@@ -39,9 +39,10 @@ from alpaca.trading.enums import OrderSide, TimeInForce
 # --- YOUR ALPACA KEYS ---
 # Paper keys:  paper.alpaca.markets → Your Account → API Keys
 # Live keys:   app.alpaca.markets   → Your Account → API Keys
-API_KEY    = "PKHCGGIGXDTSZA5VBRQFUYKDOC"
-API_SECRET = "7PJmeXW574pZpshia3Kgrf9G8sobnr8EJrGBKjnVHtZV"
-
+import os
+# This tells the bot to look in the GitHub Vault instead of your hard drive
+API_KEY    = os.environ.get("ALPACA_API_KEY")
+API_SECRET = os.environ.get("ALPACA_SECRET_KEY")
 # --- PAPER OR LIVE ---
 # True  = paper trading  (safe, fake money, always start here)
 # False = LIVE trading   (real money — only flip after 30+ days paper validation)
