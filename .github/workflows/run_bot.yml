@@ -1,0 +1,22 @@
+name: Trading Bot Run
+on:
+  workflow_dispatch: # Allows you to run it manually with a button
+  schedule:
+    - cron: '*/15 13-20 * * 1-5' # Runs every 15 mins, market hours, Mon-Fri
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install alpaca-py yfinance pandas numpy lxml
+      - name: Run bot
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python rubber_band_bot.py
