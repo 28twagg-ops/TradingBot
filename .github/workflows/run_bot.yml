@@ -1,17 +1,17 @@
 name: Trading Bot Run
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: '*/15 8-15 * * 1-5'
-      timezone: 'America/Chicago' # This ensures it hits Oklahoma market hours exactly
+  workflow_dispatch:      # Keeps the "Run Workflow" button in GitHub
+  repository_dispatch:    # Keeps the "Door" open for cron-job.org
+    types: [run-bot]      # Optional: labels the trigger for cleaner logs
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 # Updated version
+        uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v5 # Updated version
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
       - name: Install dependencies
