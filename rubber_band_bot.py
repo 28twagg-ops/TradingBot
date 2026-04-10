@@ -34,7 +34,10 @@ from alpaca.trading.enums    import OrderSide, TimeInForce
 # ══════════════════════════════════════════════════════════════════════════════
 #  CONFIGURATION — edit before running
 # ══════════════════════════════════════════════════════════════════════════════
+import os
 
+API_KEY = os.getenv("API_KEY")
+API_SECRET = os.getenv("API_SECRET")
 PAPER_TRADING      = True    # True = paper (safe). False = LIVE real money.
 
 POSITION_SIZE_PCT  = 0.02    # 2% of equity per trade
