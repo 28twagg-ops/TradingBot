@@ -589,7 +589,7 @@ def run_full_scan():
 
     # SPY regime
     spy_raw = fetch_stock("SPY")
-    spy_df  = add_indicators(spy_raw) if spy_raw else None
+    spy_df = add_indicators(spy_raw) if spy_raw is not None and not spy_raw.empty else None
     regime  = detect_regime(spy_df)
     spy_now   = float(spy_df["Close"].iloc[-1])  if spy_df is not None else 0
     spy_ma200 = float(spy_df["MA200"].iloc[-1])  if spy_df is not None else 0
