@@ -36,8 +36,11 @@ from alpaca.trading.enums    import OrderSide, TimeInForce
 # ══════════════════════════════════════════════════════════════════════════════
 import os
 
-API_KEY = os.getenv("API_KEY")
-API_SECRET = os.getenv("API_SECRET")
+API_KEY = os.getenv("ALPACA_API_KEY")
+API_SECRET = os.getenv("ALPACA_SECRET_KEY")
+
+if not API_KEY or not API_SECRET:
+    raise ValueError("API keys not found. Check GitHub Secrets.")
 PAPER_TRADING      = True    # True = paper (safe). False = LIVE real money.
 
 POSITION_SIZE_PCT  = 0.02    # 2% of equity per trade
