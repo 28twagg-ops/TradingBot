@@ -233,9 +233,18 @@ def _yf(ticker, days=300):
     except Exception: return None
 
 def fetch_stock(ticker):
-    df = _alpaca(ticker) or _yf(ticker)
-    if df is None: return None
-    if float(df["Close"].iloc[-1]) < MIN_STOCK_PRICE: return None
+    df = _alpaca(ticker)
+
+    if df is None or df.empty:
+        df = _yf(ticker)
+
+    # 🔒 safety check (VERY important)
+    if df is None or df.empty:
+        return None
+
+    if float(df["Close"].iloc[-1]) < MIN_STOCK_PRICE:
+        return None
+
     return df
 
 def add_ind(df):
