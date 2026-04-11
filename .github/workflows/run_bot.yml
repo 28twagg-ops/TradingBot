@@ -1,23 +1,63 @@
-name: Trading Bot Run
+name: Rubber Band Bot v4
+
 on:
-  workflow_dispatch:      # Keeps the "Run Workflow" button in GitHub
-  repository_dispatch:    # Keeps the "Door" open for cron-job.org
-    types: [run-bot]      # Optional: labels the trigger for cleaner logs
+  # Manual trigger button in GitHub
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Run mode'
+        required: false
+        default: 'scan'
+        type: choice
+        options: [scan, exits]
+
+  # Scheduled runs — times in UTC
+  schedule:
+    - cron: '15 20 * * 1-5'   # 4:15pm ET (EDT = UTC-4)  — full daily scan
+    - cron: '35 13 * * 1-5'   # 9:35am ET (EDT = UTC-4)  — morning exit check
 
 jobs:
-  build:
+  run_bot:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write          # needed to commit run_report.md back to repo
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
+
       - name: Install dependencies
-        run: pip install alpaca-py yfinance pandas numpy lxml
+        run: pip install alpaca-py yfinance pandas numpy lxml requests
+
+      - name: Determine run mode
+        id: mode
+        run: |
+          HOUR=$(date -u +%H)
+          MINUTE=$(date -u +%M)
+          if [ "${{ github.event.inputs.mode }}" != "" ]; then
+            echo "mode=${{ github.event.inputs.mode }}" >> $GITHUB_OUTPUT
+          elif [ "$HOUR" = "13" ]; then
+            echo "mode=exits" >> $GITHUB_OUTPUT
+          else
+            echo "mode=scan" >> $GITHUB_OUTPUT
+          fi
+
       - name: Run bot
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
-        run: python rubber_band_bot.py
+        run: python rubber_band_bot.py --mode ${{ steps.mode.outputs.mode }}
+
+      - name: Commit run report to repo
+        run: |
+          git config --local user.email "bot@rubber-band-bot"
+          git config --local user.name "Rubber Band Bot"
+          git add run_report.md logs/ || true
+          git diff --staged --quiet || git commit -m "Bot run $(date -u '+%Y-%m-%d %H:%M') UTC — ${{ steps.mode.outputs.mode }}"
+          git push || true
+        # push || true so a no-change run doesn't fail the workflow
