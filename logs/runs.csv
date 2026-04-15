@@ -91,3 +91,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers
 2026-04-15 19:00:41,summary,bull,512.4,379.91,0,0,0,1,TPL
 2026-04-15 19:15:30,summary,bull,512.19,379.91,0,0,0,1,TPL
 2026-04-15 19:30:47,summary,bull,511.99,379.91,0,0,0,1,TPL
+2026-04-15 19:45:35,summary,bull,511.96,379.91,0,0,0,1,TPL
