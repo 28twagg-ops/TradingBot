@@ -1,0 +1,2 @@
+timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hold_days,exit_reason,regime,equity_after
+2026-04-16 13:00:33,2026-04-16,SELL,TPL,unknown,418.5,132.3,10.17,12.21,7,max_hold 7d (+10.2%),bull,512.21
