@@ -5,22 +5,23 @@ RUBBER BAND BOT v7
 Calendar-aware, regime-switching, multi-strategy trading bot.
 Runs on GitHub Actions triggered by cron-job.org.
 
-CHANGES FROM v6 (sim-validated across 2yr/3yr/7yr, 900 stocks):
+CHANGES FROM v6 (sim-validated across 2yr/3yr/5yr/7yr, 900 stocks):
   - Exit simplified: midline only (price > 20-day MA)
     Removed momentum decay layer + RSI requirement
     Midline alone was the most consistent exit across every timeframe
   - Max hold reduced: 14d -> 7d (recycle capital faster)
   - Position size reduced: 15% -> 9% (~$45/trade at $500)
-    Takes ~3,700 trades over 7yr vs ~1,300 at higher sizes
-    More trades = more reliable results, less random luck
   - Removed MAX_OPEN_POSITIONS cap: cash availability is the real constraint
   - Stop loss unchanged: -3%
 
-SIM RESULTS (midline / -3% stop / 7d hold / 9% size):
-  7yr both-universe: $500 -> $928 (85.5% return)
-  3,721 trades taken, 48.5% win rate, 0.078% avg return
-  Max drawdown: 45.7%
-  Consistent across bull/bear/correction regimes
+  ENTRY STRATEGIES (bake-off validated, 5yr 900 stocks):
+    KEPT:    RubberBand  (51.7% win, 0.84 Sharpe -- best Sharpe)
+             52wkLow     (53.4% win, 0.60 Sharpe)
+             MomReversal (54.4% win, 0.47 Sharpe, lowest drawdown)
+    ADDED:   GapDown     (53.9% win, 0.51 Sharpe -- panic-to-recovery)
+             VolumeSpike (58.5% win, consistent all regimes -- institutional)
+             Pullback50  (58.2% win -- uptrend dip-buy)
+    REMOVED: GoldenCross (negative Sharpe, lost money)
 
 WHAT RUNS WHEN (auto-detected by time, no flags needed):
   9:35am ET  -> exits-only check
@@ -115,22 +116,28 @@ W = 68   # display box inner width
 
 
 # =============================================================================
-#  CALENDAR STRATEGY SCHEDULE  (5-year backtest validated)
+#  CALENDAR STRATEGY SCHEDULE  (v7 bake-off validated)
+#
+#  Changes from v6:
+#    - GoldenCross REMOVED (negative Sharpe, lost money)
+#    - GapDown ADDED (53.9% win, 0.51 Sharpe) -- replaces GoldenCross in Sep
+#    - VolumeSpike ADDED (58.5% win, all-regime consistent) -- secondary
+#    - Pullback50 ADDED (58.2% win, uptrend dip-buy) -- secondary in bull months
 # =============================================================================
 
 SCHEDULE = {
-    1:  {"p": "MomReversal", "s": "52wkLow",    "note": "Jan: MomReversal+3.67% RubberBand DISABLED"},
-    2:  {"p": "52wkLow",     "s": "MomReversal", "note": "Feb: 52wkLow+1.37% RubberBand DISABLED"},
-    3:  {"p": "52wkLow",     "s": "MomReversal", "note": "Mar: 52wkLow+1.85% 68%win"},
-    4:  {"p": "RubberBand",  "s": "52wkLow",     "note": "Apr: RubberBand+0.71% regime sets params"},
-    5:  {"p": "RubberBand",  "s": "52wkLow",     "note": "May: RubberBand+1.93% 58%win"},
-    6:  {"p": "52wkLow",     "s": "RubberBand",  "note": "Jun: 52wkLow+1.81% Sharpe 1.72"},
-    7:  {"p": "52wkLow",     "s": "RubberBand",  "note": "Jul: 52wkLow+2.86% 66%win"},
-    8:  {"p": "RubberBand",  "s": "52wkLow",     "note": "Aug: RubberBand+4.72% 70%win BEST MONTH"},
-    9:  {"p": "GoldenCross", "s": "52wkLow",     "note": "Sep: worst month. GoldenCross only option"},
-    10: {"p": "RubberBand",  "s": "52wkLow",     "note": "Oct: RubberBand+3.29% 70%win"},
-    11: {"p": "RubberBand",  "s": "MomReversal", "note": "Nov: RubberBand+4.77% 86%WIN RATE"},
-    12: {"p": "MomReversal", "s": "52wkLow",     "note": "Dec: MomReversal+1.34% year-end"},
+    1:  {"p": "MomReversal", "s": "52wkLow",     "note": "Jan: MomReversal primary, 52wkLow secondary"},
+    2:  {"p": "52wkLow",     "s": "VolumeSpike",  "note": "Feb: 52wkLow + VolumeSpike (58.5% win)"},
+    3:  {"p": "52wkLow",     "s": "MomReversal",  "note": "Mar: 52wkLow+1.85% 68%win"},
+    4:  {"p": "RubberBand",  "s": "Pullback50",   "note": "Apr: RubberBand + Pullback50 (58.2% win)"},
+    5:  {"p": "RubberBand",  "s": "52wkLow",      "note": "May: RubberBand+1.93% 58%win"},
+    6:  {"p": "52wkLow",     "s": "VolumeSpike",  "note": "Jun: 52wkLow + VolumeSpike"},
+    7:  {"p": "52wkLow",     "s": "Pullback50",   "note": "Jul: 52wkLow + Pullback50 (bull dip-buy)"},
+    8:  {"p": "RubberBand",  "s": "52wkLow",      "note": "Aug: RubberBand+4.72% 70%win BEST MONTH"},
+    9:  {"p": "GapDown",     "s": "VolumeSpike",  "note": "Sep: GapDown replaces GoldenCross + VolSpike"},
+    10: {"p": "RubberBand",  "s": "GapDown",      "note": "Oct: RubberBand + GapDown (53.9% win)"},
+    11: {"p": "RubberBand",  "s": "MomReversal",  "note": "Nov: RubberBand+4.77% 86%WIN RATE"},
+    12: {"p": "MomReversal", "s": "VolumeSpike",  "note": "Dec: MomReversal + VolumeSpike year-end"},
 }
 
 MN = {1:"Jan",2:"Feb",3:"Mar",4:"Apr",5:"May",6:"Jun",
@@ -280,6 +287,7 @@ def fetch_stock(ticker):
 
 def add_ind(df):
     c, v = df["Close"], df["Volume"]
+    o    = df["Open"]
     df   = df.copy()
     d = c.diff()
     g = d.clip(lower=0).rolling(14).mean()
@@ -295,6 +303,9 @@ def add_ind(df):
     df["L252"]  = c.rolling(252).min()
     df["R60"]   = c.pct_change(60)
     df["Ret1"]  = c.pct_change(1)
+    # -- New strategy indicators (v7 bake-off validated) ----------------------
+    df["GapPct"] = (o - c.shift(1)) / (c.shift(1) + 1e-10)  # gap from prev close
+    df["Green"]  = (c > o).astype(int)                        # green candle
     return df
 
 def fetch_batch(tickers, label=""):
@@ -326,7 +337,20 @@ def consec_down(close):
 
 
 # =============================================================================
-#  ENTRY SIGNALS  (unchanged from v5)
+#  ENTRY SIGNALS  (v7 -- bake-off validated)
+#
+#  KEPT (passed bake-off):
+#    RubberBand   -- 51.7% win, 0.84 Sharpe (best Sharpe of all)
+#    52wkLow      -- 53.4% win, 0.60 Sharpe, 83.6% return
+#    MomReversal  -- 54.4% win, 0.47 Sharpe, 129% return, lowest DD
+#
+#  ADDED (new, bake-off validated):
+#    GapDown      -- 53.9% win, 0.51 Sharpe, 93.5% return
+#    VolumeSpike  -- 58.5% win (highest!), consistent across all regimes
+#    Pullback50   -- 58.2% win, uptrend dip-buy, low risk
+#
+#  REMOVED:
+#    GoldenCross  -- negative Sharpe, lost money over 5 years
 # =============================================================================
 
 def _rb(ticker, df, p):
@@ -371,16 +395,53 @@ def _mr(ticker, df):
     except Exception: pass
     return None
 
-def _gc(ticker, df):
+def _gd(ticker, df):
+    """GapDown reversal: open gaps down >=3% but close is green."""
     try:
-        m50 = float(df["MA50"].iloc[-1]); m200 = float(df["MA200"].iloc[-1])
-        m50p = float(df["MA50"].iloc[-2]); m200p = float(df["MA200"].iloc[-2])
-        cn = float(df["Close"].iloc[-1])
-        if any(pd.isna(x) for x in [m50, m200, m50p, m200p]): return None
-        if (m50 > m200) and (m50p <= m200p):
-            return {"ticker": ticker, "strategy": "GoldenCross",
-                    "close": round(cn, 2), "rsi": 0.0, "vol_z": 0.0,
-                    "trigger": "50MA x 200MA"}
+        cn  = float(df["Close"].iloc[-1])
+        gap = float(df["GapPct"].iloc[-1])
+        grn = int(df["Green"].iloc[-1])
+        rsi = float(df["RSI"].iloc[-1])
+        vz  = float(df["VZ"].iloc[-1])
+        if pd.isna(gap): return None
+        if gap <= -0.03 and grn == 1:
+            return {"ticker": ticker, "strategy": "GapDown",
+                    "close": round(cn, 2), "rsi": round(rsi, 1), "vol_z": round(vz, 2),
+                    "trigger": f"gap {gap*100:.1f}% recovered"}
+    except Exception: pass
+    return None
+
+def _vs(ticker, df):
+    """VolumeSpike: very high volume while price holds flat/up."""
+    try:
+        c = df["Close"]; cn = float(c.iloc[-1])
+        vz  = float(df["VZ"].iloc[-1])
+        rsi = float(df["RSI"].iloc[-1])
+        r5  = float(c.pct_change(5).iloc[-1])
+        if any(pd.isna(x) for x in [vz, r5]): return None
+        if vz >= 2.5 and r5 >= -0.01 and r5 <= 0.05:
+            return {"ticker": ticker, "strategy": "VolumeSpike",
+                    "close": round(cn, 2), "rsi": round(rsi, 1), "vol_z": round(vz, 2),
+                    "trigger": f"vol z={vz:.1f} 5d={r5*100:+.1f}%"}
+    except Exception: pass
+    return None
+
+def _pb(ticker, df):
+    """Pullback50: uptrend stock pulls back to touch 50MA, closes green."""
+    try:
+        cn   = float(df["Close"].iloc[-1])
+        ma50 = float(df["MA50"].iloc[-1])
+        ma200= float(df["MA200"].iloc[-1])
+        grn  = int(df["Green"].iloc[-1])
+        rsi  = float(df["RSI"].iloc[-1])
+        vz   = float(df["VZ"].iloc[-1])
+        if any(pd.isna(x) for x in [ma50, ma200]): return None
+        in_uptrend = cn > ma200
+        near_50ma  = abs(cn - ma50) / ma50 <= 0.01
+        if in_uptrend and near_50ma and grn == 1:
+            return {"ticker": ticker, "strategy": "Pullback50",
+                    "close": round(cn, 2), "rsi": round(rsi, 1), "vol_z": round(vz, 2),
+                    "trigger": f"50MA bounce ({((cn/ma50)-1)*100:+.1f}%)"}
     except Exception: pass
     return None
 
@@ -390,10 +451,12 @@ def get_signals(ticker, df, month, rgm):
     if rgm == "bear": pri, sec = "52wkLow", "MomReversal"
     sigs = []
     for name in [pri, sec]:
-        s = (_rb(ticker, df, prm) if name == "RubberBand" else
-             _52(ticker, df)      if name == "52wkLow"    else
+        s = (_rb(ticker, df, prm) if name == "RubberBand"  else
+             _52(ticker, df)      if name == "52wkLow"     else
              _mr(ticker, df)      if name == "MomReversal" else
-             _gc(ticker, df)      if name == "GoldenCross" else None)
+             _gd(ticker, df)      if name == "GapDown"     else
+             _vs(ticker, df)      if name == "VolumeSpike" else
+             _pb(ticker, df)      if name == "Pullback50"  else None)
         if s: sigs.append(s)
     return sigs
 
