@@ -151,3 +151,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers
 2026-04-17 18:15:27,summary,bull,512.37,466.09,0,0,0,1,BKR,both
 2026-04-17 18:30:31,summary,bull,512.48,466.09,0,0,0,1,BKR,both
 2026-04-17 18:45:27,summary,bull,512.5,466.09,0,0,0,1,BKR,both
+2026-04-17 19:00:33,summary,bull,512.44,466.09,0,0,0,1,BKR,both
