@@ -9,10 +9,12 @@ CHANGES FROM v6 (sim-validated across 2yr/3yr/5yr/7yr, 900 stocks):
   - Exit simplified: midline only (price > 20-day MA)
     Removed momentum decay layer + RSI requirement
     Midline alone was the most consistent exit across every timeframe
-  - Max hold reduced: 14d -> 7d (recycle capital faster)
-  - Position size reduced: 15% -> 9% (~$45/trade at $500)
+  - Max hold reduced: 14d -> 5d (deep sweep winner, OOS +113.6%)
+  - Stop loss tightened: -3% -> -2% (deep sweep: tighter = better OOS)
+    Reasoning: 2x slippage floor means -5% stop = -10% worst-case loss.
+    Cutting to -2% (floor -4%) caps losses and recycles cash faster.
+  - Position sizing: 20% seasonal / 12% off-schedule (tiered by strategy)
   - Removed MAX_OPEN_POSITIONS cap: cash availability is the real constraint
-  - Stop loss unchanged: -3%
 
   ENTRY STRATEGIES (bake-off validated, 5yr 900 stocks):
     KEPT:    RubberBand  (51.7% win, 0.84 Sharpe -- best Sharpe)
@@ -81,21 +83,37 @@ PAPER_TRADING = True   # False = live real money (only after 30+ days paper)
 UNIVERSE = "both"
 
 # ---- Position sizing ---------------------------------------------------------
-# Sim-validated: 9% gives ~3,700 trades over 7yr at $500
-# Small enough to take many trades, big enough to matter (~$45/trade)
-# Cash availability is the only constraint -- no artificial position cap
-POSITION_SIZE_PCT  = 0.09
-CASH_RESERVE_PCT   = 0.15
+# Sim-validated (7yr, 900 stocks, multiple runs):
+#   Seasonal signals  (primary + secondary from monthly schedule): 20%
+#   Off-schedule signals (other 4 strategies firing off-schedule): 12%
+#
+#   Sweep result (7yr, 900 stocks):
+#     20%/12% wins (+394.7% total, +109.8% OOS, 28.1% dd)
+#     Consistent winner across 3yr and 7yr runs.
+#
+#   Weak-month reduction (Feb/Mar/Sep → 5%) was tested and rejected:
+#     Reduces total return by ~52pp and OOS by ~18pp vs no reduction.
+#     Even underperforming months generate enough profitable trades at
+#     full sizing to outweigh the savings from cutting size.
+SEASONAL_SIZE_PCT    = 0.20   # primary + secondary scheduled strategies
+OFFSCHEDULE_SIZE_PCT = 0.12   # all other strategies
+CASH_RESERVE_PCT     = 0.10   # sim-validated at 10%
 
-# ---- Exit rules (v7 simplified -- sim validated across 2/3/7yr) -------------
+# ---- Exit rules (v7 -- deep param sweep validated, 7yr 899 stocks) ----------
 # Midline only: price crosses above 20-day moving average
-# This beat RSI+midline, momentum decay, and all other exits in every run
-# Hard stops: -3% stop loss, 7-day max hold (fast capital recycling)
-EXIT_DAYS_MAX      = 7
-EXIT_STOP_LOSS     = -0.03
+# Deep sweep (15 combos: 5 stops x 3 holds) winner by OOS return:
+#   -2% stop / 5d hold  →  OOS +113.6%,  OOS DD 11.6%,  OOS win 55.0%
+# Tighter stop (-2% floor -4%) cuts losses fast, recycles cash sooner.
+# Every step wider (-2.5 → -3 → -4 → -5%) reduced OOS return despite
+# higher win rate, because the 2x slippage floor magnifies wide-stop losses.
+EXIT_DAYS_MAX      = 5
+EXIT_STOP_LOSS     = -0.02
 
-# ---- PDT rule ----------------------------------------------------------------
-MAX_DAY_TRADES   = 3
+# ---- Daily entry cap ---------------------------------------------------------
+# Cap sweep (5yr, 900 stocks): 5/day = +215% vs 3/day = +187% (+28pp)
+# PDT diagnostic showed 0 same-day round trips so PDT rule doesn't bind.
+# 5/day captures 96% of "no cap" return while staying realistic.
+MAX_DAY_TRADES   = 5
 
 # ---- Data quality ------------------------------------------------------------
 MIN_STOCK_PRICE  = 5.0
@@ -446,18 +464,32 @@ def _pb(ticker, df):
     return None
 
 def get_signals(ticker, df, month, rgm):
-    sc = SCHEDULE[month]; pri = sc["p"]; sec = sc["s"]
+    """Check ALL 6 strategies every day.
+    Signals from the monthly scheduled pair are tagged seasonal=True and
+    get entry priority when cash is tight (sorted first).
+    Seasonal signals get SEASONAL_SIZE_PCT; all others get OFFSCHEDULE_SIZE_PCT.
+    """
+    sc = SCHEDULE[month]
+    seasonal_set = {sc["p"], sc["s"]}
+    if rgm == "bear":
+        seasonal_set = {"52wkLow", "MomReversal"}  # bear override
     prm = BULL_P if rgm == "bull" else CORR_P if rgm == "correction" else BEAR_P
-    if rgm == "bear": pri, sec = "52wkLow", "MomReversal"
+
+    all_strategies = ["RubberBand", "52wkLow", "MomReversal",
+                      "GapDown", "VolumeSpike", "Pullback50"]
     sigs = []
-    for name in [pri, sec]:
+    for name in all_strategies:
         s = (_rb(ticker, df, prm) if name == "RubberBand"  else
              _52(ticker, df)      if name == "52wkLow"     else
              _mr(ticker, df)      if name == "MomReversal" else
              _gd(ticker, df)      if name == "GapDown"     else
              _vs(ticker, df)      if name == "VolumeSpike" else
              _pb(ticker, df)      if name == "Pullback50"  else None)
-        if s: sigs.append(s)
+        if s:
+            s["seasonal"] = (name in seasonal_set)
+            sigs.append(s)
+    # Seasonal signals first, then alphabetical within each tier
+    sigs.sort(key=lambda x: (not x["seasonal"], x["strategy"]))
     return sigs
 
 
@@ -863,8 +895,9 @@ def run_scan(client, equity, cash, rgm):
     row("Equity",    f"${equity:,.2f}")
     row("Cash",      f"${cash:,.2f}")
     row("Reserve",   f"${reserve:,.2f}  (always kept)")
-    row("Available", f"${avail:,.2f}  (for new trades)")
-    row("Per trade", f"${equity*POSITION_SIZE_PCT:,.2f}  ({POSITION_SIZE_PCT*100:.0f}% of equity)")
+    row("Available",     f"${avail:,.2f}  (for new trades)")
+    row("Seasonal trade",  f"${equity*SEASONAL_SIZE_PCT:,.2f}  ({SEASONAL_SIZE_PCT*100:.0f}% -- scheduled strategies)")
+    row("Off-sched trade", f"${equity*OFFSCHEDULE_SIZE_PCT:,.2f}  ({OFFSCHEDULE_SIZE_PCT*100:.0f}% -- other strategies)")
     ftr()
 
     positions = enrich(client, get_positions(client)); pdt = load_pdt()
@@ -935,13 +968,14 @@ def run_scan(client, equity, cash, rgm):
         blank(); row("No signals today."); blank()
         row(_trunc(sc["note"], W-4)); blank()
     else:
-        trow("TICKER","STRATEGY","PRICE","RSI","VOL_Z","TRIGGER",
-             widths=[7,14,7,5,6,24])
+        trow("TICKER","STRATEGY","TIER","PRICE","RSI","VOL_Z","TRIGGER",
+             widths=[7,14,5,7,5,6,20])
         div()
         for s in all_sigs:
-            trow(s["ticker"], s["strategy"], f"${s['close']:.2f}",
+            tier = "SEAS" if s.get("seasonal") else "off"
+            trow(s["ticker"], s["strategy"], tier, f"${s['close']:.2f}",
                  f"{s.get('rsi',0):.1f}", f"{s.get('vol_z',0):.2f}",
-                 s.get("trigger",""), widths=[7,14,7,5,6,24])
+                 s.get("trigger",""), widths=[7,14,5,7,5,6,20])
         blank()
     ftr()
 
@@ -951,15 +985,17 @@ def run_scan(client, equity, cash, rgm):
     entries = 0; buys_log = []
     for sig in all_sigs:
         ticker = sig["ticker"]; strategy = sig["strategy"]
+        is_seasonal = sig.get("seasonal", False)
         lp = get_positions(client)
         skip = ""
-        if not pdt_ok(pdt):             skip = "PDT limit"
-        elif avail <= 1.0:                skip = "reserve floor"
-        da = equity * POSITION_SIZE_PCT
-        if not skip and da > avail:       skip = "not enough cash"
+        if not pdt_ok(pdt):   skip = "PDT limit"
+        elif avail <= 1.0:    skip = "reserve floor"
+        da = equity * (SEASONAL_SIZE_PCT if is_seasonal else OFFSCHEDULE_SIZE_PCT)
+        if not skip and da > avail: skip = "not enough cash"
+        tier = "S" if is_seasonal else "o"
         if skip:
-            row(f"  SKIP  {ticker}  {strategy}", _trunc(skip, 20)); continue
-        row(f"  ENTER {ticker}  {strategy}", f"${da:.2f}")
+            row(f"  SKIP [{tier}] {ticker}  {strategy}", _trunc(skip, 20)); continue
+        row(f"  ENTER [{tier}] {ticker}  {strategy}", f"${da:.2f}")
         if do_buy(client, ticker, da, strategy):
             entries += 1; avail -= da
             log_tx("BUY", ticker, strategy, sig["close"], da, rgm,
