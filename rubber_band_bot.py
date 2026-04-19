@@ -52,9 +52,10 @@ import yfinance as yf
 
 from alpaca.trading.client   import TradingClient
 from alpaca.trading.requests import (MarketOrderRequest, GetOrdersRequest,
-                                      StopOrderRequest)
+                                      StopOrderRequest, StopLimitOrderRequest,
+                                      LimitOrderRequest)
 from alpaca.trading.enums    import (OrderSide, TimeInForce, QueryOrderStatus,
-                                     OrderType)
+                                     OrderType, OrderStatus)
 from alpaca.data.historical  import StockHistoricalDataClient
 from alpaca.data.requests    import StockBarsRequest
 from alpaca.data.timeframe   import TimeFrame
@@ -624,27 +625,36 @@ def cancel_stop_orders(client, ticker):
 
 
 def ensure_stop(client, ticker, entry_price, qty):
-    """Place a GTC stop-market sell at entry_price × (1 + EXIT_STOP_LOSS).
-    Skipped if a stop order already exists.  Safe to call repeatedly."""
-    stop_price = round(entry_price * (1.0 + EXIT_STOP_LOSS), 2)
+    """Place a GTC stop-limit sell order.
+    Trigger  = entry × (1 + EXIT_STOP_LOSS)        e.g. -2%
+    Limit    = entry × (1 + EXIT_STOP_LOSS × 2)    e.g. -4%  (2× slippage floor)
+
+    If price drops normally the limit fills between -2% and -4%.
+    If price gaps past -4% the limit won't fill — the 9:35am software
+    exit catches that and fires a market sell as fallback.
+    Skipped silently if a stop order already exists."""
+    stop_price  = round(entry_price * (1.0 + EXIT_STOP_LOSS), 2)
+    limit_price = round(entry_price * (1.0 + EXIT_STOP_LOSS * 2), 2)
     try:
         # Check if a stop-sell already exists for this ticker
         req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[ticker])
         for o in client.get_orders(req):
-            if (getattr(o, "order_type", None) == OrderType.STOP
+            if (getattr(o, "order_type", None) in (OrderType.STOP,
+                                                    OrderType.STOP_LIMIT)
                     and o.side == OrderSide.SELL):
                 log.info(f"  STOP already live {ticker} @ ${o.stop_price}")
                 return True
-        # Place new GTC stop-market order
-        o = client.submit_order(StopOrderRequest(
+        # Place new GTC stop-limit order
+        o = client.submit_order(StopLimitOrderRequest(
             symbol=ticker,
             qty=str(round(qty, 9)),
             side=OrderSide.SELL,
             time_in_force=TimeInForce.GTC,
             stop_price=stop_price,
+            limit_price=limit_price,
         ))
-        log.info(f"  STOP placed {ticker}  qty={qty:.4f}  "
-                 f"stop=${stop_price:.2f}  id={o.id}")
+        log.info(f"  STOP-LIMIT placed {ticker}  qty={qty:.4f}  "
+                 f"stop=${stop_price:.2f}  limit=${limit_price:.2f}  id={o.id}")
         return True
     except Exception as e:
         log.warning(f"  STOP placement failed {ticker}: {e}")
@@ -652,12 +662,48 @@ def ensure_stop(client, ticker, entry_price, qty):
 
 
 def do_sell(client, ticker):
-    cancel_stop_orders(client, ticker)   # remove server-side stop before closing
+    """Exit a position.
+    1. Cancel any broker-side stop order first (avoids double-sell).
+    2. Try a limit sell just below current price — fills instantly on
+       liquid S&P/MidCap stocks and gets a slightly better price.
+    3. If the limit doesn't fill within 20 seconds, cancel it and
+       fall back to a plain market sell."""
+    cancel_stop_orders(client, ticker)
+
+    # ── Step 1: try a limit sell ──────────────────────────────────────────
+    try:
+        pos      = client.get_open_position(ticker)
+        qty      = abs(float(pos.qty))
+        cur      = float(pos.current_price)
+        lim      = round(cur * 0.998, 2)   # 0.2% below current — fills fast
+        o = client.submit_order(LimitOrderRequest(
+            symbol=ticker, qty=str(qty),
+            side=OrderSide.SELL,
+            time_in_force=TimeInForce.DAY,
+            limit_price=lim))
+        log.info(f"  SELL LIMIT {ticker}  qty={qty}  limit=${lim:.2f}  id={o.id}")
+
+        # Wait up to 20 seconds for fill (4 × 5s checks)
+        for _ in range(4):
+            time.sleep(5)
+            o = client.get_order_by_id(str(o.id))
+            if o.status == OrderStatus.filled:
+                log.info(f"  SELL LIMIT filled {ticker} @ ${o.filled_avg_price}")
+                return True
+
+        # Not filled — cancel and fall through to market sell
+        client.cancel_order_by_id(str(o.id))
+        log.info(f"  SELL LIMIT not filled for {ticker}, falling back to market")
+
+    except Exception as e:
+        log.warning(f"  SELL LIMIT attempt failed {ticker}: {e}")
+
+    # ── Step 2: market sell fallback ──────────────────────────────────────
     try:
         client.close_position(ticker)
-        log.info(f"  SELL {ticker} closed"); return True
+        log.info(f"  SELL MARKET {ticker} closed"); return True
     except Exception as e:
-        # Position may already be gone (stop fired at Alpaca) — not an error
+        # Position may already be gone (broker stop already fired) — not fatal
         log.warning(f"  SELL {ticker}: {e}"); return False
 
 
