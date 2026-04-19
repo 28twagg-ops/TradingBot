@@ -51,8 +51,10 @@ import pandas as pd
 import yfinance as yf
 
 from alpaca.trading.client   import TradingClient
-from alpaca.trading.requests import MarketOrderRequest, GetOrdersRequest
-from alpaca.trading.enums    import OrderSide, TimeInForce, QueryOrderStatus
+from alpaca.trading.requests import (MarketOrderRequest, GetOrdersRequest,
+                                      StopOrderRequest)
+from alpaca.trading.enums    import (OrderSide, TimeInForce, QueryOrderStatus,
+                                     OrderType)
 from alpaca.data.historical  import StockHistoricalDataClient
 from alpaca.data.requests    import StockBarsRequest
 from alpaca.data.timeframe   import TimeFrame
@@ -74,7 +76,7 @@ if not API_KEY or not API_SECRET:
 #  CONFIGURATION
 # =============================================================================
 
-PAPER_TRADING = True   # False = live real money (only after 30+ days paper)
+PAPER_TRADING = False  # LIVE -- real money
 
 # ---- Universe ----------------------------------------------------------------
 # "sp500"   -- S&P 500 only (~500 stocks, faster)
@@ -607,12 +609,56 @@ def do_buy(client, ticker, dollars, strategy):
     except Exception as e:
         log.error(f"  BUY FAILED {ticker}: {e}"); return False
 
+def cancel_stop_orders(client, ticker):
+    """Cancel any open GTC stop-sell orders for a ticker.
+    Called before a software-triggered exit so we don't double-sell."""
+    try:
+        req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[ticker])
+        for o in client.get_orders(req):
+            if (getattr(o, "order_type", None) == OrderType.STOP
+                    and o.side == OrderSide.SELL):
+                client.cancel_order_by_id(str(o.id))
+                log.info(f"  STOP cancelled {ticker}  id={o.id}")
+    except Exception as e:
+        log.warning(f"  STOP cancel failed {ticker}: {e}")
+
+
+def ensure_stop(client, ticker, entry_price, qty):
+    """Place a GTC stop-market sell at entry_price × (1 + EXIT_STOP_LOSS).
+    Skipped if a stop order already exists.  Safe to call repeatedly."""
+    stop_price = round(entry_price * (1.0 + EXIT_STOP_LOSS), 2)
+    try:
+        # Check if a stop-sell already exists for this ticker
+        req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[ticker])
+        for o in client.get_orders(req):
+            if (getattr(o, "order_type", None) == OrderType.STOP
+                    and o.side == OrderSide.SELL):
+                log.info(f"  STOP already live {ticker} @ ${o.stop_price}")
+                return True
+        # Place new GTC stop-market order
+        o = client.submit_order(StopOrderRequest(
+            symbol=ticker,
+            qty=str(round(qty, 9)),
+            side=OrderSide.SELL,
+            time_in_force=TimeInForce.GTC,
+            stop_price=stop_price,
+        ))
+        log.info(f"  STOP placed {ticker}  qty={qty:.4f}  "
+                 f"stop=${stop_price:.2f}  id={o.id}")
+        return True
+    except Exception as e:
+        log.warning(f"  STOP placement failed {ticker}: {e}")
+        return False
+
+
 def do_sell(client, ticker):
+    cancel_stop_orders(client, ticker)   # remove server-side stop before closing
     try:
         client.close_position(ticker)
         log.info(f"  SELL {ticker} closed"); return True
     except Exception as e:
-        log.error(f"  SELL FAILED {ticker}: {e}"); return False
+        # Position may already be gone (stop fired at Alpaca) — not an error
+        log.warning(f"  SELL {ticker}: {e}"); return False
 
 
 # =============================================================================
@@ -711,18 +757,74 @@ def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells
 #  WEEKLY SUMMARY
 # =============================================================================
 
+def year_by_year_from_log():
+    """Read transactions.csv and return a list of year rows sorted oldest-first.
+    Each row: {year, start_eq, end_eq, ret_pct, n_trades, win_rate, profitable}
+    Uses equity_after column to track account value over time."""
+    if not TX_FILE.exists():
+        return []
+    try:
+        with open(TX_FILE, newline="") as f:
+            txs = [t for t in csv.DictReader(f)
+                   if t.get("equity_after") and t.get("date")]
+        if not txs:
+            return []
+
+        # Group equity snapshots by year (use last equity_after per year)
+        by_year = {}
+        for tx in txs:
+            yr  = tx["date"][:4]
+            eq  = float(tx["equity_after"])
+            by_year.setdefault(yr, {"first": eq, "last": eq,
+                                    "trades": 0, "wins": 0})
+            by_year[yr]["last"]   = eq
+            by_year[yr]["trades"] += 1
+            if tx["action"] == "SELL":
+                pnl = float(tx.get("pnl_pct", 0))
+                if pnl > 0:
+                    by_year[yr]["wins"] += 1
+
+        years = sorted(by_year.keys())
+        rows  = []
+        for i, yr in enumerate(years):
+            d = by_year[yr]
+            # start equity = previous year's end, or first tx equity for first year
+            if i == 0:
+                # Estimate start: first tx equity minus that trade's size
+                start_eq = d["first"]
+            else:
+                start_eq = by_year[years[i-1]]["last"]
+            end_eq   = d["last"]
+            ret_pct  = (end_eq - start_eq) / start_eq * 100 if start_eq > 0 else 0
+            sells    = [tx for tx in txs
+                        if tx["date"][:4] == yr and tx["action"] == "SELL"]
+            n_sells  = len(sells)
+            wins     = sum(1 for t in sells if float(t.get("pnl_pct", 0)) > 0)
+            win_rate = wins / n_sells * 100 if n_sells > 0 else 0
+            rows.append({"year": yr, "start_eq": start_eq, "end_eq": end_eq,
+                         "ret_pct": ret_pct, "n_trades": d["trades"],
+                         "win_rate": win_rate,
+                         "profitable": ret_pct > 0})
+        return rows
+    except Exception as e:
+        log.debug(f"year_by_year_from_log: {e}")
+        return []
+
+
 def write_weekly(client, equity, cash):
     today = date.today(); wk = today.isocalendar()[1]
     fname = WEEKLY_DIR / f"{today.year}-W{wk:02d}.md"
     positions = enrich(client, get_positions(client))
     week_tx = []
+    all_tx  = []
     if TX_FILE.exists():
         with open(TX_FILE, newline="") as f:
-            for tx in csv.DictReader(f):
-                try:
-                    if datetime.strptime(tx["date"], "%Y-%m-%d").date() >= today - timedelta(days=7):
-                        week_tx.append(tx)
-                except Exception: pass
+            all_tx = list(csv.DictReader(f))
+        for tx in all_tx:
+            try:
+                if datetime.strptime(tx["date"], "%Y-%m-%d").date() >= today - timedelta(days=7):
+                    week_tx.append(tx)
+            except Exception: pass
     buys     = [t for t in week_tx if t["action"] == "BUY"]
     sells    = [t for t in week_tx if t["action"] == "SELL"]
     real_pnl = sum(float(t.get("pnl_dollar", 0)) for t in sells)
@@ -738,14 +840,55 @@ def write_weekly(client, equity, cash):
     row("Trades this week",f"{len(buys)} buys  {len(sells)} sells")
     ftr()
 
+    # ── Year-by-year performance ──────────────────────────────────────────────
+    yr_rows = year_by_year_from_log()
+    if yr_rows:
+        hdr("YEAR-BY-YEAR PERFORMANCE")
+        trow("YEAR","START","END","RETURN","TRADES","WIN%","",
+             widths=[6,11,11,9,8,7,5])
+        div()
+        for r in yr_rows:
+            flag = "✓" if r["profitable"] else "✗"
+            trow(r["year"],
+                 f"${r['start_eq']:,.0f}", f"${r['end_eq']:,.0f}",
+                 f"{r['ret_pct']:+.1f}%",
+                 str(r["n_trades"]),
+                 f"{r['win_rate']:.1f}%",
+                 flag,
+                 widths=[6,11,11,9,8,7,5])
+        blank()
+        profitable_n = sum(1 for r in yr_rows if r["profitable"])
+        best  = max(yr_rows, key=lambda r: r["ret_pct"])
+        worst = min(yr_rows, key=lambda r: r["ret_pct"])
+        row("Profitable years", f"{profitable_n}/{len(yr_rows)}  "
+            f"({profitable_n/len(yr_rows)*100:.0f}%)")
+        row("Best  year", f"{best['year']}  ({best['ret_pct']:+.1f}%)")
+        row("Worst year", f"{worst['year']}  ({worst['ret_pct']:+.1f}%)")
+        ftr()
+
     L = [f"# Weekly Summary -- Week {wk}, {today.year}", f"_{today}_", "",
          "## Account", "| | |", "|---|---|",
          f"| Equity | **${equity:,.2f}** |",
          f"| Cash | ${cash:,.2f} |",
          f"| Invested | ${invested:,.2f} |",
          f"| Open P&L | ${open_pnl:+,.2f} |",
-         f"| Realised P&L | ${real_pnl:+,.2f} |", "",
-         "## Holdings"]
+         f"| Realised P&L | ${real_pnl:+,.2f} |", ""]
+
+    # Year-by-year section in markdown
+    if yr_rows:
+        L += ["## Year-by-Year Performance",
+              "| Year | Start | End | Return | Trades | Win% | Profitable |",
+              "|------|-------|-----|--------|--------|------|------------|"]
+        for r in yr_rows:
+            flag = "✅" if r["profitable"] else "❌"
+            L.append(f"| {r['year']} | ${r['start_eq']:,.0f} | ${r['end_eq']:,.0f} "
+                     f"| **{r['ret_pct']:+.1f}%** | {r['n_trades']:,} "
+                     f"| {r['win_rate']:.1f}% | {flag} |")
+        profitable_n = sum(1 for r in yr_rows if r["profitable"])
+        L += [f"",
+              f"_{profitable_n}/{len(yr_rows)} years profitable_", ""]
+
+    L += ["## Holdings"]
     if positions:
         L += ["| Ticker | Strategy | Invested | Entry | Now | P&L% | P&L$ |",
               "|--------|----------|----------|-------|-----|------|------|"]
@@ -854,6 +997,7 @@ def run_exits(client, equity, cash, rgm):
 
     pos_data = fetch_batch(list(positions.keys()), "positions")
     exits = 0
+    exited = set()
     hdr("EXIT CHECK")
     row("Exit logic", f"midline / stop{EXIT_STOP_LOSS*100:.0f}% / {EXIT_DAYS_MAX}d max")
     div()
@@ -864,6 +1008,7 @@ def run_exits(client, equity, cash, rgm):
             f"EXIT: {_trunc(why,22)}" if ex else "HOLD")
         if ex and do_sell(client, ticker):
             exits += 1
+            exited.add(ticker)
             cur = pos["current_price"]
             dh  = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                   if pos.get("entry_date") else 0
@@ -871,6 +1016,24 @@ def run_exits(client, equity, cash, rgm):
                    rgm, float(client.get_account().equity),
                    pos["pnl_pct"], pos["pnl_dollar"], dh, why)
     ftr()
+
+    # ── Ensure every held position has a server-side stop order ──────────────
+    # Runs at 9:35am after market open so fill prices are confirmed.
+    # Protects against bot outages -- stop lives at Alpaca even if bot is down.
+    hdr("STOP ORDERS")
+    row(f"Checking broker-side stop @ entry × {1+EXIT_STOP_LOSS:.0%}")
+    div()
+    for ticker, pos in positions.items():
+        if ticker in exited: continue
+        ep  = pos.get("entry_price", 0)
+        qty = pos.get("qty", 0)
+        if ep > 0 and qty > 0:
+            ensure_stop(client, ticker, ep, qty)
+            row(ticker, f"stop @ ${ep*(1+EXIT_STOP_LOSS):.2f}  qty={qty:.4f}")
+        else:
+            row(ticker, "skip (no entry price)")
+    ftr()
+
     log_run("exits", rgm, equity, cash, 0, 0, exits, positions)
 
 
@@ -1004,6 +1167,26 @@ def run_scan(client, equity, cash, rgm):
                               "tk": ticker, "st": strategy,
                               "px": sig["close"], "$": da})
     if entries == 0 and not all_sigs: row("  No entries placed.")
+    ftr()
+
+    # ── Ensure stop orders on all open positions ──────────────────────────────
+    # Covers both pre-existing holds and any buys that may have already filled.
+    # New buys placed after market close queue for next morning's open; their
+    # stops will be confirmed at the 9:35am run once fill price is known.
+    hdr("STOP ORDERS")
+    row(f"Broker-side GTC stop @ entry × {1+EXIT_STOP_LOSS:.0%}  (Alpaca-hosted)")
+    div()
+    pos_now = enrich(client, get_positions(client))
+    for ticker, pos in pos_now.items():
+        ep  = pos.get("entry_price", 0)
+        qty = pos.get("qty", 0)
+        if ep > 0 and qty > 0:
+            ensure_stop(client, ticker, ep, qty)
+            row(ticker, f"stop @ ${ep*(1+EXIT_STOP_LOSS):.2f}  qty={qty:.4f}")
+        else:
+            row(ticker, "pending fill — stop set at 9:35am check")
+    if not pos_now:
+        blank(); row("No open positions to protect."); blank()
     ftr()
 
     save_pdt(pdt)
