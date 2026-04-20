@@ -29,3 +29,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-04-20 19:30:30,summary,bull,500.0,500.0,0,0,0,0,,both
 2026-04-20 19:45:26,summary,bull,500.0,500.0,0,0,0,0,,both
 2026-04-20 20:04:04,scan,bull,500.0,500.0,35,3,0,0,,both
+2026-04-20 20:16:45,scan,bull,500.0,500.0,36,1,0,0,,both
