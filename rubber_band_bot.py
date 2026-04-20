@@ -600,7 +600,7 @@ def pdt_ok(l):
 
 def do_buy(client, ticker, dollars, strategy):
     try:
-        cid = f"{strategy}|{date.today()}"[:48]
+        cid = f"{strategy}|{ticker}|{date.today()}"[:48]
         o = client.submit_order(MarketOrderRequest(
             symbol=ticker, notional=round(dollars, 2),
             side=OrderSide.BUY, time_in_force=TimeInForce.DAY,
