@@ -1,4 +1,0 @@
-timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hold_days,exit_reason,regime,equity_after
-2026-04-16 13:00:33,2026-04-16,SELL,TPL,unknown,418.5,132.3,10.17,12.21,7,max_hold 7d (+10.2%),bull,512.21
-2026-04-16 20:04:03,2026-04-16,BUY,BKR,Pullback50,60.59,46.1,0,0,0,,bull,512.2
-2026-04-17 20:04:11,2026-04-17,BUY,ACGL,Pullback50,97.6,46.1,0,0,0,,bull,512.24
