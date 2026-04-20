@@ -1,0 +1,4 @@
+timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hold_days,exit_reason,regime,equity_after
+2026-04-20 20:04:02,2026-04-20,BUY,ACGL,Pullback50,97.52,100.0,0,0,0,,bull,500.0
+2026-04-20 20:04:02,2026-04-20,BUY,DGX,VolumeSpike,196.31,60.0,0,0,0,,bull,500.0
+2026-04-20 20:04:03,2026-04-20,BUY,CLF,GapDown,9.73,60.0,0,0,0,,bull,500.0
