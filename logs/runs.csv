@@ -31,3 +31,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-04-21 20:04:09,scan,bull,499.32,439.56,29,4,0,1,BKNG,both
 2026-04-21 20:19:06,scan,bull,499.25,439.56,30,1,0,1,BKNG,both
 2026-04-21 20:34:11,scan,bull,499.55,439.56,30,0,0,1,BKNG,both
+2026-04-21 20:49:04,scan,bull,499.55,439.56,30,0,0,1,BKNG,both
