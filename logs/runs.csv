@@ -39,3 +39,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-04-22 14:00:34,summary,bull,497.97,19.94,0,0,0,6,ADM|BIIB|BKNG|BMY|EFX|EXE,both
 2026-04-22 14:15:28,summary,bull,497.03,19.94,0,0,0,6,ADM|BIIB|BKNG|BMY|EFX|EXE,both
 2026-04-22 14:30:29,summary,bull,497.05,19.94,0,0,0,6,ADM|BIIB|BKNG|BMY|EFX|EXE,both
+2026-04-22 14:45:29,summary,bull,496.16,19.94,0,0,0,6,ADM|BIIB|BKNG|BMY|EFX|EXE,both
