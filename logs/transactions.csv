@@ -6,3 +6,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-04-21 20:19:06,2026-04-21,BUY,EXE,MomReversal,94.26,59.91,0,0,0,,bull,499.25
 2026-04-23 20:04:17,2026-04-23,BUY,MO,Pullback50,67.16,97.99,0,0,0,,bull,489.86
 2026-04-23 20:04:17,2026-04-23,BUY,AIZ,VolumeSpike,230.47,58.8,0,0,0,,bull,489.86
+2026-04-23 20:19:09,2026-04-23,BUY,CBRE,VolumeSpike,149.31,58.8,0,0,0,,bull,489.96
