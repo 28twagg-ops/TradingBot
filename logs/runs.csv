@@ -85,3 +85,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-04-23 18:15:33,summary,bull,489.93,176.45,0,0,0,4,ADM|BMY|EFX|EXE,both
 2026-04-23 18:30:47,summary,bull,490.53,176.45,0,0,0,4,ADM|BMY|EFX|EXE,both
 2026-04-23 18:43:12,exits,bull,490.15,176.45,0,0,0,4,ADM|BMY|EFX|EXE,both
+2026-04-23 18:45:30,exits,bull,490.2,230.52,0,0,0,3,ADM|BMY|EXE,both
