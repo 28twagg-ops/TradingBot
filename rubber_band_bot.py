@@ -973,11 +973,12 @@ def write_weekly(client, equity, cash):
 # =============================================================================
 
 def detect_mode():
-    now = datetime.utcnow(); h = now.hour; dow = now.weekday()
+    now = datetime.utcnow(); h = now.hour; m = now.minute; dow = now.weekday()
     if dow >= 5: return "weekly"
     if dow == 4 and h >= 21: return "weekly"
-    if 13 <= h < 14: return "exits"
-    if 20 <= h < 22: return "scan"
+    if 20 <= h < 22: return "scan"                         # 4-6pm ET: full scan + entries
+    # Market hours 9:30am-4:00pm ET = 13:30-20:00 UTC: check exits every run
+    if (h == 13 and m >= 30) or (14 <= h < 20): return "exits"
     return "summary"
 
 
