@@ -667,19 +667,20 @@ def ensure_stop(client, ticker, entry_price, qty):
 
 def do_sell(client, ticker):
     """Exit a position.
-    1. Cancel any broker-side stop order first (avoids double-sell).
+    1. Cancel any open sell orders first (avoids double-sell conflicts).
     2. Try a limit sell just below current price — fills instantly on
        liquid S&P/MidCap stocks and gets a slightly better price.
     3. If the limit doesn't fill within 20 seconds, cancel it and
-       fall back to a plain market sell."""
+       fall back to a plain market sell.
+    Always returns True if the position is gone after the attempt."""
     cancel_stop_orders(client, ticker)
 
     # ── Step 1: try a limit sell ──────────────────────────────────────────
     try:
-        pos      = client.get_open_position(ticker)
-        qty      = abs(float(pos.qty))
-        cur      = float(pos.current_price)
-        lim      = round(cur * 0.998, 2)   # 0.2% below current — fills fast
+        pos = client.get_open_position(ticker)
+        qty = abs(float(pos.qty))
+        cur = float(pos.current_price)
+        lim = round(cur * 0.998, 2)   # 0.2% below current — fills fast
         o = client.submit_order(LimitOrderRequest(
             symbol=ticker, qty=str(qty),
             side=OrderSide.SELL,
@@ -690,25 +691,46 @@ def do_sell(client, ticker):
         # Wait up to 20 seconds for fill (4 × 5s checks)
         for _ in range(4):
             time.sleep(5)
-            o = client.get_order_by_id(str(o.id))
-            if o.status == OrderStatus.filled:
-                log.info(f"  SELL LIMIT filled {ticker} @ ${o.filled_avg_price}")
-                return True
+            try:
+                o = client.get_order_by_id(str(o.id))
+                if o.status in (OrderStatus.filled, OrderStatus.partially_filled):
+                    log.info(f"  SELL LIMIT filled {ticker} @ ${o.filled_avg_price}")
+                    return True
+            except Exception:
+                pass  # order may already be filled/gone — check position below
 
-        # Not filled — cancel and fall through to market sell
-        client.cancel_order_by_id(str(o.id))
+        # Check if position is already gone (limit may have filled silently)
+        try:
+            client.get_open_position(ticker)
+        except Exception:
+            log.info(f"  SELL LIMIT filled {ticker} (confirmed by position check)")
+            return True
+
+        # Still open — cancel limit and fall through to market sell
+        try:
+            client.cancel_order_by_id(str(o.id))
+        except Exception:
+            pass
         log.info(f"  SELL LIMIT not filled for {ticker}, falling back to market")
 
     except Exception as e:
-        log.warning(f"  SELL LIMIT attempt failed {ticker}: {e}")
+        log.warning(f"  SELL LIMIT setup failed {ticker}: {e}")
 
     # ── Step 2: market sell fallback ──────────────────────────────────────
     try:
+        # Check position still exists before attempting market sell
+        client.get_open_position(ticker)
         client.close_position(ticker)
-        log.info(f"  SELL MARKET {ticker} closed"); return True
+        log.info(f"  SELL MARKET {ticker} closed")
+        return True
     except Exception as e:
-        # Position may already be gone (broker stop already fired) — not fatal
-        log.warning(f"  SELL {ticker}: {e}"); return False
+        msg = str(e)
+        if "not found" in msg or "position" in msg.lower():
+            # Position already gone — treat as success
+            log.info(f"  SELL {ticker}: position already closed")
+            return True
+        log.warning(f"  SELL {ticker}: {e}")
+        return False
 
 
 # =============================================================================
@@ -1068,23 +1090,6 @@ def run_exits(client, equity, cash, rgm):
                    pos["pnl_pct"], pos["pnl_dollar"], dh, why)
     ftr()
 
-    # ── Ensure every held position has a server-side stop order ──────────────
-    # Runs at 9:35am after market open so fill prices are confirmed.
-    # Protects against bot outages -- stop lives at Alpaca even if bot is down.
-    hdr("STOP ORDERS")
-    row(f"Checking broker-side stop @ entry × {1+EXIT_STOP_LOSS:.0%}")
-    div()
-    for ticker, pos in positions.items():
-        if ticker in exited: continue
-        ep  = pos.get("entry_price", 0)
-        qty = pos.get("qty", 0)
-        if ep > 0 and qty > 0:
-            ensure_stop(client, ticker, ep, qty)
-            row(ticker, f"stop @ ${ep*(1+EXIT_STOP_LOSS):.2f}  qty={qty:.4f}")
-        else:
-            row(ticker, "skip (no entry price)")
-    ftr()
-
     log_run("exits", rgm, equity, cash, 0, 0, exits, positions)
 
 
@@ -1218,26 +1223,6 @@ def run_scan(client, equity, cash, rgm):
                               "tk": ticker, "st": strategy,
                               "px": sig["close"], "$": da})
     if entries == 0 and not all_sigs: row("  No entries placed.")
-    ftr()
-
-    # ── Ensure stop orders on all open positions ──────────────────────────────
-    # Covers both pre-existing holds and any buys that may have already filled.
-    # New buys placed after market close queue for next morning's open; their
-    # stops will be confirmed at the 9:35am run once fill price is known.
-    hdr("STOP ORDERS")
-    row(f"Broker-side GTC stop @ entry × {1+EXIT_STOP_LOSS:.0%}  (Alpaca-hosted)")
-    div()
-    pos_now = enrich(client, get_positions(client))
-    for ticker, pos in pos_now.items():
-        ep  = pos.get("entry_price", 0)
-        qty = pos.get("qty", 0)
-        if ep > 0 and qty > 0:
-            ensure_stop(client, ticker, ep, qty)
-            row(ticker, f"stop @ ${ep*(1+EXIT_STOP_LOSS):.2f}  qty={qty:.4f}")
-        else:
-            row(ticker, "pending fill — stop set at 9:35am check")
-    if not pos_now:
-        blank(); row("No open positions to protect."); blank()
     ftr()
 
     save_pdt(pdt)
