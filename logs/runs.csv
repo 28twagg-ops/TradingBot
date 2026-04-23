@@ -90,3 +90,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-04-23 19:15:30,exits,bull,490.26,230.52,0,0,0,3,ADM|BMY|EXE,both
 2026-04-23 19:30:31,exits,bull,490.29,230.52,0,0,0,3,ADM|BMY|EXE,both
 2026-04-23 19:45:32,exits,bull,489.8,230.52,0,0,0,3,ADM|BMY|EXE,both
+2026-04-23 20:04:21,scan,bull,489.86,230.52,66,2,0,3,ADM|BMY|EXE,both
