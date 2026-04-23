@@ -611,17 +611,21 @@ def do_buy(client, ticker, dollars, strategy):
         log.error(f"  BUY FAILED {ticker}: {e}"); return False
 
 def cancel_stop_orders(client, ticker):
-    """Cancel any open GTC stop-sell orders for a ticker.
-    Called before a software-triggered exit so we don't double-sell."""
+    """Cancel ALL open sell orders for a ticker (stop, stop-limit, and stuck
+    limit sells from previous do_sell() calls).  Called before a
+    software-triggered exit so we never have two conflicting sell orders."""
     try:
         req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[ticker])
         for o in client.get_orders(req):
-            if (getattr(o, "order_type", None) == OrderType.STOP
-                    and o.side == OrderSide.SELL):
-                client.cancel_order_by_id(str(o.id))
-                log.info(f"  STOP cancelled {ticker}  id={o.id}")
+            if o.side == OrderSide.SELL:          # cancel ANY open sell
+                try:
+                    client.cancel_order_by_id(str(o.id))
+                    log.info(f"  SELL order cancelled {ticker}  "
+                             f"type={getattr(o,'order_type','?')}  id={o.id}")
+                except Exception as ce:
+                    log.warning(f"  cancel failed {ticker} id={o.id}: {ce}")
     except Exception as e:
-        log.warning(f"  STOP cancel failed {ticker}: {e}")
+        log.warning(f"  cancel_stop_orders failed {ticker}: {e}")
 
 
 def ensure_stop(client, ticker, entry_price, qty):
