@@ -124,3 +124,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-04-24 19:45:41,exits,bull,487.18,14.93,0,0,0,6,ADM|AIZ|BMY|CBRE|EXE|MO,both
 2026-04-24 20:04:10,scan,bull,487.74,14.93,38,0,0,6,ADM|AIZ|BMY|CBRE|EXE|MO,both
 2026-04-24 20:19:11,scan,bull,486.94,14.93,41,0,0,6,ADM|AIZ|BMY|CBRE|EXE|MO,both
+2026-04-24 20:34:01,scan,bull,487.51,14.93,41,0,0,6,ADM|AIZ|BMY|CBRE|EXE|MO,both
