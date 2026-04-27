@@ -21,3 +21,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-04-27 20:19:47,2026-04-27,BUY,DTE,VolumeSpike,146.5,58.48,0,0,0,,bull,487.3
 2026-04-27 20:30:49,2026-04-27,SELL,AIZ,VolumeSpike,232.72,59.73,1.58,0.93,3,midline (+1.6%),bull,487.3
 2026-04-27 20:31:10,2026-04-27,SELL,CBRE,VolumeSpike,146.22,57.88,-1.56,-0.92,3,midline (-1.6%),bull,487.3
+2026-04-27 20:45:47,2026-04-27,SELL,AIZ,VolumeSpike,232.72,59.73,1.58,0.93,3,midline (+1.6%),bull,487.3
+2026-04-27 20:46:07,2026-04-27,SELL,CBRE,VolumeSpike,146.22,57.88,-1.56,-0.92,3,midline (-1.6%),bull,487.3
