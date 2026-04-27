@@ -144,3 +144,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-04-27 19:00:32,exits,bull,487.65,369.69,0,0,0,2,AIZ|CBRE,both
 2026-04-27 19:15:31,exits,bull,487.55,369.69,0,0,0,2,AIZ|CBRE,both
 2026-04-27 19:30:26,exits,bull,487.48,369.69,0,0,0,2,AIZ|CBRE,both
+2026-04-27 19:45:28,exits,bull,487.69,369.69,0,0,0,2,AIZ|CBRE,both
