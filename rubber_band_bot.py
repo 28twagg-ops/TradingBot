@@ -777,6 +777,171 @@ def log_run(mode, rgm, equity, cash, signals, entries, exits, positions):
 
 
 # =============================================================================
+#  PERFORMANCE DASHBOARD
+# =============================================================================
+
+def write_dashboard():
+    """Generate logs/dashboard.md — single-file performance summary."""
+    try:
+        STARTING_EQUITY = 500.0
+        DASH_FILE = LOG_DIR / "dashboard.md"
+
+        # Load transactions
+        trades, buys_tx, sells_tx = [], [], []
+        if TX_FILE.exists():
+            with open(TX_FILE, newline="") as f:
+                for r in csv.DictReader(f):
+                    r["pnl_pct"]    = float(r.get("pnl_pct", 0) or 0)
+                    r["pnl_dollar"] = float(r.get("pnl_dollar", 0) or 0)
+                    r["hold_days"]  = int(r.get("hold_days", 0) or 0)
+                    trades.append(r)
+            buys_tx  = [t for t in trades if t["action"] == "BUY"]
+            sells_tx = [t for t in trades if t["action"] == "SELL"]
+
+        # Load runs for equity curve
+        runs = []
+        if RUNS_FILE.exists():
+            with open(RUNS_FILE, newline="") as f:
+                for r in csv.DictReader(f):
+                    r["equity"] = float(r.get("equity", 0) or 0)
+                    r["cash"]   = float(r.get("cash", 0) or 0)
+                    runs.append(r)
+
+        eq_series      = [r["equity"] for r in runs if r["equity"] > 0]
+        current_equity = eq_series[-1] if eq_series else STARTING_EQUITY
+        peak_equity    = max(eq_series) if eq_series else STARTING_EQUITY
+        trough_equity  = min(eq_series) if eq_series else STARTING_EQUITY
+        total_ret_pct  = (current_equity - STARTING_EQUITY) / STARTING_EQUITY * 100
+        max_dd_pct     = (trough_equity - peak_equity) / peak_equity * 100 if peak_equity else 0
+
+        last_run      = runs[-1] if runs else {}
+        current_cash  = last_run.get("cash", 0)
+        open_pos_cnt  = last_run.get("open_positions", "0")
+        open_tickers  = last_run.get("tickers", "")
+        last_run_time = last_run.get("timestamp", "N/A")
+
+        # Trade stats
+        wins   = [s for s in sells_tx if s["pnl_pct"] > 0]
+        losses = [s for s in sells_tx if s["pnl_pct"] <= 0]
+        total_closed = len(sells_tx)
+        win_rate     = len(wins) / total_closed * 100 if total_closed else 0
+        avg_win      = sum(s["pnl_pct"] for s in wins)   / len(wins)   if wins   else 0
+        avg_loss     = sum(s["pnl_pct"] for s in losses) / len(losses) if losses else 0
+        avg_hold     = sum(s["hold_days"] for s in sells_tx) / total_closed if total_closed else 0
+        total_pnl    = sum(s["pnl_dollar"] for s in sells_tx)
+        gross_win    = sum(s["pnl_dollar"] for s in wins)
+        gross_loss   = abs(sum(s["pnl_dollar"] for s in losses)) or 1e-9
+        pf           = gross_win / gross_loss
+
+        # Strategy map (most recent buy per ticker)
+        strat_map = {b["ticker"]: b.get("strategy", "?") for b in buys_tx}
+
+        # Exit reason breakdown
+        from collections import defaultdict
+        by_exit = defaultdict(list)
+        for s in sells_tx:
+            key = (s.get("exit_reason") or "unknown").split("(")[0].strip().split(" ")[0]
+            by_exit[key].append(s)
+
+        by_strat = defaultdict(list)
+        for s in sells_tx:
+            strat = strat_map.get(s["ticker"], s.get("strategy", "?")) or "?"
+            by_strat[strat].append(s)
+
+        # Daily equity (last reading per day)
+        daily_eq = {}
+        for r in runs:
+            d = r.get("timestamp", "")[:10]
+            if d:
+                daily_eq[d] = r["equity"]
+        eq_dates = sorted(daily_eq.keys())
+
+        now_str = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+        L = []
+        L.append("# 📊 Rubber Band Bot — Performance Dashboard")
+        L.append(f"*Updated: {now_str}*\n")
+
+        L.append("## Account Snapshot")
+        L.append("| | |"); L.append("|---|---|")
+        L.append(f"| **Current Equity** | ${current_equity:.2f} |")
+        L.append(f"| **Starting Equity** | ${STARTING_EQUITY:.2f} |")
+        L.append(f"| **Total Return** | {total_ret_pct:+.2f}% (${current_equity - STARTING_EQUITY:+.2f}) |")
+        L.append(f"| **Peak Equity** | ${peak_equity:.2f} |")
+        L.append(f"| **Max Drawdown** | {max_dd_pct:.2f}% |")
+        L.append(f"| **Current Cash** | ${current_cash:.2f} |")
+        L.append(f"| **Open Positions** | {open_pos_cnt} ({open_tickers}) |")
+        L.append(f"| **Last Bot Run** | {last_run_time} |")
+        L.append("")
+
+        L.append("## Trade Performance (Closed Trades)")
+        L.append("| Metric | Value |"); L.append("|---|---|")
+        L.append(f"| **Total Closed Trades** | {total_closed} |")
+        L.append(f"| **Wins / Losses** | {len(wins)} / {len(losses)} |")
+        L.append(f"| **Win Rate** | {win_rate:.1f}% |")
+        L.append(f"| **Avg Win** | +{avg_win:.2f}% |")
+        L.append(f"| **Avg Loss** | {avg_loss:.2f}% |")
+        L.append(f"| **Profit Factor** | {pf:.2f}x |")
+        L.append(f"| **Avg Hold Days** | {avg_hold:.1f}d |")
+        L.append(f"| **Total Realised P&L** | ${total_pnl:+.2f} |")
+        L.append("")
+
+        if by_exit:
+            L.append("## Exit Reasons")
+            L.append("| Exit Type | Trades | Win Rate | Avg P&L% |")
+            L.append("|---|---|---|---|")
+            for reason, grp in sorted(by_exit.items(), key=lambda x: -len(x[1])):
+                gw = [s for s in grp if s["pnl_pct"] > 0]
+                L.append(f"| `{reason}` | {len(grp)} | {len(gw)/len(grp)*100:.0f}% "
+                         f"| {sum(s['pnl_pct'] for s in grp)/len(grp):+.2f}% |")
+            L.append("")
+
+        if total_closed > 0 and by_strat:
+            L.append("## Strategy Breakdown")
+            L.append("| Strategy | Trades | Win Rate | Avg P&L% |")
+            L.append("|---|---|---|---|")
+            for strat, grp in sorted(by_strat.items(), key=lambda x: -len(x[1])):
+                gw = [s for s in grp if s["pnl_pct"] > 0]
+                L.append(f"| `{strat}` | {len(grp)} | {len(gw)/len(grp)*100:.0f}% "
+                         f"| {sum(s['pnl_pct'] for s in grp)/len(grp):+.2f}% |")
+            L.append("")
+
+        if len(eq_dates) > 1:
+            L.append("## Equity Timeline")
+            L.append("| Date | Equity | Change |"); L.append("|---|---|---|")
+            prev = STARTING_EQUITY
+            step = max(1, len(eq_dates) // 30)
+            shown = set()
+            for d in eq_dates[::step]:
+                eq = daily_eq[d]; chg = eq - prev
+                L.append(f"| {d} | ${eq:.2f} | {chg:+.2f} |")
+                prev = eq; shown.add(d)
+            if eq_dates[-1] not in shown:
+                eq = daily_eq[eq_dates[-1]]; chg = eq - prev
+                L.append(f"| {eq_dates[-1]} | ${eq:.2f} | {chg:+.2f} |")
+            L.append("")
+
+        recent = sells_tx[-20:][::-1]
+        if recent:
+            L.append("## Recent Closed Trades")
+            L.append("| Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |")
+            L.append("|---|---|---|---|---|---|---|")
+            for s in recent:
+                strat = strat_map.get(s["ticker"], s.get("strategy", "?")) or "?"
+                L.append(f"| {s['date']} | **{s['ticker']}** | `{strat}` "
+                         f"| {s['pnl_pct']:+.2f}% | ${s['pnl_dollar']:+.2f} "
+                         f"| {s['hold_days']}d | {s.get('exit_reason','')} |")
+            L.append("")
+
+        L.append("---")
+        L.append("*Auto-generated after every EOD scan. View on GitHub: `logs/dashboard.md`*")
+
+        DASH_FILE.write_text("\n".join(L))
+        log.info("  Dashboard written → logs/dashboard.md")
+    except Exception as e:
+        log.warning(f"  write_dashboard failed: {e}")
+
+
+# =============================================================================
 #  DAILY LOG
 # =============================================================================
 
@@ -1252,6 +1417,7 @@ def run_scan(client, equity, cash, rgm):
 
     log_run("scan", rgm, eq2, ca2, len(all_sigs), entries, exits, pos2)
     write_daily(today, eq2, ca2, rgm, month, pos2, all_sigs, buys_log, sells_log)
+    write_dashboard()
 
 
 # =============================================================================
