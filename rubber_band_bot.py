@@ -1243,10 +1243,22 @@ def run_exits(client, equity, cash, rgm):
     pos_data = fetch_batch(list(positions.keys()), "positions")
     exits = 0
     exited = set()
+
+    # Load today's sells to prevent duplicate logging
+    already_sold_today = set()
+    today_str = str(date.today())
+    if TX_FILE.exists():
+        with open(TX_FILE, newline="") as _f:
+            for _r in csv.DictReader(_f):
+                if _r.get("action") == "SELL" and _r.get("date") == today_str:
+                    already_sold_today.add(_r["ticker"])
+
     hdr("EXIT CHECK")
     row("Exit logic", f"stop{EXIT_STOP_LOSS*100:.0f}% / {EXIT_DAYS_MAX}d max  (midline at EOD only)")
     div()
     for ticker, pos in positions.items():
+        if ticker in already_sold_today:
+            row(ticker, "already sold today -- skipping"); continue
         if ticker not in pos_data: row(ticker, "no data"); continue
         ex, why = check_exit(pos_data[ticker], pos, eod_only=False)
         row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
@@ -1254,6 +1266,7 @@ def run_exits(client, equity, cash, rgm):
         if ex and do_sell(client, ticker):
             exits += 1
             exited.add(ticker)
+            already_sold_today.add(ticker)
             cur = pos["current_price"]
             dh  = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                   if pos.get("entry_date") else 0
@@ -1315,10 +1328,21 @@ def run_scan(client, equity, cash, rgm):
 
     # Exit check on held positions
     exits = 0; sells_log = []
+
+    # Load today's sells to prevent duplicate logging across multiple scan runs
+    already_sold_today = set()
+    if TX_FILE.exists():
+        with open(TX_FILE, newline="") as _f:
+            for _r in csv.DictReader(_f):
+                if _r.get("action") == "SELL" and _r.get("date") == str(today):
+                    already_sold_today.add(_r["ticker"])
+
     if positions:
         pos_data = fetch_batch(list(positions.keys()), "positions")
         hdr("EXIT EVALUATION  (EOD -- midline + stop + max-hold)")
         for ticker, pos in list(positions.items()):
+            if ticker in already_sold_today:
+                row(ticker, "already sold today -- skipping"); continue
             if ticker not in pos_data: row(ticker, "no data"); continue
             ex, why = check_exit(pos_data[ticker], pos, eod_only=True)
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
@@ -1333,6 +1357,7 @@ def run_scan(client, equity, cash, rgm):
                 sells_log.append({"t": datetime.now().strftime("%H:%M"),
                                    "tk": ticker, "st": pos.get("strategy","?"),
                                    "px": cur, "why": why})
+                already_sold_today.add(ticker)
                 del positions[ticker]
         ftr()
 
