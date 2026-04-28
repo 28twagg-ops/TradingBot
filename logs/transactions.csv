@@ -32,3 +32,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-04-28 20:15:46,2026-04-28,SELL,AEE,Pullback50,112.2,96.75,-0.73,-0.71,0,midline (-0.7%),bull,487.73
 2026-04-28 20:16:06,2026-04-28,SELL,CNP,Pullback50,43.13,97.14,-0.32,-0.32,0,midline (-0.3%),bull,487.73
 2026-04-28 20:19:40,2026-04-28,BUY,CDNS,VolumeSpike,325.31,58.53,0,0,0,,bull,487.73
+2026-04-28 20:30:58,2026-04-28,SELL,AEE,Pullback50,112.2,96.75,-0.73,-0.71,0,midline (-0.7%),bull,487.73
+2026-04-28 20:31:18,2026-04-28,SELL,CNP,Pullback50,43.13,97.14,-0.32,-0.32,0,midline (-0.3%),bull,487.73

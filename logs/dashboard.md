@@ -1,5 +1,5 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-04-28 20:19 UTC*
+*Updated: 2026-04-28 20:34 UTC*
 
 ## Account Snapshot
 | | |
@@ -11,31 +11,31 @@
 | **Max Drawdown** | -2.79% |
 | **Current Cash** | $235.02 |
 | **Open Positions** | 3 (AEE|CNP|DTE) |
-| **Last Bot Run** | 2026-04-28 20:19:41 |
+| **Last Bot Run** | 2026-04-28 20:34:55 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 17 |
-| **Wins / Losses** | 7 / 10 |
-| **Win Rate** | 41.2% |
+| **Total Closed Trades** | 19 |
+| **Wins / Losses** | 7 / 12 |
+| **Win Rate** | 36.8% |
 | **Avg Win** | +1.13% |
-| **Avg Loss** | -1.22% |
-| **Profit Factor** | 0.49x |
-| **Avg Hold Days** | 2.9d |
-| **Total Realised P&L** | $-4.85 |
+| **Avg Loss** | -1.11% |
+| **Profit Factor** | 0.45x |
+| **Avg Hold Days** | 2.6d |
+| **Total Realised P&L** | $-5.88 |
 
 ## Exit Reasons
 | Exit Type | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `midline` | 12 | 33% | -0.17% |
+| `midline` | 14 | 29% | -0.22% |
 | `max_hold` | 4 | 75% | -0.06% |
 | `stop_loss` | 1 | 0% | -2.07% |
 
 ## Strategy Breakdown
 | Strategy | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `Pullback50` | 8 | 25% | -0.72% |
+| `Pullback50` | 10 | 20% | -0.68% |
 | `VolumeSpike` | 8 | 50% | +0.01% |
 | `MomReversal` | 1 | 100% | +1.32% |
 
@@ -52,6 +52,8 @@
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
 |---|---|---|---|---|---|---|
+| 2026-04-28 | **CNP** | `Pullback50` | -0.32% | $-0.32 | 0d | midline (-0.3%) |
+| 2026-04-28 | **AEE** | `Pullback50` | -0.73% | $-0.71 | 0d | midline (-0.7%) |
 | 2026-04-28 | **CNP** | `Pullback50` | -0.32% | $-0.32 | 0d | midline (-0.3%) |
 | 2026-04-28 | **AEE** | `Pullback50` | -0.73% | $-0.71 | 0d | midline (-0.7%) |
 | 2026-04-28 | **CNP** | `Pullback50` | -0.32% | $-0.32 | 0d | midline (-0.3%) |
