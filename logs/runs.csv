@@ -174,3 +174,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-04-28 18:30:30,exits,bull,487.68,235.02,0,0,0,3,AEE|CNP|DTE,both
 2026-04-28 18:45:28,exits,bull,487.7,235.02,0,0,0,3,AEE|CNP|DTE,both
 2026-04-28 19:00:30,exits,bull,487.47,235.02,0,0,0,3,AEE|CNP|DTE,both
+2026-04-28 19:15:26,exits,bull,487.24,235.02,0,0,0,3,AEE|CNP|DTE,both
