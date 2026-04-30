@@ -1259,14 +1259,49 @@ def run_exits(client, equity, cash, rgm):
     for ticker, pos in positions.items():
         if ticker in already_sold_today:
             row(ticker, "already sold today -- skipping"); continue
-        if ticker not in pos_data: row(ticker, "no data"); continue
+
+        # ── Stop-loss: Alpaca unrealized P&L — no yfinance needed ─────────
+        pnl_frac = pos.get("pnl_pct", 0) / 100
+        if pnl_frac <= EXIT_STOP_LOSS:
+            why = f"stop_loss ({pnl_frac*100:.1f}%)"
+            row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
+                f"EXIT: {_trunc(why,22)}")
+            if do_sell(client, ticker):
+                exits += 1; exited.add(ticker); already_sold_today.add(ticker)
+                cur = pos["current_price"]
+                dh  = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
+                      if pos.get("entry_date") else 0
+                log_tx("SELL", ticker, pos.get("strategy","?"), cur, pos["market_value"],
+                       rgm, float(client.get_account().equity),
+                       pos["pnl_pct"], pos["pnl_dollar"], dh, why)
+            continue
+
+        # ── Max-hold: position data only — no yfinance needed ─────────────
+        if pos.get("entry_date"):
+            try:
+                days = (datetime.today() -
+                        datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days
+                if days >= EXIT_DAYS_MAX:
+                    why = f"max_hold {days}d ({pnl_frac*100:+.1f}%)"
+                    row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
+                        f"EXIT: {_trunc(why,22)}")
+                    if do_sell(client, ticker):
+                        exits += 1; exited.add(ticker); already_sold_today.add(ticker)
+                        cur = pos["current_price"]
+                        log_tx("SELL", ticker, pos.get("strategy","?"), cur, pos["market_value"],
+                               rgm, float(client.get_account().equity),
+                               pos["pnl_pct"], pos["pnl_dollar"], days, why)
+                    continue
+            except Exception: pass
+
+        # ── Midline: needs price/MA data from yfinance ─────────────────────
+        if ticker not in pos_data:
+            row(ticker, "no price data (stop/max-hold already checked)"); continue
         ex, why = check_exit(pos_data[ticker], pos, eod_only=False)
         row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
             f"EXIT: {_trunc(why,22)}" if ex else "HOLD")
         if ex and do_sell(client, ticker):
-            exits += 1
-            exited.add(ticker)
-            already_sold_today.add(ticker)
+            exits += 1; exited.add(ticker); already_sold_today.add(ticker)
             cur = pos["current_price"]
             dh  = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                   if pos.get("entry_date") else 0
@@ -1343,7 +1378,50 @@ def run_scan(client, equity, cash, rgm):
         for ticker, pos in list(positions.items()):
             if ticker in already_sold_today:
                 row(ticker, "already sold today -- skipping"); continue
-            if ticker not in pos_data: row(ticker, "no data"); continue
+
+            # ── Stop-loss: Alpaca unrealized P&L — no yfinance needed ─────
+            pnl_frac = pos.get("pnl_pct", 0) / 100
+            if pnl_frac <= EXIT_STOP_LOSS:
+                why = f"stop_loss ({pnl_frac*100:.1f}%)"
+                row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
+                    f"EXIT: {_trunc(why,20)}")
+                if do_sell(client, ticker):
+                    exits += 1; cur = pos["current_price"]
+                    dh = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
+                         if pos.get("entry_date") else 0
+                    log_tx("SELL", ticker, pos.get("strategy","?"), cur, pos["market_value"],
+                           rgm, float(client.get_account().equity),
+                           pos["pnl_pct"], pos["pnl_dollar"], dh, why)
+                    sells_log.append({"t": datetime.now().strftime("%H:%M"),
+                                       "tk": ticker, "st": pos.get("strategy","?"),
+                                       "px": cur, "why": why})
+                    already_sold_today.add(ticker); del positions[ticker]
+                continue
+
+            # ── Max-hold: position data only — no yfinance needed ─────────
+            if pos.get("entry_date"):
+                try:
+                    days = (datetime.today() -
+                            datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days
+                    if days >= EXIT_DAYS_MAX:
+                        why = f"max_hold {days}d ({pnl_frac*100:+.1f}%)"
+                        row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
+                            f"EXIT: {_trunc(why,20)}")
+                        if do_sell(client, ticker):
+                            exits += 1; cur = pos["current_price"]
+                            log_tx("SELL", ticker, pos.get("strategy","?"), cur, pos["market_value"],
+                                   rgm, float(client.get_account().equity),
+                                   pos["pnl_pct"], pos["pnl_dollar"], days, why)
+                            sells_log.append({"t": datetime.now().strftime("%H:%M"),
+                                               "tk": ticker, "st": pos.get("strategy","?"),
+                                               "px": cur, "why": why})
+                            already_sold_today.add(ticker); del positions[ticker]
+                        continue
+                except Exception: pass
+
+            # ── Midline: needs price/MA data from yfinance (EOD only) ─────
+            if ticker not in pos_data:
+                row(ticker, "no price data (stop/max-hold already checked)"); continue
             ex, why = check_exit(pos_data[ticker], pos, eod_only=True)
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                 f"EXIT: {_trunc(why,20)}" if ex else "HOLD")
@@ -1357,8 +1435,7 @@ def run_scan(client, equity, cash, rgm):
                 sells_log.append({"t": datetime.now().strftime("%H:%M"),
                                    "tk": ticker, "st": pos.get("strategy","?"),
                                    "px": cur, "why": why})
-                already_sold_today.add(ticker)
-                del positions[ticker]
+                already_sold_today.add(ticker); del positions[ticker]
         ftr()
 
     # Full universe download and scan
