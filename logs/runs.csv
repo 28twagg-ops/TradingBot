@@ -220,3 +220,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-04-30 14:01:04,exits,bull,488.41,47.61,0,0,0,7,AES|ALGN|ALLE|AMD|AOS|APH|DTE,both
 2026-04-30 14:15:50,exits,bull,490.23,47.61,0,0,0,7,AES|ALGN|ALLE|AMD|AOS|APH|DTE,both
 2026-04-30 14:30:34,exits,bull,490.79,47.61,0,0,0,7,AES|ALGN|ALLE|AMD|AOS|APH|DTE,both
+2026-04-30 14:45:40,exits,bull,490.54,47.61,0,0,0,7,AES|ALGN|ALLE|AMD|AOS|APH|DTE,both
