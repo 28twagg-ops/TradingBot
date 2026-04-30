@@ -1,43 +1,39 @@
-name: Rubber Band Bot v5
-
-# HOW THIS TRIGGERS:
-#   cron-job.org hits the repository_dispatch endpoint twice daily.
-#   The bot auto-detects what to do based on the time it runs.
-#   workflow_dispatch = the manual "Run workflow" button in GitHub Actions UI.
-#
-# NO schedule: block here. Your cron-job.org IS the scheduler.
-# Adding schedule: here too would run the bot TWICE and cause duplicate trades.
-#
-# SET UP TWO CRON-JOB.ORG JOBS pointing to:
-#   POST https://api.github.com/repos/YOUR_USERNAME/TradingBot/dispatches
-#   Body: {"event_type":"run-bot"}
-#   Times:
-#     13:35 UTC  (9:35am ET)   — morning exit check
-#     20:15 UTC  (4:15pm ET)   — full daily scan
-#   Auth header: Authorization: token YOUR_GITHUB_PAT
+name: Rubber Band Bot
 
 on:
-  workflow_dispatch:       # Manual "Run workflow" button in GitHub UI
-  repository_dispatch:     # Triggered by cron-job.org POST request
-    types: [run-bot]
+  schedule:
+    # 9:35am ET exits check
+    # EDT (Mar-Nov): 13:35 UTC  |  EST (Nov-Mar): 14:35 UTC
+    - cron: '35 13 * * 1-5'
+    - cron: '35 14 * * 1-5'
+    # 3:50pm ET main scan + entries (before close so orders execute same day)
+    # EDT (Mar-Nov): 19:50 UTC  |  EST (Nov-Mar): 20:50 UTC
+    - cron: '50 19 * * 1-5'
+    - cron: '50 20 * * 1-5'
+    # Saturday weekly summary (any time, market closed)
+    - cron: '0 14 * * 6'
+  workflow_dispatch:  # manual trigger from GitHub UI
+
+permissions:
+  contents: write   # needed to commit logs back to repo
 
 jobs:
-  run_bot:
+  run-bot:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write      # Needed to commit logs back to the repo
 
     steps:
-      - name: Checkout code
+      - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up Python
+      - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install alpaca-py yfinance pandas numpy lxml requests
+        run: pip install -r requirements.txt
 
       - name: Run bot
         env:
@@ -46,12 +42,9 @@ jobs:
         run: python rubber_band_bot.py
 
       - name: Commit logs back to repo
-        # This is how your logs persist — they get saved INTO the GitHub repo
-        # itself after every run. You can read them at any time by browsing
-        # your repo files on github.com.
         run: |
-          git config --local user.email "tradingbot@noreply"
-          git config --local user.name "Rubber Band Bot"
-          git add logs/ || true
-          git diff --staged --quiet || git commit -m "Bot run $(date -u '+%Y-%m-%d %H:%M') UTC"
-          git push || true
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add logs/
+          git diff --staged --quiet || git commit -m "bot run $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
