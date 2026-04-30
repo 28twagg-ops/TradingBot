@@ -33,3 +33,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-04-29 20:04:06,2026-04-29,BUY,AES,VolumeSpike,14.47,58.23,0,0,0,,bull,485.54
 2026-04-29 20:04:06,2026-04-29,BUY,ALGN,Pullback50,178.64,97.05,0,0,0,,bull,485.54
 2026-04-29 20:19:09,2026-04-29,BUY,APH,VolumeSpike,148.38,58.15,0,0,0,,bull,484.2
+2026-04-30 20:01:00,2026-04-30,SELL,AMD,GapDown,354.5,63.67,8.78,5.14,1,midline (+8.8%),bull,496.19
+2026-04-30 20:01:21,2026-04-30,SELL,DTE,VolumeSpike,151.69,60.05,2.68,1.57,2,midline (+2.7%),bull,496.16
