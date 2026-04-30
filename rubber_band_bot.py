@@ -27,7 +27,7 @@ CHANGES FROM v6 (sim-validated across 2yr/3yr/5yr/7yr, 900 stocks):
 
 WHAT RUNS WHEN (auto-detected by time, no flags needed):
   9:35am ET  -> exits-only check
-  4:15pm ET  -> full daily scan + entries + daily log
+  3:50pm ET  -> full daily scan + entries + daily log (before close so sells execute same day)
   Weekend    -> weekly summary, no trading
   Other      -> status summary, no trading
 
@@ -516,7 +516,7 @@ def check_exit(df, pos, eod_only=False):
     eod_only=False  (intraday 15-min runs): stop-loss + max-hold only.
                     Midline skipped — sim shows intraday midline checks hurt
                     win rate by 7.9pp due to premature exits on brief MA touches.
-    eod_only=True   (4:15pm EOD scan): all exits including midline.
+    eod_only=True   (3:50pm EOD scan): all exits including midline.
                     Midline is validated against closing prices, matching the
                     sim that produced our 53.9% win rate."""
     try:
@@ -539,7 +539,7 @@ def check_exit(df, pos, eod_only=False):
                     return True, f"max_hold {days}d ({pnl*100:+.1f}%)"
             except Exception: pass
 
-        # Midline exit: only at EOD (4:15pm scan) — not intraday
+        # Midline exit: only at EOD (3:50pm scan) — not intraday
         if eod_only and c_now > mid:
             return True, f"midline ({pnl*100:+.1f}%)"
 
@@ -1170,8 +1170,10 @@ def detect_mode():
     now = datetime.utcnow(); h = now.hour; m = now.minute; dow = now.weekday()
     if dow >= 5: return "weekly"
     if dow == 4 and h >= 21: return "weekly"
-    if 20 <= h < 22: return "scan"                         # 4-6pm ET: full scan + entries
-    # Market hours 9:30am-4:00pm ET = 13:30-20:00 UTC: check exits every run
+    # 3:50pm-6pm ET: full scan + entries (EDT=19:50-22:00 UTC, EST=20:50-22:00 UTC)
+    # Check scan BEFORE exits so 19:50 UTC is caught here, not in the exits branch
+    if (h == 19 and m >= 50) or (20 <= h < 22): return "scan"
+    # Market hours 9:30am-3:50pm ET = 13:30-19:50 UTC (EDT): check exits every run
     if (h == 13 and m >= 30) or (14 <= h < 20): return "exits"
     return "summary"
 
