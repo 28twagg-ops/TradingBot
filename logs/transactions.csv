@@ -35,3 +35,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-04-29 20:19:09,2026-04-29,BUY,APH,VolumeSpike,148.38,58.15,0,0,0,,bull,484.2
 2026-04-30 20:01:00,2026-04-30,SELL,AMD,GapDown,354.5,63.67,8.78,5.14,1,midline (+8.8%),bull,496.19
 2026-04-30 20:01:21,2026-04-30,SELL,DTE,VolumeSpike,151.69,60.05,2.68,1.57,2,midline (+2.7%),bull,496.16
+2026-05-01 17:29:17,2026-05-01,SELL,AOS,MomReversal,60.48,54.48,-6.44,-3.75,1,stop_loss (-6.4%),bull,492.98
+2026-05-01 17:29:37,2026-05-01,SELL,APH,VolumeSpike,143.72,54.68,-5.97,-3.47,1,stop_loss (-6.0%),bull,492.96
