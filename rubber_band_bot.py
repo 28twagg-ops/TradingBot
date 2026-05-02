@@ -25,7 +25,7 @@ CHANGES FROM v6 (sim-validated across 2yr/3yr/5yr/7yr, 900 stocks):
              Pullback50  (58.2% win -- uptrend dip-buy)
     REMOVED: GoldenCross (negative Sharpe, lost money)
 
-WHAT RUNS WHEN (auto-detected by time, no flags needed):
+WHAT RUNS WHEN (auto-detected by US Eastern time, DST-aware via zoneinfo):
   9:35am ET  -> exits-only check
   3:50pm ET  -> full daily scan + entries + daily log (before close so sells execute same day)
   Weekend    -> weekly summary, no trading
@@ -573,13 +573,19 @@ def enrich(client, positions):
     try:
         req = GetOrdersRequest(status=QueryOrderStatus.CLOSED, limit=200)
         orders = client.get_orders(req); seen = set()
-        for o in sorted(orders, key=lambda x: x.submitted_at or datetime.min):
+        # Sort NEWEST first — so the most recent buy for each ticker wins.
+        # Old code sorted oldest-first: if a ticker was ever held before, the stale
+        # old order's fill date was used as entry_date, making the position appear
+        # much older than it is and triggering premature max_hold exits.
+        # Filter to BUY orders only — sell fills are never a position's entry date.
+        for o in sorted(orders, key=lambda x: x.submitted_at or datetime.min, reverse=True):
             sym = o.symbol
-            if sym in positions and sym not in seen:
-                seen.add(sym)
-                if o.filled_at: positions[sym]["entry_date"] = str(o.filled_at.date())
-                if o.client_order_id and "|" in o.client_order_id:
-                    positions[sym]["strategy"] = o.client_order_id.split("|")[0]
+            if sym not in positions or sym in seen: continue
+            if o.side != OrderSide.BUY: continue        # buys only for entry date
+            seen.add(sym)
+            if o.filled_at: positions[sym]["entry_date"] = str(o.filled_at.date())
+            if o.client_order_id and "|" in o.client_order_id:
+                positions[sym]["strategy"] = o.client_order_id.split("|")[0]
     except Exception as e: log.debug(f"enrich failed: {e}")
     return positions
 
@@ -1167,14 +1173,19 @@ def write_weekly(client, equity, cash):
 # =============================================================================
 
 def detect_mode():
-    now = datetime.utcnow(); h = now.hour; m = now.minute; dow = now.weekday()
+    # Use real US Eastern time (handles EDT/EST automatically via zoneinfo).
+    # Old code used raw UTC with a 2-hour "scan" window — when cron fires every
+    # 15 min, that triggered 8 scan passes and entered positions after market close.
+    from zoneinfo import ZoneInfo
+    now = datetime.now(ZoneInfo("America/New_York"))
+    h = now.hour; m = now.minute; dow = now.weekday()
     if dow >= 5: return "weekly"
-    if dow == 4 and h >= 21: return "weekly"
-    # 3:50pm-6pm ET: full scan + entries (EDT=19:50-22:00 UTC, EST=20:50-22:00 UTC)
-    # Check scan BEFORE exits so 19:50 UTC is caught here, not in the exits branch
-    if (h == 19 and m >= 50) or (20 <= h < 22): return "scan"
-    # Market hours 9:30am-3:50pm ET = 13:30-19:50 UTC (EDT): check exits every run
-    if (h == 13 and m >= 30) or (14 <= h < 20): return "exits"
+    if dow == 4 and h >= 17: return "weekly"          # Friday post-close
+    # Scan window: 3:45–4:10pm ET only (tight — never fires after market close)
+    # Check scan FIRST so 3:45–3:59pm doesn't fall through to exits
+    if (h == 15 and m >= 45) or (h == 16 and m <= 10): return "scan"
+    # Exits: 9:30am–3:45pm ET (market hours)
+    if (h == 9 and m >= 30) or (10 <= h <= 15): return "exits"
     return "summary"
 
 
