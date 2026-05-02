@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-RUBBER BAND BOT v7
-==================
+RUBBER BAND BOT v7  *** THIS IS THE CORRECT FIXED FILE — 2026-05-02 ***
+========================================================================
+FIXES IN THIS VERSION:
+  1. enrich()      — entry date now uses NEWEST BUY order (not oldest order of any side)
+  2. detect_mode() — scan window is 3:45-4:10pm ET using real Eastern time (zoneinfo)
+  3. run_bot.yml   — uses explicit pip install (no requirements.txt needed)
+========================================================================
 Calendar-aware, regime-switching, multi-strategy trading bot.
 Runs on GitHub Actions triggered by cron-job.org.
 
