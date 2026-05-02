@@ -114,8 +114,8 @@ CASH_RESERVE_PCT     = 0.10   # sim-validated at 10%
 # Tighter stop (-2% floor -4%) cuts losses fast, recycles cash sooner.
 # Every step wider (-2.5 → -3 → -4 → -5%) reduced OOS return despite
 # higher win rate, because the 2x slippage floor magnifies wide-stop losses.
-EXIT_DAYS_MAX      = 5
-EXIT_STOP_LOSS     = -0.02
+EXIT_DAYS_MAX      = 3
+EXIT_STOP_LOSS     = -0.005
 
 # ---- Daily entry cap ---------------------------------------------------------
 # Cap sweep (5yr, 900 stocks): 5/day = +215% vs 3/day = +187% (+28pp)
