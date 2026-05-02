@@ -259,3 +259,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-01 21:38:41,summary,bull,493.19,280.05,0,0,0,3,AES|ALGN|ALLE,both
 2026-05-02 14:41:33,summary,bull,493.23,280.05,0,0,0,3,AES|ALGN|ALLE,both
 2026-05-02 15:22:54,summary,bull,493.23,280.05,0,0,0,3,AES|ALGN|ALLE,both
+2026-05-02 19:11:22,summary,bull,493.23,280.05,0,0,0,3,AES|ALGN|ALLE,both
