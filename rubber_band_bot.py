@@ -114,8 +114,8 @@ CASH_RESERVE_PCT     = 0.10   # sim-validated at 10%
 # Tighter stop (-2% floor -4%) cuts losses fast, recycles cash sooner.
 # Every step wider (-2.5 → -3 → -4 → -5%) reduced OOS return despite
 # higher win rate, because the 2x slippage floor magnifies wide-stop losses.
-EXIT_DAYS_MAX      = 3       # OOS-validated: 3d beats 5d (Tests 1,4,10 — 3x #1 winner)
-EXIT_STOP_LOSS     = -0.005  # OOS-validated: -0.5% beats -2.0% (+822% vs +161% OOS)
+EXIT_DAYS_MAX      = 5       # OOS-validated: 5d beats 3d (Test 1 20yr OOS winner, +456pp gap)
+EXIT_STOP_LOSS     = -0.005  # OOS-validated: -0.5% beats -2.0% (16/16 rolling windows, 20yr)
 
 # ---- Daily entry cap ---------------------------------------------------------
 # Cap sweep (5yr, 900 stocks): 5/day = +215% vs 3/day = +187% (+28pp)
@@ -159,7 +159,7 @@ SCHEDULE = {
     5:  {"p": "RubberBand",  "s": "52wkLow",      "note": "May: RubberBand+1.93% 58%win"},
     6:  {"p": "GapDown",     "s": "VolumeSpike",  "note": "Jun: GapDown primary (20yr IS+OOS confirmed)"},
     7:  {"p": "52wkLow",     "s": "Pullback50",   "note": "Jul: 52wkLow + Pullback50 (bull dip-buy)"},
-    8:  {"p": "RubberBand",  "s": "52wkLow",      "note": "Aug: RubberBand+4.72% 70%win BEST MONTH"},
+    8:  {"p": "VolumeSpike", "s": "52wkLow",      "note": "Aug: VolumeSpike primary (20yr IS+OOS confirmed 2026-05-02)"},
     9:  {"p": "GapDown",     "s": "VolumeSpike",  "note": "Sep: GapDown replaces GoldenCross + VolSpike"},
     10: {"p": "RubberBand",  "s": "GapDown",      "note": "Oct: RubberBand + GapDown (53.9% win)"},
     11: {"p": "RubberBand",  "s": "MomReversal",  "note": "Nov: RubberBand+4.77% 86%WIN RATE"},
