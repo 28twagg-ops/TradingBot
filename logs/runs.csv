@@ -268,3 +268,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-04 13:31:14,exits,bull,491.68,337.07,0,0,2,2,AES|ALGN,both
 2026-05-04 13:45:27,exits,bull,491.61,491.61,0,0,0,0,,both
 2026-05-04 14:00:32,exits,bull,491.61,491.61,0,0,0,0,,both
+2026-05-04 14:15:29,exits,bull,491.61,491.61,0,0,0,0,,both
