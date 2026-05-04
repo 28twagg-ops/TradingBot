@@ -106,7 +106,7 @@ UNIVERSE = "both"
 #     full sizing to outweigh the savings from cutting size.
 SEASONAL_SIZE_PCT    = 0.20   # primary + secondary scheduled strategies
 OFFSCHEDULE_SIZE_PCT = 0.12   # all other strategies
-CASH_RESERVE_PCT     = 0.10   # sim-validated at 10%
+CASH_RESERVE_PCT     = 0.05   # sim-validated at 10%
 
 # ---- Exit rules (v7 -- deep param sweep validated, 7yr 899 stocks) ----------
 # Midline only: price crosses above 20-day moving average
