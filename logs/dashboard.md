@@ -1,17 +1,17 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-05-04 19:51 UTC*
+*Updated: 2026-05-04 20:04 UTC*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $491.52 |
+| **Current Equity** | $491.99 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | -1.70% ($-8.48) |
+| **Total Return** | -1.60% ($-8.01) |
 | **Peak Equity** | $507.73 |
 | **Max Drawdown** | -4.71% |
 | **Current Cash** | $78.68 |
 | **Open Positions** | 7 (CNP|CPAY|CVX|GD|HUBB|KIM|LDOS) |
-| **Last Bot Run** | 2026-05-04 19:51:29 |
+| **Last Bot Run** | 2026-05-04 20:04:14 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
@@ -55,7 +55,7 @@
 | 2026-05-01 | $493.19 | -2.87 |
 | 2026-05-02 | $493.23 | +0.04 |
 | 2026-05-03 | $493.23 | +0.00 |
-| 2026-05-04 | $491.52 | -1.71 |
+| 2026-05-04 | $491.99 | -1.24 |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
