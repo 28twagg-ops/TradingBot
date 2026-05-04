@@ -37,3 +37,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-04-30 20:01:21,2026-04-30,SELL,DTE,VolumeSpike,151.69,60.05,2.68,1.57,2,midline (+2.7%),bull,496.16
 2026-05-01 17:29:17,2026-05-01,SELL,AOS,MomReversal,60.48,54.48,-6.44,-3.75,1,stop_loss (-6.4%),bull,492.98
 2026-05-01 17:29:37,2026-05-01,SELL,APH,VolumeSpike,143.72,54.68,-5.97,-3.47,1,stop_loss (-6.0%),bull,492.96
+2026-05-04 13:30:54,2026-05-04,SELL,AES,VolumeSpike,14.27,57.35,-1.52,-0.88,4,stop_loss (-1.5%),bull,491.69
+2026-05-04 13:31:14,2026-05-04,SELL,ALGN,Pullback50,176.49,97.26,0.22,0.21,4,max_hold 4d (+0.2%),bull,491.61
