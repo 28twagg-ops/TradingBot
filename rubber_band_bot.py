@@ -14,18 +14,19 @@ CHANGES FROM v6 (sim-validated across 2yr/3yr/5yr/7yr, 900 stocks):
   - Exit simplified: midline only (price > 20-day MA)
     Removed momentum decay layer + RSI requirement
     Midline alone was the most consistent exit across every timeframe
-  - Max hold reduced: 14d -> 5d (deep sweep winner, OOS +113.6%)
+  - Max hold: 14d -> 3d (rolling 16-window OOS avg +153.9% vs 5d +127.7%, 2026-05-03)
   - Stop loss tightened: -3% -> -2% (deep sweep: tighter = better OOS)
     Reasoning: 2x slippage floor means -5% stop = -10% worst-case loss.
     Cutting to -2% (floor -4%) caps losses and recycles cash faster.
   - Position sizing: 20% seasonal / 12% off-schedule (tiered by strategy)
   - Removed MAX_OPEN_POSITIONS cap: cash availability is the real constraint
 
-  ENTRY STRATEGIES (bake-off validated, 5yr 900 stocks):
-    KEPT:    RubberBand  (51.7% win, 0.84 Sharpe -- best Sharpe)
+  ENTRY STRATEGIES (bake-off validated, 5yr/20yr 900 stocks):
+    ACTIVE:  RSIRecovery (10/16 OOS wins as scheduled primary -- Apr/May/Nov, 2026-05-03)
+             RubberBand  (51.7% win, 0.84 Sharpe -- off-schedule + Oct)
              52wkLow     (53.4% win, 0.60 Sharpe)
              MomReversal (54.4% win, 0.47 Sharpe, lowest drawdown)
-    ADDED:   GapDown     (53.9% win, 0.51 Sharpe -- panic-to-recovery)
+             GapDown     (53.9% win, 0.51 Sharpe -- panic-to-recovery)
              VolumeSpike (58.5% win, consistent all regimes -- institutional)
              Pullback50  (58.2% win -- uptrend dip-buy)
     REMOVED: GoldenCross (negative Sharpe, lost money)
@@ -114,7 +115,7 @@ CASH_RESERVE_PCT     = 0.10   # sim-validated at 10%
 # Tighter stop (-2% floor -4%) cuts losses fast, recycles cash sooner.
 # Every step wider (-2.5 → -3 → -4 → -5%) reduced OOS return despite
 # higher win rate, because the 2x slippage floor magnifies wide-stop losses.
-EXIT_DAYS_MAX      = 5       # OOS-validated: 5d beats 3d (Test 1 20yr OOS winner, +456pp gap)
+EXIT_DAYS_MAX      = 3       # OOS-validated: 3d beats 5d (Test 10 rolling 16-window avg: +153.9% vs +127.7%)
 EXIT_STOP_LOSS     = -0.005  # OOS-validated: -0.5% beats -2.0% (16/16 rolling windows, 20yr)
 
 # ---- Daily entry cap ---------------------------------------------------------
@@ -155,14 +156,14 @@ SCHEDULE = {
     1:  {"p": "MomReversal", "s": "52wkLow",     "note": "Jan: MomReversal primary, 52wkLow secondary"},
     2:  {"p": "52wkLow",     "s": "VolumeSpike",  "note": "Feb: 52wkLow + VolumeSpike (58.5% win)"},
     3:  {"p": "GapDown",     "s": "52wkLow",      "note": "Mar: GapDown primary (20yr IS+OOS confirmed)"},
-    4:  {"p": "RubberBand",  "s": "Pullback50",   "note": "Apr: RubberBand + Pullback50 (58.2% win)"},
-    5:  {"p": "RubberBand",  "s": "52wkLow",      "note": "May: RubberBand+1.93% 58%win"},
+    4:  {"p": "RSIRecovery", "s": "Pullback50",   "note": "Apr: RSIRecovery primary (Test 14: 10/16 OOS wins vs baseline 6/16, 2026-05-03)"},
+    5:  {"p": "RSIRecovery", "s": "52wkLow",      "note": "May: RSIRecovery primary (replaces RubberBand, 2026-05-03)"},
     6:  {"p": "GapDown",     "s": "VolumeSpike",  "note": "Jun: GapDown primary (20yr IS+OOS confirmed)"},
     7:  {"p": "52wkLow",     "s": "Pullback50",   "note": "Jul: 52wkLow + Pullback50 (bull dip-buy)"},
     8:  {"p": "VolumeSpike", "s": "52wkLow",      "note": "Aug: VolumeSpike primary (20yr IS+OOS confirmed 2026-05-02)"},
     9:  {"p": "GapDown",     "s": "VolumeSpike",  "note": "Sep: GapDown replaces GoldenCross + VolSpike"},
     10: {"p": "RubberBand",  "s": "GapDown",      "note": "Oct: RubberBand + GapDown (53.9% win)"},
-    11: {"p": "RubberBand",  "s": "MomReversal",  "note": "Nov: RubberBand+4.77% 86%WIN RATE"},
+    11: {"p": "RSIRecovery", "s": "MomReversal",  "note": "Nov: RSIRecovery primary (replaces RubberBand, 2026-05-03)"},
     12: {"p": "MomReversal", "s": "VolumeSpike",  "note": "Dec: MomReversal + VolumeSpike year-end"},
 }
 
@@ -363,14 +364,14 @@ def consec_down(close):
 
 
 # =============================================================================
-#  ENTRY SIGNALS  (v7 -- bake-off validated)
+#  ENTRY SIGNALS  (v7 -- bake-off validated, updated 2026-05-03)
 #
-#  KEPT (passed bake-off):
+#  ACTIVE:
+#    RSIRecovery  -- RSI crosses back above 30 after oversold (Test 14: 10/16 OOS wins)
+#                    Replaces RubberBand as primary in Apr, May, Nov
 #    RubberBand   -- 51.7% win, 0.84 Sharpe (best Sharpe of all)
 #    52wkLow      -- 53.4% win, 0.60 Sharpe, 83.6% return
 #    MomReversal  -- 54.4% win, 0.47 Sharpe, 129% return, lowest DD
-#
-#  ADDED (new, bake-off validated):
 #    GapDown      -- 53.9% win, 0.51 Sharpe, 93.5% return
 #    VolumeSpike  -- 58.5% win (highest!), consistent across all regimes
 #    Pullback50   -- 58.2% win, uptrend dip-buy, low risk
@@ -471,8 +472,32 @@ def _pb(ticker, df):
     except Exception: pass
     return None
 
+def _rsi(ticker, df):
+    """RSIRecovery: RSI crosses back above 30 after being oversold.
+    More precise than RubberBand's raw RSI threshold — requires the actual
+    recovery cross rather than just being in oversold territory.
+    Test 14 (20yr, 16 rolling OOS windows): RSI schedule wins 10/16 vs baseline 6/16.
+    Replaces RubberBand as primary in Apr, May, Nov.
+    """
+    try:
+        c = df["Close"]; cn = float(c.iloc[-1])
+        rsi      = float(df["RSI"].iloc[-1])
+        rsi_prev = float(df["RSI"].iloc[-2])
+        vz       = float(df["VZ"].iloc[-1])
+        grn      = int(df["Green"].iloc[-1])
+        if any(pd.isna(x) for x in [rsi, rsi_prev, vz]): return None
+        if (rsi_prev < 30              # was oversold yesterday
+                and rsi >= 30          # crossed back above 30 today
+                and vz >= 0.3          # some volume confirmation
+                and grn == 1):         # price confirms recovery
+            return {"ticker": ticker, "strategy": "RSIRecovery",
+                    "close": round(cn, 2), "rsi": round(rsi, 1), "vol_z": round(vz, 2),
+                    "trigger": f"RSI {rsi_prev:.1f}→{rsi:.1f} cross above 30"}
+    except Exception: pass
+    return None
+
 def get_signals(ticker, df, month, rgm):
-    """Check ALL 6 strategies every day.
+    """Check ALL 7 strategies every day.
     Signals from the monthly scheduled pair are tagged seasonal=True and
     get entry priority when cash is tight (sorted first).
     Seasonal signals get SEASONAL_SIZE_PCT; all others get OFFSCHEDULE_SIZE_PCT.
@@ -483,16 +508,17 @@ def get_signals(ticker, df, month, rgm):
         seasonal_set = {"52wkLow", "MomReversal"}  # bear override
     prm = BULL_P if rgm == "bull" else CORR_P if rgm == "correction" else BEAR_P
 
-    all_strategies = ["RubberBand", "52wkLow", "MomReversal",
+    all_strategies = ["RubberBand", "RSIRecovery", "52wkLow", "MomReversal",
                       "GapDown", "VolumeSpike", "Pullback50"]
     sigs = []
     for name in all_strategies:
-        s = (_rb(ticker, df, prm) if name == "RubberBand"  else
-             _52(ticker, df)      if name == "52wkLow"     else
-             _mr(ticker, df)      if name == "MomReversal" else
-             _gd(ticker, df)      if name == "GapDown"     else
-             _vs(ticker, df)      if name == "VolumeSpike" else
-             _pb(ticker, df)      if name == "Pullback50"  else None)
+        s = (_rb(ticker, df, prm)  if name == "RubberBand"   else
+             _rsi(ticker, df)      if name == "RSIRecovery"  else
+             _52(ticker, df)       if name == "52wkLow"      else
+             _mr(ticker, df)       if name == "MomReversal"  else
+             _gd(ticker, df)       if name == "GapDown"      else
+             _vs(ticker, df)       if name == "VolumeSpike"  else
+             _pb(ticker, df)       if name == "Pullback50"   else None)
         if s:
             s["seasonal"] = (name in seasonal_set)
             sigs.append(s)
