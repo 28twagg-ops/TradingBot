@@ -46,3 +46,6 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-04 19:51:27,2026-05-04,BUY,HUBB,Pullback50,512.55,58.99,0,0,0,,bull,491.56
 2026-05-04 19:51:27,2026-05-04,BUY,KIM,Pullback50,23.31,58.99,0,0,0,,bull,491.53
 2026-05-04 19:51:27,2026-05-04,BUY,LDOS,MomReversal,148.9,58.99,0,0,0,,bull,491.52
+2026-05-05 13:46:06,2026-05-05,SELL,CPAY,Pullback50,304.94,57.75,-2.1,-1.24,1,stop_loss (-2.1%),bull,487.42
+2026-05-05 13:46:26,2026-05-05,SELL,GD,Pullback50,344.91,58.33,-1.12,-0.66,1,stop_loss (-1.1%),bull,487.42
+2026-05-05 13:46:47,2026-05-05,SELL,LDOS,MomReversal,144.67,57.16,-3.1,-1.83,1,stop_loss (-3.1%),bull,487.41
