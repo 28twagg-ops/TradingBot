@@ -327,3 +327,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-05 18:00:39,exits,bull,488.72,310.39,0,0,0,3,CNP|CVX|KIM,both
 2026-05-05 18:15:30,exits,bull,489.06,310.39,0,0,0,3,CNP|CVX|KIM,both
 2026-05-05 18:30:40,exits,bull,489.12,310.39,0,0,0,3,CNP|CVX|KIM,both
+2026-05-05 18:45:44,exits,bull,489.25,310.39,0,0,0,3,CNP|CVX|KIM,both
