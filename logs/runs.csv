@@ -303,3 +303,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-04 21:30:30,summary,bull,492.61,78.68,0,0,0,7,CNP|CPAY|CVX|GD|HUBB|KIM|LDOS,both
 2026-05-04 21:45:23,summary,bull,492.61,78.68,0,0,0,7,CNP|CPAY|CVX|GD|HUBB|KIM|LDOS,both
 2026-05-04 21:46:04,summary,bull,492.61,78.68,0,0,0,7,CNP|CPAY|CVX|GD|HUBB|KIM|LDOS,both
+2026-05-05 13:00:36,summary,bull,493.43,78.68,0,0,0,7,CNP|CPAY|CVX|GD|HUBB|KIM|LDOS,both
