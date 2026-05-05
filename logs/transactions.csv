@@ -60,3 +60,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-05 19:50:06,2026-05-05,BUY,DVA,VolumeSpike,156.05,58.72,0,0,0,,bull,489.2
 2026-05-05 19:50:06,2026-05-05,BUY,ETN,GapDown,410.3,58.72,0,0,0,,bull,489.19
 2026-05-05 19:50:06,2026-05-05,BUY,ETN,VolumeSpike,410.3,58.72,0,0,0,,bull,489.17
+2026-05-05 20:00:50,2026-05-05,SELL,CCL,MomReversal,25.79,58.16,-0.96,-0.56,0,stop_loss (-1.0%),bull,488.61

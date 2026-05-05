@@ -1,34 +1,34 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-05-05 19:50 UTC*
+*Updated: 2026-05-05 20:04 UTC*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $489.24 |
+| **Current Equity** | $488.62 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | -2.15% ($-10.76) |
+| **Total Return** | -2.28% ($-11.38) |
 | **Peak Equity** | $507.73 |
 | **Max Drawdown** | -4.71% |
 | **Current Cash** | $78.26 |
 | **Open Positions** | 6 (AES|CCL|CL|CVX|DVA|ETN) |
-| **Last Bot Run** | 2026-05-05 19:50:07 |
+| **Last Bot Run** | 2026-05-05 20:04:24 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 27 |
-| **Wins / Losses** | 11 / 16 |
-| **Win Rate** | 40.7% |
+| **Total Closed Trades** | 28 |
+| **Wins / Losses** | 11 / 17 |
+| **Win Rate** | 39.3% |
 | **Avg Win** | +1.92% |
-| **Avg Loss** | -2.91% |
-| **Profit Factor** | 0.45x |
+| **Avg Loss** | -2.79% |
+| **Profit Factor** | 0.44x |
 | **Avg Hold Days** | 2.0d |
-| **Total Realised P&L** | $-16.46 |
+| **Total Realised P&L** | $-17.02 |
 
 ## Exit Reasons
 | Exit Type | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `stop_loss` | 12 | 0% | -3.56% |
+| `stop_loss` | 13 | 0% | -3.36% |
 | `midline` | 10 | 70% | +1.74% |
 | `max_hold` | 5 | 80% | -0.01% |
 
@@ -37,8 +37,8 @@
 |---|---|---|---|
 | `Pullback50` | 15 | 47% | -0.30% |
 | `VolumeSpike` | 5 | 40% | -0.76% |
+| `MomReversal` | 4 | 25% | -2.29% |
 | `GapDown` | 3 | 33% | -0.79% |
-| `MomReversal` | 3 | 33% | -2.74% |
 | `unknown` | 1 | 0% | -6.47% |
 
 ## Equity Timeline
@@ -56,11 +56,12 @@
 | 2026-05-02 | $493.23 | +0.04 |
 | 2026-05-03 | $493.23 | +0.00 |
 | 2026-05-04 | $492.61 | -0.62 |
-| 2026-05-05 | $489.24 | -3.37 |
+| 2026-05-05 | $488.62 | -3.99 |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
 |---|---|---|---|---|---|---|
+| 2026-05-05 | **CCL** | `MomReversal` | -0.96% | $-0.56 | 0d | stop_loss (-1.0%) |
 | 2026-05-05 | **KIM** | `Pullback50` | +1.29% | $+0.76 | 1d | midline (+1.3%) |
 | 2026-05-05 | **CVX** | `Pullback50` | +0.67% | $+0.39 | 1d | midline (+0.7%) |
 | 2026-05-05 | **CNP** | `Pullback50` | +1.33% | $+0.78 | 1d | midline (+1.3%) |
@@ -80,7 +81,6 @@
 | 2026-04-28 | **AEE** | `Pullback50` | -0.73% | $-0.71 | 1d | midline (-0.7%) |
 | 2026-04-28 | **ACGL** | `Pullback50` | +0.15% | $+0.14 | 1d | max_hold filled at open |
 | 2026-04-28 | **CBRE** | `VolumeSpike` | -0.93% | $-0.55 | 5d | midline filled at open |
-| 2026-04-28 | **AIZ** | `VolumeSpike` | +2.57% | $+1.51 | 5d | midline filled at open |
 
 ---
 *Auto-generated after every EOD scan. View on GitHub: `logs/dashboard.md`*
