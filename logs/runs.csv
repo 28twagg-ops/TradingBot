@@ -358,3 +358,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-06 16:00:44,exits,bull,505.24,196.16,0,0,0,4,AES|CL|DVA|ETN,both
 2026-05-06 16:06:43,exits,bull,505.03,196.16,0,0,0,4,AES|CL|DVA|ETN,both
 2026-05-06 16:13:49,exits,bull,504.67,196.16,0,0,0,4,AES|CL|DVA|ETN,both
+2026-05-06 16:15:07,exits,bull,504.42,196.16,0,0,0,4,AES|CL|DVA|ETN,both
