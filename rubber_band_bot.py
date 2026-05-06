@@ -1,22 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-RUBBER BAND BOT v8  *** UPDATED 2026-05-05 ***
+RUBBER BAND BOT v7  *** THIS IS THE CORRECT FIXED FILE — 2026-05-02 ***
 ========================================================================
-FIXES IN THIS VERSION (v8):
-  1. ensure_stop()    — switched from stop-LIMIT to stop-MARKET (GTC)
-                        stop-limit at -1% won't fill on a -6% overnight gap;
-                        stop-market fills at the open price no matter how big the gap.
-  2. place_all_stops()— NEW: called after every buy loop AND at the start of exits.
-                        Ensures every position always has a GTC stop, even if
-                        placement failed on a prior run or bot missed a morning run.
-  3. cancel_stop_orders() — called before every software-triggered sell to avoid
-                        double-sell conflicts with the GTC stop.
-  4. log_tx()         — explicit file flush + stderr fallback so no transaction
-                        is ever silently lost even if disk write fails.
-  5. run_exits()      — calls place_all_stops() at start to catch gaps from missed runs.
-  6. run_scan()       — calls place_all_stops() after buy loop (5s wait for fills).
-========================================================================
-FIXES IN v7:
+FIXES IN THIS VERSION:
   1. enrich()      — entry date now uses NEWEST BUY order (not oldest order of any side)
   2. detect_mode() — scan window is 3:45-4:10pm ET using real Eastern time (zoneinfo)
   3. run_bot.yml   — uses explicit pip install (no requirements.txt needed)
@@ -120,8 +106,7 @@ UNIVERSE = "both"
 #     full sizing to outweigh the savings from cutting size.
 SEASONAL_SIZE_PCT    = 0.20   # primary + secondary scheduled strategies
 OFFSCHEDULE_SIZE_PCT = 0.12   # all other strategies
-CASH_RESERVE_PCT     = 0.05   # sim-validated at 5% (Test 18)
-MIN_TRADE_SIZE       = 20.0   # never scale a position below this dollar amount
+CASH_RESERVE_PCT     = 0.05   # sim-validated at 10%
 
 # ---- Exit rules (v7 -- deep param sweep validated, 7yr 899 stocks) ----------
 # Midline only: price crosses above 20-day moving average
@@ -200,7 +185,7 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
     handlers=[logging.StreamHandler()]
 )
-log = logging.getLogger("RBv8")
+log = logging.getLogger("RBv7")
 
 
 # =============================================================================
@@ -688,20 +673,16 @@ def cancel_stop_orders(client, ticker):
 
 
 def ensure_stop(client, ticker, entry_price, qty):
-    """Place a GTC stop-MARKET sell order.
-    Trigger = entry × (1 + EXIT_STOP_LOSS)   e.g. -0.5%
+    """Place a GTC stop-limit sell order.
+    Trigger  = entry × (1 + EXIT_STOP_LOSS)        e.g. -2%
+    Limit    = entry × (1 + EXIT_STOP_LOSS × 2)    e.g. -4%  (2× slippage floor)
 
-    Why stop-MARKET (not stop-LIMIT):
-      A stop-LIMIT at -1% will NOT fill if the stock gaps down -6% overnight —
-      the order triggers but the price is already below the limit, so it sits
-      unfilled until the software exit catches it at 9:35am (or never if the
-      morning run misses like May 1st). A stop-MARKET converts to a market order
-      the instant the trigger is breached, filling at whatever the open price is.
-      You still lose the gap amount, but you're OUT at the open instead of
-      riding further intraday decline.
-
-    Skipped silently if a GTC stop already exists for this ticker."""
-    stop_price = round(entry_price * (1.0 + EXIT_STOP_LOSS), 2)
+    If price drops normally the limit fills between -2% and -4%.
+    If price gaps past -4% the limit won't fill — the 9:35am software
+    exit catches that and fires a market sell as fallback.
+    Skipped silently if a stop order already exists."""
+    stop_price  = round(entry_price * (1.0 + EXIT_STOP_LOSS), 2)
+    limit_price = round(entry_price * (1.0 + EXIT_STOP_LOSS * 2), 2)
     try:
         # Check if a stop-sell already exists for this ticker
         req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[ticker])
@@ -711,43 +692,21 @@ def ensure_stop(client, ticker, entry_price, qty):
                     and o.side == OrderSide.SELL):
                 log.info(f"  STOP already live {ticker} @ ${o.stop_price}")
                 return True
-        # Place new GTC stop-MARKET order
-        o = client.submit_order(StopOrderRequest(
+        # Place new GTC stop-limit order
+        o = client.submit_order(StopLimitOrderRequest(
             symbol=ticker,
             qty=str(round(qty, 9)),
             side=OrderSide.SELL,
             time_in_force=TimeInForce.GTC,
             stop_price=stop_price,
+            limit_price=limit_price,
         ))
-        log.info(f"  STOP-MARKET placed {ticker}  qty={qty:.4f}  "
-                 f"stop=${stop_price:.2f}  id={o.id}")
+        log.info(f"  STOP-LIMIT placed {ticker}  qty={qty:.4f}  "
+                 f"stop=${stop_price:.2f}  limit=${limit_price:.2f}  id={o.id}")
         return True
     except Exception as e:
         log.warning(f"  STOP placement failed {ticker}: {e}")
         return False
-
-
-def place_all_stops(client):
-    """Ensure every open Alpaca position has a GTC stop-market order.
-
-    Called:
-      • After the buy loop in run_scan() — places stops on newly bought positions.
-        Waits 5s first so market orders have time to fill and appear in positions.
-      • At the start of run_exits() — catches any position that lost its stop
-        (e.g. stop was triggered on a small dip but re-entered, or morning run
-        missed entirely like May 1st leaving positions unprotected all day).
-
-    safe to call repeatedly — ensure_stop() skips tickers that already have a stop."""
-    try:
-        positions = client.get_all_positions()
-        if not positions:
-            return
-        log.info(f"  place_all_stops: checking {len(positions)} positions...")
-        for p in positions:
-            ensure_stop(client, p.symbol,
-                        float(p.avg_entry_price), float(p.qty))
-    except Exception as e:
-        log.warning(f"  place_all_stops failed: {e}")
 
 
 def do_sell(client, ticker):
@@ -827,35 +786,17 @@ TX_F = ["timestamp","date","action","ticker","strategy","price","dollar_amount",
 
 def log_tx(action, ticker, strategy, price, dollars, rgm, equity,
            pnl_pct=0, pnl_dollar=0, hold_days=0, exit_reason=""):
-    row_data = {
-        "timestamp":    datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "date":         str(date.today()),
-        "action":       action,
-        "ticker":       ticker,
-        "strategy":     strategy,
-        "price":        round(price, 2),
-        "dollar_amount":round(dollars, 2),
-        "pnl_pct":      round(pnl_pct, 2),
-        "pnl_dollar":   round(pnl_dollar, 2),
-        "hold_days":    hold_days,
-        "exit_reason":  exit_reason,
-        "regime":       rgm,
-        "equity_after": round(equity, 2),
-    }
-    try:
-        init = not TX_FILE.exists()
-        with open(TX_FILE, "a", newline="") as f:
-            w = csv.DictWriter(f, fieldnames=TX_F)
-            if init: w.writeheader()
-            w.writerow(row_data)
-            f.flush()          # force write to disk — prevents silent data loss
-            os.fsync(f.fileno())
-        log.info(f"  TX logged: {action} {ticker}  "
-                 f"{'P&L '+str(round(pnl_pct,2))+'%' if action=='SELL' else '$'+str(round(dollars,2))}")
-    except Exception as e:
-        log.error(f"  TX LOG FAILED {action} {ticker}: {e}")
-        # Fallback: print to stdout so GitHub Actions always captures it in run logs
-        print(f"TX_FALLBACK|{row_data}", flush=True)
+    init = not TX_FILE.exists()
+    with open(TX_FILE, "a", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=TX_F)
+        if init: w.writeheader()
+        w.writerow({"timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "date": str(date.today()), "action": action, "ticker": ticker,
+                    "strategy": strategy, "price": round(price, 2),
+                    "dollar_amount": round(dollars, 2), "pnl_pct": round(pnl_pct, 2),
+                    "pnl_dollar": round(pnl_dollar, 2), "hold_days": hold_days,
+                    "exit_reason": exit_reason, "regime": rgm,
+                    "equity_after": round(equity, 2)})
 
 RUN_F = ["timestamp","mode","regime","equity","cash","signals","entries",
          "exits","open_positions","tickers","universe"]
@@ -1088,7 +1029,7 @@ def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells
                      f"| {s.get('rsi',0):.1f} | {s.get('vol_z',0):.2f} | {s.get('trigger','')} |")
     else:
         L.append("_No signals today._")
-    L += ["", "---", f"_RBv8{datetime.now().strftime('%H:%M UTC')}_"]
+    L += ["", "---", f"_RBv7 {datetime.now().strftime('%H:%M UTC')}_"]
     fname.write_text("\n".join(L), encoding="utf-8")
     log.info(f"  Daily log -> {fname}")
 
@@ -1253,7 +1194,7 @@ def write_weekly(client, equity, cash):
           f"- Month: **{MN[nm]}**",
           f"- Primary: **{ns['p']}**   Secondary: **{ns['s']}**",
           f"- Note: {ns['note']}", "", "---",
-          f"_RBv8{datetime.now().strftime('%Y-%m-%d %H:%M UTC')}_"]
+          f"_RBv7 {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}_"]
     fname.write_text("\n".join(L), encoding="utf-8")
     log.info(f"  Weekly summary -> {fname}")
 
@@ -1338,10 +1279,6 @@ def run_summary(client, equity, cash, rgm):
 # =============================================================================
 
 def run_exits(client, equity, cash, rgm):
-    # Ensure every position has a GTC stop-market order.
-    # Catches positions that lost their stop (e.g. May 1st missed morning run).
-    place_all_stops(client)
-
     positions = enrich(client, get_positions(client))
     if not positions:
         hdr("MORNING CHECK"); blank(); row("No open positions."); blank(); ftr()
@@ -1579,48 +1516,18 @@ def run_scan(client, equity, cash, rgm):
         blank()
     ftr()
 
-    # ── Sort signals: seasonal first so they always get cash priority ────
-    all_sigs.sort(key=lambda s: (0 if s.get("seasonal") else 1))
-
-    # ── Signal-scaled position sizing ─────────────────────────────────────
-    # When few signals: use standard sizes (20% / 12%).
-    # When many signals: scale down equally so we participate in more setups
-    # and get better statistical coverage. Caps at standard sizes; never
-    # goes below MIN_TRADE_SIZE.
-    already_held   = set(positions.keys())
-    viable         = [s for s in all_sigs if s["ticker"] not in already_held]
-    n_viable       = max(1, len(viable))
-    n_sea_pending  = sum(1 for s in viable if s.get("seasonal"))
-
-    equal_share = avail / n_viable
-    sea_da = max(MIN_TRADE_SIZE,
-                 min(equity * SEASONAL_SIZE_PCT, equal_share))
-    off_da = max(MIN_TRADE_SIZE,
-                 min(equity * OFFSCHEDULE_SIZE_PCT,
-                     equal_share * (OFFSCHEDULE_SIZE_PCT / SEASONAL_SIZE_PCT)))
-    scale_active = equal_share < equity * SEASONAL_SIZE_PCT
-
     # Entries
     hdr("ENTRY ORDERS")
     cash = float(client.get_account().cash); avail = max(0.0, cash - reserve)
-    if scale_active and n_viable > 1:
-        row(f"Signal scaling: {n_viable} signals → "
-            f"sea=${sea_da:.0f} off=${off_da:.0f}  "
-            f"(max sea=${equity*SEASONAL_SIZE_PCT:.0f} off=${equity*OFFSCHEDULE_SIZE_PCT:.0f})")
     entries = 0; buys_log = []
-    n_unfilled_sea = n_sea_pending  # decrements as seasonal signals get filled
     for sig in all_sigs:
         ticker = sig["ticker"]; strategy = sig["strategy"]
         is_seasonal = sig.get("seasonal", False)
+        lp = get_positions(client)
         skip = ""
         if not pdt_ok(pdt):   skip = "PDT limit"
         elif avail <= 1.0:    skip = "reserve floor"
-        da = sea_da if is_seasonal else off_da
-        # Seasonal reserve: don't let off-schedule buys crowd out unfilled
-        # seasonal signals — always keep room for at least one seasonal entry
-        if not skip and not is_seasonal and n_unfilled_sea > 0:
-            if avail - da < sea_da:
-                skip = "seasonal reserve"
+        da = equity * (SEASONAL_SIZE_PCT if is_seasonal else OFFSCHEDULE_SIZE_PCT)
         if not skip and da > avail: skip = "not enough cash"
         tier = "S" if is_seasonal else "o"
         if skip:
@@ -1628,8 +1535,6 @@ def run_scan(client, equity, cash, rgm):
         row(f"  ENTER [{tier}] {ticker}  {strategy}", f"${da:.2f}")
         if do_buy(client, ticker, da, strategy):
             entries += 1; avail -= da
-            pdt.append(str(today))   # track this buy for PDT cap enforcement
-            if is_seasonal: n_unfilled_sea = max(0, n_unfilled_sea - 1)
             log_tx("BUY", ticker, strategy, sig["close"], da, rgm,
                    float(client.get_account().equity))
             buys_log.append({"t": datetime.now().strftime("%H:%M"),
@@ -1637,16 +1542,6 @@ def run_scan(client, equity, cash, rgm):
                               "px": sig["close"], "$": da})
     if entries == 0 and not all_sigs: row("  No entries placed.")
     ftr()
-
-    # Place GTC stop-market orders for all open positions.
-    # Wait 5s first so newly submitted market buys have time to fill and
-    # appear in Alpaca positions before we try to attach stops to them.
-    if entries > 0:
-        hdr("GTC STOP PLACEMENT")
-        row(f"Waiting 5s for {entries} buy(s) to fill...")
-        ftr()
-        time.sleep(5)
-    place_all_stops(client)
 
     save_pdt(pdt)
     acct2 = client.get_account()
