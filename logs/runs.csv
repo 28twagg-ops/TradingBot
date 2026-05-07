@@ -403,3 +403,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-07 16:30:38,exits,bull,502.61,443.94,0,0,0,1,AES,both
 2026-05-07 16:45:37,exits,bull,502.61,443.94,0,0,0,1,AES,both
 2026-05-07 17:00:39,exits,bull,502.61,443.94,0,0,0,1,AES,both
+2026-05-07 17:15:36,exits,bull,502.61,443.94,0,0,0,1,AES,both
