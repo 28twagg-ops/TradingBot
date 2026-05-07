@@ -85,3 +85,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-07 19:49:11,2026-05-07,BUY,CINF,Pullback50,161.73,60.27,0,0,0,,bull,502.16
 2026-05-07 19:49:11,2026-05-07,BUY,DASH,VolumeSpike,171.3,60.27,0,0,0,,bull,502.17
 2026-05-07 19:49:11,2026-05-07,BUY,EA,Pullback50,200.88,60.27,0,0,0,,bull,502.17
+2026-05-07 20:00:49,2026-05-07,SELL,AKAM,GapDown,116.69,60.04,-0.38,-0.23,0,midline (-0.4%),bull,502.03

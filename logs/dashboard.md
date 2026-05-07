@@ -1,35 +1,35 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-05-07 19:49 UTC*
+*Updated: 2026-05-07 20:04 UTC*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $502.20 |
+| **Current Equity** | $505.93 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | +0.44% ($+2.20) |
+| **Total Return** | +1.19% ($+5.93) |
 | **Peak Equity** | $507.73 |
 | **Max Drawdown** | -4.71% |
 | **Current Cash** | $80.37 |
 | **Open Positions** | 7 (AEP|AES|AKAM|CF|CINF|DASH|EA) |
-| **Last Bot Run** | 2026-05-07 19:49:12 |
+| **Last Bot Run** | 2026-05-07 20:04:23 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 39 |
-| **Wins / Losses** | 14 / 25 |
-| **Win Rate** | 35.9% |
+| **Total Closed Trades** | 40 |
+| **Wins / Losses** | 14 / 26 |
+| **Win Rate** | 35.0% |
 | **Avg Win** | +3.47% |
-| **Avg Loss** | -2.40% |
-| **Profit Factor** | 0.81x |
-| **Avg Hold Days** | 1.7d |
-| **Total Realised P&L** | $-7.44 |
+| **Avg Loss** | -2.32% |
+| **Profit Factor** | 0.80x |
+| **Avg Hold Days** | 1.6d |
+| **Total Realised P&L** | $-7.67 |
 
 ## Exit Reasons
 | Exit Type | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
 | `stop_loss` | 21 | 0% | -2.67% |
-| `midline` | 13 | 77% | +3.45% |
+| `midline` | 14 | 71% | +3.18% |
 | `max_hold` | 5 | 80% | -0.01% |
 
 ## Strategy Breakdown
@@ -38,7 +38,7 @@
 | `Pullback50` | 17 | 47% | -0.61% |
 | `MomReversal` | 9 | 11% | -1.70% |
 | `VolumeSpike` | 7 | 57% | +3.84% |
-| `GapDown` | 4 | 25% | -1.33% |
+| `GapDown` | 5 | 20% | -1.14% |
 | `unknown` | 1 | 0% | -6.47% |
 | `RSIRecovery` | 1 | 0% | -0.71% |
 
@@ -59,11 +59,12 @@
 | 2026-05-04 | $492.61 | -0.62 |
 | 2026-05-05 | $490.93 | -1.68 |
 | 2026-05-06 | $506.37 | +15.44 |
-| 2026-05-07 | $502.20 | -4.17 |
+| 2026-05-07 | $505.93 | -0.44 |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
 |---|---|---|---|---|---|---|
+| 2026-05-07 | **AKAM** | `GapDown` | -0.38% | $-0.23 | 0d | midline (-0.4%) |
 | 2026-05-07 | **AES** | `MomReversal` | -0.67% | $-0.40 | 2d | stop_loss (-0.7%) |
 | 2026-05-07 | **COO** | `MomReversal` | -0.52% | $-0.31 | 1d | stop_loss (-0.5%) |
 | 2026-05-07 | **CPAY** | `MomReversal` | -1.28% | $-0.78 | 1d | stop_loss (-1.3%) |
@@ -83,7 +84,6 @@
 | 2026-05-05 | **LDOS** | `MomReversal` | -3.10% | $-1.83 | 1d | stop_loss (-3.1%) |
 | 2026-05-05 | **GD** | `Pullback50` | -1.12% | $-0.66 | 1d | stop_loss (-1.1%) |
 | 2026-05-05 | **CPAY** | `MomReversal` | -2.10% | $-1.24 | 1d | stop_loss (-2.1%) |
-| 2026-05-04 | **ALGN** | `Pullback50` | +0.22% | $+0.21 | 4d | max_hold 4d (+0.2%) |
 
 ---
 *Auto-generated after every EOD scan. View on GitHub: `logs/dashboard.md`*
