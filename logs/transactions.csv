@@ -77,3 +77,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-07 13:45:48,2026-05-07,SELL,APH,Pullback50,135.35,59.72,-1.87,-1.14,1,stop_loss (-1.9%),bull,505.15
 2026-05-07 14:31:02,2026-05-07,SELL,CPAY,MomReversal,301.03,60.08,-1.28,-0.78,1,stop_loss (-1.3%),bull,502.88
 2026-05-07 15:45:56,2026-05-07,SELL,COO,MomReversal,60.98,60.55,-0.52,-0.31,1,stop_loss (-0.5%),bull,502.63
+2026-05-07 19:15:54,2026-05-07,SELL,AES,Pullback50,14.26,58.32,-0.67,-0.4,2,stop_loss (-0.7%),bull,502.26
