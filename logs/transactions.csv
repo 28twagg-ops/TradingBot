@@ -89,3 +89,7 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-08 13:45:58,2026-05-08,SELL,CF,GapDown,117.92,59.71,-0.93,-0.56,1,stop_loss (-0.9%),bull,513.72
 2026-05-08 13:46:18,2026-05-08,SELL,DASH,VolumeSpike,165.02,58.18,-3.46,-2.09,1,stop_loss (-3.5%),bull,513.56
 2026-05-08 14:45:57,2026-05-08,SELL,AEP,Pullback50,131.23,59.94,-0.55,-0.33,1,stop_loss (-0.6%),bull,513.64
+2026-05-08 19:49:07,2026-05-08,BUY,COIN,GapDown,197.92,61.66,0,0,0,,bull,513.73
+2026-05-08 19:49:08,2026-05-08,BUY,CPAY,RSIRecovery,341.68,102.76,0,0,0,,bull,513.62
+2026-05-08 19:49:08,2026-05-08,BUY,CTVA,Pullback50,81.22,61.66,0,0,0,,bull,513.61
+2026-05-08 19:49:08,2026-05-08,BUY,D,Pullback50,61.88,61.66,0,0,0,,bull,513.61
