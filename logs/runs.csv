@@ -432,3 +432,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-08 14:15:31,exits,bull,513.59,272.83,0,0,0,4,AEP|AES|CINF|EA,both
 2026-05-08 14:30:35,exits,bull,514.01,272.83,0,0,0,4,AEP|AES|CINF|EA,both
 2026-05-08 14:45:57,exits,bull,513.65,272.83,0,0,1,4,AEP|AES|CINF|EA,both
+2026-05-08 15:00:35,exits,bull,513.67,332.75,0,0,0,3,AES|CINF|EA,both
