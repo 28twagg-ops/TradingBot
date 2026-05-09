@@ -631,19 +631,26 @@ def cancel_stop_orders(client, ticker):
     except Exception as e:
         log.warning(f"  cancel_stop_orders failed {ticker}: {e}")
 
-def ensure_stop(client, ticker, entry_price, qty):
-    """Place GTC stop-MARKET sell for the given qty.
-    Skipped silently if a GTC stop already exists.
+def ensure_stop(client, ticker, entry_price, qty, stop_loss_pct=None):
+    """Place a GTC stop sell for the given qty.
+
+    Order type preference (automatic fallback):
+      1. stop-MARKET  — preferred; fills at open price no matter how large the gap.
+      2. stop-LIMIT   — automatic fallback if the asset/broker rejects stop-market
+                        (e.g. Alpaca crypto: error 40010001 "invalid order type").
+                        limit_price = stop_price × 0.995 (0.5% buffer below trigger).
 
     Fractional-share handling: Alpaca rejects GTC orders on fractional qty.
-    We floor to whole shares. If the position is < 1 share the stop is skipped
-    entirely — the 9:35am software exit will catch it instead.
-    """
-    stop_price = round(entry_price * (1.0 + EXIT_STOP_LOSS), 2)
+    Floor to whole shares. < 1 share → skipped, software exit catches it instead.
+
+    stop_loss_pct: override the module default (EXIT_STOP_LOSS). Used by crypto
+    helpers which pass CRYPTO_STOP_LOSS directly."""
+    pct        = stop_loss_pct if stop_loss_pct is not None else EXIT_STOP_LOSS
+    stop_price = round(entry_price * (1.0 + pct), 4)
     stop_qty   = math.floor(qty)
     if stop_qty < 1:
-        log.warning(f"  STOP skipped {ticker}: position is {qty:.4f} shares "
-                    f"(<1 whole share) — 9:35am software exit will handle it")
+        log.warning(f"  STOP skipped {ticker}: position is {qty:.6f} shares "
+                    f"(<1 whole share) — software exit will handle it")
         return False
     try:
         req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[ticker])
@@ -653,16 +660,38 @@ def ensure_stop(client, ticker, entry_price, qty):
                     and o.side == OrderSide.SELL):
                 log.info(f"  STOP already live {ticker} @ ${o.stop_price}")
                 return True
-        o = client.submit_order(StopOrderRequest(
+
+        # ── Attempt 1: stop-MARKET (best gap protection) ─────────────────────
+        try:
+            o = client.submit_order(StopOrderRequest(
+                symbol=ticker,
+                qty=str(stop_qty),
+                side=OrderSide.SELL,
+                time_in_force=TimeInForce.GTC,
+                stop_price=stop_price,
+            ))
+            log.info(f"  STOP-MARKET placed {ticker}  qty={stop_qty} (pos={qty:.6f})  "
+                     f"stop=${stop_price:.4f}  id={o.id}")
+            return True
+        except Exception as e1:
+            if "invalid order type" not in str(e1).lower():
+                raise   # unexpected error — bubble up
+
+        # ── Attempt 2: stop-LIMIT fallback (crypto / restricted assets) ──────
+        limit_price = round(stop_price * 0.995, 4)  # 0.5% buffer below trigger
+        o = client.submit_order(StopLimitOrderRequest(
             symbol=ticker,
             qty=str(stop_qty),
             side=OrderSide.SELL,
             time_in_force=TimeInForce.GTC,
             stop_price=stop_price,
+            limit_price=limit_price,
         ))
-        log.info(f"  STOP-MARKET placed {ticker}  qty={stop_qty} (pos={qty:.4f})  "
-                 f"stop=${stop_price:.2f}  id={o.id}")
+        log.info(f"  STOP-LIMIT placed {ticker}  qty={stop_qty} (pos={qty:.6f})  "
+                 f"stop=${stop_price:.4f}  limit=${limit_price:.4f}  id={o.id}  "
+                 f"[stop-market rejected, using stop-limit fallback]")
         return True
+
     except Exception as e:
         log.warning(f"  STOP placement failed {ticker}: {e}")
         return False
@@ -1666,15 +1695,21 @@ def _crypto_signals(pairs):
 # =============================================================================
 
 def _crypto_ensure_stop(client, sym, entry_price, qty):
-    """Place GTC stop-MARKET for a crypto position.
-    Uses CRYPTO_STOP_LOSS (-1.5%) instead of stock EXIT_STOP_LOSS (-0.5%).
-    Mirrors rubber_band_bot.py ensure_stop() exactly — same whole-share floor,
-    same idempotency check, same logging."""
-    stop_price = round(entry_price * (1.0 + CRYPTO_STOP_LOSS), 4)
-    stop_qty   = math.floor(qty)   # Alpaca rejects GTC on fractional qty
+    """Place GTC stop-LIMIT for a crypto position.
+
+    KEY DIFFERENCE vs rubber_band_bot.py:
+      Alpaca does NOT support stop-MARKET orders for crypto (error 40010001).
+      We use stop-LIMIT instead, with limit_price = stop_price × 0.995 (0.5%
+      below trigger). This means on a fast gap we could be skipped if price blows
+      through both levels, but it's the only stop type Alpaca allows on crypto.
+
+    Uses CRYPTO_STOP_LOSS (-1.5%) — wider than stock stop (-0.5%)."""
+    stop_price  = round(entry_price * (1.0 + CRYPTO_STOP_LOSS), 4)
+    limit_price = round(stop_price  * 0.995, 4)   # 0.5% below trigger
+    stop_qty    = math.floor(qty)   # Alpaca rejects GTC on fractional qty
     if stop_qty < 1:
         log.warning(f"  CRYPTO STOP skipped {sym}: qty={qty:.6f} < 1 whole unit "
-                    f"— software exit will handle it")
+                    f"— software P&L check will handle it")
         return False
     try:
         req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[sym])
@@ -1683,15 +1718,16 @@ def _crypto_ensure_stop(client, sym, entry_price, qty):
                     and o.side == OrderSide.SELL):
                 log.info(f"  CRYPTO STOP already live {sym} @ ${o.stop_price}")
                 return True
-        o = client.submit_order(StopOrderRequest(
+        o = client.submit_order(StopLimitOrderRequest(
             symbol=sym,
             qty=str(stop_qty),
             side=OrderSide.SELL,
             time_in_force=TimeInForce.GTC,
             stop_price=stop_price,
+            limit_price=limit_price,
         ))
-        log.info(f"  CRYPTO STOP-MARKET placed {sym}  qty={stop_qty} (pos={qty:.6f})  "
-                 f"stop=${stop_price:.4f}  id={o.id}")
+        log.info(f"  CRYPTO STOP-LIMIT placed {sym}  qty={stop_qty} (pos={qty:.6f})  "
+                 f"stop=${stop_price:.4f}  limit=${limit_price:.4f}  id={o.id}")
         return True
     except Exception as e:
         log.warning(f"  CRYPTO STOP placement failed {sym}: {e}")
@@ -1821,7 +1857,7 @@ def run_crypto_weekend(client, equity, cash):
     row("Stop",    f"{CRYPTO_STOP_LOSS*100:.1f}%  (wider for crypto volatility)")
     row("Size",    f"{CRYPTO_POSITION_PCT*100:.0f}% per coin  "
                    f"(${equity*CRYPTO_POSITION_PCT:,.0f} target)")
-    row("Stop method", "GTC stop-MARKET (whole units) — rubber band style")
+    row("Stop method", "GTC stop-LIMIT (crypto only — stop-market not supported)")
     row("Sell method", "DAY limit 0.2% below → 4×5s poll → market fallback")
     ftr()
 
