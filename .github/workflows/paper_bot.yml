@@ -1,0 +1,129 @@
+name: Paper Bot 📋
+
+# ─── SCHEDULE ────────────────────────────────────────────────────────────────
+# Same cron times as the live bot but paper-only.
+# Runs at 9:35am ET (exits) and 3:50pm ET (scan+entries).
+# 4 crons cover EDT and EST automatically via Python's zoneinfo.
+
+on:
+  schedule:
+    # ── Weekday stock runs ─────────────────────────────────────────────────
+    # Morning exits check: 9:35am ET
+    - cron: '35 13 * * 1-5'   # EDT (Mar-Nov): 13:35 UTC
+    - cron: '35 14 * * 1-5'   # EST (Nov-Mar): 14:35 UTC
+    # Afternoon scan + entries: 3:50pm ET
+    - cron: '50 19 * * 1-5'   # EDT (Mar-Nov): 19:50 UTC
+    - cron: '50 20 * * 1-5'   # EST (Nov-Mar): 20:50 UTC
+
+    # ── Weekend crypto runs (every 4 hours Sat + Sun) ──────────────────────
+    # Crypto markets are 24/7. Bot scans for RSI oversold signals and
+    # tests the full sell flow (limit → market → partial sell).
+    # Times: midnight, 4am, 8am, noon, 4pm, 8pm UTC on Sat+Sun
+    - cron: '0  0 * * 0,6'
+    - cron: '0  4 * * 0,6'
+    - cron: '0  8 * * 0,6'
+    - cron: '0 12 * * 0,6'
+    - cron: '0 16 * * 0,6'
+    - cron: '0 20 * * 0,6'
+  workflow_dispatch:            # manual "Run workflow" button
+
+permissions:
+  contents: write               # commit logs back to repo
+
+jobs:
+  paper-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────────
+      - name: 📥 Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 2. Python setup ──────────────────────────────────────────────────────
+      - name: 🐍 Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Install dependencies
+        run: pip install alpaca-py yfinance pandas numpy lxml requests
+
+      # ── 3. Detect current run mode ────────────────────────────────────────────
+      - name: 🕐 Detect run mode
+        id: mode
+        run: |
+          MODE=$(python -c "
+          from datetime import datetime
+          import pytz
+          et = pytz.timezone('America/New_York')
+          now = datetime.now(et)
+          h, m = now.hour, now.minute
+          mins = h * 60 + m
+          if abs(mins - (9*60+35)) <= 10:
+              print('exits')
+          elif abs(mins - (15*60+50)) <= 10:
+              print('scan')
+          elif now.weekday() == 5:
+              print('summary')
+          else:
+              print('summary')
+          " 2>/dev/null || echo "summary")
+          echo "MODE=$MODE" >> $GITHUB_OUTPUT
+          echo "Run mode: $MODE"
+
+      # ── 4. Run paper bot ─────────────────────────────────────────────────────
+      - name: 🤖 Run paper bot
+        id: run_bot
+        env:
+          ALPACA_PAPER_KEY:    ${{ secrets.ALPACA_PAPER_KEY }}
+          ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
+        run: |
+          python paper_bot.py 2>&1 | tee /tmp/paper_bot_output.txt
+          EXIT_CODE=${PIPESTATUS[0]}
+          echo "exit_code=$EXIT_CODE" >> $GITHUB_OUTPUT
+          exit $EXIT_CODE
+
+      # ── 5. Generate beautiful step summary ───────────────────────────────────
+      - name: 📊 Generate summary
+        if: always()
+        run: |
+          python generate_paper_summary.py >> $GITHUB_STEP_SUMMARY 2>/dev/null || true
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # If bot output captured, add collapsible log section
+          if [ -f /tmp/paper_bot_output.txt ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "<details>" >> $GITHUB_STEP_SUMMARY
+            echo "<summary>📄 Full bot output (click to expand)</summary>" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            head -200 /tmp/paper_bot_output.txt >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "</details>" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      # ── 6. Show error hint if bot failed ─────────────────────────────────────
+      - name: ❌ Error annotation
+        if: failure()
+        run: |
+          echo "::error title=Paper bot failed::Check the full bot output above. Common causes: missing ALPACA_PAPER_KEY / ALPACA_PAPER_SECRET secrets, API outage, or a code error. Bot output saved in the log step above."
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## ❌ Bot Run FAILED" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Check logs above. Common causes:" >> $GITHUB_STEP_SUMMARY
+          echo "- Missing \`ALPACA_PAPER_KEY\` or \`ALPACA_PAPER_SECRET\` secrets" >> $GITHUB_STEP_SUMMARY
+          echo "- Alpaca API outage" >> $GITHUB_STEP_SUMMARY
+          echo "- Code error in paper_bot.py" >> $GITHUB_STEP_SUMMARY
+
+      # ── 7. Commit logs ───────────────────────────────────────────────────────
+      - name: 💾 Commit logs
+        if: always()
+        run: |
+          git config user.name "paper-bot[auto]"
+          git config user.email "paper-bot@noreply"
+          git add logs/paper/ || true
+          git diff --staged --quiet || git commit -m "paper bot $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push || true
