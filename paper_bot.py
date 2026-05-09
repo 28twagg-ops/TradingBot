@@ -143,7 +143,7 @@ CRYPTO_PAIRS = [
 ]
 CRYPTO_POSITION_PCT = 0.03   # 3% of equity per coin
 CRYPTO_STOP_LOSS    = -0.015  # -1.5% stop (wider than stocks)
-CRYPTO_RSI_ENTRY    = 38      # buy when RSI ≤ this (oversold)
+CRYPTO_RSI_ENTRY    = 70      # raised for initial test run — drop back to 38 after first buys confirmed
 CRYPTO_RSI_EXIT     = 55      # sell partial when RSI ≥ this (recovered)
 
 # ---- Daily entry cap ---------------------------------------------------------
@@ -1616,8 +1616,12 @@ def _fetch_crypto_ohlcv(symbol, days=30):
         df = yf.download(yf_sym, period=f"{days}d", interval="1h",
                          auto_adjust=True, progress=False)
         if df is None or len(df) < 20: return None
-        df.columns = [c.lower() for c in df.columns]
-        df.index   = pd.to_datetime(df.index, utc=True)
+        # yfinance newer versions return MultiIndex columns like ('Close','BTC-USD')
+        if isinstance(df.columns, pd.MultiIndex):
+            df.columns = [c[0].lower() for c in df.columns]
+        else:
+            df.columns = [c.lower() for c in df.columns]
+        df.index = pd.to_datetime(df.index, utc=True)
         return df
     except Exception as e:
         log.warning(f"  crypto fetch failed {symbol}: {e}"); return None
