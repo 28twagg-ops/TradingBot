@@ -143,9 +143,8 @@ CRYPTO_PAIRS = [
 ]
 CRYPTO_POSITION_PCT = 0.03   # 3% of equity per coin
 CRYPTO_STOP_LOSS    = -0.015  # -1.5% stop (wider than stocks)
-CRYPTO_RSI_ENTRY    = 60      # buy when RSI ≤ this (oversold)
+CRYPTO_RSI_ENTRY    = 38      # buy when RSI ≤ this (oversold)
 CRYPTO_RSI_EXIT     = 55      # sell partial when RSI ≥ this (recovered)
-CRYPTO_LOG_DIR      = LOG_DIR / "crypto"
 
 # ---- Daily entry cap ---------------------------------------------------------
 MAX_DAY_TRADES = 5
@@ -1664,7 +1663,8 @@ def run_crypto_weekend(client, equity, cash):
          (limit sell → market fallback, extended-hours path)
       3. Log everything to logs/paper/crypto/
     """
-    CRYPTO_LOG_DIR.mkdir(parents=True, exist_ok=True)
+    crypto_log_dir = LOG_DIR / "crypto"
+    crypto_log_dir.mkdir(parents=True, exist_ok=True)
     now_str = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
     reserve = equity * 0.05  # keep 5% cash reserve
 
