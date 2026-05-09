@@ -30,7 +30,7 @@ GITHUB SECRETS required (separate from live bot secrets):
 ========================================================================
 """
 
-import os, json, time, logging, csv
+import os, json, time, logging, csv, math
 from datetime import datetime, timedelta, date
 from pathlib import Path
 
@@ -44,8 +44,8 @@ from alpaca.trading.requests import (MarketOrderRequest, GetOrdersRequest,
                                       LimitOrderRequest)
 from alpaca.trading.enums    import (OrderSide, TimeInForce, QueryOrderStatus,
                                      OrderType, OrderStatus)
-from alpaca.data.historical  import StockHistoricalDataClient
-from alpaca.data.requests    import StockBarsRequest
+from alpaca.data.historical  import StockHistoricalDataClient, CryptoHistoricalDataClient
+from alpaca.data.requests    import StockBarsRequest, CryptoBarsRequest
 from alpaca.data.timeframe   import TimeFrame
 
 
@@ -107,6 +107,45 @@ TEST_MODE = True
 # Normal mode:         -0.5% stop / 3d hold  →  matches live bot validation.
 EXIT_DAYS_MAX  = 1     if TEST_MODE else 3
 EXIT_STOP_LOSS = -0.001 if TEST_MODE else -0.005
+
+# ---- Extended-hours selling --------------------------------------------------
+# When True: exit signals that fire at 3:50pm place post-market LIMIT sells
+# (extended_hours=True, TimeInForce.DAY) that execute between 4pm and 8pm ET.
+# Benefits:
+#   1. Fills at/near closing price with no overnight exposure on exited positions
+#   2. DAY limit orders work on fractional shares — no GTC fractional rejection
+#   3. If the limit doesn't fill by 8pm (rare), it expires; the 9:35am morning
+#      run re-evaluates and exits with a regular market order.
+# The 9:35am morning run always uses regular market hours (extended hours = off).
+USE_EXTENDED_HOURS_SELL = True
+
+# ---- Crypto weekend mode ----------------------------------------------------
+# On weekends the stock market is closed. This mode runs the paper bot against
+# a small basket of liquid crypto pairs to:
+#   1. Test the full buy → stop → limit-sell → market-fallback flow end-to-end
+#   2. Test extended-hours (24/7) limit sells vs market sells on real fills
+#   3. Accumulate paper P&L data on crypto mean-reversion signals
+#
+# Strategy: RSI(<35) oversold mean-reversion — same concept as stock strategies.
+# Position size: 3% of equity per coin (small, testing focus not returns).
+# Stop: -1.5% (crypto is noisier than stocks; wider stop to survive volatility).
+# Hold: 1 run cycle (~6h); sell on next run if above entry or at stop.
+#
+# Flip to False if you only want weekday stock trading.
+CRYPTO_WEEKEND_MODE = True
+
+CRYPTO_PAIRS = [
+    "BTC/USD",   # Bitcoin — most liquid
+    "ETH/USD",   # Ethereum
+    "SOL/USD",   # Solana — good mean-reversion
+    "AVAX/USD",  # Avalanche
+    "LINK/USD",  # Chainlink
+]
+CRYPTO_POSITION_PCT = 0.03   # 3% of equity per coin
+CRYPTO_STOP_LOSS    = -0.015  # -1.5% stop (wider than stocks)
+CRYPTO_RSI_ENTRY    = 38      # buy when RSI ≤ this (oversold)
+CRYPTO_RSI_EXIT     = 55      # sell partial when RSI ≥ this (recovered)
+CRYPTO_LOG_DIR      = LOG_DIR / "crypto"
 
 # ---- Daily entry cap ---------------------------------------------------------
 MAX_DAY_TRADES = 5
@@ -595,8 +634,18 @@ def cancel_stop_orders(client, ticker):
 
 def ensure_stop(client, ticker, entry_price, qty):
     """Place GTC stop-MARKET sell for the given qty.
-    Skipped silently if a GTC stop already exists."""
+    Skipped silently if a GTC stop already exists.
+
+    Fractional-share handling: Alpaca rejects GTC orders on fractional qty.
+    We floor to whole shares. If the position is < 1 share the stop is skipped
+    entirely — the 9:35am software exit will catch it instead.
+    """
     stop_price = round(entry_price * (1.0 + EXIT_STOP_LOSS), 2)
+    stop_qty   = math.floor(qty)
+    if stop_qty < 1:
+        log.warning(f"  STOP skipped {ticker}: position is {qty:.4f} shares "
+                    f"(<1 whole share) — 9:35am software exit will handle it")
+        return False
     try:
         req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[ticker])
         for o in client.get_orders(req):
@@ -607,12 +656,12 @@ def ensure_stop(client, ticker, entry_price, qty):
                 return True
         o = client.submit_order(StopOrderRequest(
             symbol=ticker,
-            qty=str(round(qty, 9)),
+            qty=str(stop_qty),
             side=OrderSide.SELL,
             time_in_force=TimeInForce.GTC,
             stop_price=stop_price,
         ))
-        log.info(f"  STOP-MARKET placed {ticker}  qty={qty:.4f}  "
+        log.info(f"  STOP-MARKET placed {ticker}  qty={stop_qty} (pos={qty:.4f})  "
                  f"stop=${stop_price:.2f}  id={o.id}")
         return True
     except Exception as e:
@@ -631,9 +680,10 @@ def place_all_stops(client):
     except Exception as e:
         log.warning(f"  place_all_stops failed: {e}")
 
-def do_partial_sell(client, ticker, fraction=PARTIAL_EXIT_FRAC):
+def do_partial_sell(client, ticker, fraction=PARTIAL_EXIT_FRAC, extended_hours=False):
     """Sell FRACTION of the current position (partial exit).
     Cancels existing stop first, then re-places stop on the remaining qty.
+    extended_hours=True: post-market limit (4–8pm ET), works on fractional shares.
     Returns True if the sell was submitted successfully."""
     cancel_stop_orders(client, ticker)
     try:
@@ -642,14 +692,21 @@ def do_partial_sell(client, ticker, fraction=PARTIAL_EXIT_FRAC):
         sell_qty = max(0.001, round(full_qty * fraction, 9))
         remain   = round(full_qty - sell_qty, 9)
         cur      = float(pos.current_price)
-        lim      = round(cur * 0.998, 2)
+        # Extended hours: limit slightly tighter (0.15% below) — still fills easily
+        # at post-market prices which are typically near close.
+        lim      = round(cur * (0.9985 if extended_hours else 0.998), 2)
+        eh_tag   = " [extended-hours]" if extended_hours else ""
 
-        o = client.submit_order(LimitOrderRequest(
+        order_kwargs = dict(
             symbol=ticker, qty=str(sell_qty),
             side=OrderSide.SELL,
             time_in_force=TimeInForce.DAY,
-            limit_price=lim))
-        log.info(f"  PARTIAL SELL {ticker}  {sell_qty:.4f}/{full_qty:.4f} shares  "
+            limit_price=lim)
+        if extended_hours:
+            order_kwargs["extended_hours"] = True
+
+        o = client.submit_order(LimitOrderRequest(**order_kwargs))
+        log.info(f"  PARTIAL SELL{eh_tag} {ticker}  {sell_qty:.4f}/{full_qty:.4f} shares  "
                  f"limit=${lim:.2f}  id={o.id}")
 
         for _ in range(4):
@@ -680,21 +737,31 @@ def do_partial_sell(client, ticker, fraction=PARTIAL_EXIT_FRAC):
         log.error(f"  PARTIAL SELL FAILED {ticker}: {e}")
         return False
 
-def do_sell(client, ticker):
-    """Exit entire position (cancel stop → limit sell → market fallback)."""
+def do_sell(client, ticker, extended_hours=False):
+    """Exit entire position (cancel stop → limit sell → market fallback).
+    extended_hours=True: places post-market limit (4–8pm ET) instead of
+    a regular-session order. Works on fractional shares (DAY limit).
+    If the limit doesn't fill by 8pm it expires; 9:35am run re-exits.
+    """
     cancel_stop_orders(client, ticker)
+    eh_tag = " [extended-hours]" if extended_hours else ""
 
     try:
         pos = client.get_open_position(ticker)
         qty = abs(float(pos.qty))
         cur = float(pos.current_price)
-        lim = round(cur * 0.998, 2)
-        o = client.submit_order(LimitOrderRequest(
+        lim = round(cur * (0.9985 if extended_hours else 0.998), 2)
+
+        order_kwargs = dict(
             symbol=ticker, qty=str(qty),
             side=OrderSide.SELL,
             time_in_force=TimeInForce.DAY,
-            limit_price=lim))
-        log.info(f"  SELL LIMIT {ticker}  qty={qty}  limit=${lim:.2f}  id={o.id}")
+            limit_price=lim)
+        if extended_hours:
+            order_kwargs["extended_hours"] = True
+
+        o = client.submit_order(LimitOrderRequest(**order_kwargs))
+        log.info(f"  SELL LIMIT{eh_tag} {ticker}  qty={qty}  limit=${lim:.2f}  id={o.id}")
 
         for _ in range(4):
             time.sleep(5)
@@ -709,24 +776,30 @@ def do_sell(client, ticker):
         except Exception: pass
     except Exception: pass
 
-    # Market fallback
-    try:
-        pos = client.get_open_position(ticker)
-        qty = abs(float(pos.qty))
-        o = client.submit_order(MarketOrderRequest(
-            symbol=ticker, qty=str(qty),
-            side=OrderSide.SELL,
-            time_in_force=TimeInForce.DAY))
-        log.info(f"  SELL MARKET {ticker}  qty={qty}  id={o.id}")
-        return True
-    except Exception:
-        # Position might already be gone (stop-market filled overnight)
+    # Market fallback (regular hours only — extended hours doesn't allow market orders)
+    if not extended_hours:
         try:
-            client.get_open_position(ticker)
-            log.error(f"  SELL FAILED {ticker} — position still open")
-            return False
+            pos = client.get_open_position(ticker)
+            qty = abs(float(pos.qty))
+            o = client.submit_order(MarketOrderRequest(
+                symbol=ticker, qty=str(qty),
+                side=OrderSide.SELL,
+                time_in_force=TimeInForce.DAY))
+            log.info(f"  SELL MARKET {ticker}  qty={qty}  id={o.id}")
+            return True
         except Exception:
-            log.info(f"  {ticker} already closed (stop-market filled)"); return True
+            pass
+
+    # Final check — position might already be closed (stop fired, or EH limit filled)
+    try:
+        client.get_open_position(ticker)
+        if extended_hours:
+            log.info(f"  {ticker} EH limit pending — will re-check at 9:35am")
+            return True   # order is alive, treat as success
+        log.error(f"  SELL FAILED {ticker} — position still open")
+        return False
+    except Exception:
+        log.info(f"  {ticker} already closed"); return True
 
 
 # =============================================================================
@@ -1042,9 +1115,15 @@ def detect_mode():
     from zoneinfo import ZoneInfo
     now = datetime.now(ZoneInfo("America/New_York"))
     h = now.hour; m = now.minute; dow = now.weekday()
-    if dow >= 5: return "weekly"
-    if dow == 4 and h >= 17: return "weekly"
+    # Weekend (Sat=5, Sun=6): crypto mode if enabled
+    if dow >= 5:
+        return "crypto" if CRYPTO_WEEKEND_MODE else "weekly"
+    # Friday after 5pm: treat as weekend
+    if dow == 4 and h >= 17:
+        return "crypto" if CRYPTO_WEEKEND_MODE else "weekly"
+    # Weekday scan window: 3:45–4:10pm ET
     if (h == 15 and m >= 45) or (h == 16 and m <= 10): return "scan"
+    # Weekday exits window: 9:30am–3pm ET
     if (h == 9 and m >= 30) or (10 <= h <= 15): return "exits"
     return "summary"
 
@@ -1294,7 +1373,7 @@ def run_scan(client, equity, cash, rgm):
             if pnl_frac <= EXIT_STOP_LOSS:
                 why = f"stop_loss ({pnl_frac*100:.1f}%)"
                 row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%", f"FULL EXIT: {why}")
-                if do_sell(client, ticker):
+                if do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL):
                     exits += 1; cur = pos["current_price"]
                     dh = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                          if pos.get("entry_date") else 0
@@ -1317,7 +1396,7 @@ def run_scan(client, equity, cash, rgm):
                     if days >= EXIT_DAYS_MAX:
                         why = f"max_hold {days}d ({pnl_frac*100:+.1f}%)"
                         row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%", f"FULL EXIT: {why}")
-                        if do_sell(client, ticker):
+                        if do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL):
                             exits += 1; cur = pos["current_price"]
                             log_tx("SELL", ticker, pos.get("strategy","?"), cur, pos["market_value"],
                                    rgm, float(client.get_account().equity),
@@ -1339,7 +1418,8 @@ def run_scan(client, equity, cash, rgm):
                 if not tr.get("partial_sold"):
                     row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%",
                         f"PARTIAL EXIT (50%): {why}")
-                    if do_partial_sell(client, ticker, PARTIAL_EXIT_FRAC):
+                    if do_partial_sell(client, ticker, PARTIAL_EXIT_FRAC,
+                                       extended_hours=USE_EXTENDED_HOURS_SELL):
                         exits += 1; cur = pos["current_price"]
                         dh = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                              if pos.get("entry_date") else 0
@@ -1357,7 +1437,7 @@ def run_scan(client, equity, cash, rgm):
                 else:
                     row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%",
                         f"FULL EXIT (remainder): {why}")
-                    if do_sell(client, ticker):
+                    if do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL):
                         exits += 1; cur = pos["current_price"]
                         dh = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                              if pos.get("entry_date") else 0
@@ -1373,7 +1453,7 @@ def run_scan(client, equity, cash, rgm):
             else:
                 row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%",
                     f"EXIT: {_trunc(why,20)}" if ex else "HOLD")
-                if ex and do_sell(client, ticker):
+                if ex and do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL):
                     exits += 1; cur = pos["current_price"]
                     dh = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                          if pos.get("entry_date") else 0
@@ -1525,6 +1605,272 @@ def run_scan(client, equity, cash, rgm):
 
 
 # =============================================================================
+#  CRYPTO WEEKEND MODE
+# =============================================================================
+
+def _fetch_crypto_ohlcv(symbol, days=30):
+    """Fetch OHLCV for a crypto pair via yfinance. Returns DataFrame or None.
+    yfinance symbol: BTC/USD → BTC-USD"""
+    yf_sym = symbol.replace("/", "-")
+    try:
+        import yfinance as yf
+        df = yf.download(yf_sym, period=f"{days}d", interval="1h",
+                         auto_adjust=True, progress=False)
+        if df is None or len(df) < 20: return None
+        df.columns = [c.lower() for c in df.columns]
+        df.index   = pd.to_datetime(df.index, utc=True)
+        return df
+    except Exception as e:
+        log.warning(f"  crypto fetch failed {symbol}: {e}"); return None
+
+
+def _crypto_rsi(df, period=14):
+    """RSI on hourly close prices."""
+    delta = df["close"].diff()
+    gain  = delta.clip(lower=0).rolling(period).mean()
+    loss  = (-delta.clip(upper=0)).rolling(period).mean()
+    rs    = gain / loss.replace(0, 1e-9)
+    return (100 - 100 / (1 + rs)).iloc[-1]
+
+
+def _crypto_signals(pairs):
+    """Return list of dicts for crypto pairs where RSI is oversold."""
+    signals = []
+    for sym in pairs:
+        df = _fetch_crypto_ohlcv(sym, days=14)
+        if df is None or len(df) < 20: continue
+        rsi   = _crypto_rsi(df)
+        close = float(df["close"].iloc[-1])
+        # Change over last 24h (24 hourly bars)
+        prev24 = float(df["close"].iloc[-25]) if len(df) >= 25 else close
+        chg24  = (close - prev24) / prev24 * 100
+        # Volume spike: last bar vs 24h avg
+        vol_avg = float(df["volume"].tail(24).mean()) or 1
+        vol_z   = (float(df["volume"].iloc[-1]) - vol_avg) / vol_avg
+        signals.append({
+            "symbol": sym, "close": close, "rsi": rsi,
+            "chg24": chg24, "vol_z": vol_z,
+        })
+        log.info(f"  {sym:<12} close=${close:>10,.2f}  RSI={rsi:.1f}  "
+                 f"24h={chg24:+.2f}%  vol_z={vol_z:+.2f}")
+    return signals
+
+
+def run_crypto_weekend(client, equity, cash):
+    """Weekend crypto paper-trading run.
+    Goals:
+      1. Scan CRYPTO_PAIRS for oversold RSI signals → buy entries
+      2. Check existing crypto positions → test full sell flow
+         (limit sell → market fallback, extended-hours path)
+      3. Log everything to logs/paper/crypto/
+    """
+    CRYPTO_LOG_DIR.mkdir(parents=True, exist_ok=True)
+    now_str = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+    reserve = equity * 0.05  # keep 5% cash reserve
+
+    hdr()
+    row("PAPER BOT — CRYPTO WEEKEND MODE"); div()
+    row("Time",    now_str)
+    row("Equity",  f"${equity:,.2f}")
+    row("Cash",    f"${cash:,.2f}")
+    row("Pairs",   ", ".join(CRYPTO_PAIRS))
+    row("Signal",  f"RSI ≤ {CRYPTO_RSI_ENTRY} (oversold entry)")
+    row("Stop",    f"{CRYPTO_STOP_LOSS*100:.1f}%  (wider for crypto volatility)")
+    row("Size",    f"{CRYPTO_POSITION_PCT*100:.0f}% per coin  "
+                   f"(${equity*CRYPTO_POSITION_PCT:,.0f} target)")
+    row("Purpose", "Testing sell strategies: limit, market, partial")
+    ftr()
+
+    # ── Step 1: check and exit existing crypto positions ─────────────────────
+    all_positions = {}
+    try:
+        for p in client.get_all_positions():
+            sym = getattr(p, "symbol", "")
+            # Alpaca crypto positions: "BTCUSD", "ETHUSD" etc.
+            if any(c in sym for c in ["BTC","ETH","SOL","AVAX","LINK"]):
+                all_positions[sym] = p
+    except Exception as e:
+        log.warning(f"  get_all_positions failed: {e}")
+
+    exits = 0
+    if all_positions:
+        hdr(f"CRYPTO HOLDINGS  ({len(all_positions)} open)")
+        for sym, pos in all_positions.items():
+            qty    = abs(float(pos.qty))
+            cur    = float(pos.current_price)
+            ep     = float(pos.avg_entry_price)
+            pnl_p  = (cur - ep) / ep * 100
+            unreal = float(pos.unrealized_pl)
+            row(f"{sym}", f"qty={qty:.6f}  entry=${ep:.2f}  now=${cur:.2f}  "
+                f"P&L={pnl_p:+.2f}%  ${unreal:+.2f}")
+
+            # Exit conditions:
+            #  a) Stop loss hit
+            #  b) RSI recovered above exit threshold
+            should_exit = False
+            exit_reason = ""
+
+            if pnl_p <= CRYPTO_STOP_LOSS * 100:
+                should_exit = True
+                exit_reason = f"stop_loss ({pnl_p:.1f}%)"
+
+            if not should_exit:
+                # Get RSI for this pair
+                pair_sym = sym.replace("USD", "/USD")  # BTCUSD → BTC/USD
+                df = _fetch_crypto_ohlcv(pair_sym, days=3)
+                if df is not None:
+                    rsi = _crypto_rsi(df)
+                    row(f"  {sym} RSI", f"{rsi:.1f}")
+                    if rsi >= CRYPTO_RSI_EXIT:
+                        should_exit = True
+                        exit_reason = f"rsi_exit (RSI={rsi:.0f})"
+
+            if should_exit:
+                row(f"  EXIT {sym}", exit_reason)
+                # Test BOTH sell paths: first try limit sell, then market fallback
+                # Crypto is 24/7 so no "extended hours" concept — always DAY limit
+                try:
+                    cancel_stop_orders(client, sym)
+                    pos2 = client.get_open_position(sym)
+                    qty2 = abs(float(pos2.qty))
+                    cur2 = float(pos2.current_price)
+                    lim  = round(cur2 * 0.9990, 4)  # 0.10% below — fast fill
+                    o = client.submit_order(LimitOrderRequest(
+                        symbol=sym, qty=str(qty2),
+                        side=OrderSide.SELL,
+                        time_in_force=TimeInForce.GTC,   # crypto allows GTC on fractional
+                        limit_price=lim,
+                    ))
+                    log.info(f"  CRYPTO SELL LIMIT {sym}  qty={qty2:.6f}  "
+                             f"limit=${lim:.4f}  id={o.id}")
+                    row(f"  SELL LIMIT {sym}", f"lim=${lim:.4f}  qty={qty2:.6f}")
+
+                    # Wait 15s for fill
+                    time.sleep(15)
+                    try:
+                        o2 = client.get_order_by_id(str(o.id))
+                        if o2.status in (OrderStatus.filled, OrderStatus.partially_filled):
+                            log.info(f"  CRYPTO SELL LIMIT filled {sym} @ {o2.filled_avg_price}")
+                            row(f"  ✅ SELL LIMIT filled {sym}",
+                                f"@ ${float(o2.filled_avg_price or cur2):.4f}")
+                            exits += 1
+                            # Log to crypto CSV
+                            _crypto_log_tx("SELL", sym, pnl_p, unreal, exit_reason, equity)
+                            continue
+                    except Exception: pass
+
+                    # Limit not filled → cancel and market sell
+                    try:
+                        client.cancel_order_by_id(str(o.id))
+                    except Exception: pass
+                    row(f"  SELL LIMIT timeout {sym}", "→ market fallback")
+                    client.close_position(sym)
+                    row(f"  ✅ SELL MARKET {sym}", "closed")
+                    exits += 1
+                    _crypto_log_tx("SELL_MKT", sym, pnl_p, unreal, exit_reason, equity)
+
+                except Exception as e:
+                    log.warning(f"  CRYPTO SELL failed {sym}: {e}")
+                    row(f"  ❌ SELL failed {sym}", str(e)[:40])
+            else:
+                row(f"  HOLD {sym}", f"P&L={pnl_p:+.2f}%  (waiting for RSI≥{CRYPTO_RSI_EXIT})")
+        ftr()
+    else:
+        hdr("CRYPTO HOLDINGS"); blank(); row("No crypto positions."); blank(); ftr()
+
+    # ── Step 2: scan for new entries ─────────────────────────────────────────
+    hdr("CRYPTO SIGNAL SCAN")
+    row(f"Scanning {len(CRYPTO_PAIRS)} pairs for RSI ≤ {CRYPTO_RSI_ENTRY}...")
+    ftr()
+
+    signals = _crypto_signals(CRYPTO_PAIRS)
+    entry_signals = [s for s in signals if s["rsi"] <= CRYPTO_RSI_ENTRY]
+
+    hdr(f"CRYPTO SIGNALS  ({len(entry_signals)} of {len(signals)} oversold)")
+    if signals:
+        trow("PAIR", "PRICE", "RSI", "24h%", "VOL_Z", "ACTION",
+             widths=[10, 12, 6, 7, 7, 10])
+        div()
+        for s in signals:
+            action = "BUY" if s["rsi"] <= CRYPTO_RSI_ENTRY else "watch"
+            trow(s["symbol"], f"${s['close']:,.2f}", f"{s['rsi']:.1f}",
+                 f"{s['chg24']:+.2f}%", f"{s['vol_z']:+.2f}", action,
+                 widths=[10, 12, 6, 7, 7, 10])
+    blank(); ftr()
+
+    # ── Step 3: place entries ─────────────────────────────────────────────────
+    hdr("CRYPTO ENTRY ORDERS")
+    already_held = {p.symbol for p in client.get_all_positions()
+                    if any(c in p.symbol for c in ["BTC","ETH","SOL","AVAX","LINK"])}
+    entries = 0
+    for s in entry_signals:
+        alpaca_sym = s["symbol"].replace("/", "")  # BTC/USD → BTCUSD
+        if alpaca_sym in already_held:
+            row(f"  SKIP {s['symbol']}", "already held"); continue
+        avail = max(0.0, cash - reserve)
+        da    = min(equity * CRYPTO_POSITION_PCT, avail)
+        if da < 5.0:
+            row(f"  SKIP {s['symbol']}", "insufficient cash"); continue
+
+        row(f"  ENTER {s['symbol']}", f"${da:.2f}  RSI={s['rsi']:.1f}")
+        try:
+            o = client.submit_order(MarketOrderRequest(
+                symbol=s["symbol"],    # Alpaca crypto uses "BTC/USD" format
+                notional=round(da, 2),
+                side=OrderSide.BUY,
+                time_in_force=TimeInForce.GTC,
+            ))
+            log.info(f"  CRYPTO BUY {s['symbol']}  ${da:.2f}  id={o.id}")
+            entries += 1; cash -= da
+            _crypto_log_tx("BUY", s["symbol"], 0.0, 0.0, "rsi_entry", equity)
+            row(f"  ✅ BUY {s['symbol']}", f"id={o.id}")
+        except Exception as e:
+            log.warning(f"  CRYPTO BUY failed {s['symbol']}: {e}")
+            row(f"  ❌ BUY failed {s['symbol']}", str(e)[:40])
+    if not entry_signals:
+        blank(); row("No oversold signals this run."); blank()
+    ftr()
+
+    # ── Summary ───────────────────────────────────────────────────────────────
+    hdr("CRYPTO SESSION SUMMARY")
+    row("Pairs scanned",  str(len(signals)))
+    row("Entry signals",  str(len(entry_signals)))
+    row("Entries placed", str(entries))
+    row("Exits placed",   str(exits))
+    row("Test focus",     "limit sell → market fallback → partial sell")
+    ftr()
+
+    log_run("crypto", "crypto", equity, cash, len(signals), entries, exits, {})
+    write_dashboard()
+
+
+def _crypto_log_tx(action, symbol, pnl_pct, pnl_dollar, reason, equity):
+    """Append a crypto trade to transactions.csv so the dashboard shows it."""
+    try:
+        init = not TX_FILE.exists()
+        with open(TX_FILE, "a", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=TX_F)
+            if init: w.writeheader()
+            w.writerow({
+                "timestamp":    datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                "date":         str(date.today()),
+                "action":       action,
+                "ticker":       symbol,
+                "strategy":     "CryptoRSI",
+                "price":        0,
+                "dollar_amount":0,
+                "pnl_pct":      round(pnl_pct, 3),
+                "pnl_dollar":   round(pnl_dollar, 2),
+                "hold_days":    0,
+                "exit_reason":  reason,
+                "regime":       "crypto",
+                "equity_after": round(equity, 2),
+            })
+    except Exception as e:
+        log.warning(f"  _crypto_log_tx failed: {e}")
+
+
+# =============================================================================
 #  ENTRY POINT
 # =============================================================================
 
@@ -1536,6 +1882,15 @@ if __name__ == "__main__":
     acct   = client.get_account()
     equity = float(acct.equity)
     cash   = float(acct.cash)
+
+    # Safety guard: paper account should be funded with ~$100k.
+    # If equity < $5,000 it almost certainly means the paper bot is pointing at
+    # the live account (wrong keys) — abort immediately before touching anything.
+    if equity < 5000.0:
+        print(f"ABORT: equity=${equity:.2f} is too low for a paper account.")
+        print("This usually means ALPACA_PAPER_KEY/ALPACA_PAPER_SECRET are pointing")
+        print("at the live account. Set the correct paper trading keys and retry.")
+        raise SystemExit(1)
 
     spy_raw = fetch_stock("SPY")
     spy_df  = add_ind(spy_raw) if spy_raw is not None else None
@@ -1557,7 +1912,9 @@ if __name__ == "__main__":
         row("Flip TEST_MODE=False in paper_bot.py for normal paper trading.")
     ftr()
 
-    if mode == "scan":
+    if mode == "crypto":
+        run_crypto_weekend(client, equity, cash)
+    elif mode == "scan":
         run_scan(client, equity, cash, rgm)
     elif mode == "exits":
         run_exits(client, equity, cash, rgm)
