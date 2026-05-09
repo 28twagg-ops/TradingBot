@@ -4,3 +4,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-06 16:15:08,exits,bull,100000.0,100000.0,0,0,0,0,,both
 2026-05-09 16:09:01,crypto,crypto,100000.0,100000.0,0,0,0,0,,both
 2026-05-09 16:11:51,crypto,crypto,100000.0,85000.0,5,5,0,0,,both
+2026-05-09 16:16:01,crypto,crypto,99913.67,79303.87,5,2,0,0,,both
