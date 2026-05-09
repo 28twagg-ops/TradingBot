@@ -54,11 +54,17 @@ jobs:
         # Explicit installs — no requirements.txt needed in the repo.
         run: pip install alpaca-py yfinance pandas numpy lxml requests
 
-      - name: Run bot
+      - name: Run live bot
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
         run: python rubber_band_bot.py
+
+      - name: Run paper bot
+        env:
+          ALPACA_PAPER_KEY: ${{ secrets.ALPACA_PAPER_KEY }}
+          ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
+        run: python paper_bot.py
 
       - name: Commit logs back to repo
         run: |
