@@ -143,7 +143,7 @@ CRYPTO_PAIRS = [
 ]
 CRYPTO_POSITION_PCT = 0.03   # 3% of equity per coin
 CRYPTO_STOP_LOSS    = -0.015  # -1.5% stop (wider than stocks)
-CRYPTO_RSI_ENTRY    = 38      # raised for initial test run — drop back to 38 after first buys confirmed
+CRYPTO_RSI_ENTRY    = 38      # RSI oversold threshold for crypto entries
 CRYPTO_RSI_EXIT     = 55      # sell partial when RSI ≥ this (recovered)
 
 # ---- Daily entry cap ---------------------------------------------------------
@@ -1763,15 +1763,45 @@ def run_crypto_weekend(client, equity, cash):
                             continue
                     except Exception: pass
 
-                    # Limit not filled → cancel and market sell
+                    # Limit not filled → cancel it, wait for exchange to confirm,
+                    # then close_position (Alpaca rejects close if an open order exists)
                     try:
                         client.cancel_order_by_id(str(o.id))
                     except Exception: pass
+
+                    # Wait up to 6s for cancellation to settle
+                    cancelled = False
+                    for _ in range(3):
+                        time.sleep(2)
+                        try:
+                            chk = client.get_order_by_id(str(o.id))
+                            if chk.status in (OrderStatus.canceled, OrderStatus.expired,
+                                              OrderStatus.filled, OrderStatus.partially_filled):
+                                cancelled = True
+                                break
+                        except Exception:
+                            cancelled = True  # order gone — that's fine
+                            break
+
                     row(f"  SELL LIMIT timeout {sym}", "→ market fallback")
-                    client.close_position(sym)
-                    row(f"  ✅ SELL MARKET {sym}", "closed")
-                    exits += 1
-                    _crypto_log_tx("SELL_MKT", sym, pnl_p, unreal, exit_reason, equity)
+                    try:
+                        client.close_position(sym)
+                        row(f"  ✅ SELL MARKET {sym}", "closed")
+                        exits += 1
+                        _crypto_log_tx("SELL_MKT", sym, pnl_p, unreal, exit_reason, equity)
+                    except Exception as mkt_e:
+                        # If still blocked, try cancel_all then close one more time
+                        log.warning(f"  close_position blocked for {sym}: {mkt_e} — "
+                                    f"cancel_all retry")
+                        try:
+                            client.cancel_orders()   # cancel all open orders
+                            time.sleep(3)
+                            client.close_position(sym)
+                            row(f"  ✅ SELL MARKET {sym}", "closed (retry)")
+                            exits += 1
+                            _crypto_log_tx("SELL_MKT", sym, pnl_p, unreal, exit_reason, equity)
+                        except Exception as e2:
+                            raise e2
 
                 except Exception as e:
                     log.warning(f"  CRYPTO SELL failed {sym}: {e}")
