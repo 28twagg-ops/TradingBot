@@ -1659,13 +1659,152 @@ def _crypto_signals(pairs):
     return signals
 
 
+# =============================================================================
+#  CRYPTO STOP / SELL HELPERS  (mirrors rubber_band_bot.py exactly)
+#  These are separate from the stock helpers so we can use CRYPTO_STOP_LOSS
+#  and see how the rubber-band execution methods behave on 24/7 crypto markets.
+# =============================================================================
+
+def _crypto_ensure_stop(client, sym, entry_price, qty):
+    """Place GTC stop-MARKET for a crypto position.
+    Uses CRYPTO_STOP_LOSS (-1.5%) instead of stock EXIT_STOP_LOSS (-0.5%).
+    Mirrors rubber_band_bot.py ensure_stop() exactly — same whole-share floor,
+    same idempotency check, same logging."""
+    stop_price = round(entry_price * (1.0 + CRYPTO_STOP_LOSS), 4)
+    stop_qty   = math.floor(qty)   # Alpaca rejects GTC on fractional qty
+    if stop_qty < 1:
+        log.warning(f"  CRYPTO STOP skipped {sym}: qty={qty:.6f} < 1 whole unit "
+                    f"— software exit will handle it")
+        return False
+    try:
+        req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[sym])
+        for o in client.get_orders(req):
+            if (getattr(o, "order_type", None) in (OrderType.STOP, OrderType.STOP_LIMIT)
+                    and o.side == OrderSide.SELL):
+                log.info(f"  CRYPTO STOP already live {sym} @ ${o.stop_price}")
+                return True
+        o = client.submit_order(StopOrderRequest(
+            symbol=sym,
+            qty=str(stop_qty),
+            side=OrderSide.SELL,
+            time_in_force=TimeInForce.GTC,
+            stop_price=stop_price,
+        ))
+        log.info(f"  CRYPTO STOP-MARKET placed {sym}  qty={stop_qty} (pos={qty:.6f})  "
+                 f"stop=${stop_price:.4f}  id={o.id}")
+        return True
+    except Exception as e:
+        log.warning(f"  CRYPTO STOP placement failed {sym}: {e}")
+        return False
+
+
+def _crypto_place_all_stops(client):
+    """Ensure every crypto position has a GTC stop-market order.
+    Called: (a) after the buy loop, (b) at the start of the holdings check.
+    Mirrors rubber_band_bot.py place_all_stops() exactly."""
+    try:
+        positions = [p for p in client.get_all_positions()
+                     if any(c in p.symbol for c in ["BTC","ETH","SOL","AVAX","LINK"])]
+        if not positions:
+            return
+        log.info(f"  _crypto_place_all_stops: checking {len(positions)} crypto positions")
+        for p in positions:
+            _crypto_ensure_stop(client, p.symbol,
+                                float(p.avg_entry_price), float(p.qty))
+    except Exception as e:
+        log.warning(f"  _crypto_place_all_stops failed: {e}")
+
+
+def _crypto_do_sell(client, sym, pnl_p, unreal, exit_reason, equity):
+    """Sell a crypto position using rubber_band_bot.py's exact do_sell() flow:
+      1. cancel_stop_orders  (avoids conflicting GTC stop)
+      2. DAY limit sell at 0.2% below current  (same spread as rubber band)
+      3. Poll 4 × 5s = 20s  (same as rubber band)
+      4. Check if position already gone  (same as rubber band)
+      5. Cancel limit → close_position market fallback
+    Returns True on success, False on failure."""
+    # Step 1 — cancel any open stop/sell orders (same as rubber band)
+    cancel_stop_orders(client, sym)
+
+    # Step 2 — limit sell at 0.2% below current (rubber band regular-hours spread)
+    try:
+        pos = client.get_open_position(sym)
+        qty = abs(float(pos.qty))
+        cur = float(pos.current_price)
+        lim = round(cur * 0.998, 4)   # 0.2% below — same as rubber band
+        o = client.submit_order(LimitOrderRequest(
+            symbol=sym, qty=str(qty),
+            side=OrderSide.SELL,
+            time_in_force=TimeInForce.DAY,  # DAY — same as rubber band
+            limit_price=lim,
+        ))
+        log.info(f"  CRYPTO SELL LIMIT {sym}  qty={qty:.6f}  "
+                 f"limit=${lim:.4f}  id={o.id}")
+        row(f"  SELL LIMIT {sym}", f"lim=${lim:.4f}  qty={qty:.6f}")
+
+        # Step 3 — poll 4 × 5s = 20s (same as rubber band)
+        for _ in range(4):
+            time.sleep(5)
+            try:
+                o2 = client.get_order_by_id(str(o.id))
+                if o2.status in (OrderStatus.filled, OrderStatus.partially_filled):
+                    fill_px = float(o2.filled_avg_price or cur)
+                    log.info(f"  CRYPTO SELL LIMIT filled {sym} @ ${fill_px:.4f}")
+                    row(f"  ✅ SELL LIMIT filled {sym}", f"@ ${fill_px:.4f}")
+                    _crypto_log_tx("SELL", sym, pnl_p, unreal, exit_reason, equity)
+                    return True
+            except Exception:
+                pass
+
+        # Step 4 — check if position is already gone (may have filled silently)
+        try:
+            client.get_open_position(sym)
+        except Exception:
+            log.info(f"  CRYPTO SELL LIMIT filled {sym} (confirmed by position check)")
+            row(f"  ✅ SELL LIMIT filled {sym}", "(position gone)")
+            _crypto_log_tx("SELL", sym, pnl_p, unreal, exit_reason, equity)
+            return True
+
+        # Step 5 — cancel limit → market fallback (same as rubber band)
+        try:
+            client.cancel_order_by_id(str(o.id))
+        except Exception:
+            pass
+        log.info(f"  CRYPTO SELL LIMIT not filled {sym}, falling back to market")
+        row(f"  SELL LIMIT timeout {sym}", "→ market fallback")
+
+    except Exception as e:
+        log.warning(f"  CRYPTO SELL LIMIT setup failed {sym}: {e}")
+        row(f"  SELL LIMIT setup failed {sym}", str(e)[:40])
+
+    # Market fallback — mirrors rubber band: "not found" = already closed = success
+    try:
+        client.get_open_position(sym)   # raises if gone
+        client.close_position(sym)
+        log.info(f"  CRYPTO SELL MARKET {sym} closed")
+        row(f"  ✅ SELL MARKET {sym}", "closed")
+        _crypto_log_tx("SELL_MKT", sym, pnl_p, unreal, exit_reason, equity)
+        return True
+    except Exception as e:
+        msg = str(e)
+        if "not found" in msg or "position" in msg.lower():
+            log.info(f"  CRYPTO SELL {sym}: position already closed")
+            row(f"  ✅ SELL {sym}", "position already closed")
+            _crypto_log_tx("SELL_MKT", sym, pnl_p, unreal, exit_reason, equity)
+            return True
+        log.warning(f"  CRYPTO SELL failed {sym}: {e}")
+        row(f"  ❌ SELL failed {sym}", str(e)[:40])
+        return False
+
+
+# =============================================================================
+
 def run_crypto_weekend(client, equity, cash):
     """Weekend crypto paper-trading run.
-    Goals:
-      1. Scan CRYPTO_PAIRS for oversold RSI signals → buy entries
-      2. Check existing crypto positions → test full sell flow
-         (limit sell → market fallback, extended-hours path)
-      3. Log everything to logs/paper/crypto/
+    Tests rubber_band_bot.py's exact buy/sell/stop methods on 24/7 crypto markets:
+      - GTC stop-market orders after every buy  (whole units only)
+      - DAY limit sell at 0.2% below, 4×5s poll, market fallback
+      - place_all_stops at session start
     """
     crypto_log_dir = LOG_DIR / "crypto"
     crypto_log_dir.mkdir(parents=True, exist_ok=True)
@@ -1682,8 +1821,12 @@ def run_crypto_weekend(client, equity, cash):
     row("Stop",    f"{CRYPTO_STOP_LOSS*100:.1f}%  (wider for crypto volatility)")
     row("Size",    f"{CRYPTO_POSITION_PCT*100:.0f}% per coin  "
                    f"(${equity*CRYPTO_POSITION_PCT:,.0f} target)")
-    row("Purpose", "Testing sell strategies: limit, market, partial")
+    row("Stop method", "GTC stop-MARKET (whole units) — rubber band style")
+    row("Sell method", "DAY limit 0.2% below → 4×5s poll → market fallback")
     ftr()
+
+    # ── Step 0: ensure every position has a GTC stop (mirrors rubber band) ───
+    _crypto_place_all_stops(client)
 
     # ── Step 1: check and exit existing crypto positions ─────────────────────
     all_positions = {}
@@ -1731,81 +1874,9 @@ def run_crypto_weekend(client, equity, cash):
 
             if should_exit:
                 row(f"  EXIT {sym}", exit_reason)
-                # Test BOTH sell paths: first try limit sell, then market fallback
-                # Crypto is 24/7 so no "extended hours" concept — always DAY limit
-                try:
-                    cancel_stop_orders(client, sym)
-                    pos2 = client.get_open_position(sym)
-                    qty2 = abs(float(pos2.qty))
-                    cur2 = float(pos2.current_price)
-                    lim  = round(cur2 * 0.9990, 4)  # 0.10% below — fast fill
-                    o = client.submit_order(LimitOrderRequest(
-                        symbol=sym, qty=str(qty2),
-                        side=OrderSide.SELL,
-                        time_in_force=TimeInForce.GTC,   # crypto allows GTC on fractional
-                        limit_price=lim,
-                    ))
-                    log.info(f"  CRYPTO SELL LIMIT {sym}  qty={qty2:.6f}  "
-                             f"limit=${lim:.4f}  id={o.id}")
-                    row(f"  SELL LIMIT {sym}", f"lim=${lim:.4f}  qty={qty2:.6f}")
-
-                    # Wait 15s for fill
-                    time.sleep(15)
-                    try:
-                        o2 = client.get_order_by_id(str(o.id))
-                        if o2.status in (OrderStatus.filled, OrderStatus.partially_filled):
-                            log.info(f"  CRYPTO SELL LIMIT filled {sym} @ {o2.filled_avg_price}")
-                            row(f"  ✅ SELL LIMIT filled {sym}",
-                                f"@ ${float(o2.filled_avg_price or cur2):.4f}")
-                            exits += 1
-                            # Log to crypto CSV
-                            _crypto_log_tx("SELL", sym, pnl_p, unreal, exit_reason, equity)
-                            continue
-                    except Exception: pass
-
-                    # Limit not filled → cancel it, wait for exchange to confirm,
-                    # then close_position (Alpaca rejects close if an open order exists)
-                    try:
-                        client.cancel_order_by_id(str(o.id))
-                    except Exception: pass
-
-                    # Wait up to 6s for cancellation to settle
-                    cancelled = False
-                    for _ in range(3):
-                        time.sleep(2)
-                        try:
-                            chk = client.get_order_by_id(str(o.id))
-                            if chk.status in (OrderStatus.canceled, OrderStatus.expired,
-                                              OrderStatus.filled, OrderStatus.partially_filled):
-                                cancelled = True
-                                break
-                        except Exception:
-                            cancelled = True  # order gone — that's fine
-                            break
-
-                    row(f"  SELL LIMIT timeout {sym}", "→ market fallback")
-                    try:
-                        client.close_position(sym)
-                        row(f"  ✅ SELL MARKET {sym}", "closed")
-                        exits += 1
-                        _crypto_log_tx("SELL_MKT", sym, pnl_p, unreal, exit_reason, equity)
-                    except Exception as mkt_e:
-                        # If still blocked, try cancel_all then close one more time
-                        log.warning(f"  close_position blocked for {sym}: {mkt_e} — "
-                                    f"cancel_all retry")
-                        try:
-                            client.cancel_orders()   # cancel all open orders
-                            time.sleep(3)
-                            client.close_position(sym)
-                            row(f"  ✅ SELL MARKET {sym}", "closed (retry)")
-                            exits += 1
-                            _crypto_log_tx("SELL_MKT", sym, pnl_p, unreal, exit_reason, equity)
-                        except Exception as e2:
-                            raise e2
-
-                except Exception as e:
-                    log.warning(f"  CRYPTO SELL failed {sym}: {e}")
-                    row(f"  ❌ SELL failed {sym}", str(e)[:40])
+                # Use rubber_band_bot.py's exact sell flow via _crypto_do_sell()
+                if _crypto_do_sell(client, sym, pnl_p, unreal, exit_reason, equity):
+                    exits += 1
             else:
                 row(f"  HOLD {sym}", f"P&L={pnl_p:+.2f}%  (waiting for RSI≥{CRYPTO_RSI_EXIT})")
         ftr()
@@ -1865,13 +1936,19 @@ def run_crypto_weekend(client, equity, cash):
         blank(); row("No oversold signals this run."); blank()
     ftr()
 
+    # ── Place stops on any newly bought positions (mirrors rubber band) ────────
+    if entries > 0:
+        row("Placing GTC stops on new positions...")
+        time.sleep(5)   # wait for market orders to fill and appear
+        _crypto_place_all_stops(client)
+
     # ── Summary ───────────────────────────────────────────────────────────────
     hdr("CRYPTO SESSION SUMMARY")
     row("Pairs scanned",  str(len(signals)))
     row("Entry signals",  str(len(entry_signals)))
     row("Entries placed", str(entries))
     row("Exits placed",   str(exits))
-    row("Test focus",     "limit sell → market fallback → partial sell")
+    row("Test focus",     "rubber band methods: GTC stop + DAY limit sell + market fallback")
     ftr()
 
     log_run("crypto", "crypto", equity, cash, len(signals), entries, exits, {})
