@@ -143,7 +143,7 @@ CRYPTO_PAIRS = [
 ]
 CRYPTO_POSITION_PCT = 0.03   # 3% of equity per coin
 CRYPTO_STOP_LOSS    = -0.015  # -1.5% stop (wider than stocks)
-CRYPTO_RSI_ENTRY    = 38      # RSI oversold threshold for crypto entries
+CRYPTO_RSI_ENTRY    = 70      # RSI oversold threshold for crypto entries
 CRYPTO_RSI_EXIT     = 55      # sell partial when RSI ≥ this (recovered)
 
 # ---- Daily entry cap ---------------------------------------------------------
