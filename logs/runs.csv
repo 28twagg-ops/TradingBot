@@ -522,3 +522,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-10 18:15:27,summary,bull,514.56,45.01,0,0,0,7,AES|CINF|COIN|CPAY|CTVA|D|EA,both
 2026-05-10 18:30:29,summary,bull,514.56,45.01,0,0,0,7,AES|CINF|COIN|CPAY|CTVA|D|EA,both
 2026-05-10 18:45:27,summary,bull,514.56,45.01,0,0,0,7,AES|CINF|COIN|CPAY|CTVA|D|EA,both
+2026-05-10 19:00:28,summary,bull,514.56,45.01,0,0,0,7,AES|CINF|COIN|CPAY|CTVA|D|EA,both
