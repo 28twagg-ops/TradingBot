@@ -9,3 +9,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-09 16:16:01,2026-05-09,BUY,ETH/USD,CryptoRSI,0,0,0.0,0.0,0,rsi_entry,crypto,99913.67
 2026-05-10 03:46:14,2026-05-10,BUY,BTC/USD,CryptoRSI,0,0,0.0,0.0,0,rsi_entry,crypto,99951.38
 2026-05-10 03:46:14,2026-05-10,BUY,ETH/USD,CryptoRSI,0,0,0.0,0.0,0,rsi_entry,crypto,99951.38
+2026-05-10 03:49:02,2026-05-10,SELL_MKT,BTCUSD,CryptoRSI,0,0,0.024,0.72,0,rsi_exit (RSI=68),crypto,99939.06
