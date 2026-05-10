@@ -11,3 +11,6 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-10 03:46:14,2026-05-10,BUY,ETH/USD,CryptoRSI,0,0,0.0,0.0,0,rsi_entry,crypto,99951.38
 2026-05-10 03:49:02,2026-05-10,SELL_MKT,BTCUSD,CryptoRSI,0,0,0.024,0.72,0,rsi_exit (RSI=68),crypto,99939.06
 2026-05-10 03:54:02,2026-05-10,SELL_MKT,ETHUSD,CryptoRSI,0,0,0.056,1.65,0,rsi_exit (RSI=64),crypto,99918.15
+2026-05-10 06:39:03,2026-05-10,SELL,AVAXUSD,CryptoRSI,0,0,0.354,10.38,0,rsi_exit (RSI=64),crypto,99895.95
+2026-05-10 06:39:24,2026-05-10,SELL,LINKUSD,CryptoRSI,0,0,-0.148,-4.35,0,rsi_exit (RSI=58),crypto,99895.95
+2026-05-10 06:39:45,2026-05-10,SELL,SOLUSD,CryptoRSI,0,0,0.465,13.63,0,rsi_exit (RSI=63),crypto,99895.95
