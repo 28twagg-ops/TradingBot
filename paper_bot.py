@@ -1697,11 +1697,12 @@ def _crypto_signals(pairs):
 def _crypto_ensure_stop(client, sym, entry_price, qty):
     """Place GTC stop-LIMIT for a crypto position.
 
-    KEY DIFFERENCE vs rubber_band_bot.py:
-      Alpaca does NOT support stop-MARKET orders for crypto (error 40010001).
-      We use stop-LIMIT instead, with limit_price = stop_price × 0.995 (0.5%
-      below trigger). This means on a fast gap we could be skipped if price blows
-      through both levels, but it's the only stop type Alpaca allows on crypto.
+    KEY DIFFERENCES vs rubber_band_bot.py:
+      1. stop-MARKET not supported for crypto → use stop-LIMIT (limit = stop × 0.995)
+      2. Alpaca stores crypto orders as "ETH/USD" internally even when submitted as
+         "ETHUSD" — so we must check BOTH formats when looking for existing orders.
+      3. "insufficient balance" on stop placement means units are already locked by
+         an existing order we can't see via GetOrdersRequest — treat as protected.
 
     Uses CRYPTO_STOP_LOSS (-1.5%) — wider than stock stop (-0.5%)."""
     stop_price  = round(entry_price * (1.0 + CRYPTO_STOP_LOSS), 4)
@@ -1711,13 +1712,23 @@ def _crypto_ensure_stop(client, sym, entry_price, qty):
         log.warning(f"  CRYPTO STOP skipped {sym}: qty={qty:.6f} < 1 whole unit "
                     f"— software P&L check will handle it")
         return False
+
+    # Alpaca stores crypto orders in slash-format internally ("ETH/USD") even
+    # when submitted in no-slash format ("ETHUSD") — check both to avoid placing
+    # a duplicate when one already exists.
+    slash_sym = sym.replace("USD", "/USD")  # "ETHUSD" → "ETH/USD"
+    for fmt in [sym, slash_sym]:
+        try:
+            req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[fmt])
+            for o in client.get_orders(req):
+                if o.side == OrderSide.SELL:
+                    log.info(f"  CRYPTO STOP already live {sym}  "
+                             f"type={getattr(o,'order_type','?')}  id={o.id}")
+                    return True
+        except Exception:
+            pass
+
     try:
-        req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[sym])
-        for o in client.get_orders(req):
-            if (getattr(o, "order_type", None) in (OrderType.STOP, OrderType.STOP_LIMIT)
-                    and o.side == OrderSide.SELL):
-                log.info(f"  CRYPTO STOP already live {sym} @ ${o.stop_price}")
-                return True
         o = client.submit_order(StopLimitOrderRequest(
             symbol=sym,
             qty=str(stop_qty),
@@ -1730,6 +1741,11 @@ def _crypto_ensure_stop(client, sym, entry_price, qty):
                  f"stop=${stop_price:.4f}  limit=${limit_price:.4f}  id={o.id}")
         return True
     except Exception as e:
+        if "insufficient balance" in str(e).lower():
+            # Whole units already locked by an existing order Alpaca didn't surface
+            # in GetOrdersRequest — position is protected, nothing to do.
+            log.info(f"  CRYPTO STOP {sym}: units locked by existing order — protected")
+            return True
         log.warning(f"  CRYPTO STOP placement failed {sym}: {e}")
         return False
 
@@ -1752,17 +1768,24 @@ def _crypto_place_all_stops(client):
 
 
 def _crypto_do_sell(client, sym, pnl_p, unreal, exit_reason, equity):
-    """Sell a crypto position using rubber_band_bot.py's exact do_sell() flow:
-      1. cancel_stop_orders  (avoids conflicting GTC stop)
-      2. DAY limit sell at 0.2% below current  (same spread as rubber band)
+    """Sell a crypto position — rubber_band_bot.py do_sell() logic adapted for crypto:
+      1. Cancel any open stop/sell orders — checks BOTH symbol formats (ETHUSD + ETH/USD)
+         because Alpaca stores crypto orders in slash-format internally even when
+         submitted in no-slash format.
+      2. GTC limit sell at 0.2% below current  (crypto requires GTC, not DAY)
       3. Poll 4 × 5s = 20s  (same as rubber band)
       4. Check if position already gone  (same as rubber band)
-      5. Cancel limit → close_position market fallback
+      5. Cancel limit → close_position market fallback; if still locked by an order,
+         cancel ALL open orders and retry once.
     Returns True on success, False on failure."""
-    # Step 1 — cancel any open stop/sell orders (same as rubber band)
-    cancel_stop_orders(client, sym)
+    # Step 1 — cancel any open stop/sell orders in BOTH symbol formats
+    slash_sym = sym.replace("USD", "/USD")   # "ETHUSD" → "ETH/USD"
+    for fmt in [sym, slash_sym]:
+        cancel_stop_orders(client, fmt)
+    time.sleep(1)   # brief pause so cancellations settle before we read position
 
-    # Step 2 — limit sell at 0.2% below current (rubber band regular-hours spread)
+    # Step 2 — limit sell at 0.2% below current
+    # KEY DIFFERENCE from rubber band: crypto requires GTC, not DAY (error 42210000)
     try:
         pos = client.get_open_position(sym)
         qty = abs(float(pos.qty))
@@ -1771,7 +1794,7 @@ def _crypto_do_sell(client, sym, pnl_p, unreal, exit_reason, equity):
         o = client.submit_order(LimitOrderRequest(
             symbol=sym, qty=str(qty),
             side=OrderSide.SELL,
-            time_in_force=TimeInForce.DAY,  # DAY — same as rubber band
+            time_in_force=TimeInForce.GTC,   # GTC — crypto requirement (DAY = error 42210000)
             limit_price=lim,
         ))
         log.info(f"  CRYPTO SELL LIMIT {sym}  qty={qty:.6f}  "
@@ -1813,10 +1836,13 @@ def _crypto_do_sell(client, sym, pnl_p, unreal, exit_reason, equity):
         log.warning(f"  CRYPTO SELL LIMIT setup failed {sym}: {e}")
         row(f"  SELL LIMIT setup failed {sym}", str(e)[:40])
 
-    # Market fallback — mirrors rubber band: "not found" = already closed = success
-    try:
-        client.get_open_position(sym)   # raises if gone
+    # Market fallback — "not found" = already closed = success
+    def _try_close(sym):
+        client.get_open_position(sym)   # raises if position already gone
         client.close_position(sym)
+
+    try:
+        _try_close(sym)
         log.info(f"  CRYPTO SELL MARKET {sym} closed")
         row(f"  ✅ SELL MARKET {sym}", "closed")
         _crypto_log_tx("SELL_MKT", sym, pnl_p, unreal, exit_reason, equity)
@@ -1828,6 +1854,23 @@ def _crypto_do_sell(client, sym, pnl_p, unreal, exit_reason, equity):
             row(f"  ✅ SELL {sym}", "position already closed")
             _crypto_log_tx("SELL_MKT", sym, pnl_p, unreal, exit_reason, equity)
             return True
+        if "insufficient balance" in msg.lower():
+            # Units still locked by an order (slash-format vs no-slash mismatch).
+            # Cancel ALL open orders as a last resort, then retry.
+            log.warning(f"  CRYPTO SELL {sym}: balance locked — cancel_all then retry")
+            row(f"  SELL MARKET retry {sym}", "cancel_all → retry")
+            try:
+                client.cancel_orders()
+                time.sleep(3)
+                _try_close(sym)
+                log.info(f"  CRYPTO SELL MARKET {sym} closed (after cancel_all)")
+                row(f"  ✅ SELL MARKET {sym}", "closed (after cancel_all)")
+                _crypto_log_tx("SELL_MKT", sym, pnl_p, unreal, exit_reason, equity)
+                return True
+            except Exception as e2:
+                log.warning(f"  CRYPTO SELL {sym} failed after cancel_all: {e2}")
+                row(f"  ❌ SELL failed {sym}", str(e2)[:40])
+                return False
         log.warning(f"  CRYPTO SELL failed {sym}: {e}")
         row(f"  ❌ SELL failed {sym}", str(e)[:40])
         return False
@@ -1839,7 +1882,7 @@ def run_crypto_weekend(client, equity, cash):
     """Weekend crypto paper-trading run.
     Tests rubber_band_bot.py's exact buy/sell/stop methods on 24/7 crypto markets:
       - GTC stop-market orders after every buy  (whole units only)
-      - DAY limit sell at 0.2% below, 4×5s poll, market fallback
+      - GTC limit sell at 0.2% below, 4×5s poll, market fallback
       - place_all_stops at session start
     """
     crypto_log_dir = LOG_DIR / "crypto"
@@ -1858,7 +1901,7 @@ def run_crypto_weekend(client, equity, cash):
     row("Size",    f"{CRYPTO_POSITION_PCT*100:.0f}% per coin  "
                    f"(${equity*CRYPTO_POSITION_PCT:,.0f} target)")
     row("Stop method", "GTC stop-LIMIT (crypto only — stop-market not supported)")
-    row("Sell method", "DAY limit 0.2% below → 4×5s poll → market fallback")
+    row("Sell method", "GTC limit 0.2% below → 4×5s poll → cancel_all → market")
     ftr()
 
     # ── Step 0: ensure every position has a GTC stop (mirrors rubber band) ───
