@@ -1,36 +1,12 @@
 name: Rubber Band Bot
 
-# HOW SCHEDULING WORKS:
-#   GitHub Actions fires these crons in UTC. The bot uses US Eastern Time
-#   (via Python's zoneinfo) to decide what to do, so EDT/EST switches are
-#   handled automatically — no manual cron changes needed at DST transitions.
-#
-#   4 crons cover both EDT and EST for each of the two daily trigger times:
-#     Morning exits (9:35am ET):
-#       EDT: 13:35 UTC  |  EST: 14:35 UTC
-#     Afternoon scan (3:50pm ET):
-#       EDT: 19:50 UTC  |  EST: 20:50 UTC
-#
-#   In a given season one of each pair will fire at the wrong ET hour. That
-#   is harmless: detect_mode() uses a tight ±10 min window around the intended
-#   times. Out-of-window runs return "summary" and do nothing.
-#
-#   DELETE run_bot.yml if it still exists in .github/workflows/ — having two
-#   workflow files causes duplicate runs and extra Actions billing.
+# Triggered by cron-job.org webhook (Chicago time: 0,15,30,45 8-18 * * 1-5)
+# The bot uses US Eastern Time internally (zoneinfo) to decide what mode to run.
+# Modes: exits (market hours) | scan (3:44-3:59pm ET) | ext_exits (4pm-8pm ET)
+#        weekly (weekend) | summary (outside all windows)
 
 on:
-  schedule:
-    # Morning exits check: 9:35am ET
-    # EDT (Mar-Nov): 13:35 UTC  |  EST (Nov-Mar): 14:35 UTC
-    - cron: '35 13 * * 1-5'
-    - cron: '35 14 * * 1-5'
-    # Afternoon scan + entries: 3:50pm ET (before close — orders execute same day)
-    # EDT (Mar-Nov): 19:50 UTC  |  EST (Nov-Mar): 20:50 UTC
-    - cron: '50 19 * * 1-5'
-    - cron: '50 20 * * 1-5'
-    # Saturday weekly summary (market closed, any time is fine)
-    - cron: '0 14 * * 6'
-  workflow_dispatch:  # manual "Run workflow" button in GitHub UI
+  workflow_dispatch:  # cron-job.org hits this URL, also allows manual "Run workflow"
 
 permissions:
   contents: write   # needed to commit logs back to repo
@@ -51,7 +27,6 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        # Explicit installs — no requirements.txt needed in the repo.
         run: pip install alpaca-py yfinance pandas numpy lxml requests
 
       - name: Run live bot
@@ -59,12 +34,6 @@ jobs:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
         run: python rubber_band_bot.py
-
-      - name: Run paper bot
-        env:
-          ALPACA_PAPER_KEY: ${{ secrets.ALPACA_PAPER_KEY }}
-          ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
-        run: python paper_bot.py
 
       - name: Commit logs back to repo
         run: |
