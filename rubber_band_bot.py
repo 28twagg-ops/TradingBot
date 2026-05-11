@@ -46,10 +46,13 @@ CHANGES FROM v6 (sim-validated across 2yr/3yr/5yr/7yr, 900 stocks):
     REMOVED: GoldenCross (negative Sharpe, lost money)
 
 WHAT RUNS WHEN (auto-detected by US Eastern time, DST-aware via zoneinfo):
-  9:35am ET  -> exits-only check
-  3:50pm ET  -> full daily scan + entries + daily log (before close so sells execute same day)
-  Weekend    -> weekly summary, no trading
-  Other      -> status summary, no trading
+  9:35am ET       -> exits-only check (regular hours, market orders allowed)
+  3:50pm ET       -> full daily scan + entries + daily log
+  4:15pm–8:00pm ET -> post-market exits-only (extended hours, limit orders only)
+                     catches stop-loss and time-stop positions after close;
+                     critical for fractional positions with no GTC stop order.
+  Weekend         -> weekly summary, no trading
+  Other           -> status summary, no trading
 
 LOGS committed back to repo after every run:
   logs/daily/YYYY-MM-DD.md
@@ -1329,6 +1332,11 @@ def detect_mode():
     # Scan window: 3:45–4:10pm ET only (tight — never fires after market close)
     # Check scan FIRST so 3:45–3:59pm doesn't fall through to exits
     if (h == 15 and m >= 45) or (h == 16 and m <= 10): return "scan"
+    # Post-market extended-hours exits: 4:10pm–8:00pm ET
+    # Alpaca allows DAY limit sells in extended hours (4pm–8pm ET).
+    # Critical safety net for fractional positions that have no GTC stop order.
+    # No new buys — exits only. Cron trigger: 4:15pm ET.
+    if (h == 16 and m > 10) or (17 <= h <= 19): return "ext_exits"
     # Exits: 9:30am–3:45pm ET (market hours)
     if (h == 9 and m >= 30) or (10 <= h <= 15): return "exits"
     return "summary"
@@ -1392,17 +1400,30 @@ def run_summary(client, equity, cash, rgm):
 #  EXITS RUN
 # =============================================================================
 
-def run_exits(client, equity, cash, rgm):
-    # Ensure every position has a GTC stop-market order.
-    # Catches positions that lost their stop (e.g. May 1st missed morning run).
-    place_all_stops(client)
+def run_exits(client, equity, cash, rgm, extended_hours=False):
+    """Exit check for open positions.
+
+    extended_hours=False  (9:35am run): regular hours; market-order fallback
+                          allowed; GTC stops re-placed on any position missing one.
+    extended_hours=True   (4:15pm run): Alpaca extended hours (4pm–8pm ET);
+                          limit orders only — no market orders, no GTC placement.
+                          Checks stop-loss and max-hold exits only (no midline —
+                          midline uses today's close which is already final).
+    """
+    eh_tag = " [EXTENDED HRS]" if extended_hours else ""
+
+    # In regular hours: ensure every position has a GTC stop-market order.
+    # Skip in extended hours — GTC placement requires regular-hours session.
+    if not extended_hours:
+        place_all_stops(client)
 
     positions = enrich(client, get_positions(client))
+    mode_label = "EXTENDED HOURS EXIT" if extended_hours else "MORNING CHECK"
     if not positions:
-        hdr("MORNING CHECK"); blank(); row("No open positions."); blank(); ftr()
+        hdr(mode_label); blank(); row("No open positions."); blank(); ftr()
         log_run("exits", rgm, equity, cash, 0, 0, 0, {}); return
 
-    pos_data = fetch_batch(list(positions.keys()), "positions")
+    pos_data = fetch_batch(list(positions.keys()), "positions") if not extended_hours else {}
     exits = 0
     exited = set()
 
@@ -1415,8 +1436,13 @@ def run_exits(client, equity, cash, rgm):
                 if _r.get("action") == "SELL" and _r.get("date") == today_str:
                     already_sold_today.add(_r["ticker"])
 
-    hdr("EXIT CHECK")
-    row("Exit logic", f"stop{EXIT_STOP_LOSS*100:.0f}% / {EXIT_DAYS_MAX}d max  (midline at EOD only)")
+    hdr(f"EXIT CHECK{eh_tag}")
+    exit_desc = f"stop{EXIT_STOP_LOSS*100:.0f}% / {EXIT_DAYS_MAX}d max"
+    if not extended_hours:
+        exit_desc += "  (midline at EOD only)"
+    else:
+        exit_desc += "  (midline skipped — close already final)"
+    row("Exit logic", exit_desc)
     div()
     for ticker, pos in positions.items():
         if ticker in already_sold_today:
@@ -1427,8 +1453,8 @@ def run_exits(client, equity, cash, rgm):
         if pnl_frac <= EXIT_STOP_LOSS:
             why = f"stop_loss ({pnl_frac*100:.1f}%)"
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
-                f"EXIT: {_trunc(why,22)}")
-            if do_sell(client, ticker):
+                f"EXIT{eh_tag}: {_trunc(why,22)}")
+            if do_sell(client, ticker, extended_hours=extended_hours):
                 exits += 1; exited.add(ticker); already_sold_today.add(ticker)
                 cur = pos["current_price"]
                 dh  = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
@@ -1446,8 +1472,8 @@ def run_exits(client, equity, cash, rgm):
                 if days >= EXIT_DAYS_MAX:
                     why = f"max_hold {days}d ({pnl_frac*100:+.1f}%)"
                     row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
-                        f"EXIT: {_trunc(why,22)}")
-                    if do_sell(client, ticker):
+                        f"EXIT{eh_tag}: {_trunc(why,22)}")
+                    if do_sell(client, ticker, extended_hours=extended_hours):
                         exits += 1; exited.add(ticker); already_sold_today.add(ticker)
                         cur = pos["current_price"]
                         log_tx("SELL", ticker, pos.get("strategy","?"), cur, pos["market_value"],
@@ -1457,6 +1483,11 @@ def run_exits(client, equity, cash, rgm):
             except Exception: pass
 
         # ── Midline: needs price/MA data from yfinance ─────────────────────
+        # Skip midline check in extended hours — today's close is already baked
+        # into signals; midline exits are better handled by the 9:35am run.
+        if extended_hours:
+            row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}", "HOLD  (midline deferred to 9:35am)")
+            continue
         if ticker not in pos_data:
             row(ticker, "no price data (stop/max-hold already checked)"); continue
         ex, why = check_exit(pos_data[ticker], pos, eod_only=False)
@@ -1755,6 +1786,11 @@ if __name__ == "__main__":
         run_scan(client, equity, cash, rgm)
     elif mode == "exits":
         run_exits(client, equity, cash, rgm)
+    elif mode == "ext_exits":
+        # Post-market exits (4:10pm–8pm ET): extended hours limit sells only.
+        # No GTC stop orders can be placed in extended hours.
+        # No new buys — exits only (stop-loss, time-stop, midline).
+        run_exits(client, equity, cash, rgm, extended_hours=True)
     elif mode == "weekly":
         run_summary(client, equity, cash, rgm)
         write_weekly(client, equity, cash)
