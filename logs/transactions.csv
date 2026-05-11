@@ -96,3 +96,7 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-08 20:00:53,2026-05-08,SELL,COIN,GapDown,201.2,62.52,1.4,0.86,0,midline (+1.4%),bull,514.56
 2026-05-08 20:01:14,2026-05-08,SELL,CPAY,RSIRecovery,343.99,102.76,-0.0,-0.0,0,midline (-0.0%),bull,514.34
 2026-05-08 20:01:34,2026-05-08,SELL,CTVA,Pullback50,81.13,61.66,-0.0,-0.0,0,midline (-0.0%),bull,514.23
+2026-05-11 13:31:01,2026-05-11,SELL,AES,MomReversal,14.36,60.6,0.56,0.34,4,max_hold 4d (+0.6%),bull,515.65
+2026-05-11 13:31:21,2026-05-11,SELL,CINF,Pullback50,161.75,60.37,0.16,0.1,4,max_hold 4d (+0.2%),bull,515.35
+2026-05-11 13:31:42,2026-05-11,SELL,D,Pullback50,62.33,62.12,0.74,0.46,3,max_hold 3d (+0.7%),bull,515.34
+2026-05-11 13:32:02,2026-05-11,SELL,EA,Pullback50,200.47,60.18,-0.14,-0.09,4,max_hold 4d (-0.1%),bull,515.32
