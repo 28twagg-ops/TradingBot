@@ -167,7 +167,7 @@ PDT_FILE   = LOG_DIR / "pdt.json"
 for d in [LOG_DIR, DAILY_DIR, WEEKLY_DIR]:
     d.mkdir(parents=True, exist_ok=True)
 
-W = 68   # display box inner width
+W = 72   # display box inner width
 
 
 # =============================================================================
@@ -1229,39 +1229,94 @@ def write_weekly(client, equity, cash):
     open_pnl = sum(p.get("pnl_dollar", 0) for p in positions.values())
     invested = sum(p.get("dollar_amt", 0) for p in positions.values())
 
-    hdr(f"WEEKLY SUMMARY  Week {wk} / {today.year}")
-    row("Equity",          f"${equity:,.2f}")
-    row("Cash",            f"${cash:,.2f}")
-    row("Total invested",  f"${invested:,.2f}")
-    row("Open P&L",        f"${open_pnl:+,.2f}")
-    row("Realised P&L",    f"${real_pnl:+,.2f}")
-    row("Trades this week",f"{len(buys)} buys  {len(sells)} sells")
+    # ── Compute extra stats ───────────────────────────────────────────────────
+    week_sells   = [t for t in sells]
+    week_wins    = sum(1 for t in week_sells if float(t.get("pnl_pct", 0)) > 0)
+    week_wr      = week_wins / len(week_sells) * 100 if week_sells else 0
+    all_sells    = [t for t in all_tx if t["action"] == "SELL"]
+    all_real_pnl = sum(float(t.get("pnl_dollar", 0)) for t in all_sells)
+    hold_days    = []
+    for t in all_sells:
+        try:
+            hd = int(t.get("hold_days", 0))
+            if hd > 0: hold_days.append(hd)
+        except Exception: pass
+    avg_hold = sum(hold_days) / len(hold_days) if hold_days else 0
+    pdt_used = pdt_n(load_pdt())
+    sc       = SCHEDULE[today.month]
+    nm       = today.month % 12 + 1; ns = SCHEDULE[nm]
+    all_eq_start = float(all_tx[0]["equity_after"]) if all_tx else equity
+    all_ret      = (equity - all_eq_start) / all_eq_start * 100 if all_eq_start else 0
+
+    # ── Terminal display ──────────────────────────────────────────────────────
+    hdr(f"RUBBER BAND BOT  |  Week {wk} / {today.year}  |  {'PAPER' if PAPER_TRADING else 'LIVE'}")
+    div()
+    row("Date",            f"{today}  ({MN[today.month]})")
+    row("Regime",          rgm.upper())
+    row("Strategy",        f"{sc['p']}  +  {sc['s']}")
+    row("PDT used",        f"{pdt_used} / {MAX_DAY_TRADES} today")
+    div()
+    # Two-column account layout
+    def _col2(l1, v1, l2, v2):
+        left  = f"  {l1:<16} {v1:<12}"
+        right = f"  {l2:<16} {v2}"
+        line  = f"{left}{right}"
+        if len(line) > W: line = line[:W]
+        print(f"|{line}{' '*(W-len(line))}|")
+
+    _col2("Equity",    f"${equity:,.2f}",   "Cash",        f"${cash:,.2f}")
+    _col2("Invested",  f"${invested:,.2f}",  "Available",   f"${max(0,cash - equity*CASH_RESERVE_PCT):,.2f}")
+    _col2("Open P&L",  f"${open_pnl:+,.2f}", "Realized P&L",f"${all_real_pnl:+,.2f}")
+    div()
+    row("This week",       f"{len(buys)} buys  |  {len(sells)} sells  |  "
+                           f"Win rate {week_wr:.0f}%  |  P&L ${real_pnl:+,.2f}")
+    row("All time",        f"{len(all_tx)} trades  |  Avg hold {avg_hold:.1f}d  |  "
+                           f"Return {all_ret:+.1f}%  |  P&L ${all_real_pnl:+,.2f}")
+    div()
+    if positions:
+        trow("TICKER","STRATEGY","INVESTED","ENTRY","NOW","P&L%","P&L$",
+             widths=[7,14,9,8,8,7,8])
+        div()
+        for t, p in positions.items():
+            pnl_flag = "!" if p["pnl_pct"] <= EXIT_STOP_LOSS * 100 else ""
+            trow(t, p.get("strategy","?"),
+                 f"${p.get('dollar_amt',0):.2f}",
+                 f"${p['entry_price']:.2f}",
+                 f"${p['current_price']:.2f}",
+                 f"{p['pnl_pct']:+.1f}%{pnl_flag}",
+                 f"${p['pnl_dollar']:+.2f}",
+                 widths=[7,14,9,8,8,7,8])
+    else:
+        blank(); row("  No open positions."); blank()
+    div()
+    row("Next month",      f"{MN[nm]}:  {ns['p']}  +  {ns['s']}")
     ftr()
 
     # ── Year-by-year performance ──────────────────────────────────────────────
     yr_rows = year_by_year_from_log()
     if yr_rows:
         hdr("YEAR-BY-YEAR PERFORMANCE")
-        trow("YEAR","START","END","RETURN","TRADES","WIN%","",
-             widths=[6,11,11,9,8,7,5])
+        trow("YEAR","START","END","RETURN","P&L $","TRADES","WIN%",
+             widths=[6,9,9,9,10,8,10])
         div()
         for r in yr_rows:
-            flag = "✓" if r["profitable"] else "✗"
+            flag = " ✓" if r["profitable"] else " ✗"
+            dollar_pnl = r["end_eq"] - r["start_eq"]
             trow(r["year"],
-                 f"${r['start_eq']:,.0f}", f"${r['end_eq']:,.0f}",
+                 f"${r['start_eq']:,.0f}",
+                 f"${r['end_eq']:,.0f}",
                  f"{r['ret_pct']:+.1f}%",
+                 f"${dollar_pnl:+,.2f}",
                  str(r["n_trades"]),
-                 f"{r['win_rate']:.1f}%",
-                 flag,
-                 widths=[6,11,11,9,8,7,5])
-        blank()
+                 f"{r['win_rate']:.1f}%{flag}",
+                 widths=[6,9,9,9,10,8,10])
+        div()
         profitable_n = sum(1 for r in yr_rows if r["profitable"])
         best  = max(yr_rows, key=lambda r: r["ret_pct"])
         worst = min(yr_rows, key=lambda r: r["ret_pct"])
-        row("Profitable years", f"{profitable_n}/{len(yr_rows)}  "
-            f"({profitable_n/len(yr_rows)*100:.0f}%)")
-        row("Best  year", f"{best['year']}  ({best['ret_pct']:+.1f}%)")
-        row("Worst year", f"{worst['year']}  ({worst['ret_pct']:+.1f}%)")
+        row("Profitable years", f"{profitable_n}/{len(yr_rows)}  ({profitable_n/len(yr_rows)*100:.0f}%)")
+        row("Best  year",       f"{best['year']}   {best['ret_pct']:+.1f}%   ${best['end_eq']-best['start_eq']:+,.2f}")
+        row("Worst year",       f"{worst['year']}   {worst['ret_pct']:+.1f}%   ${worst['end_eq']-worst['start_eq']:+,.2f}")
         ftr()
 
     L = [f"# Weekly Summary -- Week {wk}, {today.year}", f"_{today}_", "",
