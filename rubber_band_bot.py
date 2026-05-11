@@ -1329,14 +1329,15 @@ def detect_mode():
     h = now.hour; m = now.minute; dow = now.weekday()
     if dow >= 5: return "weekly"
     if dow == 4 and h >= 17: return "weekly"          # Friday post-close
-    # Scan window: 3:45–4:10pm ET only (tight — never fires after market close)
-    # Check scan FIRST so 3:45–3:59pm doesn't fall through to exits
-    if (h == 15 and m >= 45) or (h == 16 and m <= 10): return "scan"
-    # Post-market extended-hours exits: 4:10pm–8:00pm ET
+    # Scan window: 3:44–3:59pm ET — the cron :45 firing (19:45 UTC) lands here cleanly.
+    # Next cron firing (20:00 UTC = 4:00pm ET) falls into ext_exits, not scan.
+    # One scan per day guaranteed with a standard 15-min cron (no :50 trick needed).
+    if h == 15 and m >= 44: return "scan"
+    # Post-market extended-hours exits: 4:00pm–8:00pm ET
     # Alpaca allows DAY limit sells in extended hours (4pm–8pm ET).
     # Critical safety net for fractional positions that have no GTC stop order.
-    # No new buys — exits only. Cron trigger: 4:15pm ET.
-    if (h == 16 and m > 10) or (17 <= h <= 19): return "ext_exits"
+    # No new buys — exits only.
+    if h == 16 or (17 <= h <= 19): return "ext_exits"
     # Exits: 9:30am–3:45pm ET (market hours)
     if (h == 9 and m >= 30) or (10 <= h <= 15): return "exits"
     return "summary"
