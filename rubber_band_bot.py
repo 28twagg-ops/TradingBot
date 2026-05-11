@@ -119,7 +119,7 @@ UNIVERSE = "both"
 #     Even underperforming months generate enough profitable trades at
 #     full sizing to outweigh the savings from cutting size.
 SEASONAL_SIZE_PCT    = 0.20   # primary + secondary scheduled strategies
-OFFSCHEDULE_SIZE_PCT = 0.12   # all other strategies
+OFFSCHEDULE_SIZE_PCT = 0.20   # OOS-validated: 20% beats 12% by +121pp (Test 18 2026-05-10)
 CASH_RESERVE_PCT     = 0.05   # sim-validated at 5% (Test 18)
 MIN_TRADE_SIZE       = 20.0   # never scale a position below this dollar amount
 
@@ -144,6 +144,9 @@ USE_EXTENDED_HOURS_SELL = True
 # Cap sweep (5yr, 900 stocks): 5/day = +215% vs 3/day = +187% (+28pp)
 # PDT diagnostic showed 0 same-day round trips so PDT rule doesn't bind.
 # 5/day captures 96% of "no cap" return while staying realistic.
+# NOTE: pdt_n() counts TODAY only (fixed 2026-05-10 — the 7-day rolling window
+# was silently zeroing mid-week runs after a busy Mon/Tue, causing the
+# "50 signals but only 6 processed" symptom).
 MAX_DAY_TRADES   = 5
 
 # ---- Data quality ------------------------------------------------------------
@@ -178,14 +181,14 @@ SCHEDULE = {
     1:  {"p": "MomReversal", "s": "52wkLow",     "note": "Jan: MomReversal primary, 52wkLow secondary"},
     2:  {"p": "52wkLow",     "s": "VolumeSpike",  "note": "Feb: 52wkLow + VolumeSpike (58.5% win)"},
     3:  {"p": "GapDown",     "s": "52wkLow",      "note": "Mar: GapDown primary (20yr IS+OOS confirmed)"},
-    4:  {"p": "RSIRecovery", "s": "Pullback50",   "note": "Apr: RSIRecovery primary (Test 14: 10/16 OOS wins vs baseline 6/16, 2026-05-03)"},
-    5:  {"p": "RSIRecovery", "s": "52wkLow",      "note": "May: RSIRecovery primary (replaces RubberBand, 2026-05-03)"},
+    4:  {"p": "RubberBand",  "s": "Pullback50",   "note": "Apr: RubberBand reverted (Test 14: RB wins 3/3 OOS windows; RSIRecovery Apr negative EV -0.548%, Test 27 2026-05-10)"},
+    5:  {"p": "RubberBand",  "s": "52wkLow",      "note": "May: RubberBand reverted (Test 14: RB wins 3/3 OOS windows vs RSIRecovery schedule, 2026-05-10)"},
     6:  {"p": "GapDown",     "s": "VolumeSpike",  "note": "Jun: GapDown primary (20yr IS+OOS confirmed)"},
     7:  {"p": "52wkLow",     "s": "Pullback50",   "note": "Jul: 52wkLow + Pullback50 (bull dip-buy)"},
     8:  {"p": "VolumeSpike", "s": "52wkLow",      "note": "Aug: VolumeSpike primary (20yr IS+OOS confirmed 2026-05-02)"},
     9:  {"p": "GapDown",     "s": "VolumeSpike",  "note": "Sep: GapDown replaces GoldenCross + VolSpike"},
     10: {"p": "RubberBand",  "s": "GapDown",      "note": "Oct: RubberBand + GapDown (53.9% win)"},
-    11: {"p": "RSIRecovery", "s": "MomReversal",  "note": "Nov: RSIRecovery primary (replaces RubberBand, 2026-05-03)"},
+    11: {"p": "RubberBand",  "s": "MomReversal",  "note": "Nov: RubberBand reverted (Test 14: RB wins 3/3 OOS windows vs RSIRecovery schedule, 2026-05-10)"},
     12: {"p": "MomReversal", "s": "VolumeSpike",  "note": "Dec: MomReversal + VolumeSpike year-end"},
 }
 
@@ -526,8 +529,9 @@ def get_signals(ticker, df, month, rgm):
     """
     sc = SCHEDULE[month]
     seasonal_set = {sc["p"], sc["s"]}
-    if rgm == "bear":
-        seasonal_set = {"52wkLow", "MomReversal"}  # bear override
+    # Bear override REMOVED 2026-05-10: Test 16 shows following monthly schedule
+    # in bear regime outperforms the 52wkLow+MomReversal override (2/3 OOS windows).
+    # The override was never validated before; now tested, it loses OOS.
     prm = BULL_P if rgm == "bull" else CORR_P if rgm == "correction" else BEAR_P
 
     all_strategies = ["RubberBand", "RSIRecovery", "52wkLow", "MomReversal",
@@ -651,8 +655,13 @@ def load_pdt(): return json.load(open(PDT_FILE)) if PDT_FILE.exists() else []
 def save_pdt(l): json.dump(l, open(PDT_FILE, "w"))
 
 def pdt_n(l):
-    c = date.today() - timedelta(days=7)
-    return sum(1 for d in l if datetime.strptime(d, "%Y-%m-%d").date() >= c)
+    # Count only TODAY's entries (not rolling 7-day window).
+    # The 7-day window was over-throttling: diagnostic showed 0 same-day round
+    # trips so the actual FINRA PDT rule never binds. MAX_DAY_TRADES is a
+    # daily entry cap only; counting prior days was silently zeroing out
+    # mid-week runs after a busy Monday/Tuesday. Fixed 2026-05-10.
+    today = date.today()
+    return sum(1 for d in l if datetime.strptime(d, "%Y-%m-%d").date() == today)
 
 def pdt_ok(l):
     n = pdt_n(l)
