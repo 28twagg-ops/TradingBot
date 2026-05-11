@@ -1275,17 +1275,17 @@ def write_weekly(client, equity, cash):
     div()
     if positions:
         trow("TICKER","STRATEGY","INVESTED","ENTRY","NOW","P&L%","P&L$",
-             widths=[7,14,9,8,8,7,8])
+             widths=[6,13,9,8,8,8,10])
         div()
         for t, p in positions.items():
-            pnl_flag = "!" if p["pnl_pct"] <= EXIT_STOP_LOSS * 100 else ""
+            pnl_flag = " !" if p["pnl_pct"] <= EXIT_STOP_LOSS * 100 else ""
             trow(t, p.get("strategy","?"),
                  f"${p.get('dollar_amt',0):.2f}",
                  f"${p['entry_price']:.2f}",
                  f"${p['current_price']:.2f}",
                  f"{p['pnl_pct']:+.1f}%{pnl_flag}",
                  f"${p['pnl_dollar']:+.2f}",
-                 widths=[7,14,9,8,8,7,8])
+                 widths=[6,13,9,8,8,8,10])
     else:
         blank(); row("  No open positions."); blank()
     div()
@@ -1297,7 +1297,7 @@ def write_weekly(client, equity, cash):
     if yr_rows:
         hdr("YEAR-BY-YEAR PERFORMANCE")
         trow("YEAR","START","END","RETURN","P&L $","TRADES","WIN%",
-             widths=[6,9,9,9,10,8,10])
+             widths=[5,8,8,8,10,7,10])
         div()
         for r in yr_rows:
             flag = " ✓" if r["profitable"] else " ✗"
@@ -1309,7 +1309,7 @@ def write_weekly(client, equity, cash):
                  f"${dollar_pnl:+,.2f}",
                  str(r["n_trades"]),
                  f"{r['win_rate']:.1f}%{flag}",
-                 widths=[6,9,9,9,10,8,10])
+                 widths=[5,8,8,8,10,7,10])
         div()
         profitable_n = sum(1 for r in yr_rows if r["profitable"])
         best  = max(yr_rows, key=lambda r: r["ret_pct"])
@@ -1433,7 +1433,7 @@ def run_summary(client, equity, cash, rgm):
         blank(); row("No open positions."); blank()
     ftr()
 
-    hdr("EXIT LOGIC ACTIVE  (v7)")
+    hdr("EXIT LOGIC ACTIVE  (v8)")
     row("Profit target",  "price > 20-day MA (midline)")
     row("Stop loss",      f"{EXIT_STOP_LOSS*100:.1f}% from entry")
     row("Time stop",      f"max {EXIT_DAYS_MAX} calendar days")
@@ -1570,7 +1570,7 @@ def run_scan(client, equity, cash, rgm):
     today = date.today(); month = today.month; sc = SCHEDULE[month]
     reserve = equity * CASH_RESERVE_PCT; avail = max(0.0, cash - reserve)
 
-    hdr("RUBBER BAND BOT v7  --  DAILY SCAN")
+    hdr("RUBBER BAND BOT v8  --  DAILY SCAN")
     row("Mode",     "PAPER" if PAPER_TRADING else "*** LIVE ***")
     row("Date",     str(today))
     row("Universe", UNIVERSE)
@@ -1830,7 +1830,7 @@ if __name__ == "__main__":
     spy_df  = add_ind(spy_raw) if spy_raw is not None else None
     rgm     = regime(spy_df)
 
-    hdr(); row("RUBBER BAND BOT  v7"); div()
+    hdr(); row("RUBBER BAND BOT  v8"); div()
     row("Mode",     mode.upper())
     row("Time",     datetime.utcnow().strftime("%H:%M UTC"))
     row("Regime",   rgm.upper())
