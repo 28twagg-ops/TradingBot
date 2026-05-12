@@ -141,7 +141,11 @@ EXIT_STOP_LOSS     = -0.005  # OOS-validated: -0.5% beats -2.0% (16/16 rolling w
 # fractional shares; GTC is not). Limit = cur × 0.9985 (wider spread than
 # regular hours, ~3×). If unfilled by market open, 9:35am run re-evaluates.
 # No overnight GTC stop issue — these are DAY orders that expire the same day.
-USE_EXTENDED_HOURS_SELL = True
+# Scan runs at 3:44-3:59pm ET — regular market hours — so exits during the
+# scan always use regular market sells (limit → market fallback).
+# Extended-hours sells (limit only, no fallback) are only used in
+# run_exits(extended_hours=True) which covers 4pm-8pm ET.
+USE_EXTENDED_HOURS_SELL = False
 
 # ---- Daily entry cap ---------------------------------------------------------
 # Cap sweep (5yr, 900 stocks): 5/day = +215% vs 3/day = +187% (+28pp)
