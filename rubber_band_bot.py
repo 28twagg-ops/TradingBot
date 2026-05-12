@@ -145,12 +145,12 @@ USE_EXTENDED_HOURS_SELL = True
 
 # ---- Daily entry cap ---------------------------------------------------------
 # Cap sweep (5yr, 900 stocks): 5/day = +215% vs 3/day = +187% (+28pp)
-# PDT diagnostic showed 0 same-day round trips so PDT rule doesn't bind.
-# 5/day captures 96% of "no cap" return while staying realistic.
+# Max entries per day = floor(available_cash / MIN_TRADE_SIZE).
+# No hardcoded cap — cash is the real constraint. With a $500 account and
+# $20 min size that's ~24 max entries; as the account grows so does the cap.
 # NOTE: pdt_n() counts TODAY only (fixed 2026-05-10 — the 7-day rolling window
-# was silently zeroing mid-week runs after a busy Mon/Tue, causing the
-# "50 signals but only 6 processed" symptom).
-MAX_DAY_TRADES   = 5
+# was silently zeroing mid-week runs after a busy Mon/Tue).
+# MAX_DAY_TRADES is computed dynamically in run_scan() — not a global constant.
 
 # ---- Data quality ------------------------------------------------------------
 MIN_STOCK_PRICE  = 5.0
@@ -659,16 +659,14 @@ def save_pdt(l): json.dump(l, open(PDT_FILE, "w"))
 
 def pdt_n(l):
     # Count only TODAY's entries (not rolling 7-day window).
-    # The 7-day window was over-throttling: diagnostic showed 0 same-day round
-    # trips so the actual FINRA PDT rule never binds. MAX_DAY_TRADES is a
-    # daily entry cap only; counting prior days was silently zeroing out
-    # mid-week runs after a busy Monday/Tuesday. Fixed 2026-05-10.
+    # Fixed 2026-05-10 — 7-day window was silently zeroing mid-week runs.
     today = date.today()
     return sum(1 for d in l if datetime.strptime(d, "%Y-%m-%d").date() == today)
 
-def pdt_ok(l):
+def pdt_ok(l, max_trades):
+    # max_trades is computed dynamically: floor(avail / MIN_TRADE_SIZE)
     n = pdt_n(l)
-    if n >= MAX_DAY_TRADES: log.warning(f"PDT {n}/{MAX_DAY_TRADES}"); return False
+    if n >= max_trades: log.warning(f"PDT {n}/{max_trades}"); return False
     return True
 
 
@@ -1242,7 +1240,10 @@ def write_weekly(client, equity, cash):
             if hd > 0: hold_days.append(hd)
         except Exception: pass
     avg_hold = sum(hold_days) / len(hold_days) if hold_days else 0
-    pdt_used = pdt_n(load_pdt())
+    pdt_used  = pdt_n(load_pdt())
+    reserve   = equity * CASH_RESERVE_PCT
+    wk_avail  = max(0.0, cash - reserve)
+    wk_max_t  = max(1, int(wk_avail // MIN_TRADE_SIZE))
     sc       = SCHEDULE[today.month]
     nm       = today.month % 12 + 1; ns = SCHEDULE[nm]
     all_eq_start = float(all_tx[0]["equity_after"]) if all_tx else equity
@@ -1254,7 +1255,7 @@ def write_weekly(client, equity, cash):
     row("Date",            f"{today}  ({MN[today.month]})")
     row("Regime",          rgm.upper())
     row("Strategy",        f"{sc['p']}  +  {sc['s']}")
-    row("PDT used",        f"{pdt_used} / {MAX_DAY_TRADES} today")
+    row("PDT used",        f"{pdt_used} / {wk_max_t} today")
     div()
     # Two-column account layout
     def _col2(l1, v1, l2, v2):
@@ -1377,24 +1378,26 @@ def write_weekly(client, equity, cash):
 
 def detect_mode():
     # Use real US Eastern time (handles EDT/EST automatically via zoneinfo).
-    # Old code used raw UTC with a 2-hour "scan" window — when cron fires every
-    # 15 min, that triggered 8 scan passes and entered positions after market close.
     from zoneinfo import ZoneInfo
     now = datetime.now(ZoneInfo("America/New_York"))
     h = now.hour; m = now.minute; dow = now.weekday()
     if dow >= 5: return "weekly"
     if dow == 4 and h >= 17: return "weekly"          # Friday post-close
-    # Scan window: 3:44–3:59pm ET — the cron :45 firing (19:45 UTC) lands here cleanly.
-    # Next cron firing (20:00 UTC = 4:00pm ET) falls into ext_exits, not scan.
-    # One scan per day guaranteed with a standard 15-min cron (no :50 trick needed).
+    # Morning scan: 9:44–9:59am ET — cron :45 firing (Chicago 8:45am CDT).
+    # Catches overnight gap setups and any signal that formed at the open.
+    # One morning buy window per day. 10:00am falls into exits.
+    if h == 9 and m >= 44: return "morning_scan"
+    # Evening scan: 3:44–3:59pm ET — cron :45 firing (Chicago 2:45pm CDT).
+    # EOD scan using closing prices. One evening buy window per day.
+    # 4:00pm falls into ext_exits.
     if h == 15 and m >= 44: return "scan"
     # Post-market extended-hours exits: 4:00pm–8:00pm ET
-    # Alpaca allows DAY limit sells in extended hours (4pm–8pm ET).
-    # Critical safety net for fractional positions that have no GTC stop order.
-    # No new buys — exits only.
+    # Alpaca allows DAY limit sells in extended hours. No new buys.
     if h == 16 or (17 <= h <= 19): return "ext_exits"
-    # Exits: 9:30am–3:45pm ET (market hours)
-    if (h == 9 and m >= 30) or (10 <= h <= 15): return "exits"
+    # Exits only: 10:00am–3:44pm ET (between the two scan windows)
+    if (10 <= h <= 15): return "exits"
+    # Early morning exits: 9:30–9:44am ET (brief window before morning scan)
+    if h == 9 and m >= 30: return "exits"
     return "summary"
 
 
@@ -1403,6 +1406,9 @@ def detect_mode():
 # =============================================================================
 
 def run_summary(client, equity, cash, rgm):
+    # Safety net: create today's daily log if scan lost its git push
+    ensure_daily_log(client, equity, cash, rgm)
+
     positions = enrich(client, get_positions(client))
     invested  = sum(p.get("dollar_amt", 0) for p in positions.values())
     open_pnl  = sum(p.get("pnl_dollar", 0) for p in positions.values())
@@ -1627,6 +1633,10 @@ def run_scan(client, equity, cash, rgm):
     row("Off-sched trade", f"${equity*OFFSCHEDULE_SIZE_PCT:,.2f}  ({OFFSCHEDULE_SIZE_PCT*100:.0f}% -- other strategies)")
     ftr()
 
+    # Dynamic entry cap: how many MIN_TRADE_SIZE positions fit in available cash.
+    # No hardcoded limit — cash is the real constraint.
+    max_trades = max(1, int(avail // MIN_TRADE_SIZE))
+
     positions = enrich(client, get_positions(client)); pdt = load_pdt()
 
     hdr(f"HOLDINGS  ({len(positions)} open)")
@@ -1646,7 +1656,7 @@ def run_scan(client, equity, cash, rgm):
         row("Total open P&L", f"${pnl:+,.2f}")
     else:
         blank(); row("No open positions."); blank()
-    row(f"PDT used: {pdt_n(pdt)}/{MAX_DAY_TRADES}")
+    row(f"PDT used: {pdt_n(pdt)}/{max_trades} today")
     ftr()
 
     # Exit check on held positions
@@ -1768,12 +1778,17 @@ def run_scan(client, equity, cash, rgm):
     # When many signals: scale down equally so we participate in more setups
     # and get better statistical coverage. Caps at standard sizes; never
     # goes below MIN_TRADE_SIZE.
+    #
+    # Position sizing: divide available cash by the number of slots we can
+    # actually fill today (min of signals available and cash-based cap).
+    # This ensures we deploy capital evenly rather than shrinking to $20.
     already_held   = set(positions.keys())
     viable         = [s for s in all_sigs if s["ticker"] not in already_held]
     n_viable       = max(1, len(viable))
     n_sea_pending  = sum(1 for s in viable if s.get("seasonal"))
 
-    equal_share = avail / n_viable
+    n_slots      = min(n_viable, max_trades)   # signals we can actually fill
+    equal_share  = avail / n_slots
     sea_da = max(MIN_TRADE_SIZE,
                  min(equity * SEASONAL_SIZE_PCT, equal_share))
     off_da = max(MIN_TRADE_SIZE,
@@ -1785,7 +1800,7 @@ def run_scan(client, equity, cash, rgm):
     hdr("ENTRY ORDERS")
     cash = float(client.get_account().cash); avail = max(0.0, cash - reserve)
     if scale_active and n_viable > 1:
-        row(f"Signal scaling: {n_viable} signals → "
+        row(f"Signal scaling: {n_viable} signals / {n_slots} slots → "
             f"sea=${sea_da:.0f} off=${off_da:.0f}  "
             f"(max sea=${equity*SEASONAL_SIZE_PCT:.0f} off=${equity*OFFSCHEDULE_SIZE_PCT:.0f})")
     entries = 0; buys_log = []
@@ -1794,7 +1809,7 @@ def run_scan(client, equity, cash, rgm):
         ticker = sig["ticker"]; strategy = sig["strategy"]
         is_seasonal = sig.get("seasonal", False)
         skip = ""
-        if not pdt_ok(pdt):   skip = "PDT limit"
+        if not pdt_ok(pdt, max_trades):   skip = "PDT limit"
         elif avail <= 1.0:    skip = "reserve floor"
         da = sea_da if is_seasonal else off_da
         # Seasonal reserve: don't let off-schedule buys crowd out unfilled
@@ -1877,12 +1892,12 @@ if __name__ == "__main__":
     row("Equity",   f"${equity:,.2f}")
     ftr()
 
-    if mode == "scan":
+    if mode in ("scan", "morning_scan"):
         run_scan(client, equity, cash, rgm)
     elif mode == "exits":
         run_exits(client, equity, cash, rgm)
     elif mode == "ext_exits":
-        # Post-market exits (4:10pm–8pm ET): extended hours limit sells only.
+        # Post-market exits (4pm–8pm ET): extended hours limit sells only.
         # No GTC stop orders can be placed in extended hours.
         # No new buys — exits only (stop-loss, time-stop, midline).
         run_exits(client, equity, cash, rgm, extended_hours=True)
