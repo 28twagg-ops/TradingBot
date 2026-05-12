@@ -1453,6 +1453,41 @@ def run_summary(client, equity, cash, rgm):
 
 
 # =============================================================================
+#  DAILY LOG SAFETY NET
+# =============================================================================
+
+def ensure_daily_log(client, equity, cash, rgm):
+    """Write today's daily log if it doesn't exist yet.
+
+    Called at the top of every run_exits() and run_summary() call.
+    Protects against the scan run losing its git push (e.g. two jobs pushing
+    simultaneously causes a conflict and the scan's commit is dropped).
+    If that happens, the very next 15-min exits run will notice the missing
+    file and write a fallback log with current positions and no signals/trades.
+    The note at the top makes it clear it was auto-recovered, not a real scan.
+    """
+    today = date.today()
+    fname = DAILY_DIR / f"{today}.md"
+    if fname.exists():
+        return   # already written — nothing to do
+    log.info(f"  ensure_daily_log: {fname} missing — writing fallback log")
+    try:
+        positions = enrich(client, get_positions(client))
+        month     = today.month
+        write_daily(today, equity, cash, rgm, month, positions,
+                    signals=[], buys=[], sells=[])
+        # Prepend a note so it's clear this is a recovered log, not a scan log
+        text = fname.read_text(encoding="utf-8")
+        note = ("> ⚠️ **Fallback log** — scan run lost its git push "
+                "(concurrent job conflict). Positions shown are current; "
+                "signals/trades from the scan are not recorded here.\n\n")
+        fname.write_text(note + text, encoding="utf-8")
+        log.info(f"  Fallback daily log written → {fname}")
+    except Exception as e:
+        log.warning(f"  ensure_daily_log failed: {e}")
+
+
+# =============================================================================
 #  EXITS RUN
 # =============================================================================
 
@@ -1466,6 +1501,10 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                           Checks stop-loss and max-hold exits only (no midline —
                           midline uses today's close which is already final).
     """
+    # Safety net: if today's daily log is missing (scan lost its git push),
+    # write a fallback log now so we always have a record for every trading day.
+    ensure_daily_log(client, equity, cash, rgm)
+
     eh_tag = " [EXTENDED HRS]" if extended_hours else ""
 
     # In regular hours: ensure every position has a GTC stop-market order.
