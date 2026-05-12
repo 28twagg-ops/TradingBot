@@ -8,6 +8,15 @@ name: Rubber Band Bot
 on:
   workflow_dispatch:  # cron-job.org hits this URL, also allows manual "Run workflow"
 
+# Only one run at a time. The scan takes 20-30min (900 stock download).
+# Without this, the next 15-min cron fires while scan is still running,
+# both try to git push, the second push rejects the first → logs lost.
+# cancel-in-progress: false means the scan finishes; the new run queues
+# and starts immediately after, so no cron firing is skipped entirely.
+concurrency:
+  group: rubber-band-bot
+  cancel-in-progress: false
+
 permissions:
   contents: write   # needed to commit logs back to repo
 
@@ -41,4 +50,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add logs/
           git diff --staged --quiet || git commit -m "bot run $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git pull --rebase origin main
           git push
