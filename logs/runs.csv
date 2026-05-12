@@ -613,3 +613,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-12 19:30:29,exits,bull,515.32,515.32,0,0,0,0,,both
 2026-05-12 19:49:07,scan,bull,515.3,415.32,40,5,0,5,AEP|AES|BR|CINF|DRI,both
 2026-05-12 20:00:34,exits,bull,515.12,415.32,0,0,1,5,AEP|AES|BR|CINF|DRI,both
+2026-05-12 20:15:31,exits,bull,514.75,415.32,0,0,1,5,AEP|AES|BR|CINF|DRI,both

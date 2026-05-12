@@ -106,3 +106,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-12 19:49:02,2026-05-12,BUY,CINF,Pullback50,163.95,20.0,0,0,0,,bull,515.32
 2026-05-12 19:49:02,2026-05-12,BUY,DRI,Pullback50,200.1,20.0,0,0,0,,bull,515.31
 2026-05-12 20:00:34,2026-05-12,SELL,DRI,Pullback50,199.12,19.89,-0.56,-0.11,0,stop_loss (-0.6%),bull,515.12
+2026-05-12 20:15:31,2026-05-12,SELL,AEP,Pullback50,129.5,19.6,-1.98,-0.4,0,stop_loss (-2.0%),bull,514.75
