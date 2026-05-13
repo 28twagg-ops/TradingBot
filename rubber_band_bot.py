@@ -779,6 +779,71 @@ def place_all_stops(client):
         log.warning(f"  place_all_stops failed: {e}")
 
 
+def place_eod_stops(client):
+    """Replace all GTC stops with current-price-based stops right before close.
+
+    Called once at the end of run_scan() (~3:49pm ET).
+
+    Why this matters:
+      place_all_stops() sets the stop at entry_price * 0.995 and never moves it.
+      If a position drops from $132 to $127, the entry-based stop at $131.34 is
+      already blown through — useless overnight. This function cancels the old
+      stop and places a fresh one at current_price * 0.995, so the stop always
+      reflects where the stock IS right now, not where it was bought.
+
+      Effect:
+        • Losing positions: stop moves to current level — caps further overnight bleed.
+        • Winning positions: stop ratchets up — locks in some of the gain.
+
+    Fractional positions (<1 whole share) can't have GTC stops — logged and skipped.
+    Those are protected by ext_exits (4pm–8pm) and the morning exits run.
+    """
+    try:
+        positions = client.get_all_positions()
+        if not positions:
+            return
+        log.info(f"  place_eod_stops: updating {len(positions)} stops to current price...")
+        for p in positions:
+            qty       = float(p.qty)
+            stop_qty  = math.floor(qty)
+            cur_price = float(p.current_price)
+            stop_price = round(cur_price * (1.0 + EXIT_STOP_LOSS), 2)
+
+            if stop_qty < 1:
+                log.info(f"  EOD stop skip {p.symbol}: {qty:.4f} shares (fractional) "
+                         f"— ext_exits will cover")
+                continue
+
+            # Cancel any existing stop for this ticker first
+            try:
+                req = GetOrdersRequest(status=QueryOrderStatus.OPEN,
+                                       symbols=[p.symbol])
+                for o in client.get_orders(req):
+                    if (getattr(o, "order_type", None) in
+                            (OrderType.STOP, OrderType.STOP_LIMIT)
+                            and o.side == OrderSide.SELL):
+                        client.cancel_order_by_id(str(o.id))
+                        log.info(f"  EOD stop: cancelled old stop {p.symbol}")
+            except Exception as e:
+                log.warning(f"  EOD stop: cancel failed {p.symbol}: {e}")
+
+            # Place fresh stop at current price
+            try:
+                o = client.submit_order(StopOrderRequest(
+                    symbol=p.symbol,
+                    qty=str(stop_qty),
+                    side=OrderSide.SELL,
+                    time_in_force=TimeInForce.GTC,
+                    stop_price=stop_price,
+                ))
+                log.info(f"  EOD stop placed {p.symbol} @ ${stop_price:.2f}  "
+                         f"(cur ${cur_price:.2f}  qty={stop_qty})")
+            except Exception as e:
+                log.warning(f"  EOD stop failed {p.symbol}: {e}")
+    except Exception as e:
+        log.warning(f"  place_eod_stops failed: {e}")
+
+
 def do_sell(client, ticker, extended_hours=False):
     """Exit a position.
     In regular hours (extended_hours=False):
@@ -1517,8 +1582,9 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
 
     eh_tag = " [EXTENDED HRS]" if extended_hours else ""
 
-    # In regular hours: ensure every position has a GTC stop-market order.
-    # Skip in extended hours — GTC placement requires regular-hours session.
+    # Regular hours only: place GTC stops at start of morning exits.
+    # Extended hours: GTC stops don't trigger after 4pm, limit sells are
+    # the only mechanism available — handled below in the exit loop.
     if not extended_hours:
         place_all_stops(client)
 
@@ -1549,9 +1615,12 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         exit_desc += "  (midline skipped — close already final)"
     row("Exit logic", exit_desc)
     div()
+
+    eh_sells = []   # collect ext-hours sells for summary section
+
     for ticker, pos in positions.items():
         if ticker in already_sold_today:
-            row(ticker, "already sold today -- skipping"); continue
+            continue
 
         # ── Stop-loss: Alpaca unrealized P&L — no yfinance needed ─────────
         pnl_frac = pos.get("pnl_pct", 0) / 100
@@ -1567,6 +1636,9 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                 log_tx("SELL", ticker, pos.get("strategy","?"), cur, pos["market_value"],
                        rgm, float(client.get_account().equity),
                        pos["pnl_pct"], pos["pnl_dollar"], dh, why)
+                if extended_hours:
+                    eh_sells.append((ticker, pos.get("strategy","?"), pos["pnl_pct"],
+                                     pos["pnl_dollar"], why))
             continue
 
         # ── Max-hold: position data only — no yfinance needed ─────────────
@@ -1584,6 +1656,9 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                         log_tx("SELL", ticker, pos.get("strategy","?"), cur, pos["market_value"],
                                rgm, float(client.get_account().equity),
                                pos["pnl_pct"], pos["pnl_dollar"], days, why)
+                        if extended_hours:
+                            eh_sells.append((ticker, pos.get("strategy","?"), pos["pnl_pct"],
+                                             pos["pnl_dollar"], why))
                     continue
             except Exception: pass
 
@@ -1591,7 +1666,9 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         # Skip midline check in extended hours — today's close is already baked
         # into signals; midline exits are better handled by the 9:35am run.
         if extended_hours:
-            row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}", "HOLD  (midline deferred to 9:35am)")
+            strat = pos.get("strategy", "midline")
+            row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
+                f"HOLDING until 9:35am scan ({strat})")
             continue
         if ticker not in pos_data:
             row(ticker, "no price data (stop/max-hold already checked)"); continue
@@ -1607,6 +1684,25 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                    rgm, float(client.get_account().equity),
                    pos["pnl_pct"], pos["pnl_dollar"], dh, why)
     ftr()
+
+    # ── Extended-hours sells summary ──────────────────────────────────────
+    if extended_hours and eh_sells:
+        hdr("EXTENDED HOURS SELLS")
+        trow("TICKER", "STRATEGY", "P&L%", "P&L$", "REASON",
+             widths=[8, 14, 7, 8, 28])
+        div()
+        total_pnl = 0.0
+        for ticker, strat, pnl_pct, pnl_dollar, why in eh_sells:
+            trow(ticker, strat, f"{pnl_pct:+.2f}%", f"${pnl_dollar:+.2f}", why,
+                 widths=[8, 14, 7, 8, 28])
+            total_pnl += pnl_dollar
+        blank()
+        row(f"{len(eh_sells)} sold after hours", f"total P&L  ${total_pnl:+.2f}")
+        ftr()
+    elif extended_hours:
+        hdr("EXTENDED HOURS SELLS")
+        blank(); row("No extended-hours sells this run."); blank()
+        ftr()
 
     log_run("exits", rgm, equity, cash, 0, 0, exits, positions)
 
@@ -1679,7 +1775,7 @@ def run_scan(client, equity, cash, rgm):
         hdr("EXIT EVALUATION  (EOD -- midline + stop + max-hold)")
         for ticker, pos in list(positions.items()):
             if ticker in already_sold_today:
-                row(ticker, "already sold today -- skipping"); continue
+                continue
 
             # ── Stop-loss: Alpaca unrealized P&L — no yfinance needed ─────
             pnl_frac = pos.get("pnl_pct", 0) / 100
