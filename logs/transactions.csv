@@ -133,3 +133,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-13 13:49:52,2026-05-13,BUY,NNN,Pullback50,44.34,20.37,0,0,0,,bull,513.62
 2026-05-13 13:49:52,2026-05-13,BUY,TCBI,Pullback50,97.48,20.37,0,0,0,,bull,513.61
 2026-05-13 13:49:52,2026-05-13,BUY,TXNM,Pullback50,59.28,20.37,0,0,0,,bull,513.61
+2026-05-13 14:01:01,2026-05-13,SELL,BCO,GapDown,101.64,20.1,-1.34,-0.27,0,stop_loss (-1.3%),bull,513.01
+2026-05-13 14:01:21,2026-05-13,SELL,CHD,Pullback50,94.64,20.25,-0.59,-0.12,0,stop_loss (-0.6%),bull,513.07
