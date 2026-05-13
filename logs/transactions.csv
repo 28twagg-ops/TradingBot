@@ -107,3 +107,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-12 19:49:02,2026-05-12,BUY,DRI,Pullback50,200.1,20.0,0,0,0,,bull,515.31
 2026-05-12 20:00:34,2026-05-12,SELL,DRI,Pullback50,199.12,19.89,-0.56,-0.11,0,stop_loss (-0.6%),bull,515.12
 2026-05-12 20:15:31,2026-05-12,SELL,AEP,Pullback50,129.5,19.6,-1.98,-0.4,0,stop_loss (-2.0%),bull,514.75
+2026-05-13 13:30:51,2026-05-13,SELL,AEP,Pullback50,126.43,19.14,-4.3,-0.86,1,stop_loss (-4.3%),bull,514.03
+2026-05-13 13:31:11,2026-05-13,SELL,BR,MomReversal,147.96,19.77,-1.14,-0.23,1,stop_loss (-1.1%),bull,513.91
