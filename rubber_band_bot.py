@@ -728,8 +728,7 @@ def ensure_stop(client, ticker, entry_price, qty):
     # those (the software exit at 9:35am will still catch them).
     stop_qty = math.floor(qty)
     if stop_qty < 1:
-        log.warning(f"  STOP skipped {ticker}: position is {qty:.4f} shares "
-                    f"(<1 whole share) — software exit will handle it")
+        log.info(f"  STOP skipped {ticker}: fractional ({qty:.4f} shares) — software exit will handle it")
         return False
     try:
         # Check if a stop-sell already exists for this ticker
@@ -1620,6 +1619,16 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
 
     for ticker, pos in positions.items():
         if ticker in already_sold_today:
+            continue
+
+        # ── Skip same-day exits (PDT protection) ──────────────────────────
+        # Alpaca blocks same-day buy+sell as a day trade on accounts < $25k.
+        # If the position was entered today, defer all exits to the 9:35am run.
+        entry_date = pos.get("entry_date", "")
+        entered_today = (entry_date == str(date.today()))
+        if entered_today and not extended_hours:
+            row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
+                "HOLDING until 9:35am (entered today — PDT)")
             continue
 
         # ── Stop-loss: Alpaca unrealized P&L — no yfinance needed ─────────
