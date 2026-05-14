@@ -172,3 +172,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-14 13:51:01,2026-05-14,BUY,GM,Pullback50,76.59,20.12,0,0,0,,bull,512.67
 2026-05-14 13:51:01,2026-05-14,BUY,INTC,GapDown,118.29,20.12,0,0,0,,bull,512.65
 2026-05-14 13:51:01,2026-05-14,BUY,NI,Pullback50,47.15,20.12,0,0,0,,bull,512.66
+2026-05-14 14:30:48,2026-05-14,SELL,HWC,Pullback50,65.55,20.23,-0.69,-0.14,1,stop_loss (-0.7%),bull,511.9
