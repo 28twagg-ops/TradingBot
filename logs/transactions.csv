@@ -202,3 +202,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-15 13:51:12,2026-05-15,BUY,SNDK,GapDown,1375.44,20.36,0,0,0,,bull,511.64
 2026-05-15 13:51:12,2026-05-15,BUY,STX,GapDown,776.89,20.36,0,0,0,,bull,511.62
 2026-05-15 13:51:13,2026-05-15,BUY,TER,GapDown,341.91,20.36,0,0,0,,bull,511.61
+2026-05-15 14:15:48,2026-05-15,SELL,XEL,Pullback50,78.96,20.26,-0.53,-0.11,2,stop_loss (-0.5%),bull,511.92
