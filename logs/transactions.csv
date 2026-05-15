@@ -178,3 +178,7 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-14 19:46:23,2026-05-14,SELL,KNX,Pullback50,67.95,22.92,12.51,2.55,1,midline (+12.5%),bull,514.67
 2026-05-14 20:00:27,2026-05-14,SELL,DE,Pullback50,574.64,19.87,-1.23,-0.25,0,stop_loss (-1.2%),bull,514.83
 2026-05-14 20:00:27,2026-05-14,SELL,INTC,GapDown,115.76,19.93,-0.95,-0.19,0,stop_loss (-0.9%),bull,514.83
+2026-05-15 13:30:49,2026-05-15,SELL,DE,Pullback50,571.5,19.76,-1.76,-0.36,1,stop_loss (-1.8%),bull,512.43
+2026-05-15 13:31:09,2026-05-15,SELL,GD,Pullback50,339.41,20.01,-0.53,-0.11,1,stop_loss (-0.5%),bull,512.4
+2026-05-15 13:31:29,2026-05-15,SELL,INTC,GapDown,109.31,18.82,-6.47,-1.3,1,stop_loss (-6.5%),bull,512.37
+2026-05-15 13:31:50,2026-05-15,SELL,LNT,Pullback50,72.3,20.01,-0.56,-0.11,1,stop_loss (-0.6%),bull,512.17
