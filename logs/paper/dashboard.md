@@ -1,18 +1,18 @@
 # 📊 Paper Bot — Performance Dashboard (PAPER TRADING)
-*Updated: 2026-05-16 13:21 UTC*
+*Updated: 2026-05-16 17:05 UTC*
 
 > ⚠️ **Paper trading only — no real money involved.**
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $99527.38 |
+| **Current Equity** | $99613.10 |
 | **Starting Equity** | $100000.00 |
-| **Total Return** | -0.47% ($-472.62) |
+| **Total Return** | -0.39% ($-386.90) |
 | **Max Drawdown** | -99.48% |
 | **Current Cash** | $84964.25 |
 | **Open Positions** | 0 () |
-| **Last Run** | 2026-05-16 13:21:14 |
+| **Last Run** | 2026-05-16 17:05:53 |
 
 ## Trade Performance
 | Metric | Value |
