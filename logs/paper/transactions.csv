@@ -29,3 +29,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-16 09:48:48,2026-05-16,BUY,SOL/USD,CryptoRSI,0,0,0.0,0.0,0,rsi_entry,crypto,99575.31
 2026-05-16 09:48:48,2026-05-16,BUY,AVAX/USD,CryptoRSI,0,0,0.0,0.0,0,rsi_entry,crypto,99575.31
 2026-05-16 09:48:48,2026-05-16,BUY,LINK/USD,CryptoRSI,0,0,0.0,0.0,0,rsi_entry,crypto,99575.31
+2026-05-17 06:49:39,2026-05-17,SELL,ETHUSD,CryptoRSI,0,0,0.399,11.67,0,rsi_exit (RSI=60),crypto,99620.7
