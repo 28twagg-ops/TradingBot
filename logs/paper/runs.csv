@@ -104,3 +104,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-17 02:48:18,crypto,crypto,99524.53,84964.25,5,0,0,0,,both
 2026-05-17 06:49:40,crypto,crypto,99620.7,84964.25,5,0,1,0,,both
 2026-05-17 09:54:29,crypto,crypto,99619.66,87888.39,5,0,2,0,,both
+2026-05-17 13:19:29,crypto,crypto,99590.18,93761.49,5,0,0,0,,both
