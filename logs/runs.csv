@@ -843,3 +843,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-19 21:45:24,exits,bull,507.93,309.88,0,0,0,9,ABNB|DLR|FIX|IFF|KR|L|LRCX|MPWR|NI,both
 2026-05-19 22:00:27,exits,bull,507.83,309.88,0,0,0,9,ABNB|DLR|FIX|IFF|KR|L|LRCX|MPWR|NI,both
 2026-05-19 22:15:26,exits,bull,507.77,309.88,0,0,0,9,ABNB|DLR|FIX|IFF|KR|L|LRCX|MPWR|NI,both
+2026-05-19 22:30:26,exits,bull,507.86,309.88,0,0,0,9,ABNB|DLR|FIX|IFF|KR|L|LRCX|MPWR|NI,both
