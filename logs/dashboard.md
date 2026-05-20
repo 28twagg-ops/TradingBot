@@ -1,42 +1,42 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-05-19 19:50 UTC*
+*Updated: 2026-05-20 13:50 UTC*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $507.76 |
+| **Current Equity** | $508.92 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | +1.55% ($+7.76) |
+| **Total Return** | +1.78% ($+8.92) |
 | **Peak Equity** | $519.36 |
 | **Max Drawdown** | -6.84% |
-| **Current Cash** | $309.88 |
-| **Open Positions** | 9 (ABNB|DLR|FIX|IFF|KR|L|LRCX|MPWR|NI) |
-| **Last Bot Run** | 2026-05-19 19:50:47 |
+| **Current Cash** | $91.57 |
+| **Open Positions** | 20 (ADI|AEE|APD|BMY|C|CNP|DLR|EA|ETR|FITB|FIX|FTV|GD|HAS|HIG|INTU|KEY|KEYS|L|MPWR) |
+| **Last Bot Run** | 2026-05-20 13:50:17 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 150 |
-| **Wins / Losses** | 38 / 112 |
-| **Win Rate** | 25.3% |
+| **Total Closed Trades** | 158 |
+| **Wins / Losses** | 41 / 117 |
+| **Win Rate** | 25.9% |
 | **Avg Win** | +2.22% |
-| **Avg Loss** | -1.38% |
-| **Profit Factor** | 0.66x |
+| **Avg Loss** | -1.36% |
+| **Profit Factor** | 0.67x |
 | **Avg Hold Days** | 1.3d |
-| **Total Realised P&L** | $-20.24 |
+| **Total Realised P&L** | $-19.93 |
 
 ## Exit Reasons
 | Exit Type | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `stop_loss` | 97 | 0% | -1.54% |
-| `midline` | 33 | 76% | +2.01% |
+| `stop_loss` | 102 | 0% | -1.51% |
+| `midline` | 36 | 78% | +2.03% |
 | `max_hold` | 20 | 65% | +0.64% |
 
 ## Strategy Breakdown
 | Strategy | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `Pullback50` | 107 | 25% | -0.50% |
-| `GapDown` | 24 | 25% | -0.78% |
+| `Pullback50` | 114 | 25% | -0.49% |
+| `GapDown` | 25 | 28% | -0.56% |
 | `VolumeSpike` | 8 | 50% | +2.92% |
 | `MomReversal` | 6 | 17% | -1.81% |
 | `RSIRecovery` | 4 | 0% | -1.02% |
@@ -69,11 +69,20 @@
 | 2026-05-14 | $514.46 | +3.64 |
 | 2026-05-15 | $512.95 | -1.51 |
 | 2026-05-18 | $511.00 | -1.95 |
-| 2026-05-19 | $507.76 | -3.24 |
+| 2026-05-19 | $507.78 | -3.22 |
+| 2026-05-20 | $508.92 | +1.14 |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
 |---|---|---|---|---|---|---|
+| 2026-05-20 | **NI** | `Pullback50` | +1.69% | $+0.38 | 1d | midline (+1.7%) |
+| 2026-05-20 | **LRCX** | `GapDown` | +4.70% | $+1.04 | 1d | midline (+4.7%) |
+| 2026-05-20 | **L** | `Pullback50` | +0.40% | $+0.08 | 2d | midline (+0.4%) |
+| 2026-05-20 | **KR** | `Pullback50` | -0.76% | $-0.17 | 1d | stop_loss (-0.8%) |
+| 2026-05-20 | **IFF** | `Pullback50` | -0.66% | $-0.15 | 1d | stop_loss (-0.7%) |
+| 2026-05-20 | **DLR** | `Pullback50` | -0.91% | $-0.20 | 1d | stop_loss (-0.9%) |
+| 2026-05-20 | **ABNB** | `Pullback50` | -2.17% | $-0.48 | 1d | stop_loss (-2.2%) |
+| 2026-05-19 | **DLR** | `Pullback50` | -0.87% | $-0.19 | 0d | stop_loss (-0.9%) |
 | 2026-05-19 | **WBD** | `Pullback50` | +0.60% | $+0.12 | 1d | midline (+0.6%) |
 | 2026-05-19 | **LNT** | `Pullback50` | +1.69% | $+0.34 | 1d | midline (+1.7%) |
 | 2026-05-19 | **EVRG** | `Pullback50` | +1.43% | $+0.29 | 1d | midline (+1.4%) |
@@ -86,14 +95,6 @@
 | 2026-05-19 | **HIG** | `Pullback50` | -1.01% | $-0.21 | 1d | stop_loss (-1.0%) |
 | 2026-05-19 | **EW** | `Pullback50` | -1.14% | $-0.23 | 1d | stop_loss (-1.1%) |
 | 2026-05-19 | **CFG** | `Pullback50` | -1.95% | $-0.40 | 1d | stop_loss (-2.0%) |
-| 2026-05-19 | **CB** | `Pullback50` | +0.37% | $+0.08 | 1d | midline (+0.4%) |
-| 2026-05-19 | **ACGL** | `Pullback50` | +0.15% | $+0.03 | 1d | midline (+0.2%) |
-| 2026-05-19 | **TTWO** | `GapDown` | -0.71% | $-0.14 | 1d | stop_loss (-0.7%) |
-| 2026-05-19 | **RF** | `Pullback50` | -0.73% | $-0.15 | 1d | stop_loss (-0.7%) |
-| 2026-05-19 | **PSA** | `Pullback50` | -0.68% | $-0.14 | 1d | stop_loss (-0.7%) |
-| 2026-05-19 | **PNC** | `Pullback50` | -0.95% | $-0.19 | 1d | stop_loss (-0.9%) |
-| 2026-05-19 | **PKG** | `Pullback50` | -1.87% | $-0.38 | 1d | stop_loss (-1.9%) |
-| 2026-05-19 | **NI** | `Pullback50` | -0.82% | $-0.17 | 1d | stop_loss (-0.8%) |
 
 ---
 *Auto-generated after every EOD scan. View on GitHub: `logs/dashboard.md`*
