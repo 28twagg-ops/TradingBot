@@ -312,3 +312,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-20 13:50:12,2026-05-20,BUY,KEY,Pullback50,21.05,20.67,0,0,0,,bull,508.92
 2026-05-20 13:50:12,2026-05-20,BUY,KEYS,GapDown,343.09,20.67,0,0,0,,bull,508.9
 2026-05-20 13:50:12,2026-05-20,BUY,L,Pullback50,108.41,20.67,0,0,0,,bull,508.88
+2026-05-20 19:45:47,2026-05-20,SELL,ADI,GapDown,398.42,20.42,-1.23,-0.25,0,stop_loss (-1.2%),bull,510.84
+2026-05-20 19:46:07,2026-05-20,SELL,APD,Pullback50,289.8,20.56,-0.52,-0.11,0,stop_loss (-0.5%),bull,510.85
