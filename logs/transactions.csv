@@ -336,3 +336,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-21 13:50:30,2026-05-21,BUY,KR,GapDown,66.28,20.59,0,0,0,,bull,504.69
 2026-05-21 13:50:30,2026-05-21,BUY,NI,Pullback50,47.26,20.59,0,0,0,,bull,504.68
 2026-05-21 13:50:31,2026-05-21,BUY,PNW,Pullback50,101.57,20.59,0,0,0,,bull,504.67
+2026-05-21 19:45:56,2026-05-21,SELL,EA,Pullback50,201.72,20.69,0.09,0.02,1,midline (+0.1%),bull,507.74
+2026-05-21 19:46:17,2026-05-21,SELL,HIG,Pullback50,136.16,20.85,0.89,0.18,1,midline (+0.9%),bull,507.77

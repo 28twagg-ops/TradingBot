@@ -1,41 +1,41 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-05-21 13:50 UTC*
+*Updated: 2026-05-21 19:49 UTC*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $504.66 |
+| **Current Equity** | $508.00 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | +0.93% ($+4.66) |
+| **Total Return** | +1.60% ($+8.00) |
 | **Peak Equity** | $519.36 |
 | **Max Drawdown** | -6.84% |
-| **Current Cash** | $106.57 |
-| **Open Positions** | 19 (AEE|ANET|C|CARR|DLR|EA|ETR|FITB|FIX|FTV|GM|HIG|INCY|KEY|KR|LNT|MPWR|NI|PNW) |
-| **Last Bot Run** | 2026-05-21 13:50:36 |
+| **Current Cash** | $148.10 |
+| **Open Positions** | 17 (AEE|ANET|C|CARR|DLR|ETR|FITB|FIX|FTV|GM|INCY|KEY|KR|LNT|MPWR|NI|PNW) |
+| **Last Bot Run** | 2026-05-21 19:49:50 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 174 |
-| **Wins / Losses** | 41 / 133 |
-| **Win Rate** | 23.6% |
-| **Avg Win** | +2.22% |
+| **Total Closed Trades** | 176 |
+| **Wins / Losses** | 43 / 133 |
+| **Win Rate** | 24.4% |
+| **Avg Win** | +2.14% |
 | **Avg Loss** | -1.55% |
 | **Profit Factor** | 0.58x |
 | **Avg Hold Days** | 1.2d |
-| **Total Realised P&L** | $-29.47 |
+| **Total Realised P&L** | $-29.27 |
 
 ## Exit Reasons
 | Exit Type | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
 | `stop_loss` | 118 | 0% | -1.70% |
-| `midline` | 36 | 78% | +2.03% |
+| `midline` | 38 | 79% | +1.95% |
 | `max_hold` | 20 | 65% | +0.64% |
 
 ## Strategy Breakdown
 | Strategy | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `Pullback50` | 122 | 24% | -0.53% |
+| `Pullback50` | 124 | 25% | -0.51% |
 | `GapDown` | 33 | 21% | -1.57% |
 | `VolumeSpike` | 8 | 50% | +2.92% |
 | `MomReversal` | 6 | 17% | -1.81% |
@@ -71,11 +71,13 @@
 | 2026-05-18 | $511.00 | -1.95 |
 | 2026-05-19 | $507.78 | -3.22 |
 | 2026-05-20 | $507.78 | +0.00 |
-| 2026-05-21 | $504.66 | -3.12 |
+| 2026-05-21 | $508.00 | +0.22 |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
 |---|---|---|---|---|---|---|
+| 2026-05-21 | **HIG** | `Pullback50` | +0.89% | $+0.18 | 1d | midline (+0.9%) |
+| 2026-05-21 | **EA** | `Pullback50` | +0.09% | $+0.02 | 1d | midline (+0.1%) |
 | 2026-05-21 | **L** | `Pullback50` | -0.89% | $-0.18 | 1d | stop_loss (-0.9%) |
 | 2026-05-21 | **KEYS** | `GapDown` | -1.44% | $-0.30 | 1d | stop_loss (-1.4%) |
 | 2026-05-21 | **HAS** | `GapDown` | -2.04% | $-0.42 | 1d | stop_loss (-2.0%) |
@@ -94,8 +96,6 @@
 | 2026-05-20 | **ADI** | `GapDown` | -1.23% | $-0.25 | 0d | stop_loss (-1.2%) |
 | 2026-05-20 | **NI** | `Pullback50` | +1.69% | $+0.38 | 1d | midline (+1.7%) |
 | 2026-05-20 | **LRCX** | `GapDown` | +4.70% | $+1.04 | 1d | midline (+4.7%) |
-| 2026-05-20 | **L** | `Pullback50` | +0.40% | $+0.08 | 2d | midline (+0.4%) |
-| 2026-05-20 | **KR** | `GapDown` | -0.76% | $-0.17 | 1d | stop_loss (-0.8%) |
 
 ---
 *Auto-generated after every EOD scan. View on GitHub: `logs/dashboard.md`*
