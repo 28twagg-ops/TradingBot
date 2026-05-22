@@ -111,11 +111,11 @@ UNIVERSE = "both"
 # ---- Position sizing ---------------------------------------------------------
 # Sim-validated (7yr, 900 stocks, multiple runs):
 #   Seasonal signals  (primary + secondary from monthly schedule): 20%
-#   Off-schedule signals (other 4 strategies firing off-schedule): 12%
+#   Off-schedule signals (other 4 strategies firing off-schedule): 20%
 #
 #   Sweep result (7yr, 900 stocks):
-#     20%/12% wins (+394.7% total, +109.8% OOS, 28.1% dd)
-#     Consistent winner across 3yr and 7yr runs.
+#     20%/20% beats 20%/12% by +121pp total return (Test 18, 2026-05-10)
+#     while keeping sizing simple and symmetric.
 #
 #   Weak-month reduction (Feb/Mar/Sep → 5%) was tested and rejected:
 #     Reduces total return by ~52pp and OOS by ~18pp vs no reduction.
@@ -1209,7 +1209,7 @@ def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells
          f"| Open P&L | ${op_pnl:+,.2f} |",
          f"| Regime | {rgm.upper()} |",
          f"| Universe | {UNIVERSE} |",
-         f"| Exit mode | midline / stop{EXIT_STOP_LOSS*100:.0f}% / {EXIT_DAYS_MAX}d max |",
+        f"| Exit mode | midline / stop{EXIT_STOP_LOSS*100:.1f}% / {EXIT_DAYS_MAX}d max |",
          f"| Strategies | {sc['p']} + {sc['s']} |", "",
          "## Holdings"]
     if positions:
@@ -1639,7 +1639,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                     already_sold_today.add(_r["ticker"])
 
     hdr(f"EXIT CHECK{eh_tag}")
-    exit_desc = f"stop{EXIT_STOP_LOSS*100:.0f}% / {EXIT_DAYS_MAX}d max"
+    exit_desc = f"stop{EXIT_STOP_LOSS*100:.1f}% / {EXIT_DAYS_MAX}d max"
     if not extended_hours:
         exit_desc += "  (midline at EOD only)"
     else:
@@ -1762,7 +1762,7 @@ def run_scan(client, equity, cash, rgm):
     row("Universe", UNIVERSE)
     row("Month",    f"{MN[month]}: {sc['p']} + {sc['s']}")
     row("Regime",   rgm.upper())
-    row("Exit",     f"midline / stop{EXIT_STOP_LOSS*100:.0f}% / {EXIT_DAYS_MAX}d max")
+    row("Exit",     f"midline / stop{EXIT_STOP_LOSS*100:.1f}% / {EXIT_DAYS_MAX}d max")
     ftr()
 
     hdr("ACCOUNT")
@@ -1915,7 +1915,7 @@ def run_scan(client, equity, cash, rgm):
     all_sigs.sort(key=lambda s: (0 if s.get("seasonal") else 1))
 
     # ── Signal-scaled position sizing ─────────────────────────────────────
-    # When few signals: use standard sizes (20% / 12%).
+    # When few signals: use standard sizes (20% / 20%).
     # When many signals: scale down equally so we participate in more setups
     # and get better statistical coverage. Caps at standard sizes; never
     # goes below MIN_TRADE_SIZE.
@@ -1954,25 +1954,34 @@ def run_scan(client, equity, cash, rgm):
         elif avail <= 1.0:    skip = "reserve floor"
         da = sea_da if is_seasonal else off_da
         # Seasonal reserve: don't let off-schedule buys crowd out unfilled
-        # seasonal signals — always keep room for at least one seasonal entry
+        # seasonal signals. Lock cash for ALL pending seasonal entries, not
+        # just one slot, so off-schedule orders only consume true surplus.
         if not skip and not is_seasonal and n_unfilled_sea > 0:
-            if avail - da < sea_da:
+            seasonal_lock = min(avail, n_unfilled_sea * sea_da)
+            if avail - da < seasonal_lock:
                 skip = "seasonal reserve"
         if not skip and da > avail: skip = "not enough cash"
         if not skip and has_earnings_soon(ticker): skip = f"earnings ≤{EARNINGS_SKIP_DAYS}d"
         tier = "S" if is_seasonal else "o"
         if skip:
-            row(f"  SKIP [{tier}] {ticker}  {strategy}", _trunc(skip, 20)); continue
+            row(f"  SKIP [{tier}] {ticker}  {strategy}", _trunc(skip, 20))
+            if is_seasonal:
+                # Mark seasonal signal as processed even when skipped, so any
+                # remaining cash can flow to off-schedule entries.
+                n_unfilled_sea = max(0, n_unfilled_sea - 1)
+            continue
         row(f"  ENTER [{tier}] {ticker}  {strategy}", f"${da:.2f}")
         if do_buy(client, ticker, da, strategy):
             entries += 1; avail -= da
             pdt.append(str(today))   # track this buy for PDT cap enforcement
-            if is_seasonal: n_unfilled_sea = max(0, n_unfilled_sea - 1)
             log_tx("BUY", ticker, strategy, sig["close"], da, rgm,
                    float(client.get_account().equity))
             buys_log.append({"t": datetime.now().strftime("%H:%M"),
                               "tk": ticker, "st": strategy,
                               "px": sig["close"], "$": da})
+        if is_seasonal:
+            # Seasonal signal has been processed (buy attempt complete).
+            n_unfilled_sea = max(0, n_unfilled_sea - 1)
     if entries == 0 and not all_sigs: row("  No entries placed.")
     ftr()
 
