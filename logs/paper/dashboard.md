@@ -1,29 +1,29 @@
 # 📊 Paper Bot — Performance Dashboard (PAPER TRADING)
-*Updated: 2026-05-17 20:39 UTC*
+*Updated: 2026-05-22 21:01 UTC*
 
 > ⚠️ **Paper trading only — no real money involved.**
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $99595.03 |
+| **Current Equity** | $99516.30 |
 | **Starting Equity** | $100000.00 |
-| **Total Return** | -0.40% ($-404.97) |
+| **Total Return** | -0.48% ($-483.70) |
 | **Max Drawdown** | -99.48% |
-| **Current Cash** | $93761.49 |
+| **Current Cash** | $84515.79 |
 | **Open Positions** | 0 () |
-| **Last Run** | 2026-05-17 20:39:46 |
+| **Last Run** | 2026-05-22 21:01:37 |
 
 ## Trade Performance
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 10 |
-| **Win Rate** | 50.0% |
+| **Total Closed Trades** | 11 |
+| **Win Rate** | 45.5% |
 | **Avg Win** | +0.39% |
-| **Avg Loss** | -1.79% |
-| **Profit Factor** | 1.16x |
+| **Avg Loss** | -1.77% |
+| **Profit Factor** | 1.13x |
 | **Avg Hold Days** | 0.0d |
-| **Total Realised P&L** | $+7.74 |
+| **Total Realised P&L** | $+6.49 |
 
 ## Tranche Feature  (new in paper bot)
 | Parameter | Value |
@@ -36,11 +36,12 @@
 | Exit | Trades | WR | Avg P&L% |
 |---|---|---|---|
 | `rsi_exit` | 7 | 71% | +0.11% |
-| `stop_loss` | 3 | 0% | -2.59% |
+| `stop_loss` | 4 | 0% | -2.37% |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit |
 |---|---|---|---|---|---|---|
+| 2026-05-22 | **SOLUSD** | `CryptoRSI` | -1.69% | $-1.25 | 0d | stop_loss (-1.7%) |
 | 2026-05-17 | **BTCUSD** | `CryptoRSI` | -1.02% | $-29.86 | 0d | rsi_exit (RSI=55) |
 | 2026-05-17 | **LINKUSD** | `CryptoRSI` | +0.55% | $+16.05 | 0d | rsi_exit (RSI=55) |
 | 2026-05-17 | **ETHUSD** | `CryptoRSI` | +0.40% | $+11.67 | 0d | rsi_exit (RSI=60) |
