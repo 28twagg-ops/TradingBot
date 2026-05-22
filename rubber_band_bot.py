@@ -710,6 +710,39 @@ def pdt_ok(l, max_trades):
 #  ORDERS
 # =============================================================================
 
+def _order_fill_summary(order):
+    """Return normalized fill info from an Alpaca order object."""
+    try:
+        avg = float(getattr(order, "filled_avg_price", 0) or 0)
+        qty = float(getattr(order, "filled_qty", 0) or 0)
+        if avg > 0 and qty > 0:
+            return {"price": avg, "qty": qty, "dollars": avg * qty}
+    except Exception:
+        pass
+    return {"price": None, "qty": None, "dollars": None}
+
+
+def _recent_filled_order(client, ticker, side, limit=20):
+    """Best-effort lookup of the most recent filled order for ticker+side."""
+    try:
+        req = GetOrdersRequest(
+            status=QueryOrderStatus.CLOSED,
+            symbols=[ticker],
+            limit=limit,
+        )
+        for o in client.get_orders(req):
+            if o.side != side:
+                continue
+            if getattr(o, "status", None) not in (OrderStatus.filled, OrderStatus.partially_filled):
+                continue
+            fill = _order_fill_summary(o)
+            if fill["price"] is not None:
+                return fill
+    except Exception:
+        pass
+    return {"price": None, "qty": None, "dollars": None}
+
+
 def do_buy(client, ticker, dollars, strategy):
     try:
         cid = f"{strategy}|{ticker}|{date.today()}"[:48]
@@ -718,9 +751,23 @@ def do_buy(client, ticker, dollars, strategy):
             side=OrderSide.BUY, time_in_force=TimeInForce.DAY,
             client_order_id=cid))
         log.info(f"  BUY  {ticker}  ${dollars:.2f}  [{strategy}]  id={o.id}")
-        return True
+
+        # Best-effort fill capture for accurate transaction logs.
+        for _ in range(5):
+            time.sleep(2)
+            try:
+                oo = client.get_order_by_id(str(o.id))
+                if oo.status in (OrderStatus.filled, OrderStatus.partially_filled):
+                    fill = _order_fill_summary(oo)
+                    return {"ok": True, "filled": True, **fill}
+            except Exception:
+                pass
+
+        fill = _recent_filled_order(client, ticker, OrderSide.BUY, limit=10)
+        return {"ok": True, "filled": fill["price"] is not None, **fill}
     except Exception as e:
-        log.error(f"  BUY FAILED {ticker}: {e}"); return False
+        log.error(f"  BUY FAILED {ticker}: {e}")
+        return {"ok": False, "filled": False, "price": None, "qty": None, "dollars": None}
 
 def cancel_stop_orders(client, ticker):
     """Cancel ALL open sell orders for a ticker (stop, stop-limit, and stuck
@@ -887,7 +934,11 @@ def do_sell(client, ticker, extended_hours=False):
       - No market-order fallback (Alpaca only allows limit in extended hours).
       - If unfilled by market open, 9:35am run re-evaluates.
 
-    Always returns True if the position is gone after the attempt."""
+    Returns dict with:
+      ok: command path succeeded
+      filled: position was actually filled/closed this run
+      price/dollars/qty: best-effort Alpaca fill details for logging
+    """
     cancel_stop_orders(client, ticker)
 
     # ── Step 1: try a limit sell ──────────────────────────────────────────
@@ -918,12 +969,13 @@ def do_sell(client, ticker, extended_hours=False):
                 o = client.get_order_by_id(str(o.id))
                 if o.status in (OrderStatus.filled, OrderStatus.partially_filled):
                     log.info(f"  SELL LIMIT[EXT] filled {ticker} @ ${o.filled_avg_price}")
-                    return True
+                    fill = _order_fill_summary(o)
+                    return {"ok": True, "filled": True, **fill}
             except Exception:
                 pass
             # Still pending — leave it; 9:35am will re-check
             log.info(f"  SELL LIMIT[EXT] pending for {ticker} — 9:35am will follow up")
-            return True   # return True so caller doesn't retry with market order
+            return {"ok": True, "filled": False, "price": None, "qty": None, "dollars": None}
 
         # Regular hours: wait up to 20 seconds for fill (4 × 5s checks)
         for _ in range(4):
@@ -932,7 +984,8 @@ def do_sell(client, ticker, extended_hours=False):
                 o = client.get_order_by_id(str(o.id))
                 if o.status in (OrderStatus.filled, OrderStatus.partially_filled):
                     log.info(f"  SELL LIMIT filled {ticker} @ ${o.filled_avg_price}")
-                    return True
+                    fill = _order_fill_summary(o)
+                    return {"ok": True, "filled": True, **fill}
             except Exception:
                 pass  # order may already be filled/gone — check position below
 
@@ -941,7 +994,10 @@ def do_sell(client, ticker, extended_hours=False):
             client.get_open_position(ticker)
         except Exception:
             log.info(f"  SELL LIMIT filled {ticker} (confirmed by position check)")
-            return True
+            fill = _order_fill_summary(o)
+            if fill["price"] is None:
+                fill = _recent_filled_order(client, ticker, OrderSide.SELL, limit=10)
+            return {"ok": True, "filled": True, **fill}
 
         # Still open — cancel limit and fall through to market sell
         try:
@@ -957,21 +1013,24 @@ def do_sell(client, ticker, extended_hours=False):
     if extended_hours:
         # Market orders not allowed in extended hours — leave for 9:35am
         log.info(f"  SELL[EXT] {ticker}: limit not placed, 9:35am will retry")
-        return True
+        return {"ok": True, "filled": False, "price": None, "qty": None, "dollars": None}
     try:
         # Check position still exists before attempting market sell
         client.get_open_position(ticker)
         client.close_position(ticker)
         log.info(f"  SELL MARKET {ticker} closed")
-        return True
+        time.sleep(2)
+        fill = _recent_filled_order(client, ticker, OrderSide.SELL, limit=10)
+        return {"ok": True, "filled": True, **fill}
     except Exception as e:
         msg = str(e)
         if "not found" in msg or "position" in msg.lower():
             # Position already gone — treat as success
             log.info(f"  SELL {ticker}: position already closed")
-            return True
+            fill = _recent_filled_order(client, ticker, OrderSide.SELL, limit=10)
+            return {"ok": True, "filled": True, **fill}
         log.warning(f"  SELL {ticker}: {e}")
-        return False
+        return {"ok": False, "filled": False, "price": None, "qty": None, "dollars": None}
 
 
 # =============================================================================
@@ -1669,12 +1728,14 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
             why = f"stop_loss ({pnl_frac*100:.1f}%)"
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                 f"EXIT{eh_tag}: {_trunc(why,22)}")
-            if do_sell(client, ticker, extended_hours=extended_hours):
+            sell_res = do_sell(client, ticker, extended_hours=extended_hours)
+            if sell_res.get("ok") and sell_res.get("filled"):
                 exits += 1; exited.add(ticker); already_sold_today.add(ticker)
-                cur = pos["current_price"]
+                cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
+                sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
                 dh  = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                       if pos.get("entry_date") else 0
-                log_tx("SELL", ticker, pos.get("strategy","?"), cur, pos["market_value"],
+                log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
                        rgm, float(client.get_account().equity),
                        pos["pnl_pct"], pos["pnl_dollar"], dh, why)
                 if extended_hours:
@@ -1691,10 +1752,12 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                     why = f"max_hold {days}d ({pnl_frac*100:+.1f}%)"
                     row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                         f"EXIT{eh_tag}: {_trunc(why,22)}")
-                    if do_sell(client, ticker, extended_hours=extended_hours):
+                    sell_res = do_sell(client, ticker, extended_hours=extended_hours)
+                    if sell_res.get("ok") and sell_res.get("filled"):
                         exits += 1; exited.add(ticker); already_sold_today.add(ticker)
-                        cur = pos["current_price"]
-                        log_tx("SELL", ticker, pos.get("strategy","?"), cur, pos["market_value"],
+                        cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
+                        sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
+                        log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
                                rgm, float(client.get_account().equity),
                                pos["pnl_pct"], pos["pnl_dollar"], days, why)
                         if extended_hours:
@@ -1716,12 +1779,14 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         ex, why = check_exit(pos_data[ticker], pos, eod_only=False)
         row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
             f"EXIT: {_trunc(why,22)}" if ex else "HOLD")
-        if ex and do_sell(client, ticker):
+        sell_res = do_sell(client, ticker) if ex else {"ok": False, "filled": False}
+        if ex and sell_res.get("ok") and sell_res.get("filled"):
             exits += 1; exited.add(ticker); already_sold_today.add(ticker)
-            cur = pos["current_price"]
+            cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
+            sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
             dh  = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                   if pos.get("entry_date") else 0
-            log_tx("SELL", ticker, pos.get("strategy","?"), cur, pos["market_value"],
+            log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
                    rgm, float(client.get_account().equity),
                    pos["pnl_pct"], pos["pnl_dollar"], dh, why)
     ftr()
@@ -1824,11 +1889,14 @@ def run_scan(client, equity, cash, rgm):
                 why = f"stop_loss ({pnl_frac*100:.1f}%)"
                 row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                     f"EXIT: {_trunc(why,20)}")
-                if do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL):
+                sell_res = do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL)
+                if sell_res.get("ok") and sell_res.get("filled"):
                     exits += 1; cur = pos["current_price"]
+                    cur = sell_res.get("price") if sell_res.get("price") is not None else cur
+                    sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
                     dh = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                          if pos.get("entry_date") else 0
-                    log_tx("SELL", ticker, pos.get("strategy","?"), cur, pos["market_value"],
+                    log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
                            rgm, float(client.get_account().equity),
                            pos["pnl_pct"], pos["pnl_dollar"], dh, why)
                     sells_log.append({"t": datetime.now().strftime("%H:%M"),
@@ -1846,9 +1914,12 @@ def run_scan(client, equity, cash, rgm):
                         why = f"max_hold {days}d ({pnl_frac*100:+.1f}%)"
                         row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                             f"EXIT: {_trunc(why,20)}")
-                        if do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL):
+                        sell_res = do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL)
+                        if sell_res.get("ok") and sell_res.get("filled"):
                             exits += 1; cur = pos["current_price"]
-                            log_tx("SELL", ticker, pos.get("strategy","?"), cur, pos["market_value"],
+                            cur = sell_res.get("price") if sell_res.get("price") is not None else cur
+                            sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
+                            log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
                                    rgm, float(client.get_account().equity),
                                    pos["pnl_pct"], pos["pnl_dollar"], days, why)
                             sells_log.append({"t": datetime.now().strftime("%H:%M"),
@@ -1971,14 +2042,17 @@ def run_scan(client, equity, cash, rgm):
                 n_unfilled_sea = max(0, n_unfilled_sea - 1)
             continue
         row(f"  ENTER [{tier}] {ticker}  {strategy}", f"${da:.2f}")
-        if do_buy(client, ticker, da, strategy):
+        buy_res = do_buy(client, ticker, da, strategy)
+        if buy_res.get("ok"):
             entries += 1; avail -= da
             pdt.append(str(today))   # track this buy for PDT cap enforcement
-            log_tx("BUY", ticker, strategy, sig["close"], da, rgm,
+            buy_price = buy_res.get("price") if buy_res.get("price") is not None else sig["close"]
+            buy_dollars = buy_res.get("dollars") if buy_res.get("dollars") is not None else da
+            log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
                    float(client.get_account().equity))
             buys_log.append({"t": datetime.now().strftime("%H:%M"),
                               "tk": ticker, "st": strategy,
-                              "px": sig["close"], "$": da})
+                              "px": round(buy_price, 2), "$": round(buy_dollars, 2)})
         if is_seasonal:
             # Seasonal signal has been processed (buy attempt complete).
             n_unfilled_sea = max(0, n_unfilled_sea - 1)
