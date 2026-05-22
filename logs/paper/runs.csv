@@ -123,3 +123,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-21 17:19:41,exits,bull,99518.22,99443.24,0,0,0,1,SOLUSD,both
 2026-05-21 21:19:32,summary,bull,99518.57,99443.24,0,0,0,1,SOLUSD,both
 2026-05-21 22:06:35,summary,bull,99518.3,99443.24,0,0,0,1,SOLUSD,both
+2026-05-22 16:03:03,exits,bull,99517.91,99443.24,0,0,0,1,SOLUSD,both
