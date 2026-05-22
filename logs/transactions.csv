@@ -357,3 +357,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-22 13:52:15,2026-05-22,BUY,CAH,Pullback50,202.77,21.12,0,0,0,,bull,509.47
 2026-05-22 13:52:15,2026-05-22,BUY,CNP,Pullback50,42.73,21.12,0,0,0,,bull,509.46
 2026-05-22 13:52:15,2026-05-22,BUY,STZ,Pullback50,151.93,21.12,0,0,0,,bull,530.57
+2026-05-22 19:45:52,2026-05-22,SELL,ANET,Pullback50,153.11,21.65,5.15,1.06,1,midline (+5.2%),bull,508.77
+2026-05-22 19:49:27,2026-05-22,BUY,AEP,Pullback50,131.73,20.95,0,0,0,,bull,508.69
