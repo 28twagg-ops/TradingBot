@@ -1,29 +1,29 @@
 # 📊 Paper Bot — Performance Dashboard (PAPER TRADING)
-*Updated: 2026-05-23 06:39 UTC*
+*Updated: 2026-05-23 10:01 UTC*
 
 > ⚠️ **Paper trading only — no real money involved.**
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $99300.82 |
+| **Current Equity** | $99173.37 |
 | **Starting Equity** | $100000.00 |
-| **Total Return** | -0.70% ($-699.18) |
+| **Total Return** | -0.83% ($-826.63) |
 | **Max Drawdown** | -99.48% |
-| **Current Cash** | $90485.91 |
+| **Current Cash** | $80559.94 |
 | **Open Positions** | 0 () |
-| **Last Run** | 2026-05-23 06:39:47 |
+| **Last Run** | 2026-05-23 10:01:55 |
 
 ## Trade Performance
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 11 |
-| **Win Rate** | 45.5% |
+| **Total Closed Trades** | 15 |
+| **Win Rate** | 33.3% |
 | **Avg Win** | +0.39% |
-| **Avg Loss** | -1.77% |
-| **Profit Factor** | 1.13x |
+| **Avg Loss** | -2.29% |
+| **Profit Factor** | 0.47x |
 | **Avg Hold Days** | 0.0d |
-| **Total Realised P&L** | $+6.49 |
+| **Total Realised P&L** | $-65.39 |
 
 ## Tranche Feature  (new in paper bot)
 | Parameter | Value |
@@ -35,12 +35,16 @@
 ## Exit Reasons
 | Exit | Trades | WR | Avg P&L% |
 |---|---|---|---|
+| `stop_loss` | 8 | 0% | -2.72% |
 | `rsi_exit` | 7 | 71% | +0.11% |
-| `stop_loss` | 4 | 0% | -2.37% |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit |
 |---|---|---|---|---|---|---|
+| 2026-05-23 | **SOLUSD** | `CryptoRSI` | -3.33% | $-0.91 | 0d | stop_loss (-3.3%) |
+| 2026-05-23 | **ETHUSD** | `CryptoRSI` | -2.22% | $-18.81 | 0d | stop_loss (-2.2%) |
+| 2026-05-23 | **BTCUSD** | `CryptoRSI` | -1.77% | $-51.71 | 0d | stop_loss (-1.8%) |
+| 2026-05-23 | **AVAXUSD** | `CryptoRSI` | -4.94% | $-0.45 | 0d | stop_loss (-4.9%) |
 | 2026-05-22 | **SOLUSD** | `CryptoRSI` | -1.69% | $-1.25 | 0d | stop_loss (-1.7%) |
 | 2026-05-17 | **BTCUSD** | `CryptoRSI` | -1.02% | $-29.86 | 0d | rsi_exit (RSI=55) |
 | 2026-05-17 | **LINKUSD** | `CryptoRSI` | +0.55% | $+16.05 | 0d | rsi_exit (RSI=55) |
