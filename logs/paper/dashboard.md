@@ -1,29 +1,29 @@
 # 📊 Paper Bot — Performance Dashboard (PAPER TRADING)
-*Updated: 2026-05-23 17:10 UTC*
+*Updated: 2026-05-23 20:40 UTC*
 
 > ⚠️ **Paper trading only — no real money involved.**
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $99396.30 |
+| **Current Equity** | $99749.05 |
 | **Starting Equity** | $100000.00 |
-| **Total Return** | -0.60% ($-603.70) |
+| **Total Return** | -0.25% ($-250.95) |
 | **Max Drawdown** | -99.48% |
 | **Current Cash** | $84579.96 |
 | **Open Positions** | 0 () |
-| **Last Run** | 2026-05-23 17:10:03 |
+| **Last Run** | 2026-05-23 20:40:48 |
 
 ## Trade Performance
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 15 |
-| **Win Rate** | 33.3% |
-| **Avg Win** | +0.39% |
+| **Total Closed Trades** | 20 |
+| **Win Rate** | 50.0% |
+| **Avg Win** | +2.33% |
 | **Avg Loss** | -2.29% |
-| **Profit Factor** | 0.47x |
+| **Profit Factor** | 5.53x |
 | **Avg Hold Days** | 0.0d |
-| **Total Realised P&L** | $-65.39 |
+| **Total Realised P&L** | $+554.75 |
 
 ## Tranche Feature  (new in paper bot)
 | Parameter | Value |
@@ -35,12 +35,17 @@
 ## Exit Reasons
 | Exit | Trades | WR | Avg P&L% |
 |---|---|---|---|
+| `rsi_exit` | 12 | 83% | +1.84% |
 | `stop_loss` | 8 | 0% | -2.72% |
-| `rsi_exit` | 7 | 71% | +0.11% |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit |
 |---|---|---|---|---|---|---|
+| 2026-05-23 | **SOLUSD** | `CryptoRSI` | +5.14% | $+149.45 | 0d | rsi_exit (RSI=66) |
+| 2026-05-23 | **LINKUSD** | `CryptoRSI` | +3.68% | $+107.14 | 0d | rsi_exit (RSI=70) |
+| 2026-05-23 | **ETHUSD** | `CryptoRSI` | +4.31% | $+125.55 | 0d | rsi_exit (RSI=72) |
+| 2026-05-23 | **BTCUSD** | `CryptoRSI` | +2.23% | $+64.88 | 0d | rsi_exit (RSI=72) |
+| 2026-05-23 | **AVAXUSD** | `CryptoRSI` | +5.96% | $+173.12 | 0d | rsi_exit (RSI=70) |
 | 2026-05-23 | **SOLUSD** | `CryptoRSI` | -3.33% | $-0.91 | 0d | stop_loss (-3.3%) |
 | 2026-05-23 | **ETHUSD** | `CryptoRSI` | -2.22% | $-18.81 | 0d | stop_loss (-2.2%) |
 | 2026-05-23 | **BTCUSD** | `CryptoRSI` | -1.77% | $-51.71 | 0d | stop_loss (-1.8%) |

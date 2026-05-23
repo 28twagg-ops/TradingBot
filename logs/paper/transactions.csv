@@ -51,3 +51,8 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-23 10:01:50,2026-05-23,BUY,SOL/USD,CryptoRSI,0,0,0.0,0.0,0,rsi_entry,crypto,99173.37
 2026-05-23 10:01:50,2026-05-23,BUY,AVAX/USD,CryptoRSI,0,0,0.0,0.0,0,rsi_entry,crypto,99173.37
 2026-05-23 10:01:50,2026-05-23,BUY,LINK/USD,CryptoRSI,0,0,0.0,0.0,0,rsi_entry,crypto,99173.37
+2026-05-23 20:39:22,2026-05-23,SELL,AVAXUSD,CryptoRSI,0,0,5.955,173.12,0,rsi_exit (RSI=70),crypto,99749.05
+2026-05-23 20:39:44,2026-05-23,SELL,BTCUSD,CryptoRSI,0,0,2.229,64.88,0,rsi_exit (RSI=72),crypto,99749.05
+2026-05-23 20:40:05,2026-05-23,SELL,ETHUSD,CryptoRSI,0,0,4.313,125.55,0,rsi_exit (RSI=72),crypto,99749.05
+2026-05-23 20:40:26,2026-05-23,SELL,LINKUSD,CryptoRSI,0,0,3.676,107.14,0,rsi_exit (RSI=70),crypto,99749.05
+2026-05-23 20:40:47,2026-05-23,SELL,SOLUSD,CryptoRSI,0,0,5.143,149.45,0,rsi_exit (RSI=66),crypto,99749.05
