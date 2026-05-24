@@ -1,29 +1,29 @@
 # 📊 Paper Bot — Performance Dashboard (PAPER TRADING)
-*Updated: 2026-05-24 13:24 UTC*
+*Updated: 2026-05-24 17:11 UTC*
 
 > ⚠️ **Paper trading only — no real money involved.**
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $99712.36 |
+| **Current Equity** | $99584.23 |
 | **Starting Equity** | $100000.00 |
-| **Total Return** | -0.29% ($-287.64) |
+| **Total Return** | -0.42% ($-415.77) |
 | **Max Drawdown** | -99.48% |
-| **Current Cash** | $90958.24 |
+| **Current Cash** | $95778.62 |
 | **Open Positions** | 0 () |
-| **Last Run** | 2026-05-24 13:24:54 |
+| **Last Run** | 2026-05-24 17:11:54 |
 
 ## Trade Performance
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 20 |
-| **Win Rate** | 50.0% |
+| **Total Closed Trades** | 22 |
+| **Win Rate** | 45.5% |
 | **Avg Win** | +2.33% |
-| **Avg Loss** | -2.29% |
-| **Profit Factor** | 5.53x |
+| **Avg Loss** | -2.22% |
+| **Profit Factor** | 5.52x |
 | **Avg Hold Days** | 0.0d |
-| **Total Realised P&L** | $+554.75 |
+| **Total Realised P&L** | $+554.44 |
 
 ## Tranche Feature  (new in paper bot)
 | Parameter | Value |
@@ -36,11 +36,13 @@
 | Exit | Trades | WR | Avg P&L% |
 |---|---|---|---|
 | `rsi_exit` | 12 | 83% | +1.84% |
-| `stop_loss` | 8 | 0% | -2.72% |
+| `stop_loss` | 10 | 0% | -2.55% |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit |
 |---|---|---|---|---|---|---|
+| 2026-05-24 | **LINKUSD** | `CryptoRSI` | -1.62% | $-0.15 | 0d | stop_loss (-1.6%) |
+| 2026-05-24 | **AVAXUSD** | `CryptoRSI` | -2.17% | $-0.16 | 0d | stop_loss (-2.2%) |
 | 2026-05-23 | **SOLUSD** | `CryptoRSI` | +5.14% | $+149.45 | 0d | rsi_exit (RSI=66) |
 | 2026-05-23 | **LINKUSD** | `CryptoRSI` | +3.68% | $+107.14 | 0d | rsi_exit (RSI=70) |
 | 2026-05-23 | **ETHUSD** | `CryptoRSI` | +4.31% | $+125.55 | 0d | rsi_exit (RSI=72) |
@@ -59,8 +61,6 @@
 | 2026-05-10 | **BTCUSD** | `CryptoRSI` | +0.18% | $+5.25 | 0d | rsi_exit (RSI=68) |
 | 2026-05-10 | **SOLUSD** | `CryptoRSI` | +0.47% | $+13.63 | 0d | rsi_exit (RSI=63) |
 | 2026-05-10 | **LINKUSD** | `CryptoRSI` | -0.15% | $-4.35 | 0d | rsi_exit (RSI=58) |
-| 2026-05-10 | **AVAXUSD** | `CryptoRSI` | +0.35% | $+10.38 | 0d | rsi_exit (RSI=64) |
-| 2026-05-06 | **ACGL** | `Pullback50` | -2.04% | $-0.94 | 0d | stop_loss (-2.0%) |
 
 ---
 *Auto-generated. Paper account only.*
