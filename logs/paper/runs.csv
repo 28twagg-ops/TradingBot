@@ -139,3 +139,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-24 17:11:54,crypto,crypto,99584.23,95778.62,5,1,2,0,,both
 2026-05-24 20:42:53,crypto,crypto,99564.53,89869.92,5,2,0,0,,both
 2026-05-25 16:07:53,exits,bull,99415.1,98559.45,0,0,0,4,AVAXUSD|ETHUSD|LINKUSD|SOLUSD,both
+2026-05-25 16:39:51,exits,bull,99415.15,98559.45,0,0,0,4,AVAXUSD|ETHUSD|LINKUSD|SOLUSD,both
