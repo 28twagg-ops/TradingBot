@@ -1,40 +1,41 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-05-25 19:48 UTC*
+*Updated: 2026-05-26 13:58 UTC*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $508.76 |
+| **Current Equity** | $509.64 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | +1.75% ($+8.76) |
-| **Peak Equity** | $508.87 |
-| **Max Drawdown** | -0.07% |
-| **Current Cash** | $214.71 |
-| **Open Positions** | 14 (ABNB|AEE|AEP|AMGN|APA|APD|C|CAH|CARR|CNP|DLR|ETR|FTV|STZ) |
-| **Last Bot Run** | 2026-05-25 19:48:56 |
+| **Total Return** | +1.93% ($+9.64) |
+| **Peak Equity** | $509.86 |
+| **Max Drawdown** | -0.26% |
+| **Current Cash** | $25.43 |
+| **Open Positions** | 23 (ABNB|AEP|AMCR|AME|APA|AZO|CB|CVNA|CVX|DOV|DTE|EA|EIX|ETN|GD|GILD|HIG|HSIC|O|OXY|SNA|VZ|XOM) |
+| **Last Bot Run** | 2026-05-26 13:58:35 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 14 |
-| **Wins / Losses** | 8 / 6 |
-| **Win Rate** | 57.1% |
-| **Avg Win** | +1.30% |
-| **Avg Loss** | -1.01% |
-| **Profit Factor** | 1.69x |
-| **Avg Hold Days** | 3.6d |
-| **Total Realised P&L** | $+0.88 |
+| **Total Closed Trades** | 20 |
+| **Wins / Losses** | 11 / 9 |
+| **Win Rate** | 55.0% |
+| **Avg Win** | +1.41% |
+| **Avg Loss** | -0.77% |
+| **Profit Factor** | 2.18x |
+| **Avg Hold Days** | 2.9d |
+| **Total Realised P&L** | $+1.74 |
 
 ## Exit Reasons
 | Exit Type | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `max_hold` | 8 | 100% | +1.30% |
+| `max_hold` | 9 | 100% | +1.60% |
 | `stop_loss` | 6 | 0% | -1.01% |
+| `midline` | 5 | 40% | +0.03% |
 
 ## Strategy Breakdown
 | Strategy | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `Pullback50` | 13 | 54% | +0.19% |
+| `Pullback50` | 19 | 53% | +0.35% |
 | `GapDown` | 1 | 100% | +1.84% |
 
 ## Equity Timeline
@@ -42,10 +43,17 @@
 |---|---|---|
 | 2026-05-22 | $508.87 | +8.87 |
 | 2026-05-25 | $508.76 | -0.11 |
+| 2026-05-26 | $509.64 | +0.88 |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
 |---|---|---|---|---|---|---|
+| 2026-05-26 | **XOM** | `Pullback50` | +0.65% | $+0.14 | 0d | midline (+0.6%) |
+| 2026-05-26 | **HSIC** | `Pullback50` | -0.08% | $-0.02 | 0d | midline (-0.1%) |
+| 2026-05-26 | **EIX** | `Pullback50` | +0.40% | $+0.08 | 0d | midline (+0.4%) |
+| 2026-05-26 | **DTE** | `Pullback50` | -0.47% | $-0.10 | 0d | midline (-0.5%) |
+| 2026-05-26 | **CVX** | `Pullback50` | -0.36% | $-0.08 | 0d | midline (-0.4%) |
+| 2026-05-26 | **C** | `Pullback50` | +4.06% | $+0.84 | 6d | max_hold 6d (+4.1%) |
 | 2026-05-25 | **STZ** | `Pullback50` | -1.46% | $-0.31 | 3d | stop_loss (-1.5%) |
 | 2026-05-25 | **FTV** | `Pullback50` | +2.08% | $+0.43 | 5d | max_hold 5d (+2.1%) |
 | 2026-05-25 | **ETR** | `Pullback50` | +0.62% | $+0.13 | 5d | max_hold 5d (+0.6%) |
