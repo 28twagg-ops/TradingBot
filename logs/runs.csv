@@ -113,3 +113,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-27 16:11:45,exits,bull,504.18,419.43,0,0,0,4,AME|CVNA|DOV|EA,both
 2026-05-27 16:15:36,exits,bull,504.24,419.43,0,0,0,4,AME|CVNA|DOV|EA,both
 2026-05-27 16:30:34,exits,bull,504.32,419.43,0,0,0,4,AME|CVNA|DOV|EA,both
+2026-05-27 16:45:34,exits,bull,504.27,419.43,0,0,0,4,AME|CVNA|DOV|EA,both
