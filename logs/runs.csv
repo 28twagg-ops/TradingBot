@@ -102,3 +102,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-05-27 13:34:51,exits,bull,504.23,25.43,0,0,12,23,ABNB|AEP|AMCR|AME|APA|AZO|CB|CVNA|CVX|DOV|DTE|EA|EIX|ETN|GD|GILD|HIG|HSIC|O|OXY|SNA|VZ|XOM,both
 2026-05-27 14:00:38,exits,bull,504.97,419.43,0,0,0,4,AME|CVNA|DOV|EA,both
 2026-05-27 14:15:35,exits,bull,504.85,419.43,0,0,0,4,AME|CVNA|DOV|EA,both
+2026-05-27 14:30:37,exits,bull,504.72,419.43,0,0,0,4,AME|CVNA|DOV|EA,both
