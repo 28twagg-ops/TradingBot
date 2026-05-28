@@ -100,3 +100,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-28 13:53:00,2026-05-28,BUY,SATS,Pullback50,124.09,20.52,0,0,0,,bull,503.54
 2026-05-28 13:53:10,2026-05-28,BUY,ETR,Pullback50,111.44,20.52,0,0,0,,bull,503.52
 2026-05-28 13:53:20,2026-05-28,BUY,EXC,Pullback50,46.55,20.52,0,0,0,,bull,503.53
+2026-05-28 14:01:03,2026-05-28,SELL,REGN,MomReversal,622.43,20.5,-1.13,-0.23,1,stop_loss (-1.1%),bull,503.56
