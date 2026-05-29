@@ -80,7 +80,7 @@ from alpaca.trading.requests import (MarketOrderRequest, GetOrdersRequest,
 from alpaca.trading.enums    import (OrderSide, TimeInForce, QueryOrderStatus,
                                      OrderType, OrderStatus)
 from alpaca.data.historical  import StockHistoricalDataClient
-from alpaca.data.requests    import StockBarsRequest
+from alpaca.data.requests    import StockBarsRequest, StockLatestQuoteRequest
 from alpaca.data.timeframe   import TimeFrame
 
 
@@ -922,7 +922,21 @@ def place_eod_stops(client):
         log.warning(f"  place_eod_stops failed: {e}")
 
 
-def do_sell(client, ticker, extended_hours=False):
+def _latest_bid(ticker):
+    """Best-effort latest bid from Alpaca market data."""
+    try:
+        req = StockLatestQuoteRequest(symbol_or_symbols=[ticker])
+        q = _get_dc().get_stock_latest_quote(req)
+        qv = q.get(ticker) if isinstance(q, dict) else None
+        if qv is None and hasattr(q, "__getitem__"):
+            qv = q[ticker]
+        bid = float(getattr(qv, "bid_price", 0) or 0)
+        return bid if bid > 0 else None
+    except Exception:
+        return None
+
+
+def do_sell(client, ticker, extended_hours=False, urgency="normal"):
     """Exit a position.
     In regular hours (extended_hours=False):
       1. Cancel any open sell orders first.
@@ -940,15 +954,49 @@ def do_sell(client, ticker, extended_hours=False):
       price/dollars/qty: best-effort Alpaca fill details for logging
     """
     cancel_stop_orders(client, ticker)
+    t0 = time.time()
+
+    def _mk(ok, filled, fill=None, method=""):
+        fill = fill or {"price": None, "qty": None, "dollars": None}
+        price = fill.get("price")
+        slp = None
+        if cur_submit is not None and price is not None and cur_submit > 0:
+            try:
+                slp = (float(cur_submit) - float(price)) / float(cur_submit) * 10000.0
+            except Exception:
+                slp = None
+        return {
+            "ok": ok,
+            "filled": filled,
+            "price": fill.get("price"),
+            "qty": fill.get("qty"),
+            "dollars": fill.get("dollars"),
+            "sell_method": method,
+            "cur_at_submit": cur_submit,
+            "bid_at_submit": bid_submit,
+            "limit_price_used": lim_submit,
+            "sell_latency_s": time.time() - t0,
+            "fill_slippage_bps": slp,
+        }
+
+    cur_submit = None
+    bid_submit = None
+    lim_submit = None
 
     # ── Step 1: try a limit sell ──────────────────────────────────────────
     try:
         pos = client.get_open_position(ticker)
         qty = abs(float(pos.qty))
         cur = float(pos.current_price)
+        cur_submit = cur
+        _polls = {"urgent": 1, "normal": 4, "low": 6}.get(urgency, 4)
         # Extended hours: wider spread (~3×), use tighter limit to get filled
         spread_adj = 0.9985 if extended_hours else 0.998
-        lim = round(cur * spread_adj, 2)
+        bid = None if extended_hours else _latest_bid(ticker)
+        bid_submit = bid
+        lim = max(cur * spread_adj, bid) if bid is not None else (cur * spread_adj)
+        lim = round(lim, 2)
+        lim_submit = lim
         order_kwargs = dict(
             symbol=ticker, qty=str(qty),
             side=OrderSide.SELL,
@@ -970,22 +1018,22 @@ def do_sell(client, ticker, extended_hours=False):
                 if o.status in (OrderStatus.filled, OrderStatus.partially_filled):
                     log.info(f"  SELL LIMIT[EXT] filled {ticker} @ ${o.filled_avg_price}")
                     fill = _order_fill_summary(o)
-                    return {"ok": True, "filled": True, **fill}
+                    return _mk(True, True, fill=fill, method="ext_limit_fill")
             except Exception:
                 pass
             # Still pending — leave it; 9:35am will re-check
             log.info(f"  SELL LIMIT[EXT] pending for {ticker} — 9:35am will follow up")
-            return {"ok": True, "filled": False, "price": None, "qty": None, "dollars": None}
+            return _mk(True, False, method="ext_limit_pending")
 
-        # Regular hours: wait up to 20 seconds for fill (4 × 5s checks)
-        for _ in range(4):
+        # Regular hours: urgency-adjusted wait for fill.
+        for _ in range(_polls):
             time.sleep(5)
             try:
                 o = client.get_order_by_id(str(o.id))
                 if o.status in (OrderStatus.filled, OrderStatus.partially_filled):
                     log.info(f"  SELL LIMIT filled {ticker} @ ${o.filled_avg_price}")
                     fill = _order_fill_summary(o)
-                    return {"ok": True, "filled": True, **fill}
+                    return _mk(True, True, fill=fill, method="limit_fill")
             except Exception:
                 pass  # order may already be filled/gone — check position below
 
@@ -997,7 +1045,7 @@ def do_sell(client, ticker, extended_hours=False):
             fill = _order_fill_summary(o)
             if fill["price"] is None:
                 fill = _recent_filled_order(client, ticker, OrderSide.SELL, limit=10)
-            return {"ok": True, "filled": True, **fill}
+            return _mk(True, True, fill=fill, method="limit_fill_position_check")
 
         # Still open — cancel limit and fall through to market sell
         try:
@@ -1013,7 +1061,7 @@ def do_sell(client, ticker, extended_hours=False):
     if extended_hours:
         # Market orders not allowed in extended hours — leave for 9:35am
         log.info(f"  SELL[EXT] {ticker}: limit not placed, 9:35am will retry")
-        return {"ok": True, "filled": False, "price": None, "qty": None, "dollars": None}
+        return _mk(True, False, method="ext_retry")
     try:
         # Check position still exists before attempting market sell
         client.get_open_position(ticker)
@@ -1021,16 +1069,16 @@ def do_sell(client, ticker, extended_hours=False):
         log.info(f"  SELL MARKET {ticker} closed")
         time.sleep(2)
         fill = _recent_filled_order(client, ticker, OrderSide.SELL, limit=10)
-        return {"ok": True, "filled": True, **fill}
+        return _mk(True, True, fill=fill, method="market_fallback")
     except Exception as e:
         msg = str(e)
         if "not found" in msg or "position" in msg.lower():
             # Position already gone — treat as success
             log.info(f"  SELL {ticker}: position already closed")
             fill = _recent_filled_order(client, ticker, OrderSide.SELL, limit=10)
-            return {"ok": True, "filled": True, **fill}
+            return _mk(True, True, fill=fill, method="position_already_closed")
         log.warning(f"  SELL {ticker}: {e}")
-        return {"ok": False, "filled": False, "price": None, "qty": None, "dollars": None}
+        return _mk(False, False, method="sell_failed")
 
 
 # =============================================================================
@@ -1038,10 +1086,22 @@ def do_sell(client, ticker, extended_hours=False):
 # =============================================================================
 
 TX_F = ["timestamp","date","action","ticker","strategy","price","dollar_amount",
-        "pnl_pct","pnl_dollar","hold_days","exit_reason","regime","equity_after"]
+        "pnl_pct","pnl_dollar","hold_days","exit_reason","regime","equity_after",
+        "sell_method","cur_at_submit","bid_at_submit","limit_price_used",
+        "sell_latency_s","fill_slippage_bps"]
 
 def log_tx(action, ticker, strategy, price, dollars, rgm, equity,
-           pnl_pct=0, pnl_dollar=0, hold_days=0, exit_reason=""):
+           pnl_pct=0, pnl_dollar=0, hold_days=0, exit_reason="",
+           sell_method="", cur_at_submit=None, bid_at_submit=None,
+           limit_price_used=None, sell_latency_s=None, fill_slippage_bps=None):
+    def _fmt(v, nd=2):
+        if v is None:
+            return ""
+        try:
+            return round(float(v), nd)
+        except Exception:
+            return ""
+
     row_data = {
         "timestamp":    datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "date":         str(date.today()),
@@ -1056,6 +1116,12 @@ def log_tx(action, ticker, strategy, price, dollars, rgm, equity,
         "exit_reason":  exit_reason,
         "regime":       rgm,
         "equity_after": round(equity, 2),
+        "sell_method":  sell_method,
+        "cur_at_submit": _fmt(cur_at_submit, 4),
+        "bid_at_submit": _fmt(bid_at_submit, 4),
+        "limit_price_used": _fmt(limit_price_used, 4),
+        "sell_latency_s": _fmt(sell_latency_s, 2),
+        "fill_slippage_bps": _fmt(fill_slippage_bps, 2),
     }
     try:
         init = not TX_FILE.exists()
@@ -1712,14 +1778,14 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         if ticker in already_sold_today:
             continue
 
-        # ── Skip same-day exits (PDT protection) ──────────────────────────
-        # Alpaca blocks same-day buy+sell as a day trade on accounts < $25k.
-        # If the position was entered today, defer all exits to the 9:35am run.
         entry_date = pos.get("entry_date", "")
         entered_today = (entry_date == str(date.today()))
-        if entered_today and not extended_hours:
+
+        # ── Strict PDT guard: never same-day exit in any mode ──────────────
+        # For sub-$25k accounts, avoid all same-day buy+sell round trips.
+        if entered_today:
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
-                "HOLDING until 9:35am (entered today — PDT)")
+                "HOLDING until next session (entered today — PDT)")
             continue
 
         # ── Stop-loss: Alpaca unrealized P&L — no yfinance needed ─────────
@@ -1728,7 +1794,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
             why = f"stop_loss ({pnl_frac*100:.1f}%)"
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                 f"EXIT{eh_tag}: {_trunc(why,22)}")
-            sell_res = do_sell(client, ticker, extended_hours=extended_hours)
+            sell_res = do_sell(client, ticker, extended_hours=extended_hours, urgency="urgent")
             if sell_res.get("ok") and sell_res.get("filled"):
                 exits += 1; exited.add(ticker); already_sold_today.add(ticker)
                 cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
@@ -1737,7 +1803,13 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                       if pos.get("entry_date") else 0
                 log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
                        rgm, float(client.get_account().equity),
-                       pos["pnl_pct"], pos["pnl_dollar"], dh, why)
+                       pos["pnl_pct"], pos["pnl_dollar"], dh, why,
+                       sell_method=sell_res.get("sell_method",""),
+                       cur_at_submit=sell_res.get("cur_at_submit"),
+                       bid_at_submit=sell_res.get("bid_at_submit"),
+                       limit_price_used=sell_res.get("limit_price_used"),
+                       sell_latency_s=sell_res.get("sell_latency_s"),
+                       fill_slippage_bps=sell_res.get("fill_slippage_bps"))
                 if extended_hours:
                     eh_sells.append((ticker, pos.get("strategy","?"), pos["pnl_pct"],
                                      pos["pnl_dollar"], why))
@@ -1752,14 +1824,20 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                     why = f"max_hold {days}d ({pnl_frac*100:+.1f}%)"
                     row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                         f"EXIT{eh_tag}: {_trunc(why,22)}")
-                    sell_res = do_sell(client, ticker, extended_hours=extended_hours)
+                    sell_res = do_sell(client, ticker, extended_hours=extended_hours, urgency="normal")
                     if sell_res.get("ok") and sell_res.get("filled"):
                         exits += 1; exited.add(ticker); already_sold_today.add(ticker)
                         cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
                         sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
                         log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
                                rgm, float(client.get_account().equity),
-                               pos["pnl_pct"], pos["pnl_dollar"], days, why)
+                               pos["pnl_pct"], pos["pnl_dollar"], days, why,
+                               sell_method=sell_res.get("sell_method",""),
+                               cur_at_submit=sell_res.get("cur_at_submit"),
+                               bid_at_submit=sell_res.get("bid_at_submit"),
+                               limit_price_used=sell_res.get("limit_price_used"),
+                               sell_latency_s=sell_res.get("sell_latency_s"),
+                               fill_slippage_bps=sell_res.get("fill_slippage_bps"))
                         if extended_hours:
                             eh_sells.append((ticker, pos.get("strategy","?"), pos["pnl_pct"],
                                              pos["pnl_dollar"], why))
@@ -1779,7 +1857,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         ex, why = check_exit(pos_data[ticker], pos, eod_only=False)
         row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
             f"EXIT: {_trunc(why,22)}" if ex else "HOLD")
-        sell_res = do_sell(client, ticker) if ex else {"ok": False, "filled": False}
+        sell_res = do_sell(client, ticker, urgency="low") if ex else {"ok": False, "filled": False}
         if ex and sell_res.get("ok") and sell_res.get("filled"):
             exits += 1; exited.add(ticker); already_sold_today.add(ticker)
             cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
@@ -1788,7 +1866,13 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                   if pos.get("entry_date") else 0
             log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
                    rgm, float(client.get_account().equity),
-                   pos["pnl_pct"], pos["pnl_dollar"], dh, why)
+                   pos["pnl_pct"], pos["pnl_dollar"], dh, why,
+                   sell_method=sell_res.get("sell_method",""),
+                   cur_at_submit=sell_res.get("cur_at_submit"),
+                   bid_at_submit=sell_res.get("bid_at_submit"),
+                   limit_price_used=sell_res.get("limit_price_used"),
+                   sell_latency_s=sell_res.get("sell_latency_s"),
+                   fill_slippage_bps=sell_res.get("fill_slippage_bps"))
     ftr()
 
     # ── Extended-hours sells summary ──────────────────────────────────────
@@ -1882,6 +1966,12 @@ def run_scan(client, equity, cash, rgm):
         for ticker, pos in list(positions.items()):
             if ticker in already_sold_today:
                 continue
+            entry_date = pos.get("entry_date", "")
+            entered_today = (entry_date == str(today))
+            if entered_today:
+                row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
+                    "HOLDING until next session (entered today — PDT)")
+                continue
 
             # ── Stop-loss: Alpaca unrealized P&L — no yfinance needed ─────
             pnl_frac = pos.get("pnl_pct", 0) / 100
@@ -1889,7 +1979,7 @@ def run_scan(client, equity, cash, rgm):
                 why = f"stop_loss ({pnl_frac*100:.1f}%)"
                 row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                     f"EXIT: {_trunc(why,20)}")
-                sell_res = do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL)
+                sell_res = do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL, urgency="urgent")
                 if sell_res.get("ok") and sell_res.get("filled"):
                     exits += 1; cur = pos["current_price"]
                     cur = sell_res.get("price") if sell_res.get("price") is not None else cur
@@ -1898,7 +1988,13 @@ def run_scan(client, equity, cash, rgm):
                          if pos.get("entry_date") else 0
                     log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
                            rgm, float(client.get_account().equity),
-                           pos["pnl_pct"], pos["pnl_dollar"], dh, why)
+                           pos["pnl_pct"], pos["pnl_dollar"], dh, why,
+                           sell_method=sell_res.get("sell_method",""),
+                           cur_at_submit=sell_res.get("cur_at_submit"),
+                           bid_at_submit=sell_res.get("bid_at_submit"),
+                           limit_price_used=sell_res.get("limit_price_used"),
+                           sell_latency_s=sell_res.get("sell_latency_s"),
+                           fill_slippage_bps=sell_res.get("fill_slippage_bps"))
                     sells_log.append({"t": datetime.now().strftime("%H:%M"),
                                        "tk": ticker, "st": pos.get("strategy","?"),
                                        "px": cur, "why": why})
@@ -1914,14 +2010,20 @@ def run_scan(client, equity, cash, rgm):
                         why = f"max_hold {days}d ({pnl_frac*100:+.1f}%)"
                         row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                             f"EXIT: {_trunc(why,20)}")
-                        sell_res = do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL)
+                        sell_res = do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL, urgency="normal")
                         if sell_res.get("ok") and sell_res.get("filled"):
                             exits += 1; cur = pos["current_price"]
                             cur = sell_res.get("price") if sell_res.get("price") is not None else cur
                             sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
                             log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
                                    rgm, float(client.get_account().equity),
-                                   pos["pnl_pct"], pos["pnl_dollar"], days, why)
+                                   pos["pnl_pct"], pos["pnl_dollar"], days, why,
+                                   sell_method=sell_res.get("sell_method",""),
+                                   cur_at_submit=sell_res.get("cur_at_submit"),
+                                   bid_at_submit=sell_res.get("bid_at_submit"),
+                                   limit_price_used=sell_res.get("limit_price_used"),
+                                   sell_latency_s=sell_res.get("sell_latency_s"),
+                                   fill_slippage_bps=sell_res.get("fill_slippage_bps"))
                             sells_log.append({"t": datetime.now().strftime("%H:%M"),
                                                "tk": ticker, "st": pos.get("strategy","?"),
                                                "px": cur, "why": why})
@@ -1935,13 +2037,22 @@ def run_scan(client, equity, cash, rgm):
             ex, why = check_exit(pos_data[ticker], pos, eod_only=True)
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                 f"EXIT: {_trunc(why,20)}" if ex else "HOLD")
-            if ex and do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL):
+            sell_res = do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL, urgency="low") if ex else {"ok": False, "filled": False}
+            if ex and sell_res.get("ok") and sell_res.get("filled"):
                 exits += 1; cur = pos["current_price"]
+                cur = sell_res.get("price") if sell_res.get("price") is not None else cur
+                sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
                 dh = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                      if pos.get("entry_date") else 0
-                log_tx("SELL", ticker, pos.get("strategy","?"), cur, pos["market_value"],
+                log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
                        rgm, float(client.get_account().equity),
-                       pos["pnl_pct"], pos["pnl_dollar"], dh, why)
+                       pos["pnl_pct"], pos["pnl_dollar"], dh, why,
+                       sell_method=sell_res.get("sell_method",""),
+                       cur_at_submit=sell_res.get("cur_at_submit"),
+                       bid_at_submit=sell_res.get("bid_at_submit"),
+                       limit_price_used=sell_res.get("limit_price_used"),
+                       sell_latency_s=sell_res.get("sell_latency_s"),
+                       fill_slippage_bps=sell_res.get("fill_slippage_bps"))
                 sells_log.append({"t": datetime.now().strftime("%H:%M"),
                                    "tk": ticker, "st": pos.get("strategy","?"),
                                    "px": cur, "why": why})
@@ -2068,6 +2179,16 @@ def run_scan(client, equity, cash, rgm):
         ftr()
         time.sleep(5)
     place_all_stops(client)
+
+    # Evening scan (~3:45pm ET): refresh stops to current price so overnight
+    # protection isn't anchored to stale entry prices.
+    try:
+        from zoneinfo import ZoneInfo
+        now_et = datetime.now(ZoneInfo("America/New_York"))
+        if now_et.hour == 15:
+            place_eod_stops(client)
+    except Exception as e:
+        log.warning(f"  EOD stop refresh check failed: {e}")
 
     save_pdt(pdt)
     acct2 = client.get_account()
