@@ -133,3 +133,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-05-29 13:52:41,2026-05-29,BUY,TJX,Pullback50,155.85,20.69,0,0,0,,bull,500.83
 2026-05-29 13:52:52,2026-05-29,BUY,TT,Pullback50,457.18,20.69,0,0,0,,bull,500.87
 2026-05-29 14:00:50,2026-05-29,SELL,WBD,Pullback50,26.91,20.62,-0.64,-0.13,2,stop_loss (-0.6%),bull,500.34
+2026-05-29 19:45:50,2026-05-29,SELL,ABNB,Pullback50,133.32,20.72,-0.65,-0.14,1,stop_loss (-0.7%),bull,500.12
+2026-05-29 19:46:12,2026-05-29,SELL,TSCO,MomReversal,31.6,21.37,2.97,0.62,2,midline (+3.0%),bull,500.08
