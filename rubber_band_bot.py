@@ -175,6 +175,7 @@ WEEKLY_DIR = LOG_DIR / "weekly"
 TX_FILE    = LOG_DIR / "transactions.csv"
 RUNS_FILE  = LOG_DIR / "runs.csv"
 PDT_FILE   = LOG_DIR / "pdt.json"
+STOP_LOSS_LOOK_FILE = LOG_DIR / "stop_losses_to_look_into.txt"
 
 for d in [LOG_DIR, DAILY_DIR, WEEKLY_DIR]:
     d.mkdir(parents=True, exist_ok=True)
@@ -272,6 +273,62 @@ def trow(*cols, widths=None):
     padded  = [f"{p:<{w}}" for p, w in zip(parts, widths)]
     content = ("  " + "  ".join(padded))[:W]
     print(f"|{content}{' '*(W-len(content))}|")
+
+
+def _append_stoploss_look_items(items, mode):
+    """Append non-duplicate stop-loss investigations to one persistent text file."""
+    if not items:
+        return 0
+
+    existing_ids = set()
+    if STOP_LOSS_LOOK_FILE.exists():
+        try:
+            with open(STOP_LOSS_LOOK_FILE, encoding="utf-8") as f:
+                for line in f:
+                    if line.startswith("ID: "):
+                        existing_ids.add(line[4:].strip())
+        except Exception:
+            pass
+
+    lines = []
+    if not STOP_LOSS_LOOK_FILE.exists():
+        lines.extend([
+            "STOP LOSSES TO LOOK INTO",
+            "=" * 72,
+            "This file records stop-loss breaches where expected exit did not complete.",
+            "Duplicates are prevented by (ticker + entry_date).",
+            "",
+        ])
+
+    added = 0
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    for item in items:
+        item_id = item["id"]
+        if item_id in existing_ids:
+            continue
+        lines.extend([
+            "-" * 72,
+            f"Timestamp: {ts}",
+            f"ID: {item_id}",
+            f"Mode: {mode}",
+            f"Ticker: {item['ticker']}",
+            f"Strategy: {item.get('strategy', '?')}",
+            f"Entry date: {item.get('entry_date', 'unknown')}",
+            f"P&L at breach: {item['pnl_frac']*100:+.2f}%",
+            f"Stop threshold: {EXIT_STOP_LOSS*100:+.2f}%",
+            f"Root cause: {item['root_cause']}",
+            f"Explanation: {item['explanation']}",
+            "",
+        ])
+        existing_ids.add(item_id)
+        added += 1
+
+    if lines:
+        with open(STOP_LOSS_LOOK_FILE, "a", encoding="utf-8", newline="\n") as f:
+            f.write("\n".join(lines))
+            if not lines[-1].endswith("\n"):
+                f.write("\n")
+    return added
 
 
 # =============================================================================
@@ -1831,6 +1888,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         "holds": 0,
     }
     stop_breaches = {}
+    stoploss_look_items = {}
 
     for ticker, pos in positions.items():
         if ticker in already_sold_today:
@@ -1848,6 +1906,17 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         # For sub-$25k accounts, avoid all same-day buy+sell round trips.
         if entered_today:
             stats["pdt_deferred"] += 1
+            if ticker in stop_breaches:
+                uid = f"{ticker}|{entry_date or 'unknown'}"
+                stoploss_look_items[uid] = {
+                    "id": uid,
+                    "ticker": ticker,
+                    "strategy": pos.get("strategy", "?"),
+                    "entry_date": entry_date or "unknown",
+                    "pnl_frac": stop_breaches[ticker],
+                    "root_cause": "PDT guard deferred exit",
+                    "explanation": "Position breached stop but was entered today, so strict PDT mode defers same-day exits.",
+                }
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                 "HOLDING until next session (entered today — PDT)")
             continue
@@ -1880,9 +1949,29 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                                      pos["pnl_dollar"], why))
             elif sell_res.get("pending"):
                 stats["pending"] += 1
+                uid = f"{ticker}|{entry_date or 'unknown'}"
+                stoploss_look_items[uid] = {
+                    "id": uid,
+                    "ticker": ticker,
+                    "strategy": pos.get("strategy", "?"),
+                    "entry_date": entry_date or "unknown",
+                    "pnl_frac": pnl_frac,
+                    "root_cause": "After-hours limit still pending",
+                    "explanation": "Stop breached but extended-hours order is limit-only and did not fill immediately; follow-up occurs next regular-hours run.",
+                }
                 row(ticker, "SELL pending (after-hours limit open)")
             else:
                 stats["failed"] += 1
+                uid = f"{ticker}|{entry_date or 'unknown'}"
+                stoploss_look_items[uid] = {
+                    "id": uid,
+                    "ticker": ticker,
+                    "strategy": pos.get("strategy", "?"),
+                    "entry_date": entry_date or "unknown",
+                    "pnl_frac": pnl_frac,
+                    "root_cause": "Sell attempt failed",
+                    "explanation": "Stop breached and an exit was attempted, but the broker/order flow returned a failure state.",
+                }
                 row(ticker, "SELL attempt failed (will retry next run)")
             continue
 
@@ -1916,9 +2005,29 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                                              pos["pnl_dollar"], why))
                     elif sell_res.get("pending"):
                         stats["pending"] += 1
+                        uid = f"{ticker}|{entry_date or 'unknown'}"
+                        stoploss_look_items[uid] = {
+                            "id": uid,
+                            "ticker": ticker,
+                            "strategy": pos.get("strategy", "?"),
+                            "entry_date": entry_date or "unknown",
+                            "pnl_frac": pnl_frac,
+                            "root_cause": "After-hours limit still pending",
+                            "explanation": "Stop breached but extended-hours order is limit-only and did not fill immediately; follow-up occurs next regular-hours run.",
+                        }
                         row(ticker, "SELL pending (after-hours limit open)")
                     else:
                         stats["failed"] += 1
+                        uid = f"{ticker}|{entry_date or 'unknown'}"
+                        stoploss_look_items[uid] = {
+                            "id": uid,
+                            "ticker": ticker,
+                            "strategy": pos.get("strategy", "?"),
+                            "entry_date": entry_date or "unknown",
+                            "pnl_frac": pnl_frac,
+                            "root_cause": "Sell attempt failed",
+                            "explanation": "Stop breached and an exit was attempted, but the broker/order flow returned a failure state.",
+                        }
                         row(ticker, "SELL attempt failed (will retry next run)")
                     continue
             except Exception: pass
@@ -1959,10 +2068,30 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         elif ex and sell_res.get("pending"):
             stats["attempted"] += 1
             stats["pending"] += 1
+            uid = f"{ticker}|{entry_date or 'unknown'}"
+            stoploss_look_items[uid] = {
+                "id": uid,
+                "ticker": ticker,
+                "strategy": pos.get("strategy", "?"),
+                "entry_date": entry_date or "unknown",
+                "pnl_frac": pnl_frac,
+                "root_cause": "After-hours limit still pending",
+                "explanation": "Stop breached but extended-hours order is limit-only and did not fill immediately; follow-up occurs next regular-hours run.",
+            }
             row(ticker, "SELL pending (after-hours limit open)")
         elif ex:
             stats["attempted"] += 1
             stats["failed"] += 1
+            uid = f"{ticker}|{entry_date or 'unknown'}"
+            stoploss_look_items[uid] = {
+                "id": uid,
+                "ticker": ticker,
+                "strategy": pos.get("strategy", "?"),
+                "entry_date": entry_date or "unknown",
+                "pnl_frac": pnl_frac,
+                "root_cause": "Sell attempt failed",
+                "explanation": "Stop breached and an exit was attempted, but the broker/order flow returned a failure state.",
+            }
             row(ticker, "SELL attempt failed (will retry next run)")
         else:
             stats["holds"] += 1
@@ -2006,6 +2135,11 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         row("Count", str(len(stop_breaches)))
     else:
         row("None")
+    ftr()
+
+    added_look = _append_stoploss_look_items(list(stoploss_look_items.values()), run_mode_name)
+    row("Stop-loss look file", str(STOP_LOSS_LOOK_FILE))
+    row("New investigations added", str(added_look))
     ftr()
 
     positions_after = enrich(client, get_positions(client))
@@ -2082,6 +2216,7 @@ def run_scan(client, equity, cash, rgm):
         "holds": 0,
     }
     scan_stop_breaches = {}
+    scan_stoploss_look_items = {}
 
     # Load today's sells to prevent duplicate logging across multiple scan runs
     already_sold_today = set()
@@ -2105,6 +2240,17 @@ def run_scan(client, equity, cash, rgm):
                 scan_stop_breaches[ticker] = pnl_frac
             if entered_today:
                 scan_exit_stats["pdt_deferred"] += 1
+                if ticker in scan_stop_breaches:
+                    uid = f"{ticker}|{entry_date or 'unknown'}"
+                    scan_stoploss_look_items[uid] = {
+                        "id": uid,
+                        "ticker": ticker,
+                        "strategy": pos.get("strategy", "?"),
+                        "entry_date": entry_date or "unknown",
+                        "pnl_frac": scan_stop_breaches[ticker],
+                        "root_cause": "PDT guard deferred exit",
+                        "explanation": "Position breached stop but was entered today, so strict PDT mode defers same-day exits.",
+                    }
                 row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                     "HOLDING until next session (entered today — PDT)")
                 continue
@@ -2138,9 +2284,29 @@ def run_scan(client, equity, cash, rgm):
                     already_sold_today.add(ticker); del positions[ticker]
                 elif sell_res.get("pending"):
                     scan_exit_stats["pending"] += 1
+                    uid = f"{ticker}|{entry_date or 'unknown'}"
+                    scan_stoploss_look_items[uid] = {
+                        "id": uid,
+                        "ticker": ticker,
+                        "strategy": pos.get("strategy", "?"),
+                        "entry_date": entry_date or "unknown",
+                        "pnl_frac": pnl_frac,
+                        "root_cause": "After-hours limit still pending",
+                        "explanation": "Stop breached but extended-hours order is limit-only and did not fill immediately; follow-up occurs next regular-hours run.",
+                    }
                     row(ticker, "SELL pending (after-hours limit open)")
                 else:
                     scan_exit_stats["failed"] += 1
+                    uid = f"{ticker}|{entry_date or 'unknown'}"
+                    scan_stoploss_look_items[uid] = {
+                        "id": uid,
+                        "ticker": ticker,
+                        "strategy": pos.get("strategy", "?"),
+                        "entry_date": entry_date or "unknown",
+                        "pnl_frac": pnl_frac,
+                        "root_cause": "Sell attempt failed",
+                        "explanation": "Stop breached and an exit was attempted, but the broker/order flow returned a failure state.",
+                    }
                     row(ticker, "SELL attempt failed (will retry next run)")
                 continue
 
@@ -2235,6 +2401,9 @@ def run_scan(client, equity, cash, rgm):
                 row(tk, f"{frac*100:+.2f}%  (threshold {EXIT_STOP_LOSS*100:+.2f}%)")
         else:
             row("Stop-loss breaches", "none")
+        added_look_scan = _append_stoploss_look_items(list(scan_stoploss_look_items.values()), "scan")
+        row("Stop-loss look file", str(STOP_LOSS_LOOK_FILE))
+        row("New investigations added", str(added_look_scan))
         ftr()
 
     # Full universe download and scan
