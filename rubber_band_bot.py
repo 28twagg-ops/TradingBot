@@ -146,6 +146,7 @@ EXIT_STOP_LOSS     = -0.005  # OOS-validated: -0.5% beats -2.0% (16/16 rolling w
 # Extended-hours sells (limit only, no fallback) are only used in
 # run_exits(extended_hours=True) which covers 4pm-8pm ET.
 USE_EXTENDED_HOURS_SELL = False
+WEEKLY_MAX_HOLDINGS_PRINT = 8
 
 # ---- Daily entry cap ---------------------------------------------------------
 # Cap sweep (5yr, 900 stocks): 5/day = +215% vs 3/day = +187% (+28pp)
@@ -956,7 +957,7 @@ def do_sell(client, ticker, extended_hours=False, urgency="normal"):
     cancel_stop_orders(client, ticker)
     t0 = time.time()
 
-    def _mk(ok, filled, fill=None, method=""):
+    def _mk(ok, filled, fill=None, method="", pending=False):
         fill = fill or {"price": None, "qty": None, "dollars": None}
         price = fill.get("price")
         slp = None
@@ -968,6 +969,7 @@ def do_sell(client, ticker, extended_hours=False, urgency="normal"):
         return {
             "ok": ok,
             "filled": filled,
+            "pending": pending,
             "price": fill.get("price"),
             "qty": fill.get("qty"),
             "dollars": fill.get("dollars"),
@@ -1023,7 +1025,7 @@ def do_sell(client, ticker, extended_hours=False, urgency="normal"):
                 pass
             # Still pending — leave it; 9:35am will re-check
             log.info(f"  SELL LIMIT[EXT] pending for {ticker} — 9:35am will follow up")
-            return _mk(True, False, method="ext_limit_pending")
+            return _mk(True, False, method="ext_limit_pending", pending=True)
 
         # Regular hours: urgency-adjusted wait for fill.
         for _ in range(_polls):
@@ -1351,7 +1353,39 @@ def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells
     else:
         L.append("_No open positions._")
     L += ["", "## Trades today"]
-    if buys or sells:
+    # Source of truth: ledger entries from transactions.csv for this date.
+    # This captures exits placed outside the current in-memory scan run too.
+    ledger_today = []
+    if TX_FILE.exists():
+        try:
+            with open(TX_FILE, newline="") as f:
+                for r in csv.DictReader(f):
+                    if r.get("date") == str(today):
+                        ledger_today.append(r)
+        except Exception as e:
+            log.warning(f"write_daily ledger read failed: {e}")
+    if ledger_today:
+        ledger_today.sort(key=lambda r: r.get("timestamp", ""))
+        L += ["| Time | Action | Ticker | Strategy | Price | Amount | Note |",
+              "|------|--------|--------|----------|-------|--------|------|"]
+        for t in ledger_today:
+            ts = t.get("timestamp", "")
+            tm = ts[11:16] if len(ts) >= 16 else "--:--"
+            action = (t.get("action") or "").upper()
+            try:
+                px = float(t.get("price", 0) or 0)
+            except Exception:
+                px = 0.0
+            try:
+                amt = float(t.get("dollar_amount", 0) or 0)
+            except Exception:
+                amt = 0.0
+            note = t.get("exit_reason", "") if action == "SELL" else "--"
+            note = note or "--"
+            L.append(f"| {tm} | {action:<4} | {t.get('ticker','')} | {t.get('strategy','?')} | "
+                     f"${px:.2f} | ${amt:.2f} | {note} |")
+    elif buys or sells:
+        # Fallback for first run before ledger write is available.
         L += ["| Time | Action | Ticker | Strategy | Price | Amount | Note |",
               "|------|--------|--------|----------|-------|--------|------|"]
         for b in buys:
@@ -1480,7 +1514,9 @@ def write_weekly(client, equity, cash):
     row("Date",            f"{today}  ({MN[today.month]})")
     row("Regime",          rgm.upper())
     row("Strategy",        f"{sc['p']}  +  {sc['s']}")
-    row("PDT used",        f"{pdt_used} / {wk_max_t} today")
+    row("Execution",       "Summary mode only (no orders submitted)")
+    row("PDT round trips", f"{pdt_used} today")
+    row("Cash-based cap",  f"{wk_max_t} max trades with current available cash")
     div()
     # Two-column account layout
     def _col2(l1, v1, l2, v2):
@@ -1500,10 +1536,13 @@ def write_weekly(client, equity, cash):
                            f"Return {all_ret:+.1f}%  |  P&L ${all_real_pnl:+,.2f}")
     div()
     if positions:
+        shown = 0
         trow("TICKER","STRATEGY","INVESTED","ENTRY","NOW","P&L%","P&L$",
              widths=[6,13,9,8,8,8,10])
         div()
         for t, p in positions.items():
+            if shown >= WEEKLY_MAX_HOLDINGS_PRINT:
+                break
             pnl_flag = " !" if p["pnl_pct"] <= EXIT_STOP_LOSS * 100 else ""
             trow(t, p.get("strategy","?"),
                  f"${p.get('dollar_amt',0):.2f}",
@@ -1512,6 +1551,11 @@ def write_weekly(client, equity, cash):
                  f"{p['pnl_pct']:+.1f}%{pnl_flag}",
                  f"${p['pnl_dollar']:+.2f}",
                  widths=[6,13,9,8,8,8,10])
+            shown += 1
+        if len(positions) > shown:
+            blank()
+            row("More holdings",
+                f"Showing {shown}/{len(positions)} in terminal; full list in weekly markdown file")
     else:
         blank(); row("  No open positions."); blank()
     div()
@@ -1607,7 +1651,9 @@ def detect_mode():
     now = datetime.now(ZoneInfo("America/New_York"))
     h = now.hour; m = now.minute; dow = now.weekday()
     if dow >= 5: return "weekly"
-    if dow == 4 and h >= 17: return "weekly"          # Friday post-close
+    # Friday: keep running extended-hours exits through 7:59pm ET.
+    # Switch to weekly summary only after extended-hours window closes.
+    if dow == 4 and h >= 20: return "weekly"
     # Morning scan: 9:44–9:59am ET — cron :45 firing (Chicago 8:45am CDT).
     # Catches overnight gap setups and any signal that formed at the open.
     # One morning buy window per day. 10:00am falls into exits.
@@ -1746,9 +1792,10 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
 
     positions = enrich(client, get_positions(client))
     mode_label = "EXTENDED HOURS EXIT" if extended_hours else "MORNING CHECK"
+    run_mode_name = "ext_exits" if extended_hours else "exits"
     if not positions:
         hdr(mode_label); blank(); row("No open positions."); blank(); ftr()
-        log_run("exits", rgm, equity, cash, 0, 0, 0, {}); return
+        log_run(run_mode_name, rgm, equity, cash, 0, 0, 0, {}); return
 
     pos_data = fetch_batch(list(positions.keys()), "positions") if not extended_hours else {}
     exits = 0
@@ -1773,9 +1820,20 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
     div()
 
     eh_sells = []   # collect ext-hours sells for summary section
+    stats = {
+        "already_logged": 0,
+        "pdt_deferred": 0,
+        "no_data_skip": 0,
+        "attempted": 0,
+        "filled": 0,
+        "pending": 0,
+        "failed": 0,
+        "holds": 0,
+    }
 
     for ticker, pos in positions.items():
         if ticker in already_sold_today:
+            stats["already_logged"] += 1
             continue
 
         entry_date = pos.get("entry_date", "")
@@ -1784,6 +1842,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         # ── Strict PDT guard: never same-day exit in any mode ──────────────
         # For sub-$25k accounts, avoid all same-day buy+sell round trips.
         if entered_today:
+            stats["pdt_deferred"] += 1
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                 "HOLDING until next session (entered today — PDT)")
             continue
@@ -1794,8 +1853,10 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
             why = f"stop_loss ({pnl_frac*100:.1f}%)"
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                 f"EXIT{eh_tag}: {_trunc(why,22)}")
+            stats["attempted"] += 1
             sell_res = do_sell(client, ticker, extended_hours=extended_hours, urgency="urgent")
             if sell_res.get("ok") and sell_res.get("filled"):
+                stats["filled"] += 1
                 exits += 1; exited.add(ticker); already_sold_today.add(ticker)
                 cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
                 sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
@@ -1813,6 +1874,12 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                 if extended_hours:
                     eh_sells.append((ticker, pos.get("strategy","?"), pos["pnl_pct"],
                                      pos["pnl_dollar"], why))
+            elif sell_res.get("pending"):
+                stats["pending"] += 1
+                row(ticker, "SELL pending (after-hours limit open)")
+            else:
+                stats["failed"] += 1
+                row(ticker, "SELL attempt failed (will retry next run)")
             continue
 
         # ── Max-hold: position data only — no yfinance needed ─────────────
@@ -1824,8 +1891,10 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                     why = f"max_hold {days}d ({pnl_frac*100:+.1f}%)"
                     row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                         f"EXIT{eh_tag}: {_trunc(why,22)}")
+                    stats["attempted"] += 1
                     sell_res = do_sell(client, ticker, extended_hours=extended_hours, urgency="normal")
                     if sell_res.get("ok") and sell_res.get("filled"):
+                        stats["filled"] += 1
                         exits += 1; exited.add(ticker); already_sold_today.add(ticker)
                         cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
                         sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
@@ -1841,6 +1910,12 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                         if extended_hours:
                             eh_sells.append((ticker, pos.get("strategy","?"), pos["pnl_pct"],
                                              pos["pnl_dollar"], why))
+                    elif sell_res.get("pending"):
+                        stats["pending"] += 1
+                        row(ticker, "SELL pending (after-hours limit open)")
+                    else:
+                        stats["failed"] += 1
+                        row(ticker, "SELL attempt failed (will retry next run)")
                     continue
             except Exception: pass
 
@@ -1849,16 +1924,20 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         # into signals; midline exits are better handled by the 9:35am run.
         if extended_hours:
             strat = pos.get("strategy", "midline")
+            stats["holds"] += 1
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                 f"HOLDING until 9:35am scan ({strat})")
             continue
         if ticker not in pos_data:
+            stats["no_data_skip"] += 1
             row(ticker, "no price data (stop/max-hold already checked)"); continue
         ex, why = check_exit(pos_data[ticker], pos, eod_only=False)
         row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
             f"EXIT: {_trunc(why,22)}" if ex else "HOLD")
         sell_res = do_sell(client, ticker, urgency="low") if ex else {"ok": False, "filled": False}
         if ex and sell_res.get("ok") and sell_res.get("filled"):
+            stats["attempted"] += 1
+            stats["filled"] += 1
             exits += 1; exited.add(ticker); already_sold_today.add(ticker)
             cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
             sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
@@ -1873,6 +1952,16 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                    limit_price_used=sell_res.get("limit_price_used"),
                    sell_latency_s=sell_res.get("sell_latency_s"),
                    fill_slippage_bps=sell_res.get("fill_slippage_bps"))
+        elif ex and sell_res.get("pending"):
+            stats["attempted"] += 1
+            stats["pending"] += 1
+            row(ticker, "SELL pending (after-hours limit open)")
+        elif ex:
+            stats["attempted"] += 1
+            stats["failed"] += 1
+            row(ticker, "SELL attempt failed (will retry next run)")
+        else:
+            stats["holds"] += 1
     ftr()
 
     # ── Extended-hours sells summary ──────────────────────────────────────
@@ -1894,7 +1983,25 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         blank(); row("No extended-hours sells this run."); blank()
         ftr()
 
-    log_run("exits", rgm, equity, cash, 0, 0, exits, positions)
+    hdr("EXIT RUN SUMMARY")
+    total_candidates = len(positions)
+    row("Mode", run_mode_name)
+    row("Candidates", str(total_candidates))
+    row("Deferred/Skipped", f"PDT {stats['pdt_deferred']}  |  already logged {stats['already_logged']}")
+    row("Data skips", f"no price data {stats['no_data_skip']}")
+    row("Sell attempts", f"{stats['attempted']} attempted  |  {stats['filled']} filled  |  "
+                         f"{stats['pending']} pending  |  {stats['failed']} failed")
+    row("Holds", str(stats["holds"]))
+    row("Logged exits", str(exits))
+    ftr()
+
+    positions_after = enrich(client, get_positions(client))
+    acct2 = client.get_account()
+    eq2 = float(acct2.equity)
+    ca2 = float(acct2.cash)
+    log_run(run_mode_name, rgm, eq2, ca2, 0, 0, exits, positions_after)
+    # Keep daily markdown in sync for non-scan exit runs too.
+    write_daily(date.today(), eq2, ca2, rgm, date.today().month, positions_after, [], [], [])
 
 
 # =============================================================================
@@ -1946,11 +2053,21 @@ def run_scan(client, equity, cash, rgm):
         row("Total open P&L", f"${pnl:+,.2f}")
     else:
         blank(); row("No open positions."); blank()
-    row(f"PDT used: {pdt_n(pdt)}/{max_trades} today")
+    row(f"PDT round trips today: {pdt_n(pdt)}  |  cash-based cap now: {max_trades}")
     ftr()
 
     # Exit check on held positions
     exits = 0; sells_log = []
+    scan_exit_stats = {
+        "already_logged": 0,
+        "pdt_deferred": 0,
+        "no_data_skip": 0,
+        "attempted": 0,
+        "filled": 0,
+        "pending": 0,
+        "failed": 0,
+        "holds": 0,
+    }
 
     # Load today's sells to prevent duplicate logging across multiple scan runs
     already_sold_today = set()
@@ -1965,10 +2082,12 @@ def run_scan(client, equity, cash, rgm):
         hdr("EXIT EVALUATION  (EOD -- midline + stop + max-hold)")
         for ticker, pos in list(positions.items()):
             if ticker in already_sold_today:
+                scan_exit_stats["already_logged"] += 1
                 continue
             entry_date = pos.get("entry_date", "")
             entered_today = (entry_date == str(today))
             if entered_today:
+                scan_exit_stats["pdt_deferred"] += 1
                 row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                     "HOLDING until next session (entered today — PDT)")
                 continue
@@ -1979,8 +2098,10 @@ def run_scan(client, equity, cash, rgm):
                 why = f"stop_loss ({pnl_frac*100:.1f}%)"
                 row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                     f"EXIT: {_trunc(why,20)}")
+                scan_exit_stats["attempted"] += 1
                 sell_res = do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL, urgency="urgent")
                 if sell_res.get("ok") and sell_res.get("filled"):
+                    scan_exit_stats["filled"] += 1
                     exits += 1; cur = pos["current_price"]
                     cur = sell_res.get("price") if sell_res.get("price") is not None else cur
                     sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
@@ -1999,6 +2120,12 @@ def run_scan(client, equity, cash, rgm):
                                        "tk": ticker, "st": pos.get("strategy","?"),
                                        "px": cur, "why": why})
                     already_sold_today.add(ticker); del positions[ticker]
+                elif sell_res.get("pending"):
+                    scan_exit_stats["pending"] += 1
+                    row(ticker, "SELL pending (after-hours limit open)")
+                else:
+                    scan_exit_stats["failed"] += 1
+                    row(ticker, "SELL attempt failed (will retry next run)")
                 continue
 
             # ── Max-hold: position data only — no yfinance needed ─────────
@@ -2010,8 +2137,10 @@ def run_scan(client, equity, cash, rgm):
                         why = f"max_hold {days}d ({pnl_frac*100:+.1f}%)"
                         row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                             f"EXIT: {_trunc(why,20)}")
+                        scan_exit_stats["attempted"] += 1
                         sell_res = do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL, urgency="normal")
                         if sell_res.get("ok") and sell_res.get("filled"):
+                            scan_exit_stats["filled"] += 1
                             exits += 1; cur = pos["current_price"]
                             cur = sell_res.get("price") if sell_res.get("price") is not None else cur
                             sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
@@ -2028,17 +2157,26 @@ def run_scan(client, equity, cash, rgm):
                                                "tk": ticker, "st": pos.get("strategy","?"),
                                                "px": cur, "why": why})
                             already_sold_today.add(ticker); del positions[ticker]
+                        elif sell_res.get("pending"):
+                            scan_exit_stats["pending"] += 1
+                            row(ticker, "SELL pending (after-hours limit open)")
+                        else:
+                            scan_exit_stats["failed"] += 1
+                            row(ticker, "SELL attempt failed (will retry next run)")
                         continue
                 except Exception: pass
 
             # ── Midline: needs price/MA data from yfinance (EOD only) ─────
             if ticker not in pos_data:
+                scan_exit_stats["no_data_skip"] += 1
                 row(ticker, "no price data (stop/max-hold already checked)"); continue
             ex, why = check_exit(pos_data[ticker], pos, eod_only=True)
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                 f"EXIT: {_trunc(why,20)}" if ex else "HOLD")
             sell_res = do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL, urgency="low") if ex else {"ok": False, "filled": False}
             if ex and sell_res.get("ok") and sell_res.get("filled"):
+                scan_exit_stats["attempted"] += 1
+                scan_exit_stats["filled"] += 1
                 exits += 1; cur = pos["current_price"]
                 cur = sell_res.get("price") if sell_res.get("price") is not None else cur
                 sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
@@ -2057,6 +2195,24 @@ def run_scan(client, equity, cash, rgm):
                                    "tk": ticker, "st": pos.get("strategy","?"),
                                    "px": cur, "why": why})
                 already_sold_today.add(ticker); del positions[ticker]
+            elif ex and sell_res.get("pending"):
+                scan_exit_stats["attempted"] += 1
+                scan_exit_stats["pending"] += 1
+                row(ticker, "SELL pending (after-hours limit open)")
+            elif ex:
+                scan_exit_stats["attempted"] += 1
+                scan_exit_stats["failed"] += 1
+                row(ticker, "SELL attempt failed (will retry next run)")
+            else:
+                scan_exit_stats["holds"] += 1
+        ftr()
+        hdr("EXIT EVAL SUMMARY")
+        row("Exit eval",
+            f"attempted {scan_exit_stats['attempted']} | filled {scan_exit_stats['filled']} | "
+            f"pending {scan_exit_stats['pending']} | failed {scan_exit_stats['failed']} | "
+            f"PDT deferred {scan_exit_stats['pdt_deferred']}")
+        row("Other skips", f"already logged today {scan_exit_stats['already_logged']}  |  "
+                           f"no price data {scan_exit_stats['no_data_skip']}  |  holds {scan_exit_stats['holds']}")
         ftr()
 
     # Full universe download and scan
@@ -2248,7 +2404,7 @@ if __name__ == "__main__":
         # No new buys — exits only (stop-loss, time-stop, midline).
         run_exits(client, equity, cash, rgm, extended_hours=True)
     elif mode == "weekly":
-        run_summary(client, equity, cash, rgm)
+        # Weekly mode prints a compact weekly snapshot and writes weekly markdown.
         write_weekly(client, equity, cash)
     else:
         run_summary(client, equity, cash, rgm)

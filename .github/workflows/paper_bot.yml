@@ -1,30 +1,9 @@
 name: Paper Bot 📋
 
-# ─── SCHEDULE ────────────────────────────────────────────────────────────────
-# Same cron times as the live bot but paper-only.
-# Runs at 9:35am ET (exits) and 3:50pm ET (scan+entries).
-# 4 crons cover EDT and EST automatically via Python's zoneinfo.
+# ─── TRIGGERING ───────────────────────────────────────────────────────────────
+# Paper bot is manual-only by default to avoid accidental paper runs.
 
 on:
-  schedule:
-    # ── Weekday stock runs ─────────────────────────────────────────────────
-    # Morning exits check: 9:35am ET
-    - cron: '35 13 * * 1-5'   # EDT (Mar-Nov): 13:35 UTC
-    - cron: '35 14 * * 1-5'   # EST (Nov-Mar): 14:35 UTC
-    # Afternoon scan + entries: 3:50pm ET
-    - cron: '50 19 * * 1-5'   # EDT (Mar-Nov): 19:50 UTC
-    - cron: '50 20 * * 1-5'   # EST (Nov-Mar): 20:50 UTC
-
-    # ── Weekend crypto runs (every 4 hours Sat + Sun) ──────────────────────
-    # Crypto markets are 24/7. Bot scans for RSI oversold signals and
-    # tests the full sell flow (limit → market → partial sell).
-    # Times: midnight, 4am, 8am, noon, 4pm, 8pm UTC on Sat+Sun
-    - cron: '0  0 * * 0,6'
-    - cron: '0  4 * * 0,6'
-    - cron: '0  8 * * 0,6'
-    - cron: '0 12 * * 0,6'
-    - cron: '0 16 * * 0,6'
-    - cron: '0 20 * * 0,6'
   workflow_dispatch:            # manual "Run workflow" button
 
 permissions:
