@@ -1830,11 +1830,16 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         "failed": 0,
         "holds": 0,
     }
+    stop_breaches = {}
 
     for ticker, pos in positions.items():
         if ticker in already_sold_today:
             stats["already_logged"] += 1
             continue
+
+        pnl_frac = pos.get("pnl_pct", 0) / 100
+        if pnl_frac <= EXIT_STOP_LOSS:
+            stop_breaches[ticker] = pnl_frac
 
         entry_date = pos.get("entry_date", "")
         entered_today = (entry_date == str(date.today()))
@@ -1848,7 +1853,6 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
             continue
 
         # ── Stop-loss: Alpaca unrealized P&L — no yfinance needed ─────────
-        pnl_frac = pos.get("pnl_pct", 0) / 100
         if pnl_frac <= EXIT_STOP_LOSS:
             why = f"stop_loss ({pnl_frac*100:.1f}%)"
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
@@ -1995,6 +1999,15 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
     row("Logged exits", str(exits))
     ftr()
 
+    hdr("STOP-LOSS BREACHES THIS RUN")
+    if stop_breaches:
+        for tk, frac in sorted(stop_breaches.items(), key=lambda kv: kv[1]):
+            row(tk, f"{frac*100:+.2f}%  (threshold {EXIT_STOP_LOSS*100:+.2f}%)")
+        row("Count", str(len(stop_breaches)))
+    else:
+        row("None")
+    ftr()
+
     positions_after = enrich(client, get_positions(client))
     acct2 = client.get_account()
     eq2 = float(acct2.equity)
@@ -2068,6 +2081,7 @@ def run_scan(client, equity, cash, rgm):
         "failed": 0,
         "holds": 0,
     }
+    scan_stop_breaches = {}
 
     # Load today's sells to prevent duplicate logging across multiple scan runs
     already_sold_today = set()
@@ -2086,6 +2100,9 @@ def run_scan(client, equity, cash, rgm):
                 continue
             entry_date = pos.get("entry_date", "")
             entered_today = (entry_date == str(today))
+            pnl_frac = pos.get("pnl_pct", 0) / 100
+            if pnl_frac <= EXIT_STOP_LOSS:
+                scan_stop_breaches[ticker] = pnl_frac
             if entered_today:
                 scan_exit_stats["pdt_deferred"] += 1
                 row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
@@ -2093,7 +2110,6 @@ def run_scan(client, equity, cash, rgm):
                 continue
 
             # ── Stop-loss: Alpaca unrealized P&L — no yfinance needed ─────
-            pnl_frac = pos.get("pnl_pct", 0) / 100
             if pnl_frac <= EXIT_STOP_LOSS:
                 why = f"stop_loss ({pnl_frac*100:.1f}%)"
                 row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
@@ -2213,6 +2229,12 @@ def run_scan(client, equity, cash, rgm):
             f"PDT deferred {scan_exit_stats['pdt_deferred']}")
         row("Other skips", f"already logged today {scan_exit_stats['already_logged']}  |  "
                            f"no price data {scan_exit_stats['no_data_skip']}  |  holds {scan_exit_stats['holds']}")
+        if scan_stop_breaches:
+            row("Stop-loss breaches", str(len(scan_stop_breaches)))
+            for tk, frac in sorted(scan_stop_breaches.items(), key=lambda kv: kv[1]):
+                row(tk, f"{frac*100:+.2f}%  (threshold {EXIT_STOP_LOSS*100:+.2f}%)")
+        else:
+            row("Stop-loss breaches", "none")
         ftr()
 
     # Full universe download and scan
