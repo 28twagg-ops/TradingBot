@@ -1,17 +1,17 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-06-01 13:53 UTC*
+*Updated: 2026-06-01 19:49 UTC*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $495.17 |
+| **Current Equity** | $499.74 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | -0.97% ($-4.83) |
+| **Total Return** | -0.05% ($-0.26) |
 | **Peak Equity** | $509.86 |
-| **Max Drawdown** | -2.88% |
+| **Max Drawdown** | -3.19% |
 | **Current Cash** | $24.74 |
 | **Open Positions** | 22 (ABNB|AFL|BG|CIEN|DGX|EA|EME|EVRG|FANG|FDX|FIX|FN|FTV|INTC|KEYS|KNF|LITE|MTB|NEM|OXY|PII|RRX) |
-| **Last Bot Run** | 2026-06-01 13:53:09 |
+| **Last Bot Run** | 2026-06-01 19:49:08 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
@@ -49,7 +49,7 @@
 | 2026-05-27 | $505.12 | -1.41 |
 | 2026-05-28 | $503.68 | -1.44 |
 | 2026-05-29 | $499.64 | -4.04 |
-| 2026-06-01 | $495.17 | -4.47 |
+| 2026-06-01 | $499.74 | +0.10 |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
