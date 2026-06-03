@@ -279,3 +279,75 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-03 14:15:41
+ID: ALL|2026-06-03
+Mode: exits
+Ticker: ALL
+Strategy: Pullback50
+Entry date: 2026-06-03
+P&L at breach: -0.85%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-03 14:15:41
+ID: ARES|2026-06-03
+Mode: exits
+Ticker: ARES
+Strategy: GapDown
+Entry date: 2026-06-03
+P&L at breach: -1.18%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-03 14:15:41
+ID: BX|2026-06-03
+Mode: exits
+Ticker: BX
+Strategy: GapDown
+Entry date: 2026-06-03
+P&L at breach: -1.57%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-03 14:15:41
+ID: DTE|2026-06-03
+Mode: exits
+Ticker: DTE
+Strategy: Pullback50
+Entry date: 2026-06-03
+P&L at breach: -0.56%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-03 14:15:41
+ID: KKR|2026-06-03
+Mode: exits
+Ticker: KKR
+Strategy: GapDown
+Entry date: 2026-06-03
+P&L at breach: -0.91%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-03 14:15:41
+ID: LNT|2026-06-03
+Mode: exits
+Ticker: LNT
+Strategy: Pullback50
+Entry date: 2026-06-03
+P&L at breach: -0.57%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
