@@ -519,3 +519,15 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-05 21:00:26
+ID: HWM|2026-06-05
+Mode: ext_exits
+Ticker: HWM
+Strategy: Pullback50
+Entry date: 2026-06-05
+P&L at breach: -0.90%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
