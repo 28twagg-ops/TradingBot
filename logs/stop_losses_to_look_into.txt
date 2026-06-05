@@ -471,3 +471,27 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-05 15:45:28
+ID: ABNB|2026-06-05
+Mode: exits
+Ticker: ABNB
+Strategy: Pullback50
+Entry date: 2026-06-05
+P&L at breach: -0.70%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-05 15:45:28
+ID: LULU|2026-06-05
+Mode: exits
+Ticker: LULU
+Strategy: GapDown
+Entry date: 2026-06-05
+P&L at breach: -1.52%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
