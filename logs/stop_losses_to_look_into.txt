@@ -735,3 +735,15 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-08 20:30:30
+ID: HAL|2026-06-08
+Mode: ext_exits
+Ticker: HAL
+Strategy: Pullback50
+Entry date: 2026-06-08
+P&L at breach: -0.51%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
