@@ -615,3 +615,27 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-08 15:45:35
+ID: BURL|2026-06-08
+Mode: exits
+Ticker: BURL
+Strategy: Pullback50
+Entry date: 2026-06-08
+P&L at breach: -0.67%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-08 15:45:35
+ID: CHRD|2026-06-08
+Mode: exits
+Ticker: CHRD
+Strategy: Pullback50
+Entry date: 2026-06-08
+P&L at breach: -0.51%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
