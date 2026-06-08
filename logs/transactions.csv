@@ -288,3 +288,24 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-06-05 13:52:52,2026-06-05,BUY,PCAR,Pullback50,117.9,20.61,0,0,0,,bull,500.39,,,,,,
 2026-06-05 13:53:03,2026-06-05,BUY,PCG,Pullback50,16.94,20.61,0,0,0,,bull,500.46,,,,,,
 2026-06-05 13:53:13,2026-06-05,BUY,PNW,Pullback50,101.6,20.61,0,0,0,,bull,500.55,,,,,,
+2026-06-08 13:30:40,2026-06-08,SELL,ABNB,Pullback50,133.85,20.42,-0.74,-0.15,3,stop_loss (-0.7%),bull,499.64,limit_fill_position_check,134.035,126.35,133.77,5.09,13.65
+2026-06-08 13:31:01,2026-06-08,SELL,APO,GapDown,128.27,21.21,2.76,0.57,5,max_hold 5d (+2.8%),bull,499.46,limit_fill_position_check,128.5,127.34,128.24,20.12,17.9
+2026-06-08 13:31:21,2026-06-08,SELL,CB,Pullback50,324.03,20.69,0.33,0.07,3,max_hold 3d (+0.3%),bull,499.62,limit_fill_position_check,323.94,305.15,323.29,20.09,-2.9
+2026-06-08 13:31:41,2026-06-08,SELL,CG,GapDown,43.25,20.98,1.64,0.34,5,max_hold 5d (+1.6%),bull,499.77,limit_fill_position_check,43.275,40.54,43.19,20.11,6.24
+2026-06-08 13:32:03,2026-06-08,SELL,CHD,Pullback50,95.09,20.59,-0.04,-0.01,3,max_hold 3d (-0.0%),bull,499.69,market_fallback,95.34,95.01,95.15,22.2,
+2026-06-08 13:32:25,2026-06-08,SELL,CINF,Pullback50,164.37,20.78,0.89,0.18,3,max_hold 3d (+0.9%),bull,499.77,market_fallback,164.475,153.21,164.15,22.17,
+2026-06-08 13:32:45,2026-06-08,SELL,CL,Pullback50,86.89,20.61,0.01,0.0,3,max_hold 3d (+0.0%),bull,499.73,limit_fill_position_check,87.015,86.81,86.84,20.09,14.14
+2026-06-08 13:33:05,2026-06-08,SELL,CNP,Pullback50,42.66,20.69,0.24,0.05,3,max_hold 3d (+0.2%),bull,499.63,limit_fill_position_check,42.679,42.58,42.59,20.11,5.39
+2026-06-08 13:33:28,2026-06-08,SELL,DRI,Pullback50,196.35,20.52,-0.37,-0.08,3,max_hold 3d (-0.4%),bull,499.38,market_fallback,195.57,183.09,195.18,22.12,
+2026-06-08 13:33:50,2026-06-08,SELL,DTE,Pullback50,145.27,20.67,0.34,0.07,3,max_hold 3d (+0.3%),bull,499.14,market_fallback,145.93,145.21,145.64,22.21,
+2026-06-08 13:34:10,2026-06-08,SELL,EVRG,Pullback50,83.25,20.68,-0.0,-0.0,3,max_hold 3d (-0.0%),bull,499.05,limit_fill_position_check,83.385,83.17,83.22,20.08,15.71
+2026-06-08 13:34:17,2026-06-08,SELL,GWRE,GapDown,135.13,19.64,-4.66,-0.96,3,stop_loss (-4.7%),bull,498.91,market_fallback,132.975,127.06,132.71,7.12,
+2026-06-08 13:34:22,2026-06-08,SELL,HIMS,GapDown,25.97,19.97,-1.46,-0.3,3,stop_loss (-1.5%),bull,498.91,limit_fill_position_check,25.995,25.96,25.96,5.07,8.08
+2026-06-08 13:34:42,2026-06-08,SELL,HWM,Pullback50,252.32,20.69,0.29,0.06,3,max_hold 3d (+0.3%),bull,498.77,limit_fill_position_check,252.41,251.5,251.91,20.07,3.57
+2026-06-08 13:34:49,2026-06-08,SELL,IFF,Pullback50,72.69,20.31,-1.41,-0.29,3,stop_loss (-1.4%),bull,498.75,market_fallback,72.605,68.32,72.46,7.09,
+2026-06-08 13:35:10,2026-06-08,SELL,KKR,GapDown,92.74,21.16,2.97,0.61,5,max_hold 5d (+3.0%),bull,498.65,limit_fill_position_check,92.91,87.81,92.72,20.11,18.73
+2026-06-08 13:35:30,2026-06-08,SELL,LNT,Pullback50,72.87,20.77,0.63,0.13,3,max_hold 3d (+0.6%),bull,498.54,limit_fill_position_check,72.925,72.84,72.84,20.08,6.99
+2026-06-08 13:35:50,2026-06-08,SELL,LULU,GapDown,114.4,20.45,1.54,0.32,3,max_hold 3d (+1.5%),bull,498.43,limit_fill_position_check,114.55,110.74,114.32,20.08,12.75
+2026-06-08 13:35:55,2026-06-08,SELL,PCAR,Pullback50,117.0,20.41,-0.84,-0.17,3,stop_loss (-0.8%),bull,498.43,limit_fill_position_check,116.99,109.81,116.76,5.05,-0.85
+2026-06-08 13:36:00,2026-06-08,SELL,PCG,Pullback50,16.96,3.43,-0.57,-0.12,3,stop_loss (-0.6%),bull,498.44,limit_fill_position_check,16.965,16.95,16.95,5.06,1.77
+2026-06-08 13:36:20,2026-06-08,SELL,PNW,Pullback50,103.02,20.77,0.46,0.09,3,max_hold 3d (+0.5%),bull,498.43,limit_fill_position_check,103.06,96.97,102.85,20.12,3.69
