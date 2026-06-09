@@ -364,3 +364,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-06-09 13:54:09,2026-06-09,BUY,EME,Pullback50,842.76,20.33,0,0,0,,bull,497.81,,,,,,
 2026-06-09 14:15:37,2026-06-09,SELL,HAL,Pullback50,40.0,20.44,-0.69,-0.14,1,stop_loss (-0.7%),bull,496.24,limit_fill_position_check,40.01,39.99,39.99,5.32,1.5
 2026-06-09 14:30:45,2026-06-09,SELL,BKR,Pullback50,64.0,20.47,-0.51,-0.11,1,stop_loss (-0.5%),bull,495.35,limit_fill_position_check,64.02,60.83,63.89,5.44,3.44
+2026-06-09 15:30:50,2026-06-09,SELL,SNPS,Pullback50,462.8,20.33,-1.14,-0.23,1,stop_loss (-1.1%),bull,491.17,limit_fill_position_check,463.09,447.83,462.16,5.21,6.26
