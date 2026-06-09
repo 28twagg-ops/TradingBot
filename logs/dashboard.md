@@ -1,41 +1,41 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-06-09 13:54 UTC*
+*Updated: 2026-06-09 19:49 UTC*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $497.78 |
+| **Current Equity** | $491.94 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | -0.44% ($-2.22) |
+| **Total Return** | -1.61% ($-8.06) |
 | **Peak Equity** | $513.45 |
-| **Max Drawdown** | -3.87% |
-| **Current Cash** | $191.35 |
-| **Open Positions** | 15 (ABNB|AME|AVGO|BKR|CB|CL|COIN|DE|DRI|EME|HAL|KEX|NOVT|NOW|SNPS) |
-| **Last Bot Run** | 2026-06-09 13:54:14 |
+| **Max Drawdown** | -4.58% |
+| **Current Cash** | $252.29 |
+| **Open Positions** | 12 (ABNB|AME|AVGO|CB|CL|COIN|DE|DRI|EME|GATX|NOVT|NOW) |
+| **Last Bot Run** | 2026-06-09 19:49:23 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 183 |
-| **Wins / Losses** | 66 / 117 |
-| **Win Rate** | 36.1% |
+| **Total Closed Trades** | 187 |
+| **Wins / Losses** | 66 / 121 |
+| **Win Rate** | 35.3% |
 | **Avg Win** | +1.98% |
-| **Avg Loss** | -1.42% |
-| **Profit Factor** | 0.86x |
+| **Avg Loss** | -1.40% |
+| **Profit Factor** | 0.85x |
 | **Avg Hold Days** | 1.7d |
-| **Total Realised P&L** | $-4.71 |
+| **Total Realised P&L** | $-5.35 |
 
 ## Exit Reasons
 | Exit Type | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `stop_loss` | 103 | 0% | -1.58% |
+| `stop_loss` | 107 | 0% | -1.55% |
 | `midline` | 48 | 83% | +1.91% |
 | `max_hold` | 32 | 81% | +1.11% |
 
 ## Strategy Breakdown
 | Strategy | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `Pullback50` | 133 | 35% | -0.24% |
+| `Pullback50` | 137 | 34% | -0.26% |
 | `GapDown` | 46 | 37% | -0.13% |
 | `MomReversal` | 3 | 67% | +2.14% |
 | `VolumeSpike` | 1 | 0% | -3.86% |
@@ -55,11 +55,15 @@
 | 2026-06-04 | $508.00 | +7.12 |
 | 2026-06-05 | $500.42 | -7.58 |
 | 2026-06-08 | $495.61 | -4.81 |
-| 2026-06-09 | $497.78 | +2.17 |
+| 2026-06-09 | $491.94 | -3.67 |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
 |---|---|---|---|---|---|---|
+| 2026-06-09 | **KEX** | `Pullback50` | -0.77% | $-0.16 | 1d | stop_loss (-0.8%) |
+| 2026-06-09 | **SNPS** | `Pullback50` | -1.14% | $-0.23 | 1d | stop_loss (-1.1%) |
+| 2026-06-09 | **BKR** | `Pullback50` | -0.51% | $-0.11 | 1d | stop_loss (-0.5%) |
+| 2026-06-09 | **HAL** | `Pullback50` | -0.69% | $-0.14 | 1d | stop_loss (-0.7%) |
 | 2026-06-09 | **TXT** | `Pullback50` | +1.89% | $+0.39 | 1d | midline (+1.9%) |
 | 2026-06-09 | **TT** | `Pullback50` | +1.79% | $+0.37 | 1d | midline (+1.8%) |
 | 2026-06-09 | **TFC** | `Pullback50` | +1.60% | $+0.33 | 1d | midline (+1.6%) |
@@ -76,10 +80,6 @@
 | 2026-06-09 | **DTE** | `Pullback50` | -0.95% | $-0.20 | 1d | stop_loss (-0.9%) |
 | 2026-06-09 | **CVX** | `Pullback50` | -1.00% | $-0.21 | 1d | stop_loss (-1.0%) |
 | 2026-06-09 | **CHRD** | `Pullback50` | -0.94% | $-0.19 | 1d | stop_loss (-0.9%) |
-| 2026-06-09 | **BURL** | `Pullback50` | -2.24% | $-0.46 | 1d | stop_loss (-2.2%) |
-| 2026-06-09 | **BKH** | `Pullback50` | -0.90% | $-0.18 | 1d | stop_loss (-0.9%) |
-| 2026-06-09 | **AM** | `Pullback50` | -1.99% | $-0.41 | 1d | stop_loss (-2.0%) |
-| 2026-06-08 | **PNW** | `Pullback50` | +0.46% | $+0.09 | 3d | max_hold 3d (+0.5%) |
 
 ---
 *Auto-generated after every EOD scan. View on GitHub: `logs/dashboard.md`*
