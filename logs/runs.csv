@@ -535,3 +535,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-06-09 22:30:24,ext_exits,bull,492.8,252.29,0,0,0,12,ABNB|AME|AVGO|CB|CL|COIN|DE|DRI|EME|GATX|NOVT|NOW,both
 2026-06-09 22:45:27,ext_exits,bull,492.55,252.29,0,0,0,12,ABNB|AME|AVGO|CB|CL|COIN|DE|DRI|EME|GATX|NOVT|NOW,both
 2026-06-09 23:00:29,ext_exits,bull,492.49,252.29,0,0,0,12,ABNB|AME|AVGO|CB|CL|COIN|DE|DRI|EME|GATX|NOVT|NOW,both
+2026-06-09 23:15:28,ext_exits,bull,492.76,252.29,0,0,0,12,ABNB|AME|AVGO|CB|CL|COIN|DE|DRI|EME|GATX|NOVT|NOW,both
