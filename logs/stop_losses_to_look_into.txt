@@ -831,3 +831,63 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-10 14:00:37
+ID: AA|2026-06-10
+Mode: exits
+Ticker: AA
+Strategy: GapDown
+Entry date: 2026-06-10
+P&L at breach: -2.13%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-10 14:00:37
+ID: FCX|2026-06-10
+Mode: exits
+Ticker: FCX
+Strategy: Pullback50
+Entry date: 2026-06-10
+P&L at breach: -1.08%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-10 14:00:37
+ID: GLW|2026-06-10
+Mode: exits
+Ticker: GLW
+Strategy: Pullback50
+Entry date: 2026-06-10
+P&L at breach: -0.96%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-10 14:00:37
+ID: HL|2026-06-10
+Mode: exits
+Ticker: HL
+Strategy: GapDown
+Entry date: 2026-06-10
+P&L at breach: -0.80%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-10 14:00:37
+ID: MU|2026-06-10
+Mode: exits
+Ticker: MU
+Strategy: GapDown
+Entry date: 2026-06-10
+P&L at breach: -1.41%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
