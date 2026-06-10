@@ -891,3 +891,39 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-10 14:15:37
+ID: BILL|2026-06-10
+Mode: exits
+Ticker: BILL
+Strategy: GapDown
+Entry date: 2026-06-10
+P&L at breach: -2.91%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-10 14:15:37
+ID: PEGA|2026-06-10
+Mode: exits
+Ticker: PEGA
+Strategy: GapDown
+Entry date: 2026-06-10
+P&L at breach: -2.10%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-10 14:15:37
+ID: SNPS|2026-06-10
+Mode: exits
+Ticker: SNPS
+Strategy: Pullback50
+Entry date: 2026-06-10
+P&L at breach: -0.58%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
