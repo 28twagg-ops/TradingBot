@@ -927,3 +927,15 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-10 14:45:33
+ID: NEM|2026-06-10
+Mode: exits
+Ticker: NEM
+Strategy: GapDown
+Entry date: 2026-06-10
+P&L at breach: -1.09%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
