@@ -1,0 +1,9 @@
+timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,filled_dollars,slippage_pct,slippage_dollar,execution_method,exit_reason,regime
+2026-06-10 13:30:38,2026-06-10,SELL,ABNB,Pullback50,129.635,129.38,129.5,19.31,-0.1041,-0.0201,market_fallback,stop_loss (-5.0%),bull
+2026-06-10 13:30:45,2026-06-10,SELL,AME,Pullback50,228.37,227.91,228.37,20.13,0.0,0.0,market_fallback,stop_loss (-1.0%),bull
+2026-06-10 13:30:50,2026-06-10,SELL,AVGO,Pullback50,383.295,382.53,383.16,19.28,-0.0352,-0.0068,limit_fill_position_check,stop_loss (-5.0%),bull
+2026-06-10 13:30:56,2026-06-10,SELL,COIN,GapDown,154.1479,153.84,154.172,19.11,0.0156,0.003,limit_fill_position_check,stop_loss (-5.9%),bull
+2026-06-10 13:31:03,2026-06-10,SELL,DE,Pullback50,577.0,575.85,577.0,20.21,0.0,0.0,market_fallback,stop_loss (-0.6%),bull
+2026-06-10 13:31:12,2026-06-10,SELL,EME,Pullback50,812.23,810.61,812.23,19.53,0.0,0.0,market_fallback,stop_loss (-3.9%),bull
+2026-06-10 13:31:19,2026-06-10,SELL,NOVT,GapDown,158.87,158.55,159.57,19.97,0.4406,0.088,market_fallback,stop_loss (-1.7%),bull
+2026-06-10 13:31:24,2026-06-10,SELL,NOW,GapDown,105.095,104.88,105.038,19.07,-0.0542,-0.0103,limit_fill_position_check,stop_loss (-6.0%),bull
