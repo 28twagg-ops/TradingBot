@@ -173,6 +173,7 @@ LOG_DIR    = Path("logs")
 DAILY_DIR  = LOG_DIR / "daily"
 WEEKLY_DIR = LOG_DIR / "weekly"
 TX_FILE    = LOG_DIR / "transactions.csv"
+EXEC_AUDIT_FILE = LOG_DIR / "execution_audit.csv"
 RUNS_FILE  = LOG_DIR / "runs.csv"
 PDT_FILE   = LOG_DIR / "pdt.json"
 STOP_LOSS_LOOK_FILE = LOG_DIR / "stop_losses_to_look_into.txt"
@@ -801,7 +802,7 @@ def _recent_filled_order(client, ticker, side, limit=20):
     return {"price": None, "qty": None, "dollars": None}
 
 
-def do_buy(client, ticker, dollars, strategy):
+def do_buy(client, ticker, dollars, strategy, expected_price=None):
     try:
         cid = f"{strategy}|{ticker}|{date.today()}"[:48]
         o = client.submit_order(MarketOrderRequest(
@@ -817,15 +818,38 @@ def do_buy(client, ticker, dollars, strategy):
                 oo = client.get_order_by_id(str(o.id))
                 if oo.status in (OrderStatus.filled, OrderStatus.partially_filled):
                     fill = _order_fill_summary(oo)
-                    return {"ok": True, "filled": True, **fill}
+                    return {
+                        "ok": True,
+                        "filled": True,
+                        "expected_price": expected_price,
+                        "order_price": expected_price,
+                        "execution_method": "market_fill",
+                        **fill,
+                    }
             except Exception:
                 pass
 
         fill = _recent_filled_order(client, ticker, OrderSide.BUY, limit=10)
-        return {"ok": True, "filled": fill["price"] is not None, **fill}
+        return {
+            "ok": True,
+            "filled": fill["price"] is not None,
+            "expected_price": expected_price,
+            "order_price": expected_price,
+            "execution_method": "market_submit",
+            **fill,
+        }
     except Exception as e:
         log.error(f"  BUY FAILED {ticker}: {e}")
-        return {"ok": False, "filled": False, "price": None, "qty": None, "dollars": None}
+        return {
+            "ok": False,
+            "filled": False,
+            "price": None,
+            "qty": None,
+            "dollars": None,
+            "expected_price": expected_price,
+            "order_price": expected_price,
+            "execution_method": "buy_failed",
+        }
 
 def cancel_stop_orders(client, ticker):
     """Cancel ALL open sell orders for a ticker (stop, stop-limit, and stuck
@@ -1148,11 +1172,18 @@ TX_F = ["timestamp","date","action","ticker","strategy","price","dollar_amount",
         "pnl_pct","pnl_dollar","hold_days","exit_reason","regime","equity_after",
         "sell_method","cur_at_submit","bid_at_submit","limit_price_used",
         "sell_latency_s","fill_slippage_bps"]
+EXEC_AUDIT_F = [
+    "timestamp", "date", "action", "ticker", "strategy",
+    "expected_price", "order_price", "actual_price", "filled_dollars",
+    "slippage_pct", "slippage_dollar", "execution_method",
+    "exit_reason", "regime",
+]
 
 def log_tx(action, ticker, strategy, price, dollars, rgm, equity,
            pnl_pct=0, pnl_dollar=0, hold_days=0, exit_reason="",
            sell_method="", cur_at_submit=None, bid_at_submit=None,
-           limit_price_used=None, sell_latency_s=None, fill_slippage_bps=None):
+           limit_price_used=None, sell_latency_s=None, fill_slippage_bps=None,
+           expected_price=None, order_price=None, execution_method=""):
     def _fmt(v, nd=2):
         if v is None:
             return ""
@@ -1160,6 +1191,59 @@ def log_tx(action, ticker, strategy, price, dollars, rgm, equity,
             return round(float(v), nd)
         except Exception:
             return ""
+
+    def _to_f(v):
+        try:
+            if v is None or v == "":
+                return None
+            return float(v)
+        except Exception:
+            return None
+
+    def _log_exec_audit():
+        exp = _to_f(expected_price)
+        if exp is None:
+            exp = _to_f(cur_at_submit) if action == "SELL" else _to_f(price)
+        ord_px = _to_f(order_price)
+        if ord_px is None:
+            ord_px = _to_f(limit_price_used) if action == "SELL" else exp
+        act = _to_f(price)
+        filled = _to_f(dollars)
+
+        slip_pct = None
+        slip_dol = None
+        qty_est = None
+        if exp and exp > 0 and filled is not None:
+            qty_est = filled / exp
+        if exp and exp > 0 and act is not None:
+            slip_pct = ((act - exp) / exp) * 100.0
+            if qty_est is not None:
+                slip_dol = (act - exp) * qty_est
+
+        row = {
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "date": str(date.today()),
+            "action": action,
+            "ticker": ticker,
+            "strategy": strategy,
+            "expected_price": _fmt(exp, 4),
+            "order_price": _fmt(ord_px, 4),
+            "actual_price": _fmt(act, 4),
+            "filled_dollars": _fmt(filled, 2),
+            "slippage_pct": _fmt(slip_pct, 4),
+            "slippage_dollar": _fmt(slip_dol, 4),
+            "execution_method": execution_method or sell_method or ("manual_" + action.lower()),
+            "exit_reason": exit_reason,
+            "regime": rgm,
+        }
+        init = not EXEC_AUDIT_FILE.exists()
+        with open(EXEC_AUDIT_FILE, "a", newline="") as af:
+            aw = csv.DictWriter(af, fieldnames=EXEC_AUDIT_F)
+            if init:
+                aw.writeheader()
+            aw.writerow(row)
+            af.flush()
+            os.fsync(af.fileno())
 
     row_data = {
         "timestamp":    datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -1190,6 +1274,10 @@ def log_tx(action, ticker, strategy, price, dollars, rgm, equity,
             w.writerow(row_data)
             f.flush()          # force write to disk — prevents silent data loss
             os.fsync(f.fileno())
+        try:
+            _log_exec_audit()
+        except Exception as audit_e:
+            log.warning(f"  EXEC audit log failed {action} {ticker}: {audit_e}")
         log.info(f"  TX logged: {action} {ticker}  "
                  f"{'P&L '+str(round(pnl_pct,2))+'%' if action=='SELL' else '$'+str(round(dollars,2))}")
     except Exception as e:
@@ -2500,14 +2588,17 @@ def run_scan(client, equity, cash, rgm):
                 n_unfilled_sea = max(0, n_unfilled_sea - 1)
             continue
         row(f"  ENTER [{tier}] {ticker}  {strategy}", f"${da:.2f}")
-        buy_res = do_buy(client, ticker, da, strategy)
+        buy_res = do_buy(client, ticker, da, strategy, expected_price=sig["close"])
         if buy_res.get("ok"):
             entries += 1; avail -= da
             pdt.append(str(today))   # track this buy for PDT cap enforcement
             buy_price = buy_res.get("price") if buy_res.get("price") is not None else sig["close"]
             buy_dollars = buy_res.get("dollars") if buy_res.get("dollars") is not None else da
             log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
-                   float(client.get_account().equity))
+                   float(client.get_account().equity),
+                   expected_price=sig["close"],
+                   order_price=buy_res.get("order_price", sig["close"]),
+                   execution_method=buy_res.get("execution_method", "buy_market"))
             buys_log.append({"t": datetime.now().strftime("%H:%M"),
                               "tk": ticker, "st": strategy,
                               "px": round(buy_price, 2), "$": round(buy_dollars, 2)})
