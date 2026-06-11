@@ -1,17 +1,17 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-06-11 13:59 UTC*
+*Updated: 2026-06-11 19:55 UTC*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $484.39 |
+| **Current Equity** | $485.65 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | -3.12% ($-15.61) |
+| **Total Return** | -2.87% ($-14.35) |
 | **Peak Equity** | $513.45 |
 | **Max Drawdown** | -6.33% |
-| **Current Cash** | $196.64 |
-| **Open Positions** | 39 (ADC|AEE|ALGN|AM|BC|BKH|CNP|DOV|DUK|ED|EMR|ETR|EXC|FCFS|FCX|FLR|GBCI|GEF|IDA|JHG|LECO|NDSN|NI|NJR|NSC|NWE|O|OGE|OHI|RBC|ROIV|RRX|SBUX|SMG|SO|STAG|SWX|TEX|TTC) |
-| **Last Bot Run** | 2026-06-11 13:59:57 |
+| **Current Cash** | $29.47 |
+| **Open Positions** | 71 (AA|ADC|AEE|ALGN|AM|BA|BC|BKH|BMY|CNP|CYTK|DE|DOV|DUK|EA|ED|EMR|ESAB|ETR|EXC|FCFS|FCX|FLR|FOUR|GBCI|GEF|GEV|GLW|GOOG|HL|IDA|JHG|KDP|KEYS|LECO|LMT|MRNA|NDSN|NI|NJR|NSC|NVDA|NWE|O|OGE|OHI|ORCL|PCAR|PCG|PFE|PH|PWR|RBC|RNR|ROIV|RRX|RTX|SATS|SBUX|SMG|SO|SON|STAG|SWX|TDY|TEX|TT|TTC|WAB|WY|XYZ) |
+| **Last Bot Run** | 2026-06-11 19:55:12 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
@@ -35,9 +35,10 @@
 ## Strategy Breakdown
 | Strategy | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `Pullback50` | 153 | 34% | -0.30% |
-| `GapDown` | 60 | 35% | -0.88% |
+| `Pullback50` | 153 | 33% | -0.38% |
+| `GapDown` | 57 | 37% | -0.76% |
 | `MomReversal` | 3 | 67% | +2.14% |
+| `RSIRecovery` | 3 | 33% | +0.78% |
 | `VolumeSpike` | 2 | 50% | -1.59% |
 
 ## Equity Timeline
@@ -57,7 +58,7 @@
 | 2026-06-08 | $495.61 | -4.81 |
 | 2026-06-09 | $492.58 | -3.03 |
 | 2026-06-10 | $481.45 | -11.13 |
-| 2026-06-11 | $484.39 | +2.94 |
+| 2026-06-11 | $485.65 | +4.20 |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
@@ -76,11 +77,11 @@
 | 2026-06-11 | **NVDA** | `Pullback50` | -1.39% | $-0.28 | 1d | stop_loss (-1.4%) |
 | 2026-06-11 | **NEM** | `GapDown` | -3.54% | $-0.71 | 1d | stop_loss (-3.5%) |
 | 2026-06-11 | **MU** | `GapDown` | -2.88% | $-0.58 | 1d | stop_loss (-2.9%) |
-| 2026-06-11 | **HL** | `GapDown` | -2.63% | $-0.15 | 1d | stop_loss (-2.6%) |
+| 2026-06-11 | **HL** | `RSIRecovery` | -2.63% | $-0.15 | 1d | stop_loss (-2.6%) |
 | 2026-06-11 | **GLW** | `Pullback50` | -3.68% | $-0.74 | 1d | stop_loss (-3.7%) |
 | 2026-06-11 | **FCX** | `Pullback50` | -2.16% | $-0.44 | 1d | stop_loss (-2.2%) |
 | 2026-06-11 | **BILL** | `GapDown` | -5.73% | $-1.16 | 1d | stop_loss (-5.7%) |
-| 2026-06-11 | **AA** | `GapDown` | -5.93% | $-1.20 | 1d | stop_loss (-5.9%) |
+| 2026-06-11 | **AA** | `Pullback50` | -5.93% | $-1.20 | 1d | stop_loss (-5.9%) |
 | 2026-06-10 | **CL** | `Pullback50` | +3.62% | $+0.73 | 1d | midline (+3.6%) |
 
 ---
