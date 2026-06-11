@@ -1131,3 +1131,15 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-11 14:30:36
+ID: TTC|2026-06-11
+Mode: exits
+Ticker: TTC
+Strategy: Pullback50
+Entry date: 2026-06-11
+P&L at breach: -0.56%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
