@@ -1143,3 +1143,15 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-11 15:15:37
+ID: STAG|2026-06-11
+Mode: exits
+Ticker: STAG
+Strategy: Pullback50
+Entry date: 2026-06-11
+P&L at breach: -0.65%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
