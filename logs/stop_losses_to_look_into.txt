@@ -1155,3 +1155,27 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-11 15:30:38
+ID: IDA|2026-06-11
+Mode: exits
+Ticker: IDA
+Strategy: Pullback50
+Entry date: 2026-06-11
+P&L at breach: -0.68%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-11 15:30:38
+ID: NJR|2026-06-11
+Mode: exits
+Ticker: NJR
+Strategy: Pullback50
+Entry date: 2026-06-11
+P&L at breach: -0.58%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
