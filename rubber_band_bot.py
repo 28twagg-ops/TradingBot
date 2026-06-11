@@ -124,7 +124,7 @@ UNIVERSE = "both"
 SEASONAL_SIZE_PCT    = 0.20   # primary + secondary scheduled strategies
 OFFSCHEDULE_SIZE_PCT = 0.20   # OOS-validated: 20% beats 12% by +121pp (Test 18 2026-05-10)
 CASH_RESERVE_PCT     = 0.05   # sim-validated at 5% (Test 18)
-MIN_TRADE_SIZE       = 1.0    # effectively no floor while keeping sizing math safe
+MIN_TRADE_SIZE       = 0.01   # effectively no floor while keeping sizing math safe
 
 # ---- Exit rules (v7 -- deep param sweep validated, 7yr 899 stocks) ----------
 # Midline only: price crosses above 20-day moving average
