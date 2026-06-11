@@ -1203,3 +1203,51 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-11 16:00:34
+ID: ADC|2026-06-11
+Mode: exits
+Ticker: ADC
+Strategy: Pullback50
+Entry date: 2026-06-11
+P&L at breach: -0.67%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-11 16:00:34
+ID: ETR|2026-06-11
+Mode: exits
+Ticker: ETR
+Strategy: Pullback50
+Entry date: 2026-06-11
+P&L at breach: -0.60%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-11 16:00:34
+ID: OGE|2026-06-11
+Mode: exits
+Ticker: OGE
+Strategy: Pullback50
+Entry date: 2026-06-11
+P&L at breach: -0.51%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-11 16:00:34
+ID: OHI|2026-06-11
+Mode: exits
+Ticker: OHI
+Strategy: Pullback50
+Entry date: 2026-06-11
+P&L at breach: -0.56%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
