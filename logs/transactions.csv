@@ -490,3 +490,20 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-06-11 19:54:46,2026-06-11,BUY,HL,RSIRecovery,14.86,4.93,0,0,0,,bull,485.65,,,,,,
 2026-06-11 19:54:56,2026-06-11,BUY,RNR,Pullback50,298.06,4.93,0,0,0,,bull,485.49,,,,,,
 2026-06-11 19:55:07,2026-06-11,BUY,SON,Pullback50,50.74,4.93,0,0,0,,bull,485.55,,,,,,
+2026-06-12 13:30:47,2026-06-12,SELL,ADC,Pullback50,75.23,7.31,-1.17,-0.09,1,stop_loss (-1.2%),bull,488.0,limit_fill_position_check,75.16,70.09,75.01,5.2,-9.85
+2026-06-12 13:30:54,2026-06-12,SELL,AEE,Pullback50,108.7,7.33,-0.83,-0.06,1,stop_loss (-0.8%),bull,487.9,market_fallback,108.935,103.07,108.72,7.28,
+2026-06-12 13:30:59,2026-06-12,SELL,AM,Pullback50,21.27,7.24,-1.72,-0.13,1,stop_loss (-1.7%),bull,487.88,limit_fill_position_check,21.29,21.25,21.25,5.25,11.27
+2026-06-12 13:31:07,2026-06-12,SELL,BKH,Pullback50,71.89,7.22,-2.35,-0.17,1,stop_loss (-2.4%),bull,487.71,market_fallback,71.89,61.74,71.75,7.32,
+2026-06-12 13:31:12,2026-06-12,SELL,DUK,Pullback50,124.62,7.32,-0.86,-0.06,1,stop_loss (-0.9%),bull,487.7,limit_fill_position_check,124.685,124.08,124.44,5.14,5.37
+2026-06-12 13:31:17,2026-06-12,SELL,ED,Pullback50,107.16,7.28,-1.1,-0.08,1,stop_loss (-1.1%),bull,487.66,limit_fill_position_check,107.265,100.67,107.05,5.14,9.98
+2026-06-12 13:31:22,2026-06-12,SELL,ETR,Pullback50,110.15,7.3,-1.11,-0.08,1,stop_loss (-1.1%),bull,487.67,limit_fill_position_check,110.26,103.78,110.04,5.17,9.98
+2026-06-12 13:31:28,2026-06-12,SELL,EXC,Pullback50,45.67,7.34,-0.68,-0.05,1,stop_loss (-0.7%),bull,487.93,limit_fill_position_check,45.69,45.63,45.63,5.13,4.82
+2026-06-12 13:31:35,2026-06-12,SELL,IDA,Pullback50,142.25,7.32,-0.93,-0.07,1,stop_loss (-0.9%),bull,487.87,market_fallback,142.24,132.61,141.96,7.25,
+2026-06-12 13:31:40,2026-06-12,SELL,KDP,VolumeSpike,31.34,4.9,-0.53,-0.03,1,stop_loss (-0.5%),bull,487.9,limit_fill_position_check,31.35,31.32,31.32,5.15,3.83
+2026-06-12 13:31:47,2026-06-12,SELL,NJR,Pullback50,54.55,7.23,-2.18,-0.16,1,stop_loss (-2.2%),bull,487.84,market_fallback,54.55,46.05,54.44,7.26,
+2026-06-12 13:31:55,2026-06-12,SELL,NWE,Pullback50,69.56,7.21,-2.45,-0.18,1,stop_loss (-2.4%),bull,487.88,market_fallback,69.56,59.07,69.42,7.24,
+2026-06-12 13:32:00,2026-06-12,SELL,O,Pullback50,62.34,7.36,-0.51,-0.04,1,stop_loss (-0.5%),bull,487.81,limit_fill_position_check,62.355,62.32,62.32,5.13,2.41
+2026-06-12 13:32:07,2026-06-12,SELL,OGE,Pullback50,47.45,7.3,-1.28,-0.09,1,stop_loss (-1.3%),bull,487.8,market_fallback,47.45,47.26,47.36,7.26,
+2026-06-12 13:32:15,2026-06-12,SELL,OHI,Pullback50,45.49,7.27,-1.64,-0.12,1,stop_loss (-1.6%),bull,487.84,market_fallback,45.5,45.35,45.41,7.27,
+2026-06-12 13:32:20,2026-06-12,SELL,SO,Pullback50,93.64,7.31,-1.06,-0.08,1,stop_loss (-1.1%),bull,487.84,limit_fill_position_check,93.72,93.38,93.53,5.14,8.96
+2026-06-12 13:32:27,2026-06-12,SELL,SWX,Pullback50,88.05,7.26,-1.82,-0.13,1,stop_loss (-1.8%),bull,487.76,market_fallback,88.025,74.59,87.85,7.24,
