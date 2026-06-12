@@ -1,41 +1,41 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-06-12 14:14 UTC*
+*Updated: 2026-06-12 19:53 UTC*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $486.30 |
+| **Current Equity** | $486.43 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | -2.74% ($-13.70) |
+| **Total Return** | -2.71% ($-13.57) |
 | **Peak Equity** | $513.45 |
 | **Max Drawdown** | -6.33% |
-| **Current Cash** | $300.89 |
-| **Open Positions** | 52 (ADC|AEE|AM|BG|BKH|CHH|CNP|CRUS|CVX|CYTK|DE|DUK|ED|EOG|ETN|EXC|FCFS|FE|FTV|GEV|GLPI|GOOG|GTLS|HAL|HL|IDA|KEX|KEYS|KLAC|KMI|LECO|LITE|MUR|NI|NSC|NVDA|NWE|O|OGE|OVV|PFE|POR|PWR|SO|SRE|SWX|VRSN|VTR|VZ|WEC|XEL|XYZ) |
-| **Last Bot Run** | 2026-06-12 14:14:51 |
+| **Current Cash** | $77.22 |
+| **Open Positions** | 64 (ADBE|ADC|AEE|AM|BG|BKH|CHH|CNP|COKE|CRUS|CVX|CYTK|DE|DTM|DUK|ED|EOG|ETN|EXC|FE|FTV|GEV|GLPI|GOOG|GTLS|HAL|HL|IDA|IPGP|KEX|KLAC|KMI|L|LECO|LEN|LITE|MRNA|MUR|NI|NVDA|NWE|NXT|O|OGE|OVV|PBF|PCAR|PCG|PFE|PNFP|POR|PWR|RGA|SO|SRE|STZ|SWX|VRSN|VTR|VZ|WBD|WEC|XEL|XYZ) |
+| **Last Bot Run** | 2026-06-12 19:53:00 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 278 |
-| **Wins / Losses** | 100 / 178 |
-| **Win Rate** | 36.0% |
-| **Avg Win** | +2.05% |
+| **Total Closed Trades** | 281 |
+| **Wins / Losses** | 103 / 178 |
+| **Win Rate** | 36.7% |
+| **Avg Win** | +2.07% |
 | **Avg Loss** | -1.62% |
-| **Profit Factor** | 0.71x |
+| **Profit Factor** | 0.72x |
 | **Avg Hold Days** | 1.5d |
-| **Total Realised P&L** | $-15.59 |
+| **Total Realised P&L** | $-15.05 |
 
 ## Exit Reasons
 | Exit Type | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
 | `stop_loss` | 154 | 0% | -1.83% |
-| `midline` | 92 | 80% | +1.78% |
+| `midline` | 95 | 81% | +1.82% |
 | `max_hold` | 32 | 81% | +1.11% |
 
 ## Strategy Breakdown
 | Strategy | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `Pullback50` | 208 | 36% | -0.18% |
+| `Pullback50` | 211 | 36% | -0.13% |
 | `GapDown` | 58 | 36% | -0.77% |
 | `RSIRecovery` | 6 | 33% | -0.78% |
 | `VolumeSpike` | 3 | 33% | -1.24% |
@@ -59,11 +59,14 @@
 | 2026-06-09 | $492.58 | -3.03 |
 | 2026-06-10 | $481.45 | -11.13 |
 | 2026-06-11 | $486.07 | +4.62 |
-| 2026-06-12 | $486.30 | +0.23 |
+| 2026-06-12 | $486.43 | +0.36 |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
 |---|---|---|---|---|---|---|
+| 2026-06-12 | **NSC** | `Pullback50` | +1.20% | $+0.09 | 1d | midline (+1.2%) |
+| 2026-06-12 | **KEYS** | `Pullback50` | +3.98% | $+0.20 | 1d | midline (+4.0%) |
+| 2026-06-12 | **FCFS** | `Pullback50` | +3.42% | $+0.25 | 1d | midline (+3.4%) |
 | 2026-06-12 | **WY** | `Pullback50` | +2.18% | $+0.11 | 1d | midline (+2.2%) |
 | 2026-06-12 | **WAB** | `Pullback50` | +0.11% | $+0.01 | 1d | midline (+0.1%) |
 | 2026-06-12 | **TTC** | `Pullback50` | -0.30% | $-0.02 | 1d | midline (-0.3%) |
@@ -81,9 +84,6 @@
 | 2026-06-12 | **RNR** | `Pullback50` | +0.46% | $+0.02 | 1d | midline (+0.5%) |
 | 2026-06-12 | **RBC** | `Pullback50` | +2.95% | $+0.22 | 1d | midline (+3.0%) |
 | 2026-06-12 | **PH** | `Pullback50` | +0.17% | $+0.01 | 1d | midline (+0.2%) |
-| 2026-06-12 | **PFE** | `Pullback50` | +0.33% | $+0.02 | 1d | midline (+0.3%) |
-| 2026-06-12 | **PCG** | `Pullback50` | +0.49% | $+0.02 | 1d | midline (+0.5%) |
-| 2026-06-12 | **PCAR** | `Pullback50` | -0.13% | $-0.01 | 1d | midline (-0.1%) |
 
 ---
 *Auto-generated after every EOD scan. View on GitHub: `logs/dashboard.md`*
