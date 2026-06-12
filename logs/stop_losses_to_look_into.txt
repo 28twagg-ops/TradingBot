@@ -1671,3 +1671,15 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-12 20:45:25
+ID: COKE|2026-06-12
+Mode: ext_exits
+Ticker: COKE
+Strategy: Pullback50
+Entry date: 2026-06-12
+P&L at breach: -0.78%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
