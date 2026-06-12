@@ -1623,3 +1623,15 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-12 18:00:36
+ID: FTV|2026-06-12
+Mode: exits
+Ticker: FTV
+Strategy: Pullback50
+Entry date: 2026-06-12
+P&L at breach: -0.60%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
