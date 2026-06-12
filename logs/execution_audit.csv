@@ -139,3 +139,87 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-12 13:32:15,2026-06-12,SELL,OHI,Pullback50,45.5,45.41,45.4875,7.27,-0.0275,-0.002,market_fallback,stop_loss (-1.6%),bull
 2026-06-12 13:32:20,2026-06-12,SELL,SO,Pullback50,93.72,93.53,93.636,7.31,-0.0896,-0.0066,limit_fill_position_check,stop_loss (-1.1%),bull
 2026-06-12 13:32:27,2026-06-12,SELL,SWX,Pullback50,88.025,87.85,88.05,7.26,0.0284,0.0021,market_fallback,stop_loss (-1.8%),bull
+2026-06-12 13:45:44,2026-06-12,SELL,AA,Pullback50,68.3,68.25,68.26,4.88,-0.0586,-0.0029,limit_fill_position_check,stop_loss (-0.6%),bull
+2026-06-12 13:46:18,2026-06-12,SELL,ALGN,Pullback50,175.005,174.65,175.005,7.53,0.0,0.0,market_fallback,midline (+1.9%),bull
+2026-06-12 13:46:23,2026-06-12,SELL,BA,Pullback50,218.96,218.52,218.864,4.86,-0.0438,-0.0021,limit_fill_position_check,stop_loss (-1.2%),bull
+2026-06-12 13:46:56,2026-06-12,SELL,BC,Pullback50,83.05,82.88,83.05,7.72,0.0,0.0,market_fallback,midline (+4.4%),bull
+2026-06-12 13:47:27,2026-06-12,SELL,BMY,Pullback50,56.915,56.9,56.906,4.9,-0.0158,-0.0008,limit_fill_position_check,midline (-0.1%),bull
+2026-06-12 13:47:33,2026-06-12,SELL,CNP,Pullback50,42.75,42.72,42.726,7.35,-0.0561,-0.0041,limit_fill_position_check,stop_loss (-0.5%),bull
+2026-06-12 13:48:04,2026-06-12,SELL,DE,Pullback50,569.31,568.17,568.658,4.91,-0.1145,-0.0056,limit_fill_position_check,midline (-0.3%),bull
+2026-06-12 13:48:34,2026-06-12,SELL,DOV,Pullback50,218.8425,218.4,218.564,7.45,-0.1273,-0.0095,limit_fill_position_check,midline (+1.5%),bull
+2026-06-12 13:49:05,2026-06-12,SELL,EA,Pullback50,202.95,202.92,202.932,4.92,-0.0089,-0.0004,limit_fill_position_check,midline (-0.0%),bull
+2026-06-12 13:49:36,2026-06-12,SELL,EMR,Pullback50,141.555,141.36,141.438,7.52,-0.0827,-0.0062,limit_fill_position_check,midline (+2.3%),bull
+2026-06-12 13:50:09,2026-06-12,SELL,ESAB,RSIRecovery,89.64,89.46,89.8,4.98,0.1785,0.0089,market_fallback,midline (+1.3%),bull
+2026-06-12 13:50:40,2026-06-12,SELL,FCX,Pullback50,67.27,67.26,67.268,7.78,-0.003,-0.0002,limit_fill_position_check,midline (+4.9%),bull
+2026-06-12 13:51:11,2026-06-12,SELL,FLR,Pullback50,50.25,50.15,50.196,7.7,-0.1075,-0.0083,limit_fill_position_check,midline (+4.4%),bull
+2026-06-12 13:51:19,2026-06-12,SELL,FOUR,RSIRecovery,39.52,39.44,38.82,9.71,-1.7713,-0.172,market_fallback,stop_loss (-1.3%),bull
+2026-06-12 13:51:50,2026-06-12,SELL,GBCI,Pullback50,49.115,49.02,49.034,7.53,-0.1649,-0.0124,limit_fill_position_check,midline (+1.9%),bull
+2026-06-12 13:52:23,2026-06-12,SELL,GEF,Pullback50,67.455,67.32,67.685,7.63,0.341,0.026,market_fallback,midline (+3.3%),bull
+2026-06-12 13:52:28,2026-06-12,SELL,GLW,Pullback50,176.665,176.31,176.542,4.92,-0.0696,-0.0034,limit_fill_position_check,stop_loss (-1.0%),bull
+2026-06-12 13:52:59,2026-06-12,SELL,JHG,Pullback50,51.8,51.8,51.802,7.39,0.0039,0.0003,limit_fill_position_check,midline (-0.0%),bull
+2026-06-12 13:53:05,2026-06-12,SELL,LMT,Pullback50,542.565,541.48,542.304,4.85,-0.0481,-0.0023,limit_fill_position_check,stop_loss (-1.3%),bull
+2026-06-12 13:53:36,2026-06-12,SELL,MRNA,Pullback50,50.24,50.14,50.25,4.98,0.0199,0.001,limit_fill_position_check,midline (+1.2%),bull
+2026-06-12 13:54:06,2026-06-12,SELL,NDSN,Pullback50,286.0,285.43,285.696,7.47,-0.1063,-0.0079,limit_fill_position_check,midline (+1.3%),bull
+2026-06-12 13:54:37,2026-06-12,SELL,NI,Pullback50,47.28,47.27,47.278,7.42,-0.0042,-0.0003,limit_fill_position_check,midline (-0.1%),bull
+2026-06-12 13:54:43,2026-06-12,SELL,ORCL,GapDown,179.2796,178.92,179.214,4.82,-0.0366,-0.0018,limit_fill_position_check,stop_loss (-1.0%),bull
+2026-06-12 13:55:14,2026-06-12,SELL,PCAR,Pullback50,117.25,117.02,117.208,4.9,-0.0358,-0.0018,limit_fill_position_check,midline (-0.1%),bull
+2026-06-12 13:55:45,2026-06-12,SELL,PCG,Pullback50,16.98,16.98,16.982,4.96,0.0118,0.0006,limit_fill_position_check,midline (+0.5%),bull
+2026-06-12 13:56:15,2026-06-12,SELL,PFE,Pullback50,26.345,26.34,26.342,4.94,-0.0114,-0.0006,limit_fill_position_check,midline (+0.3%),bull
+2026-06-12 13:56:46,2026-06-12,SELL,PH,Pullback50,901.8425,900.04,901.548,4.92,-0.0327,-0.0016,limit_fill_position_check,midline (+0.2%),bull
+2026-06-12 13:57:19,2026-06-12,SELL,RBC,Pullback50,607.58,606.36,607.21,7.61,-0.0609,-0.0046,market_fallback,midline (+3.0%),bull
+2026-06-12 13:57:50,2026-06-12,SELL,RNR,Pullback50,299.22,298.62,299.168,4.94,-0.0174,-0.0009,limit_fill_position_check,midline (+0.5%),bull
+2026-06-12 13:58:21,2026-06-12,SELL,ROIV,Pullback50,30.31,30.28,30.292,7.7,-0.0594,-0.0046,limit_fill_position_check,midline (+3.6%),bull
+2026-06-12 13:58:52,2026-06-12,SELL,RRX,Pullback50,212.9,212.47,212.744,7.68,-0.0733,-0.0056,limit_fill_position_check,midline (+3.4%),bull
+2026-06-12 13:58:58,2026-06-12,SELL,RTX,Pullback50,182.4,182.21,182.334,4.88,-0.0362,-0.0018,limit_fill_position_check,stop_loss (-0.6%),bull
+2026-06-12 13:59:03,2026-06-12,SELL,SATS,RSIRecovery,118.365,118.13,118.296,9.15,-0.0583,-0.0053,limit_fill_position_check,stop_loss (-7.0%),bull
+2026-06-12 13:59:34,2026-06-12,SELL,SBUX,Pullback50,103.3,103.26,103.276,7.56,-0.0232,-0.0018,limit_fill_position_check,midline (+2.5%),bull
+2026-06-12 14:00:07,2026-06-12,SELL,SMG,Pullback50,62.11,61.99,62.5,7.56,0.6279,0.0475,market_fallback,midline (+2.3%),bull
+2026-06-12 14:00:38,2026-06-12,SELL,SON,Pullback50,50.165,50.06,50.072,4.86,-0.1854,-0.009,limit_fill_position_check,midline (-0.2%),bull
+2026-06-12 14:01:09,2026-06-12,SELL,STAG,Pullback50,38.53,38.51,38.522,7.42,-0.0208,-0.0015,limit_fill_position_check,midline (+0.1%),bull
+2026-06-12 14:01:15,2026-06-12,SELL,TDY,Pullback50,621.28,620.04,620.812,4.91,-0.0753,-0.0037,limit_fill_position_check,stop_loss (-0.6%),bull
+2026-06-12 14:01:46,2026-06-12,SELL,TEX,Pullback50,64.01,63.88,64.038,7.77,0.0437,0.0034,limit_fill_position_check,midline (+4.3%),bull
+2026-06-12 14:02:19,2026-06-12,SELL,TT,Pullback50,460.92,460.0,459.47,4.9,-0.3146,-0.0154,market_fallback,midline (-0.3%),bull
+2026-06-12 14:02:52,2026-06-12,SELL,TTC,Pullback50,92.61,92.42,92.24,7.37,-0.3995,-0.0294,market_fallback,midline (-0.3%),bull
+2026-06-12 14:03:25,2026-06-12,SELL,WAB,Pullback50,263.8399,263.31,263.01,4.93,-0.3145,-0.0155,market_fallback,midline (+0.1%),bull
+2026-06-12 14:03:56,2026-06-12,SELL,WY,Pullback50,25.075,25.07,25.072,5.06,-0.012,-0.0006,limit_fill_position_check,midline (+2.2%),bull
+2026-06-12 14:07:38,2026-06-12,BUY,KLAC,GapDown,246.22,246.22,246.22,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:07:48,2026-06-12,BUY,AEE,Pullback50,109.3,109.3,109.3,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:07:59,2026-06-12,BUY,BG,Pullback50,125.78,125.78,125.78,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:08:10,2026-06-12,BUY,CNP,Pullback50,42.94,42.94,42.94,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:08:21,2026-06-12,BUY,CVX,Pullback50,187.58,187.58,187.58,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:08:31,2026-06-12,BUY,ED,Pullback50,108.11,108.11,108.11,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:08:42,2026-06-12,BUY,DE,Pullback50,573.77,573.77,573.77,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:08:53,2026-06-12,BUY,DUK,Pullback50,125.27,125.27,125.27,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:09:03,2026-06-12,BUY,ETN,Pullback50,397.96,397.96,397.96,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:09:14,2026-06-12,BUY,EOG,Pullback50,137.91,137.91,137.91,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:09:25,2026-06-12,BUY,EXC,Pullback50,46.08,46.08,46.08,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:09:35,2026-06-12,BUY,FE,Pullback50,47.31,47.31,47.31,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:09:46,2026-06-12,BUY,FTV,Pullback50,60.31,60.31,60.31,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:09:57,2026-06-12,BUY,HAL,Pullback50,39.94,39.94,39.94,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:10:07,2026-06-12,BUY,KMI,Pullback50,31.96,31.96,31.96,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:10:18,2026-06-12,BUY,LITE,Pullback50,904.1,904.1,904.1,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:10:29,2026-06-12,BUY,NI,Pullback50,47.26,47.26,47.26,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:10:40,2026-06-12,BUY,PFE,Pullback50,26.41,26.41,26.41,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:10:51,2026-06-12,BUY,O,Pullback50,62.64,62.64,62.64,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:11:01,2026-06-12,BUY,SRE,Pullback50,92.59,92.59,92.59,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:11:12,2026-06-12,BUY,SO,Pullback50,94.36,94.36,94.36,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:11:22,2026-06-12,BUY,VTR,Pullback50,84.75,84.75,84.75,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:11:33,2026-06-12,BUY,VRSN,Pullback50,280.64,280.64,280.64,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:11:44,2026-06-12,BUY,VZ,Pullback50,47.6,47.6,47.6,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:11:54,2026-06-12,BUY,WEC,Pullback50,114.28,114.28,114.28,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:12:05,2026-06-12,BUY,XEL,Pullback50,79.12,79.12,79.12,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:12:16,2026-06-12,BUY,ADC,Pullback50,75.69,75.69,75.69,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:12:27,2026-06-12,BUY,AM,Pullback50,21.8,21.8,21.8,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:12:37,2026-06-12,BUY,BKH,Pullback50,73.11,73.11,73.11,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:12:48,2026-06-12,BUY,CHH,Pullback50,110.68,110.68,110.68,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:12:59,2026-06-12,BUY,CRUS,Pullback50,165.51,165.51,165.51,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:13:09,2026-06-12,BUY,GLPI,Pullback50,47.55,47.55,47.55,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:13:20,2026-06-12,BUY,GTLS,Pullback50,206.67,206.67,206.67,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:13:31,2026-06-12,BUY,IDA,Pullback50,143.97,143.97,143.97,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:13:41,2026-06-12,BUY,KEX,Pullback50,143.22,143.22,143.22,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:13:52,2026-06-12,BUY,MUR,Pullback50,39.33,39.33,39.33,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:14:02,2026-06-12,BUY,NWE,Pullback50,70.74,70.74,70.74,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:14:13,2026-06-12,BUY,OGE,Pullback50,47.88,47.88,47.88,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:14:24,2026-06-12,BUY,OVV,Pullback50,57.68,57.68,57.68,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:14:34,2026-06-12,BUY,POR,Pullback50,50.69,50.69,50.69,3.01,0.0,0.0,market_submit,,bull
+2026-06-12 14:14:45,2026-06-12,BUY,SWX,Pullback50,88.93,88.93,88.93,3.01,0.0,0.0,market_submit,,bull
