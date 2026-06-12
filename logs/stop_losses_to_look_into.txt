@@ -1491,3 +1491,27 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-12 14:30:36
+ID: CHH|2026-06-12
+Mode: exits
+Ticker: CHH
+Strategy: Pullback50
+Entry date: 2026-06-12
+P&L at breach: -0.97%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-12 14:30:36
+ID: ETN|2026-06-12
+Mode: exits
+Ticker: ETN
+Strategy: Pullback50
+Entry date: 2026-06-12
+P&L at breach: -0.95%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
