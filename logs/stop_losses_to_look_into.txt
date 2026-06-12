@@ -1467,3 +1467,27 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-12 14:16:09
+ID: CRUS|2026-06-12
+Mode: exits
+Ticker: CRUS
+Strategy: Pullback50
+Entry date: 2026-06-12
+P&L at breach: -0.59%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-12 14:16:09
+ID: HAL|2026-06-12
+Mode: exits
+Ticker: HAL
+Strategy: Pullback50
+Entry date: 2026-06-12
+P&L at breach: -0.74%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
