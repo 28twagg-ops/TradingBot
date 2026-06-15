@@ -1767,3 +1767,51 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-15 14:15:36
+ID: AME|2026-06-15
+Mode: exits
+Ticker: AME
+Strategy: Pullback50
+Entry date: 2026-06-15
+P&L at breach: -0.84%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-15 14:15:36
+ID: KNF|2026-06-15
+Mode: exits
+Ticker: KNF
+Strategy: Pullback50
+Entry date: 2026-06-15
+P&L at breach: -0.74%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-15 14:15:36
+ID: MTDR|2026-06-15
+Mode: exits
+Ticker: MTDR
+Strategy: GapDown
+Entry date: 2026-06-15
+P&L at breach: -0.68%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-15 14:15:36
+ID: NVST|2026-06-15
+Mode: exits
+Ticker: NVST
+Strategy: Pullback50
+Entry date: 2026-06-15
+P&L at breach: -0.80%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
