@@ -1911,3 +1911,15 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-15 18:15:41
+ID: EG|2026-06-15
+Mode: exits
+Ticker: EG
+Strategy: Pullback50
+Entry date: 2026-06-15
+P&L at breach: -0.51%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
