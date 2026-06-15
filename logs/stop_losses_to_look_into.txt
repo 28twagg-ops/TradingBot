@@ -1923,3 +1923,27 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-15 19:30:44
+ID: DVN|2026-06-15
+Mode: exits
+Ticker: DVN
+Strategy: GapDown
+Entry date: 2026-06-15
+P&L at breach: -0.66%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-15 19:30:44
+ID: OKE|2026-06-15
+Mode: exits
+Ticker: OKE
+Strategy: Pullback50
+Entry date: 2026-06-15
+P&L at breach: -0.63%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
