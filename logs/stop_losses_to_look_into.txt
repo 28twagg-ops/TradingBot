@@ -1695,3 +1695,75 @@ Stop threshold: -0.50%
 Root cause: Sell attempt failed
 Explanation: Stop breached and an exit was attempted, but the broker/order flow returned a failure state.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-15 14:01:59
+ID: AGCO|2026-06-15
+Mode: exits
+Ticker: AGCO
+Strategy: Pullback50
+Entry date: 2026-06-15
+P&L at breach: -1.17%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-15 14:01:59
+ID: APA|2026-06-15
+Mode: exits
+Ticker: APA
+Strategy: GapDown
+Entry date: 2026-06-15
+P&L at breach: -0.77%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-15 14:01:59
+ID: DINO|2026-06-15
+Mode: exits
+Ticker: DINO
+Strategy: GapDown
+Entry date: 2026-06-15
+P&L at breach: -0.94%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-15 14:01:59
+ID: TRGP|2026-06-15
+Mode: exits
+Ticker: TRGP
+Strategy: GapDown
+Entry date: 2026-06-15
+P&L at breach: -0.79%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-15 14:01:59
+ID: TT|2026-06-15
+Mode: exits
+Ticker: TT
+Strategy: Pullback50
+Entry date: 2026-06-15
+P&L at breach: -0.53%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-15 14:01:59
+ID: VAL|2026-06-15
+Mode: exits
+Ticker: VAL
+Strategy: GapDown
+Entry date: 2026-06-15
+P&L at breach: -1.11%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
