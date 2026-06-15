@@ -1683,3 +1683,15 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-15 13:46:28
+ID: VRSN|2026-06-12
+Mode: exits
+Ticker: VRSN
+Strategy: Pullback50
+Entry date: 2026-06-12
+P&L at breach: +0.05%
+Stop threshold: -0.50%
+Root cause: Sell attempt failed
+Explanation: Stop breached and an exit was attempted, but the broker/order flow returned a failure state.
+
