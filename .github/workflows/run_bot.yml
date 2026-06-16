@@ -1,28 +1,38 @@
 name: Rubber Band Bot
 
-# Triggered by cron-job.org webhook (Chicago time: 0,15,30,45 8-18 * * 1-5)
-# The bot uses US Eastern Time internally (zoneinfo) to decide what mode to run.
-# Modes: exits (market hours) | scan (3:44-3:59pm ET) | ext_exits (4pm-8pm ET)
-#        weekly (weekend) | summary (outside all windows)
+# cron-job.org webhook (Chicago): see logs/failed_run_diagnosis.md for schedule.
+# Modes auto-detected via BOT_MODE=auto or explicit workflow_dispatch input.
 
 on:
-  workflow_dispatch:  # cron-job.org hits this URL, also allows manual "Run workflow"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Bot mode (auto = ET time detection)"
+        required: false
+        default: auto
+        type: choice
+        options:
+          - auto
+          - morning_prep
+          - morning_scan
+          - exits
+          - evening_prep
+          - scan
+          - ext_exits
+          - summary
+          - weekly
 
-# Only one run at a time. The scan takes 20-30min (900 stock download).
-# Without this, the next 15-min cron fires while scan is still running,
-# both try to git push, the second push rejects the first → logs lost.
-# cancel-in-progress: false means the scan finishes; the new run queues
-# and starts immediately after, so no cron firing is skipped entirely.
 concurrency:
   group: rubber-band-bot
   cancel-in-progress: false
 
 permissions:
-  contents: write   # needed to commit logs back to repo
+  contents: write
 
 jobs:
   run-bot:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
 
     steps:
       - name: Checkout repo
@@ -42,13 +52,37 @@ jobs:
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          BOT_MODE: ${{ github.event.inputs.mode || 'auto' }}
         run: python rubber_band_bot.py
 
       - name: Commit logs back to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          # Stash this run's logs, reset logs/ to remote, merge append-only files
+          mkdir -p /tmp/botlogs_run
+          cp -r logs/. /tmp/botlogs_run/ 2>/dev/null || true
+          git checkout origin/main -- logs/ 2>/dev/null || mkdir -p logs
+          python scripts/merge_bot_logs.py /tmp/botlogs_run logs
           git add logs/
-          git diff --staged --quiet || git commit -m "bot run $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git pull --rebase origin main
-          git push
+          if git diff --staged --quiet; then
+            echo "No log changes to commit"
+            exit 0
+          fi
+          git commit -m "bot run $(date -u '+%Y-%m-%d %H:%M UTC')"
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then
+              echo "Push succeeded on attempt $attempt"
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; merging remote and retrying..."
+            git fetch origin main
+            git checkout origin/main -- logs/
+            python scripts/merge_bot_logs.py /tmp/botlogs_run logs
+            git add logs/
+            git commit --amend --no-edit || git commit -m "bot run $(date -u '+%Y-%m-%d %H:%M UTC')"
+            sleep 3
+          done
+          echo "ERROR: failed to push logs after 5 attempts"
+          exit 1

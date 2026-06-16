@@ -66,6 +66,7 @@ GITHUB SECRETS required:
 """
 
 import os, json, time, logging, csv, math
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, date
 from pathlib import Path
 
@@ -172,13 +173,27 @@ MIN_HISTORY_DAYS = 220
 LOG_DIR    = Path("logs")
 DAILY_DIR  = LOG_DIR / "daily"
 WEEKLY_DIR = LOG_DIR / "weekly"
+PLAN_DIR   = LOG_DIR / "plans"
+CACHE_DIR  = LOG_DIR / "cache"
 TX_FILE    = LOG_DIR / "transactions.csv"
 EXEC_AUDIT_FILE = LOG_DIR / "execution_audit.csv"
 RUNS_FILE  = LOG_DIR / "runs.csv"
 PDT_FILE   = LOG_DIR / "pdt.json"
 STOP_LOSS_LOOK_FILE = LOG_DIR / "stop_losses_to_look_into.txt"
+FRACTIONAL_WATCH_FILE = LOG_DIR / "fractional_watch.json"
+MORNING_PLAN_FILE = PLAN_DIR / "morning_plan.json"
+EVENING_PLAN_FILE = PLAN_DIR / "evening_plan.json"
+PLAN_MAX_AGE_MIN = 120
+USE_TWO_PHASE_PLAN = True
+# Live accounts: defer same-day exits (PDT). Paper: allow stop exits same session.
+STRICT_SAME_DAY_EXIT = PAPER_TRADING is False
+FETCH_WORKERS = 16
+FETCH_CHUNK_PAUSE_S = 0.25
 
-for d in [LOG_DIR, DAILY_DIR, WEEKLY_DIR]:
+_run_started_at = None
+_last_cache_hit = False
+
+for d in [LOG_DIR, DAILY_DIR, WEEKLY_DIR, PLAN_DIR, CACHE_DIR]:
     d.mkdir(parents=True, exist_ok=True)
 
 W = 72   # display box inner width
@@ -336,7 +351,22 @@ def _append_stoploss_look_items(items, mode):
 #  UNIVERSE
 # =============================================================================
 
+def _ticker_cache_path():
+    return CACHE_DIR / f"tickers_{date.today().isoformat()}.json"
+
+
 def get_live_tickers():
+    cache_path = _ticker_cache_path()
+    if cache_path.exists():
+        try:
+            cached = json.loads(cache_path.read_text(encoding="utf-8"))
+            tickers = cached.get("tickers", [])
+            if tickers:
+                log.info(f"  Universe cache hit: {len(tickers)} tickers ({cache_path.name})")
+                return tickers
+        except Exception as e:
+            log.warning(f"  Ticker cache read failed: {e}")
+
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     log.info(f"Fetching tickers (universe={UNIVERSE})...")
     sp500, mid400 = [], []
@@ -362,6 +392,13 @@ def get_live_tickers():
     combined = list(dict.fromkeys(sp500 + mid400))
     cleaned  = [t.replace(".", "-") for t in combined]
     log.info(f"  Total: {len(cleaned)} tickers")
+    try:
+        cache_path.write_text(
+            json.dumps({"date": str(date.today()), "tickers": cleaned}, indent=2),
+            encoding="utf-8",
+        )
+    except Exception as e:
+        log.warning(f"  Ticker cache write failed: {e}")
     return cleaned
 
 
@@ -434,13 +471,32 @@ def add_ind(df):
     return df
 
 def fetch_batch(tickers, label=""):
+    if not tickers:
+        return {}
     data = {}
-    for i in range(0, len(tickers), 40):
-        for t in tickers[i:i+40]:
-            df = fetch_stock(t)
-            if df is not None: data[t] = add_ind(df)
-        log.info(f"  [{label}] {min(i+40,len(tickers))}/{len(tickers)} ({len(data)} valid)")
-        time.sleep(1.0)
+    chunk_size = 40
+    workers = min(FETCH_WORKERS, max(1, len(tickers)))
+
+    def _fetch_one(t):
+        df = fetch_stock(t)
+        if df is not None:
+            return t, add_ind(df)
+        return t, None
+
+    for i in range(0, len(tickers), chunk_size):
+        chunk = tickers[i:i + chunk_size]
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            futures = {pool.submit(_fetch_one, t): t for t in chunk}
+            for fut in as_completed(futures):
+                try:
+                    t, df = fut.result()
+                    if df is not None:
+                        data[t] = df
+                except Exception as e:
+                    log.debug(f"  fetch_batch {futures[fut]}: {e}")
+        log.info(f"  [{label}] {min(i + chunk_size, len(tickers))}/{len(tickers)} ({len(data)} valid)")
+        if i + chunk_size < len(tickers):
+            time.sleep(FETCH_CHUNK_PAUSE_S)
     return data
 
 
@@ -802,7 +858,7 @@ def _recent_filled_order(client, ticker, side, limit=20):
     return {"price": None, "qty": None, "dollars": None}
 
 
-def do_buy(client, ticker, dollars, strategy, expected_price=None):
+def do_buy(client, ticker, dollars, strategy, expected_price=None, fast_submit=False):
     try:
         cid = f"{strategy}|{ticker}|{date.today()}"[:48]
         o = client.submit_order(MarketOrderRequest(
@@ -810,32 +866,49 @@ def do_buy(client, ticker, dollars, strategy, expected_price=None):
             side=OrderSide.BUY, time_in_force=TimeInForce.DAY,
             client_order_id=cid))
         log.info(f"  BUY  {ticker}  ${dollars:.2f}  [{strategy}]  id={o.id}")
+        order_id = str(o.id)
+
+        if fast_submit:
+            return {
+                "ok": True,
+                "filled": False,
+                "order_id": order_id,
+                "expected_price": expected_price,
+                "order_price": expected_price,
+                "execution_method": "market_submit_pending",
+                "price": None,
+                "qty": None,
+                "dollars": None,
+            }
 
         # Best-effort fill capture for accurate transaction logs.
-        for _ in range(5):
+        for _ in range(3):
             time.sleep(2)
             try:
-                oo = client.get_order_by_id(str(o.id))
+                oo = client.get_order_by_id(order_id)
                 if oo.status in (OrderStatus.filled, OrderStatus.partially_filled):
                     fill = _order_fill_summary(oo)
                     return {
                         "ok": True,
                         "filled": True,
+                        "order_id": order_id,
                         "expected_price": expected_price,
                         "order_price": expected_price,
-                        "execution_method": "market_fill",
+                        "execution_method": "market_fill_confirmed",
                         **fill,
                     }
             except Exception:
                 pass
 
         fill = _recent_filled_order(client, ticker, OrderSide.BUY, limit=10)
+        fill_confirmed = (fill["price"] is not None and fill["qty"] is not None and fill["qty"] > 0)
         return {
             "ok": True,
-            "filled": fill["price"] is not None,
+            "filled": fill_confirmed,
+            "order_id": order_id,
             "expected_price": expected_price,
             "order_price": expected_price,
-            "execution_method": "market_submit",
+            "execution_method": "market_fill_delayed" if fill_confirmed else "market_submit_unconfirmed",
             **fill,
         }
     except Exception as e:
@@ -843,6 +916,7 @@ def do_buy(client, ticker, dollars, strategy, expected_price=None):
         return {
             "ok": False,
             "filled": False,
+            "order_id": None,
             "price": None,
             "qty": None,
             "dollars": None,
@@ -850,6 +924,52 @@ def do_buy(client, ticker, dollars, strategy, expected_price=None):
             "order_price": expected_price,
             "execution_method": "buy_failed",
         }
+
+
+def poll_pending_buys(client, pending_buys, rgm):
+    """Poll submitted buys; log confirmed fills. Returns count of newly confirmed fills."""
+    if not pending_buys:
+        return 0
+    confirmed = 0
+    hdr("BUY FILL CONFIRMATION")
+    row("Pending submits", str(len(pending_buys)))
+    div()
+    for item in pending_buys:
+        ticker = item["ticker"]
+        strategy = item["strategy"]
+        da = item["dollars"]
+        sig_close = item.get("expected_price")
+        order_id = item.get("order_id")
+        fill = {"price": None, "qty": None, "dollars": None}
+        filled = False
+        if order_id:
+            for _ in range(4):
+                try:
+                    oo = client.get_order_by_id(order_id)
+                    if oo.status in (OrderStatus.filled, OrderStatus.partially_filled):
+                        fill = _order_fill_summary(oo)
+                        filled = True
+                        break
+                except Exception:
+                    pass
+                time.sleep(2)
+        if not filled:
+            fill = _recent_filled_order(client, ticker, OrderSide.BUY, limit=10)
+            filled = fill["price"] is not None and fill.get("qty") and fill["qty"] > 0
+        if filled:
+            confirmed += 1
+            buy_price = fill.get("price") if fill.get("price") is not None else sig_close
+            buy_dollars = fill.get("dollars") if fill.get("dollars") is not None else da
+            log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
+                   float(client.get_account().equity),
+                   expected_price=sig_close,
+                   order_price=sig_close,
+                   execution_method="market_fill_batched")
+            row(ticker, f"confirmed @ ${float(buy_price):.2f}")
+        else:
+            row(ticker, "still unconfirmed")
+    ftr()
+    return confirmed
 
 def cancel_stop_orders(client, ticker):
     """Cancel ALL open sell orders for a ticker (stop, stop-limit, and stuck
@@ -890,6 +1010,7 @@ def ensure_stop(client, ticker, entry_price, qty):
     stop_qty = math.floor(qty)
     if stop_qty < 1:
         log.info(f"  STOP skipped {ticker}: fractional ({qty:.4f} shares) — software exit will handle it")
+        _register_fractional_watch(ticker, qty, entry_price)
         return False
     try:
         # Check if a stop-sell already exists for this ticker
@@ -937,6 +1058,39 @@ def place_all_stops(client):
                         float(p.avg_entry_price), float(p.qty))
     except Exception as e:
         log.warning(f"  place_all_stops failed: {e}")
+
+
+def _load_fractional_watch():
+    if not FRACTIONAL_WATCH_FILE.exists():
+        return {}
+    try:
+        return json.loads(FRACTIONAL_WATCH_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _save_fractional_watch(data):
+    try:
+        FRACTIONAL_WATCH_FILE.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    except Exception as e:
+        log.warning(f"  fractional_watch save failed: {e}")
+
+
+def _register_fractional_watch(ticker, qty, entry_price):
+    data = _load_fractional_watch()
+    data[ticker] = {
+        "qty": float(qty),
+        "entry_price": float(entry_price),
+        "registered": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+    }
+    _save_fractional_watch(data)
+
+
+def _clear_fractional_watch(ticker):
+    data = _load_fractional_watch()
+    if ticker in data:
+        del data[ticker]
+        _save_fractional_watch(data)
 
 
 def place_eod_stops(client):
@@ -1038,7 +1192,15 @@ def do_sell(client, ticker, extended_hours=False, urgency="normal"):
     cancel_stop_orders(client, ticker)
     t0 = time.time()
 
-    def _mk(ok, filled, fill=None, method="", pending=False):
+    def _position_state():
+        """Return (is_open, remaining_qty) for ticker right now."""
+        try:
+            p = client.get_open_position(ticker)
+            return True, abs(float(p.qty))
+        except Exception:
+            return False, 0.0
+
+    def _mk(ok, filled, fill=None, method="", pending=False, exit_complete=None, remaining_qty=None):
         fill = fill or {"price": None, "qty": None, "dollars": None}
         price = fill.get("price")
         slp = None
@@ -1047,10 +1209,23 @@ def do_sell(client, ticker, extended_hours=False, urgency="normal"):
                 slp = (float(cur_submit) - float(price)) / float(cur_submit) * 10000.0
             except Exception:
                 slp = None
+        if exit_complete is None:
+            if filled:
+                is_open, rem = _position_state()
+                exit_complete = (not is_open) or rem <= 1e-6
+                remaining_qty = 0.0 if exit_complete else rem
+            else:
+                exit_complete = False
+        partial = bool(filled and not exit_complete)
+        if filled and method and not method.endswith("_full") and not method.endswith("_partial"):
+            method = f"{method}_{'full' if exit_complete else 'partial'}"
         return {
             "ok": ok,
             "filled": filled,
             "pending": pending,
+            "exit_complete": exit_complete,
+            "partial": partial,
+            "remaining_qty": remaining_qty,
             "price": fill.get("price"),
             "qty": fill.get("qty"),
             "dollars": fill.get("dollars"),
@@ -1286,18 +1461,42 @@ def log_tx(action, ticker, strategy, price, dollars, rgm, equity,
         print(f"TX_FALLBACK|{row_data}", flush=True)
 
 RUN_F = ["timestamp","mode","regime","equity","cash","signals","entries",
-         "exits","open_positions","tickers","universe"]
+         "exits","open_positions","tickers","universe","duration_s","cache_hit"]
 
-def log_run(mode, rgm, equity, cash, signals, entries, exits, positions):
+def log_run(mode, rgm, equity, cash, signals, entries, exits, positions,
+            cache_hit=None):
+    global _last_cache_hit
+    if cache_hit is not None:
+        _last_cache_hit = cache_hit
+    duration_s = ""
+    if _run_started_at is not None:
+        duration_s = round(time.time() - _run_started_at, 1)
     init = not RUNS_FILE.exists()
     with open(RUNS_FILE, "a", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=RUN_F)
+        w = csv.DictWriter(f, fieldnames=RUN_F, extrasaction="ignore")
         if init: w.writeheader()
         w.writerow({"timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                     "mode": mode, "regime": rgm, "equity": round(equity, 2),
                     "cash": round(cash, 2), "signals": signals, "entries": entries,
                     "exits": exits, "open_positions": len(positions),
-                    "tickers": "|".join(positions.keys()), "universe": UNIVERSE})
+                    "tickers": "|".join(positions.keys()), "universe": UNIVERSE,
+                    "duration_s": duration_s, "cache_hit": _last_cache_hit})
+
+
+def _max_drawdown_pct_pathwise(eq_series):
+    """Path-wise max drawdown from running peaks (negative percentage)."""
+    if not eq_series:
+        return 0.0
+    peak = eq_series[0]
+    max_dd = 0.0
+    for eq in eq_series:
+        if eq > peak:
+            peak = eq
+        if peak > 0:
+            dd = (eq - peak) / peak * 100.0
+            if dd < max_dd:
+                max_dd = dd
+    return max_dd
 
 
 # =============================================================================
@@ -1334,9 +1533,8 @@ def write_dashboard():
         eq_series      = [r["equity"] for r in runs if r["equity"] > 0]
         current_equity = eq_series[-1] if eq_series else STARTING_EQUITY
         peak_equity    = max(eq_series) if eq_series else STARTING_EQUITY
-        trough_equity  = min(eq_series) if eq_series else STARTING_EQUITY
         total_ret_pct  = (current_equity - STARTING_EQUITY) / STARTING_EQUITY * 100
-        max_dd_pct     = (trough_equity - peak_equity) / peak_equity * 100 if peak_equity else 0
+        max_dd_pct     = _max_drawdown_pct_pathwise(eq_series)
 
         last_run      = runs[-1] if runs else {}
         current_cash  = last_run.get("cash", 0)
@@ -1469,7 +1667,31 @@ def write_dashboard():
 #  DAILY LOG
 # =============================================================================
 
-def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells):
+def _read_existing_signals_section(path):
+    """Return existing daily-log signal section body lines (without heading)."""
+    try:
+        if not path.exists():
+            return None
+        lines = path.read_text(encoding="utf-8").splitlines()
+        start = None
+        for i, line in enumerate(lines):
+            if line.strip() == "## Signals":
+                start = i + 1
+                break
+        if start is None:
+            return None
+        end = len(lines)
+        for i in range(start, len(lines)):
+            if lines[i].startswith("## ") or lines[i].strip() == "---":
+                end = i
+                break
+        return lines[start:end]
+    except Exception:
+        return None
+
+
+def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells,
+                preserve_existing_signals=False):
     sc = SCHEDULE[month]
     op_pnl = sum(p.get("pnl_dollar", 0) for p in positions.values())
     fname  = DAILY_DIR / f"{today}.md"
@@ -1539,6 +1761,9 @@ def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells
             L.append(f"| {s['t']} | SELL | {s['tk']} | {s['st']} | ${s['px']:.2f} | -- | {s['why']} |")
     else:
         L.append("_No trades today._")
+    existing_signals = None
+    if preserve_existing_signals and not signals:
+        existing_signals = _read_existing_signals_section(fname)
     L += ["", "## Signals"]
     if signals:
         L += ["| Ticker | Strategy | Price | RSI | Vol Z | Trigger |",
@@ -1546,6 +1771,11 @@ def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells
         for s in signals:
             L.append(f"| {s['ticker']} | {s['strategy']} | ${s['close']:.2f} "
                      f"| {s.get('rsi',0):.1f} | {s.get('vol_z',0):.2f} | {s.get('trigger','')} |")
+    elif existing_signals is not None:
+        if existing_signals:
+            L += existing_signals
+        else:
+            L.append("_No signals recorded yet._")
     else:
         L.append("_No signals today._")
     L += ["", "---", f"_RBv8{datetime.now().strftime('%H:%M UTC')}_"]
@@ -1787,6 +2017,251 @@ def write_weekly(client, equity, cash):
 
 
 # =============================================================================
+#  PREP PLAN CACHE (two-phase runs)
+# =============================================================================
+
+def _plan_file_for_mode(mode_name):
+    if mode_name == "morning":
+        return MORNING_PLAN_FILE
+    return EVENING_PLAN_FILE
+
+
+def _save_plan(path, payload):
+    try:
+        payload["saved_at_utc"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2)
+        return True
+    except Exception as e:
+        log.warning(f"  plan save failed {path}: {e}")
+        return False
+
+
+def _load_plan(path):
+    try:
+        if not path.exists():
+            return None
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        log.warning(f"  plan load failed {path}: {e}")
+        return None
+
+
+def _plan_fresh_minutes(plan):
+    try:
+        ts = plan.get("saved_at_utc", "")
+        if not ts:
+            return None
+        saved = datetime.strptime(ts, "%Y-%m-%dT%H:%M:%SZ")
+        return (datetime.utcnow() - saved).total_seconds() / 60.0
+    except Exception:
+        return None
+
+
+def _snapshot_open_sell_orders(client):
+    rows = []
+    try:
+        req = GetOrdersRequest(status=QueryOrderStatus.OPEN)
+        for o in client.get_orders(req):
+            if getattr(o, "side", None) == OrderSide.SELL:
+                rows.append({
+                    "ticker": getattr(o, "symbol", "?"),
+                    "type": str(getattr(o, "order_type", "?")),
+                    "qty": str(getattr(o, "qty", "")),
+                    "limit": str(getattr(o, "limit_price", "")),
+                    "stop": str(getattr(o, "stop_price", "")),
+                })
+    except Exception:
+        pass
+    return rows
+
+
+def _plan_usable(plan, mode_name, rgm, month, positions=None, open_sell_orders=None):
+    if not plan:
+        return False, "missing"
+    age_min = _plan_fresh_minutes(plan)
+    if age_min is None:
+        return False, "no timestamp"
+    if age_min > PLAN_MAX_AGE_MIN:
+        return False, f"stale ({age_min:.1f}m)"
+    if plan.get("mode_name") != mode_name:
+        return False, "mode mismatch"
+    if plan.get("regime") != rgm:
+        return False, "regime changed"
+    if int(plan.get("month", -1)) != int(month):
+        return False, "month changed"
+    if positions is not None:
+        try:
+            cached_count = int(plan.get("positions_count", -1))
+        except Exception:
+            cached_count = -1
+        if cached_count >= 0 and cached_count != len(positions):
+            return False, "positions changed"
+        cached_tickers = sorted(
+            str(p.get("ticker", "")).upper()
+            for p in plan.get("positions_snapshot", [])
+            if p.get("ticker")
+        )
+        live_tickers = sorted(str(t).upper() for t in positions.keys())
+        if cached_tickers != live_tickers:
+            return False, "positions changed"
+    if open_sell_orders is not None:
+        def _ord_key(o):
+            return (
+                str(o.get("ticker", "")).upper(),
+                str(o.get("type", "")).lower(),
+                str(o.get("qty", "")).strip(),
+                str(o.get("limit", "")).strip(),
+                str(o.get("stop", "")).strip(),
+            )
+        cached_orders = sorted(_ord_key(o) for o in plan.get("open_sell_orders", []))
+        live_orders = sorted(_ord_key(o) for o in open_sell_orders)
+        if cached_orders != live_orders:
+            return False, "open sell orders changed"
+    return True, f"fresh ({age_min:.1f}m)"
+
+
+def build_plan(client, equity, cash, rgm, mode_name):
+    """
+    Build a cached plan with:
+      - exit candidates (sell if needed) from current positions
+      - entry candidates (signals) from full universe scan
+    mode_name: "morning" or "evening"
+    """
+    month = date.today().month
+    positions = enrich(client, get_positions(client))
+    positions_snapshot = []
+    for ticker, p in positions.items():
+        positions_snapshot.append({
+            "ticker": ticker,
+            "strategy": p.get("strategy", "?"),
+            "dollar_amt": float(p.get("dollar_amt", 0) or 0),
+            "entry_price": float(p.get("entry_price", 0) or 0),
+            "current_price": float(p.get("current_price", 0) or 0),
+            "pnl_pct": float(p.get("pnl_pct", 0) or 0),
+            "pnl_dollar": float(p.get("pnl_dollar", 0) or 0),
+        })
+    pos_data = fetch_batch(list(positions.keys()), "prep_positions") if positions else {}
+
+    exit_plan = []
+    for ticker, pos in positions.items():
+        entry_date = pos.get("entry_date", "")
+        entered_today = (entry_date == str(date.today()))
+        pnl_frac = pos.get("pnl_pct", 0) / 100
+
+        if entered_today and STRICT_SAME_DAY_EXIT:
+            continue
+        if pnl_frac <= EXIT_STOP_LOSS:
+            exit_plan.append({"ticker": ticker, "why": f"stop_loss ({pnl_frac*100:.1f}%)"})
+            continue
+        if pos.get("entry_date"):
+            try:
+                days = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days
+                if days >= EXIT_DAYS_MAX:
+                    exit_plan.append({"ticker": ticker, "why": f"max_hold {days}d ({pnl_frac*100:+.1f}%)"})
+                    continue
+            except Exception:
+                pass
+        if ticker in pos_data:
+            # Keep existing behavior: scan path uses eod_only=True for midline checks.
+            ex, why = check_exit(pos_data[ticker], pos, eod_only=True)
+            if ex:
+                exit_plan.append({"ticker": ticker, "why": why})
+
+    tickers = get_live_tickers()
+    scan = [t for t in tickers if t not in positions]
+    all_data = fetch_batch(scan, "prep_universe")
+    signals = []
+    for ticker, df in all_data.items():
+        for s in get_signals(ticker, df, month, rgm):
+            s["month"] = month
+            s["regime"] = rgm
+            signals.append(s)
+
+    open_sell_orders = _snapshot_open_sell_orders(client)
+
+    payload = {
+        "mode_name": mode_name,
+        "date": str(date.today()),
+        "month": month,
+        "regime": rgm,
+        "positions_count": len(positions),
+        "positions_snapshot": positions_snapshot,
+        "open_sell_orders": open_sell_orders,
+        "scan_universe_count": len(scan),
+        "exit_plan": exit_plan,
+        "signals": signals,
+    }
+    return payload
+
+
+def run_prep(client, equity, cash, rgm, mode_name):
+    """Pre-compute exits + signals and save cache for the next execution run."""
+    plan_file = _plan_file_for_mode(mode_name)
+    hdr(f"{mode_name.upper()} PREP")
+    row("Goal", "Precompute exits/signals for next execution run")
+    row("Plan file", str(plan_file))
+    row("Regime", rgm.upper())
+    ftr()
+
+    plan = build_plan(client, equity, cash, rgm, mode_name)
+    ok = _save_plan(plan_file, plan)
+    pos_rows = plan.get("positions_snapshot", [])
+    open_pnl = sum(float(p.get("pnl_dollar", 0) or 0) for p in pos_rows)
+    invested = sum(float(p.get("dollar_amt", 0) or 0) for p in pos_rows)
+
+    hdr("OPEN POSITION P&L SNAPSHOT")
+    row("Open positions", str(len(pos_rows)))
+    row("Invested", f"${invested:,.2f}")
+    row("Open P&L", f"${open_pnl:+,.2f}")
+    if pos_rows:
+        trow("TICKER", "STRATEGY", "INVESTED", "ENTRY", "NOW", "P&L%", "P&L$",
+             widths=[7, 14, 9, 7, 7, 6, 7])
+        div()
+        for p in pos_rows:
+            trow(
+                p.get("ticker", "?"),
+                p.get("strategy", "?"),
+                f"${float(p.get('dollar_amt', 0) or 0):.2f}",
+                f"${float(p.get('entry_price', 0) or 0):.2f}",
+                f"${float(p.get('current_price', 0) or 0):.2f}",
+                f"{float(p.get('pnl_pct', 0) or 0):+.1f}%",
+                f"${float(p.get('pnl_dollar', 0) or 0):+.2f}",
+                widths=[7, 14, 9, 7, 7, 6, 7],
+            )
+    else:
+        blank(); row("No open positions."); blank()
+    ftr()
+
+    hdr("OPEN SELL ORDERS")
+    sell_orders = plan.get("open_sell_orders", [])
+    row("Count", str(len(sell_orders)))
+    if sell_orders:
+        trow("TICKER", "TYPE", "QTY", "LIMIT", "STOP", widths=[8, 16, 8, 10, 10])
+        div()
+        for o in sell_orders:
+            trow(
+                o.get("ticker", "?"),
+                _trunc(o.get("type", "?"), 16),
+                _trunc(o.get("qty", ""), 8),
+                _trunc(o.get("limit", ""), 10),
+                _trunc(o.get("stop", ""), 10),
+                widths=[8, 16, 8, 10, 10],
+            )
+    else:
+        blank(); row("No open sell orders."); blank()
+    ftr()
+
+    hdr("PREP SUMMARY")
+    row("Saved", "yes" if ok else "no")
+    row("Exit candidates", str(len(plan.get("exit_plan", []))))
+    row("Signal candidates", str(len(plan.get("signals", []))))
+    row("Universe scanned", str(plan.get("scan_universe_count", 0)))
+    ftr()
+
+
+# =============================================================================
 #  TIME AUTO-DETECTION
 # =============================================================================
 
@@ -1799,21 +2274,21 @@ def detect_mode():
     # Friday: keep running extended-hours exits through 7:59pm ET.
     # Switch to weekly summary only after extended-hours window closes.
     if dow == 4 and h >= 20: return "weekly"
-    # Morning scan: 9:44–9:59am ET — cron :45 firing (Chicago 8:45am CDT).
-    # Catches overnight gap setups and any signal that formed at the open.
-    # One morning buy window per day. 10:00am falls into exits.
+    # Morning scan: 9:44–9:59am ET (Chicago 8:45 cron)
     if h == 9 and m >= 44: return "morning_scan"
-    # Evening scan: 3:44–3:59pm ET — cron :45 firing (Chicago 2:45pm CDT).
-    # EOD scan using closing prices. One evening buy window per day.
-    # 4:00pm falls into ext_exits.
+    # Morning prep: 9:35–9:43am ET (Chicago 8:35 cron)
+    if h == 9 and 35 <= m <= 43: return "morning_prep"
+    # Early morning exits: 9:30–9:34am ET
+    if h == 9 and m >= 30: return "exits"
+    # Evening scan: 3:44–3:59pm ET (Chicago 2:45 cron)
     if h == 15 and m >= 44: return "scan"
+    # Evening prep: 3:30–3:43pm ET (Chicago 2:30 cron)
+    if h == 15 and 30 <= m <= 43: return "evening_prep"
     # Post-market extended-hours exits: 4:00pm–8:00pm ET
     # Alpaca allows DAY limit sells in extended hours. No new buys.
     if h == 16 or (17 <= h <= 19): return "ext_exits"
-    # Exits only: 10:00am–3:44pm ET (between the two scan windows)
-    if (10 <= h <= 15): return "exits"
-    # Early morning exits: 9:30–9:44am ET (brief window before morning scan)
-    if h == 9 and m >= 30: return "exits"
+    # Exits only: 10:00am–3:29pm ET (between scan windows)
+    if (10 <= h <= 14) or (h == 15 and m < 30): return "exits"
     return "summary"
 
 
@@ -1953,6 +2428,9 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         with open(TX_FILE, newline="") as _f:
             for _r in csv.DictReader(_f):
                 if _r.get("action") == "SELL" and _r.get("date") == today_str:
+                    sm = (_r.get("sell_method") or "").lower()
+                    if "partial" in sm:
+                        continue
                     already_sold_today.add(_r["ticker"])
 
     hdr(f"EXIT CHECK{eh_tag}")
@@ -1971,6 +2449,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         "no_data_skip": 0,
         "attempted": 0,
         "filled": 0,
+        "partial": 0,
         "pending": 0,
         "failed": 0,
         "holds": 0,
@@ -1978,8 +2457,12 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
     stop_breaches = {}
     stoploss_look_items = {}
 
-    for ticker, pos in positions.items():
-        if ticker in already_sold_today:
+    sorted_positions = sorted(
+        positions.items(),
+        key=lambda kv: float(kv[1].get("pnl_pct", 0) or 0),
+    )
+    for ticker, pos in sorted_positions:
+        if ticker in already_sold_today and abs(float(pos.get("qty", 0) or 0)) <= 1e-6:
             stats["already_logged"] += 1
             continue
 
@@ -1990,9 +2473,8 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         entry_date = pos.get("entry_date", "")
         entered_today = (entry_date == str(date.today()))
 
-        # ── Strict PDT guard: never same-day exit in any mode ──────────────
-        # For sub-$25k accounts, avoid all same-day buy+sell round trips.
-        if entered_today:
+        # ── Strict PDT guard: never same-day exit when STRICT_SAME_DAY_EXIT ──
+        if entered_today and STRICT_SAME_DAY_EXIT:
             stats["pdt_deferred"] += 1
             if ticker in stop_breaches:
                 uid = f"{ticker}|{entry_date or 'unknown'}"
@@ -2017,24 +2499,31 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
             stats["attempted"] += 1
             sell_res = do_sell(client, ticker, extended_hours=extended_hours, urgency="urgent")
             if sell_res.get("ok") and sell_res.get("filled"):
-                stats["filled"] += 1
-                exits += 1; exited.add(ticker); already_sold_today.add(ticker)
-                cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
-                sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
-                dh  = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
-                      if pos.get("entry_date") else 0
-                log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
-                       rgm, float(client.get_account().equity),
-                       pos["pnl_pct"], pos["pnl_dollar"], dh, why,
-                       sell_method=sell_res.get("sell_method",""),
-                       cur_at_submit=sell_res.get("cur_at_submit"),
-                       bid_at_submit=sell_res.get("bid_at_submit"),
-                       limit_price_used=sell_res.get("limit_price_used"),
-                       sell_latency_s=sell_res.get("sell_latency_s"),
-                       fill_slippage_bps=sell_res.get("fill_slippage_bps"))
-                if extended_hours:
-                    eh_sells.append((ticker, pos.get("strategy","?"), pos["pnl_pct"],
-                                     pos["pnl_dollar"], why))
+                if sell_res.get("exit_complete", True):
+                    stats["filled"] += 1
+                    exits += 1; exited.add(ticker); already_sold_today.add(ticker)
+                    cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
+                    sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
+                    dh  = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
+                          if pos.get("entry_date") else 0
+                    log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
+                           rgm, float(client.get_account().equity),
+                           pos["pnl_pct"], pos["pnl_dollar"], dh, why,
+                           sell_method=sell_res.get("sell_method",""),
+                           cur_at_submit=sell_res.get("cur_at_submit"),
+                           bid_at_submit=sell_res.get("bid_at_submit"),
+                           limit_price_used=sell_res.get("limit_price_used"),
+                           sell_latency_s=sell_res.get("sell_latency_s"),
+                           fill_slippage_bps=sell_res.get("fill_slippage_bps"))
+                    _clear_fractional_watch(ticker)
+                    if extended_hours:
+                        eh_sells.append((ticker, pos.get("strategy","?"), pos["pnl_pct"],
+                                         pos["pnl_dollar"], why))
+                else:
+                    stats["partial"] += 1
+                    rem = sell_res.get("remaining_qty")
+                    rem_txt = f"{float(rem):.4f} sh remain" if rem is not None else "residual shares remain"
+                    row(ticker, f"PARTIAL SELL ({rem_txt}) — will retry this session")
             elif sell_res.get("pending"):
                 stats["pending"] += 1
                 uid = f"{ticker}|{entry_date or 'unknown'}"
@@ -2075,22 +2564,28 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                     stats["attempted"] += 1
                     sell_res = do_sell(client, ticker, extended_hours=extended_hours, urgency="normal")
                     if sell_res.get("ok") and sell_res.get("filled"):
-                        stats["filled"] += 1
-                        exits += 1; exited.add(ticker); already_sold_today.add(ticker)
-                        cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
-                        sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
-                        log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
-                               rgm, float(client.get_account().equity),
-                               pos["pnl_pct"], pos["pnl_dollar"], days, why,
-                               sell_method=sell_res.get("sell_method",""),
-                               cur_at_submit=sell_res.get("cur_at_submit"),
-                               bid_at_submit=sell_res.get("bid_at_submit"),
-                               limit_price_used=sell_res.get("limit_price_used"),
-                               sell_latency_s=sell_res.get("sell_latency_s"),
-                               fill_slippage_bps=sell_res.get("fill_slippage_bps"))
-                        if extended_hours:
-                            eh_sells.append((ticker, pos.get("strategy","?"), pos["pnl_pct"],
-                                             pos["pnl_dollar"], why))
+                        if sell_res.get("exit_complete", True):
+                            stats["filled"] += 1
+                            exits += 1; exited.add(ticker); already_sold_today.add(ticker)
+                            cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
+                            sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
+                            log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
+                                   rgm, float(client.get_account().equity),
+                                   pos["pnl_pct"], pos["pnl_dollar"], days, why,
+                                   sell_method=sell_res.get("sell_method",""),
+                                   cur_at_submit=sell_res.get("cur_at_submit"),
+                                   bid_at_submit=sell_res.get("bid_at_submit"),
+                                   limit_price_used=sell_res.get("limit_price_used"),
+                                   sell_latency_s=sell_res.get("sell_latency_s"),
+                                   fill_slippage_bps=sell_res.get("fill_slippage_bps"))
+                            if extended_hours:
+                                eh_sells.append((ticker, pos.get("strategy","?"), pos["pnl_pct"],
+                                                 pos["pnl_dollar"], why))
+                        else:
+                            stats["partial"] += 1
+                            rem = sell_res.get("remaining_qty")
+                            rem_txt = f"{float(rem):.4f} sh remain" if rem is not None else "residual shares remain"
+                            row(ticker, f"PARTIAL SELL ({rem_txt}) — will retry this session")
                     elif sell_res.get("pending"):
                         stats["pending"] += 1
                         uid = f"{ticker}|{entry_date or 'unknown'}"
@@ -2138,21 +2633,27 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         sell_res = do_sell(client, ticker, urgency="low") if ex else {"ok": False, "filled": False}
         if ex and sell_res.get("ok") and sell_res.get("filled"):
             stats["attempted"] += 1
-            stats["filled"] += 1
-            exits += 1; exited.add(ticker); already_sold_today.add(ticker)
-            cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
-            sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
-            dh  = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
-                  if pos.get("entry_date") else 0
-            log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
-                   rgm, float(client.get_account().equity),
-                   pos["pnl_pct"], pos["pnl_dollar"], dh, why,
-                   sell_method=sell_res.get("sell_method",""),
-                   cur_at_submit=sell_res.get("cur_at_submit"),
-                   bid_at_submit=sell_res.get("bid_at_submit"),
-                   limit_price_used=sell_res.get("limit_price_used"),
-                   sell_latency_s=sell_res.get("sell_latency_s"),
-                   fill_slippage_bps=sell_res.get("fill_slippage_bps"))
+            if sell_res.get("exit_complete", True):
+                stats["filled"] += 1
+                exits += 1; exited.add(ticker); already_sold_today.add(ticker)
+                cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
+                sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
+                dh  = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
+                      if pos.get("entry_date") else 0
+                log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
+                       rgm, float(client.get_account().equity),
+                       pos["pnl_pct"], pos["pnl_dollar"], dh, why,
+                       sell_method=sell_res.get("sell_method",""),
+                       cur_at_submit=sell_res.get("cur_at_submit"),
+                       bid_at_submit=sell_res.get("bid_at_submit"),
+                       limit_price_used=sell_res.get("limit_price_used"),
+                       sell_latency_s=sell_res.get("sell_latency_s"),
+                       fill_slippage_bps=sell_res.get("fill_slippage_bps"))
+            else:
+                stats["partial"] += 1
+                rem = sell_res.get("remaining_qty")
+                rem_txt = f"{float(rem):.4f} sh remain" if rem is not None else "residual shares remain"
+                row(ticker, f"PARTIAL SELL ({rem_txt}) — will retry this session")
         elif ex and sell_res.get("pending"):
             stats["attempted"] += 1
             stats["pending"] += 1
@@ -2211,7 +2712,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
     row("Deferred/Skipped", f"PDT {stats['pdt_deferred']}  |  already logged {stats['already_logged']}")
     row("Data skips", f"no price data {stats['no_data_skip']}")
     row("Sell attempts", f"{stats['attempted']} attempted  |  {stats['filled']} filled  |  "
-                         f"{stats['pending']} pending  |  {stats['failed']} failed")
+                         f"{stats['partial']} partial  |  {stats['pending']} pending  |  {stats['failed']} failed")
     row("Holds", str(stats["holds"]))
     row("Logged exits", str(exits))
     ftr()
@@ -2236,14 +2737,15 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
     ca2 = float(acct2.cash)
     log_run(run_mode_name, rgm, eq2, ca2, 0, 0, exits, positions_after)
     # Keep daily markdown in sync for non-scan exit runs too.
-    write_daily(date.today(), eq2, ca2, rgm, date.today().month, positions_after, [], [], [])
+    write_daily(date.today(), eq2, ca2, rgm, date.today().month, positions_after, [], [], [],
+                preserve_existing_signals=True)
 
 
 # =============================================================================
 #  FULL SCAN
 # =============================================================================
 
-def run_scan(client, equity, cash, rgm):
+def run_scan(client, equity, cash, rgm, mode_name="scan"):
     today = date.today(); month = today.month; sc = SCHEDULE[month]
     reserve = equity * CASH_RESERVE_PCT; avail = max(0.0, cash - reserve)
 
@@ -2270,6 +2772,21 @@ def run_scan(client, equity, cash, rgm):
     max_trades = max(1, int(avail // MIN_TRADE_SIZE))
 
     positions = enrich(client, get_positions(client)); pdt = load_pdt()
+    plan_mode_name = "morning" if mode_name == "morning_scan" else "evening"
+    plan_file = _plan_file_for_mode(plan_mode_name)
+    cached_plan = _load_plan(plan_file)
+    live_open_sell_orders = _snapshot_open_sell_orders(client)
+    plan_ok, plan_note = _plan_usable(
+        cached_plan,
+        plan_mode_name,
+        rgm,
+        month,
+        positions=positions,
+        open_sell_orders=live_open_sell_orders,
+    )
+    if not USE_TWO_PHASE_PLAN:
+        plan_ok = False
+        plan_note = "disabled (parity mode)"
 
     hdr(f"HOLDINGS  ({len(positions)} open)")
     if positions:
@@ -2291,6 +2808,15 @@ def run_scan(client, equity, cash, rgm):
     row(f"PDT round trips today: {pdt_n(pdt)}  |  cash-based cap now: {max_trades}")
     ftr()
 
+    hdr("PLAN CACHE")
+    row("Mode", plan_mode_name)
+    row("File", str(plan_file))
+    row("Use cached plan", f"{'yes' if plan_ok else 'no'} ({plan_note})")
+    if plan_ok:
+        row("Cached exits", str(len(cached_plan.get("exit_plan", []))))
+        row("Cached signals", str(len(cached_plan.get("signals", []))))
+    ftr()
+
     # Exit check on held positions
     exits = 0; sells_log = []
     scan_exit_stats = {
@@ -2299,6 +2825,7 @@ def run_scan(client, equity, cash, rgm):
         "no_data_skip": 0,
         "attempted": 0,
         "filled": 0,
+        "partial": 0,
         "pending": 0,
         "failed": 0,
         "holds": 0,
@@ -2312,13 +2839,25 @@ def run_scan(client, equity, cash, rgm):
         with open(TX_FILE, newline="") as _f:
             for _r in csv.DictReader(_f):
                 if _r.get("action") == "SELL" and _r.get("date") == str(today):
+                    sm = (_r.get("sell_method") or "").lower()
+                    if "partial" in sm:
+                        continue
                     already_sold_today.add(_r["ticker"])
 
     if positions:
-        pos_data = fetch_batch(list(positions.keys()), "positions")
+        pos_data = {} if plan_ok else fetch_batch(list(positions.keys()), "positions")
+        cached_exit_map = {}
+        if plan_ok:
+            cached_exit_map = {e.get("ticker"): e.get("why", "planned_exit")
+                               for e in cached_plan.get("exit_plan", [])
+                               if e.get("ticker")}
         hdr("EXIT EVALUATION  (EOD -- midline + stop + max-hold)")
-        for ticker, pos in list(positions.items()):
-            if ticker in already_sold_today:
+        sorted_scan_pos = sorted(
+            positions.items(),
+            key=lambda kv: float(kv[1].get("pnl_pct", 0) or 0),
+        )
+        for ticker, pos in sorted_scan_pos:
+            if ticker in already_sold_today and abs(float(pos.get("qty", 0) or 0)) <= 1e-6:
                 scan_exit_stats["already_logged"] += 1
                 continue
             entry_date = pos.get("entry_date", "")
@@ -2326,7 +2865,7 @@ def run_scan(client, equity, cash, rgm):
             pnl_frac = pos.get("pnl_pct", 0) / 100
             if pnl_frac <= EXIT_STOP_LOSS:
                 scan_stop_breaches[ticker] = pnl_frac
-            if entered_today:
+            if entered_today and STRICT_SAME_DAY_EXIT:
                 scan_exit_stats["pdt_deferred"] += 1
                 if ticker in scan_stop_breaches:
                     uid = f"{ticker}|{entry_date or 'unknown'}"
@@ -2351,25 +2890,31 @@ def run_scan(client, equity, cash, rgm):
                 scan_exit_stats["attempted"] += 1
                 sell_res = do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL, urgency="urgent")
                 if sell_res.get("ok") and sell_res.get("filled"):
-                    scan_exit_stats["filled"] += 1
-                    exits += 1; cur = pos["current_price"]
-                    cur = sell_res.get("price") if sell_res.get("price") is not None else cur
-                    sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
-                    dh = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
-                         if pos.get("entry_date") else 0
-                    log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
-                           rgm, float(client.get_account().equity),
-                           pos["pnl_pct"], pos["pnl_dollar"], dh, why,
-                           sell_method=sell_res.get("sell_method",""),
-                           cur_at_submit=sell_res.get("cur_at_submit"),
-                           bid_at_submit=sell_res.get("bid_at_submit"),
-                           limit_price_used=sell_res.get("limit_price_used"),
-                           sell_latency_s=sell_res.get("sell_latency_s"),
-                           fill_slippage_bps=sell_res.get("fill_slippage_bps"))
-                    sells_log.append({"t": datetime.now().strftime("%H:%M"),
-                                       "tk": ticker, "st": pos.get("strategy","?"),
-                                       "px": cur, "why": why})
-                    already_sold_today.add(ticker); del positions[ticker]
+                    if sell_res.get("exit_complete", True):
+                        scan_exit_stats["filled"] += 1
+                        exits += 1; cur = pos["current_price"]
+                        cur = sell_res.get("price") if sell_res.get("price") is not None else cur
+                        sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
+                        dh = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
+                             if pos.get("entry_date") else 0
+                        log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
+                               rgm, float(client.get_account().equity),
+                               pos["pnl_pct"], pos["pnl_dollar"], dh, why,
+                               sell_method=sell_res.get("sell_method",""),
+                               cur_at_submit=sell_res.get("cur_at_submit"),
+                               bid_at_submit=sell_res.get("bid_at_submit"),
+                               limit_price_used=sell_res.get("limit_price_used"),
+                               sell_latency_s=sell_res.get("sell_latency_s"),
+                               fill_slippage_bps=sell_res.get("fill_slippage_bps"))
+                        sells_log.append({"t": datetime.now().strftime("%H:%M"),
+                                           "tk": ticker, "st": pos.get("strategy","?"),
+                                           "px": cur, "why": why})
+                        already_sold_today.add(ticker); del positions[ticker]
+                    else:
+                        scan_exit_stats["partial"] += 1
+                        rem = sell_res.get("remaining_qty")
+                        rem_txt = f"{float(rem):.4f} sh remain" if rem is not None else "residual shares remain"
+                        row(ticker, f"PARTIAL SELL ({rem_txt}) — will retry this session")
                 elif sell_res.get("pending"):
                     scan_exit_stats["pending"] += 1
                     uid = f"{ticker}|{entry_date or 'unknown'}"
@@ -2410,23 +2955,29 @@ def run_scan(client, equity, cash, rgm):
                         scan_exit_stats["attempted"] += 1
                         sell_res = do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL, urgency="normal")
                         if sell_res.get("ok") and sell_res.get("filled"):
-                            scan_exit_stats["filled"] += 1
-                            exits += 1; cur = pos["current_price"]
-                            cur = sell_res.get("price") if sell_res.get("price") is not None else cur
-                            sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
-                            log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
-                                   rgm, float(client.get_account().equity),
-                                   pos["pnl_pct"], pos["pnl_dollar"], days, why,
-                                   sell_method=sell_res.get("sell_method",""),
-                                   cur_at_submit=sell_res.get("cur_at_submit"),
-                                   bid_at_submit=sell_res.get("bid_at_submit"),
-                                   limit_price_used=sell_res.get("limit_price_used"),
-                                   sell_latency_s=sell_res.get("sell_latency_s"),
-                                   fill_slippage_bps=sell_res.get("fill_slippage_bps"))
-                            sells_log.append({"t": datetime.now().strftime("%H:%M"),
-                                               "tk": ticker, "st": pos.get("strategy","?"),
-                                               "px": cur, "why": why})
-                            already_sold_today.add(ticker); del positions[ticker]
+                            if sell_res.get("exit_complete", True):
+                                scan_exit_stats["filled"] += 1
+                                exits += 1; cur = pos["current_price"]
+                                cur = sell_res.get("price") if sell_res.get("price") is not None else cur
+                                sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
+                                log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
+                                       rgm, float(client.get_account().equity),
+                                       pos["pnl_pct"], pos["pnl_dollar"], days, why,
+                                       sell_method=sell_res.get("sell_method",""),
+                                       cur_at_submit=sell_res.get("cur_at_submit"),
+                                       bid_at_submit=sell_res.get("bid_at_submit"),
+                                       limit_price_used=sell_res.get("limit_price_used"),
+                                       sell_latency_s=sell_res.get("sell_latency_s"),
+                                       fill_slippage_bps=sell_res.get("fill_slippage_bps"))
+                                sells_log.append({"t": datetime.now().strftime("%H:%M"),
+                                                   "tk": ticker, "st": pos.get("strategy","?"),
+                                                   "px": cur, "why": why})
+                                already_sold_today.add(ticker); del positions[ticker]
+                            else:
+                                scan_exit_stats["partial"] += 1
+                                rem = sell_res.get("remaining_qty")
+                                rem_txt = f"{float(rem):.4f} sh remain" if rem is not None else "residual shares remain"
+                                row(ticker, f"PARTIAL SELL ({rem_txt}) — will retry this session")
                         elif sell_res.get("pending"):
                             scan_exit_stats["pending"] += 1
                             row(ticker, "SELL pending (after-hours limit open)")
@@ -2437,34 +2988,44 @@ def run_scan(client, equity, cash, rgm):
                 except Exception: pass
 
             # ── Midline: needs price/MA data from yfinance (EOD only) ─────
-            if ticker not in pos_data:
-                scan_exit_stats["no_data_skip"] += 1
-                row(ticker, "no price data (stop/max-hold already checked)"); continue
-            ex, why = check_exit(pos_data[ticker], pos, eod_only=True)
+            if plan_ok:
+                ex = ticker in cached_exit_map
+                why = cached_exit_map.get(ticker, "HOLD")
+            else:
+                if ticker not in pos_data:
+                    scan_exit_stats["no_data_skip"] += 1
+                    row(ticker, "no price data (stop/max-hold already checked)"); continue
+                ex, why = check_exit(pos_data[ticker], pos, eod_only=True)
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                 f"EXIT: {_trunc(why,20)}" if ex else "HOLD")
             sell_res = do_sell(client, ticker, extended_hours=USE_EXTENDED_HOURS_SELL, urgency="low") if ex else {"ok": False, "filled": False}
             if ex and sell_res.get("ok") and sell_res.get("filled"):
                 scan_exit_stats["attempted"] += 1
-                scan_exit_stats["filled"] += 1
-                exits += 1; cur = pos["current_price"]
-                cur = sell_res.get("price") if sell_res.get("price") is not None else cur
-                sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
-                dh = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
-                     if pos.get("entry_date") else 0
-                log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
-                       rgm, float(client.get_account().equity),
-                       pos["pnl_pct"], pos["pnl_dollar"], dh, why,
-                       sell_method=sell_res.get("sell_method",""),
-                       cur_at_submit=sell_res.get("cur_at_submit"),
-                       bid_at_submit=sell_res.get("bid_at_submit"),
-                       limit_price_used=sell_res.get("limit_price_used"),
-                       sell_latency_s=sell_res.get("sell_latency_s"),
-                       fill_slippage_bps=sell_res.get("fill_slippage_bps"))
-                sells_log.append({"t": datetime.now().strftime("%H:%M"),
-                                   "tk": ticker, "st": pos.get("strategy","?"),
-                                   "px": cur, "why": why})
-                already_sold_today.add(ticker); del positions[ticker]
+                if sell_res.get("exit_complete", True):
+                    scan_exit_stats["filled"] += 1
+                    exits += 1; cur = pos["current_price"]
+                    cur = sell_res.get("price") if sell_res.get("price") is not None else cur
+                    sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
+                    dh = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
+                         if pos.get("entry_date") else 0
+                    log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
+                           rgm, float(client.get_account().equity),
+                           pos["pnl_pct"], pos["pnl_dollar"], dh, why,
+                           sell_method=sell_res.get("sell_method",""),
+                           cur_at_submit=sell_res.get("cur_at_submit"),
+                           bid_at_submit=sell_res.get("bid_at_submit"),
+                           limit_price_used=sell_res.get("limit_price_used"),
+                           sell_latency_s=sell_res.get("sell_latency_s"),
+                           fill_slippage_bps=sell_res.get("fill_slippage_bps"))
+                    sells_log.append({"t": datetime.now().strftime("%H:%M"),
+                                       "tk": ticker, "st": pos.get("strategy","?"),
+                                       "px": cur, "why": why})
+                    already_sold_today.add(ticker); del positions[ticker]
+                else:
+                    scan_exit_stats["partial"] += 1
+                    rem = sell_res.get("remaining_qty")
+                    rem_txt = f"{float(rem):.4f} sh remain" if rem is not None else "residual shares remain"
+                    row(ticker, f"PARTIAL SELL ({rem_txt}) — will retry this session")
             elif ex and sell_res.get("pending"):
                 scan_exit_stats["attempted"] += 1
                 scan_exit_stats["pending"] += 1
@@ -2479,7 +3040,7 @@ def run_scan(client, equity, cash, rgm):
         hdr("EXIT EVAL SUMMARY")
         row("Exit eval",
             f"attempted {scan_exit_stats['attempted']} | filled {scan_exit_stats['filled']} | "
-            f"pending {scan_exit_stats['pending']} | failed {scan_exit_stats['failed']} | "
+            f"partial {scan_exit_stats['partial']} | pending {scan_exit_stats['pending']} | failed {scan_exit_stats['failed']} | "
             f"PDT deferred {scan_exit_stats['pdt_deferred']}")
         row("Other skips", f"already logged today {scan_exit_stats['already_logged']}  |  "
                            f"no price data {scan_exit_stats['no_data_skip']}  |  holds {scan_exit_stats['holds']}")
@@ -2494,23 +3055,36 @@ def run_scan(client, equity, cash, rgm):
         row("New investigations added", str(added_look_scan))
         ftr()
 
-    # Full universe download and scan
+    # Full universe download and scan (or cached plan reuse)
     hdr("DATA DOWNLOAD")
     row(f"Universe: {UNIVERSE}  |  Alpaca primary / yfinance fallback")
     ftr()
-    tickers  = get_live_tickers()
-    scan     = [t for t in tickers if t not in positions]
-    all_data = fetch_batch(scan, "universe")
 
-    hdr("SIGNAL SCAN")
-    row(f"Month: {MN[month]}  |  Regime: {rgm.upper()}")
-    row(f"Primary: {sc['p']}  |  Secondary: {sc['s']}")
-    ftr()
-    all_sigs = []
-    for ticker, df in all_data.items():
-        for s in get_signals(ticker, df, month, rgm):
-            s["month"] = month; s["regime"] = rgm
-            all_sigs.append(s)
+    if plan_ok:
+        all_data = {}
+        scan = []
+        all_sigs = list(cached_plan.get("signals", []))
+        hdr("SIGNAL SCAN")
+        row(f"Month: {MN[month]}  |  Regime: {rgm.upper()}")
+        row(f"Primary: {sc['p']}  |  Secondary: {sc['s']}")
+        row("Source", "cached prep plan")
+        row("Universe scanned in prep", str(cached_plan.get("scan_universe_count", 0)))
+        ftr()
+    else:
+        tickers  = get_live_tickers()
+        scan     = [t for t in tickers if t not in positions]
+        all_data = fetch_batch(scan, "universe")
+
+        hdr("SIGNAL SCAN")
+        row(f"Month: {MN[month]}  |  Regime: {rgm.upper()}")
+        row(f"Primary: {sc['p']}  |  Secondary: {sc['s']}")
+        row("Source", "live scan")
+        ftr()
+        all_sigs = []
+        for ticker, df in all_data.items():
+            for s in get_signals(ticker, df, month, rgm):
+                s["month"] = month; s["regime"] = rgm
+                all_sigs.append(s)
 
     hdr(f"SIGNALS FOUND  --  {len(all_sigs)}")
     if not all_sigs:
@@ -2561,7 +3135,7 @@ def run_scan(client, equity, cash, rgm):
         row(f"Signal scaling: {n_viable} signals / {n_slots} slots → "
             f"sea=${sea_da:.0f} off=${off_da:.0f}  "
             f"(max sea=${equity*SEASONAL_SIZE_PCT:.0f} off=${equity*OFFSCHEDULE_SIZE_PCT:.0f})")
-    entries = 0; buys_log = []
+    entries = 0; buys_log = []; unconfirmed_buys = 0; pending_buys = []
     n_unfilled_sea = n_sea_pending  # decrements as seasonal signals get filled
     for sig in all_sigs:
         ticker = sig["ticker"]; strategy = sig["strategy"]
@@ -2588,32 +3162,52 @@ def run_scan(client, equity, cash, rgm):
                 n_unfilled_sea = max(0, n_unfilled_sea - 1)
             continue
         row(f"  ENTER [{tier}] {ticker}  {strategy}", f"${da:.2f}")
-        buy_res = do_buy(client, ticker, da, strategy, expected_price=sig["close"])
+        buy_res = do_buy(client, ticker, da, strategy, expected_price=sig["close"], fast_submit=True)
         if buy_res.get("ok"):
-            entries += 1; avail -= da
-            pdt.append(str(today))   # track this buy for PDT cap enforcement
-            buy_price = buy_res.get("price") if buy_res.get("price") is not None else sig["close"]
-            buy_dollars = buy_res.get("dollars") if buy_res.get("dollars") is not None else da
-            log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
-                   float(client.get_account().equity),
-                   expected_price=sig["close"],
-                   order_price=buy_res.get("order_price", sig["close"]),
-                   execution_method=buy_res.get("execution_method", "buy_market"))
-            buys_log.append({"t": datetime.now().strftime("%H:%M"),
-                              "tk": ticker, "st": strategy,
-                              "px": round(buy_price, 2), "$": round(buy_dollars, 2)})
+            # Submitted orders consume buying power, even if confirmation lags.
+            avail -= da
+            if buy_res.get("filled"):
+                entries += 1
+                pdt.append(str(today))   # only confirmed fills count toward PDT entries
+                buy_price = buy_res.get("price") if buy_res.get("price") is not None else sig["close"]
+                buy_dollars = buy_res.get("dollars") if buy_res.get("dollars") is not None else da
+                log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
+                       float(client.get_account().equity),
+                       expected_price=sig["close"],
+                       order_price=buy_res.get("order_price", sig["close"]),
+                       execution_method=buy_res.get("execution_method", "buy_market"))
+                buys_log.append({"t": datetime.now().strftime("%H:%M"),
+                                  "tk": ticker, "st": strategy,
+                                  "px": round(buy_price, 2), "$": round(buy_dollars, 2)})
+            else:
+                unconfirmed_buys += 1
+                pending_buys.append({
+                    "ticker": ticker,
+                    "strategy": strategy,
+                    "dollars": da,
+                    "expected_price": sig["close"],
+                    "order_id": buy_res.get("order_id"),
+                })
+                row(f"  BUY SUBMITTED [{tier}] {ticker}",
+                    "fill pending — batched confirmation after entries")
         if is_seasonal:
             # Seasonal signal has been processed (buy attempt complete).
             n_unfilled_sea = max(0, n_unfilled_sea - 1)
     if entries == 0 and not all_sigs: row("  No entries placed.")
+    if pending_buys:
+        batched = poll_pending_buys(client, pending_buys, rgm)
+        entries += batched
+        for _ in range(batched):
+            pdt.append(str(today))
     ftr()
 
     # Place GTC stop-market orders for all open positions.
     # Wait 5s first so newly submitted market buys have time to fill and
     # appear in Alpaca positions before we try to attach stops to them.
-    if entries > 0:
+    total_buy_submits = entries + unconfirmed_buys
+    if total_buy_submits > 0:
         hdr("GTC STOP PLACEMENT")
-        row(f"Waiting 5s for {entries} buy(s) to fill...")
+        row(f"Waiting 5s for {total_buy_submits} buy submit(s) to settle...")
         ftr()
         time.sleep(5)
     place_all_stops(client)
@@ -2640,13 +3234,15 @@ def run_scan(client, equity, cash, rgm):
     row("Scanned",  str(len(all_data)))
     row("Signals",  str(len(all_sigs)))
     row("Entries",  str(entries))
+    row("Buy submits", f"{entries} confirmed  |  {unconfirmed_buys} unconfirmed")
     row("Exits",    str(exits))
     row("Open pos", str(len(pos2)))
     row("Equity",   f"${eq2:,.2f}")
     row("Cash",     f"${ca2:,.2f}")
     ftr()
 
-    log_run("scan", rgm, eq2, ca2, len(all_sigs), entries, exits, pos2)
+    scan_run_mode = "scan_morning" if mode_name == "morning_scan" else "scan_evening"
+    log_run(scan_run_mode, rgm, eq2, ca2, len(all_sigs), entries, exits, pos2, cache_hit=plan_ok)
     write_daily(today, eq2, ca2, rgm, month, pos2, all_sigs, buys_log, sells_log)
     write_dashboard()
 
@@ -2656,8 +3252,15 @@ def run_scan(client, equity, cash, rgm):
 # =============================================================================
 
 if __name__ == "__main__":
-    mode = detect_mode()
-    log.info(f"Mode auto-detected: {mode}")
+    _run_started_at = time.time()
+
+    mode = os.getenv("BOT_MODE", "").strip().lower()
+    if not mode or mode == "auto":
+        mode = detect_mode()
+    else:
+        log.info(f"Mode from BOT_MODE env: {mode}")
+
+    log.info(f"Mode: {mode}")
 
     client = TradingClient(API_KEY, API_SECRET, paper=PAPER_TRADING)
     acct   = client.get_account()
@@ -2676,8 +3279,12 @@ if __name__ == "__main__":
     row("Equity",   f"${equity:,.2f}")
     ftr()
 
-    if mode in ("scan", "morning_scan"):
-        run_scan(client, equity, cash, rgm)
+    if mode == "morning_prep":
+        run_prep(client, equity, cash, rgm, mode_name="morning")
+    elif mode == "evening_prep":
+        run_prep(client, equity, cash, rgm, mode_name="evening")
+    elif mode in ("scan", "morning_scan"):
+        run_scan(client, equity, cash, rgm, mode_name=mode)
     elif mode == "exits":
         run_exits(client, equity, cash, rgm)
     elif mode == "ext_exits":
