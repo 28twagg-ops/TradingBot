@@ -1983,3 +1983,15 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-16 15:15:48
+ID: NWE|2026-06-16
+Mode: exits
+Ticker: NWE
+Strategy: Pullback50
+Entry date: 2026-06-16
+P&L at breach: -0.63%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
