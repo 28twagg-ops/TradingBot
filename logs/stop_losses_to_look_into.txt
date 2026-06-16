@@ -1971,3 +1971,15 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-16 15:00:48
+ID: NOV|2026-06-16
+Mode: exits
+Ticker: NOV
+Strategy: Pullback50
+Entry date: 2026-06-16
+P&L at breach: -0.77%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
