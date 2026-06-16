@@ -185,8 +185,13 @@ MORNING_PLAN_FILE = PLAN_DIR / "morning_plan.json"
 EVENING_PLAN_FILE = PLAN_DIR / "evening_plan.json"
 PLAN_MAX_AGE_MIN = 120
 USE_TWO_PHASE_PLAN = True
-# Live accounts: defer same-day exits (PDT). Paper: allow stop exits same session.
+# Live accounts: defer same-day midline/max-hold (PDT). Stop breaches still exit same day.
 STRICT_SAME_DAY_EXIT = PAPER_TRADING is False
+
+
+def _pdt_blocks_exit(entered_today, pnl_frac):
+    """Block same-day midline/max-hold on live; always allow stop-loss exits."""
+    return entered_today and STRICT_SAME_DAY_EXIT and pnl_frac > EXIT_STOP_LOSS
 FETCH_WORKERS = 16
 FETCH_CHUNK_PAUSE_S = 0.25
 
@@ -1175,9 +1180,8 @@ def _latest_bid(ticker):
 def do_sell(client, ticker, extended_hours=False, urgency="normal"):
     """Exit a position.
     In regular hours (extended_hours=False):
-      1. Cancel any open sell orders first.
-      2. Try a limit sell 0.2% below current price (fills fast, better fill).
-      3. If unfilled after 20s, fall back to a market sell.
+      - urgency="urgent" (stop breach): market sell immediately.
+      - otherwise: limit 0.2% below, then market fallback after polls.
 
     In extended hours (extended_hours=True):
       - DAY limit sell at 0.15% below current (DAY orders work on fractional shares).
@@ -1240,6 +1244,25 @@ def do_sell(client, ticker, extended_hours=False, urgency="normal"):
     cur_submit = None
     bid_submit = None
     lim_submit = None
+
+    # ── Urgent regular hours: market immediately (stop breach) ────────────
+    if urgency == "urgent" and not extended_hours:
+        try:
+            pos = client.get_open_position(ticker)
+            cur_submit = float(pos.current_price)
+            client.close_position(ticker)
+            log.info(f"  SELL MARKET [urgent] {ticker} closed")
+            time.sleep(2)
+            fill = _recent_filled_order(client, ticker, OrderSide.SELL, limit=10)
+            return _mk(True, True, fill=fill, method="market_urgent")
+        except Exception as e:
+            msg = str(e)
+            if "not found" in msg or "position" in msg.lower():
+                log.info(f"  SELL [urgent] {ticker}: position already closed")
+                fill = _recent_filled_order(client, ticker, OrderSide.SELL, limit=10)
+                return _mk(True, True, fill=fill, method="position_already_closed")
+            log.warning(f"  SELL MARKET [urgent] failed {ticker}: {e}")
+            # fall through to limit + market path
 
     # ── Step 1: try a limit sell ──────────────────────────────────────────
     try:
@@ -2150,7 +2173,7 @@ def build_plan(client, equity, cash, rgm, mode_name):
         entered_today = (entry_date == str(date.today()))
         pnl_frac = pos.get("pnl_pct", 0) / 100
 
-        if entered_today and STRICT_SAME_DAY_EXIT:
+        if _pdt_blocks_exit(entered_today, pnl_frac):
             continue
         if pnl_frac <= EXIT_STOP_LOSS:
             exit_plan.append({"ticker": ticker, "why": f"stop_loss ({pnl_frac*100:.1f}%)"})
@@ -2473,20 +2496,9 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
         entry_date = pos.get("entry_date", "")
         entered_today = (entry_date == str(date.today()))
 
-        # ── Strict PDT guard: never same-day exit when STRICT_SAME_DAY_EXIT ──
-        if entered_today and STRICT_SAME_DAY_EXIT:
+        # ── PDT guard: defer same-day midline/max-hold; stop breaches exit now ──
+        if _pdt_blocks_exit(entered_today, pnl_frac):
             stats["pdt_deferred"] += 1
-            if ticker in stop_breaches:
-                uid = f"{ticker}|{entry_date or 'unknown'}"
-                stoploss_look_items[uid] = {
-                    "id": uid,
-                    "ticker": ticker,
-                    "strategy": pos.get("strategy", "?"),
-                    "entry_date": entry_date or "unknown",
-                    "pnl_frac": stop_breaches[ticker],
-                    "root_cause": "PDT guard deferred exit",
-                    "explanation": "Position breached stop but was entered today, so strict PDT mode defers same-day exits.",
-                }
             row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                 "HOLDING until next session (entered today — PDT)")
             continue
@@ -2865,19 +2877,8 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
             pnl_frac = pos.get("pnl_pct", 0) / 100
             if pnl_frac <= EXIT_STOP_LOSS:
                 scan_stop_breaches[ticker] = pnl_frac
-            if entered_today and STRICT_SAME_DAY_EXIT:
+            if _pdt_blocks_exit(entered_today, pnl_frac):
                 scan_exit_stats["pdt_deferred"] += 1
-                if ticker in scan_stop_breaches:
-                    uid = f"{ticker}|{entry_date or 'unknown'}"
-                    scan_stoploss_look_items[uid] = {
-                        "id": uid,
-                        "ticker": ticker,
-                        "strategy": pos.get("strategy", "?"),
-                        "entry_date": entry_date or "unknown",
-                        "pnl_frac": scan_stop_breaches[ticker],
-                        "root_cause": "PDT guard deferred exit",
-                        "explanation": "Position breached stop but was entered today, so strict PDT mode defers same-day exits.",
-                    }
                 row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
                     "HOLDING until next session (entered today — PDT)")
                 continue
