@@ -370,3 +370,15 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-16 14:02:16,2026-06-16,BUY,NWE,Pullback50,71.16,71.16,71.16,13.74,0.0,0.0,market_submit,,bull
 2026-06-16 14:02:26,2026-06-16,BUY,POR,Pullback50,50.67,50.67,50.67,13.74,0.0,0.0,market_submit,,bull
 2026-06-16 14:30:55,2026-06-16,SELL,VRT,Pullback50,307.0001,307.0,307.07,7.92,0.0228,0.0018,limit_fill_position_check,stop_loss (-1.7%),bull
+2026-06-16 19:49:23,2026-06-16,BUY,BALL,Pullback50,57.95,57.95,57.95,14.86,0.0,0.0,market_submit,,bull
+2026-06-16 19:49:33,2026-06-16,BUY,ETR,Pullback50,112.14,112.14,112.14,14.86,0.0,0.0,market_submit,,bull
+2026-06-16 19:49:44,2026-06-16,BUY,EXC,Pullback50,46.44,46.44,46.44,14.86,0.0,0.0,market_submit,,bull
+2026-06-16 19:49:54,2026-06-16,BUY,FE,Pullback50,47.58,47.58,47.58,14.86,0.0,0.0,market_submit,,bull
+2026-06-16 19:50:05,2026-06-16,BUY,HSY,MomReversal,181.95,181.95,181.95,14.86,0.0,0.0,market_submit,,bull
+2026-06-16 19:50:15,2026-06-16,BUY,SO,Pullback50,94.1,94.1,94.1,14.86,0.0,0.0,market_submit,,bull
+2026-06-16 19:50:26,2026-06-16,BUY,TFC,Pullback50,49.16,49.16,49.16,14.86,0.0,0.0,market_submit,,bull
+2026-06-16 19:50:37,2026-06-16,BUY,VLO,Pullback50,244.32,244.32,244.32,14.86,0.0,0.0,market_submit,,bull
+2026-06-16 19:50:47,2026-06-16,BUY,WEC,Pullback50,114.23,114.23,114.23,14.86,0.0,0.0,market_submit,,bull
+2026-06-16 19:50:58,2026-06-16,BUY,KNF,Pullback50,82.09,82.09,82.09,14.86,0.0,0.0,market_submit,,bull
+2026-06-16 19:51:08,2026-06-16,BUY,NVST,Pullback50,24.83,24.83,24.83,14.86,0.0,0.0,market_submit,,bull
+2026-06-16 19:51:19,2026-06-16,BUY,RNR,Pullback50,299.16,299.16,299.16,14.86,0.0,0.0,market_submit,,bull
