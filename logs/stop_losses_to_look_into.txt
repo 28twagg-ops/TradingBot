@@ -2043,3 +2043,27 @@ Stop threshold: -0.50%
 Root cause: PDT guard deferred exit
 Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
 
+------------------------------------------------------------------------
+Timestamp: 2026-06-16 20:00:45
+ID: HUBB|2026-06-16
+Mode: ext_exits
+Ticker: HUBB
+Strategy: Pullback50
+Entry date: 2026-06-16
+P&L at breach: -1.20%
+Stop threshold: -0.50%
+Root cause: PDT guard deferred exit
+Explanation: Position breached stop but was entered today, so strict PDT mode defers same-day exits.
+
+------------------------------------------------------------------------
+Timestamp: 2026-06-16 20:00:45
+ID: NVDA|2026-06-15
+Mode: ext_exits
+Ticker: NVDA
+Strategy: Pullback50
+Entry date: 2026-06-15
+P&L at breach: -0.76%
+Stop threshold: -0.50%
+Root cause: After-hours limit still pending
+Explanation: Stop breached but extended-hours order is limit-only and did not fill immediately; follow-up occurs next regular-hours run.
+
