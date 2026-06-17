@@ -781,3 +781,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-06-17 15:30:40,2026-06-17,SELL,FE,Pullback50,47.18,5.67,-0.8,-0.05,0,stop_loss (-0.8%),bull,482.98
 2026-06-17 15:30:43,2026-06-17,SELL,EG,Pullback50,339.79,5.69,-0.52,-0.03,0,stop_loss (-0.5%),bull,482.97
 2026-06-17 15:45:38,2026-06-17,SELL,L,Pullback50,108.04,5.69,-0.54,-0.03,0,stop_loss (-0.5%),bull,483.05
+2026-06-17 16:00:35,2026-06-17,SELL,POR,Pullback50,50.22,5.69,-0.51,-0.03,0,stop_loss (-0.5%),bull,482.91
