@@ -791,3 +791,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-06-17 21:45:26,ext_exits,bull,482.27,228.83,0,0,0,12,AES|CF|CNX|DTM|EA|FCFS|GEV|GTLS|RGA|RNR|VC|XOM,both
 2026-06-17 22:00:32,ext_exits,bull,482.29,228.83,0,0,0,12,AES|CF|CNX|DTM|EA|FCFS|GEV|GTLS|RGA|RNR|VC|XOM,both
 2026-06-17 22:15:27,ext_exits,bull,482.28,228.83,0,0,0,12,AES|CF|CNX|DTM|EA|FCFS|GEV|GTLS|RGA|RNR|VC|XOM,both
+2026-06-17 22:30:26,ext_exits,bull,482.26,228.83,0,0,0,12,AES|CF|CNX|DTM|EA|FCFS|GEV|GTLS|RGA|RNR|VC|XOM,both
