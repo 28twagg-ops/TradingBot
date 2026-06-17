@@ -1,0 +1,202 @@
+{
+  "mode_name": "evening",
+  "date": "2026-06-17",
+  "month": 6,
+  "regime": "bull",
+  "positions_count": 12,
+  "positions_snapshot": [
+    {
+      "ticker": "AES",
+      "strategy": "Pullback50",
+      "dollar_amt": 5.691494,
+      "entry_price": 14.648,
+      "current_price": 14.575,
+      "pnl_pct": -0.498,
+      "pnl_dollar": -0.028506
+    },
+    {
+      "ticker": "AMT",
+      "strategy": "Pullback50",
+      "dollar_amt": 5.677084,
+      "entry_price": 182.6,
+      "current_price": 181.23,
+      "pnl_pct": -0.75,
+      "pnl_dollar": -0.042916
+    },
+    {
+      "ticker": "CF",
+      "strategy": "unknown",
+      "dollar_amt": 8.054342,
+      "entry_price": 105.414,
+      "current_price": 105.34,
+      "pnl_pct": -0.06999999999999999,
+      "pnl_dollar": -0.005658
+    },
+    {
+      "ticker": "DTM",
+      "strategy": "Pullback50",
+      "dollar_amt": 8.048461,
+      "entry_price": 140.396,
+      "current_price": 140.195,
+      "pnl_pct": -0.14300000000000002,
+      "pnl_dollar": -0.011539
+    },
+    {
+      "ticker": "EA",
+      "strategy": "Pullback50",
+      "dollar_amt": 5.716956,
+      "entry_price": 202.968,
+      "current_price": 202.86,
+      "pnl_pct": -0.053,
+      "pnl_dollar": -0.003044
+    },
+    {
+      "ticker": "FANG",
+      "strategy": "unknown",
+      "dollar_amt": 8.003109,
+      "entry_price": 187.01,
+      "current_price": 185.69,
+      "pnl_pct": -0.7060000000000001,
+      "pnl_dollar": -0.056891
+    },
+    {
+      "ticker": "FCFS",
+      "strategy": "Pullback50",
+      "dollar_amt": 5.890291,
+      "entry_price": 218.466,
+      "current_price": 224.97,
+      "pnl_pct": 2.9770000000000003,
+      "pnl_dollar": 0.170291
+    },
+    {
+      "ticker": "GEV",
+      "strategy": "Pullback50",
+      "dollar_amt": 5.934577,
+      "entry_price": 1010.088,
+      "current_price": 1047.98,
+      "pnl_pct": 3.7510000000000003,
+      "pnl_dollar": 0.214578
+    },
+    {
+      "ticker": "GTLS",
+      "strategy": "Pullback50",
+      "dollar_amt": 13.694099,
+      "entry_price": 207.282,
+      "current_price": 206.74,
+      "pnl_pct": -0.261,
+      "pnl_dollar": -0.035901
+    },
+    {
+      "ticker": "NWS",
+      "strategy": "Pullback50",
+      "dollar_amt": 5.663536,
+      "entry_price": 29.986,
+      "current_price": 29.69,
+      "pnl_pct": -0.987,
+      "pnl_dollar": -0.056464
+    },
+    {
+      "ticker": "RGA",
+      "strategy": "Pullback50",
+      "dollar_amt": 5.770253,
+      "entry_price": 210.29,
+      "current_price": 212.1375,
+      "pnl_pct": 0.8789999999999999,
+      "pnl_dollar": 0.050253
+    },
+    {
+      "ticker": "XOM",
+      "strategy": "unknown",
+      "dollar_amt": 8.117533,
+      "entry_price": 139.534,
+      "current_price": 140.53,
+      "pnl_pct": 0.714,
+      "pnl_dollar": 0.057533
+    }
+  ],
+  "open_sell_orders": [],
+  "scan_universe_count": 891,
+  "exit_plan": [
+    {
+      "ticker": "AMT",
+      "why": "stop_loss (-0.8%)"
+    },
+    {
+      "ticker": "FANG",
+      "why": "stop_loss (-0.7%)"
+    },
+    {
+      "ticker": "NWS",
+      "why": "stop_loss (-1.0%)"
+    }
+  ],
+  "signals": [
+    {
+      "ticker": "VRT",
+      "strategy": "Pullback50",
+      "close": 322.29,
+      "rsi": 52.9,
+      "vol_z": -0.79,
+      "trigger": "50MA bounce (+0.5%)",
+      "seasonal": false,
+      "month": 6,
+      "regime": "bull"
+    },
+    {
+      "ticker": "CNX",
+      "strategy": "MomReversal",
+      "close": 32.57,
+      "rsi": 38.7,
+      "vol_z": 1.34,
+      "trigger": "-19.9% drop/60d stabilising",
+      "seasonal": false,
+      "month": 6,
+      "regime": "bull"
+    },
+    {
+      "ticker": "ORA",
+      "strategy": "GapDown",
+      "close": 126.72,
+      "rsi": 34.8,
+      "vol_z": -0.18,
+      "trigger": "gap -5.5% recovered",
+      "seasonal": true,
+      "month": 6,
+      "regime": "bull"
+    },
+    {
+      "ticker": "ORA",
+      "strategy": "Pullback50",
+      "close": 126.72,
+      "rsi": 34.8,
+      "vol_z": -0.18,
+      "trigger": "50MA bounce (+1.0%)",
+      "seasonal": false,
+      "month": 6,
+      "regime": "bull"
+    },
+    {
+      "ticker": "RNR",
+      "strategy": "Pullback50",
+      "close": 299.86,
+      "rsi": 62.5,
+      "vol_z": -2.2,
+      "trigger": "50MA bounce (+0.3%)",
+      "seasonal": false,
+      "month": 6,
+      "regime": "bull"
+    },
+    {
+      "ticker": "VC",
+      "strategy": "Pullback50",
+      "close": 111.49,
+      "rsi": 37.2,
+      "vol_z": -1.06,
+      "trigger": "50MA bounce (+0.8%)",
+      "seasonal": false,
+      "month": 6,
+      "regime": "bull"
+    }
+  ],
+  "saved_at_utc": "2026-06-17T19:34:10Z"
+}
