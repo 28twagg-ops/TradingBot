@@ -412,3 +412,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-17 14:15:44,2026-06-17,SELL,VFC,Pullback50,17.965,,17.965,5.69,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-06-17 14:45:33,2026-06-17,SELL,SBUX,Pullback50,100.705,,100.705,5.68,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
 2026-06-17 14:45:35,2026-06-17,SELL,IDA,Pullback50,141.82,,141.82,5.69,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
+2026-06-17 15:00:39,2026-06-17,SELL,NVDA,Pullback50,206.6275,,206.63,5.68,0.0012,0.0001,market_urgent_full,stop_loss (-0.7%),bull
