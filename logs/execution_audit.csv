@@ -423,3 +423,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-17 17:00:39,2026-06-17,SELL,TDY,Pullback50,628.135,,628.135,5.68,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
 2026-06-17 17:15:40,2026-06-17,SELL,CNH,Pullback50,10.605,,10.605,5.69,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-06-17 17:30:30,2026-06-17,SELL,ED,Pullback50,107.12,,107.12,5.69,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-06-17 17:45:37,2026-06-17,SELL,NI,Pullback50,47.23,,47.23,5.69,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
