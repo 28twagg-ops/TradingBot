@@ -775,3 +775,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-06-17 13:53:03,2026-06-17,SELL,NVST,Pullback50,25.63,15.34,2.55,0.38,1,midline (+2.5%),bull,482.97
 2026-06-17 14:15:42,2026-06-17,SELL,ORA,GapDown,125.3,5.65,-1.16,-0.07,0,stop_loss (-1.2%),bull,482.94
 2026-06-17 14:15:44,2026-06-17,SELL,VFC,Pullback50,17.96,5.69,-0.57,-0.03,0,stop_loss (-0.6%),bull,482.94
+2026-06-17 14:45:33,2026-06-17,SELL,SBUX,Pullback50,100.7,5.68,-0.73,-0.04,0,stop_loss (-0.7%),bull,483.0
+2026-06-17 14:45:35,2026-06-17,SELL,IDA,Pullback50,141.82,5.69,-0.58,-0.03,0,stop_loss (-0.6%),bull,483.01
