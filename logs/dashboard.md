@@ -1,45 +1,46 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Generated: 2026-06-18 13:15  |  Log source: `logs/`*
+*Generated: 2026-06-18 13:30  |  Log source: `logs/`*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $482.07 |
+| **Current Equity** | $482.71 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | -3.59% ($-17.93) |
+| **Total Return** | -3.46% ($-17.29) |
 | **Peak Equity** | $513.45 |
 | **Max Drawdown** | -6.33% |
-| **Current Cash** | $228.83 |
-| **Open Positions** | 12 (AES|CF|CNX|DTM|EA|FCFS|GEV|GTLS|RGA|RNR|VC|XOM) |
-| **Last Bot Run** | 2026-06-18 13:15:28 |
+| **Current Cash** | $244.82 |
+| **Open Positions** | 10 (AES|CNX|EA|FCFS|GEV|GTLS|RGA|RNR|VC|XOM) |
+| **Last Bot Run** | 2026-06-18 13:30:52 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 438 |
-| **Wins / Losses** | 153 / 285 |
-| **Win Rate** | 34.9% |
-| **Avg Win** | +2.06% |
+| **Total Closed Trades** | 440 |
+| **Wins / Losses** | 154 / 286 |
+| **Win Rate** | 35.0% |
+| **Avg Win** | +2.04% |
 | **Avg Loss** | -1.48% |
 | **Profit Factor** | 0.73x |
 | **Avg Hold Days** | 1.6d |
-| **Total P&L** | $-17.19 |
+| **Total P&L** | $-17.26 |
 
 ## Exit Reasons
 | Exit Type | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `stop_loss` | 245 | 0% | -1.68% |
+| `stop_loss` | 246 | 0% | -1.68% |
 | `midline` | 125 | 79% | +1.55% |
-| `max_hold` | 68 | 79% | +1.63% |
+| `max_hold` | 69 | 80% | +1.61% |
 
 ## Strategy Breakdown
 | Strategy | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `Pullback50` | 353 | 35% | -0.20% |
+| `Pullback50` | 354 | 35% | -0.19% |
 | `GapDown` | 68 | 34% | -0.81% |
 | `RSIRecovery` | 8 | 50% | +1.82% |
 | `MomReversal` | 5 | 40% | +0.88% |
 | `VolumeSpike` | 4 | 50% | -0.63% |
+| `unknown` | 1 | 0% | -1.04% |
 
 ## Equity Timeline
 | Date | Equity | Change |
@@ -63,11 +64,13 @@
 | 2026-06-15 | $485.99 | -0.41 |
 | 2026-06-16 | $483.51 | -2.48 |
 | 2026-06-17 | $482.32 | -1.19 |
-| 2026-06-18 | $482.07 | -0.25 |
+| 2026-06-18 | $482.71 | +0.39 |
 
 ## Recent Closed Trades (newest first)
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
 |---|---|---|---|---|---|---|
+| 2026-06-18 | **DTM** | `Pullback50` | +0.17% | $+0.01 | 3d | max_hold 3d (+0.2%) |
+| 2026-06-18 | **CF** | `unknown` | -1.04% | $-0.08 | 0d | stop_loss (-1.0%) |
 | 2026-06-17 | **AMT** | `Pullback50` | -0.61% | $-0.04 | 0d | stop_loss (-0.6%) |
 | 2026-06-17 | **FANG** | `Pullback50` | -0.98% | $-0.08 | 0d | stop_loss (-1.0%) |
 | 2026-06-17 | **NWS** | `Pullback50` | -1.34% | $-0.08 | 0d | stop_loss (-1.3%) |
@@ -86,14 +89,14 @@
 | 2026-06-17 | **EG** | `Pullback50` | -0.52% | $-0.03 | 0d | stop_loss (-0.5%) |
 | 2026-06-17 | **FE** | `Pullback50` | -0.80% | $-0.05 | 0d | stop_loss (-0.8%) |
 | 2026-06-17 | **NVDA** | `Pullback50` | -0.72% | $-0.04 | 0d | stop_loss (-0.7%) |
-| 2026-06-17 | **IDA** | `Pullback50` | -0.58% | $-0.03 | 0d | stop_loss (-0.6%) |
-| 2026-06-17 | **SBUX** | `Pullback50` | -0.73% | $-0.04 | 0d | stop_loss (-0.7%) |
 
 <details>
 <summary>Full trade history (all closed trades)</summary>
 
 | Date | Ticker | P&L% | P&L$ | Hold | Exit Reason |
 |---|---|---|---|---|---|
+| 2026-06-18 | DTM | +0.17% | $+0.01 | 3d | max_hold 3d (+0.2%) |
+| 2026-06-18 | CF | -1.04% | $-0.08 | 0d | stop_loss (-1.0%) |
 | 2026-06-17 | AMT | -0.61% | $-0.04 | 0d | stop_loss (-0.6%) |
 | 2026-06-17 | FANG | -0.98% | $-0.08 | 0d | stop_loss (-1.0%) |
 | 2026-06-17 | NWS | -1.34% | $-0.08 | 0d | stop_loss (-1.3%) |
