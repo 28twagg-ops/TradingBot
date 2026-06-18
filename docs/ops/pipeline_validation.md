@@ -31,8 +31,8 @@ New `runs.csv` columns: `duration_s`, `cache_hit`. Monitor after deploy.
 | Cron | ET mode |
 |------|---------|
 | 8:30 | exits |
-| 8:35 | morning_prep |
-| 8:45 | morning_scan |
+| 8:35 | exits (morning_prep removed) |
+| 8:45 | exits (was morning_scan) |
 | 9:00–14:30 | exits every 15m |
 | 14:30 | evening_prep |
 | 14:45 | scan |

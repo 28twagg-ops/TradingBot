@@ -150,13 +150,10 @@ USE_EXTENDED_HOURS_SELL = False
 WEEKLY_MAX_HOLDINGS_PRINT = 8
 
 # ---- Daily entry cap ---------------------------------------------------------
-# Cap sweep (5yr, 900 stocks): 5/day = +215% vs 3/day = +187% (+28pp)
-# Max entries per day = floor(available_cash / MIN_TRADE_SIZE).
-# No hardcoded cap — cash is the real constraint. With a $500 account and
-# $20 min size that's ~24 max entries; as the account grows so does the cap.
-# NOTE: pdt_n() counts TODAY only (fixed 2026-05-10 — the 7-day rolling window
-# was silently zeroing mid-week runs after a busy Mon/Tue).
-# MAX_DAY_TRADES is computed dynamically in run_scan() — not a global constant.
+# MAX_OPEN_POSITIONS caps concurrent holdings so ~$500 accounts get ~$90/slot
+# (whole-share broker GTC stops) instead of 30+ fractional fragments.
+MAX_OPEN_POSITIONS = 5
+# Max entries per scan also bounded by floor(avail / MIN_TRADE_SIZE).
 
 # ---- Earnings filter ---------------------------------------------------------
 # Skip buy signals if the stock has earnings within this many calendar days.
@@ -2301,8 +2298,8 @@ def detect_mode():
     if dow == 4 and h >= 20: return "weekly"
     # 9:44–9:59am ET: exits only (morning_scan removed — evening-only entries)
     if h == 9 and m >= 44: return "exits"
-    # Morning prep: 9:35–9:43am ET (Chicago 8:35 cron)
-    if h == 9 and 35 <= m <= 43: return "morning_prep"
+    # 9:35–9:43am ET: exits (morning_prep disabled — evening-only entries)
+    if h == 9 and 35 <= m <= 43: return "exits"
     # Early morning exits: 9:30–9:34am ET
     if h == 9 and m >= 30: return "exits"
     # Evening scan: 3:44–3:59pm ET (Chicago 2:45 cron)
@@ -2786,11 +2783,11 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     row("Off-sched trade", f"${equity*OFFSCHEDULE_SIZE_PCT:,.2f}  ({OFFSCHEDULE_SIZE_PCT*100:.0f}% -- other strategies)")
     ftr()
 
-    # Dynamic entry cap: how many MIN_TRADE_SIZE positions fit in available cash.
-    # No hardcoded limit — cash is the real constraint.
-    max_trades = max(1, int(avail // MIN_TRADE_SIZE))
-
     positions = enrich(client, get_positions(client)); pdt = load_pdt()
+    # Dynamic entry cap: cash slots + MAX_OPEN_POSITIONS concurrent holdings.
+    max_trades = max(1, int(avail // MIN_TRADE_SIZE))
+    if MAX_OPEN_POSITIONS:
+        max_trades = min(max_trades, max(0, MAX_OPEN_POSITIONS - len(positions)))
     plan_mode_name = "morning" if mode_name == "morning_scan" else "evening"
     plan_file = _plan_file_for_mode(plan_mode_name)
     cached_plan = _load_plan(plan_file)
@@ -2824,7 +2821,8 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         row("Total open P&L", f"${pnl:+,.2f}")
     else:
         blank(); row("No open positions."); blank()
-    row(f"PDT round trips today: {pdt_n(pdt)}  |  cash-based cap now: {max_trades}")
+    row(f"PDT round trips today: {pdt_n(pdt)}  |  entry cap: {max_trades}"
+        f"  |  max open: {MAX_OPEN_POSITIONS}")
     ftr()
 
     hdr("PLAN CACHE")
@@ -3152,11 +3150,14 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
                 f"(max sea=${equity*SEASONAL_SIZE_PCT:.0f} off=${equity*OFFSCHEDULE_SIZE_PCT:.0f})")
         entries = 0; buys_log = []; unconfirmed_buys = 0; pending_buys = []
         n_unfilled_sea = n_sea_pending  # decrements as seasonal signals get filled
+        n_open = len(positions)
         for sig in all_sigs:
             ticker = sig["ticker"]; strategy = sig["strategy"]
             is_seasonal = sig.get("seasonal", False)
             skip = ""
             if not pdt_ok(pdt, max_trades):   skip = "PDT limit"
+            elif MAX_OPEN_POSITIONS and n_open >= MAX_OPEN_POSITIONS:
+                skip = f"cap {MAX_OPEN_POSITIONS}"
             elif avail <= 1.0:    skip = "reserve floor"
             da = sea_da if is_seasonal else off_da
             # Seasonal reserve: don't let off-schedule buys crowd out unfilled
@@ -3179,6 +3180,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
             row(f"  ENTER [{tier}] {ticker}  {strategy}", f"${da:.2f}")
             buy_res = do_buy(client, ticker, da, strategy, expected_price=sig["close"], fast_submit=True)
             if buy_res.get("ok"):
+                n_open += 1
                 # Submitted orders consume buying power, even if confirmation lags.
                 avail -= da
                 if buy_res.get("filled"):
@@ -3295,7 +3297,8 @@ if __name__ == "__main__":
     ftr()
 
     if mode == "morning_prep":
-        run_prep(client, equity, cash, rgm, mode_name="morning")
+        log.info("morning_prep deprecated — evening-only entries; running exits")
+        run_exits(client, equity, cash, rgm)
     elif mode == "evening_prep":
         run_prep(client, equity, cash, rgm, mode_name="evening")
     elif mode == "morning_scan":
