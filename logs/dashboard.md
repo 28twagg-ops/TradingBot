@@ -1,5 +1,5 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Generated: 2026-06-18 15:00  |  Log source: `logs/`*
+*Generated: 2026-06-18 15:15  |  Log source: `logs/`*
 
 ## Account Snapshot
 | | |
@@ -11,7 +11,7 @@
 | **Max Drawdown** | -6.49% |
 | **Current Cash** | $407.88 |
 | **Open Positions** | 7 (AES|CNX|EA|FCFS|GEV|GTLS|RGA) |
-| **Last Bot Run** | 2026-06-18 15:00:35 |
+| **Last Bot Run** | 2026-06-18 15:15:37 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
