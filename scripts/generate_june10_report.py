@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LOGS = ROOT / "logs"
 TARGET = "2026-06-10"
-OUT = LOGS / "june_10_incident_report.md"
+OUT = ROOT / "docs" / "incidents" / "june_10_incident_report.md"
 
 
 def load_stop_items_for_date(target):

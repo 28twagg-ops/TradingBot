@@ -1,6 +1,6 @@
 name: Rubber Band Bot
 
-# cron-job.org webhook (Chicago): see logs/failed_run_diagnosis.md for schedule.
+# cron-job.org webhook (Chicago): see docs/ops/failed_run_diagnosis.md for schedule.
 # Modes auto-detected via BOT_MODE=auto or explicit workflow_dispatch input.
 
 on:
