@@ -1,0 +1,296 @@
+============================================================================
+  RUBBER BAND BOT — VALIDATION SIMULATOR
+  Run date:      2026-06-17 20:07
+  Universe:      BOTH  (20 years)
+  Capital:       $500
+  WF IS/OOS:     60% / 40%
+  Slippage mult: 2.0x stop
+  Live bot:      stop=-0%  hold=3d  seas=20%  off=20%
+  Tests to run:  [2, 3, 6, 17, 22, 33]
+  Tests 9+10:    9=realistic-exit  10=rolling-WF+hold-period+significance
+  Tests 14-17:   RSIRecovery regression, Oct deep-dive, bear override, freq
+  Tests 22-25:   bid-ask spread, compounding, multi-day gaps, look-ahead bias
+  Test 33:       empirical live stop slippage replay from transactions.csv
+============================================================================
+
+  Loaded: 899 stocks  (20yr  BOTH)
+
+============================================================================
+  TEST 2: YEAR-BY-YEAR STRATEGY BREAKDOWN
+============================================================================
+
+  Win rate % by year (stop=-0%  hold=3d)
+  Strategy       2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026
+----------------------------------------------------------------------------
+  RubberBand       53%   47%   55%   59%   52%   58%   54%   49%   57%   50%   55%   46%   59%   54%   56%   45%   50%   48%   54%   47%
+  52wkLow          52%   51%   58%   58%   58%   57%   62%   58%   52%   61%   59%   53%   59%   51%   55%   50%   57%   56%   56%   46%
+  MomReversal      48%   50%   59%   61%   51%   55%   55%   55%   55%   61%   53%   54%   59%   56%   51%   50%   57%   57%   59%   47%
+  GapDown          48%   48%   56%   50%   54%   46%   52%   56%   54%   59%   57%   48%   55%   54%   58%   58%   54%   55%   59%   53%
+  VolumeSpike      55%   53%   54%   54%   53%   53%   55%   52%   52%   53%   55%   51%   58%   52%   53%   56%   57%   57%   54%   56%
+  Pullback50       57%   51%   57%   57%   55%   57%   61%   60%   56%   58%   64%   59%   61%   53%   60%   53%   57%   59%   57%   63%
+  GoldenCross      51%   48%   46%   50%   52%   54%   52%   54%   54%   57%   61%   53%   54%   54%   56%   46%   54%   56%   52%   61%
+  EarningsDip      44%   46%   50%   54%   40%   50%   48%   50%   57%   47%   58%   45%   50%   34%   62%   56%   50%   50%   46%   54%
+  RSIRecovery      54%   48%   61%   54%   55%   56%   56%   57%   55%   61%   63%   57%   61%   56%   54%   54%   56%   59%   59%   49%
+
+  Annual return % by year
+  Strategy          2007    2008    2009    2010    2011    2012    2013    2014    2015    2016    2017    2018    2019    2020    2021    2022    2023    2024    2025    2026
+----------------------------------------------------------------------------
+  RubberBand      +36.2% +114.0%  +56.1%  +59.8%  +55.7%  +20.3%  +30.4%  +21.4%  +50.7%  +31.0%  +35.8%  +43.3%  +50.0%  +55.9%  +57.7%  +88.4%  +41.0%  +31.7%  +66.7%  +18.2%
+  52wkLow         +88.4% +369.8% +101.6% +106.4% +236.6% +150.2% +124.2%  +88.0%  +98.7% +147.3%  +99.9% +111.2% +214.3% +187.9%  +54.1% +162.9% +147.3% +147.2% +147.9%  +23.2%
+  MomReversal     +67.5% +257.3% +171.0%  +64.1%  +84.6%  +75.1%  +48.7%  +95.9% +100.7% +105.5%  +55.1%  +98.8% +101.1% +125.7%  +60.4% +131.4% +108.5%  +97.5% +152.0%  +40.4%
+  GapDown         +50.7% +424.9% +398.0%  +83.9% +173.0%  +74.0%  +84.3% +101.8%  +99.0% +122.7%  +70.3%  +75.1% +116.6% +261.6% +138.7% +275.7% +120.7% +149.5% +182.8%  +33.0%
+  VolumeSpike    +159.5% +155.5% +225.3% +131.6% +121.6%  +80.8% +113.6% +108.9% +133.8% +146.4% +162.6% +109.3% +192.4% +242.8% +147.7% +192.9% +225.7% +240.0% +199.3%  +48.5%
+  Pullback50      +80.4%  +99.3% +143.9%  +99.2%  +95.4%  +60.2% +104.5%  +70.9%  +62.8%  +82.7%  +74.7%  +97.1% +100.9% +128.4% +103.7% +107.6%  +82.5% +101.0%  +93.6%  +28.4%
+  GoldenCross     +30.8%  +40.3%  +68.7%  +36.3%  +28.6%  +50.5%  +27.7%  +24.7%  +27.3%  +45.7%  +43.0%  +20.0%  +48.5% +120.9%  +29.9%  +22.4%  +60.8%  +54.6%  +55.5%  +25.1%
+  EarningsDip      +4.7%  +59.4%  +34.3%  +22.1%  +12.9%  +24.2%   +8.5%  +13.7%  +25.4%  +17.5%  +22.6%  +27.9%  +30.0%  +11.4%  +22.1%  +54.4%  +26.0%  +30.2%  +36.5%  +12.9%
+  RSIRecovery     +65.7% +203.7% +192.8%  +64.1%  +96.8%  +86.4%  +83.5%  +68.1%  +81.5% +108.8% +101.9%  +82.1% +117.8% +154.5%  +88.7% +114.1%  +99.0% +121.6% +125.9%  +31.5%
+
+  Consistency (positive years / total years tested):
+----------------------------------------------------------------------------
+  RubberBand      positive 20/20 years  avg_annual=+48.2% ← IN LIVE BOT
+  52wkLow         positive 20/20 years  avg_annual=+140.3% ← IN LIVE BOT
+  MomReversal     positive 20/20 years  avg_annual=+102.1% ← IN LIVE BOT
+  GapDown         positive 20/20 years  avg_annual=+151.8% ← IN LIVE BOT
+  VolumeSpike     positive 20/20 years  avg_annual=+156.9% ← IN LIVE BOT
+  Pullback50      positive 20/20 years  avg_annual=+90.9% ← IN LIVE BOT
+  GoldenCross     positive 20/20 years  avg_annual=+43.1% ← REMOVED
+  EarningsDip     positive 20/20 years  avg_annual=+24.8% ← REMOVED
+  RSIRecovery     positive 20/20 years  avg_annual=+104.4% ← IN LIVE BOT
+
+  Elapsed: 0.1m
+
+============================================================================
+  TEST 3: REGIME BREAKDOWN (bull / correction / bear)
+============================================================================
+
+  --- BULL REGIME ---
+  Strategy        Signals   Win%  AvgP&L%     Ret%
+----------------------------------------------------------------------------
+  RubberBand    *    2,330   53.9%   +1.06%  +391.8%
+  52wkLow       *   39,243   54.1%   +1.30% +9367.0%
+  MomReversal   *    9,897   53.0%   +1.33% +2457.8%
+  GapDown       *   13,839   53.8%   +1.42% +3491.3%
+  VolumeSpike   *   42,396   54.0%   +0.64% +4903.0%
+  Pullback50    *  124,309   57.5%   +0.49% +10259.0%
+  GoldenCross        9,067   53.1%   +0.45%  +791.1%
+  EarningsDip        1,542   48.6%   +1.08%  +333.7%
+  RSIRecovery   *   20,090   56.4%   +1.03% +3726.0%
+
+  --- CORRECTION REGIME ---
+  Strategy        Signals   Win%  AvgP&L%     Ret%
+----------------------------------------------------------------------------
+  RubberBand    *   12,916   52.0%   +1.59% +1541.7%
+  52wkLow       *   16,330   54.3%   +1.60% +2369.0%
+  MomReversal   *    3,818   56.8%   +1.64%  +822.1%
+  GapDown       *    4,735   53.2%   +1.58%  +929.9%
+  VolumeSpike   *    4,919   55.3%   +0.89%  +673.4%
+  Pullback50    *   12,725   58.9%   +0.67% +1183.8%
+  GoldenCross        1,471   54.0%   +0.57%  +142.4%
+  EarningsDip          342   53.8%   +1.59%  +104.0%
+  RSIRecovery   *    5,301   58.7%   +1.43%  +726.8%
+
+  --- BEAR REGIME ---
+  Strategy        Signals   Win%  AvgP&L%     Ret%
+----------------------------------------------------------------------------
+  RubberBand    *    2,092   52.6%   +2.27%  +298.8%
+  52wkLow       *   23,054   58.0%   +2.31% +2553.8%
+  MomReversal   *    5,059   58.7%   +2.47% +1071.0%
+  GapDown       *    9,586   58.4%   +2.68% +1884.3%
+  VolumeSpike   *    2,432   57.9%   +1.31%  +551.1%
+  Pullback50    *    5,437   57.7%   +0.78%  +669.4%
+  GoldenCross          550   49.9%   +0.81%   +82.3%
+  EarningsDip          293   53.7%   +2.71%  +132.1%
+  RSIRecovery   *    5,004   57.6%   +2.16%  +849.0%
+
+  (* = currently in live bot)
+
+  Elapsed: 0.0m
+
+============================================================================
+  TEST 6: CRASH STRESS TEST
+============================================================================
+  Tests performance during three known crash windows:
+    COVID crash            2020-02-19 → 2020-04-30
+    2022 bear mkt          2022-01-03 → 2022-10-12
+    2025 tariff shk        2025-04-01 → 2025-06-30
+
+  --- COVID CRASH (2020-02-19 → 2020-04-30) ---
+  Strategy        Signals   Win%  AvgP&L%     Ret%  Note
+----------------------------------------------------------------------------
+  RubberBand    *    1,270   31.6%   +2.91%   +22.5%  ✗ struggling
+  52wkLow       *    4,014   57.1%   +5.33%   +76.9%  ✓ solid
+  MomReversal   *      785   30.4%   +2.10%   +27.0%  ✗ struggling
+  GapDown       *    3,143   53.2%   +3.28%   +81.8%  
+  VolumeSpike   *      135   45.1%   +3.08%   +56.6%  
+  Pullback50    *      505   43.7%   +0.83%   +23.5%  
+  GoldenCross           19   38.9%   -0.16%    -0.7%  ✗ struggling
+  EarningsDip           34   30.0%   +0.87%    +3.6%  ✗ struggling
+  RSIRecovery   *    1,128   44.8%   +4.29%   +43.1%  
+
+  --- 2022 BEAR MKT (2022-01-03 → 2022-10-12) ---
+  Strategy        Signals   Win%  AvgP&L%     Ret%  Note
+----------------------------------------------------------------------------
+  RubberBand    *    1,565   46.8%   +1.41%   +70.6%  
+  52wkLow       *    8,668   47.0%   +1.02%   +94.3%  
+  MomReversal   *    1,761   49.5%   +1.31%   +95.7%  
+  GapDown       *    1,444   57.1%   +1.88%  +203.8%  ✓ solid
+  VolumeSpike   *    1,553   54.7%   +0.88%  +109.9%  
+  Pullback50    *    3,780   51.3%   +0.47%   +64.0%  
+  GoldenCross          412   43.6%   +0.23%   +15.8%  
+  EarningsDip          103   50.6%   +2.41%   +41.7%  
+  RSIRecovery   *    2,261   50.8%   +1.07%   +76.0%  
+
+  --- 2025 TARIFF SHK (2025-04-01 → 2025-06-30) ---
+  Strategy        Signals   Win%  AvgP&L%     Ret%  Note
+----------------------------------------------------------------------------
+  RubberBand    *      323   63.6%   +2.17%   +20.5%  ✓ solid
+  52wkLow       *    1,920   58.7%   +1.54%   +40.7%  ✓ solid
+  MomReversal   *      378   67.9%   +1.73%   +31.2%  ✓ solid
+  GapDown       *    1,031   62.9%   +1.89%   +50.1%  ✓ solid
+  VolumeSpike   *      686   54.9%   +1.16%   +38.9%  
+  Pullback50    *    1,250   58.1%   +0.43%   +17.3%  ✓ solid
+  GoldenCross          171   58.8%   +0.59%   +13.6%  ✓ solid
+  EarningsDip           29   74.1%   +2.84%   +15.2%  ✓ solid
+  RSIRecovery   *      745   63.8%   +1.46%   +29.8%  ✓ solid
+
+  (* = currently in live bot)
+  GapDown is a mean-reversion buy-on-panic strategy — watch it closely in crashes.
+  If win rate is low during crashes → signals fire correctly but market keeps falling.
+
+  Elapsed: 0.0m
+
+============================================================================
+  TEST 17: SIGNAL FREQUENCY ANALYSIS
+============================================================================
+  Counts how often each strategy fires per month and per year.
+  Key concern: RSIRecovery requires an actual RSI cross above 30 —
+  it may fire less often than RubberBand (raw threshold), leaving
+  Apr/May/Nov with fewer entries and idle capital.
+
+  SIGNAL COUNTS BY MONTH  (total signals per strategy across all years)
+  Strategy         Jan   Feb   Mar   Apr   May   Jun   Jul   Aug   Sep   Oct   Nov   Dec    Total
+----------------------------------------------------------------------------
+  RubberBand      2269  1607  1925   935  1072  1279   462  2827   896  1765   897  1404    17338
+  RSIRecovery     2968  2270  3561  2086  2134  2714  1957  2786  2644  3236  2307  1732    30395
+  52wkLow         7927  5687  9475  4597  4709  6183  4637  5402  7899 10390  5656  6065    78627
+  MomReversal     1902  1207  2460  1024  1368  1663  1132  1292  1613  2579  1449  1085    18774
+  GapDown         2534  3009  3717  3089  1743  1519  1561  2408  1811  3195  2189  1385    28160
+  VolumeSpike     3529  3848  4582  3788  4098  5424  3329  2840  6252  3800  3668  4589    49747
+  Pullback50     10943 11653 12264 12327 13181 13576 12479 12461 11948 12108  9598  9933   142471
+
+  RSIRECOVERY vs RUBBERBAND IN APR/MAY/NOV  (live scheduled months)
+  Month      RubberBand   RSIRecovery   Ratio RSI/RB  Note
+----------------------------------------------------------------------------
+  Apr               935         2,086          2.23x  similar frequency ✓
+  May             1,072         2,134          1.99x  similar frequency ✓
+  Nov               897         2,307          2.57x  similar frequency ✓
+
+  ANNUAL SIGNAL COUNTS  (all 7 live strategies combined)
+  Strategy         2007   2008   2009   2010   2011   2012   2013   2014   2015   2016   2017   2018   2019   2020   2021   2022   2023   2024   2025   2026
+----------------------------------------------------------------------------
+  RubberBand        551   2008    274    834   1555    255    169    586   1567   1239    226   1454    356   1480    463   1951    988    334    804    244
+  RSIRecovery      1461   2407   1091   1206   1556   1134   1014   1484   1810   1487   1151   1726   1201   2026   1391   2430   1653   1539   2056    572
+  52wkLow          4101  11075   2351   1257   3109   1248    962   2587   5745   4060   2141   7215   1928   4580   1083   9878   4485   2768   6439   1615
+  MomReversal       874   2585    743    498    874    538    226    557   1122    938    348   1272    629   1220    488   1963   1285    759   1389    466
+  GapDown           700   4551   2415    732   1529    617    461    556   1097   1141    471    774    691   4730   1038   1810    882   1346   1934    685
+  VolumeSpike      1876   1278   1403   1974   1919   2741   2973   2908   2658   2655   3452   2618   3228   2228   2747   2201   3399   3734   3149    606
+  Pullback50       7077   2235   3890   6596   7284   8462   8672  10057   9204   7812  10452   8260   7636   4725   9627   4633   7514   9246   7272   1817
+
+  QUALITY vs QUANTITY: RSIRecovery vs RubberBand in Apr/May/Nov
+  Metric                         RubberBand   RSIRecovery
+----------------------------------------------------------------------------
+  Apr Win%                            53.8%         57.5%
+  Apr AvgP&L%                        +1.45%        +1.17%
+  Apr Ret%                           +90.9%       +186.8%
+  Apr Signals                           320           848
+----------------------------------------------------------------------------
+  May Win%                            59.7%         56.1%
+  May AvgP&L%                        +1.66%        +1.07%
+  May Ret%                          +146.5%       +224.2%
+  May Signals                           464         1,115
+----------------------------------------------------------------------------
+  Nov Win%                            51.2%         61.2%
+  Nov AvgP&L%                        +1.79%        +1.38%
+  Nov Ret%                          +112.0%       +267.1%
+  Nov Signals                           344         1,062
+----------------------------------------------------------------------------
+
+  If RSIRecovery win% and avg P&L are higher even with fewer signals,
+  the quality improvement more than compensates for lower frequency.
+
+  Elapsed: 0.0m
+
+============================================================================
+  TEST 22 — BID-ASK SPREAD IMPACT
+============================================================================
+  Sweeping round-trip spread cost: 0%, 0.05%, 0.10%, 0.15%, 0.20%, 0.30%
+  Strategy: live SCHEDULE (NEW priority+scaling), BOTH universe, 20yr rolling WF
+  Base = no-spread result from Test 19/20 (GAP model, -0.5% stop, 3d hold)
+
+    Spread    Return%     Ann%   WinRate   MaxDD%   Trades   vs Base
+  --------  ---------  -------  --------  -------  -------  --------
+     0.00%   +30110.0%    +33.0%     47.4%     15.6%  377,469    (base)
+     0.05%   +25756.7%    +32.0%     46.1%     15.6%  377,276   -4353.2%
+     0.10%   +20961.2%    +30.7%     44.5%     14.9%  375,885   -9148.7%
+     0.15%   +16370.5%    +29.1%     42.8%     15.5%  375,659  -13739.5%
+     0.20%   +11416.8%    +26.8%     41.1%     15.8%  374,906  -18693.2%
+     0.30%    +2541.8%    +17.8%     37.7%     16.1%  371,911  -27568.2%
+
+  NOTE: 'Spread' = round-trip cost (entry ask premium + exit bid discount).
+  Typical ranges: large-cap ETF 0.01-0.05%, mid/small-cap 0.05-0.30%.
+  Slippage already modeled at 2.0x stop for intraday stop hits.
+
+  Elapsed: 0.1m
+
+============================================================================
+  TEST 33: EMPIRICAL LIVE STOP SLIPPAGE
+============================================================================
+  Replays observed live stop-loss outcomes from transactions.csv
+  inside the 20yr portfolio simulation (conservative worse-of model).
+
+  Live stop sample source: c:\Users\28twa\Desktop\TradingBot-git\logs\transactions.csv
+  Sample size: 211
+  Mean=-1.821%  Median=-1.250%  P10=-3.860%  P90=-0.630%
+
+  Scenario                              Ret%   WinRate   MaxDD%    Taken
+----------------------------------------------------------------------------
+  Baseline GAP model                +30110.0%     47.4%     15.6%  377,469
+  Empirical stop MC (mean)            +895.4%     47.5%     19.1%  368,895
+  Empirical stop MC (p10 ret)         +822.1%     47.5%     20.4%       --
+  Empirical stop MC (p90 ret)         +963.6%     47.6%     18.2%       --
+
+  Mean return impact vs baseline GAP model: -29214.5pp
+  ⚠ Large edge erosion from observed live stop behavior.
+
+  Elapsed: 1.2m
+
+============================================================================
+  VALIDATION COMPLETE  (67 minutes)
+============================================================================
+  Tests 1-11:  core validation (exit params, regime, schedule, crash, timing)
+  Test 10:     hold-period comparison + multiple-comparisons significance
+  Test 12:     survivorship bias Monte Carlo (delisting penalty model)
+  Test 13:     universe robustness (20 random 50/50 ticker splits)
+  Test 14:     RSIRecovery schedule REGRESSION vs old RubberBand baseline
+  Test 15:     October deep-dive: RubberBand vs RSIRecovery in Oct only
+  Test 16:     Bear override: 52wkLow+MomReversal vs follow monthly schedule
+  Test 17:     Signal frequency: RSIRecovery vs RubberBand in Apr/May/Nov
+  Test 18:     Position sizing sweep: all seasonal/off-schedule/reserve combos
+  Test 19:     Signal priority + scaling: seasonal-first + scaled sizes + reserve
+  Test 20:     Year-by-year + monthly breakdown with priority logic + gap model
+  Test 21:     Universe comparison: SP500 / MidCap / Both, month×year grid, $
+  Test 22:     Bid-ask spread impact: 6 spread levels, return/WR/DD degradation
+  Test 23:     Compounding: percentage-based sizing vs fixed capital (live bot match)
+  Test 24:     Multi-day overnight gaps: all hold-period nights vs stop (needs --refresh-trades)
+  Test 25:     Look-ahead bias: temporal isolation + indicator lag + signal date checks
+  Test 26:     Non-overlapping walk-forward: ~5 truly independent windows, binomial p
+  Test 27:     Trade distribution: EV, Kelly fraction, percentiles, gap-fill model per strat
+  Test 28:     Signal-lag (same-bar entry premium): raw vs next-open entry comparison
+  Test 29:     Portfolio correlation: daily P&L correlation, max concurrent drawdown
+  Test 30:     Crash predictor sweep: 150 indicators × hibernation × re-entry (needs --years 20)
+  Test 31:     Entry timing sweep: 8 scenarios from 3:50pm close to pre-market; extended hours
+  Test 32:     Extended hours viability: 4 architectures, GTC stop alternatives, gap analysis
+  Test 33:     Empirical live stop slippage replay (Monte Carlo from transactions.csv)
+  Update CHANGE_LOG.md with these results before touching the live bot.
+  Full report → C:\Users\28twa\Desktop\TradingBot\simulations\results\test_2_3_6_17_22_33.txt
+============================================================================

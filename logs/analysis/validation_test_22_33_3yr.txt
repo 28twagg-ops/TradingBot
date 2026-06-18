@@ -1,0 +1,91 @@
+============================================================================
+  RUBBER BAND BOT — VALIDATION SIMULATOR
+  Run date:      2026-06-17 19:43
+  Universe:      BOTH  (3 years)
+  Capital:       $500
+  WF IS/OOS:     60% / 40%
+  Slippage mult: 2.0x stop
+  Live bot:      stop=-0%  hold=3d  seas=20%  off=20%
+  Tests to run:  [22, 33]
+  Tests 9+10:    9=realistic-exit  10=rolling-WF+hold-period+significance
+  Tests 14-17:   RSIRecovery regression, Oct deep-dive, bear override, freq
+  Tests 22-25:   bid-ask spread, compounding, multi-day gaps, look-ahead bias
+  Test 33:       empirical live stop slippage replay from transactions.csv
+============================================================================
+
+  Loaded: 898 stocks  (3yr  BOTH)
+
+============================================================================
+  TEST 22 — BID-ASK SPREAD IMPACT
+============================================================================
+  Sweeping round-trip spread cost: 0%, 0.05%, 0.10%, 0.15%, 0.20%, 0.30%
+  Strategy: live SCHEDULE (NEW priority+scaling), BOTH universe, 20yr rolling WF
+  Base = no-spread result from Test 19/20 (GAP model, -0.5% stop, 3d hold)
+
+    Spread    Return%     Ann%   WinRate   MaxDD%   Trades   vs Base
+  --------  ---------  -------  --------  -------  -------  --------
+     0.00%     +266.1%    +54.1%     48.9%      4.8%   47,963    (base)
+     0.05%     +216.0%    +46.7%     47.4%      5.0%   47,989     -50.1%
+     0.10%     +172.5%    +39.7%     45.8%      5.1%   47,968     -93.6%
+     0.15%     +119.0%    +29.9%     42.3%      7.2%   46,793    -147.2%
+     0.20%      +88.0%    +23.4%     40.6%      7.6%   46,779    -178.2%
+     0.30%      +48.5%    +14.1%     38.4%      5.9%   45,890    -217.7%
+
+  NOTE: 'Spread' = round-trip cost (entry ask premium + exit bid discount).
+  Typical ranges: large-cap ETF 0.01-0.05%, mid/small-cap 0.05-0.30%.
+  Slippage already modeled at 2.0x stop for intraday stop hits.
+
+  Elapsed: 0.0m
+
+============================================================================
+  TEST 33: EMPIRICAL LIVE STOP SLIPPAGE
+============================================================================
+  Replays observed live stop-loss outcomes from transactions.csv
+  inside the 20yr portfolio simulation (conservative worse-of model).
+
+  Live stop sample source: c:\Users\28twa\Desktop\TradingBot-git\logs\transactions.csv
+  Sample size: 211
+  Mean=-1.821%  Median=-1.250%  P10=-3.860%  P90=-0.630%
+
+  Scenario                              Ret%   WinRate   MaxDD%    Taken
+----------------------------------------------------------------------------
+  Baseline GAP model                  +266.1%     48.9%      4.8%   47,963
+  Empirical stop MC (mean)             +27.3%     48.9%      8.5%   45,783
+  Empirical stop MC (p10 ret)          +25.0%     48.9%      9.0%       --
+  Empirical stop MC (p90 ret)          +30.4%     49.0%      7.9%       --
+
+  Mean return impact vs baseline GAP model: -238.8pp
+  ⚠ Large edge erosion from observed live stop behavior.
+
+  Elapsed: 0.2m
+
+============================================================================
+  VALIDATION COMPLETE  (8 minutes)
+============================================================================
+  Tests 1-11:  core validation (exit params, regime, schedule, crash, timing)
+  Test 10:     hold-period comparison + multiple-comparisons significance
+  Test 12:     survivorship bias Monte Carlo (delisting penalty model)
+  Test 13:     universe robustness (20 random 50/50 ticker splits)
+  Test 14:     RSIRecovery schedule REGRESSION vs old RubberBand baseline
+  Test 15:     October deep-dive: RubberBand vs RSIRecovery in Oct only
+  Test 16:     Bear override: 52wkLow+MomReversal vs follow monthly schedule
+  Test 17:     Signal frequency: RSIRecovery vs RubberBand in Apr/May/Nov
+  Test 18:     Position sizing sweep: all seasonal/off-schedule/reserve combos
+  Test 19:     Signal priority + scaling: seasonal-first + scaled sizes + reserve
+  Test 20:     Year-by-year + monthly breakdown with priority logic + gap model
+  Test 21:     Universe comparison: SP500 / MidCap / Both, month×year grid, $
+  Test 22:     Bid-ask spread impact: 6 spread levels, return/WR/DD degradation
+  Test 23:     Compounding: percentage-based sizing vs fixed capital (live bot match)
+  Test 24:     Multi-day overnight gaps: all hold-period nights vs stop (needs --refresh-trades)
+  Test 25:     Look-ahead bias: temporal isolation + indicator lag + signal date checks
+  Test 26:     Non-overlapping walk-forward: ~5 truly independent windows, binomial p
+  Test 27:     Trade distribution: EV, Kelly fraction, percentiles, gap-fill model per strat
+  Test 28:     Signal-lag (same-bar entry premium): raw vs next-open entry comparison
+  Test 29:     Portfolio correlation: daily P&L correlation, max concurrent drawdown
+  Test 30:     Crash predictor sweep: 150 indicators × hibernation × re-entry (needs --years 20)
+  Test 31:     Entry timing sweep: 8 scenarios from 3:50pm close to pre-market; extended hours
+  Test 32:     Extended hours viability: 4 architectures, GTC stop alternatives, gap analysis
+  Test 33:     Empirical live stop slippage replay (Monte Carlo from transactions.csv)
+  Update CHANGE_LOG.md with these results before touching the live bot.
+  Full report → C:\Users\28twa\Desktop\TradingBot\simulations\results\test_22_33.txt
+============================================================================

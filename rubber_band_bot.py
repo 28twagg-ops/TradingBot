@@ -46,8 +46,8 @@ CHANGES FROM v6 (sim-validated across 2yr/3yr/5yr/7yr, 900 stocks):
     REMOVED: GoldenCross (negative Sharpe, lost money)
 
 WHAT RUNS WHEN (auto-detected by US Eastern time, DST-aware via zoneinfo):
-  9:35am ET       -> exits-only check (regular hours, market orders allowed)
-  3:50pm ET       -> full daily scan + entries + daily log
+  9:30–9:59am ET  -> exits-only (PDT-safe morning sells; no new buys)
+  3:50pm ET       -> full daily scan + entries + daily log (only buy window)
   4:15pm–8:00pm ET -> post-market exits-only (extended hours, limit orders only)
                      catches stop-loss and time-stop positions after close;
                      critical for fractional positions with no GTC stop order.
@@ -185,6 +185,8 @@ MORNING_PLAN_FILE = PLAN_DIR / "morning_plan.json"
 EVENING_PLAN_FILE = PLAN_DIR / "evening_plan.json"
 PLAN_MAX_AGE_MIN = 120
 USE_TWO_PHASE_PLAN = True
+# PDT-safe schedule: buy afternoon (~3:50pm ET), sell next morning — no open entries.
+EVENING_ONLY_ENTRIES = True
 # Live accounts: defer same-day midline/max-hold (PDT). Stop breaches still exit same day.
 STRICT_SAME_DAY_EXIT = PAPER_TRADING is False
 
@@ -2297,8 +2299,8 @@ def detect_mode():
     # Friday: keep running extended-hours exits through 7:59pm ET.
     # Switch to weekly summary only after extended-hours window closes.
     if dow == 4 and h >= 20: return "weekly"
-    # Morning scan: 9:44–9:59am ET (Chicago 8:45 cron)
-    if h == 9 and m >= 44: return "morning_scan"
+    # 9:44–9:59am ET: exits only (morning_scan removed — evening-only entries)
+    if h == 9 and m >= 44: return "exits"
     # Morning prep: 9:35–9:43am ET (Chicago 8:35 cron)
     if h == 9 and 35 <= m <= 43: return "morning_prep"
     # Early morning exits: 9:30–9:34am ET
@@ -2321,7 +2323,7 @@ def detect_mode():
 
 def run_summary(client, equity, cash, rgm):
     # Safety net: create today's daily log if scan lost its git push
-    ensure_daily_log(client, equity, cash, rgm)
+    reconcile_daily_log(client, equity, cash, rgm)
 
     positions = enrich(client, get_positions(client))
     invested  = sum(p.get("dollar_amt", 0) for p in positions.values())
@@ -2376,35 +2378,40 @@ def run_summary(client, equity, cash, rgm):
 #  DAILY LOG SAFETY NET
 # =============================================================================
 
-def ensure_daily_log(client, equity, cash, rgm):
-    """Write today's daily log if it doesn't exist yet.
-
-    Called at the top of every run_exits() and run_summary() call.
-    Protects against the scan run losing its git push (e.g. two jobs pushing
-    simultaneously causes a conflict and the scan's commit is dropped).
-    If that happens, the very next 15-min exits run will notice the missing
-    file and write a fallback log with current positions and no signals/trades.
-    The note at the top makes it clear it was auto-recovered, not a real scan.
-    """
+def reconcile_daily_log(client, equity, cash, rgm):
+    """Refresh today's daily markdown from transactions.csv when needed."""
     today = date.today()
     fname = DAILY_DIR / f"{today}.md"
+    ledger = []
+    if TX_FILE.exists():
+        with open(TX_FILE, newline="") as f:
+            for r in csv.DictReader(f):
+                if r.get("date") == str(today):
+                    ledger.append(r)
+
     if fname.exists():
-        return   # already written — nothing to do
-    log.info(f"  ensure_daily_log: {fname} missing — writing fallback log")
+        text = fname.read_text(encoding="utf-8")
+        if "Fallback log" not in text and "_No trades today._" not in text:
+            if not ledger:
+                return
+        # stale fallback or missing trades — rebuild below
+    elif not ledger and not _past_evening_scan_window():
+        return
+
     try:
         positions = enrich(client, get_positions(client))
-        month     = today.month
-        write_daily(today, equity, cash, rgm, month, positions,
-                    signals=[], buys=[], sells=[])
-        # Prepend a note so it's clear this is a recovered log, not a scan log
-        text = fname.read_text(encoding="utf-8")
-        note = ("> ⚠️ **Fallback log** — scan run lost its git push "
-                "(concurrent job conflict). Positions shown are current; "
-                "signals/trades from the scan are not recorded here.\n\n")
-        fname.write_text(note + text, encoding="utf-8")
-        log.info(f"  Fallback daily log written → {fname}")
+        write_daily(today, equity, cash, rgm, today.month, positions,
+                    signals=[], buys=[], sells=[],
+                    preserve_existing_signals=fname.exists())
+        log.info(f"  Daily log reconciled -> {fname} ({len(ledger)} ledger rows)")
     except Exception as e:
-        log.warning(f"  ensure_daily_log failed: {e}")
+        log.warning(f"  reconcile_daily_log failed: {e}")
+
+
+def _past_evening_scan_window():
+    from zoneinfo import ZoneInfo
+    now = datetime.now(ZoneInfo("America/New_York"))
+    return now.hour >= 16 or (now.hour == 15 and now.minute >= 44)
 
 
 # =============================================================================
@@ -2423,7 +2430,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
     """
     # Safety net: if today's daily log is missing (scan lost its git push),
     # write a fallback log now so we always have a record for every trading day.
-    ensure_daily_log(client, equity, cash, rgm)
+    reconcile_daily_log(client, equity, cash, rgm)
 
     eh_tag = " [EXTENDED HRS]" if extended_hours else ""
 
@@ -3103,104 +3110,111 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         blank()
     ftr()
 
+    allow_entries = (not EVENING_ONLY_ENTRIES) or mode_name == "scan"
+
     # ── Sort signals: seasonal first so they always get cash priority ────
     all_sigs.sort(key=lambda s: (0 if s.get("seasonal") else 1))
 
-    # ── Signal-scaled position sizing ─────────────────────────────────────
-    # When few signals: use standard sizes (20% / 20%).
-    # When many signals: scale down equally so we participate in more setups
-    # and get better statistical coverage. Caps at standard sizes; never
-    # goes below MIN_TRADE_SIZE.
-    #
-    # Position sizing: divide available cash by the number of slots we can
-    # actually fill today (min of signals available and cash-based cap).
-    # This ensures we deploy capital evenly rather than shrinking to $20.
-    already_held   = set(positions.keys())
-    viable         = [s for s in all_sigs if s["ticker"] not in already_held]
-    n_viable       = max(1, len(viable))
-    n_sea_pending  = sum(1 for s in viable if s.get("seasonal"))
+    if not allow_entries:
+        hdr("ENTRY ORDERS")
+        row("Skipped", "evening-only — buys at 3:50pm ET scan only (PDT-safe)")
+        entries = 0; buys_log = []; unconfirmed_buys = 0; pending_buys = []
+        ftr()
+    else:
+        # ── Signal-scaled position sizing ─────────────────────────────────
+        # When few signals: use standard sizes (20% / 20%).
+        # When many signals: scale down equally so we participate in more setups
+        # and get better statistical coverage. Caps at standard sizes; never
+        # goes below MIN_TRADE_SIZE.
+        #
+        # Position sizing: divide available cash by the number of slots we can
+        # actually fill today (min of signals available and cash-based cap).
+        # This ensures we deploy capital evenly rather than shrinking to $20.
+        already_held   = set(positions.keys())
+        viable         = [s for s in all_sigs if s["ticker"] not in already_held]
+        n_viable       = max(1, len(viable))
+        n_sea_pending  = sum(1 for s in viable if s.get("seasonal"))
 
-    n_slots      = min(n_viable, max_trades)   # signals we can actually fill
-    equal_share  = avail / n_slots
-    sea_da = max(MIN_TRADE_SIZE,
-                 min(equity * SEASONAL_SIZE_PCT, equal_share))
-    off_da = max(MIN_TRADE_SIZE,
-                 min(equity * OFFSCHEDULE_SIZE_PCT,
-                     equal_share * (OFFSCHEDULE_SIZE_PCT / SEASONAL_SIZE_PCT)))
-    scale_active = equal_share < equity * SEASONAL_SIZE_PCT
+        n_slots      = min(n_viable, max_trades)   # signals we can actually fill
+        equal_share  = avail / n_slots
+        sea_da = max(MIN_TRADE_SIZE,
+                     min(equity * SEASONAL_SIZE_PCT, equal_share))
+        off_da = max(MIN_TRADE_SIZE,
+                     min(equity * OFFSCHEDULE_SIZE_PCT,
+                         equal_share * (OFFSCHEDULE_SIZE_PCT / SEASONAL_SIZE_PCT)))
+        scale_active = equal_share < equity * SEASONAL_SIZE_PCT
 
-    # Entries
-    hdr("ENTRY ORDERS")
-    cash = float(client.get_account().cash); avail = max(0.0, cash - reserve)
-    if scale_active and n_viable > 1:
-        row(f"Signal scaling: {n_viable} signals / {n_slots} slots → "
-            f"sea=${sea_da:.0f} off=${off_da:.0f}  "
-            f"(max sea=${equity*SEASONAL_SIZE_PCT:.0f} off=${equity*OFFSCHEDULE_SIZE_PCT:.0f})")
-    entries = 0; buys_log = []; unconfirmed_buys = 0; pending_buys = []
-    n_unfilled_sea = n_sea_pending  # decrements as seasonal signals get filled
-    for sig in all_sigs:
-        ticker = sig["ticker"]; strategy = sig["strategy"]
-        is_seasonal = sig.get("seasonal", False)
-        skip = ""
-        if not pdt_ok(pdt, max_trades):   skip = "PDT limit"
-        elif avail <= 1.0:    skip = "reserve floor"
-        da = sea_da if is_seasonal else off_da
-        # Seasonal reserve: don't let off-schedule buys crowd out unfilled
-        # seasonal signals. Lock cash for ALL pending seasonal entries, not
-        # just one slot, so off-schedule orders only consume true surplus.
-        if not skip and not is_seasonal and n_unfilled_sea > 0:
-            seasonal_lock = min(avail, n_unfilled_sea * sea_da)
-            if avail - da < seasonal_lock:
-                skip = "seasonal reserve"
-        if not skip and da > avail: skip = "not enough cash"
-        if not skip and has_earnings_soon(ticker): skip = f"earnings ≤{EARNINGS_SKIP_DAYS}d"
-        tier = "S" if is_seasonal else "o"
-        if skip:
-            row(f"  SKIP [{tier}] {ticker}  {strategy}", _trunc(skip, 20))
+        hdr("ENTRY ORDERS")
+        cash = float(client.get_account().cash); avail = max(0.0, cash - reserve)
+        if scale_active and n_viable > 1:
+            row(f"Signal scaling: {n_viable} signals / {n_slots} slots → "
+                f"sea=${sea_da:.0f} off=${off_da:.0f}  "
+                f"(max sea=${equity*SEASONAL_SIZE_PCT:.0f} off=${equity*OFFSCHEDULE_SIZE_PCT:.0f})")
+        entries = 0; buys_log = []; unconfirmed_buys = 0; pending_buys = []
+        n_unfilled_sea = n_sea_pending  # decrements as seasonal signals get filled
+        for sig in all_sigs:
+            ticker = sig["ticker"]; strategy = sig["strategy"]
+            is_seasonal = sig.get("seasonal", False)
+            skip = ""
+            if not pdt_ok(pdt, max_trades):   skip = "PDT limit"
+            elif avail <= 1.0:    skip = "reserve floor"
+            da = sea_da if is_seasonal else off_da
+            # Seasonal reserve: don't let off-schedule buys crowd out unfilled
+            # seasonal signals. Lock cash for ALL pending seasonal entries, not
+            # just one slot, so off-schedule orders only consume true surplus.
+            if not skip and not is_seasonal and n_unfilled_sea > 0:
+                seasonal_lock = min(avail, n_unfilled_sea * sea_da)
+                if avail - da < seasonal_lock:
+                    skip = "seasonal reserve"
+            if not skip and da > avail: skip = "not enough cash"
+            if not skip and has_earnings_soon(ticker): skip = f"earnings ≤{EARNINGS_SKIP_DAYS}d"
+            tier = "S" if is_seasonal else "o"
+            if skip:
+                row(f"  SKIP [{tier}] {ticker}  {strategy}", _trunc(skip, 20))
+                if is_seasonal:
+                    # Mark seasonal signal as processed even when skipped, so any
+                    # remaining cash can flow to off-schedule entries.
+                    n_unfilled_sea = max(0, n_unfilled_sea - 1)
+                continue
+            row(f"  ENTER [{tier}] {ticker}  {strategy}", f"${da:.2f}")
+            buy_res = do_buy(client, ticker, da, strategy, expected_price=sig["close"], fast_submit=True)
+            if buy_res.get("ok"):
+                # Submitted orders consume buying power, even if confirmation lags.
+                avail -= da
+                if buy_res.get("filled"):
+                    entries += 1
+                    pdt.append(str(today))   # only confirmed fills count toward PDT entries
+                    buy_price = buy_res.get("price") if buy_res.get("price") is not None else sig["close"]
+                    buy_dollars = buy_res.get("dollars") if buy_res.get("dollars") is not None else da
+                    log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
+                           float(client.get_account().equity),
+                           expected_price=sig["close"],
+                           order_price=buy_res.get("order_price", sig["close"]),
+                           execution_method=buy_res.get("execution_method", "buy_market"))
+                    buys_log.append({"t": datetime.now().strftime("%H:%M"),
+                                      "tk": ticker, "st": strategy,
+                                      "px": round(buy_price, 2), "$": round(buy_dollars, 2)})
+                else:
+                    unconfirmed_buys += 1
+                    pending_buys.append({
+                        "ticker": ticker,
+                        "strategy": strategy,
+                        "dollars": da,
+                        "expected_price": sig["close"],
+                        "order_id": buy_res.get("order_id"),
+                    })
+                    row(f"  BUY SUBMITTED [{tier}] {ticker}",
+                        "fill pending — batched confirmation after entries")
             if is_seasonal:
-                # Mark seasonal signal as processed even when skipped, so any
-                # remaining cash can flow to off-schedule entries.
+                # Seasonal signal has been processed (buy attempt complete).
                 n_unfilled_sea = max(0, n_unfilled_sea - 1)
-            continue
-        row(f"  ENTER [{tier}] {ticker}  {strategy}", f"${da:.2f}")
-        buy_res = do_buy(client, ticker, da, strategy, expected_price=sig["close"], fast_submit=True)
-        if buy_res.get("ok"):
-            # Submitted orders consume buying power, even if confirmation lags.
-            avail -= da
-            if buy_res.get("filled"):
-                entries += 1
-                pdt.append(str(today))   # only confirmed fills count toward PDT entries
-                buy_price = buy_res.get("price") if buy_res.get("price") is not None else sig["close"]
-                buy_dollars = buy_res.get("dollars") if buy_res.get("dollars") is not None else da
-                log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
-                       float(client.get_account().equity),
-                       expected_price=sig["close"],
-                       order_price=buy_res.get("order_price", sig["close"]),
-                       execution_method=buy_res.get("execution_method", "buy_market"))
-                buys_log.append({"t": datetime.now().strftime("%H:%M"),
-                                  "tk": ticker, "st": strategy,
-                                  "px": round(buy_price, 2), "$": round(buy_dollars, 2)})
-            else:
-                unconfirmed_buys += 1
-                pending_buys.append({
-                    "ticker": ticker,
-                    "strategy": strategy,
-                    "dollars": da,
-                    "expected_price": sig["close"],
-                    "order_id": buy_res.get("order_id"),
-                })
-                row(f"  BUY SUBMITTED [{tier}] {ticker}",
-                    "fill pending — batched confirmation after entries")
-        if is_seasonal:
-            # Seasonal signal has been processed (buy attempt complete).
-            n_unfilled_sea = max(0, n_unfilled_sea - 1)
-    if entries == 0 and not all_sigs: row("  No entries placed.")
-    if pending_buys:
-        batched = poll_pending_buys(client, pending_buys, rgm)
-        entries += batched
-        for _ in range(batched):
-            pdt.append(str(today))
-    ftr()
+        if entries == 0 and not all_sigs: row("  No entries placed.")
+        if pending_buys:
+            batched = poll_pending_buys(client, pending_buys, rgm)
+            entries += batched
+            for _ in range(batched):
+                pdt.append(str(today))
+        ftr()
 
     # Place GTC stop-market orders for all open positions.
     # Wait 5s first so newly submitted market buys have time to fill and
@@ -3284,7 +3298,10 @@ if __name__ == "__main__":
         run_prep(client, equity, cash, rgm, mode_name="morning")
     elif mode == "evening_prep":
         run_prep(client, equity, cash, rgm, mode_name="evening")
-    elif mode in ("scan", "morning_scan"):
+    elif mode == "morning_scan":
+        log.info("morning_scan deprecated — evening-only entries; running exits")
+        run_exits(client, equity, cash, rgm)
+    elif mode == "scan":
         run_scan(client, equity, cash, rgm, mode_name=mode)
     elif mode == "exits":
         run_exits(client, equity, cash, rgm)

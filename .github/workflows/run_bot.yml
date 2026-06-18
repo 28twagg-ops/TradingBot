@@ -65,6 +65,8 @@ jobs:
           cp -r logs/. /tmp/botlogs_run/ 2>/dev/null || true
           git checkout origin/main -- logs/ 2>/dev/null || mkdir -p logs
           python scripts/merge_bot_logs.py /tmp/botlogs_run logs
+          python scripts/reconcile_daily_logs.py logs 14
+          python scripts/daily_slippage_watch.py logs
           git add logs/
           if git diff --staged --quiet; then
             echo "No log changes to commit"
@@ -80,6 +82,8 @@ jobs:
             git fetch origin main
             git checkout origin/main -- logs/
             python scripts/merge_bot_logs.py /tmp/botlogs_run logs
+            python scripts/reconcile_daily_logs.py logs 14
+            python scripts/daily_slippage_watch.py logs
             git add logs/
             git commit --amend --no-edit || git commit -m "bot run $(date -u '+%Y-%m-%d %H:%M UTC')"
             sleep 3
