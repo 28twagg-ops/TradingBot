@@ -1,0 +1,7 @@
+# 2026-06-19: Prior dual_window empirical rows near -191% used buggy post-hoc sum of pnl_dollar (no compounding). Superseded.
+# 2026-06-20: Method 2 (equity-walk + unconditional worse-of) superseded by Option A conditional overlay (see empirical_methodology_note_2026-06-20.md).
+test_name,horizon_yr,slippage_model,total_return_pct,ann_return_pct,sharpe,win_rate,profit_factor,stop_exit_count,stop_avg_return,max_drawdown_pct,run_date,days_both_windows,days_one_window,morning_entry_trades,evening_entry_trades,notes
+schedule_dual_window,3,gap,34.5,10.4,0.0,48.6,1.34,1602,-1.71,-99.99,2026-06-20,636,11,2955,2953,
+schedule_dual_window,3,empirical,-40.1,-15.8,0.0,48.5,0.78,1598,-2.05,40.1,2026-06-20,636,11,2955,2953,Option A in-engine; 831/1602 stops overridden (51.9%); SANITY CHECK FAILED
+schedule_evening_only,3,gap,20.6,6.3,0.0,48.9,1.28,577,-1.65,45.2,2026-06-20,0,0,0,577,live schedule mode
+schedule_evening_only,3,empirical,-20.8,-7.8,0.0,48.8,0.88,576,-2.01,20.8,2026-06-20,0,0,0,577,Option A in-engine; 374/577 stops overridden (64.8%); SANITY CHECK FAILED

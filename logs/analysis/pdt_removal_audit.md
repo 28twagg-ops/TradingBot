@@ -40,9 +40,23 @@ Repo: `TradingBot-git/rubber_band_bot.py` @ pre-removal checkpoint
 
 No PDT-specific references. No changes required for PDT removal.
 
-## paper_bot.py (out of scope per guide)
+## paper_bot.py — removed 2026-06-20
 
-Contains separate `pdt.json` logic and `MAX_DAY_TRADES`. Not modified in Phase C; track for later parity.
+Deleted per user decision (live-only validation; paper trading skipped). Rebuild from
+`rubber_band_bot.py` if needed later.
+
+## Empirical slippage methodology (D3 sims — 2026-06-20)
+
+Schedule-engine gap stops already average ~-1.71% vs live -1.68%. Unconditional worse-of
+(Test 33 style) double-counts slippage on this baseline.
+
+**Current method (Option A):** In `simulations/pdt_schedule_engine.py`, replace gap stop
+fill with a live sample **only** when gap fill is better (less negative) than -1.2%.
+See `simulations/results/pdt_removal/empirical_methodology_note_2026-06-20.md`.
+
+Prior methods (post-hoc sum → equity-walk worse-of) documented in that file. Sanity check
+2026-06-20: Option A still yields negative empirical returns for 3yr evening_only and
+dual_window — full D3 matrix blocked pending user review.
 
 ## EVENING_ONLY_ENTRIES — Phase 3 gate
 
@@ -56,7 +70,7 @@ Rename to `PREFER_EVENING_ENTRIES` only after sim decision.
 3. Remove `STRICT_SAME_DAY_EXIT` + `_pdt_blocks_exit` (separate commit)
 4. Remove `pdt.json` machinery; entry cap via transactions.csv + in-scan counter
 5. Phase 3 sim suite before touching EVENING_ONLY or live stop threshold
-6. Paper trading 10 days before live PDT removal deploy (Phase E)
+6. ~~Paper trading 10 days before live PDT removal deploy (Phase E)~~ — skipped; live validation log instead (2026-06-19)
 
 ## C4 verification (Phase C — 2026-06-18)
 
