@@ -1,0 +1,466 @@
+================================================================
+RUBBER BAND BOT -- FULL PROJECT HISTORY & HANDOFF V9
+================================================================
+Owner    : Tyler (28twagg@gmail.com)
+Updated  : 2026-04-28
+Purpose  : Full history doc so any AI can pick up exactly where
+           this project left off. Share this file + the code files.
+================================================================
+
+IMPORTANT (2026-05 update): this handoff is historical context only.
+For current live configuration and strategy rules, use TRANSFER_DOCUMENT.txt.
+Key values changed after this doc: stop loss -0.5%, max hold 3d, reserve 5%,
+off-schedule sizing 20%, and updated monthly schedule/reversion notes.
+
+
+================================================================
+SECTION 1: WHAT THIS IS
+================================================================
+
+A fully-automated mean-reversion stock trading bot that:
+- Runs on GitHub Actions, triggered every 15 minutes by cron-job.org
+- Trades US equities (S&P 500 universe) via Alpaca Markets
+- Started as paper trading, went LIVE around April 20, 2026
+- Written in Python, runs on Windows locally for testing
+
+Starting capital : $500 (live Alpaca account)
+Broker           : Alpaca Markets (live, not paper)
+GitHub repo      : Tyler's private TradingBot repo
+Local folder     : C:\Users\28twa\Desktop\TradingBot
+Python version   : 3.14 (use "python" command, not "py")
+
+Key files:
+  rubber_band_bot.py    -- the live bot (v7), all fixes applied
+  exit_simulator.py     -- backtester (not actively used anymore)
+  strategy_analyzer.py  -- NEW: AI-powered strategy review (Gemini)
+  generate_dashboard.py -- NEW: standalone dashboard generator
+  logs/transactions.csv -- live trade log (on GitHub, not local)
+  logs/runs.csv         -- bot run log (on GitHub, not local)
+  logs/dashboard.md     -- auto-generated after each EOD scan
+  logs/daily/YYYY-MM-DD.md  -- daily summaries
+  logs/weekly/YYYY-WNN.md   -- weekly summaries
+
+
+================================================================
+SECTION 2: FULL HISTORY -- HOW WE GOT HERE
+================================================================
+
+--- PHASE 1: STRATEGY DESIGN & BACKTESTING ---
+
+Started by testing 6 mean-reversion entry strategies across
+S&P 500 stocks over 2/3/5/7 year windows. Strategy "bakeoff"
+compared all combinations. Results that survived:
+
+  RubberBand  : RSI < 35 + price near lower Bollinger Band
+  52wkLow     : price near 52-week low
+  MomReversal : sharp recent decline, betting on bounce
+  GapDown     : stock gapped down significantly (panic selling)
+  VolumeSpike : unusual volume suggesting institutional buying
+  Pullback50  : uptrending stock pulled back to 50-day MA
+
+Strategies removed: GoldenCross (negative Sharpe, lost money)
+
+Exit rules tested and settled on:
+  - Midline exit: price crosses back above 20-day Bollinger midband
+  - Stop loss: -2% (checked every 15 min by software)
+  - Max hold: 5 days (forces exit regardless of P&L)
+
+Sizing:
+  - Seasonal match position (primary strategy for month): ~20% of equity
+  - Off-schedule position: ~12% of equity
+  - Cash reserve: 15% always kept aside
+  - No hard cap on open positions -- cash is the real constraint
+
+Calendar (which 2 strategies get larger sizing each month):
+  Jan: MomReversal + 52wkLow    Jul: 52wkLow + Pullback50
+  Feb: 52wkLow + VolumeSpike    Aug: RubberBand + 52wkLow
+  Mar: 52wkLow + MomReversal    Sep: GapDown + VolumeSpike
+  Apr: RubberBand + Pullback50  Oct: RubberBand + GapDown
+  May: RubberBand + 52wkLow     Nov: RubberBand + MomReversal
+  Jun: 52wkLow + VolumeSpike    Dec: MomReversal + VolumeSpike
+
+Regime filter (SPY vs its 200-day MA):
+  Bull (ratio >= 1.0)        : all strategies active
+  Correction (0.93-1.0)      : all strategies active
+  Bear (ratio < 0.93)        : only 52wkLow + MomReversal
+
+--- PHASE 2: SIMULATOR VALIDATION ---
+
+7-year backtest on ~900 S&P 500 stocks showed:
+  - With naive -3% stop cap (hides gap risk): $500 -> ~$10,000
+  - With realistic 2x slippage floor (-6% max): $500 -> ~$3,000-5,000
+  - Uncapped (includes data artifacts): ~$500
+
+Walk-forward test (60% in-sample, 40% out-of-sample):
+  In-sample win rate: 51%
+  Out-of-sample win rate: 58.4%
+  OOS outperformed IS -- strategy is NOT overfit, edge is real.
+
+PDT rule: 0 same-day round trips in 7yr sim. Not a constraint.
+
+Key risk identified: gap-down events can bypass stop orders.
+2020 COVID: equity dropped from $449 to $288 in one month in sim.
+Real bracket orders would have limited this but not eliminated it.
+
+Backtested win rate settled on: ~53% EOD exits baseline.
+
+Intraday vs EOD exit test (900 tickers):
+  EOD only win rate:      53.0%
+  Intraday check win rate: 45.1%  (-7.9 percentage points)
+  Conclusion: checking midline intraday HURTS win rate.
+  Fix: midline exit only checked at EOD scan (4:15 PM ET).
+       Stop loss still checked every 15 min (intraday).
+
+--- PHASE 3: LIVE BOT BUGS FIXED ---
+
+Bot went live ~April 20, 2026. Several bugs discovered and fixed:
+
+BUG 1 -- detect_mode() only running exits 9-10 AM ET
+  Problem: exits window was `if 13 <= h < 14` (1 hour only)
+  Fix: changed to cover all market hours:
+    if (h == 13 and m >= 30) or (14 <= h < 20): return "exits"
+  Result: bot now checks exits every 15 min 9:30 AM - 4 PM ET
+
+BUG 2 -- EFX stuck limit sell order
+  Problem: cancel_stop_orders() only cancelled STOP type orders,
+           not LIMIT type orders. EFX had a limit sell at $178.54
+           while price fell to $175.02 -- order never executed.
+  Fix: cancel ALL open sell orders regardless of type:
+    for o in client.get_orders(req):
+        if o.side == OrderSide.SELL:
+            client.cancel_order_by_id(str(o.id))
+
+BUG 3 -- do_sell() returning False even when position was sold
+  Problem: after limit order filled silently, bot tried to cancel
+           already-filled order -> exception -> fell through to
+           close_position -> "position not found" -> returned False
+           -> transaction not logged
+  Fix: after waiting 20 seconds, check if position still exists.
+       If "not found" exception, treat as success (already sold).
+
+BUG 4 -- ensure_stop() always failing
+  Problem: Alpaca error "fractional orders must be DAY orders"
+           GTC stop-limit orders cannot be placed on fractional
+           share positions. Was failing silently every run.
+  Fix: removed all calls to ensure_stop() completely.
+       Software stop-loss check every 15 min is the only mechanism.
+       This is fine -- the 15-min check is reliable enough.
+
+BUG 5 -- Intraday midline exits hurting win rate
+  Problem: run_exits was checking midline (price > BB midband) every
+           15 minutes, causing premature exits on intraday noise.
+  Fix: added eod_only parameter to check_exit():
+    run_exits calls: check_exit(..., eod_only=False)  <- no midline
+    run_scan calls:  check_exit(..., eod_only=True)   <- midline only at EOD
+
+--- PHASE 4: LIVE PERFORMANCE SO FAR ---
+
+As of April 28, 2026:
+
+Trades made:
+  Apr 21: BUY ADM  (Pullback50,  $99.92, entry $69.85)
+  Apr 21: BUY BIIB (Pullback50,  $99.92, entry $185.96)
+  Apr 21: BUY BMY  (Pullback50,  $99.92, entry $59.39)
+  Apr 21: BUY EFX  (GapDown,     $59.95, entry $192.44)
+  Apr 21: BUY EXE  (MomReversal, $59.91, entry $94.26)
+  Apr 23: BUY MO   (Pullback50,  $97.99, entry $67.16)
+  Apr 23: BUY AIZ  (VolumeSpike, $58.80, entry $230.47)
+  Apr 23: BUY CBRE (VolumeSpike, $58.80, entry $149.31)
+
+  Apr 27: SELL ADM  +0.1%  ($+0.10) max_hold 5d
+  Apr 27: SELL BMY  -1.83% ($-1.83) max_hold 5d
+  Apr 27: SELL EXE  +1.32% ($+0.79) max_hold 5d
+
+Still open as of Apr 27: BIIB, EFX, MO, AIZ, CBRE
+  (Note: EFX was a gap-down trade, bought at $192, likely still
+   underwater. BIIB also may have been sold -- check live Alpaca.)
+
+Equity progression:
+  Start:   $500.00
+  Apr 21:  $499.55 (after buys)
+  Apr 22:  $490.19 (EFX gap-down impact visible in equity)
+  Apr 23:  $490.33
+  Apr 24:  $487.80
+  Apr 27:  $487.74 (after 3 max_hold exits)
+
+Win rate so far: 2/3 closed trades = 66.7%
+Total realised P&L: -$0.94 (essentially flat on closed trades)
+Main drag: unrealised EFX loss (~-9% on $60 position = -$5.87)
+
+Apr 24 scan: found 41 signals, made 0 entries.
+  Reason: only $14.93 cash vs $48.78 reserve minimum.
+  Bot was fully deployed with 6 positions, no room to add.
+
+Note on "missing morning buys":
+  The bot does NOT buy in the morning. All entries are based on
+  end-of-day data (daily closes for RSI, Bollinger Bands etc.)
+  and execute at the next-day open price. The 4:15 PM ET scan
+  finds signals; the fill happens at next morning's open.
+  When Tyler says "bot didn't buy in the morning" -- it did,
+  via next-day open fills from previous night's scan.
+
+
+================================================================
+SECTION 3: HOW THE BOT WORKS (technical)
+================================================================
+
+--- SCHEDULING ---
+
+GitHub Actions workflow runs every 15 minutes via cron-job.org
+hitting the repo's repository_dispatch endpoint.
+
+detect_mode() auto-detects what to do based on UTC time:
+  9:30 AM - 4:00 PM ET  -> "exits"  (check stops + max hold)
+  4:00 PM - 6:00 PM ET  -> "scan"   (full scan + new entries + daily log)
+  Friday after 5 PM ET  -> "weekly" (weekly summary)
+  All other times        -> "summary" (status only, no trades)
+
+--- RUN CYCLE ---
+
+exits mode (every 15 min during market hours):
+  1. Get all open positions
+  2. Fetch current price data
+  3. check_exit() for each position:
+     - stop_loss: pnl_pct <= -2% -> sell
+     - max_hold:  hold >= 5 days -> sell
+     - midline:   NOT checked intraday (eod_only=False)
+  4. do_sell() for any triggered exits
+  5. log_run() writes to runs.csv
+
+scan mode (4:15 PM ET daily):
+  1. Fetch SPY for regime detection
+  2. Get all positions, enrich with current prices
+  3. check_exit() for each position:
+     - stop_loss, max_hold, midline (eod_only=True) -- all checked
+  4. do_sell() for exits
+  5. Scan all S&P 500 stocks for entry signals
+  6. Score and filter signals by strategy
+  7. buy_position() for qualifying entries if cash available
+  8. log_run(), write_daily(), write_dashboard() -> commit to GitHub
+
+--- KEY PARAMETERS ---
+
+EXIT_STOP_LOSS    = -0.02   # -2% stop loss
+EXIT_DAYS_MAX     = 5       # 5 day max hold
+CASH_RESERVE_PCT  = 0.15    # keep 15% cash aside always
+MIN_STOCK_PRICE   = $5.00   # ignore penny stocks
+MIN_HISTORY_DAYS  = 220     # need ~1yr of data for indicators
+
+--- SELL LOGIC (do_sell) ---
+
+1. Cancel any existing open sell orders for the ticker
+2. Get current position and price
+3. Place a limit sell at current_price * 0.998 (0.2% below)
+4. Wait 20 seconds, check if filled
+5. If not filled: check if position still exists
+6. If position gone -> success (filled silently)
+7. If position still there -> cancel limit, use close_position()
+8. If "position not found" at any point -> treat as success
+
+
+================================================================
+SECTION 4: FILES CREATED IN THIS SESSION
+================================================================
+
+--- rubber_band_bot.py (MODIFIED) ---
+
+Added write_dashboard() function that runs after every EOD scan
+and writes logs/dashboard.md to GitHub. This gives a single
+clean summary page without digging through multiple log files.
+
+The function reads transactions.csv and runs.csv and generates:
+  - Account snapshot (equity, return, drawdown, cash, positions)
+  - Trade performance table (win rate, avg win/loss, profit factor)
+  - Exit reason breakdown
+  - Strategy breakdown
+  - Equity timeline
+  - Recent closed trades table
+
+To update in GitHub: copy the full rubber_band_bot.py.
+After next EOD scan (4:15 PM ET), logs/dashboard.md will appear.
+
+--- strategy_analyzer.py (NEW) ---
+
+Standalone script that reads live logs and calls Google Gemini
+API to produce a written strategy analysis report.
+
+Output: logs/strategy_review.md
+
+Setup:
+  1. Get free Gemini API key at: aistudio.google.com/app/apikey
+  2. In Command Prompt (same window as running script):
+       set GEMINI_API_KEY=your_key_here
+       python strategy_analyzer.py
+
+Requirements:
+  - logs/transactions.csv and logs/runs.csv must exist locally
+  - Get them from GitHub: download raw files and put in logs/ folder
+  - Uses gemini-1.5-flash model (free tier)
+  - Uses only built-in Python libraries (no pip install needed)
+
+Note: Tyler was having trouble with this -- the model needed
+to be changed from gemini-2.0-flash to gemini-1.5-flash because
+the 2.0 flash free tier quota showed limit=0 for his account.
+Also had a Windows encoding crash (emoji in file write) -- fixed
+by adding encoding="utf-8" to OUT_FILE.write_text().
+
+--- generate_dashboard.py (NEW) ---
+
+Standalone version of the dashboard generator. Run manually
+after git pulling logs to generate dashboard.md locally.
+Less useful now that it's baked into the bot, but kept for
+reference.
+
+Usage:
+  python generate_dashboard.py          # auto-detects log folder
+  python generate_dashboard.py paper    # use paper_logs/
+  python generate_dashboard.py logs     # use logs/ (live)
+
+
+================================================================
+SECTION 5: WHAT TO DO NEXT
+================================================================
+
+IMMEDIATE (before next trading day):
+  1. Push rubber_band_bot.py to GitHub
+     -- contains write_dashboard() function
+     -- after next 4:15 PM scan, logs/dashboard.md will appear
+     -- this is the main deliverable from this session
+
+  2. Push strategy_analyzer.py and generate_dashboard.py to GitHub
+     -- not required for the bot to run, just tools for Tyler
+
+  3. Check Alpaca positions for BIIB and EFX
+     -- BIIB may have been sold without a log entry (same bug as EFX)
+     -- EFX is likely still held and underwater
+
+SHORT TERM (next 2-4 weeks):
+  4. Let the bot run and collect more trade data
+     -- Need 30+ closed trades for statistics to be meaningful
+     -- With ~5 positions cycling every 5 days, expect ~3-4 trades/week
+     -- At that rate: 30 trades in ~7-10 weeks
+
+  5. Run strategy_analyzer.py every 2 weeks
+     -- git pull logs from GitHub first
+     -- set GEMINI_API_KEY and run the script
+     -- saves strategy_review.md with AI analysis
+
+  6. Monitor logs/dashboard.md on GitHub after each 4:15 PM scan
+     -- single page shows win rate, equity, all closed trades
+     -- no need to download or run anything locally
+
+LONGER TERM:
+  7. Earnings blackout filter (HIGH PRIORITY when time allows)
+     -- Before entering a position, check if earnings are in next 2 days
+     -- Earnings gaps are the main source of -10%+ losses
+     -- Would have avoided the EFX gap-down situation
+     -- Implementation: yfinance Ticker(t).calendar for next earnings
+
+  8. Consider bumping capital to $1,000-$2,000 when validated
+     -- $500 is too small: with 6 positions only $14.93 cash left
+     -- Bot misses good signals due to cash constraint, not strategy
+     -- $2,000 would give meaningful dollar returns and room to breathe
+
+  9. Sector concentration cap
+     -- Sim didn't cap sectors; bot can pile into beaten-down sectors
+     -- Consider: max 2 open positions per GICS sector
+
+
+================================================================
+SECTION 6: KNOWN ISSUES / THINGS TO WATCH
+================================================================
+
+1. EFX loss (-9.77% approx, ~$5.87): This was a gap-down that
+   bypassed the stop. The position was bought as a GapDown signal
+   (intentionally buying after a gap down), then the stock kept
+   falling. This is expected risk for that strategy. The bot
+   eventually sold it via the 15-min software check once
+   detect_mode was fixed. NOT a bug, just bad luck on timing.
+
+2. BIIB potentially unsold: The original do_sell() bug (returning
+   False even when sold) may have caused BIIB's sell to go unlogged.
+   Check Alpaca account to confirm BIIB position status.
+
+3. Local logs don't sync automatically: The bot runs on GitHub
+   Actions, not locally. To get logs locally you must git pull.
+   Tyler's Desktop TradingBot folder does NOT automatically get
+   new log entries -- it's just a code folder, not a git clone.
+
+4. Windows encoding on Python 3.14: Any script writing files with
+   emoji characters will crash on Windows with cp1252 encoding.
+   Fix: always use encoding="utf-8" in file write operations.
+   This was fixed in strategy_analyzer.py but watch for it in
+   any new scripts.
+
+5. Alpaca fractional shares + GTC orders: Cannot place GTC
+   stop-limit orders on fractional share positions. Alpaca rejects
+   them with "fractional orders must be DAY orders." The bot no
+   longer tries to place stop orders -- software check only.
+
+
+================================================================
+SECTION 7: BOT PERFORMANCE EXPECTATIONS
+================================================================
+
+With $500 account:
+  Expected monthly return if strategy works: ~$5-25/month
+  Expected drawdown before recovery: 10-20% ($50-100)
+  Break-even timeline: likely 2-4 months
+  When it "feels profitable": probably not until $1,000+ capital
+
+The strategy math:
+  Win rate: ~53% (backtested), 66% so far live (too few trades)
+  Avg win: ~+2-3% per position
+  Avg loss: ~-2% per position (capped by stop)
+  Position size: ~$60-100 per trade
+  Expected value per trade: very thin, maybe +$0.10-0.50
+  Monthly trades: ~12-16 closed trades (at current deployment level)
+
+The bot is not broken. It is working correctly. The small dollar
+returns are a capital size problem, not a strategy problem.
+The right move is to validate the strategy over 30+ trades,
+then decide whether to add more capital.
+
+
+================================================================
+SECTION 8: INSTRUCTIONS FOR THE NEW AI
+================================================================
+
+You are picking up Tyler's mean-reversion trading bot project.
+Here is what you need to know about Tyler and this project:
+
+- Tyler is a student, working on this between classes and finals
+- He is not an experienced developer -- explain things simply
+- He uses Windows with Python 3.14
+- The bot is live and running automatically (no action needed to
+  keep it running -- GitHub Actions handles it)
+- He is understandably anxious about the bot losing money
+- The current losses (~$12) are small and within expected range
+
+Context for this session:
+  - The bot went live April 20, 2026
+  - Multiple bugs were found and fixed (all in rubber_band_bot.py)
+  - The code was pushed to GitHub and is running correctly
+  - A performance dashboard (write_dashboard) was added to the bot
+  - A standalone AI analyzer (strategy_analyzer.py) was built
+  - Tyler still needs to push the latest rubber_band_bot.py to GitHub
+
+What NOT to do:
+  - Don't suggest rewriting the bot or starting over
+  - Don't suggest disabling the live trading
+  - Don't suggest major parameter changes without backtesting
+  - Don't alarm Tyler about the current losses -- they are expected
+
+What TO do:
+  - Help Tyler push the updated files to GitHub if needed
+  - Help debug any errors from running the scripts
+  - Once 30+ trades are accumulated, proper analysis is possible
+  - If Tyler wants to improve the strategy, suggest:
+    a) earnings blackout filter (highest priority, low effort)
+    b) sector concentration cap
+    c) adding capital once validated
+
+The bot is working. Tyler just needs to let it run.
+================================================================
+END OF HANDOFF V9
+================================================================

@@ -65,7 +65,7 @@ GITHUB SECRETS required:
   ALPACA_SECRET_KEY
 """
 
-import os, json, time, logging, csv, math
+import os, json, time, logging, csv, math, random
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, date
 from pathlib import Path
@@ -177,6 +177,11 @@ EXEC_AUDIT_FILE = LOG_DIR / "execution_audit.csv"
 RUNS_FILE  = LOG_DIR / "runs.csv"
 STOP_LOSS_LOOK_FILE = LOG_DIR / "stop_losses_to_look_into.txt"
 FRACTIONAL_WATCH_FILE = LOG_DIR / "fractional_watch.json"
+AB_TEST_DIR           = LOG_DIR / "ab_test"
+AB_TEST_REGISTRY_FILE = AB_TEST_DIR / "registry.json"
+AB_TEST_DASHBOARD     = AB_TEST_DIR / "dashboard.md"
+AB_TEST_WEEK_REVIEW   = AB_TEST_DIR / "week_review.md"
+AB_TEST_TRADES_CSV    = AB_TEST_DIR / "trades_sorted.csv"
 MORNING_PLAN_FILE = PLAN_DIR / "morning_plan.json"
 EVENING_PLAN_FILE = PLAN_DIR / "evening_plan.json"
 PLAN_MAX_AGE_MIN = 120
@@ -184,6 +189,17 @@ USE_TWO_PHASE_PLAN = True
 # Strategy timing: entries at evening scan only (Phase 3 sim will confirm vs any-time).
 # TODO(phase3): rename PREFER_EVENING_ENTRIES after schedule mode sims (D3).
 EVENING_ONLY_ENTRIES = True
+
+# ---- A/B concentration test (1 week) -----------------------------------------
+# Virtual 50/50 equity split; no fixed position cap — only group budget + ratio.
+#   Group A (wide):        ~AB_RATIO_A_TO_B names per 1 B name, smaller size
+#   Group B (concentrated): 1 per ratio block, larger size
+# Each scan: shuffle all viable signals, split by ratio, size = half_budget / count.
+AB_TEST_ENABLED      = True
+AB_TEST_DAYS         = 7
+AB_TEST_START        = ""     # auto-set on first run if empty (YYYY-MM-DD)
+AB_TEST_EQUITY_SPLIT = 0.50
+AB_RATIO_A_TO_B      = 5     # target ~5 wide (A) for every 1 concentrated (B)
 
 # Alpaca account: read only .equity / .cash from get_account().
 # Deprecated Jul 6 2026: pattern_day_trader, daytrade_count, daytrading_buying_power — never used here.
@@ -193,7 +209,7 @@ FETCH_CHUNK_PAUSE_S = 0.25
 _run_started_at = None
 _last_cache_hit = False
 
-for d in [LOG_DIR, DAILY_DIR, WEEKLY_DIR, PLAN_DIR, CACHE_DIR]:
+for d in [LOG_DIR, DAILY_DIR, WEEKLY_DIR, PLAN_DIR, CACHE_DIR, AB_TEST_DIR]:
     d.mkdir(parents=True, exist_ok=True)
 
 W = 72   # display box inner width
@@ -798,6 +814,8 @@ def enrich(client, positions):
             if o.client_order_id and "|" in o.client_order_id:
                 positions[sym]["strategy"] = o.client_order_id.split("|")[0]
     except Exception as e: log.debug(f"enrich failed: {e}")
+    if ab_test_active() or ab_load_registry().get("entries"):
+        ab_attach_groups(positions)
     return positions
 
 
@@ -822,6 +840,429 @@ def entry_slot_ok(buys_today, max_trades):
         log.warning(f"Entry cap reached {buys_today}/{max_trades}")
         return False
     return True
+
+
+# =============================================================================
+#  A/B CONCENTRATION TEST  (virtual 50/50 groups, tracked separately)
+# =============================================================================
+
+def _ab_default_registry():
+    start = AB_TEST_START or str(date.today())
+    return {"started": start, "days": AB_TEST_DAYS, "entries": {}, "scans": []}
+
+
+def ab_load_registry():
+    if not AB_TEST_REGISTRY_FILE.exists():
+        reg = _ab_default_registry()
+        ab_save_registry(reg)
+        return reg
+    try:
+        return json.loads(AB_TEST_REGISTRY_FILE.read_text(encoding="utf-8"))
+    except Exception as e:
+        log.warning(f"ab_load_registry failed: {e}")
+        return _ab_default_registry()
+
+
+def ab_save_registry(reg):
+    try:
+        AB_TEST_REGISTRY_FILE.write_text(
+            json.dumps(reg, indent=2, sort_keys=True), encoding="utf-8")
+    except Exception as e:
+        log.warning(f"ab_save_registry failed: {e}")
+
+
+def ab_test_end(start_str=None):
+    reg = ab_load_registry()
+    start = start_str or reg.get("started") or str(date.today())
+    try:
+        s = datetime.strptime(start, "%Y-%m-%d").date()
+    except Exception:
+        s = date.today()
+    days = int(reg.get("days") or AB_TEST_DAYS)
+    return s + timedelta(days=days - 1)
+
+
+def ab_test_active():
+    if not AB_TEST_ENABLED:
+        return False
+    reg = ab_load_registry()
+    start = reg.get("started") or str(date.today())
+    try:
+        s = datetime.strptime(start, "%Y-%m-%d").date()
+    except Exception:
+        return False
+    return s <= date.today() <= ab_test_end(start)
+
+
+def ab_position_key(ticker, entry_date):
+    return f"{ticker}|{entry_date or ''}"
+
+
+def ab_register_entry(ticker, entry_date, group, strategy, dollars):
+    reg = ab_load_registry()
+    reg.setdefault("entries", {})
+    reg["entries"][ab_position_key(ticker, entry_date)] = {
+        "group": group,
+        "strategy": strategy,
+        "dollars": round(float(dollars), 2),
+        "entry_date": entry_date,
+    }
+    ab_save_registry(reg)
+
+
+def ab_unregister_entry(ticker, entry_date):
+    reg = ab_load_registry()
+    key = ab_position_key(ticker, entry_date)
+    if reg.get("entries", {}).pop(key, None) is not None:
+        ab_save_registry(reg)
+
+
+def ab_group_for(ticker, entry_date=""):
+    reg = ab_load_registry()
+    entries = reg.get("entries", {})
+    if entry_date:
+        ent = entries.get(ab_position_key(ticker, entry_date))
+        if ent:
+            return ent.get("group", "")
+    for k, ent in entries.items():
+        if k.startswith(f"{ticker}|"):
+            return ent.get("group", "")
+    return ""
+
+
+def ab_attach_groups(positions):
+    for ticker, pos in positions.items():
+        pos["ab_group"] = ab_group_for(ticker, pos.get("entry_date", ""))
+
+
+def ab_open_counts(positions):
+    a = b = 0
+    for ticker, p in positions.items():
+        g = p.get("ab_group") or ab_group_for(ticker, p.get("entry_date", ""))
+        if g == "A":
+            a += 1
+        elif g == "B":
+            b += 1
+    return a, b
+
+
+def ab_deployed(positions, group):
+    total = 0.0
+    for ticker, p in positions.items():
+        g = p.get("ab_group") or ab_group_for(ticker, p.get("entry_date", ""))
+        if g == group:
+            total += float(p.get("dollar_amt", 0) or p.get("market_value", 0) or 0)
+    return total
+
+
+def ab_size_for_group(group, equity, batch_count, deployed=0.0):
+    """Dynamic size: remaining half-budget divided by signals in this group today."""
+    half = equity * AB_TEST_EQUITY_SPLIT
+    avail_g = max(0.0, half - float(deployed))
+    n = max(1, int(batch_count))
+    return max(MIN_TRADE_SIZE, min(avail_g / n, avail_g))
+
+
+def ab_assign_groups(viable):
+    """Shuffle all viable signals; split ~ratio:1 into A (wide) vs B (conc). No cap."""
+    sigs = [dict(s) for s in viable]
+    if not sigs:
+        return []
+    rng = random.Random(int(date.today().strftime("%Y%m%d")))
+    rng.shuffle(sigs)
+    n = len(sigs)
+    ratio = max(1, AB_RATIO_A_TO_B)
+    n_b = max(1, round(n / (ratio + 1)))
+    n_b = min(n_b, n)
+    n_a = n - n_b
+    for i, s in enumerate(sigs):
+        s["ab_group"] = "B" if i < n_b else "A"
+    for s in sigs:
+        s["_ab_batch_n"] = n_b if s["ab_group"] == "B" else n_a
+    sigs.sort(key=lambda s: (0 if s["ab_group"] == "B" else 1, s["ticker"]))
+    return sigs
+
+
+def ab_log_scan(assigned, viable_count):
+    reg = ab_load_registry()
+    reg.setdefault("scans", []).append({
+        "date": str(date.today()),
+        "time": datetime.now().strftime("%H:%M:%S"),
+        "viable": viable_count,
+        "assigned_a": sum(1 for s in assigned if s.get("ab_group") == "A"),
+        "assigned_b": sum(1 for s in assigned if s.get("ab_group") == "B"),
+        "tickers_a": sorted(s["ticker"] for s in assigned if s.get("ab_group") == "A"),
+        "tickers_b": sorted(s["ticker"] for s in assigned if s.get("ab_group") == "B"),
+    })
+    ab_save_registry(reg)
+
+
+def ab_fetch_test_rows():
+    """All BUY/SELL rows with ab_group since test start, sorted for review."""
+    reg = ab_load_registry()
+    start = reg.get("started", "")
+    if not TX_FILE.exists():
+        return []
+    rows = []
+    with open(TX_FILE, newline="", encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            g = (r.get("ab_group") or "").strip()
+            if not g:
+                continue
+            if start and (r.get("date") or "") < start:
+                continue
+            rows.append(r)
+    rows.sort(key=lambda r: (r.get("date", ""), r.get("ab_group", ""), r.get("action", ""),
+                             r.get("timestamp", ""), r.get("ticker", "")))
+    return rows
+
+
+def ab_group_stats(rows, group, action="SELL"):
+    sub = [r for r in rows if r.get("ab_group") == group and r.get("action") == action]
+    if action == "SELL":
+        pnls = []
+        for r in sub:
+            try:
+                pnls.append(float(r.get("pnl_dollar") or 0))
+            except Exception:
+                pass
+        wins = sum(1 for p in pnls if p > 0)
+        n = len(pnls)
+        return {
+            "n": n,
+            "wins": wins,
+            "win_rate": round(wins / n * 100, 1) if n else 0.0,
+            "total_pnl": round(sum(pnls), 2),
+            "avg_pnl": round(sum(pnls) / n, 2) if n else 0.0,
+        }
+    return {"n": len(sub), "wins": 0, "win_rate": 0.0, "total_pnl": 0.0, "avg_pnl": 0.0}
+
+
+def ab_strategy_breakdown(rows, group):
+    out = {}
+    for r in rows:
+        if r.get("ab_group") != group or r.get("action") != "SELL":
+            continue
+        st = r.get("strategy") or "?"
+        out.setdefault(st, {"n": 0, "pnl": 0.0, "wins": 0})
+        out[st]["n"] += 1
+        try:
+            p = float(r.get("pnl_dollar") or 0)
+        except Exception:
+            p = 0.0
+        out[st]["pnl"] += p
+        if p > 0:
+            out[st]["wins"] += 1
+    return dict(sorted(out.items(), key=lambda kv: kv[1]["pnl"], reverse=True))
+
+
+def ab_realized_pnl(group=None):
+    if not TX_FILE.exists():
+        return 0.0, 0
+    reg = ab_load_registry()
+    start = reg.get("started", "")
+    total = 0.0
+    n = 0
+    with open(TX_FILE, newline="", encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            if r.get("action") != "SELL":
+                continue
+            if start and (r.get("date") or "") < start:
+                continue
+            g = (r.get("ab_group") or "").strip()
+            if group and g != group:
+                continue
+            if not group and not g:
+                continue
+            try:
+                total += float(r.get("pnl_dollar") or 0)
+                n += 1
+            except Exception:
+                pass
+    return total, n
+
+
+def ab_write_dashboard(equity, cash, positions):
+    """Write dashboard.md, week_review.md, and trades_sorted.csv for end-of-week review."""
+    if not ab_test_active() and not ab_load_registry().get("entries"):
+        return
+    reg = ab_load_registry()
+    start = reg.get("started", "?")
+    end = ab_test_end(start)
+    ab_attach_groups(positions)
+    a_open, b_open = ab_open_counts(positions)
+    a_dep = ab_deployed(positions, "A")
+    b_dep = ab_deployed(positions, "B")
+    a_open_pnl = sum(p.get("pnl_dollar", 0) for p in positions.values()
+                     if (p.get("ab_group") or "") == "A")
+    b_open_pnl = sum(p.get("pnl_dollar", 0) for p in positions.values()
+                     if (p.get("ab_group") or "") == "B")
+    a_real, a_n = ab_realized_pnl("A")
+    b_real, b_n = ab_realized_pnl("B")
+    half = equity * AB_TEST_EQUITY_SPLIT
+    active = ab_test_active()
+    rows = ab_fetch_test_rows()
+    a_st = ab_group_stats(rows, "A")
+    b_st = ab_group_stats(rows, "B")
+    a_buys = ab_group_stats(rows, "A", action="BUY")["n"]
+    b_buys = ab_group_stats(rows, "B", action="BUY")["n"]
+    ratio_live = round(a_open / b_open, 1) if b_open else (a_open if a_open else 0)
+
+    # ── trades_sorted.csv ─────────────────────────────────────────────────
+    try:
+        fields = ["date", "timestamp", "ab_group", "action", "ticker", "strategy",
+                  "price", "dollar_amount", "pnl_pct", "pnl_dollar", "hold_days",
+                  "exit_reason", "sell_method"]
+        with open(AB_TEST_TRADES_CSV, "w", newline="", encoding="utf-8") as cf:
+            w = csv.DictWriter(cf, fieldnames=fields, extrasaction="ignore")
+            w.writeheader()
+            for r in rows:
+                w.writerow({k: r.get(k, "") for k in fields})
+    except Exception as e:
+        log.warning(f"ab trades csv failed: {e}")
+
+    # ── dashboard.md (quick snapshot) ─────────────────────────────────────
+    dash = [
+        "# A/B Test — Quick Dashboard",
+        "",
+        "| | |",
+        "|---|---|",
+        f"| Status | {'**ACTIVE**' if active else 'ENDED — review week_review.md'} |",
+        f"| Period | {start} → {end} |",
+        f"| Equity | ${equity:,.2f} |",
+        f"| Split | {AB_TEST_EQUITY_SPLIT:.0%} virtual budget per group |",
+        f"| Target ratio | ~{AB_RATIO_A_TO_B}:1 (A wide : B conc) |",
+        f"| Live open ratio | {a_open}:{b_open} ({ratio_live}:1) |",
+        "",
+        "## Scoreboard (realized since test start)",
+        "",
+        "| Group | Buys | Closed | Win% | Realized P&L | Open | Open P&L | Deployed |",
+        "|-------|------|--------|------|--------------|------|----------|----------|",
+        f"| **A** wide | {a_buys} | {a_st['n']} | {a_st['win_rate']:.1f}% | "
+        f"${a_real:+,.2f} | {a_open} | ${a_open_pnl:+,.2f} | ${a_dep:,.2f} |",
+        f"| **B** conc | {b_buys} | {b_st['n']} | {b_st['win_rate']:.1f}% | "
+        f"${b_real:+,.2f} | {b_open} | ${b_open_pnl:+,.2f} | ${b_dep:,.2f} |",
+        f"| **Combined** | {a_buys + b_buys} | {a_st['n'] + b_st['n']} | — | "
+        f"${a_real + b_real:+,.2f} | {a_open + b_open} | ${a_open_pnl + b_open_pnl:+,.2f} | — |",
+        "",
+        "## Open positions (sorted by group → ticker)",
+    ]
+    for grp in ("A", "B"):
+        dash.append(f"### Group {grp}")
+        pos_rows = sorted(
+            [(t, p) for t, p in positions.items() if (p.get("ab_group") or "") == grp],
+            key=lambda x: x[0],
+        )
+        if not pos_rows:
+            dash.append("_None_")
+            continue
+        dash += ["| Ticker | Strategy | Invested | P&L% | P&L$ | Entry |",
+                   "|--------|----------|----------|------|------|-------|"]
+        for t, p in pos_rows:
+            dash.append(
+                f"| {t} | {p.get('strategy','?')} | ${p.get('dollar_amt',0):,.2f} "
+                f"| {p.get('pnl_pct',0):+.1f}% | ${p.get('pnl_dollar',0):+.2f} "
+                f"| {p.get('entry_date','')} |")
+        dash.append("")
+    dash.append(f"_Updated {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}_")
+    dash.append(f"_Full detail: `week_review.md` · All trades: `trades_sorted.csv`_")
+
+    # ── week_review.md (full sorted review) ───────────────────────────────
+    review = [
+        "# A/B Concentration Test — Week Review",
+        "",
+        f"**Period:** {start} → {end}  ",
+        f"**Status:** {'ACTIVE' if active else 'ENDED'}  ",
+        f"**Design:** ~{AB_RATIO_A_TO_B}:1 signal ratio (A wide / B conc), no fixed position cap — "
+        f"limited only by each group's 50% virtual budget and account cash.",
+        "",
+        "---",
+        "",
+        "## 1. Headline comparison",
+        "",
+        "| Metric | Group A (wide) | Group B (conc) |",
+        "|--------|----------------|----------------|",
+        f"| Buys (test period) | {a_buys} | {b_buys} |",
+        f"| Closed trades | {a_st['n']} | {b_st['n']} |",
+        f"| Win rate | {a_st['win_rate']:.1f}% | {b_st['win_rate']:.1f}% |",
+        f"| Avg $ / closed trade | ${a_st['avg_pnl']:+.2f} | ${b_st['avg_pnl']:+.2f} |",
+        f"| Realized P&L | ${a_real:+,.2f} | ${b_real:+,.2f} |",
+        f"| Open positions now | {a_open} | {b_open} |",
+        f"| Open P&L (unrealized) | ${a_open_pnl:+,.2f} | ${b_open_pnl:+,.2f} |",
+        f"| Capital deployed now | ${a_dep:,.2f} / ${half:,.0f} | ${b_dep:,.2f} / ${half:,.0f} |",
+        f"| **Total P&L (realized + open)** | "
+        f"${a_real + a_open_pnl:+,.2f} | ${b_real + b_open_pnl:+,.2f} |",
+        "",
+        "## 2. Closed trades by group (newest first)",
+        "",
+    ]
+    sells = [r for r in rows if r.get("action") == "SELL"]
+    sells.sort(key=lambda r: (r.get("date", ""), r.get("timestamp", "")), reverse=True)
+    if sells:
+        review += ["| Date | Grp | Ticker | Strategy | P&L$ | P&L% | Hold | Exit |",
+                   "|------|-----|--------|----------|------|------|------|------|"]
+        for r in sells:
+            review.append(
+                f"| {r.get('date','')} | {r.get('ab_group','')} | {r.get('ticker','')} "
+                f"| {r.get('strategy','?')} | ${float(r.get('pnl_dollar') or 0):+.2f} "
+                f"| {float(r.get('pnl_pct') or 0):+.1f}% | {r.get('hold_days','')} "
+                f"| {r.get('exit_reason','')} |")
+    else:
+        review.append("_No closed A/B trades yet._")
+    review += ["", "## 3. Closed trades by strategy", ""]
+    for grp, label in [("A", "Wide"), ("B", "Concentrated")]:
+        review.append(f"### Group {grp} — {label}")
+        br = ab_strategy_breakdown(rows, grp)
+        if not br:
+            review.append("_None_")
+        else:
+            review += ["| Strategy | Trades | Wins | Win% | Total P&L |",
+                       "|----------|--------|------|------|-----------|"]
+            for st, v in br.items():
+                wr = round(v["wins"] / v["n"] * 100, 1) if v["n"] else 0
+                review.append(
+                    f"| {st} | {v['n']} | {v['wins']} | {wr:.1f}% | ${v['pnl']:+.2f} |")
+        review.append("")
+    review += ["## 4. Daily scan log (signal assignment)", ""]
+    scans = reg.get("scans") or []
+    if scans:
+        review += ["| Date | Time | Viable | → A | → B | B tickers |",
+                   "|------|------|--------|-----|-----|-----------|"]
+        for sc in scans:
+            review.append(
+                f"| {sc.get('date','')} | {sc.get('time','')} | {sc.get('viable',0)} "
+                f"| {sc.get('assigned_a',0)} | {sc.get('assigned_b',0)} "
+                f"| {', '.join(sc.get('tickers_b') or [])} |")
+    else:
+        review.append("_No scans logged yet._")
+    review += [
+        "",
+        "## 5. All ledger rows (sorted: date → group → action → ticker)",
+        "",
+        "See **`trades_sorted.csv`** for spreadsheet import.",
+        "",
+    ]
+    if rows:
+        review += ["| Date | Time | Grp | Act | Ticker | Strategy | $ | P&L$ | Note |",
+                   "|------|------|-----|-----|--------|----------|---|------|------|"]
+        for r in rows:
+            tm = (r.get("timestamp") or "")[11:19]
+            note = r.get("exit_reason", "") if r.get("action") == "SELL" else ""
+            review.append(
+                f"| {r.get('date','')} | {tm} | {r.get('ab_group','')} | {r.get('action','')} "
+                f"| {r.get('ticker','')} | {r.get('strategy','?')} "
+                f"| ${float(r.get('dollar_amount') or 0):.2f} "
+                f"| ${float(r.get('pnl_dollar') or 0):+.2f} | {_trunc(note, 30)} |")
+    review.append("")
+    review.append(f"_Generated {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}_")
+
+    try:
+        AB_TEST_DASHBOARD.write_text("\n".join(dash), encoding="utf-8")
+        AB_TEST_WEEK_REVIEW.write_text("\n".join(review), encoding="utf-8")
+        log.info(f"  AB reports -> {AB_TEST_DASHBOARD.name}, {AB_TEST_WEEK_REVIEW.name}, "
+                 f"{AB_TEST_TRADES_CSV.name}")
+    except Exception as e:
+        log.warning(f"ab_write_dashboard failed: {e}")
 
 
 # =============================================================================
@@ -967,7 +1408,8 @@ def poll_pending_buys(client, pending_buys, rgm):
                    float(client.get_account().equity),
                    expected_price=sig_close,
                    order_price=sig_close,
-                   execution_method="market_fill_batched")
+                   execution_method="market_fill_batched",
+                   ab_group=item.get("ab_group", ""))
             row(ticker, f"confirmed @ ${float(buy_price):.2f}")
         else:
             row(ticker, "still unconfirmed")
@@ -1367,7 +1809,7 @@ def do_sell(client, ticker, extended_hours=False, urgency="normal"):
 TX_F = ["timestamp","date","action","ticker","strategy","price","dollar_amount",
         "pnl_pct","pnl_dollar","hold_days","exit_reason","regime","equity_after",
         "sell_method","cur_at_submit","bid_at_submit","limit_price_used",
-        "sell_latency_s","fill_slippage_bps"]
+        "sell_latency_s","fill_slippage_bps","ab_group"]
 EXEC_AUDIT_F = [
     "timestamp", "date", "action", "ticker", "strategy",
     "expected_price", "order_price", "actual_price", "filled_dollars",
@@ -1379,7 +1821,8 @@ def log_tx(action, ticker, strategy, price, dollars, rgm, equity,
            pnl_pct=0, pnl_dollar=0, hold_days=0, exit_reason="",
            sell_method="", cur_at_submit=None, bid_at_submit=None,
            limit_price_used=None, sell_latency_s=None, fill_slippage_bps=None,
-           expected_price=None, order_price=None, execution_method=""):
+           expected_price=None, order_price=None, execution_method="",
+           ab_group=""):
     def _fmt(v, nd=2):
         if v is None:
             return ""
@@ -1461,7 +1904,19 @@ def log_tx(action, ticker, strategy, price, dollars, rgm, equity,
         "limit_price_used": _fmt(limit_price_used, 4),
         "sell_latency_s": _fmt(sell_latency_s, 2),
         "fill_slippage_bps": _fmt(fill_slippage_bps, 2),
+        "ab_group": ab_group or "",
     }
+    if action == "SELL" and not row_data["ab_group"]:
+        row_data["ab_group"] = ab_group_for(ticker)
+    if action == "BUY" and row_data["ab_group"]:
+        ab_register_entry(ticker, str(date.today()), row_data["ab_group"], strategy, dollars)
+    if action == "SELL":
+        reg = ab_load_registry()
+        for k in list(reg.get("entries", {})):
+            if k.startswith(f"{ticker}|"):
+                reg["entries"].pop(k, None)
+                ab_save_registry(reg)
+                break
     try:
         init = not TX_FILE.exists()
         with open(TX_FILE, "a", newline="") as f:
@@ -1754,8 +2209,13 @@ def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells
             log.warning(f"write_daily ledger read failed: {e}")
     if ledger_today:
         ledger_today.sort(key=lambda r: r.get("timestamp", ""))
-        L += ["| Time | Action | Ticker | Strategy | Price | Amount | Note |",
-              "|------|--------|--------|----------|-------|--------|------|"]
+        has_grp = any(r.get("ab_group") for r in ledger_today)
+        if has_grp:
+            L += ["| Time | Grp | Action | Ticker | Strategy | Price | Amount | Note |",
+                  "|------|-----|--------|--------|----------|-------|--------|------|"]
+        else:
+            L += ["| Time | Action | Ticker | Strategy | Price | Amount | Note |",
+                  "|------|--------|--------|----------|-------|--------|------|"]
         for t in ledger_today:
             ts = t.get("timestamp", "")
             tm = ts[11:16] if len(ts) >= 16 else "--:--"
@@ -1770,8 +2230,12 @@ def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells
                 amt = 0.0
             note = t.get("exit_reason", "") if action == "SELL" else "--"
             note = note or "--"
-            L.append(f"| {tm} | {action:<4} | {t.get('ticker','')} | {t.get('strategy','?')} | "
-                     f"${px:.2f} | ${amt:.2f} | {note} |")
+            if has_grp:
+                L.append(f"| {tm} | {t.get('ab_group','')} | {action:<4} | {t.get('ticker','')} | "
+                         f"{t.get('strategy','?')} | ${px:.2f} | ${amt:.2f} | {note} |")
+            else:
+                L.append(f"| {tm} | {action:<4} | {t.get('ticker','')} | {t.get('strategy','?')} | "
+                         f"${px:.2f} | ${amt:.2f} | {note} |")
     elif buys or sells:
         # Fallback for first run before ledger write is available.
         L += ["| Time | Action | Ticker | Strategy | Price | Amount | Note |",
@@ -2742,6 +3206,8 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
     # Keep daily markdown in sync for non-scan exit runs too.
     write_daily(date.today(), eq2, ca2, rgm, date.today().month, positions_after, [], [], [],
                 preserve_existing_signals=True)
+    if ab_test_active() or ab_load_registry().get("entries"):
+        ab_write_dashboard(eq2, ca2, positions_after)
 
 
 # =============================================================================
@@ -2774,8 +3240,18 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     entries_today = _count_buys_today()
     # Dynamic entry cap: cash slots + MAX_OPEN_POSITIONS concurrent holdings.
     max_trades = max(1, int(avail // MIN_TRADE_SIZE))
-    if MAX_OPEN_POSITIONS:
+    if not ab_test_active() and MAX_OPEN_POSITIONS:
         max_trades = min(max_trades, max(0, MAX_OPEN_POSITIONS - len(positions)))
+
+    if ab_test_active():
+        reg = ab_load_registry()
+        hdr("A/B CONCENTRATION TEST  (ACTIVE)")
+        row("Period", f"{reg.get('started')} → {ab_test_end(reg.get('started'))}")
+        row("Group A", f"wide — ~{AB_RATIO_A_TO_B}× B count, no fixed cap")
+        row("Group B", f"conc — 1 per ~{AB_RATIO_A_TO_B}+1 signals, no fixed cap")
+        row("Sizing", f"each group's 50% budget ÷ signals assigned that day")
+        row("Review files", f"logs/ab_test/week_review.md · trades_sorted.csv")
+        ftr()
     plan_mode_name = "morning" if mode_name == "morning_scan" else "evening"
     plan_file = _plan_file_for_mode(plan_mode_name)
     cached_plan = _load_plan(plan_file)
@@ -2794,23 +3270,38 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
 
     hdr(f"HOLDINGS  ({len(positions)} open)")
     if positions:
-        trow("TICKER","STRATEGY","INVESTED","ENTRY","NOW","P&L%","P&L$",
-             widths=[7,14,9,7,7,6,7])
+        if ab_test_active():
+            trow("GRP","TICKER","STRATEGY","INVESTED","ENTRY","NOW","P&L%","P&L$",
+                 widths=[4,7,14,9,7,7,6,7])
+        else:
+            trow("TICKER","STRATEGY","INVESTED","ENTRY","NOW","P&L%","P&L$",
+                 widths=[7,14,9,7,7,6,7])
         div()
         for t, p in positions.items():
-            trow(t, p.get("strategy","?"),
-                 f"${p.get('dollar_amt',0):.2f}", f"${p['entry_price']:.2f}",
-                 f"${p['current_price']:.2f}", f"{p['pnl_pct']:+.1f}%",
-                 f"${p['pnl_dollar']:+.2f}", widths=[7,14,9,7,7,6,7])
+            if ab_test_active():
+                trow(p.get("ab_group","?"), t, p.get("strategy","?"),
+                     f"${p.get('dollar_amt',0):.2f}", f"${p['entry_price']:.2f}",
+                     f"${p['current_price']:.2f}", f"{p['pnl_pct']:+.1f}%",
+                     f"${p['pnl_dollar']:+.2f}", widths=[4,7,14,9,7,7,6,7])
+            else:
+                trow(t, p.get("strategy","?"),
+                     f"${p.get('dollar_amt',0):.2f}", f"${p['entry_price']:.2f}",
+                     f"${p['current_price']:.2f}", f"{p['pnl_pct']:+.1f}%",
+                     f"${p['pnl_dollar']:+.2f}", widths=[7,14,9,7,7,6,7])
         blank()
         inv = sum(p.get("dollar_amt",0) for p in positions.values())
         pnl = sum(p.get("pnl_dollar",0) for p in positions.values())
         row("Total invested", f"${inv:,.2f}")
         row("Total open P&L", f"${pnl:+,.2f}")
+        if ab_test_active():
+            a_o, b_o = ab_open_counts(positions)
+            row("By group", f"A: {a_o} open ${ab_deployed(positions,'A'):,.0f}  |  "
+                f"B: {b_o} open ${ab_deployed(positions,'B'):,.0f}")
     else:
         blank(); row("No open positions."); blank()
+    cap_note = "A/B test (no global cap)" if ab_test_active() else str(MAX_OPEN_POSITIONS)
     row(f"Buys today: {entries_today}  |  entry cap: {max_trades}"
-        f"  |  max open: {MAX_OPEN_POSITIONS}")
+        f"  |  max open: {cap_note}")
     ftr()
 
     hdr("PLAN CACHE")
@@ -3100,97 +3591,159 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         entries = 0; buys_log = []; unconfirmed_buys = 0; pending_buys = []
         ftr()
     else:
-        # ── Signal-scaled position sizing ─────────────────────────────────
-        # When few signals: use standard sizes (20% / 20%).
-        # When many signals: scale down equally so we participate in more setups
-        # and get better statistical coverage. Caps at standard sizes; never
-        # goes below MIN_TRADE_SIZE.
-        #
-        # Position sizing: divide available cash by the number of slots we can
-        # actually fill today (min of signals available and cash-based cap).
-        # This ensures we deploy capital evenly rather than shrinking to $20.
         already_held   = set(positions.keys())
         viable         = [s for s in all_sigs if s["ticker"] not in already_held]
-        n_viable       = max(1, len(viable))
-        n_sea_pending  = sum(1 for s in viable if s.get("seasonal"))
-
-        n_slots      = min(n_viable, max_trades)   # signals we can actually fill
-        equal_share  = avail / n_slots
-        sea_da = max(MIN_TRADE_SIZE,
-                     min(equity * SEASONAL_SIZE_PCT, equal_share))
-        off_da = max(MIN_TRADE_SIZE,
-                     min(equity * OFFSCHEDULE_SIZE_PCT,
-                         equal_share * (OFFSCHEDULE_SIZE_PCT / SEASONAL_SIZE_PCT)))
-        scale_active = equal_share < equity * SEASONAL_SIZE_PCT
-
-        hdr("ENTRY ORDERS")
-        cash = float(client.get_account().cash); avail = max(0.0, cash - reserve)
-        if scale_active and n_viable > 1:
-            row(f"Signal scaling: {n_viable} signals / {n_slots} slots → "
-                f"sea=${sea_da:.0f} off=${off_da:.0f}  "
-                f"(max sea=${equity*SEASONAL_SIZE_PCT:.0f} off=${equity*OFFSCHEDULE_SIZE_PCT:.0f})")
         entries = 0; buys_log = []; unconfirmed_buys = 0; pending_buys = []
-        n_unfilled_sea = n_sea_pending  # decrements as seasonal signals get filled
+        cash = float(client.get_account().cash); avail = max(0.0, cash - reserve)
         n_open = len(positions)
-        for sig in all_sigs:
-            ticker = sig["ticker"]; strategy = sig["strategy"]
-            is_seasonal = sig.get("seasonal", False)
-            skip = ""
-            if not entry_slot_ok(entries_today, max_trades):   skip = "entry cap"
-            elif MAX_OPEN_POSITIONS and n_open >= MAX_OPEN_POSITIONS:
-                skip = f"cap {MAX_OPEN_POSITIONS}"
-            elif avail <= 1.0:    skip = "reserve floor"
-            da = sea_da if is_seasonal else off_da
-            # Seasonal reserve: don't let off-schedule buys crowd out unfilled
-            # seasonal signals. Lock cash for ALL pending seasonal entries, not
-            # just one slot, so off-schedule orders only consume true surplus.
-            if not skip and not is_seasonal and n_unfilled_sea > 0:
-                seasonal_lock = min(avail, n_unfilled_sea * sea_da)
-                if avail - da < seasonal_lock:
-                    skip = "seasonal reserve"
-            if not skip and da > avail: skip = "not enough cash"
-            if not skip and has_earnings_soon(ticker): skip = f"earnings ≤{EARNINGS_SKIP_DAYS}d"
-            tier = "S" if is_seasonal else "o"
-            if skip:
-                row(f"  SKIP [{tier}] {ticker}  {strategy}", _trunc(skip, 20))
+
+        if ab_test_active():
+            half = equity * AB_TEST_EQUITY_SPLIT
+            assigned = ab_assign_groups(viable)
+            ab_log_scan(assigned, len(viable))
+            a_open, b_open = ab_open_counts(positions)
+            a_dep = ab_deployed(positions, "A")
+            b_dep = ab_deployed(positions, "B")
+            n_a_left = sum(1 for s in assigned if s.get("ab_group") == "A")
+            n_b_left = sum(1 for s in assigned if s.get("ab_group") == "B")
+            n_a_batch = n_a_left
+            n_b_batch = n_b_left
+
+            hdr("A/B TEST — ENTRY ORDERS")
+            row("Viable signals", str(len(viable)))
+            row("Split today", f"A={n_a_batch}  B={n_b_batch}  (target ~{AB_RATIO_A_TO_B}:1)")
+            row("Open now", f"A={a_open}  B={b_open}  (live ratio {a_open}:{b_open})")
+            row("Budget left", f"A=${max(0,half-a_dep):.0f}  B=${max(0,half-b_dep):.0f}  of ${half:.0f} each")
+            for sig in assigned:
+                ticker = sig["ticker"]; strategy = sig["strategy"]
+                group = sig["ab_group"]
+                batch_left = n_b_left if group == "B" else n_a_left
+                dep = b_dep if group == "B" else a_dep
+                da = ab_size_for_group(group, equity, batch_left, dep)
+                skip = ""
+                if avail <= 1.0:
+                    skip = "reserve floor"
+                elif dep + da > half + 1.0:
+                    skip = f"{group} half budget"
+                if not skip and da > avail:
+                    skip = "not enough cash"
+                if not skip and has_earnings_soon(ticker):
+                    skip = f"earnings ≤{EARNINGS_SKIP_DAYS}d"
+                if skip:
+                    row(f"  SKIP [{group}] {ticker}  {strategy}", _trunc(skip, 22))
+                    continue
+                row(f"  ENTER [{group}] {ticker}  {strategy}", f"${da:.2f}")
+                buy_res = do_buy(client, ticker, da, strategy,
+                                 expected_price=sig["close"], fast_submit=True)
+                if buy_res.get("ok"):
+                    n_open += 1
+                    avail -= da
+                    if group == "B":
+                        b_open += 1
+                        b_dep += da
+                        n_b_left = max(0, n_b_left - 1)
+                    else:
+                        a_open += 1
+                        a_dep += da
+                        n_a_left = max(0, n_a_left - 1)
+                    if buy_res.get("filled"):
+                        entries += 1
+                        entries_today += 1
+                        buy_price = buy_res.get("price") or sig["close"]
+                        buy_dollars = buy_res.get("dollars") or da
+                        log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
+                               float(client.get_account().equity),
+                               expected_price=sig["close"],
+                               order_price=buy_res.get("order_price", sig["close"]),
+                               execution_method=buy_res.get("execution_method", "buy_market"),
+                               ab_group=group)
+                        buys_log.append({"t": datetime.now().strftime("%H:%M"),
+                                          "tk": ticker, "st": strategy,
+                                          "px": round(buy_price, 2), "$": round(buy_dollars, 2),
+                                          "grp": group})
+                    else:
+                        unconfirmed_buys += 1
+                        pending_buys.append({
+                            "ticker": ticker,
+                            "strategy": strategy,
+                            "dollars": da,
+                            "expected_price": sig["close"],
+                            "order_id": buy_res.get("order_id"),
+                            "ab_group": group,
+                        })
+                        row(f"  BUY SUBMITTED [{group}] {ticker}",
+                            "fill pending — batched confirmation after entries")
+        else:
+            # ── Signal-scaled position sizing (standard mode) ───────────────
+            n_viable       = max(1, len(viable))
+            n_sea_pending  = sum(1 for s in viable if s.get("seasonal"))
+            n_slots      = min(n_viable, max_trades)
+            equal_share  = avail / n_slots
+            sea_da = max(MIN_TRADE_SIZE,
+                         min(equity * SEASONAL_SIZE_PCT, equal_share))
+            off_da = max(MIN_TRADE_SIZE,
+                         min(equity * OFFSCHEDULE_SIZE_PCT,
+                             equal_share * (OFFSCHEDULE_SIZE_PCT / SEASONAL_SIZE_PCT)))
+            scale_active = equal_share < equity * SEASONAL_SIZE_PCT
+
+            hdr("ENTRY ORDERS")
+            if scale_active and n_viable > 1:
+                row(f"Signal scaling: {n_viable} signals / {n_slots} slots → "
+                    f"sea=${sea_da:.0f} off=${off_da:.0f}  "
+                    f"(max sea=${equity*SEASONAL_SIZE_PCT:.0f} off=${equity*OFFSCHEDULE_SIZE_PCT:.0f})")
+            n_unfilled_sea = n_sea_pending
+            for sig in all_sigs:
+                ticker = sig["ticker"]; strategy = sig["strategy"]
+                is_seasonal = sig.get("seasonal", False)
+                skip = ""
+                if not entry_slot_ok(entries_today, max_trades):   skip = "entry cap"
+                elif MAX_OPEN_POSITIONS and n_open >= MAX_OPEN_POSITIONS:
+                    skip = f"cap {MAX_OPEN_POSITIONS}"
+                elif avail <= 1.0:    skip = "reserve floor"
+                da = sea_da if is_seasonal else off_da
+                if not skip and not is_seasonal and n_unfilled_sea > 0:
+                    seasonal_lock = min(avail, n_unfilled_sea * sea_da)
+                    if avail - da < seasonal_lock:
+                        skip = "seasonal reserve"
+                if not skip and da > avail: skip = "not enough cash"
+                if not skip and has_earnings_soon(ticker): skip = f"earnings ≤{EARNINGS_SKIP_DAYS}d"
+                tier = "S" if is_seasonal else "o"
+                if skip:
+                    row(f"  SKIP [{tier}] {ticker}  {strategy}", _trunc(skip, 20))
+                    if is_seasonal:
+                        n_unfilled_sea = max(0, n_unfilled_sea - 1)
+                    continue
+                row(f"  ENTER [{tier}] {ticker}  {strategy}", f"${da:.2f}")
+                buy_res = do_buy(client, ticker, da, strategy, expected_price=sig["close"], fast_submit=True)
+                if buy_res.get("ok"):
+                    n_open += 1
+                    avail -= da
+                    if buy_res.get("filled"):
+                        entries += 1
+                        entries_today += 1
+                        buy_price = buy_res.get("price") if buy_res.get("price") is not None else sig["close"]
+                        buy_dollars = buy_res.get("dollars") if buy_res.get("dollars") is not None else da
+                        log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
+                               float(client.get_account().equity),
+                               expected_price=sig["close"],
+                               order_price=buy_res.get("order_price", sig["close"]),
+                               execution_method=buy_res.get("execution_method", "buy_market"))
+                        buys_log.append({"t": datetime.now().strftime("%H:%M"),
+                                          "tk": ticker, "st": strategy,
+                                          "px": round(buy_price, 2), "$": round(buy_dollars, 2)})
+                    else:
+                        unconfirmed_buys += 1
+                        pending_buys.append({
+                            "ticker": ticker,
+                            "strategy": strategy,
+                            "dollars": da,
+                            "expected_price": sig["close"],
+                            "order_id": buy_res.get("order_id"),
+                        })
+                        row(f"  BUY SUBMITTED [{tier}] {ticker}",
+                            "fill pending — batched confirmation after entries")
                 if is_seasonal:
-                    # Mark seasonal signal as processed even when skipped, so any
-                    # remaining cash can flow to off-schedule entries.
                     n_unfilled_sea = max(0, n_unfilled_sea - 1)
-                continue
-            row(f"  ENTER [{tier}] {ticker}  {strategy}", f"${da:.2f}")
-            buy_res = do_buy(client, ticker, da, strategy, expected_price=sig["close"], fast_submit=True)
-            if buy_res.get("ok"):
-                n_open += 1
-                # Submitted orders consume buying power, even if confirmation lags.
-                avail -= da
-                if buy_res.get("filled"):
-                    entries += 1
-                    entries_today += 1
-                    buy_price = buy_res.get("price") if buy_res.get("price") is not None else sig["close"]
-                    buy_dollars = buy_res.get("dollars") if buy_res.get("dollars") is not None else da
-                    log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
-                           float(client.get_account().equity),
-                           expected_price=sig["close"],
-                           order_price=buy_res.get("order_price", sig["close"]),
-                           execution_method=buy_res.get("execution_method", "buy_market"))
-                    buys_log.append({"t": datetime.now().strftime("%H:%M"),
-                                      "tk": ticker, "st": strategy,
-                                      "px": round(buy_price, 2), "$": round(buy_dollars, 2)})
-                else:
-                    unconfirmed_buys += 1
-                    pending_buys.append({
-                        "ticker": ticker,
-                        "strategy": strategy,
-                        "dollars": da,
-                        "expected_price": sig["close"],
-                        "order_id": buy_res.get("order_id"),
-                    })
-                    row(f"  BUY SUBMITTED [{tier}] {ticker}",
-                        "fill pending — batched confirmation after entries")
-            if is_seasonal:
-                # Seasonal signal has been processed (buy attempt complete).
-                n_unfilled_sea = max(0, n_unfilled_sea - 1)
         if entries == 0 and not all_sigs: row("  No entries placed.")
         if pending_buys:
             batched = poll_pending_buys(client, pending_buys, rgm)
@@ -3241,6 +3794,8 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     log_run(scan_run_mode, rgm, eq2, ca2, len(all_sigs), entries, exits, pos2, cache_hit=plan_ok)
     write_daily(today, eq2, ca2, rgm, month, pos2, all_sigs, buys_log, sells_log)
     write_dashboard()
+    if ab_test_active() or ab_load_registry().get("entries"):
+        ab_write_dashboard(eq2, ca2, pos2)
 
 
 # =============================================================================

@@ -1,12 +1,20 @@
 TradingBot (GitHub live repo) — documentation index
+===================================================
 
-ops/         Cron schedule (failed_run_diagnosis.md), pipeline_validation.md
-incidents/   Post-mortems (june_10_incident_report.md)
-             Agent plans: stop_exit_agent_plan.md, AI_5_AGENT_FLOW.md
-             Runbooks: JUNE_STABILIZATION_RUNBOOK.md
+START HERE: docs/TIMELINE.md  (timeline + where to find everything)
 
-scripts/     merge_bot_logs, reconcile_daily_logs, daily_slippage_watch, etc.
-tools/       june_audit.py and one-off audit helpers
-logs/        Bot-written data only (transactions, runs, daily/, analysis/, …)
+ACTIVE (current use)
+  docs/handoff/          ChatGPT / independent review exports (2026-06-19)
+  docs/ops/              Cron pipeline validation
+  logs/transactions.csv  Live trade ledger
+  logs/analysis/         paper_trading_validation.md, daily_slippage_watch.md,
+                         pdt_removal_audit.md, live_slippage_profile_2026-06-16.*
+  logs/ab_test/          A/B concentration test dashboards (when running)
+  simulations/           Backtest / PDT removal sim code + results/
 
-Bot entrypoints at repo root: rubber_band_bot.py, paper_bot.py, generate_dashboard.py
+ARCHIVE (historical — not deleted)
+  docs/archive/          Old handoffs, runbooks, agent plans, incident reports
+  logs/analysis/archive/ Old sim exports, validation dumps, June studies
+
+Bot entrypoints: rubber_band_bot.py, generate_dashboard.py
+Scripts: scripts/  |  Tools: tools/

@@ -1,0 +1,42 @@
+ARCHIVE INDEX — all moved files (nothing deleted)
+Generated: 2026-06-20
+
+docs/archive/agent_plans/
+  AI_5_AGENT_FLOW.md
+  stop_exit_agent_plan.md
+
+docs/archive/runbooks/
+  JUNE_STABILIZATION_RUNBOOK.md
+
+docs/archive/briefs/
+  FULL_SITUATION_BRIEF_FOR_REVIEW.txt
+
+docs/archive/incidents/
+  june_10_incident_report.md
+
+docs/archive/handoff/
+  CLAUDE_NEXT_STEPS_HANDOFF.txt
+  PROJECT_HANDOFF_V9.txt
+  TRANSFER_DOCUMENT.txt
+
+logs/analysis/archive/
+  strategy_expansion_20yr_2026-06-17.md / .csv
+  strategy_expansion_3yr_2026-06-16.md / .csv
+  validation_20yr_test_2_3_6_17_22_33.txt
+  validation_test_22_33_3yr.txt
+  overnight_pdt_20yr_2026-06-17.md
+  overnight_pdt_3yr_2026-06-16.md
+  return_methodology_report.md
+  pdt_schedule_sim_report.md
+  pdt_schedule_sim_rolling_oos.csv
+  pdt_schedule_sim_by_period.csv
+  pdt_schedule_sim_summary.csv
+  paper_trade_validation.md
+  execution_path_review.md
+  extensive_sim_analysis_synthesis.md
+  stop_overshoot_synthesis.md
+  stop_overshoot_timelines.md
+  stop_overshoot_worst50.csv
+  june_audit_latest.md
+
+For narrative context see docs/TIMELINE.md

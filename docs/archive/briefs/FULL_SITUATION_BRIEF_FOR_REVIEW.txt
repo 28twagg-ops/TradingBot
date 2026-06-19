@@ -1,0 +1,528 @@
+================================================================================
+RUBBER BAND BOT — FULL SITUATION BRIEF FOR EXTERNAL REVIEW
+Generated: 2026-06-18 (for Sonnet / advisor review)
+Author context: User runs a small live Alpaca account (~$500) with an automated
+equity bot deployed via GitHub Actions + cron-job.org webhooks.
+================================================================================
+
+TABLE OF CONTENTS
+  1. Executive summary
+  2. What we are trying to accomplish
+  3. Account & performance snapshot
+  4. Strategy — entries, exits, sizing, calendar
+  5. How the bot runs (schedule & infrastructure)
+  6. Repository layout (two folders on disk)
+  7. Log files — what exists and how to read them
+  8. Timeline of issues & incidents
+  9. The core problem: stop-loss execution vs simulation
+  10. PDT (Pattern Day Trader) constraints
+  11. Simulation engine & validation work
+  12. Recent code changes (June 2026)
+  13. What is working now
+  14. What is still broken or uncertain
+  15. Open decisions (not yet implemented)
+  16. Key file paths for deep dive
+  17. Glossary
+
+================================================================================
+1. EXECUTIVE SUMMARY
+================================================================================
+
+We operate "Rubber Band Bot v8" — a calendar-aware, regime-switching, multi-
+strategy US equity bot on Alpaca (LIVE, not paper). Starting equity ~$500.
+Universe: S&P 500 + MidCap 400 (~900 stocks). Bot scans for mean-reversion /
+panic-recovery entry signals, holds 1–3 days, exits on midline (price > 20d MA),
+stop-loss (-0.5%), or max-hold (3 days).
+
+LIVE RESULTS (Apr–Jun 2026): Roughly flat to slightly down (~$500 → ~$482).
+Win rate on closed trades ~35%. Profit factor < 1. Primary drag: STOP LOSSES
+fill far worse than modeled (-0.5% trigger → mean ~-1.7% realized loss).
+
+SIMULATION RESULTS: Headline backtests show spectacular returns (+266% 3yr,
++30,110% 20yr) under ideal gap model. With EMPIRICAL stop slippage from live
+logs, same sims collapse (+27% 3yr, +895% 20yr). Simulation overstated edge
+because it assumed stops near -0.5%; live stops overshoot by ~1.2 percentage
+points on average.
+
+MAJOR JUNE WORK: (a) hardened CI/log pipeline after bot stopped logging Jun 11–13,
+(b) investigated stop overshoots and deployed market_urgent_full stop sells,
+(c) ran extensive validation sims (3yr/7yr/20yr), (d) validated overnight PDT
+schedule (buy afternoon, sell morning), (e) switched live bot to EVENING_ONLY
+entries, (f) added daily slippage monitoring and daily log reconciliation.
+
+BOTTOM LINE FOR REVIEWER: Strategy logic may be sound in sim, but LIVE edge is
+being eaten by (1) stop execution slippage, (2) PDT deferrals when schedule was
+wrong (morning buys + same-day stops blocked), (3) fractional positions without
+broker GTC stops relying on software exits. We are stabilizing execution before
+considering strategy expansion (adding new strategies from sim bake-offs).
+
+================================================================================
+2. WHAT WE ARE TRYING TO ACCOMPLISH
+================================================================================
+
+- Run a fully automated, rules-based swing system on a small account without
+  manual intervention.
+- Respect PDT rules on a sub-$25k account (no same-day round trips unless
+  necessary for stop protection).
+- Use simulation to validate parameters BEFORE changing live config.
+- Commit all logs back to GitHub after every run for auditability.
+- Eventually grow account via compounding if live execution matches sim
+  assumptions.
+
+================================================================================
+3. ACCOUNT & PERFORMANCE SNAPSHOT
+================================================================================
+
+Broker:        Alpaca (LIVE — PAPER_TRADING = False in rubber_band_bot.py)
+Starting eq:   ~$500 (user target account size for sims)
+Current eq:    ~$482–$484 (runs.csv / daily log 2026-06-17)
+Peak eq:       ~$513 (dashboard, stale as of 2026-06-09)
+Open positions: ~30+ fractional positions (~$8–$15 each typical)
+Cash:          ~$59 (heavily invested; 5% reserve rule)
+
+Transaction log: logs/transactions.csv
+  - 796 rows from 2026-05-25 through 2026-06-17
+  - June 2026: 291 buys, 372 sells (high churn)
+
+June daily activity (buys/sells):
+  2026-06-04   B:11  S:15
+  2026-06-05   B:18  S:11
+  2026-06-08   B:23  S:21
+  2026-06-09   B:12  S:23
+  2026-06-10   B:19  S:12
+  2026-06-11   B:73  S:19   ← abnormal buy spike
+  2026-06-12   B:56  S:63
+  2026-06-15   B:0   S:63
+  2026-06-16   B:29  S:49
+  2026-06-17   B:0   S:48
+
+Dashboard (logs/dashboard.md): STALE — last updated 2026-06-09. Shows -1.61%
+total return, 35% win rate, 107 stop_loss exits at -1.55% avg. Use transactions
+.csv for current analytics.
+
+Closed-trade stats (stale dashboard):
+  Wins/Losses: 66/121 | Win rate 35.3% | Profit factor 0.85
+  Stop_loss: 107 trades, 0% win rate, -1.55% avg
+  Midline: 48 trades, 83% win rate, +1.91% avg
+  Max_hold: 32 trades, 81% win rate, +1.11% avg
+
+Interpretation: Midline and max-hold exits work; stop bucket destroys P&L.
+
+================================================================================
+4. STRATEGY — ENTRIES, EXITS, SIZING, CALENDAR
+================================================================================
+
+4.1 ENTRY STRATEGIES (7 active in live bot)
+  RSIRecovery    — scheduled primary in some months (sim winner)
+  RubberBand     — off-schedule + Oct
+  52wkLow
+  MomReversal
+  GapDown        — panic gap recovery
+  VolumeSpike    — institutional volume spike
+  Pullback50     — uptrend dip buy
+  REMOVED: GoldenCross (negative Sharpe in sim)
+
+4.2 MONTHLY SCHEDULE (primary + secondary per month)
+  Jan:  MomReversal + 52wkLow
+  Feb:  52wkLow + VolumeSpike
+  Mar:  GapDown + 52wkLow
+  Apr:  RubberBand + Pullback50
+  May:  RubberBand + 52wkLow
+  Jun:  GapDown + VolumeSpike   ← current month
+  Jul:  52wkLow + Pullback50
+  Aug:  VolumeSpike + 52wkLow
+  Sep:  GapDown + VolumeSpike
+  Oct:  RubberBand + GapDown
+  Nov:  RubberBand + MomReversal
+  Dec:  MomReversal + VolumeSpike
+
+  All 7 strategies can also fire "off-schedule" as tertiary signals.
+
+4.3 REGIME FILTER
+  SPY-based regime: BULL / CORRECTION / BEAR adjusts RSI, BB, volume thresholds.
+
+4.4 EXIT RULES (live config)
+  EXIT_STOP_LOSS  = -0.005  (-0.5%)  — sim-validated trigger level
+  EXIT_DAYS_MAX   = 3 days
+  Midline exit:    price crosses above 20-day moving average
+  Stop type:       GTC stop-MARKET on whole shares; fractional uses software exit
+
+4.5 POSITION SIZING
+  SEASONAL_SIZE_PCT    = 20% of equity (scheduled primary/secondary signals)
+  OFFSCHEDULE_SIZE_PCT = 20% of equity (other strategy hits)
+  CASH_RESERVE_PCT     = 5%
+  MIN_TRADE_SIZE       = 0.01 (effectively unlimited fractional slots)
+  No hard MAX_OPEN_POSITIONS — cash is the constraint
+  On ~$500 account, positions often ~$8–$15 due to many concurrent signals
+
+4.6 FILTERS
+  EARNINGS_SKIP_DAYS = 2 (skip buys near earnings)
+  MIN_STOCK_PRICE = $5
+  Universe BOTH = ~900 stocks
+
+4.7 TWO-PHASE PLAN CACHE
+  evening_prep (3:30–3:43pm ET) builds evening_plan.json
+  morning_prep (9:35–9:43am ET) builds morning_plan.json
+  scan run can use cached signals/exits if plan fresh (<120 min)
+
+================================================================================
+5. HOW THE BOT RUNS (SCHEDULE & INFRASTRUCTURE)
+================================================================================
+
+5.1 DEPLOYMENT
+  - GitHub repo: https://github.com/28twagg-ops/TradingBot (folder TradingBot-git locally)
+  - Workflow: .github/workflows/run_bot.yml
+  - Trigger: cron-job.org webhooks (Chicago time) → workflow_dispatch
+  - BOT_MODE=auto uses detect_mode() in rubber_band_bot.py
+  - After run: logs merged, reconciled, slippage watch updated, pushed to main
+  - Secrets: ALPACA_API_KEY, ALPACA_SECRET_KEY (live keys)
+  - Job timeout: 25 minutes; concurrency group prevents overlapping cancels
+
+5.2 CURRENT AUTO MODE SCHEDULE (US Eastern, post June 17 deploy)
+  9:30–9:34am   exits
+  9:35–9:43am   morning_prep (plan cache only — NO buys)
+  9:44–9:59am   exits (was morning_scan with buys — REMOVED)
+  10:00am–3:29pm exits every ~15 min
+  3:30–3:43pm   evening_prep
+  3:44–3:59pm   scan — ONLY BUY WINDOW + full scan + daily log
+  4:00–8:00pm   ext_exits (extended hours limit sells)
+  Weekend       weekly summary
+
+  EVENING_ONLY_ENTRIES = True
+  PDT-safe: buy ~3:50pm ET, sell next morning. No morning entries.
+
+5.3 CRON-JOB.ORG (Chicago time — may need doc update)
+  Historical mapping in docs/ops/pipeline_validation.md:
+    8:30 exits | 8:35 morning_prep | 8:45 was morning_scan | 14:30 evening_prep
+    14:45 scan | 15:00+ ext_exits
+  Note: 8:45 Chicago = 9:45 ET → now runs exits, not buys.
+
+5.4 PAPER BOT
+  Separate paper_bot.py + paper_bot.yml workflow (manual dispatch).
+  Paper uses relaxed same-day exits; live uses STRICT_SAME_DAY_EXIT.
+
+================================================================================
+6. REPOSITORY LAYOUT (TWO FOLDERS ON DISK)
+================================================================================
+
+C:\Users\28twa\Desktop\TradingBot        — Local workspace (NOT git root)
+  rubber_band_bot.py, paper_bot.py       — copies; may lag TradingBot-git
+  simulations/                           — validation sim engine, caches, results
+  docs/                                  — handoffs, analysis notes, reports
+  scripts/                               — test_live_order.py etc.
+  archive/TradingBot-main/               — old duplicate snapshot
+  logs/                                  — small local log copy
+
+C:\Users\28twa\Desktop\TradingBot-git   — GitHub clone (source of truth for live)
+  rubber_band_bot.py                     — LIVE bot deployed by Actions
+  scripts/                               — merge_bot_logs, reconcile_daily_logs,
+                                           daily_slippage_watch, sim_pdt_schedule
+  tools/june_audit.py                    — daily June audit tool
+  docs/                                  — ops, incidents, runbooks
+  logs/                                  — all committed live logs
+
+Sim outputs: TradingBot/simulations/results/
+  validation/  studies/  grand_tests/  logs/
+
+Published analysis copies: TradingBot-git/logs/analysis/
+
+================================================================================
+7. LOG FILES — WHAT EXISTS AND HOW TO READ THEM
+================================================================================
+
+logs/transactions.csv
+  Every BUY/SELL with price, dollars, strategy, regime, equity, sell_method,
+  execution_method, expected_price, slippage fields.
+
+logs/execution_audit.csv
+  Started Jun 10 — per-order expected vs actual fill, slippage_pct, method.
+  Use for BUY/SELL slippage (non-stop); stops often only in transactions.csv.
+
+logs/runs.csv
+  One row per bot invocation: mode, equity, cash, signals, entries, exits,
+  open_positions, tickers, universe. May include duration_s, cache_hit.
+
+logs/daily/YYYY-MM-DD.md
+  Human-readable daily summary: account, holdings, signals, trades.
+  WARNING: Some days are "fallback logs" if scan git push failed — see banner
+  at top. reconcile_daily_log() rebuilds from transactions.csv when needed.
+
+logs/weekly/YYYY-WNN.md
+  Weekend summary snapshots.
+
+logs/plans/morning_plan.json, evening_plan.json
+  Cached prep outputs for two-phase execution.
+
+logs/analysis/
+  Simulation reports, slippage profiles, daily_slippage_watch.md (auto-updated).
+
+logs/stop_losses_to_look_into.txt
+  Bot-written investigation log when stop breaches detected.
+
+logs/fractional_watch.json
+  Tracks fractional positions lacking broker GTC stops.
+
+logs/pdt.json
+  PDT round-trip tracking (today's entries for cap logic).
+
+logs/dashboard.md
+  STALE — run generate_dashboard.py to refresh.
+
+docs/ops/failed_run_diagnosis.md
+  Jun 11–13 logging gap root-cause analysis.
+
+docs/incidents/june_10_incident_report.md
+  Same-day PDT deferral incident detail.
+
+================================================================================
+8. TIMELINE OF ISSUES & INCIDENTS
+================================================================================
+
+APR–MAY 2026: Bot live with morning + evening activity. Sim-validated v8 params
+(-0.5% stop, 3d hold, 20%/20% sizing). Account roughly flat.
+
+JUN 10 INCIDENT (critical):
+  - 19 afternoon buys, 12 same-day stop breaches on NEW positions.
+  - STRICT_SAME_DAY_EXIT blocked selling (PDT guard) — all 12 deferred.
+  - Fractional ~$20 positions: no broker GTC stop; software exit deferred.
+  - Mean stop damage worse overnight. See docs/incidents/june_10_incident_report.md
+
+JUN 11–13 LOGGING GAP:
+  - No transactions, daily logs, or runs after Jun 10 23:45 until recovery.
+  - Likely: GitHub Actions didn't complete/push, webhook failure, or push conflict.
+  - See docs/ops/failed_run_diagnosis.md
+
+JUN 11 ABNORMAL ACTIVITY:
+  - 73 buys in one day (possible recovery run + plan cache issues or duplicate
+    entries after gap). Heavy position churn followed.
+
+JUN 10–16 STOP OVERSHOOT ERA:
+  - Stops used limit_fill_position_check / market_fallback paths.
+  - daily_slippage_watch ALERT most days: mean stop ~-1.5% to -4%, overshoot
+    ~-1.0 to -3.7 pp vs -0.5% model.
+
+JUN 17 FIRST GOOD STOP DAY:
+  - 34 stops via market_urgent_full; mean -0.83%; overshoot -0.33pp; status OK.
+  - Suggests urgent market sell fix is working.
+
+JUN 17 DAILY LOG ISSUE:
+  - 2026-06-17.md shows fallback banner + "No trades today" despite 48 sells in
+    transactions.csv — scan push conflict; reconcile_daily_logs.py added to fix.
+
+================================================================================
+9. THE CORE PROBLEM: STOP-LOSS EXECUTION VS SIMULATION
+================================================================================
+
+9.1 WHAT SIM ASSUMES
+  validation_sim.py uses EXIT_STOP_LOSS = -0.5% with gap model or empirical
+  distribution from live stops (Test 33). Ideal gap model: stop fills at
+  trigger. Empirical: samples actual stop P&L from transactions.csv.
+
+9.2 WHAT LIVE DOES
+  Trigger: position P&L <= -0.5% → software exit or GTC stop-market.
+  Actual mean stop P&L (245+ samples): -1.68% (overshoot -1.18pp vs -0.5%).
+
+  Why overshoot happens:
+  (a) Overnight gap through stop level (open below stop)
+  (b) Limit-first sell logic missing fast move (limit_fill_position_check)
+  (c) PDT deferral → sell next day at worse price
+  (d) Fractional shares: no GTC; relies on cron catching breach
+  (e) 15-min cron granularity — price can move past stop between checks
+
+9.3 SIM IMPACT (from extensive_sim_analysis_synthesis.md)
+  3yr:  +266% baseline → +27% with empirical stops (-238pp)
+  20yr: +30,110% baseline → +895% with empirical stops
+
+9.4 FIXES ATTEMPTED
+  - stop-MARKET instead of stop-LIMIT on GTC orders
+  - place_all_stops() after every buy and at start of exits
+  - cancel_stop_orders() before software sells (avoid double sell)
+  - do_sell(urgency="urgent") → market_urgent_full for stop breaches
+  - Same-day stop exits allowed even under STRICT_SAME_DAY_EXIT (stop breaches)
+  - daily_slippage_watch.md monitors overshoot daily
+
+9.5 NON-STOP EXECUTION (good)
+  SELL slippage mean ~-0.05% (execution_audit). BUY slippage ~0%.
+  Regular midline/max-hold sells are NOT the problem.
+
+================================================================================
+10. PDT (PATTERN DAY TRADER) CONSTRAINTS
+================================================================================
+
+Account < $25k → PDT rules apply if same-day buy+sell counts as day trade.
+
+Live setting: STRICT_SAME_DAY_EXIT = True (because PAPER_TRADING = False)
+  - Same-day midline and max-hold exits DEFERRED if position entered today.
+  - Stop breaches CAN exit same day (implemented after Jun 10 incident).
+
+Old schedule problem: morning_scan bought at open → stop hit same afternoon →
+couldn't sell → overnight loss. FIXED by EVENING_ONLY_ENTRIES.
+
+Sim-validated alternative: overnight_pdt schedule
+  - Afternoon entry only, morning exit only, 0 day trades.
+  - 8yr sim on $500: overnight_pdt +158% vs strict_pdt +103%.
+  - See logs/analysis/pdt_schedule_sim_report.md
+
+pdt.json + pdt_n() tracks today's entries for dynamic entry cap.
+
+================================================================================
+11. SIMULATION ENGINE & VALIDATION WORK
+================================================================================
+
+Location: TradingBot/simulations/
+
+Key scripts:
+  validation_sim.py          — 33 tests, main validation suite
+  strategy_expansion_study.py — tests strategies not in live bot
+  overnight_pdt_validation.py — PDT schedule modes
+  analyze_live_slippage.py   — builds slippage profile from transactions
+
+Guides: simulations/TESTS_GUIDE.txt, simulations/README.txt
+
+Major June runs:
+  - validation_sim 3yr/7yr/20yr
+  - strategy_expansion 3yr/7yr/20yr
+  - overnight_pdt 3yr/7yr/20yr
+  - live slippage profile (211–279 stop samples)
+
+Key finding: Live 7 strategies profitable standalone in sim, but RubberBand weakest.
+Expansion candidates (Keltner_BO, ADX_DI_14, SMA_20_50) dominate long horizons.
+NOT added to live — user review required.
+
+Overnight PDT modes (20yr, slippage-adjusted):
+  overnight_pdt_gaps: +7718% | intraday_stops: +21872% (not PDT-safe) |
+  strict_pdt: +544%
+
+Methodology note: Headline portfolio sim % ≠ sum of standalone strategy %.
+See logs/analysis/return_methodology_report.md
+
+================================================================================
+12. RECENT CODE CHANGES (JUNE 2026, pushed to GitHub main)
+================================================================================
+
+Commit a97cbe3 (Jun 17):
+  - EVENING_ONLY_ENTRIES = True
+  - detect_mode: 9:44–9:59am → exits (not morning_scan)
+  - reconcile_daily_log() replaces ensure_daily_log()
+  - scripts/reconcile_daily_logs.py, daily_slippage_watch.py
+  - CI runs reconcile + slippage watch after log merge
+  - logs/analysis/* published reports
+
+Commit d399669 (Jun 17):
+  - Organized docs: ops/, incidents/, logs/analysis/
+  - tools/june_audit.py, scripts/sim_pdt_schedule.py
+
+Earlier (Jun 16 area):
+  - Stop overshoot fixes: market_urgent_full, same-day stop exits
+  - Two-phase prep/execute, parallel fetch, plan cache
+  - merge_bot_logs.py for append-only log merge on push conflicts
+
+================================================================================
+13. WHAT IS WORKING NOW
+================================================================================
+
++ Bot runs on schedule via GitHub Actions (runs.csv active through Jun 17)
++ Evening-only buys deployed (PDT-aligned schedule)
++ Stop execution improved Jun 17 (market_urgent_full, overshoot -0.33pp)
++ Log pipeline: merge → reconcile → slippage watch → push with retry
++ Simulation pipeline organized; 3/7/20yr validation complete
++ Empirical slippage profile feeds Test 33 in validation_sim
++ Extended-hours exits for fractional stop catches (ext_exits mode)
++ Execution audit logging for slippage tracking
+
+================================================================================
+14. WHAT IS STILL BROKEN OR UNCERTAIN
+================================================================================
+
+? Account still down ~3–4% from $500 — strategy profitable in sim but not live
+? Stop overshoot only ONE good day (Jun 17) — need more days to confirm fix
+? dashboard.md stale (Jun 9) — not auto-updated in CI
+? Daily markdown logs can show fallback / wrong trade counts (reconcile helps)
+? ~30+ tiny fractional positions — capital fragmented, hard to manage stops
+? Jun 11 buy spike (73 buys) — root cause not fully documented
+? pipeline_validation.md cron table still says morning_scan at 8:45
+? Paper vs live parity — paper relaxed PDT may not predict live behavior
+? Strategy expansion (better sim strategies) NOT deployed — deliberate hold
+? Win rate 35% with stops at 0% win rate — need fewer bad stops or better fills
+? Sim uses daily bars + approximations; live is 15-min cron + real gaps
+
+================================================================================
+15. OPEN DECISIONS (NOT YET IMPLEMENTED)
+================================================================================
+
+1. Add expansion strategies (Keltner_BO, ADX_DI_14, etc.) to live bot?
+2. Cap max concurrent positions (e.g. 3–5) to concentrate capital?
+3. Raise MIN effective position size vs current ~$8–15 fragments?
+4. Disable morning_prep entirely (only evening_prep needed now)?
+5. Auto-refresh dashboard.md in CI?
+6. Remove Pullback50 from schedule if live win rate stays poor?
+7. Further stop logic: broker stops only on whole shares vs all software?
+8. Re-evaluate EXIT_STOP_LOSS -0.5% if overshoot persists (wider stop = worse
+   in sim due to slippage floor, but live may differ).
+
+User policy: No live strategy changes from sim without explicit approval.
+Execution/stability fixes are OK.
+
+================================================================================
+16. KEY FILE PATHS FOR DEEP DIVE
+================================================================================
+
+LIVE BOT CODE:
+  TradingBot-git/rubber_band_bot.py          — entire strategy + execution
+  TradingBot-git/.github/workflows/run_bot.yml
+
+LOGS (live):
+  TradingBot-git/logs/transactions.csv
+  TradingBot-git/logs/execution_audit.csv
+  TradingBot-git/logs/runs.csv
+  TradingBot-git/logs/daily/2026-06-17.md
+  TradingBot-git/logs/analysis/daily_slippage_watch.md
+  TradingBot-git/logs/analysis/extensive_sim_analysis_synthesis.md
+  TradingBot-git/logs/analysis/live_slippage_profile_2026-06-16.md
+
+DOCS:
+  TradingBot-git/docs/ops/failed_run_diagnosis.md
+  TradingBot-git/docs/ops/pipeline_validation.md
+  TradingBot-git/docs/incidents/june_10_incident_report.md
+  TradingBot-git/docs/JUNE_STABILIZATION_RUNBOOK.md
+
+SIMULATION:
+  TradingBot/simulations/validation_sim.py
+  TradingBot/simulations/TESTS_GUIDE.txt
+  TradingBot/simulations/results/validation/
+  TradingBot/simulations/results/studies/
+
+SCRIPTS:
+  TradingBot-git/scripts/daily_slippage_watch.py
+  TradingBot-git/scripts/reconcile_daily_logs.py
+  TradingBot-git/scripts/merge_bot_logs.py
+  TradingBot-git/tools/june_audit.py
+
+================================================================================
+17. GLOSSARY
+================================================================================
+
+Midline exit     — Sell when price > 20-day moving average
+Overshoot        — How much worse than -0.5% stop trigger the actual loss is
+PDT              — Pattern Day Trader rule (<$25k, limited day trades)
+GTC stop-market  — Broker-held stop that becomes market order when triggered
+Fractional       — Sub-share dollar-based orders (~$15 positions common)
+Plan cache       — JSON file from prep run to speed up execute run
+ext_exits        — Post-4pm extended hours exit mode (limit orders)
+market_urgent_full — Immediate market sell for stop breaches
+strict_pdt       — Sim mode: no same-day sells (old live behavior)
+overnight_pdt    — Sim mode: afternoon buy, morning sell only
+Empirical stops  — Sim using actual stop P&L distribution from live logs
+Gap model        — Sim assuming stop fills at trigger with gap adjustment
+
+================================================================================
+END OF BRIEF — Questions for reviewer
+================================================================================
+
+1. Is -0.5% stop realistic on $8–15 fractional positions with 15-min checks?
+2. Should we concentrate capital (max 3–5 positions) before tuning stops?
+3. Is 35% win rate acceptable if avg win > avg loss on non-stop exits?
+4. What additional execution data would prove stop fix is real (not one-day noise)?
+5. Given empirical stop drag, is the scheduled portfolio still +EV live?
+
+================================================================================

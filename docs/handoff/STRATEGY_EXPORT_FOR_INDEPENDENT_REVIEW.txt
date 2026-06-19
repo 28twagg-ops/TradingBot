@@ -1,0 +1,318 @@
+================================================================================
+RUBBER BAND BOT v8 — STRATEGY EXPORT FOR INDEPENDENT REVIEW
+Generated: 2026-06-19
+Source: rubber_band_bot.py (live bot) + logs/transactions.csv
+================================================================================
+
+This document describes the strategy rules and raw trade history only.
+No prior simulation results, performance opinions, or internal test
+framework references are included.
+
+================================================================================
+SECTION 1 — STRATEGY UNIVERSE & DATA
+================================================================================
+
+UNIVERSE (as coded):
+  UNIVERSE = "both"
+  Meaning: S&P 500 + S&P MidCap 400 combined (~900 tickers after dedup).
+  Tickers fetched from Wikipedia lists:
+    - List_of_S%26P_500_companies
+    - List_of_S%26P_400_companies
+  Symbols with dots converted to hyphens (e.g. BRK.B → BRK-B).
+  Daily cache: logs/cache/tickers_YYYY-MM-DD.json
+
+PRICE / HISTORY FILTERS (as coded):
+  MIN_STOCK_PRICE  = 5.0        (skip if latest close < $5)
+  MIN_HISTORY_DAYS = 220        (need at least 220 daily bars)
+
+DATA SOURCE / TIMEFRAME:
+  Daily OHLCV bars only (no intraday bars for signal generation).
+  Primary: Alpaca StockHistoricalDataClient, TimeFrame.Day (~300 calendar days lookback).
+  Fallback: yfinance daily download if Alpaca returns insufficient data.
+  Indicators computed on daily Close/Volume/Open from these bars.
+
+MARKET REGIME (SPY-based, as coded):
+  regime(spy_df):
+    bull        if SPY close / SPY 200-day MA >= 1.0
+    correction  if ratio >= 0.93 and < 1.0
+    bear        if ratio < 0.93
+  (If SPY data unavailable or < 210 bars, defaults to "bull".)
+
+REGIME PARAMETERS FOR RubberBand strategy only:
+  BULL_P  = {consec_down: 5, rsi_thresh: 25, bb_std: 2.5, vol_z_min: 1.5, require_ma200: True}
+  CORR_P  = {consec_down: 3, rsi_thresh: 30, bb_std: 2.0, vol_z_min: 0.5, require_ma200: False}
+  BEAR_P  = {consec_down: 5, rsi_thresh: 20, bb_std: 2.5, vol_z_min: 1.0, require_ma200: False}
+  prm = BULL_P if bull else CORR_P if correction else BEAR_P
+
+INDICATORS COMPUTED (daily, on each stock):
+  RSI(14)
+  BBL25 = 20-day MA - 2.5 × 20-day std
+  BBL20 = 20-day MA - 2.0 × 20-day std
+  BBM   = 20-day MA (used as "midline" exit)
+  VZ    = volume z-score vs 20-day volume mean/std
+  MA50, MA200
+  L252  = 252-day rolling minimum close (52-week low proxy)
+  R60   = 60-day percent change
+  GapPct = (Open - prior Close) / prior Close
+  Green  = 1 if Close > Open else 0
+
+================================================================================
+SECTION 2 — ENTRY RULES (EXACT, AS CODED)
+================================================================================
+
+ACTIVE STRATEGIES (7 — all checked every trading day for every ticker):
+
+  1. RubberBand (_rb)
+     ALL of:
+       (consecutive down days >= prm["consec_down"]) OR (RSI < prm["rsi_thresh"])
+       Close <= lower Bollinger band (BBL25 if bb_std >= 2.4 else BBL20)
+       Volume z-score >= prm["vol_z_min"]
+       If prm["require_ma200"]: Close > MA200
+
+  2. RSIRecovery (_rsi)
+     ALL of:
+       Prior day RSI < 30
+       Today RSI >= 30  (cross back above 30)
+       Volume z-score >= 0.3
+       Green candle (Close > Open)
+
+  3. 52wkLow (_52)
+     ALL of:
+       Close <= 52-week low (L252) × 1.05
+       Volume z-score >= 0.5
+       RSI > 10
+
+  4. MomReversal (_mr)
+     ALL of:
+       60-day return (R60) < -0.12  (-12%)
+       5-day return > -0.02  (not still falling hard)
+       RSI < 40
+       Volume z-score >= 0.3
+
+  5. GapDown (_gd)
+     ALL of:
+       GapPct <= -0.03  (open gaps down >= 3% vs prior close)
+       Green candle (Close > Open)
+
+  6. VolumeSpike (_vs)
+     ALL of:
+       Volume z-score >= 2.5
+       5-day return >= -0.01 and <= 0.05
+
+  7. Pullback50 (_pb)
+     ALL of:
+       Close > MA200  (uptrend)
+       abs(Close - MA50) / MA50 <= 0.01  (within 1% of 50-day MA)
+       Green candle (Close > Open)
+
+DORMANT / REMOVED STRATEGIES:
+  GoldenCross — removed from codebase (not in get_signals() loop).
+
+SIGNAL SELECTION PER TICKER:
+  get_signals() runs all 7 strategies; may return multiple signals per ticker.
+  Monthly schedule defines "seasonal" pair (primary + secondary); see Section 5.
+  Signals tagged seasonal=True if strategy name matches that month's primary or secondary.
+  Sort order: seasonal signals first, then alphabetical by strategy name.
+
+POSITION SIZING (as coded):
+  SEASONAL_SIZE_PCT    = 0.20   (20% of equity — scheduled primary/secondary strategies)
+  OFFSCHEDULE_SIZE_PCT = 0.20   (20% of equity — other firing strategies)
+  CASH_RESERVE_PCT     = 0.05   (5% of equity kept as reserve; not deployed)
+  MIN_TRADE_SIZE       = 0.01   (minimum dollars per entry slot math)
+
+  Signal-scaled sizing when many signals:
+    avail = cash - (equity × CASH_RESERVE_PCT)
+    n_slots = min(viable_signals, max_trades)
+    equal_share = avail / n_slots
+    sea_da = max(MIN_TRADE_SIZE, min(equity × SEASONAL_SIZE_PCT, equal_share))
+    off_da = max(MIN_TRADE_SIZE, min(equity × OFFSCHEDULE_SIZE_PCT,
+                 equal_share × (OFFSCHEDULE_SIZE_PCT / SEASONAL_SIZE_PCT)))
+
+CONCURRENT POSITION CAP (as coded):
+  MAX_OPEN_POSITIONS = 5
+  max_trades = max(1, int(avail // MIN_TRADE_SIZE))
+  max_trades = min(max_trades, max(0, MAX_OPEN_POSITIONS - len(open_positions)))
+
+ENTRY TIMING (as coded):
+  EVENING_ONLY_ENTRIES = True
+  → New buys ONLY during "scan" mode (evening window). All other modes skip entries.
+
+  detect_mode() windows (US Eastern, DST-aware via zoneinfo America/New_York):
+    Saturday/Sunday (dow >= 5): weekly summary, no trading
+    Friday after 8:00pm ET: weekly summary
+    9:30–9:59am ET: exits only
+    10:00am–3:29pm ET: exits only
+    3:30–3:43pm ET: evening_prep (plan building when USE_TWO_PHASE_PLAN=True)
+    3:44–3:59pm ET: scan (entries + daily log + EOD stop refresh)
+    4:00pm–8:00pm ET: ext_exits (extended-hours exits only)
+    Other times: summary, no trading
+
+  External cron (Chicago time, triggers GitHub Actions via webhook):
+    8:30, 8:35, 8:45 → exits
+    9:00–14:30 every 15 min → exits
+    14:30 → evening_prep
+    14:45 → scan
+    15:00+ → ext_exits
+
+ENTRY ORDER TYPE:
+  Market buy, notional dollar amount, TimeInForce.DAY
+  client_order_id encodes strategy: "{strategy}|{ticker}|{date}"
+
+ENTRY FILTERS (skip buy if):
+  Ticker already held
+  entry_slot_ok() false (daily entry cap)
+  open positions >= MAX_OPEN_POSITIONS
+  avail <= $1 (reserve floor)
+  Seasonal reserve logic blocks off-schedule when seasonal slots pending
+  da > avail (not enough cash)
+  has_earnings_soon(ticker): earnings within EARNINGS_SKIP_DAYS (= 2) calendar days
+
+================================================================================
+SECTION 3 — EXIT RULES (EXACT, AS CODED)
+================================================================================
+
+EXIT_STOP_LOSS = -0.005   (-0.5% from entry, as fraction of P&L)
+EXIT_DAYS_MAX  = 3        (max calendar days held)
+
+check_exit(df, pos, eod_only) priority:
+  1. Stop loss: if position pnl_pct/100 <= EXIT_STOP_LOSS → exit "stop_loss"
+  2. Max hold: if calendar days since entry_date >= EXIT_DAYS_MAX → exit "max_hold"
+  3. Midline: if eod_only=True AND Close > BBM (20-day MA) → exit "midline"
+     Midline is NOT checked on intraday exit runs (eod_only=False).
+
+EXIT TIMING:
+  Intraday exit runs (9:30am–3:29pm ET, every ~15 min): stop-loss + max-hold only
+  Evening scan (3:44–3:59pm ET): all exits including midline (eod_only=True)
+  Extended hours (4:00–8:00pm ET): stop-loss + max-hold only (no midline)
+
+BROKER STOP ORDERS (parallel to software exits):
+  GTC stop-MARKET sell on whole shares only (qty = floor(position_qty))
+  Trigger price = entry_price × (1 + EXIT_STOP_LOSS)  [e.g. entry × 0.995]
+  Skipped if position is fractional (< 1 whole share)
+  place_all_stops() at start of morning exits and after buy loop
+  place_eod_stops() at end of scan: cancels old stop, places new stop at
+    current_price × (1 + EXIT_STOP_LOSS)
+
+SOFTWARE SELL BEHAVIOR (do_sell):
+  Cancels any open SELL orders for ticker before software exit
+  urgency="urgent" (stop breach, regular hours): market sell immediately
+  urgency="normal": limit sell 0.2% below current (0.998×), poll, then market fallback
+  extended_hours=True: DAY limit at 0.9985× current; no market fallback
+
+================================================================================
+SECTION 4 — EXECUTION / BROKER MECHANICS (FACTS)
+================================================================================
+
+BROKER: Alpaca (TradingClient + StockHistoricalDataClient)
+ACCOUNT: Live (PAPER_TRADING = False). Code comments reference ~$500 account size.
+         MAX_OPEN_POSITIONS=5 sized for ~$90/slot at that equity level.
+
+FRACTIONAL vs WHOLE SHARES:
+  Entries use notional market orders → typically fractional share quantities.
+  GTC stop-MARKET orders require whole shares (floor(qty)); fractional positions
+  skip broker stop and rely on software exits (morning/intraday/ext_exits).
+  Fractional positions tracked in logs/fractional_watch.json when stop skipped.
+
+ORDER TYPES USED:
+  BUY:  MarketOrderRequest, notional dollars, DAY
+  SELL (urgent stop): close_position / market
+  SELL (normal): LimitOrderRequest then market fallback if unfilled
+  SELL (extended hours): LimitOrderRequest DAY only
+  STOP: StopOrderRequest GTC on whole shares at stop_price
+
+EXIT CHECK FREQUENCY:
+  ~Every 15 minutes during regular session (9:00am–2:30pm Chicago / 10:00am–3:30pm ET)
+  Plus dedicated morning windows (8:30–8:45 Chicago) and evening scan + ext_exits
+
+BROKER CONSTRAINTS (factual):
+  Alpaca rejects GTC stop orders on fractional quantities.
+  Extended hours: limit orders only (no market orders).
+  DAY orders used for extended-hours limit sells (GTC not allowed on fractional).
+
+USE_EXTENDED_HOURS_SELL = False  (extended-hours path exists but flag is False;
+  ext_exits mode still uses limit sells when extended_hours=True in do_sell)
+
+TWO-PHASE PLAN (USE_TWO_PHASE_PLAN = True):
+  evening_prep builds signal plan → logs/plans/evening_plan.json
+  scan executes plan (PLAN_MAX_AGE_MIN = 120 minutes)
+
+================================================================================
+SECTION 5 — STRATEGY SCHEDULE (MONTHLY)
+================================================================================
+
+Each month has primary ("p") and secondary ("s") scheduled strategies.
+All 7 strategies still fire off-schedule; scheduled pair gets seasonal=True
+and entry priority + SEASONAL_SIZE_PCT label.
+
+  Month | Primary      | Secondary
+  ------|--------------|-------------
+  Jan   | MomReversal  | 52wkLow
+  Feb   | 52wkLow      | VolumeSpike
+  Mar   | GapDown      | 52wkLow
+  Apr   | RubberBand   | Pullback50
+  May   | RubberBand   | 52wkLow
+  Jun   | GapDown      | VolumeSpike
+  Jul   | 52wkLow      | Pullback50
+  Aug   | VolumeSpike  | 52wkLow
+  Sep   | GapDown      | VolumeSpike
+  Oct   | RubberBand   | GapDown
+  Nov   | RubberBand   | MomReversal
+  Dec   | MomReversal  | VolumeSpike
+
+CURRENTLY ACTIVE (as of June 2026, month=6):
+  Primary (seasonal):   GapDown
+  Secondary (seasonal): VolumeSpike
+
+================================================================================
+SECTION 6 — RAW TRADE HISTORY (FACTS ONLY)
+================================================================================
+
+Full transaction log exported to companion file (complete, unfiltered):
+  docs/handoff/transactions_full_export.csv
+
+  Source: logs/transactions.csv (live account)
+  File size: ~76 KB
+  Total rows: 801 (including header: 802 lines)
+  Date range: 2026-05-25 through 2026-06-18
+  BUY rows: 358
+  SELL rows: 443
+
+CSV columns:
+  timestamp, date, action, ticker, strategy, price, dollar_amount,
+  pnl_pct, pnl_dollar, hold_days, exit_reason, regime, equity_after,
+  sell_method, cur_at_submit, bid_at_submit, limit_price_used,
+  sell_latency_s, fill_slippage_bps
+
+  action = "BUY" or "SELL"
+  exit_reason examples: "stop_loss (-0.5%)", "max_hold 3d (+0.6%)", "midline (+1.2%)"
+  sell_method examples: "market_urgent_full", "limit_then_market_full"
+
+ACCOUNT EQUITY (from logs, no commentary):
+  First logged equity (runs.csv earliest row): $508.51
+  First logged equity_after (transactions.csv earliest row): $508.76
+  Latest logged equity (runs.csv 2026-06-18): $480.09
+  Latest logged equity_after (transactions.csv latest row): $480.48
+
+Note: Log history begins 2026-05-25; no transactions before that date in file.
+
+================================================================================
+SECTION 7 — OPEN QUESTIONS FOR THE INDEPENDENT REVIEWER
+================================================================================
+
+Using the rules and data above, please build an independent simulation
+and assess:
+
+  (1) Does this strategy show a real statistical edge once realistic
+      execution costs and slippage are accounted for?
+
+  (2) Does position count/sizing (unlimited vs a capped number of concurrent
+      positions) meaningfully affect the result?
+
+  (3) Does timing of entries (e.g. time of day, day of week) meaningfully
+      affect the result?
+
+Please show your methodology and reasoning, not just a final number.
+
+================================================================================
+END OF EXPORT
+================================================================================

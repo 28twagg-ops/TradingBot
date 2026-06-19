@@ -1,0 +1,1106 @@
+================================================================================
+  RUBBER BAND BOT — COMPLETE AI TRANSFER DOCUMENT
+  Written for AI continuity. Assumes the receiving AI has access to the full
+  codebase at rubber_band_bot.py and the simulations/ folder.
+  Last updated: 2026-05-13
+================================================================================
+
+
+================================================================================
+  SECTION 1: WHAT THIS PROJECT IS
+================================================================================
+
+This is a live, fully automated mean-reversion stock trading bot called the
+"Rubber Band Bot" (current version: v8). It runs on a real-money Alpaca
+brokerage account starting with $500. The bot is deployed on GitHub Actions,
+triggered every 15 minutes by cron-job.org webhooks during market hours.
+
+The core thesis: stocks in the S&P 500 and S&P MidCap 400 that have been
+oversold, gapped down, or pulled back to key moving average levels tend to
+snap back ("rubber band") within 1–3 trading days. The bot captures these
+short-term mean-reversion moves.
+
+The owner is Tyler (28twagg@gmail.com). He is not a professional trader. This
+is a personal project for learning and generating returns. Treat him as a
+non-technical but highly engaged user who understands the concepts well and
+wants everything explained clearly.
+
+Platform: GitHub (public repo) + Alpaca Markets (live brokerage)
+Language: Python 3.11
+Broker API: alpaca-py
+Data source: yfinance (historical OHLCV for signals + indicators)
+Scheduling: cron-job.org → GitHub Actions workflow_dispatch webhook
+
+
+================================================================================
+  SECTION 2: INFRASTRUCTURE ARCHITECTURE
+================================================================================
+
+HOW THE BOT RUNS:
+  - cron-job.org fires a webhook every 15 minutes during Chicago business hours
+    (8:00am–6:00pm CDT on weekdays) pointing at the GitHub Actions
+    workflow_dispatch URL
+  - GitHub Actions checks out the repo, installs dependencies, runs
+    rubber_band_bot.py, then commits any new log files back to the repo
+  - The bot auto-detects its mode based on US Eastern Time (DST-aware via
+    Python's zoneinfo module)
+
+WORKFLOW FILE: .github/workflows/run_bot.yml
+  - The ONLY workflow file that should be active. There is also a paper_bot.yml
+    that should be deleted from the repo (it's a leftover)
+  - Key settings:
+      concurrency:
+        group: rubber-band-bot
+        cancel-in-progress: false
+    This prevents concurrent runs from conflicting on git push. If a scan is
+    running when the next 15-min cron fires, the new run QUEUES and waits.
+    cancel-in-progress: false means the scan always finishes.
+  - After the bot runs, the workflow does:
+      git add logs/
+      git diff --staged --quiet || git commit -m "bot run YYYY-MM-DD HH:MM UTC"
+      git pull --rebase origin main
+      git push
+    The git pull --rebase is critical — it resolves any merge conflicts between
+    concurrent log writes without failing the push.
+
+SECRETS REQUIRED (set in GitHub repo settings → Secrets):
+  ALPACA_API_KEY
+  ALPACA_SECRET_KEY
+
+GITHUB ACTIONS RUNTIME:
+  - Most exit-only runs: 20–30 seconds
+  - Full evening scan (downloading 900 stocks): 20–30 minutes
+  - The concurrency block prevents the next cron from overwriting the scan's logs
+
+LOCAL SIMULATION FILES:
+  All files in simulations/ are LOCAL ONLY — they never run on GitHub Actions.
+  They are research tools for validating changes before pushing to the live bot.
+
+
+================================================================================
+  SECTION 3: BOT OPERATING MODES (auto-detected by Eastern Time)
+================================================================================
+
+The bot has 6 operating modes, detected by detect_mode() using zoneinfo:
+
+  Mode           Time window (ET)     What it does
+  ─────────────  ───────────────────  ──────────────────────────────────────────
+  exits          9:30am – 9:44am      Morning exit check only. Places GTC stops,
+                                      checks stop-loss + midline. No new buys.
+  morning_scan   9:44am – 9:59am      Full scan + entries at open. Catches gap
+                                      setups from overnight. New buys allowed.
+  exits          10:00am – 3:43pm     Intraday exit checks. No new buys.
+  scan           3:44pm – 3:59pm      Full EOD scan + entries at close price.
+                                      This is the primary daily buy window.
+  ext_exits      4:00pm – 7:59pm      Post-market exit check. Limit sells only
+                                      (DAY orders). No new buys. No GTC stops.
+  weekly         Fri 5pm+ / weekends  Weekly summary. No trading.
+  summary        All other times      Status summary only. No trading.
+
+IMPORTANT TIMING NOTES:
+  - cron-job.org is set to Chicago time: 0,15,30,45 8-18 * * 1-5
+  - Chicago CDT = ET - 1 hour, so:
+      8:00am CDT = 9:00am ET  (pre-open, summary mode)
+      8:45am CDT = 9:45am ET  (morning_scan fires)
+      2:45pm CDT = 3:45pm ET  (evening scan fires)
+      3:00pm CDT = 4:00pm ET  (ext_exits fires)
+  - The bot uses Python zoneinfo to get real ET including DST transitions.
+    Never hardcode hour offsets — always use ZoneInfo("America/New_York").
+
+MODE ROUTING (main entry point):
+  if mode in ("scan", "morning_scan"):  → run_scan()
+  elif mode == "exits":                 → run_exits()
+  elif mode == "ext_exits":             → run_exits(extended_hours=True)
+  elif mode == "weekly":                → run_summary() + write_weekly()
+  else:                                 → run_summary()
+
+
+================================================================================
+  SECTION 4: UNIVERSE AND DATA
+================================================================================
+
+UNIVERSE = "both"  →  S&P 500 (~500 stocks) + S&P MidCap 400 (~400 stocks)
+Total: ~900 stocks screened on every scan.
+
+Why both? More signals = more opportunities to deploy cash. Simulation confirmed
+that "both" outperforms "sp500" or "midcap" alone.
+
+TICKERS are fetched from Wikipedia at runtime:
+  - S&P 500: https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
+  - MidCap:  https://en.wikipedia.org/wiki/List_of_S%26P_400_companies
+  Both use pandas.read_html() with lxml to parse the tables.
+
+DATA DOWNLOAD:
+  yfinance is used to download OHLCV history for each ticker.
+  MIN_HISTORY_DAYS = 220  (need 220 bars to compute 200-day MA)
+  The full scan downloads ~900 tickers concurrently using yfinance's batch mode.
+  This takes 20–30 minutes on GitHub Actions.
+
+INDICATORS computed per ticker:
+  MA20   — 20-day simple moving average (midline exit trigger)
+  MA50   — 50-day SMA (Pullback50 signal, GoldenCross)
+  MA200  — 200-day SMA (regime filter, trend confirmation)
+  RSI    — 14-period RSI (RSIRecovery signal, RubberBand filter)
+  BB     — Bollinger Bands (20-day, 2.5 std) (RubberBand signal)
+  VZ     — Volume Z-score: (today_vol - 20d_avg_vol) / 20d_std_vol
+  BBM    — Bollinger Band midline = MA20 (used as midline exit check)
+
+MARKET REGIME:
+  Detected via SPY's 200-day MA:
+    SPY > MA200 → "bull"
+    SPY < MA200 but not deep bear → "correction"
+    Deep decline → "bear"
+  In bear regime: bot switches to 52wkLow + MomReversal regardless of month.
+  Currently live in BULL regime as of May 2026.
+
+
+================================================================================
+  SECTION 5: ENTRY STRATEGIES (all 7 active)
+================================================================================
+
+The bot runs up to 7 strategies. Each month, 2 are "scheduled" (primary +
+secondary from the SCHEDULE dict) and the rest fire off-schedule if they
+trigger. ALL strategies use the same position sizing now (both set to 20%).
+
+─────────────────────────────────────────────────────────────────────────────
+1. RubberBand
+─────────────────────────────────────────────────────────────────────────────
+The original core strategy. Mean-reversion of oversold stocks.
+SIGNAL: All of these must be true:
+  - 3+ consecutive down days (configurable as RB_CONSEC_DOWN)
+  - RSI < 30 (oversold)
+  - Price below lower Bollinger Band (2.5 std dev)
+  - Volume spike (VZ > 1.5)
+  - Price above MA200 (uptrend filter — strict mode)
+PERFORMANCE: 51.7% win rate, 0.84 Sharpe (best Sharpe of all strategies)
+SCHEDULED: Apr, May, Oct, Nov
+WHY IT'S GOOD: Very selective signal, high Sharpe, works best in bull markets.
+
+─────────────────────────────────────────────────────────────────────────────
+2. 52wkLow
+─────────────────────────────────────────────────────────────────────────────
+Catches stocks near their 52-week low bouncing up.
+SIGNAL:
+  - Price within 5% of 52-week low
+  - RSI between 25–40 (recovering, not still falling)
+  - No volume spike required (value play, not momentum)
+PERFORMANCE: 53.4% win rate, 83.6% total return over bakeoff period
+SCHEDULED: Jan, Feb, Mar, Jul, Aug
+WHY IT'S GOOD: Consistent in all market regimes. Works in corrections and bears.
+
+─────────────────────────────────────────────────────────────────────────────
+3. MomReversal
+─────────────────────────────────────────────────────────────────────────────
+Momentum reversal — stocks that dropped hard and are starting to recover.
+SIGNAL:
+  - 3+ consecutive down days
+  - Current close higher than yesterday's close (reversal day)
+  - RSI < 40 (still depressed, not overbought recovery)
+  - Volume confirmation (VZ > 0.5)
+PERFORMANCE: 54.4% win rate, lowest drawdown of all strategies
+SCHEDULED: Jan, Nov, Dec
+WHY IT'S GOOD: Very low drawdown. Good defensive strategy for volatile months.
+
+─────────────────────────────────────────────────────────────────────────────
+4. GapDown
+─────────────────────────────────────────────────────────────────────────────
+Buys panic gap-downs that recover within the day.
+SIGNAL:
+  - Overnight gap down > 3%
+  - Close recovers above the gap midpoint (recovery confirmed)
+  - Volume spike during gap (panic selling, not orderly)
+PERFORMANCE: 53.9% win rate, 0.51 Sharpe, 93.5% return in bakeoff
+SCHEDULED: Mar, Jun, Sep, Oct
+WHY IT'S GOOD: High frequency signal in volatile markets. Works well in
+corrections and even bears (panic selling = buying opportunity).
+NOTE: GapDown also works in bear regime — one of the few strategies that does.
+
+─────────────────────────────────────────────────────────────────────────────
+5. VolumeSpike
+─────────────────────────────────────────────────────────────────────────────
+Institutional buying signal — unusual volume with upside price action.
+SIGNAL:
+  - Volume Z-score > 2.0 (volume is 2 standard deviations above 20-day avg)
+  - 5-day return > 0% (price trending up, not selling volume)
+  - Price above MA200 (trend filter)
+PERFORMANCE: 58.5% win rate — HIGHEST WIN RATE OF ALL STRATEGIES
+SCHEDULED: Feb, Jun, Aug, Sep, Dec
+WHY IT'S GOOD: Consistent across all market regimes. The 58.5% win rate is
+the highest of all strategies tested on 900 stocks over 5–7 years.
+
+─────────────────────────────────────────────────────────────────────────────
+6. Pullback50
+─────────────────────────────────────────────────────────────────────────────
+Bull market dip-buy. Stocks in uptrends that pull back to their 50-day MA.
+SIGNAL:
+  - MA50 > MA200 (confirmed uptrend)
+  - Price within ±2% of MA50 (exactly at the dip level)
+  - Price not below MA200 (uptrend intact)
+  - RSI not overbought (< 70)
+PERFORMANCE: 58.2% win rate, second highest of all strategies
+SCHEDULED: Apr, Jul
+NOTE: Also fires very heavily as off-schedule in May 2026 (current month).
+In May 2026, the bot is seeing a lot of Pullback50 signals because many S&P
+stocks are pulling back to their 50-day MA after the tariff shock recovery.
+
+─────────────────────────────────────────────────────────────────────────────
+7. RSIRecovery
+─────────────────────────────────────────────────────────────────────────────
+RSI crossing back above 30 after being deeply oversold.
+SIGNAL:
+  - RSI crossed above 30 in the last 1–2 days (was below 30, now above)
+  - Prior RSI was below 28 (genuinely oversold, not just dipping)
+  - Volume confirmation
+PERFORMANCE: Variable by month. Negative EV in April specifically (-0.548%).
+SCHEDULED: Was previously scheduled for Apr/May/Nov, then REVERTED after
+  Test 27 (2026-05-10) showed RSIRecovery had negative EV in April and
+  RubberBand won 3/3 OOS windows in Apr/May/Nov. Now only fires off-schedule.
+
+─────────────────────────────────────────────────────────────────────────────
+REMOVED: GoldenCross
+─────────────────────────────────────────────────────────────────────────────
+MA50 crossing above MA200. Trend-following strategy.
+REMOVED because: negative Sharpe ratio, lost money over 5-year backtest.
+The problem: by the time MA50 crosses MA200, the trend is already mature and
+mean-reversion (the bot's core approach) works against it.
+
+
+================================================================================
+  SECTION 6: MONTHLY STRATEGY SCHEDULE
+================================================================================
+
+Each month has a primary (p) and secondary (s) strategy. These are the
+"scheduled" strategies — they get seasonal sizing (20%). All other strategies
+fire off-schedule if their signals trigger (also 20% sizing as of May 2026).
+
+  Month  Primary         Secondary      Notes
+  ─────  ──────────────  ─────────────  ─────────────────────────────────────
+  Jan    MomReversal     52wkLow        Year-end rotation, oversold recoveries
+  Feb    52wkLow         VolumeSpike    Value + institutional
+  Mar    GapDown         52wkLow        Volatile month, panic buying
+  Apr    RubberBand      Pullback50     Bull dip-buys (RSIRecovery REMOVED Apr)
+  May    RubberBand      52wkLow        (RSIRecovery reverted, RB confirmed)
+  Jun    GapDown         VolumeSpike    Summer volatility
+  Jul    52wkLow         Pullback50     Mid-year dip-buy
+  Aug    VolumeSpike     52wkLow        Institutional accumulation before fall
+  Sep    GapDown         VolumeSpike    Historically worst month, panic plays
+  Oct    RubberBand      GapDown        Volatile, both mean-reversion types
+  Nov    RubberBand      MomReversal    Post-election recovery plays
+  Dec    MomReversal     VolumeSpike    Year-end momentum + institutions
+
+THIS SCHEDULE was validated by:
+  - bakeoff_both_5yr and bakeoff_both_7yr (900 stocks)
+  - master_sim.py Phase 5 monthly validation
+  - validation_sim.py Walk-Forward Monthly Schedule test
+  All changes are OOS-confirmed before being deployed to live.
+
+KEY SCHEDULE CHANGE HISTORY:
+  - GoldenCross removed from Sep (was Sep primary). GapDown replaced it.
+  - RSIRecovery was previously scheduled for Apr/May/Nov. Reverted to
+    RubberBand after Test 14 showed RB wins 3/3 OOS windows and Test 27
+    showed RSIRecovery had negative EV in April specifically.
+  - OFFSCHEDULE_SIZE_PCT changed from 12% to 20% (Test 18, 2026-05-10).
+    This added +121pp return at the cost of slightly higher drawdown.
+    Validated: 20%/20% beats 20%/12% by +121pp over 7yr OOS.
+
+
+================================================================================
+  SECTION 7: POSITION SIZING
+================================================================================
+
+SEASONAL_SIZE_PCT    = 0.20  (20% of equity per scheduled strategy trade)
+OFFSCHEDULE_SIZE_PCT = 0.20  (20% of equity per off-schedule trade)
+CASH_RESERVE_PCT     = 0.05  (always keep 5% of equity as cash buffer)
+MIN_TRADE_SIZE       = $20   (minimum dollar amount per trade)
+
+DYNAMIC ENTRY CAP (not hardcoded):
+  max_trades = max(1, int(avail // MIN_TRADE_SIZE))
+  With $500 account and $20 min size: max ~24 entries per scan.
+  As account grows, the cap grows automatically.
+  There is NO hardcoded MAX_DAY_TRADES constant anymore — it was removed.
+
+WHY 20%/20% (not the original 20%/12%):
+  Test 18 (2026-05-10) sweeping seasonal vs off-schedule sizing found:
+  20%/20% = +394.7% total, +109.8% OOS return
+  20%/12% = +273.7% total (the old setting)
+  Difference: +121pp total return in favor of equal sizing.
+
+WHY 5% RESERVE:
+  Sim-validated in Test 18. Keeps a small cash buffer so the bot never
+  fully deploys 100% of equity. Prevents inability to act on strong signals.
+
+SIGNAL SCALING FIX (critical bug fixed 2026-05-12):
+  Old code: equal_share = avail / n_viable  (divided by ALL signals, ~40)
+  New code:
+    n_slots = min(n_viable, max_trades)    (how many we can actually fill)
+    equal_share = avail / n_slots          (divide only by fillable slots)
+  Bug effect: with 40 signals and $400 available, old code gave $10/trade.
+  After fix: with 20 slots and $400 available, gives $20/trade (minimum).
+  This was causing $20 positions when the account had $400+ available.
+
+FRACTIONAL SHARES:
+  With $20 positions and stock prices up to $500+, ALL positions are
+  fractional shares. Alpaca supports fractional buying but NOT GTC stop
+  orders on fractional quantities. This is handled by the software exit.
+
+
+================================================================================
+  SECTION 8: EXIT LOGIC
+================================================================================
+
+Three exit conditions checked in order:
+
+1. STOP-LOSS
+   EXIT_STOP_LOSS = -0.005  (-0.5%)
+   Trigger: Alpaca unrealized P&L <= -0.5%
+   Action: Market sell immediately (or limit sell in extended hours)
+   SLIPPAGE FLOOR: In simulation, worst case is 2x the stop = -1.0%.
+   This was validated as the optimal stop over 20yr data:
+     -0.5% stop beats -1.0%, -1.5%, -2.0%, -2.5%, -3.0% by OOS return.
+     Tighter stop = faster capital recycling = more new opportunities.
+     The 2x slippage floor means -0.5% trigger ≈ -1.0% actual worst case.
+
+2. MAX HOLD
+   EXIT_DAYS_MAX = 3 days
+   Trigger: Position held for 3 calendar days
+   Action: Market sell regardless of P&L
+   VALIDATION: 3d beats 5d by +26.2pp return in rolling 16-window OOS avg
+   (+153.9% vs +127.7%). Shorter hold = faster cash recycling.
+   Hold period is counted from entry_date in position metadata.
+
+3. MIDLINE (EOD only)
+   Trigger: Close price > MA20 (20-day moving average = midline)
+   Action: Market sell
+   WHY EOD ONLY: Intraday midline checks reduced win rate by 7.9pp due to
+   premature exits on brief MA touches that reverse before close.
+   The midline check only happens in run_scan() (EOD). The 9:35am exits
+   run skips midline. Extended hours also skips midline (close is final).
+
+EXECUTION:
+  Regular hours: Market sell order (fills immediately at market price)
+  Extended hours: DAY limit sell at cur × 0.9985 (slightly below market)
+    - DAY orders work on fractional shares in extended hours
+    - GTC orders do NOT work in extended hours
+    - If unfilled by close, position is re-evaluated at 9:35am next day
+    - USE_EXTENDED_HOURS_SELL = False (scan runs at 3:44pm = regular hours,
+      so scan sells always use regular market orders with market fallback)
+
+GTC STOP ORDERS (hardware stops):
+  place_all_stops() is called at the start of every morning exits run.
+  It places GTC stop-MARKET orders for whole-share positions only.
+  Fractional positions (<1 whole share) CANNOT have GTC stops — Alpaca
+  rejects them. These are handled by the software exit checks instead.
+  With a $500 account all positions are fractional so GTC stops never fire.
+  The software exit at 9:35am is the primary stop mechanism.
+
+SAME-DAY PDT PROTECTION (added 2026-05-13):
+  If a position was entered TODAY, the exits run skips all exit checks for
+  that position. Reason: Alpaca blocks same-day buy+sell as a pattern day
+  trade on accounts under $25k. The bot was generating PDT errors when the
+  morning scan bought stocks and the 2pm exits run tried to stop-loss sell
+  them. Now: positions entered today say "HOLDING until 9:35am (entered
+  today — PDT)" and are evaluated tomorrow morning instead.
+
+
+================================================================================
+  SECTION 9: PDT (PATTERN DAY TRADER) RULES
+================================================================================
+
+WHAT PDT IS:
+  FINRA rule: accounts under $25,000 cannot execute more than 3 "day trades"
+  (buy and sell same security on same calendar day) in a rolling 5-business-day
+  window. Violation = account flagged as Pattern Day Trader → trading restricted.
+
+HOW THE BOT HANDLES PDT:
+  - PDT tracking: pdt.json stores timestamps of same-day buy/sell pairs
+  - pdt_n(l): counts trades from TODAY only (not rolling 7-day — this was a
+    bug that was fixed 2026-05-10; the 7-day window was zeroing mid-week)
+  - pdt_ok(l, max_trades): checks if we can buy more today
+  - max_trades is computed dynamically: floor(avail / MIN_TRADE_SIZE)
+  - The exit check now skips positions entered today to avoid PDT conflicts
+
+PDT AND MORNING SCAN:
+  The morning scan (9:44am) buys stocks at market open. If those same stocks
+  hit their stop-loss before 4pm, selling them would be a day trade. The
+  same-day PDT skip (added 2026-05-13) prevents this. Those positions carry
+  overnight and are evaluated at 9:35am the next day.
+
+SIMULATION FINDING (position_split_study, 20yr):
+  About 23.9% of morning buy signals would generate same-day exits (day trades).
+  PDT blocks ~87% of those attempts when the account is under $25k.
+  Despite PDT blocking, "both" (morning + evening) buy window still
+  outperforms "evening only" by +81pp CAGR per year.
+  Once the account crosses $25k, PDT no longer applies and the full benefit
+  of morning buys is realized.
+
+
+================================================================================
+  SECTION 10: ALL SIMULATION TESTS AND FINDINGS
+================================================================================
+
+The simulations/ folder contains every research script. Here is what was
+tested, in rough chronological order, and what each test concluded:
+
+────────────────────────────────────────────────────────────────────────────
+BACKTEST ENGINE (backtest_engine.py) — First test
+────────────────────────────────────────────────────────────────────────────
+- Tested: RubberBand, GoldenCross, 52wkLow, MomReversal on 50 stocks, 5yr
+- Found: GoldenCross negative Sharpe in bear markets
+- Led to: Strategy bakeoff on 900 stocks
+
+────────────────────────────────────────────────────────────────────────────
+OPTIMIZER (optimizer.py) — Parameter optimization
+────────────────────────────────────────────────────────────────────────────
+- Tested: zscore thresholds, MA windows, price filters, position sizing
+- ~125,000+ trades in Phase 1 sweep, full S&P 500 OOS in Phase 2
+- Found: zscore=1.5, window=10, price_confirm=False, min_price=$5
+- These are now baked into the live bot entry signal parameters
+
+────────────────────────────────────────────────────────────────────────────
+STRATEGY LAB (strategy_lab.py) — Full 9-strategy bakeoff
+────────────────────────────────────────────────────────────────────────────
+- Tested: All 9 strategies on S&P 500 + MidCap 400 (~900 stocks), 5yr + 7yr
+- Key findings by strategy (win rate | Sharpe):
+    VolumeSpike:  58.5% win rate  — best win rate, consistent all regimes
+    Pullback50:   58.2% win rate  — best for bull markets
+    MomReversal:  54.4% win rate  — lowest drawdown
+    GapDown:      53.9% win rate, 0.51 Sharpe, 93.5% total return
+    52wkLow:      53.4% win rate, 83.6% return, solid Sharpe
+    RubberBand:   51.7% win rate, 0.84 Sharpe — BEST SHARPE of all
+    GoldenCross:  NEGATIVE Sharpe → REMOVED
+- This determined the 6 active strategies and the monthly SCHEDULE
+
+────────────────────────────────────────────────────────────────────────────
+EXIT SIMULATOR (exit_simulator.py) — 2,016+ exit combos
+────────────────────────────────────────────────────────────────────────────
+- Tested: 7 exit methods × 8 stops × 4 hold periods × 9 position sizes
+- Universes: sp500, midcap, both | Periods: 2yr, 3yr, 5yr, 7yr
+- Key findings:
+    WINNER: -2% stop / 5d hold / midline exit only
+    → OOS return +113.6%, OOS drawdown 11.6%, win rate 55.0%
+  - Midline alone beat all complex exits (momentum decay, RSI+midline, etc.)
+  - Every step wider than -2% stop REDUCED OOS return (2x slippage floor)
+  - 20%/12% position sizing was sweep winner at this stage
+  - 5-day max hold beat 7, 10, 14 days on OOS return
+
+────────────────────────────────────────────────────────────────────────────
+INTRADAY EXIT TEST (intraday_exit_test.py) — EOD vs intraday
+────────────────────────────────────────────────────────────────────────────
+- Tested: EOD midline check vs simulated intraday checks (using daily Hi/Lo)
+- Found: Intraday midline checks REDUCED win rate by 7.9pp
+  Reason: Stocks briefly touch the MA intraday but close back below,
+  causing premature exits right before the actual recovery
+- Decision: Midline is EOD-only. 9:35am run skips midline check.
+
+────────────────────────────────────────────────────────────────────────────
+MASTER SIM (master_sim.py) — 5-phase comprehensive study
+────────────────────────────────────────────────────────────────────────────
+Phase 1 (Bakeoff): Confirmed strategy rankings from strategy_lab
+Phase 2 (Exit Sweep): Confirmed -2%/5d as winner
+Phase 3 (Sizing Sweep): 20%/12% confirmed over other combos
+Phase 4 (Intraday): Confirmed intraday stops are worse than EOD
+Phase 5 (Monthly): Validated the monthly schedule
+
+────────────────────────────────────────────────────────────────────────────
+VALIDATION SIM (validation_sim.py) — 10 targeted OOS tests
+────────────────────────────────────────────────────────────────────────────
+Test 1:  Walk-Forward Exit Validation (60/40 IS/OOS split)
+         Result: -0.5%/3d superiority confirmed OOS (not in-sample overfit)
+
+Test 2:  Year-by-Year Strategy Breakdown
+         Result: GapDown and VolumeSpike consistent year-over-year, not
+         driven by one or two lucky years
+
+Test 3:  Regime Breakdown
+         Result: GapDown works in all regimes including bear (panic buying).
+         52wkLow works best in bear. RubberBand only in bull/correction.
+
+Test 4:  Stop Loss Sensitivity
+         Result: -0.5% is in a stable zone (not a cliff edge). -0.5%, -0.6%,
+         -0.7% all give similar results. The zone is genuine, not overfit.
+
+Test 5:  Walk-Forward Monthly Schedule
+         Result: Confirmed which months benefit from each strategy OOS
+
+Test 6:  Crash Stress Test (COVID 2020, 2022 bear, 2025 tariff shock)
+         Result: Bot survives crashes due to tight stops and short holds.
+         GapDown actually performs well during panics.
+
+Test 7:  Signal Correlation
+         Result: Strategies fire somewhat independently — good diversification.
+         Pullback50 and VolumeSpike occasionally co-fire on the same stock.
+
+Test 8:  Streak Analysis
+         Result: Max losing streak is manageable with tight stops and 3d hold.
+
+Test 9:  Realistic Exit Comparison
+         Result: Close-price entry vs next-day-open entry — confirmed that
+         the old 4:15pm bot (next-day-open entry) was slightly worse than
+         current 3:44pm close-price entry.
+
+Test 10: Rolling Walk-Forward
+         Result: -0.5%/3d wins consistently across all rolling windows
+         (IS=3yr, OOS=1yr, step=1yr). 16/16 rolling windows confirmed.
+         This is the key validation for the stop loss change.
+
+────────────────────────────────────────────────────────────────────────────
+TEST 10 (key): Stop Loss Deep Validation
+────────────────────────────────────────────────────────────────────────────
+This is the most important single test. The live bot originally used -2% stop.
+The validation_sim found -0.5%/3d beat -2.0%/5d in 16/16 rolling OOS windows
+over 20 years. This is an overwhelming result — 16 out of 16 is almost never
+coincidence. Changed to -0.5% stop and 3d max hold as a result.
+
+────────────────────────────────────────────────────────────────────────────
+TEST 18 (key): Off-Schedule Sizing
+────────────────────────────────────────────────────────────────────────────
+Found that 20%/20% (seasonal/off-schedule equal) beats 20%/12% by +121pp
+total return over 7yr OOS. Changed OFFSCHEDULE_SIZE_PCT from 0.12 to 0.20.
+Also confirmed CASH_RESERVE_PCT = 0.05 is optimal.
+
+────────────────────────────────────────────────────────────────────────────
+TEST 27 (key): RSIRecovery April validation
+────────────────────────────────────────────────────────────────────────────
+Found RSIRecovery had NEGATIVE expected value in April (-0.548% avg P&L).
+Combined with Test 14 showing RubberBand wins 3/3 OOS windows in Apr/May/Nov,
+the decision was made to revert to RubberBand as primary for those months.
+
+────────────────────────────────────────────────────────────────────────────
+POSITION SPLIT STUDY (position_split_study.py) — 2026-05-13
+────────────────────────────────────────────────────────────────────────────
+Used 20yr cached trade data (trades_both_20yr.pkl, 103,129 schedule-matched
+trades after deduplication). Tested:
+  - N splits: 1, 2, 3, 5, 7, 10, 15, 20, 25, 30, 50, unlimited
+  - Buy windows: evening (EOD close), morning (next-day open), both
+  - PDT constraint: rolling 5-day window, max 3 day trades
+
+KEY FINDINGS:
+  1. Position cap: NO CAP IS NEEDED
+     With 20% sizing, cash naturally limits to ~5-6 concurrent positions.
+     Any count cap above 6 has zero effect on returns (they plateau).
+     Any count cap below 5 HURTS returns (idle cash, missed signals).
+     Current design (no cap, cash-limited) is ALREADY OPTIMAL.
+
+  2. Buy window uplift: ADDING MORNING SCAN = +81pp CAGR per year
+     Evening only (current): +184.2% CAGR, 2.8% max drawdown
+     Morning only:           +189.1% CAGR, 3.8% max drawdown
+     Both (morning + evening): +265.0% CAGR, 4.1% max drawdown
+     The morning scan adds +81pp CAGR with only 1.3pp more drawdown.
+
+  3. PDT impact: significant but manageable
+     ~24% of morning buys would be day trades (exit same day as entry)
+     PDT blocks ~87% of those when account < $25k
+     Despite PDT, "both" window still wins decisively
+     PDT becomes irrelevant once account crosses $25k threshold
+     NOTE: The simulation applied PDT throughout all 20 years, even after
+     the theoretical account exceeded $25k (conservative — actual performance
+     would be better in later years as account grows past $25k threshold)
+
+  4. CAGR numbers are astronomical because of 20-year compounding
+     The +184% CAGR means: Year 1 $500→$1420, Year 3→$11,400, Year 5→$91k
+     These numbers are real given the signal quality but assume no external
+     constraints (trading capacity, broker limits, etc.)
+
+────────────────────────────────────────────────────────────────────────────
+POSITION SPLIT STUDY — SCRIPT ARCHITECTURE NOTE
+────────────────────────────────────────────────────────────────────────────
+The script at simulations/position_split_study.py (created 2026-05-13) had
+a SyntaxError on first write: `global PDT_ENABLED` was used inside a function
+that had already referenced PDT_ENABLED as a local variable. Python disallows
+this. The fix was a full refactor into a clean wrapper pattern:
+
+  _simulate(pdt_enabled, fixed_n, buy_window)
+    → Core simulation logic. Accepts pdt_enabled as a parameter (no global).
+      Runs one combination of (PDT on/off, position cap, buy window).
+
+  simulate(n_splits, buy_window)          → calls _simulate(pdt_enabled=True,  fixed_n=n_splits, ...)
+  simulate_nopdt(n_splits, buy_window)    → calls _simulate(pdt_enabled=False, fixed_n=n_splits, ...)
+  simulate_fixed(n, buy_window)           → fixed position count variant with PDT
+  simulate_fixed_nopdt(n, buy_window)     → fixed position count, no PDT
+
+Any future AI editing this script MUST preserve this wrapper pattern.
+Do not use global variables to toggle PDT — pass it as a parameter.
+
+RESULTS FILE: simulations/results/position_split_study_2026-05-13.txt
+This file contains the full sweep output. Key numbers are also in Section 10
+above, but the raw table with all n_splits × buy_window combinations lives
+in that results file.
+
+────────────────────────────────────────────────────────────────────────────
+TRADES CACHE STRUCTURE — entry_open_pnl FIELD
+────────────────────────────────────────────────────────────────────────────
+trades_both_20yr.pkl contains pre-generated trade records for all strategies
+across 20 years. Each record has these key fields (among others):
+
+  close_pnl      — P&L when using EOD close as entry price (evening scan)
+  entry_open_pnl — P&L when using NEXT-DAY OPEN as entry price (morning scan)
+                   Entry = next day's open, exit = same close as close_pnl.
+                   This field is what makes it possible to simulate morning
+                   vs evening buy windows without re-downloading all data.
+
+The position_split_study.py uses entry_open_pnl for "morning" and "both"
+window simulations, and close_pnl for "evening only" simulations.
+If entry_open_pnl is NaN for a trade, that trade is excluded from morning
+window results (can't simulate morning entry without open price data).
+
+Total records in pkl: 378,777 trades
+After schedule-matching and dedup filtering: 103,129 trades used in study.
+
+────────────────────────────────────────────────────────────────────────────
+EXT_HOURS VALUE STUDY (ext_hours_value_study.py) — 2026-05-13
+────────────────────────────────────────────────────────────────────────────
+Question asked: "What is the point of extended hours if we're just holding
+everything?" Ran against 20yr cache (345,370 trades, all strategies).
+
+KEY FINDINGS:
+
+1. The 3:44pm scan catches 100% of what the simulation can model.
+   Every exit in the cache is deterministic at close price. Extended hours
+   provides ZERO non-overlapping coverage over simulated exits. The 3:44pm
+   scan checks stops, max-hold, and midline for ALL prior-day positions.
+
+2. Ext_hours UNIQUE value = post-close price drops only.
+   The only scenario where ext_hours catches something the scan missed:
+   a stock passes the 3:44pm scan (above stop at close) then drops >0.5%
+   in after-hours due to earnings, Fed news, etc. This is real but cannot
+   be measured from daily close-price data.
+
+3. Estimated frequency: ~40% of trading days see ≥1 ext_hours sell.
+   (~100–150 per year out of ~970 total exits = ~10% of annual exits)
+   Removing ext_hours would push those stops to 9:35am next day instead,
+   costing an estimated 0.3–0.8% additional loss per missed stop.
+   Annual cost of removing it: probably <2–3% return/year (not simulated,
+   estimated from after-hours volatility assumptions).
+
+4. Exit day distribution (all strategies, max_hold=3, 345,370 trades):
+   Day 1: 29.9%  |  Day 2: 4.3%  |  Day 3: 27.4%
+   Day 4: 4.1%   |  Day 5: 29.8% |  Day 6: 4.5%
+   (Days 4–6 are calendar days with weekends — equivalent to trading days 3–4)
+
+5. Exit type distribution (all strategies):
+   Max-hold: 41.1%  |  Midline: 31.0%  |  Stop-loss: 27.9%
+
+6. Stop-loss P&L distribution (96,265 stops):
+   -1% to -2%: 32.4%  |  -2% to -5%: 42.0%  |  <-5%: 25.6%
+   NOTE: ALL stops are below -1.0% because simulation uses close prices.
+   A stock at -0.5% intraday closes at a worse price by EOD. The -0.5%
+   stop triggers intraday but the simulation records the closing P&L.
+   This means the simulation's stop exits are more pessimistic than live.
+
+7. The "HOLDING" noise seen on 2026-05-13 (20 positions all HOLDING) is
+   NOT normal. It happened because all 20 positions were entered that
+   same morning (PDT blocks same-day sells). In steady state with 5–6
+   positions from yesterday's scan, ext_hours is usually silent or sells
+   1 position. It will not show 20 HOLDING lines every night.
+
+VERDICT: Keep ext_hours. It's a cheap insurance policy against post-close
+crashes. The current code already cleaned up the noise (silent HOLDING,
+summary section only prints if there are sells). In normal operation the
+run either does one sell or exits silently.
+
+SCRIPT: simulations/ext_hours_value_study.py
+RESULTS: simulations/results/ext_hours_value_study.txt
+
+────────────────────────────────────────────────────────────────────────────
+CRYPTO GRAND STUDY (crypto_grand_study.py) — 75 tests
+────────────────────────────────────────────────────────────────────────────
+A separate comprehensive study of crypto strategies. Results stored in
+simulations/cache/crypto_grand_top100.pkl and crypto_grand_top30.pkl.
+This is a separate track from the equity bot. Not currently deployed live.
+
+
+================================================================================
+  SECTION 11: LIVE PERFORMANCE (as of 2026-05-13)
+================================================================================
+
+STARTING CAPITAL: $500 (first live trades: 2026-04-21)
+CURRENT EQUITY: ~$510–515 range
+TOTAL RETURN: approximately +$10-15 (+2-3%) from inception
+
+LIVE ACCOUNT HISTORY (from transactions.csv):
+  Week of 2026-04-21 to 2026-04-27 (W17):
+    First live buys: ADM, BIIB, BMY (Pullback50 ~$100 each), EFX, EXE
+    EFX (GapDown): -9.09%, -$5.88 (large loss — old 2% stop was too wide)
+    BIIB: +2.03% win via midline exit
+    Net: Small loss this week due to EFX gap
+
+  Week of 2026-04-28 to 2026-05-02 (W18):
+    Equity: $493.23 (down from $500, win rate 38.9%)
+    Notable: AMD (GapDown) +8.78% (+$5.14) — big win
+    Notable: AOS (MomReversal) -6.44%, APH (VolumeSpike) -5.97% — big losses
+    Still adjusting to live conditions, stop was still at -2% at this point
+
+  Week of 2026-05-05 to 2026-05-09 (W19):
+    Equity: $514.56 (+3.0% from start, win rate 32.6%)
+    Notable: DVA (VolumeSpike) +23.2% (+$13.62) — exceptional winner
+    Notable: ETN (VolumeSpike) +2.11%, CL (Pullback50) +2.17%
+    This was when position sizing was ~$60/position (3 positions × ~20%)
+    Stop loss changed to -0.5% during this period
+
+  Week of 2026-05-11 to 2026-05-13 (W20, current):
+    Equity: ~$510.84 after morning exits on 2026-05-13
+    Position size changed to $20 (from $60) after signal scaling fix
+    20 positions open on May 13 from morning scan
+    Several PDT blocks occurred (11 sells blocked at 2pm)
+    PDT same-day skip logic added to fix this
+
+IMPORTANT LIVE OBSERVATIONS:
+  - Win rate on live trades is lower than sim (~30-40% vs 53-55%)
+  - This is EXPECTED: small sample size (97 trades total in W19 weekly)
+    At 53% win rate, you need ~200+ trades for statistical significance
+  - The stop being -2% for the first few weeks caused larger losses
+  - Since tightening to -0.5% stop and 3d hold, performance has stabilized
+  - The $20 minimum trade is a practical constraint with the $500 account
+  - With ~$500 equity and 20 positions open, each trade is ~$20
+
+
+================================================================================
+  SECTION 12: KEY BUGS FOUND AND FIXED
+================================================================================
+
+1. SIGNAL SCALING BUG (fixed 2026-05-12)
+   Symptom: Bot was buying $20 positions when $400 was available
+   Root cause: equal_share = avail / n_viable (dividing by 40 signals)
+   Fix: n_slots = min(n_viable, max_trades)
+        equal_share = avail / n_slots (divide only by fillable slots)
+
+2. MAX_DAY_TRADES HARDCODED (fixed 2026-05-12)
+   Symptom: Bot only taking 5 trades max even with ~$400 available
+   Root cause: MAX_DAY_TRADES = 5 hardcoded as a global constant
+   Fix: max_trades = max(1, int(avail // MIN_TRADE_SIZE))
+        Removed the constant entirely
+
+3. USE_EXTENDED_HOURS_SELL = True (fixed 2026-05-12)
+   Symptom: AEP stuck as a limit sell order that never filled
+   Root cause: Scan runs at 3:44pm ET = REGULAR HOURS. Setting
+   USE_EXTENDED_HOURS_SELL=True caused scan sells to use extended hours
+   sell path (limit order, no market fallback). Limit orders at 3:44pm
+   don't fill before market close.
+   Fix: USE_EXTENDED_HOURS_SELL = False
+   Explanation: Regular hours sells should always use market order fallback.
+   Extended hours sells (after 4pm) use limit orders. These are different paths.
+
+4. MISSING DAILY LOG FOR MAY 11 AND MAY 12 (fixed 2026-05-12)
+   Symptom: No .md log file created for those days
+   Root cause 1 (May 11): Two GitHub Actions runs pushed simultaneously
+   (the 19:30 UTC run was still running when 19:45 UTC fired). Git conflict
+   → scan logs lost. Fixed by adding concurrency block to run_bot.yml.
+   Root cause 2 (May 12): Scan ran but log showed empty/fallback
+   Fix: ensure_daily_log() function added. Called from run_exits() and
+   run_summary(). If today's .md doesn't exist, creates a fallback log.
+
+5. PDT TRACKING 7-DAY WINDOW (fixed 2026-05-10)
+   Symptom: PDT counter was zeroing mid-week after a busy Mon/Tue
+   Root cause: pdt_n() was using a 7-day rolling window. After Mon/Tue
+   trades, Wednesday morning would sometimes show 0 PDT count
+   Fix: pdt_n() now counts TODAY only. PDT resets daily, not on a rolling window.
+
+6. PDT SAME-DAY BLOCK (fixed 2026-05-13)
+   Symptom: 11 sells blocked with PDT error at 2pm after morning scan buys
+   Root cause: Morning scan bought 20 stocks at 9:45am. By 2pm some hit
+   their -0.5% stop. Bot tried to sell them = day trade. Alpaca blocked.
+   Fix: Skip stop-loss and max-hold exit checks for positions entered TODAY.
+   These positions are held until the next morning's 9:35am run.
+
+7. FRACTIONAL STOP WARNINGS (fixed 2026-05-13)
+   Symptom: 20 WARNING log lines every run ("STOP skipped X: fractional")
+   Root cause: All positions are fractional with $20 buys. Warning level
+   was too high for something that happens 100% of the time by design.
+   Fix: Downgraded from log.warning() to log.info()
+
+8. ALREADY SOLD TODAY IN EXIT LOG (fixed 2026-05-13)
+   Symptom: Extended hours exit log showed "already sold today -- skipping"
+   for every stock sold during the day. Noisy and confusing.
+   Fix: Silently skip already-sold positions (just continue, no row printed)
+
+9. HOLD MESSAGE IN EXTENDED HOURS (improved 2026-05-13)
+   Old: "HOLD (midline deferred to 9:35am)"
+   New: "HOLDING until 9:35am scan (Pullback50)" — includes strategy name
+
+10. EXTENDED HOURS SELLS SUMMARY (added 2026-05-13)
+    After the exit check, if running in extended hours mode, now prints a
+    clean summary section "EXTENDED HOURS SELLS" with ticker, strategy,
+    P&L%, P&L$, reason, and total P&L for the session.
+
+    IMPLEMENTATION PATTERN — critical for future edits:
+    An `eh_sells = []` list is initialized BEFORE the exit loop begins.
+    Inside the loop, whenever an extended-hours sell succeeds, a tuple is
+    appended: eh_sells.append((ticker, strat, pnl_pct, pnl_dollar, reason))
+    AFTER the loop completes, the summary table is printed from that list.
+    Do NOT move the eh_sells printout inside the loop — it must come after
+    all positions have been evaluated so the totals are accurate.
+    If you add any new exit paths in extended hours mode, you must also
+    append to eh_sells or those sells will be invisible in the summary.
+
+11. WORKFLOW FILE NAME CONFUSION
+    Local file was named bot.yml but GitHub repo uses run_bot.yml.
+    These are the same file content. Always edit run_bot.yml on GitHub.
+    The local bot.yml should be considered a stale copy.
+
+12. AEP STUCK LIMIT ORDER (2026-05-12, manually resolved)
+    AEP was placed as a limit sell during extended hours and never filled.
+    The next morning's exits run sold it at market. No code change needed
+    for this specific incident — it was a consequence of bug #3 above.
+
+
+================================================================================
+  SECTION 13: CURRENT BOT CONFIGURATION (v8 as of 2026-05-13)
+================================================================================
+
+All configurable constants in rubber_band_bot.py:
+
+  PAPER_TRADING = False          # LIVE MONEY — do not change carelessly
+
+  # Universe
+  UNIVERSE = "both"              # S&P 500 + MidCap 400 (~900 stocks)
+
+  # Position sizing
+  SEASONAL_SIZE_PCT    = 0.20    # 20% per scheduled strategy trade
+  OFFSCHEDULE_SIZE_PCT = 0.20    # 20% per off-schedule trade
+  CASH_RESERVE_PCT     = 0.05    # keep 5% as buffer
+  MIN_TRADE_SIZE       = 20.0    # $20 minimum per position
+
+  # Exit rules
+  EXIT_DAYS_MAX   = 3            # max 3 calendar days hold
+  EXIT_STOP_LOSS  = -0.005       # -0.5% stop loss trigger
+  # Slippage floor in sim = EXIT_STOP_LOSS × 2 = -1.0% worst case
+
+  # Extended hours
+  USE_EXTENDED_HOURS_SELL = False  # scan is regular hours, use market fallback
+
+  # Data quality
+  MIN_STOCK_PRICE  = 5.0         # filter penny stocks (may be redundant for S&P)
+  MIN_HISTORY_DAYS = 220         # need 220 bars for MA200
+
+
+================================================================================
+  SECTION 14: CODE STRUCTURE WALKTHROUGH
+================================================================================
+
+rubber_band_bot.py is organized into these sections:
+
+  1. KEYS: Load API keys from environment variables
+  2. CONFIGURATION: All constants listed above
+  3. CALENDAR STRATEGY SCHEDULE: SCHEDULE dict (month → primary/secondary)
+  4. LOGGING SETUP: log = logging.getLogger, box-drawing display functions
+     hdr() = header box
+     row() = key/value row
+     trow() = table row with fixed widths
+     div() = divider line
+     blank() = empty row
+     ftr() = footer box
+  5. UTILITY FUNCTIONS: fmt_pct, _trunc, etc.
+  6. MARKET DATA: fetch_batch() (yfinance batch download), add_indicators()
+  7. REGIME DETECTION: detect_regime() using SPY MA200
+  8. SIGNAL FUNCTIONS: One per strategy (sig_RubberBand, sig_52wkLow, etc.)
+  9. EXIT LOGIC: check_exit(), ensure_stop(), place_all_stops(), do_sell()
+  10. PDT TRACKING: load_pdt(), save_pdt(), pdt_n(), pdt_ok()
+  11. POSITION MANAGEMENT: get_positions(), enrich() (adds entry_date etc.)
+  12. LOGGING: log_tx() (transaction CSV), log_run() (runs CSV),
+      write_daily() (daily .md), write_weekly() (weekly .md),
+      ensure_daily_log() (fallback log creation)
+  13. RUN FUNCTIONS:
+      run_summary() — status only, no trades
+      run_exits() — exit check, no new entries
+      run_scan() — full scan + exits + new entries + daily log
+  14. MODE DETECTION: detect_mode() — returns mode string
+  15. MAIN: gets account data, detects mode, routes to run function
+
+IMPORTANT FUNCTION NOTES:
+  - enrich(): adds entry_date, entry_price, market_value, pnl_pct, pnl_dollar,
+    strategy, dollar_amt to each position by cross-referencing transactions.csv
+  - ensure_daily_log(): if no .md for today exists, writes a fallback log.
+    Called from run_exits() and run_summary() as a safety net.
+  - do_sell(): tries limit sell first, falls back to market sell if limit
+    fails or is rejected. In extended hours, limit only (no fallback).
+  - place_all_stops(): iterates all open positions, calls ensure_stop() for
+    each. Skips fractional positions. Called at start of every morning exit.
+
+
+================================================================================
+  SECTION 15: LOG FILE STRUCTURE
+================================================================================
+
+All logs are committed to GitHub after every run.
+
+  logs/daily/YYYY-MM-DD.md
+    Created once per trading day during the evening scan (3:44pm run).
+    Also created as fallback by ensure_daily_log() if scan's push failed.
+    Contains: account equity/cash/regime, open positions table, trades today,
+    and signals (stocks that fired but weren't bought due to cap).
+    Fallback logs are marked with a ⚠️ banner at the top.
+
+  logs/weekly/YYYY-WNN.md
+    Created on weekends by run_summary() → write_weekly().
+    Contains: account summary, year-by-year performance, all trades that week.
+
+  logs/transactions.csv
+    Every BUY and SELL with: timestamp, date, action, ticker, strategy,
+    price, dollar_amount, pnl_pct, pnl_dollar, hold_days, exit_reason,
+    regime, equity_after
+
+  logs/runs.csv
+    Every bot run with: timestamp, mode, regime, equity, cash, n_buys,
+    n_sells, n_exits
+
+  logs/pdt.json
+    List of dates when PDT trades occurred today. Reset interpretation:
+    pdt_n() counts only TODAY, so this effectively resets daily.
+
+
+================================================================================
+  SECTION 16: KNOWN LIMITATIONS AND OPEN QUESTIONS
+================================================================================
+
+1. $25K PDT THRESHOLD
+   All PDT blocking goes away once equity hits $25k. With the sim showing
+   +184% CAGR, this could theoretically happen in 3–4 years. Until then,
+   the same-day PDT skip means morning scan buys are always held at least
+   one night before being eligible for stop-loss exits.
+
+2. SIMULATION PDT CAVEAT — THE NUMBERS ARE UNDERSTATED
+   The position split study (Section 10) applied PDT constraints throughout
+   ALL 20 years of simulation, even after the theoretical account balance
+   crossed $25,000. In reality, once the account clears $25k the PDT rule
+   no longer applies, and ALL morning scan exits would execute on the same
+   day without restriction.
+
+   WHAT THIS MEANS FOR THE HEADLINE NUMBERS:
+     +184% CAGR (evening only)  — accurate, PDT is irrelevant for EOD entries
+     +265% CAGR (both windows)  — UNDERSTATED. The simulation applied PDT
+       even in years 3-20 when the account would realistically be well above
+       $25k. The true "both windows, no PDT after $25k" CAGR would be higher
+       than +265%. Think of +265% as the floor, not the ceiling.
+
+   If you re-run the simulation and want a realistic "post-$25k" number,
+   run simulate_nopdt() and compare it to simulate() — the gap between those
+   two is the PDT drag that disappears once the account scales.
+
+3. FRACTIONAL GTC STOPS
+   With $20 positions, all positions are fractional and no hardware GTC stops
+   can be placed. The bot relies entirely on software exits (the 9:35am and
+   2pm exit runs) to catch stop-loss situations. If GitHub Actions has an
+   outage during a major market drop, positions could lose more than -0.5%.
+   Mitigation: Alpaca's own account-level risk controls. Manual monitoring.
+
+4. MORNING SCAN NOT YET VALIDATED
+   The morning_scan mode was added 2026-05-12 but has not yet been proven
+   in production. The simulation showed it's beneficial (+81pp CAGR) but
+   live behavior may differ. The PDT same-day skip was added the next day
+   (2026-05-13) after the first morning scan caused 11 PDT errors.
+
+5. MIN_STOCK_PRICE = 5.0
+   This filter was originally added to screen out penny stocks. The S&P 500
+   and MidCap 400 universe rarely has stocks below $5, so this filter may
+   be redundant. It has been discussed but not removed.
+
+6. POSITION SIZING TRANSITION
+   On 2026-05-12, position sizing changed from ~$60/position (3 slots at
+   20%) to $20/position (20 slots at 20%). This was due to the signal
+   scaling fix. Live performance data before and after this change is not
+   directly comparable.
+
+7. WIN RATE DISCREPANCY
+   Live win rate (32-39%) is lower than simulation (53-55%).
+   Expected at this sample size. With only 97 trades (Week 19 count),
+   you need ~200+ trades for statistical significance at 53% true win rate.
+   The live win rate should converge toward simulation over time.
+
+8. AES APPEARING REPEATEDLY
+   AES (American Electric Power / AES Corp) has appeared multiple times in
+   buy signals across different strategies. This is normal — it's a volatile
+   utility stock that repeatedly hits strategy triggers. No action needed.
+
+9. EXT_HOURS MOSTLY IDLE
+   The ext_exits run (4pm–8pm) appears useless when all positions were
+   entered the same day (PDT blocks them). This is expected and temporary.
+   In steady state it fires sells on ~40% of trading days (~10% of annual
+   exits). The value is post-close crash protection, not routine exits.
+   See ext_hours_value_study.py for the full analysis.
+
+11. SIMULTANEOUS STRATEGY FIRES (ETN on 2026-05-05)
+   ETN was bought twice in one scan (GapDown + VolumeSpike) for $58.72 each.
+   This creates a $117 position in one stock which violates diversification.
+   There is no deduplication in the current code. This may need a fix if it
+   becomes a pattern.
+
+
+================================================================================
+  SECTION 17: HOW TO MAKE CHANGES SAFELY
+================================================================================
+
+RULE: Never change live bot parameters based on IS (in-sample) results alone.
+Always run validation_sim.py to confirm OOS before changing anything.
+
+CHANGE WORKFLOW:
+  1. Identify what you want to test (e.g., "change stop to -0.75%")
+  2. Run master_sim.py to get direction: does -0.75% beat -0.5%?
+  3. If yes, run validation_sim.py Test 1 (Walk-Forward) and Test 10 (Rolling)
+  4. If OOS confirms, update rubber_band_bot.py
+  5. Commit and push to GitHub
+
+SIMULATION RUNTIME (cached data, no download):
+  master_sim.py (7yr):    ~2 hours total
+  validation_sim.py:      ~35-50 minutes
+  position_split_study.py: ~2-3 minutes (uses pre-built trades cache)
+
+DATA CACHES (in simulations/cache/):
+  data_both_20yr.pkl      — 20yr OHLCV for ~900 stocks (~large file)
+  trades_both_20yr.pkl    — pre-generated trades for all strategies, 20yr
+  data_both_7yr.pkl       — 7yr OHLCV
+  trades_both_7yr.pkl     — pre-generated trades, 7yr
+  These caches go stale over time. Use --refresh flag to rebuild.
+
+DEPENDENCIES (for local simulation):
+  pip install yfinance pandas numpy lxml requests
+
+DEPENDENCIES (for GitHub Actions, in run_bot.yml):
+  pip install alpaca-py yfinance pandas numpy lxml requests
+
+
+================================================================================
+  SECTION 18: WHAT THE NEXT AI SESSION SHOULD KNOW
+================================================================================
+
+STATE AS OF 2026-05-13:
+  - Bot is live, running on Alpaca with real money
+  - 20 positions currently open from the morning scan on 2026-05-13
+  - All 20 positions entered today = PDT skip applies until tomorrow
+  - Several of those positions are at stop-loss levels but held due to PDT
+  - Tomorrow's 9:35am run will evaluate them all for exits
+  - Current equity: ~$510.84
+
+RECENT CODE CHANGES (all in rubber_band_bot.py):
+  - morning_scan mode added (detect_mode, main entry)
+  - ensure_daily_log() added as safety net
+  - Signal scaling bug fixed (n_slots, equal_share)
+  - MAX_DAY_TRADES hardcoded constant removed (now dynamic)
+  - USE_EXTENDED_HOURS_SELL changed to False
+  - pdt_ok() signature made dynamic (accepts max_trades parameter)
+  - OFFSCHEDULE_SIZE_PCT changed from 0.12 to 0.20
+  - Same-day PDT skip added to exit loop
+  - Fractional stop warnings downgraded to INFO
+  - Already-sold stocks silently skipped in exit output
+  - "HOLDING until 9:35am scan (Strategy)" message improved
+  - Extended Hours Sells summary section added
+
+THINGS THAT MIGHT COME UP:
+  - User may want to re-run simulations with new parameters
+  - User may ask about individual stock performance (check transactions.csv)
+  - User may want to change the stop loss or hold period (needs OOS validation)
+  - User may ask why the win rate is lower than sim (sample size — explain it)
+  - User may want to add new strategies (needs strategy_lab bakeoff first)
+  - User may want to check if the morning scan is working (check daily logs)
+
+THE USER'S STYLE:
+  - Tyler types quickly with typos. He writes in ALL CAPS when frustrated.
+  - He wants direct, clear answers. Don't hedge excessively.
+  - He gets annoyed by unnecessary log noise (that's why we cleaned it up)
+  - He understands the trading concepts well but wants things explained simply
+  - When he says "what is X" he wants the 1-sentence version first
+  - When he says "run the simulation" he means use the cached data, not download
+
+================================================================================
+  END OF TRANSFER DOCUMENT
+  Total scope: 378,777 simulated trades, 20yr data, 900 stocks, v8 live bot
+================================================================================
