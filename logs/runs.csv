@@ -856,3 +856,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-06-19 16:45:28,exits,bull,480.09,445.22,0,0,0,2,AES|CNX,both
 2026-06-19 17:00:27,exits,bull,480.09,445.22,0,0,0,2,AES|CNX,both
 2026-06-19 17:15:30,exits,bull,480.09,445.22,0,0,0,2,AES|CNX,both
+2026-06-19 17:30:29,exits,bull,480.09,445.22,0,0,0,2,AES|CNX,both
