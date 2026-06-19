@@ -75,7 +75,7 @@ STARTING_EQUITY = 500.0
 EMPIRICAL_STOP_OVERSHOOT_PP = -1.18
 EMPIRICAL_STOP_SEED = 42
 # Option A: only replace optimistic gap stops (see empirical_methodology_note_2026-06-20.md)
-EMPIRICAL_OVERRIDE_THRESHOLD_PCT = -1.2
+EMPIRICAL_OVERRIDE_THRESHOLD_PCT = -0.8
 DATA_START = "2018-01-01"
 DATA_END = "2025-12-31"
 TICKER_LIMIT = 120  # subset for runtime; stratified across SP500 list
