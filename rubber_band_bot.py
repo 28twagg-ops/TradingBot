@@ -46,8 +46,8 @@ CHANGES FROM v6 (sim-validated across 2yr/3yr/5yr/7yr, 900 stocks):
     REMOVED: GoldenCross (negative Sharpe, lost money)
 
 WHAT RUNS WHEN (auto-detected by US Eastern time, DST-aware via zoneinfo):
-  9:30–9:59am ET  -> exits-only (PDT-safe morning sells; no new buys)
-  3:50pm ET       -> full daily scan + entries + daily log (only buy window)
+  9:30–9:59am ET  -> exits-only (morning sells)
+  3:50pm ET       -> full daily scan + entries + daily log (evening entry window)
   4:15pm–8:00pm ET -> post-market exits-only (extended hours, limit orders only)
                      catches stop-loss and time-stop positions after close;
                      critical for fractional positions with no GTC stop order.
@@ -175,22 +175,18 @@ CACHE_DIR  = LOG_DIR / "cache"
 TX_FILE    = LOG_DIR / "transactions.csv"
 EXEC_AUDIT_FILE = LOG_DIR / "execution_audit.csv"
 RUNS_FILE  = LOG_DIR / "runs.csv"
-PDT_FILE   = LOG_DIR / "pdt.json"
 STOP_LOSS_LOOK_FILE = LOG_DIR / "stop_losses_to_look_into.txt"
 FRACTIONAL_WATCH_FILE = LOG_DIR / "fractional_watch.json"
 MORNING_PLAN_FILE = PLAN_DIR / "morning_plan.json"
 EVENING_PLAN_FILE = PLAN_DIR / "evening_plan.json"
 PLAN_MAX_AGE_MIN = 120
 USE_TWO_PHASE_PLAN = True
-# PDT-safe schedule: buy afternoon (~3:50pm ET), sell next morning — no open entries.
+# Strategy timing: entries at evening scan only (Phase 3 sim will confirm vs any-time).
+# TODO(phase3): rename PREFER_EVENING_ENTRIES after schedule mode sims (D3).
 EVENING_ONLY_ENTRIES = True
-# Live accounts: defer same-day midline/max-hold (PDT). Stop breaches still exit same day.
-STRICT_SAME_DAY_EXIT = PAPER_TRADING is False
 
-
-def _pdt_blocks_exit(entered_today, pnl_frac):
-    """Block same-day midline/max-hold on live; always allow stop-loss exits."""
-    return entered_today and STRICT_SAME_DAY_EXIT and pnl_frac > EXIT_STOP_LOSS
+# Alpaca account: read only .equity / .cash from get_account().
+# Deprecated Jul 6 2026: pattern_day_trader, daytrade_count, daytrading_buying_power — never used here.
 FETCH_WORKERS = 16
 FETCH_CHUNK_PAUSE_S = 0.25
 
@@ -806,22 +802,25 @@ def enrich(client, positions):
 
 
 # =============================================================================
-#  PDT
+#  DAILY ENTRY COUNT (replaces pdt.json — 2026-06-18)
 # =============================================================================
 
-def load_pdt(): return json.load(open(PDT_FILE)) if PDT_FILE.exists() else []
-def save_pdt(l): json.dump(l, open(PDT_FILE, "w"))
+def _count_buys_today():
+    today = str(date.today())
+    if not TX_FILE.exists():
+        return 0
+    with open(TX_FILE, newline="") as f:
+        return sum(1 for r in csv.DictReader(f)
+                   if r.get("action") == "BUY" and r.get("date") == today)
 
-def pdt_n(l):
-    # Count only TODAY's entries (not rolling 7-day window).
-    # Fixed 2026-05-10 — 7-day window was silently zeroing mid-week runs.
-    today = date.today()
-    return sum(1 for d in l if datetime.strptime(d, "%Y-%m-%d").date() == today)
 
-def pdt_ok(l, max_trades):
-    # max_trades is computed dynamically: floor(avail / MIN_TRADE_SIZE)
-    n = pdt_n(l)
-    if n >= max_trades: log.warning(f"PDT {n}/{max_trades}"); return False
+def entry_slot_ok(buys_today, max_trades):
+    """True if another entry is allowed under cash / position caps."""
+    if max_trades <= 0:
+        return False
+    if buys_today >= max_trades:
+        log.warning(f"Entry cap reached {buys_today}/{max_trades}")
+        return False
     return True
 
 
@@ -1896,7 +1895,7 @@ def write_weekly(client, equity, cash):
             if hd > 0: hold_days.append(hd)
         except Exception: pass
     avg_hold = sum(hold_days) / len(hold_days) if hold_days else 0
-    pdt_used  = pdt_n(load_pdt())
+    pdt_used  = _count_buys_today()
     reserve   = equity * CASH_RESERVE_PCT
     wk_avail  = max(0.0, cash - reserve)
     wk_max_t  = max(1, int(wk_avail // MIN_TRADE_SIZE))
@@ -1912,7 +1911,7 @@ def write_weekly(client, equity, cash):
     row("Regime",          rgm.upper())
     row("Strategy",        f"{sc['p']}  +  {sc['s']}")
     row("Execution",       "Summary mode only (no orders submitted)")
-    row("PDT round trips", f"{pdt_used} today")
+    row("Buys today",    f"{pdt_used}")
     row("Cash-based cap",  f"{wk_max_t} max trades with current available cash")
     div()
     # Two-column account layout
@@ -2168,12 +2167,8 @@ def build_plan(client, equity, cash, rgm, mode_name):
 
     exit_plan = []
     for ticker, pos in positions.items():
-        entry_date = pos.get("entry_date", "")
-        entered_today = (entry_date == str(date.today()))
         pnl_frac = pos.get("pnl_pct", 0) / 100
 
-        if _pdt_blocks_exit(entered_today, pnl_frac):
-            continue
         if pnl_frac <= EXIT_STOP_LOSS:
             exit_plan.append({"ticker": ticker, "why": f"stop_loss ({pnl_frac*100:.1f}%)"})
             continue
@@ -2472,7 +2467,6 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
     eh_sells = []   # collect ext-hours sells for summary section
     stats = {
         "already_logged": 0,
-        "pdt_deferred": 0,
         "no_data_skip": 0,
         "attempted": 0,
         "filled": 0,
@@ -2499,13 +2493,6 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
 
         entry_date = pos.get("entry_date", "")
         entered_today = (entry_date == str(date.today()))
-
-        # ── PDT guard: defer same-day midline/max-hold; stop breaches exit now ──
-        if _pdt_blocks_exit(entered_today, pnl_frac):
-            stats["pdt_deferred"] += 1
-            row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
-                "HOLDING until next session (entered today — PDT)")
-            continue
 
         # ── Stop-loss: Alpaca unrealized P&L — no yfinance needed ─────────
         if pnl_frac <= EXIT_STOP_LOSS:
@@ -2725,7 +2712,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
     total_candidates = len(positions)
     row("Mode", run_mode_name)
     row("Candidates", str(total_candidates))
-    row("Deferred/Skipped", f"PDT {stats['pdt_deferred']}  |  already logged {stats['already_logged']}")
+    row("Deferred/Skipped", f"already logged {stats['already_logged']}")
     row("Data skips", f"no price data {stats['no_data_skip']}")
     row("Sell attempts", f"{stats['attempted']} attempted  |  {stats['filled']} filled  |  "
                          f"{stats['partial']} partial  |  {stats['pending']} pending  |  {stats['failed']} failed")
@@ -2783,7 +2770,8 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     row("Off-sched trade", f"${equity*OFFSCHEDULE_SIZE_PCT:,.2f}  ({OFFSCHEDULE_SIZE_PCT*100:.0f}% -- other strategies)")
     ftr()
 
-    positions = enrich(client, get_positions(client)); pdt = load_pdt()
+    positions = enrich(client, get_positions(client))
+    entries_today = _count_buys_today()
     # Dynamic entry cap: cash slots + MAX_OPEN_POSITIONS concurrent holdings.
     max_trades = max(1, int(avail // MIN_TRADE_SIZE))
     if MAX_OPEN_POSITIONS:
@@ -2821,7 +2809,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         row("Total open P&L", f"${pnl:+,.2f}")
     else:
         blank(); row("No open positions."); blank()
-    row(f"PDT round trips today: {pdt_n(pdt)}  |  entry cap: {max_trades}"
+    row(f"Buys today: {entries_today}  |  entry cap: {max_trades}"
         f"  |  max open: {MAX_OPEN_POSITIONS}")
     ftr()
 
@@ -2838,7 +2826,6 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     exits = 0; sells_log = []
     scan_exit_stats = {
         "already_logged": 0,
-        "pdt_deferred": 0,
         "no_data_skip": 0,
         "attempted": 0,
         "filled": 0,
@@ -2882,11 +2869,6 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
             pnl_frac = pos.get("pnl_pct", 0) / 100
             if pnl_frac <= EXIT_STOP_LOSS:
                 scan_stop_breaches[ticker] = pnl_frac
-            if _pdt_blocks_exit(entered_today, pnl_frac):
-                scan_exit_stats["pdt_deferred"] += 1
-                row(f"{ticker}  P&L {pos['pnl_pct']:+.1f}%  ${pos['pnl_dollar']:+.2f}",
-                    "HOLDING until next session (entered today — PDT)")
-                continue
 
             # ── Stop-loss: Alpaca unrealized P&L — no yfinance needed ─────
             if pnl_frac <= EXIT_STOP_LOSS:
@@ -3046,8 +3028,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         hdr("EXIT EVAL SUMMARY")
         row("Exit eval",
             f"attempted {scan_exit_stats['attempted']} | filled {scan_exit_stats['filled']} | "
-            f"partial {scan_exit_stats['partial']} | pending {scan_exit_stats['pending']} | failed {scan_exit_stats['failed']} | "
-            f"PDT deferred {scan_exit_stats['pdt_deferred']}")
+            f"partial {scan_exit_stats['partial']} | pending {scan_exit_stats['pending']} | failed {scan_exit_stats['failed']}")
         row("Other skips", f"already logged today {scan_exit_stats['already_logged']}  |  "
                            f"no price data {scan_exit_stats['no_data_skip']}  |  holds {scan_exit_stats['holds']}")
         if scan_stop_breaches:
@@ -3115,7 +3096,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
 
     if not allow_entries:
         hdr("ENTRY ORDERS")
-        row("Skipped", "evening-only — buys at 3:50pm ET scan only (PDT-safe)")
+        row("Skipped", "evening-only — buys at 3:50pm ET scan only")
         entries = 0; buys_log = []; unconfirmed_buys = 0; pending_buys = []
         ftr()
     else:
@@ -3155,7 +3136,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
             ticker = sig["ticker"]; strategy = sig["strategy"]
             is_seasonal = sig.get("seasonal", False)
             skip = ""
-            if not pdt_ok(pdt, max_trades):   skip = "PDT limit"
+            if not entry_slot_ok(entries_today, max_trades):   skip = "entry cap"
             elif MAX_OPEN_POSITIONS and n_open >= MAX_OPEN_POSITIONS:
                 skip = f"cap {MAX_OPEN_POSITIONS}"
             elif avail <= 1.0:    skip = "reserve floor"
@@ -3185,7 +3166,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
                 avail -= da
                 if buy_res.get("filled"):
                     entries += 1
-                    pdt.append(str(today))   # only confirmed fills count toward PDT entries
+                    entries_today += 1
                     buy_price = buy_res.get("price") if buy_res.get("price") is not None else sig["close"]
                     buy_dollars = buy_res.get("dollars") if buy_res.get("dollars") is not None else da
                     log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
@@ -3214,8 +3195,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         if pending_buys:
             batched = poll_pending_buys(client, pending_buys, rgm)
             entries += batched
-            for _ in range(batched):
-                pdt.append(str(today))
+            entries_today += batched
         ftr()
 
     # Place GTC stop-market orders for all open positions.
@@ -3239,7 +3219,6 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     except Exception as e:
         log.warning(f"  EOD stop refresh check failed: {e}")
 
-    save_pdt(pdt)
     acct2 = client.get_account()
     eq2 = float(acct2.equity); ca2 = float(acct2.cash)
     pos2 = enrich(client, get_positions(client))

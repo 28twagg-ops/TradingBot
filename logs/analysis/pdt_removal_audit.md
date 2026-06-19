@@ -58,11 +58,12 @@ Rename to `PREFER_EVENING_ENTRIES` only after sim decision.
 5. Phase 3 sim suite before touching EVENING_ONLY or live stop threshold
 6. Paper trading 10 days before live PDT removal deploy (Phase E)
 
-## C4 verification (fill after Phase C)
+## C4 verification (Phase C — 2026-06-18)
 
-- [ ] Bot imports / py_compile PASS
-- [ ] No `STRICT_SAME_DAY_EXIT` in codebase
-- [ ] No `pdt.json` read/write in rubber_band_bot.py
-- [ ] No `_pdt_blocks_exit` calls
-- [ ] `EVENING_ONLY_ENTRIES` still present (Phase 3 pending)
-- [ ] Paper mode cycle (manual — requires keys + workflow)
+- [x] py_compile PASS
+- [x] `STRICT_SAME_DAY_EXIT` removed
+- [x] `_pdt_blocks_exit` removed
+- [x] `pdt.json` load/save/`pdt_ok` removed — replaced with `_count_buys_today()` / `entry_slot_ok()`
+- [x] No deprecated Alpaca field reads (`.daytrade_count`, etc.)
+- [x] `EVENING_ONLY_ENTRIES` kept pending Phase 3 D3 sim decision
+- [ ] Paper mode full cycle (manual — requires workflow run)
