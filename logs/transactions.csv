@@ -873,3 +873,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-06-22 15:00:49,2026-06-22,SELL,CPRT,RSIRecovery,29.61,1.46,-0.72,-0.01,0,stop_loss (-0.7%),bull,481.55
 2026-06-22 15:00:51,2026-06-22,SELL,LOW,VolumeSpike,216.06,7.44,-0.66,-0.05,0,stop_loss (-0.7%),bull,481.54
 2026-06-22 15:00:54,2026-06-22,SELL,FIS,unknown,37.73,7.45,-0.5,-0.04,0,stop_loss (-0.5%),bull,481.54
+2026-06-22 15:15:38,2026-06-22,SELL,DT,unknown,40.37,1.45,-1.33,-0.02,0,stop_loss (-1.3%),bull,481.6
