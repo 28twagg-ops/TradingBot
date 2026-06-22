@@ -515,3 +515,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-22 16:15:38,2026-06-22,SELL,DIS,VolumeSpike,102.301,,102.301,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.8%),bull
 2026-06-22 16:30:35,2026-06-22,SELL,SON,unknown,50.09,,50.09,7.41,0.0,0.0,market_urgent_full,stop_loss (-1.0%),bull
 2026-06-22 18:00:43,2026-06-22,SELL,IEX,VolumeSpike,223.78,,223.78,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.8%),bull
+2026-06-22 18:15:35,2026-06-22,SELL,PRI,VolumeSpike,280.47,,280.47,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
