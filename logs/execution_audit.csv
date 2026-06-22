@@ -501,3 +501,6 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-22 14:30:54,2026-06-22,SELL,ALGN,unknown,177.5,,177.5,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-06-22 14:30:56,2026-06-22,SELL,CDNS,unknown,385.78,,385.11,1.46,-0.1737,-0.0025,market_urgent_full,stop_loss (-0.6%),bull
 2026-06-22 14:30:59,2026-06-22,SELL,HOG,VolumeSpike,25.215,,25.215,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
+2026-06-22 14:45:35,2026-06-22,SELL,IVZ,VolumeSpike,28.085,,28.07,1.46,-0.0534,-0.0008,market_urgent_full,stop_loss (-0.6%),bull
+2026-06-22 14:45:37,2026-06-22,SELL,A,RSIRecovery,126.04,,126.04,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-06-22 14:45:39,2026-06-22,SELL,GEN,VolumeSpike,23.495,,23.51,1.46,0.0638,0.0009,market_urgent_full,stop_loss (-0.5%),bull
