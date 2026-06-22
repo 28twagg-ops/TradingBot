@@ -468,3 +468,23 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-22 13:36:16,2026-06-22,SELL,DUK,Pullback50,124.35,124.1,124.338,7.54,-0.0097,-0.0007,limit_fill_position_check_full,max_hold 6d (+0.3%),bull
 2026-06-22 13:36:37,2026-06-22,SELL,NI,Pullback50,47.49,47.49,47.502,1.49,0.0253,0.0004,limit_fill_position_check_full,max_hold 5d (+0.6%),bull
 2026-06-22 13:36:57,2026-06-22,SELL,CNX,MomReversal,32.91,32.85,32.884,29.35,-0.079,-0.0232,limit_fill_position_check_full,max_hold 5d (+0.6%),bull
+2026-06-22 13:45:41,2026-06-22,SELL,DPZ,VolumeSpike,297.5,,297.5,1.41,0.0,0.0,market_urgent_full,stop_loss (-4.1%),bull
+2026-06-22 13:45:43,2026-06-22,SELL,AVGO,Pullback50,399.48,,399.81,7.24,0.0826,0.006,market_urgent_full,stop_loss (-3.4%),bull
+2026-06-22 13:45:45,2026-06-22,SELL,CW,VolumeSpike,768.795,,768.795,1.45,0.0,0.0,market_urgent_full,stop_loss (-1.5%),bull
+2026-06-22 13:45:47,2026-06-22,SELL,CHE,VolumeSpike,430.97,,430.6,1.45,-0.0859,-0.0012,market_urgent_full,stop_loss (-1.2%),bull
+2026-06-22 13:45:50,2026-06-22,SELL,GOOGL,Pullback50,353.85,,353.63,1.45,-0.0622,-0.0009,market_urgent_full,stop_loss (-1.1%),bull
+2026-06-22 13:45:52,2026-06-22,SELL,LYV,VolumeSpike,169.435,,169.22,1.45,-0.1269,-0.0018,market_urgent_full,stop_loss (-1.1%),bull
+2026-06-22 13:45:54,2026-06-22,SELL,GOOG,Pullback50,353.245,,352.94,1.46,-0.0863,-0.0013,market_urgent_full,stop_loss (-1.0%),bull
+2026-06-22 13:45:56,2026-06-22,SELL,GWW,VolumeSpike,1344.285,,1344.535,1.46,0.0186,0.0003,market_urgent_full,stop_loss (-0.9%),bull
+2026-06-22 13:45:59,2026-06-22,SELL,JKHY,MomReversal,123.51,,123.51,7.43,0.0,0.0,market_urgent_full,stop_loss (-0.8%),bull
+2026-06-22 13:46:01,2026-06-22,SELL,EQT,MomReversal,50.825,,50.88,2.92,0.1082,0.0032,market_urgent_full,stop_loss (-0.8%),bull
+2026-06-22 13:46:03,2026-06-22,SELL,PG,VolumeSpike,148.78,,148.91,1.46,0.0874,0.0013,market_urgent_full,stop_loss (-0.8%),bull
+2026-06-22 13:46:06,2026-06-22,SELL,CRUS,Pullback50,166.01,,166.01,7.43,0.0,0.0,market_urgent_full,stop_loss (-0.8%),bull
+2026-06-22 13:46:08,2026-06-22,SELL,EEFT,VolumeSpike,66.025,,65.36,7.44,-1.0072,-0.0749,market_urgent_full,stop_loss (-0.7%),bull
+2026-06-22 13:46:10,2026-06-22,SELL,MPC,Pullback50,240.36,,240.83,1.46,0.1955,0.0029,market_urgent_full,stop_loss (-0.7%),bull
+2026-06-22 13:46:13,2026-06-22,SELL,PHM,VolumeSpike,126.16,,126.19,1.46,0.0238,0.0003,market_urgent_full,stop_loss (-0.7%),bull
+2026-06-22 13:46:15,2026-06-22,SELL,AZO,VolumeSpike,2999.43,,3001.64,7.44,0.0737,0.0055,market_urgent_full,stop_loss (-0.7%),bull
+2026-06-22 13:46:17,2026-06-22,SELL,REGN,VolumeSpike,601.6688,,600.57,1.46,-0.1826,-0.0027,market_urgent_full,stop_loss (-0.6%),bull
+2026-06-22 13:46:19,2026-06-22,SELL,HAS,VolumeSpike,84.57,,84.48,1.46,-0.1064,-0.0016,market_urgent_full,stop_loss (-0.5%),bull
+2026-06-22 13:46:22,2026-06-22,SELL,MS,VolumeSpike,225.57,,225.545,1.46,-0.0111,-0.0002,market_urgent_full,stop_loss (-0.5%),bull
+2026-06-22 13:46:24,2026-06-22,SELL,XYL,VolumeSpike,110.925,,110.74,7.45,-0.1668,-0.0124,market_urgent_full,stop_loss (-0.5%),bull
