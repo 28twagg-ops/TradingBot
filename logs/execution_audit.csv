@@ -491,3 +491,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-22 14:00:39,2026-06-22,SELL,APO,VolumeSpike,136.4001,,136.54,1.45,0.1026,0.0015,market_urgent_full,stop_loss (-1.2%),bull
 2026-06-22 14:00:41,2026-06-22,SELL,AOS,VolumeSpike,57.77,,57.77,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-06-22 14:00:44,2026-06-22,SELL,NTRS,VolumeSpike,172.99,,172.99,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
+2026-06-22 14:15:40,2026-06-22,SELL,AMZN,RSIRecovery,237.41,,237.31,2.91,-0.0421,-0.0012,market_urgent_full,stop_loss (-1.1%),bull
+2026-06-22 14:15:42,2026-06-22,SELL,GHC,VolumeSpike,1142.79,,1142.79,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
