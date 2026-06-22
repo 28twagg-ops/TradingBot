@@ -488,3 +488,6 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-22 13:46:19,2026-06-22,SELL,HAS,VolumeSpike,84.57,,84.48,1.46,-0.1064,-0.0016,market_urgent_full,stop_loss (-0.5%),bull
 2026-06-22 13:46:22,2026-06-22,SELL,MS,VolumeSpike,225.57,,225.545,1.46,-0.0111,-0.0002,market_urgent_full,stop_loss (-0.5%),bull
 2026-06-22 13:46:24,2026-06-22,SELL,XYL,VolumeSpike,110.925,,110.74,7.45,-0.1668,-0.0124,market_urgent_full,stop_loss (-0.5%),bull
+2026-06-22 14:00:39,2026-06-22,SELL,APO,VolumeSpike,136.4001,,136.54,1.45,0.1026,0.0015,market_urgent_full,stop_loss (-1.2%),bull
+2026-06-22 14:00:41,2026-06-22,SELL,AOS,VolumeSpike,57.77,,57.77,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
+2026-06-22 14:00:44,2026-06-22,SELL,NTRS,VolumeSpike,172.99,,172.99,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
