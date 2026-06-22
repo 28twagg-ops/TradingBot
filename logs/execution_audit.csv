@@ -518,3 +518,7 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-22 18:15:35,2026-06-22,SELL,PRI,VolumeSpike,280.47,,280.47,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
 2026-06-22 18:30:35,2026-06-22,SELL,DRI,VolumeSpike,213.8675,,213.8675,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-06-22 18:30:37,2026-06-22,SELL,MAS,VolumeSpike,73.77,,73.78,1.46,0.0136,0.0002,market_urgent_full,stop_loss (-0.6%),bull
+2026-06-22 19:00:33,2026-06-22,SELL,PLNT,VolumeSpike,51.18,,51.18,1.46,0.0,0.0,market_urgent_full,stop_loss (-1.0%),bull
+2026-06-22 19:00:35,2026-06-22,SELL,NDSN,unknown,293.72,,293.72,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
+2026-06-22 19:00:37,2026-06-22,SELL,AVY,VolumeSpike,156.86,,156.86,7.45,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
+2026-06-22 19:00:39,2026-06-22,SELL,MSA,unknown,163.0901,,163.0901,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
