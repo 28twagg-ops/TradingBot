@@ -880,3 +880,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-06-19 23:15:23,ext_exits,bull,480.09,445.22,0,0,0,2,AES|CNX,both
 2026-06-19 23:30:26,ext_exits,bull,480.09,445.22,0,0,0,2,AES|CNX,both
 2026-06-19 23:45:26,ext_exits,bull,480.09,445.22,0,0,0,2,AES|CNX,both
+2026-06-22 13:00:33,summary,bull,480.09,445.22,0,0,0,2,AES|CNX,both
