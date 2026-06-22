@@ -435,3 +435,36 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-18 13:45:30,2026-06-18,SELL,VC,Pullback50,109.825,,109.825,61.54,0.0,0.0,market_urgent_full,stop_loss (-0.8%),bull
 2026-06-18 14:30:38,2026-06-18,SELL,RNR,Pullback50,299.34,,299.34,61.63,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-06-18 17:00:31,2026-06-18,SELL,RGA,Pullback50,209.165,,209.165,5.69,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-06-22 13:30:38,2026-06-22,SELL,GEF,unknown,67.46,,67.46,7.36,0.0,0.0,market_urgent_full,stop_loss (-1.7%),bull
+2026-06-22 13:30:40,2026-06-22,SELL,FOUR,unknown,38.75,,38.79,1.45,0.1032,0.0015,market_urgent_full,stop_loss (-1.3%),bull
+2026-06-22 13:30:42,2026-06-22,SELL,ALB,unknown,157.455,,157.95,1.45,0.3144,0.0046,market_urgent_full,stop_loss (-1.3%),bull
+2026-06-22 13:30:44,2026-06-22,SELL,POOL,unknown,194.345,,194.345,1.45,0.0,0.0,market_urgent_full,stop_loss (-1.1%),bull
+2026-06-22 13:30:46,2026-06-22,SELL,SIGI,VolumeSpike,91.52,,91.52,7.41,0.0,0.0,market_urgent_full,stop_loss (-1.0%),bull
+2026-06-22 13:30:49,2026-06-22,SELL,HXL,unknown,97.19,,97.19,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.9%),bull
+2026-06-22 13:30:51,2026-06-22,SELL,COLM,VolumeSpike,65.995,,65.995,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.8%),bull
+2026-06-22 13:30:53,2026-06-22,SELL,HIG,unknown,128.0001,,128.0001,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.8%),bull
+2026-06-22 13:30:55,2026-06-22,SELL,OGS,unknown,75.62,,75.62,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.8%),bull
+2026-06-22 13:30:57,2026-06-22,SELL,HAL,unknown,34.83,,34.75,1.46,-0.2297,-0.0034,market_urgent_full,stop_loss (-0.7%),bull
+2026-06-22 13:30:59,2026-06-22,SELL,ACN,unknown,123.13,,124.16,1.46,0.8365,0.0122,market_urgent_full,stop_loss (-0.7%),bull
+2026-06-22 13:31:01,2026-06-22,SELL,PFG,unknown,109.415,,109.415,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
+2026-06-22 13:31:03,2026-06-22,SELL,MZTI,unknown,106.0088,,106.0088,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
+2026-06-22 13:31:06,2026-06-22,SELL,PPG,unknown,117.74,,117.74,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-06-22 13:31:08,2026-06-22,SELL,LPX,unknown,76.51,,76.51,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-06-22 13:31:10,2026-06-22,SELL,BKR,unknown,58.82,,58.42,1.46,-0.68,-0.0099,market_urgent_full,stop_loss (-0.5%),bull
+2026-06-22 13:31:12,2026-06-22,SELL,EXPO,unknown,56.115,,56.115,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-06-22 13:31:32,2026-06-22,SELL,AM,Pullback50,21.78,21.74,21.752,2.94,-0.1286,-0.0038,limit_fill_position_check_full,max_hold 5d (-0.3%),bull
+2026-06-22 13:31:52,2026-06-22,SELL,GTLS,Pullback50,208.97,208.55,208.896,1.47,-0.0354,-0.0005,limit_fill_position_check_full,max_hold 6d (-0.2%),bull
+2026-06-22 13:32:12,2026-06-22,SELL,SBUX,Pullback50,101.17,100.97,101.172,7.53,0.002,0.0001,limit_fill_position_check_full,max_hold 5d (-0.1%),bull
+2026-06-22 13:32:33,2026-06-22,SELL,AES,Pullback50,14.64,14.63,14.632,5.71,-0.0546,-0.0031,limit_fill_position_check_full,max_hold 5d (-0.1%),bull
+2026-06-22 13:32:53,2026-06-22,SELL,EME,Pullback50,853.11,851.4,851.5,1.48,-0.1887,-0.0028,limit_fill_position_check_full,max_hold 6d (-0.1%),bull
+2026-06-22 13:33:33,2026-06-22,SELL,SRE,Pullback50,91.09,90.91,91.002,7.52,-0.0966,-0.0073,limit_fill_position_check_full,max_hold 6d (+0.0%),bull
+2026-06-22 13:33:53,2026-06-22,SELL,NVDA,Pullback50,212.62,212.56,212.606,1.48,-0.0066,-0.0001,limit_fill_position_check_full,max_hold 5d (+0.0%),bull
+2026-06-22 13:34:13,2026-06-22,SELL,EA,Pullback50,202.4,202.31,202.35,1.47,-0.0247,-0.0004,limit_fill_position_check_full,max_hold 5d (+0.1%),bull
+2026-06-22 13:34:36,2026-06-22,SELL,FR,Pullback50,62.14,62.02,61.83,1.47,-0.4989,-0.0073,market_fallback_full,max_hold 5d (+0.2%),bull
+2026-06-22 13:34:56,2026-06-22,SELL,EG,Pullback50,338.08,337.4,338.634,1.48,0.1639,0.0024,limit_fill_position_check_full,max_hold 5d (+0.2%),bull
+2026-06-22 13:35:16,2026-06-22,SELL,ETR,Pullback50,112.37,112.15,112.212,1.49,-0.1406,-0.0021,limit_fill_position_check_full,max_hold 6d (+0.2%),bull
+2026-06-22 13:35:36,2026-06-22,SELL,OGE,Pullback50,47.39,47.3,47.34,1.48,-0.1055,-0.0016,limit_fill_position_check_full,max_hold 5d (+0.2%),bull
+2026-06-22 13:35:56,2026-06-22,SELL,POR,Pullback50,50.43,50.33,50.452,1.48,0.0436,0.0006,limit_fill_position_check_full,max_hold 5d (+0.3%),bull
+2026-06-22 13:36:16,2026-06-22,SELL,DUK,Pullback50,124.35,124.1,124.338,7.54,-0.0097,-0.0007,limit_fill_position_check_full,max_hold 6d (+0.3%),bull
+2026-06-22 13:36:37,2026-06-22,SELL,NI,Pullback50,47.49,47.49,47.502,1.49,0.0253,0.0004,limit_fill_position_check_full,max_hold 5d (+0.6%),bull
+2026-06-22 13:36:57,2026-06-22,SELL,CNX,MomReversal,32.91,32.85,32.884,29.35,-0.079,-0.0232,limit_fill_position_check_full,max_hold 5d (+0.6%),bull
