@@ -878,3 +878,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-06-22 15:45:37,2026-06-22,SELL,INTU,GapDown,256.16,1.46,-0.71,-0.01,0,stop_loss (-0.7%),bull,481.78
 2026-06-22 16:15:36,2026-06-22,SELL,QLYS,VolumeSpike,109.15,7.4,-1.27,-0.09,0,stop_loss (-1.3%),bull,481.37
 2026-06-22 16:15:38,2026-06-22,SELL,DIS,VolumeSpike,102.3,1.46,-0.81,-0.01,0,stop_loss (-0.8%),bull,481.37
+2026-06-22 16:30:35,2026-06-22,SELL,SON,unknown,50.09,7.41,-1.03,-0.08,0,stop_loss (-1.0%),bull,481.2
