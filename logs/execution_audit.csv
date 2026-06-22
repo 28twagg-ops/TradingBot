@@ -504,3 +504,7 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-22 14:45:35,2026-06-22,SELL,IVZ,VolumeSpike,28.085,,28.07,1.46,-0.0534,-0.0008,market_urgent_full,stop_loss (-0.6%),bull
 2026-06-22 14:45:37,2026-06-22,SELL,A,RSIRecovery,126.04,,126.04,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
 2026-06-22 14:45:39,2026-06-22,SELL,GEN,VolumeSpike,23.495,,23.51,1.46,0.0638,0.0009,market_urgent_full,stop_loss (-0.5%),bull
+2026-06-22 15:00:46,2026-06-22,SELL,BLKB,MomReversal,26.15,,26.15,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.9%),bull
+2026-06-22 15:00:49,2026-06-22,SELL,CPRT,RSIRecovery,29.615,,29.605,1.46,-0.0338,-0.0005,market_urgent_full,stop_loss (-0.7%),bull
+2026-06-22 15:00:51,2026-06-22,SELL,LOW,VolumeSpike,216.15,,216.06,7.44,-0.0416,-0.0031,market_urgent_full,stop_loss (-0.7%),bull
+2026-06-22 15:00:54,2026-06-22,SELL,FIS,unknown,37.73,,37.73,7.45,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
