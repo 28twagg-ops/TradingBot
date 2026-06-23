@@ -523,3 +523,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-22 19:00:37,2026-06-22,SELL,AVY,VolumeSpike,156.86,,156.86,7.45,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-06-22 19:00:39,2026-06-22,SELL,MSA,unknown,163.0901,,163.0901,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-06-23 13:30:35,2026-06-23,SELL,PWR,VolumeSpike,704.17,,705.365,1.46,0.1697,0.0025,market_urgent_full,stop_loss (-0.9%),bull
+2026-06-23 15:45:31,2026-06-23,SELL,SWKS,VolumeSpike,72.33,,72.33,7.43,0.0,0.0,market_urgent_full,stop_loss (-0.8%),bull

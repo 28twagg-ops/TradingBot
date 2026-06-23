@@ -888,3 +888,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-06-22 19:00:37,2026-06-22,SELL,AVY,VolumeSpike,156.86,7.45,-0.56,-0.04,0,stop_loss (-0.6%),bull,480.29
 2026-06-22 19:00:39,2026-06-22,SELL,MSA,unknown,163.09,1.46,-0.56,-0.01,0,stop_loss (-0.6%),bull,480.28
 2026-06-23 13:30:35,2026-06-23,SELL,PWR,VolumeSpike,705.37,1.46,-0.93,-0.01,1,stop_loss (-0.9%),bull,480.12
+2026-06-23 15:45:31,2026-06-23,SELL,SWKS,VolumeSpike,72.33,7.43,-0.78,-0.06,1,stop_loss (-0.8%),bull,480.31
