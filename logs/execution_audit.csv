@@ -524,3 +524,11 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-22 19:00:39,2026-06-22,SELL,MSA,unknown,163.0901,,163.0901,1.46,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-06-23 13:30:35,2026-06-23,SELL,PWR,VolumeSpike,704.17,,705.365,1.46,0.1697,0.0025,market_urgent_full,stop_loss (-0.9%),bull
 2026-06-23 15:45:31,2026-06-23,SELL,SWKS,VolumeSpike,72.33,,72.33,7.43,0.0,0.0,market_urgent_full,stop_loss (-0.8%),bull
+2026-06-23 19:46:04,2026-06-23,SELL,DOV,unknown,223.575,223.13,223.532,1.47,-0.0192,-0.0003,limit_fill_position_check_full,midline (-0.1%),bull
+2026-06-23 19:46:35,2026-06-23,SELL,DTM,VolumeSpike,146.14,145.85,146.07,1.49,-0.0479,-0.0007,limit_fill_position_check_full,midline (+1.7%),bull
+2026-06-23 19:47:06,2026-06-23,SELL,DAL,unknown,86.22,86.05,86.214,1.5,-0.007,-0.0001,limit_fill_position_check_full,midline (+2.1%),bull
+2026-06-23 19:47:37,2026-06-23,SELL,NJR,unknown,56.155,56.14,56.146,1.51,-0.016,-0.0002,limit_fill_position_check_full,midline (+2.6%),bull
+2026-06-23 19:48:08,2026-06-23,SELL,DLR,VolumeSpike,194.84,194.45,194.792,1.52,-0.0246,-0.0004,limit_fill_position_check_full,midline (+3.4%),bull
+2026-06-23 19:48:39,2026-06-23,SELL,MO,unknown,71.575,71.57,71.572,1.52,-0.0042,-0.0001,limit_fill_position_check_full,midline (+3.5%),bull
+2026-06-23 19:49:10,2026-06-23,SELL,CCK,VolumeSpike,105.425,105.4,105.412,7.81,-0.0123,-0.001,limit_fill_position_check_full,midline (+4.1%),bull
+2026-06-23 19:49:41,2026-06-23,SELL,CTRE,unknown,38.62,38.61,38.614,1.53,-0.0155,-0.0002,limit_fill_position_check_full,midline (+4.4%),bull

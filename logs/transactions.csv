@@ -889,3 +889,11 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-06-22 19:00:39,2026-06-22,SELL,MSA,unknown,163.09,1.46,-0.56,-0.01,0,stop_loss (-0.6%),bull,480.28
 2026-06-23 13:30:35,2026-06-23,SELL,PWR,VolumeSpike,705.37,1.46,-0.93,-0.01,1,stop_loss (-0.9%),bull,480.12
 2026-06-23 15:45:31,2026-06-23,SELL,SWKS,VolumeSpike,72.33,7.43,-0.78,-0.06,1,stop_loss (-0.8%),bull,480.31
+2026-06-23 19:46:04,2026-06-23,SELL,DOV,unknown,223.53,1.47,-0.12,-0.0,0,midline (-0.1%),bull,480.33
+2026-06-23 19:46:35,2026-06-23,SELL,DTM,VolumeSpike,146.07,1.49,1.73,0.03,1,midline (+1.7%),bull,480.32
+2026-06-23 19:47:06,2026-06-23,SELL,DAL,unknown,86.21,1.5,2.13,0.03,0,midline (+2.1%),bull,480.32
+2026-06-23 19:47:37,2026-06-23,SELL,NJR,unknown,56.15,1.51,2.57,0.04,0,midline (+2.6%),bull,480.32
+2026-06-23 19:48:08,2026-06-23,SELL,DLR,VolumeSpike,194.79,1.52,3.45,0.05,1,midline (+3.4%),bull,480.32
+2026-06-23 19:48:39,2026-06-23,SELL,MO,unknown,71.57,1.52,3.52,0.05,0,midline (+3.5%),bull,480.31
+2026-06-23 19:49:10,2026-06-23,SELL,CCK,VolumeSpike,105.41,7.81,4.1,0.31,1,midline (+4.1%),bull,480.31
+2026-06-23 19:49:41,2026-06-23,SELL,CTRE,unknown,38.61,1.53,4.37,0.06,0,midline (+4.4%),bull,480.31
