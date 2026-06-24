@@ -541,3 +541,11 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-24 13:30:52,2026-06-24,SELL,ENTG,GapDown,167.535,,166.0,3.25,-0.9162,-0.0298,market_urgent_full,stop_loss (-0.9%),bull
 2026-06-24 13:30:55,2026-06-24,SELL,JBL,GapDown,369.92,,368.51,15.91,-0.3812,-0.0607,market_urgent_full,stop_loss (-0.5%),bull
 2026-06-24 13:30:57,2026-06-24,SELL,HOOD,GapDown,102.4,,102.415,3.26,0.0146,0.0005,market_urgent_full,stop_loss (-0.5%),bull
+2026-06-24 13:45:33,2026-06-24,SELL,AMKR,GapDown,83.43,,83.24,3.16,-0.2277,-0.0072,market_urgent_full,stop_loss (-3.6%),bull
+2026-06-24 13:45:35,2026-06-24,SELL,SYNA,GapDown,129.91,,129.91,3.17,0.0,0.0,market_urgent_full,stop_loss (-3.4%),bull
+2026-06-24 13:45:38,2026-06-24,SELL,COIN,GapDown,154.57,,154.14,3.2,-0.2782,-0.0089,market_urgent_full,stop_loss (-2.3%),bull
+2026-06-24 13:45:41,2026-06-24,SELL,SANM,GapDown,244.44,,244.49,3.23,0.0205,0.0007,market_urgent_full,stop_loss (-1.4%),bull
+2026-06-24 13:45:43,2026-06-24,SELL,ATI,GapDown,197.74,,197.74,3.24,0.0,0.0,market_urgent_full,stop_loss (-1.2%),bull
+2026-06-24 13:45:46,2026-06-24,SELL,BWA,GapDown,69.98,,69.855,3.24,-0.1786,-0.0058,market_urgent_full,stop_loss (-1.2%),bull
+2026-06-24 13:45:48,2026-06-24,SELL,OKE,Pullback50,86.91,,87.04,3.25,0.1496,0.0049,market_urgent_full,stop_loss (-1.0%),bull
+2026-06-24 13:45:51,2026-06-24,SELL,AMD,GapDown,515.14,,512.425,3.25,-0.527,-0.0171,market_urgent_full,stop_loss (-0.9%),bull
