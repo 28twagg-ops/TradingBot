@@ -532,3 +532,12 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-23 19:48:39,2026-06-23,SELL,MO,unknown,71.575,71.57,71.572,1.52,-0.0042,-0.0001,limit_fill_position_check_full,midline (+3.5%),bull
 2026-06-23 19:49:10,2026-06-23,SELL,CCK,VolumeSpike,105.425,105.4,105.412,7.81,-0.0123,-0.001,limit_fill_position_check_full,midline (+4.1%),bull
 2026-06-23 19:49:41,2026-06-23,SELL,CTRE,unknown,38.62,38.61,38.614,1.53,-0.0155,-0.0002,limit_fill_position_check_full,midline (+4.4%),bull
+2026-06-24 13:30:37,2026-06-24,SELL,FLS,GapDown,76.92,,76.92,3.14,0.0,0.0,market_urgent_full,stop_loss (-4.1%),bull
+2026-06-24 13:30:39,2026-06-24,SELL,PBF,Pullback50,39.77,,39.77,3.2,0.0,0.0,market_urgent_full,stop_loss (-2.5%),bull
+2026-06-24 13:30:42,2026-06-24,SELL,EOG,Pullback50,132.13,,131.91,15.63,-0.1665,-0.026,market_urgent_full,stop_loss (-2.3%),bull
+2026-06-24 13:30:44,2026-06-24,SELL,IBKR,GapDown,93.72,,93.72,3.23,0.0,0.0,market_urgent_full,stop_loss (-1.4%),bull
+2026-06-24 13:30:47,2026-06-24,SELL,MTZ,Pullback50,385.29,,384.0,19.04,-0.3348,-0.0638,market_urgent_full,stop_loss (-1.2%),bull
+2026-06-24 13:30:50,2026-06-24,SELL,FN,GapDown,574.155,,574.18,3.24,0.0044,0.0001,market_urgent_full,stop_loss (-1.2%),bull
+2026-06-24 13:30:52,2026-06-24,SELL,ENTG,GapDown,167.535,,166.0,3.25,-0.9162,-0.0298,market_urgent_full,stop_loss (-0.9%),bull
+2026-06-24 13:30:55,2026-06-24,SELL,JBL,GapDown,369.92,,368.51,15.91,-0.3812,-0.0607,market_urgent_full,stop_loss (-0.5%),bull
+2026-06-24 13:30:57,2026-06-24,SELL,HOOD,GapDown,102.4,,102.415,3.26,0.0146,0.0005,market_urgent_full,stop_loss (-0.5%),bull
