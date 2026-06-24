@@ -1005,3 +1005,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-06-24 23:00:25,ext_exits,bull,479.62,427.34,0,0,0,7,AVB|DLB|EQR|EXE|GM|NFG|SLAB,both
 2026-06-24 23:15:25,ext_exits,bull,479.62,427.34,0,0,0,7,AVB|DLB|EQR|EXE|GM|NFG|SLAB,both
 2026-06-24 23:30:22,ext_exits,bull,479.62,427.34,0,0,0,7,AVB|DLB|EQR|EXE|GM|NFG|SLAB,both
+2026-06-24 23:45:24,ext_exits,bull,479.67,427.34,0,0,0,7,AVB|DLB|EQR|EXE|GM|NFG|SLAB,both
