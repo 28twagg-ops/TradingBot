@@ -552,3 +552,6 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-24 15:00:35,2026-06-24,SELL,COKE,Pullback50,182.76,,182.76,3.25,0.0,0.0,market_urgent_full,stop_loss (-0.8%),bull
 2026-06-24 16:30:34,2026-06-24,SELL,SRE,Pullback50,91.685,,91.685,3.26,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
 2026-06-24 17:00:31,2026-06-24,SELL,STRL,GapDown,871.42,,871.42,3.22,0.0,0.0,market_urgent_full,stop_loss (-1.7%),bull
+2026-06-24 17:30:31,2026-06-24,SELL,INTC,GapDown,130.425,,130.455,15.88,0.023,0.0037,market_urgent_full,stop_loss (-0.7%),bull
+2026-06-24 17:30:33,2026-06-24,SELL,HXL,GapDown,95.68,,95.68,3.26,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
+2026-06-24 17:30:35,2026-06-24,SELL,CRS,GapDown,576.89,,576.22,3.26,-0.1161,-0.0038,market_urgent_full,stop_loss (-0.6%),bull

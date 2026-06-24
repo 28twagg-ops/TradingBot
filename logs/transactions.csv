@@ -917,3 +917,6 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-06-24 15:00:35,2026-06-24,SELL,COKE,Pullback50,182.76,3.25,-0.83,-0.03,1,stop_loss (-0.8%),bull,480.5
 2026-06-24 16:30:34,2026-06-24,SELL,SRE,Pullback50,91.69,3.26,-0.51,-0.02,1,stop_loss (-0.5%),bull,480.42
 2026-06-24 17:00:31,2026-06-24,SELL,STRL,GapDown,871.42,3.22,-1.73,-0.06,1,stop_loss (-1.7%),bull,479.82
+2026-06-24 17:30:31,2026-06-24,SELL,INTC,GapDown,130.46,15.88,-0.72,-0.12,1,stop_loss (-0.7%),bull,479.15
+2026-06-24 17:30:33,2026-06-24,SELL,HXL,GapDown,95.68,3.26,-0.67,-0.02,1,stop_loss (-0.7%),bull,479.15
+2026-06-24 17:30:35,2026-06-24,SELL,CRS,GapDown,576.22,3.26,-0.58,-0.02,1,stop_loss (-0.6%),bull,479.15

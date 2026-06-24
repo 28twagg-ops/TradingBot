@@ -1,32 +1,32 @@
 # Daily Slippage Watch
-*Updated: 2026-06-24 17:15 UTC*
+*Updated: 2026-06-24 17:30 UTC*
 
 Tracks **stop P&L** (position loss vs entry) vs **execution slippage** (fill vs limit). Target: stops near -0.5% trigger when no overnight gap.
 
 | Day | Stops | Mean stop | Overshoot vs -0.5% | Within -1% | SELL slip | Status |
 |-----|-------|-----------|---------------------|------------|-----------|--------|
-| 2026-06-24 | 20 | -1.64% | -1.14pp | 7/20 | -0.0466% | **ALERT** |
-| 2026-06-23 | 2 | -0.85% | -0.36pp | 2/2 | -0.0466% | **OK** |
-| 2026-06-22 | 71 | -0.87% | -0.37pp | 53/71 | -0.0466% | **OK** |
-| 2026-06-18 | 4 | -0.75% | -0.25pp | 3/4 | -0.0466% | **OK** |
-| 2026-06-17 | 34 | -0.83% | -0.33pp | 26/34 | -0.0466% | **OK** |
-| 2026-06-16 | 30 | -1.56% | -1.06pp | 9/30 | -0.0433% | **ALERT** |
-| 2026-06-15 | 27 | -2.03% | -1.53pp | 9/27 | -0.0466% | **ALERT** |
-| 2026-06-12 | 27 | -1.39% | -0.89pp | 10/27 | -0.0406% | **ALERT** |
+| 2026-06-24 | 23 | -1.51% | -1.01pp | 10/23 | -0.0465% | **ALERT** |
+| 2026-06-23 | 2 | -0.85% | -0.36pp | 2/2 | -0.0465% | **OK** |
+| 2026-06-22 | 71 | -0.87% | -0.37pp | 53/71 | -0.0465% | **OK** |
+| 2026-06-18 | 4 | -0.75% | -0.25pp | 3/4 | -0.0465% | **OK** |
+| 2026-06-17 | 34 | -0.83% | -0.33pp | 26/34 | -0.0465% | **OK** |
+| 2026-06-16 | 30 | -1.56% | -1.06pp | 9/30 | -0.0432% | **ALERT** |
+| 2026-06-15 | 27 | -2.03% | -1.53pp | 9/27 | -0.0465% | **ALERT** |
+| 2026-06-12 | 27 | -1.39% | -0.89pp | 10/27 | -0.0405% | **ALERT** |
 | 2026-06-11 | 12 | -4.16% | -3.66pp | 1/12 | -0.0390% | **ALERT** |
 
 ## Today (2026-06-24) detail
 
-- Stop count: **20**
-- Mean stop P&L: **-1.64%** (overshoot -1.14pp)
-- Within -1.0%: 7/20
+- Stop count: **23**
+- Mean stop P&L: **-1.51%** (overshoot -1.01pp)
+- Within -1.0%: 10/23
 - Worst: FLS -4.1%, AMKR -3.6%, SYNA -3.4%, PBF -2.5%, COIN -2.3%
 - Stop execution methods:
-  - `market_urgent_full`: 20
+  - `market_urgent_full`: 23
 
 ## Historical baseline (all logs)
-- Stop samples: 342
-- Mean stop P&L: -1.50%
-- Mean overshoot: -1.00pp
+- Stop samples: 345
+- Mean stop P&L: -1.49%
+- Mean overshoot: -0.99pp
 
 **Alert** if overshoot < -0.8pp or mean stop < -1.2%. **OK** if overshoot > -0.5pp and mean stop > -0.9%.
