@@ -914,3 +914,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-06-24 13:45:46,2026-06-24,SELL,BWA,GapDown,69.86,3.24,-1.19,-0.04,1,stop_loss (-1.2%),bull,479.33
 2026-06-24 13:45:48,2026-06-24,SELL,OKE,Pullback50,87.04,3.25,-1.0,-0.03,1,stop_loss (-1.0%),bull,479.41
 2026-06-24 13:45:51,2026-06-24,SELL,AMD,GapDown,512.42,3.25,-0.86,-0.03,1,stop_loss (-0.9%),bull,479.4
+2026-06-24 15:00:35,2026-06-24,SELL,COKE,Pullback50,182.76,3.25,-0.83,-0.03,1,stop_loss (-0.8%),bull,480.5
