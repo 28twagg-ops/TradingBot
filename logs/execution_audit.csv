@@ -551,3 +551,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-24 13:45:51,2026-06-24,SELL,AMD,GapDown,515.14,,512.425,3.25,-0.527,-0.0171,market_urgent_full,stop_loss (-0.9%),bull
 2026-06-24 15:00:35,2026-06-24,SELL,COKE,Pullback50,182.76,,182.76,3.25,0.0,0.0,market_urgent_full,stop_loss (-0.8%),bull
 2026-06-24 16:30:34,2026-06-24,SELL,SRE,Pullback50,91.685,,91.685,3.26,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-06-24 17:00:31,2026-06-24,SELL,STRL,GapDown,871.42,,871.42,3.22,0.0,0.0,market_urgent_full,stop_loss (-1.7%),bull

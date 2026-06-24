@@ -1,31 +1,31 @@
 # Daily Slippage Watch
-*Updated: 2026-06-24 16:45 UTC*
+*Updated: 2026-06-24 17:00 UTC*
 
 Tracks **stop P&L** (position loss vs entry) vs **execution slippage** (fill vs limit). Target: stops near -0.5% trigger when no overnight gap.
 
 | Day | Stops | Mean stop | Overshoot vs -0.5% | Within -1% | SELL slip | Status |
 |-----|-------|-----------|---------------------|------------|-----------|--------|
-| 2026-06-24 | 19 | -1.63% | -1.13pp | 7/19 | -0.0467% | **ALERT** |
-| 2026-06-23 | 2 | -0.85% | -0.36pp | 2/2 | -0.0467% | **OK** |
-| 2026-06-22 | 71 | -0.87% | -0.37pp | 53/71 | -0.0467% | **OK** |
-| 2026-06-18 | 4 | -0.75% | -0.25pp | 3/4 | -0.0467% | **OK** |
-| 2026-06-17 | 34 | -0.83% | -0.33pp | 26/34 | -0.0467% | **OK** |
-| 2026-06-16 | 30 | -1.56% | -1.06pp | 9/30 | -0.0434% | **ALERT** |
-| 2026-06-15 | 27 | -2.03% | -1.53pp | 9/27 | -0.0467% | **ALERT** |
+| 2026-06-24 | 20 | -1.64% | -1.14pp | 7/20 | -0.0466% | **ALERT** |
+| 2026-06-23 | 2 | -0.85% | -0.36pp | 2/2 | -0.0466% | **OK** |
+| 2026-06-22 | 71 | -0.87% | -0.37pp | 53/71 | -0.0466% | **OK** |
+| 2026-06-18 | 4 | -0.75% | -0.25pp | 3/4 | -0.0466% | **OK** |
+| 2026-06-17 | 34 | -0.83% | -0.33pp | 26/34 | -0.0466% | **OK** |
+| 2026-06-16 | 30 | -1.56% | -1.06pp | 9/30 | -0.0433% | **ALERT** |
+| 2026-06-15 | 27 | -2.03% | -1.53pp | 9/27 | -0.0466% | **ALERT** |
 | 2026-06-12 | 27 | -1.39% | -0.89pp | 10/27 | -0.0406% | **ALERT** |
-| 2026-06-11 | 12 | -4.16% | -3.66pp | 1/12 | -0.0391% | **ALERT** |
+| 2026-06-11 | 12 | -4.16% | -3.66pp | 1/12 | -0.0390% | **ALERT** |
 
 ## Today (2026-06-24) detail
 
-- Stop count: **19**
-- Mean stop P&L: **-1.63%** (overshoot -1.13pp)
-- Within -1.0%: 7/19
+- Stop count: **20**
+- Mean stop P&L: **-1.64%** (overshoot -1.14pp)
+- Within -1.0%: 7/20
 - Worst: FLS -4.1%, AMKR -3.6%, SYNA -3.4%, PBF -2.5%, COIN -2.3%
 - Stop execution methods:
-  - `market_urgent_full`: 19
+  - `market_urgent_full`: 20
 
 ## Historical baseline (all logs)
-- Stop samples: 341
+- Stop samples: 342
 - Mean stop P&L: -1.50%
 - Mean overshoot: -1.00pp
 
