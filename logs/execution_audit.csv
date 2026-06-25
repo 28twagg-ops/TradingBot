@@ -557,3 +557,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-24 17:30:35,2026-06-24,SELL,CRS,GapDown,576.89,,576.22,3.26,-0.1161,-0.0038,market_urgent_full,stop_loss (-0.6%),bull
 2026-06-24 19:00:32,2026-06-24,SELL,AVGO,GapDown,377.64,,377.715,3.25,0.0199,0.0006,market_urgent_full,stop_loss (-0.8%),bull
 2026-06-25 17:00:33,2026-06-25,SELL,SLAB,Pullback50,217.285,,217.285,3.26,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
+2026-06-25 18:15:29,2026-06-25,SELL,GM,Pullback50,78.675,,78.675,15.89,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull

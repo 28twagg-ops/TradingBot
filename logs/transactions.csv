@@ -922,3 +922,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-06-24 17:30:35,2026-06-24,SELL,CRS,GapDown,576.22,3.26,-0.58,-0.02,1,stop_loss (-0.6%),bull,479.15
 2026-06-24 19:00:32,2026-06-24,SELL,AVGO,GapDown,377.71,3.25,-0.83,-0.03,1,stop_loss (-0.8%),bull,479.98
 2026-06-25 17:00:33,2026-06-25,SELL,SLAB,Pullback50,217.28,3.26,-0.67,-0.02,2,stop_loss (-0.7%),bull,479.89
+2026-06-25 18:15:29,2026-06-25,SELL,GM,Pullback50,78.67,15.89,-0.66,-0.11,2,stop_loss (-0.7%),bull,479.8
