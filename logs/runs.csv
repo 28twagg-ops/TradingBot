@@ -1077,3 +1077,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-06-26 19:15:26,exits,bull,480.22,204.72,0,0,0,16,ADC|ALGN|CI|DLB|DLTR|EG|EXE|GATX|GTLS|JHG|NFG|NSC|NWE|PSX|RGA|UNP,both
 2026-06-26 20:10:45,ext_exits,bull,479.8,442.41,0,0,0,4,CI|DLB|EXE|PSX,both
 2026-06-26 20:15:25,ext_exits,bull,479.8,442.41,0,0,0,4,CI|DLB|EXE|PSX,both
+2026-06-26 20:30:25,ext_exits,bull,479.8,442.41,0,0,0,4,CI|DLB|EXE|PSX,both
