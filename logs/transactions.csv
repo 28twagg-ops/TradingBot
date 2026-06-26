@@ -930,3 +930,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-06-26 13:30:37,2026-06-26,SELL,PVH,GapDown,71.19,59.39,-0.95,-0.57,1,stop_loss (-1.0%),bull,479.2
 2026-06-26 13:30:40,2026-06-26,SELL,GMED,Pullback50,84.32,12.52,-0.73,-0.09,1,stop_loss (-0.7%),bull,479.22
 2026-06-26 13:30:42,2026-06-26,SELL,FLS,Pullback50,74.4,12.53,-0.62,-0.08,1,stop_loss (-0.6%),bull,479.12
+2026-06-26 13:45:30,2026-06-26,SELL,DINO,Pullback50,66.77,59.03,-1.55,-0.93,1,stop_loss (-1.6%),bull,478.75

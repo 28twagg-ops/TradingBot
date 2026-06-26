@@ -565,3 +565,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-26 13:30:37,2026-06-26,SELL,PVH,GapDown,71.19,,71.19,59.39,0.0,0.0,market_urgent_full,stop_loss (-1.0%),bull
 2026-06-26 13:30:40,2026-06-26,SELL,GMED,Pullback50,84.545,,84.32,12.52,-0.2661,-0.0333,market_urgent_full,stop_loss (-0.7%),bull
 2026-06-26 13:30:42,2026-06-26,SELL,FLS,Pullback50,73.95,,74.4,12.53,0.6085,0.0763,market_urgent_full,stop_loss (-0.6%),bull
+2026-06-26 13:45:30,2026-06-26,SELL,DINO,Pullback50,66.765,,66.765,59.03,0.0,0.0,market_urgent_full,stop_loss (-1.6%),bull
