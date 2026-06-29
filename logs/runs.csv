@@ -1180,3 +1180,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-06-29 20:40:24,ext_exits,bull,479.87,180.11,0,0,0,5,CPAY|CSL|DLB|ETN|EXE,both
 2026-06-29 20:45:27,ext_exits,bull,479.87,180.11,0,0,0,5,CPAY|CSL|DLB|ETN|EXE,both
 2026-06-29 20:50:24,ext_exits,bull,479.87,180.11,0,0,0,5,CPAY|CSL|DLB|ETN|EXE,both
+2026-06-29 20:55:26,ext_exits,bull,479.87,180.11,0,0,0,5,CPAY|CSL|DLB|ETN|EXE,both
