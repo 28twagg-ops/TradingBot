@@ -1,0 +1,6 @@
+mechanic,intraday,EOD,1day,3day,best
+A1_GapDownCall,-2.4137,-3.0302,-2.4747,1.0551,3day
+A4_MorningRevCall,-2.8402,-2.3728,-2.1612,0.5108,3day
+A8_ORBCall,-2.8001,-2.4313,-0.5796,1.7826,3day
+A3_GapUpPut,-2.4994,-2.5298,-2.0861,3.5346,3day
+A7_VWAPRejPut,-2.4975,-1.9654,-1.4570,1.4713,3day

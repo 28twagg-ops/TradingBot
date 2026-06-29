@@ -1,0 +1,6 @@
+mechanic,cancel,widen,hold,best
+A1_GapDownCall,-0.9857,-1.5912,-2.5708,cancel
+A4_MorningRevCall,-1.1474,-1.7946,-2.2056,cancel
+A8_ORBCall,-0.2072,-1.8389,-0.9752,cancel
+A3_GapUpPut,-0.1615,-0.8032,-1.7207,cancel
+A7_VWAPRejPut,-0.3478,-1.1886,-1.8000,cancel
