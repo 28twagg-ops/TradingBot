@@ -1091,3 +1091,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-06-26 23:15:24,ext_exits,bull,479.8,442.41,0,0,0,4,CI|DLB|EXE|PSX,both
 2026-06-26 23:30:26,ext_exits,bull,479.8,442.41,0,0,0,4,CI|DLB|EXE|PSX,both
 2026-06-26 23:45:27,ext_exits,bull,479.8,442.41,0,0,0,4,CI|DLB|EXE|PSX,both
+2026-06-29 13:00:31,summary,bull,480.03,442.41,0,0,0,4,CI|DLB|EXE|PSX,both
