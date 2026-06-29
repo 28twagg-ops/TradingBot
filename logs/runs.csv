@@ -1136,3 +1136,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-06-29 16:30:27,exits,bull,479.85,467.81,0,0,0,2,DLB|EXE,both
 2026-06-29 16:35:23,exits,bull,479.86,467.81,0,0,0,2,DLB|EXE,both
 2026-06-29 16:40:28,exits,bull,479.86,467.81,0,0,0,2,DLB|EXE,both
+2026-06-29 16:45:28,exits,bull,479.84,467.81,0,0,0,2,DLB|EXE,both
