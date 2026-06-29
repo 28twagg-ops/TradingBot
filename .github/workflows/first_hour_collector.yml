@@ -1,0 +1,78 @@
+# DRAFT - disabled until reviewed; must not interfere with run_bot.yml.
+#
+# first_hour_collector.yml — Task 1.4
+# Runs first_hour_collector.py 9:28–10:35 AM ET Monday–Friday.
+#
+# UTC offset: ET is UTC-4 in EDT (summer) and UTC-5 in EST (winter).
+# This cron targets ~9:25 AM EDT (summer) = 13:25 UTC.
+# For EST (winter, Nov–Mar) adjust to 14:25 UTC and update both the
+# cron line and the comment below.
+#   Current setting: 13:25 UTC = 9:25 AM EDT (valid ~Mar–Nov).
+#   Winter adjustment needed: change to "25 14 * * 1-5" for Nov–Mar.
+#
+# ENABLED: disabled by default via `if: false` on the job.
+#   Remove or change `if: false` to enable after review.
+#
+# Dependencies new vs run_bot.yml: pyarrow (not in run_bot.yml).
+# DO NOT modify run_bot.yml or add options scripts to its steps.
+
+name: First Hour Collector (DRAFT - DISABLED)
+
+on:
+  # Schedule COMMENTED OUT so this cannot trigger until manually reviewed.
+  # To enable: uncomment the schedule block AND remove `if: false` below.
+  #
+  # schedule:
+  #   - cron: "25 13 * * 1-5"   # 9:25 AM EDT (UTC-4, summer); see header note for winter
+  workflow_dispatch:
+    inputs:
+      date_override:
+        description: "Override collection date (YYYY-MM-DD, leave blank for today)"
+        required: false
+
+concurrency:
+  group: first-hour-collector
+  cancel-in-progress: false   # do not cancel a running collection
+
+permissions:
+  contents: write
+
+jobs:
+  collect-first-hour:
+    # DRAFT GATE: remove `if: false` to enable this workflow.
+    if: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 75    # 65-min window + 10-min buffer
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install alpaca-py yfinance pandas numpy pyarrow lxml requests
+
+      - name: Run first-hour collector
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python scripts/first_hour_collector.py
+
+      - name: Commit collected data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/first_hour/
+          if git diff --staged --quiet; then
+            echo "No new first-hour data to commit."
+            exit 0
+          fi
+          git commit -m "first-hour data $(date -u '+%Y-%m-%d')"
+          git push origin HEAD:main

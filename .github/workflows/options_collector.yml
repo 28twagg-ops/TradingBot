@@ -1,0 +1,151 @@
+# DRAFT - disabled until reviewed; must not interfere with run_bot.yml.
+#
+# options_collector.yml — Task 1.4
+# Cron every 5 minutes within the 9:25 AM–4:10 PM ET window, Mon–Fri.
+# Internal loop in options_data_collector.py handles 1-min resolution within
+# each 5-min cron window (t+0, t+1, t+2, t+3, t+4 minutes).
+#
+# UTC cron notes (summer EDT = UTC-4):
+#   9:25 AM ET = 13:25 UTC   |   4:10 PM ET = 20:10 UTC
+#   Cron pattern "*/5 13-20 * * 1-5" fires every 5 min from 13:00–20:55 UTC.
+#   The script guards itself: exits immediately if outside 9:28–16:05 ET window.
+#
+# Run-time guard: the `concurrency` block with cancel-in-progress: false
+# ensures overlapping runs skip (they queue but timeout-minutes: 10 on the
+# guard-check job causes early exit). The script itself also checks for a
+# lock file and logs any skip.
+#
+# ENABLED: disabled by default via `if: false` on jobs.
+#   Remove or change `if: false` on BOTH jobs to enable after review.
+#   Also uncomment the `schedule:` block.
+#
+# New dependencies vs run_bot.yml: pyarrow.
+# DO NOT modify run_bot.yml or add options scripts to its steps.
+
+name: Options Collector (DRAFT - DISABLED)
+
+on:
+  # Schedule COMMENTED OUT so this cannot trigger until manually reviewed.
+  # To enable: uncomment the schedule block AND remove `if: false` below.
+  #
+  # schedule:
+  #   - cron: "*/5 13-20 * * 1-5"  # every 5 min, 13:00-20:55 UTC (Mon-Fri)
+  #                                  # = approx 9:00 AM - 4:55 PM EDT; script
+  #                                  # guards itself to 9:28 AM - 4:05 PM ET
+  workflow_dispatch: {}
+
+env:
+  LOCK_FILE: /tmp/options_collector.lock
+
+concurrency:
+  group: options-collector
+  cancel-in-progress: false   # queue, don't cancel — the guard below handles skips
+
+permissions:
+  contents: write
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # Job 1: Run-time guard — skip if a prior run is still active
+  # ---------------------------------------------------------------------------
+  guard:
+    # DRAFT GATE: remove `if: false` to enable this workflow.
+    if: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+
+    steps:
+      - name: Check for stale lock
+        id: check
+        run: |
+          # The concurrency group ensures only one run is active at a time.
+          # This step is a belt-and-suspenders check using a /tmp lock file
+          # (only valid within a single runner; across runners the concurrency
+          # group is the primary guard).
+          if [ -f "$LOCK_FILE" ]; then
+            echo "Lock file found — prior run may still be active. Skipping."
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          else
+            touch "$LOCK_FILE"
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  # ---------------------------------------------------------------------------
+  # Job 2: Collect options + stock data
+  # ---------------------------------------------------------------------------
+  collect-options:
+    # DRAFT GATE: remove `if: false` to enable this workflow.
+    if: false
+    needs: guard
+    # Uncomment the line below (and remove the `if: false` above) to wire guard properly:
+    # if: needs.guard.outputs.should_run == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8    # 5-min collection loop + 3-min buffer
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install alpaca-py yfinance pandas numpy pyarrow lxml requests
+
+      - name: Run options collector
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python scripts/options_data_collector.py
+
+      - name: Run quality monitor (after market close only)
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: |
+          # Only run quality monitor after 4:30 PM ET (21:30 UTC in EDT).
+          # The quality monitor script itself is safe to call multiple times;
+          # it overwrites today's report each time.
+          HOUR_UTC=$(date -u +%H)
+          MINUTE_UTC=$(date -u +%M)
+          TOTAL_MINUTES=$((HOUR_UTC * 60 + MINUTE_UTC))
+          # 4:30 PM EDT = 20:30 UTC = 1230 minutes
+          if [ "$TOTAL_MINUTES" -ge 1230 ]; then
+            python scripts/data_quality_monitor.py
+          else
+            echo "Before 4:30 PM ET — skipping quality monitor."
+          fi
+
+      - name: Commit collected data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/stocks_1min/ data/options_1min/ data/quality/
+          if git diff --staged --quiet; then
+            echo "No new options/stocks data to commit."
+            exit 0
+          fi
+          git commit -m "options+stocks data $(date -u '+%Y-%m-%d %H:%M UTC')"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "Push succeeded on attempt $attempt"
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; retrying after fetch..."
+            git fetch origin main
+            git rebase origin/main
+            sleep 5
+          done
+          echo "ERROR: failed to push after 3 attempts"
+          exit 1
+
+      - name: Remove lock file
+        if: always()
+        run: rm -f "$LOCK_FILE"
