@@ -30,7 +30,7 @@ Tier 0 sizing (Task 4.3, hard caps): 1 contract, <= $75 premium, <= 20% of
 account equity in options premium.
 
 Run (paper keys required — NOT the live equity-bot keys):
-    ALPACA_PAPER_API_KEY=... ALPACA_PAPER_SECRET_KEY=... python scripts/options_morning_bot.py
+    ALPACA_PAPER_KEY=... ALPACA_PAPER_SECRET=... python scripts/options_morning_bot.py
 """
 
 from __future__ import annotations
@@ -91,9 +91,9 @@ ET = ZoneInfo("America/New_York")
 TODAY = date.today()
 
 # Paper credentials ONLY — do not use live ALPACA_API_KEY (equity bot keys).
-# GitHub Actions: secrets ALPACA_PAPER_API_KEY / ALPACA_PAPER_SECRET_KEY
-API_KEY = os.getenv("ALPACA_PAPER_API_KEY")
-API_SECRET = os.getenv("ALPACA_PAPER_SECRET_KEY")
+# GitHub Actions: secrets ALPACA_PAPER_KEY / ALPACA_PAPER_SECRET
+API_KEY = os.getenv("ALPACA_PAPER_KEY")
+API_SECRET = os.getenv("ALPACA_PAPER_SECRET")
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_DIR = REPO_ROOT / "logs" / "options"
@@ -142,8 +142,8 @@ def verify_paper_auth(trade) -> bool:
            f"account {getattr(acct, 'account_number', '?')}")
         return True
     except Exception as exc:
-        rl("FATAL: paper API auth failed. This bot requires ALPACA_PAPER_API_KEY and "
-           "ALPACA_PAPER_SECRET_KEY (not the live equity-bot keys). "
+        rl("FATAL: paper API auth failed. This bot requires ALPACA_PAPER_KEY and "
+           "ALPACA_PAPER_SECRET (not the live equity-bot keys). "
            f"Detail: {exc}")
         return False
 
@@ -476,7 +476,7 @@ def run() -> int:
               "until Phase 5 (live integration + shared-account coordination).")
         return 2
     if not API_KEY or not API_SECRET:
-        print("ERROR: set ALPACA_PAPER_API_KEY and ALPACA_PAPER_SECRET_KEY "
+        print("ERROR: set ALPACA_PAPER_KEY and ALPACA_PAPER_SECRET "
               "(paper account keys — not the live equity-bot keys).")
         return 1
 

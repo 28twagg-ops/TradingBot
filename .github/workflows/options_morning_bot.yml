@@ -9,7 +9,7 @@
 #                script self-guards 9:28-11:35am entry window; manage/exits all day)
 #   30,50 19   = explicit EOD close sweep at 3:30pm and 3:50pm ET
 #
-# Uses secrets ALPACA_PAPER_API_KEY / ALPACA_PAPER_SECRET_KEY (NOT the live keys).
+# Uses secrets ALPACA_PAPER_KEY / ALPACA_PAPER_SECRET (NOT the live keys).
 # Data collection workflows stay DISABLED until Gate 1A passes.
 
 name: Options Morning Bot (PAPER)
@@ -48,8 +48,8 @@ jobs:
 
       - name: Run options morning bot (PAPER)
         env:
-          ALPACA_PAPER_API_KEY: ${{ secrets.ALPACA_PAPER_API_KEY }}
-          ALPACA_PAPER_SECRET_KEY: ${{ secrets.ALPACA_PAPER_SECRET_KEY }}
+          ALPACA_PAPER_KEY: ${{ secrets.ALPACA_PAPER_KEY }}
+          ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
         run: python scripts/options_morning_bot.py
 
       - name: Commit options run log
