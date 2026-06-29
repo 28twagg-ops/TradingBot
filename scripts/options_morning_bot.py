@@ -29,8 +29,8 @@ EOD (>= 15:30 ET): close ALL open option positions (limit at bid; market at 15:5
 Tier 0 sizing (Task 4.3, hard caps): 1 contract, <= $75 premium, <= 20% of
 account equity in options premium.
 
-Run (paper keys required, market day):
-    ALPACA_API_KEY=... ALPACA_SECRET_KEY=... python scripts/options_morning_bot.py
+Run (paper keys required — NOT the live equity-bot keys):
+    ALPACA_PAPER_API_KEY=... ALPACA_PAPER_SECRET_KEY=... python scripts/options_morning_bot.py
 """
 
 from __future__ import annotations
@@ -90,8 +90,10 @@ HARD_STOP   = (16, 5)
 ET = ZoneInfo("America/New_York")
 TODAY = date.today()
 
-API_KEY = os.getenv("ALPACA_API_KEY")
-API_SECRET = os.getenv("ALPACA_SECRET_KEY")
+# Paper credentials ONLY — do not use live ALPACA_API_KEY (equity bot keys).
+# GitHub Actions: secrets ALPACA_PAPER_API_KEY / ALPACA_PAPER_SECRET_KEY
+API_KEY = os.getenv("ALPACA_PAPER_API_KEY")
+API_SECRET = os.getenv("ALPACA_PAPER_SECRET_KEY")
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_DIR = REPO_ROOT / "logs" / "options"
@@ -132,9 +134,18 @@ def get_clients():
     return trade, opt, stock, ref
 
 
-# --------------------------------------------------------------------------- #
-#  Position / order helpers
-# --------------------------------------------------------------------------- #
+def verify_paper_auth(trade) -> bool:
+    """Fail fast with a clear log if paper keys are wrong or missing."""
+    try:
+        acct = trade.get_account()
+        rl(f"Paper auth OK — equity ${float(acct.equity):.2f}, "
+           f"account {getattr(acct, 'account_number', '?')}")
+        return True
+    except Exception as exc:
+        rl("FATAL: paper API auth failed. This bot requires ALPACA_PAPER_API_KEY and "
+           "ALPACA_PAPER_SECRET_KEY (not the live equity-bot keys). "
+           f"Detail: {exc}")
+        return False
 
 def _is_option_symbol(sym: str) -> bool:
     return bool(OCC_RE.match(sym or ""))
@@ -465,7 +476,8 @@ def run() -> int:
               "until Phase 5 (live integration + shared-account coordination).")
         return 2
     if not API_KEY or not API_SECRET:
-        print("ERROR: set ALPACA_API_KEY and ALPACA_SECRET_KEY.")
+        print("ERROR: set ALPACA_PAPER_API_KEY and ALPACA_PAPER_SECRET_KEY "
+              "(paper account keys — not the live equity-bot keys).")
         return 1
 
     now = _now_et()
@@ -478,6 +490,10 @@ def run() -> int:
         return 0
 
     trade, opt, stock, ref = get_clients()
+
+    if not verify_paper_auth(trade):
+        write_run_log(now, "FATAL auth failed (wrong keys?)")
+        return 1
 
     # 1. cancel stale orders (Option-1 fill)
     cancel_stale_option_orders(trade)
