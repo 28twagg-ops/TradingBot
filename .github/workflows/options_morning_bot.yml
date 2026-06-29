@@ -1,30 +1,23 @@
-# DRAFT - disabled until reviewed; must not interfere with run_bot.yml.
-#
 # options_morning_bot.yml — Phase 4 Task 4.1 (PAPER mode)
 # Runs scripts/options_morning_bot.py on the Alpaca PAPER account.
 #
-# Trades the PRELIMINARY Verdict-B heuristic (strong gap-down -> ATM call, EOD
-# close, Tier 0). PAPER ONLY — the script hard-locks PAPER_TRADING=True and
-# refuses to run live. It NEVER touches rubber_band_bot.py or run_bot.yml.
+# PAPER ONLY — script hard-locks PAPER_TRADING=True and refuses live.
+# NEVER touches rubber_band_bot.py or run_bot.yml.
 #
-# Schedule intent (enable later by uncommenting + removing `if: false`):
-#   - Entry/manage every 5 min, 9:28-11:35 ET  (GitHub cron min granularity = 5m;
-#     the script guards its own 9:28-11:35 entry window and manage/exows after).
-#   - EOD close sweep run(s) ~15:30 and ~15:50 ET.
-#   UTC (EDT, summer, UTC-4): 9:30 ET = 13:30 UTC; 15:50 ET = 19:50 UTC.
+# Schedule (EDT, UTC-4 summer):
+#   */5 13-20  = every 5 min ~9:00am-4:55pm ET (full market day for now;
+#                script self-guards 9:28-11:35am entry window; manage/exits all day)
+#   30,50 19   = explicit EOD close sweep at 3:30pm and 3:50pm ET
 #
-# Dependencies vs run_bot.yml: none new beyond what collectors use (alpaca-py,
-# pandas, lxml, requests, numpy). DO NOT modify run_bot.yml.
+# Data collection workflows (first_hour_collector, options_collector) stay DISABLED
+# until Gate 1A passes Monday.
 
-name: Options Morning Bot (PAPER) (DRAFT - DISABLED)
+name: Options Morning Bot (PAPER)
 
 on:
-  # Schedule COMMENTED OUT so this cannot trigger until manually reviewed.
-  # To enable: uncomment the schedule block AND remove `if: false` below.
-  #
-  # schedule:
-  #   - cron: "*/5 13-15 * * 1-5"   # ~9:28-11:55 ET entry/manage (EDT)
-  #   - cron: "30,50 19 * * 1-5"    # ~15:30 & 15:50 ET EOD close sweep (EDT)
+  schedule:
+    - cron: "*/5 13-20 * * 1-5"   # every 5 min, full market day EDT (~9am-4:55pm ET)
+    - cron: "30,50 19 * * 1-5"    # EOD close sweep 3:30 & 3:50pm ET
   workflow_dispatch: {}
 
 concurrency:
@@ -36,8 +29,6 @@ permissions:
 
 jobs:
   morning-bot:
-    # DRAFT GATE: remove `if: false` to enable this workflow.
-    if: false
     runs-on: ubuntu-latest
     timeout-minutes: 8
 
