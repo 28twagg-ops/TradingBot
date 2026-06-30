@@ -1289,3 +1289,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-06-30 18:50:28,exits,bull,482.03,369.0,0,0,0,3,DLB|ETN|EXE,both
 2026-06-30 18:55:27,exits,bull,481.94,369.0,0,0,0,3,DLB|ETN|EXE,both
 2026-06-30 19:00:30,exits,bull,481.99,369.0,0,0,0,3,DLB|ETN|EXE,both
+2026-06-30 19:05:27,exits,bull,481.93,369.0,0,0,0,3,DLB|ETN|EXE,both
