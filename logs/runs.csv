@@ -1297,3 +1297,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-06-30 19:50:38,scan_evening,bull,481.24,93.29,13,0,2,5,AES|DLB|NLY|STWD|TTD,both
 2026-06-30 19:59:51,scan_evening,bull,480.64,93.22,10,0,0,5,AES|DLB|KRG|STWD|TTD,both
 2026-06-30 20:00:31,ext_exits,bull,480.91,93.22,0,0,0,5,AES|DLB|KRG|STWD|TTD,both
+2026-06-30 20:05:24,ext_exits,bull,480.4,93.22,0,0,0,5,AES|DLB|KRG|STWD|TTD,both
