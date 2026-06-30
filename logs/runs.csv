@@ -1313,3 +1313,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-06-30 21:10:32,ext_exits,bull,480.4,284.8,0,0,0,3,AES|DLB|KRG,both
 2026-06-30 21:15:24,ext_exits,bull,480.4,284.8,0,0,0,3,AES|DLB|KRG,both
 2026-06-30 21:20:26,ext_exits,bull,480.4,284.8,0,0,0,3,AES|DLB|KRG,both
+2026-06-30 21:25:23,ext_exits,bull,480.4,284.8,0,0,0,3,AES|DLB|KRG,both
