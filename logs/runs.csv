@@ -1418,3 +1418,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-01 18:55:29,exits,bull,479.88,380.49,0,0,0,2,AES|DLB,both
 2026-07-01 19:00:36,exits,bull,479.88,380.49,0,0,0,2,AES|DLB,both
 2026-07-01 19:05:30,exits,bull,479.92,380.49,0,0,0,2,AES|DLB,both
+2026-07-01 19:10:26,exits,bull,479.89,380.49,0,0,0,2,AES|DLB,both
