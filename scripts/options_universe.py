@@ -34,6 +34,11 @@ def _cache_path() -> Path:
     return _CACHE_DIR / f"tickers_{date.today()}.json"
 
 
+def to_alpaca_symbol(ticker: str) -> str:
+    """Map universe ticker to Alpaca API symbol (class shares: BRK-B -> BRK.B)."""
+    return ticker.replace("-", ".")
+
+
 def get_universe(force_refresh: bool = False) -> list[str]:
     """Return the combined S&P 500 + S&P 400 MidCap ticker list (~900 symbols).
 

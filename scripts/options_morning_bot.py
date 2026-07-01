@@ -43,6 +43,8 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+import pandas as pd
+
 from alpaca.trading.client import TradingClient
 from alpaca.trading.requests import LimitOrderRequest, GetOrdersRequest
 from alpaca.trading.enums import OrderSide, TimeInForce, QueryOrderStatus
@@ -51,7 +53,7 @@ from alpaca.data.requests import OptionChainRequest, StockBarsRequest
 from alpaca.data.timeframe import TimeFrame
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from options_universe import get_universe
+from options_universe import get_universe, to_alpaca_symbol
 from options_oi import make_trading_client, fetch_open_interest
 
 # --------------------------------------------------------------------------- #
@@ -79,6 +81,7 @@ MIN_UNDERLYING_PX   = 3.0       # ignore sub-$3 names
 TAKE_PROFIT_PCT     = 0.50
 STOP_LOSS_PCT       = -0.50
 MAX_NEW_ENTRIES_PER_RUN = 2     # safety throttle
+BAR_CHUNK_SIZE      = 80        # Alpaca batch bar requests (fallback per-symbol)
 
 # Time windows (ET)
 ENTRY_START = (9, 28)
@@ -198,27 +201,83 @@ def cancel_stale_option_orders(trade) -> int:
 #  Signal scan (strong gap-downs)
 # --------------------------------------------------------------------------- #
 
+def _fetch_one_bar(stock, alpaca_sym: str, start: datetime):
+    """Return daily bars df for one Alpaca symbol, or None."""
+    try:
+        req = StockBarsRequest(
+            symbol_or_symbols=alpaca_sym,
+            timeframe=TimeFrame.Day,
+            start=start,
+        )
+        df = stock.get_stock_bars(req).df
+        if df is not None and not df.empty:
+            return df
+    except Exception:
+        pass
+    return None
+
+
+def _fetch_daily_bars(stock, universe: list[str], start: datetime):
+    """Fetch daily bars in chunks; per-symbol fallback if a chunk fails."""
+    chunks: list[pd.DataFrame] = []
+    failed: list[str] = []
+
+    for i in range(0, len(universe), BAR_CHUNK_SIZE):
+        batch = universe[i:i + BAR_CHUNK_SIZE]
+        alpaca_batch = [to_alpaca_symbol(s) for s in batch]
+        try:
+            req = StockBarsRequest(
+                symbol_or_symbols=alpaca_batch,
+                timeframe=TimeFrame.Day,
+                start=start,
+            )
+            df = stock.get_stock_bars(req).df
+            if df is not None and not df.empty:
+                chunks.append(df)
+                continue
+        except Exception as exc:
+            log.warning("Bar chunk %d-%d failed: %s", i, i + len(batch), exc)
+
+        for sym in batch:
+            df = _fetch_one_bar(stock, to_alpaca_symbol(sym), start)
+            if df is not None:
+                chunks.append(df)
+            else:
+                failed.append(sym)
+
+    if not chunks:
+        return None, failed
+    combined = pd.concat(chunks)
+    if combined.index.duplicated().any():
+        combined = combined[~combined.index.duplicated(keep="last")]
+    return combined, failed
+
+
 def scan_gap_downs(stock, universe: list[str]) -> list[tuple[str, float, float]]:
     """Return [(symbol, gap_pct, today_open)] for strong gap-downs today."""
     out: list[tuple[str, float, float]] = []
-    try:
-        req = StockBarsRequest(
-            symbol_or_symbols=universe, timeframe=TimeFrame.Day,
-            start=datetime.now(ET) - timedelta(days=7),
-        )
-        df = stock.get_stock_bars(req).df
-    except Exception as exc:
-        rl(f"ERROR fetching daily bars for scan: {exc}")
-        return out
+    start = datetime.now(ET) - timedelta(days=7)
+    df, failed = _fetch_daily_bars(stock, universe, start)
     if df is None or df.empty:
+        rl("ERROR fetching daily bars for scan: no data returned")
         return out
+
+    symbols_in_df = set(df.index.get_level_values(0))
+    n_ok = sum(1 for sym in universe if to_alpaca_symbol(sym) in symbols_in_df)
+    if failed:
+        rl(f"Fetched daily bars for {n_ok}/{len(universe)} symbols "
+           f"({len(failed)} skipped: {', '.join(failed[:8])}"
+           f"{', …' if len(failed) > 8 else ''})")
+    else:
+        rl(f"Fetched daily bars for {n_ok}/{len(universe)} symbols")
 
     today_str = TODAY.isoformat()
     for sym in universe:
         try:
-            if sym not in df.index.get_level_values(0):
+            alpaca_sym = to_alpaca_symbol(sym)
+            if alpaca_sym not in symbols_in_df:
                 continue
-            sub = df.xs(sym, level=0)
+            sub = df.xs(alpaca_sym, level=0)
             if len(sub) < 2:
                 continue
             last_ts = sub.index[-1]
@@ -257,13 +316,14 @@ def _parse_occ(contract_sym: str, underlying: str):
 
 def pick_atm_call(opt, ref, symbol: str, price: float):
     """Return dict for the best ATM call, or None if nothing tradeable."""
+    api_sym = to_alpaca_symbol(symbol)
     exp_lo = TODAY + timedelta(days=DTE_MIN)
     exp_hi = TODAY + timedelta(days=DTE_MAX)
     strike_lo = round(price * (1 - STRIKE_PCT), 2)
     strike_hi = round(price * (1 + STRIKE_PCT), 2)
     try:
         req = OptionChainRequest(
-            underlying_symbol=symbol,
+            underlying_symbol=api_sym,
             expiration_date_gte=exp_lo, expiration_date_lte=exp_hi,
             strike_price_gte=strike_lo, strike_price_lte=strike_hi,
         )
@@ -276,7 +336,7 @@ def pick_atm_call(opt, ref, symbol: str, price: float):
 
     oi_map = {}
     try:
-        oi_map = fetch_open_interest(ref, symbol, strike_gte=strike_lo,
+        oi_map = fetch_open_interest(ref, api_sym, strike_gte=strike_lo,
                                     strike_lte=strike_hi,
                                     exp_gte=exp_lo, exp_lte=exp_hi)
     except Exception:
@@ -284,7 +344,7 @@ def pick_atm_call(opt, ref, symbol: str, price: float):
 
     best = None
     for csym, snap in chain.items():
-        expiry, right, strike = _parse_occ(csym, symbol)
+        expiry, right, strike = _parse_occ(csym, api_sym)
         if right != "C" or strike is None or expiry is None:
             continue
         lq = getattr(snap, "latest_quote", None)
