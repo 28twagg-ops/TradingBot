@@ -1425,3 +1425,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-01 19:49:27,scan_evening,bull,479.75,92.61,31,0,0,5,AAPL|AES|DLB|GRMN|HLT,both
 2026-07-01 19:59:20,scan_evening,bull,480.0,92.4,24,0,0,5,AAPL|AES|DLB|HLT|IVZ,both
 2026-07-01 20:00:29,ext_exits,bull,480.32,92.4,0,0,0,5,AAPL|AES|DLB|HLT|IVZ,both
+2026-07-01 20:05:25,ext_exits,bull,480.16,92.4,0,0,0,5,AAPL|AES|DLB|HLT|IVZ,both
