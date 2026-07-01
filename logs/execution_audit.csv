@@ -571,3 +571,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-30 13:30:36,2026-06-30,SELL,CPAY,Pullback50,332.55,,332.55,95.11,0.0,0.0,market_urgent_full,stop_loss (-0.9%),bull
 2026-06-30 19:45:56,2026-06-30,SELL,ETN,Pullback50,425.49,425.1,425.418,100.03,-0.0169,-0.0169,limit_fill_position_check_full,midline (+4.2%),bull
 2026-06-30 19:46:26,2026-06-30,SELL,EXE,unknown,91.28,91.25,91.26,9.38,-0.0219,-0.0021,limit_fill_position_check_full,midline (+4.7%),bull
+2026-07-01 14:05:54,2026-07-01,SELL,KRG,VolumeSpike,28.23,,28.23,10.95,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
