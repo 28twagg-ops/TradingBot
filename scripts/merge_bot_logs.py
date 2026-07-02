@@ -3,6 +3,7 @@ Merge log output from a bot run into the repo's logs/ directory.
 Used by CI to avoid git rebase conflicts on append-only CSV files.
 """
 import csv
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -44,6 +45,26 @@ def merge_csv(name, src_dir, dst_dir):
     _write_csv(dst, all_fields, merged)
 
 
+def merge_options_md(src: Path, dst: Path):
+    """Append-only merge for logs/options/YYYY-MM-DD.md run sections."""
+    if not src.exists():
+        return
+    if not dst.exists():
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dst)
+        return
+    src_text = src.read_text(encoding="utf-8")
+    dst_text = dst.read_text(encoding="utf-8")
+    for block in re.split(r"(?=^## \d)", src_text, flags=re.MULTILINE):
+        block = block.strip()
+        if not block.startswith("## "):
+            continue
+        header = block.split("\n", 1)[0].strip()
+        if header not in dst_text:
+            dst_text = dst_text.rstrip() + "\n\n" + block + "\n"
+    dst.write_text(dst_text, encoding="utf-8")
+
+
 def merge_tree(src: Path, dst: Path):
     if not src.exists():
         return
@@ -55,6 +76,8 @@ def merge_tree(src: Path, dst: Path):
         target = dst / rel
         if item.suffix == ".csv" and item.name in ("runs.csv", "transactions.csv", "execution_audit.csv"):
             merge_csv(item.name, item.parent, target.parent)
+        elif len(rel.parts) >= 2 and rel.parts[0] == "options" and item.suffix == ".md":
+            merge_options_md(item, target)
         else:
             target.parent.mkdir(parents=True, exist_ok=True)
             if not target.exists() or item.stat().st_mtime >= target.stat().st_mtime:

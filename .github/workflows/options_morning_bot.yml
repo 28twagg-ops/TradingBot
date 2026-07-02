@@ -2,22 +2,19 @@
 # Runs scripts/options_morning_bot.py on the Alpaca PAPER account.
 #
 # PAPER ONLY — script hard-locks PAPER_TRADING=True and refuses live.
-# NEVER touches rubber_band_bot.py or run_bot.yml.
+# NEVER touches rubber_band_bot.py logic.
 #
-# Schedule (EDT, UTC-4 summer):
-#   */5 13-20  = every 5 min ~9:00am-4:55pm ET (full market day for now;
-#                script self-guards 9:28-11:35am entry window; manage/exits all day)
-#   30,50 19   = explicit EOD close sweep at 3:30pm and 3:50pm ET
+# PRIMARY TRIGGER: run_bot.yml (cron-job.org every ~5 min) runs the options
+# script during 9:28-16:05 ET weekdays. GitHub schedule was removed — it was
+# delayed hours and missed the morning entry window entirely.
+#
+# This workflow remains for manual runs / debugging only.
 #
 # Uses secrets ALPACA_PAPER_KEY / ALPACA_PAPER_SECRET (NOT the live keys).
-# Data collection workflows stay DISABLED until Gate 1A passes.
 
 name: Options Morning Bot (PAPER)
 
 on:
-  schedule:
-    - cron: "*/5 13-20 * * 1-5"   # every 5 min, full market day EDT (~9am-4:55pm ET)
-    - cron: "30,50 19 * * 1-5"    # EOD close sweep 3:30 & 3:50pm ET
   workflow_dispatch: {}
 
 concurrency:

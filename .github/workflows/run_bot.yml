@@ -55,6 +55,26 @@ jobs:
           BOT_MODE: ${{ github.event.inputs.mode || 'auto' }}
         run: python rubber_band_bot.py
 
+      # Options paper bot: piggyback on cron-job.org schedule (same as live bot).
+      # GitHub-native cron is delayed/unreliable and was missing the 9:28-11:35 entry window.
+      - name: Run options paper bot (PAPER, 9:28-16:05 ET weekdays)
+        env:
+          ALPACA_PAPER_KEY: ${{ secrets.ALPACA_PAPER_KEY }}
+          ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
+        run: |
+          export TZ=America/New_York
+          dow=$(date +%u)
+          if [ "$dow" -gt 5 ]; then
+            echo "Weekend — skip options paper bot"
+            exit 0
+          fi
+          hm=$(date +%H%M)
+          if [ "$hm" -lt 0928 ] || [ "$hm" -gt 1605 ]; then
+            echo "Outside options window (${hm} ET) — skip"
+            exit 0
+          fi
+          python scripts/options_morning_bot.py
+
       - name: Commit logs back to repo
         run: |
           git config user.name "github-actions[bot]"
