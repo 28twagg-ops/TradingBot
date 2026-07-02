@@ -1577,3 +1577,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-02 21:55:31,ext_exits,bull,485.2,290.23,0,0,0,2,DECK|HLT,both
 2026-07-02 22:00:34,ext_exits,bull,485.2,290.23,0,0,0,2,DECK|HLT,both
 2026-07-02 22:05:28,ext_exits,bull,485.2,290.23,0,0,0,2,DECK|HLT,both
+2026-07-02 22:10:30,ext_exits,bull,485.2,290.23,0,0,0,2,DECK|HLT,both
