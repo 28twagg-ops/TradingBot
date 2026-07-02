@@ -940,3 +940,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-02 15:55:32,2026-07-02,SELL,AES,Pullback50,14.55,8.42,-0.55,-0.05,2,stop_loss (-0.5%),bull,484.52
 2026-07-02 16:40:42,2026-07-02,SELL,DLB,unknown,51.01,2.92,-0.56,-0.02,0,stop_loss (-0.6%),bull,484.83
 2026-07-02 17:00:36,2026-07-02,SELL,IVZ,Pullback50,26.75,15.31,-0.5,-0.08,1,stop_loss (-0.5%),bull,484.67
+2026-07-02 19:45:57,2026-07-02,SELL,AAPL,Pullback50,307.83,100.51,4.74,4.55,1,midline (+4.7%),bull,484.53
