@@ -573,3 +573,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-06-30 19:46:26,2026-06-30,SELL,EXE,unknown,91.28,91.25,91.26,9.38,-0.0219,-0.0021,limit_fill_position_check_full,midline (+4.7%),bull
 2026-07-01 14:05:54,2026-07-01,SELL,KRG,VolumeSpike,28.23,,28.23,10.95,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-07-02 15:55:32,2026-07-02,SELL,AES,Pullback50,14.555,,14.555,8.42,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-07-02 16:40:42,2026-07-02,SELL,DLB,unknown,51.01,,51.01,2.92,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
