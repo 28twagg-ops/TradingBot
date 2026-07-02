@@ -46,11 +46,12 @@ CHANGES FROM v6 (sim-validated across 2yr/3yr/5yr/7yr, 900 stocks):
     REMOVED: GoldenCross (negative Sharpe, lost money)
 
 WHAT RUNS WHEN (auto-detected by US Eastern time, DST-aware via zoneinfo):
-  9:30–9:59am ET  -> exits-only (morning sells)
-  3:50pm ET       -> full daily scan + entries + daily log (evening entry window)
-  4:15pm–8:00pm ET -> post-market exits-only (extended hours, limit orders only)
-                     catches stop-loss and time-stop positions after close;
-                     critical for fractional positions with no GTC stop order.
+  9:30–9:43am ET  -> morning_prep (cache signals/exits for morning scan)
+  9:44–9:59am ET  -> morning_scan (exits + entries)
+  10:00am–3:29pm  -> exits-only
+  3:30–3:43pm ET  -> evening_prep (cache for evening scan)
+  3:44–3:59pm ET  -> scan / scan_evening (exits + entries + daily log)
+  4:00pm–8:00pm ET -> post-market exits-only (extended hours)
   Weekend         -> weekly summary, no trading
   Other           -> status summary, no trading
 
@@ -188,7 +189,8 @@ PLAN_MAX_AGE_MIN = 120
 USE_TWO_PHASE_PLAN = True
 # Strategy timing: entries at evening scan only (Phase 3 sim will confirm vs any-time).
 # TODO(phase3): rename PREFER_EVENING_ENTRIES after schedule mode sims (D3).
-EVENING_ONLY_ENTRIES = True
+# PDT-safe schedule was evening-only (Jun 2026); dual window re-enabled when day trading allowed.
+EVENING_ONLY_ENTRIES = False
 
 # ---- A/B concentration test (1 week) -----------------------------------------
 # Virtual 50/50 equity split; no fixed position cap — only group budget + ratio.
@@ -2755,13 +2757,11 @@ def detect_mode():
     # Friday: keep running extended-hours exits through 7:59pm ET.
     # Switch to weekly summary only after extended-hours window closes.
     if dow == 4 and h >= 20: return "weekly"
-    # 9:44–9:59am ET: exits only (morning_scan removed — evening-only entries)
-    if h == 9 and m >= 44: return "exits"
-    # 9:35–9:43am ET: exits (morning_prep disabled — evening-only entries)
-    if h == 9 and 35 <= m <= 43: return "exits"
-    # Early morning exits: 9:30–9:34am ET
-    if h == 9 and m >= 30: return "exits"
-    # Evening scan: 3:44–3:59pm ET (Chicago 2:45 cron)
+    # Morning prep: 9:30–9:43am ET (compute plan only, no orders).
+    if h == 9 and 30 <= m <= 43: return "morning_prep"
+    # Morning scan: 9:44–9:59am ET (exits + entries).
+    if h == 9 and m >= 44: return "morning_scan"
+    # Evening scan: 3:44–3:59pm ET
     if h == 15 and m >= 44: return "scan"
     # Evening prep: 3:30–3:43pm ET (Chicago 2:30 cron)
     if h == 15 and 30 <= m <= 43: return "evening_prep"
@@ -3580,7 +3580,11 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         blank()
     ftr()
 
-    allow_entries = (not EVENING_ONLY_ENTRIES) or mode_name == "scan"
+    allow_entries = (
+        mode_name in ("scan", "morning_scan")
+        if not EVENING_ONLY_ENTRIES
+        else mode_name == "scan"
+    )
 
     # ── Sort signals: seasonal first so they always get cash priority ────
     all_sigs.sort(key=lambda s: (0 if s.get("seasonal") else 1))
@@ -3831,13 +3835,11 @@ if __name__ == "__main__":
     ftr()
 
     if mode == "morning_prep":
-        log.info("morning_prep deprecated — evening-only entries; running exits")
-        run_exits(client, equity, cash, rgm)
+        run_prep(client, equity, cash, rgm, mode_name="morning")
     elif mode == "evening_prep":
         run_prep(client, equity, cash, rgm, mode_name="evening")
     elif mode == "morning_scan":
-        log.info("morning_scan deprecated — evening-only entries; running exits")
-        run_exits(client, equity, cash, rgm)
+        run_scan(client, equity, cash, rgm, mode_name="morning_scan")
     elif mode == "scan":
         run_scan(client, equity, cash, rgm, mode_name=mode)
     elif mode == "exits":
