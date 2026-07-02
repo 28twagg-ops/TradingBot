@@ -1554,3 +1554,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-02 19:56:04,scan_evening,bull,484.75,96.38,19,0,3,4,DECK|GILD|GRMN|HLT,both
 2026-07-02 20:02:35,ext_exits,bull,484.79,290.23,0,0,0,2,DECK|HLT,both
 2026-07-02 20:05:32,ext_exits,bull,484.79,290.23,0,0,0,2,DECK|HLT,both
+2026-07-02 20:15:35,ext_exits,bull,485.2,290.23,0,0,0,2,DECK|HLT,both
