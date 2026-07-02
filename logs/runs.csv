@@ -1552,3 +1552,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-02 19:25:28,exits,bull,484.16,286.6,0,0,0,2,AAPL|HLT,both
 2026-07-02 19:49:59,scan_evening,bull,484.71,96.44,17,0,1,4,ATO|BA|CI|HLT,both
 2026-07-02 19:56:04,scan_evening,bull,484.75,96.38,19,0,3,4,DECK|GILD|GRMN|HLT,both
+2026-07-02 20:02:35,ext_exits,bull,484.79,290.23,0,0,0,2,DECK|HLT,both
