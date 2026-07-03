@@ -73,6 +73,9 @@ def merge_tree(src: Path, dst: Path):
         if item.is_dir():
             continue
         rel = item.relative_to(src)
+        # Options paper trial logs are committed by options_morning_bot.yml only.
+        if rel.parts and rel.parts[0] == "options_trial":
+            continue
         target = dst / rel
         if item.suffix == ".csv" and item.name in ("runs.csv", "transactions.csv", "execution_audit.csv"):
             merge_csv(item.name, item.parent, target.parent)
