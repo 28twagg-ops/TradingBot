@@ -1,0 +1,221 @@
+strategy_id,strategy_name,category,best_variant,exp_pnl_per_signal,filled,win_rate,survives
+S001,Long ATM call,directional_long,S001|OTM2|1DTE|0930-1000|3day|widen,493.7916317192325,4,0.5,False
+S002,Long OTM call 5pct,directional_long,S002|OTM2|1DTE|1100-1200|3day|cancel,402.97517652433027,5,0.4,False
+S003,Long deep OTM call,directional_long,S003|OTM2|1DTE|1100-1200|3day|widen,1058.9707458387716,1,1.0,False
+S004,Long ITM call replacement,directional_long,S004|OTM2|1DTE|1000-1100|EOD|widen,140.2969164333281,1,1.0,False
+S005,Long ATM put,directional_long,S005|OTM2|1DTE|1000-1100|1day|hold,167.40357320092977,1,1.0,False
+S006,Long OTM put hedge,directional_long,S006|OTM3|3DTE|1100-1200|3day|widen,178.24760134897764,6,0.3333333333333333,False
+S007,Long put crash hedge,directional_long,S007|OTM2|1DTE|0930-1000|1day|hold,135.59831890233772,3,0.3333333333333333,False
+S008,Long call MA pullback,directional_long,S008|OTM2|1DTE|1000-1100|3day|hold,331.82409587458,3,0.6666666666666666,False
+S009,Long call vol spike uptrend,directional_long,S009|OTM2|1DTE|1000-1100|1day|widen,377.61900587825494,2,0.5,False
+S010,Long put support break,directional_long,S010|OTM2|1DTE|1100-1200|3day|hold,207.39379656017053,2,0.5,False
+S011,Long call RSI oversold,directional_long,S011|OTM2|1DTE|1000-1100|3day|cancel,560.2285074836184,3,0.6666666666666666,False
+S012,Long put RSI overbought,directional_long,S012|OTM2|1DTE|0930-1000|3day|cancel,426.9163844711245,3,0.6666666666666666,False
+S013,Long call MACD bull cross,directional_long,S013|OTM2|1DTE|1100-1200|3day|cancel,190.48094300818224,3,0.3333333333333333,False
+S014,Long put MACD bear cross,directional_long,S014|OTM2|1DTE|1100-1200|3day|hold,711.8279760180615,2,0.5,False
+S015,Long call earnings drift,directional_long,S015|OTM2|1DTE|1000-1100|3day|widen,420.68413528847924,4,0.5,False
+S016,Long put guidance gap,directional_long,S016|OTM2|1DTE|1100-1200|3day|cancel,1788.5847823872277,1,1.0,False
+S017,Long call sector leader,directional_long,S017|OTM2|1DTE|1000-1100|3day|cancel,881.8216303803566,3,1.0,False
+S018,Long put sector laggard,directional_long,S018|OTM2|1DTE|0930-1000|3day|cancel,290.87748072164175,2,0.5,False
+S019,Long call 52wk high BO,directional_long,S019|OTM2|1DTE|0930-1000|3day|cancel,392.5150469291125,2,0.5,False
+S020,Long put 52wk low BD,directional_long,S020|OTM2|1DTE|1000-1100|3day|widen,295.99928268618385,1,1.0,False
+S021,Cash secured short put,directional_short,S021|OTM3|3DTE|1000-1100|3day|hold,48.028571428571425,6,1.0,False
+S022,Covered short call,directional_short,S022|OTM2|1DTE|0930-1000|1day|widen,35.36666666666667,3,1.0,False
+S023,Short OTM put high IV,directional_short,S023|OTM2|1DTE|1100-1200|1day|cancel,31.7,2,1.0,False
+S024,Short OTM call covered,directional_short,S024|OTM2|1DTE|0930-1000|3day|widen,37.7,1,1.0,False
+S025,Short strangle proxy,directional_short,S025|OTM2|1DTE|1000-1100|1day|widen,34.56,4,1.0,False
+S026,Bull put spread income,directional_short,S026|OTM2|1DTE|1100-1200|1day|widen,35.2,2,1.0,False
+S027,Bear call spread income,directional_short,S027|OTM2|1DTE|0930-1000|3day|widen,38.7,1,1.0,False
+S028,Short put IV crush post event,directional_short,S028|OTM2|1DTE|0930-1000|3day|widen,41.7,1,1.0,False
+S029,Short call failed BO,directional_short,S029|OTM2|1DTE|0930-1000|1day|widen,35.7,1,1.0,False
+S030,Short put failed BD,directional_short,S030|OTM2|1DTE|0930-1000|EOD|widen,37.77494674219651,2,1.0,False
+S031,Short premium IV>80,directional_short,S031|OTM2|1DTE|0930-1000|1day|widen,35.7,1,1.0,False
+S032,Short premium term inverted,directional_short,S032|OTM2|1DTE|1000-1100|1day|hold,34.7,1,1.0,False
+S033,Short put uptrend,directional_short,S033|OTM2|1DTE|1000-1100|EOD|widen,42.69755068524228,1,1.0,False
+S034,Short call downtrend,directional_short,S034|OTM2|1DTE|0930-1000|1day|widen,42.7,1,1.0,False
+S035,Short weekly put theta,directional_short,S035|OTM2|1DTE|1100-1200|intraday|hold,33.71274562297433,1,1.0,False
+S036,Short monthly call vs stock,directional_short,S036|OTM2|1DTE|0930-1000|3day|widen,40.7,1,1.0,False
+S037,Short put support,directional_short,S037|OTM2|1DTE|1100-1200|EOD|widen,39.694438678487266,1,1.0,False
+S038,Short call resistance,directional_short,S038|OTM2|1DTE|0930-1000|intraday|cancel,35.47678565476627,1,1.0,False
+S039,Bull call spread debit,vertical_debit,S039|OTM2|1DTE|1100-1200|3day|hold,208.52933529872266,5,0.2,False
+S040,Bear put spread debit,vertical_debit,S040|OTM2|1DTE|0930-1000|3day|hold,1936.243706574181,1,1.0,False
+S041,ATM bull call spread,vertical_debit,S041|OTM2|1DTE|1000-1100|3day|hold,603.9402965036167,1,1.0,False
+S042,OTM bull call spread,vertical_debit,S042|OTM2|1DTE|1000-1100|3day|widen,290.694182422161,1,1.0,False
+S043,ITM bull call spread,vertical_debit,S043|OTM2|1DTE|0930-1000|3day|widen,220.87162457394476,2,1.0,False
+S044,Bear put gap continuation,vertical_debit,S044|OTM2|1DTE|1000-1100|3day|hold,231.77605083952773,2,0.5,False
+S045,Bull call gap fade,vertical_debit,S045|OTM3|3DTE|1100-1200|3day|cancel,400.88554104513673,1,1.0,False
+S046,Debit spread 1to1 RR,vertical_debit,S046|OTM2|1DTE|0930-1000|3day|widen,513.6810987353633,4,0.75,False
+S047,Debit spread 1to2 RR,vertical_debit,S047|OTM2|1DTE|1100-1200|3day|widen,569.0065301558363,1,1.0,False
+S048,Debit spread 7 DTE,vertical_debit,S048|OTM2|1DTE|1100-1200|3day|widen,403.66339431658776,1,1.0,False
+S049,Debit spread 14 DTE,vertical_debit,S049|OTM2|1DTE|0930-1000|3day|widen,440.79045368251593,1,1.0,False
+S050,Debit spread 30 DTE,vertical_debit,S050|OTM2|1DTE|1100-1200|3day|cancel,649.3093441925048,3,0.6666666666666666,False
+S051,Debit spread first hour,vertical_debit,S051|OTM2|1DTE|1100-1200|3day|hold,686.2964626761327,2,1.0,False
+S052,Debit spread last hour,vertical_debit,S052|OTM2|1DTE|1000-1100|3day|cancel,211.53245560848404,2,0.5,False
+S053,Debit spread high IV,vertical_debit,S053|OTM3|3DTE|1000-1100|3day|cancel,191.46228265258142,5,0.4,False
+S054,Debit spread low IV,vertical_debit,S054|OTM2|1DTE|1000-1100|3day|cancel,369.83143705230543,1,1.0,False
+S055,Bull put spread credit,vertical_credit,S055|OTM2|1DTE|1000-1100|EOD|hold,30.47121037144412,1,1.0,False
+S056,Bear call spread credit,vertical_credit,S056|OTM2|1DTE|1000-1100|1day|cancel,34.7,1,1.0,False
+S057,Credit spread 0.30 delta,vertical_credit,S057|OTM3|3DTE|1100-1200|1day|cancel,44.37064659831233,6,1.0,False
+S058,Credit spread 0.16 delta,vertical_credit,S058|OTM2|1DTE|0930-1000|3day|cancel,36.7,1,1.0,False
+S059,Credit spread 0.10 delta,vertical_credit,S059|OTM2|1DTE|1000-1100|EOD|cancel,33.44834144555034,1,1.0,False
+S060,Credit spread 7 DTE,vertical_credit,S060|OTM2|1DTE|1100-1200|1day|widen,39.2,2,1.0,False
+S061,Credit spread 21 DTE,vertical_credit,S061|OTM3|3DTE|1100-1200|3day|widen,40.92857142857143,5,1.0,False
+S062,Credit spread 45 DTE,vertical_credit,S062|OTM2|1DTE|1100-1200|1day|cancel,35.7,1,1.0,False
+S063,Credit spread high IV rank,vertical_credit,S063|OTM2|1DTE|0930-1000|EOD|hold,35.641312107628245,1,1.0,False
+S064,Credit spread elevated skew,vertical_credit,S064|OTM2|1DTE|0930-1000|1day|widen,36.7,2,1.0,False
+S065,Credit spread roll when tested,vertical_credit,S065|OTM2|1DTE|1100-1200|EOD|widen,38.69909025304748,1,1.0,False
+S066,Credit spread 50pct profit,vertical_credit,S066|OTM2|1DTE|0930-1000|1day|widen,34.7,1,1.0,False
+S067,Credit spread close 21 DTE,vertical_credit,S067|OTM2|1DTE|1100-1200|1day|hold,35.7,1,1.0,False
+S068,Credit spread bull regime,vertical_credit,S068|OTM2|1DTE|1000-1100|3day|widen,37.7,1,1.0,False
+S069,Credit spread low vol regime,vertical_credit,S069|OTM2|1DTE|1000-1100|1day|cancel,32.7,1,1.0,False
+S070,Credit spread iron condor lite,vertical_credit,S070|OTM2|1DTE|0930-1000|1day|widen,36.2,2,1.0,False
+S071,Long ATM straddle,straddle_strangle,S071|OTM2|1DTE|0930-1000|3day|widen,386.5498503974843,2,0.5,False
+S072,Long OTM strangle,straddle_strangle,S072|OTM2|1DTE|1100-1200|1day|cancel,276.70731292789736,2,0.5,False
+S073,Short ATM straddle,straddle_strangle,S073|OTM3|3DTE|1100-1200|3day|hold,35.40769230769231,9,1.0,False
+S074,Short OTM strangle wings,straddle_strangle,S074|OTM2|1DTE|0930-1000|intraday|hold,39.02090282212635,1,1.0,False
+S075,Long straddle HV<<IV,straddle_strangle,S075|OTM2|1DTE|0930-1000|1day|hold,305.1653253653425,2,0.5,False
+S076,Short straddle IV>>HV,straddle_strangle,S076|OTM2|1DTE|0930-1000|1day|widen,35.2,2,1.0,False
+S077,Straddle buy pre earnings,straddle_strangle,S077|OTM2|1DTE|1100-1200|3day|cancel,357.8328218506961,1,1.0,False
+S078,Straddle sell earnings AM,straddle_strangle,S078|OTM2|1DTE|1100-1200|3day|cancel,32.7,1,1.0,False
+S079,Strangle at expected move,straddle_strangle,S079|OTM2|1DTE|1000-1100|3day|widen,1049.1495230223518,2,1.0,False
+S080,Strangle outside EM,straddle_strangle,S080|OTM2|1DTE|1000-1100|3day|cancel,354.32821067867695,1,1.0,False
+S081,Strip long 2P 1C,straddle_strangle,S081|OTM2|1DTE|0930-1000|3day|hold,675.6553207041736,1,1.0,False
+S082,Strap long 2C 1P,straddle_strangle,S082|OTM2|1DTE|0930-1000|3day|cancel,224.46560040601236,4,0.75,False
+S083,Long straddle delta hedge,straddle_strangle,S083|OTM2|1DTE|1000-1100|1day|hold,332.10909542252693,1,1.0,False
+S084,Short strangle iron condor,straddle_strangle,S084|OTM2|1DTE|0930-1000|1day|hold,33.7,1,1.0,False
+S085,Iron condor 30-45 DTE,neutral_structures,S085|OTM2|1DTE|0930-1000|3day|hold,30.7,1,1.0,False
+S086,Iron condor weekly,neutral_structures,S086|OTM2|1DTE|0930-1000|3day|widen,41.7,2,1.0,False
+S087,Iron condor 16 delta,neutral_structures,S087|OTM2|1DTE|0930-1000|EOD|hold,34.69978005849881,1,1.0,False
+S088,Iron condor 10 delta,neutral_structures,S088|OTM2|1DTE|1000-1100|intraday|hold,27.842204332660607,2,1.0,False
+S089,Iron butterfly ATM,neutral_structures,S089|OTM2|1DTE|1100-1200|EOD|widen,37.04923080734546,2,1.0,False
+S090,Reverse iron butterfly,neutral_structures,S090|OTM2|1DTE|0930-1000|3day|cancel,858.6387215438382,2,0.5,False
+S091,Long butterfly pin,neutral_structures,S091|OTM2|1DTE|1000-1100|3day|widen,605.4355743123177,4,0.75,False
+S092,Short butterfly range,neutral_structures,S092|OTM2|1DTE|1100-1200|1day|cancel,34.2,2,1.0,False
+S093,Iron condor SPY,neutral_structures,S093|OTM2|1DTE|0930-1000|3day|cancel,37.7,2,1.0,False
+S094,Iron condor high IV name,neutral_structures,S094|OTM2|1DTE|1000-1100|1day|widen,38.29337701440658,3,1.0,False
+S095,Iron condor 50pct profit,neutral_structures,S095|OTM2|1DTE|1100-1200|1day|widen,41.7,1,1.0,False
+S096,Iron condor adjust tested,neutral_structures,S096|OTM2|1DTE|0930-1000|1day|widen,38.7,2,1.0,False
+S097,Broken wing butterfly,neutral_structures,S097|OTM1|1DTE|1100-1200|3day|widen,135.86795047911056,17,0.4117647058823529,False
+S098,Call butterfly bullish,neutral_structures,S098|OTM2|1DTE|0930-1000|3day|cancel,462.8929930345633,2,0.5,False
+S099,Put butterfly bearish,neutral_structures,S099|OTM2|1DTE|0930-1000|3day|hold,382.49435315837167,1,1.0,False
+S100,Double iron condor,neutral_structures,S100|OTM1|1DTE|0930-1000|1day|hold,25.49653976255486,12,0.9166666666666666,False
+S101,Jade lizard,neutral_structures,S101|OTM2|1DTE|1000-1100|3day|cancel,35.7,1,1.0,False
+S102,Big lizard,neutral_structures,S102|OTM2|1DTE|1000-1100|intraday|widen,35.51950935062045,1,1.0,False
+S103,Long calendar spread,calendar_diagonal,S103|OTM2|1DTE|0930-1000|3day|hold,437.653209807253,2,1.0,False
+S104,Short calendar vol expansion,calendar_diagonal,S104|OTM3|3DTE|1100-1200|3day|widen,32.33529411764706,11,1.0,False
+S105,Double calendar,calendar_diagonal,S105|OTM2|1DTE|1100-1200|1day|hold,286.50236114659714,3,0.3333333333333333,False
+S106,Diagonal call bull,calendar_diagonal,S106|OTM2|1DTE|1100-1200|1day|hold,357.86384278806264,2,1.0,False
+S107,Diagonal put bear,calendar_diagonal,S107|OTM2|1DTE|0930-1000|3day|hold,409.84098218608705,3,0.3333333333333333,False
+S108,Calendar ATM same strike,calendar_diagonal,S108|OTM2|1DTE|1100-1200|3day|hold,297.4021905760566,1,1.0,False
+S109,Calendar OTM directional,calendar_diagonal,S109|OTM2|1DTE|1100-1200|3day|hold,650.0518083113966,4,0.5,False
+S110,Calendar avoid earnings,calendar_diagonal,S110|OTM2|1DTE|1000-1100|3day|cancel,901.4536068727316,1,1.0,False
+S111,Diagonal PMCC,calendar_diagonal,S111|OTM2|1DTE|0930-1000|3day|widen,698.9048757948538,2,0.5,False
+S112,Call calendar low front IV,calendar_diagonal,S112|OTM2|1DTE|1000-1100|3day|cancel,376.93644122166546,3,0.3333333333333333,False
+S113,Put calendar high front IV,calendar_diagonal,S113|OTM2|1DTE|0930-1000|3day|widen,305.2948254482006,1,1.0,False
+S114,LEAPS diagonal,calendar_diagonal,S114|OTM2|1DTE|1000-1100|3day|cancel,712.615343973435,1,1.0,False
+S115,Calendar roll forward,calendar_diagonal,S115|OTM2|1DTE|0930-1000|3day|cancel,674.0309817282048,1,1.0,False
+S116,Diagonal roll up out,calendar_diagonal,S116|OTM2|1DTE|1000-1100|3day|widen,412.1434467366962,4,0.25,False
+S117,Ratio call spread 1x2,ratio_synthetic,S117|OTM2|1DTE|1100-1200|3day|widen,322.6831886076566,2,0.5,False
+S118,Ratio put spread 1x2,ratio_synthetic,S118|OTM1|1DTE|1100-1200|3day|cancel,147.7623938749747,8,0.625,False
+S119,Call backspread,ratio_synthetic,S119|OTM2|1DTE|1100-1200|3day|widen,414.3698707857855,3,0.6666666666666666,False
+S120,Put backspread,ratio_synthetic,S120|OTM2|1DTE|0930-1000|3day|widen,329.4137107953469,2,0.5,False
+S121,Synthetic long stock,ratio_synthetic,S121|OTM2|1DTE|1100-1200|3day|cancel,829.3352229181157,2,0.5,False
+S122,Synthetic short stock,ratio_synthetic,S122|OTM2|1DTE|1000-1100|3day|widen,600.3741928742596,2,1.0,False
+S123,Conversion arb,ratio_synthetic,S123|OTM2|1DTE|0930-1000|3day|hold,673.6376029897402,2,1.0,False
+S124,Box spread arb,ratio_synthetic,S124|OTM2|1DTE|1100-1200|3day|cancel,273.5353849271324,2,0.5,False
+S125,Risk reversal skew,ratio_synthetic,S125|OTM2|1DTE|1000-1100|3day|cancel,598.7466084525578,1,1.0,False
+S126,Collar long stock,ratio_synthetic,S126|OTM2|1DTE|1000-1100|intraday|widen,247.55916086177956,1,1.0,False
+S127,Zero cost collar,ratio_synthetic,S127|OTM3|3DTE|1000-1100|3day|widen,195.42802828820294,10,0.4,False
+S128,Split strike collar,ratio_synthetic,S128|OTM2|1DTE|1000-1100|3day|hold,903.601251073434,3,0.6666666666666666,False
+S129,Long vol IV rank<20,volatility_greeks,S129|OTM2|1DTE|0930-1000|1day|cancel,403.819752136612,1,1.0,False
+S130,Short vol IV rank>80,volatility_greeks,S130|OTM2|1DTE|1100-1200|1day|widen,36.03333333333334,3,1.0,False
+S131,IV pct mean rev buy calls,volatility_greeks,S131|OTM2|1DTE|0930-1000|1day|widen,588.0741464077877,1,1.0,False
+S132,IV pct expansion straddle,volatility_greeks,S132|OTM3|3DTE|0930-1000|3day|widen,239.27983920394095,4,0.5,False
+S133,Vega neutral iron condor,volatility_greeks,S133|OTM2|1DTE|0930-1000|1day|hold,37.7,1,1.0,False
+S134,Delta neutral straddle scalp,volatility_greeks,S134|OTM2|1DTE|1100-1200|3day|cancel,1186.4796514540928,1,1.0,False
+S135,Gamma scalping,volatility_greeks,S135|OTM2|1DTE|1100-1200|3day|cancel,735.3910266322162,4,1.0,False
+S136,Theta harvest short opts,volatility_greeks,S136|OTM2|1DTE|1000-1100|3day|hold,32.2,2,1.0,False
+S137,Charm decay into expiry,volatility_greeks,S137|OTM2|1DTE|1000-1100|1day|widen,35.7,1,1.0,False
+S138,Skew buy put spread,volatility_greeks,S138|OTM2|1DTE|1000-1100|3day|cancel,238.86231878654235,1,1.0,False
+S139,Put skew steep sell spread,volatility_greeks,S139|OTM2|1DTE|0930-1000|1day|widen,33.7,2,1.0,False
+S140,Call skew steep sell spread,volatility_greeks,S140|OTM2|1DTE|1100-1200|EOD|widen,45.68496174373938,2,1.0,False
+S141,Term structure calendar vol,volatility_greeks,S141|OTM2|1DTE|1000-1100|3day|widen,933.4817276855192,3,0.6666666666666666,False
+S142,Contango short calendar,volatility_greeks,S142|OTM2|1DTE|1100-1200|3day|widen,40.7,2,1.0,False
+S143,RV>IV long vol,volatility_greeks,S143|OTM2|1DTE|0930-1000|3day|cancel,682.3741022782735,2,0.5,False
+S144,IV>RV short vol,volatility_greeks,S144|OTM2|1DTE|0930-1000|1day|cancel,35.7,1,1.0,False
+S145,VIX call hedge,volatility_greeks,S145|OTM2|1DTE|1000-1100|3day|widen,175.85377528313433,4,0.5,False
+S146,VIX put spread mean rev,volatility_greeks,S146|OTM2|1DTE|0930-1000|3day|hold,384.67791975678114,1,1.0,False
+S147,Beta delta hedge SPY,volatility_greeks,S147|OTM2|1DTE|1100-1200|3day|hold,454.4433448402062,1,1.0,False
+S148,Vol surface smile trade,volatility_greeks,S148|OTM2|1DTE|0930-1000|3day|hold,487.28722418236913,2,1.0,False
+S149,Pre-earnings long straddle,event_seasonality,S149|OTM2|1DTE|1000-1100|3day|hold,335.17912025758716,3,0.6666666666666666,False
+S150,Post-earnings IV crush short,event_seasonality,S150|OTM2|1DTE|1000-1100|3day|hold,388.1524534054087,1,1.0,False
+S151,Earnings EM vs actual fade,event_seasonality,S151|OTM2|1DTE|1000-1100|3day|widen,414.9894517220585,1,1.0,False
+S152,FDA binary straddle,event_seasonality,S152|OTM2|1DTE|1100-1200|3day|cancel,556.2447041241006,4,0.5,False
+S153,Dividend capture,event_seasonality,S153|OTM2|1DTE|1100-1200|3day|cancel,663.0351094915444,1,1.0,False
+S154,Ex-div short call avoid,event_seasonality,S154|OTM2|1DTE|1100-1200|1day|hold,35.3,5,1.0,False
+S155,OPEX gamma pin iron fly,event_seasonality,S155|OTM2|1DTE|1100-1200|3day|hold,382.24299902152876,6,0.5,False
+S156,OPEX vol crush Monday,event_seasonality,S156|OTM2|1DTE|1000-1100|3day|widen,22.46666666666667,2,1.0,False
+S157,FOMC straddle,event_seasonality,S157|OTM2|1DTE|1100-1200|3day|widen,308.5582221193754,1,1.0,False
+S158,CPI jobs ORB options,event_seasonality,S158|OTM2|1DTE|1000-1100|3day|hold,809.5539635836462,2,0.5,False
+S159,Month-end rebalance,event_seasonality,S159|OTM2|1DTE|0930-1000|3day|hold,326.96356255602274,4,0.25,False
+S160,January effect call skew,event_seasonality,S160|OTM2|1DTE|1000-1100|3day|hold,232.63612621238025,2,1.0,False
+S161,Tax loss put premium Dec,event_seasonality,S161|OTM2|1DTE|1100-1200|1day|hold,33.2,2,1.0,False
+S162,Quad witching reduced size,event_seasonality,S162|OTM2|1DTE|0930-1000|3day|widen,381.88422020726784,2,1.0,False
+S163,A1 GapDown ATM call EOD,equity_signal,S163|OTM2|1DTE|0930-1000|3day|cancel,404.84491220751477,1,1.0,False
+S164,GapDown bull call spread,equity_signal,S164|OTM2|1DTE|1100-1200|3day|hold,976.3053212498301,1,1.0,False
+S165,GapDown long call 3 DTE,equity_signal,S165|OTM2|1DTE|0930-1000|3day|hold,388.46271568710404,2,1.0,False
+S166,GapDown strong call,equity_signal,S166|OTM2|1DTE|1100-1200|intraday|hold,148.8154129336553,2,1.0,False
+S167,GapDown weak skip/half,equity_signal,S167|OTM2|1DTE|1000-1100|3day|hold,817.2996252122427,2,1.0,False
+S168,GapUp long put EOD,equity_signal,S168|OTM2|1DTE|1000-1100|3day|widen,274.48991930472965,2,0.5,False
+S169,VolumeSpike long call EOD,equity_signal,S169|OTM2|1DTE|1000-1100|3day|widen,588.0961322809624,2,0.5,False
+S170,Pullback50 long call 3 DTE,equity_signal,S170|OTM2|1DTE|1100-1200|3day|cancel,543.0823774823655,1,1.0,False
+S171,Pullback50 bull put spread,equity_signal,S171|OTM3|3DTE|0930-1000|3day|widen,39.38,11,1.0,False
+S172,52wkLow long call 7 DTE,equity_signal,S172|OTM2|1DTE|1100-1200|3day|hold,564.8047544515279,1,1.0,False
+S173,MomReversal long call,equity_signal,S173|OTM2|1DTE|0930-1000|3day|widen,343.7773102748939,6,0.5,False
+S174,RubberBand long call EOD,equity_signal,S174|OTM1|1DTE|1000-1100|3day|hold,170.0109113400338,12,0.5,False
+S175,RSIRecovery long call 3 DTE,equity_signal,S175|OTM2|1DTE|0930-1000|3day|widen,347.7491637704918,1,1.0,False
+S176,Seasonal calendar match DTE,equity_signal,S176|OTM1|1DTE|0930-1000|3day|widen,143.36346126972103,13,0.6153846153846154,False
+S177,Regime bull calls only,equity_signal,S177|OTM2|1DTE|1000-1100|1day|widen,252.9080165740816,2,0.5,False
+S178,Regime bear puts only,equity_signal,S178|OTM2|1DTE|0930-1000|3day|hold,549.1402679167147,1,1.0,False
+S179,Regime corr reduced size,equity_signal,S179|OTM2|1DTE|0930-1000|3day|widen,563.1882305222462,2,1.0,False
+S180,Signal IV rank filter,equity_signal,S180|OTM1|1DTE|1100-1200|3day|widen,193.11244460232874,17,0.5882352941176471,False
+S181,Signal low spread filter,equity_signal,S181|OTM2|1DTE|1100-1200|3day|widen,568.2579059969548,2,1.0,False
+S182,Signal OI filter,equity_signal,S182|OTM2|1DTE|0930-1000|3day|hold,314.6539717023978,4,0.25,False
+S183,GapDown VolumeSpike confirm,equity_signal,S183|OTM2|1DTE|0930-1000|3day|cancel,220.12803678197156,3,0.3333333333333333,False
+S184,Fade low vol gap long put,equity_signal,S184|OTM3|3DTE|1100-1200|3day|widen,194.79353225220575,4,0.75,False
+S185,ORB breakout call 15m,intraday,S185|OTM2|1DTE|0930-1000|3day|widen,393.19641457286866,2,0.5,False
+S186,ORB breakdown put 15m,intraday,S186|OTM2|1DTE|1000-1100|3day|widen,799.0637235849267,3,1.0,False
+S187,First hour gap fade call,intraday,S187|OTM2|1DTE|1000-1100|3day|hold,472.7035567710502,4,0.75,False
+S188,VWAP reclaim long call,intraday,S188|OTM2|1DTE|1000-1100|3day|hold,882.8558294778453,1,1.0,False
+S189,VWAP rejection long put,intraday,S189|OTM2|1DTE|0930-1000|3day|widen,240.48238711077408,1,1.0,False
+S190,Midday consolidation BO,intraday,S190|OTM1|1DTE|1000-1100|3day|widen,128.1585961561531,11,0.45454545454545453,False
+S191,Power hour momentum call,intraday,S191|OTM2|1DTE|1100-1200|3day|cancel,356.5436490648095,2,0.5,False
+S192,Power hour fade put,intraday,S192|OTM2|1DTE|1100-1200|3day|widen,261.6586640043454,3,0.6666666666666666,False
+S193,10AM reversal call,intraday,S193|OTM2|1DTE|1100-1200|3day|widen,516.4470026304867,2,0.5,False
+S194,Lunch lull vol sell,intraday,S194|OTM3|3DTE|0930-1000|3day|widen,34.747058823529414,11,1.0,False
+S195,Last hour theta short weekly,intraday,S195|OTM2|1DTE|1100-1200|1day|cancel,35.7,1,1.0,False
+S196,Tick imbalance proxy,intraday,S196|OTM2|1DTE|0930-1000|3day|widen,235.38902368304022,4,0.5,False
+S197,Bid-ask imbalance open,intraday,S197|OTM2|1DTE|0930-1000|3day|widen,176.24176523976902,3,0.3333333333333333,False
+S198,Large opening print follow,intraday,S198|OTM2|1DTE|1000-1100|3day|hold,147.34144214124717,3,0.6666666666666666,False
+S199,UOA call sweep follow,flow_sentiment,S199|OTM2|1DTE|0930-1000|3day|widen,456.10441721425286,3,0.6666666666666666,False
+S200,UOA put sweep follow,flow_sentiment,S200|OTM2|1DTE|1100-1200|3day|widen,384.8135789850411,1,1.0,False
+S201,PCR contrarian bullish,flow_sentiment,S201|OTM2|1DTE|1100-1200|3day|widen,339.41542877050034,5,0.6,False
+S202,PCR contrarian bearish,flow_sentiment,S202|OTM2|1DTE|1000-1100|EOD|cancel,920.9656481029413,1,1.0,False
+S203,Max pain pin weekly,flow_sentiment,S203|OTM2|1DTE|0930-1000|3day|widen,41.7,2,1.0,False
+S204,GEX positive fade,flow_sentiment,S204|OTM2|1DTE|0930-1000|3day|widen,461.08284069781587,1,1.0,False
+S205,GEX negative trend follow,flow_sentiment,S205|OTM2|1DTE|1000-1100|3day|widen,447.6057065464504,3,1.0,False
+S206,Dealer delta hedge proxy,flow_sentiment,S206|OTM2|1DTE|1100-1200|3day|hold,297.1030147564171,2,1.0,False
+S207,OI change breakout,flow_sentiment,S207|OTM2|1DTE|1000-1100|3day|hold,499.92191679792415,4,0.75,False
+S208,Vol weighted PCR skew,flow_sentiment,S208|OTM2|1DTE|1100-1200|3day|hold,227.51118203322136,1,1.0,False
+S209,Dark pool print call,flow_sentiment,S209|OTM2|1DTE|1000-1100|1day|hold,466.06270295964794,3,0.6666666666666666,False
+S210,13F lag overlay,flow_sentiment,S210|OTM2|1DTE|1100-1200|3day|hold,442.3392513704074,2,1.0,False
+S211,Fixed 1pct risk per trade,risk_overlay,S211|OTM2|1DTE|1000-1100|1day|widen,437.0611218731992,2,1.0,False
+S212,Kelly half sizing,risk_overlay,S212|OTM1|1DTE|1000-1100|3day|hold,107.75433454522364,16,0.4375,False
+S213,Tier0 1 contract 75 max,risk_overlay,S213|OTM2|1DTE|0930-1000|EOD|cancel,222.7539823689383,2,1.0,False
+S214,Tier1 2pct equity,risk_overlay,S214|OTM2|1DTE|0930-1000|3day|widen,1480.156286726163,1,1.0,False
+S215,Max 3 concurrent,risk_overlay,S215|OTM2|1DTE|1100-1200|3day|hold,137.90660589015286,3,0.6666666666666666,False
+S216,Max 20pct premium at risk,risk_overlay,S216|OTM2|1DTE|0930-1000|3day|cancel,768.79415818651,2,0.5,False
+S217,Stop minus 50pct premium,risk_overlay,S217|OTM2|1DTE|0930-1000|3day|hold,218.67763721775123,5,0.6,False
+S218,Stop underlying minus 1pct,risk_overlay,S218|OTM2|1DTE|1100-1200|3day|widen,454.9262892080892,1,1.0,False
+S219,Profit take plus 50pct,risk_overlay,S219|OTM2|1DTE|1000-1100|3day|cancel,1171.8968477090789,2,1.0,False
+S220,Sector correlation cap,risk_overlay,S220|OTM2|1DTE|1100-1200|3day|widen,275.66499024911684,3,0.3333333333333333,False

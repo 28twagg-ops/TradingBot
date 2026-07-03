@@ -1,0 +1,6341 @@
+{
+  "fetched": "2026-07-02",
+  "years": "max",
+  "symbols": {
+    "AAPL": {
+      "status": "ok",
+      "rows": 521,
+      "start": "2024-06-03",
+      "end": "2026-07-01",
+      "path": "data\\historical\\stocks\\AAPL_daily.parquet"
+    },
+    "MSFT": {
+      "status": "ok",
+      "rows": 521,
+      "start": "2024-06-03",
+      "end": "2026-07-01",
+      "path": "data\\historical\\stocks\\MSFT_daily.parquet"
+    },
+    "NVDA": {
+      "status": "ok",
+      "rows": 521,
+      "start": "2024-06-03",
+      "end": "2026-07-01",
+      "path": "data\\historical\\stocks\\NVDA_daily.parquet"
+    },
+    "SPY": {
+      "status": "ok",
+      "rows": 521,
+      "start": "2024-06-03",
+      "end": "2026-07-01",
+      "path": "data\\historical\\stocks\\SPY_daily.parquet"
+    },
+    "JPM": {
+      "status": "ok",
+      "rows": 521,
+      "start": "2024-06-03",
+      "end": "2026-07-01",
+      "path": "data\\historical\\stocks\\JPM_daily.parquet"
+    },
+    "MMM": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MMM_daily.parquet"
+    },
+    "AOS": {
+      "status": "ok",
+      "rows": 10772,
+      "start": "1983-09-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AOS_daily.parquet"
+    },
+    "ABT": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ABT_daily.parquet"
+    },
+    "ABBV": {
+      "status": "ok",
+      "rows": 3395,
+      "start": "2013-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ABBV_daily.parquet"
+    },
+    "ACN": {
+      "status": "ok",
+      "rows": 6275,
+      "start": "2001-07-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ACN_daily.parquet"
+    },
+    "ADBE": {
+      "status": "ok",
+      "rows": 10048,
+      "start": "1986-08-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ADBE_daily.parquet"
+    },
+    "AMD": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AMD_daily.parquet"
+    },
+    "AES": {
+      "status": "ok",
+      "rows": 8817,
+      "start": "1991-06-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AES_daily.parquet"
+    },
+    "AFL": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AFL_daily.parquet"
+    },
+    "A": {
+      "status": "ok",
+      "rows": 6694,
+      "start": "1999-11-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\A_daily.parquet"
+    },
+    "APD": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\APD_daily.parquet"
+    },
+    "ABNB": {
+      "status": "ok",
+      "rows": 1395,
+      "start": "2020-12-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ABNB_daily.parquet"
+    },
+    "AKAM": {
+      "status": "ok",
+      "rows": 6708,
+      "start": "1999-10-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AKAM_daily.parquet"
+    },
+    "ALB": {
+      "status": "ok",
+      "rows": 8144,
+      "start": "1994-02-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ALB_daily.parquet"
+    },
+    "ARE": {
+      "status": "ok",
+      "rows": 7320,
+      "start": "1997-05-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ARE_daily.parquet"
+    },
+    "ALGN": {
+      "status": "ok",
+      "rows": 6393,
+      "start": "2001-01-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ALGN_daily.parquet"
+    },
+    "ALLE": {
+      "status": "ok",
+      "rows": 3173,
+      "start": "2013-11-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ALLE_daily.parquet"
+    },
+    "LNT": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LNT_daily.parquet"
+    },
+    "ALL": {
+      "status": "ok",
+      "rows": 8327,
+      "start": "1993-06-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ALL_daily.parquet"
+    },
+    "GOOGL": {
+      "status": "ok",
+      "rows": 5502,
+      "start": "2004-08-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GOOGL_daily.parquet"
+    },
+    "GOOG": {
+      "status": "ok",
+      "rows": 5502,
+      "start": "2004-08-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GOOG_daily.parquet"
+    },
+    "MO": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MO_daily.parquet"
+    },
+    "AMZN": {
+      "status": "ok",
+      "rows": 7328,
+      "start": "1997-05-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AMZN_daily.parquet"
+    },
+    "AMCR": {
+      "status": "ok",
+      "rows": 3553,
+      "start": "2012-05-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AMCR_daily.parquet"
+    },
+    "AEE": {
+      "status": "ok",
+      "rows": 7168,
+      "start": "1998-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AEE_daily.parquet"
+    },
+    "AEP": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AEP_daily.parquet"
+    },
+    "AXP": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AXP_daily.parquet"
+    },
+    "AIG": {
+      "status": "ok",
+      "rows": 13488,
+      "start": "1973-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AIG_daily.parquet"
+    },
+    "AMT": {
+      "status": "ok",
+      "rows": 7130,
+      "start": "1998-02-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AMT_daily.parquet"
+    },
+    "AWK": {
+      "status": "ok",
+      "rows": 4577,
+      "start": "2008-04-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AWK_daily.parquet"
+    },
+    "AMP": {
+      "status": "ok",
+      "rows": 5231,
+      "start": "2005-09-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AMP_daily.parquet"
+    },
+    "AME": {
+      "status": "ok",
+      "rows": 10570,
+      "start": "1984-07-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AME_daily.parquet"
+    },
+    "AMGN": {
+      "status": "ok",
+      "rows": 10845,
+      "start": "1983-06-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AMGN_daily.parquet"
+    },
+    "APH": {
+      "status": "ok",
+      "rows": 8722,
+      "start": "1991-11-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\APH_daily.parquet"
+    },
+    "ADI": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ADI_daily.parquet"
+    },
+    "AON": {
+      "status": "ok",
+      "rows": 11615,
+      "start": "1980-06-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AON_daily.parquet"
+    },
+    "APA": {
+      "status": "ok",
+      "rows": 11880,
+      "start": "1979-05-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\APA_daily.parquet"
+    },
+    "APO": {
+      "status": "ok",
+      "rows": 3837,
+      "start": "2011-03-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\APO_daily.parquet"
+    },
+    "AMAT": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AMAT_daily.parquet"
+    },
+    "APP": {
+      "status": "ok",
+      "rows": 1310,
+      "start": "2021-04-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\APP_daily.parquet"
+    },
+    "APTV": {
+      "status": "ok",
+      "rows": 3675,
+      "start": "2011-11-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\APTV_daily.parquet"
+    },
+    "ACGL": {
+      "status": "ok",
+      "rows": 7750,
+      "start": "1995-09-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ACGL_daily.parquet"
+    },
+    "ADM": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ADM_daily.parquet"
+    },
+    "ARES": {
+      "status": "ok",
+      "rows": 3060,
+      "start": "2014-05-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ARES_daily.parquet"
+    },
+    "ANET": {
+      "status": "ok",
+      "rows": 3036,
+      "start": "2014-06-06",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ANET_daily.parquet"
+    },
+    "AJG": {
+      "status": "ok",
+      "rows": 10590,
+      "start": "1984-06-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AJG_daily.parquet"
+    },
+    "AIZ": {
+      "status": "ok",
+      "rows": 5637,
+      "start": "2004-02-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AIZ_daily.parquet"
+    },
+    "T": {
+      "status": "ok",
+      "rows": 10736,
+      "start": "1983-11-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\T_daily.parquet"
+    },
+    "ATO": {
+      "status": "ok",
+      "rows": 10711,
+      "start": "1983-12-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ATO_daily.parquet"
+    },
+    "ADSK": {
+      "status": "ok",
+      "rows": 10331,
+      "start": "1985-06-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ADSK_daily.parquet"
+    },
+    "ADP": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ADP_daily.parquet"
+    },
+    "AZO": {
+      "status": "ok",
+      "rows": 8877,
+      "start": "1991-04-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AZO_daily.parquet"
+    },
+    "AVB": {
+      "status": "ok",
+      "rows": 8131,
+      "start": "1994-03-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AVB_daily.parquet"
+    },
+    "AVY": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AVY_daily.parquet"
+    },
+    "AXON": {
+      "status": "ok",
+      "rows": 6296,
+      "start": "2001-06-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AXON_daily.parquet"
+    },
+    "BKR": {
+      "status": "ok",
+      "rows": 9885,
+      "start": "1987-04-06",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BKR_daily.parquet"
+    },
+    "BALL": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BALL_daily.parquet"
+    },
+    "BAC": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BAC_daily.parquet"
+    },
+    "BAX": {
+      "status": "ok",
+      "rows": 11260,
+      "start": "1981-10-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BAX_daily.parquet"
+    },
+    "BDX": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BDX_daily.parquet"
+    },
+    "BRK-B": {
+      "status": "ok",
+      "rows": 7585,
+      "start": "1996-05-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BRK-B_daily.parquet"
+    },
+    "BBY": {
+      "status": "ok",
+      "rows": 10381,
+      "start": "1985-04-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BBY_daily.parquet"
+    },
+    "TECH": {
+      "status": "ok",
+      "rows": 9417,
+      "start": "1989-02-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TECH_daily.parquet"
+    },
+    "BIIB": {
+      "status": "ok",
+      "rows": 8760,
+      "start": "1991-09-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BIIB_daily.parquet"
+    },
+    "BLK": {
+      "status": "ok",
+      "rows": 6728,
+      "start": "1999-10-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BLK_daily.parquet"
+    },
+    "BX": {
+      "status": "ok",
+      "rows": 4787,
+      "start": "2007-06-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BX_daily.parquet"
+    },
+    "XYZ": {
+      "status": "ok",
+      "rows": 2668,
+      "start": "2015-11-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\XYZ_daily.parquet"
+    },
+    "BNY": {
+      "status": "ok",
+      "rows": 13404,
+      "start": "1973-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BNY_daily.parquet"
+    },
+    "BA": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BA_daily.parquet"
+    },
+    "BKNG": {
+      "status": "ok",
+      "rows": 6856,
+      "start": "1999-03-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BKNG_daily.parquet"
+    },
+    "BSX": {
+      "status": "ok",
+      "rows": 8590,
+      "start": "1992-05-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BSX_daily.parquet"
+    },
+    "BMY": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BMY_daily.parquet"
+    },
+    "AVGO": {
+      "status": "ok",
+      "rows": 4252,
+      "start": "2009-08-06",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AVGO_daily.parquet"
+    },
+    "BR": {
+      "status": "ok",
+      "rows": 4851,
+      "start": "2007-03-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BR_daily.parquet"
+    },
+    "BRO": {
+      "status": "ok",
+      "rows": 11439,
+      "start": "1981-02-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BRO_daily.parquet"
+    },
+    "BF-B": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BF-B_daily.parquet"
+    },
+    "BLDR": {
+      "status": "ok",
+      "rows": 5286,
+      "start": "2005-06-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BLDR_daily.parquet"
+    },
+    "BG": {
+      "status": "ok",
+      "rows": 6265,
+      "start": "2001-08-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BG_daily.parquet"
+    },
+    "BXP": {
+      "status": "ok",
+      "rows": 7305,
+      "start": "1997-06-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BXP_daily.parquet"
+    },
+    "CHRW": {
+      "status": "ok",
+      "rows": 7221,
+      "start": "1997-10-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CHRW_daily.parquet"
+    },
+    "CDNS": {
+      "status": "ok",
+      "rows": 9840,
+      "start": "1987-06-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CDNS_daily.parquet"
+    },
+    "CPT": {
+      "status": "ok",
+      "rows": 8293,
+      "start": "1993-07-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CPT_daily.parquet"
+    },
+    "COF": {
+      "status": "ok",
+      "rows": 7958,
+      "start": "1994-11-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\COF_daily.parquet"
+    },
+    "CAH": {
+      "status": "ok",
+      "rows": 10812,
+      "start": "1983-08-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CAH_daily.parquet"
+    },
+    "CCL": {
+      "status": "ok",
+      "rows": 9809,
+      "start": "1987-07-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CCL_daily.parquet"
+    },
+    "CARR": {
+      "status": "ok",
+      "rows": 1580,
+      "start": "2020-03-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CARR_daily.parquet"
+    },
+    "CVNA": {
+      "status": "ok",
+      "rows": 2307,
+      "start": "2017-04-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CVNA_daily.parquet"
+    },
+    "CASY": {
+      "status": "ok",
+      "rows": 10758,
+      "start": "1983-10-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CASY_daily.parquet"
+    },
+    "CAT": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CAT_daily.parquet"
+    },
+    "CBOE": {
+      "status": "ok",
+      "rows": 4037,
+      "start": "2010-06-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CBOE_daily.parquet"
+    },
+    "CBRE": {
+      "status": "ok",
+      "rows": 5550,
+      "start": "2004-06-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CBRE_daily.parquet"
+    },
+    "CDW": {
+      "status": "ok",
+      "rows": 3273,
+      "start": "2013-06-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CDW_daily.parquet"
+    },
+    "COR": {
+      "status": "ok",
+      "rows": 7863,
+      "start": "1995-04-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\COR_daily.parquet"
+    },
+    "CNC": {
+      "status": "ok",
+      "rows": 6176,
+      "start": "2001-12-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CNC_daily.parquet"
+    },
+    "CNP": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CNP_daily.parquet"
+    },
+    "CF": {
+      "status": "ok",
+      "rows": 5255,
+      "start": "2005-08-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CF_daily.parquet"
+    },
+    "CRL": {
+      "status": "ok",
+      "rows": 6544,
+      "start": "2000-06-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CRL_daily.parquet"
+    },
+    "SCHW": {
+      "status": "ok",
+      "rows": 9768,
+      "start": "1987-09-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SCHW_daily.parquet"
+    },
+    "CHTR": {
+      "status": "ok",
+      "rows": 4148,
+      "start": "2010-01-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CHTR_daily.parquet"
+    },
+    "CVX": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CVX_daily.parquet"
+    },
+    "CMG": {
+      "status": "ok",
+      "rows": 5140,
+      "start": "2006-01-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CMG_daily.parquet"
+    },
+    "CB": {
+      "status": "ok",
+      "rows": 8375,
+      "start": "1993-03-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CB_daily.parquet"
+    },
+    "CHD": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CHD_daily.parquet"
+    },
+    "CIEN": {
+      "status": "ok",
+      "rows": 7395,
+      "start": "1997-02-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CIEN_daily.parquet"
+    },
+    "CI": {
+      "status": "ok",
+      "rows": 11153,
+      "start": "1982-03-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CI_daily.parquet"
+    },
+    "CINF": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CINF_daily.parquet"
+    },
+    "CTAS": {
+      "status": "ok",
+      "rows": 10801,
+      "start": "1983-08-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CTAS_daily.parquet"
+    },
+    "CSCO": {
+      "status": "ok",
+      "rows": 9159,
+      "start": "1990-02-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CSCO_daily.parquet"
+    },
+    "C": {
+      "status": "ok",
+      "rows": 12477,
+      "start": "1977-01-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\C_daily.parquet"
+    },
+    "CFG": {
+      "status": "ok",
+      "rows": 2960,
+      "start": "2014-09-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CFG_daily.parquet"
+    },
+    "CLX": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CLX_daily.parquet"
+    },
+    "CME": {
+      "status": "ok",
+      "rows": 5929,
+      "start": "2002-12-06",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CME_daily.parquet"
+    },
+    "CMS": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CMS_daily.parquet"
+    },
+    "KO": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KO_daily.parquet"
+    },
+    "CTSH": {
+      "status": "ok",
+      "rows": 7052,
+      "start": "1998-06-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CTSH_daily.parquet"
+    },
+    "COHR": {
+      "status": "ok",
+      "rows": 9760,
+      "start": "1987-10-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\COHR_daily.parquet"
+    },
+    "COIN": {
+      "status": "ok",
+      "rows": 1311,
+      "start": "2021-04-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\COIN_daily.parquet"
+    },
+    "CL": {
+      "status": "ok",
+      "rows": 13405,
+      "start": "1973-05-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CL_daily.parquet"
+    },
+    "CMCSA": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CMCSA_daily.parquet"
+    },
+    "FIX": {
+      "status": "ok",
+      "rows": 7298,
+      "start": "1997-06-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FIX_daily.parquet"
+    },
+    "COP": {
+      "status": "ok",
+      "rows": 11215,
+      "start": "1981-12-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\COP_daily.parquet"
+    },
+    "ED": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ED_daily.parquet"
+    },
+    "STZ": {
+      "status": "ok",
+      "rows": 8634,
+      "start": "1992-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\STZ_daily.parquet"
+    },
+    "CEG": {
+      "status": "ok",
+      "rows": 1117,
+      "start": "2022-01-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CEG_daily.parquet"
+    },
+    "COO": {
+      "status": "ok",
+      "rows": 10947,
+      "start": "1983-01-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\COO_daily.parquet"
+    },
+    "CPRT": {
+      "status": "ok",
+      "rows": 8127,
+      "start": "1994-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CPRT_daily.parquet"
+    },
+    "GLW": {
+      "status": "ok",
+      "rows": 11215,
+      "start": "1981-12-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GLW_daily.parquet"
+    },
+    "CPAY": {
+      "status": "ok",
+      "rows": 3909,
+      "start": "2010-12-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CPAY_daily.parquet"
+    },
+    "CTVA": {
+      "status": "ok",
+      "rows": 1786,
+      "start": "2019-05-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CTVA_daily.parquet"
+    },
+    "CSGP": {
+      "status": "ok",
+      "rows": 7044,
+      "start": "1998-07-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CSGP_daily.parquet"
+    },
+    "COST": {
+      "status": "ok",
+      "rows": 10073,
+      "start": "1986-07-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\COST_daily.parquet"
+    },
+    "CRH": {
+      "status": "ok",
+      "rows": 9311,
+      "start": "1989-07-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CRH_daily.parquet"
+    },
+    "CRWD": {
+      "status": "ok",
+      "rows": 1774,
+      "start": "2019-06-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CRWD_daily.parquet"
+    },
+    "CCI": {
+      "status": "ok",
+      "rows": 7011,
+      "start": "1998-08-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CCI_daily.parquet"
+    },
+    "CSX": {
+      "status": "ok",
+      "rows": 11507,
+      "start": "1980-11-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CSX_daily.parquet"
+    },
+    "CMI": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CMI_daily.parquet"
+    },
+    "CVS": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CVS_daily.parquet"
+    },
+    "DHR": {
+      "status": "ok",
+      "rows": 11974,
+      "start": "1978-12-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DHR_daily.parquet"
+    },
+    "DRI": {
+      "status": "ok",
+      "rows": 7839,
+      "start": "1995-05-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DRI_daily.parquet"
+    },
+    "DDOG": {
+      "status": "ok",
+      "rows": 1705,
+      "start": "2019-09-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DDOG_daily.parquet"
+    },
+    "DVA": {
+      "status": "ok",
+      "rows": 7717,
+      "start": "1995-10-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DVA_daily.parquet"
+    },
+    "DECK": {
+      "status": "ok",
+      "rows": 8233,
+      "start": "1993-10-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DECK_daily.parquet"
+    },
+    "DE": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DE_daily.parquet"
+    },
+    "DELL": {
+      "status": "ok",
+      "rows": 2482,
+      "start": "2016-08-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DELL_daily.parquet"
+    },
+    "DAL": {
+      "status": "ok",
+      "rows": 4822,
+      "start": "2007-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DAL_daily.parquet"
+    },
+    "DVN": {
+      "status": "ok",
+      "rows": 10316,
+      "start": "1985-07-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DVN_daily.parquet"
+    },
+    "DXCM": {
+      "status": "ok",
+      "rows": 5338,
+      "start": "2005-04-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DXCM_daily.parquet"
+    },
+    "FANG": {
+      "status": "ok",
+      "rows": 3448,
+      "start": "2012-10-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FANG_daily.parquet"
+    },
+    "DLR": {
+      "status": "ok",
+      "rows": 5452,
+      "start": "2004-10-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DLR_daily.parquet"
+    },
+    "DG": {
+      "status": "ok",
+      "rows": 4182,
+      "start": "2009-11-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DG_daily.parquet"
+    },
+    "DLTR": {
+      "status": "ok",
+      "rows": 7883,
+      "start": "1995-03-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DLTR_daily.parquet"
+    },
+    "D": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\D_daily.parquet"
+    },
+    "DPZ": {
+      "status": "ok",
+      "rows": 5529,
+      "start": "2004-07-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DPZ_daily.parquet"
+    },
+    "DASH": {
+      "status": "ok",
+      "rows": 1396,
+      "start": "2020-12-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DASH_daily.parquet"
+    },
+    "DOV": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DOV_daily.parquet"
+    },
+    "DOW": {
+      "status": "ok",
+      "rows": 1832,
+      "start": "2019-03-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DOW_daily.parquet"
+    },
+    "DHI": {
+      "status": "ok",
+      "rows": 8578,
+      "start": "1992-06-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DHI_daily.parquet"
+    },
+    "DTE": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DTE_daily.parquet"
+    },
+    "DUK": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DUK_daily.parquet"
+    },
+    "DD": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DD_daily.parquet"
+    },
+    "ETN": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ETN_daily.parquet"
+    },
+    "EBAY": {
+      "status": "ok",
+      "rows": 6985,
+      "start": "1998-09-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EBAY_daily.parquet"
+    },
+    "ECHO": {
+      "status": "ok",
+      "rows": 4654,
+      "start": "2008-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ECHO_daily.parquet"
+    },
+    "ECL": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ECL_daily.parquet"
+    },
+    "EIX": {
+      "status": "ok",
+      "rows": 13404,
+      "start": "1973-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EIX_daily.parquet"
+    },
+    "EW": {
+      "status": "ok",
+      "rows": 6606,
+      "start": "2000-03-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EW_daily.parquet"
+    },
+    "EA": {
+      "status": "ok",
+      "rows": 9263,
+      "start": "1989-09-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EA_daily.parquet"
+    },
+    "ELV": {
+      "status": "ok",
+      "rows": 6207,
+      "start": "2001-10-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ELV_daily.parquet"
+    },
+    "EME": {
+      "status": "ok",
+      "rows": 7922,
+      "start": "1995-01-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EME_daily.parquet"
+    },
+    "EMR": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EMR_daily.parquet"
+    },
+    "ETR": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ETR_daily.parquet"
+    },
+    "EOG": {
+      "status": "ok",
+      "rows": 9253,
+      "start": "1989-10-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EOG_daily.parquet"
+    },
+    "EQT": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EQT_daily.parquet"
+    },
+    "EFX": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EFX_daily.parquet"
+    },
+    "EQIX": {
+      "status": "ok",
+      "rows": 6510,
+      "start": "2000-08-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EQIX_daily.parquet"
+    },
+    "EQR": {
+      "status": "ok",
+      "rows": 8278,
+      "start": "1993-08-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EQR_daily.parquet"
+    },
+    "ERIE": {
+      "status": "ok",
+      "rows": 7738,
+      "start": "1995-10-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ERIE_daily.parquet"
+    },
+    "ESS": {
+      "status": "ok",
+      "rows": 8072,
+      "start": "1994-06-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ESS_daily.parquet"
+    },
+    "EL": {
+      "status": "ok",
+      "rows": 7704,
+      "start": "1995-11-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EL_daily.parquet"
+    },
+    "EG": {
+      "status": "ok",
+      "rows": 7737,
+      "start": "1995-10-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EG_daily.parquet"
+    },
+    "EVRG": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EVRG_daily.parquet"
+    },
+    "ES": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ES_daily.parquet"
+    },
+    "EXC": {
+      "status": "ok",
+      "rows": 13405,
+      "start": "1973-05-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EXC_daily.parquet"
+    },
+    "EXE": {
+      "status": "ok",
+      "rows": 1354,
+      "start": "2021-02-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EXE_daily.parquet"
+    },
+    "EXPE": {
+      "status": "ok",
+      "rows": 5270,
+      "start": "2005-07-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EXPE_daily.parquet"
+    },
+    "EXPD": {
+      "status": "ok",
+      "rows": 10522,
+      "start": "1984-09-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EXPD_daily.parquet"
+    },
+    "EXR": {
+      "status": "ok",
+      "rows": 5505,
+      "start": "2004-08-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EXR_daily.parquet"
+    },
+    "XOM": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\XOM_daily.parquet"
+    },
+    "FFIV": {
+      "status": "ok",
+      "rows": 6811,
+      "start": "1999-06-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FFIV_daily.parquet"
+    },
+    "FDS": {
+      "status": "ok",
+      "rows": 7550,
+      "start": "1996-06-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FDS_daily.parquet"
+    },
+    "FICO": {
+      "status": "ok",
+      "rows": 9811,
+      "start": "1987-07-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FICO_daily.parquet"
+    },
+    "FAST": {
+      "status": "ok",
+      "rows": 9790,
+      "start": "1987-08-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FAST_daily.parquet"
+    },
+    "FRT": {
+      "status": "ok",
+      "rows": 13404,
+      "start": "1973-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FRT_daily.parquet"
+    },
+    "FDX": {
+      "status": "ok",
+      "rows": 12156,
+      "start": "1978-04-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FDX_daily.parquet"
+    },
+    "FDXF": {
+      "status": "ok",
+      "rows": 26,
+      "start": "2026-05-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FDXF_daily.parquet"
+    },
+    "FIS": {
+      "status": "ok",
+      "rows": 6295,
+      "start": "2001-06-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FIS_daily.parquet"
+    },
+    "FITB": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FITB_daily.parquet"
+    },
+    "FSLR": {
+      "status": "ok",
+      "rows": 4934,
+      "start": "2006-11-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FSLR_daily.parquet"
+    },
+    "FE": {
+      "status": "ok",
+      "rows": 7204,
+      "start": "1997-11-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FE_daily.parquet"
+    },
+    "FISV": {
+      "status": "ok",
+      "rows": 10017,
+      "start": "1986-09-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FISV_daily.parquet"
+    },
+    "FLEX": {
+      "status": "ok",
+      "rows": 8126,
+      "start": "1994-03-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FLEX_daily.parquet"
+    },
+    "F": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\F_daily.parquet"
+    },
+    "FTNT": {
+      "status": "ok",
+      "rows": 4179,
+      "start": "2009-11-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FTNT_daily.parquet"
+    },
+    "FTV": {
+      "status": "ok",
+      "rows": 2513,
+      "start": "2016-07-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FTV_daily.parquet"
+    },
+    "FOXA": {
+      "status": "ok",
+      "rows": 1838,
+      "start": "2019-03-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FOXA_daily.parquet"
+    },
+    "FOX": {
+      "status": "ok",
+      "rows": 1837,
+      "start": "2019-03-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FOX_daily.parquet"
+    },
+    "BEN": {
+      "status": "ok",
+      "rows": 10777,
+      "start": "1983-09-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BEN_daily.parquet"
+    },
+    "FCX": {
+      "status": "ok",
+      "rows": 7797,
+      "start": "1995-07-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FCX_daily.parquet"
+    },
+    "GRMN": {
+      "status": "ok",
+      "rows": 6427,
+      "start": "2000-12-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GRMN_daily.parquet"
+    },
+    "IT": {
+      "status": "ok",
+      "rows": 8241,
+      "start": "1993-10-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IT_daily.parquet"
+    },
+    "GE": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GE_daily.parquet"
+    },
+    "GEHC": {
+      "status": "ok",
+      "rows": 888,
+      "start": "2022-12-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GEHC_daily.parquet"
+    },
+    "GEV": {
+      "status": "ok",
+      "rows": 568,
+      "start": "2024-03-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GEV_daily.parquet"
+    },
+    "GEN": {
+      "status": "ok",
+      "rows": 9324,
+      "start": "1989-06-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GEN_daily.parquet"
+    },
+    "GNRC": {
+      "status": "ok",
+      "rows": 4122,
+      "start": "2010-02-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GNRC_daily.parquet"
+    },
+    "GD": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GD_daily.parquet"
+    },
+    "GIS": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GIS_daily.parquet"
+    },
+    "GM": {
+      "status": "ok",
+      "rows": 3927,
+      "start": "2010-11-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GM_daily.parquet"
+    },
+    "GPC": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GPC_daily.parquet"
+    },
+    "GILD": {
+      "status": "ok",
+      "rows": 8672,
+      "start": "1992-01-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GILD_daily.parquet"
+    },
+    "GPN": {
+      "status": "ok",
+      "rows": 6403,
+      "start": "2001-01-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GPN_daily.parquet"
+    },
+    "GL": {
+      "status": "ok",
+      "rows": 11530,
+      "start": "1980-10-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GL_daily.parquet"
+    },
+    "GDDY": {
+      "status": "ok",
+      "rows": 2831,
+      "start": "2015-03-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GDDY_daily.parquet"
+    },
+    "GS": {
+      "status": "ok",
+      "rows": 6833,
+      "start": "1999-05-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GS_daily.parquet"
+    },
+    "HAL": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HAL_daily.parquet"
+    },
+    "HIG": {
+      "status": "ok",
+      "rows": 7685,
+      "start": "1995-12-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HIG_daily.parquet"
+    },
+    "HAS": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HAS_daily.parquet"
+    },
+    "HCA": {
+      "status": "ok",
+      "rows": 3851,
+      "start": "2011-03-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HCA_daily.parquet"
+    },
+    "DOC": {
+      "status": "ok",
+      "rows": 10356,
+      "start": "1985-05-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DOC_daily.parquet"
+    },
+    "HSIC": {
+      "status": "ok",
+      "rows": 7714,
+      "start": "1995-11-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HSIC_daily.parquet"
+    },
+    "HSY": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HSY_daily.parquet"
+    },
+    "HPE": {
+      "status": "ok",
+      "rows": 2691,
+      "start": "2015-10-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HPE_daily.parquet"
+    },
+    "HLT": {
+      "status": "ok",
+      "rows": 3156,
+      "start": "2013-12-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HLT_daily.parquet"
+    },
+    "HD": {
+      "status": "ok",
+      "rows": 11285,
+      "start": "1981-09-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HD_daily.parquet"
+    },
+    "HONA": {
+      "status": "ok",
+      "rows": 13,
+      "start": "2026-06-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HONA_daily.parquet"
+    },
+    "HON": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HON_daily.parquet"
+    },
+    "HRL": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HRL_daily.parquet"
+    },
+    "HST": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HST_daily.parquet"
+    },
+    "HWM": {
+      "status": "ok",
+      "rows": 2429,
+      "start": "2016-11-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HWM_daily.parquet"
+    },
+    "HPQ": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HPQ_daily.parquet"
+    },
+    "HUBB": {
+      "status": "ok",
+      "rows": 13512,
+      "start": "1972-06-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HUBB_daily.parquet"
+    },
+    "HUM": {
+      "status": "ok",
+      "rows": 11215,
+      "start": "1981-12-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HUM_daily.parquet"
+    },
+    "HBAN": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HBAN_daily.parquet"
+    },
+    "HII": {
+      "status": "ok",
+      "rows": 3843,
+      "start": "2011-03-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HII_daily.parquet"
+    },
+    "IBM": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IBM_daily.parquet"
+    },
+    "IEX": {
+      "status": "ok",
+      "rows": 9339,
+      "start": "1989-06-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IEX_daily.parquet"
+    },
+    "IDXX": {
+      "status": "ok",
+      "rows": 8820,
+      "start": "1991-06-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IDXX_daily.parquet"
+    },
+    "ITW": {
+      "status": "ok",
+      "rows": 13440,
+      "start": "1973-03-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ITW_daily.parquet"
+    },
+    "INCY": {
+      "status": "ok",
+      "rows": 8219,
+      "start": "1993-11-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\INCY_daily.parquet"
+    },
+    "IR": {
+      "status": "ok",
+      "rows": 2297,
+      "start": "2017-05-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IR_daily.parquet"
+    },
+    "PODD": {
+      "status": "ok",
+      "rows": 4814,
+      "start": "2007-05-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PODD_daily.parquet"
+    },
+    "INTC": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\INTC_daily.parquet"
+    },
+    "IBKR": {
+      "status": "ok",
+      "rows": 4821,
+      "start": "2007-05-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IBKR_daily.parquet"
+    },
+    "ICE": {
+      "status": "ok",
+      "rows": 5187,
+      "start": "2005-11-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ICE_daily.parquet"
+    },
+    "IFF": {
+      "status": "ok",
+      "rows": 12993,
+      "start": "1974-12-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IFF_daily.parquet"
+    },
+    "IP": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IP_daily.parquet"
+    },
+    "INTU": {
+      "status": "ok",
+      "rows": 8384,
+      "start": "1993-03-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\INTU_daily.parquet"
+    },
+    "ISRG": {
+      "status": "ok",
+      "rows": 6549,
+      "start": "2000-06-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ISRG_daily.parquet"
+    },
+    "IVZ": {
+      "status": "ok",
+      "rows": 7763,
+      "start": "1995-08-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IVZ_daily.parquet"
+    },
+    "INVH": {
+      "status": "ok",
+      "rows": 2367,
+      "start": "2017-02-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\INVH_daily.parquet"
+    },
+    "IQV": {
+      "status": "ok",
+      "rows": 3307,
+      "start": "2013-05-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IQV_daily.parquet"
+    },
+    "IRM": {
+      "status": "ok",
+      "rows": 7653,
+      "start": "1996-02-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IRM_daily.parquet"
+    },
+    "JBHT": {
+      "status": "ok",
+      "rows": 10735,
+      "start": "1983-11-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\JBHT_daily.parquet"
+    },
+    "JBL": {
+      "status": "ok",
+      "rows": 8349,
+      "start": "1993-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\JBL_daily.parquet"
+    },
+    "JKHY": {
+      "status": "ok",
+      "rows": 10231,
+      "start": "1985-11-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\JKHY_daily.parquet"
+    },
+    "J": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\J_daily.parquet"
+    },
+    "JNJ": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\JNJ_daily.parquet"
+    },
+    "JCI": {
+      "status": "ok",
+      "rows": 9764,
+      "start": "1987-09-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\JCI_daily.parquet"
+    },
+    "KVUE": {
+      "status": "ok",
+      "rows": 793,
+      "start": "2023-05-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KVUE_daily.parquet"
+    },
+    "KDP": {
+      "status": "ok",
+      "rows": 4567,
+      "start": "2008-05-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KDP_daily.parquet"
+    },
+    "KEY": {
+      "status": "ok",
+      "rows": 9736,
+      "start": "1987-11-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KEY_daily.parquet"
+    },
+    "KEYS": {
+      "status": "ok",
+      "rows": 2942,
+      "start": "2014-10-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KEYS_daily.parquet"
+    },
+    "KMB": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KMB_daily.parquet"
+    },
+    "KIM": {
+      "status": "ok",
+      "rows": 8712,
+      "start": "1991-11-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KIM_daily.parquet"
+    },
+    "KMI": {
+      "status": "ok",
+      "rows": 3869,
+      "start": "2011-02-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KMI_daily.parquet"
+    },
+    "KKR": {
+      "status": "ok",
+      "rows": 4016,
+      "start": "2010-07-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KKR_daily.parquet"
+    },
+    "KLAC": {
+      "status": "ok",
+      "rows": 11525,
+      "start": "1980-10-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KLAC_daily.parquet"
+    },
+    "KHC": {
+      "status": "ok",
+      "rows": 2765,
+      "start": "2015-07-06",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KHC_daily.parquet"
+    },
+    "KR": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KR_daily.parquet"
+    },
+    "LHX": {
+      "status": "ok",
+      "rows": 11215,
+      "start": "1981-12-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LHX_daily.parquet"
+    },
+    "LH": {
+      "status": "ok",
+      "rows": 9131,
+      "start": "1990-03-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LH_daily.parquet"
+    },
+    "LRCX": {
+      "status": "ok",
+      "rows": 10622,
+      "start": "1984-05-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LRCX_daily.parquet"
+    },
+    "LVS": {
+      "status": "ok",
+      "rows": 5420,
+      "start": "2004-12-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LVS_daily.parquet"
+    },
+    "LDOS": {
+      "status": "ok",
+      "rows": 4957,
+      "start": "2006-10-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LDOS_daily.parquet"
+    },
+    "LEN": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LEN_daily.parquet"
+    },
+    "LII": {
+      "status": "ok",
+      "rows": 6773,
+      "start": "1999-07-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LII_daily.parquet"
+    },
+    "LLY": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LLY_daily.parquet"
+    },
+    "LIN": {
+      "status": "ok",
+      "rows": 8570,
+      "start": "1992-06-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LIN_daily.parquet"
+    },
+    "LYV": {
+      "status": "ok",
+      "rows": 5163,
+      "start": "2005-12-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LYV_daily.parquet"
+    },
+    "LMT": {
+      "status": "ok",
+      "rows": 16232,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LMT_daily.parquet"
+    },
+    "L": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\L_daily.parquet"
+    },
+    "LOW": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LOW_daily.parquet"
+    },
+    "LULU": {
+      "status": "ok",
+      "rows": 4763,
+      "start": "2007-07-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LULU_daily.parquet"
+    },
+    "LITE": {
+      "status": "ok",
+      "rows": 2752,
+      "start": "2015-07-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LITE_daily.parquet"
+    },
+    "LYB": {
+      "status": "ok",
+      "rows": 4070,
+      "start": "2010-04-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LYB_daily.parquet"
+    },
+    "MTB": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MTB_daily.parquet"
+    },
+    "MPC": {
+      "status": "ok",
+      "rows": 3777,
+      "start": "2011-06-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MPC_daily.parquet"
+    },
+    "MAR": {
+      "status": "ok",
+      "rows": 7114,
+      "start": "1998-03-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MAR_daily.parquet"
+    },
+    "MRSH": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MRSH_daily.parquet"
+    },
+    "MLM": {
+      "status": "ok",
+      "rows": 8146,
+      "start": "1994-02-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MLM_daily.parquet"
+    },
+    "MRVL": {
+      "status": "ok",
+      "rows": 6539,
+      "start": "2000-06-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MRVL_daily.parquet"
+    },
+    "MAS": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MAS_daily.parquet"
+    },
+    "MA": {
+      "status": "ok",
+      "rows": 5057,
+      "start": "2006-05-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MA_daily.parquet"
+    },
+    "MKC": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MKC_daily.parquet"
+    },
+    "MCD": {
+      "status": "ok",
+      "rows": 15098,
+      "start": "1966-07-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MCD_daily.parquet"
+    },
+    "MCK": {
+      "status": "ok",
+      "rows": 7962,
+      "start": "1994-11-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MCK_daily.parquet"
+    },
+    "MDT": {
+      "status": "ok",
+      "rows": 13405,
+      "start": "1973-05-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MDT_daily.parquet"
+    },
+    "MRK": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MRK_daily.parquet"
+    },
+    "META": {
+      "status": "ok",
+      "rows": 3550,
+      "start": "2012-05-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\META_daily.parquet"
+    },
+    "MET": {
+      "status": "ok",
+      "rows": 6599,
+      "start": "2000-04-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MET_daily.parquet"
+    },
+    "MTD": {
+      "status": "ok",
+      "rows": 7200,
+      "start": "1997-11-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MTD_daily.parquet"
+    },
+    "MGM": {
+      "status": "ok",
+      "rows": 9614,
+      "start": "1988-05-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MGM_daily.parquet"
+    },
+    "MCHP": {
+      "status": "ok",
+      "rows": 8379,
+      "start": "1993-03-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MCHP_daily.parquet"
+    },
+    "MU": {
+      "status": "ok",
+      "rows": 10603,
+      "start": "1984-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MU_daily.parquet"
+    },
+    "MAA": {
+      "status": "ok",
+      "rows": 8160,
+      "start": "1994-01-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MAA_daily.parquet"
+    },
+    "MRNA": {
+      "status": "ok",
+      "rows": 1901,
+      "start": "2018-12-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MRNA_daily.parquet"
+    },
+    "TAP": {
+      "status": "ok",
+      "rows": 12871,
+      "start": "1975-06-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TAP_daily.parquet"
+    },
+    "MDLZ": {
+      "status": "ok",
+      "rows": 6300,
+      "start": "2001-06-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MDLZ_daily.parquet"
+    },
+    "MPWR": {
+      "status": "ok",
+      "rows": 5437,
+      "start": "2004-11-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MPWR_daily.parquet"
+    },
+    "MNST": {
+      "status": "ok",
+      "rows": 10219,
+      "start": "1985-12-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MNST_daily.parquet"
+    },
+    "MCO": {
+      "status": "ok",
+      "rows": 7970,
+      "start": "1994-10-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MCO_daily.parquet"
+    },
+    "MS": {
+      "status": "ok",
+      "rows": 8397,
+      "start": "1993-02-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MS_daily.parquet"
+    },
+    "MOS": {
+      "status": "ok",
+      "rows": 9681,
+      "start": "1988-01-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MOS_daily.parquet"
+    },
+    "MSI": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MSI_daily.parquet"
+    },
+    "MSCI": {
+      "status": "ok",
+      "rows": 4685,
+      "start": "2007-11-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MSCI_daily.parquet"
+    },
+    "NDAQ": {
+      "status": "ok",
+      "rows": 6040,
+      "start": "2002-07-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NDAQ_daily.parquet"
+    },
+    "NTAP": {
+      "status": "ok",
+      "rows": 7702,
+      "start": "1995-11-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NTAP_daily.parquet"
+    },
+    "NFLX": {
+      "status": "ok",
+      "rows": 6066,
+      "start": "2002-05-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NFLX_daily.parquet"
+    },
+    "NEM": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NEM_daily.parquet"
+    },
+    "NWSA": {
+      "status": "ok",
+      "rows": 3279,
+      "start": "2013-06-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NWSA_daily.parquet"
+    },
+    "NWS": {
+      "status": "ok",
+      "rows": 3279,
+      "start": "2013-06-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NWS_daily.parquet"
+    },
+    "NEE": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NEE_daily.parquet"
+    },
+    "NKE": {
+      "status": "ok",
+      "rows": 11488,
+      "start": "1980-12-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NKE_daily.parquet"
+    },
+    "NI": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NI_daily.parquet"
+    },
+    "NDSN": {
+      "status": "ok",
+      "rows": 11667,
+      "start": "1980-03-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NDSN_daily.parquet"
+    },
+    "NSC": {
+      "status": "ok",
+      "rows": 11110,
+      "start": "1982-06-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NSC_daily.parquet"
+    },
+    "NTRS": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NTRS_daily.parquet"
+    },
+    "NOC": {
+      "status": "ok",
+      "rows": 11215,
+      "start": "1981-12-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NOC_daily.parquet"
+    },
+    "NCLH": {
+      "status": "ok",
+      "rows": 3383,
+      "start": "2013-01-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NCLH_daily.parquet"
+    },
+    "NRG": {
+      "status": "ok",
+      "rows": 5681,
+      "start": "2003-12-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NRG_daily.parquet"
+    },
+    "NUE": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NUE_daily.parquet"
+    },
+    "NVR": {
+      "status": "ok",
+      "rows": 10316,
+      "start": "1985-07-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NVR_daily.parquet"
+    },
+    "NXPI": {
+      "status": "ok",
+      "rows": 4000,
+      "start": "2010-08-06",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NXPI_daily.parquet"
+    },
+    "ORLY": {
+      "status": "ok",
+      "rows": 8355,
+      "start": "1993-04-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ORLY_daily.parquet"
+    },
+    "OXY": {
+      "status": "ok",
+      "rows": 11215,
+      "start": "1981-12-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OXY_daily.parquet"
+    },
+    "ODFL": {
+      "status": "ok",
+      "rows": 8733,
+      "start": "1991-10-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ODFL_daily.parquet"
+    },
+    "OMC": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OMC_daily.parquet"
+    },
+    "ON": {
+      "status": "ok",
+      "rows": 6581,
+      "start": "2000-05-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ON_daily.parquet"
+    },
+    "OKE": {
+      "status": "ok",
+      "rows": 11530,
+      "start": "1980-10-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OKE_daily.parquet"
+    },
+    "ORCL": {
+      "status": "ok",
+      "rows": 10155,
+      "start": "1986-03-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ORCL_daily.parquet"
+    },
+    "OTIS": {
+      "status": "ok",
+      "rows": 1580,
+      "start": "2020-03-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OTIS_daily.parquet"
+    },
+    "PCAR": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PCAR_daily.parquet"
+    },
+    "PKG": {
+      "status": "ok",
+      "rows": 6646,
+      "start": "2000-01-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PKG_daily.parquet"
+    },
+    "PLTR": {
+      "status": "ok",
+      "rows": 1445,
+      "start": "2020-09-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PLTR_daily.parquet"
+    },
+    "PANW": {
+      "status": "ok",
+      "rows": 3507,
+      "start": "2012-07-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PANW_daily.parquet"
+    },
+    "PSKY": {
+      "status": "ok",
+      "rows": 5175,
+      "start": "2005-12-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PSKY_daily.parquet"
+    },
+    "PH": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PH_daily.parquet"
+    },
+    "PAYX": {
+      "status": "ok",
+      "rows": 10796,
+      "start": "1983-08-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PAYX_daily.parquet"
+    },
+    "PYPL": {
+      "status": "ok",
+      "rows": 2765,
+      "start": "2015-07-06",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PYPL_daily.parquet"
+    },
+    "PNR": {
+      "status": "ok",
+      "rows": 13404,
+      "start": "1973-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PNR_daily.parquet"
+    },
+    "PEP": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PEP_daily.parquet"
+    },
+    "PFE": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PFE_daily.parquet"
+    },
+    "PCG": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PCG_daily.parquet"
+    },
+    "PM": {
+      "status": "ok",
+      "rows": 4603,
+      "start": "2008-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PM_daily.parquet"
+    },
+    "PSX": {
+      "status": "ok",
+      "rows": 3576,
+      "start": "2012-04-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PSX_daily.parquet"
+    },
+    "PNW": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PNW_daily.parquet"
+    },
+    "PNC": {
+      "status": "ok",
+      "rows": 12761,
+      "start": "1975-11-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PNC_daily.parquet"
+    },
+    "PPG": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PPG_daily.parquet"
+    },
+    "PPL": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PPL_daily.parquet"
+    },
+    "PFG": {
+      "status": "ok",
+      "rows": 6212,
+      "start": "2001-10-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PFG_daily.parquet"
+    },
+    "PG": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PG_daily.parquet"
+    },
+    "PGR": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PGR_daily.parquet"
+    },
+    "PLD": {
+      "status": "ok",
+      "rows": 7195,
+      "start": "1997-11-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PLD_daily.parquet"
+    },
+    "PRU": {
+      "status": "ok",
+      "rows": 6176,
+      "start": "2001-12-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PRU_daily.parquet"
+    },
+    "PEG": {
+      "status": "ok",
+      "rows": 11720,
+      "start": "1980-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PEG_daily.parquet"
+    },
+    "PTC": {
+      "status": "ok",
+      "rows": 9207,
+      "start": "1989-12-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PTC_daily.parquet"
+    },
+    "PSA": {
+      "status": "ok",
+      "rows": 11497,
+      "start": "1980-11-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PSA_daily.parquet"
+    },
+    "PHM": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PHM_daily.parquet"
+    },
+    "PWR": {
+      "status": "ok",
+      "rows": 7140,
+      "start": "1998-02-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PWR_daily.parquet"
+    },
+    "QCOM": {
+      "status": "ok",
+      "rows": 8698,
+      "start": "1991-12-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\QCOM_daily.parquet"
+    },
+    "DGX": {
+      "status": "ok",
+      "rows": 7431,
+      "start": "1996-12-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DGX_daily.parquet"
+    },
+    "Q": {
+      "status": "ok",
+      "rows": 171,
+      "start": "2025-10-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\Q_daily.parquet"
+    },
+    "RL": {
+      "status": "ok",
+      "rows": 7309,
+      "start": "1997-06-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RL_daily.parquet"
+    },
+    "RJF": {
+      "status": "ok",
+      "rows": 10835,
+      "start": "1983-07-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RJF_daily.parquet"
+    },
+    "RTX": {
+      "status": "ok",
+      "rows": 16170,
+      "start": "1962-04-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RTX_daily.parquet"
+    },
+    "O": {
+      "status": "ok",
+      "rows": 7979,
+      "start": "1994-10-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\O_daily.parquet"
+    },
+    "REG": {
+      "status": "ok",
+      "rows": 8223,
+      "start": "1993-10-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\REG_daily.parquet"
+    },
+    "REGN": {
+      "status": "ok",
+      "rows": 8877,
+      "start": "1991-04-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\REGN_daily.parquet"
+    },
+    "RF": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RF_daily.parquet"
+    },
+    "RSG": {
+      "status": "ok",
+      "rows": 7044,
+      "start": "1998-07-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RSG_daily.parquet"
+    },
+    "RMD": {
+      "status": "ok",
+      "rows": 7822,
+      "start": "1995-06-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RMD_daily.parquet"
+    },
+    "RVTY": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RVTY_daily.parquet"
+    },
+    "HOOD": {
+      "status": "ok",
+      "rows": 1237,
+      "start": "2021-07-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HOOD_daily.parquet"
+    },
+    "ROK": {
+      "status": "ok",
+      "rows": 11215,
+      "start": "1981-12-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ROK_daily.parquet"
+    },
+    "ROL": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ROL_daily.parquet"
+    },
+    "ROP": {
+      "status": "ok",
+      "rows": 8656,
+      "start": "1992-02-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ROP_daily.parquet"
+    },
+    "ROST": {
+      "status": "ok",
+      "rows": 10303,
+      "start": "1985-08-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ROST_daily.parquet"
+    },
+    "RCL": {
+      "status": "ok",
+      "rows": 8352,
+      "start": "1993-04-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RCL_daily.parquet"
+    },
+    "SPGI": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SPGI_daily.parquet"
+    },
+    "CRM": {
+      "status": "ok",
+      "rows": 5542,
+      "start": "2004-06-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CRM_daily.parquet"
+    },
+    "SNDK": {
+      "status": "ok",
+      "rows": 347,
+      "start": "2025-02-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SNDK_daily.parquet"
+    },
+    "SBAC": {
+      "status": "ok",
+      "rows": 6803,
+      "start": "1999-06-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SBAC_daily.parquet"
+    },
+    "SLB": {
+      "status": "ok",
+      "rows": 11215,
+      "start": "1981-12-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SLB_daily.parquet"
+    },
+    "STX": {
+      "status": "ok",
+      "rows": 5926,
+      "start": "2002-12-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\STX_daily.parquet"
+    },
+    "SRE": {
+      "status": "ok",
+      "rows": 7046,
+      "start": "1998-06-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SRE_daily.parquet"
+    },
+    "NOW": {
+      "status": "ok",
+      "rows": 3521,
+      "start": "2012-06-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NOW_daily.parquet"
+    },
+    "SHW": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SHW_daily.parquet"
+    },
+    "SPG": {
+      "status": "ok",
+      "rows": 8192,
+      "start": "1993-12-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SPG_daily.parquet"
+    },
+    "SWKS": {
+      "status": "ok",
+      "rows": 10535,
+      "start": "1984-09-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SWKS_daily.parquet"
+    },
+    "SJM": {
+      "status": "ok",
+      "rows": 7970,
+      "start": "1994-10-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SJM_daily.parquet"
+    },
+    "SW": {
+      "status": "ok",
+      "rows": 4539,
+      "start": "2008-06-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SW_daily.parquet"
+    },
+    "SNA": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SNA_daily.parquet"
+    },
+    "SOLV": {
+      "status": "ok",
+      "rows": 569,
+      "start": "2024-03-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SOLV_daily.parquet"
+    },
+    "SO": {
+      "status": "ok",
+      "rows": 11215,
+      "start": "1981-12-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SO_daily.parquet"
+    },
+    "LUV": {
+      "status": "ok",
+      "rows": 11720,
+      "start": "1980-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LUV_daily.parquet"
+    },
+    "SWK": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SWK_daily.parquet"
+    },
+    "SBUX": {
+      "status": "ok",
+      "rows": 8563,
+      "start": "1992-06-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SBUX_daily.parquet"
+    },
+    "STT": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\STT_daily.parquet"
+    },
+    "STLD": {
+      "status": "ok",
+      "rows": 7447,
+      "start": "1996-11-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\STLD_daily.parquet"
+    },
+    "STE": {
+      "status": "ok",
+      "rows": 8582,
+      "start": "1992-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\STE_daily.parquet"
+    },
+    "SYK": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SYK_daily.parquet"
+    },
+    "SMCI": {
+      "status": "ok",
+      "rows": 4846,
+      "start": "2007-03-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SMCI_daily.parquet"
+    },
+    "SYF": {
+      "status": "ok",
+      "rows": 2998,
+      "start": "2014-07-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SYF_daily.parquet"
+    },
+    "SNPS": {
+      "status": "ok",
+      "rows": 8648,
+      "start": "1992-02-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SNPS_daily.parquet"
+    },
+    "SYY": {
+      "status": "ok",
+      "rows": 13401,
+      "start": "1973-05-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SYY_daily.parquet"
+    },
+    "TMUS": {
+      "status": "ok",
+      "rows": 4832,
+      "start": "2007-04-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TMUS_daily.parquet"
+    },
+    "TROW": {
+      "status": "ok",
+      "rows": 10141,
+      "start": "1986-04-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TROW_daily.parquet"
+    },
+    "TTWO": {
+      "status": "ok",
+      "rows": 7350,
+      "start": "1997-04-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TTWO_daily.parquet"
+    },
+    "TPR": {
+      "status": "ok",
+      "rows": 6471,
+      "start": "2000-10-06",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TPR_daily.parquet"
+    },
+    "TRGP": {
+      "status": "ok",
+      "rows": 3915,
+      "start": "2010-12-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TRGP_daily.parquet"
+    },
+    "TGT": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TGT_daily.parquet"
+    },
+    "TEL": {
+      "status": "ok",
+      "rows": 4793,
+      "start": "2007-06-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TEL_daily.parquet"
+    },
+    "TDY": {
+      "status": "ok",
+      "rows": 6691,
+      "start": "1999-11-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TDY_daily.parquet"
+    },
+    "TER": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TER_daily.parquet"
+    },
+    "TSLA": {
+      "status": "ok",
+      "rows": 4027,
+      "start": "2010-06-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TSLA_daily.parquet"
+    },
+    "TXN": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TXN_daily.parquet"
+    },
+    "TPL": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TPL_daily.parquet"
+    },
+    "TXT": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TXT_daily.parquet"
+    },
+    "TMO": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TMO_daily.parquet"
+    },
+    "TJX": {
+      "status": "ok",
+      "rows": 9828,
+      "start": "1987-06-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TJX_daily.parquet"
+    },
+    "TKO": {
+      "status": "ok",
+      "rows": 6716,
+      "start": "1999-10-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TKO_daily.parquet"
+    },
+    "TTD": {
+      "status": "ok",
+      "rows": 2458,
+      "start": "2016-09-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TTD_daily.parquet"
+    },
+    "TSCO": {
+      "status": "ok",
+      "rows": 8146,
+      "start": "1994-02-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TSCO_daily.parquet"
+    },
+    "TT": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TT_daily.parquet"
+    },
+    "TDG": {
+      "status": "ok",
+      "rows": 5107,
+      "start": "2006-03-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TDG_daily.parquet"
+    },
+    "TRV": {
+      "status": "ok",
+      "rows": 12761,
+      "start": "1975-11-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TRV_daily.parquet"
+    },
+    "TRMB": {
+      "status": "ok",
+      "rows": 9053,
+      "start": "1990-07-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TRMB_daily.parquet"
+    },
+    "TFC": {
+      "status": "ok",
+      "rows": 11667,
+      "start": "1980-03-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TFC_daily.parquet"
+    },
+    "TYL": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TYL_daily.parquet"
+    },
+    "TSN": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TSN_daily.parquet"
+    },
+    "USB": {
+      "status": "ok",
+      "rows": 13404,
+      "start": "1973-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\USB_daily.parquet"
+    },
+    "UBER": {
+      "status": "ok",
+      "rows": 1796,
+      "start": "2019-05-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\UBER_daily.parquet"
+    },
+    "UDR": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\UDR_daily.parquet"
+    },
+    "ULTA": {
+      "status": "ok",
+      "rows": 4700,
+      "start": "2007-10-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ULTA_daily.parquet"
+    },
+    "UNP": {
+      "status": "ok",
+      "rows": 11720,
+      "start": "1980-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\UNP_daily.parquet"
+    },
+    "UAL": {
+      "status": "ok",
+      "rows": 5133,
+      "start": "2006-02-06",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\UAL_daily.parquet"
+    },
+    "UPS": {
+      "status": "ok",
+      "rows": 6700,
+      "start": "1999-11-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\UPS_daily.parquet"
+    },
+    "URI": {
+      "status": "ok",
+      "rows": 7177,
+      "start": "1997-12-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\URI_daily.parquet"
+    },
+    "UNH": {
+      "status": "ok",
+      "rows": 10507,
+      "start": "1984-10-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\UNH_daily.parquet"
+    },
+    "UHS": {
+      "status": "ok",
+      "rows": 11337,
+      "start": "1981-07-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\UHS_daily.parquet"
+    },
+    "VLO": {
+      "status": "ok",
+      "rows": 11214,
+      "start": "1982-01-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VLO_daily.parquet"
+    },
+    "VEEV": {
+      "status": "ok",
+      "rows": 3196,
+      "start": "2013-10-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VEEV_daily.parquet"
+    },
+    "VTR": {
+      "status": "ok",
+      "rows": 7336,
+      "start": "1997-05-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VTR_daily.parquet"
+    },
+    "VLTO": {
+      "status": "ok",
+      "rows": 688,
+      "start": "2023-10-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VLTO_daily.parquet"
+    },
+    "VRSN": {
+      "status": "ok",
+      "rows": 7149,
+      "start": "1998-01-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VRSN_daily.parquet"
+    },
+    "VRSK": {
+      "status": "ok",
+      "rows": 4209,
+      "start": "2009-10-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VRSK_daily.parquet"
+    },
+    "VZ": {
+      "status": "ok",
+      "rows": 10736,
+      "start": "1983-11-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VZ_daily.parquet"
+    },
+    "VRTX": {
+      "status": "ok",
+      "rows": 8798,
+      "start": "1991-07-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VRTX_daily.parquet"
+    },
+    "VRT": {
+      "status": "ok",
+      "rows": 1989,
+      "start": "2018-08-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VRT_daily.parquet"
+    },
+    "VTRS": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VTRS_daily.parquet"
+    },
+    "VICI": {
+      "status": "ok",
+      "rows": 2136,
+      "start": "2018-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VICI_daily.parquet"
+    },
+    "V": {
+      "status": "ok",
+      "rows": 4601,
+      "start": "2008-03-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\V_daily.parquet"
+    },
+    "VST": {
+      "status": "ok",
+      "rows": 2448,
+      "start": "2016-10-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VST_daily.parquet"
+    },
+    "VMC": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VMC_daily.parquet"
+    },
+    "WRB": {
+      "status": "ok",
+      "rows": 13284,
+      "start": "1973-10-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WRB_daily.parquet"
+    },
+    "GWW": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GWW_daily.parquet"
+    },
+    "WAB": {
+      "status": "ok",
+      "rows": 7812,
+      "start": "1995-06-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WAB_daily.parquet"
+    },
+    "WMT": {
+      "status": "ok",
+      "rows": 13574,
+      "start": "1972-08-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WMT_daily.parquet"
+    },
+    "DIS": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DIS_daily.parquet"
+    },
+    "WBD": {
+      "status": "ok",
+      "rows": 5279,
+      "start": "2005-07-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WBD_daily.parquet"
+    },
+    "WM": {
+      "status": "ok",
+      "rows": 9578,
+      "start": "1988-06-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WM_daily.parquet"
+    },
+    "WAT": {
+      "status": "ok",
+      "rows": 7704,
+      "start": "1995-11-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WAT_daily.parquet"
+    },
+    "WEC": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WEC_daily.parquet"
+    },
+    "WFC": {
+      "status": "ok",
+      "rows": 13634,
+      "start": "1972-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WFC_daily.parquet"
+    },
+    "WELL": {
+      "status": "ok",
+      "rows": 11666,
+      "start": "1980-03-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WELL_daily.parquet"
+    },
+    "WST": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WST_daily.parquet"
+    },
+    "WDC": {
+      "status": "ok",
+      "rows": 12015,
+      "start": "1978-10-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WDC_daily.parquet"
+    },
+    "WY": {
+      "status": "ok",
+      "rows": 13404,
+      "start": "1973-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WY_daily.parquet"
+    },
+    "WSM": {
+      "status": "ok",
+      "rows": 10832,
+      "start": "1983-07-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WSM_daily.parquet"
+    },
+    "WMB": {
+      "status": "ok",
+      "rows": 11215,
+      "start": "1981-12-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WMB_daily.parquet"
+    },
+    "WTW": {
+      "status": "ok",
+      "rows": 6301,
+      "start": "2001-06-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WTW_daily.parquet"
+    },
+    "WDAY": {
+      "status": "ok",
+      "rows": 3448,
+      "start": "2012-10-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WDAY_daily.parquet"
+    },
+    "WYNN": {
+      "status": "ok",
+      "rows": 5958,
+      "start": "2002-10-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WYNN_daily.parquet"
+    },
+    "XEL": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\XEL_daily.parquet"
+    },
+    "XYL": {
+      "status": "ok",
+      "rows": 3700,
+      "start": "2011-10-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\XYL_daily.parquet"
+    },
+    "YUM": {
+      "status": "ok",
+      "rows": 7242,
+      "start": "1997-09-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\YUM_daily.parquet"
+    },
+    "ZBRA": {
+      "status": "ok",
+      "rows": 8782,
+      "start": "1991-08-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ZBRA_daily.parquet"
+    },
+    "ZBH": {
+      "status": "ok",
+      "rows": 6271,
+      "start": "2001-07-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ZBH_daily.parquet"
+    },
+    "ZTS": {
+      "status": "ok",
+      "rows": 3374,
+      "start": "2013-02-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ZTS_daily.parquet"
+    },
+    "AA": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AA_daily.parquet"
+    },
+    "AAL": {
+      "status": "ok",
+      "rows": 5223,
+      "start": "2005-09-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AAL_daily.parquet"
+    },
+    "AAON": {
+      "status": "ok",
+      "rows": 8443,
+      "start": "1992-12-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AAON_daily.parquet"
+    },
+    "ACI": {
+      "status": "ok",
+      "rows": 1511,
+      "start": "2020-06-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ACI_daily.parquet"
+    },
+    "ACM": {
+      "status": "ok",
+      "rows": 4817,
+      "start": "2007-05-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ACM_daily.parquet"
+    },
+    "ADC": {
+      "status": "ok",
+      "rows": 8107,
+      "start": "1994-04-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ADC_daily.parquet"
+    },
+    "AEIS": {
+      "status": "ok",
+      "rows": 7704,
+      "start": "1995-11-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AEIS_daily.parquet"
+    },
+    "AFG": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AFG_daily.parquet"
+    },
+    "AGCO": {
+      "status": "ok",
+      "rows": 8612,
+      "start": "1992-04-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AGCO_daily.parquet"
+    },
+    "AHR": {
+      "status": "ok",
+      "rows": 602,
+      "start": "2024-02-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AHR_daily.parquet"
+    },
+    "AIT": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AIT_daily.parquet"
+    },
+    "ALGM": {
+      "status": "ok",
+      "rows": 1424,
+      "start": "2020-10-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ALGM_daily.parquet"
+    },
+    "ALK": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ALK_daily.parquet"
+    },
+    "ALLY": {
+      "status": "ok",
+      "rows": 3126,
+      "start": "2014-01-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ALLY_daily.parquet"
+    },
+    "ALV": {
+      "status": "ok",
+      "rows": 7341,
+      "start": "1997-04-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ALV_daily.parquet"
+    },
+    "AM": {
+      "status": "ok",
+      "rows": 2303,
+      "start": "2017-05-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AM_daily.parquet"
+    },
+    "AMG": {
+      "status": "ok",
+      "rows": 7195,
+      "start": "1997-11-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AMG_daily.parquet"
+    },
+    "AMH": {
+      "status": "ok",
+      "rows": 3249,
+      "start": "2013-08-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AMH_daily.parquet"
+    },
+    "AMKR": {
+      "status": "ok",
+      "rows": 7086,
+      "start": "1998-05-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AMKR_daily.parquet"
+    },
+    "AN": {
+      "status": "ok",
+      "rows": 9101,
+      "start": "1990-05-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AN_daily.parquet"
+    },
+    "ANF": {
+      "status": "ok",
+      "rows": 7488,
+      "start": "1996-09-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ANF_daily.parquet"
+    },
+    "APG": {
+      "status": "ok",
+      "rows": 1552,
+      "start": "2020-04-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\APG_daily.parquet"
+    },
+    "APPF": {
+      "status": "ok",
+      "rows": 2770,
+      "start": "2015-06-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\APPF_daily.parquet"
+    },
+    "AR": {
+      "status": "ok",
+      "rows": 3200,
+      "start": "2013-10-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AR_daily.parquet"
+    },
+    "ARMK": {
+      "status": "ok",
+      "rows": 3156,
+      "start": "2013-12-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ARMK_daily.parquet"
+    },
+    "ARW": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ARW_daily.parquet"
+    },
+    "ARWR": {
+      "status": "ok",
+      "rows": 8190,
+      "start": "1993-12-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ARWR_daily.parquet"
+    },
+    "ASB": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ASB_daily.parquet"
+    },
+    "ASH": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ASH_daily.parquet"
+    },
+    "ATI": {
+      "status": "ok",
+      "rows": 6688,
+      "start": "1999-11-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ATI_daily.parquet"
+    },
+    "ATR": {
+      "status": "ok",
+      "rows": 8355,
+      "start": "1993-04-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ATR_daily.parquet"
+    },
+    "AVAV": {
+      "status": "ok",
+      "rows": 4892,
+      "start": "2007-01-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AVAV_daily.parquet"
+    },
+    "AVNT": {
+      "status": "ok",
+      "rows": 6742,
+      "start": "1999-09-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AVNT_daily.parquet"
+    },
+    "AVT": {
+      "status": "ok",
+      "rows": 13404,
+      "start": "1973-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AVT_daily.parquet"
+    },
+    "AVTR": {
+      "status": "ok",
+      "rows": 1791,
+      "start": "2019-05-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AVTR_daily.parquet"
+    },
+    "AXTA": {
+      "status": "ok",
+      "rows": 2925,
+      "start": "2014-11-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AXTA_daily.parquet"
+    },
+    "AYI": {
+      "status": "ok",
+      "rows": 6184,
+      "start": "2001-12-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\AYI_daily.parquet"
+    },
+    "BAH": {
+      "status": "ok",
+      "rows": 3927,
+      "start": "2010-11-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BAH_daily.parquet"
+    },
+    "BBWI": {
+      "status": "ok",
+      "rows": 11152,
+      "start": "1982-04-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BBWI_daily.parquet"
+    },
+    "BC": {
+      "status": "ok",
+      "rows": 11215,
+      "start": "1981-12-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BC_daily.parquet"
+    },
+    "BCO": {
+      "status": "ok",
+      "rows": 7674,
+      "start": "1996-01-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BCO_daily.parquet"
+    },
+    "BDC": {
+      "status": "ok",
+      "rows": 8205,
+      "start": "1993-11-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BDC_daily.parquet"
+    },
+    "BHF": {
+      "status": "ok",
+      "rows": 2253,
+      "start": "2017-07-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BHF_daily.parquet"
+    },
+    "BILL": {
+      "status": "ok",
+      "rows": 1646,
+      "start": "2019-12-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BILL_daily.parquet"
+    },
+    "BIO": {
+      "status": "ok",
+      "rows": 11681,
+      "start": "1980-02-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BIO_daily.parquet"
+    },
+    "BJ": {
+      "status": "ok",
+      "rows": 2013,
+      "start": "2018-06-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BJ_daily.parquet"
+    },
+    "BKH": {
+      "status": "ok",
+      "rows": 13453,
+      "start": "1973-02-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BKH_daily.parquet"
+    },
+    "BLD": {
+      "status": "ok",
+      "rows": 2775,
+      "start": "2015-06-17",
+      "end": "2026-07-01",
+      "path": "data\\historical\\stocks\\BLD_daily.parquet"
+    },
+    "BMRN": {
+      "status": "ok",
+      "rows": 6776,
+      "start": "1999-07-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BMRN_daily.parquet"
+    },
+    "BRKR": {
+      "status": "ok",
+      "rows": 6515,
+      "start": "2000-08-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BRKR_daily.parquet"
+    },
+    "BROS": {
+      "status": "ok",
+      "rows": 1204,
+      "start": "2021-09-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BROS_daily.parquet"
+    },
+    "BRX": {
+      "status": "ok",
+      "rows": 3186,
+      "start": "2013-10-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BRX_daily.parquet"
+    },
+    "BSY": {
+      "status": "ok",
+      "rows": 1450,
+      "start": "2020-09-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BSY_daily.parquet"
+    },
+    "BURL": {
+      "status": "ok",
+      "rows": 3206,
+      "start": "2013-10-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BURL_daily.parquet"
+    },
+    "BWA": {
+      "status": "ok",
+      "rows": 8277,
+      "start": "1993-08-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BWA_daily.parquet"
+    },
+    "BWXT": {
+      "status": "ok",
+      "rows": 4004,
+      "start": "2010-08-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BWXT_daily.parquet"
+    },
+    "BYD": {
+      "status": "ok",
+      "rows": 8233,
+      "start": "1993-10-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\BYD_daily.parquet"
+    },
+    "CACI": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CACI_daily.parquet"
+    },
+    "CAR": {
+      "status": "ok",
+      "rows": 10784,
+      "start": "1983-09-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CAR_daily.parquet"
+    },
+    "CART": {
+      "status": "ok",
+      "rows": 699,
+      "start": "2023-09-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CART_daily.parquet"
+    },
+    "CAVA": {
+      "status": "ok",
+      "rows": 764,
+      "start": "2023-06-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CAVA_daily.parquet"
+    },
+    "CBSH": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CBSH_daily.parquet"
+    },
+    "CBT": {
+      "status": "ok",
+      "rows": 11506,
+      "start": "1980-11-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CBT_daily.parquet"
+    },
+    "CCK": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CCK_daily.parquet"
+    },
+    "CDE": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CDE_daily.parquet"
+    },
+    "CDP": {
+      "status": "ok",
+      "rows": 8687,
+      "start": "1991-12-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CDP_daily.parquet"
+    },
+    "CELH": {
+      "status": "ok",
+      "rows": 4893,
+      "start": "2007-01-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CELH_daily.parquet"
+    },
+    "CFR": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CFR_daily.parquet"
+    },
+    "CG": {
+      "status": "ok",
+      "rows": 3561,
+      "start": "2012-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CG_daily.parquet"
+    },
+    "CGNX": {
+      "status": "ok",
+      "rows": 9306,
+      "start": "1989-07-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CGNX_daily.parquet"
+    },
+    "CHDN": {
+      "status": "ok",
+      "rows": 8373,
+      "start": "1993-03-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CHDN_daily.parquet"
+    },
+    "CHE": {
+      "status": "ok",
+      "rows": 13404,
+      "start": "1973-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CHE_daily.parquet"
+    },
+    "CHH": {
+      "status": "ok",
+      "rows": 7474,
+      "start": "1996-10-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CHH_daily.parquet"
+    },
+    "CHRD": {
+      "status": "ok",
+      "rows": 4035,
+      "start": "2010-06-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CHRD_daily.parquet"
+    },
+    "CHWY": {
+      "status": "ok",
+      "rows": 1772,
+      "start": "2019-06-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CHWY_daily.parquet"
+    },
+    "CLF": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CLF_daily.parquet"
+    },
+    "CLH": {
+      "status": "ok",
+      "rows": 9723,
+      "start": "1987-11-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CLH_daily.parquet"
+    },
+    "CMC": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CMC_daily.parquet"
+    },
+    "CNH": {
+      "status": "ok",
+      "rows": 3208,
+      "start": "2013-09-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CNH_daily.parquet"
+    },
+    "CNM": {
+      "status": "ok",
+      "rows": 1242,
+      "start": "2021-07-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CNM_daily.parquet"
+    },
+    "CNO": {
+      "status": "ok",
+      "rows": 5739,
+      "start": "2003-09-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CNO_daily.parquet"
+    },
+    "CNX": {
+      "status": "ok",
+      "rows": 6835,
+      "start": "1999-04-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CNX_daily.parquet"
+    },
+    "COKE": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\COKE_daily.parquet"
+    },
+    "COLB": {
+      "status": "ok",
+      "rows": 8571,
+      "start": "1992-06-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\COLB_daily.parquet"
+    },
+    "COLM": {
+      "status": "ok",
+      "rows": 7110,
+      "start": "1998-03-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\COLM_daily.parquet"
+    },
+    "CPRI": {
+      "status": "ok",
+      "rows": 3656,
+      "start": "2011-12-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CPRI_daily.parquet"
+    },
+    "CR": {
+      "status": "ok",
+      "rows": 818,
+      "start": "2023-03-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CR_daily.parquet"
+    },
+    "CRBG": {
+      "status": "ok",
+      "rows": 951,
+      "start": "2022-09-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CRBG_daily.parquet"
+    },
+    "CROX": {
+      "status": "ok",
+      "rows": 5131,
+      "start": "2006-02-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CROX_daily.parquet"
+    },
+    "CRS": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CRS_daily.parquet"
+    },
+    "CRUS": {
+      "status": "ok",
+      "rows": 9334,
+      "start": "1989-06-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CRUS_daily.parquet"
+    },
+    "CSL": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CSL_daily.parquet"
+    },
+    "CTRE": {
+      "status": "ok",
+      "rows": 3042,
+      "start": "2014-05-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CTRE_daily.parquet"
+    },
+    "CUBE": {
+      "status": "ok",
+      "rows": 5457,
+      "start": "2004-10-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CUBE_daily.parquet"
+    },
+    "CUZ": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CUZ_daily.parquet"
+    },
+    "CVLT": {
+      "status": "ok",
+      "rows": 4974,
+      "start": "2006-09-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CVLT_daily.parquet"
+    },
+    "CW": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CW_daily.parquet"
+    },
+    "CXT": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CXT_daily.parquet"
+    },
+    "CYTK": {
+      "status": "ok",
+      "rows": 5578,
+      "start": "2004-04-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\CYTK_daily.parquet"
+    },
+    "DAR": {
+      "status": "ok",
+      "rows": 8006,
+      "start": "1994-09-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DAR_daily.parquet"
+    },
+    "DBX": {
+      "status": "ok",
+      "rows": 2080,
+      "start": "2018-03-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DBX_daily.parquet"
+    },
+    "DCI": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DCI_daily.parquet"
+    },
+    "DINO": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DINO_daily.parquet"
+    },
+    "DKS": {
+      "status": "ok",
+      "rows": 5965,
+      "start": "2002-10-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DKS_daily.parquet"
+    },
+    "DLB": {
+      "status": "ok",
+      "rows": 5376,
+      "start": "2005-02-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DLB_daily.parquet"
+    },
+    "DOCN": {
+      "status": "ok",
+      "rows": 1325,
+      "start": "2021-03-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DOCN_daily.parquet"
+    },
+    "DOCS": {
+      "status": "ok",
+      "rows": 1261,
+      "start": "2021-06-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DOCS_daily.parquet"
+    },
+    "DOCU": {
+      "status": "ok",
+      "rows": 2056,
+      "start": "2018-04-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DOCU_daily.parquet"
+    },
+    "DT": {
+      "status": "ok",
+      "rows": 1739,
+      "start": "2019-08-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DT_daily.parquet"
+    },
+    "DTM": {
+      "status": "ok",
+      "rows": 1256,
+      "start": "2021-07-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DTM_daily.parquet"
+    },
+    "DUOL": {
+      "status": "ok",
+      "rows": 1238,
+      "start": "2021-07-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DUOL_daily.parquet"
+    },
+    "DY": {
+      "status": "ok",
+      "rows": 10602,
+      "start": "1984-06-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\DY_daily.parquet"
+    },
+    "EEFT": {
+      "status": "ok",
+      "rows": 7376,
+      "start": "1997-03-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EEFT_daily.parquet"
+    },
+    "EGP": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EGP_daily.parquet"
+    },
+    "EHC": {
+      "status": "ok",
+      "rows": 10019,
+      "start": "1986-09-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EHC_daily.parquet"
+    },
+    "ELAN": {
+      "status": "ok",
+      "rows": 1955,
+      "start": "2018-09-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ELAN_daily.parquet"
+    },
+    "ELF": {
+      "status": "ok",
+      "rows": 2457,
+      "start": "2016-09-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ELF_daily.parquet"
+    },
+    "ELS": {
+      "status": "ok",
+      "rows": 8395,
+      "start": "1993-02-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ELS_daily.parquet"
+    },
+    "ENS": {
+      "status": "ok",
+      "rows": 5515,
+      "start": "2004-08-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ENS_daily.parquet"
+    },
+    "ENSG": {
+      "status": "ok",
+      "rows": 4689,
+      "start": "2007-11-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ENSG_daily.parquet"
+    },
+    "ENTG": {
+      "status": "ok",
+      "rows": 6533,
+      "start": "2000-07-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ENTG_daily.parquet"
+    },
+    "EPR": {
+      "status": "ok",
+      "rows": 7198,
+      "start": "1997-11-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EPR_daily.parquet"
+    },
+    "EQH": {
+      "status": "ok",
+      "rows": 2047,
+      "start": "2018-05-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EQH_daily.parquet"
+    },
+    "ESAB": {
+      "status": "ok",
+      "rows": 1069,
+      "start": "2022-03-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ESAB_daily.parquet"
+    },
+    "ESNT": {
+      "status": "ok",
+      "rows": 3185,
+      "start": "2013-10-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ESNT_daily.parquet"
+    },
+    "EVR": {
+      "status": "ok",
+      "rows": 5002,
+      "start": "2006-08-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EVR_daily.parquet"
+    },
+    "EWBC": {
+      "status": "ok",
+      "rows": 6895,
+      "start": "1999-02-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EWBC_daily.parquet"
+    },
+    "EXEL": {
+      "status": "ok",
+      "rows": 6591,
+      "start": "2000-04-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EXEL_daily.parquet"
+    },
+    "EXLS": {
+      "status": "ok",
+      "rows": 4954,
+      "start": "2006-10-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EXLS_daily.parquet"
+    },
+    "EXP": {
+      "status": "ok",
+      "rows": 8110,
+      "start": "1994-04-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EXP_daily.parquet"
+    },
+    "EXPO": {
+      "status": "ok",
+      "rows": 9033,
+      "start": "1990-08-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\EXPO_daily.parquet"
+    },
+    "FAF": {
+      "status": "ok",
+      "rows": 4048,
+      "start": "2010-05-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FAF_daily.parquet"
+    },
+    "FBIN": {
+      "status": "ok",
+      "rows": 3719,
+      "start": "2011-09-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FBIN_daily.parquet"
+    },
+    "FCFS": {
+      "status": "ok",
+      "rows": 8829,
+      "start": "1991-06-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FCFS_daily.parquet"
+    },
+    "FCN": {
+      "status": "ok",
+      "rows": 7585,
+      "start": "1996-05-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FCN_daily.parquet"
+    },
+    "FFIN": {
+      "status": "ok",
+      "rows": 8222,
+      "start": "1993-11-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FFIN_daily.parquet"
+    },
+    "FHI": {
+      "status": "ok",
+      "rows": 7077,
+      "start": "1998-05-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FHI_daily.parquet"
+    },
+    "FHN": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FHN_daily.parquet"
+    },
+    "FIVE": {
+      "status": "ok",
+      "rows": 3508,
+      "start": "2012-07-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FIVE_daily.parquet"
+    },
+    "FLG": {
+      "status": "ok",
+      "rows": 8206,
+      "start": "1993-11-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FLG_daily.parquet"
+    },
+    "FLR": {
+      "status": "ok",
+      "rows": 6432,
+      "start": "2000-12-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FLR_daily.parquet"
+    },
+    "FLS": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FLS_daily.parquet"
+    },
+    "FN": {
+      "status": "ok",
+      "rows": 4029,
+      "start": "2010-06-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FN_daily.parquet"
+    },
+    "FNB": {
+      "status": "ok",
+      "rows": 10035,
+      "start": "1986-09-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FNB_daily.parquet"
+    },
+    "FND": {
+      "status": "ok",
+      "rows": 2308,
+      "start": "2017-04-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FND_daily.parquet"
+    },
+    "FNF": {
+      "status": "ok",
+      "rows": 5210,
+      "start": "2005-10-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FNF_daily.parquet"
+    },
+    "FOUR": {
+      "status": "ok",
+      "rows": 1526,
+      "start": "2020-06-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FOUR_daily.parquet"
+    },
+    "FR": {
+      "status": "ok",
+      "rows": 8059,
+      "start": "1994-06-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FR_daily.parquet"
+    },
+    "FTI": {
+      "status": "ok",
+      "rows": 6298,
+      "start": "2001-06-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\FTI_daily.parquet"
+    },
+    "G": {
+      "status": "ok",
+      "rows": 4759,
+      "start": "2007-08-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\G_daily.parquet"
+    },
+    "GAP": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GAP_daily.parquet"
+    },
+    "GATX": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GATX_daily.parquet"
+    },
+    "GBCI": {
+      "status": "ok",
+      "rows": 10652,
+      "start": "1984-03-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GBCI_daily.parquet"
+    },
+    "GEF": {
+      "status": "ok",
+      "rows": 7635,
+      "start": "1996-02-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GEF_daily.parquet"
+    },
+    "GGG": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GGG_daily.parquet"
+    },
+    "GHC": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GHC_daily.parquet"
+    },
+    "GLPI": {
+      "status": "ok",
+      "rows": 3198,
+      "start": "2013-10-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GLPI_daily.parquet"
+    },
+    "GME": {
+      "status": "ok",
+      "rows": 6135,
+      "start": "2002-02-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GME_daily.parquet"
+    },
+    "GMED": {
+      "status": "ok",
+      "rows": 3497,
+      "start": "2012-08-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GMED_daily.parquet"
+    },
+    "GNTX": {
+      "status": "ok",
+      "rows": 11221,
+      "start": "1981-12-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GNTX_daily.parquet"
+    },
+    "GPK": {
+      "status": "ok",
+      "rows": 8447,
+      "start": "1992-12-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GPK_daily.parquet"
+    },
+    "GT": {
+      "status": "ok",
+      "rows": 16233,
+      "start": "1962-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GT_daily.parquet"
+    },
+    "GTLS": {
+      "status": "ok",
+      "rows": 5015,
+      "start": "2006-07-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GTLS_daily.parquet"
+    },
+    "GWRE": {
+      "status": "ok",
+      "rows": 3630,
+      "start": "2012-01-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GWRE_daily.parquet"
+    },
+    "GXO": {
+      "status": "ok",
+      "rows": 1242,
+      "start": "2021-07-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\GXO_daily.parquet"
+    },
+    "H": {
+      "status": "ok",
+      "rows": 4188,
+      "start": "2009-11-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\H_daily.parquet"
+    },
+    "HAE": {
+      "status": "ok",
+      "rows": 8849,
+      "start": "1991-05-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HAE_daily.parquet"
+    },
+    "HALO": {
+      "status": "ok",
+      "rows": 5610,
+      "start": "2004-03-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HALO_daily.parquet"
+    },
+    "HGV": {
+      "status": "ok",
+      "rows": 2386,
+      "start": "2017-01-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HGV_daily.parquet"
+    },
+    "HIMS": {
+      "status": "ok",
+      "rows": 1709,
+      "start": "2019-09-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HIMS_daily.parquet"
+    },
+    "HL": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HL_daily.parquet"
+    },
+    "HLI": {
+      "status": "ok",
+      "rows": 2737,
+      "start": "2015-08-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HLI_daily.parquet"
+    },
+    "HLNE": {
+      "status": "ok",
+      "rows": 2348,
+      "start": "2017-03-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HLNE_daily.parquet"
+    },
+    "HOG": {
+      "status": "ok",
+      "rows": 10074,
+      "start": "1986-07-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HOG_daily.parquet"
+    },
+    "HOMB": {
+      "status": "ok",
+      "rows": 5037,
+      "start": "2006-06-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HOMB_daily.parquet"
+    },
+    "HQY": {
+      "status": "ok",
+      "rows": 2998,
+      "start": "2014-07-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HQY_daily.parquet"
+    },
+    "HR": {
+      "status": "ok",
+      "rows": 8331,
+      "start": "1993-05-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HR_daily.parquet"
+    },
+    "HRB": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HRB_daily.parquet"
+    },
+    "HWC": {
+      "status": "ok",
+      "rows": 8833,
+      "start": "1991-06-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HWC_daily.parquet"
+    },
+    "HXL": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\HXL_daily.parquet"
+    },
+    "IBOC": {
+      "status": "ok",
+      "rows": 7760,
+      "start": "1995-08-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IBOC_daily.parquet"
+    },
+    "IDA": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IDA_daily.parquet"
+    },
+    "IDCC": {
+      "status": "ok",
+      "rows": 11248,
+      "start": "1981-11-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IDCC_daily.parquet"
+    },
+    "ILMN": {
+      "status": "ok",
+      "rows": 6520,
+      "start": "2000-07-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ILMN_daily.parquet"
+    },
+    "INGR": {
+      "status": "ok",
+      "rows": 7182,
+      "start": "1997-12-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\INGR_daily.parquet"
+    },
+    "IPGP": {
+      "status": "ok",
+      "rows": 4917,
+      "start": "2006-12-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IPGP_daily.parquet"
+    },
+    "IRT": {
+      "status": "ok",
+      "rows": 3241,
+      "start": "2013-08-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\IRT_daily.parquet"
+    },
+    "ITT": {
+      "status": "ok",
+      "rows": 7685,
+      "start": "1995-12-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ITT_daily.parquet"
+    },
+    "JAZZ": {
+      "status": "ok",
+      "rows": 4802,
+      "start": "2007-06-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\JAZZ_daily.parquet"
+    },
+    "JEF": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\JEF_daily.parquet"
+    },
+    "JHG": {
+      "status": "ok",
+      "rows": 2284,
+      "start": "2017-05-30",
+      "end": "2026-07-01",
+      "path": "data\\historical\\stocks\\JHG_daily.parquet"
+    },
+    "JLL": {
+      "status": "ok",
+      "rows": 7285,
+      "start": "1997-07-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\JLL_daily.parquet"
+    },
+    "KBH": {
+      "status": "ok",
+      "rows": 10056,
+      "start": "1986-08-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KBH_daily.parquet"
+    },
+    "KBR": {
+      "status": "ok",
+      "rows": 4935,
+      "start": "2006-11-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KBR_daily.parquet"
+    },
+    "KD": {
+      "status": "ok",
+      "rows": 1177,
+      "start": "2021-10-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KD_daily.parquet"
+    },
+    "KEX": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KEX_daily.parquet"
+    },
+    "KNF": {
+      "status": "ok",
+      "rows": 771,
+      "start": "2023-06-06",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KNF_daily.parquet"
+    },
+    "KNSL": {
+      "status": "ok",
+      "rows": 2496,
+      "start": "2016-07-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KNSL_daily.parquet"
+    },
+    "KNX": {
+      "status": "ok",
+      "rows": 7974,
+      "start": "1994-10-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KNX_daily.parquet"
+    },
+    "KRC": {
+      "status": "ok",
+      "rows": 7402,
+      "start": "1997-01-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KRC_daily.parquet"
+    },
+    "KRG": {
+      "status": "ok",
+      "rows": 5507,
+      "start": "2004-08-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KRG_daily.parquet"
+    },
+    "KTOS": {
+      "status": "ok",
+      "rows": 6703,
+      "start": "1999-11-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\KTOS_daily.parquet"
+    },
+    "LAD": {
+      "status": "ok",
+      "rows": 7430,
+      "start": "1996-12-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LAD_daily.parquet"
+    },
+    "LAMR": {
+      "status": "ok",
+      "rows": 7526,
+      "start": "1996-08-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LAMR_daily.parquet"
+    },
+    "LEA": {
+      "status": "ok",
+      "rows": 4186,
+      "start": "2009-11-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LEA_daily.parquet"
+    },
+    "LECO": {
+      "status": "ok",
+      "rows": 8113,
+      "start": "1994-04-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LECO_daily.parquet"
+    },
+    "LFUS": {
+      "status": "ok",
+      "rows": 8503,
+      "start": "1992-09-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LFUS_daily.parquet"
+    },
+    "LIVN": {
+      "status": "ok",
+      "rows": 2691,
+      "start": "2015-10-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LIVN_daily.parquet"
+    },
+    "LNTH": {
+      "status": "ok",
+      "rows": 2771,
+      "start": "2015-06-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LNTH_daily.parquet"
+    },
+    "LOPE": {
+      "status": "ok",
+      "rows": 4429,
+      "start": "2008-11-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LOPE_daily.parquet"
+    },
+    "LPX": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LPX_daily.parquet"
+    },
+    "LSCC": {
+      "status": "ok",
+      "rows": 9227,
+      "start": "1989-11-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LSCC_daily.parquet"
+    },
+    "LSTR": {
+      "status": "ok",
+      "rows": 8389,
+      "start": "1993-03-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\LSTR_daily.parquet"
+    },
+    "M": {
+      "status": "ok",
+      "rows": 8662,
+      "start": "1992-02-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\M_daily.parquet"
+    },
+    "MANH": {
+      "status": "ok",
+      "rows": 7092,
+      "start": "1998-04-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MANH_daily.parquet"
+    },
+    "MAT": {
+      "status": "ok",
+      "rows": 12614,
+      "start": "1976-06-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MAT_daily.parquet"
+    },
+    "MEDP": {
+      "status": "ok",
+      "rows": 2486,
+      "start": "2016-08-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MEDP_daily.parquet"
+    },
+    "MIDD": {
+      "status": "ok",
+      "rows": 9798,
+      "start": "1987-08-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MIDD_daily.parquet"
+    },
+    "MKSI": {
+      "status": "ok",
+      "rows": 6857,
+      "start": "1999-03-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MKSI_daily.parquet"
+    },
+    "MLI": {
+      "status": "ok",
+      "rows": 8901,
+      "start": "1991-02-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MLI_daily.parquet"
+    },
+    "MMS": {
+      "status": "ok",
+      "rows": 7308,
+      "start": "1997-06-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MMS_daily.parquet"
+    },
+    "MOG-A": {
+      "status": "ok",
+      "rows": 11617,
+      "start": "1980-05-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MOG-A_daily.parquet"
+    },
+    "MORN": {
+      "status": "ok",
+      "rows": 5325,
+      "start": "2005-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MORN_daily.parquet"
+    },
+    "MP": {
+      "status": "ok",
+      "rows": 1515,
+      "start": "2020-06-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MP_daily.parquet"
+    },
+    "MSA": {
+      "status": "ok",
+      "rows": 13453,
+      "start": "1973-02-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MSA_daily.parquet"
+    },
+    "MSM": {
+      "status": "ok",
+      "rows": 7685,
+      "start": "1995-12-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MSM_daily.parquet"
+    },
+    "MTDR": {
+      "status": "ok",
+      "rows": 3624,
+      "start": "2012-02-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MTDR_daily.parquet"
+    },
+    "MTG": {
+      "status": "ok",
+      "rows": 8788,
+      "start": "1991-08-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MTG_daily.parquet"
+    },
+    "MTN": {
+      "status": "ok",
+      "rows": 7398,
+      "start": "1997-02-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MTN_daily.parquet"
+    },
+    "MTSI": {
+      "status": "ok",
+      "rows": 3595,
+      "start": "2012-03-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MTSI_daily.parquet"
+    },
+    "MTZ": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MTZ_daily.parquet"
+    },
+    "MUR": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MUR_daily.parquet"
+    },
+    "MUSA": {
+      "status": "ok",
+      "rows": 3237,
+      "start": "2013-08-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MUSA_daily.parquet"
+    },
+    "MZTI": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\MZTI_daily.parquet"
+    },
+    "NBIX": {
+      "status": "ok",
+      "rows": 7575,
+      "start": "1996-05-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NBIX_daily.parquet"
+    },
+    "NEU": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NEU_daily.parquet"
+    },
+    "NFG": {
+      "status": "ok",
+      "rows": 13404,
+      "start": "1973-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NFG_daily.parquet"
+    },
+    "NJR": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NJR_daily.parquet"
+    },
+    "NLY": {
+      "status": "ok",
+      "rows": 7227,
+      "start": "1997-10-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NLY_daily.parquet"
+    },
+    "NNN": {
+      "status": "ok",
+      "rows": 10513,
+      "start": "1984-10-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NNN_daily.parquet"
+    },
+    "NOV": {
+      "status": "ok",
+      "rows": 7465,
+      "start": "1996-10-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NOV_daily.parquet"
+    },
+    "NOVT": {
+      "status": "ok",
+      "rows": 6861,
+      "start": "1999-03-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NOVT_daily.parquet"
+    },
+    "NSA": {
+      "status": "ok",
+      "rows": 2816,
+      "start": "2015-04-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NSA_daily.parquet"
+    },
+    "NTNX": {
+      "status": "ok",
+      "rows": 2451,
+      "start": "2016-09-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NTNX_daily.parquet"
+    },
+    "NVST": {
+      "status": "ok",
+      "rows": 1706,
+      "start": "2019-09-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NVST_daily.parquet"
+    },
+    "NVT": {
+      "status": "ok",
+      "rows": 2059,
+      "start": "2018-04-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NVT_daily.parquet"
+    },
+    "NWE": {
+      "status": "ok",
+      "rows": 4656,
+      "start": "2007-12-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NWE_daily.parquet"
+    },
+    "NXST": {
+      "status": "ok",
+      "rows": 5685,
+      "start": "2003-11-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NXST_daily.parquet"
+    },
+    "NXT": {
+      "status": "ok",
+      "rows": 851,
+      "start": "2023-02-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NXT_daily.parquet"
+    },
+    "NYT": {
+      "status": "ok",
+      "rows": 13404,
+      "start": "1973-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\NYT_daily.parquet"
+    },
+    "OC": {
+      "status": "ok",
+      "rows": 4946,
+      "start": "2006-11-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OC_daily.parquet"
+    },
+    "OGE": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OGE_daily.parquet"
+    },
+    "OGS": {
+      "status": "ok",
+      "rows": 3133,
+      "start": "2014-01-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OGS_daily.parquet"
+    },
+    "OHI": {
+      "status": "ok",
+      "rows": 8534,
+      "start": "1992-08-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OHI_daily.parquet"
+    },
+    "OKTA": {
+      "status": "ok",
+      "rows": 2321,
+      "start": "2017-04-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OKTA_daily.parquet"
+    },
+    "OLED": {
+      "status": "ok",
+      "rows": 7605,
+      "start": "1996-04-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OLED_daily.parquet"
+    },
+    "OLLI": {
+      "status": "ok",
+      "rows": 2757,
+      "start": "2015-07-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OLLI_daily.parquet"
+    },
+    "OLN": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OLN_daily.parquet"
+    },
+    "ONB": {
+      "status": "ok",
+      "rows": 10590,
+      "start": "1984-06-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ONB_daily.parquet"
+    },
+    "ONTO": {
+      "status": "ok",
+      "rows": 1678,
+      "start": "2019-10-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ONTO_daily.parquet"
+    },
+    "OPCH": {
+      "status": "ok",
+      "rows": 7517,
+      "start": "1996-08-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OPCH_daily.parquet"
+    },
+    "ORA": {
+      "status": "ok",
+      "rows": 5443,
+      "start": "2004-11-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ORA_daily.parquet"
+    },
+    "ORI": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ORI_daily.parquet"
+    },
+    "OSK": {
+      "status": "ok",
+      "rows": 10266,
+      "start": "1985-10-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OSK_daily.parquet"
+    },
+    "OVV": {
+      "status": "ok",
+      "rows": 6099,
+      "start": "2002-04-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OVV_daily.parquet"
+    },
+    "OZK": {
+      "status": "ok",
+      "rows": 7285,
+      "start": "1997-07-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\OZK_daily.parquet"
+    },
+    "P": {
+      "status": "ok",
+      "rows": 2700,
+      "start": "2015-10-06",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\P_daily.parquet"
+    },
+    "PAG": {
+      "status": "ok",
+      "rows": 7469,
+      "start": "1996-10-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PAG_daily.parquet"
+    },
+    "PATH": {
+      "status": "ok",
+      "rows": 1306,
+      "start": "2021-04-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PATH_daily.parquet"
+    },
+    "PB": {
+      "status": "ok",
+      "rows": 6950,
+      "start": "1998-11-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PB_daily.parquet"
+    },
+    "PBF": {
+      "status": "ok",
+      "rows": 3407,
+      "start": "2012-12-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PBF_daily.parquet"
+    },
+    "PCTY": {
+      "status": "ok",
+      "rows": 3091,
+      "start": "2014-03-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PCTY_daily.parquet"
+    },
+    "PEGA": {
+      "status": "ok",
+      "rows": 7536,
+      "start": "1996-07-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PEGA_daily.parquet"
+    },
+    "PEN": {
+      "status": "ok",
+      "rows": 2712,
+      "start": "2015-09-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PEN_daily.parquet"
+    },
+    "PFGC": {
+      "status": "ok",
+      "rows": 2704,
+      "start": "2015-09-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PFGC_daily.parquet"
+    },
+    "PII": {
+      "status": "ok",
+      "rows": 9772,
+      "start": "1987-09-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PII_daily.parquet"
+    },
+    "PINS": {
+      "status": "ok",
+      "rows": 1811,
+      "start": "2019-04-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PINS_daily.parquet"
+    },
+    "PK": {
+      "status": "ok",
+      "rows": 2386,
+      "start": "2017-01-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PK_daily.parquet"
+    },
+    "PLNT": {
+      "status": "ok",
+      "rows": 2742,
+      "start": "2015-08-06",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PLNT_daily.parquet"
+    },
+    "PNFP": {
+      "status": "ok",
+      "rows": 6503,
+      "start": "2000-08-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PNFP_daily.parquet"
+    },
+    "POR": {
+      "status": "ok",
+      "rows": 5095,
+      "start": "2006-03-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\POR_daily.parquet"
+    },
+    "POST": {
+      "status": "ok",
+      "rows": 3628,
+      "start": "2012-01-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\POST_daily.parquet"
+    },
+    "PPC": {
+      "status": "ok",
+      "rows": 9699,
+      "start": "1987-12-30",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PPC_daily.parquet"
+    },
+    "PR": {
+      "status": "ok",
+      "rows": 2568,
+      "start": "2016-04-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PR_daily.parquet"
+    },
+    "PRI": {
+      "status": "ok",
+      "rows": 4088,
+      "start": "2010-04-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PRI_daily.parquet"
+    },
+    "PSN": {
+      "status": "ok",
+      "rows": 1798,
+      "start": "2019-05-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PSN_daily.parquet"
+    },
+    "PVH": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\PVH_daily.parquet"
+    },
+    "QLYS": {
+      "status": "ok",
+      "rows": 3458,
+      "start": "2012-09-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\QLYS_daily.parquet"
+    },
+    "R": {
+      "status": "ok",
+      "rows": 11720,
+      "start": "1980-01-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\R_daily.parquet"
+    },
+    "RBA": {
+      "status": "ok",
+      "rows": 7123,
+      "start": "1998-03-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RBA_daily.parquet"
+    },
+    "RBC": {
+      "status": "ok",
+      "rows": 5256,
+      "start": "2005-08-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RBC_daily.parquet"
+    },
+    "REXR": {
+      "status": "ok",
+      "rows": 3258,
+      "start": "2013-07-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\REXR_daily.parquet"
+    },
+    "RGA": {
+      "status": "ok",
+      "rows": 4478,
+      "start": "2008-09-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RGA_daily.parquet"
+    },
+    "RGEN": {
+      "status": "ok",
+      "rows": 10122,
+      "start": "1986-04-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RGEN_daily.parquet"
+    },
+    "RGLD": {
+      "status": "ok",
+      "rows": 11358,
+      "start": "1981-06-09",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RGLD_daily.parquet"
+    },
+    "RH": {
+      "status": "ok",
+      "rows": 3435,
+      "start": "2012-11-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RH_daily.parquet"
+    },
+    "RLI": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RLI_daily.parquet"
+    },
+    "RMBS": {
+      "status": "ok",
+      "rows": 7329,
+      "start": "1997-05-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RMBS_daily.parquet"
+    },
+    "RNR": {
+      "status": "ok",
+      "rows": 7784,
+      "start": "1995-07-27",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RNR_daily.parquet"
+    },
+    "ROIV": {
+      "status": "ok",
+      "rows": 1397,
+      "start": "2020-12-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ROIV_daily.parquet"
+    },
+    "ROKU": {
+      "status": "ok",
+      "rows": 2201,
+      "start": "2017-09-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ROKU_daily.parquet"
+    },
+    "RPM": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RPM_daily.parquet"
+    },
+    "RRC": {
+      "status": "ok",
+      "rows": 11602,
+      "start": "1980-06-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RRC_daily.parquet"
+    },
+    "RRX": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RRX_daily.parquet"
+    },
+    "RS": {
+      "status": "ok",
+      "rows": 8001,
+      "start": "1994-09-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RS_daily.parquet"
+    },
+    "RYAN": {
+      "status": "ok",
+      "rows": 1242,
+      "start": "2021-07-22",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RYAN_daily.parquet"
+    },
+    "RYN": {
+      "status": "ok",
+      "rows": 8146,
+      "start": "1994-02-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\RYN_daily.parquet"
+    },
+    "SAIA": {
+      "status": "ok",
+      "rows": 5990,
+      "start": "2002-09-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SAIA_daily.parquet"
+    },
+    "SAIC": {
+      "status": "ok",
+      "rows": 3218,
+      "start": "2013-09-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SAIC_daily.parquet"
+    },
+    "SAM": {
+      "status": "ok",
+      "rows": 7702,
+      "start": "1995-11-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SAM_daily.parquet"
+    },
+    "SANM": {
+      "status": "ok",
+      "rows": 8362,
+      "start": "1993-04-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SANM_daily.parquet"
+    },
+    "SARO": {
+      "status": "ok",
+      "rows": 438,
+      "start": "2024-10-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SARO_daily.parquet"
+    },
+    "SBRA": {
+      "status": "ok",
+      "rows": 6103,
+      "start": "2002-04-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SBRA_daily.parquet"
+    },
+    "SCI": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SCI_daily.parquet"
+    },
+    "SEIC": {
+      "status": "ok",
+      "rows": 11410,
+      "start": "1981-03-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SEIC_daily.parquet"
+    },
+    "SF": {
+      "status": "ok",
+      "rows": 10824,
+      "start": "1983-07-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SF_daily.parquet"
+    },
+    "SFM": {
+      "status": "ok",
+      "rows": 3249,
+      "start": "2013-08-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SFM_daily.parquet"
+    },
+    "SGI": {
+      "status": "ok",
+      "rows": 5669,
+      "start": "2003-12-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SGI_daily.parquet"
+    },
+    "SHC": {
+      "status": "ok",
+      "rows": 1408,
+      "start": "2020-11-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SHC_daily.parquet"
+    },
+    "SIGI": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SIGI_daily.parquet"
+    },
+    "SIRI": {
+      "status": "ok",
+      "rows": 8004,
+      "start": "1994-09-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SIRI_daily.parquet"
+    },
+    "SITM": {
+      "status": "ok",
+      "rows": 1661,
+      "start": "2019-11-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SITM_daily.parquet"
+    },
+    "SLAB": {
+      "status": "ok",
+      "rows": 6607,
+      "start": "2000-03-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SLAB_daily.parquet"
+    },
+    "SLGN": {
+      "status": "ok",
+      "rows": 7390,
+      "start": "1997-02-14",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SLGN_daily.parquet"
+    },
+    "SLM": {
+      "status": "ok",
+      "rows": 10777,
+      "start": "1983-09-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SLM_daily.parquet"
+    },
+    "SMG": {
+      "status": "ok",
+      "rows": 8665,
+      "start": "1992-01-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SMG_daily.parquet"
+    },
+    "SMTC": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SMTC_daily.parquet"
+    },
+    "SN": {
+      "status": "ok",
+      "rows": 734,
+      "start": "2023-07-31",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SN_daily.parquet"
+    },
+    "SNX": {
+      "status": "ok",
+      "rows": 5685,
+      "start": "2003-11-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SNX_daily.parquet"
+    },
+    "SOLS": {
+      "status": "ok",
+      "rows": 176,
+      "start": "2025-10-20",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SOLS_daily.parquet"
+    },
+    "SON": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SON_daily.parquet"
+    },
+    "SPXC": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SPXC_daily.parquet"
+    },
+    "SR": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SR_daily.parquet"
+    },
+    "SSB": {
+      "status": "ok",
+      "rows": 7403,
+      "start": "1997-01-28",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SSB_daily.parquet"
+    },
+    "SSD": {
+      "status": "ok",
+      "rows": 8079,
+      "start": "1994-05-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SSD_daily.parquet"
+    },
+    "ST": {
+      "status": "ok",
+      "rows": 4103,
+      "start": "2010-03-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ST_daily.parquet"
+    },
+    "STAG": {
+      "status": "ok",
+      "rows": 3825,
+      "start": "2011-04-15",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\STAG_daily.parquet"
+    },
+    "STRL": {
+      "status": "ok",
+      "rows": 8806,
+      "start": "1991-07-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\STRL_daily.parquet"
+    },
+    "STWD": {
+      "status": "ok",
+      "rows": 4248,
+      "start": "2009-08-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\STWD_daily.parquet"
+    },
+    "SWX": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SWX_daily.parquet"
+    },
+    "SYNA": {
+      "status": "ok",
+      "rows": 6146,
+      "start": "2002-01-29",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\SYNA_daily.parquet"
+    },
+    "TCBI": {
+      "status": "ok",
+      "rows": 5758,
+      "start": "2003-08-13",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TCBI_daily.parquet"
+    },
+    "TEX": {
+      "status": "ok",
+      "rows": 11666,
+      "start": "1980-03-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TEX_daily.parquet"
+    },
+    "THC": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\THC_daily.parquet"
+    },
+    "THG": {
+      "status": "ok",
+      "rows": 7731,
+      "start": "1995-10-11",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\THG_daily.parquet"
+    },
+    "THO": {
+      "status": "ok",
+      "rows": 10703,
+      "start": "1984-01-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\THO_daily.parquet"
+    },
+    "TKR": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TKR_daily.parquet"
+    },
+    "TLN": {
+      "status": "ok",
+      "rows": 773,
+      "start": "2023-06-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TLN_daily.parquet"
+    },
+    "TMHC": {
+      "status": "ok",
+      "rows": 3328,
+      "start": "2013-04-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TMHC_daily.parquet"
+    },
+    "TNL": {
+      "status": "ok",
+      "rows": 5020,
+      "start": "2006-07-19",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TNL_daily.parquet"
+    },
+    "TOL": {
+      "status": "ok",
+      "rows": 10074,
+      "start": "1986-07-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TOL_daily.parquet"
+    },
+    "TREX": {
+      "status": "ok",
+      "rows": 6851,
+      "start": "1999-04-08",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TREX_daily.parquet"
+    },
+    "TRU": {
+      "status": "ok",
+      "rows": 2771,
+      "start": "2015-06-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TRU_daily.parquet"
+    },
+    "TTC": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TTC_daily.parquet"
+    },
+    "TTEK": {
+      "status": "ok",
+      "rows": 8696,
+      "start": "1991-12-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TTEK_daily.parquet"
+    },
+    "TTMI": {
+      "status": "ok",
+      "rows": 6480,
+      "start": "2000-09-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TTMI_daily.parquet"
+    },
+    "TWLO": {
+      "status": "ok",
+      "rows": 2520,
+      "start": "2016-06-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TWLO_daily.parquet"
+    },
+    "TXNM": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TXNM_daily.parquet"
+    },
+    "TXRH": {
+      "status": "ok",
+      "rows": 5470,
+      "start": "2004-10-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\TXRH_daily.parquet"
+    },
+    "UBSI": {
+      "status": "ok",
+      "rows": 9844,
+      "start": "1987-06-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\UBSI_daily.parquet"
+    },
+    "UFPI": {
+      "status": "ok",
+      "rows": 8215,
+      "start": "1993-11-10",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\UFPI_daily.parquet"
+    },
+    "UGI": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\UGI_daily.parquet"
+    },
+    "ULS": {
+      "status": "ok",
+      "rows": 557,
+      "start": "2024-04-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ULS_daily.parquet"
+    },
+    "UMBF": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\UMBF_daily.parquet"
+    },
+    "UNM": {
+      "status": "ok",
+      "rows": 9988,
+      "start": "1986-11-06",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\UNM_daily.parquet"
+    },
+    "USFD": {
+      "status": "ok",
+      "rows": 2539,
+      "start": "2016-05-26",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\USFD_daily.parquet"
+    },
+    "UTHR": {
+      "status": "ok",
+      "rows": 6802,
+      "start": "1999-06-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\UTHR_daily.parquet"
+    },
+    "VAL": {
+      "status": "ok",
+      "rows": 1298,
+      "start": "2021-05-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VAL_daily.parquet"
+    },
+    "VC": {
+      "status": "ok",
+      "rows": 3959,
+      "start": "2010-10-05",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VC_daily.parquet"
+    },
+    "VFC": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VFC_daily.parquet"
+    },
+    "VIAV": {
+      "status": "ok",
+      "rows": 8210,
+      "start": "1993-11-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VIAV_daily.parquet"
+    },
+    "VICR": {
+      "status": "ok",
+      "rows": 9128,
+      "start": "1990-04-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VICR_daily.parquet"
+    },
+    "VLY": {
+      "status": "ok",
+      "rows": 9135,
+      "start": "1990-03-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VLY_daily.parquet"
+    },
+    "VMI": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VMI_daily.parquet"
+    },
+    "VNO": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VNO_daily.parquet"
+    },
+    "VNOM": {
+      "status": "ok",
+      "rows": 3028,
+      "start": "2014-06-18",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VNOM_daily.parquet"
+    },
+    "VNT": {
+      "status": "ok",
+      "rows": 1449,
+      "start": "2020-09-24",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VNT_daily.parquet"
+    },
+    "VOYA": {
+      "status": "ok",
+      "rows": 3312,
+      "start": "2013-05-02",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VOYA_daily.parquet"
+    },
+    "VVV": {
+      "status": "ok",
+      "rows": 2456,
+      "start": "2016-09-23",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\VVV_daily.parquet"
+    },
+    "WAL": {
+      "status": "ok",
+      "rows": 5283,
+      "start": "2005-07-01",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WAL_daily.parquet"
+    },
+    "WBS": {
+      "status": "ok",
+      "rows": 9963,
+      "start": "1986-12-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WBS_daily.parquet"
+    },
+    "WCC": {
+      "status": "ok",
+      "rows": 6827,
+      "start": "1999-05-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WCC_daily.parquet"
+    },
+    "WEX": {
+      "status": "ok",
+      "rows": 5377,
+      "start": "2005-02-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WEX_daily.parquet"
+    },
+    "WFRD": {
+      "status": "ok",
+      "rows": 1380,
+      "start": "2021-01-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WFRD_daily.parquet"
+    },
+    "WH": {
+      "status": "ok",
+      "rows": 2040,
+      "start": "2018-05-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WH_daily.parquet"
+    },
+    "WHR": {
+      "status": "ok",
+      "rows": 13454,
+      "start": "1973-02-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WHR_daily.parquet"
+    },
+    "WING": {
+      "status": "ok",
+      "rows": 2780,
+      "start": "2015-06-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WING_daily.parquet"
+    },
+    "WLK": {
+      "status": "ok",
+      "rows": 5507,
+      "start": "2004-08-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WLK_daily.parquet"
+    },
+    "WMG": {
+      "status": "ok",
+      "rows": 1528,
+      "start": "2020-06-03",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WMG_daily.parquet"
+    },
+    "WMS": {
+      "status": "ok",
+      "rows": 3002,
+      "start": "2014-07-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WMS_daily.parquet"
+    },
+    "WPC": {
+      "status": "ok",
+      "rows": 7156,
+      "start": "1998-01-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WPC_daily.parquet"
+    },
+    "WSO": {
+      "status": "ok",
+      "rows": 10599,
+      "start": "1984-06-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WSO_daily.parquet"
+    },
+    "WTFC": {
+      "status": "ok",
+      "rows": 7097,
+      "start": "1998-04-16",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WTFC_daily.parquet"
+    },
+    "WTRG": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WTRG_daily.parquet"
+    },
+    "WTS": {
+      "status": "ok",
+      "rows": 10042,
+      "start": "1986-08-21",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WTS_daily.parquet"
+    },
+    "WWD": {
+      "status": "ok",
+      "rows": 8116,
+      "start": "1994-04-04",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\WWD_daily.parquet"
+    },
+    "XPO": {
+      "status": "ok",
+      "rows": 5720,
+      "start": "2003-10-07",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\XPO_daily.parquet"
+    },
+    "XRAY": {
+      "status": "ok",
+      "rows": 9796,
+      "start": "1987-08-12",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\XRAY_daily.parquet"
+    },
+    "YETI": {
+      "status": "ok",
+      "rows": 1930,
+      "start": "2018-10-25",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\YETI_daily.parquet"
+    },
+    "ZION": {
+      "status": "ok",
+      "rows": 11668,
+      "start": "1980-03-17",
+      "end": "2026-07-02",
+      "path": "data\\historical\\stocks\\ZION_daily.parquet"
+    }
+  },
+  "summary": {
+    "ok": 899,
+    "failed": 0,
+    "skipped": 4,
+    "total": 903
+  },
+  "max_history": true
+}

@@ -1,0 +1,29 @@
+{
+  "paper_strategies": [
+    "S173",
+    "S174",
+    "S165",
+    "S166",
+    "S163"
+  ],
+  "strategy_tweaks": {
+    "S173": {
+      "max_premium": 100,
+      "account_cap": 0.25,
+      "take_profit": 0.6,
+      "stop_loss": -0.4
+    },
+    "S174": {},
+    "S165": {
+      "max_premium": 50,
+      "account_cap": 0.15,
+      "take_profit": 0.35,
+      "stop_loss": -0.3
+    },
+    "S166": {
+      "max_premium": 80,
+      "take_profit": 0.7
+    },
+    "S163": {}
+  }
+}

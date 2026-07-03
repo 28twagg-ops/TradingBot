@@ -1,0 +1,17 @@
+{
+  "bucket_id": 2,
+  "name": "aggressive_buy",
+  "buy_limit_offset": -0.01,
+  "buy_at_mid": true,
+  "max_premium": 90,
+  "max_spread_frac": 0.25,
+  "min_open_interest": 100,
+  "account_cap": 0.22,
+  "max_contracts": 1,
+  "sell_limit_offset": -0.02,
+  "sell_at_mid": false,
+  "take_profit": 0.55,
+  "stop_loss": -0.45,
+  "eod_only": false,
+  "market_exit_eod": true
+}

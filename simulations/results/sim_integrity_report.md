@@ -2,7 +2,7 @@
 
 _DEVELOPMENT ONLY - NOT FOR TRADING DECISIONS_
 
-Generated: 2026-06-28
+Generated: 2026-07-03
 Engine: `simulations/options_strategy_simulator.py`
 Dataset: SYNTHETIC development data (Black-Scholes + adversarial spread model). Real Alpaca 1-min data required for Phase 3.
 

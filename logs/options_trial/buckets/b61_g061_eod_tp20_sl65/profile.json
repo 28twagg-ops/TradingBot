@@ -1,0 +1,17 @@
+{
+  "bucket_id": 61,
+  "name": "g061_eod_tp20_sl65",
+  "buy_limit_offset": -0.1,
+  "buy_at_mid": false,
+  "max_premium": 90,
+  "max_spread_frac": 0.18,
+  "min_open_interest": 100,
+  "account_cap": 0.95,
+  "max_contracts": 1,
+  "sell_limit_offset": -0.05,
+  "sell_at_mid": false,
+  "take_profit": 0.2,
+  "stop_loss": -0.65,
+  "eod_only": true,
+  "market_exit_eod": true
+}

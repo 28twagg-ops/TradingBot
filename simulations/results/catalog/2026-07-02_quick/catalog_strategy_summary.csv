@@ -1,0 +1,106 @@
+strategy_id,strategy_name,category,best_variant,exp_pnl_per_signal,filled,win_rate,survives
+S001,Long ATM call,directional_long,S001|ATM|7DTE|0930-1000|EOD|cancel,-1.6559242362656847,3,0.3333333333333333,False
+S002,Long OTM call 5pct,directional_long,S002|ATM|7DTE|0930-1000|EOD|cancel,0.26131668735989966,8,0.5,False
+S003,Long deep OTM call,directional_long,S003|ATM|7DTE|0930-1000|EOD|cancel,-0.2657772096384067,3,0.3333333333333333,False
+S004,Long ITM call replacement,directional_long,S004|ATM|7DTE|0930-1000|EOD|cancel,-1.7925558798499075,7,0.42857142857142855,False
+S005,Long ATM put,directional_long,S005|ATM|7DTE|0930-1000|EOD|cancel,-2.524294360750459,2,0.0,False
+S006,Long OTM put hedge,directional_long,S006|ATM|7DTE|0930-1000|EOD|cancel,-1.5585807789013268,6,0.3333333333333333,False
+S007,Long put crash hedge,directional_long,S007|ATM|7DTE|0930-1000|EOD|cancel,-1.1363776914381691,3,0.3333333333333333,False
+S008,Long call MA pullback,directional_long,S008|ATM|7DTE|0930-1000|EOD|cancel,0.9912246169623568,5,0.4,False
+S009,Long call vol spike uptrend,directional_long,S009|ATM|7DTE|0930-1000|EOD|cancel,-3.513610778121277,6,0.16666666666666666,False
+S010,Long put support break,directional_long,S010|ATM|7DTE|0930-1000|EOD|cancel,-0.18386366291992695,2,0.5,False
+S011,Long call RSI oversold,directional_long,S011|ATM|7DTE|0930-1000|EOD|cancel,0.24553723496527366,7,0.2857142857142857,False
+S012,Long put RSI overbought,directional_long,S012|ATM|7DTE|0930-1000|EOD|cancel,-2.7814618794041905,4,0.25,False
+S013,Long call MACD bull cross,directional_long,S013|ATM|7DTE|0930-1000|EOD|cancel,-2.679563495521542,5,0.0,False
+S014,Long put MACD bear cross,directional_long,S014|ATM|7DTE|0930-1000|EOD|cancel,0.3974537256967636,6,0.5,False
+S015,Long call earnings drift,directional_long,S015|ATM|7DTE|0930-1000|EOD|cancel,-2.167626280066051,9,0.3333333333333333,False
+S016,Long put guidance gap,directional_long,S016|ATM|7DTE|0930-1000|EOD|cancel,-1.196001424022362,2,0.0,False
+S017,Long call sector leader,directional_long,S017|ATM|7DTE|0930-1000|EOD|cancel,-2.9906869552926674,5,0.2,False
+S018,Long put sector laggard,directional_long,S018|ATM|7DTE|0930-1000|EOD|cancel,-0.2343783009289651,2,0.0,False
+S019,Long call 52wk high BO,directional_long,S019|ATM|7DTE|0930-1000|EOD|cancel,-1.0614376139177912,3,0.6666666666666666,False
+S020,Long put 52wk low BD,directional_long,S020|ATM|7DTE|0930-1000|EOD|cancel,-1.8608960927271405,4,0.25,False
+S021,Cash secured short put,directional_short,S021|ATM|7DTE|0930-1000|EOD|cancel,-9.492689283636635,12,0.25,False
+S022,Covered short call,directional_short,S022|ATM|7DTE|0930-1000|EOD|cancel,-7.703105928125876,15,0.3333333333333333,False
+S023,Short OTM put high IV,directional_short,S023|ATM|7DTE|0930-1000|EOD|cancel,1.419000945607553,17,0.4117647058823529,False
+S024,Short OTM call covered,directional_short,S024|ATM|7DTE|0930-1000|EOD|cancel,-0.9027305154175196,26,0.46153846153846156,False
+S028,Short put IV crush post event,directional_short,S028|ATM|7DTE|0930-1000|EOD|cancel,1.4811841436737336,15,0.6,False
+S029,Short call failed BO,directional_short,S029|ATM|7DTE|0930-1000|EOD|cancel,3.0746549330582456,23,0.43478260869565216,False
+S030,Short put failed BD,directional_short,S030|ATM|7DTE|0930-1000|EOD|cancel,2.0895658275527373,18,0.5555555555555556,False
+S031,Short premium IV>80,directional_short,S031|ATM|7DTE|0930-1000|EOD|cancel,1.5637236690595437,10,0.9,False
+S032,Short premium term inverted,directional_short,S032|ATM|7DTE|0930-1000|EOD|cancel,-10.317955756450617,16,0.375,False
+S033,Short put uptrend,directional_short,S033|ATM|7DTE|0930-1000|EOD|cancel,-5.748330725043322,23,0.43478260869565216,False
+S034,Short call downtrend,directional_short,S034|ATM|7DTE|0930-1000|EOD|cancel,-3.7023953074423193,14,0.2857142857142857,False
+S035,Short weekly put theta,directional_short,S035|ATM|7DTE|0930-1000|EOD|cancel,-3.272750773073701,12,0.3333333333333333,False
+S036,Short monthly call vs stock,directional_short,S036|ATM|7DTE|0930-1000|EOD|cancel,-0.585776530899101,13,0.38461538461538464,False
+S037,Short put support,directional_short,S037|ATM|7DTE|0930-1000|EOD|cancel,-10.366747005172725,20,0.3,False
+S038,Short call resistance,directional_short,S038|ATM|7DTE|0930-1000|EOD|cancel,3.712015455485843,13,0.5384615384615384,False
+S130,Short vol IV rank>80,volatility_greeks,S130|ATM|7DTE|0930-1000|EOD|cancel,1.4917901625177186,16,0.5,False
+S131,IV pct mean rev buy calls,volatility_greeks,S131|ATM|7DTE|0930-1000|EOD|cancel,2.2585861706260197,5,0.4,False
+S136,Theta harvest short opts,volatility_greeks,S136|ATM|7DTE|0930-1000|EOD|cancel,2.8286328697863956,19,0.6842105263157895,False
+S137,Charm decay into expiry,volatility_greeks,S137|ATM|7DTE|0930-1000|EOD|cancel,-6.968352503996577,14,0.5,False
+S144,IV>RV short vol,volatility_greeks,S144|ATM|7DTE|0930-1000|EOD|cancel,-10.844486625847882,18,0.5555555555555556,False
+S145,VIX call hedge,volatility_greeks,S145|ATM|7DTE|0930-1000|EOD|cancel,1.3725329678181268,3,0.6666666666666666,False
+S147,Beta delta hedge SPY,volatility_greeks,S147|ATM|7DTE|0930-1000|EOD|cancel,1.6394305508023794,3,0.6666666666666666,False
+S148,Vol surface smile trade,volatility_greeks,S148|ATM|7DTE|0930-1000|EOD|cancel,-0.9882326564393511,1,0.0,False
+S153,Dividend capture,event_seasonality,S153|ATM|7DTE|0930-1000|EOD|cancel,-0.35187656162017594,4,0.5,False
+S154,Ex-div short call avoid,event_seasonality,S154|ATM|7DTE|0930-1000|EOD|cancel,-1.7946385295484888,17,0.5882352941176471,False
+S156,OPEX vol crush Monday,event_seasonality,S156|ATM|7DTE|0930-1000|EOD|cancel,-13.519465326924276,17,0.23529411764705882,False
+S158,CPI jobs ORB options,event_seasonality,S158|ATM|7DTE|0930-1000|EOD|cancel,0.33050843677487257,8,0.5,False
+S159,Month-end rebalance,event_seasonality,S159|ATM|7DTE|0930-1000|EOD|cancel,-0.534586584553476,8,0.5,False
+S160,January effect call skew,event_seasonality,S160|ATM|7DTE|0930-1000|EOD|cancel,1.6674943249327823,2,1.0,False
+S161,Tax loss put premium Dec,event_seasonality,S161|ATM|7DTE|0930-1000|EOD|cancel,-2.9425466853283186,14,0.5,False
+S163,A1 GapDown ATM call EOD,equity_signal,S163|ATM|7DTE|0930-1000|EOD|cancel,2.3961702204427624,7,0.7142857142857143,False
+S165,GapDown long call 3 DTE,equity_signal,S165|ATM|7DTE|0930-1000|EOD|cancel,-1.247198344694375,5,0.4,False
+S166,GapDown strong call,equity_signal,S166|ATM|7DTE|0930-1000|EOD|cancel,-2.562036801356952,4,0.25,False
+S167,GapDown weak skip/half,equity_signal,S167|ATM|7DTE|0930-1000|EOD|cancel,-1.7379491947891577,6,0.16666666666666666,False
+S168,GapUp long put EOD,equity_signal,S168|ATM|7DTE|0930-1000|EOD|cancel,-2.366096466611362,3,0.3333333333333333,False
+S169,VolumeSpike long call EOD,equity_signal,S169|ATM|7DTE|0930-1000|EOD|cancel,-2.981752199312306,4,0.25,False
+S170,Pullback50 long call 3 DTE,equity_signal,S170|ATM|7DTE|0930-1000|EOD|cancel,-0.3598671548827532,5,0.4,False
+S172,52wkLow long call 7 DTE,equity_signal,S172|ATM|7DTE|0930-1000|EOD|cancel,3.1246459768918347,5,0.6,False
+S173,MomReversal long call,equity_signal,S173|ATM|7DTE|0930-1000|EOD|cancel,4.407683478540718,5,0.8,False
+S174,RubberBand long call EOD,equity_signal,S174|ATM|7DTE|0930-1000|EOD|cancel,0.2929939521593408,4,0.25,False
+S175,RSIRecovery long call 3 DTE,equity_signal,S175|ATM|7DTE|0930-1000|EOD|cancel,0.10020670129434468,3,0.6666666666666666,False
+S176,Seasonal calendar match DTE,equity_signal,S176|ATM|7DTE|0930-1000|EOD|cancel,-1.2892314812039214,5,0.4,False
+S177,Regime bull calls only,equity_signal,S177|ATM|7DTE|0930-1000|EOD|cancel,-0.8577916087228594,4,0.5,False
+S178,Regime bear puts only,equity_signal,S178|ATM|7DTE|0930-1000|EOD|cancel,2.7977385639412855,3,0.6666666666666666,False
+S179,Regime corr reduced size,equity_signal,S179|ATM|7DTE|0930-1000|EOD|cancel,-0.6770517043180908,5,0.6,False
+S180,Signal IV rank filter,equity_signal,S180|ATM|7DTE|0930-1000|EOD|cancel,-3.4495832945614326,4,0.25,False
+S181,Signal low spread filter,equity_signal,S181|ATM|7DTE|0930-1000|EOD|cancel,-0.9641864765645756,1,0.0,False
+S182,Signal OI filter,equity_signal,S182|ATM|7DTE|0930-1000|EOD|cancel,-1.2489034584200303,4,0.25,False
+S183,GapDown VolumeSpike confirm,equity_signal,S183|ATM|7DTE|0930-1000|EOD|cancel,-5.501045239483608,7,0.14285714285714285,False
+S184,Fade low vol gap long put,equity_signal,S184|ATM|7DTE|0930-1000|EOD|cancel,0.40405865483848125,7,0.42857142857142855,False
+S185,ORB breakout call 15m,intraday,S185|ATM|7DTE|0930-1000|EOD|cancel,-3.115459680278937,11,0.45454545454545453,False
+S186,ORB breakdown put 15m,intraday,S186|ATM|7DTE|0930-1000|EOD|cancel,2.0757292983858306,6,0.3333333333333333,False
+S187,First hour gap fade call,intraday,S187|ATM|7DTE|0930-1000|EOD|cancel,-0.9278744601532118,5,0.4,False
+S188,VWAP reclaim long call,intraday,S188|ATM|7DTE|0930-1000|EOD|cancel,-1.536238123836235,6,0.3333333333333333,False
+S189,VWAP rejection long put,intraday,S189|ATM|7DTE|0930-1000|EOD|cancel,-1.41609159833407,5,0.4,False
+S190,Midday consolidation BO,intraday,S190|ATM|7DTE|0930-1000|EOD|cancel,-1.0472942918609849,2,0.0,False
+S191,Power hour momentum call,intraday,S191|ATM|7DTE|0930-1000|EOD|cancel,-0.5999705826579733,2,0.5,False
+S192,Power hour fade put,intraday,S192|ATM|7DTE|0930-1000|EOD|cancel,-1.533018787010351,1,0.0,False
+S193,10AM reversal call,intraday,S193|ATM|7DTE|0930-1000|EOD|cancel,-1.0051866172155304,2,0.0,False
+S194,Lunch lull vol sell,intraday,S194|ATM|7DTE|0930-1000|EOD|cancel,-8.303794306517196,18,0.2222222222222222,False
+S195,Last hour theta short weekly,intraday,S195|ATM|7DTE|0930-1000|EOD|cancel,2.5578559826610143,15,0.5333333333333333,False
+S196,Tick imbalance proxy,intraday,S196|ATM|7DTE|0930-1000|EOD|cancel,0.4533361728967168,1,1.0,False
+S197,Bid-ask imbalance open,intraday,S197|ATM|7DTE|0930-1000|EOD|cancel,-3.220988986367228,7,0.2857142857142857,False
+S198,Large opening print follow,intraday,S198|ATM|7DTE|0930-1000|EOD|cancel,-0.9800309411066688,6,0.3333333333333333,False
+S199,UOA call sweep follow,flow_sentiment,S199|ATM|7DTE|0930-1000|EOD|cancel,-1.6894450891113715,4,0.25,False
+S200,UOA put sweep follow,flow_sentiment,S200|ATM|7DTE|0930-1000|EOD|cancel,-1.5433057597031838,3,0.3333333333333333,False
+S201,PCR contrarian bullish,flow_sentiment,S201|ATM|7DTE|0930-1000|EOD|cancel,-1.9486409394186182,5,0.2,False
+S202,PCR contrarian bearish,flow_sentiment,S202|ATM|7DTE|0930-1000|EOD|cancel,-1.134125524587683,3,0.3333333333333333,False
+S204,GEX positive fade,flow_sentiment,S204|ATM|7DTE|0930-1000|EOD|cancel,-1.2549062218733398,6,0.3333333333333333,False
+S205,GEX negative trend follow,flow_sentiment,S205|ATM|7DTE|0930-1000|EOD|cancel,-0.903199153205092,5,0.2,False
+S206,Dealer delta hedge proxy,flow_sentiment,S206|ATM|7DTE|0930-1000|EOD|cancel,-6.001246764433802,8,0.125,False
+S207,OI change breakout,flow_sentiment,S207|ATM|7DTE|0930-1000|EOD|cancel,-2.4275802783121967,6,0.16666666666666666,False
+S208,Vol weighted PCR skew,flow_sentiment,S208|ATM|7DTE|0930-1000|EOD|cancel,-0.6694024633531862,4,0.5,False
+S209,Dark pool print call,flow_sentiment,S209|ATM|7DTE|0930-1000|EOD|cancel,1.9787274724633945,2,1.0,False
+S210,13F lag overlay,flow_sentiment,S210|ATM|7DTE|0930-1000|EOD|cancel,-0.7355714787657378,7,0.42857142857142855,False
+S211,Fixed 1pct risk per trade,risk_overlay,S211|ATM|7DTE|0930-1000|EOD|cancel,1.0341778640336403,7,0.5714285714285714,False
+S212,Kelly half sizing,risk_overlay,S212|ATM|7DTE|0930-1000|EOD|cancel,-1.025836759446657,6,0.16666666666666666,False
+S213,Tier0 1 contract 75 max,risk_overlay,S213|ATM|7DTE|0930-1000|EOD|cancel,-2.223692660483275,8,0.375,False
+S214,Tier1 2pct equity,risk_overlay,S214|ATM|7DTE|0930-1000|EOD|cancel,-2.7303717464918473,4,0.25,False
+S215,Max 3 concurrent,risk_overlay,S215|ATM|7DTE|0930-1000|EOD|cancel,-1.438917940271591,6,0.5,False
+S216,Max 20pct premium at risk,risk_overlay,S216|ATM|7DTE|0930-1000|EOD|cancel,-1.8297472407680158,4,0.25,False
+S217,Stop minus 50pct premium,risk_overlay,S217|ATM|7DTE|0930-1000|EOD|cancel,-1.057668677267477,2,0.0,False
+S218,Stop underlying minus 1pct,risk_overlay,S218|ATM|7DTE|0930-1000|EOD|cancel,-4.023572246976266,5,0.2,False
+S219,Profit take plus 50pct,risk_overlay,S219|ATM|7DTE|0930-1000|EOD|cancel,-3.0222395567009177,5,0.4,False
+S220,Sector correlation cap,risk_overlay,S220|ATM|7DTE|0930-1000|EOD|cancel,0.7678436582815754,4,0.25,False

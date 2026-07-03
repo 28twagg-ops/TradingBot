@@ -48,22 +48,20 @@ from options_strategy_simulator import (  # noqa: E402
     SignalEvent, simulate_single_trade, aggregate, quote_from_underlying,
     MAX_CONTRACT_COST, DEV_LABEL,
 )
+try:
+    from options_strategy_registry import mechanics_dict, load_registry  # noqa: E402
+    _REGISTRY_MECHANICS = mechanics_dict()
+except Exception:
+    _REGISTRY_MECHANICS = {}
 
-# --------------------------------------------------------------------------- #
-#  Grid axes
-# --------------------------------------------------------------------------- #
-
-# Representative mechanic archetypes. On SYNTHETIC data a "mechanic" only encodes
-# a directional bias (right + drift); the real per-mechanic differentiation comes
-# from real data in Phase 3. The library expands trivially (A1..E6) by adding
-# entries here; the grid machinery is identical.
-MECHANICS = {
-    "A1_GapDownCall":    {"right": "C", "drift": 0.22},
-    "A4_MorningRevCall": {"right": "C", "drift": 0.16},
-    "A8_ORBCall":        {"right": "C", "drift": 0.13},
-    "A3_GapUpPut":       {"right": "P", "drift": 0.22},
-    "A7_VWAPRejPut":     {"right": "P", "drift": 0.14},
+_LEGACY_MECHANICS = {
+    "A1_GapDownCall":    {"right": "C", "drift": 0.22, "side": "long"},
+    "A4_MorningRevCall": {"right": "C", "drift": 0.16, "side": "long"},
+    "A8_ORBCall":        {"right": "C", "drift": 0.13, "side": "long"},
+    "A3_GapUpPut":       {"right": "P", "drift": 0.22, "side": "long"},
+    "A7_VWAPRejPut":     {"right": "P", "drift": 0.14, "side": "long"},
 }
+MECHANICS = _LEGACY_MECHANICS
 
 STRIKE_OFFSETS = {"ATM": 0.0, "OTM1": 0.015, "OTM2": 0.030}
 DTE_DAYS = [1, 3, 7, 14, 30]
@@ -94,9 +92,12 @@ def gen_variant_signals(mech: str, strike_key: str, dte: int, win_key: str,
     rng = random.Random(seed)
     spec = MECHANICS[mech]
     right = spec["right"]
+    side = spec.get("side", "long")
     drift = spec["drift"] * ENTRY_WINDOWS[win_key]     # edge decays later in morning
-    if right == "P":
+    if right == "P" and side == "long":
         drift = -abs(drift)                            # puts want downward move
+    elif right == "C" and side == "long":
+        drift = abs(drift)
     off = STRIKE_OFFSETS[strike_key]
     hold_min = EXIT_HOLD_MIN[exit_key]
     T = dte / 365.0
@@ -127,6 +128,7 @@ def gen_variant_signals(mech: str, strike_key: str, dte: int, win_key: str,
             mechanic=mech, right=right, strike=K, T_years=T, iv=iv,
             open_interest=oi, period=("A" if i % 2 == 0 else "B"),
             S_signal=S_signal, S_next=S_next, S_exit=S_exit, T_exit_years=T_exit,
+            side=side,
         ))
     return sigs
 
@@ -412,7 +414,14 @@ def main() -> int:
     ap.add_argument("--quick", action="store_true", help="tiny smoke grid")
     ap.add_argument("--focused", action="store_true",
                     help="Verdict B preset: intraday/EOD exits, ATM, short DTE only")
+    ap.add_argument("--use-registry", action="store_true",
+                    help="use full ~220 strategy registry as mechanics (slow)")
     args = ap.parse_args()
+
+    global MECHANICS
+    if args.use_registry and _REGISTRY_MECHANICS:
+        MECHANICS = _REGISTRY_MECHANICS
+        print(f"Using full registry: {len(MECHANICS)} mechanics")
 
     results = run_grid(args.n, quick=args.quick, focused=args.focused)
     nmain, nsec, nexc, nsurv = save_outputs(results, args.n, focused=args.focused)

@@ -38,6 +38,7 @@ from __future__ import annotations
 import argparse
 import math
 import random
+import statistics
 import sys
 from dataclasses import dataclass, field, asdict
 from datetime import date
@@ -81,6 +82,8 @@ def bs_price(S: float, K: float, T: float, sigma: float, right: str,
              r: float = RISK_FREE_RATE) -> float:
     """Black-Scholes price of a European call/put. T in years."""
     right = right.upper()
+    if K <= 0 or S <= 0:
+        return 0.0
     if T <= 0 or sigma <= 0:
         # intrinsic value at/after expiry
         return max(0.0, (S - K) if right == "C" else (K - S))
@@ -149,6 +152,7 @@ class SignalEvent:
     S_next: float                    # underlying one window later (for fill check)
     S_exit: float                    # underlying at exit
     T_exit_years: float              # time to expiry at exit
+    side: str = "long"               # long | short premium
 
 
 def quote_from_underlying(S: float, K: float, T: float, iv: float,
@@ -191,7 +195,8 @@ class TradeResult:
 
 def simulate_single_trade(sig: SignalEvent, contracts: int = 1,
                           liquidity_filter: bool = True,
-                          fill_mode: str = "cancel") -> TradeResult:
+                          fill_mode: str = "cancel",
+                          max_contract_cost: float | None = None) -> TradeResult:
     """
     STEP B core. Adversarial assumptions (Section 4):
       - quotes derived from underlying via Black-Scholes + spread model
@@ -216,6 +221,8 @@ def simulate_single_trade(sig: SignalEvent, contracts: int = 1,
     q_sig = quote_from_underlying(sig.S_signal, sig.strike, sig.T_years,
                                   sig.iv, sig.open_interest, sig.right)
 
+    side = (sig.side or "long").lower()
+
     # Liquidity / tradeability filters (drives Integrity Check 6)
     if liquidity_filter:
         contract_cost = q_sig.ask * CONTRACT_MULTIPLIER
@@ -228,46 +235,69 @@ def simulate_single_trade(sig: SignalEvent, contracts: int = 1,
         if q_sig.spread_frac > MAX_SPREAD_FRAC:
             res.skipped, res.skip_reason = True, "spread>25%"
             return res
-        if contract_cost > MAX_CONTRACT_COST:
+        if side == "long" and contract_cost > (max_contract_cost or MAX_CONTRACT_COST):
             res.skipped, res.skip_reason = True, "cost>$75"
             return res
 
-    # Entry: limit at ask - $0.01. Fill behavior depends on fill_mode (Section 4).
-    entry_limit = round(q_sig.ask - 0.01, 2)
-    res.entry_limit = entry_limit
     q_next = quote_from_underlying(sig.S_next, sig.strike, sig.T_years,
                                    sig.iv, sig.open_interest, sig.right)
     mode = (fill_mode or "cancel").lower()
-    if mode == "cancel":             # Option 1: strict limit, cancel after one window
-        if q_next.ask > entry_limit:
-            res.filled = False
-            return res
-        entry_fill = entry_limit
-    elif mode == "widen":            # Option 2: widen to ask, pay the prevailing ask
-        if q_next.ask > q_sig.ask:
-            res.filled = False
-            return res
-        entry_fill = round(q_next.ask, 2)
-    elif mode == "hold":             # Option 3: patient limit held ~30 min, keep price
-        if q_next.ask > q_sig.ask:
-            res.filled = False
-            return res
-        entry_fill = entry_limit
+
+    if side == "long":
+        entry_limit = round(q_sig.ask - 0.01, 2)
+        res.entry_limit = entry_limit
+        if mode == "cancel":
+            if q_next.ask > entry_limit:
+                res.filled = False
+                return res
+            entry_fill = entry_limit
+        elif mode == "widen":
+            if q_next.ask > q_sig.ask:
+                res.filled = False
+                return res
+            entry_fill = round(q_next.ask, 2)
+        elif mode == "hold":
+            if q_next.ask > q_sig.ask:
+                res.filled = False
+                return res
+            entry_fill = entry_limit
+        else:
+            raise ValueError(f"unknown fill_mode: {fill_mode!r}")
+        q_exit = quote_from_underlying(sig.S_exit, sig.strike, sig.T_exit_years,
+                                       sig.iv, sig.open_interest, sig.right)
+        exit_price = q_exit.bid
+        gross = (exit_price - entry_fill) * CONTRACT_MULTIPLIER * contracts
     else:
-        raise ValueError(f"unknown fill_mode: {fill_mode!r}")
+        entry_limit = round(q_sig.bid + 0.01, 2)
+        res.entry_limit = entry_limit
+        if mode == "cancel":
+            if q_next.bid < entry_limit:
+                res.filled = False
+                return res
+            entry_fill = entry_limit
+        elif mode == "widen":
+            if q_next.bid < q_sig.bid:
+                res.filled = False
+                return res
+            entry_fill = round(q_next.bid, 2)
+        elif mode == "hold":
+            if q_next.bid < q_sig.bid:
+                res.filled = False
+                return res
+            entry_fill = entry_limit
+        else:
+            raise ValueError(f"unknown fill_mode: {fill_mode!r}")
+        q_exit = quote_from_underlying(sig.S_exit, sig.strike, sig.T_exit_years,
+                                       sig.iv, sig.open_interest, sig.right)
+        exit_price = q_exit.ask
+        gross = (entry_fill - exit_price) * CONTRACT_MULTIPLIER * contracts
 
     res.filled = True
     res.contracts = contracts
     res.entry_fill = entry_fill
-    res.entry_cost = entry_fill * CONTRACT_MULTIPLIER
-
-    # Exit: sell at bid at exit time
-    q_exit = quote_from_underlying(sig.S_exit, sig.strike, sig.T_exit_years,
-                                   sig.iv, sig.open_interest, sig.right)
-    exit_price = q_exit.bid
     res.exit_price = exit_price
-
-    res.gross_pnl = (exit_price - entry_fill) * CONTRACT_MULTIPLIER * contracts
+    res.entry_cost = entry_fill * CONTRACT_MULTIPLIER
+    res.gross_pnl = gross
     res.fees = FEE_ROUND_TRIP * contracts
     res.pnl_dollar = res.gross_pnl - res.fees
     basis = res.entry_cost * contracts
@@ -362,16 +392,21 @@ def generate_dev_signals(n: int, seed: int = 42, mechanic: str = "mixed",
     return sigs
 
 
-def load_alpaca_dataset(stocks_parquet: Path, options_parquet: Path) -> list[SignalEvent]:
+def load_alpaca_dataset(stocks_parquet: Path, options_parquet: Path,
+                        signal: str = "gap_down") -> list[SignalEvent]:
     """
-    PHASE 3 HOOK (not used in Phase 2 dev runs).
-    Load real Alpaca 1-minute stock + options parquet produced by
-    TradingBot-git/scripts/options_data_collector.py and translate into
-    SignalEvent objects. Intentionally unimplemented until real data exists.
+    Load Alpaca 1-minute stock + options parquet from options_data_collector.py
+    and build SignalEvent list using detected equity signals.
     """
-    raise NotImplementedError(
-        "Real Alpaca dataset loader is a Phase 3 task; requires collected "
-        "1-minute parquet data that does not exist yet.")
+    import pandas as pd
+    from historical_backtest import detect_signals_from_stocks, signals_to_events
+
+    if not stocks_parquet.exists():
+        raise FileNotFoundError(f"Missing stocks parquet: {stocks_parquet}")
+    stocks = pd.read_parquet(stocks_parquet)
+    options = pd.read_parquet(options_parquet) if options_parquet.exists() else None
+    raw = detect_signals_from_stocks(stocks, signal_type=signal)
+    return signals_to_events(raw, options_df=options, use_bs_fallback=options is None)
 
 
 # --------------------------------------------------------------------------- #
@@ -379,9 +414,11 @@ def load_alpaca_dataset(stocks_parquet: Path, options_parquet: Path) -> list[Sig
 # --------------------------------------------------------------------------- #
 
 def build_trade_log(sigs: list[SignalEvent], contracts: int = 1,
-                    liquidity_filter: bool = True) -> list[TradeResult]:
+                    liquidity_filter: bool = True,
+                    max_contract_cost: float | None = None) -> list[TradeResult]:
     return [simulate_single_trade(s, contracts=contracts,
-                                  liquidity_filter=liquidity_filter) for s in sigs]
+                                  liquidity_filter=liquidity_filter,
+                                  max_contract_cost=max_contract_cost) for s in sigs]
 
 
 def aggregate(trades: list[TradeResult]) -> dict:
@@ -404,6 +441,10 @@ def aggregate(trades: list[TradeResult]) -> dict:
     profit_factor = (gross_profit / gross_loss) if gross_loss > 0 else float("inf")
     # KEY METRIC (Section 4): Expected P&L per signal (dollar), penalizes fill rate
     exp_pnl_per_signal = fill_rate * (win_rate * avg_win - loss_rate * avg_loss)
+    pnl_pcts = [t.pnl_pct for t in filled]
+    avg_return_pct = (sum(pnl_pcts) / len(pnl_pcts)) if pnl_pcts else 0.0
+    med_return_pct = statistics.median(pnl_pcts) if pnl_pcts else 0.0
+    exp_return_pct_per_signal = fill_rate * avg_return_pct
 
     return {
         "signals_considered": considered,
@@ -420,6 +461,9 @@ def aggregate(trades: list[TradeResult]) -> dict:
         "total_pnl": total_pnl,
         "profit_factor": profit_factor,
         "exp_pnl_per_signal": exp_pnl_per_signal,
+        "avg_return_pct": avg_return_pct,
+        "med_return_pct": med_return_pct,
+        "exp_return_pct_per_signal": exp_return_pct_per_signal,
     }
 
 
