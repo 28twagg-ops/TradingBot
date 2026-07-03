@@ -1,16 +1,10 @@
-# options_morning_bot.yml — Phase 4 Task 4.1 (PAPER mode)
-# Runs scripts/options_morning_bot.py on the Alpaca PAPER account.
+# options_morning_bot.yml — Options paper bot ONLY (separate from rubber_band_bot)
 #
-# PAPER ONLY — script hard-locks PAPER_TRADING=True and refuses live.
-# NEVER touches rubber_band_bot.py logic.
+# Branch: options-bot (not main)
+# Logs:   logs/options_trial/ (not logs/daily/ rubber band logs)
 #
-# PRIMARY TRIGGER: run_bot.yml (cron-job.org every ~5 min) runs the options
-# script during 9:28-16:05 ET weekdays. GitHub schedule was removed — it was
-# delayed hours and missed the morning entry window entirely.
-#
-# This workflow remains for manual runs / debugging only.
-#
-# Uses secrets ALPACA_PAPER_KEY / ALPACA_PAPER_SECRET (NOT the live keys).
+# Trigger via workflow_dispatch or cron-job.org webhook targeting branch options-bot.
+# Uses secrets ALPACA_PAPER_KEY / ALPACA_PAPER_SECRET (NOT live equity keys).
 
 name: Options Morning Bot (PAPER)
 
@@ -27,12 +21,13 @@ permissions:
 jobs:
   morning-bot:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 12
 
     steps:
-      - name: Checkout repo
+      - name: Checkout options-bot branch
         uses: actions/checkout@v4
         with:
+          ref: options-bot
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python 3.11
@@ -41,26 +36,30 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install alpaca-py pandas numpy lxml requests
+        run: pip install alpaca-py pandas numpy lxml requests pyarrow
+
+      - name: Init options trial layout
+        run: python scripts/init_options_trial.py
 
       - name: Run options morning bot (PAPER)
         env:
           ALPACA_PAPER_KEY: ${{ secrets.ALPACA_PAPER_KEY }}
           ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
+          OPTIONS_PAPER_UNLIMITED: "1"
         run: python scripts/options_morning_bot.py
 
-      - name: Commit options run log
+      - name: Commit options trial logs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add logs/options/
+          git add logs/options_trial/
           if git diff --staged --quiet; then
-            echo "No new options log to commit."
+            echo "No new options trial log to commit."
             exit 0
           fi
-          git commit -m "options paper bot log $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git commit -m "options paper trial $(date -u '+%Y-%m-%d %H:%M UTC')"
           for attempt in 1 2 3; do
-            if git push origin HEAD:main; then exit 0; fi
-            git fetch origin main && git rebase origin/main && sleep 5
+            if git push origin HEAD:options-bot; then exit 0; fi
+            git fetch origin options-bot && git rebase origin/options-bot && sleep 5
           done
-          echo "ERROR: failed to push after 3 attempts"; exit 1
+          echo "ERROR: failed to push options-bot after 3 attempts"; exit 1
