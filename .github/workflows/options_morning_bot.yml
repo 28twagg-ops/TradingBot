@@ -1,65 +1,64 @@
-# options_morning_bot.yml — Options paper bot ONLY (separate from rubber_band_bot)
-#
-# Branch: options-bot (not main)
-# Logs:   logs/options_trial/ (not logs/daily/ rubber band logs)
-#
-# Trigger via workflow_dispatch or cron-job.org webhook targeting branch options-bot.
-# Uses secrets ALPACA_PAPER_KEY / ALPACA_PAPER_SECRET (NOT live equity keys).
-
-name: Options Morning Bot (PAPER)
-
-on:
-  workflow_dispatch: {}
-
-concurrency:
-  group: options-morning-bot
-  cancel-in-progress: false
-
-permissions:
-  contents: write
-
-jobs:
-  morning-bot:
-    runs-on: ubuntu-latest
-    timeout-minutes: 12
-
-    steps:
-      - name: Checkout options-bot branch
-        uses: actions/checkout@v4
-        with:
-          ref: options-bot
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: pip install alpaca-py pandas numpy lxml requests pyarrow
-
-      - name: Init options trial layout
-        run: python scripts/init_options_trial.py
-
-      - name: Run options morning bot (PAPER)
-        env:
-          ALPACA_PAPER_KEY: ${{ secrets.ALPACA_PAPER_KEY }}
-          ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
-          OPTIONS_PAPER_UNLIMITED: "1"
-        run: python scripts/options_morning_bot.py
-
-      - name: Commit options trial logs
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add logs/options_trial/
-          if git diff --staged --quiet; then
-            echo "No new options trial log to commit."
-            exit 0
-          fi
-          git commit -m "options paper trial $(date -u '+%Y-%m-%d %H:%M UTC')"
-          for attempt in 1 2 3; do
-            if git push origin HEAD:options-bot; then exit 0; fi
-            git fetch origin options-bot && git rebase origin/options-bot && sleep 5
-          done
-          echo "ERROR: failed to push options-bot after 3 attempts"; exit 1
+# options_morning_bot.yml — Manual / debug only
+#
+# PRIMARY TRIGGER: run_bot.yml (same cron-job.org ~5 min webhook as rubber_band_bot).
+# That workflow runs both bots and commits logs/options_trial/ to main.
+#
+# Use this workflow for manual runs when debugging options in isolation.
+
+name: Options Morning Bot (PAPER)
+
+on:
+  workflow_dispatch: {}
+
+concurrency:
+  group: options-morning-bot
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  morning-bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install alpaca-py pandas numpy lxml requests pyarrow
+
+      - name: Init options trial layout
+        run: python scripts/init_options_trial.py
+
+      - name: Run options morning bot (PAPER)
+        env:
+          ALPACA_PAPER_KEY: ${{ secrets.ALPACA_PAPER_KEY }}
+          ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
+          OPTIONS_PAPER_UNLIMITED: "1"
+        run: python scripts/options_morning_bot.py
+
+      - name: Commit options trial logs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add logs/options_trial/
+          if git diff --staged --quiet; then
+            echo "No new options trial log to commit."
+            exit 0
+          fi
+          git commit -m "options paper trial $(date -u '+%Y-%m-%d %H:%M UTC')"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then exit 0; fi
+            git fetch origin main && git rebase origin/main && sleep 5
+          done
+          echo "ERROR: failed to push after 3 attempts"; exit 1
+

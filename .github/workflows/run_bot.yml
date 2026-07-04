@@ -1,6 +1,6 @@
 name: Rubber Band Bot
 
-# cron-job.org webhook (Chicago): see docs/ops/failed_run_diagnosis.md for schedule.
+# cron-job.org webhook every ~5 min (Chicago): runs LIVE rubber_band_bot + PAPER options_morning_bot.
 # Modes auto-detected via BOT_MODE=auto or explicit workflow_dispatch input.
 
 on:
@@ -46,7 +46,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install alpaca-py yfinance pandas numpy lxml requests
+        run: pip install alpaca-py yfinance pandas numpy lxml requests pyarrow
 
       - name: Run live bot
         env:
@@ -54,6 +54,28 @@ jobs:
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
           BOT_MODE: ${{ github.event.inputs.mode || 'auto' }}
         run: python rubber_band_bot.py
+
+      # Options paper bot: same cron as live bot (every ~5 min). Entry window 9:28-11:35 ET;
+      # manage/exits until 16:05 ET weekdays.
+      - name: Run options paper bot (PAPER, 9:28-16:05 ET weekdays)
+        env:
+          ALPACA_PAPER_KEY: ${{ secrets.ALPACA_PAPER_KEY }}
+          ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
+          OPTIONS_PAPER_UNLIMITED: "1"
+        run: |
+          export TZ=America/New_York
+          dow=$(date +%u)
+          if [ "$dow" -gt 5 ]; then
+            echo "Weekend — skip options paper bot"
+            exit 0
+          fi
+          hm=$(date +%H%M)
+          if [ "$hm" -lt 0928 ] || [ "$hm" -gt 1605 ]; then
+            echo "Outside options window (${hm} ET) — skip"
+            exit 0
+          fi
+          python scripts/init_options_trial.py
+          python scripts/options_morning_bot.py
 
       - name: Commit logs back to repo
         run: |
@@ -65,10 +87,13 @@ jobs:
           cp -r logs/. /tmp/botlogs_run/ 2>/dev/null || true
           git checkout origin/main -- logs/ 2>/dev/null || mkdir -p logs
           python scripts/merge_bot_logs.py /tmp/botlogs_run logs
+          if [ -d /tmp/botlogs_run/options_trial ]; then
+            mkdir -p logs/options_trial
+            cp -r /tmp/botlogs_run/options_trial/. logs/options_trial/
+          fi
           python scripts/reconcile_daily_logs.py logs 14
           python scripts/daily_slippage_watch.py logs
           git add logs/
-          git reset logs/options_trial/ 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No log changes to commit"
             exit 0
@@ -83,6 +108,10 @@ jobs:
             git fetch origin main
             git checkout origin/main -- logs/
             python scripts/merge_bot_logs.py /tmp/botlogs_run logs
+            if [ -d /tmp/botlogs_run/options_trial ]; then
+              mkdir -p logs/options_trial
+              cp -r /tmp/botlogs_run/options_trial/. logs/options_trial/
+            fi
             python scripts/reconcile_daily_logs.py logs 14
             python scripts/daily_slippage_watch.py logs
             git add logs/
