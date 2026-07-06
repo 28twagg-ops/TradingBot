@@ -380,14 +380,14 @@
   {
     "bucket_id": 63,
     "profile": "g063_mid_tp20_sl65",
-    "open_premium": 177.0,
-    "open_lots": 2
+    "open_premium": 80.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 64,
     "profile": "g064_eod_tp20_sl65",
-    "open_premium": 177.0,
-    "open_lots": 2
+    "open_premium": 80.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 65,
@@ -410,14 +410,14 @@
   {
     "bucket_id": 68,
     "profile": "g068_lim_tp30_sl20",
-    "open_premium": 97.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 69,
     "profile": "g069_mid_tp30_sl20",
-    "open_premium": 97.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 70,
@@ -434,98 +434,98 @@
   {
     "bucket_id": 72,
     "profile": "g072_mid_tp30_sl20",
-    "open_premium": 99.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 73,
     "profile": "g073_eod_tp30_sl20",
-    "open_premium": 164.0,
-    "open_lots": 2
+    "open_premium": 65.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 74,
     "profile": "g074_lim_tp30_sl20",
-    "open_premium": 99.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 75,
     "profile": "g075_mid_tp30_sl20",
-    "open_premium": 99.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 76,
     "profile": "g076_eod_tp30_sl20",
-    "open_premium": 179.0,
-    "open_lots": 2
+    "open_premium": 80.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 77,
     "profile": "g077_lim_tp30_sl20",
-    "open_premium": 99.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 78,
     "profile": "g078_mid_tp30_sl20",
-    "open_premium": 99.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 79,
     "profile": "g079_eod_tp30_sl20",
-    "open_premium": 179.0,
-    "open_lots": 2
+    "open_premium": 80.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 80,
     "profile": "g080_lim_tp30_sl30",
-    "open_premium": 99.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 81,
     "profile": "g081_mid_tp30_sl30",
-    "open_premium": 99.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 82,
     "profile": "g082_eod_tp30_sl30",
-    "open_premium": 164.0,
-    "open_lots": 2
+    "open_premium": 65.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 83,
     "profile": "g083_lim_tp30_sl30",
-    "open_premium": 179.0,
-    "open_lots": 2
+    "open_premium": 80.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 84,
     "profile": "g084_mid_tp30_sl30",
-    "open_premium": 179.0,
-    "open_lots": 2
+    "open_premium": 80.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 85,
     "profile": "g085_eod_tp30_sl30",
-    "open_premium": 179.0,
-    "open_lots": 2
+    "open_premium": 80.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 86,
     "profile": "g086_lim_tp30_sl30",
-    "open_premium": 179.0,
-    "open_lots": 2
+    "open_premium": 80.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 87,
     "profile": "g087_mid_tp30_sl30",
-    "open_premium": 179.0,
-    "open_lots": 2
+    "open_premium": 80.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 88,
@@ -554,14 +554,14 @@
   {
     "bucket_id": 92,
     "profile": "g092_lim_tp30_sl40",
-    "open_premium": 100.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 93,
     "profile": "g093_mid_tp30_sl40",
-    "open_premium": 100.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 94,
@@ -572,14 +572,14 @@
   {
     "bucket_id": 95,
     "profile": "g095_lim_tp30_sl40",
-    "open_premium": 180.0,
-    "open_lots": 2
+    "open_premium": 80.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 96,
     "profile": "g096_mid_tp30_sl40",
-    "open_premium": 180.0,
-    "open_lots": 2
+    "open_premium": 80.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 97,
@@ -590,13 +590,13 @@
   {
     "bucket_id": 98,
     "profile": "g098_lim_tp30_sl40",
-    "open_premium": 180.0,
-    "open_lots": 2
+    "open_premium": 80.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 99,
     "profile": "g099_mid_tp30_sl40",
-    "open_premium": 180.0,
-    "open_lots": 2
+    "open_premium": 80.0,
+    "open_lots": 1
   }
 ]
