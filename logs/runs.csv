@@ -1792,3 +1792,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-06 20:30:55,ext_exits,bull,481.18,24.07,0,0,0,5,BWA|DECK|F|MAR|TRGP,both
 2026-07-06 20:35:41,ext_exits,bull,481.17,24.07,0,0,0,5,BWA|DECK|F|MAR|TRGP,both
 2026-07-06 20:40:52,ext_exits,bull,481.29,24.07,0,0,0,5,BWA|DECK|F|MAR|TRGP,both
+2026-07-06 20:45:37,ext_exits,bull,481.22,24.07,0,0,0,5,BWA|DECK|F|MAR|TRGP,both
