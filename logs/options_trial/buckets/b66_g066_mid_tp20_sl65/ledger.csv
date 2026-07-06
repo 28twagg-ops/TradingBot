@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail
 2026-07-06T09:34:30.695185-04:00,entry,66,g066_mid_tp20_sl65,S173,b4549c898f7e,ADBE,ADBE260710C00235000,1,0.61,,70.0,,,,-0.1,,0.6,-0.4,0.295,MR gap -1.6% green
 2026-07-06T10:03:38.403491-04:00,entry,66,g066_mid_tp20_sl65,S174,40050e0b00ee,ADBE,ADBE260710C00230000,1,0.74,,80.0,,,,-0.1,,0.2,-0.65,0.177,RB gap -1.6% reclaim
+2026-07-06T11:55:44.627023-04:00,exit,66,g066_mid_tp20_sl65,S174,40050e0b00ee,ADBE,ADBE260710C00230000,1,,,80.0,23.29,18.63,take_profit (+23.3%),,-0.05,0.2,-0.65,,

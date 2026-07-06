@@ -380,8 +380,8 @@
   {
     "bucket_id": 63,
     "profile": "g063_mid_tp20_sl65",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 64,
@@ -392,14 +392,14 @@
   {
     "bucket_id": 65,
     "profile": "g065_lim_tp20_sl65",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 66,
     "profile": "g066_mid_tp20_sl65",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 67,
