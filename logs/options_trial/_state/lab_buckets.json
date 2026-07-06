@@ -2,8 +2,8 @@
   {
     "bucket_id": 0,
     "profile": "baseline",
-    "open_premium": 529.0,
-    "open_lots": 3
+    "open_premium": 177.0,
+    "open_lots": 2
   },
   {
     "bucket_id": 1,
@@ -500,14 +500,14 @@
   {
     "bucket_id": 83,
     "profile": "g083_lim_tp30_sl30",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 84,
     "profile": "g084_mid_tp30_sl30",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 85,
@@ -518,14 +518,14 @@
   {
     "bucket_id": 86,
     "profile": "g086_lim_tp30_sl30",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 87,
     "profile": "g087_mid_tp30_sl30",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 88,
@@ -536,14 +536,14 @@
   {
     "bucket_id": 89,
     "profile": "g089_lim_tp30_sl30",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 90,
     "profile": "g090_mid_tp30_sl30",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 91,
@@ -572,14 +572,14 @@
   {
     "bucket_id": 95,
     "profile": "g095_lim_tp30_sl40",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 96,
     "profile": "g096_mid_tp30_sl40",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 97,
@@ -590,13 +590,13 @@
   {
     "bucket_id": 98,
     "profile": "g098_lim_tp30_sl40",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 99,
     "profile": "g099_mid_tp30_sl40",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   }
 ]
