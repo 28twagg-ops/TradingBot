@@ -2,3 +2,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-06T11:50:48.667455-04:00,exit,0,orphan_reconcile,UNKNOWN,c2d58ea9a2ec,PLTR,PLTR260710C00138000,6,,,562.14,84.65,475.86,take_profit (+84.7%),,-0.01,0.5,-0.5,,
 2026-07-06T12:05:45.005827-04:00,exit,0,orphan_reconcile,UNKNOWN,df118e91c1ed,PYPL,PYPL260710C00045000,6,,,352.0,50.0,176.0,take_profit (+50.0%),,-0.01,0.5,-0.5,,
 2026-07-06T12:21:13.002043-04:00,exit,0,orphan_reconcile,UNKNOWN,5990e6c1994f,PYPL,PYPL260710C00045500,1,,,31.0,58.06,18.0,take_profit (+58.1%),,-0.01,0.5,-0.5,,
+2026-07-06T13:15:43.821844-04:00,exit,0,orphan_reconcile,UNKNOWN,3c0fc77f5461,ADBE,ADBE260710C00230000,2,,,146.0,53.42,78.0,take_profit (+53.4%),,-0.01,0.5,-0.5,,

@@ -340,26 +340,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-07-06",
       "entry_order_id": "cc437baf-50df-4d6e-a8de-b57f02463a6e"
-    },
-    {
-      "lot_id": "3c0fc77f5461",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "UNKNOWN",
-      "occ_symbol": "ADBE260710C00230000",
-      "underlying": "ADBE",
-      "qty": 2,
-      "entry_cost": 146.0,
-      "entry_price": 0.73,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-06",
-      "entry_order_id": ""
     }
   ],
   "pending_orders": [],
@@ -376,8 +356,7 @@
     "b73": 65.0,
     "b82": 65.0,
     "b58": 43.0,
-    "b70": 47.0,
-    "b0": 146.0
+    "b70": 47.0
   },
   "updated": "2026-07-06"
 }
