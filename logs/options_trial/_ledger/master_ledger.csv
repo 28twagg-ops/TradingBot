@@ -221,3 +221,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-06T11:45:42.668018-04:00,exit,96,g096_mid_tp30_sl40,S173,b0e871c77091,PLTR,PLTR260710C00138000,1,,,100.0,70.78,70.78,take_profit (+70.8%),,-0.05,0.6,-0.4,,
 2026-07-06T11:45:42.668018-04:00,exit,98,g098_lim_tp30_sl40,S173,d6c46838422d,PLTR,PLTR260710C00138000,1,,,100.0,70.78,70.78,take_profit (+70.8%),,-0.05,0.6,-0.4,,
 2026-07-06T11:45:42.668018-04:00,exit,99,g099_mid_tp30_sl40,S173,87f2d5dbdd55,PLTR,PLTR260710C00138000,1,,,100.0,70.78,70.78,take_profit (+70.8%),,-0.05,0.6,-0.4,,
+2026-07-06T11:50:48.667455-04:00,exit,0,orphan_reconcile,UNKNOWN,c2d58ea9a2ec,PLTR,PLTR260710C00138000,6,,,562.14,84.65,475.86,take_profit (+84.7%),,-0.01,0.5,-0.5,,

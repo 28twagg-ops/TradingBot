@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail
+2026-07-06T11:50:48.667455-04:00,exit,0,orphan_reconcile,UNKNOWN,c2d58ea9a2ec,PLTR,PLTR260710C00138000,6,,,562.14,84.65,475.86,take_profit (+84.7%),,-0.01,0.5,-0.5,,
