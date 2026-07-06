@@ -302,26 +302,6 @@
       "entry_order_id": "1ae33158-891f-4868-a1a0-1d90c660b613"
     },
     {
-      "lot_id": "5990e6c1994f",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "UNKNOWN",
-      "occ_symbol": "PYPL260710C00045500",
-      "underlying": "PYPL",
-      "qty": 1,
-      "entry_cost": 31.0,
-      "entry_price": 0.31,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-06",
-      "entry_order_id": ""
-    },
-    {
       "lot_id": "ce06a61057aa",
       "bucket_id": 58,
       "profile_name": "g058_eod_tp20_sl65",
@@ -395,9 +375,9 @@
     "b85": 80.0,
     "b73": 65.0,
     "b82": 65.0,
-    "b0": 177.0,
     "b58": 43.0,
-    "b70": 47.0
+    "b70": 47.0,
+    "b0": 146.0
   },
   "updated": "2026-07-06"
 }

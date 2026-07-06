@@ -1743,3 +1743,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-06 16:05:44,exits,bull,479.68,382.44,0,0,0,1,MAR,both
 2026-07-06 16:10:53,exits,bull,479.59,382.44,0,0,0,1,MAR,both
 2026-07-06 16:15:39,exits,bull,479.56,382.44,0,0,0,1,MAR,both
+2026-07-06 16:21:11,exits,bull,479.54,382.44,0,0,0,1,MAR,both
