@@ -1733,3 +1733,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-06 14:03:37,scan_morning,bull,481.79,24.17,27,0,0,5,CMI|EMR|GNRC|HUBB|MAR,both
 2026-07-06 14:19:44,exits,bull,479.51,292.62,0,0,0,2,HUBB|MAR,both
 2026-07-06 14:37:12,exits,bull,478.99,382.44,0,0,0,1,MAR,both
+2026-07-06 14:54:13,exits,bull,479.52,382.44,0,0,0,1,MAR,both
