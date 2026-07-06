@@ -8,8 +8,8 @@
   {
     "bucket_id": 1,
     "profile": "patient_buy",
-    "open_premium": 47.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 2,
@@ -20,8 +20,8 @@
   {
     "bucket_id": 3,
     "profile": "tight_stops",
-    "open_premium": 47.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 4,
@@ -368,14 +368,14 @@
   {
     "bucket_id": 61,
     "profile": "g061_eod_tp20_sl65",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 62,
     "profile": "g062_lim_tp20_sl65",
-    "open_premium": 80.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 63,
@@ -464,14 +464,14 @@
   {
     "bucket_id": 77,
     "profile": "g077_lim_tp30_sl20",
-    "open_premium": 179.0,
-    "open_lots": 2
+    "open_premium": 99.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 78,
     "profile": "g078_mid_tp30_sl20",
-    "open_premium": 179.0,
-    "open_lots": 2
+    "open_premium": 99.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 79,
