@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail
 2026-07-06T09:34:30.695185-04:00,entry,70,g070_eod_tp30_sl20,S173,db30f7bc9b96,PLTR,PLTR260710C00139000,1,0.75,,85.0,,,,-0.1,,0.6,-0.4,0.099,MR gap -1.6% green
 2026-07-06T10:03:38.403491-04:00,entry,70,g070_eod_tp30_sl20,S174,75159ca6789d,PYPL,PYPL260710C00044500,1,0.55,,65.0,,,,-0.1,,0.3,-0.2,0.047,RB gap -2.2% reclaim
+2026-07-06T10:19:45.682718-04:00,entry,70,g070_eod_tp30_sl20,S165,61952cef20d0,PYPL,PYPL260710C00045000,1,0.37,,47.0,,,,-0.1,,0.35,-0.3,0.043,gap -2.2%
