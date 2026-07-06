@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail
+2026-07-06T09:34:30.695185-04:00,entry,72,g072_mid_tp30_sl20,S173,64a63447d9a0,PLTR,PLTR260710C00138000,1,0.97,,99.0,,,,-0.1,,0.6,-0.4,0.041,MR gap -1.6% green
