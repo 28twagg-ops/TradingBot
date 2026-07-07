@@ -42,10 +42,13 @@ from options_signals import PAPER_STRATEGIES, SignalHit, scan_symbol, StrategyCo
 from options_lab import (
     VIRTUAL_BUCKET_USD, PAPER_UNLIMITED_BUCKETS, EffectiveArm, LabState,
     active_bucket_count,
-    append_ledger, arms_for_signal, entry_limit_price, exit_limit_price,
-    exit_reason_for_lot, load_state, make_entry_client_order_id,
-    make_exit_client_order_id, print_trial_stats, reconcile_with_broker,
-    register_entry_immediate, register_exit, size_for_arm, trial_root,
+    append_ledger, arms_for_signal, cancel_unfilled_lab_entries,
+    entry_limit_price, exit_limit_price,
+    exit_reason_for_lot, has_open_lab_entry, load_state,
+    lock_entry_slot, make_entry_client_order_id,
+    make_exit_client_order_id, mark_order_logged, print_exit_summary,
+    print_trial_stats, reconcile_with_broker, register_exit,
+    register_pending, size_for_arm, trial_root,
 )
 
 # --------------------------------------------------------------------------- #
@@ -84,6 +87,11 @@ TODAY = date.today()
 API_KEY = os.getenv("ALPACA_PAPER_KEY")
 API_SECRET = os.getenv("ALPACA_PAPER_SECRET")
 
+# Set OPTIONS_BOT_VERBOSE=1 for per-bucket skip/entry lines (default: summary only).
+BOT_VERBOSE = os.getenv("OPTIONS_BOT_VERBOSE", "").strip().lower() in (
+    "1", "true", "yes",
+)
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_DIR = trial_root() / "runs"
 OCC_RE = re.compile(r"^[A-Z]+\d{6}[CP]\d{8}$")
@@ -105,10 +113,25 @@ def _hm_between(now: datetime, lo: tuple[int, int], hi: tuple[int, int]) -> bool
     return lo <= (now.hour, now.minute) <= hi
 
 
-def rl(msg: str) -> None:
-    """Record a line for both the python log and the markdown run log."""
-    log.info(msg)
+def _in_trading_window(now: datetime) -> bool:
+    """9:28–16:05 ET — entries, exits, and manage runs."""
+    return _hm_between(now, ENTRY_START, HARD_STOP)
+
+
+def _after_hours(now: datetime) -> bool:
+    return not _in_trading_window(now)
+
+
+def rl(msg: str, *, console: bool = True) -> None:
+    """Record a line in the markdown run log; echo to console when console=True."""
     _run_log.append(msg)
+    if console:
+        log.info(msg)
+
+
+def rl_file(msg: str) -> None:
+    """File-only detail line (included in logs/options_trial/runs/YYYY-MM-DD.md)."""
+    rl(msg, console=False)
 
 
 # --------------------------------------------------------------------------- #
@@ -163,11 +186,14 @@ def open_option_premium(trade) -> float:
 
 
 def cancel_stale_option_orders(trade) -> int:
-    """Option-1 fill behavior: cancel option orders left open from prior runs."""
+    """Cancel non-LAB option orders. LAB-tagged orders use dedicated cancel paths."""
     n = 0
     try:
         req = GetOrdersRequest(status=QueryOrderStatus.OPEN, limit=200)
         for o in trade.get_orders(req):
+            cid = getattr(o, "client_order_id", "") or ""
+            if cid.startswith("LB") or cid.startswith("LX"):
+                continue
             sym = getattr(o, "symbol", "")
             ac = str(getattr(o, "asset_class", "") or "")
             if "option" in ac.lower() or _is_option_symbol(sym):
@@ -179,7 +205,7 @@ def cancel_stale_option_orders(trade) -> int:
     except Exception as exc:
         rl(f"ERROR listing open orders: {exc}")
     if n:
-        rl(f"Cancelled {n} stale option order(s) from prior run.")
+        rl(f"Cancelled {n} stale non-LAB option order(s).")
     return n
 
 
@@ -319,7 +345,7 @@ def pick_atm_call(opt, ref, symbol: str, price: float,
         )
         chain = opt.get_option_chain(req)
     except Exception as exc:
-        rl(f"  [{symbol}] chain error: {exc}")
+        rl_file(f"  [{symbol}] chain error: {exc}")
         return None
     if not chain:
         return None
@@ -380,9 +406,12 @@ def _sell_limit(trade, sym: str, qty: int, limit: float, tag: str,
         if client_order_id:
             kwargs["client_order_id"] = client_order_id[:48]
         o = trade.submit_order(LimitOrderRequest(**kwargs))
-        rl(f"  EXIT {tag} SELL {qty} {sym} @<= {limit:.2f}  id={o.id}")
+        rl(f"  EXIT {tag} SELL {qty} {sym} @<= {limit:.2f}  id={o.id}", console=False)
+        log.info(f"  EXIT {tag} SELL {qty} {sym} @<= {limit:.2f}")
+        return str(o.id)
     except Exception as exc:
         rl(f"  EXIT {tag} SELL failed {sym}: {exc}")
+        return None
 
 
 def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
@@ -437,6 +466,7 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
                 sell_limit = exit_limit_price(lot, bid, ask_est, (bid + ask_est) / 2)
 
             use_market = _hm_ge(now, EOD_MARKET) or (not bid and lot.market_exit_eod)
+            exit_oid = None
             if use_market:
                 try:
                     from alpaca.trading.requests import MarketOrderRequest
@@ -444,13 +474,21 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
                         symbol=occ, qty=sell_qty, side=OrderSide.SELL,
                         time_in_force=TimeInForce.DAY,
                         client_order_id=cid[:48]))
+                    exit_oid = str(o.id)
+                    exit_msg = (
+                        f"  EXIT {tag} MARKET SELL {sell_qty} {occ} "
+                        f"return={ret_pct:+.1f}%  id={o.id}"
+                    )
+                    rl_file(exit_msg)
                     rl(f"  EXIT {tag} MARKET SELL {sell_qty} {occ} "
-                       f"return={ret_pct:+.1f}%  id={o.id}")
+                       f"return={ret_pct:+.1f}%")
                 except Exception as exc:
                     rl(f"  EXIT {tag} market failed {occ}: {exc}")
                     continue
             else:
-                _sell_limit(trade, occ, sell_qty, sell_limit, tag, cid)
+                exit_oid = _sell_limit(trade, occ, sell_qty, sell_limit, tag, cid)
+                if not exit_oid:
+                    continue
 
             append_ledger({
                 "ts": now.isoformat(),
@@ -469,7 +507,9 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
                 "sell_offset": lot.sell_limit_offset,
                 "take_profit": lot.take_profit,
                 "stop_loss": lot.stop_loss,
+                "order_id": exit_oid,
             })
+            mark_order_logged(state, exit_oid)
             register_exit(state, lot, sell_qty)
             pos_qty -= sell_qty
 
@@ -496,6 +536,8 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
     real_cap = REAL_ACCOUNT_OPTIONS_CAP * equity
 
     placed = 0
+    skip_no_chain = skip_cap = skip_full = 0
+    skip_locked = skip_open = skip_pending = 0
     for hit in signals:
         if placed >= MAX_NEW_ENTRIES_PER_RUN:
             break
@@ -508,22 +550,34 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
             if state.bucket_has_strategy(arm.bucket_id, hit.strategy_id):
                 continue
             if state.pending_for_bucket_strategy(arm.bucket_id, hit.strategy_id):
+                skip_pending += 1
+                continue
+            if state.pending_for_bucket_underlying(arm.bucket_id, hit.symbol):
+                continue
+            if state.entry_slot_locked(arm.bucket_id, hit.strategy_id):
+                skip_locked += 1
+                continue
+            if has_open_lab_entry(trade, arm.bucket_id, hit.strategy_id):
+                skip_open += 1
                 continue
             if state.bucket_holds_underlying(arm.bucket_id, hit.symbol):
                 continue
             cand = pick_atm_call(opt, ref, hit.symbol, hit.price,
                                  strat.dte_min, strat.dte_max, strat.dte_target, arm)
             if not cand:
-                rl(f"  [b{arm.bucket_id}|{arm.profile_name}] {hit.strategy_id} "
-                   f"{hit.symbol}: no tradeable call")
+                skip_no_chain += 1
+                rl_file(f"  [b{arm.bucket_id}|{arm.profile_name}] {hit.strategy_id} "
+                        f"{hit.symbol}: no tradeable call")
                 continue
             if real_open + cand["cost"] > real_cap:
-                rl(f"  [b{arm.bucket_id}] real account cap (${real_cap:.0f}) — skip")
+                skip_cap += 1
+                rl_file(f"  [b{arm.bucket_id}] real account cap (${real_cap:.0f}) — skip")
                 continue
             qty = size_for_arm(arm, state, cand["cost"])
             if qty < 1:
-                rl(f"  [b{arm.bucket_id}|{arm.profile_name}] bucket full "
-                   f"({arm.account_cap:.0%} of ${arm.virtual_equity:.0f}) — skip")
+                skip_full += 1
+                rl_file(f"  [b{arm.bucket_id}|{arm.profile_name}] bucket full "
+                        f"({arm.account_cap:.0%} of ${arm.virtual_equity:.0f}) — skip")
                 continue
             limit = entry_limit_price(arm, cand["bid"], cand["ask"], cand["mid"])
             cid = make_entry_client_order_id(arm.bucket_id, hit.strategy_id)
@@ -535,34 +589,38 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
                 placed += 1
                 entry_cost = cand["cost"] * qty
                 real_open += entry_cost
-                lot = register_entry_immediate(
-                    state, arm, cand["symbol"], hit.symbol, qty,
-                    entry_cost, limit, str(o.id))
-                append_ledger({
-                    "ts": now.isoformat(),
-                    "event": "entry",
-                    "bucket_id": arm.bucket_id,
-                    "profile": arm.profile_name,
-                    "strategy_id": hit.strategy_id,
-                    "lot_id": lot.lot_id,
-                    "symbol": hit.symbol,
-                    "occ": cand["symbol"],
-                    "qty": qty,
-                    "limit": limit,
-                    "cost": round(entry_cost, 2),
-                    "buy_offset": arm.buy_limit_offset,
-                    "take_profit": arm.take_profit,
-                    "stop_loss": arm.stop_loss,
-                    "spread_frac": round(cand["spread_frac"], 3),
-                    "detail": hit.detail,
-                })
-                rl(f"  ENTRY [b{arm.bucket_id}|{arm.profile_name}|{hit.strategy_id}] "
-                   f"BUY {qty}x {cand['symbol']} ({hit.detail}) "
-                   f"limit={limit:.2f} (ask={cand['ask']:.2f} off={arm.buy_limit_offset:+.2f}) "
-                   f"tp={arm.take_profit:+.0%} sl={arm.stop_loss:+.0%} lot={lot.lot_id} "
-                   f"id={o.id}")
+                register_pending(
+                    state, arm, cand["symbol"], hit.symbol, qty, limit, str(o.id),
+                    detail=hit.detail, spread_frac=cand["spread_frac"])
+                lock_entry_slot(state, arm.bucket_id, hit.strategy_id)
+                entry_msg = (
+                    f"  ENTRY [b{arm.bucket_id}|{arm.profile_name}|{hit.strategy_id}] "
+                    f"BUY {qty}x {cand['symbol']} ({hit.detail}) "
+                    f"limit={limit:.2f} (ask={cand['ask']:.2f} "
+                    f"off={arm.buy_limit_offset:+.2f}) "
+                    f"tp={arm.take_profit:+.0%} sl={arm.stop_loss:+.0%} "
+                    f"pending id={o.id}"
+                )
+                rl_file(entry_msg)
+                if BOT_VERBOSE:
+                    log.info(entry_msg)
             except Exception as exc:
                 rl(f"  [b{arm.bucket_id} {hit.symbol}] ENTRY failed: {exc}")
+    if skip_no_chain or skip_cap or skip_full or skip_locked or skip_open or skip_pending:
+        parts = []
+        if skip_no_chain:
+            parts.append(f"{skip_no_chain} no tradeable call")
+        if skip_cap:
+            parts.append(f"{skip_cap} account cap")
+        if skip_full:
+            parts.append(f"{skip_full} bucket full")
+        if skip_locked:
+            parts.append(f"{skip_locked} already attempted today")
+        if skip_open:
+            parts.append(f"{skip_open} open order exists")
+        if skip_pending:
+            parts.append(f"{skip_pending} pending order")
+        rl(f"  Skipped: {', '.join(parts)}")
     return placed
 
 
@@ -604,15 +662,21 @@ def _snapshot_equity(trade) -> float | None:
 def write_run_log(now: datetime, header: str) -> None:
     try:
         LOG_DIR.mkdir(parents=True, exist_ok=True)
-        path = LOG_DIR / f"{TODAY.isoformat()}.md"
-        new = not path.exists()
-        with open(path, "a", encoding="utf-8") as f:
+        md_path = LOG_DIR / f"{TODAY.isoformat()}.md"
+        log_path = LOG_DIR / f"{TODAY.isoformat()}.log"
+        new = not md_path.exists()
+        with open(md_path, "a", encoding="utf-8") as f:
             if new:
                 f.write(f"# Options morning bot (PAPER) — {TODAY.isoformat()}\n\n")
                 f.write("_Paper lab: virtual $500 buckets, per-bucket buy/sell experiments._\n\n")
             f.write(f"## {now.strftime('%H:%M:%S')} ET — {header}\n\n")
             for line in _run_log:
                 f.write(f"- {line}\n")
+            f.write("\n")
+        with open(log_path, "a", encoding="utf-8") as f:
+            f.write(f"=== {now.strftime('%H:%M:%S')} ET — {header} ===\n")
+            for line in _run_log:
+                f.write(f"{line}\n")
             f.write("\n")
     except Exception as exc:
         log.error("Failed to write run log: %s", exc)
@@ -638,9 +702,9 @@ def run() -> int:
     now = _now_et()
     rl(f"=== options_morning_bot (PAPER) {now.isoformat()} ===")
 
-    # Outside trading window — still show stats if keys work
-    if not _hm_between(now, ENTRY_START, HARD_STOP):
-        rl(f"Outside trading window ({now.strftime('%H:%M')} ET).")
+    # Outside trading window — exit summary + stats (no trading)
+    if _after_hours(now):
+        rl(f"After hours ({now.strftime('%H:%M')} ET) — exit summary only.")
         state = load_state()
         equity = None
         positions = []
@@ -649,30 +713,39 @@ def run() -> int:
             if verify_paper_auth(trade):
                 equity = _snapshot_equity(trade)
                 positions = _position_snapshots(trade)
-                state = reconcile_with_broker(trade, state, log_fn=lambda m: rl(m))
+                state = reconcile_with_broker(trade, state, log_fn=rl_file)
         except Exception:
             pass
-        print_trial_stats(state, equity, positions, log_fn=rl)
-        write_run_log(now, "idle (outside window)")
+        print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=rl)
+        print_trial_stats(state, equity, positions, file_fn=rl_file, console_fn=None)
+        rl(f"Full detail: logs/options_trial/runs/{TODAY.isoformat()}.log")
+        write_run_log(now, "after hours (exit summary)")
+        print("STATUS: options_morning_bot after-hours summary (PAPER).", flush=True)
         return 0
 
     trade, opt, stock, ref = get_clients()
 
     if not verify_paper_auth(trade):
         state = load_state()
-        print_trial_stats(state, None, [], log_fn=rl)
+        print_trial_stats(state, None, [], file_fn=rl_file, console_fn=rl)
         write_run_log(now, "FATAL auth failed (wrong keys?)")
         return 1
 
     equity = _snapshot_equity(trade)
     state = load_state()
-    state = reconcile_with_broker(trade, state, log_fn=lambda m: rl(m))
+    state = reconcile_with_broker(trade, state, log_fn=rl_file)
 
     rl(f"Active buckets: {active_bucket_count(equity or 0)} | "
        f"Strategies: {', '.join(s.id for s in PAPER_STRATEGIES)}")
 
     # 1. cancel stale orders (Option-1 fill)
     cancel_stale_option_orders(trade)
+
+    # 1b. after entry window, cancel unfilled LAB entry limits
+    if not _hm_between(now, ENTRY_START, ENTRY_END):
+        n_unfilled = cancel_unfilled_lab_entries(trade, log_fn=rl_file)
+        if n_unfilled:
+            rl(f"Cancelled {n_unfilled} unfilled LAB entry order(s).")
 
     # 2. manage exits (per-arm stop rules)
     manage_exits(trade, opt, state, now)
@@ -696,7 +769,10 @@ def run() -> int:
         rl("Past entry window; manage/exit only.")
 
     positions = _position_snapshots(trade)
-    print_trial_stats(state, equity, positions, log_fn=rl)
+    print_trial_stats(state, equity, positions, file_fn=rl_file, console_fn=rl)
+    if _hm_ge(now, (16, 0)):
+        print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=rl)
+    rl(f"Full detail: logs/options_trial/runs/{TODAY.isoformat()}.log")
     write_run_log(now, header)
     print("STATUS: options_morning_bot run complete (PAPER).", flush=True)
     return 0

@@ -171,6 +171,7 @@ MIN_HISTORY_DAYS = 220
 LOG_DIR    = Path("logs")
 DAILY_DIR  = LOG_DIR / "daily"
 WEEKLY_DIR = LOG_DIR / "weekly"
+TRACE_DIR  = LOG_DIR / "run_trace"
 PLAN_DIR   = LOG_DIR / "plans"
 CACHE_DIR  = LOG_DIR / "cache"
 TX_FILE    = LOG_DIR / "transactions.csv"
@@ -211,7 +212,7 @@ FETCH_CHUNK_PAUSE_S = 0.25
 _run_started_at = None
 _last_cache_hit = False
 
-for d in [LOG_DIR, DAILY_DIR, WEEKLY_DIR, PLAN_DIR, CACHE_DIR, AB_TEST_DIR]:
+for d in [LOG_DIR, DAILY_DIR, WEEKLY_DIR, PLAN_DIR, CACHE_DIR, AB_TEST_DIR, TRACE_DIR]:
     d.mkdir(parents=True, exist_ok=True)
 
 W = 72   # display box inner width
@@ -254,6 +255,9 @@ BEAR_P = {"consec_down":5, "rsi_thresh":20, "bb_std":2.5, "vol_z_min":1.0, "requ
 #  LOGGING
 # =============================================================================
 
+# Parallel yfinance/Alpaca fetches spam "Connection pool is full" at WARNING.
+logging.getLogger("urllib3.connectionpool").setLevel(logging.ERROR)
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s  %(levelname)-8s  %(message)s",
@@ -261,6 +265,13 @@ logging.basicConfig(
     handlers=[logging.StreamHandler()]
 )
 log = logging.getLogger("RBv8")
+
+_trace_path = TRACE_DIR / f"{date.today().isoformat()}.log"
+_trace_handler = logging.FileHandler(_trace_path, encoding="utf-8")
+_trace_handler.setLevel(logging.INFO)
+_trace_handler.setFormatter(logging.Formatter(
+    "%(asctime)s  %(levelname)-8s  %(message)s", datefmt="%H:%M:%S"))
+logging.getLogger().addHandler(_trace_handler)
 
 
 # =============================================================================
@@ -501,7 +512,10 @@ def fetch_batch(tickers, label=""):
             return t, add_ind(df)
         return t, None
 
-    for i in range(0, len(tickers), chunk_size):
+    total = len(tickers)
+    if label:
+        log.info(f"  [{label}] fetching {total} tickers…")
+    for i in range(0, total, chunk_size):
         chunk = tickers[i:i + chunk_size]
         with ThreadPoolExecutor(max_workers=workers) as pool:
             futures = {pool.submit(_fetch_one, t): t for t in chunk}
@@ -512,9 +526,10 @@ def fetch_batch(tickers, label=""):
                         data[t] = df
                 except Exception as e:
                     log.debug(f"  fetch_batch {futures[fut]}: {e}")
-        log.info(f"  [{label}] {min(i + chunk_size, len(tickers))}/{len(tickers)} ({len(data)} valid)")
-        if i + chunk_size < len(tickers):
+        if i + chunk_size < total:
             time.sleep(FETCH_CHUNK_PAUSE_S)
+    if label:
+        log.info(f"  [{label}] done {len(data)}/{total} valid")
     return data
 
 
@@ -3854,3 +3869,8 @@ if __name__ == "__main__":
         write_weekly(client, equity, cash)
     else:
         run_summary(client, equity, cash, rgm)
+
+    trace_file = f"logs/run_trace/{date.today().isoformat()}.log"
+    log.info(f"Full trace: {trace_file}")
+    print(f"STATUS: rubber_band_bot complete ({mode}).", flush=True)
+    print(f"Full trace: {trace_file}", flush=True)
