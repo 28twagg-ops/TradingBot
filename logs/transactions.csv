@@ -947,3 +947,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-07 15:31:01,2026-07-07,SELL,BWA,Pullback50,64.22,87.15,-2.61,-2.34,1,stop_loss (-2.6%),bull,480.31
 2026-07-07 15:31:03,2026-07-07,SELL,F,Pullback50,13.64,6.61,-1.24,-0.08,1,stop_loss (-1.2%),bull,480.31
 2026-07-07 19:46:11,2026-07-07,SELL,TRGP,Pullback50,274.18,93.03,3.96,3.55,1,midline (+4.0%),bull,482.48
+2026-07-07 19:51:30,2026-07-07,SELL,CF,Pullback50,114.84,96.37,-0.08,-0.08,0,midline (-0.1%),bull,482.8

@@ -582,3 +582,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-07-07 15:31:01,2026-07-07,SELL,BWA,Pullback50,64.215,,64.215,87.15,0.0,0.0,market_urgent_full,stop_loss (-2.6%),bull
 2026-07-07 15:31:03,2026-07-07,SELL,F,Pullback50,13.645,,13.645,6.61,0.0,0.0,market_urgent_full,stop_loss (-1.2%),bull
 2026-07-07 19:46:11,2026-07-07,SELL,TRGP,Pullback50,274.21,273.66,274.184,93.03,-0.0095,-0.0088,limit_fill_position_check_full,midline (+4.0%),bull
+2026-07-07 19:51:30,2026-07-07,SELL,CF,Pullback50,114.86,114.63,114.842,96.37,-0.0157,-0.0151,limit_fill_position_check_full,midline (-0.1%),bull
