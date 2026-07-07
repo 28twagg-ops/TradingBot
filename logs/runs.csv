@@ -1882,3 +1882,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-07 19:50:07,scan_evening,bull,482.76,100.18,29,0,1,4,AES|CF|DECK|MAR,both
 2026-07-07 19:55:18,scan_evening,bull,482.94,100.0,31,0,1,4,AES|CI|DECK|MAR,both
 2026-07-07 20:01:11,ext_exits,bull,482.2,196.53,0,0,0,3,AES|DECK|MAR,both
+2026-07-07 20:05:41,ext_exits,bull,482.2,196.53,0,0,0,3,AES|DECK|MAR,both
