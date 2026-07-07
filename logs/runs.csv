@@ -1841,3 +1841,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-07 16:05:39,exits,bull,480.51,200.09,0,0,0,3,DECK|MAR|TRGP,both
 2026-07-07 16:11:26,exits,bull,480.29,200.09,0,0,0,3,DECK|MAR|TRGP,both
 2026-07-07 16:15:43,exits,bull,480.04,200.09,0,0,0,3,DECK|MAR|TRGP,both
+2026-07-07 16:21:22,exits,bull,479.63,200.09,0,0,0,3,DECK|MAR|TRGP,both
