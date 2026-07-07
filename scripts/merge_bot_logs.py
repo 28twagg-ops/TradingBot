@@ -65,6 +65,29 @@ def merge_options_md(src: Path, dst: Path):
     dst.write_text(dst_text, encoding="utf-8")
 
 
+def merge_daily_md(src: Path, dst: Path):
+    """Keep the newest daily log (evening scan beats morning via footer timestamp)."""
+    if not src.exists():
+        return
+    if not dst.exists():
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dst)
+        return
+
+    def _stamp(text: str) -> str:
+        m = re.search(r"_RBv8\s*(\d{4}-\d{2}-\d{2}T[\d:Z]+)_", text)
+        if m:
+            return m.group(1)
+        m = re.search(r"_RBv8(\d{2}:\d{2} UTC)_", text)
+        return m.group(1) if m else ""
+
+    src_text = src.read_text(encoding="utf-8")
+    dst_text = dst.read_text(encoding="utf-8")
+    src_s, dst_s = _stamp(src_text), _stamp(dst_text)
+    if src_s > dst_s or (src_s == dst_s and len(src_text) >= len(dst_text)):
+        shutil.copy2(src, dst)
+
+
 def merge_tree(src: Path, dst: Path):
     if not src.exists():
         return
@@ -81,6 +104,8 @@ def merge_tree(src: Path, dst: Path):
             merge_csv(item.name, item.parent, target.parent)
         elif len(rel.parts) >= 2 and rel.parts[0] == "options" and item.suffix == ".md":
             merge_options_md(item, target)
+        elif len(rel.parts) == 2 and rel.parts[0] == "daily" and item.suffix == ".md":
+            merge_daily_md(item, target)
         else:
             target.parent.mkdir(parents=True, exist_ok=True)
             if not target.exists() or item.stat().st_mtime >= target.stat().st_mtime:

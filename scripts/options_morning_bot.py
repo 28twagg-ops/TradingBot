@@ -22,6 +22,8 @@ import logging
 import os
 import re
 import sys
+import time
+import csv
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -94,11 +96,14 @@ BOT_VERBOSE = os.getenv("OPTIONS_BOT_VERBOSE", "").strip().lower() in (
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_DIR = trial_root() / "runs"
+RUNS_CSV = trial_root() / "runs.csv"
 OCC_RE = re.compile(r"^[A-Z]+\d{6}[CP]\d{8}$")
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("options_morning_bot")
 _run_log: list[str] = []
+_run_t0: float | None = None
+_run_phases: dict[str, float] = {}
 
 
 def _now_et() -> datetime:
@@ -675,7 +680,27 @@ def _snapshot_equity(trade) -> float | None:
     except Exception:
         return None
 
-def write_run_log(now: datetime, header: str) -> None:
+def _mark_phase(name: str, t0: float) -> None:
+    _run_phases[name] = round(time.perf_counter() - t0, 2)
+
+
+def _elapsed_total() -> float:
+    if _run_t0 is None:
+        return 0.0
+    return round(time.perf_counter() - _run_t0, 1)
+
+
+def _format_timing(elapsed_s: float, phases: dict[str, float]) -> str:
+    parts = [f"elapsed={elapsed_s}s"]
+    for key in ("reconcile", "cancel", "manage", "scan", "entries"):
+        if key in phases:
+            parts.append(f"{key}={phases[key]}s")
+    return " ".join(parts)
+
+
+def write_run_log(now: datetime, header: str, *,
+                  elapsed_s: float | None = None,
+                  phases: dict[str, float] | None = None) -> None:
     try:
         LOG_DIR.mkdir(parents=True, exist_ok=True)
         md_path = LOG_DIR / f"{TODAY.isoformat()}.md"
@@ -686,11 +711,17 @@ def write_run_log(now: datetime, header: str) -> None:
                 f.write(f"# Options morning bot (PAPER) — {TODAY.isoformat()}\n\n")
                 f.write("_Paper lab: virtual $500 buckets, per-bucket buy/sell experiments._\n\n")
             f.write(f"## {now.strftime('%H:%M:%S')} ET — {header}\n\n")
+            if elapsed_s is not None:
+                timing = _format_timing(elapsed_s, phases or {})
+                f.write(f"_{timing}_\n\n")
             for line in _run_log:
                 f.write(f"- {line}\n")
             f.write("\n")
         with open(log_path, "a", encoding="utf-8") as f:
-            f.write(f"=== {now.strftime('%H:%M:%S')} ET — {header} ===\n")
+            timing = ""
+            if elapsed_s is not None:
+                timing = f" [{_format_timing(elapsed_s, phases or {})}]"
+            f.write(f"=== {now.strftime('%H:%M:%S')} ET — {header}{timing} ===\n")
             for line in _run_log:
                 f.write(f"{line}\n")
             f.write("\n")
@@ -698,13 +729,65 @@ def write_run_log(now: datetime, header: str) -> None:
         log.error("Failed to write run log: %s", exc)
 
 
+RUN_CSV_FIELDS = [
+    "timestamp", "date", "mode", "elapsed_s", "signals", "placed", "equity",
+    "reconcile_s", "cancel_s", "manage_s", "scan_s", "entries_s",
+]
+
+
+def log_run_csv(now: datetime, mode: str, *,
+                elapsed_s: float, signals: int = 0, placed: int = 0,
+                equity: float | None = None,
+                phases: dict[str, float] | None = None) -> None:
+    """Append one row to logs/options_trial/runs.csv (mirrors rubber_band runs.csv)."""
+    try:
+        trial_root().mkdir(parents=True, exist_ok=True)
+        phases = phases or {}
+        init = not RUNS_CSV.exists()
+        with open(RUNS_CSV, "a", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=RUN_CSV_FIELDS, extrasaction="ignore")
+            if init:
+                w.writeheader()
+            w.writerow({
+                "timestamp": now.strftime("%Y-%m-%d %H:%M:%S"),
+                "date": TODAY.isoformat(),
+                "mode": mode,
+                "elapsed_s": elapsed_s,
+                "signals": signals,
+                "placed": placed,
+                "equity": round(equity, 2) if equity is not None else "",
+                "reconcile_s": phases.get("reconcile", ""),
+                "cancel_s": phases.get("cancel", ""),
+                "manage_s": phases.get("manage", ""),
+                "scan_s": phases.get("scan", ""),
+                "entries_s": phases.get("entries", ""),
+            })
+    except Exception as exc:
+        log.error("Failed to write runs.csv: %s", exc)
+
+
+def _finish_run(now: datetime, header: str, mode: str, *,
+                signals: int = 0, placed: int = 0,
+                equity: float | None = None) -> float:
+    """Write logs, CSV row, and return total elapsed seconds."""
+    elapsed = _elapsed_total()
+    timing = _format_timing(elapsed, _run_phases)
+    rl(timing)
+    write_run_log(now, header, elapsed_s=elapsed, phases=_run_phases)
+    log_run_csv(now, mode, elapsed_s=elapsed, signals=signals, placed=placed,
+                equity=equity, phases=_run_phases)
+    return elapsed
+
+
 # --------------------------------------------------------------------------- #
 #  Orchestration
 # --------------------------------------------------------------------------- #
 
 def run() -> int:
-    global _run_log
+    global _run_log, _run_t0, _run_phases
     _run_log = []
+    _run_phases = {}
+    _run_t0 = time.perf_counter()
 
     if not PAPER_TRADING:
         print("REFUSING TO RUN: PAPER_TRADING is False. This bot is paper-only "
@@ -727,16 +810,20 @@ def run() -> int:
         try:
             trade, _, _, _ = get_clients()
             if verify_paper_auth(trade):
+                t0 = time.perf_counter()
                 equity = _snapshot_equity(trade)
                 positions = _position_snapshots(trade)
                 state = reconcile_with_broker(trade, state, log_fn=rl_file)
+                _mark_phase("reconcile", t0)
         except Exception:
             pass
         print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=rl)
         print_trial_stats(state, equity, positions, file_fn=rl_file, console_fn=None)
         rl(f"Full detail: logs/options_trial/runs/{TODAY.isoformat()}.log")
-        write_run_log(now, "after hours (exit summary)")
-        print("STATUS: options_morning_bot after-hours summary (PAPER).", flush=True)
+        elapsed = _finish_run(now, "after hours (exit summary)", "after_hours",
+                              equity=equity)
+        print(f"STATUS: options_morning_bot after-hours summary (PAPER) "
+              f"elapsed={elapsed}s.", flush=True)
         return 0
 
     trade, opt, stock, ref = get_clients()
@@ -744,53 +831,67 @@ def run() -> int:
     if not verify_paper_auth(trade):
         state = load_state()
         print_trial_stats(state, None, [], file_fn=rl_file, console_fn=rl)
-        write_run_log(now, "FATAL auth failed (wrong keys?)")
+        elapsed = _finish_run(now, "FATAL auth failed (wrong keys?)", "auth_failed")
+        print(f"STATUS: options_morning_bot auth failed (PAPER) elapsed={elapsed}s.",
+              flush=True)
         return 1
 
     equity = _snapshot_equity(trade)
     state = load_state()
+    t0 = time.perf_counter()
     state = reconcile_with_broker(trade, state, log_fn=rl_file)
+    _mark_phase("reconcile", t0)
 
     rl(f"Active buckets: {active_bucket_count(equity or 0)} | "
        f"Strategies: {', '.join(s.id for s in PAPER_STRATEGIES)}")
 
-    # 1. cancel stale orders (Option-1 fill)
+    t0 = time.perf_counter()
     cancel_stale_option_orders(trade)
-
-    # 1b. after entry window, cancel unfilled LAB entry limits
     if not _hm_between(now, ENTRY_START, ENTRY_END):
         n_unfilled = cancel_unfilled_lab_entries(trade, log_fn=rl_file)
         if n_unfilled:
             rl(f"Cancelled {n_unfilled} unfilled LAB entry order(s).")
+    _mark_phase("cancel", t0)
 
-    # 2. manage exits (per-arm stop rules)
+    t0 = time.perf_counter()
     manage_exits(trade, opt, state, now)
+    _mark_phase("manage", t0)
 
-    # 3+4. entries only within the entry window
+    placed = 0
+    signals_n = 0
     if _hm_between(now, ENTRY_START, ENTRY_END):
         universe = get_universe()
         strat_ids = ", ".join(s.id for s in PAPER_STRATEGIES)
         rl(f"Scanning {len(universe)} symbols for [{strat_ids}] …")
+        t0 = time.perf_counter()
         signals = scan_all_signals(stock, universe)
+        _mark_phase("scan", t0)
+        signals_n = len(signals)
         if signals:
             summary = [f"{h.strategy_id}:{h.symbol}" for h in signals[:8]]
-            rl(f"Found {len(signals)} signal(s); top: {summary}")
+            rl(f"Found {signals_n} signal(s); top: {summary}")
         else:
             rl("Found 0 signals across top-5 strategies")
+        t0 = time.perf_counter()
         placed = place_entries(trade, opt, ref, signals, state, now)
+        _mark_phase("entries", t0)
         rl(f"Placed {placed} new entry order(s).")
         header = f"entry+manage ({placed} new)"
+        mode = "entry+manage"
     else:
         header = "manage-only (past entry window)"
         rl("Past entry window; manage/exit only.")
+        mode = "manage-only"
 
     positions = _position_snapshots(trade)
     print_trial_stats(state, equity, positions, file_fn=rl_file, console_fn=rl)
     if _hm_ge(now, (16, 0)):
         print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=rl)
     rl(f"Full detail: logs/options_trial/runs/{TODAY.isoformat()}.log")
-    write_run_log(now, header)
-    print("STATUS: options_morning_bot run complete (PAPER).", flush=True)
+    elapsed = _finish_run(now, header, mode, signals=signals_n, placed=placed,
+                          equity=equity)
+    print(f"STATUS: options_morning_bot run complete (PAPER) elapsed={elapsed}s.",
+          flush=True)
     return 0
 
 

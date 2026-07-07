@@ -860,6 +860,143 @@ def entry_slot_ok(buys_today, max_trades):
 
 
 # =============================================================================
+#  BROKER LEDGER RECONCILE (GTC stops + delayed buy confirms)
+# =============================================================================
+
+def _logged_sells_today() -> set[tuple[str, str]]:
+    """(date, ticker) pairs already in transactions.csv as SELL."""
+    out: set[tuple[str, str]] = set()
+    if not TX_FILE.exists():
+        return out
+    with open(TX_FILE, newline="") as f:
+        for r in csv.DictReader(f):
+            if r.get("action") == "SELL":
+                out.add((r.get("date", ""), r.get("ticker", "")))
+    return out
+
+
+def _logged_buys_today() -> set[tuple[str, str]]:
+    out: set[tuple[str, str]] = set()
+    if not TX_FILE.exists():
+        return out
+    with open(TX_FILE, newline="") as f:
+        for r in csv.DictReader(f):
+            if r.get("action") == "BUY":
+                out.add((r.get("date", ""), r.get("ticker", "")))
+    return out
+
+
+def _latest_buy_record(ticker: str) -> dict | None:
+    if not TX_FILE.exists():
+        return None
+    hits = []
+    with open(TX_FILE, newline="") as f:
+        for r in csv.DictReader(f):
+            if r.get("action") == "BUY" and r.get("ticker") == ticker:
+                hits.append(r)
+    return hits[-1] if hits else None
+
+
+def _strategy_from_order(o) -> str:
+    cid = getattr(o, "client_order_id", None) or ""
+    if "|" in cid:
+        return cid.split("|")[0]
+    return "unknown"
+
+
+def reconcile_broker_ledger(client, rgm) -> int:
+    """Log Alpaca fills missing from transactions.csv (GTC stops, batched buys)."""
+    logged_sells = _logged_sells_today()
+    logged_buys = _logged_buys_today()
+    added = 0
+    try:
+        req = GetOrdersRequest(status=QueryOrderStatus.CLOSED, limit=150)
+        orders = client.get_orders(req)
+    except Exception as e:
+        log.warning(f"reconcile_broker_ledger: {e}")
+        return 0
+
+    try:
+        equity = float(client.get_account().equity)
+    except Exception:
+        equity = 0.0
+
+    for o in orders:
+        if getattr(o, "status", None) not in (OrderStatus.filled, OrderStatus.partially_filled):
+            continue
+        fill = _order_fill_summary(o)
+        if fill.get("price") is None or not fill.get("dollars"):
+            continue
+        sym = o.symbol
+        fill_date = str(o.filled_at.date()) if o.filled_at else str(date.today())
+
+        if o.side == OrderSide.BUY:
+            if (fill_date, sym) in logged_buys:
+                continue
+            strategy = _strategy_from_order(o)
+            log_tx("BUY", sym, strategy, fill["price"], fill["dollars"], rgm, equity,
+                   expected_price=fill["price"],
+                   order_price=fill["price"],
+                   execution_method="broker_reconcile")
+            logged_buys.add((fill_date, sym))
+            added += 1
+            log.info(f"  RECONCILE BUY {sym} ${fill['dollars']:.2f} [{strategy}]")
+            continue
+
+        if o.side != OrderSide.SELL:
+            continue
+        if (fill_date, sym) in logged_sells:
+            continue
+
+        buy_rec = _latest_buy_record(sym)
+        strategy = (buy_rec or {}).get("strategy") or _strategy_from_order(o)
+        try:
+            entry_px = float((buy_rec or {}).get("price") or 0)
+            entry_amt = float((buy_rec or {}).get("dollar_amount") or 0)
+        except (TypeError, ValueError):
+            entry_px = entry_amt = 0.0
+        sell_px = float(fill["price"])
+        sell_amt = float(fill["dollars"])
+        if entry_px > 0 and entry_amt > 0:
+            pnl_pct = (sell_px - entry_px) / entry_px * 100.0
+            pnl_dollar = sell_amt - entry_amt * (sell_amt / entry_amt if entry_amt else 1)
+        else:
+            pnl_pct = pnl_dollar = 0.0
+        hold_days = 0
+        if buy_rec and buy_rec.get("date"):
+            try:
+                hold_days = (datetime.strptime(fill_date, "%Y-%m-%d").date()
+                             - datetime.strptime(buy_rec["date"], "%Y-%m-%d").date()).days
+            except Exception:
+                pass
+
+        otype = getattr(o, "order_type", None)
+        if otype in (OrderType.STOP, OrderType.STOP_LIMIT):
+            reason = f"gtc_stop ({pnl_pct:+.1f}%)"
+            method = "reconciled_gtc_stop"
+        elif otype == OrderType.MARKET:
+            reason = f"broker_market ({pnl_pct:+.1f}%)"
+            method = "reconciled_market"
+        else:
+            reason = f"broker_fill ({pnl_pct:+.1f}%)"
+            method = "reconciled_limit"
+
+        log_tx("SELL", sym, strategy, sell_px, sell_amt, rgm, equity,
+               pnl_pct=pnl_pct, pnl_dollar=pnl_dollar, hold_days=hold_days,
+               exit_reason=reason, sell_method=method,
+               execution_method=method)
+        logged_sells.add((fill_date, sym))
+        added += 1
+        log.info(f"  RECONCILE SELL {sym} ${sell_amt:.2f} {reason}")
+
+    if added:
+        hdr("BROKER LEDGER RECONCILE")
+        row("New fills logged", str(added))
+        ftr()
+    return added
+
+
+# =============================================================================
 #  A/B CONCENTRATION TEST  (virtual 50/50 groups, tracked separately)
 # =============================================================================
 
@@ -1956,6 +2093,27 @@ def log_tx(action, ticker, strategy, price, dollars, rgm, equity,
 RUN_F = ["timestamp","mode","regime","equity","cash","signals","entries",
          "exits","open_positions","tickers","universe","duration_s","cache_hit"]
 
+
+def _ensure_runs_csv_header():
+    """Migrate runs.csv header when duration_s / cache_hit columns were added."""
+    if not RUNS_FILE.exists():
+        return
+    try:
+        with open(RUNS_FILE, newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            fields = list(reader.fieldnames or [])
+            if fields == RUN_F:
+                return
+            rows = list(reader)
+        with open(RUNS_FILE, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=RUN_F, extrasaction="ignore")
+            w.writeheader()
+            for r in rows:
+                w.writerow(r)
+    except Exception as e:
+        log.warning(f"runs.csv header migrate failed: {e}")
+
+
 def log_run(mode, rgm, equity, cash, signals, entries, exits, positions,
             cache_hit=None):
     global _last_cache_hit
@@ -1964,6 +2122,7 @@ def log_run(mode, rgm, equity, cash, signals, entries, exits, positions,
     duration_s = ""
     if _run_started_at is not None:
         duration_s = round(time.time() - _run_started_at, 1)
+    _ensure_runs_csv_header()
     init = not RUNS_FILE.exists()
     with open(RUNS_FILE, "a", newline="") as f:
         w = csv.DictWriter(f, fieldnames=RUN_F, extrasaction="ignore")
@@ -2280,7 +2439,7 @@ def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells
             L.append("_No signals recorded yet._")
     else:
         L.append("_No signals today._")
-    L += ["", "---", f"_RBv8{datetime.now().strftime('%H:%M UTC')}_"]
+    L += ["", "---", f"_RBv8 {datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')}_"]
     fname.write_text("\n".join(L), encoding="utf-8")
     log.info(f"  Daily log -> {fname}")
 
@@ -2794,6 +2953,7 @@ def detect_mode():
 
 def run_summary(client, equity, cash, rgm):
     # Safety net: create today's daily log if scan lost its git push
+    reconcile_broker_ledger(client, rgm)
     reconcile_daily_log(client, equity, cash, rgm)
 
     positions = enrich(client, get_positions(client))
@@ -2901,6 +3061,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
     """
     # Safety net: if today's daily log is missing (scan lost its git push),
     # write a fallback log now so we always have a record for every trading day.
+    reconcile_broker_ledger(client, rgm)
     reconcile_daily_log(client, equity, cash, rgm)
 
     eh_tag = " [EXTENDED HRS]" if extended_hours else ""
@@ -3230,6 +3391,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
 # =============================================================================
 
 def run_scan(client, equity, cash, rgm, mode_name="scan"):
+    reconcile_broker_ledger(client, rgm)
     today = date.today(); month = today.month; sc = SCHEDULE[month]
     reserve = equity * CASH_RESERVE_PCT; avail = max(0.0, cash - reserve)
 
@@ -3871,6 +4033,7 @@ if __name__ == "__main__":
         run_summary(client, equity, cash, rgm)
 
     trace_file = f"logs/run_trace/{date.today().isoformat()}.log"
+    elapsed_s = round(time.time() - _run_started_at, 1) if _run_started_at else 0.0
     log.info(f"Full trace: {trace_file}")
-    print(f"STATUS: rubber_band_bot complete ({mode}).", flush=True)
+    print(f"STATUS: rubber_band_bot complete ({mode}) elapsed={elapsed_s}s.", flush=True)
     print(f"Full trace: {trace_file}", flush=True)
