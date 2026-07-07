@@ -327,7 +327,8 @@ def _parse_occ(contract_sym: str, underlying: str):
 
 def pick_atm_call(opt, ref, symbol: str, price: float,
                   dte_min: int, dte_max: int, dte_target: int,
-                  arm: EffectiveArm):
+                  arm: EffectiveArm, *, chain_cache: dict | None = None,
+                  oi_cache: dict | None = None):
     """Return dict for the best ATM call, or None if nothing tradeable."""
     api_sym = to_alpaca_symbol(symbol)
     max_premium = arm.max_premium
@@ -337,26 +338,38 @@ def pick_atm_call(opt, ref, symbol: str, price: float,
     exp_hi = TODAY + timedelta(days=dte_max)
     strike_lo = round(price * (1 - STRIKE_PCT), 2)
     strike_hi = round(price * (1 + STRIKE_PCT), 2)
-    try:
-        req = OptionChainRequest(
-            underlying_symbol=api_sym,
-            expiration_date_gte=exp_lo, expiration_date_lte=exp_hi,
-            strike_price_gte=strike_lo, strike_price_lte=strike_hi,
-        )
-        chain = opt.get_option_chain(req)
-    except Exception as exc:
-        rl_file(f"  [{symbol}] chain error: {exc}")
-        return None
+    cache_key = (api_sym, dte_min, dte_max, strike_lo, strike_hi)
+    chain = None
+    if chain_cache is not None and cache_key in chain_cache:
+        chain = chain_cache[cache_key]
+    else:
+        try:
+            req = OptionChainRequest(
+                underlying_symbol=api_sym,
+                expiration_date_gte=exp_lo, expiration_date_lte=exp_hi,
+                strike_price_gte=strike_lo, strike_price_lte=strike_hi,
+            )
+            chain = opt.get_option_chain(req)
+            if chain_cache is not None:
+                chain_cache[cache_key] = chain
+        except Exception as exc:
+            rl_file(f"  [{symbol}] chain error: {exc}")
+            return None
     if not chain:
         return None
 
     oi_map = {}
-    try:
-        oi_map = fetch_open_interest(ref, api_sym, strike_gte=strike_lo,
-                                    strike_lte=strike_hi,
-                                    exp_gte=exp_lo, exp_lte=exp_hi)
-    except Exception:
-        oi_map = {}
+    if oi_cache is not None and cache_key in oi_cache:
+        oi_map = oi_cache[cache_key]
+    else:
+        try:
+            oi_map = fetch_open_interest(ref, api_sym, strike_gte=strike_lo,
+                                        strike_lte=strike_hi,
+                                        exp_gte=exp_lo, exp_lte=exp_hi)
+            if oi_cache is not None:
+                oi_cache[cache_key] = oi_map
+        except Exception:
+            oi_map = {}
 
     best = None
     for csym, snap in chain.items():
@@ -538,6 +551,8 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
     placed = 0
     skip_no_chain = skip_cap = skip_full = 0
     skip_locked = skip_open = skip_pending = 0
+    chain_cache: dict = {}
+    oi_cache: dict = {}
     for hit in signals:
         if placed >= MAX_NEW_ENTRIES_PER_RUN:
             break
@@ -563,7 +578,8 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
             if state.bucket_holds_underlying(arm.bucket_id, hit.symbol):
                 continue
             cand = pick_atm_call(opt, ref, hit.symbol, hit.price,
-                                 strat.dte_min, strat.dte_max, strat.dte_target, arm)
+                                 strat.dte_min, strat.dte_max, strat.dte_target, arm,
+                                 chain_cache=chain_cache, oi_cache=oi_cache)
             if not cand:
                 skip_no_chain += 1
                 rl_file(f"  [b{arm.bucket_id}|{arm.profile_name}] {hit.strategy_id} "

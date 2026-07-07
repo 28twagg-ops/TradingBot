@@ -76,6 +76,7 @@ jobs:
           fi
           python scripts/init_options_trial.py
           python scripts/options_morning_bot.py
+          python scripts/options_daily_bucket_report.py
 
       - name: Commit logs back to repo
         run: |
