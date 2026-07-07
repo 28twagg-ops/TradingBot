@@ -1,0 +1,10 @@
+13:30:57  INFO      Mode: morning_prep
+13:30:57  INFO        [prep_positions] fetching 5 tickers…
+13:30:58  INFO        [prep_positions] done 5/5 valid
+13:30:58  INFO      Fetching tickers (universe=both)...
+13:30:58  INFO        S&P 500: 503
+13:30:58  INFO        MidCap 400: 400
+13:30:58  INFO        Total: 903 tickers
+13:30:58  INFO        [prep_universe] fetching 898 tickers…
+13:34:31  INFO        [prep_universe] done 894/898 valid
+13:34:32  INFO      Full trace: logs/run_trace/2026-07-07.log
