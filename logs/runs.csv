@@ -1935,3 +1935,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-08 13:15:49,summary,bull,480.11,196.53,0,0,0,3,AES|DECK|MAR,both
 2026-07-08 13:20:58,summary,bull,480.11,196.53,0,0,0,3,AES|DECK|MAR,both
 2026-07-08 13:25:41,summary,bull,480.04,196.53,0,0,0,3,AES|DECK|MAR,both
+2026-07-08 14:06:20,exits,bull,477.52,187.38,0,0,1,3,AES|ATO|MAR,both
