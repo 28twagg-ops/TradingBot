@@ -1985,3 +1985,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-08 18:25:37,exits,bull,477.0,187.38,0,0,0,3,AES|ATO|MAR,both
 2026-07-08 18:31:04,exits,bull,477.08,187.38,0,0,0,3,AES|ATO|MAR,both
 2026-07-08 18:35:39,exits,bull,476.75,283.87,0,0,1,2,AES|ATO,both
+2026-07-08 18:40:57,exits,bull,476.64,283.87,0,0,0,2,AES|ATO,both
