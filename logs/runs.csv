@@ -1995,3 +1995,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-08 19:16:29,exits,bull,476.62,283.87,0,0,0,2,AES|ATO,both
 2026-07-08 19:20:57,exits,bull,476.74,283.87,0,0,0,2,AES|ATO,both
 2026-07-08 19:25:39,exits,bull,476.72,283.87,0,0,0,2,AES|ATO,both
+2026-07-08 19:50:28,scan_evening,bull,476.77,94.17,23,0,1,4,AES|AME|CDNS|CSCO,both
