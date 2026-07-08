@@ -1,0 +1,1275 @@
+=== 09:34:39 ET — entry+manage (100 new) [elapsed=333.3s reconcile=0.39s cancel=0.08s manage=0.15s scan=28.9s entries=303.27s] ===
+=== options_morning_bot (PAPER) 2026-07-08T09:34:39.194320-04:00 ===
+Paper auth OK — equity $112822.29, account PA36KS87UPRS
+  reconcile: cleared 100 resolved pending order(s)
+  reconcile: WARNING ANET260710C00185000 broker qty 22 > virtual 0 (unattributed qty=22)
+  reconcile: WARNING AVGO260708C00385000 broker qty 51 > virtual 0 (unattributed qty=51)
+  reconcile: WARNING AVGO260710C00400000 broker qty 49 > virtual 0 (unattributed qty=49)
+Active buckets: 100 | Strategies: S173, S174, S165, S166, S163
+Scanning 903 symbols for [S173, S174, S165, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 119 signal(s); top: ['S173:AMD', 'S173:ALB', 'S173:APH', 'S173:BA', 'S173:CARR', 'S173:CVNA', 'S173:CHTR', 'S173:CTSH']
+Paper lab: $111565 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+  [b0|baseline] S173 AMD: no tradeable call
+  [b1|patient_buy] S173 AMD: no tradeable call
+  [b2|aggressive_buy] S173 AMD: no tradeable call
+  [b3|tight_stops] S173 AMD: no tradeable call
+  [b4|wide_stops] S173 AMD: no tradeable call
+  [b5|eod_only] S173 AMD: no tradeable call
+  [b6|loose_spread] S173 AMD: no tradeable call
+  [b7|tight_spread] S173 AMD: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 AMD: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 AMD: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 AMD: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 AMD: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 AMD: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 AMD: no tradeable call
+  [b14|g014_lim_tp20_sl20] S173 AMD: no tradeable call
+  [b15|g015_mid_tp20_sl20] S173 AMD: no tradeable call
+  [b16|g016_eod_tp20_sl20] S173 AMD: no tradeable call
+  [b17|g017_lim_tp20_sl20] S173 AMD: no tradeable call
+  [b18|g018_mid_tp20_sl20] S173 AMD: no tradeable call
+  [b19|g019_eod_tp20_sl20] S173 AMD: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 AMD: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 AMD: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 AMD: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 AMD: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 AMD: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 AMD: no tradeable call
+  [b26|g026_lim_tp20_sl30] S173 AMD: no tradeable call
+  [b27|g027_mid_tp20_sl30] S173 AMD: no tradeable call
+  [b28|g028_eod_tp20_sl30] S173 AMD: no tradeable call
+  [b29|g029_lim_tp20_sl30] S173 AMD: no tradeable call
+  [b30|g030_mid_tp20_sl30] S173 AMD: no tradeable call
+  [b31|g031_eod_tp20_sl30] S173 AMD: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 AMD: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 AMD: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 AMD: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 AMD: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 AMD: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 AMD: no tradeable call
+  [b38|g038_lim_tp20_sl40] S173 AMD: no tradeable call
+  [b39|g039_mid_tp20_sl40] S173 AMD: no tradeable call
+  [b40|g040_eod_tp20_sl40] S173 AMD: no tradeable call
+  [b41|g041_lim_tp20_sl40] S173 AMD: no tradeable call
+  [b42|g042_mid_tp20_sl40] S173 AMD: no tradeable call
+  [b43|g043_eod_tp20_sl40] S173 AMD: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 AMD: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 AMD: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 AMD: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 AMD: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 AMD: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 AMD: no tradeable call
+  [b50|g050_lim_tp20_sl50] S173 AMD: no tradeable call
+  [b51|g051_mid_tp20_sl50] S173 AMD: no tradeable call
+  [b52|g052_eod_tp20_sl50] S173 AMD: no tradeable call
+  [b53|g053_lim_tp20_sl50] S173 AMD: no tradeable call
+  [b54|g054_mid_tp20_sl50] S173 AMD: no tradeable call
+  [b55|g055_eod_tp20_sl50] S173 AMD: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 AMD: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 AMD: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 AMD: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 AMD: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 AMD: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 AMD: no tradeable call
+  [b62|g062_lim_tp20_sl65] S173 AMD: no tradeable call
+  [b63|g063_mid_tp20_sl65] S173 AMD: no tradeable call
+  [b64|g064_eod_tp20_sl65] S173 AMD: no tradeable call
+  [b65|g065_lim_tp20_sl65] S173 AMD: no tradeable call
+  [b66|g066_mid_tp20_sl65] S173 AMD: no tradeable call
+  [b67|g067_eod_tp20_sl65] S173 AMD: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 AMD: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 AMD: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 AMD: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 AMD: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 AMD: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 AMD: no tradeable call
+  [b74|g074_lim_tp30_sl20] S173 AMD: no tradeable call
+  [b75|g075_mid_tp30_sl20] S173 AMD: no tradeable call
+  [b76|g076_eod_tp30_sl20] S173 AMD: no tradeable call
+  [b77|g077_lim_tp30_sl20] S173 AMD: no tradeable call
+  [b78|g078_mid_tp30_sl20] S173 AMD: no tradeable call
+  [b79|g079_eod_tp30_sl20] S173 AMD: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 AMD: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 AMD: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 AMD: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 AMD: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 AMD: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 AMD: no tradeable call
+  [b86|g086_lim_tp30_sl30] S173 AMD: no tradeable call
+  [b87|g087_mid_tp30_sl30] S173 AMD: no tradeable call
+  [b88|g088_eod_tp30_sl30] S173 AMD: no tradeable call
+  [b89|g089_lim_tp30_sl30] S173 AMD: no tradeable call
+  [b90|g090_mid_tp30_sl30] S173 AMD: no tradeable call
+  [b91|g091_eod_tp30_sl30] S173 AMD: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 AMD: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 AMD: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 AMD: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 AMD: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 AMD: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 AMD: no tradeable call
+  [b98|g098_lim_tp30_sl40] S173 AMD: no tradeable call
+  [b99|g099_mid_tp30_sl40] S173 AMD: no tradeable call
+  [b0|baseline] S173 ALB: no tradeable call
+  [b1|patient_buy] S173 ALB: no tradeable call
+  [b2|aggressive_buy] S173 ALB: no tradeable call
+  [b3|tight_stops] S173 ALB: no tradeable call
+  [b4|wide_stops] S173 ALB: no tradeable call
+  [b5|eod_only] S173 ALB: no tradeable call
+  [b6|loose_spread] S173 ALB: no tradeable call
+  [b7|tight_spread] S173 ALB: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 ALB: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 ALB: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 ALB: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 ALB: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 ALB: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 ALB: no tradeable call
+  [b14|g014_lim_tp20_sl20] S173 ALB: no tradeable call
+  [b15|g015_mid_tp20_sl20] S173 ALB: no tradeable call
+  [b16|g016_eod_tp20_sl20] S173 ALB: no tradeable call
+  [b17|g017_lim_tp20_sl20] S173 ALB: no tradeable call
+  [b18|g018_mid_tp20_sl20] S173 ALB: no tradeable call
+  [b19|g019_eod_tp20_sl20] S173 ALB: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 ALB: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 ALB: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 ALB: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 ALB: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 ALB: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 ALB: no tradeable call
+  [b26|g026_lim_tp20_sl30] S173 ALB: no tradeable call
+  [b27|g027_mid_tp20_sl30] S173 ALB: no tradeable call
+  [b28|g028_eod_tp20_sl30] S173 ALB: no tradeable call
+  [b29|g029_lim_tp20_sl30] S173 ALB: no tradeable call
+  [b30|g030_mid_tp20_sl30] S173 ALB: no tradeable call
+  [b31|g031_eod_tp20_sl30] S173 ALB: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 ALB: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 ALB: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 ALB: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 ALB: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 ALB: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 ALB: no tradeable call
+  [b38|g038_lim_tp20_sl40] S173 ALB: no tradeable call
+  [b39|g039_mid_tp20_sl40] S173 ALB: no tradeable call
+  [b40|g040_eod_tp20_sl40] S173 ALB: no tradeable call
+  [b41|g041_lim_tp20_sl40] S173 ALB: no tradeable call
+  [b42|g042_mid_tp20_sl40] S173 ALB: no tradeable call
+  [b43|g043_eod_tp20_sl40] S173 ALB: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 ALB: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 ALB: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 ALB: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 ALB: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 ALB: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 ALB: no tradeable call
+  [b50|g050_lim_tp20_sl50] S173 ALB: no tradeable call
+  [b51|g051_mid_tp20_sl50] S173 ALB: no tradeable call
+  [b52|g052_eod_tp20_sl50] S173 ALB: no tradeable call
+  [b53|g053_lim_tp20_sl50] S173 ALB: no tradeable call
+  [b54|g054_mid_tp20_sl50] S173 ALB: no tradeable call
+  [b55|g055_eod_tp20_sl50] S173 ALB: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 ALB: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 ALB: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 ALB: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 ALB: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 ALB: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 ALB: no tradeable call
+  [b62|g062_lim_tp20_sl65] S173 ALB: no tradeable call
+  [b63|g063_mid_tp20_sl65] S173 ALB: no tradeable call
+  [b64|g064_eod_tp20_sl65] S173 ALB: no tradeable call
+  [b65|g065_lim_tp20_sl65] S173 ALB: no tradeable call
+  [b66|g066_mid_tp20_sl65] S173 ALB: no tradeable call
+  [b67|g067_eod_tp20_sl65] S173 ALB: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 ALB: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 ALB: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 ALB: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 ALB: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 ALB: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 ALB: no tradeable call
+  [b74|g074_lim_tp30_sl20] S173 ALB: no tradeable call
+  [b75|g075_mid_tp30_sl20] S173 ALB: no tradeable call
+  [b76|g076_eod_tp30_sl20] S173 ALB: no tradeable call
+  [b77|g077_lim_tp30_sl20] S173 ALB: no tradeable call
+  [b78|g078_mid_tp30_sl20] S173 ALB: no tradeable call
+  [b79|g079_eod_tp30_sl20] S173 ALB: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 ALB: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 ALB: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 ALB: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 ALB: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 ALB: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 ALB: no tradeable call
+  [b86|g086_lim_tp30_sl30] S173 ALB: no tradeable call
+  [b87|g087_mid_tp30_sl30] S173 ALB: no tradeable call
+  [b88|g088_eod_tp30_sl30] S173 ALB: no tradeable call
+  [b89|g089_lim_tp30_sl30] S173 ALB: no tradeable call
+  [b90|g090_mid_tp30_sl30] S173 ALB: no tradeable call
+  [b91|g091_eod_tp30_sl30] S173 ALB: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 ALB: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 ALB: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 ALB: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 ALB: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 ALB: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 ALB: no tradeable call
+  [b98|g098_lim_tp30_sl40] S173 ALB: no tradeable call
+  [b99|g099_mid_tp30_sl40] S173 ALB: no tradeable call
+  [b0|baseline] S173 APH: no tradeable call
+  [b1|patient_buy] S173 APH: no tradeable call
+  [b2|aggressive_buy] S173 APH: no tradeable call
+  [b3|tight_stops] S173 APH: no tradeable call
+  [b4|wide_stops] S173 APH: no tradeable call
+  [b5|eod_only] S173 APH: no tradeable call
+  [b6|loose_spread] S173 APH: no tradeable call
+  [b7|tight_spread] S173 APH: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 APH: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 APH: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 APH: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 APH: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 APH: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 APH: no tradeable call
+  [b14|g014_lim_tp20_sl20] S173 APH: no tradeable call
+  [b15|g015_mid_tp20_sl20] S173 APH: no tradeable call
+  [b16|g016_eod_tp20_sl20] S173 APH: no tradeable call
+  [b17|g017_lim_tp20_sl20] S173 APH: no tradeable call
+  [b18|g018_mid_tp20_sl20] S173 APH: no tradeable call
+  [b19|g019_eod_tp20_sl20] S173 APH: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 APH: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 APH: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 APH: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 APH: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 APH: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 APH: no tradeable call
+  [b26|g026_lim_tp20_sl30] S173 APH: no tradeable call
+  [b27|g027_mid_tp20_sl30] S173 APH: no tradeable call
+  [b28|g028_eod_tp20_sl30] S173 APH: no tradeable call
+  [b29|g029_lim_tp20_sl30] S173 APH: no tradeable call
+  [b30|g030_mid_tp20_sl30] S173 APH: no tradeable call
+  [b31|g031_eod_tp20_sl30] S173 APH: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 APH: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 APH: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 APH: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 APH: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 APH: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 APH: no tradeable call
+  [b38|g038_lim_tp20_sl40] S173 APH: no tradeable call
+  [b39|g039_mid_tp20_sl40] S173 APH: no tradeable call
+  [b40|g040_eod_tp20_sl40] S173 APH: no tradeable call
+  [b41|g041_lim_tp20_sl40] S173 APH: no tradeable call
+  [b42|g042_mid_tp20_sl40] S173 APH: no tradeable call
+  [b43|g043_eod_tp20_sl40] S173 APH: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 APH: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 APH: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 APH: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 APH: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 APH: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 APH: no tradeable call
+  [b50|g050_lim_tp20_sl50] S173 APH: no tradeable call
+  [b51|g051_mid_tp20_sl50] S173 APH: no tradeable call
+  [b52|g052_eod_tp20_sl50] S173 APH: no tradeable call
+  [b53|g053_lim_tp20_sl50] S173 APH: no tradeable call
+  [b54|g054_mid_tp20_sl50] S173 APH: no tradeable call
+  [b55|g055_eod_tp20_sl50] S173 APH: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 APH: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 APH: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 APH: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 APH: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 APH: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 APH: no tradeable call
+  [b62|g062_lim_tp20_sl65] S173 APH: no tradeable call
+  [b63|g063_mid_tp20_sl65] S173 APH: no tradeable call
+  [b64|g064_eod_tp20_sl65] S173 APH: no tradeable call
+  [b65|g065_lim_tp20_sl65] S173 APH: no tradeable call
+  [b66|g066_mid_tp20_sl65] S173 APH: no tradeable call
+  [b67|g067_eod_tp20_sl65] S173 APH: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 APH: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 APH: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 APH: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 APH: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 APH: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 APH: no tradeable call
+  [b74|g074_lim_tp30_sl20] S173 APH: no tradeable call
+  [b75|g075_mid_tp30_sl20] S173 APH: no tradeable call
+  [b76|g076_eod_tp30_sl20] S173 APH: no tradeable call
+  [b77|g077_lim_tp30_sl20] S173 APH: no tradeable call
+  [b78|g078_mid_tp30_sl20] S173 APH: no tradeable call
+  [b79|g079_eod_tp30_sl20] S173 APH: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 APH: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 APH: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 APH: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 APH: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 APH: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 APH: no tradeable call
+  [b86|g086_lim_tp30_sl30] S173 APH: no tradeable call
+  [b87|g087_mid_tp30_sl30] S173 APH: no tradeable call
+  [b88|g088_eod_tp30_sl30] S173 APH: no tradeable call
+  [b89|g089_lim_tp30_sl30] S173 APH: no tradeable call
+  [b90|g090_mid_tp30_sl30] S173 APH: no tradeable call
+  [b91|g091_eod_tp30_sl30] S173 APH: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 APH: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 APH: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 APH: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 APH: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 APH: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 APH: no tradeable call
+  [b98|g098_lim_tp30_sl40] S173 APH: no tradeable call
+  [b99|g099_mid_tp30_sl40] S173 APH: no tradeable call
+  ENTRY [b0|baseline|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.15 (ask=0.16 off=-0.01) tp=+60% sl=-40% pending id=2dfe87b8-51f8-4cf5-a17a-a145e7b5e6ce
+  ENTRY [b1|patient_buy|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.11 (ask=0.16 off=-0.05) tp=+60% sl=-40% pending id=ef791a95-6bd1-4036-aaba-e56c30f77a29
+  ENTRY [b2|aggressive_buy|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.15 (ask=0.16 off=-0.01) tp=+60% sl=-40% pending id=ec4599b2-f198-4932-bffc-6d0657b0a706
+  ENTRY [b3|tight_stops|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.15 (ask=0.16 off=-0.01) tp=+60% sl=-40% pending id=5e8debea-caa2-41a6-b579-cc9a2612654b
+  ENTRY [b4|wide_stops|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.14 (ask=0.16 off=-0.02) tp=+60% sl=-40% pending id=97ab2abe-34de-43c4-a3ab-ff169559dba8
+  ENTRY [b5|eod_only|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.15 (ask=0.16 off=-0.01) tp=+60% sl=-40% pending id=5b279f69-8271-4db2-b8f6-67f03a4048c5
+  ENTRY [b6|loose_spread|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.27 (ask=0.28 off=-0.01) tp=+60% sl=-40% pending id=7a6748d2-273d-4adc-89e2-0da4730a9fcd
+  [b7|tight_spread] S173 BA: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 BA: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 BA: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 BA: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 BA: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 BA: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 BA: no tradeable call
+  ENTRY [b14|g014_lim_tp20_sl20|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=63b0e559-24b9-4ebc-849e-433065878248
+  ENTRY [b15|g015_mid_tp20_sl20|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.15 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=e91c752a-61c0-43dd-88fc-c48ecf244d1c
+  ENTRY [b16|g016_eod_tp20_sl20|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=a8ec6630-f439-4bf9-a16c-d1869274277a
+  ENTRY [b17|g017_lim_tp20_sl20|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.18 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=ddd79544-5b3a-48d2-bdd8-f68513c5daf0
+  ENTRY [b18|g018_mid_tp20_sl20|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.24 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=dd9b9f64-c02d-4369-a481-040b213da7c3
+  ENTRY [b19|g019_eod_tp20_sl20|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.18 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=4e87b9bb-e3d2-4454-a7df-c2d72e279ced
+  [b20|g020_lim_tp20_sl30] S173 BA: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 BA: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 BA: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 BA: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 BA: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 BA: no tradeable call
+  ENTRY [b26|g026_lim_tp20_sl30|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=c04af62b-a2a9-4004-9b11-da9135392496
+  ENTRY [b27|g027_mid_tp20_sl30|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.15 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=6840e069-aa21-4527-9bdb-1d1925316ee9
+  ENTRY [b28|g028_eod_tp20_sl30|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=28a2f229-0e2f-48fc-9f80-8fd91a1c07d3
+  ENTRY [b29|g029_lim_tp20_sl30|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.18 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=fdcaf2a8-28cd-4855-87e0-0ec5de3728ae
+  ENTRY [b30|g030_mid_tp20_sl30|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.24 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=ce0449ff-cfbc-4949-8a9f-a0a6ec3d1f1c
+  ENTRY [b31|g031_eod_tp20_sl30|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.18 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=9d1a2d90-40e3-4d2a-8901-c3e1a2fa331a
+  [b32|g032_lim_tp20_sl40] S173 BA: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 BA: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 BA: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 BA: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 BA: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 BA: no tradeable call
+  ENTRY [b38|g038_lim_tp20_sl40|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=e1a99f70-6693-45df-8419-3dfd05c7e607
+  ENTRY [b39|g039_mid_tp20_sl40|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.15 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=e5f85d78-69e9-492f-b427-35ce1a67cc7e
+  ENTRY [b40|g040_eod_tp20_sl40|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=2706ffe4-df41-4f16-806d-4ee253b31f98
+  ENTRY [b41|g041_lim_tp20_sl40|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.18 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=830fab92-0d31-4208-87ef-6d329c5050f2
+  ENTRY [b42|g042_mid_tp20_sl40|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.24 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=5f4a8032-b468-45e9-8a51-aad7e6468e09
+  ENTRY [b43|g043_eod_tp20_sl40|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.18 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=e50cb5dc-7102-49bf-9615-2e02a857a101
+  [b44|g044_lim_tp20_sl50] S173 BA: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 BA: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 BA: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 BA: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 BA: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 BA: no tradeable call
+  ENTRY [b50|g050_lim_tp20_sl50|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=41dc8c55-fa28-46f3-a560-394b6b6f6d67
+  ENTRY [b51|g051_mid_tp20_sl50|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.15 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=c6fa935e-dd19-4bcc-9635-4737cc1d5efd
+  ENTRY [b52|g052_eod_tp20_sl50|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=2fceb5be-9c5f-41b2-86ee-138ee360826c
+  ENTRY [b53|g053_lim_tp20_sl50|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.18 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=b00ae59e-5c78-4232-a000-b66c2464d22d
+  ENTRY [b54|g054_mid_tp20_sl50|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.24 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=f92d6240-a25a-4702-b77c-3c2a0093eaec
+  ENTRY [b55|g055_eod_tp20_sl50|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.18 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=9cc7d416-768e-4201-918d-c5c4ab58146d
+  [b56|g056_lim_tp20_sl65] S173 BA: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 BA: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 BA: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 BA: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 BA: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 BA: no tradeable call
+  ENTRY [b62|g062_lim_tp20_sl65|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=4735afb4-3699-44ae-a1c8-35de521c66d3
+  ENTRY [b63|g063_mid_tp20_sl65|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.15 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=44b5b150-89ce-4ca1-9ce4-7dfaf7bfe34b
+  ENTRY [b64|g064_eod_tp20_sl65|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=e5c1e939-831a-468e-ab3e-97afab65be6a
+  ENTRY [b65|g065_lim_tp20_sl65|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.18 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=382fae9a-3c7c-4cd6-a106-ef3e661e9c61
+  ENTRY [b66|g066_mid_tp20_sl65|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.24 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=5babf224-4735-46fe-8473-46c4dc9fa5eb
+  ENTRY [b67|g067_eod_tp20_sl65|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.18 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=67e5bbe9-e35d-4a13-9ed7-f53efbf10928
+  [b68|g068_lim_tp30_sl20] S173 BA: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 BA: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 BA: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 BA: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 BA: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 BA: no tradeable call
+  ENTRY [b74|g074_lim_tp30_sl20|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=985f2166-76c6-4a40-a2cc-6e85ec35cd7e
+  ENTRY [b75|g075_mid_tp30_sl20|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.15 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=fe98e018-0f38-4869-852d-fd2ef1b62c54
+  ENTRY [b76|g076_eod_tp30_sl20|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=f55013c8-c086-49ca-b72f-0e2c9449786a
+  ENTRY [b77|g077_lim_tp30_sl20|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.18 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=e9c2c955-f0d3-4278-b694-87982deba025
+  ENTRY [b78|g078_mid_tp30_sl20|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.24 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=8cade72c-4911-46d8-8ccd-3236a9771e38
+  ENTRY [b79|g079_eod_tp30_sl20|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.18 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=ceba0d9e-652e-4450-9955-173fab0d83b0
+  [b80|g080_lim_tp30_sl30] S173 BA: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 BA: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 BA: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 BA: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 BA: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 BA: no tradeable call
+  ENTRY [b86|g086_lim_tp30_sl30|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=bbe7472e-1183-4521-b122-d3f249f0a45f
+  ENTRY [b87|g087_mid_tp30_sl30|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.15 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=cf0e4e88-b779-4b8b-bda9-43c2ece3ae5c
+  ENTRY [b88|g088_eod_tp30_sl30|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=8c9daf50-826a-4cd8-836b-3e492cfca4b6
+  ENTRY [b89|g089_lim_tp30_sl30|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.18 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=5e9b5a01-42b4-479f-b7c5-0da92218d837
+  ENTRY [b90|g090_mid_tp30_sl30|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.24 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=91a8a3de-fc29-4378-a3e9-10a4c2aefa14
+  ENTRY [b91|g091_eod_tp30_sl30|S173] BUY 1x BA260710C00240000 (MR gap -2.0% green) limit=0.18 (ask=0.28 off=-0.10) tp=+60% sl=-40% pending id=178e714b-142c-4bde-a0e7-10480c47653f
+  [b92|g092_lim_tp30_sl40] S173 BA: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 BA: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 BA: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 BA: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 BA: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 BA: no tradeable call
+  ENTRY [b98|g098_lim_tp30_sl40|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.06 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=60f0e41d-a997-4f47-a1f8-687c52c52c56
+  ENTRY [b99|g099_mid_tp30_sl40|S173] BUY 1x BA260710C00242500 (MR gap -2.0% green) limit=0.15 (ask=0.16 off=-0.10) tp=+60% sl=-40% pending id=aa665dd0-f6b3-4812-9135-64830b7b2fcf
+  [b7|tight_spread] S173 CARR: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 CARR: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 CARR: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 CARR: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 CARR: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 CARR: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 CARR: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 CARR: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 CARR: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 CARR: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 CARR: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 CARR: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 CARR: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 CARR: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 CARR: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 CARR: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 CARR: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 CARR: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 CARR: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 CARR: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 CARR: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 CARR: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 CARR: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 CARR: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 CARR: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 CARR: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 CARR: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 CARR: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 CARR: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 CARR: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 CARR: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 CARR: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 CARR: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 CARR: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 CARR: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 CARR: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 CARR: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 CARR: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 CARR: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 CARR: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 CARR: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 CARR: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 CARR: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 CARR: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 CARR: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 CARR: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 CARR: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 CARR: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 CARR: no tradeable call
+  [b7|tight_spread] S173 CVNA: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 CVNA: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 CVNA: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 CVNA: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 CVNA: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 CVNA: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 CVNA: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 CVNA: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 CVNA: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 CVNA: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 CVNA: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 CVNA: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 CVNA: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 CVNA: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 CVNA: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 CVNA: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 CVNA: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 CVNA: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 CVNA: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 CVNA: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 CVNA: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 CVNA: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 CVNA: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 CVNA: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 CVNA: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 CVNA: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 CVNA: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 CVNA: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 CVNA: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 CVNA: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 CVNA: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 CVNA: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 CVNA: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 CVNA: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 CVNA: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 CVNA: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 CVNA: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 CVNA: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 CVNA: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 CVNA: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 CVNA: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 CVNA: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 CVNA: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 CVNA: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 CVNA: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 CVNA: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 CVNA: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 CVNA: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 CVNA: no tradeable call
+  [b7|tight_spread] S173 CHTR: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 CHTR: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 CHTR: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 CHTR: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 CHTR: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 CHTR: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 CHTR: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 CHTR: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 CHTR: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 CHTR: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 CHTR: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 CHTR: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 CHTR: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 CHTR: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 CHTR: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 CHTR: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 CHTR: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 CHTR: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 CHTR: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 CHTR: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 CHTR: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 CHTR: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 CHTR: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 CHTR: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 CHTR: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 CHTR: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 CHTR: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 CHTR: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 CHTR: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 CHTR: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 CHTR: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 CHTR: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 CHTR: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 CHTR: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 CHTR: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 CHTR: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 CHTR: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 CHTR: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 CHTR: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 CHTR: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 CHTR: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 CHTR: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 CHTR: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 CHTR: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 CHTR: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 CHTR: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 CHTR: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 CHTR: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 CHTR: no tradeable call
+  [b7|tight_spread] S173 CTSH: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 CTSH: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 CTSH: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 CTSH: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 CTSH: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 CTSH: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 CTSH: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 CTSH: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 CTSH: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 CTSH: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 CTSH: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 CTSH: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 CTSH: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 CTSH: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 CTSH: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 CTSH: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 CTSH: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 CTSH: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 CTSH: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 CTSH: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 CTSH: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 CTSH: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 CTSH: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 CTSH: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 CTSH: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 CTSH: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 CTSH: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 CTSH: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 CTSH: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 CTSH: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 CTSH: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 CTSH: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 CTSH: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 CTSH: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 CTSH: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 CTSH: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 CTSH: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 CTSH: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 CTSH: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 CTSH: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 CTSH: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 CTSH: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 CTSH: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 CTSH: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 CTSH: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 CTSH: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 CTSH: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 CTSH: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 CTSH: no tradeable call
+  [b7|tight_spread] S173 COIN: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 COIN: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 COIN: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 COIN: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 COIN: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 COIN: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 COIN: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 COIN: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 COIN: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 COIN: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 COIN: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 COIN: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 COIN: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 COIN: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 COIN: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 COIN: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 COIN: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 COIN: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 COIN: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 COIN: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 COIN: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 COIN: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 COIN: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 COIN: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 COIN: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 COIN: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 COIN: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 COIN: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 COIN: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 COIN: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 COIN: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 COIN: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 COIN: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 COIN: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 COIN: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 COIN: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 COIN: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 COIN: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 COIN: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 COIN: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 COIN: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 COIN: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 COIN: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 COIN: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 COIN: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 COIN: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 COIN: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 COIN: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 COIN: no tradeable call
+  [b7|tight_spread] S173 FIX: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 FIX: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 FIX: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 FIX: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 FIX: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 FIX: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 FIX: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 FIX: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 FIX: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 FIX: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 FIX: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 FIX: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 FIX: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 FIX: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 FIX: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 FIX: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 FIX: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 FIX: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 FIX: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 FIX: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 FIX: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 FIX: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 FIX: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 FIX: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 FIX: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 FIX: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 FIX: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 FIX: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 FIX: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 FIX: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 FIX: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 FIX: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 FIX: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 FIX: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 FIX: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 FIX: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 FIX: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 FIX: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 FIX: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 FIX: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 FIX: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 FIX: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 FIX: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 FIX: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 FIX: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 FIX: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 FIX: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 FIX: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 FIX: no tradeable call
+  [b7|tight_spread] S173 DDOG: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 DDOG: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 DDOG: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 DDOG: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 DDOG: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 DDOG: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 DDOG: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 DDOG: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 DDOG: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 DDOG: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 DDOG: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 DDOG: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 DDOG: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 DDOG: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 DDOG: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 DDOG: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 DDOG: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 DDOG: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 DDOG: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 DDOG: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 DDOG: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 DDOG: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 DDOG: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 DDOG: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 DDOG: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 DDOG: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 DDOG: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 DDOG: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 DDOG: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 DDOG: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 DDOG: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 DDOG: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 DDOG: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 DDOG: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 DDOG: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 DDOG: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 DDOG: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 DDOG: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 DDOG: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 DDOG: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 DDOG: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 DDOG: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 DDOG: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 DDOG: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 DDOG: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 DDOG: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 DDOG: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 DDOG: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 DDOG: no tradeable call
+  [b7|tight_spread] S173 FSLR: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 FSLR: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 FSLR: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 FSLR: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 FSLR: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 FSLR: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 FSLR: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 FSLR: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 FSLR: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 FSLR: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 FSLR: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 FSLR: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 FSLR: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 FSLR: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 FSLR: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 FSLR: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 FSLR: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 FSLR: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 FSLR: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 FSLR: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 FSLR: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 FSLR: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 FSLR: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 FSLR: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 FSLR: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 FSLR: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 FSLR: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 FSLR: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 FSLR: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 FSLR: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 FSLR: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 FSLR: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 FSLR: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 FSLR: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 FSLR: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 FSLR: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 FSLR: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 FSLR: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 FSLR: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 FSLR: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 FSLR: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 FSLR: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 FSLR: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 FSLR: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 FSLR: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 FSLR: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 FSLR: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 FSLR: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 FSLR: no tradeable call
+  [b7|tight_spread] S173 FISV: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 FISV: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 FISV: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 FISV: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 FISV: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 FISV: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 FISV: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 FISV: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 FISV: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 FISV: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 FISV: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 FISV: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 FISV: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 FISV: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 FISV: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 FISV: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 FISV: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 FISV: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 FISV: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 FISV: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 FISV: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 FISV: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 FISV: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 FISV: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 FISV: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 FISV: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 FISV: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 FISV: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 FISV: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 FISV: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 FISV: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 FISV: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 FISV: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 FISV: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 FISV: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 FISV: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 FISV: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 FISV: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 FISV: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 FISV: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 FISV: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 FISV: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 FISV: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 FISV: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 FISV: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 FISV: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 FISV: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 FISV: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 FISV: no tradeable call
+  [b7|tight_spread] S173 FLEX: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 FLEX: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 FLEX: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 FLEX: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 FLEX: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 FLEX: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 FLEX: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 FLEX: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 FLEX: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 FLEX: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 FLEX: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 FLEX: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 FLEX: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 FLEX: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 FLEX: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 FLEX: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 FLEX: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 FLEX: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 FLEX: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 FLEX: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 FLEX: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 FLEX: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 FLEX: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 FLEX: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 FLEX: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 FLEX: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 FLEX: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 FLEX: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 FLEX: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 FLEX: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 FLEX: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 FLEX: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 FLEX: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 FLEX: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 FLEX: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 FLEX: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 FLEX: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 FLEX: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 FLEX: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 FLEX: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 FLEX: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 FLEX: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 FLEX: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 FLEX: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 FLEX: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 FLEX: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 FLEX: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 FLEX: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 FLEX: no tradeable call
+  [b7|tight_spread] S173 FCX: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 FCX: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 FCX: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 FCX: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 FCX: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 FCX: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 FCX: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 FCX: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 FCX: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 FCX: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 FCX: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 FCX: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 FCX: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 FCX: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 FCX: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 FCX: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 FCX: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 FCX: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 FCX: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 FCX: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 FCX: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 FCX: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 FCX: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 FCX: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 FCX: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 FCX: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 FCX: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 FCX: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 FCX: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 FCX: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 FCX: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 FCX: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 FCX: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 FCX: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 FCX: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 FCX: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 FCX: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 FCX: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 FCX: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 FCX: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 FCX: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 FCX: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 FCX: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 FCX: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 FCX: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 FCX: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 FCX: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 FCX: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 FCX: no tradeable call
+  [b7|tight_spread] S173 GE: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 GE: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 GE: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 GE: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 GE: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 GE: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 GE: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 GE: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 GE: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 GE: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 GE: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 GE: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 GE: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 GE: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 GE: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 GE: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 GE: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 GE: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 GE: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 GE: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 GE: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 GE: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 GE: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 GE: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 GE: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 GE: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 GE: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 GE: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 GE: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 GE: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 GE: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 GE: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 GE: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 GE: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 GE: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 GE: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 GE: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 GE: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 GE: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 GE: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 GE: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 GE: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 GE: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 GE: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 GE: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 GE: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 GE: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 GE: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 GE: no tradeable call
+  [b7|tight_spread] S173 GNRC: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 GNRC: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 GNRC: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 GNRC: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 GNRC: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 GNRC: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 GNRC: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 GNRC: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 GNRC: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 GNRC: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 GNRC: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 GNRC: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 GNRC: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 GNRC: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 GNRC: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 GNRC: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 GNRC: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 GNRC: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 GNRC: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 GNRC: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 GNRC: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 GNRC: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 GNRC: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 GNRC: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 GNRC: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 GNRC: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 GNRC: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 GNRC: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 GNRC: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 GNRC: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 GNRC: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 GNRC: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 GNRC: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 GNRC: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 GNRC: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 GNRC: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 GNRC: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 GNRC: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 GNRC: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 GNRC: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 GNRC: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 GNRC: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 GNRC: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 GNRC: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 GNRC: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 GNRC: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 GNRC: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 GNRC: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 GNRC: no tradeable call
+  ENTRY [b7|tight_spread|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.99 (ask=1.00 off=-0.01) tp=+60% sl=-40% pending id=bd88772a-0c10-4f05-a0e5-48f2a0703ab8
+  ENTRY [b8|g008_lim_tp20_sl20|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=e539c5c4-7d8a-483c-92da-f16f93289814
+  ENTRY [b9|g009_mid_tp20_sl20|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.79 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=ee760e23-af54-482b-a8bf-3421de1ca881
+  ENTRY [b10|g010_eod_tp20_sl20|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=efa51551-9bf7-47d7-9cbb-3faf7b49dfce
+  ENTRY [b11|g011_lim_tp20_sl20|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=7a45b7d2-2d9b-424e-abd6-37fd1e177050
+  ENTRY [b12|g012_mid_tp20_sl20|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.94 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=259ef2f9-f764-45c5-bfd2-b5c1127c100f
+  ENTRY [b13|g013_eod_tp20_sl20|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=416bfa39-948b-475c-b196-8dd4c92ee05f
+  ENTRY [b20|g020_lim_tp20_sl30|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=16bf82a2-1973-40b5-9672-bc0cfc171772
+  ENTRY [b21|g021_mid_tp20_sl30|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.79 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=68f1d9fd-5af5-406b-a40f-9f3af4ec5c18
+  ENTRY [b22|g022_eod_tp20_sl30|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=f438dd6c-327c-402b-8860-b1be58cd7351
+  ENTRY [b23|g023_lim_tp20_sl30|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=9491bd35-28ea-4ee6-a8a6-1c5c548013df
+  ENTRY [b24|g024_mid_tp20_sl30|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.94 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=99a8453c-d052-44a9-b226-9f406d80362c
+  ENTRY [b25|g025_eod_tp20_sl30|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=88821996-b70c-4d12-86e0-a864db8a1791
+  ENTRY [b32|g032_lim_tp20_sl40|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=e5f56b5f-c4fc-415c-b8ab-3136106c2fd8
+  ENTRY [b33|g033_mid_tp20_sl40|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.79 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=dc0c8ca2-7818-48bd-b62f-63deac022c59
+  ENTRY [b34|g034_eod_tp20_sl40|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=e51a3a3c-ab84-4a87-842b-78ca93126b3c
+  ENTRY [b35|g035_lim_tp20_sl40|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=7642b17b-972b-4e0d-8c25-ff88c24a492d
+  ENTRY [b36|g036_mid_tp20_sl40|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.94 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=ba55a97f-0688-496e-8cca-74ec985404b9
+  ENTRY [b37|g037_eod_tp20_sl40|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=ea63c4a8-77ef-4c62-87a7-036c8954c5ad
+  ENTRY [b44|g044_lim_tp20_sl50|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=871f623e-071f-43ff-9128-873f12fb6636
+  ENTRY [b45|g045_mid_tp20_sl50|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.79 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=db58975b-b746-485b-990a-28e7f5d78bc0
+  ENTRY [b46|g046_eod_tp20_sl50|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=b4ccb62b-ae0a-4370-9c53-f24dca46f81a
+  ENTRY [b47|g047_lim_tp20_sl50|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=9b0de401-4d1d-42b9-a573-3a1fa63dfee3
+  ENTRY [b48|g048_mid_tp20_sl50|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.94 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=bd567746-e897-4546-bb44-be5a44a78d68
+  ENTRY [b49|g049_eod_tp20_sl50|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=c3539a0b-5e7c-48d1-8020-bb7f8b8ed18d
+  ENTRY [b56|g056_lim_tp20_sl65|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=be7b0d50-9257-4185-82d6-c247e9e1a102
+  ENTRY [b57|g057_mid_tp20_sl65|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.79 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=658cf378-9dee-45b3-a599-d3fd14b8172f
+  ENTRY [b58|g058_eod_tp20_sl65|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=ae3044a6-6f7b-490d-a26f-a4ee0fa427f8
+  ENTRY [b59|g059_lim_tp20_sl65|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=e969e465-30fb-4ef9-a85b-15932e6566ea
+  ENTRY [b60|g060_mid_tp20_sl65|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.94 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=cc159bb5-519c-476b-82d0-7791e45df920
+  ENTRY [b61|g061_eod_tp20_sl65|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=b110f90f-9825-4caf-acc8-8c5825eda874
+  ENTRY [b68|g068_lim_tp30_sl20|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=74bf819a-10eb-48ba-a52d-729b630d933d
+  ENTRY [b69|g069_mid_tp30_sl20|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.79 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=711157fb-f58c-433b-b8e2-d7e65e4b450c
+  ENTRY [b70|g070_eod_tp30_sl20|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=31ab8c5d-bb45-4bf0-b231-c56cf7442a2f
+  ENTRY [b71|g071_lim_tp30_sl20|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=54e2c4cc-f03f-404b-9814-6e643d8dedb7
+  ENTRY [b72|g072_mid_tp30_sl20|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.94 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=1d005955-a852-4fff-8420-59da8866e6e7
+  ENTRY [b73|g073_eod_tp30_sl20|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=9f71e340-6c92-4b6a-8e47-f8e033dfa61b
+  ENTRY [b80|g080_lim_tp30_sl30|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=4c2c3d12-40cc-46ea-9061-ff9f7ec314ae
+  ENTRY [b81|g081_mid_tp30_sl30|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.79 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=81962c82-27e4-4281-b98c-0617390f3f33
+  ENTRY [b82|g082_eod_tp30_sl30|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=59bf7bf0-ad2a-4a10-80ff-34a4e87c25d9
+  ENTRY [b83|g083_lim_tp30_sl30|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=9b72c874-67e3-4e3e-8c67-2c454b473f73
+  ENTRY [b84|g084_mid_tp30_sl30|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.94 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=c651688e-b2ee-43d6-aec7-b120b30b16ac
+  ENTRY [b85|g085_eod_tp30_sl30|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=febd9efe-4ab4-4ebe-9644-27e5cdf66575
+  ENTRY [b92|g092_lim_tp30_sl40|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=df49daf2-9655-4547-a044-c7f83d0e73d1
+  ENTRY [b93|g093_mid_tp30_sl40|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.79 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=b58ae8ec-f56a-4051-9cc0-c08b0043b5e9
+  ENTRY [b94|g094_eod_tp30_sl40|S173] BUY 1x INTC260710C00119000 (MR gap -1.9% green) limit=0.72 (ask=0.82 off=-0.10) tp=+60% sl=-40% pending id=28a2858c-0d3f-481e-be8e-aef7134c6c7e
+  ENTRY [b95|g095_lim_tp30_sl40|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=2cd9a5ea-49a1-4334-a33f-848475aab0fb
+  ENTRY [b96|g096_mid_tp30_sl40|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.94 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=202ca2b0-f1da-439e-9507-2e1687ba371a
+  ENTRY [b97|g097_eod_tp30_sl40|S173] BUY 1x INTC260710C00118000 (MR gap -1.9% green) limit=0.90 (ask=1.00 off=-0.10) tp=+60% sl=-40% pending id=b9cd8411-b098-4aac-a758-640da7e3eaa5
+  Skipped: 986 no tradeable call, 712 pending order
+Placed 100 new entry order(s).
+========================================================
+OPTIONS TRIAL STATS
+========================================================
+Account equity: $112,822.29
+Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
+
+P&L summary
+  Realized (sold):     $+2,154.53 all-time  |  $+0.00 today
+  Open (not sold yet): $+0.00 unrealized (virtual lots)
+                       $+5,153.00 unrealized (broker total)
+  Premium deployed:    $0.00 in open positions
+  Combined P&L:        $+2,154.53 (realized + open virtual)
+
+Ledger (master)
+  Total events:     256
+  Today entries:    0
+  Today exits:      0
+  All-time exits:   52  wins 94%
+  Avg return/trade: +39.6%  median +36.5%
+
+Open virtual lots (by bucket)
+  b56 g056_lim_tp20_sl65      prem=$     0  real=$+20.52  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+20% sl=-65%
+  b57 g057_mid_tp20_sl65      prem=$     0  real=$+20.52  open=$ +0.00  lots=0  [-]
+       buy: mid  sell: bid-0.05  tp=+20% sl=-65%
+  b58 g058_eod_tp20_sl65      prem=$     0  real=$+25.41  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+20% sl=-65%
+  b63 g063_mid_tp20_sl65      prem=$     0  real=$+18.63  open=$ +0.00  lots=0  [-]
+       buy: mid  sell: bid-0.05  tp=+20% sl=-65%
+  b64 g064_eod_tp20_sl65      prem=$     0  real=$+27.40  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+20% sl=-65%
+  b65 g065_lim_tp20_sl65      prem=$     0  real=$+18.63  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+20% sl=-65%
+  b66 g066_mid_tp20_sl65      prem=$     0  real=$+18.63  open=$ +0.00  lots=0  [-]
+       buy: mid  sell: bid-0.05  tp=+20% sl=-65%
+  b67 g067_eod_tp20_sl65      prem=$     0  real=$+27.40  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+20% sl=-65%
+  b70 g070_eod_tp30_sl20      prem=$     0  real=$+27.77  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-20%
+  b71 g071_lim_tp30_sl20      prem=$     0  real=$+23.73  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-20%
+  b72 g072_mid_tp30_sl20      prem=$     0  real=$+23.73  open=$ +0.00  lots=0  [-]
+       buy: mid  sell: bid-0.05  tp=+30% sl=-20%
+  b73 g073_eod_tp30_sl20      prem=$     0  real=$+36.11  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-20%
+  b74 g074_lim_tp30_sl20      prem=$     0  real=$+23.73  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-20%
+  b75 g075_mid_tp30_sl20      prem=$     0  real=$+23.73  open=$ +0.00  lots=0  [-]
+       buy: mid  sell: bid-0.05  tp=+30% sl=-20%
+  b76 g076_eod_tp30_sl20      prem=$     0  real=$+27.40  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-20%
+  b77 g077_lim_tp30_sl20      prem=$     0  real=$-18.63  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-20%
+  b78 g078_mid_tp30_sl20      prem=$     0  real=$-18.63  open=$ +0.00  lots=0  [-]
+       buy: mid  sell: bid-0.05  tp=+30% sl=-20%
+  b79 g079_eod_tp30_sl20      prem=$     0  real=$+27.40  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-20%
+  b80 g080_lim_tp30_sl30      prem=$     0  real=$+23.73  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-30%
+  b81 g081_mid_tp30_sl30      prem=$     0  real=$+23.73  open=$ +0.00  lots=0  [-]
+       buy: mid  sell: bid-0.05  tp=+30% sl=-30%
+  (18 more active bucket(s) omitted)
+  (62 quiet bucket profile(s) — no trades yet)
+
+Pending orders: 100
+  b0 S173 BA limit=0.15
+  b1 S173 BA limit=0.11
+  b2 S173 BA limit=0.15
+  b3 S173 BA limit=0.15
+  b4 S173 BA limit=0.14
+
+Alpaca option positions
+  ANET260710C00185000  qty=22  cost=$600.00  return=-19.3%  open P&L=$-116.00
+  AVGO260708C00385000  qty=51  cost=$3,596.00  return=+57.4%  open P&L=$+2,065.00
+  AVGO260710C00400000  qty=49  cost=$2,740.00  return=+118.2%  open P&L=$+3,238.00
+  BA260710C00240000  qty=4  cost=$97.00  return=-5.2%  open P&L=$-5.00
+  BA260710C00242500  qty=12  cost=$168.00  return=-21.4%  open P&L=$-36.00
+  INTC260710C00118000  qty=1  cost=$98.00  return=+7.1%  open P&L=$+7.00
+
+Per-bucket exit stats (all time)
+  b0|orphan_reconcile     n=  4  avg=+61.5%  med=+58.1%  realized=$+747.86
+  b56|g056_lim_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b57|g057_mid_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b58|g058_eod_tp20_sl65  n=  1  avg=+59.1%  med=+59.1%  realized=$+25.41
+  b63|g063_mid_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b64|g064_eod_tp20_sl65  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b65|g065_lim_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b66|g066_mid_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b67|g067_eod_tp20_sl65  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b70|g070_eod_tp30_sl20  n=  1  avg=+59.1%  med=+59.1%  realized=$+27.77
+  b71|g071_lim_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b72|g072_mid_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b73|g073_eod_tp30_sl20  n=  1  avg=+55.6%  med=+55.6%  realized=$+36.11
+  b74|g074_lim_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b75|g075_mid_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b76|g076_eod_tp30_sl20  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b77|g077_lim_tp30_sl20  n=  1  avg=-23.3%  med=-23.3%  realized=$-18.63
+  b78|g078_mid_tp30_sl20  n=  1  avg=-23.3%  med=-23.3%  realized=$-18.63
+  b79|g079_eod_tp30_sl20  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b80|g080_lim_tp30_sl30  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b81|g081_mid_tp30_sl30  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b82|g082_eod_tp30_sl30  n=  1  avg=+55.6%  med=+55.6%  realized=$+36.11
+  b83|g083_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b84|g084_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b85|g085_eod_tp30_sl30  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b86|g086_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b87|g087_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b88|g088_eod_tp30_sl30  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b89|g089_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b90|g090_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b91|g091_eod_tp30_sl30  n=  2  avg=+19.8%  med=+55.6%  realized=$+25.00
+  b92|g092_lim_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b93|g093_mid_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b94|g094_eod_tp30_sl40  n=  2  avg=+46.6%  med=+55.6%  realized=$+73.80
+  b95|g095_lim_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b96|g096_mid_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b97|g097_eod_tp30_sl40  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b98|g098_lim_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b99|g099_mid_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+========================================================
+========================================================
+OPTIONS TRIAL STATS
+========================================================
+Account equity: $112,822.29
+Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
+
+P&L summary
+  Realized (sold):     $+2,154.53 all-time  |  $+0.00 today
+  Open (not sold yet): $+0.00 unrealized (virtual lots)
+                       $+5,153.00 unrealized (broker total)
+  Premium deployed:    $0.00 in open positions
+  Combined P&L:        $+2,154.53 (realized + open virtual)
+
+Ledger (master)
+  Total events:     256
+  Today entries:    0
+  Today exits:      0
+  All-time exits:   52  wins 94%
+  Avg return/trade: +39.6%  median +36.5%
+
+Open virtual lots (by bucket)
+  b56 g056_lim_tp20_sl65      prem=$     0  real=$+20.52  open=$ +0.00  lots=0  [-]
+  b57 g057_mid_tp20_sl65      prem=$     0  real=$+20.52  open=$ +0.00  lots=0  [-]
+  b58 g058_eod_tp20_sl65      prem=$     0  real=$+25.41  open=$ +0.00  lots=0  [-]
+  b63 g063_mid_tp20_sl65      prem=$     0  real=$+18.63  open=$ +0.00  lots=0  [-]
+  b64 g064_eod_tp20_sl65      prem=$     0  real=$+27.40  open=$ +0.00  lots=0  [-]
+  (33 more active bucket(s) omitted)
+  (62 quiet bucket profile(s) — no trades yet)
+
+Pending orders: 100
+  b0 S173 BA limit=0.15
+  b1 S173 BA limit=0.11
+  b2 S173 BA limit=0.15
+  b3 S173 BA limit=0.15
+  b4 S173 BA limit=0.14
+
+Alpaca option positions
+  ANET260710C00185000  qty=22  cost=$600.00  return=-19.3%  open P&L=$-116.00
+  AVGO260708C00385000  qty=51  cost=$3,596.00  return=+57.4%  open P&L=$+2,065.00
+  AVGO260710C00400000  qty=49  cost=$2,740.00  return=+118.2%  open P&L=$+3,238.00
+  BA260710C00240000  qty=4  cost=$97.00  return=-5.2%  open P&L=$-5.00
+  BA260710C00242500  qty=12  cost=$168.00  return=-21.4%  open P&L=$-36.00
+  INTC260710C00118000  qty=1  cost=$98.00  return=+7.1%  open P&L=$+7.00
+
+Per-bucket exit stats (all time)
+  39 bucket profiles with exits (showing top 5 by trade count)
+  b0|orphan_reconcile     n=  4  avg=+61.5%  med=+58.1%  realized=$+747.86
+  b88|g088_eod_tp30_sl30  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b91|g091_eod_tp30_sl30  n=  2  avg=+19.8%  med=+55.6%  realized=$+25.00
+  b92|g092_lim_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b93|g093_mid_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+========================================================
+Full detail: logs/options_trial/runs/2026-07-08.log
+elapsed=333.3s reconcile=0.39s cancel=0.08s manage=0.15s scan=28.9s entries=303.27s
+
