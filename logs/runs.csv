@@ -2029,3 +2029,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-08 22:31:07,ext_exits,bull,475.52,283.49,0,0,0,2,AES|CSCO,both
 2026-07-08 22:35:39,ext_exits,bull,475.55,283.49,0,0,0,2,AES|CSCO,both
 2026-07-08 22:41:03,ext_exits,bull,475.29,283.49,0,0,0,2,AES|CSCO,both
+2026-07-08 22:45:40,ext_exits,bull,475.29,283.49,0,0,0,2,AES|CSCO,both
