@@ -1998,3 +1998,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-08 19:50:28,scan_evening,bull,476.77,94.17,23,0,1,4,AES|AME|CDNS|CSCO,both
 2026-07-08 20:01:19,ext_exits,bull,476.11,188.35,0,0,0,3,AES|CDNS|CSCO,both
 2026-07-08 20:05:47,ext_exits,bull,476.11,188.35,0,0,0,3,AES|CDNS|CSCO,both
+2026-07-08 20:11:02,ext_exits,bull,474.75,188.35,0,0,0,3,AES|CDNS|CSCO,both
