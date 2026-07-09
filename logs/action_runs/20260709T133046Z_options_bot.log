@@ -1,0 +1,88 @@
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         /home/runner/work/TradingBot/TradingBot/docs/options_trial
+Buckets:      100
+2026-07-09 09:34:26,984 INFO === options_morning_bot (PAPER) 2026-07-09T09:34:26.984447-04:00 ===
+2026-07-09 09:34:26,984 INFO 
+2026-07-09 09:34:26,984 INFO [Run context]
+2026-07-09 09:34:27,232 INFO Paper auth OK — equity $173843.89, account PA36KS87UPRS
+2026-07-09 09:34:27,731 INFO 
+2026-07-09 09:34:27,731 INFO [Setup]
+2026-07-09 09:34:27,731 INFO Active buckets: 100 | Strategies: S173, S174, S165, S166, S163
+2026-07-09 09:34:27,889 INFO 
+2026-07-09 09:34:27,889 INFO [Scan + entries]
+2026-07-09 09:34:27,890 INFO Scanning 903 symbols for [S173, S174, S165, S166, S163] …
+2026-07-09 09:34:43,858 INFO Fetched daily bars for 903/903 symbols
+2026-07-09 09:34:49,217 INFO Found 73 signal(s); top: ['S173:ADBE', 'S173:GOOGL', 'S173:GOOG', 'S173:AMZN', 'S173:APP', 'S173:AXON', 'S173:CHTR', 'S173:CME']
+2026-07-09 09:34:49,288 INFO Paper lab: $176814 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+2026-07-09 09:35:22,275 INFO   Skipped: 99 no tradeable call, 1 pending order
+2026-07-09 09:35:22,276 INFO Placed 100 new entry order(s).
+2026-07-09 09:35:22,367 INFO 
+2026-07-09 09:35:22,368 INFO [Portfolio snapshot]
+2026-07-09 09:35:22,371 INFO ========================================================
+2026-07-09 09:35:22,371 INFO OPTIONS TRIAL STATS
+2026-07-09 09:35:22,371 INFO ========================================================
+2026-07-09 09:35:22,371 INFO Account equity: $173,845.89
+2026-07-09 09:35:22,372 INFO Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
+2026-07-09 09:35:22,372 INFO 
+2026-07-09 09:35:22,372 INFO P&L summary
+2026-07-09 09:35:22,372 INFO   Realized (sold):     $+2,154.53 all-time  |  $+0.00 today
+2026-07-09 09:35:22,372 INFO   Open (not sold yet): $+0.00 unrealized (virtual lots)
+2026-07-09 09:35:22,372 INFO                        $+44,576.00 unrealized (broker total)
+2026-07-09 09:35:22,372 INFO   Premium deployed:    $0.00 in open positions
+2026-07-09 09:35:22,372 INFO   Combined P&L:        $+2,154.53 (realized + open virtual)
+2026-07-09 09:35:22,372 INFO 
+2026-07-09 09:35:22,372 INFO Ledger (master)
+2026-07-09 09:35:22,372 INFO   Total events:     256
+2026-07-09 09:35:22,372 INFO   Today entries:    0
+2026-07-09 09:35:22,372 INFO   Today exits:      0
+2026-07-09 09:35:22,372 INFO   All-time exits:   52  wins 94%
+2026-07-09 09:35:22,372 INFO   Avg return/trade: +39.6%  median +36.5%
+2026-07-09 09:35:22,372 INFO 
+2026-07-09 09:35:22,372 INFO Open virtual lots (by bucket)
+2026-07-09 09:35:22,372 INFO   b56 g056_lim_tp20_sl65      prem=$     0  real=$+20.52  open=$ +0.00  lots=0  [-]
+2026-07-09 09:35:22,372 INFO   b57 g057_mid_tp20_sl65      prem=$     0  real=$+20.52  open=$ +0.00  lots=0  [-]
+2026-07-09 09:35:22,372 INFO   b58 g058_eod_tp20_sl65      prem=$     0  real=$+25.41  open=$ +0.00  lots=0  [-]
+2026-07-09 09:35:22,372 INFO   b63 g063_mid_tp20_sl65      prem=$     0  real=$+18.63  open=$ +0.00  lots=0  [-]
+2026-07-09 09:35:22,372 INFO   b64 g064_eod_tp20_sl65      prem=$     0  real=$+27.40  open=$ +0.00  lots=0  [-]
+2026-07-09 09:35:22,372 INFO   (33 more active bucket(s) omitted)
+2026-07-09 09:35:22,372 INFO   (62 quiet bucket profile(s) — no trades yet)
+2026-07-09 09:35:22,372 INFO 
+2026-07-09 09:35:22,372 INFO Pending orders: 100
+2026-07-09 09:35:22,372 INFO   b6 S173 ADBE limit=0.87
+2026-07-09 09:35:22,372 INFO   b0 S173 GOOGL limit=0.89
+2026-07-09 09:35:22,372 INFO   b1 S173 GOOGL limit=0.85
+2026-07-09 09:35:22,372 INFO   b2 S173 GOOGL limit=0.84
+2026-07-09 09:35:22,372 INFO   b3 S173 GOOGL limit=0.89
+2026-07-09 09:35:22,372 INFO 
+2026-07-09 09:35:22,372 INFO Alpaca option positions
+2026-07-09 09:35:22,372 INFO   ADBE260710C00225000  qty=1  cost=$86.00  return=-31.4%  open P&L=$-27.00
+2026-07-09 09:35:22,372 INFO   ANET260710C00185000  qty=22  cost=$600.00  return=+1770.0%  open P&L=$+10,620.00
+2026-07-09 09:35:22,372 INFO   AVGO260710C00400000  qty=49  cost=$2,740.00  return=+1223.4%  open P&L=$+33,520.00
+2026-07-09 09:35:22,372 INFO   BA260710C00237500  qty=22  cost=$466.00  return=-90.6%  open P&L=$-422.00
+2026-07-09 09:35:22,372 INFO   BA260710C00240000  qty=22  cost=$415.00  return=-94.7%  open P&L=$-393.00
+2026-07-09 09:35:22,373 INFO   BA260710C00242500  qty=29  cost=$284.00  return=-89.8%  open P&L=$-255.00
+2026-07-09 09:35:22,373 INFO   CCL260710C00026000  qty=7  cost=$298.00  return=-3.7%  open P&L=$-11.00
+2026-07-09 09:35:22,373 INFO   CCL260717C00026000  qty=93  cost=$6,981.00  return=-5.4%  open P&L=$-378.00
+2026-07-09 09:35:22,373 INFO   GOOGL260710C00365000  qty=5  cost=$444.00  return=+2.5%  open P&L=$+11.00
+2026-07-09 09:35:22,373 INFO   INTC260710C00118000  qty=25  cost=$2,258.00  return=+99.3%  open P&L=$+2,242.00
+2026-07-09 09:35:22,373 INFO   INTC260710C00119000  qty=24  cost=$1,784.00  return=+92.4%  open P&L=$+1,648.00
+2026-07-09 09:35:22,373 INFO   MRNA260710C00085000  qty=54  cost=$1,667.00  return=-93.5%  open P&L=$-1,559.00
+2026-07-09 09:35:22,373 INFO   PLTR260710C00136000  qty=24  cost=$780.00  return=-53.8%  open P&L=$-420.00
+2026-07-09 09:35:22,373 INFO 
+2026-07-09 09:35:22,373 INFO Per-bucket exit stats (all time)
+2026-07-09 09:35:22,373 INFO   39 bucket profiles with exits (showing top 5 by trade count)
+2026-07-09 09:35:22,373 INFO   b0|orphan_reconcile     n=  4  avg=+61.5%  med=+58.1%  realized=$+747.86
+2026-07-09 09:35:22,373 INFO   b88|g088_eod_tp30_sl30  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+2026-07-09 09:35:22,373 INFO   b91|g091_eod_tp30_sl30  n=  2  avg=+19.8%  med=+55.6%  realized=$+25.00
+2026-07-09 09:35:22,373 INFO   b92|g092_lim_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+2026-07-09 09:35:22,373 INFO   b93|g093_mid_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+2026-07-09 09:35:22,373 INFO ========================================================
+2026-07-09 09:35:22,373 INFO Full detail: logs/options_trial/runs/2026-07-09.log
+2026-07-09 09:35:22,373 INFO elapsed=55.4s reconcile=0.42s cancel=0.07s manage=0.09s scan=21.33s entries=33.06s
+STATUS: options_morning_bot run complete (PAPER) elapsed=55.4s.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_strategy_selection.csv
+Summary: keep=0 watch=5 drop=0

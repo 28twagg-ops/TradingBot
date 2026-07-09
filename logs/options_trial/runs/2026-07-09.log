@@ -206,3 +206,420 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-07-09.log
 elapsed=0.8s reconcile=0.55s
 
+=== 09:34:26 ET — entry+manage (100 new) [elapsed=55.4s reconcile=0.42s cancel=0.07s manage=0.09s scan=21.33s entries=33.06s] ===
+=== options_morning_bot (PAPER) 2026-07-09T09:34:26.984447-04:00 ===
+
+[Run context]
+Paper auth OK — equity $173843.89, account PA36KS87UPRS
+  reconcile: WARNING ANET260710C00185000 broker qty 22 > virtual 0 (unattributed qty=22)
+  reconcile: WARNING AVGO260710C00400000 broker qty 49 > virtual 0 (unattributed qty=49)
+  reconcile: WARNING BA260710C00237500 broker qty 22 > virtual 0 (unattributed qty=22)
+  reconcile: WARNING BA260710C00240000 broker qty 22 > virtual 0 (unattributed qty=22)
+  reconcile: WARNING BA260710C00242500 broker qty 29 > virtual 0 (unattributed qty=29)
+  reconcile: WARNING CCL260710C00026000 broker qty 7 > virtual 0 (unattributed qty=7)
+  reconcile: WARNING CCL260717C00026000 broker qty 93 > virtual 0 (unattributed qty=93)
+  reconcile: WARNING INTC260710C00118000 broker qty 25 > virtual 0 (unattributed qty=25)
+  reconcile: WARNING INTC260710C00119000 broker qty 24 > virtual 0 (unattributed qty=24)
+  reconcile: WARNING MRNA260710C00085000 broker qty 54 > virtual 0 (unattributed qty=54)
+  reconcile: WARNING PLTR260710C00136000 broker qty 24 > virtual 0 (unattributed qty=24)
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S174, S165, S166, S163
+
+[Scan + entries]
+Scanning 903 symbols for [S173, S174, S165, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 73 signal(s); top: ['S173:ADBE', 'S173:GOOGL', 'S173:GOOG', 'S173:AMZN', 'S173:APP', 'S173:AXON', 'S173:CHTR', 'S173:CME']
+Paper lab: $176814 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+  [b0|baseline] S173 ADBE: no tradeable call
+  [b1|patient_buy] S173 ADBE: no tradeable call
+  [b2|aggressive_buy] S173 ADBE: no tradeable call
+  [b3|tight_stops] S173 ADBE: no tradeable call
+  [b4|wide_stops] S173 ADBE: no tradeable call
+  [b5|eod_only] S173 ADBE: no tradeable call
+  ENTRY [b6|loose_spread|S173] BUY 1x ADBE260710C00225000 (MR gap -3.1% green) limit=0.87 (ask=0.88 off=-0.01) tp=+60% sl=-40% pending id=c0f9357b-561d-451f-849a-9b050daffc9c
+  [b7|tight_spread] S173 ADBE: no tradeable call
+  [b8|g008_lim_tp20_sl20] S173 ADBE: no tradeable call
+  [b9|g009_mid_tp20_sl20] S173 ADBE: no tradeable call
+  [b10|g010_eod_tp20_sl20] S173 ADBE: no tradeable call
+  [b11|g011_lim_tp20_sl20] S173 ADBE: no tradeable call
+  [b12|g012_mid_tp20_sl20] S173 ADBE: no tradeable call
+  [b13|g013_eod_tp20_sl20] S173 ADBE: no tradeable call
+  [b14|g014_lim_tp20_sl20] S173 ADBE: no tradeable call
+  [b15|g015_mid_tp20_sl20] S173 ADBE: no tradeable call
+  [b16|g016_eod_tp20_sl20] S173 ADBE: no tradeable call
+  [b17|g017_lim_tp20_sl20] S173 ADBE: no tradeable call
+  [b18|g018_mid_tp20_sl20] S173 ADBE: no tradeable call
+  [b19|g019_eod_tp20_sl20] S173 ADBE: no tradeable call
+  [b20|g020_lim_tp20_sl30] S173 ADBE: no tradeable call
+  [b21|g021_mid_tp20_sl30] S173 ADBE: no tradeable call
+  [b22|g022_eod_tp20_sl30] S173 ADBE: no tradeable call
+  [b23|g023_lim_tp20_sl30] S173 ADBE: no tradeable call
+  [b24|g024_mid_tp20_sl30] S173 ADBE: no tradeable call
+  [b25|g025_eod_tp20_sl30] S173 ADBE: no tradeable call
+  [b26|g026_lim_tp20_sl30] S173 ADBE: no tradeable call
+  [b27|g027_mid_tp20_sl30] S173 ADBE: no tradeable call
+  [b28|g028_eod_tp20_sl30] S173 ADBE: no tradeable call
+  [b29|g029_lim_tp20_sl30] S173 ADBE: no tradeable call
+  [b30|g030_mid_tp20_sl30] S173 ADBE: no tradeable call
+  [b31|g031_eod_tp20_sl30] S173 ADBE: no tradeable call
+  [b32|g032_lim_tp20_sl40] S173 ADBE: no tradeable call
+  [b33|g033_mid_tp20_sl40] S173 ADBE: no tradeable call
+  [b34|g034_eod_tp20_sl40] S173 ADBE: no tradeable call
+  [b35|g035_lim_tp20_sl40] S173 ADBE: no tradeable call
+  [b36|g036_mid_tp20_sl40] S173 ADBE: no tradeable call
+  [b37|g037_eod_tp20_sl40] S173 ADBE: no tradeable call
+  [b38|g038_lim_tp20_sl40] S173 ADBE: no tradeable call
+  [b39|g039_mid_tp20_sl40] S173 ADBE: no tradeable call
+  [b40|g040_eod_tp20_sl40] S173 ADBE: no tradeable call
+  [b41|g041_lim_tp20_sl40] S173 ADBE: no tradeable call
+  [b42|g042_mid_tp20_sl40] S173 ADBE: no tradeable call
+  [b43|g043_eod_tp20_sl40] S173 ADBE: no tradeable call
+  [b44|g044_lim_tp20_sl50] S173 ADBE: no tradeable call
+  [b45|g045_mid_tp20_sl50] S173 ADBE: no tradeable call
+  [b46|g046_eod_tp20_sl50] S173 ADBE: no tradeable call
+  [b47|g047_lim_tp20_sl50] S173 ADBE: no tradeable call
+  [b48|g048_mid_tp20_sl50] S173 ADBE: no tradeable call
+  [b49|g049_eod_tp20_sl50] S173 ADBE: no tradeable call
+  [b50|g050_lim_tp20_sl50] S173 ADBE: no tradeable call
+  [b51|g051_mid_tp20_sl50] S173 ADBE: no tradeable call
+  [b52|g052_eod_tp20_sl50] S173 ADBE: no tradeable call
+  [b53|g053_lim_tp20_sl50] S173 ADBE: no tradeable call
+  [b54|g054_mid_tp20_sl50] S173 ADBE: no tradeable call
+  [b55|g055_eod_tp20_sl50] S173 ADBE: no tradeable call
+  [b56|g056_lim_tp20_sl65] S173 ADBE: no tradeable call
+  [b57|g057_mid_tp20_sl65] S173 ADBE: no tradeable call
+  [b58|g058_eod_tp20_sl65] S173 ADBE: no tradeable call
+  [b59|g059_lim_tp20_sl65] S173 ADBE: no tradeable call
+  [b60|g060_mid_tp20_sl65] S173 ADBE: no tradeable call
+  [b61|g061_eod_tp20_sl65] S173 ADBE: no tradeable call
+  [b62|g062_lim_tp20_sl65] S173 ADBE: no tradeable call
+  [b63|g063_mid_tp20_sl65] S173 ADBE: no tradeable call
+  [b64|g064_eod_tp20_sl65] S173 ADBE: no tradeable call
+  [b65|g065_lim_tp20_sl65] S173 ADBE: no tradeable call
+  [b66|g066_mid_tp20_sl65] S173 ADBE: no tradeable call
+  [b67|g067_eod_tp20_sl65] S173 ADBE: no tradeable call
+  [b68|g068_lim_tp30_sl20] S173 ADBE: no tradeable call
+  [b69|g069_mid_tp30_sl20] S173 ADBE: no tradeable call
+  [b70|g070_eod_tp30_sl20] S173 ADBE: no tradeable call
+  [b71|g071_lim_tp30_sl20] S173 ADBE: no tradeable call
+  [b72|g072_mid_tp30_sl20] S173 ADBE: no tradeable call
+  [b73|g073_eod_tp30_sl20] S173 ADBE: no tradeable call
+  [b74|g074_lim_tp30_sl20] S173 ADBE: no tradeable call
+  [b75|g075_mid_tp30_sl20] S173 ADBE: no tradeable call
+  [b76|g076_eod_tp30_sl20] S173 ADBE: no tradeable call
+  [b77|g077_lim_tp30_sl20] S173 ADBE: no tradeable call
+  [b78|g078_mid_tp30_sl20] S173 ADBE: no tradeable call
+  [b79|g079_eod_tp30_sl20] S173 ADBE: no tradeable call
+  [b80|g080_lim_tp30_sl30] S173 ADBE: no tradeable call
+  [b81|g081_mid_tp30_sl30] S173 ADBE: no tradeable call
+  [b82|g082_eod_tp30_sl30] S173 ADBE: no tradeable call
+  [b83|g083_lim_tp30_sl30] S173 ADBE: no tradeable call
+  [b84|g084_mid_tp30_sl30] S173 ADBE: no tradeable call
+  [b85|g085_eod_tp30_sl30] S173 ADBE: no tradeable call
+  [b86|g086_lim_tp30_sl30] S173 ADBE: no tradeable call
+  [b87|g087_mid_tp30_sl30] S173 ADBE: no tradeable call
+  [b88|g088_eod_tp30_sl30] S173 ADBE: no tradeable call
+  [b89|g089_lim_tp30_sl30] S173 ADBE: no tradeable call
+  [b90|g090_mid_tp30_sl30] S173 ADBE: no tradeable call
+  [b91|g091_eod_tp30_sl30] S173 ADBE: no tradeable call
+  [b92|g092_lim_tp30_sl40] S173 ADBE: no tradeable call
+  [b93|g093_mid_tp30_sl40] S173 ADBE: no tradeable call
+  [b94|g094_eod_tp30_sl40] S173 ADBE: no tradeable call
+  [b95|g095_lim_tp30_sl40] S173 ADBE: no tradeable call
+  [b96|g096_mid_tp30_sl40] S173 ADBE: no tradeable call
+  [b97|g097_eod_tp30_sl40] S173 ADBE: no tradeable call
+  [b98|g098_lim_tp30_sl40] S173 ADBE: no tradeable call
+  [b99|g099_mid_tp30_sl40] S173 ADBE: no tradeable call
+  ENTRY [b0|baseline|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.89 (ask=0.90 off=-0.01) tp=+60% sl=-40% pending id=e2481c3d-ad32-43a9-b838-63d039b8af41
+  ENTRY [b1|patient_buy|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.85 (ask=0.90 off=-0.05) tp=+60% sl=-40% pending id=fd30d519-f46c-43c0-8f1e-be5783f2daa8
+  ENTRY [b2|aggressive_buy|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.01) tp=+60% sl=-40% pending id=eb400017-d8da-4d59-9b19-3979a3ebf2ab
+  ENTRY [b3|tight_stops|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.89 (ask=0.90 off=-0.01) tp=+60% sl=-40% pending id=843e0269-e95c-42cf-b9be-39fb8456c04b
+  ENTRY [b4|wide_stops|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.88 (ask=0.90 off=-0.02) tp=+60% sl=-40% pending id=e1ad2c93-cca4-41c1-9b82-30c4b5bf82a5
+  ENTRY [b5|eod_only|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.89 (ask=0.90 off=-0.01) tp=+60% sl=-40% pending id=19537967-f297-42fe-8c18-38717aea0431
+  ENTRY [b7|tight_spread|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.89 (ask=0.90 off=-0.01) tp=+60% sl=-40% pending id=870326f0-7b79-49c3-a4d5-76b1252ca22f
+  ENTRY [b8|g008_lim_tp20_sl20|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=45a419b5-0854-4ca1-b077-9c006f198703
+  ENTRY [b9|g009_mid_tp20_sl20|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.49 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=45b5f3f4-4456-4066-b825-4242978c19d9
+  ENTRY [b10|g010_eod_tp20_sl20|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=7c2c4f9f-1dfd-429d-b450-242cdd2364c1
+  ENTRY [b11|g011_lim_tp20_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=894dee88-b4e5-4af9-866d-ccf660a820b0
+  ENTRY [b12|g012_mid_tp20_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=840b7011-cbcc-4e94-9a68-e600e1548394
+  ENTRY [b13|g013_eod_tp20_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=6d23c068-55a5-4ade-a6c9-ef87e7f2e4e1
+  ENTRY [b14|g014_lim_tp20_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=3a4e999b-6609-4fa7-85cf-28b4f071295e
+  ENTRY [b15|g015_mid_tp20_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=a5c8390c-ffb2-4669-a24a-b1c5b4bb4bdd
+  ENTRY [b16|g016_eod_tp20_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=afe40078-7fa9-40a5-89c7-177d0dea6a46
+  ENTRY [b17|g017_lim_tp20_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=6f778df5-24c6-474f-a6b7-997f4a0a7cca
+  ENTRY [b18|g018_mid_tp20_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=2e81eafe-57a1-4c77-975c-7cfecf1588ad
+  ENTRY [b19|g019_eod_tp20_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=339ca247-4151-4ef4-9692-b8a15e5303b3
+  ENTRY [b20|g020_lim_tp20_sl30|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=4ba0a102-ca1d-4a48-a9b6-f36460f6150b
+  ENTRY [b21|g021_mid_tp20_sl30|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.49 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=a2299c7b-32bf-4826-918c-fe52be7455d2
+  ENTRY [b22|g022_eod_tp20_sl30|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=8118282e-95e1-4b41-9af8-2299dc60abd7
+  ENTRY [b23|g023_lim_tp20_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=f693808c-0689-4a38-8985-2ef8723693e3
+  ENTRY [b24|g024_mid_tp20_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=f6012a2c-0e3f-45aa-b6bd-2eb6253b72f8
+  ENTRY [b25|g025_eod_tp20_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=3409b934-8702-48fb-9492-f940367727d4
+  ENTRY [b26|g026_lim_tp20_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=e5ed96ac-c5f6-443b-ba1e-d17d940bd820
+  ENTRY [b27|g027_mid_tp20_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=2e618346-e51c-42ea-b8f1-ee9ac86ccb01
+  ENTRY [b28|g028_eod_tp20_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=b8878da7-d8b0-4336-91f5-5657d86c3264
+  ENTRY [b29|g029_lim_tp20_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=e0b28ecd-2635-4efe-a2b8-d62bd5484d0d
+  ENTRY [b30|g030_mid_tp20_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=790da917-3949-4679-a524-97d959f497d7
+  ENTRY [b31|g031_eod_tp20_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=55c085e7-9e90-488a-946b-fea728fb3453
+  ENTRY [b32|g032_lim_tp20_sl40|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=50fce34b-5e28-403a-949c-443cec6fbfa9
+  ENTRY [b33|g033_mid_tp20_sl40|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.49 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=d3db4b21-8843-4394-9ac0-a3687efe4280
+  ENTRY [b34|g034_eod_tp20_sl40|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=b8820929-b053-4b1d-a64f-d1082510b77e
+  ENTRY [b35|g035_lim_tp20_sl40|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=e7d1ce77-6b4e-41b1-8b24-359fce8bca9e
+  ENTRY [b36|g036_mid_tp20_sl40|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=dde8d320-15b1-4ef6-a90a-3c0457cce03e
+  ENTRY [b37|g037_eod_tp20_sl40|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=87cdbe3f-1f9e-405a-aee6-98a98dad7889
+  ENTRY [b38|g038_lim_tp20_sl40|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=30e45cc4-ed47-4bfc-b4a3-f133178da584
+  ENTRY [b39|g039_mid_tp20_sl40|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=e95679ac-1124-465f-88e3-cb18ab214251
+  ENTRY [b40|g040_eod_tp20_sl40|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=a0af1cd0-8bee-4b9c-80bc-f5c4556007ae
+  ENTRY [b41|g041_lim_tp20_sl40|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=4634ae05-6e67-4d3b-b2f4-962cbeee5773
+  ENTRY [b42|g042_mid_tp20_sl40|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=8f70b1c6-0f6d-41cc-9506-26f9f65dd766
+  ENTRY [b43|g043_eod_tp20_sl40|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=a806257d-e43a-4742-85dc-a74e565dc1c6
+  ENTRY [b44|g044_lim_tp20_sl50|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=786d9350-3035-4fbe-b24c-dda99269dabb
+  ENTRY [b45|g045_mid_tp20_sl50|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.49 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=44cbdab2-293c-4ed9-b5f3-87a93e11bdb1
+  ENTRY [b46|g046_eod_tp20_sl50|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=925a0f84-c096-48ad-92d8-e08cf8c8bacf
+  ENTRY [b47|g047_lim_tp20_sl50|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=8fd8d06f-5d02-45c0-844a-6966cdc20e3f
+  ENTRY [b48|g048_mid_tp20_sl50|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=2a5a250a-cbbc-4a33-9c1d-4b25f75da7b2
+  ENTRY [b49|g049_eod_tp20_sl50|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=4af84801-813c-4624-8354-fa15ae3755ac
+  ENTRY [b50|g050_lim_tp20_sl50|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=e7623e33-ad34-4771-96bd-eca1c01025b1
+  ENTRY [b51|g051_mid_tp20_sl50|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=5d510686-7b47-4fdb-8bc8-7291cd50c347
+  ENTRY [b52|g052_eod_tp20_sl50|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=45c1e8b7-5c87-4a71-9d87-d21ac44b6810
+  ENTRY [b53|g053_lim_tp20_sl50|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=b8aa2d29-7887-4abc-82f6-e9027393cfad
+  ENTRY [b54|g054_mid_tp20_sl50|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=ba93ad0d-67e8-423f-9079-55fc82b6ced6
+  ENTRY [b55|g055_eod_tp20_sl50|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=83ad8087-1e67-4fd9-90a9-bffbdff25ae0
+  ENTRY [b56|g056_lim_tp20_sl65|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=519c5471-c471-49c1-b394-b4d7a19d1bb3
+  ENTRY [b57|g057_mid_tp20_sl65|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.49 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=3b77d375-9285-4857-998c-ece71ac48cea
+  ENTRY [b58|g058_eod_tp20_sl65|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=879695a0-63d1-4051-9341-dbc29f3c9e05
+  ENTRY [b59|g059_lim_tp20_sl65|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=967700fb-b6f3-4035-93b3-5f443314cbac
+  ENTRY [b60|g060_mid_tp20_sl65|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=f9f7a9a0-6895-4ecb-af08-396647749416
+  ENTRY [b61|g061_eod_tp20_sl65|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=43209826-d890-4e2f-aea6-72bd10a9d4b3
+  ENTRY [b62|g062_lim_tp20_sl65|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=ff435450-ffb2-4c3f-88e1-a012cdd3ce3f
+  ENTRY [b63|g063_mid_tp20_sl65|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=433bbbb0-313d-408e-9f34-a6e3906adbac
+  ENTRY [b64|g064_eod_tp20_sl65|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=d6d1a40a-f62d-4a4a-8b48-a20442271369
+  ENTRY [b65|g065_lim_tp20_sl65|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=b166f61d-14ca-498c-b7e9-e605ba9e3bc6
+  ENTRY [b66|g066_mid_tp20_sl65|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=732cdf88-937d-45eb-ba5e-30f86e2736af
+  ENTRY [b67|g067_eod_tp20_sl65|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=4a733482-9fa8-461d-85bc-99a86f31f3bd
+  ENTRY [b68|g068_lim_tp30_sl20|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=8580fc59-4348-4d6e-ac5b-39d3dba20449
+  ENTRY [b69|g069_mid_tp30_sl20|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.49 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=a5098736-92d2-4eb2-bd7d-71ff28899615
+  ENTRY [b70|g070_eod_tp30_sl20|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=502da4c5-7d11-4b80-8af2-39830c35e42c
+  ENTRY [b71|g071_lim_tp30_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=8cf8aaea-41f3-4c92-89de-94c74035eb09
+  ENTRY [b72|g072_mid_tp30_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=f3b0375e-f3c7-4844-b34b-a97524cb7e9a
+  ENTRY [b73|g073_eod_tp30_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=6ded199e-e767-4ce4-ae7f-1d908b0def77
+  ENTRY [b74|g074_lim_tp30_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=69be1846-dad8-49b1-bfac-3e1f53a8b40a
+  ENTRY [b75|g075_mid_tp30_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=aa275745-669a-4d68-85e7-f717f507a278
+  ENTRY [b76|g076_eod_tp30_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=d6f14cce-4ab5-42ad-8fce-946fa3a7f280
+  ENTRY [b77|g077_lim_tp30_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=52ce5b56-a64f-4bb8-bf6d-3407bef990d4
+  ENTRY [b78|g078_mid_tp30_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=abea1fc4-7c89-4817-b394-e778e5247282
+  ENTRY [b79|g079_eod_tp30_sl20|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=b532ef00-c098-4838-84a5-9cd25c525ecc
+  ENTRY [b80|g080_lim_tp30_sl30|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=a9e93d75-1e09-44a7-ae8e-51f13ab48774
+  ENTRY [b81|g081_mid_tp30_sl30|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.49 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=d323ee0f-bf7d-417c-a65d-bba9ce115de1
+  ENTRY [b82|g082_eod_tp30_sl30|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=a5ab31a9-8066-4e35-8443-66292b2fe9bc
+  ENTRY [b83|g083_lim_tp30_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=dfb6f848-5d45-4322-8736-8d600eec139a
+  ENTRY [b84|g084_mid_tp30_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=fadce3ba-982b-4dc2-aa2a-efb160a58a27
+  ENTRY [b85|g085_eod_tp30_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=56ef01f1-452e-4429-be2b-6a9af4887303
+  ENTRY [b86|g086_lim_tp30_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=33128694-4e88-436c-a66f-74e7f10accfb
+  ENTRY [b87|g087_mid_tp30_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=1465b072-b777-4ec3-8b0b-daa5afb1d41f
+  ENTRY [b88|g088_eod_tp30_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=41efb35b-123c-4cea-a40d-f0e0999e41c5
+  ENTRY [b89|g089_lim_tp30_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=8c8f492f-e083-413a-8f9e-173a765fa29b
+  ENTRY [b90|g090_mid_tp30_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=11c05baa-6dcf-4d87-8ccd-f5e9522db431
+  ENTRY [b91|g091_eod_tp30_sl30|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=227d9815-ebb0-4061-8d56-0bee55b69750
+  ENTRY [b92|g092_lim_tp30_sl40|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=be0b2a89-3757-4398-a772-8208eb5fa8a0
+  ENTRY [b93|g093_mid_tp30_sl40|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.49 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=4c74ab88-bb9d-463d-a980-8b7d8a08a893
+  ENTRY [b94|g094_eod_tp30_sl40|S173] BUY 1x GOOGL260710C00367500 (MR gap -2.1% green) limit=0.41 (ask=0.51 off=-0.10) tp=+60% sl=-40% pending id=dc658cd1-2770-454f-83a8-1a73ea8dcffc
+  ENTRY [b95|g095_lim_tp30_sl40|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=59f6d1e5-9949-4c77-9e34-50de46bc9f71
+  ENTRY [b96|g096_mid_tp30_sl40|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=a5fd84b9-f1c7-4bee-98ed-79f1ae3ab5cc
+  ENTRY [b97|g097_eod_tp30_sl40|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=9993bcda-1a84-4417-a45a-e6e0413768d2
+  ENTRY [b98|g098_lim_tp30_sl40|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.80 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=e963f7a0-b555-4287-a4da-ea9b143ca1d5
+  ENTRY [b99|g099_mid_tp30_sl40|S173] BUY 1x GOOGL260710C00365000 (MR gap -2.1% green) limit=0.84 (ask=0.90 off=-0.10) tp=+60% sl=-40% pending id=76e1fc43-714d-464b-948a-5ca680e6db99
+  Skipped: 99 no tradeable call, 1 pending order
+Placed 100 new entry order(s).
+
+[Portfolio snapshot]
+========================================================
+OPTIONS TRIAL STATS
+========================================================
+Account equity: $173,845.89
+Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
+
+P&L summary
+  Realized (sold):     $+2,154.53 all-time  |  $+0.00 today
+  Open (not sold yet): $+0.00 unrealized (virtual lots)
+                       $+44,576.00 unrealized (broker total)
+  Premium deployed:    $0.00 in open positions
+  Combined P&L:        $+2,154.53 (realized + open virtual)
+
+Ledger (master)
+  Total events:     256
+  Today entries:    0
+  Today exits:      0
+  All-time exits:   52  wins 94%
+  Avg return/trade: +39.6%  median +36.5%
+
+Open virtual lots (by bucket)
+  b56 g056_lim_tp20_sl65      prem=$     0  real=$+20.52  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+20% sl=-65%
+  b57 g057_mid_tp20_sl65      prem=$     0  real=$+20.52  open=$ +0.00  lots=0  [-]
+       buy: mid  sell: bid-0.05  tp=+20% sl=-65%
+  b58 g058_eod_tp20_sl65      prem=$     0  real=$+25.41  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+20% sl=-65%
+  b63 g063_mid_tp20_sl65      prem=$     0  real=$+18.63  open=$ +0.00  lots=0  [-]
+       buy: mid  sell: bid-0.05  tp=+20% sl=-65%
+  b64 g064_eod_tp20_sl65      prem=$     0  real=$+27.40  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+20% sl=-65%
+  b65 g065_lim_tp20_sl65      prem=$     0  real=$+18.63  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+20% sl=-65%
+  b66 g066_mid_tp20_sl65      prem=$     0  real=$+18.63  open=$ +0.00  lots=0  [-]
+       buy: mid  sell: bid-0.05  tp=+20% sl=-65%
+  b67 g067_eod_tp20_sl65      prem=$     0  real=$+27.40  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+20% sl=-65%
+  b70 g070_eod_tp30_sl20      prem=$     0  real=$+27.77  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-20%
+  b71 g071_lim_tp30_sl20      prem=$     0  real=$+23.73  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-20%
+  b72 g072_mid_tp30_sl20      prem=$     0  real=$+23.73  open=$ +0.00  lots=0  [-]
+       buy: mid  sell: bid-0.05  tp=+30% sl=-20%
+  b73 g073_eod_tp30_sl20      prem=$     0  real=$+36.11  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-20%
+  b74 g074_lim_tp30_sl20      prem=$     0  real=$+23.73  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-20%
+  b75 g075_mid_tp30_sl20      prem=$     0  real=$+23.73  open=$ +0.00  lots=0  [-]
+       buy: mid  sell: bid-0.05  tp=+30% sl=-20%
+  b76 g076_eod_tp30_sl20      prem=$     0  real=$+27.40  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-20%
+  b77 g077_lim_tp30_sl20      prem=$     0  real=$-18.63  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-20%
+  b78 g078_mid_tp30_sl20      prem=$     0  real=$-18.63  open=$ +0.00  lots=0  [-]
+       buy: mid  sell: bid-0.05  tp=+30% sl=-20%
+  b79 g079_eod_tp30_sl20      prem=$     0  real=$+27.40  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-20%
+  b80 g080_lim_tp30_sl30      prem=$     0  real=$+23.73  open=$ +0.00  lots=0  [-]
+       buy: ask-0.10  sell: bid-0.05  tp=+30% sl=-30%
+  b81 g081_mid_tp30_sl30      prem=$     0  real=$+23.73  open=$ +0.00  lots=0  [-]
+       buy: mid  sell: bid-0.05  tp=+30% sl=-30%
+  (18 more active bucket(s) omitted)
+  (62 quiet bucket profile(s) — no trades yet)
+
+Pending orders: 100
+  b6 S173 ADBE limit=0.87
+  b0 S173 GOOGL limit=0.89
+  b1 S173 GOOGL limit=0.85
+  b2 S173 GOOGL limit=0.84
+  b3 S173 GOOGL limit=0.89
+
+Alpaca option positions
+  ADBE260710C00225000  qty=1  cost=$86.00  return=-31.4%  open P&L=$-27.00
+  ANET260710C00185000  qty=22  cost=$600.00  return=+1770.0%  open P&L=$+10,620.00
+  AVGO260710C00400000  qty=49  cost=$2,740.00  return=+1223.4%  open P&L=$+33,520.00
+  BA260710C00237500  qty=22  cost=$466.00  return=-90.6%  open P&L=$-422.00
+  BA260710C00240000  qty=22  cost=$415.00  return=-94.7%  open P&L=$-393.00
+  BA260710C00242500  qty=29  cost=$284.00  return=-89.8%  open P&L=$-255.00
+  CCL260710C00026000  qty=7  cost=$298.00  return=-3.7%  open P&L=$-11.00
+  CCL260717C00026000  qty=93  cost=$6,981.00  return=-5.4%  open P&L=$-378.00
+  GOOGL260710C00365000  qty=5  cost=$444.00  return=+2.5%  open P&L=$+11.00
+  INTC260710C00118000  qty=25  cost=$2,258.00  return=+99.3%  open P&L=$+2,242.00
+  INTC260710C00119000  qty=24  cost=$1,784.00  return=+92.4%  open P&L=$+1,648.00
+  MRNA260710C00085000  qty=54  cost=$1,667.00  return=-93.5%  open P&L=$-1,559.00
+  PLTR260710C00136000  qty=24  cost=$780.00  return=-53.8%  open P&L=$-420.00
+
+Per-bucket exit stats (all time)
+  b0|orphan_reconcile     n=  4  avg=+61.5%  med=+58.1%  realized=$+747.86
+  b56|g056_lim_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b57|g057_mid_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b58|g058_eod_tp20_sl65  n=  1  avg=+59.1%  med=+59.1%  realized=$+25.41
+  b63|g063_mid_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b64|g064_eod_tp20_sl65  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b65|g065_lim_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b66|g066_mid_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b67|g067_eod_tp20_sl65  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b70|g070_eod_tp30_sl20  n=  1  avg=+59.1%  med=+59.1%  realized=$+27.77
+  b71|g071_lim_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b72|g072_mid_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b73|g073_eod_tp30_sl20  n=  1  avg=+55.6%  med=+55.6%  realized=$+36.11
+  b74|g074_lim_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b75|g075_mid_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b76|g076_eod_tp30_sl20  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b77|g077_lim_tp30_sl20  n=  1  avg=-23.3%  med=-23.3%  realized=$-18.63
+  b78|g078_mid_tp30_sl20  n=  1  avg=-23.3%  med=-23.3%  realized=$-18.63
+  b79|g079_eod_tp30_sl20  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b80|g080_lim_tp30_sl30  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b81|g081_mid_tp30_sl30  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b82|g082_eod_tp30_sl30  n=  1  avg=+55.6%  med=+55.6%  realized=$+36.11
+  b83|g083_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b84|g084_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b85|g085_eod_tp30_sl30  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b86|g086_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b87|g087_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b88|g088_eod_tp30_sl30  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b89|g089_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b90|g090_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b91|g091_eod_tp30_sl30  n=  2  avg=+19.8%  med=+55.6%  realized=$+25.00
+  b92|g092_lim_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b93|g093_mid_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b94|g094_eod_tp30_sl40  n=  2  avg=+46.6%  med=+55.6%  realized=$+73.80
+  b95|g095_lim_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b96|g096_mid_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b97|g097_eod_tp30_sl40  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b98|g098_lim_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b99|g099_mid_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+========================================================
+========================================================
+OPTIONS TRIAL STATS
+========================================================
+Account equity: $173,845.89
+Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
+
+P&L summary
+  Realized (sold):     $+2,154.53 all-time  |  $+0.00 today
+  Open (not sold yet): $+0.00 unrealized (virtual lots)
+                       $+44,576.00 unrealized (broker total)
+  Premium deployed:    $0.00 in open positions
+  Combined P&L:        $+2,154.53 (realized + open virtual)
+
+Ledger (master)
+  Total events:     256
+  Today entries:    0
+  Today exits:      0
+  All-time exits:   52  wins 94%
+  Avg return/trade: +39.6%  median +36.5%
+
+Open virtual lots (by bucket)
+  b56 g056_lim_tp20_sl65      prem=$     0  real=$+20.52  open=$ +0.00  lots=0  [-]
+  b57 g057_mid_tp20_sl65      prem=$     0  real=$+20.52  open=$ +0.00  lots=0  [-]
+  b58 g058_eod_tp20_sl65      prem=$     0  real=$+25.41  open=$ +0.00  lots=0  [-]
+  b63 g063_mid_tp20_sl65      prem=$     0  real=$+18.63  open=$ +0.00  lots=0  [-]
+  b64 g064_eod_tp20_sl65      prem=$     0  real=$+27.40  open=$ +0.00  lots=0  [-]
+  (33 more active bucket(s) omitted)
+  (62 quiet bucket profile(s) — no trades yet)
+
+Pending orders: 100
+  b6 S173 ADBE limit=0.87
+  b0 S173 GOOGL limit=0.89
+  b1 S173 GOOGL limit=0.85
+  b2 S173 GOOGL limit=0.84
+  b3 S173 GOOGL limit=0.89
+
+Alpaca option positions
+  ADBE260710C00225000  qty=1  cost=$86.00  return=-31.4%  open P&L=$-27.00
+  ANET260710C00185000  qty=22  cost=$600.00  return=+1770.0%  open P&L=$+10,620.00
+  AVGO260710C00400000  qty=49  cost=$2,740.00  return=+1223.4%  open P&L=$+33,520.00
+  BA260710C00237500  qty=22  cost=$466.00  return=-90.6%  open P&L=$-422.00
+  BA260710C00240000  qty=22  cost=$415.00  return=-94.7%  open P&L=$-393.00
+  BA260710C00242500  qty=29  cost=$284.00  return=-89.8%  open P&L=$-255.00
+  CCL260710C00026000  qty=7  cost=$298.00  return=-3.7%  open P&L=$-11.00
+  CCL260717C00026000  qty=93  cost=$6,981.00  return=-5.4%  open P&L=$-378.00
+  GOOGL260710C00365000  qty=5  cost=$444.00  return=+2.5%  open P&L=$+11.00
+  INTC260710C00118000  qty=25  cost=$2,258.00  return=+99.3%  open P&L=$+2,242.00
+  INTC260710C00119000  qty=24  cost=$1,784.00  return=+92.4%  open P&L=$+1,648.00
+  MRNA260710C00085000  qty=54  cost=$1,667.00  return=-93.5%  open P&L=$-1,559.00
+  PLTR260710C00136000  qty=24  cost=$780.00  return=-53.8%  open P&L=$-420.00
+
+Per-bucket exit stats (all time)
+  39 bucket profiles with exits (showing top 5 by trade count)
+  b0|orphan_reconcile     n=  4  avg=+61.5%  med=+58.1%  realized=$+747.86
+  b88|g088_eod_tp30_sl30  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b91|g091_eod_tp30_sl30  n=  2  avg=+19.8%  med=+55.6%  realized=$+25.00
+  b92|g092_lim_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b93|g093_mid_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+========================================================
+Full detail: logs/options_trial/runs/2026-07-09.log
+elapsed=55.4s reconcile=0.42s cancel=0.07s manage=0.09s scan=21.33s entries=33.06s
+
