@@ -146,3 +146,157 @@ Outside options window (0922 ET) — skip
 
 ---
 
+## Run 20260709T132611Z
+
+- UTC timestamp: `20260709T132611Z`
+- Live bot: exit=`0`, duration=`3s`
+- Options bot: exit=`0`, duration=`2s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-09T09:26:15.150752-04:00","date":"2026-07-09","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.8,"phases_s":{"reconcile":0.55},"signals":0,"placed":0,"equity":144857.89,"open_positions":11,"pending_orders":0,"open_lots":0,"top_signals":[],"status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:26:12  INFO      Mode: summary
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                           SUMMARY|
+|  Time                                                         13:26 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $476.39|
++========================================================================+
+
++========================================================================+
+|                             ACCOUNT STATUS                             |
++========================================================================+
+|  Equity                                                         $476.39|
+|  Cash                                                           $283.49|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Total invested                                                 $192.90|
+|  Open P&L                                                        $+1.13|
++========================================================================+
+
++========================================================================+
+|                        HOLDINGS  (2 positions)                         |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AES      Pullback50      $96.50     $14.64   $14.64   +0.0%   $+0.03  |
+|  CSCO     Pullback50      $96.40     $113.43  $114.74  +1.2%   $+1.10  |
+|                                                                        |
+|  Total invested                                                 $192.90|
+|  Total open P&L                                                  $+1.13|
++========================================================================+
+
++========================================================================+
+|                        EXIT LOGIC ACTIVE  (v8)                         |
++========================================================================+
+|  Profit target                              price > 20-day MA (midline)|
+|  Stop loss                                             -0.5% from entry|
+|  Time stop                                          max 3 calendar days|
++========================================================================+
+
++========================================================================+
+|                          RECENT TRANSACTIONS                           |
++========================================================================+
+|  2026-07-08  SELL  ATO  Pullback50  $96.20  P&L $-0.35                 |
+|  2026-07-08  SELL  MAR  Pullback50  $96.50  P&L $-0.52                 |
+|  2026-07-08  SELL  DECK  Pullback50  $87.47  P&L $-2.12                |
+|  2026-07-07  SELL  CF  Pullback50  $96.37  P&L $-0.08                  |
+|  2026-07-07  SELL  TRGP  Pullback50  $93.03  P&L $+3.55                |
+|  2026-07-07  SELL  F  Pullback50  $6.61  P&L $-0.08                    |
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         /home/runner/work/TradingBot/TradingBot/docs/options_trial
+Buckets:      100
+2026-07-09 09:26:15,150 INFO === options_morning_bot (PAPER) 2026-07-09T09:26:15.150752-04:00 ===
+2026-07-09 09:26:15,150 INFO 
+2026-07-09 09:26:15,150 INFO [Run context]
+2026-07-09 09:26:15,150 INFO After hours (09:26 ET) — exit summary only.
+2026-07-09 09:26:15,443 INFO Paper auth OK — equity $144857.89, account PA36KS87UPRS
+2026-07-09 09:26:15,988 INFO 
+2026-07-09 09:26:15,988 INFO [Exit summary]
+2026-07-09 09:26:15,990 INFO ========================================================
+2026-07-09 09:26:15,990 INFO OPTIONS EXIT SUMMARY — 2026-07-09
+2026-07-09 09:26:15,990 INFO ========================================================
+2026-07-09 09:26:15,990 INFO Account equity: $144,857.89
+2026-07-09 09:26:15,990 INFO Open broker positions: 11  unrealized $+11,847.00
+2026-07-09 09:26:15,990 INFO 
+2026-07-09 09:26:15,990 INFO No closed trades today.
+2026-07-09 09:26:15,990 INFO ========================================================
+2026-07-09 09:26:15,990 INFO 
+2026-07-09 09:26:15,990 INFO [Portfolio snapshot]
+2026-07-09 09:26:15,994 INFO ========================================================
+2026-07-09 09:26:15,994 INFO OPTIONS TRIAL STATS
+2026-07-09 09:26:15,994 INFO ========================================================
+2026-07-09 09:26:15,994 INFO Account equity: $144,857.89
+2026-07-09 09:26:15,994 INFO Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
+2026-07-09 09:26:15,994 INFO 
+2026-07-09 09:26:15,994 INFO P&L summary
+2026-07-09 09:26:15,994 INFO   Realized (sold):     $+2,154.53 all-time  |  $+0.00 today
+2026-07-09 09:26:15,994 INFO   Open (not sold yet): $+0.00 unrealized (virtual lots)
+2026-07-09 09:26:15,994 INFO                        $+11,847.00 unrealized (broker total)
+2026-07-09 09:26:15,994 INFO   Premium deployed:    $0.00 in open positions
+2026-07-09 09:26:15,994 INFO   Combined P&L:        $+2,154.53 (realized + open virtual)
+2026-07-09 09:26:15,994 INFO 
+2026-07-09 09:26:15,994 INFO Ledger (master)
+2026-07-09 09:26:15,995 INFO   Total events:     256
+2026-07-09 09:26:15,995 INFO   Today entries:    0
+2026-07-09 09:26:15,995 INFO   Today exits:      0
+2026-07-09 09:26:15,995 INFO   All-time exits:   52  wins 94%
+2026-07-09 09:26:15,995 INFO   Avg return/trade: +39.6%  median +36.5%
+2026-07-09 09:26:15,995 INFO 
+2026-07-09 09:26:15,995 INFO Open virtual lots (by bucket)
+2026-07-09 09:26:15,995 INFO   b56 g056_lim_tp20_sl65      prem=$     0  real=$+20.52  open=$ +0.00  lots=0  [-]
+2026-07-09 09:26:15,995 INFO   b57 g057_mid_tp20_sl65      prem=$     0  real=$+20.52  open=$ +0.00  lots=0  [-]
+2026-07-09 09:26:15,995 INFO   b58 g058_eod_tp20_sl65      prem=$     0  real=$+25.41  open=$ +0.00  lots=0  [-]
+2026-07-09 09:26:15,995 INFO   b63 g063_mid_tp20_sl65      prem=$     0  real=$+18.63  open=$ +0.00  lots=0  [-]
+2026-07-09 09:26:15,995 INFO   b64 g064_eod_tp20_sl65      prem=$     0  real=$+27.40  open=$ +0.00  lots=0  [-]
+2026-07-09 09:26:15,995 INFO   (33 more active bucket(s) omitted)
+2026-07-09 09:26:15,995 INFO   (62 quiet bucket profile(s) — no trades yet)
+2026-07-09 09:26:15,995 INFO 
+2026-07-09 09:26:15,995 INFO Alpaca option positions
+2026-07-09 09:26:15,995 INFO   ANET260710C00185000  qty=22  cost=$600.00  return=+824.0%  open P&L=$+4,944.00
+2026-07-09 09:26:15,995 INFO   AVGO260710C00400000  qty=49  cost=$2,740.00  return=+347.1%  open P&L=$+9,510.00
+2026-07-09 09:26:15,995 INFO   BA260710C00237500  qty=22  cost=$466.00  return=-67.0%  open P&L=$-312.00
+2026-07-09 09:26:15,995 INFO   BA260710C00240000  qty=22  cost=$415.00  return=-78.8%  open P&L=$-327.00
+2026-07-09 09:26:15,995 INFO   BA260710C00242500  qty=29  cost=$284.00  return=-89.8%  open P&L=$-255.00
+2026-07-09 09:26:15,995 INFO   CCL260710C00026000  qty=7  cost=$298.00  return=-41.3%  open P&L=$-123.00
+2026-07-09 09:26:15,995 INFO   CCL260717C00026000  qty=93  cost=$6,981.00  return=-21.4%  open P&L=$-1,494.00
+2026-07-09 09:26:15,995 INFO   INTC260710C00118000  qty=25  cost=$2,258.00  return=-10.3%  open P&L=$-233.00
+2026-07-09 09:26:15,995 INFO   INTC260710C00119000  qty=24  cost=$1,784.00  return=-12.6%  open P&L=$-224.00
+2026-07-09 09:26:15,995 INFO   MRNA260710C00085000  qty=54  cost=$1,667.00  return=-61.1%  open P&L=$-1,019.00
+2026-07-09 09:26:15,995 INFO   PLTR260710C00136000  qty=24  cost=$780.00  return=+176.9%  open P&L=$+1,380.00
+2026-07-09 09:26:15,995 INFO 
+2026-07-09 09:26:15,995 INFO Per-bucket exit stats (all time)
+2026-07-09 09:26:15,995 INFO   39 bucket profiles with exits (showing top 5 by trade count)
+2026-07-09 09:26:15,995 INFO   b0|orphan_reconcile     n=  4  avg=+61.5%  med=+58.1%  realized=$+747.86
+2026-07-09 09:26:15,995 INFO   b88|g088_eod_tp30_sl30  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+2026-07-09 09:26:15,996 INFO   b91|g091_eod_tp30_sl30  n=  2  avg=+19.8%  med=+55.6%  realized=$+25.00
+2026-07-09 09:26:15,996 INFO   b92|g092_lim_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+2026-07-09 09:26:15,996 INFO   b93|g093_mid_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+2026-07-09 09:26:15,996 INFO ========================================================
+2026-07-09 09:26:15,996 INFO Full detail: logs/options_trial/runs/2026-07-09.log
+2026-07-09 09:26:15,996 INFO elapsed=0.8s reconcile=0.55s
+STATUS: options_morning_bot after-hours summary (PAPER) elapsed=0.8s.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_strategy_selection.csv
+Summary: keep=0 watch=5 drop=0
+```
+
+---
+
