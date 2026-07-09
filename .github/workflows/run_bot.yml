@@ -188,6 +188,10 @@ jobs:
           fi
           git commit -m "bot run $(date -u '+%Y-%m-%d %H:%M UTC')"
           for attempt in 1 2 3 4 5; do
+            # Rebase this log commit onto the latest remote main right before push.
+            # This avoids repeated non-fast-forward failures when another workflow
+            # lands a commit between our fetch/reset and push.
+            git pull --rebase origin main
             if git push origin HEAD:main; then
               echo "Push succeeded on attempt $attempt"
               exit 0
