@@ -1,0 +1,54 @@
+16:00:51  INFO      Mode: exits
+16:00:51  INFO        Daily log -> logs/daily/2026-07-09.md
+16:00:51  INFO        Daily log reconciled -> logs/daily/2026-07-09.md (0 ledger rows)
+16:00:51  INFO        place_all_stops: checking 5 positions...
+16:00:51  INFO        STOP already live AES @ $14.56
+16:00:51  INFO        STOP skipped AME: fractional (0.3706 shares) — software exit will handle it
+16:00:51  INFO        STOP skipped CDNS: fractional (0.2290 shares) — software exit will handle it
+16:00:51  INFO        STOP skipped CSCO: fractional (0.8402 shares) — software exit will handle it
+16:00:51  INFO        STOP already live HST @ $22.91
+16:00:51  INFO        [positions] 5/5 (5 valid)
+16:00:51  INFO        Daily log -> logs/daily/2026-07-09.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         16:00 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $482.94|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  AME  P&L +0.4%  $+0.38                                            HOLD|
+|  AES  P&L +0.9%  $+0.89                                            HOLD|
+|  HST  P&L +1.5%  $+1.28                                            HOLD|
+|  CDNS  P&L +1.5%  $+1.28                                           HOLD|
+|  CSCO  P&L +4.0%  $+3.86                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           5|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                5|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
