@@ -140,6 +140,12 @@ jobs:
             echo "- UTC timestamp: \`${RUN_STAMP}\`"
             echo "- Live bot: exit=\`${LIVE_BOT_EXIT:-0}\`, duration=\`${LIVE_BOT_DURATION_S:-0}s\`"
             echo "- Options bot: exit=\`${OPTIONS_BOT_EXIT:-0}\`, duration=\`${OPTIONS_BOT_DURATION_S:-0}s\`"
+            if [ -f "logs/options_trial/runs.jsonl" ]; then
+              echo "- Options structured summary (latest JSON):"
+              echo '```json'
+              tail -n 1 logs/options_trial/runs.jsonl
+              echo '```'
+            fi
             echo
             echo "### Live bot full output"
             echo

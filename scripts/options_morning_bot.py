@@ -24,6 +24,7 @@ import re
 import sys
 import time
 import csv
+import json
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -97,6 +98,7 @@ BOT_VERBOSE = os.getenv("OPTIONS_BOT_VERBOSE", "").strip().lower() in (
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_DIR = trial_root() / "runs"
 RUNS_CSV = trial_root() / "runs.csv"
+RUNS_JSONL = trial_root() / "runs.jsonl"
 OCC_RE = re.compile(r"^[A-Z]+\d{6}[CP]\d{8}$")
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -137,6 +139,12 @@ def rl(msg: str, *, console: bool = True) -> None:
 def rl_file(msg: str) -> None:
     """File-only detail line (included in logs/options_trial/runs/YYYY-MM-DD.md)."""
     rl(msg, console=False)
+
+
+def section(title: str) -> None:
+    """Visual section marker for human-readable run output."""
+    rl("")
+    rl(f"[{title}]")
 
 
 # --------------------------------------------------------------------------- #
@@ -824,6 +832,35 @@ def _finish_run(now: datetime, header: str, mode: str, *,
     return elapsed
 
 
+def log_run_json(now: datetime, mode: str, *, header: str, elapsed_s: float,
+                 signals: int, placed: int, equity: float | None,
+                 positions: list[dict], state: LabState,
+                 top_signals: list[str]) -> None:
+    """Append one structured run record for fast review/parsing."""
+    try:
+        trial_root().mkdir(parents=True, exist_ok=True)
+        rec = {
+            "ts_et": now.isoformat(),
+            "date": TODAY.isoformat(),
+            "mode": mode,
+            "header": header,
+            "elapsed_s": elapsed_s,
+            "phases_s": dict(_run_phases),
+            "signals": signals,
+            "placed": placed,
+            "equity": round(equity, 2) if equity is not None else None,
+            "open_positions": len(positions),
+            "pending_orders": len(state.pending_orders),
+            "open_lots": sum(1 for l in state.lots if l.qty > 0),
+            "top_signals": top_signals[:12],
+            "status": "ok",
+        }
+        with open(RUNS_JSONL, "a", encoding="utf-8") as f:
+            f.write(json.dumps(rec, separators=(",", ":")) + "\n")
+    except Exception as exc:
+        log.error("Failed to write runs.jsonl: %s", exc)
+
+
 # --------------------------------------------------------------------------- #
 #  Orchestration
 # --------------------------------------------------------------------------- #
@@ -845,6 +882,7 @@ def run() -> int:
 
     now = _now_et()
     rl(f"=== options_morning_bot (PAPER) {now.isoformat()} ===")
+    section("Run context")
 
     # Outside trading window — exit summary + stats (no trading)
     if _after_hours(now):
@@ -862,11 +900,16 @@ def run() -> int:
                 _mark_phase("reconcile", t0)
         except Exception:
             pass
-        print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=rl)
-        print_trial_stats(state, equity, positions, file_fn=rl_file, console_fn=None)
+        section("Exit summary")
+        print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=rl, compact=True)
+        section("Portfolio snapshot")
+        print_trial_stats(state, equity, positions, file_fn=rl_file, console_fn=rl, compact=True)
         rl(f"Full detail: logs/options_trial/runs/{TODAY.isoformat()}.log")
         elapsed = _finish_run(now, "after hours (exit summary)", "after_hours",
                               equity=equity)
+        log_run_json(now, "after_hours", header="after hours (exit summary)",
+                     elapsed_s=elapsed, signals=0, placed=0, equity=equity,
+                     positions=positions, state=state, top_signals=[])
         print(f"STATUS: options_morning_bot after-hours summary (PAPER) "
               f"elapsed={elapsed}s.", flush=True)
         return 0
@@ -877,6 +920,9 @@ def run() -> int:
         state = load_state()
         print_trial_stats(state, None, [], file_fn=rl_file, console_fn=rl)
         elapsed = _finish_run(now, "FATAL auth failed (wrong keys?)", "auth_failed")
+        log_run_json(now, "auth_failed", header="FATAL auth failed (wrong keys?)",
+                     elapsed_s=elapsed, signals=0, placed=0, equity=None,
+                     positions=[], state=state, top_signals=[])
         print(f"STATUS: options_morning_bot auth failed (PAPER) elapsed={elapsed}s.",
               flush=True)
         return 1
@@ -887,6 +933,7 @@ def run() -> int:
     state = reconcile_with_broker(trade, state, log_fn=rl_file)
     _mark_phase("reconcile", t0)
 
+    section("Setup")
     rl(f"Active buckets: {active_bucket_count(equity or 0)} | "
        f"Strategies: {', '.join(s.id for s in PAPER_STRATEGIES)}")
 
@@ -904,7 +951,9 @@ def run() -> int:
 
     placed = 0
     signals_n = 0
+    top_signals: list[str] = []
     if _hm_between(now, ENTRY_START, ENTRY_END):
+        section("Scan + entries")
         universe = get_universe()
         strat_ids = ", ".join(s.id for s in PAPER_STRATEGIES)
         rl(f"Scanning {len(universe)} symbols for [{strat_ids}] …")
@@ -913,8 +962,8 @@ def run() -> int:
         _mark_phase("scan", t0)
         signals_n = len(signals)
         if signals:
-            summary = [f"{h.strategy_id}:{h.symbol}" for h in signals[:8]]
-            rl(f"Found {signals_n} signal(s); top: {summary}")
+            top_signals = [f"{h.strategy_id}:{h.symbol}" for h in signals[:8]]
+            rl(f"Found {signals_n} signal(s); top: {top_signals}")
         else:
             rl("Found 0 signals across top-5 strategies")
         t0 = time.perf_counter()
@@ -925,16 +974,22 @@ def run() -> int:
         mode = "entry+manage"
     else:
         header = "manage-only (past entry window)"
+        section("Manage only")
         rl("Past entry window; manage/exit only.")
         mode = "manage-only"
 
     positions = _position_snapshots(trade)
-    print_trial_stats(state, equity, positions, file_fn=rl_file, console_fn=rl)
+    section("Portfolio snapshot")
+    print_trial_stats(state, equity, positions, file_fn=rl_file, console_fn=rl, compact=True)
     if _hm_ge(now, (16, 0)):
-        print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=rl)
+        section("Exit summary")
+        print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=rl, compact=True)
     rl(f"Full detail: logs/options_trial/runs/{TODAY.isoformat()}.log")
     elapsed = _finish_run(now, header, mode, signals=signals_n, placed=placed,
                           equity=equity)
+    log_run_json(now, mode, header=header, elapsed_s=elapsed, signals=signals_n,
+                 placed=placed, equity=equity, positions=positions, state=state,
+                 top_signals=top_signals)
     print(f"STATUS: options_morning_bot run complete (PAPER) elapsed={elapsed}s.",
           flush=True)
     return 0
