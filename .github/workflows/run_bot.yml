@@ -169,10 +169,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin main
-          git checkout -B main origin/main
           # Stash this run's logs, reset logs/ to remote, merge append-only files
           mkdir -p /tmp/botlogs_run
           cp -r logs/. /tmp/botlogs_run/ 2>/dev/null || true
+          # Clean local logs workspace before switching to remote main snapshot.
+          git reset --hard
+          git clean -fd logs
+          git checkout -B main origin/main
           mkdir -p logs
           python scripts/merge_bot_logs.py /tmp/botlogs_run logs
           if [ -d /tmp/botlogs_run/options_trial ]; then
@@ -198,6 +201,8 @@ jobs:
             fi
             echo "Push attempt $attempt failed; merging remote and retrying..."
             git fetch origin main
+            git reset --hard
+            git clean -fd logs
             git checkout -B main origin/main
             mkdir -p logs
             python scripts/merge_bot_logs.py /tmp/botlogs_run logs
