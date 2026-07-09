@@ -1,0 +1,208 @@
+19:45:40  INFO      Mode: scan
+19:45:42  INFO        [positions] 5/5 (5 valid)
+19:45:42  INFO        SELL order cancelled AES  type=OrderType.STOP  id=365fa9a0-8d81-4250-8687-2f63fb169486
+19:45:42  INFO        SELL LIMIT AES  qty=6.591314388  limit=$14.75  id=6f75ba20-745f-41a6-b64d-903486c47275
+19:46:13  INFO        SELL LIMIT filled AES (confirmed by position check)
+19:46:13  INFO        TX logged: SELL AES  P&L 0.79%
+19:46:13  INFO        SELL LIMIT CDNS  qty=0.228973693  limit=$385.98  id=d9a41d4a-dd7a-46eb-9a3b-ed0a0450c56d
+19:46:44  INFO        SELL LIMIT filled CDNS (confirmed by position check)
+19:46:44  INFO        TX logged: SELL CDNS  P&L 2.15%
+19:46:44  INFO        SELL LIMIT CSCO  qty=0.840195369  limit=$118.48  id=9e69055e-ed19-4b64-af00-d54fba7f215d
+19:47:15  INFO        SELL LIMIT filled CSCO (confirmed by position check)
+19:47:15  INFO        TX logged: SELL CSCO  P&L 4.55%
+19:47:15  INFO        Universe cache hit: 903 tickers (tickers_2026-07-09.json)
+19:47:16  INFO        [universe] 40/901 (40 valid)
+19:47:18  INFO        [universe] 80/901 (80 valid)
+19:47:19  INFO        [universe] 120/901 (120 valid)
+19:47:20  INFO        [universe] 160/901 (160 valid)
+19:47:22  INFO        [universe] 200/901 (199 valid)
+19:47:30  INFO        [universe] 240/901 (238 valid)
+19:47:40  INFO        [universe] 280/901 (278 valid)
+19:47:53  INFO        [universe] 320/901 (318 valid)
+19:48:04  INFO        [universe] 360/901 (358 valid)
+19:48:17  INFO        [universe] 400/901 (397 valid)
+19:48:28  INFO        [universe] 440/901 (437 valid)
+19:48:41  INFO        [universe] 480/901 (477 valid)
+19:48:51  INFO        [universe] 520/901 (517 valid)
+19:49:05  INFO        [universe] 560/901 (557 valid)
+19:49:15  INFO        [universe] 600/901 (597 valid)
+19:49:29  INFO        [universe] 640/901 (637 valid)
+19:49:42  INFO        [universe] 680/901 (677 valid)
+19:49:52  INFO        [universe] 720/901 (717 valid)
+19:50:06  INFO        [universe] 760/901 (757 valid)
+19:50:16  INFO        [universe] 800/901 (797 valid)
+19:50:30  INFO        [universe] 840/901 (836 valid)
+19:50:40  INFO        [universe] 880/901 (876 valid)
+19:50:47  INFO        [universe] 901/901 (897 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $482.87|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-09|
+|  Universe                                                          both|
+|  Month                                        Jul: 52wkLow + Pullback50|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $482.87|
+|  Cash                                                            $23.92|
+|  Reserve                                          $24.14  (always kept)|
+|  Available                                      $0.00  (for new trades)|
+|  Seasonal trade                   $96.57  (20% -- scheduled strategies)|
+|  Off-sched trade                      $96.57  (20% -- other strategies)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (5 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AES      Pullback50      $97.23     $14.64   $14.75   +0.8%   $+0.76  |
+|  AME      Pullback50      $86.35     $233.44  $232.97  -0.2%   $-0.17  |
+|  CDNS     Pullback50      $88.38     $377.86  $385.98  +2.1%   $+1.86  |
+|  CSCO     Pullback50      $99.63     $113.43  $118.58  +4.5%   $+4.33  |
+|  HST      Pullback50      $87.37     $23.03   $23.25   +1.0%   $+0.85  |
+|                                                                        |
+|  Total invested                                                 $458.96|
+|  Total open P&L                                                  $+7.63|
+|  Buys today: 0  |  entry cap: 0  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (31691.5m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AME  P&L -0.2%  $-0.17                                            HOLD|
+|  AES  P&L +0.8%  $+0.76                           EXIT: midline (+0.8%)|
+|  HST  P&L +1.0%  $+0.85                                            HOLD|
+|  CDNS  P&L +2.1%  $+1.86                          EXIT: midline (+2.1%)|
+|  CSCO  P&L +4.5%  $+4.33                          EXIT: midline (+4.5%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 3 | filled 3 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50                            |
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  43                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      VolumeSpike     off    $14.74   64.2   3.40    vol z=3.4 5d=+|
+|  ACN      GapDown         off    $138.94  38.1   -0.78   gap -4.6% reco|
+|  ADBE     GapDown         off    $222.29  79.5   -1.16   gap -3.1% reco|
+|  APP      GapDown         off    $516.60  57.9   -1.40   gap -3.3% reco|
+|  CARR     Pullback50      SEAS   $68.02   46.2   -2.28   50MA bounce (+|
+|  DRI      Pullback50      SEAS   $202.78  36.5   -1.00   50MA bounce (+|
+|  DECK     Pullback50      SEAS   $104.57  48.3   -1.28   50MA bounce (-|
+|  IT       GapDown         off    $132.15  48.6   -0.75   gap -3.0% reco|
+|  HON      Pullback50      SEAS   $222.60  44.0   -1.38   50MA bounce (+|
+|  IBM      GapDown         off    $294.80  67.1   -1.13   gap -5.4% reco|
+|  INTU     GapDown         off    $273.42  52.7   -1.48   gap -4.2% reco|
+|  MAR      Pullback50      SEAS   $372.34  30.8   -2.14   50MA bounce (-|
+|  META     GapDown         off    $628.81  64.2   0.10    gap -3.2% reco|
+|  PSKY     GapDown         off    $9.37    38.2   1.25    gap -5.1% reco|
+|  PLTR     GapDown         off    $128.97  48.5   -1.27   gap -3.4% reco|
+|  PKG      Pullback50      SEAS   $226.16  45.7   -1.56   50MA bounce (+|
+|  PEP      GapDown         off    $137.43  43.7   0.90    gap -3.8% reco|
+|  PLD      Pullback50      SEAS   $141.53  51.1   -1.97   50MA bounce (-|
+|  CRM      GapDown         off    $162.44  58.8   -0.59   gap -5.0% reco|
+|  NOW      GapDown         off    $109.20  67.7   -1.88   gap -5.3% reco|
+|  TPR      Pullback50      SEAS   $140.37  39.3   -1.31   50MA bounce (-|
+|  TXT      Pullback50      SEAS   $90.61   45.0   -1.48   50MA bounce (-|
+|  TYL      GapDown         off    $310.76  63.3   -1.64   gap -3.1% reco|
+|  WDAY     GapDown         off    $138.89  64.6   -1.24   gap -4.7% reco|19:50:49  INFO        place_all_stops: checking 2 positions...
+19:50:49  INFO        STOP skipped AME: fractional (0.3706 shares) — software exit will handle it
+19:50:49  INFO        STOP already live HST @ $22.91
+19:50:49  INFO        place_eod_stops: updating 2 stops to current price...
+19:50:49  INFO        EOD stop skip AME: 0.3706 shares (fractional) — ext_exits will cover
+19:50:49  INFO        EOD stop: cancelled old stop HST
+19:50:49  INFO        EOD stop placed HST @ $23.11  (cur $23.23  qty=3)
+19:50:50  INFO        Daily log -> logs/daily/2026-07-09.md
+19:50:50  INFO        Dashboard written → logs/dashboard.md
+
+|  AVNT     Pullback50      SEAS   $36.10   46.8   -1.54   50MA bounce (+|
+|  BKH      Pullback50      SEAS   $73.55   57.0   -0.67   50MA bounce (+|
+|  BRX      Pullback50      SEAS   $31.07   51.6   -2.60   50MA bounce (+|
+|  CHH      Pullback50      SEAS   $109.56  43.6   -1.91   50MA bounce (+|
+|  EVR      Pullback50      SEAS   $341.66  37.7   -1.95   50MA bounce (-|
+|  FCFS     Pullback50      SEAS   $220.72  46.4   -1.51   50MA bounce (-|
+|  GNTX     Pullback50      SEAS   $24.00   38.7   -1.61   50MA bounce (-|
+|  GWRE     GapDown         off    $135.03  75.1   -1.24   gap -3.5% reco|
+|  HLI      VolumeSpike     off    $136.97  43.4   3.56    vol z=3.6 5d=-|
+|  KEX      Pullback50      SEAS   $143.46  55.3   -1.04   50MA bounce (+|
+|  NOVT     Pullback50      SEAS   $152.30  50.8   -0.87   50MA bounce (-|
+|  NYT      Pullback50      SEAS   $74.34   49.7   -1.75   50MA bounce (-|
+|  NWE      Pullback50      SEAS   $70.96   58.1   -0.83   50MA bounce (+|
+|  PEGA     GapDown         off    $31.99   59.9   -2.00   gap -3.3% reco|
+|  PEN      Pullback50      SEAS   $317.88  56.7   -2.13   50MA bounce (-|
+|  SNX      Pullback50      SEAS   $251.60  31.5   -1.40   50MA bounce (-|
+|  TTC      Pullback50      SEAS   $93.29   57.6   -1.28   50MA bounce (+|
+|  UTHR     Pullback50      SEAS   $553.36  51.0   -1.02   50MA bounce (-|
+|  XPO      Pullback50      SEAS   $208.22  59.5   -1.57   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy                                          52wkLow + Pullback50|
+|  Scanned                                                            897|
+|  Signals                                                             43|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                3|
+|  Open pos                                                             2|
+|  Equity                                                         $482.59|
+|  Cash                                                           $309.10|
++========================================================================+
