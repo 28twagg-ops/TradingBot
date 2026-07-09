@@ -3564,6 +3564,18 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
                 s["month"] = month; s["regime"] = rgm
                 all_sigs.append(s)
 
+    # Defensive de-dupe: merged universes/data glitches should not double-submit
+    # the same ticker+strategy signal in one scan run.
+    deduped_sigs = []
+    seen_sig_keys = set()
+    for s in all_sigs:
+        k = (s.get("ticker"), s.get("strategy"))
+        if k in seen_sig_keys:
+            continue
+        seen_sig_keys.add(k)
+        deduped_sigs.append(s)
+    all_sigs = deduped_sigs
+
     hdr(f"SIGNALS FOUND  --  {len(all_sigs)}")
     if not all_sigs:
         blank(); row("No signals today."); blank()
@@ -3679,75 +3691,77 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
                             "fill pending — batched confirmation after entries")
         else:
             # ── Signal-scaled position sizing (standard mode) ───────────────
-            n_viable       = max(1, len(viable))
-            n_sea_pending  = sum(1 for s in viable if s.get("seasonal"))
-            n_slots      = min(n_viable, max_trades)
-            equal_share  = avail / n_slots
-            sea_da = max(MIN_TRADE_SIZE,
-                         min(equity * SEASONAL_SIZE_PCT, equal_share))
-            off_da = max(MIN_TRADE_SIZE,
-                         min(equity * OFFSCHEDULE_SIZE_PCT,
-                             equal_share * (OFFSCHEDULE_SIZE_PCT / SEASONAL_SIZE_PCT)))
-            scale_active = equal_share < equity * SEASONAL_SIZE_PCT
-
+            n_viable = len(viable)
+            n_slots = min(n_viable, max_trades)
             hdr("ENTRY ORDERS")
-            if scale_active and n_viable > 1:
-                row(f"Signal scaling: {n_viable} signals / {n_slots} slots → "
-                    f"sea=${sea_da:.0f} off=${off_da:.0f}  "
-                    f"(max sea=${equity*SEASONAL_SIZE_PCT:.0f} off=${equity*OFFSCHEDULE_SIZE_PCT:.0f})")
-            n_unfilled_sea = n_sea_pending
-            for sig in all_sigs:
-                ticker = sig["ticker"]; strategy = sig["strategy"]
-                is_seasonal = sig.get("seasonal", False)
-                skip = ""
-                if not entry_slot_ok(entries_today, max_trades):   skip = "entry cap"
-                elif MAX_OPEN_POSITIONS and n_open >= MAX_OPEN_POSITIONS:
-                    skip = f"cap {MAX_OPEN_POSITIONS}"
-                elif avail <= 1.0:    skip = "reserve floor"
-                da = sea_da if is_seasonal else off_da
-                if not skip and not is_seasonal and n_unfilled_sea > 0:
-                    seasonal_lock = min(avail, n_unfilled_sea * sea_da)
-                    if avail - da < seasonal_lock:
-                        skip = "seasonal reserve"
-                if not skip and da > avail: skip = "not enough cash"
-                if not skip and has_earnings_soon(ticker): skip = f"earnings ≤{EARNINGS_SKIP_DAYS}d"
-                tier = "S" if is_seasonal else "o"
-                if skip:
-                    row(f"  SKIP [{tier}] {ticker}  {strategy}", _trunc(skip, 20))
-                    if is_seasonal:
-                        n_unfilled_sea = max(0, n_unfilled_sea - 1)
-                    continue
-                row(f"  ENTER [{tier}] {ticker}  {strategy}", f"${da:.2f}")
-                buy_res = do_buy(client, ticker, da, strategy, expected_price=sig["close"], fast_submit=True)
-                if buy_res.get("ok"):
-                    n_open += 1
-                    avail -= da
-                    if buy_res.get("filled"):
-                        entries += 1
-                        entries_today += 1
-                        buy_price = buy_res.get("price") if buy_res.get("price") is not None else sig["close"]
-                        buy_dollars = buy_res.get("dollars") if buy_res.get("dollars") is not None else da
-                        log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
-                               float(client.get_account().equity),
-                               expected_price=sig["close"],
-                               order_price=buy_res.get("order_price", sig["close"]),
-                               execution_method=buy_res.get("execution_method", "buy_market"))
-                        buys_log.append({"t": datetime.now().strftime("%H:%M"),
-                                          "tk": ticker, "st": strategy,
-                                          "px": round(buy_price, 2), "$": round(buy_dollars, 2)})
-                    else:
-                        unconfirmed_buys += 1
-                        pending_buys.append({
-                            "ticker": ticker,
-                            "strategy": strategy,
-                            "dollars": da,
-                            "expected_price": sig["close"],
-                            "order_id": buy_res.get("order_id"),
-                        })
-                        row(f"  BUY SUBMITTED [{tier}] {ticker}",
-                            "fill pending — batched confirmation after entries")
-                if is_seasonal:
-                    n_unfilled_sea = max(0, n_unfilled_sea - 1)
+            if n_slots <= 0:
+                row("Skipped", f"no entry slots (max_trades={max_trades})")
+            else:
+                n_sea_pending = sum(1 for s in viable if s.get("seasonal"))
+                equal_share = avail / n_slots
+                sea_da = max(MIN_TRADE_SIZE,
+                             min(equity * SEASONAL_SIZE_PCT, equal_share))
+                off_da = max(MIN_TRADE_SIZE,
+                             min(equity * OFFSCHEDULE_SIZE_PCT,
+                                 equal_share * (OFFSCHEDULE_SIZE_PCT / SEASONAL_SIZE_PCT)))
+                scale_active = equal_share < equity * SEASONAL_SIZE_PCT
+                if scale_active and n_viable > 1:
+                    row(f"Signal scaling: {n_viable} signals / {n_slots} slots → "
+                        f"sea=${sea_da:.0f} off=${off_da:.0f}  "
+                        f"(max sea=${equity*SEASONAL_SIZE_PCT:.0f} off=${equity*OFFSCHEDULE_SIZE_PCT:.0f})")
+                n_unfilled_sea = n_sea_pending
+                for sig in all_sigs:
+                    ticker = sig["ticker"]; strategy = sig["strategy"]
+                    is_seasonal = sig.get("seasonal", False)
+                    skip = ""
+                    if not entry_slot_ok(entries_today, max_trades):   skip = "entry cap"
+                    elif MAX_OPEN_POSITIONS and n_open >= MAX_OPEN_POSITIONS:
+                        skip = f"cap {MAX_OPEN_POSITIONS}"
+                    elif avail <= 1.0:    skip = "reserve floor"
+                    da = sea_da if is_seasonal else off_da
+                    if not skip and not is_seasonal and n_unfilled_sea > 0:
+                        seasonal_lock = min(avail, n_unfilled_sea * sea_da)
+                        if avail - da < seasonal_lock:
+                            skip = "seasonal reserve"
+                    if not skip and da > avail: skip = "not enough cash"
+                    if not skip and has_earnings_soon(ticker): skip = f"earnings ≤{EARNINGS_SKIP_DAYS}d"
+                    tier = "S" if is_seasonal else "o"
+                    if skip:
+                        row(f"  SKIP [{tier}] {ticker}  {strategy}", _trunc(skip, 20))
+                        if is_seasonal:
+                            n_unfilled_sea = max(0, n_unfilled_sea - 1)
+                        continue
+                    row(f"  ENTER [{tier}] {ticker}  {strategy}", f"${da:.2f}")
+                    buy_res = do_buy(client, ticker, da, strategy, expected_price=sig["close"], fast_submit=True)
+                    if buy_res.get("ok"):
+                        n_open += 1
+                        avail -= da
+                        if buy_res.get("filled"):
+                            entries += 1
+                            entries_today += 1
+                            buy_price = buy_res.get("price") if buy_res.get("price") is not None else sig["close"]
+                            buy_dollars = buy_res.get("dollars") if buy_res.get("dollars") is not None else da
+                            log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
+                                   float(client.get_account().equity),
+                                   expected_price=sig["close"],
+                                   order_price=buy_res.get("order_price", sig["close"]),
+                                   execution_method=buy_res.get("execution_method", "buy_market"))
+                            buys_log.append({"t": datetime.now().strftime("%H:%M"),
+                                             "tk": ticker, "st": strategy,
+                                             "px": round(buy_price, 2), "$": round(buy_dollars, 2)})
+                        else:
+                            unconfirmed_buys += 1
+                            pending_buys.append({
+                                "ticker": ticker,
+                                "strategy": strategy,
+                                "dollars": da,
+                                "expected_price": sig["close"],
+                                "order_id": buy_res.get("order_id"),
+                            })
+                            row(f"  BUY SUBMITTED [{tier}] {ticker}",
+                                "fill pending — batched confirmation after entries")
+                        if is_seasonal:
+                            n_unfilled_sea = max(0, n_unfilled_sea - 1)
         if entries == 0 and not all_sigs: row("  No entries placed.")
         if pending_buys:
             batched = poll_pending_buys(client, pending_buys, rgm)
