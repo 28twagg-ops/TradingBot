@@ -1,0 +1,49 @@
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         /home/runner/work/TradingBot/TradingBot/docs/options_trial
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-09T15:34:31.795300-04:00 ===
+
+[Run context]
+Paper auth OK — equity $161390.01, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S174, S165, S166, S163
+
+[Manage only]
+Past entry window; manage/exit only.
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          manage-only                             |
+|  Equity                        $161,390.01                             |
+|  Signals this run              0                                       |
+|  Entries placed                0                                       |
+|  Open option positions         19                                      |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (19)                                                     |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  AVGO260710C00400000          49   +901.5%   $+24,700.00               |
+|  ANET260710C00185000          22   +798.3%   $ +4,790.00               |
+|  CCL260717C00026000           93    +51.9%   $ +3,621.00               |
+|  GOOGL260710C00365000         75    -25.5%   $ -1,568.99               |
+|  MRNA260710C00085000          54    -83.8%   $ -1,397.00               |
+|  GOOGL260710C00362500         24    +95.2%   $ +1,346.00               |
+|  INTC260710C00118000          25    -43.5%   $   -983.00               |
+|  INTC260710C00119000          24    -50.2%   $   -896.00               |
+|  ... 11 more position(s)                                               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-09.log
+elapsed=0.9s reconcile=0.31s cancel=0.12s manage=0.07s
+STATUS: options_morning_bot run complete (PAPER) elapsed=0.9s.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_strategy_selection.csv
+Summary: keep=0 watch=5 drop=0
