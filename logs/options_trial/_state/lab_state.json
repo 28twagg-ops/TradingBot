@@ -19,17 +19,17 @@
       "stop_loss": -0.5
     },
     {
-      "order_id": "95ef6054-2a6d-4ff9-82ec-3969525c0305",
+      "order_id": "d819588f-0787-4ebd-b54e-aae56e87db26",
       "bucket_id": 90,
       "strategy_id": "S165",
       "occ_symbol": "GOOGL260710C00362500",
       "underlying": "GOOGL",
       "qty": 1,
-      "limit": 0.57,
+      "limit": 0.61,
       "profile_name": "c090_s165_w3_1045_1120_r5",
       "submitted": "2026-07-09",
       "detail": "gap -2.1%",
-      "spread_frac": 0.053097345132743216,
+      "spread_frac": 0.03278688524590167,
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
