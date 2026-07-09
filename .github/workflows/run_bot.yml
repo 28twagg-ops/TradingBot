@@ -51,12 +51,18 @@ jobs:
       - name: Initialize run output log files
         run: |
           ts=$(date -u '+%Y%m%dT%H%M%SZ')
+          day=$(date -u '+%Y-%m-%d')
           mkdir -p logs/action_runs
+          mkdir -p logs/action_runs/reports
           echo "RUN_STAMP=$ts" >> "$GITHUB_ENV"
+          echo "RUN_DAY=$day" >> "$GITHUB_ENV"
           echo "LIVE_LOG=logs/action_runs/${ts}_live_bot.log" >> "$GITHUB_ENV"
           echo "OPTIONS_LOG=logs/action_runs/${ts}_options_bot.log" >> "$GITHUB_ENV"
+          echo "DAY_REVIEW_DOC=logs/action_runs/reports/${day}_comprehensive_review.md" >> "$GITHUB_ENV"
           echo "LIVE_BOT_EXIT=0" >> "$GITHUB_ENV"
           echo "OPTIONS_BOT_EXIT=0" >> "$GITHUB_ENV"
+          echo "LIVE_BOT_DURATION_S=0" >> "$GITHUB_ENV"
+          echo "OPTIONS_BOT_DURATION_S=0" >> "$GITHUB_ENV"
           echo "Run stamp: $ts"
 
       - name: Run live bot
@@ -68,10 +74,15 @@ jobs:
         run: |
           set +e
           set -o pipefail
+          t0=$(date +%s)
           python rubber_band_bot.py 2>&1 | tee "$LIVE_LOG"
           rc=${PIPESTATUS[0]}
+          t1=$(date +%s)
+          dur=$((t1 - t0))
           echo "LIVE_BOT_EXIT=$rc" >> "$GITHUB_ENV"
+          echo "LIVE_BOT_DURATION_S=$dur" >> "$GITHUB_ENV"
           echo "Live bot exit code: $rc"
+          echo "Live bot duration: ${dur}s"
           exit 0
 
       # Options paper bot: same cron as live bot (every ~5 min). Entry window 9:28-11:35 ET;
@@ -85,6 +96,7 @@ jobs:
         run: |
           set +e
           set -o pipefail
+          t0=$(date +%s)
           {
             export TZ=America/New_York
             dow=$(date +%u)
@@ -102,9 +114,48 @@ jobs:
             python scripts/options_daily_bucket_report.py
           } 2>&1 | tee "$OPTIONS_LOG"
           rc=${PIPESTATUS[0]}
+          t1=$(date +%s)
+          dur=$((t1 - t0))
           echo "OPTIONS_BOT_EXIT=$rc" >> "$GITHUB_ENV"
+          echo "OPTIONS_BOT_DURATION_S=$dur" >> "$GITHUB_ENV"
           echo "Options bot exit code: $rc"
+          echo "Options bot duration: ${dur}s"
           exit 0
+
+      - name: Append run to daily comprehensive review
+        if: always()
+        run: |
+          if [ ! -f "$DAY_REVIEW_DOC" ]; then
+            {
+              echo "# Daily Comprehensive Action Review — ${RUN_DAY}"
+              echo
+              echo "_Auto-generated from GitHub Actions run output. This document appends every run for the day._"
+              echo
+            } > "$DAY_REVIEW_DOC"
+          fi
+
+          {
+            echo "## Run ${RUN_STAMP}"
+            echo
+            echo "- UTC timestamp: \`${RUN_STAMP}\`"
+            echo "- Live bot: exit=\`${LIVE_BOT_EXIT:-0}\`, duration=\`${LIVE_BOT_DURATION_S:-0}s\`"
+            echo "- Options bot: exit=\`${OPTIONS_BOT_EXIT:-0}\`, duration=\`${OPTIONS_BOT_DURATION_S:-0}s\`"
+            echo
+            echo "### Live bot full output"
+            echo
+            echo '```text'
+            cat "$LIVE_LOG"
+            echo '```'
+            echo
+            echo "### Options bot full output"
+            echo
+            echo '```text'
+            cat "$OPTIONS_LOG"
+            echo '```'
+            echo
+            echo "---"
+            echo
+          } >> "$DAY_REVIEW_DOC"
 
       - name: Commit logs back to repo
         if: always()
