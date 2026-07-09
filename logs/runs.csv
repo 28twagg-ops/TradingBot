@@ -2063,3 +2063,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-09 14:50:50,exits,bull,480.56,23.92,0,0,0,5,AES|AME|CDNS|CSCO|HST,both
 2026-07-09 14:55:50,exits,bull,480.91,23.92,0,0,0,5,AES|AME|CDNS|CSCO|HST,both
 2026-07-09 15:01:05,exits,bull,481.73,23.92,0,0,0,5,AES|AME|CDNS|CSCO|HST,both
+2026-07-09 15:05:44,exits,bull,482.08,23.92,0,0,0,5,AES|AME|CDNS|CSCO|HST,both
