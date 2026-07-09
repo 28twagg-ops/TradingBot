@@ -4632,3 +4632,149 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-07-09.log
 elapsed=0.3s reconcile=0.09s cancel=0.02s manage=0.02s
 
+=== 11:55:50 ET — manage-only (past entry window) [elapsed=0.9s reconcile=0.21s cancel=0.08s manage=0.04s] ===
+=== options_morning_bot (PAPER) 2026-07-09T11:55:50.014498-04:00 ===
+
+[Run context]
+Paper auth OK — equity $160014.01, account PA36KS87UPRS
+  reconcile: WARNING ADBE260710C00225000 broker qty 1 > virtual 0 (unattributed qty=1)
+  reconcile: WARNING ANET260710C00185000 broker qty 22 > virtual 0 (unattributed qty=22)
+  reconcile: WARNING AVGO260710C00400000 broker qty 49 > virtual 0 (unattributed qty=49)
+  reconcile: WARNING BA260710C00237500 broker qty 22 > virtual 0 (unattributed qty=22)
+  reconcile: WARNING BA260710C00240000 broker qty 22 > virtual 0 (unattributed qty=22)
+  reconcile: WARNING BA260710C00242500 broker qty 29 > virtual 0 (unattributed qty=29)
+  reconcile: WARNING CCL260710C00026000 broker qty 7 > virtual 0 (unattributed qty=7)
+  reconcile: WARNING CCL260717C00026000 broker qty 93 > virtual 0 (unattributed qty=93)
+  reconcile: WARNING GOOGL260710C00362500 broker qty 24 > virtual 0 (unattributed qty=24)
+  reconcile: WARNING GOOGL260710C00365000 broker qty 75 > virtual 0 (unattributed qty=75)
+  reconcile: WARNING GOOGL260710C00367500 broker qty 24 > virtual 0 (unattributed qty=24)
+  reconcile: WARNING INTC260710C00118000 broker qty 25 > virtual 0 (unattributed qty=25)
+  reconcile: WARNING INTC260710C00119000 broker qty 24 > virtual 0 (unattributed qty=24)
+  reconcile: WARNING MRNA260710C00085000 broker qty 54 > virtual 0 (unattributed qty=54)
+  reconcile: WARNING PEP260717C00141000 broker qty 5 > virtual 0 (unattributed qty=5)
+  reconcile: WARNING PLTR260710C00131000 broker qty 5 > virtual 0 (unattributed qty=5)
+  reconcile: WARNING PLTR260710C00136000 broker qty 24 > virtual 0 (unattributed qty=24)
+  reconcile: WARNING PLTR260717C00139000 broker qty 5 > virtual 0 (unattributed qty=5)
+  reconcile: WARNING PSKY260717C00010000 broker qty 5 > virtual 0 (unattributed qty=5)
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S174, S165, S166, S163
+
+[Manage only]
+Past entry window; manage/exit only.
+
+[Portfolio snapshot]
+========================================================
+OPTIONS TRIAL STATS
+========================================================
+Account equity: $160,014.01
+Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
+
+P&L summary
+  Realized (sold):     $+2,154.53 all-time  |  $+0.00 today
+  Open (not sold yet): $+0.00 unrealized (virtual lots)
+                       $+26,794.01 unrealized (broker total)
+  Premium deployed:    $0.00 in open positions
+  Combined P&L:        $+2,154.53 (realized + open virtual)
+
+Ledger (master)
+  Total events:     256
+  Today entries:    0
+  Today exits:      0
+  All-time exits:   52  wins 94%
+  Avg return/trade: +39.6%  median +36.5%
+
+Open virtual lots (by bucket)
+  (100 quiet bucket profile(s) — no trades yet)
+  (no open lots across active profiles)
+
+Alpaca option positions
+  ADBE260710C00225000  qty=1  cost=$86.00  return=+27.9%  open P&L=$+24.00
+  ANET260710C00185000  qty=22  cost=$600.00  return=+1073.3%  open P&L=$+6,440.00
+  AVGO260710C00400000  qty=49  cost=$2,740.00  return=+910.4%  open P&L=$+24,945.00
+  BA260710C00237500  qty=22  cost=$466.00  return=-90.6%  open P&L=$-422.00
+  BA260710C00240000  qty=22  cost=$415.00  return=-89.4%  open P&L=$-371.00
+  BA260710C00242500  qty=29  cost=$284.00  return=-89.8%  open P&L=$-255.00
+  CCL260710C00026000  qty=7  cost=$298.00  return=+109.1%  open P&L=$+325.00
+  CCL260717C00026000  qty=93  cost=$6,981.00  return=+65.2%  open P&L=$+4,551.00
+  GOOGL260710C00362500  qty=24  cost=$1,414.00  return=-30.4%  open P&L=$-430.00
+  GOOGL260710C00365000  qty=75  cost=$6,143.99  return=-71.9%  open P&L=$-4,418.99
+  GOOGL260710C00367500  qty=24  cost=$1,032.00  return=-69.8%  open P&L=$-720.00
+  INTC260710C00118000  qty=25  cost=$2,258.00  return=-10.3%  open P&L=$-233.00
+  INTC260710C00119000  qty=24  cost=$1,784.00  return=-15.2%  open P&L=$-272.00
+  MRNA260710C00085000  qty=54  cost=$1,667.00  return=-100.0%  open P&L=$-1,667.00
+  PEP260717C00141000  qty=5  cost=$340.00  return=+25.0%  open P&L=$+85.00
+  PLTR260710C00131000  qty=5  cost=$300.00  return=-35.0%  open P&L=$-105.00
+  PLTR260710C00136000  qty=24  cost=$780.00  return=-78.5%  open P&L=$-612.00
+  PLTR260717C00139000  qty=5  cost=$365.00  return=-17.8%  open P&L=$-65.00
+  PSKY260717C00010000  qty=5  cost=$40.00  return=-12.5%  open P&L=$-5.00
+
+Per-bucket exit stats (all time)
+  b0|orphan_reconcile     n=  4  avg=+61.5%  med=+58.1%  realized=$+747.86
+  b56|g056_lim_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b57|g057_mid_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b58|g058_eod_tp20_sl65  n=  1  avg=+59.1%  med=+59.1%  realized=$+25.41
+  b63|g063_mid_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b64|g064_eod_tp20_sl65  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b65|g065_lim_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b66|g066_mid_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b67|g067_eod_tp20_sl65  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b70|g070_eod_tp30_sl20  n=  1  avg=+59.1%  med=+59.1%  realized=$+27.77
+  b71|g071_lim_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b72|g072_mid_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b73|g073_eod_tp30_sl20  n=  1  avg=+55.6%  med=+55.6%  realized=$+36.11
+  b74|g074_lim_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b75|g075_mid_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b76|g076_eod_tp30_sl20  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b77|g077_lim_tp30_sl20  n=  1  avg=-23.3%  med=-23.3%  realized=$-18.63
+  b78|g078_mid_tp30_sl20  n=  1  avg=-23.3%  med=-23.3%  realized=$-18.63
+  b79|g079_eod_tp30_sl20  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b80|g080_lim_tp30_sl30  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b81|g081_mid_tp30_sl30  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b82|g082_eod_tp30_sl30  n=  1  avg=+55.6%  med=+55.6%  realized=$+36.11
+  b83|g083_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b84|g084_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b85|g085_eod_tp30_sl30  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b86|g086_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b87|g087_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b88|g088_eod_tp30_sl30  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b89|g089_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b90|g090_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b91|g091_eod_tp30_sl30  n=  2  avg=+19.8%  med=+55.6%  realized=$+25.00
+  b92|g092_lim_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b93|g093_mid_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b94|g094_eod_tp30_sl40  n=  2  avg=+46.6%  med=+55.6%  realized=$+73.80
+  b95|g095_lim_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b96|g096_mid_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b97|g097_eod_tp30_sl40  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b98|g098_lim_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b99|g099_mid_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+========================================================
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          manage-only                             |
+|  Equity                        $160,014.01                             |
+|  Signals this run              0                                       |
+|  Entries placed                0                                       |
+|  Open option positions         19                                      |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (19)                                                     |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  AVGO260710C00400000          49   +910.4%   $+24,945.00               |
+|  ANET260710C00185000          22  +1073.3%   $ +6,440.00               |
+|  CCL260717C00026000           93    +65.2%   $ +4,551.00               |
+|  GOOGL260710C00365000         75    -71.9%   $ -4,418.99               |
+|  MRNA260710C00085000          54   -100.0%   $ -1,667.00               |
+|  GOOGL260710C00367500         24    -69.8%   $   -720.00               |
+|  PLTR260710C00136000          24    -78.5%   $   -612.00               |
+|  GOOGL260710C00362500         24    -30.4%   $   -430.00               |
+|  ... 11 more position(s)                                               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-09.log
+elapsed=0.9s reconcile=0.21s cancel=0.08s manage=0.04s
+
