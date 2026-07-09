@@ -104,11 +104,9 @@ jobs:
               echo "Weekend — skip options paper bot"
               exit 0
             fi
-            hm=$(date +%H%M)
-            if [ "$hm" -lt 0928 ] || [ "$hm" -gt 1605 ]; then
-              echo "Outside options window (${hm} ET) — skip"
-              exit 0
-            fi
+            # Always run on weekdays so we always get an options status snapshot.
+            # options_morning_bot.py itself enforces entry/manage windows and emits
+            # after-hours summaries with open position visibility.
             python scripts/init_options_trial.py
             python scripts/options_morning_bot.py
             python scripts/options_daily_bucket_report.py
