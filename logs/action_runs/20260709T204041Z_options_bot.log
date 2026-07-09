@@ -1,0 +1,71 @@
+Traceback (most recent call last):
+  File "/home/runner/work/TradingBot/TradingBot/scripts/init_options_trial.py", line 15, in <module>
+    from local_docs import local_docs
+ModuleNotFoundError: No module named 'local_docs'
+=== options_morning_bot (PAPER) 2026-07-09T16:40:44.582495-04:00 ===
+
+[Run context]
+After hours (16:40 ET) — exit summary only.
+Paper auth OK — equity $159951.01, account PA36KS87UPRS
+
+[Exit summary]
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          after_hours                             |
+|  Equity                        $159,951.01                             |
+|  Signals this run              0                                       |
+|  Orders submitted (session)    0                                       |
+|  Orders filled today (ledger)  0                                       |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             19                                      |
+|  Broker option positions       19                                      |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD                                                    |
++------------------------------------------------------------------------+
+|  All-time  trades=52  buckets=39  win=94%                              |
+|  Returns   avg=+39.6%  med=+36.5%  p10=+24.0%  p90=+70.8%              |
+|  Realized  $+2,154.53                                                  |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b70  c070_s165_w3_1045_  1 100% +59.1 +59.1 +59.1 $    +28            |
+|  b58  c058_s163_w3_1045_  1 100% +59.1 +59.1 +59.1 $    +25            |
+|  b0   c000_s173_w1_0928_  4 100% +61.5 +55.7 +84.7 $   +748            |
+|  b73  c073_s166_w2_1005_  1 100% +55.6 +55.6 +55.6 $    +36            |
+|  b82  c082_s173_w3_1045_  1 100% +55.6 +55.6 +55.6 $    +36            |
+|  b92  c092_s166_w1_0928_  2 100% +53.6 +53.6 +70.8 $    +95            |
+|  b93  c093_s166_w2_1005_  2 100% +53.6 +53.6 +70.8 $    +95            |
+|  b95  c095_s166_w4_1120_  2 100% +50.5 +50.5 +70.8 $    +95            |
+|  ... 31 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b78  c078_s163_w3_1045_  1   0% -23.3 -23.3 -23.3 $    -19       |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (19)                                                     |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  AVGO260710C00400000          49   +847.8%   $+23,230.00               |
+|  ANET260710C00185000          22   +780.0%   $ +4,680.00               |
+|  CCL260717C00026000           93    +47.9%   $ +3,342.00               |
+|  MRNA260710C00085000          54   -100.0%   $ -1,667.00               |
+|  GOOGL260710C00365000         75    -23.1%   $ -1,418.99               |
+|  GOOGL260710C00362500         24    +98.6%   $ +1,394.00               |
+|  INTC260710C00118000          25    -42.4%   $   -958.00               |
+|  INTC260710C00119000          24    -50.2%   $   -896.00               |
+|  ... 11 more position(s)                                               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-09.log
+elapsed=0.5s reconcile=0.12s
+STATUS: options_morning_bot after-hours summary (PAPER) elapsed=0.5s. run=#3534 https://github.com/28twagg-ops/TradingBot/actions/runs/29048702846
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_strategy_selection.csv
+Summary: keep=0 watch=5 drop=0
