@@ -93,6 +93,7 @@ jobs:
           ALPACA_PAPER_KEY: ${{ secrets.ALPACA_PAPER_KEY }}
           ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
           OPTIONS_PAPER_UNLIMITED: "1"
+          OPTIONS_CONTROLLED_LAYOUT: "1"
         run: |
           set +e
           set -o pipefail

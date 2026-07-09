@@ -129,11 +129,23 @@ def _after_hours(now: datetime) -> bool:
     return not _in_trading_window(now)
 
 
+def _parse_hm(hm: str) -> tuple[int, int]:
+    try:
+        h, m = hm.split(":", 1)
+        return int(h), int(m)
+    except Exception:
+        return ENTRY_START
+
+
+def _arm_entry_window_open(arm: EffectiveArm, now: datetime) -> bool:
+    return _hm_between(now, _parse_hm(arm.buy_start_hm), _parse_hm(arm.buy_end_hm))
+
+
 def rl(msg: str, *, console: bool = True) -> None:
     """Record a line in the markdown run log; echo to console when console=True."""
     _run_log.append(msg)
     if console:
-        log.info(msg)
+        print(msg, flush=True)
 
 
 def rl_file(msg: str) -> None:
@@ -620,6 +632,8 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
         for arm in arms_for_signal(hit.strategy_id, equity):
             if placed >= MAX_NEW_ENTRIES_PER_RUN:
                 break
+            if not _arm_entry_window_open(arm, now):
+                continue
             if state.bucket_has_strategy(arm.bucket_id, hit.strategy_id):
                 continue
             if state.pending_for_bucket_strategy(arm.bucket_id, hit.strategy_id):

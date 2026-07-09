@@ -37,6 +37,7 @@ VIRTUAL_BUCKET_USD = float(os.environ.get("OPTIONS_VIRTUAL_BUCKET_USD", "500"))
 # When 1 (default), all defined profiles run regardless of broker equity.
 PAPER_UNLIMITED_BUCKETS = os.environ.get("OPTIONS_PAPER_UNLIMITED", "1") != "0"
 TARGET_BUCKET_PROFILES = int(os.environ.get("OPTIONS_BUCKET_COUNT", "100"))
+CONTROLLED_LAYOUT = os.environ.get("OPTIONS_CONTROLLED_LAYOUT", "0") == "1"
 STATE_VERSION = 4
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -77,12 +78,60 @@ class BucketProfile:
     stop_loss: float = -0.50
     eod_only: bool = False            # skip intraday stops; exit at EOD only
     market_exit_eod: bool = True      # use market order after EOD_MARKET if limit fails
+    # --- Controlled experiment controls ---
+    strategy_scope: str = "all"       # "all" or one strategy id (e.g. S173)
+    buy_start_hm: str = "09:28"
+    buy_end_hm: str = "11:35"
 
 
 # Experiment grid — generated up to TARGET_BUCKET_PROFILES variants.
 def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
     n = target if target is not None else TARGET_BUCKET_PROFILES
     n = max(8, min(n, 200))
+
+    if CONTROLLED_LAYOUT:
+        # Controlled mode: isolate time-window effect and strategy effect.
+        # All execution/risk knobs are held constant across buckets.
+        windows = [
+            ("w1_0928_1005", "09:28", "10:05"),
+            ("w2_1005_1045", "10:05", "10:45"),
+            ("w3_1045_1120", "10:45", "11:20"),
+            ("w4_1120_1135", "11:20", "11:35"),
+        ]
+        strategy_ids = ["S173", "S174", "S165", "S166", "S163"]
+        profiles: list[BucketProfile] = []
+        idx = 0
+        while len(profiles) < n:
+            for sid in strategy_ids:
+                for tag, start_hm, end_hm in windows:
+                    if len(profiles) >= n:
+                        break
+                    rep = len(profiles) // (len(strategy_ids) * len(windows))
+                    name = f"c{idx:03d}_{sid.lower()}_{tag}_r{rep+1}"
+                    profiles.append(
+                        BucketProfile(
+                            bucket_id=idx,
+                            name=name,
+                            buy_limit_offset=-0.01,
+                            buy_at_mid=False,
+                            max_premium=75,
+                            max_spread_frac=0.25,
+                            min_open_interest=100,
+                            account_cap=0.95,
+                            max_contracts=1,
+                            sell_limit_offset=-0.01,
+                            sell_at_mid=False,
+                            take_profit=0.50,
+                            stop_loss=-0.50,
+                            eod_only=False,
+                            market_exit_eod=True,
+                            strategy_scope=sid,
+                            buy_start_hm=start_hm,
+                            buy_end_hm=end_hm,
+                        )
+                    )
+                    idx += 1
+        return profiles[:n]
 
     core = [
         BucketProfile(0, "baseline",
@@ -193,6 +242,9 @@ class EffectiveArm:
     stop_loss: float = -0.50
     eod_only: bool = False
     market_exit_eod: bool = True
+    strategy_scope: str = "all"
+    buy_start_hm: str = "09:28"
+    buy_end_hm: str = "11:35"
 
     @property
     def bucket_key(self) -> str:
@@ -443,7 +495,7 @@ def ensure_trial_layout() -> None:
 
 def _merge_arm(bucket: BucketProfile, strategy_id: str,
                equity: float = VIRTUAL_BUCKET_USD) -> EffectiveArm:
-    tweaks = STRATEGY_TWEAKS.get(strategy_id, {})
+    tweaks = {} if CONTROLLED_LAYOUT else STRATEGY_TWEAKS.get(strategy_id, {})
     vals = {f.name: getattr(bucket, f.name) for f in fields(BucketProfile)
             if f.name not in ("bucket_id", "name")}
     for k, v in tweaks.items():
@@ -478,7 +530,11 @@ def active_buckets(equity: float) -> list[BucketProfile]:
 
 
 def arms_for_signal(strategy_id: str, equity: float) -> list[EffectiveArm]:
-    return [_merge_arm(b, strategy_id, equity) for b in active_buckets(equity)]
+    return [
+        _merge_arm(b, strategy_id, equity)
+        for b in active_buckets(equity)
+        if b.strategy_scope in ("all", strategy_id)
+    ]
 
 
 def size_for_arm(arm: EffectiveArm, state: LabState, contract_cost: float) -> int:
