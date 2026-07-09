@@ -112,6 +112,7 @@ jobs:
             python scripts/init_options_trial.py
             python scripts/options_morning_bot.py
             python scripts/options_daily_bucket_report.py
+            python scripts/options_strategy_selection_report.py
           } 2>&1 | tee "$OPTIONS_LOG"
           rc=${PIPESTATUS[0]}
           t1=$(date +%s)
