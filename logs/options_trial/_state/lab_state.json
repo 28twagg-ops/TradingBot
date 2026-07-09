@@ -1,24 +1,7 @@
 {
   "version": 4,
   "lots": [],
-  "pending_orders": [
-    {
-      "order_id": "a9412d7d-6dd4-4191-a170-c9766036a7da",
-      "bucket_id": 89,
-      "strategy_id": "S165",
-      "occ_symbol": "GOOGL260710C00362500",
-      "underlying": "GOOGL",
-      "qty": 1,
-      "limit": 0.45,
-      "profile_name": "c089_s165_w2_1005_1045_r5",
-      "submitted": "2026-07-09",
-      "detail": "gap -2.1%",
-      "spread_frac": 0.090909090909091,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    }
-  ],
+  "pending_orders": [],
   "bucket_open_premium": {},
   "session_date": "2026-07-09",
   "entries_locked": [
