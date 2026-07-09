@@ -48,37 +48,66 @@ jobs:
       - name: Install dependencies
         run: pip install alpaca-py yfinance pandas numpy lxml requests pyarrow
 
+      - name: Initialize run output log files
+        run: |
+          ts=$(date -u '+%Y%m%dT%H%M%SZ')
+          mkdir -p logs/action_runs
+          echo "RUN_STAMP=$ts" >> "$GITHUB_ENV"
+          echo "LIVE_LOG=logs/action_runs/${ts}_live_bot.log" >> "$GITHUB_ENV"
+          echo "OPTIONS_LOG=logs/action_runs/${ts}_options_bot.log" >> "$GITHUB_ENV"
+          echo "LIVE_BOT_EXIT=0" >> "$GITHUB_ENV"
+          echo "OPTIONS_BOT_EXIT=0" >> "$GITHUB_ENV"
+          echo "Run stamp: $ts"
+
       - name: Run live bot
+        continue-on-error: true
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
           BOT_MODE: ${{ github.event.inputs.mode || 'auto' }}
-        run: python rubber_band_bot.py
+        run: |
+          set +e
+          set -o pipefail
+          python rubber_band_bot.py 2>&1 | tee "$LIVE_LOG"
+          rc=${PIPESTATUS[0]}
+          echo "LIVE_BOT_EXIT=$rc" >> "$GITHUB_ENV"
+          echo "Live bot exit code: $rc"
+          exit 0
 
       # Options paper bot: same cron as live bot (every ~5 min). Entry window 9:28-11:35 ET;
       # manage/exits until 16:05 ET weekdays.
       - name: Run options paper bot (PAPER, 9:28-16:05 ET weekdays)
+        continue-on-error: true
         env:
           ALPACA_PAPER_KEY: ${{ secrets.ALPACA_PAPER_KEY }}
           ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
           OPTIONS_PAPER_UNLIMITED: "1"
         run: |
-          export TZ=America/New_York
-          dow=$(date +%u)
-          if [ "$dow" -gt 5 ]; then
-            echo "Weekend — skip options paper bot"
-            exit 0
-          fi
-          hm=$(date +%H%M)
-          if [ "$hm" -lt 0928 ] || [ "$hm" -gt 1605 ]; then
-            echo "Outside options window (${hm} ET) — skip"
-            exit 0
-          fi
-          python scripts/init_options_trial.py
-          python scripts/options_morning_bot.py
-          python scripts/options_daily_bucket_report.py
+          set +e
+          set -o pipefail
+          {
+            export TZ=America/New_York
+            dow=$(date +%u)
+            if [ "$dow" -gt 5 ]; then
+              echo "Weekend — skip options paper bot"
+              exit 0
+            fi
+            hm=$(date +%H%M)
+            if [ "$hm" -lt 0928 ] || [ "$hm" -gt 1605 ]; then
+              echo "Outside options window (${hm} ET) — skip"
+              exit 0
+            fi
+            python scripts/init_options_trial.py
+            python scripts/options_morning_bot.py
+            python scripts/options_daily_bucket_report.py
+          } 2>&1 | tee "$OPTIONS_LOG"
+          rc=${PIPESTATUS[0]}
+          echo "OPTIONS_BOT_EXIT=$rc" >> "$GITHUB_ENV"
+          echo "Options bot exit code: $rc"
+          exit 0
 
       - name: Commit logs back to repo
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -121,3 +150,13 @@ jobs:
           done
           echo "ERROR: failed to push logs after 5 attempts"
           exit 1
+
+      - name: Fail workflow if bot step failed
+        if: always()
+        run: |
+          echo "Live bot exit code: ${LIVE_BOT_EXIT:-0}"
+          echo "Options bot exit code: ${OPTIONS_BOT_EXIT:-0}"
+          if [ "${LIVE_BOT_EXIT:-0}" -ne 0 ] || [ "${OPTIONS_BOT_EXIT:-0}" -ne 0 ]; then
+            echo "One or more bot steps failed. See logs/action_runs/*.log for full output."
+            exit 1
+          fi

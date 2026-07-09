@@ -493,7 +493,10 @@ def fetch_batch(tickers, label=""):
         return {}
     data = {}
     chunk_size = 40
-    workers = min(FETCH_WORKERS, max(1, len(tickers)))
+    # Alpaca HTTP pool is effectively ~10 connections per host by default.
+    # Keep worker count below that to avoid noisy "Connection pool is full"
+    # warnings during prep/scans while preserving parallel fetch speed.
+    workers = min(FETCH_WORKERS, 8, max(1, len(tickers)))
 
     def _fetch_one(t):
         df = fetch_stock(t)
