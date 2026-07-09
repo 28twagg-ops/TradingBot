@@ -44,13 +44,13 @@ from options_oi import make_trading_client, fetch_open_interest
 from options_signals import PAPER_STRATEGIES, SignalHit, scan_symbol, StrategyConfig
 from options_lab import (
     VIRTUAL_BUCKET_USD, PAPER_UNLIMITED_BUCKETS, EffectiveArm, LabState,
-    active_bucket_count,
-    append_ledger, arms_for_signal, cancel_unfilled_lab_entries,
+    active_bucket_count, arms_for_signal,
+    append_ledger, build_bucket_leaderboard, cancel_unfilled_lab_entries,
     entry_limit_price, exit_limit_price,
     exit_reason_for_lot, has_open_lab_entry, load_state,
     lock_entry_slot, make_entry_client_order_id,
     make_exit_client_order_id, mark_order_logged, print_exit_summary,
-    print_trial_stats, reconcile_with_broker, register_exit,
+    print_trial_stats, reconcile_summary, reconcile_with_broker, register_exit,
     register_pending, size_for_arm, trial_root,
 )
 
@@ -107,6 +107,7 @@ _run_log: list[str] = []
 _run_t0: float | None = None
 _run_phases: dict[str, float] = {}
 W = 72
+_BARS_CACHE: dict[str, tuple[pd.DataFrame | None, list[str]]] = {}
 
 
 def _now_et() -> datetime:
@@ -182,15 +183,23 @@ def _box_end() -> None:
 
 
 def _console_account_summary(state: LabState, equity: float | None, positions: list[dict],
-                             *, mode: str, signals: int, placed: int) -> None:
+                             *, mode: str, signals: int, placed: int,
+                             rec: dict | None = None) -> None:
+    rec = rec or reconcile_summary(state, positions)
     _box_title("OPTIONS BOT SUMMARY")
     rl(_box_line(f"  Mode                          {mode}"))
     if equity is not None:
         rl(_box_line(f"  Equity                        ${equity:,.2f}"))
     rl(_box_line(f"  Signals this run              {signals}"))
-    rl(_box_line(f"  Entries placed                {placed}"))
-    rl(_box_line(f"  Open option positions         {len(positions)}"))
-    rl(_box_line(f"  Pending orders                {len(state.pending_orders)}"))
+    rl(_box_line(f"  Orders submitted (session)    {rec.get('submitted_today', 0)}"))
+    rl(_box_line(f"  Orders filled today (ledger)  {rec.get('filled_today', 0)}"))
+    rl(_box_line(f"  Entries placed this run       {placed}"))
+    rl(_box_line(f"  Open virtual lots             {rec.get('open_lots', 0)}"))
+    rl(_box_line(f"  Broker option positions       {rec.get('broker_positions', len(positions))}"))
+    unatt = rec.get("unattributed_contracts", 0)
+    if unatt:
+        rl(_box_line(f"  Unattributed contracts        {unatt} (orphan reconcile)"))
+    rl(_box_line(f"  Pending orders                {rec.get('pending_orders', 0)}"))
     _box_end()
 
 
@@ -214,6 +223,81 @@ def _console_positions_table(positions: list[dict], *, max_rows: int = 8) -> Non
         rl(_box_line(f"  {sym:25s}  {qty:4d}  {ret:+7.1f}%   ${upl:+10,.2f}"))
     if len(positions) > shown:
         rl(_box_line(f"  ... {len(positions)-shown} more position(s)"))
+    _box_end()
+
+
+def _console_pending_summary(state: LabState, *, max_rows: int = 5) -> None:
+    pending = state.pending_orders
+    if not pending:
+        return
+    from collections import Counter
+    groups = Counter(f"{p.strategy_id}:{p.underlying}" for p in pending)
+    top = ", ".join(f"{k}({v})" for k, v in groups.most_common(3))
+    _box_title(f"PENDING ORDERS ({len(pending)})")
+    rl(_box_line(f"  Top groups                    {top}"))
+    rl(_box_border("-"))
+    for p in pending[:max_rows]:
+        sym = p.underlying[:8]
+        rl(_box_line(
+            f"  b{p.bucket_id:<3d} {p.strategy_id} {sym:8s} limit={p.limit:.2f}"))
+    if len(pending) > max_rows:
+        rl(_box_line(f"  ... {len(pending) - max_rows} more pending order(s)"))
+    _box_end()
+
+
+def _console_bucket_leaderboard(state: LabState, *, top_n: int = 8) -> None:
+    """Human-readable per-bucket stats table (top buckets + aggregate)."""
+    board = build_bucket_leaderboard(state)
+    today = TODAY.isoformat()
+    today_board = build_bucket_leaderboard(state, day=today)
+
+    _box_title("BUCKET LEADERBOARD")
+    if board.total_exits == 0:
+        rl(_box_line(f"  {board.buckets_defined} buckets defined — no completed trades yet"))
+        _box_end()
+        return
+
+    rl(_box_line(
+        f"  All-time  trades={board.total_exits}  buckets={board.buckets_with_exits}"
+        f"  win={board.win_rate_pct:.0f}%"
+    ))
+    rl(_box_line(
+        f"  Returns   avg={board.avg_return_pct:+.1f}%  med={board.med_return_pct:+.1f}%"
+        f"  p10={board.p10_return_pct:+.1f}%  p90={board.p90_return_pct:+.1f}%"
+    ))
+    rl(_box_line(f"  Realized  ${board.total_realized_usd:+,.2f}"))
+    if today_board.total_exits:
+        rl(_box_line(
+            f"  Today     trades={today_board.total_exits}  "
+            f"avg={today_board.avg_return_pct:+.1f}%  "
+            f"med={today_board.med_return_pct:+.1f}%  "
+            f"real=${today_board.total_realized_usd:+,.2f}"
+        ))
+
+    rl(_box_border("-"))
+    rl(_box_line("  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$"))
+    rl(_box_border("-"))
+    for row in board.rows[:top_n]:
+        prof = row.profile[:18]
+        win_pct = 100.0 * row.wins / row.exits if row.exits else 0.0
+        rl(_box_line(
+            f"  b{row.bucket_id:<3d} {prof:18s} {row.exits:2d} "
+            f"{win_pct:3.0f}% {row.avg_return_pct:+5.1f} {row.med_return_pct:+5.1f} "
+            f"{row.best_return_pct:+5.1f} ${row.realized_usd:+7.0f}"
+        ))
+    omitted = len(board.rows) - min(top_n, len(board.rows))
+    if omitted > 0:
+        rl(_box_line(f"  ... {omitted} more bucket(s) with exits"))
+    if len(board.rows) >= 3:
+        worst = board.rows[-1]
+        wprof = worst.profile[:18]
+        wwin = 100.0 * worst.wins / worst.exits if worst.exits else 0.0
+        rl(_box_border("-"))
+        rl(_box_line(
+            f"  Low  b{worst.bucket_id:<3d} {wprof:18s} {worst.exits:2d} "
+            f"{wwin:3.0f}% {worst.avg_return_pct:+5.1f} {worst.med_return_pct:+5.1f} "
+            f"{worst.worst_return_pct:+5.1f} ${worst.realized_usd:+7.0f}"
+        ))
     _box_end()
 
 
@@ -307,7 +391,7 @@ def scan_all_signals(stock, universe: list[str]) -> list[SignalHit]:
     """Scan universe; one hit per symbol (highest-priority strategy wins)."""
     out: list[SignalHit] = []
     start = datetime.now(ET) - timedelta(days=SCAN_LOOKBACK_DAYS)
-    df, failed = _fetch_daily_bars(stock, universe, start)
+    df, failed = _fetch_daily_bars_cached(stock, universe, start)
     if df is None or df.empty:
         rl("ERROR fetching daily bars for scan: no data returned")
         return out
@@ -389,6 +473,45 @@ def _fetch_daily_bars(stock, universe: list[str], start: datetime):
     if combined.index.duplicated().any():
         combined = combined[~combined.index.duplicated(keep="last")]
     return combined, failed
+
+
+def _fetch_daily_bars_cached(stock, universe: list[str], start: datetime):
+    """Session cache: daily bars keyed by calendar day (ET)."""
+    key = TODAY.isoformat()
+    if key in _BARS_CACHE:
+        rl_file(f"  Daily bars cache hit ({key})")
+        return _BARS_CACHE[key]
+    result = _fetch_daily_bars(stock, universe, start)
+    _BARS_CACHE[key] = result
+    return result
+
+
+def _entries_blocked(state: LabState, signals: list[SignalHit], equity: float,
+                     now: datetime, trade) -> bool:
+    """True when no bucket can accept a new entry this run."""
+    if not signals:
+        return True
+    for hit in signals:
+        strat = _strategy_by_id(hit.strategy_id)
+        if not strat:
+            continue
+        for arm in arms_for_signal(hit.strategy_id, equity):
+            if not _arm_entry_window_open(arm, now):
+                continue
+            if state.bucket_has_strategy(arm.bucket_id, hit.strategy_id):
+                continue
+            if state.pending_for_bucket_strategy(arm.bucket_id, hit.strategy_id):
+                continue
+            if state.pending_for_bucket_underlying(arm.bucket_id, hit.symbol):
+                continue
+            if state.entry_slot_locked(arm.bucket_id, hit.strategy_id):
+                continue
+            if has_open_lab_entry(trade, arm.bucket_id, hit.strategy_id):
+                continue
+            if state.bucket_holds_underlying(arm.bucket_id, hit.symbol):
+                continue
+            return False
+    return True
 
 
 # --------------------------------------------------------------------------- #
@@ -681,6 +804,9 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
     skip_locked = skip_open = skip_pending = 0
     chain_cache: dict = {}
     oi_cache: dict = {}
+    if _entries_blocked(state, signals, equity, now, trade):
+        rl("  All bucket slots blocked or closed for today's signals — skip entry loop.")
+        return 0
     for hit in signals:
         if placed >= MAX_NEW_ENTRIES_PER_RUN:
             break
@@ -911,6 +1037,9 @@ def log_run_json(now: datetime, mode: str, *, header: str, elapsed_s: float,
     """Append one structured run record for fast review/parsing."""
     try:
         trial_root().mkdir(parents=True, exist_ok=True)
+        rec_sum = reconcile_summary(state, positions)
+        run_no = os.getenv("GITHUB_RUN_NUMBER", "")
+        run_id = os.getenv("GITHUB_RUN_ID", "")
         rec = {
             "ts_et": now.isoformat(),
             "date": TODAY.isoformat(),
@@ -922,15 +1051,30 @@ def log_run_json(now: datetime, mode: str, *, header: str, elapsed_s: float,
             "placed": placed,
             "equity": round(equity, 2) if equity is not None else None,
             "open_positions": len(positions),
-            "pending_orders": len(state.pending_orders),
-            "open_lots": sum(1 for l in state.lots if l.qty > 0),
+            "pending_orders": rec_sum.get("pending_orders", 0),
+            "open_lots": rec_sum.get("open_lots", 0),
+            "submitted_today": rec_sum.get("submitted_today", 0),
+            "filled_today": rec_sum.get("filled_today", 0),
+            "unattributed_contracts": rec_sum.get("unattributed_contracts", 0),
             "top_signals": top_signals[:12],
+            "github_run": run_no,
+            "github_run_id": run_id,
             "status": "ok",
         }
         with open(RUNS_JSONL, "a", encoding="utf-8") as f:
             f.write(json.dumps(rec, separators=(",", ":")) + "\n")
     except Exception as exc:
         log.error("Failed to write runs.jsonl: %s", exc)
+
+
+def _status_line(label: str, elapsed: float) -> None:
+    run_no = os.getenv("GITHUB_RUN_NUMBER", "")
+    repo = os.getenv("GITHUB_REPOSITORY", "")
+    run_id = os.getenv("GITHUB_RUN_ID", "")
+    extra = ""
+    if run_no and repo and run_id:
+        extra = f" run=#{run_no} https://github.com/{repo}/actions/runs/{run_id}"
+    print(f"STATUS: {label} elapsed={elapsed}s.{extra}", flush=True)
 
 
 # --------------------------------------------------------------------------- #
@@ -976,7 +1120,11 @@ def run() -> int:
         print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=None, compact=True)
         section("Portfolio snapshot")
         print_trial_stats(state, equity, positions, file_fn=rl_file, console_fn=None, compact=True)
-        _console_account_summary(state, equity, positions, mode="after_hours", signals=0, placed=0)
+        rec = reconcile_summary(state, positions)
+        _console_account_summary(state, equity, positions, mode="after_hours",
+                                 signals=0, placed=0, rec=rec)
+        _console_bucket_leaderboard(state)
+        _console_pending_summary(state)
         _console_positions_table(positions)
         rl(f"Full detail: logs/options_trial/runs/{TODAY.isoformat()}.log")
         elapsed = _finish_run(now, "after hours (exit summary)", "after_hours",
@@ -984,21 +1132,19 @@ def run() -> int:
         log_run_json(now, "after_hours", header="after hours (exit summary)",
                      elapsed_s=elapsed, signals=0, placed=0, equity=equity,
                      positions=positions, state=state, top_signals=[])
-        print(f"STATUS: options_morning_bot after-hours summary (PAPER) "
-              f"elapsed={elapsed}s.", flush=True)
+        _status_line("options_morning_bot after-hours summary (PAPER)", elapsed)
         return 0
 
     trade, opt, stock, ref = get_clients()
 
     if not verify_paper_auth(trade):
         state = load_state()
-        print_trial_stats(state, None, [], file_fn=rl_file, console_fn=rl)
+        print_trial_stats(state, None, [], file_fn=rl_file, console_fn=None)
         elapsed = _finish_run(now, "FATAL auth failed (wrong keys?)", "auth_failed")
         log_run_json(now, "auth_failed", header="FATAL auth failed (wrong keys?)",
                      elapsed_s=elapsed, signals=0, placed=0, equity=None,
                      positions=[], state=state, top_signals=[])
-        print(f"STATUS: options_morning_bot auth failed (PAPER) elapsed={elapsed}s.",
-              flush=True)
+        _status_line("options_morning_bot auth failed (PAPER)", elapsed)
         return 1
 
     equity = _snapshot_equity(trade)
@@ -1053,12 +1199,16 @@ def run() -> int:
         mode = "manage-only"
 
     positions = _position_snapshots(trade)
+    rec = reconcile_summary(state, positions)
     section("Portfolio snapshot")
     print_trial_stats(state, equity, positions, file_fn=rl_file, console_fn=None, compact=True)
     if _hm_ge(now, (16, 0)):
         section("Exit summary")
         print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=None, compact=True)
-    _console_account_summary(state, equity, positions, mode=mode, signals=signals_n, placed=placed)
+    _console_account_summary(state, equity, positions, mode=mode, signals=signals_n,
+                             placed=placed, rec=rec)
+    _console_bucket_leaderboard(state)
+    _console_pending_summary(state)
     _console_positions_table(positions)
     rl(f"Full detail: logs/options_trial/runs/{TODAY.isoformat()}.log")
     elapsed = _finish_run(now, header, mode, signals=signals_n, placed=placed,
@@ -1066,8 +1216,7 @@ def run() -> int:
     log_run_json(now, mode, header=header, elapsed_s=elapsed, signals=signals_n,
                  placed=placed, equity=equity, positions=positions, state=state,
                  top_signals=top_signals)
-    print(f"STATUS: options_morning_bot run complete (PAPER) elapsed={elapsed}s.",
-          flush=True)
+    _status_line("options_morning_bot run complete (PAPER)", elapsed)
     return 0
 
 

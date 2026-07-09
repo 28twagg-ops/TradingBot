@@ -74,8 +74,12 @@ def _percentile(vals: list[float], p: float) -> float:
 
 
 def _recommend(exits: int, med_ret: float, p10: float, top_symbol_share_pct: float) -> tuple[str, str]:
-    if exits < 12:
-        return "watch", "insufficient sample (<12 exits)"
+    if exits < 8:
+        return "watch", "insufficient sample (<8 exits)"
+    if exits < 20:
+        if med_ret <= 0:
+            return "watch", "early sample with non-positive median"
+        return "watch", "building sample (8-19 exits)"
     if med_ret <= 0:
         return "drop", "non-positive median return"
     if p10 < -45:
@@ -84,6 +88,8 @@ def _recommend(exits: int, med_ret: float, p10: float, top_symbol_share_pct: flo
         return "watch", "too concentrated in one symbol"
     if exits >= 30 and med_ret > 0 and p10 >= -35 and top_symbol_share_pct < 50:
         return "keep", "enough sample + positive median + acceptable tail/concentration"
+    if exits >= 20 and med_ret > 5 and p10 >= -40:
+        return "watch", "promising mid-sample — need more exits"
     return "watch", "promising but needs larger sample"
 
 

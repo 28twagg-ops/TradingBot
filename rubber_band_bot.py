@@ -2612,6 +2612,24 @@ def _plan_usable(plan, mode_name, rgm, month, positions=None, open_sell_orders=N
     return True, f"fresh ({age_min:.1f}m)"
 
 
+def _plan_signals_cacheable(plan, mode_name, rgm, month):
+    """Signals-only cache: ignore position changes (exits still evaluated live)."""
+    if not plan:
+        return False, "missing"
+    age_min = _plan_fresh_minutes(plan)
+    if age_min is None:
+        return False, "no timestamp"
+    if age_min > PLAN_MAX_AGE_MIN:
+        return False, f"stale ({age_min:.1f}m)"
+    if plan.get("mode_name") != mode_name:
+        return False, "mode mismatch"
+    if plan.get("regime") != rgm:
+        return False, "regime changed"
+    if int(plan.get("month", -1)) != int(month):
+        return False, "month changed"
+    return True, f"signals fresh ({age_min:.1f}m)"
+
+
 def build_plan(client, equity, cash, rgm, mode_name):
     """
     Build a cached plan with:
@@ -3291,8 +3309,11 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         positions=positions,
         open_sell_orders=live_open_sell_orders,
     )
+    signals_cache_ok, signals_note = _plan_signals_cacheable(
+        cached_plan, plan_mode_name, rgm, month)
     if not USE_TWO_PHASE_PLAN:
         plan_ok = False
+        signals_cache_ok = False
         plan_note = "disabled (parity mode)"
 
     hdr(f"HOLDINGS  ({len(positions)} open)")
@@ -3337,6 +3358,9 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     row("Use cached plan", f"{'yes' if plan_ok else 'no'} ({plan_note})")
     if plan_ok:
         row("Cached exits", str(len(cached_plan.get("exit_plan", []))))
+        row("Cached signals", str(len(cached_plan.get("signals", []))))
+    if not plan_ok and signals_cache_ok:
+        row("Use cached signals", f"yes ({signals_note}; positions refreshed live)")
         row("Cached signals", str(len(cached_plan.get("signals", []))))
     ftr()
 
@@ -3573,6 +3597,16 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         row(f"Month: {MN[month]}  |  Regime: {rgm.upper()}")
         row(f"Primary: {sc['p']}  |  Secondary: {sc['s']}")
         row("Source", "cached prep plan")
+        row("Universe scanned in prep", str(cached_plan.get("scan_universe_count", 0)))
+        ftr()
+    elif signals_cache_ok:
+        all_data = {}
+        scan = []
+        all_sigs = list(cached_plan.get("signals", []))
+        hdr("SIGNAL SCAN")
+        row(f"Month: {MN[month]}  |  Regime: {rgm.upper()}")
+        row(f"Primary: {sc['p']}  |  Secondary: {sc['s']}")
+        row("Source", f"cached signals ({signals_note})")
         row("Universe scanned in prep", str(cached_plan.get("scan_universe_count", 0)))
         ftr()
     else:
@@ -3836,7 +3870,8 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     ftr()
 
     scan_run_mode = "scan_morning" if mode_name == "morning_scan" else "scan_evening"
-    log_run(scan_run_mode, rgm, eq2, ca2, len(all_sigs), entries, exits, pos2, cache_hit=plan_ok)
+    log_run(scan_run_mode, rgm, eq2, ca2, len(all_sigs), entries, exits, pos2,
+            cache_hit=(plan_ok or signals_cache_ok))
     write_daily(today, eq2, ca2, rgm, month, pos2, all_sigs, buys_log, sells_log)
     write_dashboard()
     if ab_test_active() or ab_load_registry().get("entries"):

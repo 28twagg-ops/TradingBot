@@ -24,12 +24,14 @@ from __future__ import annotations
 import csv
 import itertools
 import json
+import logging
 import os
 import re
 import uuid
 from dataclasses import asdict, dataclass, field, fields
 from datetime import date, datetime, timedelta
 from pathlib import Path
+from statistics import mean, median
 from typing import Any
 
 # Each bucket is a fixed $500 virtual experiment cell (paper treats equity as unlimited).
@@ -38,7 +40,12 @@ VIRTUAL_BUCKET_USD = float(os.environ.get("OPTIONS_VIRTUAL_BUCKET_USD", "500"))
 PAPER_UNLIMITED_BUCKETS = os.environ.get("OPTIONS_PAPER_UNLIMITED", "1") != "0"
 TARGET_BUCKET_PROFILES = int(os.environ.get("OPTIONS_BUCKET_COUNT", "100"))
 CONTROLLED_LAYOUT = os.environ.get("OPTIONS_CONTROLLED_LAYOUT", "0") == "1"
-STATE_VERSION = 4
+STATE_VERSION = 5
+
+ORPHAN_BUCKET_ID = 0
+ORPHAN_PROFILE = "orphan_reconcile"
+ORPHAN_STRATEGY = "ORPHAN"
+ORDER_FETCH_LIMIT = 500
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRIAL_ROOT = REPO_ROOT / "logs" / "options_trial"
@@ -212,6 +219,12 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
 
 BUCKET_EXPERIMENTS: list[BucketProfile] = _build_bucket_experiments()
 
+
+def experiment_layout_id() -> str:
+    mode = "controlled" if CONTROLLED_LAYOUT else "grid"
+    head = BUCKET_EXPERIMENTS[0].name if BUCKET_EXPERIMENTS else "none"
+    return f"{mode}:{len(BUCKET_EXPERIMENTS)}:{head}"
+
 # Per-strategy tweaks layered on top of bucket profile (signal-specific narrowing).
 STRATEGY_TWEAKS: dict[str, dict[str, Any]] = {
     "S173": {"max_premium": 100, "account_cap": 0.25, "take_profit": 0.60, "stop_loss": -0.40},
@@ -300,6 +313,8 @@ class LabState:
     session_date: str = ""
     entries_locked: list[str] = field(default_factory=list)
     processed_orders: list[str] = field(default_factory=list)
+    submitted_today: int = 0
+    layout_id: str = ""
 
     def open_premium_for_bucket(self, bucket_id: int) -> float:
         return float(self.bucket_open_premium.get(f"b{bucket_id}", 0.0))
@@ -340,6 +355,7 @@ def rollover_session(state: LabState) -> None:
     if state.session_date != today:
         state.session_date = today
         state.entries_locked = []
+        state.submitted_today = 0
 
 
 def lock_entry_slot(state: LabState, bucket_id: int, strategy_id: str) -> None:
@@ -614,8 +630,11 @@ def load_state() -> LabState:
             session_date=raw.get("session_date", ""),
             entries_locked=list(raw.get("entries_locked", [])),
             processed_orders=list(raw.get("processed_orders", [])),
+            submitted_today=int(raw.get("submitted_today", 0) or 0),
+            layout_id=str(raw.get("layout_id", "") or ""),
         )
         rollover_session(st)
+        sync_state_layout(st)
         _rebuild_bucket_premium(st)
         return st
     except Exception:
@@ -633,6 +652,8 @@ def save_state(state: LabState) -> None:
         "session_date": state.session_date or date.today().isoformat(),
         "entries_locked": list(state.entries_locked),
         "processed_orders": list(state.processed_orders),
+        "submitted_today": state.submitted_today,
+        "layout_id": state.layout_id or experiment_layout_id(),
         "updated": date.today().isoformat(),
     }
     STATE_PATH.write_text(json.dumps(payload, indent=2), encoding="utf-8")
@@ -655,6 +676,54 @@ def _write_buckets_snapshot(state: LabState) -> None:
 
 def new_lot_id() -> str:
     return uuid.uuid4().hex[:12]
+
+
+def sync_state_layout(state: LabState) -> str | None:
+    """Record experiment layout changes without wiping open lots."""
+    current = experiment_layout_id()
+    if state.layout_id and state.layout_id != current:
+        return f"layout changed {state.layout_id} -> {current}"
+    state.layout_id = current
+    return None
+
+
+def count_filled_entries_today(rows: list[dict] | None = None) -> int:
+    today = date.today().isoformat()
+    if rows is None:
+        rows = _read_ledger_rows()
+    n = 0
+    for r in rows:
+        if r.get("event") != "entry":
+            continue
+        ts = str(r.get("ts", ""))
+        if ts.startswith(today) or str(r.get("date", "")) == today:
+            n += 1
+    return n
+
+
+def reconcile_summary(state: LabState, positions: list[dict] | None) -> dict[str, Any]:
+    """Lightweight stats for console summary."""
+    open_lots = sum(1 for l in state.lots if l.qty > 0)
+    orphan_lots = sum(
+        1 for l in state.lots
+        if l.qty > 0 and l.strategy_id == ORPHAN_STRATEGY
+    )
+    broker_n = len(positions or [])
+    lot_qty = sum(l.qty for l in state.lots if l.qty > 0)
+    broker_qty = sum(int(p.get("qty", 0) or 0) for p in (positions or []))
+    unattributed = max(0, broker_qty - lot_qty)
+    rows = _read_ledger_rows()
+    return {
+        "open_lots": open_lots,
+        "orphan_lots": orphan_lots,
+        "broker_positions": broker_n,
+        "broker_contracts": broker_qty,
+        "virtual_contracts": lot_qty,
+        "unattributed_contracts": unattributed,
+        "pending_orders": len(state.pending_orders),
+        "submitted_today": state.submitted_today,
+        "filled_today": count_filled_entries_today(rows),
+    }
 
 
 def register_pending(state: LabState, arm: EffectiveArm, occ: str, underlying: str,
@@ -680,6 +749,7 @@ def register_pending(state: LabState, arm: EffectiveArm, occ: str, underlying: s
         take_profit=arm.take_profit,
         stop_loss=arm.stop_loss,
     ))
+    state.submitted_today += 1
     save_state(state)
 
 
@@ -1388,6 +1458,157 @@ def format_trial_stats(
     return lines
 
 
+@dataclass
+class BucketStatsRow:
+    bucket_id: int
+    profile: str
+    exits: int
+    wins: int
+    avg_return_pct: float
+    med_return_pct: float
+    best_return_pct: float
+    worst_return_pct: float
+    realized_usd: float
+
+
+@dataclass
+class BucketLeaderboard:
+    buckets_defined: int
+    buckets_with_exits: int
+    total_exits: int
+    win_rate_pct: float
+    avg_return_pct: float
+    med_return_pct: float
+    p10_return_pct: float
+    p90_return_pct: float
+    total_realized_usd: float
+    rows: list[BucketStatsRow]
+
+
+def _percentile(vals: list[float], p: float) -> float:
+    if not vals:
+        return 0.0
+    xs = sorted(vals)
+    if len(xs) == 1:
+        return xs[0]
+    idx = (len(xs) - 1) * p / 100.0
+    lo = int(idx)
+    hi = min(lo + 1, len(xs) - 1)
+    frac = idx - lo
+    return xs[lo] * (1 - frac) + xs[hi] * frac
+
+
+def _exit_pnl_usd(r: dict, lots: dict[str, dict]) -> float:
+    if r.get("pnl_usd"):
+        try:
+            return float(r["pnl_usd"])
+        except (TypeError, ValueError):
+            pass
+    lot_id = r.get("lot_id") or ""
+    try:
+        ret = float(r.get("return_pct") or 0)
+    except (TypeError, ValueError):
+        return 0.0
+    if not lot_id or not ret:
+        return 0.0
+    lot = lots.get(lot_id)
+    if not lot:
+        try:
+            return float(r.get("cost") or 0) * ret / 100.0
+        except (TypeError, ValueError):
+            return 0.0
+    try:
+        qty = max(1, int(float(r.get("qty") or 1)))
+        entry_qty = max(1, lot.get("qty", 1))
+        cost = lot.get("cost", 0.0)
+        return cost * (qty / entry_qty) * ret / 100.0
+    except (TypeError, ValueError, ZeroDivisionError):
+        return 0.0
+
+
+def build_bucket_leaderboard(
+    state: LabState | None = None,
+    *,
+    day: str | None = None,
+) -> BucketLeaderboard:
+    """Per-bucket exit stats ranked by median return (best first)."""
+    del state  # reserved for future open-P&L attribution per bucket
+    rows = _read_ledger_rows()
+    lots: dict[str, dict] = {}
+    for r in rows:
+        if r.get("event") == "entry" and r.get("lot_id"):
+            try:
+                lots[r["lot_id"]] = {
+                    "cost": float(r.get("cost") or 0),
+                    "qty": max(1, int(float(r.get("qty") or 1))),
+                }
+            except (TypeError, ValueError):
+                pass
+
+    exits_by_bucket: dict[int, list[dict]] = {}
+    for r in rows:
+        if r.get("event") != "exit":
+            continue
+        if day and not (str(r.get("ts", "")).startswith(day)
+                        or str(r.get("date", "")) == day):
+            continue
+        try:
+            bid = int(r.get("bucket_id", -1))
+        except (TypeError, ValueError):
+            continue
+        exits_by_bucket.setdefault(bid, []).append(r)
+
+    stat_rows: list[BucketStatsRow] = []
+    all_rets: list[float] = []
+    total_realized = 0.0
+    total_exits = 0
+    total_wins = 0
+
+    profile_by_id = {b.bucket_id: b.name for b in BUCKET_EXPERIMENTS}
+    for bid, exs in exits_by_bucket.items():
+        rets: list[float] = []
+        for x in exs:
+            try:
+                rets.append(float(x["return_pct"]))
+            except (TypeError, ValueError):
+                pass
+        if not rets:
+            continue
+        pnls = [_exit_pnl_usd(x, lots) for x in exs]
+        realized = sum(pnls)
+        wins = sum(1 for x in rets if x > 0)
+        total_exits += len(rets)
+        total_wins += wins
+        total_realized += realized
+        all_rets.extend(rets)
+        stat_rows.append(BucketStatsRow(
+            bucket_id=bid,
+            profile=profile_by_id.get(bid, exs[0].get("profile", "?")),
+            exits=len(rets),
+            wins=wins,
+            avg_return_pct=mean(rets),
+            med_return_pct=median(rets),
+            best_return_pct=max(rets),
+            worst_return_pct=min(rets),
+            realized_usd=realized,
+        ))
+
+    stat_rows.sort(key=lambda r: (r.med_return_pct, r.exits, r.realized_usd), reverse=True)
+    win_rate = 100.0 * total_wins / total_exits if total_exits else 0.0
+    return BucketLeaderboard(
+        buckets_defined=len(BUCKET_EXPERIMENTS),
+        buckets_with_exits=len(stat_rows),
+        total_exits=total_exits,
+        win_rate_pct=win_rate,
+        avg_return_pct=mean(all_rets) if all_rets else 0.0,
+        med_return_pct=median(all_rets) if all_rets else 0.0,
+        p10_return_pct=_percentile(all_rets, 10),
+        p90_return_pct=_percentile(all_rets, 90),
+        total_realized_usd=total_realized,
+        rows=stat_rows,
+    )
+
+
 def print_trial_stats(
     state: LabState,
     equity: float | None = None,
@@ -1425,36 +1646,89 @@ def print_trial_stats(
             log_fn(line)
 
 
+def _occ_underlying(occ: str) -> str:
+    m = re.match(r"^([A-Z]+)", occ or "")
+    return m.group(1) if m else (occ or "")[:4]
+
+
+def _fetch_lab_orders(trade) -> tuple[list, list]:
+    from alpaca.trading.requests import GetOrdersRequest
+    from alpaca.trading.enums import QueryOrderStatus
+
+    closed_orders: list = []
+    open_orders: list = []
+    try:
+        closed_orders = list(trade.get_orders(
+            GetOrdersRequest(status=QueryOrderStatus.CLOSED, limit=ORDER_FETCH_LIMIT)) or [])
+        open_orders = list(trade.get_orders(
+            GetOrdersRequest(status=QueryOrderStatus.OPEN, limit=ORDER_FETCH_LIMIT)) or [])
+    except Exception as exc:
+        log = logging.getLogger("options_lab")
+        log.warning("order fetch failed: %s", exc)
+    return closed_orders, open_orders
+
+
+def _create_orphan_lot(state: LabState, occ: str, pos, qty: int, *, log_fn) -> None:
+    if qty <= 0:
+        return
+    orphan_key = f"orphan:{occ}"
+    if any(l.occ_symbol == occ and l.entry_order_id == orphan_key and l.qty > 0
+           for l in state.lots):
+        return
+    try:
+        total_qty = max(1, int(float(getattr(pos, "qty", 0) or 0)))
+    except (TypeError, ValueError):
+        total_qty = max(1, qty)
+    try:
+        cost_basis = abs(float(getattr(pos, "cost_basis", 0) or 0))
+    except (TypeError, ValueError):
+        cost_basis = 0.0
+    entry_cost = cost_basis * (qty / total_qty) if total_qty else 0.0
+    entry_price = entry_cost / (qty * 100) if qty else 0.0
+    lot = VirtualLot(
+        lot_id=new_lot_id(),
+        bucket_id=ORPHAN_BUCKET_ID,
+        profile_name=ORPHAN_PROFILE,
+        strategy_id=ORPHAN_STRATEGY,
+        occ_symbol=occ,
+        underlying=_occ_underlying(occ),
+        qty=qty,
+        entry_cost=entry_cost,
+        entry_price=entry_price,
+        buy_limit_offset=-0.01,
+        sell_limit_offset=-0.01,
+        take_profit=0.50,
+        stop_loss=-0.50,
+        entry_date=date.today().isoformat(),
+        entry_order_id=orphan_key,
+    )
+    state.lots.append(lot)
+    log_fn(f"  reconcile: orphan lot b{ORPHAN_BUCKET_ID} {occ} x{qty} "
+           f"@ {entry_price:.2f} (legacy/unattributed)")
+
+
 def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
     """
     Sync virtual lots with Alpaca positions and LAB-tagged order fills.
     Entries create lots on fill only; exits attribute via LX client_order_id.
     """
-    from alpaca.trading.requests import GetOrdersRequest
-    from alpaca.trading.enums import QueryOrderStatus
-
     occ_re = re.compile(r"^[A-Z]+\d{6}[CP]\d{8}$")
 
     def _is_opt(sym: str) -> bool:
         return bool(occ_re.match(sym or ""))
 
     rollover_session(state)
+    layout_note = sync_state_layout(state)
+    if layout_note:
+        log_fn(f"  reconcile: {layout_note}")
 
     try:
         equity = float(trade.get_account().equity)
     except Exception:
         equity = VIRTUAL_BUCKET_USD
 
-    closed_orders: list = []
-    open_orders: list = []
-    try:
-        closed_orders = list(trade.get_orders(
-            GetOrdersRequest(status=QueryOrderStatus.CLOSED, limit=200)) or [])
-        open_orders = list(trade.get_orders(
-            GetOrdersRequest(status=QueryOrderStatus.OPEN, limit=200)) or [])
-    except Exception as exc:
-        log_fn(f"  reconcile: order read failed: {exc}")
-
+    closed_orders, open_orders = _fetch_lab_orders(trade)
+    all_orders = closed_orders + open_orders
     open_ids = {str(getattr(o, "id", "")) for o in open_orders}
 
     def _process_entry_fill(o) -> None:
@@ -1479,7 +1753,7 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
         strat = parsed["strategy_id"]
         bucket = next((b for b in BUCKET_EXPERIMENTS if b.bucket_id == bucket_id), None)
         if not bucket:
-            return
+            bucket = BucketProfile(bucket_id=bucket_id, name=f"b{bucket_id}")
         arm = _merge_arm(bucket, strat, equity)
         try:
             fill_px = float(getattr(o, "filled_avg_price", 0) or 0)
@@ -1542,8 +1816,8 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
         log_fn(f"  reconcile: exit fill b{lot.bucket_id}|{lot.strategy_id} "
                f"{lot.underlying} {return_pct:+.1f}%")
 
-    # --- 1) Process filled LAB entry + exit orders ---
-    for o in closed_orders:
+    # --- 1) Process filled LAB entry + exit orders (closed + open) ---
+    for o in all_orders:
         _process_entry_fill(o)
         _process_exit_fill(o)
 
@@ -1580,7 +1854,7 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
         need = pos_qty - lot_qty
         if need <= 0:
             continue
-        for o in closed_orders:
+        for o in all_orders:
             if need <= 0:
                 break
             if getattr(o, "symbol", "") != occ:
@@ -1633,8 +1907,21 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
             log_fn(f"  reconcile: trimmed {occ} lots to match pos qty {pos_qty}")
         elif lot_qty < pos_qty:
             orphan = pos_qty - lot_qty
-            log_fn(f"  reconcile: WARNING {occ} broker qty {pos_qty} > "
-                   f"virtual {lot_qty} (unattributed qty={orphan})")
+            # Try pending orders for this contract before orphan bucket.
+            for p in list(state.pending_orders):
+                if orphan <= 0 or p.occ_symbol != occ:
+                    continue
+                oid = p.order_id
+                order = next((o for o in all_orders if str(o.id) == oid), None)
+                if order is None:
+                    continue
+                status = str(getattr(order, "status", "") or "").lower()
+                if status not in ("filled", "partially_filled"):
+                    continue
+                _process_entry_fill(order)
+                orphan = pos_qty - sum(l.qty for l in state.lots_for_occ(occ))
+            if orphan > 0:
+                _create_orphan_lot(state, occ, pos, orphan, log_fn=log_fn)
 
     # --- 7) Clear stale pending (>1 day) ---
     cutoff = (date.today() - timedelta(days=1)).isoformat()

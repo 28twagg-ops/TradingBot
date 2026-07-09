@@ -9,15 +9,24 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from options_lab import (
     BUCKET_EXPERIMENTS, STRATEGY_TWEAKS, PAPER_UNLIMITED_BUCKETS, VIRTUAL_BUCKET_USD,
-    bucket_dir, ensure_trial_layout, trial_root,
+    bucket_dir, ensure_trial_layout, experiment_layout_id, load_state, save_state,
+    sync_state_layout, trial_root,
 )
+from local_docs import local_docs
 
 GIT = Path(__file__).resolve().parent.parent
-DOCS = GIT.parent / "TradingBot" / "docs" / "options_trial"
+DOCS = local_docs("options_trial")
 
 
 def main() -> int:
     ensure_trial_layout()
+    state = load_state()
+    note = sync_state_layout(state)
+    if note:
+        save_state(state)
+        print(f"Layout: {experiment_layout_id()} ({note})")
+    else:
+        print(f"Layout: {experiment_layout_id()}")
     DOCS.mkdir(parents=True, exist_ok=True)
 
     index = [
