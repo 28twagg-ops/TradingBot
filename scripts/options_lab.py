@@ -561,7 +561,10 @@ def exit_limit_price(lot: VirtualLot, bid: float, ask: float, mid: float) -> flo
 def make_entry_client_order_id(bucket_id: int, strategy_id: str,
                                today: date | None = None) -> str:
     d = (today or date.today()).strftime("%Y%m%d")
-    return f"LB{bucket_id}|{strategy_id}|{d}"[:48]
+    # Alpaca enforces uniqueness on client_order_id. Keep stable prefix for
+    # grouping, but append a short nonce so repeated retries/signals don't clash.
+    nonce = uuid.uuid4().hex[:6]
+    return f"LB{bucket_id}|{strategy_id}|{d}|{nonce}"[:48]
 
 
 def make_exit_client_order_id(bucket_id: int, strategy_id: str, lot_id: str) -> str:
