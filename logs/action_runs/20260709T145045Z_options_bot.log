@@ -1,0 +1,54 @@
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         /home/runner/work/TradingBot/TradingBot/docs/options_trial
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-09T10:50:51.078189-04:00 ===
+
+[Run context]
+Paper auth OK — equity $140219.37, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S174, S165, S166, S163
+
+[Scan + entries]
+Scanning 903 symbols for [S173, S174, S165, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 71 signal(s); top: ['S173:ACN', 'S173:ADBE', 'S173:AMZN', 'S173:APP', 'S173:ADSK', 'S173:ADP', 'S173:AXON', 'S173:CHTR']
+Paper lab: $141107 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+  Skipped: 349 already attempted today, 5 pending order
+Placed 1 new entry order(s).
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          entry+manage                            |
+|  Equity                        $140,219.37                             |
+|  Signals this run              71                                      |
+|  Entries placed                1                                       |
+|  Open option positions         18                                      |
+|  Pending orders                2                                       |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (18)                                                     |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  AVGO260710C00400000          49   +411.5%   $+11,274.00               |
+|  GOOGL260710C00365000         75    -58.5%   $ -3,593.99               |
+|  CCL260717C00026000           93    +46.5%   $ +3,249.00               |
+|  ANET260710C00185000          22   +446.3%   $ +2,678.00               |
+|  MRNA260710C00085000          54    -61.1%   $ -1,019.00               |
+|  PLTR260710C00136000          24    -84.6%   $   -660.00               |
+|  GOOGL260710C00367500         24    -55.8%   $   -576.00               |
+|  BA260710C00237500            22    -85.8%   $   -400.00               |
+|  ... 10 more position(s)                                               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-09.log
+elapsed=37.4s reconcile=0.37s cancel=0.07s manage=0.08s scan=35.12s entries=1.07s
+STATUS: options_morning_bot run complete (PAPER) elapsed=37.4s.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_strategy_selection.csv
+Summary: keep=0 watch=5 drop=0
