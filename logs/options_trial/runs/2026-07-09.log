@@ -837,3 +837,215 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-07-09.log
 elapsed=22.9s reconcile=0.31s cancel=0.06s manage=0.06s scan=18.34s entries=3.72s
 
+=== 09:54:20 ET — entry+manage (0 new) [elapsed=36.8s reconcile=0.37s cancel=0.07s manage=0.17s scan=31.89s entries=3.9s] ===
+=== options_morning_bot (PAPER) 2026-07-09T09:54:20.780610-04:00 ===
+
+[Run context]
+Paper auth OK — equity $159912.11, account PA36KS87UPRS
+  reconcile: cleared 53 resolved pending order(s)
+  reconcile: WARNING ADBE260710C00225000 broker qty 1 > virtual 0 (unattributed qty=1)
+  reconcile: WARNING ANET260710C00185000 broker qty 22 > virtual 0 (unattributed qty=22)
+  reconcile: WARNING AVGO260710C00400000 broker qty 49 > virtual 0 (unattributed qty=49)
+  reconcile: WARNING BA260710C00237500 broker qty 22 > virtual 0 (unattributed qty=22)
+  reconcile: WARNING BA260710C00240000 broker qty 22 > virtual 0 (unattributed qty=22)
+  reconcile: WARNING BA260710C00242500 broker qty 29 > virtual 0 (unattributed qty=29)
+  reconcile: WARNING CCL260710C00026000 broker qty 7 > virtual 0 (unattributed qty=7)
+  reconcile: WARNING CCL260717C00026000 broker qty 93 > virtual 0 (unattributed qty=93)
+  reconcile: WARNING GOOGL260710C00365000 broker qty 75 > virtual 0 (unattributed qty=75)
+  reconcile: WARNING GOOGL260710C00367500 broker qty 8 > virtual 0 (unattributed qty=8)
+  reconcile: WARNING INTC260710C00118000 broker qty 25 > virtual 0 (unattributed qty=25)
+  reconcile: WARNING INTC260710C00119000 broker qty 24 > virtual 0 (unattributed qty=24)
+  reconcile: WARNING MRNA260710C00085000 broker qty 54 > virtual 0 (unattributed qty=54)
+  reconcile: WARNING PLTR260710C00131000 broker qty 5 > virtual 0 (unattributed qty=5)
+  reconcile: WARNING PLTR260710C00136000 broker qty 24 > virtual 0 (unattributed qty=24)
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S174, S165, S166, S163
+
+[Scan + entries]
+Scanning 903 symbols for [S173, S174, S165, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 71 signal(s); top: ['S173:ACN', 'S173:ADBE', 'S173:GOOGL', 'S173:GOOG', 'S173:AMZN', 'S173:APP', 'S173:ADSK', 'S173:ADP']
+Paper lab: $159557 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+  [b4|c004_s174_w1_0928_1005_r1] S174 PEP: no tradeable call
+  [b24|c024_s174_w1_0928_1005_r2] S174 PEP: no tradeable call
+  [b44|c044_s174_w1_0928_1005_r3] S174 PEP: no tradeable call
+  [b64|c064_s174_w1_0928_1005_r4] S174 PEP: no tradeable call
+  [b84|c084_s174_w1_0928_1005_r5] S174 PEP: no tradeable call
+  [b4|c004_s174_w1_0928_1005_r1] S174 MAT: no tradeable call
+  [b24|c024_s174_w1_0928_1005_r2] S174 MAT: no tradeable call
+  [b44|c044_s174_w1_0928_1005_r3] S174 MAT: no tradeable call
+  [b64|c064_s174_w1_0928_1005_r4] S174 MAT: no tradeable call
+  [b84|c084_s174_w1_0928_1005_r5] S174 MAT: no tradeable call
+  [b4|c004_s174_w1_0928_1005_r1] S174 MMS: no tradeable call
+  [b24|c024_s174_w1_0928_1005_r2] S174 MMS: no tradeable call
+  [b44|c044_s174_w1_0928_1005_r3] S174 MMS: no tradeable call
+  [b64|c064_s174_w1_0928_1005_r4] S174 MMS: no tradeable call
+  [b84|c084_s174_w1_0928_1005_r5] S174 MMS: no tradeable call
+  [b8|c008_s165_w1_0928_1005_r1] S165 AXON: no tradeable call
+  [b28|c028_s165_w1_0928_1005_r2] S165 AXON: no tradeable call
+  [b48|c048_s165_w1_0928_1005_r3] S165 AXON: no tradeable call
+  [b68|c068_s165_w1_0928_1005_r4] S165 AXON: no tradeable call
+  [b88|c088_s165_w1_0928_1005_r5] S165 AXON: no tradeable call
+  [b8|c008_s165_w1_0928_1005_r1] S165 PSKY: no tradeable call
+  [b28|c028_s165_w1_0928_1005_r2] S165 PSKY: no tradeable call
+  [b48|c048_s165_w1_0928_1005_r3] S165 PSKY: no tradeable call
+  [b68|c068_s165_w1_0928_1005_r4] S165 PSKY: no tradeable call
+  [b88|c088_s165_w1_0928_1005_r5] S165 PSKY: no tradeable call
+  [b8|c008_s165_w1_0928_1005_r1] S165 AVAV: no tradeable call
+  [b28|c028_s165_w1_0928_1005_r2] S165 AVAV: no tradeable call
+  [b48|c048_s165_w1_0928_1005_r3] S165 AVAV: no tradeable call
+  [b68|c068_s165_w1_0928_1005_r4] S165 AVAV: no tradeable call
+  [b88|c088_s165_w1_0928_1005_r5] S165 AVAV: no tradeable call
+  Skipped: 30 no tradeable call, 195 already attempted today, 130 pending order
+Placed 0 new entry order(s).
+
+[Portfolio snapshot]
+========================================================
+OPTIONS TRIAL STATS
+========================================================
+Account equity: $159,912.11
+Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
+
+P&L summary
+  Realized (sold):     $+2,154.53 all-time  |  $+0.00 today
+  Open (not sold yet): $+0.00 unrealized (virtual lots)
+                       $+27,830.01 unrealized (broker total)
+  Premium deployed:    $0.00 in open positions
+  Combined P&L:        $+2,154.53 (realized + open virtual)
+
+Ledger (master)
+  Total events:     256
+  Today entries:    0
+  Today exits:      0
+  All-time exits:   52  wins 94%
+  Avg return/trade: +39.6%  median +36.5%
+
+Open virtual lots (by bucket)
+  (100 quiet bucket profile(s) — no trades yet)
+  (no open lots across active profiles)
+
+Pending orders: 16
+  b8 S173 GOOGL limit=0.41
+  b10 S173 GOOGL limit=0.41
+  b20 S173 GOOGL limit=0.41
+  b22 S173 GOOGL limit=0.41
+  b32 S173 GOOGL limit=0.41
+
+Alpaca option positions
+  ADBE260710C00225000  qty=1  cost=$86.00  return=+2.3%  open P&L=$+2.00
+  ANET260710C00185000  qty=22  cost=$600.00  return=+1293.3%  open P&L=$+7,760.00
+  AVGO260710C00400000  qty=49  cost=$2,740.00  return=+651.1%  open P&L=$+17,840.00
+  BA260710C00237500  qty=22  cost=$466.00  return=-90.6%  open P&L=$-422.00
+  BA260710C00240000  qty=22  cost=$415.00  return=-89.4%  open P&L=$-371.00
+  BA260710C00242500  qty=29  cost=$284.00  return=-79.6%  open P&L=$-226.00
+  CCL260710C00026000  qty=7  cost=$298.00  return=+26.8%  open P&L=$+80.00
+  CCL260717C00026000  qty=93  cost=$6,981.00  return=+27.9%  open P&L=$+1,947.00
+  GOOGL260710C00365000  qty=75  cost=$6,143.99  return=-14.6%  open P&L=$-893.99
+  GOOGL260710C00367500  qty=8  cost=$376.00  return=-14.9%  open P&L=$-56.00
+  INTC260710C00118000  qty=25  cost=$2,258.00  return=+99.3%  open P&L=$+2,242.00
+  INTC260710C00119000  qty=24  cost=$1,784.00  return=+97.8%  open P&L=$+1,744.00
+  MRNA260710C00085000  qty=54  cost=$1,667.00  return=-90.3%  open P&L=$-1,505.00
+  PLTR260710C00131000  qty=5  cost=$300.00  return=+28.3%  open P&L=$+85.00
+  PLTR260710C00136000  qty=24  cost=$780.00  return=-50.8%  open P&L=$-396.00
+
+Per-bucket exit stats (all time)
+  b0|orphan_reconcile     n=  4  avg=+61.5%  med=+58.1%  realized=$+747.86
+  b56|g056_lim_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b57|g057_mid_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b58|g058_eod_tp20_sl65  n=  1  avg=+59.1%  med=+59.1%  realized=$+25.41
+  b63|g063_mid_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b64|g064_eod_tp20_sl65  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b65|g065_lim_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b66|g066_mid_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b67|g067_eod_tp20_sl65  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b70|g070_eod_tp30_sl20  n=  1  avg=+59.1%  med=+59.1%  realized=$+27.77
+  b71|g071_lim_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b72|g072_mid_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b73|g073_eod_tp30_sl20  n=  1  avg=+55.6%  med=+55.6%  realized=$+36.11
+  b74|g074_lim_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b75|g075_mid_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b76|g076_eod_tp30_sl20  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b77|g077_lim_tp30_sl20  n=  1  avg=-23.3%  med=-23.3%  realized=$-18.63
+  b78|g078_mid_tp30_sl20  n=  1  avg=-23.3%  med=-23.3%  realized=$-18.63
+  b79|g079_eod_tp30_sl20  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b80|g080_lim_tp30_sl30  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b81|g081_mid_tp30_sl30  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b82|g082_eod_tp30_sl30  n=  1  avg=+55.6%  med=+55.6%  realized=$+36.11
+  b83|g083_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b84|g084_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b85|g085_eod_tp30_sl30  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b86|g086_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b87|g087_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b88|g088_eod_tp30_sl30  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b89|g089_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b90|g090_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b91|g091_eod_tp30_sl30  n=  2  avg=+19.8%  med=+55.6%  realized=$+25.00
+  b92|g092_lim_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b93|g093_mid_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b94|g094_eod_tp30_sl40  n=  2  avg=+46.6%  med=+55.6%  realized=$+73.80
+  b95|g095_lim_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b96|g096_mid_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b97|g097_eod_tp30_sl40  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b98|g098_lim_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b99|g099_mid_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+========================================================
+========================================================
+OPTIONS TRIAL STATS
+========================================================
+Account equity: $159,912.11
+Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
+
+P&L summary
+  Realized (sold):     $+2,154.53 all-time  |  $+0.00 today
+  Open (not sold yet): $+0.00 unrealized (virtual lots)
+                       $+27,830.01 unrealized (broker total)
+  Premium deployed:    $0.00 in open positions
+  Combined P&L:        $+2,154.53 (realized + open virtual)
+
+Ledger (master)
+  Total events:     256
+  Today entries:    0
+  Today exits:      0
+  All-time exits:   52  wins 94%
+  Avg return/trade: +39.6%  median +36.5%
+
+Open virtual lots (by bucket)
+  (100 quiet bucket profile(s) — no trades yet)
+  (no open lots across active profiles)
+
+Pending orders: 16
+  b8 S173 GOOGL limit=0.41
+  b10 S173 GOOGL limit=0.41
+  b20 S173 GOOGL limit=0.41
+  b22 S173 GOOGL limit=0.41
+  b32 S173 GOOGL limit=0.41
+
+Alpaca option positions
+  ADBE260710C00225000  qty=1  cost=$86.00  return=+2.3%  open P&L=$+2.00
+  ANET260710C00185000  qty=22  cost=$600.00  return=+1293.3%  open P&L=$+7,760.00
+  AVGO260710C00400000  qty=49  cost=$2,740.00  return=+651.1%  open P&L=$+17,840.00
+  BA260710C00237500  qty=22  cost=$466.00  return=-90.6%  open P&L=$-422.00
+  BA260710C00240000  qty=22  cost=$415.00  return=-89.4%  open P&L=$-371.00
+  BA260710C00242500  qty=29  cost=$284.00  return=-79.6%  open P&L=$-226.00
+  CCL260710C00026000  qty=7  cost=$298.00  return=+26.8%  open P&L=$+80.00
+  CCL260717C00026000  qty=93  cost=$6,981.00  return=+27.9%  open P&L=$+1,947.00
+  GOOGL260710C00365000  qty=75  cost=$6,143.99  return=-14.6%  open P&L=$-893.99
+  GOOGL260710C00367500  qty=8  cost=$376.00  return=-14.9%  open P&L=$-56.00
+  INTC260710C00118000  qty=25  cost=$2,258.00  return=+99.3%  open P&L=$+2,242.00
+  INTC260710C00119000  qty=24  cost=$1,784.00  return=+97.8%  open P&L=$+1,744.00
+  MRNA260710C00085000  qty=54  cost=$1,667.00  return=-90.3%  open P&L=$-1,505.00
+  PLTR260710C00131000  qty=5  cost=$300.00  return=+28.3%  open P&L=$+85.00
+  PLTR260710C00136000  qty=24  cost=$780.00  return=-50.8%  open P&L=$-396.00
+
+Per-bucket exit stats (all time)
+  39 bucket profiles with exits (showing top 5 by trade count)
+  b0|orphan_reconcile     n=  4  avg=+61.5%  med=+58.1%  realized=$+747.86
+  b88|g088_eod_tp30_sl30  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b91|g091_eod_tp30_sl30  n=  2  avg=+19.8%  med=+55.6%  realized=$+25.00
+  b92|g092_lim_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b93|g093_mid_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+========================================================
+Full detail: logs/options_trial/runs/2026-07-09.log
+elapsed=36.8s reconcile=0.37s cancel=0.07s manage=0.17s scan=31.89s entries=3.9s
+
