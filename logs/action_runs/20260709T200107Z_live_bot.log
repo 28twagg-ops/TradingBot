@@ -1,0 +1,58 @@
+20:01:09  INFO      Mode: ext_exits
+20:01:09  INFO        Daily log -> logs/daily/2026-07-09.md
+20:01:09  INFO        Daily log reconciled -> logs/daily/2026-07-09.md (3 ledger rows)
+20:01:09  INFO        SELL LIMIT [EXT HRS] DRI  qty=0.467706671  limit=$201.62  id=4c6a9032-771a-41e1-a85a-2a3d4663552b
+20:01:15  INFO        SELL LIMIT[EXT] pending for DRI — 9:35am will follow up
+20:01:15  INFO        Daily log -> logs/daily/2026-07-09.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                         EXT_EXITS|
+|  Time                                                         20:01 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $481.80|
++========================================================================+
+
++========================================================================+
+|                       EXIT CHECK [EXTENDED HRS]                        |
++========================================================================+
+|  Exit log~  stop-0.5% / 3d max  (midline skipped — close already final)|
++------------------------------------------------------------------------+
+|  DRI  P&L -0.6%  $-0.54          EXIT [EXTENDED HRS]: stop_loss (-0.6%)|
+|  DRI                              SELL pending (after-hours limit open)|
+|  AME  P&L -0.2%  $-0.17          HOLDING until 9:35am scan (Pullback50)|
+|  CARR  P&L -0.1%  $-0.12         HOLDING until 9:35am scan (Pullback50)|
+|  HST  P&L +0.6%  $+0.49          HOLDING until 9:35am scan (Pullback50)|
++========================================================================+
+
++========================================================================+
+|                          EXTENDED HOURS SELLS                          |
++========================================================================+
+|                                                                        |
+|  No extended-hours sells this run.                                     |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                         ext_exits|
+|  Candidates                                                           4|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  0 filled  |  0 partial  |  1 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  DRI                                         -0.57%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             1|
++========================================================================+
