@@ -2691,6 +2691,30 @@ def run_prep(client, equity, cash, rgm, mode_name):
     row("Regime", rgm.upper())
     ftr()
 
+    # Reuse a fresh prep plan when positions/open sell orders/regime/month are unchanged.
+    # This avoids repeatedly downloading/scanning the full universe across adjacent prep runs.
+    cached = _load_plan(plan_file)
+    positions_now = enrich(client, get_positions(client))
+    open_sell_orders_now = _snapshot_open_sell_orders(client)
+    month_now = date.today().month
+    cache_ok, cache_note = _plan_usable(
+        cached,
+        mode_name,
+        rgm,
+        month_now,
+        positions=positions_now,
+        open_sell_orders=open_sell_orders_now,
+    )
+    if USE_TWO_PHASE_PLAN and cache_ok:
+        hdr("PREP CACHE")
+        row("Using cached plan", f"yes ({cache_note})")
+        row("Exit candidates", str(len(cached.get("exit_plan", []))))
+        row("Signal candidates", str(len(cached.get("signals", []))))
+        row("Universe scanned", str(cached.get("scan_universe_count", 0)))
+        ftr()
+        log.info("  Prep cache reused; skipped full universe scan")
+        return
+
     plan = build_plan(client, equity, cash, rgm, mode_name)
     ok = _save_plan(plan_file, plan)
     pos_rows = plan.get("positions_snapshot", [])
