@@ -169,10 +169,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin main
+          git checkout -B main origin/main
           # Stash this run's logs, reset logs/ to remote, merge append-only files
           mkdir -p /tmp/botlogs_run
           cp -r logs/. /tmp/botlogs_run/ 2>/dev/null || true
-          git checkout origin/main -- logs/ 2>/dev/null || mkdir -p logs
+          mkdir -p logs
           python scripts/merge_bot_logs.py /tmp/botlogs_run logs
           if [ -d /tmp/botlogs_run/options_trial ]; then
             mkdir -p logs/options_trial
@@ -193,7 +194,8 @@ jobs:
             fi
             echo "Push attempt $attempt failed; merging remote and retrying..."
             git fetch origin main
-            git checkout origin/main -- logs/
+            git checkout -B main origin/main
+            mkdir -p logs
             python scripts/merge_bot_logs.py /tmp/botlogs_run logs
             if [ -d /tmp/botlogs_run/options_trial ]; then
               mkdir -p logs/options_trial
@@ -202,7 +204,11 @@ jobs:
             python scripts/reconcile_daily_logs.py logs 14
             python scripts/daily_slippage_watch.py logs
             git add logs/
-            git commit --amend --no-edit || git commit -m "bot run $(date -u '+%Y-%m-%d %H:%M UTC')"
+            if git diff --staged --quiet; then
+              echo "No log changes after refresh"
+              exit 0
+            fi
+            git commit -m "bot run $(date -u '+%Y-%m-%d %H:%M UTC')"
             sleep 3
           done
           echo "ERROR: failed to push logs after 5 attempts"
