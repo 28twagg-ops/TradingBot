@@ -106,6 +106,7 @@ log = logging.getLogger("options_morning_bot")
 _run_log: list[str] = []
 _run_t0: float | None = None
 _run_phases: dict[str, float] = {}
+W = 72
 
 
 def _now_et() -> datetime:
@@ -157,6 +158,63 @@ def section(title: str) -> None:
     """Visual section marker for human-readable run output."""
     rl("")
     rl(f"[{title}]")
+
+
+def _box_border(ch: str = "=") -> str:
+    return "+" + (ch * W) + "+"
+
+
+def _box_line(msg: str = "") -> str:
+    msg = str(msg)
+    if len(msg) > W:
+        msg = msg[:W]
+    return f"|{msg:<{W}}|"
+
+
+def _box_title(title: str) -> None:
+    rl(_box_border("="))
+    rl(_box_line(f"  {title}"))
+    rl(_box_border("-"))
+
+
+def _box_end() -> None:
+    rl(_box_border("="))
+
+
+def _console_account_summary(state: LabState, equity: float | None, positions: list[dict],
+                             *, mode: str, signals: int, placed: int) -> None:
+    _box_title("OPTIONS BOT SUMMARY")
+    rl(_box_line(f"  Mode                          {mode}"))
+    if equity is not None:
+        rl(_box_line(f"  Equity                        ${equity:,.2f}"))
+    rl(_box_line(f"  Signals this run              {signals}"))
+    rl(_box_line(f"  Entries placed                {placed}"))
+    rl(_box_line(f"  Open option positions         {len(positions)}"))
+    rl(_box_line(f"  Pending orders                {len(state.pending_orders)}"))
+    _box_end()
+
+
+def _console_positions_table(positions: list[dict], *, max_rows: int = 8) -> None:
+    _box_title(f"OPEN OPTIONS ({len(positions)})")
+    if not positions:
+        rl(_box_line("  No open option positions"))
+        _box_end()
+        return
+    rl(_box_line("  SYMBOL                      QTY    RET%        OPEN P&L"))
+    rl(_box_line("-" * W))
+    shown = 0
+    for p in sorted(positions, key=lambda x: abs(float(x.get("unrealized_pl", 0) or 0)), reverse=True):
+        if shown >= max_rows:
+            break
+        shown += 1
+        sym = str(p.get("symbol", ""))[:25]
+        qty = int(p.get("qty", 0) or 0)
+        ret = float(p.get("plpc", 0) or 0) * 100.0
+        upl = float(p.get("unrealized_pl", 0) or 0)
+        rl(_box_line(f"  {sym:25s}  {qty:4d}  {ret:+7.1f}%   ${upl:+10,.2f}"))
+    if len(positions) > shown:
+        rl(_box_line(f"  ... {len(positions)-shown} more position(s)"))
+    _box_end()
 
 
 # --------------------------------------------------------------------------- #
@@ -915,9 +973,11 @@ def run() -> int:
         except Exception:
             pass
         section("Exit summary")
-        print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=rl, compact=True)
+        print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=None, compact=True)
         section("Portfolio snapshot")
-        print_trial_stats(state, equity, positions, file_fn=rl_file, console_fn=rl, compact=True)
+        print_trial_stats(state, equity, positions, file_fn=rl_file, console_fn=None, compact=True)
+        _console_account_summary(state, equity, positions, mode="after_hours", signals=0, placed=0)
+        _console_positions_table(positions)
         rl(f"Full detail: logs/options_trial/runs/{TODAY.isoformat()}.log")
         elapsed = _finish_run(now, "after hours (exit summary)", "after_hours",
                               equity=equity)
@@ -994,10 +1054,12 @@ def run() -> int:
 
     positions = _position_snapshots(trade)
     section("Portfolio snapshot")
-    print_trial_stats(state, equity, positions, file_fn=rl_file, console_fn=rl, compact=True)
+    print_trial_stats(state, equity, positions, file_fn=rl_file, console_fn=None, compact=True)
     if _hm_ge(now, (16, 0)):
         section("Exit summary")
-        print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=rl, compact=True)
+        print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=None, compact=True)
+    _console_account_summary(state, equity, positions, mode=mode, signals=signals_n, placed=placed)
+    _console_positions_table(positions)
     rl(f"Full detail: logs/options_trial/runs/{TODAY.isoformat()}.log")
     elapsed = _finish_run(now, header, mode, signals=signals_n, placed=placed,
                           equity=equity)
