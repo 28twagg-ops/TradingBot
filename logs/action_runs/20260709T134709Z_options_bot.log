@@ -1,0 +1,84 @@
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         /home/runner/work/TradingBot/TradingBot/docs/options_trial
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-09T09:47:44.352460-04:00 ===
+
+[Run context]
+Paper auth OK — equity $165059.17, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S174, S165, S166, S163
+
+[Scan + entries]
+Scanning 903 symbols for [S173, S174, S165, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 73 signal(s); top: ['S173:ACN', 'S173:ADBE', 'S173:GOOGL', 'S173:GOOG', 'S173:AMZN', 'S173:APP', 'S173:ADSK', 'S173:ADP']
+Paper lab: $165757 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+  Skipped: 35 no tradeable call, 132 already attempted today, 198 pending order
+Placed 0 new entry order(s).
+
+[Portfolio snapshot]
+========================================================
+OPTIONS TRIAL STATS
+========================================================
+Account equity: $165,059.17
+Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
+
+P&L summary
+  Realized (sold):     $+2,154.53 all-time  |  $+0.00 today
+  Open (not sold yet): $+0.00 unrealized (virtual lots)
+                       $+32,600.00 unrealized (broker total)
+  Premium deployed:    $0.00 in open positions
+  Combined P&L:        $+2,154.53 (realized + open virtual)
+
+Ledger (master)
+  Total events:     256
+  Today entries:    0
+  Today exits:      0
+  All-time exits:   52  wins 94%
+  Avg return/trade: +39.6%  median +36.5%
+
+Open virtual lots (by bucket)
+  (100 quiet bucket profile(s) — no trades yet)
+  (no open lots across active profiles)
+
+Pending orders: 69
+  b8 S173 GOOGL limit=0.41
+  b9 S173 GOOGL limit=0.49
+  b10 S173 GOOGL limit=0.41
+  b11 S173 GOOGL limit=0.80
+  b13 S173 GOOGL limit=0.80
+
+Alpaca option positions
+  ADBE260710C00225000  qty=1  cost=$86.00  return=+16.3%  open P&L=$+14.00
+  ANET260710C00185000  qty=22  cost=$600.00  return=+1146.7%  open P&L=$+6,880.00
+  AVGO260710C00400000  qty=49  cost=$2,740.00  return=+794.2%  open P&L=$+21,760.00
+  BA260710C00237500  qty=22  cost=$466.00  return=-90.6%  open P&L=$-422.00
+  BA260710C00240000  qty=22  cost=$415.00  return=-89.4%  open P&L=$-371.00
+  BA260710C00242500  qty=29  cost=$284.00  return=-79.6%  open P&L=$-226.00
+  CCL260710C00026000  qty=7  cost=$298.00  return=+26.8%  open P&L=$+80.00
+  CCL260717C00026000  qty=93  cost=$6,981.00  return=+29.2%  open P&L=$+2,040.00
+  GOOGL260710C00365000  qty=30  cost=$2,544.00  return=-3.3%  open P&L=$-84.00
+  INTC260710C00118000  qty=25  cost=$2,258.00  return=+118.1%  open P&L=$+2,667.00
+  INTC260710C00119000  qty=24  cost=$1,784.00  return=+120.6%  open P&L=$+2,152.00
+  MRNA260710C00085000  qty=54  cost=$1,667.00  return=-93.5%  open P&L=$-1,559.00
+  PLTR260710C00131000  qty=5  cost=$300.00  return=+21.7%  open P&L=$+65.00
+  PLTR260710C00136000  qty=24  cost=$780.00  return=-50.8%  open P&L=$-396.00
+
+Per-bucket exit stats (all time)
+  39 bucket profiles with exits (showing top 5 by trade count)
+  b0|orphan_reconcile     n=  4  avg=+61.5%  med=+58.1%  realized=$+747.86
+  b88|g088_eod_tp30_sl30  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b91|g091_eod_tp30_sl30  n=  2  avg=+19.8%  med=+55.6%  realized=$+25.00
+  b92|g092_lim_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b93|g093_mid_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+========================================================
+Full detail: logs/options_trial/runs/2026-07-09.log
+elapsed=22.9s reconcile=0.31s cancel=0.06s manage=0.06s scan=18.34s entries=3.72s
+STATUS: options_morning_bot run complete (PAPER) elapsed=22.9s.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-09_strategy_selection.csv
+Summary: keep=0 watch=5 drop=0
