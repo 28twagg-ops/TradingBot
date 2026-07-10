@@ -22,26 +22,6 @@
       "entry_order_id": "orphan:BA260710C00237500"
     },
     {
-      "lot_id": "7e5719fad01e",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "CCL260717C00026000",
-      "underlying": "CCL",
-      "qty": 93,
-      "entry_cost": 6980.9985,
-      "entry_price": 0.750645,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-09",
-      "entry_order_id": "orphan:CCL260717C00026000"
-    },
-    {
       "lot_id": "4d688d39c6bb",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -122,26 +102,6 @@
       "entry_order_id": "orphan:INTC260713C00114000"
     },
     {
-      "lot_id": "a8c97ef07d28",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "INTC260713C00118000",
-      "underlying": "INTC",
-      "qty": 5,
-      "entry_cost": 235.0,
-      "entry_price": 0.47,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-10",
-      "entry_order_id": "orphan:INTC260713C00118000"
-    },
-    {
       "lot_id": "70c721ca476f",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -204,24 +164,24 @@
   ],
   "pending_orders": [
     {
-      "order_id": "4089f757-5349-4783-940a-5777987e4b59",
+      "order_id": "8d31a441-0141-4c47-99e4-d2804c2198cd",
       "bucket_id": 85,
       "strategy_id": "S174",
-      "occ_symbol": "INTC260713C00115000",
+      "occ_symbol": "INTC260713C00114000",
       "underlying": "INTC",
       "qty": 1,
-      "limit": 0.6,
+      "limit": 0.67,
       "profile_name": "c085_s174_w2_1005_1045_r5",
       "submitted": "2026-07-10",
       "detail": "RB gap -2.6% reclaim",
-      "spread_frac": 0.15929203539823006,
+      "spread_frac": 0.1250000000000001,
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
     }
   ],
   "bucket_open_premium": {
-    "b0": 10856.9995
+    "b0": 3641.001
   },
   "session_date": "2026-07-10",
   "entries_locked": [
@@ -262,9 +222,11 @@
     "329ebeb7-5867-4b3d-abc2-01569e43a6bd",
     "94ca6324-2233-478e-8ca8-3cad83d7ac8d",
     "4b028296-166e-48f9-b3e0-fd300fe39583",
-    "4cb7c6fc-c51f-4d64-b50b-45c49b76305f"
+    "4cb7c6fc-c51f-4d64-b50b-45c49b76305f",
+    "cbe1057e-a8e8-47ad-9473-ecc40ae5673b",
+    "d9557fae-d1c3-4803-afda-5201e1782195"
   ],
-  "submitted_today": 29,
+  "submitted_today": 30,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-07-10"
 }

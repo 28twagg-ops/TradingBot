@@ -2376,3 +2376,208 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-07-10.log
 elapsed=41.2s reconcile=0.28s cancel=0.02s manage=6.45s scan=32.15s entries=1.8s
 
+=== 10:20:45 ET — entry+manage (1 new) [elapsed=32.7s reconcile=0.17s cancel=0.01s manage=3.88s scan=25.96s entries=2.58s] ===
+=== options_morning_bot (PAPER) 2026-07-10T10:20:45.295428-04:00 ===
+
+[Run context]
+Paper auth OK — equity $138389.56, account PA36KS87UPRS
+  reconcile: cleared 1 resolved pending order(s)
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S174, S165, S166, S163
+  EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-100.0%) market failed MRNA260710C00085000: {"code":40310000,"message":"order has been rejected due to no available quote for symbol. please reenter with a limit"}
+  EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-100.0%) market failed BA260710C00237500: {"code":40310000,"message":"order has been rejected due to no available quote for symbol. please reenter with a limit"}
+  EXIT [b0|orphan_reconcile|ORPHAN] take_profit (+54.5%) SELL 93 CCL260717C00026000 @<= 1.13  id=cbe1057e-a8e8-47ad-9473-ecc40ae5673b
+  EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-57.4%) SELL 5 INTC260713C00118000 @<= 0.21  id=d9557fae-d1c3-4803-afda-5201e1782195
+
+[Scan + entries]
+Scanning 903 symbols for [S173, S174, S165, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 32 signal(s); top: ['S173:ADI', 'S173:AMAT', 'S173:T', 'S173:CIEN', 'S173:GIS', 'S173:KLAC', 'S173:LRCX', 'S173:LITE']
+Paper lab: $138482 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+  ENTRY [b85|c085_s174_w2_1005_1045_r5|S174] BUY 1x INTC260713C00114000 (RB gap -2.6% reclaim) limit=0.67 (ask=0.68 off=-0.01) tp=+50% sl=-50% pending id=8d31a441-0141-4c47-99e4-d2804c2198cd
+  [b9|c009_s165_w2_1005_1045_r1] S165 MRVL: no tradeable call
+  [b29|c029_s165_w2_1005_1045_r2] S165 MRVL: no tradeable call
+  [b49|c049_s165_w2_1005_1045_r3] S165 MRVL: no tradeable call
+  [b69|c069_s165_w2_1005_1045_r4] S165 MRVL: no tradeable call
+  [b89|c089_s165_w2_1005_1045_r5] S165 MRVL: no tradeable call
+  [b9|c009_s165_w2_1005_1045_r1] S165 MPWR: no tradeable call
+  [b29|c029_s165_w2_1005_1045_r2] S165 MPWR: no tradeable call
+  [b49|c049_s165_w2_1005_1045_r3] S165 MPWR: no tradeable call
+  [b69|c069_s165_w2_1005_1045_r4] S165 MPWR: no tradeable call
+  [b89|c089_s165_w2_1005_1045_r5] S165 MPWR: no tradeable call
+  [b9|c009_s165_w2_1005_1045_r1] S165 TER: no tradeable call
+  [b29|c029_s165_w2_1005_1045_r2] S165 TER: no tradeable call
+  [b49|c049_s165_w2_1005_1045_r3] S165 TER: no tradeable call
+  [b69|c069_s165_w2_1005_1045_r4] S165 TER: no tradeable call
+  [b89|c089_s165_w2_1005_1045_r5] S165 TER: no tradeable call
+  [b9|c009_s165_w2_1005_1045_r1] S165 ALGM: no tradeable call
+  [b29|c029_s165_w2_1005_1045_r2] S165 ALGM: no tradeable call
+  [b49|c049_s165_w2_1005_1045_r3] S165 ALGM: no tradeable call
+  [b69|c069_s165_w2_1005_1045_r4] S165 ALGM: no tradeable call
+  [b89|c089_s165_w2_1005_1045_r5] S165 ALGM: no tradeable call
+  [b9|c009_s165_w2_1005_1045_r1] S165 LSCC: no tradeable call
+  [b29|c029_s165_w2_1005_1045_r2] S165 LSCC: no tradeable call
+  [b49|c049_s165_w2_1005_1045_r3] S165 LSCC: no tradeable call
+  [b69|c069_s165_w2_1005_1045_r4] S165 LSCC: no tradeable call
+  [b89|c089_s165_w2_1005_1045_r5] S165 LSCC: no tradeable call
+  [b9|c009_s165_w2_1005_1045_r1] S165 MTSI: no tradeable call
+  [b29|c029_s165_w2_1005_1045_r2] S165 MTSI: no tradeable call
+  [b49|c049_s165_w2_1005_1045_r3] S165 MTSI: no tradeable call
+  [b69|c069_s165_w2_1005_1045_r4] S165 MTSI: no tradeable call
+  [b89|c089_s165_w2_1005_1045_r5] S165 MTSI: no tradeable call
+  [b9|c009_s165_w2_1005_1045_r1] S165 RMBS: no tradeable call
+  [b29|c029_s165_w2_1005_1045_r2] S165 RMBS: no tradeable call
+  [b49|c049_s165_w2_1005_1045_r3] S165 RMBS: no tradeable call
+  [b69|c069_s165_w2_1005_1045_r4] S165 RMBS: no tradeable call
+  [b89|c089_s165_w2_1005_1045_r5] S165 RMBS: no tradeable call
+  [b9|c009_s165_w2_1005_1045_r1] S165 SMTC: no tradeable call
+  [b29|c029_s165_w2_1005_1045_r2] S165 SMTC: no tradeable call
+  [b49|c049_s165_w2_1005_1045_r3] S165 SMTC: no tradeable call
+  [b69|c069_s165_w2_1005_1045_r4] S165 SMTC: no tradeable call
+  [b89|c089_s165_w2_1005_1045_r5] S165 SMTC: no tradeable call
+  Skipped: 40 no tradeable call, 117 already attempted today, 2 pending order
+Placed 1 new entry order(s).
+
+[Portfolio snapshot]
+========================================================
+OPTIONS TRIAL STATS
+========================================================
+Account equity: $138,389.56
+Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
+
+P&L summary
+  Realized (sold):     $+9,850.58 all-time  |  $+7,696.05 today
+  Open (not sold yet): $-2,326.71 unrealized (virtual lots)
+                       $-2,724.00 unrealized (broker total)
+  Premium deployed:    $3,641.00 in open positions
+  Combined P&L:        $+7,523.87 (realized + open virtual)
+
+Ledger (master)
+  Total events:     272
+  Today entries:    0
+  Today exits:      16
+  All-time exits:   68  wins 81%
+  Avg return/trade: +36.9%  median +36.5%
+
+Open virtual lots (by bucket)
+  b0 c000_s173_w1_0928_1005_r1  prem=$  3641  real=$ +0.00  open=$ +0.00  lots=8  [ORPHAN:BAx22, ORPHAN:MRNAx54, ORPHAN:PLTRx5, ORPHAN:PSKYx5 +4 more]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  (99 quiet bucket profile(s) — no trades yet)
+
+Pending orders: 1
+  b85 S174 INTC limit=0.67
+
+Alpaca option positions
+  BA260710C00237500  qty=22  cost=$466.00  return=-100.0%  open P&L=$-466.00
+  INTC260713C00114000  qty=5  cost=$370.00  return=-16.2%  open P&L=$-60.00
+  INTC260713C00115000  qty=21  cost=$1,313.00  return=-28.0%  open P&L=$-368.00
+  INTC260713C00118000  qty=5  cost=$235.00  return=-59.6%  open P&L=$-140.00
+  MRNA260710C00085000  qty=54  cost=$1,667.00  return=-100.0%  open P&L=$-1,667.00
+  PLTR260717C00139000  qty=5  cost=$365.00  return=-21.9%  open P&L=$-80.00
+  PSKY260717C00010000  qty=5  cost=$40.00  return=-25.0%  open P&L=$-10.00
+  T260710C00021000  qty=5  cost=$80.00  return=+6.2%  open P&L=$+5.00
+  T260717C00021000  qty=8  cost=$258.00  return=+24.0%  open P&L=$+62.00
+
+Per-bucket exit stats (all time)
+  b0|orphan_reconcile     n= 20  avg=+34.6%  med=+50.0%  realized=$+8,443.91
+  b56|g056_lim_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b57|g057_mid_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b58|g058_eod_tp20_sl65  n=  1  avg=+59.1%  med=+59.1%  realized=$+25.41
+  b63|g063_mid_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b64|g064_eod_tp20_sl65  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b65|g065_lim_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b66|g066_mid_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b67|g067_eod_tp20_sl65  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b70|g070_eod_tp30_sl20  n=  1  avg=+59.1%  med=+59.1%  realized=$+27.77
+  b71|g071_lim_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b72|g072_mid_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b73|g073_eod_tp30_sl20  n=  1  avg=+55.6%  med=+55.6%  realized=$+36.11
+  b74|g074_lim_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b75|g075_mid_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b76|g076_eod_tp30_sl20  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b77|g077_lim_tp30_sl20  n=  1  avg=-23.3%  med=-23.3%  realized=$-18.63
+  b78|g078_mid_tp30_sl20  n=  1  avg=-23.3%  med=-23.3%  realized=$-18.63
+  b79|g079_eod_tp30_sl20  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b80|g080_lim_tp30_sl30  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b81|g081_mid_tp30_sl30  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b82|g082_eod_tp30_sl30  n=  1  avg=+55.6%  med=+55.6%  realized=$+36.11
+  b83|g083_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b84|g084_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b85|g085_eod_tp30_sl30  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b86|g086_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b87|g087_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b88|g088_eod_tp30_sl30  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b89|g089_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b90|g090_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b91|g091_eod_tp30_sl30  n=  2  avg=+19.8%  med=+55.6%  realized=$+25.00
+  b92|g092_lim_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b93|g093_mid_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b94|g094_eod_tp30_sl40  n=  2  avg=+46.6%  med=+55.6%  realized=$+73.80
+  b95|g095_lim_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b96|g096_mid_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b97|g097_eod_tp30_sl40  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b98|g098_lim_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b99|g099_mid_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+========================================================
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          entry+manage                            |
+|  Equity                        $138,389.56                             |
+|  Signals this run              32                                      |
+|  Orders submitted (session)    30                                      |
+|  Orders filled today (ledger)  0                                       |
+|  Entries placed this run       1                                       |
+|  Open virtual lots             8                                       |
+|  Broker option positions       9                                       |
+|  Unattributed contracts        20 (orphan reconcile)                   |
+|  Pending orders                1                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD                                                    |
++------------------------------------------------------------------------+
+|  All-time  trades=68  buckets=39  win=81%                              |
+|  Returns   avg=+36.9%  med=+36.5%  p10=-79.3%  p90=+70.8%              |
+|  Realized  $+9,850.58                                                  |
+|  Today     trades=16  avg=+27.9%  med=-74.8%  real=$+7,696.05          |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b70  c070_s165_w3_1045_  1 100% +59.1 +59.1 +59.1 $    +28            |
+|  b58  c058_s163_w3_1045_  1 100% +59.1 +59.1 +59.1 $    +25            |
+|  b73  c073_s166_w2_1005_  1 100% +55.6 +55.6 +55.6 $    +36            |
+|  b82  c082_s173_w3_1045_  1 100% +55.6 +55.6 +55.6 $    +36            |
+|  b92  c092_s166_w1_0928_  2 100% +53.6 +53.6 +70.8 $    +95            |
+|  b93  c093_s166_w2_1005_  2 100% +53.6 +53.6 +70.8 $    +95            |
+|  b95  c095_s166_w4_1120_  2 100% +50.5 +50.5 +70.8 $    +95            |
+|  b96  c096_s163_w1_0928_  2 100% +50.5 +50.5 +70.8 $    +95            |
+|  ... 31 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b78  c078_s163_w3_1045_  1   0% -23.3 -23.3 -23.3 $    -19       |
++========================================================================+
++========================================================================+
+|  PENDING ORDERS (1)                                                    |
++------------------------------------------------------------------------+
+|  Top groups                    S174:INTC(1)                            |
++------------------------------------------------------------------------+
+|  b85  S174 INTC     limit=0.67                                         |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (9)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  MRNA260710C00085000          54   -100.0%   $ -1,667.00               |
+|  BA260710C00237500            22   -100.0%   $   -466.00               |
+|  INTC260713C00115000          21    -28.0%   $   -368.00               |
+|  INTC260713C00118000           5    -59.6%   $   -140.00               |
+|  PLTR260717C00139000           5    -21.9%   $    -80.00               |
+|  T260717C00021000              8    +24.0%   $    +62.00               |
+|  INTC260713C00114000           5    -16.2%   $    -60.00               |
+|  PSKY260717C00010000           5    -25.0%   $    -10.00               |
+|  ... 1 more position(s)                                                |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-10.log
+elapsed=32.7s reconcile=0.17s cancel=0.01s manage=3.88s scan=25.96s entries=2.58s
+
