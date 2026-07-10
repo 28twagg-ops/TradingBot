@@ -1,0 +1,85 @@
+Layout: controlled:100:c000_s173_w1_0928_1005_r1
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-10T15:44:17.715579-04:00 ===
+
+[Run context]
+Paper auth OK — equity $139375.36, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S174, S165, S166, S163
+2026-07-10 15:44:23,568 INFO   EXIT [b80|c080_s173_w1_0928_1005_r5|S173] EOD SELL 1 T260717C00021000 @<= 0.39
+2026-07-10 15:44:23,884 INFO   EXIT [b83|c083_s173_w4_1120_1135_r5|S173] EOD SELL 1 T260710C00021000 @<= 0.17
+2026-07-10 15:44:24,510 INFO   EXIT [b88|c088_s165_w1_0928_1005_r5|S165] EOD SELL 1 INTC260713C00114000 @<= 0.69
+
+[Manage only]
+Past entry window; manage/exit only.
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          manage-only                             |
+|  Equity                        $139,375.36                             |
+|  Signals this run              0                                       |
+|  Orders submitted (session)    62                                      |
+|  Orders filled today (ledger)  144                                     |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             143                                     |
+|  Broker option positions       7                                       |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD                                                    |
++------------------------------------------------------------------------+
+|  All-time  trades=83  buckets=42  win=75%                              |
+|  Returns   avg=+26.7%  med=+34.2%  p10=-80.8%  p90=+70.8%              |
+|  Realized  $+7,581.58                                                  |
+|  Today     trades=31  avg=+5.1%  med=-49.3%  real=$+5,427.05           |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b70  c070_s165_w3_1045_  1 100% +59.1 +59.1 +59.1 $    +28            |
+|  b58  c058_s163_w3_1045_  1 100% +59.1 +59.1 +59.1 $    +25            |
+|  b73  c073_s166_w2_1005_  1 100% +55.6 +55.6 +55.6 $    +36            |
+|  b92  c092_s166_w1_0928_  2 100% +53.6 +53.6 +70.8 $    +95            |
+|  b93  c093_s166_w2_1005_  2 100% +53.6 +53.6 +70.8 $    +95            |
+|  b95  c095_s166_w4_1120_  2 100% +50.5 +50.5 +70.8 $    +95            |
+|  b96  c096_s163_w1_0928_  2 100% +50.5 +50.5 +70.8 $    +95            |
+|  b98  c098_s163_w3_1045_  2 100% +50.5 +50.5 +70.8 $    +95            |
+|  ... 34 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b0   c000_s173_w1_0928_ 22  45% +22.4 -64.3 -100.0 $  +6311      |
++========================================================================+
++========================================================================+
+|  PENDING EXITS (5)                                                     |
++------------------------------------------------------------------------+
+|  b50  S165 INTC260713C00115000 x1 EOD                                  |
+|  b47  S174 PSKY260717C00010000 x1 EOD                                  |
+|  b80  S173 T260717C00021000 x1 EOD                                     |
+|  b83  S173 T260710C00021000 x1 EOD                                     |
+|  b88  S165 INTC260713C00114000 x1 EOD                                  |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (7)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  MRNA260710C00085000          54   -100.0%   $ -1,667.00               |
+|  BA260710C00237500            22   -100.0%   $   -466.00               |
+|  INTC260713C00115000          31     -9.0%   $   -164.69               |
+|  T260717C00021000             10    +13.9%   $    +50.00               |
+|  T260710C00021000              7    +29.0%   $    +31.50               |
+|  PSKY260717C00010000           4    +37.5%   $    +12.00               |
+|  INTC260713C00114000          12     +0.1%   $     +0.80               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-10.log
+elapsed=6.9s reconcile=4.69s cancel=0.14s manage=1.62s
+STATUS: options_morning_bot run complete (PAPER) elapsed=6.9s. run=#3654 https://github.com/28twagg-ops/TradingBot/actions/runs/29118776447
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-10_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-10_buckets.csv
+Summary: 11 buckets closed trades, $+5,427.05 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-10_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-10_strategy_selection.csv
+Summary: keep=0 watch=5 drop=0
