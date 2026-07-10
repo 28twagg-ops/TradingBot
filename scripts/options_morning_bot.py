@@ -730,6 +730,13 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
                 sell_limit = exit_limit_price(lot, bid, ask_est, (bid + ask_est) / 2)
 
             use_market = _hm_ge(now, EOD_MARKET) or (not bid and lot.market_exit_eod)
+            # Worthless / no-quote options: Alpaca rejects market sells with
+            # "no available quote" — always prefer a $0.01 limit in that case.
+            no_quote = (not bid) or float(bid or 0) <= 0.01 or ret_pct <= -99.0
+            if no_quote:
+                use_market = False
+                sell_limit = 0.01
+
             exit_oid = None
             if use_market:
                 try:
@@ -747,8 +754,14 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
                     rl(f"  EXIT {tag} MARKET SELL {sell_qty} {occ} "
                        f"return={ret_pct:+.1f}%")
                 except Exception as exc:
-                    rl(f"  EXIT {tag} market failed {occ}: {exc}")
-                    continue
+                    # Fallback: limit at $0.01 when market is rejected (no quote).
+                    rl_file(f"  EXIT {tag} market failed {occ}: {exc}")
+                    exit_oid = _sell_limit(trade, occ, sell_qty, 0.01, tag, cid)
+                    if not exit_oid:
+                        rl(f"  EXIT {tag} market+limit failed {occ}: {exc}")
+                        continue
+                    rl(f"  EXIT {tag} LIMIT fallback SELL {sell_qty} {occ} @<= 0.01 "
+                       f"return={ret_pct:+.1f}%")
             else:
                 exit_oid = _sell_limit(trade, occ, sell_qty, sell_limit, tag, cid)
                 if not exit_oid:

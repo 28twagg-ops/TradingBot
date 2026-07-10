@@ -12,10 +12,14 @@ from options_lab import (
     bucket_dir, ensure_trial_layout, experiment_layout_id, load_state, save_state,
     sync_state_layout, trial_root,
 )
-from local_docs import local_docs
 
 GIT = Path(__file__).resolve().parent.parent
-DOCS = local_docs("options_trial")
+
+try:
+    from local_docs import local_docs, local_docs_available
+    DOCS = local_docs("options_trial") if local_docs_available() else None
+except Exception:
+    DOCS = None
 
 
 def main() -> int:
@@ -27,6 +31,13 @@ def main() -> int:
         print(f"Layout: {experiment_layout_id()} ({note})")
     else:
         print(f"Layout: {experiment_layout_id()}")
+
+    if DOCS is None:
+        print(f"Trial layout: {trial_root()}")
+        print("Docs:         skipped (local docs unavailable on this runner)")
+        print(f"Buckets:      {len(BUCKET_EXPERIMENTS)}")
+        return 0
+
     DOCS.mkdir(parents=True, exist_ok=True)
 
     index = [

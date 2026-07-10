@@ -1746,8 +1746,23 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
         if not _is_opt(occ):
             return
         oid = str(o.id)
-        if any(l.entry_order_id == oid for l in state.lots):
-            mark_order_logged(state, oid)
+        existing = next((l for l in state.lots if l.entry_order_id == oid), None)
+        if existing is not None:
+            # Lot already created (prior run / crash between confirm and ledger).
+            # Still write the ledger row if it was never logged.
+            if not state.order_already_logged(oid):
+                pending = next((p for p in state.pending_orders if p.order_id == oid), None)
+                try:
+                    fill_px = float(getattr(o, "filled_avg_price", 0) or existing.entry_price or 0)
+                except Exception:
+                    fill_px = existing.entry_price or 0.0
+                entry_cost = existing.entry_cost or (fill_px * 100 * existing.qty)
+                ts = str(getattr(o, "filled_at", "") or getattr(o, "updated_at", "") or "")
+                append_entry_ledger_from_fill(
+                    state, existing, pending, order_id=oid, fill_price=fill_px,
+                    entry_cost=entry_cost, ts=ts or None)
+                log_fn(f"  reconcile: backfill ledger entry b{existing.bucket_id}|"
+                       f"{existing.strategy_id} {existing.underlying} x{existing.qty}")
             return
         bucket_id = parsed["bucket_id"]
         strat = parsed["strategy_id"]
@@ -1760,15 +1775,54 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
         except Exception:
             fill_px = 0.0
         entry_cost = fill_px * 100 * filled_qty
-        m = re.match(r"^([A-Z]+)", occ)
-        und = m.group(1) if m else occ[:4]
+        und = _occ_underlying(occ)
         pending = next((p for p in state.pending_orders if p.order_id == oid), None)
-        lot = confirm_fill(state, arm, occ, und, filled_qty, entry_cost, fill_px, oid)
+        # Prefer reclaiming an orphan lot on this OCC over creating a duplicate.
+        orphan = next(
+            (l for l in state.lots
+             if l.occ_symbol == occ and l.strategy_id == ORPHAN_STRATEGY and l.qty > 0),
+            None,
+        )
+        if orphan is not None:
+            take = min(orphan.qty, filled_qty)
+            orphan.qty -= take
+            if orphan.qty <= 0:
+                state.lots = [l for l in state.lots if l is not orphan]
+            else:
+                orphan.entry_cost *= (orphan.qty / (orphan.qty + take)) if (orphan.qty + take) else 0
+            lot = VirtualLot(
+                lot_id=new_lot_id(),
+                bucket_id=arm.bucket_id,
+                profile_name=arm.profile_name,
+                strategy_id=arm.strategy_id,
+                occ_symbol=occ,
+                underlying=und,
+                qty=take,
+                entry_cost=entry_cost * (take / filled_qty) if filled_qty else entry_cost,
+                entry_price=fill_px,
+                buy_limit_offset=arm.buy_limit_offset,
+                sell_limit_offset=arm.sell_limit_offset,
+                sell_at_mid=arm.sell_at_mid,
+                take_profit=arm.take_profit,
+                stop_loss=arm.stop_loss,
+                eod_only=arm.eod_only,
+                market_exit_eod=arm.market_exit_eod,
+                entry_date=date.today().isoformat(),
+                entry_order_id=oid,
+            )
+            state.lots.append(lot)
+            if pending:
+                state.pending_orders = [p for p in state.pending_orders if p.order_id != oid]
+            save_state(state)
+            log_fn(f"  reconcile: reattributed orphan -> b{bucket_id}|{strat} "
+                   f"{und} x{take} @ {fill_px:.2f}")
+        else:
+            lot = confirm_fill(state, arm, occ, und, filled_qty, entry_cost, fill_px, oid)
         ts = str(getattr(o, "filled_at", "") or getattr(o, "updated_at", "") or "")
         append_entry_ledger_from_fill(
             state, lot, pending, order_id=oid, fill_price=fill_px,
-            entry_cost=entry_cost, ts=ts or None)
-        log_fn(f"  reconcile: entry fill b{bucket_id}|{strat} {und} x{filled_qty} "
+            entry_cost=lot.entry_cost, ts=ts or None)
+        log_fn(f"  reconcile: entry fill b{bucket_id}|{strat} {und} x{lot.qty} "
                f"@ {fill_px:.2f}")
 
     def _process_exit_fill(o) -> None:
@@ -1820,6 +1874,20 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
     for o in all_orders:
         _process_entry_fill(o)
         _process_exit_fill(o)
+
+    # --- 1b) Resolve pending entries that left the open book ---
+    # Closed-order pagination can miss fills; look up by pending order_id.
+    for p in list(state.pending_orders):
+        if p.order_id in open_ids:
+            continue
+        order = next((o for o in all_orders if str(getattr(o, "id", "")) == p.order_id), None)
+        if order is None:
+            try:
+                order = trade.get_order_by_id(p.order_id)
+            except Exception:
+                order = None
+        if order is not None:
+            _process_entry_fill(order)
 
     # --- 2) Drop pending when order no longer open (filled/cancelled) ---
     before_p = len(state.pending_orders)
