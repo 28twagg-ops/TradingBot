@@ -1,0 +1,94 @@
+Traceback (most recent call last):
+  File "/home/runner/work/TradingBot/TradingBot/scripts/init_options_trial.py", line 15, in <module>
+    from local_docs import local_docs
+ModuleNotFoundError: No module named 'local_docs'
+=== options_morning_bot (PAPER) 2026-07-10T09:50:52.622939-04:00 ===
+
+[Run context]
+Paper auth OK — equity $138975.28, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S174, S165, S166, S163
+  EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-100.0%) market failed BA260710C00237500: {"code":40310000,"message":"order has been rejected due to no available quote for symbol. please reenter with a limit"}
+  EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-100.0%) market failed MRNA260710C00085000: {"code":40310000,"message":"order has been rejected due to no available quote for symbol. please reenter with a limit"}
+  EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-100.0%) market failed BA260710C00242500: {"code":40310000,"message":"order has been rejected due to no available quote for symbol. please reenter with a limit"}
+
+[Scan + entries]
+Scanning 903 symbols for [S173, S174, S165, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 36 signal(s); top: ['S173:ADI', 'S173:AMAT', 'S173:T', 'S173:CIEN', 'S173:COHR', 'S173:GIS', 'S173:KLAC', 'S173:LRCX']
+Paper lab: $139125 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+  Skipped: 30 no tradeable call, 1 bucket full, 128 already attempted today, 15 pending order
+Placed 5 new entry order(s).
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          entry+manage                            |
+|  Equity                        $138,975.28                             |
+|  Signals this run              36                                      |
+|  Orders submitted (session)    14                                      |
+|  Orders filled today (ledger)  0                                       |
+|  Entries placed this run       5                                       |
+|  Open virtual lots             10                                      |
+|  Broker option positions       10                                      |
+|  Unattributed contracts        4 (orphan reconcile)                    |
+|  Pending orders                5                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD                                                    |
++------------------------------------------------------------------------+
+|  All-time  trades=52  buckets=39  win=94%                              |
+|  Returns   avg=+39.6%  med=+36.5%  p10=+24.0%  p90=+70.8%              |
+|  Realized  $+2,154.53                                                  |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b70  c070_s165_w3_1045_  1 100% +59.1 +59.1 +59.1 $    +28            |
+|  b58  c058_s163_w3_1045_  1 100% +59.1 +59.1 +59.1 $    +25            |
+|  b0   c000_s173_w1_0928_  4 100% +61.5 +55.7 +84.7 $   +748            |
+|  b73  c073_s166_w2_1005_  1 100% +55.6 +55.6 +55.6 $    +36            |
+|  b82  c082_s173_w3_1045_  1 100% +55.6 +55.6 +55.6 $    +36            |
+|  b92  c092_s166_w1_0928_  2 100% +53.6 +53.6 +70.8 $    +95            |
+|  b93  c093_s166_w2_1005_  2 100% +53.6 +53.6 +70.8 $    +95            |
+|  b95  c095_s166_w4_1120_  2 100% +50.5 +50.5 +70.8 $    +95            |
+|  ... 31 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b78  c078_s163_w3_1045_  1   0% -23.3 -23.3 -23.3 $    -19       |
++========================================================================+
++========================================================================+
+|  PENDING ORDERS (5)                                                    |
++------------------------------------------------------------------------+
+|  Top groups                    S174:INTC(5)                            |
++------------------------------------------------------------------------+
+|  b4   S174 INTC     limit=0.66                                         |
+|  b24  S174 INTC     limit=0.66                                         |
+|  b44  S174 INTC     limit=0.66                                         |
+|  b64  S174 INTC     limit=0.66                                         |
+|  b84  S174 INTC     limit=0.66                                         |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (10)                                                     |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  CCL260717C00026000           93    +42.5%   $ +2,970.00               |
+|  MRNA260710C00085000          54   -100.0%   $ -1,667.00               |
+|  BA260710C00237500            22   -100.0%   $   -466.00               |
+|  BA260710C00242500            29   -100.0%   $   -284.00               |
+|  INTC260713C00118000           5    -42.6%   $   -100.00               |
+|  INTC260713C00114000           5     +5.4%   $    +20.00               |
+|  INTC260713C00115000           1     -7.7%   $     -5.00               |
+|  PLTR260717C00139000           5     -1.4%   $     -5.00               |
+|  ... 2 more position(s)                                                |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-10.log
+elapsed=36.5s reconcile=0.11s cancel=0.01s manage=3.73s scan=28.75s entries=3.78s
+STATUS: options_morning_bot run complete (PAPER) elapsed=36.5s. run=#3583 https://github.com/28twagg-ops/TradingBot/actions/runs/29097218373
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-10_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-10_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-10_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-10_strategy_selection.csv
+Summary: keep=0 watch=5 drop=0

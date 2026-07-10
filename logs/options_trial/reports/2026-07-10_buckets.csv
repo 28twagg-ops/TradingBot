@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,c000_s173_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,13,38.5,41.47,-78.46,472.26,-94.7,4279.03,"ADBE,ANET,AVGO,BA,CCL,GOOGL,INTC,PEP,PLTR",ORPHAN,stop_loss (-85.3%); take_profit (+68.3%); take_profit (+66.8%)…,closed
+0,c000_s173_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,,,,,,0,,,,idle
 1,c001_s173_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,,,,,,0,,,,idle
 2,c002_s173_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,,,,,,0,,,,idle
 3,c003_s173_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,,,,,,0,,,,idle
