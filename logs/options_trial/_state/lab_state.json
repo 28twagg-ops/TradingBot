@@ -3023,7 +3023,58 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "35243f22-5efc-4b82-b67d-edbad1ac4481",
+      "lot_id": "68ec0f3dab4a",
+      "bucket_id": 86,
+      "strategy_id": "S174",
+      "occ_symbol": "INTC260713C00114000",
+      "qty": 1,
+      "reason": "EOD",
+      "submitted": "2026-07-10T15:34:24"
+    },
+    {
+      "order_id": "20b4abb5-9e2b-46c6-98c0-bae7cf0a481a",
+      "lot_id": "9fc7edccc142",
+      "bucket_id": 82,
+      "strategy_id": "S173",
+      "occ_symbol": "T260717C00021000",
+      "qty": 1,
+      "reason": "EOD",
+      "submitted": "2026-07-10T15:34:24"
+    },
+    {
+      "order_id": "6ac8e159-5cb9-4fbf-bd90-8d71f0e30eb4",
+      "lot_id": "926ac497e2a6",
+      "bucket_id": 81,
+      "strategy_id": "S173",
+      "occ_symbol": "T260710C00021000",
+      "qty": 1,
+      "reason": "EOD",
+      "submitted": "2026-07-10T15:34:24"
+    },
+    {
+      "order_id": "1ba1da06-acb6-4071-b018-4f0ea7481a8d",
+      "lot_id": "ac72bad731c7",
+      "bucket_id": 87,
+      "strategy_id": "S174",
+      "occ_symbol": "PSKY260717C00010000",
+      "qty": 1,
+      "reason": "EOD",
+      "submitted": "2026-07-10T15:34:24"
+    },
+    {
+      "order_id": "753685e4-4fe4-4f5f-87f3-f32960b386ca",
+      "lot_id": "7eb5fdaae5e6",
+      "bucket_id": 90,
+      "strategy_id": "S165",
+      "occ_symbol": "INTC260713C00115000",
+      "qty": 1,
+      "reason": "EOD",
+      "submitted": "2026-07-10T15:34:24"
+    }
+  ],
   "bucket_open_premium": {
     "b90": 73.0,
     "b70": 48.0,
