@@ -1,0 +1,54 @@
+14:15:38  INFO      Mode: exits
+14:15:38  INFO        Daily log -> logs/daily/2026-07-10.md
+14:15:38  INFO        Daily log reconciled -> logs/daily/2026-07-10.md (1 ledger rows)
+14:15:38  INFO        place_all_stops: checking 5 positions...
+14:15:38  INFO        STOP skipped AME: fractional (0.3706 shares) — software exit will handle it
+14:15:38  INFO        STOP already live CARR @ $67.55
+14:15:38  INFO        STOP skipped CHD: fractional (0.9797 shares) — software exit will handle it
+14:15:38  INFO        STOP skipped CMI: fractional (0.1399 shares) — software exit will handle it
+14:15:38  INFO        STOP already live HST @ $23.04
+14:15:39  INFO        [positions] 5/5 (5 valid)
+14:15:39  INFO        Daily log -> logs/daily/2026-07-10.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:15 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $484.63|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CMI  P&L +0.0%  $+0.02                                            HOLD|
+|  CHD  P&L +0.1%  $+0.14                                            HOLD|
+|  AME  P&L +0.7%  $+0.58                                            HOLD|
+|  HST  P&L +1.2%  $+1.06                                            HOLD|
+|  CARR  P&L +1.9%  $+1.81                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           5|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                5|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
