@@ -1,0 +1,91 @@
+Layout: controlled:100:c000_s173_w1_0928_1005_r1
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-10T11:30:48.156485-04:00 ===
+
+[Run context]
+Paper auth OK — equity $139759.82, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S174, S165, S166, S163
+
+[Scan + entries]
+Scanning 903 symbols for [S173, S174, S165, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 36 signal(s); top: ['S173:ADI', 'S173:AMAT', 'S173:T', 'S173:CIEN', 'S173:GIS', 'S173:KLAC', 'S173:LRCX', 'S173:LITE']
+Paper lab: $139460 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+  All bucket slots blocked or closed for today's signals — skip entry loop.
+Placed 0 new entry order(s).
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          entry+manage                            |
+|  Equity                        $139,759.82                             |
+|  Signals this run              36                                      |
+|  Orders submitted (session)    62                                      |
+|  Orders filled today (ledger)  135                                     |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             151                                     |
+|  Broker option positions       8                                       |
+|  Pending orders                7                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD                                                    |
++------------------------------------------------------------------------+
+|  All-time  trades=70  buckets=39  win=79%                              |
+|  Returns   avg=+33.0%  med=+35.4%  p10=-82.0%  p90=+70.8%              |
+|  Realized  $+7,717.58                                                  |
+|  Today     trades=18  avg=+13.7%  med=-79.9%  real=$+5,563.05          |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b70  c070_s165_w3_1045_  1 100% +59.1 +59.1 +59.1 $    +28            |
+|  b58  c058_s163_w3_1045_  1 100% +59.1 +59.1 +59.1 $    +25            |
+|  b73  c073_s166_w2_1005_  1 100% +55.6 +55.6 +55.6 $    +36            |
+|  b82  c082_s173_w3_1045_  1 100% +55.6 +55.6 +55.6 $    +36            |
+|  b92  c092_s166_w1_0928_  2 100% +53.6 +53.6 +70.8 $    +95            |
+|  b93  c093_s166_w2_1005_  2 100% +53.6 +53.6 +70.8 $    +95            |
+|  b95  c095_s166_w4_1120_  2 100% +50.5 +50.5 +70.8 $    +95            |
+|  b96  c096_s163_w1_0928_  2 100% +50.5 +50.5 +70.8 $    +95            |
+|  ... 31 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b0   c000_s173_w1_0928_ 22  45% +22.4 -64.3 -100.0 $  +6311      |
++========================================================================+
++========================================================================+
+|  PENDING ORDERS (7)                                                    |
++------------------------------------------------------------------------+
+|  Top groups                    S174:INTC(6), S165:INTC(1)              |
++------------------------------------------------------------------------+
+|  b90  S165 INTC     limit=0.55                                         |
+|  b86  S174 INTC     limit=0.60                                         |
+|  b7   S174 INTC     limit=0.71                                         |
+|  b27  S174 INTC     limit=0.71                                         |
+|  b47  S174 INTC     limit=0.71                                         |
+|  ... 2 more pending order(s)                                           |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (8)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  MRNA260710C00085000          54   -100.0%   $ -1,667.00               |
+|  BA260710C00237500            22   -100.0%   $   -466.00               |
+|  INTC260713C00115000          32    -10.6%   $   -202.00               |
+|  PLTR260717C00139000           5    -45.2%   $   -165.00               |
+|  T260710C00021000             10    -16.1%   $    -25.00               |
+|  INTC260713C00114000          10     -3.3%   $    -24.00               |
+|  PSKY260717C00010000           5    +25.0%   $    +10.00               |
+|  T260717C00021000             13     +0.0%   $     +0.00               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-10.log
+elapsed=79.5s reconcile=4.59s cancel=0.06s manage=7.45s scan=62.22s entries=0.14s
+STATUS: options_morning_bot run complete (PAPER) elapsed=79.5s. run=#3604 https://github.com/28twagg-ops/TradingBot/actions/runs/29103897276
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-10_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-10_buckets.csv
+Summary: 1 buckets closed trades, $+5,563.05 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-10_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-10_strategy_selection.csv
+Summary: keep=0 watch=5 drop=0
