@@ -956,3 +956,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-09 19:47:15,2026-07-09,SELL,CSCO,Pullback50,118.49,99.56,4.55,4.33,1,midline (+4.5%),bull,482.73
 2026-07-10 13:52:19,2026-07-10,SELL,DECK,Pullback50,104.73,94.5,-0.54,-0.51,0,stop_loss (-0.5%),bull,482.86
 2026-07-10 19:46:05,2026-07-10,SELL,AME,Pullback50,235.06,87.12,0.72,0.62,1,midline (+0.7%),bull,485.26
+2026-07-10 19:56:12,2026-07-10,SELL,ATO,Pullback50,176.43,97.03,-0.01,-0.01,0,midline (-0.0%),bull,484.6
