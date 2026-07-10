@@ -19,3 +19,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-10T10:15:40.034872-04:00,exit,0,orphan_reconcile,ORPHAN,262eedfd288b,BA,BA260710C00242500,29,,,284.0,-89.79,-255.0,stop_loss (-89.8%),,-0.01,0.5,-0.5,,,4cb7c6fc-c51f-4d64-b50b-45c49b76305f
 2026-07-10T10:20:45.295428-04:00,exit,0,orphan_reconcile,ORPHAN,7e5719fad01e,CCL,CCL260717C00026000,93,,,6981.0,54.53,3807.02,take_profit (+54.5%),,-0.01,0.5,-0.5,,,cbe1057e-a8e8-47ad-9473-ecc40ae5673b
 2026-07-10T10:20:45.295428-04:00,exit,0,orphan_reconcile,ORPHAN,a8c97ef07d28,INTC,INTC260713C00118000,5,,,235.0,-57.45,-135.0,stop_loss (-57.4%),,-0.01,0.5,-0.5,,,d9557fae-d1c3-4803-afda-5201e1782195
+2026-07-10T10:45:39.942133-04:00,exit,0,orphan_reconcile,ORPHAN,4d688d39c6bb,MRNA,MRNA260710C00085000,54,,,1667.0,-100.0,-1667.0,stop_loss (-100.0%),,-0.01,0.5,-0.5,,,abd18c6e-0d32-4213-a981-940bac9a5106
+2026-07-10T10:45:39.942133-04:00,exit,0,orphan_reconcile,ORPHAN,a6c987b61026,BA,BA260710C00237500,22,,,466.0,-100.0,-466.0,stop_loss (-100.0%),,-0.01,0.5,-0.5,,,fc8b62e2-8e20-409e-8296-545395fc8a12
