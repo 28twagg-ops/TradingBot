@@ -164,17 +164,17 @@
   ],
   "pending_orders": [
     {
-      "order_id": "8d31a441-0141-4c47-99e4-d2804c2198cd",
+      "order_id": "c9137d12-0848-4fbf-9749-01470970e9a6",
       "bucket_id": 85,
       "strategy_id": "S174",
-      "occ_symbol": "INTC260713C00114000",
+      "occ_symbol": "INTC260713C00115000",
       "underlying": "INTC",
       "qty": 1,
-      "limit": 0.67,
+      "limit": 0.56,
       "profile_name": "c085_s174_w2_1005_1045_r5",
       "submitted": "2026-07-10",
       "detail": "RB gap -2.6% reclaim",
-      "spread_frac": 0.1250000000000001,
+      "spread_frac": 0.13084112149532703,
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
@@ -226,7 +226,7 @@
     "cbe1057e-a8e8-47ad-9473-ecc40ae5673b",
     "d9557fae-d1c3-4803-afda-5201e1782195"
   ],
-  "submitted_today": 30,
+  "submitted_today": 31,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-07-10"
 }
