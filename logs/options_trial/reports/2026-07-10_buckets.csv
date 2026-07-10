@@ -24,7 +24,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 22,c022_s173_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,,,,,,0,T,S173,,entered_no_exit
 23,c023_s173_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,,,,,,0,T,S173,,entered_no_exit
 24,c024_s174_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,4,0,,,,,,0,INTC,S174,,entered_no_exit
-25,c025_s174_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,,,,,,0,INTC,S174,,entered_no_exit
+25,c025_s174_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,1,0.0,-50.68,-50.68,-50.68,-50.68,-37.0,"INTC,PLTR",S174,stop_loss (-50.7%),closed
 26,c026_s174_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,,,,,,0,INTC,S174,,entered_no_exit
 27,c027_s174_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,,,,,,0,INTC,S174,,entered_no_exit
 28,c028_s165_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,4,0,,,,,,0,INTC,S165,,entered_no_exit
