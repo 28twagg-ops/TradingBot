@@ -3122,40 +3122,7 @@
       "entry_order_id": "cbe3a5b6-2081-456f-819a-ad5c5d1fa502"
     }
   ],
-  "pending_orders": [
-    {
-      "order_id": "9ccde60d-5342-4fbc-a88e-4fe50ba62832",
-      "bucket_id": 90,
-      "strategy_id": "S165",
-      "occ_symbol": "INTC260713C00114000",
-      "underlying": "INTC",
-      "qty": 1,
-      "limit": 0.55,
-      "profile_name": "c090_s165_w3_1045_1120_r5",
-      "submitted": "2026-07-10",
-      "detail": "gap -2.6%",
-      "spread_frac": 0.19607843137254907,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "f46a5aca-dc63-4bd4-a737-b9d808398338",
-      "bucket_id": 86,
-      "strategy_id": "S174",
-      "occ_symbol": "INTC260713C00114000",
-      "underlying": "INTC",
-      "qty": 1,
-      "limit": 0.6,
-      "profile_name": "c086_s174_w3_1045_1120_r5",
-      "submitted": "2026-07-10",
-      "detail": "RB gap -2.6% reclaim",
-      "spread_frac": 0.08547008547008536,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    }
-  ],
+  "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {
     "b90": 73.0,
