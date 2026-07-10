@@ -45,13 +45,14 @@ from options_signals import PAPER_STRATEGIES, SignalHit, scan_symbol, StrategyCo
 from options_lab import (
     VIRTUAL_BUCKET_USD, PAPER_UNLIMITED_BUCKETS, EffectiveArm, LabState,
     active_bucket_count, arms_for_signal,
-    append_ledger, build_bucket_leaderboard, cancel_unfilled_lab_entries,
+    build_bucket_leaderboard, cancel_unfilled_lab_entries,
     entry_limit_price, exit_limit_price,
     exit_reason_for_lot, has_open_lab_entry, load_state,
     lock_entry_slot, make_entry_client_order_id,
-    make_exit_client_order_id, mark_order_logged, print_exit_summary,
-    print_trial_stats, reconcile_summary, reconcile_with_broker, register_exit,
-    register_pending, size_for_arm, trial_root,
+    make_exit_client_order_id, open_option_sell_symbols,
+    print_exit_summary, print_trial_stats, reconcile_summary,
+    reconcile_with_broker, register_pending, register_pending_exit,
+    size_for_arm, trial_root,
 )
 
 # --------------------------------------------------------------------------- #
@@ -228,21 +229,32 @@ def _console_positions_table(positions: list[dict], *, max_rows: int = 8) -> Non
 
 def _console_pending_summary(state: LabState, *, max_rows: int = 5) -> None:
     pending = state.pending_orders
-    if not pending:
+    pending_ex = state.pending_exits
+    if not pending and not pending_ex:
         return
-    from collections import Counter
-    groups = Counter(f"{p.strategy_id}:{p.underlying}" for p in pending)
-    top = ", ".join(f"{k}({v})" for k, v in groups.most_common(3))
-    _box_title(f"PENDING ORDERS ({len(pending)})")
-    rl(_box_line(f"  Top groups                    {top}"))
-    rl(_box_border("-"))
-    for p in pending[:max_rows]:
-        sym = p.underlying[:8]
-        rl(_box_line(
-            f"  b{p.bucket_id:<3d} {p.strategy_id} {sym:8s} limit={p.limit:.2f}"))
-    if len(pending) > max_rows:
-        rl(_box_line(f"  ... {len(pending) - max_rows} more pending order(s)"))
-    _box_end()
+    if pending:
+        from collections import Counter
+        groups = Counter(f"{p.strategy_id}:{p.underlying}" for p in pending)
+        top = ", ".join(f"{k}({v})" for k, v in groups.most_common(3))
+        _box_title(f"PENDING ORDERS ({len(pending)})")
+        rl(_box_line(f"  Top groups                    {top}"))
+        rl(_box_border("-"))
+        for p in pending[:max_rows]:
+            sym = p.underlying[:8]
+            rl(_box_line(
+                f"  b{p.bucket_id:<3d} {p.strategy_id} {sym:8s} limit={p.limit:.2f}"))
+        if len(pending) > max_rows:
+            rl(_box_line(f"  ... {len(pending) - max_rows} more pending order(s)"))
+        _box_end()
+    if pending_ex:
+        _box_title(f"PENDING EXITS ({len(pending_ex)})")
+        for pe in pending_ex[:max_rows]:
+            rl(_box_line(
+                f"  b{pe.bucket_id:<3d} {pe.strategy_id} {pe.occ_symbol[:22]} "
+                f"x{pe.qty} {pe.reason[:20]}"))
+        if len(pending_ex) > max_rows:
+            rl(_box_line(f"  ... {len(pending_ex) - max_rows} more pending exit(s)"))
+        _box_end()
 
 
 def _console_bucket_leaderboard(state: LabState, *, top_n: int = 8) -> None:
@@ -682,8 +694,12 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
     eod = _hm_ge(now, EOD_SWEEP)
     occ_symbols = {l.occ_symbol for l in state.lots if l.qty > 0}
     pos_by_occ = {getattr(p, "symbol", ""): p for p in option_positions(trade)}
+    open_sells = open_option_sell_symbols(trade)
 
     for occ in occ_symbols:
+        if occ in open_sells or state.pending_exit_for_occ(occ):
+            rl(f"  EXIT skip {occ}: open sell already pending", console=False)
+            continue
         p = pos_by_occ.get(occ)
         if not p:
             continue
@@ -710,19 +726,21 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
         for lot in list(state.lots_for_occ(occ)):
             if lot.qty <= 0:
                 continue
+            if state.pending_exit_for_lot(lot.lot_id):
+                continue
             reason = exit_reason_for_lot(lot, plpc, eod)
             if not reason:
                 continue
             sell_qty = min(lot.qty, pos_qty)
             if sell_qty <= 0:
                 continue
+            # Re-check broker open sells (another lot on same OCC may have just submitted).
+            if occ in open_sells or state.pending_exit_for_occ(occ):
+                rl(f"  EXIT skip {occ}: open sell already pending", console=False)
+                break
             ret_pct = plpc * 100.0
             tag = f"[b{lot.bucket_id}|{lot.profile_name}|{lot.strategy_id}] {reason}"
             cid = make_exit_client_order_id(lot.bucket_id, lot.strategy_id, lot.lot_id)
-            cost_sold = (
-                lot.entry_cost * (sell_qty / lot.qty) if lot.qty else lot.entry_cost
-            )
-            pnl_usd = cost_sold * (ret_pct / 100.0)
 
             sell_limit = exit_limit_price(lot, bid or 0.01, bid or 0.01, (bid or 0.01))
             if bid:
@@ -767,28 +785,13 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
                 if not exit_oid:
                     continue
 
-            append_ledger({
-                "ts": now.isoformat(),
-                "event": "exit",
-                "bucket_id": lot.bucket_id,
-                "profile": lot.profile_name,
-                "strategy_id": lot.strategy_id,
-                "lot_id": lot.lot_id,
-                "symbol": lot.underlying,
-                "occ": occ,
-                "qty": sell_qty,
-                "cost": round(cost_sold, 2),
-                "return_pct": round(ret_pct, 2),
-                "pnl_usd": round(pnl_usd, 2),
-                "reason": reason,
-                "sell_offset": lot.sell_limit_offset,
-                "take_profit": lot.take_profit,
-                "stop_loss": lot.stop_loss,
-                "order_id": exit_oid,
-            })
-            mark_order_logged(state, exit_oid)
-            register_exit(state, lot, sell_qty)
+            # Ledger + lot reduction happen on fill in reconcile — not on submit.
+            # Registering early caused double-sells when $0.01 limits sat unfilled.
+            register_pending_exit(state, lot, exit_oid, sell_qty, reason)
+            open_sells.add(occ)
             pos_qty -= sell_qty
+            # One open sell per OCC is enough; further lots wait for fill/reconcile.
+            break
 
 
 # --------------------------------------------------------------------------- #
@@ -1203,6 +1206,11 @@ def run() -> int:
         placed = place_entries(trade, opt, ref, signals, state, now)
         _mark_phase("entries", t0)
         rl(f"Placed {placed} new entry order(s).")
+        # Re-reconcile so same-run fills land in ledger/lots before summary.
+        if placed or state.pending_orders:
+            t0 = time.perf_counter()
+            state = reconcile_with_broker(trade, state, log_fn=rl_file)
+            _mark_phase("reconcile2", t0)
         header = f"entry+manage ({placed} new)"
         mode = "entry+manage"
     else:

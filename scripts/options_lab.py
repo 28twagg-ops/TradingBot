@@ -305,10 +305,38 @@ class PendingOrder:
 
 
 @dataclass
+class PendingExit:
+    order_id: str
+    lot_id: str
+    bucket_id: int
+    strategy_id: str
+    occ_symbol: str
+    qty: int
+    reason: str = ""
+    submitted: str = ""
+
+
+def _norm_order_field(val: Any) -> str:
+    """Normalize Alpaca enum/string fields (str(OrderStatus.FILLED) != 'filled')."""
+    if val is None:
+        return ""
+    if hasattr(val, "value"):
+        try:
+            return str(val.value).lower()
+        except Exception:
+            pass
+    s = str(val).lower()
+    if "." in s:
+        s = s.rsplit(".", 1)[-1]
+    return s
+
+
+@dataclass
 class LabState:
     version: int = STATE_VERSION
     lots: list[VirtualLot] = field(default_factory=list)
     pending_orders: list[PendingOrder] = field(default_factory=list)
+    pending_exits: list[PendingExit] = field(default_factory=list)
     bucket_open_premium: dict[str, float] = field(default_factory=dict)
     session_date: str = ""
     entries_locked: list[str] = field(default_factory=list)
@@ -337,6 +365,12 @@ class LabState:
     def pending_for_bucket_underlying(self, bucket_id: int, underlying: str) -> bool:
         return any(p.bucket_id == bucket_id and p.underlying == underlying
                    for p in self.pending_orders)
+
+    def pending_exit_for_occ(self, occ: str) -> bool:
+        return any(p.occ_symbol == occ for p in self.pending_exits)
+
+    def pending_exit_for_lot(self, lot_id: str) -> bool:
+        return any(p.lot_id == lot_id for p in self.pending_exits)
 
     def entry_slot_locked(self, bucket_id: int, strategy_id: str) -> bool:
         return entry_slot_key(bucket_id, strategy_id) in self.entries_locked
@@ -622,10 +656,22 @@ def load_state() -> LabState:
         raw = json.loads(path.read_text(encoding="utf-8"))
         lots = [VirtualLot(**x) for x in raw.get("lots", [])]
         pending = [PendingOrder(**x) for x in raw.get("pending_orders", [])]
+        pending_exits = []
+        for x in raw.get("pending_exits", []):
+            try:
+                pending_exits.append(PendingExit(**{
+                    k: x[k] for k in (
+                        "order_id", "lot_id", "bucket_id", "strategy_id",
+                        "occ_symbol", "qty", "reason", "submitted",
+                    ) if k in x
+                }))
+            except Exception:
+                continue
         st = LabState(
             version=raw.get("version", 1),
             lots=lots,
             pending_orders=pending,
+            pending_exits=pending_exits,
             bucket_open_premium=raw.get("bucket_open_premium", {}),
             session_date=raw.get("session_date", ""),
             entries_locked=list(raw.get("entries_locked", [])),
@@ -648,6 +694,7 @@ def save_state(state: LabState) -> None:
         "version": STATE_VERSION,
         "lots": [asdict(l) for l in state.lots if l.qty > 0],
         "pending_orders": [asdict(p) for p in state.pending_orders],
+        "pending_exits": [asdict(p) for p in state.pending_exits],
         "bucket_open_premium": state.bucket_open_premium,
         "session_date": state.session_date or date.today().isoformat(),
         "entries_locked": list(state.entries_locked),
@@ -721,6 +768,7 @@ def reconcile_summary(state: LabState, positions: list[dict] | None) -> dict[str
         "virtual_contracts": lot_qty,
         "unattributed_contracts": unattributed,
         "pending_orders": len(state.pending_orders),
+        "pending_exits": len(state.pending_exits),
         "submitted_today": state.submitted_today,
         "filled_today": count_filled_entries_today(rows),
     }
@@ -818,7 +866,7 @@ def cancel_unfilled_lab_entries(trade, log_fn=None) -> int:
         req = GetOrdersRequest(status=QueryOrderStatus.OPEN, limit=200)
         for o in trade.get_orders(req):
             cid = getattr(o, "client_order_id", "") or ""
-            side = str(getattr(o, "side", "") or "").lower()
+            side = _norm_order_field(getattr(o, "side", ""))
             if not cid.startswith("LB") or side != "buy":
                 continue
             try:
@@ -843,7 +891,7 @@ def open_lab_entry_order_ids(trade) -> set[str]:
         req = GetOrdersRequest(status=QueryOrderStatus.OPEN, limit=200)
         for o in trade.get_orders(req):
             cid = getattr(o, "client_order_id", "") or ""
-            side = str(getattr(o, "side", "") or "").lower()
+            side = _norm_order_field(getattr(o, "side", ""))
             if cid.startswith("LB") and side == "buy":
                 out.add(cid)
     except Exception:
@@ -860,11 +908,62 @@ def register_exit(state: LabState, lot: VirtualLot, qty: int) -> None:
     if lot.qty <= qty:
         lot.qty = 0
     else:
-        freed_frac = qty / (lot.qty + qty) if lot.qty else 1.0
+        freed_frac = qty / lot.qty if lot.qty else 1.0
         lot.entry_cost *= (1 - freed_frac)
         lot.qty -= qty
     state.lots = [l for l in state.lots if l.qty > 0]
     save_state(state)
+
+
+def register_pending_exit(
+    state: LabState,
+    lot: VirtualLot,
+    order_id: str,
+    qty: int,
+    reason: str,
+) -> None:
+    state.pending_exits = [
+        p for p in state.pending_exits
+        if p.order_id != order_id and p.lot_id != lot.lot_id
+    ]
+    state.pending_exits.append(PendingExit(
+        order_id=str(order_id),
+        lot_id=lot.lot_id,
+        bucket_id=lot.bucket_id,
+        strategy_id=lot.strategy_id,
+        occ_symbol=lot.occ_symbol,
+        qty=qty,
+        reason=reason,
+        submitted=datetime.now().isoformat(timespec="seconds"),
+    ))
+    save_state(state)
+
+
+def clear_pending_exit(state: LabState, order_id: str) -> None:
+    oid = str(order_id)
+    state.pending_exits = [p for p in state.pending_exits if p.order_id != oid]
+
+
+def open_option_sell_symbols(trade) -> set[str]:
+    """OCC symbols with an open broker sell (avoid double-sell / uncovered)."""
+    from alpaca.trading.requests import GetOrdersRequest
+    from alpaca.trading.enums import QueryOrderStatus
+
+    occ_re = re.compile(r"^[A-Z]+\d{6}[CP]\d{8}$")
+    out: set[str] = set()
+    try:
+        orders = list(trade.get_orders(
+            GetOrdersRequest(status=QueryOrderStatus.OPEN, limit=ORDER_FETCH_LIMIT)
+        ) or [])
+    except Exception:
+        return out
+    for o in orders:
+        if _norm_order_field(getattr(o, "side", "")) != "sell":
+            continue
+        sym = getattr(o, "symbol", "") or ""
+        if occ_re.match(sym):
+            out.add(sym)
+    return out
 
 
 def exit_reason_for_lot(lot: VirtualLot, plpc: float, eod: bool) -> str | None:
@@ -1736,7 +1835,7 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
         parsed = parse_lab_client_order_id(cid)
         if not parsed or parsed["side"] != "entry":
             return
-        status = str(getattr(o, "status", "") or "").lower()
+        status = _norm_order_field(getattr(o, "status", ""))
         if status not in ("filled", "partially_filled"):
             return
         filled_qty = int(float(getattr(o, "filled_qty", 0) or 0))
@@ -1830,14 +1929,15 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
         parsed = parse_exit_client_order_id(cid)
         if not parsed:
             return
-        side = str(getattr(o, "side", "") or "").lower()
+        side = _norm_order_field(getattr(o, "side", ""))
         if side != "sell":
             return
-        status = str(getattr(o, "status", "") or "").lower()
+        status = _norm_order_field(getattr(o, "status", ""))
         if status not in ("filled", "partially_filled"):
             return
         oid = str(o.id)
         if state.order_already_logged(oid):
+            clear_pending_exit(state, oid)
             return
         filled_qty = int(float(getattr(o, "filled_qty", 0) or 0))
         if filled_qty <= 0:
@@ -1852,6 +1952,8 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
                 None,
             )
         if not lot:
+            # Lot may already be gone if a prior buggy path cleared it on submit.
+            clear_pending_exit(state, oid)
             return
         try:
             fill_px = float(getattr(o, "filled_avg_price", 0) or 0)
@@ -1863,12 +1965,25 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
         else:
             return_pct = 0.0
         reason = "reconcile_fill"
+        pe = next((p for p in state.pending_exits if p.order_id == oid), None)
+        if pe and pe.reason:
+            reason = pe.reason
         ts = str(getattr(o, "filled_at", "") or "")
         append_exit_ledger_from_fill(
             state, lot, order_id=oid, qty=min(filled_qty, lot.qty),
             fill_price=fill_px, return_pct=return_pct, reason=reason, ts=ts or None)
+        clear_pending_exit(state, oid)
         log_fn(f"  reconcile: exit fill b{lot.bucket_id}|{lot.strategy_id} "
                f"{lot.underlying} {return_pct:+.1f}%")
+
+    def _lookup_order(order_id: str):
+        order = next((o for o in all_orders if str(getattr(o, "id", "")) == order_id), None)
+        if order is not None:
+            return order
+        try:
+            return trade.get_order_by_id(order_id)
+        except Exception:
+            return None
 
     # --- 1) Process filled LAB entry + exit orders (closed + open) ---
     for o in all_orders:
@@ -1880,21 +1995,64 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
     for p in list(state.pending_orders):
         if p.order_id in open_ids:
             continue
-        order = next((o for o in all_orders if str(getattr(o, "id", "")) == p.order_id), None)
-        if order is None:
-            try:
-                order = trade.get_order_by_id(p.order_id)
-            except Exception:
-                order = None
+        order = _lookup_order(p.order_id)
         if order is not None:
             _process_entry_fill(order)
 
-    # --- 2) Drop pending when order no longer open (filled/cancelled) ---
+    for pe in list(state.pending_exits):
+        if pe.order_id in open_ids:
+            continue
+        order = _lookup_order(pe.order_id)
+        if order is not None:
+            _process_exit_fill(order)
+
+    # --- 2) Drop pending only when fill processed or terminal no-fill ---
+    terminal_no_fill = {
+        "canceled", "cancelled", "expired", "rejected", "replaced",
+    }
     before_p = len(state.pending_orders)
-    state.pending_orders = [p for p in state.pending_orders if p.order_id in open_ids]
+    keep_pending: list[PendingOrder] = []
+    for p in state.pending_orders:
+        if p.order_id in open_ids:
+            keep_pending.append(p)
+            continue
+        order = _lookup_order(p.order_id)
+        if order is None:
+            keep_pending.append(p)  # keep until broker confirms
+            continue
+        status = _norm_order_field(getattr(order, "status", ""))
+        filled_qty = int(float(getattr(order, "filled_qty", 0) or 0))
+        if status in ("filled", "partially_filled") and filled_qty > 0:
+            continue  # processed above; drop
+        if status in terminal_no_fill and filled_qty <= 0:
+            continue  # cancelled/rejected; drop
+        keep_pending.append(p)
+    state.pending_orders = keep_pending
     if before_p > len(state.pending_orders):
         log_fn(f"  reconcile: cleared {before_p - len(state.pending_orders)} "
                f"resolved pending order(s)")
+
+    before_pe = len(state.pending_exits)
+    keep_exits: list[PendingExit] = []
+    for pe in state.pending_exits:
+        if pe.order_id in open_ids:
+            keep_exits.append(pe)
+            continue
+        order = _lookup_order(pe.order_id)
+        if order is None:
+            keep_exits.append(pe)
+            continue
+        status = _norm_order_field(getattr(order, "status", ""))
+        filled_qty = int(float(getattr(order, "filled_qty", 0) or 0))
+        if status in ("filled", "partially_filled") and filled_qty > 0:
+            continue
+        if status in terminal_no_fill and filled_qty <= 0:
+            continue
+        keep_exits.append(pe)
+    state.pending_exits = keep_exits
+    if before_pe > len(state.pending_exits):
+        log_fn(f"  reconcile: cleared {before_pe - len(state.pending_exits)} "
+               f"resolved pending exit(s)")
 
     # --- 3) Broker positions ---
     pos_by_occ: dict[str, Any] = {}
@@ -1934,7 +2092,7 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
             oid = str(o.id)
             if any(l.entry_order_id == oid for l in state.lots):
                 continue
-            status = str(getattr(o, "status", "") or "").lower()
+            status = _norm_order_field(getattr(o, "status", ""))
             if status not in ("filled", "partially_filled"):
                 continue
             filled_qty = int(float(getattr(o, "filled_qty", 0) or 0))
@@ -1979,15 +2137,26 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
             for p in list(state.pending_orders):
                 if orphan <= 0 or p.occ_symbol != occ:
                     continue
-                oid = p.order_id
-                order = next((o for o in all_orders if str(o.id) == oid), None)
+                order = _lookup_order(p.order_id)
                 if order is None:
                     continue
-                status = str(getattr(order, "status", "") or "").lower()
+                status = _norm_order_field(getattr(order, "status", ""))
                 if status not in ("filled", "partially_filled"):
                     continue
                 _process_entry_fill(order)
                 orphan = pos_qty - sum(l.qty for l in state.lots_for_occ(occ))
+            # Also scan all_orders again for LAB fills on this OCC (pagination miss).
+            if orphan > 0:
+                for o in all_orders:
+                    if orphan <= 0:
+                        break
+                    if getattr(o, "symbol", "") != occ:
+                        continue
+                    cid = getattr(o, "client_order_id", "") or ""
+                    if not parse_lab_client_order_id(cid):
+                        continue
+                    _process_entry_fill(o)
+                    orphan = pos_qty - sum(l.qty for l in state.lots_for_occ(occ))
             if orphan > 0:
                 _create_orphan_lot(state, occ, pos, orphan, log_fn=log_fn)
 
