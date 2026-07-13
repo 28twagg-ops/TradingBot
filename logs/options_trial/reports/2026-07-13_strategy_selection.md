@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-13
 
-_Generated 2026-07-13T11:11:19.122578_
+_Generated 2026-07-13T11:16:42.628174_
 
 ## Summary
 
@@ -13,9 +13,9 @@ _Generated 2026-07-13T11:11:19.122578_
 
 | strategy | recommendation | exits | win% | med ret% | avg ret% | p10% | p90% | realized $ | symbols | top symbol share | rationale |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| S173 (MomReversal long call) | watch | 43 | 67.4 | +33.33 | +46.17 | -63.93 | +77.89 | $+577.64 | 6 | 53.5% | fat left tail (p10 < -45%) |
-| S174 (RubberBand long call EOD) | watch | 84 | 51.2 | +10.98 | -8.66 | -89.66 | +37.50 | $-476.19 | 6 | 45.2% | fat left tail (p10 < -45%) |
+| S173 (MomReversal long call) | watch | 44 | 68.2 | +33.33 | +46.35 | -63.93 | +77.44 | $+596.64 | 6 | 54.5% | fat left tail (p10 < -45%) |
 | S165 (GapDown long call 3 DTE) | watch | 17 | 76.5 | +10.77 | +20.31 | -2.70 | +52.27 | $+161.22 | 2 | 76.5% | building sample (8-19 exits) |
+| S174 (RubberBand long call EOD) | watch | 85 | 50.6 | +9.46 | -9.56 | -89.66 | +37.50 | $-536.19 | 6 | 45.9% | fat left tail (p10 < -45%) |
 | S163 (A1 GapDown ATM call EOD) | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | $+0.00 | 0 | 0.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | $+0.00 | 0 | 0.0% | insufficient sample (<8 exits) |
 
