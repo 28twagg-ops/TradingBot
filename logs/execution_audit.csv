@@ -599,3 +599,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-07-13 13:52:30,2026-07-13,SELL,CVX,Pullback50,180.885,180.78,180.862,96.86,-0.0127,-0.0123,limit_fill_position_check_full,midline (-0.0%),bull
 2026-07-13 14:45:45,2026-07-13,SELL,DOV,Pullback50,215.515,,215.515,96.28,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-07-13 14:50:57,2026-07-13,SELL,HST,Pullback50,23.125,,23.125,2.58,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-07-13 14:55:47,2026-07-13,SELL,AME,Pullback50,232.12,,232.12,96.22,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
