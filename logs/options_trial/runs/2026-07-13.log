@@ -72208,3 +72208,619 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-07-13.log
 elapsed=3.4s reconcile=3.21s
 
+=== 18:20:53 ET — after hours (exit summary) [elapsed=7.4s reconcile=6.93s] ===
+=== options_morning_bot (PAPER) 2026-07-13T18:20:53.942403-04:00 ===
+
+[Run context]
+After hours (18:20 ET) — exit summary only.
+Paper auth OK — equity $129876.27, account PA36KS87UPRS
+  reconcile: entry fill b67|S174 INTC x1 @ 0.59
+  reconcile: entry fill b47|S174 INTC x1 @ 0.59
+  reconcile: entry fill b43|S173 AMD x1 @ 0.65
+  reconcile: entry fill b66|S174 INTC x1 @ 0.59
+  reconcile: entry fill b70|S165 HL x1 @ 0.67
+  reconcile: entry fill b62|S173 AMD x1 @ 0.05
+  reconcile: entry fill b26|S174 AVGO x1 @ 0.49
+  reconcile: entry fill b6|S174 AVGO x1 @ 0.49
+  reconcile: entry fill b50|S165 HL x1 @ 0.66
+  reconcile: entry fill b30|S165 HL x1 @ 0.66
+  reconcile: entry fill b25|S174 AVGO x1 @ 0.46
+  reconcile: entry fill b89|S165 INTC x1 @ 0.55
+  reconcile: entry fill b29|S165 INTC x1 @ 0.55
+  reconcile: entry fill b9|S165 INTC x1 @ 0.55
+  reconcile: entry fill b81|S173 SMCI x1 @ 0.61
+  reconcile: entry fill b61|S173 SMCI x1 @ 0.61
+  reconcile: entry fill b21|S173 SMCI x1 @ 0.61
+  reconcile: entry fill b60|S173 NEM x1 @ 0.33
+  reconcile: entry fill b20|S173 SMCI x1 @ 0.70
+  reconcile: entry fill b48|S165 INTC x1 @ 0.71
+  reconcile: entry fill b28|S165 INTC x1 @ 0.71
+  reconcile: entry fill b8|S165 INTC x1 @ 0.71
+  reconcile: entry fill b0|S173 SMCI x1 @ 0.73
+  reconcile: entry fill b87|S174 INTC x1 @ 0.71
+  reconcile: entry fill b7|S174 INTC x1 @ 0.71
+  reconcile: entry fill b83|S173 T x1 @ 0.15
+  reconcile: entry fill b63|S173 T x1 @ 0.15
+  reconcile: entry fill b43|S173 T x1 @ 0.15
+  reconcile: entry fill b23|S173 T x1 @ 0.15
+  reconcile: entry fill b3|S173 T x1 @ 0.15
+  reconcile: entry fill b50|S165 INTC x1 @ 0.48
+  reconcile: entry fill b86|S174 INTC x1 @ 0.70
+  reconcile: entry fill b86|S174 INTC x1 @ 0.74
+  reconcile: entry fill b82|S173 T x1 @ 0.42
+  reconcile: entry fill b62|S173 T x1 @ 0.42
+  reconcile: entry fill b42|S173 T x1 @ 0.42
+  reconcile: entry fill b22|S173 T x1 @ 0.42
+  reconcile: entry fill b2|S173 T x1 @ 0.42
+  reconcile: entry fill b85|S174 INTC x1 @ 0.71
+  reconcile: entry fill b81|S173 T x1 @ 0.16
+  reconcile: entry fill b61|S173 T x1 @ 0.16
+  reconcile: entry fill b41|S173 T x1 @ 0.16
+  reconcile: entry fill b21|S173 T x1 @ 0.16
+  reconcile: entry fill b1|S173 T x1 @ 0.16
+  reconcile: entry fill b84|S174 INTC x1 @ 0.61
+  reconcile: entry fill b84|S174 INTC x1 @ 0.64
+  reconcile: entry fill b88|S165 INTC x1 @ 0.74
+  reconcile: entry fill b8|S165 INTC x1 @ 0.74
+  reconcile: entry fill b80|S173 T x1 @ 0.35
+  reconcile: entry fill b60|S173 T x1 @ 0.35
+  reconcile: entry fill b40|S173 T x1 @ 0.35
+  reconcile: entry fill b20|S173 T x1 @ 0.35
+  reconcile: entry fill b88|S165 INTC x1 @ 0.47
+  reconcile: entry fill b68|S165 INTC x1 @ 0.47
+  reconcile: entry fill b48|S165 INTC x1 @ 0.47
+  reconcile: entry fill b28|S165 INTC x1 @ 0.47
+  reconcile: entry fill b8|S165 INTC x1 @ 0.47
+  reconcile: entry fill b80|S173 T x1 @ 0.29
+  reconcile: entry fill b60|S173 T x1 @ 0.30
+  reconcile: entry fill b40|S173 T x1 @ 0.30
+  reconcile: entry fill b20|S173 T x1 @ 0.29
+  reconcile: entry fill b91|S165 GOOGL x1 @ 0.56
+  reconcile: entry fill b87|S174 PSKY x1 @ 0.08
+  reconcile: entry fill b67|S174 PSKY x1 @ 0.08
+  reconcile: entry fill b47|S174 PSKY x1 @ 0.08
+  reconcile: entry fill b27|S174 PSKY x1 @ 0.08
+  reconcile: entry fill b7|S174 PSKY x1 @ 0.08
+  reconcile: entry fill b91|S165 GOOGL x1 @ 0.57
+  reconcile: entry fill b71|S165 GOOGL x1 @ 0.57
+  reconcile: entry fill b51|S165 GOOGL x1 @ 0.57
+  reconcile: entry fill b31|S165 GOOGL x1 @ 0.57
+  reconcile: entry fill b11|S165 GOOGL x1 @ 0.57
+  reconcile: entry fill b90|S165 GOOGL x1 @ 0.57
+  reconcile: entry fill b90|S165 GOOGL x1 @ 0.60
+  reconcile: entry fill b90|S165 GOOGL x1 @ 0.56
+  reconcile: entry fill b90|S165 GOOGL x1 @ 0.58
+  reconcile: entry fill b90|S165 GOOGL x1 @ 0.63
+  reconcile: entry fill b90|S165 GOOGL x1 @ 0.61
+  reconcile: entry fill b90|S165 GOOGL x1 @ 0.56
+  reconcile: entry fill b70|S165 GOOGL x1 @ 0.56
+  reconcile: entry fill b50|S165 GOOGL x1 @ 0.56
+  reconcile: entry fill b30|S165 GOOGL x1 @ 0.56
+  reconcile: entry fill b10|S165 GOOGL x1 @ 0.56
+  reconcile: entry fill b86|S174 PEP x1 @ 0.68
+  reconcile: entry fill b66|S174 PEP x1 @ 0.68
+  reconcile: entry fill b46|S174 PEP x1 @ 0.68
+  reconcile: entry fill b26|S174 PEP x1 @ 0.68
+  reconcile: entry fill b6|S174 PEP x1 @ 0.68
+  reconcile: entry fill b89|S165 GOOGL x1 @ 0.44
+  reconcile: entry fill b89|S165 GOOGL x1 @ 0.59
+  reconcile: entry fill b85|S174 PLTR x1 @ 0.73
+  reconcile: entry fill b65|S174 PLTR x1 @ 0.73
+  reconcile: entry fill b45|S174 PLTR x1 @ 0.73
+  reconcile: entry fill b25|S174 PLTR x1 @ 0.73
+  reconcile: entry fill b5|S174 PLTR x1 @ 0.73
+  reconcile: entry fill b89|S165 GOOGL x1 @ 0.67
+  reconcile: entry fill b69|S165 GOOGL x1 @ 0.67
+  reconcile: entry fill b49|S165 GOOGL x1 @ 0.67
+  reconcile: entry fill b29|S165 GOOGL x1 @ 0.67
+  reconcile: entry fill b9|S165 GOOGL x1 @ 0.67
+  reconcile: entry fill b88|S165 PLTR x1 @ 0.60
+  reconcile: entry fill b68|S165 PLTR x1 @ 0.60
+  reconcile: entry fill b48|S165 PLTR x1 @ 0.60
+  reconcile: entry fill b28|S165 PLTR x1 @ 0.60
+  reconcile: entry fill b8|S165 PLTR x1 @ 0.60
+  reconcile: entry fill b99|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b98|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b97|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b96|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b95|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b94|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b93|S173 GOOGL x1 @ 0.47
+  reconcile: entry fill b92|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b91|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b90|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b89|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b88|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b87|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b86|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b85|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b84|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b83|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b82|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b81|S173 GOOGL x1 @ 0.47
+  reconcile: entry fill b80|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b79|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b78|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b77|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b76|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b75|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b74|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b73|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b72|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b71|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b70|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b69|S173 GOOGL x1 @ 0.47
+  reconcile: entry fill b68|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b67|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b66|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b65|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b64|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b63|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b62|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b61|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b60|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b59|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b58|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b57|S173 GOOGL x1 @ 0.47
+  reconcile: entry fill b56|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b55|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b54|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b53|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b52|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b51|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b50|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b49|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b48|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b47|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b46|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b45|S173 GOOGL x1 @ 0.47
+  reconcile: entry fill b44|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b43|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b42|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b41|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b40|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b39|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b38|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b37|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b36|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b35|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b34|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b33|S173 GOOGL x1 @ 0.47
+  reconcile: entry fill b32|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b31|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b30|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b29|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b28|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b27|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b26|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b25|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b24|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b23|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b22|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b21|S173 GOOGL x1 @ 0.47
+  reconcile: entry fill b20|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b19|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b18|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b17|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b16|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b15|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b14|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b13|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b12|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b11|S173 GOOGL x1 @ 0.80
+  reconcile: entry fill b10|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b9|S173 GOOGL x1 @ 0.47
+  reconcile: entry fill b8|S173 GOOGL x1 @ 0.41
+  reconcile: entry fill b7|S173 GOOGL x1 @ 0.89
+  reconcile: entry fill b5|S173 GOOGL x1 @ 0.89
+  reconcile: entry fill b4|S173 GOOGL x1 @ 0.88
+  reconcile: entry fill b3|S173 GOOGL x1 @ 0.89
+  reconcile: entry fill b2|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b1|S173 GOOGL x1 @ 0.84
+  reconcile: entry fill b0|S173 GOOGL x1 @ 0.89
+  reconcile: entry fill b6|S173 ADBE x1 @ 0.86
+  reconcile: entry fill b94|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b93|S165 PLTR x1 @ 0.37
+  reconcile: entry fill b92|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b82|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b81|S165 PLTR x1 @ 0.37
+  reconcile: entry fill b80|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b70|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b69|S165 PLTR x1 @ 0.37
+  reconcile: entry fill b68|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b58|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b57|S165 PLTR x1 @ 0.37
+  reconcile: entry fill b56|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b46|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b45|S165 PLTR x1 @ 0.38
+  reconcile: entry fill b44|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b34|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b33|S165 PLTR x1 @ 0.38
+  reconcile: entry fill b32|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b22|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b21|S165 PLTR x1 @ 0.38
+  reconcile: entry fill b20|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b10|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b9|S165 PLTR x1 @ 0.38
+  reconcile: entry fill b8|S165 PLTR x1 @ 0.30
+  reconcile: entry fill b99|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b98|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b97|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b96|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b95|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b88|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b87|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b86|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b85|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b84|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b83|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b76|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b75|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b74|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b73|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b72|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b71|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b64|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b63|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b62|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b61|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b60|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b59|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b52|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b51|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b50|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b49|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b48|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b47|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b40|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b39|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b38|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b37|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b36|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b35|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b28|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b27|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b26|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b25|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b24|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b23|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b16|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b15|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b14|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b13|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b12|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b11|S165 MRNA x1 @ 0.28
+  reconcile: entry fill b7|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b5|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b4|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b3|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b2|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b1|S165 MRNA x1 @ 0.29
+  reconcile: entry fill b0|S165 MRNA x1 @ 0.35
+  reconcile: entry fill b91|S165 BA x1 @ 0.19
+  reconcile: entry fill b90|S165 BA x1 @ 0.25
+  reconcile: entry fill b89|S165 BA x1 @ 0.19
+  reconcile: entry fill b79|S165 BA x1 @ 0.19
+  reconcile: entry fill b78|S165 BA x1 @ 0.25
+  reconcile: entry fill b77|S165 BA x1 @ 0.19
+  reconcile: entry fill b67|S165 BA x1 @ 0.19
+  reconcile: entry fill b66|S165 BA x1 @ 0.25
+  reconcile: entry fill b65|S165 BA x1 @ 0.19
+  reconcile: entry fill b55|S165 BA x1 @ 0.19
+  reconcile: entry fill b54|S165 BA x1 @ 0.25
+  reconcile: entry fill b53|S165 BA x1 @ 0.19
+  reconcile: entry fill b43|S165 BA x1 @ 0.19
+  reconcile: entry fill b42|S165 BA x1 @ 0.25
+  reconcile: entry fill b41|S165 BA x1 @ 0.19
+  reconcile: entry fill b31|S165 BA x1 @ 0.19
+  reconcile: entry fill b30|S165 BA x1 @ 0.25
+  reconcile: entry fill b29|S165 BA x1 @ 0.19
+  reconcile: entry fill b19|S165 BA x1 @ 0.19
+  reconcile: entry fill b18|S165 BA x1 @ 0.25
+  reconcile: entry fill b17|S165 BA x1 @ 0.19
+  reconcile: entry fill b6|S165 BA x1 @ 0.25
+  reconcile: entry fill b99|S174 CCL x1 @ 0.79
+  reconcile: entry fill b98|S174 CCL x1 @ 0.73
+  reconcile: entry fill b97|S174 CCL x1 @ 0.73
+  reconcile: entry fill b96|S174 CCL x1 @ 0.79
+  reconcile: entry fill b95|S174 CCL x1 @ 0.73
+  reconcile: entry fill b94|S174 CCL x1 @ 0.73
+  reconcile: entry fill b93|S174 CCL x1 @ 0.79
+  reconcile: entry fill b92|S174 CCL x1 @ 0.73
+  reconcile: entry fill b91|S174 CCL x1 @ 0.73
+  reconcile: entry fill b90|S174 CCL x1 @ 0.79
+  reconcile: entry fill b89|S174 CCL x1 @ 0.73
+  reconcile: entry fill b88|S174 CCL x1 @ 0.73
+  reconcile: entry fill b87|S174 CCL x1 @ 0.79
+  reconcile: entry fill b86|S174 CCL x1 @ 0.73
+  reconcile: entry fill b85|S174 CCL x1 @ 0.73
+  reconcile: entry fill b84|S174 CCL x1 @ 0.79
+  reconcile: entry fill b83|S174 CCL x1 @ 0.73
+  reconcile: entry fill b82|S174 CCL x1 @ 0.73
+  reconcile: entry fill b81|S174 CCL x1 @ 0.79
+  reconcile: entry fill b80|S174 CCL x1 @ 0.73
+  reconcile: entry fill b79|S174 CCL x1 @ 0.73
+  reconcile: entry fill b78|S174 CCL x1 @ 0.79
+  reconcile: entry fill b77|S174 CCL x1 @ 0.73
+  reconcile: entry fill b76|S174 CCL x1 @ 0.73
+  reconcile: entry fill b75|S174 CCL x1 @ 0.79
+  reconcile: entry fill b74|S174 CCL x1 @ 0.73
+  reconcile: entry fill b73|S174 CCL x1 @ 0.73
+  reconcile: entry fill b72|S174 CCL x1 @ 0.79
+  reconcile: entry fill b71|S174 CCL x1 @ 0.73
+  reconcile: entry fill b70|S174 CCL x1 @ 0.73
+  reconcile: entry fill b69|S174 CCL x1 @ 0.79
+  reconcile: entry fill b68|S174 CCL x1 @ 0.73
+  reconcile: entry fill b67|S174 CCL x1 @ 0.73
+  reconcile: entry fill b66|S174 CCL x1 @ 0.79
+  reconcile: entry fill b65|S174 CCL x1 @ 0.73
+  reconcile: entry fill b64|S174 CCL x1 @ 0.73
+  reconcile: entry fill b63|S174 CCL x1 @ 0.79
+  reconcile: entry fill b62|S174 CCL x1 @ 0.73
+  reconcile: entry fill b61|S174 CCL x1 @ 0.73
+  reconcile: entry fill b60|S174 CCL x1 @ 0.79
+  reconcile: entry fill b59|S174 CCL x1 @ 0.73
+  reconcile: entry fill b58|S174 CCL x1 @ 0.73
+  reconcile: entry fill b57|S174 CCL x1 @ 0.79
+  reconcile: entry fill b56|S174 CCL x1 @ 0.73
+  reconcile: entry fill b55|S174 CCL x1 @ 0.73
+  reconcile: entry fill b54|S174 CCL x1 @ 0.79
+  reconcile: entry fill b53|S174 CCL x1 @ 0.73
+  reconcile: entry fill b52|S174 CCL x1 @ 0.73
+  reconcile: removed 331 stale lot(s)
+  reconcile: trimmed AMD260713C00560000 lots to match pos qty 7
+  reconcile: trimmed INTC260713C00114000 lots to match pos qty 8
+  reconcile: trimmed INTC260713C00115000 lots to match pos qty 29
+  reconcile: trimmed INTC260715C00113000 lots to match pos qty 4
+  reconcile: trimmed SMCI260717C00029000 lots to match pos qty 3
+
+[Exit summary]
+========================================================
+OPTIONS EXIT SUMMARY — 2026-07-13
+========================================================
+Account equity: $129,876.27
+Open broker positions: 5  unrealized $-2,872.80
+
+Today's closed trades
+  Count:     57
+  Win rate:  19/57 (33%)
+  Return:    avg +18.1%  med -42.4%  best +1100.0%  worst -93.3%
+  Realized:  $-896.00
+
+By strategy
+  S165    n= 10  win=20%  avg=-35.2%
+  S173    n= 24  win=62%  avg=+117.5%
+  S174    n= 23  win=9%  avg=-62.5%
+
+By symbol
+  INTC    n= 25  avg=-66.4%
+  T       n= 13  avg=+64.3%
+  SMCI    n=  5  avg=-26.7%
+  PSKY    n=  4  avg=+12.5%
+  AMD     n=  4  avg=+520.2%
+  AVGO    n=  3  avg=-51.7%
+  NEM     n=  2  avg=+18.2%
+  HL      n=  1  avg=-24.2%
+
+By exit type
+  take_profit   10
+  EOD           11
+  stop_loss     13
+  reconcile_fill  23
+
+Top buckets today (realized $)
+  b80|c080_s173_w1_0928_1005_r5  $+171.00
+  b62|c062_s173_w3_1045_1120_r4  $+107.00
+  b60|c060_s173_w1_0928_1005_r4  $+41.00
+  b40|c040_s173_w1_0928_1005_r3  $+19.00
+  b20|c020_s173_w1_0928_1005_r2  $+19.00
+  (18 more bucket profiles with exits)
+
+Recent exits (last 8)
+  19:44:36  b81 c081_s173_w2_1005_  SMCI  S173    -26.2%    $-16.00  EOD
+  19:46:09  b70 c070_s165_w3_1045_  INTC  S165     +8.3%     $+4.00  reconcile_fill
+  19:48:09  b68 c068_s165_w1_0928_  INTC  S165    -47.3%    $-26.00  stop_loss (-50.5%)
+  19:50:16  b69 c069_s165_w2_1005_  INTC  S165    -43.6%    $-24.00  reconcile_fill
+  19:50:17  b40 c040_s173_w1_0928_  SMCI  S173    -19.0%    $-11.00  reconcile_fill
+  19:50:17  b70 c070_s165_w3_1045_  INTC  S165    +12.5%     $+6.00  reconcile_fill
+  19:56:10  b67 c067_s174_w4_1120_  INTC  S174    -45.8%    $-27.00  EOD
+  19:56:10  b81 c081_s173_w2_1005_  SMCI  S173    -22.9%    $-14.00  EOD
+========================================================
+
+[Portfolio snapshot]
+========================================================
+OPTIONS TRIAL STATS
+========================================================
+Account equity: $129,876.27
+Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
+
+P&L summary
+  Realized (sold):     $+5,979.58 all-time  |  $-896.00 today
+  Open (not sold yet): $-2,886.36 unrealized (virtual lots)
+                       $-2,872.80 unrealized (broker total)
+  Premium deployed:    $3,175.00 in open positions
+  Combined P&L:        $+3,093.22 (realized + open virtual)
+
+Ledger (master)
+  Total events:     2665
+  Today entries:    68
+  Today exits:      57
+  All-time exits:   197  wins 51%
+  Avg return/trade: +11.3%  median +4.8%
+
+Open virtual lots (by bucket)
+  b0 c000_s173_w1_0928_1005_r1  prem=$    73  real=$-30.00  open=$-16.45  lots=1  [S173:SMCIx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b2 c002_s173_w3_1045_1120_r1  prem=$    70  real=$ +0.00  open=$-70.00  lots=1  [S173:AMDx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b3 c003_s173_w4_1120_1135_r1  prem=$    65  real=$-40.00  open=$-65.00  lots=1  [S173:AMDx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b4 c004_s174_w1_0928_1005_r1  prem=$   127  real=$ +0.00  open=$-127.00  lots=2  [S174:INTCx1, S174:INTCx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b5 c005_s174_w2_1005_1045_r1  prem=$    62  real=$ +0.00  open=$-62.00  lots=1  [S174:INTCx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b6 c006_s174_w3_1045_1120_r1  prem=$    58  real=$ +0.00  open=$-58.00  lots=1  [S174:INTCx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b7 c007_s174_w4_1120_1135_r1  prem=$    71  real=$-58.00  open=$-71.00  lots=1  [S174:INTCx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b8 c008_s165_w1_0928_1005_r1  prem=$    74  real=$-66.00  open=$-74.00  lots=1  [S165:INTCx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b9 c009_s165_w2_1005_1045_r1  prem=$    55  real=$ +0.00  open=$-22.93  lots=1  [S165:INTCx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b10 c010_s165_w3_1045_1120_r1  prem=$    48  real=$ +0.00  open=$-48.00  lots=1  [S165:INTCx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b20 c020_s173_w1_0928_1005_r2  prem=$    70  real=$+19.00  open=$-15.77  lots=1  [S173:SMCIx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b21 c021_s173_w2_1005_1045_r2  prem=$    61  real=$-96.00  open=$-13.74  lots=1  [S173:SMCIx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b22 c022_s173_w3_1045_1120_r2  prem=$    54  real=$-32.00  open=$-54.00  lots=1  [S173:AMDx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b24 c024_s174_w1_0928_1005_r2  prem=$   127  real=$ +0.00  open=$-127.00  lots=2  [S174:INTCx1, S174:INTCx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b25 c025_s174_w2_1005_1045_r2  prem=$    62  real=$-257.00  open=$-62.00  lots=1  [S174:INTCx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b26 c026_s174_w3_1045_1120_r2  prem=$    58  real=$-26.00  open=$-58.00  lots=1  [S174:INTCx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b28 c028_s165_w1_0928_1005_r2  prem=$    74  real=$ +0.00  open=$-74.00  lots=1  [S165:INTCx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b29 c029_s165_w2_1005_1045_r2  prem=$    55  real=$ +0.00  open=$-22.93  lots=1  [S165:INTCx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b40 c040_s173_w1_0928_1005_r3  prem=$     0  real=$+19.00  open=$ +0.00  lots=0  [-]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b41 c041_s173_w2_1005_1045_r3  prem=$     0  real=$-72.00  open=$ +0.00  lots=0  [-]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  (29 more active bucket(s) omitted)
+  (51 quiet bucket profile(s) — no trades yet)
+
+Alpaca option positions
+  AMD260713C00560000  qty=7  cost=$440.13  return=-100.0%  open P&L=$-440.13
+  INTC260713C00114000  qty=8  cost=$575.47  return=-100.0%  open P&L=$-575.47
+  INTC260713C00115000  qty=29  cost=$1,720.06  return=-100.0%  open P&L=$-1,720.06
+  INTC260715C00113000  qty=4  cost=$226.40  return=-41.7%  open P&L=$-94.40
+  SMCI260717C00029000  qty=3  cost=$189.75  return=-22.5%  open P&L=$-42.75
+
+Per-bucket exit stats (all time)
+  b0|c000_s173_w1_0928_1005_r1  n=  1  avg=-41.1%  med=-41.1%  realized=$-30.00
+  b0|orphan_reconcile     n= 22  avg=+22.4%  med=-57.5%  realized=$+6,310.91
+  b20|c020_s173_w1_0928_1005_r2  n=  1  avg=+54.3%  med=+54.3%  realized=$+19.00
+  b21|c021_s173_w2_1005_1045_r2  n=  3  avg=-55.5%  med=-77.0%  realized=$-96.00
+  b22|c022_s173_w3_1045_1120_r2  n=  1  avg=-59.3%  med=-59.3%  realized=$-32.00
+  b25|c025_s174_w2_1005_1045_r2  n= 10  avg=-42.8%  med=-41.9%  realized=$-257.00
+  b26|c026_s174_w3_1045_1120_r2  n=  1  avg=-53.1%  med=-53.1%  realized=$-26.00
+  b3|c003_s173_w4_1120_1135_r1  n=  2  avg=-18.0%  med=+33.3%  realized=$-40.00
+  b40|c040_s173_w1_0928_1005_r3  n=  4  avg=+23.6%  med=+54.3%  realized=$+19.00
+  b41|c041_s173_w2_1005_1045_r3  n=  3  avg=-30.1%  med=-63.9%  realized=$-72.00
+  b42|c042_s173_w3_1045_1120_r3  n=  3  avg=-3.0%  med=+4.8%  realized=$-6.00
+  b46|c046_s174_w3_1045_1120_r3  n=  3  avg=-89.7%  med=-89.7%  realized=$-156.00
+  b47|c047_s174_w4_1120_1135_r3  n= 10  avg=-60.3%  med=-76.1%  realized=$-428.00
+  b48|c048_s165_w1_0928_1005_r3  n=  1  avg=-53.5%  med=-53.5%  realized=$-38.00
+  b49|c049_s165_w2_1005_1045_r3  n=  1  avg=-49.1%  med=-49.1%  realized=$-27.00
+  b50|c050_s165_w3_1045_1120_r3  n=  1  avg=-24.2%  med=-24.2%  realized=$-16.00
+  b56|g056_lim_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b57|g057_mid_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b58|g058_eod_tp20_sl65  n=  1  avg=+59.1%  med=+59.1%  realized=$+25.41
+  b60|c060_s173_w1_0928_1005_r4  n=  3  avg=+44.3%  med=+78.8%  realized=$+41.00
+  b62|c062_s173_w3_1045_1120_r4  n=  3  avg=+713.3%  med=+1100.0%  realized=$+107.00
+  b63|g063_mid_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b64|c064_s174_w1_0928_1005_r4  n=  3  avg=-93.3%  med=-93.3%  realized=$-168.00
+  b64|g064_eod_tp20_sl65  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b65|c065_s174_w2_1005_1045_r4  n=  8  avg=-45.7%  med=-45.2%  realized=$-238.00
+  b65|g065_lim_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b66|c066_s174_w3_1045_1120_r4  n=  1  avg=-52.5%  med=-52.5%  realized=$-31.00
+  b66|g066_mid_tp20_sl65  n=  1  avg=+23.3%  med=+23.3%  realized=$+18.63
+  b67|c067_s174_w4_1120_1135_r4  n=  1  avg=-45.8%  med=-45.8%  realized=$-27.00
+  b67|g067_eod_tp20_sl65  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b68|c068_s165_w1_0928_1005_r4  n=  2  avg=-48.2%  med=-47.3%  realized=$-53.00
+  b69|c069_s165_w2_1005_1045_r4  n=  1  avg=-43.6%  med=-43.6%  realized=$-24.00
+  b70|c070_s165_w3_1045_1120_r4  n=  2  avg=+10.4%  med=+12.5%  realized=$+10.00
+  b70|g070_eod_tp30_sl20  n=  1  avg=+59.1%  med=+59.1%  realized=$+27.77
+  b71|g071_lim_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b72|g072_mid_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b73|g073_eod_tp30_sl20  n=  1  avg=+55.6%  med=+55.6%  realized=$+36.11
+  b74|g074_lim_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b75|g075_mid_tp30_sl20  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b76|g076_eod_tp30_sl20  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b77|g077_lim_tp30_sl20  n=  1  avg=-23.3%  med=-23.3%  realized=$-18.63
+  b78|g078_mid_tp30_sl20  n=  1  avg=-23.3%  med=-23.3%  realized=$-18.63
+  b79|g079_eod_tp30_sl20  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b7|c007_s174_w4_1120_1135_r1  n=  5  avg=-7.5%  med=-1.4%  realized=$-58.00
+  b80|c080_s173_w1_0928_1005_r5  n= 12  avg=+52.7%  med=+62.9%  realized=$+198.00
+  b80|g080_lim_tp30_sl30  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b81|c081_s173_w2_1005_1045_r5  n=  5  avg=-29.8%  med=-26.2%  realized=$-105.00
+  b81|g081_mid_tp30_sl30  n=  1  avg=+36.5%  med=+36.5%  realized=$+23.73
+  b82|c082_s173_w3_1045_1120_r5  n=  2  avg=+0.0%  med=+0.0%  realized=$+0.00
+  b82|g082_eod_tp30_sl30  n=  1  avg=+55.6%  med=+55.6%  realized=$+36.11
+  b83|c083_s173_w4_1120_1135_r5  n=  4  avg=-42.6%  med=-46.7%  realized=$-104.00
+  b83|g083_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b84|g084_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b85|c085_s174_w2_1005_1045_r5  n=  7  avg=-9.4%  med=-32.7%  realized=$-42.00
+  b85|g085_eod_tp30_sl30  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
+  b86|c086_s174_w3_1045_1120_r5  n=  4  avg=+26.1%  med=+39.7%  realized=$+64.00
+  b86|g086_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b87|c087_s174_w4_1120_1135_r5  n=  4  avg=-23.5%  med=+37.5%  realized=$-114.00
+  b87|g087_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b88|c088_s165_w1_0928_1005_r5  n=  6  avg=+1.8%  med=-2.7%  realized=$+6.00
+  b88|g088_eod_tp30_sl30  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b89|g089_lim_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b8|c008_s165_w1_0928_1005_r1  n=  5  avg=-18.6%  med=+1.4%  realized=$-66.00
+  b90|c090_s165_w3_1045_1120_r5  n=  4  avg=+27.1%  med=+27.1%  realized=$+52.00
+  b90|g090_mid_tp30_sl30  n=  1  avg=+30.1%  med=+30.1%  realized=$+24.11
+  b91|g091_eod_tp30_sl30  n=  2  avg=+19.8%  med=+55.6%  realized=$+25.00
+  b92|g092_lim_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b93|g093_mid_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
+  b94|g094_eod_tp30_sl40  n=  2  avg=+46.6%  med=+55.6%  realized=$+73.80
+  b95|g095_lim_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b96|g096_mid_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b97|g097_eod_tp30_sl40  n=  2  avg=+36.0%  med=+37.7%  realized=$+65.09
+  b98|g098_lim_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+  b99|g099_mid_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
+========================================================
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          after_hours                             |
+|  Equity                        $129,876.27                             |
+|  Signals this run              0                                       |
+|  Orders submitted (session)    44                                      |
+|  Orders filled today (ledger)  68                                      |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             51                                      |
+|  Broker option positions       5                                       |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD                                                    |
++------------------------------------------------------------------------+
+|  All-time  trades=197  buckets=59  win=51%                             |
+|  Returns   avg=+11.3%  med=+4.8%  p10=-83.7%  p90=+67.4%               |
+|  Realized  $+5,979.58                                                  |
+|  Today     trades=57  avg=+18.1%  med=-42.4%  real=$-896.00            |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b62  c062_s173_w3_1045_  3  67% +713.3 +1100.0 +1100.0 $   +107       |
+|  b60  c060_s173_w1_0928_  3  67% +44.3 +78.8 +96.7 $    +41            |
+|  b58  c058_s163_w3_1045_  1 100% +59.1 +59.1 +59.1 $    +25            |
+|  b73  c073_s166_w2_1005_  1 100% +55.6 +55.6 +55.6 $    +36            |
+|  b20  c020_s173_w1_0928_  1 100% +54.3 +54.3 +54.3 $    +19            |
+|  b92  c092_s166_w1_0928_  2 100% +53.6 +53.6 +70.8 $    +95            |
+|  b93  c093_s166_w2_1005_  2 100% +53.6 +53.6 +70.8 $    +95            |
+|  b95  c095_s166_w4_1120_  2 100% +50.5 +50.5 +70.8 $    +95            |
+|  ... 51 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b64  c064_s174_w1_0928_  4  25% -61.4 -93.3 -93.3 $   -141       |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (5)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  INTC260713C00115000          29   -100.0%   $ -1,720.06               |
+|  INTC260713C00114000           8   -100.0%   $   -575.47               |
+|  AMD260713C00560000            7   -100.0%   $   -440.13               |
+|  INTC260715C00113000           4    -41.7%   $    -94.40               |
+|  SMCI260717C00029000           3    -22.5%   $    -42.75               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-13.log
+elapsed=7.4s reconcile=6.93s
+
