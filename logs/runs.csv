@@ -2366,3 +2366,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-13 19:20:44,exits,bull,480.8,480.8,0,0,0,0,,both
 2026-07-13 19:25:39,exits,bull,480.8,480.8,0,0,0,0,,both
 2026-07-13 19:50:11,scan_evening,bull,480.81,24.1,25,0,0,5,DE|FANG|JCI|MO|NI,both
+2026-07-13 19:56:05,scan_evening,bull,480.69,298.0,25,0,3,2,DE|NI,both

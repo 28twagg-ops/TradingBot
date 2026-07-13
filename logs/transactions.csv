@@ -967,3 +967,6 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-13 14:55:47,2026-07-13,SELL,AME,Pullback50,232.12,96.22,-0.69,-0.67,0,stop_loss (-0.7%),bull,481.63
 2026-07-13 15:25:55,2026-07-13,SELL,EXR,Pullback50,144.49,96.39,-0.52,-0.5,0,stop_loss (-0.5%),bull,481.26
 2026-07-13 15:45:47,2026-07-13,SELL,ETN,Pullback50,400.33,95.96,-0.73,-0.7,0,stop_loss (-0.7%),bull,480.8
+2026-07-13 19:51:30,2026-07-13,SELL,MO,Pullback50,71.98,91.26,-0.09,-0.08,0,midline (-0.1%),bull,480.57
+2026-07-13 19:52:00,2026-07-13,SELL,FANG,Pullback50,191.74,91.32,0.02,0.02,0,midline (+0.0%),bull,480.53
+2026-07-13 19:52:31,2026-07-13,SELL,JCI,Pullback50,143.55,91.32,0.1,0.09,0,midline (+0.1%),bull,480.55

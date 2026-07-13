@@ -602,3 +602,6 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-07-13 14:55:47,2026-07-13,SELL,AME,Pullback50,232.12,,232.12,96.22,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
 2026-07-13 15:25:55,2026-07-13,SELL,EXR,Pullback50,144.49,,144.49,96.39,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
 2026-07-13 15:45:47,2026-07-13,SELL,ETN,Pullback50,400.33,,400.33,95.96,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
+2026-07-13 19:51:30,2026-07-13,SELL,MO,Pullback50,71.97,71.97,71.9751,91.26,0.0071,0.0065,limit_fill_position_check_full,midline (-0.1%),bull
+2026-07-13 19:52:00,2026-07-13,SELL,FANG,Pullback50,191.74,191.36,191.74,91.32,0.0,0.0,limit_fill_position_check_full,midline (+0.0%),bull
+2026-07-13 19:52:31,2026-07-13,SELL,JCI,Pullback50,143.59,143.53,143.546,91.32,-0.0306,-0.028,limit_fill_position_check_full,midline (+0.1%),bull
