@@ -1,0 +1,127 @@
+Layout: controlled:100:c000_s173_w1_0928_1005_r1
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-13T16:01:10.608550-04:00 ===
+
+[Run context]
+Paper auth OK — equity $129580.23, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S174, S165, S166, S163
+  EXIT [b42|c042_s173_w3_1045_1120_r3|S173] EOD SELL failed AMD260713C00560000: {"code":42210000,"message":"contract \"AMD260713C00560000\" is expired"}
+  EXIT [b63|c063_s173_w4_1120_1135_r4|S173] EOD SELL failed AMD260713C00560000: {"code":42210000,"message":"contract \"AMD260713C00560000\" is expired"}
+  EXIT [b43|c043_s173_w4_1120_1135_r3|S173] EOD SELL failed AMD260713C00560000: {"code":42210000,"message":"contract \"AMD260713C00560000\" is expired"}
+  EXIT [b23|c023_s173_w4_1120_1135_r2|S173] EOD SELL failed AMD260713C00560000: {"code":42210000,"message":"contract \"AMD260713C00560000\" is expired"}
+  EXIT [b3|c003_s173_w4_1120_1135_r1|S173] EOD SELL failed AMD260713C00560000: {"code":42210000,"message":"contract \"AMD260713C00560000\" is expired"}
+  EXIT [b83|c083_s173_w4_1120_1135_r5|S173] EOD SELL failed AMD260713C00560000: {"code":42210000,"message":"contract \"AMD260713C00560000\" is expired"}
+  EXIT [b22|c022_s173_w3_1045_1120_r2|S173] EOD SELL failed AMD260713C00560000: {"code":42210000,"message":"contract \"AMD260713C00560000\" is expired"}
+2026-07-13 16:01:17,121 INFO   EXIT [b66|c066_s174_w3_1045_1120_r4|S174] EOD SELL 1 INTC260715C00113000 @<= 0.01
+  EXIT [b66|c066_s174_w3_1045_1120_r4|S174] EOD LIMIT fallback SELL 1 INTC260715C00113000 @<= 0.01 return=-41.7%
+  EXIT [b26|c026_s174_w3_1045_1120_r2|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b88|c088_s165_w1_0928_1005_r5|S165] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b6|c006_s174_w3_1045_1120_r1|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b85|c085_s174_w2_1005_1045_r5|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b24|c024_s174_w1_0928_1005_r2|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b85|c085_s174_w2_1005_1045_r5|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b84|c084_s174_w1_0928_1005_r5|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b4|c004_s174_w1_0928_1005_r1|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b90|c090_s165_w3_1045_1120_r5|S165] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b45|c045_s174_w2_1005_1045_r3|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b5|c005_s174_w2_1005_1045_r1|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b86|c086_s174_w3_1045_1120_r5|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b84|c084_s174_w1_0928_1005_r5|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b84|c084_s174_w1_0928_1005_r5|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b46|c046_s174_w3_1045_1120_r3|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b65|c065_s174_w2_1005_1045_r4|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b84|c084_s174_w1_0928_1005_r5|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b44|c044_s174_w1_0928_1005_r3|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b24|c024_s174_w1_0928_1005_r2|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b50|c050_s165_w3_1045_1120_r3|S165] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b4|c004_s174_w1_0928_1005_r1|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b84|c084_s174_w1_0928_1005_r5|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b70|c070_s165_w3_1045_1120_r4|S165] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b30|c030_s165_w3_1045_1120_r2|S165] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b85|c085_s174_w2_1005_1045_r5|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b85|c085_s174_w2_1005_1045_r5|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b10|c010_s165_w3_1045_1120_r1|S165] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b25|c025_s174_w2_1005_1045_r2|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b64|c064_s174_w1_0928_1005_r4|S174] EOD SELL failed INTC260713C00115000: {"code":42210000,"message":"contract \"INTC260713C00115000\" is expired"}
+  EXIT [b48|c048_s165_w1_0928_1005_r3|S165] EOD SELL failed INTC260713C00114000: {"code":42210000,"message":"contract \"INTC260713C00114000\" is expired"}
+  EXIT [b87|c087_s174_w4_1120_1135_r5|S174] EOD SELL failed INTC260713C00114000: {"code":42210000,"message":"contract \"INTC260713C00114000\" is expired"}
+  EXIT [b7|c007_s174_w4_1120_1135_r1|S174] EOD SELL failed INTC260713C00114000: {"code":42210000,"message":"contract \"INTC260713C00114000\" is expired"}
+  EXIT [b86|c086_s174_w3_1045_1120_r5|S174] EOD SELL failed INTC260713C00114000: {"code":42210000,"message":"contract \"INTC260713C00114000\" is expired"}
+  EXIT [b86|c086_s174_w3_1045_1120_r5|S174] EOD SELL failed INTC260713C00114000: {"code":42210000,"message":"contract \"INTC260713C00114000\" is expired"}
+  EXIT [b85|c085_s174_w2_1005_1045_r5|S174] EOD SELL failed INTC260713C00114000: {"code":42210000,"message":"contract \"INTC260713C00114000\" is expired"}
+  EXIT [b88|c088_s165_w1_0928_1005_r5|S165] EOD SELL failed INTC260713C00114000: {"code":42210000,"message":"contract \"INTC260713C00114000\" is expired"}
+  EXIT [b28|c028_s165_w1_0928_1005_r2|S165] EOD SELL failed INTC260713C00114000: {"code":42210000,"message":"contract \"INTC260713C00114000\" is expired"}
+2026-07-13 16:01:20,897 INFO   EXIT [b21|c021_s173_w2_1005_1045_r2|S173] EOD SELL 1 SMCI260717C00029000 @<= 0.01
+  EXIT [b21|c021_s173_w2_1005_1045_r2|S173] EOD LIMIT fallback SELL 1 SMCI260717C00029000 @<= 0.01 return=-22.5%
+
+[Manage only]
+Past entry window; manage/exit only.
+
+[Portfolio snapshot]
+
+[Exit summary]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          manage-only                             |
+|  Equity                        $129,580.23                             |
+|  Signals this run              0                                       |
+|  Orders submitted (session)    44                                      |
+|  Orders filled today (ledger)  68                                      |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             51                                      |
+|  Broker option positions       5                                       |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD                                                    |
++------------------------------------------------------------------------+
+|  All-time  trades=197  buckets=59  win=51%                             |
+|  Returns   avg=+11.2%  med=+4.8%  p10=-83.7%  p90=+67.4%               |
+|  Realized  $+5,960.58                                                  |
+|  Today     trades=57  avg=+17.5%  med=-42.4%  real=$-915.00            |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b62  c062_s173_w3_1045_  3  67% +713.3 +1100.0 +1100.0 $   +107       |
+|  b60  c060_s173_w1_0928_  3  67% +44.3 +78.8 +96.7 $    +41            |
+|  b58  c058_s163_w3_1045_  1 100% +59.1 +59.1 +59.1 $    +25            |
+|  b73  c073_s166_w2_1005_  1 100% +55.6 +55.6 +55.6 $    +36            |
+|  b20  c020_s173_w1_0928_  1 100% +54.3 +54.3 +54.3 $    +19            |
+|  b92  c092_s166_w1_0928_  2 100% +53.6 +53.6 +70.8 $    +95            |
+|  b93  c093_s166_w2_1005_  2 100% +53.6 +53.6 +70.8 $    +95            |
+|  b95  c095_s166_w4_1120_  2 100% +50.5 +50.5 +70.8 $    +95            |
+|  ... 51 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b64  c064_s174_w1_0928_  4  25% -61.4 -93.3 -93.3 $   -141       |
++========================================================================+
++========================================================================+
+|  PENDING EXITS (2)                                                     |
++------------------------------------------------------------------------+
+|  b66  S174 INTC260715C00113000 x1 EOD                                  |
+|  b21  S173 SMCI260717C00029000 x1 EOD                                  |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (5)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  INTC260713C00115000          29   -100.0%   $ -1,720.06               |
+|  INTC260713C00114000           8   -100.0%   $   -575.47               |
+|  AMD260713C00560000            7   -100.0%   $   -440.13               |
+|  INTC260715C00113000           4    -41.7%   $    -94.40               |
+|  SMCI260717C00029000           3    -22.5%   $    -42.75               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-13.log
+elapsed=10.4s reconcile=3.55s cancel=0.13s manage=6.21s
+STATUS: options_morning_bot run complete (PAPER) elapsed=10.4s. run=#3787 https://github.com/28twagg-ops/TradingBot/actions/runs/29280311634
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-13_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-13_buckets.csv
+Summary: 23 buckets closed trades, $-915.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-13_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-13_strategy_selection.csv
+Summary: keep=0 watch=4 drop=1
