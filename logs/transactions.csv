@@ -965,3 +965,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-13 14:45:45,2026-07-13,SELL,DOV,Pullback50,215.51,96.28,-0.63,-0.61,0,stop_loss (-0.6%),bull,482.15
 2026-07-13 14:50:57,2026-07-13,SELL,HST,Pullback50,23.12,2.58,-0.52,-0.01,0,stop_loss (-0.5%),bull,482.3
 2026-07-13 14:55:47,2026-07-13,SELL,AME,Pullback50,232.12,96.22,-0.69,-0.67,0,stop_loss (-0.7%),bull,481.63
+2026-07-13 15:25:55,2026-07-13,SELL,EXR,Pullback50,144.49,96.39,-0.52,-0.5,0,stop_loss (-0.5%),bull,481.26
