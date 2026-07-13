@@ -1,0 +1,76 @@
+13:40:29  INFO      Mode: morning_prep
+13:40:30  INFO        [prep_positions] 4/4 (4 valid)
+13:40:30  INFO        Universe cache hit: 903 tickers (tickers_2026-07-13.json)
+13:40:31  INFO        [prep_universe] 40/899 (40 valid)
+13:40:32  INFO        [prep_universe] 80/899 (80 valid)
+13:40:34  INFO        [prep_universe] 120/899 (120 valid)
+13:40:35  INFO        [prep_universe] 160/899 (160 valid)
+13:40:36  INFO        [prep_universe] 200/899 (199 valid)
+13:40:43  INFO        [prep_universe] 240/899 (238 valid)
+13:40:56  INFO        [prep_universe] 280/899 (278 valid)
+13:41:09  INFO        [prep_universe] 320/899 (318 valid)
+13:41:22  INFO        [prep_universe] 360/899 (358 valid)
+13:41:32  INFO        [prep_universe] 400/899 (397 valid)
+13:41:45  INFO        [prep_universe] 440/899 (437 valid)
+13:41:58  INFO        [prep_universe] 480/899 (477 valid)
+13:42:08  INFO        [prep_universe] 520/899 (517 valid)
+13:42:21  INFO        [prep_universe] 560/899 (557 valid)
+13:42:34  INFO        [prep_universe] 600/899 (597 valid)
+13:42:44  INFO        [prep_universe] 640/899 (637 valid)
+13:42:57  INFO        [prep_universe] 680/899 (677 valid)
+13:43:10  INFO        [prep_universe] 720/899 (717 valid)
+13:43:20  INFO        [prep_universe] 760/899 (757 valid)
+13:43:33  INFO        [prep_universe] 800/899 (797 valid)
+13:43:46  INFO        [prep_universe] 840/899 (836 valid)
+13:43:56  INFO        [prep_universe] 880/899 (876 valid)
+13:44:03  INFO        [prep_universe] 899/899 (895 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         13:40 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $484.58|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       4|
+|  Invested                                                       $304.22|
+|  Open P&L                                                        $+2.94|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  CARR     Pullback50      $97.50     $67.90   $69.70   +2.7%   $+2.52  |
+|  CHD      Pullback50      $95.19     $96.44   $97.17   +0.8%   $+0.71  |
+|  CMI      Pullback50      $93.96     $674.69  $671.58  -0.5%   $-0.43  |
+|  HST      Pullback50      $17.57     $23.03   $23.21   +0.8%   $+0.14  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                1|
+|  TICKER    TYPE              QTY       LIMIT       STOP                |
++------------------------------------------------------------------------+
+|  CARR      OrderType.STOP    1         None        69.03               |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      4|
+|  Signal candidates                                                   34|
+|  Universe scanned                                                   899|
++========================================================================+
