@@ -1,0 +1,57 @@
+14:45:42  INFO      Mode: exits
+14:45:42  INFO        Daily log -> logs/daily/2026-07-13.md
+14:45:42  INFO        Daily log reconciled -> logs/daily/2026-07-13.md (5 ledger rows)
+14:45:42  INFO        place_all_stops: checking 5 positions...
+14:45:42  INFO        STOP skipped AME: fractional (0.4145 shares) — software exit will handle it
+14:45:42  INFO        STOP skipped DOV: fractional (0.4467 shares) — software exit will handle it
+14:45:42  INFO        STOP skipped ETN: fractional (0.2397 shares) — software exit will handle it
+14:45:42  INFO        STOP skipped EXR: fractional (0.6671 shares) — software exit will handle it
+14:45:42  INFO        STOP skipped HST: fractional (0.1116 shares) — software exit will handle it
+14:45:43  INFO        [positions] 5/5 (5 valid)
+14:45:43  INFO        SELL MARKET [urgent] DOV closed
+14:45:45  INFO        TX logged: SELL DOV  P&L -0.63%
+14:45:45  INFO        Daily log -> logs/daily/2026-07-13.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $482.31|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  DOV  P&L -0.6%  $-0.61                         EXIT: stop_loss (-0.6%)|
+|  HST  P&L -0.5%  $-0.01                                            HOLD|
+|  AME  P&L -0.4%  $-0.37                                            HOLD|
+|  EXR  P&L -0.1%  $-0.14                                            HOLD|
+|  ETN  P&L -0.1%  $-0.10                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           5|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                4|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  DOV                                         -0.63%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
