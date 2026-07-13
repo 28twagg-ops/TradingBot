@@ -1,6 +1,6 @@
 strategy_id,strategy_name,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p90_return_pct,realized_usd,active_days,unique_symbols,top_symbol_share_pct
-S173,MomReversal long call,watch,fat left tail (p10 < -45%),753,31,22,9,60.28,33.33,-46.67,96.67,581.64,3,5,54.8
-S174,RubberBand long call EOD,watch,fat left tail (p10 < -45%),698,70,41,29,-0.33,30.14,-76.91,39.66,-10.19,3,5,35.7
-S165,GapDown long call 3 DTE,watch,building sample (8-19 exits),598,13,10,3,23.43,27.08,-2.7,56.82,139.22,2,2,69.2
+S173,MomReversal long call,watch,fat left tail (p10 < -45%),765,40,26,14,45.58,25.97,-64.09,80.58,523.64,3,6,50.0
+S174,RubberBand long call EOD,watch,fat left tail (p10 < -45%),701,81,43,38,-6.69,15.71,-84.51,37.5,-344.19,3,6,43.2
+S165,GapDown long call 3 DTE,watch,building sample (8-19 exits),613,17,13,4,20.31,10.77,-2.7,52.27,161.22,2,2,76.5
 S163,A1 GapDown ATM call EOD,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0.0
 S166,GapDown strong call,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0.0
