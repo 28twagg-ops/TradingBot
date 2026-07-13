@@ -1,0 +1,49 @@
+15:45:43  INFO      Mode: exits
+15:45:44  INFO        Daily log -> logs/daily/2026-07-13.md
+15:45:44  INFO        Daily log reconciled -> logs/daily/2026-07-13.md (9 ledger rows)
+15:45:44  INFO        place_all_stops: checking 1 positions...
+15:45:44  INFO        STOP skipped ETN: fractional (0.2397 shares) — software exit will handle it
+15:45:44  INFO        [positions] 1/1 (1 valid)
+15:45:44  INFO        SELL MARKET [urgent] ETN closed
+15:45:47  INFO        TX logged: SELL ETN  P&L -0.73%
+15:45:47  INFO        Daily log -> logs/daily/2026-07-13.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $480.84|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  ETN  P&L -0.7%  $-0.70                         EXIT: stop_loss (-0.7%)|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           1|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                0|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  ETN                                         -0.73%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
