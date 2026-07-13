@@ -1,0 +1,214 @@
+19:45:47  INFO      Mode: scan
+19:45:47  INFO        Universe cache hit: 903 tickers (tickers_2026-07-13.json)
+19:45:48  INFO        [universe] 40/903 (40 valid)
+19:45:50  INFO        [universe] 80/903 (80 valid)
+19:45:51  INFO        [universe] 120/903 (120 valid)
+19:45:52  INFO        [universe] 160/903 (160 valid)
+19:45:53  INFO        [universe] 200/903 (199 valid)
+19:46:01  INFO        [universe] 240/903 (238 valid)
+19:46:14  INFO        [universe] 280/903 (278 valid)
+19:46:24  INFO        [universe] 320/903 (318 valid)
+19:46:37  INFO        [universe] 360/903 (358 valid)
+19:46:48  INFO        [universe] 400/903 (397 valid)
+19:47:01  INFO        [universe] 440/903 (437 valid)
+19:47:14  INFO        [universe] 480/903 (477 valid)
+19:47:24  INFO        [universe] 520/903 (517 valid)
+19:47:38  INFO        [universe] 560/903 (557 valid)
+19:47:48  INFO        [universe] 600/903 (597 valid)
+19:48:01  INFO        [universe] 640/903 (637 valid)
+19:48:14  INFO        [universe] 680/903 (677 valid)
+19:48:24  INFO        [universe] 720/903 (717 valid)
+19:48:37  INFO        [universe] 760/903 (757 valid)
+19:48:48  INFO        [universe] 800/903 (797 valid)
+19:49:01  INFO        [universe] 840/903 (836 valid)
+19:49:14  INFO        [universe] 880/903 (876 valid)
+19:49:21  INFO        [universe] 903/903 (899 valid)
+19:49:22  INFO        BUY  MO  $91.35  [Pullback50]  id=b77e58e8-f76e-453e-8e96-3544b13d4e92
+19:49:22  ERROR       BUY FAILED CVX: {"code":40010001,"message":"client_order_id must be unique"}
+19:49:23  INFO        BUY  DE  $91.35  [Pullback50]  id=c4ace6cd-6949-40ed-8371-39376d2c5048
+19:49:23  INFO        BUY  FANG  $91.35  [Pullback50]  id=76858a11-a0fd-48e9-9c3c-35f9dbbb7d61
+19:49:23  ERROR       BUY FAILED EXR: {"code":40010001,"message":"client_order_id must be unique"}
+19:49:23  INFO        BUY  JCI  $91.35  [Pullback50]  id=853a535c-e022-44c7-bcda-8a6b82a4e836
+19:49:23  INFO        BUY  NI  $91.35  [Pullback50]  id=aaaefa8f-9e17-4620-8e69-27165235b8c8
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $480.80|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-13|
+|  Universe                                                          both|
+|  Month                                        Jul: 52wkLow + Pullback50|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $480.80|
+|  Cash                                                           $480.80|
+|  Reserve                                          $24.04  (always kept)|
+|  Available                                    $456.76  (for new trades)|
+|  Seasonal trade                   $96.16  (20% -- scheduled strategies)|
+|  Off-sched trade                      $96.16  (20% -- other strategies)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (0 open)                           |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 5  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (37451.6m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50                            |
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  25                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  MO       Pullback50      SEAS   $72.14   60.9   -1.44   50MA bounce (+|
+|  CVX      Pullback50      SEAS   $181.88  59.7   -1.20   50MA bounce (-|
+|  DE       Pullback50      SEAS   $586.26  46.1   -1.58   50MA bounce (+|
+|  FANG     Pullback50      SEAS   $191.90  54.4   -1.06   50MA bounce (-|
+|  EXR      Pullback50      SEAS   $145.40  48.8   -1.34   50MA bounce (+|
+|  JCI      Pullback50      SEAS   $143.45  43.9   -1.30   50MA bounce (+|
+|  KLAC     GapDown         off    $221.71  39.2   -1.77   gap -4.3% reco|
+|  MU       GapDown         off    $932.49  32.1   -1.51   gap -5.1% reco|
+|  NI       Pullback50      SEAS   $47.08   46.4   -1.32   50MA bounce (-|
+|  NEE      Pullback50      SEAS   $88.48   60.4   -2.55   50MA bounce (-|
+|  OXY      Pullback50      SEAS   $54.78   59.7   0.05    50MA bounce (-|
+|  PLD      Pullback50      SEAS   $141.85  45.8   -1.72   50MA bounce (-|
+|  RMD      GapDown         off    $199.02  57.8   -0.43   gap -5.0% reco|
+|  WBD      Pullback50      SEAS   $27.11   52.3   1.84    50MA bounce (+|
+|  ALV      Pullback50      SEAS   $121.40  55.8   -1.39   50MA bounce (+|
+|  CUBE     Pullback50      SEAS   $40.52   50.2   -2.48   50MA bounce (+|
+|  NSA      VolumeSpike     off    $44.98   51.7   3.27    vol z=3.3 5d=-|
+|  OVV      Pullback50      SEAS   $56.72   58.7   -0.36   50MA bounce (-|
+|  PEN      Pullback50      SEAS   $318.18  58.9   -0.59   50MA bounce (-|
+|  PR       Pullback50      SEAS   $19.61   57.5   -1.19   50MA bounce (-|
+|  SBRA     Pullback50      SEAS   $19.78   72.8   -1.31   50MA bounce (+|
+|  SITM     GapDown         off    $607.88  33.2   -0.67   gap -3.5% reco|
+|  SMTC     GapDown         off    $131.85  29.4   -0.69   gap -4.4% reco|
+|  WSO      Pullback50      SEAS   $391.12  46.8   -1.15   50MA bounce (-|
+|  XPO      Pullback50      SEAS   $209.33  63.0   -1.29   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Signal scaling: 25 signals / 5 slots → sea=$91 off=$91  (max sea=$96 ~|
+|    ENTER [S] MO  Pullback50                                      $91.35|
+|    BUY SUBMITTED [S~  fill pending — batched confirmation after entries|
+|    ENTER [S] CVX  Pullback50                                     $91.35|
+|    ENTER [S] DE  Pullback50                                      $91.35|
+|    BUY SUBMITTED [S~  fill pending — batched confirmation after entries|
+|    ENTER [S] FANG  Pullback50                                    $91.35|
+|    BUY SUBMITTED [S~  fill pending — batched confirmation after entries|
+|    ENTER [S] EXR  Pullback50                                     $91.35|
+|    ENTER [S] JCI  Pullback50                                     $91.35|
+|    BUY SUBMITTED [S~  fill pending — batched confirmation after entries|
+|    ENTER [S] NI  Pullback50                                      $91.35|
+|    BUY SUBMITTED [S~  fill pending — batched confirmation after entries|
+|    SKIP [S] NEE  Pullback50                                       cap 5|
+|    SKIP [S] OXY  Pullback50                                       cap 5|
+|    SKIP [S] PLD  Pullback50                                       cap 5|
+|    SKIP [S] WBD  Pullback50                                       cap 5|
+|    SKIP [S] ALV  Pullback50                                       cap 5|19:50:10  INFO        place_all_stops: checking 5 positions...
+19:50:10  INFO        STOP skipped DE: fractional (0.1558 shares) — software exit will handle it
+19:50:10  INFO        STOP skipped FANG: fractional (0.4763 shares) — software exit will handle it
+19:50:10  INFO        STOP skipped JCI: fractional (0.6362 shares) — software exit will handle it
+19:50:10  INFO        STOP-MARKET placed MO  qty=1 (pos=1.2680)  stop=$71.68  id=81b95ba1-5fbb-4310-8a61-0c7c3c2272db
+19:50:10  INFO        STOP-MARKET placed NI  qty=1 (pos=1.9407)  stop=$46.83  id=416bff11-d3b1-4c3a-9861-7fb4e656a0c6
+19:50:10  INFO        place_eod_stops: updating 5 stops to current price...
+19:50:10  INFO        EOD stop skip DE: 0.1558 shares (fractional) — ext_exits will cover
+19:50:10  INFO        EOD stop skip FANG: 0.4763 shares (fractional) — ext_exits will cover
+19:50:10  INFO        EOD stop skip JCI: 0.6362 shares (fractional) — ext_exits will cover
+19:50:10  INFO        EOD stop: cancelled old stop MO
+19:50:10  INFO        EOD stop placed MO @ $71.58  (cur $71.94  qty=1)
+19:50:11  INFO        EOD stop: cancelled old stop NI
+19:50:11  INFO        EOD stop placed NI @ $46.83  (cur $47.07  qty=1)
+19:50:11  INFO        Daily log -> logs/daily/2026-07-13.md
+19:50:11  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [S] CUBE  Pullback50                                      cap 5|
+|    SKIP [S] OVV  Pullback50                                       cap 5|
+|    SKIP [S] PEN  Pullback50                                       cap 5|
+|    SKIP [S] PR  Pullback50                                        cap 5|
+|    SKIP [S] SBRA  Pullback50                                      cap 5|
+|    SKIP [S] WSO  Pullback50                                       cap 5|
+|    SKIP [S] XPO  Pullback50                                       cap 5|
+|    SKIP [o] KLAC  GapDown                                         cap 5|
+|    SKIP [o] MU  GapDown                                           cap 5|
+|    SKIP [o] RMD  GapDown                                          cap 5|
+|    SKIP [o] NSA  VolumeSpike                                      cap 5|
+|    SKIP [o] SITM  GapDown                                         cap 5|
+|    SKIP [o] SMTC  GapDown                                         cap 5|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      5|
++------------------------------------------------------------------------+
+|  MO                                                   still unconfirmed|
+|  DE                                                   still unconfirmed|
+|  FANG                                                 still unconfirmed|
+|  JCI                                                  still unconfirmed|
+|  NI                                                   still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 5 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy                                          52wkLow + Pullback50|
+|  Scanned                                                            899|
+|  Signals                                                             25|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  5 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             5|
+|  Equity                                                         $480.81|
+|  Cash                                                            $24.10|
++========================================================================+
