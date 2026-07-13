@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-13
 
-_Generated 2026-07-13T12:31:00.833377_
+_Generated 2026-07-13T12:35:47.385577_
 
 ## Summary
 
@@ -17,7 +17,7 @@ _Generated 2026-07-13T12:31:00.833377_
 | S165 (GapDown long call 3 DTE) | watch | 20 | 65.0 | +8.20 | +9.31 | -52.25 | +48.87 | $+48.22 | 2 | 80.0% | fat left tail (p10 < -45%) |
 | S163 (A1 GapDown ATM call EOD) | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | $+0.00 | 0 | 0.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | $+0.00 | 0 | 0.0% | insufficient sample (<8 exits) |
-| S174 (RubberBand long call EOD) | drop | 87 | 49.4 | -1.41 | -10.50 | -89.66 | +37.50 | $-584.19 | 6 | 44.8% | non-positive median return |
+| S174 (RubberBand long call EOD) | drop | 88 | 48.9 | -1.41 | -10.99 | -89.66 | +37.50 | $-609.19 | 6 | 44.3% | non-positive median return |
 
 ## Notes
 

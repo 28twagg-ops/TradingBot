@@ -3,4 +3,4 @@ S173,MomReversal long call,watch,fat left tail (p10 < -45%),770,50,32,18,38.61,3
 S165,GapDown long call 3 DTE,watch,fat left tail (p10 < -45%),614,20,13,7,9.31,8.2,-52.25,48.87,48.22,3,2,80.0
 S163,A1 GapDown ATM call EOD,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0.0
 S166,GapDown strong call,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0.0
-S174,RubberBand long call EOD,drop,non-positive median return,705,87,43,44,-10.5,-1.41,-89.66,37.5,-584.19,3,6,44.8
+S174,RubberBand long call EOD,drop,non-positive median return,705,88,43,45,-10.99,-1.41,-89.66,37.5,-609.19,3,6,44.3
