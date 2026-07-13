@@ -2307,3 +2307,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-13 14:25:45,exits,bull,484.34,24.23,0,0,0,5,AME|DOV|ETN|EXR|HST,both
 2026-07-13 14:30:56,exits,bull,483.82,24.23,0,0,0,5,AME|DOV|ETN|EXR|HST,both
 2026-07-13 14:35:44,exits,bull,483.59,24.23,0,0,0,5,AME|DOV|ETN|EXR|HST,both
+2026-07-13 14:40:46,exits,bull,482.84,24.23,0,0,0,5,AME|DOV|ETN|EXR|HST,both
