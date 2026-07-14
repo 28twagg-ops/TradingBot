@@ -1,0 +1,16 @@
+Layout: controlled:100:c000_s173_w1_0928_1005_r1
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-14T09:44:28.200857-04:00 ===
+
+[Run context]
+FATAL: paper API auth failed. This bot requires ALPACA_PAPER_KEY and ALPACA_PAPER_SECRET (not the live equity-bot keys). Detail: {"code":50410000,"message":"request timed out"}
+elapsed=169.2s
+STATUS: options_morning_bot auth failed (PAPER) elapsed=169.2s. run=#3844 https://github.com/28twagg-ops/TradingBot/actions/runs/29337451402
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_buckets.csv
+Summary: 1 buckets closed trades, $+34.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_strategy_selection.csv
+Summary: keep=0 watch=4 drop=1
