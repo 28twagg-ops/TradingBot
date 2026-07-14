@@ -1,7 +1,6 @@
 {
   "paper_strategies": [
     "S173",
-    "S174",
     "S165",
     "S166",
     "S163"
@@ -25,5 +24,8 @@
       "take_profit": 0.7
     },
     "S163": {}
-  }
+  },
+  "dropped_strategies": [
+    "S174"
+  ]
 }
