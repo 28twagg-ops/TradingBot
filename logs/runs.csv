@@ -2500,3 +2500,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-14 20:25:44,ext_exits,bull,478.16,196.93,0,0,0,3,CDNS|CHH|HST,both
 2026-07-14 20:30:53,ext_exits,bull,478.16,196.93,0,0,0,3,CDNS|CHH|HST,both
 2026-07-14 20:35:54,ext_exits,bull,478.16,196.93,0,0,0,3,CDNS|CHH|HST,both
+2026-07-14 20:40:51,ext_exits,bull,478.16,196.93,0,0,0,3,CDNS|CHH|HST,both
