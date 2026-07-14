@@ -1,0 +1,273 @@
+19:50:59  INFO      Mode: scan
+19:51:02  INFO        [positions] 4/4 (4 valid)
+19:51:02  INFO        SELL order cancelled KMI  type=OrderType.STOP  id=338e7372-c380-4130-b02f-6da504491d5e
+19:51:02  INFO        SELL LIMIT KMI  qty=2.755713218  limit=$32.47  id=3ba8a84e-02e2-4934-b8c5-4c450af477fa
+19:51:33  INFO        SELL LIMIT filled KMI (confirmed by position check)
+19:51:34  INFO        TX logged: SELL KMI  P&L -0.11%
+19:51:34  INFO        SELL order cancelled NEE  type=OrderType.STOP  id=d853a886-2bce-4d23-abcf-f818ac9b93e2
+19:51:34  INFO        SELL LIMIT NEE  qty=1.000692366  limit=$89.48  id=134f7c40-fdff-4c4b-82d6-e9b8965e6424
+19:52:05  INFO        SELL LIMIT filled NEE (confirmed by position check)
+19:52:05  INFO        TX logged: SELL NEE  P&L -0.1%
+19:52:05  INFO        Universe cache hit: 903 tickers (tickers_2026-07-14.json)
+19:52:07  INFO        [universe] 40/901 (40 valid)
+19:52:10  INFO        [universe] 80/901 (80 valid)
+19:52:11  INFO        [universe] 120/901 (120 valid)
+19:52:13  INFO        [universe] 160/901 (160 valid)
+19:52:15  INFO        [universe] 200/901 (199 valid)
+19:52:19  INFO        [universe] 240/901 (238 valid)
+19:52:30  INFO        [universe] 280/901 (278 valid)
+19:52:44  INFO        [universe] 320/901 (318 valid)
+19:52:55  INFO        [universe] 360/901 (358 valid)
+19:53:06  INFO        [universe] 400/901 (397 valid)
+19:53:20  INFO        [universe] 440/901 (437 valid)
+19:53:31  INFO        [universe] 480/901 (477 valid)
+19:53:42  INFO        [universe] 520/901 (517 valid)
+19:53:56  INFO        [universe] 560/901 (557 valid)
+19:54:06  INFO        [universe] 600/901 (597 valid)
+19:54:20  INFO        [universe] 640/901 (637 valid)
+19:54:31  INFO        [universe] 680/901 (677 valid)
+19:54:42  INFO        [universe] 720/901 (717 valid)
+19:54:56  INFO        [universe] 760/901 (757 valid)
+19:55:06  INFO        [universe] 800/901 (797 valid)
+19:55:20  INFO        [universe] 840/901 (836 valid)
+19:55:31  INFO        [universe] 880/901 (876 valid)
+19:55:38  INFO        [universe] 901/901 (897 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:51 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $478.26|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-14|
+|  Universe                                                          both|
+|  Month                                        Jul: 52wkLow + Pullback50|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $478.26|
+|  Cash                                                           $113.56|
+|  Reserve                                          $23.91  (always kept)|
+|  Available                                     $89.65  (for new trades)|
+|  Seasonal trade                   $95.65  (20% -- scheduled strategies)|
+|  Off-sched trade                      $95.65  (20% -- other strategies)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (4 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  CDNS     Pullback50      $96.12     $376.81  $377.20  +0.1%   $+0.10  |
+|  HST      Pullback50      $89.53     $23.37   $23.35   -0.1%   $-0.07  |
+|  KMI      Pullback50      $89.51     $32.52   $32.48   -0.1%   $-0.10  |
+|  NEE      Pullback50      $89.52     $89.55   $89.46   -0.1%   $-0.09  |
+|                                                                        |
+|  Total invested                                                 $364.68|
+|  Total open P&L                                                  $-0.16|
+|  Buys today: 0  |  entry cap: 1  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (38896.9m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  KMI  P&L -0.1%  $-0.10                           EXIT: midline (-0.1%)|
+|  NEE  P&L -0.1%  $-0.09                           EXIT: midline (-0.1%)|
+|  HST  P&L -0.1%  $-0.07                                            HOLD|
+|  CDNS  P&L +0.1%  $+0.10                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 2 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50                            |
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  44                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  ACN      GapDown         off    $134.19  57.2   -0.86   gap -5.8% reco|
+|  ADSK     GapDown         off    $206.25  66.9   -0.99   gap -4.8% reco|
+|  AXON     GapDown         off    $548.25  67.7   -1.98   gap -3.8% reco|
+|  CTSH     GapDown         off    $42.70   54.9   -0.74   gap -5.5% reco|
+|  CSGP     GapDown         off    $27.41   38.6   1.49    gap -6.2% reco|
+|  CRWD     MomReversal     off    $209.50  18.2   1.41    -49.9% drop/60|
+|  HCA      GapDown         off    $363.69  38.6   3.12    gap -9.3% reco|
+|  INTU     GapDown         off    $281.34  62.6   -0.93   gap -5.6% reco|
+|  KMI      Pullback50      SEAS   $32.48   49.4   -1.46   50MA bounce (+|
+|  LH       GapDown         off    $276.73  73.4   -0.30   gap -5.3% reco|
+|  NEE      Pullback50      SEAS   $89.43   62.4   -1.97   50MA bounce (+|
+|  PLTR     GapDown         off    $133.60  66.6   -0.19   gap -4.9% reco|
+|  PLD      Pullback50      SEAS   $142.86  44.9   -1.57   50MA bounce (+|
+|  PTC      GapDown         off    $122.83  70.6   -1.39   gap -4.1% reco|
+|  CRM      GapDown         off    $167.50  65.2   -0.49   gap -5.1% reco|
+|  NOW      GapDown         off    $104.69  59.9   -0.46   gap -6.8% reco|
+|  TYL      GapDown         off    $301.69  62.7   -1.13   gap -4.0% reco|
+|  VEEV     GapDown         off    $193.41  79.7   -1.15   gap -3.4% reco|
+|  WFC      GapDown         off    $85.33   54.1   1.75    gap -3.2% reco|
+|  WDAY     GapDown         off    $139.22  70.4   -0.55   gap -8.2% reco|
+|  APPF     GapDown         off    $174.66  75.6   -1.39   gap -4.2% reco|
+|  BILL     GapDown         off    $41.42   79.6   -1.59   gap -3.7% reco|
+|  BSY      GapDown         off    $31.21   71.8   -1.23   gap -3.5% reco|
+|  CHH      Pullback50      SEAS   $108.33  43.9   -1.43   50MA bounce (-|
+|  CW       Pullback50      SEAS   $751.56  45.7   -0.91   50MA bounce (+|
+|  DBX      GapDown         off    $29.86   74.1   -0.61   gap -3.3% reco|19:55:42  ERROR       BUY FAILED KMI: {"code":40010001,"message":"client_order_id must be unique"}
+19:55:42  ERROR       BUY FAILED NEE: {"code":40010001,"message":"client_order_id must be unique"}
+19:55:42  INFO        BUY  PLD  $95.65  [Pullback50]  id=b3f0dbc7-91f8-47bf-9b99-cbef1facad06
+19:55:43  INFO        BUY  CHH  $95.65  [Pullback50]  id=f1f062ce-31a8-4ad2-8012-0a32b03e77b9
+19:56:05  INFO        place_all_stops: checking 4 positions...
+19:56:05  INFO        STOP skipped CDNS: fractional (0.2548 shares) — software exit will handle it
+19:56:05  INFO        STOP skipped CHH: fractional (0.8820 shares) — software exit will handle it
+19:56:05  INFO        STOP already live HST @ $23.25
+19:56:05  INFO        STOP skipped PLD: fractional (0.6696 shares) — software exit will handle it
+19:56:05  INFO        place_eod_stops: updating 4 stops to current price...
+19:56:05  INFO        EOD stop skip CDNS: 0.2548 shares (fractional) — ext_exits will cover
+19:56:05  INFO        EOD stop skip CHH: 0.8820 shares (fractional) — ext_exits will cover
+19:56:06  INFO        EOD stop: cancelled old stop HST
+19:56:06  INFO        EOD stop placed HST @ $23.25  (cur $23.36  qty=3)
+19:56:06  INFO        EOD stop skip PLD: 0.6696 shares (fractional) — ext_exits will cover
+19:56:06  INFO        Daily log -> logs/daily/2026-07-14.md
+19:56:06  INFO        Dashboard written → logs/dashboard.md
+
+|  DT       GapDown         off    $44.80   66.4   -0.94   gap -3.0% reco|
+|  DUOL     GapDown         off    $128.56  47.0   -1.36   gap -3.3% reco|
+|  DOCS     GapDown         off    $21.82   58.7   -1.02   gap -3.4% reco|
+|  DOCU     GapDown         off    $49.27   74.5   -1.32   gap -5.1% reco|
+|  EVR      Pullback50      SEAS   $342.23  37.8   -0.70   50MA bounce (-|
+|  EXLS     GapDown         off    $27.42   57.9   -0.74   gap -4.4% reco|
+|  G        GapDown         off    $29.50   57.1   -1.68   gap -4.0% reco|
+|  GTLS     Pullback50      SEAS   $209.92  70.9   -0.79   50MA bounce (+|
+|  GWRE     GapDown         off    $140.56  91.0   -0.59   gap -4.9% reco|
+|  JEF      Pullback50      SEAS   $53.98   37.0   -1.10   50MA bounce (-|
+|  KD       GapDown         off    $11.57   55.8   0.56    gap -6.7% reco|
+|  MANH     GapDown         off    $157.69  80.6   -1.31   gap -3.5% reco|
+|  NTNX     GapDown         off    $55.57   84.1   -1.72   gap -4.2% reco|
+|  PCTY     GapDown         off    $122.97  74.4   -1.16   gap -4.3% reco|
+|  PATH     GapDown         off    $11.88   74.3   1.06    gap -4.6% reco|
+|  PEGA     GapDown         off    $30.66   53.9   -1.08   gap -4.8% reco|
+|  SBRA     Pullback50      SEAS   $19.73   68.7   -1.49   50MA bounce (+|
+|  TWLO     GapDown         off    $218.20  89.9   -0.72   gap -3.0% reco|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [S] KMI  Pullback50                                     $95.65|
+|    ENTER [S] NEE  Pullback50                                     $95.65|
+|    ENTER [S] PLD  Pullback50                                     $95.65|
+|    BUY SUBMITTED [S~  fill pending — batched confirmation after entries|
+|    ENTER [S] CHH  Pullback50                                     $95.65|
+|    BUY SUBMITTED [S~  fill pending — batched confirmation after entries|
+|    SKIP [S] CW  Pullback50                              not enough cash|
+|    SKIP [S] EVR  Pullback50                             not enough cash|
+|    SKIP [S] GTLS  Pullback50                            not enough cash|
+|    SKIP [S] JEF  Pullback50                             not enough cash|
+|    SKIP [S] SBRA  Pullback50                            not enough cash|
+|    SKIP [o] ACN  GapDown                               seasonal reserve|
+|    SKIP [o] ADSK  GapDown                              seasonal reserve|
+|    SKIP [o] AXON  GapDown                              seasonal reserve|
+|    SKIP [o] CTSH  GapDown                              seasonal reserve|
+|    SKIP [o] CSGP  GapDown                              seasonal reserve|
+|    SKIP [o] CRWD  MomReversal                          seasonal reserve|
+|    SKIP [o] HCA  GapDown                               seasonal reserve|
+|    SKIP [o] INTU  GapDown                              seasonal reserve|
+|    SKIP [o] LH  GapDown                                seasonal reserve|
+|    SKIP [o] PLTR  GapDown                              seasonal reserve|
+|    SKIP [o] PTC  GapDown                               seasonal reserve|
+|    SKIP [o] CRM  GapDown                               seasonal reserve|
+|    SKIP [o] NOW  GapDown                               seasonal reserve|
+|    SKIP [o] TYL  GapDown                               seasonal reserve|
+|    SKIP [o] VEEV  GapDown                              seasonal reserve|
+|    SKIP [o] WFC  GapDown                               seasonal reserve|
+|    SKIP [o] WDAY  GapDown                              seasonal reserve|
+|    SKIP [o] APPF  GapDown                              seasonal reserve|
+|    SKIP [o] BILL  GapDown                              seasonal reserve|
+|    SKIP [o] BSY  GapDown                               seasonal reserve|
+|    SKIP [o] DBX  GapDown                               seasonal reserve|
+|    SKIP [o] DT  GapDown                                seasonal reserve|
+|    SKIP [o] DUOL  GapDown                              seasonal reserve|
+|    SKIP [o] DOCS  GapDown                              seasonal reserve|
+|    SKIP [o] DOCU  GapDown                              seasonal reserve|
+|    SKIP [o] EXLS  GapDown                              seasonal reserve|
+|    SKIP [o] G  GapDown                                 seasonal reserve|
+|    SKIP [o] GWRE  GapDown                              seasonal reserve|
+|    SKIP [o] KD  GapDown                                seasonal reserve|
+|    SKIP [o] MANH  GapDown                              seasonal reserve|
+|    SKIP [o] NTNX  GapDown                              seasonal reserve|
+|    SKIP [o] PCTY  GapDown                              seasonal reserve|
+|    SKIP [o] PATH  GapDown                              seasonal reserve|
+|    SKIP [o] PEGA  GapDown                              seasonal reserve|
+|    SKIP [o] TWLO  GapDown                              seasonal reserve|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  PLD                                                  still unconfirmed|
+|  CHH                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy                                          52wkLow + Pullback50|
+|  Scanned                                                            897|
+|  Signals                                                             44|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                2|
+|  Open pos                                                             4|
+|  Equity                                                         $478.08|
+|  Cash                                                           $101.29|
++========================================================================+
