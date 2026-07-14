@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-14
 
-_Generated 2026-07-14T15:39:21.464083_
+_Generated 2026-07-14T15:44:25.317498_
 
 ## Summary
 
@@ -15,8 +15,8 @@ _Generated 2026-07-14T15:39:21.464083_
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | S163 (A1 GapDown ATM call EOD) | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | $+0.00 | 0 | 0.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | $+0.00 | 0 | 0.0% | insufficient sample (<8 exits) |
-| S173 (MomReversal long call) | drop | 93 | 48.4 | +0.00 | +44.34 | -69.73 | +108.27 | $+5.64 | 7 | 28.0% | non-positive median return |
-| S165 (GapDown long call 3 DTE) | drop | 52 | 50.0 | -0.68 | +21.54 | -50.73 | +83.33 | $+72.22 | 6 | 50.0% | non-positive median return |
+| S173 (MomReversal long call) | drop | 94 | 47.9 | +0.00 | +43.37 | -69.67 | +107.24 | $-27.36 | 7 | 27.7% | non-positive median return |
+| S165 (GapDown long call 3 DTE) | drop | 53 | 49.1 | -2.70 | +20.99 | -50.55 | +82.35 | $+67.22 | 6 | 49.1% | non-positive median return |
 | S174 (RubberBand long call EOD) | drop | 97 | 44.3 | -21.74 | -15.29 | -89.66 | +37.37 | $-909.19 | 6 | 47.4% | manually paused — excluded from new entries & reflected P&L |
 
 ## Notes
