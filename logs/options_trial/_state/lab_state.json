@@ -282,9 +282,9 @@
       "entry_order_id": "10eb4623-5637-4e7e-9527-3e7bb4601928"
     },
     {
-      "lot_id": "ae89d187b5af",
-      "bucket_id": 81,
-      "profile_name": "c081_s173_w2_1005_1045_r5",
+      "lot_id": "d2852b30e620",
+      "bucket_id": 61,
+      "profile_name": "c061_s173_w2_1005_1045_r4",
       "strategy_id": "S173",
       "occ_symbol": "C260717C00148000",
       "underlying": "C",
@@ -299,12 +299,12 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-14",
-      "entry_order_id": "6066ad12-f7df-4f84-8238-079cef60b424"
+      "entry_order_id": "deeca41a-57ba-4f4e-a895-36d5034ca8ec"
     },
     {
-      "lot_id": "eb0787bb9610",
-      "bucket_id": 21,
-      "profile_name": "c021_s173_w2_1005_1045_r2",
+      "lot_id": "0230dbba0e3e",
+      "bucket_id": 41,
+      "profile_name": "c041_s173_w2_1005_1045_r3",
       "strategy_id": "S173",
       "occ_symbol": "C260717C00148000",
       "underlying": "C",
@@ -319,12 +319,12 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-14",
-      "entry_order_id": "9ab70742-226f-4102-b3d8-d5af3ff1ed82"
+      "entry_order_id": "b4ec3a90-e079-4519-93bf-b438b3f9c1de"
     },
     {
-      "lot_id": "0596a0a8bca9",
-      "bucket_id": 20,
-      "profile_name": "c020_s173_w1_0928_1005_r2",
+      "lot_id": "8534af192d70",
+      "bucket_id": 0,
+      "profile_name": "c000_s173_w1_0928_1005_r1",
       "strategy_id": "S173",
       "occ_symbol": "C260717C00148000",
       "underlying": "C",
@@ -339,12 +339,12 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-14",
-      "entry_order_id": "c5802ac7-ab75-4437-b55f-cfa9a45f2ae1"
+      "entry_order_id": "8bf9ec89-49cc-4f23-9a4e-0e9f62963ac9"
     },
     {
-      "lot_id": "d9f020c85d35",
-      "bucket_id": 60,
-      "profile_name": "c060_s173_w1_0928_1005_r4",
+      "lot_id": "d7fe311b7a50",
+      "bucket_id": 40,
+      "profile_name": "c040_s173_w1_0928_1005_r3",
       "strategy_id": "S173",
       "occ_symbol": "C260717C00150000",
       "underlying": "C",
@@ -359,7 +359,7 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-14",
-      "entry_order_id": "ce36181d-347e-4d5c-8eef-e0f262e251a8"
+      "entry_order_id": "5eedb4a4-8677-46ae-a66f-a943e43c2f16"
     }
   ],
   "pending_orders": [],
@@ -379,10 +379,10 @@
     "b43": 40.0,
     "b23": 40.0,
     "b3": 40.0,
-    "b81": 73.0,
-    "b21": 73.0,
-    "b20": 48.0,
-    "b60": 22.0
+    "b61": 73.0,
+    "b41": 73.0,
+    "b0": 48.0,
+    "b40": 22.0
   },
   "session_date": "2026-07-14",
   "entries_locked": [
