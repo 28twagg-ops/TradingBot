@@ -1,12 +1,12 @@
 """
 options_morning_bot.py — Phase 4 paper bot: TOP 5 strategies (multi-slot).
 
-Runs five research-ranked strategies in parallel on the Alpaca PAPER account:
+Runs research-ranked strategies on the Alpaca PAPER account:
   S173 MomReversal long call
-  S174 RubberBand long call EOD
   S165 GapDown long call 3 DTE
   S166 GapDown strong call (gap <= -3%, green close)
   S163 A1 GapDown ATM call EOD (control)
+  S174 RubberBand long call EOD — DROPPED (no new entries; excluded from reflected P&L)
 
 P&L is tracked and logged as **return % per trade** (not dollar matrices).
 
@@ -45,14 +45,16 @@ from options_signals import PAPER_STRATEGIES, SignalHit, scan_symbol, StrategyCo
 from options_lab import (
     VIRTUAL_BUCKET_USD, PAPER_UNLIMITED_BUCKETS, EffectiveArm, LabState,
     active_bucket_count, arms_for_signal,
-    build_bucket_leaderboard, cancel_unfilled_lab_entries,
+    build_bucket_leaderboard, build_reflected_leaderboard,
+    cancel_dropped_strategy_entries, cancel_unfilled_lab_entries,
+    DROPPED_STRATEGIES,
     entry_limit_price, exit_limit_price,
     exit_reason_for_lot, has_open_lab_entry, load_state,
     lock_entry_slot, make_entry_client_order_id,
     make_exit_client_order_id, open_option_sell_symbols,
     print_exit_summary, print_trial_stats, reconcile_summary,
     reconcile_with_broker, register_pending, register_pending_exit,
-    size_for_arm, trial_root,
+    save_state, size_for_arm, trial_root,
 )
 
 # --------------------------------------------------------------------------- #
@@ -258,19 +260,22 @@ def _console_pending_summary(state: LabState, *, max_rows: int = 5) -> None:
 
 
 def _console_bucket_leaderboard(state: LabState, *, top_n: int = 8) -> None:
-    """Human-readable per-bucket stats table (top buckets + aggregate)."""
-    board = build_bucket_leaderboard(state)
+    """Human-readable per-bucket stats — reflected (ex-dropped) is primary."""
+    board = build_reflected_leaderboard(state)
     today = TODAY.isoformat()
-    today_board = build_bucket_leaderboard(state, day=today)
+    today_board = build_reflected_leaderboard(state, day=today)
+    raw = build_bucket_leaderboard(state) if DROPPED_STRATEGIES else None
 
-    _box_title("BUCKET LEADERBOARD")
+    drop_tag = ",".join(sorted(DROPPED_STRATEGIES)) if DROPPED_STRATEGIES else ""
+    title = f"BUCKET LEADERBOARD (reflected ex-{drop_tag})" if drop_tag else "BUCKET LEADERBOARD"
+    _box_title(title)
     if board.total_exits == 0:
         rl(_box_line(f"  {board.buckets_defined} buckets defined — no completed trades yet"))
         _box_end()
         return
 
     rl(_box_line(
-        f"  All-time  trades={board.total_exits}  buckets={board.buckets_with_exits}"
+        f"  Reflected trades={board.total_exits}  buckets={board.buckets_with_exits}"
         f"  win={board.win_rate_pct:.0f}%"
     ))
     rl(_box_line(
@@ -278,6 +283,11 @@ def _console_bucket_leaderboard(state: LabState, *, top_n: int = 8) -> None:
         f"  p10={board.p10_return_pct:+.1f}%  p90={board.p90_return_pct:+.1f}%"
     ))
     rl(_box_line(f"  Realized  ${board.total_realized_usd:+,.2f}"))
+    if raw is not None and abs(raw.total_realized_usd - board.total_realized_usd) > 0.01:
+        rl(_box_line(
+            f"  Raw incl dropped  trades={raw.total_exits}  "
+            f"real=${raw.total_realized_usd:+,.2f}"
+        ))
     if today_board.total_exits:
         rl(_box_line(
             f"  Today     trades={today_board.total_exits}  "
@@ -1172,9 +1182,26 @@ def run() -> int:
     section("Setup")
     rl(f"Active buckets: {active_bucket_count(equity or 0)} | "
        f"Strategies: {', '.join(s.id for s in PAPER_STRATEGIES)}")
+    if DROPPED_STRATEGIES:
+        rl(f"Dropped (no new entries; ex-reflected P&L): "
+           f"{', '.join(sorted(DROPPED_STRATEGIES))}")
 
     t0 = time.perf_counter()
     cancel_stale_option_orders(trade)
+    n_drop = cancel_dropped_strategy_entries(trade, log_fn=rl_file)
+    if n_drop:
+        rl(f"Cancelled {n_drop} dropped-strategy entry order(s).")
+    # Drop pending entry records for paused strategies so slots free up.
+    if DROPPED_STRATEGIES and state.pending_orders:
+        before = len(state.pending_orders)
+        state.pending_orders = [
+            p for p in state.pending_orders
+            if p.strategy_id not in DROPPED_STRATEGIES
+        ]
+        cleared = before - len(state.pending_orders)
+        if cleared:
+            save_state(state)
+            rl(f"Cleared {cleared} pending entry slot(s) for dropped strategies.")
     if not _hm_between(now, ENTRY_START, ENTRY_END):
         n_unfilled = cancel_unfilled_lab_entries(trade, log_fn=rl_file)
         if n_unfilled:

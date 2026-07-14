@@ -45,6 +45,13 @@ STATE_VERSION = 5
 ORPHAN_BUCKET_ID = 0
 ORPHAN_PROFILE = "orphan_reconcile"
 ORPHAN_STRATEGY = "ORPHAN"
+
+# Strategies paused from new entries (layout buckets stay for audit).
+# Reflected P&L / leaderboard exclude these by default.
+DROPPED_STRATEGIES: frozenset[str] = frozenset(
+    s.strip() for s in os.environ.get("OPTIONS_DROPPED_STRATEGIES", "S174").split(",")
+    if s.strip()
+)
 ORDER_FETCH_LIMIT = 500
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -538,9 +545,19 @@ def ensure_trial_layout() -> None:
             )
     if not STRATEGIES_PATH.exists():
         STRATEGIES_PATH.write_text(json.dumps({
-            "paper_strategies": ["S173", "S174", "S165", "S166", "S163"],
+            "paper_strategies": ["S173", "S165", "S166", "S163"],
+            "dropped_strategies": sorted(DROPPED_STRATEGIES),
             "strategy_tweaks": STRATEGY_TWEAKS,
         }, indent=2), encoding="utf-8")
+    else:
+        # Keep on-disk selection in sync when strategies are paused.
+        try:
+            raw = json.loads(STRATEGIES_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            raw = {}
+        raw["paper_strategies"] = ["S173", "S165", "S166", "S163"]
+        raw["dropped_strategies"] = sorted(DROPPED_STRATEGIES)
+        STRATEGIES_PATH.write_text(json.dumps(raw, indent=2), encoding="utf-8")
 
 
 def _merge_arm(bucket: BucketProfile, strategy_id: str,
@@ -580,10 +597,13 @@ def active_buckets(equity: float) -> list[BucketProfile]:
 
 
 def arms_for_signal(strategy_id: str, equity: float) -> list[EffectiveArm]:
+    if strategy_id in DROPPED_STRATEGIES:
+        return []
     return [
         _merge_arm(b, strategy_id, equity)
         for b in active_buckets(equity)
         if b.strategy_scope in ("all", strategy_id)
+        and b.strategy_scope not in DROPPED_STRATEGIES
     ]
 
 
@@ -859,7 +879,7 @@ def clear_pending_for_order(state: LabState, order_id: str) -> PendingOrder | No
 def cancel_unfilled_lab_entries(trade, log_fn=None) -> int:
     """Cancel open LAB-tagged entry (buy) orders."""
     from alpaca.trading.requests import GetOrdersRequest
-    from alpaca.trading.enums import QueryOrderStatus, OrderSide
+    from alpaca.trading.enums import QueryOrderStatus
 
     n = 0
     try:
@@ -880,6 +900,37 @@ def cancel_unfilled_lab_entries(trade, log_fn=None) -> int:
             log_fn(f"  cancel unfilled entries list failed: {exc}")
     return n
 
+
+def cancel_dropped_strategy_entries(trade, log_fn=None) -> int:
+    """Cancel open buy orders tagged to DROPPED_STRATEGIES (no new entries)."""
+    from alpaca.trading.requests import GetOrdersRequest
+    from alpaca.trading.enums import QueryOrderStatus
+
+    if not DROPPED_STRATEGIES:
+        return 0
+    n = 0
+    try:
+        req = GetOrdersRequest(status=QueryOrderStatus.OPEN, limit=200)
+        for o in trade.get_orders(req):
+            cid = getattr(o, "client_order_id", "") or ""
+            side = _norm_order_field(getattr(o, "side", ""))
+            if not cid.startswith("LB") or side != "buy":
+                continue
+            parsed = parse_lab_client_order_id(cid)
+            if not parsed or parsed.get("strategy_id") not in DROPPED_STRATEGIES:
+                continue
+            try:
+                trade.cancel_order_by_id(o.id)
+                n += 1
+                if log_fn:
+                    log_fn(f"  cancel dropped entry {cid}")
+            except Exception as exc:
+                if log_fn:
+                    log_fn(f"  cancel dropped entry failed {cid}: {exc}")
+    except Exception as exc:
+        if log_fn:
+            log_fn(f"  cancel dropped entries list failed: {exc}")
+    return n
 
 def open_lab_entry_order_ids(trade) -> set[str]:
     """Return client_order_id prefixes bucket|strategy for open LAB buys."""
@@ -1008,9 +1059,14 @@ def _read_ledger_rows() -> list[dict]:
         return list(csv.DictReader(f))
 
 
-def _ledger_realized_pnl(rows: list[dict]) -> tuple[float, float, dict[str, float]]:
+def _ledger_realized_pnl(
+    rows: list[dict],
+    *,
+    exclude_strategies: set[str] | frozenset[str] | None = None,
+) -> tuple[float, float, dict[str, float]]:
     """Return (all_time_usd, today_usd, per_bucket_key_usd) from closed trades."""
     today = date.today().isoformat()
+    excl = set(exclude_strategies or ())
     lots: dict[str, dict] = {}
     realized_all = 0.0
     realized_today = 0.0
@@ -1031,6 +1087,9 @@ def _ledger_realized_pnl(rows: list[dict]) -> tuple[float, float, dict[str, floa
                 pass
             continue
         if ev != "exit" or not lot_id:
+            continue
+        sid = str(r.get("strategy_id") or "")
+        if sid and sid in excl:
             continue
 
         pnl: float | None = None
@@ -1185,7 +1244,8 @@ def format_exit_summary(
     day = (for_date or date.today()).isoformat()
     rows = _read_ledger_rows()
     exits = _exits_for_date(rows, day)
-    _, realized_day, realized_by_bucket = _ledger_realized_pnl(rows)
+    _, realized_day, realized_by_bucket = _ledger_realized_pnl(
+        rows, exclude_strategies=DROPPED_STRATEGIES)
 
     lines: list[str] = []
     lines.append("=" * 56)
@@ -1402,14 +1462,27 @@ def format_trial_stats(
         lines.append("Account equity: (not connected)")
 
     rows = _read_ledger_rows()
-    realized_all, realized_today, realized_by_bucket = _ledger_realized_pnl(rows)
+    realized_raw, realized_today_raw, _ = _ledger_realized_pnl(rows)
+    realized_all, realized_today, realized_by_bucket = _ledger_realized_pnl(
+        rows, exclude_strategies=DROPPED_STRATEGIES)
     open_virtual, open_premium, broker_open, open_by_bucket = _open_pnl_stats(
         state, positions)
 
+    drop_tag = ",".join(sorted(DROPPED_STRATEGIES)) if DROPPED_STRATEGIES else ""
     lines.append("")
     lines.append("P&L summary")
-    lines.append(f"  Realized (sold):     ${realized_all:+,.2f} all-time"
-                 f"  |  ${realized_today:+,.2f} today")
+    if drop_tag:
+        lines.append(
+            f"  Reflected (ex-{drop_tag}): ${realized_all:+,.2f} all-time"
+            f"  |  ${realized_today:+,.2f} today"
+        )
+        lines.append(
+            f"  Raw (incl dropped):     ${realized_raw:+,.2f} all-time"
+            f"  |  ${realized_today_raw:+,.2f} today"
+        )
+    else:
+        lines.append(f"  Realized (sold):     ${realized_all:+,.2f} all-time"
+                     f"  |  ${realized_today:+,.2f} today")
     if positions is not None:
         lines.append(
             f"  Open (not sold yet): ${open_virtual:+,.2f} unrealized (virtual lots)"
@@ -1423,14 +1496,22 @@ def format_trial_stats(
     lines.append(f"  Premium deployed:    ${open_premium:,.2f} in open positions")
     lines.append(
         f"  Combined P&L:        ${realized_all + open_virtual:+,.2f} "
-        f"(realized + open virtual)"
+        f"(reflected realized + open virtual)"
     )
 
     today_rows = [r for r in rows if str(r.get("ts", "")).startswith(today)
                   or str(r.get("date", "")) == today]
     entries_today = sum(1 for r in today_rows if r.get("event") == "entry")
-    exits_today = sum(1 for r in today_rows if r.get("event") == "exit")
-    all_exits = [r for r in rows if r.get("event") == "exit" and r.get("return_pct")]
+    exits_today = sum(
+        1 for r in today_rows
+        if r.get("event") == "exit"
+        and str(r.get("strategy_id") or "") not in DROPPED_STRATEGIES
+    )
+    all_exits = [
+        r for r in rows
+        if r.get("event") == "exit" and r.get("return_pct")
+        and str(r.get("strategy_id") or "") not in DROPPED_STRATEGIES
+    ]
     rets = []
     for r in all_exits:
         try:
@@ -1442,14 +1523,14 @@ def format_trial_stats(
     lines.append("Ledger (master)")
     lines.append(f"  Total events:     {len(rows)}")
     lines.append(f"  Today entries:    {entries_today}")
-    lines.append(f"  Today exits:      {exits_today}")
+    lines.append(f"  Today exits (reflected): {exits_today}")
     if rets:
         wins = sum(1 for x in rets if x > 0)
-        lines.append(f"  All-time exits:   {len(rets)}  wins {wins/len(rets):.0%}")
+        lines.append(f"  All-time exits (reflected): {len(rets)}  wins {wins/len(rets):.0%}")
         lines.append(f"  Avg return/trade: {sum(rets)/len(rets):+.1f}%  "
                      f"median {sorted(rets)[len(rets)//2]:+.1f}%")
     else:
-        lines.append("  All-time exits:   0 (no completed trades yet)")
+        lines.append("  All-time exits (reflected): 0 (no completed trades yet)")
 
     lines.append("")
     lines.append("Open virtual lots (by bucket)")
@@ -1582,6 +1663,8 @@ class BucketLeaderboard:
     p90_return_pct: float
     total_realized_usd: float
     rows: list[BucketStatsRow]
+    excluded_strategies: tuple[str, ...] = ()
+    label: str = ""
 
 
 def _percentile(vals: list[float], p: float) -> float:
@@ -1629,9 +1712,16 @@ def build_bucket_leaderboard(
     state: LabState | None = None,
     *,
     day: str | None = None,
+    exclude_strategies: set[str] | frozenset[str] | None = None,
+    label: str = "",
 ) -> BucketLeaderboard:
-    """Per-bucket exit stats ranked by median return (best first)."""
+    """Per-bucket exit stats ranked by median return (best first).
+
+    exclude_strategies: if set, skip exit rows for those strategy_ids (reflected P&L).
+    Pass DROPPED_STRATEGIES for the active reflected view.
+    """
     del state  # reserved for future open-P&L attribution per bucket
+    excl = set(exclude_strategies or ())
     rows = _read_ledger_rows()
     lots: dict[str, dict] = {}
     for r in rows:
@@ -1647,6 +1737,9 @@ def build_bucket_leaderboard(
     exits_by_bucket: dict[int, list[dict]] = {}
     for r in rows:
         if r.get("event") != "exit":
+            continue
+        sid = str(r.get("strategy_id") or "")
+        if sid and sid in excl:
             continue
         if day and not (str(r.get("ts", "")).startswith(day)
                         or str(r.get("date", "")) == day):
@@ -1705,8 +1798,25 @@ def build_bucket_leaderboard(
         p90_return_pct=_percentile(all_rets, 90),
         total_realized_usd=total_realized,
         rows=stat_rows,
+        excluded_strategies=tuple(sorted(excl)),
+        label=label,
     )
 
+
+def build_reflected_leaderboard(
+    state: LabState | None = None,
+    *,
+    day: str | None = None,
+) -> BucketLeaderboard:
+    """Leaderboard excluding DROPPED_STRATEGIES (primary reflected view)."""
+    excl = set(DROPPED_STRATEGIES)
+    tag = ",".join(sorted(excl)) if excl else "none"
+    return build_bucket_leaderboard(
+        state,
+        day=day,
+        exclude_strategies=excl,
+        label=f"ex-{tag}" if excl else "all",
+    )
 
 def print_trial_stats(
     state: LabState,

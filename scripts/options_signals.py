@@ -110,9 +110,11 @@ class StrategyConfig:
     scanner: object
 
 
+# Live scan list — S174 paused (2026-07-13): negative median / drop recommendation.
+# Historical ledger still contains S174 exits for audit; see DROPPED_STRATEGIES
+# in options_lab for reflected P&L that excludes them.
 PAPER_STRATEGIES: list[StrategyConfig] = [
     StrategyConfig("S173", "MomReversal long call", 1, 0, 7, scan_mom_reversal),
-    StrategyConfig("S174", "RubberBand long call EOD", 7, 2, 14, scan_rubber_band),
     StrategyConfig("S165", "GapDown long call 3 DTE", 3, 1, 7,
                    lambda sub, sym, today, mp: scan_gap_down(
                        sub, sym, today, GAP_DOWN_THRESH,
@@ -123,6 +125,13 @@ PAPER_STRATEGIES: list[StrategyConfig] = [
                        sub, sym, today, GAP_DOWN_THRESH,
                        "S163", "A1 GapDown ATM call EOD", mp)),
 ]
+
+# Kept for reports / name lookup only — not scanned.
+DROPPED_PAPER_STRATEGIES: list[StrategyConfig] = [
+    StrategyConfig("S174", "RubberBand long call EOD", 7, 2, 14, scan_rubber_band),
+]
+
+ALL_KNOWN_STRATEGIES: list[StrategyConfig] = PAPER_STRATEGIES + DROPPED_PAPER_STRATEGIES
 
 
 def scan_symbol(sub: pd.DataFrame, sym: str, today: date,

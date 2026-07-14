@@ -20,8 +20,8 @@ from datetime import date, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from options_lab import LEDGER_PATH, TRIAL_ROOT, ensure_trial_layout
-from options_signals import PAPER_STRATEGIES
+from options_lab import LEDGER_PATH, TRIAL_ROOT, DROPPED_STRATEGIES, ensure_trial_layout
+from options_signals import ALL_KNOWN_STRATEGIES, PAPER_STRATEGIES
 
 
 @dataclass
@@ -117,7 +117,7 @@ def build_report(as_of_day: str) -> tuple[list[StratStats], dict]:
         elif ev == "exit":
             exits_by_sid[sid].append(r)
 
-    sid_to_name = {s.id: s.name for s in PAPER_STRATEGIES}
+    sid_to_name = {s.id: s.name for s in ALL_KNOWN_STRATEGIES}
     all_sids = sorted(set(list(sid_to_name.keys()) + list(entries_by_sid.keys()) + list(exits_by_sid.keys())))
     all_sids = [sid for sid in all_sids if sid in sid_to_name]
     out: list[StratStats] = []
@@ -153,6 +153,8 @@ def build_report(as_of_day: str) -> tuple[list[StratStats], dict]:
         p10 = _percentile(rets, 0.10)
         p90 = _percentile(rets, 0.90)
         rec, why = _recommend(n, med, p10, top_share)
+        if sid in DROPPED_STRATEGIES:
+            rec, why = "drop", "manually paused — excluded from new entries & reflected P&L"
 
         out.append(
             StratStats(
