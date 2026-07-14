@@ -1,0 +1,53 @@
+14:02:01  INFO      Mode: exits
+14:02:01  INFO        place_all_stops: checking 4 positions...
+14:02:01  INFO        STOP skipped CDNS: fractional (0.2548 shares) — software exit will handle it
+14:02:01  INFO        STOP skipped HON: fractional (0.4281 shares) — software exit will handle it
+14:02:01  INFO        STOP skipped NDSN: fractional (0.3144 shares) — software exit will handle it
+14:02:01  INFO        STOP already live NI @ $46.83
+14:02:01  INFO        [positions] 4/4 (4 valid)
+14:02:01  INFO        SELL MARKET [urgent] NDSN closed
+14:02:03  INFO        TX logged: SELL NDSN  P&L -0.57%
+14:02:03  INFO        Daily log -> logs/daily/2026-07-14.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:02 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $480.39|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  NDSN  P&L -0.6%  $-0.53                        EXIT: stop_loss (-0.6%)|
+|  HON  P&L +0.0%  $+0.02                                            HOLD|
+|  CDNS  P&L +0.4%  $+0.39                                           HOLD|
+|  NI  P&L +0.4%  $+0.41                                             HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           4|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  NDSN                                        -0.57%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
