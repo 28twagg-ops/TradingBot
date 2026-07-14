@@ -1,0 +1,99 @@
+Layout: controlled:100:c000_s173_w1_0928_1005_r1
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-14T11:25:42.105304-04:00 ===
+
+[Run context]
+Paper auth OK — equity $134229.02, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S165, S166, S163
+Dropped (no new entries; ex-reflected P&L): S174
+2026-07-14 11:25:46,576 INFO   EXIT [b41|c041_s173_w2_1005_1045_r3|S173] stop_loss (-78.4%) SELL 1 C260717C00148000 @<= 0.15
+
+[Scan + entries]
+Scanning 903 symbols for [S173, S165, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 103 signal(s); top: ['S173:ACN', 'S173:ADBE', 'S173:ALL', 'S173:APP', 'S173:ADSK', 'S173:ADP', 'S173:AXON', 'S173:BKNG']
+Paper lab: $134198 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+  All bucket slots blocked or closed for today's signals — skip entry loop.
+Placed 0 new entry order(s).
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          entry+manage                            |
+|  Equity                        $134,229.02                             |
+|  Signals this run              103                                     |
+|  Orders submitted (session)    38                                      |
+|  Orders filled today (ledger)  42                                      |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             21                                      |
+|  Broker option positions       7                                       |
+|  Pending orders                10                                      |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S174)                                |
++------------------------------------------------------------------------+
+|  Reflected trades=164  buckets=39  win=49%                             |
+|  Returns   avg=+35.6%  med=+0.0%  p10=-76.1%  p90=+100.0%              |
+|  Realized  $+6,456.77                                                  |
+|  Raw incl dropped  trades=261  real=$+5,547.58                         |
+|  Today     trades=17  avg=+58.4%  med=+61.8%  real=$+77.00             |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b62  c062_s173_w3_1045_  5  60% +628.8 +1100.0 +1100.0 $   +116       |
+|  b89  c089_s165_w2_1005_  2 100% +425.9 +425.9 +790.0 $   +113         |
+|  b28  c028_s165_w1_0928_  4 100% +91.7 +95.1 +102.0 $   +187           |
+|  b69  c069_s165_w2_1005_  2  50% +83.2 +83.2 +210.0 $     -3           |
+|  b60  c060_s173_w1_0928_  5  60% +57.5 +78.8 +168.2 $    +75           |
+|  b92  c092_s166_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b93  c093_s166_w2_1005_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b95  c095_s166_w4_1120_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  ... 31 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b21  c021_s173_w2_1005_  7   0% -54.4 -74.0 -77.0 $   -243       |
++========================================================================+
++========================================================================+
+|  PENDING ORDERS (10)                                                   |
++------------------------------------------------------------------------+
+|  Top groups                    S173:ADBE(5), S165:BSX(5)               |
++------------------------------------------------------------------------+
+|  b3   S173 ADBE     limit=0.43                                         |
+|  b23  S173 ADBE     limit=0.43                                         |
+|  b43  S173 ADBE     limit=0.43                                         |
+|  b63  S173 ADBE     limit=0.43                                         |
+|  b83  S173 ADBE     limit=0.43                                         |
+|  ... 5 more pending order(s)                                           |
++========================================================================+
++========================================================================+
+|  PENDING EXITS (2)                                                     |
++------------------------------------------------------------------------+
+|  b40  S173 C260717C00150000 x1 take_profit (+68.2%)                    |
+|  b89  S165 BSX260717C00045500 x1 stop_loss (-50.0%)                    |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (7)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  C260717C00148000              3    -76.8%   $   -149.00               |
+|  BSX260717C00043000            5    -30.8%   $   -100.00               |
+|  ADBE260717C00240000           5    -27.1%   $    -65.00               |
+|  BSX260717C00045500            4   -100.0%   $    -40.00               |
+|  SMCI260717C00029000           2    -20.9%   $    -26.50               |
+|  GEHC260717C00062000           1    -28.6%   $    -20.00               |
+|  C260717C00150000              1    -63.6%   $    -14.00               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-14.log
+elapsed=29.5s reconcile=3.23s cancel=0.03s manage=1.15s scan=21.56s entries=0.04s
+STATUS: options_morning_bot run complete (PAPER) elapsed=29.5s. run=#3865 https://github.com/28twagg-ops/TradingBot/actions/runs/29345231680
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_buckets.csv
+Summary: 10 buckets closed trades, $+77.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_strategy_selection.csv
+Summary: keep=0 watch=3 drop=2
