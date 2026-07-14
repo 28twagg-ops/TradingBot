@@ -974,3 +974,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-14 13:49:04,2026-07-14,SELL,PLD,Pullback50,142.69,91.75,0.52,0.48,0,midline (+0.5%),bull,480.23
 2026-07-14 14:02:03,2026-07-14,SELL,NDSN,Pullback50,288.76,90.78,-0.57,-0.53,0,stop_loss (-0.6%),bull,480.29
 2026-07-14 14:25:44,2026-07-14,SELL,HON,Pullback50,222.94,95.44,-0.6,-0.58,0,stop_loss (-0.6%),bull,479.4
+2026-07-14 15:20:48,2026-07-14,SELL,NI,Pullback50,46.83,44.05,-0.51,-0.23,1,stop_loss (-0.5%),bull,479.68
