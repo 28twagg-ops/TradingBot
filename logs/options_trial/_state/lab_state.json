@@ -382,9 +382,9 @@
       "entry_order_id": "10eb4623-5637-4e7e-9527-3e7bb4601928"
     },
     {
-      "lot_id": "a69bfb107619",
-      "bucket_id": 81,
-      "profile_name": "c081_s173_w2_1005_1045_r5",
+      "lot_id": "2085de7384d1",
+      "bucket_id": 61,
+      "profile_name": "c061_s173_w2_1005_1045_r4",
       "strategy_id": "S173",
       "occ_symbol": "C260717C00148000",
       "underlying": "C",
@@ -399,12 +399,12 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-14",
-      "entry_order_id": "6066ad12-f7df-4f84-8238-079cef60b424"
+      "entry_order_id": "deeca41a-57ba-4f4e-a895-36d5034ca8ec"
     },
     {
-      "lot_id": "4c11caa24bd7",
-      "bucket_id": 21,
-      "profile_name": "c021_s173_w2_1005_1045_r2",
+      "lot_id": "35d7cb445457",
+      "bucket_id": 41,
+      "profile_name": "c041_s173_w2_1005_1045_r3",
       "strategy_id": "S173",
       "occ_symbol": "C260717C00148000",
       "underlying": "C",
@@ -419,12 +419,12 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-14",
-      "entry_order_id": "9ab70742-226f-4102-b3d8-d5af3ff1ed82"
+      "entry_order_id": "b4ec3a90-e079-4519-93bf-b438b3f9c1de"
     },
     {
-      "lot_id": "743db2345ee9",
-      "bucket_id": 20,
-      "profile_name": "c020_s173_w1_0928_1005_r2",
+      "lot_id": "89310f7159f4",
+      "bucket_id": 0,
+      "profile_name": "c000_s173_w1_0928_1005_r1",
       "strategy_id": "S173",
       "occ_symbol": "C260717C00148000",
       "underlying": "C",
@@ -439,12 +439,12 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-14",
-      "entry_order_id": "c5802ac7-ab75-4437-b55f-cfa9a45f2ae1"
+      "entry_order_id": "8bf9ec89-49cc-4f23-9a4e-0e9f62963ac9"
     },
     {
-      "lot_id": "46da6ec66b3a",
-      "bucket_id": 60,
-      "profile_name": "c060_s173_w1_0928_1005_r4",
+      "lot_id": "bc88b06c61e2",
+      "bucket_id": 40,
+      "profile_name": "c040_s173_w1_0928_1005_r3",
       "strategy_id": "S173",
       "occ_symbol": "C260717C00150000",
       "underlying": "C",
@@ -459,18 +459,18 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-14",
-      "entry_order_id": "ce36181d-347e-4d5c-8eef-e0f262e251a8"
+      "entry_order_id": "5eedb4a4-8677-46ae-a66f-a943e43c2f16"
     },
     {
-      "lot_id": "e389533e1fdf",
-      "bucket_id": 20,
-      "profile_name": "c020_s173_w1_0928_1005_r2",
+      "lot_id": "614253b6eac1",
+      "bucket_id": 1,
+      "profile_name": "c001_s173_w2_1005_1045_r1",
       "strategy_id": "S173",
       "occ_symbol": "SMCI260717C00029000",
       "underlying": "SMCI",
       "qty": 1,
-      "entry_cost": 70.0,
-      "entry_price": 0.7,
+      "entry_cost": 61.0,
+      "entry_price": 0.61,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
@@ -479,18 +479,18 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-14",
-      "entry_order_id": "e9701979-ff87-4f36-a865-58d35f7082a9"
+      "entry_order_id": "7d0bfe9f-40ae-4dbf-8d4c-63c7aeb22c03"
     },
     {
-      "lot_id": "fe19aeffb3a3",
-      "bucket_id": 0,
-      "profile_name": "c000_s173_w1_0928_1005_r1",
+      "lot_id": "d7719275dfc5",
+      "bucket_id": 40,
+      "profile_name": "c040_s173_w1_0928_1005_r3",
       "strategy_id": "S173",
       "occ_symbol": "SMCI260717C00029000",
       "underlying": "SMCI",
       "qty": 1,
-      "entry_cost": 73.0,
-      "entry_price": 0.73,
+      "entry_cost": 57.99999999999999,
+      "entry_price": 0.58,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
@@ -499,7 +499,7 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-14",
-      "entry_order_id": "170f6320-7922-4f22-a246-3de7666d7995"
+      "entry_order_id": "68f31f23-52b4-4319-a528-4941103ccf44"
     }
   ],
   "pending_orders": [],
@@ -555,11 +555,11 @@
     "b43": 40.0,
     "b23": 40.0,
     "b3": 40.0,
-    "b81": 73.0,
-    "b21": 73.0,
-    "b20": 118.0,
-    "b60": 22.0,
-    "b0": 73.0
+    "b61": 73.0,
+    "b41": 73.0,
+    "b0": 48.0,
+    "b40": 80.0,
+    "b1": 61.0
   },
   "session_date": "2026-07-14",
   "entries_locked": [
