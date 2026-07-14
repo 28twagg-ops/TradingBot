@@ -1,0 +1,68 @@
+Layout: controlled:100:c000_s173_w1_0928_1005_r1
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-14T18:20:45.224899-04:00 ===
+
+[Run context]
+After hours (18:20 ET) — exit summary only.
+Paper auth OK — equity $131481.90, account PA36KS87UPRS
+
+[Exit summary]
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          after_hours                             |
+|  Equity                        $131,481.90                             |
+|  Signals this run              0                                       |
+|  Orders submitted (session)    38                                      |
+|  Orders filled today (ledger)  47                                      |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             18                                      |
+|  Broker option positions       4                                       |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S174)                                |
++------------------------------------------------------------------------+
+|  Reflected trades=172  buckets=41  win=47%                             |
+|  Returns   avg=+32.9%  med=-2.7%  p10=-73.7%  p90=+99.7%               |
+|  Realized  $+6,340.77                                                  |
+|  Raw incl dropped  trades=269  real=$+5,431.58                         |
+|  Today     trades=25  avg=+33.0%  med=-7.7%  real=$-39.00              |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b62  c062_s173_w3_1045_  5  60% +628.8 +1100.0 +1100.0 $   +116       |
+|  b89  c089_s165_w2_1005_  2 100% +425.9 +425.9 +790.0 $   +113         |
+|  b28  c028_s165_w1_0928_  4 100% +91.7 +95.1 +102.0 $   +187           |
+|  b69  c069_s165_w2_1005_  2  50% +83.2 +83.2 +210.0 $     -3           |
+|  b60  c060_s173_w1_0928_  5  60% +57.5 +78.8 +168.2 $    +75           |
+|  b92  c092_s166_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b93  c093_s166_w2_1005_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b95  c095_s166_w4_1120_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  ... 33 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b21  c021_s173_w2_1005_  7   0% -54.4 -74.0 -77.0 $   -243       |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (4)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  C260717C00148000              3    -96.9%   $   -188.00               |
+|  ADBE260717C00240000          10    -29.5%   $   -130.00               |
+|  BSX260717C00045500            4   -100.0%   $    -40.00               |
+|  C260717C00150000              1    -90.9%   $    -20.00               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-14.log
+elapsed=3.2s reconcile=2.97s
+STATUS: options_morning_bot after-hours summary (PAPER) elapsed=3.2s. run=#3948 https://github.com/28twagg-ops/TradingBot/actions/runs/29372641430
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_buckets.csv
+Summary: 15 buckets closed trades, $-39.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_strategy_selection.csv
+Summary: keep=0 watch=2 drop=3
