@@ -605,3 +605,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-07-13 19:51:30,2026-07-13,SELL,MO,Pullback50,71.97,71.97,71.9751,91.26,0.0071,0.0065,limit_fill_position_check_full,midline (-0.1%),bull
 2026-07-13 19:52:00,2026-07-13,SELL,FANG,Pullback50,191.74,191.36,191.74,91.32,0.0,0.0,limit_fill_position_check_full,midline (+0.0%),bull
 2026-07-13 19:52:31,2026-07-13,SELL,JCI,Pullback50,143.59,143.53,143.546,91.32,-0.0306,-0.028,limit_fill_position_check_full,midline (+0.1%),bull
+2026-07-14 13:48:33,2026-07-14,SELL,NEE,Pullback50,88.9,88.89,88.9154,90.94,0.0173,0.0158,limit_fill_position_check_full,midline (-0.4%),bull
+2026-07-14 13:49:04,2026-07-14,SELL,PLD,Pullback50,142.77,142.48,142.69,91.75,-0.056,-0.0514,limit_fill_position_check_full,midline (+0.5%),bull
