@@ -2479,3 +2479,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-14 18:25:45,exits,bull,479.4,382.39,0,0,0,1,CDNS,both
 2026-07-14 18:30:53,exits,bull,479.34,382.39,0,0,0,1,CDNS,both
 2026-07-14 18:35:37,exits,bull,479.35,382.39,0,0,0,1,CDNS,both
+2026-07-14 18:40:51,exits,bull,479.12,382.39,0,0,0,1,CDNS,both
