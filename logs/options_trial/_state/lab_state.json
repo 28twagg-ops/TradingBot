@@ -282,27 +282,7 @@
       "entry_order_id": "10eb4623-5637-4e7e-9527-3e7bb4601928"
     },
     {
-      "lot_id": "51fdcde8f2ec",
-      "bucket_id": 10,
-      "profile_name": "c010_s165_w3_1045_1120_r1",
-      "strategy_id": "S165",
-      "occ_symbol": "BSX260717C00043000",
-      "underlying": "BSX",
-      "qty": 1,
-      "entry_cost": 65.0,
-      "entry_price": 0.65,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-14",
-      "entry_order_id": "aa181b78-26d7-4062-bced-e1361d0639b3"
-    },
-    {
-      "lot_id": "7fb5963445c0",
+      "lot_id": "c59f10743560",
       "bucket_id": 81,
       "profile_name": "c081_s173_w2_1005_1045_r5",
       "strategy_id": "S173",
@@ -322,7 +302,7 @@
       "entry_order_id": "6066ad12-f7df-4f84-8238-079cef60b424"
     },
     {
-      "lot_id": "1fe5aa5e7cdf",
+      "lot_id": "a4255ea5e4c6",
       "bucket_id": 21,
       "profile_name": "c021_s173_w2_1005_1045_r2",
       "strategy_id": "S173",
@@ -342,7 +322,7 @@
       "entry_order_id": "9ab70742-226f-4102-b3d8-d5af3ff1ed82"
     },
     {
-      "lot_id": "cfa090884f09",
+      "lot_id": "d6e0313baa3d",
       "bucket_id": 20,
       "profile_name": "c020_s173_w1_0928_1005_r2",
       "strategy_id": "S173",
@@ -362,7 +342,7 @@
       "entry_order_id": "c5802ac7-ab75-4437-b55f-cfa9a45f2ae1"
     },
     {
-      "lot_id": "e690656a9c32",
+      "lot_id": "091023dc0010",
       "bucket_id": 60,
       "profile_name": "c060_s173_w1_0928_1005_r4",
       "strategy_id": "S173",
@@ -385,54 +365,44 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "25c90f66-0005-48f3-be52-85391f9cecab",
-      "lot_id": "be66be4c8c72",
-      "bucket_id": 40,
-      "strategy_id": "S173",
-      "occ_symbol": "C260717C00150000",
-      "qty": 1,
-      "reason": "take_profit (+68.2%)",
-      "submitted": "2026-07-14T10:15:46"
-    },
-    {
-      "order_id": "260eaaac-85dd-4542-88ab-dce663c31d65",
-      "lot_id": "71387eadfbd6",
-      "bucket_id": 89,
-      "strategy_id": "S165",
-      "occ_symbol": "BSX260717C00045500",
-      "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-07-14T10:15:48"
-    },
-    {
-      "order_id": "2fb62363-d5b6-42a6-a383-b29128a45dde",
-      "lot_id": "d878248b1755",
-      "bucket_id": 81,
-      "strategy_id": "S173",
-      "occ_symbol": "C260717C00148000",
-      "qty": 1,
-      "reason": "stop_loss (-90.7%)",
-      "submitted": "2026-07-14T11:30:59"
-    },
-    {
-      "order_id": "37306dac-928f-4044-93b3-698caa12def6",
-      "lot_id": "31b7cefa81c1",
-      "bucket_id": 42,
+      "order_id": "887e3af8-e07b-44d9-8b51-2c2c7ff84d32",
+      "lot_id": "ae5e3a85e03a",
+      "bucket_id": 2,
       "strategy_id": "S173",
       "occ_symbol": "ADBE260717C00240000",
       "qty": 1,
       "reason": "EOD",
-      "submitted": "2026-07-14T15:34:27"
+      "submitted": "2026-07-14T16:01:20"
     },
     {
-      "order_id": "5c4b3cf6-077d-459e-b91b-02df7a59ff97",
-      "lot_id": "51fdcde8f2ec",
-      "bucket_id": 10,
-      "strategy_id": "S165",
-      "occ_symbol": "BSX260717C00043000",
+      "order_id": "5ebb3bae-2652-448b-a367-b9863f65d372",
+      "lot_id": "c59f10743560",
+      "bucket_id": 81,
+      "strategy_id": "S173",
+      "occ_symbol": "C260717C00148000",
       "qty": 1,
       "reason": "EOD",
-      "submitted": "2026-07-14T15:56:14"
+      "submitted": "2026-07-14T16:01:20"
+    },
+    {
+      "order_id": "abaf511f-1c68-4b12-9b55-ce81fdecce32",
+      "lot_id": "b8f233374184",
+      "bucket_id": 29,
+      "strategy_id": "S165",
+      "occ_symbol": "BSX260717C00045500",
+      "qty": 1,
+      "reason": "EOD",
+      "submitted": "2026-07-14T16:01:20"
+    },
+    {
+      "order_id": "a23ac6ac-b7f9-40ce-8495-4e98e35c4079",
+      "lot_id": "091023dc0010",
+      "bucket_id": 60,
+      "strategy_id": "S173",
+      "occ_symbol": "C260717C00150000",
+      "qty": 1,
+      "reason": "EOD",
+      "submitted": "2026-07-14T16:01:21"
     }
   ],
   "bucket_open_premium": {
@@ -450,7 +420,6 @@
     "b43": 40.0,
     "b23": 40.0,
     "b3": 40.0,
-    "b10": 65.0,
     "b81": 73.0,
     "b21": 73.0,
     "b20": 48.0,

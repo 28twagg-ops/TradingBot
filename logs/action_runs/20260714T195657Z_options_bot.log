@@ -1,0 +1,90 @@
+Layout: controlled:100:c000_s173_w1_0928_1005_r1
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-14T16:01:17.403650-04:00 ===
+
+[Run context]
+Paper auth OK — equity $131632.74, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S165, S166, S163
+Dropped (no new entries; ex-reflected P&L): S174
+  EXIT [b42|c042_s173_w3_1045_1120_r3|S173] EOD SELL failed ADBE260717C00240000: {"code":40010001,"message":"client_order_id must be unique"}
+  EXIT [b42|c042_s173_w3_1045_1120_r3|S173] EOD market+limit failed ADBE260717C00240000: {"code":40010001,"message":"client_order_id must be unique"}
+2026-07-14 16:01:20,619 INFO   EXIT [b2|c002_s173_w3_1045_1120_r1|S173] EOD SELL 1 ADBE260717C00240000 @<= 0.01
+  EXIT [b2|c002_s173_w3_1045_1120_r1|S173] EOD LIMIT fallback SELL 1 ADBE260717C00240000 @<= 0.01 return=-29.5%
+2026-07-14 16:01:20,829 INFO   EXIT [b81|c081_s173_w2_1005_1045_r5|S173] EOD SELL 1 C260717C00148000 @<= 0.01
+  EXIT [b81|c081_s173_w2_1005_1045_r5|S173] EOD LIMIT fallback SELL 1 C260717C00148000 @<= 0.01 return=-96.9%
+2026-07-14 16:01:20,914 INFO   EXIT [b29|c029_s165_w2_1005_1045_r2|S165] EOD SELL 1 BSX260717C00045500 @<= 0.01
+2026-07-14 16:01:21,025 INFO   EXIT [b60|c060_s173_w1_0928_1005_r4|S173] EOD SELL 1 C260717C00150000 @<= 0.01
+
+[Manage only]
+Past entry window; manage/exit only.
+
+[Portfolio snapshot]
+
+[Exit summary]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          manage-only                             |
+|  Equity                        $131,632.74                             |
+|  Signals this run              0                                       |
+|  Orders submitted (session)    38                                      |
+|  Orders filled today (ledger)  47                                      |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             18                                      |
+|  Broker option positions       4                                       |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S174)                                |
++------------------------------------------------------------------------+
+|  Reflected trades=171  buckets=40  win=47%                             |
+|  Returns   avg=+33.2%  med=-2.7%  p10=-74.0%  p90=+100.0%              |
+|  Realized  $+6,345.77                                                  |
+|  Raw incl dropped  trades=268  real=$+5,436.58                         |
+|  Today     trades=24  avg=+34.7%  med=-7.7%  real=$-34.00              |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b62  c062_s173_w3_1045_  5  60% +628.8 +1100.0 +1100.0 $   +116       |
+|  b89  c089_s165_w2_1005_  2 100% +425.9 +425.9 +790.0 $   +113         |
+|  b28  c028_s165_w1_0928_  4 100% +91.7 +95.1 +102.0 $   +187           |
+|  b69  c069_s165_w2_1005_  2  50% +83.2 +83.2 +210.0 $     -3           |
+|  b60  c060_s173_w1_0928_  5  60% +57.5 +78.8 +168.2 $    +75           |
+|  b92  c092_s166_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b93  c093_s166_w2_1005_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b95  c095_s166_w4_1120_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  ... 32 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b21  c021_s173_w2_1005_  7   0% -54.4 -74.0 -77.0 $   -243       |
++========================================================================+
++========================================================================+
+|  PENDING EXITS (4)                                                     |
++------------------------------------------------------------------------+
+|  b2   S173 ADBE260717C00240000 x1 EOD                                  |
+|  b81  S173 C260717C00148000 x1 EOD                                     |
+|  b29  S165 BSX260717C00045500 x1 EOD                                   |
+|  b60  S173 C260717C00150000 x1 EOD                                     |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (4)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  C260717C00148000              3    -96.9%   $   -188.00               |
+|  ADBE260717C00240000          10    -29.5%   $   -130.00               |
+|  BSX260717C00045500            4   -100.0%   $    -40.00               |
+|  C260717C00150000              1    -90.9%   $    -20.00               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-14.log
+elapsed=3.7s reconcile=2.87s cancel=0.02s manage=0.65s
+STATUS: options_morning_bot run complete (PAPER) elapsed=3.7s. run=#3919 https://github.com/28twagg-ops/TradingBot/actions/runs/29363652659
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_buckets.csv
+Summary: 14 buckets closed trades, $-34.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-14_strategy_selection.csv
+Summary: keep=0 watch=2 drop=3
