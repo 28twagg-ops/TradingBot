@@ -302,9 +302,9 @@
       "entry_order_id": "388cd97f-b7e5-4d1d-87c3-f5140ca1d54b"
     },
     {
-      "lot_id": "0b15f17beffd",
-      "bucket_id": 40,
-      "profile_name": "c040_s173_w1_0928_1005_r3",
+      "lot_id": "90331b4ea234",
+      "bucket_id": 60,
+      "profile_name": "c060_s173_w1_0928_1005_r4",
       "strategy_id": "S173",
       "occ_symbol": "C260717C00150000",
       "underlying": "C",
@@ -319,18 +319,18 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-14",
-      "entry_order_id": "5eedb4a4-8677-46ae-a66f-a943e43c2f16"
+      "entry_order_id": "ce36181d-347e-4d5c-8eef-e0f262e251a8"
     },
     {
-      "lot_id": "ac49f76b103c",
-      "bucket_id": 1,
-      "profile_name": "c001_s173_w2_1005_1045_r1",
+      "lot_id": "f3ba6a8d34a6",
+      "bucket_id": 40,
+      "profile_name": "c040_s173_w1_0928_1005_r3",
       "strategy_id": "S173",
       "occ_symbol": "SMCI260717C00029000",
       "underlying": "SMCI",
       "qty": 1,
-      "entry_cost": 61.0,
-      "entry_price": 0.61,
+      "entry_cost": 57.99999999999999,
+      "entry_price": 0.58,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
@@ -339,18 +339,18 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-14",
-      "entry_order_id": "7d0bfe9f-40ae-4dbf-8d4c-63c7aeb22c03"
+      "entry_order_id": "68f31f23-52b4-4319-a528-4941103ccf44"
     },
     {
-      "lot_id": "cdb7767ba843",
-      "bucket_id": 20,
-      "profile_name": "c020_s173_w1_0928_1005_r2",
+      "lot_id": "29867485f087",
+      "bucket_id": 0,
+      "profile_name": "c000_s173_w1_0928_1005_r1",
       "strategy_id": "S173",
       "occ_symbol": "SMCI260717C00029000",
       "underlying": "SMCI",
       "qty": 1,
-      "entry_cost": 70.0,
-      "entry_price": 0.7,
+      "entry_cost": 73.0,
+      "entry_price": 0.73,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
@@ -359,7 +359,7 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-14",
-      "entry_order_id": "e9701979-ff87-4f36-a865-58d35f7082a9"
+      "entry_order_id": "170f6320-7922-4f22-a246-3de7666d7995"
     }
   ],
   "pending_orders": [],
@@ -395,14 +395,15 @@
     "b48": 51.0,
     "b88": 51.0,
     "b8": 51.0,
-    "b1": 115.0,
+    "b1": 54.0,
     "b89": 10.0,
     "b69": 10.0,
     "b29": 10.0,
     "b9": 10.0,
     "b49": 70.0,
-    "b40": 22.0,
-    "b20": 70.0
+    "b60": 22.0,
+    "b40": 57.99999999999999,
+    "b0": 73.0
   },
   "session_date": "2026-07-14",
   "entries_locked": [
