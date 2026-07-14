@@ -162,7 +162,7 @@
       "entry_order_id": "5eedb4a4-8677-46ae-a66f-a943e43c2f16"
     },
     {
-      "lot_id": "c2e91def0ba5",
+      "lot_id": "7de1bc9f2c49",
       "bucket_id": 29,
       "profile_name": "c029_s165_w2_1005_1045_r2",
       "strategy_id": "S165",
@@ -182,7 +182,7 @@
       "entry_order_id": "dfeaa828-0488-4b0d-8103-16e18bf10a65"
     },
     {
-      "lot_id": "46343438b394",
+      "lot_id": "2292d7d7f08f",
       "bucket_id": 9,
       "profile_name": "c009_s165_w2_1005_1045_r1",
       "strategy_id": "S165",
@@ -202,7 +202,7 @@
       "entry_order_id": "bf5ca081-2a4f-407f-b4c1-9f1581b69ced"
     },
     {
-      "lot_id": "2e4d77ed88a7",
+      "lot_id": "7e3c8dac16e9",
       "bucket_id": 20,
       "profile_name": "c020_s173_w1_0928_1005_r2",
       "strategy_id": "S173",
@@ -222,7 +222,7 @@
       "entry_order_id": "e9701979-ff87-4f36-a865-58d35f7082a9"
     },
     {
-      "lot_id": "6d0f89b146a1",
+      "lot_id": "cf561061d947",
       "bucket_id": 0,
       "profile_name": "c000_s173_w1_0928_1005_r1",
       "strategy_id": "S173",
@@ -240,10 +240,170 @@
       "market_exit_eod": true,
       "entry_date": "2026-07-14",
       "entry_order_id": "170f6320-7922-4f22-a246-3de7666d7995"
+    },
+    {
+      "lot_id": "41d4ec86b811",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "C260717C00148000",
+      "underlying": "C",
+      "qty": 4,
+      "entry_cost": 292.0,
+      "entry_price": 0.73,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-07-14",
+      "entry_order_id": "orphan:C260717C00148000"
     }
   ],
-  "pending_orders": [],
-  "pending_exits": [],
+  "pending_orders": [
+    {
+      "order_id": "9ab70742-226f-4102-b3d8-d5af3ff1ed82",
+      "bucket_id": 21,
+      "strategy_id": "S173",
+      "occ_symbol": "C260717C00148000",
+      "underlying": "C",
+      "qty": 1,
+      "limit": 0.74,
+      "profile_name": "c021_s173_w2_1005_1045_r2",
+      "submitted": "2026-07-14",
+      "detail": "MR gap -2.1% green",
+      "spread_frac": 0.14285714285714282,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "b4ec3a90-e079-4519-93bf-b438b3f9c1de",
+      "bucket_id": 41,
+      "strategy_id": "S173",
+      "occ_symbol": "C260717C00148000",
+      "underlying": "C",
+      "qty": 1,
+      "limit": 0.74,
+      "profile_name": "c041_s173_w2_1005_1045_r3",
+      "submitted": "2026-07-14",
+      "detail": "MR gap -2.1% green",
+      "spread_frac": 0.14285714285714282,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "deeca41a-57ba-4f4e-a895-36d5034ca8ec",
+      "bucket_id": 61,
+      "strategy_id": "S173",
+      "occ_symbol": "C260717C00148000",
+      "underlying": "C",
+      "qty": 1,
+      "limit": 0.74,
+      "profile_name": "c061_s173_w2_1005_1045_r4",
+      "submitted": "2026-07-14",
+      "detail": "MR gap -2.1% green",
+      "spread_frac": 0.14285714285714282,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "6066ad12-f7df-4f84-8238-079cef60b424",
+      "bucket_id": 81,
+      "strategy_id": "S173",
+      "occ_symbol": "C260717C00148000",
+      "underlying": "C",
+      "qty": 1,
+      "limit": 0.74,
+      "profile_name": "c081_s173_w2_1005_1045_r5",
+      "submitted": "2026-07-14",
+      "detail": "MR gap -2.1% green",
+      "spread_frac": 0.14285714285714282,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "cf6bfb1c-f0ee-4274-ba6d-d9317fcb92a2",
+      "bucket_id": 9,
+      "strategy_id": "S165",
+      "occ_symbol": "BSX260717C00045500",
+      "underlying": "BSX",
+      "qty": 1,
+      "limit": 0.12,
+      "profile_name": "c009_s165_w2_1005_1045_r1",
+      "submitted": "2026-07-14",
+      "detail": "gap -2.6%",
+      "spread_frac": 0.08000000000000007,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "bc9e10bf-4c98-42d0-b433-ab7a75b14d86",
+      "bucket_id": 29,
+      "strategy_id": "S165",
+      "occ_symbol": "BSX260717C00045500",
+      "underlying": "BSX",
+      "qty": 1,
+      "limit": 0.12,
+      "profile_name": "c029_s165_w2_1005_1045_r2",
+      "submitted": "2026-07-14",
+      "detail": "gap -2.6%",
+      "spread_frac": 0.08000000000000007,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "9b7766a4-1303-4608-a310-fb4ae5beb639",
+      "bucket_id": 69,
+      "strategy_id": "S165",
+      "occ_symbol": "BSX260717C00045500",
+      "underlying": "BSX",
+      "qty": 1,
+      "limit": 0.12,
+      "profile_name": "c069_s165_w2_1005_1045_r4",
+      "submitted": "2026-07-14",
+      "detail": "gap -2.6%",
+      "spread_frac": 0.08000000000000007,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "129e9eed-5d23-4596-83c0-ff472fe2dd98",
+      "bucket_id": 89,
+      "strategy_id": "S165",
+      "occ_symbol": "BSX260717C00045500",
+      "underlying": "BSX",
+      "qty": 1,
+      "limit": 0.12,
+      "profile_name": "c089_s165_w2_1005_1045_r5",
+      "submitted": "2026-07-14",
+      "detail": "gap -2.6%",
+      "spread_frac": 0.08000000000000007,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    }
+  ],
+  "pending_exits": [
+    {
+      "order_id": "b5f3a55c-a82f-41d9-9285-2e15346648d5",
+      "lot_id": "7f5a4ed63421",
+      "bucket_id": 80,
+      "strategy_id": "S173",
+      "occ_symbol": "C260717C00150000",
+      "qty": 1,
+      "reason": "take_profit (+59.1%)",
+      "submitted": "2026-07-14T10:06:04"
+    }
+  ],
   "bucket_open_premium": {
     "b88": 51.0,
     "b68": 51.0,
@@ -256,7 +416,7 @@
     "b29": 55.00000000000001,
     "b9": 55.00000000000001,
     "b20": 70.0,
-    "b0": 73.0
+    "b0": 365.0
   },
   "session_date": "2026-07-14",
   "entries_locked": [
@@ -267,7 +427,15 @@
     "28|S165|2026-07-14",
     "48|S165|2026-07-14",
     "68|S165|2026-07-14",
-    "88|S165|2026-07-14"
+    "88|S165|2026-07-14",
+    "21|S173|2026-07-14",
+    "41|S173|2026-07-14",
+    "61|S173|2026-07-14",
+    "81|S173|2026-07-14",
+    "9|S165|2026-07-14",
+    "29|S165|2026-07-14",
+    "69|S165|2026-07-14",
+    "89|S165|2026-07-14"
   ],
   "processed_orders": [
     "854eb0c9-e194-408b-a64e-af605473f0ce",
@@ -770,7 +938,7 @@
     "ce36181d-347e-4d5c-8eef-e0f262e251a8",
     "5eedb4a4-8677-46ae-a66f-a943e43c2f16"
   ],
-  "submitted_today": 8,
+  "submitted_today": 16,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-07-14"
 }
