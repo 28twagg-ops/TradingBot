@@ -88,6 +88,52 @@ def merge_daily_md(src: Path, dst: Path):
         shutil.copy2(src, dst)
 
 
+def merge_run_index_csv(src: Path, dst: Path):
+    """Append-only merge for daily action run index CSVs."""
+    if not src.exists():
+        return
+    if not dst.exists():
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dst)
+        return
+    src_fields, src_rows = _read_csv(src)
+    dst_fields, dst_rows = _read_csv(dst)
+    all_fields = list(dict.fromkeys((dst_fields or src_fields) + (src_fields or [])))
+    if not all_fields:
+        all_fields = ["run_stamp", "run_number", "run_id", "live_exit",
+                      "options_exit", "live_duration_s", "options_duration_s"]
+    seen = set()
+    merged = []
+    for r in dst_rows + src_rows:
+        key = str(r.get("run_stamp") or r.get("run_id") or "")
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        merged.append(r)
+    merged.sort(key=lambda r: str(r.get("run_stamp") or ""))
+    _write_csv(dst, all_fields, merged)
+
+
+def merge_comprehensive_review(src: Path, dst: Path):
+    """Append run sections; keep header once."""
+    if not src.exists():
+        return
+    if not dst.exists():
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dst)
+        return
+    src_text = src.read_text(encoding="utf-8")
+    dst_text = dst.read_text(encoding="utf-8")
+    for block in re.split(r"(?=^## Run )", src_text, flags=re.MULTILINE):
+        block = block.strip()
+        if not block.startswith("## Run "):
+            continue
+        header = block.split("\n", 1)[0].strip()
+        if header not in dst_text:
+            dst_text = dst_text.rstrip() + "\n\n" + block + "\n"
+    dst.write_text(dst_text, encoding="utf-8")
+
+
 def merge_tree(src: Path, dst: Path):
     if not src.exists():
         return
@@ -102,6 +148,14 @@ def merge_tree(src: Path, dst: Path):
         target = dst / rel
         if item.suffix == ".csv" and item.name in ("runs.csv", "transactions.csv", "execution_audit.csv"):
             merge_csv(item.name, item.parent, target.parent)
+        elif (len(rel.parts) >= 3 and rel.parts[0] == "action_runs"
+              and rel.parts[1] == "reports"
+              and item.name.endswith("_run_index.csv")):
+            merge_run_index_csv(item, target)
+        elif (len(rel.parts) >= 3 and rel.parts[0] == "action_runs"
+              and rel.parts[1] == "reports"
+              and item.name.endswith("_comprehensive_review.md")):
+            merge_comprehensive_review(item, target)
         elif len(rel.parts) >= 2 and rel.parts[0] == "options" and item.suffix == ".md":
             merge_options_md(item, target)
         elif len(rel.parts) == 2 and rel.parts[0] == "daily" and item.suffix == ".md":

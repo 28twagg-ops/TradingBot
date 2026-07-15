@@ -396,7 +396,9 @@ def get_live_tickers():
                 storage_options=headers)[0]["Symbol"].tolist()
             log.info(f"  S&P 500: {len(sp500)}")
         except Exception as e:
-            log.error(f"FATAL S&P 500: {e}"); raise SystemExit(1)
+            # Do not kill the whole run — GHA evenings still need exits/summary.
+            log.error(f"S&P 500 fetch failed (non-fatal if cache exists): {e}")
+            sp500 = []
 
     if UNIVERSE in ("midcap", "both"):
         try:
@@ -405,7 +407,24 @@ def get_live_tickers():
                 storage_options=headers)[0]["Symbol"].tolist()
             log.info(f"  MidCap 400: {len(mid400)}")
         except Exception as e:
-            log.error(f"FATAL MidCap 400: {e}"); raise SystemExit(1)
+            log.error(f"MidCap 400 fetch failed (non-fatal if cache exists): {e}")
+            mid400 = []
+
+    if not sp500 and not mid400:
+        # Last resort: any older cache file in the ticker cache dir.
+        try:
+            cache_dir = cache_path.parent
+            cands = sorted(cache_dir.glob("tickers_*.json"), reverse=True)
+            for p in cands:
+                raw = json.loads(p.read_text(encoding="utf-8"))
+                tickers = raw.get("tickers") or []
+                if tickers:
+                    log.warning(f"  Using stale ticker cache {p.name} ({len(tickers)} symbols)")
+                    return tickers
+        except Exception as e:
+            log.error(f"  Stale ticker cache fallback failed: {e}")
+        log.error("FATAL: no tickers available (Wikipedia + cache failed)")
+        raise SystemExit(1)
 
     combined = list(dict.fromkeys(sp500 + mid400))
     cleaned  = [t.replace(".", "-") for t in combined]

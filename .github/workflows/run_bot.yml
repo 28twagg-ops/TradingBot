@@ -1,9 +1,14 @@
 name: Rubber Band Bot
 
-# cron-job.org webhook every ~5 min (Chicago): runs LIVE rubber_band_bot + PAPER options_morning_bot.
-# Modes auto-detected via BOT_MODE=auto or explicit workflow_dispatch input.
+# Primary: cron-job.org webhook (~5 min, Chicago) via workflow_dispatch.
+# Backup: native GitHub schedule so market hours still run if cron-job.org dies.
 
 on:
+  schedule:
+    # Every 5 minutes, Mon–Fri. GitHub cron is UTC and can drift a few minutes.
+    # Covers ~08:00–22:00 ET (approx market + extended hours).
+    - cron: "*/5 12-23 * * 1-5"
+    - cron: "*/5 0-2 * * 1-5"
   workflow_dispatch:
     inputs:
       mode:
@@ -23,8 +28,9 @@ on:
           - weekly
 
 concurrency:
+  # Drop stale queued runs so a timeout backlog cannot skip market hours.
   group: rubber-band-bot
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -240,7 +246,20 @@ jobs:
         run: |
           echo "Live bot exit code: ${LIVE_BOT_EXIT:-0}"
           echo "Options bot exit code: ${OPTIONS_BOT_EXIT:-0}"
-          if [ "${LIVE_BOT_EXIT:-0}" -ne 0 ] || [ "${OPTIONS_BOT_EXIT:-0}" -ne 0 ]; then
-            echo "One or more bot steps failed. See logs/action_runs/*.log for full output."
+          live=${LIVE_BOT_EXIT:-0}
+          opt=${OPTIONS_BOT_EXIT:-0}
+          # Bot steps already use continue-on-error so logs can still commit.
+          # Prefer warnings over a red job when only one bot hiccups — otherwise
+          # operators see "This job failed" even after a successful log push,
+          # and cancel/queue chaos can skip the trading day.
+          if [ "$live" -ne 0 ] && [ "$opt" -ne 0 ]; then
+            echo "::error::Both live and options bots failed (live=$live options=$opt). See logs/action_runs/."
             exit 1
           fi
+          if [ "$live" -ne 0 ]; then
+            echo "::warning::Live bot failed (exit=$live). See $LIVE_LOG"
+          fi
+          if [ "$opt" -ne 0 ]; then
+            echo "::warning::Options bot failed (exit=$opt). See $OPTIONS_LOG"
+          fi
+          echo "Workflow continuing (log commit already attempted)."
