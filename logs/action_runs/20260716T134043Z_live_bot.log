@@ -1,0 +1,75 @@
+13:40:44  INFO      Mode: morning_prep
+13:40:46  INFO        [prep_positions] 3/3 (3 valid)
+13:40:46  INFO        Universe cache hit: 903 tickers (tickers_2026-07-16.json)
+13:40:47  INFO        [prep_universe] 40/900 (40 valid)
+13:40:49  INFO        [prep_universe] 80/900 (80 valid)
+13:40:50  INFO        [prep_universe] 120/900 (120 valid)
+13:40:51  INFO        [prep_universe] 160/900 (160 valid)
+13:40:53  INFO        [prep_universe] 200/900 (199 valid)
+13:41:01  INFO        [prep_universe] 240/900 (238 valid)
+13:41:11  INFO        [prep_universe] 280/900 (278 valid)
+13:41:24  INFO        [prep_universe] 320/900 (318 valid)
+13:41:38  INFO        [prep_universe] 360/900 (358 valid)
+13:41:48  INFO        [prep_universe] 400/900 (397 valid)
+13:42:01  INFO        [prep_universe] 440/900 (437 valid)
+13:42:12  INFO        [prep_universe] 480/900 (477 valid)
+13:42:25  INFO        [prep_universe] 520/900 (517 valid)
+13:42:36  INFO        [prep_universe] 560/900 (556 valid)
+13:42:49  INFO        [prep_universe] 600/900 (596 valid)
+13:42:59  INFO        [prep_universe] 640/900 (636 valid)
+13:43:13  INFO        [prep_universe] 680/900 (676 valid)
+13:43:23  INFO        [prep_universe] 720/900 (716 valid)
+13:43:36  INFO        [prep_universe] 760/900 (756 valid)
+13:43:49  INFO        [prep_universe] 800/900 (796 valid)
+13:44:00  INFO        [prep_universe] 840/900 (835 valid)
+13:44:13  INFO        [prep_universe] 880/900 (875 valid)
+13:44:17  INFO        [prep_universe] 900/900 (895 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         13:40 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $480.74|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       3|
+|  Invested                                                       $284.63|
+|  Open P&L                                                        $+3.75|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  CHH      Pullback50      $97.20     $108.43  $110.20  +1.6%   $+1.56  |
+|  EVR      Pullback50      $95.79     $346.97  $347.51  +0.2%   $+0.15  |
+|  HST      Pullback50      $91.64     $23.37   $23.90   +2.3%   $+2.04  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                1|
+|  TICKER    TYPE              QTY       LIMIT       STOP                |
++------------------------------------------------------------------------+
+|  HST       OrderType.STOP    3         None        23.25               |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      0|
+|  Signal candidates                                                   61|
+|  Universe scanned                                                   900|
++========================================================================+
