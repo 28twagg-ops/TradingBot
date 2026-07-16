@@ -9772,3 +9772,155 @@ Orphan rate: 5.7% (22/389)
 ```
 
 ---
+
+## Run 20260716T173038Z
+
+- UTC timestamp: `20260716T173038Z`
+- GitHub run: [#4162](https://github.com/28twagg-ops/TradingBot/actions/runs/29520014894)
+- Run id: `29520014894`
+- Live bot: exit=`0`, duration=`3s`
+- Options bot: exit=`0`, duration=`7s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-16T13:30:42.512598-04:00","date":"2026-07-16","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":4.8,"phases_s":{"reconcile":2.67,"cancel":0.22,"manage":1.12},"signals":0,"placed":0,"equity":126374.09,"open_positions":4,"pending_orders":0,"open_lots":11,"submitted_today":32,"filled_today":55,"unattributed_contracts":0,"top_signals":[],"github_run":"4162","github_run_id":"29520014894","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+17:30:39  INFO      Mode: exits
+17:30:40  INFO        Daily log -> logs/daily/2026-07-16.md
+17:30:40  INFO        Daily log reconciled -> logs/daily/2026-07-16.md (5 ledger rows)
+17:30:40  INFO        place_all_stops: checking 2 positions...
+17:30:40  INFO        STOP skipped AME: fractional (0.3685 shares) — software exit will handle it
+17:30:40  INFO        STOP already live CARR @ $67.55
+17:30:41  INFO        [positions] 2/2 (2 valid)
+17:30:41  INFO        Daily log -> logs/daily/2026-07-16.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         17:30 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $484.15|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  AME  P&L +1.0%  $+0.87                                            HOLD|
+|  CARR  P&L +2.4%  $+2.07                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+Layout: controlled:100:c000_s173_w1_0928_1005_r1
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-16T13:30:42.512598-04:00 ===
+
+[Run context]
+Paper auth OK — equity $126374.09, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S165, S166, S163
+Dropped (no new entries; ex-reflected P&L): S174
+
+[Manage only]
+Past entry window; manage/exit only.
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          manage-only                             |
+|  Equity                        $126,374.09                             |
+|  Signals this run              0                                       |
+|  Orders submitted (session)    32                                      |
+|  Orders filled today (ledger)  55                                      |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             11                                      |
+|  Broker option positions       4                                       |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S174)                                |
++------------------------------------------------------------------------+
+|  Reflected trades=288  buckets=46  win=35%                             |
+|  Returns   avg=+14.0%  med=-21.4%  p10=-77.0%  p90=+93.4%              |
+|  Realized  $+4,274.77                                                  |
+|  Raw incl dropped  trades=391  real=$+3,151.58                         |
+|  Today     trades=43  avg=-40.7%  med=-56.4%  real=$-1,203.00          |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b28  c028_s165_w1_0928_  8 100% +84.7 +84.5 +102.0 $   +358           |
+|  b92  c092_s166_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b93  c093_s166_w2_1005_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b95  c095_s166_w4_1120_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b96  c096_s163_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b98  c098_s163_w3_1045_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b99  c099_s163_w4_1120_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b89  c089_s165_w2_1005_  4  75% +220.0 +69.9 +790.0 $   +127          |
+|  ... 38 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b21  c021_s173_w2_1005_ 14   0% -62.5 -73.0 -98.5 $   -585       |
++========================================================================+
++========================================================================+
+|  PENDING EXITS (3)                                                     |
++------------------------------------------------------------------------+
+|  b80  S173 UAL260717C00122000 x1 take_profit (+53.8%)                  |
+|  b63  S173 LULU260717C00122000 x1 stop_loss (-58.1%)                   |
+|  b90  S165 AVGO260717C00400000 x1 stop_loss (-59.8%)                   |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (4)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  UAL260717C00122000            3    -43.1%   $    -84.00               |
+|  AVGO260717C00400000           2    -63.0%   $    -78.33               |
+|  LULU260717C00122000           2    -58.1%   $    -69.20               |
+|  ADBE260717C00240000           4    +31.8%   $    +56.00               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-16.log
+elapsed=4.8s reconcile=2.67s cancel=0.22s manage=1.12s
+STATUS: options_morning_bot run complete (PAPER) elapsed=4.8s. run=#4162 https://github.com/28twagg-ops/TradingBot/actions/runs/29520014894
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-16_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-16_buckets.csv
+Summary: 26 buckets closed trades, $-1,203.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-16_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-16_strategy_selection.csv
+Summary: keep=0 watch=2 drop=3
+Orphan rate: 5.6% (22/391)
+```
+
+---
