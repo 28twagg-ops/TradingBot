@@ -203,7 +203,7 @@ AB_TEST_START        = ""     # auto-set on first run if empty (YYYY-MM-DD)
 AB_TEST_EQUITY_SPLIT = 0.50
 AB_RATIO_A_TO_B      = 5     # target ~5 wide (A) for every 1 concentrated (B)
 
-# Alpaca account: read only .equity / .cash from get_account().
+# Alpaca account: read only .equity / .cash via get_account_safe().
 # Deprecated Jul 6 2026: pattern_day_trader, daytrade_count, daytrading_buying_power — never used here.
 FETCH_WORKERS = 16
 FETCH_CHUNK_PAUSE_S = 0.25
@@ -801,6 +801,24 @@ def check_exit(df, pos, eod_only=False):
 # =============================================================================
 #  POSITIONS
 # =============================================================================
+
+def get_account_safe(client, retries=3, wait=10):
+    """Retry wrapper for Alpaca account fetch — mid-run timeouts lost entire
+    entry sessions (e.g. 2026-05-27). Prefer this over bare client calls."""
+    for i in range(retries):
+        try:
+            return client.get_account()
+        except Exception as e:
+            if i < retries - 1:
+                log.warning(
+                    f"get_account failed attempt {i + 1}/{retries}: {e} "
+                    f"retrying in {wait}s"
+                )
+                time.sleep(wait)
+            else:
+                log.error(f"get_account failed after {retries} attempts: {e}")
+                raise
+
 
 def get_positions(client):
     try:
@@ -1429,7 +1447,7 @@ def poll_pending_buys(client, pending_buys, rgm):
             buy_price = fill.get("price") if fill.get("price") is not None else sig_close
             buy_dollars = fill.get("dollars") if fill.get("dollars") is not None else da
             log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
-                   float(client.get_account().equity),
+                   float(get_account_safe(client).equity),
                    expected_price=sig_close,
                    order_price=sig_close,
                    execution_method="market_fill_batched",
@@ -3038,7 +3056,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                     dh  = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                           if pos.get("entry_date") else 0
                     log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
-                           rgm, float(client.get_account().equity),
+                           rgm, float(get_account_safe(client).equity),
                            pos["pnl_pct"], pos["pnl_dollar"], dh, why,
                            sell_method=sell_res.get("sell_method",""),
                            cur_at_submit=sell_res.get("cur_at_submit"),
@@ -3101,7 +3119,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                             cur = sell_res.get("price") if sell_res.get("price") is not None else pos["current_price"]
                             sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
                             log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
-                                   rgm, float(client.get_account().equity),
+                                   rgm, float(get_account_safe(client).equity),
                                    pos["pnl_pct"], pos["pnl_dollar"], days, why,
                                    sell_method=sell_res.get("sell_method",""),
                                    cur_at_submit=sell_res.get("cur_at_submit"),
@@ -3172,7 +3190,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                 dh  = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                       if pos.get("entry_date") else 0
                 log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
-                       rgm, float(client.get_account().equity),
+                       rgm, float(get_account_safe(client).equity),
                        pos["pnl_pct"], pos["pnl_dollar"], dh, why,
                        sell_method=sell_res.get("sell_method",""),
                        cur_at_submit=sell_res.get("cur_at_submit"),
@@ -3263,7 +3281,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
     ftr()
 
     positions_after = enrich(client, get_positions(client))
-    acct2 = client.get_account()
+    acct2 = get_account_safe(client)
     eq2 = float(acct2.equity)
     ca2 = float(acct2.cash)
     log_run(run_mode_name, rgm, eq2, ca2, 0, 0, exits, positions_after)
@@ -3447,7 +3465,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
                         dh = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                              if pos.get("entry_date") else 0
                         log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
-                               rgm, float(client.get_account().equity),
+                               rgm, float(get_account_safe(client).equity),
                                pos["pnl_pct"], pos["pnl_dollar"], dh, why,
                                sell_method=sell_res.get("sell_method",""),
                                cur_at_submit=sell_res.get("cur_at_submit"),
@@ -3510,7 +3528,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
                                 cur = sell_res.get("price") if sell_res.get("price") is not None else cur
                                 sold_dollars = sell_res.get("dollars") if sell_res.get("dollars") is not None else pos["market_value"]
                                 log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
-                                       rgm, float(client.get_account().equity),
+                                       rgm, float(get_account_safe(client).equity),
                                        pos["pnl_pct"], pos["pnl_dollar"], days, why,
                                        sell_method=sell_res.get("sell_method",""),
                                        cur_at_submit=sell_res.get("cur_at_submit"),
@@ -3558,7 +3576,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
                     dh = (datetime.today() - datetime.strptime(pos["entry_date"], "%Y-%m-%d")).days \
                          if pos.get("entry_date") else 0
                     log_tx("SELL", ticker, pos.get("strategy","?"), cur, sold_dollars,
-                           rgm, float(client.get_account().equity),
+                           rgm, float(get_account_safe(client).equity),
                            pos["pnl_pct"], pos["pnl_dollar"], dh, why,
                            sell_method=sell_res.get("sell_method",""),
                            cur_at_submit=sell_res.get("cur_at_submit"),
@@ -3690,7 +3708,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         already_held   = set(positions.keys())
         viable         = [s for s in all_sigs if s["ticker"] not in already_held]
         entries = 0; buys_log = []; unconfirmed_buys = 0; pending_buys = []
-        cash = float(client.get_account().cash); avail = max(0.0, cash - reserve)
+        cash = float(get_account_safe(client).cash); avail = max(0.0, cash - reserve)
         n_open = len(positions)
 
         if ab_test_active():
@@ -3748,7 +3766,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
                         buy_price = buy_res.get("price") or sig["close"]
                         buy_dollars = buy_res.get("dollars") or da
                         log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
-                               float(client.get_account().equity),
+                               float(get_account_safe(client).equity),
                                expected_price=sig["close"],
                                order_price=buy_res.get("order_price", sig["close"]),
                                execution_method=buy_res.get("execution_method", "buy_market"),
@@ -3822,7 +3840,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
                             buy_price = buy_res.get("price") if buy_res.get("price") is not None else sig["close"]
                             buy_dollars = buy_res.get("dollars") if buy_res.get("dollars") is not None else da
                             log_tx("BUY", ticker, strategy, buy_price, buy_dollars, rgm,
-                                   float(client.get_account().equity),
+                                   float(get_account_safe(client).equity),
                                    expected_price=sig["close"],
                                    order_price=buy_res.get("order_price", sig["close"]),
                                    execution_method=buy_res.get("execution_method", "buy_market"))
@@ -3870,7 +3888,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     except Exception as e:
         log.warning(f"  EOD stop refresh check failed: {e}")
 
-    acct2 = client.get_account()
+    acct2 = get_account_safe(client)
     eq2 = float(acct2.equity); ca2 = float(acct2.cash)
     pos2 = enrich(client, get_positions(client))
 
@@ -3913,7 +3931,7 @@ if __name__ == "__main__":
     log.info(f"Mode: {mode}")
 
     client = TradingClient(API_KEY, API_SECRET, paper=PAPER_TRADING)
-    acct   = client.get_account()
+    acct   = get_account_safe(client)
     equity = float(acct.equity)
     cash   = float(acct.cash)
 
