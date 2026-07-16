@@ -14046,3 +14046,353 @@ Orphan rate: 5.6% (22/395)
 ```
 
 ---
+
+## Run 20260716T195552Z
+
+- UTC timestamp: `20260716T195552Z`
+- GitHub run: [#4193](https://github.com/28twagg-ops/TradingBot/actions/runs/29529887605)
+- Run id: `29529887605`
+- Live bot: exit=`0`, duration=`235s`
+- Options bot: exit=`0`, duration=`4s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-16T15:59:48.021961-04:00","date":"2026-07-16","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":2.5,"phases_s":{"reconcile":2.23,"cancel":0.04,"manage":0.04},"signals":0,"placed":0,"equity":125170.99,"open_positions":2,"pending_orders":0,"open_lots":4,"submitted_today":32,"filled_today":55,"unattributed_contracts":0,"top_signals":[],"github_run":"4193","github_run_id":"29529887605","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:55:53  INFO      Mode: scan
+19:55:54  INFO        [positions] 4/4 (4 valid)
+19:55:54  INFO        Universe cache hit: 903 tickers (tickers_2026-07-16.json)
+19:55:54  INFO        [universe] 40/899 (40 valid)
+19:55:56  INFO        [universe] 80/899 (80 valid)
+19:55:57  INFO        [universe] 120/899 (120 valid)
+19:55:58  INFO        [universe] 160/899 (160 valid)
+19:56:02  INFO        [universe] 200/899 (199 valid)
+19:56:16  INFO        [universe] 240/899 (238 valid)
+19:56:29  INFO        [universe] 280/899 (278 valid)
+19:56:38  INFO        [universe] 320/899 (318 valid)
+19:56:51  INFO        [universe] 360/899 (358 valid)
+19:57:04  INFO        [universe] 400/899 (397 valid)
+19:57:14  INFO        [universe] 440/899 (437 valid)
+19:57:27  INFO        [universe] 480/899 (477 valid)
+19:57:40  INFO        [universe] 520/899 (517 valid)
+19:57:50  INFO        [universe] 560/899 (556 valid)
+19:58:03  INFO        [universe] 600/899 (596 valid)
+19:58:16  INFO        [universe] 640/899 (636 valid)
+19:58:26  INFO        [universe] 680/899 (676 valid)
+19:58:39  INFO        [universe] 720/899 (716 valid)
+19:58:52  INFO        [universe] 760/899 (756 valid)
+19:59:02  INFO        [universe] 800/899 (796 valid)
+19:59:15  INFO        [universe] 840/899 (835 valid)
+19:59:28  INFO        [universe] 880/899 (875 valid)
+19:59:32  INFO        [universe] 899/899 (894 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:55 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $484.58|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-16|
+|  Universe                                                          both|
+|  Month                                        Jul: 52wkLow + Pullback50|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $484.58|
+|  Cash                                                           $106.12|
+|  Reserve                                          $24.23  (always kept)|
+|  Available                                     $81.89  (for new trades)|
+|  Seasonal trade                   $96.92  (20% -- scheduled strategies)|
+|  Off-sched trade                      $96.92  (20% -- other strategies)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (4 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  CARR     Pullback50      $87.54     $67.89   $69.09   +1.8%   $+1.52  |
+|  CMS      Pullback50      $96.86     $74.35   $74.41   +0.1%   $+0.08  |
+|  CNP      Pullback50      $97.10     $43.13   $43.27   +0.3%   $+0.32  |
+|  DRI      Pullback50      $96.97     $201.51  $201.73  +0.1%   $+0.11  |
+|                                                                        |
+|  Total invested                                                 $378.46|
+|  Total open P&L                                                  $+2.03|
+|  Buys today: 0  |  entry cap: 1  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (41781.7m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  CMS  P&L +0.1%  $+0.08                                            HOLD|
+|  DRI  P&L +0.1%  $+0.11                                            HOLD|
+|  CNP  P&L +0.3%  $+0.32                                            HOLD|
+|  CARR  P&L +1.8%  $+1.52                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 4|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50                            |
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  35                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  BRK-B    Pullback50      SEAS   $491.67  53.4   -1.34   50MA bounce (+|
+|  CASY     Pullback50      SEAS   $825.43  58.8   -1.47   50MA bounce (+|
+|  DOV      Pullback50      SEAS   $217.41  30.4   -1.29   50MA bounce (+|
+|  DUK      Pullback50      SEAS   $126.06  47.7   -0.82   50MA bounce (+|
+|  EMR      Pullback50      SEAS   $139.11  37.1   -1.03   50MA bounce (-|
+|  XOM      Pullback50      SEAS   $146.04  68.2   -1.00   50MA bounce (-|
+|  GEV      Pullback50      SEAS   $1035.~  44.8   -0.75   50MA bounce (-|
+|  KLAC     GapDown         off    $219.55  39.8   -1.26   gap -3.0% reco|
+|  JCI      Pullback50      SEAS   $141.39  43.9   -1.37   50MA bounce (-|
+|  MAR      Pullback50      SEAS   $371.24  43.5   -1.65   50MA bounce (-|
+|  MAA      Pullback50      SEAS   $134.92  43.5   -1.77   50MA bounce (+|
+|  MDLZ     Pullback50      SEAS   $61.41   50.6   -0.69   50MA bounce (+|
+|  TDY      Pullback50      SEAS   $629.98  51.3   -1.15   50MA bounce (+|
+|  TXT      Pullback50      SEAS   $90.31   53.9   -1.07   50MA bounce (-|
+|  UAL      GapDown         off    $118.66  21.0   0.32    gap -3.6% reco|
+|  WAB      Pullback50      SEAS   $263.53  23.6   -0.76   50MA bounce (-|
+|  WEC      Pullback50      SEAS   $114.19  42.1   -1.33   50MA bounce (+|
+|  XEL      Pullback50      SEAS   $80.03   43.0   -0.46   50MA bounce (+|
+|  WMB      Pullback50      SEAS   $74.81   39.9   -1.14   50MA bounce (+|
+|  AGCO     Pullback50      SEAS   $115.32  39.3   -2.23   50MA bounce (+|
+|  ALV      VolumeSpike     off    $124.86  58.1   2.72    vol z=2.7 5d=+|
+|  CGNX     GapDown         off    $63.76   44.8   -1.35   gap -3.1% reco|
+|  COKE     Pullback50      SEAS   $182.09  52.8   -1.11   50MA bounce (+|
+|  CSL      Pullback50      SEAS   $351.99  30.4   -1.47   50MA bounce (+|
+|  ENTG     GapDown         off    $134.37  30.9   -1.33   gap -3.9% reco|
+|  ITT      Pullback50      SEAS   $194.98  44.9   -1.89   50MA bounce (-|19:59:33  ERROR       BUY FAILED BRK-B: {"code":42210000,"message":"asset \"BRK-B\" not found"}
+19:59:33  ERROR       BUY FAILED CASY: {"code":40010001,"message":"client_order_id must be unique"}
+19:59:33  INFO        BUY  DOV  $81.89  [Pullback50]  id=d5ac9b96-a3e2-46e9-9b24-aab583cfe56a
+19:59:46  INFO        place_all_stops: checking 5 positions...
+19:59:46  INFO        STOP already live CARR @ $68.92
+19:59:46  INFO        STOP already live CMS @ $74.19
+19:59:46  INFO        STOP already live CNP @ $43.07
+19:59:46  INFO        STOP skipped DOV: fractional (0.3763 shares) — software exit will handle it
+19:59:46  INFO        STOP skipped DRI: fractional (0.4807 shares) — software exit will handle it
+19:59:46  INFO        place_eod_stops: updating 5 stops to current price...
+19:59:46  INFO        EOD stop: cancelled old stop CARR
+19:59:47  WARNING     EOD stop failed CARR: {"available":"0.267012313","code":40310000,"existing_qty":"1.267012313","held_for_orders":"1","message":"insufficient qty available for order (requested: 1, available: 0.267012313)","related_orders":["ce6878e1-2f30-409f-99f1-6a219dcbeca6"],"symbol":"CARR"}
+19:59:47  INFO        EOD stop: cancelled old stop CMS
+19:59:47  WARNING     EOD stop failed CMS: {"available":"0.301716253","code":40310000,"existing_qty":"1.301716253","held_for_orders":"1","message":"insufficient qty available for order (requested: 1, available: 0.301716253)","related_orders":["6f74eeaa-22d5-410a-b784-878050ba7066"],"symbol":"CMS"}
+19:59:47  INFO        EOD stop: cancelled old stop CNP
+19:59:47  WARNING     EOD stop failed CNP: {"available":"0.244011816","code":40310000,"existing_qty":"2.244011816","held_for_orders":"2","message":"insufficient qty available for order (requested: 2, available: 0.244011816)","related_orders":["4e1b31b7-ebe3-4970-b482-edcb7b3ce043"],"symbol":"CNP"}
+19:59:47  INFO        EOD stop skip DOV: 0.3763 shares (fractional) — ext_exits will cover
+19:59:47  INFO        EOD stop skip DRI: 0.4807 shares (fractional) — ext_exits will cover
+19:59:47  INFO        Daily log -> logs/daily/2026-07-16.md
+19:59:47  INFO        Dashboard written → logs/dashboard.md
+
+|  KEX      Pullback50      SEAS   $142.89  56.9   -1.11   50MA bounce (+|
+|  OVV      Pullback50      SEAS   $56.52   65.4   -1.04   50MA bounce (-|
+|  PR       Pullback50      SEAS   $19.68   62.3   -1.15   50MA bounce (+|
+|  PEN      Pullback50      SEAS   $319.28  56.8   0.59    50MA bounce (-|
+|  RMBS     GapDown         off    $101.38  36.0   -0.36   gap -3.9% reco|
+|  RRX      Pullback50      SEAS   $211.94  39.9   -1.34   50MA bounce (-|
+|  SLAB     Pullback50      SEAS   $218.36  54.2   -0.60   50MA bounce (+|
+|  STRL     GapDown         off    $641.75  24.7   -0.48   gap -4.3% reco|
+|  VMI      Pullback50      SEAS   $538.34  28.3   -0.95   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Signal scaling: 35 signals / 1 slots → sea=$82 off=$82  (max sea=$97 ~|
+|    ENTER [S] BRK-B  Pullback50                                   $81.89|
+|    ENTER [S] CASY  Pullback50                                    $81.89|
+|    ENTER [S] DOV  Pullback50                                     $81.89|
+|    BUY SUBMITTED [S~  fill pending — batched confirmation after entries|
+|    SKIP [S] DUK  Pullback50                                       cap 5|
+|    SKIP [S] EMR  Pullback50                                       cap 5|
+|    SKIP [S] XOM  Pullback50                                       cap 5|
+|    SKIP [S] GEV  Pullback50                                       cap 5|
+|    SKIP [S] JCI  Pullback50                                       cap 5|
+|    SKIP [S] MAR  Pullback50                                       cap 5|
+|    SKIP [S] MAA  Pullback50                                       cap 5|
+|    SKIP [S] MDLZ  Pullback50                                      cap 5|
+|    SKIP [S] TDY  Pullback50                                       cap 5|
+|    SKIP [S] TXT  Pullback50                                       cap 5|
+|    SKIP [S] WAB  Pullback50                                       cap 5|
+|    SKIP [S] WEC  Pullback50                                       cap 5|
+|    SKIP [S] XEL  Pullback50                                       cap 5|
+|    SKIP [S] WMB  Pullback50                                       cap 5|
+|    SKIP [S] AGCO  Pullback50                                      cap 5|
+|    SKIP [S] COKE  Pullback50                                      cap 5|
+|    SKIP [S] CSL  Pullback50                                       cap 5|
+|    SKIP [S] ITT  Pullback50                                       cap 5|
+|    SKIP [S] KEX  Pullback50                                       cap 5|
+|    SKIP [S] OVV  Pullback50                                       cap 5|
+|    SKIP [S] PR  Pullback50                                        cap 5|
+|    SKIP [S] PEN  Pullback50                                       cap 5|
+|    SKIP [S] RRX  Pullback50                                       cap 5|
+|    SKIP [S] SLAB  Pullback50                                      cap 5|
+|    SKIP [S] VMI  Pullback50                                       cap 5|
+|    SKIP [o] KLAC  GapDown                                         cap 5|
+|    SKIP [o] UAL  GapDown                                          cap 5|
+|    SKIP [o] ALV  VolumeSpike                                      cap 5|
+|    SKIP [o] CGNX  GapDown                                         cap 5|
+|    SKIP [o] ENTG  GapDown                                         cap 5|
+|    SKIP [o] RMBS  GapDown                                         cap 5|
+|    SKIP [o] STRL  GapDown                                         cap 5|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      1|
++------------------------------------------------------------------------+
+|  DOV                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 1 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy                                          52wkLow + Pullback50|
+|  Scanned                                                            894|
+|  Signals                                                             35|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  1 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             5|
+|  Equity                                                         $484.64|
+|  Cash                                                            $24.24|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+Layout: controlled:100:c000_s173_w1_0928_1005_r1
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-16T15:59:48.021961-04:00 ===
+
+[Run context]
+Paper auth OK — equity $125170.99, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S165, S166, S163
+Dropped (no new entries; ex-reflected P&L): S174
+
+[Manage only]
+Past entry window; manage/exit only.
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          manage-only                             |
+|  Equity                        $125,170.99                             |
+|  Signals this run              0                                       |
+|  Orders submitted (session)    32                                      |
+|  Orders filled today (ledger)  55                                      |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             4                                       |
+|  Broker option positions       2                                       |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S174)                                |
++------------------------------------------------------------------------+
+|  Reflected trades=292  buckets=46  win=36%                             |
+|  Returns   avg=+14.5%  med=-20.0%  p10=-77.0%  p90=+92.9%              |
+|  Realized  $+4,345.77                                                  |
+|  Raw incl dropped  trades=395  real=$+3,222.58                         |
+|  Today     trades=47  avg=-33.4%  med=-56.0%  real=$-1,132.00          |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b28  c028_s165_w1_0928_  8 100% +84.7 +84.5 +102.0 $   +358           |
+|  b92  c092_s166_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b93  c093_s166_w2_1005_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b95  c095_s166_w4_1120_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b96  c096_s163_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b98  c098_s163_w3_1045_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b99  c099_s163_w4_1120_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b89  c089_s165_w2_1005_  4  75% +220.0 +69.9 +790.0 $   +127          |
+|  ... 38 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b21  c021_s173_w2_1005_ 14   0% -62.5 -73.0 -98.5 $   -585       |
++========================================================================+
++========================================================================+
+|  PENDING EXITS (2)                                                     |
++------------------------------------------------------------------------+
+|  b80  S173 UAL260717C00122000 x1 take_profit (+53.8%)                  |
+|  b48  S165 AVGO260717C00400000 x1 stop_loss (-61.4%)                   |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (2)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  UAL260717C00122000            3    -46.2%   $    -90.00               |
+|  AVGO260717C00400000           1    -75.9%   $    -47.17               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-16.log
+elapsed=2.5s reconcile=2.23s cancel=0.04s manage=0.04s
+STATUS: options_morning_bot run complete (PAPER) elapsed=2.5s. run=#4193 https://github.com/28twagg-ops/TradingBot/actions/runs/29529887605
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-16_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-16_buckets.csv
+Summary: 26 buckets closed trades, $-1,132.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-16_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-16_strategy_selection.csv
+Summary: keep=0 watch=2 drop=3
+Orphan rate: 5.6% (22/395)
+```
+
+---
