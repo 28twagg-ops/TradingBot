@@ -2536,3 +2536,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-16 13:49:43,scan_morning,bull,481.89,24.06,54,0,0,5,AME|CARR|CHH|EVR|HST,both
 2026-07-16 13:55:01,scan_morning,bull,484.03,120.23,51,0,1,4,AME|CARR|CHH|HST,both
 2026-07-16 14:01:10,exits,bull,483.44,117.0,0,0,0,4,AME|CARR|CASY|MO,both
+2026-07-16 14:07:48,exits,bull,484.11,117.0,0,0,0,4,AME|CARR|CASY|MO,both
