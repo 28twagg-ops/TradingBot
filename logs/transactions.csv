@@ -978,3 +978,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-14 19:51:33,2026-07-14,SELL,KMI,Pullback50,32.47,89.48,-0.11,-0.1,0,midline (-0.1%),bull,478.36
 2026-07-14 19:52:05,2026-07-14,SELL,NEE,Pullback50,89.48,89.54,-0.1,-0.09,0,midline (-0.1%),bull,478.37
 2026-07-14 19:57:29,2026-07-14,SELL,PLD,Pullback50,142.84,95.64,0.01,0.01,0,midline (+0.0%),bull,478.24
+2026-07-16 13:51:29,2026-07-16,SELL,EVR,Pullback50,349.98,96.47,0.87,0.83,1,midline (+0.9%),bull,482.75
