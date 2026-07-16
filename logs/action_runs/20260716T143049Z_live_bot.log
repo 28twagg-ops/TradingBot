@@ -1,0 +1,55 @@
+14:30:50  INFO      Mode: exits
+14:30:51  INFO        Daily log -> logs/daily/2026-07-16.md
+14:30:51  INFO        Daily log reconciled -> logs/daily/2026-07-16.md (3 ledger rows)
+14:30:51  INFO        place_all_stops: checking 4 positions...
+14:30:51  INFO        STOP skipped AME: fractional (0.3685 shares) — software exit will handle it
+14:30:51  INFO        STOP already live CARR @ $67.55
+14:30:51  INFO        STOP skipped CASY: fractional (0.1169 shares) — software exit will handle it
+14:30:51  INFO        STOP already live MO @ $71.9
+14:30:52  INFO        [positions] 4/4 (4 valid)
+14:30:52  INFO        SELL MARKET [urgent] CASY closed
+14:30:54  INFO        TX logged: SELL CASY  P&L -0.74%
+14:30:55  INFO        Daily log -> logs/daily/2026-07-16.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:30 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $483.25|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CASY  P&L -0.7%  $-0.71                        EXIT: stop_loss (-0.7%)|
+|  MO  P&L -0.4%  $-0.42                                             HOLD|
+|  CARR  P&L +1.1%  $+0.92                                           HOLD|
+|  AME  P&L +1.1%  $+0.93                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           4|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  CASY                                        -0.74%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
