@@ -2609,3 +2609,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-16 20:05:34,ext_exits,bull,484.75,24.24,0,0,0,5,CARR|CMS|CNP|DOV|DRI,both
 2026-07-16 20:10:34,ext_exits,bull,484.75,24.24,0,0,0,5,CARR|CMS|CNP|DOV|DRI,both
 2026-07-16 20:16:27,ext_exits,bull,484.75,24.24,0,0,0,5,CARR|CMS|CNP|DOV|DRI,both
+2026-07-16 20:20:40,ext_exits,bull,484.75,24.24,0,0,0,5,CARR|CMS|CNP|DOV|DRI,both
