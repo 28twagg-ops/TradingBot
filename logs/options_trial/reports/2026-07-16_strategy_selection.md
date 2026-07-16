@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-16
 
-_Generated 2026-07-16T07:51:34.999185_
+_Generated 2026-07-16T09:01:05.866722_
 
 ## Summary
 
@@ -8,6 +8,13 @@ _Generated 2026-07-16T07:51:34.999185_
 - Keep: **0**
 - Watch: **2**
 - Drop: **3**
+
+## Attribution health
+
+- Total exits: **273**
+- Orphan exits (b0/orphan_reconcile): **22**
+- Orphan rate: **8.1%** (warn if >10%)
+- Orphan rate OK (attribution looks healthy).
 
 ## Strategy scoreboard
 
@@ -21,7 +28,9 @@ _Generated 2026-07-16T07:51:34.999185_
 
 ## Notes
 
-- Selection emphasizes robustness first: median > 0, acceptable left tail (p10), and symbol diversification.
+- Selection emphasizes robustness first: median > 0, acceptable left tail (**p10**), and symbol diversification.
+- **p10 (10th percentile return %)** is the primary options risk metric — fat left tails hide behind a flat median.
 - `keep` requires >=30 exits with positive median and no extreme concentration/tail risk.
 - `watch` means potentially viable but still sample-limited or risk-concentrated.
 - `drop` means current evidence is not supportive (e.g., non-positive median with enough exits).
+- Orphan rate = orphan_exits / total_exits; alert if >10% (attribution failure, not edge).
