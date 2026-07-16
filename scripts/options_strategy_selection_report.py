@@ -20,8 +20,18 @@ from datetime import date, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from options_lab import LEDGER_PATH, TRIAL_ROOT, DROPPED_STRATEGIES, ensure_trial_layout
+from options_lab import (
+    DROPPED_STRATEGIES,
+    LEDGER_PATH,
+    ORPHAN_BUCKET_ID,
+    ORPHAN_PROFILE,
+    ORPHAN_STRATEGY,
+    TRIAL_ROOT,
+    ensure_trial_layout,
+)
 from options_signals import ALL_KNOWN_STRATEGIES, PAPER_STRATEGIES
+
+ORPHAN_RATE_WARN = 0.10  # >10% orphan exits => attribution likely broken
 
 
 @dataclass
@@ -178,6 +188,21 @@ def build_report(as_of_day: str) -> tuple[list[StratStats], dict]:
         )
 
     out.sort(key=lambda s: ({"keep": 0, "watch": 1, "drop": 2}.get(s.recommendation, 3), -s.med_return_pct, -s.exits))
+
+    # Attribution health: orphan exits are not strategy edge — high rate means broken tagging.
+    total_exit_events = 0
+    orphan_exit_events = 0
+    for r in filt:
+        if r.get("event") != "exit":
+            continue
+        total_exit_events += 1
+        sid = str(r.get("strategy_id") or "")
+        profile = str(r.get("profile") or "")
+        # b0 is also a real controlled-layout bucket — do NOT key off bucket_id alone.
+        if sid == ORPHAN_STRATEGY or profile == ORPHAN_PROFILE:
+            orphan_exit_events += 1
+    orphan_rate = (orphan_exit_events / total_exit_events) if total_exit_events else 0.0
+
     summary = {
         "as_of": as_of_day,
         "generated_at": datetime.now().isoformat(),
@@ -185,6 +210,10 @@ def build_report(as_of_day: str) -> tuple[list[StratStats], dict]:
         "keep": sum(1 for x in out if x.recommendation == "keep"),
         "watch": sum(1 for x in out if x.recommendation == "watch"),
         "drop": sum(1 for x in out if x.recommendation == "drop"),
+        "total_exits": total_exit_events,
+        "orphan_exits": orphan_exit_events,
+        "orphan_rate": round(orphan_rate, 4),
+        "orphan_alert": orphan_rate > ORPHAN_RATE_WARN and total_exit_events > 0,
     }
     return out, summary
 
@@ -207,11 +236,29 @@ def write_report(as_of_day: str, rows: list[StratStats], summary: dict) -> tuple
         f"- Watch: **{summary.get('watch', 0)}**",
         f"- Drop: **{summary.get('drop', 0)}**",
         "",
-        "## Strategy scoreboard",
+        "## Attribution health",
         "",
-        "| strategy | recommendation | exits | win% | med ret% | avg ret% | p10% | p90% | realized $ | symbols | top symbol share | rationale |",
-        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|",
+        f"- Total exits: **{summary.get('total_exits', 0)}**",
+        f"- Orphan exits (b{ORPHAN_BUCKET_ID}/{ORPHAN_PROFILE}): **{summary.get('orphan_exits', 0)}**",
+        f"- Orphan rate: **{100.0 * float(summary.get('orphan_rate', 0)):.1f}%** "
+        f"(warn if >{100 * ORPHAN_RATE_WARN:.0f}%)",
     ]
+    if summary.get("orphan_alert"):
+        lines.append(
+            f"- **ALERT:** orphan_rate > {100 * ORPHAN_RATE_WARN:.0f}% — "
+            "check client_order_id tagging / fill attribution before trusting strategy P&L."
+        )
+    else:
+        lines.append("- Orphan rate OK (attribution looks healthy).")
+    lines.extend(
+        [
+            "",
+            "## Strategy scoreboard",
+            "",
+            "| strategy | recommendation | exits | win% | med ret% | avg ret% | p10% | p90% | realized $ | symbols | top symbol share | rationale |",
+            "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|",
+        ]
+    )
     for r in rows:
         win_pct = (100.0 * r.wins / r.exits) if r.exits else 0.0
         lines.append(
@@ -225,10 +272,12 @@ def write_report(as_of_day: str, rows: list[StratStats], summary: dict) -> tuple
             "",
             "## Notes",
             "",
-            "- Selection emphasizes robustness first: median > 0, acceptable left tail (p10), and symbol diversification.",
+            "- Selection emphasizes robustness first: median > 0, acceptable left tail (**p10**), and symbol diversification.",
+            "- **p10 (10th percentile return %)** is the primary options risk metric — fat left tails hide behind a flat median.",
             "- `keep` requires >=30 exits with positive median and no extreme concentration/tail risk.",
             "- `watch` means potentially viable but still sample-limited or risk-concentrated.",
             "- `drop` means current evidence is not supportive (e.g., non-positive median with enough exits).",
+            f"- Orphan rate = orphan_exits / total_exits; alert if >{100 * ORPHAN_RATE_WARN:.0f}% (attribution failure, not edge).",
             "",
         ]
     )
@@ -276,6 +325,12 @@ def main() -> int:
     print(f"Wrote {md}")
     print(f"Wrote {csvp}")
     print(f"Summary: keep={summary['keep']} watch={summary['watch']} drop={summary['drop']}")
+    orphan_pct = 100.0 * float(summary.get("orphan_rate", 0))
+    alert = " ALERT" if summary.get("orphan_alert") else ""
+    print(
+        f"Orphan rate: {orphan_pct:.1f}% "
+        f"({summary.get('orphan_exits', 0)}/{summary.get('total_exits', 0)}){alert}"
+    )
     return 0
 
 
