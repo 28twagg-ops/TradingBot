@@ -1,0 +1,33 @@
+13:55:57  INFO      Mode: morning_scan
+13:55:58  INFO        [positions] 4/4 (4 valid)
+13:55:59  INFO        SELL order cancelled HST  type=OrderType.STOP  id=eb308040-6a38-455b-9703-54d41418431b
+13:55:59  INFO        SELL LIMIT HST  qty=3.834465878  limit=$24.03  id=30a587e6-977e-4eef-977f-6df778c1b628
+13:56:29  INFO        SELL LIMIT filled HST (confirmed by position check)
+13:56:29  INFO        TX logged: SELL HST  P&L 2.85%
+13:56:30  INFO        SELL LIMIT CHH  qty=0.882043714  limit=$111.42  id=33f50d4f-4512-4b73-9cee-e0887435973d
+13:57:00  INFO        SELL LIMIT not filled for CHH, falling back to market
+13:57:01  INFO        SELL MARKET CHH closed
+13:57:03  INFO        TX logged: SELL CHH  P&L 2.96%
+13:57:03  INFO        Universe cache hit: 903 tickers (tickers_2026-07-16.json)
+13:57:04  INFO        [universe] 40/901 (40 valid)
+13:57:05  INFO        [universe] 80/901 (80 valid)
+13:57:06  INFO        [universe] 120/901 (120 valid)
+13:57:08  INFO        [universe] 160/901 (160 valid)
+13:57:09  INFO        [universe] 200/901 (199 valid)
+13:57:17  INFO        [universe] 240/901 (238 valid)
+13:57:30  INFO        [universe] 280/901 (278 valid)
+13:57:40  INFO        [universe] 320/901 (318 valid)
+13:57:54  INFO        [universe] 360/901 (358 valid)
+13:58:04  INFO        [universe] 400/901 (397 valid)
+13:58:17  INFO        [universe] 440/901 (437 valid)
+13:58:28  INFO        [universe] 480/901 (477 valid)
+13:58:41  INFO        [universe] 520/901 (517 valid)
+13:58:52  INFO        [universe] 560/901 (556 valid)
+13:59:05  INFO        [universe] 600/901 (596 valid)
+13:59:16  INFO        [universe] 640/901 (636 valid)
+13:59:29  INFO        [universe] 680/901 (676 valid)
+13:59:39  INFO        [universe] 720/901 (716 valid)
+13:59:53  INFO        [universe] 760/901 (756 valid)
+14:00:06  INFO        [universe] 800/901 (796 valid)
+14:00:16  INFO        [universe] 840/901 (835 valid)
+14:00:30  INFO        [universe] 880/901 (875 valid)
