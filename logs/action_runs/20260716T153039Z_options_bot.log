@@ -1,0 +1,104 @@
+Layout: controlled:100:c000_s173_w1_0928_1005_r1
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-16T11:30:42.711105-04:00 ===
+
+[Run context]
+Paper auth OK — equity $127603.61, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S165, S166, S163
+Dropped (no new entries; ex-reflected P&L): S174
+2026-07-16 11:30:50,178 INFO   EXIT [b68|c068_s165_w1_0928_1005_r4|S165] stop_loss (-57.9%) SELL 1 AVGO260717C00405000 @<= 0.19
+2026-07-16 11:30:52,158 INFO   EXIT [b82|c082_s173_w3_1045_1120_r5|S173] stop_loss (-51.1%) SELL 1 LULU260717C00123000 @<= 0.24
+
+[Scan + entries]
+Scanning 903 symbols for [S173, S165, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 90 signal(s); top: ['S173:ADI', 'S173:AMAT', 'S173:BLDR', 'S173:EME', 'S173:EMR', 'S173:GNRC', 'S173:HUBB', 'S173:JCI']
+Paper lab: $127882 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+  All bucket slots blocked or closed for today's signals — skip entry loop.
+Placed 0 new entry order(s).
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          entry+manage                            |
+|  Equity                        $127,603.61                             |
+|  Signals this run              90                                      |
+|  Orders submitted (session)    32                                      |
+|  Orders filled today (ledger)  35                                      |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             26                                      |
+|  Broker option positions       9                                       |
+|  Pending orders                6                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S174)                                |
++------------------------------------------------------------------------+
+|  Reflected trades=232  buckets=44  win=41%                             |
+|  Returns   avg=+24.5%  med=-13.1%  p10=-76.7%  p90=+99.7%              |
+|  Realized  $+5,437.77                                                  |
+|  Raw incl dropped  trades=335  real=$+4,314.58                         |
+|  Today     trades=22  avg=-21.2%  med=-54.3%  real=$-448.00            |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b62  c062_s173_w3_1045_  8  50% +511.3 +520.8 +1100.0 $    +97        |
+|  b29  c029_s165_w2_1005_  2  50% +100.0 +100.0 +250.0 $    +20         |
+|  b28  c028_s165_w1_0928_  5 100% +85.7 +94.1 +102.0 $   +221           |
+|  b92  c092_s166_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b93  c093_s166_w2_1005_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b95  c095_s166_w4_1120_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b96  c096_s163_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b98  c098_s163_w3_1045_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  ... 36 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b21  c021_s173_w2_1005_ 11   0% -61.2 -74.0 -98.5 $   -446       |
++========================================================================+
++========================================================================+
+|  PENDING ORDERS (6)                                                    |
++------------------------------------------------------------------------+
+|  Top groups                    S165:AMD(5), S173:LULU(1)               |
++------------------------------------------------------------------------+
+|  b11  S165 AMD      limit=0.73                                         |
+|  b31  S165 AMD      limit=0.73                                         |
+|  b51  S165 AMD      limit=0.73                                         |
+|  b71  S165 AMD      limit=0.73                                         |
+|  b91  S165 AMD      limit=0.73                                         |
+|  ... 1 more pending order(s)                                           |
++========================================================================+
++========================================================================+
+|  PENDING EXITS (3)                                                     |
++------------------------------------------------------------------------+
+|  b3   S173 ADBE260717C00240000 x1 stop_loss (-61.4%)                   |
+|  b80  S173 UAL260717C00122000 x1 take_profit (+53.8%)                  |
+|  b82  S173 LULU260717C00123000 x1 stop_loss (-51.1%)                   |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (9)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  ADBE260717C00240000           7    -81.8%   $   -252.00               |
+|  AVGO260717C00400000           6    -29.2%   $   -109.00               |
+|  LULU260717C00122000           5    -21.1%   $    -63.00               |
+|  UAL260717C00122000            3    +24.6%   $    +48.00               |
+|  AVGO260717C00405000           1    -57.9%   $    -30.22               |
+|  AMD260717C00557500            1    -35.8%   $    -24.00               |
+|  LULU260717C00123000           1    -51.1%   $    -24.00               |
+|  AMD260717C00555000            1    -22.1%   $    -15.00               |
+|  ... 1 more position(s)                                                |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-16.log
+elapsed=66.1s reconcile=2.6s cancel=0.06s manage=8.07s scan=52.32s entries=0.09s
+STATUS: options_morning_bot run complete (PAPER) elapsed=66.1s. run=#4137 https://github.com/28twagg-ops/TradingBot/actions/runs/29511411937
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-16_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-16_buckets.csv
+Summary: 16 buckets closed trades, $-448.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-16_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-16_strategy_selection.csv
+Summary: keep=0 watch=2 drop=3
+Orphan rate: 6.6% (22/335)
