@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-16
 
-_Generated 2026-07-16T13:50:51.485483_
+_Generated 2026-07-16T13:55:48.636482_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-07-16T13:50:51.485483_
 
 ## Attribution health
 
-- Total exits: **393**
+- Total exits: **394**
 - Orphan exits (b0/orphan_reconcile): **22**
 - Orphan rate: **5.6%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -24,7 +24,7 @@ _Generated 2026-07-16T13:50:51.485483_
 | S166 (GapDown strong call) | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | $+0.00 | 0 | 0.0% | insufficient sample (<8 exits) |
 | S165 (GapDown long call 3 DTE) | drop | 104 | 37.5 | -7.69 | +7.70 | -56.25 | +81.27 | $-361.78 | 7 | 33.7% | non-positive median return |
 | S174 (RubberBand long call EOD) | drop | 103 | 41.7 | -23.29 | -18.01 | -89.80 | +37.29 | $-1,123.19 | 6 | 48.5% | manually paused — excluded from new entries & reflected P&L |
-| S173 (MomReversal long call) | drop | 164 | 32.9 | -31.51 | +16.94 | -77.05 | +99.00 | $-1,677.36 | 10 | 20.7% | non-positive median return |
+| S173 (MomReversal long call) | drop | 165 | 33.3 | -31.51 | +17.31 | -77.05 | +98.67 | $-1,640.36 | 10 | 20.6% | non-positive median return |
 
 ## Notes
 
