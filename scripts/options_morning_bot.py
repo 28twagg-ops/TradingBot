@@ -327,6 +327,20 @@ def _console_bucket_leaderboard(state: LabState, *, top_n: int = 8) -> None:
 #  Clients
 # --------------------------------------------------------------------------- #
 
+def get_paper_account_safe(client, retries=3, wait=10):
+    """Retry wrapper for paper Alpaca get_account (mirrors rubber band helper)."""
+    for i in range(retries):
+        try:
+            return client.get_account()
+        except Exception as e:
+            if i < retries - 1:
+                log.warning("paper get_account failed attempt %s/%s: %s", i + 1, retries, e)
+                time.sleep(wait)
+            else:
+                log.error("paper get_account failed after %s attempts: %s", retries, e)
+                raise
+
+
 def get_clients():
     trade = TradingClient(API_KEY, API_SECRET, paper=PAPER_TRADING)
     opt = OptionHistoricalDataClient(API_KEY, API_SECRET)
@@ -338,7 +352,7 @@ def get_clients():
 def verify_paper_auth(trade) -> bool:
     """Fail fast with a clear log if paper keys are wrong or missing."""
     try:
-        acct = trade.get_account()
+        acct = get_paper_account_safe(trade)
         rl(f"Paper auth OK — equity ${float(acct.equity):.2f}, "
            f"account {getattr(acct, 'account_number', '?')}")
         return True
@@ -825,7 +839,7 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
 def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
                   now: datetime) -> int:
     try:
-        acct = trade.get_account()
+        acct = get_paper_account_safe(trade)
         equity = float(acct.equity)
     except Exception as exc:
         rl(f"ERROR reading account: {exc}")
@@ -967,7 +981,7 @@ def _position_snapshots(trade) -> list[dict]:
 
 def _snapshot_equity(trade) -> float | None:
     try:
-        return float(trade.get_account().equity)
+        return float(get_paper_account_safe(trade).equity)
     except Exception:
         return None
 
