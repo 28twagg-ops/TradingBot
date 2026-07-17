@@ -121,12 +121,14 @@ jobs:
             # Always run on weekdays so we always get an options status snapshot.
             # options_morning_bot.py itself enforces entry/manage windows and emits
             # after-hours summaries with open position visibility.
+            python scripts/options_reconcile.py || echo "reconcile failed (non-fatal)"
             python scripts/init_options_trial.py
             python scripts/options_morning_bot.py
             python scripts/options_daily_bucket_report.py
             python scripts/options_strategy_selection_report.py
             python scripts/options_signal_frequency.py || echo "signal_frequency report failed (non-fatal)"
             python scripts/options_ledger_health.py || echo "ledger_health failed (non-fatal)"
+            python scripts/generate_dashboard.py || echo "dashboard failed (non-fatal)"
           } 2>&1 | tee "$OPTIONS_LOG"
           rc=${PIPESTATUS[0]}
           t1=$(date +%s)

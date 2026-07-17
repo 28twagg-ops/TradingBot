@@ -599,6 +599,20 @@ def _fetch_oi_map(ref, api_sym: str, strike_lo, strike_hi, exp_lo, exp_hi):
                                exp_gte=exp_lo, exp_lte=exp_hi)
 
 
+def score_call_for_mode(strike: float, price: float, dte: int, dte_target: int,
+                        strike_mode: str = "atm") -> tuple[float, int] | None:
+    """Rank key for call selection. Lower is better. None = ineligible.
+
+    atm:  closest to spot, then nearest DTE to target
+    otm1: lowest strike strictly above spot, then nearest DTE to target
+    """
+    if strike_mode == "otm1":
+        if strike <= price:
+            return None
+        return (strike - price, abs(dte - dte_target))
+    return (abs(strike - price), abs(dte - dte_target))
+
+
 def _pick_call_from_chain(opt, ref, symbol: str, price: float,
                           dte_min: int, dte_max: int, dte_target: int,
                           arm: EffectiveArm, *, chain_cache: dict | None = None,
@@ -704,12 +718,9 @@ def _pick_call_from_chain(opt, ref, symbol: str, price: float,
             dte = (date.fromisoformat(expiry) - TODAY).days
         except Exception:
             continue
-        if strike_mode == "otm1":
-            # Prefer lowest strike above spot, then nearest DTE to target
-            score = (strike - price, abs(dte - dte_target))
-        else:
-            # ATM: closest to spot, then nearest DTE to target
-            score = (abs(strike - price), abs(dte - dte_target))
+        score = score_call_for_mode(strike, price, dte, dte_target, strike_mode)
+        if score is None:
+            continue
         cand = {"symbol": csym, "underlying": symbol, "strike": strike,
                 "expiry": expiry, "dte": dte, "bid": bid, "ask": ask, "mid": mid,
                 "spread_frac": spread_frac, "cost": cost, "oi": oi, "score": score}
