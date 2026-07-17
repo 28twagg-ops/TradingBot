@@ -1933,3 +1933,186 @@ Orphan rate: 5.5% (22/399)
 ```
 
 ---
+
+## Run 20260717T134039Z
+
+- UTC timestamp: `20260717T134039Z`
+- GitHub run: [#4258](https://github.com/28twagg-ops/TradingBot/actions/runs/29584840531)
+- Run id: `29584840531`
+- Live bot: exit=`0`, duration=`215s`
+- Options bot: exit=`0`, duration=`31s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-17T09:44:15.358451-04:00","date":"2026-07-17","mode":"entry+manage","header":"entry+manage (2 new)","elapsed_s":29.1,"phases_s":{"reconcile":2.37,"cancel":0.12,"manage":1.55,"scan":20.58,"entries":1.39,"reconcile2":2.61},"signals":188,"placed":2,"equity":118502.43,"open_positions":3,"pending_orders":0,"open_lots":12,"submitted_today":10,"filled_today":10,"unattributed_contracts":0,"top_signals":["S173:AKAM","S173:ALB","S173:AMZN","S173:AMP","S173:AME","S173:ARES","S173:BLK","S173:BX"],"github_run":"4258","github_run_id":"29584840531","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:40:40  INFO      Mode: morning_prep
+13:40:41  INFO        [prep_positions] 5/5 (5 valid)
+13:40:41  INFO        Universe cache hit: 903 tickers (tickers_2026-07-17.json)
+13:40:42  INFO        [prep_universe] 40/898 (40 valid)
+13:40:44  INFO        [prep_universe] 80/898 (80 valid)
+13:40:45  INFO        [prep_universe] 120/898 (120 valid)
+13:40:47  INFO        [prep_universe] 160/898 (160 valid)
+13:40:48  INFO        [prep_universe] 200/898 (199 valid)
+13:40:56  INFO        [prep_universe] 240/898 (238 valid)
+13:41:09  INFO        [prep_universe] 280/898 (278 valid)
+13:41:20  INFO        [prep_universe] 320/898 (318 valid)
+13:41:33  INFO        [prep_universe] 360/898 (358 valid)
+13:41:43  INFO        [prep_universe] 400/898 (397 valid)
+13:41:57  INFO        [prep_universe] 440/898 (437 valid)
+13:42:07  INFO        [prep_universe] 480/898 (477 valid)
+13:42:20  INFO        [prep_universe] 520/898 (517 valid)
+13:42:31  INFO        [prep_universe] 560/898 (556 valid)
+13:42:44  INFO        [prep_universe] 600/898 (596 valid)
+13:42:57  INFO        [prep_universe] 640/898 (636 valid)
+13:43:08  INFO        [prep_universe] 680/898 (676 valid)
+13:43:21  INFO        [prep_universe] 720/898 (716 valid)
+13:43:32  INFO        [prep_universe] 760/898 (756 valid)
+13:43:45  INFO        [prep_universe] 800/898 (796 valid)
+13:43:55  INFO        [prep_universe] 840/898 (835 valid)
+13:44:09  INFO        [prep_universe] 880/898 (875 valid)
+13:44:12  INFO        [prep_universe] 898/898 (893 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         13:40 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $487.02|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       5|
+|  Invested                                                       $462.78|
+|  Open P&L                                                        $+4.46|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  CARR     Pullback50      $86.70     $67.89   $68.43   +0.8%   $+0.68  |
+|  CMS      Pullback50      $98.55     $74.35   $75.71   +1.8%   $+1.77  |
+|  CNP      Pullback50      $99.16     $43.13   $44.19   +2.5%   $+2.39  |
+|  DOV      Pullback50      $81.13     $217.58  $215.58  -0.9%   $-0.75  |
+|  DRI      Pullback50      $97.23     $201.51  $202.28  +0.4%   $+0.37  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                0|
+|                                                                        |
+|  No open sell orders.                                                  |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      2|
+|  Signal candidates                                                   38|
+|  Universe scanned                                                   898|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+Layout: controlled:100:c000_s173_w1_0928_1005_r1
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-17T09:44:15.358451-04:00 ===
+
+[Run context]
+Paper auth OK — equity $118502.43, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S165, S166, S163
+Dropped (no new entries; ex-reflected P&L): S174
+
+[Scan + entries]
+Scanning 903 symbols for [S173, S165, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 188 signal(s); top: ['S173:AKAM', 'S173:ALB', 'S173:AMZN', 'S173:AMP', 'S173:AME', 'S173:ARES', 'S173:BLK', 'S173:BX']
+Paper lab: $118771 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+  Skipped: 4 no tradeable call, 178 pending order
+Placed 2 new entry order(s).
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          entry+manage                            |
+|  Equity                        $118,502.43                             |
+|  Signals this run              188                                     |
+|  Orders submitted (session)    10                                      |
+|  Orders filled today (ledger)  10                                      |
+|  Entries placed this run       2                                       |
+|  Open virtual lots             12                                      |
+|  Broker option positions       3                                       |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S174)                                |
++------------------------------------------------------------------------+
+|  Reflected trades=326  buckets=46  win=36%                             |
+|  Returns   avg=+10.4%  med=-23.0%  p10=-77.5%  p90=+89.2%              |
+|  Realized  $+3,748.77                                                  |
+|  Raw incl dropped  trades=431  real=$+2,570.58                         |
+|  Today     trades=2  avg=-93.5%  med=-93.5%  real=$-129.00             |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b28  c028_s165_w1_0928_ 10  90% +68.7 +80.9 +102.0 $   +363           |
+|  b92  c092_s166_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b93  c093_s166_w2_1005_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b95  c095_s166_w4_1120_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b96  c096_s163_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b98  c098_s163_w3_1045_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b99  c099_s163_w4_1120_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b89  c089_s165_w2_1005_  4  75% +220.0 +69.9 +790.0 $   +127          |
+|  ... 38 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b21  c021_s173_w2_1005_ 15   0% -63.6 -74.0 -98.5 $   -639       |
++========================================================================+
++========================================================================+
+|  PENDING EXITS (1)                                                     |
++------------------------------------------------------------------------+
+|  b40  S173 UAL260717C00122000 x1 stop_loss (-100.0%)                   |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (3)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  GOOGL260720C00360000          5    -49.1%   $   -135.00               |
+|  UAL260717C00122000            2   -100.0%   $   -130.00               |
+|  AMZN260717C00250000           5    -10.9%   $    -27.00               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-17.log
+elapsed=29.1s reconcile=2.37s cancel=0.12s manage=1.55s scan=20.58s entries=1.39s
+STATUS: options_morning_bot run complete (PAPER) elapsed=29.1s. run=#4258 https://github.com/28twagg-ops/TradingBot/actions/runs/29584840531
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-17_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-17_buckets.csv
+Summary: 2 buckets closed trades, $-129.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-17_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-17_strategy_selection.csv
+Summary: keep=0 watch=2 drop=3
+Orphan rate: 5.1% (22/431)
+```
+
+---
