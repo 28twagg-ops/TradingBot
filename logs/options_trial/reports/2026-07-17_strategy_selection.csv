@@ -1,6 +1,6 @@
 strategy_id,strategy_name,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p90_return_pct,realized_usd,active_days,unique_symbols,top_symbol_share_pct
 S163,A1 GapDown ATM call EOD,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0.0
 S166,GapDown strong call,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0.0
-S174,RubberBand long call EOD,drop,manually paused — excluded from new entries & reflected P&L,1062,113,43,70,-21.39,-23.29,-89.83,37.13,-1444.19,3,6,49.6
-S165,GapDown long call 3 DTE,drop,non-positive median return,1258,187,63,124,1.05,-24.24,-60.0,85.49,-650.78,7,9,28.3
-S173,MomReversal long call,drop,non-positive median return,1485,277,93,184,11.39,-33.93,-79.43,98.0,-1968.36,7,11,32.5
+S174,RubberBand long call EOD,drop,manually paused — excluded from new entries & reflected P&L,1062,114,43,71,-22.0,-24.14,-89.83,37.06,-1498.19,3,6,50.0
+S165,GapDown long call 3 DTE,drop,non-positive median return,1263,191,63,128,-0.2,-30.0,-60.0,84.31,-788.78,7,9,27.7
+S173,MomReversal long call,drop,non-positive median return,1491,277,93,184,11.39,-33.93,-79.43,98.0,-1968.36,7,11,32.5
