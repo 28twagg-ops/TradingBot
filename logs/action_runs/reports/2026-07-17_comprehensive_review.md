@@ -5032,3 +5032,89 @@ Orphan rate: 4.6% (22/477)
 ```
 
 ---
+
+## Run 20260717T150005Z
+
+- UTC timestamp: `20260717T150005Z`
+- GitHub run: [#4274](https://github.com/28twagg-ops/TradingBot/actions/runs/29590245348)
+- Run id: `29590245348`
+- Live bot: exit=`0`, duration=`3s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-17T10:55:40.962763-04:00","date":"2026-07-17","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":48.5,"phases_s":{"reconcile":2.24,"cancel":0.15,"manage":6.27,"scan":38.93,"entries":0.18},"signals":205,"placed":0,"equity":123070.97,"open_positions":5,"pending_orders":0,"open_lots":21,"submitted_today":30,"filled_today":30,"unattributed_contracts":0,"top_signals":["S173:AMD","S173:AKAM","S173:ALB","S173:GOOGL","S173:GOOG","S173:AMZN","S173:AMP","S173:AME"],"github_run":"4273","github_run_id":"29589954387","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+15:00:06  INFO      Mode: exits
+15:00:07  INFO        Daily log -> logs/daily/2026-07-17.md
+15:00:07  INFO        Daily log reconciled -> logs/daily/2026-07-17.md (3 ledger rows)
+15:00:07  INFO        place_all_stops: checking 3 positions...
+15:00:07  INFO        STOP already live CARR @ $67.55
+15:00:07  INFO        STOP already live CMS @ $73.98
+15:00:07  INFO        STOP skipped DOV: fractional (0.3763 shares) — software exit will handle it
+15:00:07  INFO        [positions] 3/3 (3 valid)
+15:00:07  INFO        Daily log -> logs/daily/2026-07-17.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:00 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $486.89|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  DOV  P&L +0.0%  $+0.01                                            HOLD|
+|  CMS  P&L +1.0%  $+0.95                                            HOLD|
+|  CARR  P&L +2.3%  $+2.00                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+Layout: controlled:100:c000_s173_w1_0928_1005_r1
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-17T11:00:08.694325-04:00 ===
+
+[Run context]
+Paper auth OK — equity $122485.73, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S165, S166, S163
+Dropped (no new entries; ex-reflected P&L): S174
+```
+
+---
