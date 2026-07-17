@@ -1,0 +1,62 @@
+20:00:49  INFO      Mode: ext_exits
+20:00:49  INFO        Daily log -> logs/daily/2026-07-17.md
+20:00:49  INFO        Daily log reconciled -> logs/daily/2026-07-17.md (5 ledger rows)
+20:00:49  INFO        SELL LIMIT [EXT HRS] AMD  qty=0.186148951  limit=$495.25  id=c1c8409a-c35b-4481-8579-20c611efe58e
+20:00:54  INFO        SELL LIMIT[EXT] pending for AMD — 9:35am will follow up
+20:00:54  INFO        SELL LIMIT [EXT HRS] ETN  qty=0.231689236  limit=$399.39  id=831aa178-0a17-438f-b5f2-8ba34ee1eb54
+20:00:59  INFO        SELL LIMIT[EXT] pending for ETN — 9:35am will follow up
+20:00:59  INFO        Daily log -> logs/daily/2026-07-17.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                         EXT_EXITS|
+|  Time                                                         20:00 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $482.99|
++========================================================================+
+
++========================================================================+
+|                       EXIT CHECK [EXTENDED HRS]                        |
++========================================================================+
+|  Exit log~  stop-0.5% / 3d max  (midline skipped — close already final)|
++------------------------------------------------------------------------+
+|  AMD  P&L -0.9%  $-0.81          EXIT [EXTENDED HRS]: stop_loss (-0.9%)|
+|  AMD                              SELL pending (after-hours limit open)|
+|  ETN  P&L -0.5%  $-0.47          EXIT [EXTENDED HRS]: stop_loss (-0.5%)|
+|  ETN                              SELL pending (after-hours limit open)|
+|  EMR  P&L +0.2%  $+0.16          HOLDING until 9:35am scan (Pullback50)|
+|  CARR  P&L +1.2%  $+1.01         HOLDING until 9:35am scan (Pullback50)|
++========================================================================+
+
++========================================================================+
+|                          EXTENDED HOURS SELLS                          |
++========================================================================+
+|                                                                        |
+|  No extended-hours sells this run.                                     |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                         ext_exits|
+|  Candidates                                                           4|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  2 attempted  |  0 filled  |  0 partial  |  2 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  AMD                                         -0.87%  (threshold -0.50%)|
+|  ETN                                         -0.50%  (threshold -0.50%)|
+|  Count                                                                2|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             2|
++========================================================================+

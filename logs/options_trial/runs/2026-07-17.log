@@ -40808,11 +40808,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-07-17.log
 elapsed=2.4s reconcile=1.77s cancel=0.12s manage=0.1s
 
-=== 16:00:07 ET — manage-only (past entry window) [elapsed=3.2s reconcile=1.82s cancel=0.2s manage=0.15s] ===
-=== options_morning_bot (PAPER) 2026-07-17T16:00:07.425207-04:00 ===
+=== 16:01:00 ET — manage-only (past entry window) [elapsed=6.8s reconcile=1.62s cancel=0.03s manage=0.02s] ===
+=== options_morning_bot (PAPER) 2026-07-17T16:01:00.495359-04:00 ===
 
 [Run context]
-Paper auth OK — equity $125885.35, account PA36KS87UPRS
+Paper auth OK — equity $125665.71, account PA36KS87UPRS
   reconcile: entry fill b91|S165 META x1 @ 0.66
   reconcile: entry fill b71|S165 META x1 @ 0.66
   reconcile: entry fill b51|S165 META x1 @ 0.66
@@ -41097,7 +41097,7 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $125,895.35
+Account equity: $125,665.71
 Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
@@ -41221,7 +41221,7 @@ Per-bucket exit stats (all time)
 ========================================================
 OPTIONS EXIT SUMMARY — 2026-07-17
 ========================================================
-Account equity: $125,895.35
+Account equity: $125,665.71
 Open positions: flat
 
 Today's closed trades
@@ -41270,7 +41270,7 @@ Recent exits (last 8)
 |  OPTIONS BOT SUMMARY                                                   |
 +------------------------------------------------------------------------+
 |  Mode                          manage-only                             |
-|  Equity                        $125,895.35                             |
+|  Equity                        $125,665.71                             |
 |  Signals this run              0                                       |
 |  Orders submitted (session)    40                                      |
 |  Orders filled today (ledger)  60                                      |
@@ -41308,5 +41308,5 @@ Recent exits (last 8)
 |  No open option positions                                              |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-07-17.log
-elapsed=3.2s reconcile=1.82s cancel=0.2s manage=0.15s
+elapsed=6.8s reconcile=1.62s cancel=0.03s manage=0.02s
 
