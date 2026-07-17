@@ -2709,3 +2709,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-17 16:55:38,exits,bull,484.46,300.54,0,0,0,2,CARR|CMS,both
 2026-07-17 17:00:42,exits,bull,484.48,300.54,0,0,0,2,CARR|CMS,both
 2026-07-17 17:05:41,exits,bull,484.42,396.79,0,0,1,1,CARR,both
+2026-07-17 17:10:43,exits,bull,484.57,396.79,0,0,0,1,CARR,both
