@@ -82,26 +82,6 @@
       "entry_order_id": "b7656954-83d7-4707-9567-ebe5f0e5225d"
     },
     {
-      "lot_id": "f38fd25f0c98",
-      "bucket_id": 61,
-      "profile_name": "c061_s173_w2_1005_1045_r4",
-      "strategy_id": "S173",
-      "occ_symbol": "AMD260717C00512500",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 66.0,
-      "entry_price": 0.66,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-17",
-      "entry_order_id": "a1551d17-89d9-46d1-93df-f3abdfc71e84"
-    },
-    {
       "lot_id": "a01139170e46",
       "bucket_id": 41,
       "profile_name": "c041_s173_w2_1005_1045_r3",
@@ -280,16 +260,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-07-17",
       "entry_order_id": "82dbb301-99e3-420b-b7ae-625a4dc6ab16"
+    },
+    {
+      "lot_id": "123f71a82ecc",
+      "bucket_id": 81,
+      "profile_name": "c081_s173_w2_1005_1045_r5",
+      "strategy_id": "S173",
+      "occ_symbol": "AMD260717C00512500",
+      "underlying": "AMD",
+      "qty": 1,
+      "entry_cost": 66.0,
+      "entry_price": 0.66,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-07-17",
+      "entry_order_id": "aef1d622-f095-429e-a468-0680036d639a"
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "6a1a9fa7-e633-4687-a31d-6167708a1675",
+      "lot_id": "092af88d6af6",
+      "bucket_id": 28,
+      "strategy_id": "S165",
+      "occ_symbol": "GOOGL260720C00360000",
+      "qty": 1,
+      "reason": "stop_loss (-50.9%)",
+      "submitted": "2026-07-17T10:35:39"
+    }
+  ],
   "bucket_open_premium": {
     "b28": 55.00000000000001,
     "b8": 55.00000000000001,
     "b29": 68.0,
     "b9": 68.0,
-    "b61": 66.0,
     "b41": 66.0,
     "b88": 55.00000000000001,
     "b68": 55.00000000000001,
@@ -298,7 +308,8 @@
     "b1": 66.0,
     "b48": 55.00000000000001,
     "b69": 68.0,
-    "b21": 66.0
+    "b21": 66.0,
+    "b81": 66.0
   },
   "session_date": "2026-07-17",
   "entries_locked": [
