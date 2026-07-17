@@ -410,7 +410,12 @@ def _strategy_by_id(sid: str) -> StrategyConfig | None:
 
 
 def scan_all_signals(stock, universe: list[str]) -> list[SignalHit]:
-    """Scan universe; one hit per symbol (highest-priority strategy wins)."""
+    """Scan universe for paper strategy hits.
+
+    CONTROLLED_LAYOUT: emit every matching strategy per symbol so each
+    strategy's buckets receive signals. Otherwise keep one hit per symbol
+    (highest-priority strategy wins).
+    """
     out: list[SignalHit] = []
     start = datetime.now(ET) - timedelta(days=SCAN_LOOKBACK_DAYS)
     df, failed = _fetch_daily_bars_cached(stock, universe, start)
@@ -428,6 +433,7 @@ def scan_all_signals(stock, universe: list[str]) -> list[SignalHit]:
         rl(f"Fetched daily bars for {n_ok}/{len(universe)} symbols")
 
     priority = {s.id: i for i, s in enumerate(PAPER_STRATEGIES)}
+    controlled = bool(os.getenv("OPTIONS_CONTROLLED_LAYOUT"))
     for sym in universe:
         try:
             alpaca_sym = to_alpaca_symbol(sym)
@@ -437,8 +443,16 @@ def scan_all_signals(stock, universe: list[str]) -> list[SignalHit]:
             hits = scan_symbol(sub, sym, TODAY, MIN_UNDERLYING_PX)
             if not hits:
                 continue
-            hits.sort(key=lambda h: priority.get(h.strategy_id, 99))
-            out.append(hits[0])
+            if controlled:
+                # Controlled layout: emit ALL strategy hits per symbol so every
+                # strategy bucket receives signals. arms_for_signal() already
+                # routes each hit to its own bucket — no double-buying risk.
+                for hit in hits:
+                    out.append(hit)
+            else:
+                # Non-controlled: original behavior, one hit per symbol
+                hits.sort(key=lambda h: priority.get(h.strategy_id, 99))
+                out.append(hits[0])
         except Exception:
             continue
     out.sort(key=lambda h: priority.get(h.strategy_id, 99))
