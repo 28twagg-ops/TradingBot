@@ -122,27 +122,7 @@
       "entry_order_id": "3042a08b-3d58-4008-8387-8d83cf91908b"
     },
     {
-      "lot_id": "c9b1512f3487",
-      "bucket_id": 80,
-      "profile_name": "c080_s173_w1_0928_1005_r5",
-      "strategy_id": "S173",
-      "occ_symbol": "AMZN260717C00250000",
-      "underlying": "AMZN",
-      "qty": 1,
-      "entry_cost": 51.0,
-      "entry_price": 0.51,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-17",
-      "entry_order_id": "3c7b2d1b-d38b-4781-bfb5-abd6db2515ce"
-    },
-    {
-      "lot_id": "9a5f27511efa",
+      "lot_id": "b5cd85d46a52",
       "bucket_id": 40,
       "profile_name": "c040_s173_w1_0928_1005_r3",
       "strategy_id": "S173",
@@ -162,7 +142,27 @@
       "entry_order_id": "3d7b3ed3-1c3b-44f9-aa58-1f7f7ef6ac17"
     },
     {
-      "lot_id": "d185afb3b2d2",
+      "lot_id": "a7ba2f5dd778",
+      "bucket_id": 80,
+      "profile_name": "c080_s173_w1_0928_1005_r5",
+      "strategy_id": "S173",
+      "occ_symbol": "AMZN260717C00250000",
+      "underlying": "AMZN",
+      "qty": 1,
+      "entry_cost": 51.0,
+      "entry_price": 0.51,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-07-17",
+      "entry_order_id": "3c7b2d1b-d38b-4781-bfb5-abd6db2515ce"
+    },
+    {
+      "lot_id": "2395cab198c3",
       "bucket_id": 0,
       "profile_name": "c000_s173_w1_0928_1005_r1",
       "strategy_id": "S173",
@@ -183,7 +183,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "e1f0d2bf-a5f3-4237-852d-f9d17fb55333",
+      "lot_id": "b7d6e834c837",
+      "bucket_id": 20,
+      "strategy_id": "S173",
+      "occ_symbol": "AMZN260717C00250000",
+      "qty": 1,
+      "reason": "take_profit (+64.0%)",
+      "submitted": "2026-07-17T10:01:11"
+    }
+  ],
   "bucket_open_premium": {
     "b20": 51.0,
     "b88": 55.00000000000001,
@@ -191,8 +202,8 @@
     "b48": 55.00000000000001,
     "b28": 55.00000000000001,
     "b8": 55.00000000000001,
-    "b80": 51.0,
     "b40": 47.0,
+    "b80": 51.0,
     "b0": 47.0
   },
   "session_date": "2026-07-17",
@@ -502,15 +513,12 @@
     "8af07a82-b804-46ef-bd81-c6d86645e8e2",
     "bb96253e-9b78-41f9-b36f-c4d2f9b983fa",
     "db99eb5f-a4c7-4612-b9dd-2f60e813c1e5",
+    "3216e6ae-3a6d-4041-b26d-91c3104bb372",
     "2fe7ec7a-3e91-469f-a594-6d4ee71b3c9b",
     "5f8ee4c4-a445-4d7b-b834-fb177009bbde",
     "98320c59-b2ca-4082-9512-001d494d7c9e",
     "e109ed89-345f-4ed3-b330-2b1c8aa9eeb1",
     "63ad767c-6be3-4474-b82d-5aad7ab09c80",
-    "886a2d79-e720-4951-a62d-90174463291d",
-    "19d3ba4b-19e4-47dd-a1dd-f77fad00965e",
-    "3216e6ae-3a6d-4041-b26d-91c3104bb372",
-    "c92c2567-1c14-4bd0-84c3-4de3124bcd8a",
     "89651e19-101b-43d3-92d9-21046094ef89",
     "7b54617a-0b85-4c3f-bd64-ab745c1a6eb7",
     "df441aca-e9b4-4ce9-85c0-0e8028d8c761",
@@ -692,7 +700,12 @@
     "e0b28ecd-2635-4efe-a2b8-d62bd5484d0d",
     "b8878da7-d8b0-4336-91f5-5657d86c3264",
     "2e618346-e51c-42ea-b8f1-ee9ac86ccb01",
-    "e5ed96ac-c5f6-443b-ba1e-d17d940bd820"
+    "e5ed96ac-c5f6-443b-ba1e-d17d940bd820",
+    "3409b934-8702-48fb-9492-f940367727d4",
+    "f6012a2c-0e3f-45aa-b6bd-2eb6253b72f8",
+    "886a2d79-e720-4951-a62d-90174463291d",
+    "19d3ba4b-19e4-47dd-a1dd-f77fad00965e",
+    "c92c2567-1c14-4bd0-84c3-4de3124bcd8a"
   ],
   "submitted_today": 10,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

@@ -2669,3 +2669,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-17 13:49:36,scan_morning,bull,488.93,123.33,42,0,1,4,CARR|CMS|DOV|DRI,both
 2026-07-17 13:54:33,scan_morning,bull,488.38,25.6,57,0,0,5,BG|CARR|CMS|DOV|DRI,both
 2026-07-17 13:59:39,scan_morning,bull,487.35,123.27,66,0,1,4,CARR|CMS|DOV|DRI,both
+2026-07-17 14:01:04,exits,bull,487.46,123.27,0,0,0,4,CARR|CMS|DOV|DRI,both
