@@ -1,0 +1,198 @@
+13:45:32  INFO      Mode: morning_scan
+13:45:34  INFO        [positions] 5/5 (5 valid)
+13:45:34  INFO        SELL LIMIT CNP  qty=2.244011816  limit=$44.16  id=23df6c61-8b34-436f-ac75-da3cad722d54
+13:46:04  INFO        SELL LIMIT filled CNP (confirmed by position check)
+13:46:04  INFO        TX logged: SELL CNP  P&L 2.44%
+13:46:04  INFO        Universe cache hit: 903 tickers (tickers_2026-07-17.json)
+13:46:05  INFO        [universe] 40/899 (40 valid)
+13:46:07  INFO        [universe] 80/899 (80 valid)
+13:46:12  INFO        [universe] 120/899 (120 valid)
+13:46:13  INFO        [universe] 160/899 (160 valid)
+13:46:15  INFO        [universe] 200/899 (199 valid)
+13:46:19  INFO        [universe] 240/899 (238 valid)
+13:46:29  INFO        [universe] 280/899 (278 valid)
+13:46:42  INFO        [universe] 320/899 (318 valid)
+13:46:52  INFO        [universe] 360/899 (358 valid)
+13:47:05  INFO        [universe] 400/899 (397 valid)
+13:47:18  INFO        [universe] 440/899 (437 valid)
+13:47:31  INFO        [universe] 480/899 (477 valid)
+13:47:41  INFO        [universe] 520/899 (517 valid)
+13:47:54  INFO        [universe] 560/899 (556 valid)
+13:48:06  INFO        [universe] 600/899 (596 valid)
+13:48:16  INFO        [universe] 640/899 (636 valid)
+13:48:29  INFO        [universe] 680/899 (676 valid)
+13:48:42  INFO        [universe] 720/899 (716 valid)
+13:48:52  INFO        [universe] 760/899 (756 valid)
+13:49:05  INFO        [universe] 800/899 (796 valid)
+13:49:18  INFO        [universe] 840/899 (835 valid)
+13:49:31  INFO        [universe] 880/899 (875 valid)
+13:49:35  INFO        [universe] 899/899 (894 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $487.94|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-17|
+|  Universe                                                          both|
+|  Month                                        Jul: 52wkLow + Pullback50|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $487.94|
+|  Cash                                                            $24.24|
+|  Reserve                                          $24.40  (always kept)|
+|  Available                                      $0.00  (for new trades)|
+|  Seasonal trade                   $97.59  (20% -- scheduled strategies)|
+|  Off-sched trade                      $97.59  (20% -- other strategies)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (5 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  CARR     Pullback50      $87.51     $67.89   $69.07   +1.7%   $+1.49  |
+|  CMS      Pullback50      $98.51     $74.35   $75.68   +1.8%   $+1.73  |
+|  CNP      Pullback50      $99.14     $43.13   $44.18   +2.4%   $+2.36  |
+|  DOV      Pullback50      $81.77     $217.58  $217.29  -0.1%   $-0.11  |
+|  DRI      Pullback50      $96.76     $201.51  $201.31  -0.1%   $-0.10  |
+|                                                                        |
+|  Total invested                                                 $463.70|
+|  Total open P&L                                                  $+5.38|
+|  Buys today: 0  |  entry cap: 0  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (11520.1m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  DOV  P&L -0.1%  $-0.11                                            HOLD|
+|  DRI  P&L -0.1%  $-0.10                                            HOLD|
+|  CARR  P&L +1.7%  $+1.49                                           HOLD|
+|  CMS  P&L +1.8%  $+1.73                                            HOLD|
+|  CNP  P&L +2.4%  $+2.36                           EXIT: midline (+2.4%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 4|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50                            |
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  42                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AME      Pullback50      SEAS   $233.41  44.1   -1.96   50MA bounce (+|
+|  BG       Pullback50      SEAS   $118.83  65.8   -2.14   50MA bounce (-|
+|  CCL      GapDown         off    $26.34   27.5   -2.10   gap -3.2% reco|
+|  CAT      GapDown         off    $848.36  28.4   -1.23   gap -4.0% reco|
+|  CI       Pullback50      SEAS   $289.13  54.3   -1.85   50MA bounce (+|
+|  EMR      Pullback50      SEAS   $139.45  41.1   -2.06   50MA bounce (-|
+|  F        Pullback50      SEAS   $14.27   52.7   -2.87   50MA bounce (+|
+|  HST      Pullback50      SEAS   $23.66   32.1   -2.35   50MA bounce (+|
+|  MAR      Pullback50      SEAS   $371.89  45.3   -2.59   50MA bounce (-|
+|  NFLX     GapDown         off    $66.36   33.7   -1.14   gap -11.9% rec|
+|  NI       Pullback50      SEAS   $46.84   36.2   -2.64   50MA bounce (-|
+|  NXPI     GapDown         off    $262.25  41.4   -2.25   gap -3.9% reco|
+|  OXY      Pullback50      SEAS   $54.94   67.5   -2.20   50MA bounce (+|
+|  ROK      Pullback50      SEAS   $456.96  42.2   -1.02   50MA bounce (-|
+|  ROK      GapDown         off    $456.96  42.2   -1.02   gap -3.0% reco|
+|  TDY      Pullback50      SEAS   $626.43  51.0   -2.46   50MA bounce (+|
+|  TJX      Pullback50      SEAS   $157.56  54.2   -1.99   50MA bounce (+|
+|  TT       Pullback50      SEAS   $466.93  43.0   -1.89   50MA bounce (-|
+|  VRSN     Pullback50      SEAS   $277.07  83.0   -1.92   50MA bounce (-|
+|  WAB      Pullback50      SEAS   $262.64  36.0   -2.06   50MA bounce (-|
+|  ALGM     GapDown         off    $44.75   37.7   -1.50   gap -6.0% reco|
+|  ALV      GapDown         off    $119.96  51.4   -1.63   gap -4.5% reco|
+|  BDC      GapDown         off    $100.02  18.8   -1.85   gap -3.0% reco|
+|  DOCN     GapDown         off    $112.52  35.1   -1.22   gap -4.1% reco|13:49:36  INFO        place_all_stops: checking 4 positions...
+13:49:36  INFO        STOP-MARKET placed CARR  qty=1 (pos=1.2670)  stop=$67.55  id=e3b06fff-6c14-4de5-95e1-cb325b0d5d06
+13:49:36  INFO        STOP-MARKET placed CMS  qty=1 (pos=1.3017)  stop=$73.98  id=53c83293-ab31-4e91-8843-f9f8c878f3ba
+13:49:36  INFO        STOP skipped DOV: fractional (0.3763 shares) — software exit will handle it
+13:49:36  INFO        STOP skipped DRI: fractional (0.4807 shares) — software exit will handle it
+13:49:36  INFO        Daily log -> logs/daily/2026-07-17.md
+13:49:36  INFO        Dashboard written → logs/dashboard.md
+
+|  DKS      Pullback50      SEAS   $222.14  37.4   -2.77   50MA bounce (-|
+|  ENS      GapDown         off    $189.00  32.3   -1.13   gap -3.5% reco|
+|  EXP      Pullback50      SEAS   $215.40  32.8   -2.21   50MA bounce (+|
+|  ENTG     GapDown         off    $130.35  34.3   -2.05   gap -5.1% reco|
+|  FIVE     Pullback50      SEAS   $201.81  64.4   -3.13   50MA bounce (+|
+|  FLR      Pullback50      SEAS   $48.70   34.9   -1.38   50MA bounce (-|
+|  FNB      GapDown         off    $19.12   48.2   -1.96   gap -3.5% reco|
+|  FOUR     GapDown         off    $50.78   60.3   -1.79   gap -3.3% reco|
+|  HIMS     GapDown         off    $32.51   46.1   -1.92   gap -4.8% reco|
+|  IDCC     GapDown         off    $257.95  33.0   -1.64   gap -3.4% reco|
+|  NOVT     GapDown         off    $146.19  39.4   -2.00   gap -3.3% reco|
+|  P        GapDown         off    $67.76   48.3   -1.78   gap -3.6% reco|
+|  RRX      GapDown         off    $204.49  39.9   -1.95   gap -5.3% reco|
+|  SLAB     Pullback50      SEAS   $218.03  46.0   -1.01   50MA bounce (-|
+|  SYNA     GapDown         off    $111.68  42.8   -0.83   gap -4.5% reco|
+|  VIAV     GapDown         off    $35.63   22.5   -0.66   gap -4.2% reco|
+|  VNOM     Pullback50      SEAS   $44.66   61.2   -1.97   50MA bounce (-|
+|  WWD      Pullback50      SEAS   $390.11  24.2   -1.40   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy                                          52wkLow + Pullback50|
+|  Scanned                                                            894|
+|  Signals                                                             42|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             4|
+|  Equity                                                         $488.93|
+|  Cash                                                           $123.33|
++========================================================================+
