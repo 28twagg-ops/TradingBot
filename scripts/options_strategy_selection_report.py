@@ -16,7 +16,7 @@ import csv
 import sys
 from collections import defaultdict
 from dataclasses import dataclass
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -33,6 +33,24 @@ from options_signals import ALL_KNOWN_STRATEGIES, PAPER_STRATEGIES
 
 ORPHAN_RATE_WARN = 0.10  # >10% orphan exits => attribution likely broken
 
+# Display DTE / family labels for experiment grouping.
+DTE_PROFILE: dict[str, str] = {
+    "S163": "7d ATM",
+    "S164": "1d ATM",
+    "S165": "3d ATM",
+    "S166": "3d ATM strong",
+    "S167": "3d 1-OTM",
+    "S168": "5d ATM",
+    "S173": "MomRev",
+    "S174": "RubberBand (dropped)",
+}
+
+COMPARISON_GROUPS: list[tuple[str, list[str]]] = [
+    ("GapDown DTE comparison", ["S163", "S164", "S165", "S168"]),
+    ("GapDown Strike comparison", ["S165", "S167"]),
+    ("Other", ["S173"]),
+]
+
 
 @dataclass
 class StratStats:
@@ -45,9 +63,14 @@ class StratStats:
     avg_return_pct: float = 0.0
     med_return_pct: float = 0.0
     p10_return_pct: float = 0.0
+    p25_return_pct: float = 0.0
     p90_return_pct: float = 0.0
     realized_usd: float = 0.0
     active_days: int = 0
+    days_since_first_entry: int | None = None
+    entries_last_5d: int = 0
+    exits_last_5d: int = 0
+    dte_profile: str = ""
     unique_symbols: int = 0
     top_symbol_share_pct: float = 0.0
     recommendation: str = "watch"
@@ -83,6 +106,13 @@ def _percentile(vals: list[float], p: float) -> float:
     return s[lo] * (1.0 - frac) + s[hi] * frac
 
 
+def _row_day(r: dict) -> str:
+    ts = str(r.get("ts", ""))
+    if len(ts) >= 10:
+        return ts[:10]
+    return str(r.get("date", "") or "")
+
+
 def _recommend(exits: int, med_ret: float, p10: float, top_symbol_share_pct: float) -> tuple[str, str]:
     if exits < 8:
         return "watch", "insufficient sample (<8 exits)"
@@ -103,6 +133,15 @@ def _recommend(exits: int, med_ret: float, p10: float, top_symbol_share_pct: flo
     return "watch", "promising but needs larger sample"
 
 
+def _dte_profile_for(sid: str) -> str:
+    if sid in DTE_PROFILE:
+        return DTE_PROFILE[sid]
+    for s in ALL_KNOWN_STRATEGIES:
+        if s.id == sid:
+            return f"{s.dte_target}d"
+    return "?"
+
+
 def build_report(as_of_day: str) -> tuple[list[StratStats], dict]:
     ensure_trial_layout()
     if not LEDGER_PATH.exists():
@@ -112,10 +151,15 @@ def build_report(as_of_day: str) -> tuple[list[StratStats], dict]:
     # Use all data up to as_of_day inclusive.
     filt = []
     for r in rows:
-        ts = str(r.get("ts", ""))
-        d = ts[:10] if len(ts) >= 10 else str(r.get("date", ""))
+        d = _row_day(r)
         if d and d <= as_of_day:
             filt.append(r)
+
+    try:
+        as_of = date.fromisoformat(as_of_day)
+    except ValueError:
+        as_of = date.today()
+    last5_start = (as_of - timedelta(days=4)).isoformat()
 
     exits_by_sid: dict[str, list[dict]] = defaultdict(list)
     entries_by_sid: dict[str, list[dict]] = defaultdict(list)
@@ -146,11 +190,21 @@ def build_report(as_of_day: str) -> tuple[list[StratStats], dict]:
             realized += _f(r.get("pnl_usd"), 0.0)
             sym = r.get("symbol") or "?"
             symbol_counts[sym] += 1
-            ts = str(r.get("ts", ""))
-            if len(ts) >= 10:
-                days.add(ts[:10])
-            elif r.get("date"):
-                days.add(str(r.get("date")))
+            d = _row_day(r)
+            if d:
+                days.add(d)
+
+        entry_days = [_row_day(r) for r in entries if _row_day(r)]
+        first_entry = min(entry_days) if entry_days else None
+        days_since = None
+        if first_entry:
+            try:
+                days_since = (as_of - date.fromisoformat(first_entry)).days
+            except ValueError:
+                days_since = None
+
+        entries_last_5 = sum(1 for r in entries if last5_start <= _row_day(r) <= as_of_day)
+        exits_last_5 = sum(1 for r in exits if last5_start <= _row_day(r) <= as_of_day)
 
         n = len(rets)
         wins = sum(1 for x in rets if x > 0)
@@ -161,6 +215,7 @@ def build_report(as_of_day: str) -> tuple[list[StratStats], dict]:
         avg = sum(rets) / n if n else 0.0
         med = _median(rets)
         p10 = _percentile(rets, 0.10)
+        p25 = _percentile(rets, 0.25)
         p90 = _percentile(rets, 0.90)
         rec, why = _recommend(n, med, p10, top_share)
         if sid in DROPPED_STRATEGIES:
@@ -177,9 +232,14 @@ def build_report(as_of_day: str) -> tuple[list[StratStats], dict]:
                 avg_return_pct=round(avg, 2),
                 med_return_pct=round(med, 2),
                 p10_return_pct=round(p10, 2),
+                p25_return_pct=round(p25, 2),
                 p90_return_pct=round(p90, 2),
                 realized_usd=round(realized, 2),
                 active_days=len(days),
+                days_since_first_entry=days_since,
+                entries_last_5d=entries_last_5,
+                exits_last_5d=exits_last_5,
+                dte_profile=_dte_profile_for(sid),
                 unique_symbols=len(symbol_counts),
                 top_symbol_share_pct=round(top_share, 1),
                 recommendation=rec,
@@ -214,8 +274,50 @@ def build_report(as_of_day: str) -> tuple[list[StratStats], dict]:
         "orphan_exits": orphan_exit_events,
         "orphan_rate": round(orphan_rate, 4),
         "orphan_alert": orphan_rate > ORPHAN_RATE_WARN and total_exit_events > 0,
+        "by_id": {s.strategy_id: s for s in out},
     }
     return out, summary
+
+
+def _comparison_section(rows: list[StratStats]) -> list[str]:
+    by_id = {r.strategy_id: r for r in rows}
+    lines = [
+        "## Comparison groups",
+        "",
+        "Experiment arms grouped for side-by-side decisions. "
+        "INSUFFICIENT if any arm has n<10 exits.",
+        "",
+    ]
+    for title, sids in COMPARISON_GROUPS:
+        lines.append(f"### {title}")
+        lines.append("")
+        arms = [by_id[s] for s in sids if s in by_id]
+        if not arms:
+            lines.append("_No data yet for this group._")
+            lines.append("")
+            continue
+        insuff = any(a.exits < 10 for a in arms)
+        best_med = max(arms, key=lambda a: a.med_return_pct)
+        best_p10 = max(arms, key=lambda a: a.p10_return_pct)
+        status = "INSUFFICIENT" if insuff else "OK"
+        lines.append(
+            f"- Status: **{status}** | Best median: **{best_med.strategy_id}** "
+            f"({best_med.med_return_pct:+.2f}%) | Best p10: **{best_p10.strategy_id}** "
+            f"({best_p10.p10_return_pct:+.2f}%)"
+        )
+        lines.append("")
+        lines.append(
+            "| strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |"
+        )
+        lines.append("|---|---|---:|---:|---:|---:|---:|---:|")
+        for a in arms:
+            lines.append(
+                f"| {a.strategy_id} | {a.dte_profile} | {a.exits} | "
+                f"{a.med_return_pct:+.2f} | {a.p10_return_pct:+.2f} | "
+                f"{a.p25_return_pct:+.2f} | {a.entries_last_5d} | {a.exits_last_5d} |"
+            )
+        lines.append("")
+    return lines
 
 
 def write_report(as_of_day: str, rows: list[StratStats], summary: dict) -> tuple[Path, Path]:
@@ -255,29 +357,35 @@ def write_report(as_of_day: str, rows: list[StratStats], summary: dict) -> tuple
             "",
             "## Strategy scoreboard",
             "",
-            "| strategy | recommendation | exits | win% | med ret% | avg ret% | p10% | p90% | realized $ | symbols | top symbol share | rationale |",
-            "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|",
+            "| strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | "
+            "days live | ent 5d | exit 5d | realized $ | top share | rationale |",
+            "|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|",
         ]
     )
     for r in rows:
         win_pct = (100.0 * r.wins / r.exits) if r.exits else 0.0
+        days_live = r.days_since_first_entry if r.days_since_first_entry is not None else "—"
         lines.append(
-            f"| {r.strategy_id} ({r.strategy_name}) | {r.recommendation} | {r.exits} | "
-            f"{win_pct:.1f} | {r.med_return_pct:+.2f} | {r.avg_return_pct:+.2f} | "
-            f"{r.p10_return_pct:+.2f} | {r.p90_return_pct:+.2f} | ${r.realized_usd:+,.2f} | "
-            f"{r.unique_symbols} | {r.top_symbol_share_pct:.1f}% | {r.rationale} |"
+            f"| {r.strategy_id} ({r.strategy_name}) | {r.dte_profile} | {r.recommendation} | "
+            f"{r.exits} | {win_pct:.1f} | {r.med_return_pct:+.2f} | {r.p10_return_pct:+.2f} | "
+            f"{r.p25_return_pct:+.2f} | {r.p90_return_pct:+.2f} | {days_live} | "
+            f"{r.entries_last_5d} | {r.exits_last_5d} | ${r.realized_usd:+,.2f} | "
+            f"{r.top_symbol_share_pct:.1f}% | {r.rationale} |"
         )
+    lines.append("")
+    lines.extend(_comparison_section(rows))
     lines.extend(
         [
-            "",
             "## Notes",
             "",
             "- Selection emphasizes robustness first: median > 0, acceptable left tail (**p10**), and symbol diversification.",
             "- **p10 (10th percentile return %)** is the primary options risk metric — fat left tails hide behind a flat median.",
+            "- **p25** sits between p10 and median for mid-tail visibility.",
             "- `keep` requires >=30 exits with positive median and no extreme concentration/tail risk.",
             "- `watch` means potentially viable but still sample-limited or risk-concentrated.",
             "- `drop` means current evidence is not supportive (e.g., non-positive median with enough exits).",
             f"- Orphan rate = orphan_exits / total_exits; alert if >{100 * ORPHAN_RATE_WARN:.0f}% (attribution failure, not edge).",
+            "- Active paper strategies: " + ", ".join(s.id for s in PAPER_STRATEGIES) + ".",
             "",
         ]
     )
@@ -289,6 +397,7 @@ def write_report(as_of_day: str, rows: list[StratStats], summary: dict) -> tuple
             fieldnames=[
                 "strategy_id",
                 "strategy_name",
+                "dte_profile",
                 "recommendation",
                 "rationale",
                 "entries",
@@ -298,9 +407,13 @@ def write_report(as_of_day: str, rows: list[StratStats], summary: dict) -> tuple
                 "avg_return_pct",
                 "med_return_pct",
                 "p10_return_pct",
+                "p25_return_pct",
                 "p90_return_pct",
                 "realized_usd",
                 "active_days",
+                "days_since_first_entry",
+                "entries_last_5d",
+                "exits_last_5d",
                 "unique_symbols",
                 "top_symbol_share_pct",
             ],
@@ -336,4 +449,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

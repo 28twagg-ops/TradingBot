@@ -113,12 +113,29 @@ class StrategyConfig:
 # Live scan list — S174 paused (2026-07-13): negative median / drop recommendation.
 # Historical ledger still contains S174 exits for audit; see DROPPED_STRATEGIES
 # in options_lab for reflected P&L that excludes them.
+# P2B (2026-07-18): S164=1-DTE, S168=5-DTE GapDown ATM; S165=3-DTE control; S163=7-DTE.
+# P2C (2026-07-18): S167=1-strike OTM ~3-DTE (same gap signal as S165).
 PAPER_STRATEGIES: list[StrategyConfig] = [
     StrategyConfig("S173", "MomReversal long call", 1, 0, 7, scan_mom_reversal),
     StrategyConfig("S165", "GapDown long call 3 DTE", 3, 1, 7,
                    lambda sub, sym, today, mp: scan_gap_down(
                        sub, sym, today, GAP_DOWN_THRESH,
                        "S165", "GapDown long call 3 DTE", mp)),
+    StrategyConfig(
+        "S164", "GapDown ATM 1-DTE — P2B arm", 1, 0, 3,
+        lambda sub, sym, today, mp: scan_gap_down(
+            sub, sym, today, GAP_DOWN_THRESH,
+            "S164", "GapDown ATM 1-DTE — P2B arm", mp)),
+    StrategyConfig(
+        "S168", "GapDown ATM 5-DTE — P2B arm", 5, 3, 8,
+        lambda sub, sym, today, mp: scan_gap_down(
+            sub, sym, today, GAP_DOWN_THRESH,
+            "S168", "GapDown ATM 5-DTE — P2B arm", mp)),
+    StrategyConfig(
+        "S167", "GapDown long call 3 DTE 1-OTM — P2C", 3, 1, 7,
+        lambda sub, sym, today, mp: scan_gap_down(
+            sub, sym, today, GAP_DOWN_THRESH,
+            "S167", "GapDown long call 3 DTE 1-OTM — P2C", mp)),
     StrategyConfig("S166", "GapDown strong call", 7, 2, 14, scan_gap_down_strong),
     StrategyConfig("S163", "A1 GapDown ATM call EOD", 7, 2, 10,
                    lambda sub, sym, today, mp: scan_gap_down(

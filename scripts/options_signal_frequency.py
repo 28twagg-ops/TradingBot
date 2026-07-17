@@ -22,7 +22,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from options_lab import TRIAL_ROOT, ensure_trial_layout
 
-STRATEGIES = ["S163", "S165", "S166", "S173", "S174"]
+STRATEGIES = ["S163", "S164", "S165", "S166", "S167", "S168", "S173", "S174"]
 EXIT_RATE_PROXY = 0.80  # rough: fraction of unique entries that become exits
 TARGET_EXITS = 30
 
@@ -152,21 +152,22 @@ def _est_days_to_n30(avg_unique_per_active: float) -> str:
 
 def _md_table(counts: dict[str, dict[str, int]], title: str) -> list[str]:
     days = sorted(counts.keys())
+    hdr = "| Date       | " + " | ".join(STRATEGIES) + " | Total |"
+    sep = "|------------|" + "|".join(["-----:" for _ in STRATEGIES]) + "|------:|"
     lines = [
         f"### {title}",
         "",
-        "| Date       | S163 | S165 | S166 | S173 | S174 | Total |",
-        "|------------|-----:|-----:|-----:|-----:|-----:|------:|",
+        hdr,
+        sep,
     ]
     for day in days:
         row = counts[day]
         vals = [int(row.get(s, 0)) for s in STRATEGIES]
-        lines.append(
-            f"| {day} | {vals[0]:4d} | {vals[1]:4d} | {vals[2]:4d} | "
-            f"{vals[3]:4d} | {vals[4]:4d} | {sum(vals):5d} |"
-        )
+        cells = " | ".join(f"{v:4d}" for v in vals)
+        lines.append(f"| {day} | {cells} | {sum(vals):5d} |")
     if not days:
-        lines.append("| _(no run logs)_ | 0 | 0 | 0 | 0 | 0 | 0 |")
+        zeros = " | ".join(["   0" for _ in STRATEGIES])
+        lines.append(f"| _(no run logs)_ | {zeros} |     0 |")
     lines.append("")
     return lines
 

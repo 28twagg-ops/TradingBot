@@ -112,7 +112,9 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
             ("w3_1045_1120", "10:45", "11:20"),
             ("w4_1120_1135", "11:20", "11:35"),
         ]
-        strategy_ids = ["S173", "S174", "S165", "S166", "S163"]
+        # S167 reclaims former S174 slots (P2C). S164/S168 are P2B DTE arms.
+        # 7 strategies × 4 windows × 5 reps = 140 buckets (set OPTIONS_BUCKET_COUNT=140).
+        strategy_ids = ["S173", "S167", "S165", "S166", "S163", "S164", "S168"]
         profiles: list[BucketProfile] = []
         idx = 0
         while len(profiles) < n:
@@ -237,9 +239,15 @@ STRATEGY_TWEAKS: dict[str, dict[str, Any]] = {
     "S173": {"max_premium": 100, "account_cap": 0.25, "take_profit": 0.60, "stop_loss": -0.40},
     "S174": {},
     "S165": {"max_premium": 50, "account_cap": 0.15, "take_profit": 0.35, "stop_loss": -0.30},
+    "S164": {},
+    "S167": {},
+    "S168": {},
     "S166": {"max_premium": 80, "take_profit": 0.70},
     "S163": {},
 }
+
+# Active paper strategies mirrored into strategies.json (S174 stays dropped).
+ACTIVE_PAPER_STRATEGY_IDS = ["S173", "S165", "S164", "S168", "S167", "S166", "S163"]
 
 
 @dataclass
@@ -545,7 +553,7 @@ def ensure_trial_layout() -> None:
             )
     if not STRATEGIES_PATH.exists():
         STRATEGIES_PATH.write_text(json.dumps({
-            "paper_strategies": ["S173", "S165", "S166", "S163"],
+            "paper_strategies": list(ACTIVE_PAPER_STRATEGY_IDS),
             "dropped_strategies": sorted(DROPPED_STRATEGIES),
             "strategy_tweaks": STRATEGY_TWEAKS,
         }, indent=2), encoding="utf-8")
@@ -555,7 +563,7 @@ def ensure_trial_layout() -> None:
             raw = json.loads(STRATEGIES_PATH.read_text(encoding="utf-8"))
         except Exception:
             raw = {}
-        raw["paper_strategies"] = ["S173", "S165", "S166", "S163"]
+        raw["paper_strategies"] = list(ACTIVE_PAPER_STRATEGY_IDS)
         raw["dropped_strategies"] = sorted(DROPPED_STRATEGIES)
         STRATEGIES_PATH.write_text(json.dumps(raw, indent=2), encoding="utf-8")
 

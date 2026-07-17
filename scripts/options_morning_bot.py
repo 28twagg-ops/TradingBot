@@ -1,11 +1,14 @@
 """
-options_morning_bot.py — Phase 4 paper bot: TOP 5 strategies (multi-slot).
+options_morning_bot.py — Phase 4 paper bot: multi-strategy options (PAPER).
 
 Runs research-ranked strategies on the Alpaca PAPER account:
   S173 MomReversal long call
-  S165 GapDown long call 3 DTE
-  S166 GapDown strong call (gap <= -3%, green close)
-  S163 A1 GapDown ATM call EOD (control)
+  S165 GapDown long call 3 DTE (control)
+  S164 GapDown ATM 1-DTE — P2B
+  S168 GapDown ATM 5-DTE — P2B
+  S167 GapDown 1-strike OTM ~3-DTE — P2C (reclaims S174 buckets)
+  S166 GapDown strong call (gap <= -3%)
+  S163 A1 GapDown ATM call EOD (~7 DTE / P2B 7-DTE arm)
   S174 RubberBand long call EOD — DROPPED (no new entries; excluded from reflected P&L)
 
 P&L is tracked and logged as **return % per trade** (not dollar matrices).
@@ -596,11 +599,12 @@ def _fetch_oi_map(ref, api_sym: str, strike_lo, strike_hi, exp_lo, exp_hi):
                                exp_gte=exp_lo, exp_lte=exp_hi)
 
 
-def pick_atm_call(opt, ref, symbol: str, price: float,
-                  dte_min: int, dte_max: int, dte_target: int,
-                  arm: EffectiveArm, *, chain_cache: dict | None = None,
-                  oi_cache: dict | None = None):
-    """Return dict for the best ATM call, or None if nothing tradeable."""
+def _pick_call_from_chain(opt, ref, symbol: str, price: float,
+                          dte_min: int, dte_max: int, dte_target: int,
+                          arm: EffectiveArm, *, chain_cache: dict | None = None,
+                          oi_cache: dict | None = None,
+                          strike_mode: str = "atm"):
+    """Return best tradeable call under strike_mode ('atm' or 'otm1')."""
     api_sym = to_alpaca_symbol(symbol)
     max_premium = arm.max_premium
     max_spread = arm.max_spread_frac
@@ -677,6 +681,10 @@ def pick_atm_call(opt, ref, symbol: str, price: float,
         expiry, right, strike = _parse_occ(csym, api_sym)
         if right != "C" or strike is None or expiry is None:
             continue
+        if strike_mode == "otm1":
+            # 1-strike OTM: only calls strictly above spot
+            if strike <= price:
+                continue
         lq = getattr(snap, "latest_quote", None)
         bid = getattr(lq, "bid_price", None) if lq else None
         ask = getattr(lq, "ask_price", None) if lq else None
@@ -696,15 +704,38 @@ def pick_atm_call(opt, ref, symbol: str, price: float,
             dte = (date.fromisoformat(expiry) - TODAY).days
         except Exception:
             continue
-        moneyness = abs(strike - price)
-        # rank: closest to ATM, then closest DTE to target
-        score = (moneyness, abs(dte - dte_target))
+        if strike_mode == "otm1":
+            # Prefer lowest strike above spot, then nearest DTE to target
+            score = (strike - price, abs(dte - dte_target))
+        else:
+            # ATM: closest to spot, then nearest DTE to target
+            score = (abs(strike - price), abs(dte - dte_target))
         cand = {"symbol": csym, "underlying": symbol, "strike": strike,
                 "expiry": expiry, "dte": dte, "bid": bid, "ask": ask, "mid": mid,
                 "spread_frac": spread_frac, "cost": cost, "oi": oi, "score": score}
         if best is None or score < best["score"]:
             best = cand
     return best
+
+
+def pick_atm_call(opt, ref, symbol: str, price: float,
+                  dte_min: int, dte_max: int, dte_target: int,
+                  arm: EffectiveArm, *, chain_cache: dict | None = None,
+                  oi_cache: dict | None = None):
+    """Return dict for the best ATM call, or None if nothing tradeable."""
+    return _pick_call_from_chain(
+        opt, ref, symbol, price, dte_min, dte_max, dte_target, arm,
+        chain_cache=chain_cache, oi_cache=oi_cache, strike_mode="atm")
+
+
+def pick_otm_call_1strike(opt, ref, symbol: str, price: float,
+                          dte_min: int, dte_max: int, dte_target: int,
+                          arm: EffectiveArm, *, chain_cache: dict | None = None,
+                          oi_cache: dict | None = None):
+    """Return dict for the lowest call strike strictly above spot (1-OTM)."""
+    return _pick_call_from_chain(
+        opt, ref, symbol, price, dte_min, dte_max, dte_target, arm,
+        chain_cache=chain_cache, oi_cache=oi_cache, strike_mode="otm1")
 
 
 # --------------------------------------------------------------------------- #
@@ -887,9 +918,16 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
                 continue
             if state.bucket_holds_underlying(arm.bucket_id, hit.symbol):
                 continue
-            cand = pick_atm_call(opt, ref, hit.symbol, hit.price,
-                                 strat.dte_min, strat.dte_max, strat.dte_target, arm,
-                                 chain_cache=chain_cache, oi_cache=oi_cache)
+            if hit.strategy_id == "S167":
+                cand = pick_otm_call_1strike(
+                    opt, ref, hit.symbol, hit.price,
+                    strat.dte_min, strat.dte_max, strat.dte_target, arm,
+                    chain_cache=chain_cache, oi_cache=oi_cache)
+            else:
+                cand = pick_atm_call(
+                    opt, ref, hit.symbol, hit.price,
+                    strat.dte_min, strat.dte_max, strat.dte_target, arm,
+                    chain_cache=chain_cache, oi_cache=oi_cache)
             if not cand:
                 skip_no_chain += 1
                 rl_file(f"  [b{arm.bucket_id}|{arm.profile_name}] {hit.strategy_id} "

@@ -10,7 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from options_lab import BUCKET_EXPERIMENTS, LEDGER_PATH, TRIAL_ROOT, bucket_dir, ensure_trial_layout
 
-PAPER = ["S173", "S174", "S165", "S166", "S163"]
+PAPER = ["S173", "S174", "S165", "S164", "S168", "S167", "S166", "S163"]
 
 
 def _stats(vals: list[float]) -> str:
