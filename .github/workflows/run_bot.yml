@@ -124,6 +124,8 @@ jobs:
             python scripts/options_morning_bot.py
             python scripts/options_daily_bucket_report.py
             python scripts/options_strategy_selection_report.py
+            python scripts/options_signal_frequency.py || echo "signal_frequency report failed (non-fatal)"
+            python scripts/options_ledger_health.py || echo "ledger_health failed (non-fatal)"
           } 2>&1 | tee "$OPTIONS_LOG"
           rc=${PIPESTATUS[0]}
           t1=$(date +%s)
