@@ -1,0 +1,55 @@
+14:20:40  INFO      Mode: exits
+14:20:41  INFO        Daily log -> logs/daily/2026-07-17.md
+14:20:41  INFO        Daily log reconciled -> logs/daily/2026-07-17.md (2 ledger rows)
+14:20:41  INFO        place_all_stops: checking 4 positions...
+14:20:41  INFO        STOP already live CARR @ $67.55
+14:20:41  INFO        STOP already live CMS @ $73.98
+14:20:41  INFO        STOP skipped DOV: fractional (0.3763 shares) — software exit will handle it
+14:20:41  INFO        STOP skipped DRI: fractional (0.4807 shares) — software exit will handle it
+14:20:41  INFO        [positions] 4/4 (4 valid)
+14:20:41  INFO        SELL MARKET [urgent] DRI closed
+14:20:44  INFO        TX logged: SELL DRI  P&L -0.92%
+14:20:44  INFO        Daily log -> logs/daily/2026-07-17.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:20 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $486.10|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  DRI  P&L -0.9%  $-0.89                         EXIT: stop_loss (-0.9%)|
+|  DOV  P&L +0.2%  $+0.13                                            HOLD|
+|  CMS  P&L +0.6%  $+0.61                                            HOLD|
+|  CARR  P&L +1.7%  $+1.44                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           4|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  DRI                                         -0.92%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
