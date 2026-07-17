@@ -1,0 +1,53 @@
+15:35:39  INFO      Mode: exits
+15:35:39  INFO        Daily log -> logs/daily/2026-07-17.md
+15:35:39  INFO        Daily log reconciled -> logs/daily/2026-07-17.md (3 ledger rows)
+15:35:39  INFO        place_all_stops: checking 3 positions...
+15:35:40  INFO        STOP already live CARR @ $67.55
+15:35:40  INFO        STOP already live CMS @ $73.98
+15:35:40  INFO        STOP skipped DOV: fractional (0.3763 shares) — software exit will handle it
+15:35:40  INFO        [positions] 3/3 (3 valid)
+15:35:40  INFO        SELL MARKET [urgent] DOV closed
+15:35:42  INFO        TX logged: SELL DOV  P&L -0.61%
+15:35:43  INFO        Daily log -> logs/daily/2026-07-17.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:35 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $485.59|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  DOV  P&L -0.6%  $-0.50                         EXIT: stop_loss (-0.6%)|
+|  CMS  P&L +0.7%  $+0.65                                            HOLD|
+|  CARR  P&L +1.8%  $+1.51                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  DOV                                         -0.61%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
