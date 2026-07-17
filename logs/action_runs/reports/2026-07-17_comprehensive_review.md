@@ -13834,3 +13834,42 @@ Orphan rate: 3.6% (22/604)
 ### Options bot full output
 
 ```text
+
+## Run 20260717T194742Z
+
+- UTC timestamp: `20260717T194742Z`
+- GitHub run: [#4336](https://github.com/28twagg-ops/TradingBot/actions/runs/29608793567)
+- Run id: `29608793567`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-17T15:44:15.075413-04:00","date":"2026-07-17","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":2.4,"phases_s":{"reconcile":1.77,"cancel":0.12,"manage":0.1},"signals":0,"placed":0,"equity":126538.95,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":40,"filled_today":60,"unattributed_contracts":0,"top_signals":[],"github_run":"4334","github_run_id":"29608371070","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:47:43  INFO      Mode: scan
+19:47:43  INFO        [positions] 1/1 (1 valid)
+19:47:43  INFO        Universe cache hit: 903 tickers (tickers_2026-07-17.json)
+19:47:44  INFO        [universe] 40/902 (40 valid)
+19:47:45  INFO        [universe] 80/902 (80 valid)
+19:47:47  INFO        [universe] 120/902 (120 valid)
+19:48:00  INFO        [universe] 160/902 (160 valid)
+19:48:10  INFO        [universe] 200/902 (199 valid)
+19:48:23  INFO        [universe] 240/902 (238 valid)
+19:48:33  INFO        [universe] 280/902 (278 valid)
+19:48:46  INFO        [universe] 320/902 (318 valid)
+19:48:59  INFO        [universe] 360/902 (358 valid)
+19:49:09  INFO        [universe] 400/902 (397 valid)
+19:49:22  INFO        [universe] 440/902 (437 valid)
+19:49:35  INFO        [universe] 480/902 (477 valid)
+19:49:45  INFO        [universe] 520/902 (517 valid)
+19:49:58  INFO        [universe] 560/902 (556 valid)
+19:50:11  INFO        [universe] 600/902 (596 valid)
+```
+
+### Options bot full output
+
+```text
