@@ -82,26 +82,6 @@
       "entry_order_id": "b7656954-83d7-4707-9567-ebe5f0e5225d"
     },
     {
-      "lot_id": "9fdc133a67bf",
-      "bucket_id": 81,
-      "profile_name": "c081_s173_w2_1005_1045_r5",
-      "strategy_id": "S173",
-      "occ_symbol": "AMD260717C00512500",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 66.0,
-      "entry_price": 0.66,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-17",
-      "entry_order_id": "aef1d622-f095-429e-a468-0680036d639a"
-    },
-    {
       "lot_id": "f38fd25f0c98",
       "bucket_id": 61,
       "profile_name": "c061_s173_w2_1005_1045_r4",
@@ -242,26 +222,6 @@
       "entry_order_id": "1a241e23-53a0-4684-aaf2-62932dae24b4"
     },
     {
-      "lot_id": "57c34615d5b2",
-      "bucket_id": 20,
-      "profile_name": "c020_s173_w1_0928_1005_r2",
-      "strategy_id": "S173",
-      "occ_symbol": "AMZN260717C00250000",
-      "underlying": "AMZN",
-      "qty": 1,
-      "entry_cost": 51.0,
-      "entry_price": 0.51,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-17",
-      "entry_order_id": "562208a6-c599-48f6-9cf7-290293133129"
-    },
-    {
       "lot_id": "b90e172169cb",
       "bucket_id": 48,
       "profile_name": "c048_s165_w1_0928_1005_r3",
@@ -300,27 +260,35 @@
       "market_exit_eod": true,
       "entry_date": "2026-07-17",
       "entry_order_id": "d1afddfc-4ca2-4dc8-95ca-3a27cbf25618"
+    },
+    {
+      "lot_id": "a038c5ec3a07",
+      "bucket_id": 21,
+      "profile_name": "c021_s173_w2_1005_1045_r2",
+      "strategy_id": "S173",
+      "occ_symbol": "AMD260717C00512500",
+      "underlying": "AMD",
+      "qty": 1,
+      "entry_cost": 66.0,
+      "entry_price": 0.66,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-07-17",
+      "entry_order_id": "82dbb301-99e3-420b-b7ae-625a4dc6ab16"
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "4851eeab-5fd4-4db2-98b2-7196d6d8be80",
-      "lot_id": "57c34615d5b2",
-      "bucket_id": 20,
-      "strategy_id": "S173",
-      "occ_symbol": "AMZN260717C00250000",
-      "qty": 1,
-      "reason": "take_profit (+61.9%)",
-      "submitted": "2026-07-17T10:25:41"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b28": 55.00000000000001,
     "b8": 55.00000000000001,
     "b29": 68.0,
     "b9": 68.0,
-    "b81": 66.0,
     "b61": 66.0,
     "b41": 66.0,
     "b88": 55.00000000000001,
@@ -328,9 +296,9 @@
     "b89": 68.0,
     "b49": 68.0,
     "b1": 66.0,
-    "b20": 51.0,
     "b48": 55.00000000000001,
-    "b69": 68.0
+    "b69": 68.0,
+    "b21": 66.0
   },
   "session_date": "2026-07-17",
   "entries_locked": [
@@ -789,7 +757,8 @@
     "8896a65c-b24f-4211-ad07-95ad1b3a5a0f",
     "9e01f268-3bcc-45e7-b1b2-c3d0a245d1b5",
     "496451b1-53c2-4288-a111-507f51686ace",
-    "196bd08f-1bf7-4585-86bb-07e775421869"
+    "196bd08f-1bf7-4585-86bb-07e775421869",
+    "4851eeab-5fd4-4db2-98b2-7196d6d8be80"
   ],
   "submitted_today": 20,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
