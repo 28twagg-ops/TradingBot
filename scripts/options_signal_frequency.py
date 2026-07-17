@@ -1,6 +1,9 @@
 """
 options_signal_frequency.py — Daily ENTRY counts per strategy from options run logs.
 
+Headline metric: unique (strategy_id, underlying_symbol, date).
+Raw log-line counts kept as a secondary debug table.
+
 Outputs:
   logs/options_trial/reports/signal_frequency.md
 
@@ -9,6 +12,7 @@ Usage:
 """
 from __future__ import annotations
 
+import math
 import re
 import sys
 from collections import defaultdict
@@ -19,38 +23,37 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from options_lab import TRIAL_ROOT, ensure_trial_layout
 
 STRATEGIES = ["S163", "S165", "S166", "S173", "S174"]
-EXIT_RATE_PROXY = 0.60  # rough: fraction of entries that become exits
+EXIT_RATE_PROXY = 0.80  # rough: fraction of unique entries that become exits
 TARGET_EXITS = 30
 
-# ENTRY [b20|c020_s173_w1_0928_1005_r2|S173] BUY 1x AAL...
+# ENTRY [b20|c020_s173_w1_0928_1005_r2|S173] BUY 1x AAL260717C00015000 ...
 _RE_ENTRY_BRACKET = re.compile(
     r"ENTRY\s*\[[^\]]*\|(S\d{3})\]",
     re.IGNORECASE,
 )
-# ENTRY S165 | AVGO ...  OR  ENTRY S165 BUY ...
 _RE_ENTRY_PLAIN = re.compile(
     r"\bENTRY\b[^\n]{0,80}?\b(S\d{3})\b",
     re.IGNORECASE,
 )
-# options entry: strategy=S165 symbol=AVGO
 _RE_STRATEGY_EQ = re.compile(
     r"(?:strategy[_ ]?id|strategy)\s*[=:]\s*(S\d{3})",
     re.IGNORECASE,
 )
-# pending id=... for dedupe within a day file
+# Underlying from OCC: AAL260717C00015000 or "BUY 1x AAL260717..."
+_RE_OCC = re.compile(
+    r"\b([A-Z]{1,6})\d{6}[CP]\d{8}\b",
+)
+_RE_SYMBOL_EQ = re.compile(
+    r"(?:underlying|symbol)\s*[=:]\s*([A-Z]{1,6})\b",
+    re.IGNORECASE,
+)
 _RE_PENDING_ID = re.compile(r"pending\s+id=([0-9a-fA-F\-]{8,})", re.IGNORECASE)
 _RE_ORDER_ID = re.compile(r"\bid=([0-9a-fA-F\-]{8,})", re.IGNORECASE)
 
 
 def _extract_strategy(line: str) -> str | None:
-    if "ENTRY" not in line.upper() and "signal" not in line.lower():
-        # Prefer ENTRY; also allow explicit strategy= on signal lines with S###.
-        m = _RE_STRATEGY_EQ.search(line)
-        if m and "signal" in line.lower():
-            sid = m.group(1).upper()
-            return sid if sid in STRATEGIES else None
+    if "ENTRY" not in line.upper():
         return None
-
     for rx in (_RE_ENTRY_BRACKET, _RE_STRATEGY_EQ, _RE_ENTRY_PLAIN):
         m = rx.search(line)
         if m:
@@ -60,27 +63,45 @@ def _extract_strategy(line: str) -> str | None:
     return None
 
 
-def _dedupe_key(line: str, sid: str, day: str) -> str:
+def _extract_underlying(line: str) -> str | None:
+    m = _RE_OCC.search(line.upper())
+    if m:
+        return m.group(1)
+    m = _RE_SYMBOL_EQ.search(line)
+    if m:
+        return m.group(1).upper()
+    return None
+
+
+def _raw_line_key(line: str, sid: str, day: str) -> str:
     m = _RE_PENDING_ID.search(line) or _RE_ORDER_ID.search(line)
     if m:
         return f"{day}|{sid}|{m.group(1)}"
-    # Fallback: normalize whitespace
     return f"{day}|{sid}|{re.sub(r'\s+', ' ', line.strip())[:160]}"
 
 
-def collect_counts() -> tuple[dict[str, dict[str, int]], dict[str, int]]:
-    """Return (counts[day][sid], totals[sid])."""
+def collect_counts() -> tuple[
+    dict[str, dict[str, int]],
+    dict[str, dict[str, int]],
+    dict[str, int],
+    dict[str, int],
+]:
+    """Return unique_counts[day][sid], raw_counts[day][sid], unique_totals, raw_totals."""
     ensure_trial_layout()
     runs_dir = TRIAL_ROOT / "runs"
-    counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
-    seen: set[str] = set()
-    totals: dict[str, int] = defaultdict(int)
+    unique_counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    raw_counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    unique_seen: set[str] = set()
+    raw_seen: set[str] = set()
+    unique_totals: dict[str, int] = defaultdict(int)
+    raw_totals: dict[str, int] = defaultdict(int)
 
     if not runs_dir.exists():
-        return {}, {s: 0 for s in STRATEGIES}
+        z = {s: 0 for s in STRATEGIES}
+        return {}, {}, z, z
 
     for path in sorted(runs_dir.glob("*.log")):
-        day = path.stem  # YYYY-MM-DD
+        day = path.stem
         if not re.match(r"\d{4}-\d{2}-\d{2}$", day):
             continue
         try:
@@ -94,43 +115,45 @@ def collect_counts() -> tuple[dict[str, dict[str, int]], dict[str, int]]:
             sid = _extract_strategy(line)
             if not sid:
                 continue
-            key = _dedupe_key(line, sid, day)
-            if key in seen:
+
+            raw_key = _raw_line_key(line, sid, day)
+            if raw_key not in raw_seen:
+                raw_seen.add(raw_key)
+                raw_counts[day][sid] += 1
+                raw_totals[sid] += 1
+
+            sym = _extract_underlying(line)
+            if not sym:
                 continue
-            seen.add(key)
-            counts[day][sid] += 1
-            totals[sid] += 1
+            ukey = f"{day}|{sid}|{sym}"
+            if ukey not in unique_seen:
+                unique_seen.add(ukey)
+                unique_counts[day][sid] += 1
+                unique_totals[sid] += 1
 
-    return dict(counts), {s: int(totals.get(s, 0)) for s in STRATEGIES}
+    return (
+        dict(unique_counts),
+        dict(raw_counts),
+        {s: int(unique_totals.get(s, 0)) for s in STRATEGIES},
+        {s: int(raw_totals.get(s, 0)) for s in STRATEGIES},
+    )
 
 
-def _est_days_to_n30(total_entries: int, active_days: int, avg_per_active: float) -> str:
-    if avg_per_active <= 0 or active_days <= 0:
-        if total_entries == 0:
-            return "inf (no entries yet)"
-        return "n/a"
-    exits_est = total_entries * EXIT_RATE_PROXY
-    if exits_est >= TARGET_EXITS:
-        return "0 (proxy already >=30 exits)"
-    need = TARGET_EXITS - exits_est
-    # expected exits per active day
-    exits_per_active = avg_per_active * EXIT_RATE_PROXY
-    if exits_per_active <= 0:
+def _est_days_to_n30(avg_unique_per_active: float) -> str:
+    if avg_unique_per_active <= 0:
+        return "inf (no unique entries yet)"
+    # ceil(30 / (avg * 0.80))
+    denom = avg_unique_per_active * EXIT_RATE_PROXY
+    if denom <= 0:
         return "inf"
-    # active days are sparse — scale by observed active-day frequency if possible
-    days_needed = need / exits_per_active
-    return f"~{days_needed:.0f} active signal-days (~{days_needed * 2:.0f} calendar trading days @ ~50% hit rate)"
+    days = math.ceil(TARGET_EXITS / denom)
+    return f"~{days} active signal-days"
 
 
-def build_report(counts: dict[str, dict[str, int]], totals: dict[str, int]) -> str:
+def _md_table(counts: dict[str, dict[str, int]], title: str) -> list[str]:
     days = sorted(counts.keys())
     lines = [
-        f"# Options signal frequency",
-        "",
-        f"_Generated {datetime.now().isoformat()}_",
-        "",
-        "Counts are unique ENTRY events from `logs/options_trial/runs/*.log` "
-        "(deduped by pending/order id when present).",
+        f"### {title}",
         "",
         "| Date       | S163 | S165 | S166 | S173 | S174 | Total |",
         "|------------|-----:|-----:|-----:|-----:|-----:|------:|",
@@ -144,32 +167,74 @@ def build_report(counts: dict[str, dict[str, int]], totals: dict[str, int]) -> s
         )
     if not days:
         lines.append("| _(no run logs)_ | 0 | 0 | 0 | 0 | 0 | 0 |")
+    lines.append("")
+    return lines
 
-    lines.extend(["", "## Per-strategy summary", ""])
-    lines.append("| Strategy | Total entries | Active days | Avg / active day | Est. days to n=30 exits* |")
-    lines.append("|----------|--------------:|------------:|-----------------:|--------------------------|")
 
+def build_report(
+    unique_counts: dict[str, dict[str, int]],
+    raw_counts: dict[str, dict[str, int]],
+    unique_totals: dict[str, int],
+    raw_totals: dict[str, int],
+) -> str:
+    days = sorted(set(unique_counts.keys()) | set(raw_counts.keys()))
+    lines = [
+        "# Options signal frequency",
+        "",
+        f"_Generated {datetime.now().isoformat()}_",
+        "",
+        "Headline counts are **unique (strategy, underlying, date)** from "
+        "`ENTRY` lines in `logs/options_trial/runs/*.log`.",
+        "Raw log-line counts (multi-bucket duplicates) are shown below for debug.",
+        "",
+    ]
+    lines.extend(_md_table(unique_counts, "Unique underlying symbols per day (headline)"))
+
+    lines.extend(["## Per-strategy summary (unique underlyings)", ""])
+    lines.append(
+        "| Strategy | Unique entries | Active days | Avg unique / active day | "
+        "Est. active days to n=30 exits* |"
+    )
+    lines.append(
+        "|----------|---------------:|------------:|------------------------:|"
+        "--------------------------------|"
+    )
     for sid in STRATEGIES:
-        total = totals.get(sid, 0)
-        active = sum(1 for d in days if counts[d].get(sid, 0) > 0)
+        total = unique_totals.get(sid, 0)
+        active = sum(1 for d in days if unique_counts.get(d, {}).get(sid, 0) > 0)
         avg = (total / active) if active else 0.0
-        est = _est_days_to_n30(total, active, avg)
-        lines.append(
-            f"| {sid} | {total} | {active} | {avg:.1f} | {est} |"
-        )
+        est = _est_days_to_n30(avg)
+        if total * EXIT_RATE_PROXY >= TARGET_EXITS:
+            est = "0 (proxy already >=30 exits)"
+        lines.append(f"| {sid} | {total} | {active} | {avg:.1f} | {est} |")
 
     lines.extend(
         [
             "",
-            f"\\* Proxy assumes {EXIT_RATE_PROXY:.0%} of entries become exits; "
-            f"target = {TARGET_EXITS} exits. Update when real exit rates are known.",
+            f"\\* Formula: `ceil({TARGET_EXITS} / (avg_unique_per_active_day * "
+            f"{EXIT_RATE_PROXY:.0%}))`. Update when real exit rates are known.",
             "",
+            "## Raw vs unique totals",
+            "",
+            "| Strategy | Raw log lines (includes multi-bucket duplicates) | Unique underlying symbols |",
+            "|----------|-------------------------------------------------:|--------------------------:|",
+        ]
+    )
+    for sid in STRATEGIES:
+        lines.append(
+            f"| {sid} | {raw_totals.get(sid, 0)} | {unique_totals.get(sid, 0)} |"
+        )
+    lines.append("")
+    lines.extend(_md_table(raw_counts, "Raw log lines per day (debug / multi-bucket)"))
+
+    lines.extend(
+        [
             "## Notes",
             "",
             "- Pre-router-fix (before 2026-07-17 commit `56660c9e`): S163/S166 "
-            "were starved by one-hit-per-symbol priority — expect zeros until fix is live.",
-            "- Controlled layout places one ENTRY per matching bucket×strategy, so "
-            "a single gap-down symbol can produce many ENTRY rows for S165 (etc.).",
+            "were starved — expect zeros until a post-fix entry-window gap-down day.",
+            "- Controlled layout places one ENTRY per matching bucket×strategy; "
+            "raw counts inflate, unique underlyings do not.",
             "",
         ]
     )
@@ -178,13 +243,14 @@ def build_report(counts: dict[str, dict[str, int]], totals: dict[str, int]) -> s
 
 def main() -> int:
     try:
-        counts, totals = collect_counts()
-        md = build_report(counts, totals)
+        unique_counts, raw_counts, unique_totals, raw_totals = collect_counts()
+        md = build_report(unique_counts, raw_counts, unique_totals, raw_totals)
         out_dir = TRIAL_ROOT / "reports"
         out_dir.mkdir(parents=True, exist_ok=True)
         out_path = out_dir / "signal_frequency.md"
         out_path.write_text(md, encoding="utf-8")
-        print(md.encode("utf-8", errors="replace").decode(sys.stdout.encoding or "utf-8", errors="replace"))
+        enc = sys.stdout.encoding or "utf-8"
+        print(md.encode("utf-8", errors="replace").decode(enc, errors="replace"))
         print(f"\nWrote {out_path}")
     except Exception as e:
         print(f"signal_frequency report failed (non-fatal): {e}")

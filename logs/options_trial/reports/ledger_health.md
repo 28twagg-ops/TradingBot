@@ -1,22 +1,26 @@
 # Ledger health — 2026-07-17
 
-_Generated 2026-07-17T18:20:39.319255_
+_Generated 2026-07-17T17:22:59.876643_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
+Baseline cutoff: **2026-07-06** (attribution fix start). WARN only after **2026-07-10** (ledger pairing stabilized); earlier unmatched entries = INFO debt.
+
 State file: OK
 
-| Check                 | Count | Status |
-|-----------------------|------:|--------|
-| Current stuck (state) |     0 | OK |
-| Orphaned lots (ledger)|   589 | WARN |
-| State/ledger mismat   |     0 | OK |
-| Missing exit records  |   589 | WARN |
-| Total open lots       |     0 | INFO |
-| Total closed lots     |   264 | INFO |
+| Check                       | Count | Status |
+|-----------------------------|------:|--------|
+| Current stuck (state)       |     0 | OK |
+| Orphaned lots (post-stable) |     0 | OK |
+| Missing exit records (post) |     0 | OK |
+| State/ledger mismatches     |     0 | OK |
+| Total open lots             |     0 | INFO |
+| Total closed lots           |   264 | INFO |
+| Pre-cutoff audit debt       |     0 | INFO |
+| Transition audit debt       |   589 | INFO |
 
 Notes:
 - **Current stuck** = open in `lab_state.json` and older than stuck threshold (actionable).
-- **Orphaned lots / missing exits** = deduped ledger entries with no matching exit (by lot_id or bucket|strategy|occ). High counts often reflect pre-2026-07-07 optimistic logging / lot_id churn — treat as audit debt, not necessarily live stuck risk, when current stuck = 0.
-
-_Orphaned ledger detail omitted (589 rows) — see note above on historical lot_id churn._
+- **Post-stable orphaned / missing exits** = actionable WARN (entry_date > 2026-07-10).
+- **Pre-cutoff debt** = entry_date < 2026-07-06 (INFO).
+- **Transition debt** = 2026-07-06..2026-07-10 lot_id churn after attribution fix (INFO, not WARN).

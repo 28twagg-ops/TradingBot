@@ -26,6 +26,12 @@ from options_lab import (
 
 EXIT_DAYS_MAX = 3
 STUCK_BUFFER_DAYS = 2  # weekend/holiday → stuck if age > EXIT_DAYS_MAX+2
+# Fill-attribution / OrderStatus.value fix era started ~2026-07-06.
+BASELINE_CUTOFF = date.fromisoformat("2026-07-06")
+# Ledger lot_id pairing was still noisy through 2026-07-10 (optimistic logging /
+# reconcile churn). WARN only on unmatched entries AFTER this inclusive date so
+# the daily monitor stays actionable (pre/transition debt = INFO).
+STABLE_AFTER = date.fromisoformat("2026-07-10")
 
 
 def _f(v, d=0.0) -> float:
@@ -123,6 +129,8 @@ def analyze(as_of: date | None = None) -> dict:
         return False
 
     orphaned_lots: list[dict] = []
+    pre_cutoff_debt: list[dict] = []
+    transition_debt: list[dict] = []
     for key, ent in entries_by_key.items():
         if has_exit_for_entry(ent):
             continue
@@ -130,17 +138,22 @@ def analyze(as_of: date | None = None) -> dict:
         if ed is None:
             continue
         age = (as_of - ed).days
-        if age > stuck_after:
-            orphaned_lots.append(
-                {
-                    "lot_id": ent.get("lot_id") or "?",
-                    "strategy_id": ent.get("strategy_id") or "?",
-                    "symbol": ent.get("symbol") or ent.get("occ") or "?",
-                    "entry_day": ed.isoformat(),
-                    "age_days": age,
-                    "key": key,
-                }
-            )
+        if age <= stuck_after:
+            continue
+        row = {
+            "lot_id": ent.get("lot_id") or "?",
+            "strategy_id": ent.get("strategy_id") or "?",
+            "symbol": ent.get("symbol") or ent.get("occ") or "?",
+            "entry_day": ed.isoformat(),
+            "age_days": age,
+            "key": key,
+        }
+        if ed < BASELINE_CUTOFF:
+            pre_cutoff_debt.append(row)
+        elif ed <= STABLE_AFTER:
+            transition_debt.append(row)
+        else:
+            orphaned_lots.append(row)
 
     state = _load_state()
     state_open: list[dict] = []
@@ -182,7 +195,7 @@ def analyze(as_of: date | None = None) -> dict:
                 }
             )
 
-    # Missing exit: deduped entry, no exit, not in state, older than stuck buffer
+    # Missing exit: post-cutoff deduped entry, no exit, not in state, older than stuck buffer
     missing_exit_records = [
         o for o in orphaned_lots
         if o.get("lot_id") not in state_open_ids
@@ -192,8 +205,14 @@ def analyze(as_of: date | None = None) -> dict:
 
     return {
         "as_of": as_of.isoformat(),
+        "baseline_cutoff": BASELINE_CUTOFF.isoformat(),
+        "stable_after": STABLE_AFTER.isoformat(),
         "orphaned_lots": orphaned_lots,
         "orphaned_count": len(orphaned_lots),
+        "pre_cutoff_debt": pre_cutoff_debt,
+        "pre_cutoff_debt_count": len(pre_cutoff_debt),
+        "transition_debt": transition_debt,
+        "transition_debt_count": len(transition_debt),
         "current_stuck": current_stuck,
         "current_stuck_count": len(current_stuck),
         "state_ledger_mismatch": state_missing_entry + state_open_but_exited,
@@ -224,28 +243,36 @@ def write_report(result: dict) -> Path:
         f"Stuck threshold: **>{result['stuck_after_days']}** days "
         f"(EXIT_DAYS_MAX={EXIT_DAYS_MAX} + buffer={STUCK_BUFFER_DAYS}).",
         "",
+        f"Baseline cutoff: **{result.get('baseline_cutoff', BASELINE_CUTOFF.isoformat())}** "
+        "(attribution fix start). "
+        f"WARN only after **{result.get('stable_after', STABLE_AFTER.isoformat())}** "
+        "(ledger pairing stabilized); earlier unmatched entries = INFO debt.",
+        "",
         f"State file: {'OK' if result['state_available'] else 'MISSING/UNREADABLE'}",
         "",
-        "| Check                 | Count | Status |",
-        "|-----------------------|------:|--------|",
-        f"| Current stuck (state) | {result['current_stuck_count']:5d} | "
+        "| Check                       | Count | Status |",
+        "|-----------------------------|------:|--------|",
+        f"| Current stuck (state)       | {result['current_stuck_count']:5d} | "
         f"{st(result['current_stuck_count'])} |",
-        f"| Orphaned lots (ledger)| {result['orphaned_count']:5d} | "
+        f"| Orphaned lots (post-stable) | {result['orphaned_count']:5d} | "
         f"{st(result['orphaned_count'])} |",
-        f"| State/ledger mismat   | {result['state_mismatch_count']:5d} | "
-        f"{st(result['state_mismatch_count'])} |",
-        f"| Missing exit records  | {result['missing_exit_count']:5d} | "
+        f"| Missing exit records (post) | {result['missing_exit_count']:5d} | "
         f"{st(result['missing_exit_count'])} |",
-        f"| Total open lots       | {result['total_open_lots']:5d} | INFO |",
-        f"| Total closed lots     | {result['total_closed_lots']:5d} | INFO |",
+        f"| State/ledger mismatches     | {result['state_mismatch_count']:5d} | "
+        f"{st(result['state_mismatch_count'])} |",
+        f"| Total open lots             | {result['total_open_lots']:5d} | INFO |",
+        f"| Total closed lots           | {result['total_closed_lots']:5d} | INFO |",
+        f"| Pre-cutoff audit debt       | {result.get('pre_cutoff_debt_count', 0):5d} | INFO |",
+        f"| Transition audit debt       | {result.get('transition_debt_count', 0):5d} | INFO |",
         "",
         "Notes:",
         "- **Current stuck** = open in `lab_state.json` and older than stuck threshold "
         "(actionable).",
-        "- **Orphaned lots / missing exits** = deduped ledger entries with no matching "
-        "exit (by lot_id or bucket|strategy|occ). High counts often reflect "
-        "pre-2026-07-07 optimistic logging / lot_id churn — treat as audit debt, "
-        "not necessarily live stuck risk, when current stuck = 0.",
+        f"- **Post-stable orphaned / missing exits** = actionable WARN "
+        f"(entry_date > {STABLE_AFTER.isoformat()}).",
+        f"- **Pre-cutoff debt** = entry_date < {BASELINE_CUTOFF.isoformat()} (INFO).",
+        f"- **Transition debt** = {BASELINE_CUTOFF.isoformat()}..{STABLE_AFTER.isoformat()} "
+        "lot_id churn after attribution fix (INFO, not WARN).",
         "",
     ]
 
@@ -298,21 +325,23 @@ def main() -> int:
         print(f"## Ledger health — {result['as_of']}")
         rows = [
             ("Current stuck (state)", result["current_stuck_count"], True),
-            ("Orphaned lots (ledger)", result["orphaned_count"], True),
-            ("State/ledger mismat", result["state_mismatch_count"], True),
-            ("Missing exit records", result["missing_exit_count"], True),
+            ("Orphaned lots (post-stable)", result["orphaned_count"], True),
+            ("Missing exit records (post)", result["missing_exit_count"], True),
+            ("State/ledger mismatches", result["state_mismatch_count"], True),
             ("Total open lots", result["total_open_lots"], False),
             ("Total closed lots", result["total_closed_lots"], False),
+            ("Pre-cutoff audit debt", result.get("pre_cutoff_debt_count", 0), False),
+            ("Transition audit debt", result.get("transition_debt_count", 0), False),
         ]
-        print("| Check                 | Count | Status |")
-        print("|-----------------------|------:|--------|")
+        print("| Check                       | Count | Status |")
+        print("|-----------------------------|------:|--------|")
         for name, n, warnable in rows:
             if not warnable:
                 st = "INFO"
             else:
                 st = "WARN" if n > 0 else "OK"
             mark = " <<<" if st == "WARN" else ""
-            print(f"| {name:<22} | {n:5d} | {st} |{mark}")
+            print(f"| {name:<27} | {n:5d} | {st} |{mark}")
         print(f"\nWrote {path}")
     except Exception as e:
         print(f"ledger_health failed (non-fatal): {e}")

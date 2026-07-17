@@ -67,6 +67,7 @@ GITHUB SECRETS required:
 """
 
 import os, json, time, logging, csv, math, random
+import socket
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, date
 from pathlib import Path
@@ -84,6 +85,14 @@ from alpaca.trading.enums    import (OrderSide, TimeInForce, QueryOrderStatus,
 from alpaca.data.historical  import StockHistoricalDataClient
 from alpaca.data.requests    import StockBarsRequest, StockLatestQuoteRequest
 from alpaca.data.timeframe   import TimeFrame
+
+# Cap hung network calls (Alpaca / yfinance / Wikipedia). Without this, a stalled
+# socket can block the entire GHA job indefinitely (see May 27 timeout crash).
+socket.setdefaulttimeout(45)
+
+# alpaca-py TradingClient.__init__ does not accept timeout= (as of current pin).
+# TODO: if a future alpaca-py adds timeout, pass timeout=30 to TradingClient(...).
+# Until then, socket.setdefaulttimeout above is the belt-and-suspenders cap.
 
 
 # =============================================================================
@@ -3931,6 +3940,7 @@ if __name__ == "__main__":
     log.info(f"Mode: {mode}")
 
     client = TradingClient(API_KEY, API_SECRET, paper=PAPER_TRADING)
+    # Note: TradingClient has no timeout= kwarg — see socket.setdefaulttimeout(45) above.
     acct   = get_account_safe(client)
     equity = float(acct.equity)
     cash   = float(acct.cash)
