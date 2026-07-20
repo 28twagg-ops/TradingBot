@@ -49,7 +49,7 @@ ORPHAN_STRATEGY = "ORPHAN"
 # Strategies paused from new entries (layout buckets stay for audit).
 # Reflected P&L / leaderboard exclude these by default.
 DROPPED_STRATEGIES: frozenset[str] = frozenset(
-    s.strip() for s in os.environ.get("OPTIONS_DROPPED_STRATEGIES", "S174").split(",")
+    s.strip() for s in os.environ.get("OPTIONS_DROPPED_STRATEGIES", "S174,S173").split(",")
     if s.strip()
 )
 ORDER_FETCH_LIMIT = 500

@@ -314,8 +314,9 @@ def _experiment_progress(selection_rows: list[dict], ledger: dict[str, dict]) ->
 
 def _rb_leaderboard() -> list[dict]:
     path = REPO / "logs" / "transactions.csv"
+    disabled = {"GapDown", "VolumeSpike"}
     if not path.exists():
-        return []
+        return [], []
     by: dict[str, list[float]] = {}
     by_d: dict[str, list[float]] = {}
     with path.open(encoding="utf-8", newline="") as f:
@@ -325,13 +326,14 @@ def _rb_leaderboard() -> list[dict]:
             strat = (r.get("strategy") or "unknown").strip() or "unknown"
             by.setdefault(strat, []).append(_f(r.get("pnl_pct")))
             by_d.setdefault(strat, []).append(_f(r.get("pnl_dollar")))
-    rows = []
+    active_rows = []
+    disabled_rows = []
     for strat, pnls in by.items():
         dollars = by_d.get(strat, [])
         gw = sum(d for d in dollars if d > 0)
         gl = abs(sum(d for d in dollars if d < 0))
         pf = (gw / gl) if gl > 0 else (999.0 if gw > 0 else 0.0)
-        rows.append({
+        row = {
             "strategy": strat,
             "n": len(pnls),
             "wr": round(100.0 * sum(1 for p in pnls if p > 0) / len(pnls), 1),
@@ -340,9 +342,23 @@ def _rb_leaderboard() -> list[dict]:
             "p10": round(_percentile(pnls, 0.10), 2),
             "pf": round(pf, 2),
             "total": round(sum(dollars), 2),
-        })
-    rows.sort(key=lambda x: (-x["pf"], -x["avg"]))
-    return rows
+        }
+        if strat in disabled:
+            row["note"] = "Disabled 2026-07-20"
+            disabled_rows.append(row)
+        else:
+            active_rows.append(row)
+    # Ensure disabled names appear even with no sells in window
+    have = {r["strategy"] for r in disabled_rows}
+    for name in sorted(disabled):
+        if name not in have:
+            disabled_rows.append({
+                "strategy": name, "n": 0, "wr": 0.0, "avg": 0.0, "med": 0.0,
+                "p10": 0.0, "pf": 0.0, "total": 0.0, "note": "Disabled 2026-07-20",
+            })
+    active_rows.sort(key=lambda x: (-x["pf"], -x["avg"]))
+    disabled_rows.sort(key=lambda x: x["strategy"])
+    return active_rows, disabled_rows
 
 
 def _stale(last_run: str | None, minutes: int = 20) -> bool:
@@ -365,6 +381,7 @@ def build_data() -> dict:
     health = _ledger_health()
     ledger = _ledger_arm_stats()
     router = _router_detail()
+    rb_active, rb_disabled = _rb_leaderboard()
     generated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     return {
         "generated_at": generated,
@@ -373,10 +390,11 @@ def build_data() -> dict:
             "today_realized": today["realized"],
             "today_sells": today["sells"],
             "status": "STALE" if _stale(rb.get("last_run")) else "RUNNING",
-            "leaderboard": _rb_leaderboard(),
+            "leaderboard": rb_active,
+            "disabled": rb_disabled,
         },
         "options": {
-            "active_strategies": 7,
+            "active_strategies": 6,
             "keep": sel["keep"],
             "watch": sel["watch"],
             "drop": sel["drop"],
@@ -451,6 +469,8 @@ td.mono {{ font-family:"JetBrains Mono",monospace; }}
 tr.keep td:first-child {{ box-shadow:inset 3px 0 0 var(--green); }}
 tr.watch td:first-child {{ box-shadow:inset 3px 0 0 var(--yellow); }}
 tr.drop td:first-child {{ box-shadow:inset 3px 0 0 var(--red); }}
+tr.disabled {{ opacity:0.55; color:var(--muted); }}
+tr.disabled td:first-child {{ box-shadow:inset 3px 0 0 var(--muted); }}
 .heat {{ display:grid; gap:4px; overflow-x:auto; }}
 .heat-row {{ display:grid; grid-template-columns:90px repeat(auto-fit,minmax(36px,1fr)); gap:4px; align-items:center; }}
 .heat-cell {{ height:28px; border-radius:4px; background:#21262d; font-family:"JetBrains Mono",monospace; font-size:0.7rem;
@@ -488,7 +508,8 @@ svg.spark {{ width:100%; height:120px; background:var(--panel); border:1px solid
   <section>
     <h3>Rubber Band Strategy Leaderboard</h3>
     <div class="card" style="padding:0; overflow:auto"><table id="rbBoard"></table></div>
-    <div class="muted" style="margin-top:8px;font-size:0.85rem">Equal weight since 2026-07-18 — schedule not enforced</div>
+    <div class="muted" style="margin-top:8px;font-size:0.85rem">Equal weight since 2026-07-18 — schedule not enforced · GapDown + VolumeSpike disabled 2026-07-20</div>
+    <div class="card" style="padding:0; overflow:auto; margin-top:12px"><table id="rbDisabled"></table></div>
   </section>
 </div>
 <script>
@@ -637,6 +658,18 @@ function renderRbBoard() {{
   }});
   html += '</tbody>';
   document.getElementById('rbBoard').innerHTML = html;
+  const dis = (DATA.rubber_band&&DATA.rubber_band.disabled)||[];
+  let dhtml = `<thead><tr><th colspan="9" style="color:var(--muted)">Disabled strategies (historical stats)</th></tr>
+    <tr><th></th><th>Strategy</th><th>n</th><th>WR%</th><th>Avg%</th><th>Med%</th><th>p10%</th><th>PF</th><th>Note</th></tr></thead><tbody>`;
+  dis.forEach(r => {{
+    dhtml += `<tr class="disabled"><td></td><td>${{r.strategy}}</td>
+      <td class="mono">${{r.n}}</td><td class="mono">${{r.wr}}</td>
+      <td class="mono">${{fmtPct(r.avg)}}</td><td class="mono">${{fmtPct(r.med)}}</td>
+      <td class="mono">${{fmtPct(r.p10)}}</td><td class="mono">${{Number(r.pf||0).toFixed(2)}}</td>
+      <td class="muted">${{r.note||'Disabled 2026-07-20'}}</td></tr>`;
+  }});
+  dhtml += '</tbody>';
+  document.getElementById('rbDisabled').innerHTML = dhtml;
 }}
 document.getElementById('gen').textContent = DATA.generated_at;
 renderCards(); renderSpark(); renderBoard(); renderHeat(); renderExps(); renderRbBoard();

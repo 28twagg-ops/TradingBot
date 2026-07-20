@@ -110,13 +110,12 @@ class StrategyConfig:
     scanner: object
 
 
-# Live scan list — S174 paused (2026-07-13): negative median / drop recommendation.
-# Historical ledger still contains S174 exits for audit; see DROPPED_STRATEGIES
+# Live scan list — S174 ended (2026-07-16/20); S173 ended new entries (2026-07-20).
+# Historical ledger still contains S173/S174 exits for audit; see DROPPED_STRATEGIES
 # in options_lab for reflected P&L that excludes them.
 # P2B (2026-07-18): S164=1-DTE, S168=5-DTE GapDown ATM; S165=3-DTE control; S163=7-DTE.
 # P2C (2026-07-18): S167=1-strike OTM ~3-DTE (same gap signal as S165).
 PAPER_STRATEGIES: list[StrategyConfig] = [
-    StrategyConfig("S173", "MomReversal long call", 1, 0, 7, scan_mom_reversal),
     StrategyConfig("S165", "GapDown long call 3 DTE", 3, 1, 7,
                    lambda sub, sym, today, mp: scan_gap_down(
                        sub, sym, today, GAP_DOWN_THRESH,
@@ -146,6 +145,7 @@ PAPER_STRATEGIES: list[StrategyConfig] = [
 # Kept for reports / name lookup only — not scanned.
 DROPPED_PAPER_STRATEGIES: list[StrategyConfig] = [
     StrategyConfig("S174", "RubberBand long call EOD", 7, 2, 14, scan_rubber_band),
+    StrategyConfig("S173", "MomReversal long call", 1, 0, 7, scan_mom_reversal),
 ]
 
 ALL_KNOWN_STRATEGIES: list[StrategyConfig] = PAPER_STRATEGIES + DROPPED_PAPER_STRATEGIES

@@ -150,6 +150,19 @@ MIN_TRADE_SIZE       = 0.01   # effectively no floor while keeping sizing math s
 EXIT_DAYS_MAX      = 3       # OOS-validated: 3d beats 5d (Test 10 rolling 16-window avg: +153.9% vs +127.7%)
 EXIT_STOP_LOSS     = -0.005  # OOS-validated: -0.5% beats -2.0% (16/16 rolling windows, 20yr)
 
+# Strategies disabled after live performance analysis (2026-07-20).
+# Signal functions (_gd, _vs) are retained for potential re-enable.
+# Disable evidence:
+#   GapDown:    n=102, PF=0.49, avg=-0.99%, total=-$12.63, t***
+#               77/102 exits were stop_loss averaging -2.14%
+#               June primary month drag confirmed consistent underperf
+#   VolumeSpike: n=44, PF=0.41, avg=-0.56%, total=-$1.05, t***
+#               39/44 exits were stop_loss, avg hold 0.3d, WR 11%
+DISABLED_STRATEGIES = {
+    "GapDown",
+    "VolumeSpike",
+}
+
 # ---- Extended-hours selling --------------------------------------------------
 # Post-market limit sells (4pm–8pm ET) using DAY orders (DAY allowed on
 # fractional shares; GTC is not). Limit = cur × 0.9985 (wider spread than
@@ -721,6 +734,8 @@ def get_signals(ticker, df, month, rgm):
                       "GapDown", "VolumeSpike", "Pullback50"]
     sigs = []
     for name in all_strategies:
+        if name in DISABLED_STRATEGIES:
+            continue
         s = (_rb(ticker, df, prm)  if name == "RubberBand"   else
              _rsi(ticker, df)      if name == "RSIRecovery"  else
              _52(ticker, df)       if name == "52wkLow"      else
@@ -3319,6 +3334,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     row("Date",     str(today))
     row("Universe", UNIVERSE)
     row("Month",    f"{MN[month]}: {sc['p']} + {sc['s']} (display only — schedule not enforced)")
+    row("Disabled", f"{', '.join(sorted(DISABLED_STRATEGIES))} (see DISABLED_STRATEGIES)")
     row("Regime",   rgm.upper())
     row("Exit",     f"midline / stop{EXIT_STOP_LOSS*100:.1f}% / {EXIT_DAYS_MAX}d max")
     ftr()

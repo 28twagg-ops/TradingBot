@@ -2,14 +2,14 @@
 options_morning_bot.py — Phase 4 paper bot: multi-strategy options (PAPER).
 
 Runs research-ranked strategies on the Alpaca PAPER account:
-  S173 MomReversal long call
   S165 GapDown long call 3 DTE (control)
   S164 GapDown ATM 1-DTE — P2B
   S168 GapDown ATM 5-DTE — P2B
   S167 GapDown 1-strike OTM ~3-DTE — P2C (reclaims S174 buckets)
   S166 GapDown strong call (gap <= -3%)
   S163 A1 GapDown ATM call EOD (~7 DTE / P2B 7-DTE arm)
-  S174 RubberBand long call EOD — DROPPED (no new entries; excluded from reflected P&L)
+  S173 MomReversal long call — DROPPED 2026-07-20 (no new entries; open lots still exit)
+  S174 RubberBand long call EOD — DROPPED permanent (no new entries; excluded from reflected P&L)
 
 P&L is tracked and logged as **return % per trade** (not dollar matrices).
 
