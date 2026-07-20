@@ -1,0 +1,157 @@
+19:45:36  INFO      Mode: scan
+19:45:37  INFO        [positions] 1/1 (1 valid)
+19:45:37  INFO        SELL LIMIT COP  qty=0.76995436  limit=$115.90  id=d6f8be04-4edd-4be8-a657-b35b9579d3d7
+19:46:08  INFO        SELL LIMIT filled COP (confirmed by position check)
+19:46:08  INFO        TX logged: SELL COP  P&L 0.99%
+19:46:08  INFO        Universe cache hit: 903 tickers (tickers_2026-07-20.json)
+19:46:09  INFO        [universe] 40/903 (40 valid)
+19:46:10  INFO        [universe] 80/903 (80 valid)
+19:46:12  INFO        [universe] 120/903 (120 valid)
+19:46:13  INFO        [universe] 160/903 (160 valid)
+19:46:15  INFO        [universe] 200/903 (199 valid)
+19:46:22  INFO        [universe] 240/903 (238 valid)
+19:46:32  INFO        [universe] 280/903 (278 valid)
+19:46:46  INFO        [universe] 320/903 (318 valid)
+19:46:59  INFO        [universe] 360/903 (358 valid)
+19:47:10  INFO        [universe] 400/903 (397 valid)
+19:47:20  INFO        [universe] 440/903 (437 valid)
+19:47:34  INFO        [universe] 480/903 (477 valid)
+19:47:44  INFO        [universe] 520/903 (517 valid)
+19:47:58  INFO        [universe] 560/903 (556 valid)
+19:48:08  INFO        [universe] 600/903 (596 valid)
+19:48:22  INFO        [universe] 640/903 (636 valid)
+19:48:32  INFO        [universe] 680/903 (676 valid)
+19:48:46  INFO        [universe] 720/903 (715 valid)
+19:48:59  INFO        [universe] 760/903 (755 valid)
+19:49:09  INFO        [universe] 800/903 (795 valid)
+19:49:23  INFO        [universe] 840/903 (834 valid)
+19:49:33  INFO        [universe] 880/903 (874 valid)
+19:49:40  INFO        [universe] 903/903 (897 valid)
+19:49:42  ERROR       BUY FAILED AMZN: {"code":40010001,"message":"client_order_id must be unique"}
+19:49:42  ERROR       BUY FAILED BRK-B: {"code":42210000,"message":"asset \"BRK-B\" not found"}
+19:49:43  ERROR       BUY FAILED CI: {"code":40010001,"message":"client_order_id must be unique"}
+19:49:43  ERROR       BUY FAILED KO: {"code":40010001,"message":"client_order_id must be unique"}
+19:49:43  INFO        BUY  MAA  $96.36  [Pullback50]  id=f71715ae-c895-415e-9476-c5718356881e
+19:49:43  INFO        BUY  OXY  $96.36  [Pullback50]  id=2fa0f3e4-e5cb-475d-ac5c-c710e9eed7fb
+19:49:43  INFO        BUY  TPR  $96.36  [Pullback50]  id=9260e312-5d4e-48d9-8b77-ae7d8d3f7fc9
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $481.82|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-20|
+|  Universe                                                          both|
+|  Mon~  Jul: 52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $481.82|
+|  Cash                                                           $392.54|
+|  Reserve                                          $24.09  (always kept)|
+|  Available                                    $368.45  (for new trades)|
+|  Trade size             $96.36  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (1 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  COP      Pullback50      $89.28     $114.81  $115.95  +1.0%   $+0.88  |
+|                                                                        |
+|  Total invested                                                  $89.28|
+|  Total open P&L                                                  $+0.88|
+|  Buys today: 0  |  entry cap: 4  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (47531.5m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  COP  P&L +1.0%  $+0.88                           EXIT: midline (+1.0%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 0|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50 (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  16                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AMZN     Pullback50      eq     $249.79  63.1   -0.77   50MA bounce (-|
+|  BRK-B    Pullback50      eq     $490.97  44.7   -1.82   50MA bounce (+|
+|  CI       Pullback50      eq     $284.74  54.3   -0.88   50MA bounce (-|
+|  KO       Pullback50      eq     $81.73   47.4   -1.05   50MA bounce (+|
+|  HAS      VolumeSpike     eq     $81.45   41.5   3.31    vol z=3.3 5d=+|
+|  MAA      Pullback50      eq     $133.84  36.1   -1.88   50MA bounce (-|
+|  OXY      Pullback50      eq     $55.20   72.6   -1.23   50MA bounce (+|
+|  TPR      Pullback50      eq     $140.74  40.2   -1.63   50MA bounce (-|
+|  TJX      Pullback50      eq     $155.90  61.7   -1.29   50MA bounce (-|
+|  WMB      Pullback50      eq     $74.20   46.5   -1.46   50MA bounce (-|
+|  CHRD     Pullback50      eq     $129.35  68.7   -1.47   50MA bounce (-|
+|  MUR      Pullback50      eq     $36.83   63.8   -0.91   50MA bounce (+|
+|  MTDR     Pullback50      eq     $53.53   67.8   -1.96   50MA bounce (-|
+|  NOV      Pullback50      eq     $19.60   67.7   -1.09   50MA bounce (-|
+|  PATH     VolumeSpike     eq     $12.26   79.9   2.98    vol z=3.0 5d=+|
+|  VNOM     Pullback50      eq     $44.47   61.5   -1.56   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AMZN  Pullback50                                   $96.36|
+|    ENTER [eq] BRK-B  Pullback50                                  $96.36|
+|    ENTER [eq] CI  Pullback50                                     $96.36|
+|    ENTER [eq] KO  Pullback50                                     $96.36|
+|    ENTER [eq] MAA  Pullback50                                    $96.36|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] OXY  Pullback50                                    $96.36|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] TPR  Pullback50                                    $96.36|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] TJX  Pullback50                                    $96.36|19:49:43  INFO        BUY  TJX  $96.36  [Pullback50]  id=555184a4-36df-4283-9026-7d0e4e9487d9
+19:49:43  INFO        BUY  WMB  $72.25  [Pullback50]  id=f910e6ac-7227-4773-80a8-c904b4b73cb1
