@@ -132,8 +132,11 @@ UNIVERSE = "both"
 #     Reduces total return by ~52pp and OOS by ~18pp vs no reduction.
 #     Even underperforming months generate enough profitable trades at
 #     full sizing to outweigh the savings from cutting size.
-SEASONAL_SIZE_PCT    = 0.20   # primary + secondary scheduled strategies
-OFFSCHEDULE_SIZE_PCT = 0.20   # OOS-validated: 20% beats 12% by +121pp (Test 18 2026-05-10)
+# Schedule removal 2026-07-18: SEASONAL_SIZE_PCT no longer used.
+# All strategies use OFFSCHEDULE_SIZE_PCT = 0.20 regardless of month.
+# SCHEDULE dict retained for reference and display only.
+SEASONAL_SIZE_PCT    = 0.20   # RETAINED (unused for sizing since 2026-07-18 schedule removal)
+OFFSCHEDULE_SIZE_PCT = 0.20   # all strategies equal weight (schedule removed 2026-07-18)
 CASH_RESERVE_PCT     = 0.05   # sim-validated at 5% (Test 18)
 MIN_TRADE_SIZE       = 0.01   # effectively no floor while keeping sizing math safe
 
@@ -228,6 +231,9 @@ W = 72   # display box inner width
 
 # =============================================================================
 #  CALENDAR STRATEGY SCHEDULE  (v7 bake-off validated)
+#  DISPLAY / REFERENCE ONLY since 2026-07-18 — does NOT affect entry priority
+#  or sizing. Live data (May–Jul 2026): off-schedule WR 34% vs scheduled 21%.
+#  All 7 strategies run every day at OFFSCHEDULE_SIZE_PCT.
 #
 #  Changes from v6:
 #    - GoldenCross REMOVED (negative Sharpe, lost money)
@@ -701,12 +707,11 @@ def _rsi(ticker, df):
 
 def get_signals(ticker, df, month, rgm):
     """Check ALL 7 strategies every day.
-    Signals from the monthly scheduled pair are tagged seasonal=True and
-    get entry priority when cash is tight (sorted first).
-    Seasonal signals get SEASONAL_SIZE_PCT; all others get OFFSCHEDULE_SIZE_PCT.
+
+    Schedule removal 2026-07-18: every hit is tagged seasonal=False so all
+    strategies share equal entry priority and OFFSCHEDULE_SIZE_PCT sizing.
+    The SCHEDULE dict is display/reference only.
     """
-    sc = SCHEDULE[month]
-    seasonal_set = {sc["p"], sc["s"]}
     # Bear override REMOVED 2026-05-10: Test 16 shows following monthly schedule
     # in bear regime outperforms the 52wkLow+MomReversal override (2/3 OOS windows).
     # The override was never validated before; now tested, it loses OOS.
@@ -724,10 +729,10 @@ def get_signals(ticker, df, month, rgm):
              _vs(ticker, df)       if name == "VolumeSpike"  else
              _pb(ticker, df)       if name == "Pullback50"   else None)
         if s:
-            s["seasonal"] = (name in seasonal_set)
+            s["seasonal"] = False  # schedule removed 2026-07-18: all strategies equal
             sigs.append(s)
-    # Seasonal signals first, then alphabetical within each tier
-    sigs.sort(key=lambda x: (not x["seasonal"], x["strategy"]))
+    # Deterministic order only — no seasonal priority tier
+    sigs.sort(key=lambda x: x["strategy"])
     return sigs
 
 
@@ -2231,7 +2236,7 @@ def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells
          f"| Regime | {rgm.upper()} |",
          f"| Universe | {UNIVERSE} |",
         f"| Exit mode | midline / stop{EXIT_STOP_LOSS*100:.1f}% / {EXIT_DAYS_MAX}d max |",
-         f"| Strategies | {sc['p']} + {sc['s']} |", "",
+         f"| Strategies | {sc['p']} + {sc['s']} (display only — schedule not enforced) |", "",
          "## Holdings"]
     if positions:
         L += ["| Ticker | Strategy | Invested | Entry | Now | P&L% | P&L$ | Days |",
@@ -2424,7 +2429,7 @@ def write_weekly(client, equity, cash):
     div()
     row("Date",            f"{today}  ({MN[today.month]})")
     row("Regime",          rgm.upper())
-    row("Strategy",        f"{sc['p']}  +  {sc['s']}")
+    row("Strategy",        f"{sc['p']}  +  {sc['s']} (display only — schedule not enforced)")
     row("Execution",       "Summary mode only (no orders submitted)")
     row("Buys today",    f"{pdt_used}")
     row("Cash-based cap",  f"{wk_max_t} max trades with current available cash")
@@ -3313,7 +3318,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     row("Mode",     "PAPER" if PAPER_TRADING else "*** LIVE ***")
     row("Date",     str(today))
     row("Universe", UNIVERSE)
-    row("Month",    f"{MN[month]}: {sc['p']} + {sc['s']}")
+    row("Month",    f"{MN[month]}: {sc['p']} + {sc['s']} (display only — schedule not enforced)")
     row("Regime",   rgm.upper())
     row("Exit",     f"midline / stop{EXIT_STOP_LOSS*100:.1f}% / {EXIT_DAYS_MAX}d max")
     ftr()
@@ -3323,8 +3328,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     row("Cash",      f"${cash:,.2f}")
     row("Reserve",   f"${reserve:,.2f}  (always kept)")
     row("Available",     f"${avail:,.2f}  (for new trades)")
-    row("Seasonal trade",  f"${equity*SEASONAL_SIZE_PCT:,.2f}  ({SEASONAL_SIZE_PCT*100:.0f}% -- scheduled strategies)")
-    row("Off-sched trade", f"${equity*OFFSCHEDULE_SIZE_PCT:,.2f}  ({OFFSCHEDULE_SIZE_PCT*100:.0f}% -- other strategies)")
+    row("Trade size", f"${equity*OFFSCHEDULE_SIZE_PCT:,.2f}  ({OFFSCHEDULE_SIZE_PCT*100:.0f}% per signal — all strategies equal)")
     ftr()
 
     positions = enrich(client, get_positions(client))
@@ -3641,7 +3645,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         all_sigs = list(cached_plan.get("signals", []))
         hdr("SIGNAL SCAN")
         row(f"Month: {MN[month]}  |  Regime: {rgm.upper()}")
-        row(f"Primary: {sc['p']}  |  Secondary: {sc['s']}")
+        row(f"Primary: {sc['p']}  |  Secondary: {sc['s']} (display only — schedule not enforced)")
         row("Source", "cached prep plan")
         row("Universe scanned in prep", str(cached_plan.get("scan_universe_count", 0)))
         ftr()
@@ -3651,7 +3655,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         all_sigs = list(cached_plan.get("signals", []))
         hdr("SIGNAL SCAN")
         row(f"Month: {MN[month]}  |  Regime: {rgm.upper()}")
-        row(f"Primary: {sc['p']}  |  Secondary: {sc['s']}")
+        row(f"Primary: {sc['p']}  |  Secondary: {sc['s']} (display only — schedule not enforced)")
         row("Source", f"cached signals ({signals_note})")
         row("Universe scanned in prep", str(cached_plan.get("scan_universe_count", 0)))
         ftr()
@@ -3662,7 +3666,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
 
         hdr("SIGNAL SCAN")
         row(f"Month: {MN[month]}  |  Regime: {rgm.upper()}")
-        row(f"Primary: {sc['p']}  |  Secondary: {sc['s']}")
+        row(f"Primary: {sc['p']}  |  Secondary: {sc['s']} (display only — schedule not enforced)")
         row("Source", "live scan")
         ftr()
         all_sigs = []
@@ -3692,7 +3696,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
              widths=[7,14,5,7,5,6,20])
         div()
         for s in all_sigs:
-            tier = "SEAS" if s.get("seasonal") else "off"
+            tier = "eq"  # schedule removed — all strategies equal weight
             trow(s["ticker"], s["strategy"], tier, f"${s['close']:.2f}",
                  f"{s.get('rsi',0):.1f}", f"{s.get('vol_z',0):.2f}",
                  s.get("trigger",""), widths=[7,14,5,7,5,6,20])
@@ -3705,8 +3709,8 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         else mode_name == "scan"
     )
 
-    # ── Sort signals: seasonal first so they always get cash priority ────
-    all_sigs.sort(key=lambda s: (0 if s.get("seasonal") else 1))
+    # ── Deterministic sort only (no seasonal cash priority) ──────────────
+    all_sigs.sort(key=lambda s: s["strategy"])
 
     if not allow_entries:
         hdr("ENTRY ORDERS")
@@ -3797,48 +3801,28 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
                         row(f"  BUY SUBMITTED [{group}] {ticker}",
                             "fill pending — batched confirmation after entries")
         else:
-            # ── Signal-scaled position sizing (standard mode) ───────────────
+            # ── Equal-weight position sizing (schedule removed 2026-07-18) ─
             n_viable = len(viable)
             n_slots = min(n_viable, max_trades)
             hdr("ENTRY ORDERS")
             if n_slots <= 0:
                 row("Skipped", f"no entry slots (max_trades={max_trades})")
             else:
-                n_sea_pending = sum(1 for s in viable if s.get("seasonal"))
-                equal_share = avail / n_slots
-                sea_da = max(MIN_TRADE_SIZE,
-                             min(equity * SEASONAL_SIZE_PCT, equal_share))
-                off_da = max(MIN_TRADE_SIZE,
-                             min(equity * OFFSCHEDULE_SIZE_PCT,
-                                 equal_share * (OFFSCHEDULE_SIZE_PCT / SEASONAL_SIZE_PCT)))
-                scale_active = equal_share < equity * SEASONAL_SIZE_PCT
-                if scale_active and n_viable > 1:
-                    row(f"Signal scaling: {n_viable} signals / {n_slots} slots → "
-                        f"sea=${sea_da:.0f} off=${off_da:.0f}  "
-                        f"(max sea=${equity*SEASONAL_SIZE_PCT:.0f} off=${equity*OFFSCHEDULE_SIZE_PCT:.0f})")
-                n_unfilled_sea = n_sea_pending
                 for sig in all_sigs:
                     ticker = sig["ticker"]; strategy = sig["strategy"]
-                    is_seasonal = sig.get("seasonal", False)
                     skip = ""
                     if not entry_slot_ok(entries_today, max_trades):   skip = "entry cap"
                     elif MAX_OPEN_POSITIONS and n_open >= MAX_OPEN_POSITIONS:
                         skip = f"cap {MAX_OPEN_POSITIONS}"
                     elif avail <= 1.0:    skip = "reserve floor"
-                    da = sea_da if is_seasonal else off_da
-                    if not skip and not is_seasonal and n_unfilled_sea > 0:
-                        seasonal_lock = min(avail, n_unfilled_sea * sea_da)
-                        if avail - da < seasonal_lock:
-                            skip = "seasonal reserve"
+                    da = max(MIN_TRADE_SIZE,
+                             min(equity * OFFSCHEDULE_SIZE_PCT, avail))
                     if not skip and da > avail: skip = "not enough cash"
                     if not skip and has_earnings_soon(ticker): skip = f"earnings ≤{EARNINGS_SKIP_DAYS}d"
-                    tier = "S" if is_seasonal else "o"
                     if skip:
-                        row(f"  SKIP [{tier}] {ticker}  {strategy}", _trunc(skip, 20))
-                        if is_seasonal:
-                            n_unfilled_sea = max(0, n_unfilled_sea - 1)
+                        row(f"  SKIP [eq] {ticker}  {strategy}", _trunc(skip, 20))
                         continue
-                    row(f"  ENTER [{tier}] {ticker}  {strategy}", f"${da:.2f}")
+                    row(f"  ENTER [eq] {ticker}  {strategy}", f"${da:.2f}")
                     buy_res = do_buy(client, ticker, da, strategy, expected_price=sig["close"], fast_submit=True)
                     if buy_res.get("ok"):
                         n_open += 1
@@ -3865,10 +3849,8 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
                                 "expected_price": sig["close"],
                                 "order_id": buy_res.get("order_id"),
                             })
-                            row(f"  BUY SUBMITTED [{tier}] {ticker}",
+                            row(f"  BUY SUBMITTED [eq] {ticker}",
                                 "fill pending — batched confirmation after entries")
-                        if is_seasonal:
-                            n_unfilled_sea = max(0, n_unfilled_sea - 1)
         if entries == 0 and not all_sigs: row("  No entries placed.")
         if pending_buys:
             batched = poll_pending_buys(client, pending_buys, rgm)
@@ -3904,7 +3886,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     hdr("SESSION SUMMARY")
     row("Regime",   rgm.upper())
     row("Universe", UNIVERSE)
-    row("Strategy", f"{sc['p']} + {sc['s']}")
+    row("Strategy", f"{sc['p']} + {sc['s']} (display only — schedule not enforced)")
     row("Scanned",  str(len(all_data)))
     row("Signals",  str(len(all_sigs)))
     row("Entries",  str(entries))

@@ -154,56 +154,195 @@ def _ledger_health() -> dict:
     return {"status": status, "warns": warns, "open_lots": open_lots}
 
 
-def _router_status() -> str:
+def _percentile(vals: list[float], p: float) -> float:
+    if not vals:
+        return 0.0
+    s = sorted(vals)
+    if len(s) == 1:
+        return s[0]
+    k = (len(s) - 1) * p
+    lo = int(k)
+    hi = min(lo + 1, len(s) - 1)
+    frac = k - lo
+    return s[lo] * (1.0 - frac) + s[hi] * frac
+
+
+def _median(vals: list[float]) -> float:
+    if not vals:
+        return 0.0
+    s = sorted(vals)
+    n = len(s)
+    m = n // 2
+    return s[m] if n % 2 else (s[m - 1] + s[m]) / 2
+
+
+def _ledger_arm_stats() -> dict[str, dict]:
+    """Per-strategy exit stats from master_ledger.csv."""
+    path = TRIAL / "_ledger" / "master_ledger.csv"
+    out: dict[str, dict] = {}
+    if not path.exists():
+        return out
+    by: dict[str, list[float]] = {}
+    first_entry: dict[str, str] = {}
+    with path.open(encoding="utf-8", newline="") as f:
+        for r in csv.DictReader(f):
+            sid = r.get("strategy_id") or ""
+            if not sid:
+                continue
+            ts = str(r.get("ts") or "")[:10]
+            if r.get("event") == "entry" and ts:
+                if sid not in first_entry or ts < first_entry[sid]:
+                    first_entry[sid] = ts
+            if r.get("event") != "exit":
+                continue
+            ret = _f(r.get("return_pct"), None)
+            if ret is None:
+                continue
+            by.setdefault(sid, []).append(ret)
+    for sid, rets in by.items():
+        n = len(rets)
+        rec = "INSUFFICIENT" if n < 5 else ("keep" if _median(rets) > 0 and n >= 30 else "watch")
+        if n >= 20 and _median(rets) <= 0:
+            rec = "drop"
+        out[sid] = {
+            "exits": n,
+            "med": round(_median(rets), 2) if n >= 5 else None,
+            "p10": round(_percentile(rets, 0.10), 2) if n >= 5 else None,
+            "status": rec,
+            "first_entry": first_entry.get(sid),
+        }
+    for sid, day in first_entry.items():
+        out.setdefault(sid, {"exits": 0, "med": None, "p10": None, "status": "INSUFFICIENT"})
+        out[sid]["first_entry"] = day
+    return out
+
+
+def _router_detail() -> dict:
+    """CONFIRMED if any S163/S164/S166/S167/S168 ENTRY ever logged."""
     runs = TRIAL / "runs"
-    if not runs.exists():
-        return "PENDING"
-    pat = re.compile(r"ENTRY\s*\[[^\]]*\|(S163|S166)\]", re.I)
-    for p in sorted(runs.glob("*.log"), reverse=True)[:30]:
-        try:
-            if pat.search(p.read_text(encoding="utf-8", errors="replace")[-200000:]):
-                return "CONFIRMED"
-        except Exception:
-            continue
-    return "PENDING"
+    pat = re.compile(
+        r"ENTRY\s*\[[^\]]*\|(S163|S164|S166|S167|S168)\]",
+        re.I,
+    )
+    first_date = None
+    confirmed = False
+    if runs.exists():
+        for p in sorted(runs.glob("*.log")):
+            try:
+                text = p.read_text(encoding="utf-8", errors="replace")
+            except Exception:
+                continue
+            m = pat.search(text)
+            if m:
+                confirmed = True
+                # Prefer date from filename YYYY-MM-DD.log
+                day = p.stem if re.match(r"\d{4}-\d{2}-\d{2}$", p.stem) else None
+                if day and (first_date is None or day < first_date):
+                    first_date = day
+    return {
+        "status": "CONFIRMED" if confirmed else "PENDING",
+        "first_entry_date": first_date or "PENDING",
+        "confirmed": confirmed,
+    }
 
 
-def _experiment_progress(selection_rows: list[dict]) -> dict:
-    by_id = {r.get("strategy_id"): r for r in selection_rows}
+def _experiment_progress(selection_rows: list[dict], ledger: dict[str, dict]) -> dict:
+    by_sel = {r.get("strategy_id"): r for r in selection_rows}
 
-    def arm(sid: str, label: str) -> dict:
-        r = by_id.get(sid) or {}
-        exits = int(_f(r.get("exits"), 0))
-        med = _f(r.get("med_return_pct"), 0)
+    def arm(sid: str, label: str, extra: str = "") -> dict:
+        L = ledger.get(sid) or {}
+        S = by_sel.get(sid) or {}
+        exits = int(L.get("exits") or _f(S.get("exits"), 0))
+        med = L.get("med")
+        p10 = L.get("p10")
+        if med is None and exits >= 5:
+            med = _f(S.get("med_return_pct"), None)
+        if p10 is None and exits >= 5:
+            p10 = _f(S.get("p10_return_pct"), None)
+        status = L.get("status") or S.get("recommendation") or "INSUFFICIENT"
+        if exits < 5:
+            status = "INSUFFICIENT"
+            med = None
+            p10 = None
         return {
             "id": sid,
             "label": label,
+            "extra": extra,
             "exits": exits,
             "target": 30,
             "pct": min(100, round(100.0 * exits / 30.0, 1)),
-            "med": med if exits >= 5 else None,
+            "med": med,
+            "p10": p10,
+            "status": status,
         }
+
+    p2b_arms = [
+        arm("S164", "1-DTE", "1 day"),
+        arm("S165", "3-DTE", "3 days"),
+        arm("S168", "5-DTE", "5 days"),
+        arm("S163", "7-DTE", "7 days"),
+    ]
+    p2c_arms = [
+        arm("S165", "ATM ctrl", "ATM"),
+        arm("S167", "1-OTM", "+1 strike"),
+    ]
+
+    def best_note(arms: list[dict]) -> str:
+        ready = [a for a in arms if a["exits"] >= 30 and a["med"] is not None]
+        if not ready:
+            return "Insufficient data (need n≥30 per arm)"
+        best = max(ready, key=lambda a: a["med"])
+        return f"Best arm after n≥30: {best['id']} at {best['med']:+.1f}%"
 
     return {
         "p2b": {
-            "title": "P2B DTE Sensitivity",
-            "subtitle": "S164(1d) vs S165(3d) vs S168(5d) vs S163(7d)",
-            "arms": [
-                arm("S164", "1d ATM"),
-                arm("S165", "3d ATM ctrl"),
-                arm("S168", "5d ATM"),
-                arm("S163", "7d ATM"),
-            ],
+            "title": "Experiment P2B — DTE Sensitivity (GapDown signal)",
+            "subtitle": "Does holding period matter for gap-recovery options?",
+            "arms": p2b_arms,
+            "progress": best_note(p2b_arms),
+            "note": "Decision threshold: n≥30 per arm. Early kill: p10<-80% at n≥15.",
         },
         "p2c": {
-            "title": "P2C Strike Sensitivity",
-            "subtitle": "S167(1-OTM) vs S165(ATM)",
-            "arms": [
-                arm("S165", "ATM ctrl"),
-                arm("S167", "1-OTM"),
-            ],
+            "title": "Experiment P2C — Strike Sensitivity (GapDown signal)",
+            "subtitle": "Does buying OTM vs ATM improve risk-adjusted returns?",
+            "arms": p2c_arms,
+            "progress": best_note(p2c_arms),
+            "note": "Decision threshold: n≥30 per arm. Early kill: p10<-80% at n≥15.",
         },
     }
+
+
+def _rb_leaderboard() -> list[dict]:
+    path = REPO / "logs" / "transactions.csv"
+    if not path.exists():
+        return []
+    by: dict[str, list[float]] = {}
+    by_d: dict[str, list[float]] = {}
+    with path.open(encoding="utf-8", newline="") as f:
+        for r in csv.DictReader(f):
+            if (r.get("action") or "").upper() != "SELL":
+                continue
+            strat = (r.get("strategy") or "unknown").strip() or "unknown"
+            by.setdefault(strat, []).append(_f(r.get("pnl_pct")))
+            by_d.setdefault(strat, []).append(_f(r.get("pnl_dollar")))
+    rows = []
+    for strat, pnls in by.items():
+        dollars = by_d.get(strat, [])
+        gw = sum(d for d in dollars if d > 0)
+        gl = abs(sum(d for d in dollars if d < 0))
+        pf = (gw / gl) if gl > 0 else (999.0 if gw > 0 else 0.0)
+        rows.append({
+            "strategy": strat,
+            "n": len(pnls),
+            "wr": round(100.0 * sum(1 for p in pnls if p > 0) / len(pnls), 1),
+            "avg": round(sum(pnls) / len(pnls), 2),
+            "med": round(_median(pnls), 2),
+            "p10": round(_percentile(pnls, 0.10), 2),
+            "pf": round(pf, 2),
+            "total": round(sum(dollars), 2),
+        })
+    rows.sort(key=lambda x: (-x["pf"], -x["avg"]))
+    return rows
 
 
 def _stale(last_run: str | None, minutes: int = 20) -> bool:
@@ -224,7 +363,8 @@ def build_data() -> dict:
     sel = _latest_selection()
     freq = _parse_freq_md()
     health = _ledger_health()
-    router = _router_status()
+    ledger = _ledger_arm_stats()
+    router = _router_detail()
     generated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     return {
         "generated_at": generated,
@@ -233,13 +373,14 @@ def build_data() -> dict:
             "today_realized": today["realized"],
             "today_sells": today["sells"],
             "status": "STALE" if _stale(rb.get("last_run")) else "RUNNING",
+            "leaderboard": _rb_leaderboard(),
         },
         "options": {
             "active_strategies": 7,
             "keep": sel["keep"],
             "watch": sel["watch"],
             "drop": sel["drop"],
-            "orphan_rate": None,  # filled below from md if present
+            "orphan_rate": None,
             "open_lots": health["open_lots"],
             "selection_file": sel["path"],
             "leaderboard": sel["rows"],
@@ -247,12 +388,14 @@ def build_data() -> dict:
         "system": {
             "ledger_health": health["status"],
             "ledger_warns": health["warns"],
-            "router": router,
+            "router": router["status"],
+            "router_first_entry": router["first_entry_date"],
             "cron": "OK" if not _stale(rb.get("last_run"), 20) else "STALE",
             "last_run": rb.get("last_run"),
         },
         "frequency": freq,
-        "experiments": _experiment_progress(sel["rows"]),
+        "experiments": _experiment_progress(sel["rows"], ledger),
+        "router_card": router,
     }
 
 
@@ -340,6 +483,12 @@ svg.spark {{ width:100%; height:120px; background:var(--panel); border:1px solid
   <section>
     <h3>Experiments</h3>
     <div class="exp" id="exps"></div>
+    <div class="card" id="routerCard" style="margin-top:12px"></div>
+  </section>
+  <section>
+    <h3>Rubber Band Strategy Leaderboard</h3>
+    <div class="card" style="padding:0; overflow:auto"><table id="rbBoard"></table></div>
+    <div class="muted" style="margin-top:8px;font-size:0.85rem">Equal weight since 2026-07-18 — schedule not enforced</div>
   </section>
 </div>
 <script>
@@ -349,6 +498,17 @@ function fmtMoney(x) {{
   const n = Number(x||0);
   const s = (n<0?'-':'') + '$' + Math.abs(n).toFixed(2);
   return s;
+}}
+function fmtPct(x) {{
+  if (x==null || x===undefined) return '—';
+  const n = Number(x);
+  return (n>=0?'+':'') + n.toFixed(1) + '%';
+}}
+function statusCls(s) {{
+  const t = (s||'').toLowerCase();
+  if (t==='keep' || t==='confirmed') return 'ok';
+  if (t==='drop' || t==='bad') return 'bad';
+  return 'warn';
 }}
 function renderCards() {{
   const rb = DATA.rubber_band, op = DATA.options, sy = DATA.system;
@@ -375,7 +535,8 @@ function renderCards() {{
     <div class="card"><h2>System Health</h2>
       <div class="row"><span class="muted">Cron / last run</span>${{pill(sy.cron, sy.cron==='OK'?'ok':'warn')}}</div>
       <div class="row"><span class="muted">Ledger health</span>${{pill(sy.ledger_health, ledgerCls)}}</div>
-      <div class="row"><span class="muted">Router S163/S166</span>${{pill(sy.router, routerCls)}}</div>
+      <div class="row"><span class="muted">Router</span>${{pill(sy.router, routerCls)}}</div>
+      <div class="row"><span class="muted">First router ENTRY</span><span class="mono">${{sy.router_first_entry||'PENDING'}}</span></div>
       <div class="row"><span class="muted">Last run</span><span class="mono">${{sy.last_run||'—'}}</span></div>
     </div>`;
 }}
@@ -437,19 +598,48 @@ function renderHeat() {{
 }}
 function renderExps() {{
   const ex = DATA.experiments||{{}};
-  function card(e) {{
-    let arms = (e.arms||[]).map(a => {{
-      const med = a.med==null ? 'insufficient' : ((a.med>=0?'+':'')+Number(a.med).toFixed(1)+'%');
-      return `<div style="margin:10px 0"><div class="row"><span>${{a.id}} ${{a.label}}</span>
-        <span class="mono">${{a.exits}}/30 · ${{med}}</span></div>
-        <div class="bar"><i style="width:${{a.pct}}%"></i></div></div>`;
+  function card(e, kind) {{
+    const head = kind==='p2b'
+      ? '<tr><th>Arm</th><th>Strategy</th><th>DTE</th><th>n</th><th>Med%</th><th>p10%</th><th>Status</th></tr>'
+      : '<tr><th>Arm</th><th>Strategy</th><th>Strike</th><th>n</th><th>Med%</th><th>p10%</th><th>Status</th></tr>';
+    let rows = (e.arms||[]).map(a => {{
+      return `<tr><td>${{a.label}}</td><td class="mono">${{a.id}}</td><td class="mono">${{a.extra||'—'}}</td>
+        <td class="mono">${{a.exits}}</td><td class="mono">${{fmtPct(a.med)}}</td>
+        <td class="mono">${{fmtPct(a.p10)}}</td>
+        <td>${{pill(a.status||'INSUFFICIENT', statusCls(a.status))}}</td></tr>`;
     }}).join('');
-    return `<div class="card"><h2>${{e.title}}</h2><div class="muted" style="margin-bottom:8px">${{e.subtitle}}</div>${{arms}}</div>`;
+    return `<div class="card"><h2>${{e.title||''}}</h2>
+      <div class="muted" style="margin-bottom:8px">${{e.subtitle||''}}</div>
+      <table><thead>${{head}}</thead><tbody>${{rows}}</tbody></table>
+      <div class="row" style="margin-top:10px"><span class="muted">Progress</span><span>${{e.progress||'—'}}</span></div>
+      <div class="muted" style="font-size:0.8rem;margin-top:6px">${{e.note||''}}</div></div>`;
   }}
-  document.getElementById('exps').innerHTML = card(ex.p2b||{{}}) + card(ex.p2c||{{}});
+  document.getElementById('exps').innerHTML = card(ex.p2b||{{}}, 'p2b') + card(ex.p2c||{{}}, 'p2c');
+  const rc = DATA.router_card||{{}};
+  document.getElementById('routerCard').innerHTML = `
+    <h2>Router Status — Controlled Layout</h2>
+    <div class="row"><span class="muted">S163/S164/S166/S167/S168 confirmed</span>
+      ${{pill(rc.status||'PENDING', statusCls(rc.status))}}</div>
+    <div class="row"><span class="muted">First confirmed entry date</span>
+      <span class="mono">${{rc.first_entry_date||'PENDING'}}</span></div>`;
+}}
+function renderRbBoard() {{
+  const rows = (DATA.rubber_band&&DATA.rubber_band.leaderboard)||[];
+  let html = `<thead><tr><th>Rank</th><th>Strategy</th><th>n</th><th>WR%</th><th>Avg%</th><th>Med%</th><th>p10%</th><th>PF</th><th>Total $</th></tr></thead><tbody>`;
+  rows.forEach((r,i) => {{
+    const pf = Number(r.pf||0);
+    const cls = pf>=1.1 ? 'keep' : (pf>=0.9 ? 'watch' : 'drop');
+    html += `<tr class="${{cls}}"><td class="mono">${{i+1}}</td><td>${{r.strategy}}</td>
+      <td class="mono">${{r.n}}</td><td class="mono">${{r.wr}}</td>
+      <td class="mono">${{fmtPct(r.avg)}}</td><td class="mono">${{fmtPct(r.med)}}</td>
+      <td class="mono">${{fmtPct(r.p10)}}</td><td class="mono">${{pf.toFixed(2)}}</td>
+      <td class="mono">${{fmtMoney(r.total)}}</td></tr>`;
+  }});
+  html += '</tbody>';
+  document.getElementById('rbBoard').innerHTML = html;
 }}
 document.getElementById('gen').textContent = DATA.generated_at;
-renderCards(); renderSpark(); renderBoard(); renderHeat(); renderExps();
+renderCards(); renderSpark(); renderBoard(); renderHeat(); renderExps(); renderRbBoard();
 </script>
 </body>
 </html>
