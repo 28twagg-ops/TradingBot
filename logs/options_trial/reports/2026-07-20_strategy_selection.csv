@@ -3,4 +3,4 @@ S163,A1 GapDown ATM call EOD,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.
 S166,GapDown strong call,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0.0
 S174,RubberBand long call EOD,drop,manually paused — excluded from new entries & reflected P&L,1062,114,43,71,-22.0,-24.14,-89.83,37.06,-1498.19,3,6,50.0
 S165,GapDown long call 3 DTE,drop,non-positive median return,1263,191,63,128,-0.2,-30.0,-60.0,84.31,-788.78,7,9,27.7
-S173,MomReversal long call,drop,non-positive median return,1511,286,100,186,11.8,-33.84,-79.43,95.45,-1833.36,8,12,31.5
+S173,MomReversal long call,drop,non-positive median return,1511,287,101,186,12.05,-33.82,-79.43,95.21,-1786.36,8,12,31.4
