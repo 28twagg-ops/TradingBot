@@ -77,7 +77,9 @@ def _raw_line_key(line: str, sid: str, day: str) -> str:
     m = _RE_PENDING_ID.search(line) or _RE_ORDER_ID.search(line)
     if m:
         return f"{day}|{sid}|{m.group(1)}"
-    return f"{day}|{sid}|{re.sub(r'\s+', ' ', line.strip())[:160]}"
+    # Precompute — older Python forbids backslashes inside f-string expressions.
+    compact = re.sub(r"\s+", " ", line.strip())[:160]
+    return f"{day}|{sid}|{compact}"
 
 
 def collect_counts() -> tuple[
