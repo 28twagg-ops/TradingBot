@@ -2221,3 +2221,171 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_
 ### Options bot full output
 
 ```text
+
+## Run 20260720T140105Z
+
+- UTC timestamp: `20260720T140105Z`
+- GitHub run: [#4406](https://github.com/28twagg-ops/TradingBot/actions/runs/29748689380)
+- Run id: `29748689380`
+- Live bot: exit=`0`, duration=`3s`
+- Options bot: exit=`0`, duration=`50s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-20T10:01:08.775493-04:00","date":"2026-07-20","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":48.8,"phases_s":{"reconcile":1.87,"cancel":0.13,"manage":1.86,"scan":34.23,"entries":10.13},"signals":17,"placed":0,"equity":128219.43,"open_positions":1,"pending_orders":0,"open_lots":5,"submitted_today":5,"filled_today":5,"unattributed_contracts":0,"top_signals":["S173:ADM","S173:AXON","S173:FANG","S173:CRM","S173:WDAY","S173:DOCS","S173:POST","S165:HONA"],"github_run":"4406","github_run_id":"29748689380","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+14:01:06  INFO      Mode: exits
+14:01:07  INFO        Daily log -> logs/daily/2026-07-20.md
+14:01:07  INFO        Daily log reconciled -> logs/daily/2026-07-20.md (4 ledger rows)
+14:01:07  INFO        place_all_stops: checking 4 positions...
+14:01:07  INFO        STOP skipped CI: fractional (0.3102 shares) — software exit will handle it
+14:01:07  INFO        STOP already live CNP @ $43.14
+14:01:07  INFO        STOP skipped COP: fractional (0.7700 shares) — software exit will handle it
+14:01:07  INFO        STOP already live KO @ $81.47
+14:01:07  INFO        [positions] 4/4 (4 valid)
+14:01:08  INFO        Daily log -> logs/daily/2026-07-20.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:01 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $483.05|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  COP  P&L +0.1%  $+0.05                                            HOLD|
+|  CI  P&L +0.1%  $+0.06                                             HOLD|
+|  CNP  P&L +0.1%  $+0.10                                            HOLD|
+|  KO  P&L +0.4%  $+0.36                                             HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           4|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                4|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+Layout: controlled:100:c000_s173_w1_0928_1005_r1
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-20T10:01:08.775493-04:00 ===
+
+[Run context]
+Paper auth OK — equity $128219.43, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S165, S166, S163
+Dropped (no new entries; ex-reflected P&L): S174
+
+[Scan + entries]
+Scanning 903 symbols for [S173, S165, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 17 signal(s); top: ['S173:ADM', 'S173:AXON', 'S173:FANG', 'S173:CRM', 'S173:WDAY', 'S173:DOCS', 'S173:POST', 'S165:HONA']
+Paper lab: $127913 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+  Skipped: 50 no tradeable call
+Placed 0 new entry order(s).
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          entry+manage                            |
+|  Equity                        $128,219.43                             |
+|  Signals this run              17                                      |
+|  Orders submitted (session)    5                                       |
+|  Orders filled today (ledger)  5                                       |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             5                                       |
+|  Broker option positions       1                                       |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S174)                                |
++------------------------------------------------------------------------+
+|  Reflected trades=495  buckets=49  win=34%                             |
+|  Returns   avg=+7.4%  med=-33.8%  p10=-77.0%  p90=+93.7%               |
+|  Realized  $+3,579.77                                                  |
+|  Raw incl dropped  trades=609  real=$+2,081.58                         |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b51  c051_s165_w4_1120_  1 100% +263.6 +263.6 +263.6 $   +174         |
+|  b91  c091_s165_w4_1120_  3  67% +142.7 +197.0 +247.0 $   +282         |
+|  b31  c031_s165_w4_1120_  2 100% +145.5 +145.5 +175.8 $   +192         |
+|  b28  c028_s165_w1_0928_ 17  76% +49.5 +80.0 +102.0 $   +448           |
+|  b92  c092_s166_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b93  c093_s166_w2_1005_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b95  c095_s166_w4_1120_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b96  c096_s163_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  ... 41 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b21  c021_s173_w2_1005_ 22   0% -64.0 -72.1 -98.5 $   -942       |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (1)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  CRM260724C00185000            5    -22.2%   $    -70.00               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-20.log
+elapsed=48.8s reconcile=1.87s cancel=0.13s manage=1.86s scan=34.23s entries=10.13s
+STATUS: options_morning_bot run complete (PAPER) elapsed=48.8s. run=#4406 https://github.com/28twagg-ops/TradingBot/actions/runs/29748689380
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-20_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-20_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-20_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-20_strategy_selection.csv
+Summary: keep=0 watch=2 drop=3
+Orphan rate: 3.6% (22/609)
+  File "/home/runner/work/TradingBot/TradingBot/scripts/options_signal_frequency.py", line 80
+    return f"{day}|{sid}|{re.sub(r'\s+', ' ', line.strip())[:160]}"
+                                                                   ^
+SyntaxError: f-string expression part cannot include a backslash
+signal_frequency report failed (non-fatal)
+## Ledger health — 2026-07-20
+| Check                       | Count | Status |
+|-----------------------------|------:|--------|
+| Current stuck (state)       |     0 | OK |
+| Orphaned lots (post-stable) |    27 | WARN | <<<
+| Missing exit records (post) |    27 | WARN | <<<
+| State/ledger mismatches     |     3 | WARN | <<<
+| Total open lots             |     5 | INFO |
+| Total closed lots           |   267 | INFO |
+| Pre-cutoff audit debt       |     0 | INFO |
+| Transition audit debt       |   589 | INFO |
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_health.md
+```
+
+---
