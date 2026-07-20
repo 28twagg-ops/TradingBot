@@ -362,8 +362,8 @@
   {
     "bucket_id": 60,
     "profile": "c060_s173_w1_0928_1005_r4",
-    "open_premium": 63.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 61,
