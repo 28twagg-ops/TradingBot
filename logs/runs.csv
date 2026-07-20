@@ -2908,3 +2908,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-20 23:00:44,ext_exits,bull,481.84,216.83,0,0,0,3,MAA|TPR|WMB,both
 2026-07-20 23:05:40,ext_exits,bull,481.84,216.83,0,0,0,3,MAA|TPR|WMB,both
 2026-07-20 23:10:37,ext_exits,bull,481.84,216.83,0,0,0,3,MAA|TPR|WMB,both
+2026-07-20 23:15:34,ext_exits,bull,481.84,216.83,0,0,0,3,MAA|TPR|WMB,both
