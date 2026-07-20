@@ -997,3 +997,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-20 16:05:41,2026-07-20,SELL,KO,Pullback50,81.42,14.6,-0.56,-0.08,0,stop_loss (-0.6%),bull,482.28
 2026-07-20 16:25:39,2026-07-20,SELL,CI,Pullback50,283.32,87.88,-0.58,-0.52,0,stop_loss (-0.6%),bull,482.03
 2026-07-20 19:46:08,2026-07-20,SELL,COP,Pullback50,115.93,89.26,0.99,0.88,0,midline (+1.0%),bull,481.8
+2026-07-20 19:51:25,2026-07-20,SELL,OXY,Pullback50,55.16,96.34,-0.01,-0.01,0,midline (-0.0%),bull,481.7
+2026-07-20 19:51:56,2026-07-20,SELL,TJX,Pullback50,155.84,96.31,0.06,0.06,0,midline (+0.1%),bull,481.56
