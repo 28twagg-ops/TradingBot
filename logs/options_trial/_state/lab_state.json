@@ -1,43 +1,9 @@
 {
   "version": 5,
-  "lots": [
-    {
-      "lot_id": "00ffd0fa3db3",
-      "bucket_id": 20,
-      "profile_name": "c020_s173_w1_0928_1005_r2",
-      "strategy_id": "S173",
-      "occ_symbol": "CRM260724C00185000",
-      "underlying": "CRM",
-      "qty": 1,
-      "entry_cost": 63.0,
-      "entry_price": 0.63,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-20",
-      "entry_order_id": "eb83a71c-6574-4607-93cd-9f8dac991a4f"
-    }
-  ],
+  "lots": [],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "2170c3e3-11d8-4224-a20f-c442b98c86a2",
-      "lot_id": "00ffd0fa3db3",
-      "bucket_id": 20,
-      "strategy_id": "S173",
-      "occ_symbol": "CRM260724C00185000",
-      "qty": 1,
-      "reason": "take_profit (+110.0%)",
-      "submitted": "2026-07-20T13:40:52"
-    }
-  ],
-  "bucket_open_premium": {
-    "b20": 63.0
-  },
+  "pending_exits": [],
+  "bucket_open_premium": {},
   "session_date": "2026-07-20",
   "entries_locked": [
     "0|S173|2026-07-20",
@@ -533,7 +499,8 @@
     "771110ba-da12-432d-892d-5fce0f3cb236",
     "b9e508e5-7564-406a-bc0d-680e1cb805b2",
     "8d0f7807-b2c1-43b2-be37-e5a60f842a6e",
-    "98706aa2-b92a-438c-bc67-8abee49840d8"
+    "98706aa2-b92a-438c-bc67-8abee49840d8",
+    "2170c3e3-11d8-4224-a20f-c442b98c86a2"
   ],
   "submitted_today": 20,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
