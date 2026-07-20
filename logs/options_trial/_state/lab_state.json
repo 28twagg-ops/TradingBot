@@ -202,7 +202,88 @@
       "entry_order_id": "7ac33d44-f411-4068-a99b-495806380e68"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "ae695997-54d0-4b75-8777-a9d8aaf862fd",
+      "bucket_id": 2,
+      "strategy_id": "S173",
+      "occ_symbol": "CRM260724C00185000",
+      "underlying": "CRM",
+      "qty": 1,
+      "limit": 0.7,
+      "profile_name": "c002_s173_w3_1045_1120_r1",
+      "submitted": "2026-07-20",
+      "detail": "MR gap -1.7% green",
+      "spread_frac": 0.1353383458646616,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "45c1631e-9dd0-4dd1-87f5-e29206b96137",
+      "bucket_id": 22,
+      "strategy_id": "S173",
+      "occ_symbol": "CRM260724C00185000",
+      "underlying": "CRM",
+      "qty": 1,
+      "limit": 0.7,
+      "profile_name": "c022_s173_w3_1045_1120_r2",
+      "submitted": "2026-07-20",
+      "detail": "MR gap -1.7% green",
+      "spread_frac": 0.1353383458646616,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "316460c8-24fd-47d2-aaf1-63d8b7479597",
+      "bucket_id": 42,
+      "strategy_id": "S173",
+      "occ_symbol": "CRM260724C00185000",
+      "underlying": "CRM",
+      "qty": 1,
+      "limit": 0.7,
+      "profile_name": "c042_s173_w3_1045_1120_r3",
+      "submitted": "2026-07-20",
+      "detail": "MR gap -1.7% green",
+      "spread_frac": 0.1353383458646616,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "d749cef0-b9cd-4e09-872a-63583b65c277",
+      "bucket_id": 62,
+      "strategy_id": "S173",
+      "occ_symbol": "CRM260724C00185000",
+      "underlying": "CRM",
+      "qty": 1,
+      "limit": 0.7,
+      "profile_name": "c062_s173_w3_1045_1120_r4",
+      "submitted": "2026-07-20",
+      "detail": "MR gap -1.7% green",
+      "spread_frac": 0.1353383458646616,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "e5be8a29-d9f3-40b7-84d9-88498d78d392",
+      "bucket_id": 82,
+      "strategy_id": "S173",
+      "occ_symbol": "CRM260724C00185000",
+      "underlying": "CRM",
+      "qty": 1,
+      "limit": 0.7,
+      "profile_name": "c082_s173_w3_1045_1120_r5",
+      "submitted": "2026-07-20",
+      "detail": "MR gap -1.7% green",
+      "spread_frac": 0.1353383458646616,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    }
+  ],
   "pending_exits": [],
   "bucket_open_premium": {
     "b80": 63.0,
@@ -227,7 +308,12 @@
     "21|S173|2026-07-20",
     "41|S173|2026-07-20",
     "61|S173|2026-07-20",
-    "81|S173|2026-07-20"
+    "81|S173|2026-07-20",
+    "2|S173|2026-07-20",
+    "22|S173|2026-07-20",
+    "42|S173|2026-07-20",
+    "62|S173|2026-07-20",
+    "82|S173|2026-07-20"
   ],
   "processed_orders": [
     "d5e2135f-1916-4ac9-986c-867207fda0fe",
@@ -675,7 +761,7 @@
     "4b25da15-f261-4385-bdc3-5be82bcc6317",
     "aa128d17-83d4-4e31-a084-4f1002950d89"
   ],
-  "submitted_today": 10,
+  "submitted_today": 15,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-07-20"
 }
