@@ -629,3 +629,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-07-20 13:51:34,2026-07-20,SELL,BG,Pullback50,120.17,119.95,120.036,96.49,-0.1115,-0.1076,limit_fill_position_check_full,midline (+0.0%),bull
 2026-07-20 13:52:05,2026-07-20,SELL,AMZN,Pullback50,250.115,250.12,250.138,96.7,0.0092,0.0089,limit_fill_position_check_full,midline (+0.1%),bull
 2026-07-20 15:20:46,2026-07-20,SELL,CNP,Pullback50,43.095,,43.09,9.78,-0.0116,-0.0011,market_urgent_full,stop_loss (-0.6%),bull
+2026-07-20 16:05:41,2026-07-20,SELL,KO,Pullback50,81.42,,81.42,14.6,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull

@@ -403,7 +403,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "e5213874-75b7-427e-ab7e-a94cd1cc5075",
+      "lot_id": "3da70f52c270",
+      "bucket_id": 80,
+      "strategy_id": "S173",
+      "occ_symbol": "CRM260724C00185000",
+      "qty": 1,
+      "reason": "take_profit (+62.6%)",
+      "submitted": "2026-07-20T12:05:44"
+    }
+  ],
   "bucket_open_premium": {
     "b80": 63.0,
     "b60": 63.0,
