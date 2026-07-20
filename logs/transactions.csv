@@ -989,3 +989,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-17 15:35:42,2026-07-17,SELL,DOV,Pullback50,216.25,81.38,-0.61,-0.5,1,stop_loss (-0.6%),bull,485.49
 2026-07-17 17:05:41,2026-07-17,SELL,CMS,Pullback50,73.87,22.29,-0.64,-0.14,1,stop_loss (-0.6%),bull,484.42
 2026-07-17 19:56:34,2026-07-17,SELL,EBAY,Pullback50,112.09,93.44,0.32,0.3,0,midline (+0.3%),bull,484.32
+2026-07-20 13:45:56,2026-07-20,SELL,EMR,Pullback50,138.72,92.75,-0.28,-0.26,3,max_hold 3d (-0.3%),bull,482.46
+2026-07-20 13:46:16,2026-07-20,SELL,CARR,Pullback50,68.71,87.06,1.54,1.33,4,max_hold 4d (+1.5%),bull,482.43
