@@ -1933,3 +1933,53 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_
 ### Options bot full output
 
 ```text
+
+## Run 20260720T135101Z
+
+- UTC timestamp: `20260720T135101Z`
+- GitHub run: [#4404](https://github.com/28twagg-ops/TradingBot/actions/runs/29747954147)
+- Run id: `29747954147`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-20T09:44:20.965121-04:00","date":"2026-07-20","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":28.4,"phases_s":{"reconcile":2.1,"cancel":0.16,"manage":1.38,"scan":15.49,"entries":8.17},"signals":24,"placed":0,"equity":129231.43,"open_positions":1,"pending_orders":0,"open_lots":5,"submitted_today":5,"filled_today":5,"unattributed_contracts":0,"top_signals":["S173:ADM","S173:ADSK","S173:AXON","S173:FANG","S173:IT","S173:GDDY","S173:ORCL","S173:CRM"],"github_run":"4402","github_run_id":"29747227265","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:51:02  INFO      Mode: morning_scan
+13:51:03  INFO        [positions] 4/4 (4 valid)
+13:51:03  INFO        SELL LIMIT BG  qty=0.803862803  limit=$119.95  id=c6b97304-b2f7-469f-8507-bdc197b4f1a7
+13:51:34  INFO        SELL LIMIT filled BG (confirmed by position check)
+13:51:34  INFO        TX logged: SELL BG  P&L 0.04%
+13:51:34  INFO        SELL LIMIT AMZN  qty=0.386604955  limit=$250.12  id=e0038396-440e-4c22-958a-0a8f446fa049
+13:52:05  INFO        SELL LIMIT filled AMZN (confirmed by position check)
+13:52:05  INFO        TX logged: SELL AMZN  P&L 0.07%
+13:52:05  INFO        Universe cache hit: 903 tickers (tickers_2026-07-20.json)
+13:52:06  INFO        [universe] 40/901 (40 valid)
+13:52:07  INFO        [universe] 80/901 (80 valid)
+13:52:08  INFO        [universe] 120/901 (120 valid)
+13:52:10  INFO        [universe] 160/901 (160 valid)
+13:52:11  INFO        [universe] 200/901 (199 valid)
+13:52:18  INFO        [universe] 240/901 (238 valid)
+13:52:32  INFO        [universe] 280/901 (278 valid)
+13:52:42  INFO        [universe] 320/901 (318 valid)
+13:52:55  INFO        [universe] 360/901 (358 valid)
+13:53:06  INFO        [universe] 400/901 (397 valid)
+13:53:19  INFO        [universe] 440/901 (437 valid)
+13:53:29  INFO        [universe] 480/901 (477 valid)
+13:53:43  INFO        [universe] 520/901 (517 valid)
+13:53:56  INFO        [universe] 560/901 (556 valid)
+13:54:06  INFO        [universe] 600/901 (596 valid)
+13:54:20  INFO        [universe] 640/901 (636 valid)
+13:54:30  INFO        [universe] 680/901 (676 valid)
+13:54:43  INFO        [universe] 720/901 (715 valid)
+13:54:54  INFO        [universe] 760/901 (755 valid)
+13:55:07  INFO        [universe] 800/901 (795 valid)
+```
+
+### Options bot full output
+
+```text
