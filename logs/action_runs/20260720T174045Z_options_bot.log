@@ -1,0 +1,94 @@
+Layout: controlled:100:c000_s173_w1_0928_1005_r1
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-07-20T13:40:48.701876-04:00 ===
+
+[Run context]
+Paper auth OK — equity $131131.75, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 100 | Strategies: S173, S165, S166, S163
+Dropped (no new entries; ex-reflected P&L): S174
+2026-07-20 13:40:52,372 INFO   EXIT [b20|c020_s173_w1_0928_1005_r2|S173] take_profit (+110.0%) SELL 1 CRM260724C00185000 @<= 1.30
+
+[Manage only]
+Past entry window; manage/exit only.
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          manage-only                             |
+|  Equity                        $131,131.75                             |
+|  Signals this run              0                                       |
+|  Orders submitted (session)    20                                      |
+|  Orders filled today (ledger)  20                                      |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             1                                       |
+|  Broker option positions       1                                       |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S174)                                |
++------------------------------------------------------------------------+
+|  Reflected trades=515  buckets=49  win=37%                             |
+|  Returns   avg=+10.0%  med=-30.0%  p10=-75.8%  p90=+96.4%              |
+|  Realized  $+4,518.77                                                  |
+|  Raw incl dropped  trades=629  real=$+3,020.58                         |
+|  Today     trades=18  avg=+80.3%  med=+81.9%  real=$+911.00            |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b51  c051_s165_w4_1120_  1 100% +263.6 +263.6 +263.6 $   +174         |
+|  b91  c091_s165_w4_1120_  3  67% +142.7 +197.0 +247.0 $   +282         |
+|  b31  c031_s165_w4_1120_  2 100% +145.5 +145.5 +175.8 $   +192         |
+|  b28  c028_s165_w1_0928_ 17  76% +49.5 +80.0 +102.0 $   +448           |
+|  b92  c092_s166_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b93  c093_s166_w2_1005_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b95  c095_s166_w4_1120_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  b96  c096_s163_w1_0928_  1 100% +70.8 +70.8 +70.8 $    +71            |
+|  ... 41 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b21  c021_s173_w2_1005_ 23   4% -55.2 -72.1 -98.5 $   -863       |
++========================================================================+
++========================================================================+
+|  PENDING EXITS (1)                                                     |
++------------------------------------------------------------------------+
+|  b20  S173 CRM260724C00185000 x1 take_profit (+110.0%                  |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (1)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  CRM260724C00185000            1   +110.0%   $    +69.67               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-20.log
+elapsed=3.8s reconcile=2.35s cancel=0.09s manage=0.48s
+STATUS: options_morning_bot run complete (PAPER) elapsed=3.8s. run=#4452 https://github.com/28twagg-ops/TradingBot/actions/runs/29764543581
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-20_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-20_buckets.csv
+Summary: 14 buckets closed trades, $+911.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-20_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-20_strategy_selection.csv
+Summary: keep=0 watch=2 drop=3
+Orphan rate: 3.5% (22/629)
+  File "/home/runner/work/TradingBot/TradingBot/scripts/options_signal_frequency.py", line 80
+    return f"{day}|{sid}|{re.sub(r'\s+', ' ', line.strip())[:160]}"
+                                                                   ^
+SyntaxError: f-string expression part cannot include a backslash
+signal_frequency report failed (non-fatal)
+## Ledger health — 2026-07-20
+| Check                       | Count | Status |
+|-----------------------------|------:|--------|
+| Current stuck (state)       |     0 | OK |
+| Orphaned lots (post-stable) |    27 | WARN | <<<
+| Missing exit records (post) |    27 | WARN | <<<
+| State/ledger mismatches     |     1 | WARN | <<<
+| Total open lots             |     1 | INFO |
+| Total closed lots           |   274 | INFO |
+| Pre-cutoff audit debt       |     0 | INFO |
+| Transition audit debt       |   589 | INFO |
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_health.md
