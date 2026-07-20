@@ -82,7 +82,7 @@
       "entry_order_id": "eb83a71c-6574-4607-93cd-9f8dac991a4f"
     },
     {
-      "lot_id": "63c4c743c4f7",
+      "lot_id": "f3df843084e1",
       "bucket_id": 0,
       "profile_name": "c000_s173_w1_0928_1005_r1",
       "strategy_id": "S173",
@@ -555,7 +555,8 @@
     "7f0566a6-4079-4a9b-85fd-4dcc21abe916",
     "e1f0d2bf-a5f3-4237-852d-f9d17fb55333",
     "19d3ba4b-19e4-47dd-a1dd-f77fad00965e",
-    "8d55c2ce-a4df-4db6-9a19-e7c1eb5e07e1"
+    "8d55c2ce-a4df-4db6-9a19-e7c1eb5e07e1",
+    "886a2d79-e720-4951-a62d-90174463291d"
   ],
   "submitted_today": 5,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
