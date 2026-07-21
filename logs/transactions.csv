@@ -1001,3 +1001,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-20 19:51:56,2026-07-20,SELL,TJX,Pullback50,155.84,96.31,0.06,0.06,0,midline (+0.1%),bull,481.56
 2026-07-21 13:46:04,2026-07-21,SELL,WMB,Pullback50,73.53,71.44,-1.1,-0.8,1,stop_loss (-1.1%),bull,481.07
 2026-07-21 13:46:06,2026-07-21,SELL,MAA,Pullback50,132.86,95.8,-0.57,-0.55,1,stop_loss (-0.6%),bull,480.98
+2026-07-21 13:50:51,2026-07-21,SELL,IEX,Pullback50,219.0,70.78,-0.68,-0.49,0,stop_loss (-0.7%),bull,480.59
+2026-07-21 13:51:22,2026-07-21,SELL,CI,Pullback50,287.01,95.97,-0.18,-0.17,0,midline (-0.2%),bull,480.24

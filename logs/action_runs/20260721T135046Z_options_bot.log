@@ -1,0 +1,21 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=0 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=2
+  zombies_flagged=0
+options_reconcile: done
+Layout: controlled:140:c000_s173_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:140:c000_s173_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      140
+=== options_morning_bot (PAPER) 2026-07-21T09:54:56.048559-04:00 ===
+
+[Run context]
+Paper auth OK — equity $130997.05, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 140 | Strategies: S165, S164, S168, S167, S166, S163
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163] …
+Fetched daily bars for 903/903 symbols
