@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-17 13:44:41.690093+00:00,entry,40,c040_s166_w1_0928_1005_r2,S173,72c6011320bb,AMZN,AMZN260717C00250000,1,0.47,0.47,47.0,,,,-0.01,,0.5,-0.5,,,3d7b3ed3-1c3b-44f9-aa58-1f7f7ef6ac17

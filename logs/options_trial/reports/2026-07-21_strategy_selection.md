@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-21
 
-_Generated 2026-07-21T10:05:19.970431_
+_Generated 2026-07-21T10:09:27.158718_
 
 ## Summary
 
@@ -11,23 +11,23 @@ _Generated 2026-07-21T10:05:19.970431_
 
 ## Attribution health
 
-- Total exits: **630**
+- Total exits: **667**
 - Orphan exits (b0/orphan_reconcile): **22**
-- Orphan rate: **3.5%** (warn if >10%)
+- Orphan rate: **3.3%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
 
 ## Strategy scoreboard
 
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S166 (GapDown strong call) | 3d ATM strong | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 5 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 5 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S166 (GapDown strong call) | 3d ATM strong | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 5 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 5 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 114 | 37.7 | -24.14 | -89.83 | -71.19 | +37.06 | 15 | 0 | 0 | $-1,498.19 | 50.0% | manually paused — excluded from new entries & reflected P&L |
-| S173 (MomReversal long call) | MomRev | drop | 303 | 38.6 | -27.45 | -78.62 | -62.41 | +100.00 | 15 | 50 | 50 | $-933.36 | 29.7% | manually paused — excluded from new entries & reflected P&L |
-| S165 (GapDown long call 3 DTE) | 3d ATM | drop | 191 | 33.0 | -30.00 | -60.00 | -52.73 | +84.31 | 15 | 35 | 22 | $-788.78 | 27.7% | non-positive median return |
+| S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 10 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 115 | 37.4 | -25.00 | -89.83 | -71.19 | +36.98 | 15 | 0 | 0 | $-1,551.19 | 50.4% | manually paused — excluded from new entries & reflected P&L |
+| S173 (MomReversal long call) | MomRev | drop | 330 | 38.8 | -31.20 | -77.07 | -62.69 | +103.65 | 15 | 62 | 61 | $-86.36 | 30.3% | manually paused — excluded from new entries & reflected P&L |
+| S165 (GapDown long call 3 DTE) | 3d ATM | drop | 200 | 31.5 | -36.64 | -61.91 | -53.52 | +83.83 | 15 | 51 | 23 | $-1,162.78 | 26.5% | non-positive median return |
 
 ## Comparison groups
 
@@ -39,10 +39,10 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S163 | 7d ATM | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
-| S164 | 1d ATM | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
-| S165 | 3d ATM | 191 | -30.00 | -60.00 | -52.73 | 35 | 22 |
-| S168 | 5d ATM | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
+| S163 | 7d ATM | 0 | +0.00 | +0.00 | +0.00 | 5 | 0 |
+| S164 | 1d ATM | 0 | +0.00 | +0.00 | +0.00 | 5 | 0 |
+| S165 | 3d ATM | 200 | -36.64 | -61.91 | -53.52 | 51 | 23 |
+| S168 | 5d ATM | 0 | +0.00 | +0.00 | +0.00 | 10 | 0 |
 
 ### GapDown Strike comparison
 
@@ -50,16 +50,16 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S165 | 3d ATM | 191 | -30.00 | -60.00 | -52.73 | 35 | 22 |
+| S165 | 3d ATM | 200 | -36.64 | -61.91 | -53.52 | 51 | 23 |
 | S167 | 3d 1-OTM | 0 | +0.00 | +0.00 | +0.00 | 5 | 0 |
 
 ### Other
 
-- Status: **OK** | Best median: **S173** (-27.45%) | Best p10: **S173** (-78.62%)
+- Status: **OK** | Best median: **S173** (-31.20%) | Best p10: **S173** (-77.07%)
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S173 | MomRev | 303 | -27.45 | -78.62 | -62.41 | 50 | 50 |
+| S173 | MomRev | 330 | -31.20 | -77.07 | -62.69 | 62 | 61 |
 
 ## Notes
 

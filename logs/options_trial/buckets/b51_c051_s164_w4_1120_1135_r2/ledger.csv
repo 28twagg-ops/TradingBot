@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-17 15:21:41.066929+00:00,entry,51,c051_s164_w4_1120_1135_r2,S165,dafbf1dd1188,META,META260720C00667500,1,0.66,0.66,66.0,,,,-0.01,,0.5,-0.5,,,cd139998-d6ae-4a3a-991f-e86a2378947d

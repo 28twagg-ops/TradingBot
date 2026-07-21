@@ -1,0 +1,4 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-17 14:47:39.604378+00:00,entry,70,c070_s166_w3_1045_1120_r3,S165,301d4baa9a05,META,META260720C00670000,1,0.74,0.74,74.0,,,,-0.01,,0.5,-0.5,,,697162a3-4148-4382-9693-19d3595e480c
+2026-07-16 17:07:14.866932+00:00,exit,70,c070_s166_w3_1045_1120_r3,S165,301d4baa9a05,META,META260720C00670000,1,,0.26,74.0,-64.86,-48.0,reconcile_fill,,-0.01,0.5,-0.5,,,e562525c-8754-4b3e-8e81-8d5da2b43a2b
+2026-07-16 14:50:16.963132+00:00,entry,70,c070_s166_w3_1045_1120_r3,S165,ffbf3669d632,AVGO,AVGO260717C00400000,1,0.6,0.6,60.0,,,,-0.01,,0.5,-0.5,,,40a8bff8-a6dc-4a85-bb9a-7ba158ec831f

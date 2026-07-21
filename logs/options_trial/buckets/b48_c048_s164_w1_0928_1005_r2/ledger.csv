@@ -1,0 +1,4 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-21 14:08:08.623201+00:00,entry,48,c048_s164_w1_0928_1005_r2,S164,a439876a0525,HAL,HAL260724C00035000,1,0.08,0.08,8.0,,,,-0.01,,0.5,-0.5,,,20ef4d17-3430-4308-8b01-d9be2d8c6b60
+2026-07-16 15:10:48.074764+00:00,exit,48,c048_s164_w1_0928_1005_r2,S165,d85130e27b02,GOOGL,GOOGL260720C00360000,1,,0.24,55.0,-56.36,-31.0,reconcile_fill,,-0.01,0.5,-0.5,,,9e01f268-3bcc-45e7-b1b2-c3d0a245d1b5
+2026-07-16 14:21:05.622333+00:00,entry,48,c048_s164_w1_0928_1005_r2,S165,b0eddfd10f8a,AVGO,AVGO260717C00400000,1,0.73,0.73,73.0,,,,-0.01,,0.5,-0.5,,,609af444-f31c-4db3-8951-b4dc6623a22b

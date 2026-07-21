@@ -1,0 +1,3 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-17 14:45:49.037991+00:00,exit,21,c021_s164_w2_1005_1045_r1,S173,11f743e0484d,CRM,CRM260724C00185000,1,,0.25,57.0,-56.14,-32.0,reconcile_fill,,-0.01,0.5,-0.5,,,bde110b5-17de-40a8-9405-05cfc81609c9
+2026-07-16 14:59:58.716655+00:00,exit,21,c021_s164_w2_1005_1045_r1,S173,3b8ccf2b3cb6,AMD,AMD260717C00512500,1,,0.3,66.0,-54.55,-36.0,reconcile_fill,,-0.01,0.5,-0.5,,,e8529f34-fbe3-4918-9f7b-cb07abe43cbb
