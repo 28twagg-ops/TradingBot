@@ -21537,3 +21537,45 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ### Options bot full output
 
 ```text
+
+## Run 20260721T195702Z
+
+- UTC timestamp: `20260721T195702Z`
+- GitHub run: [#4624](https://github.com/28twagg-ops/TradingBot/actions/runs/29863613775)
+- Run id: `29863613775`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-21T15:54:44.347397-04:00","date":"2026-07-21","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":2.5,"phases_s":{"reconcile":1.65,"cancel":0.22,"manage":0.14},"signals":0,"placed":0,"equity":132832.85,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":90,"filled_today":105,"unattributed_contracts":0,"top_signals":[],"github_run":"4622","github_run_id":"29863178213","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:57:03  INFO      Mode: scan
+19:57:03  INFO        [positions] 4/4 (4 valid)
+19:57:03  INFO        Universe cache hit: 903 tickers (tickers_2026-07-21.json)
+19:57:04  INFO        [universe] 40/899 (40 valid)
+19:57:05  INFO        [universe] 80/899 (80 valid)
+19:57:07  INFO        [universe] 120/899 (120 valid)
+19:57:20  INFO        [universe] 160/899 (160 valid)
+19:57:30  INFO        [universe] 200/899 (199 valid)
+19:57:42  INFO        [universe] 240/899 (238 valid)
+19:57:55  INFO        [universe] 280/899 (278 valid)
+19:58:08  INFO        [universe] 320/899 (318 valid)
+19:58:18  INFO        [universe] 360/899 (358 valid)
+19:58:31  INFO        [universe] 400/899 (397 valid)
+19:58:44  INFO        [universe] 440/899 (437 valid)
+19:58:54  INFO        [universe] 480/899 (477 valid)
+19:59:07  INFO        [universe] 520/899 (517 valid)
+19:59:20  INFO        [universe] 560/899 (556 valid)
+19:59:30  INFO        [universe] 600/899 (596 valid)
+19:59:43  INFO        [universe] 640/899 (636 valid)
+19:59:56  INFO        [universe] 680/899 (676 valid)
+20:00:06  INFO        [universe] 720/899 (715 valid)
+```
+
+### Options bot full output
+
+```text
