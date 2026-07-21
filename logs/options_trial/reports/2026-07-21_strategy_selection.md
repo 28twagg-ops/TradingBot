@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-21
 
-_Generated 2026-07-21T11:01:56.492714_
+_Generated 2026-07-21T11:06:29.147713_
 
 ## Summary
 
@@ -23,7 +23,7 @@ _Generated 2026-07-21T11:01:56.492714_
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 10 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 15 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 10 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 10 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 15 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 15 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 15 | 0 | 0 | $-1,658.19 | 50.4% | manually paused — excluded from new entries & reflected P&L |
 | S173 (MomReversal long call) | MomRev | drop | 385 | 35.6 | -32.31 | -78.45 | -63.16 | +100.00 | 15 | 65 | 66 | $-1,186.36 | 28.1% | manually paused — excluded from new entries & reflected P&L |
@@ -51,7 +51,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S165 | 3d ATM | 236 | -34.31 | -61.76 | -52.73 | 55 | 24 |
-| S167 | 3d 1-OTM | 0 | +0.00 | +0.00 | +0.00 | 10 | 0 |
+| S167 | 3d 1-OTM | 0 | +0.00 | +0.00 | +0.00 | 15 | 0 |
 
 ### Other
 

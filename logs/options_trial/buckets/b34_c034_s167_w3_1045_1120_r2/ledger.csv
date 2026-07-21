@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-21 15:02:40.533788+00:00,entry,34,c034_s167_w3_1045_1120_r2,S167,c855fdc6c8d4,LULU,LULU260724C00120000,1,0.64,0.63,63.0,,,,-0.01,,0.5,-0.5,0.08000000000000007,gap -2.4%,74aa6226-3923-48b1-90b2-6d72a3a32f12

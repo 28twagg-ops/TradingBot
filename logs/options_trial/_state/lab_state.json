@@ -2,7 +2,7 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "f0c03357f8a6",
+      "lot_id": "145ac957f3a3",
       "bucket_id": 138,
       "profile_name": "c138_s168_w3_1045_1120_r5",
       "strategy_id": "S168",
@@ -22,7 +22,7 @@
       "entry_order_id": "ac918c13-4afb-4505-b226-05f75faa5797"
     },
     {
-      "lot_id": "057cb1b44cd5",
+      "lot_id": "a03899e5b50c",
       "bucket_id": 110,
       "profile_name": "c110_s168_w3_1045_1120_r4",
       "strategy_id": "S168",
@@ -42,7 +42,7 @@
       "entry_order_id": "c2654eb5-c92e-4575-b0a7-a5dbfea6a8e5"
     },
     {
-      "lot_id": "62fa25547ac3",
+      "lot_id": "fc8cc96bceff",
       "bucket_id": 82,
       "profile_name": "c082_s168_w3_1045_1120_r3",
       "strategy_id": "S168",
@@ -62,7 +62,7 @@
       "entry_order_id": "e4cda265-6c7b-4a20-81d8-d6dc8b94b355"
     },
     {
-      "lot_id": "727db7e6e69a",
+      "lot_id": "eb4becbf68ee",
       "bucket_id": 54,
       "profile_name": "c054_s168_w3_1045_1120_r2",
       "strategy_id": "S168",
@@ -82,7 +82,7 @@
       "entry_order_id": "187ea7b5-f702-444a-8886-24cb332825b2"
     },
     {
-      "lot_id": "b59bb7e48a5e",
+      "lot_id": "54d48d178294",
       "bucket_id": 26,
       "profile_name": "c026_s168_w3_1045_1120_r1",
       "strategy_id": "S168",
@@ -179,86 +179,6 @@
       "submitted": "2026-07-21",
       "detail": "gap -5.1%",
       "spread_frac": 0.1855670103092784,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "1cdce2da-8a90-42ba-aad7-6b07a5038594",
-      "bucket_id": 6,
-      "strategy_id": "S167",
-      "occ_symbol": "LULU260724C00120000",
-      "underlying": "LULU",
-      "qty": 1,
-      "limit": 0.64,
-      "profile_name": "c006_s167_w3_1045_1120_r1",
-      "submitted": "2026-07-21",
-      "detail": "gap -2.4%",
-      "spread_frac": 0.08000000000000007,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "74aa6226-3923-48b1-90b2-6d72a3a32f12",
-      "bucket_id": 34,
-      "strategy_id": "S167",
-      "occ_symbol": "LULU260724C00120000",
-      "underlying": "LULU",
-      "qty": 1,
-      "limit": 0.64,
-      "profile_name": "c034_s167_w3_1045_1120_r2",
-      "submitted": "2026-07-21",
-      "detail": "gap -2.4%",
-      "spread_frac": 0.08000000000000007,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "9aabfff2-a514-4073-b031-8756c9986dbf",
-      "bucket_id": 62,
-      "strategy_id": "S167",
-      "occ_symbol": "LULU260724C00120000",
-      "underlying": "LULU",
-      "qty": 1,
-      "limit": 0.64,
-      "profile_name": "c062_s167_w3_1045_1120_r3",
-      "submitted": "2026-07-21",
-      "detail": "gap -2.4%",
-      "spread_frac": 0.08000000000000007,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "36b40227-8065-4518-b2cd-e73c00c50160",
-      "bucket_id": 90,
-      "strategy_id": "S167",
-      "occ_symbol": "LULU260724C00120000",
-      "underlying": "LULU",
-      "qty": 1,
-      "limit": 0.64,
-      "profile_name": "c090_s167_w3_1045_1120_r4",
-      "submitted": "2026-07-21",
-      "detail": "gap -2.4%",
-      "spread_frac": 0.08000000000000007,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "9f7fb92f-f1cc-4187-b42d-60f5ab57a912",
-      "bucket_id": 118,
-      "strategy_id": "S167",
-      "occ_symbol": "LULU260724C00120000",
-      "underlying": "LULU",
-      "qty": 1,
-      "limit": 0.64,
-      "profile_name": "c118_s167_w3_1045_1120_r5",
-      "submitted": "2026-07-21",
-      "detail": "gap -2.4%",
-      "spread_frac": 0.08000000000000007,
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
@@ -838,7 +758,12 @@
     "48a6b6f5-37b8-4253-a610-97a2f7d03e1f",
     "de151f01-5202-4b70-902b-7a52e03a8af9",
     "450db1b9-c3da-4123-9045-e00ea7527ad5",
-    "744ca778-c925-42c0-b7d2-5e396acd0381"
+    "744ca778-c925-42c0-b7d2-5e396acd0381",
+    "9f7fb92f-f1cc-4187-b42d-60f5ab57a912",
+    "36b40227-8065-4518-b2cd-e73c00c50160",
+    "9aabfff2-a514-4073-b031-8756c9986dbf",
+    "74aa6226-3923-48b1-90b2-6d72a3a32f12",
+    "1cdce2da-8a90-42ba-aad7-6b07a5038594"
   ],
   "submitted_today": 60,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

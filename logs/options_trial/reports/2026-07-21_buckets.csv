@@ -5,7 +5,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 3,c003_s173_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-20,False,,,,,,,0,,,,idle
 4,c004_s167_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S167,,entered_no_exit
 5,c005_s167_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S167,,entered_no_exit
-6,c006_s167_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-13,False,,,,,,,0,,,,idle
+6,c006_s167_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,LULU,S167,,entered_no_exit
 7,c007_s167_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-10,False,,,,,,,0,,,,idle
 8,c008_s165_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S165,,entered_no_exit
 9,c009_s165_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,HAL,S165,,entered_no_exit
@@ -33,7 +33,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 31,c031_s173_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-17,False,,,,,,,0,,,,idle
 32,c032_s167_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S167,,entered_no_exit
 33,c033_s167_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S167,,entered_no_exit
-34,c034_s167_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-09,False,,,,,,,0,,,,idle
+34,c034_s167_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,LULU,S167,,entered_no_exit
 35,c035_s167_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-09,False,,,,,,,0,,,,idle
 36,c036_s165_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S165,,entered_no_exit
 37,c037_s165_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,HAL,S165,,entered_no_exit
@@ -61,7 +61,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 59,c059_s173_w4_1120_1135_r3,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-09,False,,,,,,,0,,,,idle
 60,c060_s167_w1_0928_1005_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S167,,entered_no_exit
 61,c061_s167_w2_1005_1045_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S167,,entered_no_exit
-62,c062_s167_w3_1045_1120_r3,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-20,False,,,,,,,0,,,,idle
+62,c062_s167_w3_1045_1120_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,LULU,S167,,entered_no_exit
 63,c063_s167_w4_1120_1135_r3,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-20,False,,,,,,,0,,,,idle
 64,c064_s165_w1_0928_1005_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S165,,entered_no_exit
 65,c065_s165_w2_1005_1045_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,HAL,S165,,entered_no_exit
@@ -89,7 +89,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 87,c087_s173_w4_1120_1135_r4,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-10,False,,,,,,,0,,,,idle
 88,c088_s167_w1_0928_1005_r4,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S167,,entered_no_exit
 89,c089_s167_w2_1005_1045_r4,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S167,,entered_no_exit
-90,c090_s167_w3_1045_1120_r4,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-17,False,,,,,,,0,,,,idle
+90,c090_s167_w3_1045_1120_r4,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,LULU,S167,,entered_no_exit
 91,c091_s167_w4_1120_1135_r4,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-17,False,,,,,,,0,,,,idle
 92,c092_s165_w1_0928_1005_r4,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S165,,entered_no_exit
 93,c093_s165_w2_1005_1045_r4,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,HAL,S165,,entered_no_exit
@@ -117,7 +117,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 115,c115_s173_w4_1120_1135_r5,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 116,c116_s167_w1_0928_1005_r5,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S167,,entered_no_exit
 117,c117_s167_w2_1005_1045_r5,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S167,,entered_no_exit
-118,c118_s167_w3_1045_1120_r5,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
+118,c118_s167_w3_1045_1120_r5,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,LULU,S167,,entered_no_exit
 119,c119_s167_w4_1120_1135_r5,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 120,c120_s165_w1_0928_1005_r5,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,CELH,S165,,entered_no_exit
 121,c121_s165_w2_1005_1045_r5,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-21,False,,,,,,,0,HAL,S165,,entered_no_exit
