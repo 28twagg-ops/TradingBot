@@ -12093,3 +12093,1141 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-07-21.log
 elapsed=48.5s reconcile=1.61s cancel=0.07s manage=0.07s scan=44.55s entries=0.13s
 
+=== 11:20:38 ET — entry+manage (30 new) [elapsed=135.6s reconcile=1.39s cancel=0.02s manage=0.02s scan=31.05s entries=101.22s] ===
+=== options_morning_bot (PAPER) 2026-07-21T11:20:38.570876-04:00 ===
+
+[Run context]
+Paper auth OK — equity $131956.05, account PA36KS87UPRS
+  reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:140:c000_s173_w1_0928_1005_r1
+  reconcile: entry fill b126|S166 HAL x1 @ 0.62
+  reconcile: entry fill b98|S166 HAL x1 @ 0.62
+  reconcile: entry fill b70|S166 HAL x1 @ 0.62
+  reconcile: entry fill b42|S166 HAL x1 @ 0.63
+  reconcile: entry fill b14|S166 HAL x1 @ 0.63
+  reconcile: entry fill b118|S167 LULU x1 @ 0.63
+  reconcile: entry fill b90|S167 LULU x1 @ 0.63
+  reconcile: entry fill b62|S167 LULU x1 @ 0.63
+  reconcile: entry fill b34|S167 LULU x1 @ 0.63
+  reconcile: entry fill b6|S167 LULU x1 @ 0.63
+  reconcile: entry fill b138|S168 LULU x1 @ 0.67
+  reconcile: entry fill b110|S168 LULU x1 @ 0.67
+  reconcile: entry fill b82|S168 LULU x1 @ 0.67
+  reconcile: entry fill b54|S168 LULU x1 @ 0.67
+  reconcile: entry fill b26|S168 LULU x1 @ 0.67
+  reconcile: entry fill b134|S164 HAL x1 @ 0.53
+  reconcile: entry fill b106|S164 HAL x1 @ 0.53
+  reconcile: entry fill b78|S164 HAL x1 @ 0.53
+  reconcile: entry fill b50|S164 HAL x1 @ 0.53
+  reconcile: entry fill b22|S164 HAL x1 @ 0.55
+  reconcile: entry fill b129|S163 HAL x1 @ 0.62
+  reconcile: entry fill b101|S163 HAL x1 @ 0.62
+  reconcile: entry fill b73|S163 HAL x1 @ 0.62
+  reconcile: entry fill b45|S163 HAL x1 @ 0.62
+  reconcile: entry fill b17|S163 HAL x1 @ 0.62
+  reconcile: entry fill b125|S166 HAL x1 @ 0.67
+  reconcile: entry fill b97|S166 HAL x1 @ 0.67
+  reconcile: entry fill b69|S166 HAL x1 @ 0.67
+  reconcile: entry fill b41|S166 HAL x1 @ 0.67
+  reconcile: entry fill b13|S166 HAL x1 @ 0.67
+  reconcile: entry fill b117|S167 CELH x1 @ 0.40
+  reconcile: entry fill b89|S167 CELH x1 @ 0.40
+  reconcile: entry fill b61|S167 CELH x1 @ 0.40
+  reconcile: entry fill b33|S167 CELH x1 @ 0.40
+  reconcile: entry fill b5|S167 CELH x1 @ 0.40
+  reconcile: entry fill b137|S168 HAL x1 @ 0.60
+  reconcile: entry fill b109|S168 HAL x1 @ 0.60
+  reconcile: entry fill b81|S168 HAL x1 @ 0.60
+  reconcile: entry fill b53|S168 HAL x1 @ 0.60
+  reconcile: entry fill b25|S168 HAL x1 @ 0.60
+  reconcile: entry fill b133|S164 LULU x1 @ 0.65
+  reconcile: entry fill b105|S164 LULU x1 @ 0.65
+  reconcile: entry fill b77|S164 LULU x1 @ 0.65
+  reconcile: entry fill b49|S164 LULU x1 @ 0.65
+  reconcile: entry fill b21|S164 LULU x1 @ 0.65
+  reconcile: entry fill b121|S165 HAL x1 @ 0.63
+  reconcile: entry fill b93|S165 HAL x1 @ 0.63
+  reconcile: entry fill b65|S165 HAL x1 @ 0.63
+  reconcile: entry fill b37|S165 HAL x1 @ 0.63
+  reconcile: entry fill b9|S165 HAL x1 @ 0.63
+  reconcile: entry fill b128|S163 HAL x1 @ 0.74
+  reconcile: entry fill b100|S163 HAL x1 @ 0.74
+  reconcile: entry fill b72|S163 HAL x1 @ 0.74
+  reconcile: entry fill b44|S163 HAL x1 @ 0.74
+  reconcile: entry fill b16|S163 HAL x1 @ 0.74
+  reconcile: entry fill b116|S167 CELH x1 @ 0.45
+  reconcile: entry fill b88|S167 CELH x1 @ 0.45
+  reconcile: entry fill b60|S167 CELH x1 @ 0.45
+  reconcile: entry fill b32|S167 CELH x1 @ 0.45
+  reconcile: entry fill b4|S167 CELH x1 @ 0.45
+  reconcile: entry fill b136|S168 HAL x1 @ 0.63
+  reconcile: entry fill b108|S168 HAL x1 @ 0.63
+  reconcile: entry fill b80|S168 HAL x1 @ 0.63
+  reconcile: entry fill b52|S168 HAL x1 @ 0.63
+  reconcile: entry fill b24|S168 HAL x1 @ 0.63
+  reconcile: entry fill b132|S164 HAL x1 @ 0.08
+  reconcile: entry fill b104|S164 HAL x1 @ 0.08
+  reconcile: entry fill b76|S164 HAL x1 @ 0.08
+  reconcile: entry fill b48|S164 HAL x1 @ 0.08
+  reconcile: entry fill b20|S164 HAL x1 @ 0.08
+  reconcile: entry fill b120|S165 CELH x1 @ 0.45
+  reconcile: entry fill b92|S165 CELH x1 @ 0.45
+  reconcile: entry fill b64|S165 CELH x1 @ 0.45
+  reconcile: entry fill b36|S165 CELH x1 @ 0.45
+  reconcile: entry fill b8|S165 CELH x1 @ 0.45
+  reconcile: entry fill b83|S173 CRM x1 @ 0.62
+  reconcile: entry fill b63|S173 CRM x1 @ 0.62
+  reconcile: entry fill b43|S173 CRM x1 @ 0.62
+  reconcile: entry fill b23|S173 CRM x1 @ 0.62
+  reconcile: entry fill b3|S173 CRM x1 @ 0.62
+  reconcile: entry fill b82|S173 CRM x1 @ 0.70
+  reconcile: entry fill b62|S173 CRM x1 @ 0.70
+  reconcile: entry fill b42|S173 CRM x1 @ 0.70
+  reconcile: entry fill b22|S173 CRM x1 @ 0.70
+  reconcile: entry fill b2|S173 CRM x1 @ 0.70
+  reconcile: entry fill b81|S173 CRM x1 @ 0.57
+  reconcile: entry fill b61|S173 CRM x1 @ 0.57
+  reconcile: entry fill b41|S173 CRM x1 @ 0.57
+  reconcile: entry fill b21|S173 CRM x1 @ 0.57
+  reconcile: entry fill b1|S173 CRM x1 @ 0.57
+  reconcile: entry fill b80|S173 CRM x1 @ 0.63
+  reconcile: entry fill b60|S173 CRM x1 @ 0.63
+  reconcile: entry fill b40|S173 CRM x1 @ 0.63
+  reconcile: entry fill b20|S173 CRM x1 @ 0.63
+  reconcile: entry fill b0|S173 CRM x1 @ 0.63
+  reconcile: entry fill b91|S165 META x1 @ 0.66
+  reconcile: entry fill b71|S165 META x1 @ 0.66
+  reconcile: entry fill b51|S165 META x1 @ 0.66
+  reconcile: entry fill b31|S165 META x1 @ 0.66
+  reconcile: entry fill b11|S165 META x1 @ 0.66
+  reconcile: entry fill b83|S173 AMD x1 @ 0.52
+  reconcile: entry fill b63|S173 AMD x1 @ 0.52
+  reconcile: entry fill b43|S173 AMD x1 @ 0.52
+  reconcile: entry fill b23|S173 AMD x1 @ 0.52
+  reconcile: entry fill b3|S173 AMD x1 @ 0.52
+  reconcile: entry fill b90|S165 META x1 @ 0.74
+  reconcile: entry fill b70|S165 META x1 @ 0.74
+  reconcile: entry fill b50|S165 META x1 @ 0.74
+  reconcile: entry fill b30|S165 META x1 @ 0.74
+  reconcile: entry fill b10|S165 META x1 @ 0.74
+  reconcile: entry fill b82|S173 AMD x1 @ 0.67
+  reconcile: entry fill b62|S173 AMD x1 @ 0.67
+  reconcile: entry fill b42|S173 AMD x1 @ 0.67
+  reconcile: entry fill b22|S173 AMD x1 @ 0.67
+  reconcile: entry fill b2|S173 AMD x1 @ 0.67
+  reconcile: entry fill b89|S165 META x1 @ 0.68
+  reconcile: entry fill b69|S165 META x1 @ 0.68
+  reconcile: entry fill b49|S165 META x1 @ 0.68
+  reconcile: entry fill b29|S165 META x1 @ 0.68
+  reconcile: entry fill b9|S165 META x1 @ 0.68
+  reconcile: entry fill b81|S173 AMD x1 @ 0.66
+  reconcile: entry fill b61|S173 AMD x1 @ 0.66
+  reconcile: entry fill b41|S173 AMD x1 @ 0.66
+  reconcile: entry fill b21|S173 AMD x1 @ 0.66
+  reconcile: entry fill b1|S173 AMD x1 @ 0.66
+  reconcile: entry fill b40|S173 AMZN x1 @ 0.47
+  reconcile: entry fill b0|S173 AMZN x1 @ 0.47
+  reconcile: entry fill b88|S165 GOOGL x1 @ 0.55
+  reconcile: entry fill b68|S165 GOOGL x1 @ 0.55
+  reconcile: entry fill b48|S165 GOOGL x1 @ 0.55
+  reconcile: entry fill b28|S165 GOOGL x1 @ 0.55
+  reconcile: entry fill b8|S165 GOOGL x1 @ 0.55
+  reconcile: entry fill b80|S173 AMZN x1 @ 0.51
+  reconcile: entry fill b60|S173 AMZN x1 @ 0.51
+  reconcile: entry fill b20|S173 AMZN x1 @ 0.51
+  reconcile: entry fill b63|S173 LULU x1 @ 0.57
+  reconcile: entry fill b43|S173 LULU x1 @ 0.57
+  reconcile: entry fill b83|S173 LULU x1 @ 0.63
+  reconcile: entry fill b23|S173 LULU x1 @ 0.63
+  reconcile: entry fill b62|S173 LULU x1 @ 0.58
+  reconcile: entry fill b42|S173 AMD x1 @ 0.68
+  reconcile: entry fill b82|S173 LULU x1 @ 0.47
+  reconcile: entry fill b2|S173 AMD x1 @ 0.70
+  reconcile: entry fill b90|S165 AVGO x1 @ 0.60
+  reconcile: entry fill b70|S165 AVGO x1 @ 0.60
+  reconcile: entry fill b50|S165 AVGO x1 @ 0.60
+  reconcile: entry fill b30|S165 AVGO x1 @ 0.60
+  reconcile: entry fill b10|S165 AVGO x1 @ 0.60
+  reconcile: entry fill b22|S173 AMD x1 @ 0.67
+  reconcile: entry fill b81|S173 AMD x1 @ 0.68
+  reconcile: entry fill b61|S173 AMD x1 @ 0.68
+  reconcile: entry fill b41|S173 AMD x1 @ 0.68
+  reconcile: entry fill b21|S173 AMD x1 @ 0.68
+  reconcile: entry fill b1|S173 AMD x1 @ 0.68
+  reconcile: entry fill b89|S165 AVGO x1 @ 0.50
+  reconcile: entry fill b69|S165 AVGO x1 @ 0.50
+  reconcile: entry fill b49|S165 AVGO x1 @ 0.50
+  reconcile: entry fill b29|S165 AVGO x1 @ 0.50
+  reconcile: entry fill b9|S165 AVGO x1 @ 0.50
+  reconcile: entry fill b48|S165 AVGO x1 @ 0.73
+  reconcile: entry fill b20|S173 AAL x1 @ 0.56
+  reconcile: entry fill b88|S165 AVGO x1 @ 0.55
+  reconcile: entry fill b68|S165 AVGO x1 @ 0.55
+  reconcile: entry fill b48|S165 AVGO x1 @ 0.55
+  reconcile: entry fill b28|S165 AVGO x1 @ 0.55
+  reconcile: entry fill b8|S165 AVGO x1 @ 0.55
+  reconcile: entry fill b80|S173 UAL x1 @ 0.65
+  reconcile: entry fill b60|S173 UAL x1 @ 0.65
+  reconcile: entry fill b40|S173 UAL x1 @ 0.65
+  reconcile: entry fill b0|S173 UAL x1 @ 0.65
+  reconcile: entry fill b83|S173 ADBE x1 @ 0.40
+  reconcile: entry fill b63|S173 ADBE x1 @ 0.40
+  reconcile: entry fill b43|S173 ADBE x1 @ 0.40
+  reconcile: entry fill b23|S173 ADBE x1 @ 0.40
+  reconcile: entry fill b3|S173 ADBE x1 @ 0.40
+  reconcile: entry fill b90|S165 BSX x1 @ 0.65
+  reconcile: entry fill b70|S165 BSX x1 @ 0.65
+  reconcile: entry fill b50|S165 BSX x1 @ 0.65
+  reconcile: entry fill b30|S165 BSX x1 @ 0.65
+  reconcile: entry fill b10|S165 BSX x1 @ 0.65
+  reconcile: entry fill b82|S173 ADBE x1 @ 0.48
+  reconcile: entry fill b62|S173 ADBE x1 @ 0.48
+  reconcile: entry fill b42|S173 ADBE x1 @ 0.48
+  reconcile: entry fill b22|S173 ADBE x1 @ 0.48
+  reconcile: entry fill b2|S173 ADBE x1 @ 0.48
+  reconcile: entry fill b49|S165 GEHC x1 @ 0.70
+  reconcile: entry fill b1|S173 C x1 @ 0.54
+  reconcile: entry fill b89|S165 BSX x1 @ 0.10
+  reconcile: entry fill b69|S165 BSX x1 @ 0.10
+  reconcile: entry fill b29|S165 BSX x1 @ 0.10
+  reconcile: entry fill b9|S165 BSX x1 @ 0.10
+  reconcile: entry fill b81|S173 C x1 @ 0.73
+  reconcile: entry fill b61|S173 C x1 @ 0.73
+  reconcile: entry fill b41|S173 C x1 @ 0.73
+  reconcile: entry fill b21|S173 C x1 @ 0.73
+  reconcile: entry fill b20|S173 C x1 @ 0.48
+  reconcile: entry fill b0|S173 C x1 @ 0.48
+  reconcile: entry fill b88|S165 MSFT x1 @ 0.51
+  reconcile: entry fill b68|S165 MSFT x1 @ 0.51
+  reconcile: entry fill b48|S165 MSFT x1 @ 0.51
+  reconcile: entry fill b28|S165 MSFT x1 @ 0.51
+  reconcile: entry fill b8|S165 MSFT x1 @ 0.51
+  reconcile: entry fill b80|S173 C x1 @ 0.22
+  reconcile: entry fill b60|S173 C x1 @ 0.22
+  reconcile: entry fill b40|S173 C x1 @ 0.22
+  reconcile: entry fill b67|S174 INTC x1 @ 0.59
+  reconcile: entry fill b47|S174 INTC x1 @ 0.59
+  reconcile: entry fill b27|S174 INTC x1 @ 0.59
+  reconcile: entry fill b83|S173 AMD x1 @ 0.65
+  reconcile: entry fill b63|S173 AMD x1 @ 0.65
+  reconcile: entry fill b43|S173 AMD x1 @ 0.65
+  reconcile: entry fill b23|S173 AMD x1 @ 0.65
+  reconcile: entry fill b3|S173 AMD x1 @ 0.65
+  reconcile: entry fill b66|S174 INTC x1 @ 0.59
+  reconcile: entry fill b70|S165 HL x1 @ 0.67
+  reconcile: entry fill b62|S173 AMD x1 @ 0.05
+  reconcile: entry fill b26|S174 AVGO x1 @ 0.49
+  reconcile: entry fill b6|S174 AVGO x1 @ 0.49
+  reconcile: entry fill b2|S173 AMD x1 @ 0.70
+  reconcile: entry fill b50|S165 HL x1 @ 0.66
+  reconcile: entry fill b30|S165 HL x1 @ 0.66
+  reconcile: entry fill b42|S173 AMD x1 @ 0.54
+  reconcile: entry fill b22|S173 AMD x1 @ 0.54
+  reconcile: entry fill b25|S174 AVGO x1 @ 0.46
+  reconcile: entry fill b89|S165 INTC x1 @ 0.55
+  reconcile: entry fill b69|S165 INTC x1 @ 0.55
+  reconcile: entry fill b49|S165 INTC x1 @ 0.55
+  reconcile: entry fill b29|S165 INTC x1 @ 0.55
+  reconcile: entry fill b9|S165 INTC x1 @ 0.55
+  reconcile: entry fill b81|S173 SMCI x1 @ 0.61
+  reconcile: entry fill b61|S173 SMCI x1 @ 0.61
+  reconcile: entry fill b41|S173 SMCI x1 @ 0.61
+  reconcile: removed 232 stale lot(s)
+
+[Setup]
+Active buckets: 140 | Strategies: S165, S164, S168, S167, S166, S163
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 335 signal(s); top: ['S165:ACN', 'S165:ADBE', 'S165:A', 'S165:BR', 'S165:CSGP', 'S165:DHR', 'S165:EFX', 'S165:FDS']
+Paper lab: $131982 broker equity -> 140 bucket(s) ($500 virtual each, unlimited paper)
+  [b11|c011_s165_w4_1120_1135_r1] S165 ACN: no tradeable call
+  [b39|c039_s165_w4_1120_1135_r2] S165 ACN: no tradeable call
+  [b67|c067_s165_w4_1120_1135_r3] S165 ACN: no tradeable call
+  [b95|c095_s165_w4_1120_1135_r4] S165 ACN: no tradeable call
+  [b123|c123_s165_w4_1120_1135_r5] S165 ACN: no tradeable call
+  [b11|c011_s165_w4_1120_1135_r1] S165 ADBE: no tradeable call
+  [b39|c039_s165_w4_1120_1135_r2] S165 ADBE: no tradeable call
+  [b67|c067_s165_w4_1120_1135_r3] S165 ADBE: no tradeable call
+  [b95|c095_s165_w4_1120_1135_r4] S165 ADBE: no tradeable call
+  [b123|c123_s165_w4_1120_1135_r5] S165 ADBE: no tradeable call
+  [b11|c011_s165_w4_1120_1135_r1] S165 A: no tradeable call
+  [b39|c039_s165_w4_1120_1135_r2] S165 A: no tradeable call
+  [b67|c067_s165_w4_1120_1135_r3] S165 A: no tradeable call
+  [b95|c095_s165_w4_1120_1135_r4] S165 A: no tradeable call
+  [b123|c123_s165_w4_1120_1135_r5] S165 A: no tradeable call
+  [b11|c011_s165_w4_1120_1135_r1] S165 BR: no tradeable call
+  [b39|c039_s165_w4_1120_1135_r2] S165 BR: no tradeable call
+  [b67|c067_s165_w4_1120_1135_r3] S165 BR: no tradeable call
+  [b95|c095_s165_w4_1120_1135_r4] S165 BR: no tradeable call
+  [b123|c123_s165_w4_1120_1135_r5] S165 BR: no tradeable call
+  [b11|c011_s165_w4_1120_1135_r1] S165 CSGP: no tradeable call
+  [b39|c039_s165_w4_1120_1135_r2] S165 CSGP: no tradeable call
+  [b67|c067_s165_w4_1120_1135_r3] S165 CSGP: no tradeable call
+  [b95|c095_s165_w4_1120_1135_r4] S165 CSGP: no tradeable call
+  [b123|c123_s165_w4_1120_1135_r5] S165 CSGP: no tradeable call
+  [b11|c011_s165_w4_1120_1135_r1] S165 DHR: no tradeable call
+  [b39|c039_s165_w4_1120_1135_r2] S165 DHR: no tradeable call
+  [b67|c067_s165_w4_1120_1135_r3] S165 DHR: no tradeable call
+  [b95|c095_s165_w4_1120_1135_r4] S165 DHR: no tradeable call
+  [b123|c123_s165_w4_1120_1135_r5] S165 DHR: no tradeable call
+  [b11|c011_s165_w4_1120_1135_r1] S165 EFX: no tradeable call
+  [b39|c039_s165_w4_1120_1135_r2] S165 EFX: no tradeable call
+  [b67|c067_s165_w4_1120_1135_r3] S165 EFX: no tradeable call
+  [b95|c095_s165_w4_1120_1135_r4] S165 EFX: no tradeable call
+  [b123|c123_s165_w4_1120_1135_r5] S165 EFX: no tradeable call
+  [b11|c011_s165_w4_1120_1135_r1] S165 FDS: no tradeable call
+  [b39|c039_s165_w4_1120_1135_r2] S165 FDS: no tradeable call
+  [b67|c067_s165_w4_1120_1135_r3] S165 FDS: no tradeable call
+  [b95|c095_s165_w4_1120_1135_r4] S165 FDS: no tradeable call
+  [b123|c123_s165_w4_1120_1135_r5] S165 FDS: no tradeable call
+  [b11|c011_s165_w4_1120_1135_r1] S165 FICO: no tradeable call
+  [b39|c039_s165_w4_1120_1135_r2] S165 FICO: no tradeable call
+  [b67|c067_s165_w4_1120_1135_r3] S165 FICO: no tradeable call
+  [b95|c095_s165_w4_1120_1135_r4] S165 FICO: no tradeable call
+  [b123|c123_s165_w4_1120_1135_r5] S165 FICO: no tradeable call
+  [b11|c011_s165_w4_1120_1135_r1] S165 IT: no tradeable call
+  [b39|c039_s165_w4_1120_1135_r2] S165 IT: no tradeable call
+  [b67|c067_s165_w4_1120_1135_r3] S165 IT: no tradeable call
+  [b95|c095_s165_w4_1120_1135_r4] S165 IT: no tradeable call
+  [b123|c123_s165_w4_1120_1135_r5] S165 IT: no tradeable call
+  [b11|c011_s165_w4_1120_1135_r1] S165 GPC: no tradeable call
+  [b39|c039_s165_w4_1120_1135_r2] S165 GPC: no tradeable call
+  [b67|c067_s165_w4_1120_1135_r3] S165 GPC: no tradeable call
+  [b95|c095_s165_w4_1120_1135_r4] S165 GPC: no tradeable call
+  [b123|c123_s165_w4_1120_1135_r5] S165 GPC: no tradeable call
+  [b11|c011_s165_w4_1120_1135_r1] S165 GILD: no tradeable call
+  [b39|c039_s165_w4_1120_1135_r2] S165 GILD: no tradeable call
+  [b67|c067_s165_w4_1120_1135_r3] S165 GILD: no tradeable call
+  [b95|c095_s165_w4_1120_1135_r4] S165 GILD: no tradeable call
+  [b123|c123_s165_w4_1120_1135_r5] S165 GILD: no tradeable call
+  [b11|c011_s165_w4_1120_1135_r1] S165 GDDY: no tradeable call
+  [b39|c039_s165_w4_1120_1135_r2] S165 GDDY: no tradeable call
+  [b67|c067_s165_w4_1120_1135_r3] S165 GDDY: no tradeable call
+  [b95|c095_s165_w4_1120_1135_r4] S165 GDDY: no tradeable call
+  [b123|c123_s165_w4_1120_1135_r5] S165 GDDY: no tradeable call
+  ENTRY [b11|c011_s165_w4_1120_1135_r1|S165] BUY 1x HAL260724C00033000 (gap -5.1%) limit=0.65 (ask=0.66 off=-0.01) tp=+50% sl=-50% pending id=fe22afb2-be2f-4b28-96d3-47abc417b2f9
+  ENTRY [b39|c039_s165_w4_1120_1135_r2|S165] BUY 1x HAL260724C00033000 (gap -5.1%) limit=0.65 (ask=0.66 off=-0.01) tp=+50% sl=-50% pending id=67350bc3-1844-4a2e-a407-ebdd6986eb90
+  ENTRY [b67|c067_s165_w4_1120_1135_r3|S165] BUY 1x HAL260724C00033000 (gap -5.1%) limit=0.65 (ask=0.66 off=-0.01) tp=+50% sl=-50% pending id=7fcd6c6d-2538-4d47-8fcd-9ff831bda7d8
+  ENTRY [b95|c095_s165_w4_1120_1135_r4|S165] BUY 1x HAL260724C00033000 (gap -5.1%) limit=0.65 (ask=0.66 off=-0.01) tp=+50% sl=-50% pending id=1ce0bf9d-6d16-4ae1-893d-6ce91cbbb345
+  ENTRY [b123|c123_s165_w4_1120_1135_r5|S165] BUY 1x HAL260724C00033000 (gap -5.1%) limit=0.65 (ask=0.66 off=-0.01) tp=+50% sl=-50% pending id=191be3fb-2f7c-4e45-b09d-4da0af580058
+  [b23|c023_s164_w4_1120_1135_r1] S164 ACN: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 ACN: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 ACN: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 ACN: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 ACN: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 ADBE: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 ADBE: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 ADBE: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 ADBE: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 ADBE: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 A: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 A: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 A: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 A: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 A: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 BR: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 BR: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 BR: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 BR: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 BR: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 CSGP: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 CSGP: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 CSGP: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 CSGP: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 CSGP: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 DHR: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 DHR: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 DHR: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 DHR: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 DHR: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 EFX: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 EFX: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 EFX: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 EFX: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 EFX: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 FDS: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 FDS: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 FDS: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 FDS: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 FDS: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 FICO: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 FICO: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 FICO: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 FICO: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 FICO: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 IT: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 IT: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 IT: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 IT: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 IT: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 GPC: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 GPC: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 GPC: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 GPC: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 GPC: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 GILD: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 GILD: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 GILD: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 GILD: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 GILD: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 GDDY: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 GDDY: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 GDDY: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 GDDY: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 GDDY: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 HAL: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 HAL: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 HAL: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 HAL: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 HAL: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 PODD: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 PODD: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 PODD: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 PODD: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 PODD: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 INTU: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 INTU: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 INTU: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 INTU: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 INTU: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 IQV: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 IQV: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 IQV: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 IQV: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 IQV: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 JKHY: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 JKHY: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 JKHY: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 JKHY: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 JKHY: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 KEY: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 KEY: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 KEY: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 KEY: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 KEY: no tradeable call
+  [b23|c023_s164_w4_1120_1135_r1] S164 LDOS: no tradeable call
+  [b51|c051_s164_w4_1120_1135_r2] S164 LDOS: no tradeable call
+  [b79|c079_s164_w4_1120_1135_r3] S164 LDOS: no tradeable call
+  [b107|c107_s164_w4_1120_1135_r4] S164 LDOS: no tradeable call
+  [b135|c135_s164_w4_1120_1135_r5] S164 LDOS: no tradeable call
+  ENTRY [b23|c023_s164_w4_1120_1135_r1|S164] BUY 1x LULU260724C00120000 (gap -2.4%) limit=0.65 (ask=0.66 off=-0.01) tp=+50% sl=-50% pending id=1588df79-150e-4dda-98a8-396253d0ada3
+  ENTRY [b51|c051_s164_w4_1120_1135_r2|S164] BUY 1x LULU260724C00120000 (gap -2.4%) limit=0.65 (ask=0.66 off=-0.01) tp=+50% sl=-50% pending id=6a32ee8e-e168-4a7d-9593-065b777c8120
+  ENTRY [b79|c079_s164_w4_1120_1135_r3|S164] BUY 1x LULU260724C00120000 (gap -2.4%) limit=0.65 (ask=0.66 off=-0.01) tp=+50% sl=-50% pending id=6553acc2-6969-4b4d-8d32-c97079165ccb
+  ENTRY [b107|c107_s164_w4_1120_1135_r4|S164] BUY 1x LULU260724C00120000 (gap -2.4%) limit=0.65 (ask=0.66 off=-0.01) tp=+50% sl=-50% pending id=4a8fdb62-b2f3-4ba0-8361-3cff8e1a0180
+  ENTRY [b135|c135_s164_w4_1120_1135_r5|S164] BUY 1x LULU260724C00120000 (gap -2.4%) limit=0.65 (ask=0.66 off=-0.01) tp=+50% sl=-50% pending id=4dd63b16-887d-46ca-ba50-3f3b1507e88b
+  [b27|c027_s168_w4_1120_1135_r1] S168 ACN: no tradeable call
+  [b55|c055_s168_w4_1120_1135_r2] S168 ACN: no tradeable call
+  [b83|c083_s168_w4_1120_1135_r3] S168 ACN: no tradeable call
+  [b111|c111_s168_w4_1120_1135_r4] S168 ACN: no tradeable call
+  [b139|c139_s168_w4_1120_1135_r5] S168 ACN: no tradeable call
+  [b27|c027_s168_w4_1120_1135_r1] S168 ADBE: no tradeable call
+  [b55|c055_s168_w4_1120_1135_r2] S168 ADBE: no tradeable call
+  [b83|c083_s168_w4_1120_1135_r3] S168 ADBE: no tradeable call
+  [b111|c111_s168_w4_1120_1135_r4] S168 ADBE: no tradeable call
+  [b139|c139_s168_w4_1120_1135_r5] S168 ADBE: no tradeable call
+  [b27|c027_s168_w4_1120_1135_r1] S168 A: no tradeable call
+  [b55|c055_s168_w4_1120_1135_r2] S168 A: no tradeable call
+  [b83|c083_s168_w4_1120_1135_r3] S168 A: no tradeable call
+  [b111|c111_s168_w4_1120_1135_r4] S168 A: no tradeable call
+  [b139|c139_s168_w4_1120_1135_r5] S168 A: no tradeable call
+  [b27|c027_s168_w4_1120_1135_r1] S168 BR: no tradeable call
+  [b55|c055_s168_w4_1120_1135_r2] S168 BR: no tradeable call
+  [b83|c083_s168_w4_1120_1135_r3] S168 BR: no tradeable call
+  [b111|c111_s168_w4_1120_1135_r4] S168 BR: no tradeable call
+  [b139|c139_s168_w4_1120_1135_r5] S168 BR: no tradeable call
+  [b27|c027_s168_w4_1120_1135_r1] S168 CSGP: no tradeable call
+  [b55|c055_s168_w4_1120_1135_r2] S168 CSGP: no tradeable call
+  [b83|c083_s168_w4_1120_1135_r3] S168 CSGP: no tradeable call
+  [b111|c111_s168_w4_1120_1135_r4] S168 CSGP: no tradeable call
+  [b139|c139_s168_w4_1120_1135_r5] S168 CSGP: no tradeable call
+  [b27|c027_s168_w4_1120_1135_r1] S168 DHR: no tradeable call
+  [b55|c055_s168_w4_1120_1135_r2] S168 DHR: no tradeable call
+  [b83|c083_s168_w4_1120_1135_r3] S168 DHR: no tradeable call
+  [b111|c111_s168_w4_1120_1135_r4] S168 DHR: no tradeable call
+  [b139|c139_s168_w4_1120_1135_r5] S168 DHR: no tradeable call
+  [b27|c027_s168_w4_1120_1135_r1] S168 EFX: no tradeable call
+  [b55|c055_s168_w4_1120_1135_r2] S168 EFX: no tradeable call
+  [b83|c083_s168_w4_1120_1135_r3] S168 EFX: no tradeable call
+  [b111|c111_s168_w4_1120_1135_r4] S168 EFX: no tradeable call
+  [b139|c139_s168_w4_1120_1135_r5] S168 EFX: no tradeable call
+  [b27|c027_s168_w4_1120_1135_r1] S168 FDS: no tradeable call
+  [b55|c055_s168_w4_1120_1135_r2] S168 FDS: no tradeable call
+  [b83|c083_s168_w4_1120_1135_r3] S168 FDS: no tradeable call
+  [b111|c111_s168_w4_1120_1135_r4] S168 FDS: no tradeable call
+  [b139|c139_s168_w4_1120_1135_r5] S168 FDS: no tradeable call
+  [b27|c027_s168_w4_1120_1135_r1] S168 FICO: no tradeable call
+  [b55|c055_s168_w4_1120_1135_r2] S168 FICO: no tradeable call
+  [b83|c083_s168_w4_1120_1135_r3] S168 FICO: no tradeable call
+  [b111|c111_s168_w4_1120_1135_r4] S168 FICO: no tradeable call
+  [b139|c139_s168_w4_1120_1135_r5] S168 FICO: no tradeable call
+  [b27|c027_s168_w4_1120_1135_r1] S168 IT: no tradeable call
+  [b55|c055_s168_w4_1120_1135_r2] S168 IT: no tradeable call
+  [b83|c083_s168_w4_1120_1135_r3] S168 IT: no tradeable call
+  [b111|c111_s168_w4_1120_1135_r4] S168 IT: no tradeable call
+  [b139|c139_s168_w4_1120_1135_r5] S168 IT: no tradeable call
+  [b27|c027_s168_w4_1120_1135_r1] S168 GPC: no tradeable call
+  [b55|c055_s168_w4_1120_1135_r2] S168 GPC: no tradeable call
+  [b83|c083_s168_w4_1120_1135_r3] S168 GPC: no tradeable call
+  [b111|c111_s168_w4_1120_1135_r4] S168 GPC: no tradeable call
+  [b139|c139_s168_w4_1120_1135_r5] S168 GPC: no tradeable call
+  [b27|c027_s168_w4_1120_1135_r1] S168 GILD: no tradeable call
+  [b55|c055_s168_w4_1120_1135_r2] S168 GILD: no tradeable call
+  [b83|c083_s168_w4_1120_1135_r3] S168 GILD: no tradeable call
+  [b111|c111_s168_w4_1120_1135_r4] S168 GILD: no tradeable call
+  [b139|c139_s168_w4_1120_1135_r5] S168 GILD: no tradeable call
+  [b27|c027_s168_w4_1120_1135_r1] S168 GDDY: no tradeable call
+  [b55|c055_s168_w4_1120_1135_r2] S168 GDDY: no tradeable call
+  [b83|c083_s168_w4_1120_1135_r3] S168 GDDY: no tradeable call
+  [b111|c111_s168_w4_1120_1135_r4] S168 GDDY: no tradeable call
+  [b139|c139_s168_w4_1120_1135_r5] S168 GDDY: no tradeable call
+  ENTRY [b27|c027_s168_w4_1120_1135_r1|S168] BUY 1x HAL260724C00033000 (gap -5.1%) limit=0.69 (ask=0.70 off=-0.01) tp=+50% sl=-50% pending id=43463cf2-95f0-4bdf-8021-8eb2dbd656a2
+  ENTRY [b55|c055_s168_w4_1120_1135_r2|S168] BUY 1x HAL260724C00033000 (gap -5.1%) limit=0.69 (ask=0.70 off=-0.01) tp=+50% sl=-50% pending id=64fc6633-4883-4fc6-a75d-92cb752dceb9
+  ENTRY [b83|c083_s168_w4_1120_1135_r3|S168] BUY 1x HAL260724C00033000 (gap -5.1%) limit=0.69 (ask=0.70 off=-0.01) tp=+50% sl=-50% pending id=bebcc874-d64c-4347-9ecc-5958eb7b3ac1
+  ENTRY [b111|c111_s168_w4_1120_1135_r4|S168] BUY 1x HAL260724C00033000 (gap -5.1%) limit=0.69 (ask=0.70 off=-0.01) tp=+50% sl=-50% pending id=68617c58-3aba-4021-8fca-ba46c3e21391
+  ENTRY [b139|c139_s168_w4_1120_1135_r5|S168] BUY 1x HAL260724C00033000 (gap -5.1%) limit=0.69 (ask=0.70 off=-0.01) tp=+50% sl=-50% pending id=b7111bbe-3b72-4462-947e-8e256b88cb0d
+  [b7|c007_s167_w4_1120_1135_r1] S167 ACN: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 ACN: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 ACN: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 ACN: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 ACN: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 ADBE: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 ADBE: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 ADBE: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 ADBE: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 ADBE: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 A: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 A: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 A: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 A: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 A: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 BR: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 BR: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 BR: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 BR: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 BR: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 CSGP: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 CSGP: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 CSGP: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 CSGP: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 CSGP: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 DHR: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 DHR: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 DHR: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 DHR: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 DHR: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 EFX: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 EFX: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 EFX: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 EFX: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 EFX: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 FDS: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 FDS: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 FDS: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 FDS: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 FDS: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 FICO: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 FICO: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 FICO: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 FICO: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 FICO: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 IT: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 IT: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 IT: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 IT: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 IT: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 GPC: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 GPC: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 GPC: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 GPC: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 GPC: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 GILD: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 GILD: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 GILD: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 GILD: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 GILD: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 GDDY: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 GDDY: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 GDDY: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 GDDY: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 GDDY: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 HAL: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 HAL: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 HAL: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 HAL: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 HAL: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 PODD: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 PODD: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 PODD: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 PODD: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 PODD: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 INTU: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 INTU: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 INTU: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 INTU: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 INTU: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 IQV: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 IQV: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 IQV: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 IQV: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 IQV: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 JKHY: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 JKHY: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 JKHY: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 JKHY: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 JKHY: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 KEY: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 KEY: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 KEY: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 KEY: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 KEY: no tradeable call
+  [b7|c007_s167_w4_1120_1135_r1] S167 LDOS: no tradeable call
+  [b35|c035_s167_w4_1120_1135_r2] S167 LDOS: no tradeable call
+  [b63|c063_s167_w4_1120_1135_r3] S167 LDOS: no tradeable call
+  [b91|c091_s167_w4_1120_1135_r4] S167 LDOS: no tradeable call
+  [b119|c119_s167_w4_1120_1135_r5] S167 LDOS: no tradeable call
+  ENTRY [b7|c007_s167_w4_1120_1135_r1|S167] BUY 1x LULU260724C00120000 (gap -2.4%) limit=0.62 (ask=0.63 off=-0.01) tp=+50% sl=-50% pending id=f9e54cd5-cd86-4747-bef4-1ba788ae0923
+  ENTRY [b35|c035_s167_w4_1120_1135_r2|S167] BUY 1x LULU260724C00120000 (gap -2.4%) limit=0.62 (ask=0.63 off=-0.01) tp=+50% sl=-50% pending id=cff6131b-8638-460f-b898-75e0d03ef753
+  ENTRY [b63|c063_s167_w4_1120_1135_r3|S167] BUY 1x LULU260724C00120000 (gap -2.4%) limit=0.62 (ask=0.63 off=-0.01) tp=+50% sl=-50% pending id=a438d69d-63c8-4cfa-b97b-6ccbafc1f435
+  ENTRY [b91|c091_s167_w4_1120_1135_r4|S167] BUY 1x LULU260724C00120000 (gap -2.4%) limit=0.62 (ask=0.63 off=-0.01) tp=+50% sl=-50% pending id=97b1fd76-6215-4798-b8c7-0a20b47b5da6
+  ENTRY [b119|c119_s167_w4_1120_1135_r5|S167] BUY 1x LULU260724C00120000 (gap -2.4%) limit=0.62 (ask=0.63 off=-0.01) tp=+50% sl=-50% pending id=6315f79b-368c-4a03-bb98-4c3bd45d2e68
+  [b15|c015_s166_w4_1120_1135_r1] S166 ADBE: no tradeable call
+  [b43|c043_s166_w4_1120_1135_r2] S166 ADBE: no tradeable call
+  [b71|c071_s166_w4_1120_1135_r3] S166 ADBE: no tradeable call
+  [b99|c099_s166_w4_1120_1135_r4] S166 ADBE: no tradeable call
+  [b127|c127_s166_w4_1120_1135_r5] S166 ADBE: no tradeable call
+  [b15|c015_s166_w4_1120_1135_r1] S166 CSGP: no tradeable call
+  [b43|c043_s166_w4_1120_1135_r2] S166 CSGP: no tradeable call
+  [b71|c071_s166_w4_1120_1135_r3] S166 CSGP: no tradeable call
+  [b99|c099_s166_w4_1120_1135_r4] S166 CSGP: no tradeable call
+  [b127|c127_s166_w4_1120_1135_r5] S166 CSGP: no tradeable call
+  [b15|c015_s166_w4_1120_1135_r1] S166 DHR: no tradeable call
+  [b43|c043_s166_w4_1120_1135_r2] S166 DHR: no tradeable call
+  [b71|c071_s166_w4_1120_1135_r3] S166 DHR: no tradeable call
+  [b99|c099_s166_w4_1120_1135_r4] S166 DHR: no tradeable call
+  [b127|c127_s166_w4_1120_1135_r5] S166 DHR: no tradeable call
+  [b15|c015_s166_w4_1120_1135_r1] S166 EFX: no tradeable call
+  [b43|c043_s166_w4_1120_1135_r2] S166 EFX: no tradeable call
+  [b71|c071_s166_w4_1120_1135_r3] S166 EFX: no tradeable call
+  [b99|c099_s166_w4_1120_1135_r4] S166 EFX: no tradeable call
+  [b127|c127_s166_w4_1120_1135_r5] S166 EFX: no tradeable call
+  [b15|c015_s166_w4_1120_1135_r1] S166 FDS: no tradeable call
+  [b43|c043_s166_w4_1120_1135_r2] S166 FDS: no tradeable call
+  [b71|c071_s166_w4_1120_1135_r3] S166 FDS: no tradeable call
+  [b99|c099_s166_w4_1120_1135_r4] S166 FDS: no tradeable call
+  [b127|c127_s166_w4_1120_1135_r5] S166 FDS: no tradeable call
+  [b15|c015_s166_w4_1120_1135_r1] S166 FICO: no tradeable call
+  [b43|c043_s166_w4_1120_1135_r2] S166 FICO: no tradeable call
+  [b71|c071_s166_w4_1120_1135_r3] S166 FICO: no tradeable call
+  [b99|c099_s166_w4_1120_1135_r4] S166 FICO: no tradeable call
+  [b127|c127_s166_w4_1120_1135_r5] S166 FICO: no tradeable call
+  [b15|c015_s166_w4_1120_1135_r1] S166 IT: no tradeable call
+  [b43|c043_s166_w4_1120_1135_r2] S166 IT: no tradeable call
+  [b71|c071_s166_w4_1120_1135_r3] S166 IT: no tradeable call
+  [b99|c099_s166_w4_1120_1135_r4] S166 IT: no tradeable call
+  [b127|c127_s166_w4_1120_1135_r5] S166 IT: no tradeable call
+  [b15|c015_s166_w4_1120_1135_r1] S166 GPC: no tradeable call
+  [b43|c043_s166_w4_1120_1135_r2] S166 GPC: no tradeable call
+  [b71|c071_s166_w4_1120_1135_r3] S166 GPC: no tradeable call
+  [b99|c099_s166_w4_1120_1135_r4] S166 GPC: no tradeable call
+  [b127|c127_s166_w4_1120_1135_r5] S166 GPC: no tradeable call
+  ENTRY [b15|c015_s166_w4_1120_1135_r1|S166] BUY 1x HAL260731C00033500 (gap -5.1%) limit=0.71 (ask=0.72 off=-0.01) tp=+50% sl=-50% pending id=7d083a5d-eb38-41d2-9842-f5960c4adf87
+  ENTRY [b43|c043_s166_w4_1120_1135_r2|S166] BUY 1x HAL260731C00033500 (gap -5.1%) limit=0.71 (ask=0.72 off=-0.01) tp=+50% sl=-50% pending id=a77acafb-4ae3-40fa-ac39-8271f99356ad
+  ENTRY [b71|c071_s166_w4_1120_1135_r3|S166] BUY 1x HAL260731C00033500 (gap -5.1%) limit=0.71 (ask=0.72 off=-0.01) tp=+50% sl=-50% pending id=75a10c53-ef93-41ef-89d8-439ed611179b
+  ENTRY [b99|c099_s166_w4_1120_1135_r4|S166] BUY 1x HAL260731C00033500 (gap -5.1%) limit=0.71 (ask=0.72 off=-0.01) tp=+50% sl=-50% pending id=884a4341-4043-460f-91b9-7eb4699dfb74
+  ENTRY [b127|c127_s166_w4_1120_1135_r5|S166] BUY 1x HAL260731C00033500 (gap -5.1%) limit=0.71 (ask=0.72 off=-0.01) tp=+50% sl=-50% pending id=1453c784-0b9d-4f3a-8dc4-10fc9ad4e779
+  [b19|c019_s163_w4_1120_1135_r1] S163 ACN: no tradeable call
+  [b47|c047_s163_w4_1120_1135_r2] S163 ACN: no tradeable call
+  [b75|c075_s163_w4_1120_1135_r3] S163 ACN: no tradeable call
+  [b103|c103_s163_w4_1120_1135_r4] S163 ACN: no tradeable call
+  [b131|c131_s163_w4_1120_1135_r5] S163 ACN: no tradeable call
+  [b19|c019_s163_w4_1120_1135_r1] S163 ADBE: no tradeable call
+  [b47|c047_s163_w4_1120_1135_r2] S163 ADBE: no tradeable call
+  [b75|c075_s163_w4_1120_1135_r3] S163 ADBE: no tradeable call
+  [b103|c103_s163_w4_1120_1135_r4] S163 ADBE: no tradeable call
+  [b131|c131_s163_w4_1120_1135_r5] S163 ADBE: no tradeable call
+  [b19|c019_s163_w4_1120_1135_r1] S163 A: no tradeable call
+  [b47|c047_s163_w4_1120_1135_r2] S163 A: no tradeable call
+  [b75|c075_s163_w4_1120_1135_r3] S163 A: no tradeable call
+  [b103|c103_s163_w4_1120_1135_r4] S163 A: no tradeable call
+  [b131|c131_s163_w4_1120_1135_r5] S163 A: no tradeable call
+  [b19|c019_s163_w4_1120_1135_r1] S163 BR: no tradeable call
+  [b47|c047_s163_w4_1120_1135_r2] S163 BR: no tradeable call
+  [b75|c075_s163_w4_1120_1135_r3] S163 BR: no tradeable call
+  [b103|c103_s163_w4_1120_1135_r4] S163 BR: no tradeable call
+  [b131|c131_s163_w4_1120_1135_r5] S163 BR: no tradeable call
+  [b19|c019_s163_w4_1120_1135_r1] S163 CSGP: no tradeable call
+  [b47|c047_s163_w4_1120_1135_r2] S163 CSGP: no tradeable call
+  [b75|c075_s163_w4_1120_1135_r3] S163 CSGP: no tradeable call
+  [b103|c103_s163_w4_1120_1135_r4] S163 CSGP: no tradeable call
+  [b131|c131_s163_w4_1120_1135_r5] S163 CSGP: no tradeable call
+  [b19|c019_s163_w4_1120_1135_r1] S163 DHR: no tradeable call
+  [b47|c047_s163_w4_1120_1135_r2] S163 DHR: no tradeable call
+  [b75|c075_s163_w4_1120_1135_r3] S163 DHR: no tradeable call
+  [b103|c103_s163_w4_1120_1135_r4] S163 DHR: no tradeable call
+  [b131|c131_s163_w4_1120_1135_r5] S163 DHR: no tradeable call
+  [b19|c019_s163_w4_1120_1135_r1] S163 EFX: no tradeable call
+  [b47|c047_s163_w4_1120_1135_r2] S163 EFX: no tradeable call
+  [b75|c075_s163_w4_1120_1135_r3] S163 EFX: no tradeable call
+  [b103|c103_s163_w4_1120_1135_r4] S163 EFX: no tradeable call
+  [b131|c131_s163_w4_1120_1135_r5] S163 EFX: no tradeable call
+  [b19|c019_s163_w4_1120_1135_r1] S163 FDS: no tradeable call
+  [b47|c047_s163_w4_1120_1135_r2] S163 FDS: no tradeable call
+  [b75|c075_s163_w4_1120_1135_r3] S163 FDS: no tradeable call
+  [b103|c103_s163_w4_1120_1135_r4] S163 FDS: no tradeable call
+  [b131|c131_s163_w4_1120_1135_r5] S163 FDS: no tradeable call
+  [b19|c019_s163_w4_1120_1135_r1] S163 FICO: no tradeable call
+  [b47|c047_s163_w4_1120_1135_r2] S163 FICO: no tradeable call
+  [b75|c075_s163_w4_1120_1135_r3] S163 FICO: no tradeable call
+  [b103|c103_s163_w4_1120_1135_r4] S163 FICO: no tradeable call
+  [b131|c131_s163_w4_1120_1135_r5] S163 FICO: no tradeable call
+  [b19|c019_s163_w4_1120_1135_r1] S163 IT: no tradeable call
+  [b47|c047_s163_w4_1120_1135_r2] S163 IT: no tradeable call
+  [b75|c075_s163_w4_1120_1135_r3] S163 IT: no tradeable call
+  [b103|c103_s163_w4_1120_1135_r4] S163 IT: no tradeable call
+  [b131|c131_s163_w4_1120_1135_r5] S163 IT: no tradeable call
+  [b19|c019_s163_w4_1120_1135_r1] S163 GPC: no tradeable call
+  [b47|c047_s163_w4_1120_1135_r2] S163 GPC: no tradeable call
+  [b75|c075_s163_w4_1120_1135_r3] S163 GPC: no tradeable call
+  [b103|c103_s163_w4_1120_1135_r4] S163 GPC: no tradeable call
+  [b131|c131_s163_w4_1120_1135_r5] S163 GPC: no tradeable call
+  [b19|c019_s163_w4_1120_1135_r1] S163 GILD: no tradeable call
+  [b47|c047_s163_w4_1120_1135_r2] S163 GILD: no tradeable call
+  [b75|c075_s163_w4_1120_1135_r3] S163 GILD: no tradeable call
+  [b103|c103_s163_w4_1120_1135_r4] S163 GILD: no tradeable call
+  [b131|c131_s163_w4_1120_1135_r5] S163 GILD: no tradeable call
+  [b19|c019_s163_w4_1120_1135_r1] S163 GDDY: no tradeable call
+  [b47|c047_s163_w4_1120_1135_r2] S163 GDDY: no tradeable call
+  [b75|c075_s163_w4_1120_1135_r3] S163 GDDY: no tradeable call
+  [b103|c103_s163_w4_1120_1135_r4] S163 GDDY: no tradeable call
+  [b131|c131_s163_w4_1120_1135_r5] S163 GDDY: no tradeable call
+  ENTRY [b19|c019_s163_w4_1120_1135_r1|S163] BUY 1x HAL260731C00033500 (gap -5.1%) limit=0.71 (ask=0.72 off=-0.01) tp=+50% sl=-50% pending id=eeeb6567-39f9-4c91-ab5d-0df83ccaa4ae
+  ENTRY [b47|c047_s163_w4_1120_1135_r2|S163] BUY 1x HAL260731C00033500 (gap -5.1%) limit=0.71 (ask=0.72 off=-0.01) tp=+50% sl=-50% pending id=2196a605-0a90-4dfe-b4d2-e9f30d944911
+  ENTRY [b75|c075_s163_w4_1120_1135_r3|S163] BUY 1x HAL260731C00033500 (gap -5.1%) limit=0.71 (ask=0.72 off=-0.01) tp=+50% sl=-50% pending id=b353977b-8642-47a4-a400-f9d412338f34
+  ENTRY [b103|c103_s163_w4_1120_1135_r4|S163] BUY 1x HAL260731C00033500 (gap -5.1%) limit=0.71 (ask=0.72 off=-0.01) tp=+50% sl=-50% pending id=5ac05011-5347-4a05-bb46-6755f998459f
+  ENTRY [b131|c131_s163_w4_1120_1135_r5|S163] BUY 1x HAL260731C00033500 (gap -5.1%) limit=0.71 (ask=0.72 off=-0.01) tp=+50% sl=-50% pending id=c80ab9b9-19a9-4c33-a40f-571df4718180
+  Skipped: 435 no tradeable call, 1055 already attempted today, 1830 pending order
+Placed 30 new entry order(s).
+  reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:140:c000_s173_w1_0928_1005_r1
+  reconcile: entry fill b131|S163 HAL x1 @ 0.70
+  reconcile: entry fill b103|S163 HAL x1 @ 0.70
+  reconcile: entry fill b75|S163 HAL x1 @ 0.70
+  reconcile: entry fill b47|S163 HAL x1 @ 0.70
+  reconcile: entry fill b19|S163 HAL x1 @ 0.70
+  reconcile: entry fill b127|S166 HAL x1 @ 0.70
+  reconcile: entry fill b99|S166 HAL x1 @ 0.70
+  reconcile: entry fill b71|S166 HAL x1 @ 0.70
+  reconcile: entry fill b43|S166 HAL x1 @ 0.70
+  reconcile: entry fill b15|S166 HAL x1 @ 0.70
+  reconcile: entry fill b119|S167 LULU x1 @ 0.61
+  reconcile: entry fill b91|S167 LULU x1 @ 0.61
+  reconcile: entry fill b63|S167 LULU x1 @ 0.61
+  reconcile: entry fill b35|S167 LULU x1 @ 0.61
+  reconcile: entry fill b7|S167 LULU x1 @ 0.61
+  reconcile: entry fill b139|S168 HAL x1 @ 0.68
+  reconcile: entry fill b111|S168 HAL x1 @ 0.68
+  reconcile: entry fill b83|S168 HAL x1 @ 0.68
+  reconcile: entry fill b55|S168 HAL x1 @ 0.68
+  reconcile: entry fill b27|S168 HAL x1 @ 0.68
+  reconcile: entry fill b135|S164 LULU x1 @ 0.64
+  reconcile: entry fill b107|S164 LULU x1 @ 0.64
+  reconcile: entry fill b79|S164 LULU x1 @ 0.64
+  reconcile: entry fill b51|S164 LULU x1 @ 0.64
+  reconcile: entry fill b23|S164 LULU x1 @ 0.64
+  reconcile: entry fill b123|S165 HAL x1 @ 0.65
+  reconcile: entry fill b95|S165 HAL x1 @ 0.65
+  reconcile: entry fill b67|S165 HAL x1 @ 0.65
+  reconcile: entry fill b39|S165 HAL x1 @ 0.65
+  reconcile: entry fill b11|S165 HAL x1 @ 0.65
+  reconcile: entry fill b126|S166 HAL x1 @ 0.62
+  reconcile: entry fill b98|S166 HAL x1 @ 0.62
+  reconcile: entry fill b70|S166 HAL x1 @ 0.62
+  reconcile: entry fill b42|S166 HAL x1 @ 0.63
+  reconcile: entry fill b14|S166 HAL x1 @ 0.63
+  reconcile: entry fill b118|S167 LULU x1 @ 0.63
+  reconcile: entry fill b90|S167 LULU x1 @ 0.63
+  reconcile: entry fill b62|S167 LULU x1 @ 0.63
+  reconcile: entry fill b34|S167 LULU x1 @ 0.63
+  reconcile: entry fill b6|S167 LULU x1 @ 0.63
+  reconcile: entry fill b138|S168 LULU x1 @ 0.67
+  reconcile: entry fill b110|S168 LULU x1 @ 0.67
+  reconcile: entry fill b82|S168 LULU x1 @ 0.67
+  reconcile: entry fill b54|S168 LULU x1 @ 0.67
+  reconcile: entry fill b26|S168 LULU x1 @ 0.67
+  reconcile: entry fill b134|S164 HAL x1 @ 0.53
+  reconcile: entry fill b106|S164 HAL x1 @ 0.53
+  reconcile: entry fill b78|S164 HAL x1 @ 0.53
+  reconcile: entry fill b50|S164 HAL x1 @ 0.53
+  reconcile: entry fill b22|S164 HAL x1 @ 0.55
+  reconcile: entry fill b129|S163 HAL x1 @ 0.62
+  reconcile: entry fill b101|S163 HAL x1 @ 0.62
+  reconcile: entry fill b73|S163 HAL x1 @ 0.62
+  reconcile: entry fill b45|S163 HAL x1 @ 0.62
+  reconcile: entry fill b17|S163 HAL x1 @ 0.62
+  reconcile: entry fill b125|S166 HAL x1 @ 0.67
+  reconcile: entry fill b97|S166 HAL x1 @ 0.67
+  reconcile: entry fill b69|S166 HAL x1 @ 0.67
+  reconcile: entry fill b41|S166 HAL x1 @ 0.67
+  reconcile: entry fill b13|S166 HAL x1 @ 0.67
+  reconcile: entry fill b117|S167 CELH x1 @ 0.40
+  reconcile: entry fill b89|S167 CELH x1 @ 0.40
+  reconcile: entry fill b61|S167 CELH x1 @ 0.40
+  reconcile: entry fill b33|S167 CELH x1 @ 0.40
+  reconcile: entry fill b5|S167 CELH x1 @ 0.40
+  reconcile: entry fill b137|S168 HAL x1 @ 0.60
+  reconcile: entry fill b109|S168 HAL x1 @ 0.60
+  reconcile: entry fill b81|S168 HAL x1 @ 0.60
+  reconcile: entry fill b53|S168 HAL x1 @ 0.60
+  reconcile: entry fill b25|S168 HAL x1 @ 0.60
+  reconcile: entry fill b133|S164 LULU x1 @ 0.65
+  reconcile: entry fill b105|S164 LULU x1 @ 0.65
+  reconcile: entry fill b77|S164 LULU x1 @ 0.65
+  reconcile: entry fill b49|S164 LULU x1 @ 0.65
+  reconcile: entry fill b21|S164 LULU x1 @ 0.65
+  reconcile: entry fill b121|S165 HAL x1 @ 0.63
+  reconcile: entry fill b93|S165 HAL x1 @ 0.63
+  reconcile: entry fill b65|S165 HAL x1 @ 0.63
+  reconcile: entry fill b37|S165 HAL x1 @ 0.63
+  reconcile: entry fill b9|S165 HAL x1 @ 0.63
+  reconcile: entry fill b128|S163 HAL x1 @ 0.74
+  reconcile: entry fill b100|S163 HAL x1 @ 0.74
+  reconcile: entry fill b72|S163 HAL x1 @ 0.74
+  reconcile: entry fill b44|S163 HAL x1 @ 0.74
+  reconcile: entry fill b16|S163 HAL x1 @ 0.74
+  reconcile: entry fill b116|S167 CELH x1 @ 0.45
+  reconcile: entry fill b88|S167 CELH x1 @ 0.45
+  reconcile: entry fill b60|S167 CELH x1 @ 0.45
+  reconcile: entry fill b32|S167 CELH x1 @ 0.45
+  reconcile: entry fill b4|S167 CELH x1 @ 0.45
+  reconcile: entry fill b136|S168 HAL x1 @ 0.63
+  reconcile: entry fill b108|S168 HAL x1 @ 0.63
+  reconcile: entry fill b80|S168 HAL x1 @ 0.63
+  reconcile: entry fill b52|S168 HAL x1 @ 0.63
+  reconcile: entry fill b24|S168 HAL x1 @ 0.63
+  reconcile: entry fill b132|S164 HAL x1 @ 0.08
+  reconcile: entry fill b104|S164 HAL x1 @ 0.08
+  reconcile: entry fill b76|S164 HAL x1 @ 0.08
+  reconcile: entry fill b48|S164 HAL x1 @ 0.08
+  reconcile: entry fill b20|S164 HAL x1 @ 0.08
+  reconcile: entry fill b120|S165 CELH x1 @ 0.45
+  reconcile: entry fill b92|S165 CELH x1 @ 0.45
+  reconcile: entry fill b64|S165 CELH x1 @ 0.45
+  reconcile: entry fill b36|S165 CELH x1 @ 0.45
+  reconcile: entry fill b8|S165 CELH x1 @ 0.45
+  reconcile: entry fill b83|S173 CRM x1 @ 0.62
+  reconcile: entry fill b63|S173 CRM x1 @ 0.62
+  reconcile: entry fill b43|S173 CRM x1 @ 0.62
+  reconcile: entry fill b23|S173 CRM x1 @ 0.62
+  reconcile: entry fill b3|S173 CRM x1 @ 0.62
+  reconcile: entry fill b82|S173 CRM x1 @ 0.70
+  reconcile: entry fill b62|S173 CRM x1 @ 0.70
+  reconcile: entry fill b42|S173 CRM x1 @ 0.70
+  reconcile: entry fill b22|S173 CRM x1 @ 0.70
+  reconcile: entry fill b2|S173 CRM x1 @ 0.70
+  reconcile: entry fill b81|S173 CRM x1 @ 0.57
+  reconcile: entry fill b61|S173 CRM x1 @ 0.57
+  reconcile: entry fill b41|S173 CRM x1 @ 0.57
+  reconcile: entry fill b21|S173 CRM x1 @ 0.57
+  reconcile: entry fill b1|S173 CRM x1 @ 0.57
+  reconcile: entry fill b80|S173 CRM x1 @ 0.63
+  reconcile: entry fill b60|S173 CRM x1 @ 0.63
+  reconcile: entry fill b40|S173 CRM x1 @ 0.63
+  reconcile: entry fill b20|S173 CRM x1 @ 0.63
+  reconcile: entry fill b0|S173 CRM x1 @ 0.63
+  reconcile: entry fill b91|S165 META x1 @ 0.66
+  reconcile: entry fill b71|S165 META x1 @ 0.66
+  reconcile: entry fill b51|S165 META x1 @ 0.66
+  reconcile: entry fill b31|S165 META x1 @ 0.66
+  reconcile: entry fill b11|S165 META x1 @ 0.66
+  reconcile: entry fill b83|S173 AMD x1 @ 0.52
+  reconcile: entry fill b63|S173 AMD x1 @ 0.52
+  reconcile: entry fill b43|S173 AMD x1 @ 0.52
+  reconcile: entry fill b23|S173 AMD x1 @ 0.52
+  reconcile: entry fill b3|S173 AMD x1 @ 0.52
+  reconcile: entry fill b90|S165 META x1 @ 0.74
+  reconcile: entry fill b70|S165 META x1 @ 0.74
+  reconcile: entry fill b50|S165 META x1 @ 0.74
+  reconcile: entry fill b30|S165 META x1 @ 0.74
+  reconcile: entry fill b10|S165 META x1 @ 0.74
+  reconcile: entry fill b82|S173 AMD x1 @ 0.67
+  reconcile: entry fill b62|S173 AMD x1 @ 0.67
+  reconcile: entry fill b42|S173 AMD x1 @ 0.67
+  reconcile: entry fill b22|S173 AMD x1 @ 0.67
+  reconcile: entry fill b2|S173 AMD x1 @ 0.67
+  reconcile: entry fill b89|S165 META x1 @ 0.68
+  reconcile: entry fill b69|S165 META x1 @ 0.68
+  reconcile: entry fill b49|S165 META x1 @ 0.68
+  reconcile: entry fill b29|S165 META x1 @ 0.68
+  reconcile: entry fill b9|S165 META x1 @ 0.68
+  reconcile: entry fill b81|S173 AMD x1 @ 0.66
+  reconcile: entry fill b61|S173 AMD x1 @ 0.66
+  reconcile: entry fill b41|S173 AMD x1 @ 0.66
+  reconcile: entry fill b21|S173 AMD x1 @ 0.66
+  reconcile: entry fill b1|S173 AMD x1 @ 0.66
+  reconcile: entry fill b40|S173 AMZN x1 @ 0.47
+  reconcile: entry fill b0|S173 AMZN x1 @ 0.47
+  reconcile: entry fill b88|S165 GOOGL x1 @ 0.55
+  reconcile: entry fill b68|S165 GOOGL x1 @ 0.55
+  reconcile: entry fill b48|S165 GOOGL x1 @ 0.55
+  reconcile: entry fill b28|S165 GOOGL x1 @ 0.55
+  reconcile: entry fill b8|S165 GOOGL x1 @ 0.55
+  reconcile: entry fill b80|S173 AMZN x1 @ 0.51
+  reconcile: entry fill b60|S173 AMZN x1 @ 0.51
+  reconcile: entry fill b20|S173 AMZN x1 @ 0.51
+  reconcile: entry fill b63|S173 LULU x1 @ 0.57
+  reconcile: entry fill b43|S173 LULU x1 @ 0.57
+  reconcile: entry fill b83|S173 LULU x1 @ 0.63
+  reconcile: entry fill b23|S173 LULU x1 @ 0.63
+  reconcile: entry fill b62|S173 LULU x1 @ 0.58
+  reconcile: entry fill b42|S173 AMD x1 @ 0.68
+  reconcile: entry fill b82|S173 LULU x1 @ 0.47
+  reconcile: entry fill b2|S173 AMD x1 @ 0.70
+  reconcile: entry fill b90|S165 AVGO x1 @ 0.60
+  reconcile: entry fill b70|S165 AVGO x1 @ 0.60
+  reconcile: entry fill b50|S165 AVGO x1 @ 0.60
+  reconcile: entry fill b30|S165 AVGO x1 @ 0.60
+  reconcile: entry fill b10|S165 AVGO x1 @ 0.60
+  reconcile: entry fill b22|S173 AMD x1 @ 0.67
+  reconcile: entry fill b81|S173 AMD x1 @ 0.68
+  reconcile: entry fill b61|S173 AMD x1 @ 0.68
+  reconcile: entry fill b41|S173 AMD x1 @ 0.68
+  reconcile: entry fill b21|S173 AMD x1 @ 0.68
+  reconcile: entry fill b1|S173 AMD x1 @ 0.68
+  reconcile: entry fill b89|S165 AVGO x1 @ 0.50
+  reconcile: entry fill b69|S165 AVGO x1 @ 0.50
+  reconcile: entry fill b49|S165 AVGO x1 @ 0.50
+  reconcile: entry fill b29|S165 AVGO x1 @ 0.50
+  reconcile: entry fill b9|S165 AVGO x1 @ 0.50
+  reconcile: entry fill b48|S165 AVGO x1 @ 0.73
+  reconcile: entry fill b20|S173 AAL x1 @ 0.56
+  reconcile: entry fill b88|S165 AVGO x1 @ 0.55
+  reconcile: entry fill b68|S165 AVGO x1 @ 0.55
+  reconcile: entry fill b48|S165 AVGO x1 @ 0.55
+  reconcile: entry fill b28|S165 AVGO x1 @ 0.55
+  reconcile: entry fill b8|S165 AVGO x1 @ 0.55
+  reconcile: entry fill b80|S173 UAL x1 @ 0.65
+  reconcile: entry fill b60|S173 UAL x1 @ 0.65
+  reconcile: entry fill b40|S173 UAL x1 @ 0.65
+  reconcile: entry fill b0|S173 UAL x1 @ 0.65
+  reconcile: entry fill b83|S173 ADBE x1 @ 0.40
+  reconcile: entry fill b63|S173 ADBE x1 @ 0.40
+  reconcile: entry fill b43|S173 ADBE x1 @ 0.40
+  reconcile: entry fill b23|S173 ADBE x1 @ 0.40
+  reconcile: entry fill b3|S173 ADBE x1 @ 0.40
+  reconcile: entry fill b90|S165 BSX x1 @ 0.65
+  reconcile: entry fill b70|S165 BSX x1 @ 0.65
+  reconcile: entry fill b50|S165 BSX x1 @ 0.65
+  reconcile: entry fill b30|S165 BSX x1 @ 0.65
+  reconcile: entry fill b10|S165 BSX x1 @ 0.65
+  reconcile: entry fill b82|S173 ADBE x1 @ 0.48
+  reconcile: entry fill b62|S173 ADBE x1 @ 0.48
+  reconcile: entry fill b42|S173 ADBE x1 @ 0.48
+  reconcile: entry fill b22|S173 ADBE x1 @ 0.48
+  reconcile: entry fill b2|S173 ADBE x1 @ 0.48
+  reconcile: entry fill b49|S165 GEHC x1 @ 0.70
+  reconcile: entry fill b1|S173 C x1 @ 0.54
+  reconcile: entry fill b89|S165 BSX x1 @ 0.10
+  reconcile: entry fill b69|S165 BSX x1 @ 0.10
+  reconcile: entry fill b29|S165 BSX x1 @ 0.10
+  reconcile: entry fill b9|S165 BSX x1 @ 0.10
+  reconcile: entry fill b81|S173 C x1 @ 0.73
+  reconcile: entry fill b61|S173 C x1 @ 0.73
+  reconcile: entry fill b41|S173 C x1 @ 0.73
+  reconcile: entry fill b21|S173 C x1 @ 0.73
+  reconcile: entry fill b20|S173 C x1 @ 0.48
+  reconcile: entry fill b0|S173 C x1 @ 0.48
+  reconcile: entry fill b88|S165 MSFT x1 @ 0.51
+  reconcile: entry fill b68|S165 MSFT x1 @ 0.51
+  reconcile: entry fill b48|S165 MSFT x1 @ 0.51
+  reconcile: entry fill b28|S165 MSFT x1 @ 0.51
+  reconcile: entry fill b8|S165 MSFT x1 @ 0.51
+  reconcile: entry fill b80|S173 C x1 @ 0.22
+  reconcile: entry fill b60|S173 C x1 @ 0.22
+  reconcile: entry fill b40|S173 C x1 @ 0.22
+  reconcile: entry fill b67|S174 INTC x1 @ 0.59
+  reconcile: entry fill b47|S174 INTC x1 @ 0.59
+  reconcile: entry fill b27|S174 INTC x1 @ 0.59
+  reconcile: entry fill b83|S173 AMD x1 @ 0.65
+  reconcile: entry fill b63|S173 AMD x1 @ 0.65
+  reconcile: entry fill b43|S173 AMD x1 @ 0.65
+  reconcile: entry fill b23|S173 AMD x1 @ 0.65
+  reconcile: removed 162 stale lot(s)
+  reconcile: trimmed HAL260724C00033000 lots to match pos qty 10
+  reconcile: trimmed HAL260731C00033500 lots to match pos qty 10
+  reconcile: trimmed LULU260724C00120000 lots to match pos qty 10
+
+[Portfolio snapshot]
+========================================================
+OPTIONS TRIAL STATS
+========================================================
+Account equity: $131,956.05
+Active buckets: 140 of 140 profiles ($500 virtual each) — paper unlimited mode
+
+P&L summary
+  Reflected (ex-S173,S174): $+4,817.13 all-time  |  $+0.00 today
+  Raw (incl dropped):     $+1,972.58 all-time  |  $+0.00 today
+  Open (not sold yet): $-229.62 unrealized (virtual lots)
+                       $-230.00 unrealized (broker total)
+  Premium deployed:    $1,985.00 in open positions
+  Combined P&L:        $+4,587.51 (reflected realized + open virtual)
+
+Ledger (master)
+  Total events:     4991
+  Today entries:    105
+  Today exits (reflected): 0
+  All-time exits (reflected): 258  wins 32%
+  Avg return/trade: -1.7%  median -35.3%
+
+Open virtual lots (by bucket)
+  b6 c006_s167_w3_1045_1120_r1  prem=$    63  real=$ +0.00  open=$ -7.56  lots=1  [S167:LULUx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b8 c008_s165_w1_0928_1005_r1  prem=$     0  real=$-231.00  open=$ +0.00  lots=0  [-]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b9 c009_s165_w2_1005_1045_r1  prem=$    63  real=$-261.00  open=$ -7.11  lots=1  [S165:HALx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b10 c010_s165_w3_1045_1120_r1  prem=$     0  real=$-166.00  open=$ +0.00  lots=0  [-]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b13 c013_s166_w2_1005_1045_r1  prem=$    67  real=$ +0.00  open=$ -7.66  lots=1  [S166:HALx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b16 c016_s163_w1_0928_1005_r1  prem=$    74  real=$ +0.00  open=$ -8.46  lots=1  [S163:HALx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b24 c024_s168_w1_0928_1005_r1  prem=$    63  real=$ +0.00  open=$ -7.11  lots=1  [S168:HALx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b26 c026_s168_w3_1045_1120_r1  prem=$    67  real=$ +0.00  open=$ -8.04  lots=1  [S168:LULUx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b28 c028_s173_w1_0928_1005_r2  prem=$     0  real=$+142.00  open=$ +0.00  lots=0  [-]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b29 c029_s173_w2_1005_1045_r2  prem=$     0  real=$-78.00  open=$ +0.00  lots=0  [-]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b30 c030_s173_w3_1045_1120_r2  prem=$     0  real=$-14.00  open=$ +0.00  lots=0  [-]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b34 c034_s167_w3_1045_1120_r2  prem=$    63  real=$ +0.00  open=$ -7.56  lots=1  [S167:LULUx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b37 c037_s165_w2_1005_1045_r2  prem=$    63  real=$ +0.00  open=$ -7.11  lots=1  [S165:HALx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b41 c041_s166_w2_1005_1045_r2  prem=$    67  real=$ +0.00  open=$ -7.66  lots=1  [S166:HALx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b44 c044_s163_w1_0928_1005_r2  prem=$    74  real=$ +0.00  open=$ -8.46  lots=1  [S163:HALx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b48 c048_s164_w1_0928_1005_r2  prem=$     0  real=$-64.00  open=$ +0.00  lots=0  [-]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b49 c049_s164_w2_1005_1045_r2  prem=$     0  real=$-133.00  open=$ +0.00  lots=0  [-]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b50 c050_s164_w3_1045_1120_r2  prem=$     0  real=$-67.00  open=$ +0.00  lots=0  [-]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b52 c052_s168_w1_0928_1005_r2  prem=$    63  real=$ +0.00  open=$ -7.11  lots=1  [S168:HALx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b54 c054_s168_w3_1045_1120_r2  prem=$    67  real=$ +0.00  open=$ -8.04  lots=1  [S168:LULUx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  (22 more active bucket(s) omitted)
+  (98 quiet bucket profile(s) — no trades yet)
+
+Pending orders: 10
+  b10 S165 HAL limit=0.52
+  b38 S165 HAL limit=0.52
+  b66 S165 HAL limit=0.52
+  b94 S165 HAL limit=0.52
+  b122 S165 HAL limit=0.52
+
+Alpaca option positions
+  HAL260724C00033000  qty=10  cost=$665.00  return=-11.3%  open P&L=$-75.00
+  HAL260731C00033500  qty=10  cost=$700.00  return=-11.4%  open P&L=$-80.00
+  LULU260724C00120000  qty=10  cost=$625.00  return=-12.0%  open P&L=$-75.00
+
+Per-bucket exit stats (all time)
+  b0|orphan_reconcile     n= 22  avg=+22.4%  med=-57.5%  realized=$+6,310.91
+  b10|c010_s165_w3_1045_1120_r1  n=  7  avg=-33.8%  med=-18.9%  realized=$-166.00
+  b28|c028_s165_w1_0928_1005_r2  n= 17  avg=+49.5%  med=+80.0%  realized=$+448.00
+  b28|c028_s173_w1_0928_1005_r2  n=  5  avg=+51.6%  med=+80.0%  realized=$+142.00
+  b29|c029_s165_w2_1005_1045_r2  n=  9  avg=-23.3%  med=-50.0%  realized=$-221.00
+  b29|c029_s173_w2_1005_1045_r2  n=  2  avg=-69.3%  med=-48.5%  realized=$-78.00
+  b30|c030_s165_w3_1045_1120_r2  n=  9  avg=+38.8%  med=+0.0%  realized=$+260.00
+  b30|c030_s173_w3_1045_1120_r2  n=  2  avg=-9.5%  med=+0.0%  realized=$-14.00
+  b31|c031_s165_w4_1120_1135_r2  n=  2  avg=+145.5%  med=+175.8%  realized=$+192.00
+  b48|c048_s164_w1_0928_1005_r2  n=  4  avg=-29.1%  med=-40.0%  realized=$-64.00
+  b48|c048_s165_w1_0928_1005_r3  n= 16  avg=-35.9%  med=-49.1%  realized=$-344.00
+  b49|c049_s164_w2_1005_1045_r2  n=  4  avg=-51.8%  med=-44.0%  realized=$-133.00
+  b49|c049_s165_w2_1005_1045_r3  n= 15  avg=-49.3%  med=-49.1%  realized=$-458.00
+  b50|c050_s164_w3_1045_1120_r2  n=  3  avg=-31.2%  med=-16.7%  realized=$-67.00
+  b50|c050_s165_w3_1045_1120_r3  n=  9  avg=-23.6%  med=-23.1%  realized=$-142.00
+  b51|c051_s165_w4_1120_1135_r3  n=  1  avg=+263.6%  med=+263.6%  realized=$+174.00
+  b56|g056_lim_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b57|g057_mid_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b58|g058_eod_tp20_sl65  n=  1  avg=+59.1%  med=+59.1%  realized=$+25.41
+  b68|c068_s165_w1_0928_1005_r4  n= 16  avg=-51.3%  med=-49.1%  realized=$-446.00
+  b68|c068_s166_w1_0928_1005_r3  n=  3  avg=-50.3%  med=-49.1%  realized=$-83.00
+  b69|c069_s165_w2_1005_1045_r4  n= 11  avg=+19.0%  med=-43.6%  realized=$-179.00
+  b69|c069_s166_w2_1005_1045_r3  n=  4  avg=+10.1%  med=-40.0%  realized=$-87.00
+  b70|c070_s165_w3_1045_1120_r4  n= 11  avg=-2.1%  med=-16.9%  realized=$-6.00
+  b70|c070_s166_w3_1045_1120_r3  n=  3  avg=-35.1%  med=-27.0%  realized=$-76.00
+  b70|g070_eod_tp30_sl20  n=  1  avg=+59.1%  med=+59.1%  realized=$+27.77
+  b88|c088_s165_w1_0928_1005_r5  n= 21  avg=-5.0%  med=-2.7%  realized=$-63.00
+  b88|c088_s167_w1_0928_1005_r4  n=  3  avg=+3.0%  med=+30.9%  realized=$+5.00
+  b89|c089_s165_w2_1005_1045_r5  n=  7  avg=+113.1%  med=+30.9%  realized=$+67.00
+  b89|c089_s167_w2_1005_1045_r4  n=  2  avg=-16.2%  med=+30.9%  realized=$-22.00
+  b8|c008_s165_w1_0928_1005_r1  n= 22  avg=-18.6%  med=-33.3%  realized=$-231.00
+  b90|c090_s165_w3_1045_1120_r5  n= 13  avg=+7.7%  med=+0.0%  realized=$+47.00
+  b90|c090_s167_w3_1045_1120_r4  n=  3  avg=-33.8%  med=-18.9%  realized=$-75.00
+  b91|c091_s165_w4_1120_1135_r5  n=  2  avg=+222.0%  med=+247.0%  realized=$+293.00
+  b9|c009_s165_w2_1005_1045_r1  n=  6  avg=-76.2%  med=-66.2%  realized=$-261.00
+========================================================
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          entry+manage                            |
+|  Equity                        $131,956.05                             |
+|  Signals this run              335                                     |
+|  Orders submitted (session)    90                                      |
+|  Orders filled today (ledger)  105                                     |
+|  Entries placed this run       30                                      |
+|  Open virtual lots             30                                      |
+|  Broker option positions       3                                       |
+|  Pending orders                10                                      |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S173,S174)                           |
++------------------------------------------------------------------------+
+|  Reflected trades=258  buckets=22  win=32%                             |
+|  Returns   avg=-1.7%  med=-35.3%  p10=-65.3%  p90=+83.9%               |
+|  Realized  $+4,817.13                                                  |
+|  Raw incl dropped  trades=762  real=$+1,972.58                         |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b51  c051_s164_w4_1120_  1 100% +263.6 +263.6 +263.6 $   +174         |
+|  b91  c091_s167_w4_1120_  2 100% +222.0 +222.0 +247.0 $   +293         |
+|  b31  c031_s173_w4_1120_  2 100% +145.5 +145.5 +175.8 $   +192         |
+|  b28  c028_s173_w1_0928_ 22  77% +50.0 +80.0 +102.0 $   +590           |
+|  b58  c058_s173_w3_1045_  1 100% +59.1 +59.1 +59.1 $    +25            |
+|  b56  c056_s173_w1_0928_  1 100% +47.7 +47.7 +47.7 $    +21            |
+|  b57  c057_s173_w2_1005_  1 100% +47.7 +47.7 +47.7 $    +21            |
+|  b89  c089_s167_w2_1005_  9  56% +84.4 +30.9 +790.0 $    +45           |
+|  ... 14 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b9   c009_s165_w2_1005_  6   0% -76.2 -78.1 -92.7 $   -261       |
++========================================================================+
++========================================================================+
+|  PENDING ORDERS (10)                                                   |
++------------------------------------------------------------------------+
+|  Top groups                    S165:HAL(5), S163:HAL(5)                |
++------------------------------------------------------------------------+
+|  b10  S165 HAL      limit=0.52                                         |
+|  b38  S165 HAL      limit=0.52                                         |
+|  b66  S165 HAL      limit=0.52                                         |
+|  b94  S165 HAL      limit=0.52                                         |
+|  b122 S165 HAL      limit=0.52                                         |
+|  ... 5 more pending order(s)                                           |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (3)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  HAL260731C00033500           10    -11.4%   $    -80.00               |
+|  HAL260724C00033000           10    -11.3%   $    -75.00               |
+|  LULU260724C00120000          10    -12.0%   $    -75.00               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-21.log
+elapsed=135.6s reconcile=1.39s cancel=0.02s manage=0.02s scan=31.05s entries=101.22s
+

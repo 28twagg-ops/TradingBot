@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-21 15:22:52.336133+00:00,entry,103,c103_s163_w4_1120_1135_r4,S163,d7ec823a5238,HAL,HAL260731C00033500,1,0.71,0.7,70.0,,,,-0.01,,0.5,-0.5,0.11764705882352937,gap -5.1%,5ac05011-5347-4a05-bb46-6755f998459f
