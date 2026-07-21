@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-21
 
-_Generated 2026-07-21T09:25:47.396916_
+_Generated 2026-07-21T10:05:19.970431_
 
 ## Summary
 
@@ -23,11 +23,11 @@ _Generated 2026-07-21T09:25:47.396916_
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 5 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 114 | 37.7 | -24.14 | -89.83 | -71.19 | +37.06 | 15 | 0 | 0 | $-1,498.19 | 50.0% | manually paused — excluded from new entries & reflected P&L |
 | S173 (MomReversal long call) | MomRev | drop | 303 | 38.6 | -27.45 | -78.62 | -62.41 | +100.00 | 15 | 50 | 50 | $-933.36 | 29.7% | manually paused — excluded from new entries & reflected P&L |
-| S165 (GapDown long call 3 DTE) | 3d ATM | drop | 191 | 33.0 | -30.00 | -60.00 | -52.73 | +84.31 | 15 | 30 | 22 | $-788.78 | 27.7% | non-positive median return |
+| S165 (GapDown long call 3 DTE) | 3d ATM | drop | 191 | 33.0 | -30.00 | -60.00 | -52.73 | +84.31 | 15 | 35 | 22 | $-788.78 | 27.7% | non-positive median return |
 
 ## Comparison groups
 
@@ -41,7 +41,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 |---|---|---:|---:|---:|---:|---:|---:|
 | S163 | 7d ATM | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S164 | 1d ATM | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
-| S165 | 3d ATM | 191 | -30.00 | -60.00 | -52.73 | 30 | 22 |
+| S165 | 3d ATM | 191 | -30.00 | -60.00 | -52.73 | 35 | 22 |
 | S168 | 5d ATM | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
 ### GapDown Strike comparison
@@ -50,8 +50,8 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S165 | 3d ATM | 191 | -30.00 | -60.00 | -52.73 | 30 | 22 |
-| S167 | 3d 1-OTM | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
+| S165 | 3d ATM | 191 | -30.00 | -60.00 | -52.73 | 35 | 22 |
+| S167 | 3d 1-OTM | 0 | +0.00 | +0.00 | +0.00 | 5 | 0 |
 
 ### Other
 

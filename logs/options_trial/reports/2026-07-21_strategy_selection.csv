@@ -2,8 +2,8 @@ strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,win
 S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S166,GapDown strong call,3d ATM strong,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
-S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
+S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,insufficient sample (<8 exits),5,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,5,0,0,0.0
 S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S174,RubberBand long call EOD,RubberBand (dropped),drop,manually paused — excluded from new entries & reflected P&L,1062,114,43,71,-22.0,-24.14,-89.83,-71.19,37.06,-1498.19,3,15,0,0,6,50.0
 S173,MomReversal long call,MomRev,drop,manually paused — excluded from new entries & reflected P&L,1511,303,117,186,15.85,-27.45,-78.62,-62.41,100.0,-933.36,8,15,50,50,12,29.7
-S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1263,191,63,128,-0.2,-30.0,-60.0,-52.73,84.31,-788.78,7,15,30,22,9,27.7
+S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1268,191,63,128,-0.2,-30.0,-60.0,-52.73,84.31,-788.78,7,15,35,22,9,27.7
