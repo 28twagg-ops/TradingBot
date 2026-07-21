@@ -2509,3 +2509,177 @@ Fetched daily bars for 903/903 symbols
 ```
 
 ---
+
+## Run 20260721T134559Z
+
+- UTC timestamp: `20260721T134559Z`
+- GitHub run: [#4545](https://github.com/28twagg-ops/TradingBot/actions/runs/29835867007)
+- Run id: `29835867007`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-21T09:25:44.409109-04:00","date":"2026-07-21","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":2.4,"phases_s":{"reconcile":1.95},"signals":0,"placed":0,"equity":134555.05,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"4541","github_run_id":"29834325935","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:46:00  INFO      Mode: morning_scan
+13:46:01  INFO        [positions] 3/3 (3 valid)
+13:46:01  INFO        SELL MARKET [urgent] WMB closed
+13:46:04  INFO        TX logged: SELL WMB  P&L -1.1%
+13:46:04  INFO        SELL MARKET [urgent] MAA closed
+13:46:06  INFO        TX logged: SELL MAA  P&L -0.57%
+13:46:06  INFO        Universe cache hit: 903 tickers (tickers_2026-07-21.json)
+13:46:08  INFO        [universe] 40/902 (40 valid)
+13:46:09  INFO        [universe] 80/902 (80 valid)
+13:46:11  INFO        [universe] 120/902 (120 valid)
+13:46:12  INFO        [universe] 160/902 (160 valid)
+13:46:14  INFO        [universe] 200/902 (199 valid)
+13:46:19  INFO        [universe] 240/902 (238 valid)
+13:46:32  INFO        [universe] 280/902 (278 valid)
+13:46:46  INFO        [universe] 320/902 (318 valid)
+13:46:56  INFO        [universe] 360/902 (358 valid)
+13:47:07  INFO        [universe] 400/902 (397 valid)
+13:47:20  INFO        [universe] 440/902 (437 valid)
+13:47:31  INFO        [universe] 480/902 (477 valid)
+13:47:45  INFO        [universe] 520/902 (517 valid)
+13:47:55  INFO        [universe] 560/902 (556 valid)
+13:48:09  INFO        [universe] 600/902 (596 valid)
+13:48:19  INFO        [universe] 640/902 (636 valid)
+13:48:32  INFO        [universe] 680/902 (676 valid)
+13:48:43  INFO        [universe] 720/902 (715 valid)
+13:48:57  INFO        [universe] 760/902 (755 valid)
+13:49:07  INFO        [universe] 800/902 (795 valid)
+13:49:21  INFO        [universe] 840/902 (834 valid)
+13:49:31  INFO        [universe] 880/902 (874 valid)
+13:49:38  INFO        [universe] 902/902 (896 valid)
+13:49:40  INFO        BUY  BIIB  $96.21  [Pullback50]  id=a216be62-29d1-46b1-989d-fd807c7df127
+13:49:40  INFO        BUY  CNP  $96.21  [Pullback50]  id=63e9c122-d739-4556-b38c-faf134258615
+13:49:40  INFO        BUY  CI  $96.21  [Pullback50]  id=441abf71-e258-4e09-aef4-e015b16b61a1
+13:49:40  INFO        BUY  IEX  $71.28  [Pullback50]  id=fb23e7d8-1e95-420c-8899-2b8e13c0e627
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $481.07|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-21|
+|  Universe                                                          both|
+|  Mon~  Jul: 52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $481.07|
+|  Cash                                                           $216.83|
+|  Reserve                                          $24.05  (always kept)|
+|  Available                                    $192.78  (for new trades)|
+|  Trade size             $96.21  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (3 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  MAA      Pullback50      $95.80     $133.63  $132.86  -0.6%   $-0.55  |
+|  TPR      Pullback50      $97.00     $140.84  $141.78  +0.7%   $+0.65  |
+|  WMB      Pullback50      $71.44     $74.35   $73.53   -1.1%   $-0.80  |
+|                                                                        |
+|  Total invested                                                 $264.24|
+|  Total open P&L                                                  $-0.70|
+|  Buys today: 0  |  entry cap: 2  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (17280.5m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  WMB  P&L -1.1%  $-0.80                         EXIT: stop_loss (-1.1%)|
+|  MAA  P&L -0.6%  $-0.55                         EXIT: stop_loss (-0.6%)|
+|  TPR  P&L +0.7%  $+0.65                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 2 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                   2|
+|  WMB                                         -1.10%  (threshold -0.50%)|
+|  MAA                                         -0.57%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50 (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  11                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  BIIB     Pullback50      eq     $200.62  40.8   -1.90   50MA bounce (+|
+|  CNP      Pullback50      eq     $42.88   41.4   -2.46   50MA bounce (-|
+|  CI       Pullback50      eq     $283.99  56.3   -1.90   50MA bounce (-|
+|  IEX      Pullback50      eq     $219.72  38.3   -1.95   50MA bounce (+|
+|  MU       Pullback50      eq     $935.13  32.0   -2.27   50MA bounce (-|
+|  AVT      Pullback50      eq     $86.90   45.5   -2.23   50MA bounce (+|
+|  AXTA     Pullback50      eq     $32.09   30.9   -2.48   50MA bounce (+|
+|  IRT      Pullback50      eq     $16.46   46.4   -1.61   50MA bounce (-|
+|  MTDR     Pullback50      eq     $54.17   69.3   -2.70   50MA bounce (+|
+|  PEN      Pullback50      eq     $317.33  55.6   -2.18   50MA bounce (-|
+|  VNOM     Pullback50      eq     $44.76   62.7   -2.74   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] BIIB  Pullback50                                   $96.21|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] CNP  Pullback50                                    $96.21|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] CI  Pullback50                                     $96.21|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] IEX  Pullback50                                    $71.28|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] MU  Pullback50                                       cap 5|```
+
+### Options bot full output
+
+```text

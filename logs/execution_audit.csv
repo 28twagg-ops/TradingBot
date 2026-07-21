@@ -634,3 +634,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-07-20 19:46:08,2026-07-20,SELL,COP,Pullback50,115.95,115.9,115.926,89.26,-0.0207,-0.0185,limit_fill_position_check_full,midline (+1.0%),bull
 2026-07-20 19:51:25,2026-07-20,SELL,OXY,Pullback50,55.161,55.16,55.1635,96.34,0.0045,0.0044,limit_fill_position_check_full,midline (-0.0%),bull
 2026-07-20 19:51:56,2026-07-20,SELL,TJX,Pullback50,155.88,155.82,155.84,96.31,-0.0257,-0.0247,limit_fill_position_check_full,midline (+0.1%),bull
+2026-07-21 13:46:04,2026-07-21,SELL,WMB,Pullback50,73.53,,73.53,71.44,0.0,0.0,market_urgent_full,stop_loss (-1.1%),bull
+2026-07-21 13:46:06,2026-07-21,SELL,MAA,Pullback50,132.905,,132.86,95.8,-0.0339,-0.0324,market_urgent_full,stop_loss (-0.6%),bull
