@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-21 14:16:14.547457+00:00,entry,33,c033_s167_w2_1005_1045_r2,S167,da2cf5b83a73,CELH,CELH260724C00029000,1,0.4,0.4,40.0,,,,-0.01,,0.5,-0.5,0.1025641025641025,gap -2.5%,d87f1df5-e9e6-4057-8ee5-0557d61272fc

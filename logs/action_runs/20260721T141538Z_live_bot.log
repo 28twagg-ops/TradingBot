@@ -1,0 +1,54 @@
+14:15:39  INFO      Mode: exits
+14:15:39  INFO        Daily log -> logs/daily/2026-07-21.md
+14:15:39  INFO        Daily log reconciled -> logs/daily/2026-07-21.md (4 ledger rows)
+14:15:39  INFO        place_all_stops: checking 5 positions...
+14:15:39  INFO        STOP already live BEN @ $32.36
+14:15:39  INFO        STOP skipped BIIB: fractional (0.4766 shares) — software exit will handle it
+14:15:39  INFO        STOP already live CNP @ $42.71
+14:15:39  INFO        STOP skipped DUK: fractional (0.7693 shares) — software exit will handle it
+14:15:39  INFO        STOP skipped TPR: fractional (0.6841 shares) — software exit will handle it
+14:15:39  INFO        [positions] 5/5 (5 valid)
+14:15:39  INFO        Daily log -> logs/daily/2026-07-21.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:15 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $481.60|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CNP  P&L -0.3%  $-0.28                                            HOLD|
+|  DUK  P&L +0.2%  $+0.20                                            HOLD|
+|  BIIB  P&L +0.6%  $+0.54                                           HOLD|
+|  BEN  P&L +0.6%  $+0.43                                            HOLD|
+|  TPR  P&L +1.1%  $+1.03                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           5|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                5|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
