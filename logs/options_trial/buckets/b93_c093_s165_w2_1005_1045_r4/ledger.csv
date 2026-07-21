@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-21 14:07:43.865442+00:00,entry,93,c093_s165_w2_1005_1045_r4,S165,08f1e48d05f5,HAL,HAL260724C00033000,1,0.64,0.63,63.0,,,,-0.01,,0.5,-0.5,0.22222222222222224,gap -5.1%,ddfb3230-cb4f-442c-b63f-a88ef6b7c38d
+2026-07-21T14:10:38Z,reconcile,93,c093_s165_w2_1005_1045_r4,S165,08f1e48d05f5,HAL,HAL260724C00033000,1,,,63.0,,,zombie_lot,,,,,,zombie age_min=851 notional=$63.00 occ=HAL260724C00033000 action=submitted:f8fba983-ea06-4a75-a8c7-6d4fef19f71c,

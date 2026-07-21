@@ -1,2 +1,5 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-16 14:26:02.431945+00:00,exit,49,c049_s164_w2_1005_1045_r2,S165,408315463b43,META,META260720C00675000,1,,0.26,68.0,-61.76,-42.0,reconcile_fill,,-0.01,0.5,-0.5,,,37f77fff-dc9f-4af1-809b-74c3f43268b4
+2026-07-21 14:09:36.979013+00:00,entry,49,c049_s164_w2_1005_1045_r2,S164,0445d822e120,LULU,LULU260724C00121000,1,0.65,0.65,65.0,,,,-0.01,,0.5,-0.5,0.14634146341463428,gap -2.4%,eca1b2fb-eb64-4039-b089-bcc07982e52f
+2026-07-16 14:11:05.302560+00:00,entry,49,c049_s164_w2_1005_1045_r2,S165,0067d34a59fe,AVGO,AVGO260717C00405000,1,0.5,0.5,50.0,,,,-0.01,,0.5,-0.5,,,f0e2d2ab-84e7-4615-94f7-b8b4df765f7c
+2026-07-14 15:52:23.542183+00:00,exit,49,c049_s164_w2_1005_1045_r2,S165,d6b9605cc2a7,META,META260720C00675000,1,,0.4,68.0,-41.18,-28.0,reconcile_fill,,-0.01,0.5,-0.5,,,c77705d1-94a3-4718-8711-055f1a1488b3

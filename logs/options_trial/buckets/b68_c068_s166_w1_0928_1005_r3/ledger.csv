@@ -1,0 +1,5 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-16 13:35:11.367058+00:00,entry,68,c068_s166_w1_0928_1005_r3,S165,e1132609b77f,AVGO,AVGO260717C00405000,1,0.55,0.55,55.0,,,,-0.01,,0.5,-0.5,,,c2940626-c0a5-4eb1-a5cb-d0cd8c183edf
+2026-07-14 13:35:09.858621+00:00,entry,68,c068_s166_w1_0928_1005_r3,S165,cb00cab142e1,MSFT,MSFT260715C00395000,1,0.51,0.51,51.0,,,,-0.01,,0.5,-0.5,,,a638a2a8-2766-47e4-abb1-a62428704692
+2026-07-13 19:48:09.838621+00:00,exit,68,c068_s166_w1_0928_1005_r3,S165,fee5377fa23d,GOOGL,GOOGL260720C00360000,1,,0.29,55.0,-47.27,-26.0,reconcile_fill,,-0.01,0.5,-0.5,,,5ba76b20-f306-4813-ad24-11c59b7f3540
+2026-07-17 13:35:52.074973+00:00,entry,68,c068_s166_w1_0928_1005_r3,S165,a475367ce58d,GOOGL,GOOGL260720C00360000,1,0.55,0.55,55.0,,,,-0.01,,0.5,-0.5,,,272a9557-2d2d-4dd7-84f5-5de090a77dc9

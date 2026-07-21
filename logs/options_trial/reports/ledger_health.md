@@ -1,6 +1,6 @@
 # Ledger health — 2026-07-21
 
-_Generated 2026-07-21T10:09:29.729853_
+_Generated 2026-07-21T10:11:31.924526_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -14,8 +14,8 @@ State file: OK
 | Orphaned lots (post-stable) |    27 | WARN |
 | Missing exit records (post) |    27 | WARN |
 | State/ledger mismatches     |     1 | WARN |
-| Total open lots             |    40 | INFO |
-| Total closed lots           |   286 | INFO |
+| Total open lots             |    25 | INFO |
+| Total closed lots           |   295 | INFO |
 | Pre-cutoff audit debt       |     0 | INFO |
 | Transition audit debt       |   589 | INFO |
 
@@ -47,15 +47,15 @@ Notes:
 | 43108024132f | S173 | AMD | 2026-07-13 | 8 |
 | 8e079ecd2e01 | S173 | AMD | 2026-07-13 | 8 |
 | 2920355fb151 | S174 | INTC | 2026-07-13 | 8 |
-| 11796ab3d72d | S165 | MSFT | 2026-07-14 | 7 |
-| 135cee9ff4b0 | S165 | MSFT | 2026-07-14 | 7 |
-| 8b2091753041 | S165 | MSFT | 2026-07-14 | 7 |
-| 6f7835a223cc | S173 | C | 2026-07-14 | 7 |
-| e229674c717d | S165 | BSX | 2026-07-14 | 7 |
+| d8cb3a147256 | S165 | MSFT | 2026-07-14 | 7 |
+| cb00cab142e1 | S165 | MSFT | 2026-07-14 | 7 |
+| 2eb176a920da | S165 | MSFT | 2026-07-14 | 7 |
+| 209ba9a3f92d | S173 | C | 2026-07-14 | 7 |
+| e8006feddd99 | S165 | BSX | 2026-07-14 | 7 |
 | c2de9fef4808 | S173 | ADBE | 2026-07-14 | 7 |
-| 3c43a209d835 | S173 | C | 2026-07-14 | 7 |
-| 55a88a33b549 | S173 | ADBE | 2026-07-14 | 7 |
-| 8c19f86893e9 | S173 | ADBE | 2026-07-14 | 7 |
+| b61c999df2a7 | S173 | C | 2026-07-14 | 7 |
+| 9603ff1aa615 | S173 | ADBE | 2026-07-14 | 7 |
+| b805b2e81e9c | S173 | ADBE | 2026-07-14 | 7 |
 
 ## State/ledger mismatches
 
