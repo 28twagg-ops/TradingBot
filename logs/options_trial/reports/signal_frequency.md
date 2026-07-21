@@ -1,6 +1,6 @@
 # Options signal frequency
 
-_Generated 2026-07-21T10:41:28.192929_
+_Generated 2026-07-21T10:48:13.548773_
 
 Headline counts are **unique (strategy, underlying, date)** from `ENTRY` lines in `logs/options_trial/runs/*.log`.
 Raw log-line counts (multi-bucket duplicates) are shown below for debug.
@@ -18,18 +18,18 @@ Raw log-line counts (multi-bucket duplicates) are shown below for debug.
 | 2026-07-16 |    0 |    0 |    2 |    0 |    0 |    0 |    3 |    0 |     5 |
 | 2026-07-17 |    0 |    0 |    2 |    0 |    0 |    0 |    2 |    0 |     4 |
 | 2026-07-20 |    0 |    0 |    0 |    0 |    0 |    0 |    1 |    0 |     1 |
-| 2026-07-21 |    1 |    1 |    1 |    1 |    1 |    1 |    0 |    0 |     6 |
+| 2026-07-21 |    1 |    2 |    1 |    1 |    2 |    2 |    0 |    0 |     9 |
 
 ## Per-strategy summary (unique underlyings)
 
 | Strategy | Unique entries | Active days | Avg unique / active day | Est. active days to n=30 exits* |
 |----------|---------------:|------------:|------------------------:|--------------------------------|
 | S163 | 1 | 1 | 1.0 | ~38 active signal-days |
-| S164 | 1 | 1 | 1.0 | ~38 active signal-days |
+| S164 | 2 | 1 | 2.0 | ~19 active signal-days |
 | S165 | 15 | 8 | 1.9 | ~20 active signal-days |
 | S166 | 1 | 1 | 1.0 | ~38 active signal-days |
-| S167 | 1 | 1 | 1.0 | ~38 active signal-days |
-| S168 | 1 | 1 | 1.0 | ~38 active signal-days |
+| S167 | 2 | 1 | 2.0 | ~19 active signal-days |
+| S168 | 2 | 1 | 2.0 | ~19 active signal-days |
 | S173 | 17 | 9 | 1.9 | ~20 active signal-days |
 | S174 | 7 | 4 | 1.8 | ~22 active signal-days |
 
@@ -39,12 +39,12 @@ Raw log-line counts (multi-bucket duplicates) are shown below for debug.
 
 | Strategy | Raw log lines (includes multi-bucket duplicates) | Unique underlying symbols |
 |----------|-------------------------------------------------:|--------------------------:|
-| S163 | 15 | 1 |
-| S164 | 15 | 1 |
-| S165 | 1407 | 15 |
-| S166 | 10 | 1 |
-| S167 | 15 | 1 |
-| S168 | 15 | 1 |
+| S163 | 20 | 1 |
+| S164 | 21 | 2 |
+| S165 | 1412 | 15 |
+| S166 | 20 | 1 |
+| S167 | 20 | 2 |
+| S168 | 25 | 2 |
 | S173 | 1754 | 17 |
 | S174 | 891 | 7 |
 
@@ -62,7 +62,7 @@ Raw log-line counts (multi-bucket duplicates) are shown below for debug.
 | 2026-07-16 |    0 |    0 |  179 |    0 |    0 |    0 |  205 |   58 |   442 |
 | 2026-07-17 |    0 |    0 |  127 |    0 |    0 |    0 |  207 |   58 |   392 |
 | 2026-07-20 |    0 |    0 |  107 |    0 |    0 |    0 |  143 |   58 |   308 |
-| 2026-07-21 |   15 |   15 |   98 |   10 |   15 |   15 |  118 |   48 |   334 |
+| 2026-07-21 |   20 |   21 |  103 |   20 |   20 |   25 |  118 |   48 |   375 |
 
 ## Notes
 
