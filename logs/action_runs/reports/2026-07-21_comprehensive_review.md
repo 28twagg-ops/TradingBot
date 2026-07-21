@@ -2389,3 +2389,123 @@ Scanning 903 symbols for [S165, S164, S168, S167, S166, S163] …
 ```
 
 ---
+
+## Run 20260721T134101Z
+
+- UTC timestamp: `20260721T134101Z`
+- GitHub run: [#4544](https://github.com/28twagg-ops/TradingBot/actions/runs/29835479087)
+- Run id: `29835479087`
+- Live bot: exit=`0`, duration=`215s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-21T09:25:44.409109-04:00","date":"2026-07-21","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":2.4,"phases_s":{"reconcile":1.95},"signals":0,"placed":0,"equity":134555.05,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"4541","github_run_id":"29834325935","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:41:02  INFO      Mode: morning_prep
+13:41:03  INFO        [prep_positions] 3/3 (3 valid)
+13:41:03  INFO        Universe cache hit: 903 tickers (tickers_2026-07-21.json)
+13:41:04  INFO        [prep_universe] 40/900 (40 valid)
+13:41:06  INFO        [prep_universe] 80/900 (80 valid)
+13:41:07  INFO        [prep_universe] 120/900 (120 valid)
+13:41:09  INFO        [prep_universe] 160/900 (160 valid)
+13:41:10  INFO        [prep_universe] 200/900 (199 valid)
+13:41:17  INFO        [prep_universe] 240/900 (238 valid)
+13:41:30  INFO        [prep_universe] 280/900 (278 valid)
+13:41:40  INFO        [prep_universe] 320/900 (318 valid)
+13:41:53  INFO        [prep_universe] 360/900 (358 valid)
+13:42:06  INFO        [prep_universe] 400/900 (397 valid)
+13:42:17  INFO        [prep_universe] 440/900 (437 valid)
+13:42:30  INFO        [prep_universe] 480/900 (477 valid)
+13:42:43  INFO        [prep_universe] 520/900 (517 valid)
+13:42:53  INFO        [prep_universe] 560/900 (556 valid)
+13:43:06  INFO        [prep_universe] 600/900 (596 valid)
+13:43:17  INFO        [prep_universe] 640/900 (636 valid)
+13:43:30  INFO        [prep_universe] 680/900 (676 valid)
+13:43:42  INFO        [prep_universe] 720/900 (715 valid)
+13:43:52  INFO        [prep_universe] 760/900 (755 valid)
+13:44:05  INFO        [prep_universe] 800/900 (795 valid)
+13:44:18  INFO        [prep_universe] 840/900 (834 valid)
+13:44:31  INFO        [prep_universe] 880/900 (874 valid)
+13:44:35  INFO        [prep_universe] 900/900 (894 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         13:41 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $482.12|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       3|
+|  Invested                                                       $265.29|
+|  Open P&L                                                        $+0.35|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  MAA      Pullback50      $95.94     $133.63  $133.06  -0.4%   $-0.41  |
+|  TPR      Pullback50      $97.71     $140.84  $142.82  +1.4%   $+1.36  |
+|  WMB      Pullback50      $71.64     $74.35   $73.73   -0.8%   $-0.60  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                0|
+|                                                                        |
+|  No open sell orders.                                                  |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      1|
+|  Signal candidates                                                   13|
+|  Universe scanned                                                   900|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=0 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=2
+  zombies_flagged=0
+options_reconcile: done
+Layout: controlled:140:c000_s173_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:140:c000_s173_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      140
+=== options_morning_bot (PAPER) 2026-07-21T09:44:38.062161-04:00 ===
+
+[Run context]
+Paper auth OK — equity $131747.05, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 140 | Strategies: S165, S164, S168, S167, S166, S163
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163] …
+Fetched daily bars for 903/903 symbols
+```
+
+---
