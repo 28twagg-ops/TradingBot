@@ -640,3 +640,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-07-21 13:51:22,2026-07-21,SELL,CI,Pullback50,287.165,286.59,287.006,95.97,-0.0554,-0.0531,limit_fill_position_check_full,midline (-0.2%),bull
 2026-07-21 14:25:46,2026-07-21,SELL,CNP,Pullback50,42.67,,42.67,10.28,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-07-21 17:50:47,2026-07-21,SELL,BEN,Pullback50,31.99,,31.98,5.47,-0.0313,-0.0017,market_urgent_full,stop_loss (-1.7%),bull
+2026-07-21 19:51:08,2026-07-21,SELL,APA,Pullback50,35.685,35.68,35.6832,96.03,-0.005,-0.0048,limit_fill_position_check_full,midline (-0.0%),bull
