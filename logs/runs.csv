@@ -2939,3 +2939,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-21 14:35:40,exits,bull,479.84,119.79,0,0,0,4,BEN|BIIB|DUK|TPR,both
 2026-07-21 14:40:44,exits,bull,479.31,119.79,0,0,0,4,BEN|BIIB|DUK|TPR,both
 2026-07-21 14:45:43,exits,bull,479.45,119.79,0,0,0,4,BEN|BIIB|DUK|TPR,both
+2026-07-21 14:50:40,exits,bull,479.27,119.79,0,0,0,4,BEN|BIIB|DUK|TPR,both

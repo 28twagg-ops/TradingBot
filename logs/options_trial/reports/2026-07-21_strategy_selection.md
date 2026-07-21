@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-21
 
-_Generated 2026-07-21T10:48:12.212041_
+_Generated 2026-07-21T10:51:25.458162_
 
 ## Summary
 
@@ -21,7 +21,7 @@ _Generated 2026-07-21T10:48:12.212041_
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 10 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 11 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 15 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 10 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 10 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 15 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -40,7 +40,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S163 | 7d ATM | 0 | +0.00 | +0.00 | +0.00 | 10 | 0 |
-| S164 | 1d ATM | 0 | +0.00 | +0.00 | +0.00 | 11 | 0 |
+| S164 | 1d ATM | 0 | +0.00 | +0.00 | +0.00 | 15 | 0 |
 | S165 | 3d ATM | 236 | -34.31 | -61.76 | -52.73 | 55 | 24 |
 | S168 | 5d ATM | 0 | +0.00 | +0.00 | +0.00 | 15 | 0 |
 
