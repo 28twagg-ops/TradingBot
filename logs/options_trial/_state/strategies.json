@@ -29,6 +29,7 @@
     "S163": {}
   },
   "dropped_strategies": [
+    "S173",
     "S174"
   ]
 }

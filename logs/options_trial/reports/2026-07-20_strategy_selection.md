@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-20
 
-_Generated 2026-07-20T21:01:20.551424_
+_Generated 2026-07-20T21:50:30.549631_
 
 ## Summary
 
@@ -26,7 +26,7 @@ _Generated 2026-07-20T21:01:20.551424_
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 114 | 37.7 | -24.14 | -89.83 | -71.19 | +37.06 | 14 | 0 | 0 | $-1,498.19 | 50.0% | manually paused — excluded from new entries & reflected P&L |
-| S173 (MomReversal long call) | MomRev | drop | 303 | 38.6 | -27.45 | -78.62 | -62.41 | +100.00 | 14 | 99 | 106 | $-933.36 | 29.7% | non-positive median return |
+| S173 (MomReversal long call) | MomRev | drop | 303 | 38.6 | -27.45 | -78.62 | -62.41 | +100.00 | 14 | 99 | 106 | $-933.36 | 29.7% | manually paused — excluded from new entries & reflected P&L |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 191 | 33.0 | -30.00 | -60.00 | -52.73 | +84.31 | 14 | 72 | 64 | $-788.78 | 27.7% | non-positive median return |
 
 ## Comparison groups
@@ -70,4 +70,4 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 - `watch` means potentially viable but still sample-limited or risk-concentrated.
 - `drop` means current evidence is not supportive (e.g., non-positive median with enough exits).
 - Orphan rate = orphan_exits / total_exits; alert if >10% (attribution failure, not edge).
-- Active paper strategies: S173, S165, S164, S168, S167, S166, S163.
+- Active paper strategies: S165, S164, S168, S167, S166, S163.
