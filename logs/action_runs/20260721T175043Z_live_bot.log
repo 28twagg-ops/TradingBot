@@ -1,0 +1,55 @@
+17:50:43  INFO      Mode: exits
+17:50:44  INFO        Daily log -> logs/daily/2026-07-21.md
+17:50:44  INFO        Daily log reconciled -> logs/daily/2026-07-21.md (5 ledger rows)
+17:50:44  INFO        place_all_stops: checking 4 positions...
+17:50:44  INFO        STOP skipped BEN: fractional (0.1710 shares) — software exit will handle it
+17:50:44  INFO        STOP skipped BIIB: fractional (0.4766 shares) — software exit will handle it
+17:50:44  INFO        STOP skipped DUK: fractional (0.7693 shares) — software exit will handle it
+17:50:44  INFO        STOP skipped TPR: fractional (0.6841 shares) — software exit will handle it
+17:50:45  INFO        [positions] 4/4 (4 valid)
+17:50:45  INFO        SELL MARKET [urgent] BEN closed
+17:50:47  INFO        TX logged: SELL BEN  P&L -1.66%
+17:50:48  INFO        Daily log -> logs/daily/2026-07-21.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         17:50 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $479.71|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  BEN  P&L -1.7%  $-0.09                         EXIT: stop_loss (-1.7%)|
+|  BIIB  P&L +0.1%  $+0.08                                           HOLD|
+|  DUK  P&L +0.4%  $+0.36                                            HOLD|
+|  TPR  P&L +0.6%  $+0.54                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           4|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  BEN                                         -1.66%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
