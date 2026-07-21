@@ -2995,3 +2995,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-21 19:00:41,exits,bull,479.98,189.93,0,0,0,3,BIIB|DUK|TPR,both
 2026-07-21 19:05:47,exits,bull,480.14,189.93,0,0,0,3,BIIB|DUK|TPR,both
 2026-07-21 19:10:37,exits,bull,480.06,189.93,0,0,0,3,BIIB|DUK|TPR,both
+2026-07-21 19:16:08,exits,bull,480.34,189.93,0,0,0,3,BIIB|DUK|TPR,both
