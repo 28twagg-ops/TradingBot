@@ -21505,3 +21505,35 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260721T195533Z
+
+- UTC timestamp: `20260721T195533Z`
+- GitHub run: [#4623](https://github.com/28twagg-ops/TradingBot/actions/runs/29863531405)
+- Run id: `29863531405`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-21T15:54:44.347397-04:00","date":"2026-07-21","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":2.5,"phases_s":{"reconcile":1.65,"cancel":0.22,"manage":0.14},"signals":0,"placed":0,"equity":132832.85,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":90,"filled_today":105,"unattributed_contracts":0,"top_signals":[],"github_run":"4622","github_run_id":"29863178213","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:55:34  INFO      Mode: scan
+19:55:35  INFO        [positions] 4/4 (4 valid)
+19:55:35  INFO        Universe cache hit: 903 tickers (tickers_2026-07-21.json)
+19:55:36  INFO        [universe] 40/899 (40 valid)
+19:55:37  INFO        [universe] 80/899 (80 valid)
+19:55:38  INFO        [universe] 120/899 (120 valid)
+19:55:39  INFO        [universe] 160/899 (160 valid)
+19:55:40  INFO        [universe] 200/899 (199 valid)
+19:55:53  INFO        [universe] 240/899 (238 valid)
+19:56:06  INFO        [universe] 280/899 (278 valid)
+19:56:19  INFO        [universe] 320/899 (318 valid)
+```
+
+### Options bot full output
+
+```text
