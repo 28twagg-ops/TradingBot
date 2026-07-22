@@ -3165,3 +3165,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-22 22:45:41,ext_exits,bull,482.27,25.95,0,0,0,5,AEP|C|CARR|CHD|LNT,both
 2026-07-22 22:50:36,ext_exits,bull,482.27,25.95,0,0,0,5,AEP|C|CARR|CHD|LNT,both
 2026-07-22 22:56:15,ext_exits,bull,482.27,25.95,0,0,0,5,AEP|C|CARR|CHD|LNT,both
+2026-07-22 23:00:42,ext_exits,bull,482.27,25.95,0,0,0,5,AEP|C|CARR|CHD|LNT,both
