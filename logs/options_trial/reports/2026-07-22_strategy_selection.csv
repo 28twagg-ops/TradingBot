@@ -1,9 +1,9 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
-S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),20,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,20,0,0,0.0
-S166,GapDown strong call,3d ATM strong,watch,insufficient sample (<8 exits),15,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,15,0,0,0.0
-S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,insufficient sample (<8 exits),30,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,30,0,0,0.0
-S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,insufficient sample (<8 exits),20,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,20,0,0,0.0
+S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),30,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,30,0,0,0.0
+S166,GapDown strong call,3d ATM strong,watch,insufficient sample (<8 exits),20,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,20,0,0,0.0
+S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,insufficient sample (<8 exits),35,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,35,0,0,0.0
+S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,insufficient sample (<8 exits),27,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,27,0,0,0.0
 S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,insufficient sample (<8 exits),32,1,0,1,-53.57,-53.57,-53.57,-53.57,-53.57,-30.0,1,1,32,1,1,100.0
 S174,RubberBand long call EOD,RubberBand (dropped),drop,manually paused — excluded from new entries & reflected P&L,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,16,0,0,6,50.4
-S173,MomReversal long call,MomRev,drop,manually paused — excluded from new entries & reflected P&L,1587,385,137,248,11.42,-32.31,-78.45,-63.16,100.0,-1186.36,8,16,20,19,12,28.1
-S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1351,236,73,163,-3.99,-34.31,-61.76,-52.73,81.82,-1493.78,7,16,25,0,11,27.1
+S173,MomReversal long call,MomRev,drop,manually paused — excluded from new entries & reflected P&L,1613,391,141,250,11.38,-31.75,-78.79,-62.95,100.0,-1154.36,8,16,40,19,12,27.6
+S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1366,240,73,167,-4.9,-36.64,-61.91,-52.93,81.82,-1626.78,7,16,35,0,12,26.7

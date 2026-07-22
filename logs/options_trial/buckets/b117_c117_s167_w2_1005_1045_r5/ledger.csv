@@ -2,3 +2,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-21 14:16:14.550231+00:00,entry,117,c117_s167_w2_1005_1045_r5,S167,dd7c430d19fc,CELH,CELH260724C00029000,1,0.4,0.4,40.0,,,,-0.01,,0.5,-0.5,0.1025641025641025,gap -2.5%,3dc8b475-76d1-4e4f-9438-9e367f1be852
 2026-07-21T14:20:46Z,reconcile,117,c117_s167_w2_1005_1045_r5,S167,dd7c430d19fc,CELH,CELH260724C00029000,1,,,40.0,,,zombie_lot,,,,,,zombie age_min=861 notional=$40.00 occ=CELH260724C00029000 action=submitted:c4c35bc7-da4c-4f95-8db4-2854e8e277ea,
 2026-07-22 14:44:01.658506+00:00,entry,117,c117_s167_w2_1005_1045_r5,S167,2fd729a4951e,COIN,COIN260724C00187500,1,0.63,0.63,63.0,,,,-0.01,,0.5,-0.5,,,ebb69e40-6e68-4e6d-87c8-b00629b48107
+2026-07-22T14:50:45Z,reconcile,117,c117_s167_w2_1005_1045_r5,S167,2fd729a4951e,COIN,COIN260724C00187500,1,,,63.0,,,zombie_lot,,,,,,zombie age_min=891 notional=$63.00 occ=COIN260724C00187500 action=submitted:a569d347-bd08-46bb-ac18-dcd93d003e68,
