@@ -1,0 +1,76 @@
+19:35:34  INFO      Mode: evening_prep
+19:35:34  INFO        [prep_positions] 4/4 (4 valid)
+19:35:34  INFO        Universe cache hit: 903 tickers (tickers_2026-07-22.json)
+19:35:35  INFO        [prep_universe] 40/899 (40 valid)
+19:35:37  INFO        [prep_universe] 80/899 (80 valid)
+19:35:38  INFO        [prep_universe] 120/899 (120 valid)
+19:35:39  INFO        [prep_universe] 160/899 (160 valid)
+19:35:41  INFO        [prep_universe] 200/899 (199 valid)
+19:35:48  INFO        [prep_universe] 240/899 (238 valid)
+19:36:01  INFO        [prep_universe] 280/899 (278 valid)
+19:36:14  INFO        [prep_universe] 320/899 (318 valid)
+19:36:24  INFO        [prep_universe] 360/899 (358 valid)
+19:36:37  INFO        [prep_universe] 400/899 (397 valid)
+19:36:50  INFO        [prep_universe] 440/899 (437 valid)
+19:37:03  INFO        [prep_universe] 480/899 (477 valid)
+19:37:13  INFO        [prep_universe] 520/899 (517 valid)
+19:37:26  INFO        [prep_universe] 560/899 (556 valid)
+19:37:36  INFO        [prep_universe] 600/899 (596 valid)
+19:37:49  INFO        [prep_universe] 640/899 (636 valid)
+19:38:02  INFO        [prep_universe] 680/899 (676 valid)
+19:38:12  INFO        [prep_universe] 720/899 (715 valid)
+19:38:25  INFO        [prep_universe] 760/899 (755 valid)
+19:38:38  INFO        [prep_universe] 800/899 (795 valid)
+19:38:48  INFO        [prep_universe] 840/899 (834 valid)
+19:39:01  INFO        [prep_universe] 880/899 (874 valid)
+19:39:08  INFO        [prep_universe] 899/899 (893 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      EVENING_PREP|
+|  Time                                                         19:35 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $481.92|
++========================================================================+
+
++========================================================================+
+|                              EVENING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/evening_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       4|
+|  Invested                                                       $360.91|
+|  Open P&L                                                        $+2.35|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AEP      Pullback50      $96.89     $131.94  $132.63  +0.5%   $+0.50  |
+|  C        Pullback50      $69.83     $132.61  $132.56  -0.0%   $-0.03  |
+|  CARR     Pullback50      $96.19     $67.80   $67.96   +0.2%   $+0.23  |
+|  TPR      Pullback50      $98.00     $140.84  $143.25  +1.7%   $+1.65  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                1|
+|  TICKER    TYPE              QTY       LIMIT       STOP                |
++------------------------------------------------------------------------+
+|  CARR      OrderType.STOP    1         None        67.46               |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      1|
+|  Signal candidates                                                   28|
+|  Universe scanned                                                   899|
++========================================================================+
