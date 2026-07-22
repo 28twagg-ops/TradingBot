@@ -3556,3 +3556,108 @@ Paper lab: $132171 broker equity -> 140 bucket(s) ($500 virtual each, unlimited 
 ```
 
 ---
+
+## Run 20260722T142059Z
+
+- UTC timestamp: `20260722T142059Z`
+- GitHub run: [#4695](https://github.com/28twagg-ops/TradingBot/actions/runs/29928077910)
+- Run id: `29928077910`
+- Live bot: exit=`0`, duration=`3s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-22T09:25:44.966471-04:00","date":"2026-07-22","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.7,"phases_s":{"reconcile":1.39},"signals":0,"placed":0,"equity":130535.33,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"4683","github_run_id":"29923786253","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+14:21:00  INFO      Mode: exits
+14:21:01  INFO        Daily log -> logs/daily/2026-07-22.md
+14:21:01  INFO        Daily log reconciled -> logs/daily/2026-07-22.md (1 ledger rows)
+14:21:01  INFO        place_all_stops: checking 5 positions...
+14:21:01  INFO        STOP skipped AEP: fractional (0.7305 shares) — software exit will handle it
+14:21:01  INFO        STOP skipped BIIB: fractional (0.4766 shares) — software exit will handle it
+14:21:01  INFO        STOP skipped C: fractional (0.5268 shares) — software exit will handle it
+14:21:01  INFO        STOP already live CARR @ $67.46
+14:21:01  INFO        STOP skipped TPR: fractional (0.6841 shares) — software exit will handle it
+14:21:02  INFO        [positions] 5/5 (5 valid)
+14:21:02  INFO        Daily log -> logs/daily/2026-07-22.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:21 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $482.93|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  C  P&L -0.2%  $-0.15                                              HOLD|
+|  BIIB  P&L +0.3%  $+0.27                                           HOLD|
+|  CARR  P&L +0.4%  $+0.36                                           HOLD|
+|  AEP  P&L +0.6%  $+0.61                                            HOLD|
+|  TPR  P&L +1.7%  $+1.63                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           5|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                5|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=4 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=3
+  zombies_flagged=4
+  FLAG b104|S164|c6095e4d zombie age_min=861 notional=$56.00 occ=AMD260722C00570000 action=submitted:c340336b-0f14-42fc-baef-ec48b136fd17
+  FLAG b76|S164|4cedf2ab zombie age_min=861 notional=$56.00 occ=AMD260722C00570000 action=submitted:abb19633-abd3-4b70-950d-2f7e32cd2ac7
+  FLAG b48|S164|3e37f4df zombie age_min=861 notional=$56.00 occ=AMD260722C00570000 action=submitted:8235a47c-0d0b-4661-8bd1-a7e90af5f71f
+  FLAG b20|S164|3738ecb7 zombie age_min=861 notional=$56.00 occ=AMD260722C00570000 action=submitted:3e2f51d5-4a54-46de-a822-ae20fc6d57d3
+options_reconcile: done
+Layout: controlled:140:c000_s173_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:140:c000_s173_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      140
+=== options_morning_bot (PAPER) 2026-07-22T10:21:04.750937-04:00 ===
+
+[Run context]
+Paper auth OK — equity $132597.05, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 140 | Strategies: S165, S164, S168, S167, S166, S163
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 299 signal(s); top: ['S165:AMD', 'S165:APH', 'S165:AMAT', 'S165:CB', 'S165:CIEN', 'S165:COHR', 'S165:COIN', 'S165:FIX']
+Paper lab: $132608 broker equity -> 140 bucket(s) ($500 virtual each, unlimited paper)
+```
+
+---
