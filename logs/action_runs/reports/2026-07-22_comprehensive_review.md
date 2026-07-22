@@ -2815,3 +2815,45 @@ Scanning 903 symbols for [S165, S164, S168, S167, S166, S163] …
 ```
 
 ---
+
+## Run 20260722T135105Z
+
+- UTC timestamp: `20260722T135105Z`
+- GitHub run: [#4688](https://github.com/28twagg-ops/TradingBot/actions/runs/29925697379)
+- Run id: `29925697379`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-22T09:25:44.966471-04:00","date":"2026-07-22","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.7,"phases_s":{"reconcile":1.39},"signals":0,"placed":0,"equity":130535.33,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"4683","github_run_id":"29923786253","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:51:06  INFO      Mode: morning_scan
+13:51:07  INFO        [positions] 5/5 (5 valid)
+13:51:07  INFO        SELL LIMIT DUK  qty=0.769322995  limit=$126.70  id=cc17ebae-bc3d-4409-85fc-2d9f22f8a722
+13:51:37  INFO        SELL LIMIT filled DUK (confirmed by position check)
+13:51:37  INFO        TX logged: SELL DUK  P&L 1.47%
+13:51:37  INFO        Universe cache hit: 903 tickers (tickers_2026-07-22.json)
+13:51:38  INFO        [universe] 40/899 (40 valid)
+13:51:40  INFO        [universe] 80/899 (80 valid)
+13:51:41  INFO        [universe] 120/899 (120 valid)
+13:51:42  INFO        [universe] 160/899 (160 valid)
+13:51:43  INFO        [universe] 200/899 (199 valid)
+13:51:51  INFO        [universe] 240/899 (238 valid)
+13:52:04  INFO        [universe] 280/899 (278 valid)
+13:52:14  INFO        [universe] 320/899 (318 valid)
+13:52:28  INFO        [universe] 360/899 (358 valid)
+13:52:38  INFO        [universe] 400/899 (397 valid)
+13:52:51  INFO        [universe] 440/899 (437 valid)
+13:53:01  INFO        [universe] 480/899 (477 valid)
+13:53:14  INFO        [universe] 520/899 (517 valid)
+13:53:27  INFO        [universe] 560/899 (556 valid)
+13:53:38  INFO        [universe] 600/899 (596 valid)
+```
+
+### Options bot full output
+
+```text
