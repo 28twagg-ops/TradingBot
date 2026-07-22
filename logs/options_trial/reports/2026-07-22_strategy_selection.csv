@@ -5,5 +5,5 @@ S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,insufficient sample (<
 S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,insufficient sample (<8 exits),27,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,27,0,0,0.0
 S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,insufficient sample (<8 exits),32,1,0,1,-53.57,-53.57,-53.57,-53.57,-53.57,-30.0,1,1,32,1,1,100.0
 S174,RubberBand long call EOD,RubberBand (dropped),drop,manually paused — excluded from new entries & reflected P&L,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,16,0,0,6,50.4
-S173,MomReversal long call,MomRev,drop,manually paused — excluded from new entries & reflected P&L,1613,391,141,250,11.38,-31.75,-78.79,-62.95,100.0,-1154.36,8,16,40,19,12,27.6
+S173,MomReversal long call,MomRev,drop,manually paused — excluded from new entries & reflected P&L,1613,392,142,250,11.44,-31.63,-78.7,-62.85,99.84,-1132.36,8,16,40,19,12,27.6
 S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1366,240,73,167,-4.9,-36.64,-61.91,-52.93,81.82,-1626.78,7,16,35,0,12,26.7

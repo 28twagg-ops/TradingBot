@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-22
 
-_Generated 2026-07-22T10:53:05.786300_
+_Generated 2026-07-22T10:57:46.266066_
 
 ## Summary
 
@@ -11,9 +11,9 @@ _Generated 2026-07-22T10:53:05.786300_
 
 ## Attribution health
 
-- Total exits: **773**
+- Total exits: **774**
 - Orphan exits (b0/orphan_reconcile): **22**
-- Orphan rate: **2.9%** (warn if >10%)
+- Orphan rate: **2.8%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
 
 ## Strategy scoreboard
@@ -26,7 +26,7 @@ _Generated 2026-07-22T10:53:05.786300_
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 1 | 27 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 1 | 0.0 | -53.57 | -53.57 | -53.57 | -53.57 | 1 | 32 | 1 | $-30.00 | 100.0% | insufficient sample (<8 exits) |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 16 | 0 | 0 | $-1,658.19 | 50.4% | manually paused — excluded from new entries & reflected P&L |
-| S173 (MomReversal long call) | MomRev | drop | 391 | 36.1 | -31.75 | -78.79 | -62.95 | +100.00 | 16 | 40 | 19 | $-1,154.36 | 27.6% | manually paused — excluded from new entries & reflected P&L |
+| S173 (MomReversal long call) | MomRev | drop | 392 | 36.2 | -31.63 | -78.70 | -62.85 | +99.84 | 16 | 40 | 19 | $-1,132.36 | 27.6% | manually paused — excluded from new entries & reflected P&L |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 240 | 30.4 | -36.64 | -61.91 | -52.93 | +81.82 | 16 | 35 | 0 | $-1,626.78 | 26.7% | non-positive median return |
 
 ## Comparison groups
@@ -55,11 +55,11 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 ### Other
 
-- Status: **OK** | Best median: **S173** (-31.75%) | Best p10: **S173** (-78.79%)
+- Status: **OK** | Best median: **S173** (-31.63%) | Best p10: **S173** (-78.70%)
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S173 | MomRev | 391 | -31.75 | -78.79 | -62.95 | 40 | 19 |
+| S173 | MomRev | 392 | -31.63 | -78.70 | -62.85 | 40 | 19 |
 
 ## Notes
 

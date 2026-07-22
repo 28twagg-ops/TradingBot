@@ -7,3 +7,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-22 14:42:36.608252+00:00,entry,65,c065_s165_w2_1005_1045_r3,S165,9da2c3b18341,COIN,COIN260724C00187500,1,0.63,0.63,63.0,,,,-0.01,,0.5,-0.5,,,1a9fc2f6-ccf9-43c5-abc7-66befc142f82
 2026-07-22T14:50:45Z,reconcile,65,c065_s165_w2_1005_1045_r3,S165,9da2c3b18341,COIN,COIN260724C00187500,1,,,63.0,,,zombie_lot,,,,,,zombie age_min=891 notional=$63.00 occ=COIN260724C00187500 action=submitted:317d573c-8749-4897-984f-553ddeefdce6,
 2026-07-21 14:07:43.873537+00:00,entry,65,c065_s165_w2_1005_1045_r3,S165,0733f4e91082,HAL,HAL260724C00033000,1,0.63,0.63,63.0,,,,-0.01,,0.5,-0.5,,,67015a43-586c-47bf-8966-7c841c3217bf
+2026-07-22T14:55:38Z,reconcile,65,c065_s165_w2_1005_1045_r3,S165,bd6d8dc5b27c,COIN,COIN260724C00187500,1,,,63.0,,,zombie_lot,,,,,,zombie age_min=896 notional=$63.00 occ=COIN260724C00187500 action=submitted:da4f54b4-897b-4b1c-8821-a51d6a534d40,
