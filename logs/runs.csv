@@ -3063,3 +3063,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-22 14:00:09,scan_morning,bull,482.09,25.32,37,0,0,5,AEP|BIIB|C|CARR|TPR,both
 2026-07-22 14:00:55,exits,bull,482.12,25.32,0,0,0,5,AEP|BIIB|C|CARR|TPR,both
 2026-07-22 14:06:06,exits,bull,482.82,25.32,0,0,0,5,AEP|BIIB|C|CARR|TPR,both
+2026-07-22 14:11:09,exits,bull,482.87,25.32,0,0,0,5,AEP|BIIB|C|CARR|TPR,both
