@@ -1,6 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-21 14:08:08.620632+00:00,entry,132,c132_s164_w1_0928_1005_r5,S164,0b52d9aae365,HAL,HAL260724C00035000,1,0.08,0.08,8.0,,,,-0.01,,0.5,-0.5,,,36720bf6-a138-41ad-8790-84e969adf1d6
 2026-07-21T14:10:39Z,reconcile,132,c132_s164_w1_0928_1005_r5,S164,0b52d9aae365,HAL,HAL260724C00035000,1,,,8.0,,,zombie_lot,,,,,,zombie age_min=851 notional=$8.00 occ=HAL260724C00035000 action=submitted:3c14972f-652e-4e53-a062-4ecb66c08e41,
-2026-07-22 14:03:07.620266+00:00,entry,132,c132_s164_w1_0928_1005_r5,S164,8e5a39a55448,AMD,AMD260722C00570000,1,0.56,0.56,56.0,,,,-0.01,,0.5,-0.5,,,6f00f173-73e5-437f-b01e-d15165427e4a
-2026-07-22 14:06:11.849583+00:00,exit,132,c132_s164_w1_0928_1005_r5,S164,8e5a39a55448,AMD,AMD260722C00570000,1,,0.26,56.0,-53.57,-30.0,stop_loss (-53.6%),,-0.01,0.5,-0.5,,,ff1167dc-da17-49b0-aa21-6bed45efb0ac
-2026-07-22T14:26:06Z,reconcile,132,c132_s164_w1_0928_1005_r5,S164,2686c2538801,AMD,AMD260722C00570000,1,,,56.00000000000001,,,zombie_lot,,,,,,zombie age_min=866 notional=$56.00 occ=AMD260722C00570000 action=no_broker_position,
+2026-07-22 14:03:07.620266+00:00,entry,132,c132_s164_w1_0928_1005_r5,S164,8f6383409041,AMD,AMD260722C00570000,1,0.56,0.56,56.0,,,,-0.01,,0.5,-0.5,0.07272727272727258,gap -3.2%,6f00f173-73e5-437f-b01e-d15165427e4a
