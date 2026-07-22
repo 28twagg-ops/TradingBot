@@ -1,0 +1,22 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=2 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=3
+  zombies_flagged=2
+  FLAG b48|S164|43984859 zombie age_min=830 notional=$58.00 occ=AMD260722C00575000 action=submitted:830eee3d-dc54-43ae-b0f6-ba44fcb2a0c2
+  FLAG b20|S164|9fc607f2 zombie age_min=830 notional=$58.00 occ=AMD260722C00575000 action=submitted:ceaf0697-a83b-45d5-9357-d50124494f13
+options_reconcile: done
+Layout: controlled:140:c000_s173_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:140:c000_s173_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      140
+=== options_morning_bot (PAPER) 2026-07-22T09:49:51.883273-04:00 ===
+
+[Run context]
+Paper auth OK — equity $132205.25, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 140 | Strategies: S165, S164, S168, S167, S166, S163
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163] …
