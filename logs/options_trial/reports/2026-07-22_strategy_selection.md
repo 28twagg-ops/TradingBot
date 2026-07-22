@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-22
 
-_Generated 2026-07-22T11:18:31.762486_
+_Generated 2026-07-22T11:34:38.012242_
 
 ## Summary
 
@@ -22,12 +22,12 @@ _Generated 2026-07-22T11:18:31.762486_
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 1 | 30 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 1 | 20 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 1 | 35 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 1 | 40 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 1 | 27 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 1 | 0.0 | -53.57 | -53.57 | -53.57 | -53.57 | 1 | 32 | 1 | $-30.00 | 100.0% | insufficient sample (<8 exits) |
+| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 1 | 0.0 | -53.57 | -53.57 | -53.57 | -53.57 | 1 | 42 | 1 | $-30.00 | 100.0% | insufficient sample (<8 exits) |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 16 | 0 | 0 | $-1,658.19 | 50.4% | manually paused — excluded from new entries & reflected P&L |
 | S173 (MomReversal long call) | MomRev | drop | 392 | 36.2 | -31.63 | -78.70 | -62.85 | +99.84 | 16 | 40 | 19 | $-1,132.36 | 27.6% | manually paused — excluded from new entries & reflected P&L |
-| S165 (GapDown long call 3 DTE) | 3d ATM | drop | 240 | 30.4 | -36.64 | -61.91 | -52.93 | +81.82 | 16 | 35 | 0 | $-1,626.78 | 26.7% | non-positive median return |
+| S165 (GapDown long call 3 DTE) | 3d ATM | drop | 240 | 30.4 | -36.64 | -61.91 | -52.93 | +81.82 | 16 | 40 | 0 | $-1,626.78 | 26.7% | non-positive median return |
 
 ## Comparison groups
 
@@ -40,8 +40,8 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S163 | 7d ATM | 0 | +0.00 | +0.00 | +0.00 | 30 | 0 |
-| S164 | 1d ATM | 1 | -53.57 | -53.57 | -53.57 | 32 | 1 |
-| S165 | 3d ATM | 240 | -36.64 | -61.91 | -52.93 | 35 | 0 |
+| S164 | 1d ATM | 1 | -53.57 | -53.57 | -53.57 | 42 | 1 |
+| S165 | 3d ATM | 240 | -36.64 | -61.91 | -52.93 | 40 | 0 |
 | S168 | 5d ATM | 0 | +0.00 | +0.00 | +0.00 | 27 | 0 |
 
 ### GapDown Strike comparison
@@ -50,8 +50,8 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S165 | 3d ATM | 240 | -36.64 | -61.91 | -52.93 | 35 | 0 |
-| S167 | 3d 1-OTM | 0 | +0.00 | +0.00 | +0.00 | 35 | 0 |
+| S165 | 3d ATM | 240 | -36.64 | -61.91 | -52.93 | 40 | 0 |
+| S167 | 3d 1-OTM | 0 | +0.00 | +0.00 | +0.00 | 40 | 0 |
 
 ### Other
 

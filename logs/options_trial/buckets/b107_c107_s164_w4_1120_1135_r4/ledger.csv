@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-21 15:21:23.787754+00:00,entry,107,c107_s164_w4_1120_1135_r4,S164,5e1771692c9b,LULU,LULU260724C00120000,1,0.65,0.64,64.0,,,,-0.01,,0.5,-0.5,0.1818181818181818,gap -2.4%,4a8fdb62-b2f3-4ba0-8361-3cff8e1a0180
-2026-07-22 15:23:13.942687+00:00,entry,107,c107_s164_w4_1120_1135_r4,S164,94494ed49c35,AMD,AMD260722C00570000,1,0.57,0.57,57.0,,,,-0.01,,0.5,-0.5,,,efcb6a7e-b4ce-415d-b67a-f60dd4e578fe
+2026-07-22 15:28:48.122034+00:00,entry,107,c107_s164_w4_1120_1135_r4,S164,c45748b7307a,AMD,AMD260722C00570000,1,0.56,0.56,56.0,,,,-0.01,,0.5,-0.5,,,5c22829d-bd4e-4a8e-a037-0c1f1f92eacb
+2026-07-22 15:23:13.942687+00:00,entry,107,c107_s164_w4_1120_1135_r4,S164,26ba27147f41,AMD,AMD260722C00570000,1,0.57,0.57,57.0,,,,-0.01,,0.5,-0.5,,,efcb6a7e-b4ce-415d-b67a-f60dd4e578fe
