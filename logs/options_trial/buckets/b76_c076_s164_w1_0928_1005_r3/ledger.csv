@@ -1,4 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-21 14:08:08.625083+00:00,entry,76,c076_s164_w1_0928_1005_r3,S164,52c09cd9e179,HAL,HAL260724C00035000,1,0.08,0.08,8.0,,,,-0.01,,0.5,-0.5,,,4f7febf6-4b7e-477f-a8ba-e65a1974a5d2
 2026-07-21T14:10:39Z,reconcile,76,c076_s164_w1_0928_1005_r3,S164,52c09cd9e179,HAL,HAL260724C00035000,1,,,8.0,,,zombie_lot,,,,,,zombie age_min=851 notional=$8.00 occ=HAL260724C00035000 action=submitted:dfdff98a-d823-461a-8d54-570afabb3d07,
-2026-07-22 14:03:07.623906+00:00,entry,76,c076_s164_w1_0928_1005_r3,S164,4cedf2abc380,AMD,AMD260722C00570000,1,0.56,0.56,56.0,,,,-0.01,,0.5,-0.5,0.07272727272727258,gap -3.2%,5fb3210b-757f-490c-8506-11d02b34b056
+2026-07-22 14:03:07.623906+00:00,entry,76,c076_s164_w1_0928_1005_r3,S164,b1836055c960,AMD,AMD260722C00570000,1,0.56,0.56,56.0,,,,-0.01,,0.5,-0.5,,,5fb3210b-757f-490c-8506-11d02b34b056
