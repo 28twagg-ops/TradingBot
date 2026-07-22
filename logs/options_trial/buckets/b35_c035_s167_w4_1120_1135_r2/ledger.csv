@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-21 15:22:08.782974+00:00,entry,35,c035_s167_w4_1120_1135_r2,S167,36a09dc8e59a,LULU,LULU260724C00120000,1,0.62,0.61,61.0,,,,-0.01,,0.5,-0.5,0.13559322033898297,gap -2.4%,cff6131b-8638-460f-b898-75e0d03ef753
 2026-07-22 15:29:33.289034+00:00,entry,35,c035_s167_w4_1120_1135_r2,S167,0ce4556970dc,COIN,COIN260724C00187500,1,0.57,0.56,56.0,,,,-0.01,,0.5,-0.5,0.128440366972477,gap -2.0%,ae7d6f59-1400-415f-81b6-08dd32a60831
+2026-07-22 15:35:03.914680+00:00,entry,35,c035_s167_w4_1120_1135_r2,S167,28e44164d252,COIN,COIN260724C00187500,1,0.55,0.55,55.0,,,,-0.01,,0.5,-0.5,,,637cbe3e-61ec-430c-ac68-7843a727a329

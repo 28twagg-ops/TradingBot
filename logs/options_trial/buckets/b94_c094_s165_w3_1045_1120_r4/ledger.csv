@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-22 14:47:03.390113+00:00,entry,94,c094_s165_w3_1045_1120_r4,S165,7c5f28ad00b5,COIN,COIN260724C00187500,1,0.65,0.64,64.0,,,,-0.01,,0.5,-0.5,0.21848739495798322,gap -2.0%,7e73d71c-7bc9-4272-8db6-4726183801a5
 2026-07-22T14:50:46Z,reconcile,94,c094_s165_w3_1045_1120_r4,S165,7c5f28ad00b5,COIN,COIN260724C00187500,1,,,64.0,,,zombie_lot,,,,,,zombie age_min=891 notional=$64.00 occ=COIN260724C00187500 action=submitted:588a09f9-98b7-4a0f-8134-fed4f3c7fbd3,
+2026-07-22T15:35:59Z,reconcile,94,c094_s165_w3_1045_1120_r4,S165,ef45afeb2753,COIN,COIN260724C00187500,1,,,64.0,,,zombie_lot,,,,,,zombie age_min=936 notional=$64.00 occ=COIN260724C00187500 action=submitted:998db6a1-abc1-49a1-b6eb-a967e27cc206,

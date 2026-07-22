@@ -16,3 +16,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-22T14:26:06Z,reconcile,48,c048_s164_w1_0928_1005_r2,S164,91d9aa59ecf7,AMD,AMD260722C00570000,1,,,56.00000000000001,,,zombie_lot,,,,,,zombie age_min=866 notional=$56.00 occ=AMD260722C00570000 action=no_broker_position,
 2026-07-22T14:50:47Z,reconcile,48,c048_s164_w1_0928_1005_r2,S164,28146b6a6e1a,AMD,AMD260722C00570000,1,,,56.00000000000001,,,zombie_lot,,,,,,zombie age_min=891 notional=$56.00 occ=AMD260722C00570000 action=submitted:62a9c43b-2512-4388-a72c-caf794eae26c,
 2026-07-16 17:01:24.067415+00:00,exit,48,c048_s164_w1_0928_1005_r2,S165,7f5e349dd2b7,GOOGL,GOOGL260720C00360000,1,,0.28,55.0,-49.09,-27.0,reconcile_fill,,-0.01,0.5,-0.5,,,19bc8cbc-a6e1-4b82-ba16-3303694672ed
+2026-07-21 14:08:08.623201+00:00,entry,48,c048_s164_w1_0928_1005_r2,S164,4dd73e3112dc,HAL,HAL260724C00035000,1,0.08,0.08,8.0,,,,-0.01,,0.5,-0.5,,,20ef4d17-3430-4308-8b01-d9be2d8c6b60
