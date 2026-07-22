@@ -1,0 +1,26 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=2 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=3
+  zombies_flagged=2
+  FLAG b48|S164|4b941fe5 zombie age_min=846 notional=$58.00 occ=AMD260722C00575000 action=no_broker_position
+  FLAG b20|S164|3fbbe0c3 zombie age_min=846 notional=$58.00 occ=AMD260722C00575000 action=no_broker_position
+options_reconcile: done
+Layout: controlled:140:c000_s173_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:140:c000_s173_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      140
+=== options_morning_bot (PAPER) 2026-07-22T10:06:08.009966-04:00 ===
+
+[Run context]
+Paper auth OK — equity $132110.71, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 140 | Strategies: S165, S164, S168, S167, S166, S163
+Dropped (no new entries; ex-reflected P&L): S173, S174
+2026-07-22 10:06:11,779 INFO   EXIT [b132|c132_s164_w1_0928_1005_r5|S164] stop_loss (-53.6%) SELL 1 AMD260722C00570000 @<= 0.23
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 299 signal(s); top: ['S165:AMD', 'S165:APH', 'S165:AMAT', 'S165:CB', 'S165:CIEN', 'S165:COHR', 'S165:COIN', 'S165:FIX']
+Paper lab: $131923 broker equity -> 140 bucket(s) ($500 virtual each, unlimited paper)
