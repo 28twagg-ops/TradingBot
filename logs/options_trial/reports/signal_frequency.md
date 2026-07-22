@@ -1,6 +1,6 @@
 # Options signal frequency
 
-_Generated 2026-07-22T10:45:14.656256_
+_Generated 2026-07-22T10:49:04.291040_
 
 Headline counts are **unique (strategy, underlying, date)** from `ENTRY` lines in `logs/options_trial/runs/*.log`.
 Raw log-line counts (multi-bucket duplicates) are shown below for debug.
@@ -19,14 +19,14 @@ Raw log-line counts (multi-bucket duplicates) are shown below for debug.
 | 2026-07-17 |    0 |    0 |    2 |    0 |    0 |    0 |    2 |    0 |     4 |
 | 2026-07-20 |    0 |    0 |    0 |    0 |    0 |    0 |    1 |    0 |     1 |
 | 2026-07-21 |    1 |    2 |    1 |    1 |    2 |    2 |    0 |    0 |     9 |
-| 2026-07-22 |    1 |    0 |    1 |    0 |    1 |    0 |    0 |    0 |     3 |
+| 2026-07-22 |    1 |    1 |    1 |    0 |    1 |    0 |    0 |    0 |     4 |
 
 ## Per-strategy summary (unique underlyings)
 
 | Strategy | Unique entries | Active days | Avg unique / active day | Est. active days to n=30 exits* |
 |----------|---------------:|------------:|------------------------:|--------------------------------|
 | S163 | 2 | 2 | 1.0 | ~38 active signal-days |
-| S164 | 2 | 1 | 2.0 | ~19 active signal-days |
+| S164 | 3 | 2 | 1.5 | ~25 active signal-days |
 | S165 | 16 | 9 | 1.8 | ~22 active signal-days |
 | S166 | 1 | 1 | 1.0 | ~38 active signal-days |
 | S167 | 3 | 2 | 1.5 | ~25 active signal-days |
@@ -41,10 +41,10 @@ Raw log-line counts (multi-bucket duplicates) are shown below for debug.
 | Strategy | Raw log lines (includes multi-bucket duplicates) | Unique underlying symbols |
 |----------|-------------------------------------------------:|--------------------------:|
 | S163 | 55 | 2 |
-| S164 | 62 | 2 |
-| S165 | 1498 | 16 |
+| S164 | 72 | 3 |
+| S165 | 1503 | 16 |
 | S166 | 45 | 1 |
-| S167 | 65 | 3 |
+| S167 | 70 | 3 |
 | S168 | 55 | 2 |
 | S173 | 1831 | 17 |
 | S174 | 891 | 7 |
@@ -64,7 +64,7 @@ Raw log-line counts (multi-bucket duplicates) are shown below for debug.
 | 2026-07-17 |    0 |    0 |  127 |    0 |    0 |    0 |  207 |   58 |   392 |
 | 2026-07-20 |    0 |    0 |  107 |    0 |    0 |    0 |  143 |   58 |   308 |
 | 2026-07-21 |   30 |   35 |  113 |   30 |   35 |   35 |  118 |   48 |   444 |
-| 2026-07-22 |   25 |   27 |   76 |   15 |   30 |   20 |   77 |    0 |   270 |
+| 2026-07-22 |   25 |   37 |   81 |   15 |   35 |   20 |   77 |    0 |   290 |
 
 ## Notes
 

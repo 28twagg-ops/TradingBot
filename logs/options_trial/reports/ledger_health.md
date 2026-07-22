@@ -1,6 +1,6 @@
 # Ledger health — 2026-07-22
 
-_Generated 2026-07-22T10:45:14.739810_
+_Generated 2026-07-22T10:49:04.389095_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -13,9 +13,9 @@ State file: OK
 | Current stuck (state)       |     0 | OK |
 | Orphaned lots (post-stable) |     7 | WARN |
 | Missing exit records (post) |     7 | WARN |
-| State/ledger mismatches     |     0 | OK |
-| Total open lots             |    15 | INFO |
-| Total closed lots           |   297 | INFO |
+| State/ledger mismatches     |     5 | WARN |
+| Total open lots             |    30 | INFO |
+| Total closed lots           |   298 | INFO |
 | Pre-cutoff audit debt       |     0 | INFO |
 | Transition audit debt       |   616 | INFO |
 
@@ -36,3 +36,11 @@ Notes:
 | 78970860d223 | S165 | AVGO | 2026-07-16 | 6 |
 | cfe20e4c43c8 | S165 | AVGO | 2026-07-16 | 6 |
 | a16f71cdcc5f | S173 | LULU | 2026-07-16 | 6 |
+
+## State/ledger mismatches
+
+- `28146b6a6e1a`
+- `298f4d1123e9`
+- `3cd585c64943`
+- `63ea65703a42`
+- `f1a9abda8e98`

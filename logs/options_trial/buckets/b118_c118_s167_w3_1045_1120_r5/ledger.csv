@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-21 15:02:40.543172+00:00,entry,118,c118_s167_w3_1045_1120_r5,S167,dea1881cf2c4,LULU,LULU260724C00120000,1,0.64,0.63,63.0,,,,-0.01,,0.5,-0.5,0.08000000000000007,gap -2.4%,9f7fb92f-f1cc-4187-b42d-60f5ab57a912
 2026-07-21T15:25:42Z,reconcile,118,c118_s167_w3_1045_1120_r5,S167,56d88ece4ea6,LULU,LULU260724C00120000,1,,,63.0,,,zombie_lot,,,,,,zombie age_min=926 notional=$63.00 occ=LULU260724C00120000 action=submitted:c4bf2f59-88c0-4964-8b36-e1ecb820ce14,
+2026-07-22 14:47:50.315956+00:00,entry,118,c118_s167_w3_1045_1120_r5,S167,b22564974598,COIN,COIN260724C00187500,1,0.65,0.6,60.0,,,,-0.01,,0.5,-0.5,0.21848739495798322,gap -2.0%,1b5b27ab-fbd0-4e8d-b63e-a47d717f0afb
