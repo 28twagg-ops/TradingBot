@@ -1,9 +1,53 @@
 {
   "version": 5,
-  "lots": [],
+  "lots": [
+    {
+      "lot_id": "4b941fe5bf18",
+      "bucket_id": 48,
+      "profile_name": "c048_s164_w1_0928_1005_r2",
+      "strategy_id": "S164",
+      "occ_symbol": "AMD260722C00575000",
+      "underlying": "AMD",
+      "qty": 1,
+      "entry_cost": 57.99999999999999,
+      "entry_price": 0.58,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-07-22",
+      "entry_order_id": "c123469d-46d7-4e3a-9516-f8ad4b64c708"
+    },
+    {
+      "lot_id": "3fbbe0c35910",
+      "bucket_id": 20,
+      "profile_name": "c020_s164_w1_0928_1005_r1",
+      "strategy_id": "S164",
+      "occ_symbol": "AMD260722C00575000",
+      "underlying": "AMD",
+      "qty": 1,
+      "entry_cost": 57.99999999999999,
+      "entry_price": 0.58,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-07-22",
+      "entry_order_id": "63abf980-9a4a-4b03-8a92-1391f927d13f"
+    }
+  ],
   "pending_orders": [],
   "pending_exits": [],
-  "bucket_open_premium": {},
+  "bucket_open_premium": {
+    "b48": 57.99999999999999,
+    "b20": 57.99999999999999
+  },
   "session_date": "2026-07-22",
   "entries_locked": [],
   "processed_orders": [
