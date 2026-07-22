@@ -3121,3 +3121,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-22 18:35:35,exits,bull,482.12,121.01,0,0,0,4,AEP|C|CARR|TPR,both
 2026-07-22 18:40:51,exits,bull,482.05,121.01,0,0,0,4,AEP|C|CARR|TPR,both
 2026-07-22 18:46:05,exits,bull,481.96,121.01,0,0,0,4,AEP|C|CARR|TPR,both
+2026-07-22 18:50:42,exits,bull,481.78,121.01,0,0,0,4,AEP|C|CARR|TPR,both
