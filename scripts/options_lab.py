@@ -27,12 +27,15 @@ import json
 import logging
 import os
 import re
+import time
 import uuid
 from dataclasses import asdict, dataclass, field, fields
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from statistics import mean, median
 from typing import Any
+
+log = logging.getLogger(__name__)
 
 # Each bucket is a fixed $500 virtual experiment cell (paper treats equity as unlimited).
 VIRTUAL_BUCKET_USD = float(os.environ.get("OPTIONS_VIRTUAL_BUCKET_USD", "500"))
@@ -53,6 +56,22 @@ DROPPED_STRATEGIES: frozenset[str] = frozenset(
     if s.strip()
 )
 ORDER_FETCH_LIMIT = 500
+
+
+def get_lab_account_safe(client, retries=3, wait=10):
+    """Retry wrapper for Alpaca get_account (mirrors rubber_band / morning_bot)."""
+    for i in range(retries):
+        try:
+            return client.get_account()
+        except Exception as e:
+            if i < retries - 1:
+                log.warning(
+                    "lab get_account failed attempt %s/%s: %s", i + 1, retries, e
+                )
+                time.sleep(wait)
+            else:
+                log.error("lab get_account failed after %s attempts: %s", retries, e)
+                raise
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRIAL_ROOT = REPO_ROOT / "logs" / "options_trial"
@@ -1940,7 +1959,7 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
         log_fn(f"  reconcile: {layout_note}")
 
     try:
-        equity = float(trade.get_account().equity)
+        equity = float(get_lab_account_safe(trade).equity)
     except Exception:
         equity = VIRTUAL_BUCKET_USD
 

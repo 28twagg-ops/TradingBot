@@ -28,10 +28,10 @@ EXIT_DAYS_MAX = 3
 STUCK_BUFFER_DAYS = 2  # weekend/holiday → stuck if age > EXIT_DAYS_MAX+2
 # Fill-attribution / OrderStatus.value fix era started ~2026-07-06.
 BASELINE_CUTOFF = date.fromisoformat("2026-07-06")
-# Ledger lot_id pairing was still noisy through 2026-07-10 (optimistic logging /
-# reconcile churn). WARN only on unmatched entries AFTER this inclusive date so
-# the daily monitor stays actionable (pre/transition debt = INFO).
-STABLE_AFTER = date.fromisoformat("2026-07-10")
+# Ledger lot_id pairing was still noisy through 2026-07-14 (optimistic logging /
+# reconcile churn on Jul 13-14). WARN only on unmatched entries AFTER this
+# inclusive date so the daily monitor stays actionable (pre/transition debt = INFO).
+STABLE_AFTER = date.fromisoformat("2026-07-15")
 
 
 def _f(v, d=0.0) -> float:
