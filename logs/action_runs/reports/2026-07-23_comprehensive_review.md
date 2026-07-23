@@ -5834,3 +5834,194 @@ Paper lab: $133557 broker equity -> 140 bucket(s) ($500 virtual each, unlimited 
 ```
 
 ---
+
+## Run 20260723T150614Z
+
+- UTC timestamp: `20260723T150614Z`
+- GitHub run: [#4847](https://github.com/28twagg-ops/TradingBot/actions/runs/30018863866)
+- Run id: `30018863866`
+- Live bot: exit=`0`, duration=`3s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-23T09:25:54.569304-04:00","date":"2026-07-23","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":2.3,"phases_s":{"reconcile":2.07},"signals":0,"placed":0,"equity":133813.45,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"4826","github_run_id":"30011102545","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+15:06:15  INFO      Mode: exits
+15:06:16  INFO        Daily log -> logs/daily/2026-07-23.md
+15:06:16  INFO        Daily log reconciled -> logs/daily/2026-07-23.md (3 ledger rows)
+15:06:16  INFO        place_all_stops: checking 4 positions...
+15:06:16  INFO        STOP skipped AEP: fractional (0.7305 shares) — software exit will handle it
+15:06:16  INFO        STOP already live CARR @ $67.75
+15:06:16  INFO        STOP skipped DTE: fractional (0.6516 shares) — software exit will handle it
+15:06:16  INFO        STOP skipped LNT: fractional (0.3038 shares) — software exit will handle it
+15:06:16  INFO        [positions] 4/4 (4 valid)
+15:06:17  INFO        Daily log -> logs/daily/2026-07-23.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:06 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $483.50|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  DTE  P&L +0.9%  $+0.91                                            HOLD|
+|  LNT  P&L +1.0%  $+0.23                                            HOLD|
+|  CARR  P&L +1.5%  $+1.40                                           HOLD|
+|  AEP  P&L +2.3%  $+2.26                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           4|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                4|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=0 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=2
+  zombies_flagged=0
+options_reconcile: done
+Layout: controlled:140:c000_s173_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:140:c000_s173_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      140
+=== options_morning_bot (PAPER) 2026-07-23T11:06:18.989306-04:00 ===
+
+[Run context]
+Paper auth OK — equity $133285.45, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 140 | Strategies: S165, S164, S168, S167, S166, S163
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 430 signal(s); top: ['S165:GOOGL', 'S165:GOOG', 'S165:AMZN', 'S165:ADI', 'S165:BKNG', 'S165:BLDR', 'S165:CCL', 'S165:CNC']
+Paper lab: $133377 broker equity -> 140 bucket(s) ($500 virtual each, unlimited paper)
+  [b10 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"44.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b38 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"44.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b66 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"44.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b94 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"44.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b122 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"44.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b10 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"40.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b38 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"40.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b66 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"40.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b94 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"40.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b122 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"40.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b10 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"74.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b38 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"74.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b66 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"74.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b94 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"74.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b122 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"74.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b10 META] ENTRY failed: {"code":40310000,"cost_basis":"60.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b38 META] ENTRY failed: {"code":40310000,"cost_basis":"60.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b66 META] ENTRY failed: {"code":40310000,"cost_basis":"60.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b94 META] ENTRY failed: {"code":40310000,"cost_basis":"60.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b122 META] ENTRY failed: {"code":40310000,"cost_basis":"60.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b10 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"68.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b38 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"68.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b66 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"68.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b94 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"68.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b122 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"68.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b10 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"73.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b38 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"73.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b66 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"73.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b94 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"73.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b122 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"73.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b10 TSLA] ENTRY failed: {"code":40310000,"cost_basis":"54.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b38 TSLA] ENTRY failed: {"code":40310000,"cost_basis":"54.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b66 TSLA] ENTRY failed: {"code":40310000,"cost_basis":"54.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b94 TSLA] ENTRY failed: {"code":40310000,"cost_basis":"54.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b122 TSLA] ENTRY failed: {"code":40310000,"cost_basis":"54.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b10 AAL] ENTRY failed: {"code":40310000,"cost_basis":"13.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b38 AAL] ENTRY failed: {"code":40310000,"cost_basis":"13.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b66 AAL] ENTRY failed: {"code":40310000,"cost_basis":"13.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b94 AAL] ENTRY failed: {"code":40310000,"cost_basis":"13.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b122 AAL] ENTRY failed: {"code":40310000,"cost_basis":"13.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b10 HL] ENTRY failed: {"code":40310000,"cost_basis":"37.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b38 HL] ENTRY failed: {"code":40310000,"cost_basis":"37.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b66 HL] ENTRY failed: {"code":40310000,"cost_basis":"37.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b94 HL] ENTRY failed: {"code":40310000,"cost_basis":"37.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b122 HL] ENTRY failed: {"code":40310000,"cost_basis":"37.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b22 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"46.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b50 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"46.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b78 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"46.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b106 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"46.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b134 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"46.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b22 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"45.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b50 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"45.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b78 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"45.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b106 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"45.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b134 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"45.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b22 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"74.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b50 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"74.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b78 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"74.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b106 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"74.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b134 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"74.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b22 DAL] ENTRY failed: {"code":40310000,"cost_basis":"50.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b50 DAL] ENTRY failed: {"code":40310000,"cost_basis":"50.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b78 DAL] ENTRY failed: {"code":40310000,"cost_basis":"50.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b106 DAL] ENTRY failed: {"code":40310000,"cost_basis":"50.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b134 DAL] ENTRY failed: {"code":40310000,"cost_basis":"50.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b22 META] ENTRY failed: {"code":40310000,"cost_basis":"58.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b50 META] ENTRY failed: {"code":40310000,"cost_basis":"58.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b78 META] ENTRY failed: {"code":40310000,"cost_basis":"58.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b106 META] ENTRY failed: {"code":40310000,"cost_basis":"58.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b134 META] ENTRY failed: {"code":40310000,"cost_basis":"58.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b22 PG] ENTRY failed: {"code":40310000,"cost_basis":"6.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b50 PG] ENTRY failed: {"code":40310000,"cost_basis":"6.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b78 PG] ENTRY failed: {"code":40310000,"cost_basis":"6.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b106 PG] ENTRY failed: {"code":40310000,"cost_basis":"6.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b134 PG] ENTRY failed: {"code":40310000,"cost_basis":"6.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b22 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"68.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b50 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"68.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b78 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"68.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b106 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"68.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b134 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"68.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b22 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"69.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b50 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"69.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b78 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"69.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b106 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"69.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b134 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"69.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b22 TSLA] ENTRY failed: {"code":40310000,"cost_basis":"50.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b50 TSLA] ENTRY failed: {"code":40310000,"cost_basis":"50.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b78 TSLA] ENTRY failed: {"code":40310000,"cost_basis":"50.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b106 TSLA] ENTRY failed: {"code":40310000,"cost_basis":"50.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b134 TSLA] ENTRY failed: {"code":40310000,"cost_basis":"50.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b22 AAL] ENTRY failed: {"code":40310000,"cost_basis":"13.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b50 AAL] ENTRY failed: {"code":40310000,"cost_basis":"13.01","message":"insufficient options buying power","options_buying_power":"0"}
+```
+
+---
