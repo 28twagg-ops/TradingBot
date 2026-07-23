@@ -647,3 +647,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-07-22 19:51:12,2026-07-22,SELL,AVGO,Pullback50,397.23,397.15,397.188,96.29,-0.0106,-0.0102,limit_fill_position_check_full,midline (-0.1%),bull
 2026-07-23 13:46:08,2026-07-23,SELL,CHD,Pullback50,95.97,,95.97,95.22,0.0,0.0,market_urgent_full,stop_loss (-1.2%),bull
 2026-07-23 13:46:11,2026-07-23,SELL,C,Pullback50,131.61,,131.615,69.34,0.0038,0.0026,market_urgent_full,stop_loss (-0.7%),bull
+2026-07-23 13:56:34,2026-07-23,SELL,FIX,Pullback50,1870.01,1867.59,1869.544,96.39,-0.0249,-0.024,limit_fill_position_check_full,midline (+0.3%),bull

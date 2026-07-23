@@ -1012,3 +1012,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-22 19:51:12,2026-07-22,SELL,AVGO,Pullback50,397.19,96.29,-0.14,-0.14,0,midline (-0.1%),bull,482.09
 2026-07-23 13:46:08,2026-07-23,SELL,CHD,Pullback50,95.97,95.22,-1.23,-1.19,1,stop_loss (-1.2%),bull,481.48
 2026-07-23 13:46:11,2026-07-23,SELL,C,Pullback50,131.62,69.34,-0.75,-0.52,2,stop_loss (-0.7%),bull,481.44
+2026-07-23 13:56:34,2026-07-23,SELL,FIX,Pullback50,1869.54,96.39,0.33,0.32,0,midline (+0.3%),bull,481.51

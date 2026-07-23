@@ -3201,3 +3201,49 @@ Scanning 903 symbols for [S165, S164, S168, S167, S166, S163] …
 ```
 
 ---
+
+## Run 20260723T135601Z
+
+- UTC timestamp: `20260723T135601Z`
+- GitHub run: [#4832](https://github.com/28twagg-ops/TradingBot/actions/runs/30013355792)
+- Run id: `30013355792`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-23T09:25:54.569304-04:00","date":"2026-07-23","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":2.3,"phases_s":{"reconcile":2.07},"signals":0,"placed":0,"equity":133813.45,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"4826","github_run_id":"30011102545","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:56:03  INFO      Mode: morning_scan
+13:56:04  INFO        [positions] 5/5 (5 valid)
+13:56:04  INFO        SELL LIMIT FIX  qty=0.051556282  limit=$1867.59  id=c83f2ec8-8cbe-4915-9206-cc27575feebd
+13:56:34  INFO        SELL LIMIT filled FIX (confirmed by position check)
+13:56:34  INFO        TX logged: SELL FIX  P&L 0.33%
+13:56:34  INFO        Universe cache hit: 903 tickers (tickers_2026-07-23.json)
+13:56:35  INFO        [universe] 40/899 (40 valid)
+13:56:37  INFO        [universe] 80/899 (80 valid)
+13:56:38  INFO        [universe] 120/899 (120 valid)
+13:56:39  INFO        [universe] 160/899 (160 valid)
+13:56:40  INFO        [universe] 200/899 (199 valid)
+13:56:47  INFO        [universe] 240/899 (238 valid)
+13:57:00  INFO        [universe] 280/899 (278 valid)
+13:57:11  INFO        [universe] 320/899 (318 valid)
+13:57:24  INFO        [universe] 360/899 (358 valid)
+13:57:37  INFO        [universe] 400/899 (397 valid)
+13:57:47  INFO        [universe] 440/899 (437 valid)
+13:58:00  INFO        [universe] 480/899 (477 valid)
+13:58:13  INFO        [universe] 520/899 (517 valid)
+13:58:23  INFO        [universe] 560/899 (557 valid)
+13:58:36  INFO        [universe] 600/899 (597 valid)
+13:58:46  INFO        [universe] 640/899 (637 valid)
+13:59:00  INFO        [universe] 680/899 (677 valid)
+13:59:13  INFO        [universe] 720/899 (717 valid)
+13:59:23  INFO        [universe] 760/899 (757 valid)
+```
+
+### Options bot full output
+
+```text
