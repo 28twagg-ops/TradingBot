@@ -18450,11 +18450,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-07-23.log
 elapsed=2.5s reconcile=1.65s cancel=0.2s manage=0.14s
 
-=== 14:50:25 ET — manage-only (past entry window) [elapsed=1.7s reconcile=1.39s cancel=0.03s manage=0.02s] ===
-=== options_morning_bot (PAPER) 2026-07-23T14:50:25.307438-04:00 ===
+=== 14:51:15 ET — manage-only (past entry window) [elapsed=1.7s reconcile=1.4s cancel=0.04s manage=0.03s] ===
+=== options_morning_bot (PAPER) 2026-07-23T14:51:15.410274-04:00 ===
 
 [Run context]
-Paper auth OK — equity $133393.45, account PA36KS87UPRS
+Paper auth OK — equity $133449.45, account PA36KS87UPRS
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:140:c000_s173_w1_0928_1005_r1
   reconcile: entry fill b131|S163 COIN x1 @ 0.50
   reconcile: entry fill b103|S163 COIN x1 @ 0.50
@@ -18706,7 +18706,7 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $133,393.45
+Account equity: $133,449.45
 Active buckets: 140 of 140 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
@@ -18803,7 +18803,7 @@ Per-bucket exit stats (all time)
 |  OPTIONS BOT SUMMARY                                                   |
 +------------------------------------------------------------------------+
 |  Mode                          manage-only                             |
-|  Equity                        $133,393.45                             |
+|  Equity                        $133,449.45                             |
 |  Signals this run              0                                       |
 |  Orders submitted (session)    0                                       |
 |  Orders filled today (ledger)  0                                       |
@@ -18840,5 +18840,5 @@ Per-bucket exit stats (all time)
 |  No open option positions                                              |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-07-23.log
-elapsed=1.7s reconcile=1.39s cancel=0.03s manage=0.02s
+elapsed=1.7s reconcile=1.4s cancel=0.04s manage=0.03s
 
