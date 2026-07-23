@@ -1,6 +1,6 @@
-# Ledger health — 2026-07-22
+# Ledger health — 2026-07-23
 
-_Generated 2026-07-22T21:56:58.336024_
+_Generated 2026-07-23T01:20:41.002724_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -11,8 +11,8 @@ State file: OK
 | Check                       | Count | Status |
 |-----------------------------|------:|--------|
 | Current stuck (state)       |     0 | OK |
-| Orphaned lots (post-stable) |     7 | WARN |
-| Missing exit records (post) |     7 | WARN |
+| Orphaned lots (post-stable) |    18 | WARN |
+| Missing exit records (post) |    18 | WARN |
 | State/ledger mismatches     |     0 | OK |
 | Total open lots             |     0 | INFO |
 | Total closed lots           |   313 | INFO |
@@ -29,10 +29,21 @@ Notes:
 
 | lot_id | strategy | symbol | entry_day | age_days |
 |--------|----------|--------|-----------|---------:|
-| fe6b46fa00bb | S165 | AVGO | 2026-07-16 | 6 |
-| 7385dc02b472 | S173 | UAL | 2026-07-16 | 6 |
-| 5b2b4313830f | S173 | UAL | 2026-07-16 | 6 |
-| f09b7de85a3f | S173 | AMD | 2026-07-16 | 6 |
-| 78970860d223 | S165 | AVGO | 2026-07-16 | 6 |
-| cfe20e4c43c8 | S165 | AVGO | 2026-07-16 | 6 |
-| 30f0bcea133d | S173 | LULU | 2026-07-16 | 6 |
+| fe6b46fa00bb | S165 | AVGO | 2026-07-16 | 7 |
+| 7385dc02b472 | S173 | UAL | 2026-07-16 | 7 |
+| 5b2b4313830f | S173 | UAL | 2026-07-16 | 7 |
+| f09b7de85a3f | S173 | AMD | 2026-07-16 | 7 |
+| 78970860d223 | S165 | AVGO | 2026-07-16 | 7 |
+| cfe20e4c43c8 | S165 | AVGO | 2026-07-16 | 7 |
+| 30f0bcea133d | S173 | LULU | 2026-07-16 | 7 |
+| 9ecc64bd9c12 | S173 | AMZN | 2026-07-17 | 6 |
+| 5d7beb55fe5d | S173 | AMZN | 2026-07-17 | 6 |
+| a475367ce58d | S165 | GOOGL | 2026-07-17 | 6 |
+| e6ef223ec478 | S165 | META | 2026-07-17 | 6 |
+| 7931dfce2f00 | S165 | META | 2026-07-17 | 6 |
+| 79be64ae2c62 | S173 | AMD | 2026-07-17 | 6 |
+| 436408a3ca7a | S165 | META | 2026-07-17 | 6 |
+| 5f3a3db61d3b | S165 | META | 2026-07-17 | 6 |
+| 036fd10e9adc | S165 | META | 2026-07-17 | 6 |
+| fe4bb2e8483b | S173 | AMD | 2026-07-17 | 6 |
+| 768e1ca7158a | S173 | AMD | 2026-07-17 | 6 |
