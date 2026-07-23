@@ -2197,3 +2197,160 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260723T133040Z
+
+- UTC timestamp: `20260723T133040Z`
+- GitHub run: [#4827](https://github.com/28twagg-ops/TradingBot/actions/runs/30011465239)
+- Run id: `30011465239`
+- Live bot: exit=`0`, duration=`215s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-23T09:25:54.569304-04:00","date":"2026-07-23","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":2.3,"phases_s":{"reconcile":2.07},"signals":0,"placed":0,"equity":133813.45,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"4826","github_run_id":"30011102545","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:30:41  INFO      Mode: morning_prep
+13:30:41  INFO        [prep_positions] 5/5 (5 valid)
+13:30:41  INFO      Fetching tickers (universe=both)...
+13:30:42  INFO        S&P 500: 503
+13:30:42  INFO        MidCap 400: 400
+13:30:42  INFO        Total: 903 tickers
+13:30:43  INFO        [prep_universe] 40/898 (40 valid)
+13:30:45  INFO        [prep_universe] 80/898 (80 valid)
+13:30:46  INFO        [prep_universe] 120/898 (120 valid)
+13:30:47  INFO        [prep_universe] 160/898 (160 valid)
+13:30:49  INFO        [prep_universe] 200/898 (199 valid)
+13:30:56  INFO        [prep_universe] 240/898 (238 valid)
+13:31:09  INFO        [prep_universe] 280/898 (278 valid)
+13:31:20  INFO        [prep_universe] 320/898 (318 valid)
+13:31:33  INFO        [prep_universe] 360/898 (358 valid)
+13:31:44  INFO        [prep_universe] 400/898 (397 valid)
+13:31:57  INFO        [prep_universe] 440/898 (437 valid)
+13:32:07  INFO        [prep_universe] 480/898 (477 valid)
+13:32:21  INFO        [prep_universe] 520/898 (517 valid)
+13:32:31  INFO        [prep_universe] 560/898 (557 valid)
+13:32:44  INFO        [prep_universe] 600/898 (597 valid)
+13:32:57  INFO        [prep_universe] 640/898 (637 valid)
+13:33:07  INFO        [prep_universe] 680/898 (677 valid)
+13:33:21  INFO        [prep_universe] 720/898 (717 valid)
+13:33:31  INFO        [prep_universe] 760/898 (757 valid)
+13:33:44  INFO        [prep_universe] 800/898 (797 valid)
+13:33:57  INFO        [prep_universe] 840/898 (836 valid)
+13:34:07  INFO        [prep_universe] 880/898 (876 valid)
+13:34:14  INFO        [prep_universe] 898/898 (894 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         13:30 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $478.12|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       5|
+|  Invested                                                       $378.89|
+|  Open P&L                                                        $-2.20|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AEP      Pullback50      $96.71     $131.94  $132.38  +0.3%   $+0.32  |
+|  C        Pullback50      $68.96     $132.61  $130.90  -1.3%   $-0.90  |
+|  CARR     Pullback50      $95.91     $67.80   $67.76   -0.1%   $-0.05  |
+|  CHD      Pullback50      $94.96     $97.17   $95.70   -1.5%   $-1.45  |
+|  LNT      Pullback50      $22.36     $73.97   $73.58   -0.5%   $-0.12  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                1|
+|  TICKER    TYPE              QTY       LIMIT       STOP                |
++------------------------------------------------------------------------+
+|  CARR      OrderType.STOP    1         None        67.75               |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      3|
+|  Signal candidates                                                   33|
+|  Universe scanned                                                   898|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=0 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=2
+  zombies_flagged=0
+options_reconcile: done
+Layout: controlled:140:c000_s173_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:140:c000_s173_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      140
+=== options_morning_bot (PAPER) 2026-07-23T09:34:16.620106-04:00 ===
+
+[Run context]
+Paper auth OK — equity $135079.45, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 140 | Strategies: S165, S164, S168, S167, S166, S163
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163] …
+Fetched daily bars for 903/903 symbols
+Found 425 signal(s); top: ['S165:GOOGL', 'S165:GOOG', 'S165:AMZN', 'S165:ADI', 'S165:BKNG', 'S165:BLDR', 'S165:CCL', 'S165:CNC']
+Paper lab: $134723 broker equity -> 140 bucket(s) ($500 virtual each, unlimited paper)
+  [b8 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"71.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b36 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"71.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b64 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"71.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b92 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"71.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b120 GOOGL] ENTRY failed: {"code":40310000,"cost_basis":"71.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b8 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"63.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b36 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"63.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b64 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"63.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b92 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"63.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b120 GOOG] ENTRY failed: {"code":40310000,"cost_basis":"63.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b8 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"70.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b36 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"70.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b64 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"70.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b92 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"70.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b120 AMZN] ENTRY failed: {"code":40310000,"cost_basis":"70.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b8 META] ENTRY failed: {"code":40310000,"cost_basis":"31.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b36 META] ENTRY failed: {"code":40310000,"cost_basis":"31.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b64 META] ENTRY failed: {"code":40310000,"cost_basis":"31.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b92 META] ENTRY failed: {"code":40310000,"cost_basis":"31.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b120 META] ENTRY failed: {"code":40310000,"cost_basis":"31.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b8 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"66.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b36 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"66.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b64 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"66.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b92 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"66.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b120 QCOM] ENTRY failed: {"code":40310000,"cost_basis":"66.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b8 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"59.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b36 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"59.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b64 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"59.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b92 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"59.01","message":"insufficient options buying power","options_buying_power":"0"}
+  [b120 HOOD] ENTRY failed: {"code":40310000,"cost_basis":"59.01","message":"insufficient options buying power","options_buying_power":"0"}
+```
+
+---
