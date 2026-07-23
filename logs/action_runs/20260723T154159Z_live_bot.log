@@ -1,0 +1,52 @@
+15:42:00  INFO      Mode: exits
+15:42:00  INFO        Daily log -> logs/daily/2026-07-23.md
+15:42:00  INFO        Daily log reconciled -> logs/daily/2026-07-23.md (3 ledger rows)
+15:42:00  INFO        place_all_stops: checking 4 positions...
+15:42:00  INFO        STOP skipped AEP: fractional (0.7305 shares) — software exit will handle it
+15:42:00  INFO        STOP already live CARR @ $67.75
+15:42:00  INFO        STOP skipped DTE: fractional (0.6516 shares) — software exit will handle it
+15:42:00  INFO        STOP skipped LNT: fractional (0.3038 shares) — software exit will handle it
+15:42:00  INFO        [positions] 4/4 (4 valid)
+15:42:01  INFO        Daily log -> logs/daily/2026-07-23.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:42 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $483.31|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  DTE  P&L +0.7%  $+0.68                                            HOLD|
+|  LNT  P&L +0.9%  $+0.21                                            HOLD|
+|  CARR  P&L +1.6%  $+1.50                                           HOLD|
+|  AEP  P&L +2.3%  $+2.19                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           4|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                4|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
