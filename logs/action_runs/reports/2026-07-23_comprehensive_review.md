@@ -2655,3 +2655,251 @@ Paper lab: $135647 broker equity -> 140 bucket(s) ($500 virtual each, unlimited 
 ```
 
 ---
+
+## Run 20260723T134603Z
+
+- UTC timestamp: `20260723T134603Z`
+- GitHub run: [#4830](https://github.com/28twagg-ops/TradingBot/actions/runs/30012587925)
+- Run id: `30012587925`
+- Live bot: exit=`0`, duration=`222s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-23T09:25:54.569304-04:00","date":"2026-07-23","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":2.3,"phases_s":{"reconcile":2.07},"signals":0,"placed":0,"equity":133813.45,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"4826","github_run_id":"30011102545","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:46:04  INFO      Mode: morning_scan
+13:46:06  INFO        [positions] 5/5 (5 valid)
+13:46:06  INFO        SELL MARKET [urgent] CHD closed
+13:46:08  INFO        TX logged: SELL CHD  P&L -1.23%
+13:46:09  INFO        SELL MARKET [urgent] C closed
+13:46:11  INFO        TX logged: SELL C  P&L -0.75%
+13:46:11  INFO        Universe cache hit: 903 tickers (tickers_2026-07-23.json)
+13:46:12  INFO        [universe] 40/900 (40 valid)
+13:46:14  INFO        [universe] 80/900 (80 valid)
+13:46:16  INFO        [universe] 120/900 (120 valid)
+13:46:17  INFO        [universe] 160/900 (160 valid)
+13:46:19  INFO        [universe] 200/900 (199 valid)
+13:46:24  INFO        [universe] 240/900 (238 valid)
+13:46:37  INFO        [universe] 280/900 (278 valid)
+13:46:48  INFO        [universe] 320/900 (318 valid)
+13:47:02  INFO        [universe] 360/900 (358 valid)
+13:47:12  INFO        [universe] 400/900 (397 valid)
+13:47:25  INFO        [universe] 440/900 (437 valid)
+13:47:36  INFO        [universe] 480/900 (477 valid)
+13:47:49  INFO        [universe] 520/900 (517 valid)
+13:48:00  INFO        [universe] 560/900 (557 valid)
+13:48:13  INFO        [universe] 600/900 (597 valid)
+13:48:24  INFO        [universe] 640/900 (637 valid)
+13:48:37  INFO        [universe] 680/900 (677 valid)
+13:48:48  INFO        [universe] 720/900 (717 valid)
+13:49:02  INFO        [universe] 760/900 (757 valid)
+13:49:13  INFO        [universe] 800/900 (797 valid)
+13:49:26  INFO        [universe] 840/900 (836 valid)
+13:49:36  INFO        [universe] 880/900 (876 valid)
+13:49:43  INFO        [universe] 900/900 (896 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $481.59|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-23|
+|  Universe                                                          both|
+|  Mon~  Jul: 52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $481.59|
+|  Cash                                                            $99.23|
+|  Reserve                                          $24.08  (always kept)|
+|  Available                                     $75.15  (for new trades)|
+|  Trade size             $96.32  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (5 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AEP      Pullback50      $97.34     $131.94  $133.24  +1.0%   $+0.95  |
+|  C        Pullback50      $69.34     $132.61  $131.62  -0.7%   $-0.52  |
+|  CARR     Pullback50      $98.02     $67.80   $69.25   +2.1%   $+2.06  |
+|  CHD      Pullback50      $95.22     $97.17   $95.97   -1.2%   $-1.19  |
+|  LNT      Pullback50      $22.45     $73.97   $73.88   -0.1%   $-0.03  |
+|                                                                        |
+|  Total invested                                                 $382.36|
+|  Total open P&L                                                  $+1.27|
+|  Buys today: 0  |  entry cap: 0  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (20160.6m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  CHD  P&L -1.2%  $-1.19                         EXIT: stop_loss (-1.2%)|
+|  C  P&L -0.7%  $-0.52                           EXIT: stop_loss (-0.7%)|
+|  LNT  P&L -0.1%  $-0.03                                            HOLD|
+|  AEP  P&L +1.0%  $+0.95                                            HOLD|
+|  CARR  P&L +2.1%  $+2.06                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 2 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 3|
+|  Stop-loss breaches                                                   2|
+|  CHD                                         -1.23%  (threshold -0.50%)|
+|  C                                           -0.75%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50 (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  46                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  BIIB     Pullback50      eq     $197.49  38.2   -1.78   50MA bounce (-|
+|  CL       Pullback50      eq     $90.09   38.0   -2.58   50MA bounce (-|
+|  FIX      Pullback50      eq     $1854.~  58.9   -1.43   50MA bounce (+|
+|  DTE      Pullback50      eq     $147.70  37.3   -2.89   50MA bounce (+|
+|  EXR      Pullback50      eq     $145.52  42.3   -2.33   50MA bounce (+|
+|  FAST     Pullback50      eq     $45.48   31.8   -2.15   50MA bounce (-|
+|  FFIV     Pullback50      eq     $400.46  45.9   -2.59   50MA bounce (+|
+|  F        Pullback50      eq     $14.21   65.8   -3.40   50MA bounce (-|
+|  BEN      Pullback50      eq     $32.37   33.1   -3.26   50MA bounce (-|
+|  FCX      Pullback50      eq     $63.75   56.2   -2.74   50MA bounce (-|
+|  GRMN     Pullback50      eq     $239.47  49.4   -1.89   50MA bounce (+|
+|  FTV      Pullback50      eq     $60.93   42.3   -2.95   50MA bounce (+|
+|  IRM      Pullback50      eq     $125.38  73.6   -2.86   50MA bounce (-|
+|  INVH     Pullback50      eq     $29.70   40.7   -2.08   50MA bounce (+|
+|  MRNA     Pullback50      eq     $57.77   18.1   -1.71   50MA bounce (+|
+|  NVDA     Pullback50      eq     $209.53  63.0   -3.41   50MA bounce (+|
+|  NI       Pullback50      eq     $46.46   39.7   -2.53   50MA bounce (-|
+|  PPG      Pullback50      eq     $114.90  31.7   -2.21   50MA bounce (+|
+|  PSA      Pullback50      eq     $314.91  37.5   -1.42   50MA bounce (+|
+|  ROK      Pullback50      eq     $458.99  43.5   -0.99   50MA bounce (-|
+|  LUV      Pullback50      eq     $45.75   30.8   -2.36   50MA bounce (+|
+|  TTWO     Pullback50      eq     $232.50  27.2   -1.58   50MA bounce (-|13:49:44  INFO        place_all_stops: checking 3 positions...
+13:49:44  INFO        STOP skipped AEP: fractional (0.7305 shares) — software exit will handle it
+13:49:45  INFO        STOP already live CARR @ $67.75
+13:49:45  INFO        STOP skipped LNT: fractional (0.3038 shares) — software exit will handle it
+13:49:45  INFO        Daily log -> logs/daily/2026-07-23.md
+13:49:45  INFO        Dashboard written → logs/dashboard.md
+
+|  TPR      Pullback50      eq     $142.74  47.6   -2.05   50MA bounce (+|
+|  STLD     Pullback50      eq     $244.24  73.0   -2.80   50MA bounce (-|
+|  WEC      Pullback50      eq     $113.28  32.6   -3.04   50MA bounce (-|
+|  XEL      Pullback50      eq     $80.02   40.3   -2.96   50MA bounce (+|
+|  ALGM     Pullback50      eq     $50.98   42.7   -1.22   50MA bounce (-|
+|  AEIS     Pullback50      eq     $324.25  55.0   -0.78   50MA bounce (-|
+|  ALLY     Pullback50      eq     $44.05   43.1   -2.18   50MA bounce (-|
+|  AXTA     Pullback50      eq     $32.04   24.6   -2.40   50MA bounce (+|
+|  BYD      Pullback50      eq     $85.86   42.7   -3.09   50MA bounce (+|
+|  CW       Pullback50      eq     $741.10  44.5   -1.62   50MA bounce (-|
+|  DTM      Pullback50      eq     $143.55  47.4   -3.34   50MA bounce (-|
+|  FHI      Pullback50      eq     $56.99   51.6   -2.89   50MA bounce (-|
+|  IESC     Pullback50      eq     $681.12  55.2   -0.92   50MA bounce (-|
+|  ITT      Pullback50      eq     $193.98  62.4   -2.66   50MA bounce (+|
+|  LSCC     Pullback50      eq     $138.05  51.5   -1.92   50MA bounce (-|
+|  MKSI     Pullback50      eq     $345.50  41.7   -2.13   50MA bounce (-|
+|  NWE      Pullback50      eq     $71.68   51.5   -1.18   50MA bounce (+|
+|  P        Pullback50      eq     $76.26   55.4   -2.24   50MA bounce (-|
+|  PEN      Pullback50      eq     $316.48  41.5   -1.88   50MA bounce (-|
+|  RBC      Pullback50      eq     $596.09  45.2   -1.85   50MA bounce (-|
+|  SLAB     Pullback50      eq     $217.32  40.0   -0.95   50MA bounce (-|
+|  SPXC     Pullback50      eq     $221.50  44.1   -0.58   50MA bounce (-|
+|  TLN      Pullback50      eq     $375.73  54.4   -2.04   50MA bounce (-|
+|  TOL      Pullback50      eq     $146.50  36.0   -2.67   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Scanned                                                            896|
+|  Signals                                                             46|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                2|
+|  Open pos                                                             3|
+|  Equity                                                         $481.25|
+|  Cash                                                           $263.71|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=0 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=2
+  zombies_flagged=0
+options_reconcile: done
+Layout: controlled:140:c000_s173_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:140:c000_s173_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      140
+=== options_morning_bot (PAPER) 2026-07-23T09:49:47.306879-04:00 ===
+
+[Run context]
+Paper auth OK — equity $135155.45, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 140 | Strategies: S165, S164, S168, S167, S166, S163
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163] …
+```
+
+---

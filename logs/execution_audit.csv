@@ -645,3 +645,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-07-22 15:26:10,2026-07-22,SELL,BIIB,Pullback50,200.81,,200.81,95.71,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
 2026-07-22 19:46:12,2026-07-22,SELL,TPR,Pullback50,143.24,143.13,143.162,97.94,-0.0545,-0.0533,limit_fill_position_check_full,midline (+1.7%),bull
 2026-07-22 19:51:12,2026-07-22,SELL,AVGO,Pullback50,397.23,397.15,397.188,96.29,-0.0106,-0.0102,limit_fill_position_check_full,midline (-0.1%),bull
+2026-07-23 13:46:08,2026-07-23,SELL,CHD,Pullback50,95.97,,95.97,95.22,0.0,0.0,market_urgent_full,stop_loss (-1.2%),bull
+2026-07-23 13:46:11,2026-07-23,SELL,C,Pullback50,131.61,,131.615,69.34,0.0038,0.0026,market_urgent_full,stop_loss (-0.7%),bull
