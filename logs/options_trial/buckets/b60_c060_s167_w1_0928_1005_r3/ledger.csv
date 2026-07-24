@@ -14,3 +14,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-20 13:34:41.354120+00:00,entry,60,c060_s167_w1_0928_1005_r3,S173,4006f65060a0,CRM,CRM260724C00185000,1,0.63,0.63,63.0,,,,-0.01,,0.5,-0.5,,,f8eb5d3c-0961-449b-a87f-28230a95947a
 2026-07-24 13:39:59.652255+00:00,entry,60,c060_s167_w1_0928_1005_r3,S167,7a7ae341df5e,CMCSA,CMCSA260731C00022000,1,0.46,0.4,40.0,,,,-0.01,,0.5,-0.5,0.23809523809523805,gap -2.8%,df2d31c6-b339-4a5d-be50-23ca6460c745
 2026-07-24T14:01:11Z,reconcile,60,c060_s167_w1_0928_1005_r3,S167,7a7ae341df5e,CMCSA,CMCSA260731C00022000,1,,,40.0,,,zombie_lot,,,,,,zombie age_min=841 notional=$40.00 occ=CMCSA260731C00022000 action=submitted:42eb3212-e135-4713-9edf-a9c5780d2786,
+2026-07-24T14:55:46Z,reconcile,60,c060_s167_w1_0928_1005_r3,S167,bdad8dfa45e0,CMCSA,CMCSA260731C00022000,1,,,40.0,,,zombie_lot,,,,,,zombie age_min=896 notional=$40.00 occ=CMCSA260731C00022000 action=submitted:d41c1fe2-f04e-49aa-93dc-ee91b452e680,
