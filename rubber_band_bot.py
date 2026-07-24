@@ -533,6 +533,10 @@ def add_ind(df):
     # -- New strategy indicators (v7 bake-off validated) ----------------------
     df["GapPct"] = (o - c.shift(1)) / (c.shift(1) + 1e-10)  # gap from prev close
     df["Green"]  = (c > o).astype(int)                        # green candle
+    # -- Pattern strategies (2026-07-22B) --------------------------------------
+    df["BBU20"] = c.rolling(20).mean() + 2.0 * c.rolling(20).std()
+    df["BBW"] = (df["BBU20"] - df["BBL20"]) / (df["BBM"] + 1e-10)
+    df["VWAP5"] = ((df["High"] + df["Low"] + df["Close"]) / 3).rolling(5).mean()
     return df
 
 def fetch_batch(tickers, label=""):
@@ -718,8 +722,143 @@ def _rsi(ticker, df):
     except Exception: pass
     return None
 
+
+def _maq(ticker, df):
+    """MA_Squeeze: Bollinger bandwidth near 20d min, then upside breakout on volume."""
+    try:
+        if len(df) < 45:
+            return None
+        cn = float(df["Close"].iloc[-1])
+        bbw = float(df["BBW"].iloc[-1])
+        bbu = float(df["BBU20"].iloc[-1])
+        vz = float(df["VZ"].iloc[-1])
+        ma50 = float(df["MA50"].iloc[-1])
+        rsi = float(df["RSI"].iloc[-1])
+        bbw_min = float(df["BBW"].rolling(20).min().shift(1).iloc[-1])
+        if any(pd.isna(x) for x in [bbw, bbu, vz, ma50, bbw_min]):
+            return None
+        if (bbw < bbw_min * 1.05 and cn > bbu and vz >= 1.5 and cn > ma50):
+            return {"ticker": ticker, "strategy": "MA_Squeeze",
+                    "close": round(cn, 2), "rsi": round(rsi, 1), "vol_z": round(vz, 2),
+                    "trigger": f"BBW squeeze breakout VZ={vz:.1f}"}
+    except Exception:
+        pass
+    return None
+
+
+def _gp(ticker, df):
+    """GoldenPocket: Fib 61.8–65% retracement bounce in MA200 uptrend."""
+    try:
+        if len(df) < 210:
+            return None
+        cn = float(df["Close"].iloc[-1])
+        ma200 = float(df["MA200"].iloc[-1])
+        grn = int(df["Green"].iloc[-1])
+        vz = float(df["VZ"].iloc[-1])
+        rsi = float(df["RSI"].iloc[-1])
+        swing_high = float(df["High"].rolling(20).max().iloc[-1])
+        swing_low = float(df["Low"].rolling(20).min().iloc[-1])
+        if any(pd.isna(x) for x in [ma200, swing_high, swing_low, vz]):
+            return None
+        rng = swing_high - swing_low
+        if rng <= 0:
+            return None
+        fib_618 = swing_high - 0.618 * rng
+        fib_650 = swing_high - 0.650 * rng
+        if cn > ma200 and fib_650 <= cn <= fib_618 and grn == 1 and vz >= 0.5:
+            return {"ticker": ticker, "strategy": "GoldenPocket",
+                    "close": round(cn, 2), "rsi": round(rsi, 1), "vol_z": round(vz, 2),
+                    "trigger": "fib 61.8-65% bounce"}
+    except Exception:
+        pass
+    return None
+
+
+def _vr(ticker, df):
+    """VWAP_Reclaim: dipped below 5d VWAP proxy, closed back above on volume."""
+    try:
+        if len(df) < 55:
+            return None
+        cn = float(df["Close"].iloc[-1])
+        lo = float(df["Low"].iloc[-1])
+        vwap5 = float(df["VWAP5"].iloc[-1])
+        vz = float(df["VZ"].iloc[-1])
+        ma50 = float(df["MA50"].iloc[-1])
+        grn = int(df["Green"].iloc[-1])
+        rsi = float(df["RSI"].iloc[-1])
+        if any(pd.isna(x) for x in [vwap5, vz, ma50]):
+            return None
+        if lo < vwap5 and cn > vwap5 and vz >= 1.0 and cn > ma50 and grn == 1:
+            return {"ticker": ticker, "strategy": "VWAP_Reclaim",
+                    "close": round(cn, 2), "rsi": round(rsi, 1), "vol_z": round(vz, 2),
+                    "trigger": f"VWAP reclaim VZ={vz:.1f}"}
+    except Exception:
+        pass
+    return None
+
+
+def _tr(ticker, df):
+    """TrendResumption: HH/HL structure, 2–4d pullback, then break prior high."""
+    try:
+        if len(df) < 210:
+            return None
+        c = df["Close"]
+        cn = float(c.iloc[-1])
+        ma50 = float(df["MA50"].iloc[-1])
+        ma200 = float(df["MA200"].iloc[-1])
+        vz = float(df["VZ"].iloc[-1])
+        rsi = float(df["RSI"].iloc[-1])
+        prior_high = float(df["High"].iloc[-2])
+        if any(pd.isna(x) for x in [ma50, ma200, vz, prior_high]):
+            return None
+        hh_struct = float(df["High"].iloc[-10]) < float(df["High"].iloc[-5])
+        pullback_days = sum(
+            float(c.iloc[-i]) < float(c.iloc[-i - 1]) for i in range(1, 4)
+        )
+        if (hh_struct and pullback_days >= 2 and cn > prior_high
+                and cn > ma50 and cn > ma200 and vz >= 0.3):
+            return {"ticker": ticker, "strategy": "TrendResumption",
+                    "close": round(cn, 2), "rsi": round(rsi, 1), "vol_z": round(vz, 2),
+                    "trigger": f"HH/HL resumption after {pullback_days}d pullback"}
+    except Exception:
+        pass
+    return None
+
+
+def _ed(ticker, df):
+    """EarningsDrift: post +3% gap/volume spike continuation within 5 days."""
+    try:
+        if len(df) < 30:
+            return None
+        cn = float(df["Close"].iloc[-1])
+        prev = float(df["Close"].iloc[-2])
+        ma20 = float(df["BBM"].iloc[-1])  # MA20
+        rsi = float(df["RSI"].iloc[-1])
+        vz = float(df["VZ"].iloc[-1])
+        if any(pd.isna(x) for x in [prev, ma20, rsi, vz]):
+            return None
+        recent = df.iloc[-6:-1]
+        days_since = None
+        for offset, (_, row) in enumerate(recent.iloc[::-1].iterrows(), start=1):
+            gap = float(row["GapPct"]) if not pd.isna(row["GapPct"]) else None
+            rvz = float(row["VZ"]) if not pd.isna(row["VZ"]) else None
+            if gap is not None and rvz is not None and gap >= 0.03 and rvz >= 2.0:
+                days_since = offset
+                break
+        if days_since is None:
+            return None
+        if (cn > prev and cn > ma20 and cn < ma20 * 1.10
+                and rsi < 70 and vz >= 0.5):
+            return {"ticker": ticker, "strategy": "EarningsDrift",
+                    "close": round(cn, 2), "rsi": round(rsi, 1), "vol_z": round(vz, 2),
+                    "trigger": f"post-earnings continuation day {days_since}"}
+    except Exception:
+        pass
+    return None
+
+
 def get_signals(ticker, df, month, rgm):
-    """Check ALL 7 strategies every day.
+    """Check all active strategies every day.
 
     Schedule removal 2026-07-18: every hit is tagged seasonal=False so all
     strategies share equal entry priority and OFFSCHEDULE_SIZE_PCT sizing.
@@ -730,19 +869,25 @@ def get_signals(ticker, df, month, rgm):
     # The override was never validated before; now tested, it loses OOS.
     prm = BULL_P if rgm == "bull" else CORR_P if rgm == "correction" else BEAR_P
 
-    all_strategies = ["RubberBand", "RSIRecovery", "52wkLow", "MomReversal",
-                      "GapDown", "VolumeSpike", "Pullback50"]
+    checks = {
+        "RubberBand": lambda: _rb(ticker, df, prm),
+        "RSIRecovery": lambda: _rsi(ticker, df),
+        "52wkLow": lambda: _52(ticker, df),
+        "MomReversal": lambda: _mr(ticker, df),
+        "GapDown": lambda: _gd(ticker, df),      # disabled
+        "VolumeSpike": lambda: _vs(ticker, df),  # disabled
+        "Pullback50": lambda: _pb(ticker, df),
+        "MA_Squeeze": lambda: _maq(ticker, df),
+        "GoldenPocket": lambda: _gp(ticker, df),
+        "VWAP_Reclaim": lambda: _vr(ticker, df),
+        "TrendResumption": lambda: _tr(ticker, df),
+        "EarningsDrift": lambda: _ed(ticker, df),
+    }
     sigs = []
-    for name in all_strategies:
+    for name, fn in checks.items():
         if name in DISABLED_STRATEGIES:
             continue
-        s = (_rb(ticker, df, prm)  if name == "RubberBand"   else
-             _rsi(ticker, df)      if name == "RSIRecovery"  else
-             _52(ticker, df)       if name == "52wkLow"      else
-             _mr(ticker, df)       if name == "MomReversal"  else
-             _gd(ticker, df)       if name == "GapDown"      else
-             _vs(ticker, df)       if name == "VolumeSpike"  else
-             _pb(ticker, df)       if name == "Pullback50"   else None)
+        s = fn()
         if s:
             s["seasonal"] = False  # schedule removed 2026-07-18: all strategies equal
             sigs.append(s)

@@ -79,7 +79,7 @@ REAL_ACCOUNT_OPTIONS_CAP = 0.90   # never deploy >90% of real equity in options
 
 MAX_NEW_ENTRIES_PER_RUN = 100     # signals x buckets (grid mode)
 BAR_CHUNK_SIZE      = 80
-SCAN_LOOKBACK_DAYS  = 90
+SCAN_LOOKBACK_DAYS  = 260  # need ~200+ bars for MA200 pattern scanners (S170/S172)
 
 # Time windows (ET)
 ENTRY_START = (9, 28)

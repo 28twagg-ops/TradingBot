@@ -125,23 +125,24 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
     if CONTROLLED_LAYOUT:
         # Controlled mode: isolate time-window effect and strategy effect.
         # All execution/risk knobs are held constant across buckets.
+        # 2026-07-22C Option A (expanded): 11 strategies × 4 windows × 2 reps = 88.
+        # Retired: S173 idle slots + reps 3–5. Keep all windows w1–w4.
         windows = [
             ("w1_0928_1005", "09:28", "10:05"),
             ("w2_1005_1045", "10:05", "10:45"),
             ("w3_1045_1120", "10:45", "11:20"),
             ("w4_1120_1135", "11:20", "11:35"),
         ]
-        # S167 reclaims former S174 slots (P2C). S164/S168 are P2B DTE arms.
-        # 7 strategies × 4 windows × 5 reps = 140 buckets (set OPTIONS_BUCKET_COUNT=140).
-        strategy_ids = ["S173", "S167", "S165", "S166", "S163", "S164", "S168"]
+        strategy_ids = [
+            "S163", "S164", "S165", "S166", "S167", "S168",
+            "S169", "S170", "S171", "S172", "S175",
+        ]
+        reps = 2
         profiles: list[BucketProfile] = []
         idx = 0
-        while len(profiles) < n:
-            for sid in strategy_ids:
-                for tag, start_hm, end_hm in windows:
-                    if len(profiles) >= n:
-                        break
-                    rep = len(profiles) // (len(strategy_ids) * len(windows))
+        for sid in strategy_ids:
+            for tag, start_hm, end_hm in windows:
+                for rep in range(reps):
                     name = f"c{idx:03d}_{sid.lower()}_{tag}_r{rep+1}"
                     profiles.append(
                         BucketProfile(
@@ -166,6 +167,7 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
                         )
                     )
                     idx += 1
+        # Exact layout is 88; honor OPTIONS_BUCKET_COUNT as a truncate/cap only.
         return profiles[:n]
 
     core = [
@@ -263,11 +265,23 @@ STRATEGY_TWEAKS: dict[str, dict[str, Any]] = {
     "S168": {},
     "S166": {"max_premium": 80, "take_profit": 0.70},
     "S163": {},
+    "S169": {},
+    "S170": {},
+    "S171": {},
+    "S172": {},
+    "S175": {},
 }
 
-# Active paper strategies mirrored into strategies.json (S174 stays dropped).
-ACTIVE_PAPER_STRATEGY_IDS = ["S173", "S165", "S164", "S168", "S167", "S166", "S163"]
+# Active paper strategies mirrored into strategies.json (S173/S174 stay dropped).
+ACTIVE_PAPER_STRATEGY_IDS = [
+    "S163", "S164", "S165", "S166", "S167", "S168",
+    "S169", "S170", "S171", "S172", "S175",
+]
 
+
+def build_controlled_layout(target: int | None = None) -> list[BucketProfile]:
+    """Return controlled-layout bucket profiles (audit / regression helper)."""
+    return _build_bucket_experiments(target)
 
 @dataclass
 class EffectiveArm:

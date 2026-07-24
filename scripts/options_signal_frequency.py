@@ -22,7 +22,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from options_lab import TRIAL_ROOT, ensure_trial_layout
 
-STRATEGIES = ["S163", "S164", "S165", "S166", "S167", "S168", "S173", "S174"]
+STRATEGIES = [
+    "S163", "S164", "S165", "S166", "S167", "S168",
+    "S169", "S170", "S171", "S172", "S175",
+    "S173", "S174",
+]
 EXIT_RATE_PROXY = 0.80  # rough: fraction of unique entries that become exits
 TARGET_EXITS = 30
 

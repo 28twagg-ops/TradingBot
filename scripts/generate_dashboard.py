@@ -22,7 +22,15 @@ TRIAL = REPO / "logs" / "options_trial"
 OUT = REPO / "logs" / "dashboard.html"
 ET = ZoneInfo("America/New_York")
 START_EQUITY = 480.0
-STRATS = ["S163", "S164", "S165", "S166", "S167", "S168", "S173", "S174"]
+STRATS = [
+    "S163", "S164", "S165", "S166", "S167", "S168",
+    "S169", "S170", "S171", "S172", "S175",
+    "S173", "S174",
+]
+KNOWN_RB_STRATEGIES = [
+    "Pullback50", "MomReversal", "RSIRecovery", "52wkLow", "RubberBand",
+    "MA_Squeeze", "GoldenPocket", "VWAP_Reclaim", "TrendResumption", "EarningsDrift",
+]
 
 
 def _f(v, d=0.0) -> float:
@@ -315,17 +323,16 @@ def _experiment_progress(selection_rows: list[dict], ledger: dict[str, dict]) ->
 def _rb_leaderboard() -> list[dict]:
     path = REPO / "logs" / "transactions.csv"
     disabled = {"GapDown", "VolumeSpike"}
-    if not path.exists():
-        return [], []
     by: dict[str, list[float]] = {}
     by_d: dict[str, list[float]] = {}
-    with path.open(encoding="utf-8", newline="") as f:
-        for r in csv.DictReader(f):
-            if (r.get("action") or "").upper() != "SELL":
-                continue
-            strat = (r.get("strategy") or "unknown").strip() or "unknown"
-            by.setdefault(strat, []).append(_f(r.get("pnl_pct")))
-            by_d.setdefault(strat, []).append(_f(r.get("pnl_dollar")))
+    if path.exists():
+        with path.open(encoding="utf-8", newline="") as f:
+            for r in csv.DictReader(f):
+                if (r.get("action") or "").upper() != "SELL":
+                    continue
+                strat = (r.get("strategy") or "unknown").strip() or "unknown"
+                by.setdefault(strat, []).append(_f(r.get("pnl_pct")))
+                by_d.setdefault(strat, []).append(_f(r.get("pnl_dollar")))
     active_rows = []
     disabled_rows = []
     for strat, pnls in by.items():
@@ -342,21 +349,32 @@ def _rb_leaderboard() -> list[dict]:
             "p10": round(_percentile(pnls, 0.10), 2),
             "pf": round(pf, 2),
             "total": round(sum(dollars), 2),
+            "status": "WATCH" if len(pnls) < 30 else "ACTIVE",
         }
         if strat in disabled:
             row["note"] = "Disabled 2026-07-20"
+            row["status"] = "DISABLED"
             disabled_rows.append(row)
         else:
             active_rows.append(row)
+    # Ensure known active strategies appear even at n=0
+    have = {r["strategy"] for r in active_rows}
+    for name in KNOWN_RB_STRATEGIES:
+        if name not in have and name not in disabled:
+            active_rows.append({
+                "strategy": name, "n": 0, "wr": 0.0, "avg": 0.0, "med": 0.0,
+                "p10": 0.0, "pf": 0.0, "total": 0.0, "status": "NEW",
+            })
     # Ensure disabled names appear even with no sells in window
-    have = {r["strategy"] for r in disabled_rows}
+    have_d = {r["strategy"] for r in disabled_rows}
     for name in sorted(disabled):
-        if name not in have:
+        if name not in have_d:
             disabled_rows.append({
                 "strategy": name, "n": 0, "wr": 0.0, "avg": 0.0, "med": 0.0,
                 "p10": 0.0, "pf": 0.0, "total": 0.0, "note": "Disabled 2026-07-20",
+                "status": "DISABLED",
             })
-    active_rows.sort(key=lambda x: (-x["pf"], -x["avg"]))
+    active_rows.sort(key=lambda x: (0 if x["n"] > 0 else 1, -x["pf"], -x["avg"], x["strategy"]))
     disabled_rows.sort(key=lambda x: x["strategy"])
     return active_rows, disabled_rows
 
@@ -394,7 +412,7 @@ def build_data() -> dict:
             "disabled": rb_disabled,
         },
         "options": {
-            "active_strategies": 6,
+            "active_strategies": 11,
             "keep": sel["keep"],
             "watch": sel["watch"],
             "drop": sel["drop"],
@@ -649,8 +667,10 @@ function renderRbBoard() {{
   let html = `<thead><tr><th>Rank</th><th>Strategy</th><th>n</th><th>WR%</th><th>Avg%</th><th>Med%</th><th>p10%</th><th>PF</th><th>Total $</th></tr></thead><tbody>`;
   rows.forEach((r,i) => {{
     const pf = Number(r.pf||0);
-    const cls = pf>=1.1 ? 'keep' : (pf>=0.9 ? 'watch' : 'drop');
-    html += `<tr class="${{cls}}"><td class="mono">${{i+1}}</td><td>${{r.strategy}}</td>
+    const status = r.status || (r.n===0 ? 'NEW' : (r.n<30 ? 'WATCH' : 'ACTIVE'));
+    const cls = status==='NEW' ? 'watch' : (pf>=1.1 ? 'keep' : (pf>=0.9 ? 'watch' : 'drop'));
+    const badge = status==='NEW' ? ' <span class="pill watch">NEW</span>' : '';
+    html += `<tr class="${{cls}}"><td class="mono">${{i+1}}</td><td>${{r.strategy}}${{badge}}</td>
       <td class="mono">${{r.n}}</td><td class="mono">${{r.wr}}</td>
       <td class="mono">${{fmtPct(r.avg)}}</td><td class="mono">${{fmtPct(r.med)}}</td>
       <td class="mono">${{fmtPct(r.p10)}}</td><td class="mono">${{pf.toFixed(2)}}</td>

@@ -23,6 +23,13 @@ TX = REPO / "logs" / "transactions.csv"
 RUNS = REPO / "logs" / "runs.csv"
 OUT = REPO / "logs" / "rubber_band_report.md"
 
+# Always show these on the board (n=0 → NEW / WATCH).
+KNOWN_STRATEGIES = [
+    "Pullback50", "MomReversal", "RSIRecovery", "52wkLow", "RubberBand",
+    "MA_Squeeze", "GoldenPocket", "VWAP_Reclaim", "TrendResumption", "EarningsDrift",
+]
+DISABLED_STRATEGIES = ["GapDown", "VolumeSpike"]
+
 
 def _f(v, d=0.0) -> float:
     try:
@@ -68,6 +75,8 @@ def build() -> str:
 
     board = []
     for strat, grp in by_strat.items():
+        if strat in DISABLED_STRATEGIES:
+            continue
         pnls = [_f(r["pnl_pct"]) for r in grp]
         dollars = [_f(r.get("pnl_dollar")) for r in grp]
         holds = [_f(r.get("hold_days")) for r in grp if r.get("hold_days") not in ("", None)]
@@ -88,6 +97,24 @@ def build() -> str:
             "total": sum(dollars),
         })
     board.sort(key=lambda x: (-x["pf"], -x["avg"], -x["n"]))
+
+    seen = {b["strategy"] for b in board}
+    for name in KNOWN_STRATEGIES:
+        if name not in seen:
+            board.append({
+                "strategy": name,
+                "n": 0,
+                "wr": 0.0,
+                "avg": 0.0,
+                "med": 0.0,
+                "p10": 0.0,
+                "pf": 0.0,
+                "hold": 0.0,
+                "total": 0.0,
+                "status": "NEW",
+            })
+    # Keep ranked filled strategies first, then NEW (n=0) alphabetically.
+    board.sort(key=lambda x: (0 if x["n"] > 0 else 1, -x["pf"], -x["avg"], x["strategy"]))
 
     by_exit: dict[str, list[float]] = defaultdict(list)
     for r in sells:
@@ -121,15 +148,28 @@ def build() -> str:
         f"*Updated: {now}*",
         "*All strategies equal weight since 2026-07-18 schedule removal*",
         "",
-        "| Rank | Strategy | n | WR% | Avg PnL% | Med PnL% | p10% | PF | Avg Hold | Total $ |",
-        "|------|----------|--:|----:|---------:|---------:|-----:|---:|---------:|--------:|",
+        "| Rank | Strategy | n | WR% | Avg PnL% | Med PnL% | p10% | PF | Avg Hold | Total $ | Status |",
+        "|------|----------|--:|----:|---------:|---------:|-----:|---:|---------:|--------:|--------|",
     ]
     for i, b in enumerate(board, 1):
+        status = b.get("status") or ("WATCH" if b["n"] < 30 else "ACTIVE")
+        if b["n"] == 0:
+            status = "NEW"
         lines.append(
             f"| {i} | {b['strategy']} | {b['n']} | {b['wr']:.0f}% | "
             f"{b['avg']:+.2f}% | {b['med']:+.2f}% | {b['p10']:+.2f}% | "
-            f"{b['pf']:.2f} | {b['hold']:.1f}d | ${b['total']:+.2f} |"
+            f"{b['pf']:.2f} | {b['hold']:.1f}d | ${b['total']:+.2f} | {status} |"
         )
+
+    lines.extend([
+        "",
+        "## Disabled strategies (no new entries)",
+        "",
+        "| Strategy | Status |",
+        "|----------|--------|",
+    ])
+    for name in DISABLED_STRATEGIES:
+        lines.append(f"| {name} | Disabled 2026-07-20 |")
 
     lines.extend(["", "## Exit reason breakdown", "",
                   "| Exit Type | n | WR% | Avg PnL% |",

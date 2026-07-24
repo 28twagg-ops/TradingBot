@@ -41,6 +41,11 @@ DTE_PROFILE: dict[str, str] = {
     "S166": "3d ATM strong",
     "S167": "3d 1-OTM",
     "S168": "5d ATM",
+    "S169": "3d ATM BB squeeze",
+    "S170": "3d ATM golden pocket",
+    "S171": "3d ATM VWAP reclaim",
+    "S172": "3d ATM trend resume",
+    "S175": "3d ATM earnings drift",
     "S173": "MomRev",
     "S174": "RubberBand (dropped)",
 }
@@ -48,6 +53,8 @@ DTE_PROFILE: dict[str, str] = {
 COMPARISON_GROUPS: list[tuple[str, list[str]]] = [
     ("GapDown DTE comparison", ["S163", "S164", "S165", "S168"]),
     ("GapDown Strike comparison", ["S165", "S167"]),
+    ("New Pattern Strategies — GapDown signal independent",
+     ["S169", "S170", "S171", "S172", "S175"]),
     ("Other", ["S173"]),
 ]
 
