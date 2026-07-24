@@ -50,8 +50,8 @@
   {
     "bucket_id": 8,
     "profile": "c008_s165_w1_0928_1005_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 45.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 9,
@@ -134,8 +134,8 @@
   {
     "bucket_id": 22,
     "profile": "c022_s164_w3_1045_1120_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 49.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 23,
@@ -218,8 +218,8 @@
   {
     "bucket_id": 36,
     "profile": "c036_s165_w1_0928_1005_r2",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 45.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 37,
@@ -302,8 +302,8 @@
   {
     "bucket_id": 50,
     "profile": "c050_s164_w3_1045_1120_r2",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 49.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 51,
@@ -386,8 +386,8 @@
   {
     "bucket_id": 64,
     "profile": "c064_s165_w1_0928_1005_r3",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 45.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 65,
@@ -470,8 +470,8 @@
   {
     "bucket_id": 78,
     "profile": "c078_s164_w3_1045_1120_r3",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 49.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 79,
@@ -554,8 +554,8 @@
   {
     "bucket_id": 92,
     "profile": "c092_s165_w1_0928_1005_r4",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 45.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 93,
@@ -638,8 +638,8 @@
   {
     "bucket_id": 106,
     "profile": "c106_s164_w3_1045_1120_r4",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 49.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 107,
@@ -722,8 +722,8 @@
   {
     "bucket_id": 120,
     "profile": "c120_s165_w1_0928_1005_r5",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 45.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 121,
@@ -806,8 +806,8 @@
   {
     "bucket_id": 134,
     "profile": "c134_s164_w3_1045_1120_r5",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 49.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 135,

@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-22 14:49:30.373711+00:00,entry,46,c046_s163_w3_1045_1120_r2,S163,7da0ecb3b2f7,COIN,COIN260724C00187500,1,0.57,0.56,56.0,,,,-0.01,,0.5,-0.5,0.053097345132743216,gap -2.0%,c07ab886-e41a-401f-86ff-adcc6bd1cb27
+2026-07-24 14:46:59.485139+00:00,entry,46,c046_s163_w3_1045_1120_r2,S163,392bbcdd49dd,CMCSA,CMCSA260731C00022000,1,0.7,0.69,69.0,,,,-0.01,,0.5,-0.5,0.1353383458646616,gap -2.8%,f5e49729-3dcc-48b3-b7c0-6840fb28ea35
