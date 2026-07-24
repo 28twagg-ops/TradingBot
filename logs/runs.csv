@@ -3369,3 +3369,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-24 17:35:39,exits,bull,486.68,170.87,0,0,0,4,ABNB|CARR|DTE|LNT,both
 2026-07-24 17:40:38,exits,bull,486.86,170.87,0,0,0,4,ABNB|CARR|DTE|LNT,both
 2026-07-24 17:45:51,exits,bull,486.89,170.87,0,0,0,4,ABNB|CARR|DTE|LNT,both
+2026-07-24 17:50:46,exits,bull,486.7,170.87,0,0,0,4,ABNB|CARR|DTE|LNT,both
