@@ -2,9 +2,9 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "4bd63c3a19d3",
-      "bucket_id": 76,
-      "profile_name": "c076_s164_w1_0928_1005_r3",
+      "lot_id": "72d1d6ac7bb4",
+      "bucket_id": 48,
+      "profile_name": "c048_s164_w1_0928_1005_r2",
       "strategy_id": "S164",
       "occ_symbol": "MRVL260724C00220000",
       "underlying": "MRVL",
@@ -19,13 +19,13 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-24",
-      "entry_order_id": "fc894ae8-1dcf-4dff-8022-14ea66d7d143"
+      "entry_order_id": "7ddb5e55-d1f7-4fd2-92ee-746516d1e3c8"
     }
   ],
   "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {
-    "b76": 4.0
+    "b48": 4.0
   },
   "session_date": "2026-07-24",
   "entries_locked": [
