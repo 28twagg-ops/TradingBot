@@ -1,6 +1,6 @@
 # Options signal frequency
 
-_Generated 2026-07-24T17:10:53.230823_
+_Generated 2026-07-24T16:18:29.482334_
 
 Headline counts are **unique (strategy, underlying, date)** from `ENTRY` lines in `logs/options_trial/runs/*.log`.
 Raw log-line counts (multi-bucket duplicates) are shown below for debug.
@@ -36,6 +36,17 @@ Raw log-line counts (multi-bucket duplicates) are shown below for debug.
 | S174 | 7 | 4 | 1.8 | ~22 active signal-days |
 
 \* Formula: `ceil(30 / (avg_unique_per_active_day * 80%))`. Update when real exit rates are known.
+
+## Signal frequency by window (all time, unique strategy×symbol×date×window)
+
+| Window | S163 | S164 | S165 | S166 | S167 | S168 | S173 | S174 | Total |
+|--------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|------:|
+| w1     |    1 |    1 |    5 |    0 |    1 |    0 |    7 |    1 |    16 |
+| w2     |    2 |    2 |    8 |    1 |    2 |    2 |    6 |    3 |    26 |
+| w3     |    3 |    3 |    9 |    1 |    3 |    2 |    7 |    4 |    32 |
+| w4     |    3 |    2 |    7 |    1 |    2 |    2 |    6 |    3 |    26 |
+
+Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:20–11:35. Parsed from controlled-layout profile names in ENTRY log lines.
 
 ## Raw vs unique totals
 

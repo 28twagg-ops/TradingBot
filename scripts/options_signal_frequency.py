@@ -39,6 +39,9 @@ _RE_STRATEGY_EQ = re.compile(
     r"(?:strategy[_ ]?id|strategy)\s*[=:]\s*(S\d{3})",
     re.IGNORECASE,
 )
+# Window tag from controlled-layout profile name: ..._w2_1005_1045_r1
+# Note: do not use \b before w — underscore is a word char in Python.
+_RE_WINDOW = re.compile(r"(?<![A-Za-z0-9])(w[1-4])_\d{4}_\d{4}", re.IGNORECASE)
 # Underlying from OCC: AAL260717C00015000 or "BUY 1x AAL260717..."
 _RE_OCC = re.compile(
     r"\b([A-Z]{1,6})\d{6}[CP]\d{8}\b",
@@ -49,6 +52,16 @@ _RE_SYMBOL_EQ = re.compile(
 )
 _RE_PENDING_ID = re.compile(r"pending\s+id=([0-9a-fA-F\-]{8,})", re.IGNORECASE)
 _RE_ORDER_ID = re.compile(r"\bid=([0-9a-fA-F\-]{8,})", re.IGNORECASE)
+
+WINDOWS = ["w1", "w2", "w3", "w4"]
+
+
+def _extract_window(line: str) -> str | None:
+    """Extract w1–w4 from controlled-layout profile tag in ENTRY line."""
+    m = _RE_WINDOW.search(line)
+    if m:
+        return m.group(1).lower()
+    return None
 
 
 def _extract_strategy(line: str) -> str | None:
@@ -87,20 +100,26 @@ def collect_counts() -> tuple[
     dict[str, dict[str, int]],
     dict[str, int],
     dict[str, int],
+    dict[str, dict[str, int]],
 ]:
-    """Return unique_counts[day][sid], raw_counts[day][sid], unique_totals, raw_totals."""
+    """Return unique_counts, raw_counts, unique_totals, raw_totals, window_unique.
+
+    window_unique[window][sid] = unique (strategy, underlying, date) in that window.
+    """
     ensure_trial_layout()
     runs_dir = TRIAL_ROOT / "runs"
     unique_counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
     raw_counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    window_unique: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
     unique_seen: set[str] = set()
     raw_seen: set[str] = set()
+    window_seen: set[str] = set()
     unique_totals: dict[str, int] = defaultdict(int)
     raw_totals: dict[str, int] = defaultdict(int)
 
     if not runs_dir.exists():
         z = {s: 0 for s in STRATEGIES}
-        return {}, {}, z, z
+        return {}, {}, z, z, {}
 
     for path in sorted(runs_dir.glob("*.log")):
         day = path.stem
@@ -133,11 +152,19 @@ def collect_counts() -> tuple[
                 unique_counts[day][sid] += 1
                 unique_totals[sid] += 1
 
+            win = _extract_window(line)
+            if win:
+                wkey = f"{day}|{sid}|{sym}|{win}"
+                if wkey not in window_seen:
+                    window_seen.add(wkey)
+                    window_unique[win][sid] += 1
+
     return (
         dict(unique_counts),
         dict(raw_counts),
         {s: int(unique_totals.get(s, 0)) for s in STRATEGIES},
         {s: int(raw_totals.get(s, 0)) for s in STRATEGIES},
+        {w: dict(window_unique.get(w, {})) for w in WINDOWS},
     )
 
 
@@ -179,6 +206,7 @@ def build_report(
     raw_counts: dict[str, dict[str, int]],
     unique_totals: dict[str, int],
     raw_totals: dict[str, int],
+    window_unique: dict[str, dict[str, int]] | None = None,
 ) -> str:
     days = sorted(set(unique_counts.keys()) | set(raw_counts.keys()))
     lines = [
@@ -217,6 +245,39 @@ def build_report(
             f"\\* Formula: `ceil({TARGET_EXITS} / (avg_unique_per_active_day * "
             f"{EXIT_RATE_PROXY:.0%}))`. Update when real exit rates are known.",
             "",
+            "## Signal frequency by window (all time, unique strategy×symbol×date×window)",
+            "",
+            "| Window | " + " | ".join(STRATEGIES) + " | Total |",
+            "|--------|" + "|".join(["-----:" for _ in STRATEGIES]) + "|------:|",
+        ]
+    )
+    wu = window_unique or {}
+    for win in WINDOWS:
+        row = wu.get(win, {})
+        vals = [int(row.get(s, 0)) for s in STRATEGIES]
+        cells = " | ".join(f"{v:4d}" for v in vals)
+        lines.append(f"| {win}     | {cells} | {sum(vals):5d} |")
+    if not any(wu.get(w) for w in WINDOWS):
+        lines.extend(
+            [
+                "",
+                "_No window tags found in ENTRY lines "
+                "(expected profile tag like `w2_1005_1045`)._",
+            ]
+        )
+    else:
+        lines.extend(
+            [
+                "",
+                "Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · "
+                "w3 10:45–11:20 · w4 11:20–11:35. "
+                "Parsed from controlled-layout profile names in ENTRY log lines.",
+            ]
+        )
+
+    lines.extend(
+        [
+            "",
             "## Raw vs unique totals",
             "",
             "| Strategy | Raw log lines (includes multi-bucket duplicates) | Unique underlying symbols |",
@@ -246,8 +307,12 @@ def build_report(
 
 def main() -> int:
     try:
-        unique_counts, raw_counts, unique_totals, raw_totals = collect_counts()
-        md = build_report(unique_counts, raw_counts, unique_totals, raw_totals)
+        unique_counts, raw_counts, unique_totals, raw_totals, window_unique = (
+            collect_counts()
+        )
+        md = build_report(
+            unique_counts, raw_counts, unique_totals, raw_totals, window_unique
+        )
         out_dir = TRIAL_ROOT / "reports"
         out_dir.mkdir(parents=True, exist_ok=True)
         out_path = out_dir / "signal_frequency.md"
