@@ -1015,3 +1015,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-23 13:56:34,2026-07-23,SELL,FIX,Pullback50,1869.54,96.39,0.33,0.32,0,midline (+0.3%),bull,481.51
 2026-07-24 13:46:35,2026-07-24,SELL,AEP,Pullback50,135.97,99.33,3.07,2.96,2,midline (+3.1%),bull,485.13
 2026-07-24 13:56:30,2026-07-24,SELL,CI,Pullback50,288.07,97.4,0.97,0.93,1,midline (+1.0%),bull,485.77
+2026-07-24 19:51:19,2026-07-24,SELL,CHD,Pullback50,97.44,97.41,0.12,0.12,0,midline (+0.1%),bull,486.88
