@@ -22,7 +22,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 20,c020_s164_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-07-24,False,,0.0,-88.89,-88.89,-88.89,-88.89,-8.0,MRVL,S164,stop_loss (-88.9%),closed
 21,c021_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
 22,c022_s164_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
-23,c023_s164_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
+23,c023_s164_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
 24,c024_s168_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S168,,entered_no_exit
 25,c025_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S168,,entered_no_exit
 26,c026_s168_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S168,,entered_no_exit
@@ -47,10 +47,10 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 45,c045_s163_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S163,,entered_no_exit
 46,c046_s163_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S163,,entered_no_exit
 47,c047_s163_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S163,,entered_no_exit
-48,c048_s164_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
+48,c048_s164_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,0,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
 49,c049_s164_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
 50,c050_s164_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
-51,c051_s164_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
+51,c051_s164_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
 52,c052_s168_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S168,,entered_no_exit
 53,c053_s168_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S168,,entered_no_exit
 54,c054_s168_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S168,,entered_no_exit
@@ -75,10 +75,10 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 73,c073_s163_w2_1005_1045_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S163,,entered_no_exit
 74,c074_s163_w3_1045_1120_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S163,,entered_no_exit
 75,c075_s163_w4_1120_1135_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S163,,entered_no_exit
-76,c076_s164_w1_0928_1005_r3,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-07-24,False,,0.0,-50.0,-50.0,-50.0,-50.0,-2.0,MRVL,S164,stop_loss (-50.0%),closed
+76,c076_s164_w1_0928_1005_r3,ask-0.01,bid-0.01,50.0,-50.0,2,1,1,2026-07-24,False,,0.0,-50.0,-50.0,-50.0,-50.0,-2.0,MRVL,S164,stop_loss (-50.0%),closed
 77,c077_s164_w2_1005_1045_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
 78,c078_s164_w3_1045_1120_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
-79,c079_s164_w4_1120_1135_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
+79,c079_s164_w4_1120_1135_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
 80,c080_s168_w1_0928_1005_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S168,,entered_no_exit
 81,c081_s168_w2_1005_1045_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S168,,entered_no_exit
 82,c082_s168_w3_1045_1120_r3,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S168,,entered_no_exit
@@ -134,7 +134,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 132,c132_s164_w1_0928_1005_r5,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-07-24,False,,0.0,-77.78,-77.78,-77.78,-77.78,-7.0,MRVL,S164,stop_loss (-88.9%),closed
 133,c133_s164_w2_1005_1045_r5,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
 134,c134_s164_w3_1045_1120_r5,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,MRVL,S164,,entered_no_exit
-135,c135_s164_w4_1120_1135_r5,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-07-24,False,,0.0,-50.0,-50.0,-50.0,-50.0,-4.0,MRVL,S164,stop_loss (-50.0%),closed
+135,c135_s164_w4_1120_1135_r5,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-07-24,False,,0.0,-50.0,-50.0,-50.0,-50.0,-4.0,MRVL,S164,stop_loss (-50.0%),closed
 136,c136_s168_w1_0928_1005_r5,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S168,,entered_no_exit
 137,c137_s168_w2_1005_1045_r5,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S168,,entered_no_exit
 138,c138_s168_w3_1045_1120_r5,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-24,False,,,,,,,0,CMCSA,S168,,entered_no_exit
