@@ -3,3 +3,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-21T14:10:38Z,reconcile,52,c052_s168_w1_0928_1005_r2,S168,7af94f44e923,HAL,HAL260724C00033000,1,,,63.0,,,zombie_lot,,,,,,zombie age_min=851 notional=$63.00 occ=HAL260724C00033000 action=submitted:3413ddc5-54f4-4965-8d3e-38a5ab47b9e3,
 2026-07-21T15:25:42Z,reconcile,52,c052_s168_w1_0928_1005_r2,S168,0b1ca7898f4d,HAL,HAL260724C00033000,1,,,63.0,,,zombie_lot,,,,,,zombie age_min=926 notional=$63.00 occ=HAL260724C00033000 action=submitted:ee1d570b-822d-487a-9e1a-0428dd823423,
 2026-07-21 14:07:43.886367+00:00,entry,52,c052_s168_w1_0928_1005_r2,S168,cc6b7580ec5b,HAL,HAL260724C00033000,1,0.63,0.63,63.0,,,,-0.01,,0.5,-0.5,,,191b541e-28d8-4ed1-8936-0f10bbe2402a
+2026-07-24 13:39:53.364328+00:00,entry,52,c052_s168_w1_0928_1005_r2,S168,722f9eee38af,CMCSA,CMCSA260731C00022000,1,0.42,0.4,40.0,,,,-0.01,,0.5,-0.5,0.15,gap -2.8%,2cbee72a-3d0d-462a-a65c-3c021c16d5ff
