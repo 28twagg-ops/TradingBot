@@ -2,7 +2,7 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "f1fe88c258f6",
+      "lot_id": "e9a6482aea3c",
       "bucket_id": 128,
       "profile_name": "c128_s163_w1_0928_1005_r5",
       "strategy_id": "S163",
@@ -22,7 +22,7 @@
       "entry_order_id": "8ab85d37-4dec-49bc-a5d0-94582f05e346"
     },
     {
-      "lot_id": "6e2ed1c98a77",
+      "lot_id": "01ce1ef79b03",
       "bucket_id": 100,
       "profile_name": "c100_s163_w1_0928_1005_r4",
       "strategy_id": "S163",
@@ -42,7 +42,7 @@
       "entry_order_id": "1a9a08bc-3151-486f-b3b7-5e15496f12b6"
     },
     {
-      "lot_id": "4fcb62efd525",
+      "lot_id": "21168f2303fe",
       "bucket_id": 72,
       "profile_name": "c072_s163_w1_0928_1005_r3",
       "strategy_id": "S163",
@@ -62,7 +62,7 @@
       "entry_order_id": "3d259478-91c0-46de-b87f-d86e34492435"
     },
     {
-      "lot_id": "47526a48dd1c",
+      "lot_id": "176cedae3bb5",
       "bucket_id": 44,
       "profile_name": "c044_s163_w1_0928_1005_r2",
       "strategy_id": "S163",
@@ -82,7 +82,7 @@
       "entry_order_id": "5981ae76-3842-4560-b5e4-45d51f4a03af"
     },
     {
-      "lot_id": "cf3c045318d5",
+      "lot_id": "929fa09fcefe",
       "bucket_id": 16,
       "profile_name": "c016_s163_w1_0928_1005_r1",
       "strategy_id": "S163",
@@ -102,7 +102,7 @@
       "entry_order_id": "90a56086-7398-47ad-abb3-b4872765e724"
     },
     {
-      "lot_id": "22fbdd4bfce9",
+      "lot_id": "de6d651109da",
       "bucket_id": 116,
       "profile_name": "c116_s167_w1_0928_1005_r5",
       "strategy_id": "S167",
@@ -122,7 +122,7 @@
       "entry_order_id": "ab3abd73-e540-458d-afad-528197b678eb"
     },
     {
-      "lot_id": "26ae1c65e8ec",
+      "lot_id": "a85a44143be1",
       "bucket_id": 88,
       "profile_name": "c088_s167_w1_0928_1005_r4",
       "strategy_id": "S167",
@@ -142,7 +142,7 @@
       "entry_order_id": "6b945ea0-4361-4d10-9891-df43a5e84f08"
     },
     {
-      "lot_id": "7a7ae341df5e",
+      "lot_id": "a93ab210226b",
       "bucket_id": 60,
       "profile_name": "c060_s167_w1_0928_1005_r3",
       "strategy_id": "S167",
@@ -162,7 +162,7 @@
       "entry_order_id": "df2d31c6-b339-4a5d-be50-23ca6460c745"
     },
     {
-      "lot_id": "3304d9d82e6f",
+      "lot_id": "092e13c346be",
       "bucket_id": 32,
       "profile_name": "c032_s167_w1_0928_1005_r2",
       "strategy_id": "S167",
@@ -182,7 +182,7 @@
       "entry_order_id": "c6219d0c-4e35-426b-9124-a157a9b2a00e"
     },
     {
-      "lot_id": "9d068bb9ab26",
+      "lot_id": "6a0dbdbe433e",
       "bucket_id": 4,
       "profile_name": "c004_s167_w1_0928_1005_r1",
       "strategy_id": "S167",
@@ -202,7 +202,7 @@
       "entry_order_id": "b780d317-ff53-40f2-b716-c3cb68dd49bb"
     },
     {
-      "lot_id": "b580149fdba5",
+      "lot_id": "44032b5c3602",
       "bucket_id": 136,
       "profile_name": "c136_s168_w1_0928_1005_r5",
       "strategy_id": "S168",
@@ -222,7 +222,7 @@
       "entry_order_id": "9ce2e40c-2b62-40ce-a007-62a3f3aebaed"
     },
     {
-      "lot_id": "3eeffbc703a2",
+      "lot_id": "9586bb47b9f3",
       "bucket_id": 108,
       "profile_name": "c108_s168_w1_0928_1005_r4",
       "strategy_id": "S168",
@@ -242,7 +242,7 @@
       "entry_order_id": "aacba748-36f0-4955-8d30-88a70bc49f13"
     },
     {
-      "lot_id": "45fe08105b90",
+      "lot_id": "5ac398b14df6",
       "bucket_id": 80,
       "profile_name": "c080_s168_w1_0928_1005_r3",
       "strategy_id": "S168",
@@ -262,7 +262,7 @@
       "entry_order_id": "849b392b-0fd4-4641-8d9c-a0e0f25c656c"
     },
     {
-      "lot_id": "722f9eee38af",
+      "lot_id": "acfa3c8406d1",
       "bucket_id": 52,
       "profile_name": "c052_s168_w1_0928_1005_r2",
       "strategy_id": "S168",
@@ -282,7 +282,7 @@
       "entry_order_id": "2cbee72a-3d0d-462a-a65c-3c021c16d5ff"
     },
     {
-      "lot_id": "b73a2816bba1",
+      "lot_id": "a5763a2a6755",
       "bucket_id": 24,
       "profile_name": "c024_s168_w1_0928_1005_r1",
       "strategy_id": "S168",
@@ -302,7 +302,7 @@
       "entry_order_id": "46d13ad0-70ed-4581-af81-dd5a62bdaa84"
     },
     {
-      "lot_id": "dfc4fb7a83dc",
+      "lot_id": "ebfd5962f568",
       "bucket_id": 120,
       "profile_name": "c120_s165_w1_0928_1005_r5",
       "strategy_id": "S165",
@@ -322,7 +322,7 @@
       "entry_order_id": "9d0b0d75-48c7-43a5-8f71-3a1e33194217"
     },
     {
-      "lot_id": "8cef1830c3fd",
+      "lot_id": "5caac75d0434",
       "bucket_id": 92,
       "profile_name": "c092_s165_w1_0928_1005_r4",
       "strategy_id": "S165",
@@ -342,7 +342,7 @@
       "entry_order_id": "7a5f8cdd-03fd-4c1a-8e8b-90e4bad3fb23"
     },
     {
-      "lot_id": "1418d085e756",
+      "lot_id": "36b61784a375",
       "bucket_id": 64,
       "profile_name": "c064_s165_w1_0928_1005_r3",
       "strategy_id": "S165",
@@ -362,7 +362,7 @@
       "entry_order_id": "f85c5c6f-fefb-4bc7-833e-5e4ca705071f"
     },
     {
-      "lot_id": "74633f8f892e",
+      "lot_id": "a006856fbcfd",
       "bucket_id": 36,
       "profile_name": "c036_s165_w1_0928_1005_r2",
       "strategy_id": "S165",
@@ -382,7 +382,7 @@
       "entry_order_id": "ac248052-3cd0-46de-b74c-237a0ec44304"
     },
     {
-      "lot_id": "27952940f297",
+      "lot_id": "2838ad05b69a",
       "bucket_id": 8,
       "profile_name": "c008_s165_w1_0928_1005_r1",
       "strategy_id": "S165",
@@ -402,27 +402,7 @@
       "entry_order_id": "65ca387a-d414-44d9-ad40-8b86bc81a8e5"
     },
     {
-      "lot_id": "fac9936e92e3",
-      "bucket_id": 132,
-      "profile_name": "c132_s164_w1_0928_1005_r5",
-      "strategy_id": "S164",
-      "occ_symbol": "MRVL260724C00222500",
-      "underlying": "MRVL",
-      "qty": 1,
-      "entry_cost": 9.0,
-      "entry_price": 0.09,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-24",
-      "entry_order_id": "446538b6-5029-409d-85be-ffeb2eaab364"
-    },
-    {
-      "lot_id": "22fc752acb8a",
+      "lot_id": "c8bfe3532db2",
       "bucket_id": 104,
       "profile_name": "c104_s164_w1_0928_1005_r4",
       "strategy_id": "S164",
@@ -442,7 +422,7 @@
       "entry_order_id": "2bb978f3-d189-47d5-b36e-a374bedc38c3"
     },
     {
-      "lot_id": "8c6cb46089fd",
+      "lot_id": "875e5788ac93",
       "bucket_id": 76,
       "profile_name": "c076_s164_w1_0928_1005_r3",
       "strategy_id": "S164",
@@ -462,7 +442,7 @@
       "entry_order_id": "f3e373ad-2e53-45ad-bd65-ae0129e9ef01"
     },
     {
-      "lot_id": "a5d07ea8b867",
+      "lot_id": "88170d1a9335",
       "bucket_id": 48,
       "profile_name": "c048_s164_w1_0928_1005_r2",
       "strategy_id": "S164",
@@ -482,7 +462,7 @@
       "entry_order_id": "5864703d-8ad9-4bc8-94ab-73f339190b6d"
     },
     {
-      "lot_id": "dc815e363f82",
+      "lot_id": "a8b979040ba0",
       "bucket_id": 20,
       "profile_name": "c020_s164_w1_0928_1005_r1",
       "strategy_id": "S164",
@@ -505,14 +485,14 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "d17972a4-d09e-4067-aa69-127e2c5cc535",
-      "lot_id": "fac9936e92e3",
-      "bucket_id": 132,
+      "order_id": "3c18a75d-4e53-4bca-9cfa-3c19bc41a937",
+      "lot_id": "c8bfe3532db2",
+      "bucket_id": 104,
       "strategy_id": "S164",
       "occ_symbol": "MRVL260724C00222500",
       "qty": 1,
       "reason": "stop_loss (-88.9%)",
-      "submitted": "2026-07-24T09:54:56"
+      "submitted": "2026-07-24T10:00:10"
     }
   ],
   "bucket_open_premium": {
@@ -536,7 +516,6 @@
     "b64": 45.0,
     "b36": 45.0,
     "b8": 45.0,
-    "b132": 9.0,
     "b104": 9.0,
     "b76": 9.0,
     "b48": 9.0,
