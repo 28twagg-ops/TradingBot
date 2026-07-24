@@ -1,11 +1,97 @@
 {
   "version": 5,
   "lots": [],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "e8c8c318-892e-42a8-aa92-9b187a7b18a9",
+      "bucket_id": 20,
+      "strategy_id": "S164",
+      "occ_symbol": "MRVL260724C00222500",
+      "underlying": "MRVL",
+      "qty": 1,
+      "limit": 0.13,
+      "profile_name": "c020_s164_w1_0928_1005_r1",
+      "submitted": "2026-07-24",
+      "detail": "gap -3.1%",
+      "spread_frac": 0.07407407407407414,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "5864703d-8ad9-4bc8-94ab-73f339190b6d",
+      "bucket_id": 48,
+      "strategy_id": "S164",
+      "occ_symbol": "MRVL260724C00222500",
+      "underlying": "MRVL",
+      "qty": 1,
+      "limit": 0.13,
+      "profile_name": "c048_s164_w1_0928_1005_r2",
+      "submitted": "2026-07-24",
+      "detail": "gap -3.1%",
+      "spread_frac": 0.07407407407407414,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "f3e373ad-2e53-45ad-bd65-ae0129e9ef01",
+      "bucket_id": 76,
+      "strategy_id": "S164",
+      "occ_symbol": "MRVL260724C00222500",
+      "underlying": "MRVL",
+      "qty": 1,
+      "limit": 0.13,
+      "profile_name": "c076_s164_w1_0928_1005_r3",
+      "submitted": "2026-07-24",
+      "detail": "gap -3.1%",
+      "spread_frac": 0.07407407407407414,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "2bb978f3-d189-47d5-b36e-a374bedc38c3",
+      "bucket_id": 104,
+      "strategy_id": "S164",
+      "occ_symbol": "MRVL260724C00222500",
+      "underlying": "MRVL",
+      "qty": 1,
+      "limit": 0.13,
+      "profile_name": "c104_s164_w1_0928_1005_r4",
+      "submitted": "2026-07-24",
+      "detail": "gap -3.1%",
+      "spread_frac": 0.07407407407407414,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "446538b6-5029-409d-85be-ffeb2eaab364",
+      "bucket_id": 132,
+      "strategy_id": "S164",
+      "occ_symbol": "MRVL260724C00222500",
+      "underlying": "MRVL",
+      "qty": 1,
+      "limit": 0.13,
+      "profile_name": "c132_s164_w1_0928_1005_r5",
+      "submitted": "2026-07-24",
+      "detail": "gap -3.1%",
+      "spread_frac": 0.07407407407407414,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    }
+  ],
   "pending_exits": [],
   "bucket_open_premium": {},
   "session_date": "2026-07-24",
-  "entries_locked": [],
+  "entries_locked": [
+    "20|S164|2026-07-24",
+    "48|S164|2026-07-24",
+    "76|S164|2026-07-24",
+    "104|S164|2026-07-24"
+  ],
   "processed_orders": [
     "f0e2d2ab-84e7-4615-94f7-b8b4df765f7c",
     "5f5c9ddc-9333-4b5f-b72d-b85ca9dc72b6",
@@ -475,7 +561,7 @@
     "515d5504-76f2-40cc-a009-02dc2d16c99d",
     "f9626607-92dd-47e2-b5df-b41cc0ed9d29"
   ],
-  "submitted_today": 0,
+  "submitted_today": 5,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-07-24"
 }
