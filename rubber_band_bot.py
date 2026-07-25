@@ -90,9 +90,11 @@ from alpaca.data.timeframe   import TimeFrame
 # socket can block the entire GHA job indefinitely (see May 27 timeout crash).
 socket.setdefaulttimeout(45)
 
-# alpaca-py TradingClient.__init__ does not accept timeout= (as of current pin).
-# TODO: if a future alpaca-py adds timeout, pass timeout=30 to TradingClient(...).
-# Until then, socket.setdefaulttimeout above is the belt-and-suspenders cap.
+# alpaca-py 0.43.2 TradingClient.__init__ still has no timeout= (params: api_key,
+# secret_key, oauth_token, paper, raw_data, url_override). RESTClient has retry_*
+# but no request timeout either. Closed 2026-07-25A: keep socket.setdefaulttimeout(45)
+# as the best available cap; recheck when alpaca-py adds a real timeout kwarg.
+# GHA installs with: pip install --upgrade alpaca-py ...
 
 
 # =============================================================================

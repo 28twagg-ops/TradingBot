@@ -52,7 +52,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install alpaca-py yfinance pandas numpy lxml requests pyarrow
+        run: pip install --upgrade alpaca-py yfinance pandas numpy lxml requests pyarrow
 
       - name: Initialize run output log files
         run: |

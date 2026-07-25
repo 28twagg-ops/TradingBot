@@ -1,4 +1,4 @@
-ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-06T09:34:30.695185-04:00,entry,6,loose_spread,S173,66707e04a874,ADBE,ADBE260710C00235000,1,0.69,,70.0,,,,-0.01,,0.6,-0.4,0.295,MR gap -1.6% green
 2026-07-06T09:34:30.695185-04:00,entry,17,g017_lim_tp20_sl20,S173,381253e5621e,ADBE,ADBE260710C00235000,1,0.6,,70.0,,,,-0.1,,0.6,-0.4,0.295,MR gap -1.6% green
 2026-07-06T09:34:30.695185-04:00,entry,18,g018_mid_tp20_sl20,S173,5e4249066dd4,ADBE,ADBE260710C00235000,1,0.61,,70.0,,,,-0.1,,0.6,-0.4,0.295,MR gap -1.6% green
