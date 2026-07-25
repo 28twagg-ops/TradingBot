@@ -2014,6 +2014,12 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
                 log_fn(f"  reconcile: backfill ledger entry b{existing.bucket_id}|"
                        f"{existing.strategy_id} {existing.underlying} x{existing.qty}")
             return
+        if state.order_already_logged(oid):
+            # A previously logged entry can be absent from state after its lot
+            # was sold or trimmed during broker quantity alignment. Recreating
+            # every historical fill here produces a fresh lot_id on every run
+            # and can relabel old buckets after a controlled-layout change.
+            return
         bucket_id = parsed["bucket_id"]
         strat = parsed["strategy_id"]
         bucket = next((b for b in BUCKET_EXPERIMENTS if b.bucket_id == bucket_id), None)

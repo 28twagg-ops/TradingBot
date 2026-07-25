@@ -1,0 +1,14 @@
+strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
+S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),65,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,4,65,0,0,0.0
+S166,GapDown strong call,3d ATM strong,watch,insufficient sample (<8 exits),20,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,4,20,0,0,0.0
+S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,insufficient sample (<8 exits),66,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,4,66,0,0,0.0
+S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,insufficient sample (<8 exits),50,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,4,50,0,0,0.0
+S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
+S170,Golden Pocket call 3 DTE,3d ATM golden pocket,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
+S171,VWAP Reclaim call 3 DTE,3d ATM VWAP reclaim,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
+S172,Trend Resumption call 3 DTE,3d ATM trend resume,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
+S175,Earnings Drift call 3 DTE,3d ATM earnings drift,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
+S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,insufficient sample (<8 exits),77,6,0,6,-68.19,-65.67,-88.89,-86.11,-50.0,-59.0,2,4,77,6,2,83.3
+S174,RubberBand long call EOD,RubberBand (dropped),drop,manually paused — excluded from new entries & reflected P&L,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,19,0,0,6,50.4
+S173,MomReversal long call,MomRev,drop,manually paused — excluded from new entries & reflected P&L,1625,415,154,261,15.19,-31.51,-77.18,-62.95,101.9,62.64,8,19,0,0,12,27.5
+S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1402,245,73,172,-6.01,-38.18,-63.39,-54.55,81.82,-1828.78,7,19,60,0,12,26.1

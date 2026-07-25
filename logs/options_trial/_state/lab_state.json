@@ -2,9 +2,9 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "ceba9953fb25",
+      "lot_id": "b24a7d98b2f0",
       "bucket_id": 48,
-      "profile_name": "c048_s169_w1_0928_1005_r1",
+      "profile_name": "c048_s164_w1_0928_1005_r2",
       "strategy_id": "S164",
       "occ_symbol": "MRVL260724C00220000",
       "underlying": "MRVL",
