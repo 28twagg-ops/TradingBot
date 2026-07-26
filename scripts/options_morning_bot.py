@@ -750,6 +750,116 @@ def pick_otm_call_1strike(opt, ref, symbol: str, price: float,
 
 
 # --------------------------------------------------------------------------- #
+#  Put pickers (added 2026-07-25B -- bearish signals S203, S214, etc.)
+# --------------------------------------------------------------------------- #
+
+def _pick_put_from_chain(opt, ref, symbol: str, price: float,
+                         dte_min: int, dte_max: int, dte_target: int,
+                         arm: "EffectiveArm", *, chain_cache: dict | None = None,
+                         oi_cache: dict | None = None,
+                         strike_mode: str = "atm"):
+    """Return best tradeable put under strike_mode ('atm' or 'otm1').
+
+    'atm' = closest strike to spot.
+    'otm1' = highest put strike strictly below spot (1-OTM for puts).
+    """
+    api_sym = to_alpaca_symbol(symbol)
+    max_premium = arm.max_premium
+    max_spread = arm.max_spread_frac
+    min_oi = arm.min_open_interest
+    exp_lo = TODAY + timedelta(days=dte_min)
+    exp_hi = TODAY + timedelta(days=dte_max)
+    strike_lo = round(price * (1 - STRIKE_PCT), 2)
+    strike_hi = round(price * (1 + STRIKE_PCT), 2)
+    cache_key = (api_sym, dte_min, dte_max, strike_lo, strike_hi, "put")
+
+    chain = None
+    if chain_cache is not None and cache_key in chain_cache:
+        chain = chain_cache[cache_key]
+
+    if chain is None:
+        try:
+            chain = _fetch_option_chain(opt, api_sym, exp_lo, exp_hi, strike_lo, strike_hi)
+            if chain_cache is not None and chain:
+                chain_cache[cache_key] = chain
+        except Exception as exc:
+            rl_file(f"  [{symbol}] put chain error: {exc}")
+            return None
+
+    if not chain:
+        return None
+
+    oi_map = {}
+    if oi_cache is not None and cache_key in oi_cache:
+        oi_map = oi_cache[cache_key]
+    else:
+        try:
+            oi_map = _fetch_oi_map(ref, api_sym, strike_lo, strike_hi, exp_lo, exp_hi)
+            if oi_cache is not None and oi_map:
+                oi_cache[cache_key] = oi_map
+        except Exception:
+            oi_map = {}
+
+    best = None
+    for csym, snap in chain.items():
+        expiry, right, strike = _parse_occ(csym, api_sym)
+        if right != "P" or strike is None or expiry is None:
+            continue
+        if strike_mode == "otm1":
+            if strike >= price:
+                continue
+        lq = getattr(snap, "latest_quote", None)
+        bid = getattr(lq, "bid_price", None) if lq else None
+        ask = getattr(lq, "ask_price", None) if lq else None
+        if not bid or not ask or bid <= 0 or ask <= 0:
+            continue
+        mid = (bid + ask) / 2
+        spread_frac = (ask - bid) / mid if mid > 0 else 9.9
+        if spread_frac > max_spread:
+            continue
+        cost = ask * 100
+        if cost > max_premium:
+            continue
+        oi = (oi_map.get(csym) or {}).get("open_interest")
+        if oi is not None and oi < min_oi:
+            continue
+        try:
+            dte = (date.fromisoformat(expiry) - TODAY).days
+        except Exception:
+            continue
+        # For puts: ATM = closest to spot; OTM1 = highest strike below spot
+        if strike_mode == "otm1":
+            score = (price - strike, abs(dte - dte_target))
+        else:
+            score = (abs(strike - price), abs(dte - dte_target))
+        if best is None or score < best["score"]:
+            best = {"symbol": csym, "underlying": symbol, "strike": strike,
+                    "expiry": expiry, "dte": dte, "bid": bid, "ask": ask, "mid": mid,
+                    "spread_frac": spread_frac, "cost": cost, "oi": oi, "score": score}
+    return best
+
+
+def pick_atm_put(opt, ref, symbol: str, price: float,
+                 dte_min: int, dte_max: int, dte_target: int,
+                 arm: "EffectiveArm", *, chain_cache: dict | None = None,
+                 oi_cache: dict | None = None):
+    """Return dict for the best ATM put, or None if nothing tradeable."""
+    return _pick_put_from_chain(
+        opt, ref, symbol, price, dte_min, dte_max, dte_target, arm,
+        chain_cache=chain_cache, oi_cache=oi_cache, strike_mode="atm")
+
+
+def pick_otm_put_1strike(opt, ref, symbol: str, price: float,
+                         dte_min: int, dte_max: int, dte_target: int,
+                         arm: "EffectiveArm", *, chain_cache: dict | None = None,
+                         oi_cache: dict | None = None):
+    """Return dict for the highest put strike strictly below spot (1-OTM put)."""
+    return _pick_put_from_chain(
+        opt, ref, symbol, price, dte_min, dte_max, dte_target, arm,
+        chain_cache=chain_cache, oi_cache=oi_cache, strike_mode="otm1")
+
+
+# --------------------------------------------------------------------------- #
 #  Exits (per virtual lot / arm stop rules)
 # --------------------------------------------------------------------------- #
 
@@ -934,6 +1044,11 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
                     opt, ref, hit.symbol, hit.price,
                     strat.dte_min, strat.dte_max, strat.dte_target, arm,
                     chain_cache=chain_cache, oi_cache=oi_cache)
+            elif getattr(hit, "option_type", "call") == "put":
+                cand = pick_atm_put(
+                    opt, ref, hit.symbol, hit.price,
+                    strat.dte_min, strat.dte_max, strat.dte_target, arm,
+                    chain_cache=chain_cache, oi_cache=oi_cache)
             else:
                 cand = pick_atm_call(
                     opt, ref, hit.symbol, hit.price,
@@ -941,8 +1056,9 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
                     chain_cache=chain_cache, oi_cache=oi_cache)
             if not cand:
                 skip_no_chain += 1
+                opt_type = getattr(hit, "option_type", "call")
                 rl_file(f"  [b{arm.bucket_id}|{arm.profile_name}] {hit.strategy_id} "
-                        f"{hit.symbol}: no tradeable call")
+                        f"{hit.symbol}: no tradeable {opt_type}")
                 continue
             if real_open + cand["cost"] > real_cap:
                 skip_cap += 1

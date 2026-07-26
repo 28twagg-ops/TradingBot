@@ -1,0 +1,501 @@
+{
+  "generated": "2026-07-26",
+  "next_id": 200,
+  "strategies": [
+    {
+      "strategy_id": "S200",
+      "signal_name": "GapDown_Aggressive",
+      "signal_params": {
+        "gap_thresh": -0.03,
+        "vz_min": 2.0,
+        "rsi_max": 50
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S201",
+      "signal_name": "GapDown_Mild",
+      "signal_params": {
+        "gap_lo": -0.03,
+        "gap_hi": -0.015,
+        "vz_min": 1.0
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S202",
+      "signal_name": "GapDown_Monster",
+      "signal_params": {
+        "gap_thresh": -0.05
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S203",
+      "signal_name": "GapUp_Fade",
+      "signal_params": {
+        "gap_thresh": 0.03
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "put",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S204",
+      "signal_name": "GapUp_Continuation",
+      "signal_params": {
+        "gap_thresh": 0.02,
+        "vz_min": 2.0
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S205",
+      "signal_name": "GapDown_HighVol",
+      "signal_params": {
+        "gap_thresh": -0.02,
+        "vz_min": 3.0
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S206",
+      "signal_name": "GapDown_WithTrend",
+      "signal_params": {
+        "gap_thresh": -0.02,
+        "vz_min": 1.5
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S207",
+      "signal_name": "GapDown_AtSupport",
+      "signal_params": {
+        "gap_thresh": -0.02,
+        "ma50_pct": 0.05
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S208",
+      "signal_name": "GapDown_AboveMA200",
+      "signal_params": {
+        "gap_thresh": -0.02
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S209",
+      "signal_name": "GapDown_Recovery",
+      "signal_params": {
+        "gap_thresh": -0.02
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S210",
+      "signal_name": "MA_Cross_8_21",
+      "signal_params": {
+        "fast": 8,
+        "slow": 21
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S211",
+      "signal_name": "MA_Cross_21_50",
+      "signal_params": {
+        "fast": 21,
+        "slow": 50
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S212",
+      "signal_name": "MA_Bounce_50",
+      "signal_params": {
+        "ma": 50,
+        "pct_band": 0.03
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S213",
+      "signal_name": "MA_Bounce_200",
+      "signal_params": {
+        "ma": 200,
+        "pct_band": 0.03
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S214",
+      "signal_name": "MA_Death_Cross",
+      "signal_params": {
+        "fast": 50,
+        "slow": 200
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "put",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S215",
+      "signal_name": "MA_Reclaim_200",
+      "signal_params": {
+        "ma": 200,
+        "lookback": 10
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S216",
+      "signal_name": "RSI_Oversold_Cross",
+      "signal_params": {
+        "rsi_thresh": 30
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S217",
+      "signal_name": "RSI_25_Bounce",
+      "signal_params": {
+        "rsi_thresh": 25
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S218",
+      "signal_name": "BB_Lower_Touch",
+      "signal_params": {
+        "std": 2.0,
+        "window": 20
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S219",
+      "signal_name": "Volume_Climax_Up",
+      "signal_params": {
+        "vz_min": 3.0
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-26",
+      "drop_reason": ""
+    }
+  ]
+}

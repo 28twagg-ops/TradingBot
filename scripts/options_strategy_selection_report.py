@@ -48,6 +48,17 @@ DTE_PROFILE: dict[str, str] = {
     "S175": "3d ATM earnings drift",
     "S173": "MomRev",
     "S174": "RubberBand (dropped)",
+    # Phase-1 (2026-07-25B)
+    "S200": "3d ATM gap-aggr", "S201": "3d ATM gap-mild",
+    "S202": "3d ATM gap-monster", "S203": "3d ATM gap-up fade (put)",
+    "S204": "3d ATM gap-up cont", "S205": "3d ATM gap-highvol",
+    "S206": "3d ATM gap-trend", "S207": "3d ATM gap-support",
+    "S208": "3d ATM gap-ma200", "S209": "3d ATM gap-recovery",
+    "S210": "3d ATM MA cross 8/21", "S211": "3d ATM MA cross 21/50",
+    "S212": "3d ATM MA bounce 50", "S213": "3d ATM MA bounce 200",
+    "S214": "3d ATM death cross (put)", "S215": "3d ATM MA reclaim 200",
+    "S216": "3d ATM RSI x30", "S217": "3d ATM RSI<25 bounce",
+    "S218": "3d ATM BB lower touch", "S219": "3d ATM vol climax up",
 }
 
 COMPARISON_GROUPS: list[tuple[str, list[str]]] = [
@@ -55,6 +66,10 @@ COMPARISON_GROUPS: list[tuple[str, list[str]]] = [
     ("GapDown Strike comparison", ["S165", "S167"]),
     ("New Pattern Strategies — GapDown signal independent",
      ["S169", "S170", "S171", "S172", "S175"]),
+    ("Phase-1 Gap family", ["S200", "S201", "S202", "S204", "S205", "S206", "S207", "S208", "S209"]),
+    ("Phase-1 Bearish Gap & MA", ["S203", "S214"]),
+    ("Phase-1 MA family", ["S210", "S211", "S212", "S213", "S215"]),
+    ("Phase-1 RSI/BB/Vol", ["S216", "S217", "S218", "S219"]),
     ("Other", ["S173"]),
 ]
 
@@ -327,6 +342,116 @@ def _comparison_section(rows: list[StratStats]) -> list[str]:
     return lines
 
 
+def _pipeline_section(rows: list[StratStats]) -> list[str]:
+    """
+    Strategy Pipeline Status section -- added 2026-07-25B.
+    Reads from strategy_eval.md if available, else builds from StratStats.
+    """
+    from pathlib import Path as _Path
+    from options_strategy_lab import (
+        evaluate_for_kill, _load_ledger, _LEDGER_PATH,
+        KILL_MIN_N, PROMOTE_MIN_N, PROMOTE_MEDIAN_THRESH,
+    )
+
+    eval_report = TRIAL_ROOT / "reports" / "strategy_eval.md"
+    ledger_df = _load_ledger(_LEDGER_PATH)
+
+    today = date.today().isoformat()
+    lines: list[str] = [
+        "## Strategy Pipeline Status",
+        "",
+        f"_Pipeline evaluation as of {today}. "
+        "Auto-kill thresholds: median<-25% at n>=15, p10<-85%, WR<15% at n>=25. "
+        "Promote: n>=30 median>0%._",
+        "",
+        "| Strategy | Signal | n | Median% | WR% | Status | Days |",
+        "|----------|--------|---|---------|-----|--------|------|",
+    ]
+
+    by_id = {r.strategy_id: r for r in rows}
+
+    # Include all rows (existing S163-S175) plus phase-1 (S200+)
+    all_ids: list[str] = sorted(
+        {r.strategy_id for r in rows}
+        | {s.id for s in PAPER_STRATEGIES if s.id >= "S200"},
+        key=lambda x: x,
+    )
+
+    for sid in all_ids:
+        r = by_id.get(sid)
+        n = r.exits if r else 0
+        med = f"{r.med_return_pct:+.2f}%" if (r and r.exits >= 1) else "—"
+        wr_pct = (100.0 * r.wins / r.exits) if (r and r.exits) else 0.0
+        wr_s = f"{wr_pct:.0f}%" if (r and r.exits) else "—"
+        days = r.days_since_first_entry if r and r.days_since_first_entry else 0
+        signal_name = r.strategy_name if r else sid
+
+        verdict = "NEW"
+        if ledger_df is not None and n >= KILL_MIN_N:
+            verdict = evaluate_for_kill(sid, ledger_df)
+        elif n > 0:
+            verdict = "WATCH"
+
+        lines.append(
+            f"| {sid} | {signal_name[:22]} | {n} | {med} | {wr_s} "
+            f"| {verdict} | {days} |"
+        )
+
+    # Auto-kill log
+    lines += [
+        "",
+        "## Auto-Kill Log",
+        "",
+        "| Date | Strategy | Reason | n | Median% |",
+        "|------|----------|--------|---|---------|",
+    ]
+    # Pull from eval report if present
+    killed_rows = []
+    if eval_report.exists():
+        try:
+            text = eval_report.read_text(encoding="utf-8")
+            in_kill = False
+            for ln in text.splitlines():
+                if "## Auto-Kill Log" in ln:
+                    in_kill = True
+                    continue
+                if in_kill and ln.startswith("| 20"):
+                    killed_rows.append(ln)
+                elif in_kill and ln.startswith("##"):
+                    break
+        except Exception:
+            pass
+    if killed_rows:
+        lines.extend(killed_rows)
+    else:
+        lines.append("| — | — | (no kills yet) | — | — |")
+
+    # Promote candidates
+    promote = [
+        r for r in rows
+        if r.exits >= PROMOTE_MIN_N and r.med_return_pct > PROMOTE_MEDIAN_THRESH
+    ]
+    lines += [
+        "",
+        "## Promote Candidates (n>=30, median>0%)",
+        "",
+        "| Strategy | n | Median% | WR% | Recommendation |",
+        "|----------|---|---------|-----|----------------|",
+    ]
+    if promote:
+        for r in sorted(promote, key=lambda x: -x.med_return_pct):
+            wr_pct = (100.0 * r.wins / r.exits) if r.exits else 0.0
+            lines.append(
+                f"| {r.strategy_id} | {r.exits} | {r.med_return_pct:+.2f}% "
+                f"| {wr_pct:.0f}% | Tyler review |"
+            )
+    else:
+        lines.append("| — | — | — | — | (none yet — collecting data) |")
+
+    lines.append("")
+    return lines
+
+
 def write_report(as_of_day: str, rows: list[StratStats], summary: dict) -> tuple[Path, Path]:
     out_dir = TRIAL_ROOT / "reports"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -381,6 +506,7 @@ def write_report(as_of_day: str, rows: list[StratStats], summary: dict) -> tuple
         )
     lines.append("")
     lines.extend(_comparison_section(rows))
+    lines.extend(_pipeline_section(rows))
     lines.extend(
         [
             "## Notes",

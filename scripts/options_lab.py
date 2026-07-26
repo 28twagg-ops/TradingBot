@@ -120,7 +120,7 @@ class BucketProfile:
 # Experiment grid — generated up to TARGET_BUCKET_PROFILES variants.
 def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
     n = target if target is not None else TARGET_BUCKET_PROFILES
-    n = max(8, min(n, 200))
+    n = max(8, min(n, 5000))  # raised cap from 200 to 5000 for 100+ strategy framework
 
     if CONTROLLED_LAYOUT:
         # Controlled mode: isolate time-window effect and strategy effect.
@@ -136,6 +136,11 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
         strategy_ids = [
             "S163", "S164", "S165", "S166", "S167", "S168",
             "S169", "S170", "S171", "S172", "S175",
+            # Phase-1 (2026-07-25B): 20 new signals — 160 additional buckets
+            "S200", "S201", "S202", "S203", "S204", "S205",
+            "S206", "S207", "S208", "S209",
+            "S210", "S211", "S212", "S213", "S214", "S215",
+            "S216", "S217", "S218", "S219",
         ]
         reps = 2
         profiles: list[BucketProfile] = []
@@ -167,7 +172,7 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
                         )
                     )
                     idx += 1
-        # Exact layout is 88; honor OPTIONS_BUCKET_COUNT as a truncate/cap only.
+        # 2026-07-25B: 31 strategies x 4 windows x 2 reps = 248 buckets. Honor count as cap.
         return profiles[:n]
 
     core = [

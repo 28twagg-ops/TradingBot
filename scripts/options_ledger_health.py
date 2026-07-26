@@ -31,7 +31,7 @@ BASELINE_CUTOFF = date.fromisoformat("2026-07-06")
 # Ledger lot_id pairing was still noisy through 2026-07-14 (optimistic logging /
 # reconcile churn on Jul 13-14). WARN only on unmatched entries AFTER this
 # inclusive date so the daily monitor stays actionable (pre/transition debt = INFO).
-STABLE_AFTER = date.fromisoformat("2026-07-18")
+STABLE_AFTER = date.fromisoformat("2026-07-21")  # advanced 25B: covers S173 last entries 2026-07-20
 
 
 def _f(v, d=0.0) -> float:

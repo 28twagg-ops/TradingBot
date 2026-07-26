@@ -1,10 +1,10 @@
-# Ledger health — 2026-07-25
+# Ledger health — 2026-07-26
 
-_Generated 2026-07-25T15:03:33.703620_
+_Generated 2026-07-26T17:26:19.953676_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
-Baseline cutoff: **2026-07-06** (attribution fix start). WARN only after **2026-07-18** (ledger pairing stabilized); earlier unmatched entries = INFO debt.
+Baseline cutoff: **2026-07-06** (attribution fix start). WARN only after **2026-07-21** (ledger pairing stabilized); earlier unmatched entries = INFO debt.
 
 State file: OK
 
@@ -17,10 +17,10 @@ State file: OK
 | Total open lots             |     1 | INFO |
 | Total closed lots           |   318 | INFO |
 | Pre-cutoff audit debt       |     0 | INFO |
-| Transition audit debt       |   634 | INFO |
+| Transition audit debt       |   639 | INFO |
 
 Notes:
 - **Current stuck** = open in `lab_state.json` and older than stuck threshold (actionable).
-- **Post-stable orphaned / missing exits** = actionable WARN (entry_date > 2026-07-18).
+- **Post-stable orphaned / missing exits** = actionable WARN (entry_date > 2026-07-21).
 - **Pre-cutoff debt** = entry_date < 2026-07-06 (INFO).
-- **Transition debt** = 2026-07-06..2026-07-18 lot_id churn after attribution fix (INFO, not WARN).
+- **Transition debt** = 2026-07-06..2026-07-21 lot_id churn after attribution fix (INFO, not WARN).

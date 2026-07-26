@@ -24,6 +24,7 @@ class SignalHit:
     symbol: str
     price: float
     detail: str
+    option_type: str = "call"   # "call" or "put" — bearish signals set "put"
 
 
 def prepare_bars(sub: pd.DataFrame) -> pd.DataFrame | None:
@@ -280,6 +281,485 @@ def scan_earnings_drift(sub: pd.DataFrame, sym: str, today: date,
     return None
 
 
+# =========================================================================== #
+#  PHASE-1 SCANNERS: S200-S219  (added 2026-07-25B)
+#  All follow: scan_SXXX(sub, sym, today, min_px) -> SignalHit | None
+#  Indicators computed inline from _prep_pattern_bars().
+# =========================================================================== #
+
+# --------------------------------------------------------------------------- #
+#  FAMILY 1: GAP SIGNALS — S200-S209
+# --------------------------------------------------------------------------- #
+
+def scan_s200(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S200 GapDown_Aggressive: gap <= -3%, green close, VZ >= 2.0, RSI < 50."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        gap = float(row.get("gap_pct", float("nan")))
+        vz = float(row.get("vz", float("nan")))
+        rsi = float(row.get("rsi", float("nan")))
+        cn, opn = float(row["close"]), float(row["open"])
+        if any(pd.isna(v) for v in (gap, vz, rsi)) or cn < min_px:
+            return None
+        if gap <= -0.03 and cn > opn and vz >= 2.0 and rsi < 50:
+            return SignalHit("S200", "GapDown_Aggressive", sym, cn,
+                             f"gap {gap:+.1%} vz={vz:.1f} rsi={rsi:.0f}")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s201(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S201 GapDown_Mild: gap -1.5% to -3%, green close, VZ >= 1.0."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        gap = float(row.get("gap_pct", float("nan")))
+        vz = float(row.get("vz", float("nan")))
+        cn, opn = float(row["close"]), float(row["open"])
+        if any(pd.isna(v) for v in (gap, vz)) or cn < min_px:
+            return None
+        if -0.03 < gap <= -0.015 and cn > opn and vz >= 1.0:
+            return SignalHit("S201", "GapDown_Mild", sym, cn,
+                             f"gap {gap:+.1%} vz={vz:.1f}")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s202(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S202 GapDown_Monster: gap <= -5% (capitulation, any close)."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        gap = float(row.get("gap_pct", float("nan")))
+        cn = float(row["close"])
+        if pd.isna(gap) or cn < min_px:
+            return None
+        if gap <= -0.05:
+            return SignalHit("S202", "GapDown_Monster", sym, cn, f"gap {gap:+.1%}")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s203(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S203 GapUp_Fade: gap >= +3%, RED close (gap fill reversal -- PUT)."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        gap = float(row.get("gap_pct", float("nan")))
+        cn, opn = float(row["close"]), float(row["open"])
+        if pd.isna(gap) or cn < min_px:
+            return None
+        if gap >= 0.03 and cn < opn:
+            return SignalHit("S203", "GapUp_Fade", sym, cn,
+                             f"gap {gap:+.1%} red close",
+                             option_type="put")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s204(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S204 GapUp_Continuation: gap >= +2%, green close, VZ >= 2.0 (call)."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        gap = float(row.get("gap_pct", float("nan")))
+        vz = float(row.get("vz", float("nan")))
+        cn, opn = float(row["close"]), float(row["open"])
+        if any(pd.isna(v) for v in (gap, vz)) or cn < min_px:
+            return None
+        if gap >= 0.02 and cn > opn and vz >= 2.0:
+            return SignalHit("S204", "GapUp_Continuation", sym, cn,
+                             f"gap {gap:+.1%} vz={vz:.1f}")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s205(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S205 GapDown_HighVol: gap <= -2%, VZ >= 3.0 (institutional panic)."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        gap = float(row.get("gap_pct", float("nan")))
+        vz = float(row.get("vz", float("nan")))
+        cn = float(row["close"])
+        if any(pd.isna(v) for v in (gap, vz)) or cn < min_px:
+            return None
+        if gap <= -0.02 and vz >= 3.0:
+            return SignalHit("S205", "GapDown_HighVol", sym, cn,
+                             f"gap {gap:+.1%} vz={vz:.1f}")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s206(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S206 GapDown_WithTrend: gap <= -2%, above MA50, green, VZ >= 1.5."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        gap = float(row.get("gap_pct", float("nan")))
+        vz = float(row.get("vz", float("nan")))
+        ma50 = float(row.get("ma50", float("nan")))
+        cn, opn = float(row["close"]), float(row["open"])
+        if any(pd.isna(v) for v in (gap, vz, ma50)) or cn < min_px:
+            return None
+        if gap <= -0.02 and cn > opn and vz >= 1.5 and cn > ma50:
+            return SignalHit("S206", "GapDown_WithTrend", sym, cn,
+                             f"gap {gap:+.1%} vz={vz:.1f} above MA50")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s207(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S207 GapDown_AtSupport: gap <= -2%, close within 5% above MA50 (support zone)."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        gap = float(row.get("gap_pct", float("nan")))
+        ma50 = float(row.get("ma50", float("nan")))
+        cn, opn = float(row["close"]), float(row["open"])
+        if any(pd.isna(v) for v in (gap, ma50)) or cn < min_px or ma50 <= 0:
+            return None
+        dist = (cn - ma50) / ma50
+        if gap <= -0.02 and cn > opn and 0 <= dist <= 0.05:
+            return SignalHit("S207", "GapDown_AtSupport", sym, cn,
+                             f"gap {gap:+.1%} MA50 dist={dist:.1%}")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s208(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S208 GapDown_AboveMA200: gap <= -2%, green, price > MA200 (quality name)."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        gap = float(row.get("gap_pct", float("nan")))
+        ma200 = float(row.get("ma200", float("nan")))
+        cn, opn = float(row["close"]), float(row["open"])
+        if any(pd.isna(v) for v in (gap, ma200)) or cn < min_px:
+            return None
+        if gap <= -0.02 and cn > opn and cn > ma200:
+            return SignalHit("S208", "GapDown_AboveMA200", sym, cn,
+                             f"gap {gap:+.1%} above MA200")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s209(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S209 GapDown_Recovery: gap <= -2%, close > prior close (immediate recovery)."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        gap = float(row.get("gap_pct", float("nan")))
+        prior_close = float(row.get("prior_close", float("nan")))
+        cn = float(row["close"])
+        if any(pd.isna(v) for v in (gap, prior_close)) or cn < min_px:
+            return None
+        if gap <= -0.02 and cn > prior_close:
+            return SignalHit("S209", "GapDown_Recovery", sym, cn,
+                             f"gap {gap:+.1%} recovery above prev close")
+    except Exception:
+        pass
+    return None
+
+
+# --------------------------------------------------------------------------- #
+#  FAMILY 2: MOVING AVERAGE SIGNALS — S210-S215
+# --------------------------------------------------------------------------- #
+
+def _ma_cross(df: pd.DataFrame, fast_n: int, slow_n: int) -> tuple[bool, bool]:
+    """Return (crossed_above_today, was_below_yesterday)."""
+    c = df["close"]
+    fast = c.rolling(fast_n).mean()
+    slow = c.rolling(slow_n).mean()
+    if len(fast) < 2 or pd.isna(fast.iloc[-1]) or pd.isna(slow.iloc[-1]):
+        return False, False
+    cross_today = fast.iloc[-1] > slow.iloc[-1]
+    was_below = fast.iloc[-2] <= slow.iloc[-2]
+    return cross_today and was_below, True
+
+
+def scan_s210(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S210 MA_Cross_8_21: 8-day MA crosses above 21-day MA."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        if str(df.index[-1].date()) != str(today):
+            return None
+        cn = float(df.iloc[-1]["close"])
+        if cn < min_px:
+            return None
+        crossed, _ = _ma_cross(df, 8, 21)
+        if crossed:
+            ma8 = float(df["close"].rolling(8).mean().iloc[-1])
+            return SignalHit("S210", "MA_Cross_8_21", sym, cn,
+                             f"MA8 {ma8:.2f} crossed above MA21")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s211(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S211 MA_Cross_21_50: 21-day crosses above 50-day."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        if str(df.index[-1].date()) != str(today):
+            return None
+        cn = float(df.iloc[-1]["close"])
+        if cn < min_px:
+            return None
+        crossed, _ = _ma_cross(df, 21, 50)
+        if crossed:
+            return SignalHit("S211", "MA_Cross_21_50", sym, cn,
+                             "MA21 crossed above MA50")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s212(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S212 MA_Bounce_50: touch 50MA from above + green candle."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        ma50 = float(row.get("ma50", float("nan")))
+        lo = float(row["low"])
+        cn, opn = float(row["close"]), float(row["open"])
+        if pd.isna(ma50) or cn < min_px:
+            return None
+        pct_from_ma = abs(lo - ma50) / ma50
+        if pct_from_ma <= 0.015 and cn > opn:
+            return SignalHit("S212", "MA_Bounce_50", sym, cn,
+                             f"low={lo:.2f} MA50={ma50:.2f} touch+green")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s213(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S213 MA_Bounce_200: touch 200MA from above + green candle."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        ma200 = float(row.get("ma200", float("nan")))
+        lo = float(row["low"])
+        cn, opn = float(row["close"]), float(row["open"])
+        if pd.isna(ma200) or cn < min_px:
+            return None
+        pct_from_ma = abs(lo - ma200) / ma200
+        if pct_from_ma <= 0.02 and cn > opn:
+            return SignalHit("S213", "MA_Bounce_200", sym, cn,
+                             f"low={lo:.2f} MA200={ma200:.2f} touch+green")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s214(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S214 MA_Death_Cross: 50MA crosses below 200MA -- PUT signal."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        if str(df.index[-1].date()) != str(today):
+            return None
+        cn = float(df.iloc[-1]["close"])
+        if cn < min_px:
+            return None
+        c = df["close"]
+        ma50 = c.rolling(50).mean()
+        ma200 = c.rolling(200).mean()
+        if pd.isna(ma50.iloc[-1]) or pd.isna(ma200.iloc[-1]):
+            return None
+        below_today = ma50.iloc[-1] < ma200.iloc[-1]
+        was_above = ma50.iloc[-2] >= ma200.iloc[-2] if len(ma50) >= 2 else False
+        if below_today and was_above:
+            return SignalHit("S214", "MA_Death_Cross", sym, cn,
+                             f"MA50 {ma50.iloc[-1]:.2f} crossed below MA200 {ma200.iloc[-1]:.2f}",
+                             option_type="put")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s215(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S215 MA_Reclaim_200: price reclaims 200MA after being below it (within 10d)."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None or len(df) < 12:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        ma200 = float(row.get("ma200", float("nan")))
+        cn = float(row["close"])
+        if pd.isna(ma200) or cn < min_px:
+            return None
+        above_today = cn > ma200
+        prev_closes = df["close"].iloc[-11:-1]
+        prev_ma200 = df["close"].rolling(200).mean().iloc[-11:-1]
+        was_below_recently = any(
+            float(pc) < float(pm)
+            for pc, pm in zip(prev_closes, prev_ma200)
+            if not pd.isna(pm)
+        )
+        if above_today and was_below_recently:
+            return SignalHit("S215", "MA_Reclaim_200", sym, cn,
+                             f"price {cn:.2f} reclaimed MA200 {ma200:.2f}")
+    except Exception:
+        pass
+    return None
+
+
+# --------------------------------------------------------------------------- #
+#  EARLY RSI / BB / VOLUME ENTRIES — S216-S219
+# --------------------------------------------------------------------------- #
+
+def scan_s216(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S216 RSI_Oversold_Cross: RSI crosses above 30 (oversold recovery)."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None or len(df) < 2:
+            return None
+        if str(df.index[-1].date()) != str(today):
+            return None
+        rsi_today = float(df.iloc[-1].get("rsi", float("nan")))
+        rsi_prev = float(df.iloc[-2].get("rsi", float("nan")))
+        cn = float(df.iloc[-1]["close"])
+        if any(pd.isna(v) for v in (rsi_today, rsi_prev)) or cn < min_px:
+            return None
+        if rsi_today > 30 and rsi_prev <= 30:
+            return SignalHit("S216", "RSI_Oversold_Cross", sym, cn,
+                             f"RSI crossed 30: {rsi_prev:.1f} -> {rsi_today:.1f}")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s217(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S217 RSI_25_Bounce: RSI < 25 + green candle (deeper oversold entry)."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        rsi = float(row.get("rsi", float("nan")))
+        cn, opn = float(row["close"]), float(row["open"])
+        if pd.isna(rsi) or cn < min_px:
+            return None
+        if rsi < 25 and cn > opn:
+            return SignalHit("S217", "RSI_25_Bounce", sym, cn,
+                             f"RSI={rsi:.1f} green")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s218(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S218 BB_Lower_Touch: price touches lower 2.0-std band + green candle."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        bbl = float(row.get("bbl20", float("nan")))
+        lo = float(row["low"])
+        cn, opn = float(row["close"]), float(row["open"])
+        if pd.isna(bbl) or cn < min_px:
+            return None
+        if lo <= bbl * 1.005 and cn > opn:
+            return SignalHit("S218", "BB_Lower_Touch", sym, cn,
+                             f"low={lo:.2f} BB_lower={bbl:.2f} touch+green")
+    except Exception:
+        pass
+    return None
+
+
+def scan_s219(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S219 Volume_Climax_Up: VZ >= 3.0 + green candle (institutional accumulation)."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None:
+            return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today):
+            return None
+        vz = float(row.get("vz", float("nan")))
+        cn, opn = float(row["close"]), float(row["open"])
+        if pd.isna(vz) or cn < min_px:
+            return None
+        if vz >= 3.0 and cn > opn:
+            return SignalHit("S219", "Volume_Climax_Up", sym, cn,
+                             f"VZ={vz:.1f} green close")
+    except Exception:
+        pass
+    return None
+
+
 @dataclass
 class StrategyConfig:
     id: str
@@ -327,6 +807,33 @@ PAPER_STRATEGIES: list[StrategyConfig] = [
     StrategyConfig("S172", "Trend Resumption call 3 DTE", 3, 1, 7, scan_trend_resumption),
     StrategyConfig("S175", "Earnings Drift call 3 DTE", 3, 1, 7, scan_earnings_drift),
 ]
+
+# Phase-1 strategies (2026-07-25B): S200-S219 -- 20 signals, 8 buckets each = 160 new buckets
+# Signals with option_type="put": S203 (GapUp_Fade), S214 (MA_Death_Cross)
+PHASE1_STRATEGIES: list[StrategyConfig] = [
+    StrategyConfig("S200", "GapDown_Aggressive", 3, 1, 7, scan_s200),
+    StrategyConfig("S201", "GapDown_Mild",        3, 1, 7, scan_s201),
+    StrategyConfig("S202", "GapDown_Monster",     3, 1, 7, scan_s202),
+    StrategyConfig("S203", "GapUp_Fade",          3, 1, 7, scan_s203),
+    StrategyConfig("S204", "GapUp_Continuation",  3, 1, 7, scan_s204),
+    StrategyConfig("S205", "GapDown_HighVol",     3, 1, 7, scan_s205),
+    StrategyConfig("S206", "GapDown_WithTrend",   3, 1, 7, scan_s206),
+    StrategyConfig("S207", "GapDown_AtSupport",   3, 1, 7, scan_s207),
+    StrategyConfig("S208", "GapDown_AboveMA200",  3, 1, 7, scan_s208),
+    StrategyConfig("S209", "GapDown_Recovery",    3, 1, 7, scan_s209),
+    StrategyConfig("S210", "MA_Cross_8_21",       3, 1, 7, scan_s210),
+    StrategyConfig("S211", "MA_Cross_21_50",      3, 1, 7, scan_s211),
+    StrategyConfig("S212", "MA_Bounce_50",        3, 1, 7, scan_s212),
+    StrategyConfig("S213", "MA_Bounce_200",       3, 1, 7, scan_s213),
+    StrategyConfig("S214", "MA_Death_Cross",      3, 1, 7, scan_s214),
+    StrategyConfig("S215", "MA_Reclaim_200",      3, 1, 7, scan_s215),
+    StrategyConfig("S216", "RSI_Oversold_Cross",  3, 1, 7, scan_s216),
+    StrategyConfig("S217", "RSI_25_Bounce",       3, 1, 7, scan_s217),
+    StrategyConfig("S218", "BB_Lower_Touch",      3, 1, 7, scan_s218),
+    StrategyConfig("S219", "Volume_Climax_Up",    3, 1, 7, scan_s219),
+]
+
+PAPER_STRATEGIES.extend(PHASE1_STRATEGIES)
 
 # Kept for reports / name lookup only — not scanned.
 DROPPED_PAPER_STRATEGIES: list[StrategyConfig] = [
