@@ -660,3 +660,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-07-27 13:57:43,2026-07-27,SELL,APA,Pullback50,35.73,35.73,35.735,97.73,0.014,0.0137,limit_fill_position_check_full,midline (-0.2%),bull
 2026-07-27 13:58:14,2026-07-27,SELL,DRI,Pullback50,201.895,201.61,201.724,97.5,-0.0847,-0.0826,limit_fill_position_check_full,midline (-0.1%),bull
 2026-07-27 14:01:06,2026-07-27,SELL,ALGN,Pullback50,170.3,,170.3,97.06,0.0,0.0,market_urgent_full,stop_loss (-0.9%),bull
+2026-07-27 15:51:00,2026-07-27,SELL,CMS,Pullback50,74.38,,74.38,23.03,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
