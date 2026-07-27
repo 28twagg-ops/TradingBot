@@ -2313,3 +2313,60 @@ Fetched daily bars for 903/903 symbols
 ```
 
 ---
+
+## Run 20260727T134601Z
+
+- UTC timestamp: `20260727T134601Z`
+- GitHub run: [#5115](https://github.com/28twagg-ops/TradingBot/actions/runs/30271735776)
+- Run id: `30271735776`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-27T09:25:46.778135-04:00","date":"2026-07-27","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.0,"phases_s":{"reconcile":0.54},"signals":0,"placed":0,"equity":133163.91,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"5111","github_run_id":"30270174127","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:46:02  INFO      Mode: morning_scan
+13:46:03  INFO        [positions] 5/5 (5 valid)
+13:46:04  INFO        SELL LIMIT DTE  qty=0.651561335  limit=$148.97  id=c97a7651-cc13-4204-8a93-ee2ff76c77d5
+13:46:24  INFO        SELL LIMIT not filled for DTE, falling back to market
+13:46:24  WARNING     SELL DTE: {"available":"0","code":40310000,"existing_qty":"0.651561335","held_for_orders":"0.651561335","message":"insufficient qty available for order (requested: 0.651561335, available: 0)","symbol":"DTE"}
+13:46:25  INFO        SELL LIMIT LNT  qty=0.303842305  limit=$74.78  id=988371df-2072-4d41-973a-c52a12ec7d9d
+13:46:45  INFO        SELL LIMIT filled LNT (confirmed by position check)
+13:46:45  INFO        TX logged: SELL LNT  P&L 1.18%
+13:46:45  INFO        SELL LIMIT CL  qty=1.072869139  limit=$91.73  id=428bef15-81ec-45c7-b914-111f014403b0
+13:47:06  INFO        SELL LIMIT filled CL (confirmed by position check)
+13:47:06  INFO        TX logged: SELL CL  P&L 1.2%
+13:47:06  INFO        SELL order cancelled CARR  type=OrderType.STOP  id=1dc8d077-e605-474d-bff1-e811869c8b14
+13:47:06  INFO        SELL LIMIT CARR  qty=1.415380984  limit=$69.20  id=18160796-23e7-46d3-81a8-0dee7af93385
+13:47:27  INFO        SELL LIMIT filled CARR (confirmed by position check)
+13:47:27  INFO        TX logged: SELL CARR  P&L 2.29%
+13:47:27  INFO        SELL LIMIT ABNB  qty=0.694697045  limit=$143.75  id=7132372d-d9f4-4ad3-ad1e-ea6249d07ee5
+13:47:48  INFO        SELL LIMIT filled ABNB (confirmed by position check)
+13:47:48  INFO        TX logged: SELL ABNB  P&L 3.14%
+13:47:48  INFO        Universe cache hit: 903 tickers (tickers_2026-07-27.json)
+13:47:49  INFO        [universe] 40/902 (40 valid)
+13:47:51  INFO        [universe] 80/902 (80 valid)
+13:47:52  INFO        [universe] 120/902 (120 valid)
+13:47:53  INFO        [universe] 160/902 (160 valid)
+13:47:55  INFO        [universe] 200/902 (199 valid)
+13:48:02  INFO        [universe] 240/902 (238 valid)
+13:48:12  INFO        [universe] 280/902 (278 valid)
+13:48:26  INFO        [universe] 320/902 (318 valid)
+13:48:36  INFO        [universe] 360/902 (358 valid)
+13:48:49  INFO        [universe] 400/902 (397 valid)
+13:49:03  INFO        [universe] 440/902 (437 valid)
+13:49:13  INFO        [universe] 480/902 (477 valid)
+13:49:26  INFO        [universe] 520/902 (517 valid)
+13:49:37  INFO        [universe] 560/902 (557 valid)
+13:49:50  INFO        [universe] 600/902 (597 valid)
+13:50:01  INFO        [universe] 640/902 (637 valid)
+13:50:14  INFO        [universe] 680/902 (677 valid)
+```
+
+### Options bot full output
+
+```text
