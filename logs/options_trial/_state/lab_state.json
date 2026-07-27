@@ -2,15 +2,15 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "b6c4032bc312",
-      "bucket_id": 239,
-      "profile_name": "c239_s218_w4_1120_1135_r2",
-      "strategy_id": "S218",
-      "occ_symbol": "CMCSA260731C00023500",
-      "underlying": "CMCSA",
+      "lot_id": "2395d02305ea",
+      "bucket_id": 223,
+      "profile_name": "c223_s216_w4_1120_1135_r2",
+      "strategy_id": "S216",
+      "occ_symbol": "GOOGL260729C00342500",
+      "underlying": "GOOGL",
       "qty": 1,
-      "entry_cost": 23.0,
-      "entry_price": 0.23,
+      "entry_cost": 56.00000000000001,
+      "entry_price": 0.56,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
@@ -19,18 +19,18 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-27",
-      "entry_order_id": "84a90948-fa71-4716-8959-115785874e15"
+      "entry_order_id": "f739356a-29fd-46c6-8bb0-eeab04e80962"
     },
     {
-      "lot_id": "1f55186844cd",
-      "bucket_id": 191,
-      "profile_name": "c191_s212_w4_1120_1135_r2",
-      "strategy_id": "S212",
-      "occ_symbol": "ADBE260731C00260000",
-      "underlying": "ADBE",
+      "lot_id": "a684daad7131",
+      "bucket_id": 222,
+      "profile_name": "c222_s216_w4_1120_1135_r1",
+      "strategy_id": "S216",
+      "occ_symbol": "GOOGL260729C00342500",
+      "underlying": "GOOGL",
       "qty": 1,
-      "entry_cost": 60.0,
-      "entry_price": 0.6,
+      "entry_cost": 56.00000000000001,
+      "entry_price": 0.56,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
@@ -39,27 +39,7 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-27",
-      "entry_order_id": "bde530a8-ff37-4e4c-bb7c-b3cad754aaa9"
-    },
-    {
-      "lot_id": "be15ea75b8ec",
-      "bucket_id": 190,
-      "profile_name": "c190_s212_w4_1120_1135_r1",
-      "strategy_id": "S212",
-      "occ_symbol": "ADBE260731C00260000",
-      "underlying": "ADBE",
-      "qty": 1,
-      "entry_cost": 60.0,
-      "entry_price": 0.6,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-27",
-      "entry_order_id": "ae92c35c-e5a0-4fa3-8ca4-6a606cd5b66a"
+      "entry_order_id": "de61f3ec-3aa8-47ee-a63d-b57c37a8ffb0"
     }
   ],
   "pending_orders": [
@@ -352,38 +332,6 @@
       "stop_loss": -0.5
     },
     {
-      "order_id": "de61f3ec-3aa8-47ee-a63d-b57c37a8ffb0",
-      "bucket_id": 222,
-      "strategy_id": "S216",
-      "occ_symbol": "GOOGL260729C00342500",
-      "underlying": "GOOGL",
-      "qty": 1,
-      "limit": 0.56,
-      "profile_name": "c222_s216_w4_1120_1135_r1",
-      "submitted": "2026-07-27",
-      "detail": "RSI crossed 30: 26.5 -> 32.2",
-      "spread_frac": 0.111111111111111,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "f739356a-29fd-46c6-8bb0-eeab04e80962",
-      "bucket_id": 223,
-      "strategy_id": "S216",
-      "occ_symbol": "GOOGL260729C00342500",
-      "underlying": "GOOGL",
-      "qty": 1,
-      "limit": 0.56,
-      "profile_name": "c223_s216_w4_1120_1135_r2",
-      "submitted": "2026-07-27",
-      "detail": "RSI crossed 30: 26.5 -> 32.2",
-      "spread_frac": 0.111111111111111,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
       "order_id": "3775a83b-f20e-4836-8218-8db5656cb9c8",
       "bucket_id": 182,
       "strategy_id": "S211",
@@ -418,9 +366,8 @@
   ],
   "pending_exits": [],
   "bucket_open_premium": {
-    "b239": 23.0,
-    "b191": 60.0,
-    "b190": 60.0
+    "b223": 56.00000000000001,
+    "b222": 56.00000000000001
   },
   "session_date": "2026-07-27",
   "entries_locked": [
@@ -993,7 +940,9 @@
     "8e31fd51-2ffa-4d4b-939b-359106a2b52e",
     "84a90948-fa71-4716-8959-115785874e15",
     "bde530a8-ff37-4e4c-bb7c-b3cad754aaa9",
-    "ae92c35c-e5a0-4fa3-8ca4-6a606cd5b66a"
+    "ae92c35c-e5a0-4fa3-8ca4-6a606cd5b66a",
+    "f739356a-29fd-46c6-8bb0-eeab04e80962",
+    "de61f3ec-3aa8-47ee-a63d-b57c37a8ffb0"
   ],
   "submitted_today": 102,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

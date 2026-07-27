@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-27 15:30:29.100850+00:00,entry,223,c223_s216_w4_1120_1135_r2,S216,2395d02305ea,GOOGL,GOOGL260729C00342500,1,0.56,0.56,56.0,,,,-0.01,,0.5,-0.5,0.111111111111111,RSI crossed 30: 26.5 -> 32.2,f739356a-29fd-46c6-8bb0-eeab04e80962

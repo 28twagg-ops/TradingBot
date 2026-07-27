@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-27 15:23:50.169565+00:00,entry,191,c191_s212_w4_1120_1135_r2,S212,1f55186844cd,ADBE,ADBE260731C00260000,1,0.63,0.6,60.0,,,,-0.01,,0.5,-0.5,0.13333333333333325,low=229.79 MA50=228.02 touch+green,bde530a8-ff37-4e4c-bb7c-b3cad754aaa9
+2026-07-27T15:30:47Z,reconcile,191,c191_s212_w4_1120_1135_r2,S212,1f55186844cd,ADBE,ADBE260731C00260000,1,,,60.0,,,zombie_lot,,,,,,zombie age_min=931 notional=$60.00 occ=ADBE260731C00260000 action=submitted:57d44162-af27-44f0-838c-620aa8152c0a,

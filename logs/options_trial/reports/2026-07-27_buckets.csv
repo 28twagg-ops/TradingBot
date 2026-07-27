@@ -189,8 +189,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 187,c187_s212_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-27,False,,,,,,,0,ADBE,S212,,entered_no_exit
 188,c188_s212_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-27,False,,,,,,,0,ADBE,S212,,entered_no_exit
 189,c189_s212_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-27,False,,,,,,,0,ADBE,S212,,entered_no_exit
-190,c190_s212_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-27,False,,,,,,,0,ADBE,S212,,entered_no_exit
-191,c191_s212_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-27,False,,,,,,,0,ADBE,S212,,entered_no_exit
+190,c190_s212_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-27,False,,,,,,,0,ADBE,S212,,entered_no_exit
+191,c191_s212_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-27,False,,,,,,,0,ADBE,S212,,entered_no_exit
 192,c192_s213_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 193,c193_s213_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 194,c194_s213_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
@@ -221,8 +221,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 219,c219_s216_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-27,False,,,,,,,0,GOOGL,S216,,entered_no_exit
 220,c220_s216_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 221,c221_s216_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
-222,c222_s216_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
-223,c223_s216_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
+222,c222_s216_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-27,False,,,,,,,0,GOOGL,S216,,entered_no_exit
+223,c223_s216_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-27,False,,,,,,,0,GOOGL,S216,,entered_no_exit
 224,c224_s217_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-27,False,,,,,,,0,IBM,S217,,entered_no_exit
 225,c225_s217_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-27,False,,,,,,,0,IBM,S217,,entered_no_exit
 226,c226_s217_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-27,False,,,,,,,0,IBM,S217,,entered_no_exit
@@ -238,7 +238,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 236,c236_s218_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-27,False,,,,,,,0,CMCSA,S218,,entered_no_exit
 237,c237_s218_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-27,False,,,,,,,0,CMCSA,S218,,entered_no_exit
 238,c238_s218_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-27,False,,,,,,,0,CMCSA,S218,,entered_no_exit
-239,c239_s218_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-27,False,,,,,,,0,CMCSA,S218,,entered_no_exit
+239,c239_s218_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-07-27,False,,,,,,,0,CMCSA,S218,,entered_no_exit
 240,c240_s219_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 241,c241_s219_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 242,c242_s219_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
