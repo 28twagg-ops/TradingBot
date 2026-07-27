@@ -3520,3 +3520,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-27 19:49:59,scan_evening,bull,487.27,24.41,20,0,0,5,AVB|CBOE|EQR|HUBB|NOW,both
 2026-07-27 20:01:16,ext_exits,bull,486.18,486.18,0,0,0,0,,both
 2026-07-27 20:05:49,ext_exits,bull,486.18,486.18,0,0,0,0,,both
+2026-07-27 20:10:40,ext_exits,bull,486.18,486.18,0,0,0,0,,both
