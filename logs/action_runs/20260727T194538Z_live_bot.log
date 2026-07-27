@@ -1,0 +1,200 @@
+19:45:38  INFO      Mode: scan
+19:45:39  INFO        Universe cache hit: 903 tickers (tickers_2026-07-27.json)
+19:45:40  INFO        [universe] 40/903 (40 valid)
+19:45:41  INFO        [universe] 80/903 (80 valid)
+19:45:42  INFO        [universe] 120/903 (120 valid)
+19:45:43  INFO        [universe] 160/903 (160 valid)
+19:45:45  INFO        [universe] 200/903 (199 valid)
+19:45:52  INFO        [universe] 240/903 (238 valid)
+19:46:05  INFO        [universe] 280/903 (278 valid)
+19:46:18  INFO        [universe] 320/903 (318 valid)
+19:46:28  INFO        [universe] 360/903 (358 valid)
+19:46:41  INFO        [universe] 400/903 (397 valid)
+19:46:54  INFO        [universe] 440/903 (437 valid)
+19:47:04  INFO        [universe] 480/903 (477 valid)
+19:47:17  INFO        [universe] 520/903 (517 valid)
+19:47:30  INFO        [universe] 560/903 (557 valid)
+19:47:39  INFO        [universe] 600/903 (597 valid)
+19:47:52  INFO        [universe] 640/903 (637 valid)
+19:48:05  INFO        [universe] 680/903 (677 valid)
+19:48:15  INFO        [universe] 720/903 (717 valid)
+19:48:28  INFO        [universe] 760/903 (757 valid)
+19:48:41  INFO        [universe] 800/903 (797 valid)
+19:48:54  INFO        [universe] 840/903 (836 valid)
+19:49:04  INFO        [universe] 880/903 (876 valid)
+19:49:11  INFO        [universe] 903/903 (899 valid)
+19:49:13  INFO        BUY  NOW  $97.49  [EarningsDrift]  id=573cca61-a17a-4029-a2fc-04c961e28d8b
+19:49:14  INFO        BUY  AVB  $97.49  [Pullback50]  id=1a702dc4-c733-47c3-81b8-1811cae1e12d
+19:49:14  INFO        BUY  CBOE  $97.49  [Pullback50]  id=c9c27f83-ca82-40d0-abba-fc66f8b85d9c
+19:49:14  INFO        BUY  EQR  $97.49  [Pullback50]  id=a5604e9f-dfff-46b8-9d4c-87ebb5d48158
+19:49:14  INFO        BUY  HUBB  $73.12  [Pullback50]  id=edf20fd5-5ba6-417e-a725-5817a4f3b564
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $487.44|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-27|
+|  Universe                                                          both|
+|  Mon~  Jul: 52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $487.44|
+|  Cash                                                           $487.44|
+|  Reserve                                          $24.37  (always kept)|
+|  Available                                    $463.07  (for new trades)|
+|  Trade size             $97.49  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (0 open)                           |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 5  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (57611.5m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50 (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  20                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AVB      Pullback50      eq     $188.98  38.8   -2.35   50MA bounce (+|
+|  CBOE     Pullback50      eq     $287.88  79.2   -1.49   50MA bounce (-|
+|  EQR      Pullback50      eq     $67.62   36.4   -1.14   50MA bounce (+|
+|  FFIV     VWAP_Reclaim    eq     $405.17  44.6   1.62    VWAP reclaim V|
+|  HUBB     Pullback50      eq     $492.19  58.6   0.64    50MA bounce (+|
+|  IFF      Pullback50      eq     $76.69   37.1   -1.51   50MA bounce (+|
+|  MDLZ     Pullback50      eq     $60.75   52.3   -1.68   50MA bounce (-|
+|  RL       Pullback50      eq     $379.28  43.3   -1.35   50MA bounce (-|
+|  ROK      Pullback50      eq     $465.00  47.5   -2.01   50MA bounce (+|
+|  NOW      EarningsDrift   eq     $105.97  44.7   0.50    post-earnings |
+|  TJX      Pullback50      eq     $156.75  57.8   -1.73   50MA bounce (+|
+|  UBER     RSIRecovery     eq     $68.17   31.3   0.59    RSI 29.9→31.3 |
+|  WST      RSIRecovery     eq     $331.30  33.3   1.00    RSI 29.8→33.3 |
+|  ARW      Pullback50      eq     $214.63  70.8   -1.45   50MA bounce (-|
+|  CART     Pullback50      eq     $43.88   30.4   -1.60   50MA bounce (+|
+|  DINO     TrendResumpti~  eq     $91.11   82.8   0.46    HH/HL resumpti|
+|  DOCS     RSIRecovery     eq     $21.10   36.4   0.46    RSI 27.7→36.4 |
+|  HGV      Pullback50      eq     $50.57   47.6   -2.03   50MA bounce (+|
+|  PEN      Pullback50      eq     $319.75  54.8   -1.30   50MA bounce (+|
+|  PLNT     VWAP_Reclaim    eq     $54.35   59.7   1.67    VWAP reclaim V|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] NOW  EarningsDrift                                 $97.49|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AVB  Pullback50                                    $97.49|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] CBOE  Pullback50                                   $97.49|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] EQR  Pullback50                                    $97.49|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] HUBB  Pullback50                                   $73.12|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] IFF  Pullback50                                      cap 5|
+|    SKIP [eq] MDLZ  Pullback50                                     cap 5|
+|    SKIP [eq] RL  Pullback50                                       cap 5|
+|    SKIP [eq] ROK  Pullback50                                      cap 5|
+|    SKIP [eq] TJX  Pullback50                                      cap 5|
+|    SKIP [eq] ARW  Pullback50                                      cap 5|
+|    SKIP [eq] CART  Pullback50                                     cap 5|
+|    SKIP [eq] HGV  Pullback50                                      cap 5|
+|    SKIP [eq] PEN  Pullback50                                      cap 5|
+|    SKIP [eq] UBER  RSIRecovery                                    cap 5|
+|    SKIP [eq] WST  RSIRecovery                                     cap 5|
+|    SKIP [eq] DOCS  RSIRecovery                                    cap 5|
+|    SKIP [eq] DINO  TrendResumption                                cap 5|19:49:59  INFO        place_all_stops: checking 5 positions...
+19:49:59  INFO        STOP skipped AVB: fractional (0.5159 shares) — software exit will handle it
+19:49:59  INFO        STOP skipped CBOE: fractional (0.3386 shares) — software exit will handle it
+19:49:59  INFO        STOP-MARKET placed EQR  qty=1 (pos=1.4417)  stop=$67.28  id=612b1c09-2d21-4f71-8724-3da439feec72
+19:49:59  INFO        STOP skipped HUBB: fractional (0.1478 shares) — software exit will handle it
+19:49:59  INFO        STOP skipped NOW: fractional (0.9217 shares) — software exit will handle it
+19:49:59  INFO        place_eod_stops: updating 5 stops to current price...
+19:49:59  INFO        EOD stop skip AVB: 0.5159 shares (fractional) — ext_exits will cover
+19:49:59  INFO        EOD stop skip CBOE: 0.3386 shares (fractional) — ext_exits will cover
+19:49:59  INFO        EOD stop: cancelled old stop EQR
+19:49:59  WARNING     EOD stop failed EQR: {"available":"0.44167061","code":40310000,"existing_qty":"1.44167061","held_for_orders":"1","message":"insufficient qty available for order (requested: 1, available: 0.44167061)","symbol":"EQR"}
+19:49:59  INFO        EOD stop skip HUBB: 0.1478 shares (fractional) — ext_exits will cover
+19:49:59  INFO        EOD stop skip NOW: 0.9217 shares (fractional) — ext_exits will cover
+19:49:59  INFO        Daily log -> logs/daily/2026-07-27.md
+19:49:59  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [eq] FFIV  VWAP_Reclaim                                   cap 5|
+|    SKIP [eq] PLNT  VWAP_Reclaim                                   cap 5|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      5|
++------------------------------------------------------------------------+
+|  NOW                                                  still unconfirmed|
+|  AVB                                                  still unconfirmed|
+|  CBOE                                                 still unconfirmed|
+|  EQR                                                  still unconfirmed|
+|  HUBB                                                 still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 5 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Scanned                                                            899|
+|  Signals                                                             20|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  5 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             5|
+|  Equity                                                         $487.27|
+|  Cash                                                            $24.41|
++========================================================================+

@@ -20164,3 +20164,419 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260727T194538Z
+
+- UTC timestamp: `20260727T194538Z`
+- GitHub run: [#5190](https://github.com/28twagg-ops/TradingBot/actions/runs/30299606895)
+- Run id: `30299606895`
+- Live bot: exit=`0`, duration=`261s`
+- Options bot: exit=`0`, duration=`8s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-27T15:50:01.440887-04:00","date":"2026-07-27","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":0.7,"phases_s":{"reconcile":0.14,"cancel":0.03,"manage":0.1},"signals":0,"placed":0,"equity":130350.63,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":102,"filled_today":82,"unattributed_contracts":0,"top_signals":[],"github_run":"5190","github_run_id":"30299606895","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:45:38  INFO      Mode: scan
+19:45:39  INFO        Universe cache hit: 903 tickers (tickers_2026-07-27.json)
+19:45:40  INFO        [universe] 40/903 (40 valid)
+19:45:41  INFO        [universe] 80/903 (80 valid)
+19:45:42  INFO        [universe] 120/903 (120 valid)
+19:45:43  INFO        [universe] 160/903 (160 valid)
+19:45:45  INFO        [universe] 200/903 (199 valid)
+19:45:52  INFO        [universe] 240/903 (238 valid)
+19:46:05  INFO        [universe] 280/903 (278 valid)
+19:46:18  INFO        [universe] 320/903 (318 valid)
+19:46:28  INFO        [universe] 360/903 (358 valid)
+19:46:41  INFO        [universe] 400/903 (397 valid)
+19:46:54  INFO        [universe] 440/903 (437 valid)
+19:47:04  INFO        [universe] 480/903 (477 valid)
+19:47:17  INFO        [universe] 520/903 (517 valid)
+19:47:30  INFO        [universe] 560/903 (557 valid)
+19:47:39  INFO        [universe] 600/903 (597 valid)
+19:47:52  INFO        [universe] 640/903 (637 valid)
+19:48:05  INFO        [universe] 680/903 (677 valid)
+19:48:15  INFO        [universe] 720/903 (717 valid)
+19:48:28  INFO        [universe] 760/903 (757 valid)
+19:48:41  INFO        [universe] 800/903 (797 valid)
+19:48:54  INFO        [universe] 840/903 (836 valid)
+19:49:04  INFO        [universe] 880/903 (876 valid)
+19:49:11  INFO        [universe] 903/903 (899 valid)
+19:49:13  INFO        BUY  NOW  $97.49  [EarningsDrift]  id=573cca61-a17a-4029-a2fc-04c961e28d8b
+19:49:14  INFO        BUY  AVB  $97.49  [Pullback50]  id=1a702dc4-c733-47c3-81b8-1811cae1e12d
+19:49:14  INFO        BUY  CBOE  $97.49  [Pullback50]  id=c9c27f83-ca82-40d0-abba-fc66f8b85d9c
+19:49:14  INFO        BUY  EQR  $97.49  [Pullback50]  id=a5604e9f-dfff-46b8-9d4c-87ebb5d48158
+19:49:14  INFO        BUY  HUBB  $73.12  [Pullback50]  id=edf20fd5-5ba6-417e-a725-5817a4f3b564
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $487.44|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-27|
+|  Universe                                                          both|
+|  Mon~  Jul: 52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $487.44|
+|  Cash                                                           $487.44|
+|  Reserve                                          $24.37  (always kept)|
+|  Available                                    $463.07  (for new trades)|
+|  Trade size             $97.49  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (0 open)                           |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 5  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (57611.5m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50 (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  20                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AVB      Pullback50      eq     $188.98  38.8   -2.35   50MA bounce (+|
+|  CBOE     Pullback50      eq     $287.88  79.2   -1.49   50MA bounce (-|
+|  EQR      Pullback50      eq     $67.62   36.4   -1.14   50MA bounce (+|
+|  FFIV     VWAP_Reclaim    eq     $405.17  44.6   1.62    VWAP reclaim V|
+|  HUBB     Pullback50      eq     $492.19  58.6   0.64    50MA bounce (+|
+|  IFF      Pullback50      eq     $76.69   37.1   -1.51   50MA bounce (+|
+|  MDLZ     Pullback50      eq     $60.75   52.3   -1.68   50MA bounce (-|
+|  RL       Pullback50      eq     $379.28  43.3   -1.35   50MA bounce (-|
+|  ROK      Pullback50      eq     $465.00  47.5   -2.01   50MA bounce (+|
+|  NOW      EarningsDrift   eq     $105.97  44.7   0.50    post-earnings |
+|  TJX      Pullback50      eq     $156.75  57.8   -1.73   50MA bounce (+|
+|  UBER     RSIRecovery     eq     $68.17   31.3   0.59    RSI 29.9→31.3 |
+|  WST      RSIRecovery     eq     $331.30  33.3   1.00    RSI 29.8→33.3 |
+|  ARW      Pullback50      eq     $214.63  70.8   -1.45   50MA bounce (-|
+|  CART     Pullback50      eq     $43.88   30.4   -1.60   50MA bounce (+|
+|  DINO     TrendResumpti~  eq     $91.11   82.8   0.46    HH/HL resumpti|
+|  DOCS     RSIRecovery     eq     $21.10   36.4   0.46    RSI 27.7→36.4 |
+|  HGV      Pullback50      eq     $50.57   47.6   -2.03   50MA bounce (+|
+|  PEN      Pullback50      eq     $319.75  54.8   -1.30   50MA bounce (+|
+|  PLNT     VWAP_Reclaim    eq     $54.35   59.7   1.67    VWAP reclaim V|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] NOW  EarningsDrift                                 $97.49|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AVB  Pullback50                                    $97.49|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] CBOE  Pullback50                                   $97.49|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] EQR  Pullback50                                    $97.49|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] HUBB  Pullback50                                   $73.12|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] IFF  Pullback50                                      cap 5|
+|    SKIP [eq] MDLZ  Pullback50                                     cap 5|
+|    SKIP [eq] RL  Pullback50                                       cap 5|
+|    SKIP [eq] ROK  Pullback50                                      cap 5|
+|    SKIP [eq] TJX  Pullback50                                      cap 5|
+|    SKIP [eq] ARW  Pullback50                                      cap 5|
+|    SKIP [eq] CART  Pullback50                                     cap 5|
+|    SKIP [eq] HGV  Pullback50                                      cap 5|
+|    SKIP [eq] PEN  Pullback50                                      cap 5|
+|    SKIP [eq] UBER  RSIRecovery                                    cap 5|
+|    SKIP [eq] WST  RSIRecovery                                     cap 5|
+|    SKIP [eq] DOCS  RSIRecovery                                    cap 5|
+|    SKIP [eq] DINO  TrendResumption                                cap 5|19:49:59  INFO        place_all_stops: checking 5 positions...
+19:49:59  INFO        STOP skipped AVB: fractional (0.5159 shares) — software exit will handle it
+19:49:59  INFO        STOP skipped CBOE: fractional (0.3386 shares) — software exit will handle it
+19:49:59  INFO        STOP-MARKET placed EQR  qty=1 (pos=1.4417)  stop=$67.28  id=612b1c09-2d21-4f71-8724-3da439feec72
+19:49:59  INFO        STOP skipped HUBB: fractional (0.1478 shares) — software exit will handle it
+19:49:59  INFO        STOP skipped NOW: fractional (0.9217 shares) — software exit will handle it
+19:49:59  INFO        place_eod_stops: updating 5 stops to current price...
+19:49:59  INFO        EOD stop skip AVB: 0.5159 shares (fractional) — ext_exits will cover
+19:49:59  INFO        EOD stop skip CBOE: 0.3386 shares (fractional) — ext_exits will cover
+19:49:59  INFO        EOD stop: cancelled old stop EQR
+19:49:59  WARNING     EOD stop failed EQR: {"available":"0.44167061","code":40310000,"existing_qty":"1.44167061","held_for_orders":"1","message":"insufficient qty available for order (requested: 1, available: 0.44167061)","symbol":"EQR"}
+19:49:59  INFO        EOD stop skip HUBB: 0.1478 shares (fractional) — ext_exits will cover
+19:49:59  INFO        EOD stop skip NOW: 0.9217 shares (fractional) — ext_exits will cover
+19:49:59  INFO        Daily log -> logs/daily/2026-07-27.md
+19:49:59  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [eq] FFIV  VWAP_Reclaim                                   cap 5|
+|    SKIP [eq] PLNT  VWAP_Reclaim                                   cap 5|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      5|
++------------------------------------------------------------------------+
+|  NOW                                                  still unconfirmed|
+|  AVB                                                  still unconfirmed|
+|  CBOE                                                 still unconfirmed|
+|  EQR                                                  still unconfirmed|
+|  HUBB                                                 still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 5 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Scanned                                                            899|
+|  Signals                                                             20|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  5 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             5|
+|  Equity                                                         $487.27|
+|  Cash                                                            $24.41|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=0 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=2
+  zombies_flagged=0
+options_reconcile: done
+Layout: controlled:248:c000_s163_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:248:c000_s163_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      248
+=== options_morning_bot (PAPER) 2026-07-27T15:50:01.440887-04:00 ===
+
+[Run context]
+Paper auth OK — equity $130350.63, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 248 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Manage only]
+Past entry window; manage/exit only.
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          manage-only                             |
+|  Equity                        $130,350.63                             |
+|  Signals this run              0                                       |
+|  Orders submitted (session)    102                                     |
+|  Orders filled today (ledger)  82                                      |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             0                                       |
+|  Broker option positions       0                                       |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S173,S174)                           |
++------------------------------------------------------------------------+
+|  Reflected trades=273  buckets=27  win=30%                             |
+|  Returns   avg=-5.1%  med=-40.0%  p10=-66.2%  p90=+81.8%               |
+|  Realized  $+4,423.13                                                  |
+|  Raw incl dropped  trades=807  real=$+2,827.58                         |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b51  c051_s169_w2_1005_  1 100% +263.6 +263.6 +263.6 $   +174         |
+|  b91  c091_s200_w2_1005_  2 100% +222.0 +222.0 +247.0 $   +293         |
+|  b31  c031_s166_w4_1120_  2 100% +145.5 +145.5 +175.8 $   +192         |
+|  b28  c028_s166_w3_1045_ 22  77% +50.0 +80.0 +102.0 $   +590           |
+|  b58  c058_s170_w2_1005_  1 100% +59.1 +59.1 +59.1 $    +25            |
+|  b56  c056_s170_w1_0928_  1 100% +47.7 +47.7 +47.7 $    +21            |
+|  b57  c057_s170_w1_0928_  1 100% +47.7 +47.7 +47.7 $    +21            |
+|  b89  c089_s200_w1_0928_  9  56% +84.4 +30.9 +790.0 $    +45           |
+|  ... 19 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b20  c020_s165_w3_1045_  1   0% -88.9 -88.9 -88.9 $     -8       |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (0)                                                      |
++------------------------------------------------------------------------+
+|  No open option positions                                              |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-27.log
+elapsed=0.7s reconcile=0.14s cancel=0.03s manage=0.1s
+STATUS: options_morning_bot run complete (PAPER) elapsed=0.7s. run=#5190 https://github.com/28twagg-ops/TradingBot/actions/runs/30299606895
+Evaluation complete: 30 strategies evaluated, 0 killed, 0 promote candidates.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-27_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-27_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-27_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-27_strategy_selection.csv
+Summary: keep=0 watch=30 drop=3
+Orphan rate: 2.7% (22/807)
+# Options signal frequency
+
+_Generated 2026-07-27T15:50:06.945904_
+
+Headline counts are **unique (strategy, underlying, date)** from `ENTRY` lines in `logs/options_trial/runs/*.log`.
+Raw log-line counts (multi-bucket duplicates) are shown below for debug.
+
+### Unique underlying symbols per day (headline)
+
+| Date       | S163 | S164 | S165 | S166 | S167 | S168 | S169 | S170 | S171 | S172 | S175 | S173 | S174 | Total |
+|------------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|------:|
+| 2026-07-07 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    1 |    0 |     1 |
+| 2026-07-08 |    0 |    0 |    3 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    2 |    1 |     6 |
+| 2026-07-09 |    0 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    2 |    3 |     6 |
+| 2026-07-10 |    0 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    1 |    1 |     3 |
+| 2026-07-13 |    0 |    0 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    3 |    2 |     7 |
+| 2026-07-14 |    0 |    0 |    3 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    2 |    0 |     5 |
+| 2026-07-16 |    0 |    0 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    3 |    0 |     5 |
+| 2026-07-17 |    0 |    0 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    2 |    0 |     4 |
+| 2026-07-20 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    1 |    0 |     1 |
+| 2026-07-21 |    1 |    2 |    1 |    1 |    2 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     9 |
+| 2026-07-22 |    1 |    1 |    1 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     4 |
+| 2026-07-24 |    1 |    1 |    1 |    0 |    1 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     5 |
+| 2026-07-27 |    1 |    0 |    1 |    1 |    1 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     5 |
+
+## Per-strategy summary (unique underlyings)
+
+| Strategy | Unique entries | Active days | Avg unique / active day | Est. active days to n=30 exits* |
+|----------|---------------:|------------:|------------------------:|--------------------------------|
+| S163 | 4 | 4 | 1.0 | ~38 active signal-days |
+| S164 | 4 | 3 | 1.3 | ~29 active signal-days |
+| S165 | 18 | 11 | 1.6 | ~23 active signal-days |
+| S166 | 2 | 2 | 1.0 | ~38 active signal-days |
+| S167 | 5 | 4 | 1.2 | ~30 active signal-days |
+| S168 | 4 | 3 | 1.3 | ~29 active signal-days |
+| S169 | 0 | 0 | 0.0 | inf (no unique entries yet) |
+| S170 | 0 | 0 | 0.0 | inf (no unique entries yet) |
+| S171 | 0 | 0 | 0.0 | inf (no unique entries yet) |
+| S172 | 0 | 0 | 0.0 | inf (no unique entries yet) |
+| S175 | 0 | 0 | 0.0 | inf (no unique entries yet) |
+| S173 | 17 | 9 | 1.9 | ~20 active signal-days |
+| S174 | 7 | 4 | 1.8 | ~22 active signal-days |
+
+\* Formula: `ceil(30 / (avg_unique_per_active_day * 80%))`. Update when real exit rates are known.
+
+## Signal frequency by window (all time, unique strategy×symbol×date×window)
+
+| Window | S163 | S164 | S165 | S166 | S167 | S168 | S169 | S170 | S171 | S172 | S175 | S173 | S174 | Total |
+|--------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|------:|
+| w1     |    2 |    1 |    6 |    1 |    2 |    1 |    0 |    0 |    0 |    0 |    0 |    7 |    1 |    21 |
+| w2     |    3 |    2 |    9 |    2 |    3 |    3 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    31 |
+| w3     |    4 |    3 |   10 |    2 |    4 |    3 |    0 |    0 |    0 |    0 |    0 |    7 |    4 |    37 |
+| w4     |    4 |    2 |    8 |    2 |    3 |    3 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    31 |
+
+Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:20–11:35. Parsed from controlled-layout profile names in ENTRY log lines.
+
+## Raw vs unique totals
+
+| Strategy | Raw log lines (includes multi-bucket duplicates) | Unique underlying symbols |
+|----------|-------------------------------------------------:|--------------------------:|
+| S163 | 189 | 4 |
+| S164 | 211 | 4 |
+| S165 | 1657 | 18 |
+| S166 | 89 | 2 |
+| S167 | 211 | 5 |
+| S168 | 144 | 4 |
+| S169 | 0 | 0 |
+| S170 | 0 | 0 |
+| S171 | 0 | 0 |
+| S172 | 0 | 0 |
+| S175 | 0 | 0 |
+| S173 | 1911 | 17 |
+| S174 | 891 | 7 |
+
+### Raw log lines per day (debug / multi-bucket)
+
+| Date       | S163 | S164 | S165 | S166 | S167 | S168 | S169 | S170 | S171 | S172 | S175 | S173 | S174 | Total |
+|------------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|------:|
+| 2026-07-07 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |    0 |   100 |
+| 2026-07-08 |    0 |    0 |  100 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |  100 |   300 |
+| 2026-07-09 |    0 |    0 |   24 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |   15 |   139 |
+| 2026-07-10 |    0 |    0 |  242 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  230 |  202 |   674 |
+| 2026-07-13 |    0 |    0 |  190 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  212 |  188 |   590 |
+| 2026-07-14 |    0 |    0 |  194 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  185 |  106 |   485 |
+| 2026-07-15 |    0 |    0 |  146 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  154 |   58 |   358 |
+| 2026-07-16 |    0 |    0 |  179 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  205 |   58 |   442 |
+| 2026-07-17 |    0 |    0 |  127 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  207 |   58 |   392 |
+| 2026-07-20 |    0 |    0 |  107 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  143 |   58 |   308 |
+| 2026-07-21 |   30 |   35 |  113 |   30 |   35 |   35 |    0 |    0 |    0 |    0 |    0 |  118 |   48 |   444 |
+| 2026-07-22 |   40 |   47 |   86 |   15 |   45 |   20 |    0 |    0 |    0 |    0 |    0 |   77 |    0 |   330 |
+| 2026-07-23 |   30 |   42 |   50 |   15 |   40 |   20 |    0 |    0 |    0 |    0 |    0 |   40 |    0 |   237 |
+| 2026-07-24 |   75 |   87 |   85 |   15 |   77 |   55 |    0 |    0 |    0 |    0 |    0 |   40 |    0 |   434 |
+| 2026-07-27 |   14 |    0 |   14 |   14 |   14 |   14 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    70 |
+
+## Notes
+
+- Pre-router-fix (before 2026-07-17 commit `56660c9e`): S163/S166 were starved — expect zeros until a post-fix entry-window gap-down day.
+- Controlled layout places one ENTRY per matching bucket×strategy; raw counts inflate, unique underlyings do not.
+
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/signal_frequency.md
+## Ledger health — 2026-07-27
+| Check                       | Count | Status |
+|-----------------------------|------:|--------|
+| Current stuck (state)       |     0 | OK |
+| Orphaned lots (post-stable) |     0 | OK |
+| Missing exit records (post) |     0 | OK |
+| State/ledger mismatches     |     0 | OK |
+| Total open lots             |     0 | INFO |
+| Total closed lots           |   318 | INFO |
+| Pre-cutoff audit debt       |     0 | INFO |
+| Transition audit debt       |   744 | INFO |
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_health.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/dashboard.html
+equity=487.27 router=CONFIRMED leaderboard_rows=33
+Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
+| 1 | MomReversal | 9 | 33% | +0.31% | -0.78% | -1.14% | 4.09 | 1.3d | $+1.33 | WATCH |
+| 2 | unknown | 32 | 19% | -0.03% | -0.59% | -1.27% | 1.44 | 0.0d | $+0.29 | ACTIVE |
+```
+
+---
