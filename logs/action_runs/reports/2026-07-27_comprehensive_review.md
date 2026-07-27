@@ -6430,3 +6430,106 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260727T150708Z
+
+- UTC timestamp: `20260727T150708Z`
+- GitHub run: [#5132](https://github.com/28twagg-ops/TradingBot/actions/runs/30278251196)
+- Run id: `30278251196`
+- Live bot: exit=`0`, duration=`2s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-27T11:00:55.410609-04:00","date":"2026-07-27","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":211.5,"phases_s":{"reconcile":0.4,"cancel":0.15,"manage":0.87,"scan":199.74,"entries":9.29,"reconcile2":0.43},"signals":326,"placed":0,"equity":130673.55,"open_positions":2,"pending_orders":10,"open_lots":10,"submitted_today":76,"filled_today":66,"unattributed_contracts":0,"top_signals":["S165:APA","S165:CF","S165:CVX","S165:COP","S165:DVN","S165:FANG","S165:DOW","S165:EOG"],"github_run":"5131","github_run_id":"30277824310","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+15:07:09  INFO      Mode: exits
+15:07:09  INFO        Daily log -> logs/daily/2026-07-27.md
+15:07:09  INFO        Daily log reconciled -> logs/daily/2026-07-27.md (9 ledger rows)
+15:07:09  INFO        place_all_stops: checking 1 positions...
+15:07:10  INFO        STOP already live CMS @ $74.4
+15:07:10  INFO        [positions] 1/1 (1 valid)
+15:07:10  INFO        Daily log -> logs/daily/2026-07-27.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:07 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $487.75|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CMS  P&L -0.2%  $-0.23                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           1|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=10 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=4
+  zombies_flagged=10
+  FLAG b5|S163|c1702e3e zombie age_min=907 notional=$64.00 occ=APA260731C00036000 action=error:{"bid":"0.56","buy_limit_price":"0.61","code":40310000,"existing_order_id":"439aaff2-e52d-4fa1-9f1a-c19313eb4b37","message":"potential wash trade detected. use complex orders","reject_reason":"buy order exists, quote bid should be greater than existing buy limit price"}
+  FLAG b4|S163|a6e411fc zombie age_min=907 notional=$64.00 occ=APA260731C00036000 action=error:{"bid":"0.56","buy_limit_price":"0.61","code":40310000,"existing_order_id":"439aaff2-e52d-4fa1-9f1a-c19313eb4b37","message":"potential wash trade detected. use complex orders","reject_reason":"buy order exists, quote bid should be greater than existing buy limit price"}
+  FLAG b29|S166|0af1b983 zombie age_min=907 notional=$64.00 occ=APA260731C00036000 action=error:{"bid":"0.56","buy_limit_price":"0.61","code":40310000,"existing_order_id":"439aaff2-e52d-4fa1-9f1a-c19313eb4b37","message":"potential wash trade detected. use complex orders","reject_reason":"buy order exists, quote bid should be greater than existing buy limit price"}
+  FLAG b28|S166|2fc7986f zombie age_min=907 notional=$64.00 occ=APA260731C00036000 action=error:{"bid":"0.56","buy_limit_price":"0.61","code":40310000,"existing_order_id":"439aaff2-e52d-4fa1-9f1a-c19313eb4b37","message":"potential wash trade detected. use complex orders","reject_reason":"buy order exists, quote bid should be greater than existing buy limit price"}
+  FLAG b45|S168|98d4f3f9 zombie age_min=907 notional=$64.00 occ=APA260731C00036000 action=error:{"bid":"0.56","buy_limit_price":"0.61","code":40310000,"existing_order_id":"439aaff2-e52d-4fa1-9f1a-c19313eb4b37","message":"potential wash trade detected. use complex orders","reject_reason":"buy order exists, quote bid should be greater than existing buy limit price"}
+  FLAG b44|S168|5bc996b4 zombie age_min=907 notional=$64.00 occ=APA260731C00036000 action=error:{"bid":"0.56","buy_limit_price":"0.61","code":40310000,"existing_order_id":"439aaff2-e52d-4fa1-9f1a-c19313eb4b37","message":"potential wash trade detected. use complex orders","reject_reason":"buy order exists, quote bid should be greater than existing buy limit price"}
+  FLAG b33|S167|6bf61178 zombie age_min=907 notional=$21.00 occ=APA260731C00037500 action=submitted:72ee4893-da5f-4592-b0c1-d747ec6aba45
+  FLAG b32|S167|d81c5e4c zombie age_min=907 notional=$21.00 occ=APA260731C00037500 action=submitted:da359794-f079-4b27-b68c-b5545b429ce2
+  FLAG b17|S165|33779a06 zombie age_min=907 notional=$21.00 occ=APA260731C00037500 action=submitted:49fc5609-3831-4bd6-b1db-73edc441c61b
+  FLAG b16|S165|3bcef6ba zombie age_min=907 notional=$21.00 occ=APA260731C00037500 action=submitted:b513ceb2-b229-4b24-bcb5-45f55e3c7b2b
+options_reconcile: done
+Layout: controlled:248:c000_s163_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:248:c000_s163_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      248
+=== options_morning_bot (PAPER) 2026-07-27T11:07:13.142126-04:00 ===
+
+[Run context]
+Paper auth OK — equity $130114.55, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 248 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219] …
+Fetched daily bars for 903/903 symbols
+Found 323 signal(s); top: ['S165:APA', 'S165:CF', 'S165:CVX', 'S165:COP', 'S165:DVN', 'S165:FANG', 'S165:DOW', 'S165:EOG']
+Paper lab: $130095 broker equity -> 248 bucket(s) ($500 virtual each, unlimited paper)
+```
+
+---
