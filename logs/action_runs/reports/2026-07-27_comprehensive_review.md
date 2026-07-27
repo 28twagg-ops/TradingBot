@@ -20632,3 +20632,44 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ### Options bot full output
 
 ```text
+
+## Run 20260727T195557Z
+
+- UTC timestamp: `20260727T195557Z`
+- GitHub run: [#5192](https://github.com/28twagg-ops/TradingBot/actions/runs/30300338170)
+- Run id: `30300338170`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-27T15:50:01.440887-04:00","date":"2026-07-27","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":0.7,"phases_s":{"reconcile":0.14,"cancel":0.03,"manage":0.1},"signals":0,"placed":0,"equity":130350.63,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":102,"filled_today":82,"unattributed_contracts":0,"top_signals":[],"github_run":"5190","github_run_id":"30299606895","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:55:58  INFO      Mode: scan
+19:55:58  INFO        [positions] 2/2 (2 valid)
+19:55:58  INFO        Universe cache hit: 903 tickers (tickers_2026-07-27.json)
+19:55:59  INFO        [universe] 40/901 (40 valid)
+19:56:00  INFO        [universe] 80/901 (80 valid)
+19:56:02  INFO        [universe] 120/901 (120 valid)
+19:56:11  INFO        [universe] 160/901 (160 valid)
+19:56:21  INFO        [universe] 200/901 (199 valid)
+19:56:34  INFO        [universe] 240/901 (238 valid)
+19:56:47  INFO        [universe] 280/901 (278 valid)
+19:57:00  INFO        [universe] 320/901 (318 valid)
+19:57:10  INFO        [universe] 360/901 (358 valid)
+19:57:23  INFO        [universe] 400/901 (397 valid)
+19:57:36  INFO        [universe] 440/901 (437 valid)
+19:57:45  INFO        [universe] 480/901 (477 valid)
+19:57:59  INFO        [universe] 520/901 (517 valid)
+19:58:11  INFO        [universe] 560/901 (557 valid)
+19:58:24  INFO        [universe] 600/901 (597 valid)
+19:58:34  INFO        [universe] 640/901 (637 valid)
+19:58:47  INFO        [universe] 680/901 (677 valid)
+```
+
+### Options bot full output
+
+```text
