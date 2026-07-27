@@ -1029,3 +1029,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-27 19:51:19,2026-07-27,SELL,CBOE,Pullback50,287.53,97.34,-0.15,-0.14,0,midline (-0.1%),bull,486.95
 2026-07-27 19:51:49,2026-07-27,SELL,NOW,EarningsDrift,105.72,97.43,-0.03,-0.03,0,midline (-0.0%),bull,486.83
 2026-07-27 19:52:20,2026-07-27,SELL,HUBB,Pullback50,495.95,73.3,0.15,0.11,0,midline (+0.2%),bull,486.77
+2026-07-27 19:59:41,2026-07-27,SELL,AVB,Pullback50,187.47,96.72,-0.78,-0.76,0,stop_loss (-0.8%),bull,486.19
+2026-07-27 19:59:44,2026-07-27,SELL,EQR,Pullback50,67.26,96.97,-0.53,-0.51,0,stop_loss (-0.5%),bull,486.18

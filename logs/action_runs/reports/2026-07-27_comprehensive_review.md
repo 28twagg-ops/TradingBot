@@ -20673,3 +20673,37 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ### Options bot full output
 
 ```text
+
+## Run 20260727T195937Z
+
+- UTC timestamp: `20260727T195937Z`
+- GitHub run: [#5193](https://github.com/28twagg-ops/TradingBot/actions/runs/30300593318)
+- Run id: `30300593318`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-27T15:44:32.503696-04:00","date":"2026-07-27","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":0.8,"phases_s":{"reconcile":0.22,"cancel":0.12,"manage":0.08},"signals":0,"placed":0,"equity":130122.63,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":102,"filled_today":82,"unattributed_contracts":0,"top_signals":[],"github_run":"5189","github_run_id":"30299234462","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:59:38  INFO      Mode: scan
+19:59:39  INFO        [positions] 2/2 (2 valid)
+19:59:39  INFO        SELL MARKET [urgent] AVB closed
+19:59:41  INFO        TX logged: SELL AVB  P&L -0.78%
+19:59:41  INFO        SELL MARKET [urgent] EQR closed
+19:59:44  INFO        TX logged: SELL EQR  P&L -0.53%
+19:59:44  INFO        Universe cache hit: 903 tickers (tickers_2026-07-27.json)
+19:59:45  INFO        [universe] 40/903 (40 valid)
+19:59:46  INFO        [universe] 80/903 (80 valid)
+19:59:47  INFO        [universe] 120/903 (120 valid)
+19:59:48  INFO        [universe] 160/903 (160 valid)
+19:59:55  INFO        [universe] 200/903 (199 valid)
+20:00:09  INFO        [universe] 240/903 (238 valid)
+```
+
+### Options bot full output
+
+```text

@@ -1,0 +1,14 @@
+19:59:38  INFO      Mode: scan
+19:59:39  INFO        [positions] 2/2 (2 valid)
+19:59:39  INFO        SELL MARKET [urgent] AVB closed
+19:59:41  INFO        TX logged: SELL AVB  P&L -0.78%
+19:59:41  INFO        SELL MARKET [urgent] EQR closed
+19:59:44  INFO        TX logged: SELL EQR  P&L -0.53%
+19:59:44  INFO        Universe cache hit: 903 tickers (tickers_2026-07-27.json)
+19:59:45  INFO        [universe] 40/903 (40 valid)
+19:59:46  INFO        [universe] 80/903 (80 valid)
+19:59:47  INFO        [universe] 120/903 (120 valid)
+19:59:48  INFO        [universe] 160/903 (160 valid)
+19:59:55  INFO        [universe] 200/903 (199 valid)
+20:00:09  INFO        [universe] 240/903 (238 valid)
+20:00:22  INFO        [universe] 280/903 (278 valid)
