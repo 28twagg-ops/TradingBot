@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-27 14:48:55.212483+00:00,entry,148,c148_s207_w3_1045_1120_r1,S207,533561366de4,OXY,OXY260731C00057000,1,0.61,0.6,60.0,,,,-0.01,,0.5,-0.5,0.08403361344537823,gap -3.1% MA50 dist=1.5%,53527522-63b0-4a39-9325-a8234edc7b31

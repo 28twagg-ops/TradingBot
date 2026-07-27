@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-27 14:49:01.962272+00:00,entry,229,c229_s217_w3_1045_1120_r2,S217,b9c2181126cb,UBER,UBER260731C00069000,1,0.45,0.44,44.0,,,,-0.01,,0.5,-0.5,0.090909090909091,RSI=23.4 green,d49b0255-9152-423e-a428-4bf4a966f623
