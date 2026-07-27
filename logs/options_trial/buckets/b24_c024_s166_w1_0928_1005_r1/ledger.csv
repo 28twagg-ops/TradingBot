@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-27 14:10:25.520104+00:00,entry,24,c024_s166_w1_0928_1005_r1,S166,ca4af1acf35f,APA,APA260731C00037000,1,0.33,0.32,32.0,,,,-0.01,,0.5,-0.5,0.19354838709677416,gap -4.2%,b90ed9fd-96f0-48f8-a206-d3f0dbc0ec77
+2026-07-27T14:16:32Z,reconcile,24,c024_s166_w1_0928_1005_r1,S166,ca4af1acf35f,APA,APA260731C00037000,1,,,32.0,,,zombie_lot,,,,,,zombie age_min=857 notional=$32.00 occ=APA260731C00037000 action=submitted:c4c37816-71cd-4dc7-acb1-a6a0a54868da,

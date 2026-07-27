@@ -3469,3 +3469,310 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260727T141628Z
+
+- UTC timestamp: `20260727T141628Z`
+- GitHub run: [#5121](https://github.com/28twagg-ops/TradingBot/actions/runs/30274154523)
+- Run id: `30274154523`
+- Live bot: exit=`0`, duration=`2s`
+- Options bot: exit=`0`, duration=`186s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-27T10:16:33.611920-04:00","date":"2026-07-27","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":177.5,"phases_s":{"reconcile":0.09,"cancel":0.02,"manage":0.02,"scan":172.42,"entries":4.65,"reconcile2":0.09},"signals":297,"placed":0,"equity":130458.39,"open_positions":1,"pending_orders":8,"open_lots":2,"submitted_today":48,"filled_today":40,"unattributed_contracts":0,"top_signals":["S165:APA","S165:CF","S165:CVX","S165:COP","S165:DVN","S165:FANG","S165:DOW","S165:EOG"],"github_run":"5121","github_run_id":"30274154523","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+14:16:29  INFO      Mode: exits
+14:16:30  INFO        Daily log -> logs/daily/2026-07-27.md
+14:16:30  INFO        Daily log reconciled -> logs/daily/2026-07-27.md (9 ledger rows)
+14:16:30  INFO        place_all_stops: checking 1 positions...
+14:16:30  INFO        STOP already live CMS @ $74.4
+14:16:30  INFO        [positions] 1/1 (1 valid)
+14:16:30  INFO        Daily log -> logs/daily/2026-07-27.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:16 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $487.87|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CMS  P&L -0.1%  $-0.11                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           1|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=26 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=8
+  zombies_flagged=26
+  FLAG b147|S207|9e3443ba zombie age_min=857 notional=$72.00 occ=APA260731C00036000 action=submitted:db7a5d0d-82b9-460f-9988-f861ca60b20e
+  FLAG b146|S207|34bc38f2 zombie age_min=857 notional=$72.00 occ=APA260731C00036000 action=submitted:4941a7ab-33cd-4513-bdbc-91b20541c445
+  FLAG b3|S163|00070998 zombie age_min=857 notional=$72.00 occ=APA260731C00036000 action=submitted:5f5adb47-bed3-449d-8277-438ed55a8ce6
+  FLAG b2|S163|21913e86 zombie age_min=857 notional=$72.00 occ=APA260731C00036000 action=submitted:6453f92d-54fb-448b-8c37-f6ded4b8ad93
+  FLAG b27|S166|899bb57d zombie age_min=857 notional=$72.00 occ=APA260731C00036000 action=submitted:92f7dcd4-e299-4065-9e41-ab168bd6305b
+  FLAG b26|S166|9234dbb5 zombie age_min=857 notional=$72.00 occ=APA260731C00036000 action=submitted:eaef8ccb-5dcf-4bda-b6e9-303bd4e78558
+  FLAG b187|S212|6c29d694 zombie age_min=857 notional=$74.00 occ=ADBE260731C00255000 action=submitted:192e67af-8c2a-4723-b91c-c9077d6c75f6
+  FLAG b186|S212|84e9639c zombie age_min=857 notional=$74.00 occ=ADBE260731C00255000 action=submitted:b7894ee4-768f-4bc3-a888-bd857172988a
+  FLAG b145|S207|3627b182 zombie age_min=857 notional=$45.00 occ=CVX260731C00205000 action=submitted:bd9c8d7e-2f15-4a11-8003-ccb62b07876b
+  FLAG b144|S207|c55ab2cc zombie age_min=857 notional=$45.00 occ=CVX260731C00205000 action=submitted:e502cfc6-23fa-4b2d-9407-bd0782526fe8
+  FLAG b1|S163|b0b42ff8 zombie age_min=857 notional=$32.00 occ=APA260731C00037000 action=submitted:b3bcadd1-f70f-43cd-8605-fc1853b1ec73
+  FLAG b0|S163|6de41cda zombie age_min=857 notional=$32.00 occ=APA260731C00037000 action=submitted:96ef18d6-766a-47bd-a29a-c28d70a01a3e
+  FLAG b25|S166|75a3fed6 zombie age_min=857 notional=$32.00 occ=APA260731C00037000 action=submitted:24331a0a-20f2-4fc5-94b0-4abc1e811d02
+  FLAG b24|S166|ca4af1ac zombie age_min=857 notional=$32.00 occ=APA260731C00037000 action=submitted:c4c37816-71cd-4dc7-acb1-a6a0a54868da
+  FLAG b41|S168|71a198a4 zombie age_min=857 notional=$32.00 occ=APA260731C00037000 action=submitted:677f209d-06eb-418b-997f-94663d2c0644
+  FLAG b40|S168|8f246766 zombie age_min=857 notional=$32.00 occ=APA260731C00037000 action=submitted:61bcdd84-3d76-402b-9ed4-0bbef5b82174
+  FLAG b235|S218|38b802da zombie age_min=857 notional=$45.00 occ=UBER260731C00069000 action=submitted:dc1e9a01-0298-4fa5-89d1-7d0ba5fda5b4
+  FLAG b234|S218|cbe7a51d zombie age_min=857 notional=$45.00 occ=UBER260731C00069000 action=submitted:41c2c926-8e93-4eb7-9028-99a9937eb4d3
+  FLAG b219|S216|17bc9075 zombie age_min=857 notional=$66.00 occ=GOOGL260729C00342500 action=submitted:3e52b4a3-53e9-45ce-81d0-2543c62274c5
+  FLAG b218|S216|d56cfd97 zombie age_min=857 notional=$66.00 occ=GOOGL260729C00342500 action=submitted:a12fa81d-e7c1-4d62-b06d-7eeeeadd3a35
+  FLAG b35|S167|b974cb22 zombie age_min=857 notional=$69.00 occ=APA260731C00036000 action=submitted:da5ffb14-0b7b-4eac-81f6-7d49581dc785
+  FLAG b34|S167|3674b8c5 zombie age_min=857 notional=$69.00 occ=APA260731C00036000 action=submitted:424f0dad-50ab-4467-9dba-d4dcb2d99c95
+  FLAG b43|S168|df69b113 zombie age_min=857 notional=$69.00 occ=APA260731C00036000 action=submitted:509a6fd4-dd87-4f37-b42c-75e4702f79e3
+  FLAG b42|S168|70feddcf zombie age_min=857 notional=$69.00 occ=APA260731C00036000 action=submitted:67d85753-92d4-4481-8c87-aac3ce758ccb
+  FLAG b19|S165|eec21382 zombie age_min=857 notional=$69.00 occ=APA260731C00036000 action=submitted:4269d956-4d9a-4c54-8639-2ca38f92d0d6
+  FLAG b18|S165|2af00a35 zombie age_min=857 notional=$69.00 occ=APA260731C00036000 action=submitted:b4e00b5f-6109-4d74-b64b-f0350358ba55
+options_reconcile: done
+Layout: controlled:248:c000_s163_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:248:c000_s163_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      248
+=== options_morning_bot (PAPER) 2026-07-27T10:16:33.611920-04:00 ===
+
+[Run context]
+Paper auth OK — equity $130458.39, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 248 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219] …
+Fetched daily bars for 903/903 symbols
+Found 297 signal(s); top: ['S165:APA', 'S165:CF', 'S165:CVX', 'S165:COP', 'S165:DVN', 'S165:FANG', 'S165:DOW', 'S165:EOG']
+Paper lab: $130176 broker equity -> 248 bucket(s) ($500 virtual each, unlimited paper)
+  Skipped: 52 no tradeable call, 510 already attempted today, 32 pending order
+Placed 0 new entry order(s).
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          entry+manage                            |
+|  Equity                        $130,458.39                             |
+|  Signals this run              297                                     |
+|  Orders submitted (session)    48                                      |
+|  Orders filled today (ledger)  40                                      |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             2                                       |
+|  Broker option positions       1                                       |
+|  Pending orders                8                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S173,S174)                           |
++------------------------------------------------------------------------+
+|  Reflected trades=273  buckets=27  win=30%                             |
+|  Returns   avg=-5.1%  med=-40.0%  p10=-66.2%  p90=+81.8%               |
+|  Realized  $+4,423.13                                                  |
+|  Raw incl dropped  trades=807  real=$+2,827.58                         |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b51  c051_s169_w2_1005_  1 100% +263.6 +263.6 +263.6 $   +174         |
+|  b91  c091_s200_w2_1005_  2 100% +222.0 +222.0 +247.0 $   +293         |
+|  b31  c031_s166_w4_1120_  2 100% +145.5 +145.5 +175.8 $   +192         |
+|  b28  c028_s166_w3_1045_ 22  77% +50.0 +80.0 +102.0 $   +590           |
+|  b58  c058_s170_w2_1005_  1 100% +59.1 +59.1 +59.1 $    +25            |
+|  b56  c056_s170_w1_0928_  1 100% +47.7 +47.7 +47.7 $    +21            |
+|  b57  c057_s170_w1_0928_  1 100% +47.7 +47.7 +47.7 $    +21            |
+|  b89  c089_s200_w1_0928_  9  56% +84.4 +30.9 +790.0 $    +45           |
+|  ... 19 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b20  c020_s165_w3_1045_  1   0% -88.9 -88.9 -88.9 $     -8       |
++========================================================================+
++========================================================================+
+|  PENDING ORDERS (8)                                                    |
++------------------------------------------------------------------------+
+|  Top groups                    S165:APA(2), S167:APA(2), S212:CMG(2)   |
++------------------------------------------------------------------------+
+|  b16  S165 APA      limit=0.21                                         |
+|  b17  S165 APA      limit=0.21                                         |
+|  b32  S167 APA      limit=0.21                                         |
+|  b33  S167 APA      limit=0.21                                         |
+|  b184 S212 CMG      limit=0.69                                         |
+|  ... 3 more pending order(s)                                           |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (1)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  IBM260731C00235000            2    -11.5%   $    -12.00               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-27.log
+elapsed=177.5s reconcile=0.09s cancel=0.02s manage=0.02s scan=172.42s entries=4.65s
+STATUS: options_morning_bot run complete (PAPER) elapsed=177.5s. run=#5121 https://github.com/28twagg-ops/TradingBot/actions/runs/30274154523
+Evaluation complete: 30 strategies evaluated, 0 killed, 0 promote candidates.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-27_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-27_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-27_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-27_strategy_selection.csv
+Summary: keep=0 watch=30 drop=3
+Orphan rate: 2.7% (22/807)
+# Options signal frequency
+
+_Generated 2026-07-27T10:19:35.790989_
+
+Headline counts are **unique (strategy, underlying, date)** from `ENTRY` lines in `logs/options_trial/runs/*.log`.
+Raw log-line counts (multi-bucket duplicates) are shown below for debug.
+
+### Unique underlying symbols per day (headline)
+
+| Date       | S163 | S164 | S165 | S166 | S167 | S168 | S169 | S170 | S171 | S172 | S175 | S173 | S174 | Total |
+|------------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|------:|
+| 2026-07-07 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    1 |    0 |     1 |
+| 2026-07-08 |    0 |    0 |    3 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    2 |    1 |     6 |
+| 2026-07-09 |    0 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    2 |    3 |     6 |
+| 2026-07-10 |    0 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    1 |    1 |     3 |
+| 2026-07-13 |    0 |    0 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    3 |    2 |     7 |
+| 2026-07-14 |    0 |    0 |    3 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    2 |    0 |     5 |
+| 2026-07-16 |    0 |    0 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    3 |    0 |     5 |
+| 2026-07-17 |    0 |    0 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    2 |    0 |     4 |
+| 2026-07-20 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    1 |    0 |     1 |
+| 2026-07-21 |    1 |    2 |    1 |    1 |    2 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     9 |
+| 2026-07-22 |    1 |    1 |    1 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     4 |
+| 2026-07-24 |    1 |    1 |    1 |    0 |    1 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     5 |
+| 2026-07-27 |    1 |    0 |    1 |    1 |    1 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     5 |
+
+## Per-strategy summary (unique underlyings)
+
+| Strategy | Unique entries | Active days | Avg unique / active day | Est. active days to n=30 exits* |
+|----------|---------------:|------------:|------------------------:|--------------------------------|
+| S163 | 4 | 4 | 1.0 | ~38 active signal-days |
+| S164 | 4 | 3 | 1.3 | ~29 active signal-days |
+| S165 | 18 | 11 | 1.6 | ~23 active signal-days |
+| S166 | 2 | 2 | 1.0 | ~38 active signal-days |
+| S167 | 5 | 4 | 1.2 | ~30 active signal-days |
+| S168 | 4 | 3 | 1.3 | ~29 active signal-days |
+| S169 | 0 | 0 | 0.0 | inf (no unique entries yet) |
+| S170 | 0 | 0 | 0.0 | inf (no unique entries yet) |
+| S171 | 0 | 0 | 0.0 | inf (no unique entries yet) |
+| S172 | 0 | 0 | 0.0 | inf (no unique entries yet) |
+| S175 | 0 | 0 | 0.0 | inf (no unique entries yet) |
+| S173 | 17 | 9 | 1.9 | ~20 active signal-days |
+| S174 | 7 | 4 | 1.8 | ~22 active signal-days |
+
+\* Formula: `ceil(30 / (avg_unique_per_active_day * 80%))`. Update when real exit rates are known.
+
+## Signal frequency by window (all time, unique strategy×symbol×date×window)
+
+| Window | S163 | S164 | S165 | S166 | S167 | S168 | S169 | S170 | S171 | S172 | S175 | S173 | S174 | Total |
+|--------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|------:|
+| w1     |    2 |    1 |    6 |    1 |    2 |    1 |    0 |    0 |    0 |    0 |    0 |    7 |    1 |    21 |
+| w2     |    3 |    2 |    9 |    2 |    3 |    3 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    31 |
+| w3     |    3 |    3 |    9 |    1 |    3 |    2 |    0 |    0 |    0 |    0 |    0 |    7 |    4 |    32 |
+| w4     |    3 |    2 |    7 |    1 |    2 |    2 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    26 |
+
+Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:20–11:35. Parsed from controlled-layout profile names in ENTRY log lines.
+
+## Raw vs unique totals
+
+| Strategy | Raw log lines (includes multi-bucket duplicates) | Unique underlying symbols |
+|----------|-------------------------------------------------:|--------------------------:|
+| S163 | 183 | 4 |
+| S164 | 211 | 4 |
+| S165 | 1649 | 18 |
+| S166 | 83 | 2 |
+| S167 | 203 | 5 |
+| S168 | 138 | 4 |
+| S169 | 0 | 0 |
+| S170 | 0 | 0 |
+| S171 | 0 | 0 |
+| S172 | 0 | 0 |
+| S175 | 0 | 0 |
+| S173 | 1911 | 17 |
+| S174 | 891 | 7 |
+
+### Raw log lines per day (debug / multi-bucket)
+
+| Date       | S163 | S164 | S165 | S166 | S167 | S168 | S169 | S170 | S171 | S172 | S175 | S173 | S174 | Total |
+|------------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|------:|
+| 2026-07-07 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |    0 |   100 |
+| 2026-07-08 |    0 |    0 |  100 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |  100 |   300 |
+| 2026-07-09 |    0 |    0 |   24 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |   15 |   139 |
+| 2026-07-10 |    0 |    0 |  242 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  230 |  202 |   674 |
+| 2026-07-13 |    0 |    0 |  190 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  212 |  188 |   590 |
+| 2026-07-14 |    0 |    0 |  194 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  185 |  106 |   485 |
+| 2026-07-15 |    0 |    0 |  146 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  154 |   58 |   358 |
+| 2026-07-16 |    0 |    0 |  179 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  205 |   58 |   442 |
+| 2026-07-17 |    0 |    0 |  127 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  207 |   58 |   392 |
+| 2026-07-20 |    0 |    0 |  107 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  143 |   58 |   308 |
+| 2026-07-21 |   30 |   35 |  113 |   30 |   35 |   35 |    0 |    0 |    0 |    0 |    0 |  118 |   48 |   444 |
+| 2026-07-22 |   40 |   47 |   86 |   15 |   45 |   20 |    0 |    0 |    0 |    0 |    0 |   77 |    0 |   330 |
+| 2026-07-23 |   30 |   42 |   50 |   15 |   40 |   20 |    0 |    0 |    0 |    0 |    0 |   40 |    0 |   237 |
+| 2026-07-24 |   75 |   87 |   85 |   15 |   77 |   55 |    0 |    0 |    0 |    0 |    0 |   40 |    0 |   434 |
+| 2026-07-27 |    8 |    0 |    6 |    8 |    6 |    8 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    36 |
+
+## Notes
+
+- Pre-router-fix (before 2026-07-17 commit `56660c9e`): S163/S166 were starved — expect zeros until a post-fix entry-window gap-down day.
+- Controlled layout places one ENTRY per matching bucket×strategy; raw counts inflate, unique underlyings do not.
+
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/signal_frequency.md
+## Ledger health — 2026-07-27
+| Check                       | Count | Status |
+|-----------------------------|------:|--------|
+| Current stuck (state)       |     0 | OK |
+| Orphaned lots (post-stable) |     0 | OK |
+| Missing exit records (post) |     0 | OK |
+| State/ledger mismatches     |     0 | OK |
+| Total open lots             |     2 | INFO |
+| Total closed lots           |   318 | INFO |
+| Pre-cutoff audit debt       |     0 | INFO |
+| Transition audit debt       |   744 | INFO |
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_health.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/dashboard.html
+equity=487.87 router=CONFIRMED leaderboard_rows=33
+Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
+| 1 | MomReversal | 9 | 33% | +0.31% | -0.78% | -1.14% | 4.09 | 1.3d | $+1.33 | WATCH |
+| 2 | unknown | 32 | 19% | -0.03% | -0.59% | -1.27% | 1.44 | 0.0d | $+0.29 | ACTIVE |
+```
+
+---

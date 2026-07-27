@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-27 14:11:21.657131+00:00,entry,234,c234_s218_w2_1005_1045_r1,S218,cbe7a51de2c4,UBER,UBER260731C00069000,1,0.45,0.45,45.0,,,,-0.01,,0.5,-0.5,0.1149425287356323,low=65.41 BB_lower=67.09 touch+green,a9182e1b-b51a-4204-a2a9-cea249ef1357
+2026-07-27T14:16:32Z,reconcile,234,c234_s218_w2_1005_1045_r1,S218,cbe7a51de2c4,UBER,UBER260731C00069000,1,,,45.0,,,zombie_lot,,,,,,zombie age_min=857 notional=$45.00 occ=UBER260731C00069000 action=submitted:41c2c926-8e93-4eb7-9028-99a9937eb4d3,

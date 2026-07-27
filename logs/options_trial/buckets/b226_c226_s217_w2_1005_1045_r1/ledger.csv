@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-27 14:16:53.901632+00:00,entry,226,c226_s217_w2_1005_1045_r1,S217,11b1eaab1286,IBM,IBM260731C00235000,1,0.53,0.52,52.0,,,,-0.01,,0.5,-0.5,0.18181818181818188,RSI=17.5 green,d3e5855d-84fb-4618-b31f-d8bd949e9792
