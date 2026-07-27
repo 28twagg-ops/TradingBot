@@ -1021,3 +1021,6 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-27 13:47:27,2026-07-27,SELL,CARR,Pullback50,69.23,97.99,2.29,2.2,5,max_hold 5d (+2.3%),bull,490.07
 2026-07-27 13:47:48,2026-07-27,SELL,ABNB,Pullback50,143.86,99.94,3.14,3.04,3,max_hold 3d (+3.1%),bull,490.07
 2026-07-27 13:51:28,2026-07-27,SELL,DTE,Pullback50,148.59,96.81,0.73,0.7,4,max_hold 4d (+0.7%),bull,489.64
+2026-07-27 13:57:12,2026-07-27,SELL,DVN,Pullback50,44.15,73.15,-0.3,-0.22,0,midline (-0.3%),bull,488.56
+2026-07-27 13:57:43,2026-07-27,SELL,APA,Pullback50,35.73,97.73,-0.18,-0.17,0,midline (-0.2%),bull,488.55
+2026-07-27 13:58:14,2026-07-27,SELL,DRI,Pullback50,201.72,97.5,-0.14,-0.14,0,midline (-0.1%),bull,488.51
