@@ -1,0 +1,51 @@
+14:01:03  INFO      Mode: exits
+14:01:03  INFO        Daily log -> logs/daily/2026-07-27.md
+14:01:03  INFO        Daily log reconciled -> logs/daily/2026-07-27.md (5 ledger rows)
+14:01:03  INFO        place_all_stops: checking 2 positions...
+14:01:03  INFO        STOP skipped ALGN: fractional (0.5700 shares) — software exit will handle it
+14:01:03  INFO        STOP-MARKET placed CMS  qty=1 (pos=1.3097)  stop=$74.40  id=13c276ab-bee9-4536-bdbe-2b60ca844e43
+14:01:04  INFO        [positions] 2/2 (2 valid)
+14:01:04  INFO        SELL MARKET [urgent] ALGN closed
+14:01:06  INFO        TX logged: SELL ALGN  P&L -0.89%
+14:01:06  INFO        Daily log -> logs/daily/2026-07-27.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:01 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $487.86|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  ALGN  P&L -0.9%  $-0.87                        EXIT: stop_loss (-0.9%)|
+|  CMS  P&L -0.1%  $-0.06                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  ALGN                                        -0.89%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+

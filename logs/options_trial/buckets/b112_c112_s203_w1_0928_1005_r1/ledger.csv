@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-27 14:03:57.475046+00:00,entry,112,c112_s203_w1_0928_1005_r1,S203,c1fc75dcffa2,CCL,CCL260731P00027000,1,0.74,0.73,73.0,,,,-0.01,,0.5,-0.5,0.158273381294964,gap +3.3% red close,c86ad456-bb69-45c9-abaf-bb80a72b8126
