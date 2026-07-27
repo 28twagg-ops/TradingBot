@@ -20580,3 +20580,55 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260727T195047Z
+
+- UTC timestamp: `20260727T195047Z`
+- GitHub run: [#5191](https://github.com/28twagg-ops/TradingBot/actions/runs/30299964834)
+- Run id: `30299964834`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-27T15:44:32.503696-04:00","date":"2026-07-27","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":0.8,"phases_s":{"reconcile":0.22,"cancel":0.12,"manage":0.08},"signals":0,"placed":0,"equity":130122.63,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":102,"filled_today":82,"unattributed_contracts":0,"top_signals":[],"github_run":"5189","github_run_id":"30299234462","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:50:48  INFO      Mode: scan
+19:50:49  INFO        [positions] 5/5 (5 valid)
+19:50:49  INFO        SELL LIMIT CBOE  qty=0.338552158  limit=$287.25  id=63fcc91e-1bc3-4f11-8567-fe2c1dcab7bc
+19:51:19  INFO        SELL LIMIT filled CBOE (confirmed by position check)
+19:51:19  INFO        TX logged: SELL CBOE  P&L -0.15%
+19:51:19  INFO        SELL LIMIT NOW  qty=0.921657243  limit=$105.70  id=7f24de19-f7cf-452b-8f7b-82d80072e730
+19:51:49  INFO        SELL LIMIT filled NOW (confirmed by position check)
+19:51:49  INFO        TX logged: SELL NOW  P&L -0.03%
+19:51:49  INFO        SELL LIMIT HUBB  qty=0.147788927  limit=$495.83  id=64685c13-d9f5-44a1-a3e8-806413a87961
+19:52:20  INFO        SELL LIMIT filled HUBB (confirmed by position check)
+19:52:20  INFO        TX logged: SELL HUBB  P&L 0.15%
+19:52:20  INFO        Universe cache hit: 903 tickers (tickers_2026-07-27.json)
+19:52:21  INFO        [universe] 40/901 (40 valid)
+19:52:22  INFO        [universe] 80/901 (80 valid)
+19:52:23  INFO        [universe] 120/901 (120 valid)
+19:52:24  INFO        [universe] 160/901 (160 valid)
+19:52:26  INFO        [universe] 200/901 (199 valid)
+19:52:33  INFO        [universe] 240/901 (238 valid)
+19:52:46  INFO        [universe] 280/901 (278 valid)
+19:52:56  INFO        [universe] 320/901 (318 valid)
+19:53:09  INFO        [universe] 360/901 (358 valid)
+19:53:22  INFO        [universe] 400/901 (397 valid)
+19:53:32  INFO        [universe] 440/901 (437 valid)
+19:53:45  INFO        [universe] 480/901 (477 valid)
+19:53:58  INFO        [universe] 520/901 (517 valid)
+19:54:08  INFO        [universe] 560/901 (557 valid)
+19:54:21  INFO        [universe] 600/901 (597 valid)
+19:54:34  INFO        [universe] 640/901 (637 valid)
+19:54:44  INFO        [universe] 680/901 (677 valid)
+19:54:57  INFO        [universe] 720/901 (717 valid)
+19:55:10  INFO        [universe] 760/901 (757 valid)
+```
+
+### Options bot full output
+
+```text
