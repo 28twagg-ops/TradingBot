@@ -1,2 +1,3 @@
 run_stamp,run_number,run_id,live_exit,options_exit,live_duration_s,options_duration_s,event_type
 20260727T020322Z,5104,30231215892,0,0,2,0,schedule
+20260727T055848Z,5105,30241253215,0,0,3,8,schedule

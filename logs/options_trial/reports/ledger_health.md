@@ -1,6 +1,6 @@
-# Ledger health — 2026-07-26
+# Ledger health — 2026-07-27
 
-_Generated 2026-07-26T17:26:19.953676_
+_Generated 2026-07-27T01:58:58.807150_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -14,10 +14,10 @@ State file: OK
 | Orphaned lots (post-stable) |     0 | OK |
 | Missing exit records (post) |     0 | OK |
 | State/ledger mismatches     |     0 | OK |
-| Total open lots             |     1 | INFO |
+| Total open lots             |     0 | INFO |
 | Total closed lots           |   318 | INFO |
 | Pre-cutoff audit debt       |     0 | INFO |
-| Transition audit debt       |   639 | INFO |
+| Transition audit debt       |   744 | INFO |
 
 Notes:
 - **Current stuck** = open in `lab_state.json` and older than stuck threshold (actionable).
