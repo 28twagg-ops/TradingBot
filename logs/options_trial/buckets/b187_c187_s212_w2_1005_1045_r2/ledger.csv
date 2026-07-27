@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-27 14:09:54.597595+00:00,entry,187,c187_s212_w2_1005_1045_r2,S212,6c29d694e414,ADBE,ADBE260731C00255000,1,0.74,0.74,74.0,,,,-0.01,,0.5,-0.5,0.17391304347826086,low=229.79 MA50=227.97 touch+green,a53c620d-6d5f-4242-a084-6dc104cd0a7e

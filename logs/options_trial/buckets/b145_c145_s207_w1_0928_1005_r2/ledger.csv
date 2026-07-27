@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-27 14:09:40.569551+00:00,entry,145,c145_s207_w1_0928_1005_r2,S207,3627b1823c92,CVX,CVX260731C00205000,1,0.5,0.45,45.0,,,,-0.01,,0.5,-0.5,0.17021276595744686,gap -3.1% MA50 dist=4.8%,d475df6c-f5e6-4934-b283-ae4f2f5a1d22
