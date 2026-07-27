@@ -1,47 +1,6 @@
 {
   "version": 5,
-  "lots": [
-    {
-      "lot_id": "2395d02305ea",
-      "bucket_id": 223,
-      "profile_name": "c223_s216_w4_1120_1135_r2",
-      "strategy_id": "S216",
-      "occ_symbol": "GOOGL260729C00342500",
-      "underlying": "GOOGL",
-      "qty": 1,
-      "entry_cost": 56.00000000000001,
-      "entry_price": 0.56,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-27",
-      "entry_order_id": "f739356a-29fd-46c6-8bb0-eeab04e80962"
-    },
-    {
-      "lot_id": "a684daad7131",
-      "bucket_id": 222,
-      "profile_name": "c222_s216_w4_1120_1135_r1",
-      "strategy_id": "S216",
-      "occ_symbol": "GOOGL260729C00342500",
-      "underlying": "GOOGL",
-      "qty": 1,
-      "entry_cost": 56.00000000000001,
-      "entry_price": 0.56,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-27",
-      "entry_order_id": "de61f3ec-3aa8-47ee-a63d-b57c37a8ffb0"
-    }
-  ],
+  "lots": [],
   "pending_orders": [
     {
       "order_id": "b290cb28-8c8c-4be3-91b0-8a141d12fe31",
@@ -365,10 +324,7 @@
     }
   ],
   "pending_exits": [],
-  "bucket_open_premium": {
-    "b223": 56.00000000000001,
-    "b222": 56.00000000000001
-  },
+  "bucket_open_premium": {},
   "session_date": "2026-07-27",
   "entries_locked": [
     "16|S165|2026-07-27",
