@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-27 15:20:21.161472+00:00,entry,185,c185_s212_w1_0928_1005_r2,S212,d40609f7561f,CMG,CMG260731C00035000,1,0.69,0.68,68.0,,,,-0.01,,0.5,-0.5,0.12121212121212116,low=32.51 MA50=32.56 touch+green,4f83e40e-5216-42e1-9de5-293fb5e87be1
