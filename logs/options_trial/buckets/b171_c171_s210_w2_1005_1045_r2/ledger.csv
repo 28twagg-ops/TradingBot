@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-27 14:08:54.815777+00:00,entry,171,c171_s210_w2_1005_1045_r2,S210,6ec8bccddd25,EQT,EQT260731C00053000,1,0.59,0.58,58.0,,,,-0.01,,0.5,-0.5,0.16216216216216212,MA8 51.35 crossed above MA21,1adf82e5-1f54-4d89-986d-ac6883b7bf59
