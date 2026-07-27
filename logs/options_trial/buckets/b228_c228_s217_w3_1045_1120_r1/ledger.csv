@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-27 14:49:01.845681+00:00,entry,228,c228_s217_w3_1045_1120_r1,S217,6756d9c20eb0,UBER,UBER260731C00069000,1,0.45,0.44,44.0,,,,-0.01,,0.5,-0.5,0.090909090909091,RSI=23.4 green,b8cfc9d9-6d8f-4a49-a21d-ddfc522aa525
+2026-07-27T14:50:43Z,reconcile,228,c228_s217_w3_1045_1120_r1,S217,6756d9c20eb0,UBER,UBER260731C00069000,1,,,44.0,,,zombie_lot,,,,,,zombie age_min=891 notional=$44.00 occ=UBER260731C00069000 action=submitted:c0072238-6b1d-4b31-98a8-51aad6a270dd,

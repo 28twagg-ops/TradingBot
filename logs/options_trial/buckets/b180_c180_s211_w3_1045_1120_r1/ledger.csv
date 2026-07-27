@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-27 14:49:20.469329+00:00,entry,180,c180_s211_w3_1045_1120_r1,S211,f56203062091,FIS,FIS260731C00044000,1,0.52,0.5,50.0,,,,-0.01,,0.5,-0.5,0.23157894736842116,MA21 crossed above MA50,dba5251b-1864-4957-ab60-6759843016ad
