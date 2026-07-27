@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-27 15:23:42.043051+00:00,entry,239,c239_s218_w4_1120_1135_r2,S218,b6c4032bc312,CMCSA,CMCSA260731C00023500,1,0.24,0.23,23.0,,,,-0.01,,0.5,-0.5,0.22222222222222215,low=22.36 BB_lower=22.29 touch+green,84a90948-fa71-4716-8959-115785874e15
