@@ -1,47 +1,6 @@
 {
   "version": 5,
-  "lots": [
-    {
-      "lot_id": "af325de3d1d1",
-      "bucket_id": 227,
-      "profile_name": "c227_s217_w2_1005_1045_r2",
-      "strategy_id": "S217",
-      "occ_symbol": "IBM260731C00235000",
-      "underlying": "IBM",
-      "qty": 1,
-      "entry_cost": 52.0,
-      "entry_price": 0.52,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-27",
-      "entry_order_id": "4b466896-136f-42e3-8545-306f9f6d14b5"
-    },
-    {
-      "lot_id": "11b1eaab1286",
-      "bucket_id": 226,
-      "profile_name": "c226_s217_w2_1005_1045_r1",
-      "strategy_id": "S217",
-      "occ_symbol": "IBM260731C00235000",
-      "underlying": "IBM",
-      "qty": 1,
-      "entry_cost": 52.0,
-      "entry_price": 0.52,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-27",
-      "entry_order_id": "d3e5855d-84fb-4618-b31f-d8bd949e9792"
-    }
-  ],
+  "lots": [],
   "pending_orders": [
     {
       "order_id": "7f3a29df-4025-4720-b606-e5a28c5f9935",
@@ -173,10 +132,7 @@
     }
   ],
   "pending_exits": [],
-  "bucket_open_premium": {
-    "b227": 52.0,
-    "b226": 52.0
-  },
+  "bucket_open_premium": {},
   "session_date": "2026-07-27",
   "entries_locked": [
     "16|S165|2026-07-27",
