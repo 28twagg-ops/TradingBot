@@ -3,4 +3,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-27T14:16:32Z,reconcile,35,c035_s167_w2_1005_1045_r2,S167,b974cb22503c,APA,APA260731C00036000,1,,,69.0,,,zombie_lot,,,,,,zombie age_min=857 notional=$69.00 occ=APA260731C00036000 action=submitted:da5ffb14-0b7b-4eac-81f6-7d49581dc785,
 2026-07-28 14:13:55.289756+00:00,entry,35,c035_s167_w2_1005_1045_r2,S167,bc56d7f5894c,AVGO,AVGO260729C00400000,1,0.44,0.44,44.0,,,,-0.01,,0.5,-0.5,,,18470142-cd62-4597-806c-7c15c08ad856
 2026-07-28 14:19:02.457808+00:00,entry,35,c035_s167_w2_1005_1045_r2,S167,6e0c0e840e08,GLW,GLW260731C00132000,1,0.62,0.6,60.0,,,,-0.01,,0.5,-0.5,0.25,gap -15.1%,7db3667d-daff-40c2-8390-6c11389c563f
-2026-07-28T14:26:05Z,reconcile,35,c035_s167_w2_1005_1045_r2,S167,6e0c0e840e08,GLW,GLW260731C00132000,1,,,60.0,,,zombie_lot,,,,,,zombie age_min=866 notional=$60.00 occ=GLW260731C00132000 action=no_broker_position,
+2026-07-28T14:20:55Z,reconcile,35,c035_s167_w2_1005_1045_r2,S167,6e0c0e840e08,GLW,GLW260731C00132000,1,,,60.0,,,zombie_lot,,,,,,zombie age_min=861 notional=$60.00 occ=GLW260731C00132000 action=submitted:a7ed9021-c121-4829-a9c8-f95c5c63e187,

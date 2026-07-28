@@ -1,4 +1,5 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-27 14:11:21.657131+00:00,entry,234,c234_s218_w2_1005_1045_r1,S218,cbe7a51de2c4,UBER,UBER260731C00069000,1,0.45,0.45,45.0,,,,-0.01,,0.5,-0.5,0.1149425287356323,low=65.41 BB_lower=67.09 touch+green,a9182e1b-b51a-4204-a2a9-cea249ef1357
 2026-07-27T14:16:32Z,reconcile,234,c234_s218_w2_1005_1045_r1,S218,cbe7a51de2c4,UBER,UBER260731C00069000,1,,,45.0,,,zombie_lot,,,,,,zombie age_min=857 notional=$45.00 occ=UBER260731C00069000 action=submitted:41c2c926-8e93-4eb7-9028-99a9937eb4d3,
-2026-07-28 14:25:01.781136+00:00,entry,234,c234_s218_w2_1005_1045_r1,S218,76717298c3d7,KMI,KMI260731C00032000,1,0.42,0.42,42.0,,,,-0.01,,0.5,-0.5,,,fa7c2580-5513-4394-9cd9-4e65214ed0aa
+2026-07-28 14:25:01.781135+00:00,entry,234,c234_s218_w2_1005_1045_r1,S218,3a98806eae4a,KMI,KMI260731C00032000,1,0.43,0.42,42.0,,,,-0.01,,0.5,-0.5,0.20000000000000004,low=31.73 BB_lower=31.62 touch+green,fa7c2580-5513-4394-9cd9-4e65214ed0aa
+2026-07-28T14:31:16Z,reconcile,234,c234_s218_w2_1005_1045_r1,S218,3a98806eae4a,KMI,KMI260731C00032000,1,,,42.0,,,zombie_lot,,,,,,zombie age_min=871 notional=$42.00 occ=KMI260731C00032000 action=submitted:415e772e-ce79-436c-a182-717c4c7c7bd4,
