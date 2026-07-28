@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-28 15:24:59.667352+00:00,entry,175,c175_s210_w4_1120_1135_r2,S210,a54bd51593c8,LVS,LVS260731C00049000,1,0.41,0.4,40.0,,,,-0.01,,0.5,-0.5,0.15384615384615383,MA8 46.25 crossed above MA21,8305bc6f-7dc2-4f43-80ef-4d6726b0ccc3
+2026-07-28T15:35:46Z,reconcile,175,c175_s210_w4_1120_1135_r2,S210,a54bd51593c8,LVS,LVS260731C00049000,1,,,40.0,,,zombie_lot,,,,,,zombie age_min=936 notional=$40.00 occ=LVS260731C00049000 action=submitted:67d3d8ad-c5d7-4360-b0cc-0984d15617c6,
