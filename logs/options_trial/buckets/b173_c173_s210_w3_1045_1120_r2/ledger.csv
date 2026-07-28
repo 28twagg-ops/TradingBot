@@ -1,5 +1,5 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-27 14:48:58.288671+00:00,entry,173,c173_s210_w3_1045_1120_r2,S210,4f227b7b8adb,EQT,EQT260731C00054000,1,0.28,0.27,27.0,,,,-0.01,,0.5,-0.5,0.10909090909090897,MA8 51.35 crossed above MA21,c785d9ad-9984-4a7a-a3ac-2353d00ee6ca
 2026-07-27T14:50:43Z,reconcile,173,c173_s210_w3_1045_1120_r2,S210,4f227b7b8adb,EQT,EQT260731C00054000,1,,,27.0,,,zombie_lot,,,,,,zombie age_min=891 notional=$27.00 occ=EQT260731C00054000 action=submitted:2d55612d-d2ca-4f82-a006-5b82291b6e92,
-2026-07-28 14:49:49.977053+00:00,entry,173,c173_s210_w3_1045_1120_r2,S210,7b5ab6f0a21e,KO,KO260731C00091000,1,0.55,0.55,55.0,,,,-0.01,,0.5,-0.5,,,7d4c5560-571f-4838-b35c-076271a631eb
-2026-07-28T15:01:15Z,reconcile,173,c173_s210_w3_1045_1120_r2,S210,7b5ab6f0a21e,KO,KO260731C00091000,1,,,55.00000000000001,,,zombie_lot,,,,,,zombie age_min=901 notional=$55.00 occ=KO260731C00091000 action=submitted:67ef92b6-a5fe-4b38-bdf6-ac409b29f692,
+2026-07-28 14:49:49.977053+00:00,entry,173,c173_s210_w3_1045_1120_r2,S210,9ad7b9ca9a32,KO,KO260731C00091000,1,0.55,0.55,55.0,,,,-0.01,,0.5,-0.5,,,7d4c5560-571f-4838-b35c-076271a631eb
+2026-07-28T15:06:22Z,reconcile,173,c173_s210_w3_1045_1120_r2,S210,9ad7b9ca9a32,KO,KO260731C00091000,1,,,55.00000000000001,,,zombie_lot,,,,,,zombie age_min=906 notional=$55.00 occ=KO260731C00091000 action=no_broker_position,

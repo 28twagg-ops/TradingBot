@@ -1,5 +1,6 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-27 15:16:01.494479+00:00,entry,36,c036_s167_w3_1045_1120_r1,S167,f4593917ea7e,APA,APA260731C00036000,1,0.61,0.57,57.0,,,,-0.01,,0.5,-0.5,0.15652173913043474,gap -4.2%,9614d851-114c-42a5-9cc6-3ff640a365e7
 2026-07-27T15:20:39Z,reconcile,36,c036_s167_w3_1045_1120_r1,S167,f4593917ea7e,APA,APA260731C00036000,1,,,56.99999999999999,,,zombie_lot,,,,,,zombie age_min=921 notional=$57.00 occ=APA260731C00036000 action=submitted:3fd97bc1-2b0a-4787-b779-ae98592492a7,
-2026-07-28 14:49:31.015120+00:00,entry,36,c036_s167_w3_1045_1120_r1,S167,847a255a3dfe,AVGO,AVGO260729C00400000,1,0.46,0.46,46.0,,,,-0.01,,0.5,-0.5,,,1b4859a5-0ad0-4b1e-89ff-94a8535c1b47
-2026-07-28T15:01:16Z,reconcile,36,c036_s167_w3_1045_1120_r1,S167,847a255a3dfe,AVGO,AVGO260729C00400000,1,,,46.0,,,zombie_lot,,,,,,zombie age_min=901 notional=$46.00 occ=AVGO260729C00400000 action=submitted:fe07ec85-7cb3-40cb-9871-3e81848ec888,
+2026-07-28 14:49:31.015120+00:00,entry,36,c036_s167_w3_1045_1120_r1,S167,e9b9ae5826e1,AVGO,AVGO260729C00400000,1,0.46,0.46,46.0,,,,-0.01,,0.5,-0.5,,,1b4859a5-0ad0-4b1e-89ff-94a8535c1b47
+2026-07-28T15:06:22Z,reconcile,36,c036_s167_w3_1045_1120_r1,S167,e9b9ae5826e1,AVGO,AVGO260729C00400000,1,,,46.0,,,zombie_lot,,,,,,zombie age_min=906 notional=$46.00 occ=AVGO260729C00400000 action=submitted:a46681c0-7085-4c8a-b123-5cac140dd65e,
+2026-07-28 15:05:09.655067+00:00,entry,36,c036_s167_w3_1045_1120_r1,S167,e7e9a0f96fc3,AVGO,AVGO260729C00400000,1,0.39,0.39,39.0,,,,-0.01,,0.5,-0.5,,,b8dbdaaf-f4b1-432a-8160-ae7ceb45d674
