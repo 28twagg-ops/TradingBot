@@ -5702,3 +5702,123 @@ Paper lab: $127866 broker equity -> 248 bucket(s) ($500 virtual each, unlimited 
 ```
 
 ---
+
+## Run 20260728T150108Z
+
+- UTC timestamp: `20260728T150108Z`
+- GitHub run: [#5273](https://github.com/28twagg-ops/TradingBot/actions/runs/30371173165)
+- Run id: `30371173165`
+- Live bot: exit=`0`, duration=`6s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-28T10:40:49.991841-04:00","date":"2026-07-28","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":208.9,"phases_s":{"reconcile":0.4,"cancel":0.14,"manage":0.15,"scan":194.74,"entries":12.27,"reconcile2":0.38},"signals":727,"placed":0,"equity":127484.13,"open_positions":0,"pending_orders":2,"open_lots":0,"submitted_today":24,"filled_today":44,"unattributed_contracts":0,"top_signals":["S165:AMD","S165:APH","S165:AMAT","S165:ANET","S165:AVGO","S165:CARR","S165:CAT","S165:CNC"],"github_run":"5269","github_run_id":"30369495758","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+15:01:09  INFO      Mode: exits
+15:01:10  INFO        Daily log -> logs/daily/2026-07-28.md
+15:01:10  INFO        Daily log reconciled -> logs/daily/2026-07-28.md (2 ledger rows)
+15:01:10  INFO        place_all_stops: checking 5 positions...
+15:01:10  INFO        STOP skipped ALGN: fractional (0.5675 shares) — software exit will handle it
+15:01:10  INFO        STOP skipped DTE: fractional (0.6523 shares) — software exit will handle it
+15:01:10  INFO        STOP already live EQR @ $67.45
+15:01:10  INFO        STOP skipped FFIV: fractional (0.2428 shares) — software exit will handle it
+15:01:10  INFO        STOP skipped HUBB: fractional (0.1985 shares) — software exit will handle it
+15:01:11  INFO        [positions] 5/5 (5 valid)
+15:01:11  INFO        SELL MARKET [urgent] HUBB closed
+15:01:13  INFO        TX logged: SELL HUBB  P&L -0.59%
+15:01:14  INFO        Daily log -> logs/daily/2026-07-28.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:01 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $488.16|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  HUBB  P&L -0.6%  $-0.57                        EXIT: stop_loss (-0.6%)|
+|  ALGN  P&L +0.2%  $+0.17                                           HOLD|
+|  EQR  P&L +0.3%  $+0.19                                            HOLD|
+|  DTE  P&L +0.4%  $+0.36                                            HOLD|
+|  FFIV  P&L +2.0%  $+1.99                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           5|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                4|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  HUBB                                        -0.59%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=16 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=8
+  zombies_flagged=16
+  FLAG b221|S216|b0c34002 zombie age_min=901 notional=$50.00 occ=BA260731C00232500 action=submitted:80fa9aa5-5ca2-4403-8452-724b854e12a7
+  FLAG b220|S216|2cf6e520 zombie age_min=901 notional=$50.00 occ=BA260731C00232500 action=submitted:fbe18087-1c92-4ff5-b1ac-31660e55c41a
+  FLAG b189|S212|5e17376b zombie age_min=901 notional=$67.00 occ=COST260731C01030000 action=submitted:ea23e8e7-f71d-4b0e-aa62-806c8503cbcc
+  FLAG b188|S212|127942e3 zombie age_min=901 notional=$67.00 occ=COST260731C01030000 action=submitted:d6144228-eec2-458b-870f-3d3a135f9763
+  FLAG b173|S210|7b5ab6f0 zombie age_min=901 notional=$55.00 occ=KO260731C00091000 action=submitted:67ef92b6-a5fe-4b38-bdf6-ac409b29f692
+  FLAG b172|S210|87c2b725 zombie age_min=901 notional=$55.00 occ=KO260731C00091000 action=submitted:146f46c7-b6c5-4b6c-8d09-e8754c560dc9
+  FLAG b109|S202|c932647c zombie age_min=901 notional=$32.00 occ=INTC260729C00093000 action=submitted:940469bf-f7a8-4dad-917d-b6b0604d549f
+  FLAG b108|S202|3cd82550 zombie age_min=901 notional=$32.00 occ=INTC260729C00093000 action=submitted:514ad820-d993-480c-a677-6f337121d941
+  FLAG b37|S167|5dd2cf4b zombie age_min=901 notional=$46.00 occ=AVGO260729C00400000 action=submitted:6880aa0c-c058-45a5-83fd-7c0f5362234b
+  FLAG b36|S167|847a255a zombie age_min=901 notional=$46.00 occ=AVGO260729C00400000 action=submitted:fe07ec85-7cb3-40cb-9871-3e81848ec888
+  FLAG b45|S168|f5c1d996 zombie age_min=901 notional=$62.00 occ=HPE260731C00047000 action=submitted:ed935f7d-eaee-405a-a74e-d3570d7ebdf5
+  FLAG b44|S168|8dc0ae97 zombie age_min=901 notional=$62.00 occ=HPE260731C00047000 action=submitted:b0d4e4a2-4760-41ff-b39b-54c57b333423
+  FLAG b13|S164|7516bec5 zombie age_min=901 notional=$46.00 occ=AVGO260729C00400000 action=submitted:b778fba8-0ee0-4d5c-8fad-07f631bbad26
+  FLAG b12|S164|fa09fff1 zombie age_min=901 notional=$46.00 occ=AVGO260729C00400000 action=submitted:14063a06-af42-4097-a4aa-953619e7b111
+  FLAG b21|S165|c84afe92 zombie age_min=901 notional=$46.00 occ=AVGO260729C00400000 action=submitted:e6c74b7d-d846-4bdd-82be-7e125b31b696
+  FLAG b20|S165|81dda7a3 zombie age_min=901 notional=$46.00 occ=AVGO260729C00400000 action=submitted:32734d84-eae1-49d0-94f2-990c57fada6e
+options_reconcile: done
+Layout: controlled:248:c000_s163_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:248:c000_s163_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      248
+=== options_morning_bot (PAPER) 2026-07-28T11:01:17.614055-04:00 ===
+
+[Run context]
+Paper auth OK — equity $128087.49, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 248 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219] …
+Fetched daily bars for 903/903 symbols
+Found 726 signal(s); top: ['S165:AMD', 'S165:APH', 'S165:AMAT', 'S165:ANET', 'S165:AVGO', 'S165:CARR', 'S165:CAT', 'S165:CNC']
+Paper lab: $127819 broker equity -> 248 bucket(s) ($500 virtual each, unlimited paper)
+```
+
+---

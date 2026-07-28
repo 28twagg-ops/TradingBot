@@ -1,4 +1,5 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-27 15:16:01.612550+00:00,entry,37,c037_s167_w3_1045_1120_r2,S167,73f7d2eba2c7,APA,APA260731C00036000,1,0.61,0.57,57.0,,,,-0.01,,0.5,-0.5,0.15652173913043474,gap -4.2%,439aaff2-e52d-4fa1-9f1a-c19313eb4b37
 2026-07-27T15:20:39Z,reconcile,37,c037_s167_w3_1045_1120_r2,S167,73f7d2eba2c7,APA,APA260731C00036000,1,,,56.99999999999999,,,zombie_lot,,,,,,zombie age_min=921 notional=$57.00 occ=APA260731C00036000 action=submitted:11249b0d-4635-47b1-8b11-3be4e7b717d9,
-2026-07-28 14:49:31.141700+00:00,entry,37,c037_s167_w3_1045_1120_r2,S167,1b4df5c9b802,AVGO,AVGO260729C00400000,1,0.46,0.46,46.0,,,,-0.01,,0.5,-0.5,,,a68e82c3-ea12-4468-b28b-9684afdb6efa
+2026-07-28 14:49:31.141700+00:00,entry,37,c037_s167_w3_1045_1120_r2,S167,5dd2cf4b73c5,AVGO,AVGO260729C00400000,1,0.46,0.46,46.0,,,,-0.01,,0.5,-0.5,,,a68e82c3-ea12-4468-b28b-9684afdb6efa
+2026-07-28T15:01:16Z,reconcile,37,c037_s167_w3_1045_1120_r2,S167,5dd2cf4b73c5,AVGO,AVGO260729C00400000,1,,,46.0,,,zombie_lot,,,,,,zombie age_min=901 notional=$46.00 occ=AVGO260729C00400000 action=submitted:6880aa0c-c058-45a5-83fd-7c0f5362234b,
