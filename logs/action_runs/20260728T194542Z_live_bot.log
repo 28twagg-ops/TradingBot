@@ -1,0 +1,249 @@
+19:45:43  INFO      Mode: scan
+19:45:44  INFO        [positions] 3/3 (3 valid)
+19:45:44  INFO        Universe cache hit: 903 tickers (tickers_2026-07-28.json)
+19:45:45  INFO        [universe] 40/900 (40 valid)
+19:45:47  INFO        [universe] 80/900 (80 valid)
+19:45:48  INFO        [universe] 120/900 (120 valid)
+19:45:49  INFO        [universe] 160/900 (160 valid)
+19:45:50  INFO        [universe] 200/900 (199 valid)
+19:45:57  INFO        [universe] 240/900 (238 valid)
+19:46:11  INFO        [universe] 280/900 (278 valid)
+19:46:24  INFO        [universe] 320/900 (318 valid)
+19:46:34  INFO        [universe] 360/900 (358 valid)
+19:46:47  INFO        [universe] 400/900 (397 valid)
+19:47:00  INFO        [universe] 440/900 (437 valid)
+19:47:10  INFO        [universe] 480/900 (477 valid)
+19:47:23  INFO        [universe] 520/900 (517 valid)
+19:47:33  INFO        [universe] 560/900 (557 valid)
+19:47:47  INFO        [universe] 600/900 (597 valid)
+19:47:59  INFO        [universe] 640/900 (637 valid)
+19:48:10  INFO        [universe] 680/900 (677 valid)
+19:48:23  INFO        [universe] 720/900 (717 valid)
+19:48:36  INFO        [universe] 760/900 (757 valid)
+19:48:46  INFO        [universe] 800/900 (797 valid)
+19:48:59  INFO        [universe] 840/900 (836 valid)
+19:49:10  INFO        [universe] 880/900 (876 valid)
+19:49:16  INFO        [universe] 900/900 (896 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $488.45|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-28|
+|  Universe                                                          both|
+|  Mon~  Jul: 52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $488.45|
+|  Cash                                                           $217.25|
+|  Reserve                                          $24.42  (always kept)|
+|  Available                                    $192.83  (for new trades)|
+|  Trade size             $97.69  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (3 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ALGN     Pullback50      $98.48     $171.32  $173.52  +1.3%   $+1.25  |
+|  EQR      Pullback50      $73.61     $67.78   $68.43   +1.0%   $+0.69  |
+|  FFIV     Pullback50      $99.29     $400.57  $409.01  +2.1%   $+2.05  |
+|                                                                        |
+|  Total invested                                                 $271.39|
+|  Total open P&L                                                  $+4.00|
+|  Buys today: 0  |  entry cap: 2  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (59051.6m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  EQR  P&L +1.0%  $+0.69                                            HOLD|
+|  ALGN  P&L +1.3%  $+1.25                                           HOLD|
+|  FFIV  P&L +2.1%  $+2.05                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 3|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50 (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  37                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  BA       RSIRecovery     eq     $222.26  46.9   1.94    RSI 24.0→46.9 |
+|  BA       VWAP_Reclaim    eq     $222.26  46.9   1.94    VWAP reclaim V|
+|  BRO      VWAP_Reclaim    eq     $73.46   63.0   1.16    VWAP reclaim V|
+|  CNC      VWAP_Reclaim    eq     $64.60   42.8   3.24    VWAP reclaim V|
+|  DHI      Pullback50      eq     $150.27  52.8   -1.21   50MA bounce (-|
+|  DTE      Pullback50      eq     $147.21  39.8   -0.92   50MA bounce (-|
+|  FICO     MA_Squeeze      eq     $1331.~  58.6   1.54    BBW squeeze br|
+|  INCY     VWAP_Reclaim    eq     $132.01  74.8   3.52    VWAP reclaim V|
+|  HII      VWAP_Reclaim    eq     $297.93  58.2   1.40    VWAP reclaim V|
+|  HBAN     Pullback50      eq     $17.25   46.8   -0.57   50MA bounce (+|
+|  IBKR     Pullback50      eq     $90.89   44.5   -0.74   50MA bounce (+|
+|  KDP      Pullback50      eq     $31.04   50.5   -0.89   50MA bounce (+|
+|  LII      VWAP_Reclaim    eq     $542.68  52.4   2.46    VWAP reclaim V|
+|  LIN      Pullback50      eq     $513.76  39.8   -0.72   50MA bounce (-|
+|  NOW      EarningsDrift   eq     $110.00  52.4   0.54    post-earnings |
+|  UDR      Pullback50      eq     $39.26   42.8   1.83    50MA bounce (+|
+|  UHS      EarningsDrift   eq     $166.01  61.1   0.88    post-earnings |
+|  WST      Pullback50      eq     $338.45  40.4   -0.70   50MA bounce (+|
+|  ZBRA     VWAP_Reclaim    eq     $279.48  60.6   1.44    VWAP reclaim V|
+|  AAL      Pullback50      eq     $15.29   40.4   -1.57   50MA bounce (+|
+|  ALLY     Pullback50      eq     $43.98   47.1   -0.67   50MA bounce (-|
+|  ASH      TrendResumpti~  eq     $67.75   66.6   1.37    HH/HL resumpti|
+|  ASH      VWAP_Reclaim    eq     $67.75   66.6   1.37    VWAP reclaim V|
+|  BHF      Pullback50      eq     $63.62   37.6   -1.09   50MA bounce (+|
+|  CMC      Pullback50      eq     $70.21   72.9   -1.60   50MA bounce (+|
+|  COLB     Pullback50      eq     $31.27   50.0   -1.13   50MA bounce (+|
+|  FLS      Pullback50      eq     $73.50   64.6   -0.88   50MA bounce (+|19:49:19  INFO        BUY  NOW  $97.69  [EarningsDrift]  id=4aa08744-aa20-4db9-ba4e-86ce403cd532
+19:49:19  INFO        BUY  UHS  $95.14  [EarningsDrift]  id=1f8443b7-8993-42a9-ba2b-e50e46879fae
+19:49:41  INFO        place_all_stops: checking 5 positions...
+19:49:41  INFO        STOP skipped ALGN: fractional (0.5675 shares) — software exit will handle it
+19:49:41  INFO        STOP already live EQR @ $67.45
+19:49:41  INFO        STOP skipped FFIV: fractional (0.2428 shares) — software exit will handle it
+19:49:41  INFO        STOP skipped NOW: fractional (0.8860 shares) — software exit will handle it
+19:49:41  INFO        STOP skipped UHS: fractional (0.5724 shares) — software exit will handle it
+19:49:41  INFO        place_eod_stops: updating 5 stops to current price...
+19:49:41  INFO        EOD stop skip ALGN: 0.5675 shares (fractional) — ext_exits will cover
+19:49:41  INFO        EOD stop: cancelled old stop EQR
+19:49:41  WARNING     EOD stop failed EQR: {"available":"0.075770093","code":40310000,"existing_qty":"1.075770093","held_for_orders":"1","message":"insufficient qty available for order (requested: 1, available: 0.075770093)","related_orders":["891b8a4a-93cc-4d0b-90cb-b2659eab0893"],"symbol":"EQR"}
+19:49:41  INFO        EOD stop skip FFIV: 0.2428 shares (fractional) — ext_exits will cover
+19:49:41  INFO        EOD stop skip NOW: 0.8860 shares (fractional) — ext_exits will cover
+19:49:41  INFO        EOD stop skip UHS: 0.5724 shares (fractional) — ext_exits will cover
+19:49:41  INFO        Daily log -> logs/daily/2026-07-28.md
+19:49:41  INFO        Dashboard written → logs/dashboard.md
+
+|  GLPI     Pullback50      eq     $45.94   77.1   -0.82   50MA bounce (+|
+|  GBCI     Pullback50      eq     $49.35   45.5   -1.00   50MA bounce (-|
+|  PEN      Pullback50      eq     $320.17  60.0   -0.99   50MA bounce (+|
+|  POR      Pullback50      eq     $51.40   42.7   -0.96   50MA bounce (+|
+|  RGEN     VWAP_Reclaim    eq     $146.40  59.0   1.23    VWAP reclaim V|
+|  SHC      VWAP_Reclaim    eq     $17.59   51.5   1.10    VWAP reclaim V|
+|  SLAB     Pullback50      eq     $217.33  37.3   -0.58   50MA bounce (-|
+|  TRU      VWAP_Reclaim    eq     $83.95   64.3   2.61    VWAP reclaim V|
+|  UNM      Pullback50      eq     $87.39   48.3   -0.80   50MA bounce (-|
+|  WING     MomReversal     eq     $133.33  19.0   0.72    -18.7% drop/60|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] NOW  EarningsDrift                                 $97.69|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] UHS  EarningsDrift                                 $95.14|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] FICO  MA_Squeeze                                     cap 5|
+|    SKIP [eq] WING  MomReversal                                    cap 5|
+|    SKIP [eq] DHI  Pullback50                                      cap 5|
+|    SKIP [eq] DTE  Pullback50                                      cap 5|
+|    SKIP [eq] HBAN  Pullback50                                     cap 5|
+|    SKIP [eq] IBKR  Pullback50                                     cap 5|
+|    SKIP [eq] KDP  Pullback50                                      cap 5|
+|    SKIP [eq] LIN  Pullback50                                      cap 5|
+|    SKIP [eq] UDR  Pullback50                                      cap 5|
+|    SKIP [eq] WST  Pullback50                                      cap 5|
+|    SKIP [eq] AAL  Pullback50                                      cap 5|
+|    SKIP [eq] ALLY  Pullback50                                     cap 5|
+|    SKIP [eq] BHF  Pullback50                                      cap 5|
+|    SKIP [eq] CMC  Pullback50                                      cap 5|
+|    SKIP [eq] COLB  Pullback50                                     cap 5|
+|    SKIP [eq] FLS  Pullback50                                      cap 5|
+|    SKIP [eq] GLPI  Pullback50                                     cap 5|
+|    SKIP [eq] GBCI  Pullback50                                     cap 5|
+|    SKIP [eq] PEN  Pullback50                                      cap 5|
+|    SKIP [eq] POR  Pullback50                                      cap 5|
+|    SKIP [eq] SLAB  Pullback50                                     cap 5|
+|    SKIP [eq] UNM  Pullback50                                      cap 5|
+|    SKIP [eq] BA  RSIRecovery                                      cap 5|
+|    SKIP [eq] ASH  TrendResumption                                 cap 5|
+|    SKIP [eq] BA  VWAP_Reclaim                                     cap 5|
+|    SKIP [eq] BRO  VWAP_Reclaim                                    cap 5|
+|    SKIP [eq] CNC  VWAP_Reclaim                                    cap 5|
+|    SKIP [eq] INCY  VWAP_Reclaim                                   cap 5|
+|    SKIP [eq] HII  VWAP_Reclaim                                    cap 5|
+|    SKIP [eq] LII  VWAP_Reclaim                                    cap 5|
+|    SKIP [eq] ZBRA  VWAP_Reclaim                                   cap 5|
+|    SKIP [eq] ASH  VWAP_Reclaim                                    cap 5|
+|    SKIP [eq] RGEN  VWAP_Reclaim                                   cap 5|
+|    SKIP [eq] SHC  VWAP_Reclaim                                    cap 5|
+|    SKIP [eq] TRU  VWAP_Reclaim                                    cap 5|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  NOW                                                  still unconfirmed|
+|  UHS                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Scanned                                                            896|
+|  Signals                                                             37|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             5|
+|  Equity                                                         $488.31|
+|  Cash                                                            $24.44|
++========================================================================+
