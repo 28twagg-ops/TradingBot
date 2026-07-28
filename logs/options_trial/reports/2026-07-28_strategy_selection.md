@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-28
 
-_Generated 2026-07-28T10:14:52.633423_
+_Generated 2026-07-28T10:19:05.212234_
 
 ## Summary
 
@@ -20,9 +20,9 @@ _Generated 2026-07-28T10:14:52.633423_
 
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 7 | 31 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 7 | 35 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 7 | 8 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 7 | 29 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 7 | 31 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 7 | 28 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S169 (BB Squeeze Breakout call 3 DTE) | 3d ATM BB squeeze | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S170 (Golden Pocket call 3 DTE) | 3d ATM golden pocket | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -45,7 +45,7 @@ _Generated 2026-07-28T10:14:52.633423_
 | S213 (MA_Bounce_200) | 3d ATM MA bounce 200 | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S214 (MA_Death_Cross) | 3d ATM death cross (put) | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S215 (MA_Reclaim_200) | 3d ATM MA reclaim 200 | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 1 | 6 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 1 | 8 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 1 | 8 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 1 | 8 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S219 (Volume_Climax_Up) | 3d ATM vol climax up | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -64,7 +64,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S163 | 7d ATM | 0 | +0.00 | +0.00 | +0.00 | 31 | 0 |
+| S163 | 7d ATM | 0 | +0.00 | +0.00 | +0.00 | 35 | 0 |
 | S164 | 1d ATM | 6 | -65.67 | -88.89 | -86.11 | 29 | 5 |
 | S165 | 3d ATM | 245 | -38.18 | -63.39 | -54.55 | 30 | 0 |
 | S168 | 5d ATM | 0 | +0.00 | +0.00 | +0.00 | 28 | 0 |
@@ -76,7 +76,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S165 | 3d ATM | 245 | -38.18 | -63.39 | -54.55 | 30 | 0 |
-| S167 | 3d 1-OTM | 0 | +0.00 | +0.00 | +0.00 | 29 | 0 |
+| S167 | 3d 1-OTM | 0 | +0.00 | +0.00 | +0.00 | 31 | 0 |
 
 ### New Pattern Strategies — GapDown signal independent
 
@@ -133,7 +133,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S216 | 3d ATM RSI x30 | 0 | +0.00 | +0.00 | +0.00 | 6 | 0 |
+| S216 | 3d ATM RSI x30 | 0 | +0.00 | +0.00 | +0.00 | 8 | 0 |
 | S217 | 3d ATM RSI<25 bounce | 0 | +0.00 | +0.00 | +0.00 | 8 | 0 |
 | S218 | 3d ATM BB lower touch | 0 | +0.00 | +0.00 | +0.00 | 8 | 0 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |

@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-27 14:11:19.981760+00:00,entry,218,c218_s216_w2_1005_1045_r1,S216,d56cfd9754de,GOOGL,GOOGL260729C00342500,1,0.66,0.66,66.0,,,,-0.01,,0.5,-0.5,0.1269841269841271,RSI crossed 30: 26.5 -> 32.1,7d2ad7c8-5d00-43b4-877f-e7b44f77e1a8
 2026-07-27T14:16:32Z,reconcile,218,c218_s216_w2_1005_1045_r1,S216,d56cfd9754de,GOOGL,GOOGL260729C00342500,1,,,66.0,,,zombie_lot,,,,,,zombie age_min=857 notional=$66.00 occ=GOOGL260729C00342500 action=submitted:a12fa81d-e7c1-4d62-b06d-7eeeeadd3a35,
+2026-07-28 14:16:07.215041+00:00,entry,218,c218_s216_w2_1005_1045_r1,S216,803c2de58111,NFLX,NFLX260731C00075000,1,0.67,0.67,67.0,,,,-0.01,,0.5,-0.5,,,64c28168-d58c-4c21-af50-d7e78f89e021
