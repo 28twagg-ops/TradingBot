@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-28 15:24:35.590793+00:00,entry,47,c047_s168_w4_1120_1135_r2,S168,98337d84d899,FCX,FCX260731C00064000,1,0.64,0.64,64.0,,,,-0.01,,0.5,-0.5,,,4998d2de-7cd8-42c8-930d-a03d0900f32e

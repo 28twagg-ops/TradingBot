@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-28 15:24:52.190969+00:00,entry,110,c110_s202_w4_1120_1135_r1,S202,95cbcad23581,INTC,INTC260729C00093000,1,0.34,0.34,34.0,,,,-0.01,,0.5,-0.5,,,bfefe0f6-496a-4cb1-adc1-11ed3ce24dbb
