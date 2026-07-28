@@ -3113,3 +3113,104 @@ Fetched daily bars for 903/903 symbols
 ### Options bot full output
 
 ```text
+
+## Run 20260728T140138Z
+
+- UTC timestamp: `20260728T140138Z`
+- GitHub run: [#5260](https://github.com/28twagg-ops/TradingBot/actions/runs/30366185352)
+- Run id: `30366185352`
+- Live bot: exit=`0`, duration=`3s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-28T09:25:53.006491-04:00","date":"2026-07-28","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.0,"phases_s":{"reconcile":0.55},"signals":0,"placed":0,"equity":127687.89,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"5253","github_run_id":"30363370450","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+14:01:39  INFO      Mode: exits
+14:01:40  INFO        Daily log -> logs/daily/2026-07-28.md
+14:01:40  INFO        Daily log reconciled -> logs/daily/2026-07-28.md (2 ledger rows)
+14:01:40  INFO        place_all_stops: checking 5 positions...
+14:01:40  INFO        STOP skipped ALGN: fractional (0.5675 shares) — software exit will handle it
+14:01:40  INFO        STOP skipped DTE: fractional (0.6523 shares) — software exit will handle it
+14:01:40  INFO        STOP already live EQR @ $67.45
+14:01:40  INFO        STOP skipped FFIV: fractional (0.2428 shares) — software exit will handle it
+14:01:40  INFO        STOP skipped HUBB: fractional (0.1985 shares) — software exit will handle it
+14:01:41  INFO        [positions] 5/5 (5 valid)
+14:01:41  INFO        Daily log -> logs/daily/2026-07-28.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:01 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $486.38|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  HUBB  P&L -0.2%  $-0.22                                           HOLD|
+|  ALGN  P&L -0.2%  $-0.19                                           HOLD|
+|  DTE  P&L +0.2%  $+0.17                                            HOLD|
+|  FFIV  P&L +0.3%  $+0.31                                           HOLD|
+|  EQR  P&L +0.4%  $+0.29                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           5|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                5|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=0 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=2
+  zombies_flagged=0
+options_reconcile: done
+Layout: controlled:248:c000_s163_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:248:c000_s163_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      248
+=== options_morning_bot (PAPER) 2026-07-28T10:01:43.471274-04:00 ===
+
+[Run context]
+Paper auth OK — equity $128345.89, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 248 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219] …
+Fetched daily bars for 903/903 symbols
+Found 733 signal(s); top: ['S165:AMD', 'S165:APH', 'S165:AMAT', 'S165:ANET', 'S165:AVGO', 'S165:CARR', 'S165:CAT', 'S165:CNC']
+Paper lab: $129126 broker equity -> 248 bucket(s) ($500 virtual each, unlimited paper)
+```
+
+---

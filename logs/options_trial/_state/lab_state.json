@@ -1,11 +1,80 @@
 {
   "version": 5,
   "lots": [],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "f0a9bb19-fa6e-4e68-84bb-90ebc718e509",
+      "bucket_id": 16,
+      "strategy_id": "S165",
+      "occ_symbol": "AVGO260729C00400000",
+      "underlying": "AVGO",
+      "qty": 1,
+      "limit": 0.66,
+      "profile_name": "c016_s165_w1_0928_1005_r1",
+      "submitted": "2026-07-28",
+      "detail": "gap -2.3%",
+      "spread_frac": 0.1612903225806453,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "b9972dac-789e-4a4d-b424-69bbe576049d",
+      "bucket_id": 17,
+      "strategy_id": "S165",
+      "occ_symbol": "AVGO260729C00400000",
+      "underlying": "AVGO",
+      "qty": 1,
+      "limit": 0.66,
+      "profile_name": "c017_s165_w1_0928_1005_r2",
+      "submitted": "2026-07-28",
+      "detail": "gap -2.3%",
+      "spread_frac": 0.1612903225806453,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "15b833b9-a281-42db-a194-fbfe0c54a233",
+      "bucket_id": 8,
+      "strategy_id": "S164",
+      "occ_symbol": "AVGO260729C00400000",
+      "underlying": "AVGO",
+      "qty": 1,
+      "limit": 0.62,
+      "profile_name": "c008_s164_w1_0928_1005_r1",
+      "submitted": "2026-07-28",
+      "detail": "gap -2.3%",
+      "spread_frac": 0.10000000000000009,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "258ea028-e869-4a6a-986b-6b47f5b85e79",
+      "bucket_id": 9,
+      "strategy_id": "S164",
+      "occ_symbol": "AVGO260729C00400000",
+      "underlying": "AVGO",
+      "qty": 1,
+      "limit": 0.62,
+      "profile_name": "c009_s164_w1_0928_1005_r2",
+      "submitted": "2026-07-28",
+      "detail": "gap -2.3%",
+      "spread_frac": 0.10000000000000009,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    }
+  ],
   "pending_exits": [],
   "bucket_open_premium": {},
   "session_date": "2026-07-28",
-  "entries_locked": [],
+  "entries_locked": [
+    "16|S165|2026-07-28",
+    "17|S165|2026-07-28",
+    "8|S164|2026-07-28"
+  ],
   "processed_orders": [
     "2fe7ec7a-3e91-469f-a594-6d4ee71b3c9b",
     "98320c59-b2ca-4082-9512-001d494d7c9e",
@@ -476,7 +545,7 @@
     "f739356a-29fd-46c6-8bb0-eeab04e80962",
     "de61f3ec-3aa8-47ee-a63d-b57c37a8ffb0"
   ],
-  "submitted_today": 0,
+  "submitted_today": 4,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-07-28"
 }
