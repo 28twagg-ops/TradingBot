@@ -266,26 +266,26 @@
   {
     "bucket_id": 44,
     "profile": "c044_s168_w3_1045_1120_r1",
-    "open_premium": 53.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 45,
     "profile": "c045_s168_w3_1045_1120_r2",
-    "open_premium": 53.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 46,
     "profile": "c046_s168_w4_1120_1135_r1",
-    "open_premium": 64.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 47,
     "profile": "c047_s168_w4_1120_1135_r2",
-    "open_premium": 64.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 48,
