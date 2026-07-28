@@ -1,6 +1,6 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
 S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),75,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,7,35,0,0,0.0
-S166,GapDown strong call,3d ATM strong,watch,insufficient sample (<8 exits),30,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,7,10,0,0,0.0
+S166,GapDown strong call,3d ATM strong,watch,insufficient sample (<8 exits),32,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,7,12,0,0,0.0
 S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,insufficient sample (<8 exits),76,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,7,31,0,0,0.0
 S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,insufficient sample (<8 exits),58,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,7,28,0,0,0.0
 S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
@@ -10,7 +10,7 @@ S172,Trend Resumption call 3 DTE,3d ATM trend resume,watch,insufficient sample (
 S175,Earnings Drift call 3 DTE,3d ATM earnings drift,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S200,GapDown_Aggressive,3d ATM gap-aggr,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S201,GapDown_Mild,3d ATM gap-mild,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
-S202,GapDown_Monster,3d ATM gap-monster,watch,insufficient sample (<8 exits),4,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,4,0,0,0.0
+S202,GapDown_Monster,3d ATM gap-monster,watch,insufficient sample (<8 exits),6,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,6,0,0,0.0
 S203,GapUp_Fade,3d ATM gap-up fade (put),watch,insufficient sample (<8 exits),4,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,4,0,0,0.0
 S204,GapUp_Continuation,3d ATM gap-up cont,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S205,GapDown_HighVol,3d ATM gap-highvol,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
@@ -20,7 +20,7 @@ S208,GapDown_AboveMA200,3d ATM gap-ma200,watch,insufficient sample (<8 exits),0,
 S209,GapDown_Recovery,3d ATM gap-recovery,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S210,MA_Cross_8_21,3d ATM MA cross 8/21,watch,insufficient sample (<8 exits),6,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,6,0,0,0.0
 S211,MA_Cross_21_50,3d ATM MA cross 21/50,watch,insufficient sample (<8 exits),4,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,4,0,0,0.0
-S212,MA_Bounce_50,3d ATM MA bounce 50,watch,insufficient sample (<8 exits),10,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,10,0,0,0.0
+S212,MA_Bounce_50,3d ATM MA bounce 50,watch,insufficient sample (<8 exits),12,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,12,0,0,0.0
 S213,MA_Bounce_200,3d ATM MA bounce 200,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S214,MA_Death_Cross,3d ATM death cross (put),watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S215,MA_Reclaim_200,3d ATM MA reclaim 200,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0

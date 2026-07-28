@@ -2,4 +2,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-27 14:11:16.505365+00:00,entry,43,c043_s168_w2_1005_1045_r2,S168,df69b11380ff,APA,APA260731C00036000,1,0.69,0.69,69.0,,,,-0.01,,0.5,-0.5,0.1374045801526717,gap -4.2%,e4fc605c-99ea-4eac-b0d0-895786f66f29
 2026-07-27T14:16:32Z,reconcile,43,c043_s168_w2_1005_1045_r2,S168,df69b11380ff,APA,APA260731C00036000,1,,,69.0,,,zombie_lot,,,,,,zombie age_min=857 notional=$69.00 occ=APA260731C00036000 action=submitted:509a6fd4-dd87-4f37-b42c-75e4702f79e3,
 2026-07-28 14:13:54.677826+00:00,entry,43,c043_s168_w2_1005_1045_r2,S168,5ffb7b2d58d0,INTC,INTC260731C00095000,1,0.69,0.69,69.0,,,,-0.01,,0.5,-0.5,,,1068eef3-1232-4505-aac7-da6a27409403
-2026-07-28T14:20:54Z,reconcile,43,c043_s168_w2_1005_1045_r2,S168,5ffb7b2d58d0,INTC,INTC260731C00095000,1,,,69.0,,,zombie_lot,,,,,,zombie age_min=861 notional=$69.00 occ=INTC260731C00095000 action=submitted:da214372-8e8a-43eb-bb7d-0f4c6c78dff2,
+2026-07-28T14:26:05Z,reconcile,43,c043_s168_w2_1005_1045_r2,S168,5ffb7b2d58d0,INTC,INTC260731C00095000,1,,,69.0,,,zombie_lot,,,,,,zombie age_min=866 notional=$69.00 occ=INTC260731C00095000 action=no_broker_position,
