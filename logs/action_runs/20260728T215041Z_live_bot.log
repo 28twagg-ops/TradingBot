@@ -1,0 +1,60 @@
+21:50:42  INFO      Mode: ext_exits
+21:50:43  INFO        Daily log -> logs/daily/2026-07-28.md
+21:50:43  INFO        Daily log reconciled -> logs/daily/2026-07-28.md (4 ledger rows)
+21:50:43  INFO        SELL order cancelled LII  type=OrderType.LIMIT  id=d98f6e21-3d17-4ba0-b123-3286a4e2ddaa
+21:50:43  INFO        SELL LIMIT [EXT HRS] LII  qty=0.174570232  limit=$539.19  id=8b3a7ea0-ee69-4c0b-88e9-ebc21fb78549
+21:50:48  INFO        SELL LIMIT[EXT] pending for LII — 9:35am will follow up
+21:50:48  INFO        Daily log -> logs/daily/2026-07-28.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                         EXT_EXITS|
+|  Time                                                         21:50 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $486.88|
++========================================================================+
+
++========================================================================+
+|                       EXIT CHECK [EXTENDED HRS]                        |
++========================================================================+
+|  Exit log~  stop-0.5% / 3d max  (midline skipped — close already final)|
++------------------------------------------------------------------------+
+|  LII  P&L -0.8%  $-0.78          EXIT [EXTENDED HRS]: stop_loss (-0.8%)|
+|  LII                              SELL pending (after-hours limit open)|
+|  HLT  P&L -0.2%  $-0.18        HOLDING until 9:35am scan (GoldenPocket)|
+|  EQR  P&L +0.5%  $+0.33          HOLDING until 9:35am scan (Pullback50)|
+|  FFIV  P&L +0.7%  $+0.70         HOLDING until 9:35am scan (Pullback50)|
+|  ALGN  P&L +2.5%  $+2.43         HOLDING until 9:35am scan (Pullback50)|
++========================================================================+
+
++========================================================================+
+|                          EXTENDED HOURS SELLS                          |
++========================================================================+
+|                                                                        |
+|  No extended-hours sells this run.                                     |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                         ext_exits|
+|  Candidates                                                           5|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  0 filled  |  0 partial  |  1 pending  |  0 failed|
+|  Holds                                                                4|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  LII                                         -0.82%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             1|
++========================================================================+
