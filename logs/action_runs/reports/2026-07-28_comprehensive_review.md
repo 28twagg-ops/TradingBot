@@ -19566,3 +19566,99 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260728T193130Z
+
+- UTC timestamp: `20260728T193130Z`
+- GitHub run: [#5330](https://github.com/28twagg-ops/TradingBot/actions/runs/30392203832)
+- Run id: `30392203832`
+- Live bot: exit=`0`, duration=`218s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-28T15:25:50.835795-04:00","date":"2026-07-28","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":0.6,"phases_s":{"reconcile":0.15,"cancel":0.08,"manage":0.05},"signals":0,"placed":0,"equity":130448.25,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":59,"filled_today":91,"unattributed_contracts":0,"top_signals":[],"github_run":"5329","github_run_id":"30391844626","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:31:31  INFO      Mode: evening_prep
+19:31:32  INFO        [prep_positions] 3/3 (3 valid)
+19:31:32  INFO        Universe cache hit: 903 tickers (tickers_2026-07-28.json)
+19:31:33  INFO        [prep_universe] 40/900 (40 valid)
+19:31:34  INFO        [prep_universe] 80/900 (80 valid)
+19:31:36  INFO        [prep_universe] 120/900 (120 valid)
+19:31:37  INFO        [prep_universe] 160/900 (160 valid)
+19:31:38  INFO        [prep_universe] 200/900 (199 valid)
+19:31:46  INFO        [prep_universe] 240/900 (238 valid)
+19:31:59  INFO        [prep_universe] 280/900 (278 valid)
+19:32:09  INFO        [prep_universe] 320/900 (318 valid)
+19:32:23  INFO        [prep_universe] 360/900 (358 valid)
+19:32:33  INFO        [prep_universe] 400/900 (397 valid)
+19:32:46  INFO        [prep_universe] 440/900 (437 valid)
+19:33:00  INFO        [prep_universe] 480/900 (477 valid)
+19:33:10  INFO        [prep_universe] 520/900 (517 valid)
+19:33:23  INFO        [prep_universe] 560/900 (557 valid)
+19:33:34  INFO        [prep_universe] 600/900 (597 valid)
+19:33:47  INFO        [prep_universe] 640/900 (637 valid)
+19:33:57  INFO        [prep_universe] 680/900 (677 valid)
+19:34:11  INFO        [prep_universe] 720/900 (717 valid)
+19:34:21  INFO        [prep_universe] 760/900 (757 valid)
+19:34:34  INFO        [prep_universe] 800/900 (797 valid)
+19:34:47  INFO        [prep_universe] 840/900 (836 valid)
+19:34:58  INFO        [prep_universe] 880/900 (876 valid)
+19:35:05  INFO        [prep_universe] 900/900 (896 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      EVENING_PREP|
+|  Time                                                         19:31 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $488.75|
++========================================================================+
+
++========================================================================+
+|                              EVENING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/evening_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       3|
+|  Invested                                                       $271.50|
+|  Open P&L                                                        $+4.11|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ALGN     Pullback50      $98.32     $171.32  $173.25  +1.1%   $+1.09  |
+|  EQR      Pullback50      $73.50     $67.78   $68.33   +0.8%   $+0.58  |
+|  FFIV     Pullback50      $99.67     $400.57  $410.59  +2.5%   $+2.43  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                1|
+|  TICKER    TYPE              QTY       LIMIT       STOP                |
++------------------------------------------------------------------------+
+|  EQR       OrderType.STOP    1         None        67.45               |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      0|
+|  Signal candidates                                                   34|
+|  Universe scanned                                                   900|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
