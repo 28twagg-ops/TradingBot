@@ -3613,3 +3613,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-28 16:51:03,exits,bull,487.97,217.25,0,0,0,3,ALGN|EQR|FFIV,both
 2026-07-28 16:55:44,exits,bull,487.81,217.25,0,0,0,3,ALGN|EQR|FFIV,both
 2026-07-28 17:00:48,exits,bull,487.12,217.25,0,0,0,3,ALGN|EQR|FFIV,both
+2026-07-28 17:05:44,exits,bull,486.8,217.25,0,0,0,3,ALGN|EQR|FFIV,both
