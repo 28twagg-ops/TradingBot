@@ -1,2 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-28 14:14:06.866810+00:00,entry,106,c106_s202_w2_1005_1045_r1,S202,258bc89d8ca9,INTC,INTC260729C00090000,1,0.57,0.57,57.0,,,,-0.01,,0.5,-0.5,,,144d8aef-4801-45fe-b204-462fe15644c4
+2026-07-28T14:20:54Z,reconcile,106,c106_s202_w2_1005_1045_r1,S202,258bc89d8ca9,INTC,INTC260729C00090000,1,,,56.99999999999999,,,zombie_lot,,,,,,zombie age_min=861 notional=$57.00 occ=INTC260729C00090000 action=submitted:3f52b897-aea7-43f4-9d73-0832338ba35d,
+2026-07-28 14:24:33.276908+00:00,entry,106,c106_s202_w2_1005_1045_r1,S202,fabdcc047398,INTC,INTC260729C00090000,1,0.56,0.55,55.0,,,,-0.01,,0.5,-0.5,0.1714285714285714,gap -5.5%,1bc00ba8-1b0d-4431-ac89-7ad952e6b025

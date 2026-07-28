@@ -1,0 +1,54 @@
+14:20:50  INFO      Mode: exits
+14:20:51  INFO        Daily log -> logs/daily/2026-07-28.md
+14:20:51  INFO        Daily log reconciled -> logs/daily/2026-07-28.md (2 ledger rows)
+14:20:51  INFO        place_all_stops: checking 5 positions...
+14:20:51  INFO        STOP skipped ALGN: fractional (0.5675 shares) — software exit will handle it
+14:20:51  INFO        STOP skipped DTE: fractional (0.6523 shares) — software exit will handle it
+14:20:51  INFO        STOP already live EQR @ $67.45
+14:20:51  INFO        STOP skipped FFIV: fractional (0.2428 shares) — software exit will handle it
+14:20:51  INFO        STOP skipped HUBB: fractional (0.1985 shares) — software exit will handle it
+14:20:52  INFO        [positions] 5/5 (5 valid)
+14:20:52  INFO        Daily log -> logs/daily/2026-07-28.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:20 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $488.59|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  HUBB  P&L +0.2%  $+0.18                                           HOLD|
+|  EQR  P&L +0.3%  $+0.21                                            HOLD|
+|  DTE  P&L +0.7%  $+0.67                                            HOLD|
+|  FFIV  P&L +0.7%  $+0.70                                           HOLD|
+|  ALGN  P&L +0.8%  $+0.80                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           5|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                5|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
