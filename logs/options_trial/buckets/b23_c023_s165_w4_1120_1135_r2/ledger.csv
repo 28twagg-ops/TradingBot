@@ -1,2 +1,2 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
-2026-07-28 15:24:46.097101+00:00,entry,23,c023_s165_w4_1120_1135_r2,S165,a95d626381a0,AVGO,AVGO260729C00400000,1,0.66,0.66,66.0,,,,-0.01,,0.5,-0.5,,,36de23f9-d0f1-40ba-aa0c-d566138d6df6
+2026-07-28 15:24:46.097101+00:00,entry,23,c023_s165_w4_1120_1135_r2,S165,ab7e49e0369d,AVGO,AVGO260729C00400000,1,0.66,0.66,66.0,,,,-0.01,,0.5,-0.5,0.1612903225806453,gap -2.3%,36de23f9-d0f1-40ba-aa0c-d566138d6df6

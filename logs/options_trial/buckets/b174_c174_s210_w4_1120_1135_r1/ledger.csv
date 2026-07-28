@@ -1,2 +1,2 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
-2026-07-28 15:24:59.546876+00:00,entry,174,c174_s210_w4_1120_1135_r1,S210,5a11230f54ed,LVS,LVS260731C00049000,1,0.4,0.4,40.0,,,,-0.01,,0.5,-0.5,,,dd3fe43c-2111-4abe-a3f7-052a7399e38d
+2026-07-28 15:24:59.546876+00:00,entry,174,c174_s210_w4_1120_1135_r1,S210,e7caf83a5892,LVS,LVS260731C00049000,1,0.41,0.4,40.0,,,,-0.01,,0.5,-0.5,0.15384615384615383,MA8 46.25 crossed above MA21,dd3fe43c-2111-4abe-a3f7-052a7399e38d
