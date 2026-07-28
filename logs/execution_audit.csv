@@ -669,3 +669,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-07-28 13:51:58,2026-07-28,SELL,BG,Pullback50,118.33,118.09,118.306,97.15,-0.0203,-0.0197,limit_fill_position_check_full,midline (-0.1%),bull
 2026-07-28 13:52:29,2026-07-28,SELL,DHI,Pullback50,151.71,151.41,151.664,97.18,-0.0303,-0.0295,limit_fill_position_check_full,midline (-0.0%),bull
 2026-07-28 15:01:13,2026-07-28,SELL,HUBB,Pullback50,485.98,,485.98,96.49,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
+2026-07-28 15:21:16,2026-07-28,SELL,DTE,Pullback50,148.16,,148.16,96.65,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
