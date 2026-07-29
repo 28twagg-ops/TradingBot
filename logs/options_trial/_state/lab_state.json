@@ -2,15 +2,15 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "0956fcc71e0c",
-      "bucket_id": 163,
-      "profile_name": "c163_s209_w2_1005_1045_r2",
-      "strategy_id": "S209",
-      "occ_symbol": "V260731C00382500",
-      "underlying": "V",
+      "lot_id": "d54c0fa6a58a",
+      "bucket_id": 235,
+      "profile_name": "c235_s218_w2_1005_1045_r2",
+      "strategy_id": "S218",
+      "occ_symbol": "UPS260731C00109000",
+      "underlying": "UPS",
       "qty": 1,
-      "entry_cost": 56.00000000000001,
-      "entry_price": 0.56,
+      "entry_cost": 19.0,
+      "entry_price": 0.19,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
@@ -19,18 +19,18 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-29",
-      "entry_order_id": "b767064f-6762-4b52-842a-6dc9cc9d3633"
+      "entry_order_id": "d4dbe73e-0668-44ac-9914-345cb92cd643"
     },
     {
-      "lot_id": "e22396f6220f",
-      "bucket_id": 162,
-      "profile_name": "c162_s209_w2_1005_1045_r1",
-      "strategy_id": "S209",
-      "occ_symbol": "V260731C00382500",
-      "underlying": "V",
+      "lot_id": "b27983386e64",
+      "bucket_id": 234,
+      "profile_name": "c234_s218_w2_1005_1045_r1",
+      "strategy_id": "S218",
+      "occ_symbol": "UPS260731C00109000",
+      "underlying": "UPS",
       "qty": 1,
-      "entry_cost": 56.00000000000001,
-      "entry_price": 0.56,
+      "entry_cost": 19.0,
+      "entry_price": 0.19,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
@@ -39,7 +39,7 @@
       "eod_only": false,
       "market_exit_eod": true,
       "entry_date": "2026-07-29",
-      "entry_order_id": "7c84cefe-5797-4698-a251-62fc6507a102"
+      "entry_order_id": "add99c61-a7fd-4e2f-9331-c7e745f5c24b"
     }
   ],
   "pending_orders": [
@@ -154,44 +154,12 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
-    },
-    {
-      "order_id": "add99c61-a7fd-4e2f-9331-c7e745f5c24b",
-      "bucket_id": 234,
-      "strategy_id": "S218",
-      "occ_symbol": "UPS260731C00109000",
-      "underlying": "UPS",
-      "qty": 1,
-      "limit": 0.19,
-      "profile_name": "c234_s218_w2_1005_1045_r1",
-      "submitted": "2026-07-29",
-      "detail": "low=103.97 BB_lower=105.61 touch+green",
-      "spread_frac": 0.10526315789473693,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "d4dbe73e-0668-44ac-9914-345cb92cd643",
-      "bucket_id": 235,
-      "strategy_id": "S218",
-      "occ_symbol": "UPS260731C00109000",
-      "underlying": "UPS",
-      "qty": 1,
-      "limit": 0.19,
-      "profile_name": "c235_s218_w2_1005_1045_r2",
-      "submitted": "2026-07-29",
-      "detail": "low=103.97 BB_lower=105.61 touch+green",
-      "spread_frac": 0.10526315789473693,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
     }
   ],
   "pending_exits": [],
   "bucket_open_premium": {
-    "b163": 56.00000000000001,
-    "b162": 56.00000000000001
+    "b235": 19.0,
+    "b234": 19.0
   },
   "session_date": "2026-07-29",
   "entries_locked": [
@@ -706,7 +674,9 @@
     "3e56a793-1c21-47a2-a8f8-0adc44c82611",
     "30f0d827-4bb0-483d-8547-1f1aeed87f16",
     "b767064f-6762-4b52-842a-6dc9cc9d3633",
-    "7c84cefe-5797-4698-a251-62fc6507a102"
+    "7c84cefe-5797-4698-a251-62fc6507a102",
+    "d4dbe73e-0668-44ac-9914-345cb92cd643",
+    "add99c61-a7fd-4e2f-9331-c7e745f5c24b"
   ],
   "submitted_today": 29,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

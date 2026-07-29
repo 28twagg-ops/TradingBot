@@ -4965,3 +4965,102 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260729T143733Z
+
+- UTC timestamp: `20260729T143733Z`
+- GitHub run: [#5411](https://github.com/28twagg-ops/TradingBot/actions/runs/30461585319)
+- Run id: `30461585319`
+- Live bot: exit=`0`, duration=`2s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-29T10:30:53.236891-04:00","date":"2026-07-29","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":203.3,"phases_s":{"reconcile":0.44,"cancel":0.14,"manage":0.13,"scan":172.57,"entries":29.02,"reconcile2":0.46},"signals":509,"placed":0,"equity":126766.32,"open_positions":1,"pending_orders":9,"open_lots":2,"submitted_today":29,"filled_today":24,"unattributed_contracts":0,"top_signals":["S165:AMCR","S165:AON","S165:AMAT","S165:ACGL","S165:BSX","S165:BLDR","S165:BG","S165:CCL"],"github_run":"5410","github_run_id":"30461164108","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+14:37:34  INFO      Mode: exits
+14:37:34  INFO        Daily log -> logs/daily/2026-07-29.md
+14:37:34  INFO        Daily log reconciled -> logs/daily/2026-07-29.md (5 ledger rows)
+14:37:34  INFO        place_all_stops: checking 3 positions...
+14:37:34  INFO        STOP already live CMS @ $74.46
+14:37:34  INFO        STOP already live EQR @ $67.89
+14:37:34  INFO        STOP skipped FFIV: fractional (0.2428 shares) — software exit will handle it
+14:37:34  INFO        [positions] 3/3 (3 valid)
+14:37:35  INFO        Daily log -> logs/daily/2026-07-29.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:37 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $474.64|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CMS  P&L -0.0%  $-0.00                                            HOLD|
+|  FFIV  P&L +0.7%  $+0.65                                           HOLD|
+|  EQR  P&L +1.2%  $+0.88                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=2 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=4
+  zombies_flagged=2
+  FLAG b163|S209|0956fcc7 zombie age_min=878 notional=$56.00 occ=V260731C00382500 action=submitted:2458d1a1-b148-4fc0-ac5e-61f72a25d687
+  FLAG b162|S209|e22396f6 zombie age_min=878 notional=$56.00 occ=V260731C00382500 action=submitted:b1b32d14-f4c2-4c1f-8944-6ec3ebdbae2d
+options_reconcile: done
+Layout: controlled:248:c000_s163_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:248:c000_s163_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      248
+=== options_morning_bot (PAPER) 2026-07-29T10:37:36.749969-04:00 ===
+
+[Run context]
+Paper auth OK — equity $126414.20, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 248 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219] …
+Fetched daily bars for 903/903 symbols
+Found 509 signal(s); top: ['S165:AMCR', 'S165:AON', 'S165:AMAT', 'S165:ACGL', 'S165:BSX', 'S165:BLDR', 'S165:BG', 'S165:CCL']
+Paper lab: $126038 broker equity -> 248 bucket(s) ($500 virtual each, unlimited paper)
+```
+
+---
