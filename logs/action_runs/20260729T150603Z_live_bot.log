@@ -1,0 +1,53 @@
+15:06:04  INFO      Mode: exits
+15:06:05  INFO        Daily log -> logs/daily/2026-07-29.md
+15:06:05  INFO        Daily log reconciled -> logs/daily/2026-07-29.md (5 ledger rows)
+15:06:05  INFO        place_all_stops: checking 3 positions...
+15:06:05  INFO        STOP skipped CMS: fractional (0.2712 shares) — software exit will handle it
+15:06:05  INFO        STOP already live EQR @ $67.89
+15:06:05  INFO        STOP skipped FFIV: fractional (0.2428 shares) — software exit will handle it
+15:06:06  INFO        [positions] 3/3 (3 valid)
+15:06:06  INFO        SELL MARKET [urgent] CMS closed
+15:06:08  INFO        TX logged: SELL CMS  P&L -0.71%
+15:06:08  INFO        Daily log -> logs/daily/2026-07-29.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:06 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $472.97|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CMS  P&L -0.7%  $-0.14                         EXIT: stop_loss (-0.7%)|
+|  FFIV  P&L -0.2%  $-0.17                                           HOLD|
+|  EQR  P&L +0.7%  $+0.54                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  CMS                                         -0.71%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
