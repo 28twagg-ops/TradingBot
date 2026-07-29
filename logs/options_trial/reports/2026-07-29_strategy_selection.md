@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-29
 
-_Generated 2026-07-29T10:54:20.889570_
+_Generated 2026-07-29T10:58:45.792692_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-07-29T10:54:20.889570_
 
 ## Attribution health
 
-- Total exits: **807**
+- Total exits: **808**
 - Orphan exits (b0/orphan_reconcile): **22**
 - Orphan rate: **2.7%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -31,7 +31,6 @@ _Generated 2026-07-29T10:54:20.889570_
 | S175 (Earnings Drift call 3 DTE) | 3d ATM earnings drift | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S200 (GapDown_Aggressive) | 3d ATM gap-aggr | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S201 (GapDown_Mild) | 3d ATM gap-mild | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 1 | 12 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 2 | 6 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S204 (GapUp_Continuation) | 3d ATM gap-up cont | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S205 (GapDown_HighVol) | 3d ATM gap-highvol | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -49,7 +48,8 @@ _Generated 2026-07-29T10:54:20.889570_
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 2 | 10 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 2 | 16 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S219 (Volume_Climax_Up) | 3d ATM vol climax up | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 6 | 0.0 | -65.67 | -88.89 | -86.11 | -50.00 | 8 | 16 | 0 | $-59.00 | 83.3% | insufficient sample (<8 exits) |
+| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 6 | 0.0 | -65.67 | -88.89 | -86.11 | -50.00 | 8 | 17 | 0 | $-59.00 | 83.3% | insufficient sample (<8 exits) |
+| S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 1 | 0.0 | -66.67 | -66.67 | -66.67 | -66.67 | 1 | 12 | 1 | $-2.00 | 100.0% | insufficient sample (<8 exits) |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 23 | 0 | 0 | $-1,658.19 | 50.4% | manually paused — excluded from new entries & reflected P&L |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 23 | 0 | 0 | $+62.64 | 27.5% | manually paused — excluded from new entries & reflected P&L |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 245 | 29.8 | -38.18 | -63.39 | -54.55 | +81.82 | 23 | 22 | 0 | $-1,828.78 | 26.1% | non-positive median return |
@@ -65,7 +65,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S163 | 7d ATM | 0 | +0.00 | +0.00 | +0.00 | 14 | 0 |
-| S164 | 1d ATM | 6 | -65.67 | -88.89 | -86.11 | 16 | 0 |
+| S164 | 1d ATM | 6 | -65.67 | -88.89 | -86.11 | 17 | 0 |
 | S165 | 3d ATM | 245 | -38.18 | -63.39 | -54.55 | 22 | 0 |
 | S168 | 5d ATM | 0 | +0.00 | +0.00 | +0.00 | 18 | 0 |
 
@@ -98,7 +98,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 |---|---|---:|---:|---:|---:|---:|---:|
 | S200 | 3d ATM gap-aggr | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S201 | 3d ATM gap-mild | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
-| S202 | 3d ATM gap-monster | 0 | +0.00 | +0.00 | +0.00 | 12 | 0 |
+| S202 | 3d ATM gap-monster | 1 | -66.67 | -66.67 | -66.67 | 12 | 1 |
 | S204 | 3d ATM gap-up cont | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S205 | 3d ATM gap-highvol | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S206 | 3d ATM gap-trend | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
@@ -167,7 +167,7 @@ _Pipeline evaluation as of 2026-07-29. Auto-kill thresholds: median<-25% at n>=1
 | S175 | Earnings Drift call 3  | 0 | — | — | NEW | 0 |
 | S200 | GapDown_Aggressive | 0 | — | — | NEW | 0 |
 | S201 | GapDown_Mild | 0 | — | — | NEW | 0 |
-| S202 | GapDown_Monster | 0 | — | — | NEW | 1 |
+| S202 | GapDown_Monster | 1 | -66.67% | 0% | WATCH | 1 |
 | S203 | GapUp_Fade | 0 | — | — | NEW | 2 |
 | S204 | GapUp_Continuation | 0 | — | — | NEW | 0 |
 | S205 | GapDown_HighVol | 0 | — | — | NEW | 0 |
