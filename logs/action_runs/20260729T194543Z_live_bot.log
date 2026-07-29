@@ -1,0 +1,218 @@
+19:45:44  INFO      Mode: scan
+19:45:44  INFO        [positions] 1/1 (1 valid)
+19:45:44  INFO        Universe cache hit: 903 tickers (tickers_2026-07-29.json)
+19:45:45  INFO        [universe] 40/902 (40 valid)
+19:45:47  INFO        [universe] 80/902 (80 valid)
+19:45:49  INFO        [universe] 120/902 (120 valid)
+19:45:50  INFO        [universe] 160/902 (160 valid)
+19:45:51  INFO        [universe] 200/902 (199 valid)
+19:45:59  INFO        [universe] 240/902 (238 valid)
+19:46:12  INFO        [universe] 280/902 (278 valid)
+19:46:23  INFO        [universe] 320/902 (318 valid)
+19:46:36  INFO        [universe] 360/902 (358 valid)
+19:46:46  INFO        [universe] 400/902 (397 valid)
+19:46:59  INFO        [universe] 440/902 (437 valid)
+19:47:10  INFO        [universe] 480/902 (477 valid)
+19:47:23  INFO        [universe] 520/902 (517 valid)
+19:47:34  INFO        [universe] 560/902 (557 valid)
+19:47:47  INFO        [universe] 600/902 (597 valid)
+19:48:00  INFO        [universe] 640/902 (637 valid)
+19:48:10  INFO        [universe] 680/902 (677 valid)
+19:48:24  INFO        [universe] 720/902 (717 valid)
+19:48:34  INFO        [universe] 760/902 (757 valid)
+19:48:47  INFO        [universe] 800/902 (797 valid)
+19:49:00  INFO        [universe] 840/902 (836 valid)
+19:49:10  INFO        [universe] 880/902 (876 valid)
+19:49:17  INFO        [universe] 902/902 (898 valid)
+19:49:20  INFO        BUY  NOW  $94.57  [EarningsDrift]  id=bdb62826-9ad2-4bcb-9006-7b21c40d9bc4
+19:49:20  INFO        BUY  FTNT  $94.57  [GoldenPocket]  id=e23d33a3-1844-4091-8655-127c1473ae28
+19:49:20  INFO        BUY  ODFL  $94.57  [GoldenPocket]  id=48e11619-6541-4e4f-a567-ae3432ae14aa
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $472.83|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-29|
+|  Universe                                                          both|
+|  Mon~  Jul: 52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $472.83|
+|  Cash                                                           $399.03|
+|  Reserve                                          $23.64  (always kept)|
+|  Available                                    $375.39  (for new trades)|
+|  Trade size             $94.57  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (1 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  EQR      Pullback50      $73.80     $67.78   $68.60   +1.2%   $+0.88  |
+|                                                                        |
+|  Total invested                                                  $73.80|
+|  Total open P&L                                                  $+0.88|
+|  Buys today: 0  |  entry cap: 4  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (60491.6m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  EQR  P&L +1.2%  $+0.88                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50 (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  20                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  BXP      VWAP_Reclaim    eq     $72.98   72.3   3.26    VWAP reclaim V|
+|  CAT      RubberBand      eq     $781.98  19.5   2.05    RSI           |
+|  COST     Pullback50      eq     $973.02  75.3   -1.57   50MA bounce (+|
+|  DVN      Pullback50      eq     $44.48   63.0   -1.62   50MA bounce (+|
+|  FTNT     GoldenPocket    eq     $153.19  36.5   2.23    fib 61.8-65% b|
+|  FTNT     VWAP_Reclaim    eq     $153.19  36.5   2.23    VWAP reclaim V|
+|  LIN      Pullback50      eq     $512.02  39.5   -1.56   50MA bounce (-|
+|  MAR      Pullback50      eq     $380.43  56.5   -1.27   50MA bounce (+|
+|  ODFL     GoldenPocket    eq     $222.19  46.5   1.96    fib 61.8-65% b|
+|  PWR      RubberBand      eq     $559.30  21.0   1.84    RSI           |
+|  RVTY     VWAP_Reclaim    eq     $112.76  49.6   1.18    VWAP reclaim V|
+|  NOW      EarningsDrift   eq     $115.92  57.0   0.93    post-earnings |
+|  SWK      VWAP_Reclaim    eq     $92.89   63.0   1.98    VWAP reclaim V|
+|  APG      MomReversal     eq     $38.53   21.1   0.37    -16.1% drop/60|
+|  CUZ      VWAP_Reclaim    eq     $32.30   69.7   2.04    VWAP reclaim V|
+|  GLPI     Pullback50      eq     $45.84   76.0   -0.76   50MA bounce (+|
+|  LSTR     RubberBand      eq     $177.77  22.5   2.18    RSI           |
+|  MTDR     RSIRecovery     eq     $48.97   43.0   1.13    RSI 29.0→43.0 |
+|  PEN      Pullback50      eq     $319.65  56.1   -1.04   50MA bounce (+|
+|  WING     MomReversal     eq     $139.09  28.1   2.37    -13.5% drop/60|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] NOW  EarningsDrift                                 $94.57|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] FTNT  GoldenPocket                                 $94.57|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] ODFL  GoldenPocket                                 $94.57|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|19:49:21  INFO        BUY  APG  $91.69  [MomReversal]  id=95adc11a-6ecc-42bf-8e13-bcdeba99bee6
+19:49:59  INFO        place_all_stops: checking 5 positions...
+19:49:59  INFO        STOP-MARKET placed APG  qty=2 (pos=2.3776)  stop=$38.37  id=a6c63601-c1ed-4c55-be71-54bcf71bc5a8
+19:49:59  INFO        STOP already live EQR @ $67.89
+19:49:59  INFO        STOP skipped FTNT: fractional (0.6181 shares) — software exit will handle it
+19:49:59  INFO        STOP skipped NOW: fractional (0.8185 shares) — software exit will handle it
+19:49:59  INFO        STOP skipped ODFL: fractional (0.4250 shares) — software exit will handle it
+19:49:59  INFO        place_eod_stops: updating 5 stops to current price...
+19:49:59  INFO        EOD stop: cancelled old stop APG
+19:49:59  INFO        EOD stop placed APG @ $38.44  (cur $38.63  qty=2)
+19:49:59  INFO        EOD stop: cancelled old stop EQR
+19:49:59  INFO        EOD stop placed EQR @ $68.44  (cur $68.78  qty=1)
+19:49:59  INFO        EOD stop skip FTNT: 0.6181 shares (fractional) — ext_exits will cover
+19:49:59  INFO        EOD stop skip NOW: 0.8185 shares (fractional) — ext_exits will cover
+19:49:59  INFO        EOD stop skip ODFL: 0.4250 shares (fractional) — ext_exits will cover
+19:49:59  INFO        Daily log -> logs/daily/2026-07-29.md
+19:49:59  INFO        Dashboard written → logs/dashboard.md
+
+|    ENTER [eq] APG  MomReversal                                   $91.69|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] WING  MomReversal                                    cap 5|
+|    SKIP [eq] COST  Pullback50                                     cap 5|
+|    SKIP [eq] DVN  Pullback50                                      cap 5|
+|    SKIP [eq] LIN  Pullback50                                      cap 5|
+|    SKIP [eq] MAR  Pullback50                                      cap 5|
+|    SKIP [eq] GLPI  Pullback50                                     cap 5|
+|    SKIP [eq] PEN  Pullback50                                      cap 5|
+|    SKIP [eq] MTDR  RSIRecovery                                    cap 5|
+|    SKIP [eq] CAT  RubberBand                                      cap 5|
+|    SKIP [eq] PWR  RubberBand                                      cap 5|
+|    SKIP [eq] LSTR  RubberBand                                     cap 5|
+|    SKIP [eq] BXP  VWAP_Reclaim                                    cap 5|
+|    SKIP [eq] FTNT  VWAP_Reclaim                                   cap 5|
+|    SKIP [eq] RVTY  VWAP_Reclaim                                   cap 5|
+|    SKIP [eq] SWK  VWAP_Reclaim                                    cap 5|
+|    SKIP [eq] CUZ  VWAP_Reclaim                                    cap 5|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      4|
++------------------------------------------------------------------------+
+|  NOW                                                  still unconfirmed|
+|  FTNT                                                 still unconfirmed|
+|  ODFL                                                 still unconfirmed|
+|  APG                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 4 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Scanned                                                            898|
+|  Signals                                                             20|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  4 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             5|
+|  Equity                                                         $473.40|
+|  Cash                                                            $23.67|
++========================================================================+
