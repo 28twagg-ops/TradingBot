@@ -3708,3 +3708,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-29 13:55:17,scan_morning,bull,476.07,23.82,19,0,1,5,CMS|COST|DHI|EQR|FFIV,both
 2026-07-29 14:01:50,exits,bull,475.51,207.83,0,0,0,3,CMS|EQR|FFIV,both
 2026-07-29 14:06:17,exits,bull,476.01,207.83,0,0,0,3,CMS|EQR|FFIV,both
+2026-07-29 14:10:44,exits,bull,475.86,207.83,0,0,0,3,CMS|EQR|FFIV,both
