@@ -1,0 +1,213 @@
+19:55:38  INFO      Mode: scan
+19:55:39  INFO        [positions] 3/3 (3 valid)
+19:55:39  INFO        Universe cache hit: 903 tickers (tickers_2026-07-29.json)
+19:55:40  INFO        [universe] 40/900 (40 valid)
+19:55:41  INFO        [universe] 80/900 (80 valid)
+19:55:43  INFO        [universe] 120/900 (120 valid)
+19:55:53  INFO        [universe] 160/900 (160 valid)
+19:56:03  INFO        [universe] 200/900 (199 valid)
+19:56:16  INFO        [universe] 240/900 (238 valid)
+19:56:26  INFO        [universe] 280/900 (278 valid)
+19:56:39  INFO        [universe] 320/900 (318 valid)
+19:56:52  INFO        [universe] 360/900 (358 valid)
+19:57:03  INFO        [universe] 400/900 (397 valid)
+19:57:16  INFO        [universe] 440/900 (437 valid)
+19:57:26  INFO        [universe] 480/900 (477 valid)
+19:57:39  INFO        [universe] 520/900 (517 valid)
+19:57:52  INFO        [universe] 560/900 (557 valid)
+19:58:05  INFO        [universe] 600/900 (597 valid)
+19:58:15  INFO        [universe] 640/900 (637 valid)
+19:58:28  INFO        [universe] 680/900 (677 valid)
+19:58:41  INFO        [universe] 720/900 (717 valid)
+19:58:51  INFO        [universe] 760/900 (757 valid)
+19:59:04  INFO        [universe] 800/900 (797 valid)
+19:59:17  INFO        [universe] 840/900 (836 valid)
+19:59:27  INFO        [universe] 880/900 (876 valid)
+19:59:33  INFO        [universe] 900/900 (896 valid)
+19:59:36  ERROR       BUY FAILED NOW: {"code":40010001,"message":"client_order_id must be unique"}
+19:59:36  INFO        BUY  WING  $94.70  [MomReversal]  id=83435d57-81eb-4f91-98b6-24636eb2308c
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:55 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $473.50|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-29|
+|  Universe                                                          both|
+|  Mon~  Jul: 52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $473.50|
+|  Cash                                                           $192.40|
+|  Reserve                                          $23.68  (always kept)|
+|  Available                                    $168.72  (for new trades)|
+|  Trade size             $94.70  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (3 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  APG      MomReversal     $91.62     $38.56   $38.53   -0.1%   $-0.06  |
+|  FTNT     GoldenPocket    $94.89     $152.97  $153.50  +0.3%   $+0.33  |
+|  ODFL     GoldenPocket    $94.53     $222.48  $222.42  -0.0%   $-0.03  |
+|                                                                        |
+|  Total invested                                                 $281.04|
+|  Total open P&L                                                  $+0.24|
+|  Buys today: 0  |  entry cap: 2  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (60501.5m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  APG  P&L -0.1%  $-0.06                                            HOLD|
+|  ODFL  P&L -0.0%  $-0.03                                           HOLD|
+|  FTNT  P&L +0.3%  $+0.33                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 3|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50 (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  18                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  ACGL     VWAP_Reclaim    eq     $104.01  54.8   1.06    VWAP reclaim V|
+|  BXP      VWAP_Reclaim    eq     $73.24   72.8   3.36    VWAP reclaim V|
+|  CAT      RubberBand      eq     $782.20  19.5   2.25    RSI           |
+|  COST     Pullback50      eq     $974.08  75.5   -1.49   50MA bounce (+|
+|  DVN      Pullback50      eq     $44.48   63.1   -1.54   50MA bounce (+|
+|  EXE      VWAP_Reclaim    eq     $92.56   59.2   1.21    VWAP reclaim V|
+|  MAR      Pullback50      eq     $380.95  57.0   -1.06   50MA bounce (+|
+|  PWR      RubberBand      eq     $560.12  21.1   2.18    RSI           |
+|  RVTY     VWAP_Reclaim    eq     $113.08  50.3   1.59    VWAP reclaim V|
+|  NOW      EarningsDrift   eq     $115.67  56.7   1.12    post-earnings |
+|  SWK      VWAP_Reclaim    eq     $92.48   61.9   2.27    VWAP reclaim V|
+|  CUZ      VWAP_Reclaim    eq     $32.33   69.9   2.38    VWAP reclaim V|
+|  GLPI     Pullback50      eq     $46.06   77.1   -0.61   50MA bounce (+|
+|  LSTR     RubberBand      eq     $178.05  22.6   2.57    RSI           |
+|  MTDR     RSIRecovery     eq     $49.03   43.2   1.53    RSI 29.0→43.2 |
+|  PEN      Pullback50      eq     $319.73  56.4   -0.88   50MA bounce (+|
+|  VIAV     RubberBand      eq     $32.16   28.7   2.12    6d-down       |
+|  WING     MomReversal     eq     $139.33  28.5   2.55    -13.3% drop/60|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] NOW  EarningsDrift                                 $94.70|
+|    ENTER [eq] WING  MomReversal                                  $94.70|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] COST  Pullback50                                   $94.70|19:59:36  ERROR       BUY FAILED COST: {"code":40010001,"message":"client_order_id must be unique"}
+19:59:36  INFO        BUY  DVN  $94.70  [Pullback50]  id=d65e05fa-dcba-4798-acb0-04d102f83657
+19:59:58  INFO        place_all_stops: checking 5 positions...
+19:59:58  INFO        STOP skipped APG: fractional (0.3776 shares) — software exit will handle it
+19:59:58  INFO        STOP-MARKET placed DVN  qty=2 (pos=2.1289)  stop=$44.26  id=70b05f5b-83dd-4c84-a037-c6bde33d3b71
+19:59:58  INFO        STOP skipped FTNT: fractional (0.6181 shares) — software exit will handle it
+19:59:58  INFO        STOP skipped ODFL: fractional (0.4250 shares) — software exit will handle it
+19:59:58  INFO        STOP skipped WING: fractional (0.6787 shares) — software exit will handle it
+19:59:58  INFO        place_eod_stops: updating 5 stops to current price...
+19:59:58  INFO        EOD stop skip APG: 0.3776 shares (fractional) — ext_exits will cover
+19:59:58  INFO        EOD stop: cancelled old stop DVN
+19:59:58  WARNING     EOD stop failed DVN: {"available":"0.128887929","code":40310000,"existing_qty":"2.128887929","held_for_orders":"2","message":"insufficient qty available for order (requested: 2, available: 0.128887929)","symbol":"DVN"}
+19:59:58  INFO        EOD stop skip FTNT: 0.6181 shares (fractional) — ext_exits will cover
+19:59:58  INFO        EOD stop skip ODFL: 0.4250 shares (fractional) — ext_exits will cover
+19:59:58  INFO        EOD stop skip WING: 0.6787 shares (fractional) — ext_exits will cover
+19:59:58  INFO        Daily log -> logs/daily/2026-07-29.md
+19:59:58  INFO        Dashboard written → logs/dashboard.md
+
+|    ENTER [eq] DVN  Pullback50                                    $94.70|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] MAR  Pullback50                                      cap 5|
+|    SKIP [eq] GLPI  Pullback50                                     cap 5|
+|    SKIP [eq] PEN  Pullback50                                      cap 5|
+|    SKIP [eq] MTDR  RSIRecovery                                    cap 5|
+|    SKIP [eq] CAT  RubberBand                                      cap 5|
+|    SKIP [eq] PWR  RubberBand                                      cap 5|
+|    SKIP [eq] LSTR  RubberBand                                     cap 5|
+|    SKIP [eq] VIAV  RubberBand                                     cap 5|
+|    SKIP [eq] ACGL  VWAP_Reclaim                                   cap 5|
+|    SKIP [eq] BXP  VWAP_Reclaim                                    cap 5|
+|    SKIP [eq] EXE  VWAP_Reclaim                                    cap 5|
+|    SKIP [eq] RVTY  VWAP_Reclaim                                   cap 5|
+|    SKIP [eq] SWK  VWAP_Reclaim                                    cap 5|
+|    SKIP [eq] CUZ  VWAP_Reclaim                                    cap 5|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  WING                                                 still unconfirmed|
+|  DVN                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Scanned                                                            896|
+|  Signals                                                             18|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             5|
+|  Equity                                                         $473.64|
+|  Cash                                                            $79.90|
++========================================================================+
