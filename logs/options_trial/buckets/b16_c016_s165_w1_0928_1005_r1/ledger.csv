@@ -4,3 +4,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-28 14:05:14.646620+00:00,entry,16,c016_s165_w1_0928_1005_r1,S165,85d1894e1e9e,AVGO,AVGO260729C00400000,1,0.66,0.65,65.0,,,,-0.01,,0.5,-0.5,0.1612903225806453,gap -2.3%,f0a9bb19-fa6e-4e68-84bb-90ebc718e509
 2026-07-28T14:15:44Z,reconcile,16,c016_s165_w1_0928_1005_r1,S165,85d1894e1e9e,AVGO,AVGO260729C00400000,1,,,65.0,,,zombie_lot,,,,,,zombie age_min=856 notional=$65.00 occ=AVGO260729C00400000 action=submitted:a3114f00-9c15-42f3-baea-c74de3911978,
 2026-07-29 14:08:42.440259+00:00,entry,16,c016_s165_w1_0928_1005_r1,S165,9185ea50e9c1,CCL,CCL260731C00028000,1,0.59,0.59,59.0,,,,-0.01,,0.5,-0.5,,,a4557a11-efc1-466d-9540-23ff30e3f1ff
+2026-07-29T14:15:42Z,reconcile,16,c016_s165_w1_0928_1005_r1,S165,9185ea50e9c1,CCL,CCL260731C00028000,1,,,59.0,,,zombie_lot,,,,,,zombie age_min=856 notional=$59.00 occ=CCL260731C00028000 action=submitted:6c765df2-a014-456d-bdf1-225969b05d89,

@@ -6,3 +6,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-28 14:16:44.534339+00:00,entry,2,c002_s163_w2_1005_1045_r1,S163,990a77331133,HPE,HPE260807C00050000,1,0.55,0.55,55.0,,,,-0.01,,0.5,-0.5,,,3e7dfe5f-0389-42eb-b71b-324a86f80c31
 2026-07-28T14:20:55Z,reconcile,2,c002_s163_w2_1005_1045_r1,S163,a0b8ee57f0c5,GLW,GLW260731C00132000,1,,,60.0,,,zombie_lot,,,,,,zombie age_min=861 notional=$60.00 occ=GLW260731C00132000 action=submitted:c6fcee8a-6722-4c24-8e2f-be44cd2da9e5,
 2026-07-28T14:20:56Z,reconcile,2,c002_s163_w2_1005_1045_r1,S163,990a77331133,HPE,HPE260807C00050000,1,,,55.00000000000001,,,zombie_lot,,,,,,zombie age_min=861 notional=$55.00 occ=HPE260807C00050000 action=submitted:b5b6f916-1151-46e1-aebe-342784701375,
+2026-07-29 14:14:44.559577+00:00,entry,2,c002_s163_w2_1005_1045_r1,S163,8fda7b9aaee6,CCL,CCL260731C00028000,1,0.59,0.59,59.0,,,,-0.01,,0.5,-0.5,0.2018348623853211,gap -2.7%,a03ea111-d0eb-480f-b80f-efc13b17780e
