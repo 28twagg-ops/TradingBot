@@ -5916,3 +5916,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-28T15:45:45Z,reconcile,44,c044_s168_w3_1045_1120_r1,S168,b47089be73ba,FCX,FCX260731C00064000,1,,,53.0,,,zombie_lot,,,,,,zombie age_min=946 notional=$53.00 occ=FCX260731C00064000 action=submitted:f505aad8-bb63-47cf-89ed-4333265e5f76,
 2026-07-28T15:45:45Z,reconcile,47,c047_s168_w4_1120_1135_r2,S168,134e59c4468a,FCX,FCX260731C00064000,1,,,64.0,,,zombie_lot,,,,,,zombie age_min=946 notional=$64.00 occ=FCX260731C00064000 action=submitted:2694b2a1-c4c0-4fcd-ad75-87c5c35211df,
 2026-07-28T15:45:45Z,reconcile,46,c046_s168_w4_1120_1135_r1,S168,cc9695cfee39,FCX,FCX260731C00064000,1,,,64.0,,,zombie_lot,,,,,,zombie age_min=946 notional=$64.00 occ=FCX260731C00064000 action=submitted:1552786f-9164-460d-a224-9c8d64c9ddb5,
+2026-07-29 14:05:20.880331+00:00,entry,9,c009_s164_w1_0928_1005_r2,S164,5033ab07679f,CCL,CCL260731C00028000,1,0.7,0.7,70.0,,,,-0.01,,0.5,-0.5,,,471861ba-db70-4cad-b580-4e714f1846d1
+2026-07-29 14:05:20.629612+00:00,entry,8,c008_s164_w1_0928_1005_r1,S164,ebefcab13542,CCL,CCL260731C00028000,1,0.7,0.7,70.0,,,,-0.01,,0.5,-0.5,,,64a878c3-2f7b-47ca-94b1-c2410ae6e40a

@@ -50,14 +50,14 @@
   {
     "bucket_id": 8,
     "profile": "c008_s164_w1_0928_1005_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 70.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 9,
     "profile": "c009_s164_w1_0928_1005_r2",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 70.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 10,
