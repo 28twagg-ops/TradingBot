@@ -1,2 +1,2 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
-2026-07-29 15:24:51.365402+00:00,entry,31,c031_s166_w4_1120_1135_r2,S166,622e51e2a052,AAL,AAL260731C00014500,1,0.72,0.72,72.0,,,,-0.01,,0.5,-0.5,,,effbba0f-8429-42d2-b8fe-bfcf92f04095
+2026-07-29 15:24:51.365402+00:00,entry,31,c031_s166_w4_1120_1135_r2,S166,91ba1f4d235a,AAL,AAL260731C00014500,1,0.73,0.72,72.0,,,,-0.01,,0.5,-0.5,0.14492753623188404,gap -4.2%,effbba0f-8429-42d2-b8fe-bfcf92f04095

@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-29 15:33:55.500477+00:00,entry,182,c182_s211_w4_1120_1135_r1,S211,d5811203c90a,HPQ,HPQ260731C00028500,1,0.53,0.52,52.0,,,,-0.01,,0.5,-0.5,0.18181818181818188,MA21 crossed above MA50,8e6e68d0-743c-4eb1-8172-2dafb4a0b4af
