@@ -2959,3 +2959,617 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-07-29.log
 elapsed=163.5s reconcile=0.24s cancel=0.05s manage=0.32s scan=147.23s entries=15.05s
 
+=== 10:45:39 ET — entry+manage (28 new) [elapsed=223.9s reconcile=0.15s cancel=0.05s manage=0.05s scan=141.11s entries=81.96s] ===
+=== options_morning_bot (PAPER) 2026-07-29T10:45:39.960935-04:00 ===
+
+[Run context]
+Paper auth OK — equity $125712.16, account PA36KS87UPRS
+  reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:248:c000_s163_w1_0928_1005_r1
+  reconcile: removed 2 stale lot(s)
+
+[Setup]
+Active buckets: 248 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219] …
+Fetched daily bars for 903/903 symbols
+Found 509 signal(s); top: ['S165:AMCR', 'S165:AON', 'S165:AMAT', 'S165:ACGL', 'S165:BSX', 'S165:BLDR', 'S165:BG', 'S165:CCL']
+Paper lab: $126134 broker equity -> 248 bucket(s) ($500 virtual each, unlimited paper)
+  [b20|c020_s165_w3_1045_1120_r1] S165 AMCR: no tradeable call
+  [b21|c021_s165_w3_1045_1120_r2] S165 AMCR: no tradeable call
+  [b20|c020_s165_w3_1045_1120_r1] S165 AON: no tradeable call
+  [b21|c021_s165_w3_1045_1120_r2] S165 AON: no tradeable call
+  [b20|c020_s165_w3_1045_1120_r1] S165 AMAT: no tradeable call
+  [b21|c021_s165_w3_1045_1120_r2] S165 AMAT: no tradeable call
+  [b20|c020_s165_w3_1045_1120_r1] S165 ACGL: no tradeable call
+  [b21|c021_s165_w3_1045_1120_r2] S165 ACGL: no tradeable call
+  [b20|c020_s165_w3_1045_1120_r1] S165 BSX: no tradeable call
+  [b21|c021_s165_w3_1045_1120_r2] S165 BSX: no tradeable call
+  [b20|c020_s165_w3_1045_1120_r1] S165 BLDR: no tradeable call
+  [b21|c021_s165_w3_1045_1120_r2] S165 BLDR: no tradeable call
+  [b20|c020_s165_w3_1045_1120_r1] S165 BG: no tradeable call
+  [b21|c021_s165_w3_1045_1120_r2] S165 BG: no tradeable call
+  ENTRY [b20|c020_s165_w3_1045_1120_r1|S165] BUY 1x CCL260731C00028000 (gap -2.7%) limit=0.45 (ask=0.46 off=-0.01) tp=+50% sl=-50% pending id=951ef5f7-f93b-4ed4-bfac-652dacd7914c
+  ENTRY [b21|c021_s165_w3_1045_1120_r2|S165] BUY 1x CCL260731C00028000 (gap -2.7%) limit=0.45 (ask=0.46 off=-0.01) tp=+50% sl=-50% pending id=96df6f14-4b98-44d9-ad42-8b2b8496e189
+  [b12|c012_s164_w3_1045_1120_r1] S164 AMCR: no tradeable call
+  [b13|c013_s164_w3_1045_1120_r2] S164 AMCR: no tradeable call
+  [b12|c012_s164_w3_1045_1120_r1] S164 AON: no tradeable call
+  [b13|c013_s164_w3_1045_1120_r2] S164 AON: no tradeable call
+  [b12|c012_s164_w3_1045_1120_r1] S164 AMAT: no tradeable call
+  [b13|c013_s164_w3_1045_1120_r2] S164 AMAT: no tradeable call
+  [b12|c012_s164_w3_1045_1120_r1] S164 ACGL: no tradeable call
+  [b13|c013_s164_w3_1045_1120_r2] S164 ACGL: no tradeable call
+  [b12|c012_s164_w3_1045_1120_r1] S164 BSX: no tradeable call
+  [b13|c013_s164_w3_1045_1120_r2] S164 BSX: no tradeable call
+  [b12|c012_s164_w3_1045_1120_r1] S164 BLDR: no tradeable call
+  [b13|c013_s164_w3_1045_1120_r2] S164 BLDR: no tradeable call
+  [b12|c012_s164_w3_1045_1120_r1] S164 BG: no tradeable call
+  [b13|c013_s164_w3_1045_1120_r2] S164 BG: no tradeable call
+  ENTRY [b12|c012_s164_w3_1045_1120_r1|S164] BUY 1x CCL260731C00028000 (gap -2.7%) limit=0.45 (ask=0.46 off=-0.01) tp=+50% sl=-50% pending id=52ea755b-642c-4c41-a51c-ce5fbadf743f
+  ENTRY [b13|c013_s164_w3_1045_1120_r2|S164] BUY 1x CCL260731C00028000 (gap -2.7%) limit=0.45 (ask=0.46 off=-0.01) tp=+50% sl=-50% pending id=f3fd691f-2c9f-42e6-b5dc-3bda7dc4ec37
+  [b42|c042_s168_w2_1005_1045_r1] S168 AMCR: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 AMCR: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 AMCR: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 AMCR: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 AON: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 AON: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 AON: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 AON: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 AMAT: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 AMAT: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 AMAT: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 AMAT: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 ACGL: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 ACGL: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 ACGL: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 ACGL: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 BSX: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 BSX: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 BSX: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 BSX: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 BLDR: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 BLDR: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 BLDR: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 BLDR: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 BG: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 BG: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 BG: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 BG: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 CCL: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 CCL: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 CCL: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 CCL: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 CAT: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 CAT: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 CAT: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 CAT: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 CSGP: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 CSGP: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 CSGP: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 CSGP: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 DAL: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 DAL: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 DAL: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 DAL: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 FLEX: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 FLEX: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 FLEX: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 FLEX: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 FTV: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 FTV: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 FTV: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 FTV: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 IP: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 IP: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 IP: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 IP: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 KKR: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 KKR: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 KKR: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 KKR: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 KLAC: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 KLAC: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 KLAC: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 KLAC: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 LII: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 LII: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 LII: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 LII: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 MAS: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 MAS: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 MAS: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 MAS: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 NCLH: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 NCLH: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 NCLH: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 NCLH: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 NXPI: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 NXPI: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 NXPI: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 NXPI: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 ODFL: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 ODFL: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 ODFL: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 ODFL: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 OMC: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 OMC: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 OMC: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 OMC: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 PPG: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 PPG: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 PPG: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 PPG: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 PG: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 PG: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 PG: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 PG: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 SWKS: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 SWKS: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 SWKS: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 SWKS: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 SW: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 SW: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 SW: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 SW: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 LUV: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 LUV: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 LUV: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 LUV: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 TPR: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 TPR: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 TPR: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 TPR: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 UAL: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 UAL: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 UAL: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 UAL: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 VRT: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 VRT: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 VRT: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 VRT: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 V: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 V: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 V: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 V: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 AAL: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 AAL: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 AAL: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 AAL: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 AGCO: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 AGCO: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 AGCO: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 AGCO: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 ALK: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 ALK: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 ALK: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 ALK: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 ANF: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 ANF: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 ANF: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 ANF: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 BBWI: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 BBWI: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 BBWI: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 BBWI: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 CAR: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 CAR: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 CAR: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 CAR: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 CHWY: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 CHWY: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 CHWY: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 CHWY: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 CPRI: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 CPRI: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 CPRI: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 CPRI: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 CR: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 CR: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 CR: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 CR: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 ELF: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 ELF: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 ELF: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 ELF: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 ENTG: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 ENTG: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 ENTG: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 ENTG: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 ESAB: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 ESAB: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 ESAB: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 ESAB: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 EVR: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 EVR: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 EVR: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 EVR: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 FBIN: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 FBIN: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 FBIN: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 FBIN: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 GPK: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 GPK: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 GPK: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 GPK: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 H: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 H: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 H: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 H: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 HIMS: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 HIMS: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 HIMS: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 HIMS: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 KEX: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 KEX: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 KEX: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 KEX: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 LSTR: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 LSTR: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 LSTR: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 LSTR: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 M: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 M: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 M: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 M: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 ONTO: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 ONTO: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 ONTO: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 ONTO: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 OSK: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 OSK: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 OSK: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 OSK: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 PSN: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 PSN: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 PSN: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 PSN: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 PVH: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 PVH: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 PVH: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 PVH: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 RH: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 RH: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 RH: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 RH: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 SGI: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 SGI: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 SGI: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 SGI: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 SLGN: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 SLGN: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 SLGN: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 SLGN: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 TEX: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 TEX: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 TEX: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 TEX: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 UNM: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 UNM: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 UNM: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 UNM: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 VFC: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 VFC: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 VFC: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 VFC: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 VIAV: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 VIAV: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 VIAV: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 VIAV: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 WMS: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 WMS: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 WMS: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 WMS: no tradeable call
+  [b42|c042_s168_w2_1005_1045_r1] S168 WSO: no tradeable call
+  [b43|c043_s168_w2_1005_1045_r2] S168 WSO: no tradeable call
+  [b44|c044_s168_w3_1045_1120_r1] S168 WSO: no tradeable call
+  [b45|c045_s168_w3_1045_1120_r2] S168 WSO: no tradeable call
+  [b36|c036_s167_w3_1045_1120_r1] S167 AMCR: no tradeable call
+  [b37|c037_s167_w3_1045_1120_r2] S167 AMCR: no tradeable call
+  [b36|c036_s167_w3_1045_1120_r1] S167 AON: no tradeable call
+  [b37|c037_s167_w3_1045_1120_r2] S167 AON: no tradeable call
+  [b36|c036_s167_w3_1045_1120_r1] S167 AMAT: no tradeable call
+  [b37|c037_s167_w3_1045_1120_r2] S167 AMAT: no tradeable call
+  [b36|c036_s167_w3_1045_1120_r1] S167 ACGL: no tradeable call
+  [b37|c037_s167_w3_1045_1120_r2] S167 ACGL: no tradeable call
+  [b36|c036_s167_w3_1045_1120_r1] S167 BSX: no tradeable call
+  [b37|c037_s167_w3_1045_1120_r2] S167 BSX: no tradeable call
+  [b36|c036_s167_w3_1045_1120_r1] S167 BLDR: no tradeable call
+  [b37|c037_s167_w3_1045_1120_r2] S167 BLDR: no tradeable call
+  [b36|c036_s167_w3_1045_1120_r1] S167 BG: no tradeable call
+  [b37|c037_s167_w3_1045_1120_r2] S167 BG: no tradeable call
+  ENTRY [b36|c036_s167_w3_1045_1120_r1|S167] BUY 1x CCL260731C00028000 (gap -2.7%) limit=0.45 (ask=0.46 off=-0.01) tp=+50% sl=-50% pending id=69ec0b51-4953-474d-a173-abe64455b4f4
+  ENTRY [b37|c037_s167_w3_1045_1120_r2|S167] BUY 1x CCL260731C00028000 (gap -2.7%) limit=0.45 (ask=0.46 off=-0.01) tp=+50% sl=-50% pending id=4b667dd3-9644-4c43-8b77-07a995c3a2b1
+  [b28|c028_s166_w3_1045_1120_r1] S166 AON: no tradeable call
+  [b29|c029_s166_w3_1045_1120_r2] S166 AON: no tradeable call
+  [b28|c028_s166_w3_1045_1120_r1] S166 ACGL: no tradeable call
+  [b29|c029_s166_w3_1045_1120_r2] S166 ACGL: no tradeable call
+  [b28|c028_s166_w3_1045_1120_r1] S166 BSX: no tradeable call
+  [b29|c029_s166_w3_1045_1120_r2] S166 BSX: no tradeable call
+  [b28|c028_s166_w3_1045_1120_r1] S166 BG: no tradeable call
+  [b29|c029_s166_w3_1045_1120_r2] S166 BG: no tradeable call
+  [b28|c028_s166_w3_1045_1120_r1] S166 CAT: no tradeable call
+  [b29|c029_s166_w3_1045_1120_r2] S166 CAT: no tradeable call
+  [b28|c028_s166_w3_1045_1120_r1] S166 CSGP: no tradeable call
+  [b29|c029_s166_w3_1045_1120_r2] S166 CSGP: no tradeable call
+  [b28|c028_s166_w3_1045_1120_r1] S166 FLEX: no tradeable call
+  [b29|c029_s166_w3_1045_1120_r2] S166 FLEX: no tradeable call
+  [b28|c028_s166_w3_1045_1120_r1] S166 KLAC: no tradeable call
+  [b29|c029_s166_w3_1045_1120_r2] S166 KLAC: no tradeable call
+  [b28|c028_s166_w3_1045_1120_r1] S166 LII: no tradeable call
+  [b29|c029_s166_w3_1045_1120_r2] S166 LII: no tradeable call
+  [b28|c028_s166_w3_1045_1120_r1] S166 MAS: no tradeable call
+  [b29|c029_s166_w3_1045_1120_r2] S166 MAS: no tradeable call
+  ENTRY [b28|c028_s166_w3_1045_1120_r1|S166] BUY 1x NCLH260731C00021500 (gap -3.4%) limit=0.49 (ask=0.50 off=-0.01) tp=+50% sl=-50% pending id=4038d022-6746-433b-aeab-cb84d6708041
+  ENTRY [b29|c029_s166_w3_1045_1120_r2|S166] BUY 1x NCLH260731C00021500 (gap -3.4%) limit=0.49 (ask=0.50 off=-0.01) tp=+50% sl=-50% pending id=263f0bd7-5c88-4fb4-bab9-60feab7ea9ae
+  [b4|c004_s163_w3_1045_1120_r1] S163 AMCR: no tradeable call
+  [b5|c005_s163_w3_1045_1120_r2] S163 AMCR: no tradeable call
+  [b4|c004_s163_w3_1045_1120_r1] S163 AON: no tradeable call
+  [b5|c005_s163_w3_1045_1120_r2] S163 AON: no tradeable call
+  [b4|c004_s163_w3_1045_1120_r1] S163 AMAT: no tradeable call
+  [b5|c005_s163_w3_1045_1120_r2] S163 AMAT: no tradeable call
+  [b4|c004_s163_w3_1045_1120_r1] S163 ACGL: no tradeable call
+  [b5|c005_s163_w3_1045_1120_r2] S163 ACGL: no tradeable call
+  [b4|c004_s163_w3_1045_1120_r1] S163 BSX: no tradeable call
+  [b5|c005_s163_w3_1045_1120_r2] S163 BSX: no tradeable call
+  [b4|c004_s163_w3_1045_1120_r1] S163 BLDR: no tradeable call
+  [b5|c005_s163_w3_1045_1120_r2] S163 BLDR: no tradeable call
+  [b4|c004_s163_w3_1045_1120_r1] S163 BG: no tradeable call
+  [b5|c005_s163_w3_1045_1120_r2] S163 BG: no tradeable call
+  ENTRY [b4|c004_s163_w3_1045_1120_r1|S163] BUY 1x CCL260731C00028000 (gap -2.7%) limit=0.47 (ask=0.48 off=-0.01) tp=+50% sl=-50% pending id=584551b7-1936-483a-ac9f-bd773a517047
+  ENTRY [b5|c005_s163_w3_1045_1120_r2|S163] BUY 1x CCL260731C00028000 (gap -2.7%) limit=0.47 (ask=0.48 off=-0.01) tp=+50% sl=-50% pending id=98a2f246-92e0-4b4a-b30b-be088a8373fd
+  [b108|c108_s202_w3_1045_1120_r1] S202 BSX: no tradeable call
+  [b109|c109_s202_w3_1045_1120_r2] S202 BSX: no tradeable call
+  [b108|c108_s202_w3_1045_1120_r1] S202 CSGP: no tradeable call
+  [b109|c109_s202_w3_1045_1120_r2] S202 CSGP: no tradeable call
+  [b108|c108_s202_w3_1045_1120_r1] S202 FLEX: no tradeable call
+  [b109|c109_s202_w3_1045_1120_r2] S202 FLEX: no tradeable call
+  [b108|c108_s202_w3_1045_1120_r1] S202 KLAC: no tradeable call
+  [b109|c109_s202_w3_1045_1120_r2] S202 KLAC: no tradeable call
+  [b108|c108_s202_w3_1045_1120_r1] S202 LII: no tradeable call
+  [b109|c109_s202_w3_1045_1120_r2] S202 LII: no tradeable call
+  [b108|c108_s202_w3_1045_1120_r1] S202 MAS: no tradeable call
+  [b109|c109_s202_w3_1045_1120_r2] S202 MAS: no tradeable call
+  ENTRY [b108|c108_s202_w3_1045_1120_r1|S202] BUY 1x PG260731C00155000 (gap -5.0%) limit=0.04 (ask=0.05 off=-0.01) tp=+50% sl=-50% pending id=423864a3-be6c-414e-b012-52980bd616a8
+  ENTRY [b109|c109_s202_w3_1045_1120_r2|S202] BUY 1x PG260731C00155000 (gap -5.0%) limit=0.04 (ask=0.05 off=-0.01) tp=+50% sl=-50% pending id=67ebe617-1fa9-4909-b33e-c8dcec38a1c4
+  [b116|c116_s203_w3_1045_1120_r1] S203 APH: no tradeable put
+  [b117|c117_s203_w3_1045_1120_r2] S203 APH: no tradeable put
+  ENTRY [b116|c116_s203_w3_1045_1120_r1|S203] BUY 1x APA260731P00036000 (gap +4.6% red close) limit=0.49 (ask=0.50 off=-0.01) tp=+50% sl=-50% pending id=17de61df-cf96-4e3d-b495-964eb4369bc9
+  ENTRY [b117|c117_s203_w3_1045_1120_r2|S203] BUY 1x APA260731P00036000 (gap +4.6% red close) limit=0.49 (ask=0.50 off=-0.01) tp=+50% sl=-50% pending id=20d7c0b3-1587-4a7d-95cb-415c1a1788c0
+  [b130|c130_s205_w2_1005_1045_r1] S205 PSN: no tradeable call
+  [b131|c131_s205_w2_1005_1045_r2] S205 PSN: no tradeable call
+  [b132|c132_s205_w3_1045_1120_r1] S205 PSN: no tradeable call
+  [b133|c133_s205_w3_1045_1120_r2] S205 PSN: no tradeable call
+  ENTRY [b148|c148_s207_w3_1045_1120_r1|S207] BUY 1x CCL260731C00028500 (gap -2.7% MA50 dist=0.9%) limit=0.27 (ask=0.28 off=-0.01) tp=+50% sl=-50% pending id=e26ef74c-6b4c-435c-869d-521635701576
+  ENTRY [b149|c149_s207_w3_1045_1120_r2|S207] BUY 1x CCL260731C00028500 (gap -2.7% MA50 dist=0.9%) limit=0.27 (ask=0.28 off=-0.01) tp=+50% sl=-50% pending id=22f8d495-3dc2-4864-bb3d-b56a9bffb0e4
+  [b164|c164_s209_w3_1045_1120_r1] S209 BSX: no tradeable call
+  [b165|c165_s209_w3_1045_1120_r2] S209 BSX: no tradeable call
+  ENTRY [b164|c164_s209_w3_1045_1120_r1|S209] BUY 1x V260731C00382500 (gap -2.6% recovery above prev close) limit=0.55 (ask=0.56 off=-0.01) tp=+50% sl=-50% pending id=6fa5ffa7-8ffb-42c1-ad40-43dbf3332916
+  ENTRY [b165|c165_s209_w3_1045_1120_r2|S209] BUY 1x V260731C00382500 (gap -2.6% recovery above prev close) limit=0.55 (ask=0.56 off=-0.01) tp=+50% sl=-50% pending id=c3e9711b-97bb-4182-9303-caa3cbb64d4b
+  [b172|c172_s210_w3_1045_1120_r1] S210 CNP: no tradeable call
+  [b173|c173_s210_w3_1045_1120_r2] S210 CNP: no tradeable call
+  [b172|c172_s210_w3_1045_1120_r1] S210 CI: no tradeable call
+  [b173|c173_s210_w3_1045_1120_r2] S210 CI: no tradeable call
+  ENTRY [b172|c172_s210_w3_1045_1120_r1|S210] BUY 1x KO260731C00091000 (MA8 84.08 crossed above MA21) limit=0.67 (ask=0.68 off=-0.01) tp=+50% sl=-50% pending id=a50c54d3-dccb-4b23-9c5b-a9494f98fcdd
+  ENTRY [b173|c173_s210_w3_1045_1120_r2|S210] BUY 1x KO260731C00091000 (MA8 84.08 crossed above MA21) limit=0.67 (ask=0.68 off=-0.01) tp=+50% sl=-50% pending id=4245e3c5-43e5-4ba4-87f8-6247ef65f8c5
+  [b180|c180_s211_w3_1045_1120_r1] S211 BLK: no tradeable call
+  [b181|c181_s211_w3_1045_1120_r2] S211 BLK: no tradeable call
+  ENTRY [b180|c180_s211_w3_1045_1120_r1|S211] BUY 1x HPQ260731C00028500 (MA21 crossed above MA50) limit=0.64 (ask=0.65 off=-0.01) tp=+50% sl=-50% pending id=621c775d-ee46-418e-b4ea-3659af0b0ef4
+  ENTRY [b181|c181_s211_w3_1045_1120_r2|S211] BUY 1x HPQ260731C00028500 (MA21 crossed above MA50) limit=0.64 (ask=0.65 off=-0.01) tp=+50% sl=-50% pending id=a2ddf60a-c9a1-4ea3-88e0-6a9448bb932b
+  [b188|c188_s212_w3_1045_1120_r1] S212 ALGN: no tradeable call
+  [b189|c189_s212_w3_1045_1120_r2] S212 ALGN: no tradeable call
+  [b188|c188_s212_w3_1045_1120_r1] S212 AZO: no tradeable call
+  [b189|c189_s212_w3_1045_1120_r2] S212 AZO: no tradeable call
+  ENTRY [b188|c188_s212_w3_1045_1120_r1|S212] BUY 1x CCL260731C00028500 (low=27.33 MA50=27.48 touch+green) limit=0.27 (ask=0.28 off=-0.01) tp=+50% sl=-50% pending id=eb6f6550-8e7f-4bb7-9f56-1d4b77cbe124
+  ENTRY [b189|c189_s212_w3_1045_1120_r2|S212] BUY 1x CCL260731C00028500 (low=27.33 MA50=27.48 touch+green) limit=0.27 (ask=0.28 off=-0.01) tp=+50% sl=-50% pending id=cae125f3-d574-4e0e-ad24-b5b0122dae44
+  ENTRY [b220|c220_s216_w3_1045_1120_r1|S216] BUY 1x HAL260731C00031500 (RSI crossed 30: 26.6 -> 31.9) limit=0.49 (ask=0.50 off=-0.01) tp=+50% sl=-50% pending id=4adb4cb1-86ed-4da2-980b-e3c268d66dd9
+  ENTRY [b221|c221_s216_w3_1045_1120_r2|S216] BUY 1x HAL260731C00031500 (RSI crossed 30: 26.6 -> 31.9) limit=0.49 (ask=0.50 off=-0.01) tp=+50% sl=-50% pending id=e33a644f-303f-40f3-be37-2d97361b3030
+  [b226|c226_s217_w2_1005_1045_r1] S217 GLW: no tradeable call
+  [b227|c227_s217_w2_1005_1045_r2] S217 GLW: no tradeable call
+  [b228|c228_s217_w3_1045_1120_r1] S217 GLW: no tradeable call
+  [b229|c229_s217_w3_1045_1120_r2] S217 GLW: no tradeable call
+  [b226|c226_s217_w2_1005_1045_r1] S217 FLEX: no tradeable call
+  [b227|c227_s217_w2_1005_1045_r2] S217 FLEX: no tradeable call
+  [b228|c228_s217_w3_1045_1120_r1] S217 FLEX: no tradeable call
+  [b229|c229_s217_w3_1045_1120_r2] S217 FLEX: no tradeable call
+  [b236|c236_s218_w3_1045_1120_r1] S218 CL: no tradeable call
+  [b237|c237_s218_w3_1045_1120_r2] S218 CL: no tradeable call
+  [b236|c236_s218_w3_1045_1120_r1] S218 CSGP: no tradeable call
+  [b237|c237_s218_w3_1045_1120_r2] S218 CSGP: no tradeable call
+  [b236|c236_s218_w3_1045_1120_r1] S218 FLEX: no tradeable call
+  [b237|c237_s218_w3_1045_1120_r2] S218 FLEX: no tradeable call
+  [b236|c236_s218_w3_1045_1120_r1] S218 KEY: no tradeable call
+  [b237|c237_s218_w3_1045_1120_r2] S218 KEY: no tradeable call
+  [b236|c236_s218_w3_1045_1120_r1] S218 PNW: no tradeable call
+  [b237|c237_s218_w3_1045_1120_r2] S218 PNW: no tradeable call
+  ENTRY [b236|c236_s218_w3_1045_1120_r1|S218] BUY 1x PG260731C00155000 (low=140.20 BB_lower=144.79 touch+green) limit=0.04 (ask=0.05 off=-0.01) tp=+50% sl=-50% pending id=f2ad38c9-d4fa-42ba-9365-f109028353c2
+  ENTRY [b237|c237_s218_w3_1045_1120_r2|S218] BUY 1x PG260731C00155000 (low=140.20 BB_lower=144.79 touch+green) limit=0.04 (ask=0.05 off=-0.01) tp=+50% sl=-50% pending id=8c880f8e-b9ce-482f-8241-1b54184ea0f4
+  Skipped: 380 no tradeable call, 716 already attempted today, 912 pending order
+Placed 28 new entry order(s).
+  reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:248:c000_s163_w1_0928_1005_r1
+  reconcile: entry fill b221|S216 HAL x1 @ 0.48
+  reconcile: entry fill b220|S216 HAL x1 @ 0.48
+  reconcile: entry fill b181|S211 HPQ x1 @ 0.63
+  reconcile: entry fill b180|S211 HPQ x1 @ 0.63
+  reconcile: entry fill b173|S210 KO x1 @ 0.66
+  reconcile: entry fill b172|S210 KO x1 @ 0.66
+  reconcile: entry fill b165|S209 V x1 @ 0.55
+  reconcile: entry fill b164|S209 V x1 @ 0.55
+  reconcile: entry fill b109|S202 PG x1 @ 0.03
+  reconcile: entry fill b108|S202 PG x1 @ 0.03
+  reconcile: entry fill b5|S163 CCL x1 @ 0.46
+  reconcile: entry fill b4|S163 CCL x1 @ 0.46
+  reconcile: entry fill b236|S218 PG x1 @ 0.03
+  reconcile: entry fill b237|S218 PG x1 @ 0.03
+
+[Portfolio snapshot]
+========================================================
+OPTIONS TRIAL STATS
+========================================================
+Account equity: $125,712.16
+Active buckets: 248 of 248 profiles ($500 virtual each) — paper unlimited mode
+
+P&L summary
+  Reflected (ex-S173,S174): $+4,423.13 all-time  |  $+0.00 today
+  Raw (incl dropped):     $+2,827.58 all-time  |  $+0.00 today
+  Open (not sold yet): $-92.00 unrealized (virtual lots)
+  Premium deployed:    $568.00 in open positions
+  Combined P&L:        $+4,331.13 (reflected realized + open virtual)
+
+Ledger (master)
+  Total events:     5985
+  Today entries:    40
+  Today exits (reflected): 0
+  All-time exits (reflected): 273  wins 30%
+  Avg return/trade: -5.1%  median -40.0%
+
+Open virtual lots (by bucket)
+  b4 c004_s163_w3_1045_1120_r1  prem=$    46  real=$ +0.00  open=$ -6.00  lots=1  [S163:CCLx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b5 c005_s163_w3_1045_1120_r2  prem=$    46  real=$ +0.00  open=$ -6.00  lots=1  [S163:CCLx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b108 c108_s202_w3_1045_1120_r1  prem=$     3  real=$ +0.00  open=$ -1.00  lots=1  [S202:PGx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b109 c109_s202_w3_1045_1120_r2  prem=$     3  real=$ +0.00  open=$ -1.00  lots=1  [S202:PGx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b164 c164_s209_w3_1045_1120_r1  prem=$    55  real=$ +0.00  open=$ -8.00  lots=1  [S209:Vx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b165 c165_s209_w3_1045_1120_r2  prem=$    55  real=$ +0.00  open=$ -8.00  lots=1  [S209:Vx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b172 c172_s210_w3_1045_1120_r1  prem=$    66  real=$ +0.00  open=$-11.00  lots=1  [S210:KOx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b173 c173_s210_w3_1045_1120_r2  prem=$    66  real=$ +0.00  open=$-11.00  lots=1  [S210:KOx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b180 c180_s211_w3_1045_1120_r1  prem=$    63  real=$ +0.00  open=$-12.00  lots=1  [S211:HPQx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b181 c181_s211_w3_1045_1120_r2  prem=$    63  real=$ +0.00  open=$-12.00  lots=1  [S211:HPQx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b220 c220_s216_w3_1045_1120_r1  prem=$    48  real=$ +0.00  open=$ -7.00  lots=1  [S216:HALx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b221 c221_s216_w3_1045_1120_r2  prem=$    48  real=$ +0.00  open=$ -7.00  lots=1  [S216:HALx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b236 c236_s218_w3_1045_1120_r1  prem=$     3  real=$ +0.00  open=$ -1.00  lots=1  [S218:PGx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b237 c237_s218_w3_1045_1120_r2  prem=$     3  real=$ +0.00  open=$ -1.00  lots=1  [S218:PGx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  (234 quiet bucket profile(s) — no trades yet)
+
+Pending orders: 21
+  b106 S202 BSX limit=0.07
+  b107 S202 BSX limit=0.07
+  b170 S210 KO limit=0.57
+  b171 S210 KO limit=0.57
+  b178 S211 HPQ limit=0.60
+
+Alpaca option positions
+  CCL260731C00028000  qty=2  cost=$92.00  return=-13.0%  open P&L=$-12.00
+  HAL260731C00031500  qty=2  cost=$96.00  return=-14.6%  open P&L=$-14.00
+  HPQ260731C00028500  qty=2  cost=$126.00  return=-19.0%  open P&L=$-24.00
+  KO260731C00091000  qty=2  cost=$132.00  return=-16.7%  open P&L=$-22.00
+  PG260731C00155000  qty=4  cost=$12.00  return=-33.3%  open P&L=$-4.00
+  V260731C00382500  qty=2  cost=$110.00  return=-14.5%  open P&L=$-16.00
+
+Per-bucket exit stats (all time)
+  b0|orphan_reconcile     n= 22  avg=+22.4%  med=-57.5%  realized=$+6,310.91
+  b104|c104_s164_w1_0928_1005_r4  n=  1  avg=-88.9%  med=-88.9%  realized=$-8.00
+  b10|c010_s165_w3_1045_1120_r1  n=  8  avg=-37.2%  med=-18.9%  realized=$-205.00
+  b132|c132_s164_w1_0928_1005_r5  n=  2  avg=-65.7%  med=-53.6%  realized=$-37.00
+  b135|c135_s164_w4_1120_1135_r5  n=  1  avg=-50.0%  med=-50.0%  realized=$-4.00
+  b20|c020_s164_w1_0928_1005_r1  n=  1  avg=-88.9%  med=-88.9%  realized=$-8.00
+  b28|c028_s165_w1_0928_1005_r2  n= 17  avg=+49.5%  med=+80.0%  realized=$+448.00
+  b28|c028_s173_w1_0928_1005_r2  n=  5  avg=+51.6%  med=+80.0%  realized=$+142.00
+  b29|c029_s165_w2_1005_1045_r2  n=  9  avg=-23.3%  med=-50.0%  realized=$-221.00
+  b29|c029_s173_w2_1005_1045_r2  n=  2  avg=-69.3%  med=-48.5%  realized=$-78.00
+  b30|c030_s165_w3_1045_1120_r2  n=  9  avg=+38.8%  med=+0.0%  realized=$+260.00
+  b30|c030_s173_w3_1045_1120_r2  n=  2  avg=-9.5%  med=+0.0%  realized=$-14.00
+  b31|c031_s165_w4_1120_1135_r2  n=  2  avg=+145.5%  med=+175.8%  realized=$+192.00
+  b48|c048_s164_w1_0928_1005_r2  n=  5  avg=-33.1%  med=-49.1%  realized=$-91.00
+  b48|c048_s165_w1_0928_1005_r3  n= 16  avg=-35.9%  med=-49.1%  realized=$-344.00
+  b49|c049_s164_w2_1005_1045_r2  n=  4  avg=-51.8%  med=-44.0%  realized=$-133.00
+  b49|c049_s165_w2_1005_1045_r3  n= 15  avg=-49.3%  med=-49.1%  realized=$-458.00
+  b50|c050_s164_w3_1045_1120_r2  n=  4  avg=-39.6%  med=-16.7%  realized=$-115.00
+  b50|c050_s165_w3_1045_1120_r3  n=  9  avg=-23.6%  med=-23.1%  realized=$-142.00
+  b51|c051_s165_w4_1120_1135_r3  n=  1  avg=+263.6%  med=+263.6%  realized=$+174.00
+  b56|g056_lim_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b57|g057_mid_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b58|g058_eod_tp20_sl65  n=  1  avg=+59.1%  med=+59.1%  realized=$+25.41
+  b68|c068_s165_w1_0928_1005_r4  n= 16  avg=-51.3%  med=-49.1%  realized=$-446.00
+  b68|c068_s166_w1_0928_1005_r3  n=  4  avg=-52.7%  med=-49.1%  realized=$-116.00
+  b69|c069_s165_w2_1005_1045_r4  n= 11  avg=+19.0%  med=-43.6%  realized=$-179.00
+  b69|c069_s166_w2_1005_1045_r3  n=  4  avg=+10.1%  med=-40.0%  realized=$-87.00
+  b70|c070_s165_w3_1045_1120_r4  n= 11  avg=-2.1%  med=-16.9%  realized=$-6.00
+  b70|c070_s166_w3_1045_1120_r3  n=  4  avg=-42.5%  med=-27.0%  realized=$-124.00
+  b70|g070_eod_tp30_sl20  n=  1  avg=+59.1%  med=+59.1%  realized=$+27.77
+  b76|c076_s164_w1_0928_1005_r3  n=  1  avg=-50.0%  med=-50.0%  realized=$-2.00
+  b88|c088_s165_w1_0928_1005_r5  n= 21  avg=-5.0%  med=-2.7%  realized=$-63.00
+  b88|c088_s167_w1_0928_1005_r4  n=  4  avg=-12.7%  med=+30.9%  realized=$-28.00
+  b89|c089_s165_w2_1005_1045_r5  n=  7  avg=+113.1%  med=+30.9%  realized=$+67.00
+  b89|c089_s167_w2_1005_1045_r4  n=  2  avg=-16.2%  med=+30.9%  realized=$-22.00
+  b8|c008_s165_w1_0928_1005_r1  n= 23  avg=-19.6%  med=-35.3%  realized=$-250.00
+  b90|c090_s165_w3_1045_1120_r5  n= 13  avg=+7.7%  med=+0.0%  realized=$+47.00
+  b90|c090_s167_w3_1045_1120_r4  n=  4  avg=-41.6%  med=-18.9%  realized=$-123.00
+  b91|c091_s165_w4_1120_1135_r5  n=  2  avg=+222.0%  med=+247.0%  realized=$+293.00
+  b9|c009_s165_w2_1005_1045_r1  n=  7  avg=-74.4%  med=-66.2%  realized=$-301.00
+========================================================
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          entry+manage                            |
+|  Equity                        $125,712.16                             |
+|  Signals this run              509                                     |
+|  Orders submitted (session)    57                                      |
+|  Orders filled today (ledger)  40                                      |
+|  Entries placed this run       28                                      |
+|  Open virtual lots             14                                      |
+|  Broker option positions       6                                       |
+|  Pending orders                21                                      |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S173,S174)                           |
++------------------------------------------------------------------------+
+|  Reflected trades=273  buckets=27  win=30%                             |
+|  Returns   avg=-5.1%  med=-40.0%  p10=-66.2%  p90=+81.8%               |
+|  Realized  $+4,423.13                                                  |
+|  Raw incl dropped  trades=807  real=$+2,827.58                         |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b51  c051_s169_w2_1005_  1 100% +263.6 +263.6 +263.6 $   +174         |
+|  b91  c091_s200_w2_1005_  2 100% +222.0 +222.0 +247.0 $   +293         |
+|  b31  c031_s166_w4_1120_  2 100% +145.5 +145.5 +175.8 $   +192         |
+|  b28  c028_s166_w3_1045_ 22  77% +50.0 +80.0 +102.0 $   +590           |
+|  b58  c058_s170_w2_1005_  1 100% +59.1 +59.1 +59.1 $    +25            |
+|  b56  c056_s170_w1_0928_  1 100% +47.7 +47.7 +47.7 $    +21            |
+|  b57  c057_s170_w1_0928_  1 100% +47.7 +47.7 +47.7 $    +21            |
+|  b89  c089_s200_w1_0928_  9  56% +84.4 +30.9 +790.0 $    +45           |
+|  ... 19 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b20  c020_s165_w3_1045_  1   0% -88.9 -88.9 -88.9 $     -8       |
++========================================================================+
++========================================================================+
+|  PENDING ORDERS (21)                                                   |
++------------------------------------------------------------------------+
+|  Top groups                    S202:BSX(2), S210:KO(2), S211:HPQ(2)    |
++------------------------------------------------------------------------+
+|  b106 S202 BSX      limit=0.07                                         |
+|  b107 S202 BSX      limit=0.07                                         |
+|  b170 S210 KO       limit=0.57                                         |
+|  b171 S210 KO       limit=0.57                                         |
+|  b178 S211 HPQ      limit=0.60                                         |
+|  ... 16 more pending order(s)                                          |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (6)                                                      |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  HPQ260731C00028500            2    -19.0%   $    -24.00               |
+|  KO260731C00091000             2    -16.7%   $    -22.00               |
+|  V260731C00382500              2    -14.5%   $    -16.00               |
+|  HAL260731C00031500            2    -14.6%   $    -14.00               |
+|  CCL260731C00028000            2    -13.0%   $    -12.00               |
+|  PG260731C00155000             4    -33.3%   $     -4.00               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-29.log
+elapsed=223.9s reconcile=0.15s cancel=0.05s manage=0.05s scan=141.11s entries=81.96s
+

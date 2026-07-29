@@ -1,0 +1,50 @@
+14:45:37  INFO      Mode: exits
+14:45:37  INFO        Daily log -> logs/daily/2026-07-29.md
+14:45:37  INFO        Daily log reconciled -> logs/daily/2026-07-29.md (5 ledger rows)
+14:45:37  INFO        place_all_stops: checking 3 positions...
+14:45:37  INFO        STOP already live CMS @ $74.46
+14:45:37  INFO        STOP already live EQR @ $67.89
+14:45:37  INFO        STOP skipped FFIV: fractional (0.2428 shares) — software exit will handle it
+14:45:38  INFO        [positions] 3/3 (3 valid)
+14:45:38  INFO        Daily log -> logs/daily/2026-07-29.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $474.74|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CMS  P&L +0.1%  $+0.05                                            HOLD|
+|  FFIV  P&L +0.7%  $+0.68                                           HOLD|
+|  EQR  P&L +1.2%  $+0.89                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
