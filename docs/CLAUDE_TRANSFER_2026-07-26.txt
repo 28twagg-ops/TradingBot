@@ -1,0 +1,101 @@
+================================================================================
+TRADINGBOT  CLAUDE TRANSFER PACKET (SINGLE SOURCE OF TRUTH)
+Date: 2026-07-26
+Last session: 2026-07-25B (Mega Session - 100+ Strategy Framework Build)
+Supersedes all prior transfer packets.
+================================================================================
+
+0. THE TWO RULES
+----------------
+Rule 1: TWO BOTS, TWO ACCOUNTS, TWO TRUTHS.
+  Rubber Band: LIVE ~$486 real money | Options: PAPER only, never go live without Tyler
+Rule 2: +16,719% backtest is NOT real. Only paper fills count.
+
+STANDING RULES:
+  PAPER_TRADING=True | docs/ local only | OrderStatus .value | scripts exit 0
+  No signal rewrites | No re-enable GD/VS/S173/S174 | No bucket changes without Tyler
+
+**CRITICAL CONTEXT FOR CURSOR — READ BEFORE BUILDING MORE STRATEGIES**
+The old options strategies (S165/S173) ran for months and proved they don't work — S165 median -34% at n=245, S173 median -32% at n=385. That is not a small sample. Those specific signal/parameter combos have no edge.
+The new arms (S163-S175) only launched July 21. Zero exits yet on most. Do not make any decisions on those yet.
+
+What this means for S200-S295 Phase 2 and beyond:
+Do NOT just copy S165's signal logic with slightly different parameters. The gap-down + ATM call + 3DTE combo is what S165 already tested and it loses. The new signals need to be genuinely different — different triggers, different market conditions, different structures.
+Specifically:
+- **Put options matter** — some of the best setups are bearish. Ensure bearish signals actually buy puts, not calls.
+- **The auto-kill thresholds are non-negotiable** — if n>=15 and median < -25%, kill it immediately. Do not wait. Do not soften the threshold.
+- **TP/SL matters as much as the signal** — S165 may have had edge on the signal but wrong exits. Test TP=25%/SL=-25% (tight) vs TP=100%/SL=-50% (let it run) as separate strategies.
+- **Commit strategy_registry.json to the repo** — GHA needs to read it on every run or the whole framework breaks silently.
+The goal is not 100 strategies running. The goal is finding 3-5 that actually make money by Aug 18. Kill fast, keep winners, ignore everything else.
+
+1. MEGA SESSION 25B ACCOMPLISHMENTS (Just Completed)
+----------------------------------------------------
+We have shifted from a static 11-strategy list to a dynamic 100+ strategy testing framework aimed at finding a profitable options strategy by mid-September.
+
+- Built Framework: Created `scripts/options_strategy_lab.py` managing `StrategySpec`, `StrategyLab`, and an auto-kill evaluator.
+- Machine-Readable State: Created `scripts/strategy_registry.json` to serialize strategy metadata across GitHub Actions runs.
+- 20 New Phase-1 Strategies (S200-S219): Launched variations of Gap Down/Up (S200-S209), Moving Average Cross/Bounce (S210-S215), and RSI/BB/Vol (S216-S219).
+- Put Option Support: Added `pick_atm_put` and `pick_otm_put_1strike` to `options_morning_bot.py`. S203 (GapUp_Fade) and S214 (MA_Death_Cross) now buy PUTS instead of calls.
+- Bucket Expansion: Layout expanded to 248 buckets (31 total strategies  4 windows  2 reps). `OPTIONS_BUCKET_COUNT` set to 248.
+- Daily Pipeline & Auto-Kill: Added `options_strategy_lab.py --evaluate` to the GHA run to auto-kill underperformers. Updated the selection report (`options_strategy_selection_report.py`) with a "Strategy Pipeline Status", "Auto-Kill Log", and "Promote Candidates" section.
+- Ledger Fixes: Advanced `STABLE_AFTER` to 2026-07-21 to clear orphaned lot WARNs for the last entries of dropped strategy S173. WARN=0.
+- Escalation Protocol: Documented the 5-stage escalation path to live trading in `docs/ESCALATION_PROTOCOL.md`.
+
+2. STATE
+--------
+RB LIVE $486.05. 10 strategies equal 20% weight. Pullback50 only proven driver (n=463 PF 1.19). 5 pattern strategies at n=0 (MA_Squeeze/GoldenPocket/VWAP_Reclaim/TrendResumption/EarningsDrift). GD/VS disabled. July PF 1.82 first green month.
+
+OPTIONS PAPER 248 buckets (31 strats x 4 windows x 2 reps). 
+- Legacy: S165 n=245 exits median -34% (no edge proven). S164 n=6 exits all losers (noise). 
+- Pattern (launched Jul 21): S169-S175 zero entries. 
+- Phase 1 Framework (launched Jul 26): S200-S219 zero entries.
+- Dropped: S173, S174. 
+- Health: WARN=0 stuck=0 mismatch=0.
+
+Auto-Kill Thresholds (evaluator checks closed ledger daily):
+- KILL: median < -25% at n>=15 OR p10 < -85% OR WR < 15% at n>=25
+- KEEP: median > -10% at n>=30
+- PROMOTE: median > 0% at n>=30
+- WATCH: Borderline, collecting data.
+
+3. GIT STATE
+------------
+Latest Commit: e4052ccc (feat: 100-strategy testing framework + put support + auto-kill system)
+GHA: 5.0 min avg gap, zero >15 min
+OPTIONS_BUCKET_COUNT=248 | OPTIONS_DROPPED_STRATEGIES=S174,S173
+socket.setdefaulttimeout(45) | alpaca-py 0.43.2
+
+4. UPCOMING SESSIONS STRATEGY (The Playbook)
+--------------------------------------------
+Target: Have 3-5 go-live candidates (n>=30 exits, median > 0%) ready for Tyler's review on Aug 18.
+
+Session 25C (Jul 28-30):
+  - Check standing gates and first S200-S219 signal frequency.
+  - Add S220-S239: RSI family (oversold cross, 25-bounce, divergence, momentum) and BB family (squeeze, mean revert).
+  - Kill S200-S219 variants with 0 signals after 5 days (dead signal).
+  - OPTIONS_BUCKET_COUNT: 248 + 160 = 408.
+  - Add TP/SL variants for top-firing gaps (e.g. S200_C TP=25/SL=-25).
+
+Session 28A (Jul 31):
+  - Add S240-S259 (Volume + Price Pattern).
+  - First real kill sweep on S200-S219.
+
+Session Aug-1A/2A (Aug 3-7):
+  - Add remaining signals (Trend, Mean Reversion, Earnings/Event).
+  - Major kill sweeps.
+
+Aug 18 (Tyler returns):
+  - Full data review of the "Promote Candidates" list for Micro Live (Stage 3).
+
+5. BACKLOG
+----------
+WATCH: 
+- S164 n=6 toward 30
+- First exits for S169-S175 pattern arms and S200-S219 Phase-1 arms.
+- Auto-kill log triggering on fast-losing strategies.
+- Any strategies crossing into "Promote" status (n>=30, median > 0%).
+
+DEFERRED: GTC stops at $500 (gap $14) | alpaca-py timeout= next major version
+================================================================================
+END CLAUDE TRANSFER
+================================================================================

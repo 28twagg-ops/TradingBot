@@ -89,11 +89,16 @@ class StrategySpec:
 # StrategyLab - manages all specs + bucket generation
 # --------------------------------------------------------------------------- #
 class StrategyLab:
-    WINDOWS = [
+    WINDOWS_MORNING = [
         ("w1_0928_1005", "09:28", "10:05"),
         ("w2_1005_1045", "10:05", "10:45"),
         ("w3_1045_1120", "10:45", "11:20"),
         ("w4_1120_1135", "11:20", "11:35"),
+    ]
+    WINDOWS_AFT = [
+        ("w5_1300_1330", "13:00", "13:30"),
+        ("w6_1400_1430", "14:00", "14:30"),
+        ("w7_1500_1530", "15:00", "15:30"),
     ]
 
     def __init__(self) -> None:
@@ -131,7 +136,13 @@ class StrategyLab:
         buckets: list[dict] = []
         idx = start_idx
         for spec in self.active_strategies():
-            for win_tag, start_hm, end_hm in self.WINDOWS:
+            windows = self.WINDOWS_MORNING.copy()
+            if not spec.signal_name.lower().startswith("gap"):
+                windows.extend(self.WINDOWS_AFT)
+            if spec.dte_target == 0:
+                windows = self.WINDOWS_MORNING[:2]
+            
+            for win_tag, start_hm, end_hm in windows:
                 for rep in range(spec.reps):
                     name = (f"lab{idx:04d}_{spec.strategy_id.lower()}"
                             f"_{win_tag}_r{rep + 1}")
@@ -575,6 +586,23 @@ _PHASE1_SPECS: list[StrategySpec] = [
                  {"vz_min": 3.0},
                  dte_target=3, dte_min=1, dte_max=7, option_type="call",
                  tp_pct=50.0, sl_pct=-50.0, launched_date="2026-07-26"),
+    # ---- FREQUENCY BOOSTERS ----------------------------------------------
+    StrategySpec("S400", "Any_Green_Close",
+                 {},
+                 dte_target=3, dte_min=1, dte_max=7, option_type="call",
+                 tp_pct=50.0, sl_pct=-50.0, launched_date="2026-07-28"),
+    StrategySpec("S401", "Any_Gap_Down_Small",
+                 {},
+                 dte_target=3, dte_min=1, dte_max=7, option_type="call",
+                 tp_pct=50.0, sl_pct=-50.0, launched_date="2026-07-28"),
+    StrategySpec("S402", "Any_High_Volume",
+                 {},
+                 dte_target=3, dte_min=1, dte_max=7, option_type="call",
+                 tp_pct=50.0, sl_pct=-50.0, launched_date="2026-07-28"),
+    StrategySpec("S403", "Any_MA50_Touch",
+                 {},
+                 dte_target=3, dte_min=1, dte_max=7, option_type="call",
+                 tp_pct=50.0, sl_pct=-50.0, launched_date="2026-07-28"),
 ]
 
 

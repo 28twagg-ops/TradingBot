@@ -26,21 +26,19 @@ _REPO_ROOT = Path(__file__).resolve().parent.parent
 _CACHE_DIR = _REPO_ROOT / "logs" / "cache"
 _SP500_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
 _SP400_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_400_companies"
+_R1000_URL = "https://en.wikipedia.org/wiki/Russell_1000_Index"
 _HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
-
 
 def _cache_path() -> Path:
     _CACHE_DIR.mkdir(parents=True, exist_ok=True)
     return _CACHE_DIR / f"tickers_{date.today()}.json"
 
-
 def to_alpaca_symbol(ticker: str) -> str:
     """Map universe ticker to Alpaca API symbol (class shares: BRK-B -> BRK.B)."""
     return ticker.replace("-", ".")
 
-
 def get_universe(force_refresh: bool = False) -> list[str]:
-    """Return the combined S&P 500 + S&P 400 MidCap ticker list (~900 symbols).
+    """Return the combined S&P 500 + S&P 400 MidCap + Russell 1000 list (~1400 symbols).
 
     Reads from today's cache file if present (avoids redundant Wikipedia hits).
     Cache is written to logs/cache/tickers_YYYY-MM-DD.json in the same format
@@ -66,9 +64,10 @@ def get_universe(force_refresh: bool = False) -> list[str]:
         except Exception as exc:
             log.warning("Ticker cache read failed: %s", exc)
 
-    log.info("Fetching universe from Wikipedia (S&P 500 + S&P 400) …")
+    log.info("Fetching universe from Wikipedia (S&P 500 + S&P 400 + Russell 1000) …")
     sp500: list[str] = []
     mid400: list[str] = []
+    r1000: list[str] = []
 
     try:
         sp500 = (
@@ -88,8 +87,18 @@ def get_universe(force_refresh: bool = False) -> list[str]:
         log.error("FATAL: could not fetch S&P 400 list: %s", exc)
         raise SystemExit(1) from exc
 
-    combined = list(dict.fromkeys(sp500 + mid400))
-    cleaned = [t.replace(".", "-") for t in combined]
+    try:
+        # Table 3 is typically the components table
+        r1000_table = pd.read_html(_R1000_URL, storage_options=_HEADERS)[3]
+        col = "Symbol" if "Symbol" in r1000_table.columns else "Ticker"
+        r1000 = r1000_table[col].tolist()
+        log.info("  Russell 1000: %d tickers", len(r1000))
+    except Exception as exc:
+        log.warning("Could not fetch Russell 1000 list: %s", exc)
+        # Not fatal, we still have S&P 500/400
+
+    combined = list(dict.fromkeys(sp500 + mid400 + r1000))
+    cleaned = [str(t).replace(".", "-") for t in combined if pd.notna(t)]
     log.info("  Universe total: %d tickers", len(cleaned))
 
     try:

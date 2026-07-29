@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26",
+  "generated": "2026-07-28",
   "next_id": 200,
   "strategies": [
     {
@@ -495,6 +495,1678 @@
       "reps": 2,
       "status": "active",
       "launched_date": "2026-07-26",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S400",
+      "signal_name": "Any_Green_Close",
+      "signal_params": {},
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S401",
+      "signal_name": "Any_Gap_Down_Small",
+      "signal_params": {},
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S402",
+      "signal_name": "Any_High_Volume",
+      "signal_params": {},
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S403",
+      "signal_name": "Any_MA50_Touch",
+      "signal_params": {},
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S350",
+      "signal_name": "GapDown_0DTE",
+      "signal_params": {
+        "base_id": "S165"
+      },
+      "dte_target": 0,
+      "dte_min": 0,
+      "dte_max": 1,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S351",
+      "signal_name": "GapDown_1DTE",
+      "signal_params": {
+        "base_id": "S165"
+      },
+      "dte_target": 1,
+      "dte_min": 0,
+      "dte_max": 2,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S352",
+      "signal_name": "GapDown_2DTE",
+      "signal_params": {
+        "base_id": "S165"
+      },
+      "dte_target": 2,
+      "dte_min": 1,
+      "dte_max": 3,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S353",
+      "signal_name": "GapDown_3DTE",
+      "signal_params": {
+        "base_id": "S165"
+      },
+      "dte_target": 3,
+      "dte_min": 2,
+      "dte_max": 4,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S354",
+      "signal_name": "GapDown_5DTE",
+      "signal_params": {
+        "base_id": "S165"
+      },
+      "dte_target": 5,
+      "dte_min": 4,
+      "dte_max": 6,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S355",
+      "signal_name": "GapDown_7DTE",
+      "signal_params": {
+        "base_id": "S165"
+      },
+      "dte_target": 7,
+      "dte_min": 6,
+      "dte_max": 8,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S356",
+      "signal_name": "GapDown_14DTE",
+      "signal_params": {
+        "base_id": "S165"
+      },
+      "dte_target": 14,
+      "dte_min": 13,
+      "dte_max": 17,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S357",
+      "signal_name": "GapDown_21DTE",
+      "signal_params": {
+        "base_id": "S165"
+      },
+      "dte_target": 21,
+      "dte_min": 20,
+      "dte_max": 24,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S358",
+      "signal_name": "GapDown_30DTE",
+      "signal_params": {
+        "base_id": "S165"
+      },
+      "dte_target": 30,
+      "dte_min": 29,
+      "dte_max": 33,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S359",
+      "signal_name": "RubberBand_0DTE",
+      "signal_params": {
+        "base_id": "S174"
+      },
+      "dte_target": 0,
+      "dte_min": 0,
+      "dte_max": 1,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S360",
+      "signal_name": "RubberBand_1DTE",
+      "signal_params": {
+        "base_id": "S174"
+      },
+      "dte_target": 1,
+      "dte_min": 0,
+      "dte_max": 2,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S361",
+      "signal_name": "RubberBand_2DTE",
+      "signal_params": {
+        "base_id": "S174"
+      },
+      "dte_target": 2,
+      "dte_min": 1,
+      "dte_max": 3,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S362",
+      "signal_name": "RubberBand_3DTE",
+      "signal_params": {
+        "base_id": "S174"
+      },
+      "dte_target": 3,
+      "dte_min": 2,
+      "dte_max": 4,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S363",
+      "signal_name": "RubberBand_5DTE",
+      "signal_params": {
+        "base_id": "S174"
+      },
+      "dte_target": 5,
+      "dte_min": 4,
+      "dte_max": 6,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S364",
+      "signal_name": "RubberBand_7DTE",
+      "signal_params": {
+        "base_id": "S174"
+      },
+      "dte_target": 7,
+      "dte_min": 6,
+      "dte_max": 8,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S365",
+      "signal_name": "RubberBand_14DTE",
+      "signal_params": {
+        "base_id": "S174"
+      },
+      "dte_target": 14,
+      "dte_min": 13,
+      "dte_max": 17,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S366",
+      "signal_name": "RubberBand_21DTE",
+      "signal_params": {
+        "base_id": "S174"
+      },
+      "dte_target": 21,
+      "dte_min": 20,
+      "dte_max": 24,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S367",
+      "signal_name": "RubberBand_30DTE",
+      "signal_params": {
+        "base_id": "S174"
+      },
+      "dte_target": 30,
+      "dte_min": 29,
+      "dte_max": 33,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S368",
+      "signal_name": "BBSqueeze_0DTE",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 0,
+      "dte_min": 0,
+      "dte_max": 1,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S369",
+      "signal_name": "BBSqueeze_1DTE",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 1,
+      "dte_min": 0,
+      "dte_max": 2,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S370",
+      "signal_name": "BBSqueeze_2DTE",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 2,
+      "dte_min": 1,
+      "dte_max": 3,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S371",
+      "signal_name": "BBSqueeze_3DTE",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 3,
+      "dte_min": 2,
+      "dte_max": 4,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S372",
+      "signal_name": "BBSqueeze_5DTE",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 5,
+      "dte_min": 4,
+      "dte_max": 6,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S373",
+      "signal_name": "BBSqueeze_7DTE",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 7,
+      "dte_min": 6,
+      "dte_max": 8,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S374",
+      "signal_name": "BBSqueeze_14DTE",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 14,
+      "dte_min": 13,
+      "dte_max": 17,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S375",
+      "signal_name": "BBSqueeze_21DTE",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 21,
+      "dte_min": 20,
+      "dte_max": 24,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S376",
+      "signal_name": "BBSqueeze_30DTE",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 30,
+      "dte_min": 29,
+      "dte_max": 33,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S377",
+      "signal_name": "GapDownAggr_0DTE",
+      "signal_params": {
+        "base_id": "S200"
+      },
+      "dte_target": 0,
+      "dte_min": 0,
+      "dte_max": 1,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S378",
+      "signal_name": "GapDownAggr_1DTE",
+      "signal_params": {
+        "base_id": "S200"
+      },
+      "dte_target": 1,
+      "dte_min": 0,
+      "dte_max": 2,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S379",
+      "signal_name": "GapDownAggr_2DTE",
+      "signal_params": {
+        "base_id": "S200"
+      },
+      "dte_target": 2,
+      "dte_min": 1,
+      "dte_max": 3,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S380",
+      "signal_name": "GapDownAggr_3DTE",
+      "signal_params": {
+        "base_id": "S200"
+      },
+      "dte_target": 3,
+      "dte_min": 2,
+      "dte_max": 4,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S381",
+      "signal_name": "GapDownAggr_5DTE",
+      "signal_params": {
+        "base_id": "S200"
+      },
+      "dte_target": 5,
+      "dte_min": 4,
+      "dte_max": 6,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S382",
+      "signal_name": "GapDownAggr_7DTE",
+      "signal_params": {
+        "base_id": "S200"
+      },
+      "dte_target": 7,
+      "dte_min": 6,
+      "dte_max": 8,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S383",
+      "signal_name": "GapDownAggr_14DTE",
+      "signal_params": {
+        "base_id": "S200"
+      },
+      "dte_target": 14,
+      "dte_min": 13,
+      "dte_max": 17,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S384",
+      "signal_name": "GapDownAggr_21DTE",
+      "signal_params": {
+        "base_id": "S200"
+      },
+      "dte_target": 21,
+      "dte_min": 20,
+      "dte_max": 24,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S385",
+      "signal_name": "GapDownAggr_30DTE",
+      "signal_params": {
+        "base_id": "S200"
+      },
+      "dte_target": 30,
+      "dte_min": 29,
+      "dte_max": 33,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S386",
+      "signal_name": "VolClimax_0DTE",
+      "signal_params": {
+        "base_id": "S219"
+      },
+      "dte_target": 0,
+      "dte_min": 0,
+      "dte_max": 1,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S387",
+      "signal_name": "VolClimax_1DTE",
+      "signal_params": {
+        "base_id": "S219"
+      },
+      "dte_target": 1,
+      "dte_min": 0,
+      "dte_max": 2,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S388",
+      "signal_name": "VolClimax_2DTE",
+      "signal_params": {
+        "base_id": "S219"
+      },
+      "dte_target": 2,
+      "dte_min": 1,
+      "dte_max": 3,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S389",
+      "signal_name": "VolClimax_3DTE",
+      "signal_params": {
+        "base_id": "S219"
+      },
+      "dte_target": 3,
+      "dte_min": 2,
+      "dte_max": 4,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S390",
+      "signal_name": "VolClimax_5DTE",
+      "signal_params": {
+        "base_id": "S219"
+      },
+      "dte_target": 5,
+      "dte_min": 4,
+      "dte_max": 6,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S391",
+      "signal_name": "VolClimax_7DTE",
+      "signal_params": {
+        "base_id": "S219"
+      },
+      "dte_target": 7,
+      "dte_min": 6,
+      "dte_max": 8,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S392",
+      "signal_name": "VolClimax_14DTE",
+      "signal_params": {
+        "base_id": "S219"
+      },
+      "dte_target": 14,
+      "dte_min": 13,
+      "dte_max": 17,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S393",
+      "signal_name": "VolClimax_21DTE",
+      "signal_params": {
+        "base_id": "S219"
+      },
+      "dte_target": 21,
+      "dte_min": 20,
+      "dte_max": 24,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S394",
+      "signal_name": "VolClimax_30DTE",
+      "signal_params": {
+        "base_id": "S219"
+      },
+      "dte_target": 30,
+      "dte_min": 29,
+      "dte_max": 33,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S395",
+      "signal_name": "GapDown_ITM3",
+      "signal_params": {
+        "base_id": "S165"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": -3,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S396",
+      "signal_name": "GapDown_ITM2",
+      "signal_params": {
+        "base_id": "S165"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": -2,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S397",
+      "signal_name": "GapDown_ITM1",
+      "signal_params": {
+        "base_id": "S165"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": -1,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S398",
+      "signal_name": "GapDown_ATM",
+      "signal_params": {
+        "base_id": "S165"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S399",
+      "signal_name": "GapDown_OTM1",
+      "signal_params": {
+        "base_id": "S165"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 1,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S404",
+      "signal_name": "RubberBand_ITM1",
+      "signal_params": {
+        "base_id": "S174"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": -1,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S405",
+      "signal_name": "RubberBand_ATM",
+      "signal_params": {
+        "base_id": "S174"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S406",
+      "signal_name": "RubberBand_OTM1",
+      "signal_params": {
+        "base_id": "S174"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 1,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S407",
+      "signal_name": "RubberBand_OTM2",
+      "signal_params": {
+        "base_id": "S174"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 2,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S408",
+      "signal_name": "RubberBand_OTM3",
+      "signal_params": {
+        "base_id": "S174"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 3,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S409",
+      "signal_name": "BBSqueeze_ITM3",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": -3,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S410",
+      "signal_name": "BBSqueeze_ITM2",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": -2,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S411",
+      "signal_name": "BBSqueeze_ITM1",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": -1,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S412",
+      "signal_name": "BBSqueeze_ATM",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S413",
+      "signal_name": "BBSqueeze_OTM1",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 1,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S414",
+      "signal_name": "BBSqueeze_OTM2",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 2,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S415",
+      "signal_name": "BBSqueeze_OTM3",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 3,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S416",
+      "signal_name": "BBSqueeze_ATM",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S417",
+      "signal_name": "BBSqueeze_OTM1",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 1,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S418",
+      "signal_name": "BBSqueeze_OTM2",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 2,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S419",
+      "signal_name": "BBSqueeze_OTM3",
+      "signal_params": {
+        "base_id": "S169"
+      },
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 3,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-28",
       "drop_reason": ""
     }
   ]

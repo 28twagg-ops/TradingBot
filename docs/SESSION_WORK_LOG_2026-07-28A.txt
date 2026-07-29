@@ -1,0 +1,55 @@
+================================================================================
+SESSION WORK LOG — 2026-07-28A
+Date: 2026-07-28
+Task: Fix options trade volume problem + aggressive expiration testing + identify micro-live candidates
+================================================================================
+
+TASK 1: STANDING GATES + CURRENT TRADE VOLUME
+- Ledger health: Showed 329 post-stable orphans (due to missing exits/stale states), but 0 mismatches between Alpaca and state.
+- Signal frequency: S165/S164 have not been generating enough daily signals. The overall universe is 903 symbols and morning entry windows limit opportunities.
+
+TASK 2: VOLUME DIAGNOSIS
+Root Causes Identified:
+1. Signal constraints: Gap down thresholds were strictly <= -2.0%. MA filters were too complex (4 conditions).
+2. Universe too small: Only S&P 500 + MidCap 400 (903 symbols).
+3. Windows too restricted: Only morning windows (w1-w4 up to 11:35 ET) are used, cutting off afternoon momentum and trend-based entries.
+
+TASK 3: FIXES APPLIED + EXPECTED IMPROVEMENT
+- FIX A (Relaxed Thresholds): Added S400 (Any_Green_Close), S401 (Any_Gap_Down_Small), S402 (Any_High_Volume), S403 (Any_MA50_Touch) as high-frequency simple variants.
+- FIX B (Expanded Universe): Added Russell 1000 dynamically to options_universe.py, expanding the scanned universe to ~1400 unique symbols.
+- FIX C (Widened Windows): Added w5 (13:00-13:30), w6 (14:00-14:30), and w7 (15:00-15:30). Configured options_strategy_lab.py to apply these afternoon windows to all non-gap strategies.
+- Expected Improvement: Trade volume should increase 3x to 5x with the expanded universe, new windows, and ultra-simple variants.
+
+TASK 4: DTE MATRIX
+- Built a 9-DTE matrix (0DTE, 1DTE, 2DTE, 3DTE, 5DTE, 7DTE, 14DTE, 21DTE, 30DTE).
+- Base signals used: GapDown (S165), RubberBand (S174), BBSqueeze (S169), GapDownAggr (S200), VolClimax (S219).
+- Created 45 new strategy IDs (S350 to S394) and 360 new buckets.
+- 0DTE restriction: Handled in options_strategy_lab.py (w1/w2 windows only for 0DTE).
+
+TASK 5: STRIKE MATRIX
+- Built a 7-Strike matrix (3-ITM to 3-OTM).
+- Base signals used: GapDown (S165), RubberBand (S174), BBSqueeze (S169).
+- Added `strike_offset` to `StrategyConfig` and implemented a generic `_pick_option_from_chain()` in `options_morning_bot.py` to seamlessly pick ITM or OTM based on strike offset.
+- Created 21 new strategy IDs (S395 to S415) and 168 new buckets.
+
+TASK 6: MICRO-LIVE CANDIDATES
+- Ran the analysis on master_ledger.csv for strategies with n>=3 exits.
+- Result table:
+Strategy      n    WR%  Median%    Avg%    p10%   Total$ Verdict
+---------------------------------------------------------------------------
+ORPHAN       18   33.3    -79.9    13.7   -96.3     0.00  AUTO-KILL
+S164          6    0.0    -65.7   -68.2   -88.9     0.00  watch
+S165        245   29.8    -38.2    -6.0   -63.4     0.00  AUTO-KILL
+S173        415   37.1    -31.5    15.2   -77.2     0.00  AUTO-KILL
+S174        119   36.1    -25.0   -23.4   -89.8     0.00  watch
+
+- Conclusion: There is currently NOTHING showing a positive median with enough exits. S165 and S173 are killed. S174 is close to being killed.
+- Implemented `scripts/options_microlive_sim.py` so the $500 simulation tool is ready when a strategy hits PROMOTE.
+
+TASK 7: BUCKET COUNT + REGRESSION
+- Total Buckets: 1024
+- Updated OPTIONS_BUCKET_COUNT in run_bot.yml to "1024".
+- All imports pass and regression looks clean.
+
+KEY QUESTION ANSWERED: Is there ANYTHING showing positive median right now?
+No. The existing options strategies have proven to be net losers. We must rely on the new DTE matrix, Strike matrix, and volume-boosted simple variants (launched today) to generate new, profitable patterns by Aug 18.

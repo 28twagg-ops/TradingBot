@@ -115,6 +115,11 @@ class BucketProfile:
     strategy_scope: str = "all"       # "all" or one strategy id (e.g. S173)
     buy_start_hm: str = "09:28"
     buy_end_hm: str = "11:35"
+    option_type: str = "call"
+    strike_offset: int = 0
+    dte_target: int = 3
+    dte_min: int = 1
+    dte_max: int = 7
 
 
 # Experiment grid — generated up to TARGET_BUCKET_PROFILES variants.
@@ -123,57 +128,18 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
     n = max(8, min(n, 5000))  # raised cap from 200 to 5000 for 100+ strategy framework
 
     if CONTROLLED_LAYOUT:
-        # Controlled mode: isolate time-window effect and strategy effect.
-        # All execution/risk knobs are held constant across buckets.
-        # 2026-07-22C Option A (expanded): 11 strategies × 4 windows × 2 reps = 88.
-        # Retired: S173 idle slots + reps 3–5. Keep all windows w1–w4.
-        windows = [
-            ("w1_0928_1005", "09:28", "10:05"),
-            ("w2_1005_1045", "10:05", "10:45"),
-            ("w3_1045_1120", "10:45", "11:20"),
-            ("w4_1120_1135", "11:20", "11:35"),
-        ]
-        strategy_ids = [
-            "S163", "S164", "S165", "S166", "S167", "S168",
-            "S169", "S170", "S171", "S172", "S175",
-            # Phase-1 (2026-07-25B): 20 new signals — 160 additional buckets
-            "S200", "S201", "S202", "S203", "S204", "S205",
-            "S206", "S207", "S208", "S209",
-            "S210", "S211", "S212", "S213", "S214", "S215",
-            "S216", "S217", "S218", "S219",
-        ]
-        reps = 2
+        try:
+            from scripts.options_strategy_lab import load_or_init_lab
+        except ImportError:
+            from options_strategy_lab import load_or_init_lab
+        lab = load_or_init_lab()
+        bucket_dicts = lab.generate_buckets(start_idx=0)
         profiles: list[BucketProfile] = []
-        idx = 0
-        for sid in strategy_ids:
-            for tag, start_hm, end_hm in windows:
-                for rep in range(reps):
-                    name = f"c{idx:03d}_{sid.lower()}_{tag}_r{rep+1}"
-                    profiles.append(
-                        BucketProfile(
-                            bucket_id=idx,
-                            name=name,
-                            buy_limit_offset=-0.01,
-                            buy_at_mid=False,
-                            max_premium=75,
-                            max_spread_frac=0.25,
-                            min_open_interest=100,
-                            account_cap=0.95,
-                            max_contracts=1,
-                            sell_limit_offset=-0.01,
-                            sell_at_mid=False,
-                            take_profit=0.50,
-                            stop_loss=-0.50,
-                            eod_only=False,
-                            market_exit_eod=True,
-                            strategy_scope=sid,
-                            buy_start_hm=start_hm,
-                            buy_end_hm=end_hm,
-                        )
-                    )
-                    idx += 1
-        # 2026-07-25B: 31 strategies x 4 windows x 2 reps = 248 buckets. Honor count as cap.
-        return profiles[:n]
+        for d in bucket_dicts:
+            if len(profiles) >= n:
+                break
+            profiles.append(BucketProfile(**d))
+        return profiles
 
     core = [
         BucketProfile(0, "baseline",
@@ -311,6 +277,11 @@ class EffectiveArm:
     strategy_scope: str = "all"
     buy_start_hm: str = "09:28"
     buy_end_hm: str = "11:35"
+    option_type: str = "call"
+    strike_offset: int = 0
+    dte_target: int = 3
+    dte_min: int = 1
+    dte_max: int = 7
 
     @property
     def bucket_key(self) -> str:

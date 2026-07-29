@@ -760,6 +760,89 @@ def scan_s219(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> 
     return None
 
 
+# --------------------------------------------------------------------------- #
+#  SIMPLE FREQUENCY BOOSTERS (added 2026-07-28A) — S400-S403
+# --------------------------------------------------------------------------- #
+
+def scan_s400(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S400 Any_Green_Close: stock is green today + VZ >= 0.5 + above MA50."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None: return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today): return None
+        vz = float(row.get("vz", float("nan")))
+        ma50 = float(row.get("ma50", float("nan")))
+        cn, opn = float(row["close"]), float(row["open"])
+        if pd.isna(vz) or pd.isna(ma50) or cn < min_px: return None
+        if cn > opn and vz >= 0.5 and cn > ma50:
+            return SignalHit("S400", "Any_Green_Close", sym, cn, f"green VZ={vz:.1f} >MA50")
+    except Exception: pass
+    return None
+
+def scan_s401(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S401 Any_Gap_Down_Small: gap -0.5% to -2%, green close."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None: return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today): return None
+        gap = float(row.get("gap_pct", float("nan")))
+        cn, opn = float(row["close"]), float(row["open"])
+        if pd.isna(gap) or cn < min_px: return None
+        if -0.02 <= gap <= -0.005 and cn > opn:
+            return SignalHit("S401", "Any_Gap_Down_Small", sym, cn, f"gap {gap:+.2%} green")
+    except Exception: pass
+    return None
+
+def scan_s402(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S402 Any_High_Volume: VZ >= 2.0 + close > open."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None: return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today): return None
+        vz = float(row.get("vz", float("nan")))
+        cn, opn = float(row["close"]), float(row["open"])
+        if pd.isna(vz) or cn < min_px: return None
+        if vz >= 2.0 and cn > opn:
+            return SignalHit("S402", "Any_High_Volume", sym, cn, f"VZ={vz:.1f} green")
+    except Exception: pass
+    return None
+
+def scan_s403(sub: pd.DataFrame, sym: str, today: date, min_px: float = 3.0) -> SignalHit | None:
+    """S403 Any_MA50_Touch: within 0.5% of MA50 + green."""
+    try:
+        df = _prep_pattern_bars(sub)
+        if df is None: return None
+        row = df.iloc[-1]
+        if str(df.index[-1].date()) != str(today): return None
+        ma50 = float(row.get("ma50", float("nan")))
+        lo, cn, opn = float(row["low"]), float(row["close"]), float(row["open"])
+        if pd.isna(ma50) or cn < min_px: return None
+        pct_from_ma = abs(lo - ma50) / ma50
+        if pct_from_ma <= 0.005 and cn > opn:
+            return SignalHit("S403", "Any_MA50_Touch", sym, cn, f"touch MA50 green")
+    except Exception: pass
+    return None
+
+def _get_base_scanner(base_id: str):
+    if base_id == "S165": return lambda s, sym, t, mp: scan_gap_down(s, sym, t, GAP_DOWN_THRESH, base_id, "base", mp)
+    if base_id == "S174": return scan_rubber_band
+    if base_id == "S169": return scan_bb_squeeze
+    if base_id == "S200": return scan_s200
+    if base_id == "S219": return scan_s219
+    return None
+
+def scan_variant(sub: pd.DataFrame, sym: str, today: date, min_px: float, strat_id: str, base_id: str, name: str) -> SignalHit | None:
+    scanner = _get_base_scanner(base_id)
+    if not scanner: return None
+    hit = scanner(sub, sym, today, min_px)
+    if hit:
+        hit.strategy_id = strat_id
+        hit.strategy_name = name
+    return hit
+
 @dataclass
 class StrategyConfig:
     id: str
@@ -768,6 +851,8 @@ class StrategyConfig:
     dte_min: int
     dte_max: int
     scanner: object
+    strike_offset: int = 0
+    option_type: str = "call"
 
 
 # Live scan list — S174 ended (2026-07-16/20); S173 ended new entries (2026-07-20).
@@ -831,9 +916,34 @@ PHASE1_STRATEGIES: list[StrategyConfig] = [
     StrategyConfig("S217", "RSI_25_Bounce",       3, 1, 7, scan_s217),
     StrategyConfig("S218", "BB_Lower_Touch",      3, 1, 7, scan_s218),
     StrategyConfig("S219", "Volume_Climax_Up",    3, 1, 7, scan_s219),
+    StrategyConfig("S400", "Any_Green_Close",     3, 1, 7, scan_s400),
+    StrategyConfig("S401", "Any_Gap_Down_Small",  3, 1, 7, scan_s401),
+    StrategyConfig("S402", "Any_High_Volume",     3, 1, 7, scan_s402),
+    StrategyConfig("S403", "Any_MA50_Touch",      3, 1, 7, scan_s403),
 ]
 
 PAPER_STRATEGIES.extend(PHASE1_STRATEGIES)
+
+# Dynamically add S350-S415 (Variants)
+_VARIANT_CONFIGS = [
+    # DTE Matrix (offset = 0)
+    ("S350", "GapDown_0DTE", "S165", 0, 0, 1, 0), ("S351", "GapDown_1DTE", "S165", 1, 0, 2, 0), ("S352", "GapDown_2DTE", "S165", 2, 1, 3, 0), ("S353", "GapDown_3DTE", "S165", 3, 2, 4, 0), ("S354", "GapDown_5DTE", "S165", 5, 4, 6, 0), ("S355", "GapDown_7DTE", "S165", 7, 6, 8, 0), ("S356", "GapDown_14DTE", "S165", 14, 13, 17, 0), ("S357", "GapDown_21DTE", "S165", 21, 20, 24, 0), ("S358", "GapDown_30DTE", "S165", 30, 29, 33, 0),
+    ("S359", "RubberBand_0DTE", "S174", 0, 0, 1, 0), ("S360", "RubberBand_1DTE", "S174", 1, 0, 2, 0), ("S361", "RubberBand_2DTE", "S174", 2, 1, 3, 0), ("S362", "RubberBand_3DTE", "S174", 3, 2, 4, 0), ("S363", "RubberBand_5DTE", "S174", 5, 4, 6, 0), ("S364", "RubberBand_7DTE", "S174", 7, 6, 8, 0), ("S365", "RubberBand_14DTE", "S174", 14, 13, 17, 0), ("S366", "RubberBand_21DTE", "S174", 21, 20, 24, 0), ("S367", "RubberBand_30DTE", "S174", 30, 29, 33, 0),
+    ("S368", "BBSqueeze_0DTE", "S169", 0, 0, 1, 0), ("S369", "BBSqueeze_1DTE", "S169", 1, 0, 2, 0), ("S370", "BBSqueeze_2DTE", "S169", 2, 1, 3, 0), ("S371", "BBSqueeze_3DTE", "S169", 3, 2, 4, 0), ("S372", "BBSqueeze_5DTE", "S169", 5, 4, 6, 0), ("S373", "BBSqueeze_7DTE", "S169", 7, 6, 8, 0), ("S374", "BBSqueeze_14DTE", "S169", 14, 13, 17, 0), ("S375", "BBSqueeze_21DTE", "S169", 21, 20, 24, 0), ("S376", "BBSqueeze_30DTE", "S169", 30, 29, 33, 0),
+    ("S377", "GapDownAggr_0DTE", "S200", 0, 0, 1, 0), ("S378", "GapDownAggr_1DTE", "S200", 1, 0, 2, 0), ("S379", "GapDownAggr_2DTE", "S200", 2, 1, 3, 0), ("S380", "GapDownAggr_3DTE", "S200", 3, 2, 4, 0), ("S381", "GapDownAggr_5DTE", "S200", 5, 4, 6, 0), ("S382", "GapDownAggr_7DTE", "S200", 7, 6, 8, 0), ("S383", "GapDownAggr_14DTE", "S200", 14, 13, 17, 0), ("S384", "GapDownAggr_21DTE", "S200", 21, 20, 24, 0), ("S385", "GapDownAggr_30DTE", "S200", 30, 29, 33, 0),
+    ("S386", "VolClimax_0DTE", "S219", 0, 0, 1, 0), ("S387", "VolClimax_1DTE", "S219", 1, 0, 2, 0), ("S388", "VolClimax_2DTE", "S219", 2, 1, 3, 0), ("S389", "VolClimax_3DTE", "S219", 3, 2, 4, 0), ("S390", "VolClimax_5DTE", "S219", 5, 4, 6, 0), ("S391", "VolClimax_7DTE", "S219", 7, 6, 8, 0), ("S392", "VolClimax_14DTE", "S219", 14, 13, 17, 0), ("S393", "VolClimax_21DTE", "S219", 21, 20, 24, 0), ("S394", "VolClimax_30DTE", "S219", 30, 29, 33, 0),
+    # Strike Matrix (defaults to 3DTE)
+    ("S395", "GapDown_ITM3", "S165", 3, 1, 7, -3), ("S396", "GapDown_ITM2", "S165", 3, 1, 7, -2), ("S397", "GapDown_ITM1", "S165", 3, 1, 7, -1), ("S398", "GapDown_ATM", "S165", 3, 1, 7, 0), ("S399", "GapDown_OTM1", "S165", 3, 1, 7, 1), ("S404", "GapDown_OTM2", "S165", 3, 1, 7, 2), ("S405", "GapDown_OTM3", "S165", 3, 1, 7, 3),
+    ("S406", "RubberBand_ITM3", "S174", 3, 1, 7, -3), ("S407", "RubberBand_ITM2", "S174", 3, 1, 7, -2), ("S408", "RubberBand_ITM1", "S174", 3, 1, 7, -1), ("S409", "RubberBand_ATM", "S174", 3, 1, 7, 0), ("S410", "RubberBand_OTM1", "S174", 3, 1, 7, 1), ("S411", "RubberBand_OTM2", "S174", 3, 1, 7, 2), ("S412", "RubberBand_OTM3", "S174", 3, 1, 7, 3),
+    ("S413", "BBSqueeze_ITM3", "S169", 3, 1, 7, -3), ("S414", "BBSqueeze_ITM2", "S169", 3, 1, 7, -2), ("S415", "BBSqueeze_ITM1", "S169", 3, 1, 7, -1), ("S416", "BBSqueeze_ATM", "S169", 3, 1, 7, 0), ("S417", "BBSqueeze_OTM1", "S169", 3, 1, 7, 1), ("S418", "BBSqueeze_OTM2", "S169", 3, 1, 7, 2), ("S419", "BBSqueeze_OTM3", "S169", 3, 1, 7, 3),
+]
+
+for sid, name, base, dtarg, dmin, dmax, strike_offset in _VARIANT_CONFIGS:
+    PAPER_STRATEGIES.append(
+        StrategyConfig(sid, name, dtarg, dmin, dmax, 
+                       lambda sub, sym, t, mp, s=sid, b=base, n=name: scan_variant(sub, sym, t, mp, s, b, n),
+                       strike_offset=strike_offset)
+    )
 
 # Kept for reports / name lookup only — not scanned.
 DROPPED_PAPER_STRATEGIES: list[StrategyConfig] = [

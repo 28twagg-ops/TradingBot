@@ -103,7 +103,7 @@ jobs:
           ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
           OPTIONS_PAPER_UNLIMITED: "1"
           OPTIONS_CONTROLLED_LAYOUT: "1"
-          OPTIONS_BUCKET_COUNT: "248"
+          OPTIONS_BUCKET_COUNT: "1024"
           OPTIONS_DROPPED_STRATEGIES: "S174,S173"
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
           GITHUB_RUN_ID: ${{ github.run_id }}

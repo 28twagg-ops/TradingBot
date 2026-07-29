@@ -613,27 +613,30 @@ def score_call_for_mode(strike: float, price: float, dte: int, dte_target: int,
     return (abs(strike - price), abs(dte - dte_target))
 
 
-def _pick_call_from_chain(opt, ref, symbol: str, price: float,
-                          dte_min: int, dte_max: int, dte_target: int,
-                          arm: EffectiveArm, *, chain_cache: dict | None = None,
-                          oi_cache: dict | None = None,
-                          strike_mode: str = "atm"):
-    """Return best tradeable call under strike_mode ('atm' or 'otm1')."""
+def _pick_option_from_chain(opt, ref, symbol: str, price: float,
+                              dte_min: int, dte_max: int, dte_target: int,
+                              arm: EffectiveArm, *, chain_cache: dict | None = None,
+                              oi_cache: dict | None = None):
+    """Generic picker using arm.option_type and arm.strike_offset.
+    option_type: 'call' or 'put'
+    strike_offset: 0 = ATM. >0 = OTM. <0 = ITM.
+    """
     api_sym = to_alpaca_symbol(symbol)
     max_premium = arm.max_premium
     max_spread = arm.max_spread_frac
     min_oi = arm.min_open_interest
     exp_lo = TODAY + timedelta(days=dte_min)
     exp_hi = TODAY + timedelta(days=dte_max)
-    strike_lo = round(price * (1 - STRIKE_PCT), 2)
-    strike_hi = round(price * (1 + STRIKE_PCT), 2)
-    cache_key = (api_sym, dte_min, dte_max, strike_lo, strike_hi)
+    
+    # Widen search space for deep ITM/OTM
+    pct = 0.20 if abs(arm.strike_offset) > 1 else STRIKE_PCT
+    strike_lo = round(price * (1 - pct), 2)
+    strike_hi = round(price * (1 + pct), 2)
+    cache_key = (api_sym, dte_min, dte_max, strike_lo, strike_hi, arm.option_type)
 
     chain = None
-    used_cache = False
     if chain_cache is not None and cache_key in chain_cache:
         chain = chain_cache[cache_key]
-        used_cache = True
 
     if chain is None:
         try:
@@ -641,64 +644,30 @@ def _pick_call_from_chain(opt, ref, symbol: str, price: float,
             if chain_cache is not None and chain:
                 chain_cache[cache_key] = chain
         except Exception as exc:
-            rl_file(f"  [{symbol}] chain error: {exc}")
-            if chain_cache is not None and cache_key in chain_cache:
-                del chain_cache[cache_key]
-            try:
-                chain = _fetch_option_chain(opt, api_sym, exp_lo, exp_hi, strike_lo, strike_hi)
-            except Exception as exc2:
-                rl_file(f"  [{symbol}] chain fallback error: {exc2}")
-                return None
-
-    # Empty cached chain may be stale — one uncached retry (old behavior).
-    if used_cache and not chain:
-        try:
-            chain = _fetch_option_chain(opt, api_sym, exp_lo, exp_hi, strike_lo, strike_hi)
-            if chain_cache is not None and chain:
-                chain_cache[cache_key] = chain
-        except Exception as exc:
-            rl_file(f"  [{symbol}] chain refresh error: {exc}")
+            rl_file(f"  [{symbol}] {arm.option_type} chain error: {exc}")
             return None
 
     if not chain:
         return None
 
     oi_map = {}
-    oi_from_cache = False
     if oi_cache is not None and cache_key in oi_cache:
         oi_map = oi_cache[cache_key]
-        oi_from_cache = True
     else:
         try:
             oi_map = _fetch_oi_map(ref, api_sym, strike_lo, strike_hi, exp_lo, exp_hi)
             if oi_cache is not None and oi_map:
                 oi_cache[cache_key] = oi_map
-        except Exception as exc:
-            rl_file(f"  [{symbol}] OI error: {exc}")
-            try:
-                oi_map = _fetch_oi_map(ref, api_sym, strike_lo, strike_hi, exp_lo, exp_hi)
-            except Exception:
-                oi_map = {}
-
-    if oi_from_cache and not oi_map:
-        try:
-            fresh_oi = _fetch_oi_map(ref, api_sym, strike_lo, strike_hi, exp_lo, exp_hi)
-            if fresh_oi:
-                oi_map = fresh_oi
-                if oi_cache is not None:
-                    oi_cache[cache_key] = oi_map
         except Exception:
-            pass
+            oi_map = {}
 
-    best = None
+    candidates = []
+    right_code = "C" if arm.option_type == "call" else "P"
+
     for csym, snap in chain.items():
         expiry, right, strike = _parse_occ(csym, api_sym)
-        if right != "C" or strike is None or expiry is None:
+        if right != right_code or strike is None or expiry is None:
             continue
-        if strike_mode == "otm1":
-            # 1-strike OTM: only calls strictly above spot
-            if strike <= price:
-                continue
         lq = getattr(snap, "latest_quote", None)
         bid = getattr(lq, "bid_price", None) if lq else None
         ask = getattr(lq, "ask_price", None) if lq else None
@@ -718,35 +687,40 @@ def _pick_call_from_chain(opt, ref, symbol: str, price: float,
             dte = (date.fromisoformat(expiry) - TODAY).days
         except Exception:
             continue
-        score = score_call_for_mode(strike, price, dte, dte_target, strike_mode)
-        if score is None:
-            continue
-        cand = {"symbol": csym, "underlying": symbol, "strike": strike,
-                "expiry": expiry, "dte": dte, "bid": bid, "ask": ask, "mid": mid,
-                "spread_frac": spread_frac, "cost": cost, "oi": oi, "score": score}
-        if best is None or score < best["score"]:
-            best = cand
-    return best
+        
+        candidates.append({
+            "symbol": csym, "underlying": symbol, "strike": strike,
+            "expiry": expiry, "dte": dte, "bid": bid, "ask": ask, "mid": mid,
+            "spread_frac": spread_frac, "cost": cost, "oi": oi
+        })
 
+    if not candidates:
+        return None
 
-def pick_atm_call(opt, ref, symbol: str, price: float,
-                  dte_min: int, dte_max: int, dte_target: int,
-                  arm: EffectiveArm, *, chain_cache: dict | None = None,
-                  oi_cache: dict | None = None):
-    """Return dict for the best ATM call, or None if nothing tradeable."""
-    return _pick_call_from_chain(
-        opt, ref, symbol, price, dte_min, dte_max, dte_target, arm,
-        chain_cache=chain_cache, oi_cache=oi_cache, strike_mode="atm")
+    # Sort by DTE closeness first
+    candidates.sort(key=lambda c: abs(c["dte"] - dte_target))
+    best_dte = abs(candidates[0]["dte"] - dte_target)
+    
+    # Filter to only the best DTE
+    best_dte_cands = [c for c in candidates if abs(c["dte"] - dte_target) == best_dte]
+    
+    # Sort by strike. 
+    # For calls: ITM (lower strikes) -> ATM -> OTM (higher strikes)
+    # For puts: ITM (higher strikes) -> ATM -> OTM (lower strikes)
+    if arm.option_type == "call":
+        best_dte_cands.sort(key=lambda c: c["strike"])
+    else:
+        # Puts: sort descending so ITM is first, OTM is last
+        best_dte_cands.sort(key=lambda c: c["strike"], reverse=True)
+        
+    # Find ATM index
+    atm_idx = min(range(len(best_dte_cands)), key=lambda i: abs(best_dte_cands[i]["strike"] - price))
 
-
-def pick_otm_call_1strike(opt, ref, symbol: str, price: float,
-                          dte_min: int, dte_max: int, dte_target: int,
-                          arm: EffectiveArm, *, chain_cache: dict | None = None,
-                          oi_cache: dict | None = None):
-    """Return dict for the lowest call strike strictly above spot (1-OTM)."""
-    return _pick_call_from_chain(
-        opt, ref, symbol, price, dte_min, dte_max, dte_target, arm,
-        chain_cache=chain_cache, oi_cache=oi_cache, strike_mode="otm1")
+    target_idx = atm_idx + arm.strike_offset
+    if 0 <= target_idx < len(best_dte_cands):
+        return best_dte_cands[target_idx]
+    
+    return None
 
 
 # --------------------------------------------------------------------------- #
@@ -1039,24 +1013,13 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
                 continue
             if state.bucket_holds_underlying(arm.bucket_id, hit.symbol):
                 continue
-            if hit.strategy_id == "S167":
-                cand = pick_otm_call_1strike(
-                    opt, ref, hit.symbol, hit.price,
-                    strat.dte_min, strat.dte_max, strat.dte_target, arm,
-                    chain_cache=chain_cache, oi_cache=oi_cache)
-            elif getattr(hit, "option_type", "call") == "put":
-                cand = pick_atm_put(
-                    opt, ref, hit.symbol, hit.price,
-                    strat.dte_min, strat.dte_max, strat.dte_target, arm,
-                    chain_cache=chain_cache, oi_cache=oi_cache)
-            else:
-                cand = pick_atm_call(
-                    opt, ref, hit.symbol, hit.price,
-                    strat.dte_min, strat.dte_max, strat.dte_target, arm,
-                    chain_cache=chain_cache, oi_cache=oi_cache)
+            cand = _pick_option_from_chain(
+                opt, ref, hit.symbol, hit.price,
+                strat.dte_min, strat.dte_max, strat.dte_target, arm,
+                chain_cache=chain_cache, oi_cache=oi_cache)
             if not cand:
                 skip_no_chain += 1
-                opt_type = getattr(hit, "option_type", "call")
+                opt_type = arm.option_type
                 rl_file(f"  [b{arm.bucket_id}|{arm.profile_name}] {hit.strategy_id} "
                         f"{hit.symbol}: no tradeable {opt_type}")
                 continue
