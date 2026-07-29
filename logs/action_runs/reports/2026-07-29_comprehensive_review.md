@@ -6254,3 +6254,104 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260729T150104Z
+
+- UTC timestamp: `20260729T150104Z`
+- GitHub run: [#5416](https://github.com/28twagg-ops/TradingBot/actions/runs/30463686420)
+- Run id: `30463686420`
+- Live bot: exit=`0`, duration=`4s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-29T10:55:48.328032-04:00","date":"2026-07-29","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":176.4,"phases_s":{"reconcile":0.08,"cancel":0.02,"manage":0.46,"scan":163.15,"entries":12.31,"reconcile2":0.1},"signals":509,"placed":0,"equity":126429.56,"open_positions":3,"pending_orders":16,"open_lots":6,"submitted_today":57,"filled_today":45,"unattributed_contracts":0,"top_signals":["S165:AMCR","S165:AON","S165:AMAT","S165:ACGL","S165:BSX","S165:BLDR","S165:BG","S165:CCL"],"github_run":"5415","github_run_id":"30463263300","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+15:01:05  INFO      Mode: exits
+15:01:07  INFO        Daily log -> logs/daily/2026-07-29.md
+15:01:07  INFO        Daily log reconciled -> logs/daily/2026-07-29.md (5 ledger rows)
+15:01:07  INFO        place_all_stops: checking 3 positions...
+15:01:07  INFO        STOP skipped CMS: fractional (0.2712 shares) — software exit will handle it
+15:01:07  INFO        STOP already live EQR @ $67.89
+15:01:07  INFO        STOP skipped FFIV: fractional (0.2428 shares) — software exit will handle it
+15:01:08  INFO        [positions] 3/3 (3 valid)
+15:01:08  INFO        Daily log -> logs/daily/2026-07-29.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:01 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $473.47|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CMS  P&L -0.4%  $-0.09                                            HOLD|
+|  FFIV  P&L +0.2%  $+0.19                                           HOLD|
+|  EQR  P&L +0.9%  $+0.63                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=6 pending_exits=0 paper_keys=yes dry_run=False
+  alpaca open sell orders=0 positions=5
+  zombies_flagged=3
+  FLAG b5|S163|36993a9a zombie age_min=901 notional=$46.00 occ=CCL260731C00028000 action=error:{"bid":"0.4","buy_limit_price":"0.45","code":40310000,"existing_order_id":"4b667dd3-9644-4c43-8b77-07a995c3a2b1","message":"potential wash trade detected. use complex orders","reject_reason":"buy order exists, quote bid should be greater than existing buy limit price"}
+  FLAG b4|S163|5f6f0544 zombie age_min=901 notional=$46.00 occ=CCL260731C00028000 action=error:{"bid":"0.4","buy_limit_price":"0.45","code":40310000,"existing_order_id":"4b667dd3-9644-4c43-8b77-07a995c3a2b1","message":"potential wash trade detected. use complex orders","reject_reason":"buy order exists, quote bid should be greater than existing buy limit price"}
+  FLAG b11|S164|46a1d475 zombie age_min=901 notional=$38.00 occ=NCLH260731C00022000 action=submitted:6f0767ca-a7b2-496e-bc41-8da18b3d0c86
+options_reconcile: done
+Layout: controlled:248:c000_s163_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:248:c000_s163_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      248
+=== options_morning_bot (PAPER) 2026-07-29T11:01:10.744086-04:00 ===
+
+[Run context]
+Paper auth OK — equity $126818.50, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 248 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219
+Dropped (no new entries; ex-reflected P&L): S173, S174
+2026-07-29 11:01:13,009 INFO   EXIT [b108|c108_s202_w3_1045_1120_r1|S202] stop_loss (-66.7%) SELL 1 PG260731C00155000 @<= 0.02
+
+[Scan + entries]
+Scanning 903 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219] …
+Fetched daily bars for 903/903 symbols
+Found 504 signal(s); top: ['S165:AMCR', 'S165:AON', 'S165:AMAT', 'S165:ACGL', 'S165:BSX', 'S165:BLDR', 'S165:BG', 'S165:CCL']
+Paper lab: $127145 broker equity -> 248 bucket(s) ($500 virtual each, unlimited paper)
+```
+
+---
