@@ -1,6 +1,6 @@
-# Strategy Pipeline Evaluation - 2026-07-28
+# Strategy Pipeline Evaluation - 2026-07-29
 
-**DAILY PIPELINE SUMMARY - 2026-07-28**
+**DAILY PIPELINE SUMMARY - 2026-07-29**
 
 Active: 30 | Watching: 30 | Killed today: 0 | Promote candidates: 0
 
@@ -17,26 +17,26 @@ Active: 30 | Watching: 30 | Killed today: 0 | Promote candidates: 0
 | S168 | S168 | 3 | 0 | - | - | INSUFFICIENT | 0 |
 | S173 | S173 | 3 | 0 | - | - | INSUFFICIENT | 0 |
 | S174 | S174 | 3 | 0 | - | - | INSUFFICIENT | 0 |
-| S200 | GapDown_Aggressive | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S201 | GapDown_Mild | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S202 | GapDown_Monster | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S203 | GapUp_Fade | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S204 | GapUp_Continuation | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S205 | GapDown_HighVol | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S206 | GapDown_WithTrend | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S207 | GapDown_AtSupport | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S208 | GapDown_AboveMA200 | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S209 | GapDown_Recovery | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S210 | MA_Cross_8_21 | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S211 | MA_Cross_21_50 | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S212 | MA_Bounce_50 | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S213 | MA_Bounce_200 | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S214 | MA_Death_Cross | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S215 | MA_Reclaim_200 | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S216 | RSI_Oversold_Cross | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S217 | RSI_25_Bounce | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S218 | BB_Lower_Touch | 3 | 0 | - | - | INSUFFICIENT | 2 |
-| S219 | Volume_Climax_Up | 3 | 0 | - | - | INSUFFICIENT | 2 |
+| S200 | GapDown_Aggressive | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S201 | GapDown_Mild | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S202 | GapDown_Monster | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S203 | GapUp_Fade | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S204 | GapUp_Continuation | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S205 | GapDown_HighVol | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S206 | GapDown_WithTrend | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S207 | GapDown_AtSupport | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S208 | GapDown_AboveMA200 | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S209 | GapDown_Recovery | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S210 | MA_Cross_8_21 | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S211 | MA_Cross_21_50 | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S212 | MA_Bounce_50 | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S213 | MA_Bounce_200 | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S214 | MA_Death_Cross | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S215 | MA_Reclaim_200 | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S216 | RSI_Oversold_Cross | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S217 | RSI_25_Bounce | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S218 | BB_Lower_Touch | 3 | 0 | - | - | INSUFFICIENT | 3 |
+| S219 | Volume_Climax_Up | 3 | 0 | - | - | INSUFFICIENT | 3 |
 | UNKNOWN | UNKNOWN | 3 | 0 | - | - | INSUFFICIENT | 0 |
 
 ## Auto-Kill Log
