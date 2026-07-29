@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-29 15:25:02.543337+00:00,entry,118,c118_s203_w4_1120_1135_r1,S203,8625ea138f39,APA,APA260731P00036000,1,0.55,0.55,55.0,,,,-0.01,,0.5,-0.5,,,25d9e85d-4146-44d9-9d97-50b919e73f78
