@@ -14362,19 +14362,19 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-07-29.log
 elapsed=0.4s reconcile=0.09s
 
-=== 16:55:05 ET — after hours (exit summary) [elapsed=1.1s reconcile=0.62s] ===
-=== options_morning_bot (PAPER) 2026-07-29T16:55:05.435131-04:00 ===
+=== 16:55:58 ET — after hours (exit summary) [elapsed=0.4s reconcile=0.08s] ===
+=== options_morning_bot (PAPER) 2026-07-29T16:55:58.915469-04:00 ===
 
 [Run context]
 After hours (16:55 ET) — exit summary only.
-Paper auth OK — equity $122521.72, account PA36KS87UPRS
+Paper auth OK — equity $122493.72, account PA36KS87UPRS
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1
 
 [Exit summary]
 ========================================================
 OPTIONS EXIT SUMMARY — 2026-07-29
 ========================================================
-Account equity: $122,521.72
+Account equity: $122,493.72
 Open positions: flat
 
 Today's closed trades
@@ -14411,7 +14411,7 @@ Recent exits (last 4)
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $122,521.72
+Account equity: $122,493.72
 Active buckets: 1024 of 1024 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
@@ -14485,7 +14485,7 @@ Per-bucket exit stats (all time)
 |  OPTIONS BOT SUMMARY                                                   |
 +------------------------------------------------------------------------+
 |  Mode                          after_hours                             |
-|  Equity                        $122,521.72                             |
+|  Equity                        $122,493.72                             |
 |  Signals this run              0                                       |
 |  Orders submitted (session)    83                                      |
 |  Orders filled today (ledger)  77                                      |
@@ -14523,5 +14523,5 @@ Per-bucket exit stats (all time)
 |  No open option positions                                              |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-07-29.log
-elapsed=1.1s reconcile=0.62s
+elapsed=0.4s reconcile=0.08s
 
