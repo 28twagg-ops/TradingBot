@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-29
 
-_Generated 2026-07-29T10:34:17.431433_
+_Generated 2026-07-29T10:43:51.160956_
 
 ## Summary
 
@@ -47,7 +47,7 @@ _Generated 2026-07-29T10:34:17.431433_
 | S215 (MA_Reclaim_200) | 3d ATM MA reclaim 200 | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 2 | 16 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 2 | 10 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 2 | 12 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 2 | 14 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S219 (Volume_Climax_Up) | 3d ATM vol climax up | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 6 | 0.0 | -65.67 | -88.89 | -86.11 | -50.00 | 8 | 16 | 0 | $-59.00 | 83.3% | insufficient sample (<8 exits) |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 23 | 0 | 0 | $-1,658.19 | 50.4% | manually paused — excluded from new entries & reflected P&L |
@@ -135,7 +135,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 |---|---|---:|---:|---:|---:|---:|---:|
 | S216 | 3d ATM RSI x30 | 0 | +0.00 | +0.00 | +0.00 | 16 | 0 |
 | S217 | 3d ATM RSI<25 bounce | 0 | +0.00 | +0.00 | +0.00 | 10 | 0 |
-| S218 | 3d ATM BB lower touch | 0 | +0.00 | +0.00 | +0.00 | 12 | 0 |
+| S218 | 3d ATM BB lower touch | 0 | +0.00 | +0.00 | +0.00 | 14 | 0 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
 ### Other

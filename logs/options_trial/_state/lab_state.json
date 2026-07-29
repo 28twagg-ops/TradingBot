@@ -2,7 +2,7 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "d54c0fa6a58a",
+      "lot_id": "40cf75fc8534",
       "bucket_id": 235,
       "profile_name": "c235_s218_w2_1005_1045_r2",
       "strategy_id": "S218",
@@ -22,7 +22,7 @@
       "entry_order_id": "d4dbe73e-0668-44ac-9914-345cb92cd643"
     },
     {
-      "lot_id": "b27983386e64",
+      "lot_id": "7769eeb07d5b",
       "bucket_id": 234,
       "profile_name": "c234_s218_w2_1005_1045_r1",
       "strategy_id": "S218",
