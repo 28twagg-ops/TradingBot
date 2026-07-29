@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-29
 
-_Generated 2026-07-29T12:21:12.983313_
+_Generated 2026-07-29T12:25:47.953207_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-07-29T12:21:12.983313_
 
 ## Attribution health
 
-- Total exits: **810**
+- Total exits: **811**
 - Orphan exits (b0/orphan_reconcile): **22**
 - Orphan rate: **2.7%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -47,8 +47,8 @@ _Generated 2026-07-29T12:21:12.983313_
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 2 | 20 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 2 | 10 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S219 (Volume_Climax_Up) | 3d ATM vol climax up | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 1 | 0.0 | -33.33 | -33.33 | -33.33 | -33.33 | 2 | 16 | 1 | $-1.00 | 100.0% | insufficient sample (<8 exits) |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 2 | 0.0 | -50.00 | -63.34 | -58.33 | -36.66 | 1 | 14 | 2 | $-3.00 | 100.0% | insufficient sample (<8 exits) |
+| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 2 | 0.0 | -50.00 | -63.34 | -58.33 | -36.66 | 2 | 16 | 2 | $-3.00 | 100.0% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 6 | 0.0 | -65.67 | -88.89 | -86.11 | -50.00 | 8 | 21 | 0 | $-59.00 | 83.3% | insufficient sample (<8 exits) |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 23 | 0 | 0 | $-1,658.19 | 50.4% | manually paused — excluded from new entries & reflected P&L |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 23 | 0 | 0 | $+62.64 | 27.5% | manually paused — excluded from new entries & reflected P&L |
@@ -135,7 +135,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 |---|---|---:|---:|---:|---:|---:|---:|
 | S216 | 3d ATM RSI x30 | 0 | +0.00 | +0.00 | +0.00 | 20 | 0 |
 | S217 | 3d ATM RSI<25 bounce | 0 | +0.00 | +0.00 | +0.00 | 10 | 0 |
-| S218 | 3d ATM BB lower touch | 1 | -33.33 | -33.33 | -33.33 | 16 | 1 |
+| S218 | 3d ATM BB lower touch | 2 | -50.00 | -63.34 | -58.33 | 16 | 2 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
 ### Other
@@ -183,7 +183,7 @@ _Pipeline evaluation as of 2026-07-29. Auto-kill thresholds: median<-25% at n>=1
 | S215 | MA_Reclaim_200 | 0 | — | — | NEW | 0 |
 | S216 | RSI_Oversold_Cross | 0 | — | — | NEW | 2 |
 | S217 | RSI_25_Bounce | 0 | — | — | NEW | 2 |
-| S218 | BB_Lower_Touch | 1 | -33.33% | 0% | WATCH | 2 |
+| S218 | BB_Lower_Touch | 2 | -50.00% | 0% | WATCH | 2 |
 | S219 | Volume_Climax_Up | 0 | — | — | NEW | 0 |
 
 ## Auto-Kill Log

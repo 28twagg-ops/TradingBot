@@ -1,43 +1,9 @@
 {
   "version": 5,
-  "lots": [
-    {
-      "lot_id": "75759415c9a3",
-      "bucket_id": 237,
-      "profile_name": "c237_s218_w3_1045_1120_r2",
-      "strategy_id": "S218",
-      "occ_symbol": "PG260731C00155000",
-      "underlying": "PG",
-      "qty": 1,
-      "entry_cost": 3.0,
-      "entry_price": 0.03,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-29",
-      "entry_order_id": "8c880f8e-b9ce-482f-8241-1b54184ea0f4"
-    }
-  ],
+  "lots": [],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "2d30859b-7e69-4d1e-845b-c76a12940229",
-      "lot_id": "75759415c9a3",
-      "bucket_id": 237,
-      "strategy_id": "S218",
-      "occ_symbol": "PG260731C00155000",
-      "qty": 1,
-      "reason": "stop_loss (-66.7%)",
-      "submitted": "2026-07-29T12:21:11"
-    }
-  ],
-  "bucket_open_premium": {
-    "b237": 3.0
-  },
+  "pending_exits": [],
+  "bucket_open_premium": {},
   "session_date": "2026-07-29",
   "entries_locked": [
     "18|S165|2026-07-29",
@@ -559,7 +525,8 @@
     "8e6e68d0-743c-4eb1-8172-2dafb4a0b4af",
     "cc49e1a3-dec3-4b54-8145-f57edb589dce",
     "b67532cc-44fb-4110-ab32-a582d85abc07",
-    "b20a35a0-2fab-4dab-993d-d85ed49508fa"
+    "b20a35a0-2fab-4dab-993d-d85ed49508fa",
+    "2d30859b-7e69-4d1e-845b-c76a12940229"
   ],
   "submitted_today": 83,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
