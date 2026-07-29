@@ -974,14 +974,14 @@
   {
     "bucket_id": 162,
     "profile": "c162_s209_w2_1005_1045_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 56.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 163,
     "profile": "c163_s209_w2_1005_1045_r2",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 56.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 164,

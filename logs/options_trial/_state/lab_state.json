@@ -1,6 +1,47 @@
 {
   "version": 5,
-  "lots": [],
+  "lots": [
+    {
+      "lot_id": "0956fcc71e0c",
+      "bucket_id": 163,
+      "profile_name": "c163_s209_w2_1005_1045_r2",
+      "strategy_id": "S209",
+      "occ_symbol": "V260731C00382500",
+      "underlying": "V",
+      "qty": 1,
+      "entry_cost": 56.00000000000001,
+      "entry_price": 0.56,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-07-29",
+      "entry_order_id": "b767064f-6762-4b52-842a-6dc9cc9d3633"
+    },
+    {
+      "lot_id": "e22396f6220f",
+      "bucket_id": 162,
+      "profile_name": "c162_s209_w2_1005_1045_r1",
+      "strategy_id": "S209",
+      "occ_symbol": "V260731C00382500",
+      "underlying": "V",
+      "qty": 1,
+      "entry_cost": 56.00000000000001,
+      "entry_price": 0.56,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-07-29",
+      "entry_order_id": "7c84cefe-5797-4698-a251-62fc6507a102"
+    }
+  ],
   "pending_orders": [
     {
       "order_id": "bb634f57-f0c5-4c91-98ce-307ebfba1279",
@@ -145,42 +186,13 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
-    },
-    {
-      "order_id": "7c84cefe-5797-4698-a251-62fc6507a102",
-      "bucket_id": 162,
-      "strategy_id": "S209",
-      "occ_symbol": "V260731C00382500",
-      "underlying": "V",
-      "qty": 1,
-      "limit": 0.56,
-      "profile_name": "c162_s209_w2_1005_1045_r1",
-      "submitted": "2026-07-29",
-      "detail": "gap -2.6% recovery above prev close",
-      "spread_frac": 0.2352941176470587,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "b767064f-6762-4b52-842a-6dc9cc9d3633",
-      "bucket_id": 163,
-      "strategy_id": "S209",
-      "occ_symbol": "V260731C00382500",
-      "underlying": "V",
-      "qty": 1,
-      "limit": 0.56,
-      "profile_name": "c163_s209_w2_1005_1045_r2",
-      "submitted": "2026-07-29",
-      "detail": "gap -2.6% recovery above prev close",
-      "spread_frac": 0.2352941176470587,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
     }
   ],
   "pending_exits": [],
-  "bucket_open_premium": {},
+  "bucket_open_premium": {
+    "b163": 56.00000000000001,
+    "b162": 56.00000000000001
+  },
   "session_date": "2026-07-29",
   "entries_locked": [
     "18|S165|2026-07-29",
@@ -692,7 +704,9 @@
     "87cd7b04-2659-4083-ae52-f15e4a112b11",
     "94b3ec7a-9817-4712-a3b2-233b326dcd02",
     "3e56a793-1c21-47a2-a8f8-0adc44c82611",
-    "30f0d827-4bb0-483d-8547-1f1aeed87f16"
+    "30f0d827-4bb0-483d-8547-1f1aeed87f16",
+    "b767064f-6762-4b52-842a-6dc9cc9d3633",
+    "7c84cefe-5797-4698-a251-62fc6507a102"
   ],
   "submitted_today": 29,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

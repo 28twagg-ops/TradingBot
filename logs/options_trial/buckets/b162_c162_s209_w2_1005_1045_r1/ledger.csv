@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-29 14:31:26.611674+00:00,entry,162,c162_s209_w2_1005_1045_r1,S209,e22396f6220f,V,V260731C00382500,1,0.56,0.56,56.0,,,,-0.01,,0.5,-0.5,0.2352941176470587,gap -2.6% recovery above prev close,7c84cefe-5797-4698-a251-62fc6507a102
