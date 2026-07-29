@@ -3817,3 +3817,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-29 23:05:52,ext_exits,bull,486.49,79.9,0,0,0,5,APG|DVN|FTNT|ODFL|WING,both
 2026-07-29 23:07:49,ext_exits,bull,486.49,79.9,0,0,0,5,APG|DVN|FTNT|ODFL|WING,both
 2026-07-29 23:10:48,ext_exits,bull,484.43,79.9,0,0,0,5,APG|DVN|FTNT|ODFL|WING,both
+2026-07-29 23:15:43,ext_exits,bull,484.16,79.9,0,0,0,5,APG|DVN|FTNT|ODFL|WING,both
