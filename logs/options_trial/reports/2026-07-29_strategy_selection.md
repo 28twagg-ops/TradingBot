@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-29
 
-_Generated 2026-07-29T11:33:59.009810_
+_Generated 2026-07-29T11:37:23.308145_
 
 ## Summary
 
@@ -37,7 +37,7 @@ _Generated 2026-07-29T11:33:59.009810_
 | S206 (GapDown_WithTrend) | 3d ATM gap-trend | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 2 | 12 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S208 (GapDown_AboveMA200) | 3d ATM gap-ma200 | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 4 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 6 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 2 | 15 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 2 | 10 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 2 | 18 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -104,7 +104,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | S206 | 3d ATM gap-trend | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S207 | 3d ATM gap-support | 0 | +0.00 | +0.00 | +0.00 | 12 | 0 |
 | S208 | 3d ATM gap-ma200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
-| S209 | 3d ATM gap-recovery | 0 | +0.00 | +0.00 | +0.00 | 4 | 0 |
+| S209 | 3d ATM gap-recovery | 0 | +0.00 | +0.00 | +0.00 | 6 | 0 |
 
 ### Phase-1 Bearish Gap & MA
 

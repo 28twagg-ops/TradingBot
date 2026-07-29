@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-29 15:35:17.355297+00:00,entry,167,c167_s209_w4_1120_1135_r2,S209,2771031e0546,BSX,BSX260731C00048000,1,0.57,0.55,55.0,,,,-0.01,,0.5,-0.5,0.20952380952380953,gap -7.4% recovery above prev close,cc49e1a3-dec3-4b54-8145-f57edb589dce

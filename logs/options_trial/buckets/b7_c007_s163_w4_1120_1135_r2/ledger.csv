@@ -1,3 +1,5 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-29 15:30:05.306834+00:00,entry,7,c007_s163_w4_1120_1135_r2,S163,40225cabfb07,CCL,CCL260731C00028000,1,0.45,0.45,45.0,,,,-0.01,,0.5,-0.5,,,7e510518-a8a6-4eaa-8985-0914e01eddb6
 2026-07-29 15:28:59.959406+00:00,entry,7,c007_s163_w4_1120_1135_r2,S163,e8dabd1076a4,CCL,CCL260731C00028000,1,0.45,0.45,45.0,,,,-0.01,,0.5,-0.5,,,18869baf-3997-4ced-aa16-6d4b0d803a7c
+2026-07-29T15:37:20Z,reconcile,7,c007_s163_w4_1120_1135_r2,S163,40225cabfb07,CCL,CCL260731C00028000,1,,,45.0,,,zombie_lot,,,,,,zombie age_min=937 notional=$45.00 occ=CCL260731C00028000 action=submitted:c10d5107-75f1-40ca-a490-a431f3224741,
+2026-07-29T15:37:20Z,reconcile,7,c007_s163_w4_1120_1135_r2,S163,e8dabd1076a4,CCL,CCL260731C00028000,1,,,45.0,,,zombie_lot,,,,,,zombie age_min=937 notional=$45.00 occ=CCL260731C00028000 action=submitted:62472971-eb64-475c-ab7b-81bd77058d64,

@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-29 15:24:51.246803+00:00,entry,30,c030_s166_w4_1120_1135_r1,S166,a5e060f05954,AAL,AAL260731C00014500,1,0.73,0.72,72.0,,,,-0.01,,0.5,-0.5,0.14492753623188404,gap -4.2%,5ec04124-7638-4a49-aa77-2628dbee2a44
+2026-07-29T15:37:20Z,reconcile,30,c030_s166_w4_1120_1135_r1,S166,a5e060f05954,AAL,AAL260731C00014500,1,,,72.0,,,zombie_lot,,,,,,zombie age_min=937 notional=$72.00 occ=AAL260731C00014500 action=submitted:d83e1f88-6bb6-4304-9c7f-24835a5b47b5,
