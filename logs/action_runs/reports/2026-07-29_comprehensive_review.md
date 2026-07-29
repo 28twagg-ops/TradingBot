@@ -2820,3 +2820,201 @@ Scanning 903 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, 
 ```
 
 ---
+
+## Run 20260729T134604Z
+
+- UTC timestamp: `20260729T134604Z`
+- GitHub run: [#5400](https://github.com/28twagg-ops/TradingBot/actions/runs/30457461027)
+- Run id: `30457461027`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-29T09:25:54.413319-04:00","date":"2026-07-29","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.6,"phases_s":{"reconcile":0.27},"signals":0,"placed":0,"equity":128467.2,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"5396","github_run_id":"30455899433","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:46:05  INFO      Mode: morning_scan
+13:46:06  INFO        [positions] 5/5 (5 valid)
+13:46:06  INFO        SELL MARKET [urgent] LII closed
+13:46:09  INFO        TX logged: SELL LII  P&L -16.43%
+13:46:09  INFO        SELL LIMIT ALGN  qty=0.567541063  limit=$181.03  id=154a5cbe-2bb7-4a30-ba75-56e9c5ebb6b8
+13:46:39  INFO        SELL LIMIT filled ALGN (confirmed by position check)
+13:46:39  INFO        TX logged: SELL ALGN  P&L 5.55%
+13:46:39  INFO        Universe cache hit: 903 tickers (tickers_2026-07-29.json)
+13:46:40  INFO        [universe] 40/900 (40 valid)
+13:46:42  INFO        [universe] 80/900 (80 valid)
+13:46:43  INFO        [universe] 120/900 (120 valid)
+13:46:44  INFO        [universe] 160/900 (160 valid)
+13:46:45  INFO        [universe] 200/900 (199 valid)
+13:46:53  INFO        [universe] 240/900 (238 valid)
+13:47:06  INFO        [universe] 280/900 (278 valid)
+13:47:16  INFO        [universe] 320/900 (318 valid)
+13:47:29  INFO        [universe] 360/900 (358 valid)
+13:47:41  INFO        [universe] 400/900 (397 valid)
+13:47:52  INFO        [universe] 440/900 (437 valid)
+13:48:05  INFO        [universe] 480/900 (477 valid)
+13:48:18  INFO        [universe] 520/900 (517 valid)
+13:48:28  INFO        [universe] 560/900 (557 valid)
+13:48:41  INFO        [universe] 600/900 (597 valid)
+13:48:54  INFO        [universe] 640/900 (637 valid)
+13:49:04  INFO        [universe] 680/900 (677 valid)
+13:49:17  INFO        [universe] 720/900 (717 valid)
+13:49:30  INFO        [universe] 760/900 (757 valid)
+13:49:40  INFO        [universe] 800/900 (797 valid)
+13:49:53  INFO        [universe] 840/900 (836 valid)
+13:50:06  INFO        [universe] 880/900 (876 valid)
+13:50:10  INFO        [universe] 900/900 (896 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $475.75|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-29|
+|  Universe                                                          both|
+|  Mon~  Jul: 52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $475.75|
+|  Cash                                                            $24.41|
+|  Reserve                                          $23.79  (always kept)|
+|  Available                                      $0.62  (for new trades)|
+|  Trade size             $95.15  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (5 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ALGN     Pullback50      $102.62    $171.32  $180.82  +5.5%   $+5.39  |
+|  EQR      Pullback50      $73.66     $67.78   $68.47   +1.0%   $+0.74  |
+|  FFIV     Pullback50      $98.37     $400.57  $405.24  +1.2%   $+1.13  |
+|  HLT      GoldenPocket    $97.25     $322.61  $321.69  -0.3%   $-0.28  |
+|  LII      GoldenPocket    $79.43     $544.48  $455.02  -16.4%  $-15.62 |
+|                                                                        |
+|  Total invested                                                 $451.34|
+|  Total open P&L                                                  $-8.63|
+|  Buys today: 0  |  entry cap: 0  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (28800.6m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  LII  P&L -16.4%  $-15.62                      EXIT: stop_loss (-16.4%)|
+|  HLT  P&L -0.3%  $-0.28                                            HOLD|
+|  EQR  P&L +1.0%  $+0.74                                            HOLD|
+|  FFIV  P&L +1.2%  $+1.13                                           HOLD|
+|  ALGN  P&L +5.5%  $+5.39                          EXIT: midline (+5.5%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 2 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 3|
+|  Stop-loss breaches                                                   1|
+|  LII                                        -16.43%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50 (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  19                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  COST     Pullback50      eq     $970.50  74.7   -2.53   50MA bounce (+|
+|  DELL     Pullback50      eq     $390.20  38.0   -2.40   50MA bounce (-|
+|  DHI      Pullback50      eq     $150.43  51.4   -2.38   50MA bounce (-|
+|  HBAN     Pullback50      eq     $17.20   40.8   -1.72   50MA bounce (+|
+|  KEY      Pullback50      eq     $22.59   41.5   -2.96   50MA bounce (+|
+|  MAR      Pullback50      eq     $381.82  57.8   -3.04   50MA bounce (+|
+|  MGM      Pullback50      eq     $46.16   47.4   -2.83   50MA bounce (+|
+|  PNW      Pullback50      eq     $105.14  43.9   -2.51   50MA bounce (+|
+|  ALLY     Pullback50      eq     $44.27   45.0   -2.12   50MA bounce (-|
+|  AM       Pullback50      eq     $21.85   40.3   -3.17   50MA bounce (-|
+|  ATI      Pullback50      eq     $184.87  46.8   -2.88   50MA bounce (-|
+|  BHF      Pullback50      eq     $63.90   38.2   -2.13   50MA bounce (+|
+|  COLB     Pullback50      eq     $31.14   43.6   -2.39   50MA bounce (+|
+|  GBCI     Pullback50      eq     $49.25   39.0   -2.67   50MA bounce (-|
+|  GNTX     Pullback50      eq     $24.28   53.9   -1.75   50MA bounce (-|
+|  GLPI     Pullback50      eq     $45.88   76.3   -1.72   50MA bounce (+|
+|  IRT      Pullback50      eq     $16.75   50.6   -1.90   50MA bounce (+|
+|  KEX      Pullback50      eq     $141.44  47.4   -1.98   50MA bounce (-|
+|  ULS      Pullback50      eq     $93.46   69.7   -1.83   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+13:50:12  INFO        place_all_stops: checking 3 positions...
+13:50:12  INFO        STOP already live EQR @ $67.89
+13:50:12  INFO        STOP skipped FFIV: fractional (0.2428 shares) — software exit will handle it
+13:50:12  INFO        STOP skipped HLT: fractional (0.3023 shares) — software exit will handle it
+13:50:12  INFO        Daily log -> logs/daily/2026-07-29.md
+13:50:12  INFO        Dashboard written → logs/dashboard.md
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Scanned                                                            896|
+|  Signals                                                             19|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                2|
+|  Open pos                                                             3|
+|  Equity                                                         $475.80|
+|  Cash                                                           $206.33|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
