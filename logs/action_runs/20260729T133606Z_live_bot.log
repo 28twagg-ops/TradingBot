@@ -1,0 +1,80 @@
+13:36:07  INFO      Mode: morning_prep
+13:36:09  INFO        [prep_positions] 5/5 (5 valid)
+13:36:09  INFO      Fetching tickers (universe=both)...
+13:36:09  INFO        S&P 500: 503
+13:36:09  INFO        MidCap 400: 400
+13:36:09  INFO        Total: 903 tickers
+13:36:10  INFO        [prep_universe] 40/898 (40 valid)
+13:36:12  INFO        [prep_universe] 80/898 (80 valid)
+13:36:13  INFO        [prep_universe] 120/898 (120 valid)
+13:36:14  INFO        [prep_universe] 160/898 (160 valid)
+13:36:16  INFO        [prep_universe] 200/898 (199 valid)
+13:36:23  INFO        [prep_universe] 240/898 (238 valid)
+13:36:36  INFO        [prep_universe] 280/898 (278 valid)
+13:36:46  INFO        [prep_universe] 320/898 (318 valid)
+13:36:59  INFO        [prep_universe] 360/898 (358 valid)
+13:37:12  INFO        [prep_universe] 400/898 (397 valid)
+13:37:25  INFO        [prep_universe] 440/898 (437 valid)
+13:37:35  INFO        [prep_universe] 480/898 (477 valid)
+13:37:48  INFO        [prep_universe] 520/898 (517 valid)
+13:38:01  INFO        [prep_universe] 560/898 (557 valid)
+13:38:11  INFO        [prep_universe] 600/898 (597 valid)
+13:38:24  INFO        [prep_universe] 640/898 (637 valid)
+13:38:34  INFO        [prep_universe] 680/898 (677 valid)
+13:38:47  INFO        [prep_universe] 720/898 (717 valid)
+13:39:00  INFO        [prep_universe] 760/898 (757 valid)
+13:39:10  INFO        [prep_universe] 800/898 (797 valid)
+13:39:23  INFO        [prep_universe] 840/898 (836 valid)
+13:39:36  INFO        [prep_universe] 880/898 (876 valid)
+13:39:40  INFO        [prep_universe] 898/898 (894 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         13:36 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $475.65|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       5|
+|  Invested                                                       $451.20|
+|  Open P&L                                                        $-8.77|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ALGN     Pullback50      $101.17    $171.32  $178.26  +4.1%   $+3.94  |
+|  EQR      Pullback50      $73.85     $67.78   $68.65   +1.3%   $+0.93  |
+|  FFIV     Pullback50      $98.38     $400.57  $405.25  +1.2%   $+1.14  |
+|  HLT      GoldenPocket    $96.96     $322.61  $320.74  -0.6%   $-0.57  |
+|  LII      GoldenPocket    $80.83     $544.48  $463.04  -15.0%  $-14.22 |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                1|
+|  TICKER    TYPE              QTY       LIMIT       STOP                |
++------------------------------------------------------------------------+
+|  EQR       OrderType.STOP    1         None        67.89               |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      3|
+|  Signal candidates                                                   26|
+|  Universe scanned                                                   898|
++========================================================================+
