@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-28",
+  "generated": "2026-07-29",
   "next_id": 200,
   "strategies": [
     {
@@ -2167,6 +2167,226 @@
       "reps": 2,
       "status": "active",
       "launched_date": "2026-07-28",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S173",
+      "signal_name": "S173",
+      "signal_params": {},
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-29",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S174",
+      "signal_name": "S174",
+      "signal_params": {},
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-29",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S165",
+      "signal_name": "S165",
+      "signal_params": {},
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-29",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "UNKNOWN",
+      "signal_name": "UNKNOWN",
+      "signal_params": {},
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-29",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "ORPHAN",
+      "signal_name": "ORPHAN",
+      "signal_params": {},
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-29",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S167",
+      "signal_name": "S167",
+      "signal_params": {},
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-29",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S166",
+      "signal_name": "S166",
+      "signal_params": {},
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-29",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S168",
+      "signal_name": "S168",
+      "signal_params": {},
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-29",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S163",
+      "signal_name": "S163",
+      "signal_params": {},
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-29",
+      "drop_reason": ""
+    },
+    {
+      "strategy_id": "S164",
+      "signal_name": "S164",
+      "signal_params": {},
+      "dte_target": 3,
+      "dte_min": 1,
+      "dte_max": 7,
+      "strike_offset": 0,
+      "option_type": "call",
+      "tp_pct": 50.0,
+      "sl_pct": -50.0,
+      "windows": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "reps": 2,
+      "status": "active",
+      "launched_date": "2026-07-29",
       "drop_reason": ""
     }
   ]

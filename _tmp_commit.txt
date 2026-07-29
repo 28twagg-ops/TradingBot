@@ -1,21 +1,8 @@
-feat: fix options volume + full DTE/strike matrix + micro-live candidates
+chore: 28B push verify + 0DTE tightening + microlive sim + health check
 
-Volume fixes:
-- Fix A: Added S400-S403 single-condition frequency boosters
-- Fix B: Expanded universe (added Russell 1000)
-- Fix C: Widened entry windows (added w5/w6/w7 for non-gap strategies)
-
-DTE matrix (S350-S394):
-- 9 DTE values (0d/1d/2d/3d/5d/7d/14d/21d/30d) x 5 top signals
-- 0DTE: entry restricted to morning w1/w2 only
-- 45 new strategies, 360 new buckets
-
-Strike matrix (S395-S415):
-- 7 strike levels (3-OTM to 3-ITM) x 3 top signals
-- Implemented generic _pick_option_from_chain for precise strike offsets
-- 21 new strategies, 168 new buckets
-
-Micro-live:
-- options_microlive_sim.py: $500 account simulation with slippage created
-- Candidates flagged: None (all existing show negative median, auto-killed)
-- OPTIONS_BUCKET_COUNT=1024
+- Confirmed all 28A changes live on origin/main and GHA running
+- 0DTE kill threshold tightened: n>=10 median<-20% (was n>=15 median<-25%)
+- options_microlive_sim.py: verified and fixed bugs (pandas parse error, percent parsing)
+- strategy_eval.md: 0 strategies auto-killed today
+- Microlive candidates: S173, S165, S174, ORPHAN passed sim (ready for analysis)
+- Dashboard: fixed bucket count rendering, DTE matrix/Pullback50 verified

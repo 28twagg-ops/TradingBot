@@ -217,8 +217,7 @@ def _load_ledger(ledger_path: Path | str | None = None) -> pd.DataFrame | None:
 def evaluate_for_kill(
     strategy_id: str,
     ledger_df: pd.DataFrame,
-    min_n: int = KILL_MIN_N,
-    kill_threshold: float = KILL_MEDIAN_THRESH,
+    spec: StrategySpec | None = None,
 ) -> str:
     """
     Evaluate a single strategy's performance from closed ledger rows.
@@ -240,6 +239,12 @@ def evaluate_for_kill(
         ][col_pl].astype(float)
 
         n = len(sub)
+        
+        # 0DTE specific tightening
+        is_0dte = spec and ("0DTE" in spec.signal_name or spec.dte_target == 0)
+        min_n = 10 if is_0dte else KILL_MIN_N
+        median_thresh = -20.0 if is_0dte else KILL_MEDIAN_THRESH
+
         if n < min_n:
             return "INSUFFICIENT"
 
@@ -248,7 +253,7 @@ def evaluate_for_kill(
         wr = float((sub > 0).mean() * 100)
 
         # Hard kills
-        if n >= min_n and median_pl < KILL_MEDIAN_THRESH:
+        if n >= min_n and median_pl < median_thresh:
             return "KILL"
         if n >= min_n and p10 < KILL_P10_THRESH:
             return "KILL"
@@ -319,7 +324,7 @@ def run_daily_evaluation(
     for spec in all_specs:
         if spec.status == "dropped":
             continue
-        verdict = evaluate_for_kill(spec.strategy_id, ledger_df)
+        verdict = evaluate_for_kill(spec.strategy_id, ledger_df, spec=spec)
 
         col_pl = next(
             (c for c in ledger_df.columns if "pl_pct" in c or "pnl_pct" in c), None
