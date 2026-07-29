@@ -18,8 +18,8 @@ S206,GapDown_WithTrend,3d ATM gap-trend,watch,insufficient sample (<8 exits),0,0
 S207,GapDown_AtSupport,3d ATM gap-support,watch,insufficient sample (<8 exits),10,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,2,10,0,0,0.0
 S208,GapDown_AboveMA200,3d ATM gap-ma200,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S209,GapDown_Recovery,3d ATM gap-recovery,watch,insufficient sample (<8 exits),4,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,4,0,0,0.0
-S210,MA_Cross_8_21,3d ATM MA cross 8/21,watch,insufficient sample (<8 exits),13,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,2,13,0,0,0.0
-S211,MA_Cross_21_50,3d ATM MA cross 21/50,watch,insufficient sample (<8 exits),6,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,2,6,0,0,0.0
+S210,MA_Cross_8_21,3d ATM MA cross 8/21,watch,insufficient sample (<8 exits),15,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,2,15,0,0,0.0
+S211,MA_Cross_21_50,3d ATM MA cross 21/50,watch,insufficient sample (<8 exits),8,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,2,8,0,0,0.0
 S212,MA_Bounce_50,3d ATM MA bounce 50,watch,insufficient sample (<8 exits),16,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,2,16,0,0,0.0
 S213,MA_Bounce_200,3d ATM MA bounce 200,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S214,MA_Death_Cross,3d ATM death cross (put),watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
