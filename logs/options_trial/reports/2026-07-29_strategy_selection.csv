@@ -25,8 +25,8 @@ S214,MA_Death_Cross,3d ATM death cross (put),watch,insufficient sample (<8 exits
 S215,MA_Reclaim_200,3d ATM MA reclaim 200,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S216,RSI_Oversold_Cross,3d ATM RSI x30,watch,insufficient sample (<8 exits),20,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,2,20,0,0,0.0
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,watch,insufficient sample (<8 exits),10,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,2,10,0,0,0.0
-S218,BB_Lower_Touch,3d ATM BB lower touch,watch,insufficient sample (<8 exits),16,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,2,16,0,0,0.0
 S219,Volume_Climax_Up,3d ATM vol climax up,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
+S218,BB_Lower_Touch,3d ATM BB lower touch,watch,insufficient sample (<8 exits),16,1,0,1,-33.33,-33.33,-33.33,-33.33,-33.33,-1.0,1,2,16,1,1,100.0
 S202,GapDown_Monster,3d ATM gap-monster,watch,insufficient sample (<8 exits),14,2,0,2,-50.0,-50.0,-63.34,-58.33,-36.66,-3.0,1,1,14,2,1,100.0
 S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,insufficient sample (<8 exits),98,6,0,6,-68.19,-65.67,-88.89,-86.11,-50.0,-59.0,2,8,21,0,2,83.3
 S174,RubberBand long call EOD,RubberBand (dropped),drop,manually paused — excluded from new entries & reflected P&L,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,23,0,0,6,50.4
