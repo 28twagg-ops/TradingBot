@@ -61,6 +61,65 @@ def scan_gap_down(sub: pd.DataFrame, sym: str, today: date,
     return None
 
 
+def scan_pullback50(sub: pd.DataFrame, sym: str, today: date,
+                    min_price: float = 3.0) -> SignalHit | None:
+    """Pullback50: uptrend stock pulls back to touch 50MA, closes green."""
+    last = _today_row(sub, today)
+    if last is None:
+        return None
+    cn = float(last["close"])
+    opn = float(last["open"])
+    ma50 = float(last.get("ma50", float("nan")))
+    ma200 = float(last.get("ma200", float("nan")))
+    vz = float(last.get("vz", float("nan")))
+    
+    if any(pd.isna(x) for x in [ma50, ma200]) or cn < min_price:
+        return None
+    
+    in_uptrend = cn > ma200
+    near_50ma = abs(cn - ma50) / ma50 <= 0.01
+    grn = cn > opn
+    
+    if in_uptrend and near_50ma and grn:
+        return SignalHit("S220", "Pullback50", sym, cn, f"50MA bounce ({((cn/ma50)-1)*100:+.1f}%)")
+    return None
+
+def scan_golden_pocket(sub: pd.DataFrame, sym: str, today: date,
+                       min_price: float = 3.0) -> SignalHit | None:
+    """GoldenPocket: Fib 61.8-65% retracement bounce in MA200 uptrend."""
+    last = _today_row(sub, today)
+    if last is None or len(sub) < 210:
+        return None
+        
+    cn = float(last["close"])
+    opn = float(last["open"])
+    ma200 = float(last.get("ma200", float("nan")))
+    vz = float(last.get("vz", float("nan")))
+    
+    # We need rolling max/min over the last 20 days ending today
+    # Instead of recalculating, we can just use the 'sub' dataframe up to 'today'
+    recent = sub.loc[:str(today)].tail(20)
+    if len(recent) < 20:
+        return None
+        
+    swing_high = float(recent["high"].max())
+    swing_low = float(recent["low"].min())
+    
+    if any(pd.isna(x) for x in [ma200, swing_high, swing_low, vz]) or cn < min_price:
+        return None
+        
+    rng = swing_high - swing_low
+    if rng <= 0:
+        return None
+        
+    fib_618 = swing_high - 0.618 * rng
+    fib_650 = swing_high - 0.650 * rng
+    grn = cn > opn
+    
+    if cn > ma200 and fib_650 <= cn <= fib_618 and grn and vz >= 0.5:
+        return SignalHit("S221", "GoldenPocket", sym, cn, "fib 61.8-65% bounce")
+    return None
+
 def scan_rubber_band(sub: pd.DataFrame, sym: str, today: date,
                      min_price: float = 3.0) -> SignalHit | None:
     """historical: gap <= -1.5% and close above bar midpoint."""
@@ -916,6 +975,8 @@ PHASE1_STRATEGIES: list[StrategyConfig] = [
     StrategyConfig("S217", "RSI_25_Bounce",       3, 1, 7, scan_s217),
     StrategyConfig("S218", "BB_Lower_Touch",      3, 1, 7, scan_s218),
     StrategyConfig("S219", "Volume_Climax_Up",    3, 1, 7, scan_s219),
+    StrategyConfig("S220", "Pullback50",          3, 1, 7, scan_pullback50),
+    StrategyConfig("S221", "GoldenPocket",        3, 1, 7, scan_golden_pocket),
     StrategyConfig("S400", "Any_Green_Close",     3, 1, 7, scan_s400),
     StrategyConfig("S401", "Any_Gap_Down_Small",  3, 1, 7, scan_s401),
     StrategyConfig("S402", "Any_High_Volume",     3, 1, 7, scan_s402),
@@ -932,6 +993,8 @@ _VARIANT_CONFIGS = [
     ("S368", "BBSqueeze_0DTE", "S169", 0, 0, 1, 0), ("S369", "BBSqueeze_1DTE", "S169", 1, 0, 2, 0), ("S370", "BBSqueeze_2DTE", "S169", 2, 1, 3, 0), ("S371", "BBSqueeze_3DTE", "S169", 3, 2, 4, 0), ("S372", "BBSqueeze_5DTE", "S169", 5, 4, 6, 0), ("S373", "BBSqueeze_7DTE", "S169", 7, 6, 8, 0), ("S374", "BBSqueeze_14DTE", "S169", 14, 13, 17, 0), ("S375", "BBSqueeze_21DTE", "S169", 21, 20, 24, 0), ("S376", "BBSqueeze_30DTE", "S169", 30, 29, 33, 0),
     ("S377", "GapDownAggr_0DTE", "S200", 0, 0, 1, 0), ("S378", "GapDownAggr_1DTE", "S200", 1, 0, 2, 0), ("S379", "GapDownAggr_2DTE", "S200", 2, 1, 3, 0), ("S380", "GapDownAggr_3DTE", "S200", 3, 2, 4, 0), ("S381", "GapDownAggr_5DTE", "S200", 5, 4, 6, 0), ("S382", "GapDownAggr_7DTE", "S200", 7, 6, 8, 0), ("S383", "GapDownAggr_14DTE", "S200", 14, 13, 17, 0), ("S384", "GapDownAggr_21DTE", "S200", 21, 20, 24, 0), ("S385", "GapDownAggr_30DTE", "S200", 30, 29, 33, 0),
     ("S386", "VolClimax_0DTE", "S219", 0, 0, 1, 0), ("S387", "VolClimax_1DTE", "S219", 1, 0, 2, 0), ("S388", "VolClimax_2DTE", "S219", 2, 1, 3, 0), ("S389", "VolClimax_3DTE", "S219", 3, 2, 4, 0), ("S390", "VolClimax_5DTE", "S219", 5, 4, 6, 0), ("S391", "VolClimax_7DTE", "S219", 7, 6, 8, 0), ("S392", "VolClimax_14DTE", "S219", 14, 13, 17, 0), ("S393", "VolClimax_21DTE", "S219", 21, 20, 24, 0), ("S394", "VolClimax_30DTE", "S219", 30, 29, 33, 0),
+    ("S413", "Pullback50_0DTE", "S220", 0, 0, 1, 0), ("S414", "Pullback50_3DTE", "S220", 3, 2, 4, 0), ("S415", "Pullback50_7DTE", "S220", 7, 6, 8, 0),
+    ("S416", "GoldenPocket_0DTE", "S221", 0, 0, 1, 0), ("S417", "GoldenPocket_3DTE", "S221", 3, 2, 4, 0), ("S418", "GoldenPocket_7DTE", "S221", 7, 6, 8, 0),
     # Strike Matrix (defaults to 3DTE)
     ("S395", "GapDown_ITM3", "S165", 3, 1, 7, -3), ("S396", "GapDown_ITM2", "S165", 3, 1, 7, -2), ("S397", "GapDown_ITM1", "S165", 3, 1, 7, -1), ("S398", "GapDown_ATM", "S165", 3, 1, 7, 0), ("S399", "GapDown_OTM1", "S165", 3, 1, 7, 1), ("S404", "GapDown_OTM2", "S165", 3, 1, 7, 2), ("S405", "GapDown_OTM3", "S165", 3, 1, 7, 3),
     ("S406", "RubberBand_ITM3", "S174", 3, 1, 7, -3), ("S407", "RubberBand_ITM2", "S174", 3, 1, 7, -2), ("S408", "RubberBand_ITM1", "S174", 3, 1, 7, -1), ("S409", "RubberBand_ATM", "S174", 3, 1, 7, 0), ("S410", "RubberBand_OTM1", "S174", 3, 1, 7, 1), ("S411", "RubberBand_OTM2", "S174", 3, 1, 7, 2), ("S412", "RubberBand_OTM3", "S174", 3, 1, 7, 3),
