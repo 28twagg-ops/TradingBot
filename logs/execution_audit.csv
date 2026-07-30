@@ -679,3 +679,7 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-07-29 15:40:55,2026-07-29,SELL,FFIV,Pullback50,397.665,,397.665,96.54,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
 2026-07-29 19:51:23,2026-07-29,SELL,NOW,EarningsDrift,115.72,115.7,115.706,94.71,-0.0121,-0.0115,limit_fill_position_check_full,midline (+0.2%),bull
 2026-07-29 19:51:53,2026-07-29,SELL,EQR,Pullback50,68.82,68.8,68.8099,74.02,-0.0147,-0.0109,limit_fill_position_check_full,midline (+1.6%),bull
+2026-07-30 13:46:18,2026-07-30,SELL,ODFL,GoldenPocket,215.57,,215.57,91.62,0.0,0.0,market_urgent_full,stop_loss (-3.1%),bull
+2026-07-30 13:46:20,2026-07-30,SELL,APG,MomReversal,37.56,,37.695,14.23,0.3594,0.0512,market_urgent_full,stop_loss (-2.2%),bull
+2026-07-30 13:46:23,2026-07-30,SELL,DVN,Pullback50,44.01,,43.99,93.65,-0.0454,-0.0426,market_urgent_full,stop_loss (-1.1%),bull
+2026-07-30 13:46:54,2026-07-30,SELL,FTNT,GoldenPocket,161.4494,161.13,161.402,99.77,-0.0294,-0.0293,limit_fill_position_check_full,midline (+5.0%),bull

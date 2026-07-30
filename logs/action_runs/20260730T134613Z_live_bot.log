@@ -1,0 +1,33 @@
+13:46:14  INFO      Mode: morning_scan
+13:46:15  INFO        [positions] 5/5 (5 valid)
+13:46:16  INFO        SELL MARKET [urgent] ODFL closed
+13:46:18  INFO        TX logged: SELL ODFL  P&L -3.11%
+13:46:18  INFO        SELL MARKET [urgent] APG closed
+13:46:20  INFO        TX logged: SELL APG  P&L -2.24%
+13:46:20  INFO        SELL MARKET [urgent] DVN closed
+13:46:23  INFO        TX logged: SELL DVN  P&L -1.1%
+13:46:23  INFO        SELL LIMIT FTNT  qty=0.618144259  limit=$161.13  id=d99cadf3-4b5f-43d7-a0c0-d13f710f79fb
+13:46:54  INFO        SELL LIMIT filled FTNT (confirmed by position check)
+13:46:54  INFO        TX logged: SELL FTNT  P&L 4.99%
+13:46:54  INFO        Universe cache hit: 903 tickers (tickers_2026-07-30.json)
+13:46:55  INFO        [universe] 40/902 (40 valid)
+13:46:57  INFO        [universe] 80/902 (80 valid)
+13:46:58  INFO        [universe] 120/902 (120 valid)
+13:46:59  INFO        [universe] 160/902 (160 valid)
+13:47:00  INFO        [universe] 200/902 (199 valid)
+13:47:08  INFO        [universe] 240/902 (238 valid)
+13:47:18  INFO        [universe] 280/902 (278 valid)
+13:47:32  INFO        [universe] 320/902 (318 valid)
+13:47:45  INFO        [universe] 360/902 (358 valid)
+13:47:55  INFO        [universe] 400/902 (397 valid)
+13:48:09  INFO        [universe] 440/902 (437 valid)
+13:48:19  INFO        [universe] 480/902 (477 valid)
+13:48:32  INFO        [universe] 520/902 (517 valid)
+13:48:43  INFO        [universe] 560/902 (557 valid)
+13:48:56  INFO        [universe] 600/902 (597 valid)
+13:49:06  INFO        [universe] 640/902 (637 valid)
+13:49:20  INFO        [universe] 680/902 (677 valid)
+13:49:33  INFO        [universe] 720/902 (717 valid)
+13:49:43  INFO        [universe] 760/902 (757 valid)
+13:49:57  INFO        [universe] 800/902 (797 valid)
+13:50:07  INFO        [universe] 840/902 (836 valid)

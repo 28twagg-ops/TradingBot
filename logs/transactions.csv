@@ -1044,3 +1044,7 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-29 15:40:55,2026-07-29,SELL,FFIV,Pullback50,397.67,96.54,-0.72,-0.7,1,stop_loss (-0.7%),bull,472.89
 2026-07-29 19:51:23,2026-07-29,SELL,NOW,EarningsDrift,115.71,94.71,0.17,0.16,0,midline (+0.2%),bull,473.43
 2026-07-29 19:51:53,2026-07-29,SELL,EQR,Pullback50,68.81,74.02,1.6,1.17,1,midline (+1.6%),bull,473.5
+2026-07-30 13:46:18,2026-07-30,SELL,ODFL,GoldenPocket,215.57,91.62,-3.11,-2.94,1,stop_loss (-3.1%),bull,476.19
+2026-07-30 13:46:20,2026-07-30,SELL,APG,MomReversal,37.7,14.23,-2.24,-0.33,1,stop_loss (-2.2%),bull,476.43
+2026-07-30 13:46:23,2026-07-30,SELL,DVN,Pullback50,43.99,93.65,-1.1,-1.04,1,stop_loss (-1.1%),bull,476.8
+2026-07-30 13:46:54,2026-07-30,SELL,FTNT,GoldenPocket,161.4,99.77,4.99,4.72,1,midline (+5.0%),bull,476.6
