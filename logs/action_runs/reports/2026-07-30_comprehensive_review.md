@@ -16777,3 +16777,170 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260730T194615Z
+
+- UTC timestamp: `20260730T194615Z`
+- GitHub run: [#5619](https://github.com/28twagg-ops/TradingBot/actions/runs/30576170713)
+- Run id: `30576170713`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-30T15:39:26.476944-04:00","date":"2026-07-30","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":1.4,"phases_s":{"reconcile":0.47,"cancel":0.22,"manage":0.14},"signals":0,"placed":0,"equity":130196.54,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"5617","github_run_id":"30575453407","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:46:16  INFO      Mode: scan
+19:46:16  INFO        Universe cache hit: 903 tickers (tickers_2026-07-30.json)
+19:46:18  INFO        [universe] 40/903 (40 valid)
+19:46:19  INFO        [universe] 80/903 (80 valid)
+19:46:21  INFO        [universe] 120/903 (120 valid)
+19:46:22  INFO        [universe] 160/903 (160 valid)
+19:46:23  INFO        [universe] 200/903 (199 valid)
+19:46:31  INFO        [universe] 240/903 (238 valid)
+19:46:41  INFO        [universe] 280/903 (278 valid)
+19:46:54  INFO        [universe] 320/903 (318 valid)
+19:47:05  INFO        [universe] 360/903 (358 valid)
+19:47:18  INFO        [universe] 400/903 (397 valid)
+19:47:31  INFO        [universe] 440/903 (437 valid)
+19:47:42  INFO        [universe] 480/903 (477 valid)
+19:47:55  INFO        [universe] 520/903 (517 valid)
+19:48:05  INFO        [universe] 560/903 (557 valid)
+19:48:19  INFO        [universe] 600/903 (597 valid)
+19:48:29  INFO        [universe] 640/903 (637 valid)
+19:48:42  INFO        [universe] 680/903 (677 valid)
+19:48:53  INFO        [universe] 720/903 (717 valid)
+19:49:06  INFO        [universe] 760/903 (757 valid)
+19:49:20  INFO        [universe] 800/903 (797 valid)
+19:49:30  INFO        [universe] 840/903 (836 valid)
+19:49:43  INFO        [universe] 880/903 (876 valid)
+19:49:50  INFO        [universe] 903/903 (899 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $469.79|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-30|
+|  Universe                                                          both|
+|  Mon~  Jul: 52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $469.79|
+|  Cash                                                           $469.79|
+|  Reserve                                          $23.49  (always kept)|
+|  Available                                    $446.30  (for new trades)|
+|  Trade size             $93.96  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (0 open)                           |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 5  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (61932.1m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50 (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  59                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AMZN     GoldenPocket    eq     $237.85  43.2   2.42    fib 61.8-65% b|
+|  AMZN     RSIRecovery     eq     $237.85  43.2   2.42    RSI 27.4→43.2 |
+|  APH      EarningsDrift   eq     $159.71  50.6   0.57    post-earnings |
+|  APP      MomReversal     eq     $403.62  23.1   0.65    -15.0% drop/60|
+|  BKR      Pullback50      eq     $60.09   59.7   -1.15   50MA bounce (+|
+|  BMY      VWAP_Reclaim    eq     $64.69   74.7   1.47    VWAP reclaim V|
+|  BA       Pullback50      eq     $221.06  48.9   -0.93   50MA bounce (+|
+|  CI       Pullback50      eq     $288.48  46.8   -0.02   50MA bounce (+|
+|  DVN      Pullback50      eq     $44.30   61.1   -1.28   50MA bounce (+|
+|  EW       Pullback50      eq     $86.77   31.7   -1.32   50MA bounce (-|
+|  EME      Pullback50      eq     $805.91  53.7   0.63    50MA bounce (+|
+|  EME      RSIRecovery     eq     $805.91  53.7   0.63    RSI 21.0→53.7 |
+|  EME      TrendResumpti~  eq     $805.91  53.7   0.63    HH/HL resumpti|
+|  FLEX     RSIRecovery     eq     $111.74  31.5   0.63    RSI 19.5→31.5 |
+|  FCX      Pullback50      eq     $63.57   54.5   -1.56   50MA bounce (+|
+|  HUM      Pullback50      eq     $369.32  40.2   -0.26   50MA bounce (+|
+|  HBAN     Pullback50      eq     $17.08   38.7   -0.67   50MA bounce (-|
+|  IBKR     Pullback50      eq     $90.55   43.8   -0.60   50MA bounce (+|
+|  IRM      Pullback50      eq     $125.14  57.4   -1.15   50MA bounce (-|
+|  KEY      Pullback50      eq     $22.62   40.8   -1.34   50MA bounce (+|
+|  MGM      Pullback50      eq     $46.03   42.3   0.46    50MA bounce (+|
+|  MRNA     Pullback50      eq     $57.71   27.4   -0.92   50MA bounce (-|
+|  OKE      Pullback50      eq     $89.24   47.8   -2.53   50MA bounce (-|
+|  PCG      VWAP_Reclaim    eq     $17.80   61.1   1.51    VWAP reclaim V|
+|  PWR      RSIRecovery     eq     $658.85  50.1   2.77    RSI 21.2→50.1 |
+|  RL       Pullback50      eq     $383.95  44.7   -1.98   50MA bounce (+|
+|  REG      Pullback50      eq     $80.25   53.5   -0.99   50MA bounce (+|
+|  SNDK     RSIRecovery     eq     $1264.~  32.2   1.00    RSI 24.3→32.2 |
+|  STX      EarningsDrift   eq     $847.59  45.1   0.57    post-earnings |
+|  TRGP     Pullback50      eq     $269.90  47.0   -1.81   50MA bounce (+|
+|  WST      Pullback50      eq     $337.29  38.3   -1.32   50MA bounce (-|
+|  AAL      Pullback50      eq     $15.35   38.3   -1.96   50MA bounce (-|
+|  APG      MomReversal     eq     $38.83   27.2   1.18    -13.1% drop/60|
+|  ARW      Pullback50      eq     $213.90  57.0   -1.81   50MA bounce (-|
+|  AVT      Pullback50      eq     $87.50   50.9   -1.66   50MA bounce (+|
+|  BHF      Pullback50      eq     $63.38   33.7   -0.83   50MA bounce (-|
+|  BDC      TrendResumpti~  eq     $118.52  62.9   1.53    HH/HL resumpti|
+|  COLB     Pullback50      eq     $31.26   43.2   0.08    50MA bounce (+|
+|  DAR      VWAP_Reclaim    eq     $61.76   52.8   1.20    VWAP reclaim V|
+|  FLR      Pullback50      eq     $50.05   48.1   -1.03   50MA bounce (+|
+|  HOG      Pullback50      eq     $24.91   48.7   -1.48   50MA bounce (-|
+|  IESC     RSIRecovery     eq     $571.72  42.9   0.32    RSI 27.2→42.9 |
+|  LFUS     Pullback50      eq     $445.19  61.5   -0.23   50MA bounce (+|
+|  LSTR     RubberBand      eq     $169.37  17.4   2.35    RSI           |
+|  MKSI     RSIRecovery     eq     $295.70  32.2   1.78    RSI 16.8→32.2 |
+|  MOG-A    TrendResumpti~  eq     $421.09  55.3   1.89    HH/HL resumpti|
+|  MOG-A    VWAP_Reclaim    eq     $421.09  55.3   1.89    VWAP reclaim V|
+|  NBIX     VWAP_Reclaim    eq     $183.61  59.1   1.13    VWAP reclaim V|19:49:53  INFO        BUY  APH  $93.96  [EarningsDrift]  id=380a403e-8720-4231-8f0a-735b004e17a3
+19:49:53  INFO        BUY  STX  $93.96  [EarningsDrift]  id=343d4e29-fea4-42aa-a6df-8eeb592bce63
+19:49:54  INFO        BUY  AMZN  $93.96  [GoldenPocket]  id=5a3b72dd-630c-4a39-becb-a138b795a421
+19:49:54  INFO        BUY  APP  $93.96  [MomReversal]  id=4f6a3548-ba86-4c76-8ea1-25b59c911f91
+19:49:54  INFO        BUY  APG  $70.47  [MomReversal]  id=34f2b8d2-cd80-4c8a-9475-74762cf26328
+```
+
+### Options bot full output
+
+```text
