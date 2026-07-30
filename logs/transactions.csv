@@ -1053,3 +1053,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-30 13:57:33,2026-07-30,SELL,EQIX,Pullback50,1054.25,68.85,-0.31,-0.22,0,midline (-0.3%),bull,472.29
 2026-07-30 13:58:03,2026-07-30,SELL,BKR,Pullback50,59.24,95.24,-0.08,-0.08,0,midline (-0.1%),bull,472.26
 2026-07-30 14:02:13,2026-07-30,SELL,WING,MomReversal,135.38,91.88,-2.96,-2.81,1,stop_loss (-3.0%),bull,469.79
+2026-07-30 19:51:44,2026-07-30,SELL,APH,EarningsDrift,159.51,94.06,0.14,0.13,0,midline (+0.1%),bull,470.08
+2026-07-30 19:52:15,2026-07-30,SELL,STX,EarningsDrift,850.12,94.1,0.14,0.13,0,midline (+0.1%),bull,470.02
