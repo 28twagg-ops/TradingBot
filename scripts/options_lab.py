@@ -30,7 +30,7 @@ import re
 import time
 import uuid
 from dataclasses import asdict, dataclass, field, fields
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from statistics import mean, median
 from typing import Any
@@ -866,7 +866,7 @@ def confirm_fill(state: LabState, arm: EffectiveArm, occ: str, underlying: str,
         stop_loss=arm.stop_loss,
         eod_only=arm.eod_only,
         market_exit_eod=arm.market_exit_eod,
-        entry_date=date.today().isoformat(),
+        entry_date=datetime.now(timezone.utc).isoformat(),
         entry_order_id=order_id,
     )
     state.lots.append(lot)
@@ -1036,9 +1036,18 @@ def open_option_sell_symbols(trade) -> set[str]:
 
 def exit_reason_for_lot(lot: VirtualLot, plpc: float, eod: bool) -> str | None:
     if eod:
-        return "EOD"
-    if lot.eod_only:
+        try:
+            # Check if option expires today
+            pfx = lot.occ_symbol.replace(lot.underlying, "")
+            exp_date = date(int("20" + pfx[:2]), int(pfx[2:4]), int(pfx[4:6]))
+            if exp_date <= date.today() and lot.market_exit_eod:
+                return "EOD"
+        except Exception:
+            pass
+
+    if lot.eod_only and not eod:
         return None
+
     if plpc >= lot.take_profit:
         return f"take_profit ({plpc * 100:+.1f}%)"
     if plpc <= lot.stop_loss:
@@ -1925,7 +1934,7 @@ def _create_orphan_lot(state: LabState, occ: str, pos, qty: int, *, log_fn) -> N
         sell_limit_offset=-0.01,
         take_profit=0.50,
         stop_loss=-0.50,
-        entry_date=date.today().isoformat(),
+        entry_date=datetime.now(timezone.utc).isoformat(),
         entry_order_id=orphan_key,
     )
     state.lots.append(lot)
@@ -2039,7 +2048,7 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
                 stop_loss=arm.stop_loss,
                 eod_only=arm.eod_only,
                 market_exit_eod=arm.market_exit_eod,
-                entry_date=date.today().isoformat(),
+                entry_date=datetime.now(timezone.utc).isoformat(),
                 entry_order_id=oid,
             )
             state.lots.append(lot)
