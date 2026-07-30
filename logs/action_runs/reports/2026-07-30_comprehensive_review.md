@@ -3074,3 +3074,55 @@ Fetched daily bars for 903/903 symbols
 ### Options bot full output
 
 ```text
+
+## Run 20260730T135601Z
+
+- UTC timestamp: `20260730T135601Z`
+- GitHub run: [#5545](https://github.com/28twagg-ops/TradingBot/actions/runs/30549158319)
+- Run id: `30549158319`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-30T09:26:01.699433-04:00","date":"2026-07-30","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.6,"phases_s":{"reconcile":0.25},"signals":0,"placed":0,"equity":127620.54,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"5539","github_run_id":"30546809255","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:56:02  INFO      Mode: morning_scan
+13:56:02  INFO        [positions] 5/5 (5 valid)
+13:56:02  INFO        SELL LIMIT EME  qty=0.118605664  limit=$798.20  id=8128d3ba-3cfb-49c8-aacb-28aa645cfe94
+13:56:32  INFO        SELL LIMIT filled EME (confirmed by position check)
+13:56:32  INFO        TX logged: SELL EME  P&L -0.43%
+13:56:32  INFO        SELL LIMIT DVN  qty=2.181206025  limit=$43.56  id=92b8a686-cd29-49b2-b990-a6133e8afd40
+13:57:02  INFO        SELL LIMIT filled DVN (confirmed by position check)
+13:57:02  INFO        TX logged: SELL DVN  P&L -0.33%
+13:57:02  INFO        SELL LIMIT EQIX  qty=0.065311159  limit=$1053.65  id=f8dca35a-f665-4392-bc99-649c96eaeb0d
+13:57:33  INFO        SELL LIMIT filled EQIX (confirmed by position check)
+13:57:33  INFO        TX logged: SELL EQIX  P&L -0.31%
+13:57:33  INFO        SELL LIMIT BKR  qty=1.607661154  limit=$59.14  id=33d54057-4528-417d-9728-b40ca96082c1
+13:58:03  INFO        SELL LIMIT filled BKR (confirmed by position check)
+13:58:03  INFO        TX logged: SELL BKR  P&L -0.08%
+13:58:03  INFO        Universe cache hit: 903 tickers (tickers_2026-07-30.json)
+13:58:04  INFO        [universe] 40/902 (40 valid)
+13:58:05  INFO        [universe] 80/902 (80 valid)
+13:58:06  INFO        [universe] 120/902 (120 valid)
+13:58:08  INFO        [universe] 160/902 (160 valid)
+13:58:09  INFO        [universe] 200/902 (199 valid)
+13:58:16  INFO        [universe] 240/902 (238 valid)
+13:58:29  INFO        [universe] 280/902 (278 valid)
+13:58:42  INFO        [universe] 320/902 (318 valid)
+13:58:51  INFO        [universe] 360/902 (358 valid)
+13:59:04  INFO        [universe] 400/902 (397 valid)
+13:59:17  INFO        [universe] 440/902 (437 valid)
+13:59:27  INFO        [universe] 480/902 (477 valid)
+13:59:40  INFO        [universe] 520/902 (517 valid)
+13:59:53  INFO        [universe] 560/902 (557 valid)
+14:00:03  INFO        [universe] 600/902 (597 valid)
+14:00:16  INFO        [universe] 640/902 (637 valid)
+```
+
+### Options bot full output
+
+```text
