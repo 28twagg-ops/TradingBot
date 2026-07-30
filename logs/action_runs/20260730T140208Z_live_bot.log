@@ -1,0 +1,49 @@
+14:02:10  INFO      Mode: exits
+14:02:11  INFO        Daily log -> logs/daily/2026-07-30.md
+14:02:11  INFO        Daily log reconciled -> logs/daily/2026-07-30.md (8 ledger rows)
+14:02:11  INFO        place_all_stops: checking 1 positions...
+14:02:11  INFO        STOP skipped WING: fractional (0.6787 shares) — software exit will handle it
+14:02:11  INFO        [positions] 1/1 (1 valid)
+14:02:11  INFO        SELL MARKET [urgent] WING closed
+14:02:13  INFO        TX logged: SELL WING  P&L -2.96%
+14:02:13  INFO        Daily log -> logs/daily/2026-07-30.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:02 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $469.67|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  WING  P&L -3.0%  $-2.81                        EXIT: stop_loss (-3.0%)|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           1|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                0|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  WING                                        -2.96%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
