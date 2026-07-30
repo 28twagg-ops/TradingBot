@@ -16993,3 +16993,81 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ### Options bot full output
 
 ```text
+
+## Run 20260730T200002Z
+
+- UTC timestamp: `20260730T200002Z`
+- GitHub run: [#5621](https://github.com/28twagg-ops/TradingBot/actions/runs/30576884819)
+- Run id: `30576884819`
+- Live bot: exit=`0`, duration=`7s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-30T15:39:26.476944-04:00","date":"2026-07-30","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":1.4,"phases_s":{"reconcile":0.47,"cancel":0.22,"manage":0.14},"signals":0,"placed":0,"equity":130196.54,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"5617","github_run_id":"30575453407","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+20:00:04  INFO      Mode: ext_exits
+20:00:04  INFO        Daily log -> logs/daily/2026-07-30.md
+20:00:04  INFO        Daily log reconciled -> logs/daily/2026-07-30.md (9 ledger rows)
+20:00:04  INFO        SELL LIMIT [EXT HRS] AMZN  qty=0.396042525  limit=$235.15  id=2763e0df-6e21-4833-be1a-5a4fe0c36b0d
+20:00:09  INFO        SELL LIMIT[EXT] pending for AMZN — 9:35am will follow up
+20:00:09  INFO        Daily log -> logs/daily/2026-07-30.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                         EXT_EXITS|
+|  Time                                                         20:00 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $470.36|
++========================================================================+
+
++========================================================================+
+|                       EXIT CHECK [EXTENDED HRS]                        |
++========================================================================+
+|  Exit log~  stop-0.5% / 3d max  (midline skipped — close already final)|
++------------------------------------------------------------------------+
+|  AMZN  P&L -0.7%  $-0.68         EXIT [EXTENDED HRS]: stop_loss (-0.7%)|
+|  AMZN                             SELL pending (after-hours limit open)|
+|  APP  P&L +0.4%  $+0.35         HOLDING until 9:35am scan (MomReversal)|
+|  APG  P&L +0.9%  $+0.64         HOLDING until 9:35am scan (MomReversal)|
++========================================================================+
+
++========================================================================+
+|                          EXTENDED HOURS SELLS                          |
++========================================================================+
+|                                                                        |
+|  No extended-hours sells this run.                                     |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                         ext_exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  0 filled  |  0 partial  |  1 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  AMZN                                        -0.73%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             1|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
