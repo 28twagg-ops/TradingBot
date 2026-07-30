@@ -38,78 +38,54 @@ def to_alpaca_symbol(ticker: str) -> str:
     return ticker.replace("-", ".")
 
 def get_universe(force_refresh: bool = False) -> list[str]:
-    """Return the combined S&P 500 + S&P 400 MidCap + Russell 1000 list (~1400 symbols).
+    """Return a curated 'Top 100' universe of highly liquid stocks, ensuring AAPL is included."""
+    # Fast / High-volatility tech and momentum names
+    fast = [
+        "NVDA", "TSLA", "AMD", "SMCI", "COIN", "PLTR", "CRWD", "META", "AMZN", "NFLX",
+        "UBER", "SNOW", "AVGO", "MARA", "MSTR", "ARM", "PANW", "RST", "SHOP", "SQ",
+        "HOOD", "DDOG", "ROKU", "AFRM", "TTD", "DKNG", "CVNA", "UPST", "ZS", "NET",
+        "MDB", "CELH", "RBLX", "PATH", "DOCN", "GTLB", "FSLY", "BILL", "CFLT", "TWLO"
+    ]
+    # Neutral / Standard liquid names
+    neutral = [
+        "AAPL", "MSFT", "GOOGL", "SPY", "QQQ", "IWM", "DIS", "HD", "MCD", "NKE",
+        "V", "MA", "JPM", "BAC", "BAC", "WFC", "C", "GS", "MS", "AXP", "BLK",
+        "XOM", "CVX", "CVX", "COP", "SLB", "EOG", "PXD", "MPC", "OXY",
+        "BA", "UNP", "CAT", "LMT", "GE", "MMM", "HON", "RTX", "DE", "UNH",
+        "PFE", "LLY", "ABBV", "MRK", "TMO", "MDT", "DHR", "ISRG", "SYK", "ZTS"
+    ]
+    # Slow / Stable low-volatility names
+    slow = [
+        "KO", "PG", "JNJ", "WMT", "PEP", "COST", "T", "VZ", "MRK", "BMY",
+        "CL", "KMB", "K", "GIS", "CPB", "SJM", "HRL", "CAG", "MKC", "MDLZ",
+        "DUK", "SO", "D", "AEP", "EXC", "SRE", "XEL", "WEC", "ES", "ED"
+    ]
+    
+    combined = list(dict.fromkeys(fast + neutral + slow))
+    return combined
 
-    Reads from today's cache file if present (avoids redundant Wikipedia hits).
-    Cache is written to logs/cache/tickers_YYYY-MM-DD.json in the same format
-    as rubber_band_bot.get_live_tickers() so both share the same daily file.
+def get_stock_tier(ticker: str) -> str:
+    """Return 'fast', 'slow', or 'neutral' based on the stock's volatility profile."""
+    # Fast / High-volatility tech and momentum names
+    fast = {
+        "NVDA", "TSLA", "AMD", "SMCI", "COIN", "PLTR", "CRWD", "META", "AMZN", "NFLX",
+        "UBER", "SNOW", "AVGO", "MARA", "MSTR", "ARM", "PANW", "RST", "SHOP", "SQ",
+        "HOOD", "DDOG", "ROKU", "AFRM", "TTD", "DKNG", "CVNA", "UPST", "ZS", "NET",
+        "MDB", "CELH", "RBLX", "PATH", "DOCN", "GTLB", "FSLY", "BILL", "CFLT", "TWLO"
+    }
+    # Slow / Stable low-volatility names
+    slow = {
+        "KO", "PG", "JNJ", "WMT", "PEP", "COST", "T", "VZ", "MRK", "BMY",
+        "CL", "KMB", "K", "GIS", "CPB", "SJM", "HRL", "CAG", "MKC", "MDLZ",
+        "DUK", "SO", "D", "AEP", "EXC", "SRE", "XEL", "WEC", "ES", "ED"
+    }
+    
+    if ticker in fast:
+        return "fast"
+    if ticker in slow:
+        return "slow"
+    return "neutral"
 
-    Args:
-        force_refresh: If True, bypass cache and re-scrape Wikipedia.
-
-    Returns:
-        List of ticker strings, deduplicated, dots replaced with hyphens.
-
-    Raises:
-        SystemExit(1) if Wikipedia scrapes fail (same behaviour as the equity bot).
-    """
-    cache = _cache_path()
-    if not force_refresh and cache.exists():
-        try:
-            cached = json.loads(cache.read_text(encoding="utf-8"))
-            tickers = cached.get("tickers", [])
-            if tickers:
-                log.debug("Universe cache hit: %d tickers (%s)", len(tickers), cache.name)
-                return tickers
-        except Exception as exc:
-            log.warning("Ticker cache read failed: %s", exc)
-
-    log.info("Fetching universe from Wikipedia (S&P 500 + S&P 400 + Russell 1000) …")
-    sp500: list[str] = []
-    mid400: list[str] = []
-    r1000: list[str] = []
-
-    try:
-        sp500 = (
-            pd.read_html(_SP500_URL, storage_options=_HEADERS)[0]["Symbol"].tolist()
-        )
-        log.info("  S&P 500: %d tickers", len(sp500))
-    except Exception as exc:
-        log.error("FATAL: could not fetch S&P 500 list: %s", exc)
-        raise SystemExit(1) from exc
-
-    try:
-        mid400 = (
-            pd.read_html(_SP400_URL, storage_options=_HEADERS)[0]["Symbol"].tolist()
-        )
-        log.info("  S&P 400 MidCap: %d tickers", len(mid400))
-    except Exception as exc:
-        log.error("FATAL: could not fetch S&P 400 list: %s", exc)
-        raise SystemExit(1) from exc
-
-    try:
-        # Table 3 is typically the components table
-        r1000_table = pd.read_html(_R1000_URL, storage_options=_HEADERS)[3]
-        col = "Symbol" if "Symbol" in r1000_table.columns else "Ticker"
-        r1000 = r1000_table[col].tolist()
-        log.info("  Russell 1000: %d tickers", len(r1000))
-    except Exception as exc:
-        log.warning("Could not fetch Russell 1000 list: %s", exc)
-        # Not fatal, we still have S&P 500/400
-
-    combined = list(dict.fromkeys(sp500 + mid400 + r1000))
-    cleaned = [str(t).replace(".", "-") for t in combined if pd.notna(t)]
-    log.info("  Universe total: %d tickers", len(cleaned))
-
-    try:
-        cache.write_text(
-            json.dumps({"date": str(date.today()), "tickers": cleaned}, indent=2),
-            encoding="utf-8",
-        )
-    except Exception as exc:
-        log.warning("Ticker cache write failed: %s", exc)
-
-    return cleaned
 
 
 if __name__ == "__main__":

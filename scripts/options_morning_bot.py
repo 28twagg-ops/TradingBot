@@ -42,7 +42,7 @@ from alpaca.data.requests import OptionChainRequest, StockBarsRequest
 from alpaca.data.timeframe import TimeFrame
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from options_universe import get_universe, to_alpaca_symbol
+from options_universe import get_universe, to_alpaca_symbol, get_stock_tier
 from options_oi import make_trading_client, fetch_open_interest
 from options_signals import PAPER_STRATEGIES, SignalHit, scan_symbol, StrategyConfig
 from options_lab import (
@@ -613,6 +613,30 @@ def score_call_for_mode(strike: float, price: float, dte: int, dte_target: int,
     return (abs(strike - price), abs(dte - dte_target))
 
 
+def _apply_tier_offsets(arm: EffectiveArm, tier: str) -> EffectiveArm:
+    """Adjust an arm's parameters based on the stock's volatility tier."""
+    import copy
+    new_arm = copy.copy(arm)
+    
+    if tier == "fast":
+        # Fast stocks: wider stops, further OTM, more time
+        new_arm.take_profit = new_arm.take_profit * 1.5
+        new_arm.stop_loss = new_arm.stop_loss * 1.5
+        if new_arm.option_type == "call":
+            new_arm.strike_offset += 1  # 1 strike further OTM
+        else:
+            new_arm.strike_offset += 1  # For puts, positive means further OTM
+    elif tier == "slow":
+        # Slow stocks: tighter stops, ATM/ITM only
+        new_arm.take_profit = new_arm.take_profit * 0.6
+        new_arm.stop_loss = new_arm.stop_loss * 0.6
+        if new_arm.option_type == "call":
+            new_arm.strike_offset -= 1  # 1 strike further ITM
+        else:
+            new_arm.strike_offset -= 1  # For puts, negative means further ITM
+            
+    return new_arm
+
 def _pick_option_from_chain(opt, ref, symbol: str, price: float,
                               dte_min: int, dte_max: int, dte_target: int,
                               arm: EffectiveArm, *, chain_cache: dict | None = None,
@@ -1013,28 +1037,35 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
                 continue
             if state.bucket_holds_underlying(arm.bucket_id, hit.symbol):
                 continue
+            tier = get_stock_tier(hit.symbol)
+            adjusted_arm = _apply_tier_offsets(arm, tier)
+            
+            # Widen DTE search bounds if fast tier to give more room
+            search_dte_min = strat.dte_min
+            search_dte_max = strat.dte_max + (2 if tier == "fast" else 0)
+            
             cand = _pick_option_from_chain(
                 opt, ref, hit.symbol, hit.price,
-                strat.dte_min, strat.dte_max, strat.dte_target, arm,
+                search_dte_min, search_dte_max, strat.dte_target, adjusted_arm,
                 chain_cache=chain_cache, oi_cache=oi_cache)
             if not cand:
                 skip_no_chain += 1
-                opt_type = arm.option_type
+                opt_type = adjusted_arm.option_type
                 rl_file(f"  [b{arm.bucket_id}|{arm.profile_name}] {hit.strategy_id} "
-                        f"{hit.symbol}: no tradeable {opt_type}")
+                        f"{hit.symbol} (tier: {tier}): no tradeable {opt_type}")
                 continue
             if real_open + cand["cost"] > real_cap:
                 skip_cap += 1
                 rl_file(f"  [b{arm.bucket_id}] real account cap (${real_cap:.0f}) — skip")
                 continue
-            qty = size_for_arm(arm, state, cand["cost"])
+            qty = size_for_arm(adjusted_arm, state, cand["cost"])
             if qty < 1:
                 skip_full += 1
                 rl_file(f"  [b{arm.bucket_id}|{arm.profile_name}] bucket full "
-                        f"({arm.account_cap:.0%} of ${arm.virtual_equity:.0f}) — skip")
+                        f"({adjusted_arm.account_cap:.0%} of ${adjusted_arm.virtual_equity:.0f}) — skip")
                 continue
-            limit = entry_limit_price(arm, cand["bid"], cand["ask"], cand["mid"])
-            cid = make_entry_client_order_id(arm.bucket_id, hit.strategy_id)
+            limit = entry_limit_price(adjusted_arm, cand["bid"], cand["ask"], cand["mid"])
+            cid = make_entry_client_order_id(adjusted_arm.bucket_id, hit.strategy_id)
             try:
                 o = trade.submit_order(LimitOrderRequest(
                     symbol=cand["symbol"], qty=qty, side=OrderSide.BUY,
@@ -1044,15 +1075,15 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
                 entry_cost = cand["cost"] * qty
                 real_open += entry_cost
                 register_pending(
-                    state, arm, cand["symbol"], hit.symbol, qty, limit, str(o.id),
+                    state, adjusted_arm, cand["symbol"], hit.symbol, qty, limit, str(o.id),
                     detail=hit.detail, spread_frac=cand["spread_frac"])
-                lock_entry_slot(state, arm.bucket_id, hit.strategy_id)
+                lock_entry_slot(state, adjusted_arm.bucket_id, hit.strategy_id)
                 entry_msg = (
-                    f"  ENTRY [b{arm.bucket_id}|{arm.profile_name}|{hit.strategy_id}] "
-                    f"BUY {qty}x {cand['symbol']} ({hit.detail}) "
+                    f"  ENTRY [b{adjusted_arm.bucket_id}|{adjusted_arm.profile_name}|{hit.strategy_id}] "
+                    f"BUY {qty}x {cand['symbol']} ({hit.detail}|{tier}) "
                     f"limit={limit:.2f} (ask={cand['ask']:.2f} "
-                    f"off={arm.buy_limit_offset:+.2f}) "
-                    f"tp={arm.take_profit:+.0%} sl={arm.stop_loss:+.0%} "
+                    f"off={adjusted_arm.buy_limit_offset:+.2f}) "
+                    f"tp={adjusted_arm.take_profit:+.0%} sl={adjusted_arm.stop_loss:+.0%} "
                     f"pending id={o.id}"
                 )
                 rl_file(entry_msg)
