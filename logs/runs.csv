@@ -3913,3 +3913,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-30 20:25:51,ext_exits,bull,469.94,304.98,0,0,0,2,APG|APP,both
 2026-07-30 20:36:07,ext_exits,bull,469.69,304.98,0,0,0,2,APG|APP,both
 2026-07-30 20:40:44,ext_exits,bull,470.1,304.98,0,0,0,2,APG|APP,both
+2026-07-30 20:45:42,ext_exits,bull,470.38,304.98,0,0,0,2,APG|APP,both
