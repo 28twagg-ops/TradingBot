@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-31 14:08:46.829165+00:00,entry,307,lab0307_s354_w2_1005_1045_r2,S354,2b92efe4dff5,COIN,COIN260807C00167500,1,0.44,0.44,44.0,,,,-0.01,,0.75,-0.75,0.11764705882352937,gap -6.4%,9f61c76a-49d8-49d6-8736-01c90c83a4d1
+2026-07-31 18:31:37.094119+00:00,exit,307,lab0307_s354_w2_1005_1045_r2,S354,2b92efe4dff5,COIN,COIN260807C00167500,1,,1.07,44.0,143.18,63.0,take_profit (+136.3%),,-0.01,0.5,-0.5,,,b598d0d1-0922-4326-804d-2c09dbed53fa

@@ -1,5 +1,5 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
-S354,GapDown_5DTE,5d,watch,insufficient sample (<8 exits),8,2,2,0,96.81,96.81,94.26,95.22,99.36,91.0,1,0,8,2,1,100.0
+S354,GapDown_5DTE,5d,watch,insufficient sample (<8 exits),8,3,3,0,112.27,100.0,94.9,96.81,134.54,154.0,1,0,8,3,1,100.0
 S355,GapDown_7DTE,7d,watch,insufficient sample (<8 exits),8,5,5,0,119.64,95.45,87.66,91.49,167.96,276.0,1,0,8,5,1,100.0
 S398,GapDown_ATM,3d,watch,insufficient sample (<8 exits),8,6,6,0,95.99,72.32,48.98,53.25,166.67,279.0,1,0,8,6,1,100.0
 S404,GapDown_OTM2,3d,watch,building sample (8-19 exits),8,8,8,0,78.04,66.58,36.49,43.45,130.48,388.0,1,0,8,8,1,100.0
