@@ -3,10 +3,9 @@ S355,GapDown_7DTE,7d,watch,building sample (8-19 exits),8,8,8,0,176.67,163.07,89
 S354,GapDown_5DTE,5d,watch,insufficient sample (<8 exits),8,7,7,0,165.96,143.18,97.45,119.32,248.69,527.0,1,0,8,7,1,100.0
 S399,GapDown_OTM1,3d,watch,insufficient sample (<8 exits),6,2,2,0,119.56,119.56,66.02,86.09,173.1,89.0,1,0,6,2,2,50.0
 S398,GapDown_ATM,3d,watch,building sample (8-19 exits),8,8,8,0,153.24,118.17,48.98,61.8,319.76,552.0,1,0,8,8,1,100.0
-S353,GapDown_3DTE,3d,watch,insufficient sample (<8 exits),8,2,2,0,101.31,101.31,83.42,90.13,119.21,77.0,1,0,8,2,1,100.0
 S405,GapDown_OTM3,3d,watch,building sample (8-19 exits),8,8,8,0,123.61,95.93,51.22,56.12,246.43,448.0,1,0,8,8,1,100.0
+S353,GapDown_3DTE,3d,watch,insufficient sample (<8 exits),8,1,1,0,78.95,78.95,78.95,78.95,78.95,30.0,1,0,8,1,1,100.0
 S404,GapDown_OTM2,3d,watch,building sample (8-19 exits),8,8,8,0,78.04,66.58,36.49,43.45,130.48,388.0,1,0,8,8,1,100.0
-S364,RubberBand_7DTE,7d,watch,insufficient sample (<8 exits),2,1,1,0,60.0,60.0,60.0,60.0,60.0,39.0,1,0,2,1,1,100.0
 S352,GapDown_2DTE,2d,watch,insufficient sample (<8 exits),8,3,3,0,63.33,52.38,48.57,50.0,82.48,60.0,1,0,8,3,1,100.0
 S397,GapDown_ITM1,3d,watch,insufficient sample (<8 exits),8,7,7,0,79.54,51.39,39.65,42.0,130.48,348.0,1,0,8,7,1,100.0
 S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),83,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,10,18,0,0,0.0
@@ -44,6 +43,7 @@ S359,RubberBand_0DTE,0d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0
 S361,RubberBand_2DTE,2d,watch,insufficient sample (<8 exits),2,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,2,0,0,0.0
 S362,RubberBand_3DTE,3d,watch,insufficient sample (<8 exits),2,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,2,0,0,0.0
 S363,RubberBand_5DTE,5d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
+S364,RubberBand_7DTE,7d,watch,insufficient sample (<8 exits),2,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,2,0,0,0.0
 S365,RubberBand_14DTE,14d,watch,insufficient sample (<8 exits),2,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,2,0,0,0.0
 S366,RubberBand_21DTE,21d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S367,RubberBand_30DTE,30d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0

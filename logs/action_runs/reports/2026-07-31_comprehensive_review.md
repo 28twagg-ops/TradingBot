@@ -21196,3 +21196,53 @@ Orphan rate: 2.5% (22/887)
 ```
 
 ---
+
+## Run 20260731T195110Z
+
+- UTC timestamp: `20260731T195110Z`
+- GitHub run: [#5763](https://github.com/28twagg-ops/TradingBot/actions/runs/30660585215)
+- Run id: `30660585215`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-31T15:44:25.759500-04:00","date":"2026-07-31","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":7.4,"phases_s":{"reconcile":0.16,"cancel":0.07,"manage":6.81},"signals":0,"placed":0,"equity":135205.68,"open_positions":14,"pending_orders":0,"open_lots":69,"submitted_today":164,"filled_today":156,"unattributed_contracts":0,"top_signals":[],"github_run":"5761","github_run_id":"30659967422","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:51:11  INFO      Mode: scan
+19:51:13  INFO        [positions] 5/5 (5 valid)
+19:51:13  INFO        SELL LIMIT NVT  qty=0.576309882  limit=$155.76  id=ce729c04-d0e1-4dc6-b6eb-17b8b70a785a
+19:51:44  INFO        SELL LIMIT filled NVT (confirmed by position check)
+19:51:44  INFO        TX logged: SELL NVT  P&L -0.47%
+19:51:44  INFO        SELL LIMIT LECO  qty=0.358513454  limit=$261.47  id=54fda0be-106f-4858-a60b-c15f88982b17
+19:52:14  INFO        SELL LIMIT filled LECO (confirmed by position check)
+19:52:15  INFO        TX logged: SELL LECO  P&L -0.1%
+19:52:15  INFO        SELL LIMIT MPWR  qty=0.065107089  limit=$1450.51  id=4f278eda-de15-4aeb-897a-532411cd386a
+19:52:45  INFO        SELL LIMIT filled MPWR (confirmed by position check)
+19:52:46  INFO        TX logged: SELL MPWR  P&L 0.32%
+19:52:46  INFO        Universe cache hit: 903 tickers (tickers_2026-07-31.json)
+19:52:47  INFO        [universe] 40/901 (40 valid)
+19:52:48  INFO        [universe] 80/901 (80 valid)
+19:52:49  INFO        [universe] 120/901 (120 valid)
+19:52:50  INFO        [universe] 160/901 (160 valid)
+19:52:52  INFO        [universe] 200/901 (199 valid)
+19:52:59  INFO        [universe] 240/901 (238 valid)
+19:53:12  INFO        [universe] 280/901 (278 valid)
+19:53:23  INFO        [universe] 320/901 (318 valid)
+19:53:36  INFO        [universe] 360/901 (358 valid)
+19:53:46  INFO        [universe] 400/901 (397 valid)
+19:54:00  INFO        [universe] 440/901 (437 valid)
+19:54:10  INFO        [universe] 480/901 (477 valid)
+19:54:23  INFO        [universe] 520/901 (517 valid)
+19:54:37  INFO        [universe] 560/901 (557 valid)
+19:54:47  INFO        [universe] 600/901 (597 valid)
+19:55:00  INFO        [universe] 640/901 (637 valid)
+19:55:11  INFO        [universe] 680/901 (677 valid)
+```
+
+### Options bot full output
+
+```text
