@@ -21246,3 +21246,174 @@ Orphan rate: 2.5% (22/887)
 ### Options bot full output
 
 ```text
+
+## Run 20260731T195607Z
+
+- UTC timestamp: `20260731T195607Z`
+- GitHub run: [#5764](https://github.com/28twagg-ops/TradingBot/actions/runs/30660899562)
+- Run id: `30660899562`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-31T15:50:03.306350-04:00","date":"2026-07-31","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":9.7,"phases_s":{"reconcile":0.31,"cancel":0.11,"manage":8.81},"signals":0,"placed":0,"equity":135515.64,"open_positions":14,"pending_orders":0,"open_lots":67,"submitted_today":164,"filled_today":156,"unattributed_contracts":0,"top_signals":[],"github_run":"5762","github_run_id":"30660278586","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:56:08  INFO      Mode: scan
+19:56:10  INFO        [positions] 2/2 (2 valid)
+19:56:10  INFO        Universe cache hit: 903 tickers (tickers_2026-07-31.json)
+19:56:11  INFO        [universe] 40/901 (40 valid)
+19:56:12  INFO        [universe] 80/901 (80 valid)
+19:56:14  INFO        [universe] 120/901 (120 valid)
+19:56:15  INFO        [universe] 160/901 (160 valid)
+19:56:25  INFO        [universe] 200/901 (199 valid)
+19:56:36  INFO        [universe] 240/901 (238 valid)
+19:56:49  INFO        [universe] 280/901 (278 valid)
+19:56:59  INFO        [universe] 320/901 (318 valid)
+19:57:12  INFO        [universe] 360/901 (358 valid)
+19:57:23  INFO        [universe] 400/901 (397 valid)
+19:57:36  INFO        [universe] 440/901 (437 valid)
+19:57:49  INFO        [universe] 480/901 (477 valid)
+19:57:59  INFO        [universe] 520/901 (517 valid)
+19:58:13  INFO        [universe] 560/901 (557 valid)
+19:58:23  INFO        [universe] 600/901 (597 valid)
+19:58:36  INFO        [universe] 640/901 (637 valid)
+19:58:46  INFO        [universe] 680/901 (677 valid)
+19:58:59  INFO        [universe] 720/901 (717 valid)
+19:59:13  INFO        [universe] 760/901 (757 valid)
+19:59:23  INFO        [universe] 800/901 (797 valid)
+19:59:36  INFO        [universe] 840/901 (836 valid)
+19:59:47  INFO        [universe] 880/901 (876 valid)
+19:59:53  INFO        [universe] 901/901 (897 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $469.46|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-31|
+|  Universe                                                          both|
+|  Mon~  Jul: 52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $469.46|
+|  Cash                                                           $301.70|
+|  Reserve                                          $23.47  (always kept)|
+|  Available                                    $278.23  (for new trades)|
+|  Trade size             $93.89  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (2 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  APG      MomReversal     $72.41     $38.85   $39.92   +2.8%   $+1.95  |
+|  CINF     Pullback50      $95.35     $175.04  $177.68  +1.5%   $+1.41  |
+|                                                                        |
+|  Total invested                                                 $167.76|
+|  Total open P&L                                                  $+3.36|
+|  Buys today: 0  |  entry cap: 3  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (63382.0m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  CINF  P&L +1.5%  $+1.41                                           HOLD|
+|  APG  P&L +2.8%  $+1.95                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50 (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  47                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  GOOGL    Pullback50      eq     $356.72  51.7   0.55    50MA bounce (-|
+|  GOOG     Pullback50      eq     $357.12  52.6   0.56    50MA bounce (+|
+|  AEE      Pullback50      eq     $109.86  39.9   0.26    50MA bounce (-|
+|  AAPL     Pullback50      eq     $308.17  44.7   3.29    50MA bounce (-|
+|  APP      MomReversal     eq     $395.65  32.7   0.83    -17.2% drop/60|
+|  CL       Pullback50      eq     $91.28   44.4   -0.56   50MA bounce (+|
+|  ED       Pullback50      eq     $109.16  41.1   -1.52   50MA bounce (-|
+|  D        Pullback50      eq     $69.42   41.1   -1.03   50MA bounce (+|
+|  ESS      Pullback50      eq     $285.11  36.1   -1.05   50MA bounce (-|
+|  FFIV     Pullback50      eq     $403.26  43.1   -0.37   50MA bounce (+|
+|  BEN      VWAP_Reclaim    eq     $33.80   57.7   1.52    VWAP reclaim V|
+|  HBAN     Pullback50      eq     $17.09   38.0   -1.16   50MA bounce (-|
+|  INVH     Pullback50      eq     $29.82   46.0   -1.02   50MA bounce (+|
+|  KDP      Pullback50      eq     $31.16   49.3   -1.13   50MA bounce (+|
+|  KKR      VWAP_Reclaim    eq     $101.35  58.6   1.05    VWAP reclaim V|
+|  KMI      Pullback50      eq     $32.17   49.3   -1.06   50MA bounce (+|
+|  LIN      RubberBand      eq     $478.16  23.5   3.43    RSI           |
+|  MTD      TrendResumpti~  eq     $1417.~  70.4   0.51    HH/HL resumpti|
+|  MPWR     EarningsDrift   eq     $1443.~  62.6   1.13    post-earnings |
+|  PGR      Pullback50      eq     $211.73  33.2   -1.15   50MA bounce (+|
+|  PWR      EarningsDrift   eq     $669.42  54.2   0.51    post-earnings |
+|  REG      Pullback50      eq     $80.31   52.1   -2.14   50MA bounce (+|
+|  SO       Pullback50      eq     $94.93   44.1   -1.28   50MA bounce (+|
+|  TRGP     Pullback50      eq     $269.99  40.7   -2.10   50MA bounce (+|
+|  TT       RSIRecovery     eq     $456.84  37.7   0.56    RSI 24.6→37.7 |
+|  WM       Pullback50      eq     $226.57  38.4   -0.72   50MA bounce (+|
+|  WY       VWAP_Reclaim    eq     $25.02   63.4   2.79    VWAP reclaim V|
+|  AM       Pullback50      eq     $21.87   42.2   -0.76   50MA bounce (-|
+|  ATI      Pullback50      eq     $187.66  52.9   -1.49   50MA bounce (+|19:59:57  ERROR       BUY FAILED MPWR: {"code":40010001,"message":"client_order_id must be unique"}
+19:59:57  INFO        BUY  PWR  $93.89  [EarningsDrift]  id=d72b0eb3-534a-4e17-83cb-f8bfb58c1b4a
+19:59:57  ERROR       BUY FAILED LECO: {"code":40010001,"message":"client_order_id must be unique"}
+19:59:57  ERROR       BUY FAILED NVT: {"code":40010001,"message":"client_order_id must be unique"}
+19:59:57  INFO        BUY  APP  $93.89  [MomReversal]  id=789ec7e4-d9f7-4ddd-9925-01dcfd58df81
+19:59:57  INFO        BUY  MP  $93.89  [MomReversal]  id=583b1f7e-43cd-459f-9833-e32019e95026
+```
+
+### Options bot full output
+
+```text
