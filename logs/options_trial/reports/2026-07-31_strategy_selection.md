@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-31
 
-_Generated 2026-07-31T10:32:19.714394_
+_Generated 2026-07-31T10:36:42.796548_
 
 ## Summary
 
@@ -45,7 +45,7 @@ _Generated 2026-07-31T10:32:19.714394_
 | S214 (MA_Death_Cross) | 3d ATM death cross (put) | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S215 (MA_Reclaim_200) | 3d ATM MA reclaim 200 | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 4 | 20 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 4 | 10 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 4 | 12 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S219 (Volume_Climax_Up) | 3d ATM vol climax up | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S220 (Pullback50) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S221 (GoldenPocket) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -118,7 +118,7 @@ _Generated 2026-07-31T10:32:19.714394_
 | S418 (BBSqueeze_OTM2) | 7d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 2 | 0.0 | -50.00 | -63.34 | -58.33 | -36.66 | 3 | 18 | 2 | $-3.00 | 100.0% | insufficient sample (<8 exits) |
-| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 2 | 0.0 | -50.00 | -63.34 | -58.33 | -36.66 | 4 | 16 | 2 | $-3.00 | 100.0% | insufficient sample (<8 exits) |
+| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 2 | 0.0 | -50.00 | -63.34 | -58.33 | -36.66 | 4 | 18 | 2 | $-3.00 | 100.0% | insufficient sample (<8 exits) |
 | S351 (GapDown_1DTE) | 1d | watch | 1 | 0.0 | -53.85 | -53.85 | -53.85 | -53.85 | 0 | 4 | 1 | $-7.00 | 100.0% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 6 | 0.0 | -65.67 | -88.89 | -86.11 | -50.00 | 10 | 21 | 0 | $-59.00 | 83.3% | insufficient sample (<8 exits) |
 | S350 (GapDown_0DTE) | 0d | watch | 2 | 0.0 | -66.67 | -66.67 | -66.67 | -66.67 | 0 | 4 | 2 | $-4.00 | 100.0% | insufficient sample (<8 exits) |
@@ -206,8 +206,8 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S216 | 3d ATM RSI x30 | 0 | +0.00 | +0.00 | +0.00 | 20 | 0 |
-| S217 | 3d ATM RSI<25 bounce | 0 | +0.00 | +0.00 | +0.00 | 10 | 0 |
-| S218 | 3d ATM BB lower touch | 2 | -50.00 | -63.34 | -58.33 | 16 | 2 |
+| S217 | 3d ATM RSI<25 bounce | 0 | +0.00 | +0.00 | +0.00 | 12 | 0 |
+| S218 | 3d ATM BB lower touch | 2 | -50.00 | -63.34 | -58.33 | 18 | 2 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
 ### Other
