@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-31 14:52:00.046045+00:00,entry,239,lab0239_s401_w3_1045_1120_r2,S401,92b9119ae2cc,V,V260807C00380000,1,0.6,0.59,59.0,,,,-0.01,,0.5,-0.5,0.15929203539823006,gap -0.69% green,beb27abc-be33-48d0-b684-b22a331b010b
