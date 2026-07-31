@@ -1,0 +1,59 @@
+21:35:42  INFO      Mode: ext_exits
+21:35:43  INFO        Daily log -> logs/daily/2026-07-31.md
+21:35:43  INFO        Daily log reconciled -> logs/daily/2026-07-31.md (8 ledger rows)
+21:35:43  INFO        SELL LIMIT [EXT HRS] APP  qty=0.237225262  limit=$392.41  id=69c456bf-d440-4137-8d3d-367d1817e064
+21:35:48  INFO        SELL LIMIT[EXT] pending for APP — 9:35am will follow up
+21:35:48  INFO        Daily log -> logs/daily/2026-07-31.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                         EXT_EXITS|
+|  Time                                                         21:35 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $468.22|
++========================================================================+
+
++========================================================================+
+|                       EXIT CHECK [EXTENDED HRS]                        |
++========================================================================+
+|  Exit log~  stop-0.5% / 3d max  (midline skipped — close already final)|
++------------------------------------------------------------------------+
+|  APP  P&L -0.7%  $-0.65          EXIT [EXTENDED HRS]: stop_loss (-0.7%)|
+|  APP                              SELL pending (after-hours limit open)|
+|  MP  P&L -0.3%  $-0.26          HOLDING until 9:35am scan (MomReversal)|
+|  PWR  P&L -0.1%  $-0.09       HOLDING until 9:35am scan (EarningsDrift)|
+|  CINF  P&L +1.5%  $+1.41         HOLDING until 9:35am scan (Pullback50)|
+|  APG  P&L +2.1%  $+0.68         HOLDING until 9:35am scan (MomReversal)|
++========================================================================+
+
++========================================================================+
+|                          EXTENDED HOURS SELLS                          |
++========================================================================+
+|                                                                        |
+|  No extended-hours sells this run.                                     |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                         ext_exits|
+|  Candidates                                                           5|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  0 filled  |  0 partial  |  1 pending  |  0 failed|
+|  Holds                                                                4|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  APP                                         -0.69%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             1|
++========================================================================+
