@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-31 15:25:09.895312+00:00,entry,226,lab0226_s400_w4_1120_1135_r1,S400,867e587ae354,AMZN,AMZN260803C00290000,1,0.09,0.09,9.0,,,,-0.01,,0.75,-0.75,0.10526315789473693,green VZ=1.3 >MA50,374335a7-3e41-471d-91d8-fc18ad154432
+2026-07-31T16:25:46Z,reconcile,226,lab0226_s400_w4_1120_1135_r1,S400,867e587ae354,AMZN,AMZN260803C00290000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

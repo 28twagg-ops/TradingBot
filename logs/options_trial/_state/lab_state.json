@@ -2342,26 +2342,6 @@
       "entry_order_id": "16d6aa67-91f8-43a1-95b8-470ce932d719"
     },
     {
-      "lot_id": "867e587ae354",
-      "bucket_id": 226,
-      "profile_name": "lab0226_s400_w4_1120_1135_r1",
-      "strategy_id": "S400",
-      "occ_symbol": "AMZN260803C00290000",
-      "underlying": "AMZN",
-      "qty": 1,
-      "entry_cost": 9.0,
-      "entry_price": 0.09,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-31T15:26:26.118721+00:00",
-      "entry_order_id": "374335a7-3e41-471d-91d8-fc18ad154432"
-    },
-    {
       "lot_id": "750a31949389",
       "bucket_id": 293,
       "profile_name": "lab0293_s352_w3_1045_1120_r2",
@@ -2703,16 +2683,6 @@
       "qty": 1,
       "reason": "stop_loss (-66.7%)",
       "submitted": "2026-07-31T12:02:42"
-    },
-    {
-      "order_id": "b23c72a1-58d0-46f7-88b4-9699258b4e65",
-      "lot_id": "867e587ae354",
-      "bucket_id": 226,
-      "strategy_id": "S400",
-      "occ_symbol": "AMZN260803C00290000",
-      "qty": 1,
-      "reason": "stop_loss (-58.3%)",
-      "submitted": "2026-07-31T12:20:48"
     }
   ],
   "bucket_open_premium": {
@@ -2833,7 +2803,6 @@
     "b424": 62.0,
     "b303": 40.0,
     "b302": 40.0,
-    "b226": 9.0,
     "b293": 20.0,
     "b292": 20.0,
     "b821": 42.0,
