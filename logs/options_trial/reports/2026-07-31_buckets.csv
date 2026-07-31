@@ -303,7 +303,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 301,lab0301_s353_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-31,False,,,,,,,0,AAPL,S353,,entered_no_exit
 302,lab0302_s353_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-31,False,,,,,,,0,AAPL,S353,,entered_no_exit
 303,lab0303_s353_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-31,False,,,,,,,0,AAPL,S353,,entered_no_exit
-304,lab0304_s354_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-31,False,,,,,,,0,COIN,S354,,entered_no_exit
+304,lab0304_s354_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-07-31,False,,100.0,93.62,93.62,93.62,93.62,44.0,COIN,S354,take_profit (+100.9%),closed
 305,lab0305_s354_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-07-31,False,,100.0,100.0,100.0,100.0,100.0,47.0,COIN,S354,take_profit (+107.6%),closed
 306,lab0306_s354_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-31,False,,,,,,,0,COIN,S354,,entered_no_exit
 307,lab0307_s354_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-31,False,,,,,,,0,COIN,S354,,entered_no_exit

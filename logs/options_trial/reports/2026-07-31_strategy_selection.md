@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-31
 
-_Generated 2026-07-31T14:11:12.689896_
+_Generated 2026-07-31T14:15:59.011121_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-07-31T14:11:12.689896_
 
 ## Attribution health
 
-- Total exits: **862**
+- Total exits: **863**
 - Orphan exits (b0/orphan_reconcile): **22**
 - Orphan rate: **2.5%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -20,7 +20,7 @@ _Generated 2026-07-31T14:11:12.689896_
 
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| S354 (GapDown_5DTE) | 5d | watch | 1 | 100.0 | +100.00 | +100.00 | +100.00 | +100.00 | 0 | 8 | 1 | $+47.00 | 100.0% | insufficient sample (<8 exits) |
+| S354 (GapDown_5DTE) | 5d | watch | 2 | 100.0 | +96.81 | +94.26 | +95.22 | +99.36 | 0 | 8 | 2 | $+91.00 | 100.0% | insufficient sample (<8 exits) |
 | S355 (GapDown_7DTE) | 7d | watch | 2 | 100.0 | +88.30 | +85.75 | +86.70 | +90.85 | 0 | 8 | 2 | $+83.00 | 100.0% | insufficient sample (<8 exits) |
 | S404 (GapDown_OTM2) | 3d | watch | 8 | 100.0 | +66.58 | +36.49 | +43.45 | +130.48 | 0 | 8 | 8 | $+388.00 | 100.0% | building sample (8-19 exits) |
 | S398 (GapDown_ATM) | 3d | watch | 5 | 100.0 | +66.07 | +48.98 | +48.98 | +126.10 | 0 | 8 | 5 | $+200.00 | 100.0% | insufficient sample (<8 exits) |
@@ -263,7 +263,7 @@ _Pipeline evaluation as of 2026-07-31. Auto-kill thresholds: median<-25% at n>=1
 | S351 | GapDown_1DTE | 5 | -52.94% | 0% | WATCH | 0 |
 | S352 | GapDown_2DTE | 0 | — | — | NEW | 0 |
 | S353 | GapDown_3DTE | 0 | — | — | NEW | 0 |
-| S354 | GapDown_5DTE | 1 | +100.00% | 100% | WATCH | 0 |
+| S354 | GapDown_5DTE | 2 | +96.81% | 100% | WATCH | 0 |
 | S355 | GapDown_7DTE | 2 | +88.30% | 100% | WATCH | 0 |
 | S356 | GapDown_14DTE | 0 | — | — | NEW | 0 |
 | S357 | GapDown_21DTE | 0 | — | — | NEW | 0 |
