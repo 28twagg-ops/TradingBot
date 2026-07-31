@@ -1202,26 +1202,6 @@
       "entry_order_id": "b709e289-cb12-4f44-9b4a-8dc40de75ca1"
     },
     {
-      "lot_id": "a9e365e31462",
-      "bucket_id": 223,
-      "profile_name": "lab0223_s400_w2_1005_1045_r2",
-      "strategy_id": "S400",
-      "occ_symbol": "AMZN260803C00295000",
-      "underlying": "AMZN",
-      "qty": 1,
-      "entry_cost": 8.0,
-      "entry_price": 0.08,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-31T14:32:18.061802+00:00",
-      "entry_order_id": "e25b6a43-54dd-48a6-ab51-de1c3e44c936"
-    },
-    {
       "lot_id": "3e4c4835c392",
       "bucket_id": 222,
       "profile_name": "lab0222_s400_w2_1005_1045_r1",
@@ -2205,7 +2185,6 @@
     "b110": 59.0,
     "b27": 45.0,
     "b26": 45.0,
-    "b223": 8.0,
     "b222": 8.0,
     "b195": 14.000000000000002,
     "b194": 14.000000000000002,
@@ -2803,7 +2782,8 @@
     "82a7abe0-2e0a-45a9-b428-8ef987fbb79a",
     "171484bd-7fa4-4e24-b3a8-4f6bb5b48927",
     "bb142429-795e-49b4-83f6-f3fb6ff0c91e",
-    "53787570-46d7-4a4a-9d7d-e0d6099033af"
+    "53787570-46d7-4a4a-9d7d-e0d6099033af",
+    "c021aa15-b970-4468-8642-29bf04b610fd"
   ],
   "submitted_today": 110,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

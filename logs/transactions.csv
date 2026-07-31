@@ -1059,3 +1059,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-07-31 13:52:09,2026-07-31,SELL,CHD,Pullback50,97.3,93.57,-0.1,-0.1,0,midline (-0.1%),bull,468.78
 2026-07-31 14:10:50,2026-07-31,SELL,FFIV,Pullback50,395.56,91.92,-0.58,-0.54,0,stop_loss (-0.6%),bull,467.72
 2026-07-31 14:15:49,2026-07-31,SELL,CI,Pullback50,283.94,93.26,-0.52,-0.49,0,stop_loss (-0.5%),bull,467.18
+2026-07-31 15:05:42,2026-07-31,SELL,AVB,Pullback50,185.1,93.36,-0.61,-0.58,0,stop_loss (-0.6%),bull,468.04

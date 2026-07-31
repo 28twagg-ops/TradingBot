@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-31
 
-_Generated 2026-07-31T11:02:29.422852_
+_Generated 2026-07-31T11:06:58.903456_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-07-31T11:02:29.422852_
 
 ## Attribution health
 
-- Total exits: **814**
+- Total exits: **815**
 - Orphan exits (b0/orphan_reconcile): **22**
 - Orphan rate: **2.7%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -97,7 +97,6 @@ _Generated 2026-07-31T11:02:29.422852_
 | S397 (GapDown_ITM1) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 6 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S398 (GapDown_ATM) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 6 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S399 (GapDown_OTM1) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 4 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S400 (Any_Green_Close) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 4 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S401 (Any_Gap_Down_Small) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 6 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S402 (Any_High_Volume) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S403 (Any_MA50_Touch) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 4 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -119,6 +118,7 @@ _Generated 2026-07-31T11:02:29.422852_
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 2 | 0.0 | -50.00 | -63.34 | -58.33 | -36.66 | 3 | 20 | 2 | $-3.00 | 100.0% | insufficient sample (<8 exits) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 2 | 0.0 | -50.00 | -63.34 | -58.33 | -36.66 | 4 | 18 | 2 | $-3.00 | 100.0% | insufficient sample (<8 exits) |
+| S400 (Any_Green_Close) | 3d | watch | 1 | 0.0 | -50.00 | -50.00 | -50.00 | -50.00 | 0 | 4 | 1 | $-4.00 | 100.0% | insufficient sample (<8 exits) |
 | S351 (GapDown_1DTE) | 1d | watch | 1 | 0.0 | -53.85 | -53.85 | -53.85 | -53.85 | 0 | 6 | 1 | $-7.00 | 100.0% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 6 | 0.0 | -65.67 | -88.89 | -86.11 | -50.00 | 10 | 21 | 0 | $-59.00 | 83.3% | insufficient sample (<8 exits) |
 | S350 (GapDown_0DTE) | 0d | watch | 2 | 0.0 | -66.67 | -66.67 | -66.67 | -66.67 | 0 | 4 | 2 | $-4.00 | 100.0% | insufficient sample (<8 exits) |
@@ -309,7 +309,7 @@ _Pipeline evaluation as of 2026-07-31. Auto-kill thresholds: median<-25% at n>=1
 | S397 | GapDown_ITM1 | 0 | — | — | NEW | 0 |
 | S398 | GapDown_ATM | 0 | — | — | NEW | 0 |
 | S399 | GapDown_OTM1 | 0 | — | — | NEW | 0 |
-| S400 | Any_Green_Close | 0 | — | — | NEW | 0 |
+| S400 | Any_Green_Close | 1 | -50.00% | 0% | WATCH | 0 |
 | S401 | Any_Gap_Down_Small | 0 | — | — | NEW | 0 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
 | S403 | Any_MA50_Touch | 0 | — | — | NEW | 0 |
