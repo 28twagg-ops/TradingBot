@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-31 14:04:11.923542+00:00,entry,281,lab0281_s351_w1_0928_1005_r2,S351,ecff21969f54,MSTR,MSTR260731C00096500,1,0.13,0.13,13.0,,,,-0.01,,0.75,-0.75,0.15384615384615397,gap -2.9%,750a9a27-b123-454b-a64b-f97f7d168638
