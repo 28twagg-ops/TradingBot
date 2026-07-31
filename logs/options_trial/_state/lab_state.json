@@ -322,26 +322,6 @@
       "entry_order_id": "f0cd3f81-79b1-4249-bbaf-bf33f1568c8d"
     },
     {
-      "lot_id": "1300c780d841",
-      "bucket_id": 777,
-      "profile_name": "lab0777_s397_w1_0928_1005_r2",
-      "strategy_id": "S397",
-      "occ_symbol": "COIN260807C00165000",
-      "underlying": "COIN",
-      "qty": 1,
-      "entry_cost": 56.99999999999999,
-      "entry_price": 0.57,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-31T14:07:26.180355+00:00",
-      "entry_order_id": "3961c191-2727-4fec-a350-92c3aae6bb5f"
-    },
-    {
       "lot_id": "1ca41eae9ae8",
       "bucket_id": 776,
       "profile_name": "lab0776_s397_w1_0928_1005_r1",
@@ -560,26 +540,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-07-31T14:09:02.854007+00:00",
       "entry_order_id": "2bd3d40b-848b-4bdf-bf80-0d15c069b0f0"
-    },
-    {
-      "lot_id": "65b9d8d5a5a7",
-      "bucket_id": 779,
-      "profile_name": "lab0779_s397_w2_1005_1045_r2",
-      "strategy_id": "S397",
-      "occ_symbol": "COIN260807C00162500",
-      "underlying": "COIN",
-      "qty": 1,
-      "entry_cost": 71.0,
-      "entry_price": 0.71,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-31T14:09:02.889763+00:00",
-      "entry_order_id": "97c6e6a7-58eb-4869-8340-ed916b8e0c8d"
     },
     {
       "lot_id": "cccc8d85605c",
@@ -2535,24 +2495,24 @@
       "submitted": "2026-07-31T12:02:42"
     },
     {
-      "order_id": "2e3aa868-ddb0-4a02-8ddc-b3a02e55a277",
-      "lot_id": "1300c780d841",
-      "bucket_id": 777,
-      "strategy_id": "S397",
-      "occ_symbol": "COIN260807C00165000",
-      "qty": 1,
-      "reason": "take_profit (+61.4%)",
-      "submitted": "2026-07-31T13:21:17"
-    },
-    {
-      "order_id": "24729bda-9229-46bd-8ef0-8df46b12e892",
-      "lot_id": "65b9d8d5a5a7",
-      "bucket_id": 779,
+      "order_id": "6107125f-3cd5-45de-9aaa-c859d337c030",
+      "lot_id": "cccc8d85605c",
+      "bucket_id": 778,
       "strategy_id": "S397",
       "occ_symbol": "COIN260807C00162500",
       "qty": 1,
-      "reason": "take_profit (+59.9%)",
-      "submitted": "2026-07-31T13:21:21"
+      "reason": "take_profit (+58.3%)",
+      "submitted": "2026-07-31T13:26:10"
+    },
+    {
+      "order_id": "a96e15b1-daca-475e-bb75-fc8d167c604d",
+      "lot_id": "1ca41eae9ae8",
+      "bucket_id": 776,
+      "strategy_id": "S397",
+      "occ_symbol": "COIN260807C00165000",
+      "qty": 1,
+      "reason": "take_profit (+65.5%)",
+      "submitted": "2026-07-31T13:26:13"
     }
   ],
   "bucket_open_premium": {
@@ -2572,7 +2532,6 @@
     "b234": 50.0,
     "b793": 38.0,
     "b792": 38.0,
-    "b777": 56.99999999999999,
     "b776": 56.99999999999999,
     "b313": 47.0,
     "b312": 47.0,
@@ -2584,7 +2543,6 @@
     "b816": 56.00000000000001,
     "b787": 56.00000000000001,
     "b786": 56.00000000000001,
-    "b779": 71.0,
     "b778": 72.0,
     "b331": 62.0,
     "b330": 62.0,
@@ -3264,7 +3222,9 @@
     "cadf9167-dd28-47f7-818a-c9eed955e9dd",
     "7e761593-c9fc-46f5-b659-9e6fe67c8107",
     "1573f410-fcce-463d-99ed-8f5743d0ab81",
-    "4019abc5-057a-4195-ab6b-7f37d72163d0"
+    "4019abc5-057a-4195-ab6b-7f37d72163d0",
+    "24729bda-9229-46bd-8ef0-8df46b12e892",
+    "2e3aa868-ddb0-4a02-8ddc-b3a02e55a277"
   ],
   "submitted_today": 164,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
