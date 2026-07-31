@@ -1,5 +1,6 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
-S405,GapDown_OTM3,3d,watch,insufficient sample (<8 exits),8,3,3,0,57.91,57.14,48.98,52.04,67.14,94.0,1,0,8,3,1,100.0
+S398,GapDown_ATM,3d,watch,insufficient sample (<8 exits),8,1,1,0,78.57,78.57,78.57,78.57,78.57,44.0,1,0,8,1,1,100.0
+S405,GapDown_OTM3,3d,watch,insufficient sample (<8 exits),8,4,4,0,56.7,55.1,48.78,51.53,65.89,120.0,1,0,8,4,1,100.0
 S404,GapDown_OTM2,3d,watch,insufficient sample (<8 exits),8,6,6,0,59.16,45.67,35.09,40.22,96.72,221.0,1,0,8,6,1,100.0
 S397,GapDown_ITM1,3d,watch,insufficient sample (<8 exits),8,4,4,0,43.5,42.0,39.12,39.91,49.07,113.0,1,0,8,4,1,100.0
 S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),83,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,10,18,0,0,0.0
@@ -74,7 +75,6 @@ S393,VolClimax_21DTE,21d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.
 S394,VolClimax_30DTE,30d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S395,GapDown_ITM3,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S396,GapDown_ITM2,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
-S398,GapDown_ATM,3d,watch,insufficient sample (<8 exits),8,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,8,0,0,0.0
 S399,GapDown_OTM1,3d,watch,insufficient sample (<8 exits),6,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,6,0,0,0.0
 S402,Any_High_Volume,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S403,Any_MA50_Touch,3d,watch,insufficient sample (<8 exits),4,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,4,0,0,0.0

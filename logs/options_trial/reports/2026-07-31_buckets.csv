@@ -786,7 +786,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 784,lab0784_s398_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-31,False,,,,,,,0,COIN,S398,,entered_no_exit
 785,lab0785_s398_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-31,False,,,,,,,0,COIN,S398,,entered_no_exit
 786,lab0786_s398_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-31,False,,,,,,,0,COIN,S398,,entered_no_exit
-787,lab0787_s398_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-31,False,,,,,,,0,COIN,S398,,entered_no_exit
+787,lab0787_s398_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-07-31,False,,100.0,78.57,78.57,78.57,78.57,44.0,COIN,S398,take_profit (+106.9%),closed
 788,lab0788_s398_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-31,False,,,,,,,0,COIN,S398,,entered_no_exit
 789,lab0789_s398_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-31,False,,,,,,,0,COIN,S398,,entered_no_exit
 790,lab0790_s398_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-31,False,,,,,,,0,COIN,S398,,entered_no_exit
@@ -813,7 +813,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 811,lab0811_s404_w6_1400_1430_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 812,lab0812_s404_w7_1500_1530_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 813,lab0813_s404_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
-814,lab0814_s405_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-07-31,False,,,,,,,0,COIN,S405,,entered_no_exit
+814,lab0814_s405_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-07-31,False,,100.0,53.06,53.06,53.06,53.06,26.0,COIN,S405,take_profit (+65.6%),closed
 815,lab0815_s405_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-07-31,False,,100.0,46.94,46.94,46.94,46.94,23.0,COIN,S405,take_profit (+59.0%),closed
 816,lab0816_s405_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-07-31,False,,100.0,69.64,69.64,69.64,69.64,39.0,COIN,S405,take_profit (+96.6%),closed
 817,lab0817_s405_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-07-31,False,,100.0,57.14,57.14,57.14,57.14,32.0,COIN,S405,take_profit (+77.9%),closed
