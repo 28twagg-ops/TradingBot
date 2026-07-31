@@ -98,8 +98,8 @@ S218,BB_Lower_Touch,3d ATM BB lower touch,watch,insufficient sample (<8 exits),2
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),6,2,0,2,-50.0,-50.0,-50.0,-50.0,-50.0,-8.0,1,0,6,2,1,100.0
 S351,GapDown_1DTE,1d,watch,insufficient sample (<8 exits),8,4,0,4,-51.4,-53.39,-57.33,-55.09,-43.88,-66.0,1,0,8,4,2,50.0
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,watch,insufficient sample (<8 exits),14,1,0,1,-55.0,-55.0,-55.0,-55.0,-55.0,-22.0,1,4,14,1,1,100.0
+S350,GapDown_0DTE,0d,watch,insufficient sample (<8 exits),4,4,0,4,-64.22,-64.71,-66.67,-66.67,-61.37,-67.0,1,0,4,4,2,50.0
 S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,insufficient sample (<8 exits),98,6,0,6,-68.19,-65.67,-88.89,-86.11,-50.0,-59.0,2,10,21,0,2,83.3
-S350,GapDown_0DTE,0d,watch,insufficient sample (<8 exits),4,3,0,3,-64.71,-66.67,-66.67,-66.67,-61.96,-35.0,1,0,4,3,2,66.7
 S407,RubberBand_ITM2,3d,watch,insufficient sample (<8 exits),2,1,0,1,-66.67,-66.67,-66.67,-66.67,-66.67,-2.0,1,0,2,1,1,100.0
 S174,RubberBand long call EOD,RubberBand (dropped),drop,manually paused — excluded from new entries & reflected P&L,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,25,0,0,6,50.4
 S173,MomReversal long call,MomRev,drop,manually paused — excluded from new entries & reflected P&L,1625,415,154,261,15.19,-31.51,-77.18,-62.95,101.9,62.64,8,25,0,0,12,27.5

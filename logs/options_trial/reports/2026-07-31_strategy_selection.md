@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-31
 
-_Generated 2026-07-31T11:40:58.679699_
+_Generated 2026-07-31T11:46:10.130571_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-07-31T11:40:58.679699_
 
 ## Attribution health
 
-- Total exits: **823**
+- Total exits: **824**
 - Orphan exits (b0/orphan_reconcile): **22**
 - Orphan rate: **2.7%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -119,8 +119,8 @@ _Generated 2026-07-31T11:40:58.679699_
 | S400 (Any_Green_Close) | 3d | watch | 2 | 0.0 | -50.00 | -50.00 | -50.00 | -50.00 | 0 | 6 | 2 | $-8.00 | 100.0% | insufficient sample (<8 exits) |
 | S351 (GapDown_1DTE) | 1d | watch | 4 | 0.0 | -53.39 | -57.33 | -55.09 | -43.88 | 0 | 8 | 4 | $-66.00 | 50.0% | insufficient sample (<8 exits) |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | watch | 1 | 0.0 | -55.00 | -55.00 | -55.00 | -55.00 | 4 | 14 | 1 | $-22.00 | 100.0% | insufficient sample (<8 exits) |
+| S350 (GapDown_0DTE) | 0d | watch | 4 | 0.0 | -64.71 | -66.67 | -66.67 | -61.37 | 0 | 4 | 4 | $-67.00 | 50.0% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 6 | 0.0 | -65.67 | -88.89 | -86.11 | -50.00 | 10 | 21 | 0 | $-59.00 | 83.3% | insufficient sample (<8 exits) |
-| S350 (GapDown_0DTE) | 0d | watch | 3 | 0.0 | -66.67 | -66.67 | -66.67 | -61.96 | 0 | 4 | 3 | $-35.00 | 66.7% | insufficient sample (<8 exits) |
 | S407 (RubberBand_ITM2) | 3d | watch | 1 | 0.0 | -66.67 | -66.67 | -66.67 | -66.67 | 0 | 2 | 1 | $-2.00 | 100.0% | insufficient sample (<8 exits) |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 25 | 0 | 0 | $-1,658.19 | 50.4% | manually paused — excluded from new entries & reflected P&L |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 25 | 0 | 0 | $+62.64 | 27.5% | manually paused — excluded from new entries & reflected P&L |
@@ -259,7 +259,7 @@ _Pipeline evaluation as of 2026-07-31. Auto-kill thresholds: median<-25% at n>=1
 | S219 | Volume_Climax_Up | 0 | — | — | NEW | 0 |
 | S220 | Pullback50 | 0 | — | — | NEW | 0 |
 | S221 | GoldenPocket | 0 | — | — | NEW | 0 |
-| S350 | GapDown_0DTE | 3 | -66.67% | 0% | WATCH | 0 |
+| S350 | GapDown_0DTE | 4 | -64.71% | 0% | WATCH | 0 |
 | S351 | GapDown_1DTE | 4 | -53.39% | 0% | WATCH | 0 |
 | S352 | GapDown_2DTE | 0 | — | — | NEW | 0 |
 | S353 | GapDown_3DTE | 0 | — | — | NEW | 0 |
