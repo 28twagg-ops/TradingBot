@@ -322,26 +322,6 @@
       "entry_order_id": "f0cd3f81-79b1-4249-bbaf-bf33f1568c8d"
     },
     {
-      "lot_id": "1ca41eae9ae8",
-      "bucket_id": 776,
-      "profile_name": "lab0776_s397_w1_0928_1005_r1",
-      "strategy_id": "S397",
-      "occ_symbol": "COIN260807C00165000",
-      "underlying": "COIN",
-      "qty": 1,
-      "entry_cost": 56.99999999999999,
-      "entry_price": 0.57,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-31T14:07:26.214137+00:00",
-      "entry_order_id": "d06d0241-b8a0-4da5-b294-8c1d212812b1"
-    },
-    {
       "lot_id": "dacf882b25c7",
       "bucket_id": 313,
       "profile_name": "lab0313_s355_w1_0928_1005_r2",
@@ -540,26 +520,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-07-31T14:09:02.854007+00:00",
       "entry_order_id": "2bd3d40b-848b-4bdf-bf80-0d15c069b0f0"
-    },
-    {
-      "lot_id": "cccc8d85605c",
-      "bucket_id": 778,
-      "profile_name": "lab0778_s397_w2_1005_1045_r1",
-      "strategy_id": "S397",
-      "occ_symbol": "COIN260807C00162500",
-      "underlying": "COIN",
-      "qty": 1,
-      "entry_cost": 72.0,
-      "entry_price": 0.72,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-31T14:09:02.925417+00:00",
-      "entry_order_id": "c0f11aab-7acc-433f-8794-7f25b32052c4"
     },
     {
       "lot_id": "43492cfcf987",
@@ -2495,24 +2455,44 @@
       "submitted": "2026-07-31T12:02:42"
     },
     {
-      "order_id": "6107125f-3cd5-45de-9aaa-c859d337c030",
-      "lot_id": "cccc8d85605c",
-      "bucket_id": 778,
-      "strategy_id": "S397",
+      "order_id": "d05a5d8e-5edf-4262-9ae3-99b2ea0a1bb6",
+      "lot_id": "98c98720d356",
+      "bucket_id": 805,
+      "strategy_id": "S404",
       "occ_symbol": "COIN260807C00162500",
       "qty": 1,
-      "reason": "take_profit (+58.3%)",
-      "submitted": "2026-07-31T13:26:10"
+      "reason": "take_profit (+73.9%)",
+      "submitted": "2026-07-31T13:30:47"
     },
     {
-      "order_id": "a96e15b1-daca-475e-bb75-fc8d167c604d",
-      "lot_id": "1ca41eae9ae8",
-      "bucket_id": 776,
-      "strategy_id": "S397",
+      "order_id": "c8c8fc17-5e6b-4d41-8ca9-3969eae50a22",
+      "lot_id": "1bbc2bf4c1d7",
+      "bucket_id": 835,
+      "strategy_id": "S406",
+      "occ_symbol": "AAPL260803C00317500",
+      "qty": 1,
+      "reason": "stop_loss (-51.1%)",
+      "submitted": "2026-07-31T13:30:48"
+    },
+    {
+      "order_id": "fbbfb9bf-ecb3-4e42-b02f-f51188cfcb4c",
+      "lot_id": "13c56d2f763d",
+      "bucket_id": 817,
+      "strategy_id": "S405",
       "occ_symbol": "COIN260807C00165000",
       "qty": 1,
-      "reason": "take_profit (+65.5%)",
-      "submitted": "2026-07-31T13:26:13"
+      "reason": "take_profit (+77.9%)",
+      "submitted": "2026-07-31T13:30:48"
+    },
+    {
+      "order_id": "aa9fe084-be63-4984-af99-50a2a6df6a48",
+      "lot_id": "056caf2d9666",
+      "bucket_id": 17,
+      "strategy_id": "S202",
+      "occ_symbol": "AAPL260803C00315000",
+      "qty": 1,
+      "reason": "stop_loss (-51.1%)",
+      "submitted": "2026-07-31T13:30:49"
     }
   ],
   "bucket_open_premium": {
@@ -2532,7 +2512,6 @@
     "b234": 50.0,
     "b793": 38.0,
     "b792": 38.0,
-    "b776": 56.99999999999999,
     "b313": 47.0,
     "b312": 47.0,
     "b305": 47.0,
@@ -2543,7 +2522,6 @@
     "b816": 56.00000000000001,
     "b787": 56.00000000000001,
     "b786": 56.00000000000001,
-    "b778": 72.0,
     "b331": 62.0,
     "b330": 62.0,
     "b315": 44.0,
@@ -3224,7 +3202,9 @@
     "1573f410-fcce-463d-99ed-8f5743d0ab81",
     "4019abc5-057a-4195-ab6b-7f37d72163d0",
     "24729bda-9229-46bd-8ef0-8df46b12e892",
-    "2e3aa868-ddb0-4a02-8ddc-b3a02e55a277"
+    "2e3aa868-ddb0-4a02-8ddc-b3a02e55a277",
+    "a96e15b1-daca-475e-bb75-fc8d167c604d",
+    "6107125f-3cd5-45de-9aaa-c859d337c030"
   ],
   "submitted_today": 164,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
