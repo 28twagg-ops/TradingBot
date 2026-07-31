@@ -1,9 +1,10 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
 S354,GapDown_5DTE,5d,watch,insufficient sample (<8 exits),8,6,6,0,145.21,140.91,96.81,109.66,197.92,405.0,1,0,8,6,1,100.0
+S355,GapDown_7DTE,7d,watch,insufficient sample (<8 exits),8,7,7,0,160.07,138.64,88.94,93.47,247.68,507.0,1,0,8,7,1,100.0
 S399,GapDown_OTM1,3d,watch,insufficient sample (<8 exits),6,2,2,0,119.56,119.56,66.02,86.09,173.1,89.0,1,0,6,2,2,50.0
 S398,GapDown_ATM,3d,watch,building sample (8-19 exits),8,8,8,0,153.24,118.17,48.98,61.8,319.76,552.0,1,0,8,8,1,100.0
-S355,GapDown_7DTE,7d,watch,insufficient sample (<8 exits),8,6,6,0,131.99,117.04,88.3,92.48,190.62,369.0,1,0,8,6,1,100.0
 S405,GapDown_OTM3,3d,watch,building sample (8-19 exits),8,8,8,0,123.61,95.93,51.22,56.12,246.43,448.0,1,0,8,8,1,100.0
+S352,GapDown_2DTE,2d,watch,insufficient sample (<8 exits),8,2,2,0,68.81,68.81,51.86,58.21,85.76,38.0,1,0,8,2,1,100.0
 S404,GapDown_OTM2,3d,watch,building sample (8-19 exits),8,8,8,0,78.04,66.58,36.49,43.45,130.48,388.0,1,0,8,8,1,100.0
 S397,GapDown_ITM1,3d,watch,insufficient sample (<8 exits),8,7,7,0,79.54,51.39,39.65,42.0,130.48,348.0,1,0,8,7,1,100.0
 S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),83,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,10,18,0,0,0.0
@@ -34,7 +35,6 @@ S216,RSI_Oversold_Cross,3d ATM RSI x30,watch,insufficient sample (<8 exits),20,0
 S219,Volume_Climax_Up,3d ATM vol climax up,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S220,Pullback50,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S221,GoldenPocket,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
-S352,GapDown_2DTE,2d,watch,insufficient sample (<8 exits),8,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,8,0,0,0.0
 S353,GapDown_3DTE,3d,watch,insufficient sample (<8 exits),8,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,8,0,0,0.0
 S356,GapDown_14DTE,14d,watch,insufficient sample (<8 exits),6,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,6,0,0,0.0
 S357,GapDown_21DTE,21d,watch,insufficient sample (<8 exits),6,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,6,0,0,0.0
