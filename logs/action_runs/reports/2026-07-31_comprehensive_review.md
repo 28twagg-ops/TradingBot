@@ -2920,3 +2920,172 @@ Fetched daily bars for 114/117 symbols
 ### Options bot full output
 
 ```text
+
+## Run 20260731T135606Z
+
+- UTC timestamp: `20260731T135606Z`
+- GitHub run: [#5688](https://github.com/28twagg-ops/TradingBot/actions/runs/30636393814)
+- Run id: `30636393814`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-31T09:25:43.256247-04:00","date":"2026-07-31","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.7,"phases_s":{"reconcile":0.33},"signals":0,"placed":0,"equity":131571.98,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"5682","github_run_id":"30634356825","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:56:08  INFO      Mode: morning_scan
+13:56:09  INFO        [positions] 3/3 (3 valid)
+13:56:09  INFO        Universe cache hit: 903 tickers (tickers_2026-07-31.json)
+13:56:10  INFO        [universe] 40/900 (40 valid)
+13:56:12  INFO        [universe] 80/900 (80 valid)
+13:56:13  INFO        [universe] 120/900 (120 valid)
+13:56:14  INFO        [universe] 160/900 (160 valid)
+13:56:25  INFO        [universe] 200/900 (199 valid)
+13:56:38  INFO        [universe] 240/900 (238 valid)
+13:56:51  INFO        [universe] 280/900 (278 valid)
+13:57:01  INFO        [universe] 320/900 (318 valid)
+13:57:14  INFO        [universe] 360/900 (358 valid)
+13:57:25  INFO        [universe] 400/900 (397 valid)
+13:57:38  INFO        [universe] 440/900 (437 valid)
+13:57:51  INFO        [universe] 480/900 (477 valid)
+13:58:01  INFO        [universe] 520/900 (517 valid)
+13:58:15  INFO        [universe] 560/900 (557 valid)
+13:58:25  INFO        [universe] 600/900 (597 valid)
+13:58:38  INFO        [universe] 640/900 (637 valid)
+13:58:51  INFO        [universe] 680/900 (677 valid)
+13:59:01  INFO        [universe] 720/900 (717 valid)
+13:59:15  INFO        [universe] 760/900 (757 valid)
+13:59:25  INFO        [universe] 800/900 (797 valid)
+13:59:38  INFO        [universe] 840/900 (836 valid)
+13:59:48  INFO        [universe] 880/900 (876 valid)
+13:59:55  INFO        [universe] 900/900 (896 valid)
+13:59:58  INFO        BUY  CI  $93.76  [Pullback50]  id=4efc5615-4e63-44e7-bcd9-0e7b3cb6f479
+13:59:58  INFO        BUY  FFIV  $92.47  [Pullback50]  id=2e330c7e-add0-44ef-a982-d458de61561b
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $468.78|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-31|
+|  Universe                                                          both|
+|  Mon~  Jul: 52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $468.78|
+|  Cash                                                           $209.67|
+|  Reserve                                          $23.44  (always kept)|
+|  Available                                    $186.23  (for new trades)|
+|  Trade size             $93.76  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (3 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  APG      MomReversal     $71.10     $38.85   $39.20   +0.9%   $+0.64  |
+|  AVB      Pullback50      $93.94     $186.25  $186.24  -0.0%   $-0.00  |
+|  CINF     Pullback50      $94.07     $175.04  $175.28  +0.1%   $+0.13  |
+|                                                                        |
+|  Total invested                                                 $259.11|
+|  Total open P&L                                                  $+0.77|
+|  Buys today: 0  |  entry cap: 2  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (31690.7m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AVB  P&L -0.0%  $-0.00                                            HOLD|
+|  CINF  P&L +0.1%  $+0.13                                           HOLD|
+|  APG  P&L +0.9%  $+0.64                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 3|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50 (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                          SIGNALS FOUND  --  9                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  CI       Pullback50      eq     $285.35  36.3   -1.84   50MA bounce (-|
+|  FFIV     Pullback50      eq     $397.68  40.5   -1.54   50MA bounce (-|
+|  ES       Pullback50      eq     $72.14   36.9   -2.44   50MA bounce (+|
+|  KDP      Pullback50      eq     $31.18   49.4   -2.38   50MA bounce (+|
+|  MRNA     Pullback50      eq     $58.21   30.5   -1.34   50MA bounce (-|
+|  ATI      Pullback50      eq     $185.65  51.5   -2.60   50MA bounce (-|
+|  CHH      Pullback50      eq     $111.60  57.3   -2.73   50MA bounce (+|
+|  SWX      Pullback50      eq     $89.97   41.0   -3.19   50MA bounce (+|
+|  VNOM     Pullback50      eq     $43.90   54.5   -2.58   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] CI  Pullback50                                     $93.76|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] FFIV  Pullback50                                   $92.47|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] ES  Pullback50                                       cap 5|
+|    SKIP [eq] KDP  Pullback50                                      cap 5|
+|    SKIP [eq] MRNA  Pullback50                                     cap 5|
+|    SKIP [eq] ATI  Pullback50                                      cap 5|
+|    SKIP [eq] CHH  Pullback50                                      cap 5|
+|    SKIP [eq] SWX  Pullback50                                      cap 5|
+|    SKIP [eq] VNOM  Pullback50                                     cap 5|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |```
+
+### Options bot full output
+
+```text
