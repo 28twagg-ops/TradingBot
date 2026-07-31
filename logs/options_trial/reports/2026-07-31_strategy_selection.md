@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-31
 
-_Generated 2026-07-31T15:05:48.999602_
+_Generated 2026-07-31T15:09:02.825935_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-07-31T15:05:48.999602_
 
 ## Attribution health
 
-- Total exits: **875**
+- Total exits: **876**
 - Orphan exits (b0/orphan_reconcile): **22**
 - Orphan rate: **2.5%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -24,7 +24,7 @@ _Generated 2026-07-31T15:05:48.999602_
 | S399 (GapDown_OTM1) | 3d | watch | 2 | 100.0 | +119.56 | +66.02 | +86.09 | +173.10 | 0 | 6 | 2 | $+89.00 | 50.0% | insufficient sample (<8 exits) |
 | S355 (GapDown_7DTE) | 7d | watch | 6 | 100.0 | +117.04 | +88.30 | +92.48 | +190.62 | 0 | 8 | 6 | $+369.00 | 100.0% | insufficient sample (<8 exits) |
 | S405 (GapDown_OTM3) | 3d | watch | 8 | 100.0 | +95.93 | +51.22 | +56.12 | +246.43 | 0 | 8 | 8 | $+448.00 | 100.0% | building sample (8-19 exits) |
-| S398 (GapDown_ATM) | 3d | watch | 6 | 100.0 | +72.32 | +48.98 | +53.25 | +166.67 | 0 | 8 | 6 | $+279.00 | 100.0% | insufficient sample (<8 exits) |
+| S398 (GapDown_ATM) | 3d | watch | 7 | 100.0 | +78.57 | +48.98 | +57.52 | +240.58 | 0 | 8 | 7 | $+421.00 | 100.0% | insufficient sample (<8 exits) |
 | S404 (GapDown_OTM2) | 3d | watch | 8 | 100.0 | +66.58 | +36.49 | +43.45 | +130.48 | 0 | 8 | 8 | $+388.00 | 100.0% | building sample (8-19 exits) |
 | S397 (GapDown_ITM1) | 3d | watch | 7 | 100.0 | +51.39 | +39.65 | +42.00 | +130.48 | 0 | 8 | 7 | $+348.00 | 100.0% | insufficient sample (<8 exits) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 10 | 18 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -307,7 +307,7 @@ _Pipeline evaluation as of 2026-07-31. Auto-kill thresholds: median<-25% at n>=1
 | S395 | GapDown_ITM3 | 0 | — | — | NEW | 0 |
 | S396 | GapDown_ITM2 | 0 | — | — | NEW | 0 |
 | S397 | GapDown_ITM1 | 7 | +51.39% | 100% | WATCH | 0 |
-| S398 | GapDown_ATM | 6 | +72.32% | 100% | WATCH | 0 |
+| S398 | GapDown_ATM | 7 | +78.57% | 100% | WATCH | 0 |
 | S399 | GapDown_OTM1 | 2 | +119.56% | 100% | WATCH | 0 |
 | S400 | Any_Green_Close | 5 | -50.00% | 0% | WATCH | 0 |
 | S401 | Any_Gap_Down_Small | 1 | -38.98% | 0% | WATCH | 0 |

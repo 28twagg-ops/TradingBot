@@ -4019,3 +4019,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-07-31 18:51:13,exits,bull,469.98,301.85,0,0,0,2,APG|CINF,both
 2026-07-31 19:01:16,exits,bull,469.85,301.85,0,0,0,2,APG|CINF,both
 2026-07-31 19:05:41,exits,bull,469.73,301.85,0,0,0,2,APG|CINF,both
+2026-07-31 19:08:50,exits,bull,469.77,301.85,0,0,0,2,APG|CINF,both
