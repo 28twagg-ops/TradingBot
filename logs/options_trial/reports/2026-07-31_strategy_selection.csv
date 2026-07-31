@@ -1,8 +1,10 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
+S355,GapDown_7DTE,7d,watch,insufficient sample (<8 exits),8,1,1,0,85.11,85.11,85.11,85.11,85.11,40.0,1,0,8,1,1,100.0
+S405,GapDown_OTM3,3d,watch,insufficient sample (<8 exits),8,6,6,0,81.87,63.39,50.0,54.08,132.22,239.0,1,0,8,6,1,100.0
 S398,GapDown_ATM,3d,watch,insufficient sample (<8 exits),8,4,4,0,60.65,57.52,48.98,48.98,74.82,129.0,1,0,8,4,1,100.0
-S405,GapDown_OTM3,3d,watch,insufficient sample (<8 exits),8,5,5,0,69.8,57.14,49.39,53.06,101.19,175.0,1,0,8,5,1,100.0
+S399,GapDown_OTM1,3d,watch,insufficient sample (<8 exits),6,1,1,0,52.63,52.63,52.63,52.63,52.63,20.0,1,0,6,1,1,100.0
 S397,GapDown_ITM1,3d,watch,insufficient sample (<8 exits),8,6,6,0,67.52,47.52,39.48,41.18,115.57,254.0,1,0,8,6,1,100.0
-S404,GapDown_OTM2,3d,watch,insufficient sample (<8 exits),8,6,6,0,59.16,45.67,35.09,40.22,96.72,221.0,1,0,8,6,1,100.0
+S404,GapDown_OTM2,3d,watch,insufficient sample (<8 exits),8,7,7,0,68.45,46.27,35.79,41.84,113.61,298.0,1,0,8,7,1,100.0
 S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),83,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,10,18,0,0,0.0
 S166,GapDown strong call,3d ATM strong,watch,insufficient sample (<8 exits),36,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,10,16,0,0,0.0
 S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,insufficient sample (<8 exits),88,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,10,22,0,0,0.0
@@ -34,7 +36,6 @@ S221,GoldenPocket,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.
 S352,GapDown_2DTE,2d,watch,insufficient sample (<8 exits),8,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,8,0,0,0.0
 S353,GapDown_3DTE,3d,watch,insufficient sample (<8 exits),8,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,8,0,0,0.0
 S354,GapDown_5DTE,5d,watch,insufficient sample (<8 exits),8,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,8,0,0,0.0
-S355,GapDown_7DTE,7d,watch,insufficient sample (<8 exits),8,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,8,0,0,0.0
 S356,GapDown_14DTE,14d,watch,insufficient sample (<8 exits),6,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,6,0,0,0.0
 S357,GapDown_21DTE,21d,watch,insufficient sample (<8 exits),6,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,6,0,0,0.0
 S358,GapDown_30DTE,30d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
@@ -75,7 +76,6 @@ S393,VolClimax_21DTE,21d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.
 S394,VolClimax_30DTE,30d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S395,GapDown_ITM3,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S396,GapDown_ITM2,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
-S399,GapDown_OTM1,3d,watch,insufficient sample (<8 exits),6,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,6,0,0,0.0
 S402,Any_High_Volume,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S403,Any_MA50_Touch,3d,watch,insufficient sample (<8 exits),4,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,4,0,0,0.0
 S408,RubberBand_ITM1,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
@@ -98,7 +98,7 @@ S360,RubberBand_1DTE,1d,watch,insufficient sample (<8 exits),2,1,0,1,-54.76,-54.
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,watch,insufficient sample (<8 exits),14,1,0,1,-55.0,-55.0,-55.0,-55.0,-55.0,-22.0,1,4,14,1,1,100.0
 S406,RubberBand_ITM3,3d,watch,insufficient sample (<8 exits),2,1,0,1,-56.0,-56.0,-56.0,-56.0,-56.0,-14.0,1,0,2,1,1,100.0
 S350,GapDown_0DTE,0d,watch,insufficient sample (<8 exits),4,4,0,4,-64.22,-64.71,-66.67,-66.67,-61.37,-67.0,1,0,4,4,2,50.0
-S202,GapDown_Monster,3d ATM gap-monster,watch,insufficient sample (<8 exits),22,3,0,3,-55.19,-65.57,-66.45,-66.12,-39.78,-43.0,2,3,22,3,2,66.7
+S202,GapDown_Monster,3d ATM gap-monster,watch,insufficient sample (<8 exits),22,4,0,4,-57.38,-64.75,-66.34,-65.84,-42.51,-82.0,2,3,22,4,2,50.0
 S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,insufficient sample (<8 exits),98,6,0,6,-68.19,-65.67,-88.89,-86.11,-50.0,-59.0,2,10,21,0,2,83.3
 S407,RubberBand_ITM2,3d,watch,insufficient sample (<8 exits),2,1,0,1,-66.67,-66.67,-66.67,-66.67,-66.67,-2.0,1,0,2,1,1,100.0
 S174,RubberBand long call EOD,RubberBand (dropped),drop,manually paused — excluded from new entries & reflected P&L,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,25,0,0,6,50.4
