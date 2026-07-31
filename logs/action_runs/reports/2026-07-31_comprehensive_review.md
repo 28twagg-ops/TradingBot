@@ -2870,3 +2870,53 @@ Fetched daily bars for 114/117 symbols
 ### Options bot full output
 
 ```text
+
+## Run 20260731T135105Z
+
+- UTC timestamp: `20260731T135105Z`
+- GitHub run: [#5687](https://github.com/28twagg-ops/TradingBot/actions/runs/30636049417)
+- Run id: `30636049417`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-31T09:25:43.256247-04:00","date":"2026-07-31","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.7,"phases_s":{"reconcile":0.33},"signals":0,"placed":0,"equity":131571.98,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"5682","github_run_id":"30634356825","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:51:06  INFO      Mode: morning_scan
+13:51:07  INFO        [positions] 5/5 (5 valid)
+13:51:07  INFO        SELL LIMIT DRI  qty=0.45206744  limit=$204.70  id=a8ba20fa-76be-419d-a2be-81e97a349f6e
+13:51:38  INFO        SELL LIMIT filled DRI (confirmed by position check)
+13:51:38  INFO        TX logged: SELL DRI  P&L -0.41%
+13:51:38  INFO        SELL LIMIT CHD  qty=0.961711711  limit=$97.24  id=19e37396-4e7e-4c32-bddf-c1e741c9bceb
+13:52:09  INFO        SELL LIMIT filled CHD (confirmed by position check)
+13:52:09  INFO        TX logged: SELL CHD  P&L -0.1%
+13:52:09  INFO        Universe cache hit: 903 tickers (tickers_2026-07-31.json)
+13:52:10  INFO        [universe] 40/900 (40 valid)
+13:52:11  INFO        [universe] 80/900 (80 valid)
+13:52:13  INFO        [universe] 120/900 (120 valid)
+13:52:14  INFO        [universe] 160/900 (160 valid)
+13:52:15  INFO        [universe] 200/900 (199 valid)
+13:52:22  INFO        [universe] 240/900 (238 valid)
+13:52:35  INFO        [universe] 280/900 (278 valid)
+13:52:46  INFO        [universe] 320/900 (318 valid)
+13:52:59  INFO        [universe] 360/900 (358 valid)
+13:53:12  INFO        [universe] 400/900 (397 valid)
+13:53:22  INFO        [universe] 440/900 (437 valid)
+13:53:35  INFO        [universe] 480/900 (477 valid)
+13:53:46  INFO        [universe] 520/900 (517 valid)
+13:53:59  INFO        [universe] 560/900 (557 valid)
+13:54:12  INFO        [universe] 600/900 (597 valid)
+13:54:22  INFO        [universe] 640/900 (637 valid)
+13:54:35  INFO        [universe] 680/900 (677 valid)
+13:54:46  INFO        [universe] 720/900 (717 valid)
+13:54:59  INFO        [universe] 760/900 (757 valid)
+13:55:09  INFO        [universe] 800/900 (797 valid)
+```
+
+### Options bot full output
+
+```text
