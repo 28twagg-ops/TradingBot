@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-31
 
-_Generated 2026-07-31T15:44:34.608292_
+_Generated 2026-07-31T15:50:14.415649_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-07-31T15:44:34.608292_
 
 ## Attribution health
 
-- Total exits: **885**
+- Total exits: **887**
 - Orphan exits (b0/orphan_reconcile): **22**
 - Orphan rate: **2.5%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -24,9 +24,10 @@ _Generated 2026-07-31T15:44:34.608292_
 | S354 (GapDown_5DTE) | 5d | watch | 7 | 100.0 | +143.18 | +97.45 | +119.32 | +248.69 | 0 | 8 | 7 | $+527.00 | 100.0% | insufficient sample (<8 exits) |
 | S399 (GapDown_OTM1) | 3d | watch | 2 | 100.0 | +119.56 | +66.02 | +86.09 | +173.10 | 0 | 6 | 2 | $+89.00 | 50.0% | insufficient sample (<8 exits) |
 | S398 (GapDown_ATM) | 3d | watch | 8 | 100.0 | +118.17 | +48.98 | +61.80 | +319.76 | 0 | 8 | 8 | $+552.00 | 100.0% | building sample (8-19 exits) |
+| S353 (GapDown_3DTE) | 3d | watch | 2 | 100.0 | +101.31 | +83.42 | +90.13 | +119.21 | 0 | 8 | 2 | $+77.00 | 100.0% | insufficient sample (<8 exits) |
 | S405 (GapDown_OTM3) | 3d | watch | 8 | 100.0 | +95.93 | +51.22 | +56.12 | +246.43 | 0 | 8 | 8 | $+448.00 | 100.0% | building sample (8-19 exits) |
-| S353 (GapDown_3DTE) | 3d | watch | 1 | 100.0 | +78.95 | +78.95 | +78.95 | +78.95 | 0 | 8 | 1 | $+30.00 | 100.0% | insufficient sample (<8 exits) |
 | S404 (GapDown_OTM2) | 3d | watch | 8 | 100.0 | +66.58 | +36.49 | +43.45 | +130.48 | 0 | 8 | 8 | $+388.00 | 100.0% | building sample (8-19 exits) |
+| S364 (RubberBand_7DTE) | 7d | watch | 1 | 100.0 | +60.00 | +60.00 | +60.00 | +60.00 | 0 | 2 | 1 | $+39.00 | 100.0% | insufficient sample (<8 exits) |
 | S352 (GapDown_2DTE) | 2d | watch | 3 | 100.0 | +52.38 | +48.57 | +50.00 | +82.48 | 0 | 8 | 3 | $+60.00 | 100.0% | insufficient sample (<8 exits) |
 | S397 (GapDown_ITM1) | 3d | watch | 7 | 100.0 | +51.39 | +39.65 | +42.00 | +130.48 | 0 | 8 | 7 | $+348.00 | 100.0% | insufficient sample (<8 exits) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 10 | 18 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -64,7 +65,6 @@ _Generated 2026-07-31T15:44:34.608292_
 | S361 (RubberBand_2DTE) | 2d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 2 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S362 (RubberBand_3DTE) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 2 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S363 (RubberBand_5DTE) | 5d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S364 (RubberBand_7DTE) | 7d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 2 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S365 (RubberBand_14DTE) | 14d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 2 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S366 (RubberBand_21DTE) | 21d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S367 (RubberBand_30DTE) | 30d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -262,7 +262,7 @@ _Pipeline evaluation as of 2026-07-31. Auto-kill thresholds: median<-25% at n>=1
 | S350 | GapDown_0DTE | 4 | -64.71% | 0% | WATCH | 0 |
 | S351 | GapDown_1DTE | 5 | -52.94% | 0% | WATCH | 0 |
 | S352 | GapDown_2DTE | 3 | +52.38% | 100% | WATCH | 0 |
-| S353 | GapDown_3DTE | 1 | +78.95% | 100% | WATCH | 0 |
+| S353 | GapDown_3DTE | 2 | +101.31% | 100% | WATCH | 0 |
 | S354 | GapDown_5DTE | 7 | +143.18% | 100% | WATCH | 0 |
 | S355 | GapDown_7DTE | 8 | +163.07% | 100% | WATCH | 0 |
 | S356 | GapDown_14DTE | 0 | — | — | NEW | 0 |
@@ -273,7 +273,7 @@ _Pipeline evaluation as of 2026-07-31. Auto-kill thresholds: median<-25% at n>=1
 | S361 | RubberBand_2DTE | 0 | — | — | NEW | 0 |
 | S362 | RubberBand_3DTE | 0 | — | — | NEW | 0 |
 | S363 | RubberBand_5DTE | 0 | — | — | NEW | 0 |
-| S364 | RubberBand_7DTE | 0 | — | — | NEW | 0 |
+| S364 | RubberBand_7DTE | 1 | +60.00% | 100% | WATCH | 0 |
 | S365 | RubberBand_14DTE | 0 | — | — | NEW | 0 |
 | S366 | RubberBand_21DTE | 0 | — | — | NEW | 0 |
 | S367 | RubberBand_30DTE | 0 | — | — | NEW | 0 |
