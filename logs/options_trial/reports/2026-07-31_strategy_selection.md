@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-31
 
-_Generated 2026-07-31T10:52:10.752753_
+_Generated 2026-07-31T10:57:26.640994_
 
 ## Summary
 
@@ -31,7 +31,7 @@ _Generated 2026-07-31T10:52:10.752753_
 | S175 (Earnings Drift call 3 DTE) | 3d ATM earnings drift | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S200 (GapDown_Aggressive) | 3d ATM gap-aggr | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S201 (GapDown_Mild) | 3d ATM gap-mild | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 4 | 10 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 4 | 12 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S204 (GapUp_Continuation) | 3d ATM gap-up cont | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S205 (GapDown_HighVol) | 3d ATM gap-highvol | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S206 (GapDown_WithTrend) | 3d ATM gap-trend | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -53,7 +53,7 @@ _Generated 2026-07-31T10:52:10.752753_
 | S353 (GapDown_3DTE) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 6 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S354 (GapDown_5DTE) | 5d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 6 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S355 (GapDown_7DTE) | 7d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 6 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S356 (GapDown_14DTE) | 14d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 2 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S356 (GapDown_14DTE) | 14d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 4 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S357 (GapDown_21DTE) | 21d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 0 | 6 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S358 (GapDown_30DTE) | 30d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S359 (RubberBand_0DTE) | 0d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -184,7 +184,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S203 | 3d ATM gap-up fade (put) | 0 | +0.00 | +0.00 | +0.00 | 10 | 0 |
+| S203 | 3d ATM gap-up fade (put) | 0 | +0.00 | +0.00 | +0.00 | 12 | 0 |
 | S214 | 3d ATM death cross (put) | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
 ### Phase-1 MA family

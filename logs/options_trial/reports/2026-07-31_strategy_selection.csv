@@ -10,7 +10,7 @@ S172,Trend Resumption call 3 DTE,3d ATM trend resume,watch,insufficient sample (
 S175,Earnings Drift call 3 DTE,3d ATM earnings drift,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S200,GapDown_Aggressive,3d ATM gap-aggr,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S201,GapDown_Mild,3d ATM gap-mild,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
-S203,GapUp_Fade,3d ATM gap-up fade (put),watch,insufficient sample (<8 exits),10,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,4,10,0,0,0.0
+S203,GapUp_Fade,3d ATM gap-up fade (put),watch,insufficient sample (<8 exits),12,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,4,12,0,0,0.0
 S204,GapUp_Continuation,3d ATM gap-up cont,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S205,GapDown_HighVol,3d ATM gap-highvol,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S206,GapDown_WithTrend,3d ATM gap-trend,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
@@ -32,7 +32,7 @@ S352,GapDown_2DTE,2d,watch,insufficient sample (<8 exits),4,0,0,0,0.0,0.0,0.0,0.
 S353,GapDown_3DTE,3d,watch,insufficient sample (<8 exits),6,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,6,0,0,0.0
 S354,GapDown_5DTE,5d,watch,insufficient sample (<8 exits),6,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,6,0,0,0.0
 S355,GapDown_7DTE,7d,watch,insufficient sample (<8 exits),6,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,6,0,0,0.0
-S356,GapDown_14DTE,14d,watch,insufficient sample (<8 exits),2,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,2,0,0,0.0
+S356,GapDown_14DTE,14d,watch,insufficient sample (<8 exits),4,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,4,0,0,0.0
 S357,GapDown_21DTE,21d,watch,insufficient sample (<8 exits),6,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,6,0,0,0.0
 S358,GapDown_30DTE,30d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S359,RubberBand_0DTE,0d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
