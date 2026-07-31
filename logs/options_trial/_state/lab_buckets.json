@@ -1346,8 +1346,8 @@
   {
     "bucket_id": 224,
     "profile": "lab0224_s400_w3_1045_1120_r1",
-    "open_premium": 15.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 225,
