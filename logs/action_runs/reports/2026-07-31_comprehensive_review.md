@@ -2542,3 +2542,44 @@ Fetched daily bars for 114/117 symbols
 ```
 
 ---
+
+## Run 20260731T133824Z
+
+- UTC timestamp: `20260731T133824Z`
+- GitHub run: [#5684](https://github.com/28twagg-ops/TradingBot/actions/runs/30635037159)
+- Run id: `30635037159`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-31T09:25:43.256247-04:00","date":"2026-07-31","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.7,"phases_s":{"reconcile":0.33},"signals":0,"placed":0,"equity":131571.98,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"5682","github_run_id":"30634356825","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:38:25  INFO      Mode: morning_prep
+13:38:27  INFO        [prep_positions] 1/1 (1 valid)
+13:38:27  INFO      Fetching tickers (universe=both)...
+13:38:27  INFO        S&P 500: 503
+13:38:27  INFO        MidCap 400: 400
+13:38:27  INFO        Total: 903 tickers
+13:38:29  INFO        [prep_universe] 40/902 (40 valid)
+13:38:30  INFO        [prep_universe] 80/902 (80 valid)
+13:38:31  INFO        [prep_universe] 120/902 (120 valid)
+13:38:33  INFO        [prep_universe] 160/902 (160 valid)
+13:38:34  INFO        [prep_universe] 200/902 (199 valid)
+13:38:41  INFO        [prep_universe] 240/902 (238 valid)
+13:38:52  INFO        [prep_universe] 280/902 (278 valid)
+13:39:05  INFO        [prep_universe] 320/902 (318 valid)
+13:39:18  INFO        [prep_universe] 360/902 (358 valid)
+13:39:29  INFO        [prep_universe] 400/902 (397 valid)
+13:39:42  INFO        [prep_universe] 440/902 (437 valid)
+13:39:52  INFO        [prep_universe] 480/902 (477 valid)
+13:40:06  INFO        [prep_universe] 520/902 (517 valid)
+13:40:16  INFO        [prep_universe] 560/902 (557 valid)
+```
+
+### Options bot full output
+
+```text
