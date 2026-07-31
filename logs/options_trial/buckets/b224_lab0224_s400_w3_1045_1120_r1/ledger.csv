@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-31 14:47:00.335900+00:00,entry,224,lab0224_s400_w3_1045_1120_r1,S400,b51c92dc5c2d,AMZN,AMZN260803C00290000,1,0.16,0.15,15.0,,,,-0.01,,0.75,-0.75,0.060606060606060656,green VZ=0.9 >MA50,31f513df-9349-4db1-8ff0-9d484a8e0f34

@@ -4269,3 +4269,662 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-07-31.log
 elapsed=62.9s reconcile=0.28s cancel=0.08s manage=7.48s scan=35.98s entries=18.45s
 
+=== 10:45:54 ET — entry+manage (34 new) [elapsed=160.3s reconcile=0.17s cancel=0.04s manage=7.64s scan=53.57s entries=94.63s] ===
+=== options_morning_bot (PAPER) 2026-07-31T10:45:54.158935-04:00 ===
+
+[Run context]
+Paper auth OK — equity $129196.06, account PA36KS87UPRS
+  reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1
+
+[Setup]
+Active buckets: 1024 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419
+Dropped (no new entries; ex-reflected P&L): S173, S174
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 114/117 symbols
+Found 255 signal(s); top: ['S165:COIN', 'S165:MSTR', 'S165:RBLX', 'S165:AAPL', 'S165:XOM', 'S165:SYK', 'S165:ES', 'S164:COIN']
+Paper lab: $129498 broker equity -> 1024 bucket(s) ($500 virtual each, unlimited paper)
+  [b20|lab0020_s202_w3_1045_1120_r1] S202 COIN (tier: fast): no tradeable call
+  [b21|lab0021_s202_w3_1045_1120_r2] S202 COIN (tier: fast): no tradeable call
+  [b20|lab0020_s202_w3_1045_1120_r1] S202 RBLX (tier: fast): no tradeable call
+  [b21|lab0021_s202_w3_1045_1120_r2] S202 RBLX (tier: fast): no tradeable call
+  ENTRY [b20|lab0020_s202_w3_1045_1120_r1|S202] BUY 1x AAPL260803C00315000 (gap -8.6%|neutral) limit=0.35 (ask=0.36 off=-0.01) tp=+50% sl=-50% pending id=4dfdd118-4cda-41a2-8072-22eaf25ea298
+  ENTRY [b21|lab0021_s202_w3_1045_1120_r2|S202] BUY 1x AAPL260803C00315000 (gap -8.6%|neutral) limit=0.35 (ask=0.36 off=-0.01) tp=+50% sl=-50% pending id=17c15a07-c891-4de7-ae4e-a92b46a2ff06
+  [b28|lab0028_s203_w3_1045_1120_r1] S203 AMD (tier: fast): no tradeable put
+  [b29|lab0029_s203_w3_1045_1120_r2] S203 AMD (tier: fast): no tradeable put
+  ENTRY [b28|lab0028_s203_w3_1045_1120_r1|S203] BUY 1x SMCI260807P00025500 (gap +3.3% red close|fast) limit=0.55 (ask=0.56 off=-0.01) tp=+75% sl=-75% pending id=53787570-46d7-4a4a-9d7d-e0d6099033af
+  ENTRY [b29|lab0029_s203_w3_1045_1120_r2|S203] BUY 1x SMCI260807P00025500 (gap +3.3% red close|fast) limit=0.55 (ask=0.56 off=-0.01) tp=+75% sl=-75% pending id=bb142429-795e-49b4-83f6-f3fb6ff0c91e
+  [b58|lab0058_s207_w2_1005_1045_r1] S207 ES (tier: slow): no tradeable call
+  [b59|lab0059_s207_w2_1005_1045_r2] S207 ES (tier: slow): no tradeable call
+  [b60|lab0060_s207_w3_1045_1120_r1] S207 ES (tier: slow): no tradeable call
+  [b61|lab0061_s207_w3_1045_1120_r2] S207 ES (tier: slow): no tradeable call
+  [b82|lab0082_s210_w2_1005_1045_r1] S210 PEP (tier: slow): no tradeable call
+  [b83|lab0083_s210_w2_1005_1045_r2] S210 PEP (tier: slow): no tradeable call
+  [b84|lab0084_s210_w3_1045_1120_r1] S210 PEP (tier: slow): no tradeable call
+  [b85|lab0085_s210_w3_1045_1120_r2] S210 PEP (tier: slow): no tradeable call
+  [b82|lab0082_s210_w2_1005_1045_r1] S210 KMB (tier: slow): no tradeable call
+  [b83|lab0083_s210_w2_1005_1045_r2] S210 KMB (tier: slow): no tradeable call
+  [b84|lab0084_s210_w3_1045_1120_r1] S210 KMB (tier: slow): no tradeable call
+  [b85|lab0085_s210_w3_1045_1120_r2] S210 KMB (tier: slow): no tradeable call
+  [b96|lab0096_s211_w2_1005_1045_r1] S211 COP (tier: neutral): no tradeable call
+  [b97|lab0097_s211_w2_1005_1045_r2] S211 COP (tier: neutral): no tradeable call
+  [b98|lab0098_s211_w3_1045_1120_r1] S211 COP (tier: neutral): no tradeable call
+  [b99|lab0099_s211_w3_1045_1120_r2] S211 COP (tier: neutral): no tradeable call
+  ENTRY [b112|lab0112_s212_w3_1045_1120_r1|S212] BUY 1x OXY260807C00059000 (low=55.55 MA50=54.74 touch+green|neutral) limit=0.64 (ask=0.65 off=-0.01) tp=+50% sl=-50% pending id=7f49e93c-316c-45dd-9f33-e4fc91f37338
+  ENTRY [b113|lab0113_s212_w3_1045_1120_r2|S212] BUY 1x OXY260807C00059000 (low=55.55 MA50=54.74 touch+green|neutral) limit=0.64 (ask=0.65 off=-0.01) tp=+50% sl=-50% pending id=d80861d1-9d45-41ae-945b-3ea792e85397
+  [b166|lab0166_s216_w2_1005_1045_r1] S216 ARM (tier: fast): no tradeable call
+  [b167|lab0167_s216_w2_1005_1045_r2] S216 ARM (tier: fast): no tradeable call
+  [b168|lab0168_s216_w3_1045_1120_r1] S216 ARM (tier: fast): no tradeable call
+  [b169|lab0169_s216_w3_1045_1120_r2] S216 ARM (tier: fast): no tradeable call
+  [b182|lab0182_s217_w3_1045_1120_r1] S217 META (tier: fast): no tradeable call
+  [b183|lab0183_s217_w3_1045_1120_r2] S217 META (tier: fast): no tradeable call
+  [b196|lab0196_s218_w3_1045_1120_r1] S218 META (tier: fast): no tradeable call
+  [b197|lab0197_s218_w3_1045_1120_r2] S218 META (tier: fast): no tradeable call
+  [b196|lab0196_s218_w3_1045_1120_r1] S218 CL (tier: slow): no tradeable call
+  [b197|lab0197_s218_w3_1045_1120_r2] S218 CL (tier: slow): no tradeable call
+  [b196|lab0196_s218_w3_1045_1120_r1] S218 SO (tier: slow): no tradeable call
+  [b197|lab0197_s218_w3_1045_1120_r2] S218 SO (tier: slow): no tradeable call
+  [b196|lab0196_s218_w3_1045_1120_r1] S218 D (tier: slow): no tradeable call
+  [b197|lab0197_s218_w3_1045_1120_r2] S218 D (tier: slow): no tradeable call
+  [b196|lab0196_s218_w3_1045_1120_r1] S218 AEP (tier: slow): no tradeable call
+  [b197|lab0197_s218_w3_1045_1120_r2] S218 AEP (tier: slow): no tradeable call
+  [b196|lab0196_s218_w3_1045_1120_r1] S218 EXC (tier: slow): no tradeable call
+  [b197|lab0197_s218_w3_1045_1120_r2] S218 EXC (tier: slow): no tradeable call
+  [b196|lab0196_s218_w3_1045_1120_r1] S218 XEL (tier: slow): no tradeable call
+  [b197|lab0197_s218_w3_1045_1120_r2] S218 XEL (tier: slow): no tradeable call
+  [b196|lab0196_s218_w3_1045_1120_r1] S218 WEC (tier: slow): no tradeable call
+  [b197|lab0197_s218_w3_1045_1120_r2] S218 WEC (tier: slow): no tradeable call
+  [b196|lab0196_s218_w3_1045_1120_r1] S218 ES (tier: slow): no tradeable call
+  [b197|lab0197_s218_w3_1045_1120_r2] S218 ES (tier: slow): no tradeable call
+  [b196|lab0196_s218_w3_1045_1120_r1] S218 ED (tier: slow): no tradeable call
+  [b197|lab0197_s218_w3_1045_1120_r2] S218 ED (tier: slow): no tradeable call
+  ENTRY [b224|lab0224_s400_w3_1045_1120_r1|S400] BUY 1x AMZN260803C00290000 (green VZ=0.9 >MA50|fast) limit=0.16 (ask=0.17 off=-0.01) tp=+75% sl=-75% pending id=31f513df-9349-4db1-8ff0-9d484a8e0f34
+  ENTRY [b225|lab0225_s400_w3_1045_1120_r2|S400] BUY 1x AMZN260803C00290000 (green VZ=0.9 >MA50|fast) limit=0.16 (ask=0.17 off=-0.01) tp=+75% sl=-75% pending id=f7683854-b2bb-48d3-b527-7038ba3e6ccd
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 PATH (tier: fast): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 PATH (tier: fast): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 BILL (tier: fast): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 BILL (tier: fast): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 V (tier: neutral): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 V (tier: neutral): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 MA (tier: neutral): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 MA (tier: neutral): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 HON (tier: neutral): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 HON (tier: neutral): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 MRK (tier: slow): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 MRK (tier: slow): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 ZTS (tier: neutral): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 ZTS (tier: neutral): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 KO (tier: slow): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 KO (tier: slow): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 WMT (tier: slow): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 WMT (tier: slow): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 COST (tier: slow): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 COST (tier: slow): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 CL (tier: slow): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 CL (tier: slow): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 KMB (tier: slow): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 KMB (tier: slow): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 SJM (tier: slow): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 SJM (tier: slow): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 MKC (tier: slow): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 MKC (tier: slow): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 MDLZ (tier: slow): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 MDLZ (tier: slow): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 D (tier: slow): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 D (tier: slow): no tradeable call
+  [b238|lab0238_s401_w3_1045_1120_r1] S401 ED (tier: slow): no tradeable call
+  [b239|lab0239_s401_w3_1045_1120_r2] S401 ED (tier: slow): no tradeable call
+  ENTRY [b266|lab0266_s403_w3_1045_1120_r1|S403] BUY 1x T260807C00023000 (touch MA50 green|slow) limit=0.72 (ask=0.73 off=-0.01) tp=+30% sl=-30% pending id=304bd6a9-5bf3-46cc-b698-7a73f4915c13
+  ENTRY [b267|lab0267_s403_w3_1045_1120_r2|S403] BUY 1x T260807C00023000 (touch MA50 green|slow) limit=0.72 (ask=0.73 off=-0.01) tp=+30% sl=-30% pending id=3bf9924e-e555-44da-b0f6-34db2500d36f
+  [b284|lab0284_s351_w3_1045_1120_r1] S351 COIN (tier: fast): no tradeable call
+  [b285|lab0285_s351_w3_1045_1120_r2] S351 COIN (tier: fast): no tradeable call
+  ENTRY [b284|lab0284_s351_w3_1045_1120_r1|S351] BUY 1x MSTR260731C00099000 (gap -2.9%|fast) limit=0.04 (ask=0.05 off=-0.01) tp=+75% sl=-75% pending id=a3f0fb74-1707-4858-8706-365fa09de0b3
+  ENTRY [b285|lab0285_s351_w3_1045_1120_r2|S351] BUY 1x MSTR260731C00099000 (gap -2.9%|fast) limit=0.04 (ask=0.05 off=-0.01) tp=+75% sl=-75% pending id=6c352a28-c65f-4d21-a9e8-e2388100ea32
+  [b292|lab0292_s352_w3_1045_1120_r1] S352 COIN (tier: fast): no tradeable call
+  [b293|lab0293_s352_w3_1045_1120_r2] S352 COIN (tier: fast): no tradeable call
+  [b292|lab0292_s352_w3_1045_1120_r1] S352 MSTR (tier: fast): no tradeable call
+  [b293|lab0293_s352_w3_1045_1120_r2] S352 MSTR (tier: fast): no tradeable call
+  [b292|lab0292_s352_w3_1045_1120_r1] S352 RBLX (tier: fast): no tradeable call
+  [b293|lab0293_s352_w3_1045_1120_r2] S352 RBLX (tier: fast): no tradeable call
+  ENTRY [b292|lab0292_s352_w3_1045_1120_r1|S352] BUY 1x AAPL260803C00317500 (gap -8.6%|neutral) limit=0.20 (ask=0.21 off=-0.01) tp=+50% sl=-50% pending id=ceb3011b-61ba-4c4e-8431-128c72102a1c
+  ENTRY [b293|lab0293_s352_w3_1045_1120_r2|S352] BUY 1x AAPL260803C00317500 (gap -8.6%|neutral) limit=0.20 (ask=0.21 off=-0.01) tp=+50% sl=-50% pending id=d74d3422-703d-4cb2-b744-09afe4667d68
+  [b300|lab0300_s353_w3_1045_1120_r1] S353 COIN (tier: fast): no tradeable call
+  [b301|lab0301_s353_w3_1045_1120_r2] S353 COIN (tier: fast): no tradeable call
+  [b300|lab0300_s353_w3_1045_1120_r1] S353 MSTR (tier: fast): no tradeable call
+  [b301|lab0301_s353_w3_1045_1120_r2] S353 MSTR (tier: fast): no tradeable call
+  [b300|lab0300_s353_w3_1045_1120_r1] S353 RBLX (tier: fast): no tradeable call
+  [b301|lab0301_s353_w3_1045_1120_r2] S353 RBLX (tier: fast): no tradeable call
+  ENTRY [b300|lab0300_s353_w3_1045_1120_r1|S353] BUY 1x AAPL260803C00315000 (gap -8.6%|neutral) limit=0.35 (ask=0.36 off=-0.01) tp=+50% sl=-50% pending id=6bcc071b-7a0f-4b71-9d15-604070a571f5
+  ENTRY [b301|lab0301_s353_w3_1045_1120_r2|S353] BUY 1x AAPL260803C00315000 (gap -8.6%|neutral) limit=0.35 (ask=0.36 off=-0.01) tp=+50% sl=-50% pending id=9a6974c6-fcda-4ca3-b3c0-e1aa14bcf663
+  ENTRY [b308|lab0308_s354_w3_1045_1120_r1|S354] BUY 1x COIN260807C00165000 (gap -6.4%|fast) limit=0.49 (ask=0.50 off=-0.01) tp=+75% sl=-75% pending id=66a29f59-5d63-404f-801c-7c228da9efd0
+  ENTRY [b309|lab0309_s354_w3_1045_1120_r2|S354] BUY 1x COIN260807C00165000 (gap -6.4%|fast) limit=0.49 (ask=0.50 off=-0.01) tp=+75% sl=-75% pending id=f55b3076-d631-4e88-b0b9-db4538946f1c
+  ENTRY [b316|lab0316_s355_w3_1045_1120_r1|S355] BUY 1x COIN260807C00165000 (gap -6.4%|fast) limit=0.49 (ask=0.50 off=-0.01) tp=+75% sl=-75% pending id=bfa526cd-687d-4bd6-b6d9-e10503777eb2
+  ENTRY [b317|lab0317_s355_w3_1045_1120_r2|S355] BUY 1x COIN260807C00165000 (gap -6.4%|fast) limit=0.49 (ask=0.50 off=-0.01) tp=+75% sl=-75% pending id=c2bc33d7-be0a-4d81-8d8c-be4ad1c3590f
+  [b324|lab0324_s356_w3_1045_1120_r1] S356 COIN (tier: fast): no tradeable call
+  [b325|lab0325_s356_w3_1045_1120_r2] S356 COIN (tier: fast): no tradeable call
+  [b324|lab0324_s356_w3_1045_1120_r1] S356 MSTR (tier: fast): no tradeable call
+  [b325|lab0325_s356_w3_1045_1120_r2] S356 MSTR (tier: fast): no tradeable call
+  [b324|lab0324_s356_w3_1045_1120_r1] S356 RBLX (tier: fast): no tradeable call
+  [b325|lab0325_s356_w3_1045_1120_r2] S356 RBLX (tier: fast): no tradeable call
+  ENTRY [b324|lab0324_s356_w3_1045_1120_r1|S356] BUY 1x AAPL260814C00330000 (gap -8.6%|neutral) limit=0.54 (ask=0.55 off=-0.01) tp=+50% sl=-50% pending id=171484bd-7fa4-4e24-b3a8-4f6bb5b48927
+  ENTRY [b325|lab0325_s356_w3_1045_1120_r2|S356] BUY 1x AAPL260814C00330000 (gap -8.6%|neutral) limit=0.54 (ask=0.55 off=-0.01) tp=+50% sl=-50% pending id=82a7abe0-2e0a-45a9-b428-8ef987fbb79a
+  [b332|lab0332_s357_w3_1045_1120_r1] S357 COIN (tier: fast): no tradeable call
+  [b333|lab0333_s357_w3_1045_1120_r2] S357 COIN (tier: fast): no tradeable call
+  [b332|lab0332_s357_w3_1045_1120_r1] S357 MSTR (tier: fast): no tradeable call
+  [b333|lab0333_s357_w3_1045_1120_r2] S357 MSTR (tier: fast): no tradeable call
+  [b332|lab0332_s357_w3_1045_1120_r1] S357 RBLX (tier: fast): no tradeable call
+  [b333|lab0333_s357_w3_1045_1120_r2] S357 RBLX (tier: fast): no tradeable call
+  ENTRY [b332|lab0332_s357_w3_1045_1120_r1|S357] BUY 1x AAPL260821C00335000 (gap -8.6%|neutral) limit=0.62 (ask=0.63 off=-0.01) tp=+50% sl=-50% pending id=33638c3a-aa85-4f4c-9a38-b8493ce23d36
+  ENTRY [b333|lab0333_s357_w3_1045_1120_r2|S357] BUY 1x AAPL260821C00335000 (gap -8.6%|neutral) limit=0.62 (ask=0.63 off=-0.01) tp=+50% sl=-50% pending id=1ed51b1a-9f60-4aca-aa64-fa0303c78743
+  [b338|lab0338_s358_w2_1005_1045_r1] S358 COIN (tier: fast): no tradeable call
+  [b339|lab0339_s358_w2_1005_1045_r2] S358 COIN (tier: fast): no tradeable call
+  [b340|lab0340_s358_w3_1045_1120_r1] S358 COIN (tier: fast): no tradeable call
+  [b341|lab0341_s358_w3_1045_1120_r2] S358 COIN (tier: fast): no tradeable call
+  [b338|lab0338_s358_w2_1005_1045_r1] S358 MSTR (tier: fast): no tradeable call
+  [b339|lab0339_s358_w2_1005_1045_r2] S358 MSTR (tier: fast): no tradeable call
+  [b340|lab0340_s358_w3_1045_1120_r1] S358 MSTR (tier: fast): no tradeable call
+  [b341|lab0341_s358_w3_1045_1120_r2] S358 MSTR (tier: fast): no tradeable call
+  [b338|lab0338_s358_w2_1005_1045_r1] S358 RBLX (tier: fast): no tradeable call
+  [b339|lab0339_s358_w2_1005_1045_r2] S358 RBLX (tier: fast): no tradeable call
+  [b340|lab0340_s358_w3_1045_1120_r1] S358 RBLX (tier: fast): no tradeable call
+  [b341|lab0341_s358_w3_1045_1120_r2] S358 RBLX (tier: fast): no tradeable call
+  [b338|lab0338_s358_w2_1005_1045_r1] S358 AAPL (tier: neutral): no tradeable call
+  [b339|lab0339_s358_w2_1005_1045_r2] S358 AAPL (tier: neutral): no tradeable call
+  [b340|lab0340_s358_w3_1045_1120_r1] S358 AAPL (tier: neutral): no tradeable call
+  [b341|lab0341_s358_w3_1045_1120_r2] S358 AAPL (tier: neutral): no tradeable call
+  [b338|lab0338_s358_w2_1005_1045_r1] S358 XOM (tier: neutral): no tradeable call
+  [b339|lab0339_s358_w2_1005_1045_r2] S358 XOM (tier: neutral): no tradeable call
+  [b340|lab0340_s358_w3_1045_1120_r1] S358 XOM (tier: neutral): no tradeable call
+  [b341|lab0341_s358_w3_1045_1120_r2] S358 XOM (tier: neutral): no tradeable call
+  [b338|lab0338_s358_w2_1005_1045_r1] S358 SYK (tier: neutral): no tradeable call
+  [b339|lab0339_s358_w2_1005_1045_r2] S358 SYK (tier: neutral): no tradeable call
+  [b340|lab0340_s358_w3_1045_1120_r1] S358 SYK (tier: neutral): no tradeable call
+  [b341|lab0341_s358_w3_1045_1120_r2] S358 SYK (tier: neutral): no tradeable call
+  [b338|lab0338_s358_w2_1005_1045_r1] S358 ES (tier: slow): no tradeable call
+  [b339|lab0339_s358_w2_1005_1045_r2] S358 ES (tier: slow): no tradeable call
+  [b340|lab0340_s358_w3_1045_1120_r1] S358 ES (tier: slow): no tradeable call
+  [b341|lab0341_s358_w3_1045_1120_r2] S358 ES (tier: slow): no tradeable call
+  [b346|lab0346_s359_w2_1005_1045_r1] S359 MA (tier: neutral): no tradeable call
+  [b347|lab0347_s359_w2_1005_1045_r2] S359 MA (tier: neutral): no tradeable call
+  [b346|lab0346_s359_w2_1005_1045_r1] S359 ABBV (tier: neutral): no tradeable call
+  [b347|lab0347_s359_w2_1005_1045_r2] S359 ABBV (tier: neutral): no tradeable call
+  [b346|lab0346_s359_w2_1005_1045_r1] S359 ES (tier: slow): no tradeable call
+  [b347|lab0347_s359_w2_1005_1045_r2] S359 ES (tier: slow): no tradeable call
+  [b350|lab0350_s360_w2_1005_1045_r1] S360 MA (tier: neutral): no tradeable call
+  [b351|lab0351_s360_w2_1005_1045_r2] S360 MA (tier: neutral): no tradeable call
+  [b352|lab0352_s360_w3_1045_1120_r1] S360 MA (tier: neutral): no tradeable call
+  [b353|lab0353_s360_w3_1045_1120_r2] S360 MA (tier: neutral): no tradeable call
+  [b350|lab0350_s360_w2_1005_1045_r1] S360 ABBV (tier: neutral): no tradeable call
+  [b351|lab0351_s360_w2_1005_1045_r2] S360 ABBV (tier: neutral): no tradeable call
+  [b352|lab0352_s360_w3_1045_1120_r1] S360 ABBV (tier: neutral): no tradeable call
+  [b353|lab0353_s360_w3_1045_1120_r2] S360 ABBV (tier: neutral): no tradeable call
+  [b350|lab0350_s360_w2_1005_1045_r1] S360 ES (tier: slow): no tradeable call
+  [b351|lab0351_s360_w2_1005_1045_r2] S360 ES (tier: slow): no tradeable call
+  [b352|lab0352_s360_w3_1045_1120_r1] S360 ES (tier: slow): no tradeable call
+  [b353|lab0353_s360_w3_1045_1120_r2] S360 ES (tier: slow): no tradeable call
+  [b364|lab0364_s361_w2_1005_1045_r1] S361 MA (tier: neutral): no tradeable call
+  [b365|lab0365_s361_w2_1005_1045_r2] S361 MA (tier: neutral): no tradeable call
+  [b366|lab0366_s361_w3_1045_1120_r1] S361 MA (tier: neutral): no tradeable call
+  [b367|lab0367_s361_w3_1045_1120_r2] S361 MA (tier: neutral): no tradeable call
+  [b364|lab0364_s361_w2_1005_1045_r1] S361 ABBV (tier: neutral): no tradeable call
+  [b365|lab0365_s361_w2_1005_1045_r2] S361 ABBV (tier: neutral): no tradeable call
+  [b366|lab0366_s361_w3_1045_1120_r1] S361 ABBV (tier: neutral): no tradeable call
+  [b367|lab0367_s361_w3_1045_1120_r2] S361 ABBV (tier: neutral): no tradeable call
+  [b364|lab0364_s361_w2_1005_1045_r1] S361 ES (tier: slow): no tradeable call
+  [b365|lab0365_s361_w2_1005_1045_r2] S361 ES (tier: slow): no tradeable call
+  [b366|lab0366_s361_w3_1045_1120_r1] S361 ES (tier: slow): no tradeable call
+  [b367|lab0367_s361_w3_1045_1120_r2] S361 ES (tier: slow): no tradeable call
+  [b378|lab0378_s362_w2_1005_1045_r1] S362 MA (tier: neutral): no tradeable call
+  [b379|lab0379_s362_w2_1005_1045_r2] S362 MA (tier: neutral): no tradeable call
+  [b380|lab0380_s362_w3_1045_1120_r1] S362 MA (tier: neutral): no tradeable call
+  [b381|lab0381_s362_w3_1045_1120_r2] S362 MA (tier: neutral): no tradeable call
+  [b378|lab0378_s362_w2_1005_1045_r1] S362 ABBV (tier: neutral): no tradeable call
+  [b379|lab0379_s362_w2_1005_1045_r2] S362 ABBV (tier: neutral): no tradeable call
+  [b380|lab0380_s362_w3_1045_1120_r1] S362 ABBV (tier: neutral): no tradeable call
+  [b381|lab0381_s362_w3_1045_1120_r2] S362 ABBV (tier: neutral): no tradeable call
+  [b378|lab0378_s362_w2_1005_1045_r1] S362 ES (tier: slow): no tradeable call
+  [b379|lab0379_s362_w2_1005_1045_r2] S362 ES (tier: slow): no tradeable call
+  [b380|lab0380_s362_w3_1045_1120_r1] S362 ES (tier: slow): no tradeable call
+  [b381|lab0381_s362_w3_1045_1120_r2] S362 ES (tier: slow): no tradeable call
+  [b392|lab0392_s363_w2_1005_1045_r1] S363 MA (tier: neutral): no tradeable call
+  [b393|lab0393_s363_w2_1005_1045_r2] S363 MA (tier: neutral): no tradeable call
+  [b394|lab0394_s363_w3_1045_1120_r1] S363 MA (tier: neutral): no tradeable call
+  [b395|lab0395_s363_w3_1045_1120_r2] S363 MA (tier: neutral): no tradeable call
+  [b392|lab0392_s363_w2_1005_1045_r1] S363 ABBV (tier: neutral): no tradeable call
+  [b393|lab0393_s363_w2_1005_1045_r2] S363 ABBV (tier: neutral): no tradeable call
+  [b394|lab0394_s363_w3_1045_1120_r1] S363 ABBV (tier: neutral): no tradeable call
+  [b395|lab0395_s363_w3_1045_1120_r2] S363 ABBV (tier: neutral): no tradeable call
+  [b392|lab0392_s363_w2_1005_1045_r1] S363 ES (tier: slow): no tradeable call
+  [b393|lab0393_s363_w2_1005_1045_r2] S363 ES (tier: slow): no tradeable call
+  [b394|lab0394_s363_w3_1045_1120_r1] S363 ES (tier: slow): no tradeable call
+  [b395|lab0395_s363_w3_1045_1120_r2] S363 ES (tier: slow): no tradeable call
+  [b406|lab0406_s364_w2_1005_1045_r1] S364 MA (tier: neutral): no tradeable call
+  [b407|lab0407_s364_w2_1005_1045_r2] S364 MA (tier: neutral): no tradeable call
+  [b408|lab0408_s364_w3_1045_1120_r1] S364 MA (tier: neutral): no tradeable call
+  [b409|lab0409_s364_w3_1045_1120_r2] S364 MA (tier: neutral): no tradeable call
+  [b406|lab0406_s364_w2_1005_1045_r1] S364 ABBV (tier: neutral): no tradeable call
+  [b407|lab0407_s364_w2_1005_1045_r2] S364 ABBV (tier: neutral): no tradeable call
+  [b408|lab0408_s364_w3_1045_1120_r1] S364 ABBV (tier: neutral): no tradeable call
+  [b409|lab0409_s364_w3_1045_1120_r2] S364 ABBV (tier: neutral): no tradeable call
+  [b406|lab0406_s364_w2_1005_1045_r1] S364 ES (tier: slow): no tradeable call
+  [b407|lab0407_s364_w2_1005_1045_r2] S364 ES (tier: slow): no tradeable call
+  [b408|lab0408_s364_w3_1045_1120_r1] S364 ES (tier: slow): no tradeable call
+  [b409|lab0409_s364_w3_1045_1120_r2] S364 ES (tier: slow): no tradeable call
+  [b420|lab0420_s365_w2_1005_1045_r1] S365 MA (tier: neutral): no tradeable call
+  [b421|lab0421_s365_w2_1005_1045_r2] S365 MA (tier: neutral): no tradeable call
+  [b422|lab0422_s365_w3_1045_1120_r1] S365 MA (tier: neutral): no tradeable call
+  [b423|lab0423_s365_w3_1045_1120_r2] S365 MA (tier: neutral): no tradeable call
+  [b420|lab0420_s365_w2_1005_1045_r1] S365 ABBV (tier: neutral): no tradeable call
+  [b421|lab0421_s365_w2_1005_1045_r2] S365 ABBV (tier: neutral): no tradeable call
+  [b422|lab0422_s365_w3_1045_1120_r1] S365 ABBV (tier: neutral): no tradeable call
+  [b423|lab0423_s365_w3_1045_1120_r2] S365 ABBV (tier: neutral): no tradeable call
+  [b420|lab0420_s365_w2_1005_1045_r1] S365 ES (tier: slow): no tradeable call
+  [b421|lab0421_s365_w2_1005_1045_r2] S365 ES (tier: slow): no tradeable call
+  [b422|lab0422_s365_w3_1045_1120_r1] S365 ES (tier: slow): no tradeable call
+  [b423|lab0423_s365_w3_1045_1120_r2] S365 ES (tier: slow): no tradeable call
+  [b434|lab0434_s366_w2_1005_1045_r1] S366 MA (tier: neutral): no tradeable call
+  [b435|lab0435_s366_w2_1005_1045_r2] S366 MA (tier: neutral): no tradeable call
+  [b436|lab0436_s366_w3_1045_1120_r1] S366 MA (tier: neutral): no tradeable call
+  [b437|lab0437_s366_w3_1045_1120_r2] S366 MA (tier: neutral): no tradeable call
+  [b434|lab0434_s366_w2_1005_1045_r1] S366 ABBV (tier: neutral): no tradeable call
+  [b435|lab0435_s366_w2_1005_1045_r2] S366 ABBV (tier: neutral): no tradeable call
+  [b436|lab0436_s366_w3_1045_1120_r1] S366 ABBV (tier: neutral): no tradeable call
+  [b437|lab0437_s366_w3_1045_1120_r2] S366 ABBV (tier: neutral): no tradeable call
+  [b434|lab0434_s366_w2_1005_1045_r1] S366 ES (tier: slow): no tradeable call
+  [b435|lab0435_s366_w2_1005_1045_r2] S366 ES (tier: slow): no tradeable call
+  [b436|lab0436_s366_w3_1045_1120_r1] S366 ES (tier: slow): no tradeable call
+  [b437|lab0437_s366_w3_1045_1120_r2] S366 ES (tier: slow): no tradeable call
+  [b448|lab0448_s367_w2_1005_1045_r1] S367 MA (tier: neutral): no tradeable call
+  [b449|lab0449_s367_w2_1005_1045_r2] S367 MA (tier: neutral): no tradeable call
+  [b450|lab0450_s367_w3_1045_1120_r1] S367 MA (tier: neutral): no tradeable call
+  [b451|lab0451_s367_w3_1045_1120_r2] S367 MA (tier: neutral): no tradeable call
+  [b448|lab0448_s367_w2_1005_1045_r1] S367 ABBV (tier: neutral): no tradeable call
+  [b449|lab0449_s367_w2_1005_1045_r2] S367 ABBV (tier: neutral): no tradeable call
+  [b450|lab0450_s367_w3_1045_1120_r1] S367 ABBV (tier: neutral): no tradeable call
+  [b451|lab0451_s367_w3_1045_1120_r2] S367 ABBV (tier: neutral): no tradeable call
+  [b448|lab0448_s367_w2_1005_1045_r1] S367 ES (tier: slow): no tradeable call
+  [b449|lab0449_s367_w2_1005_1045_r2] S367 ES (tier: slow): no tradeable call
+  [b450|lab0450_s367_w3_1045_1120_r1] S367 ES (tier: slow): no tradeable call
+  [b451|lab0451_s367_w3_1045_1120_r2] S367 ES (tier: slow): no tradeable call
+  [b762|lab0762_s395_w2_1005_1045_r1] S395 COIN (tier: fast): no tradeable call
+  [b763|lab0763_s395_w2_1005_1045_r2] S395 COIN (tier: fast): no tradeable call
+  [b764|lab0764_s395_w3_1045_1120_r1] S395 COIN (tier: fast): no tradeable call
+  [b765|lab0765_s395_w3_1045_1120_r2] S395 COIN (tier: fast): no tradeable call
+  [b762|lab0762_s395_w2_1005_1045_r1] S395 MSTR (tier: fast): no tradeable call
+  [b763|lab0763_s395_w2_1005_1045_r2] S395 MSTR (tier: fast): no tradeable call
+  [b764|lab0764_s395_w3_1045_1120_r1] S395 MSTR (tier: fast): no tradeable call
+  [b765|lab0765_s395_w3_1045_1120_r2] S395 MSTR (tier: fast): no tradeable call
+  [b762|lab0762_s395_w2_1005_1045_r1] S395 RBLX (tier: fast): no tradeable call
+  [b763|lab0763_s395_w2_1005_1045_r2] S395 RBLX (tier: fast): no tradeable call
+  [b764|lab0764_s395_w3_1045_1120_r1] S395 RBLX (tier: fast): no tradeable call
+  [b765|lab0765_s395_w3_1045_1120_r2] S395 RBLX (tier: fast): no tradeable call
+  [b762|lab0762_s395_w2_1005_1045_r1] S395 AAPL (tier: neutral): no tradeable call
+  [b763|lab0763_s395_w2_1005_1045_r2] S395 AAPL (tier: neutral): no tradeable call
+  [b764|lab0764_s395_w3_1045_1120_r1] S395 AAPL (tier: neutral): no tradeable call
+  [b765|lab0765_s395_w3_1045_1120_r2] S395 AAPL (tier: neutral): no tradeable call
+  [b762|lab0762_s395_w2_1005_1045_r1] S395 XOM (tier: neutral): no tradeable call
+  [b763|lab0763_s395_w2_1005_1045_r2] S395 XOM (tier: neutral): no tradeable call
+  [b764|lab0764_s395_w3_1045_1120_r1] S395 XOM (tier: neutral): no tradeable call
+  [b765|lab0765_s395_w3_1045_1120_r2] S395 XOM (tier: neutral): no tradeable call
+  [b762|lab0762_s395_w2_1005_1045_r1] S395 SYK (tier: neutral): no tradeable call
+  [b763|lab0763_s395_w2_1005_1045_r2] S395 SYK (tier: neutral): no tradeable call
+  [b764|lab0764_s395_w3_1045_1120_r1] S395 SYK (tier: neutral): no tradeable call
+  [b765|lab0765_s395_w3_1045_1120_r2] S395 SYK (tier: neutral): no tradeable call
+  [b762|lab0762_s395_w2_1005_1045_r1] S395 ES (tier: slow): no tradeable call
+  [b763|lab0763_s395_w2_1005_1045_r2] S395 ES (tier: slow): no tradeable call
+  [b764|lab0764_s395_w3_1045_1120_r1] S395 ES (tier: slow): no tradeable call
+  [b765|lab0765_s395_w3_1045_1120_r2] S395 ES (tier: slow): no tradeable call
+  [b770|lab0770_s396_w2_1005_1045_r1] S396 COIN (tier: fast): no tradeable call
+  [b771|lab0771_s396_w2_1005_1045_r2] S396 COIN (tier: fast): no tradeable call
+  [b772|lab0772_s396_w3_1045_1120_r1] S396 COIN (tier: fast): no tradeable call
+  [b773|lab0773_s396_w3_1045_1120_r2] S396 COIN (tier: fast): no tradeable call
+  [b770|lab0770_s396_w2_1005_1045_r1] S396 MSTR (tier: fast): no tradeable call
+  [b771|lab0771_s396_w2_1005_1045_r2] S396 MSTR (tier: fast): no tradeable call
+  [b772|lab0772_s396_w3_1045_1120_r1] S396 MSTR (tier: fast): no tradeable call
+  [b773|lab0773_s396_w3_1045_1120_r2] S396 MSTR (tier: fast): no tradeable call
+  [b770|lab0770_s396_w2_1005_1045_r1] S396 RBLX (tier: fast): no tradeable call
+  [b771|lab0771_s396_w2_1005_1045_r2] S396 RBLX (tier: fast): no tradeable call
+  [b772|lab0772_s396_w3_1045_1120_r1] S396 RBLX (tier: fast): no tradeable call
+  [b773|lab0773_s396_w3_1045_1120_r2] S396 RBLX (tier: fast): no tradeable call
+  [b770|lab0770_s396_w2_1005_1045_r1] S396 AAPL (tier: neutral): no tradeable call
+  [b771|lab0771_s396_w2_1005_1045_r2] S396 AAPL (tier: neutral): no tradeable call
+  [b772|lab0772_s396_w3_1045_1120_r1] S396 AAPL (tier: neutral): no tradeable call
+  [b773|lab0773_s396_w3_1045_1120_r2] S396 AAPL (tier: neutral): no tradeable call
+  [b770|lab0770_s396_w2_1005_1045_r1] S396 XOM (tier: neutral): no tradeable call
+  [b771|lab0771_s396_w2_1005_1045_r2] S396 XOM (tier: neutral): no tradeable call
+  [b772|lab0772_s396_w3_1045_1120_r1] S396 XOM (tier: neutral): no tradeable call
+  [b773|lab0773_s396_w3_1045_1120_r2] S396 XOM (tier: neutral): no tradeable call
+  [b770|lab0770_s396_w2_1005_1045_r1] S396 SYK (tier: neutral): no tradeable call
+  [b771|lab0771_s396_w2_1005_1045_r2] S396 SYK (tier: neutral): no tradeable call
+  [b772|lab0772_s396_w3_1045_1120_r1] S396 SYK (tier: neutral): no tradeable call
+  [b773|lab0773_s396_w3_1045_1120_r2] S396 SYK (tier: neutral): no tradeable call
+  [b770|lab0770_s396_w2_1005_1045_r1] S396 ES (tier: slow): no tradeable call
+  [b771|lab0771_s396_w2_1005_1045_r2] S396 ES (tier: slow): no tradeable call
+  [b772|lab0772_s396_w3_1045_1120_r1] S396 ES (tier: slow): no tradeable call
+  [b773|lab0773_s396_w3_1045_1120_r2] S396 ES (tier: slow): no tradeable call
+  ENTRY [b780|lab0780_s397_w3_1045_1120_r1|S397] BUY 1x COIN260807C00162500 (gap -6.4%|fast) limit=0.62 (ask=0.63 off=-0.01) tp=+75% sl=-75% pending id=bd1707b8-4489-428e-b442-4f60fbb7877d
+  ENTRY [b781|lab0781_s397_w3_1045_1120_r2|S397] BUY 1x COIN260807C00162500 (gap -6.4%|fast) limit=0.62 (ask=0.63 off=-0.01) tp=+75% sl=-75% pending id=c6bbbf7c-366f-40a1-8b25-c086271ff250
+  ENTRY [b788|lab0788_s398_w3_1045_1120_r1|S398] BUY 1x COIN260807C00165000 (gap -6.4%|fast) limit=0.46 (ask=0.47 off=-0.01) tp=+75% sl=-75% pending id=b4e235bf-e9b7-49a3-9eda-29226561c3d5
+  ENTRY [b789|lab0789_s398_w3_1045_1120_r2|S398] BUY 1x COIN260807C00165000 (gap -6.4%|fast) limit=0.46 (ask=0.47 off=-0.01) tp=+75% sl=-75% pending id=4db076e1-340f-4181-b8b1-cbbec1a8a90e
+  ENTRY [b796|lab0796_s399_w3_1045_1120_r1|S399] BUY 1x COIN260807C00172500 (gap -6.4%|fast) limit=0.20 (ask=0.21 off=-0.01) tp=+75% sl=-75% pending id=f55ffca0-4f06-4ed9-9166-e53e8f9f5769
+  ENTRY [b797|lab0797_s399_w3_1045_1120_r2|S399] BUY 1x COIN260807C00172500 (gap -6.4%|fast) limit=0.20 (ask=0.21 off=-0.01) tp=+75% sl=-75% pending id=dfa6bbcc-2abb-465d-831c-060c91ae19fa
+  ENTRY [b804|lab0804_s404_w3_1045_1120_r1|S404] BUY 1x COIN260807C00162500 (gap -6.4%|fast) limit=0.62 (ask=0.63 off=-0.01) tp=+75% sl=-75% pending id=2774b092-c956-42d0-87d2-66cdc85e1b03
+  ENTRY [b805|lab0805_s404_w3_1045_1120_r2|S404] BUY 1x COIN260807C00162500 (gap -6.4%|fast) limit=0.62 (ask=0.63 off=-0.01) tp=+75% sl=-75% pending id=2bc83345-93da-4da3-b207-f07ebaed32ca
+  ENTRY [b818|lab0818_s405_w3_1045_1120_r1|S405] BUY 1x COIN260807C00165000 (gap -6.4%|fast) limit=0.46 (ask=0.47 off=-0.01) tp=+75% sl=-75% pending id=e0c37705-5a63-4d55-9856-5bb4b4b8462b
+  ENTRY [b819|lab0819_s405_w3_1045_1120_r2|S405] BUY 1x COIN260807C00165000 (gap -6.4%|fast) limit=0.46 (ask=0.47 off=-0.01) tp=+75% sl=-75% pending id=616ec3c5-6761-4fdf-978f-ab54b40cafcc
+  [b830|lab0830_s406_w2_1005_1045_r1] S406 MA (tier: neutral): no tradeable call
+  [b831|lab0831_s406_w2_1005_1045_r2] S406 MA (tier: neutral): no tradeable call
+  [b832|lab0832_s406_w3_1045_1120_r1] S406 MA (tier: neutral): no tradeable call
+  [b833|lab0833_s406_w3_1045_1120_r2] S406 MA (tier: neutral): no tradeable call
+  [b830|lab0830_s406_w2_1005_1045_r1] S406 ABBV (tier: neutral): no tradeable call
+  [b831|lab0831_s406_w2_1005_1045_r2] S406 ABBV (tier: neutral): no tradeable call
+  [b832|lab0832_s406_w3_1045_1120_r1] S406 ABBV (tier: neutral): no tradeable call
+  [b833|lab0833_s406_w3_1045_1120_r2] S406 ABBV (tier: neutral): no tradeable call
+  [b830|lab0830_s406_w2_1005_1045_r1] S406 ES (tier: slow): no tradeable call
+  [b831|lab0831_s406_w2_1005_1045_r2] S406 ES (tier: slow): no tradeable call
+  [b832|lab0832_s406_w3_1045_1120_r1] S406 ES (tier: slow): no tradeable call
+  [b833|lab0833_s406_w3_1045_1120_r2] S406 ES (tier: slow): no tradeable call
+  [b844|lab0844_s407_w2_1005_1045_r1] S407 MA (tier: neutral): no tradeable call
+  [b845|lab0845_s407_w2_1005_1045_r2] S407 MA (tier: neutral): no tradeable call
+  [b846|lab0846_s407_w3_1045_1120_r1] S407 MA (tier: neutral): no tradeable call
+  [b847|lab0847_s407_w3_1045_1120_r2] S407 MA (tier: neutral): no tradeable call
+  [b844|lab0844_s407_w2_1005_1045_r1] S407 ABBV (tier: neutral): no tradeable call
+  [b845|lab0845_s407_w2_1005_1045_r2] S407 ABBV (tier: neutral): no tradeable call
+  [b846|lab0846_s407_w3_1045_1120_r1] S407 ABBV (tier: neutral): no tradeable call
+  [b847|lab0847_s407_w3_1045_1120_r2] S407 ABBV (tier: neutral): no tradeable call
+  [b844|lab0844_s407_w2_1005_1045_r1] S407 ES (tier: slow): no tradeable call
+  [b845|lab0845_s407_w2_1005_1045_r2] S407 ES (tier: slow): no tradeable call
+  [b846|lab0846_s407_w3_1045_1120_r1] S407 ES (tier: slow): no tradeable call
+  [b847|lab0847_s407_w3_1045_1120_r2] S407 ES (tier: slow): no tradeable call
+  [b858|lab0858_s408_w2_1005_1045_r1] S408 MA (tier: neutral): no tradeable call
+  [b859|lab0859_s408_w2_1005_1045_r2] S408 MA (tier: neutral): no tradeable call
+  [b860|lab0860_s408_w3_1045_1120_r1] S408 MA (tier: neutral): no tradeable call
+  [b861|lab0861_s408_w3_1045_1120_r2] S408 MA (tier: neutral): no tradeable call
+  [b858|lab0858_s408_w2_1005_1045_r1] S408 ABBV (tier: neutral): no tradeable call
+  [b859|lab0859_s408_w2_1005_1045_r2] S408 ABBV (tier: neutral): no tradeable call
+  [b860|lab0860_s408_w3_1045_1120_r1] S408 ABBV (tier: neutral): no tradeable call
+  [b861|lab0861_s408_w3_1045_1120_r2] S408 ABBV (tier: neutral): no tradeable call
+  [b858|lab0858_s408_w2_1005_1045_r1] S408 ES (tier: slow): no tradeable call
+  [b859|lab0859_s408_w2_1005_1045_r2] S408 ES (tier: slow): no tradeable call
+  [b860|lab0860_s408_w3_1045_1120_r1] S408 ES (tier: slow): no tradeable call
+  [b861|lab0861_s408_w3_1045_1120_r2] S408 ES (tier: slow): no tradeable call
+  [b872|lab0872_s409_w2_1005_1045_r1] S409 MA (tier: neutral): no tradeable call
+  [b873|lab0873_s409_w2_1005_1045_r2] S409 MA (tier: neutral): no tradeable call
+  [b874|lab0874_s409_w3_1045_1120_r1] S409 MA (tier: neutral): no tradeable call
+  [b875|lab0875_s409_w3_1045_1120_r2] S409 MA (tier: neutral): no tradeable call
+  [b872|lab0872_s409_w2_1005_1045_r1] S409 ABBV (tier: neutral): no tradeable call
+  [b873|lab0873_s409_w2_1005_1045_r2] S409 ABBV (tier: neutral): no tradeable call
+  [b874|lab0874_s409_w3_1045_1120_r1] S409 ABBV (tier: neutral): no tradeable call
+  [b875|lab0875_s409_w3_1045_1120_r2] S409 ABBV (tier: neutral): no tradeable call
+  [b872|lab0872_s409_w2_1005_1045_r1] S409 ES (tier: slow): no tradeable call
+  [b873|lab0873_s409_w2_1005_1045_r2] S409 ES (tier: slow): no tradeable call
+  [b874|lab0874_s409_w3_1045_1120_r1] S409 ES (tier: slow): no tradeable call
+  [b875|lab0875_s409_w3_1045_1120_r2] S409 ES (tier: slow): no tradeable call
+  [b886|lab0886_s410_w2_1005_1045_r1] S410 MA (tier: neutral): no tradeable call
+  [b887|lab0887_s410_w2_1005_1045_r2] S410 MA (tier: neutral): no tradeable call
+  [b888|lab0888_s410_w3_1045_1120_r1] S410 MA (tier: neutral): no tradeable call
+  [b889|lab0889_s410_w3_1045_1120_r2] S410 MA (tier: neutral): no tradeable call
+  [b886|lab0886_s410_w2_1005_1045_r1] S410 ABBV (tier: neutral): no tradeable call
+  [b887|lab0887_s410_w2_1005_1045_r2] S410 ABBV (tier: neutral): no tradeable call
+  [b888|lab0888_s410_w3_1045_1120_r1] S410 ABBV (tier: neutral): no tradeable call
+  [b889|lab0889_s410_w3_1045_1120_r2] S410 ABBV (tier: neutral): no tradeable call
+  [b886|lab0886_s410_w2_1005_1045_r1] S410 ES (tier: slow): no tradeable call
+  [b887|lab0887_s410_w2_1005_1045_r2] S410 ES (tier: slow): no tradeable call
+  [b888|lab0888_s410_w3_1045_1120_r1] S410 ES (tier: slow): no tradeable call
+  [b889|lab0889_s410_w3_1045_1120_r2] S410 ES (tier: slow): no tradeable call
+  [b900|lab0900_s411_w2_1005_1045_r1] S411 MA (tier: neutral): no tradeable call
+  [b901|lab0901_s411_w2_1005_1045_r2] S411 MA (tier: neutral): no tradeable call
+  [b902|lab0902_s411_w3_1045_1120_r1] S411 MA (tier: neutral): no tradeable call
+  [b903|lab0903_s411_w3_1045_1120_r2] S411 MA (tier: neutral): no tradeable call
+  [b900|lab0900_s411_w2_1005_1045_r1] S411 ABBV (tier: neutral): no tradeable call
+  [b901|lab0901_s411_w2_1005_1045_r2] S411 ABBV (tier: neutral): no tradeable call
+  [b902|lab0902_s411_w3_1045_1120_r1] S411 ABBV (tier: neutral): no tradeable call
+  [b903|lab0903_s411_w3_1045_1120_r2] S411 ABBV (tier: neutral): no tradeable call
+  [b900|lab0900_s411_w2_1005_1045_r1] S411 ES (tier: slow): no tradeable call
+  [b901|lab0901_s411_w2_1005_1045_r2] S411 ES (tier: slow): no tradeable call
+  [b902|lab0902_s411_w3_1045_1120_r1] S411 ES (tier: slow): no tradeable call
+  [b903|lab0903_s411_w3_1045_1120_r2] S411 ES (tier: slow): no tradeable call
+  [b914|lab0914_s412_w2_1005_1045_r1] S412 MA (tier: neutral): no tradeable call
+  [b915|lab0915_s412_w2_1005_1045_r2] S412 MA (tier: neutral): no tradeable call
+  [b916|lab0916_s412_w3_1045_1120_r1] S412 MA (tier: neutral): no tradeable call
+  [b917|lab0917_s412_w3_1045_1120_r2] S412 MA (tier: neutral): no tradeable call
+  [b914|lab0914_s412_w2_1005_1045_r1] S412 ABBV (tier: neutral): no tradeable call
+  [b915|lab0915_s412_w2_1005_1045_r2] S412 ABBV (tier: neutral): no tradeable call
+  [b916|lab0916_s412_w3_1045_1120_r1] S412 ABBV (tier: neutral): no tradeable call
+  [b917|lab0917_s412_w3_1045_1120_r2] S412 ABBV (tier: neutral): no tradeable call
+  [b914|lab0914_s412_w2_1005_1045_r1] S412 ES (tier: slow): no tradeable call
+  [b915|lab0915_s412_w2_1005_1045_r2] S412 ES (tier: slow): no tradeable call
+  [b916|lab0916_s412_w3_1045_1120_r1] S412 ES (tier: slow): no tradeable call
+  [b917|lab0917_s412_w3_1045_1120_r2] S412 ES (tier: slow): no tradeable call
+  Skipped: 378 no tradeable call, 162 pending order
+Placed 34 new entry order(s).
+  reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1
+  reconcile: entry fill b819|S405 COIN x1 @ 0.45
+  reconcile: entry fill b818|S405 COIN x1 @ 0.45
+  reconcile: entry fill b805|S404 COIN x1 @ 0.61
+  reconcile: entry fill b804|S404 COIN x1 @ 0.61
+  reconcile: entry fill b789|S398 COIN x1 @ 0.45
+  reconcile: entry fill b788|S398 COIN x1 @ 0.45
+  reconcile: entry fill b781|S397 COIN x1 @ 0.61
+  reconcile: entry fill b780|S397 COIN x1 @ 0.61
+  reconcile: entry fill b317|S355 COIN x1 @ 0.48
+  reconcile: entry fill b316|S355 COIN x1 @ 0.48
+  reconcile: entry fill b309|S354 COIN x1 @ 0.48
+  reconcile: entry fill b308|S354 COIN x1 @ 0.48
+  reconcile: entry fill b285|S351 MSTR x1 @ 0.03
+  reconcile: entry fill b284|S351 MSTR x1 @ 0.03
+  reconcile: entry fill b267|S403 T x1 @ 0.71
+  reconcile: entry fill b266|S403 T x1 @ 0.71
+  reconcile: entry fill b225|S400 AMZN x1 @ 0.15
+  reconcile: entry fill b224|S400 AMZN x1 @ 0.15
+  reconcile: entry fill b113|S212 OXY x1 @ 0.63
+  reconcile: entry fill b112|S212 OXY x1 @ 0.63
+
+[Portfolio snapshot]
+========================================================
+OPTIONS TRIAL STATS
+========================================================
+Account equity: $129,196.06
+Active buckets: 1024 of 1024 profiles ($500 virtual each) — paper unlimited mode
+
+P&L summary
+  Reflected (ex-S173,S174): $+4,406.13 all-time  |  $-11.00 today
+  Raw (incl dropped):     $+2,810.58 all-time  |  $-11.00 today
+  Open (not sold yet): $-811.00 unrealized (virtual lots)
+  Premium deployed:    $4,035.00 in open positions
+  Combined P&L:        $+3,595.13 (reflected realized + open virtual)
+
+Ledger (master)
+  Total events:     6181
+  Today entries:    90
+  Today exits (reflected): 3
+  All-time exits (reflected): 280  wins 30%
+  Avg return/trade: -6.3%  median -40.0%
+
+Open virtual lots (by bucket)
+  b16 lab0016_s202_w1_0928_1005_r1  prem=$    61  real=$ +0.00  open=$-13.96  lots=1  [S202:AAPLx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b17 lab0017_s202_w1_0928_1005_r2  prem=$    61  real=$ +0.00  open=$-13.96  lots=1  [S202:AAPLx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b18 lab0018_s202_w2_1005_1045_r1  prem=$    39  real=$ +0.00  open=$ -8.93  lots=1  [S202:AAPLx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b19 lab0019_s202_w2_1005_1045_r2  prem=$    39  real=$ +0.00  open=$ -8.93  lots=1  [S202:AAPLx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b26 lab0026_s203_w2_1005_1045_r1  prem=$    45  real=$ +0.00  open=$ -5.00  lots=1  [S203:SMCIx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b27 lab0027_s203_w2_1005_1045_r2  prem=$    45  real=$ +0.00  open=$ -5.00  lots=1  [S203:SMCIx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b110 lab0110_s212_w2_1005_1045_r1  prem=$    59  real=$ +0.00  open=$ -2.81  lots=1  [S212:Tx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b111 lab0111_s212_w2_1005_1045_r2  prem=$    59  real=$ +0.00  open=$ -2.81  lots=1  [S212:Tx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b112 lab0112_s212_w3_1045_1120_r1  prem=$    63  real=$ +0.00  open=$-10.00  lots=1  [S212:OXYx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b113 lab0113_s212_w3_1045_1120_r2  prem=$    63  real=$ +0.00  open=$-10.00  lots=1  [S212:OXYx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b180 lab0180_s217_w2_1005_1045_r1  prem=$    14  real=$ +0.00  open=$ -3.00  lots=1  [S217:METAx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b181 lab0181_s217_w2_1005_1045_r2  prem=$    14  real=$ +0.00  open=$ -3.00  lots=1  [S217:METAx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b194 lab0194_s218_w2_1005_1045_r1  prem=$    14  real=$ +0.00  open=$ -3.00  lots=1  [S218:METAx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b195 lab0195_s218_w2_1005_1045_r2  prem=$    14  real=$ +0.00  open=$ -3.00  lots=1  [S218:METAx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b222 lab0222_s400_w2_1005_1045_r1  prem=$     8  real=$ +0.00  open=$ -2.00  lots=1  [S400:AMZNx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b223 lab0223_s400_w2_1005_1045_r2  prem=$     8  real=$ +0.00  open=$ -2.00  lots=1  [S400:AMZNx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b224 lab0224_s400_w3_1045_1120_r1  prem=$    15  real=$ +0.00  open=$ +0.00  lots=1  [S400:AMZNx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b225 lab0225_s400_w3_1045_1120_r2  prem=$    15  real=$ +0.00  open=$ +0.00  lots=1  [S400:AMZNx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b234 lab0234_s401_w1_0928_1005_r1  prem=$    50  real=$ +0.00  open=$-17.00  lots=1  [S401:NFLXx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b235 lab0235_s401_w1_0928_1005_r2  prem=$    50  real=$ +0.00  open=$-17.00  lots=1  [S401:NFLXx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  (69 more active bucket(s) omitted)
+  (935 quiet bucket profile(s) — no trades yet)
+
+Pending orders: 16
+  b322 S356 AAPL limit=0.51
+  b323 S356 AAPL limit=0.51
+  b20 S202 AAPL limit=0.35
+  b21 S202 AAPL limit=0.35
+  b28 S203 SMCI limit=0.55
+
+Alpaca option positions
+  AAPL260731C00307500  qty=4  cost=$204.00  return=-35.3%  open P&L=$-72.00
+  AAPL260803C00315000  qty=12  cost=$498.00  return=-22.9%  open P&L=$-114.00
+  AAPL260814C00330000  qty=2  cost=$116.00  return=-13.8%  open P&L=$-16.00
+  AAPL260821C00335000  qty=4  cost=$260.00  return=-7.7%  open P&L=$-20.00
+  AMZN260803C00290000  qty=2  cost=$30.00  return=+0.0%  open P&L=$+0.00
+  AMZN260803C00295000  qty=2  cost=$16.00  return=-25.0%  open P&L=$-4.00
+  COIN260807C00162500  qty=8  cost=$525.00  return=-16.2%  open P&L=$-85.00
+  COIN260807C00165000  qty=16  cost=$824.00  return=-20.4%  open P&L=$-168.00
+  COIN260807C00167500  qty=12  cost=$560.00  return=-33.6%  open P&L=$-188.00
+  COIN260807C00170000  qty=2  cost=$60.00  return=-33.3%  open P&L=$-20.00
+  META260803C00600000  qty=4  cost=$56.00  return=-21.4%  open P&L=$-12.00
+  MSTR260731C00099000  qty=2  cost=$6.00  return=-33.3%  open P&L=$-2.00
+  MSTR260807C00108000  qty=2  cost=$76.00  return=-21.1%  open P&L=$-16.00
+  NFLX260807C00075000  qty=2  cost=$100.00  return=-34.0%  open P&L=$-34.00
+  OXY260807C00059000  qty=2  cost=$126.00  return=-15.9%  open P&L=$-20.00
+  SMCI260807P00025000  qty=2  cost=$90.00  return=-11.1%  open P&L=$-10.00
+  T260807C00023000  qty=6  cost=$378.00  return=-4.8%  open P&L=$-18.00
+  UBER260807C00077000  qty=2  cost=$110.00  return=-10.9%  open P&L=$-12.00
+
+Per-bucket exit stats (all time)
+  b0|orphan_reconcile     n= 22  avg=+22.4%  med=-57.5%  realized=$+6,310.91
+  b104|c104_s164_w1_0928_1005_r4  n=  1  avg=-88.9%  med=-88.9%  realized=$-8.00
+  b108|c108_s202_w3_1045_1120_r1  n=  1  avg=-33.3%  med=-33.3%  realized=$-1.00
+  b109|c109_s202_w3_1045_1120_r2  n=  1  avg=-66.7%  med=-66.7%  realized=$-2.00
+  b10|c010_s165_w3_1045_1120_r1  n=  8  avg=-37.2%  med=-18.9%  realized=$-205.00
+  b132|c132_s164_w1_0928_1005_r5  n=  2  avg=-65.7%  med=-53.6%  realized=$-37.00
+  b135|c135_s164_w4_1120_1135_r5  n=  1  avg=-50.0%  med=-50.0%  realized=$-4.00
+  b20|c020_s164_w1_0928_1005_r1  n=  1  avg=-88.9%  med=-88.9%  realized=$-8.00
+  b236|c236_s218_w3_1045_1120_r1  n=  1  avg=-33.3%  med=-33.3%  realized=$-1.00
+  b237|c237_s218_w3_1045_1120_r2  n=  1  avg=-66.7%  med=-66.7%  realized=$-2.00
+  b276|lab0276_s350_w1_0928_1005_r1  n=  1  avg=-66.7%  med=-66.7%  realized=$-2.00
+  b277|lab0277_s350_w1_0928_1005_r2  n=  1  avg=-66.7%  med=-66.7%  realized=$-2.00
+  b281|lab0281_s351_w1_0928_1005_r2  n=  1  avg=-53.9%  med=-53.9%  realized=$-7.00
+  b28|c028_s165_w1_0928_1005_r2  n= 17  avg=+49.5%  med=+80.0%  realized=$+448.00
+  b28|c028_s173_w1_0928_1005_r2  n=  5  avg=+51.6%  med=+80.0%  realized=$+142.00
+  b29|c029_s165_w2_1005_1045_r2  n=  9  avg=-23.3%  med=-50.0%  realized=$-221.00
+  b29|c029_s173_w2_1005_1045_r2  n=  2  avg=-69.3%  med=-48.5%  realized=$-78.00
+  b30|c030_s165_w3_1045_1120_r2  n=  9  avg=+38.8%  med=+0.0%  realized=$+260.00
+  b30|c030_s173_w3_1045_1120_r2  n=  2  avg=-9.5%  med=+0.0%  realized=$-14.00
+  b31|c031_s165_w4_1120_1135_r2  n=  2  avg=+145.5%  med=+175.8%  realized=$+192.00
+  b48|c048_s164_w1_0928_1005_r2  n=  5  avg=-33.1%  med=-49.1%  realized=$-91.00
+  b48|c048_s165_w1_0928_1005_r3  n= 16  avg=-35.9%  med=-49.1%  realized=$-344.00
+  b49|c049_s164_w2_1005_1045_r2  n=  4  avg=-51.8%  med=-44.0%  realized=$-133.00
+  b49|c049_s165_w2_1005_1045_r3  n= 15  avg=-49.3%  med=-49.1%  realized=$-458.00
+  b50|c050_s164_w3_1045_1120_r2  n=  4  avg=-39.6%  med=-16.7%  realized=$-115.00
+  b50|c050_s165_w3_1045_1120_r3  n=  9  avg=-23.6%  med=-23.1%  realized=$-142.00
+  b51|c051_s165_w4_1120_1135_r3  n=  1  avg=+263.6%  med=+263.6%  realized=$+174.00
+  b56|g056_lim_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b57|g057_mid_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b58|g058_eod_tp20_sl65  n=  1  avg=+59.1%  med=+59.1%  realized=$+25.41
+  b68|c068_s165_w1_0928_1005_r4  n= 16  avg=-51.3%  med=-49.1%  realized=$-446.00
+  b68|c068_s166_w1_0928_1005_r3  n=  4  avg=-52.7%  med=-49.1%  realized=$-116.00
+  b69|c069_s165_w2_1005_1045_r4  n= 11  avg=+19.0%  med=-43.6%  realized=$-179.00
+  b69|c069_s166_w2_1005_1045_r3  n=  4  avg=+10.1%  med=-40.0%  realized=$-87.00
+  b70|c070_s165_w3_1045_1120_r4  n= 11  avg=-2.1%  med=-16.9%  realized=$-6.00
+  b70|c070_s166_w3_1045_1120_r3  n=  4  avg=-42.5%  med=-27.0%  realized=$-124.00
+  b70|g070_eod_tp30_sl20  n=  1  avg=+59.1%  med=+59.1%  realized=$+27.77
+  b76|c076_s164_w1_0928_1005_r3  n=  1  avg=-50.0%  med=-50.0%  realized=$-2.00
+  b88|c088_s165_w1_0928_1005_r5  n= 21  avg=-5.0%  med=-2.7%  realized=$-63.00
+  b88|c088_s167_w1_0928_1005_r4  n=  4  avg=-12.7%  med=+30.9%  realized=$-28.00
+  b89|c089_s165_w2_1005_1045_r5  n=  7  avg=+113.1%  med=+30.9%  realized=$+67.00
+  b89|c089_s167_w2_1005_1045_r4  n=  2  avg=-16.2%  med=+30.9%  realized=$-22.00
+  b8|c008_s165_w1_0928_1005_r1  n= 23  avg=-19.6%  med=-35.3%  realized=$-250.00
+  b90|c090_s165_w3_1045_1120_r5  n= 13  avg=+7.7%  med=+0.0%  realized=$+47.00
+  b90|c090_s167_w3_1045_1120_r4  n=  4  avg=-41.6%  med=-18.9%  realized=$-123.00
+  b91|c091_s165_w4_1120_1135_r5  n=  2  avg=+222.0%  med=+247.0%  realized=$+293.00
+  b9|c009_s165_w2_1005_1045_r1  n=  7  avg=-74.4%  med=-66.2%  realized=$-301.00
+========================================================
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          entry+manage                            |
+|  Equity                        $129,196.06                             |
+|  Signals this run              255                                     |
+|  Orders submitted (session)    104                                     |
+|  Orders filled today (ledger)  90                                      |
+|  Entries placed this run       34                                      |
+|  Open virtual lots             86                                      |
+|  Broker option positions       18                                      |
+|  Pending orders                16                                      |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S173,S174)                           |
++------------------------------------------------------------------------+
+|  Reflected trades=280  buckets=34  win=30%                             |
+|  Returns   avg=-6.3%  med=-40.0%  p10=-66.7%  p90=+81.8%               |
+|  Realized  $+4,406.13                                                  |
+|  Raw incl dropped  trades=814  real=$+2,810.58                         |
+|  Today     trades=3  avg=-62.4%  med=-66.7%  real=$-11.00              |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b51  lab0051_s206_w2_10  1 100% +263.6 +263.6 +263.6 $   +174         |
+|  b91  lab0091_s210_w6_14  2 100% +222.0 +222.0 +247.0 $   +293         |
+|  b31  lab0031_s203_w4_11  2 100% +145.5 +145.5 +175.8 $   +192         |
+|  b28  lab0028_s203_w3_10 22  77% +50.0 +80.0 +102.0 $   +590           |
+|  b58  lab0058_s207_w2_10  1 100% +59.1 +59.1 +59.1 $    +25            |
+|  b56  lab0056_s207_w1_09  1 100% +47.7 +47.7 +47.7 $    +21            |
+|  b57  lab0057_s207_w1_09  1 100% +47.7 +47.7 +47.7 $    +21            |
+|  b89  lab0089_s210_w5_13  9  56% +84.4 +30.9 +790.0 $    +45           |
+|  ... 26 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b20  lab0020_s202_w3_10  1   0% -88.9 -88.9 -88.9 $     -8       |
++========================================================================+
++========================================================================+
+|  PENDING ORDERS (16)                                                   |
++------------------------------------------------------------------------+
+|  Top groups                    S356:AAPL(4), S202:AAPL(2), S203:SMCI(2)|
++------------------------------------------------------------------------+
+|  b322 S356 AAPL     limit=0.51                                         |
+|  b323 S356 AAPL     limit=0.51                                         |
+|  b20  S202 AAPL     limit=0.35                                         |
+|  b21  S202 AAPL     limit=0.35                                         |
+|  b28  S203 SMCI     limit=0.55                                         |
+|  ... 11 more pending order(s)                                          |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (18)                                                     |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  COIN260807C00167500          12    -33.6%   $   -188.00               |
+|  COIN260807C00165000          16    -20.4%   $   -168.00               |
+|  AAPL260803C00315000          12    -22.9%   $   -114.00               |
+|  COIN260807C00162500           8    -16.2%   $    -85.00               |
+|  AAPL260731C00307500           4    -35.3%   $    -72.00               |
+|  NFLX260807C00075000           2    -34.0%   $    -34.00               |
+|  AAPL260821C00335000           4     -7.7%   $    -20.00               |
+|  COIN260807C00170000           2    -33.3%   $    -20.00               |
+|  ... 10 more position(s)                                               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-31.log
+elapsed=160.3s reconcile=0.17s cancel=0.04s manage=7.64s scan=53.57s entries=94.63s
+

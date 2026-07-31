@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-31 14:46:57.941203+00:00,entry,113,lab0113_s212_w3_1045_1120_r2,S212,88331c01743a,OXY,OXY260807C00059000,1,0.64,0.63,63.0,,,,-0.01,,0.5,-0.5,0.1666666666666666,low=55.55 MA50=54.74 touch+green,d80861d1-9d45-41ae-945b-3ea792e85397

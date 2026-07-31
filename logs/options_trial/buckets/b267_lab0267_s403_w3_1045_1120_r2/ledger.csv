@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-31 14:47:03.560629+00:00,entry,267,lab0267_s403_w3_1045_1120_r2,S403,5753cadc5657,T,T260807C00023000,1,0.72,0.71,71.0,,,,-0.01,,0.3,-0.3,0.21212121212121215,touch MA50 green,3bf9924e-e555-44da-b0f6-34db2500d36f
