@@ -2700,3 +2700,173 @@ Fetched daily bars for 114/117 symbols
 ```
 
 ---
+
+## Run 20260731T134631Z
+
+- UTC timestamp: `20260731T134631Z`
+- GitHub run: [#5686](https://github.com/28twagg-ops/TradingBot/actions/runs/30635713330)
+- Run id: `30635713330`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-31T09:25:43.256247-04:00","date":"2026-07-31","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.7,"phases_s":{"reconcile":0.33},"signals":0,"placed":0,"equity":131571.98,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"5682","github_run_id":"30634356825","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:46:31  INFO      Mode: morning_scan
+13:46:32  INFO        [positions] 1/1 (1 valid)
+13:46:32  INFO        Universe cache hit: 903 tickers (tickers_2026-07-31.json)
+13:46:33  INFO        [universe] 40/902 (40 valid)
+13:46:35  INFO        [universe] 80/902 (80 valid)
+13:46:36  INFO        [universe] 120/902 (120 valid)
+13:46:37  INFO        [universe] 160/902 (160 valid)
+13:46:38  INFO        [universe] 200/902 (199 valid)
+13:46:45  INFO        [universe] 240/902 (238 valid)
+13:46:58  INFO        [universe] 280/902 (278 valid)
+13:47:12  INFO        [universe] 320/902 (318 valid)
+13:47:22  INFO        [universe] 360/902 (358 valid)
+13:47:34  INFO        [universe] 400/902 (397 valid)
+13:47:45  INFO        [universe] 440/902 (437 valid)
+13:47:57  INFO        [universe] 480/902 (477 valid)
+13:48:11  INFO        [universe] 520/902 (517 valid)
+13:48:21  INFO        [universe] 560/902 (557 valid)
+13:48:34  INFO        [universe] 600/902 (597 valid)
+13:48:47  INFO        [universe] 640/902 (637 valid)
+13:48:57  INFO        [universe] 680/902 (677 valid)
+13:49:10  INFO        [universe] 720/902 (717 valid)
+13:49:23  INFO        [universe] 760/902 (757 valid)
+13:49:33  INFO        [universe] 800/902 (797 valid)
+13:49:46  INFO        [universe] 840/902 (836 valid)
+13:49:59  INFO        [universe] 880/902 (876 valid)
+13:50:06  INFO        [universe] 902/902 (898 valid)
+13:50:08  INFO        BUY  AVB  $93.95  [Pullback50]  id=4e5b868f-2419-4fa6-b1b2-ae68eb00c4ea
+13:50:08  INFO        BUY  CHD  $93.95  [Pullback50]  id=c7cc1cb7-a118-4895-be76-43bd05b8c077
+13:50:08  INFO        BUY  CINF  $93.95  [Pullback50]  id=3eeb39e7-7074-491d-8efe-25e9cf9b51c4
+13:50:09  INFO        BUY  DRI  $93.05  [Pullback50]  id=3dad4b60-f0e7-449d-8f0e-ac79e3a81697
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $469.76|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-07-31|
+|  Universe                                                          both|
+|  Mon~  Jul: 52wkLow + Pullback50 (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $469.76|
+|  Cash                                                           $398.39|
+|  Reserve                                          $23.49  (always kept)|
+|  Available                                    $374.90  (for new trades)|
+|  Trade size             $93.95  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (1 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  APG      MomReversal     $71.37     $38.85   $39.34   +1.3%   $+0.91  |
+|                                                                        |
+|  Total invested                                                  $71.37|
+|  Total open P&L                                                  $+0.91|
+|  Buys today: 0  |  entry cap: 4  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (31681.1m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  APG  P&L +1.3%  $+0.91                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Jul  |  Regime: BULL                                           |
+|  Primary: 52wkLow  |  Secondary: Pullback50 (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  17                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AVB      Pullback50      eq     $186.99  36.9   -2.98   50MA bounce (-|
+|  CHD      Pullback50      eq     $97.56   51.1   -2.16   50MA bounce (+|
+|  CINF     Pullback50      eq     $175.54  40.0   -2.11   50MA bounce (+|
+|  DRI      Pullback50      eq     $205.06  60.4   -3.39   50MA bounce (+|
+|  EXPD     Pullback50      eq     $167.47  35.2   -2.02   50MA bounce (+|
+|  ES       Pullback50      eq     $72.31   37.5   -2.54   50MA bounce (+|
+|  FFIV     Pullback50      eq     $397.28  40.3   -1.55   50MA bounce (-|
+|  HBAN     Pullback50      eq     $17.11   38.2   -1.80   50MA bounce (-|
+|  KDP      Pullback50      eq     $31.22   49.8   -2.41   50MA bounce (+|
+|  KMI      Pullback50      eq     $31.91   46.0   -2.18   50MA bounce (-|
+|  MRNA     Pullback50      eq     $58.45   31.3   -1.45   50MA bounce (-|
+|  OKE      Pullback50      eq     $89.33   39.6   -3.45   50MA bounce (+|
+|  PWR      Pullback50      eq     $679.74  55.8   -1.53   50MA bounce (-|
+|  ATI      Pullback50      eq     $186.12  51.8   -2.62   50MA bounce (-|
+|  FTI      Pullback50      eq     $70.30   42.4   -2.24   50MA bounce (+|
+|  RBA      Pullback50      eq     $109.62  51.8   -2.72   50MA bounce (+|
+|  VNOM     Pullback50      eq     $43.98   55.0   -2.61   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AVB  Pullback50                                    $93.95|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] CHD  Pullback50                                    $93.95|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] CINF  Pullback50                                   $93.95|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] DRI  Pullback50                                    $93.05|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] EXPD  Pullback50                                     cap 5|```
+
+### Options bot full output
+
+```text
