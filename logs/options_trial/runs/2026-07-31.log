@@ -28657,3 +28657,348 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-07-31.log
 elapsed=1.1s reconcile=0.61s
 
+=== 18:35:51 ET — after hours (exit summary) [elapsed=0.7s reconcile=0.1s] ===
+=== options_morning_bot (PAPER) 2026-07-31T18:35:51.040769-04:00 ===
+
+[Run context]
+After hours (18:35 ET) — exit summary only.
+Paper auth OK — equity $135381.52, account PA36KS87UPRS
+  reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1
+
+[Exit summary]
+========================================================
+OPTIONS EXIT SUMMARY — 2026-07-31
+========================================================
+Account equity: $135,381.52
+Open broker positions: 13  unrealized $+1,870.25
+
+Today's closed trades
+  Count:     80
+  Win rate:  57/80 (71%)
+  Return:    avg +71.1%  med +57.1%  best +338.1%  worst -66.7%
+  Realized:  $+2,886.00
+
+By strategy
+  S202    n=  2  win=0%  avg=-64.8%
+  S203    n=  2  win=0%  avg=-53.0%
+  S217    n=  1  win=0%  avg=-55.0%
+  S350    n=  4  win=0%  avg=-64.2%
+  S351    n=  5  win=0%  avg=-47.8%
+  S352    n=  4  win=100%  avg=+96.1%
+  S353    n=  2  win=100%  avg=+101.3%
+  S354    n=  7  win=100%  avg=+166.0%
+  S355    n=  8  win=100%  avg=+176.7%
+  S356    n=  1  win=100%  avg=+58.6%
+  S357    n=  1  win=100%  avg=+47.1%
+  S360    n=  1  win=0%  avg=-54.8%
+  S397    n=  7  win=100%  avg=+79.5%
+  S398    n=  8  win=100%  avg=+153.2%
+  S399    n=  2  win=100%  avg=+119.6%
+  S400    n=  5  win=0%  avg=-51.1%
+  S401    n=  1  win=0%  avg=-39.0%
+  S404    n=  8  win=100%  avg=+78.0%
+  S405    n=  8  win=100%  avg=+123.6%
+  S406    n=  2  win=50%  avg=-6.0%
+  S407    n=  1  win=0%  avg=-66.7%
+
+By symbol
+  COIN    n= 47  avg=+131.0%
+  AAPL    n= 18  avg=+10.8%
+  MSTR    n=  6  avg=-34.6%
+  AMZN    n=  5  avg=-51.1%
+  SMCI    n=  2  avg=-53.0%
+  V       n=  1  avg=-39.0%
+  TSLA    n=  1  avg=-55.0%
+
+By exit type
+  take_profit   50
+  stop_loss     16
+  reconcile_fill  14
+
+Top buckets today (realized $)
+  b791|lab0791_s398_w4_1120_1135_r2  $+142.00
+  b319|lab0319_s355_w4_1120_1135_r2  $+138.00
+  b790|lab0790_s398_w4_1120_1135_r1  $+131.00
+  b318|lab0318_s355_w4_1120_1135_r1  $+123.00
+  b311|lab0311_s354_w4_1120_1135_r2  $+122.00
+  (75 more bucket profiles with exits)
+
+Recent exits (last 8)
+  19:34:48  b311 lab0311_s354_w4_11  COIN  S354   +290.5%   $+122.00  reconcile_fill
+  19:34:49  b297 lab0297_s353_w1_09  AAPL  S353    +79.0%    $+30.00  reconcile_fill
+  19:44:33  b296 lab0296_s353_w1_09  AAPL  S353   +123.7%    $+47.00  take_profit (+105.2%)
+  19:50:04  b27 lab0027_s203_w2_10  SMCI  S203    -53.3%    $-24.00  reconcile_fill
+  19:50:08  b321 lab0321_s356_w1_09  AAPL  S356    +58.6%    $+34.00  reconcile_fill
+  19:50:08  b29 lab0029_s203_w3_10  SMCI  S203    -52.7%    $-29.00  reconcile_fill
+  19:50:11  b291 lab0291_s352_w2_10  AAPL  S352   +194.4%    $+70.00  reconcile_fill
+  19:50:12  b329 lab0329_s357_w1_09  AAPL  S357    +47.1%    $+32.00  reconcile_fill
+========================================================
+
+[Portfolio snapshot]
+========================================================
+OPTIONS TRIAL STATS
+========================================================
+Account equity: $135,381.52
+Active buckets: 1024 of 1024 profiles ($500 virtual each) — paper unlimited mode
+
+P&L summary
+  Reflected (ex-S173,S174): $+7,303.13 all-time  |  $+2,886.00 today
+  Raw (incl dropped):     $+5,707.58 all-time  |  $+2,886.00 today
+  Open (not sold yet): $+1,810.61 unrealized (virtual lots)
+                       $+1,870.25 unrealized (broker total)
+  Premium deployed:    $2,792.00 in open positions
+  Combined P&L:        $+9,113.74 (reflected realized + open virtual)
+
+Ledger (master)
+  Total events:     6338
+  Today entries:    156
+  Today exits (reflected): 80
+  All-time exits (reflected): 357  wins 39%
+  Avg return/trade: +11.5%  median -23.1%
+
+Open virtual lots (by bucket)
+  b16 lab0016_s202_w1_0928_1005_r1  prem=$     0  real=$-39.00  open=$ +0.00  lots=0  [-]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b17 lab0017_s202_w1_0928_1005_r2  prem=$     0  real=$-40.00  open=$ +0.00  lots=0  [-]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b18 lab0018_s202_w2_1005_1045_r1  prem=$    39  real=$ +0.00  open=$+73.44  lots=1  [S202:AAPLx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b19 lab0019_s202_w2_1005_1045_r2  prem=$    39  real=$ +0.00  open=$+73.44  lots=1  [S202:AAPLx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b20 lab0020_s202_w3_1045_1120_r1  prem=$    35  real=$ +0.00  open=$+65.91  lots=1  [S202:AAPLx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b21 lab0021_s202_w3_1045_1120_r2  prem=$    35  real=$ +0.00  open=$+65.91  lots=1  [S202:AAPLx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b22 lab0022_s202_w4_1120_1135_r1  prem=$    44  real=$ +0.00  open=$+82.85  lots=1  [S202:AAPLx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b23 lab0023_s202_w4_1120_1135_r2  prem=$    44  real=$ +0.00  open=$+82.85  lots=1  [S202:AAPLx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b26 lab0026_s203_w2_1005_1045_r1  prem=$    45  real=$ +0.00  open=$-20.93  lots=1  [S203:SMCIx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b27 lab0027_s203_w2_1005_1045_r2  prem=$     0  real=$-24.00  open=$ +0.00  lots=0  [-]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b28 lab0028_s203_w3_1045_1120_r1  prem=$    55  real=$ +0.00  open=$-25.00  lots=1  [S203:SMCIx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b29 lab0029_s203_w3_1045_1120_r2  prem=$     0  real=$-29.00  open=$ +0.00  lots=0  [-]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b30 lab0030_s203_w4_1120_1135_r1  prem=$    41  real=$ +0.00  open=$-19.07  lots=1  [S203:SMCIx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b31 lab0031_s203_w4_1120_1135_r2  prem=$    41  real=$ +0.00  open=$-19.07  lots=1  [S203:SMCIx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b110 lab0110_s212_w2_1005_1045_r1  prem=$    59  real=$ +0.00  open=$-13.11  lots=1  [S212:Tx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b111 lab0111_s212_w2_1005_1045_r2  prem=$    59  real=$ +0.00  open=$-13.11  lots=1  [S212:Tx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b112 lab0112_s212_w3_1045_1120_r1  prem=$    63  real=$ +0.00  open=$+17.27  lots=1  [S212:OXYx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b113 lab0113_s212_w3_1045_1120_r2  prem=$    63  real=$ +0.00  open=$+17.27  lots=1  [S212:OXYx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b114 lab0114_s212_w4_1120_1135_r1  prem=$    61  real=$ +0.00  open=$+16.73  lots=1  [S212:OXYx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  b115 lab0115_s212_w4_1120_1135_r2  prem=$    61  real=$ +0.00  open=$+16.73  lots=1  [S212:OXYx1]
+       buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
+  (121 more active bucket(s) omitted)
+  (883 quiet bucket profile(s) — no trades yet)
+
+Alpaca option positions
+  AAPL260803C00315000  qty=21  cost=$859.50  return=+188.3%  open P&L=$+1,618.50
+  AAPL260814C00330000  qty=7  cost=$418.25  return=+54.0%  open P&L=$+225.75
+  AAPL260821C00335000  qty=5  cost=$320.00  return=+54.7%  open P&L=$+175.00
+  META260803C00600000  qty=6  cost=$88.00  return=-18.2%  open P&L=$-16.00
+  MSTR260731C00099000  qty=1  cost=$3.00  return=-100.0%  open P&L=$-3.00
+  NFLX260807C00075000  qty=2  cost=$100.00  return=-24.0%  open P&L=$-24.00
+  OXY260807C00059000  qty=4  cost=$248.00  return=+27.4%  open P&L=$+68.00
+  PATH260807C00013000  qty=2  cost=$60.00  return=+3.3%  open P&L=$+2.00
+  SMCI260807P00025000  qty=3  cost=$129.00  return=-46.5%  open P&L=$-60.00
+  SMCI260807P00025500  qty=1  cost=$55.00  return=-45.5%  open P&L=$-25.00
+  T260807C00023000  qty=6  cost=$378.00  return=-22.2%  open P&L=$-84.00
+  UBER260807C00077000  qty=2  cost=$110.00  return=-7.3%  open P&L=$-8.00
+  V260807C00380000  qty=1  cost=$59.00  return=+1.7%  open P&L=$+1.00
+
+Per-bucket exit stats (all time)
+  b0|orphan_reconcile     n= 22  avg=+22.4%  med=-57.5%  realized=$+6,310.91
+  b104|c104_s164_w1_0928_1005_r4  n=  1  avg=-88.9%  med=-88.9%  realized=$-8.00
+  b108|c108_s202_w3_1045_1120_r1  n=  1  avg=-33.3%  med=-33.3%  realized=$-1.00
+  b109|c109_s202_w3_1045_1120_r2  n=  1  avg=-66.7%  med=-66.7%  realized=$-2.00
+  b10|c010_s165_w3_1045_1120_r1  n=  8  avg=-37.2%  med=-18.9%  realized=$-205.00
+  b132|c132_s164_w1_0928_1005_r5  n=  2  avg=-65.7%  med=-53.6%  realized=$-37.00
+  b135|c135_s164_w4_1120_1135_r5  n=  1  avg=-50.0%  med=-50.0%  realized=$-4.00
+  b16|lab0016_s202_w1_0928_1005_r1  n=  1  avg=-63.9%  med=-63.9%  realized=$-39.00
+  b17|lab0017_s202_w1_0928_1005_r2  n=  1  avg=-65.6%  med=-65.6%  realized=$-40.00
+  b183|lab0183_s217_w3_1045_1120_r2  n=  1  avg=-55.0%  med=-55.0%  realized=$-22.00
+  b20|c020_s164_w1_0928_1005_r1  n=  1  avg=-88.9%  med=-88.9%  realized=$-8.00
+  b222|lab0222_s400_w2_1005_1045_r1  n=  1  avg=-50.0%  med=-50.0%  realized=$-4.00
+  b223|lab0223_s400_w2_1005_1045_r2  n=  1  avg=-50.0%  med=-50.0%  realized=$-4.00
+  b224|lab0224_s400_w3_1045_1120_r1  n=  1  avg=-66.7%  med=-66.7%  realized=$-10.00
+  b225|lab0225_s400_w3_1045_1120_r2  n=  1  avg=-66.7%  med=-66.7%  realized=$-10.00
+  b227|lab0227_s400_w4_1120_1135_r2  n=  1  avg=-22.2%  med=-22.2%  realized=$-2.00
+  b236|c236_s218_w3_1045_1120_r1  n=  1  avg=-33.3%  med=-33.3%  realized=$-1.00
+  b237|c237_s218_w3_1045_1120_r2  n=  1  avg=-66.7%  med=-66.7%  realized=$-2.00
+  b239|lab0239_s401_w3_1045_1120_r2  n=  1  avg=-39.0%  med=-39.0%  realized=$-23.00
+  b276|lab0276_s350_w1_0928_1005_r1  n=  1  avg=-66.7%  med=-66.7%  realized=$-2.00
+  b277|lab0277_s350_w1_0928_1005_r2  n=  1  avg=-66.7%  med=-66.7%  realized=$-2.00
+  b278|lab0278_s350_w2_1005_1045_r1  n=  1  avg=-62.8%  med=-62.8%  realized=$-32.00
+  b279|lab0279_s350_w2_1005_1045_r2  n=  1  avg=-60.8%  med=-60.8%  realized=$-31.00
+  b27|lab0027_s203_w2_1005_1045_r2  n=  1  avg=-53.3%  med=-53.3%  realized=$-24.00
+  b281|lab0281_s351_w1_0928_1005_r2  n=  1  avg=-53.9%  med=-53.9%  realized=$-7.00
+  b282|lab0282_s351_w2_1005_1045_r1  n=  1  avg=-58.8%  med=-58.8%  realized=$-30.00
+  b283|lab0283_s351_w2_1005_1045_r2  n=  1  avg=-52.9%  med=-52.9%  realized=$-27.00
+  b285|lab0285_s351_w3_1045_1120_r2  n=  1  avg=-33.3%  med=-33.3%  realized=$-1.00
+  b287|lab0287_s351_w4_1120_1135_r2  n=  1  avg=-40.0%  med=-40.0%  realized=$-2.00
+  b288|lab0288_s352_w1_0928_1005_r1  n=  1  avg=+52.4%  med=+52.4%  realized=$+22.00
+  b289|lab0289_s352_w1_0928_1005_r2  n=  1  avg=+47.6%  med=+47.6%  realized=$+20.00
+  b28|c028_s165_w1_0928_1005_r2  n= 17  avg=+49.5%  med=+80.0%  realized=$+448.00
+  b28|c028_s173_w1_0928_1005_r2  n=  5  avg=+51.6%  med=+80.0%  realized=$+142.00
+  b291|lab0291_s352_w2_1005_1045_r2  n=  1  avg=+194.4%  med=+194.4%  realized=$+70.00
+  b293|lab0293_s352_w3_1045_1120_r2  n=  1  avg=+90.0%  med=+90.0%  realized=$+18.00
+  b296|lab0296_s353_w1_0928_1005_r1  n=  1  avg=+123.7%  med=+123.7%  realized=$+47.00
+  b297|lab0297_s353_w1_0928_1005_r2  n=  1  avg=+79.0%  med=+79.0%  realized=$+30.00
+  b29|c029_s165_w2_1005_1045_r2  n=  9  avg=-23.3%  med=-50.0%  realized=$-221.00
+  b29|c029_s173_w2_1005_1045_r2  n=  2  avg=-69.3%  med=-48.5%  realized=$-78.00
+  b29|lab0029_s203_w3_1045_1120_r2  n=  1  avg=-52.7%  med=-52.7%  realized=$-29.00
+  b304|lab0304_s354_w1_0928_1005_r1  n=  1  avg=+93.6%  med=+93.6%  realized=$+44.00
+  b305|lab0305_s354_w1_0928_1005_r2  n=  1  avg=+100.0%  med=+100.0%  realized=$+47.00
+  b306|lab0306_s354_w2_1005_1045_r1  n=  1  avg=+138.6%  med=+138.6%  realized=$+61.00
+  b307|lab0307_s354_w2_1005_1045_r2  n=  1  avg=+143.2%  med=+143.2%  realized=$+63.00
+  b308|lab0308_s354_w3_1045_1120_r1  n=  1  avg=+220.8%  med=+220.8%  realized=$+106.00
+  b309|lab0309_s354_w3_1045_1120_r2  n=  1  avg=+175.0%  med=+175.0%  realized=$+84.00
+  b30|c030_s165_w3_1045_1120_r2  n=  9  avg=+38.8%  med=+0.0%  realized=$+260.00
+  b30|c030_s173_w3_1045_1120_r2  n=  2  avg=-9.5%  med=+0.0%  realized=$-14.00
+  b311|lab0311_s354_w4_1120_1135_r2  n=  1  avg=+290.5%  med=+290.5%  realized=$+122.00
+  b312|lab0312_s355_w1_0928_1005_r1  n=  1  avg=+91.5%  med=+91.5%  realized=$+43.00
+  b313|lab0313_s355_w1_0928_1005_r2  n=  1  avg=+85.1%  med=+85.1%  realized=$+40.00
+  b314|lab0314_s355_w2_1005_1045_r1  n=  1  avg=+138.6%  med=+138.6%  realized=$+61.00
+  b315|lab0315_s355_w2_1005_1045_r2  n=  1  avg=+95.5%  med=+95.5%  realized=$+42.00
+  b316|lab0316_s355_w3_1045_1120_r1  n=  1  avg=+193.8%  med=+193.8%  realized=$+93.00
+  b317|lab0317_s355_w3_1045_1120_r2  n=  1  avg=+187.5%  med=+187.5%  realized=$+90.00
+  b318|lab0318_s355_w4_1120_1135_r1  n=  1  avg=+292.9%  med=+292.9%  realized=$+123.00
+  b319|lab0319_s355_w4_1120_1135_r2  n=  1  avg=+328.6%  med=+328.6%  realized=$+138.00
+  b31|c031_s165_w4_1120_1135_r2  n=  2  avg=+145.5%  med=+175.8%  realized=$+192.00
+  b321|lab0321_s356_w1_0928_1005_r2  n=  1  avg=+58.6%  med=+58.6%  realized=$+34.00
+  b329|lab0329_s357_w1_0928_1005_r2  n=  1  avg=+47.1%  med=+47.1%  realized=$+32.00
+  b355|lab0355_s360_w4_1120_1135_r2  n=  1  avg=-54.8%  med=-54.8%  realized=$-23.00
+  b48|c048_s164_w1_0928_1005_r2  n=  5  avg=-33.1%  med=-49.1%  realized=$-91.00
+  b48|c048_s165_w1_0928_1005_r3  n= 16  avg=-35.9%  med=-49.1%  realized=$-344.00
+  b49|c049_s164_w2_1005_1045_r2  n=  4  avg=-51.8%  med=-44.0%  realized=$-133.00
+  b49|c049_s165_w2_1005_1045_r3  n= 15  avg=-49.3%  med=-49.1%  realized=$-458.00
+  b50|c050_s164_w3_1045_1120_r2  n=  4  avg=-39.6%  med=-16.7%  realized=$-115.00
+  b50|c050_s165_w3_1045_1120_r3  n=  9  avg=-23.6%  med=-23.1%  realized=$-142.00
+  b51|c051_s165_w4_1120_1135_r3  n=  1  avg=+263.6%  med=+263.6%  realized=$+174.00
+  b56|g056_lim_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b57|g057_mid_tp20_sl65  n=  1  avg=+47.7%  med=+47.7%  realized=$+20.52
+  b58|g058_eod_tp20_sl65  n=  1  avg=+59.1%  med=+59.1%  realized=$+25.41
+  b68|c068_s165_w1_0928_1005_r4  n= 16  avg=-51.3%  med=-49.1%  realized=$-446.00
+  b68|c068_s166_w1_0928_1005_r3  n=  4  avg=-52.7%  med=-49.1%  realized=$-116.00
+  b69|c069_s165_w2_1005_1045_r4  n= 11  avg=+19.0%  med=-43.6%  realized=$-179.00
+  b69|c069_s166_w2_1005_1045_r3  n=  4  avg=+10.1%  med=-40.0%  realized=$-87.00
+  b70|c070_s165_w3_1045_1120_r4  n= 11  avg=-2.1%  med=-16.9%  realized=$-6.00
+  b70|c070_s166_w3_1045_1120_r3  n=  4  avg=-42.5%  med=-27.0%  realized=$-124.00
+  b70|g070_eod_tp30_sl20  n=  1  avg=+59.1%  med=+59.1%  realized=$+27.77
+  b76|c076_s164_w1_0928_1005_r3  n=  1  avg=-50.0%  med=-50.0%  realized=$-2.00
+  b776|lab0776_s397_w1_0928_1005_r1  n=  1  avg=+40.4%  med=+40.4%  realized=$+23.00
+  b777|lab0777_s397_w1_0928_1005_r2  n=  1  avg=+38.6%  med=+38.6%  realized=$+22.00
+  b778|lab0778_s397_w2_1005_1045_r1  n=  1  avg=+51.4%  med=+51.4%  realized=$+37.00
+  b779|lab0779_s397_w2_1005_1045_r2  n=  1  avg=+43.7%  med=+43.7%  realized=$+31.00
+  b780|lab0780_s397_w3_1045_1120_r1  n=  1  avg=+114.8%  med=+114.8%  realized=$+70.00
+  b781|lab0781_s397_w3_1045_1120_r2  n=  1  avg=+116.4%  med=+116.4%  realized=$+71.00
+  b783|lab0783_s397_w4_1120_1135_r2  n=  1  avg=+151.6%  med=+151.6%  realized=$+94.00
+  b784|lab0784_s398_w1_0928_1005_r1  n=  1  avg=+49.0%  med=+49.0%  realized=$+24.00
+  b785|lab0785_s398_w1_0928_1005_r2  n=  1  avg=+49.0%  med=+49.0%  realized=$+24.00
+  b786|lab0786_s398_w2_1005_1045_r1  n=  1  avg=+66.1%  med=+66.1%  realized=$+37.00
+  b787|lab0787_s398_w2_1005_1045_r2  n=  1  avg=+78.6%  med=+78.6%  realized=$+44.00
+  b788|lab0788_s398_w3_1045_1120_r1  n=  1  avg=+175.6%  med=+175.6%  realized=$+79.00
+  b789|lab0789_s398_w3_1045_1120_r2  n=  1  avg=+157.8%  med=+157.8%  realized=$+71.00
+  b790|lab0790_s398_w4_1120_1135_r1  n=  1  avg=+311.9%  med=+311.9%  realized=$+131.00
+  b791|lab0791_s398_w4_1120_1135_r2  n=  1  avg=+338.1%  med=+338.1%  realized=$+142.00
+  b793|lab0793_s399_w1_0928_1005_r2  n=  1  avg=+52.6%  med=+52.6%  realized=$+20.00
+  b799|lab0799_s399_w4_1120_1135_r2  n=  1  avg=+186.5%  med=+186.5%  realized=$+69.00
+  b800|lab0800_s404_w1_0928_1005_r1  n=  1  avg=+38.6%  med=+38.6%  realized=$+22.00
+  b801|lab0801_s404_w1_0928_1005_r2  n=  1  avg=+31.6%  med=+31.6%  realized=$+18.00
+  b802|lab0802_s404_w2_1005_1045_r1  n=  1  avg=+45.1%  med=+45.1%  realized=$+32.00
+  b803|lab0803_s404_w2_1005_1045_r2  n=  1  avg=+46.3%  med=+46.3%  realized=$+31.00
+  b804|lab0804_s404_w3_1045_1120_r1  n=  1  avg=+106.6%  med=+106.6%  realized=$+65.00
+  b805|lab0805_s404_w3_1045_1120_r2  n=  1  avg=+86.9%  med=+86.9%  realized=$+53.00
+  b806|lab0806_s404_w4_1120_1135_r1  n=  1  avg=+145.2%  med=+145.2%  realized=$+90.00
+  b807|lab0807_s404_w4_1120_1135_r2  n=  1  avg=+124.2%  med=+124.2%  realized=$+77.00
+  b814|lab0814_s405_w1_0928_1005_r1  n=  1  avg=+53.1%  med=+53.1%  realized=$+26.00
+  b815|lab0815_s405_w1_0928_1005_r2  n=  1  avg=+46.9%  med=+46.9%  realized=$+23.00
+  b816|lab0816_s405_w2_1005_1045_r1  n=  1  avg=+69.6%  med=+69.6%  realized=$+39.00
+  b817|lab0817_s405_w2_1005_1045_r2  n=  1  avg=+57.1%  med=+57.1%  realized=$+32.00
+  b818|lab0818_s405_w3_1045_1120_r1  n=  1  avg=+142.2%  med=+142.2%  realized=$+64.00
+  b819|lab0819_s405_w3_1045_1120_r2  n=  1  avg=+122.2%  med=+122.2%  realized=$+55.00
+  b820|lab0820_s405_w4_1120_1135_r1  n=  1  avg=+254.8%  med=+254.8%  realized=$+107.00
+  b821|lab0821_s405_w4_1120_1135_r2  n=  1  avg=+242.9%  med=+242.9%  realized=$+102.00
+  b834|lab0834_s406_w4_1120_1135_r1  n=  1  avg=+44.0%  med=+44.0%  realized=$+11.00
+  b835|lab0835_s406_w4_1120_1135_r2  n=  1  avg=-56.0%  med=-56.0%  realized=$-14.00
+  b849|lab0849_s407_w4_1120_1135_r2  n=  1  avg=-66.7%  med=-66.7%  realized=$-2.00
+  b88|c088_s165_w1_0928_1005_r5  n= 21  avg=-5.0%  med=-2.7%  realized=$-63.00
+  b88|c088_s167_w1_0928_1005_r4  n=  4  avg=-12.7%  med=+30.9%  realized=$-28.00
+  b89|c089_s165_w2_1005_1045_r5  n=  7  avg=+113.1%  med=+30.9%  realized=$+67.00
+  b89|c089_s167_w2_1005_1045_r4  n=  2  avg=-16.2%  med=+30.9%  realized=$-22.00
+  b8|c008_s165_w1_0928_1005_r1  n= 23  avg=-19.6%  med=-35.3%  realized=$-250.00
+  b90|c090_s165_w3_1045_1120_r5  n= 13  avg=+7.7%  med=+0.0%  realized=$+47.00
+  b90|c090_s167_w3_1045_1120_r4  n=  4  avg=-41.6%  med=-18.9%  realized=$-123.00
+  b91|c091_s165_w4_1120_1135_r5  n=  2  avg=+222.0%  med=+247.0%  realized=$+293.00
+  b9|c009_s165_w2_1005_1045_r1  n=  7  avg=-74.4%  med=-66.2%  realized=$-301.00
+========================================================
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          after_hours                             |
+|  Equity                        $135,381.52                             |
+|  Signals this run              0                                       |
+|  Orders submitted (session)    164                                     |
+|  Orders filled today (ledger)  156                                     |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             61                                      |
+|  Broker option positions       13                                      |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S173,S174)                           |
++------------------------------------------------------------------------+
+|  Reflected trades=357  buckets=110  win=39%                            |
+|  Returns   avg=+11.5%  med=-23.1%  p10=-65.8%  p90=+134.1%             |
+|  Realized  $+7,303.13                                                  |
+|  Raw incl dropped  trades=891  real=$+5,707.58                         |
+|  Today     trades=80  avg=+71.1%  med=+55.1%  real=$+2,886.00          |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b791 lab0791_s398_w4_11  1 100% +338.1 +338.1 +338.1 $   +142         |
+|  b319 lab0319_s355_w4_11  1 100% +328.6 +328.6 +328.6 $   +138         |
+|  b790 lab0790_s398_w4_11  1 100% +311.9 +311.9 +311.9 $   +131         |
+|  b318 lab0318_s355_w4_11  1 100% +292.9 +292.9 +292.9 $   +123         |
+|  b311 lab0311_s354_w4_11  1 100% +290.5 +290.5 +290.5 $   +122         |
+|  b51  lab0051_s206_w2_10  1 100% +263.6 +263.6 +263.6 $   +174         |
+|  b820 lab0820_s405_w4_11  1 100% +254.8 +254.8 +254.8 $   +107         |
+|  b821 lab0821_s405_w4_11  1 100% +242.9 +242.9 +242.9 $   +102         |
+|  ... 102 more bucket(s) with exits                                     |
++------------------------------------------------------------------------+
+|  Low  b20  lab0020_s202_w3_10  1   0% -88.9 -88.9 -88.9 $     -8       |
++========================================================================+
++========================================================================+
+|  PENDING EXITS (3)                                                     |
++------------------------------------------------------------------------+
+|  b290 S352 AAPL260803C00315000 x1 take_profit (+188.3%                 |
+|  b320 S356 AAPL260814C00330000 x1 take_profit (+54.0%)                 |
+|  b328 S357 AAPL260821C00335000 x1 take_profit (+54.7%)                 |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (13)                                                     |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  AAPL260803C00315000          21   +188.3%   $ +1,618.50               |
+|  AAPL260814C00330000           7    +54.0%   $   +225.75               |
+|  AAPL260821C00335000           5    +54.7%   $   +175.00               |
+|  T260807C00023000              6    -22.2%   $    -84.00               |
+|  OXY260807C00059000            4    +27.4%   $    +68.00               |
+|  SMCI260807P00025000           3    -46.5%   $    -60.00               |
+|  SMCI260807P00025500           1    -45.5%   $    -25.00               |
+|  NFLX260807C00075000           2    -24.0%   $    -24.00               |
+|  ... 5 more position(s)                                                |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-31.log
+elapsed=0.7s reconcile=0.1s
+
