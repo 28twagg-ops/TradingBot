@@ -6265,7 +6265,10 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-31 16:06:45.316284+00:00,exit,225,lab0225_s400_w3_1045_1120_r2,S400,c35b6f970cca,AMZN,AMZN260803C00290000,1,,0.05,15.0,-66.67,-10.0,reconcile_fill,,-0.01,0.5,-0.5,,,a012b06d-cdc4-40a3-83b6-2de8d90cdfbb
 2026-07-31 16:16:48.096635+00:00,exit,227,lab0227_s400_w4_1120_1135_r2,S400,fcfbb32e8d77,AMZN,AMZN260803C00290000,1,,0.07,9.0,-22.22,-2.0,stop_loss (-58.3%),,-0.01,0.5,-0.5,,,186b8a59-a42a-450b-8cda-decac4a58473
 2026-07-31T16:25:46Z,reconcile,226,lab0226_s400_w4_1120_1135_r1,S400,867e587ae354,AMZN,AMZN260803C00290000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-07-31T17:20:00Z,reconcile,848,lab0848_s407_w4_1120_1135_r1,S407,e94f8e4dc45c,AAPL,AAPL260803C00330000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-07-31 17:14:02.877912+00:00,exit,795,lab0795_s399_w2_1005_1045_r2,S399,8a13ad8e2321,COIN,COIN260807C00170000,1,,0.48,30.0,60.0,18.0,take_profit (+53.3%),,-0.01,0.5,-0.5,,,5cb90059-105d-4c9a-8173-461a672e2ec5
+2026-07-31T17:21:13Z,reconcile,795,lab0795_s399_w2_1005_1045_r2,S399,8a13ad8e2321,COIN,COIN260807C00170000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-07-31T17:21:13Z,reconcile,794,lab0794_s399_w2_1005_1045_r1,S399,ea73feb5e9e8,COIN,COIN260807C00170000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-07-31T17:21:13Z,reconcile,848,lab0848_s407_w4_1120_1135_r1,S407,e94f8e4dc45c,AAPL,AAPL260803C00330000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-07-31 17:21:08.402473+00:00,exit,802,lab0802_s404_w2_1005_1045_r1,S404,22d3eb8aa4ca,COIN,COIN260807C00162500,1,,1.03,71.0,45.07,32.0,reconcile_fill,,-0.01,0.5,-0.5,,,cadf9167-dd28-47f7-818a-c9eed955e9dd
+2026-07-31 17:20:20.780815+00:00,exit,800,lab0800_s404_w1_0928_1005_r1,S404,6cf105e91416,COIN,COIN260807C00165000,1,,0.79,57.0,38.6,22.0,reconcile_fill,,-0.01,0.5,-0.5,,,7e761593-c9fc-46f5-b659-9e6fe67c8107
 2026-07-31 17:13:05.288968+00:00,exit,801,lab0801_s404_w1_0928_1005_r2,S404,9600688327bb,COIN,COIN260807C00165000,1,,0.75,57.0,31.58,18.0,take_profit (+51.0%),,-0.01,0.5,-0.5,,,1573f410-fcce-463d-99ed-8f5743d0ab81
 2026-07-31 17:13:13.187479+00:00,exit,803,lab0803_s404_w2_1005_1045_r2,S404,21e2194c47f9,COIN,COIN260807C00162500,1,,0.98,67.0,46.27,31.0,take_profit (+50.6%),,-0.01,0.5,-0.5,,,4019abc5-057a-4195-ab6b-7f37d72163d0
