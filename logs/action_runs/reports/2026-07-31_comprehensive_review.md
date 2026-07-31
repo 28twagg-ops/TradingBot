@@ -9642,3 +9642,92 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260731T161459Z
+
+- UTC timestamp: `20260731T161459Z`
+- GitHub run: [#5717](https://github.com/28twagg-ops/TradingBot/actions/runs/30645994086)
+- Run id: `30645994086`
+- Live bot: exit=`0`, duration=`3s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-31T12:02:38.009708-04:00","date":"2026-07-31","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":8.1,"phases_s":{"reconcile":0.23,"cancel":0.07,"manage":7.21},"signals":0,"placed":0,"equity":128349.04,"open_positions":22,"pending_orders":0,"open_lots":137,"submitted_today":164,"filled_today":156,"unattributed_contracts":0,"top_signals":[],"github_run":"5714","github_run_id":"30645278214","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+16:15:00  INFO      Mode: exits
+16:15:01  INFO        Daily log -> logs/daily/2026-07-31.md
+16:15:01  INFO        Daily log reconciled -> logs/daily/2026-07-31.md (5 ledger rows)
+16:15:01  INFO        place_all_stops: checking 2 positions...
+16:15:01  INFO        STOP already live APG @ $38.65
+16:15:01  INFO        STOP skipped CINF: fractional (0.5367 shares) — software exit will handle it
+16:15:02  INFO        [positions] 2/2 (2 valid)
+16:15:02  INFO        Daily log -> logs/daily/2026-07-31.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         16:15 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $469.02|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CINF  P&L +1.0%  $+0.94                                           HOLD|
+|  APG  P&L +2.6%  $+1.82                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=137 paper_keys=yes dry_run=False
+  alpaca positions=24
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-07-31T12:15:04.510728-04:00 ===
+
+[Run context]
+Paper auth OK — equity $128329.22, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 1024 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419
+Dropped (no new entries; ex-reflected P&L): S173, S174
+2026-07-31 12:15:16,658 INFO   EXIT [b224|lab0224_s400_w3_1045_1120_r1|S400] stop_loss (-58.3%) SELL 1 AMZN260803C00290000 @<= 0.02
+```
+
+---
