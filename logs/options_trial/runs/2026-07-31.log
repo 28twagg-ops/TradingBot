@@ -29347,11 +29347,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-07-31.log
 elapsed=0.8s reconcile=0.25s
 
-=== 18:44:49 ET — after hours (exit summary) [elapsed=0.7s reconcile=0.37s] ===
-=== options_morning_bot (PAPER) 2026-07-31T18:44:49.774826-04:00 ===
+=== 18:45:49 ET — after hours (exit summary) [elapsed=1.1s reconcile=0.59s] ===
+=== options_morning_bot (PAPER) 2026-07-31T18:45:49.573626-04:00 ===
 
 [Run context]
-After hours (18:44 ET) — exit summary only.
+After hours (18:45 ET) — exit summary only.
 Paper auth OK — equity $135285.52, account PA36KS87UPRS
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1
 
@@ -29690,5 +29690,5 @@ Per-bucket exit stats (all time)
 |  ... 5 more position(s)                                                |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-07-31.log
-elapsed=0.7s reconcile=0.37s
+elapsed=1.1s reconcile=0.59s
 
