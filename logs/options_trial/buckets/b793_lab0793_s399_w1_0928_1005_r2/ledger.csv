@@ -1,2 +1,2 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
-2026-07-31 14:05:17.815104+00:00,entry,793,lab0793_s399_w1_0928_1005_r2,S399,91cf917a2c54,MSTR,MSTR260807C00108000,1,0.42,0.38,38.0,,,,-0.01,,0.75,-0.75,0.20512820512820515,gap -2.9%,64243fad-94b1-4dfb-9061-0e35194cd072
+2026-07-31 14:05:17.815104+00:00,entry,793,lab0793_s399_w1_0928_1005_r2,S399,4ed6cf95aa85,MSTR,MSTR260807C00108000,1,0.42,0.38,38.0,,,,-0.01,,0.75,-0.75,0.20512820512820515,gap -2.9%,64243fad-94b1-4dfb-9061-0e35194cd072

@@ -1,0 +1,54 @@
+14:07:22  INFO      Mode: exits
+14:07:22  INFO        Daily log -> logs/daily/2026-07-31.md
+14:07:22  INFO        Daily log reconciled -> logs/daily/2026-07-31.md (2 ledger rows)
+14:07:22  INFO        place_all_stops: checking 5 positions...
+14:07:22  INFO        STOP already live APG @ $38.65
+14:07:22  INFO        STOP skipped AVB: fractional (0.5044 shares) — software exit will handle it
+14:07:22  INFO        STOP skipped CI: fractional (0.3285 shares) — software exit will handle it
+14:07:22  INFO        STOP skipped CINF: fractional (0.5367 shares) — software exit will handle it
+14:07:22  INFO        STOP skipped FFIV: fractional (0.2324 shares) — software exit will handle it
+14:07:23  INFO        [positions] 5/5 (5 valid)
+14:07:23  INFO        Daily log -> logs/daily/2026-07-31.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:07 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $468.02|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CI  P&L -0.4%  $-0.36                                             HOLD|
+|  FFIV  P&L -0.3%  $-0.32                                           HOLD|
+|  AVB  P&L -0.1%  $-0.09                                            HOLD|
+|  CINF  P&L +0.3%  $+0.29                                           HOLD|
+|  APG  P&L +0.7%  $+0.49                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           5|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                5|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
