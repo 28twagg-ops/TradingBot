@@ -10,7 +10,7 @@ S172,Trend Resumption call 3 DTE,3d ATM trend resume,watch,insufficient sample (
 S175,Earnings Drift call 3 DTE,3d ATM earnings drift,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S200,GapDown_Aggressive,3d ATM gap-aggr,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S201,GapDown_Mild,3d ATM gap-mild,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
-S203,GapUp_Fade,3d ATM gap-up fade (put),watch,insufficient sample (<8 exits),12,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,4,12,0,0,0.0
+S203,GapUp_Fade,3d ATM gap-up fade (put),watch,insufficient sample (<8 exits),14,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,4,14,0,0,0.0
 S204,GapUp_Continuation,3d ATM gap-up cont,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S205,GapDown_HighVol,3d ATM gap-highvol,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S206,GapDown_WithTrend,3d ATM gap-trend,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
