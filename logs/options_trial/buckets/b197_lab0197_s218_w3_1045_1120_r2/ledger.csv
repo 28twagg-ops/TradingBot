@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-31 15:12:31.119118+00:00,entry,197,lab0197_s218_w3_1045_1120_r2,S218,4fcd180e038b,META,META260803C00600000,1,0.16,0.16,16.0,,,,-0.01,,0.75,-0.75,0.1250000000000001,low=542.70 BB_lower=542.67 touch+green,a8ce6132-64dc-401c-812c-0b3d47bd264f

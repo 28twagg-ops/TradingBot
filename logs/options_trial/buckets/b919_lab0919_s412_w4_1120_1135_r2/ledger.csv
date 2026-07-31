@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-31 15:23:00.851285+00:00,entry,919,lab0919_s412_w4_1120_1135_r2,S412,c3e9bf665136,AAPL,AAPL260803C00315000,1,0.45,0.41,41.0,,,,-0.01,,0.5,-0.5,0.1395348837209302,RB gap -8.6% reclaim,77cfac13-0d3f-45c7-b1d0-605a74cd659c
