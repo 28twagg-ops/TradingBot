@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-31
 
-_Generated 2026-07-31T13:36:14.226879_
+_Generated 2026-07-31T13:41:03.864676_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-07-31T13:36:14.226879_
 
 ## Attribution health
 
-- Total exits: **841**
+- Total exits: **844**
 - Orphan exits (b0/orphan_reconcile): **22**
 - Orphan rate: **2.6%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -20,8 +20,8 @@ _Generated 2026-07-31T13:36:14.226879_
 
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| S405 (GapDown_OTM3) | 3d | watch | 1 | 100.0 | +57.14 | +57.14 | +57.14 | +57.14 | 0 | 8 | 1 | $+32.00 | 100.0% | insufficient sample (<8 exits) |
-| S404 (GapDown_OTM2) | 3d | watch | 5 | 100.0 | +45.07 | +34.39 | +38.60 | +70.64 | 0 | 8 | 5 | $+156.00 | 100.0% | insufficient sample (<8 exits) |
+| S405 (GapDown_OTM3) | 3d | watch | 3 | 100.0 | +57.14 | +48.98 | +52.04 | +67.14 | 0 | 8 | 3 | $+94.00 | 100.0% | insufficient sample (<8 exits) |
+| S404 (GapDown_OTM2) | 3d | watch | 6 | 100.0 | +45.67 | +35.09 | +40.22 | +96.72 | 0 | 8 | 6 | $+221.00 | 100.0% | insufficient sample (<8 exits) |
 | S397 (GapDown_ITM1) | 3d | watch | 4 | 100.0 | +42.00 | +39.12 | +39.91 | +49.07 | 0 | 8 | 4 | $+113.00 | 100.0% | insufficient sample (<8 exits) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 10 | 18 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 10 | 16 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -313,8 +313,8 @@ _Pipeline evaluation as of 2026-07-31. Auto-kill thresholds: median<-25% at n>=1
 | S401 | Any_Gap_Down_Small | 1 | -38.98% | 0% | WATCH | 0 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
 | S403 | Any_MA50_Touch | 0 | — | — | NEW | 0 |
-| S404 | GapDown_OTM2 | 5 | +45.07% | 100% | WATCH | 0 |
-| S405 | GapDown_OTM3 | 1 | +57.14% | 100% | WATCH | 0 |
+| S404 | GapDown_OTM2 | 6 | +45.67% | 100% | WATCH | 0 |
+| S405 | GapDown_OTM3 | 3 | +57.14% | 100% | WATCH | 0 |
 | S406 | RubberBand_ITM3 | 1 | -56.00% | 0% | WATCH | 0 |
 | S407 | RubberBand_ITM2 | 1 | -66.67% | 0% | WATCH | 0 |
 | S408 | RubberBand_ITM1 | 0 | — | — | NEW | 0 |
