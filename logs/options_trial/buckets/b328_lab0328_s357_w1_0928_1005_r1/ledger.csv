@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-31 14:02:30.034559+00:00,entry,328,lab0328_s357_w1_0928_1005_r1,S357,812e756aa93f,AAPL,AAPL260821C00335000,1,0.69,0.68,68.0,,,,-0.01,,0.5,-0.5,0.12121212121212116,gap -8.6%,4acbe78c-af2d-45dc-9000-0e9b279a3151

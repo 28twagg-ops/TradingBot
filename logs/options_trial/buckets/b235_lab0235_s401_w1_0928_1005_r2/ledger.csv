@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-31 14:02:21.968643+00:00,entry,235,lab0235_s401_w1_0928_1005_r2,S401,8ae85f5db0c5,NFLX,NFLX260807C00075000,1,0.51,0.5,50.0,,,,-0.01,,0.75,-0.75,0.1443298969072165,gap -1.65% green,e6cf53fa-11d2-43e0-86cc-0cc903cf8b09
