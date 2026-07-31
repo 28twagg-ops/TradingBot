@@ -1246,6 +1246,70 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
+    },
+    {
+      "order_id": "819168fd-3309-4db0-9418-da4effacd519",
+      "bucket_id": 180,
+      "strategy_id": "S217",
+      "occ_symbol": "META260803C00600000",
+      "underlying": "META",
+      "qty": 1,
+      "limit": 0.16,
+      "profile_name": "lab0180_s217_w2_1005_1045_r1",
+      "submitted": "2026-07-31",
+      "detail": "RSI=19.4 green",
+      "spread_frac": 0.1250000000000001,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "afcc0e60-46fc-4b77-9534-7154891878da",
+      "bucket_id": 181,
+      "strategy_id": "S217",
+      "occ_symbol": "META260803C00600000",
+      "underlying": "META",
+      "qty": 1,
+      "limit": 0.16,
+      "profile_name": "lab0181_s217_w2_1005_1045_r2",
+      "submitted": "2026-07-31",
+      "detail": "RSI=19.4 green",
+      "spread_frac": 0.1250000000000001,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "24c28c0e-a59c-4c72-9314-aa005fb45f5b",
+      "bucket_id": 194,
+      "strategy_id": "S218",
+      "occ_symbol": "META260803C00600000",
+      "underlying": "META",
+      "qty": 1,
+      "limit": 0.16,
+      "profile_name": "lab0194_s218_w2_1005_1045_r1",
+      "submitted": "2026-07-31",
+      "detail": "low=542.70 BB_lower=542.24 touch+green",
+      "spread_frac": 0.1250000000000001,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "51033faf-b83c-4fa4-8ccc-71bebbf7ea47",
+      "bucket_id": 195,
+      "strategy_id": "S218",
+      "occ_symbol": "META260803C00600000",
+      "underlying": "META",
+      "qty": 1,
+      "limit": 0.16,
+      "profile_name": "lab0195_s218_w2_1005_1045_r2",
+      "submitted": "2026-07-31",
+      "detail": "low=542.70 BB_lower=542.24 touch+green",
+      "spread_frac": 0.1250000000000001,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
     }
   ],
   "pending_exits": [
@@ -1386,7 +1450,11 @@
     "110|S212|2026-07-31",
     "111|S212|2026-07-31",
     "264|S403|2026-07-31",
-    "265|S403|2026-07-31"
+    "265|S403|2026-07-31",
+    "180|S217|2026-07-31",
+    "181|S217|2026-07-31",
+    "194|S218|2026-07-31",
+    "195|S218|2026-07-31"
   ],
   "processed_orders": [
     "6c262426-8745-4761-9670-548cd2bb961b",
@@ -1792,7 +1860,7 @@
     "366cb2e4-5348-4b2b-9be4-c9eadcdd6e30",
     "71f6920f-c894-4ba2-9b6f-b107be43848b"
   ],
-  "submitted_today": 64,
+  "submitted_today": 68,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-07-31"
 }
