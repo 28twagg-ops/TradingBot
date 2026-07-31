@@ -6314,3 +6314,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-31 18:41:15.679086+00:00,exit,799,lab0799_s399_w4_1120_1135_r2,S399,8dbbddc9dea4,COIN,COIN260807C00167500,1,,1.06,37.0,186.49,69.0,take_profit (+131.9%),,-0.01,0.5,-0.5,,,588235bd-8141-4b50-b295-95f69b744d52
 2026-07-31T18:51:14Z,reconcile,798,lab0798_s399_w4_1120_1135_r1,S399,38b758390ebd,COIN,COIN260807C00167500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-07-31 18:46:11.690001+00:00,exit,308,lab0308_s354_w3_1045_1120_r1,S354,6d7ee2db8ff6,COIN,COIN260807C00165000,1,,1.54,48.0,220.83,106.0,take_profit (+218.6%),,-0.01,0.5,-0.5,,,365e630d-453b-4ea2-b905-d1fc5cd92c8d
+2026-07-31 18:51:59.832387+00:00,exit,821,lab0821_s405_w4_1120_1135_r2,S405,44e460e52ef1,COIN,COIN260807C00165000,1,,1.44,42.0,242.86,102.0,take_profit (+195.9%),,-0.01,0.5,-0.5,,,cef96df3-5591-45e3-84f9-3bffdfe8fd29
