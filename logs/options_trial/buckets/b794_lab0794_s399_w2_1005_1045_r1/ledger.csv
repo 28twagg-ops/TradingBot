@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-07-31 14:10:10.268731+00:00,entry,794,lab0794_s399_w2_1005_1045_r1,S399,ea73feb5e9e8,COIN,COIN260807C00170000,1,0.33,0.3,30.0,,,,-0.01,,0.75,-0.75,0.060606060606060656,gap -6.4%,a916d297-2da1-4fc6-8bfa-edbfa632a0ee
