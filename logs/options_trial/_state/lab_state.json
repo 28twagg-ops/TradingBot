@@ -82,26 +82,6 @@
       "entry_order_id": "5ba383ad-b286-4c91-9640-11aa81dd72b8"
     },
     {
-      "lot_id": "c304dc1a4cde",
-      "bucket_id": 288,
-      "profile_name": "lab0288_s352_w1_0928_1005_r1",
-      "strategy_id": "S352",
-      "occ_symbol": "AAPL260803C00315000",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 42.0,
-      "entry_price": 0.42,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-31T14:02:42.414034+00:00",
-      "entry_order_id": "e1aeb58f-ea1c-456b-bdcd-61df664d8a54"
-    },
-    {
       "lot_id": "8ae85f5db0c5",
       "bucket_id": 235,
       "profile_name": "lab0235_s401_w1_0928_1005_r2",
@@ -1302,46 +1282,6 @@
       "entry_order_id": "16d6aa67-91f8-43a1-95b8-470ce932d719"
     },
     {
-      "lot_id": "32c0c31be5af",
-      "bucket_id": 292,
-      "profile_name": "lab0292_s352_w3_1045_1120_r1",
-      "strategy_id": "S352",
-      "occ_symbol": "AAPL260803C00317500",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 20.0,
-      "entry_price": 0.2,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-31T15:26:26.199651+00:00",
-      "entry_order_id": "ceb3011b-61ba-4c4e-8431-128c72102a1c"
-    },
-    {
-      "lot_id": "5c6accffc88f",
-      "bucket_id": 318,
-      "profile_name": "lab0318_s355_w4_1120_1135_r1",
-      "strategy_id": "S355",
-      "occ_symbol": "COIN260807C00165000",
-      "underlying": "COIN",
-      "qty": 1,
-      "entry_cost": 42.0,
-      "entry_price": 0.42,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-31T15:28:01.868892+00:00",
-      "entry_order_id": "a78b54fc-bd77-4430-b617-10fe72a815f2"
-    },
-    {
       "lot_id": "f0fdd7f676f8",
       "bucket_id": 311,
       "profile_name": "lab0311_s354_w4_1120_1135_r2",
@@ -1515,34 +1455,24 @@
       "submitted": "2026-07-31T12:02:42"
     },
     {
-      "order_id": "e6060d07-6566-433f-a010-b7ef83d9e7bf",
-      "lot_id": "5c6accffc88f",
-      "bucket_id": 318,
-      "strategy_id": "S355",
+      "order_id": "193a39ff-119f-42a2-ab84-30aa78d7f0c8",
+      "lot_id": "f0fdd7f676f8",
+      "bucket_id": 311,
+      "strategy_id": "S354",
       "occ_symbol": "COIN260807C00165000",
       "qty": 1,
-      "reason": "take_profit (+241.4%)",
-      "submitted": "2026-07-31T15:26:17"
+      "reason": "take_profit (+239.3%)",
+      "submitted": "2026-07-31T15:34:48"
     },
     {
-      "order_id": "ccbf28c1-5826-435f-a0ff-d11d4c860b66",
-      "lot_id": "32c0c31be5af",
-      "bucket_id": 292,
-      "strategy_id": "S352",
-      "occ_symbol": "AAPL260803C00317500",
-      "qty": 1,
-      "reason": "take_profit (+73.3%)",
-      "submitted": "2026-07-31T15:26:19"
-    },
-    {
-      "order_id": "d6814956-9c1f-4348-93e1-ccacc2276053",
-      "lot_id": "c304dc1a4cde",
-      "bucket_id": 288,
-      "strategy_id": "S352",
+      "order_id": "3f679c7e-39ad-45ec-a081-c365b98656bd",
+      "lot_id": "d3e7ad523f28",
+      "bucket_id": 297,
+      "strategy_id": "S353",
       "occ_symbol": "AAPL260803C00315000",
       "qty": 1,
-      "reason": "take_profit (+56.4%)",
-      "submitted": "2026-07-31T15:26:19"
+      "reason": "take_profit (+63.7%)",
+      "submitted": "2026-07-31T15:34:49"
     }
   ],
   "bucket_open_premium": {
@@ -1550,7 +1480,6 @@
     "b328": 68.0,
     "b321": 57.99999999999999,
     "b320": 57.99999999999999,
-    "b288": 42.0,
     "b235": 50.0,
     "b234": 50.0,
     "b297": 38.0,
@@ -1611,8 +1540,6 @@
     "b424": 62.0,
     "b303": 40.0,
     "b302": 40.0,
-    "b292": 20.0,
-    "b318": 42.0,
     "b311": 42.0,
     "b310": 42.0,
     "b31": 41.0,
@@ -2251,7 +2178,9 @@
     "1e8870fa-4dd4-432d-a9c1-8f8e9522194a",
     "1328859f-b6a1-47ba-a86d-44a357d5a73f",
     "678b6ad8-1a4c-4665-8a14-ba4937001617",
-    "f09a34ba-816c-4c1c-88c3-e8ac764f8497"
+    "f09a34ba-816c-4c1c-88c3-e8ac764f8497",
+    "d6814956-9c1f-4348-93e1-ccacc2276053",
+    "e6060d07-6566-433f-a010-b7ef83d9e7bf"
   ],
   "submitted_today": 164,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
