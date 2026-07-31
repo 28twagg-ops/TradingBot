@@ -1442,26 +1442,6 @@
       "entry_order_id": "66a29f59-5d63-404f-801c-7c228da9efd0"
     },
     {
-      "lot_id": "89a14194b0e3",
-      "bucket_id": 285,
-      "profile_name": "lab0285_s351_w3_1045_1120_r2",
-      "strategy_id": "S351",
-      "occ_symbol": "MSTR260731C00099000",
-      "underlying": "MSTR",
-      "qty": 1,
-      "entry_cost": 3.0,
-      "entry_price": 0.03,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-31T14:48:33.966181+00:00",
-      "entry_order_id": "6c352a28-c65f-4d21-a9e8-e2388100ea32"
-    },
-    {
       "lot_id": "78a482c7e069",
       "bucket_id": 284,
       "profile_name": "lab0284_s351_w3_1045_1120_r1",
@@ -1660,26 +1640,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-07-31T14:52:08.762859+00:00",
       "entry_order_id": "6f1ae2da-d939-4aa6-9931-fa0945522b1d"
-    },
-    {
-      "lot_id": "6cef0d592696",
-      "bucket_id": 182,
-      "profile_name": "lab0182_s217_w3_1045_1120_r1",
-      "strategy_id": "S217",
-      "occ_symbol": "TSLA260803C00327500",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 40.0,
-      "entry_price": 0.4,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-31T14:52:08.865128+00:00",
-      "entry_order_id": "32bd6484-c371-407d-9697-6564252b18d5"
     },
     {
       "lot_id": "711bac939f20",
@@ -2220,26 +2180,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-07-31T15:23:01.697490+00:00",
       "entry_order_id": "66e1469a-3b3a-47c9-8355-555ab81511d8"
-    },
-    {
-      "lot_id": "42f8968a16ee",
-      "bucket_id": 354,
-      "profile_name": "lab0354_s360_w4_1120_1135_r1",
-      "strategy_id": "S360",
-      "occ_symbol": "AAPL260731C00307500",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 42.0,
-      "entry_price": 0.42,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-31T15:23:01.776766+00:00",
-      "entry_order_id": "d5b84c41-5ccc-4c55-b175-632309bc4121"
     },
     {
       "lot_id": "1958c3c226d3",
@@ -2805,16 +2745,6 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "e610a052-22c7-4188-97e6-4943881f6417",
-      "lot_id": "89a14194b0e3",
-      "bucket_id": 285,
-      "strategy_id": "S351",
-      "occ_symbol": "MSTR260731C00099000",
-      "qty": 1,
-      "reason": "stop_loss (-66.7%)",
-      "submitted": "2026-07-31T11:01:11"
-    },
-    {
       "order_id": "5231166b-a880-4706-8e93-15849371d304",
       "lot_id": "e94f8e4dc45c",
       "bucket_id": 848,
@@ -2825,24 +2755,14 @@
       "submitted": "2026-07-31T11:36:27"
     },
     {
-      "order_id": "5da71253-655f-4042-9717-1a8676059321",
-      "lot_id": "6cef0d592696",
-      "bucket_id": 182,
-      "strategy_id": "S217",
-      "occ_symbol": "TSLA260803C00327500",
+      "order_id": "eb056762-8a50-497c-82f6-074d37bdcbe5",
+      "lot_id": "78a482c7e069",
+      "bucket_id": 284,
+      "strategy_id": "S351",
+      "occ_symbol": "MSTR260731C00099000",
       "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-07-31T11:40:51"
-    },
-    {
-      "order_id": "f2fbda3d-e003-42d6-8166-65bd83b06a74",
-      "lot_id": "42f8968a16ee",
-      "bucket_id": 354,
-      "strategy_id": "S360",
-      "occ_symbol": "AAPL260731C00307500",
-      "qty": 1,
-      "reason": "stop_loss (-75.0%)",
-      "submitted": "2026-07-31T11:51:41"
+      "reason": "stop_loss (-66.7%)",
+      "submitted": "2026-07-31T12:02:42"
     }
   ],
   "bucket_open_premium": {
@@ -2918,7 +2838,6 @@
     "b316": 48.0,
     "b309": 48.0,
     "b308": 48.0,
-    "b285": 3.0,
     "b284": 3.0,
     "b267": 71.0,
     "b266": 71.0,
@@ -2929,7 +2848,6 @@
     "b333": 62.0,
     "b332": 62.0,
     "b238": 59.0,
-    "b182": 40.0,
     "b301": 35.0,
     "b300": 35.0,
     "b21": 35.0,
@@ -2957,7 +2875,6 @@
     "b382": 43.0,
     "b369": 43.0,
     "b368": 43.0,
-    "b354": 42.0,
     "b327": 65.0,
     "b326": 65.0,
     "b295": 43.0,
@@ -3560,7 +3477,8 @@
     "a48846f4-7b6a-440b-912b-0c491051ac9a",
     "1076f4a6-7f25-4146-80a3-cbef241ba1e8",
     "89fe87e5-92ca-431d-a43c-3bb299a8bc54",
-    "ba8c614b-2f00-41ef-bb8c-b566ccf73147"
+    "ba8c614b-2f00-41ef-bb8c-b566ccf73147",
+    "e610a052-22c7-4188-97e6-4943881f6417"
   ],
   "submitted_today": 164,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
