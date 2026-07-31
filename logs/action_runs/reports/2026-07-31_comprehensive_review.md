@@ -8005,3 +8005,185 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260731T153332Z
+
+- UTC timestamp: `20260731T153332Z`
+- GitHub run: [#5708](https://github.com/28twagg-ops/TradingBot/actions/runs/30643138833)
+- Run id: `30643138833`
+- Live bot: exit=`0`, duration=`4s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-07-31T11:33:38.271473-04:00","date":"2026-07-31","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":97.2,"phases_s":{"reconcile":0.61,"cancel":0.15,"manage":13.76,"scan":59.81,"entries":21.62,"reconcile2":0.61},"signals":252,"placed":0,"equity":127444.32,"open_positions":25,"pending_orders":12,"open_lots":143,"submitted_today":164,"filled_today":154,"unattributed_contracts":0,"top_signals":["S165:COIN","S165:MSTR","S165:RBLX","S165:AAPL","S165:XOM","S165:SYK","S165:ES","S164:COIN"],"github_run":"5708","github_run_id":"30643138833","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+15:33:34  INFO      Mode: exits
+15:33:34  INFO        Daily log -> logs/daily/2026-07-31.md
+15:33:34  INFO        Daily log reconciled -> logs/daily/2026-07-31.md (5 ledger rows)
+15:33:34  INFO        place_all_stops: checking 2 positions...
+15:33:35  INFO        STOP already live APG @ $38.65
+15:33:35  INFO        STOP skipped CINF: fractional (0.5367 shares) — software exit will handle it
+15:33:35  INFO        [positions] 2/2 (2 valid)
+15:33:35  INFO        Daily log -> logs/daily/2026-07-31.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:33 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $467.83|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CINF  P&L +0.6%  $+0.54                                           HOLD|
+|  APG  P&L +1.5%  $+1.04                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=142 paper_keys=yes dry_run=False
+  alpaca positions=27
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-07-31T11:33:38.271473-04:00 ===
+
+[Run context]
+Paper auth OK — equity $127444.32, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 1024 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419
+Dropped (no new entries; ex-reflected P&L): S173, S174
+2026-07-31 11:33:40,645 INFO   EXIT [b849|lab0849_s407_w4_1120_1135_r2|S407] stop_loss (-66.7%) SELL 1 AAPL260803C00330000 @<= 0.01
+2026-07-31 11:33:41,669 INFO   EXIT [b282|lab0282_s351_w2_1005_1045_r1|S351] stop_loss (-56.2%) SELL 1 AAPL260731C00307500 @<= 0.18
+2026-07-31 11:33:43,281 INFO   EXIT [b225|lab0225_s400_w3_1045_1120_r2|S400] stop_loss (-66.7%) SELL 1 AMZN260803C00290000 @<= 0.05
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 114/117 symbols
+Found 252 signal(s); top: ['S165:COIN', 'S165:MSTR', 'S165:RBLX', 'S165:AAPL', 'S165:XOM', 'S165:SYK', 'S165:ES', 'S164:COIN']
+Paper lab: $127708 broker equity -> 1024 bucket(s) ($500 virtual each, unlimited paper)
+  Skipped: 110 no tradeable call, 7 already attempted today, 56 pending order
+Placed 0 new entry order(s).
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          entry+manage                            |
+|  Equity                        $127,444.32                             |
+|  Signals this run              252                                     |
+|  Orders submitted (session)    164                                     |
+|  Orders filled today (ledger)  154                                     |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             143                                     |
+|  Broker option positions       25                                      |
+|  Pending orders                12                                      |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S173,S174)                           |
++------------------------------------------------------------------------+
+|  Reflected trades=287  buckets=41  win=29%                             |
+|  Returns   avg=-7.4%  med=-40.0%  p10=-66.7%  p90=+81.8%               |
+|  Realized  $+4,314.13                                                  |
+|  Raw incl dropped  trades=821  real=$+2,718.58                         |
+|  Today     trades=10  avg=-54.5%  med=-53.4%  real=$-103.00            |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b51  lab0051_s206_w2_10  1 100% +263.6 +263.6 +263.6 $   +174         |
+|  b91  lab0091_s210_w6_14  2 100% +222.0 +222.0 +247.0 $   +293         |
+|  b31  lab0031_s203_w4_11  2 100% +145.5 +145.5 +175.8 $   +192         |
+|  b28  lab0028_s203_w3_10 22  77% +50.0 +80.0 +102.0 $   +590           |
+|  b58  lab0058_s207_w2_10  1 100% +59.1 +59.1 +59.1 $    +25            |
+|  b56  lab0056_s207_w1_09  1 100% +47.7 +47.7 +47.7 $    +21            |
+|  b57  lab0057_s207_w1_09  1 100% +47.7 +47.7 +47.7 $    +21            |
+|  b89  lab0089_s210_w5_13  9  56% +84.4 +30.9 +790.0 $    +45           |
+|  ... 33 more bucket(s) with exits                                      |
++------------------------------------------------------------------------+
+|  Low  b20  lab0020_s202_w3_10  1   0% -88.9 -88.9 -88.9 $     -8       |
++========================================================================+
++========================================================================+
+|  PENDING ORDERS (12)                                                   |
++------------------------------------------------------------------------+
+|  Top groups                    S356:AAPL(2), S399:COIN(2), S403:T(2)   |
++------------------------------------------------------------------------+
+|  b322 S356 AAPL     limit=0.51                                         |
+|  b323 S356 AAPL     limit=0.51                                         |
+|  b796 S399 COIN     limit=0.20                                         |
+|  b797 S399 COIN     limit=0.20                                         |
+|  b268 S403 T        limit=0.57                                         |
+|  ... 7 more pending order(s)                                           |
++========================================================================+
++========================================================================+
+|  PENDING EXITS (3)                                                     |
++------------------------------------------------------------------------+
+|  b285 S351 MSTR260731C00099000 x1 stop_loss (-66.7%)                   |
+|  b183 S217 TSLA260803C00327500 x1 stop_loss (-57.5%)                   |
+|  b225 S400 AMZN260803C00290000 x1 stop_loss (-66.7%)                   |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (25)                                                     |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  AAPL260803C00315000          28    -26.7%   $   -306.00               |
+|  COIN260807C00165000          24    -23.4%   $   -272.00               |
+|  COIN260807C00167500          14    -40.4%   $   -256.00               |
+|  COIN260807C00162500          12    -19.3%   $   -149.00               |
+|  AAPL260731C00307500           4    -52.1%   $   -100.00               |
+|  AAPL260814C00330000           8    -13.0%   $    -62.00               |
+|  TSLA260803C00327500           2    -60.0%   $    -48.00               |
+|  AAPL260821C00335000           6     -9.4%   $    -36.00               |
+|  ... 17 more position(s)                                               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-07-31.log
+elapsed=97.2s reconcile=0.61s cancel=0.15s manage=13.76s scan=59.81s entries=21.62s
+STATUS: options_morning_bot run complete (PAPER) elapsed=97.2s. run=#5708 https://github.com/28twagg-ops/TradingBot/actions/runs/30643138833
+Evaluation complete: 100 strategies evaluated, 0 killed, 0 promote candidates.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-31_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-31_buckets.csv
+Summary: 10 buckets closed trades, $-103.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-31_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-07-31_strategy_selection.csv
+Summary: keep=0 watch=102 drop=3
+Orphan rate: 2.7% (22/821)
+```
+
+---
