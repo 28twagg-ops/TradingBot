@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-07-31
 
-_Generated 2026-07-31T14:40:56.164345_
+_Generated 2026-07-31T14:46:18.754429_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-07-31T14:40:56.164345_
 
 ## Attribution health
 
-- Total exits: **870**
+- Total exits: **872**
 - Orphan exits (b0/orphan_reconcile): **22**
 - Orphan rate: **2.5%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -20,12 +20,12 @@ _Generated 2026-07-31T14:40:56.164345_
 
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| S354 (GapDown_5DTE) | 5d | watch | 4 | 100.0 | +119.32 | +95.53 | +98.41 | +141.82 | 0 | 8 | 4 | $+215.00 | 100.0% | insufficient sample (<8 exits) |
+| S354 (GapDown_5DTE) | 5d | watch | 5 | 100.0 | +138.64 | +96.17 | +100.00 | +162.27 | 0 | 8 | 5 | $+299.00 | 100.0% | insufficient sample (<8 exits) |
+| S399 (GapDown_OTM1) | 3d | watch | 2 | 100.0 | +119.56 | +66.02 | +86.09 | +173.10 | 0 | 6 | 2 | $+89.00 | 50.0% | insufficient sample (<8 exits) |
 | S355 (GapDown_7DTE) | 7d | watch | 6 | 100.0 | +117.04 | +88.30 | +92.48 | +190.62 | 0 | 8 | 6 | $+369.00 | 100.0% | insufficient sample (<8 exits) |
 | S398 (GapDown_ATM) | 3d | watch | 6 | 100.0 | +72.32 | +48.98 | +53.25 | +166.67 | 0 | 8 | 6 | $+279.00 | 100.0% | insufficient sample (<8 exits) |
 | S404 (GapDown_OTM2) | 3d | watch | 8 | 100.0 | +66.58 | +36.49 | +43.45 | +130.48 | 0 | 8 | 8 | $+388.00 | 100.0% | building sample (8-19 exits) |
 | S405 (GapDown_OTM3) | 3d | watch | 6 | 100.0 | +63.39 | +50.00 | +54.08 | +132.22 | 0 | 8 | 6 | $+239.00 | 100.0% | insufficient sample (<8 exits) |
-| S399 (GapDown_OTM1) | 3d | watch | 1 | 100.0 | +52.63 | +52.63 | +52.63 | +52.63 | 0 | 6 | 1 | $+20.00 | 100.0% | insufficient sample (<8 exits) |
 | S397 (GapDown_ITM1) | 3d | watch | 7 | 100.0 | +51.39 | +39.65 | +42.00 | +130.48 | 0 | 8 | 7 | $+348.00 | 100.0% | insufficient sample (<8 exits) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 10 | 18 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 10 | 16 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -263,7 +263,7 @@ _Pipeline evaluation as of 2026-07-31. Auto-kill thresholds: median<-25% at n>=1
 | S351 | GapDown_1DTE | 5 | -52.94% | 0% | WATCH | 0 |
 | S352 | GapDown_2DTE | 0 | — | — | NEW | 0 |
 | S353 | GapDown_3DTE | 0 | — | — | NEW | 0 |
-| S354 | GapDown_5DTE | 4 | +119.32% | 100% | WATCH | 0 |
+| S354 | GapDown_5DTE | 5 | +138.64% | 100% | WATCH | 0 |
 | S355 | GapDown_7DTE | 6 | +117.04% | 100% | WATCH | 0 |
 | S356 | GapDown_14DTE | 0 | — | — | NEW | 0 |
 | S357 | GapDown_21DTE | 0 | — | — | NEW | 0 |
@@ -308,7 +308,7 @@ _Pipeline evaluation as of 2026-07-31. Auto-kill thresholds: median<-25% at n>=1
 | S396 | GapDown_ITM2 | 0 | — | — | NEW | 0 |
 | S397 | GapDown_ITM1 | 7 | +51.39% | 100% | WATCH | 0 |
 | S398 | GapDown_ATM | 6 | +72.32% | 100% | WATCH | 0 |
-| S399 | GapDown_OTM1 | 1 | +52.63% | 100% | WATCH | 0 |
+| S399 | GapDown_OTM1 | 2 | +119.56% | 100% | WATCH | 0 |
 | S400 | Any_Green_Close | 5 | -50.00% | 0% | WATCH | 0 |
 | S401 | Any_Gap_Down_Small | 1 | -38.98% | 0% | WATCH | 0 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |

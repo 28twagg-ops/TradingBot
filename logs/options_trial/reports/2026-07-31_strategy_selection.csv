@@ -1,10 +1,10 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
-S354,GapDown_5DTE,5d,watch,insufficient sample (<8 exits),8,4,4,0,118.86,119.32,95.53,98.41,141.82,215.0,1,0,8,4,1,100.0
+S354,GapDown_5DTE,5d,watch,insufficient sample (<8 exits),8,5,5,0,130.09,138.64,96.17,100.0,162.27,299.0,1,0,8,5,1,100.0
+S399,GapDown_OTM1,3d,watch,insufficient sample (<8 exits),6,2,2,0,119.56,119.56,66.02,86.09,173.1,89.0,1,0,6,2,2,50.0
 S355,GapDown_7DTE,7d,watch,insufficient sample (<8 exits),8,6,6,0,131.99,117.04,88.3,92.48,190.62,369.0,1,0,8,6,1,100.0
 S398,GapDown_ATM,3d,watch,insufficient sample (<8 exits),8,6,6,0,95.99,72.32,48.98,53.25,166.67,279.0,1,0,8,6,1,100.0
 S404,GapDown_OTM2,3d,watch,building sample (8-19 exits),8,8,8,0,78.04,66.58,36.49,43.45,130.48,388.0,1,0,8,8,1,100.0
 S405,GapDown_OTM3,3d,watch,insufficient sample (<8 exits),8,6,6,0,81.87,63.39,50.0,54.08,132.22,239.0,1,0,8,6,1,100.0
-S399,GapDown_OTM1,3d,watch,insufficient sample (<8 exits),6,1,1,0,52.63,52.63,52.63,52.63,52.63,20.0,1,0,6,1,1,100.0
 S397,GapDown_ITM1,3d,watch,insufficient sample (<8 exits),8,7,7,0,79.54,51.39,39.65,42.0,130.48,348.0,1,0,8,7,1,100.0
 S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),83,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,10,18,0,0,0.0
 S166,GapDown strong call,3d ATM strong,watch,insufficient sample (<8 exits),36,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,10,16,0,0,0.0
