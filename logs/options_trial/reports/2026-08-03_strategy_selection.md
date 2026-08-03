@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-03
 
-_Generated 2026-08-03T13:00:02.585420_
+_Generated 2026-08-03T13:01:22.050385_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-03T13:00:02.585420_
 
 ## Attribution health
 
-- Total exits: **982**
+- Total exits: **983**
 - Orphan exits (b0/orphan_reconcile): **25**
 - Orphan rate: **2.5%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -114,7 +114,7 @@ _Generated 2026-08-03T13:00:02.585420_
 | S417 (BBSqueeze_OTM1) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S418 (BBSqueeze_OTM2) | 7d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S360 (RubberBand_1DTE) | 1d | watch | 6 | 33.3 | -41.66 | -55.16 | -53.57 | +59.09 | 3 | 8 | 6 | $-32.00 | 83.3% | insufficient sample (<8 exits) |
+| S360 (RubberBand_1DTE) | 1d | watch | 7 | 28.6 | -50.00 | -55.08 | -52.38 | +58.19 | 3 | 8 | 7 | $-38.00 | 85.7% | insufficient sample (<8 exits) |
 | S400 (Any_Green_Close) | 3d | watch | 5 | 0.0 | -50.00 | -66.67 | -66.67 | -33.33 | 3 | 6 | 5 | $-30.00 | 100.0% | insufficient sample (<8 exits) |
 | S351 (GapDown_1DTE) | 1d | watch | 10 | 10.0 | -50.83 | -91.99 | -57.58 | -10.21 | 3 | 20 | 10 | $-79.00 | 50.0% | early sample with non-positive median |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | watch | 3 | 0.0 | -51.47 | -56.17 | -54.41 | -47.21 | 7 | 6 | 3 | $-104.00 | 100.0% | insufficient sample (<8 exits) |
@@ -269,7 +269,7 @@ _Pipeline evaluation as of 2026-08-03. Auto-kill thresholds: median<-25% at n>=1
 | S357 | GapDown_21DTE | 2 | +47.06% | 100% | WATCH | 3 |
 | S358 | GapDown_30DTE | 0 | — | — | NEW | 0 |
 | S359 | RubberBand_0DTE | 4 | +103.25% | 100% | WATCH | 0 |
-| S360 | RubberBand_1DTE | 6 | -41.66% | 33% | WATCH | 3 |
+| S360 | RubberBand_1DTE | 7 | -50.00% | 29% | WATCH | 3 |
 | S361 | RubberBand_2DTE | 2 | +68.85% | 100% | WATCH | 3 |
 | S362 | RubberBand_3DTE | 4 | +92.44% | 100% | WATCH | 3 |
 | S363 | RubberBand_5DTE | 4 | +83.76% | 100% | WATCH | 0 |
