@@ -1702,26 +1702,6 @@
       "entry_order_id": "c09cb7c4-f87b-4104-91a4-d3c5a13452b0"
     },
     {
-      "lot_id": "284fa7949dcb",
-      "bucket_id": 355,
-      "profile_name": "lab0355_s360_w4_1120_1135_r2",
-      "strategy_id": "S360",
-      "occ_symbol": "NVDA260803C00210000",
-      "underlying": "NVDA",
-      "qty": 1,
-      "entry_cost": 18.0,
-      "entry_price": 0.18,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-03T15:23:00.537677+00:00",
-      "entry_order_id": "f2047529-c2f4-43fc-baea-5f519c3a1833"
-    },
-    {
       "lot_id": "ed35560c5eed",
       "bucket_id": 311,
       "profile_name": "lab0311_s354_w4_1120_1135_r2",
@@ -1920,26 +1900,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-03T15:23:01.170856+00:00",
       "entry_order_id": "orphan:OXY260807C00059000"
-    },
-    {
-      "lot_id": "bc196a8cbd02",
-      "bucket_id": 283,
-      "profile_name": "lab0283_s351_w2_1005_1045_r2",
-      "strategy_id": "S351",
-      "occ_symbol": "AMD260803C00500000",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 16.0,
-      "entry_price": 0.16,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-03T15:27:00.941953+00:00",
-      "entry_order_id": "c439fa23-d368-4512-a7bf-d31c44b81742"
     },
     {
       "lot_id": "ddfccedd4c9e",
@@ -2783,26 +2743,6 @@
       "qty": 1,
       "reason": "stop_loss (-68.6%)",
       "submitted": "2026-08-03T11:10:53"
-    },
-    {
-      "order_id": "aa1c0b1e-6e64-491c-927a-c5006f289fe0",
-      "lot_id": "284fa7949dcb",
-      "bucket_id": 355,
-      "strategy_id": "S360",
-      "occ_symbol": "NVDA260803C00210000",
-      "qty": 1,
-      "reason": "stop_loss (-53.3%)",
-      "submitted": "2026-08-03T12:35:59"
-    },
-    {
-      "order_id": "24251365-278a-4df0-b8a5-d4149b2985eb",
-      "lot_id": "bc196a8cbd02",
-      "bucket_id": 283,
-      "strategy_id": "S351",
-      "occ_symbol": "AMD260803C00500000",
-      "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-08-03T12:42:53"
     }
   ],
   "bucket_open_premium": {
@@ -2891,7 +2831,6 @@
     "b790": 72.0,
     "b397": 34.0,
     "b396": 34.0,
-    "b355": 18.0,
     "b311": 72.0,
     "b269": 66.0,
     "b268": 66.0,
@@ -2901,7 +2840,6 @@
     "b114": 49.0,
     "b63": 72.0,
     "b62": 72.0,
-    "b283": 16.0,
     "b282": 16.0,
     "b849": 49.0,
     "b353": 12.0,
@@ -3615,7 +3553,9 @@
     "8a678472-6582-49e8-89c0-d5c4bde9bee7",
     "dc453c62-9527-4f84-951a-4785b087db46",
     "6a693168-b8ff-4ba5-a56e-9dba1f51e5f0",
-    "ecabba9e-967c-4534-aba1-7cf56d22cb98"
+    "ecabba9e-967c-4534-aba1-7cf56d22cb98",
+    "24251365-278a-4df0-b8a5-d4149b2985eb",
+    "aa1c0b1e-6e64-491c-927a-c5006f289fe0"
   ],
   "submitted_today": 192,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
