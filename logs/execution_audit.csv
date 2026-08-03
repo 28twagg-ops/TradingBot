@@ -705,3 +705,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-08-03 14:01:19,2026-08-03,SELL,ALGN,Pullback50,173.22,,173.22,93.13,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
 2026-08-03 14:39:24,2026-08-03,SELL,CPT,Pullback50,111.335,,111.335,93.14,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
 2026-08-03 15:35:45,2026-08-03,SELL,ED,Pullback50,108.0,,108.0,69.86,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-08-03 19:56:15,2026-08-03,SELL,FSLR,EarningsDrift,232.075,,232.075,93.03,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-08-03 19:56:45,2026-08-03,SELL,TSN,EarningsDrift,59.88,59.87,59.8727,93.73,-0.0122,-0.0114,limit_fill_position_check_full,midline (+0.2%),bull

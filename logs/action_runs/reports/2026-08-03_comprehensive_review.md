@@ -22964,3 +22964,55 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ### Options bot full output
 
 ```text
+
+## Run 20260803T195611Z
+
+- UTC timestamp: `20260803T195611Z`
+- GitHub run: [#5905](https://github.com/28twagg-ops/TradingBot/actions/runs/30847850971)
+- Run id: `30847850971`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-03T15:44:26.477610-04:00","date":"2026-08-03","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":16.1,"phases_s":{"reconcile":0.41,"cancel":0.19,"manage":15.04},"signals":0,"placed":0,"equity":135630.67,"open_positions":22,"pending_orders":0,"open_lots":123,"submitted_today":192,"filled_today":161,"unattributed_contracts":1,"top_signals":[],"github_run":"5902","github_run_id":"30846764461","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:56:12  INFO      Mode: scan
+19:56:12  INFO        [positions] 5/5 (5 valid)
+19:56:13  INFO        SELL MARKET [urgent] FSLR closed
+19:56:15  INFO        TX logged: SELL FSLR  P&L -0.53%
+19:56:15  INFO        SELL LIMIT TSN  qty=1.565460449  limit=$59.87  id=bccfce0d-c339-4be3-8bb7-b09f05874361
+19:56:45  INFO        SELL LIMIT filled TSN (confirmed by position check)
+19:56:45  INFO        TX logged: SELL TSN  P&L 0.24%
+19:56:45  INFO        Universe cache hit: 903 tickers (tickers_2026-08-03.json)
+19:56:46  INFO        [universe] 40/900 (40 valid)
+19:56:47  INFO        [universe] 80/900 (80 valid)
+19:56:48  INFO        [universe] 120/900 (120 valid)
+19:56:50  INFO        [universe] 160/900 (160 valid)
+19:56:51  INFO        [universe] 200/900 (199 valid)
+19:56:58  INFO        [universe] 240/900 (238 valid)
+19:57:11  INFO        [universe] 280/900 (278 valid)
+19:57:24  INFO        [universe] 320/900 (318 valid)
+19:57:34  INFO        [universe] 360/900 (358 valid)
+19:57:46  INFO        [universe] 400/900 (397 valid)
+19:57:59  INFO        [universe] 440/900 (437 valid)
+19:58:09  INFO        [universe] 480/900 (477 valid)
+19:58:22  INFO        [universe] 520/900 (517 valid)
+19:58:35  INFO        [universe] 560/900 (557 valid)
+19:58:45  INFO        [universe] 600/900 (597 valid)
+19:58:58  INFO        [universe] 640/900 (637 valid)
+19:59:11  INFO        [universe] 680/900 (677 valid)
+19:59:24  INFO        [universe] 720/900 (717 valid)
+19:59:34  INFO        [universe] 760/900 (757 valid)
+19:59:47  INFO        [universe] 800/900 (797 valid)
+20:00:00  INFO        [universe] 840/900 (836 valid)
+20:00:10  INFO        [universe] 880/900 (876 valid)
+20:00:17  INFO        [universe] 900/900 (896 valid)
+```
+
+### Options bot full output
+
+```text
