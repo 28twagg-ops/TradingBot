@@ -2547,3 +2547,172 @@ Fetched daily bars for 114/117 symbols
 ### Options bot full output
 
 ```text
+
+## Run 20260803T135607Z
+
+- UTC timestamp: `20260803T135607Z`
+- GitHub run: [#5830](https://github.com/28twagg-ops/TradingBot/actions/runs/30820179673)
+- Run id: `30820179673`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-03T09:27:23.675337-04:00","date":"2026-08-03","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.4,"phases_s":{"reconcile":0.09},"signals":0,"placed":0,"equity":134537.4,"open_positions":12,"pending_orders":0,"open_lots":60,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"5824","github_run_id":"30817850323","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:56:10  INFO      Mode: morning_scan
+13:56:10  INFO        Universe cache hit: 903 tickers (tickers_2026-08-03.json)
+13:56:11  INFO        [universe] 40/903 (40 valid)
+13:56:13  INFO        [universe] 80/903 (80 valid)
+13:56:14  INFO        [universe] 120/903 (120 valid)
+13:56:15  INFO        [universe] 160/903 (160 valid)
+13:56:22  INFO        [universe] 200/903 (199 valid)
+13:56:35  INFO        [universe] 240/903 (238 valid)
+13:56:48  INFO        [universe] 280/903 (278 valid)
+13:56:57  INFO        [universe] 320/903 (318 valid)
+13:57:10  INFO        [universe] 360/903 (358 valid)
+13:57:23  INFO        [universe] 400/903 (397 valid)
+13:57:33  INFO        [universe] 440/903 (437 valid)
+13:57:46  INFO        [universe] 480/903 (477 valid)
+13:57:59  INFO        [universe] 520/903 (517 valid)
+13:58:09  INFO        [universe] 560/903 (557 valid)
+13:58:22  INFO        [universe] 600/903 (597 valid)
+13:58:35  INFO        [universe] 640/903 (637 valid)
+13:58:45  INFO        [universe] 680/903 (677 valid)
+13:58:58  INFO        [universe] 720/903 (717 valid)
+13:59:11  INFO        [universe] 760/903 (757 valid)
+13:59:24  INFO        [universe] 800/903 (797 valid)
+13:59:34  INFO        [universe] 840/903 (836 valid)
+13:59:47  INFO        [universe] 880/903 (876 valid)
+13:59:53  INFO        [universe] 903/903 (899 valid)
+13:59:55  INFO        BUY  ALGN  $93.65  [Pullback50]  id=d3a4687e-632b-4230-a21a-185236ed13b7
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $468.25|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-08-03|
+|  Universe                                                          both|
+|  Mo~  Aug: VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $468.25|
+|  Cash                                                           $468.25|
+|  Reserve                                          $23.41  (always kept)|
+|  Available                                    $444.84  (for new trades)|
+|  Trade size             $93.65  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (0 open)                           |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 5  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (36010.7m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  40                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  ALGN     Pullback50      eq     $174.52  46.2   -1.99   50MA bounce (+|
+|  AES      Pullback50      eq     $14.70   38.1   -1.41   50MA bounce (-|
+|  AVB      Pullback50      eq     $187.15  42.0   -2.99   50MA bounce (-|
+|  CPT      Pullback50      eq     $111.77  46.8   -1.93   50MA bounce (-|
+|  ED       Pullback50      eq     $108.51  38.9   -2.78   50MA bounce (-|
+|  DUK      Pullback50      eq     $125.42  47.1   -3.00   50MA bounce (-|
+|  EW       Pullback50      eq     $87.97   43.2   -2.33   50MA bounce (+|
+|  ESS      Pullback50      eq     $287.98  39.2   -2.50   50MA bounce (+|
+|  EQR      Pullback50      eq     $67.12   41.7   -2.38   50MA bounce (-|
+|  ES       Pullback50      eq     $72.08   38.5   -1.98   50MA bounce (+|
+|  HBAN     Pullback50      eq     $17.23   41.3   -1.75   50MA bounce (-|
+|  KEY      Pullback50      eq     $22.75   42.6   -2.91   50MA bounce (+|
+|  MAA      Pullback50      eq     $133.89  50.5   -2.24   50MA bounce (-|
+|  REG      Pullback50      eq     $80.36   50.2   -3.15   50MA bounce (+|
+|  SO       Pullback50      eq     $94.45   43.8   -2.67   50MA bounce (-|
+|  LUV      Pullback50      eq     $46.62   46.8   -2.30   50MA bounce (+|
+|  YUM      Pullback50      eq     $154.40  43.3   -2.43   50MA bounce (+|
+|  ALSN     Pullback50      eq     $115.73  51.4   -2.71   50MA bounce (-|
+|  ALLY     Pullback50      eq     $44.45   45.5   -2.05   50MA bounce (+|
+|  AM       Pullback50      eq     $21.84   37.5   -2.81   50MA bounce (-|
+|  ARW      Pullback50      eq     $217.65  61.7   -3.05   50MA bounce (+|
+|  ATI      Pullback50      eq     $187.33  48.3   -2.58   50MA bounce (-|
+|  BC       Pullback50      eq     $80.90   58.4   -2.28   50MA bounce (-|
+|  BRX      Pullback50      eq     $31.71   50.9   -1.97   50MA bounce (+|
+|  FLR      Pullback50      eq     $50.44   47.9   -2.42   50MA bounce (+|
+|  GBCI     Pullback50      eq     $50.26   42.9   -2.62   50MA bounce (+|
+|  HOG      Pullback50      eq     $25.10   50.1   -1.93   50MA bounce (-|
+|  JEF      Pullback50      eq     $55.49   55.6   -2.78   50MA bounce (+|
+|  MOG-A    Pullback50      eq     $389.52  49.3   -1.78   50MA bounce (-|
+|  NBIX     Pullback50      eq     $167.58  45.7   -1.34   50MA bounce (-|
+|  SLAB     Pullback50      eq     $218.07  50.7   -2.73   50MA bounce (-|
+|  SSD      Pullback50      eq     $191.67  52.8   -2.43   50MA bounce (-|
+|  SWX      Pullback50      eq     $90.04   39.3   -3.18   50MA bounce (+|
+|  TEX      Pullback50      eq     $64.50   48.3   -1.87   50MA bounce (-|
+|  TREX     Pullback50      eq     $44.76   52.3   -2.07   50MA bounce (+|
+|  TWLO     Pullback50      eq     $199.84  35.8   -2.88   50MA bounce (-|
+|  ULS      Pullback50      eq     $93.26   66.0   -2.19   50MA bounce (-|
+|  UNM      Pullback50      eq     $88.39   49.8   -2.13   50MA bounce (+|
+|  WAL      Pullback50      eq     $81.70   53.9   -1.74   50MA bounce (+|
+|  WPC      Pullback50      eq     $73.95   60.0   -2.81   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] ALGN  Pullback50                                   $93.65|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AES  Pullback50                                    $93.65|
+13:59:55  INFO        BUY  AES  $93.65  [Pullback50]  id=254b4e84-41b7-4308-bc3b-ef1eaf0da180
+13:59:56  INFO        BUY  AVB  $93.65  [Pullback50]  id=a9f13aa1-6114-4e54-8064-7a05bf44b119
+13:59:56  INFO        BUY  CPT  $93.65  [Pullback50]  id=3199f80a-7ac3-49bc-ad6a-4738ade67364
+13:59:56  INFO        BUY  ED  $70.24  [Pullback50]  id=533c0c02-484a-496e-babf-134b583c9207
+```
+
+### Options bot full output
+
+```text
