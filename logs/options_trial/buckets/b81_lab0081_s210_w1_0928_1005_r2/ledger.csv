@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-08-03 14:07:00.323575+00:00,entry,81,lab0081_s210_w1_0928_1005_r2,S210,8e04564da5c8,PATH,PATH260807C00013500,1,0.29,0.28,28.0,,,,-0.01,,0.75,-0.75,0.06896551724137917,MA8 11.96 crossed above MA21,4b8591a7-b1d3-45b4-abe2-67138b5601fc

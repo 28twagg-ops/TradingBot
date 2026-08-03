@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-31 14:33:34.062050+00:00,entry,181,lab0181_s217_w2_1005_1045_r2,S217,c0a5353ed6e6,META,META260803C00600000,1,0.16,0.14,14.0,,,,-0.01,,0.75,-0.75,0.1250000000000001,RSI=19.4 green,afcc0e60-46fc-4b77-9534-7154891878da
 2026-08-03 14:01:31.874156+00:00,exit,181,lab0181_s217_w2_1005_1045_r2,S217,c0a5353ed6e6,META,META260803C00600000,1,,1.55,14.0,1007.14,141.0,take_profit (+1045.5%),,-0.01,0.5,-0.5,,,c0225356-e8a0-4941-af0c-5d142a1bf461
+2026-08-03 14:07:32.658382+00:00,entry,181,lab0181_s217_w2_1005_1045_r2,S217,7790dbbd2aba,TSLA,TSLA260805C00345000,1,0.46,0.46,46.0,,,,-0.01,,0.75,-0.75,0.04347826086956514,RSI=21.3 green,2fa2da55-6174-422e-9bb6-420f4f11e25d

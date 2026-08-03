@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-08-03 14:07:00.992482+00:00,entry,97,lab0097_s211_w2_1005_1045_r2,S211,8a839889c8a8,MSFT,MSFT260807C00525000,1,0.66,0.65,65.0,,,,-0.01,,0.5,-0.5,0.1612903225806453,MA21 crossed above MA50,db2dd003-6afc-430e-bdfb-9b57a440e94b

@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-31 14:04:11.923542+00:00,entry,281,lab0281_s351_w1_0928_1005_r2,S351,a6dc011b1997,MSTR,MSTR260731C00096500,1,0.13,0.13,13.0,,,,-0.01,,0.75,-0.75,0.15384615384615397,gap -2.9%,750a9a27-b123-454b-a64b-f97f7d168638
 2026-07-31 14:07:27.631738+00:00,exit,281,lab0281_s351_w1_0928_1005_r2,S351,a6dc011b1997,MSTR,MSTR260731C00096500,1,,0.06,13.0,-53.85,-7.0,stop_loss (-53.8%),,-0.01,0.5,-0.5,,,81522462-1d11-4c99-a95b-86bc89e68dfc
+2026-08-03 14:04:03.978230+00:00,entry,281,lab0281_s351_w1_0928_1005_r2,S351,361d2d0ff4b7,AMD,AMD260803C00492500,1,0.48,0.48,48.0,,,,-0.01,,0.75,-0.75,0.13043478260869565,gap -3.0%,fb7e0a81-096e-46ba-837b-7f447f29ca6f
