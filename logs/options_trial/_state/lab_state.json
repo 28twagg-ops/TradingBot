@@ -2503,6 +2503,16 @@
       "qty": 1,
       "reason": "stop_loss (-68.6%)",
       "submitted": "2026-08-03T11:10:53"
+    },
+    {
+      "order_id": "fa8c00ac-4067-4b24-8cc6-54f8ec4d5216",
+      "lot_id": "fb1371e1e125",
+      "bucket_id": 99,
+      "strategy_id": "S211",
+      "occ_symbol": "MSFT260807C00520000",
+      "qty": 1,
+      "reason": "take_profit (+50.9%)",
+      "submitted": "2026-08-03T14:45:49"
     }
   ],
   "bucket_open_premium": {
