@@ -17,7 +17,7 @@ S397,GapDown_ITM1,3d,watch,insufficient sample (<8 exits),8,7,7,0,79.54,51.39,39
 S356,GapDown_14DTE,14d,watch,insufficient sample (<8 exits),6,2,2,0,48.27,48.27,40.0,43.1,56.55,56.0,2,3,6,2,1,100.0
 S357,GapDown_21DTE,21d,watch,insufficient sample (<8 exits),6,2,2,0,47.06,47.06,47.06,47.06,47.06,64.0,2,3,6,2,1,100.0
 S407,RubberBand_ITM2,3d,watch,insufficient sample (<8 exits),6,2,1,1,29.16,29.16,-47.5,-18.75,105.83,23.0,2,3,6,2,2,50.0
-S353,GapDown_3DTE,3d,watch,insufficient sample (<8 exits),8,4,2,2,15.05,4.62,-71.82,-70.46,110.26,30.0,2,3,8,4,1,100.0
+S353,GapDown_3DTE,3d,watch,insufficient sample (<8 exits),9,4,2,2,15.05,4.62,-71.82,-70.46,110.26,30.0,2,3,9,4,1,100.0
 S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),83,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,13,0,0,0,0.0
 S166,GapDown strong call,3d ATM strong,watch,insufficient sample (<8 exits),36,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,13,0,0,0,0.0
 S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,insufficient sample (<8 exits),88,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,13,0,0,0,0.0
@@ -98,7 +98,7 @@ S351,GapDown_1DTE,1d,watch,insufficient sample (<8 exits),10,6,0,6,-55.1,-53.39,
 S211,MA_Cross_21_50,3d ATM MA cross 21/50,watch,insufficient sample (<8 exits),14,2,0,2,-54.41,-54.41,-56.76,-55.88,-52.06,-74.0,1,7,4,2,1,100.0
 S360,RubberBand_1DTE,1d,watch,insufficient sample (<8 exits),4,1,0,1,-54.76,-54.76,-54.76,-54.76,-54.76,-23.0,1,3,4,1,1,100.0
 S212,MA_Bounce_50,3d ATM MA bounce 50,watch,insufficient sample (<8 exits),26,4,0,4,-60.82,-58.88,-67.71,-62.12,-55.49,-151.0,1,7,8,4,1,100.0
-S350,GapDown_0DTE,0d,watch,insufficient sample (<8 exits),8,4,0,4,-64.22,-64.71,-66.67,-66.67,-61.37,-67.0,1,3,8,4,2,50.0
+S350,GapDown_0DTE,0d,watch,insufficient sample (<8 exits),8,6,2,4,-14.38,-61.77,-66.67,-65.69,85.3,-38.0,2,3,8,6,3,33.3
 S202,GapDown_Monster,3d ATM gap-monster,watch,insufficient sample (<8 exits),22,6,0,6,-60.04,-64.75,-70.52,-66.39,-44.87,-133.0,3,6,8,4,2,66.7
 S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,insufficient sample (<8 exits),98,6,0,6,-68.19,-65.67,-88.89,-86.11,-50.0,-59.0,2,13,0,0,2,83.3
 S174,RubberBand long call EOD,RubberBand (dropped),drop,manually paused — excluded from new entries & reflected P&L,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,28,0,0,6,50.4
