@@ -5280,3 +5280,26 @@ Fetched daily bars for 114/117 symbols
 ```
 
 ---
+
+## Run 20260803T144109Z
+
+- UTC timestamp: `20260803T144109Z`
+- GitHub run: [#5840](https://github.com/28twagg-ops/TradingBot/actions/runs/30823787171)
+- Run id: `30823787171`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-03T10:35:42.584657-04:00","date":"2026-08-03","mode":"entry+manage","header":"entry+manage (1 new)","elapsed_s":66.1,"phases_s":{"reconcile":0.09,"cancel":0.02,"manage":7.27,"scan":51.72,"entries":6.44,"reconcile2":0.21},"signals":269,"placed":1,"equity":132670.45,"open_positions":24,"pending_orders":24,"open_lots":90,"submitted_today":94,"filled_today":73,"unattributed_contracts":0,"top_signals":["S165:AMD","S165:ARM","S165:EOG","S165:OXY","S164:AMD","S164:ARM","S164:EOG","S164:OXY"],"github_run":"5838","github_run_id":"30823391100","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+14:41:10  INFO      Mode: exits
+14:43:24  WARNING   get_account failed attempt 1/3: HTTPSConnectionPool(host='api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.alpaca.markets', port=443) at 0x7f5b7a4b67d0>, 'Connection to api.alpaca.markets timed out. (connect timeout=None)')) retrying in 10s
+```
+
+### Options bot full output
+
+```text
