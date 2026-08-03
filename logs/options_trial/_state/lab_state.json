@@ -2743,6 +2743,26 @@
       "qty": 1,
       "reason": "stop_loss (-68.6%)",
       "submitted": "2026-08-03T11:10:53"
+    },
+    {
+      "order_id": "f567de89-6cb2-499f-ade4-6630ac9a9ae9",
+      "lot_id": "ddfccedd4c9e",
+      "bucket_id": 282,
+      "strategy_id": "S351",
+      "occ_symbol": "AMD260803C00500000",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-08-03T12:56:10"
+    },
+    {
+      "order_id": "de17684a-a164-42a3-a1a0-cb9123d81df5",
+      "lot_id": "3705364cb36e",
+      "bucket_id": 353,
+      "strategy_id": "S360",
+      "occ_symbol": "NVDA260803C00210000",
+      "qty": 1,
+      "reason": "stop_loss (-60.0%)",
+      "submitted": "2026-08-03T12:56:11"
     }
   ],
   "bucket_open_premium": {
