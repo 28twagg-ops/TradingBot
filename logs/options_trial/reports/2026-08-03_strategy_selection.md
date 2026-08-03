@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-03
 
-_Generated 2026-08-03T10:32:14.301610_
+_Generated 2026-08-03T10:36:50.127714_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-03T10:32:14.301610_
 
 ## Attribution health
 
-- Total exits: **932**
+- Total exits: **935**
 - Orphan exits (b0/orphan_reconcile): **23**
 - Orphan rate: **2.5%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -25,9 +25,9 @@ _Generated 2026-08-03T10:32:14.301610_
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 6 | 66.7 | +178.57 | -50.00 | +5.36 | +821.88 | 7 | 6 | 4 | $+310.00 | 66.7% | insufficient sample (<8 exits) |
 | S355 (GapDown_7DTE) | 7d | watch | 8 | 100.0 | +163.07 | +89.58 | +94.46 | +303.57 | 3 | 8 | 8 | $+630.00 | 100.0% | building sample (8-19 exits) |
 | S354 (GapDown_5DTE) | 5d | watch | 7 | 100.0 | +143.18 | +97.45 | +119.32 | +248.69 | 3 | 8 | 7 | $+527.00 | 100.0% | insufficient sample (<8 exits) |
-| S362 (RubberBand_3DTE) | 3d | watch | 1 | 100.0 | +122.86 | +122.86 | +122.86 | +122.86 | 3 | 6 | 1 | $+43.00 | 100.0% | insufficient sample (<8 exits) |
+| S362 (RubberBand_3DTE) | 3d | watch | 2 | 100.0 | +118.58 | +115.15 | +116.43 | +122.00 | 3 | 6 | 2 | $+83.00 | 100.0% | insufficient sample (<8 exits) |
 | S398 (GapDown_ATM) | 3d | watch | 8 | 100.0 | +118.17 | +48.98 | +61.80 | +319.76 | 3 | 10 | 8 | $+552.00 | 100.0% | building sample (8-19 exits) |
-| S363 (RubberBand_5DTE) | 5d | watch | 1 | 100.0 | +103.23 | +103.23 | +103.23 | +103.23 | 0 | 4 | 1 | $+32.00 | 100.0% | insufficient sample (<8 exits) |
+| S363 (RubberBand_5DTE) | 5d | watch | 2 | 100.0 | +104.84 | +103.55 | +104.03 | +106.13 | 0 | 4 | 2 | $+65.00 | 100.0% | insufficient sample (<8 exits) |
 | S405 (GapDown_OTM3) | 3d | watch | 8 | 100.0 | +95.93 | +51.22 | +56.12 | +246.43 | 3 | 10 | 8 | $+448.00 | 100.0% | building sample (8-19 exits) |
 | S399 (GapDown_OTM1) | 3d | watch | 5 | 100.0 | +92.00 | +65.18 | +84.00 | +167.89 | 3 | 10 | 5 | $+168.00 | 60.0% | insufficient sample (<8 exits) |
 | S404 (GapDown_OTM2) | 3d | watch | 8 | 100.0 | +66.58 | +36.49 | +43.45 | +130.48 | 3 | 8 | 8 | $+388.00 | 100.0% | building sample (8-19 exits) |
@@ -115,7 +115,7 @@ _Generated 2026-08-03T10:32:14.301610_
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S400 (Any_Green_Close) | 3d | watch | 5 | 0.0 | -50.00 | -66.67 | -66.67 | -33.33 | 3 | 6 | 5 | $-30.00 | 100.0% | insufficient sample (<8 exits) |
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | watch | 6 | 0.0 | -52.73 | -53.33 | -53.18 | -48.78 | 7 | 6 | 6 | $-146.00 | 100.0% | insufficient sample (<8 exits) |
-| S351 (GapDown_1DTE) | 1d | watch | 6 | 0.0 | -53.39 | -75.25 | -57.58 | -36.66 | 3 | 10 | 6 | $-111.00 | 50.0% | insufficient sample (<8 exits) |
+| S351 (GapDown_1DTE) | 1d | watch | 7 | 14.3 | -52.94 | -71.96 | -56.34 | +59.17 | 3 | 10 | 7 | $-16.00 | 42.9% | insufficient sample (<8 exits) |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | watch | 2 | 0.0 | -54.41 | -56.76 | -55.88 | -52.06 | 7 | 4 | 2 | $-74.00 | 100.0% | insufficient sample (<8 exits) |
 | S360 (RubberBand_1DTE) | 1d | watch | 1 | 0.0 | -54.76 | -54.76 | -54.76 | -54.76 | 3 | 4 | 1 | $-23.00 | 100.0% | insufficient sample (<8 exits) |
 | S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | watch | 4 | 0.0 | -58.88 | -67.71 | -62.12 | -55.49 | 7 | 8 | 4 | $-151.00 | 100.0% | insufficient sample (<8 exits) |
@@ -260,7 +260,7 @@ _Pipeline evaluation as of 2026-08-03. Auto-kill thresholds: median<-25% at n>=1
 | S220 | Pullback50 | 0 | — | — | NEW | 0 |
 | S221 | GoldenPocket | 0 | — | — | NEW | 0 |
 | S350 | GapDown_0DTE | 6 | -61.77% | 33% | WATCH | 3 |
-| S351 | GapDown_1DTE | 6 | -53.39% | 0% | WATCH | 3 |
+| S351 | GapDown_1DTE | 7 | -52.94% | 14% | WATCH | 3 |
 | S352 | GapDown_2DTE | 5 | +52.38% | 100% | WATCH | 3 |
 | S353 | GapDown_3DTE | 4 | +4.62% | 50% | WATCH | 3 |
 | S354 | GapDown_5DTE | 7 | +143.18% | 100% | WATCH | 3 |
@@ -271,8 +271,8 @@ _Pipeline evaluation as of 2026-08-03. Auto-kill thresholds: median<-25% at n>=1
 | S359 | RubberBand_0DTE | 2 | +185.72% | 100% | WATCH | 0 |
 | S360 | RubberBand_1DTE | 1 | -54.76% | 0% | WATCH | 3 |
 | S361 | RubberBand_2DTE | 0 | — | — | NEW | 3 |
-| S362 | RubberBand_3DTE | 1 | +122.86% | 100% | WATCH | 3 |
-| S363 | RubberBand_5DTE | 1 | +103.23% | 100% | WATCH | 0 |
+| S362 | RubberBand_3DTE | 2 | +118.58% | 100% | WATCH | 3 |
+| S363 | RubberBand_5DTE | 2 | +104.84% | 100% | WATCH | 0 |
 | S364 | RubberBand_7DTE | 0 | — | — | NEW | 3 |
 | S365 | RubberBand_14DTE | 0 | — | — | NEW | 3 |
 | S366 | RubberBand_21DTE | 0 | — | — | NEW | 0 |
