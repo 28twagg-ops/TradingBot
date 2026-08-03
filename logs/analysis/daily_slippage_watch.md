@@ -1,10 +1,11 @@
 # Daily Slippage Watch
-*Updated: 2026-08-03 13:45 UTC*
+*Updated: 2026-08-03 13:50 UTC*
 
 Tracks **stop P&L** (position loss vs entry) vs **execution slippage** (fill vs limit). Target: stops near -0.5% trigger when no overnight gap.
 
 | Day | Stops | Mean stop | Overshoot vs -0.5% | Within -1% | SELL slip | Status |
 |-----|-------|-----------|---------------------|------------|-----------|--------|
+| 2026-08-03 | 1 | -0.71% | -0.21pp | 1/1 | -0.0374% | **OK** |
 | 2026-07-31 | 3 | -0.57% | -0.07pp | 3/3 | -0.0374% | **OK** |
 | 2026-07-30 | 4 | -2.35% | -1.85pp | 0/4 | -0.0374% | **ALERT** |
 | 2026-07-29 | 4 | -4.71% | -4.21pp | 3/4 | -0.0374% | **ALERT** |
@@ -16,10 +17,15 @@ Tracks **stop P&L** (position loss vs entry) vs **execution slippage** (fill vs 
 
 ## Today (2026-08-03) detail
 
-_No stop losses recorded today._
+- Stop count: **1**
+- Mean stop P&L: **-0.71%** (overshoot -0.21pp)
+- Within -1.0%: 1/1
+- Worst: PWR -0.7%
+- Stop execution methods:
+  - `market_urgent_full`: 1
 
 ## Historical baseline (all logs)
-- Stop samples: 406
+- Stop samples: 407
 - Mean stop P&L: -1.44%
 - Mean overshoot: -0.94pp
 
