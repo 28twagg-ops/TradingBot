@@ -1362,26 +1362,6 @@
       "entry_order_id": "723d8de3-a356-4618-948b-4414530e0c71"
     },
     {
-      "lot_id": "24601714630a",
-      "bucket_id": 904,
-      "profile_name": "lab0904_s411_w4_1120_1135_r1",
-      "strategy_id": "S411",
-      "occ_symbol": "NVDA260805C00215000",
-      "underlying": "NVDA",
-      "qty": 1,
-      "entry_cost": 61.0,
-      "entry_price": 0.61,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-03T15:23:00.182775+00:00",
-      "entry_order_id": "9cbb78f5-7193-4bd5-8afb-d9983c2f6dbf"
-    },
-    {
       "lot_id": "c2227e56837a",
       "bucket_id": 863,
       "profile_name": "lab0863_s408_w4_1120_1135_r2",
@@ -2523,16 +2503,6 @@
       "qty": 1,
       "reason": "stop_loss (-68.6%)",
       "submitted": "2026-08-03T11:10:53"
-    },
-    {
-      "order_id": "c83ceb5c-3bbc-4510-acf6-3fe2aeb35014",
-      "lot_id": "24601714630a",
-      "bucket_id": 904,
-      "strategy_id": "S411",
-      "occ_symbol": "NVDA260805C00215000",
-      "qty": 1,
-      "reason": "take_profit (+51.7%)",
-      "submitted": "2026-08-03T14:00:55"
     }
   ],
   "bucket_open_premium": {
@@ -2604,7 +2574,6 @@
     "b284": 35.0,
     "b169": 44.0,
     "b168": 44.0,
-    "b904": 61.0,
     "b863": 15.0,
     "b862": 15.0,
     "b835": 22.0,
