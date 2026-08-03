@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-08-03 15:22:56.923336+00:00,entry,905,lab0905_s411_w4_1120_1135_r2,S411,7fd3e1a3ad75,NVDA,NVDA260805C00215000,1,0.65,0.61,61.0,,,,-0.01,,0.75,-0.75,0.09523809523809532,RB gap -1.5% reclaim,e804667c-86ff-459f-b697-b210c2550fe1

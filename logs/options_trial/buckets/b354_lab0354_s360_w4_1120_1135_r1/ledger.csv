@@ -1,3 +1,5 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-31 15:22:24.971516+00:00,entry,354,lab0354_s360_w4_1120_1135_r1,S360,42f8968a16ee,AAPL,AAPL260731C00307500,1,0.43,0.42,42.0,,,,-0.01,,0.5,-0.5,0.14634146341463414,RB gap -8.6% reclaim,d5b84c41-5ccc-4c55-b175-632309bc4121
 2026-07-31T16:02:36Z,reconcile,354,lab0354_s360_w4_1120_1135_r1,S360,42f8968a16ee,AAPL,AAPL260731C00307500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-03 15:21:48.629469+00:00,entry,354,lab0354_s360_w4_1120_1135_r1,S360,00c68c05f023,NVDA,NVDA260803C00210000,1,0.19,0.18,18.0,,,,-0.01,,0.75,-0.75,0.05128205128205133,RB gap -1.5% reclaim,f5af806a-ef4a-4bce-8f24-77b69125cc9c
+2026-07-31 15:51:58.017792+00:00,exit,354,lab0354_s360_w4_1120_1135_r1,S360,00c68c05f023,NVDA,NVDA260803C00210000,1,,0.12,18.0,-33.33,-6.0,reconcile_fill,,-0.01,0.5,-0.5,,,f2fbda3d-e003-42d6-8166-65bd83b06a74

@@ -1,3 +1,5 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-31 15:27:02.527233+00:00,entry,310,lab0310_s354_w4_1120_1135_r1,S354,4be43ce55c20,COIN,COIN260807C00165000,1,0.45,0.42,42.0,,,,-0.01,,0.75,-0.75,0.0674157303370787,gap -6.4%,719c2670-04aa-46f6-9e25-275c5775792e
 2026-07-31T19:44:24Z,reconcile,310,lab0310_s354_w4_1120_1135_r1,S354,4be43ce55c20,COIN,COIN260807C00165000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-03 15:21:44.538037+00:00,entry,310,lab0310_s354_w4_1120_1135_r1,S354,cf5cf6dd2336,OXY,OXY260807C00058000,1,0.73,0.72,72.0,,,,-0.01,,0.5,-0.5,0.11428571428571424,gap -2.5%,a4874cc8-534c-4c2f-b43f-3445a78592e8
+2026-07-31 19:40:14.584531+00:00,exit,310,lab0310_s354_w4_1120_1135_r1,S354,cf5cf6dd2336,OXY,OXY260807C00058000,1,,1.56,72.0,116.67,84.0,reconcile_fill,,-0.01,0.5,-0.5,,,4687963c-2c55-4fad-886d-23b57537aaeb
