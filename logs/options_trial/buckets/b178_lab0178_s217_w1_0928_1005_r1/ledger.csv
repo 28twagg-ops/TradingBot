@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-08-03 14:02:48.941770+00:00,entry,178,lab0178_s217_w1_0928_1005_r1,S217,4ca1885c5e96,TSLA,TSLA260805C00345000,1,0.48,0.47,47.0,,,,-0.01,,0.75,-0.75,0.1075268817204301,RSI=21.2 green,cb33fae5-dbd8-4cec-a366-581e79844ecf

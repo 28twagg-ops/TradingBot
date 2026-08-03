@@ -1,0 +1,57 @@
+14:01:14  INFO      Mode: exits
+14:01:15  INFO        Daily log -> logs/daily/2026-08-03.md
+14:01:15  INFO        Daily log reconciled -> logs/daily/2026-08-03.md (4 ledger rows)
+14:01:15  INFO        place_all_stops: checking 5 positions...
+14:01:15  INFO        STOP-MARKET placed AES  qty=6 (pos=6.3718)  stop=$14.62  id=23533982-3e67-467b-bdb9-17e4f95b8852
+14:01:15  INFO        STOP skipped ALGN: fractional (0.5376 shares) — software exit will handle it
+14:01:15  INFO        STOP skipped AVB: fractional (0.5001 shares) — software exit will handle it
+14:01:15  INFO        STOP skipped CPT: fractional (0.8366 shares) — software exit will handle it
+14:01:15  INFO        STOP skipped ED: fractional (0.6468 shares) — software exit will handle it
+14:01:17  INFO        [positions] 5/5 (5 valid)
+14:01:17  INFO        SELL MARKET [urgent] ALGN closed
+14:01:19  INFO        TX logged: SELL ALGN  P&L -0.54%
+14:01:19  INFO        Daily log -> logs/daily/2026-08-03.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:01 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $467.32|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  ALGN  P&L -0.5%  $-0.51                        EXIT: stop_loss (-0.5%)|
+|  CPT  P&L -0.4%  $-0.41                                            HOLD|
+|  AVB  P&L -0.1%  $-0.10                                            HOLD|
+|  ED  P&L +0.0%  $+0.03                                             HOLD|
+|  AES  P&L +0.1%  $+0.06                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           5|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                4|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  ALGN                                        -0.54%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
