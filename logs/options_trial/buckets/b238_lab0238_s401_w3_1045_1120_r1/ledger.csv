@@ -1,3 +1,5 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-31 14:51:59.862806+00:00,entry,238,lab0238_s401_w3_1045_1120_r1,S401,61bed18ff072,V,V260807C00380000,1,0.6,0.59,59.0,,,,-0.01,,0.5,-0.5,0.15929203539823006,gap -0.69% green,6f1ae2da-d939-4aa6-9931-fa0945522b1d
 2026-08-03T13:44:42Z,reconcile,238,lab0238_s401_w3_1045_1120_r1,S401,61bed18ff072,V,V260807C00380000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-03 14:47:40.742544+00:00,entry,238,lab0238_s401_w3_1045_1120_r1,S401,6a10331dbfee,NVDA,NVDA260805C00217500,1,0.27,0.26,26.0,,,,-0.01,,0.75,-0.75,0.03636363636363639,gap -1.52% green,e948a866-37a8-4085-a4ac-7991819d9a9a
+2026-08-03 13:36:19.493571+00:00,exit,238,lab0238_s401_w3_1045_1120_r1,S401,6a10331dbfee,NVDA,NVDA260805C00217500,1,,0.97,26.0,273.08,71.0,reconcile_fill,,-0.01,0.5,-0.5,,,82ab1f74-1b1b-4198-9ca7-c8f3dc53bf34

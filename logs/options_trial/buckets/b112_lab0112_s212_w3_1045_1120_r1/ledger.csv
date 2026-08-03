@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-31 14:46:57.801724+00:00,entry,112,lab0112_s212_w3_1045_1120_r1,S212,4e34b1e35c0c,OXY,OXY260807C00059000,1,0.64,0.63,63.0,,,,-0.01,,0.5,-0.5,0.1666666666666666,low=55.55 MA50=54.74 touch+green,7f49e93c-316c-45dd-9f33-e4fc91f37338
 2026-08-03 13:39:47.137259+00:00,exit,112,lab0112_s212_w3_1045_1120_r1,S212,4e34b1e35c0c,OXY,OXY260807C00059000,1,,0.26,63.0,-58.73,-37.0,reconcile_fill,,-0.01,0.5,-0.5,,,6fb64481-2201-49cb-bd40-53246c2d55eb
+2026-08-03 14:47:34.700172+00:00,entry,112,lab0112_s212_w3_1045_1120_r1,S212,c1f5b0b410f9,UBER,UBER260807C00078000,1,0.48,0.47,47.0,,,,-0.01,,0.75,-0.75,0.020618556701030948,low=71.08 MA50=71.76 touch+green,6f54c66d-4341-4c44-8a6b-b028d6316f2b
