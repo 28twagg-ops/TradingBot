@@ -648,8 +648,8 @@
       "strategy_id": "ORPHAN",
       "occ_symbol": "OXY260807C00060000",
       "underlying": "OXY",
-      "qty": 3,
-      "entry_cost": 75.0,
+      "qty": 2,
+      "entry_cost": 50.00000000000001,
       "entry_price": 0.25,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
@@ -1922,26 +1922,6 @@
       "entry_order_id": "1bf49e84-662b-4090-a7e3-373458bc216e"
     },
     {
-      "lot_id": "70b5d6693a2d",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "NVDA260803C00210000",
-      "underlying": "NVDA",
-      "qty": 1,
-      "entry_cost": 15.0,
-      "entry_price": 0.15,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-03T15:28:43.171170+00:00",
-      "entry_order_id": "orphan:NVDA260803C00210000"
-    },
-    {
       "lot_id": "0770a14994f9",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -2685,14 +2665,14 @@
       "submitted": "2026-08-03T11:10:53"
     },
     {
-      "order_id": "3cd3cd04-a2af-45f8-a892-bf41b8c0f979",
-      "lot_id": "70b5d6693a2d",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "NVDA260803C00210000",
+      "order_id": "f6de91d8-becf-4caf-92a5-a9bc90fd79a3",
+      "lot_id": "4dbed7ddb643",
+      "bucket_id": 404,
+      "strategy_id": "S364",
+      "occ_symbol": "NVDA260810C00220000",
       "qty": 1,
-      "reason": "stop_loss (-60.0%)",
-      "submitted": "2026-08-03T13:01:18"
+      "reason": "take_profit (+52.0%)",
+      "submitted": "2026-08-03T13:12:59"
     }
   ],
   "bucket_open_premium": {
@@ -2728,7 +2708,7 @@
     "b82": 28.000000000000004,
     "b81": 28.000000000000004,
     "b80": 28.000000000000004,
-    "b0": 352.3671,
+    "b0": 312.3671,
     "b914": 34.0,
     "b59": 68.0,
     "b58": 68.0,
@@ -3504,7 +3484,8 @@
     "24251365-278a-4df0-b8a5-d4149b2985eb",
     "aa1c0b1e-6e64-491c-927a-c5006f289fe0",
     "98a45021-4ec3-428e-846c-95f90d3e8618",
-    "de17684a-a164-42a3-a1a0-cb9123d81df5"
+    "de17684a-a164-42a3-a1a0-cb9123d81df5",
+    "3cd3cd04-a2af-45f8-a892-bf41b8c0f979"
   ],
   "submitted_today": 192,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
