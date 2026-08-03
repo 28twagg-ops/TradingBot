@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-03
 
-_Generated 2026-08-03T13:27:35.070267_
+_Generated 2026-08-03T13:31:10.475611_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-03T13:27:35.070267_
 
 ## Attribution health
 
-- Total exits: **984**
+- Total exits: **986**
 - Orphan exits (b0/orphan_reconcile): **26**
 - Orphan rate: **2.6%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -26,16 +26,16 @@ _Generated 2026-08-03T13:27:35.070267_
 | S398 (GapDown_ATM) | 3d | watch | 8 | 100.0 | +118.17 | +48.98 | +61.80 | +319.76 | 3 | 18 | 8 | $+552.00 | 100.0% | building sample (8-19 exits) |
 | S399 (GapDown_OTM1) | 3d | watch | 6 | 100.0 | +113.00 | +68.31 | +86.00 | +163.25 | 3 | 18 | 6 | $+235.00 | 66.7% | insufficient sample (<8 exits) |
 | S359 (RubberBand_0DTE) | 0d | watch | 4 | 100.0 | +103.25 | +57.28 | +61.37 | +202.86 | 0 | 4 | 4 | $+65.00 | 100.0% | insufficient sample (<8 exits) |
+| S412 (RubberBand_OTM3) | 3d | watch | 2 | 100.0 | +101.47 | +88.53 | +93.38 | +114.41 | 3 | 8 | 2 | $+69.00 | 100.0% | insufficient sample (<8 exits) |
 | S405 (GapDown_OTM3) | 3d | watch | 8 | 100.0 | +95.93 | +51.22 | +56.12 | +246.43 | 3 | 18 | 8 | $+448.00 | 100.0% | building sample (8-19 exits) |
 | S362 (RubberBand_3DTE) | 3d | watch | 4 | 100.0 | +92.44 | +47.95 | +62.50 | +120.29 | 3 | 10 | 4 | $+120.00 | 100.0% | insufficient sample (<8 exits) |
-| S412 (RubberBand_OTM3) | 3d | watch | 1 | 100.0 | +85.29 | +85.29 | +85.29 | +85.29 | 3 | 8 | 1 | $+29.00 | 100.0% | insufficient sample (<8 exits) |
 | S363 (RubberBand_5DTE) | 5d | watch | 4 | 100.0 | +83.76 | +61.78 | +63.40 | +105.48 | 0 | 6 | 4 | $+100.00 | 100.0% | insufficient sample (<8 exits) |
 | S361 (RubberBand_2DTE) | 2d | watch | 2 | 100.0 | +68.85 | +58.47 | +62.37 | +79.23 | 3 | 8 | 2 | $+46.00 | 100.0% | insufficient sample (<8 exits) |
 | S404 (GapDown_OTM2) | 3d | watch | 8 | 100.0 | +66.58 | +36.49 | +43.45 | +130.48 | 3 | 12 | 8 | $+388.00 | 100.0% | building sample (8-19 exits) |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | watch | 7 | 85.7 | +65.96 | +8.64 | +52.45 | +934.28 | 7 | 10 | 7 | $+358.00 | 71.4% | insufficient sample (<8 exits) |
 | S350 (GapDown_0DTE) | 0d | watch | 10 | 60.0 | +64.90 | -66.67 | -62.26 | +117.50 | 3 | 14 | 10 | $+159.00 | 60.0% | building sample (8-19 exits) |
 | S364 (RubberBand_7DTE) | 7d | watch | 5 | 100.0 | +60.00 | +52.40 | +56.00 | +215.55 | 3 | 10 | 5 | $+235.00 | 100.0% | insufficient sample (<8 exits) |
-| S403 (Any_MA50_Touch) | 3d | watch | 2 | 100.0 | +57.69 | +51.54 | +53.84 | +63.84 | 3 | 10 | 2 | $+60.00 | 100.0% | insufficient sample (<8 exits) |
+| S403 (Any_MA50_Touch) | 3d | watch | 3 | 100.0 | +57.58 | +51.52 | +53.79 | +63.82 | 3 | 10 | 3 | $+98.00 | 100.0% | insufficient sample (<8 exits) |
 | S406 (RubberBand_ITM3) | 3d | watch | 4 | 75.0 | +56.31 | -26.00 | +19.00 | +71.37 | 3 | 10 | 4 | $+69.00 | 50.0% | insufficient sample (<8 exits) |
 | S401 (Any_Gap_Down_Small) | 3d | watch | 7 | 85.7 | +54.00 | -10.59 | +30.83 | +157.57 | 3 | 18 | 7 | $+175.00 | 42.9% | insufficient sample (<8 exits) |
 | S352 (GapDown_2DTE) | 2d | watch | 5 | 100.0 | +52.38 | +42.38 | +47.62 | +152.66 | 3 | 12 | 5 | $+144.00 | 100.0% | insufficient sample (<8 exits) |
@@ -312,7 +312,7 @@ _Pipeline evaluation as of 2026-08-03. Auto-kill thresholds: median<-25% at n>=1
 | S400 | Any_Green_Close | 5 | -50.00% | 0% | WATCH | 3 |
 | S401 | Any_Gap_Down_Small | 7 | +54.00% | 86% | WATCH | 3 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
-| S403 | Any_MA50_Touch | 2 | +57.69% | 100% | WATCH | 3 |
+| S403 | Any_MA50_Touch | 3 | +57.58% | 100% | WATCH | 3 |
 | S404 | GapDown_OTM2 | 8 | +66.58% | 100% | WATCH | 3 |
 | S405 | GapDown_OTM3 | 8 | +95.93% | 100% | WATCH | 3 |
 | S406 | RubberBand_ITM3 | 4 | +56.31% | 75% | WATCH | 3 |
@@ -321,7 +321,7 @@ _Pipeline evaluation as of 2026-08-03. Auto-kill thresholds: median<-25% at n>=1
 | S409 | RubberBand_ATM | 0 | — | — | NEW | 0 |
 | S410 | RubberBand_OTM1 | 0 | — | — | NEW | 0 |
 | S411 | RubberBand_OTM2 | 1 | +36.07% | 100% | WATCH | 0 |
-| S412 | RubberBand_OTM3 | 1 | +85.29% | 100% | WATCH | 3 |
+| S412 | RubberBand_OTM3 | 2 | +101.47% | 100% | WATCH | 3 |
 | S413 | BBSqueeze_ITM3 | 0 | — | — | NEW | 0 |
 | S414 | BBSqueeze_ITM2 | 0 | — | — | NEW | 0 |
 | S415 | BBSqueeze_ITM1 | 0 | — | — | NEW | 0 |
