@@ -6655,3 +6655,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-31 19:45:30.592189+00:00,exit,411,lab0411_s364_w4_1120_1135_r2,S364,d54e944293db,NVDA,NVDA260810C00225000,1,,1.04,36.0,188.89,68.0,reconcile_fill,,-0.01,0.5,-0.5,,,dc453c62-9527-4f84-951a-4785b087db46
 2026-08-03 15:45:43.645520+00:00,exit,195,lab0195_s218_w2_1005_1045_r2,S218,a4fc3369a4b2,RBLX,RBLX260807C00039500,1,,0.54,31.0,74.19,23.0,take_profit (+74.2%),,-0.01,0.5,-0.5,,,6a693168-b8ff-4ba5-a56e-9dba1f51e5f0
 2026-08-03 15:50:48.215072+00:00,exit,405,lab0405_s364_w1_0928_1005_r2,S364,88c7a60b4f5e,NVDA,NVDA260810C00220000,1,,0.75,50.0,50.0,25.0,take_profit (+50.0%),,-0.01,0.5,-0.5,,,ecabba9e-967c-4534-aba1-7cf56d22cb98
+2026-08-03T16:00:51Z,reconcile,194,lab0194_s218_w2_1005_1045_r1,S218,1f618b523a18,RBLX,RBLX260807C00039500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
