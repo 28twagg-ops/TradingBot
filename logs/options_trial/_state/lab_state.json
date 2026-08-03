@@ -2783,6 +2783,16 @@
       "qty": 1,
       "reason": "stop_loss (-68.6%)",
       "submitted": "2026-08-03T11:10:53"
+    },
+    {
+      "order_id": "aa1c0b1e-6e64-491c-927a-c5006f289fe0",
+      "lot_id": "284fa7949dcb",
+      "bucket_id": 355,
+      "strategy_id": "S360",
+      "occ_symbol": "NVDA260803C00210000",
+      "qty": 1,
+      "reason": "stop_loss (-53.3%)",
+      "submitted": "2026-08-03T12:35:59"
     }
   ],
   "bucket_open_premium": {
