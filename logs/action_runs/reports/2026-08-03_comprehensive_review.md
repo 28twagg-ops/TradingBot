@@ -2515,3 +2515,35 @@ Fetched daily bars for 114/117 symbols
 ### Options bot full output
 
 ```text
+
+## Run 20260803T135416Z
+
+- UTC timestamp: `20260803T135416Z`
+- GitHub run: [#5829](https://github.com/28twagg-ops/TradingBot/actions/runs/30819782916)
+- Run id: `30819782916`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-03T09:27:23.675337-04:00","date":"2026-08-03","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.4,"phases_s":{"reconcile":0.09},"signals":0,"placed":0,"equity":134537.4,"open_positions":12,"pending_orders":0,"open_lots":60,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"5824","github_run_id":"30817850323","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:54:17  INFO      Mode: morning_scan
+13:54:18  INFO        Universe cache hit: 903 tickers (tickers_2026-08-03.json)
+13:54:19  INFO        [universe] 40/903 (40 valid)
+13:54:20  INFO        [universe] 80/903 (80 valid)
+13:54:21  INFO        [universe] 120/903 (120 valid)
+13:54:22  INFO        [universe] 160/903 (160 valid)
+13:54:24  INFO        [universe] 200/903 (199 valid)
+13:54:31  INFO        [universe] 240/903 (238 valid)
+13:54:44  INFO        [universe] 280/903 (278 valid)
+13:54:54  INFO        [universe] 320/903 (318 valid)
+13:55:07  INFO        [universe] 360/903 (358 valid)
+```
+
+### Options bot full output
+
+```text
