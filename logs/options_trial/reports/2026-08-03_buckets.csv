@@ -901,7 +901,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 899,lab0899_s411_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 900,lab0900_s411_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-03,False,,,,,,,0,NVDA,S411,,entered_no_exit
 901,lab0901_s411_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-03,False,,100.0,36.07,36.07,36.07,36.07,22.0,NVDA,S411,take_profit (+79.2%),closed
-902,lab0902_s411_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-03,False,,,,,,,0,NVDA,S411,,entered_no_exit
+902,lab0902_s411_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-03,False,,100.0,61.7,61.7,61.7,61.7,29.0,NVDA,S411,take_profit (+64.9%),closed
 903,lab0903_s411_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-03,False,,100.0,57.45,57.45,57.45,57.45,27.0,NVDA,S411,take_profit (+60.5%),closed
 904,lab0904_s411_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-03,False,,,,,,,0,NVDA,S411,,entered_no_exit
 905,lab0905_s411_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-03,False,,,,,,,0,NVDA,S411,,entered_no_exit
