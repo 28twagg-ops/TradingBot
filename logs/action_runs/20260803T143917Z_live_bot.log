@@ -1,0 +1,55 @@
+14:39:18  INFO      Mode: exits
+14:39:21  INFO        Daily log -> logs/daily/2026-08-03.md
+14:39:21  INFO        Daily log reconciled -> logs/daily/2026-08-03.md (5 ledger rows)
+14:39:21  INFO        place_all_stops: checking 4 positions...
+14:39:21  INFO        STOP already live AES @ $14.62
+14:39:21  INFO        STOP skipped AVB: fractional (0.5001 shares) — software exit will handle it
+14:39:21  INFO        STOP skipped CPT: fractional (0.8366 shares) — software exit will handle it
+14:39:21  INFO        STOP skipped ED: fractional (0.6468 shares) — software exit will handle it
+14:39:22  INFO        [positions] 4/4 (4 valid)
+14:39:22  INFO        SELL MARKET [urgent] CPT closed
+14:39:24  INFO        TX logged: SELL CPT  P&L -0.53%
+14:39:24  INFO        Daily log -> logs/daily/2026-08-03.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:39 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $467.14|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CPT  P&L -0.5%  $-0.50                         EXIT: stop_loss (-0.5%)|
+|  ED  P&L -0.3%  $-0.20                                             HOLD|
+|  AVB  P&L -0.1%  $-0.14                                            HOLD|
+|  AES  P&L +0.1%  $+0.12                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           4|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  CPT                                         -0.53%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+

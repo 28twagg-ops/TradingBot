@@ -1068,3 +1068,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-03 13:46:46,2026-08-03,SELL,APG,MomReversal,39.2,31.9,0.86,0.27,4,max_hold 4d (+0.9%),bull,468.34
 2026-08-03 13:47:06,2026-08-03,SELL,CINF,Pullback50,178.38,95.73,1.91,1.79,3,max_hold 3d (+1.9%),bull,468.25
 2026-08-03 14:01:19,2026-08-03,SELL,ALGN,Pullback50,173.22,93.13,-0.54,-0.51,0,stop_loss (-0.5%),bull,467.44
+2026-08-03 14:39:24,2026-08-03,SELL,CPT,Pullback50,111.33,93.14,-0.53,-0.5,0,stop_loss (-0.5%),bull,467.09

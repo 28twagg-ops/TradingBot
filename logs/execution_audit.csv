@@ -703,3 +703,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-08-03 13:46:46,2026-08-03,SELL,APG,MomReversal,39.215,39.14,39.2,31.9,-0.0383,-0.0122,limit_fill_position_check_full,max_hold 4d (+0.9%),bull
 2026-08-03 13:47:06,2026-08-03,SELL,CINF,Pullback50,178.54,178.18,178.378,95.73,-0.0907,-0.0869,limit_fill_position_check_full,max_hold 3d (+1.9%),bull
 2026-08-03 14:01:19,2026-08-03,SELL,ALGN,Pullback50,173.22,,173.22,93.13,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-08-03 14:39:24,2026-08-03,SELL,CPT,Pullback50,111.335,,111.335,93.14,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
