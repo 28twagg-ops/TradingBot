@@ -22,3 +22,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-10T10:45:39.942133-04:00,exit,0,orphan_reconcile,ORPHAN,4d688d39c6bb,MRNA,MRNA260710C00085000,54,,,1667.0,-100.0,-1667.0,stop_loss (-100.0%),,-0.01,0.5,-0.5,,,abd18c6e-0d32-4213-a981-940bac9a5106
 2026-07-10T10:45:39.942133-04:00,exit,0,orphan_reconcile,ORPHAN,a6c987b61026,BA,BA260710C00237500,22,,,466.0,-100.0,-466.0,stop_loss (-100.0%),,-0.01,0.5,-0.5,,,fc8b62e2-8e20-409e-8296-545395fc8a12
 2026-07-27T14:05:43Z,reconcile,0,orphan_reconcile,ORPHAN,4d1c58bf9693,UBER,UBER260731C00069000,1,,,46.0,,,zombie_lot,,,,,,zombie age_min=846 notional=$46.00 occ=UBER260731C00069000 action=submitted:a0344d3b-22f0-4186-b6e1-79f0523753d5,
+2026-08-03 14:16:19.703224+00:00,exit,0,orphan_reconcile,ORPHAN,aec8ac0e1e92,NVDA,NVDA260807C00212500,1,,1.24,72.0,72.22,52.0,take_profit (+62.5%),,-0.01,0.5,-0.5,,,924816af-ea39-4e10-9ed9-ccb3adcbb7d7
