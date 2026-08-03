@@ -2333,3 +2333,130 @@ Fetched daily bars for 114/117 symbols
 ```
 
 ---
+
+## Run 20260803T134104Z
+
+- UTC timestamp: `20260803T134104Z`
+- GitHub run: [#5827](https://github.com/28twagg-ops/TradingBot/actions/runs/30819005975)
+- Run id: `30819005975`
+- Live bot: exit=`0`, duration=`217s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-03T09:27:23.675337-04:00","date":"2026-08-03","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.4,"phases_s":{"reconcile":0.09},"signals":0,"placed":0,"equity":134537.4,"open_positions":12,"pending_orders":0,"open_lots":60,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"5824","github_run_id":"30817850323","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:41:04  INFO      Mode: morning_prep
+13:41:05  INFO        [prep_positions] 4/4 (4 valid)
+13:41:05  INFO        Universe cache hit: 903 tickers (tickers_2026-08-03.json)
+13:41:06  INFO        [prep_universe] 40/899 (40 valid)
+13:41:08  INFO        [prep_universe] 80/899 (80 valid)
+13:41:09  INFO        [prep_universe] 120/899 (120 valid)
+13:41:10  INFO        [prep_universe] 160/899 (160 valid)
+13:41:11  INFO        [prep_universe] 200/899 (199 valid)
+13:41:21  INFO        [prep_universe] 240/899 (238 valid)
+13:41:31  INFO        [prep_universe] 280/899 (278 valid)
+13:41:45  INFO        [prep_universe] 320/899 (318 valid)
+13:41:58  INFO        [prep_universe] 360/899 (358 valid)
+13:42:08  INFO        [prep_universe] 400/899 (397 valid)
+13:42:21  INFO        [prep_universe] 440/899 (437 valid)
+13:42:31  INFO        [prep_universe] 480/899 (477 valid)
+13:42:44  INFO        [prep_universe] 520/899 (517 valid)
+13:42:57  INFO        [prep_universe] 560/899 (557 valid)
+13:43:07  INFO        [prep_universe] 600/899 (597 valid)
+13:43:20  INFO        [prep_universe] 640/899 (637 valid)
+13:43:33  INFO        [prep_universe] 680/899 (677 valid)
+13:43:43  INFO        [prep_universe] 720/899 (717 valid)
+13:43:56  INFO        [prep_universe] 760/899 (757 valid)
+13:44:09  INFO        [prep_universe] 800/899 (797 valid)
+13:44:19  INFO        [prep_universe] 840/899 (836 valid)
+13:44:32  INFO        [prep_universe] 880/899 (876 valid)
+13:44:39  INFO        [prep_universe] 899/899 (895 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         13:41 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $468.38|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       4|
+|  Invested                                                       $315.09|
+|  Open P&L                                                        $+1.77|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  APG      MomReversal     $31.87     $38.85   $39.16   +0.8%   $+0.26  |
+|  CINF     Pullback50      $95.46     $175.04  $177.87  +1.6%   $+1.52  |
+|  MP       MomReversal     $94.33     $41.37   $41.57   +0.5%   $+0.45  |
+|  PWR      EarningsDrift   $93.43     $667.29  $664.12  -0.5%   $-0.45  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                0|
+|                                                                        |
+|  No open sell orders.                                                  |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      4|
+|  Signal candidates                                                   30|
+|  Universe scanned                                                   899|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=57 paper_keys=yes dry_run=False
+  alpaca positions=13
+  FLAG b238|S401|61bed18f missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-08-03T09:44:42.981686-04:00 ===
+
+[Run context]
+Paper auth OK — equity $129433.24, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 1024 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419
+Dropped (no new entries; ex-reflected P&L): S173, S174
+2026-08-03 09:44:44,654 INFO   EXIT [b19|lab0019_s202_w2_1005_1045_r2|S202] stop_loss (-58.5%) SELL 1 AAPL260803C00315000 @<= 0.14
+2026-08-03 09:44:45,042 INFO   EXIT [b115|lab0115_s212_w4_1120_1135_r2|S212] stop_loss (-56.5%) SELL 1 OXY260807C00059000 @<= 0.28
+2026-08-03 09:44:45,722 INFO   EXIT [b234|lab0234_s401_w1_0928_1005_r1|S401] take_profit (+56.0%) SELL 1 NFLX260807C00075000 @<= 0.75
+2026-08-03 09:44:46,664 INFO   EXIT [b194|lab0194_s218_w2_1005_1045_r1|S218] take_profit (+220.5%) SELL 1 META260803C00600000 @<= 0.44
+2026-08-03 09:44:47,236 INFO   EXIT [b241|lab0241_s401_w4_1120_1135_r2|S401] take_profit (+63.3%) SELL 1 PATH260807C00013000 @<= 0.50
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 114/117 symbols
+```
+
+---
