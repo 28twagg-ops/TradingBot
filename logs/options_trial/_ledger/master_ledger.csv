@@ -6658,3 +6658,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-03T16:00:51Z,reconcile,194,lab0194_s218_w2_1005_1045_r1,S218,1f618b523a18,RBLX,RBLX260807C00039500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-03 16:47:25.362921+00:00,exit,283,lab0283_s351_w2_1005_1045_r2,S351,bc196a8cbd02,AMD,AMD260803C00500000,1,,0.09,16.0,-43.75,-7.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,24251365-278a-4df0-b8a5-d4149b2985eb
 2026-08-03 16:45:48.967165+00:00,exit,355,lab0355_s360_w4_1120_1135_r2,S360,284fa7949dcb,NVDA,NVDA260803C00210000,1,,0.08,18.0,-55.56,-10.0,stop_loss (-53.3%),,-0.01,0.5,-0.5,,,aa1c0b1e-6e64-491c-927a-c5006f289fe0
+2026-08-03T16:59:51Z,reconcile,282,lab0282_s351_w2_1005_1045_r1,S351,ddfccedd4c9e,AMD,AMD260803C00500000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-03 16:56:11.522464+00:00,exit,353,lab0353_s360_w3_1045_1120_r2,S360,3705364cb36e,NVDA,NVDA260803C00210000,1,,0.06,12.0,-50.0,-6.0,stop_loss (-60.0%),,-0.01,0.5,-0.5,,,de17684a-a164-42a3-a1a0-cb9123d81df5
