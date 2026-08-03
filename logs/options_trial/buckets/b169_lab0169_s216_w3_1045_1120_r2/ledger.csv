@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-08-03 15:11:49.000381+00:00,entry,169,lab0169_s216_w3_1045_1120_r2,S216,68d6686cc4cf,DKNG,DKNG260807C00025500,1,0.45,0.44,44.0,,,,-0.01,,0.75,-0.75,0.1395348837209302,RSI crossed 30: 28.4 -> 34.5,7b30461a-9d8a-4b8f-a29e-c50703b7f0c4
