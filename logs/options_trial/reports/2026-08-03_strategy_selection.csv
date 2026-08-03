@@ -1,8 +1,8 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
-S218,BB_Lower_Touch,3d ATM BB lower touch,watch,insufficient sample (<8 exits),22,6,4,2,316.81,178.57,-50.0,5.36,821.88,310.0,2,7,6,4,2,66.7
 S355,GapDown_7DTE,7d,watch,building sample (8-19 exits),12,8,8,0,176.67,163.07,89.58,94.46,303.57,630.0,1,3,12,8,1,100.0
 S354,GapDown_5DTE,5d,watch,building sample (8-19 exits),16,8,8,0,159.8,140.91,98.09,112.5,241.72,611.0,1,3,16,8,2,87.5
 S364,RubberBand_7DTE,7d,watch,insufficient sample (<8 exits),10,4,4,0,134.56,124.44,57.2,59.0,220.0,210.0,2,3,10,4,1,100.0
+S218,BB_Lower_Touch,3d ATM BB lower touch,watch,insufficient sample (<8 exits),22,7,5,2,282.15,121.43,-46.67,20.43,805.0,333.0,2,7,6,5,3,57.1
 S398,GapDown_ATM,3d,watch,building sample (8-19 exits),18,8,8,0,153.24,118.17,48.98,61.8,319.76,552.0,1,3,18,8,1,100.0
 S399,GapDown_OTM1,3d,watch,insufficient sample (<8 exits),18,6,6,0,114.85,113.0,68.31,86.0,163.25,235.0,1,3,18,6,3,66.7
 S359,RubberBand_0DTE,0d,watch,insufficient sample (<8 exits),4,4,4,0,122.41,103.25,57.28,61.37,202.86,65.0,1,0,4,4,1,100.0

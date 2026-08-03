@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-03
 
-_Generated 2026-08-03T11:45:53.473739_
+_Generated 2026-08-03T11:50:55.799452_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-03T11:45:53.473739_
 
 ## Attribution health
 
-- Total exits: **977**
+- Total exits: **978**
 - Orphan exits (b0/orphan_reconcile): **25**
 - Orphan rate: **2.6%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -20,10 +20,10 @@ _Generated 2026-08-03T11:45:53.473739_
 
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 6 | 66.7 | +178.57 | -50.00 | +5.36 | +821.88 | 7 | 6 | 4 | $+310.00 | 66.7% | insufficient sample (<8 exits) |
 | S355 (GapDown_7DTE) | 7d | watch | 8 | 100.0 | +163.07 | +89.58 | +94.46 | +303.57 | 3 | 12 | 8 | $+630.00 | 100.0% | building sample (8-19 exits) |
 | S354 (GapDown_5DTE) | 5d | watch | 8 | 100.0 | +140.91 | +98.09 | +112.50 | +241.72 | 3 | 16 | 8 | $+611.00 | 87.5% | building sample (8-19 exits) |
 | S364 (RubberBand_7DTE) | 7d | watch | 4 | 100.0 | +124.44 | +57.20 | +59.00 | +220.00 | 3 | 10 | 4 | $+210.00 | 100.0% | insufficient sample (<8 exits) |
+| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 7 | 71.4 | +121.43 | -46.67 | +20.43 | +805.00 | 7 | 6 | 5 | $+333.00 | 57.1% | insufficient sample (<8 exits) |
 | S398 (GapDown_ATM) | 3d | watch | 8 | 100.0 | +118.17 | +48.98 | +61.80 | +319.76 | 3 | 18 | 8 | $+552.00 | 100.0% | building sample (8-19 exits) |
 | S399 (GapDown_OTM1) | 3d | watch | 6 | 100.0 | +113.00 | +68.31 | +86.00 | +163.25 | 3 | 18 | 6 | $+235.00 | 66.7% | insufficient sample (<8 exits) |
 | S359 (RubberBand_0DTE) | 0d | watch | 4 | 100.0 | +103.25 | +57.28 | +61.37 | +202.86 | 0 | 4 | 4 | $+65.00 | 100.0% | insufficient sample (<8 exits) |
@@ -201,13 +201,13 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 ### Phase-1 RSI/BB/Vol
 
-- Status: **INSUFFICIENT** | Best median: **S218** (+178.57%) | Best p10: **S217** (+8.64%)
+- Status: **INSUFFICIENT** | Best median: **S218** (+121.43%) | Best p10: **S217** (+8.64%)
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S216 | 3d ATM RSI x30 | 0 | +0.00 | +0.00 | +0.00 | 4 | 0 |
 | S217 | 3d ATM RSI<25 bounce | 7 | +65.96 | +8.64 | +52.45 | 10 | 7 |
-| S218 | 3d ATM BB lower touch | 6 | +178.57 | -50.00 | +5.36 | 6 | 4 |
+| S218 | 3d ATM BB lower touch | 7 | +121.43 | -46.67 | +20.43 | 6 | 5 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
 ### Other
@@ -255,7 +255,7 @@ _Pipeline evaluation as of 2026-08-03. Auto-kill thresholds: median<-25% at n>=1
 | S215 | MA_Reclaim_200 | 0 | — | — | NEW | 0 |
 | S216 | RSI_Oversold_Cross | 0 | — | — | NEW | 7 |
 | S217 | RSI_25_Bounce | 7 | +65.96% | 86% | WATCH | 7 |
-| S218 | BB_Lower_Touch | 6 | +178.57% | 67% | WATCH | 7 |
+| S218 | BB_Lower_Touch | 7 | +121.43% | 71% | WATCH | 7 |
 | S219 | Volume_Climax_Up | 0 | — | — | NEW | 0 |
 | S220 | Pullback50 | 0 | — | — | NEW | 0 |
 | S221 | GoldenPocket | 0 | — | — | NEW | 0 |
