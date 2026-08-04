@@ -2,3 +2,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-03 14:07:58.397957+00:00,entry,404,lab0404_s364_w1_0928_1005_r1,S364,4dbed7ddb643,NVDA,NVDA260810C00220000,1,0.5,0.5,50.0,,,,-0.01,,0.75,-0.75,0.040000000000000036,RB gap -1.5% reclaim,ee96fb55-e496-46ce-a885-d28a15e62619
 2026-08-03T17:15:41Z,reconcile,404,lab0404_s364_w1_0928_1005_r1,S364,4dbed7ddb643,NVDA,NVDA260810C00220000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-03 14:07:58.397957+00:00,entry,404,lab0404_s364_w1_0928_1005_r1,S364,c2dfa91bcc9b,NVDA,NVDA260810C00220000,1,0.5,0.5,50.0,,,,-0.01,,0.5,-0.5,,,ee96fb55-e496-46ce-a885-d28a15e62619
+2026-08-03 14:07:58.397957+00:00,entry,404,lab0404_s364_w1_0928_1005_r1,S364,50bb1e8cad10,NVDA,NVDA260810C00220000,1,0.5,0.5,50.0,,,,-0.01,,0.5,-0.5,,,ee96fb55-e496-46ce-a885-d28a15e62619
