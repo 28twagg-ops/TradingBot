@@ -3420,6 +3420,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-04T14:55:55.080035+00:00",
       "entry_order_id": "orphan:AMZN260807C00292500"
+    },
+    {
+      "lot_id": "135363f537ea",
+      "bucket_id": 847,
+      "profile_name": "lab0847_s407_w3_1045_1120_r2",
+      "strategy_id": "S407",
+      "occ_symbol": "NKE260807C00043000",
+      "underlying": "NKE",
+      "qty": 1,
+      "entry_cost": 23.0,
+      "entry_price": 0.23,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-04T15:00:57.676770+00:00",
+      "entry_order_id": "a6ec5eb2-a84b-4485-8f86-9ade5b938d11"
+    },
+    {
+      "lot_id": "26c45f6b60a5",
+      "bucket_id": 846,
+      "profile_name": "lab0846_s407_w3_1045_1120_r1",
+      "strategy_id": "S407",
+      "occ_symbol": "NKE260807C00043000",
+      "underlying": "NKE",
+      "qty": 1,
+      "entry_cost": 23.0,
+      "entry_price": 0.23,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-04T15:00:57.721457+00:00",
+      "entry_order_id": "d4ac2628-3b91-4898-92d0-e4192cda5a33"
     }
   ],
   "pending_orders": [
@@ -3648,38 +3688,6 @@
       "stop_loss": -0.5
     },
     {
-      "order_id": "d4ac2628-3b91-4898-92d0-e4192cda5a33",
-      "bucket_id": 846,
-      "strategy_id": "S407",
-      "occ_symbol": "NKE260807C00043000",
-      "underlying": "NKE",
-      "qty": 1,
-      "limit": 0.23,
-      "profile_name": "lab0846_s407_w3_1045_1120_r1",
-      "submitted": "2026-08-04",
-      "detail": "RB gap -3.0% reclaim",
-      "spread_frac": 0.0869565217391304,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "a6ec5eb2-a84b-4485-8f86-9ade5b938d11",
-      "bucket_id": 847,
-      "strategy_id": "S407",
-      "occ_symbol": "NKE260807C00043000",
-      "underlying": "NKE",
-      "qty": 1,
-      "limit": 0.23,
-      "profile_name": "lab0847_s407_w3_1045_1120_r2",
-      "submitted": "2026-08-04",
-      "detail": "RB gap -3.0% reclaim",
-      "spread_frac": 0.0869565217391304,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
       "order_id": "5b99c63f-7e0b-4afc-b128-a0234cd7033b",
       "bucket_id": 316,
       "strategy_id": "S355",
@@ -3710,6 +3718,70 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
+    },
+    {
+      "order_id": "5b918fab-5b8d-4d68-b352-5e821a79bb6a",
+      "bucket_id": 340,
+      "strategy_id": "S358",
+      "occ_symbol": "NKE260904C00045000",
+      "underlying": "NKE",
+      "qty": 1,
+      "limit": 0.72,
+      "profile_name": "lab0340_s358_w3_1045_1120_r1",
+      "submitted": "2026-08-04",
+      "detail": "gap -3.0%",
+      "spread_frac": 0.14705882352941174,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "ec8d0f68-97ba-4ba0-93bc-ad665c726367",
+      "bucket_id": 341,
+      "strategy_id": "S358",
+      "occ_symbol": "NKE260904C00045000",
+      "underlying": "NKE",
+      "qty": 1,
+      "limit": 0.72,
+      "profile_name": "lab0341_s358_w3_1045_1120_r2",
+      "submitted": "2026-08-04",
+      "detail": "gap -3.0%",
+      "spread_frac": 0.14705882352941174,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "6763ea91-0574-4fd3-8825-611a5d98f753",
+      "bucket_id": 450,
+      "strategy_id": "S367",
+      "occ_symbol": "NKE260904C00045000",
+      "underlying": "NKE",
+      "qty": 1,
+      "limit": 0.72,
+      "profile_name": "lab0450_s367_w3_1045_1120_r1",
+      "submitted": "2026-08-04",
+      "detail": "RB gap -3.0% reclaim",
+      "spread_frac": 0.08571428571428563,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "54818dca-391d-42ec-b455-251f35b4f982",
+      "bucket_id": 451,
+      "strategy_id": "S367",
+      "occ_symbol": "NKE260904C00045000",
+      "underlying": "NKE",
+      "qty": 1,
+      "limit": 0.72,
+      "profile_name": "lab0451_s367_w3_1045_1120_r2",
+      "submitted": "2026-08-04",
+      "detail": "RB gap -3.0% reclaim",
+      "spread_frac": 0.08571428571428563,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
   "pending_exits": [
@@ -3910,7 +3982,9 @@
     "b801": 48.0,
     "b800": 48.0,
     "b777": 48.0,
-    "b776": 48.0
+    "b776": 48.0,
+    "b847": 23.0,
+    "b846": 23.0
   },
   "session_date": "2026-08-04",
   "entries_locked": [
@@ -4050,7 +4124,11 @@
     "903|S411|2026-08-04",
     "916|S412|2026-08-04",
     "316|S355|2026-08-04",
-    "317|S355|2026-08-04"
+    "317|S355|2026-08-04",
+    "340|S358|2026-08-04",
+    "341|S358|2026-08-04",
+    "450|S367|2026-08-04",
+    "451|S367|2026-08-04"
   ],
   "processed_orders": [
     "4e873aa0-aeaa-4885-b8dc-7576d0a8ddd3",
@@ -4544,9 +4622,11 @@
     "c1dba9cb-dcb8-4752-8af1-31b4b013042c",
     "619d231a-3ab7-4fec-9c1a-167663a8cb33",
     "f22ea17f-aea2-4d3f-8e21-1fc4bb107957",
-    "6d1ef36b-b4b3-431f-b1a0-4f727092045e"
+    "6d1ef36b-b4b3-431f-b1a0-4f727092045e",
+    "a6ec5eb2-a84b-4485-8f86-9ade5b938d11",
+    "d4ac2628-3b91-4898-92d0-e4192cda5a33"
   ],
-  "submitted_today": 137,
+  "submitted_today": 141,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-08-04"
 }

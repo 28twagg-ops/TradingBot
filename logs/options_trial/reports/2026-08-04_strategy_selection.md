@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-04
 
-_Generated 2026-08-04T10:57:41.113728_
+_Generated 2026-08-04T11:02:33.599724_
 
 ## Summary
 
@@ -44,7 +44,7 @@ _Generated 2026-08-04T10:57:41.113728_
 | S356 (GapDown_14DTE) | 14d | watch | 4 | 100.0 | +48.27 | +37.93 | +37.93 | +58.62 | 4 | 16 | 4 | $+112.00 | 100.0% | insufficient sample (<8 exits) |
 | S357 (GapDown_21DTE) | 21d | watch | 4 | 100.0 | +47.06 | +47.06 | +47.06 | +47.06 | 4 | 16 | 4 | $+128.00 | 100.0% | insufficient sample (<8 exits) |
 | S408 (RubberBand_ITM1) | 3d | watch | 6 | 66.7 | +43.55 | +0.00 | +10.48 | +100.00 | 1 | 16 | 6 | $+57.00 | 100.0% | insufficient sample (<8 exits) |
-| S407 (RubberBand_ITM2) | 3d | watch | 10 | 60.0 | +41.84 | -96.12 | -88.61 | +425.39 | 4 | 22 | 10 | $+63.00 | 70.0% | building sample (8-19 exits) |
+| S407 (RubberBand_ITM2) | 3d | watch | 10 | 60.0 | +41.84 | -96.12 | -88.61 | +425.39 | 4 | 24 | 10 | $+63.00 | 70.0% | building sample (8-19 exits) |
 | S411 (RubberBand_OTM2) | 3d | watch | 8 | 100.0 | +37.20 | +12.31 | +13.35 | +58.73 | 1 | 18 | 8 | $+152.00 | 50.0% | building sample (8-19 exits) |
 | S353 (GapDown_3DTE) | 3d | watch | 8 | 50.0 | +4.62 | -80.38 | -74.19 | +123.68 | 4 | 25 | 8 | $+19.00 | 50.0% | building sample (8-19 exits) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 14 | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |

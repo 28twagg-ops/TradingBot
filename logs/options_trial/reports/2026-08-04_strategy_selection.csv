@@ -23,7 +23,7 @@ S210,MA_Cross_8_21,3d ATM MA cross 8/21,watch,insufficient sample (<8 exits),34,
 S356,GapDown_14DTE,14d,watch,insufficient sample (<8 exits),16,4,4,0,48.27,48.27,37.93,37.93,58.62,112.0,2,4,16,4,1,100.0
 S357,GapDown_21DTE,21d,watch,insufficient sample (<8 exits),16,4,4,0,47.06,47.06,47.06,47.06,47.06,128.0,2,4,16,4,1,100.0
 S408,RubberBand_ITM1,3d,watch,insufficient sample (<8 exits),16,6,4,2,47.85,43.55,0.0,10.48,100.0,57.0,2,1,16,6,1,100.0
-S407,RubberBand_ITM2,3d,watch,building sample (8-19 exits),22,10,6,4,86.14,41.84,-96.12,-88.61,425.39,63.0,2,4,22,10,3,70.0
+S407,RubberBand_ITM2,3d,watch,building sample (8-19 exits),24,10,6,4,86.14,41.84,-96.12,-88.61,425.39,63.0,2,4,24,10,3,70.0
 S411,RubberBand_OTM2,3d,watch,building sample (8-19 exits),18,8,8,0,34.44,37.2,12.31,13.35,58.73,152.0,1,1,18,8,3,50.0
 S353,GapDown_3DTE,3d,watch,building sample (8-19 exits),25,8,4,4,12.45,4.62,-80.38,-74.19,123.68,19.0,2,4,25,8,3,50.0
 S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),83,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,14,0,0,0,0.0
