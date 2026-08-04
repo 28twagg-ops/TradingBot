@@ -1,3 +1,84 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=201 paper_keys=yes dry_run=False
+  alpaca positions=36
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-08-04T17:05:49.954605-04:00 ===
+
+[Run context]
+After hours (17:05 ET) — exit summary only.
+Paper auth OK — equity $144517.78, account PA36KS87UPRS
+
+[Exit summary]
+
+[Portfolio snapshot]
++========================================================================+
+|  OPTIONS BOT SUMMARY                                                   |
++------------------------------------------------------------------------+
+|  Mode                          after_hours                             |
+|  Equity                        $144,517.78                             |
+|  Signals this run              0                                       |
+|  Orders submitted (session)    184                                     |
+|  Orders filled today (ledger)  323                                     |
+|  Entries placed this run       0                                       |
+|  Open virtual lots             201                                     |
+|  Broker option positions       34                                      |
+|  Unattributed contracts        15 (orphan reconcile)                   |
+|  Pending orders                0                                       |
++========================================================================+
++========================================================================+
+|  BUCKET LEADERBOARD (reflected ex-S173,S174)                           |
++------------------------------------------------------------------------+
+|  Reflected trades=733  buckets=224  win=53%                            |
+|  Returns   avg=+35.4%  med=+13.0%  p10=-66.2%  p90=+163.0%             |
+|  Realized  $+13,667.61                                                 |
+|  Raw incl dropped  trades=1267  real=$+12,072.06                       |
+|  Today     trades=111  avg=+23.1%  med=+37.5%  real=$+176.00           |
++------------------------------------------------------------------------+
+|  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
++------------------------------------------------------------------------+
+|  b196 lab0196_s218_w3_10  2 100% +654.7 +654.7 +906.2 $   +274         |
+|  b197 lab0197_s218_w3_10  2 100% +528.1 +528.1 +737.5 $   +220         |
+|  b844 lab0844_s407_w2_10  3 100% +312.4 +446.1 +446.1 $   +138         |
+|  b845 lab0845_s407_w2_10  3 100% +271.7 +353.3 +423.1 $   +127         |
+|  b319 lab0319_s355_w4_11  1 100% +328.6 +328.6 +328.6 $   +138         |
+|  b268 lab0268_s403_w4_11  1 100% +320.0 +320.0 +320.0 $    +80         |
+|  b318 lab0318_s355_w4_11  1 100% +292.9 +292.9 +292.9 $   +123         |
+|  b238 lab0238_s401_w3_10  3 100% +201.5 +273.1 +273.1 $   +177         |
+|  ... 216 more bucket(s) with exits                                     |
++------------------------------------------------------------------------+
+|  Low  b848 lab0848_s407_w4_11  2   0% -95.9 -95.9 -95.9 $    -94       |
++========================================================================+
++========================================================================+
+|  OPEN OPTIONS (34)                                                     |
++------------------------------------------------------------------------+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|------------------------------------------------------------------------|
+|  AMZN260807C00295000          35    -23.2%   $   -327.22               |
+|  OXY260807C00058000            7    -54.7%   $   -262.35               |
+|  NKE260807C00042000           10    -32.9%   $   -211.00               |
+|  NKE260828C00045000           12    -25.6%   $   -194.00               |
+|  SMCI260807P00027500           5    -78.3%   $   -180.00               |
+|  AMZN260807C00297500          12    -42.0%   $   -173.67               |
+|  AMZN260805C00287500          17    -29.5%   $   -171.00               |
+|  AMZN260805C00290000          11    -55.2%   $   -162.33               |
+|  ... 26 more position(s)                                               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-08-04.log
+elapsed=1.3s reconcile=0.71s
+STATUS: options_morning_bot after-hours summary (PAPER) elapsed=1.3s. run=#6062 https://github.com/28twagg-ops/TradingBot/actions/runs/30950797568
+Evaluation complete: 100 strategies evaluated, 0 killed, 0 promote candidates.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-04_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-04_buckets.csv
+Summary: 60 buckets closed trades, $+176.00 realized
+STALE WARNING: 1 bucket(s) with open lots and last_entry >5d
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-04_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-04_strategy_selection.csv
+Summary: keep=0 watch=101 drop=4
+Orphan rate: 3.7% (47/1267)
 # Options signal frequency
 
 _Generated 2026-08-04T17:05:56.842155_
@@ -100,3 +181,24 @@ Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:
 
 - Pre-router-fix (before 2026-07-17 commit `56660c9e`): S163/S166 were starved — expect zeros until a post-fix entry-window gap-down day.
 - Controlled layout places one ENTRY per matching bucket×strategy; raw counts inflate, unique underlyings do not.
+
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/signal_frequency.md
+## Ledger health — 2026-08-04
+| Check                       | Count | Status |
+|-----------------------------|------:|--------|
+| Current stuck (state)       |     0 | OK |
+| Orphaned lots (post-stable) |   398 | WARN | <<<
+| Missing exit records (post) |   398 | WARN | <<<
+| State/ledger mismatches     |    21 | WARN | <<<
+| Total open lots             |   201 | INFO |
+| Total closed lots           |   753 | INFO |
+| Pre-cutoff audit debt       |     0 | INFO |
+| Transition audit debt       |   744 | INFO |
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_health.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/dashboard.html
+equity=474.49 router=CONFIRMED leaderboard_rows=105
+Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
+| 1 | MomReversal | 14 | 43% | +0.39% | -0.69% | -1.92% | 1.95 | 1.6d | $+3.40 | WATCH |
+| 2 | unknown | 32 | 19% | -0.03% | -0.59% | -1.27% | 1.44 | 0.0d | $+0.29 | ACTIVE |
