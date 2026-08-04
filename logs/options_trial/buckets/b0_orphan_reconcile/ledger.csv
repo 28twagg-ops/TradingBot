@@ -27,3 +27,8 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-03 15:35:50.226019+00:00,exit,0,orphan_reconcile,ORPHAN,27159fa4343b,AMD,AMD260803C00497500,1,,0.16,39.0,-58.97,-23.0,stop_loss (-59.0%),,-0.01,0.5,-0.5,,,6ff864d6-99bb-491c-a865-4ed7efd803e8
 2026-08-03T17:12:51Z,reconcile,0,orphan_reconcile,ORPHAN,70b5d6693a2d,NVDA,NVDA260803C00210000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-03 17:10:15.801450+00:00,exit,0,orphan_reconcile,ORPHAN,8a36990fcb80,OXY,OXY260807C00060000,1,,0.07,25.0,-72.0,-18.0,stop_loss (-60.0%),,-0.01,0.5,-0.5,,,3cd3cd04-a2af-45f8-a892-bf41b8c0f979
+2026-08-04T13:44:41Z,reconcile,0,orphan_reconcile,ORPHAN,0770a14994f9,NVDA,NVDA260807C00220000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-04 13:39:59.888174+00:00,exit,0,orphan_reconcile,ORPHAN,8a36990fcb80,OXY,OXY260807C00060000,2,,0.08,50.0,-68.0,-34.0,reconcile_fill,,-0.01,0.5,-0.5,,,5da9e771-4785-4325-beb0-d2c4b20c8e0c
+2026-08-04 13:39:53.944243+00:00,exit,0,orphan_reconcile,ORPHAN,6bf6903202cc,OXY,OXY260807C00059000,1,,0.77,47.5,62.11,29.5,reconcile_fill,,-0.01,0.5,-0.5,,,5050754f-d1a4-4a69-9a02-b2b3b62e5a86
+2026-08-04T13:54:39Z,reconcile,0,orphan_reconcile,ORPHAN,9061b2cf7b99,OXY,OXY260807C00060000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-04 13:44:54.622789+00:00,exit,0,orphan_reconcile,ORPHAN,8b5eee0f63fc,NVDA,NVDA260805C00217500,1,,0.08,28.39,-71.82,-20.39,stop_loss (-68.0%),,-0.01,0.5,-0.5,,,bc804d19-cf72-4cfa-9ae4-70f41056ff53

@@ -1,4 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-31 14:31:57.946038+00:00,entry,223,lab0223_s400_w2_1005_1045_r2,S400,a9e365e31462,AMZN,AMZN260803C00295000,1,0.1,0.08,8.0,,,,-0.01,,0.75,-0.75,0.20000000000000004,green VZ=0.5 >MA50,e25b6a43-54dd-48a6-ab51-de1c3e44c936
 2026-07-31 15:05:52.131097+00:00,exit,223,lab0223_s400_w2_1005_1045_r2,S400,a9e365e31462,AMZN,AMZN260803C00295000,1,,0.04,8.0,-50.0,-4.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,c021aa15-b970-4468-8642-29bf04b610fd
-2026-07-31 14:31:57.946039+00:00,entry,223,lab0223_s400_w2_1005_1045_r2,S400,d47adaa3fe3f,AMZN,AMZN260803C00295000,1,0.08,0.08,8.0,,,,-0.01,,0.5,-0.5,,,e25b6a43-54dd-48a6-ab51-de1c3e44c936
+2026-07-31 14:31:57.946039+00:00,entry,223,lab0223_s400_w2_1005_1045_r2,S400,7158b6725ea4,AMZN,AMZN260803C00295000,1,0.08,0.08,8.0,,,,-0.01,,0.5,-0.5,,,e25b6a43-54dd-48a6-ab51-de1c3e44c936
