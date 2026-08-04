@@ -1522,26 +1522,6 @@
       "entry_order_id": "c7803954-0f7e-4dbe-a30c-2bdc7c1f7e95"
     },
     {
-      "lot_id": "c105fc43803f",
-      "bucket_id": 238,
-      "profile_name": "lab0238_s401_w3_1045_1120_r1",
-      "strategy_id": "S401",
-      "occ_symbol": "META260807C00630000",
-      "underlying": "META",
-      "qty": 1,
-      "entry_cost": 60.0,
-      "entry_price": 0.6,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-04T14:48:53.119963+00:00",
-      "entry_order_id": "9893566e-e516-4076-8914-15ba3e023d98"
-    },
-    {
       "lot_id": "e9bfb222b500",
       "bucket_id": 113,
       "profile_name": "lab0113_s212_w3_1045_1120_r2",
@@ -4335,14 +4315,14 @@
       "submitted": "2026-08-04T11:45:56"
     },
     {
-      "order_id": "4ab1f54e-17cb-4db2-b06a-b5d00c15faea",
-      "lot_id": "c105fc43803f",
-      "bucket_id": 238,
-      "strategy_id": "S401",
+      "order_id": "f1762111-aeae-4485-b9a2-1cd9baba8190",
+      "lot_id": "a61f8143b499",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
       "occ_symbol": "META260807C00630000",
       "qty": 1,
-      "reason": "take_profit (+58.3%)",
-      "submitted": "2026-08-04T13:31:21"
+      "reason": "take_profit (+61.7%)",
+      "submitted": "2026-08-04T13:36:08"
     }
   ],
   "bucket_open_premium": {
@@ -4422,7 +4402,6 @@
     "b292": 32.0,
     "b285": 32.0,
     "b284": 32.0,
-    "b238": 86.0,
     "b113": 98.0,
     "b84": 36.0,
     "b0": 1610.2144999999998,
@@ -4502,6 +4481,7 @@
     "b114": 49.0,
     "b169": 44.0,
     "b366": 25.0,
+    "b238": 26.0,
     "b112": 47.0,
     "b61": 70.0,
     "b914": 47.0,
@@ -5179,7 +5159,8 @@
     "79e3d2b0-905e-468d-bdd1-9b5c146bc9cb",
     "21c3f4f5-bdfd-4400-8e32-da07ab73c392",
     "a98d90a6-855a-4712-b20c-dbe6d8969914",
-    "9a769682-154a-4b63-87a6-cfbc236b3ffc"
+    "9a769682-154a-4b63-87a6-cfbc236b3ffc",
+    "4ab1f54e-17cb-4db2-b06a-b5d00c15faea"
   ],
   "submitted_today": 184,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
