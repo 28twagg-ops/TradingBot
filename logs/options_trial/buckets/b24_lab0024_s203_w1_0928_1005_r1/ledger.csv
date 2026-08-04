@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-08-04 14:36:27.226512+00:00,entry,24,lab0024_s203_w1_0928_1005_r1,S203,265dd37b393a,SMCI,SMCI260807P00027500,1,0.44,0.43,43.0,,,,-0.01,,0.75,-0.75,0.09302325581395357,gap +3.5% red close,70620619-165b-4144-90ce-1d6d46859136

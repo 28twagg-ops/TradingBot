@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-08-03 15:30:58.983680+00:00,entry,87,lab0087_s210_w4_1120_1135_r2,S210,a93e4a312ece,PATH,PATH260807C00013500,1,0.29,0.29,29.0,,,,-0.01,,0.75,-0.75,0.14285714285714277,MA8 11.97 crossed above MA21,ec44a963-b39f-48e6-8b7f-494acb4b7e30
 2026-08-03 15:30:58.983680+00:00,entry,87,lab0087_s210_w4_1120_1135_r2,S210,a93e4a312ece,PATH,PATH260807C00013500,1,0.29,0.29,29.0,,,,-0.01,,0.5,-0.5,,,ec44a963-b39f-48e6-8b7f-494acb4b7e30
+2026-08-04 14:35:55.868474+00:00,exit,87,lab0087_s210_w4_1120_1135_r2,S210,a93e4a312ece,PATH,PATH260807C00013500,1,,0.43,29.0,48.28,14.0,take_profit (+59.3%),,-0.01,0.5,-0.5,,,db95ab7b-6fa1-4504-8d63-25c4d6a063d4
