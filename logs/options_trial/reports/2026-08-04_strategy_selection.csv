@@ -2,27 +2,27 @@ strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,win
 S355,GapDown_7DTE,7d,watch,building sample (8-19 exits),18,10,10,0,163.78,135.99,90.51,92.48,296.43,731.0,1,4,18,10,2,80.0
 S354,GapDown_5DTE,5d,watch,building sample (8-19 exits),26,14,14,0,145.28,135.12,100.92,116.67,207.08,1065.0,1,4,26,14,3,50.0
 S399,GapDown_OTM1,3d,watch,building sample (8-19 exits),34,15,13,2,86.66,100.0,-19.75,62.07,146.0,437.0,2,4,34,15,4,60.0
-S412,RubberBand_OTM3,3d,watch,insufficient sample (<8 exits),18,3,3,0,98.51,92.59,86.75,88.94,112.64,94.0,2,4,18,3,1,100.0
+S217,RSI_25_Bounce,3d ATM RSI<25 bounce,watch,building sample (8-19 exits),34,12,10,2,224.15,99.49,-44.39,53.15,820.84,618.0,3,8,24,12,3,66.7
 S352,GapDown_2DTE,2d,watch,insufficient sample (<8 exits),18,7,7,0,88.15,90.0,44.13,50.0,137.78,206.0,2,4,18,7,2,71.4
+S412,RubberBand_OTM3,3d,watch,insufficient sample (<8 exits),21,5,5,0,79.23,85.29,48.89,57.45,107.63,140.0,2,4,21,5,2,60.0
 S361,RubberBand_2DTE,2d,watch,insufficient sample (<8 exits),22,5,5,0,108.55,81.82,49.25,55.88,194.76,128.0,2,4,22,5,2,60.0
 S398,GapDown_ATM,3d,watch,building sample (8-19 exits),28,14,14,0,126.85,77.85,49.29,62.39,271.0,934.0,1,4,28,14,2,57.1
-S218,BB_Lower_Touch,3d ATM BB lower touch,watch,building sample (8-19 exits),30,9,6,3,225.19,74.19,-40.0,0.0,771.25,349.0,2,8,14,7,3,44.4
 S406,RubberBand_ITM3,3d,watch,building sample (8-19 exits),22,11,9,2,64.83,72.41,-50.0,53.82,163.16,201.0,3,4,22,11,3,63.6
-S217,RSI_25_Bounce,3d ATM RSI<25 bounce,watch,building sample (8-19 exits),30,10,8,2,242.51,67.76,-55.06,51.76,897.85,528.0,3,8,20,10,2,80.0
-S364,RubberBand_7DTE,7d,watch,building sample (8-19 exits),21,11,11,0,116.56,66.67,56.0,61.82,233.33,486.0,3,4,21,11,2,90.9
-S363,RubberBand_5DTE,5d,watch,insufficient sample (<8 exits),12,5,5,0,77.52,64.29,56.05,60.71,105.16,118.0,2,1,12,5,1,100.0
+S364,RubberBand_7DTE,7d,watch,building sample (8-19 exits),22,12,12,0,112.64,68.12,56.4,62.73,228.89,518.0,3,4,22,12,2,83.3
 S397,GapDown_ITM1,3d,watch,building sample (8-19 exits),20,9,9,0,76.85,61.9,40.0,43.66,123.43,433.0,1,4,20,9,2,77.8
+S218,BB_Lower_Touch,3d ATM BB lower touch,watch,building sample (8-19 exits),34,11,8,3,195.21,61.76,-33.33,25.8,737.5,390.0,2,8,18,9,3,45.5
+S363,RubberBand_5DTE,5d,watch,insufficient sample (<8 exits),14,7,7,0,57.75,60.71,8.57,31.23,104.52,125.0,2,1,14,7,2,71.4
 S359,RubberBand_0DTE,0d,watch,insufficient sample (<8 exits),12,6,4,2,69.5,59.09,-36.31,-11.36,185.72,45.0,1,1,12,6,2,66.7
 S403,Any_MA50_Touch,3d,watch,insufficient sample (<8 exits),16,3,3,0,57.65,57.58,51.52,53.79,63.82,98.0,1,4,16,3,1,100.0
 S405,GapDown_OTM3,3d,watch,building sample (8-19 exits),28,15,14,1,88.55,57.14,42.31,50.0,202.6,687.0,2,4,28,15,2,53.3
 S404,GapDown_OTM2,3d,watch,building sample (8-19 exits),20,10,10,0,73.6,55.86,37.9,45.37,126.29,460.0,1,4,20,10,2,80.0
+S210,MA_Cross_8_21,3d ATM MA cross 8/21,watch,insufficient sample (<8 exits),32,4,4,0,59.74,55.36,51.07,52.68,71.92,63.0,1,8,17,4,1,100.0
 S401,Any_Gap_Down_Small,3d,watch,building sample (8-19 exits),30,14,13,1,77.44,53.66,7.36,23.68,239.16,389.0,2,4,30,14,5,57.1
-S210,MA_Cross_8_21,3d ATM MA cross 8/21,watch,insufficient sample (<8 exits),32,3,3,0,53.57,53.57,50.71,51.78,56.43,45.0,1,8,17,3,1,100.0
 S356,GapDown_14DTE,14d,watch,insufficient sample (<8 exits),16,4,4,0,48.27,48.27,37.93,37.93,58.62,112.0,2,4,16,4,1,100.0
 S357,GapDown_21DTE,21d,watch,insufficient sample (<8 exits),16,4,4,0,47.06,47.06,47.06,47.06,47.06,128.0,2,4,16,4,1,100.0
 S411,RubberBand_OTM2,3d,watch,insufficient sample (<8 exits),12,4,4,0,42.08,46.76,20.0,30.33,60.43,86.0,1,1,12,4,1,100.0
 S408,RubberBand_ITM1,3d,watch,insufficient sample (<8 exits),14,6,4,2,47.85,43.55,0.0,10.48,100.0,57.0,2,1,14,6,1,100.0
-S407,RubberBand_ITM2,3d,watch,building sample (8-19 exits),19,10,6,4,86.14,41.84,-96.12,-88.61,425.39,63.0,2,4,19,10,3,70.0
+S407,RubberBand_ITM2,3d,watch,building sample (8-19 exits),20,10,6,4,86.14,41.84,-96.12,-88.61,425.39,63.0,2,4,20,10,3,70.0
 S362,RubberBand_3DTE,3d,watch,building sample (8-19 exits),26,9,9,0,54.08,38.24,12.17,23.68,116.0,185.0,2,4,26,9,3,44.4
 S350,GapDown_0DTE,0d,watch,building sample (8-19 exits),22,16,10,6,44.54,35.49,-64.71,-36.39,137.5,278.0,3,4,22,16,4,62.5
 S353,GapDown_3DTE,3d,watch,building sample (8-19 exits),23,8,4,4,12.45,4.62,-80.38,-74.19,123.68,19.0,2,4,23,8,3,50.0
