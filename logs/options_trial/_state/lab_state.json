@@ -4443,6 +4443,16 @@
       "qty": 1,
       "reason": "stop_loss (-52.2%)",
       "submitted": "2026-08-04T11:45:56"
+    },
+    {
+      "order_id": "babeb12c-190f-4a9c-b600-5f5ef5d33916",
+      "lot_id": "902487394273",
+      "bucket_id": 193,
+      "strategy_id": "S218",
+      "occ_symbol": "AAPL260807C00317500",
+      "qty": 1,
+      "reason": "take_profit (+50.0%)",
+      "submitted": "2026-08-04T12:56:21"
     }
   ],
   "bucket_open_premium": {
