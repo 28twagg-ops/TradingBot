@@ -1,3 +1,6 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-08-03 14:07:49.311357+00:00,entry,346,lab0346_s359_w2_1005_1045_r1,S359,c99f79f2be7c,NVDA,NVDA260803C00210000,1,0.11,0.11,11.0,,,,-0.01,,0.75,-0.75,0.0869565217391304,RB gap -1.5% reclaim,fbe9860f-9976-4fcb-bfaf-8559a010aa2b
 2026-08-03 15:05:53.426128+00:00,exit,346,lab0346_s359_w2_1005_1045_r1,S359,c99f79f2be7c,NVDA,NVDA260803C00210000,1,,0.18,11.0,63.64,7.0,take_profit (+72.7%),,-0.01,0.5,-0.5,,,fa373cee-e588-4b92-8107-c624f57ff55f
+2026-08-04 14:09:20.250230+00:00,entry,346,lab0346_s359_w2_1005_1045_r1,S359,c370fa948b40,AMZN,AMZN260805C00290000,1,0.28,0.27,27.0,,,,-0.01,,0.75,-0.75,0.23076923076923064,RB gap -2.8% reclaim,d01c12b1-52cf-4646-bc8c-68aeaea8d735
+2026-08-03 14:07:49.311357+00:00,entry,346,lab0346_s359_w2_1005_1045_r1,S359,00657e954a8e,NVDA,NVDA260803C00210000,1,0.11,0.11,11.0,,,,-0.01,,0.5,-0.5,,,fbe9860f-9976-4fcb-bfaf-8559a010aa2b
+2026-08-03 15:05:53.426128+00:00,exit,346,lab0346_s359_w2_1005_1045_r1,S359,c370fa948b40,AMZN,AMZN260805C00290000,1,,0.18,27.0,-33.33,-9.0,reconcile_fill,,-0.01,0.5,-0.5,,,fa373cee-e588-4b92-8107-c624f57ff55f

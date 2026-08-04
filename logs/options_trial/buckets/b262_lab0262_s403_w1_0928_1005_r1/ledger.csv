@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-08-03 14:04:04.552092+00:00,entry,262,lab0262_s403_w1_0928_1005_r1,S403,65f86b5c0443,SPY,SPY260806C00760000,1,0.52,0.52,52.0,,,,-0.01,,0.5,-0.5,0.03846153846153849,touch MA50 green,b1733ba9-35c9-426c-96e9-d67e77a554de
 2026-08-03 15:01:11.681286+00:00,exit,262,lab0262_s403_w1_0928_1005_r1,S403,65f86b5c0443,SPY,SPY260806C00760000,1,,0.86,52.0,65.38,34.0,take_profit (+63.5%),,-0.01,0.5,-0.5,,,746976c8-3bc1-4e0c-8227-c7cffca2a7a5
+2026-08-03 14:04:04.552092+00:00,entry,262,lab0262_s403_w1_0928_1005_r1,S403,69c20b0d26e9,SPY,SPY260806C00760000,1,0.52,0.52,52.0,,,,-0.01,,0.5,-0.5,,,b1733ba9-35c9-426c-96e9-d67e77a554de

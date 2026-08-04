@@ -1,3 +1,6 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-08-03 14:07:00.973761+00:00,entry,96,lab0096_s211_w2_1005_1045_r1,S211,72dc48f67514,MSFT,MSFT260807C00525000,1,0.66,0.65,65.0,,,,-0.01,,0.5,-0.5,0.1612903225806453,MA21 crossed above MA50,b3cf38a3-79ae-4dd8-9ecf-a9f7036252c3
 2026-08-03T14:55:54Z,reconcile,96,lab0096_s211_w2_1005_1045_r1,S211,72dc48f67514,MSFT,MSFT260807C00525000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-04 14:09:14.172326+00:00,entry,96,lab0096_s211_w2_1005_1045_r1,S211,af3be2204591,AMZN,AMZN260807C00295000,1,0.44,0.42,42.0,,,,-0.01,,0.75,-0.75,0.06896551724137938,MA21 crossed above MA50,956ac5ed-4ac7-45a1-9d35-f2aef364dbdd
+2026-08-03 14:55:06.651056+00:00,exit,96,lab0096_s211_w2_1005_1045_r1,S211,af3be2204591,AMZN,AMZN260807C00295000,1,,0.26,42.0,-38.1,-16.0,reconcile_fill,,-0.01,0.5,-0.5,,,35df9c60-74bb-49d0-a8ce-df45890f6725
+2026-08-03 14:07:00.973761+00:00,entry,96,lab0096_s211_w2_1005_1045_r1,S211,dfb2883f4eb9,MSFT,MSFT260807C00525000,1,0.65,0.65,65.0,,,,-0.01,,0.5,-0.5,,,b3cf38a3-79ae-4dd8-9ecf-a9f7036252c3
