@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-04
 
-_Generated 2026-08-04T11:56:13.710644_
+_Generated 2026-08-04T12:01:16.800421_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-04T11:56:13.710644_
 
 ## Attribution health
 
-- Total exits: **1219**
+- Total exits: **1220**
 - Orphan exits (b0/orphan_reconcile): **40**
 - Orphan rate: **3.3%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -21,7 +21,7 @@ _Generated 2026-08-04T11:56:13.710644_
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | S355 (GapDown_7DTE) | 7d | watch | 10 | 100.0 | +135.99 | +90.51 | +92.48 | +296.43 | 4 | 20 | 10 | $+731.00 | 80.0% | building sample (8-19 exits) |
-| S354 (GapDown_5DTE) | 5d | watch | 15 | 93.3 | +133.33 | +96.17 | +109.88 | +202.50 | 4 | 32 | 15 | $+1,031.00 | 46.7% | building sample (8-19 exits) |
+| S354 (GapDown_5DTE) | 5d | watch | 16 | 87.5 | +130.56 | +21.43 | +102.31 | +197.92 | 4 | 32 | 16 | $+998.00 | 43.8% | building sample (8-19 exits) |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | watch | 13 | 84.6 | +129.41 | -33.79 | +53.85 | +755.96 | 8 | 32 | 13 | $+711.00 | 61.5% | building sample (8-19 exits) |
 | S352 (GapDown_2DTE) | 2d | watch | 9 | 100.0 | +93.75 | +45.87 | +52.38 | +223.89 | 4 | 28 | 9 | $+314.00 | 55.6% | building sample (8-19 exits) |
 | S399 (GapDown_OTM1) | 3d | watch | 17 | 76.5 | +92.00 | -67.20 | +52.63 | +144.00 | 4 | 50 | 17 | $+397.00 | 52.9% | building sample (8-19 exits) |
@@ -263,7 +263,7 @@ _Pipeline evaluation as of 2026-08-04. Auto-kill thresholds: median<-25% at n>=1
 | S351 | GapDown_1DTE | 21 | -43.75% | 33% | INSUFFICIENT | 4 |
 | S352 | GapDown_2DTE | 9 | +93.75% | 100% | WATCH | 4 |
 | S353 | GapDown_3DTE | 10 | -71.22% | 40% | WATCH | 4 |
-| S354 | GapDown_5DTE | 15 | +133.33% | 93% | INSUFFICIENT | 4 |
+| S354 | GapDown_5DTE | 16 | +130.56% | 88% | INSUFFICIENT | 4 |
 | S355 | GapDown_7DTE | 10 | +135.99% | 100% | WATCH | 4 |
 | S356 | GapDown_14DTE | 4 | +48.27% | 100% | WATCH | 4 |
 | S357 | GapDown_21DTE | 4 | +47.06% | 100% | WATCH | 4 |

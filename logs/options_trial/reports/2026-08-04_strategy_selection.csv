@@ -1,6 +1,6 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
 S355,GapDown_7DTE,7d,watch,building sample (8-19 exits),20,10,10,0,163.78,135.99,90.51,92.48,296.43,731.0,1,4,20,10,2,80.0
-S354,GapDown_5DTE,5d,watch,building sample (8-19 exits),32,15,14,1,132.11,133.33,96.17,109.88,202.5,1031.0,2,4,32,15,3,46.7
+S354,GapDown_5DTE,5d,watch,building sample (8-19 exits),32,16,14,2,120.68,130.56,21.43,102.31,197.92,998.0,2,4,32,16,3,43.8
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,watch,building sample (8-19 exits),42,13,11,2,222.8,129.41,-33.79,53.85,755.96,711.0,3,8,32,13,3,61.5
 S352,GapDown_2DTE,2d,watch,building sample (8-19 exits),28,9,9,0,118.56,93.75,45.87,52.38,223.89,314.0,2,4,28,9,2,55.6
 S399,GapDown_OTM1,3d,watch,building sample (8-19 exits),50,17,13,4,68.62,92.0,-67.2,52.63,144.0,397.0,2,4,50,17,4,52.9

@@ -962,26 +962,6 @@
       "entry_order_id": "281679b7-f2d2-4b59-8bc5-4229476bb039"
     },
     {
-      "lot_id": "7e3188e15a31",
-      "bucket_id": 308,
-      "profile_name": "lab0308_s354_w3_1045_1120_r1",
-      "strategy_id": "S354",
-      "occ_symbol": "OXY260807C00058000",
-      "underlying": "OXY",
-      "qty": 1,
-      "entry_cost": 65.0,
-      "entry_price": 0.65,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-04T14:18:40.199062+00:00",
-      "entry_order_id": "29fcfeeb-e377-4801-8f04-7d99bc81aaae"
-    },
-    {
       "lot_id": "8accea4c45d8",
       "bucket_id": 239,
       "profile_name": "lab0239_s401_w3_1045_1120_r2",
@@ -4555,14 +4535,14 @@
       "submitted": "2026-08-04T11:45:56"
     },
     {
-      "order_id": "6c303c83-68e6-493d-a3a5-911127f9a1d3",
-      "lot_id": "7e3188e15a31",
-      "bucket_id": 308,
-      "strategy_id": "S354",
+      "order_id": "d51009ec-1f6c-4bd4-b0fb-a9b365b05c7d",
+      "lot_id": "52cbd5dd993c",
+      "bucket_id": 298,
+      "strategy_id": "S353",
       "occ_symbol": "OXY260807C00058000",
       "qty": 1,
-      "reason": "stop_loss (-54.7%)",
-      "submitted": "2026-08-04T11:56:11"
+      "reason": "stop_loss (-53.3%)",
+      "submitted": "2026-08-04T12:01:13"
     }
   ],
   "bucket_open_premium": {
@@ -4614,7 +4594,6 @@
     "b778": 118.0,
     "b82": 38.0,
     "b241": 38.0,
-    "b308": 65.0,
     "b239": 26.0,
     "b29": 51.0,
     "b28": 51.0,
@@ -5423,7 +5402,8 @@
     "7d3d1c0e-9dc5-4f58-a362-eed2c760fbe6",
     "48c8a995-e463-482e-89c3-3fd65fc95246",
     "16106b4a-a759-472d-b911-6430cd2f54ca",
-    "8f8c96e2-7953-4674-a4e1-ac2750a24564"
+    "8f8c96e2-7953-4674-a4e1-ac2750a24564",
+    "6c303c83-68e6-493d-a3a5-911127f9a1d3"
   ],
   "submitted_today": 184,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
