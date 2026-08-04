@@ -622,26 +622,6 @@
       "entry_order_id": "819d12cb-ab59-444c-a33d-5921d94769bd"
     },
     {
-      "lot_id": "77457a59c31d",
-      "bucket_id": 857,
-      "profile_name": "lab0857_s408_w1_0928_1005_r2",
-      "strategy_id": "S408",
-      "occ_symbol": "WMT260807C00114000",
-      "underlying": "WMT",
-      "qty": 1,
-      "entry_cost": 19.0,
-      "entry_price": 0.19,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-04T14:16:19.132559+00:00",
-      "entry_order_id": "d0b16e2c-081b-4eb9-8253-c384aaccaaed"
-    },
-    {
       "lot_id": "9fd93b6541e9",
       "bucket_id": 856,
       "profile_name": "lab0856_s408_w1_0928_1005_r1",
@@ -4295,14 +4275,14 @@
       "submitted": "2026-08-04T11:45:56"
     },
     {
-      "order_id": "fe09390b-ace3-4a54-9beb-0aa2281b55ff",
-      "lot_id": "77457a59c31d",
-      "bucket_id": 857,
+      "order_id": "531e6783-0fb3-4664-ad98-6ed1140f2d7a",
+      "lot_id": "9fd93b6541e9",
+      "bucket_id": 856,
       "strategy_id": "S408",
       "occ_symbol": "WMT260807C00114000",
       "qty": 1,
-      "reason": "take_profit (+52.6%)",
-      "submitted": "2026-08-04T14:11:16"
+      "reason": "take_profit (+57.9%)",
+      "submitted": "2026-08-04T14:16:02"
     }
   ],
   "bucket_open_premium": {
@@ -4337,7 +4317,6 @@
     "b420": 60.0,
     "b323": 60.0,
     "b322": 60.0,
-    "b857": 19.0,
     "b856": 19.0,
     "b115": 49.0,
     "b803": 120.0,
@@ -5141,7 +5120,8 @@
     "a98d90a6-855a-4712-b20c-dbe6d8969914",
     "9a769682-154a-4b63-87a6-cfbc236b3ffc",
     "4ab1f54e-17cb-4db2-b06a-b5d00c15faea",
-    "f1762111-aeae-4485-b9a2-1cd9baba8190"
+    "f1762111-aeae-4485-b9a2-1cd9baba8190",
+    "fe09390b-ace3-4a54-9beb-0aa2281b55ff"
   ],
   "submitted_today": 184,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
