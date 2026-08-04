@@ -16,7 +16,7 @@ S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),32,22,14,8,69.24,64.9,-62.
 S397,GapDown_ITM1,3d,watch,building sample (8-19 exits),30,9,9,0,76.85,61.9,40.0,43.66,123.43,433.0,1,4,30,9,2,77.8
 S404,GapDown_OTM2,3d,watch,building sample (8-19 exits),30,10,10,0,73.6,55.86,37.9,45.37,126.29,460.0,1,4,30,10,2,80.0
 S405,GapDown_OTM3,3d,watch,building sample (8-19 exits),41,17,14,3,72.34,55.71,-47.65,42.86,182.48,629.0,2,4,41,17,3,47.1
-S401,Any_Gap_Down_Small,3d,watch,building sample (8-19 exits),40,17,15,2,75.24,54.0,-5.17,21.05,205.23,490.0,3,4,40,17,5,47.1
+S401,Any_Gap_Down_Small,3d,watch,building sample (8-19 exits),40,18,16,2,72.38,53.66,-2.14,21.71,193.92,499.0,3,4,40,18,5,50.0
 S363,RubberBand_5DTE,5d,watch,building sample (8-19 exits),22,10,10,0,47.39,52.94,7.14,9.52,103.55,150.0,2,1,22,10,2,60.0
 S210,MA_Cross_8_21,3d ATM MA cross 8/21,watch,building sample (8-19 exits),45,9,9,0,53.18,50.0,38.64,48.28,79.13,128.0,1,8,30,9,2,88.9
 S356,GapDown_14DTE,14d,watch,insufficient sample (<8 exits),22,4,4,0,48.27,48.27,37.93,37.93,58.62,112.0,2,4,22,4,1,100.0

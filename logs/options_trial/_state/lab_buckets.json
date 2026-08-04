@@ -1448,8 +1448,8 @@
   {
     "bucket_id": 241,
     "profile": "lab0241_s401_w4_1120_1135_r2",
-    "open_premium": 38.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 242,
