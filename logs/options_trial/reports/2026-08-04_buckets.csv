@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,8,18,2026-07-27,True,8,37.5,-20.14,-64.0,130.3,-87.45,-85.39,"AAPL,AMZN,NVDA,OXY",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-68.0%)…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,9,19,2026-07-27,True,8,33.3,-27.53,-68.0,130.3,-87.45,-137.14,"AAPL,AMZN,NVDA,OXY",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-68.0%)…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -62,7 +62,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 60,lab0060_s207_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,2,2026-08-04,False,,0.0,-60.0,-60.0,-60.0,-60.0,-42.0,"OXY,XOM",S207,stop_loss (-59.1%),closed
 61,lab0061_s207_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,2,2026-08-04,False,,0.0,-55.71,-55.71,-55.71,-55.71,-39.0,"OXY,XOM",S207,stop_loss (-56.2%),closed
 62,lab0062_s207_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,2,2026-08-04,False,,0.0,-59.72,-59.72,-59.72,-59.72,-43.0,"OXY,XOM",S207,stop_loss (-57.7%),closed
-63,lab0063_s207_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,2,2026-08-04,False,,0.0,-55.56,-55.56,-55.56,-55.56,-40.0,"OXY,XOM",S207,stop_loss (-53.3%),closed
+63,lab0063_s207_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-08-04,False,,50.0,-20.14,-20.14,15.28,-55.56,-29.0,"OXY,XOM",S207,stop_loss (-53.3%); take_profit (+52.3%),closed
 64,lab0064_s208_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 65,lab0065_s208_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 66,lab0066_s208_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
@@ -861,7 +861,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 859,lab0859_s408_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
 860,lab0860_s408_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,2,2026-08-04,False,,,,,,,0,NKE,S408,,entered_no_exit
 861,lab0861_s408_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,2,2,2026-08-04,False,,100.0,100.0,100.0,100.0,100.0,30.0,"NKE,NVDA",S408,take_profit (+56.8%); reconcile_fill,closed
-862,lab0862_s408_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,2,2026-08-04,False,,,,,,,0,NKE,S408,,entered_no_exit
+862,lab0862_s408_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-04,False,,,,,,,0,NKE,S408,,entered_no_exit
 863,lab0863_s408_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,2,1,2026-08-04,False,,0.0,0.0,0.0,0.0,0.0,0.0,"NKE,NVDA",S408,stop_loss (-53.3%); reconcile_fill,closed
 864,lab0864_s408_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 865,lab0865_s408_w5_1300_1330_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle

@@ -7614,3 +7614,7 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-04 16:56:21.224983+00:00,exit,193,lab0193_s218_w1_0928_1005_r2,S218,902487394273,AAPL,AAPL260807C00317500,1,,0.9,60.0,50.0,30.0,take_profit (+50.0%),,-0.01,0.5,-0.5,,,babeb12c-190f-4a9c-b600-5f5ef5d33916
 2026-08-04T17:05:48Z,reconcile,192,lab0192_s218_w1_0928_1005_r1,S218,b32f8ff8c886,AAPL,AAPL260807C00317500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-04 17:01:05.091240+00:00,exit,58,lab0058_s207_w2_1005_1045_r1,S207,db555e681f45,XOM,XOM260807C00157500,1,,0.82,50.0,64.0,32.0,take_profit (+50.5%),,-0.01,0.5,-0.5,,,9edd3eb1-0212-4897-b45d-3ce45a724dcd
+2026-08-04T17:10:49Z,reconcile,63,lab0063_s207_w4_1120_1135_r2,S207,73ecf4f8b682,XOM,XOM260807C00157500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-04T17:10:49Z,reconcile,862,lab0862_s408_w4_1120_1135_r1,S408,8aa7ffd3c2fd,NVDA,NVDA260805C00222500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-04 17:06:05.245934+00:00,exit,63,lab0063_s207_w4_1120_1135_r2,S207,d90b2c3c6aa5,OXY,OXY260807C00058000,1,,0.83,72.0,15.28,11.0,take_profit (+52.3%),,-0.01,0.5,-0.5,,,15ac40d3-f7ce-4f17-9a16-2c939dd60751
+2026-08-04 17:06:00.537266+00:00,exit,0,orphan_reconcile,ORPHAN,a8ea143cb3c1,AAPL,AAPL260814C00330000,1,,0.08,59.75,-86.61,-51.75,stop_loss (-53.3%),,-0.01,0.5,-0.5,,,18f78a9f-14b1-41c2-b906-68db19a6efe9

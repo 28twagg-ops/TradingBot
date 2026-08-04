@@ -43,3 +43,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-03 14:16:19.703224+00:00,exit,0,orphan_reconcile,ORPHAN,91bee9a87674,AMZN,AMZN260810C00300000,1,,1.24,45.0,175.56,79.0,reconcile_fill,,-0.01,0.5,-0.5,,,924816af-ea39-4e10-9ed9-ccb3adcbb7d7
 2026-08-04 15:36:00.935442+00:00,exit,0,orphan_reconcile,ORPHAN,7a91f71a0efa,AMZN,AMZN260805C00295000,1,,0.06,15.0,-60.0,-9.0,stop_loss (-60.0%),,-0.01,0.5,-0.5,,,69e68b17-338c-4c35-ab49-663b9cb730d6
 2026-08-03 14:51:02.282814+00:00,exit,0,orphan_reconcile,ORPHAN,a8ea143cb3c1,AAPL,AAPL260814C00330000,1,,1.87,59.75,212.97,127.25,reconcile_fill,,-0.01,0.5,-0.5,,,8026d48c-a278-4dc7-811b-384a470f46ab
+2026-08-04 17:06:00.537266+00:00,exit,0,orphan_reconcile,ORPHAN,a8ea143cb3c1,AAPL,AAPL260814C00330000,1,,0.08,59.75,-86.61,-51.75,stop_loss (-53.3%),,-0.01,0.5,-0.5,,,18f78a9f-14b1-41c2-b906-68db19a6efe9

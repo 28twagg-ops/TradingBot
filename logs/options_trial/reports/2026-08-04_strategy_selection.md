@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-04
 
-_Generated 2026-08-04T13:06:07.410466_
+_Generated 2026-08-04T13:11:02.240141_
 
 ## Summary
 
@@ -11,8 +11,8 @@ _Generated 2026-08-04T13:06:07.410466_
 
 ## Attribution health
 
-- Total exits: **1225**
-- Orphan exits (b0/orphan_reconcile): **40**
+- Total exits: **1227**
+- Orphan exits (b0/orphan_reconcile): **41**
 - Orphan rate: **3.3%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
 
@@ -113,8 +113,8 @@ _Generated 2026-08-04T13:06:07.410466_
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | watch | 14 | 14.3 | -17.14 | -49.87 | -42.85 | +35.27 | 8 | 32 | 14 | $-101.00 | 71.4% | early sample with non-positive median |
 | S359 (RubberBand_0DTE) | 0d | watch | 10 | 40.0 | -33.33 | -46.67 | -39.29 | +151.43 | 1 | 18 | 10 | $+11.00 | 60.0% | early sample with non-positive median |
 | S360 (RubberBand_1DTE) | 1d | watch | 13 | 23.1 | -37.04 | -55.40 | -50.00 | +44.75 | 4 | 29 | 13 | $-91.00 | 61.5% | early sample with non-positive median |
+| S207 (GapDown_AtSupport) | 3d ATM gap-support | watch | 11 | 18.2 | -50.00 | -59.72 | -55.80 | +15.28 | 8 | 24 | 11 | $-287.00 | 90.9% | early sample with non-positive median |
 | S400 (Any_Green_Close) | 3d | watch | 5 | 0.0 | -50.00 | -66.67 | -66.67 | -33.33 | 4 | 12 | 5 | $-30.00 | 100.0% | insufficient sample (<8 exits) |
-| S207 (GapDown_AtSupport) | 3d ATM gap-support | watch | 10 | 10.0 | -52.78 | -59.75 | -55.84 | -35.95 | 8 | 24 | 10 | $-298.00 | 90.0% | early sample with non-positive median |
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | watch | 15 | 0.0 | -53.33 | -64.74 | -59.48 | -49.02 | 8 | 33 | 15 | $-426.00 | 60.0% | early sample with non-positive median |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 6 | 0.0 | -64.75 | -70.52 | -66.39 | -44.87 | 7 | 16 | 4 | $-133.00 | 66.7% | insufficient sample (<8 exits) |
 | S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | watch | 14 | 0.0 | -64.90 | -73.84 | -72.11 | -45.97 | 8 | 33 | 14 | $-471.00 | 64.3% | early sample with non-positive median |
@@ -174,7 +174,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | S204 | 3d ATM gap-up cont | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S205 | 3d ATM gap-highvol | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S206 | 3d ATM gap-trend | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
-| S207 | 3d ATM gap-support | 10 | -52.78 | -59.75 | -55.84 | 24 | 10 |
+| S207 | 3d ATM gap-support | 11 | -50.00 | -59.72 | -55.80 | 24 | 11 |
 | S208 | 3d ATM gap-ma200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S209 | 3d ATM gap-recovery | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
@@ -244,7 +244,7 @@ _Pipeline evaluation as of 2026-08-04. Auto-kill thresholds: median<-25% at n>=1
 | S204 | GapUp_Continuation | 0 | — | — | NEW | 0 |
 | S205 | GapDown_HighVol | 0 | — | — | NEW | 0 |
 | S206 | GapDown_WithTrend | 0 | — | — | NEW | 0 |
-| S207 | GapDown_AtSupport | 10 | -52.78% | 10% | WATCH | 8 |
+| S207 | GapDown_AtSupport | 11 | -50.00% | 18% | WATCH | 8 |
 | S208 | GapDown_AboveMA200 | 0 | — | — | NEW | 0 |
 | S209 | GapDown_Recovery | 0 | — | — | NEW | 6 |
 | S210 | MA_Cross_8_21 | 8 | +51.78% | 100% | WATCH | 8 |
