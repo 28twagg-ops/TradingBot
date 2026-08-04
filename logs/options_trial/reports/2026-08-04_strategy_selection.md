@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-04
 
-_Generated 2026-08-04T14:31:13.443998_
+_Generated 2026-08-04T14:47:10.016825_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-04T14:31:13.443998_
 
 ## Attribution health
 
-- Total exits: **1261**
+- Total exits: **1262**
 - Orphan exits (b0/orphan_reconcile): **47**
 - Orphan rate: **3.7%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -37,7 +37,7 @@ _Generated 2026-08-04T14:31:13.443998_
 | S397 (GapDown_ITM1) | 3d | watch | 9 | 100.0 | +61.90 | +40.00 | +43.66 | +123.43 | 4 | 30 | 9 | $+433.00 | 77.8% | building sample (8-19 exits) |
 | S404 (GapDown_OTM2) | 3d | watch | 10 | 100.0 | +55.86 | +37.90 | +45.37 | +126.29 | 4 | 30 | 10 | $+460.00 | 80.0% | building sample (8-19 exits) |
 | S405 (GapDown_OTM3) | 3d | watch | 17 | 82.4 | +55.71 | -47.65 | +42.86 | +182.48 | 4 | 41 | 17 | $+629.00 | 47.1% | building sample (8-19 exits) |
-| S401 (Any_Gap_Down_Small) | 3d | watch | 18 | 88.9 | +53.66 | -2.14 | +21.71 | +193.92 | 4 | 40 | 18 | $+499.00 | 50.0% | building sample (8-19 exits) |
+| S401 (Any_Gap_Down_Small) | 3d | watch | 19 | 89.5 | +54.00 | +0.89 | +22.37 | +182.62 | 4 | 40 | 19 | $+529.00 | 52.6% | building sample (8-19 exits) |
 | S363 (RubberBand_5DTE) | 5d | watch | 10 | 100.0 | +52.94 | +7.14 | +9.52 | +103.55 | 1 | 22 | 10 | $+150.00 | 60.0% | building sample (8-19 exits) |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | watch | 9 | 100.0 | +50.00 | +38.64 | +48.28 | +79.13 | 8 | 30 | 9 | $+128.00 | 88.9% | building sample (8-19 exits) |
 | S356 (GapDown_14DTE) | 14d | watch | 4 | 100.0 | +48.27 | +37.93 | +37.93 | +58.62 | 4 | 22 | 4 | $+112.00 | 100.0% | insufficient sample (<8 exits) |
@@ -310,7 +310,7 @@ _Pipeline evaluation as of 2026-08-04. Auto-kill thresholds: median<-25% at n>=1
 | S398 | GapDown_ATM | 16 | +71.60% | 88% | INSUFFICIENT | 4 |
 | S399 | GapDown_OTM1 | 17 | +92.00% | 76% | INSUFFICIENT | 4 |
 | S400 | Any_Green_Close | 5 | -50.00% | 0% | WATCH | 4 |
-| S401 | Any_Gap_Down_Small | 18 | +53.66% | 89% | INSUFFICIENT | 4 |
+| S401 | Any_Gap_Down_Small | 19 | +54.00% | 89% | INSUFFICIENT | 4 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
 | S403 | Any_MA50_Touch | 5 | +65.38% | 100% | WATCH | 4 |
 | S404 | GapDown_OTM2 | 10 | +55.86% | 100% | WATCH | 4 |
