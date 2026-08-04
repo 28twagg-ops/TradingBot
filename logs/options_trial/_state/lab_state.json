@@ -582,26 +582,6 @@
       "entry_order_id": "e02261c6-a99f-4b49-b606-241c741490d8"
     },
     {
-      "lot_id": "b32f8ff8c886",
-      "bucket_id": 192,
-      "profile_name": "lab0192_s218_w1_0928_1005_r1",
-      "strategy_id": "S218",
-      "occ_symbol": "AAPL260807C00317500",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 60.0,
-      "entry_price": 0.6,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-04T14:04:25.976077+00:00",
-      "entry_order_id": "f1e203a7-e855-429b-a710-b00d4cfaf0b6"
-    },
-    {
       "lot_id": "bbf9db0f84e1",
       "bucket_id": 421,
       "profile_name": "lab0421_s365_w2_1005_1045_r2",
@@ -1260,26 +1240,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-04T14:30:52.508077+00:00",
       "entry_order_id": "14a06bd4-22ff-44cd-9f54-c22143e85fe1"
-    },
-    {
-      "lot_id": "db555e681f45",
-      "bucket_id": 58,
-      "profile_name": "lab0058_s207_w2_1005_1045_r1",
-      "strategy_id": "S207",
-      "occ_symbol": "XOM260807C00157500",
-      "underlying": "XOM",
-      "qty": 1,
-      "entry_cost": 50.0,
-      "entry_price": 0.5,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-04T14:30:52.551589+00:00",
-      "entry_order_id": "baa41a8f-b9fd-4a30-b025-d739ba95c806"
     },
     {
       "lot_id": "dc8d518d6321",
@@ -4425,24 +4385,14 @@
       "submitted": "2026-08-04T11:45:56"
     },
     {
-      "order_id": "9edd3eb1-0212-4897-b45d-3ce45a724dcd",
-      "lot_id": "db555e681f45",
-      "bucket_id": 58,
+      "order_id": "15ac40d3-f7ce-4f17-9a16-2c939dd60751",
+      "lot_id": "73ecf4f8b682",
+      "bucket_id": 63,
       "strategy_id": "S207",
       "occ_symbol": "XOM260807C00157500",
       "qty": 1,
-      "reason": "take_profit (+50.5%)",
-      "submitted": "2026-08-04T13:01:04"
-    },
-    {
-      "order_id": "5bca919b-03bd-447a-8da4-7b06ec69ea54",
-      "lot_id": "b32f8ff8c886",
-      "bucket_id": 192,
-      "strategy_id": "S218",
-      "occ_symbol": "AAPL260807C00317500",
-      "qty": 1,
-      "reason": "take_profit (+53.3%)",
-      "submitted": "2026-08-04T13:01:24"
+      "reason": "take_profit (+52.3%)",
+      "submitted": "2026-08-04T13:06:05"
     }
   ],
   "bucket_open_premium": {
@@ -4475,7 +4425,6 @@
     "b328": 69.0,
     "b321": 67.0,
     "b320": 67.0,
-    "b192": 60.0,
     "b421": 60.0,
     "b420": 60.0,
     "b323": 60.0,
@@ -4508,7 +4457,6 @@
     "b181": 45.0,
     "b914": 44.0,
     "b915": 47.0,
-    "b58": 50.0,
     "b816": 41.0,
     "b787": 41.0,
     "b786": 41.0,
@@ -5304,7 +5252,8 @@
     "d51009ec-1f6c-4bd4-b0fb-a9b365b05c7d",
     "3d831e92-1c21-47eb-af61-ee5333195e1c",
     "df86532c-24fc-4570-87c3-c773213102c6",
-    "babeb12c-190f-4a9c-b600-5f5ef5d33916"
+    "babeb12c-190f-4a9c-b600-5f5ef5d33916",
+    "9edd3eb1-0212-4897-b45d-3ce45a724dcd"
   ],
   "submitted_today": 184,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
