@@ -4293,6 +4293,16 @@
       "qty": 1,
       "reason": "stop_loss (-52.2%)",
       "submitted": "2026-08-04T11:45:56"
+    },
+    {
+      "order_id": "fe09390b-ace3-4a54-9beb-0aa2281b55ff",
+      "lot_id": "77457a59c31d",
+      "bucket_id": 857,
+      "strategy_id": "S408",
+      "occ_symbol": "WMT260807C00114000",
+      "qty": 1,
+      "reason": "take_profit (+52.6%)",
+      "submitted": "2026-08-04T14:11:16"
     }
   ],
   "bucket_open_premium": {
