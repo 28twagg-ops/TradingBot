@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-07-31 15:22:25.581220+00:00,entry,383,lab0383_s362_w4_1120_1135_r2,S362,4a64ab5cbe34,AAPL,AAPL260803C00315000,1,0.44,0.43,43.0,,,,-0.01,,0.5,-0.5,0.0454545454545455,RB gap -8.6% reclaim,ddf379b8-4290-4732-80e8-432e595caff9
 2026-08-03 15:36:59.022978+00:00,entry,383,lab0383_s362_w4_1120_1135_r2,S362,29285f9fc4d1,NVDA,NVDA260805C00217500,1,0.32,0.31,31.0,,,,-0.01,,0.75,-0.75,0.16393442622950813,RB gap -1.5% reclaim,3f4a7d5d-5c6a-4f0f-ba7b-f5b9b888b3ec
+2026-07-31 15:22:25.581220+00:00,entry,383,lab0383_s362_w4_1120_1135_r2,S362,8a9753c60d16,AAPL,AAPL260803C00315000,1,0.43,0.43,43.0,,,,-0.01,,0.5,-0.5,,,ddf379b8-4290-4732-80e8-432e595caff9
