@@ -22051,3 +22051,48 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ### Options bot full output
 
 ```text
+
+## Run 20260804T195653Z
+
+- UTC timestamp: `20260804T195653Z`
+- GitHub run: [#6048](https://github.com/28twagg-ops/TradingBot/actions/runs/30945521593)
+- Run id: `30945521593`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-04T15:25:49.337159-04:00","date":"2026-08-04","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":6.3,"phases_s":{"reconcile":0.12,"cancel":0.03,"manage":5.78},"signals":0,"placed":0,"equity":147356.54,"open_positions":34,"pending_orders":0,"open_lots":201,"submitted_today":184,"filled_today":323,"unattributed_contracts":15,"top_signals":[],"github_run":"6041","github_run_id":"30943173759","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:56:54  INFO      Mode: scan
+19:56:55  INFO        [positions] 2/2 (2 valid)
+19:56:55  INFO        Universe cache hit: 903 tickers (tickers_2026-08-04.json)
+19:56:57  INFO        [universe] 40/901 (40 valid)
+19:56:58  INFO        [universe] 80/901 (80 valid)
+19:56:59  INFO        [universe] 120/901 (120 valid)
+19:57:00  INFO        [universe] 160/901 (160 valid)
+19:57:02  INFO        [universe] 200/901 (199 valid)
+19:57:09  INFO        [universe] 240/901 (238 valid)
+19:57:22  INFO        [universe] 280/901 (278 valid)
+19:57:35  INFO        [universe] 320/901 (318 valid)
+19:57:45  INFO        [universe] 360/901 (358 valid)
+19:57:58  INFO        [universe] 400/901 (397 valid)
+19:58:11  INFO        [universe] 440/901 (437 valid)
+19:58:21  INFO        [universe] 480/901 (477 valid)
+19:58:34  INFO        [universe] 520/901 (517 valid)
+19:58:44  INFO        [universe] 560/901 (557 valid)
+19:58:57  INFO        [universe] 600/901 (597 valid)
+19:59:10  INFO        [universe] 640/901 (637 valid)
+19:59:23  INFO        [universe] 680/901 (677 valid)
+19:59:33  INFO        [universe] 720/901 (717 valid)
+19:59:46  INFO        [universe] 760/901 (757 valid)
+19:59:57  INFO        [universe] 800/901 (797 valid)
+20:00:10  INFO        [universe] 840/901 (836 valid)
+```
+
+### Options bot full output
+
+```text
