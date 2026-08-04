@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-04
 
-_Generated 2026-08-04T10:52:22.013954_
+_Generated 2026-08-04T10:57:41.113728_
 
 ## Summary
 
@@ -32,13 +32,13 @@ _Generated 2026-08-04T10:52:22.013954_
 | S361 (RubberBand_2DTE) | 2d | watch | 6 | 83.3 | +68.85 | -10.92 | +47.59 | +180.12 | 4 | 23 | 6 | $+118.00 | 66.7% | insufficient sample (<8 exits) |
 | S364 (RubberBand_7DTE) | 7d | watch | 13 | 100.0 | +66.67 | +56.80 | +63.64 | +224.44 | 4 | 22 | 13 | $+540.00 | 84.6% | building sample (8-19 exits) |
 | S350 (GapDown_0DTE) | 0d | watch | 18 | 66.7 | +64.90 | -63.93 | -21.20 | +191.75 | 4 | 26 | 18 | $+371.00 | 55.6% | building sample (8-19 exits) |
-| S397 (GapDown_ITM1) | 3d | watch | 9 | 100.0 | +61.90 | +40.00 | +43.66 | +123.43 | 4 | 20 | 9 | $+433.00 | 77.8% | building sample (8-19 exits) |
+| S397 (GapDown_ITM1) | 3d | watch | 9 | 100.0 | +61.90 | +40.00 | +43.66 | +123.43 | 4 | 24 | 9 | $+433.00 | 77.8% | building sample (8-19 exits) |
 | S362 (RubberBand_3DTE) | 3d | watch | 11 | 100.0 | +60.47 | +13.04 | +29.28 | +114.29 | 4 | 28 | 11 | $+312.00 | 36.4% | building sample (8-19 exits) |
 | S359 (RubberBand_0DTE) | 0d | watch | 6 | 66.7 | +59.09 | -36.31 | -11.36 | +185.72 | 1 | 12 | 6 | $+45.00 | 66.7% | insufficient sample (<8 exits) |
 | S403 (Any_MA50_Touch) | 3d | watch | 3 | 100.0 | +57.58 | +51.52 | +53.79 | +63.82 | 4 | 16 | 3 | $+98.00 | 100.0% | insufficient sample (<8 exits) |
 | S363 (RubberBand_5DTE) | 5d | watch | 8 | 100.0 | +56.83 | +8.81 | +42.09 | +104.20 | 1 | 14 | 8 | $+143.00 | 75.0% | building sample (8-19 exits) |
 | S405 (GapDown_OTM3) | 3d | watch | 16 | 87.5 | +56.42 | +0.24 | +45.92 | +192.54 | 4 | 31 | 16 | $+670.00 | 50.0% | building sample (8-19 exits) |
-| S404 (GapDown_OTM2) | 3d | watch | 10 | 100.0 | +55.86 | +37.90 | +45.37 | +126.29 | 4 | 20 | 10 | $+460.00 | 80.0% | building sample (8-19 exits) |
+| S404 (GapDown_OTM2) | 3d | watch | 10 | 100.0 | +55.86 | +37.90 | +45.37 | +126.29 | 4 | 24 | 10 | $+460.00 | 80.0% | building sample (8-19 exits) |
 | S401 (Any_Gap_Down_Small) | 3d | watch | 14 | 92.9 | +53.66 | +7.36 | +23.68 | +239.16 | 4 | 31 | 14 | $+389.00 | 57.1% | building sample (8-19 exits) |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | watch | 7 | 100.0 | +53.57 | +46.90 | +49.14 | +80.00 | 8 | 19 | 7 | $+109.00 | 100.0% | insufficient sample (<8 exits) |
 | S356 (GapDown_14DTE) | 14d | watch | 4 | 100.0 | +48.27 | +37.93 | +37.93 | +58.62 | 4 | 16 | 4 | $+112.00 | 100.0% | insufficient sample (<8 exits) |
