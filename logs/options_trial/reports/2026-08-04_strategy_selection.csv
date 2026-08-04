@@ -6,9 +6,9 @@ S352,GapDown_2DTE,2d,watch,building sample (8-19 exits),28,9,9,0,118.56,93.75,45
 S399,GapDown_OTM1,3d,watch,building sample (8-19 exits),50,17,13,4,68.62,92.0,-67.2,52.63,144.0,397.0,2,4,50,17,4,52.9
 S361,RubberBand_2DTE,2d,watch,building sample (8-19 exits),35,9,8,1,93.97,82.76,22.53,55.88,194.67,200.0,2,4,35,9,2,77.8
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,watch,building sample (8-19 exits),46,15,13,2,203.17,77.78,-12.58,59.91,626.21,779.0,3,8,36,15,3,53.3
+S412,RubberBand_OTM3,3d,watch,building sample (8-19 exits),35,10,10,0,71.37,76.69,37.15,46.75,95.1,246.0,2,4,35,10,2,60.0
 S406,RubberBand_ITM3,3d,watch,building sample (8-19 exits),34,15,12,3,74.8,72.55,-32.55,53.82,172.63,282.0,3,4,34,15,4,66.7
 S398,GapDown_ATM,3d,watch,building sample (8-19 exits),39,16,14,2,104.39,71.6,-0.51,49.74,243.73,864.0,2,4,39,16,2,50.0
-S412,RubberBand_OTM3,3d,watch,building sample (8-19 exits),35,9,9,0,69.83,68.18,36.81,43.18,97.6,223.0,2,4,35,9,2,55.6
 S364,RubberBand_7DTE,7d,watch,building sample (8-19 exits),32,16,16,0,101.46,68.12,56.79,62.73,211.11,626.0,3,4,32,16,2,75.0
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,building sample (8-19 exits),44,16,13,3,188.47,67.97,-16.66,43.05,570.31,684.0,3,8,28,14,4,56.2
 S403,Any_MA50_Touch,3d,watch,insufficient sample (<8 exits),20,5,5,0,161.79,65.38,53.03,57.58,318.4,257.0,1,4,20,5,2,60.0

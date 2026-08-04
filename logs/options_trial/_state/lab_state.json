@@ -2762,26 +2762,6 @@
       "entry_order_id": "a56585ef-4c3a-489f-92cc-4f355fafa0b9"
     },
     {
-      "lot_id": "4e549c977ad3",
-      "bucket_id": 916,
-      "profile_name": "lab0916_s412_w3_1045_1120_r1",
-      "strategy_id": "S412",
-      "occ_symbol": "NVDA260805C00217500",
-      "underlying": "NVDA",
-      "qty": 1,
-      "entry_cost": 27.0,
-      "entry_price": 0.27,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-04T15:30:49.805197+00:00",
-      "entry_order_id": "50f8d933-a3af-4a80-a60f-7d91fd9f801b"
-    },
-    {
       "lot_id": "fc70d2acc7c7",
       "bucket_id": 861,
       "profile_name": "lab0861_s408_w3_1045_1120_r2",
@@ -4155,14 +4135,14 @@
       "submitted": "2026-08-04T11:45:56"
     },
     {
-      "order_id": "3df44539-23a1-4a0a-b4c9-61198bdecb0f",
-      "lot_id": "4e549c977ad3",
-      "bucket_id": 916,
-      "strategy_id": "S412",
+      "order_id": "a138ce93-1d40-44c3-8933-d0f47950feb4",
+      "lot_id": "02a413de4059",
+      "bucket_id": 833,
+      "strategy_id": "S406",
       "occ_symbol": "NVDA260805C00217500",
       "qty": 1,
-      "reason": "take_profit (+72.6%)",
-      "submitted": "2026-08-04T14:47:06"
+      "reason": "take_profit (+100.8%)",
+      "submitted": "2026-08-04T14:51:02"
     }
   ],
   "bucket_open_premium": {
@@ -4223,7 +4203,7 @@
     "b290": 37.0,
     "b283": 37.0,
     "b282": 37.0,
-    "b916": 86.0,
+    "b916": 59.0,
     "b860": 33.0,
     "b796": 36.0,
     "b423": 63.0,
@@ -4999,7 +4979,8 @@
     "f5d64cc6-65aa-4b83-8100-082ea336b626",
     "c6f37d83-d864-467b-8fde-d7ed96a4bd13",
     "e96b26bd-892f-4e85-a046-6c6b0a82cf75",
-    "da3783ae-01e8-41c6-a06f-cc0308d127a0"
+    "da3783ae-01e8-41c6-a06f-cc0308d127a0",
+    "3df44539-23a1-4a0a-b4c9-61198bdecb0f"
   ],
   "submitted_today": 184,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
