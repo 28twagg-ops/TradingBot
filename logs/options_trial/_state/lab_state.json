@@ -4082,26 +4082,6 @@
       "entry_order_id": "831a1f41-a488-45f0-86b4-acd48e648023"
     },
     {
-      "lot_id": "ef38ea8aeef2",
-      "bucket_id": 86,
-      "profile_name": "lab0086_s210_w4_1120_1135_r1",
-      "strategy_id": "S210",
-      "occ_symbol": "PATH260807C00013500",
-      "underlying": "PATH",
-      "qty": 1,
-      "entry_cost": 28.999999999999996,
-      "entry_price": 0.29,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-04T15:45:52.893030+00:00",
-      "entry_order_id": "7609e60b-9495-427c-98ce-678a5e5db6eb"
-    },
-    {
       "lot_id": "d90b2c3c6aa5",
       "bucket_id": 63,
       "profile_name": "lab0063_s207_w4_1120_1135_r2",
@@ -4465,16 +4445,6 @@
       "submitted": "2026-08-04T10:25:53"
     },
     {
-      "order_id": "290a1b4a-08f6-4f04-bffa-4c5b592a38c7",
-      "lot_id": "e6924b90f23b",
-      "bucket_id": 83,
-      "strategy_id": "S210",
-      "occ_symbol": "PATH260807C00013500",
-      "qty": 1,
-      "reason": "take_profit (+66.7%)",
-      "submitted": "2026-08-04T10:45:56"
-    },
-    {
       "order_id": "18f78a9f-14b1-41c2-b906-68db19a6efe9",
       "lot_id": "40f46c5f6dea",
       "bucket_id": 0,
@@ -4646,7 +4616,7 @@
     "b101": 36.0,
     "b100": 36.0,
     "b87": 36.0,
-    "b86": 65.0,
+    "b86": 36.0,
     "b62": 107.0,
     "b327": 61.0,
     "b326": 61.0,
