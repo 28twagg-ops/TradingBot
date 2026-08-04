@@ -192,7 +192,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 190,lab0190_s217_w7_1500_1530_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 191,lab0191_s217_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 192,lab0192_s218_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-04,False,,,,,,,0,AAPL,S218,,entered_no_exit
-193,lab0193_s218_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-04,False,,,,,,,0,AAPL,S218,,entered_no_exit
+193,lab0193_s218_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-08-04,False,,100.0,50.0,50.0,50.0,50.0,30.0,AAPL,S218,take_profit (+50.0%),closed
 194,lab0194_s218_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,2,2026-08-04,False,,,,,,,0,RBLX,S218,,entered_no_exit
 195,lab0195_s218_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-04,False,,,,,,,0,RBLX,S218,,entered_no_exit
 196,lab0196_s218_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-04,False,,,,,,,0,RBLX,S218,,entered_no_exit

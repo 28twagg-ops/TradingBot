@@ -4245,3 +4245,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-04 16:40:56,exits,bull,473.01,116.07,0,0,0,4,AES|AMD|AVB|ECHO,both
 2026-08-04 16:45:43,exits,bull,473.2,116.07,0,0,0,4,AES|AMD|AVB|ECHO,both
 2026-08-04 16:56:11,exits,bull,473.27,116.07,0,0,0,4,AES|AMD|AVB|ECHO,both
+2026-08-04 17:00:57,exits,bull,473.17,116.07,0,0,0,4,AES|AMD|AVB|ECHO,both

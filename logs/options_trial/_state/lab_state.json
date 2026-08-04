@@ -582,26 +582,6 @@
       "entry_order_id": "e02261c6-a99f-4b49-b606-241c741490d8"
     },
     {
-      "lot_id": "902487394273",
-      "bucket_id": 193,
-      "profile_name": "lab0193_s218_w1_0928_1005_r2",
-      "strategy_id": "S218",
-      "occ_symbol": "AAPL260807C00317500",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 60.0,
-      "entry_price": 0.6,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-04T14:04:25.938644+00:00",
-      "entry_order_id": "7bb6e42a-eed4-46cb-90d8-3e0fe82202df"
-    },
-    {
       "lot_id": "b32f8ff8c886",
       "bucket_id": 192,
       "profile_name": "lab0192_s218_w1_0928_1005_r1",
@@ -4445,14 +4425,24 @@
       "submitted": "2026-08-04T11:45:56"
     },
     {
-      "order_id": "babeb12c-190f-4a9c-b600-5f5ef5d33916",
-      "lot_id": "902487394273",
-      "bucket_id": 193,
+      "order_id": "9edd3eb1-0212-4897-b45d-3ce45a724dcd",
+      "lot_id": "db555e681f45",
+      "bucket_id": 58,
+      "strategy_id": "S207",
+      "occ_symbol": "XOM260807C00157500",
+      "qty": 1,
+      "reason": "take_profit (+50.5%)",
+      "submitted": "2026-08-04T13:01:04"
+    },
+    {
+      "order_id": "5bca919b-03bd-447a-8da4-7b06ec69ea54",
+      "lot_id": "b32f8ff8c886",
+      "bucket_id": 192,
       "strategy_id": "S218",
       "occ_symbol": "AAPL260807C00317500",
       "qty": 1,
-      "reason": "take_profit (+50.0%)",
-      "submitted": "2026-08-04T12:56:21"
+      "reason": "take_profit (+53.3%)",
+      "submitted": "2026-08-04T13:01:24"
     }
   ],
   "bucket_open_premium": {
@@ -4485,7 +4475,6 @@
     "b328": 69.0,
     "b321": 67.0,
     "b320": 67.0,
-    "b193": 60.0,
     "b192": 60.0,
     "b421": 60.0,
     "b420": 60.0,
@@ -5314,7 +5303,8 @@
     "6c303c83-68e6-493d-a3a5-911127f9a1d3",
     "d51009ec-1f6c-4bd4-b0fb-a9b365b05c7d",
     "3d831e92-1c21-47eb-af61-ee5333195e1c",
-    "df86532c-24fc-4570-87c3-c773213102c6"
+    "df86532c-24fc-4570-87c3-c773213102c6",
+    "babeb12c-190f-4a9c-b600-5f5ef5d33916"
   ],
   "submitted_today": 184,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

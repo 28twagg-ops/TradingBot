@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-04
 
-_Generated 2026-08-04T12:56:31.401274_
+_Generated 2026-08-04T13:01:29.637007_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-04T12:56:31.401274_
 
 ## Attribution health
 
-- Total exits: **1223**
+- Total exits: **1224**
 - Orphan exits (b0/orphan_reconcile): **40**
 - Orphan rate: **3.3%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -28,10 +28,10 @@ _Generated 2026-08-04T12:56:31.401274_
 | S412 (RubberBand_OTM3) | 3d | watch | 6 | 100.0 | +88.94 | +50.31 | +64.41 | +105.12 | 4 | 29 | 6 | $+165.00 | 66.7% | insufficient sample (<8 exits) |
 | S407 (RubberBand_ITM2) | 3d | watch | 12 | 66.7 | +84.95 | -95.92 | -73.98 | +416.11 | 4 | 32 | 12 | $+171.00 | 58.3% | building sample (8-19 exits) |
 | S361 (RubberBand_2DTE) | 2d | watch | 8 | 87.5 | +82.29 | +11.38 | +53.12 | +150.83 | 4 | 31 | 8 | $+173.00 | 75.0% | building sample (8-19 exits) |
-| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 13 | 76.9 | +74.19 | -26.66 | +51.61 | +670.62 | 8 | 24 | 11 | $+621.00 | 53.8% | building sample (8-19 exits) |
 | S406 (RubberBand_ITM3) | 3d | watch | 12 | 83.3 | +72.48 | -40.60 | +58.73 | +155.12 | 4 | 34 | 12 | $+220.00 | 66.7% | building sample (8-19 exits) |
 | S398 (GapDown_ATM) | 3d | watch | 16 | 87.5 | +71.60 | -0.51 | +49.74 | +243.73 | 4 | 38 | 16 | $+864.00 | 50.0% | building sample (8-19 exits) |
 | S364 (RubberBand_7DTE) | 7d | watch | 14 | 100.0 | +68.12 | +57.20 | +63.64 | +220.00 | 4 | 29 | 14 | $+575.00 | 78.6% | building sample (8-19 exits) |
+| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 14 | 78.6 | +67.97 | -23.33 | +50.40 | +637.19 | 8 | 24 | 12 | $+651.00 | 50.0% | building sample (8-19 exits) |
 | S403 (Any_MA50_Touch) | 3d | watch | 5 | 100.0 | +65.38 | +53.03 | +57.58 | +318.40 | 4 | 20 | 5 | $+257.00 | 60.0% | insufficient sample (<8 exits) |
 | S350 (GapDown_0DTE) | 0d | watch | 22 | 63.6 | +64.90 | -62.55 | -21.20 | +253.14 | 4 | 32 | 22 | $+516.00 | 54.5% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 9 | 100.0 | +61.90 | +40.00 | +43.66 | +123.43 | 4 | 30 | 9 | $+433.00 | 77.8% | building sample (8-19 exits) |
@@ -207,7 +207,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 |---|---|---:|---:|---:|---:|---:|---:|
 | S216 | 3d ATM RSI x30 | 2 | -80.49 | -80.49 | -80.49 | 12 | 2 |
 | S217 | 3d ATM RSI<25 bounce | 13 | +129.41 | -33.79 | +53.85 | 32 | 13 |
-| S218 | 3d ATM BB lower touch | 13 | +74.19 | -26.66 | +51.61 | 24 | 11 |
+| S218 | 3d ATM BB lower touch | 14 | +67.97 | -23.33 | +50.40 | 24 | 12 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
 ### Other
@@ -255,7 +255,7 @@ _Pipeline evaluation as of 2026-08-04. Auto-kill thresholds: median<-25% at n>=1
 | S215 | MA_Reclaim_200 | 0 | — | — | NEW | 0 |
 | S216 | RSI_Oversold_Cross | 2 | -80.49% | 0% | WATCH | 8 |
 | S217 | RSI_25_Bounce | 13 | +129.41% | 85% | WATCH | 8 |
-| S218 | BB_Lower_Touch | 13 | +74.19% | 77% | WATCH | 8 |
+| S218 | BB_Lower_Touch | 14 | +67.97% | 79% | WATCH | 8 |
 | S219 | Volume_Climax_Up | 0 | — | — | NEW | 0 |
 | S220 | Pullback50 | 0 | — | — | NEW | 0 |
 | S221 | GoldenPocket | 0 | — | — | NEW | 0 |
