@@ -1568,8 +1568,8 @@
       "strategy_id": "ORPHAN",
       "occ_symbol": "NKE260807C00042000",
       "underlying": "NKE",
-      "qty": 2,
-      "entry_cost": 128.2,
+      "qty": 1,
+      "entry_cost": 64.1,
       "entry_price": 0.6410000000000001,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
@@ -3742,26 +3742,6 @@
       "entry_order_id": "orphan:AMZN260810C00300000"
     },
     {
-      "lot_id": "a61f8143b499",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "META260807C00630000",
-      "underlying": "META",
-      "qty": 1,
-      "entry_cost": 60.0,
-      "entry_price": 0.6,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-04T15:45:54.492240+00:00",
-      "entry_order_id": "orphan:META260807C00630000"
-    },
-    {
       "lot_id": "1fad73c5bd2e",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -4313,16 +4293,6 @@
       "qty": 1,
       "reason": "stop_loss (-52.2%)",
       "submitted": "2026-08-04T11:45:56"
-    },
-    {
-      "order_id": "f1762111-aeae-4485-b9a2-1cd9baba8190",
-      "lot_id": "a61f8143b499",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "META260807C00630000",
-      "qty": 1,
-      "reason": "take_profit (+61.7%)",
-      "submitted": "2026-08-04T13:36:08"
     }
   ],
   "bucket_open_premium": {
@@ -4404,7 +4374,7 @@
     "b284": 32.0,
     "b113": 98.0,
     "b84": 36.0,
-    "b0": 1610.2144999999998,
+    "b0": 1486.1145,
     "b183": 32.0,
     "b182": 32.0,
     "b805": 48.0,
@@ -5160,7 +5130,8 @@
     "21c3f4f5-bdfd-4400-8e32-da07ab73c392",
     "a98d90a6-855a-4712-b20c-dbe6d8969914",
     "9a769682-154a-4b63-87a6-cfbc236b3ffc",
-    "4ab1f54e-17cb-4db2-b06a-b5d00c15faea"
+    "4ab1f54e-17cb-4db2-b06a-b5d00c15faea",
+    "f1762111-aeae-4485-b9a2-1cd9baba8190"
   ],
   "submitted_today": 184,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

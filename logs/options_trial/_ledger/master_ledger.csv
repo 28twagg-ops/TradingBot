@@ -7699,3 +7699,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-03 14:46:22.473917+00:00,exit,379,lab0379_s362_w2_1005_1045_r2,S362,036589dffeb0,AMZN,AMZN260807C00297500,1,,0.47,38.0,23.68,9.0,reconcile_fill,,-0.01,0.5,-0.5,,,9a769682-154a-4b63-87a6-cfbc236b3ffc
 2026-08-04T17:25:44Z,reconcile,410,lab0410_s364_w4_1120_1135_r1,S364,ded6cd78331e,NVDA,NVDA260810C00225000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-04 17:31:21.568266+00:00,exit,238,lab0238_s401_w3_1045_1120_r1,S401,c105fc43803f,META,META260807C00630000,1,,0.95,60.0,58.33,35.0,take_profit (+58.3%),,-0.01,0.5,-0.5,,,4ab1f54e-17cb-4db2-b06a-b5d00c15faea
+2026-08-04T17:40:51Z,reconcile,0,orphan_reconcile,ORPHAN,a61f8143b499,META,META260807C00630000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-04 17:36:26.850953+00:00,exit,0,orphan_reconcile,ORPHAN,9904d193bdc7,NKE,NKE260807C00042000,1,,1.02,64.1,59.13,37.9,take_profit (+61.7%),,-0.01,0.5,-0.5,,,f1762111-aeae-4485-b9a2-1cd9baba8190
