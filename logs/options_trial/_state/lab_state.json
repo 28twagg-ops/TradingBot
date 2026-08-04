@@ -1222,26 +1222,6 @@
       "entry_order_id": "723d8de3-a356-4618-948b-4414530e0c71"
     },
     {
-      "lot_id": "c2227e56837a",
-      "bucket_id": 863,
-      "profile_name": "lab0863_s408_w4_1120_1135_r2",
-      "strategy_id": "S408",
-      "occ_symbol": "NVDA260805C00222500",
-      "underlying": "NVDA",
-      "qty": 1,
-      "entry_cost": 15.0,
-      "entry_price": 0.15,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-03T15:23:00.211652+00:00",
-      "entry_order_id": "dd2ea966-b0b5-4d57-94c5-b0edfa42ae59"
-    },
-    {
       "lot_id": "bbc8e3c64549",
       "bucket_id": 862,
       "profile_name": "lab0862_s408_w4_1120_1135_r1",
@@ -2105,14 +2085,94 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "25ac750d-a4ee-47e1-a935-ed9cc8fd17b8",
-      "lot_id": "c2227e56837a",
-      "bucket_id": 863,
-      "strategy_id": "S408",
-      "occ_symbol": "NVDA260805C00222500",
+      "order_id": "f33e8cc9-8787-4374-8483-496ceadcedcc",
+      "lot_id": "200036d69064",
+      "bucket_id": 817,
+      "strategy_id": "S405",
+      "occ_symbol": "OXY260807C00058000",
       "qty": 1,
-      "reason": "stop_loss (-53.3%)",
-      "submitted": "2026-08-03T16:01:15"
+      "reason": "stop_loss (-67.9%)",
+      "submitted": "2026-08-04T09:34:25"
+    },
+    {
+      "order_id": "ce5c7081-0dba-46b7-8941-d4d3511366fc",
+      "lot_id": "946c60d4d0e5",
+      "bucket_id": 167,
+      "strategy_id": "S216",
+      "occ_symbol": "DKNG260807C00025500",
+      "qty": 1,
+      "reason": "stop_loss (-81.2%)",
+      "submitted": "2026-08-04T09:34:25"
+    },
+    {
+      "order_id": "637c706c-432b-4600-b519-fed896092856",
+      "lot_id": "7a490697b9df",
+      "bucket_id": 797,
+      "strategy_id": "S399",
+      "occ_symbol": "OXY260807C00059000",
+      "qty": 1,
+      "reason": "stop_loss (-76.8%)",
+      "submitted": "2026-08-04T09:34:26"
+    },
+    {
+      "order_id": "cc049e1f-8916-4128-a166-04cfce5c1df8",
+      "lot_id": "8c92c01889da",
+      "bucket_id": 409,
+      "strategy_id": "S364",
+      "occ_symbol": "NVDA260810C00225000",
+      "qty": 1,
+      "reason": "take_profit (+56.5%)",
+      "submitted": "2026-08-04T09:34:30"
+    },
+    {
+      "order_id": "b00e1712-40f7-4577-8f6c-f5d87b8f55c0",
+      "lot_id": "d32d68ad82a5",
+      "bucket_id": 861,
+      "strategy_id": "S408",
+      "occ_symbol": "NVDA260805C00220000",
+      "qty": 1,
+      "reason": "take_profit (+56.8%)",
+      "submitted": "2026-08-04T09:34:30"
+    },
+    {
+      "order_id": "bca2fc08-7a25-42fa-93e5-fe744ab07c2a",
+      "lot_id": "b38a6d236eaa",
+      "bucket_id": 381,
+      "strategy_id": "S362",
+      "occ_symbol": "NVDA260807C00217500",
+      "qty": 1,
+      "reason": "take_profit (+147.7%)",
+      "submitted": "2026-08-04T09:34:34"
+    },
+    {
+      "order_id": "acbde260-a466-4f19-8530-f3891f698d3d",
+      "lot_id": "e01ea26b3ce1",
+      "bucket_id": 793,
+      "strategy_id": "S399",
+      "occ_symbol": "OXY260807C00060000",
+      "qty": 1,
+      "reason": "stop_loss (-76.0%)",
+      "submitted": "2026-08-04T09:34:34"
+    },
+    {
+      "order_id": "58236797-fa43-4929-8e51-931b6f629760",
+      "lot_id": "960741b40cc5",
+      "bucket_id": 831,
+      "strategy_id": "S406",
+      "occ_symbol": "NVDA260805C00217500",
+      "qty": 1,
+      "reason": "take_profit (+83.2%)",
+      "submitted": "2026-08-04T09:34:34"
+    },
+    {
+      "order_id": "d885e251-d607-49d7-90f8-19800d5e2f77",
+      "lot_id": "132f29e0dca9",
+      "bucket_id": 849,
+      "strategy_id": "S407",
+      "occ_symbol": "NVDA260807C00220000",
+      "qty": 1,
+      "reason": "take_profit (+116.7%)",
+      "submitted": "2026-08-04T09:34:35"
     }
   ],
   "bucket_open_premium": {
@@ -2177,7 +2237,6 @@
     "b796": 45.0,
     "b169": 44.0,
     "b168": 44.0,
-    "b863": 15.0,
     "b862": 15.0,
     "b835": 22.0,
     "b834": 22.0,
@@ -2712,7 +2771,8 @@
     "b32a9e2e-63b0-4b57-859a-dd818ed45605",
     "ab2e569d-d556-43cf-855c-1f3d2f0a15d5",
     "f1027949-4454-4458-a66c-714ae4c30cf2",
-    "fa8c00ac-4067-4b24-8cc6-54f8ec4d5216"
+    "fa8c00ac-4067-4b24-8cc6-54f8ec4d5216",
+    "25ac750d-a4ee-47e1-a935-ed9cc8fd17b8"
   ],
   "submitted_today": 0,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
