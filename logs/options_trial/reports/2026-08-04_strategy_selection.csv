@@ -50,7 +50,7 @@ S220,Pullback50,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,
 S221,GoldenPocket,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S358,GapDown_30DTE,30d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S365,RubberBand_14DTE,14d,watch,insufficient sample (<8 exits),10,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,4,10,0,0,0.0
-S366,RubberBand_21DTE,21d,watch,insufficient sample (<8 exits),4,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,4,0,0,0.0
+S366,RubberBand_21DTE,21d,watch,insufficient sample (<8 exits),6,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,6,0,0,0.0
 S367,RubberBand_30DTE,30d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S368,BBSqueeze_0DTE,0d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S369,BBSqueeze_1DTE,1d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
