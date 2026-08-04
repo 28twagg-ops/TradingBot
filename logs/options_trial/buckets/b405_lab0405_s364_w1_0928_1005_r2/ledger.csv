@@ -1,4 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-08-03 14:07:58.415977+00:00,entry,405,lab0405_s364_w1_0928_1005_r2,S364,88c7a60b4f5e,NVDA,NVDA260810C00220000,1,0.5,0.5,50.0,,,,-0.01,,0.75,-0.75,0.040000000000000036,RB gap -1.5% reclaim,ee25d2f0-d515-4f5d-be55-da203bce97b2
 2026-08-03 15:50:48.215072+00:00,exit,405,lab0405_s364_w1_0928_1005_r2,S364,88c7a60b4f5e,NVDA,NVDA260810C00220000,1,,0.75,50.0,50.0,25.0,take_profit (+50.0%),,-0.01,0.5,-0.5,,,ecabba9e-967c-4534-aba1-7cf56d22cb98
-2026-08-03 14:07:58.415977+00:00,entry,405,lab0405_s364_w1_0928_1005_r2,S364,f010df0faecc,NVDA,NVDA260810C00220000,1,0.5,0.5,50.0,,,,-0.01,,0.5,-0.5,,,ee25d2f0-d515-4f5d-be55-da203bce97b2
+2026-08-03 14:07:58.415977+00:00,entry,405,lab0405_s364_w1_0928_1005_r2,S364,9c4b7a362e3c,NVDA,NVDA260810C00220000,1,0.5,0.5,50.0,,,,-0.01,,0.5,-0.5,,,ee25d2f0-d515-4f5d-be55-da203bce97b2
