@@ -1,4 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-08-03 14:02:49.089395+00:00,entry,179,lab0179_s217_w1_0928_1005_r2,S217,ae8edc2f0e25,TSLA,TSLA260805C00345000,1,0.48,0.47,47.0,,,,-0.01,,0.75,-0.75,0.1075268817204301,RSI=21.2 green,a45fdf09-0c31-4c85-8eae-4f6ddb4b7af2
 2026-08-03 15:20:50.930458+00:00,exit,179,lab0179_s217_w1_0928_1005_r2,S217,ae8edc2f0e25,TSLA,TSLA260805C00345000,1,,0.71,47.0,51.06,24.0,take_profit (+54.3%),,-0.01,0.5,-0.5,,,ed0d6bfc-07ce-4fe9-8dac-ce35c1d7b9d6
-2026-08-03 14:02:49.089395+00:00,entry,179,lab0179_s217_w1_0928_1005_r2,S217,4c7f98094e8a,TSLA,TSLA260805C00345000,1,0.47,0.47,47.0,,,,-0.01,,0.5,-0.5,,,a45fdf09-0c31-4c85-8eae-4f6ddb4b7af2
+2026-08-03 14:02:49.089395+00:00,entry,179,lab0179_s217_w1_0928_1005_r2,S217,f63c58321a54,TSLA,TSLA260805C00345000,1,0.47,0.47,47.0,,,,-0.01,,0.5,-0.5,,,a45fdf09-0c31-4c85-8eae-4f6ddb4b7af2
