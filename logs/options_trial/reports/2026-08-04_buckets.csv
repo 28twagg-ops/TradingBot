@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,13,20,2026-07-27,True,8,46.2,-5.36,-60.0,187.77,-87.5,-93.0,"AAPL,AMZN,NKE,NVDA,OXY",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-68.0%)…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,13,21,2026-07-27,True,8,46.2,-5.36,-60.0,187.77,-87.5,-93.0,"AAPL,AMZN,NKE,NVDA,OXY",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-68.0%)…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -831,7 +831,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 829,lab0829_s406_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
 830,lab0830_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,3,1,2026-08-04,False,,100.0,132.91,163.16,163.16,72.41,83.0,"AMZN,NVDA",S406,reconcile_fill; reconcile_fill; reconcile_fill,closed
 831,lab0831_s406_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,3,1,2026-08-04,False,,100.0,146.89,178.95,178.95,82.76,92.0,"AMZN,NVDA",S406,take_profit (+83.2%); reconcile_fill; reconcile_fill,closed
-832,lab0832_s406_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,2,2026-08-04,False,,,,,,,0,TTD,S406,,entered_no_exit
+832,lab0832_s406_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-08-04,False,,0.0,-6.38,-6.38,-6.38,-6.38,-3.0,TTD,S406,reconcile_fill,closed
 833,lab0833_s406_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,2,2,2026-08-04,False,,100.0,73.08,73.08,73.08,73.08,38.0,"NVDA,TTD",S406,take_profit (+51.5%); reconcile_fill,closed
 834,lab0834_s406_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
 835,lab0835_s406_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-03,False,,,,,,,0,,,,open
@@ -917,7 +917,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 915,lab0915_s412_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,4,0,1,2026-08-04,False,,,,,,,0,AMZN,S412,,entered_no_exit
 916,lab0916_s412_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,2,2026-08-04,False,,100.0,92.59,92.59,92.59,92.59,50.0,"NKE,NVDA",S412,take_profit (+83.2%); reconcile_fill,closed
 917,lab0917_s412_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
-918,lab0918_s412_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-03,False,,,,,,,0,,,,open
+918,lab0918_s412_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
 919,lab0919_s412_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-03,False,,,,,,,0,,,,open
 920,lab0920_s412_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 921,lab0921_s412_w5_1300_1330_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle

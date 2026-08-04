@@ -262,26 +262,6 @@
       "entry_order_id": "bfc443d0-ebf3-4e1f-974f-1b1ea99b2777"
     },
     {
-      "lot_id": "dae3f0a1c777",
-      "bucket_id": 918,
-      "profile_name": "lab0918_s412_w4_1120_1135_r1",
-      "strategy_id": "S412",
-      "occ_symbol": "NVDA260805C00217500",
-      "underlying": "NVDA",
-      "qty": 1,
-      "entry_cost": 32.0,
-      "entry_price": 0.32,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-03T15:37:03.589295+00:00",
-      "entry_order_id": "9b242b42-0b22-469f-841c-2f77408fc0cf"
-    },
-    {
       "lot_id": "ea353dc81423",
       "bucket_id": 919,
       "profile_name": "lab0919_s412_w4_1120_1135_r2",
@@ -1280,26 +1260,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-04T14:48:52.520795+00:00",
       "entry_order_id": "22587d3a-26a7-422d-8e8b-e6b942aaa140"
-    },
-    {
-      "lot_id": "bbd7b42b6bd5",
-      "bucket_id": 832,
-      "profile_name": "lab0832_s406_w3_1045_1120_r1",
-      "strategy_id": "S406",
-      "occ_symbol": "TTD260807C00021500",
-      "underlying": "TTD",
-      "qty": 1,
-      "entry_cost": 47.0,
-      "entry_price": 0.47,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-04T14:48:52.561000+00:00",
-      "entry_order_id": "5e51608b-47be-41e5-adc6-4e8ce131317d"
     },
     {
       "lot_id": "a6d7184acede",
@@ -4240,6 +4200,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-04T17:21:14.227086+00:00",
       "entry_order_id": "orphan:XOM260807C00160000"
+    },
+    {
+      "lot_id": "8ee0d51f85ea",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "TTD260807C00021500",
+      "underlying": "TTD",
+      "qty": 1,
+      "entry_cost": 46.0,
+      "entry_price": 0.46,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-04T18:22:33.333258+00:00",
+      "entry_order_id": "orphan:TTD260807C00021500"
     }
   ],
   "pending_orders": [],
@@ -4283,6 +4263,26 @@
       "qty": 1,
       "reason": "take_profit (+57.9%)",
       "submitted": "2026-08-04T14:16:02"
+    },
+    {
+      "order_id": "c6f37d83-d864-467b-8fde-d7ed96a4bd13",
+      "lot_id": "ea353dc81423",
+      "bucket_id": 919,
+      "strategy_id": "S412",
+      "occ_symbol": "NVDA260805C00217500",
+      "qty": 1,
+      "reason": "take_profit (+51.5%)",
+      "submitted": "2026-08-04T14:22:34"
+    },
+    {
+      "order_id": "61a64a59-0e17-420b-a6f5-16a9c6712802",
+      "lot_id": "8988583a100e",
+      "bucket_id": 396,
+      "strategy_id": "S363",
+      "occ_symbol": "NVDA260807C00222500",
+      "qty": 1,
+      "reason": "take_profit (+55.9%)",
+      "submitted": "2026-08-04T14:22:39"
     }
   ],
   "bucket_open_premium": {
@@ -4299,7 +4299,6 @@
     "b424": 62.0,
     "b109": 55.00000000000001,
     "b108": 55.00000000000001,
-    "b918": 32.0,
     "b919": 32.0,
     "b325": 54.0,
     "b324": 54.0,
@@ -4350,7 +4349,6 @@
     "b282": 37.0,
     "b916": 86.0,
     "b860": 33.0,
-    "b832": 73.0,
     "b796": 36.0,
     "b423": 63.0,
     "b422": 63.0,
@@ -4363,7 +4361,7 @@
     "b284": 32.0,
     "b113": 98.0,
     "b84": 36.0,
-    "b0": 1486.1145,
+    "b0": 1532.1145,
     "b183": 32.0,
     "b182": 32.0,
     "b805": 48.0,
@@ -4420,6 +4418,7 @@
     "b27": 95.0,
     "b26": 48.0,
     "b861": 15.0,
+    "b832": 26.0,
     "b194": 65.0,
     "b166": 41.0,
     "b451": 72.0,
@@ -5121,7 +5120,8 @@
     "9a769682-154a-4b63-87a6-cfbc236b3ffc",
     "4ab1f54e-17cb-4db2-b06a-b5d00c15faea",
     "f1762111-aeae-4485-b9a2-1cd9baba8190",
-    "fe09390b-ace3-4a54-9beb-0aa2281b55ff"
+    "fe09390b-ace3-4a54-9beb-0aa2281b55ff",
+    "f5d64cc6-65aa-4b83-8100-082ea336b626"
   ],
   "submitted_today": 184,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
