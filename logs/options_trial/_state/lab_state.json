@@ -4333,6 +4333,26 @@
       "qty": 1,
       "reason": "stop_loss (-52.2%)",
       "submitted": "2026-08-04T11:45:56"
+    },
+    {
+      "order_id": "395c5752-60a8-47fb-9ef4-06ac4749861c",
+      "lot_id": "027e8df03b71",
+      "bucket_id": 333,
+      "strategy_id": "S357",
+      "occ_symbol": "AAPL260821C00335000",
+      "qty": 1,
+      "reason": "take_profit (+53.1%)",
+      "submitted": "2026-08-04T13:15:59"
+    },
+    {
+      "order_id": "9ba6a213-32cf-4003-8b08-a7424ab36a60",
+      "lot_id": "0498ba24c320",
+      "bucket_id": 409,
+      "strategy_id": "S364",
+      "occ_symbol": "NVDA260810C00225000",
+      "qty": 1,
+      "reason": "take_profit (+50.7%)",
+      "submitted": "2026-08-04T13:16:03"
     }
   ],
   "bucket_open_premium": {
