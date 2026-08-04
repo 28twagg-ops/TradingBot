@@ -94,7 +94,7 @@ S359,RubberBand_0DTE,0d,watch,early sample with non-positive median,18,10,4,6,25
 S360,RubberBand_1DTE,1d,watch,early sample with non-positive median,29,13,3,10,-25.13,-37.04,-55.4,-50.0,44.75,-91.0,3,4,29,13,3,61.5
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),12,5,0,5,-51.11,-50.0,-66.67,-66.67,-33.33,-30.0,1,4,12,5,1,100.0
 S203,GapUp_Fade,3d ATM gap-up fade (put),watch,early sample with non-positive median,41,15,0,15,-55.26,-53.33,-64.74,-59.48,-49.02,-426.0,3,8,33,15,2,60.0
-S207,GapDown_AtSupport,3d ATM gap-support,watch,insufficient sample (<8 exits),36,7,0,7,-55.15,-55.71,-59.83,-57.8,-49.66,-265.0,1,8,24,7,1,100.0
+S207,GapDown_AtSupport,3d ATM gap-support,watch,early sample with non-positive median,36,8,0,8,-54.32,-55.64,-59.8,-56.84,-48.96,-298.0,1,8,24,8,1,100.0
 S202,GapDown_Monster,3d ATM gap-monster,watch,insufficient sample (<8 exits),30,6,0,6,-60.04,-64.75,-70.52,-66.39,-44.87,-133.0,3,7,16,4,2,66.7
 S212,MA_Bounce_50,3d ATM MA bounce 50,watch,early sample with non-positive median,51,14,0,14,-62.81,-64.9,-73.84,-72.11,-45.97,-471.0,2,8,33,14,2,64.3
 S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,insufficient sample (<8 exits),98,6,0,6,-68.19,-65.67,-88.89,-86.11,-50.0,-59.0,2,14,0,0,2,83.3
