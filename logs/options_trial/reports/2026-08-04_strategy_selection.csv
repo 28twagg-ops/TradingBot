@@ -5,7 +5,7 @@ S217,RSI_25_Bounce,3d ATM RSI<25 bounce,watch,building sample (8-19 exits),36,12
 S399,GapDown_OTM1,3d,watch,building sample (8-19 exits),36,16,13,3,77.08,96.0,-67.34,57.12,145.0,413.0,2,4,36,16,4,56.2
 S352,GapDown_2DTE,2d,watch,building sample (8-19 exits),24,9,9,0,118.56,93.75,45.87,52.38,223.89,314.0,2,4,24,9,2,55.6
 S412,RubberBand_OTM3,3d,watch,insufficient sample (<8 exits),23,6,6,0,81.46,88.94,50.31,64.41,105.12,165.0,2,4,23,6,2,66.7
-S398,GapDown_ATM,3d,watch,building sample (8-19 exits),30,14,14,0,126.85,77.85,49.29,62.39,271.0,934.0,1,4,30,14,2,57.1
+S398,GapDown_ATM,3d,watch,building sample (8-19 exits),32,14,14,0,126.85,77.85,49.29,62.39,271.0,934.0,1,4,32,14,2,57.1
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,building sample (8-19 exits),36,13,10,3,220.7,74.19,-26.66,51.61,670.62,621.0,2,8,20,11,3,53.8
 S406,RubberBand_ITM3,3d,watch,building sample (8-19 exits),23,11,9,2,64.83,72.41,-50.0,53.82,163.16,201.0,3,4,23,11,3,63.6
 S361,RubberBand_2DTE,2d,watch,insufficient sample (<8 exits),23,6,5,1,79.35,68.85,-10.92,47.59,180.12,118.0,2,4,23,6,2,66.7
@@ -16,7 +16,7 @@ S362,RubberBand_3DTE,3d,watch,building sample (8-19 exits),28,11,11,0,63.49,60.4
 S359,RubberBand_0DTE,0d,watch,insufficient sample (<8 exits),12,6,4,2,69.5,59.09,-36.31,-11.36,185.72,45.0,1,1,12,6,2,66.7
 S403,Any_MA50_Touch,3d,watch,insufficient sample (<8 exits),16,3,3,0,57.65,57.58,51.52,53.79,63.82,98.0,1,4,16,3,1,100.0
 S363,RubberBand_5DTE,5d,watch,building sample (8-19 exits),14,8,8,0,57.15,56.83,8.81,42.09,104.2,143.0,2,1,14,8,2,75.0
-S405,GapDown_OTM3,3d,watch,building sample (8-19 exits),31,16,14,2,80.42,56.42,0.24,45.92,192.54,670.0,2,4,31,16,3,50.0
+S405,GapDown_OTM3,3d,watch,building sample (8-19 exits),33,16,14,2,80.42,56.42,0.24,45.92,192.54,670.0,2,4,33,16,3,50.0
 S404,GapDown_OTM2,3d,watch,building sample (8-19 exits),24,10,10,0,73.6,55.86,37.9,45.37,126.29,460.0,1,4,24,10,2,80.0
 S401,Any_Gap_Down_Small,3d,watch,building sample (8-19 exits),31,14,13,1,77.44,53.66,7.36,23.68,239.16,389.0,2,4,31,14,5,57.1
 S210,MA_Cross_8_21,3d ATM MA cross 8/21,watch,insufficient sample (<8 exits),34,7,7,0,59.24,53.57,46.9,49.14,80.0,109.0,1,8,19,7,1,100.0
