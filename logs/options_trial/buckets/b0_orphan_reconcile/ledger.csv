@@ -44,3 +44,8 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-04 15:36:00.935442+00:00,exit,0,orphan_reconcile,ORPHAN,7a91f71a0efa,AMZN,AMZN260805C00295000,1,,0.06,15.0,-60.0,-9.0,stop_loss (-60.0%),,-0.01,0.5,-0.5,,,69e68b17-338c-4c35-ab49-663b9cb730d6
 2026-08-03 14:51:02.282814+00:00,exit,0,orphan_reconcile,ORPHAN,a8ea143cb3c1,AAPL,AAPL260814C00330000,1,,1.87,59.75,212.97,127.25,reconcile_fill,,-0.01,0.5,-0.5,,,8026d48c-a278-4dc7-811b-384a470f46ab
 2026-08-04 17:06:00.537266+00:00,exit,0,orphan_reconcile,ORPHAN,a8ea143cb3c1,AAPL,AAPL260814C00330000,1,,0.08,59.75,-86.61,-51.75,stop_loss (-53.3%),,-0.01,0.5,-0.5,,,18f78a9f-14b1-41c2-b906-68db19a6efe9
+2026-08-04 14:21:44.061574+00:00,exit,0,orphan_reconcile,ORPHAN,b9fbd7007e5b,AAPL,AAPL260821C00335000,1,,0.76,64.0,18.75,12.0,reconcile_fill,,-0.01,0.5,-0.5,,,38de5c93-c4e3-46fd-ac22-7fc825d0eeb0
+2026-08-04 13:39:59.888174+00:00,exit,0,orphan_reconcile,ORPHAN,b9fbd7007e5b,AAPL,AAPL260821C00335000,1,,0.08,64.0,-87.5,-56.0,reconcile_fill,,-0.01,0.5,-0.5,,,5da9e771-4785-4325-beb0-d2c4b20c8e0c
+2026-08-04 13:39:53.944243+00:00,exit,0,orphan_reconcile,ORPHAN,c6df1ed90b93,AMZN,AMZN260805C00290000,1,,0.77,26.76,187.77,50.24,reconcile_fill,,-0.01,0.5,-0.5,,,5050754f-d1a4-4a69-9a02-b2b3b62e5a86
+2026-08-03 17:10:15.801450+00:00,exit,0,orphan_reconcile,ORPHAN,c6df1ed90b93,AMZN,AMZN260805C00290000,1,,0.07,26.76,-73.84,-19.76,reconcile_fill,,-0.01,0.5,-0.5,,,3cd3cd04-a2af-45f8-a892-bf41b8c0f979
+2026-08-03 15:35:50.226019+00:00,exit,0,orphan_reconcile,ORPHAN,c6df1ed90b93,AMZN,AMZN260805C00290000,1,,0.16,26.76,-40.2,-10.76,reconcile_fill,,-0.01,0.5,-0.5,,,6ff864d6-99bb-491c-a865-4ed7efd803e8

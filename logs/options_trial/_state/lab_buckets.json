@@ -2,8 +2,8 @@
   {
     "bucket_id": 0,
     "profile": "lab0000_s200_w1_0928_1005_r1",
-    "open_premium": 1871.99,
-    "open_lots": 19
+    "open_premium": 1610.21,
+    "open_lots": 21
   },
   {
     "bucket_id": 1,
@@ -356,8 +356,8 @@
   {
     "bucket_id": 59,
     "profile": "lab0059_s207_w2_1005_1045_r2",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 59.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 60,
@@ -368,8 +368,8 @@
   {
     "bucket_id": 61,
     "profile": "lab0061_s207_w3_1045_1120_r2",
-    "open_premium": 103.0,
-    "open_lots": 2
+    "open_premium": 70.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 62,
@@ -512,8 +512,8 @@
   {
     "bucket_id": 85,
     "profile": "lab0085_s210_w3_1045_1120_r2",
-    "open_premium": 36.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 86,
@@ -1004,8 +1004,8 @@
   {
     "bucket_id": 167,
     "profile": "lab0167_s216_w2_1005_1045_r2",
-    "open_premium": 41.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 168,
@@ -1082,13 +1082,13 @@
   {
     "bucket_id": 180,
     "profile": "lab0180_s217_w2_1005_1045_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 34.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 181,
     "profile": "lab0181_s217_w2_1005_1045_r2",
-    "open_premium": 45.0,
+    "open_premium": 34.0,
     "open_lots": 1
   },
   {
@@ -1166,14 +1166,14 @@
   {
     "bucket_id": 194,
     "profile": "lab0194_s218_w2_1005_1045_r1",
-    "open_premium": 76.0,
+    "open_premium": 65.0,
     "open_lots": 2
   },
   {
     "bucket_id": 195,
     "profile": "lab0195_s218_w2_1005_1045_r2",
-    "open_premium": 31.0,
-    "open_lots": 1
+    "open_premium": 79.0,
+    "open_lots": 2
   },
   {
     "bucket_id": 196,
@@ -2000,8 +2000,8 @@
   {
     "bucket_id": 333,
     "profile": "lab0333_s357_w3_1045_1120_r2",
-    "open_premium": 62.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 334,
@@ -2102,8 +2102,8 @@
   {
     "bucket_id": 350,
     "profile": "lab0350_s360_w2_1005_1045_r1",
-    "open_premium": 27.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 351,
@@ -2210,14 +2210,14 @@
   {
     "bucket_id": 368,
     "profile": "lab0368_s361_w4_1120_1135_r1",
-    "open_premium": 31.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 369,
     "profile": "lab0369_s361_w4_1120_1135_r2",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 31.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 370,
@@ -2270,8 +2270,8 @@
   {
     "bucket_id": 378,
     "profile": "lab0378_s362_w2_1005_1045_r1",
-    "open_premium": 43.0,
-    "open_lots": 1
+    "open_premium": 81.0,
+    "open_lots": 2
   },
   {
     "bucket_id": 379,
@@ -2294,14 +2294,14 @@
   {
     "bucket_id": 382,
     "profile": "lab0382_s362_w4_1120_1135_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 31.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 383,
     "profile": "lab0383_s362_w4_1120_1135_r2",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 31.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 384,
@@ -2450,20 +2450,20 @@
   {
     "bucket_id": 408,
     "profile": "lab0408_s364_w3_1045_1120_r1",
-    "open_premium": 33.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 409,
     "profile": "lab0409_s364_w3_1045_1120_r2",
-    "open_premium": 33.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 410,
     "profile": "lab0410_s364_w4_1120_1135_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 36.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 411,
@@ -4904,8 +4904,8 @@
   {
     "bucket_id": 817,
     "profile": "lab0817_s405_w2_1005_1045_r2",
-    "open_premium": 102.0,
-    "open_lots": 2
+    "open_premium": 143.0,
+    "open_lots": 3
   },
   {
     "bucket_id": 818,
@@ -4982,14 +4982,14 @@
   {
     "bucket_id": 830,
     "profile": "lab0830_s406_w2_1005_1045_r1",
-    "open_premium": 48.0,
-    "open_lots": 2
+    "open_premium": 29.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 831,
     "profile": "lab0831_s406_w2_1005_1045_r2",
-    "open_premium": 48.0,
-    "open_lots": 2
+    "open_premium": 29.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 832,
@@ -5066,14 +5066,14 @@
   {
     "bucket_id": 844,
     "profile": "lab0844_s407_w2_1005_1045_r1",
-    "open_premium": 26.0,
-    "open_lots": 2
+    "open_premium": 13.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 845,
     "profile": "lab0845_s407_w2_1005_1045_r2",
-    "open_premium": 13.0,
-    "open_lots": 1
+    "open_premium": 28.0,
+    "open_lots": 2
   },
   {
     "bucket_id": 846,
@@ -5168,8 +5168,8 @@
   {
     "bucket_id": 861,
     "profile": "lab0861_s408_w3_1045_1120_r2",
-    "open_premium": 33.0,
-    "open_lots": 2
+    "open_premium": 15.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 862,
@@ -5180,8 +5180,8 @@
   {
     "bucket_id": 863,
     "profile": "lab0863_s408_w4_1120_1135_r2",
-    "open_premium": 16.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 864,
@@ -5402,14 +5402,14 @@
   {
     "bucket_id": 900,
     "profile": "lab0900_s411_w2_1005_1045_r1",
-    "open_premium": 67.0,
-    "open_lots": 1
+    "open_premium": 127.0,
+    "open_lots": 2
   },
   {
     "bucket_id": 901,
     "profile": "lab0901_s411_w2_1005_1045_r2",
-    "open_premium": 67.0,
-    "open_lots": 1
+    "open_premium": 127.0,
+    "open_lots": 2
   },
   {
     "bucket_id": 902,
@@ -5486,13 +5486,13 @@
   {
     "bucket_id": 914,
     "profile": "lab0914_s412_w2_1005_1045_r1",
-    "open_premium": 44.0,
+    "open_premium": 47.0,
     "open_lots": 1
   },
   {
     "bucket_id": 915,
     "profile": "lab0915_s412_w2_1005_1045_r2",
-    "open_premium": 47.0,
+    "open_premium": 44.0,
     "open_lots": 1
   },
   {
