@@ -1,6 +1,6 @@
 # Ledger health — 2026-08-04
 
-_Generated 2026-08-04T15:16:05.008274_
+_Generated 2026-08-04T15:20:58.318699_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -14,8 +14,8 @@ State file: OK
 | Orphaned lots (post-stable) |   398 | WARN |
 | Missing exit records (post) |   398 | WARN |
 | State/ledger mismatches     |    21 | WARN |
-| Total open lots             |   202 | INFO |
-| Total closed lots           |   752 | INFO |
+| Total open lots             |   201 | INFO |
+| Total closed lots           |   753 | INFO |
 | Pre-cutoff audit debt       |     0 | INFO |
 | Transition audit debt       |   744 | INFO |
 

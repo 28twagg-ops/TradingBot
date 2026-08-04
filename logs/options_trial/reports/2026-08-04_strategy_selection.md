@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-04
 
-_Generated 2026-08-04T15:16:00.423594_
+_Generated 2026-08-04T15:20:53.605179_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-04T15:16:00.423594_
 
 ## Attribution health
 
-- Total exits: **1266**
+- Total exits: **1267**
 - Orphan exits (b0/orphan_reconcile): **47**
 - Orphan rate: **3.7%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -23,9 +23,9 @@ _Generated 2026-08-04T15:16:00.423594_
 | S355 (GapDown_7DTE) | 7d | watch | 10 | 100.0 | +135.99 | +90.51 | +92.48 | +296.43 | 4 | 20 | 10 | $+731.00 | 80.0% | building sample (8-19 exits) |
 | S354 (GapDown_5DTE) | 5d | watch | 16 | 87.5 | +130.56 | +21.43 | +102.31 | +197.92 | 4 | 32 | 16 | $+998.00 | 43.8% | building sample (8-19 exits) |
 | S407 (RubberBand_ITM2) | 3d | watch | 13 | 69.2 | +125.00 | -95.92 | -66.67 | +441.54 | 4 | 34 | 13 | $+229.00 | 53.8% | building sample (8-19 exits) |
+| S361 (RubberBand_2DTE) | 2d | watch | 10 | 90.0 | +94.83 | +33.68 | +62.37 | +187.33 | 4 | 35 | 10 | $+229.00 | 70.0% | building sample (8-19 exits) |
 | S352 (GapDown_2DTE) | 2d | watch | 9 | 100.0 | +93.75 | +45.87 | +52.38 | +223.89 | 4 | 28 | 9 | $+314.00 | 55.6% | building sample (8-19 exits) |
 | S399 (GapDown_OTM1) | 3d | watch | 17 | 76.5 | +92.00 | -67.20 | +52.63 | +144.00 | 4 | 50 | 17 | $+397.00 | 52.9% | building sample (8-19 exits) |
-| S361 (RubberBand_2DTE) | 2d | watch | 9 | 88.9 | +82.76 | +22.53 | +55.88 | +194.67 | 4 | 35 | 9 | $+200.00 | 77.8% | building sample (8-19 exits) |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | watch | 15 | 86.7 | +77.78 | -12.58 | +59.91 | +626.21 | 8 | 36 | 15 | $+779.00 | 53.3% | building sample (8-19 exits) |
 | S412 (RubberBand_OTM3) | 3d | watch | 10 | 100.0 | +76.69 | +37.15 | +46.75 | +95.10 | 4 | 35 | 10 | $+246.00 | 60.0% | building sample (8-19 exits) |
 | S406 (RubberBand_ITM3) | 3d | watch | 17 | 82.4 | +73.08 | -23.83 | +63.64 | +169.48 | 4 | 34 | 17 | $+347.00 | 70.6% | building sample (8-19 exits) |
@@ -270,7 +270,7 @@ _Pipeline evaluation as of 2026-08-04. Auto-kill thresholds: median<-25% at n>=1
 | S358 | GapDown_30DTE | 0 | — | — | NEW | 0 |
 | S359 | RubberBand_0DTE | 10 | -33.33% | 40% | WATCH | 1 |
 | S360 | RubberBand_1DTE | 14 | -35.19% | 21% | WATCH | 4 |
-| S361 | RubberBand_2DTE | 9 | +82.76% | 89% | WATCH | 4 |
+| S361 | RubberBand_2DTE | 10 | +94.83% | 90% | WATCH | 4 |
 | S362 | RubberBand_3DTE | 16 | +45.44% | 100% | INSUFFICIENT | 4 |
 | S363 | RubberBand_5DTE | 10 | +52.94% | 100% | WATCH | 1 |
 | S364 | RubberBand_7DTE | 16 | +68.12% | 100% | INSUFFICIENT | 4 |
