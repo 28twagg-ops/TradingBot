@@ -1,0 +1,57 @@
+14:20:48  INFO      Mode: exits
+14:20:49  INFO        Daily log -> logs/daily/2026-08-04.md
+14:20:49  INFO        Daily log reconciled -> logs/daily/2026-08-04.md (0 ledger rows)
+14:20:49  INFO        place_all_stops: checking 5 positions...
+14:20:49  INFO        STOP already live AES @ $14.62
+14:20:49  INFO        STOP skipped ALGN: fractional (0.5404 shares) — software exit will handle it
+14:20:49  INFO        STOP skipped AMD: fractional (0.1831 shares) — software exit will handle it
+14:20:49  INFO        STOP skipped AVB: fractional (0.5001 shares) — software exit will handle it
+14:20:49  INFO        STOP skipped ECHO: fractional (0.8091 shares) — software exit will handle it
+14:20:49  INFO        [positions] 5/5 (5 valid)
+14:20:49  INFO        SELL MARKET [urgent] ALGN closed
+14:20:51  INFO        TX logged: SELL ALGN  P&L -0.66%
+14:20:51  INFO        Daily log -> logs/daily/2026-08-04.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:20 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $468.63|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  ALGN  P&L -0.7%  $-0.62                        EXIT: stop_loss (-0.7%)|
+|  AES  P&L -0.1%  $-0.10                                            HOLD|
+|  AVB  P&L +0.5%  $+0.47                                            HOLD|
+|  AMD  P&L +0.5%  $+0.49                                            HOLD|
+|  ECHO  P&L +2.6%  $+1.78                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           5|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                4|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  ALGN                                        -0.66%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+

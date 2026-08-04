@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-08-04 14:22:23.278077+00:00,entry,434,lab0434_s366_w2_1005_1045_r1,S366,ee1466c1a9ba,NKE,NKE260828C00045000,1,0.65,0.65,65.0,,,,-0.01,,0.5,-0.5,,,cfc7b713-a845-4824-b616-3cb43989b1f3
