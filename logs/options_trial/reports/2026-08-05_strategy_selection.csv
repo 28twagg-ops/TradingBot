@@ -8,9 +8,9 @@ S364,RubberBand_7DTE,7d,watch,building sample (8-19 exits),39,16,16,0,101.46,68.
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,watch,fat left tail (p10 < -45%),56,22,14,8,126.55,67.76,-58.49,-50.64,233.93,702.0,4,9,38,21,3,54.5
 S398,GapDown_ATM,3d,watch,building sample (8-19 exits),56,19,15,4,85.83,65.71,-29.51,26.15,202.83,848.0,2,5,40,5,4,42.1
 S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),56,31,20,11,116.59,63.64,-58.62,-6.38,178.95,1097.0,4,5,52,27,6,41.9
-S399,GapDown_OTM1,3d,watch,fat left tail (p10 < -45%),76,26,15,11,36.16,62.07,-68.48,-65.91,137.0,303.0,3,5,64,14,6,46.2
 S397,GapDown_ITM1,3d,watch,building sample (8-19 exits),50,9,9,0,76.85,61.9,40.0,43.66,123.43,433.0,1,5,34,0,2,77.8
 S362,RubberBand_3DTE,3d,watch,promising mid-sample — need more exits,62,24,24,0,154.77,60.47,13.04,25.01,120.29,1404.0,3,5,58,24,4,41.7
+S399,GapDown_OTM1,3d,watch,fat left tail (p10 < -45%),76,27,15,12,34.18,58.62,-68.39,-65.16,136.4,298.0,3,5,64,15,6,48.1
 S403,Any_MA50_Touch,3d,watch,building sample (8-19 exits),26,11,7,4,105.72,57.58,-77.46,-59.32,320.0,230.0,2,5,18,11,3,36.4
 S412,RubberBand_OTM3,3d,watch,building sample (8-19 exits),54,14,11,3,52.62,57.45,-11.52,34.91,92.59,253.0,2,5,50,14,4,42.9
 S404,GapDown_OTM2,3d,watch,building sample (8-19 exits),50,10,10,0,73.6,55.86,37.9,45.37,126.29,460.0,1,5,34,0,2,80.0
@@ -18,7 +18,7 @@ S363,RubberBand_5DTE,5d,watch,building sample (8-19 exits),26,10,10,0,47.39,52.9
 S408,RubberBand_ITM1,3d,watch,building sample (8-19 exits),48,17,11,6,261.6,52.63,-25.97,0.0,959.56,739.0,3,2,48,17,3,47.1
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),69,28,19,9,101.92,50.0,-68.8,-38.23,344.06,618.0,4,9,45,26,5,50.0
 S356,GapDown_14DTE,14d,watch,insufficient sample (<8 exits),34,4,4,0,48.27,48.27,37.93,37.93,58.62,112.0,2,5,22,2,1,100.0
-S357,GapDown_21DTE,21d,watch,insufficient sample (<8 exits),28,7,7,0,53.99,47.06,47.06,47.06,64.58,242.0,4,5,16,5,2,85.7
+S357,GapDown_21DTE,21d,watch,insufficient sample (<8 exits),30,7,7,0,53.99,47.06,47.06,47.06,64.58,242.0,4,5,18,5,2,85.7
 S405,GapDown_OTM3,3d,watch,fat left tail (p10 < -45%),58,25,15,10,37.64,42.86,-57.06,-41.46,134.22,466.0,3,5,42,11,4,44.0
 S407,RubberBand_ITM2,3d,watch,fat left tail (p10 < -45%),52,20,11,9,102.41,41.84,-95.92,-61.54,425.39,287.0,4,5,48,16,5,40.0
 S401,Any_Gap_Down_Small,3d,watch,fat left tail (p10 < -45%),60,32,20,12,56.1,27.63,-91.21,-27.24,160.0,510.0,4,5,44,30,7,37.5
