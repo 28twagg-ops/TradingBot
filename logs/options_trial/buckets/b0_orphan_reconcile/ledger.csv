@@ -74,3 +74,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-03 17:10:15.801450+00:00,exit,0,orphan_reconcile,ORPHAN,5a80d7524988,NKE,NKE260807C00042000,1,,0.07,64.1,-89.08,-57.1,reconcile_fill,,-0.01,0.5,-0.5,,,3cd3cd04-a2af-45f8-a892-bf41b8c0f979
 2026-08-03 15:35:50.226019+00:00,exit,0,orphan_reconcile,ORPHAN,5a80d7524988,NKE,NKE260807C00042000,1,,0.16,64.1,-75.04,-48.1,reconcile_fill,,-0.01,0.5,-0.5,,,6ff864d6-99bb-491c-a865-4ed7efd803e8
 2026-08-05 15:01:25.207120+00:00,exit,0,orphan_reconcile,ORPHAN,e137bd44ed5b,QQQ,QQQ260807C00747000,1,,0.34,73.0,-53.42,-39.0,stop_loss (-52.1%),,-0.01,0.5,-0.5,,,4c397210-4d43-439e-9f27-15e471be896d
+2026-08-05 15:11:15.202276+00:00,exit,0,orphan_reconcile,ORPHAN,4785c9111856,AAPL,AAPL260821C00335000,2,,1.07,128.0,67.19,86.0,take_profit (+62.5%),,-0.01,0.5,-0.5,,,9eb78eed-a38b-4099-b2b1-699236c9efea
+2026-08-04 13:44:54.622789+00:00,exit,0,orphan_reconcile,ORPHAN,ccbd8e464153,NKE,NKE260807C00043000,1,,0.08,23.5,-65.96,-15.5,reconcile_fill,,-0.01,0.5,-0.5,,,bc804d19-cf72-4cfa-9ae4-70f41056ff53
