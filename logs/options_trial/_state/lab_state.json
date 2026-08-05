@@ -4023,6 +4023,16 @@
       "qty": 1,
       "reason": "stop_loss (-53.3%)",
       "submitted": "2026-08-05T11:56:09"
+    },
+    {
+      "order_id": "98d5729b-1f64-42ab-9b26-3eb96b94f852",
+      "lot_id": "e80975c24a41",
+      "bucket_id": 789,
+      "strategy_id": "S398",
+      "occ_symbol": "UBER260807C00070000",
+      "qty": 1,
+      "reason": "stop_loss (-50.4%)",
+      "submitted": "2026-08-05T14:20:50"
     }
   ],
   "bucket_open_premium": {
