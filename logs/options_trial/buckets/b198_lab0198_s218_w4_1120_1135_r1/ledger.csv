@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-08-05 15:22:14.490974+00:00,entry,198,lab0198_s218_w4_1120_1135_r1,S218,b1dd50777a1c,UNH,UNH260807C00425000,1,0.57,0.57,57.0,,,,-0.01,,0.5,-0.5,0.18867924528301883,low=397.80 BB_lower=408.05 touch+green,b3484d33-0d7a-472f-b4c3-d604ea064b26

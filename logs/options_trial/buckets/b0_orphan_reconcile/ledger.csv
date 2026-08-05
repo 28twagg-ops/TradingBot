@@ -84,3 +84,7 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05 14:11:27.364432+00:00,exit,0,orphan_reconcile,ORPHAN,0102b4dca14c,AAPL,AAPL260814C00330000,1,,0.09,59.75,-84.94,-50.75,reconcile_fill,,-0.01,0.5,-0.5,,,5fa50eab-b3c5-424e-a52e-000714698270
 2026-08-05 14:11:17.232081+00:00,exit,0,orphan_reconcile,ORPHAN,02e57b73f915,DKNG,DKNG260807C00024000,1,,0.21,55.67,-62.28,-34.67,reconcile_fill,,-0.01,0.5,-0.5,,,133f530d-6f6a-479d-ab26-093d8b4e464a
 2026-08-04 15:36:00.935443+00:00,exit,0,orphan_reconcile,ORPHAN,559312936171,DKNG,DKNG260807C00025000,1,,0.06,30.33,-80.22,-24.33,reconcile_fill,,-0.01,0.5,-0.5,,,69e68b17-338c-4c35-ab49-663b9cb730d6
+2026-08-05 14:41:07.344015+00:00,exit,0,orphan_reconcile,ORPHAN,c551f66c55fd,UNH,UNH260807C00422500,1,,0.28,63.67,-56.02,-35.67,reconcile_fill,,-0.01,0.5,-0.5,,,a0a3a0d8-62fd-4d46-b741-e8c79119f964
+2026-08-05 14:21:03.316233+00:00,exit,0,orphan_reconcile,ORPHAN,60eed4f3f8b3,DKNG,DKNG260807C00023500,1,,0.16,73.0,-78.08,-57.0,reconcile_fill,,-0.01,0.5,-0.5,,,15feb479-7533-40f3-a66d-3e49e2cdb420
+2026-08-05 14:21:01.349299+00:00,exit,0,orphan_reconcile,ORPHAN,60eed4f3f8b3,DKNG,DKNG260807C00023500,1,,0.22,73.0,-69.86,-51.0,reconcile_fill,,-0.01,0.5,-0.5,,,5834aa42-ba22-4f6d-a5ce-ef82006bcb89
+2026-08-04 17:06:00.537266+00:00,exit,0,orphan_reconcile,ORPHAN,6f4e3a71d5ba,NKE,NKE260807C00042000,1,,0.08,64.1,-87.52,-56.1,reconcile_fill,,-0.01,0.5,-0.5,,,18f78a9f-14b1-41c2-b906-68db19a6efe9
