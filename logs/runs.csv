@@ -4331,3 +4331,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-05 14:09:10,exits,bull,473.83,190.66,0,0,0,3,AES|ALGN|AVB,both
 2026-08-05 14:11:09,exits,bull,473.93,190.66,0,0,0,3,AES|ALGN|AVB,both
 2026-08-05 14:15:50,exits,bull,474.38,190.66,0,0,0,3,AES|ALGN|AVB,both
+2026-08-05 14:20:48,exits,bull,474.31,190.66,0,0,0,3,AES|ALGN|AVB,both

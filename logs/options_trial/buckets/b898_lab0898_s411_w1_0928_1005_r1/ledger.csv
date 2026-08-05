@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-08-05 14:17:25.392279+00:00,entry,898,lab0898_s411_w1_0928_1005_r1,S411,823c0bfc00cf,DKNG,DKNG260807C00023500,1,0.74,0.72,72.0,,,,-0.01,,0.75,-0.75,0.20588235294117652,RB gap -3.8% reclaim,30d1dda3-36fe-4f49-8cae-3d86166407e9
