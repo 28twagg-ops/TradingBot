@@ -32626,36 +32626,38 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-08-05.log
 elapsed=11.4s reconcile=0.53s cancel=0.23s manage=9.91s
 
-=== 15:34:44 ET — manage-only (past entry window) [elapsed=10.2s reconcile=0.64s cancel=0.23s manage=8.54s] ===
-=== options_morning_bot (PAPER) 2026-08-05T15:34:44.006977-04:00 ===
+=== 15:39:29 ET — manage-only (past entry window) [elapsed=7.1s reconcile=0.33s cancel=0.03s manage=6.34s] ===
+=== options_morning_bot (PAPER) 2026-08-05T15:39:29.658202-04:00 ===
 
 [Run context]
-Paper auth OK — equity $143315.57, account PA36KS87UPRS
+Paper auth OK — equity $143387.51, account PA36KS87UPRS
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1
+  reconcile: exit fill b380|S362 DKNG -57.9%
+  reconcile: exit fill b0|ORPHAN RBLX -21.2%
   reconcile: exit fill b898|S411 DKNG -51.4%
   reconcile: exit fill b797|S399 AMZN -52.8%
-  reconcile: exit fill b166|S216 META -56.5%
+  reconcile: exit fill b916|S412 DKNG -51.8%
   reconcile: orphan lot b0 AMZN260807C00295000 x1 @ 0.40 (legacy/unattributed)
+  reconcile: orphan lot b0 RBLX260807C00040000 x2 @ 0.33 (legacy/unattributed)
 
 [Setup]
 Active buckets: 1024 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419
 Dropped (no new entries; ex-reflected P&L): S173, S174
-  EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-60.7%) SELL 1 META260807C00640000 @<= 0.23  id=7b86ea1f-36b8-4280-864a-6798ffd39442
+  EXIT skip AMZN260805C00290000: open sell already pending
+  EXIT skip UBER260807C00071000: open sell already pending
+  EXIT skip AMD260805C00525000: open sell already pending
+  EXIT skip AMZN260805C00287500: open sell already pending
   EXIT skip RBLX260807C00040000: open sell already pending
   EXIT skip UBER260807C00072000: open sell already pending
-  EXIT skip UBER260807C00071000: open sell already pending
-  EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-52.1%) SELL 2 DKNG260807C00023500 @<= 0.36  id=aef6ba95-05d0-4c87-b916-730a3f0b3238
-  EXIT skip AMZN260807C00295000: open sell already pending
   EXIT skip UBER260807C00078000: open sell already pending
-  EXIT skip AMZN260807C00292500: open sell already pending
-  EXIT skip DKNG260807C00024000: open sell already pending
-  EXIT skip AMZN260807C00297500: open sell already pending
-  EXIT skip AMD260805C00525000: open sell already pending
-  EXIT [b85|lab0085_s210_w3_1045_1120_r2|S210] stop_loss (-51.9%) SELL 1 PLTR260807C00172500 @<= 0.20  id=b8b1a644-5808-4075-b86c-59538165aacf
-  EXIT skip AMZN260805C00287500: open sell already pending
-  EXIT skip AMZN260805C00290000: open sell already pending
   EXIT skip AMZN260807C00302500: open sell already pending
-  EXIT [b380|lab0380_s362_w3_1045_1120_r1|S362] stop_loss (-59.4%) SELL 1 DKNG260807C00024500 @<= 0.13  id=a1a81859-e8b3-4884-9ff9-dd66a406c0a2
+  EXIT skip AMZN260807C00295000: open sell already pending
+  EXIT skip AMZN260807C00297500: open sell already pending
+  EXIT skip AMZN260807C00292500: open sell already pending
+  EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-55.1%) SELL 1 DKNG260807C00024000 @<= 0.22  id=e465bd35-9ff7-4c30-8285-e7f5da427b0a
+  EXIT skip DKNG260807C00023500: open sell already pending
+  EXIT skip PLTR260807C00172500: open sell already pending
+  EXIT [b366|lab0366_s361_w3_1045_1120_r1|S361] stop_loss (-59.4%) SELL 1 DKNG260807C00024500 @<= 0.17  id=1799ec24-7177-4060-9dac-49c1ca5b3e49
 
 [Manage only]
 Past entry window; manage/exit only.
@@ -32664,26 +32666,26 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $143,315.57
+Account equity: $143,387.51
 Active buckets: 1024 of 1024 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
-  Reflected (ex-S173,S174): $+12,062.12 all-time  |  $-1,846.01 today
-  Raw (incl dropped):     $+10,466.57 all-time  |  $-1,846.01 today
-  Open (not sold yet): $-4,841.43 unrealized (virtual lots)
-                       $-4,896.01 unrealized (broker total)
-  Premium deployed:    $9,413.43 in open positions
-  Combined P&L:        $+7,220.69 (reflected realized + open virtual)
+  Reflected (ex-S173,S174): $+12,039.12 all-time  |  $-1,869.01 today
+  Raw (incl dropped):     $+10,443.57 all-time  |  $-1,869.01 today
+  Open (not sold yet): $-4,761.39 unrealized (virtual lots)
+                       $-4,810.68 unrealized (broker total)
+  Premium deployed:    $9,296.43 in open positions
+  Combined P&L:        $+7,277.73 (reflected realized + open virtual)
 
 Ledger (master)
-  Total events:     8648
+  Total events:     8652
   Today entries:    180
-  Today exits (reflected): 172
-  All-time exits (reflected): 1028  wins 45%
-  Avg return/trade: +26.7%  median -13.3%
+  Today exits (reflected): 174
+  All-time exits (reflected): 1030  wins 45%
+  Avg return/trade: +26.6%  median -15.2%
 
 Open virtual lots (by bucket)
-  b0 lab0000_s200_w1_0928_1005_r1  prem=$  1445  real=$ +0.00  open=$ +0.00  lots=21  [ORPHAN:RBLXx1, ORPHAN:DKNGx2, ORPHAN:NKEx1, ORPHAN:UBERx1 +17 more]
+  b0 lab0000_s200_w1_0928_1005_r1  prem=$  1422  real=$ +0.00  open=$ +0.00  lots=20  [ORPHAN:DKNGx2, ORPHAN:NKEx1, ORPHAN:UBERx1, ORPHAN:AAPLx2 +16 more]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b16 lab0016_s202_w1_0928_1005_r1  prem=$     0  real=$-39.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -32727,10 +32729,10 @@ Open virtual lots (by bucket)
   (743 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  AAPL260807C00317500  qty=1  cost=$63.00  return=+11.1%  open P&L=$+7.00
-  AAPL260814C00330000  qty=6  cost=$358.50  return=-14.6%  open P&L=$-52.50
+  AAPL260807C00317500  qty=1  cost=$63.00  return=-3.2%  open P&L=$-2.00
+  AAPL260814C00330000  qty=6  cost=$358.50  return=-16.3%  open P&L=$-58.50
   AMD260805C00525000  qty=3  cost=$132.00  return=-100.0%  open P&L=$-132.00
-  AMD260807C00555000  qty=2  cost=$122.00  return=-42.6%  open P&L=$-52.00
+  AMD260807C00555000  qty=2  cost=$122.00  return=-45.9%  open P&L=$-56.00
   AMZN260805C00287500  qty=16  cost=$542.40  return=-100.0%  open P&L=$-542.40
   AMZN260805C00290000  qty=6  cost=$161.54  return=-100.0%  open P&L=$-161.54
   AMZN260807C00292500  qty=20  cost=$1,077.00  return=-90.7%  open P&L=$-977.00
@@ -32738,32 +32740,30 @@ Alpaca option positions
   AMZN260807C00297500  qty=9  cost=$305.31  return=-94.1%  open P&L=$-287.31
   AMZN260807C00302500  qty=1  cost=$13.67  return=-92.7%  open P&L=$-12.67
   DKNG260807C00023500  qty=2  cost=$146.00  return=-52.1%  open P&L=$-76.00
-  DKNG260807C00024000  qty=2  cost=$111.33  return=-58.7%  open P&L=$-65.33
   DKNG260807C00024500  qty=7  cost=$275.80  return=-59.4%  open P&L=$-163.80
-  HOOD260807C00100000  qty=2  cost=$112.00  return=-17.9%  open P&L=$-20.00
-  HOOD260807C00101000  qty=2  cost=$96.00  return=-29.2%  open P&L=$-28.00
-  META260807C00640000  qty=1  cost=$56.00  return=-60.7%  open P&L=$-34.00
+  HOOD260807C00100000  qty=2  cost=$112.00  return=-19.6%  open P&L=$-22.00
+  HOOD260807C00101000  qty=2  cost=$96.00  return=-33.3%  open P&L=$-32.00
   NKE260807C00042000  qty=10  cost=$641.00  return=-15.8%  open P&L=$-101.00
-  NKE260807C00043000  qty=4  cost=$94.00  return=-19.1%  open P&L=$-18.00
+  NKE260807C00043000  qty=4  cost=$94.00  return=-23.4%  open P&L=$-22.00
   NKE260821C00044000  qty=12  cost=$756.00  return=-9.5%  open P&L=$-72.00
   NKE260828C00045000  qty=12  cost=$758.00  return=-11.3%  open P&L=$-86.00
   NKE260904C00045000  qty=4  cost=$288.00  return=-1.4%  open P&L=$-4.00
   PLTR260807C00172500  qty=4  cost=$158.00  return=-51.9%  open P&L=$-82.00
   RBLX260807C00040000  qty=3  cost=$99.00  return=-84.8%  open P&L=$-84.00
-  T260807C00022500  qty=2  cost=$88.00  return=+13.6%  open P&L=$+12.00
+  T260807C00022500  qty=2  cost=$88.00  return=-2.3%  open P&L=$-2.00
   TTD260807C00020500  qty=4  cost=$268.00  return=+0.0%  open P&L=$+0.00
-  TTD260807C00021500  qty=2  cost=$92.00  return=+2.2%  open P&L=$+2.00
+  TTD260807C00021500  qty=2  cost=$92.00  return=-2.2%  open P&L=$-2.00
   TTD260807P00017000  qty=4  cost=$220.00  return=-29.1%  open P&L=$-64.00
-  UBER260807C00070000  qty=9  cost=$290.08  return=-28.6%  open P&L=$-83.08
+  UBER260807C00070000  qty=9  cost=$290.08  return=-22.4%  open P&L=$-65.08
   UBER260807C00071000  qty=1  cost=$30.00  return=-60.0%  open P&L=$-18.00
-  UBER260807C00072000  qty=1  cost=$15.00  return=-60.0%  open P&L=$-9.00
+  UBER260807C00072000  qty=1  cost=$15.00  return=-53.3%  open P&L=$-8.00
   UBER260807C00078000  qty=5  cost=$252.22  return=-98.0%  open P&L=$-247.22
-  UBER260814C00072000  qty=4  cost=$170.00  return=-27.1%  open P&L=$-46.00
-  UBER260814C00073000  qty=1  cost=$40.50  return=-45.7%  open P&L=$-18.50
-  UBER260828C00075000  qty=4  cost=$210.00  return=-18.1%  open P&L=$-38.00
+  UBER260814C00072000  qty=4  cost=$170.00  return=-22.4%  open P&L=$-38.00
+  UBER260814C00073000  qty=1  cost=$40.50  return=-40.7%  open P&L=$-16.50
+  UBER260828C00075000  qty=4  cost=$210.00  return=-16.2%  open P&L=$-34.00
 
 Per-bucket exit stats (all time)
-  b0|orphan_reconcile     n= 85  avg=-6.4%  med=-66.0%  realized=$+5,850.90
+  b0|orphan_reconcile     n= 86  avg=-6.6%  med=-62.3%  realized=$+5,843.90
   b104|c104_s164_w1_0928_1005_r4  n=  1  avg=-88.9%  med=-88.9%  realized=$-8.00
   b108|c108_s202_w3_1045_1120_r1  n=  1  avg=-33.3%  med=-33.3%  realized=$-1.00
   b108|lab0108_s212_w1_0928_1005_r1  n=  3  avg=-98.5%  med=-98.6%  realized=$-198.00
@@ -32780,7 +32780,7 @@ Per-bucket exit stats (all time)
   b135|c135_s164_w4_1120_1135_r5  n=  1  avg=-50.0%  med=-50.0%  realized=$-4.00
   b164|lab0164_s216_w1_0928_1005_r1  n=  1  avg=-51.7%  med=-51.7%  realized=$-31.00
   b165|lab0165_s216_w1_0928_1005_r2  n=  1  avg=-51.7%  med=-51.7%  realized=$-31.00
-  b166|lab0166_s216_w2_1005_1045_r1  n=  3  avg=-65.2%  med=-63.4%  realized=$-108.00
+  b166|lab0166_s216_w2_1005_1045_r1  n=  2  avg=-69.6%  med=-63.4%  realized=$-73.00
   b167|lab0167_s216_w2_1005_1045_r2  n=  4  avg=-82.1%  med=-80.5%  realized=$-153.00
   b169|lab0169_s216_w3_1045_1120_r2  n=  2  avg=-54.3%  med=-52.3%  realized=$-50.00
   b16|lab0016_s202_w1_0928_1005_r1  n=  1  avg=-63.9%  med=-63.9%  realized=$-39.00
@@ -32901,7 +32901,7 @@ Per-bucket exit stats (all time)
   b377|lab0377_s362_w1_0928_1005_r2  n=  3  avg=+49.6%  med=+13.0%  realized=$+61.00
   b378|lab0378_s362_w2_1005_1045_r1  n=  3  avg=+52.7%  med=+52.6%  realized=$+59.00
   b379|lab0379_s362_w2_1005_1045_r2  n=  7  avg=+41.8%  med=+38.2%  realized=$+123.00
-  b380|lab0380_s362_w3_1045_1120_r1  n=  3  avg=+103.3%  med=+103.3%  realized=$+186.00
+  b380|lab0380_s362_w3_1045_1120_r1  n=  4  avg=+63.0%  med=+103.3%  realized=$+164.00
   b381|lab0381_s362_w3_1045_1120_r2  n=  4  avg=+67.4%  med=+108.3%  realized=$+174.00
   b382|lab0382_s362_w4_1120_1135_r1  n=  1  avg=+1125.8%  med=+1125.8%  realized=$+349.00
   b383|lab0383_s362_w4_1120_1135_r2  n=  1  avg=+1222.6%  med=+1222.6%  realized=$+379.00
@@ -33024,7 +33024,7 @@ Per-bucket exit stats (all time)
   b90|c090_s167_w3_1045_1120_r4  n=  4  avg=-41.6%  med=-18.9%  realized=$-123.00
   b914|lab0914_s412_w2_1005_1045_r1  n=  4  avg=+75.2%  med=+68.2%  realized=$+124.00
   b915|lab0915_s412_w2_1005_1045_r2  n=  3  avg=+54.2%  med=+43.2%  realized=$+64.00
-  b916|lab0916_s412_w3_1045_1120_r1  n=  6  avg=+39.3%  med=+85.2%  realized=$+53.00
+  b916|lab0916_s412_w3_1045_1120_r1  n=  7  avg=+26.3%  med=-10.7%  realized=$+24.00
   b917|lab0917_s412_w3_1045_1120_r2  n=  1  avg=-51.8%  med=-51.8%  realized=$-29.00
   b919|lab0919_s412_w4_1120_1135_r2  n=  1  avg=+37.5%  med=+37.5%  realized=$+12.00
   b91|c091_s165_w4_1120_1135_r5  n=  2  avg=+222.0%  med=+247.0%  realized=$+293.00
@@ -33040,24 +33040,24 @@ Per-bucket exit stats (all time)
 |  OPTIONS BOT SUMMARY                                                   |
 +------------------------------------------------------------------------+
 |  Mode                          manage-only                             |
-|  Equity                        $143,315.57                             |
+|  Equity                        $143,387.51                             |
 |  Signals this run              0                                       |
 |  Orders submitted (session)    114                                     |
 |  Orders filled today (ledger)  180                                     |
 |  Entries placed this run       0                                       |
-|  Open virtual lots             187                                     |
-|  Broker option positions       34                                      |
-|  Unattributed contracts        2 (orphan reconcile)                    |
+|  Open virtual lots             184                                     |
+|  Broker option positions       32                                      |
+|  Unattributed contracts        1 (orphan reconcile)                    |
 |  Pending orders                0                                       |
 +========================================================================+
 +========================================================================+
 |  BUCKET LEADERBOARD (reflected ex-S173,S174)                           |
 +------------------------------------------------------------------------+
-|  Reflected trades=1028  buckets=250  win=45%                           |
-|  Returns   avg=+26.7%  med=-14.2%  p10=-73.9%  p90=+140.1%             |
-|  Realized  $+12,062.12                                                 |
-|  Raw incl dropped  trades=1562  real=$+10,466.57                       |
-|  Today     trades=172  avg=+1.7%  med=-61.5%  real=$-1,846.01          |
+|  Reflected trades=1030  buckets=250  win=45%                           |
+|  Returns   avg=+26.6%  med=-15.2%  p10=-73.9%  p90=+140.0%             |
+|  Realized  $+12,039.12                                                 |
+|  Raw incl dropped  trades=1564  real=$+10,443.57                       |
+|  Today     trades=174  avg=+1.2%  med=-61.4%  real=$-1,869.01          |
 +------------------------------------------------------------------------+
 |  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$          |
 +------------------------------------------------------------------------+
@@ -33074,17 +33074,17 @@ Per-bucket exit stats (all time)
 |  Low  b108 lab0108_s212_w1_09  4   0% -82.2 -98.4 -98.6 $   -199       |
 +========================================================================+
 +========================================================================+
-|  PENDING EXITS (15)                                                    |
+|  PENDING EXITS (12)                                                    |
 +------------------------------------------------------------------------+
 |  b301 S353 AMZN260807C00292500 x1 take_profit (+67.1%)                 |
 |  b290 S352 AMZN260805C00287500 x1 stop_loss (-91.1%)                   |
 |  b803 S404 AMZN260807C00295000 x1 stop_loss (-52.9%)                   |
 |  b278 S350 AMZN260805C00290000 x1 stop_loss (-96.3%)                   |
 |  b795 S399 AMZN260807C00297500 x1 stop_loss (-70.5%)                   |
-|  ... 10 more pending exit(s)                                           |
+|  ... 7 more pending exit(s)                                            |
 +========================================================================+
 +========================================================================+
-|  OPEN OPTIONS (34)                                                     |
+|  OPEN OPTIONS (32)                                                     |
 +------------------------------------------------------------------------+
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |------------------------------------------------------------------------|
@@ -33096,8 +33096,8 @@ Per-bucket exit stats (all time)
 |  DKNG260807C00024500           7    -59.4%   $   -163.80               |
 |  AMZN260805C00290000           6   -100.0%   $   -161.54               |
 |  AMD260805C00525000            3   -100.0%   $   -132.00               |
-|  ... 26 more position(s)                                               |
+|  ... 24 more position(s)                                               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-08-05.log
-elapsed=10.2s reconcile=0.64s cancel=0.23s manage=8.54s
+elapsed=7.1s reconcile=0.33s cancel=0.03s manage=6.34s
 

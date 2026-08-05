@@ -8643,7 +8643,11 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05 18:25:59.218326+00:00,exit,820,lab0820_s405_w4_1120_1135_r1,S405,0254bf24f392,UBER,UBER260807C00070000,1,,0.16,29.0,-44.83,-13.0,stop_loss (-50.4%),,-0.01,0.5,-0.5,,,98b3a81f-3eba-4d01-be1a-d59e47d12561
 2026-08-05 18:37:04.902956+00:00,exit,791,lab0791_s398_w4_1120_1135_r2,S398,9c077a37b322,UBER,UBER260807C00070000,1,,0.17,29.0,-41.38,-12.0,stop_loss (-50.4%),,-0.01,0.5,-0.5,,,6c41ba41-112b-4ebd-a825-4433567ace86
 2026-08-05 19:15:47.985105+00:00,exit,315,lab0315_s355_w2_1005_1045_r2,S355,9c7bb9c959db,UBER,UBER260814C00073000,1,,0.22,35.0,-37.14,-13.0,stop_loss (-50.6%),,-0.01,0.5,-0.5,,,44d70651-1185-4e3d-9907-fc1f64b8ad71
-2026-08-05T19:34:42Z,reconcile,797,lab0797_s399_w3_1045_1120_r2,S399,07402d85aaf9,AMD,AMD260807C00570000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-05T19:39:28Z,reconcile,166,lab0166_s216_w2_1005_1045_r1,S216,2d54a76d2b9e,META,META260807C00640000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-05T19:39:28Z,reconcile,797,lab0797_s399_w3_1045_1120_r2,S399,07402d85aaf9,AMD,AMD260807C00570000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-05T19:39:28Z,reconcile,0,orphan_reconcile,ORPHAN,e973b5f32bc2,META,META260807C00640000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-05 19:34:53.123192+00:00,exit,380,lab0380_s362_w3_1045_1120_r1,S362,f508818f08bd,DKNG,DKNG260807C00024500,1,,0.16,38.0,-57.89,-22.0,reconcile_fill,,-0.01,0.5,-0.5,,,a1a81859-e8b3-4884-9ff9-dd66a406c0a2
+2026-08-05 19:37:45.036378+00:00,exit,0,orphan_reconcile,ORPHAN,aebe2c4bfaab,RBLX,RBLX260807C00040000,1,,0.26,33.0,-21.21,-7.0,reconcile_fill,,-0.01,0.5,-0.5,,,7b86ea1f-36b8-4280-864a-6798ffd39442
 2026-08-05 19:29:08.547955+00:00,exit,898,lab0898_s411_w1_0928_1005_r1,S411,823c0bfc00cf,DKNG,DKNG260807C00023500,1,,0.35,72.0,-51.39,-37.0,stop_loss (-57.5%),,-0.01,0.5,-0.5,,,f0531c7a-8cbf-41f4-9416-a1b44b73cfb0
 2026-08-05 19:32:09.529222+00:00,exit,797,lab0797_s399_w3_1045_1120_r2,S399,77f09a09bdde,AMZN,AMZN260807C00295000,1,,0.17,36.0,-52.78,-19.0,stop_loss (-51.5%),,-0.01,0.5,-0.5,,,7ec62d7c-2c3d-4d4c-bea9-b3931d2cc7de
-2026-08-05 19:27:06.359186+00:00,exit,166,lab0166_s216_w2_1005_1045_r1,S216,2d54a76d2b9e,META,META260807C00640000,1,,0.27,62.0,-56.45,-35.0,stop_loss (-58.9%),,-0.01,0.5,-0.5,,,3107b2df-32d4-4470-8dbb-e54b6328d7ea
+2026-08-05 19:35:52.510503+00:00,exit,916,lab0916_s412_w3_1045_1120_r1,S412,e910bdedc5a4,DKNG,DKNG260807C00024000,1,,0.27,56.0,-51.79,-29.0,stop_loss (-53.3%),,-0.01,0.5,-0.5,,,c7dc0d75-0b09-4453-8fa8-05b0817ced4e
