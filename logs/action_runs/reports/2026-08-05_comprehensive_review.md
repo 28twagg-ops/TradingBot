@@ -2866,3 +2866,39 @@ Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, 
 ### Options bot full output
 
 ```text
+
+## Run 20260805T134845Z
+
+- UTC timestamp: `20260805T134845Z`
+- GitHub run: [#6112](https://github.com/28twagg-ops/TradingBot/actions/runs/31011715512)
+- Run id: `31011715512`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-05T09:28:29.387466-04:00","date":"2026-08-05","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":52.5,"phases_s":{"reconcile":0.1,"cancel":0.02,"manage":5.62,"scan":46.39,"entries":0.02},"signals":0,"placed":0,"equity":146042.98,"open_positions":34,"pending_orders":0,"open_lots":201,"submitted_today":0,"filled_today":0,"unattributed_contracts":15,"top_signals":[],"github_run":"6108","github_run_id":"31010090105","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:48:46  INFO      Mode: morning_scan
+13:48:47  INFO        [positions] 2/2 (2 valid)
+13:48:47  INFO        Universe cache hit: 903 tickers (tickers_2026-08-05.json)
+13:48:49  INFO        [universe] 40/901 (40 valid)
+13:48:50  INFO        [universe] 80/901 (80 valid)
+13:48:52  INFO        [universe] 120/901 (120 valid)
+13:48:53  INFO        [universe] 160/901 (160 valid)
+13:48:54  INFO        [universe] 200/901 (199 valid)
+13:49:02  INFO        [universe] 240/901 (238 valid)
+13:49:12  INFO        [universe] 280/901 (278 valid)
+13:49:26  INFO        [universe] 320/901 (318 valid)
+13:49:36  INFO        [universe] 360/901 (358 valid)
+13:49:49  INFO        [universe] 400/901 (397 valid)
+13:50:03  INFO        [universe] 440/901 (437 valid)
+13:50:13  INFO        [universe] 480/901 (477 valid)
+```
+
+### Options bot full output
+
+```text
