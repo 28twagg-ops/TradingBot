@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-08-05 14:13:26.685804+00:00,entry,348,lab0348_s360_w1_0928_1005_r1,S360,b05141a65217,AMD,AMD260805C00520000,1,0.45,0.45,45.0,,,,-0.01,,0.75,-0.75,0.090909090909091,RB gap -6.6% reclaim,78ed93cb-5e63-4a7d-92f8-804b9374f457
