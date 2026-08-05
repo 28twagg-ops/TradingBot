@@ -76,3 +76,6 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05 15:01:25.207120+00:00,exit,0,orphan_reconcile,ORPHAN,e137bd44ed5b,QQQ,QQQ260807C00747000,1,,0.34,73.0,-53.42,-39.0,stop_loss (-52.1%),,-0.01,0.5,-0.5,,,4c397210-4d43-439e-9f27-15e471be896d
 2026-08-05 15:11:15.202276+00:00,exit,0,orphan_reconcile,ORPHAN,4785c9111856,AAPL,AAPL260821C00335000,2,,1.07,128.0,67.19,86.0,take_profit (+62.5%),,-0.01,0.5,-0.5,,,9eb78eed-a38b-4099-b2b1-699236c9efea
 2026-08-04 13:44:54.622789+00:00,exit,0,orphan_reconcile,ORPHAN,ccbd8e464153,NKE,NKE260807C00043000,1,,0.08,23.5,-65.96,-15.5,reconcile_fill,,-0.01,0.5,-0.5,,,bc804d19-cf72-4cfa-9ae4-70f41056ff53
+2026-08-05T15:15:48Z,reconcile,0,orphan_reconcile,ORPHAN,91bf17015c5c,PLTR,PLTR260807C00175000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-05 15:14:14.913261+00:00,exit,0,orphan_reconcile,ORPHAN,eed01dfb242c,CVNA,CVNA260807C00075000,2,,0.21,50.0,-16.0,-8.0,stop_loss (-55.6%),,-0.01,0.5,-0.5,,,8d07843e-5132-4a96-b424-bbd231cb187f
+2026-08-05 15:15:55.204203+00:00,exit,0,orphan_reconcile,ORPHAN,cfa4d292342e,TSLA,TSLA260807C00350000,2,,0.21,101.33,-58.55,-59.33,stop_loss (-58.6%),,-0.01,0.5,-0.5,,,2e7a439b-7e2f-41c7-8031-f15d69b71cce

@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,13,23,2026-07-27,True,9,7.7,-59.73,-67.87,67.19,-96.26,-392.14,"AAPL,AMZN,DKNG,NKE,OXY,QQQ,RBLX,SMCI,XOM",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-96.3%)…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,15,22,2026-07-27,True,9,6.7,-56.74,-66.2,67.19,-96.26,-459.47,"AAPL,AMZN,CVNA,DKNG,NKE,OXY,QQQ,RBLX,SMCI,TSLA,XOM",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-96.3%)…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -59,8 +59,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 57,lab0057_s207_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-09,False,,,,,,,0,,,,idle
 58,lab0058_s207_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
 59,lab0059_s207_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
-60,lab0060_s207_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-04,False,,0.0,-65.71,-65.71,-65.71,-65.71,-46.0,OXY,S207,reconcile_fill,closed
-61,lab0061_s207_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,2,0,2026-08-04,False,,0.0,-59.33,-59.33,-51.52,-67.14,-64.0,"OXY,XOM",S207,stop_loss (-65.0%); stop_loss (-52.5%),closed
+60,lab0060_s207_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-08-05,False,,0.0,-65.71,-65.71,-65.71,-65.71,-46.0,"OXY,T",S207,reconcile_fill,closed
+61,lab0061_s207_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,2,1,2026-08-05,False,,0.0,-59.33,-59.33,-51.52,-67.14,-64.0,"OXY,T,XOM",S207,stop_loss (-65.0%); stop_loss (-52.5%),closed
 62,lab0062_s207_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,2,0,2026-08-04,False,,0.0,-59.78,-59.78,-54.29,-65.28,-66.0,"OXY,XOM",S207,stop_loss (-52.5%); reconcile_fill,closed
 63,lab0063_s207_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
 64,lab0064_s208_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
@@ -182,7 +182,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 180,lab0180_s217_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-04,False,,0.0,-58.82,-58.82,-58.82,-58.82,-20.0,RBLX,S217,stop_loss (-57.6%),closed
 181,lab0181_s217_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-04,False,,0.0,-52.94,-52.94,-52.94,-52.94,-18.0,RBLX,S217,stop_loss (-51.5%),closed
 182,lab0182_s217_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,1,2026-08-04,False,,0.0,-43.75,-43.75,-43.75,-43.75,-14.0,RBLX,S217,stop_loss (-51.5%),closed
-183,lab0183_s217_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,1,2026-08-04,False,,0.0,-68.75,-68.75,-68.75,-68.75,-22.0,RBLX,S217,stop_loss (-69.7%),closed
+183,lab0183_s217_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,2,0,2026-08-04,False,,0.0,-68.75,-68.75,-68.75,-68.75,-44.0,RBLX,S217,stop_loss (-69.7%); reconcile_fill,closed
 184,lab0184_s217_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
 185,lab0185_s217_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
 186,lab0186_s217_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -859,8 +859,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 857,lab0857_s408_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
 858,lab0858_s408_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,DKNG,S408,,entered_no_exit
 859,lab0859_s408_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,DKNG,S408,,entered_no_exit
-860,lab0860_s408_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,3,1,2026-08-04,False,,66.7,860.0,1188.89,1446.67,-55.56,421.0,"NKE,NVDA",S408,reconcile_fill; stop_loss (-52.9%); reconcile_fill,closed
-861,lab0861_s408_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,1,2026-08-04,False,,100.0,806.67,806.67,806.67,806.67,121.0,NVDA,S408,take_profit (+586.5%),closed
+860,lab0860_s408_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,4,1,2026-08-05,False,,50.0,631.11,566.67,1446.67,-55.56,411.0,"DKNG,NKE,NVDA",S408,reconcile_fill; stop_loss (-52.9%); reconcile_fill…,closed
+861,lab0861_s408_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,2,1,2026-08-05,False,,100.0,731.12,731.12,806.67,655.56,239.0,"DKNG,NKE,NVDA",S408,take_profit (+586.5%); reconcile_fill,closed
 862,lab0862_s408_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
 863,lab0863_s408_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
 864,lab0864_s408_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
