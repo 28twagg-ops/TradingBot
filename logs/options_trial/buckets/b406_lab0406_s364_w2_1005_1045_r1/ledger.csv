@@ -11,3 +11,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05 14:32:19.976083+00:00,entry,406,lab0406_s364_w2_1005_1045_r1,S364,3bfd3b69f45f,DKNG,DKNG260814C00024500,1,0.6,0.6,60.0,,,,-0.01,,0.75,-0.75,0.14035087719298237,RB gap -3.8% reclaim,e8f50e62-7200-4a28-aee1-8d0338f5101b
 2026-08-05 14:32:19.976083+00:00,entry,406,lab0406_s364_w2_1005_1045_r1,S364,3bfd3b69f45f,DKNG,DKNG260814C00024500,1,0.6,0.6,60.0,,,,-0.01,,0.5,-0.5,,,e8f50e62-7200-4a28-aee1-8d0338f5101b
 2026-08-04 14:17:53.910532+00:00,entry,406,lab0406_s364_w2_1005_1045_r1,S364,fb876c5cfcc5,AMZN,AMZN260810C00300000,1,0.45,0.45,45.0,,,,-0.01,,0.5,-0.5,,,db4ca122-cb49-4f13-9baa-3b86321b4ddb
+2026-08-05T18:15:57Z,reconcile,406,lab0406_s364_w2_1005_1045_r1,S364,3bfd3b69f45f,DKNG,DKNG260814C00024500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
