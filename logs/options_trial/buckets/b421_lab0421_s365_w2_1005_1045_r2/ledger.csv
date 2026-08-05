@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-08-04 14:15:08.629509+00:00,entry,421,lab0421_s365_w2_1005_1045_r2,S365,bbf9db0f84e1,NKE,NKE260821C00044000,1,0.6,0.6,60.0,,,,-0.01,,0.5,-0.5,,,b8d0b5a6-c7f0-4d25-b499-219ee5c24832
 2026-08-04 14:15:08.629509+00:00,entry,421,lab0421_s365_w2_1005_1045_r2,S365,bbf9db0f84e1,NKE,NKE260821C00044000,1,0.6,0.6,60.0,,,,-0.01,,0.5,-0.5,,,b8d0b5a6-c7f0-4d25-b499-219ee5c24832
+2026-08-04 14:15:08.629509+00:00,entry,421,lab0421_s365_w2_1005_1045_r2,S365,bbf9db0f84e1,NKE,NKE260821C00044000,1,0.6,0.6,60.0,,,,-0.01,,0.5,-0.5,,,b8d0b5a6-c7f0-4d25-b499-219ee5c24832

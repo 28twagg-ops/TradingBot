@@ -51,4 +51,9 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-03 15:35:50.226019+00:00,exit,0,orphan_reconcile,ORPHAN,c6df1ed90b93,AMZN,AMZN260805C00290000,1,,0.16,26.76,-40.2,-10.76,reconcile_fill,,-0.01,0.5,-0.5,,,6ff864d6-99bb-491c-a865-4ed7efd803e8
 2026-08-04T17:40:51Z,reconcile,0,orphan_reconcile,ORPHAN,a61f8143b499,META,META260807C00630000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-04 17:36:26.850953+00:00,exit,0,orphan_reconcile,ORPHAN,9904d193bdc7,NKE,NKE260807C00042000,1,,1.02,64.1,59.13,37.9,take_profit (+61.7%),,-0.01,0.5,-0.5,,,f1762111-aeae-4485-b9a2-1cd9baba8190
+2026-08-05T14:01:15Z,reconcile,0,orphan_reconcile,ORPHAN,68bdcedb58bf,AMZN,AMZN260807C00305000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-05T14:01:16Z,reconcile,0,orphan_reconcile,ORPHAN,edbee006e808,RBLX,RBLX260807C00039500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-05 13:40:03.091825+00:00,exit,0,orphan_reconcile,ORPHAN,9904d193bdc7,NKE,NKE260807C00042000,1,,0.15,64.1,-76.6,-49.1,reconcile_fill,,-0.01,0.5,-0.5,,,7e111d82-24c5-4fde-a473-5f6c35cdee17
+2026-08-05 13:39:52.936163+00:00,exit,0,orphan_reconcile,ORPHAN,cfe874780e99,RBLX,RBLX260807C00040000,1,,0.06,33.0,-81.82,-27.0,reconcile_fill,,-0.01,0.5,-0.5,,,d6c1ea13-116f-42ab-83da-6f0c14ec5198
 2026-08-04 13:44:54.622789+00:00,exit,0,orphan_reconcile,ORPHAN,8223917270ff,NKE,NKE260807C00043000,1,,0.08,23.5,-65.96,-15.5,reconcile_fill,,-0.01,0.5,-0.5,,,bc804d19-cf72-4cfa-9ae4-70f41056ff53
+2026-08-05 14:01:27.478922+00:00,exit,0,orphan_reconcile,ORPHAN,73452d4fd996,AMZN,AMZN260805C00290000,3,,0.01,80.27,-96.26,-77.27,stop_loss (-96.3%),,-0.01,0.5,-0.5,,,70186e4c-4899-4f5a-a501-f42b565a3a0c
