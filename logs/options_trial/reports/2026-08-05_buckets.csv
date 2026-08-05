@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,8,18,2026-07-27,True,9,0.0,-71.53,-72.23,-50.59,-96.26,-305.39,"AMZN,DKNG,NKE,OXY,RBLX,SMCI,XOM",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-96.3%)…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,9,17,2026-07-27,True,9,0.0,-69.42,-67.87,-50.59,-96.26,-336.39,"AMZN,DKNG,NKE,OXY,RBLX,SMCI,XOM",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-96.3%)…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -110,7 +110,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 108,lab0108_s212_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-08-05,False,,0.0,-98.18,-98.18,-98.18,-98.18,-54.0,"QQQ,UBER",S212,reconcile_fill,closed
 109,lab0109_s212_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-08-05,False,,0.0,-98.18,-98.18,-98.18,-98.18,-54.0,"QQQ,UBER",S212,stop_loss (-100.0%),closed
 110,lab0110_s212_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-08-05,False,,0.0,-74.58,-74.58,-74.58,-74.58,-44.0,"QQQ,T",S212,reconcile_fill,closed
-111,lab0111_s212_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-08-05,False,,0.0,-66.1,-66.1,-66.1,-66.1,-39.0,"QQQ,T",S212,stop_loss (-68.3%),closed
+111,lab0111_s212_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-08-05,False,,0.0,-60.25,-60.25,-54.41,-66.1,-76.0,"QQQ,T",S212,stop_loss (-68.3%); stop_loss (-55.9%),closed
 112,lab0112_s212_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
 113,lab0113_s212_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-04,False,,0.0,-97.87,-97.87,-97.87,-97.87,-46.0,UBER,S212,stop_loss (-100.0%),closed
 114,lab0114_s212_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,2,2026-08-04,False,,,,,,,0,,,,open
@@ -297,7 +297,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 295,lab0295_s352_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
 296,lab0296_s353_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
 297,lab0297_s353_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
-298,lab0298_s353_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
+298,lab0298_s353_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,UBER,S353,,entered_no_exit
 299,lab0299_s353_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,2,2026-08-04,False,,,,,,,0,,,,open
 300,lab0300_s353_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
 301,lab0301_s353_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
@@ -345,7 +345,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 343,lab0343_s358_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 344,lab0344_s359_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-05,False,,0.0,-68.42,-68.42,-68.42,-68.42,-39.0,AMD,S359,stop_loss (-66.7%),closed
 345,lab0345_s359_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-05,False,,0.0,-63.16,-63.16,-63.16,-63.16,-36.0,AMD,S359,stop_loss (-66.7%),closed
-346,lab0346_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,AMD,S359,,entered_no_exit
+346,lab0346_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-05,False,,0.0,-80.77,-80.77,-80.77,-80.77,-42.0,AMD,S359,stop_loss (-73.6%),closed
 347,lab0347_s359_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-05,False,,0.0,-71.15,-71.15,-71.15,-71.15,-37.0,AMD,S359,stop_loss (-69.5%),closed
 348,lab0348_s360_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,AMD,S360,,entered_no_exit
 349,lab0349_s360_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,AMD,S360,,entered_no_exit
@@ -830,7 +830,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 828,lab0828_s406_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,DKNG,S406,,entered_no_exit
 829,lab0829_s406_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,DKNG,S406,,entered_no_exit
 830,lab0830_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-08-05,False,,0.0,-65.52,-65.52,-65.52,-65.52,-19.0,"AMZN,DKNG",S406,stop_loss (-67.6%),closed
-831,lab0831_s406_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-08-05,False,,0.0,-58.62,-58.62,-58.62,-58.62,-17.0,"AMD,AMZN",S406,stop_loss (-67.6%),closed
+831,lab0831_s406_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-08-05,False,,0.0,-57.09,-57.09,-55.56,-58.62,-42.0,"AMD,AMZN",S406,stop_loss (-67.6%); stop_loss (-53.3%),closed
 832,lab0832_s406_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-04,False,,100.0,857.45,857.45,857.45,857.45,403.0,TTD,S406,reconcile_fill,closed
 833,lab0833_s406_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-04,False,,100.0,1457.69,1457.69,1457.69,1457.69,379.0,NVDA,S406,take_profit (+1379.5%),closed
 834,lab0834_s406_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
@@ -843,7 +843,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 841,lab0841_s406_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 842,lab0842_s407_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
 843,lab0843_s407_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
-844,lab0844_s407_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-08-05,False,,0.0,-61.54,-61.54,-61.54,-61.54,-8.0,"AMD,AMZN",S407,stop_loss (-63.4%),closed
+844,lab0844_s407_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-08-05,False,,0.0,-57.8,-57.8,-54.05,-61.54,-28.0,"AMD,AMZN",S407,stop_loss (-63.4%); stop_loss (-54.1%),closed
 845,lab0845_s407_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,1,2026-08-04,False,,0.0,-61.54,-61.54,-61.54,-61.54,-8.0,AMZN,S407,stop_loss (-63.4%),closed
 846,lab0846_s407_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
 847,lab0847_s407_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
