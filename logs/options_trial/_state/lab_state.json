@@ -2182,26 +2182,6 @@
       "entry_order_id": "e8f50e62-7200-4a28-aee1-8d0338f5101b"
     },
     {
-      "lot_id": "e4d28873c647",
-      "bucket_id": 859,
-      "profile_name": "lab0859_s408_w2_1005_1045_r2",
-      "strategy_id": "S408",
-      "occ_symbol": "DKNG260807C00026500",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 14.000000000000002,
-      "entry_price": 0.14,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-05T14:37:25.682100+00:00",
-      "entry_order_id": "702e22b4-1be0-44e5-b7c6-419e2ed86a23"
-    },
-    {
       "lot_id": "e5595a405a33",
       "bucket_id": 858,
       "profile_name": "lab0858_s408_w2_1005_1045_r1",
@@ -4565,16 +4545,6 @@
       "submitted": "2026-08-05T11:20:58"
     },
     {
-      "order_id": "1daa243c-3d4f-4a2c-aa30-19df7ff815ce",
-      "lot_id": "e4d28873c647",
-      "bucket_id": 859,
-      "strategy_id": "S408",
-      "occ_symbol": "DKNG260807C00026500",
-      "qty": 1,
-      "reason": "stop_loss (-64.3%)",
-      "submitted": "2026-08-05T11:35:14"
-    },
-    {
       "order_id": "c7f2017b-32bf-48f5-b7c7-d6db8e916387",
       "lot_id": "962eb7cc2d81",
       "bucket_id": 0,
@@ -4603,6 +4573,16 @@
       "qty": 1,
       "reason": "stop_loss (-53.3%)",
       "submitted": "2026-08-05T11:56:09"
+    },
+    {
+      "order_id": "860dfaa3-8cf3-4b19-b71e-70f4ba129e80",
+      "lot_id": "e5595a405a33",
+      "bucket_id": 858,
+      "strategy_id": "S408",
+      "occ_symbol": "DKNG260807C00026500",
+      "qty": 1,
+      "reason": "stop_loss (-64.3%)",
+      "submitted": "2026-08-05T12:01:31"
     }
   ],
   "bucket_open_premium": {
@@ -4707,7 +4687,6 @@
     "b898": 72.0,
     "b407": 60.0,
     "b406": 60.0,
-    "b859": 14.000000000000002,
     "b858": 14.000000000000002,
     "b917": 56.00000000000001,
     "b818": 38.0,
@@ -5366,7 +5345,8 @@
     "5d9bc38e-802d-4d9b-8f36-cfb16521733e",
     "70a25623-dcda-4977-bef3-8ef09477c88c",
     "7fb481af-cca3-4b2f-9fa3-08958bbbf2b5",
-    "95d69e7a-15b6-4cda-b1c6-c95eed42ac3d"
+    "95d69e7a-15b6-4cda-b1c6-c95eed42ac3d",
+    "1daa243c-3d4f-4a2c-aa30-19df7ff815ce"
   ],
   "submitted_today": 114,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
