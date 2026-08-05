@@ -4922,8 +4922,8 @@
   {
     "bucket_id": 820,
     "profile": "lab0820_s405_w4_1120_1135_r1",
-    "open_premium": 29.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 821,
