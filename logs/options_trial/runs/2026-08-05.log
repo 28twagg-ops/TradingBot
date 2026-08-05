@@ -39643,19 +39643,19 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-08-05.log
 elapsed=1.3s reconcile=0.63s
 
-=== 17:00:10 ET — after hours (exit summary) [elapsed=1.4s reconcile=0.74s] ===
-=== options_morning_bot (PAPER) 2026-08-05T17:00:10.418714-04:00 ===
+=== 17:01:14 ET — after hours (exit summary) [elapsed=1.5s reconcile=0.62s] ===
+=== options_morning_bot (PAPER) 2026-08-05T17:01:14.490966-04:00 ===
 
 [Run context]
-After hours (17:00 ET) — exit summary only.
-Paper auth OK — equity $143271.34, account PA36KS87UPRS
+After hours (17:01 ET) — exit summary only.
+Paper auth OK — equity $143305.42, account PA36KS87UPRS
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1
 
 [Exit summary]
 ========================================================
 OPTIONS EXIT SUMMARY — 2026-08-05
 ========================================================
-Account equity: $143,271.34
+Account equity: $143,305.42
 Open broker positions: 29  unrealized $-4,056.18
 
 Today's closed trades
@@ -39747,7 +39747,7 @@ Note: $-594.81 realized in orphan_reconcile (virtual/broker tracking drift — n
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $143,271.34
+Account equity: $143,305.42
 Active buckets: 1024 of 1024 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
@@ -40118,7 +40118,7 @@ Per-bucket exit stats (all time)
 |  OPTIONS BOT SUMMARY                                                   |
 +------------------------------------------------------------------------+
 |  Mode                          after_hours                             |
-|  Equity                        $143,271.34                             |
+|  Equity                        $143,305.42                             |
 |  Signals this run              0                                       |
 |  Orders submitted (session)    114                                     |
 |  Orders filled today (ledger)  180                                     |
@@ -40177,5 +40177,5 @@ Per-bucket exit stats (all time)
 |  ... 21 more position(s)                                               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-08-05.log
-elapsed=1.4s reconcile=0.74s
+elapsed=1.5s reconcile=0.62s
 
