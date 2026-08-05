@@ -58,3 +58,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-04 13:44:54.622789+00:00,exit,0,orphan_reconcile,ORPHAN,8223917270ff,NKE,NKE260807C00043000,1,,0.08,23.5,-65.96,-15.5,reconcile_fill,,-0.01,0.5,-0.5,,,bc804d19-cf72-4cfa-9ae4-70f41056ff53
 2026-08-05 14:01:27.478922+00:00,exit,0,orphan_reconcile,ORPHAN,73452d4fd996,AMZN,AMZN260805C00290000,3,,0.01,80.27,-96.26,-77.27,stop_loss (-96.3%),,-0.01,0.5,-0.5,,,70186e4c-4899-4f5a-a501-f42b565a3a0c
 2026-08-04 15:36:00.935443+00:00,exit,0,orphan_reconcile,ORPHAN,6a620ea1b5c4,CVNA,CVNA260807C00075000,1,,0.06,25.0,-76.0,-19.0,reconcile_fill,,-0.01,0.5,-0.5,,,69e68b17-338c-4c35-ab49-663b9cb730d6
+2026-08-05 14:11:27.364432+00:00,exit,0,orphan_reconcile,ORPHAN,1e47ca03623c,SMCI,SMCI260807P00027500,1,,0.09,46.0,-80.43,-37.0,stop_loss (-80.4%),,-0.01,0.5,-0.5,,,5fa50eab-b3c5-424e-a52e-000714698270
+2026-08-05 14:11:17.232081+00:00,exit,0,orphan_reconcile,ORPHAN,f750daf33a54,DKNG,DKNG260807C00025500,1,,0.21,42.5,-50.59,-21.5,stop_loss (-52.9%),,-0.01,0.5,-0.5,,,133f530d-6f6a-479d-ab26-093d8b4e464a

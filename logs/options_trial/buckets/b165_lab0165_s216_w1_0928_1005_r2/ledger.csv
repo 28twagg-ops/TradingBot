@@ -1,2 +1,2 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
-2026-08-05 14:08:56.155099+00:00,entry,165,lab0165_s216_w1_0928_1005_r2,S216,3a5b7f07325c,META,META260807C00637500,1,0.6,0.6,60.0,,,,-0.01,,0.75,-0.75,0.0677966101694916,RSI crossed 30: 26.2 -> 31.0,918b5eaa-f96d-4dbd-a089-971ac0d1db62
+2026-08-05 14:08:56.155099+00:00,entry,165,lab0165_s216_w1_0928_1005_r2,S216,663f29e976d5,META,META260807C00637500,1,0.6,0.6,60.0,,,,-0.01,,0.75,-0.75,0.0677966101694916,RSI crossed 30: 26.2 -> 31.0,918b5eaa-f96d-4dbd-a089-971ac0d1db62
