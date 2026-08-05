@@ -19,7 +19,7 @@ S401,Any_Gap_Down_Small,3d,watch,promising mid-sample — need more exits,49,23,
 S405,GapDown_OTM3,3d,watch,fat left tail (p10 < -45%),47,21,14,7,48.78,53.06,-57.14,-41.46,142.22,500.0,3,5,31,7,3,52.4
 S363,RubberBand_5DTE,5d,watch,building sample (8-19 exits),24,10,10,0,47.39,52.94,7.14,9.52,103.55,150.0,2,2,24,10,2,60.0
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),53,21,15,6,139.19,51.61,-61.29,0.0,403.12,682.0,4,9,29,19,5,57.1
-S408,RubberBand_ITM1,3d,watch,building sample (8-19 exits),36,12,8,4,216.49,48.89,-5.62,0.0,736.0,406.0,3,2,36,12,3,66.7
+S408,RubberBand_ITM1,3d,watch,building sample (8-19 exits),38,12,8,4,216.49,48.89,-5.62,0.0,736.0,406.0,3,2,38,12,3,66.7
 S356,GapDown_14DTE,14d,watch,insufficient sample (<8 exits),28,4,4,0,48.27,48.27,37.93,37.93,58.62,112.0,2,5,16,2,1,100.0
 S357,GapDown_21DTE,21d,watch,insufficient sample (<8 exits),22,5,5,0,49.26,47.06,47.06,47.06,53.66,164.0,3,5,10,3,1,100.0
 S210,MA_Cross_8_21,3d ATM MA cross 8/21,watch,building sample (8-19 exits),56,16,13,3,28.28,32.13,-7.45,12.16,67.7,116.0,2,9,41,16,3,50.0
@@ -90,7 +90,7 @@ S417,BBSqueeze_OTM1,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,
 S418,BBSqueeze_OTM2,7d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S419,BBSqueeze_OTM3,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S211,MA_Cross_21_50,3d ATM MA cross 21/50,watch,early sample with non-positive median,54,16,3,13,-5.06,-17.14,-48.81,-44.44,88.91,-72.0,2,9,44,16,2,75.0
-S359,RubberBand_0DTE,0d,watch,early sample with non-positive median,26,13,4,9,3.54,-39.29,-68.93,-46.67,127.02,-64.0,3,2,26,13,3,61.5
+S359,RubberBand_0DTE,0d,watch,early sample with non-positive median,26,15,4,11,-6.23,-39.29,-70.84,-65.79,111.17,-140.0,3,2,26,15,3,53.3
 S360,RubberBand_1DTE,1d,watch,early sample with non-positive median,38,18,3,15,-35.38,-47.41,-70.6,-55.36,20.26,-203.0,4,5,34,14,4,44.4
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),12,5,0,5,-51.11,-50.0,-66.67,-66.67,-33.33,-30.0,1,5,0,0,1,100.0
 S353,GapDown_3DTE,3d,watch,early sample with non-positive median,38,12,4,8,-11.81,-60.23,-79.49,-76.88,119.21,-99.0,3,5,22,8,3,50.0

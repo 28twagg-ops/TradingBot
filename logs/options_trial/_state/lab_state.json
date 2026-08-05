@@ -3142,26 +3142,6 @@
       "entry_order_id": "be5cf337-c3ea-4e94-aa8e-200c3ff2a648"
     },
     {
-      "lot_id": "a5dd06dd52b3",
-      "bucket_id": 347,
-      "profile_name": "lab0347_s359_w2_1005_1045_r2",
-      "strategy_id": "S359",
-      "occ_symbol": "AMD260805C00520000",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 52.0,
-      "entry_price": 0.52,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-05T14:12:50.154509+00:00",
-      "entry_order_id": "2bed0e3f-49f2-4da2-98c4-34e6764ba0e4"
-    },
-    {
       "lot_id": "3a95994959b5",
       "bucket_id": 346,
       "profile_name": "lab0346_s359_w2_1005_1045_r1",
@@ -3340,26 +3320,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-05T14:15:52.671613+00:00",
       "entry_order_id": "78ed93cb-5e63-4a7d-92f8-804b9374f457"
-    },
-    {
-      "lot_id": "8c8ec05d5d93",
-      "bucket_id": 344,
-      "profile_name": "lab0344_s359_w1_0928_1005_r1",
-      "strategy_id": "S359",
-      "occ_symbol": "AMD260805C00517500",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 56.99999999999999,
-      "entry_price": 0.57,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-05T14:15:52.757920+00:00",
-      "entry_order_id": "f8387267-3194-4977-a42d-286932670bce"
     },
     {
       "lot_id": "b3d9768243fc",
@@ -3800,41 +3760,49 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-05T14:32:46.989196+00:00",
       "entry_order_id": "e8f50e62-7200-4a28-aee1-8d0338f5101b"
+    },
+    {
+      "lot_id": "e4d28873c647",
+      "bucket_id": 859,
+      "profile_name": "lab0859_s408_w2_1005_1045_r2",
+      "strategy_id": "S408",
+      "occ_symbol": "DKNG260807C00026500",
+      "underlying": "DKNG",
+      "qty": 1,
+      "entry_cost": 14.000000000000002,
+      "entry_price": 0.14,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-05T14:37:25.682100+00:00",
+      "entry_order_id": "702e22b4-1be0-44e5-b7c6-419e2ed86a23"
+    },
+    {
+      "lot_id": "e5595a405a33",
+      "bucket_id": 858,
+      "profile_name": "lab0858_s408_w2_1005_1045_r1",
+      "strategy_id": "S408",
+      "occ_symbol": "DKNG260807C00026500",
+      "underlying": "DKNG",
+      "qty": 1,
+      "entry_cost": 14.000000000000002,
+      "entry_price": 0.14,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-05T14:37:25.724270+00:00",
+      "entry_order_id": "4188f5e9-85cc-4d04-ae8a-7495abd0ddad"
     }
   ],
   "pending_orders": [
-    {
-      "order_id": "4188f5e9-85cc-4d04-ae8a-7495abd0ddad",
-      "bucket_id": 858,
-      "strategy_id": "S408",
-      "occ_symbol": "DKNG260807C00026500",
-      "underlying": "DKNG",
-      "qty": 1,
-      "limit": 0.14,
-      "profile_name": "lab0858_s408_w2_1005_1045_r1",
-      "submitted": "2026-08-05",
-      "detail": "RB gap -3.8% reclaim",
-      "spread_frac": 0.14285714285714277,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "702e22b4-1be0-44e5-b7c6-419e2ed86a23",
-      "bucket_id": 859,
-      "strategy_id": "S408",
-      "occ_symbol": "DKNG260807C00026500",
-      "underlying": "DKNG",
-      "qty": 1,
-      "limit": 0.14,
-      "profile_name": "lab0859_s408_w2_1005_1045_r2",
-      "submitted": "2026-08-05",
-      "detail": "RB gap -3.8% reclaim",
-      "spread_frac": 0.14285714285714277,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
     {
       "order_id": "faf679dc-b356-4c76-bb18-a88c0686d276",
       "bucket_id": 298,
@@ -3922,6 +3890,26 @@
       "qty": 1,
       "reason": "stop_loss (-57.6%)",
       "submitted": "2026-08-05T10:31:24"
+    },
+    {
+      "order_id": "8db5a7ed-9469-49b4-8a3a-42cc1ed765c7",
+      "lot_id": "3f0cb7c81977",
+      "bucket_id": 306,
+      "strategy_id": "S354",
+      "occ_symbol": "AMZN260810C00300000",
+      "qty": 1,
+      "reason": "stop_loss (-75.2%)",
+      "submitted": "2026-08-05T10:35:57"
+    },
+    {
+      "order_id": "8e54bce7-dbda-4860-b2e7-4f378327aea4",
+      "lot_id": "b72a5b5726e9",
+      "bucket_id": 280,
+      "strategy_id": "S351",
+      "occ_symbol": "AMD260805C00525000",
+      "qty": 1,
+      "reason": "stop_loss (-77.3%)",
+      "submitted": "2026-08-05T10:36:12"
     }
   ],
   "bucket_open_premium": {
@@ -4061,7 +4049,6 @@
     "b164": 60.0,
     "b786": 30.0,
     "b364": 45.0,
-    "b347": 52.0,
     "b346": 52.0,
     "b314": 41.0,
     "b27": 49.0,
@@ -4070,7 +4057,6 @@
     "b794": 52.0,
     "b349": 45.0,
     "b348": 45.0,
-    "b344": 56.99999999999999,
     "b111": 68.0,
     "b110": 68.0,
     "b306": 45.0,
@@ -4084,7 +4070,9 @@
     "b830": 31.0,
     "b315": 35.0,
     "b407": 60.0,
-    "b406": 60.0
+    "b406": 60.0,
+    "b859": 14.000000000000002,
+    "b858": 14.000000000000002
   },
   "session_date": "2026-08-05",
   "entries_locked": [
@@ -4626,7 +4614,11 @@
     "1fc3cec6-2d6e-43c0-bc87-ae3c97b35495",
     "176e40bc-0eed-420d-998d-f607c57c3e75",
     "e8f50e62-7200-4a28-aee1-8d0338f5101b",
-    "b665887f-3894-42ed-b6ba-ee44bde24ffb"
+    "b665887f-3894-42ed-b6ba-ee44bde24ffb",
+    "7bfd2115-ffea-4bd1-a756-65e2392b2a12",
+    "76efd102-9c07-4d8e-9768-00c5e92d8708",
+    "702e22b4-1be0-44e5-b7c6-419e2ed86a23",
+    "4188f5e9-85cc-4d04-ae8a-7495abd0ddad"
   ],
   "submitted_today": 56,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
