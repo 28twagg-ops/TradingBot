@@ -1,6 +1,6 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
-S354,GapDown_5DTE,5d,watch,building sample (8-19 exits),36,19,14,5,91.36,116.67,-64.0,21.43,184.17,893.0,3,5,20,5,3,42.1
-S355,GapDown_7DTE,7d,watch,building sample (8-19 exits),25,13,10,3,111.11,95.45,-65.34,85.11,273.04,644.0,2,5,9,3,2,61.5
+S354,GapDown_5DTE,5d,watch,fat left tail (p10 < -45%),36,20,14,6,83.24,116.67,-64.66,-51.16,179.58,861.0,3,5,20,6,3,40.0
+S355,GapDown_7DTE,7d,watch,building sample (8-19 exits),26,13,10,3,111.11,95.45,-65.34,85.11,273.04,644.0,2,5,10,3,2,61.5
 S352,GapDown_2DTE,2d,watch,building sample (8-19 exits),38,10,9,1,100.22,91.88,28.52,48.81,209.16,290.0,3,5,22,3,2,50.0
 S407,RubberBand_ITM2,3d,watch,building sample (8-19 exits),43,16,10,6,124.76,84.95,-95.92,-62.82,434.62,268.0,4,5,39,12,4,43.8
 S361,RubberBand_2DTE,2d,watch,building sample (8-19 exits),42,13,11,2,75.01,82.76,-49.78,44.83,166.31,237.0,2,5,38,13,3,69.2
@@ -9,7 +9,7 @@ S399,GapDown_OTM1,3d,watch,fat left tail (p10 < -45%),62,22,14,8,47.19,74.76,-67
 S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),46,22,16,6,161.95,72.81,-55.4,11.0,178.95,1093.0,4,5,42,18,4,59.1
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,watch,building sample (8-19 exits),50,19,13,6,148.59,69.57,-56.21,-48.34,366.71,705.0,4,9,32,18,3,47.4
 S412,RubberBand_OTM3,3d,watch,building sample (8-19 exits),41,11,10,1,63.8,68.18,34.04,40.34,92.59,239.0,2,5,37,11,3,54.5
-S364,RubberBand_7DTE,7d,watch,building sample (8-19 exits),33,16,16,0,101.46,68.12,56.79,62.73,211.11,626.0,3,5,29,12,2,75.0
+S364,RubberBand_7DTE,7d,watch,building sample (8-19 exits),35,16,16,0,101.46,68.12,56.79,62.73,211.11,626.0,3,5,31,12,2,75.0
 S398,GapDown_ATM,3d,watch,building sample (8-19 exits),45,17,14,3,96.81,66.07,-34.63,48.98,230.1,854.0,2,5,29,3,3,47.1
 S397,GapDown_ITM1,3d,watch,building sample (8-19 exits),40,9,9,0,76.85,61.9,40.0,43.66,123.43,433.0,1,5,24,0,2,77.8
 S362,RubberBand_3DTE,3d,watch,promising mid-sample — need more exits,49,21,21,0,165.59,60.47,13.04,23.68,122.86,1263.0,3,5,45,21,3,38.1
@@ -90,8 +90,8 @@ S417,BBSqueeze_OTM1,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,
 S418,BBSqueeze_OTM2,7d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S419,BBSqueeze_OTM3,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S211,MA_Cross_21_50,3d ATM MA cross 21/50,watch,early sample with non-positive median,54,16,3,13,-5.06,-17.14,-48.81,-44.44,88.91,-72.0,2,9,44,16,2,75.0
-S359,RubberBand_0DTE,0d,watch,early sample with non-positive median,26,12,4,8,9.1,-36.31,-68.0,-46.67,134.94,-28.0,2,2,26,12,2,66.7
-S360,RubberBand_1DTE,1d,watch,early sample with non-positive median,38,17,3,14,-33.28,-46.67,-61.99,-54.76,25.16,-166.0,4,5,34,13,3,47.1
+S359,RubberBand_0DTE,0d,watch,early sample with non-positive median,26,13,4,9,3.54,-39.29,-68.93,-46.67,127.02,-64.0,3,2,26,13,3,61.5
+S360,RubberBand_1DTE,1d,watch,early sample with non-positive median,38,18,3,15,-35.38,-47.41,-70.6,-55.36,20.26,-203.0,4,5,34,14,4,44.4
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),12,5,0,5,-51.11,-50.0,-66.67,-66.67,-33.33,-30.0,1,5,0,0,1,100.0
 S353,GapDown_3DTE,3d,watch,early sample with non-positive median,38,12,4,8,-11.81,-60.23,-79.49,-76.88,119.21,-99.0,3,5,22,8,3,50.0
 S202,GapDown_Monster,3d ATM gap-monster,watch,insufficient sample (<8 exits),30,6,0,6,-60.04,-64.75,-70.52,-66.39,-44.87,-133.0,3,8,0,2,2,66.7
@@ -100,7 +100,7 @@ S216,RSI_Oversold_Cross,3d ATM RSI x30,watch,insufficient sample (<8 exits),36,5
 S174,RubberBand long call EOD,RubberBand (dropped),drop,manually paused — excluded from new entries & reflected P&L,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,30,0,0,6,50.4
 S173,MomReversal long call,MomRev,drop,manually paused — excluded from new entries & reflected P&L,1625,415,154,261,15.19,-31.51,-77.18,-62.95,101.9,62.64,8,30,0,0,12,27.5
 S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1428,245,73,172,-6.01,-38.18,-63.39,-54.55,81.82,-1828.78,7,30,0,0,12,26.1
-S351,GapDown_1DTE,1d,drop,non-positive median return,63,26,8,18,14.5,-46.23,-91.99,-62.5,184.9,114.0,4,5,47,15,4,42.3
+S351,GapDown_1DTE,1d,drop,non-positive median return,63,27,8,19,11.19,-48.72,-91.93,-68.75,182.3,81.0,4,5,47,16,4,40.7
 S207,GapDown_AtSupport,3d ATM gap-support,drop,non-positive median return,44,22,2,20,-41.17,-50.76,-64.75,-58.76,-6.97,-580.0,2,9,32,22,2,68.2
 S203,GapUp_Fade,3d ATM gap-up fade (put),drop,non-positive median return,54,20,0,20,-59.5,-54.79,-76.94,-66.1,-49.02,-591.0,4,9,33,16,2,70.0
 S212,MA_Bounce_50,3d ATM MA bounce 50,drop,non-positive median return,60,23,0,23,-70.8,-71.43,-97.94,-74.55,-50.0,-862.0,3,9,30,23,3,69.6
