@@ -3071,3 +3071,54 @@ Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, 
 ### Options bot full output
 
 ```text
+
+## Run 20260805T135615Z
+
+- UTC timestamp: `20260805T135615Z`
+- GitHub run: [#6114](https://github.com/28twagg-ops/TradingBot/actions/runs/31012534512)
+- Run id: `31012534512`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-05T09:28:29.387466-04:00","date":"2026-08-05","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":52.5,"phases_s":{"reconcile":0.1,"cancel":0.02,"manage":5.62,"scan":46.39,"entries":0.02},"signals":0,"placed":0,"equity":146042.98,"open_positions":34,"pending_orders":0,"open_lots":201,"submitted_today":0,"filled_today":0,"unattributed_contracts":15,"top_signals":[],"github_run":"6108","github_run_id":"31010090105","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:56:16  INFO      Mode: morning_scan
+13:56:18  INFO        [positions] 5/5 (5 valid)
+13:56:18  INFO        SELL MARKET [urgent] COHR closed
+13:56:20  INFO        TX logged: SELL COHR  P&L -0.51%
+13:56:21  INFO        SELL LIMIT AMAT  qty=0.171548056  limit=$550.28  id=26e36e75-27b6-43a8-8fde-360ab3805a37
+13:56:51  INFO        SELL LIMIT filled AMAT (confirmed by position check)
+13:56:51  INFO        TX logged: SELL AMAT  P&L -0.33%
+13:56:51  INFO        Universe cache hit: 903 tickers (tickers_2026-08-05.json)
+13:56:53  INFO        [universe] 40/900 (40 valid)
+13:56:54  INFO        [universe] 80/900 (80 valid)
+13:56:56  INFO        [universe] 120/900 (120 valid)
+13:56:57  INFO        [universe] 160/900 (160 valid)
+13:56:58  INFO        [universe] 200/900 (199 valid)
+13:57:05  INFO        [universe] 240/900 (238 valid)
+13:57:22  INFO        [universe] 280/900 (278 valid)
+13:57:30  INFO        [universe] 320/900 (318 valid)
+13:57:40  INFO        [universe] 360/900 (358 valid)
+13:57:54  INFO        [universe] 400/900 (397 valid)
+13:58:04  INFO        [universe] 440/900 (437 valid)
+13:58:18  INFO        [universe] 480/900 (477 valid)
+13:58:28  INFO        [universe] 520/900 (517 valid)
+13:58:42  INFO        [universe] 560/900 (557 valid)
+13:58:52  INFO        [universe] 600/900 (597 valid)
+13:59:06  INFO        [universe] 640/900 (637 valid)
+13:59:16  INFO        [universe] 680/900 (677 valid)
+13:59:30  INFO        [universe] 720/900 (717 valid)
+13:59:40  INFO        [universe] 760/900 (757 valid)
+13:59:54  INFO        [universe] 800/900 (797 valid)
+14:00:05  INFO        [universe] 840/900 (836 valid)
+14:00:18  INFO        [universe] 880/900 (876 valid)
+```
+
+### Options bot full output
+
+```text
