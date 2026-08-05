@@ -1982,26 +1982,6 @@
       "entry_order_id": "89c07271-1f6e-4068-aece-15e546ae80f9"
     },
     {
-      "lot_id": "cfb21cf996c2",
-      "bucket_id": 829,
-      "profile_name": "lab0829_s406_w1_0928_1005_r2",
-      "strategy_id": "S406",
-      "occ_symbol": "DKNG260807C00025000",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 30.0,
-      "entry_price": 0.3,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-05T14:03:08.954409+00:00",
-      "entry_order_id": "ff57b0d1-8bc7-44bc-9244-f7a2b1bf293d"
-    },
-    {
       "lot_id": "9e9bfcb3de08",
       "bucket_id": 828,
       "profile_name": "lab0828_s406_w1_0928_1005_r1",
@@ -2862,26 +2842,6 @@
       "entry_order_id": "orphan:RBLX260807C00040000"
     },
     {
-      "lot_id": "e31c028b8cb1",
-      "bucket_id": 381,
-      "profile_name": "lab0381_s362_w3_1045_1120_r2",
-      "strategy_id": "S362",
-      "occ_symbol": "DKNG260807C00024500",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 38.0,
-      "entry_price": 0.38,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-05T15:20:47.871686+00:00",
-      "entry_order_id": "591bea9a-57a5-4b79-a98c-941716371bcc"
-    },
-    {
       "lot_id": "f508818f08bd",
       "bucket_id": 380,
       "profile_name": "lab0380_s362_w3_1045_1120_r1",
@@ -3200,26 +3160,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-05T15:20:51.830062+00:00",
       "entry_order_id": "5101766e-f70e-4690-82d2-88a23e3f7ab2"
-    },
-    {
-      "lot_id": "66cb7c4a8c7b",
-      "bucket_id": 195,
-      "profile_name": "lab0195_s218_w2_1005_1045_r2",
-      "strategy_id": "S218",
-      "occ_symbol": "UNH260807C00422500",
-      "underlying": "UNH",
-      "qty": 1,
-      "entry_cost": 69.0,
-      "entry_price": 0.69,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-05T15:20:51.875360+00:00",
-      "entry_order_id": "8c641385-ab75-4dd5-9ae9-f3f829db33b2"
     },
     {
       "lot_id": "ffd5731b2a5e",
@@ -4465,34 +4405,34 @@
       "submitted": "2026-08-05T12:10:47"
     },
     {
-      "order_id": "f2ec9750-eddb-4c13-a044-0137b7b95930",
-      "lot_id": "cfb21cf996c2",
-      "bucket_id": 829,
+      "order_id": "4ff43d5c-d06a-446a-9180-a5099a982ff7",
+      "lot_id": "72eb87116a2c",
+      "bucket_id": 818,
+      "strategy_id": "S405",
+      "occ_symbol": "UBER260807C00070000",
+      "qty": 1,
+      "reason": "stop_loss (-50.4%)",
+      "submitted": "2026-08-05T12:16:05"
+    },
+    {
+      "order_id": "a66cda30-74e2-4d43-8c3e-7d09c62f5229",
+      "lot_id": "b97766944d34",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "UNH260807C00422500",
+      "qty": 5,
+      "reason": "take_profit (+89.2%)",
+      "submitted": "2026-08-05T12:16:10"
+    },
+    {
+      "order_id": "9486f6ae-5ec0-4948-8687-4224f6463843",
+      "lot_id": "9e9bfcb3de08",
+      "bucket_id": 828,
       "strategy_id": "S406",
       "occ_symbol": "DKNG260807C00025000",
       "qty": 1,
       "reason": "stop_loss (-50.5%)",
-      "submitted": "2026-08-05T12:10:48"
-    },
-    {
-      "order_id": "5aa1c957-d083-463d-9004-41a2a28d38db",
-      "lot_id": "66cb7c4a8c7b",
-      "bucket_id": 195,
-      "strategy_id": "S218",
-      "occ_symbol": "UNH260807C00422500",
-      "qty": 1,
-      "reason": "take_profit (+61.5%)",
-      "submitted": "2026-08-05T12:10:52"
-    },
-    {
-      "order_id": "bd9cd6b6-a208-4655-8763-cd5a6cc8ad20",
-      "lot_id": "e31c028b8cb1",
-      "bucket_id": 381,
-      "strategy_id": "S362",
-      "occ_symbol": "DKNG260807C00024500",
-      "qty": 1,
-      "reason": "stop_loss (-56.9%)",
-      "submitted": "2026-08-05T12:10:53"
+      "submitted": "2026-08-05T12:16:10"
     }
   ],
   "bucket_open_premium": {
@@ -4588,7 +4528,6 @@
     "b94": 35.0,
     "b377": 69.0,
     "b376": 69.0,
-    "b829": 30.0,
     "b828": 30.0,
     "b25": 70.0,
     "b26": 50.0,
@@ -4625,7 +4564,6 @@
     "b280": 76.0,
     "b0": 1800.501,
     "b860": 22.0,
-    "b381": 38.0,
     "b380": 38.0,
     "b366": 38.0,
     "b353": 38.0,
@@ -4640,7 +4578,6 @@
     "b365": 45.0,
     "b167": 62.0,
     "b793": 15.0,
-    "b195": 69.0,
     "b820": 28.999999999999996,
     "b791": 28.999999999999996,
     "b790": 28.999999999999996,
@@ -5256,7 +5193,10 @@
     "960e1af0-ac99-4b39-a2aa-b74a9be1f18c",
     "3b34ed0b-f6ce-41d5-955a-19607d4aa58c",
     "dd23da3d-7fed-4f3e-82ff-cba5b5bc3021",
-    "f124f942-6d03-4fe9-8627-35a1dacdf51d"
+    "f124f942-6d03-4fe9-8627-35a1dacdf51d",
+    "bd9cd6b6-a208-4655-8763-cd5a6cc8ad20",
+    "5aa1c957-d083-463d-9004-41a2a28d38db",
+    "f2ec9750-eddb-4c13-a044-0137b7b95930"
   ],
   "submitted_today": 114,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
