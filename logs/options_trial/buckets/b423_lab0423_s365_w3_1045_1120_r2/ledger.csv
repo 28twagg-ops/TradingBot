@@ -1,3 +1,2 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-08-04 14:47:44.705345+00:00,entry,423,lab0423_s365_w3_1045_1120_r2,S365,20cb3e46cf8a,NKE,NKE260821C00044000,1,0.64,0.63,63.0,,,,-0.01,,0.5,-0.5,0.09677419354838718,RB gap -3.0% reclaim,795cf655-b9cb-4a18-b03b-7e5a9c2abf6e
-2026-08-04 14:47:44.705345+00:00,entry,423,lab0423_s365_w3_1045_1120_r2,S365,20cb3e46cf8a,NKE,NKE260821C00044000,1,0.63,0.63,63.0,,,,-0.01,,0.5,-0.5,,,795cf655-b9cb-4a18-b03b-7e5a9c2abf6e
