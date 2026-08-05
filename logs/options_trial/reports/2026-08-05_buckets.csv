@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,27,20,2026-07-27,True,9,11.1,-47.62,-66.2,145.57,-96.26,-577.01,"AAPL,AMZN,CVNA,DKNG,NKE,OXY,PLTR,QQQ,RBLX,SMCI,TSLA,TTD,UBER,UNH,XOM",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-96.3%)…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,29,17,2026-07-27,True,9,10.3,-45.9,-62.28,145.57,-96.26,-594.81,"AAPL,AMZN,CVNA,DKNG,NKE,OXY,PLTR,QQQ,RBLX,SMCI,TSLA,TTD,UBER,UNH,XOM",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-96.3%)…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -84,7 +84,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 82,lab0082_s210_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,3,1,2026-08-05,False,,0.0,-63.65,-71.05,-48.84,-71.05,-75.0,"AMZN,PLTR",S210,stop_loss (-70.5%); stop_loss (-51.1%); reconcile_fill,closed
 83,lab0083_s210_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,0,2026-08-05,False,,,,,,,0,PLTR,S210,,entered_no_exit
 84,lab0084_s210_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,PLTR,S210,,entered_no_exit
-85,lab0085_s210_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,2,2026-08-05,False,,,,,,,0,PLTR,S210,,entered_no_exit
+85,lab0085_s210_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-08-05,False,,0.0,-51.22,-51.22,-51.22,-51.22,-21.0,PLTR,S210,reconcile_fill,closed
 86,lab0086_s210_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
 87,lab0087_s210_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
 88,lab0088_s210_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
@@ -785,14 +785,14 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 783,lab0783_s397_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
 784,lab0784_s398_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
 785,lab0785_s398_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
-786,lab0786_s398_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-05,False,,,,,,,0,UBER,S398,,entered_no_exit
+786,lab0786_s398_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-08-05,False,,0.0,-60.98,-60.98,-60.98,-60.98,-25.0,"AMZN,UBER",S398,stop_loss (-50.0%),closed
 787,lab0787_s398_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
 788,lab0788_s398_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-05,False,,,,,,,0,UBER,S398,,entered_no_exit
 789,lab0789_s398_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-08-05,False,,0.0,-57.89,-57.89,-57.89,-57.89,-22.0,UBER,S398,stop_loss (-50.4%),closed
 790,lab0790_s398_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,UBER,S398,,entered_no_exit
 791,lab0791_s398_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-05,False,,0.0,-41.38,-41.38,-41.38,-41.38,-12.0,UBER,S398,stop_loss (-50.4%),closed
 792,lab0792_s399_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
-793,lab0793_s399_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-05,False,,,,,,,0,UBER,S399,,entered_no_exit
+793,lab0793_s399_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,0,2026-08-05,False,,,,,,,0,UBER,S399,,entered_no_exit
 794,lab0794_s399_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,3,0,2026-08-05,False,,0.0,-56.3,-68.97,-17.24,-82.69,-68.0,"AMD,AMZN",S399,stop_loss (-65.4%); reconcile_fill; stop_loss (-53.8%),closed
 795,lab0795_s399_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,2,1,2026-08-04,False,,0.0,-48.94,-48.94,-46.15,-51.72,-27.0,AMZN,S399,reconcile_fill; reconcile_fill,closed
 796,lab0796_s399_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
