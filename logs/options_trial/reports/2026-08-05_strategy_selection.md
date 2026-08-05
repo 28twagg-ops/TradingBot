@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-05
 
-_Generated 2026-08-05T11:51:14.465415_
+_Generated 2026-08-05T11:56:15.768785_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-05T11:51:14.465415_
 
 ## Attribution health
 
-- Total exits: **1533**
+- Total exits: **1534**
 - Orphan exits (b0/orphan_reconcile): **81**
 - Orphan rate: **5.3%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -21,7 +21,7 @@ _Generated 2026-08-05T11:51:14.465415_
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | S354 (GapDown_5DTE) | 5d | watch | 20 | 70.0 | +116.67 | -64.66 | -51.16 | +179.58 | 5 | 22 | 6 | $+861.00 | 40.0% | fat left tail (p10 < -45%) |
-| S355 (GapDown_7DTE) | 7d | watch | 16 | 62.5 | +91.30 | -65.04 | -51.63 | +243.31 | 5 | 20 | 6 | $+580.00 | 50.0% | building sample (8-19 exits) |
+| S355 (GapDown_7DTE) | 7d | watch | 17 | 58.8 | +91.11 | -64.71 | -53.49 | +233.39 | 5 | 20 | 7 | $+557.00 | 47.1% | building sample (8-19 exits) |
 | S352 (GapDown_2DTE) | 2d | watch | 11 | 81.8 | +90.00 | -64.86 | +43.25 | +194.44 | 5 | 34 | 4 | $+266.00 | 54.5% | building sample (8-19 exits) |
 | S361 (RubberBand_2DTE) | 2d | watch | 17 | 76.5 | +82.76 | -73.11 | +17.78 | +180.00 | 5 | 51 | 17 | $+243.00 | 64.7% | building sample (8-19 exits) |
 | S350 (GapDown_0DTE) | 0d | watch | 26 | 69.2 | +68.91 | -61.77 | +0.00 | +225.72 | 5 | 40 | 20 | $+640.00 | 50.0% | fat left tail (p10 < -45%) |
@@ -264,7 +264,7 @@ _Pipeline evaluation as of 2026-08-05. Auto-kill thresholds: median<-25% at n>=1
 | S352 | GapDown_2DTE | 11 | +90.00% | 82% | WATCH | 5 |
 | S353 | GapDown_3DTE | 13 | -50.77% | 31% | WATCH | 5 |
 | S354 | GapDown_5DTE | 20 | +116.67% | 70% | INSUFFICIENT | 5 |
-| S355 | GapDown_7DTE | 16 | +91.30% | 62% | INSUFFICIENT | 5 |
+| S355 | GapDown_7DTE | 17 | +91.11% | 59% | INSUFFICIENT | 5 |
 | S356 | GapDown_14DTE | 4 | +48.27% | 100% | WATCH | 5 |
 | S357 | GapDown_21DTE | 7 | +47.06% | 100% | WATCH | 5 |
 | S358 | GapDown_30DTE | 0 | — | — | NEW | 1 |

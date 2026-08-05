@@ -2022,26 +2022,6 @@
       "entry_order_id": "7f18dac7-395b-40b9-9234-929b2b552459"
     },
     {
-      "lot_id": "53567445b277",
-      "bucket_id": 312,
-      "profile_name": "lab0312_s355_w1_0928_1005_r1",
-      "strategy_id": "S355",
-      "occ_symbol": "UBER260814C00073000",
-      "underlying": "UBER",
-      "qty": 1,
-      "entry_cost": 43.0,
-      "entry_price": 0.43,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-05T14:03:09.096893+00:00",
-      "entry_order_id": "c13cd119-5a3a-40a1-a0a1-8c8ffb2dff91"
-    },
-    {
       "lot_id": "b46715053684",
       "bucket_id": 25,
       "profile_name": "lab0025_s203_w1_0928_1005_r2",
@@ -4595,16 +4575,6 @@
       "submitted": "2026-08-05T11:35:14"
     },
     {
-      "order_id": "95d69e7a-15b6-4cda-b1c6-c95eed42ac3d",
-      "lot_id": "53567445b277",
-      "bucket_id": 312,
-      "strategy_id": "S355",
-      "occ_symbol": "UBER260814C00073000",
-      "qty": 1,
-      "reason": "stop_loss (-50.6%)",
-      "submitted": "2026-08-05T11:50:57"
-    },
-    {
       "order_id": "c7f2017b-32bf-48f5-b7c7-d6db8e916387",
       "lot_id": "962eb7cc2d81",
       "bucket_id": 0,
@@ -4613,6 +4583,26 @@
       "qty": 1,
       "reason": "stop_loss (-52.9%)",
       "submitted": "2026-08-05T11:51:00"
+    },
+    {
+      "order_id": "44d70651-1185-4e3d-9907-fc1f64b8ad71",
+      "lot_id": "9c7bb9c959db",
+      "bucket_id": 315,
+      "strategy_id": "S355",
+      "occ_symbol": "UBER260814C00073000",
+      "qty": 1,
+      "reason": "stop_loss (-50.6%)",
+      "submitted": "2026-08-05T11:56:08"
+    },
+    {
+      "order_id": "c4be2514-e54b-48cb-8500-3bf9fee49057",
+      "lot_id": "b35d98d5c86f",
+      "bucket_id": 793,
+      "strategy_id": "S399",
+      "occ_symbol": "UBER260807C00072000",
+      "qty": 1,
+      "reason": "stop_loss (-53.3%)",
+      "submitted": "2026-08-05T11:56:09"
     }
   ],
   "bucket_open_premium": {
@@ -4710,7 +4700,6 @@
     "b376": 69.0,
     "b829": 30.0,
     "b828": 30.0,
-    "b312": 43.0,
     "b25": 70.0,
     "b26": 50.0,
     "b114": 49.0,
@@ -5376,7 +5365,8 @@
     "93153202-47c4-41d7-a0ae-413de6799147",
     "5d9bc38e-802d-4d9b-8f36-cfb16521733e",
     "70a25623-dcda-4977-bef3-8ef09477c88c",
-    "7fb481af-cca3-4b2f-9fa3-08958bbbf2b5"
+    "7fb481af-cca3-4b2f-9fa3-08958bbbf2b5",
+    "95d69e7a-15b6-4cda-b1c6-c95eed42ac3d"
   ],
   "submitted_today": 114,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
