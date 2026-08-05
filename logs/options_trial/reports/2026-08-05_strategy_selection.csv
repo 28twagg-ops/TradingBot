@@ -6,7 +6,7 @@ S361,RubberBand_2DTE,2d,watch,building sample (8-19 exits),55,18,13,5,60.3,82.29
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),48,26,18,8,70.77,68.91,-61.77,0.0,225.72,640.0,3,5,40,20,4,50.0
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,watch,fat left tail (p10 < -45%),56,22,14,8,126.55,67.76,-58.49,-50.64,233.93,702.0,4,9,38,21,3,54.5
 S364,RubberBand_7DTE,7d,watch,building sample (8-19 exits),39,17,16,1,92.55,66.67,53.6,60.0,206.67,596.0,4,5,35,13,3,70.6
-S398,GapDown_ATM,3d,watch,building sample (8-19 exits),56,19,15,4,85.83,65.71,-29.51,26.15,202.83,848.0,2,5,40,5,4,42.1
+S398,GapDown_ATM,3d,watch,fat left tail (p10 < -45%),56,20,15,5,78.64,63.5,-50.57,-2.11,189.19,826.0,3,5,40,6,4,40.0
 S397,GapDown_ITM1,3d,watch,building sample (8-19 exits),50,9,9,0,76.85,61.9,40.0,43.66,123.43,433.0,1,5,34,0,2,77.8
 S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),56,33,20,13,106.49,61.29,-58.1,-50.0,175.79,1067.0,4,5,52,29,6,39.4
 S362,RubberBand_3DTE,3d,watch,promising mid-sample — need more exits,62,25,24,1,146.37,60.47,10.44,23.68,119.43,1383.0,3,5,58,25,4,40.0

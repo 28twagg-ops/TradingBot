@@ -2042,26 +2042,6 @@
       "entry_order_id": "30d1dda3-36fe-4f49-8cae-3d86166407e9"
     },
     {
-      "lot_id": "e80975c24a41",
-      "bucket_id": 789,
-      "profile_name": "lab0789_s398_w3_1045_1120_r2",
-      "strategy_id": "S398",
-      "occ_symbol": "UBER260807C00070000",
-      "underlying": "UBER",
-      "qty": 1,
-      "entry_cost": 38.0,
-      "entry_price": 0.38,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-05T14:57:41.911781+00:00",
-      "entry_order_id": "fa900fbb-9395-46a3-b09f-ddd47dbcfde1"
-    },
-    {
       "lot_id": "46ef55fa103e",
       "bucket_id": 168,
       "profile_name": "lab0168_s216_w3_1045_1120_r1",
@@ -4025,14 +4005,14 @@
       "submitted": "2026-08-05T11:56:09"
     },
     {
-      "order_id": "98d5729b-1f64-42ab-9b26-3eb96b94f852",
-      "lot_id": "e80975c24a41",
-      "bucket_id": 789,
-      "strategy_id": "S398",
+      "order_id": "98b3a81f-3eba-4d01-be1a-d59e47d12561",
+      "lot_id": "0254bf24f392",
+      "bucket_id": 820,
+      "strategy_id": "S405",
       "occ_symbol": "UBER260807C00070000",
       "qty": 1,
       "reason": "stop_loss (-50.4%)",
-      "submitted": "2026-08-05T14:20:50"
+      "submitted": "2026-08-05T14:25:59"
     }
   ],
   "bucket_open_premium": {
@@ -4130,7 +4110,6 @@
     "b376": 69.0,
     "b114": 49.0,
     "b898": 72.0,
-    "b789": 38.0,
     "b168": 48.0,
     "b379": 81.0,
     "b914": 91.0,
@@ -4795,7 +4774,8 @@
     "5287a127-0edc-40c4-a46a-df11d4163a55",
     "aaed8b98-29b4-47d8-87b2-8c4b3a2f3782",
     "68150578-9ba4-4170-bfa6-789440000b28",
-    "bf6c99a1-4ae3-4f6e-af0e-c79d13ea828f"
+    "bf6c99a1-4ae3-4f6e-af0e-c79d13ea828f",
+    "98d5729b-1f64-42ab-9b26-3eb96b94f852"
   ],
   "submitted_today": 114,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
