@@ -1610,8 +1610,8 @@
   {
     "bucket_id": 268,
     "profile": "lab0268_s403_w4_1120_1135_r1",
-    "open_premium": 25.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 269,
