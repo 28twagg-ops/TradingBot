@@ -79,3 +79,8 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05T15:15:48Z,reconcile,0,orphan_reconcile,ORPHAN,91bf17015c5c,PLTR,PLTR260807C00175000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-05 15:14:14.913261+00:00,exit,0,orphan_reconcile,ORPHAN,eed01dfb242c,CVNA,CVNA260807C00075000,2,,0.21,50.0,-16.0,-8.0,stop_loss (-55.6%),,-0.01,0.5,-0.5,,,8d07843e-5132-4a96-b424-bbd231cb187f
 2026-08-05 15:15:55.204203+00:00,exit,0,orphan_reconcile,ORPHAN,cfa4d292342e,TSLA,TSLA260807C00350000,2,,0.21,101.33,-58.55,-59.33,stop_loss (-58.6%),,-0.01,0.5,-0.5,,,2e7a439b-7e2f-41c7-8031-f15d69b71cce
+2026-08-05 14:01:27.478922+00:00,exit,0,orphan_reconcile,ORPHAN,4a3ae8885cf7,UBER,UBER260807C00072000,1,,0.01,15.0,-93.33,-14.0,reconcile_fill,,-0.01,0.5,-0.5,,,70186e4c-4899-4f5a-a501-f42b565a3a0c
+2026-08-05 14:16:03.473339+00:00,exit,0,orphan_reconcile,ORPHAN,0102b4dca14c,AAPL,AAPL260814C00330000,1,,0.15,59.75,-74.9,-44.75,reconcile_fill,,-0.01,0.5,-0.5,,,bb503969-2947-4812-b912-7da2ca15d45e
+2026-08-05 14:11:27.364432+00:00,exit,0,orphan_reconcile,ORPHAN,0102b4dca14c,AAPL,AAPL260814C00330000,1,,0.09,59.75,-84.94,-50.75,reconcile_fill,,-0.01,0.5,-0.5,,,5fa50eab-b3c5-424e-a52e-000714698270
+2026-08-05 14:11:17.232081+00:00,exit,0,orphan_reconcile,ORPHAN,02e57b73f915,DKNG,DKNG260807C00024000,1,,0.21,55.67,-62.28,-34.67,reconcile_fill,,-0.01,0.5,-0.5,,,133f530d-6f6a-479d-ab26-093d8b4e464a
+2026-08-04 15:36:00.935443+00:00,exit,0,orphan_reconcile,ORPHAN,559312936171,DKNG,DKNG260807C00025000,1,,0.06,30.33,-80.22,-24.33,reconcile_fill,,-0.01,0.5,-0.5,,,69e68b17-338c-4c35-ab49-663b9cb730d6

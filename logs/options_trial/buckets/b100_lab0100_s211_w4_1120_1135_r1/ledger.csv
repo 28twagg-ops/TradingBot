@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-08-04 15:22:14.631851+00:00,entry,100,lab0100_s211_w4_1120_1135_r1,S211,eb32fdb99b24,AMZN,AMZN260807C00295000,1,0.37,0.36,36.0,,,,-0.01,,0.75,-0.75,0.08219178082191789,MA21 crossed above MA50,7380a586-fd89-45b0-b72c-8e034e0fa655
 2026-08-04 15:22:14.631851+00:00,entry,100,lab0100_s211_w4_1120_1135_r1,S211,eb32fdb99b24,AMZN,AMZN260807C00295000,1,0.36,0.36,36.0,,,,-0.01,,0.5,-0.5,,,7380a586-fd89-45b0-b72c-8e034e0fa655
+2026-08-04 15:22:14.631851+00:00,entry,100,lab0100_s211_w4_1120_1135_r1,S211,eb32fdb99b24,AMZN,AMZN260807C00295000,1,0.36,0.36,36.0,,,,-0.01,,0.5,-0.5,,,7380a586-fd89-45b0-b72c-8e034e0fa655
