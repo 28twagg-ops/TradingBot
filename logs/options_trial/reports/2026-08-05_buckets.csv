@@ -790,7 +790,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 788,lab0788_s398_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-05,False,,,,,,,0,UBER,S398,,entered_no_exit
 789,lab0789_s398_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-08-05,False,,0.0,-57.89,-57.89,-57.89,-57.89,-22.0,UBER,S398,stop_loss (-50.4%),closed
 790,lab0790_s398_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,UBER,S398,,entered_no_exit
-791,lab0791_s398_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,UBER,S398,,entered_no_exit
+791,lab0791_s398_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-05,False,,0.0,-41.38,-41.38,-41.38,-41.38,-12.0,UBER,S398,stop_loss (-50.4%),closed
 792,lab0792_s399_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
 793,lab0793_s399_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-05,False,,,,,,,0,UBER,S399,,entered_no_exit
 794,lab0794_s399_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,3,0,2026-08-05,False,,0.0,-56.3,-68.97,-17.24,-82.69,-68.0,"AMD,AMZN",S399,stop_loss (-65.4%); reconcile_fill; stop_loss (-53.8%),closed
