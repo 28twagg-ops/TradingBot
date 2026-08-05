@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-05
 
-_Generated 2026-08-05T12:16:13.130757_
+_Generated 2026-08-05T12:20:59.803685_
 
 ## Summary
 
@@ -11,9 +11,9 @@ _Generated 2026-08-05T12:16:13.130757_
 
 ## Attribution health
 
-- Total exits: **1542**
-- Orphan exits (b0/orphan_reconcile): **81**
-- Orphan rate: **5.2%** (warn if >10%)
+- Total exits: **1545**
+- Orphan exits (b0/orphan_reconcile): **82**
+- Orphan rate: **5.3%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
 
 ## Strategy scoreboard
@@ -28,8 +28,8 @@ _Generated 2026-08-05T12:16:13.130757_
 | S364 (RubberBand_7DTE) | 7d | watch | 16 | 100.0 | +68.12 | +56.79 | +62.73 | +211.11 | 5 | 35 | 12 | $+626.00 | 75.0% | building sample (8-19 exits) |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | watch | 22 | 63.6 | +67.76 | -58.49 | -50.64 | +233.93 | 9 | 38 | 21 | $+702.00 | 54.5% | fat left tail (p10 < -45%) |
 | S398 (GapDown_ATM) | 3d | watch | 19 | 78.9 | +65.71 | -29.51 | +26.15 | +202.83 | 5 | 40 | 5 | $+848.00 | 42.1% | building sample (8-19 exits) |
-| S406 (RubberBand_ITM3) | 3d | watch | 32 | 62.5 | +62.47 | -58.36 | -17.29 | +177.37 | 5 | 52 | 28 | $+1,082.00 | 40.6% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 9 | 100.0 | +61.90 | +40.00 | +43.66 | +123.43 | 5 | 34 | 0 | $+433.00 | 77.8% | building sample (8-19 exits) |
+| S406 (RubberBand_ITM3) | 3d | watch | 33 | 60.6 | +61.29 | -58.10 | -50.00 | +175.79 | 5 | 52 | 29 | $+1,067.00 | 39.4% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 25 | 96.0 | +60.47 | +10.44 | +23.68 | +119.43 | 5 | 58 | 25 | $+1,383.00 | 40.0% | promising mid-sample — need more exits |
 | S399 (GapDown_OTM1) | 3d | watch | 27 | 55.6 | +58.62 | -68.39 | -65.16 | +136.40 | 5 | 64 | 15 | $+298.00 | 48.1% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 11 | 63.6 | +57.58 | -77.46 | -59.32 | +320.00 | 5 | 18 | 11 | $+230.00 | 36.4% | building sample (8-19 exits) |
@@ -39,7 +39,7 @@ _Generated 2026-08-05T12:16:13.130757_
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 31 | 71.0 | +50.00 | -66.67 | -16.66 | +318.75 | 9 | 45 | 29 | $+730.00 | 45.2% | fat left tail (p10 < -45%) |
 | S356 (GapDown_14DTE) | 14d | watch | 4 | 100.0 | +48.27 | +37.93 | +37.93 | +58.62 | 5 | 22 | 2 | $+112.00 | 100.0% | insufficient sample (<8 exits) |
 | S357 (GapDown_21DTE) | 21d | watch | 7 | 100.0 | +47.06 | +47.06 | +47.06 | +64.58 | 5 | 18 | 5 | $+242.00 | 85.7% | insufficient sample (<8 exits) |
-| S405 (GapDown_OTM3) | 3d | watch | 25 | 60.0 | +42.86 | -57.06 | -41.46 | +134.22 | 5 | 42 | 11 | $+466.00 | 44.0% | fat left tail (p10 < -45%) |
+| S405 (GapDown_OTM3) | 3d | watch | 26 | 57.7 | +42.40 | -57.52 | -41.46 | +132.22 | 5 | 42 | 12 | $+444.00 | 42.3% | fat left tail (p10 < -45%) |
 | S408 (RubberBand_ITM1) | 3d | watch | 21 | 52.4 | +41.94 | -55.56 | -42.86 | +806.67 | 2 | 48 | 21 | $+702.00 | 47.6% | fat left tail (p10 < -45%) |
 | S407 (RubberBand_ITM2) | 3d | watch | 20 | 55.0 | +41.84 | -95.92 | -61.54 | +425.39 | 5 | 48 | 16 | $+287.00 | 40.0% | fat left tail (p10 < -45%) |
 | S401 (Any_Gap_Down_Small) | 3d | watch | 32 | 62.5 | +27.63 | -91.21 | -27.24 | +160.00 | 5 | 44 | 30 | $+510.00 | 37.5% | fat left tail (p10 < -45%) |
@@ -314,8 +314,8 @@ _Pipeline evaluation as of 2026-08-05. Auto-kill thresholds: median<-25% at n>=1
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
 | S403 | Any_MA50_Touch | 11 | +57.58% | 64% | WATCH | 5 |
 | S404 | GapDown_OTM2 | 10 | +55.86% | 100% | WATCH | 5 |
-| S405 | GapDown_OTM3 | 25 | +42.86% | 60% | INSUFFICIENT | 5 |
-| S406 | RubberBand_ITM3 | 32 | +62.47% | 62% | INSUFFICIENT | 5 |
+| S405 | GapDown_OTM3 | 26 | +42.40% | 58% | INSUFFICIENT | 5 |
+| S406 | RubberBand_ITM3 | 33 | +61.29% | 61% | INSUFFICIENT | 5 |
 | S407 | RubberBand_ITM2 | 20 | +41.84% | 55% | INSUFFICIENT | 5 |
 | S408 | RubberBand_ITM1 | 21 | +41.94% | 52% | INSUFFICIENT | 2 |
 | S409 | RubberBand_ATM | 0 | — | — | NEW | 0 |
@@ -340,7 +340,7 @@ _Pipeline evaluation as of 2026-08-05. Auto-kill thresholds: median<-25% at n>=1
 
 | Strategy | n | Median% | WR% | Recommendation |
 |----------|---|---------|-----|----------------|
-| S406 | 32 | +62.47% | 62% | Tyler review |
+| S406 | 33 | +61.29% | 61% | Tyler review |
 | S218 | 31 | +50.00% | 71% | Tyler review |
 | S401 | 32 | +27.63% | 62% | Tyler review |
 

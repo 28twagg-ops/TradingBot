@@ -89,3 +89,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05 14:21:01.349299+00:00,exit,0,orphan_reconcile,ORPHAN,60eed4f3f8b3,DKNG,DKNG260807C00023500,1,,0.22,73.0,-69.86,-51.0,reconcile_fill,,-0.01,0.5,-0.5,,,5834aa42-ba22-4f6d-a5ce-ef82006bcb89
 2026-08-04 17:06:00.537266+00:00,exit,0,orphan_reconcile,ORPHAN,6f4e3a71d5ba,NKE,NKE260807C00042000,1,,0.08,64.1,-87.52,-56.1,reconcile_fill,,-0.01,0.5,-0.5,,,18f78a9f-14b1-41c2-b906-68db19a6efe9
 2026-08-05T15:41:25Z,reconcile,0,orphan_reconcile,ORPHAN,f524ece89be2,AMD,AMD260807C00577500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-05T16:20:46Z,reconcile,0,orphan_reconcile,ORPHAN,b97766944d34,UNH,UNH260807C00422500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-05 16:16:10.253907+00:00,exit,0,orphan_reconcile,ORPHAN,6f4e3a71d5ba,NKE,NKE260807C00042000,2,,1.23,128.2,91.89,117.8,take_profit (+89.2%),,-0.01,0.5,-0.5,,,a66cda30-74e2-4d43-8c3e-7d09c62f5229
