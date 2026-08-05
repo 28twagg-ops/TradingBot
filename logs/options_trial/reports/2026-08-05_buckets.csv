@@ -195,7 +195,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 193,lab0193_s218_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,0,2026-08-05,False,,,,,,,0,UNH,S218,,entered_no_exit
 194,lab0194_s218_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,4,0,2026-08-05,False,,0.0,-67.08,-67.53,-52.94,-80.33,-131.0,"RBLX,UNH",S218,stop_loss (-73.3%); stop_loss (-51.5%); reconcile_fill…,closed
 195,lab0195_s218_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,2,1,2026-08-05,False,,0.0,-73.66,-73.66,-64.71,-82.61,-79.0,"RBLX,UNH",S218,stop_loss (-73.3%); reconcile_fill,closed
-196,lab0196_s218_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,2,2026-08-05,False,,,,,,,0,UNH,S218,,entered_no_exit
+196,lab0196_s218_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-08-05,False,,100.0,52.17,52.17,52.17,52.17,36.0,UNH,S218,take_profit (+60.0%),closed
 197,lab0197_s218_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-05,False,,100.0,47.83,47.83,47.83,47.83,33.0,UNH,S218,take_profit (+55.4%),closed
 198,lab0198_s218_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,UNH,S218,,entered_no_exit
 199,lab0199_s218_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,UNH,S218,,entered_no_exit
@@ -366,7 +366,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 364,lab0364_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,2,2026-08-05,False,,,,,,,0,DKNG,S361,,entered_no_exit
 365,lab0365_s361_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-05,False,,,,,,,0,DKNG,S361,,entered_no_exit
 366,lab0366_s361_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,DKNG,S361,,entered_no_exit
-367,lab0367_s361_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,2,2026-08-05,False,,,,,,,0,DKNG,S361,,entered_no_exit
+367,lab0367_s361_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-08-05,False,,0.0,-55.26,-55.26,-55.26,-55.26,-21.0,DKNG,S361,stop_loss (-56.9%),closed
 368,lab0368_s361_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
 369,lab0369_s361_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
 370,lab0370_s361_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
@@ -860,7 +860,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 858,lab0858_s408_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,0,2026-08-05,False,,,,,,,0,DKNG,S408,,entered_no_exit
 859,lab0859_s408_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-08-05,False,,0.0,-42.86,-42.86,-42.86,-42.86,-6.0,DKNG,S408,stop_loss (-64.3%),closed
 860,lab0860_s408_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,4,1,2026-08-05,False,,50.0,631.11,566.67,1446.67,-55.56,411.0,"DKNG,NKE,NVDA",S408,reconcile_fill; stop_loss (-52.9%); reconcile_fill…,closed
-861,lab0861_s408_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,2,1,2026-08-05,False,,100.0,731.12,731.12,806.67,655.56,239.0,"DKNG,NKE,NVDA",S408,take_profit (+586.5%); reconcile_fill,closed
+861,lab0861_s408_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,3,0,2026-08-05,False,,66.7,464.68,655.56,806.67,-68.18,224.0,"DKNG,NKE,NVDA",S408,take_profit (+586.5%); reconcile_fill; stop_loss (-68.2%),closed
 862,lab0862_s408_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-04,False,,0.0,-50.0,-50.0,-50.0,-50.0,-8.0,NKE,S408,stop_loss (-52.9%),closed
 863,lab0863_s408_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-04,False,,0.0,-50.0,-50.0,-50.0,-50.0,-8.0,NKE,S408,stop_loss (-52.9%),closed
 864,lab0864_s408_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle

@@ -8611,3 +8611,6 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05T16:05:55Z,reconcile,858,lab0858_s408_w2_1005_1045_r1,S408,e5595a405a33,DKNG,DKNG260807C00026500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-05T16:09:20Z,reconcile,285,lab0285_s351_w3_1045_1120_r2,S351,b7b1104e3bae,AMD,AMD260805C00500000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-05 16:06:43.047494+00:00,exit,197,lab0197_s218_w3_1045_1120_r2,S218,75f412b2f931,UNH,UNH260807C00422500,1,,1.02,69.0,47.83,33.0,take_profit (+55.4%),,-0.01,0.5,-0.5,,,960e1af0-ac99-4b39-a2aa-b74a9be1f18c
+2026-08-05 16:10:02.025996+00:00,exit,196,lab0196_s218_w3_1045_1120_r1,S218,9f3a94431ce0,UNH,UNH260807C00422500,1,,1.05,69.0,52.17,36.0,take_profit (+60.0%),,-0.01,0.5,-0.5,,,3b34ed0b-f6ce-41d5-955a-19607d4aa58c
+2026-08-05 16:09:24.999124+00:00,exit,367,lab0367_s361_w3_1045_1120_r2,S361,274bba1f9f73,DKNG,DKNG260807C00024500,1,,0.17,38.0,-55.26,-21.0,stop_loss (-56.9%),,-0.01,0.5,-0.5,,,dd23da3d-7fed-4f3e-82ff-cba5b5bc3021
+2026-08-05 16:09:22.059372+00:00,exit,861,lab0861_s408_w3_1045_1120_r2,S408,6f930c7d61aa,DKNG,DKNG260807C00025500,1,,0.07,22.0,-68.18,-15.0,stop_loss (-68.2%),,-0.01,0.5,-0.5,,,f124f942-6d03-4fe9-8627-35a1dacdf51d
