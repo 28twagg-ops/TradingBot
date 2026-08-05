@@ -314,7 +314,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 312,lab0312_s355_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-08-05,False,,0.0,-53.49,-53.49,-53.49,-53.49,-23.0,UBER,S355,stop_loss (-50.6%),closed
 313,lab0313_s355_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-08-05,False,,0.0,-48.84,-48.84,-48.84,-48.84,-21.0,UBER,S355,stop_loss (-50.6%),closed
 314,lab0314_s355_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,3,0,2026-08-05,False,,0.0,-65.58,-66.67,-63.41,-66.67,-86.0,"AMZN,UBER",S355,stop_loss (-66.2%); stop_loss (-66.2%); reconcile_fill,closed
-315,lab0315_s355_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,2,1,2026-08-05,False,,0.0,-54.28,-54.28,-48.57,-60.0,-44.0,"AMZN,UBER",S355,stop_loss (-68.5%); reconcile_fill,closed
+315,lab0315_s355_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,3,0,2026-08-05,False,,0.0,-48.57,-48.57,-37.14,-60.0,-57.0,"AMZN,UBER",S355,stop_loss (-68.5%); reconcile_fill; stop_loss (-50.6%),closed
 316,lab0316_s355_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,UBER,S355,,entered_no_exit
 317,lab0317_s355_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,UBER,S355,,entered_no_exit
 318,lab0318_s355_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,UBER,S355,,entered_no_exit
