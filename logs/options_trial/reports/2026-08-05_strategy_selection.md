@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-05
 
-_Generated 2026-08-05T13:25:16.741493_
+_Generated 2026-08-05T13:26:22.541599_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-05T13:25:16.741493_
 
 ## Attribution health
 
-- Total exits: **1550**
+- Total exits: **1551**
 - Orphan exits (b0/orphan_reconcile): **84**
 - Orphan rate: **5.4%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -123,7 +123,7 @@ _Generated 2026-08-05T13:25:16.741493_
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 30 | 6.7 | -48.84 | -63.80 | -55.84 | -6.06 | 9 | 40 | 30 | $-713.00 | 53.3% | non-positive median return |
 | S360 (RubberBand_1DTE) | 1d | drop | 23 | 13.0 | -50.00 | -80.74 | -70.37 | -2.22 | 5 | 43 | 19 | $-341.00 | 47.8% | non-positive median return |
 | S351 (GapDown_1DTE) | 1d | drop | 30 | 30.0 | -50.03 | -91.73 | -68.33 | +174.48 | 5 | 61 | 19 | $+79.00 | 43.3% | non-positive median return |
-| S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 22 | 0.0 | -56.25 | -79.12 | -72.34 | -49.22 | 9 | 42 | 18 | $-669.00 | 63.6% | non-positive median return |
+| S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 23 | 0.0 | -56.25 | -79.08 | -70.26 | -49.43 | 9 | 42 | 19 | $-696.00 | 60.9% | non-positive median return |
 | S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 35 | 0.0 | -73.47 | -98.18 | -89.38 | -54.22 | 9 | 40 | 35 | $-1,492.00 | 54.3% | non-positive median return |
 
 ## Comparison groups
@@ -184,7 +184,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S203 | 3d ATM gap-up fade (put) | 22 | -56.25 | -79.12 | -72.34 | 42 | 18 |
+| S203 | 3d ATM gap-up fade (put) | 23 | -56.25 | -79.08 | -70.26 | 42 | 19 |
 | S214 | 3d ATM death cross (put) | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
 ### Phase-1 MA family
@@ -240,7 +240,7 @@ _Pipeline evaluation as of 2026-08-05. Auto-kill thresholds: median<-25% at n>=1
 | S200 | GapDown_Aggressive | 0 | — | — | NEW | 0 |
 | S201 | GapDown_Mild | 0 | — | — | NEW | 0 |
 | S202 | GapDown_Monster | 6 | -64.75% | 0% | WATCH | 8 |
-| S203 | GapUp_Fade | 22 | -56.25% | 0% | INSUFFICIENT | 9 |
+| S203 | GapUp_Fade | 23 | -56.25% | 0% | INSUFFICIENT | 9 |
 | S204 | GapUp_Continuation | 0 | — | — | NEW | 0 |
 | S205 | GapDown_HighVol | 0 | — | — | NEW | 0 |
 | S206 | GapDown_WithTrend | 0 | — | — | NEW | 0 |

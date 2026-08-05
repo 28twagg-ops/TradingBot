@@ -102,5 +102,5 @@ S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1428,245,73,
 S207,GapDown_AtSupport,3d ATM gap-support,drop,non-positive median return,52,30,2,28,-39.33,-48.84,-63.8,-55.84,-6.06,-713.0,2,9,40,30,3,53.3
 S360,RubberBand_1DTE,1d,drop,non-positive median return,47,23,3,20,-44.04,-50.0,-80.74,-70.37,-2.22,-341.0,4,5,43,19,4,47.8
 S351,GapDown_1DTE,1d,drop,non-positive median return,77,30,9,21,9.27,-50.03,-91.73,-68.33,174.48,79.0,4,5,61,19,4,43.3
-S203,GapUp_Fade,3d ATM gap-up fade (put),drop,non-positive median return,63,22,0,22,-61.33,-56.25,-79.12,-72.34,-49.22,-669.0,4,9,42,18,3,63.6
+S203,GapUp_Fade,3d ATM gap-up fade (put),drop,non-positive median return,63,23,0,23,-61.01,-56.25,-79.08,-70.26,-49.43,-696.0,4,9,42,19,3,60.9
 S212,MA_Bounce_50,3d ATM MA bounce 50,drop,non-positive median return,70,35,0,35,-74.29,-73.47,-98.18,-89.38,-54.22,-1492.0,3,9,40,35,5,54.3
