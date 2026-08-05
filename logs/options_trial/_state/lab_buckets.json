@@ -152,8 +152,8 @@
   {
     "bucket_id": 25,
     "profile": "lab0025_s203_w1_0928_1005_r2",
-    "open_premium": 70.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 26,

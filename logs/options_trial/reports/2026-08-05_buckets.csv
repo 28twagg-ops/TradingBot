@@ -24,7 +24,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 22,lab0022_s202_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-31,False,,,,,,,0,,,,idle
 23,lab0023_s202_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-31,False,,,,,,,0,,,,idle
 24,lab0024_s203_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,2,0,2026-08-04,False,,0.0,-75.58,-75.58,-74.42,-76.74,-65.0,SMCI,S203,stop_loss (-78.3%); reconcile_fill,closed
-25,lab0025_s203_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-05,False,,,,,,,0,DIS,S203,,entered_no_exit
+25,lab0025_s203_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,0,2026-08-05,False,,,,,,,0,DIS,S203,,entered_no_exit
 26,lab0026_s203_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-08-05,False,,0.0,-54.0,-54.0,-54.0,-54.0,-27.0,DIS,S203,reconcile_fill,closed
 27,lab0027_s203_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,4,0,2026-08-05,False,,0.0,-79.27,-79.38,-78.72,-79.59,-153.0,"DIS,SMCI",S203,reconcile_fill; stop_loss (-78.3%); reconcile_fill…,closed
 28,lab0028_s203_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-03,False,,,,,,,0,,,,open

@@ -1982,26 +1982,6 @@
       "entry_order_id": "89c07271-1f6e-4068-aece-15e546ae80f9"
     },
     {
-      "lot_id": "b46715053684",
-      "bucket_id": 25,
-      "profile_name": "lab0025_s203_w1_0928_1005_r2",
-      "strategy_id": "S203",
-      "occ_symbol": "DIS260807P00099000",
-      "underlying": "DIS",
-      "qty": 1,
-      "entry_cost": 70.0,
-      "entry_price": 0.7,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-05T14:03:09.278135+00:00",
-      "entry_order_id": "e49d8b71-fd77-4558-9696-06716dae30de"
-    },
-    {
       "lot_id": "4afb7edabf19",
       "bucket_id": 915,
       "profile_name": "lab0915_s412_w2_1005_1045_r2",
@@ -3982,7 +3962,7 @@
       "entry_order_id": "orphan:PLTR260807C00172500"
     },
     {
-      "lot_id": "04254f116846",
+      "lot_id": "ffafb5bd5850",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
       "strategy_id": "ORPHAN",
@@ -3998,7 +3978,7 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-05T17:34:57.681133+00:00",
+      "entry_date": "2026-08-05T17:36:18.996121+00:00",
       "entry_order_id": "orphan:TTD260807C00021500"
     }
   ],
@@ -4123,16 +4103,6 @@
       "qty": 1,
       "reason": "stop_loss (-53.3%)",
       "submitted": "2026-08-05T11:56:09"
-    },
-    {
-      "order_id": "d6457880-70ed-4fe1-bfff-375cee73b234",
-      "lot_id": "b46715053684",
-      "bucket_id": 25,
-      "strategy_id": "S203",
-      "occ_symbol": "DIS260807P00099000",
-      "qty": 1,
-      "reason": "stop_loss (-60.0%)",
-      "submitted": "2026-08-05T13:34:58"
     }
   ],
   "bucket_open_premium": {
@@ -4228,7 +4198,6 @@
     "b94": 35.0,
     "b377": 69.0,
     "b376": 69.0,
-    "b25": 70.0,
     "b114": 49.0,
     "b899": 72.0,
     "b898": 72.0,
