@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-05
 
-_Generated 2026-08-05T11:41:44.058535_
+_Generated 2026-08-05T11:46:19.224893_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-05T11:41:44.058535_
 
 ## Attribution health
 
-- Total exits: **1530**
+- Total exits: **1531**
 - Orphan exits (b0/orphan_reconcile): **81**
 - Orphan rate: **5.3%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -36,8 +36,8 @@ _Generated 2026-08-05T11:41:44.058535_
 | S412 (RubberBand_OTM3) | 3d | watch | 14 | 78.6 | +57.45 | -11.52 | +34.91 | +92.59 | 5 | 50 | 14 | $+253.00 | 42.9% | building sample (8-19 exits) |
 | S404 (GapDown_OTM2) | 3d | watch | 10 | 100.0 | +55.86 | +37.90 | +45.37 | +126.29 | 5 | 34 | 0 | $+460.00 | 80.0% | building sample (8-19 exits) |
 | S363 (RubberBand_5DTE) | 5d | watch | 10 | 100.0 | +52.94 | +7.14 | +9.52 | +103.55 | 2 | 26 | 10 | $+150.00 | 60.0% | building sample (8-19 exits) |
-| S408 (RubberBand_ITM1) | 3d | watch | 17 | 64.7 | +52.63 | -25.97 | +0.00 | +959.56 | 2 | 48 | 17 | $+739.00 | 47.1% | building sample (8-19 exits) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 28 | 67.9 | +50.00 | -68.80 | -38.23 | +344.06 | 9 | 45 | 26 | $+618.00 | 50.0% | fat left tail (p10 < -45%) |
+| S408 (RubberBand_ITM1) | 3d | watch | 18 | 61.1 | +48.89 | -51.67 | -4.69 | +921.34 | 2 | 48 | 18 | $+731.00 | 50.0% | building sample (8-19 exits) |
 | S356 (GapDown_14DTE) | 14d | watch | 4 | 100.0 | +48.27 | +37.93 | +37.93 | +58.62 | 5 | 22 | 2 | $+112.00 | 100.0% | insufficient sample (<8 exits) |
 | S357 (GapDown_21DTE) | 21d | watch | 7 | 100.0 | +47.06 | +47.06 | +47.06 | +64.58 | 5 | 18 | 5 | $+242.00 | 85.7% | insufficient sample (<8 exits) |
 | S405 (GapDown_OTM3) | 3d | watch | 25 | 60.0 | +42.86 | -57.06 | -41.46 | +134.22 | 5 | 42 | 11 | $+466.00 | 44.0% | fat left tail (p10 < -45%) |
@@ -317,7 +317,7 @@ _Pipeline evaluation as of 2026-08-05. Auto-kill thresholds: median<-25% at n>=1
 | S405 | GapDown_OTM3 | 25 | +42.86% | 60% | INSUFFICIENT | 5 |
 | S406 | RubberBand_ITM3 | 31 | +63.64% | 65% | INSUFFICIENT | 5 |
 | S407 | RubberBand_ITM2 | 20 | +41.84% | 55% | INSUFFICIENT | 5 |
-| S408 | RubberBand_ITM1 | 17 | +52.63% | 65% | INSUFFICIENT | 2 |
+| S408 | RubberBand_ITM1 | 18 | +48.89% | 61% | INSUFFICIENT | 2 |
 | S409 | RubberBand_ATM | 0 | — | — | NEW | 0 |
 | S410 | RubberBand_OTM1 | 0 | — | — | NEW | 0 |
 | S411 | RubberBand_OTM2 | 14 | +18.66% | 93% | WATCH | 2 |
