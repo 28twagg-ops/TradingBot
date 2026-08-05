@@ -1,0 +1,57 @@
+20:05:44  INFO      Mode: ext_exits
+20:05:45  INFO        Daily log -> logs/daily/2026-08-05.md
+20:05:45  INFO        Daily log reconciled -> logs/daily/2026-08-05.md (4 ledger rows)
+20:05:45  INFO        SELL LIMIT [EXT HRS] CVS  qty=0.949836269  limit=$98.85  id=4c66a563-47c6-4eb7-af61-df88d970b6d1
+20:05:50  INFO        SELL LIMIT[EXT] pending for CVS — 9:35am will follow up
+20:05:50  INFO        Daily log -> logs/daily/2026-08-05.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                         EXT_EXITS|
+|  Time                                                         20:05 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $471.27|
++========================================================================+
+
++========================================================================+
+|                       EXIT CHECK [EXTENDED HRS]                        |
++========================================================================+
+|  Exit log~  stop-0.5% / 3d max  (midline skipped — close already final)|
++------------------------------------------------------------------------+
+|  CVS  P&L -0.6%  $-0.53          EXIT [EXTENDED HRS]: stop_loss (-0.6%)|
+|  CVS                              SELL pending (after-hours limit open)|
+|  AES  P&L +0.0%  $+0.03          HOLDING until 9:35am scan (Pullback50)|
+|  AVB  P&L +1.3%  $+1.18          HOLDING until 9:35am scan (Pullback50)|
++========================================================================+
+
++========================================================================+
+|                          EXTENDED HOURS SELLS                          |
++========================================================================+
+|                                                                        |
+|  No extended-hours sells this run.                                     |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                         ext_exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  0 filled  |  0 partial  |  1 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  CVS                                         -0.56%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             1|
++========================================================================+
