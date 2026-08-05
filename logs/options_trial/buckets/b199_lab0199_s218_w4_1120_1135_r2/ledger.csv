@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-08-05 15:22:14.487016+00:00,entry,199,lab0199_s218_w4_1120_1135_r2,S218,c88e6f069a32,UNH,UNH260807C00425000,1,0.57,0.57,57.0,,,,-0.01,,0.5,-0.5,0.18867924528301883,low=397.80 BB_lower=408.05 touch+green,b8ddd29c-32ff-4373-bd95-dd2c16335fca
+2026-08-05 16:20:50.843004+00:00,exit,199,lab0199_s218_w4_1120_1135_r2,S218,c88e6f069a32,UNH,UNH260807C00425000,1,,1.0,57.0,75.44,43.0,take_profit (+75.4%),,-0.01,0.5,-0.5,,,5da941ba-e7e2-4858-9590-2bfa86eab0fd
