@@ -2022,26 +2022,6 @@
       "entry_order_id": "831a1f41-a488-45f0-86b4-acd48e648023"
     },
     {
-      "lot_id": "67d908c857f5",
-      "bucket_id": 899,
-      "profile_name": "lab0899_s411_w1_0928_1005_r2",
-      "strategy_id": "S411",
-      "occ_symbol": "DKNG260807C00023500",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 72.0,
-      "entry_price": 0.72,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-05T14:20:51.285516+00:00",
-      "entry_order_id": "a764349e-098d-47dd-8804-a7b96d2686f2"
-    },
-    {
       "lot_id": "823c0bfc00cf",
       "bucket_id": 898,
       "profile_name": "lab0898_s411_w1_0928_1005_r1",
@@ -2062,26 +2042,6 @@
       "entry_order_id": "30d1dda3-36fe-4f49-8cae-3d86166407e9"
     },
     {
-      "lot_id": "41c2494a69ec",
-      "bucket_id": 407,
-      "profile_name": "lab0407_s364_w2_1005_1045_r2",
-      "strategy_id": "S364",
-      "occ_symbol": "DKNG260814C00024500",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 60.0,
-      "entry_price": 0.6,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-05T14:32:46.652304+00:00",
-      "entry_order_id": "176e40bc-0eed-420d-998d-f607c57c3e75"
-    },
-    {
       "lot_id": "3bfd3b69f45f",
       "bucket_id": 406,
       "profile_name": "lab0406_s364_w2_1005_1045_r1",
@@ -2100,26 +2060,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-05T14:32:46.989196+00:00",
       "entry_order_id": "e8f50e62-7200-4a28-aee1-8d0338f5101b"
-    },
-    {
-      "lot_id": "a58107f2622b",
-      "bucket_id": 917,
-      "profile_name": "lab0917_s412_w3_1045_1120_r2",
-      "strategy_id": "S412",
-      "occ_symbol": "DKNG260807C00024000",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 56.00000000000001,
-      "entry_price": 0.56,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-05T14:57:41.688531+00:00",
-      "entry_order_id": "7add7eaf-0ade-463e-b4ba-8084354b1086"
     },
     {
       "lot_id": "e80975c24a41",
@@ -4105,34 +4045,14 @@
       "submitted": "2026-08-05T11:56:09"
     },
     {
-      "order_id": "bf6c99a1-4ae3-4f6e-af0e-c79d13ea828f",
-      "lot_id": "41c2494a69ec",
-      "bucket_id": 407,
+      "order_id": "aa8e059e-31ee-4785-a840-08a06ec6c22d",
+      "lot_id": "3bfd3b69f45f",
+      "bucket_id": 406,
       "strategy_id": "S364",
       "occ_symbol": "DKNG260814C00024500",
       "qty": 1,
-      "reason": "stop_loss (-51.7%)",
-      "submitted": "2026-08-05T13:40:50"
-    },
-    {
-      "order_id": "68150578-9ba4-4170-bfa6-789440000b28",
-      "lot_id": "67d908c857f5",
-      "bucket_id": 899,
-      "strategy_id": "S411",
-      "occ_symbol": "DKNG260807C00023500",
-      "qty": 1,
-      "reason": "stop_loss (-50.7%)",
-      "submitted": "2026-08-05T13:50:53"
-    },
-    {
-      "order_id": "aaed8b98-29b4-47d8-87b2-8c4b3a2f3782",
-      "lot_id": "a58107f2622b",
-      "bucket_id": 917,
-      "strategy_id": "S412",
-      "occ_symbol": "DKNG260807C00024000",
-      "qty": 1,
-      "reason": "stop_loss (-53.3%)",
-      "submitted": "2026-08-05T13:50:57"
+      "reason": "stop_loss (-55.0%)",
+      "submitted": "2026-08-05T14:07:17"
     }
   ],
   "bucket_open_premium": {
@@ -4229,11 +4149,8 @@
     "b377": 69.0,
     "b376": 69.0,
     "b114": 49.0,
-    "b899": 72.0,
     "b898": 72.0,
-    "b407": 60.0,
     "b406": 60.0,
-    "b917": 56.00000000000001,
     "b789": 38.0,
     "b168": 48.0,
     "b379": 81.0,
@@ -4896,7 +4813,10 @@
     "c7f2017b-32bf-48f5-b7c7-d6db8e916387",
     "cda220ed-ad09-4696-9883-d4d58e1556d6",
     "a5f88c69-ff9d-4139-a91a-9e84dcf9c018",
-    "5287a127-0edc-40c4-a46a-df11d4163a55"
+    "5287a127-0edc-40c4-a46a-df11d4163a55",
+    "aaed8b98-29b4-47d8-87b2-8c4b3a2f3782",
+    "68150578-9ba4-4170-bfa6-789440000b28",
+    "bf6c99a1-4ae3-4f6e-af0e-c79d13ea828f"
   ],
   "submitted_today": 114,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
