@@ -71,3 +71,4 @@ run_stamp,run_number,run_id,live_exit,options_exit,live_duration_s,options_durat
 20260805T191548Z,6181,31038535070,0,0,3,19,workflow_dispatch
 20260805T192057Z,6182,31038919776,0,0,2,15,workflow_dispatch
 20260805T192206Z,6183,31039029569,0,0,3,19,schedule
+20260805T192542Z,6184,31039303456,0,0,3,20,workflow_dispatch
