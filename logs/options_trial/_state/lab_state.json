@@ -2182,26 +2182,6 @@
       "entry_order_id": "e8f50e62-7200-4a28-aee1-8d0338f5101b"
     },
     {
-      "lot_id": "e5595a405a33",
-      "bucket_id": 858,
-      "profile_name": "lab0858_s408_w2_1005_1045_r1",
-      "strategy_id": "S408",
-      "occ_symbol": "DKNG260807C00026500",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 14.000000000000002,
-      "entry_price": 0.14,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-05T14:37:25.724270+00:00",
-      "entry_order_id": "4188f5e9-85cc-4d04-ae8a-7495abd0ddad"
-    },
-    {
       "lot_id": "a58107f2622b",
       "bucket_id": 917,
       "profile_name": "lab0917_s412_w3_1045_1120_r2",
@@ -4575,14 +4555,24 @@
       "submitted": "2026-08-05T11:56:09"
     },
     {
-      "order_id": "860dfaa3-8cf3-4b19-b71e-70f4ba129e80",
-      "lot_id": "e5595a405a33",
-      "bucket_id": 858,
-      "strategy_id": "S408",
-      "occ_symbol": "DKNG260807C00026500",
+      "order_id": "2cb9071e-c1cd-4160-9c0f-d16859981425",
+      "lot_id": "b7b1104e3bae",
+      "bucket_id": 285,
+      "strategy_id": "S351",
+      "occ_symbol": "AMD260805C00500000",
       "qty": 1,
-      "reason": "stop_loss (-64.3%)",
-      "submitted": "2026-08-05T12:01:31"
+      "reason": "take_profit (+51.8%)",
+      "submitted": "2026-08-05T12:06:04"
+    },
+    {
+      "order_id": "960e1af0-ac99-4b39-a2aa-b74a9be1f18c",
+      "lot_id": "75f412b2f931",
+      "bucket_id": 197,
+      "strategy_id": "S218",
+      "occ_symbol": "UNH260807C00422500",
+      "qty": 1,
+      "reason": "take_profit (+55.4%)",
+      "submitted": "2026-08-05T12:06:08"
     }
   ],
   "bucket_open_premium": {
@@ -4687,7 +4677,6 @@
     "b898": 72.0,
     "b407": 60.0,
     "b406": 60.0,
-    "b858": 14.000000000000002,
     "b917": 56.00000000000001,
     "b818": 38.0,
     "b789": 38.0,
