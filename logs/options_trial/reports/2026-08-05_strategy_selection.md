@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-05
 
-_Generated 2026-08-05T12:31:24.786095_
+_Generated 2026-08-05T12:41:15.438828_
 
 ## Summary
 
@@ -11,9 +11,9 @@ _Generated 2026-08-05T12:31:24.786095_
 
 ## Attribution health
 
-- Total exits: **1547**
-- Orphan exits (b0/orphan_reconcile): **82**
-- Orphan rate: **5.3%** (warn if >10%)
+- Total exits: **1549**
+- Orphan exits (b0/orphan_reconcile): **84**
+- Orphan rate: **5.4%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
 
 ## Strategy scoreboard

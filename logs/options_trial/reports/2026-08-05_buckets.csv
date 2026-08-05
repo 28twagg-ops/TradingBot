@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,23,23,2026-07-27,True,9,8.7,-55.59,-67.87,91.89,-96.26,-629.51,"AAPL,AMZN,CVNA,DKNG,NKE,OXY,QQQ,RBLX,SMCI,TSLA,UBER,UNH,XOM",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-96.3%)…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,25,21,2026-07-27,True,9,12.0,-48.41,-67.87,145.57,-96.26,-545.01,"AAPL,AMZN,CVNA,DKNG,NKE,OXY,PLTR,QQQ,RBLX,SMCI,TSLA,UBER,UNH,XOM",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-96.3%)…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -859,7 +859,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 857,lab0857_s408_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
 858,lab0858_s408_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,0,2026-08-05,False,,,,,,,0,DKNG,S408,,entered_no_exit
 859,lab0859_s408_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-08-05,False,,0.0,-42.86,-42.86,-42.86,-42.86,-6.0,DKNG,S408,stop_loss (-64.3%),closed
-860,lab0860_s408_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,4,1,2026-08-05,False,,50.0,631.11,566.67,1446.67,-55.56,411.0,"DKNG,NKE,NVDA",S408,reconcile_fill; stop_loss (-52.9%); reconcile_fill…,closed
+860,lab0860_s408_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,4,0,2026-08-05,False,,50.0,631.11,566.67,1446.67,-55.56,411.0,"DKNG,NKE,NVDA",S408,reconcile_fill; stop_loss (-52.9%); reconcile_fill…,closed
 861,lab0861_s408_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,3,0,2026-08-05,False,,66.7,464.68,655.56,806.67,-68.18,224.0,"DKNG,NKE,NVDA",S408,take_profit (+586.5%); reconcile_fill; stop_loss (-68.2%),closed
 862,lab0862_s408_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-04,False,,0.0,-50.0,-50.0,-50.0,-50.0,-8.0,NKE,S408,stop_loss (-52.9%),closed
 863,lab0863_s408_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-04,False,,0.0,-50.0,-50.0,-50.0,-50.0,-8.0,NKE,S408,stop_loss (-52.9%),closed

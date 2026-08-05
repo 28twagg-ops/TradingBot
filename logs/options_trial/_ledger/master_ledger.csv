@@ -8624,3 +8624,8 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05T16:25:47Z,reconcile,830,lab0830_s406_w2_1005_1045_r1,S406,b3d325cca5c5,DKNG,DKNG260807C00025000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-05 16:20:50.843004+00:00,exit,199,lab0199_s218_w4_1120_1135_r2,S218,c88e6f069a32,UNH,UNH260807C00425000,1,,1.0,57.0,75.44,43.0,take_profit (+75.4%),,-0.01,0.5,-0.5,,,5da941ba-e7e2-4858-9590-2bfa86eab0fd
 2026-08-05 16:25:51.104849+00:00,exit,198,lab0198_s218_w4_1120_1135_r1,S218,b1dd50777a1c,UNH,UNH260807C00425000,1,,0.98,57.0,71.93,41.0,take_profit (+71.9%),,-0.01,0.5,-0.5,,,9530508f-314d-4c71-bc86-4c9e27533c4e
+2026-08-05T16:41:06Z,reconcile,860,lab0860_s408_w3_1045_1120_r1,S408,b5f7a33e4406,DKNG,DKNG260807C00025500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-05T16:41:06Z,reconcile,0,orphan_reconcile,ORPHAN,962eb7cc2d81,NKE,NKE260807C00043500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-05T16:41:06Z,reconcile,0,orphan_reconcile,ORPHAN,ce16ef5a17e7,UNH,UNH260807C00425000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-05 16:35:24.140915+00:00,exit,0,orphan_reconcile,ORPHAN,a683fbfa29fd,PLTR,PLTR260807C00172500,2,,0.97,79.0,145.57,115.0,take_profit (+64.9%),,-0.01,0.5,-0.5,,,d2286ea5-8536-4461-9f37-995a17b5c8b2
+2026-08-05 16:31:12.086811+00:00,exit,0,orphan_reconcile,ORPHAN,a683fbfa29fd,PLTR,PLTR260807C00172500,1,,0.09,39.5,-77.22,-30.5,stop_loss (-52.9%),,-0.01,0.5,-0.5,,,c7f2017b-32bf-48f5-b7c7-d6db8e916387
