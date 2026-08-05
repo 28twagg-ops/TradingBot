@@ -312,7 +312,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 310,lab0310_s354_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-03,False,,0.0,-63.89,-63.89,-63.89,-63.89,-46.0,OXY,S354,reconcile_fill,closed
 311,lab0311_s354_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
 312,lab0312_s355_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-05,False,,,,,,,0,UBER,S355,,entered_no_exit
-313,lab0313_s355_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-05,False,,,,,,,0,UBER,S355,,entered_no_exit
+313,lab0313_s355_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-08-05,False,,0.0,-48.84,-48.84,-48.84,-48.84,-21.0,UBER,S355,stop_loss (-50.6%),closed
 314,lab0314_s355_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,3,0,2026-08-05,False,,0.0,-65.58,-66.67,-63.41,-66.67,-86.0,"AMZN,UBER",S355,stop_loss (-66.2%); stop_loss (-66.2%); reconcile_fill,closed
 315,lab0315_s355_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,2,1,2026-08-05,False,,0.0,-54.28,-54.28,-48.57,-60.0,-44.0,"AMZN,UBER",S355,stop_loss (-68.5%); reconcile_fill,closed
 316,lab0316_s355_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-05,False,,,,,,,0,UBER,S355,,entered_no_exit
@@ -861,7 +861,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 859,lab0859_s408_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-05,False,,,,,,,0,DKNG,S408,,entered_no_exit
 860,lab0860_s408_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,4,1,2026-08-05,False,,50.0,631.11,566.67,1446.67,-55.56,411.0,"DKNG,NKE,NVDA",S408,reconcile_fill; stop_loss (-52.9%); reconcile_fill…,closed
 861,lab0861_s408_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,2,1,2026-08-05,False,,100.0,731.12,731.12,806.67,655.56,239.0,"DKNG,NKE,NVDA",S408,take_profit (+586.5%); reconcile_fill,closed
-862,lab0862_s408_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-04,False,,,,,,,0,,,,open
+862,lab0862_s408_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-04,False,,0.0,-50.0,-50.0,-50.0,-50.0,-8.0,NKE,S408,stop_loss (-52.9%),closed
 863,lab0863_s408_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-04,False,,0.0,-50.0,-50.0,-50.0,-50.0,-8.0,NKE,S408,stop_loss (-52.9%),closed
 864,lab0864_s408_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 865,lab0865_s408_w5_1300_1330_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle

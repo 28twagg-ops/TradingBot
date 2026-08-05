@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-05
 
-_Generated 2026-08-05T11:46:19.224893_
+_Generated 2026-08-05T11:51:14.465415_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-05T11:46:19.224893_
 
 ## Attribution health
 
-- Total exits: **1531**
+- Total exits: **1533**
 - Orphan exits (b0/orphan_reconcile): **81**
 - Orphan rate: **5.3%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -21,7 +21,7 @@ _Generated 2026-08-05T11:46:19.224893_
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | S354 (GapDown_5DTE) | 5d | watch | 20 | 70.0 | +116.67 | -64.66 | -51.16 | +179.58 | 5 | 22 | 6 | $+861.00 | 40.0% | fat left tail (p10 < -45%) |
-| S355 (GapDown_7DTE) | 7d | watch | 15 | 66.7 | +91.49 | -65.37 | -54.28 | +253.22 | 5 | 20 | 5 | $+601.00 | 53.3% | building sample (8-19 exits) |
+| S355 (GapDown_7DTE) | 7d | watch | 16 | 62.5 | +91.30 | -65.04 | -51.63 | +243.31 | 5 | 20 | 6 | $+580.00 | 50.0% | building sample (8-19 exits) |
 | S352 (GapDown_2DTE) | 2d | watch | 11 | 81.8 | +90.00 | -64.86 | +43.25 | +194.44 | 5 | 34 | 4 | $+266.00 | 54.5% | building sample (8-19 exits) |
 | S361 (RubberBand_2DTE) | 2d | watch | 17 | 76.5 | +82.76 | -73.11 | +17.78 | +180.00 | 5 | 51 | 17 | $+243.00 | 64.7% | building sample (8-19 exits) |
 | S350 (GapDown_0DTE) | 0d | watch | 26 | 69.2 | +68.91 | -61.77 | +0.00 | +225.72 | 5 | 40 | 20 | $+640.00 | 50.0% | fat left tail (p10 < -45%) |
@@ -37,9 +37,9 @@ _Generated 2026-08-05T11:46:19.224893_
 | S404 (GapDown_OTM2) | 3d | watch | 10 | 100.0 | +55.86 | +37.90 | +45.37 | +126.29 | 5 | 34 | 0 | $+460.00 | 80.0% | building sample (8-19 exits) |
 | S363 (RubberBand_5DTE) | 5d | watch | 10 | 100.0 | +52.94 | +7.14 | +9.52 | +103.55 | 2 | 26 | 10 | $+150.00 | 60.0% | building sample (8-19 exits) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 28 | 67.9 | +50.00 | -68.80 | -38.23 | +344.06 | 9 | 45 | 26 | $+618.00 | 50.0% | fat left tail (p10 < -45%) |
-| S408 (RubberBand_ITM1) | 3d | watch | 18 | 61.1 | +48.89 | -51.67 | -4.69 | +921.34 | 2 | 48 | 18 | $+731.00 | 50.0% | building sample (8-19 exits) |
 | S356 (GapDown_14DTE) | 14d | watch | 4 | 100.0 | +48.27 | +37.93 | +37.93 | +58.62 | 5 | 22 | 2 | $+112.00 | 100.0% | insufficient sample (<8 exits) |
 | S357 (GapDown_21DTE) | 21d | watch | 7 | 100.0 | +47.06 | +47.06 | +47.06 | +64.58 | 5 | 18 | 5 | $+242.00 | 85.7% | insufficient sample (<8 exits) |
+| S408 (RubberBand_ITM1) | 3d | watch | 19 | 57.9 | +45.16 | -51.11 | -6.25 | +883.11 | 2 | 48 | 19 | $+723.00 | 52.6% | building sample (8-19 exits) |
 | S405 (GapDown_OTM3) | 3d | watch | 25 | 60.0 | +42.86 | -57.06 | -41.46 | +134.22 | 5 | 42 | 11 | $+466.00 | 44.0% | fat left tail (p10 < -45%) |
 | S407 (RubberBand_ITM2) | 3d | watch | 20 | 55.0 | +41.84 | -95.92 | -61.54 | +425.39 | 5 | 48 | 16 | $+287.00 | 40.0% | fat left tail (p10 < -45%) |
 | S401 (Any_Gap_Down_Small) | 3d | watch | 32 | 62.5 | +27.63 | -91.21 | -27.24 | +160.00 | 5 | 44 | 30 | $+510.00 | 37.5% | fat left tail (p10 < -45%) |
@@ -264,7 +264,7 @@ _Pipeline evaluation as of 2026-08-05. Auto-kill thresholds: median<-25% at n>=1
 | S352 | GapDown_2DTE | 11 | +90.00% | 82% | WATCH | 5 |
 | S353 | GapDown_3DTE | 13 | -50.77% | 31% | WATCH | 5 |
 | S354 | GapDown_5DTE | 20 | +116.67% | 70% | INSUFFICIENT | 5 |
-| S355 | GapDown_7DTE | 15 | +91.49% | 67% | INSUFFICIENT | 5 |
+| S355 | GapDown_7DTE | 16 | +91.30% | 62% | INSUFFICIENT | 5 |
 | S356 | GapDown_14DTE | 4 | +48.27% | 100% | WATCH | 5 |
 | S357 | GapDown_21DTE | 7 | +47.06% | 100% | WATCH | 5 |
 | S358 | GapDown_30DTE | 0 | — | — | NEW | 1 |
@@ -317,7 +317,7 @@ _Pipeline evaluation as of 2026-08-05. Auto-kill thresholds: median<-25% at n>=1
 | S405 | GapDown_OTM3 | 25 | +42.86% | 60% | INSUFFICIENT | 5 |
 | S406 | RubberBand_ITM3 | 31 | +63.64% | 65% | INSUFFICIENT | 5 |
 | S407 | RubberBand_ITM2 | 20 | +41.84% | 55% | INSUFFICIENT | 5 |
-| S408 | RubberBand_ITM1 | 18 | +48.89% | 61% | INSUFFICIENT | 2 |
+| S408 | RubberBand_ITM1 | 19 | +45.16% | 58% | INSUFFICIENT | 2 |
 | S409 | RubberBand_ATM | 0 | — | — | NEW | 0 |
 | S410 | RubberBand_OTM1 | 0 | — | — | NEW | 0 |
 | S411 | RubberBand_OTM2 | 14 | +18.66% | 93% | WATCH | 2 |
