@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-06
 
-_Generated 2026-08-06T10:58:47.714728_
+_Generated 2026-08-06T11:08:52.161025_
 
 ## Summary
 
@@ -11,9 +11,9 @@ _Generated 2026-08-06T10:58:47.714728_
 
 ## Attribution health
 
-- Total exits: **1737**
-- Orphan exits (b0/orphan_reconcile): **124**
-- Orphan rate: **7.1%** (warn if >10%)
+- Total exits: **1741**
+- Orphan exits (b0/orphan_reconcile): **125**
+- Orphan rate: **7.2%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
 
 ## Strategy scoreboard
@@ -38,7 +38,7 @@ _Generated 2026-08-06T10:58:47.714728_
 | S398 (GapDown_ATM) | 3d | watch | 26 | 65.4 | +49.49 | -55.00 | -22.90 | +166.67 | 6 | 48 | 12 | $+787.00 | 34.6% | fat left tail (p10 < -45%) |
 | S356 (GapDown_14DTE) | 14d | watch | 4 | 100.0 | +48.27 | +37.93 | +37.93 | +58.62 | 6 | 24 | 2 | $+112.00 | 100.0% | insufficient sample (<8 exits) |
 | S404 (GapDown_OTM2) | 3d | watch | 13 | 76.9 | +46.27 | -91.67 | +31.58 | +120.66 | 6 | 40 | 3 | $+318.00 | 61.5% | building sample (8-19 exits) |
-| S412 (RubberBand_OTM3) | 3d | watch | 17 | 64.7 | +43.18 | -29.87 | -11.86 | +92.59 | 6 | 55 | 17 | $+186.00 | 35.3% | building sample (8-19 exits) |
+| S412 (RubberBand_OTM3) | 3d | watch | 19 | 57.9 | +37.50 | -22.56 | -11.29 | +92.59 | 6 | 57 | 19 | $+184.00 | 31.6% | building sample (8-19 exits) |
 | S408 (RubberBand_ITM1) | 3d | watch | 27 | 51.9 | +33.33 | -57.04 | -46.43 | +865.82 | 3 | 60 | 27 | $+990.00 | 37.0% | fat left tail (p10 < -45%) |
 | S401 (Any_Gap_Down_Small) | 3d | watch | 37 | 59.5 | +23.68 | -96.23 | -38.98 | +205.23 | 6 | 57 | 35 | $+634.00 | 32.4% | fat left tail (p10 < -45%) |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | watch | 34 | 64.7 | +13.89 | -50.51 | -8.51 | +52.50 | 10 | 65 | 34 | $+40.00 | 44.1% | fat left tail (p10 < -45%) |
@@ -110,7 +110,7 @@ _Generated 2026-08-06T10:58:47.714728_
 | S353 (GapDown_3DTE) | 3d | watch | 18 | 33.3 | -42.73 | -87.47 | -78.01 | +104.69 | 6 | 38 | 14 | $-164.00 | 50.0% | early sample with non-positive median |
 | S400 (Any_Green_Close) | 3d | watch | 5 | 0.0 | -50.00 | -66.67 | -66.67 | -33.33 | 6 | 0 | 0 | $-30.00 | 100.0% | insufficient sample (<8 exits) |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 1 | 0.0 | -50.75 | -50.75 | -50.75 | -50.75 | 8 | 4 | 1 | $-34.00 | 100.0% | insufficient sample (<8 exits) |
-| S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | watch | 16 | 0.0 | -59.83 | -83.79 | -80.49 | -44.31 | 10 | 38 | 16 | $-519.00 | 50.0% | early sample with non-positive median |
+| S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | watch | 17 | 0.0 | -63.41 | -88.09 | -80.49 | -45.79 | 10 | 40 | 17 | $-564.00 | 52.9% | early sample with non-positive median |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 6 | 0.0 | -64.75 | -70.52 | -66.39 | -44.87 | 9 | 0 | 2 | $-133.00 | 66.7% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 6 | 0.0 | -65.67 | -88.89 | -86.11 | -50.00 | 16 | 0 | 0 | $-59.00 | 83.3% | insufficient sample (<8 exits) |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 20 | 20.0 | -24.36 | -61.35 | -46.79 | +109.42 | 10 | 62 | 20 | $-127.00 | 70.0% | non-positive median return |
@@ -205,7 +205,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S216 | 3d ATM RSI x30 | 16 | -59.83 | -83.79 | -80.49 | 38 | 16 |
+| S216 | 3d ATM RSI x30 | 17 | -63.41 | -88.09 | -80.49 | 40 | 17 |
 | S217 | 3d ATM RSI<25 bounce | 26 | +52.45 | -59.41 | -53.95 | 46 | 25 |
 | S218 | 3d ATM BB lower touch | 39 | +50.00 | -73.77 | -57.11 | 58 | 37 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
@@ -253,7 +253,7 @@ _Pipeline evaluation as of 2026-08-06. Auto-kill thresholds: median<-25% at n>=1
 | S213 | MA_Bounce_200 | 0 | — | — | NEW | 0 |
 | S214 | MA_Death_Cross | 0 | — | — | NEW | 0 |
 | S215 | MA_Reclaim_200 | 0 | — | — | NEW | 0 |
-| S216 | RSI_Oversold_Cross | 16 | -59.83% | 0% | INSUFFICIENT | 10 |
+| S216 | RSI_Oversold_Cross | 17 | -63.41% | 0% | INSUFFICIENT | 10 |
 | S217 | RSI_25_Bounce | 26 | +52.45% | 54% | INSUFFICIENT | 10 |
 | S218 | BB_Lower_Touch | 39 | +50.00% | 67% | INSUFFICIENT | 10 |
 | S219 | Volume_Climax_Up | 0 | — | — | NEW | 0 |
@@ -321,7 +321,7 @@ _Pipeline evaluation as of 2026-08-06. Auto-kill thresholds: median<-25% at n>=1
 | S409 | RubberBand_ATM | 0 | — | — | NEW | 0 |
 | S410 | RubberBand_OTM1 | 0 | — | — | NEW | 0 |
 | S411 | RubberBand_OTM2 | 20 | +11.78% | 65% | INSUFFICIENT | 3 |
-| S412 | RubberBand_OTM3 | 17 | +43.18% | 65% | INSUFFICIENT | 6 |
+| S412 | RubberBand_OTM3 | 19 | +37.50% | 58% | INSUFFICIENT | 6 |
 | S413 | BBSqueeze_ITM3 | 0 | — | — | NEW | 0 |
 | S414 | BBSqueeze_ITM2 | 0 | — | — | NEW | 0 |
 | S415 | BBSqueeze_ITM1 | 0 | — | — | NEW | 0 |

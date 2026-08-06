@@ -17,7 +17,7 @@ S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),82,39
 S398,GapDown_ATM,3d,watch,fat left tail (p10 < -45%),64,26,17,9,56.94,49.49,-55.0,-22.9,166.67,787.0,4,6,48,12,4,34.6
 S356,GapDown_14DTE,14d,watch,insufficient sample (<8 exits),36,4,4,0,48.27,48.27,37.93,37.93,58.62,112.0,2,6,24,2,1,100.0
 S404,GapDown_OTM2,3d,watch,building sample (8-19 exits),56,13,10,3,34.96,46.27,-91.67,31.58,120.66,318.0,2,6,40,3,2,61.5
-S412,RubberBand_OTM3,3d,watch,building sample (8-19 exits),59,17,11,6,36.34,43.18,-29.87,-11.86,92.59,186.0,3,6,55,17,4,35.3
+S412,RubberBand_OTM3,3d,watch,building sample (8-19 exits),61,19,11,8,32.14,37.5,-22.56,-11.29,92.59,184.0,3,6,57,19,5,31.6
 S408,RubberBand_ITM1,3d,watch,fat left tail (p10 < -45%),60,27,14,13,207.46,33.33,-57.04,-46.43,865.82,990.0,4,3,60,27,5,37.0
 S401,Any_Gap_Down_Small,3d,watch,fat left tail (p10 < -45%),73,37,22,15,54.42,23.68,-96.23,-38.98,205.23,634.0,4,6,57,35,7,32.4
 S210,MA_Cross_8_21,3d ATM MA cross 8/21,watch,fat left tail (p10 < -45%),80,34,22,12,7.37,13.89,-50.51,-8.51,52.5,40.0,2,10,65,34,4,44.1
@@ -89,7 +89,7 @@ S419,BBSqueeze_OTM3,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,
 S353,GapDown_3DTE,3d,watch,early sample with non-positive median,54,18,6,12,-10.72,-42.73,-87.47,-78.01,104.69,-164.0,4,6,38,14,4,50.0
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),12,5,0,5,-51.11,-50.0,-66.67,-66.67,-33.33,-30.0,1,6,0,0,1,100.0
 S209,GapDown_Recovery,3d ATM gap-recovery,watch,insufficient sample (<8 exits),10,1,0,1,-50.75,-50.75,-50.75,-50.75,-50.75,-34.0,1,8,4,1,1,100.0
-S216,RSI_Oversold_Cross,3d ATM RSI x30,watch,early sample with non-positive median,58,16,0,16,-64.24,-59.83,-83.79,-80.49,-44.31,-519.0,3,10,38,16,3,50.0
+S216,RSI_Oversold_Cross,3d ATM RSI x30,watch,early sample with non-positive median,60,17,0,17,-65.76,-63.41,-88.09,-80.49,-45.79,-564.0,3,10,40,17,3,52.9
 S202,GapDown_Monster,3d ATM gap-monster,watch,insufficient sample (<8 exits),30,6,0,6,-60.04,-64.75,-70.52,-66.39,-44.87,-133.0,3,9,0,2,2,66.7
 S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,insufficient sample (<8 exits),98,6,0,6,-68.19,-65.67,-88.89,-86.11,-50.0,-59.0,2,16,0,0,2,83.3
 S211,MA_Cross_21_50,3d ATM MA cross 21/50,drop,non-positive median return,72,20,4,16,-10.85,-24.36,-61.35,-46.79,109.42,-127.0,3,10,62,20,3,70.0
