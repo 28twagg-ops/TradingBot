@@ -1,0 +1,9 @@
+13:59:48  INFO      Mode: morning_scan
+13:59:48  INFO        [positions] 5/5 (5 valid)
+13:59:48  INFO        SELL LIMIT DOV  qty=0.440517507  limit=$213.12  id=33470aaa-25c0-45bd-a7c7-637095c185eb
+14:00:18  INFO        SELL LIMIT filled DOV (confirmed by position check)
+14:00:18  INFO        TX logged: SELL DOV  P&L -0.11%
+14:00:18  INFO        SELL LIMIT GS  qty=0.088675219  limit=$1061.27  id=ed40fd94-b97d-44c1-a5b5-26408670d53c
+14:00:48  INFO        SELL LIMIT filled GS (confirmed by position check)
+14:00:49  INFO        TX logged: SELL GS  P&L 0.14%
+14:00:49  INFO        SELL LIMIT PWR  qty=0.103661847  limit=$682.24  id=918e93f2-7abf-472b-9d6a-d3368600421c

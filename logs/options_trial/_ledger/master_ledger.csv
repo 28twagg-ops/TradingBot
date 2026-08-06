@@ -8751,24 +8751,3 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-04 14:28:54.354870+00:00,entry,787,lab0787_s398_w2_1005_1045_r2,S398,a580cc743cb6,AMZN,AMZN260807C00295000,1,0.41,0.41,41.0,,,,-0.01,,0.5,-0.5,,,62cfea59-32d1-408f-bb42-c8e1fa29329d
 2026-08-04 14:22:23.261104+00:00,entry,435,lab0435_s366_w2_1005_1045_r2,S366,a4bb493ace81,NKE,NKE260828C00045000,1,0.65,0.65,65.0,,,,-0.01,,0.5,-0.5,,,1af420e6-ffbd-4c80-bb34-e7ddc3b05738
 2026-08-04 14:22:23.278077+00:00,entry,434,lab0434_s366_w2_1005_1045_r1,S366,ee1466c1a9ba,NKE,NKE260828C00045000,1,0.65,0.65,65.0,,,,-0.01,,0.5,-0.5,,,cfc7b713-a845-4824-b616-3cb43989b1f3
-2026-08-06T13:44:54Z,reconcile,171,lab0171_s216_w4_1120_1135_r2,S216,603278136314,HOOD,HOOD260807C00100000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-06T13:44:54Z,reconcile,170,lab0170_s216_w4_1120_1135_r1,S216,90e2384db26c,HOOD,HOOD260807C00100000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-06T13:44:54Z,reconcile,799,lab0799_s399_w4_1120_1135_r2,S399,243b5e9d7b56,AMD,AMD260807C00555000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-06T13:44:54Z,reconcile,798,lab0798_s399_w4_1120_1135_r1,S399,13277a793f5f,AMD,AMD260807C00555000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-06T13:44:54Z,reconcile,115,lab0115_s212_w4_1120_1135_r2,S212,3b5b77dc410e,AAPL,AAPL260807C00317500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-06T13:44:54Z,reconcile,0,orphan_reconcile,ORPHAN,ffafb5bd5850,TTD,TTD260807C00021500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-06T13:44:54Z,reconcile,0,orphan_reconcile,ORPHAN,7933dacc805b,RBLX,RBLX260807C00040000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-06T13:44:54Z,reconcile,0,orphan_reconcile,ORPHAN,c400d9331107,HOOD,HOOD260807C00101000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-06 13:40:35.633677+00:00,entry,109,lab0109_s212_w1_0928_1005_r2,S212,8644ab5d5cb0,GOOGL,GOOGL260810C00380000,1,0.59,0.59,59.0,,,,-0.01,,0.5,-0.5,,,372db185-8cf2-4c7d-909c-5e609cd1b582
-2026-08-06 13:40:35.515059+00:00,entry,108,lab0108_s212_w1_0928_1005_r1,S212,4e5159d01cf3,GOOGL,GOOGL260810C00380000,1,0.59,0.59,59.0,,,,-0.01,,0.5,-0.5,,,aaaff2fc-20c7-470e-ba71-7c7c12361fb9
-2026-08-06 13:44:25.416337+00:00,entry,73,lab0073_s209_w1_0928_1005_r2,S209,f909dedc8b35,UPST,UPST260807C00032000,1,0.17,0.17,17.0,,,,-0.01,,0.5,-0.5,,,5576cb6e-2aef-41ed-9297-6b6c5ecb3958
-2026-08-06 13:44:25.419833+00:00,entry,72,lab0072_s209_w1_0928_1005_r1,S209,fe498b53f46b,UPST,UPST260807C00032000,1,0.17,0.17,17.0,,,,-0.01,,0.5,-0.5,,,43b3454a-aef6-4bdd-9062-3009ee2eda5f
-2026-08-06 13:39:53.387236+00:00,exit,804,lab0804_s404_w3_1045_1120_r1,S404,a311b45b2f1a,AMZN,AMZN260807C00292500,1,,0.04,48.0,-91.67,-44.0,reconcile_fill,,-0.01,0.5,-0.5,,,32d1f74e-0c23-4dc2-84ea-3a4414c65119
-2026-08-06 13:34:42.700730+00:00,exit,0,orphan_reconcile,ORPHAN,0bc0036ed544,UBER,UBER260807C00070000,1,,0.01,32.23,-96.9,-31.23,stop_loss (-97.0%),,-0.01,0.5,-0.5,,,299ceefc-21bd-4e5c-9ea8-0acb49b3f5a5
-2026-08-06 13:34:42.280532+00:00,exit,0,orphan_reconcile,ORPHAN,9632933efada,UBER,UBER260814C00073000,1,,0.22,40.5,-45.68,-18.5,stop_loss (-52.2%),,-0.01,0.5,-0.5,,,a771054d-ad4d-44cd-bad4-c2960538e04f
-2026-08-06 13:37:15.984332+00:00,exit,0,orphan_reconcile,ORPHAN,afc54e912591,UBER,UBER260807C00078000,3,,0.01,151.6,-98.02,-148.6,stop_loss (-100.0%),,-0.01,0.5,-0.5,,,fab90776-37ff-469e-8318-331f3f7f8164
-2026-08-06 13:35:53.832699+00:00,exit,805,lab0805_s404_w3_1045_1120_r2,S404,343ba6cee5b8,AMZN,AMZN260807C00292500,1,,0.04,48.0,-91.67,-44.0,stop_loss (-94.4%),,-0.01,0.5,-0.5,,,34ed02cb-db59-4184-bcb1-c1332bf527b0
-2026-08-06 13:34:39.074065+00:00,exit,352,lab0352_s360_w3_1045_1120_r1,S360,d96b27b3c9e3,DKNG,DKNG260807C00024500,1,,0.07,38.0,-81.58,-31.0,stop_loss (-82.2%),,-0.01,0.5,-0.5,,,d46865a4-c89a-45cd-9509-be55fd7f4f45
-2026-08-06 13:36:12.295112+00:00,exit,0,orphan_reconcile,ORPHAN,76d0456de795,AMZN,AMZN260807C00297500,1,,0.11,33.92,-67.57,-22.92,stop_loss (-87.5%),,-0.01,0.5,-0.5,,,66b6856b-d516-439f-b4f8-53f4b6ed1608
-2026-08-05 14:56:08.859727+00:00,exit,109,lab0109_s212_w1_0928_1005_r2,S212,8644ab5d5cb0,GOOGL,GOOGL260810C00380000,1,,0.3,59.0,-49.15,-29.0,reconcile_fill,,-0.01,0.5,-0.5,,,8716e239-b0c8-415a-8785-b01d08ece722
-2026-08-04 18:47:06.376705+00:00,exit,916,lab0916_s412_w3_1045_1120_r1,S412,dc76658da856,NKE,NKE260807C00042000,1,,0.5,59.0,-15.25,-9.0,reconcile_fill,,-0.01,0.5,-0.5,,,3df44539-23a1-4a0a-b4c9-61198bdecb0f

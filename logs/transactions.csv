@@ -1081,3 +1081,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-05 19:57:01,2026-08-05,SELL,NVST,EarningsDrift,28.33,94.33,-0.23,-0.22,0,midline (-0.2%),bull,472.6
 2026-08-06 13:46:49,2026-08-06,SELL,AES,Pullback50,14.68,93.56,-0.11,-0.1,3,max_hold 3d (-0.1%),bull,471.0
 2026-08-06 13:47:09,2026-08-06,SELL,AVB,Pullback50,189.19,94.61,1.12,1.05,3,max_hold 3d (+1.1%),bull,470.93
+2026-08-06 14:00:18,2026-08-06,SELL,DOV,Pullback50,213.35,93.98,-0.11,-0.11,0,midline (-0.1%),bull,472.41
+2026-08-06 14:00:49,2026-08-06,SELL,GS,Pullback50,1062.28,94.2,0.14,0.13,0,midline (+0.1%),bull,471.77

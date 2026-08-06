@@ -3143,3 +3143,33 @@ Fetched daily bars for 114/117 symbols
 ### Options bot full output
 
 ```text
+
+## Run 20260806T135947Z
+
+- UTC timestamp: `20260806T135947Z`
+- GitHub run: [#6256](https://github.com/28twagg-ops/TradingBot/actions/runs/31108211308)
+- Run id: `31108211308`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-06T09:25:47.012611-04:00","date":"2026-08-06","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.5,"phases_s":{"reconcile":0.13},"signals":0,"placed":0,"equity":143264.28,"open_positions":26,"pending_orders":0,"open_lots":156,"submitted_today":0,"filled_today":0,"unattributed_contracts":3,"top_signals":[],"github_run":"6250","github_run_id":"31105807813","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:59:48  INFO      Mode: morning_scan
+13:59:48  INFO        [positions] 5/5 (5 valid)
+13:59:48  INFO        SELL LIMIT DOV  qty=0.440517507  limit=$213.12  id=33470aaa-25c0-45bd-a7c7-637095c185eb
+14:00:18  INFO        SELL LIMIT filled DOV (confirmed by position check)
+14:00:18  INFO        TX logged: SELL DOV  P&L -0.11%
+14:00:18  INFO        SELL LIMIT GS  qty=0.088675219  limit=$1061.27  id=ed40fd94-b97d-44c1-a5b5-26408670d53c
+14:00:48  INFO        SELL LIMIT filled GS (confirmed by position check)
+14:00:49  INFO        TX logged: SELL GS  P&L 0.14%
+14:00:49  INFO        SELL LIMIT PWR  qty=0.103661847  limit=$682.24  id=918e93f2-7abf-472b-9d6a-d3368600421c
+```
+
+### Options bot full output
+
+```text
