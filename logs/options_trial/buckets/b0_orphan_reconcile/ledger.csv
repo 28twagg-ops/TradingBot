@@ -104,3 +104,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05T20:04:11Z,reconcile,0,orphan_reconcile,ORPHAN,cc4b9f78309e,DKNG,DKNG260807C00024000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-05 19:39:36.048984+00:00,exit,0,orphan_reconcile,ORPHAN,ffd5731b2a5e,DKNG,DKNG260807C00024500,1,,0.25,39.4,-36.55,-14.4,stop_loss (-55.1%),,-0.01,0.5,-0.5,,,e465bd35-9ff7-4c30-8285-e7f5da427b0a
 2026-08-05 19:50:03.811025+00:00,exit,0,orphan_reconcile,ORPHAN,ffd5731b2a5e,DKNG,DKNG260807C00024500,1,,0.36,39.4,-8.63,-3.4,reconcile_fill,,-0.01,0.5,-0.5,,,aef6ba95-05d0-4c87-b916-730a3f0b3238
+2026-08-06T01:46:05Z,reconcile,0,orphan_reconcile,ORPHAN,59e18c93befa,AMZN,AMZN260805C00290000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06T01:46:05Z,reconcile,0,orphan_reconcile,ORPHAN,6dbf70e9c876,AMZN,AMZN260805C00287500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
