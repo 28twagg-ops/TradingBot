@@ -2924,3 +2924,53 @@ Fetched daily bars for 114/117 symbols
 ```
 
 ---
+
+## Run 20260806T134625Z
+
+- UTC timestamp: `20260806T134625Z`
+- GitHub run: [#6254](https://github.com/28twagg-ops/TradingBot/actions/runs/31107398964)
+- Run id: `31107398964`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-06T09:25:47.012611-04:00","date":"2026-08-06","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.5,"phases_s":{"reconcile":0.13},"signals":0,"placed":0,"equity":143264.28,"open_positions":26,"pending_orders":0,"open_lots":156,"submitted_today":0,"filled_today":0,"unattributed_contracts":3,"top_signals":[],"github_run":"6250","github_run_id":"31105807813","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:46:26  INFO      Mode: morning_scan
+13:46:28  INFO        [positions] 2/2 (2 valid)
+13:46:28  INFO        SELL LIMIT AES  qty=6.37180185  limit=$14.68  id=a0aa1ea0-b54c-4a5c-8f97-a4980ece3847
+13:46:48  INFO        SELL LIMIT filled AES (confirmed by position check)
+13:46:49  INFO        TX logged: SELL AES  P&L -0.11%
+13:46:49  INFO        SELL LIMIT AVB  qty=0.500096131  limit=$188.94  id=ace64a11-749d-4c83-9ef7-22ddc9d4210b
+13:47:09  INFO        SELL LIMIT filled AVB (confirmed by position check)
+13:47:09  INFO        TX logged: SELL AVB  P&L 1.12%
+13:47:09  INFO        Universe cache hit: 903 tickers (tickers_2026-08-06.json)
+13:47:11  INFO        [universe] 40/903 (40 valid)
+13:47:13  INFO        [universe] 80/903 (80 valid)
+13:47:15  INFO        [universe] 120/903 (120 valid)
+13:47:16  INFO        [universe] 160/903 (160 valid)
+13:47:17  INFO        [universe] 200/903 (199 valid)
+13:47:25  INFO        [universe] 240/903 (238 valid)
+13:47:35  INFO        [universe] 280/903 (278 valid)
+13:47:46  INFO        [universe] 320/903 (318 valid)
+13:48:00  INFO        [universe] 360/903 (358 valid)
+13:48:11  INFO        [universe] 400/903 (397 valid)
+13:48:24  INFO        [universe] 440/903 (437 valid)
+13:48:35  INFO        [universe] 480/903 (477 valid)
+13:48:48  INFO        [universe] 520/903 (517 valid)
+13:48:59  INFO        [universe] 560/903 (557 valid)
+13:49:12  INFO        [universe] 600/903 (597 valid)
+13:49:22  INFO        [universe] 640/903 (637 valid)
+13:49:36  INFO        [universe] 680/903 (677 valid)
+13:49:47  INFO        [universe] 720/903 (717 valid)
+13:50:00  INFO        [universe] 760/903 (757 valid)
+13:50:11  INFO        [universe] 800/903 (797 valid)
+```
+
+### Options bot full output
+
+```text
