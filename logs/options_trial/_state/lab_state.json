@@ -1702,26 +1702,6 @@
       "entry_order_id": "1734d05f-4e64-41a0-8be5-41a8fd15ffe1"
     },
     {
-      "lot_id": "9dd7596416e5",
-      "bucket_id": 901,
-      "profile_name": "lab0901_s411_w2_1005_1045_r2",
-      "strategy_id": "S411",
-      "occ_symbol": "TTD260807C00020500",
-      "underlying": "TTD",
-      "qty": 1,
-      "entry_cost": 67.0,
-      "entry_price": 0.67,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-05T15:12:32.668985+00:00",
-      "entry_order_id": "875e1020-568b-41c6-8ea3-893c66f31a73"
-    },
-    {
       "lot_id": "8d5426703d42",
       "bucket_id": 900,
       "profile_name": "lab0900_s411_w2_1005_1045_r1",
@@ -3317,7 +3297,7 @@
     "b31": 59.0,
     "b30": 59.0,
     "b915": 91.0,
-    "b901": 127.0,
+    "b901": 60.0,
     "b900": 127.0,
     "b95": 35.0,
     "b94": 35.0,
@@ -3885,7 +3865,8 @@
     "b28ee7eb-edf9-467e-a38c-de178f1bb4a9",
     "586f1d8e-bb91-4133-806c-721e4f99600f",
     "34431e6d-82ff-497f-aa4a-9671e9edf784",
-    "43b398a6-c910-4556-b097-2581575b2f51"
+    "43b398a6-c910-4556-b097-2581575b2f51",
+    "36c9f295-a44c-4059-be93-1de40195a127"
   ],
   "submitted_today": 45,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
