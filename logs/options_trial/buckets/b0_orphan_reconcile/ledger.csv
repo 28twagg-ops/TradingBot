@@ -170,3 +170,10 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-06T18:29:33Z,reconcile,0,orphan_reconcile,ORPHAN,9722ef523d65,AMD,AMD260807C00540000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-06 18:19:03.257012+00:00,exit,0,orphan_reconcile,ORPHAN,f5363f91b2ab,AAPL,AAPL260814C00330000,2,,0.22,119.5,-63.18,-75.5,stop_loss (-53.3%),,-0.01,0.5,-0.5,,,dd66834a-e941-4ce4-9a6a-a285f96dd02a
 2026-08-06 18:10:22.141114+00:00,exit,0,orphan_reconcile,ORPHAN,d465a8c7b174,AMZN,AMZN260807C00295000,1,,0.04,40.33,-90.08,-36.33,stop_loss (-53.8%),,-0.01,0.5,-0.5,,,ddf461c8-b591-4093-9bd9-5b1ab7a4650a
+2026-08-06T18:45:47Z,reconcile,0,orphan_reconcile,ORPHAN,d4db12c7dd33,UBER,UBER260814C00073000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06T18:45:47Z,reconcile,0,orphan_reconcile,ORPHAN,d77c45e78e35,COP,COP260807P00111000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06T18:45:47Z,reconcile,0,orphan_reconcile,ORPHAN,f1d991055036,UBER,UBER260828C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06 18:29:43.901490+00:00,exit,0,orphan_reconcile,ORPHAN,d465a8c7b174,AMZN,AMZN260807C00295000,2,,0.92,80.67,128.1,103.33,take_profit (+75.2%),,-0.01,0.5,-0.5,,,225fe173-2a9b-43ba-b7b9-c04fc9b2ba5b
+2026-08-06 18:30:46.640847+00:00,exit,0,orphan_reconcile,ORPHAN,53e410b0bd58,AMZN,AMZN260807C00302500,1,,0.03,13.67,-78.05,-10.67,stop_loss (-81.8%),,-0.01,0.5,-0.5,,,6c9d78e6-9f58-419b-9603-4952679df56d
+2026-08-06 18:29:39.482034+00:00,exit,0,orphan_reconcile,ORPHAN,455af826a4e1,AMD,AMD260807C00550000,1,,0.1,19.0,-47.37,-9.0,stop_loss (-52.6%),,-0.01,0.5,-0.5,,,c3f122e0-4cfe-4127-b9be-3da27e380c47
+2026-08-06 18:29:37.110859+00:00,exit,0,orphan_reconcile,ORPHAN,7478afa6cf76,NKE,NKE260807C00042000,1,,0.62,64.1,-3.28,-2.1,take_profit (+53.1%),,-0.01,0.5,-0.5,,,962048b2-20ad-49f5-bc3c-5b58fd5c5a4a

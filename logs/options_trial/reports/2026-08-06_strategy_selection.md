@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-06
 
-_Generated 2026-08-06T14:29:45.424963_
+_Generated 2026-08-06T14:46:03.978662_
 
 ## Summary
 
@@ -11,9 +11,9 @@ _Generated 2026-08-06T14:29:45.424963_
 
 ## Attribution health
 
-- Total exits: **1838**
-- Orphan exits (b0/orphan_reconcile): **142**
-- Orphan rate: **7.7%** (warn if >10%)
+- Total exits: **1843**
+- Orphan exits (b0/orphan_reconcile): **146**
+- Orphan rate: **7.9%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
 
 ## Strategy scoreboard
@@ -122,7 +122,7 @@ _Generated 2026-08-06T14:29:45.424963_
 | S351 (GapDown_1DTE) | 1d | drop | 34 | 29.4 | -50.03 | -86.87 | -62.50 | +171.88 | 6 | 80 | 23 | $+77.00 | 38.2% | non-positive median return |
 | S407 (RubberBand_ITM2) | 3d | drop | 27 | 40.7 | -51.43 | -90.26 | -61.54 | +381.23 | 6 | 58 | 23 | $+184.00 | 33.3% | non-positive median return |
 | S360 (RubberBand_1DTE) | 1d | drop | 30 | 10.0 | -52.38 | -81.64 | -70.96 | -29.44 | 6 | 57 | 26 | $-486.00 | 36.7% | non-positive median return |
-| S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 28 | 10.7 | -53.66 | -79.30 | -68.18 | +13.05 | 10 | 47 | 24 | $-655.00 | 50.0% | non-positive median return |
+| S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 29 | 13.8 | -53.33 | -79.25 | -66.10 | +53.62 | 10 | 47 | 25 | $-625.00 | 48.3% | non-positive median return |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 22 | 0.0 | -57.12 | -86.44 | -79.32 | -36.96 | 10 | 44 | 22 | $-693.00 | 63.6% | non-positive median return |
 | S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 53 | 3.8 | -71.43 | -98.51 | -97.96 | -46.55 | 10 | 61 | 53 | $-2,084.00 | 41.5% | non-positive median return |
 
@@ -184,7 +184,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S203 | 3d ATM gap-up fade (put) | 28 | -53.66 | -79.30 | -68.18 | 47 | 24 |
+| S203 | 3d ATM gap-up fade (put) | 29 | -53.33 | -79.25 | -66.10 | 47 | 25 |
 | S214 | 3d ATM death cross (put) | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
 ### Phase-1 MA family
@@ -240,7 +240,7 @@ _Pipeline evaluation as of 2026-08-06. Auto-kill thresholds: median<-25% at n>=1
 | S200 | GapDown_Aggressive | 0 | — | — | NEW | 0 |
 | S201 | GapDown_Mild | 0 | — | — | NEW | 0 |
 | S202 | GapDown_Monster | 6 | -64.75% | 0% | WATCH | 9 |
-| S203 | GapUp_Fade | 28 | -53.66% | 11% | INSUFFICIENT | 10 |
+| S203 | GapUp_Fade | 29 | -53.33% | 14% | INSUFFICIENT | 10 |
 | S204 | GapUp_Continuation | 0 | — | — | NEW | 0 |
 | S205 | GapDown_HighVol | 0 | — | — | NEW | 0 |
 | S206 | GapDown_WithTrend | 0 | — | — | NEW | 0 |
