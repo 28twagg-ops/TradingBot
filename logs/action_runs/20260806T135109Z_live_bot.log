@@ -1,0 +1,149 @@
+13:51:10  INFO      Mode: morning_scan
+13:51:11  INFO        Universe cache hit: 903 tickers (tickers_2026-08-06.json)
+13:51:13  INFO        [universe] 40/903 (40 valid)
+13:51:15  INFO        [universe] 80/903 (80 valid)
+13:51:16  INFO        [universe] 120/903 (120 valid)
+13:51:17  INFO        [universe] 160/903 (160 valid)
+13:51:28  INFO        [universe] 200/903 (199 valid)
+13:51:39  INFO        [universe] 240/903 (238 valid)
+13:51:50  INFO        [universe] 280/903 (278 valid)
+13:52:03  INFO        [universe] 320/903 (318 valid)
+13:52:14  INFO        [universe] 360/903 (358 valid)
+13:52:27  INFO        [universe] 400/903 (397 valid)
+13:52:38  INFO        [universe] 440/903 (437 valid)
+13:52:52  INFO        [universe] 480/903 (477 valid)
+13:53:02  INFO        [universe] 520/903 (517 valid)
+13:53:16  INFO        [universe] 560/903 (557 valid)
+13:53:27  INFO        [universe] 600/903 (597 valid)
+13:53:40  INFO        [universe] 640/903 (637 valid)
+13:53:51  INFO        [universe] 680/903 (677 valid)
+13:54:02  INFO        [universe] 720/903 (717 valid)
+13:54:15  INFO        [universe] 760/903 (757 valid)
+13:54:26  INFO        [universe] 800/903 (797 valid)
+13:54:39  INFO        [universe] 840/903 (836 valid)
+13:54:50  INFO        [universe] 880/903 (876 valid)
+13:54:57  INFO        [universe] 903/903 (899 valid)
+13:55:00  INFO        BUY  DOV  $94.19  [Pullback50]  id=320a1116-d8fb-4f27-aac2-3277b32474ee
+13:55:00  INFO        BUY  GEV  $94.19  [Pullback50]  id=986a63de-4e3b-4266-8827-bf73a705a174
+13:55:00  INFO        BUY  GS  $94.19  [Pullback50]  id=399399d4-250a-469a-95d7-31f1530990e4
+13:55:00  INFO        BUY  JBL  $94.19  [Pullback50]  id=5f6558da-80e7-4e83-943e-75d3d9199627
+13:55:00  INFO        BUY  PWR  $70.64  [Pullback50]  id=656c979b-1400-486a-a450-003b355a94a9
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:51 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $470.93|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-08-06|
+|  Universe                                                          both|
+|  Mo~  Aug: VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $470.93|
+|  Cash                                                           $470.93|
+|  Reserve                                          $23.55  (always kept)|
+|  Available                                    $447.38  (for new trades)|
+|  Trade size             $94.19  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (0 open)                           |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 5  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (40325.7m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  17                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  DOV      Pullback50      eq     $213.53  49.4   -1.42   50MA bounce (-|
+|  GEV      Pullback50      eq     $1025.~  46.2   -2.48   50MA bounce (+|
+|  GS       Pullback50      eq     $1063.~  49.7   -2.42   50MA bounce (+|
+|  JBL      Pullback50      eq     $344.38  68.5   -2.85   50MA bounce (-|
+|  PWR      Pullback50      eq     $682.50  60.4   -1.68   50MA bounce (+|
+|  SWKS     Pullback50      eq     $67.53   67.4   -1.72   50MA bounce (-|
+|  TRGP     Pullback50      eq     $269.32  38.7   -2.63   50MA bounce (+|
+|  TER      Pullback50      eq     $385.20  64.2   -1.70   50MA bounce (+|
+|  WMB      Pullback50      eq     $73.09   48.9   -2.52   50MA bounce (-|
+|  BWA      Pullback50      eq     $67.32   67.9   -2.16   50MA bounce (-|
+|  CVLT     Pullback50      eq     $133.24  39.2   -1.51   50MA bounce (-|
+|  CW       Pullback50      eq     $749.41  60.3   -2.12   50MA bounce (+|
+|  ENTG     Pullback50      eq     $143.57  52.8   -2.15   50MA bounce (-|
+|  EXEL     Pullback50      eq     $54.40   44.9   -2.06   50MA bounce (+|
+|  NWE      Pullback50      eq     $70.23   39.3   -2.53   50MA bounce (-|
+|  SLAB     Pullback50      eq     $218.74  63.3   -2.63   50MA bounce (+|
+|  TEX      Pullback50      eq     $66.12   51.8   -1.92   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] DOV  Pullback50                                    $94.19|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] GEV  Pullback50                                    $94.19|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] GS  Pullback50                                     $94.19|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] JBL  Pullback50                                    $94.19|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] PWR  Pullback50                                    $70.64|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] SWKS  Pullback50                                     cap 5|
+|    SKIP [eq] TRGP  Pullback50                                     cap 5|
+|    SKIP [eq] TER  Pullback50                                      cap 5|
+|    SKIP [eq] WMB  Pullback50                                      cap 5|
+|    SKIP [eq] BWA  Pullback50                                      cap 5|
+|    SKIP [eq] CVLT  Pullback50                                     cap 5|
+|    SKIP [eq] CW  Pullback50                                       cap 5|
+|    SKIP [eq] ENTG  Pullback50                                     cap 5|
+|    SKIP [eq] EXEL  Pullback50                                     cap 5|
+|    SKIP [eq] NWE  Pullback50                                      cap 5|
+|    SKIP [eq] SLAB  Pullback50                                     cap 5|
+|    SKIP [eq] TEX  Pullback50                                      cap 5|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      5|
