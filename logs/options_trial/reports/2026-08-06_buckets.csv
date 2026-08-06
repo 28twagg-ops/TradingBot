@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,7,17,2026-07-27,True,10,14.3,-48.01,-82.84,156.46,-98.02,-297.85,"AMZN,NKE,UBER",ORPHAN,stop_loss (-54.4%); stop_loss (-97.0%); stop_loss (-52.2%)…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,7,18,2026-07-27,True,10,14.3,-48.01,-82.84,156.46,-98.02,-297.85,"AMZN,NKE,UBER",ORPHAN,stop_loss (-54.4%); stop_loss (-97.0%); stop_loss (-52.2%)…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -25,8 +25,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 23,lab0023_s202_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-31,False,,,,,,,0,,,,idle
 24,lab0024_s203_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
 25,lab0025_s203_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-05,False,,,,,,,0,,,,idle
-26,lab0026_s203_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-05,False,,,,,,,0,,,,idle
-27,lab0027_s203_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-05,False,,,,,,,0,,,,idle
+26,lab0026_s203_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-06,False,,,,,,,0,COP,S203,,entered_no_exit
+27,lab0027_s203_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-06,False,,,,,,,0,COP,S203,,entered_no_exit
 28,lab0028_s203_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-03,False,,,,,,,0,,,,open
 29,lab0029_s203_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-03,False,,,,,,,0,,,,open
 30,lab0030_s203_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-03,False,,,,,,,0,,,,open
@@ -291,7 +291,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 289,lab0289_s352_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
 290,lab0290_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-06,False,,,,,,,0,COIN,S352,,entered_no_exit
 291,lab0291_s352_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-06,False,,,,,,,0,COIN,S352,,entered_no_exit
-292,lab0292_s352_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-05,False,,,,,,,0,,,,open
+292,lab0292_s352_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-05,False,,100.0,92.59,92.59,92.59,92.59,25.0,UBER,S352,take_profit (+61.3%),closed
 293,lab0293_s352_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-05,False,,100.0,137.04,137.04,137.04,137.04,37.0,UBER,S352,take_profit (+98.6%),closed
 294,lab0294_s352_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
 295,lab0295_s352_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
@@ -901,7 +901,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 899,lab0899_s411_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-05,False,,,,,,,0,,,,idle
 900,lab0900_s411_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,2,2026-08-04,False,,,,,,,0,,,,open
 901,lab0901_s411_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,2,2026-08-04,False,,,,,,,0,,,,open
-902,lab0902_s411_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-05,False,,,,,,,0,,,,open
+902,lab0902_s411_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-05,False,,0.0,-53.73,-53.73,-53.73,-53.73,-36.0,TTD,S411,stop_loss (-53.7%),closed
 903,lab0903_s411_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-05,False,,0.0,-47.76,-47.76,-47.76,-47.76,-32.0,TTD,S411,stop_loss (-50.7%),closed
 904,lab0904_s411_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
 905,lab0905_s411_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-03,False,,,,,,,0,,,,idle
