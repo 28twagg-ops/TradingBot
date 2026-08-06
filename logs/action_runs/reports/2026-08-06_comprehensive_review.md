@@ -3283,3 +3283,107 @@ Paper lab: $144429 broker equity -> 1024 bucket(s) ($500 virtual each, unlimited
 ```
 
 ---
+
+## Run 20260806T140939Z
+
+- UTC timestamp: `20260806T140939Z`
+- GitHub run: [#6259](https://github.com/28twagg-ops/TradingBot/actions/runs/31109329609)
+- Run id: `31109329609`
+- Live bot: exit=`0`, duration=`3s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-06T09:25:47.012611-04:00","date":"2026-08-06","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.5,"phases_s":{"reconcile":0.13},"signals":0,"placed":0,"equity":143264.28,"open_positions":26,"pending_orders":0,"open_lots":156,"submitted_today":0,"filled_today":0,"unattributed_contracts":3,"top_signals":[],"github_run":"6250","github_run_id":"31105807813","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+14:09:40  INFO      Mode: exits
+14:09:42  INFO        Daily log -> logs/daily/2026-08-06.md
+14:09:42  INFO        Daily log reconciled -> logs/daily/2026-08-06.md (4 ledger rows)
+14:09:42  INFO        place_all_stops: checking 2 positions...
+14:09:42  INFO        STOP skipped GEV: fractional (0.0924 shares) — software exit will handle it
+14:09:42  INFO        STOP skipped JBL: fractional (0.2749 shares) — software exit will handle it
+14:09:42  INFO        [positions] 2/2 (2 valid)
+14:09:42  INFO        Daily log -> logs/daily/2026-08-06.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:09 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $473.62|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  GEV  P&L +1.2%  $+1.09                                            HOLD|
+|  JBL  P&L +1.7%  $+1.64                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=142 paper_keys=yes dry_run=False
+  alpaca positions=26
+  FLAG b171|S216|60327813 missing from Alpaca
+  FLAG b170|S216|90e2384d missing from Alpaca
+  FLAG b799|S399|243b5e9d missing from Alpaca
+  FLAG b798|S399|13277a79 missing from Alpaca
+  FLAG b115|S212|3b5b77dc missing from Alpaca
+  FLAG b0|ORPHAN|ffafb5bd missing from Alpaca
+  FLAG b0|ORPHAN|7933dacc missing from Alpaca
+  FLAG b0|ORPHAN|c400d933 missing from Alpaca
+  FLAG b0|ORPHAN|096ba088 missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-08-06T10:09:45.264156-04:00 ===
+
+[Run context]
+Paper auth OK — equity $144383.11, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 1024 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419
+Dropped (no new entries; ex-reflected P&L): S173, S174
+2026-08-06 10:09:53,681 INFO   EXIT [b113|lab0113_s212_w3_1045_1120_r2|S212] stop_loss (-98.0%) SELL 1 UBER260807C00078000 @<= 0.02
+2026-08-06 10:09:57,990 INFO   EXIT [b303|lab0303_s353_w4_1120_1135_r2|S353] take_profit (+70.6%) SELL 1 UBER260807C00070000 @<= 0.56
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 114/117 symbols
+```
+
+---
