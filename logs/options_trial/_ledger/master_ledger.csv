@@ -9376,3 +9376,17 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-06 17:49:52.130714+00:00,exit,0,orphan_reconcile,ORPHAN,12dc9ff32024,RBLX,RBLX260807C00038500,2,,0.2,40.0,0.0,0.0,stop_loss (-64.5%),,-0.01,0.5,-0.5,,,6ea2182e-64ac-4d0b-a0fa-fa291f139619
 2026-08-06 17:41:44.211788+00:00,exit,788,lab0788_s398_w3_1045_1120_r1,S398,a62b36aba6c4,UBER,UBER260807C00070000,1,,0.71,38.0,86.84,33.0,take_profit (+120.3%),,-0.01,0.5,-0.5,,,70fbc0e3-4e7b-469d-b5d4-aad755368d18
 2026-08-06 17:44:03.712010+00:00,exit,318,lab0318_s355_w4_1120_1135_r1,S355,5733c1c74ddb,UBER,UBER260814C00072000,1,,0.72,39.0,84.62,33.0,take_profit (+60.0%),,-0.01,0.5,-0.5,,,dfa18f33-0edd-49d3-97e9-4fcd9b62fe3e
+2026-08-06T18:29:33Z,reconcile,780,lab0780_s397_w3_1045_1120_r1,S397,19a3768be3dd,COIN,COIN260807C00157500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06T18:29:33Z,reconcile,298,lab0298_s353_w2_1005_1045_r1,S353,adb06f5940f0,UBER,UBER260807C00070000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06T18:29:33Z,reconcile,0,orphan_reconcile,ORPHAN,79c3fa94dee8,AMD,AMD260807C00570000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06T18:29:33Z,reconcile,317,lab0317_s355_w3_1045_1120_r2,S355,cfc8d0ff2fa1,UBER,UBER260814C00072000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06T18:29:33Z,reconcile,0,orphan_reconcile,ORPHAN,9722ef523d65,AMD,AMD260807C00540000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06 17:52:15.478676+00:00,exit,334,lab0334_s357_w4_1120_1135_r1,S357,ffd3920fe0fc,UBER,UBER260828C00075000,1,,0.87,48.0,81.25,39.0,take_profit (+63.8%),,-0.01,0.5,-0.5,,,3611f710-8742-42ec-bd64-e364b9779894
+2026-08-06 17:52:15.466761+00:00,exit,317,lab0317_s355_w3_1045_1120_r2,S355,564ac078e6c2,MARA,MARA260814C00011500,1,,0.86,49.0,75.51,37.0,take_profit (+100.0%),,-0.01,0.5,-0.5,,,c447c2d5-f776-4fe5-919b-ed040e91205c
+2026-08-06 17:51:55.508626+00:00,exit,28,lab0028_s203_w3_1045_1120_r1,S203,27e94df4aae3,TTD,TTD260807P00017000,1,,0.84,51.0,64.71,33.0,take_profit (+52.7%),,-0.01,0.5,-0.5,,,53e78719-a964-4f90-b8f2-457505d65044
+2026-08-06 18:19:03.257012+00:00,exit,0,orphan_reconcile,ORPHAN,f5363f91b2ab,AAPL,AAPL260814C00330000,2,,0.22,119.5,-63.18,-75.5,stop_loss (-53.3%),,-0.01,0.5,-0.5,,,dd66834a-e941-4ce4-9a6a-a285f96dd02a
+2026-08-06 17:51:53.689864+00:00,exit,284,lab0284_s351_w3_1045_1120_r1,S351,f6f348309c01,CRWD,CRWD260807C00217500,1,,0.22,46.0,-52.17,-24.0,stop_loss (-52.2%),,-0.01,0.5,-0.5,,,2607f846-b3e9-4878-b356-adafaecdfe50
+2026-08-06 17:51:51.545208+00:00,exit,363,lab0363_s361_w1_0928_1005_r2,S361,bcdac344185a,NKE,NKE260807C00042000,1,,0.32,69.0,-53.62,-37.0,stop_loss (-50.1%),,-0.01,0.5,-0.5,,,bf5fc171-872b-4f5b-b237-2d558c1ce31f
+2026-08-06 17:52:13.164234+00:00,exit,290,lab0290_s352_w2_1005_1045_r1,S352,af5887b02df4,COIN,COIN260807C00160000,1,,0.14,27.0,-48.15,-13.0,stop_loss (-54.8%),,-0.01,0.5,-0.5,,,1aba5257-1f49-4706-9adf-d1f3cbfc8817
+2026-08-06 18:10:22.141114+00:00,exit,0,orphan_reconcile,ORPHAN,d465a8c7b174,AMZN,AMZN260807C00295000,1,,0.04,40.33,-90.08,-36.33,stop_loss (-53.8%),,-0.01,0.5,-0.5,,,ddf461c8-b591-4093-9bd9-5b1ab7a4650a
+2026-08-06 18:00:08.179374+00:00,exit,74,lab0074_s209_w2_1005_1045_r1,S209,271114876be1,AMD,AMD260807C00537500,1,,0.28,67.0,-58.21,-39.0,stop_loss (-52.0%),,-0.01,0.5,-0.5,,,aa531905-9191-48e9-98bf-f07c43c0097b

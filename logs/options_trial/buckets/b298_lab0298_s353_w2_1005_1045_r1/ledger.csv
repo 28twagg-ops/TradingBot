@@ -19,3 +19,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05 14:41:08.234161+00:00,entry,298,lab0298_s353_w2_1005_1045_r1,S353,03fd5b447e2d,UBER,UBER260807C00070000,1,0.39,0.39,39.0,,,,-0.01,,0.5,-0.5,,,faf679dc-b356-4c76-bb18-a88c0686d276
 2026-08-04 16:01:14.005293+00:00,exit,298,lab0298_s353_w2_1005_1045_r1,S353,bb2dbb4f74a4,AMZN,AMZN260807C00297500,1,,0.32,49.0,-34.69,-17.0,reconcile_fill,,-0.01,0.5,-0.5,,,d51009ec-1f6c-4bd4-b0fb-a9b365b05c7d
 2026-08-05 14:41:08.234161+00:00,entry,298,lab0298_s353_w2_1005_1045_r1,S353,adb06f5940f0,UBER,UBER260807C00070000,1,0.39,0.39,39.0,,,,-0.01,,0.5,-0.5,,,faf679dc-b356-4c76-bb18-a88c0686d276
+2026-08-06T18:29:33Z,reconcile,298,lab0298_s353_w2_1005_1045_r1,S353,adb06f5940f0,UBER,UBER260807C00070000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

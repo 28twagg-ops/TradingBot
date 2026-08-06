@@ -166,3 +166,7 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-06 17:36:27.783394+00:00,exit,0,orphan_reconcile,ORPHAN,b8951f220ac1,META,META260807C00622500,1,,0.19,53.5,-64.49,-34.5,stop_loss (-64.5%),,-0.01,0.5,-0.5,,,f1071703-702e-4630-b15e-ab1566e3224d
 2026-08-06T17:51:47Z,reconcile,0,orphan_reconcile,ORPHAN,6987e1474676,META,META260807C00622500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-06 17:49:52.130714+00:00,exit,0,orphan_reconcile,ORPHAN,12dc9ff32024,RBLX,RBLX260807C00038500,2,,0.2,40.0,0.0,0.0,stop_loss (-64.5%),,-0.01,0.5,-0.5,,,6ea2182e-64ac-4d0b-a0fa-fa291f139619
+2026-08-06T18:29:33Z,reconcile,0,orphan_reconcile,ORPHAN,79c3fa94dee8,AMD,AMD260807C00570000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06T18:29:33Z,reconcile,0,orphan_reconcile,ORPHAN,9722ef523d65,AMD,AMD260807C00540000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06 18:19:03.257012+00:00,exit,0,orphan_reconcile,ORPHAN,f5363f91b2ab,AAPL,AAPL260814C00330000,2,,0.22,119.5,-63.18,-75.5,stop_loss (-53.3%),,-0.01,0.5,-0.5,,,dd66834a-e941-4ce4-9a6a-a285f96dd02a
+2026-08-06 18:10:22.141114+00:00,exit,0,orphan_reconcile,ORPHAN,d465a8c7b174,AMZN,AMZN260807C00295000,1,,0.04,40.33,-90.08,-36.33,stop_loss (-53.8%),,-0.01,0.5,-0.5,,,ddf461c8-b591-4093-9bd9-5b1ab7a4650a
