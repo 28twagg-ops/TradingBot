@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-06
 
-_Generated 2026-08-06T11:08:52.161025_
+_Generated 2026-08-06T11:13:11.529954_
 
 ## Summary
 
@@ -41,7 +41,7 @@ _Generated 2026-08-06T11:08:52.161025_
 | S412 (RubberBand_OTM3) | 3d | watch | 19 | 57.9 | +37.50 | -22.56 | -11.29 | +92.59 | 6 | 57 | 19 | $+184.00 | 31.6% | building sample (8-19 exits) |
 | S408 (RubberBand_ITM1) | 3d | watch | 27 | 51.9 | +33.33 | -57.04 | -46.43 | +865.82 | 3 | 60 | 27 | $+990.00 | 37.0% | fat left tail (p10 < -45%) |
 | S401 (Any_Gap_Down_Small) | 3d | watch | 37 | 59.5 | +23.68 | -96.23 | -38.98 | +205.23 | 6 | 57 | 35 | $+634.00 | 32.4% | fat left tail (p10 < -45%) |
-| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | watch | 34 | 64.7 | +13.89 | -50.51 | -8.51 | +52.50 | 10 | 65 | 34 | $+40.00 | 44.1% | fat left tail (p10 < -45%) |
+| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | watch | 34 | 64.7 | +13.89 | -50.51 | -8.51 | +52.50 | 10 | 66 | 34 | $+40.00 | 44.1% | fat left tail (p10 < -45%) |
 | S411 (RubberBand_OTM2) | 3d | watch | 20 | 65.0 | +11.78 | -51.88 | -47.97 | +46.25 | 3 | 57 | 20 | $-4.00 | 45.0% | fat left tail (p10 < -45%) |
 | S405 (GapDown_OTM3) | 3d | watch | 31 | 51.6 | +3.45 | -57.14 | -43.14 | +122.22 | 6 | 50 | 17 | $+396.00 | 35.5% | fat left tail (p10 < -45%) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 16 | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -124,7 +124,7 @@ _Generated 2026-08-06T11:08:52.161025_
 | S407 (RubberBand_ITM2) | 3d | drop | 25 | 44.0 | -54.05 | -92.15 | -61.54 | +395.18 | 6 | 57 | 21 | $+201.00 | 36.0% | non-positive median return |
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 26 | 3.8 | -55.12 | -79.38 | -72.34 | -47.68 | 10 | 47 | 22 | $-724.00 | 53.8% | non-positive median return |
 | S360 (RubberBand_1DTE) | 1d | drop | 28 | 10.7 | -55.16 | -81.77 | -72.81 | -21.66 | 6 | 51 | 24 | $-461.00 | 39.3% | non-positive median return |
-| S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 48 | 0.0 | -73.47 | -98.56 | -97.96 | -49.10 | 10 | 53 | 48 | $-2,101.00 | 45.8% | non-positive median return |
+| S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 48 | 0.0 | -73.47 | -98.56 | -97.96 | -49.10 | 10 | 55 | 48 | $-2,101.00 | 45.8% | non-positive median return |
 
 ## Comparison groups
 
@@ -193,9 +193,9 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S210 | 3d ATM MA cross 8/21 | 34 | +13.89 | -50.51 | -8.51 | 65 | 34 |
+| S210 | 3d ATM MA cross 8/21 | 34 | +13.89 | -50.51 | -8.51 | 66 | 34 |
 | S211 | 3d ATM MA cross 21/50 | 20 | -24.36 | -61.35 | -46.79 | 62 | 20 |
-| S212 | 3d ATM MA bounce 50 | 48 | -73.47 | -98.56 | -97.96 | 53 | 48 |
+| S212 | 3d ATM MA bounce 50 | 48 | -73.47 | -98.56 | -97.96 | 55 | 48 |
 | S213 | 3d ATM MA bounce 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S215 | 3d ATM MA reclaim 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
