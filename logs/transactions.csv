@@ -1083,3 +1083,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-06 13:47:09,2026-08-06,SELL,AVB,Pullback50,189.19,94.61,1.12,1.05,3,max_hold 3d (+1.1%),bull,470.93
 2026-08-06 14:00:18,2026-08-06,SELL,DOV,Pullback50,213.35,93.98,-0.11,-0.11,0,midline (-0.1%),bull,472.41
 2026-08-06 14:00:49,2026-08-06,SELL,GS,Pullback50,1062.28,94.2,0.14,0.13,0,midline (+0.1%),bull,471.77
+2026-08-06 17:35:56,2026-08-06,SELL,GEV,Pullback50,1012.28,93.51,-0.71,-0.67,0,stop_loss (-0.7%),bull,471.84
