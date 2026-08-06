@@ -14,3 +14,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05T18:15:57Z,reconcile,406,lab0406_s364_w2_1005_1045_r1,S364,3bfd3b69f45f,DKNG,DKNG260814C00024500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-06 14:08:16.442153+00:00,entry,406,lab0406_s364_w2_1005_1045_r1,S364,cda7d997d38a,MARA,MARA260814C00011500,1,0.53,0.52,52.0,,,,-0.01,,0.75,-0.75,0.07692307692307698,RB gap -2.8% reclaim,2873cdeb-3182-4da9-a9b0-adb636d85cc6
 2026-08-05 18:15:32.455030+00:00,exit,406,lab0406_s364_w2_1005_1045_r1,S364,cda7d997d38a,MARA,MARA260814C00011500,1,,0.29,52.0,-44.23,-23.0,reconcile_fill,,-0.01,0.5,-0.5,,,aa8e059e-31ee-4785-a840-08a06ec6c22d
+2026-08-05 14:32:19.976083+00:00,entry,406,lab0406_s364_w2_1005_1045_r1,S364,b85837dffca0,DKNG,DKNG260814C00024500,1,0.6,0.6,60.0,,,,-0.01,,0.5,-0.5,,,e8f50e62-7200-4a28-aee1-8d0338f5101b

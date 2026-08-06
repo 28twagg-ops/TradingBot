@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-08-05 15:37:27.027055+00:00,entry,334,lab0334_s357_w4_1120_1135_r1,S357,ffd3920fe0fc,UBER,UBER260828C00075000,1,0.48,0.48,48.0,,,,-0.01,,0.75,-0.75,0.1075268817204301,gap -4.2%,4eb8cd2e-2314-4e15-8d5d-58e3e84aeac3
+2026-08-05 15:37:27.027055+00:00,entry,334,lab0334_s357_w4_1120_1135_r1,S357,ffd3920fe0fc,UBER,UBER260828C00075000,1,0.48,0.48,48.0,,,,-0.01,,0.5,-0.5,,,4eb8cd2e-2314-4e15-8d5d-58e3e84aeac3

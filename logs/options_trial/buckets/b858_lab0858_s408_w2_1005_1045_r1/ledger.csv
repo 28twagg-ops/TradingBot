@@ -8,3 +8,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05T16:05:55Z,reconcile,858,lab0858_s408_w2_1005_1045_r1,S408,e5595a405a33,DKNG,DKNG260807C00026500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-06 14:14:42.241715+00:00,entry,858,lab0858_s408_w2_1005_1045_r1,S408,67e58de30844,AMD,AMD260807C00552500,1,0.27,0.27,27.0,,,,-0.01,,0.75,-0.75,0.19607843137254907,RB gap -2.1% reclaim,488196ed-d71f-4f81-a1f2-9e698190e1e2
 2026-08-05 16:01:31.998042+00:00,exit,858,lab0858_s408_w2_1005_1045_r1,S408,67e58de30844,AMD,AMD260807C00552500,1,,0.05,27.0,-81.48,-22.0,reconcile_fill,,-0.01,0.5,-0.5,,,860dfaa3-8cf3-4b19-b71e-70f4ba129e80
+2026-08-05 14:36:23.759909+00:00,entry,858,lab0858_s408_w2_1005_1045_r1,S408,e17d97f3358e,DKNG,DKNG260807C00026500,1,0.14,0.14,14.0,,,,-0.01,,0.5,-0.5,,,4188f5e9-85cc-4d04-ae8a-7495abd0ddad
