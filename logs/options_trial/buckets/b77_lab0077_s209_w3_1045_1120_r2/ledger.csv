@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-08-06 15:32:50.968589+00:00,entry,77,lab0077_s209_w3_1045_1120_r2,S209,b575fd499bca,AMD,AMD260807C00535000,1,0.57,0.55,55.0,,,,-0.01,,0.75,-0.75,0.14814814814814806,gap -2.1% recovery above prev close,25d520d5-d5dc-42c9-bcff-677fb35c8c51

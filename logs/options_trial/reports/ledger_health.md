@@ -1,6 +1,6 @@
 # Ledger health — 2026-08-06
 
-_Generated 2026-08-06T11:13:16.046786_
+_Generated 2026-08-06T11:36:47.928187_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -11,11 +11,11 @@ State file: OK
 | Check                       | Count | Status |
 |-----------------------------|------:|--------|
 | Current stuck (state)       |     1 | WARN |
-| Orphaned lots (post-stable) |   440 | WARN |
-| Missing exit records (post) |   437 | WARN |
-| State/ledger mismatches     |    24 | WARN |
-| Total open lots             |   160 | INFO |
-| Total closed lots           |  1149 | INFO |
+| Orphaned lots (post-stable) |   439 | WARN |
+| Missing exit records (post) |   436 | WARN |
+| State/ledger mismatches     |    28 | WARN |
+| Total open lots             |   194 | INFO |
+| Total closed lots           |  1185 | INFO |
 | Pre-cutoff audit debt       |     0 | INFO |
 | Transition audit debt       |   744 | INFO |
 
@@ -31,31 +31,35 @@ Notes:
 |--------|----------|--------|-----------|---------:|
 | b428605e4e35 | S365 | AAPL | 2026-07-31 | 6 |
 
-_Orphaned ledger detail omitted (440 rows) — see note above on historical lot_id churn._
+_Orphaned ledger detail omitted (439 rows) — see note above on historical lot_id churn._
 
 ## State/ledger mismatches
 
 - `12dc9ff32024`
-- `1edd9129c6f0`
-- `3990bdd54575`
+- `455af826a4e1`
+- `4b71e30aa812`
 - `53e410b0bd58`
-- `6d0fd9acb73d`
-- `72738b64f65c`
-- `73329dd73b59`
+- `61390b5f3d18`
+- `66edc5e06c63`
+- `6793458cc2d0`
+- `6de12695f717`
 - `7478afa6cf76`
 - `79c3fa94dee8`
-- `79dcdbc2c65a`
 - `7e8e8c467922`
-- `8e227e558490`
+- `85a059fc6e80`
+- `90420ec9c86d`
+- `92c6395683e2`
+- `9722ef523d65`
+- `99f5a1427601`
 - `a1fc98d9835a`
+- `a2e0625d04fc`
+- `a8c739e5ce2c`
 - `b8951f220ac1`
 - `bc9ed069a924`
-- `c57c3e700d0e`
-- `c62285dbc991`
-- `c750268030a8`
 - `d465a8c7b174`
 - `d4db12c7dd33`
-- `e229c2b7c969`
-- `ed3c151a1305`
-- `ee08eb0595dc`
+- `d77c45e78e35`
+- `ef6da0edb5af`
+- `f1d991055036`
 - `f5363f91b2ab`
+- `f92358b6d119`
