@@ -106,3 +106,11 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05 19:50:03.811025+00:00,exit,0,orphan_reconcile,ORPHAN,ffd5731b2a5e,DKNG,DKNG260807C00024500,1,,0.36,39.4,-8.63,-3.4,reconcile_fill,,-0.01,0.5,-0.5,,,aef6ba95-05d0-4c87-b916-730a3f0b3238
 2026-08-06T01:46:05Z,reconcile,0,orphan_reconcile,ORPHAN,59e18c93befa,AMZN,AMZN260805C00290000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-06T01:46:05Z,reconcile,0,orphan_reconcile,ORPHAN,6dbf70e9c876,AMZN,AMZN260805C00287500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06T13:34:29Z,reconcile,0,orphan_reconcile,ORPHAN,a20b38ca248c,PLTR,PLTR260807C00172500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06 13:30:04.448120+00:00,exit,0,orphan_reconcile,ORPHAN,5d5665f8a6e5,NKE,NKE260807C00043000,1,,0.01,23.5,-95.74,-22.5,stop_loss (-54.4%),,-0.01,0.5,-0.5,,,db56bd0d-bf79-4c47-88b9-6563fb367d64
+2026-08-05 15:11:15.202276+00:00,exit,0,orphan_reconcile,ORPHAN,b3b3a7d5d9b9,UBER,UBER260807C00078000,1,,1.07,50.44,112.11,56.56,reconcile_fill,,-0.01,0.5,-0.5,,,9eb78eed-a38b-4099-b2b1-699236c9efea
+2026-08-05 15:01:25.207120+00:00,exit,0,orphan_reconcile,ORPHAN,e46b69a4b8b6,AAPL,AAPL260814C00330000,1,,0.34,59.75,-43.1,-25.75,reconcile_fill,,-0.01,0.5,-0.5,,,4c397210-4d43-439e-9f27-15e471be896d
+2026-08-05 13:40:03.091825+00:00,exit,0,orphan_reconcile,ORPHAN,e46b69a4b8b6,AAPL,AAPL260814C00330000,1,,0.15,59.75,-74.9,-44.75,reconcile_fill,,-0.01,0.5,-0.5,,,7e111d82-24c5-4fde-a473-5f6c35cdee17
+2026-08-05 13:39:52.936163+00:00,exit,0,orphan_reconcile,ORPHAN,3f7e5b0c90d8,AMZN,AMZN260807C00302500,1,,0.06,13.67,-56.1,-7.67,reconcile_fill,,-0.01,0.5,-0.5,,,d6c1ea13-116f-42ab-83da-6f0c14ec5198
+2026-08-04 17:36:26.850953+00:00,exit,0,orphan_reconcile,ORPHAN,26fc7a2fb9fb,T,T260807C00022500,1,,1.02,44.0,131.82,58.0,reconcile_fill,,-0.01,0.5,-0.5,,,f1762111-aeae-4485-b9a2-1cd9baba8190
+2026-08-04 14:21:44.061574+00:00,exit,0,orphan_reconcile,ORPHAN,26fc7a2fb9fb,T,T260807C00022500,1,,0.76,44.0,72.73,32.0,reconcile_fill,,-0.01,0.5,-0.5,,,38de5c93-c4e3-46fd-ac22-7fc825d0eeb0
