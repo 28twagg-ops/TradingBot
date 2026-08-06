@@ -1828,8 +1828,8 @@
       "strategy_id": "ORPHAN",
       "occ_symbol": "NKE260807C00042000",
       "underlying": "NKE",
-      "qty": 3,
-      "entry_cost": 192.3,
+      "qty": 2,
+      "entry_cost": 128.20000000000002,
       "entry_price": 0.6410000000000001,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
@@ -1920,26 +1920,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-06T15:10:51.032607+00:00",
       "entry_order_id": "7cf3032a-ba49-4f2c-8e81-3706591cf72c"
-    },
-    {
-      "lot_id": "f56907d96196",
-      "bucket_id": 819,
-      "profile_name": "lab0819_s405_w3_1045_1120_r2",
-      "strategy_id": "S405",
-      "occ_symbol": "COIN260807C00160000",
-      "underlying": "COIN",
-      "qty": 1,
-      "entry_cost": 34.0,
-      "entry_price": 0.34,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-06T15:20:56.515712+00:00",
-      "entry_order_id": "df59a789-53ba-4132-8b1d-d97d324e68c3"
     },
     {
       "lot_id": "3c198b2a58dc",
@@ -2782,26 +2762,6 @@
       "entry_order_id": "ab7edfb3-cdb1-46a0-8022-3541380f2817"
     },
     {
-      "lot_id": "3b7ad7348e2d",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "COIN260807C00170000",
-      "underlying": "COIN",
-      "qty": 1,
-      "entry_cost": 5.0,
-      "entry_price": 0.05,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-06T15:41:51.246661+00:00",
-      "entry_order_id": "orphan:COIN260807C00170000"
-    },
-    {
       "lot_id": "6a7e0d153786",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -3045,24 +3005,34 @@
       "submitted": "2026-08-06T15:06:00"
     },
     {
-      "order_id": "a8410784-bb47-4cb0-9484-df766a2dd43f",
-      "lot_id": "3b7ad7348e2d",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "COIN260807C00170000",
+      "order_id": "cc05bcb9-cb6f-402a-b8d2-90e04fd533d3",
+      "lot_id": "61575be47d34",
+      "bucket_id": 368,
+      "strategy_id": "S361",
+      "occ_symbol": "AMD260807C00537500",
       "qty": 1,
-      "reason": "stop_loss (-60.0%)",
-      "submitted": "2026-08-06T15:20:58"
+      "reason": "stop_loss (-57.4%)",
+      "submitted": "2026-08-06T15:25:48"
     },
     {
-      "order_id": "a7905539-63d4-4f1c-9836-2c336208fb4b",
-      "lot_id": "f56907d96196",
-      "bucket_id": 819,
-      "strategy_id": "S405",
+      "order_id": "bdff63af-3e6b-498e-bf32-61d3bfdd7172",
+      "lot_id": "2b3333615401",
+      "bucket_id": 283,
+      "strategy_id": "S351",
       "occ_symbol": "COIN260807C00160000",
       "qty": 1,
       "reason": "stop_loss (-58.3%)",
-      "submitted": "2026-08-06T15:20:59"
+      "submitted": "2026-08-06T15:25:50"
+    },
+    {
+      "order_id": "16b09f2b-6f04-4b09-9e20-0c4d6de46646",
+      "lot_id": "85a059fc6e80",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "RBLX260807C00037500",
+      "qty": 2,
+      "reason": "stop_loss (-54.3%)",
+      "submitted": "2026-08-06T15:25:50"
     }
   ],
   "bucket_open_premium": {
@@ -3148,11 +3118,10 @@
     "b394": 49.0,
     "b771": 73.0,
     "b770": 73.0,
-    "b0": 2442.1176000000005,
+    "b0": 2373.0176,
     "b85": 36.0,
     "b112": 33.0,
     "b84": 72.0,
-    "b819": 34.0,
     "b834": 19.0,
     "b411": 38.0,
     "b397": 38.0,
@@ -3808,7 +3777,9 @@
     "b0b984d4-73ae-4eb9-ad65-9a7dbd866177",
     "a01fcf3e-03ab-4522-b89c-4bf643bc66f8",
     "e6f467f0-04e3-4048-9637-a9503d3eeb60",
-    "3bd14a0a-e566-4893-babd-7bd2c451515a"
+    "3bd14a0a-e566-4893-babd-7bd2c451515a",
+    "a7905539-63d4-4f1c-9836-2c336208fb4b",
+    "a8410784-bb47-4cb0-9484-df766a2dd43f"
   ],
   "submitted_today": 138,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
