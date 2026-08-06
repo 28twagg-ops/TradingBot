@@ -4490,3 +4490,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-06 22:45:45,ext_exits,bull,470.74,375.98,0,0,0,1,JBL,both
 2026-08-06 22:51:01,ext_exits,bull,470.74,375.98,0,0,0,1,JBL,both
 2026-08-06 22:55:46,ext_exits,bull,470.74,375.98,0,0,0,1,JBL,both
+2026-08-06 23:00:52,ext_exits,bull,470.74,375.98,0,0,0,1,JBL,both
