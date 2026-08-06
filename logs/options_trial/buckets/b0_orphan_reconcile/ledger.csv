@@ -181,3 +181,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-06 19:20:58.564055+00:00,exit,0,orphan_reconcile,ORPHAN,7478afa6cf76,NKE,NKE260807C00042000,1,,0.02,64.1,-96.88,-62.1,stop_loss (-60.0%),,-0.01,0.5,-0.5,,,a8410784-bb47-4cb0-9484-df766a2dd43f
 2026-08-06T19:44:25Z,reconcile,0,orphan_reconcile,ORPHAN,85a059fc6e80,RBLX,RBLX260807C00037500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-06 19:25:50.703281+00:00,exit,0,orphan_reconcile,ORPHAN,7478afa6cf76,NKE,NKE260807C00042000,2,,0.16,128.2,-75.04,-96.2,stop_loss (-54.3%),,-0.01,0.5,-0.5,,,16b09f2b-6f04-4b09-9e20-0c4d6de46646
+2026-08-06T20:05:52Z,reconcile,0,orphan_reconcile,ORPHAN,6a7e0d153786,CRWD,CRWD260807C00217500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06 19:45:26.081771+00:00,exit,0,orphan_reconcile,ORPHAN,bc9ed069a924,UBER,UBER260807C00078000,1,,0.23,50.53,-54.49,-27.53,stop_loss (-52.2%),,-0.01,0.5,-0.5,,,94682825-e56b-441d-a84c-98c634a9c4f3
