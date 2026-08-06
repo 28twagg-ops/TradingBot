@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-06
 
-_Generated 2026-08-06T10:38:34.948920_
+_Generated 2026-08-06T10:43:03.821068_
 
 ## Summary
 
@@ -11,8 +11,8 @@ _Generated 2026-08-06T10:38:34.948920_
 
 ## Attribution health
 
-- Total exits: **1662**
-- Orphan exits (b0/orphan_reconcile): **104**
+- Total exits: **1663**
+- Orphan exits (b0/orphan_reconcile): **105**
 - Orphan rate: **6.3%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
 
@@ -44,7 +44,7 @@ _Generated 2026-08-06T10:38:34.948920_
 | S401 (Any_Gap_Down_Small) | 3d | watch | 34 | 61.8 | +27.63 | -81.16 | -21.88 | +239.16 | 6 | 51 | 32 | $+684.00 | 35.3% | fat left tail (p10 < -45%) |
 | S405 (GapDown_OTM3) | 3d | watch | 28 | 53.6 | +22.70 | -57.37 | -42.30 | +128.22 | 6 | 45 | 14 | $+422.00 | 39.3% | fat left tail (p10 < -45%) |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | watch | 33 | 66.7 | +13.89 | -50.74 | -8.51 | +52.86 | 10 | 62 | 33 | $+56.00 | 42.4% | fat left tail (p10 < -45%) |
-| S411 (RubberBand_OTM2) | 3d | watch | 20 | 65.0 | +11.78 | -51.88 | -47.97 | +46.25 | 3 | 54 | 20 | $-4.00 | 45.0% | fat left tail (p10 < -45%) |
+| S411 (RubberBand_OTM2) | 3d | watch | 20 | 65.0 | +11.78 | -51.88 | -47.97 | +46.25 | 3 | 55 | 20 | $-4.00 | 45.0% | fat left tail (p10 < -45%) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 16 | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 16 | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 16 | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |

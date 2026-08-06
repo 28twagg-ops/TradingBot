@@ -2782,26 +2782,6 @@
       "entry_order_id": "orphan:AMD260807C00545000"
     },
     {
-      "lot_id": "15328f5d4806",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "AMD260807C00550000",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 35.0,
-      "entry_price": 0.35,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-06T14:14:34.305723+00:00",
-      "entry_order_id": "orphan:AMD260807C00550000"
-    },
-    {
       "lot_id": "f43b00eb93ab",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -3082,10 +3062,10 @@
       "entry_order_id": "orphan:CVNA260807C00073000"
     },
     {
-      "lot_id": "9ccda7adb366",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
+      "lot_id": "15bb358b0008",
+      "bucket_id": 900,
+      "profile_name": "lab0900_s411_w2_1005_1045_r1",
+      "strategy_id": "S411",
       "occ_symbol": "AMD260807C00535000",
       "underlying": "AMD",
       "qty": 1,
@@ -3098,8 +3078,8 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-06T14:38:33.048471+00:00",
-      "entry_order_id": "orphan:AMD260807C00535000"
+      "entry_date": "2026-08-06T14:40:56.274054+00:00",
+      "entry_order_id": "d1a6e0d1-92ec-40e7-8c24-a2e07362b2ef"
     }
   ],
   "pending_orders": [
@@ -3184,17 +3164,33 @@
       "stop_loss": -0.75
     },
     {
-      "order_id": "d1a6e0d1-92ec-40e7-8c24-a2e07362b2ef",
-      "bucket_id": 900,
-      "strategy_id": "S411",
-      "occ_symbol": "AMD260807C00535000",
-      "underlying": "AMD",
+      "order_id": "2ca9315f-971a-4d0b-9d06-917df3416206",
+      "bucket_id": 770,
+      "strategy_id": "S396",
+      "occ_symbol": "MARA260807C00010500",
+      "underlying": "MARA",
       "qty": 1,
-      "limit": 0.68,
-      "profile_name": "lab0900_s411_w2_1005_1045_r1",
+      "limit": 0.73,
+      "profile_name": "lab0770_s396_w2_1005_1045_r1",
       "submitted": "2026-08-06",
-      "detail": "RB gap -2.1% reclaim",
-      "spread_frac": 0.1904761904761905,
+      "detail": "gap -2.8%",
+      "spread_frac": 0.05555555555555561,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "7eba6882-7592-49fc-a0e1-b68fc0662bd1",
+      "bucket_id": 771,
+      "strategy_id": "S396",
+      "occ_symbol": "MARA260807C00010500",
+      "underlying": "MARA",
+      "qty": 1,
+      "limit": 0.73,
+      "profile_name": "lab0771_s396_w2_1005_1045_r2",
+      "submitted": "2026-08-06",
+      "detail": "gap -2.8%",
+      "spread_frac": 0.05555555555555561,
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
@@ -3339,7 +3335,7 @@
     "b108": 59.0,
     "b73": 17.0,
     "b72": 17.0,
-    "b0": 1535.3477,
+    "b0": 1433.3477,
     "b407": 52.0,
     "b393": 52.0,
     "b392": 52.0,
@@ -3375,7 +3371,8 @@
     "b26": 11.0,
     "b75": 67.0,
     "b74": 67.0,
-    "b83": 23.0
+    "b83": 23.0,
+    "b900": 67.0
   },
   "session_date": "2026-08-06",
   "entries_locked": [
@@ -3423,7 +3420,9 @@
     "82|S210|2026-08-06",
     "83|S210|2026-08-06",
     "845|S407|2026-08-06",
-    "900|S411|2026-08-06"
+    "900|S411|2026-08-06",
+    "770|S396|2026-08-06",
+    "771|S396|2026-08-06"
   ],
   "processed_orders": [
     "f454f71a-417a-4f9b-bdb6-fa1bca914f64",
@@ -3899,9 +3898,11 @@
     "ad4fdbd5-9061-42c1-80c9-80eb4ebf51c1",
     "25fdf8e3-6aaf-4267-af63-f6dc93ec4521",
     "9aa78041-4265-4a26-8cd7-4616c0554024",
-    "9193d18a-2da1-468b-881e-8cca5df7d625"
+    "9193d18a-2da1-468b-881e-8cca5df7d625",
+    "d1a6e0d1-92ec-40e7-8c24-a2e07362b2ef",
+    "d289c2a4-305c-4800-a719-a4f775164dd4"
   ],
-  "submitted_today": 46,
+  "submitted_today": 48,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-08-06"
 }
