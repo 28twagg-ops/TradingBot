@@ -7,3 +7,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-06 13:34:39.074065+00:00,exit,352,lab0352_s360_w3_1045_1120_r1,S360,d96b27b3c9e3,DKNG,DKNG260807C00024500,1,,0.07,38.0,-81.58,-31.0,stop_loss (-82.2%),,-0.01,0.5,-0.5,,,d46865a4-c89a-45cd-9509-be55fd7f4f45
 2026-08-05 15:17:28.022877+00:00,entry,352,lab0352_s360_w3_1045_1120_r1,S360,fc037c9ca75c,DKNG,DKNG260807C00024500,1,0.38,0.38,38.0,,,,-0.01,,0.5,-0.5,,,5cd4ff8f-e0c9-45d0-b7c3-4c3cc86584b0
 2026-08-06T14:45:47Z,reconcile,352,lab0352_s360_w3_1045_1120_r1,S360,fc037c9ca75c,DKNG,DKNG260807C00024500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-05 15:17:28.022877+00:00,entry,352,lab0352_s360_w3_1045_1120_r1,S360,9131a5ac7ded,DKNG,DKNG260807C00024500,1,0.38,0.38,38.0,,,,-0.01,,0.5,-0.5,,,5cd4ff8f-e0c9-45d0-b7c3-4c3cc86584b0
