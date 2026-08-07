@@ -2233,6 +2233,16 @@
       "qty": 1,
       "reason": "stop_loss (-54.5%)",
       "submitted": "2026-08-07T12:51:03"
+    },
+    {
+      "order_id": "97e4a0ab-b3d5-4026-b1da-2154d9636732",
+      "lot_id": "6a36b205d779",
+      "bucket_id": 424,
+      "strategy_id": "S365",
+      "occ_symbol": "CVX260821C00202500",
+      "qty": 1,
+      "reason": "stop_loss (-76.7%)",
+      "submitted": "2026-08-07T15:44:31"
     }
   ],
   "bucket_open_premium": {

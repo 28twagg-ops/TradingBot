@@ -1,0 +1,77 @@
+19:40:51  INFO      Mode: evening_prep
+19:40:52  INFO        [prep_positions] 4/4 (4 valid)
+19:40:52  INFO        Universe cache hit: 903 tickers (tickers_2026-08-07.json)
+19:40:53  INFO        [prep_universe] 40/899 (40 valid)
+19:40:55  INFO        [prep_universe] 80/899 (80 valid)
+19:40:57  INFO        [prep_universe] 120/899 (120 valid)
+19:40:58  INFO        [prep_universe] 160/899 (160 valid)
+19:40:59  INFO        [prep_universe] 200/899 (199 valid)
+19:41:07  INFO        [prep_universe] 240/899 (238 valid)
+19:41:20  INFO        [prep_universe] 280/899 (278 valid)
+19:41:31  INFO        [prep_universe] 320/899 (318 valid)
+19:41:41  INFO        [prep_universe] 360/899 (358 valid)
+19:41:55  INFO        [prep_universe] 400/899 (397 valid)
+19:42:05  INFO        [prep_universe] 440/899 (437 valid)
+19:42:19  INFO        [prep_universe] 480/899 (477 valid)
+19:42:29  INFO        [prep_universe] 520/899 (517 valid)
+19:42:43  INFO        [prep_universe] 560/899 (557 valid)
+19:42:53  INFO        [prep_universe] 600/899 (597 valid)
+19:43:07  INFO        [prep_universe] 640/899 (637 valid)
+19:43:18  INFO        [prep_universe] 680/899 (677 valid)
+19:43:31  INFO        [prep_universe] 720/899 (717 valid)
+19:43:42  INFO        [prep_universe] 760/899 (757 valid)
+19:43:55  INFO        [prep_universe] 800/899 (797 valid)
+19:44:06  INFO        [prep_universe] 840/899 (836 valid)
+19:44:20  INFO        [prep_universe] 880/899 (876 valid)
+19:44:24  INFO        [prep_universe] 899/899 (895 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      EVENING_PREP|
+|  Time                                                         19:40 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $473.98|
++========================================================================+
+
++========================================================================+
+|                              EVENING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/evening_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       4|
+|  Invested                                                       $356.23|
+|  Open P&L                                                        $+2.91|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AAPL     Pullback50      $95.01     $311.48  $313.31  +0.6%   $+0.55  |
+|  AES      Pullback50      $94.37     $14.72   $14.71   -0.1%   $-0.06  |
+|  BBY      Pullback50      $96.53     $80.12   $81.88   +2.2%   $+2.07  |
+|  ESS      Pullback50      $70.31     $286.19  $287.62  +0.5%   $+0.35  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                2|
+|  TICKER    TYPE              QTY       LIMIT       STOP                |
++------------------------------------------------------------------------+
+|  AES       OrderType.STOP    6         None        14.65               |
+|  BBY       OrderType.STOP    1         None        79.72               |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      0|
+|  Signal candidates                                                   50|
+|  Universe scanned                                                   899|
++========================================================================+
