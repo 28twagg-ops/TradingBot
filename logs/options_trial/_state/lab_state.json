@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "b428605e4e35",
-      "bucket_id": 424,
-      "profile_name": "lab0424_s365_w4_1120_1135_r1",
-      "strategy_id": "S365",
-      "occ_symbol": "AAPL260814C00330000",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 62.0,
-      "entry_price": 0.62,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-07-31T15:26:25.957173+00:00",
-      "entry_order_id": "1e30df55-4e55-4719-8464-8ee86d44d819"
-    },
-    {
       "lot_id": "113c24714b8a",
       "bucket_id": 325,
       "profile_name": "lab0325_s356_w3_1045_1120_r2",
@@ -1582,26 +1562,6 @@
       "entry_order_id": "711a3483-049b-4815-a859-23169c3e119a"
     },
     {
-      "lot_id": "578671eca8bf",
-      "bucket_id": 236,
-      "profile_name": "lab0236_s401_w2_1005_1045_r1",
-      "strategy_id": "S401",
-      "occ_symbol": "TSLA260810C00342500",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 53.0,
-      "entry_price": 0.53,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-06T15:41:49.634464+00:00",
-      "entry_order_id": "ab7edfb3-cdb1-46a0-8022-3541380f2817"
-    },
-    {
       "lot_id": "da9784e57ebf",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -2320,6 +2280,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-07T14:12:27.422824+00:00",
       "entry_order_id": "orphan:AAPL260810C00317500"
+    },
+    {
+      "lot_id": "e1eb64cad94e",
+      "bucket_id": 236,
+      "profile_name": "lab0236_s401_w2_1005_1045_r1",
+      "strategy_id": "S401",
+      "occ_symbol": "META260810C00630000",
+      "underlying": "META",
+      "qty": 1,
+      "entry_cost": 19.0,
+      "entry_price": 0.19,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-07T14:19:06.906504+00:00",
+      "entry_order_id": "4617e126-4369-44db-a766-438244a83f6f"
     }
   ],
   "pending_orders": [
@@ -2542,20 +2522,9 @@
       "qty": 1,
       "reason": "stop_loss (-82.6%)",
       "submitted": "2026-08-07T10:10:59"
-    },
-    {
-      "order_id": "947b60cf-51ad-4e23-88cc-398247ce8c57",
-      "lot_id": "578671eca8bf",
-      "bucket_id": 236,
-      "strategy_id": "S401",
-      "occ_symbol": "TSLA260810C00342500",
-      "qty": 1,
-      "reason": "stop_loss (-55.8%)",
-      "submitted": "2026-08-07T10:15:57"
     }
   ],
   "bucket_open_premium": {
-    "b424": 62.0,
     "b325": 54.0,
     "b324": 54.0,
     "b321": 67.0,
@@ -2625,7 +2594,6 @@
     "b78": 56.00000000000001,
     "b407": 52.0,
     "b918": 45.0,
-    "b236": 53.0,
     "b0": 1638.3260000000002,
     "b789": 35.0,
     "b788": 35.0,
@@ -2649,7 +2617,8 @@
     "b166": 47.0,
     "b263": 51.0,
     "b262": 51.0,
-    "b109": 51.0
+    "b109": 51.0,
+    "b236": 19.0
   },
   "session_date": "2026-08-07",
   "entries_locked": [
@@ -2678,7 +2647,8 @@
     "195|S218|2026-08-07",
     "237|S401|2026-08-07",
     "264|S403|2026-08-07",
-    "265|S403|2026-08-07"
+    "265|S403|2026-08-07",
+    "236|S401|2026-08-07"
   ],
   "processed_orders": [
     "5fbb8a26-398d-4080-b1f3-84aaee6e032c",
@@ -3143,9 +3113,12 @@
     "38315695-8436-42c1-b837-7732fa3f5b12",
     "70923310-6349-402c-8e76-e05b6ac52697",
     "dbf1dd06-cb3b-4207-abb6-b1d8233c2bd0",
-    "a214fce1-3837-4fe6-89ff-e1426af1cf0f"
+    "a214fce1-3837-4fe6-89ff-e1426af1cf0f",
+    "947b60cf-51ad-4e23-88cc-398247ce8c57",
+    "4617e126-4369-44db-a766-438244a83f6f",
+    "2b9b81e4-617b-4fcb-bd28-3df57576624d"
   ],
-  "submitted_today": 26,
+  "submitted_today": 27,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-08-07"
 }
