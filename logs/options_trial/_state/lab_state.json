@@ -1402,26 +1402,6 @@
       "entry_order_id": "70923310-6349-402c-8e76-e05b6ac52697"
     },
     {
-      "lot_id": "4761706fe0f1",
-      "bucket_id": 845,
-      "profile_name": "lab0845_s407_w2_1005_1045_r2",
-      "strategy_id": "S407",
-      "occ_symbol": "CVX260814C00200000",
-      "underlying": "CVX",
-      "qty": 1,
-      "entry_cost": 20.0,
-      "entry_price": 0.2,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-07T14:27:06.396807+00:00",
-      "entry_order_id": "3eaa02ce-231c-4299-86bf-2d6527f5d148"
-    },
-    {
       "lot_id": "37ed70ed4201",
       "bucket_id": 406,
       "profile_name": "lab0406_s364_w2_1005_1045_r1",
@@ -1608,8 +1588,8 @@
       "strategy_id": "ORPHAN",
       "occ_symbol": "AMZN260807C00292500",
       "underlying": "AMZN",
-      "qty": 2,
-      "entry_cost": 107.7,
+      "qty": 1,
+      "entry_cost": 53.85,
       "entry_price": 0.5385,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
@@ -2182,26 +2162,6 @@
       "entry_order_id": "orphan:MARA260814C00011500"
     },
     {
-      "lot_id": "333d0a5982a8",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "NVDA260810C00230000",
-      "underlying": "NVDA",
-      "qty": 1,
-      "entry_cost": 27.0,
-      "entry_price": 0.27,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-07T15:22:52.620742+00:00",
-      "entry_order_id": "orphan:NVDA260810C00230000"
-    },
-    {
       "lot_id": "c4246c1e298e",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -2505,24 +2465,24 @@
       "submitted": "2026-08-07T11:26:07"
     },
     {
-      "order_id": "14988e0b-8c5b-4002-b689-7d4a0c09253d",
-      "lot_id": "333d0a5982a8",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "NVDA260810C00230000",
+      "order_id": "f1a5531e-ef34-4f2e-9dd2-b077d4134e5f",
+      "lot_id": "a41c804f4ade",
+      "bucket_id": 267,
+      "strategy_id": "S403",
+      "occ_symbol": "AAPL260810C00320000",
       "qty": 1,
-      "reason": "take_profit (+55.6%)",
-      "submitted": "2026-08-07T11:40:57"
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-08-07T11:51:01"
     },
     {
-      "order_id": "5b143e2c-8031-4c57-bd82-03ddc4f38f29",
-      "lot_id": "4761706fe0f1",
-      "bucket_id": 845,
-      "strategy_id": "S407",
+      "order_id": "1135feea-5f26-46a2-85ff-f4365ef238b1",
+      "lot_id": "88a1428d19ff",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
       "occ_symbol": "CVX260814C00200000",
       "qty": 1,
       "reason": "stop_loss (-60.0%)",
-      "submitted": "2026-08-07T11:45:56"
+      "submitted": "2026-08-07T11:51:05"
     }
   ],
   "bucket_open_premium": {
@@ -2587,7 +2547,6 @@
     "b311": 39.0,
     "b262": 51.0,
     "b109": 51.0,
-    "b845": 20.0,
     "b406": 106.0,
     "b267": 40.0,
     "b266": 40.0,
@@ -2596,7 +2555,7 @@
     "b112": 41.0,
     "b407": 52.0,
     "b393": 52.0,
-    "b0": 1268.1254999999999,
+    "b0": 1187.2755,
     "b410": 38.0,
     "b396": 38.0,
     "b354": 60.0,
@@ -3180,7 +3139,9 @@
     "5da941ba-e7e2-4858-9590-2bfa86eab0fd",
     "ed8a1b44-d87a-4c59-b1b1-190434fcc2bd",
     "19313bd4-0ab9-4e8e-be9a-5e351732a4ae",
-    "7dd30c9e-c132-4d7a-84aa-47d07663738a"
+    "7dd30c9e-c132-4d7a-84aa-47d07663738a",
+    "5b143e2c-8031-4c57-bd82-03ddc4f38f29",
+    "14988e0b-8c5b-4002-b689-7d4a0c09253d"
   ],
   "submitted_today": 64,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
