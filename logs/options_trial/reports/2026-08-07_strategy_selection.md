@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-07
 
-_Generated 2026-08-07T14:31:04.197294_
+_Generated 2026-08-07T14:39:42.111487_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-07T14:31:04.197294_
 
 ## Attribution health
 
-- Total exits: **2008**
+- Total exits: **2009**
 - Orphan exits (b0/orphan_reconcile): **190**
 - Orphan rate: **9.5%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -124,7 +124,7 @@ _Generated 2026-08-07T14:31:04.197294_
 | S407 (RubberBand_ITM2) | 3d | drop | 29 | 37.9 | -54.05 | -88.38 | -61.54 | +367.28 | 7 | 62 | 25 | $+161.00 | 31.0% | non-positive median return |
 | S360 (RubberBand_1DTE) | 1d | drop | 34 | 8.8 | -55.16 | -81.64 | -70.96 | -33.33 | 7 | 64 | 30 | $-612.00 | 32.4% | non-positive median return |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 30 | 10.0 | -56.25 | -87.23 | -75.81 | -27.09 | 11 | 62 | 30 | $-733.00 | 53.3% | non-positive median return |
-| S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 58 | 5.2 | -71.89 | -98.45 | -97.94 | -45.99 | 11 | 79 | 58 | $-2,133.00 | 37.9% | non-positive median return |
+| S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 59 | 5.1 | -71.43 | -98.43 | -97.91 | -46.18 | 11 | 79 | 59 | $-2,153.00 | 39.0% | non-positive median return |
 
 ## Comparison groups
 
@@ -195,7 +195,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 |---|---|---:|---:|---:|---:|---:|---:|
 | S210 | 3d ATM MA cross 8/21 | 43 | +13.89 | -56.39 | -25.31 | 80 | 43 |
 | S211 | 3d ATM MA cross 21/50 | 21 | -31.58 | -97.22 | -48.72 | 64 | 21 |
-| S212 | 3d ATM MA bounce 50 | 58 | -71.89 | -98.45 | -97.94 | 79 | 58 |
+| S212 | 3d ATM MA bounce 50 | 59 | -71.43 | -98.43 | -97.91 | 79 | 59 |
 | S213 | 3d ATM MA bounce 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S215 | 3d ATM MA reclaim 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
@@ -249,7 +249,7 @@ _Pipeline evaluation as of 2026-08-07. Auto-kill thresholds: median<-25% at n>=1
 | S209 | GapDown_Recovery | 6 | -61.46% | 0% | WATCH | 9 |
 | S210 | MA_Cross_8_21 | 43 | +13.89% | 60% | INSUFFICIENT | 11 |
 | S211 | MA_Cross_21_50 | 21 | -31.58% | 19% | INSUFFICIENT | 11 |
-| S212 | MA_Bounce_50 | 58 | -71.89% | 5% | INSUFFICIENT | 11 |
+| S212 | MA_Bounce_50 | 59 | -71.43% | 5% | INSUFFICIENT | 11 |
 | S213 | MA_Bounce_200 | 0 | — | — | NEW | 0 |
 | S214 | MA_Death_Cross | 0 | — | — | NEW | 0 |
 | S215 | MA_Reclaim_200 | 0 | — | — | NEW | 0 |
