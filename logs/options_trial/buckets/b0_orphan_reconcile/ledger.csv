@@ -214,3 +214,7 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05 14:41:07.344015+00:00,exit,0,orphan_reconcile,ORPHAN,3624e7324a17,AMZN,AMZN260807C00292500,1,,0.28,53.85,-48.0,-25.85,reconcile_fill,,-0.01,0.5,-0.5,,,a0a3a0d8-62fd-4d46-b741-e8c79119f964
 2026-08-06 15:04:09.492263+00:00,exit,0,orphan_reconcile,ORPHAN,3ebc37036f3f,AMZN,AMZN260807C00297500,1,,0.29,33.92,-14.51,-4.92,reconcile_fill,,-0.01,0.5,-0.5,,,4c785e33-3045-4080-ba59-dc55afd88cf3
 2026-08-06 14:56:44.586313+00:00,exit,0,orphan_reconcile,ORPHAN,3ebc37036f3f,AMZN,AMZN260807C00297500,1,,0.11,33.92,-67.57,-22.92,reconcile_fill,,-0.01,0.5,-0.5,,,6bc3c482-3231-4e9e-b330-8fd8f8ecb4c9
+2026-08-07T15:10:56Z,reconcile,0,orphan_reconcile,ORPHAN,81fef23e5e21,DKNG,DKNG260814P00021500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-07T15:10:56Z,reconcile,0,orphan_reconcile,ORPHAN,14061cc71f0e,META,META260810C00620000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-07 14:53:37.998010+00:00,exit,0,orphan_reconcile,ORPHAN,3ebc37036f3f,AMZN,AMZN260807C00297500,1,,0.65,33.92,91.61,31.08,take_profit (+59.0%),,-0.01,0.5,-0.5,,,7914446a-79fe-4c6c-9f4f-cd5098136df1
+2026-08-07 14:53:04.584799+00:00,exit,0,orphan_reconcile,ORPHAN,3ebc37036f3f,AMZN,AMZN260807C00297500,1,,0.13,33.92,-61.68,-20.92,reconcile_fill,,-0.01,0.5,-0.5,,,c012470b-deec-461e-82fc-f67695be92ad

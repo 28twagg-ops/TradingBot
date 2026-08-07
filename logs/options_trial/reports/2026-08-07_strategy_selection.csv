@@ -1,20 +1,20 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
-S354,GapDown_5DTE,5d,watch,fat left tail (p10 < -45%),50,27,14,13,47.03,93.62,-70.8,-64.16,155.91,665.0,3,7,34,13,4,29.6
-S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),82,46,27,19,188.25,62.47,-64.47,-50.91,965.79,2746.0,4,7,78,42,7,28.3
+S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),86,46,27,19,188.25,62.47,-64.47,-50.91,965.79,2746.0,4,7,82,42,7,28.3
 S364,RubberBand_7DTE,7d,watch,fat left tail (p10 < -45%),59,25,18,7,52.59,60.0,-47.69,-42.31,188.89,461.0,5,7,55,21,4,48.0
 S357,GapDown_21DTE,21d,watch,building sample (8-19 exits),38,15,13,2,42.48,58.06,-30.74,47.06,73.68,358.0,6,7,26,13,3,46.7
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),57,28,18,10,61.61,57.34,-61.37,-28.26,212.0,609.0,4,7,49,22,5,46.4
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),71,29,24,5,117.34,52.63,-55.79,13.04,116.0,1237.0,4,7,67,29,4,44.8
 S397,GapDown_ITM1,3d,watch,building sample (8-19 exits),56,11,9,2,46.21,51.39,-91.67,39.48,116.39,345.0,2,7,40,2,2,63.6
 S403,Any_MA50_Touch,3d,watch,building sample (8-19 exits),34,15,10,5,85.04,50.88,-72.92,-54.27,318.4,308.0,3,7,26,15,4,33.3
-S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),94,44,30,14,76.44,50.0,-73.77,-55.03,215.0,894.0,5,11,70,42,6,38.6
+S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),98,45,30,15,73.9,50.0,-73.77,-52.94,208.09,879.0,6,11,74,43,6,40.0
 S398,GapDown_ATM,3d,watch,fat left tail (p10 < -45%),73,33,20,13,46.7,48.98,-57.45,-39.29,157.34,810.0,5,7,57,19,4,42.4
 S356,GapDown_14DTE,14d,watch,insufficient sample (<8 exits),36,4,4,0,48.27,48.27,37.93,37.93,58.62,112.0,2,7,24,2,1,100.0
 S404,GapDown_OTM2,3d,watch,building sample (8-19 exits),56,16,10,6,10.8,41.84,-94.93,-91.67,115.38,167.0,2,7,40,6,2,50.0
 S352,GapDown_2DTE,2d,watch,fat left tail (p10 < -45%),70,22,13,9,37.02,39.01,-64.86,-51.85,134.17,221.0,5,7,54,15,5,27.3
 S408,RubberBand_ITM1,3d,watch,fat left tail (p10 < -45%),72,34,18,16,205.36,37.63,-65.73,-50.0,910.19,1276.0,5,4,72,34,6,29.4
+S354,GapDown_5DTE,5d,watch,fat left tail (p10 < -45%),50,28,14,14,42.65,30.15,-72.13,-65.0,152.73,628.0,4,7,34,14,4,28.6
 S401,Any_Gap_Down_Small,3d,watch,fat left tail (p10 < -45%),90,49,29,20,50.82,23.68,-96.23,-28.95,182.62,868.0,6,7,74,47,7,30.6
-S210,MA_Cross_8_21,3d ATM MA cross 8/21,watch,fat left tail (p10 < -45%),93,40,23,17,3.11,10.79,-58.81,-42.69,53.93,-5.0,3,11,78,40,5,37.5
+S210,MA_Cross_8_21,3d ATM MA cross 8/21,watch,fat left tail (p10 < -45%),94,40,23,17,3.11,10.79,-58.81,-42.69,53.93,-5.0,3,11,79,40,5,37.5
 S363,RubberBand_5DTE,5d,watch,building sample (8-19 exits),41,15,11,4,16.42,9.52,-71.46,-23.36,87.65,30.0,3,4,41,15,3,40.0
 S411,RubberBand_OTM2,3d,watch,fat left tail (p10 < -45%),62,24,13,11,-8.0,6.57,-57.76,-52.08,43.0,-156.0,4,4,62,24,5,37.5
 S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),83,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,17,0,0,0,0.0
@@ -102,5 +102,5 @@ S351,GapDown_1DTE,1d,drop,non-positive median return,102,38,10,28,-0.5,-52.55,-8
 S407,RubberBand_ITM2,3d,drop,non-positive median return,66,28,11,17,56.43,-52.74,-89.32,-61.54,374.25,173.0,5,7,62,24,7,32.1
 S203,GapUp_Fade,3d ATM gap-up fade (put),drop,non-positive median return,76,33,4,29,-43.54,-54.0,-79.08,-74.42,38.86,-717.0,6,11,55,29,5,42.4
 S360,RubberBand_1DTE,1d,drop,non-positive median return,66,34,3,31,-50.38,-55.16,-81.64,-70.96,-33.33,-612.0,6,7,62,30,7,32.4
-S216,RSI_Oversold_Cross,3d ATM RSI x30,drop,non-positive median return,76,24,1,23,-58.01,-57.12,-87.99,-80.49,-36.96,-702.0,4,11,56,24,4,58.3
+S216,RSI_Oversold_Cross,3d ATM RSI x30,drop,non-positive median return,76,25,2,23,-52.9,-56.25,-87.86,-80.49,-36.96,-672.0,4,11,56,25,4,56.0
 S212,MA_Bounce_50,3d ATM MA bounce 50,drop,non-positive median return,103,57,2,55,-67.15,-72.34,-98.46,-97.96,-46.55,-2238.0,5,11,73,57,7,38.6
