@@ -1,0 +1,151 @@
+13:56:09  INFO      Mode: morning_scan
+13:56:09  INFO        [positions] 4/4 (4 valid)
+13:56:09  INFO        SELL order cancelled CNC  type=OrderType.STOP  id=bf8e749c-b458-4f48-b30b-02e4427aca36
+13:56:09  INFO        SELL LIMIT CNC  qty=1.460149632  limit=$64.81  id=94904ea8-3502-4b78-877a-cc3b9526dae4
+13:56:39  INFO        SELL LIMIT filled CNC (confirmed by position check)
+13:56:39  INFO        TX logged: SELL CNC  P&L 0.38%
+13:56:39  INFO        Universe cache hit: 903 tickers (tickers_2026-08-07.json)
+13:56:40  INFO        [universe] 40/900 (40 valid)
+13:56:42  INFO        [universe] 80/900 (80 valid)
+13:56:43  INFO        [universe] 120/900 (120 valid)
+13:56:44  INFO        [universe] 160/900 (160 valid)
+13:56:45  INFO        [universe] 200/900 (199 valid)
+13:56:53  INFO        [universe] 240/900 (238 valid)
+13:57:06  INFO        [universe] 280/900 (278 valid)
+13:57:16  INFO        [universe] 320/900 (318 valid)
+13:57:29  INFO        [universe] 360/900 (358 valid)
+13:57:42  INFO        [universe] 400/900 (397 valid)
+13:57:53  INFO        [universe] 440/900 (437 valid)
+13:58:06  INFO        [universe] 480/900 (477 valid)
+13:58:16  INFO        [universe] 520/900 (517 valid)
+13:58:29  INFO        [universe] 560/900 (557 valid)
+13:58:42  INFO        [universe] 600/900 (597 valid)
+13:58:55  INFO        [universe] 640/900 (637 valid)
+13:59:05  INFO        [universe] 680/900 (677 valid)
+13:59:18  INFO        [universe] 720/900 (717 valid)
+13:59:28  INFO        [universe] 760/900 (757 valid)
+13:59:41  INFO        [universe] 800/900 (797 valid)
+13:59:54  INFO        [universe] 840/900 (836 valid)
+14:00:04  INFO        [universe] 880/900 (876 valid)
+14:00:11  INFO        [universe] 900/900 (896 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $472.24|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-08-07|
+|  Universe                                                          both|
+|  Mo~  Aug: VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $472.24|
+|  Cash                                                           $117.96|
+|  Reserve                                          $23.61  (always kept)|
+|  Available                                     $94.35  (for new trades)|
+|  Trade size             $94.45  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (4 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AAPL     Pullback50      $94.56     $311.48  $311.82  +0.1%   $+0.10  |
+|  BBY      Pullback50      $95.16     $80.12   $80.72   +0.7%   $+0.70  |
+|  CNC      Pullback50      $94.82     $64.69   $64.94   +0.4%   $+0.36  |
+|  ESS      Pullback50      $69.74     $286.19  $285.29  -0.3%   $-0.22  |
+|                                                                        |
+|  Total invested                                                 $354.29|
+|  Total open P&L                                                  $+0.95|
+|  Buys today: 0  |  entry cap: 1  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (41770.7m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  ESS  P&L -0.3%  $-0.22                                            HOLD|
+|  AAPL  P&L +0.1%  $+0.10                                           HOLD|
+|  CNC  P&L +0.4%  $+0.36                           EXIT: midline (+0.4%)|
+|  BBY  P&L +0.7%  $+0.70                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 3|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  28                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.72   41.0   -2.94   50MA bounce (+|
+|  GOOG     Pullback50      eq     $355.30  51.7   -2.04   50MA bounce (+|
+|  DOV      Pullback50      eq     $212.35  52.6   -1.43   50MA bounce (-|
+|  ES       Pullback50      eq     $72.02   39.2   -2.17   50MA bounce (+|
+|  FTV      Pullback50      eq     $61.11   50.4   -2.13   50MA bounce (+|
+|  DOC      Pullback50      eq     $21.18   35.0   -2.86   50MA bounce (+|
+|  HUM      Pullback50      eq     $372.22  36.6   -1.69   50MA bounce (-|
+|  MS       Pullback50      eq     $214.12  53.7   -2.20   50MA bounce (-|
+|  PCG      Pullback50      eq     $17.09   44.5   -1.37   50MA bounce (+|
+|  O        Pullback50      eq     $62.65   26.6   -3.27   50MA bounce (-|
+|  SWKS     Pullback50      eq     $67.68   66.8   -1.72   50MA bounce (+|
+|  TTWO     Pullback50      eq     $235.36  46.4   -1.73   50MA bounce (+|
+|  VTRS     Pullback50      eq     $16.65   46.1   -2.09   50MA bounce (+|
+|  ALSN     Pullback50      eq     $117.62  55.8   -2.14   50MA bounce (+|
+|  ALV      Pullback50      eq     $123.03  61.8   -1.84   50MA bounce (+|
+|  BC       Pullback50      eq     $81.52   56.6   -2.32   50MA bounce (+|
+|  BKH      Pullback50      eq     $72.99   41.1   -2.22   50MA bounce (-|
+|  BWA      Pullback50      eq     $67.58   69.8   -2.16   50MA bounce (-|
+|  CBT      Pullback50      eq     $87.36   46.8   -1.45   50MA bounce (-|
+|  COLB     Pullback50      eq     $31.04   30.9   -2.19   50MA bounce (-|
+|  CUZ      Pullback50      eq     $30.09   37.0   -2.23   50MA bounce (+|
+|  EXP      Pullback50      eq     $216.01  60.9   -2.00   50MA bounce (+|
+|  FR       Pullback50      eq     $63.61   22.0   -2.95   50MA bounce (-|
+|  KRC      Pullback50      eq     $37.84   38.6   -1.94   50MA bounce (-|
+|  NNN      Pullback50      eq     $47.02   26.8   -1.95   50MA bounce (+|
+|  NWE      Pullback50      eq     $70.69   43.3   -2.35   50MA bounce (-|14:00:14  INFO        BUY  AES  $94.45  [Pullback50]  id=da983e81-2c51-4d6f-ba76-b314832ff046
+14:00:14  INFO        BUY  GOOG  $94.45  [Pullback50]  id=42274797-dd03-43be-956e-706d082ef7d3
