@@ -234,5 +234,3 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-07 17:10:17.482209+00:00,exit,0,orphan_reconcile,ORPHAN,127ebe228045,AMZN,AMZN260807C00292500,1,,0.16,53.85,-70.29,-37.85,stop_loss (-60.0%),,-0.01,0.5,-0.5,,,1135feea-5f26-46a2-85ff-f4365ef238b1
 2026-08-07T18:06:14Z,reconcile,0,orphan_reconcile,ORPHAN,f4b10d8f83ce,CVX,CVX260807C00187500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-07 18:00:57.744670+00:00,exit,0,orphan_reconcile,ORPHAN,7fefc4d59ab4,AMZN,AMZN260807C00295000,2,,0.17,80.67,-57.85,-46.67,stop_loss (-51.4%),,-0.01,0.5,-0.5,,,cbbb4bad-0209-487e-a74e-d6a5c07afcf8
-2026-08-07T19:54:55Z,reconcile,0,orphan_reconcile,ORPHAN,cd6a8f77d52e,CVX,CVX260821C00202500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-07 19:54:17.810455+00:00,exit,0,orphan_reconcile,ORPHAN,7fefc4d59ab4,AMZN,AMZN260807C00295000,1,,0.13,40.33,-67.77,-27.33,stop_loss (-60.0%),,-0.01,0.5,-0.5,,,683bf791-93e5-4269-97f8-6f665e527b46

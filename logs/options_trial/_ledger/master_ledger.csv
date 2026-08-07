@@ -9850,5 +9850,3 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-07 19:01:18.450414+00:00,exit,112,lab0112_s212_w3_1045_1120_r1,S212,1096cc177b92,UBER,UBER260814C00079000,1,,0.18,41.0,-56.1,-23.0,stop_loss (-56.0%),,-0.01,0.5,-0.5,,,aeda96ad-c540-4171-a304-6c13e216d678
 2026-08-07T19:20:46Z,reconcile,114,lab0114_s212_w4_1120_1135_r1,S212,395ca0f99385,UBER,UBER260814C00079000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-07 19:44:31.956165+00:00,exit,424,lab0424_s365_w4_1120_1135_r1,S365,6a36b205d779,CVX,CVX260821C00202500,1,,0.11,30.0,-63.33,-19.0,stop_loss (-76.7%),,-0.01,0.5,-0.5,,,97e4a0ab-b3d5-4026-b1da-2154d9636732
-2026-08-07T19:54:55Z,reconcile,0,orphan_reconcile,ORPHAN,cd6a8f77d52e,CVX,CVX260821C00202500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-07 19:54:17.810455+00:00,exit,0,orphan_reconcile,ORPHAN,7fefc4d59ab4,AMZN,AMZN260807C00295000,1,,0.13,40.33,-67.77,-27.33,stop_loss (-60.0%),,-0.01,0.5,-0.5,,,683bf791-93e5-4269-97f8-6f665e527b46
