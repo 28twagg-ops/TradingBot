@@ -1,4 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-08-06 14:35:05.619101+00:00,entry,74,lab0074_s209_w2_1005_1045_r1,S209,271114876be1,AMD,AMD260807C00537500,1,0.67,0.67,67.0,,,,-0.01,,0.5,-0.5,,,f8927d04-21cc-4bd4-a6cf-a104f6e44074
 2026-08-06 18:00:08.179374+00:00,exit,74,lab0074_s209_w2_1005_1045_r1,S209,271114876be1,AMD,AMD260807C00537500,1,,0.28,67.0,-58.21,-39.0,stop_loss (-52.0%),,-0.01,0.5,-0.5,,,aa531905-9191-48e9-98bf-f07c43c0097b
-2026-08-06 14:35:05.619101+00:00,entry,74,lab0074_s209_w2_1005_1045_r1,S209,1077dbfa8f1a,AMD,AMD260807C00537500,1,0.67,0.67,67.0,,,,-0.01,,0.5,-0.5,,,f8927d04-21cc-4bd4-a6cf-a104f6e44074
+2026-08-06 14:35:05.619101+00:00,entry,74,lab0074_s209_w2_1005_1045_r1,S209,858e8619946e,AMD,AMD260807C00537500,1,0.67,0.67,67.0,,,,-0.01,,0.5,-0.5,,,f8927d04-21cc-4bd4-a6cf-a104f6e44074
