@@ -1382,26 +1382,6 @@
       "entry_order_id": "c1ad7d48-3a36-499e-9179-2fc5f2e65011"
     },
     {
-      "lot_id": "4c4f5e6497dd",
-      "bucket_id": 82,
-      "profile_name": "lab0082_s210_w2_1005_1045_r1",
-      "strategy_id": "S210",
-      "occ_symbol": "NVDA260810C00230000",
-      "underlying": "NVDA",
-      "qty": 1,
-      "entry_cost": 24.0,
-      "entry_price": 0.24,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-07T14:07:09.133288+00:00",
-      "entry_order_id": "1cfbb9c3-c523-43ce-80d2-6c6db61ad3b6"
-    },
-    {
       "lot_id": "5f73fc8328b9",
       "bucket_id": 80,
       "profile_name": "lab0080_s210_w1_0928_1005_r1",
@@ -2382,15 +2362,15 @@
       "entry_order_id": "711a3483-049b-4815-a859-23169c3e119a"
     },
     {
-      "lot_id": "106575e104b4",
-      "bucket_id": 237,
-      "profile_name": "lab0237_s401_w2_1005_1045_r2",
-      "strategy_id": "S401",
-      "occ_symbol": "TSLA260810C00342500",
-      "underlying": "TSLA",
+      "lot_id": "685283db77a3",
+      "bucket_id": 115,
+      "profile_name": "lab0115_s212_w4_1120_1135_r2",
+      "strategy_id": "S212",
+      "occ_symbol": "UBER260814C00078000",
+      "underlying": "UBER",
       "qty": 1,
-      "entry_cost": 53.0,
-      "entry_price": 0.53,
+      "entry_cost": 48.0,
+      "entry_price": 0.48,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
@@ -2398,8 +2378,48 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-07T15:26:01.466334+00:00",
-      "entry_order_id": "86e0111a-b07c-4cdb-aac5-03dbf889dc27"
+      "entry_date": "2026-08-07T15:31:01.808193+00:00",
+      "entry_order_id": "a0da321a-5736-45bc-bad5-5f8cef39d75c"
+    },
+    {
+      "lot_id": "078a8210450c",
+      "bucket_id": 239,
+      "profile_name": "lab0239_s401_w3_1045_1120_r2",
+      "strategy_id": "S401",
+      "occ_symbol": "META260810C00650000",
+      "underlying": "META",
+      "qty": 1,
+      "entry_cost": 7.000000000000001,
+      "entry_price": 0.07,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-07T15:31:01.841513+00:00",
+      "entry_order_id": "103961e7-1418-4760-8f32-1d249a6117b4"
+    },
+    {
+      "lot_id": "e8dbd41fbfd2",
+      "bucket_id": 241,
+      "profile_name": "lab0241_s401_w4_1120_1135_r2",
+      "strategy_id": "S401",
+      "occ_symbol": "META260810C00627500",
+      "underlying": "META",
+      "qty": 1,
+      "entry_cost": 28.999999999999996,
+      "entry_price": 0.29,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-07T15:32:35.598117+00:00",
+      "entry_order_id": "3d3e3bc4-db4b-465d-a13e-1fd791a3cacf"
     }
   ],
   "pending_orders": [
@@ -2484,22 +2504,6 @@
       "stop_loss": -0.5
     },
     {
-      "order_id": "103961e7-1418-4760-8f32-1d249a6117b4",
-      "bucket_id": 239,
-      "strategy_id": "S401",
-      "occ_symbol": "META260810C00650000",
-      "underlying": "META",
-      "qty": 1,
-      "limit": 0.08,
-      "profile_name": "lab0239_s401_w3_1045_1120_r2",
-      "submitted": "2026-08-07",
-      "detail": "gap -0.72% green",
-      "spread_frac": 0.24999999999999986,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
       "order_id": "a57d7a00-439d-4198-b1e7-5faa40665195",
       "bucket_id": 409,
       "strategy_id": "S364",
@@ -2514,22 +2518,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
-    },
-    {
-      "order_id": "a0da321a-5736-45bc-bad5-5f8cef39d75c",
-      "bucket_id": 115,
-      "strategy_id": "S212",
-      "occ_symbol": "UBER260814C00078000",
-      "underlying": "UBER",
-      "qty": 1,
-      "limit": 0.48,
-      "profile_name": "lab0115_s212_w4_1120_1135_r2",
-      "submitted": "2026-08-07",
-      "detail": "low=71.23 MA50=71.75 touch+green",
-      "spread_frac": 0.020618556701030948,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
     },
     {
       "order_id": "1a0ad90b-fc7d-46cd-acc5-62419707ee55",
@@ -2564,17 +2552,17 @@
       "stop_loss": -0.5
     },
     {
-      "order_id": "3d3e3bc4-db4b-465d-a13e-1fd791a3cacf",
-      "bucket_id": 241,
+      "order_id": "987f49c9-236a-4408-8e34-47ebf984146c",
+      "bucket_id": 240,
       "strategy_id": "S401",
-      "occ_symbol": "META260810C00627500",
+      "occ_symbol": "META260810C00625000",
       "underlying": "META",
       "qty": 1,
-      "limit": 0.29,
-      "profile_name": "lab0241_s401_w4_1120_1135_r2",
+      "limit": 0.33,
+      "profile_name": "lab0240_s401_w4_1120_1135_r1",
       "submitted": "2026-08-07",
       "detail": "gap -0.72% green",
-      "spread_frac": 0.14285714285714277,
+      "spread_frac": 0.02985074626865674,
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
@@ -2723,7 +2711,6 @@
     "b411": 38.0,
     "b397": 38.0,
     "b311": 39.0,
-    "b82": 24.0,
     "b80": 24.0,
     "b262": 51.0,
     "b109": 51.0,
@@ -2758,7 +2745,9 @@
     "b114": 34.0,
     "b919": 45.0,
     "b918": 45.0,
-    "b237": 53.0
+    "b115": 48.0,
+    "b239": 7.000000000000001,
+    "b241": 28.999999999999996
   },
   "session_date": "2026-08-07",
   "entries_locked": [
@@ -2824,7 +2813,8 @@
     "115|S212|2026-08-07",
     "198|S218|2026-08-07",
     "199|S218|2026-08-07",
-    "241|S401|2026-08-07"
+    "241|S401|2026-08-07",
+    "240|S401|2026-08-07"
   ],
   "processed_orders": [
     "20ec24d2-a4a4-47c5-8db8-a07fa672a7ea",
@@ -3299,9 +3289,14 @@
     "7f8bd37e-4183-4b66-b924-f93bff00b31f",
     "a6009b67-422e-4b4e-b888-b062ba424284",
     "d4fa6c39-88b1-4c64-8533-e30d9b7a6d67",
-    "72231af1-9832-4d2c-9e43-eb29cd129193"
+    "72231af1-9832-4d2c-9e43-eb29cd129193",
+    "a0da321a-5736-45bc-bad5-5f8cef39d75c",
+    "103961e7-1418-4760-8f32-1d249a6117b4",
+    "5315b199-5723-444d-ab9e-da261c0214c8",
+    "cac48ed4-7b5b-4500-8f89-2c58031c3bab",
+    "3d3e3bc4-db4b-465d-a13e-1fd791a3cacf"
   ],
-  "submitted_today": 63,
+  "submitted_today": 64,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-08-07"
 }
