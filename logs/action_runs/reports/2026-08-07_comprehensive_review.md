@@ -3330,3 +3330,54 @@ Fetched daily bars for 114/117 symbols
 ```
 
 ---
+
+## Run 20260807T134610Z
+
+- UTC timestamp: `20260807T134610Z`
+- GitHub run: [#6386](https://github.com/28twagg-ops/TradingBot/actions/runs/31184131693)
+- Run id: `31184131693`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-07T09:25:58.031988-04:00","date":"2026-08-07","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.0,"phases_s":{"reconcile":0.45},"signals":0,"placed":0,"equity":143661.71,"open_positions":28,"pending_orders":0,"open_lots":136,"submitted_today":0,"filled_today":0,"unattributed_contracts":7,"top_signals":[],"github_run":"6382","github_run_id":"31182524525","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:46:12  INFO      Mode: morning_scan
+13:46:13  INFO        [positions] 1/1 (1 valid)
+13:46:13  INFO        SELL LIMIT JBL  qty=0.274920308  limit=$349.79  id=f0542b3b-2e6b-4678-a8e8-01c77f619019
+13:46:43  INFO        SELL LIMIT not filled for JBL, falling back to market
+13:46:43  INFO        SELL MARKET JBL closed
+13:46:45  INFO        TX logged: SELL JBL  P&L 2.31%
+13:46:45  INFO        Universe cache hit: 903 tickers (tickers_2026-08-07.json)
+13:46:46  INFO        [universe] 40/903 (40 valid)
+13:46:47  INFO        [universe] 80/903 (80 valid)
+13:46:49  INFO        [universe] 120/903 (120 valid)
+13:46:50  INFO        [universe] 160/903 (160 valid)
+13:46:51  INFO        [universe] 200/903 (199 valid)
+13:46:58  INFO        [universe] 240/903 (238 valid)
+13:47:12  INFO        [universe] 280/903 (278 valid)
+13:47:22  INFO        [universe] 320/903 (318 valid)
+13:47:35  INFO        [universe] 360/903 (358 valid)
+13:47:46  INFO        [universe] 400/903 (397 valid)
+13:47:59  INFO        [universe] 440/903 (437 valid)
+13:48:10  INFO        [universe] 480/903 (477 valid)
+13:48:23  INFO        [universe] 520/903 (517 valid)
+13:48:36  INFO        [universe] 560/903 (557 valid)
+13:48:46  INFO        [universe] 600/903 (597 valid)
+13:48:59  INFO        [universe] 640/903 (637 valid)
+13:49:12  INFO        [universe] 680/903 (677 valid)
+13:49:22  INFO        [universe] 720/903 (717 valid)
+13:49:35  INFO        [universe] 760/903 (757 valid)
+13:49:48  INFO        [universe] 800/903 (797 valid)
+13:49:59  INFO        [universe] 840/903 (836 valid)
+13:50:11  INFO        [universe] 880/903 (876 valid)
+13:50:18  INFO        [universe] 903/903 (899 valid)
+```
+
+### Options bot full output
+
+```text
