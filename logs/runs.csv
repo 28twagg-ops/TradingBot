@@ -4576,3 +4576,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-07 20:05:51,ext_exits,bull,474.2,117.67,0,0,0,4,AAPL|AES|BBY|ESS,both
 2026-08-07 20:10:48,ext_exits,bull,474.2,117.67,0,0,0,4,AAPL|AES|BBY|ESS,both
 2026-08-07 20:15:47,ext_exits,bull,474.22,117.67,0,0,0,4,AAPL|AES|BBY|ESS,both
+2026-08-07 20:20:52,ext_exits,bull,474.19,117.67,0,0,0,4,AAPL|AES|BBY|ESS,both
