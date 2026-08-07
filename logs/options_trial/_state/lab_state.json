@@ -1822,26 +1822,6 @@
       "entry_order_id": "b42ed4cb-39b0-441a-9c28-dd207ced1780"
     },
     {
-      "lot_id": "6a36b205d779",
-      "bucket_id": 424,
-      "profile_name": "lab0424_s365_w4_1120_1135_r1",
-      "strategy_id": "S365",
-      "occ_symbol": "CVX260821C00202500",
-      "underlying": "CVX",
-      "qty": 1,
-      "entry_cost": 30.0,
-      "entry_price": 0.3,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-07T15:22:51.211951+00:00",
-      "entry_order_id": "1101f957-bee2-4837-959b-a29934ee8d37"
-    },
-    {
       "lot_id": "1532ec990ad9",
       "bucket_id": 392,
       "profile_name": "lab0392_s363_w2_1005_1045_r1",
@@ -2235,14 +2215,14 @@
       "submitted": "2026-08-07T12:51:03"
     },
     {
-      "order_id": "97e4a0ab-b3d5-4026-b1da-2154d9636732",
-      "lot_id": "6a36b205d779",
-      "bucket_id": 424,
-      "strategy_id": "S365",
+      "order_id": "683bf791-93e5-4269-97f8-6f665e527b46",
+      "lot_id": "cd6a8f77d52e",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
       "occ_symbol": "CVX260821C00202500",
       "qty": 1,
-      "reason": "stop_loss (-76.7%)",
-      "submitted": "2026-08-07T15:44:31"
+      "reason": "stop_loss (-60.0%)",
+      "submitted": "2026-08-07T15:49:41"
     }
   ],
   "bucket_open_premium": {
@@ -2324,7 +2304,6 @@
     "b192": 40.0,
     "b833": 32.0,
     "b832": 32.0,
-    "b424": 30.0,
     "b392": 52.0,
     "b307": 51.0,
     "b306": 51.0,
@@ -2897,7 +2876,8 @@
     "f06b83b2-ed8f-4888-9f7b-6beec3b73fc2",
     "cbbb4bad-0209-487e-a74e-d6a5c07afcf8",
     "eb4f9df4-8830-4542-8ded-8f7798f480e0",
-    "aeda96ad-c540-4171-a304-6c13e216d678"
+    "aeda96ad-c540-4171-a304-6c13e216d678",
+    "97e4a0ab-b3d5-4026-b1da-2154d9636732"
   ],
   "submitted_today": 64,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
