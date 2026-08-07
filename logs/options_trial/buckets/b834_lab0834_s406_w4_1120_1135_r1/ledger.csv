@@ -9,3 +9,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-03 15:22:33.926928+00:00,entry,834,lab0834_s406_w4_1120_1135_r1,S406,995f6c37adcf,NVDA,NVDA260805C00220000,1,0.22,0.22,22.0,,,,-0.01,,0.5,-0.5,,,10ee54bc-f0bc-44ba-89dc-dfdbc456f4dc
 2026-08-06 15:25:26.319041+00:00,entry,834,lab0834_s406_w4_1120_1135_r1,S406,3c198b2a58dc,PLTR,PLTR260807C00165000,1,0.2,0.19,19.0,,,,-0.01,,0.75,-0.75,0.04878048780487795,RB gap -1.6% reclaim,246f13a9-fb67-48cd-9250-2eb556e2c3ef
 2026-08-07T13:44:43Z,reconcile,834,lab0834_s406_w4_1120_1135_r1,S406,3c198b2a58dc,PLTR,PLTR260807C00165000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-06 15:25:26.319041+00:00,entry,834,lab0834_s406_w4_1120_1135_r1,S406,9a8bd9040e94,PLTR,PLTR260807C00165000,1,0.19,0.19,19.0,,,,-0.01,,0.5,-0.5,,,246f13a9-fb67-48cd-9250-2eb556e2c3ef
