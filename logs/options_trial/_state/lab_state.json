@@ -1542,26 +1542,6 @@
       "entry_order_id": "4ae47024-3a1c-4e9c-a799-2ec297905d40"
     },
     {
-      "lot_id": "127ebe228045",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "AMZN260807C00292500",
-      "underlying": "AMZN",
-      "qty": 1,
-      "entry_cost": 53.85,
-      "entry_price": 0.5385,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-07T14:50:50.665823+00:00",
-      "entry_order_id": "orphan:AMZN260807C00292500"
-    },
-    {
       "lot_id": "7fefc4d59ab4",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -2042,26 +2022,6 @@
       "entry_order_id": "orphan:CVX260807C00187500"
     },
     {
-      "lot_id": "88a1428d19ff",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "CVX260814C00200000",
-      "underlying": "CVX",
-      "qty": 1,
-      "entry_cost": 20.0,
-      "entry_price": 0.2,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-07T15:22:52.620136+00:00",
-      "entry_order_id": "orphan:CVX260814C00200000"
-    },
-    {
       "lot_id": "cd6a8f77d52e",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -2320,6 +2280,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-07T15:35:53.918871+00:00",
       "entry_order_id": "orphan:UNH260814C00435000"
+    },
+    {
+      "lot_id": "142e9b02da30",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "AMZN260807C00292500",
+      "underlying": "AMZN",
+      "qty": 7,
+      "entry_cost": 376.95,
+      "entry_price": 0.5385,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-07T17:10:53.351721+00:00",
+      "entry_order_id": "orphan:AMZN260807C00292500"
     }
   ],
   "pending_orders": [],
@@ -2403,16 +2383,6 @@
       "qty": 1,
       "reason": "stop_loss (-73.9%)",
       "submitted": "2026-08-07T11:26:07"
-    },
-    {
-      "order_id": "1135feea-5f26-46a2-85ff-f4365ef238b1",
-      "lot_id": "88a1428d19ff",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "CVX260814C00200000",
-      "qty": 1,
-      "reason": "stop_loss (-60.0%)",
-      "submitted": "2026-08-07T11:51:05"
     },
     {
       "order_id": "32a043f9-3c27-489c-befa-fbcbb6da5cde",
@@ -2513,7 +2483,7 @@
     "b112": 41.0,
     "b407": 52.0,
     "b393": 52.0,
-    "b0": 1187.2755,
+    "b0": 1490.3755,
     "b410": 38.0,
     "b396": 38.0,
     "b354": 60.0,
@@ -3099,7 +3069,8 @@
     "7dd30c9e-c132-4d7a-84aa-47d07663738a",
     "5b143e2c-8031-4c57-bd82-03ddc4f38f29",
     "14988e0b-8c5b-4002-b689-7d4a0c09253d",
-    "f1a5531e-ef34-4f2e-9dd2-b077d4134e5f"
+    "f1a5531e-ef34-4f2e-9dd2-b077d4134e5f",
+    "1135feea-5f26-46a2-85ff-f4365ef238b1"
   ],
   "submitted_today": 64,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

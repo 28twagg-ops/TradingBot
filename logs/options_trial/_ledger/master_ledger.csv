@@ -9838,3 +9838,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-07 16:03:03.155210+00:00,exit,267,lab0267_s403_w3_1045_1120_r2,S403,a41c804f4ade,AAPL,AAPL260810C00320000,1,,0.21,40.0,-47.5,-19.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,f1a5531e-ef34-4f2e-9dd2-b077d4134e5f
 2026-08-07T16:15:45Z,reconcile,266,lab0266_s403_w3_1045_1120_r1,S403,88931be91ef4,AAPL,AAPL260810C00320000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-07T16:50:50Z,reconcile,85,lab0085_s210_w3_1045_1120_r2,S210,4446424744d5,NVDA,NVDA260810C00232500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-07T17:10:51Z,reconcile,0,orphan_reconcile,ORPHAN,88a1428d19ff,CVX,CVX260814C00200000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-07 17:10:17.482209+00:00,exit,0,orphan_reconcile,ORPHAN,127ebe228045,AMZN,AMZN260807C00292500,1,,0.16,53.85,-70.29,-37.85,stop_loss (-60.0%),,-0.01,0.5,-0.5,,,1135feea-5f26-46a2-85ff-f4365ef238b1
