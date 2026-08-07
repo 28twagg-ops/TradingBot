@@ -2913,3 +2913,144 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260807T133044Z
+
+- UTC timestamp: `20260807T133044Z`
+- GitHub run: [#6383](https://github.com/28twagg-ops/TradingBot/actions/runs/31182914866)
+- Run id: `31182914866`
+- Live bot: exit=`0`, duration=`217s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-07T09:25:58.031988-04:00","date":"2026-08-07","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.0,"phases_s":{"reconcile":0.45},"signals":0,"placed":0,"equity":143661.71,"open_positions":28,"pending_orders":0,"open_lots":136,"submitted_today":0,"filled_today":0,"unattributed_contracts":7,"top_signals":[],"github_run":"6382","github_run_id":"31182524525","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:30:45  INFO      Mode: morning_prep
+13:30:45  INFO        [prep_positions] 1/1 (1 valid)
+13:30:45  INFO      Fetching tickers (universe=both)...
+13:30:45  INFO        S&P 500: 503
+13:30:46  INFO        MidCap 400: 400
+13:30:46  INFO        Total: 903 tickers
+13:30:47  INFO        [prep_universe] 40/902 (40 valid)
+13:30:49  INFO        [prep_universe] 80/902 (80 valid)
+13:30:51  INFO        [prep_universe] 120/902 (120 valid)
+13:30:52  INFO        [prep_universe] 160/902 (160 valid)
+13:30:54  INFO        [prep_universe] 200/902 (199 valid)
+13:30:59  INFO        [prep_universe] 240/902 (238 valid)
+13:31:12  INFO        [prep_universe] 280/902 (278 valid)
+13:31:23  INFO        [prep_universe] 320/902 (318 valid)
+13:31:36  INFO        [prep_universe] 360/902 (358 valid)
+13:31:48  INFO        [prep_universe] 400/902 (397 valid)
+13:32:00  INFO        [prep_universe] 440/902 (437 valid)
+13:32:10  INFO        [prep_universe] 480/902 (477 valid)
+13:32:23  INFO        [prep_universe] 520/902 (517 valid)
+13:32:35  INFO        [prep_universe] 560/902 (557 valid)
+13:32:48  INFO        [prep_universe] 600/902 (597 valid)
+13:32:58  INFO        [prep_universe] 640/902 (637 valid)
+13:33:12  INFO        [prep_universe] 680/902 (677 valid)
+13:33:22  INFO        [prep_universe] 720/902 (717 valid)
+13:33:36  INFO        [prep_universe] 760/902 (757 valid)
+13:33:46  INFO        [prep_universe] 800/902 (797 valid)
+13:33:59  INFO        [prep_universe] 840/902 (836 valid)
+13:34:12  INFO        [prep_universe] 880/902 (876 valid)
+13:34:19  INFO        [prep_universe] 902/902 (898 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         13:30 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $471.37|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       1|
+|  Invested                                                        $95.39|
+|  Open P&L                                                        $+1.21|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  JBL      Pullback50      $95.39     $342.57  $346.96  +1.3%   $+1.21  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                0|
+|                                                                        |
+|  No open sell orders.                                                  |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      1|
+|  Signal candidates                                                   32|
+|  Universe scanned                                                   902|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=136 paper_keys=yes dry_run=False
+  alpaca positions=30
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-08-07T09:34:23.662102-04:00 ===
+
+[Run context]
+Paper auth OK — equity $143020.49, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 1024 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419
+Dropped (no new entries; ex-reflected P&L): S173, S174
+2026-08-07 09:34:27,000 INFO   EXIT [b451|lab0451_s367_w3_1045_1120_r2|S367] stop_loss (-70.8%) SELL 1 NKE260904C00045000 @<= 0.22
+2026-08-07 09:34:27,121 INFO   EXIT [b891|lab0891_s410_w4_1120_1135_r2|S410] take_profit (+98.0%) SELL 1 PATH260807C00013500 @<= 1.00
+2026-08-07 09:34:27,250 INFO   EXIT [b419|lab0419_s365_w1_0928_1005_r2|S365] stop_loss (-82.5%) SELL 1 NKE260821C00044000 @<= 0.01
+2026-08-07 09:34:27,371 INFO   EXIT [b194|lab0194_s218_w2_1005_1045_r1|S218] stop_loss (-100.0%) SELL 1 DKNG260807C00023000 @<= 0.01
+2026-08-07 09:34:27,577 INFO   EXIT [b393|lab0393_s363_w2_1005_1045_r2|S363] stop_loss (-51.8%) SELL 1 MARA260814C00011500 @<= 0.21
+2026-08-07 09:34:27,980 INFO   EXIT [b183|lab0183_s217_w3_1045_1120_r2|S217] stop_loss (-85.0%) SELL 1 RBLX260807C00038500 @<= 0.01
+2026-08-07 09:34:28,259 INFO   EXIT [b329|lab0329_s357_w1_0928_1005_r2|S357] stop_loss (-81.0%) SELL 1 NKE260828C00045000 @<= 0.09
+2026-08-07 09:34:29,571 INFO   EXIT [b76|lab0076_s209_w3_1045_1120_r1|S209] stop_loss (-62.7%) SELL 1 AMD260807C00535000 @<= 0.19
+2026-08-07 09:34:30,976 INFO   EXIT [b904|lab0904_s411_w4_1120_1135_r1|S411] stop_loss (-98.4%) SELL 1 AMD260807C00532500 @<= 0.01
+2026-08-07 09:34:31,115 INFO   EXIT [b886|lab0886_s410_w2_1005_1045_r1|S410] take_profit (+101.5%) SELL 1 PATH260807C00013000 @<= 1.32
+2026-08-07 09:34:31,248 INFO   EXIT [b411|lab0411_s364_w4_1120_1135_r2|S364] stop_loss (-60.9%) SELL 1 MARA260814C00012000 @<= 0.16
+  EXIT [b83|lab0083_s210_w2_1005_1045_r2|S210] stop_loss (-82.6%) SELL failed CVNA260807C00073000: {"code":40010001,"message":"client_order_id must be unique"}
+  EXIT [b85|lab0085_s210_w3_1045_1120_r2|S210] stop_loss (-82.2%) SELL failed CVNA260807C00072000: {"code":40010001,"message":"client_order_id must be unique"}
+2026-08-07 09:34:33,049 INFO   EXIT [b84|lab0084_s210_w3_1045_1120_r1|S210] stop_loss (-82.2%) SELL 1 CVNA260807C00072000 @<= 0.03
+2026-08-07 09:34:33,317 INFO   EXIT [b376|lab0376_s362_w1_0928_1005_r1|S362] stop_loss (-98.4%) SELL 1 NKE260807C00042000 @<= 0.01
+2026-08-07 09:34:33,614 INFO   EXIT [b834|lab0834_s406_w4_1120_1135_r1|S406] take_profit (+57.4%) SELL 1 PLTR260807C00165000 @<= 0.31
+  EXIT [b114|lab0114_s212_w4_1120_1135_r1|S212] stop_loss (-74.5%) SELL failed CVNA260807C00071000: {"code":40010001,"message":"client_order_id must be unique"}
+2026-08-07 09:34:34,360 INFO   EXIT [b294|lab0294_s352_w4_1120_1135_r1|S352] stop_loss (-72.2%) SELL 1 COIN260807C00160000 @<= 0.05
+2026-08-07 09:34:34,465 INFO   EXIT [b889|lab0889_s410_w3_1045_1120_r2|S410] stop_loss (-69.9%) SELL 1 MARA260807C00010500 @<= 0.23
+2026-08-07 09:34:34,776 INFO   EXIT [b98|lab0098_s211_w3_1045_1120_r1|S211] stop_loss (-80.0%) SELL 1 PLTR260807C00172500 @<= 0.01
+2026-08-07 09:34:38,563 INFO   EXIT [b79|lab0079_s209_w4_1120_1135_r2|S209] stop_loss (-98.3%) SELL 1 AMD260807C00537500 @<= 0.02
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 114/117 symbols
+```
+
+---
