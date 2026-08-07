@@ -1,6 +1,6 @@
-# Ledger health — 2026-08-06
+# Ledger health — 2026-08-07
 
-_Generated 2026-08-06T22:10:26.581216_
+_Generated 2026-08-07T00:32:32.924864_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -29,7 +29,7 @@ Notes:
 
 | lot_id | strategy | symbol | entry_day | age_days |
 |--------|----------|--------|-----------|---------:|
-| b428605e4e35 | S365 | AAPL | 2026-07-31 | 6 |
+| b428605e4e35 | S365 | AAPL | 2026-07-31 | 7 |
 
 _Orphaned ledger detail omitted (439 rows) — see note above on historical lot_id churn._
 
