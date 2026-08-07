@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-07
 
-_Generated 2026-08-07T10:32:30.491890_
+_Generated 2026-08-07T10:37:13.593302_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-07T10:32:30.491890_
 
 ## Attribution health
 
-- Total exits: **1928**
+- Total exits: **1930**
 - Orphan exits (b0/orphan_reconcile): **165**
 - Orphan rate: **8.6%** (warn if >10%)
 - Orphan rate OK (attribution looks healthy).
@@ -121,9 +121,9 @@ _Generated 2026-08-07T10:32:30.491890_
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 11 | 50 | 37 | $-822.00 | 43.2% | non-positive median return |
 | S351 (GapDown_1DTE) | 1d | drop | 38 | 26.3 | -52.55 | -80.48 | -66.52 | +171.88 | 7 | 86 | 27 | $+7.00 | 34.2% | non-positive median return |
 | S407 (RubberBand_ITM2) | 3d | drop | 28 | 39.3 | -52.74 | -89.32 | -61.54 | +374.25 | 7 | 62 | 24 | $+173.00 | 32.1% | non-positive median return |
-| S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 32 | 12.5 | -53.66 | -79.12 | -68.18 | +44.86 | 11 | 55 | 28 | $-689.00 | 43.8% | non-positive median return |
+| S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 33 | 12.1 | -54.00 | -79.08 | -74.42 | +38.86 | 11 | 55 | 29 | $-717.00 | 42.4% | non-positive median return |
 | S360 (RubberBand_1DTE) | 1d | drop | 32 | 9.4 | -55.16 | -81.66 | -72.81 | -33.33 | 7 | 58 | 28 | $-574.00 | 34.4% | non-positive median return |
-| S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 22 | 0.0 | -57.12 | -86.44 | -79.32 | -36.96 | 11 | 50 | 22 | $-693.00 | 63.6% | non-positive median return |
+| S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 23 | 4.3 | -56.25 | -85.78 | -78.15 | -36.96 | 11 | 50 | 23 | $-664.00 | 60.9% | non-positive median return |
 | S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 56 | 3.6 | -71.89 | -98.47 | -97.89 | -46.55 | 11 | 65 | 56 | $-2,188.00 | 39.3% | non-positive median return |
 
 ## Comparison groups
@@ -184,7 +184,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S203 | 3d ATM gap-up fade (put) | 32 | -53.66 | -79.12 | -68.18 | 55 | 28 |
+| S203 | 3d ATM gap-up fade (put) | 33 | -54.00 | -79.08 | -74.42 | 55 | 29 |
 | S214 | 3d ATM death cross (put) | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
 ### Phase-1 MA family
@@ -205,7 +205,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S216 | 3d ATM RSI x30 | 22 | -57.12 | -86.44 | -79.32 | 50 | 22 |
+| S216 | 3d ATM RSI x30 | 23 | -56.25 | -85.78 | -78.15 | 50 | 23 |
 | S217 | 3d ATM RSI<25 bounce | 29 | -10.00 | -61.75 | -55.00 | 50 | 28 |
 | S218 | 3d ATM BB lower touch | 42 | +50.00 | -73.54 | -48.04 | 66 | 40 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
@@ -240,7 +240,7 @@ _Pipeline evaluation as of 2026-08-07. Auto-kill thresholds: median<-25% at n>=1
 | S200 | GapDown_Aggressive | 0 | — | — | NEW | 0 |
 | S201 | GapDown_Mild | 0 | — | — | NEW | 0 |
 | S202 | GapDown_Monster | 6 | -64.75% | 0% | WATCH | 10 |
-| S203 | GapUp_Fade | 32 | -53.66% | 12% | INSUFFICIENT | 11 |
+| S203 | GapUp_Fade | 33 | -54.00% | 12% | INSUFFICIENT | 11 |
 | S204 | GapUp_Continuation | 0 | — | — | NEW | 0 |
 | S205 | GapDown_HighVol | 0 | — | — | NEW | 0 |
 | S206 | GapDown_WithTrend | 0 | — | — | NEW | 0 |
@@ -253,7 +253,7 @@ _Pipeline evaluation as of 2026-08-07. Auto-kill thresholds: median<-25% at n>=1
 | S213 | MA_Bounce_200 | 0 | — | — | NEW | 0 |
 | S214 | MA_Death_Cross | 0 | — | — | NEW | 0 |
 | S215 | MA_Reclaim_200 | 0 | — | — | NEW | 0 |
-| S216 | RSI_Oversold_Cross | 22 | -57.12% | 0% | INSUFFICIENT | 11 |
+| S216 | RSI_Oversold_Cross | 23 | -56.25% | 4% | INSUFFICIENT | 11 |
 | S217 | RSI_25_Bounce | 29 | -10.00% | 48% | INSUFFICIENT | 11 |
 | S218 | BB_Lower_Touch | 42 | +50.00% | 69% | INSUFFICIENT | 11 |
 | S219 | Volume_Climax_Up | 0 | — | — | NEW | 0 |
