@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,17,11,2026-07-27,True,11,23.5,-29.76,-57.85,91.61,-97.39,-411.71,"AMZN,COIN,CVNA,DKNG,MARA,META",ORPHAN,take_profit (+82.9%); stop_loss (-74.5%); stop_loss (-82.6%)…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,19,9,2026-07-27,True,11,21.1,-31.15,-57.85,91.61,-97.39,-453.71,"AMZN,COIN,CVNA,DKNG,MARA,META",ORPHAN,take_profit (+82.9%); stop_loss (-74.5%); stop_loss (-82.6%)…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -194,7 +194,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 192,lab0192_s218_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-07,False,,,,,,,0,UNH,S218,,entered_no_exit
 193,lab0193_s218_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-07,False,,,,,,,0,UNH,S218,,entered_no_exit
 194,lab0194_s218_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-07,False,,0.0,-37.5,-37.5,-37.5,-37.5,-15.0,UNH,S218,reconcile_fill,closed
-195,lab0195_s218_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-07,False,,,,,,,0,UNH,S218,,entered_no_exit
+195,lab0195_s218_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-07,False,,0.0,-55.0,-55.0,-55.0,-55.0,-22.0,UNH,S218,reconcile_fill,closed
 196,lab0196_s218_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-07,False,,,,,,,0,UNH,S218,,entered_no_exit
 197,lab0197_s218_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-07,False,,,,,,,0,UNH,S218,,entered_no_exit
 198,lab0198_s218_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-07,False,,,,,,,0,UNH,S218,,entered_no_exit
