@@ -2122,26 +2122,6 @@
       "entry_order_id": "a0da321a-5736-45bc-bad5-5f8cef39d75c"
     },
     {
-      "lot_id": "078a8210450c",
-      "bucket_id": 239,
-      "profile_name": "lab0239_s401_w3_1045_1120_r2",
-      "strategy_id": "S401",
-      "occ_symbol": "META260810C00650000",
-      "underlying": "META",
-      "qty": 1,
-      "entry_cost": 7.000000000000001,
-      "entry_price": 0.07,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-07T15:31:01.841513+00:00",
-      "entry_order_id": "103961e7-1418-4760-8f32-1d249a6117b4"
-    },
-    {
       "lot_id": "f91e2137c4da",
       "bucket_id": 111,
       "profile_name": "lab0111_s212_w2_1005_1045_r2",
@@ -2313,16 +2293,6 @@
       "qty": 1,
       "reason": "stop_loss (-54.5%)",
       "submitted": "2026-08-07T12:51:03"
-    },
-    {
-      "order_id": "f7d68b9d-62ca-4792-b056-36d487390649",
-      "lot_id": "078a8210450c",
-      "bucket_id": 239,
-      "strategy_id": "S401",
-      "occ_symbol": "META260810C00650000",
-      "qty": 1,
-      "reason": "stop_loss (-85.7%)",
-      "submitted": "2026-08-07T13:30:58"
     }
   ],
   "bucket_open_premium": {
@@ -2414,7 +2384,6 @@
     "b919": 45.0,
     "b918": 45.0,
     "b115": 48.0,
-    "b239": 7.000000000000001,
     "b111": 42.0,
     "b110": 42.0
   },

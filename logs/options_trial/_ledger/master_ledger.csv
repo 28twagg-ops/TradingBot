@@ -9845,3 +9845,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-07T17:25:50Z,reconcile,240,lab0240_s401_w4_1120_1135_r1,S401,55837985b0e8,META,META260810C00625000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-07T18:06:14Z,reconcile,0,orphan_reconcile,ORPHAN,f4b10d8f83ce,CVX,CVX260807C00187500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-07 18:00:57.744670+00:00,exit,0,orphan_reconcile,ORPHAN,7fefc4d59ab4,AMZN,AMZN260807C00295000,2,,0.17,80.67,-57.85,-46.67,stop_loss (-51.4%),,-0.01,0.5,-0.5,,,cbbb4bad-0209-487e-a74e-d6a5c07afcf8
+2026-08-07T18:20:49Z,reconcile,239,lab0239_s401_w3_1045_1120_r2,S401,078a8210450c,META,META260810C00650000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
