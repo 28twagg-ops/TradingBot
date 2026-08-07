@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,13,15,2026-07-27,True,11,30.8,-23.82,-61.68,91.61,-97.39,-264.64,"AMZN,COIN,CVNA,DKNG,MARA,META",ORPHAN,take_profit (+82.9%); stop_loss (-74.5%); stop_loss (-82.6%)…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,14,14,2026-07-27,True,11,28.6,-25.54,-54.84,91.61,-97.39,-316.34,"AMZN,COIN,CVNA,DKNG,MARA,META",ORPHAN,take_profit (+82.9%); stop_loss (-74.5%); stop_loss (-82.6%)…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle

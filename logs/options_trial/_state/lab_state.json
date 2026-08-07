@@ -1608,8 +1608,8 @@
       "strategy_id": "ORPHAN",
       "occ_symbol": "AMZN260807C00292500",
       "underlying": "AMZN",
-      "qty": 4,
-      "entry_cost": 215.4,
+      "qty": 2,
+      "entry_cost": 107.7,
       "entry_price": 0.5385,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
@@ -2082,26 +2082,6 @@
       "entry_order_id": "orphan:AAPL260810C00317500"
     },
     {
-      "lot_id": "278174ae97fd",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "AAPL260814C00330000",
-      "underlying": "AAPL",
-      "qty": 2,
-      "entry_cost": 119.5,
-      "entry_price": 0.5975,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-07T15:22:52.619618+00:00",
-      "entry_order_id": "orphan:AAPL260814C00330000"
-    },
-    {
       "lot_id": "fde0a1e3bcd5",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -2442,72 +2422,7 @@
       "entry_order_id": "orphan:UNH260814C00435000"
     }
   ],
-  "pending_orders": [
-    {
-      "order_id": "5d50c4f1-247e-4d7a-8173-7630420bd5b7",
-      "bucket_id": 408,
-      "strategy_id": "S364",
-      "occ_symbol": "CVX260814C00195000",
-      "underlying": "CVX",
-      "qty": 1,
-      "limit": 0.52,
-      "profile_name": "lab0408_s364_w3_1045_1120_r1",
-      "submitted": "2026-08-07",
-      "detail": "RB gap -1.6% reclaim",
-      "spread_frac": 0.1855670103092784,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "6860f48e-e9ed-4b27-a0ea-8cedafc893f7",
-      "bucket_id": 916,
-      "strategy_id": "S412",
-      "occ_symbol": "CVX260814C00195000",
-      "underlying": "CVX",
-      "qty": 1,
-      "limit": 0.52,
-      "profile_name": "lab0916_s412_w3_1045_1120_r1",
-      "submitted": "2026-08-07",
-      "detail": "RB gap -1.6% reclaim",
-      "spread_frac": 0.1855670103092784,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "403871d3-ce27-46db-96ea-bc6607d26f11",
-      "bucket_id": 917,
-      "strategy_id": "S412",
-      "occ_symbol": "CVX260814C00195000",
-      "underlying": "CVX",
-      "qty": 1,
-      "limit": 0.52,
-      "profile_name": "lab0917_s412_w3_1045_1120_r2",
-      "submitted": "2026-08-07",
-      "detail": "RB gap -1.6% reclaim",
-      "spread_frac": 0.1855670103092784,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "a57d7a00-439d-4198-b1e7-5faa40665195",
-      "bucket_id": 409,
-      "strategy_id": "S364",
-      "occ_symbol": "CVX260814C00195000",
-      "underlying": "CVX",
-      "qty": 1,
-      "limit": 0.53,
-      "profile_name": "lab0409_s364_w3_1045_1120_r2",
-      "submitted": "2026-08-07",
-      "detail": "RB gap -1.6% reclaim",
-      "spread_frac": 0.03773584905660381,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    }
-  ],
+  "pending_orders": [],
   "pending_exits": [
     {
       "order_id": "97af7309-6525-4f6e-bafb-5e62c96b1bab",
@@ -2600,14 +2515,14 @@
       "submitted": "2026-08-07T11:40:57"
     },
     {
-      "order_id": "7dd30c9e-c132-4d7a-84aa-47d07663738a",
-      "lot_id": "278174ae97fd",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "AAPL260814C00330000",
-      "qty": 2,
-      "reason": "stop_loss (-53.1%)",
-      "submitted": "2026-08-07T11:40:58"
+      "order_id": "5b143e2c-8031-4c57-bd82-03ddc4f38f29",
+      "lot_id": "4761706fe0f1",
+      "bucket_id": 845,
+      "strategy_id": "S407",
+      "occ_symbol": "CVX260814C00200000",
+      "qty": 1,
+      "reason": "stop_loss (-60.0%)",
+      "submitted": "2026-08-07T11:45:56"
     }
   ],
   "bucket_open_premium": {
@@ -2681,7 +2596,7 @@
     "b112": 41.0,
     "b407": 52.0,
     "b393": 52.0,
-    "b0": 1495.3255,
+    "b0": 1268.1254999999999,
     "b410": 38.0,
     "b396": 38.0,
     "b354": 60.0,
@@ -3264,7 +3179,8 @@
     "9530508f-314d-4c71-bc86-4c9e27533c4e",
     "5da941ba-e7e2-4858-9590-2bfa86eab0fd",
     "ed8a1b44-d87a-4c59-b1b1-190434fcc2bd",
-    "19313bd4-0ab9-4e8e-be9a-5e351732a4ae"
+    "19313bd4-0ab9-4e8e-be9a-5e351732a4ae",
+    "7dd30c9e-c132-4d7a-84aa-47d07663738a"
   ],
   "submitted_today": 64,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
