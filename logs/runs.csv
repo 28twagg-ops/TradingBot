@@ -4538,3 +4538,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-07 16:15:44,exits,bull,473.17,23.81,0,0,0,5,AAPL|AES|BBY|ESS|GOOG,both
 2026-08-07 16:20:46,exits,bull,473.23,23.81,0,0,0,5,AAPL|AES|BBY|ESS|GOOG,both
 2026-08-07 16:25:53,exits,bull,473.07,23.81,0,0,0,5,AAPL|AES|BBY|ESS|GOOG,both
+2026-08-07 16:46:24,exits,bull,473.71,23.81,0,0,0,5,AAPL|AES|BBY|ESS|GOOG,both
