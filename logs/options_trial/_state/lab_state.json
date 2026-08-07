@@ -2042,26 +2042,6 @@
       "entry_order_id": "f905d254-8a89-4eb3-949e-df303932ce07"
     },
     {
-      "lot_id": "5fd7e2810b12",
-      "bucket_id": 263,
-      "profile_name": "lab0263_s403_w1_0928_1005_r2",
-      "strategy_id": "S403",
-      "occ_symbol": "AAPL260810C00317500",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 51.0,
-      "entry_price": 0.51,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-07T14:12:27.117632+00:00",
-      "entry_order_id": "80fb250b-6796-4995-aae9-551b0208b23c"
-    },
-    {
       "lot_id": "e71d4489d25b",
       "bucket_id": 262,
       "profile_name": "lab0262_s403_w1_0928_1005_r1",
@@ -2200,6 +2180,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-07T14:30:56.900295+00:00",
       "entry_order_id": "orphan:DKNG260814P00021500"
+    },
+    {
+      "lot_id": "07e9d244299b",
+      "bucket_id": 406,
+      "profile_name": "lab0406_s364_w2_1005_1045_r1",
+      "strategy_id": "S364",
+      "occ_symbol": "CVX260814C00195000",
+      "underlying": "CVX",
+      "qty": 1,
+      "entry_cost": 54.0,
+      "entry_price": 0.54,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-07T14:44:55.851733+00:00",
+      "entry_order_id": "7ba65e17-3ee8-4fee-84db-253c39203318"
     }
   ],
   "pending_orders": [
@@ -2295,22 +2295,6 @@
       "submitted": "2026-08-07",
       "detail": "low=400.66 BB_lower=403.02 touch+green",
       "spread_frac": 0.24657534246575336,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "7ba65e17-3ee8-4fee-84db-253c39203318",
-      "bucket_id": 406,
-      "strategy_id": "S364",
-      "occ_symbol": "CVX260814C00195000",
-      "underlying": "CVX",
-      "qty": 1,
-      "limit": 0.54,
-      "profile_name": "lab0406_s364_w2_1005_1045_r1",
-      "submitted": "2026-08-07",
-      "detail": "RB gap -1.6% reclaim",
-      "spread_frac": 0.11538461538461549,
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
@@ -2420,14 +2404,34 @@
       "submitted": "2026-08-07T10:31:09"
     },
     {
-      "order_id": "32d79e50-9a6d-401f-95dc-3ad9ed53e98e",
-      "lot_id": "5fd7e2810b12",
-      "bucket_id": 263,
-      "strategy_id": "S403",
-      "occ_symbol": "AAPL260810C00317500",
+      "order_id": "218cbe3a-6923-4914-8c15-7a97f6fb0bdf",
+      "lot_id": "8f071924969a",
+      "bucket_id": 166,
+      "strategy_id": "S216",
+      "occ_symbol": "TSLA260810C00340000",
       "qty": 1,
-      "reason": "take_profit (+58.5%)",
-      "submitted": "2026-08-07T10:35:50"
+      "reason": "take_profit (+97.9%)",
+      "submitted": "2026-08-07T10:45:03"
+    },
+    {
+      "order_id": "c012470b-deec-461e-82fc-f67695be92ad",
+      "lot_id": "81fef23e5e21",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "DKNG260814P00021500",
+      "qty": 2,
+      "reason": "stop_loss (-79.2%)",
+      "submitted": "2026-08-07T10:45:09"
+    },
+    {
+      "order_id": "ac5394be-e87b-45a0-b983-9300b80925ef",
+      "lot_id": "a1a90a8a2dfe",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "META260810C00620000",
+      "qty": 1,
+      "reason": "take_profit (+82.1%)",
+      "submitted": "2026-08-07T10:45:12"
     }
   ],
   "bucket_open_premium": {
@@ -2514,11 +2518,11 @@
     "b80": 24.0,
     "b237": 41.0,
     "b166": 47.0,
-    "b263": 51.0,
     "b262": 51.0,
     "b109": 51.0,
     "b236": 19.0,
-    "b845": 20.0
+    "b845": 20.0,
+    "b406": 54.0
   },
   "session_date": "2026-08-07",
   "entries_locked": [
@@ -3034,7 +3038,9 @@
     "e941e040-5f4b-41ed-889a-eef7d745894c",
     "7c408858-e80b-4e66-9b50-8148328408c3",
     "72d5be97-5168-49d1-aa54-e91f8e8f3918",
-    "532215ae-1fae-4510-a842-29fa87ce433c"
+    "532215ae-1fae-4510-a842-29fa87ce433c",
+    "32d79e50-9a6d-401f-95dc-3ad9ed53e98e",
+    "7ba65e17-3ee8-4fee-84db-253c39203318"
   ],
   "submitted_today": 32,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
