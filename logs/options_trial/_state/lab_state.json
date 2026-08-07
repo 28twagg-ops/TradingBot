@@ -2423,6 +2423,26 @@
       "qty": 1,
       "reason": "stop_loss (-54.5%)",
       "submitted": "2026-08-07T12:51:03"
+    },
+    {
+      "order_id": "a05ec3b4-212a-4329-a599-2a8a15b13439",
+      "lot_id": "e8dbd41fbfd2",
+      "bucket_id": 241,
+      "strategy_id": "S401",
+      "occ_symbol": "META260810C00627500",
+      "qty": 1,
+      "reason": "stop_loss (-96.6%)",
+      "submitted": "2026-08-07T13:00:55"
+    },
+    {
+      "order_id": "f06b83b2-ed8f-4888-9f7b-6beec3b73fc2",
+      "lot_id": "6e8a769624f4",
+      "bucket_id": 238,
+      "strategy_id": "S401",
+      "occ_symbol": "META260810C00625000",
+      "qty": 1,
+      "reason": "stop_loss (-65.3%)",
+      "submitted": "2026-08-07T13:00:59"
     }
   ],
   "bucket_open_premium": {

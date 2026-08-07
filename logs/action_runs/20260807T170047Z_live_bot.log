@@ -1,0 +1,54 @@
+17:00:48  INFO      Mode: exits
+17:00:48  INFO        Daily log -> logs/daily/2026-08-07.md
+17:00:48  INFO        Daily log reconciled -> logs/daily/2026-08-07.md (3 ledger rows)
+17:00:48  INFO        place_all_stops: checking 5 positions...
+17:00:48  INFO        STOP skipped AAPL: fractional (0.3033 shares) — software exit will handle it
+17:00:48  INFO        STOP already live AES @ $14.65
+17:00:48  INFO        STOP already live BBY @ $79.72
+17:00:48  INFO        STOP skipped ESS: fractional (0.2445 shares) — software exit will handle it
+17:00:48  INFO        STOP skipped GOOG: fractional (0.2661 shares) — software exit will handle it
+17:00:49  INFO        [positions] 5/5 (5 valid)
+17:00:49  INFO        Daily log -> logs/daily/2026-08-07.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         17:00 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $473.83|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  GOOG  P&L -0.2%  $-0.16                                           HOLD|
+|  AES  P&L -0.0%  $-0.03                                            HOLD|
+|  AAPL  P&L +0.3%  $+0.27                                           HOLD|
+|  ESS  P&L +0.6%  $+0.41                                            HOLD|
+|  BBY  P&L +1.9%  $+1.78                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           5|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                5|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
