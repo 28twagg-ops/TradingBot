@@ -1,46 +1,46 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-08-05 14:00 UTC*
+*Updated: 2026-08-07 13:55 UTC*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $473.82 |
+| **Current Equity** | $472.49 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | -5.24% ($-26.18) |
+| **Total Return** | -5.50% ($-27.51) |
 | **Peak Equity** | $513.45 |
 | **Max Drawdown** | -9.15% |
-| **Current Cash** | $190.66 |
-| **Open Positions** | 3 (AES|ALGN|AVB) |
-| **Last Bot Run** | 2026-08-05 14:00:26 |
+| **Current Cash** | $375.98 |
+| **Open Positions** | 1 (JBL) |
+| **Last Bot Run** | 2026-08-07 13:25:56 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 720 |
-| **Wins / Losses** | 228 / 492 |
+| **Total Closed Trades** | 728 |
+| **Wins / Losses** | 231 / 497 |
 | **Win Rate** | 31.7% |
-| **Avg Win** | +1.89% |
-| **Avg Loss** | -1.23% |
-| **Profit Factor** | 0.95x |
+| **Avg Win** | +1.88% |
+| **Avg Loss** | -1.22% |
+| **Profit Factor** | 0.96x |
 | **Avg Hold Days** | 1.3d |
-| **Total Realised P&L** | $-6.49 |
+| **Total Realised P&L** | $-5.00 |
 
 ## Exit Reasons
 | Exit Type | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `stop_loss` | 413 | 0% | -1.43% |
-| `midline` | 207 | 72% | +1.37% |
-| `max_hold` | 100 | 79% | +1.32% |
+| `stop_loss` | 415 | 0% | -1.43% |
+| `midline` | 211 | 72% | +1.35% |
+| `max_hold` | 102 | 78% | +1.31% |
 
 ## Strategy Breakdown
 | Strategy | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `Pullback50` | 528 | 34% | -0.13% |
+| `Pullback50` | 535 | 34% | -0.13% |
 | `GapDown` | 97 | 26% | -0.94% |
 | `VolumeSpike` | 37 | 11% | -0.56% |
 | `unknown` | 20 | 25% | +0.31% |
 | `MomReversal` | 16 | 38% | +0.21% |
-| `RSIRecovery` | 13 | 31% | +0.79% |
+| `RSIRecovery` | 14 | 29% | +0.68% |
 | `EarningsDrift` | 6 | 67% | -0.03% |
 | `GoldenPocket` | 3 | 33% | -4.15% |
 
@@ -100,11 +100,21 @@
 | 2026-07-31 | $469.22 | -0.27 |
 | 2026-08-03 | $467.68 | -1.54 |
 | 2026-08-04 | $474.46 | +6.78 |
-| 2026-08-05 | $473.82 | -0.64 |
+| 2026-08-05 | $471.28 | -3.18 |
+| 2026-08-06 | $470.74 | -0.54 |
+| 2026-08-07 | $472.49 | +1.75 |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
 |---|---|---|---|---|---|---|
+| 2026-08-07 | **JBL** | `Pullback50` | +2.31% | $+2.18 | 1d | midline (+2.3%) |
+| 2026-08-06 | **GEV** | `RSIRecovery` | -0.71% | $-0.67 | 0d | stop_loss (-0.7%) |
+| 2026-08-06 | **GS** | `Pullback50` | +0.14% | $+0.13 | 0d | midline (+0.1%) |
+| 2026-08-06 | **DOV** | `Pullback50` | -0.11% | $-0.11 | 0d | midline (-0.1%) |
+| 2026-08-06 | **AVB** | `Pullback50` | +1.12% | $+1.05 | 3d | max_hold 3d (+1.1%) |
+| 2026-08-06 | **AES** | `Pullback50` | -0.11% | $-0.10 | 3d | max_hold 3d (-0.1%) |
+| 2026-08-05 | **NVST** | `Pullback50` | -0.23% | $-0.22 | 0d | midline (-0.2%) |
+| 2026-08-05 | **ALGN** | `Pullback50` | -0.81% | $-0.77 | 0d | stop_loss (-0.8%) |
 | 2026-08-05 | **AMAT** | `GapDown` | -0.33% | $-0.32 | 0d | midline (-0.3%) |
 | 2026-08-05 | **COHR** | `Pullback50` | -0.51% | $-0.37 | 0d | stop_loss (-0.5%) |
 | 2026-08-04 | **ECHO** | `MomReversal` | +6.47% | $+4.48 | 1d | midline (+6.5%) |
@@ -117,14 +127,6 @@
 | 2026-08-03 | **ALGN** | `Pullback50` | -0.54% | $-0.51 | 0d | stop_loss (-0.5%) |
 | 2026-08-03 | **CINF** | `Pullback50` | +1.91% | $+1.79 | 3d | max_hold 3d (+1.9%) |
 | 2026-08-03 | **APG** | `MomReversal` | +0.86% | $+0.27 | 4d | max_hold 4d (+0.9%) |
-| 2026-08-03 | **MP** | `MomReversal` | +0.49% | $+0.46 | 3d | max_hold 3d (+0.5%) |
-| 2026-08-03 | **PWR** | `Pullback50` | -0.71% | $-0.67 | 3d | stop_loss (-0.7%) |
-| 2026-07-31 | **MPWR** | `EarningsDrift` | +0.32% | $+0.30 | 0d | midline (+0.3%) |
-| 2026-07-31 | **LECO** | `Pullback50` | -0.10% | $-0.10 | 0d | midline (-0.1%) |
-| 2026-07-31 | **NVT** | `EarningsDrift` | -0.47% | $-0.43 | 0d | midline (-0.5%) |
-| 2026-07-31 | **AVB** | `Pullback50` | -0.61% | $-0.58 | 0d | stop_loss (-0.6%) |
-| 2026-07-31 | **CI** | `Pullback50` | -0.52% | $-0.49 | 0d | stop_loss (-0.5%) |
-| 2026-07-31 | **FFIV** | `Pullback50` | -0.58% | $-0.54 | 0d | stop_loss (-0.6%) |
 
 ---
 *Auto-generated after every EOD scan. View on GitHub: `logs/dashboard.md`*

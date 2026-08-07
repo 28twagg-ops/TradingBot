@@ -720,3 +720,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-08-06 14:00:49,2026-08-06,SELL,GS,Pullback50,1063.4,1061.27,1062.282,94.2,-0.1051,-0.099,limit_fill_position_check_full,midline (+0.1%),bull
 2026-08-06 17:35:56,2026-08-06,SELL,GEV,Pullback50,1012.2767,,1012.2767,93.51,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
 2026-08-07 13:46:45,2026-08-07,SELL,JBL,Pullback50,350.49,349.79,350.49,96.36,0.0,0.0,market_fallback_full,midline (+2.3%),bull
+2026-08-07 13:51:43,2026-08-07,SELL,DOV,Pullback50,212.22,211.8,211.824,94.3,-0.1866,-0.176,limit_fill_position_check_full,midline (+0.0%),bull

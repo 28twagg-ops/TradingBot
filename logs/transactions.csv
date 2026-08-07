@@ -1085,3 +1085,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-06 14:00:49,2026-08-06,SELL,GS,Pullback50,1062.28,94.2,0.14,0.13,0,midline (+0.1%),bull,471.77
 2026-08-06 17:35:56,2026-08-06,SELL,GEV,Pullback50,1012.28,93.51,-0.71,-0.67,0,stop_loss (-0.7%),bull,471.84
 2026-08-07 13:46:45,2026-08-07,SELL,JBL,Pullback50,350.49,96.36,2.31,2.18,1,midline (+2.3%),bull,471.46
+2026-08-07 13:51:43,2026-08-07,SELL,DOV,Pullback50,211.82,94.3,0.02,0.02,0,midline (+0.0%),bull,471.29
