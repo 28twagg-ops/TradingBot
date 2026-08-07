@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-08-06 15:32:50.961991+00:00,entry,76,lab0076_s209_w3_1045_1120_r1,S209,4bf621ac551b,AMD,AMD260807C00535000,1,0.57,0.55,55.0,,,,-0.01,,0.75,-0.75,0.14814814814814806,gap -2.1% recovery above prev close,d1842b40-425d-43f0-b048-00e83dc94fc2
+2026-08-07T13:39:51Z,reconcile,76,lab0076_s209_w3_1045_1120_r1,S209,4bf621ac551b,AMD,AMD260807C00535000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
