@@ -1,0 +1,28 @@
+19:51:19  INFO      Mode: scan
+19:51:20  INFO        [positions] 5/5 (5 valid)
+19:51:20  INFO        SELL LIMIT GOOGL  qty=0.264607515  limit=$355.62  id=90736844-6487-4b71-a1ab-d47d70ab8979
+19:51:51  INFO        SELL LIMIT filled GOOGL (confirmed by position check)
+19:51:51  INFO        TX logged: SELL GOOGL  P&L -0.05%
+19:51:51  INFO        SELL LIMIT ALGN  qty=0.535222957  limit=$175.70  id=85250ce3-3a5e-4c16-95ff-cc6d5cda1218
+19:52:21  INFO        SELL LIMIT filled ALGN (confirmed by position check)
+19:52:21  INFO        TX logged: SELL ALGN  P&L 0.12%
+19:52:21  INFO        Universe cache hit: 903 tickers (tickers_2026-08-10.json)
+19:52:22  INFO        [universe] 40/900 (40 valid)
+19:52:24  INFO        [universe] 80/900 (80 valid)
+19:52:25  INFO        [universe] 120/900 (120 valid)
+19:52:26  INFO        [universe] 160/900 (160 valid)
+19:52:27  INFO        [universe] 200/900 (199 valid)
+19:52:35  INFO        [universe] 240/900 (238 valid)
+19:52:48  INFO        [universe] 280/900 (278 valid)
+19:52:59  INFO        [universe] 320/900 (318 valid)
+19:53:12  INFO        [universe] 360/900 (358 valid)
+19:53:23  INFO        [universe] 400/900 (397 valid)
+19:53:36  INFO        [universe] 440/900 (437 valid)
+19:53:46  INFO        [universe] 480/900 (477 valid)
+19:54:00  INFO        [universe] 520/900 (517 valid)
+19:54:10  INFO        [universe] 560/900 (557 valid)
+19:54:23  INFO        [universe] 600/900 (597 valid)
+19:54:37  INFO        [universe] 640/900 (637 valid)
+19:54:47  INFO        [universe] 680/900 (677 valid)
+19:55:00  INFO        [universe] 720/900 (717 valid)
+19:55:11  INFO        [universe] 760/900 (757 valid)
