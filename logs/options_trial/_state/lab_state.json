@@ -122,26 +122,6 @@
       "entry_order_id": "819d12cb-ab59-444c-a33d-5921d94769bd"
     },
     {
-      "lot_id": "23943adc986c",
-      "bucket_id": 330,
-      "profile_name": "lab0330_s357_w2_1005_1045_r1",
-      "strategy_id": "S357",
-      "occ_symbol": "NKE260828C00045000",
-      "underlying": "NKE",
-      "qty": 1,
-      "entry_cost": 65.0,
-      "entry_price": 0.65,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-04T14:22:47.791194+00:00",
-      "entry_order_id": "d62191ba-fb98-4ade-b054-b94391af72b2"
-    },
-    {
       "lot_id": "ab30ad0b2ee8",
       "bucket_id": 433,
       "profile_name": "lab0433_s366_w1_0928_1005_r2",
@@ -1462,26 +1442,6 @@
       "entry_order_id": "10db047d-de6d-4970-aab3-a1785cc81775"
     },
     {
-      "lot_id": "99c99338711b",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "UNH260814C00435000",
-      "underlying": "UNH",
-      "qty": 3,
-      "entry_cost": 126.9999,
-      "entry_price": 0.423333,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T14:08:10.059331+00:00",
-      "entry_order_id": "orphan:UNH260814C00435000"
-    },
-    {
       "lot_id": "4b4a7644c95d",
       "bucket_id": 915,
       "profile_name": "lab0915_s412_w2_1005_1045_r2",
@@ -2240,6 +2200,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-10T14:17:56.272042+00:00",
       "entry_order_id": "orphan:AAPL260810C00317500"
+    },
+    {
+      "lot_id": "1bc6cc62da42",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "CELH260814C00028000",
+      "underlying": "CELH",
+      "qty": 2,
+      "entry_cost": 52.0,
+      "entry_price": 0.26,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-10T14:35:12.029461+00:00",
+      "entry_order_id": "orphan:CELH260814C00028000"
     }
   ],
   "pending_orders": [
@@ -2373,7 +2353,6 @@
     "b420": 60.0,
     "b323": 60.0,
     "b322": 60.0,
-    "b330": 65.0,
     "b433": 65.0,
     "b432": 65.0,
     "b423": 63.0,
@@ -2440,7 +2419,6 @@
     "b344": 25.0,
     "b17": 21.0,
     "b16": 21.0,
-    "b0": 1141.2813999999998,
     "b915": 42.0,
     "b914": 42.0,
     "b858": 38.0,
@@ -2462,6 +2440,7 @@
     "b288": 42.0,
     "b168": 43.0,
     "b108": 51.0,
+    "b0": 1066.2815,
     "b803": 73.0,
     "b802": 73.0,
     "b779": 73.0,
@@ -2557,7 +2536,9 @@
     "778|S397|2026-08-10",
     "779|S397|2026-08-10",
     "802|S404|2026-08-10",
-    "803|S404|2026-08-10"
+    "803|S404|2026-08-10",
+    "900|S411|2026-08-10",
+    "901|S411|2026-08-10"
   ],
   "processed_orders": [
     "bf6c99a1-4ae3-4f6e-af0e-c79d13ea828f",
@@ -3031,9 +3012,15 @@
     "c1eb5188-1542-47c8-b482-04c3dfa27672",
     "b5f7c39f-3483-4a55-b3d9-957457bb6b27",
     "d1897be4-ba85-43fd-9800-4e647234d083",
-    "e9653ad5-2c07-4f9b-8ff0-4a45175342eb"
+    "e9653ad5-2c07-4f9b-8ff0-4a45175342eb",
+    "d592f1c1-299b-4de6-9725-0feac1a4a951",
+    "9b4c108d-ccbb-432a-810a-74b0ce35bb34",
+    "d286d061-c4c7-44e1-a2bc-9e3b28fa2581",
+    "c263acd5-1e2e-41dd-a5f6-a65e1f813a39",
+    "4758b089-2f0d-4c7c-ac24-0faf9bbd3ab1",
+    "36c9f295-a44c-4059-be93-1de40195a127"
   ],
-  "submitted_today": 87,
+  "submitted_today": 89,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-08-10"
 }

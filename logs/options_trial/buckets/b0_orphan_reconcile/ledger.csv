@@ -270,3 +270,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-06 14:45:55.739302+00:00,exit,0,orphan_reconcile,ORPHAN,35be55837322,CVX,CVX260814C00197500,1,,0.27,32.5,-16.92,-5.5,reconcile_fill,,-0.01,0.5,-0.5,,,56af8ccb-b213-497a-8d1a-c232f1fc9953
 2026-08-06 14:47:07.954329+00:00,exit,0,orphan_reconcile,ORPHAN,4ec5ce146356,TSLA,TSLA260812C00350000,1,,0.19,51.25,-62.93,-32.25,reconcile_fill,,-0.01,0.5,-0.5,,,7119d629-85f6-450b-8022-38e8e0943d13
 2026-08-06 14:41:25.102716+00:00,exit,0,orphan_reconcile,ORPHAN,26bc76a69052,UBER,UBER260814C00081000,1,,0.16,30.0,-46.67,-14.0,reconcile_fill,,-0.01,0.5,-0.5,,,d289c2a4-305c-4800-a719-a4f775164dd4
+2026-08-10 14:33:24.144811+00:00,exit,0,orphan_reconcile,ORPHAN,99c99338711b,UNH,UNH260814C00435000,3,,0.21,127.0,-50.39,-64.0,stop_loss (-50.4%),,-0.01,0.5,-0.5,,,c263acd5-1e2e-41dd-a5f6-a65e1f813a39
