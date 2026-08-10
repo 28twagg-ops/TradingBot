@@ -2845,44 +2845,34 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "8f38c8b8-37ed-4b06-ad47-b265c793ccab",
-      "lot_id": "4d1a3e51f3d4",
-      "bucket_id": 396,
-      "strategy_id": "S363",
+      "order_id": "3203a47d-f3a3-4cbf-a32b-831497f79aaa",
+      "lot_id": "3e0808dbfba9",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
       "occ_symbol": "MARA260814C00012000",
-      "qty": 1,
-      "reason": "stop_loss (-94.8%)",
-      "submitted": "2026-08-10T10:02:23"
+      "qty": 3,
+      "reason": "stop_loss (-97.4%)",
+      "submitted": "2026-08-10T16:01:22"
     },
     {
-      "order_id": "dfe1fc56-f4f2-4f1c-a860-a1888cbf20a5",
-      "lot_id": "5438d0be7608",
-      "bucket_id": 168,
-      "strategy_id": "S216",
-      "occ_symbol": "TSLA260810C00347500",
+      "order_id": "ab37b974-17e6-448f-8544-780a03f47a49",
+      "lot_id": "f396e4b74c1a",
+      "bucket_id": 111,
+      "strategy_id": "S212",
+      "occ_symbol": "QQQ260813C00740000",
       "qty": 1,
-      "reason": "stop_loss (-93.2%)",
-      "submitted": "2026-08-10T10:16:43"
+      "reason": "stop_loss (-56.9%)",
+      "submitted": "2026-08-10T16:01:25"
     },
     {
-      "order_id": "ea26c634-1355-429f-8c26-701ddea26336",
-      "lot_id": "f2c03e8f0460",
-      "bucket_id": 347,
-      "strategy_id": "S359",
-      "occ_symbol": "AAPL260810C00310000",
-      "qty": 1,
-      "reason": "stop_loss (-59.2%)",
-      "submitted": "2026-08-10T12:01:19"
-    },
-    {
-      "order_id": "d9ec8c24-3921-44fd-9842-3e4b7dfb8d84",
-      "lot_id": "842d089d9ee0",
-      "bucket_id": 185,
+      "order_id": "ef2bd7a8-c08a-4c68-913c-9938dd9406cb",
+      "lot_id": "6f9e695fd264",
+      "bucket_id": 184,
       "strategy_id": "S217",
       "occ_symbol": "RBLX260814C00041000",
       "qty": 1,
-      "reason": "stop_loss (-59.6%)",
-      "submitted": "2026-08-10T13:51:35"
+      "reason": "stop_loss (-79.8%)",
+      "submitted": "2026-08-10T16:01:26"
     }
   ],
   "bucket_open_premium": {
