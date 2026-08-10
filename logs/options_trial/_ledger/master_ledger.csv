@@ -10619,3 +10619,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10 18:25:50.886580+00:00,exit,422,lab0422_s365_w3_1045_1120_r1,S365,ddd8a7b0c2ac,NKE,NKE260821C00044000,1,,0.3,63.0,-52.38,-33.0,stop_loss (-52.4%),,-0.01,0.5,-0.5,,,da55af4e-dad0-40c9-86c9-8ca3aa2256e9
 2026-08-10 18:37:33.678674+00:00,exit,21,lab0021_s202_w3_1045_1120_r2,S202,de5588c83a9d,CELH,CELH260814C00029000,1,,0.06,14.0,-57.14,-8.0,stop_loss (-64.3%),,-0.01,0.5,-0.5,,,ed248dbc-2890-4f8a-858d-f6f30b87186c
 2026-08-10 18:46:18.302490+00:00,exit,20,lab0020_s202_w3_1045_1120_r1,S202,1087c7fdf836,CELH,CELH260814C00029000,1,,0.08,14.0,-42.86,-6.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,dcccc5ba-27c5-4d13-9725-2e2742dbdce9
+2026-08-10T18:55:46Z,reconcile,0,orphan_reconcile,ORPHAN,793e32a81719,CELH,CELH260814C00029000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-10 18:53:34.278593+00:00,exit,0,orphan_reconcile,ORPHAN,f54dcd5bc3db,AAPL,AAPL260810C00317500,1,,0.08,53.75,-85.12,-45.75,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,726a9ebc-b77b-4e21-a303-66635d35fdeb
