@@ -5,7 +5,7 @@ S357,GapDown_21DTE,21d,watch,building sample (8-19 exits),40,18,14,4,32.91,55.07
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),44,21,13,8,58.86,50.0,-80.36,-56.0,316.0,291.0,3,10,16,7,4,42.9
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),114,52,33,19,67.76,48.91,-73.54,-52.61,166.67,977.0,7,14,28,7,6,46.2
 S397,GapDown_ITM1,3d,watch,building sample (8-19 exits),63,12,9,3,37.55,47.52,-88.28,14.51,116.23,304.0,2,10,9,3,3,58.3
-S408,RubberBand_ITM1,3d,watch,fat left tail (p10 < -45%),86,37,20,17,190.04,41.94,-69.06,-50.0,865.82,1255.0,5,7,28,3,7,27.0
+S408,RubberBand_ITM1,3d,watch,fat left tail (p10 < -45%),88,37,20,17,190.04,41.94,-69.06,-50.0,865.82,1255.0,5,7,30,3,7,27.0
 S404,GapDown_OTM2,3d,watch,building sample (8-19 exits),62,17,10,7,4.39,38.6,-98.18,-91.67,113.61,113.0,2,10,6,7,2,52.9
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),77,31,24,7,105.63,38.24,-57.89,8.7,114.29,1178.0,4,10,6,3,5,41.9
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),64,30,18,12,54.03,35.49,-60.98,-44.56,198.29,584.0,4,10,11,4,5,43.3
@@ -101,6 +101,6 @@ S207,GapDown_AtSupport,3d ATM gap-support,drop,non-positive median return,62,37,
 S407,RubberBand_ITM2,3d,drop,non-positive median return,76,31,11,20,46.98,-51.43,-86.49,-61.54,353.33,154.0,6,10,16,8,7,29.0
 S351,GapDown_1DTE,1d,drop,non-positive median return,118,43,10,33,-6.9,-52.94,-75.68,-62.5,171.88,-76.0,7,10,26,10,6,30.2
 S203,GapUp_Fade,3d ATM gap-up fade (put),drop,non-positive median return,82,33,4,29,-43.54,-54.0,-79.08,-74.42,38.86,-717.0,6,14,14,5,5,42.4
-S360,RubberBand_1DTE,1d,drop,non-positive median return,78,37,3,34,-50.91,-55.56,-81.62,-70.37,-33.33,-668.0,7,10,22,10,7,29.7
+S360,RubberBand_1DTE,1d,drop,non-positive median return,78,38,3,35,-51.35,-55.98,-81.61,-70.37,-33.33,-687.0,7,10,22,11,7,28.9
 S216,RSI_Oversold_Cross,3d ATM RSI x30,drop,non-positive median return,92,31,3,28,-48.66,-56.25,-87.1,-75.81,-36.96,-759.0,4,14,34,10,4,51.6
 S212,MA_Bounce_50,3d ATM MA bounce 50,drop,non-positive median return,126,66,5,61,-56.26,-70.59,-98.3,-84.48,-43.77,-2205.0,6,14,43,16,8,40.9
