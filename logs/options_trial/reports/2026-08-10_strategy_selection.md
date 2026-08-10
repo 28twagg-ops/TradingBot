@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-10
 
-_Generated 2026-08-10T14:55:59.364078_
+_Generated 2026-08-10T15:04:32.352221_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-10T14:55:59.364078_
 
 ## Attribution health
 
-- Total exits: **2249**
+- Total exits: **2250**
 - Orphan exits (b0/orphan_reconcile): **259**
 - Orphan rate: **11.5%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -94,8 +94,8 @@ _Generated 2026-08-10T14:55:59.364078_
 | S417 (BBSqueeze_OTM1) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S418 (BBSqueeze_OTM2) | 7d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S356 (GapDown_14DTE) | 14d | watch | 12 | 33.3 | -35.65 | -53.52 | -50.42 | +56.55 | 10 | 2 | 8 | $-89.00 | 50.0% | early sample with non-positive median |
 | S367 (RubberBand_30DTE) | 30d | watch | 2 | 0.0 | -38.20 | -48.75 | -44.79 | -27.64 | 6 | 0 | 2 | $-55.00 | 100.0% | insufficient sample (<8 exits) |
+| S356 (GapDown_14DTE) | 14d | watch | 13 | 30.8 | -46.30 | -53.32 | -50.82 | +54.48 | 10 | 2 | 9 | $-120.00 | 46.2% | early sample with non-positive median |
 | S400 (Any_Green_Close) | 3d | watch | 5 | 0.0 | -50.00 | -66.67 | -66.67 | -33.33 | 10 | 0 | 0 | $-30.00 | 100.0% | insufficient sample (<8 exits) |
 | S365 (RubberBand_14DTE) | 14d | watch | 11 | 18.2 | -50.79 | -83.58 | -57.86 | +54.84 | 10 | 4 | 11 | $-186.00 | 54.5% | early sample with non-positive median |
 | S358 (GapDown_30DTE) | 30d | watch | 2 | 0.0 | -51.39 | -51.39 | -51.39 | -51.39 | 6 | 2 | 2 | $-74.00 | 100.0% | insufficient sample (<8 exits) |
@@ -265,7 +265,7 @@ _Pipeline evaluation as of 2026-08-10. Auto-kill thresholds: median<-25% at n>=1
 | S353 | GapDown_3DTE | 20 | -34.69% | 40% | INSUFFICIENT | 10 |
 | S354 | GapDown_5DTE | 37 | -52.31% | 38% | INSUFFICIENT | 10 |
 | S355 | GapDown_7DTE | 37 | +24.14% | 51% | INSUFFICIENT | 10 |
-| S356 | GapDown_14DTE | 12 | -35.65% | 33% | WATCH | 10 |
+| S356 | GapDown_14DTE | 13 | -46.30% | 31% | WATCH | 10 |
 | S357 | GapDown_21DTE | 18 | +55.07% | 78% | INSUFFICIENT | 10 |
 | S358 | GapDown_30DTE | 2 | -51.39% | 0% | WATCH | 6 |
 | S359 | RubberBand_0DTE | 23 | -46.67% | 17% | INSUFFICIENT | 7 |
