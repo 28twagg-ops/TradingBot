@@ -265,3 +265,8 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-07 13:40:00.158555+00:00,exit,0,orphan_reconcile,ORPHAN,dbb45ab6f34a,UNH,UNH260814C00435000,3,,0.37,127.0,-12.6,-16.0,reconcile_fill,,-0.01,0.5,-0.5,,,1172c8bc-7f71-458c-9718-a9d9daa7cfdf
 2026-08-07 13:39:59.177202+00:00,exit,0,orphan_reconcile,ORPHAN,7c61cab875d4,AAPL,AAPL260810C00317500,1,,0.2,53.75,-62.79,-33.75,reconcile_fill,,-0.01,0.5,-0.5,,,e9e16535-f013-46e7-981c-2feb8a05399c
 2026-08-07 13:39:57.802860+00:00,exit,0,orphan_reconcile,ORPHAN,7c61cab875d4,AAPL,AAPL260810C00317500,2,,0.01,107.5,-98.14,-105.5,reconcile_fill,,-0.01,0.5,-0.5,,,32a52d6e-89eb-419e-a06e-2637b5f401d2
+2026-08-07 14:45:12.636306+00:00,exit,0,orphan_reconcile,ORPHAN,8950aa7a0ca0,AAPL,AAPL260810C00310000,1,,0.71,24.5,189.79,46.5,reconcile_fill,,-0.01,0.5,-0.5,,,ac5394be-e87b-45a0-b983-9300b80925ef
+2026-08-07 13:37:43.869181+00:00,exit,0,orphan_reconcile,ORPHAN,8950aa7a0ca0,AAPL,AAPL260810C00310000,1,,0.01,24.5,-95.92,-23.5,reconcile_fill,,-0.01,0.5,-0.5,,,a97c967e-713b-46a9-8cd4-577604745bfa
+2026-08-06 14:45:55.739302+00:00,exit,0,orphan_reconcile,ORPHAN,35be55837322,CVX,CVX260814C00197500,1,,0.27,32.5,-16.92,-5.5,reconcile_fill,,-0.01,0.5,-0.5,,,56af8ccb-b213-497a-8d1a-c232f1fc9953
+2026-08-06 14:47:07.954329+00:00,exit,0,orphan_reconcile,ORPHAN,4ec5ce146356,TSLA,TSLA260812C00350000,1,,0.19,51.25,-62.93,-32.25,reconcile_fill,,-0.01,0.5,-0.5,,,7119d629-85f6-450b-8022-38e8e0943d13
+2026-08-06 14:41:25.102716+00:00,exit,0,orphan_reconcile,ORPHAN,26bc76a69052,UBER,UBER260814C00081000,1,,0.16,30.0,-46.67,-14.0,reconcile_fill,,-0.01,0.5,-0.5,,,d289c2a4-305c-4800-a719-a4f775164dd4

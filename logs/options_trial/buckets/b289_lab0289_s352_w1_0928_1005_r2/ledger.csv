@@ -9,3 +9,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-04 14:03:27.891553+00:00,entry,289,lab0289_s352_w1_0928_1005_r2,S352,82e1a7eda3fe,AMZN,AMZN260805C00287500,1,0.32,0.32,32.0,,,,-0.01,,0.5,-0.5,,,ad156e95-16a4-446e-9f98-7028ff61a80d
 2026-08-04 14:03:27.891553+00:00,entry,289,lab0289_s352_w1_0928_1005_r2,S352,82e1a7eda3fe,AMZN,AMZN260805C00287500,1,0.32,0.32,32.0,,,,-0.01,,0.5,-0.5,,,ad156e95-16a4-446e-9f98-7028ff61a80d
 2026-08-06T01:46:04Z,reconcile,289,lab0289_s352_w1_0928_1005_r2,S352,82e1a7eda3fe,AMZN,AMZN260805C00287500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-10 14:08:19.488975+00:00,entry,289,lab0289_s352_w1_0928_1005_r2,S352,1014c8469eb8,AAPL,AAPL260812C00315000,1,0.42,0.42,42.0,,,,-0.01,,0.5,-0.5,,,8ede7b50-3b0b-4eaa-bce5-fad9ff74c4ee
