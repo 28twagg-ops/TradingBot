@@ -234,7 +234,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 232,lab0232_s400_w7_1500_1530_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 233,lab0233_s400_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 234,lab0234_s401_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-10,False,,,,,,,0,TSLA,S401,,entered_no_exit
-235,lab0235_s401_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-10,False,,,,,,,0,TSLA,S401,,entered_no_exit
+235,lab0235_s401_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-08-10,False,,0.0,-50.98,-50.98,-50.98,-50.98,-26.0,TSLA,S401,stop_loss (-54.5%),closed
 236,lab0236_s401_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-10,False,,,,,,,0,TSLA,S401,,entered_no_exit
 237,lab0237_s401_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,0,2026-08-10,False,,,,,,,0,TSLA,S401,,entered_no_exit
 238,lab0238_s401_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-10,False,,,,,,,0,TSLA,S401,,entered_no_exit

@@ -3233,16 +3233,6 @@
       "qty": 1,
       "reason": "stop_loss (-59.2%)",
       "submitted": "2026-08-10T12:01:19"
-    },
-    {
-      "order_id": "57e5d214-f584-4331-afbb-d1f4074f5a2f",
-      "lot_id": "d16f34aeb4ba",
-      "bucket_id": 97,
-      "strategy_id": "S211",
-      "occ_symbol": "PFE260814C00027000",
-      "qty": 1,
-      "reason": "take_profit (+51.6%)",
-      "submitted": "2026-08-10T13:00:09"
     }
   ],
   "bucket_open_premium": {
