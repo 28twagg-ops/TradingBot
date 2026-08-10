@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-10
 
-_Generated 2026-08-10T10:38:03.989577_
+_Generated 2026-08-10T10:42:01.745388_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-10T10:38:03.989577_
 
 ## Attribution health
 
-- Total exits: **2106**
+- Total exits: **2108**
 - Orphan exits (b0/orphan_reconcile): **220**
 - Orphan rate: **10.4%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -99,8 +99,8 @@ _Generated 2026-08-10T10:38:03.989577_
 | S367 (RubberBand_30DTE) | 30d | watch | 2 | 0.0 | -38.20 | -48.75 | -44.79 | -27.64 | 6 | 0 | 2 | $-55.00 | 100.0% | insufficient sample (<8 exits) |
 | S400 (Any_Green_Close) | 3d | watch | 5 | 0.0 | -50.00 | -66.67 | -66.67 | -33.33 | 10 | 0 | 0 | $-30.00 | 100.0% | insufficient sample (<8 exits) |
 | S358 (GapDown_30DTE) | 30d | watch | 2 | 0.0 | -51.39 | -51.39 | -51.39 | -51.39 | 6 | 0 | 2 | $-74.00 | 100.0% | insufficient sample (<8 exits) |
+| S366 (RubberBand_21DTE) | 21d | watch | 4 | 0.0 | -56.92 | -60.15 | -58.07 | -56.92 | 6 | 0 | 4 | $-151.00 | 100.0% | insufficient sample (<8 exits) |
 | S365 (RubberBand_14DTE) | 14d | watch | 6 | 33.3 | -57.47 | -83.58 | -78.52 | +137.42 | 10 | 2 | 6 | $-63.00 | 33.3% | insufficient sample (<8 exits) |
-| S366 (RubberBand_21DTE) | 21d | watch | 2 | 0.0 | -59.23 | -61.08 | -60.39 | -57.38 | 6 | 0 | 2 | $-77.00 | 100.0% | insufficient sample (<8 exits) |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 6 | 0.0 | -61.46 | -82.78 | -69.36 | -50.75 | 12 | 20 | 6 | $-210.00 | 83.3% | insufficient sample (<8 exits) |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 6 | 0.0 | -64.75 | -70.52 | -66.39 | -44.87 | 13 | 2 | 0 | $-133.00 | 66.7% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 6 | 0.0 | -65.67 | -88.89 | -86.11 | -50.00 | 20 | 0 | 0 | $-59.00 | 83.3% | insufficient sample (<8 exits) |
@@ -108,7 +108,7 @@ _Generated 2026-08-10T10:38:03.989577_
 | S396 (GapDown_ITM2) | 3d | watch | 1 | 0.0 | -82.19 | -82.19 | -82.19 | -82.19 | 4 | 6 | 1 | $-60.00 | 100.0% | insufficient sample (<8 exits) |
 | S412 (RubberBand_OTM3) | 3d | drop | 26 | 42.3 | -3.57 | -47.62 | -14.40 | +88.94 | 10 | 12 | 4 | $+101.00 | 23.1% | non-positive median return |
 | S361 (RubberBand_2DTE) | 2d | drop | 30 | 46.7 | -7.50 | -72.72 | -54.85 | +118.39 | 10 | 10 | 7 | $-72.00 | 36.7% | non-positive median return |
-| S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 29 | 48.3 | -10.00 | -61.75 | -55.00 | +212.73 | 14 | 12 | 1 | $+593.00 | 65.5% | non-positive median return |
+| S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 29 | 48.3 | -10.00 | -61.75 | -55.00 | +212.73 | 14 | 14 | 1 | $+593.00 | 65.5% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 39 | 46.2 | -21.05 | -58.92 | -47.41 | +110.00 | 10 | 13 | 4 | $+324.00 | 38.5% | non-positive median return |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 22 | 22.7 | -24.36 | -93.23 | -48.08 | +102.51 | 14 | 4 | 4 | $-143.00 | 68.2% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 35 | 0 | 0 | $-1,658.19 | 50.4% | manually paused — excluded from new entries & reflected P&L |
@@ -206,7 +206,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S216 | 3d ATM RSI x30 | 31 | -56.25 | -87.10 | -75.81 | 30 | 10 |
-| S217 | 3d ATM RSI<25 bounce | 29 | -10.00 | -61.75 | -55.00 | 12 | 1 |
+| S217 | 3d ATM RSI<25 bounce | 29 | -10.00 | -61.75 | -55.00 | 14 | 1 |
 | S218 | 3d ATM BB lower touch | 51 | +50.00 | -73.77 | -52.72 | 20 | 6 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
@@ -275,7 +275,7 @@ _Pipeline evaluation as of 2026-08-10. Auto-kill thresholds: median<-25% at n>=1
 | S363 | RubberBand_5DTE | 20 | +7.14% | 55% | INSUFFICIENT | 7 |
 | S364 | RubberBand_7DTE | 27 | +57.58% | 67% | INSUFFICIENT | 10 |
 | S365 | RubberBand_14DTE | 6 | -57.47% | 33% | WATCH | 10 |
-| S366 | RubberBand_21DTE | 2 | -59.23% | 0% | WATCH | 6 |
+| S366 | RubberBand_21DTE | 4 | -56.92% | 0% | WATCH | 6 |
 | S367 | RubberBand_30DTE | 2 | -38.20% | 0% | WATCH | 6 |
 | S368 | BBSqueeze_0DTE | 0 | — | — | NEW | 0 |
 | S369 | BBSqueeze_1DTE | 0 | — | — | NEW | 0 |
