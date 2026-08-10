@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-10
 
-_Generated 2026-08-10T13:31:34.287142_
+_Generated 2026-08-10T13:36:13.190462_
 
 ## Summary
 
@@ -11,8 +11,8 @@ _Generated 2026-08-10T13:31:34.287142_
 
 ## Attribution health
 
-- Total exits: **2238**
-- Orphan exits (b0/orphan_reconcile): **257**
+- Total exits: **2240**
+- Orphan exits (b0/orphan_reconcile): **258**
 - Orphan rate: **11.5%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
 
@@ -96,9 +96,9 @@ _Generated 2026-08-10T13:31:34.287142_
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S356 (GapDown_14DTE) | 14d | watch | 10 | 40.0 | -22.22 | -53.73 | -49.08 | +58.62 | 10 | 2 | 6 | $-28.00 | 60.0% | early sample with non-positive median |
 | S367 (RubberBand_30DTE) | 30d | watch | 2 | 0.0 | -38.20 | -48.75 | -44.79 | -27.64 | 6 | 0 | 2 | $-55.00 | 100.0% | insufficient sample (<8 exits) |
+| S365 (RubberBand_14DTE) | 14d | watch | 8 | 25.0 | -49.97 | -83.58 | -68.39 | +104.39 | 10 | 4 | 8 | $-92.00 | 37.5% | early sample with non-positive median |
 | S400 (Any_Green_Close) | 3d | watch | 5 | 0.0 | -50.00 | -66.67 | -66.67 | -33.33 | 10 | 0 | 0 | $-30.00 | 100.0% | insufficient sample (<8 exits) |
 | S358 (GapDown_30DTE) | 30d | watch | 2 | 0.0 | -51.39 | -51.39 | -51.39 | -51.39 | 6 | 2 | 2 | $-74.00 | 100.0% | insufficient sample (<8 exits) |
-| S365 (RubberBand_14DTE) | 14d | watch | 7 | 28.6 | -51.61 | -83.58 | -73.45 | +120.90 | 10 | 4 | 7 | $-63.00 | 42.9% | insufficient sample (<8 exits) |
 | S366 (RubberBand_21DTE) | 21d | watch | 8 | 0.0 | -55.19 | -58.31 | -56.92 | -49.12 | 6 | 0 | 8 | $-268.00 | 100.0% | early sample with non-positive median |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 6 | 0.0 | -61.46 | -82.78 | -69.36 | -50.75 | 12 | 24 | 6 | $-210.00 | 83.3% | insufficient sample (<8 exits) |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 6 | 0.0 | -64.75 | -70.52 | -66.39 | -44.87 | 13 | 6 | 0 | $-133.00 | 66.7% | insufficient sample (<8 exits) |
@@ -274,7 +274,7 @@ _Pipeline evaluation as of 2026-08-10. Auto-kill thresholds: median<-25% at n>=1
 | S362 | RubberBand_3DTE | 33 | +34.88% | 73% | INSUFFICIENT | 10 |
 | S363 | RubberBand_5DTE | 25 | -63.08% | 44% | INSUFFICIENT | 7 |
 | S364 | RubberBand_7DTE | 31 | +50.00% | 58% | INSUFFICIENT | 10 |
-| S365 | RubberBand_14DTE | 7 | -51.61% | 29% | WATCH | 10 |
+| S365 | RubberBand_14DTE | 8 | -49.97% | 25% | WATCH | 10 |
 | S366 | RubberBand_21DTE | 8 | -55.19% | 0% | WATCH | 6 |
 | S367 | RubberBand_30DTE | 2 | -38.20% | 0% | WATCH | 6 |
 | S368 | BBSqueeze_0DTE | 0 | — | — | NEW | 0 |

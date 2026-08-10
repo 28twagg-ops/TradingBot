@@ -10607,3 +10607,6 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10 17:15:51.455358+00:00,exit,234,lab0234_s401_w1_0928_1005_r1,S401,d3615415a097,TSLA,TSLA260812C00350000,1,,0.26,52.0,-50.0,-26.0,stop_loss (-50.5%),,-0.01,0.5,-0.5,,,12da408c-4287-46c3-8eb9-1a6a6ff2eb21
 2026-08-10 17:16:38.969818+00:00,exit,236,lab0236_s401_w2_1005_1045_r1,S401,97d826ad1d64,TSLA,TSLA260812C00350000,1,,0.26,51.0,-49.02,-25.0,stop_loss (-50.5%),,-0.01,0.5,-0.5,,,acc0e1ea-e903-43d0-b1c0-2f52668cff33
 2026-08-10 17:16:35.744141+00:00,exit,320,lab0320_s356_w1_0928_1005_r1,S356,471621ef50e0,NKE,NKE260821C00044000,1,,0.31,67.0,-53.73,-36.0,stop_loss (-50.8%),,-0.01,0.5,-0.5,,,9ec3cfa8-13ea-4262-b099-9e814a204d6c
+2026-08-10T17:35:48Z,reconcile,0,orphan_reconcile,ORPHAN,81dff7a0cdaa,TSLA,TSLA260812C00350000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-10 17:31:30.919773+00:00,exit,421,lab0421_s365_w2_1005_1045_r2,S365,bbf9db0f84e1,NKE,NKE260821C00044000,1,,0.31,60.0,-48.33,-29.0,stop_loss (-50.8%),,-0.01,0.5,-0.5,,,aff923f4-3c16-4e47-b55c-dbe787886603
+2026-08-10 17:31:29.277201+00:00,exit,0,orphan_reconcile,ORPHAN,045821cefc9e,UBER,UBER260814C00080000,2,,0.24,91.33,-47.45,-43.33,stop_loss (-54.5%),,-0.01,0.5,-0.5,,,b0d463af-535e-44f7-9488-89a2560e08e2

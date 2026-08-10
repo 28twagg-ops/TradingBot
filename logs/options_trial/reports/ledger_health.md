@@ -1,6 +1,6 @@
 # Ledger health — 2026-08-10
 
-_Generated 2026-08-10T13:31:38.987219_
+_Generated 2026-08-10T13:36:16.710713_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -10,12 +10,12 @@ State file: OK
 
 | Check                       | Count | Status |
 |-----------------------------|------:|--------|
-| Current stuck (state)       |     8 | WARN |
-| Orphaned lots (post-stable) |   567 | WARN |
+| Current stuck (state)       |     7 | WARN |
+| Orphaned lots (post-stable) |   566 | WARN |
 | Missing exit records (post) |   559 | WARN |
-| State/ledger mismatches     |    18 | WARN |
-| Total open lots             |   157 | INFO |
-| Total closed lots           |  1514 | INFO |
+| State/ledger mismatches     |    17 | WARN |
+| Total open lots             |   155 | INFO |
+| Total closed lots           |  1515 | INFO |
 | Pre-cutoff audit debt       |     0 | INFO |
 | Transition audit debt       |   744 | INFO |
 
@@ -29,7 +29,6 @@ Notes:
 
 | lot_id | strategy | symbol | entry_day | age_days |
 |--------|----------|--------|-----------|---------:|
-| bbf9db0f84e1 | S365 | NKE | 2026-08-04 | 6 |
 | a1ce26a89873 | S365 | NKE | 2026-08-04 | 6 |
 | 865b546efdca | S356 | NKE | 2026-08-04 | 6 |
 | b8376153a452 | S356 | NKE | 2026-08-04 | 6 |
@@ -38,11 +37,10 @@ Notes:
 | 7113a543a163 | S356 | NKE | 2026-08-04 | 6 |
 | 2720cc0bbaf5 | S356 | NKE | 2026-08-04 | 6 |
 
-_Orphaned ledger detail omitted (567 rows) — see note above on historical lot_id churn._
+_Orphaned ledger detail omitted (566 rows) — see note above on historical lot_id churn._
 
 ## State/ledger mismatches
 
-- `045821cefc9e`
 - `20addddd5b5b`
 - `2a95b347a326`
 - `30e1a418b4d0`
@@ -50,7 +48,6 @@ _Orphaned ledger detail omitted (567 rows) — see note above on historical lot_
 - `691e2fc7cf96`
 - `755c5aa2f481`
 - `793e32a81719`
-- `81dff7a0cdaa`
 - `91db69b8d92a`
 - `9d259cddf764`
 - `a2fa8f3b4dd3`
@@ -60,3 +57,4 @@ _Orphaned ledger detail omitted (567 rows) — see note above on historical lot_
 - `e4b3d8271b9e`
 - `ee5d5b326132`
 - `f54dcd5bc3db`
+- `faac7c12cb7a`
