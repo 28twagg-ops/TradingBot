@@ -12,3 +12,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-04 14:35:55.868474+00:00,exit,87,lab0087_s210_w4_1120_1135_r2,S210,6eb6b981c75d,AMZN,AMZN260807C00295000,1,,0.43,36.0,19.44,7.0,reconcile_fill,,-0.01,0.5,-0.5,,,db95ab7b-6fa1-4504-8d63-25c4d6a063d4
 2026-08-04 15:22:14.492501+00:00,entry,87,lab0087_s210_w4_1120_1135_r2,S210,6955bc79c9b3,AMZN,AMZN260807C00295000,1,0.36,0.36,36.0,,,,-0.01,,0.5,-0.5,,,1cdcbfa3-2c5c-4f7d-a959-b1aa93d13c04
 2026-08-10T13:00:48Z,reconcile,87,lab0087_s210_w4_1120_1135_r2,S210,6955bc79c9b3,AMZN,AMZN260807C00295000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-10 15:22:32.867992+00:00,entry,87,lab0087_s210_w4_1120_1135_r2,S210,4bc8292d5977,UBER,UBER260814C00080000,1,0.45,0.44,44.0,,,,-0.01,,0.75,-0.75,0.021978021978021997,MA8 71.93 crossed above MA21,9b55336d-2bae-4e46-9c63-0787474ce1c4
