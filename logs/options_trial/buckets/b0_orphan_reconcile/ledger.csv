@@ -283,3 +283,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-07 17:10:17.482209+00:00,exit,0,orphan_reconcile,ORPHAN,8fe318b124a3,CELH,CELH260814C00028000,1,,0.16,25.75,-37.86,-9.75,reconcile_fill,,-0.01,0.5,-0.5,,,1135feea-5f26-46a2-85ff-f4365ef238b1
 2026-08-07 15:40:58.890909+00:00,exit,0,orphan_reconcile,ORPHAN,8fe318b124a3,CELH,CELH260814C00028000,1,,0.28,25.75,8.74,2.25,reconcile_fill,,-0.01,0.5,-0.5,,,7dd30c9e-c132-4d7a-84aa-47d07663738a
 2026-08-07 15:49:38.537848+00:00,exit,0,orphan_reconcile,ORPHAN,0982c503c7d9,AAPL,AAPL260810C00307500,1,,0.43,61.33,-29.89,-18.33,reconcile_fill,,-0.01,0.5,-0.5,,,14988e0b-8c5b-4002-b689-7d4a0c09253d
+2026-08-10 14:57:27.536153+00:00,exit,0,orphan_reconcile,ORPHAN,d8fcc6992c25,AAPL,AAPL260810C00310000,1,,0.8,24.5,226.53,55.5,take_profit (+136.9%),,-0.01,0.5,-0.5,,,2c0c6fbf-66d7-48b3-9f80-98116e552721

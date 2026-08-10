@@ -5295,3 +5295,66 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260810T145956Z
+
+- UTC timestamp: `20260810T145956Z`
+- GitHub run: [#6549](https://github.com/28twagg-ops/TradingBot/actions/runs/31400753551)
+- Run id: `31400753551`
+- Live bot: exit=`0`, duration=`2s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-10T10:50:55.746260-04:00","date":"2026-08-10","mode":"entry+manage","header":"entry+manage (6 new)","elapsed_s":78.9,"phases_s":{"reconcile":0.44,"cancel":0.12,"manage":18.4,"scan":42.45,"entries":14.74,"reconcile2":2.01},"signals":204,"placed":6,"equity":141941.33,"open_positions":29,"pending_orders":17,"open_lots":134,"submitted_today":145,"filled_today":152,"unattributed_contracts":3,"top_signals":["S165:TTD","S165:CELH","S165:FSLY","S165:AAPL","S164:TTD","S164:CELH","S164:FSLY","S164:AAPL"],"github_run":"6548","github_run_id":"31400301446","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+14:59:57  INFO      Mode: exits
+14:59:58  INFO        Daily log -> logs/daily/2026-08-10.md
+14:59:58  INFO        Daily log reconciled -> logs/daily/2026-08-10.md (4 ledger rows)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:59 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $470.80|
++========================================================================+
+
++========================================================================+
+|                             MORNING CHECK                              |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=134 paper_keys=yes dry_run=False
+  alpaca positions=30
+  FLAG b830|S406|b619ef30 missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-08-10T11:00:00.421929-04:00 ===
+
+[Run context]
+Paper auth OK — equity $141451.05, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 1024 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419
+Dropped (no new entries; ex-reflected P&L): S173, S174
+```
+
+---
