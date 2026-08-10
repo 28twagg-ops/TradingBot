@@ -2542,26 +2542,6 @@
       "entry_order_id": "56f19876-57e0-4ac5-9cbd-0d8dc47e2cd7"
     },
     {
-      "lot_id": "8049c5bdf7c2",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "RBLX260814C00041000",
-      "underlying": "RBLX",
-      "qty": 2,
-      "entry_cost": 89.0,
-      "entry_price": 0.445,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T15:23:17.746126+00:00",
-      "entry_order_id": "orphan:RBLX260814C00041000"
-    },
-    {
       "lot_id": "2f9855601404",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -3282,26 +3262,6 @@
       "entry_order_id": "orphan:CELH260814C00029000"
     },
     {
-      "lot_id": "8633614c0aec",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "GOOGL260812C00367500",
-      "underlying": "GOOGL",
-      "qty": 2,
-      "entry_cost": 120.0,
-      "entry_price": 0.6,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T15:36:29.711978+00:00",
-      "entry_order_id": "orphan:GOOGL260812C00367500"
-    },
-    {
       "lot_id": "3e0808dbfba9",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -3500,6 +3460,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-10T15:47:02.237525+00:00",
       "entry_order_id": "orphan:CELH260814C00032000"
+    },
+    {
+      "lot_id": "d99d441afdf1",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "RBLX260814C00041000",
+      "underlying": "RBLX",
+      "qty": 2,
+      "entry_cost": 89.0,
+      "entry_price": 0.445,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-10T15:50:46.944832+00:00",
+      "entry_order_id": "orphan:RBLX260814C00041000"
     }
   ],
   "pending_orders": [],
@@ -3553,16 +3533,6 @@
       "qty": 1,
       "reason": "stop_loss (-63.3%)",
       "submitted": "2026-08-10T11:21:26"
-    },
-    {
-      "order_id": "2aea975d-4c0f-44d6-8be2-556a5bc2f240",
-      "lot_id": "8633614c0aec",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "GOOGL260812C00367500",
-      "qty": 2,
-      "reason": "stop_loss (-53.3%)",
-      "submitted": "2026-08-10T11:47:07"
     }
   ],
   "bucket_open_premium": {
@@ -3693,7 +3663,7 @@
     "b86": 44.0,
     "b349": 28.999999999999996,
     "b82": 48.0,
-    "b0": 2898.2971,
+    "b0": 2778.2971,
     "b919": 65.0,
     "b918": 65.0,
     "b821": 65.0,
@@ -4386,7 +4356,8 @@
     "a562e9e0-40d4-4885-8109-4225b5b7f0e2",
     "1172c8bc-7f71-458c-9718-a9d9daa7cfdf",
     "e9e16535-f013-46e7-981c-2feb8a05399c",
-    "32a52d6e-89eb-419e-a06e-2637b5f401d2"
+    "32a52d6e-89eb-419e-a06e-2637b5f401d2",
+    "2aea975d-4c0f-44d6-8be2-556a5bc2f240"
   ],
   "submitted_today": 192,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
