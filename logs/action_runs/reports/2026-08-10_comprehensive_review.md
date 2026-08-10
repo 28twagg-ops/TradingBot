@@ -17297,3 +17297,28 @@ Dropped (no new entries; ex-reflected P&L): S173, S174
 ```
 
 ---
+
+## Run 20260810T194119Z
+
+- UTC timestamp: `20260810T194119Z`
+- GitHub run: [#6611](https://github.com/28twagg-ops/TradingBot/actions/runs/31425216611)
+- Run id: `31425216611`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-10T15:25:50.249598-04:00","date":"2026-08-10","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":17.1,"phases_s":{"reconcile":0.5,"cancel":0.22,"manage":15.62},"signals":0,"placed":0,"equity":139731.87,"open_positions":23,"pending_orders":0,"open_lots":142,"submitted_today":192,"filled_today":296,"unattributed_contracts":1,"top_signals":[],"github_run":"6607","github_run_id":"31423975361","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:41:20  INFO      Mode: evening_prep
+19:41:20  INFO        Universe cache hit: 903 tickers (tickers_2026-08-10.json)
+19:43:34  INFO      Failed to create TzCache, reason: Error creating TzCache folder: '/home/runner/.cache/py-yfinance' reason: [Errno 17] File exists: '/home/runner/.cache/py-yfinance'. TzCache will not be used. Tip: You can direct cache to use a different location with 'set_tz_cache_location(mylocation)'
+19:43:34  INFO        [prep_universe] 40/903 (40 valid)
+```
+
+### Options bot full output
+
+```text
