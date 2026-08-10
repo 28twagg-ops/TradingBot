@@ -242,26 +242,6 @@
       "entry_order_id": "4a15345c-e3eb-4067-af42-8f7bc9f302ef"
     },
     {
-      "lot_id": "d3615415a097",
-      "bucket_id": 234,
-      "profile_name": "lab0234_s401_w1_0928_1005_r1",
-      "strategy_id": "S401",
-      "occ_symbol": "TSLA260812C00350000",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 52.0,
-      "entry_price": 0.52,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T14:01:51.063354+00:00",
-      "entry_order_id": "9dc1312e-6003-4df1-b9b6-9dcff4f0adb7"
-    },
-    {
       "lot_id": "425db2522c34",
       "bucket_id": 857,
       "profile_name": "lab0857_s408_w1_0928_1005_r2",
@@ -3235,14 +3215,24 @@
       "submitted": "2026-08-10T12:01:19"
     },
     {
-      "order_id": "12da408c-4287-46c3-8eb9-1a6a6ff2eb21",
-      "lot_id": "d3615415a097",
-      "bucket_id": 234,
+      "order_id": "9ec3cfa8-13ea-4262-b099-9e814a204d6c",
+      "lot_id": "471621ef50e0",
+      "bucket_id": 320,
+      "strategy_id": "S356",
+      "occ_symbol": "NKE260821C00044000",
+      "qty": 1,
+      "reason": "stop_loss (-50.8%)",
+      "submitted": "2026-08-10T13:16:35"
+    },
+    {
+      "order_id": "acc0e1ea-e903-43d0-b1c0-2f52668cff33",
+      "lot_id": "97d826ad1d64",
+      "bucket_id": 236,
       "strategy_id": "S401",
       "occ_symbol": "TSLA260812C00350000",
       "qty": 1,
       "reason": "stop_loss (-50.5%)",
-      "submitted": "2026-08-10T13:05:59"
+      "submitted": "2026-08-10T13:16:38"
     }
   ],
   "bucket_open_premium": {
@@ -3258,7 +3248,6 @@
     "b109": 51.0,
     "b305": 62.0,
     "b304": 62.0,
-    "b234": 52.0,
     "b857": 46.0,
     "b856": 46.0,
     "b829": 24.0,
@@ -4067,7 +4056,8 @@
     "9819b7db-1b12-452f-8edd-5d46081fc40f",
     "4eca8a47-e762-4d03-aae3-c5f729a0c4ff",
     "c22df2ae-8337-437b-b19d-c7abcd371b76",
-    "b13138f5-44cf-4083-9b3e-4c45ecaa0e16"
+    "b13138f5-44cf-4083-9b3e-4c45ecaa0e16",
+    "12da408c-4287-46c3-8eb9-1a6a6ff2eb21"
   ],
   "submitted_today": 192,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
