@@ -2993,6 +2993,16 @@
       "qty": 1,
       "reason": "stop_loss (-54.0%)",
       "submitted": "2026-08-10T14:31:07"
+    },
+    {
+      "order_id": "dcccc5ba-27c5-4d13-9725-2e2742dbdce9",
+      "lot_id": "1087c7fdf836",
+      "bucket_id": 20,
+      "strategy_id": "S202",
+      "occ_symbol": "CELH260814C00029000",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-08-10T14:45:51"
     }
   ],
   "bucket_open_premium": {
