@@ -482,26 +482,6 @@
       "entry_order_id": "cd189f6b-a666-4aae-b63f-357a0d83aa19"
     },
     {
-      "lot_id": "467c5f953d3e",
-      "bucket_id": 349,
-      "profile_name": "lab0349_s360_w1_0928_1005_r2",
-      "strategy_id": "S360",
-      "occ_symbol": "AAPL260810C00310000",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 28.999999999999996,
-      "entry_price": 0.29,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T14:04:09.253988+00:00",
-      "entry_order_id": "eef568c5-1996-4d06-9b7e-fd5d9f05aef8"
-    },
-    {
       "lot_id": "05dc2952e1ae",
       "bucket_id": 348,
       "profile_name": "lab0348_s360_w1_0928_1005_r1",
@@ -2961,7 +2941,6 @@
     "b828": 24.0,
     "b405": 68.0,
     "b404": 68.0,
-    "b349": 28.999999999999996,
     "b348": 28.000000000000004,
     "b313": 66.0,
     "b312": 66.0,
@@ -3668,7 +3647,8 @@
     "8248d859-317e-4fa8-8cf5-8262187b109b",
     "7aecf672-18ba-4d08-9416-3ca2ad8144b5",
     "e501d7ca-23ac-4c5a-9c85-4f45c563b36a",
-    "4a8770b8-4f83-4e21-af87-e0be6d54ca4f"
+    "4a8770b8-4f83-4e21-af87-e0be6d54ca4f",
+    "ab8a698a-e116-4e2c-b4bc-4454fafe6c08"
   ],
   "submitted_today": 145,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
