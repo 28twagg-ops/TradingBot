@@ -14,7 +14,6 @@ S401,Any_Gap_Down_Small,3d,watch,fat left tail (p10 < -45%),124,62,36,26,61.23,2
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),67,32,18,14,47.4,16.32,-60.63,-51.04,188.54,559.0,4,10,14,6,5,40.6
 S210,MA_Cross_8_21,3d ATM MA cross 8/21,watch,fat left tail (p10 < -45%),116,51,29,22,13.2,13.89,-71.05,-43.27,78.26,41.0,3,14,34,15,6,29.4
 S352,GapDown_2DTE,2d,watch,fat left tail (p10 < -45%),90,29,15,14,19.89,13.04,-72.14,-51.85,114.07,88.0,5,10,30,16,6,31.0
-S356,GapDown_14DTE,14d,watch,building sample (8-19 exits),38,8,4,4,6.55,9.24,-47.41,-30.32,58.62,44.0,3,10,2,4,2,75.0
 S411,RubberBand_OTM2,3d,watch,fat left tail (p10 < -45%),73,27,15,12,-8.64,7.69,-57.32,-52.5,41.0,-190.0,4,7,13,11,6,33.3
 S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),83,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,20,0,0,0,0.0
 S166,GapDown strong call,3d ATM strong,watch,insufficient sample (<8 exits),36,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,20,0,0,0,0.0
@@ -74,6 +73,7 @@ S416,BBSqueeze_ATM,0d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0
 S417,BBSqueeze_OTM1,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S418,BBSqueeze_OTM2,7d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S419,BBSqueeze_OTM3,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
+S356,GapDown_14DTE,14d,watch,early sample with non-positive median,38,9,4,5,-0.15,-19.44,-50.75,-46.3,58.62,8.0,4,10,2,5,3,66.7
 S367,RubberBand_30DTE,30d,watch,insufficient sample (<8 exits),8,2,0,2,-38.2,-38.2,-48.75,-44.79,-27.64,-55.0,2,6,0,2,1,100.0
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),12,5,0,5,-51.11,-50.0,-66.67,-66.67,-33.33,-30.0,1,10,0,0,1,100.0
 S358,GapDown_30DTE,30d,watch,insufficient sample (<8 exits),10,2,0,2,-51.39,-51.39,-51.39,-51.39,-51.39,-74.0,1,6,2,2,1,100.0
