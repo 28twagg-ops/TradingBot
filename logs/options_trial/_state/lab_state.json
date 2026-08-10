@@ -642,26 +642,6 @@
       "entry_order_id": "bbc978de-719c-4b23-b188-340c86645a01"
     },
     {
-      "lot_id": "c0b90f9d4663",
-      "bucket_id": 350,
-      "profile_name": "lab0350_s360_w2_1005_1045_r1",
-      "strategy_id": "S360",
-      "occ_symbol": "AAPL260810C00310000",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 24.0,
-      "entry_price": 0.24,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T14:08:06.487940+00:00",
-      "entry_order_id": "4c9b3453-a8e3-4319-ad0a-a1b371a3a245"
-    },
-    {
       "lot_id": "f2c03e8f0460",
       "bucket_id": 347,
       "profile_name": "lab0347_s359_w2_1005_1045_r2",
@@ -3505,14 +3485,14 @@
       "submitted": "2026-08-10T11:16:10"
     },
     {
-      "order_id": "6ecbe2de-90b1-4d74-b163-48ad96848dd5",
-      "lot_id": "5c59cd42e5dc",
-      "bucket_id": 351,
-      "strategy_id": "S360",
+      "order_id": "ea26c634-1355-429f-8c26-701ddea26336",
+      "lot_id": "f2c03e8f0460",
+      "bucket_id": 347,
+      "strategy_id": "S359",
       "occ_symbol": "AAPL260810C00310000",
       "qty": 1,
-      "reason": "stop_loss (-63.3%)",
-      "submitted": "2026-08-10T11:21:26"
+      "reason": "stop_loss (-59.2%)",
+      "submitted": "2026-08-10T12:01:19"
     }
   ],
   "bucket_open_premium": {
@@ -3548,7 +3528,6 @@
     "b786": 45.0,
     "b379": 45.0,
     "b378": 45.0,
-    "b350": 24.0,
     "b347": 24.0,
     "b346": 24.0,
     "b299": 45.0,

@@ -349,7 +349,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 347,lab0347_s359_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-10,False,,,,,,,0,AAPL,S359,,entered_no_exit
 348,lab0348_s360_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,2,1,1,2026-08-10,False,,0.0,-67.86,-67.86,-67.86,-67.86,-19.0,AAPL,S360,stop_loss (-67.3%),closed
 349,lab0349_s360_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,2,1,1,2026-08-10,False,,0.0,-62.07,-62.07,-62.07,-62.07,-18.0,AAPL,S360,stop_loss (-59.2%),closed
-350,lab0350_s360_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-08-10,False,,,,,,,0,AAPL,S360,,entered_no_exit
+350,lab0350_s360_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,0,2026-08-10,False,,,,,,,0,AAPL,S360,,entered_no_exit
 351,lab0351_s360_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,0,2026-08-10,False,,,,,,,0,AAPL,S360,,entered_no_exit
 352,lab0352_s360_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-10,False,,,,,,,0,AAPL,S360,,entered_no_exit
 353,lab0353_s360_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-10,False,,,,,,,0,AAPL,S360,,entered_no_exit
