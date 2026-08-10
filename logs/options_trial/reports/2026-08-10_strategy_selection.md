@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-10
 
-_Generated 2026-08-10T10:35:14.075478_
+_Generated 2026-08-10T10:38:03.989577_
 
 ## Summary
 
@@ -35,7 +35,7 @@ _Generated 2026-08-10T10:35:14.075478_
 | S350 (GapDown_0DTE) | 0d | watch | 30 | 60.0 | +35.49 | -60.98 | -44.56 | +198.29 | 10 | 10 | 4 | $+584.00 | 43.3% | fat left tail (p10 < -45%) |
 | S401 (Any_Gap_Down_Small) | 3d | watch | 55 | 58.2 | +21.05 | -82.50 | -42.04 | +160.00 | 10 | 32 | 12 | $+924.00 | 34.5% | fat left tail (p10 < -45%) |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | watch | 45 | 57.8 | +13.89 | -65.61 | -42.11 | +69.81 | 14 | 23 | 9 | $+13.00 | 33.3% | fat left tail (p10 < -45%) |
-| S411 (RubberBand_OTM2) | 3d | watch | 27 | 55.6 | +7.69 | -57.32 | -52.50 | +41.00 | 7 | 9 | 11 | $-190.00 | 33.3% | fat left tail (p10 < -45%) |
+| S411 (RubberBand_OTM2) | 3d | watch | 27 | 55.6 | +7.69 | -57.32 | -52.50 | +41.00 | 7 | 11 | 11 | $-190.00 | 33.3% | fat left tail (p10 < -45%) |
 | S363 (RubberBand_5DTE) | 5d | watch | 20 | 55.0 | +7.14 | -88.65 | -73.11 | +68.18 | 7 | 20 | 9 | $-188.00 | 40.0% | fat left tail (p10 < -45%) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 20 | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 20 | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
