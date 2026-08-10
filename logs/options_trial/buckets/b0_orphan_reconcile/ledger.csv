@@ -243,9 +243,3 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10T13:00:48Z,reconcile,0,orphan_reconcile,ORPHAN,fde0a1e3bcd5,CVNA,CVNA260807C00071000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-10T13:00:48Z,reconcile,0,orphan_reconcile,ORPHAN,142e9b02da30,AMZN,AMZN260807C00292500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-10T13:00:48Z,reconcile,0,orphan_reconcile,ORPHAN,73c96cca589b,AMZN,AMZN260807C00295000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-10 13:30:05.778564+00:00,exit,0,orphan_reconcile,ORPHAN,c4246c1e298e,TSLA,TSLA260810C00347500,3,,0.04,132.0,-90.91,-120.0,stop_loss (-63.6%),,-0.01,0.5,-0.5,,,2fe0a82c-cf4d-4d21-ba41-994be643344d
-2026-08-07 13:30:02.983674+00:00,exit,0,orphan_reconcile,ORPHAN,c947ffbe44d7,AAPL,AAPL260810C00317500,2,,0.75,108.4,38.38,41.6,reconcile_fill,,-0.01,0.5,-0.5,,,e3c39eb4-a434-4c7b-b3ca-8d9a762e1171
-2026-08-07 13:30:02.756534+00:00,exit,0,orphan_reconcile,ORPHAN,c947ffbe44d7,AAPL,AAPL260810C00317500,1,,0.13,54.2,-76.01,-41.2,reconcile_fill,,-0.01,0.5,-0.5,,,143d5414-a0ac-4a9c-899e-36caf7cbf27a
-2026-08-07 13:30:02.775508+00:00,exit,0,orphan_reconcile,ORPHAN,868bc0f793a1,MARA,MARA260814C00011500,1,,0.04,49.8,-91.97,-45.8,reconcile_fill,,-0.01,0.5,-0.5,,,3f691268-2ffb-44e3-9fe0-4e9d742b07a1
-2026-08-06 19:25:50.703282+00:00,exit,0,orphan_reconcile,ORPHAN,d9405712a08f,UNH,UNH260814C00435000,2,,0.16,84.67,-62.2,-52.67,reconcile_fill,,-0.01,0.5,-0.5,,,16b09f2b-6f04-4b09-9e20-0c4d6de46646
-2026-08-06 19:20:58.564055+00:00,exit,0,orphan_reconcile,ORPHAN,d9405712a08f,UNH,UNH260814C00435000,1,,0.02,42.33,-95.28,-40.33,reconcile_fill,,-0.01,0.5,-0.5,,,a8410784-bb47-4cb0-9484-df766a2dd43f
