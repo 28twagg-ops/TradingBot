@@ -17540,3 +17540,173 @@ Dropped (no new entries; ex-reflected P&L): S173, S174
 ### Options bot full output
 
 ```text
+
+## Run 20260810T195618Z
+
+- UTC timestamp: `20260810T195618Z`
+- GitHub run: [#6614](https://github.com/28twagg-ops/TradingBot/actions/runs/31426450151)
+- Run id: `31426450151`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-10T15:25:50.249598-04:00","date":"2026-08-10","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":17.1,"phases_s":{"reconcile":0.5,"cancel":0.22,"manage":15.62},"signals":0,"placed":0,"equity":139731.87,"open_positions":23,"pending_orders":0,"open_lots":142,"submitted_today":192,"filled_today":296,"unattributed_contracts":1,"top_signals":[],"github_run":"6607","github_run_id":"31423975361","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:56:20  INFO      Mode: scan
+19:56:21  INFO        [positions] 3/3 (3 valid)
+19:56:21  INFO        Universe cache hit: 903 tickers (tickers_2026-08-10.json)
+19:56:22  INFO        [universe] 40/900 (40 valid)
+19:56:23  INFO        [universe] 80/900 (80 valid)
+19:56:24  INFO        [universe] 120/900 (120 valid)
+19:56:25  INFO        [universe] 160/900 (160 valid)
+19:56:30  INFO        [universe] 200/900 (199 valid)
+19:56:43  INFO        [universe] 240/900 (238 valid)
+19:56:53  INFO        [universe] 280/900 (278 valid)
+19:57:07  INFO        [universe] 320/900 (318 valid)
+19:57:20  INFO        [universe] 360/900 (358 valid)
+19:57:31  INFO        [universe] 400/900 (397 valid)
+19:57:41  INFO        [universe] 440/900 (437 valid)
+19:57:55  INFO        [universe] 480/900 (477 valid)
+19:58:07  INFO        [universe] 520/900 (517 valid)
+19:58:18  INFO        [universe] 560/900 (557 valid)
+19:58:31  INFO        [universe] 600/900 (597 valid)
+19:58:41  INFO        [universe] 640/900 (637 valid)
+19:58:55  INFO        [universe] 680/900 (677 valid)
+19:59:08  INFO        [universe] 720/900 (717 valid)
+19:59:18  INFO        [universe] 760/900 (757 valid)
+19:59:31  INFO        [universe] 800/900 (797 valid)
+19:59:42  INFO        [universe] 840/900 (836 valid)
+19:59:55  INFO        [universe] 880/900 (876 valid)
+20:00:01  INFO        [universe] 900/900 (896 valid)
+20:00:04  INFO        BUY  AES  $94.10  [Pullback50]  id=fcd1e971-0a90-4b6f-b505-77d89ecb4c9f
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $470.48|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-08-10|
+|  Universe                                                          both|
+|  Mo~  Aug: VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $470.48|
+|  Cash                                                           $211.88|
+|  Reserve                                          $23.52  (always kept)|
+|  Available                                    $188.36  (for new trades)|
+|  Trade size             $94.10  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (3 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AAPL     Pullback50      $94.24     $307.55  $307.83  +0.1%   $+0.09  |
+|  ADM      Pullback50      $93.84     $80.48   $80.22   -0.3%   $-0.31  |
+|  CDW      Pullback50      $70.52     $136.69  $136.51  -0.1%   $-0.09  |
+|                                                                        |
+|  Total invested                                                 $258.60|
+|  Total open P&L                                                  $-0.31|
+|  Buys today: 0  |  entry cap: 2  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (77782.2m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  ADM  P&L -0.3%  $-0.31                                            HOLD|
+|  CDW  P&L -0.1%  $-0.09                                            HOLD|
+|  AAPL  P&L +0.1%  $+0.09                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 3|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  19                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.72   38.6   -1.89   50MA bounce (+|
+|  ALGN     Pullback50      eq     $176.17  48.7   -1.48   50MA bounce (+|
+|  GOOGL    Pullback50      eq     $356.98  54.0   -1.47   50MA bounce (+|
+|  GOOG     Pullback50      eq     $355.44  54.1   -1.46   50MA bounce (+|
+|  C        Pullback50      eq     $135.22  55.0   -1.40   50MA bounce (-|
+|  ELV      Pullback50      eq     $396.61  52.4   -1.31   50MA bounce (+|
+|  EQIX     Pullback50      eq     $1043.~  53.0   -2.08   50MA bounce (-|
+|  HBAN     Pullback50      eq     $17.55   39.9   -0.78   50MA bounce (+|
+|  IBKR     Pullback50      eq     $90.53   42.0   -0.37   50MA bounce (-|
+|  PGR      Pullback50      eq     $213.51  61.5   -1.07   50MA bounce (+|
+|  RSG      Pullback50      eq     $214.75  50.2   -1.50   50MA bounce (+|
+|  AM       Pullback50      eq     $21.96   44.0   -1.74   50MA bounce (-|
+|  BURL     VWAP_Reclaim    eq     $370.74  63.5   1.87    VWAP reclaim V|
+|  COLB     Pullback50      eq     $31.24   33.1   -1.27   50MA bounce (-|
+|  GMED     VWAP_Reclaim    eq     $86.00   76.9   1.21    VWAP reclaim V|
+|  HIMS     Pullback50      eq     $31.76   48.1   -0.52   50MA bounce (+|
+|  MUSA     RSIRecovery     eq     $552.37  33.3   0.76    RSI 16.9→33.3 |
+|  PK       Pullback50      eq     $14.51   40.6   -1.39   50MA bounce (+|
+|  WTFC     Pullback50      eq     $158.97  50.1   -1.23   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AES  Pullback50                                    $94.10|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] ALGN  Pullback50                                   $94.10|20:00:04  ERROR       BUY FAILED ALGN: {"code":40010001,"message":"client_order_id must be unique"}
+20:00:04  ERROR       BUY FAILED GOOGL: {"code":40010001,"message":"client_order_id must be unique"}
+20:00:04  INFO        BUY  GOOG  $94.10  [Pullback50]  id=abf3b286-1213-4ec6-bb80-de8422ea44d3
+```
+
+### Options bot full output
+
+```text
