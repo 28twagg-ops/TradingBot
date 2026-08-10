@@ -78,7 +78,7 @@ S367,RubberBand_30DTE,30d,watch,insufficient sample (<8 exits),8,2,0,2,-38.2,-38
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),12,5,0,5,-51.11,-50.0,-66.67,-66.67,-33.33,-30.0,1,10,0,0,1,100.0
 S358,GapDown_30DTE,30d,watch,insufficient sample (<8 exits),8,2,0,2,-51.39,-51.39,-51.39,-51.39,-51.39,-74.0,1,6,0,2,1,100.0
 S365,RubberBand_14DTE,14d,watch,insufficient sample (<8 exits),32,7,2,5,-1.04,-51.61,-83.58,-73.45,120.9,-63.0,2,10,4,7,3,42.9
-S366,RubberBand_21DTE,21d,watch,insufficient sample (<8 exits),30,7,0,7,-55.23,-56.92,-58.77,-56.92,-50.68,-240.0,1,6,0,7,1,100.0
+S366,RubberBand_21DTE,21d,watch,early sample with non-positive median,30,8,0,8,-54.46,-55.19,-58.31,-56.92,-49.12,-268.0,1,6,0,8,1,100.0
 S209,GapDown_Recovery,3d ATM gap-recovery,watch,insufficient sample (<8 exits),30,6,0,6,-64.99,-61.46,-82.78,-69.36,-50.75,-210.0,2,12,24,6,2,83.3
 S202,GapDown_Monster,3d ATM gap-monster,watch,insufficient sample (<8 exits),34,6,0,6,-60.04,-64.75,-70.52,-66.39,-44.87,-133.0,3,13,4,0,2,66.7
 S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,insufficient sample (<8 exits),98,6,0,6,-68.19,-65.67,-88.89,-86.11,-50.0,-59.0,2,20,0,0,2,83.3
@@ -99,7 +99,7 @@ S399,GapDown_OTM1,3d,drop,non-positive median return,106,39,18,21,23.55,-46.15,-
 S359,RubberBand_0DTE,0d,drop,non-positive median return,52,23,4,19,-26.76,-46.67,-71.43,-70.37,61.82,-323.0,3,7,10,0,4,43.5
 S207,GapDown_AtSupport,3d ATM gap-support,drop,non-positive median return,62,37,2,35,-38.6,-47.06,-63.64,-55.71,-6.06,-822.0,2,14,0,0,3,43.2
 S407,RubberBand_ITM2,3d,drop,non-positive median return,76,31,11,20,46.98,-51.43,-86.49,-61.54,353.33,154.0,6,10,16,8,7,29.0
-S351,GapDown_1DTE,1d,drop,non-positive median return,118,42,10,32,-5.82,-53.39,-75.68,-62.5,171.88,-63.0,7,10,26,9,6,31.0
+S351,GapDown_1DTE,1d,drop,non-positive median return,118,43,10,33,-6.9,-52.94,-75.68,-62.5,171.88,-76.0,7,10,26,10,6,30.2
 S203,GapUp_Fade,3d ATM gap-up fade (put),drop,non-positive median return,82,33,4,29,-43.54,-54.0,-79.08,-74.42,38.86,-717.0,6,14,14,5,5,42.4
 S360,RubberBand_1DTE,1d,drop,non-positive median return,78,36,3,33,-50.6,-55.16,-81.62,-70.56,-33.33,-650.0,6,10,22,9,7,30.6
 S216,RSI_Oversold_Cross,3d ATM RSI x30,drop,non-positive median return,92,31,3,28,-48.66,-56.25,-87.1,-75.81,-36.96,-759.0,4,14,34,10,4,51.6
