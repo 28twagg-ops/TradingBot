@@ -2855,16 +2855,6 @@
       "submitted": "2026-08-10T16:01:22"
     },
     {
-      "order_id": "ab37b974-17e6-448f-8544-780a03f47a49",
-      "lot_id": "f396e4b74c1a",
-      "bucket_id": 111,
-      "strategy_id": "S212",
-      "occ_symbol": "QQQ260813C00740000",
-      "qty": 1,
-      "reason": "stop_loss (-56.9%)",
-      "submitted": "2026-08-10T16:01:25"
-    },
-    {
       "order_id": "ef2bd7a8-c08a-4c68-913c-9938dd9406cb",
       "lot_id": "6f9e695fd264",
       "bucket_id": 184,
