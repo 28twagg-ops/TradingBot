@@ -1,6 +1,6 @@
 # Ledger health — 2026-08-10
 
-_Generated 2026-08-10T09:26:01.329939_
+_Generated 2026-08-10T10:04:16.681692_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -10,12 +10,12 @@ State file: OK
 
 | Check                       | Count | Status |
 |-----------------------------|------:|--------|
-| Current stuck (state)       |    23 | WARN |
-| Orphaned lots (post-stable) |   582 | WARN |
+| Current stuck (state)       |    21 | WARN |
+| Orphaned lots (post-stable) |   580 | WARN |
 | Missing exit records (post) |   559 | WARN |
-| State/ledger mismatches     |     4 | WARN |
-| Total open lots             |    52 | INFO |
-| Total closed lots           |  1355 | INFO |
+| State/ledger mismatches     |     5 | WARN |
+| Total open lots             |    61 | INFO |
+| Total closed lots           |  1374 | INFO |
 | Pre-cutoff audit debt       |     0 | INFO |
 | Transition audit debt       |   744 | INFO |
 
@@ -35,7 +35,6 @@ Notes:
 | a1ce26a89873 | S365 | NKE | 2026-08-04 | 6 |
 | 865b546efdca | S356 | NKE | 2026-08-04 | 6 |
 | b8376153a452 | S356 | NKE | 2026-08-04 | 6 |
-| a4bb493ace81 | S366 | NKE | 2026-08-04 | 6 |
 | ee1466c1a9ba | S366 | NKE | 2026-08-04 | 6 |
 | cf84522cb24e | S357 | NKE | 2026-08-04 | 6 |
 | 23943adc986c | S357 | NKE | 2026-08-04 | 6 |
@@ -49,15 +48,15 @@ Notes:
 | 9b997fb24b3b | S366 | NKE | 2026-08-04 | 6 |
 | 7113a543a163 | S356 | NKE | 2026-08-04 | 6 |
 | 2720cc0bbaf5 | S356 | NKE | 2026-08-04 | 6 |
-| a13d994bb958 | S367 | NKE | 2026-08-04 | 6 |
 | f25bd4c42181 | S358 | NKE | 2026-08-04 | 6 |
 | a29162672691 | S358 | NKE | 2026-08-04 | 6 |
 
-_Orphaned ledger detail omitted (582 rows) — see note above on historical lot_id churn._
+_Orphaned ledger detail omitted (580 rows) — see note above on historical lot_id churn._
 
 ## State/ledger mismatches
 
-- `868bc0f793a1`
-- `c4246c1e298e`
-- `c947ffbe44d7`
-- `d9405712a08f`
+- `0a5998ccf0ac`
+- `0aacd95b2330`
+- `dbb45ab6f34a`
+- `e8eddec5c0b8`
+- `f7e1984a00a1`

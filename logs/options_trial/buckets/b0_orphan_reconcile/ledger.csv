@@ -243,3 +243,16 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10T13:00:48Z,reconcile,0,orphan_reconcile,ORPHAN,fde0a1e3bcd5,CVNA,CVNA260807C00071000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-10T13:00:48Z,reconcile,0,orphan_reconcile,ORPHAN,142e9b02da30,AMZN,AMZN260807C00292500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-10T13:00:48Z,reconcile,0,orphan_reconcile,ORPHAN,73c96cca589b,AMZN,AMZN260807C00295000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-10 13:45:11.210790+00:00,exit,0,orphan_reconcile,ORPHAN,c947ffbe44d7,AAPL,AAPL260810C00317500,1,,1.05,54.2,93.73,50.8,reconcile_fill,,-0.01,0.5,-0.5,,,7d57dc4c-7fbe-4955-a587-313d979b25a9
+2026-08-10 13:30:05.778564+00:00,exit,0,orphan_reconcile,ORPHAN,c4246c1e298e,TSLA,TSLA260810C00347500,3,,0.04,132.0,-90.91,-120.0,stop_loss (-63.6%),,-0.01,0.5,-0.5,,,2fe0a82c-cf4d-4d21-ba41-994be643344d
+2026-08-07 13:30:02.983674+00:00,exit,0,orphan_reconcile,ORPHAN,c947ffbe44d7,AAPL,AAPL260810C00317500,2,,0.75,108.4,38.38,41.6,reconcile_fill,,-0.01,0.5,-0.5,,,e3c39eb4-a434-4c7b-b3ca-8d9a762e1171
+2026-08-07 13:30:02.756534+00:00,exit,0,orphan_reconcile,ORPHAN,868bc0f793a1,MARA,MARA260814C00011500,1,,0.13,49.8,-73.9,-36.8,reconcile_fill,,-0.01,0.5,-0.5,,,143d5414-a0ac-4a9c-899e-36caf7cbf27a
+2026-08-07 13:30:02.775508+00:00,exit,0,orphan_reconcile,ORPHAN,d9405712a08f,UNH,UNH260814C00435000,1,,0.04,42.33,-90.55,-38.33,reconcile_fill,,-0.01,0.5,-0.5,,,3f691268-2ffb-44e3-9fe0-4e9d742b07a1
+2026-08-06 19:25:50.703282+00:00,exit,0,orphan_reconcile,ORPHAN,d9405712a08f,UNH,UNH260814C00435000,2,,0.16,84.67,-62.2,-52.67,reconcile_fill,,-0.01,0.5,-0.5,,,16b09f2b-6f04-4b09-9e20-0c4d6de46646
+2026-08-06 19:20:58.564055+00:00,exit,0,orphan_reconcile,ORPHAN,b52523970392,AAPL,AAPL260810C00317500,1,,0.02,53.75,-96.28,-51.75,reconcile_fill,,-0.01,0.5,-0.5,,,a8410784-bb47-4cb0-9484-df766a2dd43f
+2026-08-06 18:29:43.901490+00:00,exit,0,orphan_reconcile,ORPHAN,b52523970392,AAPL,AAPL260810C00317500,2,,0.92,107.5,71.16,76.5,reconcile_fill,,-0.01,0.5,-0.5,,,225fe173-2a9b-43ba-b7b9-c04fc9b2ba5b
+2026-08-06 18:30:46.640847+00:00,exit,0,orphan_reconcile,ORPHAN,bba88e5d7b48,CVX,CVX260814C00197500,1,,0.03,32.5,-90.77,-29.5,reconcile_fill,,-0.01,0.5,-0.5,,,6c9d78e6-9f58-419b-9603-4952679df56d
+2026-08-06 18:29:39.482034+00:00,exit,0,orphan_reconcile,ORPHAN,0eee25dd536c,MARA,MARA260814C00011500,1,,0.1,49.8,-79.92,-39.8,reconcile_fill,,-0.01,0.5,-0.5,,,c3f122e0-4cfe-4127-b9be-3da27e380c47
+2026-08-06 18:29:37.110859+00:00,exit,0,orphan_reconcile,ORPHAN,6150bf6e012d,UNH,UNH260814C00435000,1,,0.62,42.33,46.46,19.67,reconcile_fill,,-0.01,0.5,-0.5,,,962048b2-20ad-49f5-bc3c-5b58fd5c5a4a
+2026-08-06 19:45:26.081771+00:00,exit,0,orphan_reconcile,ORPHAN,6150bf6e012d,UNH,UNH260814C00435000,1,,0.23,42.33,-45.67,-19.33,reconcile_fill,,-0.01,0.5,-0.5,,,94682825-e56b-441d-a84c-98c634a9c4f3
+2026-08-06 18:19:03.257012+00:00,exit,0,orphan_reconcile,ORPHAN,6150bf6e012d,UNH,UNH260814C00435000,1,,0.22,42.33,-48.03,-20.33,reconcile_fill,,-0.01,0.5,-0.5,,,dd66834a-e941-4ce4-9a6a-a285f96dd02a
