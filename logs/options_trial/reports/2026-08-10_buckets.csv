@@ -352,7 +352,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 350,lab0350_s360_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,0,2026-08-10,False,,,,,,,0,AAPL,S360,,entered_no_exit
 351,lab0351_s360_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,2,0,0,2026-08-10,False,,,,,,,0,AAPL,S360,,entered_no_exit
 352,lab0352_s360_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-10,False,,,,,,,0,AAPL,S360,,entered_no_exit
-353,lab0353_s360_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-10,False,,,,,,,0,AAPL,S360,,entered_no_exit
+353,lab0353_s360_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-10,False,,0.0,-69.64,-69.64,-69.64,-69.64,-39.0,AAPL,S360,stop_loss (-70.8%),closed
 354,lab0354_s360_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-10,False,,,,,,,0,CELH,S360,,entered_no_exit
 355,lab0355_s360_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-10,False,,,,,,,0,CELH,S360,,entered_no_exit
 356,lab0356_s360_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
