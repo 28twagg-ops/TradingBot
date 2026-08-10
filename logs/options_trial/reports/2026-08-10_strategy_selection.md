@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-10
 
-_Generated 2026-08-10T12:36:37.118842_
+_Generated 2026-08-10T12:41:13.421865_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-10T12:36:37.118842_
 
 ## Attribution health
 
-- Total exits: **2232**
+- Total exits: **2233**
 - Orphan exits (b0/orphan_reconcile): **256**
 - Orphan rate: **11.5%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -119,8 +119,8 @@ _Generated 2026-08-10T12:36:37.118842_
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 14 | 0 | 0 | $-822.00 | 43.2% | non-positive median return |
 | S407 (RubberBand_ITM2) | 3d | drop | 34 | 32.4 | -47.73 | -80.54 | -61.54 | +316.08 | 10 | 22 | 11 | $+134.00 | 26.5% | non-positive median return |
 | S354 (GapDown_5DTE) | 5d | drop | 37 | 37.8 | -52.31 | -92.16 | -75.51 | +140.46 | 10 | 28 | 10 | $+254.00 | 35.1% | non-positive median return |
-| S351 (GapDown_1DTE) | 1d | drop | 45 | 22.2 | -53.85 | -79.25 | -67.86 | +171.88 | 10 | 30 | 12 | $-153.00 | 28.9% | non-positive median return |
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 33 | 12.1 | -54.00 | -79.08 | -74.42 | +38.86 | 14 | 16 | 5 | $-717.00 | 42.4% | non-positive median return |
+| S351 (GapDown_1DTE) | 1d | drop | 46 | 21.7 | -54.92 | -78.66 | -68.78 | +171.88 | 10 | 30 | 13 | $-191.00 | 28.3% | non-positive median return |
 | S360 (RubberBand_1DTE) | 1d | drop | 42 | 9.5 | -55.98 | -81.57 | -70.37 | -22.62 | 10 | 30 | 15 | $-762.00 | 26.2% | non-positive median return |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 31 | 9.7 | -56.25 | -87.10 | -75.81 | -36.96 | 14 | 36 | 10 | $-759.00 | 51.6% | non-positive median return |
 | S363 (RubberBand_5DTE) | 5d | drop | 25 | 44.0 | -63.08 | -91.69 | -82.54 | +62.86 | 7 | 29 | 14 | $-447.00 | 36.0% | non-positive median return |
@@ -260,7 +260,7 @@ _Pipeline evaluation as of 2026-08-10. Auto-kill thresholds: median<-25% at n>=1
 | S220 | Pullback50 | 0 | — | — | NEW | 0 |
 | S221 | GoldenPocket | 0 | — | — | NEW | 0 |
 | S350 | GapDown_0DTE | 34 | +13.38% | 53% | INSUFFICIENT | 10 |
-| S351 | GapDown_1DTE | 45 | -53.85% | 22% | INSUFFICIENT | 10 |
+| S351 | GapDown_1DTE | 46 | -54.92% | 22% | INSUFFICIENT | 10 |
 | S352 | GapDown_2DTE | 29 | +13.04% | 52% | INSUFFICIENT | 10 |
 | S353 | GapDown_3DTE | 20 | -34.69% | 40% | INSUFFICIENT | 10 |
 | S354 | GapDown_5DTE | 37 | -52.31% | 38% | INSUFFICIENT | 10 |

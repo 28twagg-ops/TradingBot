@@ -1682,26 +1682,6 @@
       "entry_order_id": "d6fad8c4-430e-4eda-9905-bb530ed7b845"
     },
     {
-      "lot_id": "67c4c5500de9",
-      "bucket_id": 285,
-      "profile_name": "lab0285_s351_w3_1045_1120_r2",
-      "strategy_id": "S351",
-      "occ_symbol": "AAPL260810C00307500",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 55.00000000000001,
-      "entry_price": 0.55,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T14:48:34.978260+00:00",
-      "entry_order_id": "47257b32-c44e-4e6e-acf8-128283831844"
-    },
-    {
       "lot_id": "c816951cdadb",
       "bucket_id": 269,
       "profile_name": "lab0269_s403_w4_1120_1135_r2",
@@ -3295,14 +3275,14 @@
       "submitted": "2026-08-10T12:01:19"
     },
     {
-      "order_id": "4eca8a47-e762-4d03-aae3-c5f729a0c4ff",
-      "lot_id": "67c4c5500de9",
-      "bucket_id": 285,
-      "strategy_id": "S351",
+      "order_id": "c22df2ae-8337-437b-b19d-c7abcd371b76",
+      "lot_id": "6aad0d189f53",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
       "occ_symbol": "AAPL260810C00307500",
-      "qty": 1,
-      "reason": "stop_loss (-72.5%)",
-      "submitted": "2026-08-10T12:31:36"
+      "qty": 3,
+      "reason": "stop_loss (-74.2%)",
+      "submitted": "2026-08-10T12:41:11"
     }
   ],
   "bucket_open_premium": {
@@ -3390,7 +3370,6 @@
     "b316": 62.0,
     "b301": 41.0,
     "b300": 41.0,
-    "b285": 55.00000000000001,
     "b269": 56.00000000000001,
     "b268": 56.00000000000001,
     "b170": 45.0,
@@ -4126,7 +4105,8 @@
     "98a363c3-ba3a-4273-9d59-0e719dd98ad7",
     "edd6bb0c-b3bf-48ef-8b7b-8bd26a040ed2",
     "3b357e46-c2d6-4848-83e8-9a4979aa587b",
-    "9819b7db-1b12-452f-8edd-5d46081fc40f"
+    "9819b7db-1b12-452f-8edd-5d46081fc40f",
+    "4eca8a47-e762-4d03-aae3-c5f729a0c4ff"
   ],
   "submitted_today": 192,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
