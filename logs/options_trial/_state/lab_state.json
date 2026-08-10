@@ -242,26 +242,6 @@
       "entry_order_id": "4a15345c-e3eb-4067-af42-8f7bc9f302ef"
     },
     {
-      "lot_id": "cffa607bc13f",
-      "bucket_id": 235,
-      "profile_name": "lab0235_s401_w1_0928_1005_r2",
-      "strategy_id": "S401",
-      "occ_symbol": "TSLA260812C00350000",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 51.0,
-      "entry_price": 0.51,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T14:01:51.029278+00:00",
-      "entry_order_id": "3d582c0d-781f-486c-b094-5849b83c0612"
-    },
-    {
       "lot_id": "d3615415a097",
       "bucket_id": 234,
       "profile_name": "lab0234_s401_w1_0928_1005_r1",
@@ -3255,14 +3235,14 @@
       "submitted": "2026-08-10T12:01:19"
     },
     {
-      "order_id": "b13138f5-44cf-4083-9b3e-4c45ecaa0e16",
-      "lot_id": "cffa607bc13f",
-      "bucket_id": 235,
-      "strategy_id": "S401",
-      "occ_symbol": "TSLA260812C00350000",
+      "order_id": "57e5d214-f584-4331-afbb-d1f4074f5a2f",
+      "lot_id": "d16f34aeb4ba",
+      "bucket_id": 97,
+      "strategy_id": "S211",
+      "occ_symbol": "PFE260814C00027000",
       "qty": 1,
-      "reason": "stop_loss (-54.5%)",
-      "submitted": "2026-08-10T12:46:10"
+      "reason": "take_profit (+51.6%)",
+      "submitted": "2026-08-10T13:00:09"
     }
   ],
   "bucket_open_premium": {
@@ -3278,7 +3258,6 @@
     "b109": 51.0,
     "b305": 62.0,
     "b304": 62.0,
-    "b235": 51.0,
     "b234": 52.0,
     "b857": 46.0,
     "b856": 46.0,
@@ -4087,7 +4066,8 @@
     "3b357e46-c2d6-4848-83e8-9a4979aa587b",
     "9819b7db-1b12-452f-8edd-5d46081fc40f",
     "4eca8a47-e762-4d03-aae3-c5f729a0c4ff",
-    "c22df2ae-8337-437b-b19d-c7abcd371b76"
+    "c22df2ae-8337-437b-b19d-c7abcd371b76",
+    "b13138f5-44cf-4083-9b3e-4c45ecaa0e16"
   ],
   "submitted_today": 192,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
