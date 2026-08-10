@@ -3282,26 +3282,6 @@
       "entry_order_id": "orphan:TTD260828C00014000"
     },
     {
-      "lot_id": "5a7ea7321ee6",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "UBER260814C00078000",
-      "underlying": "UBER",
-      "qty": 1,
-      "entry_cost": 44.0,
-      "entry_price": 0.44,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T15:36:29.712555+00:00",
-      "entry_order_id": "orphan:UBER260814C00078000"
-    },
-    {
       "lot_id": "30e1a418b4d0",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -3445,16 +3425,6 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "65b36b14-daa7-400a-983b-831a3730c3ff",
-      "lot_id": "e36ff976b532",
-      "bucket_id": 110,
-      "strategy_id": "S212",
-      "occ_symbol": "UBER260814C00078000",
-      "qty": 1,
-      "reason": "take_profit (+143.2%)",
-      "submitted": "2026-08-10T10:02:09"
-    },
-    {
       "order_id": "8f38c8b8-37ed-4b06-ad47-b265c793ccab",
       "lot_id": "4d1a3e51f3d4",
       "bucket_id": 396,
@@ -3493,6 +3463,36 @@
       "qty": 1,
       "reason": "stop_loss (-59.2%)",
       "submitted": "2026-08-10T12:01:19"
+    },
+    {
+      "order_id": "d17f4a29-9763-4f2d-9e4f-cfa2d5581367",
+      "lot_id": "8258dd8747e5",
+      "bucket_id": 315,
+      "strategy_id": "S355",
+      "occ_symbol": "AAPL260817C00322500",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-08-10T12:16:21"
+    },
+    {
+      "order_id": "bc1cf46f-0697-46be-ae5f-a65c84052533",
+      "lot_id": "77dd84179ade",
+      "bucket_id": 277,
+      "strategy_id": "S350",
+      "occ_symbol": "AAPL260810C00307500",
+      "qty": 1,
+      "reason": "stop_loss (-82.8%)",
+      "submitted": "2026-08-10T12:16:23"
+    },
+    {
+      "order_id": "84199a38-d472-4008-b963-f4abbc53f708",
+      "lot_id": "386e50011c4e",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "CELH260814C00032000",
+      "qty": 2,
+      "reason": "stop_loss (-66.7%)",
+      "submitted": "2026-08-10T12:16:25"
     }
   ],
   "bucket_open_premium": {
@@ -3621,7 +3621,7 @@
     "b86": 44.0,
     "b349": 28.999999999999996,
     "b82": 48.0,
-    "b0": 2778.2971,
+    "b0": 2734.2971,
     "b919": 65.0,
     "b918": 65.0,
     "b821": 65.0,
