@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "a1ce26a89873",
-      "bucket_id": 420,
-      "profile_name": "lab0420_s365_w2_1005_1045_r1",
-      "strategy_id": "S365",
-      "occ_symbol": "NKE260821C00044000",
-      "underlying": "NKE",
-      "qty": 1,
-      "entry_cost": 60.0,
-      "entry_price": 0.6,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-04T14:16:18.434954+00:00",
-      "entry_order_id": "7a26a19e-414e-42e7-8bc4-55b0dbefbda9"
-    },
-    {
       "lot_id": "865b546efdca",
       "bucket_id": 323,
       "profile_name": "lab0323_s356_w2_1005_1045_r2",
@@ -1360,26 +1340,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-10T14:38:01.891710+00:00",
       "entry_order_id": "9c13b095-7d96-4746-bc83-3b681870f9c0"
-    },
-    {
-      "lot_id": "8a424a7462f1",
-      "bucket_id": 181,
-      "profile_name": "lab0181_s217_w2_1005_1045_r2",
-      "strategy_id": "S217",
-      "occ_symbol": "RBLX260814C00042000",
-      "underlying": "RBLX",
-      "qty": 1,
-      "entry_cost": 28.999999999999996,
-      "entry_price": 0.29,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T14:40:46.709532+00:00",
-      "entry_order_id": "a66d803d-710e-4cbf-ba6d-774729889072"
     },
     {
       "lot_id": "3b537aaaf3eb",
@@ -3135,28 +3095,27 @@
       "submitted": "2026-08-10T12:01:19"
     },
     {
-      "order_id": "ff9397fe-b727-46a0-b2da-0c8202977080",
-      "lot_id": "a1ce26a89873",
-      "bucket_id": 420,
-      "strategy_id": "S365",
-      "occ_symbol": "NKE260821C00044000",
-      "qty": 1,
-      "reason": "stop_loss (-50.8%)",
-      "submitted": "2026-08-10T13:35:52"
-    },
-    {
-      "order_id": "c720fde8-22cb-4166-a1af-32588bb67807",
-      "lot_id": "8a424a7462f1",
-      "bucket_id": 181,
+      "order_id": "854c800e-162f-4a6e-864b-6605b02062d3",
+      "lot_id": "3b537aaaf3eb",
+      "bucket_id": 180,
       "strategy_id": "S217",
       "occ_symbol": "RBLX260814C00042000",
       "qty": 1,
       "reason": "stop_loss (-51.7%)",
-      "submitted": "2026-08-10T13:36:04"
+      "submitted": "2026-08-10T13:41:01"
+    },
+    {
+      "order_id": "b13e8c8c-115a-4ad7-9370-b054ba34c382",
+      "lot_id": "865b546efdca",
+      "bucket_id": 323,
+      "strategy_id": "S356",
+      "occ_symbol": "NKE260821C00044000",
+      "qty": 1,
+      "reason": "stop_loss (-54.0%)",
+      "submitted": "2026-08-10T13:41:10"
     }
   ],
   "bucket_open_premium": {
-    "b420": 60.0,
     "b323": 60.0,
     "b322": 60.0,
     "b423": 63.0,
@@ -3224,7 +3183,6 @@
     "b407": 65.0,
     "b901": 25.0,
     "b900": 25.0,
-    "b181": 28.999999999999996,
     "b180": 28.999999999999996,
     "b916": 40.0,
     "b847": 57.99999999999999,
@@ -3978,7 +3936,9 @@
     "acc0e1ea-e903-43d0-b1c0-2f52668cff33",
     "9ec3cfa8-13ea-4262-b099-9e814a204d6c",
     "aff923f4-3c16-4e47-b55c-dbe787886603",
-    "b0d463af-535e-44f7-9488-89a2560e08e2"
+    "b0d463af-535e-44f7-9488-89a2560e08e2",
+    "c720fde8-22cb-4166-a1af-32588bb67807",
+    "ff9397fe-b727-46a0-b2da-0c8202977080"
   ],
   "submitted_today": 192,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

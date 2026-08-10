@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-10
 
-_Generated 2026-08-10T13:36:13.190462_
+_Generated 2026-08-10T13:41:15.918801_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-10T13:36:13.190462_
 
 ## Attribution health
 
-- Total exits: **2240**
+- Total exits: **2242**
 - Orphan exits (b0/orphan_reconcile): **258**
 - Orphan rate: **11.5%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -96,7 +96,7 @@ _Generated 2026-08-10T13:36:13.190462_
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S356 (GapDown_14DTE) | 14d | watch | 10 | 40.0 | -22.22 | -53.73 | -49.08 | +58.62 | 10 | 2 | 6 | $-28.00 | 60.0% | early sample with non-positive median |
 | S367 (RubberBand_30DTE) | 30d | watch | 2 | 0.0 | -38.20 | -48.75 | -44.79 | -27.64 | 6 | 0 | 2 | $-55.00 | 100.0% | insufficient sample (<8 exits) |
-| S365 (RubberBand_14DTE) | 14d | watch | 8 | 25.0 | -49.97 | -83.58 | -68.39 | +104.39 | 10 | 4 | 8 | $-92.00 | 37.5% | early sample with non-positive median |
+| S365 (RubberBand_14DTE) | 14d | watch | 9 | 22.2 | -48.33 | -83.58 | -63.33 | +87.87 | 10 | 4 | 9 | $-121.00 | 44.4% | early sample with non-positive median |
 | S400 (Any_Green_Close) | 3d | watch | 5 | 0.0 | -50.00 | -66.67 | -66.67 | -33.33 | 10 | 0 | 0 | $-30.00 | 100.0% | insufficient sample (<8 exits) |
 | S358 (GapDown_30DTE) | 30d | watch | 2 | 0.0 | -51.39 | -51.39 | -51.39 | -51.39 | 6 | 2 | 2 | $-74.00 | 100.0% | insufficient sample (<8 exits) |
 | S366 (RubberBand_21DTE) | 21d | watch | 8 | 0.0 | -55.19 | -58.31 | -56.92 | -49.12 | 6 | 0 | 8 | $-268.00 | 100.0% | early sample with non-positive median |
@@ -113,7 +113,7 @@ _Generated 2026-08-10T13:36:13.190462_
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 35 | 0 | 0 | $+62.64 | 27.5% | manually paused — excluded from new entries & reflected P&L |
 | S353 (GapDown_3DTE) | 3d | drop | 20 | 40.0 | -34.69 | -85.57 | -76.88 | +124.42 | 10 | 12 | 6 | $-46.00 | 45.0% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 245 | 29.8 | -38.18 | -63.39 | -54.55 | +81.82 | 35 | 0 | 0 | $-1,828.78 | 26.1% | non-positive median return |
-| S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 31 | 45.2 | -43.75 | -68.75 | -57.19 | +206.67 | 14 | 18 | 3 | $+502.00 | 67.7% | non-positive median return |
+| S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 32 | 43.8 | -43.75 | -68.75 | -56.38 | +202.54 | 14 | 18 | 4 | $+487.00 | 68.8% | non-positive median return |
 | S399 (GapDown_OTM1) | 3d | drop | 39 | 46.2 | -46.15 | -78.76 | -66.67 | +142.00 | 10 | 24 | 6 | $+64.00 | 41.0% | non-positive median return |
 | S359 (RubberBand_0DTE) | 0d | drop | 23 | 17.4 | -46.67 | -71.43 | -70.37 | +61.82 | 7 | 14 | 0 | $-323.00 | 43.5% | non-positive median return |
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 14 | 0 | 0 | $-822.00 | 43.2% | non-positive median return |
@@ -206,7 +206,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S216 | 3d ATM RSI x30 | 31 | -56.25 | -87.10 | -75.81 | 36 | 10 |
-| S217 | 3d ATM RSI<25 bounce | 31 | -43.75 | -68.75 | -57.19 | 18 | 3 |
+| S217 | 3d ATM RSI<25 bounce | 32 | -43.75 | -68.75 | -56.38 | 18 | 4 |
 | S218 | 3d ATM BB lower touch | 52 | +48.91 | -73.54 | -52.61 | 28 | 7 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
@@ -254,7 +254,7 @@ _Pipeline evaluation as of 2026-08-10. Auto-kill thresholds: median<-25% at n>=1
 | S214 | MA_Death_Cross | 0 | — | — | NEW | 0 |
 | S215 | MA_Reclaim_200 | 0 | — | — | NEW | 0 |
 | S216 | RSI_Oversold_Cross | 31 | -56.25% | 10% | INSUFFICIENT | 14 |
-| S217 | RSI_25_Bounce | 31 | -43.75% | 45% | INSUFFICIENT | 14 |
+| S217 | RSI_25_Bounce | 32 | -43.75% | 44% | INSUFFICIENT | 14 |
 | S218 | BB_Lower_Touch | 52 | +48.91% | 63% | INSUFFICIENT | 14 |
 | S219 | Volume_Climax_Up | 0 | — | — | NEW | 0 |
 | S220 | Pullback50 | 0 | — | — | NEW | 0 |
@@ -274,7 +274,7 @@ _Pipeline evaluation as of 2026-08-10. Auto-kill thresholds: median<-25% at n>=1
 | S362 | RubberBand_3DTE | 33 | +34.88% | 73% | INSUFFICIENT | 10 |
 | S363 | RubberBand_5DTE | 25 | -63.08% | 44% | INSUFFICIENT | 7 |
 | S364 | RubberBand_7DTE | 31 | +50.00% | 58% | INSUFFICIENT | 10 |
-| S365 | RubberBand_14DTE | 8 | -49.97% | 25% | WATCH | 10 |
+| S365 | RubberBand_14DTE | 9 | -48.33% | 22% | WATCH | 10 |
 | S366 | RubberBand_21DTE | 8 | -55.19% | 0% | WATCH | 6 |
 | S367 | RubberBand_30DTE | 2 | -38.20% | 0% | WATCH | 6 |
 | S368 | BBSqueeze_0DTE | 0 | — | — | NEW | 0 |
