@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "ddd8a7b0c2ac",
-      "bucket_id": 422,
-      "profile_name": "lab0422_s365_w3_1045_1120_r1",
-      "strategy_id": "S365",
-      "occ_symbol": "NKE260821C00044000",
-      "underlying": "NKE",
-      "qty": 1,
-      "entry_cost": 63.0,
-      "entry_price": 0.63,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-04T14:48:52.720324+00:00",
-      "entry_order_id": "fc365c33-0f7f-4561-a8d6-db734baa56cc"
-    },
-    {
       "lot_id": "7113a543a163",
       "bucket_id": 327,
       "profile_name": "lab0327_s356_w4_1120_1135_r2",
@@ -3025,18 +3005,27 @@
       "submitted": "2026-08-10T13:51:35"
     },
     {
-      "order_id": "da55af4e-dad0-40c9-86c9-8ca3aa2256e9",
-      "lot_id": "ddd8a7b0c2ac",
-      "bucket_id": 422,
-      "strategy_id": "S365",
+      "order_id": "111ae98b-8507-4627-9a27-34ccc362f01c",
+      "lot_id": "7113a543a163",
+      "bucket_id": 327,
+      "strategy_id": "S356",
       "occ_symbol": "NKE260821C00044000",
       "qty": 1,
-      "reason": "stop_loss (-52.4%)",
-      "submitted": "2026-08-10T14:25:50"
+      "reason": "stop_loss (-54.0%)",
+      "submitted": "2026-08-10T14:31:07"
+    },
+    {
+      "order_id": "ed248dbc-2890-4f8a-858d-f6f30b87186c",
+      "lot_id": "de5588c83a9d",
+      "bucket_id": 21,
+      "strategy_id": "S202",
+      "occ_symbol": "CELH260814C00029000",
+      "qty": 1,
+      "reason": "stop_loss (-64.3%)",
+      "submitted": "2026-08-10T14:31:22"
     }
   ],
   "bucket_open_premium": {
-    "b422": 63.0,
     "b327": 61.0,
     "b326": 61.0,
     "b109": 51.0,
@@ -3857,7 +3846,8 @@
     "ff9397fe-b727-46a0-b2da-0c8202977080",
     "b13e8c8c-115a-4ad7-9370-b054ba34c382",
     "781227e2-919e-44c0-a84f-da3ad297ed7e",
-    "e1a8f96d-90ef-4447-8891-3609f8957d26"
+    "e1a8f96d-90ef-4447-8891-3609f8957d26",
+    "da55af4e-dad0-40c9-86c9-8ca3aa2256e9"
   ],
   "submitted_today": 192,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
