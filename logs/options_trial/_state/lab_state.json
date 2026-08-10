@@ -242,26 +242,6 @@
       "entry_order_id": "4a15345c-e3eb-4067-af42-8f7bc9f302ef"
     },
     {
-      "lot_id": "77dd84179ade",
-      "bucket_id": 277,
-      "profile_name": "lab0277_s350_w1_0928_1005_r2",
-      "strategy_id": "S350",
-      "occ_symbol": "AAPL260810C00307500",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 73.0,
-      "entry_price": 0.73,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T14:01:50.960521+00:00",
-      "entry_order_id": "bcb8f74c-0379-4742-966e-6c43487db19d"
-    },
-    {
       "lot_id": "7f20c3504178",
       "bucket_id": 276,
       "profile_name": "lab0276_s350_w1_0928_1005_r1",
@@ -1160,26 +1140,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-10T14:16:35.271374+00:00",
       "entry_order_id": "67334ac9-b487-46bc-aa84-eaaadfd26e3b"
-    },
-    {
-      "lot_id": "8258dd8747e5",
-      "bucket_id": 315,
-      "profile_name": "lab0315_s355_w2_1005_1045_r2",
-      "strategy_id": "S355",
-      "occ_symbol": "AAPL260817C00322500",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 46.0,
-      "entry_price": 0.46,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T14:16:35.310736+00:00",
-      "entry_order_id": "54a63bd7-8e69-4ee3-a690-b1f3744f0d04"
     },
     {
       "lot_id": "77e93fe4b8f2",
@@ -2502,26 +2462,6 @@
       "entry_order_id": "56f19876-57e0-4ac5-9cbd-0d8dc47e2cd7"
     },
     {
-      "lot_id": "2f9855601404",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "TSLA260812C00347500",
-      "underlying": "TSLA",
-      "qty": 2,
-      "entry_cost": 100.0,
-      "entry_price": 0.5,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T15:23:17.746243+00:00",
-      "entry_order_id": "orphan:TSLA260812C00347500"
-    },
-    {
       "lot_id": "eeeb7d626317",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -3382,26 +3322,6 @@
       "entry_order_id": "orphan:AAPL260817C00320000"
     },
     {
-      "lot_id": "386e50011c4e",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "CELH260814C00032000",
-      "underlying": "CELH",
-      "qty": 2,
-      "entry_cost": 6.0,
-      "entry_price": 0.03,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T15:47:02.237525+00:00",
-      "entry_order_id": "orphan:CELH260814C00032000"
-    },
-    {
       "lot_id": "d99d441afdf1",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -3420,6 +3340,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-10T15:50:46.944832+00:00",
       "entry_order_id": "orphan:RBLX260814C00041000"
+    },
+    {
+      "lot_id": "755c5aa2f481",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "TSLA260812C00347500",
+      "underlying": "TSLA",
+      "qty": 2,
+      "entry_cost": 100.0,
+      "entry_price": 0.5,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-10T16:20:50.498404+00:00",
+      "entry_order_id": "orphan:TSLA260812C00347500"
     }
   ],
   "pending_orders": [],
@@ -3465,34 +3405,24 @@
       "submitted": "2026-08-10T12:01:19"
     },
     {
-      "order_id": "d17f4a29-9763-4f2d-9e4f-cfa2d5581367",
-      "lot_id": "8258dd8747e5",
-      "bucket_id": 315,
+      "order_id": "50999a11-4d5f-4d57-8c77-06fc826bf6e5",
+      "lot_id": "77e93fe4b8f2",
+      "bucket_id": 314,
       "strategy_id": "S355",
       "occ_symbol": "AAPL260817C00322500",
       "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-08-10T12:16:21"
+      "reason": "stop_loss (-56.5%)",
+      "submitted": "2026-08-10T12:20:55"
     },
     {
-      "order_id": "bc1cf46f-0697-46be-ae5f-a65c84052533",
-      "lot_id": "77dd84179ade",
-      "bucket_id": 277,
+      "order_id": "98a363c3-ba3a-4273-9d59-0e719dd98ad7",
+      "lot_id": "7f20c3504178",
+      "bucket_id": 276,
       "strategy_id": "S350",
       "occ_symbol": "AAPL260810C00307500",
       "qty": 1,
-      "reason": "stop_loss (-82.8%)",
-      "submitted": "2026-08-10T12:16:23"
-    },
-    {
-      "order_id": "84199a38-d472-4008-b963-f4abbc53f708",
-      "lot_id": "386e50011c4e",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "CELH260814C00032000",
-      "qty": 2,
-      "reason": "stop_loss (-66.7%)",
-      "submitted": "2026-08-10T12:16:25"
+      "reason": "stop_loss (-63.9%)",
+      "submitted": "2026-08-10T12:21:06"
     }
   ],
   "bucket_open_premium": {
@@ -3508,7 +3438,6 @@
     "b109": 51.0,
     "b305": 62.0,
     "b304": 62.0,
-    "b277": 73.0,
     "b276": 73.0,
     "b235": 51.0,
     "b234": 52.0,
@@ -3554,7 +3483,6 @@
     "b794": 62.0,
     "b365": 42.0,
     "b364": 42.0,
-    "b315": 46.0,
     "b314": 46.0,
     "b291": 17.0,
     "b843": 21.0,
@@ -3621,7 +3549,7 @@
     "b86": 44.0,
     "b349": 28.999999999999996,
     "b82": 48.0,
-    "b0": 2734.2971,
+    "b0": 2728.2971,
     "b919": 65.0,
     "b918": 65.0,
     "b821": 65.0,
@@ -4316,7 +4244,10 @@
     "e9e16535-f013-46e7-981c-2feb8a05399c",
     "32a52d6e-89eb-419e-a06e-2637b5f401d2",
     "2aea975d-4c0f-44d6-8be2-556a5bc2f240",
-    "37400874-ea4d-46a8-80c4-f06ad3dbbd4d"
+    "37400874-ea4d-46a8-80c4-f06ad3dbbd4d",
+    "84199a38-d472-4008-b963-f4abbc53f708",
+    "bc1cf46f-0697-46be-ae5f-a65c84052533",
+    "d17f4a29-9763-4f2d-9e4f-cfa2d5581367"
   ],
   "submitted_today": 192,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
