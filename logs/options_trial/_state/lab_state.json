@@ -282,26 +282,6 @@
       "entry_order_id": "9dc1312e-6003-4df1-b9b6-9dcff4f0adb7"
     },
     {
-      "lot_id": "fecd671a472b",
-      "bucket_id": 95,
-      "profile_name": "lab0095_s211_w1_0928_1005_r2",
-      "strategy_id": "S211",
-      "occ_symbol": "PFE260814C00027000",
-      "underlying": "PFE",
-      "qty": 1,
-      "entry_cost": 18.0,
-      "entry_price": 0.18,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T14:01:51.131820+00:00",
-      "entry_order_id": "55cf92f6-7af2-470e-b553-04b4b67bc1ee"
-    },
-    {
       "lot_id": "425db2522c34",
       "bucket_id": 857,
       "profile_name": "lab0857_s408_w1_0928_1005_r2",
@@ -3305,16 +3285,6 @@
       "submitted": "2026-08-10T10:16:43"
     },
     {
-      "order_id": "9819b7db-1b12-452f-8edd-5d46081fc40f",
-      "lot_id": "fecd671a472b",
-      "bucket_id": 95,
-      "strategy_id": "S211",
-      "occ_symbol": "PFE260814C00027000",
-      "qty": 1,
-      "reason": "take_profit (+50.0%)",
-      "submitted": "2026-08-10T11:16:10"
-    },
-    {
       "order_id": "ea26c634-1355-429f-8c26-701ddea26336",
       "lot_id": "f2c03e8f0460",
       "bucket_id": 347,
@@ -3350,7 +3320,6 @@
     "b304": 62.0,
     "b235": 51.0,
     "b234": 52.0,
-    "b95": 18.0,
     "b857": 46.0,
     "b856": 46.0,
     "b829": 24.0,
@@ -4156,7 +4125,8 @@
     "d17f4a29-9763-4f2d-9e4f-cfa2d5581367",
     "98a363c3-ba3a-4273-9d59-0e719dd98ad7",
     "edd6bb0c-b3bf-48ef-8b7b-8bd26a040ed2",
-    "3b357e46-c2d6-4848-83e8-9a4979aa587b"
+    "3b357e46-c2d6-4848-83e8-9a4979aa587b",
+    "9819b7db-1b12-452f-8edd-5d46081fc40f"
   ],
   "submitted_today": 192,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
