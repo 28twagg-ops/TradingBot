@@ -2448,3 +2448,47 @@ Fetched daily bars for 114/117 symbols
 ### Options bot full output
 
 ```text
+
+## Run 20260810T135140Z
+
+- UTC timestamp: `20260810T135140Z`
+- GitHub run: [#6535](https://github.com/28twagg-ops/TradingBot/actions/runs/31394909037)
+- Run id: `31394909037`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-10T09:25:53.866121-04:00","date":"2026-08-10","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.3,"phases_s":{"reconcile":0.64},"signals":0,"placed":0,"equity":142831.74,"open_positions":11,"pending_orders":0,"open_lots":52,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"6530","github_run_id":"31392772050","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:51:41  INFO      Mode: morning_scan
+13:51:41  INFO        Universe cache hit: 903 tickers (tickers_2026-08-10.json)
+13:51:42  INFO        [universe] 40/903 (40 valid)
+13:51:44  INFO        [universe] 80/903 (80 valid)
+13:51:45  INFO        [universe] 120/903 (120 valid)
+13:51:46  INFO        [universe] 160/903 (160 valid)
+13:51:56  INFO        [universe] 200/903 (199 valid)
+13:52:09  INFO        [universe] 240/903 (238 valid)
+13:52:19  INFO        [universe] 280/903 (278 valid)
+13:52:32  INFO        [universe] 320/903 (318 valid)
+13:52:45  INFO        [universe] 360/903 (358 valid)
+13:52:55  INFO        [universe] 400/903 (397 valid)
+13:53:08  INFO        [universe] 440/903 (437 valid)
+13:53:21  INFO        [universe] 480/903 (477 valid)
+13:53:31  INFO        [universe] 520/903 (517 valid)
+13:53:44  INFO        [universe] 560/903 (557 valid)
+13:53:57  INFO        [universe] 600/903 (597 valid)
+13:54:07  INFO        [universe] 640/903 (637 valid)
+13:54:20  INFO        [universe] 680/903 (677 valid)
+13:54:33  INFO        [universe] 720/903 (717 valid)
+13:54:46  INFO        [universe] 760/903 (757 valid)
+13:54:56  INFO        [universe] 800/903 (797 valid)
+13:55:09  INFO        [universe] 840/903 (836 valid)
+```
+
+### Options bot full output
+
+```text
