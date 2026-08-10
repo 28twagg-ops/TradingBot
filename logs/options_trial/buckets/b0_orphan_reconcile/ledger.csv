@@ -238,3 +238,8 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-07T20:01:32Z,reconcile,0,orphan_reconcile,ORPHAN,cd6a8f77d52e,CVX,CVX260821C00202500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-07 19:54:59.935389+00:00,exit,0,orphan_reconcile,ORPHAN,7fefc4d59ab4,AMZN,AMZN260807C00295000,2,,0.33,80.67,-18.18,-14.67,reconcile_fill,,-0.01,0.5,-0.5,,,dccc7e0d-0063-4eac-a858-a133e3328875
 2026-08-07 19:54:17.810455+00:00,exit,0,orphan_reconcile,ORPHAN,7fefc4d59ab4,AMZN,AMZN260807C00295000,1,,0.13,40.33,-67.77,-27.33,stop_loss (-60.0%),,-0.01,0.5,-0.5,,,683bf791-93e5-4269-97f8-6f665e527b46
+2026-08-10T13:00:48Z,reconcile,0,orphan_reconcile,ORPHAN,98c85151b5d5,AMZN,AMZN260807C00302500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-10T13:00:48Z,reconcile,0,orphan_reconcile,ORPHAN,e4f72e015884,AMZN,AMZN260807C00297500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-10T13:00:48Z,reconcile,0,orphan_reconcile,ORPHAN,fde0a1e3bcd5,CVNA,CVNA260807C00071000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-10T13:00:48Z,reconcile,0,orphan_reconcile,ORPHAN,142e9b02da30,AMZN,AMZN260807C00292500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-10T13:00:48Z,reconcile,0,orphan_reconcile,ORPHAN,73c96cca589b,AMZN,AMZN260807C00295000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
