@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "20cb3e46cf8a",
-      "bucket_id": 423,
-      "profile_name": "lab0423_s365_w3_1045_1120_r2",
-      "strategy_id": "S365",
-      "occ_symbol": "NKE260821C00044000",
-      "underlying": "NKE",
-      "qty": 1,
-      "entry_cost": 63.0,
-      "entry_price": 0.63,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-04T14:48:52.680510+00:00",
-      "entry_order_id": "795cf655-b9cb-4a18-b03b-7e5a9c2abf6e"
-    },
-    {
       "lot_id": "ddd8a7b0c2ac",
       "bucket_id": 422,
       "profile_name": "lab0422_s365_w3_1045_1120_r1",
@@ -3045,18 +3025,17 @@
       "submitted": "2026-08-10T13:51:35"
     },
     {
-      "order_id": "e1a8f96d-90ef-4447-8891-3609f8957d26",
-      "lot_id": "20cb3e46cf8a",
-      "bucket_id": 423,
+      "order_id": "da55af4e-dad0-40c9-86c9-8ca3aa2256e9",
+      "lot_id": "ddd8a7b0c2ac",
+      "bucket_id": 422,
       "strategy_id": "S365",
       "occ_symbol": "NKE260821C00044000",
       "qty": 1,
-      "reason": "stop_loss (-54.0%)",
-      "submitted": "2026-08-10T13:55:56"
+      "reason": "stop_loss (-52.4%)",
+      "submitted": "2026-08-10T14:25:50"
     }
   ],
   "bucket_open_premium": {
-    "b423": 63.0,
     "b422": 63.0,
     "b327": 61.0,
     "b326": 61.0,
@@ -3877,7 +3856,8 @@
     "c720fde8-22cb-4166-a1af-32588bb67807",
     "ff9397fe-b727-46a0-b2da-0c8202977080",
     "b13e8c8c-115a-4ad7-9370-b054ba34c382",
-    "781227e2-919e-44c0-a84f-da3ad297ed7e"
+    "781227e2-919e-44c0-a84f-da3ad297ed7e",
+    "e1a8f96d-90ef-4447-8891-3609f8957d26"
   ],
   "submitted_today": 192,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-10
 
-_Generated 2026-08-10T14:21:16.450343_
+_Generated 2026-08-10T14:25:57.131266_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-10T14:21:16.450343_
 
 ## Attribution health
 
-- Total exits: **2244**
+- Total exits: **2245**
 - Orphan exits (b0/orphan_reconcile): **258**
 - Orphan rate: **11.5%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -96,7 +96,7 @@ _Generated 2026-08-10T14:21:16.450343_
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S356 (GapDown_14DTE) | 14d | watch | 12 | 33.3 | -35.65 | -53.52 | -50.42 | +56.55 | 10 | 2 | 8 | $-89.00 | 50.0% | early sample with non-positive median |
 | S367 (RubberBand_30DTE) | 30d | watch | 2 | 0.0 | -38.20 | -48.75 | -44.79 | -27.64 | 6 | 0 | 2 | $-55.00 | 100.0% | insufficient sample (<8 exits) |
-| S365 (RubberBand_14DTE) | 14d | watch | 9 | 22.2 | -48.33 | -83.58 | -63.33 | +87.87 | 10 | 4 | 9 | $-121.00 | 44.4% | early sample with non-positive median |
+| S365 (RubberBand_14DTE) | 14d | watch | 10 | 20.0 | -49.56 | -83.58 | -60.40 | +71.36 | 10 | 4 | 10 | $-153.00 | 50.0% | early sample with non-positive median |
 | S400 (Any_Green_Close) | 3d | watch | 5 | 0.0 | -50.00 | -66.67 | -66.67 | -33.33 | 10 | 0 | 0 | $-30.00 | 100.0% | insufficient sample (<8 exits) |
 | S358 (GapDown_30DTE) | 30d | watch | 2 | 0.0 | -51.39 | -51.39 | -51.39 | -51.39 | 6 | 2 | 2 | $-74.00 | 100.0% | insufficient sample (<8 exits) |
 | S366 (RubberBand_21DTE) | 21d | watch | 8 | 0.0 | -55.19 | -58.31 | -56.92 | -49.12 | 6 | 0 | 8 | $-268.00 | 100.0% | early sample with non-positive median |
@@ -274,7 +274,7 @@ _Pipeline evaluation as of 2026-08-10. Auto-kill thresholds: median<-25% at n>=1
 | S362 | RubberBand_3DTE | 33 | +34.88% | 73% | INSUFFICIENT | 10 |
 | S363 | RubberBand_5DTE | 25 | -63.08% | 44% | INSUFFICIENT | 7 |
 | S364 | RubberBand_7DTE | 31 | +50.00% | 58% | INSUFFICIENT | 10 |
-| S365 | RubberBand_14DTE | 9 | -48.33% | 22% | WATCH | 10 |
+| S365 | RubberBand_14DTE | 10 | -49.56% | 20% | WATCH | 10 |
 | S366 | RubberBand_21DTE | 8 | -55.19% | 0% | WATCH | 6 |
 | S367 | RubberBand_30DTE | 2 | -38.20% | 0% | WATCH | 6 |
 | S368 | BBSqueeze_0DTE | 0 | — | — | NEW | 0 |
