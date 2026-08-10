@@ -128,8 +128,8 @@
   {
     "bucket_id": 21,
     "profile": "lab0021_s202_w3_1045_1120_r2",
-    "open_premium": 14.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 22,
