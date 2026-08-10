@@ -724,3 +724,7 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-08-07 13:56:39,2026-08-07,SELL,CNC,Pullback50,64.9385,64.81,64.88,94.73,-0.0901,-0.0853,limit_fill_position_check_full,midline (+0.4%),bull
 2026-08-07 18:45:58,2026-08-07,SELL,GOOG,Pullback50,352.99,,352.99,93.95,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
 2026-08-07 19:51:18,2026-08-07,SELL,BR,EarningsDrift,166.5,166.17,166.44,93.95,-0.036,-0.0339,limit_fill_position_check_full,midline (-0.1%),bull
+2026-08-10 13:47:56,2026-08-10,SELL,AAPL,Pullback50,305.91,,305.91,92.77,0.0,0.0,market_urgent_full,stop_loss (-1.8%),bull
+2026-08-10 13:47:59,2026-08-10,SELL,ESS,Pullback50,284.1337,,284.1337,69.46,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
+2026-08-10 13:48:20,2026-08-10,SELL,AES,Pullback50,14.7465,14.74,14.7441,94.56,-0.0163,-0.0154,limit_fill_position_check_full,max_hold 3d (+0.1%),bull
+2026-08-10 13:48:40,2026-08-10,SELL,BBY,Pullback50,82.03,81.87,82.0362,96.71,0.0076,0.0073,limit_fill_position_check_full,max_hold 3d (+2.4%),bull
