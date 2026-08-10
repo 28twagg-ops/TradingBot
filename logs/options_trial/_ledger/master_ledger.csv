@@ -10601,3 +10601,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10 16:27:47.396000+00:00,exit,352,lab0352_s360_w3_1045_1120_r1,S360,0977af732809,AAPL,AAPL260810C00307500,1,,0.16,56.0,-71.43,-40.0,stop_loss (-72.5%),,-0.01,0.5,-0.5,,,3b357e46-c2d6-4848-83e8-9a4979aa587b
 2026-08-10 16:35:46.194760+00:00,exit,95,lab0095_s211_w1_0928_1005_r2,S211,fecd671a472b,PFE,PFE260814C00027000,1,,0.33,18.0,83.33,15.0,take_profit (+50.0%),,-0.01,0.5,-0.5,,,9819b7db-1b12-452f-8edd-5d46081fc40f
 2026-08-10 16:40:30.478474+00:00,exit,285,lab0285_s351_w3_1045_1120_r2,S351,67c4c5500de9,AAPL,AAPL260810C00307500,1,,0.17,55.0,-69.09,-38.0,stop_loss (-72.5%),,-0.01,0.5,-0.5,,,4eca8a47-e762-4d03-aae3-c5f729a0c4ff
+2026-08-10T16:45:46Z,reconcile,0,orphan_reconcile,ORPHAN,6aad0d189f53,AAPL,AAPL260810C00307500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-10 16:41:11.373529+00:00,exit,0,orphan_reconcile,ORPHAN,eeeb7d626317,TTD,TTD260814C00012500,1,,0.15,67.67,-77.83,-52.67,stop_loss (-74.2%),,-0.01,0.5,-0.5,,,c22df2ae-8337-437b-b19d-c7abcd371b76
