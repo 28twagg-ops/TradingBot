@@ -256,3 +256,12 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-06 18:29:37.110859+00:00,exit,0,orphan_reconcile,ORPHAN,6150bf6e012d,UNH,UNH260814C00435000,1,,0.62,42.33,46.46,19.67,reconcile_fill,,-0.01,0.5,-0.5,,,962048b2-20ad-49f5-bc3c-5b58fd5c5a4a
 2026-08-06 19:45:26.081771+00:00,exit,0,orphan_reconcile,ORPHAN,6150bf6e012d,UNH,UNH260814C00435000,1,,0.23,42.33,-45.67,-19.33,reconcile_fill,,-0.01,0.5,-0.5,,,94682825-e56b-441d-a84c-98c634a9c4f3
 2026-08-06 18:19:03.257012+00:00,exit,0,orphan_reconcile,ORPHAN,6150bf6e012d,UNH,UNH260814C00435000,1,,0.22,42.33,-48.03,-20.33,reconcile_fill,,-0.01,0.5,-0.5,,,dd66834a-e941-4ce4-9a6a-a285f96dd02a
+2026-08-06 18:10:22.141114+00:00,exit,0,orphan_reconcile,ORPHAN,f7e1984a00a1,AAPL,AAPL260810C00317500,1,,0.04,53.75,-92.56,-49.75,reconcile_fill,,-0.01,0.5,-0.5,,,ddf461c8-b591-4093-9bd9-5b1ab7a4650a
+2026-08-06 17:49:52.130714+00:00,exit,0,orphan_reconcile,ORPHAN,f7e1984a00a1,AAPL,AAPL260810C00317500,2,,0.2,107.5,-62.79,-67.5,reconcile_fill,,-0.01,0.5,-0.5,,,6ea2182e-64ac-4d0b-a0fa-fa291f139619
+2026-08-06 17:36:27.783394+00:00,exit,0,orphan_reconcile,ORPHAN,0a5998ccf0ac,AAPL,AAPL260812C00315000,1,,0.19,46.0,-58.7,-27.0,reconcile_fill,,-0.01,0.5,-0.5,,,f1071703-702e-4630-b15e-ab1566e3224d
+2026-08-06 15:37:22.441237+00:00,exit,0,orphan_reconcile,ORPHAN,0a5998ccf0ac,AAPL,AAPL260812C00315000,2,,0.25,92.0,-45.65,-42.0,reconcile_fill,,-0.01,0.5,-0.5,,,20ec24d2-a4a4-47c5-8db8-a07fa672a7ea
+2026-08-07 14:01:23.468523+00:00,exit,0,orphan_reconcile,ORPHAN,e8eddec5c0b8,CVX,CVX260814C00197500,1,,0.56,32.5,72.31,23.5,reconcile_fill,,-0.01,0.5,-0.5,,,da831829-f29c-4ff3-ba86-9238f60d1666
+2026-08-07 14:01:38.013755+00:00,exit,0,orphan_reconcile,ORPHAN,0aacd95b2330,MARA,MARA260814C00011500,1,,0.06,49.8,-87.95,-43.8,reconcile_fill,,-0.01,0.5,-0.5,,,a562e9e0-40d4-4885-8109-4225b5b7f0e2
+2026-08-07 13:40:00.158555+00:00,exit,0,orphan_reconcile,ORPHAN,dbb45ab6f34a,UNH,UNH260814C00435000,3,,0.37,127.0,-12.6,-16.0,reconcile_fill,,-0.01,0.5,-0.5,,,1172c8bc-7f71-458c-9718-a9d9daa7cfdf
+2026-08-07 13:39:59.177202+00:00,exit,0,orphan_reconcile,ORPHAN,7c61cab875d4,AAPL,AAPL260810C00317500,1,,0.2,53.75,-62.79,-33.75,reconcile_fill,,-0.01,0.5,-0.5,,,e9e16535-f013-46e7-981c-2feb8a05399c
+2026-08-07 13:39:57.802860+00:00,exit,0,orphan_reconcile,ORPHAN,7c61cab875d4,AAPL,AAPL260810C00317500,2,,0.01,107.5,-98.14,-105.5,reconcile_fill,,-0.01,0.5,-0.5,,,32a52d6e-89eb-419e-a06e-2637b5f401d2
