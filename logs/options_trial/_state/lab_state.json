@@ -1282,26 +1282,6 @@
       "entry_order_id": "92a80577-0a18-4ef5-bd51-dbf38363dc01"
     },
     {
-      "lot_id": "7c4bd63574a0",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "AAPL260814C00317500",
-      "underlying": "AAPL",
-      "qty": 2,
-      "entry_cost": 122.2608,
-      "entry_price": 0.6113040000000001,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-11T14:07:46.928029+00:00",
-      "entry_order_id": "orphan:AAPL260814C00317500"
-    },
-    {
       "lot_id": "cdf30b192b2f",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -1420,26 +1400,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-11T14:08:56.658859+00:00",
       "entry_order_id": "orphan:RBLX260814C00040000"
-    },
-    {
-      "lot_id": "3624bdf6ef0e",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "TTD260814C00014500",
-      "underlying": "TTD",
-      "qty": 3,
-      "entry_cost": 33.0,
-      "entry_price": 0.11,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-11T14:08:56.659022+00:00",
-      "entry_order_id": "orphan:TTD260814C00014500"
     },
     {
       "lot_id": "d070fdf262ea",
@@ -2480,6 +2440,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-11T15:49:50.802661+00:00",
       "entry_order_id": "orphan:UBER260814C00081000"
+    },
+    {
+      "lot_id": "cff37a88683d",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "AAPL260814C00317500",
+      "underlying": "AAPL",
+      "qty": 8,
+      "entry_cost": 489.04319999999996,
+      "entry_price": 0.611304,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-11T16:23:37.418195+00:00",
+      "entry_order_id": "orphan:AAPL260814C00317500"
     }
   ],
   "pending_orders": [],
@@ -2563,16 +2543,6 @@
       "qty": 1,
       "reason": "stop_loss (-63.5%)",
       "submitted": "2026-08-11T12:01:08"
-    },
-    {
-      "order_id": "b15b1115-1e4b-4f2e-8d98-9df40987d864",
-      "lot_id": "3624bdf6ef0e",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "TTD260814C00014500",
-      "qty": 3,
-      "reason": "stop_loss (-54.5%)",
-      "submitted": "2026-08-11T12:15:51"
     }
   ],
   "bucket_open_premium": {
@@ -2639,7 +2609,7 @@
     "b293": 41.0,
     "b292": 41.0,
     "b317": 62.0,
-    "b0": 1133.9303,
+    "b0": 1467.7127,
     "b181": 26.0,
     "b238": 37.0,
     "b99": 26.0,
@@ -3233,7 +3203,8 @@
     "cb8970b8-3648-446d-977e-e01ce4fa95a8",
     "a113532c-9e40-4f46-bc39-0286908902b1",
     "ee396bc7-c58b-44f4-9436-457af7a6113d",
-    "976aa3cf-fa04-429a-8fe3-a802226190d2"
+    "976aa3cf-fa04-429a-8fe3-a802226190d2",
+    "b15b1115-1e4b-4f2e-8d98-9df40987d864"
   ],
   "submitted_today": 56,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
