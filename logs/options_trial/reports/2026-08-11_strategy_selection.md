@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-11
 
-_Generated 2026-08-11T15:09:50.411249_
+_Generated 2026-08-11T15:10:58.759494_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-11T15:09:50.411249_
 
 ## Attribution health
 
-- Total exits: **2408**
+- Total exits: **2409**
 - Orphan exits (b0/orphan_reconcile): **291**
 - Orphan rate: **12.1%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -123,7 +123,7 @@ _Generated 2026-08-11T15:09:50.411249_
 | S351 (GapDown_1DTE) | 1d | drop | 48 | 20.8 | -56.57 | -81.63 | -70.30 | +171.88 | 11 | 20 | 9 | $-268.00 | 27.1% | non-positive median return |
 | S360 (RubberBand_1DTE) | 1d | drop | 44 | 9.1 | -56.77 | -81.55 | -70.37 | -25.00 | 11 | 30 | 8 | $-821.00 | 25.0% | non-positive median return |
 | S354 (GapDown_5DTE) | 5d | drop | 43 | 32.6 | -63.89 | -92.16 | -76.47 | +138.47 | 11 | 17 | 16 | $+19.00 | 30.2% | non-positive median return |
-| S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 76 | 13.2 | -69.05 | -98.18 | -81.11 | +51.47 | 15 | 41 | 18 | $-2,122.00 | 38.2% | non-positive median return |
+| S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 77 | 13.0 | -68.09 | -98.18 | -80.88 | +51.47 | 15 | 41 | 19 | $-2,159.00 | 37.7% | non-positive median return |
 | S363 (RubberBand_5DTE) | 5d | drop | 29 | 37.9 | -72.31 | -92.31 | -88.46 | +61.43 | 8 | 18 | 18 | $-669.00 | 34.5% | non-positive median return |
 
 ## Comparison groups
@@ -195,7 +195,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 |---|---|---:|---:|---:|---:|---:|---:|
 | S210 | 3d ATM MA cross 8/21 | 59 | +7.69 | -84.44 | -44.44 | 35 | 23 |
 | S211 | 3d ATM MA cross 21/50 | 29 | -38.10 | -96.36 | -51.47 | 20 | 9 |
-| S212 | 3d ATM MA bounce 50 | 76 | -69.05 | -98.18 | -81.11 | 41 | 18 |
+| S212 | 3d ATM MA bounce 50 | 77 | -68.09 | -98.18 | -80.88 | 41 | 19 |
 | S213 | 3d ATM MA bounce 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S215 | 3d ATM MA reclaim 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
@@ -249,7 +249,7 @@ _Pipeline evaluation as of 2026-08-11. Auto-kill thresholds: median<-25% at n>=1
 | S209 | GapDown_Recovery | 6 | -61.46% | 0% | WATCH | 13 |
 | S210 | MA_Cross_8_21 | 59 | +7.69% | 54% | INSUFFICIENT | 15 |
 | S211 | MA_Cross_21_50 | 29 | -38.10% | 24% | INSUFFICIENT | 15 |
-| S212 | MA_Bounce_50 | 76 | -69.05% | 13% | INSUFFICIENT | 15 |
+| S212 | MA_Bounce_50 | 77 | -68.09% | 13% | INSUFFICIENT | 15 |
 | S213 | MA_Bounce_200 | 0 | — | — | NEW | 0 |
 | S214 | MA_Death_Cross | 0 | — | — | NEW | 0 |
 | S215 | MA_Reclaim_200 | 0 | — | — | NEW | 0 |

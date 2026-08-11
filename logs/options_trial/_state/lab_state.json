@@ -982,26 +982,6 @@
       "entry_order_id": "f4dbf2e5-4542-4342-a7e9-62c47f6b35f7"
     },
     {
-      "lot_id": "631a69c85e32",
-      "bucket_id": 108,
-      "profile_name": "lab0108_s212_w1_0928_1005_r1",
-      "strategy_id": "S212",
-      "occ_symbol": "C260814C00139000",
-      "underlying": "C",
-      "qty": 1,
-      "entry_cost": 71.0,
-      "entry_price": 0.71,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T15:36:26.855926+00:00",
-      "entry_order_id": "6fdca0c1-9866-4d4f-8610-3d3d1b14cde2"
-    },
-    {
       "lot_id": "ecea415732c6",
       "bucket_id": 913,
       "profile_name": "lab0913_s412_w1_0928_1005_r2",
@@ -2305,14 +2285,14 @@
       "submitted": "2026-08-11T12:34:40"
     },
     {
-      "order_id": "7119e16a-f47a-4b63-ac24-8f009b8fbfc8",
-      "lot_id": "631a69c85e32",
-      "bucket_id": 108,
-      "strategy_id": "S212",
+      "order_id": "3b6157d9-2f49-4660-9df4-c20685ab958e",
+      "lot_id": "d632d1f22a35",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
       "occ_symbol": "C260814C00139000",
-      "qty": 1,
+      "qty": 2,
       "reason": "stop_loss (-50.7%)",
-      "submitted": "2026-08-11T15:09:46"
+      "submitted": "2026-08-11T15:10:56"
     }
   ],
   "bucket_open_premium": {
@@ -2365,7 +2345,6 @@
     "b310": 56.99999999999999,
     "b87": 44.0,
     "b86": 44.0,
-    "b108": 71.0,
     "b913": 43.0,
     "b912": 43.0,
     "b797": 57.99999999999999,
@@ -2928,7 +2907,8 @@
     "5b143e2c-8031-4c57-bd82-03ddc4f38f29",
     "c298731f-412e-4303-bb66-4e5ebf1d9ba1",
     "3b01f827-3087-474f-96ec-99ab348afa5f",
-    "ba4c4f5f-3308-4e77-b3ec-bba97864a049"
+    "ba4c4f5f-3308-4e77-b3ec-bba97864a049",
+    "7119e16a-f47a-4b63-ac24-8f009b8fbfc8"
   ],
   "submitted_today": 56,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
