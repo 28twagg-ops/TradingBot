@@ -328,3 +328,10 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-07 15:20:02.258536+00:00,exit,0,orphan_reconcile,ORPHAN,691e2fc7cf96,AAPL,AAPL260814C00317500,2,,0.08,122.26,-86.91,-106.26,reconcile_fill,,-0.01,0.5,-0.5,,,29c5bf05-bfec-41e2-849e-ac0252555a50
 2026-08-07 14:53:37.998010+00:00,exit,0,orphan_reconcile,ORPHAN,2a95b347a326,C,C260814C00139000,1,,0.65,69.0,-5.8,-4.0,reconcile_fill,,-0.01,0.5,-0.5,,,7914446a-79fe-4c6c-9f4f-cd5098136df1
 2026-08-07 14:53:04.584799+00:00,exit,0,orphan_reconcile,ORPHAN,2a95b347a326,C,C260814C00139000,1,,0.13,69.0,-81.16,-56.0,reconcile_fill,,-0.01,0.5,-0.5,,,c012470b-deec-461e-82fc-f67695be92ad
+2026-08-10 14:57:27.536153+00:00,exit,0,orphan_reconcile,ORPHAN,30e1a418b4d0,UBER,UBER260814C00081000,1,,0.8,30.0,166.67,50.0,reconcile_fill,,-0.01,0.5,-0.5,,,2c0c6fbf-66d7-48b3-9f80-98116e552721
+2026-08-07 19:54:59.935389+00:00,exit,0,orphan_reconcile,ORPHAN,e4b3d8271b9e,AAPL,AAPL260812C00317500,1,,0.33,22.2,48.65,10.8,reconcile_fill,,-0.01,0.5,-0.5,,,dccc7e0d-0063-4eac-a858-a133e3328875
+2026-08-07 19:54:17.810455+00:00,exit,0,orphan_reconcile,ORPHAN,7a39ae9277a6,CELH,CELH260814C00028000,1,,0.13,25.75,-49.51,-12.75,reconcile_fill,,-0.01,0.5,-0.5,,,683bf791-93e5-4269-97f8-6f665e527b46
+2026-08-07 18:00:57.744670+00:00,exit,0,orphan_reconcile,ORPHAN,cd6f7fb007d7,CELH,CELH260814C00028500,1,,0.17,19.67,-13.56,-2.67,reconcile_fill,,-0.01,0.5,-0.5,,,cbbb4bad-0209-487e-a74e-d6a5c07afcf8
+2026-08-07 17:10:17.482209+00:00,exit,0,orphan_reconcile,ORPHAN,62718582f724,AAPL,AAPL260812C00320000,1,,0.16,11.0,45.45,5.0,reconcile_fill,,-0.01,0.5,-0.5,,,1135feea-5f26-46a2-85ff-f4365ef238b1
+2026-08-07 15:40:58.890909+00:00,exit,0,orphan_reconcile,ORPHAN,ef5d694f4fe3,AAPL,AAPL260812C00315000,2,,0.28,84.53,-33.75,-28.53,reconcile_fill,,-0.01,0.5,-0.5,,,7dd30c9e-c132-4d7a-84aa-47d07663738a
+2026-08-07 15:49:38.537848+00:00,exit,0,orphan_reconcile,ORPHAN,ef5d694f4fe3,AAPL,AAPL260812C00315000,1,,0.43,42.26,1.74,0.74,reconcile_fill,,-0.01,0.5,-0.5,,,14988e0b-8c5b-4002-b689-7d4a0c09253d
