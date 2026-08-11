@@ -2302,7 +2302,7 @@
       "entry_order_id": "orphan:UBER260814C00080000"
     },
     {
-      "lot_id": "59e55a4edeb4",
+      "lot_id": "8c1970c75e69",
       "bucket_id": 833,
       "profile_name": "lab0833_s406_w3_1045_1120_r2",
       "strategy_id": "S406",
@@ -2318,11 +2318,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:43.213397+00:00",
+      "entry_date": "2026-08-11T13:39:55.553015+00:00",
       "entry_order_id": "d6d6d38a-5812-43b3-878d-f713d7e03b61"
     },
     {
-      "lot_id": "3cd23c1aa73e",
+      "lot_id": "7db6366510ef",
       "bucket_id": 818,
       "profile_name": "lab0818_s405_w3_1045_1120_r1",
       "strategy_id": "S405",
@@ -2338,11 +2338,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:43.297812+00:00",
+      "entry_date": "2026-08-11T13:39:55.710059+00:00",
       "entry_order_id": "1435c1fb-21a4-4c70-8c34-0c3b2322f25c"
     },
     {
-      "lot_id": "ab78aa0a44f2",
+      "lot_id": "4b89fbb1ac9a",
       "bucket_id": 797,
       "profile_name": "lab0797_s399_w3_1045_1120_r2",
       "strategy_id": "S399",
@@ -2358,11 +2358,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:43.328899+00:00",
+      "entry_date": "2026-08-11T13:39:55.752614+00:00",
       "entry_order_id": "dbf41835-d663-4993-8b8c-430218b0ab1f"
     },
     {
-      "lot_id": "f2b2ce91b446",
+      "lot_id": "58c185f06868",
       "bucket_id": 789,
       "profile_name": "lab0789_s398_w3_1045_1120_r2",
       "strategy_id": "S398",
@@ -2378,11 +2378,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:43.453151+00:00",
+      "entry_date": "2026-08-11T13:39:55.811786+00:00",
       "entry_order_id": "55b4803c-c379-40b5-bb72-d75094d39b9e"
     },
     {
-      "lot_id": "2e5fdf886a2a",
+      "lot_id": "43728d5a45ad",
       "bucket_id": 788,
       "profile_name": "lab0788_s398_w3_1045_1120_r1",
       "strategy_id": "S398",
@@ -2398,11 +2398,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:43.483809+00:00",
+      "entry_date": "2026-08-11T13:39:55.846252+00:00",
       "entry_order_id": "f8f61a27-ea2a-45f9-8fba-68c06308e29b"
     },
     {
-      "lot_id": "9de4c34a7fa1",
+      "lot_id": "40e14471800c",
       "bucket_id": 409,
       "profile_name": "lab0409_s364_w3_1045_1120_r2",
       "strategy_id": "S364",
@@ -2418,11 +2418,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:43.514414+00:00",
+      "entry_date": "2026-08-11T13:39:55.879723+00:00",
       "entry_order_id": "ac9c54fd-5cc3-4a00-bba6-c2361351b528"
     },
     {
-      "lot_id": "001ae66dd27f",
+      "lot_id": "906bb676d3e9",
       "bucket_id": 408,
       "profile_name": "lab0408_s364_w3_1045_1120_r1",
       "strategy_id": "S364",
@@ -2438,11 +2438,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:43.545163+00:00",
+      "entry_date": "2026-08-11T13:39:55.913292+00:00",
       "entry_order_id": "6e7f17bd-2e75-4a16-9c19-c3206a0541ad"
     },
     {
-      "lot_id": "bb0af021a38a",
+      "lot_id": "1a9d7715bce2",
       "bucket_id": 395,
       "profile_name": "lab0395_s363_w3_1045_1120_r2",
       "strategy_id": "S363",
@@ -2458,11 +2458,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:43.576026+00:00",
+      "entry_date": "2026-08-11T13:39:55.945770+00:00",
       "entry_order_id": "194ae82f-a806-42de-aaef-aeeb3da2f928"
     },
     {
-      "lot_id": "64d1144e5542",
+      "lot_id": "13e04f649b4a",
       "bucket_id": 394,
       "profile_name": "lab0394_s363_w3_1045_1120_r1",
       "strategy_id": "S363",
@@ -2478,11 +2478,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:43.606970+00:00",
+      "entry_date": "2026-08-11T13:39:55.978239+00:00",
       "entry_order_id": "f6b0089e-fb52-4dca-931d-4dd9f9811d06"
     },
     {
-      "lot_id": "15a78d532c4c",
+      "lot_id": "84735559d906",
       "bucket_id": 325,
       "profile_name": "lab0325_s356_w3_1045_1120_r2",
       "strategy_id": "S356",
@@ -2498,11 +2498,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:43.743937+00:00",
+      "entry_date": "2026-08-11T13:39:56.120170+00:00",
       "entry_order_id": "61b632ae-b82b-4a6d-9aac-6b92c0a76166"
     },
     {
-      "lot_id": "0e8dfd00bb45",
+      "lot_id": "dd78587a9664",
       "bucket_id": 324,
       "profile_name": "lab0324_s356_w3_1045_1120_r1",
       "strategy_id": "S356",
@@ -2518,11 +2518,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:43.775634+00:00",
+      "entry_date": "2026-08-11T13:39:56.152843+00:00",
       "entry_order_id": "d376f80e-9faa-4aff-9902-4a97a9af9b73"
     },
     {
-      "lot_id": "759d78be674d",
+      "lot_id": "5abddf5ce9a2",
       "bucket_id": 901,
       "profile_name": "lab0901_s411_w2_1005_1045_r2",
       "strategy_id": "S411",
@@ -2538,11 +2538,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:43.849910+00:00",
+      "entry_date": "2026-08-11T13:39:56.229869+00:00",
       "entry_order_id": "d592f1c1-299b-4de6-9725-0feac1a4a951"
     },
     {
-      "lot_id": "30bc0daa1d64",
+      "lot_id": "ff59ff2b276b",
       "bucket_id": 900,
       "profile_name": "lab0900_s411_w2_1005_1045_r1",
       "strategy_id": "S411",
@@ -2558,11 +2558,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:43.910832+00:00",
+      "entry_date": "2026-08-11T13:39:56.298773+00:00",
       "entry_order_id": "9b4c108d-ccbb-432a-810a-74b0ce35bb34"
     },
     {
-      "lot_id": "b0a9b1e1b5c6",
+      "lot_id": "48597b334975",
       "bucket_id": 306,
       "profile_name": "lab0306_s354_w2_1005_1045_r1",
       "strategy_id": "S354",
@@ -2578,11 +2578,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:44.074673+00:00",
+      "entry_date": "2026-08-11T13:39:56.524243+00:00",
       "entry_order_id": "fd29f2e1-edd6-41ae-9cf1-557d562d696c"
     },
     {
-      "lot_id": "075adab43582",
+      "lot_id": "4d426d147e3f",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
       "strategy_id": "ORPHAN",
@@ -2598,11 +2598,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:45.567603+00:00",
+      "entry_date": "2026-08-11T13:39:58.126941+00:00",
       "entry_order_id": "orphan:AAPL260812C00312500"
     },
     {
-      "lot_id": "7a39ae9277a6",
+      "lot_id": "7249dd480670",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
       "strategy_id": "ORPHAN",
@@ -2618,11 +2618,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:45.568677+00:00",
+      "entry_date": "2026-08-11T13:39:58.127973+00:00",
       "entry_order_id": "orphan:CELH260814C00028000"
     },
     {
-      "lot_id": "cd6f7fb007d7",
+      "lot_id": "672fd590de54",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
       "strategy_id": "ORPHAN",
@@ -2638,11 +2638,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:34:45.568841+00:00",
+      "entry_date": "2026-08-11T13:39:58.128137+00:00",
       "entry_order_id": "orphan:CELH260814C00028500"
     },
     {
-      "lot_id": "62718582f724",
+      "lot_id": "152b1bff389c",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
       "strategy_id": "ORPHAN",
@@ -2658,21 +2658,61 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-11T13:45:06.705580+00:00",
+      "entry_date": "2026-08-11T13:50:04.079809+00:00",
       "entry_order_id": "orphan:AAPL260812C00320000"
     }
   ],
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "3078dec6-cfee-482c-b197-6bf0bb2cd96c",
-      "lot_id": "d99d441afdf1",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "RBLX260814C00041000",
-      "qty": 2,
-      "reason": "stop_loss (-77.5%)",
-      "submitted": "2026-08-11T09:34:51"
+      "order_id": "fd5b6d60-149a-4f75-8daf-b02509d42df9",
+      "lot_id": "6a87f8fe253e",
+      "bucket_id": 829,
+      "strategy_id": "S406",
+      "occ_symbol": "AAPL260812C00317500",
+      "qty": 1,
+      "reason": "stop_loss (-64.0%)",
+      "submitted": "2026-08-11T09:40:02"
+    },
+    {
+      "order_id": "97676966-d42f-4c6c-a44b-4a1da66f3d47",
+      "lot_id": "2e4213652caf",
+      "bucket_id": 817,
+      "strategy_id": "S405",
+      "occ_symbol": "AAPL260812C00315000",
+      "qty": 1,
+      "reason": "stop_loss (-55.0%)",
+      "submitted": "2026-08-11T09:40:14"
+    },
+    {
+      "order_id": "43877d14-6240-4449-b3c3-43a8bdf4b0c7",
+      "lot_id": "648821f9e0dd",
+      "bucket_id": 383,
+      "strategy_id": "S362",
+      "occ_symbol": "AAPL260812C00312500",
+      "qty": 1,
+      "reason": "stop_loss (-57.5%)",
+      "submitted": "2026-08-11T09:50:06"
+    },
+    {
+      "order_id": "bea1408f-04a5-42ea-8333-e8776e5855e4",
+      "lot_id": "425db2522c34",
+      "bucket_id": 857,
+      "strategy_id": "S408",
+      "occ_symbol": "AAPL260814C00320000",
+      "qty": 1,
+      "reason": "stop_loss (-51.7%)",
+      "submitted": "2026-08-11T09:50:11"
+    },
+    {
+      "order_id": "35bc7804-579d-49d8-a1aa-623f28f25723",
+      "lot_id": "e60264111764",
+      "bucket_id": 785,
+      "strategy_id": "S398",
+      "occ_symbol": "CELH260814C00028500",
+      "qty": 1,
+      "reason": "stop_loss (-84.7%)",
+      "submitted": "2026-08-11T09:50:16"
     }
   ],
   "bucket_open_premium": {
