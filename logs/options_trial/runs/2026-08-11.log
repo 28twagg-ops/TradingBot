@@ -12427,84 +12427,55 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-08-11.log
 elapsed=66.0s reconcile=0.44s cancel=0.14s manage=13.67s scan=44.0s entries=6.51s
 
-=== 11:25:53 ET — entry+manage (0 new) [elapsed=80.7s reconcile=0.45s cancel=0.13s manage=11.0s scan=63.35s entries=4.7s] ===
-=== options_morning_bot (PAPER) 2026-08-11T11:25:53.067183-04:00 ===
+=== 11:28:19 ET — entry+manage (2 new) [elapsed=73.7s reconcile=0.54s cancel=0.15s manage=10.29s scan=60.11s entries=1.25s] ===
+=== options_morning_bot (PAPER) 2026-08-11T11:28:19.236135-04:00 ===
 
 [Run context]
-Paper auth OK — equity $135469.83, account PA36KS87UPRS
+Paper auth OK — equity $135282.83, account PA36KS87UPRS
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1
   reconcile: exit fill b95|S211 BA -45.2%
 
 [Setup]
 Active buckets: 1024 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419
 Dropped (no new entries; ex-reflected P&L): S173, S174
+  EXIT skip TTD260814C00012500: open sell already pending
+  EXIT skip AAPL260814C00317500: open sell already pending
+  EXIT skip PLTR260814C00192500: open sell already pending
+  EXIT skip AAPL260812C00320000: open sell already pending
+  EXIT skip PFE260814C00027000: open sell already pending
+  EXIT [b111|lab0111_s212_w2_1005_1045_r2|S212] stop_loss (-79.3%) SELL failed QQQ260813C00740000: {"code":40010001,"message":"client_order_id must be unique"}
+  EXIT skip AAPL260812C00317500: open sell already pending
   EXIT skip AAPL260812C00312500: open sell already pending
   EXIT skip AAPL260812C00315000: open sell already pending
-  EXIT skip AAPL260812C00317500: open sell already pending
-  EXIT skip TTD260814C00012500: open sell already pending
-  EXIT skip RBLX260814C00041000: open sell already pending
-  EXIT skip PLTR260814C00192500: open sell already pending
-  EXIT [b111|lab0111_s212_w2_1005_1045_r2|S212] stop_loss (-79.3%) SELL failed QQQ260813C00740000: {"code":40010001,"message":"client_order_id must be unique"}
   EXIT skip AAPL260817C00320000: open sell already pending
-  EXIT skip PFE260814C00027000: open sell already pending
-  EXIT skip AAPL260812C00320000: open sell already pending
-  EXIT skip AAPL260814C00317500: open sell already pending
+  EXIT [b262|lab0262_s403_w1_0928_1005_r1|S403] stop_loss (-51.9%) SELL 1 NFLX260814C00079000 @<= 0.13  id=5caa918d-05a5-473a-b1b3-9155d0d23720
+  EXIT skip RBLX260814C00041000: open sell already pending
 
 [Scan + entries]
 Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
 Fetched daily bars for 114/117 symbols
-Found 69 signal(s); top: ['S203:MARA', 'S210:ARM', 'S210:AFRM', 'S211:AVGO', 'S211:BA', 'S212:META', 'S212:AFRM', 'S212:C']
-Paper lab: $135360 broker equity -> 1024 bucket(s) ($500 virtual each, unlimited paper)
-  [b268|lab0268_s403_w4_1120_1135_r1] S403 AFRM (tier: fast): no tradeable call
-  [b269|lab0269_s403_w4_1120_1135_r2] S403 AFRM (tier: fast): no tradeable call
-  [b268|lab0268_s403_w4_1120_1135_r1] S403 AXP (tier: neutral): no tradeable call
-  [b269|lab0269_s403_w4_1120_1135_r2] S403 AXP (tier: neutral): no tradeable call
-  [b268|lab0268_s403_w4_1120_1135_r1] S403 ISRG (tier: neutral): no tradeable call
-  [b269|lab0269_s403_w4_1120_1135_r2] S403 ISRG (tier: neutral): no tradeable call
-  [b268|lab0268_s403_w4_1120_1135_r1] S403 CPB (tier: slow): no tradeable call
-  [b269|lab0269_s403_w4_1120_1135_r2] S403 CPB (tier: slow): no tradeable call
-  [b268|lab0268_s403_w4_1120_1135_r1] S403 MDLZ (tier: slow): no tradeable call
-  [b269|lab0269_s403_w4_1120_1135_r2] S403 MDLZ (tier: slow): no tradeable call
-  [b354|lab0354_s360_w4_1120_1135_r1] S360 DDOG (tier: fast): no tradeable call
-  [b355|lab0355_s360_w4_1120_1135_r2] S360 DDOG (tier: fast): no tradeable call
-  [b368|lab0368_s361_w4_1120_1135_r1] S361 DDOG (tier: fast): no tradeable call
-  [b369|lab0369_s361_w4_1120_1135_r2] S361 DDOG (tier: fast): no tradeable call
-  [b397|lab0397_s363_w4_1120_1135_r2] S363 DDOG (tier: fast): no tradeable call
-  [b410|lab0410_s364_w4_1120_1135_r1] S364 DDOG (tier: fast): no tradeable call
-  [b424|lab0424_s365_w4_1120_1135_r1] S365 DDOG (tier: fast): no tradeable call
-  [b425|lab0425_s365_w4_1120_1135_r2] S365 DDOG (tier: fast): no tradeable call
-  [b438|lab0438_s366_w4_1120_1135_r1] S366 DDOG (tier: fast): no tradeable call
-  [b439|lab0439_s366_w4_1120_1135_r2] S366 DDOG (tier: fast): no tradeable call
-  [b452|lab0452_s367_w4_1120_1135_r1] S367 DDOG (tier: fast): no tradeable call
-  [b453|lab0453_s367_w4_1120_1135_r2] S367 DDOG (tier: fast): no tradeable call
-  [b834|lab0834_s406_w4_1120_1135_r1] S406 DDOG (tier: fast): no tradeable call
-  [b835|lab0835_s406_w4_1120_1135_r2] S406 DDOG (tier: fast): no tradeable call
-  [b876|lab0876_s409_w4_1120_1135_r1] S409 DDOG (tier: fast): no tradeable call
-  [b877|lab0877_s409_w4_1120_1135_r2] S409 DDOG (tier: fast): no tradeable call
-  [b890|lab0890_s410_w4_1120_1135_r1] S410 DDOG (tier: fast): no tradeable call
-  [b891|lab0891_s410_w4_1120_1135_r2] S410 DDOG (tier: fast): no tradeable call
-  [b904|lab0904_s411_w4_1120_1135_r1] S411 DDOG (tier: fast): no tradeable call
-  [b905|lab0905_s411_w4_1120_1135_r2] S411 DDOG (tier: fast): no tradeable call
-  [b918|lab0918_s412_w4_1120_1135_r1] S412 DDOG (tier: fast): no tradeable call
-  [b919|lab0919_s412_w4_1120_1135_r2] S412 DDOG (tier: fast): no tradeable call
-  Skipped: 32 no tradeable call, 38 pending order
-Placed 0 new entry order(s).
+Found 51 signal(s); top: ['S203:MARA', 'S210:ARM', 'S210:AFRM', 'S210:MPC', 'S211:AVGO', 'S211:BA', 'S212:META', 'S212:AFRM']
+Paper lab: $135230 broker equity -> 1024 bucket(s) ($500 virtual each, unlimited paper)
+  ENTRY [b268|lab0268_s403_w4_1120_1135_r1|S403] BUY 1x AFRM260814C00082000 (touch MA50 green|fast) limit=0.18 (ask=0.19 off=-0.01) tp=+75% sl=-75% pending id=d2b8d81c-1a40-4563-9188-1a2c672746d3
+  ENTRY [b269|lab0269_s403_w4_1120_1135_r2|S403] BUY 1x AFRM260814C00082000 (touch MA50 green|fast) limit=0.18 (ask=0.19 off=-0.01) tp=+75% sl=-75% pending id=e42fab37-01ca-45ca-a898-e0b0ed07583b
+  Skipped: 44 pending order
+Placed 2 new entry order(s).
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1
 
 [Portfolio snapshot]
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $135,482.59
+Account equity: $135,282.83
 Active buckets: 1024 of 1024 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S173,S174): $+3,652.80 all-time  |  $-436.67 today
   Raw (incl dropped):     $+2,057.25 all-time  |  $-436.67 today
-  Open (not sold yet): $-3,184.02 unrealized (virtual lots)
-                       $-3,317.44 unrealized (broker total)
+  Open (not sold yet): $-3,215.82 unrealized (virtual lots)
+                       $-3,350.44 unrealized (broker total)
   Premium deployed:    $6,331.70 in open positions
-  Combined P&L:        $+468.78 (reflected realized + open virtual)
+  Combined P&L:        $+436.98 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     10945
@@ -12557,7 +12528,7 @@ Open virtual lots (by bucket)
   (282 more active bucket(s) omitted)
   (722 quiet bucket profile(s) — no trades yet)
 
-Pending orders: 12
+Pending orders: 14
   b168 S216 TTD limit=0.19
   b169 S216 TTD limit=0.19
   b196 S218 TTD limit=0.19
@@ -12571,29 +12542,29 @@ Alpaca option positions
   AAPL260812C00320000  qty=1  cost=$11.00  return=-90.9%  open P&L=$-10.00
   AAPL260814C00317500  qty=22  cost=$1,344.87  return=-59.1%  open P&L=$-794.87
   AAPL260817C00320000  qty=8  cost=$501.54  return=-58.5%  open P&L=$-293.54
-  AVGO260814C00460000  qty=2  cost=$52.00  return=-23.1%  open P&L=$-12.00
+  AVGO260814C00460000  qty=2  cost=$52.00  return=-30.8%  open P&L=$-16.00
   BA260814C00245000  qty=1  cost=$42.00  return=-47.6%  open P&L=$-20.00
   C260814C00139000  qty=3  cost=$207.00  return=-31.9%  open P&L=$-66.00
   CELH260814C00028000  qty=8  cost=$206.00  return=-10.7%  open P&L=$-22.00
-  CELH260814C00028500  qty=3  cost=$59.00  return=-33.9%  open P&L=$-20.00
-  CVNA260814C00075000  qty=2  cost=$140.00  return=-22.9%  open P&L=$-32.00
-  CVNA260814C00076000  qty=2  cost=$92.00  return=-26.1%  open P&L=$-24.00
+  CELH260814C00028500  qty=3  cost=$59.00  return=-28.8%  open P&L=$-17.00
+  CVNA260814C00075000  qty=2  cost=$140.00  return=-27.1%  open P&L=$-38.00
+  CVNA260814C00076000  qty=2  cost=$92.00  return=-34.8%  open P&L=$-32.00
   MARA260814P00009000  qty=6  cost=$56.00  return=-25.0%  open P&L=$-14.00
-  MARA260814P00009500  qty=2  cost=$50.00  return=-12.0%  open P&L=$-6.00
-  META260814C00657500  qty=2  cost=$108.00  return=-25.9%  open P&L=$-28.00
-  NFLX260814C00079000  qty=6  cost=$162.00  return=-48.1%  open P&L=$-78.00
+  MARA260814P00009500  qty=2  cost=$50.00  return=-16.0%  open P&L=$-8.00
+  META260814C00657500  qty=2  cost=$108.00  return=-22.2%  open P&L=$-24.00
+  NFLX260814C00079000  qty=6  cost=$162.00  return=-55.6%  open P&L=$-90.00
   PFE260814C00027000  qty=3  cost=$73.20  return=-67.2%  open P&L=$-49.20
-  PLTR260814C00187500  qty=2  cost=$84.00  return=-7.1%  open P&L=$-6.00
-  PLTR260814C00190000  qty=4  cost=$166.00  return=-37.3%  open P&L=$-62.00
-  PLTR260814C00192500  qty=2  cost=$74.00  return=-51.4%  open P&L=$-38.00
+  PLTR260814C00187500  qty=2  cost=$84.00  return=-9.5%  open P&L=$-8.00
+  PLTR260814C00190000  qty=4  cost=$166.00  return=-39.8%  open P&L=$-66.00
+  PLTR260814C00192500  qty=2  cost=$74.00  return=-54.1%  open P&L=$-40.00
   QQQ260813C00740000  qty=1  cost=$58.00  return=-79.3%  open P&L=$-46.00
-  RBLX260814C00038000  qty=2  cost=$110.00  return=-12.7%  open P&L=$-14.00
+  RBLX260814C00038000  qty=2  cost=$110.00  return=-10.9%  open P&L=$-12.00
   RBLX260814C00040000  qty=2  cost=$52.00  return=-42.3%  open P&L=$-22.00
   RBLX260814C00041000  qty=1  cost=$44.50  return=-82.0%  open P&L=$-36.50
   TTD260814C00012500  qty=2  cost=$135.33  return=+72.9%  open P&L=$+98.67
   TTD260814C00014000  qty=4  cost=$88.00  return=-13.6%  open P&L=$-12.00
   TTD260814C00014500  qty=4  cost=$44.00  return=-27.3%  open P&L=$-12.00
-  TTD260828C00014000  qty=2  cost=$72.00  return=+38.9%  open P&L=$+28.00
+  TTD260828C00014000  qty=2  cost=$72.00  return=+36.1%  open P&L=$+26.00
   TTD260911C00014000  qty=1  cost=$49.00  return=+42.9%  open P&L=$+21.00
   UBER260814C00080000  qty=6  cost=$274.00  return=+22.6%  open P&L=$+62.00
   UBER260814C00081000  qty=2  cost=$60.00  return=+6.7%  open P&L=$+4.00
@@ -12943,15 +12914,15 @@ Per-bucket exit stats (all time)
 |  OPTIONS BOT SUMMARY                                                   |
 +------------------------------------------------------------------------+
 |  Mode                          entry+manage                            |
-|  Equity                        $135,482.59                             |
-|  Signals this run              69                                      |
-|  Orders submitted (session)    54                                      |
+|  Equity                        $135,282.83                             |
+|  Signals this run              51                                      |
+|  Orders submitted (session)    56                                      |
 |  Orders filled today (ledger)  44                                      |
-|  Entries placed this run       0                                       |
+|  Entries placed this run       2                                       |
 |  Open virtual lots             129                                     |
 |  Broker option positions       32                                      |
 |  Unattributed contracts        6 (orphan reconcile)                    |
-|  Pending orders                12                                      |
+|  Pending orders                14                                      |
 +========================================================================+
 +========================================================================+
 |  BUCKET LEADERBOARD (reflected ex-S173,S174)                           |
@@ -12977,7 +12948,7 @@ Per-bucket exit stats (all time)
 |  Low  b79  lab0079_s209_w4_11  1   0% -94.6 -94.6 -94.6 $    -53       |
 +========================================================================+
 +========================================================================+
-|  PENDING ORDERS (12)                                                   |
+|  PENDING ORDERS (14)                                                   |
 +------------------------------------------------------------------------+
 |  Top groups                    S216:TTD(4), S218:TTD(4), S212:C(2)     |
 +------------------------------------------------------------------------+
@@ -12986,17 +12957,17 @@ Per-bucket exit stats (all time)
 |  b196 S218 TTD      limit=0.19                                         |
 |  b197 S218 TTD      limit=0.19                                         |
 |  b832 S406 CVNA     limit=0.30                                         |
-|  ... 7 more pending order(s)                                           |
+|  ... 9 more pending order(s)                                           |
 +========================================================================+
 +========================================================================+
-|  PENDING EXITS (7)                                                     |
+|  PENDING EXITS (8)                                                     |
 +------------------------------------------------------------------------+
 |  b304 S354 AAPL260814C00317500 x1 stop_loss (-50.9%)                   |
 |  b182 S217 RBLX260814C00041000 x1 stop_loss (-75.3%)                   |
 |  b316 S355 AAPL260817C00320000 x1 stop_loss (-52.1%)                   |
 |  b791 S398 AAPL260812C00312500 x1 stop_loss (-60.5%)                   |
 |  b238 S401 PLTR260814C00192500 x1 stop_loss (-51.4%)                   |
-|  ... 2 more pending exit(s)                                            |
+|  ... 3 more pending exit(s)                                            |
 +========================================================================+
 +========================================================================+
 |  OPEN OPTIONS (32)                                                     |
@@ -13009,10 +12980,10 @@ Per-bucket exit stats (all time)
 |  AAPL260812C00312500           6    -71.1%   $   -281.00               |
 |  AAPL260812C00317500          10    -86.5%   $   -192.00               |
 |  TTD260814C00012500            2    +72.9%   $    +98.67               |
-|  NFLX260814C00079000           6    -48.1%   $    -78.00               |
+|  NFLX260814C00079000           6    -55.6%   $    -90.00               |
 |  C260814C00139000              3    -31.9%   $    -66.00               |
 |  ... 24 more position(s)                                               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-08-11.log
-elapsed=80.7s reconcile=0.45s cancel=0.13s manage=11.0s scan=63.35s entries=4.7s
+elapsed=73.7s reconcile=0.54s cancel=0.15s manage=10.29s scan=60.11s entries=1.25s
 

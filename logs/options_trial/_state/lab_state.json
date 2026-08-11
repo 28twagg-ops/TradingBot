@@ -2774,6 +2774,38 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
+    },
+    {
+      "order_id": "d2b8d81c-1a40-4563-9188-1a2c672746d3",
+      "bucket_id": 268,
+      "strategy_id": "S403",
+      "occ_symbol": "AFRM260814C00082000",
+      "underlying": "AFRM",
+      "qty": 1,
+      "limit": 0.18,
+      "profile_name": "lab0268_s403_w4_1120_1135_r1",
+      "submitted": "2026-08-11",
+      "detail": "touch MA50 green",
+      "spread_frac": 0.2352941176470589,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "e42fab37-01ca-45ca-a898-e0b0ed07583b",
+      "bucket_id": 269,
+      "strategy_id": "S403",
+      "occ_symbol": "AFRM260814C00082000",
+      "underlying": "AFRM",
+      "qty": 1,
+      "limit": 0.18,
+      "profile_name": "lab0269_s403_w4_1120_1135_r2",
+      "submitted": "2026-08-11",
+      "detail": "touch MA50 green",
+      "spread_frac": 0.2352941176470589,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
     }
   ],
   "pending_exits": [
@@ -2846,6 +2878,16 @@
       "qty": 1,
       "reason": "take_profit (+72.9%)",
       "submitted": "2026-08-11T11:21:09"
+    },
+    {
+      "order_id": "5caa918d-05a5-473a-b1b3-9155d0d23720",
+      "lot_id": "acb691c65eea",
+      "bucket_id": 262,
+      "strategy_id": "S403",
+      "occ_symbol": "NFLX260814C00079000",
+      "qty": 1,
+      "reason": "stop_loss (-51.9%)",
+      "submitted": "2026-08-11T11:28:29"
     }
   ],
   "bucket_open_premium": {
@@ -3013,7 +3055,9 @@
     "198|S218|2026-08-11",
     "199|S218|2026-08-11",
     "240|S401|2026-08-11",
-    "241|S401|2026-08-11"
+    "241|S401|2026-08-11",
+    "268|S403|2026-08-11",
+    "269|S403|2026-08-11"
   ],
   "processed_orders": [
     "528c6cf8-7e26-4352-8197-d9aeaa5914fb",
@@ -3516,7 +3560,7 @@
     "4eaa4e68-c46b-457d-aef0-2da2abf67331",
     "a38c51e0-eebf-470e-90a1-5b7b48b9b84f"
   ],
-  "submitted_today": 54,
+  "submitted_today": 56,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-08-11"
 }
