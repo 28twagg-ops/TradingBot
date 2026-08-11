@@ -1682,26 +1682,6 @@
       "entry_order_id": "orphan:TTD260814C00014000"
     },
     {
-      "lot_id": "0a7b348dcf41",
-      "bucket_id": 95,
-      "profile_name": "lab0095_s211_w1_0928_1005_r2",
-      "strategy_id": "S211",
-      "occ_symbol": "BA260814C00245000",
-      "underlying": "BA",
-      "qty": 1,
-      "entry_cost": 42.0,
-      "entry_price": 0.42,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-11T14:07:45.343629+00:00",
-      "entry_order_id": "50c8a124-5efa-427f-975a-9959d1aade69"
-    },
-    {
       "lot_id": "7c4bd63574a0",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -2848,16 +2828,6 @@
       "submitted": "2026-08-11T11:16:06"
     },
     {
-      "order_id": "a38c51e0-eebf-470e-90a1-5b7b48b9b84f",
-      "lot_id": "0a7b348dcf41",
-      "bucket_id": 95,
-      "strategy_id": "S211",
-      "occ_symbol": "BA260814C00245000",
-      "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-08-11T11:21:03"
-    },
-    {
       "order_id": "e5733c4b-1e0b-47ff-b933-c564cdb40e5e",
       "lot_id": "4b73038e371d",
       "bucket_id": 101,
@@ -2961,7 +2931,6 @@
     "b292": 41.0,
     "b317": 62.0,
     "b0": 1750.6963,
-    "b95": 42.0,
     "b194": 11.0,
     "b181": 26.0,
     "b238": 37.0,
@@ -3544,7 +3513,8 @@
     "d13e5d07-ed02-4899-868d-f774e1b8af5f",
     "78b595ee-dc22-4248-8de3-9c2b9f70e8b1",
     "a00b6b09-4dfb-42a6-b78b-2cd12c1a4bbb",
-    "4eaa4e68-c46b-457d-aef0-2da2abf67331"
+    "4eaa4e68-c46b-457d-aef0-2da2abf67331",
+    "a38c51e0-eebf-470e-90a1-5b7b48b9b84f"
   ],
   "submitted_today": 54,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
