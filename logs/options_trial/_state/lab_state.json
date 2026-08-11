@@ -2503,6 +2503,16 @@
       "qty": 2,
       "reason": "stop_loss (-51.9%)",
       "submitted": "2026-08-11T12:34:40"
+    },
+    {
+      "order_id": "4cbca058-8ea6-4ec6-86d1-c7e80dc1e9f3",
+      "lot_id": "1fdb6f199870",
+      "bucket_id": 99,
+      "strategy_id": "S211",
+      "occ_symbol": "AVGO260814C00460000",
+      "qty": 1,
+      "reason": "stop_loss (-53.8%)",
+      "submitted": "2026-08-11T13:11:11"
     }
   ],
   "bucket_open_premium": {
