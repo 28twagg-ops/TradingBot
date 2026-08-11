@@ -22987,3 +22987,44 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ### Options bot full output
 
 ```text
+
+## Run 20260811T193747Z
+
+- UTC timestamp: `20260811T193747Z`
+- GitHub run: [#6758](https://github.com/28twagg-ops/TradingBot/actions/runs/31528698467)
+- Run id: `31528698467`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-11T15:34:31.745136-04:00","date":"2026-08-11","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":2.5,"phases_s":{"reconcile":0.16,"cancel":0.04,"manage":1.75},"signals":0,"placed":0,"equity":132087.16,"open_positions":22,"pending_orders":0,"open_lots":109,"submitted_today":56,"filled_today":44,"unattributed_contracts":4,"top_signals":[],"github_run":"6756","github_run_id":"31528160687","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:37:49  INFO      Mode: evening_prep
+19:37:50  INFO        [prep_positions] 1/1 (1 valid)
+19:37:50  INFO        Universe cache hit: 903 tickers (tickers_2026-08-11.json)
+19:37:51  INFO        [prep_universe] 40/902 (40 valid)
+19:37:53  INFO        [prep_universe] 80/902 (80 valid)
+19:37:55  INFO        [prep_universe] 120/902 (120 valid)
+19:37:56  INFO        [prep_universe] 160/902 (160 valid)
+19:37:58  INFO        [prep_universe] 200/902 (199 valid)
+19:38:05  INFO        [prep_universe] 240/902 (238 valid)
+19:38:16  INFO        [prep_universe] 280/902 (278 valid)
+19:38:27  INFO        [prep_universe] 320/902 (318 valid)
+19:38:40  INFO        [prep_universe] 360/902 (358 valid)
+19:38:51  INFO        [prep_universe] 400/902 (397 valid)
+19:39:05  INFO        [prep_universe] 440/902 (437 valid)
+19:39:16  INFO        [prep_universe] 480/902 (477 valid)
+19:39:27  INFO        [prep_universe] 520/902 (517 valid)
+19:39:38  INFO        [prep_universe] 560/902 (557 valid)
+19:39:52  INFO        [prep_universe] 600/902 (597 valid)
+19:40:05  INFO        [prep_universe] 640/902 (637 valid)
+19:40:15  INFO        [prep_universe] 680/902 (677 valid)
+```
+
+### Options bot full output
+
+```text
