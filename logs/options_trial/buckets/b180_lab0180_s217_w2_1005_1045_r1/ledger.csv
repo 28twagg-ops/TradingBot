@@ -25,3 +25,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-06 14:16:05.868170+00:00,entry,180,lab0180_s217_w2_1005_1045_r1,S217,ca12837f2432,RBLX,RBLX260807C00037500,1,0.35,0.35,35.0,,,,-0.01,,0.5,-0.5,,,5ac75c40-5b94-494c-afad-bf1b7bdfc702
 2026-08-10 14:38:04.163144+00:00,entry,180,lab0180_s217_w2_1005_1045_r1,S217,3b537aaaf3eb,RBLX,RBLX260814C00042000,1,0.29,0.29,29.0,,,,-0.01,,0.75,-0.75,0.0338983050847458,RSI=24.1 green,e69324ea-cea6-46c0-9eef-385543b92f47
 2026-08-10T17:51:31Z,reconcile,180,lab0180_s217_w2_1005_1045_r1,S217,3b537aaaf3eb,RBLX,RBLX260814C00042000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-10 14:38:04.163144+00:00,entry,180,lab0180_s217_w2_1005_1045_r1,S217,786735ce9d4a,RBLX,RBLX260814C00042000,1,0.29,0.29,29.0,,,,-0.01,,0.5,-0.5,,,e69324ea-cea6-46c0-9eef-385543b92f47
