@@ -4749,3 +4749,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-11 13:20:51,summary,bull,470.71,211.88,0,0,0,3,AAPL|ADM|CDW,both
 2026-08-11 13:25:47,summary,bull,470.91,211.88,0,0,0,3,AAPL|ADM|CDW,both
 2026-08-11 13:50:00,scan_morning,bull,467.69,186.0,44,0,2,3,AAPL|ADM|AES,both
+2026-08-11 13:55:28,scan_morning,bull,466.91,103.41,44,0,1,5,ADM|AES|AFL|AIG|ALGN,both
