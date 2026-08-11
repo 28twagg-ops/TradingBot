@@ -5,3 +5,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-04T01:11:19Z,reconcile,17,lab0017_s202_w1_0928_1005_r2,S202,77ac718ebebb,AAPL,AAPL260803C00315000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-10 14:07:18.436954+00:00,entry,17,lab0017_s202_w1_0928_1005_r2,S202,39dd5c85f11f,CELH,CELH260814C00028500,1,0.22,0.21,21.0,,,,-0.01,,0.75,-0.75,0.2439024390243903,gap -5.3%,77e3e158-f38d-4c51-bef7-c0d2e2dbb337
 2026-08-10 14:07:18.436954+00:00,entry,17,lab0017_s202_w1_0928_1005_r2,S202,39dd5c85f11f,CELH,CELH260814C00028500,1,0.21,0.21,21.0,,,,-0.01,,0.5,-0.5,,,77e3e158-f38d-4c51-bef7-c0d2e2dbb337
+2026-08-11 14:15:58.526484+00:00,exit,17,lab0017_s202_w1_0928_1005_r2,S202,39dd5c85f11f,CELH,CELH260814C00028500,1,,0.05,21.0,-76.19,-16.0,stop_loss (-74.6%),,-0.01,0.5,-0.5,,,2411fe9a-7bfe-40ca-8735-dcf8cf3c02d7
