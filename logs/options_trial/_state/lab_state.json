@@ -222,26 +222,6 @@
       "entry_order_id": "49b92463-cb56-45e7-b76f-abbd510b2fd0"
     },
     {
-      "lot_id": "397d316e9781",
-      "bucket_id": 800,
-      "profile_name": "lab0800_s404_w1_0928_1005_r1",
-      "strategy_id": "S404",
-      "occ_symbol": "CELH260814C00028000",
-      "underlying": "CELH",
-      "qty": 1,
-      "entry_cost": 26.0,
-      "entry_price": 0.26,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T14:08:07.229153+00:00",
-      "entry_order_id": "e0b4615e-63b1-4ec8-80f2-ce09e7187023"
-    },
-    {
       "lot_id": "e6a44ccc974a",
       "bucket_id": 777,
       "profile_name": "lab0777_s397_w1_0928_1005_r2",
@@ -2185,84 +2165,104 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "4c29d604-f593-4525-a4e0-34525dc050a6",
-      "lot_id": "050929fd52c1",
-      "bucket_id": 182,
-      "strategy_id": "S217",
-      "occ_symbol": "RBLX260814C00041000",
-      "qty": 1,
-      "reason": "stop_loss (-75.3%)",
-      "submitted": "2026-08-11T10:07:51"
-    },
-    {
-      "order_id": "8286b3ca-aac5-4642-9b4e-92c6f9779e43",
-      "lot_id": "2c221ead4f31",
-      "bucket_id": 782,
-      "strategy_id": "S397",
-      "occ_symbol": "TTD260814C00012500",
-      "qty": 1,
-      "reason": "take_profit (+72.9%)",
-      "submitted": "2026-08-11T11:21:09"
-    },
-    {
-      "order_id": "5caa918d-05a5-473a-b1b3-9155d0d23720",
-      "lot_id": "acb691c65eea",
-      "bucket_id": 262,
-      "strategy_id": "S403",
-      "occ_symbol": "NFLX260814C00079000",
-      "qty": 1,
-      "reason": "stop_loss (-51.9%)",
-      "submitted": "2026-08-11T11:28:29"
-    },
-    {
-      "order_id": "cc931074-f357-4ccd-8bb5-b89ac76be715",
-      "lot_id": "a3b7ebb859b5",
-      "bucket_id": 317,
-      "strategy_id": "S355",
-      "occ_symbol": "AAPL260817C00320000",
-      "qty": 1,
-      "reason": "stop_loss (-50.6%)",
-      "submitted": "2026-08-11T11:49:54"
-    },
-    {
-      "order_id": "2ac4e817-bcbf-484b-b85c-c86cbe0e2074",
-      "lot_id": "44e4a2352a6e",
+      "order_id": "cfe6ce79-e75b-4cf9-a19d-2e8c4d570ec1",
+      "lot_id": "2a5f26b32177",
       "bucket_id": 0,
       "strategy_id": "ORPHAN",
-      "occ_symbol": "QQQ260813C00740000",
+      "occ_symbol": "RBLX260814C00041000",
       "qty": 1,
-      "reason": "stop_loss (-81.0%)",
-      "submitted": "2026-08-11T11:49:58"
+      "reason": "stop_loss (-95.5%)",
+      "submitted": "2026-08-11T16:01:34"
     },
     {
-      "order_id": "eca02d60-a19c-4369-86b5-38e6dddf359b",
-      "lot_id": "7a6feb260932",
-      "bucket_id": 391,
-      "strategy_id": "S363",
-      "occ_symbol": "AAPL260814C00317500",
+      "order_id": "71f45dac-03bf-4987-bdc4-f5025b018bbc",
+      "lot_id": "e0915b11c51b",
+      "bucket_id": 844,
+      "strategy_id": "S407",
+      "occ_symbol": "AAPL260812C00320000",
       "qty": 1,
-      "reason": "stop_loss (-50.9%)",
-      "submitted": "2026-08-11T11:56:20"
+      "reason": "stop_loss (-90.9%)",
+      "submitted": "2026-08-11T16:01:35"
     },
     {
-      "order_id": "840e2d84-b9ad-4d85-ac5a-f812f970f97f",
-      "lot_id": "91c401cd4072",
-      "bucket_id": 821,
+      "order_id": "83bb7e7b-79d7-45f3-b26d-20462623bd7f",
+      "lot_id": "6dc8eb6c5203",
+      "bucket_id": 820,
       "strategy_id": "S405",
       "occ_symbol": "AAPL260812C00312500",
       "qty": 1,
-      "reason": "stop_loss (-63.5%)",
-      "submitted": "2026-08-11T12:01:08"
+      "reason": "stop_loss (-89.4%)",
+      "submitted": "2026-08-11T16:01:36"
     },
     {
-      "order_id": "3c451b23-704e-4f12-b9ef-58041c2339e4",
-      "lot_id": "69c0f18b57d0",
+      "order_id": "d5bcba9d-9034-4613-a0d2-ae22da0370a5",
+      "lot_id": "c081a3ca8cd6",
       "bucket_id": 0,
       "strategy_id": "ORPHAN",
       "occ_symbol": "META260814C00657500",
       "qty": 2,
-      "reason": "stop_loss (-51.9%)",
-      "submitted": "2026-08-11T12:34:40"
+      "reason": "stop_loss (-87.0%)",
+      "submitted": "2026-08-11T16:01:37"
+    },
+    {
+      "order_id": "95a8c692-5f13-4c77-8182-8b57b40e1e49",
+      "lot_id": "8ccdd034f691",
+      "bucket_id": 390,
+      "strategy_id": "S363",
+      "occ_symbol": "AAPL260814C00317500",
+      "qty": 1,
+      "reason": "stop_loss (-73.8%)",
+      "submitted": "2026-08-11T16:01:38"
+    },
+    {
+      "order_id": "c46fda42-d78c-4775-a59f-2904dc52f83f",
+      "lot_id": "3cd3022a7fbf",
+      "bucket_id": 828,
+      "strategy_id": "S406",
+      "occ_symbol": "AAPL260812C00317500",
+      "qty": 1,
+      "reason": "stop_loss (-95.5%)",
+      "submitted": "2026-08-11T16:01:39"
+    },
+    {
+      "order_id": "73a1405f-313a-4658-b1a7-2a26acf1369d",
+      "lot_id": "4db4dd2247f3",
+      "bucket_id": 816,
+      "strategy_id": "S405",
+      "occ_symbol": "AAPL260812C00315000",
+      "qty": 1,
+      "reason": "stop_loss (-95.3%)",
+      "submitted": "2026-08-11T16:01:40"
+    },
+    {
+      "order_id": "1c7c930b-2855-4e8f-be2f-4ce876c4ebe5",
+      "lot_id": "e6a44ccc974a",
+      "bucket_id": 777,
+      "strategy_id": "S397",
+      "occ_symbol": "CELH260814C00028000",
+      "qty": 1,
+      "reason": "take_profit (+117.5%)",
+      "submitted": "2026-08-11T16:01:41"
+    },
+    {
+      "order_id": "476f9943-db75-4345-977a-959311b89225",
+      "lot_id": "dabb7d6e0f1b",
+      "bucket_id": 109,
+      "strategy_id": "S212",
+      "occ_symbol": "NFLX260814C00079000",
+      "qty": 1,
+      "reason": "stop_loss (-74.1%)",
+      "submitted": "2026-08-11T16:01:44"
+    },
+    {
+      "order_id": "798354e7-a412-425e-b592-568d23f1ffbb",
+      "lot_id": "be6e4b0bb32a",
+      "bucket_id": 319,
+      "strategy_id": "S355",
+      "occ_symbol": "AAPL260817C00320000",
+      "qty": 1,
+      "reason": "stop_loss (-74.5%)",
+      "submitted": "2026-08-11T16:01:45"
     }
   ],
   "bucket_open_premium": {
@@ -2277,7 +2277,6 @@
     "b378": 45.0,
     "b299": 45.0,
     "b83": 48.0,
-    "b800": 26.0,
     "b777": 26.0,
     "b776": 26.0,
     "b391": 67.0,
@@ -2879,7 +2878,8 @@
     "3b01f827-3087-474f-96ec-99ab348afa5f",
     "ba4c4f5f-3308-4e77-b3ec-bba97864a049",
     "7119e16a-f47a-4b63-ac24-8f009b8fbfc8",
-    "3b6157d9-2f49-4660-9df4-c20685ab958e"
+    "3b6157d9-2f49-4660-9df4-c20685ab958e",
+    "224eddb7-8b6f-4cc0-aa16-bd4b2bdd7de9"
   ],
   "submitted_today": 56,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
