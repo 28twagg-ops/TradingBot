@@ -11036,3 +11036,6 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-11 15:56:18.533976+00:00,exit,96,lab0096_s211_w2_1005_1045_r1,S211,674430792522,PFE,PFE260814C00027000,1,,0.09,22.0,-59.09,-13.0,stop_loss (-63.1%),,-0.01,0.5,-0.5,,,341a82ff-bacf-4e90-bed6-70969de358f2
 2026-08-11 15:56:18.150656+00:00,exit,918,lab0918_s412_w4_1120_1135_r1,S412,7d20dbd4726d,AAPL,AAPL260812C00312500,1,,0.24,65.0,-63.08,-41.0,stop_loss (-63.5%),,-0.01,0.5,-0.5,,,cb8970b8-3648-446d-977e-e01ce4fa95a8
 2026-08-11 15:56:17.189750+00:00,exit,234,lab0234_s401_w1_0928_1005_r1,S401,3dbf7c709c3d,PLTR,PLTR260814C00190000,1,,0.19,41.0,-53.66,-22.0,stop_loss (-54.2%),,-0.01,0.5,-0.5,,,a113532c-9e40-4f46-bc39-0286908902b1
+2026-08-11T16:05:47Z,reconcile,0,orphan_reconcile,ORPHAN,6047a02bc306,PLTR,PLTR260814C00190000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-11T16:05:48Z,reconcile,95,lab0095_s211_w1_0928_1005_r2,S211,b66b59ab673a,PFE,PFE260814C00027000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-11 16:01:14.510968+00:00,exit,0,orphan_reconcile,ORPHAN,7c4bd63574a0,AAPL,AAPL260814C00317500,2,,0.19,122.26,-68.92,-84.26,stop_loss (-54.2%),,-0.01,0.5,-0.5,,,ee396bc7-c58b-44f4-9436-457af7a6113d

@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,5,19,2026-07-27,True,15,0.0,-66.67,-63.64,-47.95,-98.48,-271.93,"AAPL,RBLX,TSLA",ORPHAN,stop_loss (-97.4%); reconcile_fill; stop_loss (-77.5%)…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,6,18,2026-07-27,True,15,0.0,-67.05,-66.28,-47.95,-98.48,-356.19,"AAPL,RBLX,TSLA",ORPHAN,stop_loss (-97.4%); reconcile_fill; stop_loss (-77.5%)…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -94,7 +94,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 92,lab0092_s210_w7_1500_1530_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 93,lab0093_s210_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 94,lab0094_s211_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-11,False,,,,,,,0,BA,S211,,entered_no_exit
-95,lab0095_s211_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-08-11,False,,0.0,-45.24,-45.24,-45.24,-45.24,-19.0,BA,S211,stop_loss (-50.0%),closed
+95,lab0095_s211_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-11,False,,0.0,-45.24,-45.24,-45.24,-45.24,-19.0,BA,S211,stop_loss (-50.0%),closed
 96,lab0096_s211_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,2,0,2026-08-10,False,,0.0,-52.27,-52.27,-45.45,-59.09,-23.0,PFE,S211,stop_loss (-50.8%); stop_loss (-63.1%),closed
 97,lab0097_s211_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-10,False,,,,,,,0,,,,idle
 98,lab0098_s211_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-11,False,,,,,,,0,AVGO,S211,,entered_no_exit
