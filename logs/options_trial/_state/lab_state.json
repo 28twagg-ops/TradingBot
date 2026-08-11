@@ -222,26 +222,6 @@
       "entry_order_id": "49b92463-cb56-45e7-b76f-abbd510b2fd0"
     },
     {
-      "lot_id": "54632cb74f4e",
-      "bucket_id": 801,
-      "profile_name": "lab0801_s404_w1_0928_1005_r2",
-      "strategy_id": "S404",
-      "occ_symbol": "CELH260814C00028000",
-      "underlying": "CELH",
-      "qty": 1,
-      "entry_cost": 26.0,
-      "entry_price": 0.26,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-10T14:08:07.191039+00:00",
-      "entry_order_id": "9d9093e2-a693-4c85-b68b-08bdd8eac0bf"
-    },
-    {
       "lot_id": "397d316e9781",
       "bucket_id": 800,
       "profile_name": "lab0800_s404_w1_0928_1005_r1",
@@ -2553,16 +2533,6 @@
       "qty": 2,
       "reason": "stop_loss (-51.9%)",
       "submitted": "2026-08-11T12:34:40"
-    },
-    {
-      "order_id": "27b5560d-fc16-4bc3-843e-c0f6e2c34175",
-      "lot_id": "54632cb74f4e",
-      "bucket_id": 801,
-      "strategy_id": "S404",
-      "occ_symbol": "CELH260814C00028000",
-      "qty": 1,
-      "reason": "take_profit (+51.5%)",
-      "submitted": "2026-08-11T12:35:54"
     }
   ],
   "bucket_open_premium": {
@@ -2577,7 +2547,6 @@
     "b378": 45.0,
     "b299": 45.0,
     "b83": 48.0,
-    "b801": 26.0,
     "b800": 26.0,
     "b777": 26.0,
     "b776": 26.0,
@@ -3224,7 +3193,8 @@
     "a113532c-9e40-4f46-bc39-0286908902b1",
     "ee396bc7-c58b-44f4-9436-457af7a6113d",
     "976aa3cf-fa04-429a-8fe3-a802226190d2",
-    "b15b1115-1e4b-4f2e-8d98-9df40987d864"
+    "b15b1115-1e4b-4f2e-8d98-9df40987d864",
+    "27b5560d-fc16-4bc3-843e-c0f6e2c34175"
   ],
   "submitted_today": 56,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

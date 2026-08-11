@@ -4808,8 +4808,8 @@
   {
     "bucket_id": 801,
     "profile": "lab0801_s404_w1_0928_1005_r2",
-    "open_premium": 26.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 802,
