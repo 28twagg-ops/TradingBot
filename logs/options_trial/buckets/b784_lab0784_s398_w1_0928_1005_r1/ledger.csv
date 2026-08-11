@@ -8,3 +8,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10T13:00:47Z,reconcile,784,lab0784_s398_w1_0928_1005_r1,S398,308f3ff7c713,AMZN,AMZN260807C00295000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-10 14:07:18.416343+00:00,entry,784,lab0784_s398_w1_0928_1005_r1,S398,5ac7f0ea312e,CELH,CELH260814C00028500,1,0.22,0.21,21.0,,,,-0.01,,0.75,-0.75,0.2439024390243903,gap -5.3%,fc9a20d5-e835-4ab2-a423-f2636d3d5de7
 2026-08-10 14:07:18.416343+00:00,entry,784,lab0784_s398_w1_0928_1005_r1,S398,5ac7f0ea312e,CELH,CELH260814C00028500,1,0.21,0.21,21.0,,,,-0.01,,0.5,-0.5,,,fc9a20d5-e835-4ab2-a423-f2636d3d5de7
+2026-08-11 14:05:10.973423+00:00,exit,784,lab0784_s398_w1_0928_1005_r1,S398,5ac7f0ea312e,CELH,CELH260814C00028500,1,,0.07,21.0,-66.67,-14.0,stop_loss (-74.6%),,-0.01,0.5,-0.5,,,66d51aab-0382-4019-ae5d-ad217e4d1a68
