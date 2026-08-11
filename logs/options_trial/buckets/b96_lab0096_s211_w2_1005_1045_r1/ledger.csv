@@ -17,3 +17,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10T13:00:47Z,reconcile,96,lab0096_s211_w2_1005_1045_r1,S211,28e9993bd392,AMZN,AMZN260807C00297500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-10 14:07:32.382128+00:00,entry,96,lab0096_s211_w2_1005_1045_r1,S211,c8992c8d01dc,PFE,PFE260814C00027000,1,0.23,0.22,22.0,,,,-0.01,,0.5,-0.5,0.042553191489361625,MA21 crossed above MA50,8f47318f-b8c3-4b2a-9589-b4a05cc765d6
 2026-08-10 14:07:32.382128+00:00,entry,96,lab0096_s211_w2_1005_1045_r1,S211,c8992c8d01dc,PFE,PFE260814C00027000,1,0.22,0.22,22.0,,,,-0.01,,0.5,-0.5,,,8f47318f-b8c3-4b2a-9589-b4a05cc765d6
+2026-08-11 15:11:12.105279+00:00,exit,96,lab0096_s211_w2_1005_1045_r1,S211,c8992c8d01dc,PFE,PFE260814C00027000,1,,0.12,22.0,-45.45,-10.0,stop_loss (-50.8%),,-0.01,0.5,-0.5,,,75ebf904-b48a-4ac4-be42-4be18561619e
