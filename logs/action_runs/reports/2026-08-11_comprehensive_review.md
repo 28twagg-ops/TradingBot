@@ -3551,3 +3551,52 @@ Fetched daily bars for 114/117 symbols
 ```
 
 ---
+
+## Run 20260811T135655Z
+
+- UTC timestamp: `20260811T135655Z`
+- GitHub run: [#6684](https://github.com/28twagg-ops/TradingBot/actions/runs/31498705337)
+- Run id: `31498705337`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-11T09:25:49.736216-04:00","date":"2026-08-11","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.3,"phases_s":{"reconcile":0.67},"signals":0,"placed":0,"equity":140246.92,"open_positions":20,"pending_orders":0,"open_lots":127,"submitted_today":0,"filled_today":0,"unattributed_contracts":1,"top_signals":[],"github_run":"6678","github_run_id":"31496048357","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:56:56  INFO      Mode: morning_scan
+13:56:57  INFO        [positions] 5/5 (5 valid)
+13:56:57  INFO        SELL MARKET [urgent] ADM closed
+13:57:00  INFO        TX logged: SELL ADM  P&L -0.59%
+13:57:00  INFO        SELL LIMIT ALGN  qty=0.525665089  limit=$177.60  id=4c4db0a2-e8c3-44ea-b60a-342bd968e85e
+13:57:30  INFO        SELL LIMIT filled ALGN (confirmed by position check)
+13:57:31  INFO        TX logged: SELL ALGN  P&L 0.01%
+13:57:31  INFO        Universe cache hit: 903 tickers (tickers_2026-08-11.json)
+13:57:32  INFO        [universe] 40/900 (40 valid)
+13:57:33  INFO        [universe] 80/900 (80 valid)
+13:57:34  INFO        [universe] 120/900 (120 valid)
+13:57:35  INFO        [universe] 160/900 (160 valid)
+13:57:37  INFO        [universe] 200/900 (199 valid)
+13:57:44  INFO        [universe] 240/900 (238 valid)
+13:57:57  INFO        [universe] 280/900 (278 valid)
+13:58:08  INFO        [universe] 320/900 (318 valid)
+13:58:21  INFO        [universe] 360/900 (358 valid)
+13:58:32  INFO        [universe] 400/900 (397 valid)
+13:58:45  INFO        [universe] 440/900 (437 valid)
+13:58:56  INFO        [universe] 480/900 (477 valid)
+13:59:09  INFO        [universe] 520/900 (517 valid)
+13:59:19  INFO        [universe] 560/900 (557 valid)
+13:59:33  INFO        [universe] 600/900 (597 valid)
+13:59:43  INFO        [universe] 640/900 (637 valid)
+13:59:57  INFO        [universe] 680/900 (677 valid)
+14:00:07  INFO        [universe] 720/900 (717 valid)
+14:00:21  INFO        [universe] 760/900 (757 valid)
+14:00:31  INFO        [universe] 800/900 (797 valid)
+```
+
+### Options bot full output
+
+```text
