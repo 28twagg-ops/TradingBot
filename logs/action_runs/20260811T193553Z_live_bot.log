@@ -1,0 +1,11 @@
+19:35:54  INFO      Mode: evening_prep
+19:35:55  INFO        [prep_positions] 1/1 (1 valid)
+19:35:55  INFO        Universe cache hit: 903 tickers (tickers_2026-08-11.json)
+19:35:57  INFO        [prep_universe] 40/902 (40 valid)
+19:35:59  INFO        [prep_universe] 80/902 (80 valid)
+19:36:01  INFO        [prep_universe] 120/902 (120 valid)
+19:36:03  INFO        [prep_universe] 160/902 (160 valid)
+19:36:05  INFO        [prep_universe] 200/902 (199 valid)
+19:36:10  INFO        [prep_universe] 240/902 (238 valid)
+19:36:20  INFO        [prep_universe] 280/902 (278 valid)
+19:36:34  INFO        [prep_universe] 320/902 (318 valid)

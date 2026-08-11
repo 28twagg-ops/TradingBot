@@ -22955,3 +22955,35 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260811T193553Z
+
+- UTC timestamp: `20260811T193553Z`
+- GitHub run: [#6757](https://github.com/28twagg-ops/TradingBot/actions/runs/31528582906)
+- Run id: `31528582906`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-11T15:34:31.745136-04:00","date":"2026-08-11","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":2.5,"phases_s":{"reconcile":0.16,"cancel":0.04,"manage":1.75},"signals":0,"placed":0,"equity":132087.16,"open_positions":22,"pending_orders":0,"open_lots":109,"submitted_today":56,"filled_today":44,"unattributed_contracts":4,"top_signals":[],"github_run":"6756","github_run_id":"31528160687","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:35:54  INFO      Mode: evening_prep
+19:35:55  INFO        [prep_positions] 1/1 (1 valid)
+19:35:55  INFO        Universe cache hit: 903 tickers (tickers_2026-08-11.json)
+19:35:57  INFO        [prep_universe] 40/902 (40 valid)
+19:35:59  INFO        [prep_universe] 80/902 (80 valid)
+19:36:01  INFO        [prep_universe] 120/902 (120 valid)
+19:36:03  INFO        [prep_universe] 160/902 (160 valid)
+19:36:05  INFO        [prep_universe] 200/902 (199 valid)
+19:36:10  INFO        [prep_universe] 240/902 (238 valid)
+19:36:20  INFO        [prep_universe] 280/902 (278 valid)
+19:36:34  INFO        [prep_universe] 320/902 (318 valid)
+```
+
+### Options bot full output
+
+```text
