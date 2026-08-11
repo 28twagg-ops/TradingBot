@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-11
 
-_Generated 2026-08-11T13:11:16.154202_
+_Generated 2026-08-11T13:16:04.881351_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-11T13:11:16.154202_
 
 ## Attribution health
 
-- Total exits: **2389**
+- Total exits: **2390**
 - Orphan exits (b0/orphan_reconcile): **281**
 - Orphan rate: **11.8%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -108,8 +108,8 @@ _Generated 2026-08-11T13:11:16.154202_
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 36 | 0 | 0 | $-1,658.19 | 50.4% | manually paused — excluded from new entries & reflected P&L |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 36 | 0 | 0 | $+62.64 | 27.5% | manually paused — excluded from new entries & reflected P&L |
 | S353 (GapDown_3DTE) | 3d | drop | 20 | 40.0 | -34.69 | -85.57 | -76.88 | +124.42 | 11 | 18 | 0 | $-46.00 | 45.0% | non-positive median return |
-| S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 28 | 25.0 | -34.84 | -96.47 | -49.41 | +90.64 | 15 | 20 | 8 | $-184.00 | 53.6% | non-positive median return |
 | S355 (GapDown_7DTE) | 7d | drop | 40 | 47.5 | -37.14 | -66.88 | -55.63 | +143.53 | 11 | 18 | 6 | $+369.00 | 27.5% | non-positive median return |
+| S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 29 | 24.1 | -38.10 | -96.36 | -51.47 | +88.20 | 15 | 20 | 9 | $-198.00 | 51.7% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 245 | 29.8 | -38.18 | -63.39 | -54.55 | +81.82 | 36 | 0 | 0 | $-1,828.78 | 26.1% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 47 | 38.3 | -40.00 | -80.65 | -58.11 | +102.78 | 11 | 20 | 9 | $+86.00 | 31.9% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 37 | 48.6 | -42.31 | -92.11 | -63.64 | +122.22 | 11 | 19 | 14 | $-70.00 | 32.4% | non-positive median return |
@@ -194,7 +194,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S210 | 3d ATM MA cross 8/21 | 59 | +7.69 | -84.44 | -44.44 | 35 | 23 |
-| S211 | 3d ATM MA cross 21/50 | 28 | -34.84 | -96.47 | -49.41 | 20 | 8 |
+| S211 | 3d ATM MA cross 21/50 | 29 | -38.10 | -96.36 | -51.47 | 20 | 9 |
 | S212 | 3d ATM MA bounce 50 | 76 | -69.05 | -98.18 | -81.11 | 41 | 18 |
 | S213 | 3d ATM MA bounce 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S215 | 3d ATM MA reclaim 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
@@ -248,7 +248,7 @@ _Pipeline evaluation as of 2026-08-11. Auto-kill thresholds: median<-25% at n>=1
 | S208 | GapDown_AboveMA200 | 0 | — | — | NEW | 0 |
 | S209 | GapDown_Recovery | 6 | -61.46% | 0% | WATCH | 13 |
 | S210 | MA_Cross_8_21 | 59 | +7.69% | 54% | INSUFFICIENT | 15 |
-| S211 | MA_Cross_21_50 | 28 | -34.84% | 25% | INSUFFICIENT | 15 |
+| S211 | MA_Cross_21_50 | 29 | -38.10% | 24% | INSUFFICIENT | 15 |
 | S212 | MA_Bounce_50 | 76 | -69.05% | 13% | INSUFFICIENT | 15 |
 | S213 | MA_Bounce_200 | 0 | — | — | NEW | 0 |
 | S214 | MA_Death_Cross | 0 | — | — | NEW | 0 |
