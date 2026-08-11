@@ -4829,3 +4829,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-11 20:50:50,ext_exits,bull,466.17,116.46,0,0,0,4,ADM|AES|AXP|EXR,both
 2026-08-11 20:58:19,ext_exits,bull,466.17,116.46,0,0,0,4,ADM|AES|AXP|EXR,both
 2026-08-11 21:00:55,ext_exits,bull,466.17,116.46,0,0,0,4,ADM|AES|AXP|EXR,both
+2026-08-11 21:05:48,ext_exits,bull,466.17,116.46,0,0,0,4,ADM|AES|AXP|EXR,both
