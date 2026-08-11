@@ -735,3 +735,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-08-11 13:51:24,2026-08-11,SELL,AAPL,Pullback50,305.79,,305.79,93.61,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-08-11 13:57:00,2026-08-11,SELL,ADM,Pullback50,80.0,,80.0,13.59,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-08-11 13:57:31,2026-08-11,SELL,ALGN,Pullback50,177.955,177.6,177.67,93.39,-0.1602,-0.1496,limit_fill_position_check_full,midline (+0.0%),bull
+2026-08-11 14:01:43,2026-08-11,SELL,AIG,Pullback50,77.25,,77.25,68.71,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
