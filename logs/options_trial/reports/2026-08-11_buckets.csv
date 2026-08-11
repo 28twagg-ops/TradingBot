@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,12,14,2026-07-27,True,15,0.0,-70.29,-66.41,-47.95,-98.48,-586.38,"AAPL,MARA,RBLX,TSLA,TTD,UBER",ORPHAN,stop_loss (-97.4%); reconcile_fill; stop_loss (-77.5%)…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,13,13,2026-07-27,True,15,0.0,-66.2,-63.89,-17.19,-98.48,-600.91,"AAPL,MARA,RBLX,TSLA,TTD,UBER",ORPHAN,stop_loss (-97.4%); reconcile_fill; stop_loss (-77.5%)…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
