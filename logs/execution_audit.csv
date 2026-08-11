@@ -737,3 +737,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-08-11 13:57:31,2026-08-11,SELL,ALGN,Pullback50,177.955,177.6,177.67,93.39,-0.1602,-0.1496,limit_fill_position_check_full,midline (+0.0%),bull
 2026-08-11 14:01:43,2026-08-11,SELL,AIG,Pullback50,77.25,,77.25,68.71,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-08-11 14:07:43,2026-08-11,SELL,AFL,Pullback50,121.165,,121.165,93.04,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-08-11 19:58:24,2026-08-11,SELL,DHI,Pullback50,150.65,150.35,150.644,93.11,-0.004,-0.0037,limit_fill_position_check_full,midline (-0.1%),bull

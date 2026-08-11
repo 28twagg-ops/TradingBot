@@ -23237,3 +23237,44 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ### Options bot full output
 
 ```text
+
+## Run 20260811T195751Z
+
+- UTC timestamp: `20260811T195751Z`
+- GitHub run: [#6762](https://github.com/28twagg-ops/TradingBot/actions/runs/31530261694)
+- Run id: `31530261694`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-11T15:34:31.745136-04:00","date":"2026-08-11","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":2.5,"phases_s":{"reconcile":0.16,"cancel":0.04,"manage":1.75},"signals":0,"placed":0,"equity":132087.16,"open_positions":22,"pending_orders":0,"open_lots":109,"submitted_today":56,"filled_today":44,"unattributed_contracts":4,"top_signals":[],"github_run":"6756","github_run_id":"31528160687","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+19:57:52  INFO      Mode: scan
+19:57:53  INFO        [positions] 5/5 (5 valid)
+19:57:53  INFO        SELL LIMIT DHI  qty=0.618063198  limit=$150.35  id=cd3b3872-4581-428c-987a-87343ac7a9ff
+19:58:23  INFO        SELL LIMIT filled DHI (confirmed by position check)
+19:58:24  INFO        TX logged: SELL DHI  P&L -0.12%
+19:58:24  INFO        Universe cache hit: 903 tickers (tickers_2026-08-11.json)
+19:58:24  INFO        [universe] 40/899 (40 valid)
+19:58:27  INFO        [universe] 80/899 (80 valid)
+19:58:28  INFO        [universe] 120/899 (120 valid)
+19:58:29  INFO        [universe] 160/899 (160 valid)
+19:58:31  INFO        [universe] 200/899 (199 valid)
+19:58:37  INFO        [universe] 240/899 (238 valid)
+19:58:48  INFO        [universe] 280/899 (278 valid)
+19:59:01  INFO        [universe] 320/899 (318 valid)
+19:59:14  INFO        [universe] 360/899 (358 valid)
+19:59:25  INFO        [universe] 400/899 (397 valid)
+19:59:38  INFO        [universe] 440/899 (437 valid)
+19:59:49  INFO        [universe] 480/899 (477 valid)
+20:00:02  INFO        [universe] 520/899 (517 valid)
+20:00:12  INFO        [universe] 560/899 (557 valid)
+```
+
+### Options bot full output
+
+```text
