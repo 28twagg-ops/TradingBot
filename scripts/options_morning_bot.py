@@ -35,8 +35,10 @@ from zoneinfo import ZoneInfo
 import pandas as pd
 
 from alpaca.trading.client import TradingClient
-from alpaca.trading.requests import LimitOrderRequest, GetOrdersRequest
-from alpaca.trading.enums import OrderSide, TimeInForce, QueryOrderStatus
+from alpaca.trading.requests import (
+    LimitOrderRequest, GetOrdersRequest, StopLimitOrderRequest, StopOrderRequest,
+)
+from alpaca.trading.enums import OrderSide, TimeInForce, QueryOrderStatus, OrderType
 from alpaca.data.historical import OptionHistoricalDataClient, StockHistoricalDataClient
 from alpaca.data.requests import OptionChainRequest, StockBarsRequest
 from alpaca.data.timeframe import TimeFrame
@@ -54,7 +56,9 @@ from options_lab import (
     entry_limit_price, exit_limit_price,
     exit_reason_for_lot, has_open_lab_entry, load_state,
     lock_entry_slot, make_entry_client_order_id,
-    make_exit_client_order_id, open_option_sell_symbols,
+    make_exit_client_order_id, make_protective_stop_client_order_id,
+    cancel_protective_stops_for_occ, is_protective_stop_client_order_id,
+    open_option_sell_symbols,
     print_exit_summary, print_trial_stats, reconcile_summary,
     reconcile_with_broker, register_pending, register_pending_exit,
     save_state, size_for_arm, trial_root,
@@ -192,31 +196,50 @@ def _console_account_summary(state: LabState, equity: float | None, positions: l
                              *, mode: str, signals: int, placed: int,
                              rec: dict | None = None) -> None:
     rec = rec or reconcile_summary(state, positions)
-    _box_title("OPTIONS BOT SUMMARY")
-    rl(_box_line(f"  Mode                          {mode}"))
+    
+    rl(_box_border())
+    rl(_box_line("[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]"))
+    rl(_box_border())
+    rl(_box_line(f"-- ACCOUNT STATUS ({mode}) --"))
     if equity is not None:
-        rl(_box_line(f"  Equity                        ${equity:,.2f}"))
-    rl(_box_line(f"  Signals this run              {signals}"))
-    rl(_box_line(f"  Orders submitted (session)    {rec.get('submitted_today', 0)}"))
-    rl(_box_line(f"  Orders filled today (ledger)  {rec.get('filled_today', 0)}"))
-    rl(_box_line(f"  Entries placed this run       {placed}"))
-    rl(_box_line(f"  Open virtual lots             {rec.get('open_lots', 0)}"))
-    rl(_box_line(f"  Broker option positions       {rec.get('broker_positions', len(positions))}"))
+        rl(_box_line(f"Equity       : ${equity:,.2f}"))
+    rl(_box_line(f"Open Risk    : {rec.get('open_lots', 0)} lots ({rec.get('broker_positions', len(positions))} broker pos)"))
+    rl(_box_line(f"Today's Run  : {signals} signals -> {placed} orders submitted"))
+    rl(_box_line(""))
+    
     unatt = rec.get("unattributed_contracts", 0)
-    if unatt:
-        rl(_box_line(f"  Unattributed contracts        {unatt} (orphan reconcile)"))
-    rl(_box_line(f"  Pending orders                {rec.get('pending_orders', 0)}"))
+    zombies = "0 (Ledger is clean)" if unatt == 0 else f"{unatt} WARN: See reconcile"
+    rl(_box_line("-- SYSTEM HEALTH --"))
+    rl(_box_line(f"Zombies      : {zombies}"))
+    rl(_box_line(f"Lab Status   : {len(state.lots)} Active Lots | {len(state.pending_orders)} Pending Orders"))
+    
+    # Check for auto-kills or watch recommendations
+    try:
+        df = pd.read_csv(LOG_DIR / "reports" / f"{TODAY}_strategy_selection.csv")
+        killed = len(df[df['recommendation'] == 'kill']) if 'kill' in df.columns else 0
+        watch = len(df[df['recommendation'] == 'watch']) if 'watch' in df.columns else 0
+        promoted = len(df[df['recommendation'] == 'promote']) if 'promote' in df.columns else 0
+        rl(_box_line(f"Auto-Matrix  : {killed} Killed | {watch} Watched | {promoted} Promoted"))
+    except Exception:
+        rl(_box_line("Auto-Matrix  : (Pending EOD report generation)"))
+        
     _box_end()
 
 
 def _console_positions_table(positions: list[dict], *, max_rows: int = 8) -> None:
-    _box_title(f"OPEN OPTIONS ({len(positions)})")
     if not positions:
+        rl(_box_border())
+        rl(_box_line("[OPEN OPTIONS (0)]"))
+        rl(_box_border())
         rl(_box_line("  No open option positions"))
         _box_end()
         return
+
+    rl(_box_border())
+    rl(_box_line(f"[OPEN OPTIONS ({len(positions)})]"))
+    rl(_box_border())
     rl(_box_line("  SYMBOL                      QTY    RET%        OPEN P&L"))
-    rl(_box_line("-" * W))
+    rl(_box_line("  ---------------------------------------------------------"))
     shown = 0
     for p in sorted(positions, key=lambda x: abs(float(x.get("unrealized_pl", 0) or 0)), reverse=True):
         if shown >= max_rows:
@@ -237,22 +260,30 @@ def _console_pending_summary(state: LabState, *, max_rows: int = 5) -> None:
     pending_ex = state.pending_exits
     if not pending and not pending_ex:
         return
+        
     if pending:
         from collections import Counter
         groups = Counter(f"{p.strategy_id}:{p.underlying}" for p in pending)
         top = ", ".join(f"{k}({v})" for k, v in groups.most_common(3))
-        _box_title(f"PENDING ORDERS ({len(pending)})")
-        rl(_box_line(f"  Top groups                    {top}"))
-        rl(_box_border("-"))
+        
+        rl(_box_border())
+        rl(_box_line(f"[PENDING ORDERS ({len(pending)})]"))
+        rl(_box_border())
+        rl(_box_line(f"  Top groups: {top}"))
+        rl(_box_line("  ---------------------------------------------------------"))
+        
         for p in pending[:max_rows]:
             sym = p.underlying[:8]
-            rl(_box_line(
-                f"  b{p.bucket_id:<3d} {p.strategy_id} {sym:8s} limit={p.limit:.2f}"))
+            rl(_box_line(f"  b{p.bucket_id:<3d} {p.strategy_id} {sym:8s} limit={p.limit:.2f}"))
+            
         if len(pending) > max_rows:
             rl(_box_line(f"  ... {len(pending) - max_rows} more pending order(s)"))
         _box_end()
+        
     if pending_ex:
-        _box_title(f"PENDING EXITS ({len(pending_ex)})")
+        rl(_box_border())
+        rl(_box_line(f"[PENDING EXITS ({len(pending_ex)})]"))
+        rl(_box_border())
         for pe in pending_ex[:max_rows]:
             rl(_box_line(
                 f"  b{pe.bucket_id:<3d} {pe.strategy_id} {pe.occ_symbol[:22]} "
@@ -262,67 +293,106 @@ def _console_pending_summary(state: LabState, *, max_rows: int = 5) -> None:
         _box_end()
 
 
-def _console_bucket_leaderboard(state: LabState, *, top_n: int = 8) -> None:
-    """Human-readable per-bucket stats — reflected (ex-dropped) is primary."""
-    board = build_reflected_leaderboard(state)
-    today = TODAY.isoformat()
-    today_board = build_reflected_leaderboard(state, day=today)
-    raw = build_bucket_leaderboard(state) if DROPPED_STRATEGIES else None
+def _console_data_quality() -> dict | None:
+    """Show CLEAN / TAINTED / KEEP-only lens in GitHub run console."""
+    try:
+        from options_data_quality_report import compute_quality
+        payload = compute_quality()
+    except Exception as exc:
+        rl(_box_border())
+        rl(_box_line("[DATA QUALITY]"))
+        rl(_box_border())
+        rl(_box_line(f"  (unavailable: {exc})"))
+        _box_end()
+        return None
+    if not payload:
+        return None
+    s = payload["slices"]
 
-    drop_tag = ",".join(sorted(DROPPED_STRATEGIES)) if DROPPED_STRATEGIES else ""
-    title = f"BUCKET LEADERBOARD (reflected ex-{drop_tag})" if drop_tag else "BUCKET LEADERBOARD"
-    _box_title(title)
+    def _line(label: str, sl: dict) -> None:
+        rl(_box_line(
+            f"  {label:<18s} n={sl['n']:<4d}  win={sl['win']:5.1f}%  "
+            f"med={sl['med']:+6.1f}%  ${sl['pnl']:+,.0f}"
+        ))
+
+    rl(_box_border())
+    rl(_box_line("[DATA QUALITY: CLEAN vs ERRORS vs KEEP-ONLY]"))
+    rl(_box_border())
+    _line("CLEAN", s["clean"])
+    _line("TAINTED", s["tainted"])
+    _line("KEEP-only", s["keep_only"])
+    _line("KEEP recent", s["keep_only_recent"])
+    keeps = payload.get("keep_strategies") or []
+    kills = payload.get("kill_strategies") or []
+    keep_txt = ",".join(keeps[:8]) + ("..." if len(keeps) > 8 else "")
+    kill_txt = ",".join(kills[:8]) + ("..." if len(kills) > 8 else "")
+    rl(_box_line(f"  KEEP({len(keeps)}): {keep_txt or '-'}"))
+    rl(_box_line(f"  KILL({len(kills)}): {kill_txt or '-'}"))
+    _box_end()
+    return {
+        "clean": s["clean"],
+        "tainted": s["tainted"],
+        "keep_only": s["keep_only"],
+        "keep_only_recent": s["keep_only_recent"],
+        "keep_strategies": keeps,
+        "kill_strategies": kills,
+    }
+
+
+def _console_bucket_leaderboard(state: LabState, *, top_n: int = 4) -> None:
+    """Human-readable per-bucket stats."""
+    board = build_reflected_leaderboard(state)
+    
     if board.total_exits == 0:
-        rl(_box_line(f"  {board.buckets_defined} buckets defined — no completed trades yet"))
+        rl(_box_border())
+        rl(_box_line("[STRATEGY PERFORMANCE]"))
+        rl(_box_border())
+        rl(_box_line(f"  {board.buckets_defined} buckets defined - no completed trades yet"))
         _box_end()
         return
 
-    rl(_box_line(
-        f"  Reflected trades={board.total_exits}  buckets={board.buckets_with_exits}"
-        f"  win={board.win_rate_pct:.0f}%"
-    ))
-    rl(_box_line(
-        f"  Returns   avg={board.avg_return_pct:+.1f}%  med={board.med_return_pct:+.1f}%"
-        f"  p10={board.p10_return_pct:+.1f}%  p90={board.p90_return_pct:+.1f}%"
-    ))
-    rl(_box_line(f"  Realized  ${board.total_realized_usd:+,.2f}"))
-    if raw is not None and abs(raw.total_realized_usd - board.total_realized_usd) > 0.01:
-        rl(_box_line(
-            f"  Raw incl dropped  trades={raw.total_exits}  "
-            f"real=${raw.total_realized_usd:+,.2f}"
-        ))
-    if today_board.total_exits:
-        rl(_box_line(
-            f"  Today     trades={today_board.total_exits}  "
-            f"avg={today_board.avg_return_pct:+.1f}%  "
-            f"med={today_board.med_return_pct:+.1f}%  "
-            f"real=${today_board.total_realized_usd:+,.2f}"
-        ))
+    # Filter to only rows with enough trades, sort by median
+    valid = [r for r in board.rows if r.exits >= 10]
+    valid.sort(key=lambda x: x.med_return_pct, reverse=True)
+    
+    if not valid:
+        rl(_box_border())
+        rl(_box_line("[STRATEGY PERFORMANCE]"))
+        rl(_box_border())
+        rl(_box_line("  No strategies have reached 10 exits yet. Waiting for data."))
+        _box_end()
+        return
 
-    rl(_box_border("-"))
-    rl(_box_line("  BKT PROFILE               N  WIN  AVG%   MED%   BEST%  REAL$"))
-    rl(_box_border("-"))
-    for row in board.rows[:top_n]:
-        prof = row.profile[:18]
-        win_pct = 100.0 * row.wins / row.exits if row.exits else 0.0
-        rl(_box_line(
-            f"  b{row.bucket_id:<3d} {prof:18s} {row.exits:2d} "
-            f"{win_pct:3.0f}% {row.avg_return_pct:+5.1f} {row.med_return_pct:+5.1f} "
-            f"{row.best_return_pct:+5.1f} ${row.realized_usd:+7.0f}"
-        ))
-    omitted = len(board.rows) - min(top_n, len(board.rows))
-    if omitted > 0:
-        rl(_box_line(f"  ... {omitted} more bucket(s) with exits"))
-    if len(board.rows) >= 3:
-        worst = board.rows[-1]
-        wprof = worst.profile[:18]
-        wwin = 100.0 * worst.wins / worst.exits if worst.exits else 0.0
-        rl(_box_border("-"))
-        rl(_box_line(
-            f"  Low  b{worst.bucket_id:<3d} {wprof:18s} {worst.exits:2d} "
-            f"{wwin:3.0f}% {worst.avg_return_pct:+5.1f} {worst.med_return_pct:+5.1f} "
-            f"{worst.worst_return_pct:+5.1f} ${worst.realized_usd:+7.0f}"
-        ))
+    rl(_box_border())
+    rl(_box_line("[+++ OVERPERFORMING STRATEGIES (n>=10)]"))
+    rl(_box_border())
+    rl(_box_line("  BKT  PROFILE                   WIN%   MED%   TOTAL TRADES"))
+    rl(_box_line("  ---------------------------------------------------------"))
+    for r in valid[:top_n]:
+        prof = (r.profile[:20] + "..") if len(r.profile) > 22 else r.profile.ljust(22)
+        win_pct = 100.0 * r.wins / r.exits if r.exits else 0.0
+        win_str = f"{win_pct:.0f}%".rjust(4)
+        med_str = f"{r.med_return_pct:+.1f}%".rjust(6)
+        rl(_box_line(f"  b{r.bucket_id:<3d} {prof} {win_str}  {med_str}  {r.exits:4d}"))
+        
+    rl(_box_border())
+    rl(_box_line("[--- UNDERPERFORMING STRATEGIES (n>=10)]"))
+    rl(_box_border())
+    rl(_box_line("  BKT  PROFILE                   WIN%   MED%   TOTAL TRADES"))
+    rl(_box_line("  ---------------------------------------------------------"))
+    
+    worst = valid[-top_n:] if len(valid) > top_n else []
+    if not worst:
+        rl(_box_line("  (Not enough distinct strategies to show underperformers yet)"))
+    else:
+        worst.sort(key=lambda x: x.med_return_pct) # Worst at the top of this list
+        for r in worst:
+            prof = (r.profile[:20] + "..") if len(r.profile) > 22 else r.profile.ljust(22)
+            win_pct = 100.0 * r.wins / r.exits if r.exits else 0.0
+            win_str = f"{win_pct:.0f}%".rjust(4)
+            med_str = f"{r.med_return_pct:+.1f}%".rjust(6)
+            rl(_box_line(f"  b{r.bucket_id:<3d} {prof} {win_str}  {med_str}  {r.exits:4d}"))
+            
     _box_end()
 
 
@@ -398,7 +468,8 @@ def cancel_stale_option_orders(trade) -> int:
         req = GetOrdersRequest(status=QueryOrderStatus.OPEN, limit=200)
         for o in trade.get_orders(req):
             cid = getattr(o, "client_order_id", "") or ""
-            if cid.startswith("LB") or cid.startswith("LX"):
+            # LB entry, LX exit, LS protective stop — never cancel as "stale"
+            if cid.startswith("LB") or cid.startswith("LX") or cid.startswith("LS"):
                 continue
             sym = getattr(o, "symbol", "")
             ac = str(getattr(o, "asset_class", "") or "")
@@ -413,6 +484,126 @@ def cancel_stale_option_orders(trade) -> int:
     if n:
         rl(f"Cancelled {n} stale non-LAB option order(s).")
     return n
+
+
+def _has_protective_stop(trade, occ: str, lot_id: str | None = None) -> bool:
+    """True if a resting LS… stop already covers this OCC (optionally lot)."""
+    try:
+        req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[occ], limit=50)
+        for o in trade.get_orders(req) or []:
+            cid = getattr(o, "client_order_id", "") or ""
+            if not is_protective_stop_client_order_id(cid):
+                continue
+            if getattr(o, "side", None) != OrderSide.SELL and str(
+                    getattr(o, "side", "")).lower() != "sell":
+                continue
+            otype = getattr(o, "order_type", None) or getattr(o, "type", None)
+            otype_s = str(otype).lower() if otype is not None else ""
+            if "stop" not in otype_s and otype not in (OrderType.STOP, OrderType.STOP_LIMIT):
+                # Still treat LS-tagged sells as protective
+                pass
+            if lot_id:
+                short = lot_id.replace("-", "")[:6]
+                if short and short not in cid.replace("-", ""):
+                    continue
+            return True
+    except Exception:
+        return False
+    return False
+
+
+def ensure_protective_stops(trade, state: LabState) -> int:
+    """Place resting broker stop-limits at each lot's stop_loss so exits still
+    fire if GitHub Actions / this bot is down.
+
+    Uses StopLimit (preferred) then Stop-Market fallback. Prefers GTC, falls
+    back to DAY if the broker rejects GTC for that contract.
+    """
+    placed = 0
+    skipped = 0
+    failed = 0
+    # One stop per OCC (aggregate qty) — Alpaca rejects overselling the position.
+    by_occ: dict[str, list] = {}
+    for lot in state.lots:
+        if int(lot.qty) <= 0 or not lot.occ_symbol or lot.entry_price <= 0:
+            continue
+        by_occ.setdefault(lot.occ_symbol, []).append(lot)
+
+    open_exit_sells = open_option_sell_symbols(trade, include_protective_stops=False)
+
+    for occ, lots in by_occ.items():
+        if occ in open_exit_sells:
+            skipped += 1
+            continue
+        if _has_protective_stop(trade, occ):
+            skipped += 1
+            continue
+        # Use the tightest (most protective) stop among lots sharing OCC
+        primary = min(lots, key=lambda l: float(l.stop_loss))
+        qty = sum(int(l.qty) for l in lots)
+        if qty < 1:
+            continue
+        entry = float(primary.entry_price)
+        sl = float(primary.stop_loss)
+        if sl >= 0:
+            # No downside stop configured
+            skipped += 1
+            continue
+        stop_px = round(max(0.01, entry * (1.0 + sl)), 2)
+        # Limit slightly below stop so a gap-down still has a chance to fill
+        limit_px = round(max(0.01, stop_px * 0.92), 2)
+        cid = make_protective_stop_client_order_id(
+            primary.bucket_id, primary.strategy_id, primary.lot_id)
+
+        order_id = None
+        last_err = None
+        for tif in (TimeInForce.GTC, TimeInForce.DAY):
+            try:
+                o = trade.submit_order(StopLimitOrderRequest(
+                    symbol=occ,
+                    qty=qty,
+                    side=OrderSide.SELL,
+                    time_in_force=tif,
+                    stop_price=stop_px,
+                    limit_price=limit_px,
+                    client_order_id=cid[:48],
+                ))
+                order_id = str(o.id)
+                rl_file(
+                    f"  PROT STOP-LIMIT {occ} x{qty} stop={stop_px:.2f} "
+                    f"lim={limit_px:.2f} tif={tif.value} "
+                    f"sl={sl:+.0%} entry={entry:.2f} id={o.id}"
+                )
+                break
+            except Exception as exc:
+                last_err = exc
+                try:
+                    o = trade.submit_order(StopOrderRequest(
+                        symbol=occ,
+                        qty=qty,
+                        side=OrderSide.SELL,
+                        time_in_force=tif,
+                        stop_price=stop_px,
+                        client_order_id=(cid[:46] + "M")[:48],
+                    ))
+                    order_id = str(o.id)
+                    rl_file(
+                        f"  PROT STOP-MKT {occ} x{qty} stop={stop_px:.2f} "
+                        f"tif={tif.value} sl={sl:+.0%} id={o.id}"
+                    )
+                    break
+                except Exception as exc2:
+                    last_err = exc2
+                    continue
+        if order_id:
+            placed += 1
+        else:
+            failed += 1
+            rl_file(f"  PROT STOP failed {occ}: {last_err}")
+
+    if placed or failed:
+        rl(f"Protective stops: placed={placed} already={skipped} failed={failed}")
+    return placed
 
 
 # --------------------------------------------------------------------------- #
@@ -882,7 +1073,8 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
     eod = _hm_ge(now, EOD_SWEEP)
     occ_symbols = {l.occ_symbol for l in state.lots if l.qty > 0}
     pos_by_occ = {getattr(p, "symbol", ""): p for p in option_positions(trade)}
-    open_sells = open_option_sell_symbols(trade)
+    # Ignore LS… protective stops here — we cancel them before TP/EOD exits.
+    open_sells = open_option_sell_symbols(trade, include_protective_stops=False)
 
     for occ in occ_symbols:
         if occ in open_sells or state.pending_exit_for_occ(occ):
@@ -926,6 +1118,8 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
             if occ in open_sells or state.pending_exit_for_occ(occ):
                 rl(f"  EXIT skip {occ}: open sell already pending", console=False)
                 break
+            # Free the position from broker-side protective stop before exit sell
+            cancel_protective_stops_for_occ(trade, occ, log_fn=rl_file)
             ret_pct = plpc * 100.0
             tag = f"[b{lot.bucket_id}|{lot.profile_name}|{lot.strategy_id}] {reason}"
             cid = make_exit_client_order_id(lot.bucket_id, lot.strategy_id, lot.lot_id)
@@ -1246,7 +1440,8 @@ def _finish_run(now: datetime, header: str, mode: str, *,
 def log_run_json(now: datetime, mode: str, *, header: str, elapsed_s: float,
                  signals: int, placed: int, equity: float | None,
                  positions: list[dict], state: LabState,
-                 top_signals: list[str]) -> None:
+                 top_signals: list[str],
+                 data_quality: dict | None = None) -> None:
     """Append one structured run record for fast review/parsing."""
     try:
         trial_root().mkdir(parents=True, exist_ok=True)
@@ -1274,6 +1469,15 @@ def log_run_json(now: datetime, mode: str, *, header: str, elapsed_s: float,
             "github_run_id": run_id,
             "status": "ok",
         }
+        if data_quality:
+            # Compact for runs.jsonl / daily review visuals
+            rec["data_quality"] = {
+                k: ({kk: round(vv, 2) if isinstance(vv, float) else vv
+                     for kk, vv in v.items()} if isinstance(v, dict) else v)
+                for k, v in data_quality.items()
+                if k in ("clean", "tainted", "keep_only", "keep_only_recent",
+                         "keep_strategies", "kill_strategies")
+            }
         with open(RUNS_JSONL, "a", encoding="utf-8") as f:
             f.write(json.dumps(rec, separators=(",", ":")) + "\n")
     except Exception as exc:
@@ -1336,6 +1540,7 @@ def run() -> int:
         rec = reconcile_summary(state, positions)
         _console_account_summary(state, equity, positions, mode="after_hours",
                                  signals=0, placed=0, rec=rec)
+        dq = _console_data_quality()
         _console_bucket_leaderboard(state)
         _console_pending_summary(state)
         _console_positions_table(positions)
@@ -1344,7 +1549,8 @@ def run() -> int:
                               equity=equity)
         log_run_json(now, "after_hours", header="after hours (exit summary)",
                      elapsed_s=elapsed, signals=0, placed=0, equity=equity,
-                     positions=positions, state=state, top_signals=[])
+                     positions=positions, state=state, top_signals=[],
+                     data_quality=dq)
         _status_line("options_morning_bot after-hours summary (PAPER)", elapsed)
         return 0
 
@@ -1399,6 +1605,11 @@ def run() -> int:
     manage_exits(trade, opt, state, now)
     _mark_phase("manage", t0)
 
+    # Broker-resting stops: survive GitHub outages between bot cycles.
+    t0 = time.perf_counter()
+    ensure_protective_stops(trade, state)
+    _mark_phase("protective_stops", t0)
+
     placed = 0
     signals_n = 0
     top_signals: list[str] = []
@@ -1425,6 +1636,8 @@ def run() -> int:
             t0 = time.perf_counter()
             state = reconcile_with_broker(trade, state, log_fn=rl_file)
             _mark_phase("reconcile2", t0)
+            # Cover any fills that landed this cycle
+            ensure_protective_stops(trade, state)
         header = f"entry+manage ({placed} new)"
         mode = "entry+manage"
     else:
@@ -1442,6 +1655,7 @@ def run() -> int:
         print_exit_summary(state, equity, positions, file_fn=rl_file, console_fn=None, compact=True)
     _console_account_summary(state, equity, positions, mode=mode, signals=signals_n,
                              placed=placed, rec=rec)
+    dq = _console_data_quality()
     _console_bucket_leaderboard(state)
     _console_pending_summary(state)
     _console_positions_table(positions)
@@ -1450,7 +1664,7 @@ def run() -> int:
                           equity=equity)
     log_run_json(now, mode, header=header, elapsed_s=elapsed, signals=signals_n,
                  placed=placed, equity=equity, positions=positions, state=state,
-                 top_signals=top_signals)
+                 top_signals=top_signals, data_quality=dq)
     _status_line("options_morning_bot run complete (PAPER)", elapsed)
     return 0
 

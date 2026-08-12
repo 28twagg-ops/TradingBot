@@ -541,7 +541,7 @@ def bucket_dir(bucket_id: int, profile_name: str) -> Path:
 
 def ensure_trial_layout() -> None:
     """Create options_trial tree (separate from rubber_band logs/)."""
-    for sub in ("_state", "_ledger", "runs", "buckets", "simulations"):
+    for sub in ("_state", "_ledger", "runs", "buckets", "simulations", "reports"):
         (TRIAL_ROOT / sub).mkdir(parents=True, exist_ok=True)
     for b in BUCKET_EXPERIMENTS:
         d = bucket_dir(b.bucket_id, b.name)
@@ -659,14 +659,26 @@ def make_exit_client_order_id(bucket_id: int, strategy_id: str, lot_id: str) -> 
     return f"LX{bucket_id}|{strategy_id}|{short}"[:48]
 
 
+def make_protective_stop_client_order_id(bucket_id: int, strategy_id: str,
+                                         lot_id: str) -> str:
+    """Broker-resting stop that survives GitHub/bot downtime (LS… prefix)."""
+    short = lot_id.replace("-", "")[:6]
+    return f"LS{bucket_id}|{strategy_id}|{short}"[:48]
+
+
+def is_protective_stop_client_order_id(cid: str | None) -> bool:
+    return bool(cid) and str(cid).startswith("LS")
+
+
 def parse_lab_client_order_id(cid: str) -> dict[str, Any] | None:
     if not cid:
         return None
-    m = re.match(r"^L([BX])(\d+)\|([^|]+)\|", cid)
+    m = re.match(r"^L([BXS])(\d+)\|([^|]+)\|", cid)
     if not m:
         return None
+    kind = {"B": "entry", "X": "exit", "S": "protective_stop"}[m.group(1)]
     return {
-        "side": "entry" if m.group(1) == "B" else "exit",
+        "side": kind,
         "bucket_id": int(m.group(2)),
         "strategy_id": m.group(3),
     }
@@ -1012,8 +1024,12 @@ def clear_pending_exit(state: LabState, order_id: str) -> None:
     state.pending_exits = [p for p in state.pending_exits if p.order_id != oid]
 
 
-def open_option_sell_symbols(trade) -> set[str]:
-    """OCC symbols with an open broker sell (avoid double-sell / uncovered)."""
+def open_option_sell_symbols(trade, *, include_protective_stops: bool = True) -> set[str]:
+    """OCC symbols with an open broker sell (avoid double-sell / uncovered).
+
+    Protective stops use client_order_id prefix LS… and can be excluded so the
+    bot can still submit take-profit / EOD exits (after canceling the stop).
+    """
     from alpaca.trading.requests import GetOrdersRequest
     from alpaca.trading.enums import QueryOrderStatus
 
@@ -1028,10 +1044,45 @@ def open_option_sell_symbols(trade) -> set[str]:
     for o in orders:
         if _norm_order_field(getattr(o, "side", "")) != "sell":
             continue
+        cid = getattr(o, "client_order_id", "") or ""
+        if not include_protective_stops and is_protective_stop_client_order_id(cid):
+            continue
         sym = getattr(o, "symbol", "") or ""
         if occ_re.match(sym):
             out.add(sym)
     return out
+
+
+def cancel_protective_stops_for_occ(trade, occ: str, log_fn=None) -> int:
+    """Cancel resting LS… protective stops for one OCC before placing an exit."""
+    from alpaca.trading.requests import GetOrdersRequest
+    from alpaca.trading.enums import QueryOrderStatus
+
+    n = 0
+    try:
+        orders = list(trade.get_orders(
+            GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[occ],
+                             limit=ORDER_FETCH_LIMIT)
+        ) or [])
+    except Exception as exc:
+        if log_fn:
+            log_fn(f"  cancel protective list failed {occ}: {exc}")
+        return 0
+    for o in orders:
+        cid = getattr(o, "client_order_id", "") or ""
+        if not is_protective_stop_client_order_id(cid):
+            continue
+        if _norm_order_field(getattr(o, "side", "")) != "sell":
+            continue
+        try:
+            trade.cancel_order_by_id(o.id)
+            n += 1
+            if log_fn:
+                log_fn(f"  cancelled protective stop {occ} id={o.id}")
+        except Exception as exc:
+            if log_fn:
+                log_fn(f"  cancel protective failed {occ}: {exc}")
+    return n
 
 
 def exit_reason_for_lot(lot: VirtualLot, plpc: float, eod: bool) -> str | None:

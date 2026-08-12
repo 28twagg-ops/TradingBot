@@ -101,6 +101,39 @@ def _latest_selection() -> dict:
     return {"rows": rows, "path": path.name, "keep": keep, "watch": watch, "drop": drop}
 
 
+def _latest_data_quality() -> dict:
+    path = TRIAL / "reports" / "latest_data_quality.json"
+    empty = {
+        "as_of": None,
+        "clean": {},
+        "tainted": {},
+        "keep_only": {},
+        "keep_only_recent": {},
+        "keep_count": 0,
+        "kill_count": 0,
+        "keep_strategies": [],
+        "kill_strategies": [],
+    }
+    if not path.exists():
+        return empty
+    try:
+        raw = json.loads(path.read_text(encoding="utf-8"))
+        slices = raw.get("slices") or {}
+        return {
+            "as_of": raw.get("as_of"),
+            "clean": slices.get("clean") or {},
+            "tainted": slices.get("tainted") or {},
+            "keep_only": slices.get("keep_only") or {},
+            "keep_only_recent": slices.get("keep_only_recent") or {},
+            "keep_count": int(raw.get("keep_count") or 0),
+            "kill_count": int(raw.get("kill_count") or 0),
+            "keep_strategies": raw.get("keep_strategies") or [],
+            "kill_strategies": raw.get("kill_strategies") or [],
+        }
+    except Exception:
+        return empty
+
+
 def _parse_freq_md() -> dict:
     path = TRIAL / "reports" / "signal_frequency.md"
     matrix: dict[str, dict[str, int]] = {}
@@ -395,6 +428,7 @@ def build_data() -> dict:
     rb = _read_runs_equity()
     today = _rb_today_pnl()
     sel = _latest_selection()
+    dq = _latest_data_quality()
     freq = _parse_freq_md()
     health = _ledger_health()
     ledger = _ledger_arm_stats()
@@ -420,6 +454,7 @@ def build_data() -> dict:
             "open_lots": health["open_lots"],
             "selection_file": sel["path"],
             "leaderboard": sel["rows"],
+            "data_quality": dq,
         },
         "system": {
             "ledger_health": health["status"],
@@ -506,6 +541,11 @@ svg.spark {{ width:100%; height:120px; background:var(--panel); border:1px solid
   <div class="sub">Generated <span id="gen"></span> · data embedded from committed logs</div>
   <div class="grid3" id="statusCards"></div>
   <section>
+    <h3>Options data quality (CLEAN vs TAINTED vs KEEP-only)</h3>
+    <div class="grid3" id="dqCards"></div>
+    <div class="muted" id="dqMeta" style="margin-top:8px;font-size:0.85rem"></div>
+  </section>
+  <section>
     <h3>Rubber Band equity (last 30 days)</h3>
     <svg class="spark" id="spark" viewBox="0 0 1000 120" preserveAspectRatio="none"></svg>
     <div class="row muted" id="sparkLegend"></div>
@@ -548,6 +588,34 @@ function statusCls(s) {{
   if (t==='keep' || t==='confirmed') return 'ok';
   if (t==='drop' || t==='bad') return 'bad';
   return 'warn';
+}}
+function dqCard(title, sl, cls) {{
+  const n = (sl && sl.n != null) ? sl.n : 0;
+  const win = (sl && sl.win != null) ? Number(sl.win).toFixed(1) : '—';
+  const med = (sl && sl.med != null) ? fmtPct(sl.med) : '—';
+  const pnl = (sl && sl.pnl != null) ? fmtMoney(sl.pnl) : '—';
+  return `<div class="card"><h2>${{title}} ${{pill(String(n)+' exits', cls)}}</h2>
+    <div class="metric">${{med}}</div>
+    <div class="row"><span class="muted">Win%</span><span class="mono">${{win}}%</span></div>
+    <div class="row"><span class="muted">Realized</span><span class="mono">${{pnl}}</span></div>
+  </div>`;
+}}
+function renderDataQuality() {{
+  const dq = (DATA.options && DATA.options.data_quality) || {{}};
+  const el = document.getElementById('dqCards');
+  if (!el) return;
+  el.innerHTML = dqCard('CLEAN (perfect)', dq.clean, 'ok')
+    + dqCard('TAINTED (errors/outage)', dq.tainted, 'bad')
+    + dqCard('KEEP-only', dq.keep_only, 'info');
+  const meta = document.getElementById('dqMeta');
+  if (meta) {{
+    const keeps = (dq.keep_strategies||[]).join(', ') || '—';
+    const kills = (dq.kill_strategies||[]).join(', ') || '—';
+    const recent = dq.keep_only_recent || {{}};
+    meta.innerHTML = `as of ${{dq.as_of||'—'}} · KEEP n=${{dq.keep_count||0}} · KILL n=${{dq.kill_count||0}}`
+      + ` · KEEP-only recent med ${{recent.med!=null?fmtPct(recent.med):'—'}}`
+      + `<br/>KEEP: ${{keeps}}<br/>KILL: ${{kills}}`;
+  }}
 }}
 function renderCards() {{
   const rb = DATA.rubber_band, op = DATA.options, sy = DATA.system;
@@ -692,7 +760,7 @@ function renderRbBoard() {{
   document.getElementById('rbDisabled').innerHTML = dhtml;
 }}
 document.getElementById('gen').textContent = DATA.generated_at;
-renderCards(); renderSpark(); renderBoard(); renderHeat(); renderExps(); renderRbBoard();
+renderCards(); renderDataQuality(); renderSpark(); renderBoard(); renderHeat(); renderExps(); renderRbBoard();
 </script>
 </body>
 </html>

@@ -1,14 +1,9 @@
 name: Rubber Band Bot
 
-# Primary: cron-job.org webhook (~5 min, Chicago) via workflow_dispatch.
-# Backup: native GitHub schedule so market hours still run if cron-job.org dies.
+# Trigger: cron-job.org webhook (~5 min, Chicago) via workflow_dispatch only.
+# Native GitHub schedule is intentionally disabled — it drifts far more than cron-job.org.
 
 on:
-  schedule:
-    # Every 5 minutes, Mon–Fri. GitHub cron is UTC and can drift a few minutes.
-    # Covers ~08:00–22:00 ET (approx market + extended hours).
-    - cron: "*/5 12-23 * * 1-5"
-    - cron: "*/5 0-2 * * 1-5"
   workflow_dispatch:
     inputs:
       mode:
@@ -104,7 +99,8 @@ jobs:
           OPTIONS_PAPER_UNLIMITED: "1"
           OPTIONS_CONTROLLED_LAYOUT: "1"
           OPTIONS_BUCKET_COUNT: "1024"
-          OPTIONS_DROPPED_STRATEGIES: "S174,S173"
+          # CLEAN-data hard losers (n>=10, med<=-45%): pause new entries; open lots still exit
+          OPTIONS_DROPPED_STRATEGIES: "S212,S360,S207,S351,S405,S211"
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
           GITHUB_RUN_ID: ${{ github.run_id }}
           GITHUB_REPOSITORY: ${{ github.repository }}
@@ -130,6 +126,7 @@ jobs:
             python scripts/options_strategy_selection_report.py
             python scripts/options_signal_frequency.py || echo "signal_frequency report failed (non-fatal)"
             python scripts/options_ledger_health.py || echo "ledger_health failed (non-fatal)"
+            python scripts/options_data_quality_report.py || echo "data_quality report failed (non-fatal)"
             python scripts/generate_dashboard.py || echo "dashboard failed (non-fatal)"
             python scripts/rubber_band_report.py || echo "rubber_band_report failed (non-fatal)"
           } 2>&1 | tee "$OPTIONS_LOG"
@@ -140,6 +137,16 @@ jobs:
           echo "OPTIONS_BOT_DURATION_S=$dur" >> "$GITHUB_ENV"
           echo "Options bot exit code: $rc"
           echo "Options bot duration: ${dur}s"
+          # Job Summary: CLEAN / TAINTED / KEEP-only (visible on Actions run page)
+          {
+            echo "## Options data quality"
+            echo
+            if [ -f logs/options_trial/reports/latest_data_quality_snippet.md ]; then
+              cat logs/options_trial/reports/latest_data_quality_snippet.md
+            else
+              echo "_Data quality snippet not available this run._"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
           exit 0
 
       - name: Append run to daily comprehensive review
@@ -165,6 +172,10 @@ jobs:
             echo "- Run id: \`${RUN_ID}\`"
             echo "- Live bot: exit=\`${LIVE_BOT_EXIT:-0}\`, duration=\`${LIVE_BOT_DURATION_S:-0}s\`"
             echo "- Options bot: exit=\`${OPTIONS_BOT_EXIT:-0}\`, duration=\`${OPTIONS_BOT_DURATION_S:-0}s\`"
+            if [ -f "logs/options_trial/reports/latest_data_quality_snippet.md" ]; then
+              echo
+              cat logs/options_trial/reports/latest_data_quality_snippet.md
+            fi
             if [ -f "logs/options_trial/runs.jsonl" ]; then
               echo "- Options structured summary (latest JSON):"
               echo '```json'
