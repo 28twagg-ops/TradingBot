@@ -2102,26 +2102,6 @@
       "entry_order_id": "bcfaea3e-f40f-4763-af81-59e89ebc2153"
     },
     {
-      "lot_id": "463b85f64d96",
-      "bucket_id": 85,
-      "profile_name": "lab0085_s210_w3_1045_1120_r2",
-      "strategy_id": "S210",
-      "occ_symbol": "MS260814C00225000",
-      "underlying": "MS",
-      "qty": 1,
-      "entry_cost": 71.0,
-      "entry_price": 0.71,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-12T14:48:37.997314+00:00",
-      "entry_order_id": "dd100313-b408-4516-a183-c8193f0a5b9e"
-    },
-    {
       "lot_id": "9d048a5d1a42",
       "bucket_id": 84,
       "profile_name": "lab0084_s210_w3_1045_1120_r1",
@@ -3010,7 +2990,6 @@
     "b224": 48.0,
     "b113": 70.0,
     "b112": 70.0,
-    "b85": 71.0,
     "b84": 71.0,
     "b353": 36.0,
     "b352": 36.0,
@@ -3562,7 +3541,8 @@
     "cd115770-d105-4105-8498-1790fd5f3993",
     "a60774c9-3576-48fd-8adb-1a8ec62d05c0",
     "de1cda14-6c36-4538-973f-678fbd893c32",
-    "d3acd9e5-61b2-44a1-b0bd-7c062b3e6827"
+    "d3acd9e5-61b2-44a1-b0bd-7c062b3e6827",
+    "7625cd96-477f-445c-a19c-90867a0dc47d"
   ],
   "submitted_today": 73,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
