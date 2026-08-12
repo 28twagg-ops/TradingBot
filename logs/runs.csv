@@ -4920,3 +4920,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-12 17:20:49,exits,bull,465.52,184.69,0,0,0,3,AES|AFL|AXP,both
 2026-08-12 17:25:53,exits,bull,465.5,184.69,0,0,0,3,AES|AFL|AXP,both
 2026-08-12 17:32:35,exits,bull,465.4,184.69,0,0,0,3,AES|AFL|AXP,both
+2026-08-12 17:35:51,exits,bull,465.33,184.69,0,0,0,3,AES|AFL|AXP,both
