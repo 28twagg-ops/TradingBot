@@ -11367,3 +11367,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-12T16:32:51Z,reconcile,0,orphan_reconcile,ORPHAN,8dbdc24844d5,ABBV,ABBV260814C00255000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-12 16:29:32.706549+00:00,exit,0,orphan_reconcile,ORPHAN,6c779d79cdac,CVNA,CVNA260814C00076000,1,,0.21,46.0,-54.35,-25.0,stop_loss (-58.8%),,-0.01,0.5,-0.5,,,415695f5-0149-4ac1-8fd8-36d991d6cd0c
 2026-08-12 16:56:18.646413+00:00,exit,353,lab0353_s360_w3_1045_1120_r2,S360,447e3226884f,SNOW,SNOW260814C00362500,1,,0.16,36.0,-55.56,-20.0,stop_loss (-55.6%),,-0.01,0.5,-0.5,,,da6ec130-1230-44d4-b93a-d884bc25f6d3
+2026-08-12T17:05:53Z,reconcile,352,lab0352_s360_w3_1045_1120_r1,S360,9af4a8ee4bf6,SNOW,SNOW260814C00362500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12 17:01:18.791847+00:00,exit,225,lab0225_s400_w3_1045_1120_r2,S400,00f463bd6d83,SMCI,SMCI260814C00038000,1,,0.73,48.0,52.08,25.0,take_profit (+50.0%),,-0.01,0.5,-0.5,,,407087bb-5f05-468e-8de7-e6e1010452c3
