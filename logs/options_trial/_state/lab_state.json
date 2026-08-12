@@ -2752,6 +2752,16 @@
       "qty": 1,
       "reason": "take_profit (+51.6%)",
       "submitted": "2026-08-12T10:50:55"
+    },
+    {
+      "order_id": "1d37d590-c800-4a68-9a4b-34c8617400df",
+      "lot_id": "4cfd82e820fd",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "PATH260814C00016500",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-08-12T10:55:56"
     }
   ],
   "bucket_open_premium": {
