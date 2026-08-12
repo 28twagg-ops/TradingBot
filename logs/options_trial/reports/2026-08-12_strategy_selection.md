@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-12
 
-_Generated 2026-08-12T11:03:21.561457_
+_Generated 2026-08-12T11:07:13.176954_
 
 ## Summary
 
@@ -98,7 +98,7 @@ _Generated 2026-08-12T11:03:21.561457_
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 6 | 0.0 | -61.46 | -82.78 | -69.36 | -50.75 | 14 | 0 | 0 | $-210.00 | 83.3% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 6 | 0.0 | -65.67 | -88.89 | -86.11 | -50.00 | 22 | 0 | 0 | $-59.00 | 83.3% | insufficient sample (<8 exits) |
 | S410 (RubberBand_OTM1) | 3d | watch | 3 | 33.3 | -68.49 | -76.16 | -73.28 | +67.49 | 6 | 0 | 0 | $-39.00 | 66.7% | insufficient sample (<8 exits) |
-| S396 (GapDown_ITM2) | 3d | watch | 1 | 0.0 | -82.19 | -82.19 | -82.19 | -82.19 | 6 | 4 | 0 | $-60.00 | 100.0% | insufficient sample (<8 exits) |
+| S396 (GapDown_ITM2) | 3d | watch | 1 | 0.0 | -82.19 | -82.19 | -82.19 | -82.19 | 6 | 6 | 0 | $-60.00 | 100.0% | insufficient sample (<8 exits) |
 | S408 (RubberBand_ITM1) | 3d | drop | 43 | 46.5 | +0.00 | -69.93 | -55.56 | +776.45 | 9 | 20 | 5 | $+1,095.00 | 23.3% | non-positive median return |
 | S401 (Any_Gap_Down_Small) | 3d | drop | 86 | 48.8 | -3.33 | -93.88 | -50.73 | +160.00 | 12 | 42 | 12 | $+879.00 | 37.2% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 29 | 37.9 | -3.57 | -52.51 | -23.26 | +86.75 | 12 | 22 | 3 | $-13.00 | 20.7% | non-positive median return |
