@@ -39,4 +39,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-12 14:46:58.851487+00:00,entry,238,lab0238_s401_w3_1045_1120_r1,S401,19b2670b7cad,XOM,XOM260814C00170000,1,0.04,0.03,3.0,,,,-0.01,,0.5,-0.5,0.22222222222222227,gap -0.78% green,a8721d52-a3ae-46f9-8216-7e5988096478
 2026-08-11 14:47:27.046603+00:00,entry,238,lab0238_s401_w3_1045_1120_r1,S401,afc017d4c161,PLTR,PLTR260814C00192500,1,0.37,0.37,37.0,,,,-0.01,,0.5,-0.5,,,23146aa7-0b27-4e41-a321-2f2a14ac62a7
 2026-08-10 14:47:24.745177+00:00,entry,238,lab0238_s401_w3_1045_1120_r1,S401,bfaa2e1c22b0,TSLA,TSLA260812C00350000,1,0.49,0.49,49.0,,,,-0.01,,0.5,-0.5,,,6ab0ae8c-d228-4fd5-b0c0-c4f7801b0807
-2026-08-12T21:03:44Z,reconcile,238,lab0238_s401_w3_1045_1120_r1,S401,19b2670b7cad,XOM,XOM260814C00170000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12T21:09:11Z,reconcile,238,lab0238_s401_w3_1045_1120_r1,S401,19b2670b7cad,XOM,XOM260814C00170000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

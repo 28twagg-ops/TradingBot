@@ -23,4 +23,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10 13:35:34.007777+00:00,entry,80,lab0080_s210_w1_0928_1005_r1,S210,3b8517e5446f,UBER,UBER260814C00081000,1,0.3,0.3,30.0,,,,-0.01,,0.5,-0.5,,,728697ff-73ef-44b9-8f3d-05e407a4940e
 2026-08-07 15:36:07.314876+00:00,exit,80,lab0080_s210_w1_0928_1005_r1,S210,3b8517e5446f,UBER,UBER260814C00081000,1,,0.46,30.0,53.33,16.0,reconcile_fill,,-0.01,0.5,-0.5,,,19313bd4-0ab9-4e8e-be9a-5e351732a4ae
 2026-08-12 13:59:58.264174+00:00,entry,80,lab0080_s210_w1_0928_1005_r1,S210,af83fe346a31,LLY,LLY260814C01300000,1,0.2,0.17,17.0,,,,-0.01,,0.5,-0.5,0.15384615384615383,MA8 1179.07 crossed above MA21,2662c213-0ff5-450c-8918-97f069cbf3e2
-2026-08-12T21:03:43Z,reconcile,80,lab0080_s210_w1_0928_1005_r1,S210,af83fe346a31,LLY,LLY260814C01300000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12T21:09:11Z,reconcile,80,lab0080_s210_w1_0928_1005_r1,S210,af83fe346a31,LLY,LLY260814C01300000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

@@ -17,4 +17,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-05 15:17:28.026943+00:00,entry,381,lab0381_s362_w3_1045_1120_r2,S362,8cbb408d3994,DKNG,DKNG260807C00024500,1,0.38,0.38,38.0,,,,-0.01,,0.5,-0.5,,,591bea9a-57a5-4b79-a98c-941716371bcc
 2026-08-10 14:52:19.797283+00:00,entry,381,lab0381_s362_w3_1045_1120_r2,S362,9c9a0f286768,AAPL,AAPL260812C00315000,1,0.38,0.38,38.0,,,,-0.01,,0.5,-0.5,0.025974025974025997,RB gap -2.1% reclaim,2bcd777a-c55c-4c21-bad5-615ae8de0ed2
 2026-08-10 14:52:19.797283+00:00,entry,381,lab0381_s362_w3_1045_1120_r2,S362,9c9a0f286768,AAPL,AAPL260812C00315000,1,0.38,0.38,38.0,,,,-0.01,,0.5,-0.5,,,2bcd777a-c55c-4c21-bad5-615ae8de0ed2
-2026-08-12T21:03:42Z,reconcile,381,lab0381_s362_w3_1045_1120_r2,S362,9c9a0f286768,AAPL,AAPL260812C00315000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12T21:09:10Z,reconcile,381,lab0381_s362_w3_1045_1120_r2,S362,9c9a0f286768,AAPL,AAPL260812C00315000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

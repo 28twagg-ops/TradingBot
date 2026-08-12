@@ -22,4 +22,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-06 15:36:11.689850+00:00,entry,863,lab0863_s408_w4_1120_1135_r2,S408,a4e72884ac73,PLTR,PLTR260807C00175000,1,0.05,0.05,5.0,,,,-0.01,,0.5,-0.5,,,9a6f9118-8fa5-434b-82f3-d0d3c533f99d
 2026-08-10 15:23:06.001680+00:00,entry,863,lab0863_s408_w4_1120_1135_r2,S408,46ce16c86db3,AAPL,AAPL260814C00317500,1,0.58,0.57,57.0,,,,-0.01,,0.5,-0.5,0.01709401709401711,RB gap -2.1% reclaim,ab3e2a01-2d5f-43aa-89fd-b16eaecbe324
 2026-08-10 15:23:06.001680+00:00,entry,863,lab0863_s408_w4_1120_1135_r2,S408,46ce16c86db3,AAPL,AAPL260814C00317500,1,0.57,0.57,57.0,,,,-0.01,,0.5,-0.5,,,ab3e2a01-2d5f-43aa-89fd-b16eaecbe324
-2026-08-12T21:03:42Z,reconcile,863,lab0863_s408_w4_1120_1135_r2,S408,46ce16c86db3,AAPL,AAPL260814C00317500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12T21:09:10Z,reconcile,863,lab0863_s408_w4_1120_1135_r2,S408,46ce16c86db3,AAPL,AAPL260814C00317500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

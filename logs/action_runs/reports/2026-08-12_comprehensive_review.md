@@ -29162,3 +29162,227 @@ After hours (17:03 ET) — exit summary only.
 ```
 
 ---
+
+## Run 20260812T210617Z
+
+- UTC timestamp: `20260812T210617Z`
+- GitHub run: [#6916](https://github.com/28twagg-ops/TradingBot/actions/runs/31640833779)
+- Run id: `31640833779`
+- Live bot: exit=`0`, duration=`2s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 782 | 42.2 | -47.1 | +12.1 | $+8,202 |
+| TAINTED | 1701 | 33.1 | -39.0 | +10.2 | $-8,382 |
+| KEEP-only | 275 | 64.7 | +37.7 | +42.1 | $+5,447 |
+| KEEP-only recent | 88 | 61.4 | +51.2 | +54.0 | $+1,398 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S403, S404, S406
+- KILL strategies (15): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-12T16:57:29.528641-04:00","date":"2026-08-12","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.7,"phases_s":{"reconcile":0.17},"signals":0,"placed":0,"equity":130946.98,"open_positions":30,"pending_orders":0,"open_lots":120,"submitted_today":99,"filled_today":82,"unattributed_contracts":0,"top_signals":[],"github_run":"6914","github_run_id":"31640013669","status":"ok","data_quality":{"clean":{"n":782,"win":42.2,"med":-47.14,"avg":12.07,"pnl":8202.42},"tainted":{"n":1701,"win":33.1,"med":-39.02,"avg":10.24,"pnl":-8382.34},"keep_only":{"n":275,"win":64.73,"med":37.69,"avg":42.15,"pnl":5447.45},"keep_only_recent":{"n":88,"win":61.36,"med":51.22,"avg":53.96,"pnl":1398.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S403","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+21:06:18  INFO      Mode: ext_exits
+21:06:18  INFO        Daily log -> logs/daily/2026-08-12.md
+21:06:18  INFO        Daily log reconciled -> logs/daily/2026-08-12.md (5 ledger rows)
+21:06:19  INFO        Daily log -> logs/daily/2026-08-12.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                         EXT_EXITS|
+|  Time                                                         21:06 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $465.34|
++========================================================================+
+
++========================================================================+
+|                       EXIT CHECK [EXTENDED HRS]                        |
++========================================================================+
+|  Exit log~  stop-0.5% / 3d max  (midline skipped — close already final)|
++------------------------------------------------------------------------+
+|  AFL  P&L -0.3%  $-0.25          HOLDING until 9:35am scan (Pullback50)|
+|  AES  P&L -0.0%  $-0.01          HOLDING until 9:35am scan (Pullback50)|
+|  ACGL  P&L +0.0%  $+0.01         HOLDING until 9:35am scan (Pullback50)|
++========================================================================+
+
++========================================================================+
+|                          EXTENDED HOURS SELLS                          |
++========================================================================+
+|                                                                        |
+|  No extended-hours sells this run.                                     |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                         ext_exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+2026-08-12 17:09:09,187  WARNING   could not list positions: {"code":50410000,"message":"request timed out"}
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=120 paper_keys=yes dry_run=False
+  alpaca positions=0
+  FLAG b829|S406|6a87f8fe missing from Alpaca
+  FLAG b830|S406|47d6292a missing from Alpaca
+  FLAG b817|S405|2e421365 missing from Alpaca
+  FLAG b787|S398|5de27f2b missing from Alpaca
+  FLAG b786|S398|d5b1550e missing from Alpaca
+  FLAG b379|S362|1392dc24 missing from Alpaca
+  FLAG b378|S362|b710738f missing from Alpaca
+  FLAG b299|S353|ae72456c missing from Alpaca
+  FLAG b776|S397|39177de5 missing from Alpaca
+  FLAG b391|S363|7a6feb26 missing from Alpaca
+  FLAG b915|S412|4b4a7644 missing from Alpaca
+  FLAG b914|S412|741b49fb missing from Alpaca
+  FLAG b365|S361|58e8e060 missing from Alpaca
+  FLAG b364|S361|dee0586e missing from Alpaca
+  FLAG b843|S407|f598de52 missing from Alpaca
+  FLAG b842|S407|86bfac6c missing from Alpaca
+  FLAG b793|S399|656b75d4 missing from Alpaca
+  FLAG b792|S399|8d670e42 missing from Alpaca
+  FLAG b297|S353|76d52e8c missing from Alpaca
+  FLAG b296|S353|2e97134b missing from Alpaca
+  FLAG b289|S352|1014c846 missing from Alpaca
+  FLAG b288|S352|108d3d4a missing from Alpaca
+  FLAG b901|S411|22b2aa32 missing from Alpaca
+  FLAG b916|S412|70634214 missing from Alpaca
+  FLAG b796|S399|2f126a0b missing from Alpaca
+  FLAG b367|S361|aa3b8153 missing from Alpaca
+  FLAG b366|S361|b162c7ca missing from Alpaca
+  FLAG b301|S353|2d96109e missing from Alpaca
+  FLAG b300|S353|610835a2 missing from Alpaca
+  FLAG b917|S412|48f6936a missing from Alpaca
+  FLAG b381|S362|9c9a0f28 missing from Alpaca
+  FLAG b380|S362|ae4f8d98 missing from Alpaca
+  FLAG b863|S408|46ce16c8 missing from Alpaca
+  FLAG b799|S399|6bc80a0e missing from Alpaca
+  FLAG b798|S399|01e9ddc9 missing from Alpaca
+  FLAG b396|S363|5297f9c9 missing from Alpaca
+  FLAG b310|S354|71d8dfc3 missing from Alpaca
+  FLAG b913|S412|ecea4157 missing from Alpaca
+  FLAG b912|S412|6f75d238 missing from Alpaca
+  FLAG b797|S399|ab78aa0a missing from Alpaca
+  FLAG b901|S411|759d78be missing from Alpaca
+  FLAG b900|S411|30bc0daa missing from Alpaca
+  FLAG b293|S352|f3aa99b0 missing from Alpaca
+  FLAG b292|S352|374b5ab5 missing from Alpaca
+  FLAG b862|S408|e6aa7b20 missing from Alpaca
+  FLAG b849|S407|23ef6bc2 missing from Alpaca
+  FLAG b848|S407|11129dee missing from Alpaca
+  FLAG b343|S358|5504cd3e missing from Alpaca
+  FLAG b298|S353|346aec26 missing from Alpaca
+  FLAG b377|S362|b9b362d4 missing from Alpaca
+  FLAG b376|S362|4c2f6d09 missing from Alpaca
+  FLAG b363|S361|ea6e6840 missing from Alpaca
+  FLAG b362|S361|e3e7ce7d missing from Alpaca
+  FLAG b844|S407|e0915b11 missing from Alpaca
+  FLAG b795|S399|1d59a689 missing from Alpaca
+  FLAG b0|ORPHAN|be7f9da2 missing from Alpaca
+  FLAG b109|S212|1bc4003a missing from Alpaca
+  FLAG b108|S212|b31afb54 missing from Alpaca
+  FLAG b80|S210|af83fe34 missing from Alpaca
+  FLAG b25|S203|973ee997 missing from Alpaca
+  FLAG b771|S396|d36c07d1 missing from Alpaca
+  FLAG b770|S396|66a10537 missing from Alpaca
+  FLAG b769|S396|1db0fe04 missing from Alpaca
+  FLAG b768|S396|332d82cb missing from Alpaca
+  FLAG b816|S405|ba10923c missing from Alpaca
+  FLAG b0|ORPHAN|8060eb83 missing from Alpaca
+  FLAG b819|S405|a3c0daaf missing from Alpaca
+  FLAG b818|S405|c8abce55 missing from Alpaca
+  FLAG b789|S398|2bfb14bb missing from Alpaca
+  FLAG b788|S398|db644d46 missing from Alpaca
+  FLAG b395|S363|4d44d723 missing from Alpaca
+  FLAG b394|S363|6663c38d missing from Alpaca
+  FLAG b325|S356|9151f029 missing from Alpaca
+  FLAG b324|S356|a2ae1251 missing from Alpaca
+  FLAG b900|S411|02f11ca3 missing from Alpaca
+  FLAG b306|S354|2dfe4c44 missing from Alpaca
+  FLAG b0|ORPHAN|8544156a missing from Alpaca
+  FLAG b0|ORPHAN|ae5accf5 missing from Alpaca
+  FLAG b234|S401|5d4bef0c missing from Alpaca
+  FLAG b0|ORPHAN|dde09b7a missing from Alpaca
+  FLAG b801|S404|b8c7752a missing from Alpaca
+  FLAG b800|S404|18fa0e13 missing from Alpaca
+  FLAG b779|S397|cc233a6b missing from Alpaca
+  FLAG b777|S397|7fe804cd missing from Alpaca
+  FLAG b97|S211|b645a519 missing from Alpaca
+  FLAG b96|S211|fb81a1a8 missing from Alpaca
+  FLAG b291|S352|ce0c6787 missing from Alpaca
+  FLAG b290|S352|b7a3e9b5 missing from Alpaca
+  FLAG b239|S401|d7973c14 missing from Alpaca
+  FLAG b238|S401|19b2670b missing from Alpaca
+  FLAG b98|S211|a95e6a7b missing from Alpaca
+  FLAG b902|S411|2a62f58e missing from Alpaca
+  FLAG b805|S404|a8e59bc8 missing from Alpaca
+  FLAG b804|S404|415a1413 missing from Alpaca
+  FLAG b781|S397|a8655941 missing from Alpaca
+  FLAG b780|S397|f65ed312 missing from Alpaca
+  FLAG b27|S203|86e88c4f missing from Alpaca
+  FLAG b26|S203|07bcf693 missing from Alpaca
+  FLAG b316|S355|f49ab73f missing from Alpaca
+  FLAG b309|S354|f74c113e missing from Alpaca
+  FLAG b308|S354|19eb2c5c missing from Alpaca
+  FLAG b0|ORPHAN|beddcf95 missing from Alpaca
+  FLAG b0|ORPHAN|ead1bd3a missing from Alpaca
+  FLAG b773|S396|2bbbcd91 missing from Alpaca
+  FLAG b772|S396|2583e4cd missing from Alpaca
+  FLAG b821|S405|005c5a55 missing from Alpaca
+  FLAG b807|S404|06264d36 missing from Alpaca
+  FLAG b806|S404|2d1b2852 missing from Alpaca
+  FLAG b790|S398|86e2adb7 missing from Alpaca
+  FLAG b783|S397|9abaa445 missing from Alpaca
+  FLAG b782|S397|5bfa4186 missing from Alpaca
+  FLAG b303|S353|1fa84e94 missing from Alpaca
+  FLAG b302|S353|e07cc61f missing from Alpaca
+  FLAG b295|S352|1e93da14 missing from Alpaca
+  FLAG b294|S352|53d4c3a9 missing from Alpaca
+  FLAG b287|S351|5c66fe29 missing from Alpaca
+  FLAG b286|S351|1ff8c239 missing from Alpaca
+  FLAG b0|ORPHAN|3491e15c missing from Alpaca
+  FLAG b0|ORPHAN|ef98f45c missing from Alpaca
+  FLAG b0|ORPHAN|ab863436 missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-08-12T17:09:14.429670-04:00 ===
+
+[Run context]
+After hours (17:09 ET) — exit summary only.
+```
+
+---
