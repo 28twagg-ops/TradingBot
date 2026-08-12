@@ -1108,8 +1108,8 @@
       "strategy_id": "ORPHAN",
       "occ_symbol": "CVNA260814C00076000",
       "underlying": "CVNA",
-      "qty": 2,
-      "entry_cost": 92.0,
+      "qty": 1,
+      "entry_cost": 46.0,
       "entry_price": 0.46,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
@@ -1840,26 +1840,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-12T14:37:32.545876+00:00",
       "entry_order_id": "bbf4ba68-486e-4c29-8dd9-5c394687213d"
-    },
-    {
-      "lot_id": "8dbdc24844d5",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "ABBV260814C00255000",
-      "underlying": "ABBV",
-      "qty": 1,
-      "entry_cost": 51.0,
-      "entry_price": 0.51,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-12T14:37:32.806885+00:00",
-      "entry_order_id": "orphan:ABBV260814C00255000"
     },
     {
       "lot_id": "d168e25027a6",
@@ -2933,16 +2913,6 @@
       "qty": 1,
       "reason": "stop_loss (-66.7%)",
       "submitted": "2026-08-12T11:21:04"
-    },
-    {
-      "order_id": "415695f5-0149-4ac1-8fd8-36d991d6cd0c",
-      "lot_id": "8dbdc24844d5",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "ABBV260814C00255000",
-      "qty": 1,
-      "reason": "stop_loss (-58.8%)",
-      "submitted": "2026-08-12T12:29:32"
     }
   ],
   "bucket_open_premium": {
@@ -3000,7 +2970,7 @@
     "b362": 46.0,
     "b844": 11.0,
     "b795": 62.0,
-    "b0": 861.555,
+    "b0": 764.555,
     "b109": 64.0,
     "b108": 64.0,
     "b80": 17.0,
@@ -3657,7 +3627,8 @@
     "7c8e6269-3841-49a2-ad96-2666bec299c9",
     "29f5c246-bd73-4984-8975-fb1b518d8acc",
     "becbc280-8746-4c20-b3c2-19cf423a896a",
-    "7ba362df-cf1c-4836-b78d-b6bc1a42c1a7"
+    "7ba362df-cf1c-4836-b78d-b6bc1a42c1a7",
+    "415695f5-0149-4ac1-8fd8-36d991d6cd0c"
   ],
   "submitted_today": 99,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
