@@ -2913,6 +2913,16 @@
       "qty": 1,
       "reason": "stop_loss (-66.7%)",
       "submitted": "2026-08-12T11:21:04"
+    },
+    {
+      "order_id": "da6ec130-1230-44d4-b93a-d884bc25f6d3",
+      "lot_id": "447e3226884f",
+      "bucket_id": 353,
+      "strategy_id": "S360",
+      "occ_symbol": "SNOW260814C00362500",
+      "qty": 1,
+      "reason": "stop_loss (-55.6%)",
+      "submitted": "2026-08-12T12:56:18"
     }
   ],
   "bucket_open_premium": {
