@@ -11,4 +11,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10 14:06:14.591405+00:00,entry,777,lab0777_s397_w1_0928_1005_r2,S397,e6a44ccc974a,CELH,CELH260814C00028000,1,0.26,0.26,26.0,,,,-0.01,,0.5,-0.5,,,cd4178cc-034a-4a2b-9de1-7e95443388be
 2026-08-12 13:30:04.186068+00:00,exit,777,lab0777_s397_w1_0928_1005_r2,S397,e6a44ccc974a,CELH,CELH260814C00028000,1,,0.56,26.0,115.38,30.0,take_profit (+117.5%),,-0.01,0.5,-0.5,,,1c7c930b-2855-4e8f-be2f-4ce876c4ebe5
 2026-08-12 14:28:00.674617+00:00,entry,777,lab0777_s397_w1_0928_1005_r2,S397,7fe804cdaf29,PATH,PATH260821C00015500,1,0.44,0.44,44.0,,,,-0.01,,0.75,-0.75,0.19512195121951223,gap -2.6%,97bbf557-3b11-4033-95b1-db3ed1f97c3e
-2026-08-12T21:03:43Z,reconcile,777,lab0777_s397_w1_0928_1005_r2,S397,7fe804cdaf29,PATH,PATH260821C00015500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12T21:09:11Z,reconcile,777,lab0777_s397_w1_0928_1005_r2,S397,7fe804cdaf29,PATH,PATH260821C00015500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

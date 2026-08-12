@@ -10,4 +10,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10 14:06:14.704658+00:00,entry,800,lab0800_s404_w1_0928_1005_r1,S404,397d316e9781,CELH,CELH260814C00028000,1,0.26,0.26,26.0,,,,-0.01,,0.5,-0.5,,,e0b4615e-63b1-4ec8-80f2-ce09e7187023
 2026-08-11 19:47:41.088624+00:00,exit,800,lab0800_s404_w1_0928_1005_r1,S404,397d316e9781,CELH,CELH260814C00028000,1,,0.55,26.0,111.54,29.0,reconcile_fill,,-0.01,0.5,-0.5,,,224eddb7-8b6f-4cc0-aa16-bd4b2bdd7de9
 2026-08-12 14:28:00.670076+00:00,entry,800,lab0800_s404_w1_0928_1005_r1,S404,18fa0e13681e,PATH,PATH260821C00015500,1,0.44,0.44,44.0,,,,-0.01,,0.75,-0.75,0.19512195121951223,gap -2.6%,c030fb36-8e8d-438d-95b8-0691f674eeb7
-2026-08-12T21:03:43Z,reconcile,800,lab0800_s404_w1_0928_1005_r1,S404,18fa0e13681e,PATH,PATH260821C00015500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12T21:09:11Z,reconcile,800,lab0800_s404_w1_0928_1005_r1,S404,18fa0e13681e,PATH,PATH260821C00015500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
