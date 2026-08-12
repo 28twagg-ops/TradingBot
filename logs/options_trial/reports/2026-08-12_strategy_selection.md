@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-12
 
-_Generated 2026-08-12T10:37:36.726620_
+_Generated 2026-08-12T10:42:44.115089_
 
 ## Summary
 
@@ -91,7 +91,7 @@ _Generated 2026-08-12T10:37:36.726620_
 | S356 (GapDown_14DTE) | 14d | watch | 17 | 23.5 | -25.00 | -52.49 | -50.00 | +46.21 | 12 | 8 | 7 | $-151.00 | 35.3% | early sample with non-positive median |
 | S367 (RubberBand_30DTE) | 30d | watch | 2 | 0.0 | -38.20 | -48.75 | -44.79 | -27.64 | 8 | 0 | 1 | $-55.00 | 100.0% | insufficient sample (<8 exits) |
 | S365 (RubberBand_14DTE) | 14d | watch | 12 | 16.7 | -49.56 | -81.56 | -55.12 | +49.36 | 12 | 0 | 4 | $-186.00 | 50.0% | early sample with non-positive median |
-| S400 (Any_Green_Close) | 3d | watch | 5 | 0.0 | -50.00 | -66.67 | -66.67 | -33.33 | 12 | 0 | 0 | $-30.00 | 100.0% | insufficient sample (<8 exits) |
+| S400 (Any_Green_Close) | 3d | watch | 5 | 0.0 | -50.00 | -66.67 | -66.67 | -33.33 | 12 | 2 | 0 | $-30.00 | 100.0% | insufficient sample (<8 exits) |
 | S358 (GapDown_30DTE) | 30d | watch | 3 | 33.3 | -51.39 | -51.39 | -51.39 | +33.80 | 8 | 4 | 3 | $-47.00 | 66.7% | insufficient sample (<8 exits) |
 | S366 (RubberBand_21DTE) | 21d | watch | 8 | 0.0 | -55.19 | -58.31 | -56.92 | -49.12 | 8 | 0 | 8 | $-268.00 | 100.0% | early sample with non-positive median |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 10 | 0.0 | -60.53 | -74.54 | -66.39 | -37.62 | 15 | 10 | 4 | $-171.00 | 40.0% | early sample with non-positive median |
