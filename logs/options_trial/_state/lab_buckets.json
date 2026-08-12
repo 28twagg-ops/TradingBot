@@ -182,8 +182,8 @@
   {
     "bucket_id": 30,
     "profile": "lab0030_s203_w4_1120_1135_r1",
-    "open_premium": 55.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 31,
