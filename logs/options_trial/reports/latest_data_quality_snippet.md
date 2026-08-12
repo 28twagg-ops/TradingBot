@@ -2,11 +2,11 @@
 
 | Slice | n | Win% | Med% | Avg% | $ |
 |---|---:|---:|---:|---:|---:|
-| CLEAN | 738 | 43.9 | -45.3 | +16.0 | $+9,446 |
+| CLEAN | 762 | 42.7 | -46.7 | +13.1 | $+8,460 |
 | TAINTED | 1673 | 33.1 | -39.3 | +9.9 | $-8,265 |
-| KEEP-only | 302 | 63.9 | +37.7 | +42.0 | $+5,709 |
-| KEEP-only recent | 114 | 60.5 | +50.0 | +51.5 | $+1,683 |
+| KEEP-only | 294 | 63.9 | +37.7 | +42.9 | $+5,741 |
+| KEEP-only recent | 106 | 60.4 | +50.0 | +54.7 | $+1,715 |
 
-- KEEP strategies (12): S173, S174, S210, S218, S350, S364, S397, S398, S401, S403, S404, S406
-- KILL strategies (12): ORPHAN, S165, S207, S211, S212, S217, S351, S354, S355, S360, S405, S408
+- KEEP strategies (11): S173, S174, S210, S218, S350, S397, S398, S401, S403, S404, S406
+- KILL strategies (13): ORPHAN, S165, S207, S211, S212, S217, S351, S354, S355, S360, S364, S405, S408
 - Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
