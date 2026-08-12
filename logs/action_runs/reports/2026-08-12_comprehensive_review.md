@@ -2950,3 +2950,56 @@ Fetched daily bars for 114/117 symbols
 ```
 
 ---
+
+## Run 20260812T133826Z
+
+- UTC timestamp: `20260812T133826Z`
+- GitHub run: [#6826](https://github.com/28twagg-ops/TradingBot/actions/runs/31602161273)
+- Run id: `31602161273`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 738 | 43.9 | -45.3 | +16.0 | $+9,446 |
+| TAINTED | 1673 | 33.1 | -39.3 | +9.9 | $-8,265 |
+| KEEP-only | 302 | 63.9 | +37.7 | +42.0 | $+5,709 |
+| KEEP-only recent | 114 | 60.5 | +50.0 | +51.5 | $+1,683 |
+
+- KEEP strategies (12): S173, S174, S210, S218, S350, S364, S397, S398, S401, S403, S404, S406
+- KILL strategies (12): ORPHAN, S165, S207, S211, S212, S217, S351, S354, S355, S360, S405, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-12T09:25:57.564755-04:00","date":"2026-08-12","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.0,"phases_s":{"reconcile":0.23},"signals":0,"placed":0,"equity":136440.41,"open_positions":22,"pending_orders":0,"open_lots":108,"submitted_today":0,"filled_today":0,"unattributed_contracts":4,"top_signals":[],"github_run":"6824","github_run_id":"31601295371","status":"ok","data_quality":{"clean":{"n":738,"win":43.9,"med":-45.34,"avg":15.95,"pnl":9445.88},"tainted":{"n":1673,"win":33.11,"med":-39.29,"avg":9.95,"pnl":-8264.62},"keep_only":{"n":302,"win":63.91,"med":37.69,"avg":41.99,"pnl":5709.45},"keep_only_recent":{"n":114,"win":60.53,"med":50.0,"avg":51.55,"pnl":1683.0},"keep_strategies":["S173","S174","S210","S218","S350","S364","S397","S398","S401","S403","S404","S406"],"kill_strategies":["ORPHAN","S165","S207","S211","S212","S217","S351","S354","S355","S360","S405","S408"]}}
+```
+
+### Live bot full output
+
+```text
+13:38:27  INFO      Mode: morning_prep
+13:38:28  INFO        [prep_positions] 4/4 (4 valid)
+13:38:28  INFO      Fetching tickers (universe=both)...
+13:38:28  INFO        S&P 500: 503
+13:38:29  INFO        MidCap 400: 400
+13:38:29  INFO        Total: 903 tickers
+13:38:29  INFO        [prep_universe] 40/899 (40 valid)
+13:38:31  INFO        [prep_universe] 80/899 (80 valid)
+13:38:33  INFO        [prep_universe] 120/899 (120 valid)
+13:38:34  INFO        [prep_universe] 160/899 (160 valid)
+13:38:35  INFO        [prep_universe] 200/899 (199 valid)
+13:38:42  INFO        [prep_universe] 240/899 (238 valid)
+13:38:56  INFO        [prep_universe] 280/899 (278 valid)
+13:39:08  INFO        [prep_universe] 320/899 (318 valid)
+13:39:19  INFO        [prep_universe] 360/899 (358 valid)
+13:39:32  INFO        [prep_universe] 400/899 (397 valid)
+13:39:44  INFO        [prep_universe] 440/899 (437 valid)
+13:39:54  INFO        [prep_universe] 480/899 (477 valid)
+13:40:08  INFO        [prep_universe] 520/899 (517 valid)
+```
+
+### Options bot full output
+
+```text
