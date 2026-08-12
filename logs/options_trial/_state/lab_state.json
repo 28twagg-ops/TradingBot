@@ -2973,6 +2973,16 @@
       "qty": 1,
       "reason": "stop_loss (-66.7%)",
       "submitted": "2026-08-12T11:21:04"
+    },
+    {
+      "order_id": "becbc280-8746-4c20-b3c2-19cf423a896a",
+      "lot_id": "4def6ea2632a",
+      "bucket_id": 81,
+      "strategy_id": "S210",
+      "occ_symbol": "LLY260814C01300000",
+      "qty": 1,
+      "reason": "take_profit (+64.7%)",
+      "submitted": "2026-08-12T12:15:52"
     }
   ],
   "bucket_open_premium": {
