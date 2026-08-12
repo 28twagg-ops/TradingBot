@@ -1,0 +1,28 @@
+19:51:17  INFO      Mode: scan
+19:51:18  INFO        [positions] 5/5 (5 valid)
+19:51:18  INFO        SELL LIMIT AKAM  qty=0.757706244  limit=$122.59  id=a4ade01d-1527-48c2-be95-71929a80dee4
+19:51:48  INFO        SELL LIMIT filled AKAM (confirmed by position check)
+19:51:48  INFO        TX logged: SELL AKAM  P&L -0.18%
+19:51:48  INFO        SELL LIMIT ALGN  qty=0.534380013  limit=$174.05  id=abd7cadd-2a25-4988-9f9a-aac764607e60
+19:52:18  INFO        SELL LIMIT filled ALGN (confirmed by position check)
+19:52:18  INFO        TX logged: SELL ALGN  P&L -0.13%
+19:52:18  INFO        Universe cache hit: 903 tickers (tickers_2026-08-12.json)
+19:52:19  INFO        [universe] 40/900 (40 valid)
+19:52:20  INFO        [universe] 80/900 (80 valid)
+19:52:21  INFO        [universe] 120/900 (120 valid)
+19:52:23  INFO        [universe] 160/900 (160 valid)
+19:52:24  INFO        [universe] 200/900 (199 valid)
+19:52:31  INFO        [universe] 240/900 (238 valid)
+19:52:44  INFO        [universe] 280/900 (278 valid)
+19:52:57  INFO        [universe] 320/900 (318 valid)
+19:53:07  INFO        [universe] 360/900 (358 valid)
+19:53:20  INFO        [universe] 400/900 (397 valid)
+19:53:33  INFO        [universe] 440/900 (437 valid)
+19:53:43  INFO        [universe] 480/900 (477 valid)
+19:53:56  INFO        [universe] 520/900 (517 valid)
+19:54:09  INFO        [universe] 560/900 (557 valid)
+19:54:19  INFO        [universe] 600/900 (597 valid)
+19:54:32  INFO        [universe] 640/900 (637 valid)
+19:54:45  INFO        [universe] 680/900 (677 valid)
+19:54:55  INFO        [universe] 720/900 (717 valid)
+19:55:08  INFO        [universe] 760/900 (757 valid)

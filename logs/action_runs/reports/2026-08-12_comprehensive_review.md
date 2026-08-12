@@ -24994,3 +24994,65 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ### Options bot full output
 
 ```text
+
+## Run 20260812T195116Z
+
+- UTC timestamp: `20260812T195116Z`
+- GitHub run: [#6901](https://github.com/28twagg-ops/TradingBot/actions/runs/31634596289)
+- Run id: `31634596289`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 781 | 42.1 | -47.1 | +12.0 | $+8,178 |
+| TAINTED | 1701 | 33.1 | -39.0 | +10.2 | $-8,382 |
+| KEEP-only | 275 | 64.7 | +37.7 | +42.1 | $+5,447 |
+| KEEP-only recent | 88 | 61.4 | +51.2 | +54.0 | $+1,398 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S403, S404, S406
+- KILL strategies (15): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-12T15:44:27.863723-04:00","date":"2026-08-12","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":4.4,"phases_s":{"reconcile":0.33,"cancel":0.1,"manage":2.46,"protective_stops":0.8},"signals":0,"placed":0,"equity":130981.48,"open_positions":30,"pending_orders":0,"open_lots":121,"submitted_today":99,"filled_today":82,"unattributed_contracts":0,"top_signals":[],"github_run":"6899","github_run_id":"31633766271","status":"ok","data_quality":{"clean":{"n":781,"win":42.13,"med":-47.14,"avg":11.99,"pnl":8178.42},"tainted":{"n":1701,"win":33.1,"med":-39.02,"avg":10.24,"pnl":-8382.34},"keep_only":{"n":275,"win":64.73,"med":37.69,"avg":42.15,"pnl":5447.45},"keep_only_recent":{"n":88,"win":61.36,"med":51.22,"avg":53.96,"pnl":1398.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S403","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+19:51:17  INFO      Mode: scan
+19:51:18  INFO        [positions] 5/5 (5 valid)
+19:51:18  INFO        SELL LIMIT AKAM  qty=0.757706244  limit=$122.59  id=a4ade01d-1527-48c2-be95-71929a80dee4
+19:51:48  INFO        SELL LIMIT filled AKAM (confirmed by position check)
+19:51:48  INFO        TX logged: SELL AKAM  P&L -0.18%
+19:51:48  INFO        SELL LIMIT ALGN  qty=0.534380013  limit=$174.05  id=abd7cadd-2a25-4988-9f9a-aac764607e60
+19:52:18  INFO        SELL LIMIT filled ALGN (confirmed by position check)
+19:52:18  INFO        TX logged: SELL ALGN  P&L -0.13%
+19:52:18  INFO        Universe cache hit: 903 tickers (tickers_2026-08-12.json)
+19:52:19  INFO        [universe] 40/900 (40 valid)
+19:52:20  INFO        [universe] 80/900 (80 valid)
+19:52:21  INFO        [universe] 120/900 (120 valid)
+19:52:23  INFO        [universe] 160/900 (160 valid)
+19:52:24  INFO        [universe] 200/900 (199 valid)
+19:52:31  INFO        [universe] 240/900 (238 valid)
+19:52:44  INFO        [universe] 280/900 (278 valid)
+19:52:57  INFO        [universe] 320/900 (318 valid)
+19:53:07  INFO        [universe] 360/900 (358 valid)
+19:53:20  INFO        [universe] 400/900 (397 valid)
+19:53:33  INFO        [universe] 440/900 (437 valid)
+19:53:43  INFO        [universe] 480/900 (477 valid)
+19:53:56  INFO        [universe] 520/900 (517 valid)
+19:54:09  INFO        [universe] 560/900 (557 valid)
+19:54:19  INFO        [universe] 600/900 (597 valid)
+19:54:32  INFO        [universe] 640/900 (637 valid)
+19:54:45  INFO        [universe] 680/900 (677 valid)
+19:54:55  INFO        [universe] 720/900 (717 valid)
+19:55:08  INFO        [universe] 760/900 (757 valid)
+```
+
+### Options bot full output
+
+```text
