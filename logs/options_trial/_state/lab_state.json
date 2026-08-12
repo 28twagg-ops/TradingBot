@@ -2902,7 +2902,7 @@
       "entry_order_id": "orphan:PATH260814C00016000"
     },
     {
-      "lot_id": "b9d66cac67ba",
+      "lot_id": "a3a09b309e7c",
       "bucket_id": 31,
       "profile_name": "lab0031_s203_w4_1120_1135_r2",
       "strategy_id": "S203",
@@ -2918,11 +2918,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-12T15:34:31.461307+00:00",
+      "entry_date": "2026-08-12T15:30:06.368185+00:00",
       "entry_order_id": "7c8e6269-3841-49a2-ad96-2666bec299c9"
     },
     {
-      "lot_id": "f20ee8d6a8ee",
+      "lot_id": "95c1a7e7ec51",
       "bucket_id": 30,
       "profile_name": "lab0030_s203_w4_1120_1135_r1",
       "strategy_id": "S203",
@@ -2938,7 +2938,7 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-12T15:34:31.503730+00:00",
+      "entry_date": "2026-08-12T15:30:06.411674+00:00",
       "entry_order_id": "29f5c246-bd73-4984-8975-fb1b518d8acc"
     }
   ],
