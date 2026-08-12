@@ -2900,6 +2900,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-12T15:24:10.474429+00:00",
       "entry_order_id": "orphan:PATH260814C00016000"
+    },
+    {
+      "lot_id": "a3a09b309e7c",
+      "bucket_id": 31,
+      "profile_name": "lab0031_s203_w4_1120_1135_r2",
+      "strategy_id": "S203",
+      "occ_symbol": "ARM260814P00245000",
+      "underlying": "ARM",
+      "qty": 1,
+      "entry_cost": 55.00000000000001,
+      "entry_price": 0.55,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-12T15:30:06.368185+00:00",
+      "entry_order_id": "7c8e6269-3841-49a2-ad96-2666bec299c9"
+    },
+    {
+      "lot_id": "95c1a7e7ec51",
+      "bucket_id": 30,
+      "profile_name": "lab0030_s203_w4_1120_1135_r1",
+      "strategy_id": "S203",
+      "occ_symbol": "ARM260814P00245000",
+      "underlying": "ARM",
+      "qty": 1,
+      "entry_cost": 55.00000000000001,
+      "entry_price": 0.55,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-12T15:30:06.411674+00:00",
+      "entry_order_id": "29f5c246-bd73-4984-8975-fb1b518d8acc"
     }
   ],
   "pending_orders": [
@@ -3078,38 +3118,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
-    },
-    {
-      "order_id": "29f5c246-bd73-4984-8975-fb1b518d8acc",
-      "bucket_id": 30,
-      "strategy_id": "S203",
-      "occ_symbol": "ARM260814P00245000",
-      "underlying": "ARM",
-      "qty": 1,
-      "limit": 0.56,
-      "profile_name": "lab0030_s203_w4_1120_1135_r1",
-      "submitted": "2026-08-12",
-      "detail": "gap +4.1% red close",
-      "spread_frac": 0.2135922330097086,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "7c8e6269-3841-49a2-ad96-2666bec299c9",
-      "bucket_id": 31,
-      "strategy_id": "S203",
-      "occ_symbol": "ARM260814P00245000",
-      "underlying": "ARM",
-      "qty": 1,
-      "limit": 0.56,
-      "profile_name": "lab0031_s203_w4_1120_1135_r2",
-      "submitted": "2026-08-12",
-      "detail": "gap +4.1% red close",
-      "spread_frac": 0.2135922330097086,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
     },
     {
       "order_id": "21eacabd-01cf-4279-986b-9323b2a72ad9",
@@ -3450,7 +3458,9 @@
     "b269": 45.0,
     "b268": 45.0,
     "b115": 45.0,
-    "b114": 45.0
+    "b114": 45.0,
+    "b31": 55.00000000000001,
+    "b30": 55.00000000000001
   },
   "session_date": "2026-08-12",
   "entries_locked": [
@@ -4032,7 +4042,9 @@
     "db66cbe5-f20b-454c-ab7f-ada83d13300a",
     "b9301c2c-3240-479e-99d5-e10372eacfba",
     "96ba0fc7-23e6-46e1-8f11-7ed577878557",
-    "31d07447-af24-44ca-bca0-e68787938133"
+    "31d07447-af24-44ca-bca0-e68787938133",
+    "7c8e6269-3841-49a2-ad96-2666bec299c9",
+    "29f5c246-bd73-4984-8975-fb1b518d8acc"
   ],
   "submitted_today": 99,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
