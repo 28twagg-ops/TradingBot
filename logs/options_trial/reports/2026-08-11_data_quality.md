@@ -80,5 +80,6 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 
 - Prefer CLEAN numbers for promotion / kill decisions.
 - KEEP-only is the optimistic lens (past keepers only).
+- KILL/KEEP tags are advisory for now - all strategies still trade so weak names can surprise over the next ~week.
 - `reconcile_fill` / outage days are TAINTED, not alpha.
 - Protective broker stops (LS...) reduce damage when GitHub is down.
