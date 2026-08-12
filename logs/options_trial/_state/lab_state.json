@@ -2082,26 +2082,6 @@
       "entry_order_id": "d4a50208-99ac-4e0b-8c3f-37ae31b5de67"
     },
     {
-      "lot_id": "b58e7089e197",
-      "bucket_id": 284,
-      "profile_name": "lab0284_s351_w3_1045_1120_r1",
-      "strategy_id": "S351",
-      "occ_symbol": "PATH260814C00016500",
-      "underlying": "PATH",
-      "qty": 1,
-      "entry_cost": 4.0,
-      "entry_price": 0.04,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-12T14:48:37.629083+00:00",
-      "entry_order_id": "7638c469-137c-4784-a2fd-1551ea7fc99a"
-    },
-    {
       "lot_id": "d168e25027a6",
       "bucket_id": 267,
       "profile_name": "lab0267_s403_w3_1045_1120_r2",
@@ -2626,6 +2606,70 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
+    },
+    {
+      "order_id": "559ce020-50e6-4886-9077-f3a286daaede",
+      "bucket_id": 352,
+      "strategy_id": "S360",
+      "occ_symbol": "SNOW260814C00362500",
+      "underlying": "SNOW",
+      "qty": 1,
+      "limit": 0.42,
+      "profile_name": "lab0352_s360_w3_1045_1120_r1",
+      "submitted": "2026-08-12",
+      "detail": "RB gap -1.5% reclaim",
+      "spread_frac": 0.20512820512820515,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "383b2422-58f3-445d-acd4-58e916b8b495",
+      "bucket_id": 353,
+      "strategy_id": "S360",
+      "occ_symbol": "SNOW260814C00362500",
+      "underlying": "SNOW",
+      "qty": 1,
+      "limit": 0.42,
+      "profile_name": "lab0353_s360_w3_1045_1120_r2",
+      "submitted": "2026-08-12",
+      "detail": "RB gap -1.5% reclaim",
+      "spread_frac": 0.20512820512820515,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "fc317eb7-2c13-4dab-87a5-320ad128194b",
+      "bucket_id": 902,
+      "strategy_id": "S411",
+      "occ_symbol": "SNOW260814C00360000",
+      "underlying": "SNOW",
+      "qty": 1,
+      "limit": 0.56,
+      "profile_name": "lab0902_s411_w3_1045_1120_r1",
+      "submitted": "2026-08-12",
+      "detail": "RB gap -1.5% reclaim",
+      "spread_frac": 0.19230769230769226,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "8e1bf495-6ba5-42f7-9dc9-9157182c6d1d",
+      "bucket_id": 903,
+      "strategy_id": "S411",
+      "occ_symbol": "SNOW260814C00360000",
+      "underlying": "SNOW",
+      "qty": 1,
+      "limit": 0.56,
+      "profile_name": "lab0903_s411_w3_1045_1120_r2",
+      "submitted": "2026-08-12",
+      "detail": "RB gap -1.5% reclaim",
+      "spread_frac": 0.19230769230769226,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
     }
   ],
   "pending_exits": [
@@ -2698,6 +2742,16 @@
       "qty": 1,
       "reason": "stop_loss (-84.0%)",
       "submitted": "2026-08-12T10:10:58"
+    },
+    {
+      "order_id": "76211193-0ff4-4af1-b55c-7990fd61582f",
+      "lot_id": "1bc4003a57b8",
+      "bucket_id": 109,
+      "strategy_id": "S212",
+      "occ_symbol": "C260814C00139000",
+      "qty": 1,
+      "reason": "take_profit (+51.6%)",
+      "submitted": "2026-08-12T10:50:55"
     }
   ],
   "bucket_open_premium": {
@@ -2794,7 +2848,6 @@
     "b26": 7.000000000000001,
     "b223": 50.0,
     "b222": 50.0,
-    "b284": 4.0,
     "b267": 70.0,
     "b266": 70.0,
     "b239": 3.0,
@@ -2873,7 +2926,11 @@
     "780|S397|2026-08-12",
     "781|S397|2026-08-12",
     "804|S404|2026-08-12",
-    "805|S404|2026-08-12"
+    "805|S404|2026-08-12",
+    "352|S360|2026-08-12",
+    "353|S360|2026-08-12",
+    "902|S411|2026-08-12",
+    "903|S411|2026-08-12"
   ],
   "processed_orders": [
     "4a69b9c5-6a70-4c35-a2e2-c4907686eb7b",
@@ -3367,9 +3424,10 @@
     "bcfaea3e-f40f-4763-af81-59e89ebc2153",
     "dd100313-b408-4516-a183-c8193f0a5b9e",
     "d5026970-dc74-442c-9bc5-c6c43399aedd",
-    "4eca8a47-e762-4d03-aae3-c5f729a0c4ff"
+    "4eca8a47-e762-4d03-aae3-c5f729a0c4ff",
+    "4dc219d6-d935-41bf-bf1a-c52ac0252f19"
   ],
-  "submitted_today": 67,
+  "submitted_today": 71,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-08-12"
 }
