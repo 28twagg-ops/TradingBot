@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-12
 
-_Generated 2026-08-12T10:22:53.425595_
+_Generated 2026-08-12T10:28:00.228130_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-12T10:22:53.425595_
 
 ## Attribution health
 
-- Total exits: **2450**
+- Total exits: **2453**
 - Orphan exits (b0/orphan_reconcile): **300**
 - Orphan rate: **12.2%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -30,7 +30,7 @@ _Generated 2026-08-12T10:22:53.425595_
 | S350 (GapDown_0DTE) | 0d | watch | 34 | 52.9 | +13.38 | -65.49 | -54.17 | +182.75 | 12 | 12 | 2 | $+447.00 | 38.2% | fat left tail (p10 < -45%) |
 | S411 (RubberBand_OTM2) | 3d | watch | 28 | 57.1 | +7.69 | -57.17 | -52.08 | +40.33 | 9 | 14 | 0 | $-187.00 | 32.1% | fat left tail (p10 < -45%) |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | watch | 60 | 53.3 | +7.34 | -84.44 | -45.54 | +78.70 | 16 | 22 | 1 | $+11.00 | 25.0% | fat left tail (p10 < -45%) |
-| S401 (Any_Gap_Down_Small) | 3d | watch | 83 | 50.6 | +6.94 | -93.88 | -50.49 | +160.00 | 12 | 30 | 9 | $+936.00 | 38.6% | fat left tail (p10 < -45%) |
+| S401 (Any_Gap_Down_Small) | 3d | watch | 84 | 50.0 | +3.47 | -93.88 | -50.24 | +160.00 | 12 | 34 | 10 | $+920.00 | 38.1% | fat left tail (p10 < -45%) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 22 | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 22 | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | 22 | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -119,11 +119,11 @@ _Generated 2026-08-12T10:22:53.425595_
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 12 | 22 | 2 | $+33.00 | 26.3% | non-positive median return |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 38 | 36.8 | -50.86 | -81.50 | -61.16 | +177.77 | 16 | 18 | 6 | $+308.00 | 73.7% | non-positive median return |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 35 | 20.0 | -52.63 | -84.46 | -71.24 | +168.86 | 16 | 6 | 0 | $-511.00 | 45.7% | non-positive median return |
-| S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 36 | 11.1 | -55.12 | -78.94 | -68.18 | +20.88 | 16 | 11 | 1 | $-749.00 | 38.9% | non-positive median return |
+| S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 37 | 10.8 | -55.56 | -78.90 | -66.10 | +14.89 | 16 | 11 | 2 | $-754.00 | 37.8% | non-positive median return |
 | S351 (GapDown_1DTE) | 1d | drop | 48 | 20.8 | -56.57 | -81.63 | -70.30 | +171.88 | 12 | 20 | 3 | $-268.00 | 27.1% | non-positive median return |
 | S360 (RubberBand_1DTE) | 1d | drop | 44 | 9.1 | -56.77 | -81.55 | -70.37 | -25.00 | 12 | 24 | 6 | $-821.00 | 25.0% | non-positive median return |
 | S354 (GapDown_5DTE) | 5d | drop | 44 | 31.8 | -58.10 | -92.16 | -76.47 | +138.38 | 12 | 18 | 11 | $-13.00 | 29.5% | non-positive median return |
-| S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 78 | 12.8 | -69.05 | -98.18 | -80.50 | +51.47 | 16 | 20 | 9 | $-2,176.00 | 37.2% | non-positive median return |
+| S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 79 | 12.7 | -70.00 | -98.18 | -81.35 | +51.47 | 16 | 20 | 10 | $-2,198.00 | 36.7% | non-positive median return |
 | S363 (RubberBand_5DTE) | 5d | drop | 30 | 36.7 | -73.91 | -92.82 | -89.90 | +61.07 | 9 | 20 | 9 | $-735.00 | 36.7% | non-positive median return |
 
 ## Comparison groups
@@ -184,7 +184,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S203 | 3d ATM gap-up fade (put) | 36 | -55.12 | -78.94 | -68.18 | 11 | 1 |
+| S203 | 3d ATM gap-up fade (put) | 37 | -55.56 | -78.90 | -66.10 | 11 | 2 |
 | S214 | 3d ATM death cross (put) | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
 ### Phase-1 MA family
@@ -195,7 +195,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 |---|---|---:|---:|---:|---:|---:|---:|
 | S210 | 3d ATM MA cross 8/21 | 60 | +7.34 | -84.44 | -45.54 | 22 | 1 |
 | S211 | 3d ATM MA cross 21/50 | 29 | -38.10 | -96.36 | -51.47 | 20 | 7 |
-| S212 | 3d ATM MA bounce 50 | 78 | -69.05 | -98.18 | -80.50 | 20 | 9 |
+| S212 | 3d ATM MA bounce 50 | 79 | -70.00 | -98.18 | -81.35 | 20 | 10 |
 | S213 | 3d ATM MA bounce 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S215 | 3d ATM MA reclaim 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
@@ -240,7 +240,7 @@ _Pipeline evaluation as of 2026-08-12. Auto-kill thresholds: median<-25% at n>=1
 | S200 | GapDown_Aggressive | 0 | — | — | NEW | 0 |
 | S201 | GapDown_Mild | 0 | — | — | NEW | 0 |
 | S202 | GapDown_Monster | 10 | -60.53% | 0% | WATCH | 15 |
-| S203 | GapUp_Fade | 36 | -55.12% | 11% | INSUFFICIENT | 16 |
+| S203 | GapUp_Fade | 37 | -55.56% | 11% | INSUFFICIENT | 16 |
 | S204 | GapUp_Continuation | 0 | — | — | NEW | 0 |
 | S205 | GapDown_HighVol | 0 | — | — | NEW | 0 |
 | S206 | GapDown_WithTrend | 0 | — | — | NEW | 0 |
@@ -249,7 +249,7 @@ _Pipeline evaluation as of 2026-08-12. Auto-kill thresholds: median<-25% at n>=1
 | S209 | GapDown_Recovery | 6 | -61.46% | 0% | WATCH | 14 |
 | S210 | MA_Cross_8_21 | 60 | +7.34% | 53% | INSUFFICIENT | 16 |
 | S211 | MA_Cross_21_50 | 29 | -38.10% | 24% | INSUFFICIENT | 16 |
-| S212 | MA_Bounce_50 | 78 | -69.05% | 13% | INSUFFICIENT | 16 |
+| S212 | MA_Bounce_50 | 79 | -70.00% | 13% | INSUFFICIENT | 16 |
 | S213 | MA_Bounce_200 | 0 | — | — | NEW | 0 |
 | S214 | MA_Death_Cross | 0 | — | — | NEW | 0 |
 | S215 | MA_Reclaim_200 | 0 | — | — | NEW | 0 |
@@ -310,7 +310,7 @@ _Pipeline evaluation as of 2026-08-12. Auto-kill thresholds: median<-25% at n>=1
 | S398 | GapDown_ATM | 40 | -4.05% | 50% | INSUFFICIENT | 12 |
 | S399 | GapDown_OTM1 | 41 | -46.67% | 44% | INSUFFICIENT | 12 |
 | S400 | Any_Green_Close | 5 | -50.00% | 0% | WATCH | 12 |
-| S401 | Any_Gap_Down_Small | 83 | +6.94% | 51% | INSUFFICIENT | 12 |
+| S401 | Any_Gap_Down_Small | 84 | +3.47% | 50% | INSUFFICIENT | 12 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
 | S403 | Any_MA50_Touch | 24 | +50.88% | 67% | INSUFFICIENT | 12 |
 | S404 | GapDown_OTM2 | 25 | +50.00% | 72% | INSUFFICIENT | 12 |
@@ -345,7 +345,7 @@ _Pipeline evaluation as of 2026-08-12. Auto-kill thresholds: median<-25% at n>=1
 | S362 | 35 | +25.45% | 69% | Tyler review |
 | S350 | 34 | +13.38% | 53% | Tyler review |
 | S210 | 60 | +7.34% | 53% | Tyler review |
-| S401 | 83 | +6.94% | 51% | Tyler review |
+| S401 | 84 | +3.47% | 50% | Tyler review |
 
 ## Notes
 
