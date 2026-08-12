@@ -24810,3 +24810,187 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260812T194547Z
+
+- UTC timestamp: `20260812T194547Z`
+- GitHub run: [#6900](https://github.com/28twagg-ops/TradingBot/actions/runs/31634182898)
+- Run id: `31634182898`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 781 | 42.1 | -47.1 | +12.0 | $+8,178 |
+| TAINTED | 1701 | 33.1 | -39.0 | +10.2 | $-8,382 |
+| KEEP-only | 275 | 64.7 | +37.7 | +42.1 | $+5,447 |
+| KEEP-only recent | 88 | 61.4 | +51.2 | +54.0 | $+1,398 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S403, S404, S406
+- KILL strategies (15): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-12T15:44:27.863723-04:00","date":"2026-08-12","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":4.4,"phases_s":{"reconcile":0.33,"cancel":0.1,"manage":2.46,"protective_stops":0.8},"signals":0,"placed":0,"equity":130981.48,"open_positions":30,"pending_orders":0,"open_lots":121,"submitted_today":99,"filled_today":82,"unattributed_contracts":0,"top_signals":[],"github_run":"6899","github_run_id":"31633766271","status":"ok","data_quality":{"clean":{"n":781,"win":42.13,"med":-47.14,"avg":11.99,"pnl":8178.42},"tainted":{"n":1701,"win":33.1,"med":-39.02,"avg":10.24,"pnl":-8382.34},"keep_only":{"n":275,"win":64.73,"med":37.69,"avg":42.15,"pnl":5447.45},"keep_only_recent":{"n":88,"win":61.36,"med":51.22,"avg":53.96,"pnl":1398.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S403","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+19:45:48  INFO      Mode: scan
+19:45:48  INFO        [positions] 3/3 (3 valid)
+19:45:48  INFO        SELL LIMIT AXP  qty=0.273648489  limit=$343.35  id=d883b3d4-861a-4783-9799-0ee30c725296
+19:46:18  INFO        SELL LIMIT filled AXP (confirmed by position check)
+19:46:18  INFO        TX logged: SELL AXP  P&L 0.99%
+19:46:18  INFO        Universe cache hit: 903 tickers (tickers_2026-08-12.json)
+19:46:20  INFO        [universe] 40/901 (40 valid)
+19:46:21  INFO        [universe] 80/901 (80 valid)
+19:46:23  INFO        [universe] 120/901 (120 valid)
+19:46:24  INFO        [universe] 160/901 (160 valid)
+19:46:26  INFO        [universe] 200/901 (199 valid)
+19:46:33  INFO        [universe] 240/901 (238 valid)
+19:46:44  INFO        [universe] 280/901 (278 valid)
+19:46:56  INFO        [universe] 320/901 (318 valid)
+19:47:07  INFO        [universe] 360/901 (358 valid)
+19:47:21  INFO        [universe] 400/901 (397 valid)
+19:47:31  INFO        [universe] 440/901 (437 valid)
+19:47:44  INFO        [universe] 480/901 (477 valid)
+19:47:55  INFO        [universe] 520/901 (517 valid)
+19:48:08  INFO        [universe] 560/901 (557 valid)
+19:48:21  INFO        [universe] 600/901 (597 valid)
+19:48:31  INFO        [universe] 640/901 (637 valid)
+19:48:44  INFO        [universe] 680/901 (677 valid)
+19:48:57  INFO        [universe] 720/901 (717 valid)
+19:49:08  INFO        [universe] 760/901 (757 valid)
+19:49:21  INFO        [universe] 800/901 (797 valid)
+19:49:31  INFO        [universe] 840/901 (836 valid)
+19:49:44  INFO        [universe] 880/901 (876 valid)
+19:49:51  INFO        [universe] 901/901 (897 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $466.34|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-08-12|
+|  Universe                                                          both|
+|  Mo~  Aug: VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Disabled                GapDown, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $466.34|
+|  Cash                                                           $184.69|
+|  Reserve                                          $23.32  (always kept)|
+|  Available                                    $161.37  (for new trades)|
+|  Trade size             $93.27  (20% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (3 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AES      Pullback50      $94.09     $14.72   $14.72   +0.0%   $+0.00  |
+|  AFL      Pullback50      $93.41     $120.39  $120.86  +0.4%   $+0.36  |
+|  AXP      Pullback50      $94.15     $340.66  $344.04  +1.0%   $+0.93  |
+|                                                                        |
+|  Total invested                                                 $281.65|
+|  Total open P&L                                                  $+1.29|
+|  Buys today: 0  |  entry cap: 2  |  max open: 5                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (80651.6m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AES  P&L +0.0%  $+0.00                                            HOLD|
+|  AFL  P&L +0.4%  $+0.36                                            HOLD|
+|  AXP  P&L +1.0%  $+0.93                           EXIT: midline (+1.0%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  37                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AKAM     Pullback50      eq     $122.84  55.2   -0.81   50MA bounce (-|
+|  ALGN     Pullback50      eq     $174.56  56.5   -1.66   50MA bounce (-|
+|  ACGL     Pullback50      eq     $97.59   42.6   -1.44   50MA bounce (+|
+|  CASY     Pullback50      eq     $838.89  36.8   -2.07   50MA bounce (+|
+|  CDW      Pullback50      eq     $136.84  56.2   -1.18   50MA bounce (+|
+|  CIEN     Pullback50      eq     $433.56  55.3   1.29    50MA bounce (-|
+|  C        Pullback50      eq     $137.93  61.8   -2.28   50MA bounce (+|
+|  ELV      Pullback50      eq     $398.21  64.1   -1.58   50MA bounce (+|
+|  EXR      Pullback50      eq     $146.71  53.6   -1.53   50MA bounce (-|
+|  FTV      Pullback50      eq     $61.56   53.5   -1.63   50MA bounce (+|
+|  INVH     Pullback50      eq     $29.77   55.6   -1.69   50MA bounce (+|
+|  IBKR     Pullback50      eq     $91.94   50.4   -2.00   50MA bounce (+|
+|  IRM      Pullback50      eq     $124.46  49.9   -2.03   50MA bounce (-|
+|  KEY      Pullback50      eq     $22.96   54.7   -1.47   50MA bounce (+|
+|  KMI      Pullback50      eq     $31.73   39.1   -1.61   50MA bounce (-|
+|  KHC      Pullback50      eq     $24.53   44.6   -1.14   50MA bounce (-|
+|  LITE     VWAP_Reclaim    eq     $926.84  56.2   3.37    VWAP reclaim V|
+|  O        Pullback50      eq     $62.47   31.0   3.44    50MA bounce (-|
+|  O        RSIRecovery     eq     $62.47   31.0   3.44    RSI 22.3→31.0 |
+|  RSG      Pullback50      eq     $214.32  43.5   -1.94   50MA bounce (+|
+|  TRGP     Pullback50      eq     $268.04  38.3   -2.03   50MA bounce (-|
+|  VTR      Pullback50      eq     $88.94   33.3   -1.70   50MA bounce (-|
+|  WM       Pullback50      eq     $226.49  30.1   -1.73   50MA bounce (-|
+|  WMB      Pullback50      eq     $73.63   44.1   -1.59   50MA bounce (+|
+|  ALLY     Pullback50      eq     $44.27   52.0   -1.10   50MA bounce (-|
+|  AM       Pullback50      eq     $22.18   40.2   -1.41   50MA bounce (+|
+|  BRKR     Pullback50      eq     $58.76   45.4   -0.56   50MA bounce (+|19:49:53  INFO        BUY  AKAM  $93.27  [Pullback50]  id=37c02788-056d-40b8-9798-ed3e319ad114
+19:49:53  INFO        BUY  ALGN  $93.27  [Pullback50]  id=cba9a16e-b9f8-4429-a4d3-83a9c6484e2f
+19:49:53  INFO        BUY  ACGL  $68.96  [Pullback50]  id=57017253-2020-41ad-9086-e5dd73c07876
+```
+
+### Options bot full output
+
+```text
