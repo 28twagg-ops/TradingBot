@@ -18,4 +18,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10 15:26:27.020194+00:00,entry,790,lab0790_s398_w4_1120_1135_r1,S398,df106456cc97,AAPL,AAPL260812C00312500,1,0.67,0.65,65.0,,,,-0.01,,0.5,-0.5,0.02985074626865674,gap -2.1%,ef9f49e5-ff3b-4ae7-9970-389ba4c5e471
 2026-08-10 15:26:27.020194+00:00,entry,790,lab0790_s398_w4_1120_1135_r1,S398,df106456cc97,AAPL,AAPL260812C00312500,1,0.65,0.65,65.0,,,,-0.01,,0.5,-0.5,,,ef9f49e5-ff3b-4ae7-9970-389ba4c5e471
 2026-08-12 15:23:26.280679+00:00,entry,790,lab0790_s398_w4_1120_1135_r1,S398,86e2adb71a0c,PATH,PATH260814C00016000,1,0.09,0.08,8.0,,,,-0.01,,0.75,-0.75,0.22222222222222227,gap -2.6%,3b051b15-fc1c-42d4-8254-2d4f33bac67a
-2026-08-12T21:09:12Z,reconcile,790,lab0790_s398_w4_1120_1135_r1,S398,86e2adb71a0c,PATH,PATH260814C00016000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12T21:03:44Z,reconcile,790,lab0790_s398_w4_1120_1135_r1,S398,86e2adb71a0c,PATH,PATH260814C00016000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

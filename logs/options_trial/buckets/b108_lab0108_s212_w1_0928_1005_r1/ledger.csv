@@ -24,4 +24,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10 13:46:45.565042+00:00,entry,108,lab0108_s212_w1_0928_1005_r1,S212,631a69c85e32,C,C260814C00139000,1,0.71,0.71,71.0,,,,-0.01,,0.5,-0.5,,,6fdca0c1-9866-4d4f-8610-3d3d1b14cde2
 2026-08-11 19:09:46.789772+00:00,exit,108,lab0108_s212_w1_0928_1005_r1,S212,631a69c85e32,C,C260814C00139000,1,,0.34,71.0,-52.11,-37.0,reconcile_fill,,-0.01,0.5,-0.5,,,7119e16a-f47a-4b63-ac24-8f009b8fbfc8
 2026-08-12 13:56:09.880347+00:00,entry,108,lab0108_s212_w1_0928_1005_r1,S212,b31afb5432ae,C,C260814C00139000,1,0.65,0.64,64.0,,,,-0.01,,0.5,-0.5,0.14634146341463428,low=136.41 MA50=136.71 touch+green,30c6c621-ccb3-4d53-bf3e-87feaabe0cdf
-2026-08-12T21:09:11Z,reconcile,108,lab0108_s212_w1_0928_1005_r1,S212,b31afb5432ae,C,C260814C00139000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12T21:03:43Z,reconcile,108,lab0108_s212_w1_0928_1005_r1,S212,b31afb5432ae,C,C260814C00139000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

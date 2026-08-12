@@ -1,3 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-08-12 14:08:16.437417+00:00,entry,769,lab0769_s396_w1_0928_1005_r2,S396,1db0fe043027,PATH,PATH260821C00015000,1,0.72,0.71,71.0,,,,-0.01,,0.75,-0.75,0.16296296296296292,gap -2.6%,cfba1e7f-a7a5-41ae-82cf-7e5d9892adae
-2026-08-12T21:09:11Z,reconcile,769,lab0769_s396_w1_0928_1005_r2,S396,1db0fe043027,PATH,PATH260821C00015000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12T21:03:43Z,reconcile,769,lab0769_s396_w1_0928_1005_r2,S396,1db0fe043027,PATH,PATH260821C00015000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

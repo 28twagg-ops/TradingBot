@@ -19,4 +19,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10 14:07:32.374686+00:00,entry,97,lab0097_s211_w2_1005_1045_r2,S211,d16f34aeb4ba,PFE,PFE260814C00027000,1,0.22,0.22,22.0,,,,-0.01,,0.5,-0.5,,,818d9800-ba2e-498e-a57d-c8fd86dd12df
 2026-08-10 14:07:32.374686+00:00,entry,97,lab0097_s211_w2_1005_1045_r2,S211,d16f34aeb4ba,PFE,PFE260814C00027000,1,0.22,0.22,22.0,,,,-0.01,,0.5,-0.5,,,818d9800-ba2e-498e-a57d-c8fd86dd12df
 2026-08-12 14:33:00.601238+00:00,entry,97,lab0097_s211_w2_1005_1045_r2,S211,b645a519fb7e,CVNA,CVNA260814C00075000,1,0.27,0.25,25.0,,,,-0.01,,0.75,-0.75,0.11320754716981142,MA21 crossed above MA50,a939d693-8666-406b-a9f1-770fd529ba19
-2026-08-12T21:09:11Z,reconcile,97,lab0097_s211_w2_1005_1045_r2,S211,b645a519fb7e,CVNA,CVNA260814C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12T21:03:43Z,reconcile,97,lab0097_s211_w2_1005_1045_r2,S211,b645a519fb7e,CVNA,CVNA260814C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
