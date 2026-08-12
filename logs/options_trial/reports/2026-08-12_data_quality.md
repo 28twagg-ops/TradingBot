@@ -1,0 +1,85 @@
+# Options data quality report - 2026-08-12
+
+Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAINTED** (reconcile_fill / broker-missing / known GitHub outage days).
+**KEEP-only** = CLEAN exits from strategies with n>=10, med>=0%, win>=50%.
+
+## Headline
+
+| Slice | n | Win% | Med% | Avg% | Realized $ |
+|---|---:|---:|---:|---:|---:|
+| ALL | 2411 | 36.4 | -40.0 | +11.8 | $+1,181 |
+| CLEAN (perfect running) | 738 | 43.9 | -45.3 | +16.0 | $+9,446 |
+| TAINTED (errors/outages) | 1673 | 33.1 | -39.3 | +9.9 | $-8,265 |
+| CLEAN since 2026-08-03 | 422 | 32.9 | -51.4 | +0.8 | $-2,854 |
+| KEEP-only (CLEAN keepers) | 302 | 63.9 | +37.7 | +42.0 | $+5,709 |
+| KEEP-only since 2026-08-03 | 114 | 60.5 | +50.0 | +51.5 | $+1,683 |
+
+## Known outage / degraded days
+
+2026-08-01, 2026-08-06
+
+## Daily exit health
+
+| Day | Tag | n | reconcile-ish | Win% | Med% |
+|---|---|---:|---:|---:|---:|
+| 2026-07-06 | OK | 52 | 0 | 94 | +36.5 |
+| 2026-07-10 | BUGGY | 163 | 123 | 32 | -21.7 |
+| 2026-07-13 | BUGGY | 204 | 170 | 26 | -33.3 |
+| 2026-07-14 | BUGGY | 98 | 78 | 30 | -21.8 |
+| 2026-07-15 | BUGGY | 16 | 16 | 0 | -92.7 |
+| 2026-07-16 | BUGGY | 156 | 120 | 13 | -57.5 |
+| 2026-07-17 | BUGGY | 93 | 52 | 62 | +42.9 |
+| 2026-07-20 | OK | 19 | 0 | 100 | +82.5 |
+| 2026-07-22 | OK | 1 | 0 | 0 | -53.6 |
+| 2026-07-24 | BUGGY | 5 | 1 | 0 | -77.8 |
+| 2026-07-29 | BUGGY | 4 | 1 | 0 | -50.0 |
+| 2026-07-31 | BUGGY | 145 | 79 | 76 | +63.6 |
+| 2026-08-03 | BUGGY | 222 | 147 | 68 | +47.1 |
+| 2026-08-04 | BUGGY | 254 | 193 | 49 | +0.0 |
+| 2026-08-05 | BUGGY | 361 | 256 | 17 | -54.3 |
+| 2026-08-06 | OUTAGE | 216 | 134 | 23 | -53.6 |
+| 2026-08-07 | BUGGY | 230 | 160 | 28 | -59.7 |
+| 2026-08-10 | BUGGY | 107 | 51 | 22 | -52.4 |
+| 2026-08-11 | BUGGY | 65 | 10 | 20 | -53.8 |
+
+## CLEAN strategy kill list (n>=10, med<=-20%)
+
+| strategy | n | win% | med% | avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| S212 | 14 | 0.0 | -64.7 | -70.5 | $-544 |
+| S360 | 15 | 13.3 | -62.1 | -48.1 | $-320 |
+| ORPHAN | 74 | 23.0 | -60.0 | -18.2 | $+4,366 |
+| S405 | 22 | 36.4 | -54.7 | +4.2 | $+67 |
+| S207 | 13 | 15.4 | -54.3 | -40.5 | $-341 |
+| S351 | 13 | 7.7 | -52.9 | -34.1 | $-108 |
+| S217 | 16 | 37.5 | -52.3 | +95.2 | $+180 |
+| S354 | 16 | 37.5 | -51.2 | +12.2 | $+46 |
+| S211 | 10 | 30.0 | -45.8 | -20.6 | $-94 |
+| S408 | 16 | 31.2 | -45.6 | +32.3 | $+45 |
+| S355 | 20 | 40.0 | -45.1 | +35.0 | $+278 |
+| S165 | 61 | 37.7 | -24.2 | +20.4 | $+507 |
+
+## CLEAN strategy keep list (n>=10, med>=0, win>=50%)
+
+| strategy | n | win% | med% | avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| S404 | 12 | 100.0 | +80.1 | +79.4 | $+584 |
+| S406 | 15 | 60.0 | +72.5 | +137.7 | $+544 |
+| S350 | 12 | 58.3 | +64.9 | +30.4 | $+85 |
+| S397 | 11 | 100.0 | +57.5 | +76.3 | $+538 |
+| S210 | 13 | 76.9 | +57.1 | +44.8 | $+136 |
+| S173 | 105 | 61.9 | +51.6 | +43.1 | $+2,562 |
+| S218 | 17 | 52.9 | +47.8 | +67.3 | $+320 |
+| S401 | 23 | 56.5 | +47.4 | +53.9 | $+358 |
+| S174 | 54 | 68.5 | +30.1 | +5.5 | $+325 |
+| S398 | 16 | 50.0 | +3.8 | +46.9 | $+359 |
+| S403 | 12 | 50.0 | +0.8 | -3.7 | $-29 |
+| S364 | 12 | 50.0 | +0.0 | -3.0 | $-72 |
+
+## Notes
+
+- Prefer CLEAN numbers for promotion / kill decisions.
+- KEEP-only is the optimistic lens (past keepers only).
+- KILL/KEEP tags are advisory for now - all strategies still trade so weak names can surprise over the next ~week.
+- `reconcile_fill` / outage days are TAINTED, not alpha.
+- Protective broker stops (LS...) reduce damage when GitHub is down.
