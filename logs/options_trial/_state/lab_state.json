@@ -2613,6 +2613,16 @@
       "qty": 1,
       "reason": "take_profit (+52.9%)",
       "submitted": "2026-08-12T15:05:49"
+    },
+    {
+      "order_id": "90ea5834-8e0f-4715-9629-2aea9dc906dd",
+      "lot_id": "99393b91b0c7",
+      "bucket_id": 778,
+      "strategy_id": "S397",
+      "occ_symbol": "TTD260814C00012500",
+      "qty": 1,
+      "reason": "take_profit (+68.5%)",
+      "submitted": "2026-08-12T15:27:12"
     }
   ],
   "bucket_open_premium": {
