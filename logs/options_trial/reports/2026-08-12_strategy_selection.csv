@@ -1,7 +1,7 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
 S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),124,60,39,21,195.14,65.16,-63.62,-50.0,969.21,3080.0,8,12,22,10,9,21.7
+S397,GapDown_ITM1,3d,watch,building sample (8-19 exits),84,19,16,3,50.13,56.16,-64.53,42.0,115.58,600.0,4,12,27,7,4,36.8
 S357,GapDown_21DTE,21d,watch,building sample (8-19 exits),40,18,14,4,32.91,55.07,-67.86,47.06,73.68,323.0,7,12,0,2,3,44.4
-S397,GapDown_ITM1,3d,watch,building sample (8-19 exits),84,18,15,3,49.79,54.46,-67.93,41.18,115.68,559.0,4,12,27,6,4,38.9
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),65,25,17,8,76.63,50.88,-79.2,-52.54,316.0,497.0,4,12,13,1,6,36.0
 S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),84,27,20,7,35.8,50.77,-94.27,-30.05,130.88,571.0,3,12,28,10,5,33.3
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),130,59,34,25,58.78,36.36,-71.9,-48.75,166.67,957.0,8,16,8,7,7,42.4
