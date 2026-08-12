@@ -20875,3 +20875,87 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260812T184503Z
+
+- UTC timestamp: `20260812T184503Z`
+- GitHub run: [#6887](https://github.com/28twagg-ops/TradingBot/actions/runs/31628787808)
+- Run id: `31628787808`
+- Live bot: exit=`0`, duration=`3s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 780 | 42.1 | -47.2 | +11.8 | $+8,108 |
+| TAINTED | 1700 | 33.1 | -39.0 | +10.0 | $-8,473 |
+| KEEP-only | 274 | 64.6 | +37.7 | +41.7 | $+5,377 |
+| KEEP-only recent | 87 | 60.9 | +50.9 | +52.7 | $+1,328 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S403, S404, S406
+- KILL strategies (15): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-12T14:36:42.539247-04:00","date":"2026-08-12","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":6.1,"phases_s":{"reconcile":0.34,"cancel":0.09,"manage":4.07,"protective_stops":0.83},"signals":0,"placed":0,"equity":131805.12,"open_positions":31,"pending_orders":0,"open_lots":124,"submitted_today":99,"filled_today":82,"unattributed_contracts":0,"top_signals":[],"github_run":"6886","github_run_id":"31628372057","status":"ok","data_quality":{"clean":{"n":780,"win":42.05,"med":-47.2,"avg":11.81,"pnl":8108.42},"tainted":{"n":1700,"win":33.06,"med":-39.02,"avg":10.01,"pnl":-8473.14},"keep_only":{"n":274,"win":64.6,"med":37.69,"avg":41.72,"pnl":5377.45},"keep_only_recent":{"n":87,"win":60.92,"med":50.88,"avg":52.75,"pnl":1328.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S403","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+18:45:04  INFO      Mode: exits
+18:45:05  INFO        Daily log -> logs/daily/2026-08-12.md
+18:45:05  INFO        Daily log reconciled -> logs/daily/2026-08-12.md (2 ledger rows)
+18:45:05  INFO        place_all_stops: checking 3 positions...
+18:45:05  INFO        STOP already live AES @ $14.65
+18:45:05  INFO        STOP skipped AFL: fractional (0.7729 shares) — software exit will handle it
+18:45:05  INFO        STOP skipped AXP: fractional (0.2736 shares) — software exit will handle it
+18:45:05  INFO        [positions] 3/3 (3 valid)
+18:45:06  INFO        Daily log -> logs/daily/2026-08-12.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         18:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $466.01|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  AES  P&L +0.0%  $+0.03                                            HOLD|
+|  AFL  P&L +0.4%  $+0.37                                            HOLD|
+|  AXP  P&L +0.6%  $+0.56                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
