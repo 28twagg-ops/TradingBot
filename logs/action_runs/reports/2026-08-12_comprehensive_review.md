@@ -9686,3 +9686,110 @@ Active buckets: 1024 | Strategies: S165, S164, S168, S167, S166, S163, S169, S17
 ```
 
 ---
+
+## Run 20260812T153427Z
+
+- UTC timestamp: `20260812T153427Z`
+- GitHub run: [#6849](https://github.com/28twagg-ops/TradingBot/actions/runs/31612630975)
+- Run id: `31612630975`
+- Live bot: exit=`0`, duration=`2s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 772 | 42.2 | -47.1 | +12.3 | $+8,246 |
+| TAINTED | 1700 | 33.1 | -39.0 | +10.0 | $-8,473 |
+| KEEP-only | 273 | 64.5 | +37.7 | +41.6 | $+5,366 |
+| KEEP-only recent | 86 | 60.5 | +50.4 | +52.6 | $+1,317 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S403, S404, S406
+- KILL strategies (15): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-12T11:20:55.624656-04:00","date":"2026-08-12","mode":"entry+manage","header":"entry+manage (26 new)","elapsed_s":207.5,"phases_s":{"reconcile":0.59,"cancel":0.1,"manage":7.86,"protective_stops":3.04,"scan":67.09,"entries":114.34,"reconcile2":1.47},"signals":264,"placed":26,"equity":132523.2,"open_positions":37,"pending_orders":19,"open_lots":145,"submitted_today":99,"filled_today":80,"unattributed_contracts":0,"top_signals":["S165:DDOG","S165:ZS","S165:MDB","S165:PATH","S165:BILL","S164:DDOG","S164:ZS","S164:MDB"],"github_run":"6847","github_run_id":"31611716550","status":"ok","data_quality":{"clean":{"n":772,"win":42.23,"med":-47.1,"avg":12.26,"pnl":8246.42},"tainted":{"n":1700,"win":33.06,"med":-39.02,"avg":10.01,"pnl":-8473.14},"keep_only":{"n":273,"win":64.47,"med":37.69,"avg":41.64,"pnl":5366.45},"keep_only_recent":{"n":86,"win":60.47,"med":50.44,"avg":52.61,"pnl":1317.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S403","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+15:34:28  INFO      Mode: exits
+15:34:29  INFO        Daily log -> logs/daily/2026-08-12.md
+15:34:29  INFO        Daily log reconciled -> logs/daily/2026-08-12.md (2 ledger rows)
+15:34:29  INFO        place_all_stops: checking 3 positions...
+15:34:29  INFO        STOP already live AES @ $14.65
+15:34:29  INFO        STOP skipped AFL: fractional (0.7729 shares) — software exit will handle it
+15:34:29  INFO        STOP skipped AXP: fractional (0.2736 shares) — software exit will handle it
+15:34:29  INFO        [positions] 3/3 (3 valid)
+15:34:29  INFO        Daily log -> logs/daily/2026-08-12.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:34 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $465.51|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  AES  P&L +0.0%  $+0.00                                            HOLD|
+|  AXP  P&L +0.0%  $+0.03                                            HOLD|
+|  AFL  P&L +0.5%  $+0.44                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=145 paper_keys=yes dry_run=False
+  alpaca positions=40
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-08-12T11:34:31.285493-04:00 ===
+
+[Run context]
+Paper auth OK — equity $132351.58, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 1024 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419
+Protective stops: placed=0 already=36 failed=2
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 114/117 symbols
+```
+
+---
