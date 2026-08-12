@@ -2603,6 +2603,16 @@
       "qty": 1,
       "reason": "stop_loss (-51.1%)",
       "submitted": "2026-08-12T13:11:00"
+    },
+    {
+      "order_id": "2ae830ce-5ebb-4faf-9c2b-b8b7021691c6",
+      "lot_id": "d7acef521d70",
+      "bucket_id": 99,
+      "strategy_id": "S211",
+      "occ_symbol": "CVNA260814C00074000",
+      "qty": 1,
+      "reason": "take_profit (+52.9%)",
+      "submitted": "2026-08-12T15:05:49"
     }
   ],
   "bucket_open_premium": {
