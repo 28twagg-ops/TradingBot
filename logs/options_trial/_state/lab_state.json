@@ -1202,26 +1202,6 @@
       "entry_order_id": "30c6c621-ccb3-4d53-bf3e-87feaabe0cdf"
     },
     {
-      "lot_id": "4def6ea2632a",
-      "bucket_id": 81,
-      "profile_name": "lab0081_s210_w1_0928_1005_r2",
-      "strategy_id": "S210",
-      "occ_symbol": "LLY260814C01300000",
-      "underlying": "LLY",
-      "qty": 1,
-      "entry_cost": 17.0,
-      "entry_price": 0.17,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-12T14:01:32.803612+00:00",
-      "entry_order_id": "c1433ec5-3203-4956-b273-20136d7ddcd0"
-    },
-    {
       "lot_id": "af83fe346a31",
       "bucket_id": 80,
       "profile_name": "lab0080_s210_w1_0928_1005_r1",
@@ -2975,14 +2955,14 @@
       "submitted": "2026-08-12T11:21:04"
     },
     {
-      "order_id": "becbc280-8746-4c20-b3c2-19cf423a896a",
-      "lot_id": "4def6ea2632a",
-      "bucket_id": 81,
-      "strategy_id": "S210",
-      "occ_symbol": "LLY260814C01300000",
+      "order_id": "7ba362df-cf1c-4836-b78d-b6bc1a42c1a7",
+      "lot_id": "39a39ebf99ab",
+      "bucket_id": 350,
+      "strategy_id": "S360",
+      "occ_symbol": "ABBV260814C00255000",
       "qty": 1,
-      "reason": "take_profit (+64.7%)",
-      "submitted": "2026-08-12T12:15:52"
+      "reason": "stop_loss (-60.8%)",
+      "submitted": "2026-08-12T12:21:05"
     }
   ],
   "bucket_open_premium": {
@@ -3043,7 +3023,6 @@
     "b0": 861.555,
     "b109": 64.0,
     "b108": 64.0,
-    "b81": 17.0,
     "b80": 17.0,
     "b25": 14.000000000000002,
     "b771": 71.0,
@@ -3697,7 +3676,8 @@
     "96ba0fc7-23e6-46e1-8f11-7ed577878557",
     "31d07447-af24-44ca-bca0-e68787938133",
     "7c8e6269-3841-49a2-ad96-2666bec299c9",
-    "29f5c246-bd73-4984-8975-fb1b518d8acc"
+    "29f5c246-bd73-4984-8975-fb1b518d8acc",
+    "becbc280-8746-4c20-b3c2-19cf423a896a"
   ],
   "submitted_today": 99,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
