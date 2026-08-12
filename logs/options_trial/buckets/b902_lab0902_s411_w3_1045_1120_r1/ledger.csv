@@ -19,3 +19,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-11 15:04:11.711103+00:00,entry,902,lab0902_s411_w3_1045_1120_r1,S411,e9c47af33d4c,CVNA,CVNA260814C00075000,1,0.7,0.7,70.0,,,,-0.01,,0.5,-0.5,,,f9d561ab-d201-4f69-8342-079d644d545c
 2026-08-12T14:10:49Z,reconcile,902,lab0902_s411_w3_1045_1120_r1,S411,e9c47af33d4c,CVNA,CVNA260814C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-12 15:02:05.112925+00:00,entry,902,lab0902_s411_w3_1045_1120_r1,S411,2a62f58e165d,SNOW,SNOW260814C00360000,1,0.56,0.45,45.0,,,,-0.01,,0.75,-0.75,0.19230769230769226,RB gap -1.5% reclaim,fc317eb7-2c13-4dab-87a5-320ad128194b
+2026-08-12T21:03:44Z,reconcile,902,lab0902_s411_w3_1045_1120_r1,S411,2a62f58e165d,SNOW,SNOW260814C00360000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

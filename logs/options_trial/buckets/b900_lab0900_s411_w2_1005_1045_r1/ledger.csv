@@ -29,3 +29,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-06 19:44:29.440664+00:00,exit,900,lab0900_s411_w2_1005_1045_r1,S411,f8454bcb661e,CELH,CELH260814C00028000,1,,0.28,25.0,12.0,3.0,reconcile_fill,,-0.01,0.5,-0.5,,,4758b089-2f0d-4c7c-ac24-0faf9bbd3ab1
 2026-08-10 14:38:01.451616+00:00,entry,900,lab0900_s411_w2_1005_1045_r1,S411,02f11ca3338e,CELH,CELH260814C00028000,1,0.25,0.25,25.0,,,,-0.01,,0.5,-0.5,,,9c13b095-7d96-4746-bc83-3b681870f9c0
 2026-08-10 14:35:11.131296+00:00,entry,900,lab0900_s411_w2_1005_1045_r1,S411,30bc0daa1d64,CELH,CELH260814C00028000,1,0.26,0.26,26.0,,,,-0.01,,0.5,-0.5,,,9b4c108d-ccbb-432a-810a-74b0ce35bb34
+2026-08-12T21:03:42Z,reconcile,900,lab0900_s411_w2_1005_1045_r1,S411,30bc0daa1d64,CELH,CELH260814C00028000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12T21:03:43Z,reconcile,900,lab0900_s411_w2_1005_1045_r1,S411,02f11ca3338e,CELH,CELH260814C00028000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
