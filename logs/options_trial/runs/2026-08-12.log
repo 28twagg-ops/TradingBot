@@ -46078,32 +46078,31 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-08-12.log
 elapsed=8.3s reconcile=0.51s cancel=0.16s manage=4.88s
 
-=== 15:34:46 ET — manage-only (past entry window) [elapsed=6.5s reconcile=0.46s cancel=0.14s manage=3.8s] ===
-=== options_morning_bot (PAPER) 2026-08-12T15:34:46.778839-04:00 ===
+=== 15:39:32 ET — manage-only (past entry window) [elapsed=5.1s reconcile=0.41s cancel=0.09s manage=3.2s] ===
+=== options_morning_bot (PAPER) 2026-08-12T15:39:32.702795-04:00 ===
 
 [Run context]
-Paper auth OK — equity $131286.02, account PA36KS87UPRS
+Paper auth OK — equity $131004.00, account PA36KS87UPRS
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1
-  reconcile: exit fill b778|S397 TTD +56.2%
+  reconcile: exit fill b0|ORPHAN AAPL +409.0%
+  reconcile: exit fill b778|S397 PATH +159.1%
+  reconcile: orphan lot b0 AAPL260812C00317500 x1 @ 0.22 (legacy/unattributed)
 
 [Setup]
 Active buckets: 1024 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419
-  EXIT skip C260814C00139000: open sell already pending
-  EXIT skip XOM260814C00170000: open sell already pending
-  EXIT skip AAPL260817C00320000: open sell already pending
   EXIT skip CVNA260814C00074000: open sell already pending
-  EXIT skip AAPL260812C00320000: open sell already pending
-  EXIT skip AAPL260814C00317500: open sell already pending
   EXIT skip AAPL260812C00317500: open sell already pending
-  EXIT skip MCD260814C00280000: open sell already pending
-  EXIT skip CVNA260814C00076000: open sell already pending
+  EXIT skip AAPL260812C00320000: open sell already pending
   EXIT skip UBER260814C00081000: open sell already pending
-  EXIT skip AAPL260812C00315000: open sell already pending
   EXIT skip AAPL260812C00312500: open sell already pending
+  EXIT skip AAPL260812C00315000: open sell already pending
+  EXIT skip AAPL260814C00317500: open sell already pending
+  EXIT skip XOM260814C00170000: open sell already pending
+  EXIT skip MCD260814C00280000: open sell already pending
+  EXIT skip AAPL260817C00320000: open sell already pending
+  EXIT skip CVNA260814C00076000: open sell already pending
   EXIT skip SNOW260814C00360000: open sell already pending
-  EXIT [b0|orphan_reconcile|ORPHAN] take_profit (+67.0%) SELL 1 TTD260814C00012500 @<= 1.10  id=ab6551b3-e338-4835-a23d-c6e564c7aabb
-  PROT STOP failed TTD260814C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-Protective stops: placed=0 already=29 failed=1
+  EXIT skip C260814C00139000: open sell already pending
 
 [Manage only]
 Past entry window; manage/exit only.
@@ -46112,25 +46111,25 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $131,286.02
+Account equity: $131,004.00
 Active buckets: 1024 of 1024 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
-  Realized (sold):     $-323.72 all-time  |  $-1,296.46 today
-  Open (not sold yet): $-2,819.49 unrealized (virtual lots)
-                       $-2,814.03 unrealized (broker total)
-  Premium deployed:    $5,042.56 in open positions
-  Combined P&L:        $-3,143.21 (reflected realized + open virtual)
+  Realized (sold):     $-203.92 all-time  |  $-1,176.66 today
+  Open (not sold yet): $-2,912.50 unrealized (virtual lots)
+                       $-2,909.03 unrealized (broker total)
+  Premium deployed:    $4,930.89 in open positions
+  Combined P&L:        $-3,116.42 (reflected realized + open virtual)
 
 Ledger (master)
-  Total events:     11385
+  Total events:     11388
   Today entries:    82
-  Today exits (reflected): 43
-  All-time exits (reflected): 2481  wins 36%
-  Avg return/trade: +10.5%  median -41.0%
+  Today exits (reflected): 44
+  All-time exits (reflected): 2482  wins 36%
+  Avg return/trade: +10.7%  median -40.7%
 
 Open virtual lots (by bucket)
-  b0 lab0000_s200_w1_0928_1005_r1  prem=$   807  real=$ +0.00  open=$ +0.00  lots=11  [ORPHAN:AAPLx1, ORPHAN:UBERx1, ORPHAN:PATHx2, ORPHAN:AAPLx4 +7 more]
+  b0 lab0000_s200_w1_0928_1005_r1  prem=$   739  real=$ +0.00  open=$ +0.00  lots=10  [ORPHAN:UBERx1, ORPHAN:PATHx2, ORPHAN:AAPLx4, ORPHAN:PATHx2 +6 more]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b16 lab0016_s202_w1_0928_1005_r1  prem=$     0  real=$-47.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -46146,11 +46145,11 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b24 lab0024_s203_w1_0928_1005_r1  prem=$     0  real=$-95.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b25 lab0025_s203_w1_0928_1005_r2  prem=$    14  real=$-18.00  open=$ -5.38  lots=1  [S203:MARAx1]
+  b25 lab0025_s203_w1_0928_1005_r2  prem=$    14  real=$-18.00  open=$ -4.31  lots=1  [S203:MARAx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b26 lab0026_s203_w2_1005_1045_r1  prem=$    25  real=$-110.00  open=$ -9.62  lots=1  [S203:MARAx1]
+  b26 lab0026_s203_w2_1005_1045_r1  prem=$    25  real=$-110.00  open=$ -7.69  lots=1  [S203:MARAx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b27 lab0027_s203_w2_1005_1045_r2  prem=$    25  real=$-325.00  open=$ -9.62  lots=1  [S203:MARAx1]
+  b27 lab0027_s203_w2_1005_1045_r2  prem=$    25  real=$-325.00  open=$ -7.69  lots=1  [S203:MARAx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b28 lab0028_s203_w3_1045_1120_r1  prem=$     0  real=$-26.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -46179,27 +46178,27 @@ Alpaca option positions
   AAPL260812C00317500  qty=9  cost=$199.80  return=-100.0%  open P&L=$-199.80
   AAPL260812C00320000  qty=1  cost=$11.00  return=-100.0%  open P&L=$-11.00
   AAPL260814C00317500  qty=17  cost=$1,039.22  return=-90.2%  open P&L=$-937.22
-  AAPL260817C00320000  qty=1  cost=$62.69  return=-87.2%  open P&L=$-54.69
+  AAPL260817C00320000  qty=1  cost=$62.69  return=-85.6%  open P&L=$-53.69
   ARM260814P00245000  qty=-1  cost=$29.00  return=-10.3%  open P&L=$-3.00
-  C260814C00139000  qty=2  cost=$128.00  return=+6.2%  open P&L=$+8.00
-  CELH260814C00028000  qty=5  cost=$128.75  return=+8.7%  open P&L=$+11.25
+  C260814C00139000  qty=2  cost=$128.00  return=+1.6%  open P&L=$+2.00
+  CELH260814C00028000  qty=5  cost=$128.75  return=-6.8%  open P&L=$-8.75
   CVNA260814C00074000  qty=2  cost=$68.00  return=+29.4%  open P&L=$+20.00
   CVNA260814C00075000  qty=2  cost=$50.00  return=+8.0%  open P&L=$+4.00
   CVNA260814C00076000  qty=2  cost=$92.00  return=-69.6%  open P&L=$-64.00
   LLY260814C01300000  qty=1  cost=$17.00  return=+23.5%  open P&L=$+4.00
-  MARA260814P00009500  qty=-1  cost=$13.00  return=-38.5%  open P&L=$-5.00
-  MCD260814C00280000  qty=1  cost=$42.00  return=+9.5%  open P&L=$+4.00
+  MARA260814P00009500  qty=-1  cost=$13.00  return=-30.8%  open P&L=$-4.00
+  MCD260814C00280000  qty=1  cost=$42.00  return=+11.9%  open P&L=$+5.00
   PATH260814C00014500  qty=2  cost=$134.00  return=+16.4%  open P&L=$+22.00
-  PATH260814C00015000  qty=4  cost=$160.00  return=+10.0%  open P&L=$+16.00
-  PATH260814C00015500  qty=4  cost=$68.00  return=+23.5%  open P&L=$+16.00
-  PATH260814C00016000  qty=12  cost=$98.00  return=-14.3%  open P&L=$-14.00
-  PATH260821C00015000  qty=4  cost=$284.00  return=+2.8%  open P&L=$+8.00
-  PATH260821C00015500  qty=7  cost=$308.00  return=+13.6%  open P&L=$+42.00
-  PATH260821C00016000  qty=2  cost=$64.00  return=+0.0%  open P&L=$+0.00
-  PATH260821C00016500  qty=1  cost=$21.00  return=-4.8%  open P&L=$-1.00
+  PATH260814C00015000  qty=4  cost=$160.00  return=+5.0%  open P&L=$+8.00
+  PATH260814C00015500  qty=4  cost=$68.00  return=+5.9%  open P&L=$+4.00
+  PATH260814C00016000  qty=12  cost=$98.00  return=-26.5%  open P&L=$-26.00
+  PATH260821C00015000  qty=4  cost=$284.00  return=+1.4%  open P&L=$+4.00
+  PATH260821C00015500  qty=7  cost=$308.00  return=+4.5%  open P&L=$+14.00
+  PATH260821C00016000  qty=2  cost=$64.00  return=-6.2%  open P&L=$-4.00
+  PATH260821C00016500  qty=1  cost=$21.00  return=-14.3%  open P&L=$-3.00
   PATH260828C00016500  qty=2  cost=$74.00  return=-8.1%  open P&L=$-6.00
   SNOW260814C00360000  qty=1  cost=$45.00  return=-77.8%  open P&L=$-35.00
-  TTD260828C00014000  qty=2  cost=$72.00  return=+22.2%  open P&L=$+16.00
+  TTD260828C00014000  qty=2  cost=$72.00  return=+19.4%  open P&L=$+14.00
   TTD260911C00014000  qty=1  cost=$49.00  return=+32.7%  open P&L=$+16.00
   UBER260814C00081000  qty=1  cost=$30.00  return=-96.7%  open P&L=$-29.00
   XOM260814C00162500  qty=1  cost=$42.00  return=-14.3%  open P&L=$-6.00
@@ -46207,7 +46206,7 @@ Alpaca option positions
 
 Per-bucket exit stats (all time)
   b0|c000_s173_w1_0928_1005_r1  n= 22  avg=+24.8%  med=+34.9%  realized=$+283.00
-  b0|orphan_reconcile     n=302  avg=-10.5%  med=-57.8%  realized=$+1,270.61
+  b0|orphan_reconcile     n=303  avg=-9.1%  med=-57.8%  realized=$+1,361.41
   b104|c104_s164_w1_0928_1005_r4  n=  1  avg=-88.9%  med=-88.9%  realized=$-8.00
   b108|c108_s202_w3_1045_1120_r1  n=  1  avg=-33.3%  med=-33.3%  realized=$-1.00
   b108|lab0108_s212_w1_0928_1005_r1  n=  8  avg=-76.2%  med=-62.0%  realized=$-407.00
@@ -46490,7 +46489,7 @@ Per-bucket exit stats (all time)
   b771|lab0771_s396_w2_1005_1045_r2  n=  1  avg=-82.2%  med=-82.2%  realized=$-60.00
   b776|lab0776_s397_w1_0928_1005_r1  n=  1  avg=+40.4%  med=+40.4%  realized=$+23.00
   b777|lab0777_s397_w1_0928_1005_r2  n=  2  avg=+77.0%  med=+115.4%  realized=$+52.00
-  b778|lab0778_s397_w2_1005_1045_r1  n=  4  avg=+59.5%  med=+57.5%  realized=$+166.00
+  b778|lab0778_s397_w2_1005_1045_r1  n=  4  avg=+85.3%  med=+73.0%  realized=$+195.00
   b779|lab0779_s397_w2_1005_1045_r2  n=  4  avg=+50.4%  med=+48.0%  realized=$+140.00
   b77|g077_lim_tp30_sl20  n=  1  avg=-23.3%  med=-23.3%  realized=$-18.63
   b77|lab0077_s209_w3_1045_1120_r2  n=  1  avg=-70.9%  med=-70.9%  realized=$-39.00
@@ -46633,22 +46632,22 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $131,286.02                                              |
-|Open Risk    : 123 lots (30 broker pos)                                 |
+|Equity       : $131,004.00                                              |
+|Open Risk    : 121 lots (30 broker pos)                                 |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
 |-- SYSTEM HEALTH --                                                     |
 |Zombies      : 0 (Ledger is clean)                                      |
-|Lab Status   : 123 Active Lots | 0 Pending Orders                       |
+|Lab Status   : 121 Active Lots | 0 Pending Orders                       |
 |Auto-Matrix  : (Pending EOD report generation)                          |
 +========================================================================+
 +========================================================================+
 |[DATA QUALITY: CLEAN vs ERRORS vs KEEP-ONLY]                            |
 +========================================================================+
-|  CLEAN              n=781   win= 42.1%  med= -47.1%  $+8,149           |
-|  TAINTED            n=1700  win= 33.1%  med= -39.0%  $-8,473           |
-|  KEEP-only          n=275   win= 64.7%  med= +37.7%  $+5,418           |
-|  KEEP recent        n=88    win= 61.4%  med= +51.2%  $+1,369           |
+|  CLEAN              n=781   win= 42.1%  med= -47.1%  $+8,178           |
+|  TAINTED            n=1701  win= 33.1%  med= -39.0%  $-8,382           |
+|  KEEP-only          n=275   win= 64.7%  med= +37.7%  $+5,447           |
+|  KEEP recent        n=88    win= 61.4%  med= +51.2%  $+1,398           |
 |  KEEP(10): S173,S174,S210,S218,S350,S397,S398,S403...                  |
 |  KILL(15): ORPHAN,S165,S203,S207,S211,S212,S217,S351...                |
 +========================================================================+
@@ -46672,14 +46671,14 @@ Per-bucket exit stats (all time)
 |  b112 lab0112_s212_w3_1045..   0%  -68.1%    11                        |
 +========================================================================+
 +========================================================================+
-|[PENDING EXITS (14)]                                                    |
+|[PENDING EXITS (13)]                                                    |
 +========================================================================+
 |  b844 S407 AAPL260812C00320000 x1 stop_loss (-90.9%)                   |
 |  b787 S398 AAPL260812C00315000 x1 stop_loss (-100.0%)                  |
 |  b830 S406 AAPL260812C00317500 x1 stop_loss (-100.0%)                  |
 |  b0   ORPHAN UBER260814C00081000 x1 stop_loss (-66.7%)                 |
 |  b0   ORPHAN CVNA260814C00076000 x2 stop_loss (-56.5%)                 |
-|  ... 9 more pending exit(s)                                            |
+|  ... 8 more pending exit(s)                                            |
 +========================================================================+
 +========================================================================+
 |[OPEN OPTIONS (30)]                                                     |
@@ -46691,11 +46690,11 @@ Per-bucket exit stats (all time)
 |  AAPL260812C00317500           9   -100.0%   $   -199.80               |
 |  AAPL260812C00312500           1   -100.0%   $    -65.83               |
 |  CVNA260814C00076000           2    -69.6%   $    -64.00               |
-|  AAPL260817C00320000           1    -87.2%   $    -54.69               |
-|  PATH260821C00015500           7    +13.6%   $    +42.00               |
+|  AAPL260817C00320000           1    -85.6%   $    -53.69               |
 |  SNOW260814C00360000           1    -77.8%   $    -35.00               |
+|  UBER260814C00081000           1    -96.7%   $    -29.00               |
 |  ... 22 more position(s)                                               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-08-12.log
-elapsed=6.5s reconcile=0.46s cancel=0.14s manage=3.8s
+elapsed=5.1s reconcile=0.41s cancel=0.09s manage=3.2s
 

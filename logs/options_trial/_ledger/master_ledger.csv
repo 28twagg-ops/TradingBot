@@ -11383,4 +11383,7 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-12 17:15:00.996717+00:00,exit,0,orphan_reconcile,ORPHAN,6c779d79cdac,CVNA,CVNA260814C00076000,1,,0.03,46.0,-93.48,-43.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,1d37d590-c800-4a68-9a4b-34c8617400df
 2026-08-12 17:56:46.284665+00:00,exit,31,lab0031_s203_w4_1120_1135_r2,S203,a3a09b309e7c,ARM,ARM260814P00245000,1,,0.23,55.0,-58.18,-32.0,stop_loss (-60.0%),,-0.01,0.5,-0.5,,,86db66dd-c925-408d-90fb-a5f181c93443
 2026-08-12T18:01:00Z,reconcile,30,lab0030_s203_w4_1120_1135_r1,S203,95c1a7e7ec51,ARM,ARM260814P00245000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-12 19:27:12.739626+00:00,exit,778,lab0778_s397_w2_1005_1045_r1,S397,99393b91b0c7,TTD,TTD260814C00012500,1,,1.14,73.0,56.16,41.0,take_profit (+68.5%),,-0.01,0.5,-0.5,,,90ea5834-8e0f-4715-9629-2aea9dc906dd
+2026-08-12T19:39:31Z,reconcile,778,lab0778_s397_w2_1005_1045_r1,S397,99393b91b0c7,TTD,TTD260814C00012500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12T19:39:31Z,reconcile,0,orphan_reconcile,ORPHAN,b41b9b407de5,TTD,TTD260814C00012500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12 19:34:51.401731+00:00,exit,0,orphan_reconcile,ORPHAN,d7264a8a0cc9,AAPL,AAPL260812C00317500,1,,1.13,22.2,409.01,90.8,reconcile_fill,,-0.01,0.5,-0.5,,,ab6551b3-e338-4835-a23d-c6e564c7aabb
+2026-08-12 19:27:12.739626+00:00,exit,778,lab0778_s397_w2_1005_1045_r1,S397,97eed6a3de3f,PATH,PATH260821C00015500,1,,1.14,44.0,159.09,70.0,take_profit (+68.5%),,-0.01,0.5,-0.5,,,90ea5834-8e0f-4715-9629-2aea9dc906dd

@@ -377,3 +377,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-12 16:29:32.706549+00:00,exit,0,orphan_reconcile,ORPHAN,6c779d79cdac,CVNA,CVNA260814C00076000,1,,0.21,46.0,-54.35,-25.0,stop_loss (-58.8%),,-0.01,0.5,-0.5,,,415695f5-0149-4ac1-8fd8-36d991d6cd0c
 2026-08-12T17:15:54Z,reconcile,0,orphan_reconcile,ORPHAN,4cfd82e820fd,PATH,PATH260814C00016500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-12 17:15:00.996717+00:00,exit,0,orphan_reconcile,ORPHAN,6c779d79cdac,CVNA,CVNA260814C00076000,1,,0.03,46.0,-93.48,-43.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,1d37d590-c800-4a68-9a4b-34c8617400df
+2026-08-12T19:39:31Z,reconcile,0,orphan_reconcile,ORPHAN,b41b9b407de5,TTD,TTD260814C00012500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12 19:34:51.401731+00:00,exit,0,orphan_reconcile,ORPHAN,d7264a8a0cc9,AAPL,AAPL260812C00317500,1,,1.13,22.2,409.01,90.8,reconcile_fill,,-0.01,0.5,-0.5,,,ab6551b3-e338-4835-a23d-c6e564c7aabb
