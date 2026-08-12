@@ -10,8 +10,9 @@ The same signal can fire in every active bucket (different limits, stops, sizing
 Each bucket uses a fixed $500 virtual equity (OPTIONS_VIRTUAL_BUCKET_USD).
 
 Tracking (the hard part):
-  - Every order tagged:  LB<bucket>|<strategy>|<YYYYMMDD>  (entry)
-                         LX<bucket>|<strategy>|<lot_id>     (exit)
+  - Every order tagged:  LB<bucket>|<strategy>|<YYYYMMDD>|<nonce>  (entry)
+                         LX<bucket>|<strategy>|<lot6>|<nonce>       (exit)
+                         LS<bucket>|<strategy>|<lot6>|<nonce>       (protective stop)
   - lab_state.json holds virtual lots with lot_id + bucket_id
   - reconcile_with_broker() syncs lots vs Alpaca positions each run
   - lab_ledger.csv is the long-term audit trail
@@ -655,15 +656,18 @@ def make_entry_client_order_id(bucket_id: int, strategy_id: str,
 
 
 def make_exit_client_order_id(bucket_id: int, strategy_id: str, lot_id: str) -> str:
+    # Include nonce: Alpaca rejects reused client_order_id across retries/runs.
     short = lot_id.replace("-", "")[:6]
-    return f"LX{bucket_id}|{strategy_id}|{short}"[:48]
+    nonce = uuid.uuid4().hex[:4]
+    return f"LX{bucket_id}|{strategy_id}|{short}|{nonce}"[:48]
 
 
 def make_protective_stop_client_order_id(bucket_id: int, strategy_id: str,
                                          lot_id: str) -> str:
     """Broker-resting stop that survives GitHub/bot downtime (LS… prefix)."""
     short = lot_id.replace("-", "")[:6]
-    return f"LS{bucket_id}|{strategy_id}|{short}"[:48]
+    nonce = uuid.uuid4().hex[:4]
+    return f"LS{bucket_id}|{strategy_id}|{short}|{nonce}"[:48]
 
 
 def is_protective_stop_client_order_id(cid: str | None) -> bool:

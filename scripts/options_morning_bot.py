@@ -552,12 +552,15 @@ def ensure_protective_stops(trade, state: LabState) -> int:
         stop_px = round(max(0.01, entry * (1.0 + sl)), 2)
         # Limit slightly below stop so a gap-down still has a chance to fill
         limit_px = round(max(0.01, stop_px * 0.92), 2)
-        cid = make_protective_stop_client_order_id(
-            primary.bucket_id, primary.strategy_id, primary.lot_id)
 
         order_id = None
         last_err = None
         for tif in (TimeInForce.GTC, TimeInForce.DAY):
+            # Fresh client_order_id every attempt — Alpaca rejects reused CIDs.
+            cid_limit = make_protective_stop_client_order_id(
+                primary.bucket_id, primary.strategy_id, primary.lot_id)
+            cid_mkt = make_protective_stop_client_order_id(
+                primary.bucket_id, primary.strategy_id, primary.lot_id)
             try:
                 o = trade.submit_order(StopLimitOrderRequest(
                     symbol=occ,
@@ -566,7 +569,7 @@ def ensure_protective_stops(trade, state: LabState) -> int:
                     time_in_force=tif,
                     stop_price=stop_px,
                     limit_price=limit_px,
-                    client_order_id=cid[:48],
+                    client_order_id=cid_limit[:48],
                 ))
                 order_id = str(o.id)
                 rl_file(
@@ -584,7 +587,7 @@ def ensure_protective_stops(trade, state: LabState) -> int:
                         side=OrderSide.SELL,
                         time_in_force=tif,
                         stop_price=stop_px,
-                        client_order_id=(cid[:46] + "M")[:48],
+                        client_order_id=cid_mkt[:48],
                     ))
                     order_id = str(o.id)
                     rl_file(
@@ -1052,21 +1055,45 @@ def pick_otm_put_1strike(opt, ref, symbol: str, price: float,
 #  Exits (per virtual lot / arm stop rules)
 # --------------------------------------------------------------------------- #
 
+def _is_duplicate_client_order_id_error(exc: Exception) -> bool:
+    msg = str(exc).lower()
+    return "client_order_id" in msg and ("unique" in msg or "duplicate" in msg)
+
+
 def _sell_limit(trade, sym: str, qty: int, limit: float, tag: str,
-                client_order_id: str | None = None):
-    try:
-        kwargs = dict(
-            symbol=sym, qty=qty, side=OrderSide.SELL,
-            time_in_force=TimeInForce.DAY, limit_price=round(max(0.01, limit), 2))
-        if client_order_id:
-            kwargs["client_order_id"] = client_order_id[:48]
-        o = trade.submit_order(LimitOrderRequest(**kwargs))
-        rl(f"  EXIT {tag} SELL {qty} {sym} @<= {limit:.2f}  id={o.id}", console=False)
-        log.info(f"  EXIT {tag} SELL {qty} {sym} @<= {limit:.2f}")
-        return str(o.id)
-    except Exception as exc:
-        rl(f"  EXIT {tag} SELL failed {sym}: {exc}")
-        return None
+                client_order_id: str | None = None,
+                bucket_id: int | None = None,
+                strategy_id: str | None = None,
+                lot_id: str | None = None):
+    """Submit a DAY limit sell; retry once with a fresh client_order_id on clash."""
+    attempts = 0
+    cid = client_order_id
+    while attempts < 2:
+        attempts += 1
+        try:
+            kwargs = dict(
+                symbol=sym, qty=qty, side=OrderSide.SELL,
+                time_in_force=TimeInForce.DAY, limit_price=round(max(0.01, limit), 2))
+            if cid:
+                kwargs["client_order_id"] = cid[:48]
+            o = trade.submit_order(LimitOrderRequest(**kwargs))
+            rl(f"  EXIT {tag} SELL {qty} {sym} @<= {limit:.2f}  id={o.id}", console=False)
+            log.info(f"  EXIT {tag} SELL {qty} {sym} @<= {limit:.2f}")
+            return str(o.id)
+        except Exception as exc:
+            if (
+                attempts < 2
+                and _is_duplicate_client_order_id_error(exc)
+                and bucket_id is not None
+                and strategy_id
+                and lot_id
+            ):
+                cid = make_exit_client_order_id(bucket_id, strategy_id, lot_id)
+                rl_file(f"  EXIT {tag} retry new client_order_id after clash: {exc}")
+                continue
+            rl(f"  EXIT {tag} SELL failed {sym}: {exc}")
+            return None
+    return None
 
 
 def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
@@ -1139,31 +1166,54 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
 
             exit_oid = None
             if use_market:
-                try:
-                    from alpaca.trading.requests import MarketOrderRequest
-                    o = trade.submit_order(MarketOrderRequest(
-                        symbol=occ, qty=sell_qty, side=OrderSide.SELL,
-                        time_in_force=TimeInForce.DAY,
-                        client_order_id=cid[:48]))
-                    exit_oid = str(o.id)
-                    exit_msg = (
-                        f"  EXIT {tag} MARKET SELL {sell_qty} {occ} "
-                        f"return={ret_pct:+.1f}%  id={o.id}"
-                    )
-                    rl_file(exit_msg)
-                    rl(f"  EXIT {tag} MARKET SELL {sell_qty} {occ} "
-                       f"return={ret_pct:+.1f}%")
-                except Exception as exc:
-                    # Fallback: limit at $0.01 when market is rejected (no quote).
-                    rl_file(f"  EXIT {tag} market failed {occ}: {exc}")
-                    exit_oid = _sell_limit(trade, occ, sell_qty, 0.01, tag, cid)
-                    if not exit_oid:
-                        rl(f"  EXIT {tag} market+limit failed {occ}: {exc}")
-                        continue
-                    rl(f"  EXIT {tag} LIMIT fallback SELL {sell_qty} {occ} @<= 0.01 "
-                       f"return={ret_pct:+.1f}%")
+                for attempt in range(2):
+                    try:
+                        from alpaca.trading.requests import MarketOrderRequest
+                        o = trade.submit_order(MarketOrderRequest(
+                            symbol=occ, qty=sell_qty, side=OrderSide.SELL,
+                            time_in_force=TimeInForce.DAY,
+                            client_order_id=cid[:48]))
+                        exit_oid = str(o.id)
+                        rl_file(
+                            f"  EXIT {tag} MARKET SELL {sell_qty} {occ} "
+                            f"return={ret_pct:+.1f}%  id={o.id}"
+                        )
+                        rl(f"  EXIT {tag} MARKET SELL {sell_qty} {occ} "
+                           f"return={ret_pct:+.1f}%")
+                        break
+                    except Exception as exc:
+                        if (
+                            attempt == 0
+                            and _is_duplicate_client_order_id_error(exc)
+                        ):
+                            cid = make_exit_client_order_id(
+                                lot.bucket_id, lot.strategy_id, lot.lot_id)
+                            rl_file(
+                                f"  EXIT {tag} market CID clash; retrying: {exc}"
+                            )
+                            continue
+                        # Fallback: limit at $0.01 when market is rejected (no quote).
+                        rl_file(f"  EXIT {tag} market failed {occ}: {exc}")
+                        exit_oid = _sell_limit(
+                            trade, occ, sell_qty, 0.01, tag, cid,
+                            bucket_id=lot.bucket_id,
+                            strategy_id=lot.strategy_id,
+                            lot_id=lot.lot_id)
+                        if exit_oid:
+                            rl(
+                                f"  EXIT {tag} LIMIT fallback SELL {sell_qty} {occ} "
+                                f"@<= 0.01 return={ret_pct:+.1f}%"
+                            )
+                        break
+                if not exit_oid:
+                    rl(f"  EXIT {tag} market+limit failed {occ}")
+                    continue
             else:
-                exit_oid = _sell_limit(trade, occ, sell_qty, sell_limit, tag, cid)
+                exit_oid = _sell_limit(
+                    trade, occ, sell_qty, sell_limit, tag, cid,
+                    bucket_id=lot.bucket_id,
+                    strategy_id=lot.strategy_id,
+                    lot_id=lot.lot_id)
                 if not exit_oid:
                     continue
 

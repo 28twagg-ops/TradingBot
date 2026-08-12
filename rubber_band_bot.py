@@ -135,10 +135,10 @@ UNIVERSE = "both"
 #     Even underperforming months generate enough profitable trades at
 #     full sizing to outweigh the savings from cutting size.
 # Schedule removal 2026-07-18: SEASONAL_SIZE_PCT no longer used.
-# All strategies use OFFSCHEDULE_SIZE_PCT = 0.20 regardless of month.
+# All strategies use OFFSCHEDULE_SIZE_PCT (tightened 2026-08-12) regardless of month.
 # SCHEDULE dict retained for reference and display only.
 SEASONAL_SIZE_PCT    = 0.20   # RETAINED (unused for sizing since 2026-07-18 schedule removal)
-OFFSCHEDULE_SIZE_PCT = 0.20   # all strategies equal weight (schedule removed 2026-07-18)
+OFFSCHEDULE_SIZE_PCT = 0.15   # tightened 2026-08-12 (was 0.20) while stops overrun
 CASH_RESERVE_PCT     = 0.05   # sim-validated at 5% (Test 18)
 MIN_TRADE_SIZE       = 0.01   # effectively no floor while keeping sizing math safe
 
@@ -160,9 +160,12 @@ EXIT_STOP_LOSS     = -0.005  # OOS-validated: -0.5% beats -2.0% (16/16 rolling w
 #               June primary month drag confirmed consistent underperf
 #   VolumeSpike: n=44, PF=0.41, avg=-0.56%, total=-$1.05, t***
 #               39/44 exits were stop_loss, avg hold 0.3d, WR 11%
+#   GoldenPocket: Jul29 LII -16.4% (~-$16) on ~$480 equity; keep off until
+#               stop-overshoot / gap risk is controlled.
 DISABLED_STRATEGIES = {
     "GapDown",
     "VolumeSpike",
+    "GoldenPocket",
 }
 
 # ---- Extended-hours selling --------------------------------------------------
@@ -178,9 +181,10 @@ USE_EXTENDED_HOURS_SELL = False
 WEEKLY_MAX_HOLDINGS_PRINT = 8
 
 # ---- Daily entry cap ---------------------------------------------------------
-# MAX_OPEN_POSITIONS caps concurrent holdings so ~$500 accounts get ~$90/slot
-# (whole-share broker GTC stops) instead of 30+ fractional fragments.
-MAX_OPEN_POSITIONS = 5
+# MAX_OPEN_POSITIONS caps concurrent holdings so ~$500 accounts get larger
+# whole-share slots (broker GTC stops) instead of many fractional fragments.
+# Reduced 5 -> 3 (2026-08-12) to cut variance / stop-overshoot cluster risk.
+MAX_OPEN_POSITIONS = 3
 # Max entries per scan also bounded by floor(avail / MIN_TRADE_SIZE).
 
 # ---- Earnings filter ---------------------------------------------------------
@@ -880,7 +884,7 @@ def get_signals(ticker, df, month, rgm):
         "VolumeSpike": lambda: _vs(ticker, df),  # disabled
         "Pullback50": lambda: _pb(ticker, df),
         "MA_Squeeze": lambda: _maq(ticker, df),
-        "GoldenPocket": lambda: _gp(ticker, df),
+        "GoldenPocket": lambda: _gp(ticker, df),  # disabled
         "VWAP_Reclaim": lambda: _vr(ticker, df),
         "TrendResumption": lambda: _tr(ticker, df),
         "EarningsDrift": lambda: _ed(ticker, df),
