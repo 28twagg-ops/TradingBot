@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-12
 
-_Generated 2026-08-12T10:09:16.313230_
+_Generated 2026-08-12T10:12:41.275602_
 
 ## Summary
 
@@ -110,7 +110,7 @@ _Generated 2026-08-12T10:09:16.313230_
 | S353 (GapDown_3DTE) | 3d | drop | 20 | 40.0 | -34.69 | -85.57 | -76.88 | +124.42 | 12 | 20 | 0 | $-46.00 | 45.0% | non-positive median return |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 29 | 24.1 | -38.10 | -96.36 | -51.47 | +88.20 | 16 | 20 | 7 | $-198.00 | 51.7% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 245 | 29.8 | -38.18 | -63.39 | -54.55 | +81.82 | 37 | 0 | 0 | $-1,828.78 | 26.1% | non-positive median return |
-| S405 (GapDown_OTM3) | 3d | drop | 51 | 35.3 | -41.46 | -82.86 | -61.41 | +100.00 | 12 | 20 | 8 | $-48.00 | 29.4% | non-positive median return |
+| S405 (GapDown_OTM3) | 3d | drop | 51 | 35.3 | -41.46 | -82.86 | -61.41 | +100.00 | 12 | 21 | 8 | $-48.00 | 29.4% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 39 | 46.2 | -42.31 | -92.11 | -69.32 | +100.00 | 12 | 17 | 10 | $-186.00 | 30.8% | non-positive median return |
 | S355 (GapDown_7DTE) | 7d | drop | 44 | 43.2 | -44.94 | -79.66 | -63.41 | +137.05 | 12 | 20 | 10 | $+167.00 | 25.0% | non-positive median return |
 | S399 (GapDown_OTM1) | 3d | drop | 41 | 43.9 | -46.67 | -85.48 | -66.67 | +140.00 | 12 | 20 | 1 | $-49.00 | 39.0% | non-positive median return |

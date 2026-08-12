@@ -11162,3 +11162,6 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-12 14:08:13.513307+00:00,entry,768,lab0768_s396_w1_0928_1005_r1,S396,332d82cb30bc,PATH,PATH260821C00015000,1,0.72,0.71,71.0,,,,-0.01,,0.75,-0.75,0.16296296296296292,gap -2.6%,18e1ef3f-d21d-420c-a718-1668118e3829
 2026-08-12 14:07:53.933848+00:00,exit,846,lab0846_s407_w3_1045_1120_r1,S407,ebdb59e0829c,AAPL,AAPL260814C00317500,1,,0.1,58.0,-82.76,-48.0,stop_loss (-85.3%),,-0.01,0.5,-0.5,,,9ad6bc5d-c5cb-49a4-97f3-1faa6f0a038a
 2026-08-12 14:05:49.514224+00:00,exit,312,lab0312_s355_w1_0928_1005_r1,S355,5d6d37f7fcbd,AAPL,AAPL260817C00320000,1,,0.11,66.0,-83.33,-55.0,stop_loss (-82.5%),,-0.01,0.5,-0.5,,,3b755ab0-a42e-4db6-b06d-c212b27dbe0b
+2026-08-12T14:10:49Z,reconcile,903,lab0903_s411_w3_1045_1120_r2,S411,117e7e00bcd6,CVNA,CVNA260814C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12T14:10:49Z,reconcile,902,lab0902_s411_w3_1045_1120_r1,S411,e9c47af33d4c,CVNA,CVNA260814C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-12 14:12:16.328920+00:00,entry,816,lab0816_s405_w2_1005_1045_r1,S405,ba10923c34de,PATH,PATH260821C00016500,1,0.22,0.21,21.0,,,,-0.01,,0.75,-0.75,0.2439024390243903,gap -2.6%,c5d2c5d8-54a1-4088-ab94-72bde65136de
