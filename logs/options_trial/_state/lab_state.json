@@ -773,6 +773,16 @@
       "qty": 1,
       "reason": "stop_loss (-100.0%)",
       "submitted": "2026-08-12T16:01:34"
+    },
+    {
+      "order_id": "f69f6fe7-45be-4afc-a4b1-b1fcc2f23e7b",
+      "lot_id": "6c246a7c25f6",
+      "bucket_id": 264,
+      "strategy_id": "S403",
+      "occ_symbol": "DKNG260821C00027000",
+      "qty": 1,
+      "reason": "stop_loss (-51.6%)",
+      "submitted": "2026-08-13T12:10:57"
     }
   ],
   "bucket_open_premium": {
