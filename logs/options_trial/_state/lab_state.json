@@ -242,46 +242,6 @@
       "entry_order_id": "64a74f02-f931-49d3-8118-10f652f00013"
     },
     {
-      "lot_id": "a0dc9750c8d3",
-      "bucket_id": 109,
-      "profile_name": "lab0109_s212_w1_0928_1005_r2",
-      "strategy_id": "S212",
-      "occ_symbol": "NFLX260814C00079000",
-      "underlying": "NFLX",
-      "qty": 1,
-      "entry_cost": 17.0,
-      "entry_price": 0.17,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-13T14:02:47.176338+00:00",
-      "entry_order_id": "59d37bdd-435d-4f3c-9647-bc343795dee4"
-    },
-    {
-      "lot_id": "687f7b74956f",
-      "bucket_id": 108,
-      "profile_name": "lab0108_s212_w1_0928_1005_r1",
-      "strategy_id": "S212",
-      "occ_symbol": "NFLX260814C00079000",
-      "underlying": "NFLX",
-      "qty": 1,
-      "entry_cost": 17.0,
-      "entry_price": 0.17,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-13T14:02:47.203064+00:00",
-      "entry_order_id": "ab8c65d4-4420-4eb4-a99e-3a892873e98f"
-    },
-    {
       "lot_id": "a36e55628cd8",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -1002,35 +962,15 @@
       "entry_order_id": "d5d28aeb-04ed-44f1-80de-e13395877484"
     },
     {
-      "lot_id": "321308de00f6",
-      "bucket_id": 97,
-      "profile_name": "lab0097_s211_w2_1005_1045_r2",
-      "strategy_id": "S211",
-      "occ_symbol": "DIS260814C00106000",
-      "underlying": "DIS",
-      "qty": 1,
-      "entry_cost": 11.0,
-      "entry_price": 0.11,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-13T15:02:55.163613+00:00",
-      "entry_order_id": "a9a1ed62-0f0c-4f73-8885-541686484c4b"
-    },
-    {
-      "lot_id": "067750c6129f",
+      "lot_id": "34cc09ed3eb1",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
       "strategy_id": "ORPHAN",
-      "occ_symbol": "DIS260814C00106000",
+      "occ_symbol": "DIS260814C00107000",
       "underlying": "DIS",
-      "qty": 1,
-      "entry_cost": 11.0,
-      "entry_price": 0.11,
+      "qty": 2,
+      "entry_cost": 6.0,
+      "entry_price": 0.03,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
@@ -1038,8 +978,8 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-13T15:02:55.363324+00:00",
-      "entry_order_id": "orphan:DIS260814C00106000"
+      "entry_date": "2026-08-13T15:12:45.908323+00:00",
+      "entry_order_id": "orphan:DIS260814C00107000"
     }
   ],
   "pending_orders": [],
@@ -1053,40 +993,10 @@
       "qty": 1,
       "reason": "stop_loss (-100.0%)",
       "submitted": "2026-08-12T16:01:34"
-    },
-    {
-      "order_id": "472b463a-be52-4b4d-8b79-597fa99efed0",
-      "lot_id": "d8b878508ca3",
-      "bucket_id": 94,
-      "strategy_id": "S211",
-      "occ_symbol": "DIS260814C00105000",
-      "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-08-13T11:09:48"
-    },
-    {
-      "order_id": "1b58e6a8-455a-4b41-9051-6cf8316fcb6e",
-      "lot_id": "e80fc83a43e3",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "PATH260814C00015500",
-      "qty": 4,
-      "reason": "stop_loss (-52.9%)",
-      "submitted": "2026-08-13T11:09:49"
-    },
-    {
-      "order_id": "3443dc05-a0d5-4f9c-9aea-c86dbd941229",
-      "lot_id": "321308de00f6",
-      "bucket_id": 97,
-      "strategy_id": "S211",
-      "occ_symbol": "DIS260814C00106000",
-      "qty": 1,
-      "reason": "stop_loss (-54.5%)",
-      "submitted": "2026-08-13T11:09:52"
     }
   ],
   "bucket_open_premium": {
-    "b0": 1170.0,
+    "b0": 1165.0,
     "b94": 42.0,
     "b419": 50.0,
     "b418": 50.0,
@@ -1094,8 +1004,6 @@
     "b390": 34.0,
     "b193": 25.0,
     "b192": 25.0,
-    "b109": 17.0,
-    "b108": 17.0,
     "b265": 31.0,
     "b264": 31.0,
     "b263": 31.0,
@@ -1125,8 +1033,7 @@
     "b167": 4.0,
     "b166": 4.0,
     "b901": 67.0,
-    "b900": 67.0,
-    "b97": 11.0
+    "b900": 67.0
   },
   "session_date": "2026-08-13",
   "entries_locked": [
@@ -1189,7 +1096,9 @@
     "238|S401|2026-08-13",
     "239|S401|2026-08-13",
     "266|S403|2026-08-13",
-    "267|S403|2026-08-13"
+    "267|S403|2026-08-13",
+    "98|S211|2026-08-13",
+    "99|S211|2026-08-13"
   ],
   "processed_orders": [
     "c22df2ae-8337-437b-b19d-c7abcd371b76",
@@ -1646,9 +1555,15 @@
     "2add466d-4381-4f42-ad4c-84de4e23cac6",
     "a9a1ed62-0f0c-4f73-8885-541686484c4b",
     "e107b7b1-3ce0-4b99-90e7-95c0b28a4453",
-    "341a82ff-bacf-4e90-bed6-70969de358f2"
+    "341a82ff-bacf-4e90-bed6-70969de358f2",
+    "3443dc05-a0d5-4f9c-9aea-c86dbd941229",
+    "b9c43a72-fd4f-40f9-86fa-27704e4517b9",
+    "bfd2a796-5aa7-4f86-9801-93bc921a0ce1",
+    "b76e2a6b-b835-44a5-9c5c-b72b44dd9018",
+    "4ff7c907-5d91-4dcf-ac4c-182a0781de4b",
+    "4cbca058-8ea6-4ec6-86d1-c7e80dc1e9f3"
   ],
-  "submitted_today": 60,
+  "submitted_today": 62,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-08-13"
 }
