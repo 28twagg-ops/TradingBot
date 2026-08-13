@@ -45640,35 +45640,85 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-08-13.log
 elapsed=4.0s reconcile=0.4s cancel=0.08s manage=2.27s
 
-=== 16:04:48 ET — manage-only (past entry window) [elapsed=5.9s reconcile=0.56s cancel=0.15s manage=2.86s] ===
-=== options_morning_bot (PAPER) 2026-08-13T16:04:48.573326-04:00 ===
+=== 16:06:12 ET — after hours (exit summary) [elapsed=1.7s reconcile=0.92s] ===
+=== options_morning_bot (PAPER) 2026-08-13T16:06:12.696431-04:00 ===
 
 [Run context]
-Paper auth OK — equity $132296.93, account PA36KS87UPRS
+After hours (16:06 ET) — exit summary only.
+Paper auth OK — equity $132095.01, account PA36KS87UPRS
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1
   reconcile: cleared 2 resolved pending exit(s)
 
-[Setup]
-Active buckets: 1024 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419
-  EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-100.0%) SELL failed XOM260814C00170000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  EXIT [b0|orphan_reconcile|ORPHAN] take_profit (+58.5%) market failed DIS260814C00104000: {"code":42210000,"message":"options market orders are only allowed during market hours"}
-  EXIT [b0|orphan_reconcile|ORPHAN] take_profit (+58.5%) SELL failed DIS260814C00104000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  EXIT [b0|orphan_reconcile|ORPHAN] take_profit (+58.5%) market+limit failed DIS260814C00104000
-  EXIT [b82|lab0082_s210_w2_1005_1045_r1|S210] stop_loss (-51.6%) market failed DKNG260821C00027000: {"code":42210000,"message":"options market orders are only allowed during market hours"}
-  EXIT [b82|lab0082_s210_w2_1005_1045_r1|S210] stop_loss (-51.6%) SELL 1 DKNG260821C00027000 @<= 0.01  id=40baf7fd-c2aa-4edd-88b3-bfbb7c286883
-  EXIT [b82|lab0082_s210_w2_1005_1045_r1|S210] stop_loss (-51.6%) LIMIT fallback SELL 1 DKNG260821C00027000 @<= 0.01 return=-51.6%
-  PROT STOP failed DIS260814C00104000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  PROT STOP failed XOM260814C00170000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-Protective stops: placed=0 already=7 failed=2
+[Exit summary]
+========================================================
+OPTIONS EXIT SUMMARY — 2026-08-13
+========================================================
+Account equity: $132,095.01
+Open broker positions: 13  unrealized $-228.50
 
-[Manage only]
-Past entry window; manage/exit only.
+Today's closed trades
+  Count:     41
+  Win rate:  15/41 (37%)
+  Return:    avg +124.7%  med -48.4%  best +3933.3%  worst -98.5%
+  Realized:  $+32.11
+
+By strategy
+  ORPHAN  n= 23  win=39%  avg=+159.1%
+  S210    n=  2  win=0%  avg=-50.8%
+  S211    n=  4  win=50%  avg=+429.6%
+  S212    n=  2  win=50%  avg=+3.8%
+  S218    n=  1  win=100%  avg=+76.0%
+  S358    n=  1  win=100%  avg=+53.1%
+  S401    n=  1  win=100%  avg=+50.0%
+  S403    n=  6  win=0%  avg=-49.9%
+  S410    n=  1  win=0%  avg=-48.4%
+
+By symbol
+  PATH    n=  9  avg=-8.0%
+  DKNG    n=  8  avg=-50.3%
+  DIS     n=  7  avg=+807.8%
+  CELH    n=  4  avg=-16.5%
+  AAPL    n=  2  avg=-85.3%
+  XOM     n=  2  avg=+58.3%
+  LLY     n=  2  avg=-70.6%
+  TTD     n=  2  avg=+54.3%
+  NFLX    n=  1  avg=+58.8%
+  CVX     n=  1  avg=+50.0%
+  AXP     n=  1  avg=-50.0%
+  MARA    n=  1  avg=-48.4%
+  NKE     n=  1  avg=+76.0%
+
+By exit type
+  take_profit   13
+  stop_loss     22
+  reconcile_fill  6
+
+Top buckets today (realized $)
+  b0|orphan_reconcile           $+94.11
+  b98|lab0098_s211_w3_1045_1120_r1  $+52.00
+  b100|lab0100_s211_w4_1120_1135_r1  $+39.00
+  b342|lab0342_s358_w4_1120_1135_r1  $+26.00
+  b111|lab0111_s212_w2_1005_1045_r2  $+20.00
+  (14 more bucket profiles with exits)
+
+Recent exits (last 8)
+  18:35:52  b 0 orphan_reconcile    DIS   ORPHAN   +57.1%    $+24.00  take_profit (+50.0%)
+  18:44:21  b 0 orphan_reconcile    PATH  ORPHAN  +105.6%   $+150.00  take_profit (+79.1%)
+  18:45:58  b 0 orphan_reconcile    PATH  ORPHAN   +64.8%    $+92.00  take_profit (+64.8%)
+  18:51:35  b 0 orphan_reconcile    DIS   ORPHAN  +3933.3%   $+236.00  take_profit (+59.2%)
+  18:56:58  b193 lab0193_s218_w1_09  NKE   S218    +76.0%    $+19.00  take_profit (+68.0%)
+  19:10:35  b262 lab0262_s403_w1_09  DKNG  S403    -45.2%    $-14.00  stop_loss (-51.6%)
+  19:39:26  b100 lab0100_s211_w4_11  DIS   S211    +73.6%    $+39.00  take_profit (+73.6%)
+  19:43:43  b83 lab0083_s210_w2_10  DKNG  S210    -51.6%    $-16.00  stop_loss (-54.8%)
+
+Note: $+94.11 realized in orphan_reconcile (virtual/broker tracking drift — not a bucket profile).
+========================================================
 
 [Portfolio snapshot]
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $132,296.93
+Account equity: $132,095.01
 Active buckets: 1024 of 1024 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
@@ -46172,76 +46222,11 @@ Per-bucket exit stats (all time)
   b99|lab0099_s211_w3_1045_1120_r2  n=  7  avg=+103.9%  med=+107.7%  realized=$+179.00
   b9|c009_s165_w2_1005_1045_r1  n=  7  avg=-74.4%  med=-66.2%  realized=$-301.00
 ========================================================
-
-[Exit summary]
-========================================================
-OPTIONS EXIT SUMMARY — 2026-08-13
-========================================================
-Account equity: $132,296.93
-Open broker positions: 13  unrealized $-228.50
-
-Today's closed trades
-  Count:     41
-  Win rate:  15/41 (37%)
-  Return:    avg +124.7%  med -48.4%  best +3933.3%  worst -98.5%
-  Realized:  $+32.11
-
-By strategy
-  ORPHAN  n= 23  win=39%  avg=+159.1%
-  S210    n=  2  win=0%  avg=-50.8%
-  S211    n=  4  win=50%  avg=+429.6%
-  S212    n=  2  win=50%  avg=+3.8%
-  S218    n=  1  win=100%  avg=+76.0%
-  S358    n=  1  win=100%  avg=+53.1%
-  S401    n=  1  win=100%  avg=+50.0%
-  S403    n=  6  win=0%  avg=-49.9%
-  S410    n=  1  win=0%  avg=-48.4%
-
-By symbol
-  PATH    n=  9  avg=-8.0%
-  DKNG    n=  8  avg=-50.3%
-  DIS     n=  7  avg=+807.8%
-  CELH    n=  4  avg=-16.5%
-  AAPL    n=  2  avg=-85.3%
-  XOM     n=  2  avg=+58.3%
-  LLY     n=  2  avg=-70.6%
-  TTD     n=  2  avg=+54.3%
-  NFLX    n=  1  avg=+58.8%
-  CVX     n=  1  avg=+50.0%
-  AXP     n=  1  avg=-50.0%
-  MARA    n=  1  avg=-48.4%
-  NKE     n=  1  avg=+76.0%
-
-By exit type
-  take_profit   13
-  stop_loss     22
-  reconcile_fill  6
-
-Top buckets today (realized $)
-  b0|orphan_reconcile           $+94.11
-  b98|lab0098_s211_w3_1045_1120_r1  $+52.00
-  b100|lab0100_s211_w4_1120_1135_r1  $+39.00
-  b342|lab0342_s358_w4_1120_1135_r1  $+26.00
-  b111|lab0111_s212_w2_1005_1045_r2  $+20.00
-  (14 more bucket profiles with exits)
-
-Recent exits (last 8)
-  18:35:52  b 0 orphan_reconcile    DIS   ORPHAN   +57.1%    $+24.00  take_profit (+50.0%)
-  18:44:21  b 0 orphan_reconcile    PATH  ORPHAN  +105.6%   $+150.00  take_profit (+79.1%)
-  18:45:58  b 0 orphan_reconcile    PATH  ORPHAN   +64.8%    $+92.00  take_profit (+64.8%)
-  18:51:35  b 0 orphan_reconcile    DIS   ORPHAN  +3933.3%   $+236.00  take_profit (+59.2%)
-  18:56:58  b193 lab0193_s218_w1_09  NKE   S218    +76.0%    $+19.00  take_profit (+68.0%)
-  19:10:35  b262 lab0262_s403_w1_09  DKNG  S403    -45.2%    $-14.00  stop_loss (-51.6%)
-  19:39:26  b100 lab0100_s211_w4_11  DIS   S211    +73.6%    $+39.00  take_profit (+73.6%)
-  19:43:43  b83 lab0083_s210_w2_10  DKNG  S210    -51.6%    $-16.00  stop_loss (-54.8%)
-
-Note: $+94.11 realized in orphan_reconcile (virtual/broker tracking drift — not a bucket profile).
-========================================================
 +========================================================================+
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
-|-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $132,296.93                                              |
+|-- ACCOUNT STATUS (after_hours) --                                      |
+|Equity       : $132,095.01                                              |
 |Open Risk    : 18 lots (13 broker pos)                                  |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -46280,11 +46265,6 @@ Note: $+94.11 realized in orphan_reconcile (virtual/broker tracking drift — no
 |  b112 lab0112_s212_w3_1045..   0%  -68.1%    11                        |
 +========================================================================+
 +========================================================================+
-|[PENDING EXITS (1)]                                                     |
-+========================================================================+
-|  b82  S210 DKNG260821C00027000 x1 stop_loss (-51.6%)                   |
-+========================================================================+
-+========================================================================+
 |[OPEN OPTIONS (13)]                                                     |
 +========================================================================+
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
@@ -46300,5 +46280,5 @@ Note: $+94.11 realized in orphan_reconcile (virtual/broker tracking drift — no
 |  ... 5 more position(s)                                                |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-08-13.log
-elapsed=5.9s reconcile=0.56s cancel=0.15s manage=2.86s
+elapsed=1.7s reconcile=0.92s
 
