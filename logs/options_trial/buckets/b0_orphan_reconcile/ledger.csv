@@ -433,3 +433,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-13 15:21:02.040722+00:00,exit,0,orphan_reconcile,ORPHAN,55847465121c,PATH,PATH260821C00016500,1,,0.05,21.0,-76.19,-16.0,stop_loss (-76.2%),,-0.01,0.5,-0.5,,,d8c898da-8e41-468a-a1be-82e63edc1dbe
 2026-08-13 15:21:00.381048+00:00,exit,0,orphan_reconcile,ORPHAN,9290a2eb6691,PATH,PATH260814C00015000,4,,0.18,160.0,-55.0,-88.0,stop_loss (-55.0%),,-0.01,0.5,-0.5,,,8ccfc778-a20b-4f95-b7bf-b4c558b2a492
 2026-08-13 15:26:30.961196+00:00,exit,0,orphan_reconcile,ORPHAN,de4d441c0162,PATH,PATH260821C00016000,2,,0.17,64.0,-46.88,-30.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,3ff8efb5-a463-4613-a7c3-b26cd0103ef7
+2026-08-13T15:50:53Z,reconcile,0,orphan_reconcile,ORPHAN,6368ac1f7893,MARA,MARA260814C00010000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
