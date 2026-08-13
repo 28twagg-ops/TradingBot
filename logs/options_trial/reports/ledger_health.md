@@ -1,6 +1,6 @@
 # Ledger health — 2026-08-13
 
-_Generated 2026-08-13T14:46:07.526796_
+_Generated 2026-08-13T14:51:11.261651_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -29,8 +29,8 @@ _Orphaned ledger detail omitted (678 rows) — see note above on historical lot_
 
 ## State/ledger mismatches
 
-- `01168fbc0684`
 - `016c361d91ee`
+- `1f349a5a74ff`
 - `34cc09ed3eb1`
 - `977a90eaedf7`
 - `d85edad31cbf`
