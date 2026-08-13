@@ -11728,3 +11728,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-13 15:47:17.588450+00:00,exit,94,lab0094_s211_w1_0928_1005_r1,S211,d8b878508ca3,DIS,DIS260814C00105000,1,,0.24,42.0,-42.86,-18.0,reconcile_fill,,-0.01,0.5,-0.5,,,472b463a-be52-4b4d-8b79-597fa99efed0
 2026-08-13T16:16:05Z,reconcile,110,lab0110_s212_w2_1005_1045_r1,S212,5f02784db0d2,NFLX,NFLX260814C00078000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-13 16:21:26.053658+00:00,exit,887,lab0887_s410_w2_1005_1045_r2,S410,206fa1a98fc4,MARA,MARA260814C00009000,1,,0.33,64.0,-48.44,-31.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,e55258e2-6e35-41d1-bc42-63644461cbbc
+2026-08-13T16:40:51Z,reconcile,886,lab0886_s410_w2_1005_1045_r1,S410,ea8ea3cba74b,MARA,MARA260814C00009000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
