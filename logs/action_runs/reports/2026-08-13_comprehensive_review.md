@@ -6961,3 +6961,112 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260813T150941Z
+
+- UTC timestamp: `20260813T150941Z`
+- GitHub run: [#6976](https://github.com/28twagg-ops/TradingBot/actions/runs/31713486397)
+- Run id: `31713486397`
+- Live bot: exit=`0`, duration=`2s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 797 | 42.2 | -47.1 | +11.5 | $+7,999 |
+| TAINTED | 1722 | 33.0 | -38.8 | +10.6 | $-8,929 |
+| KEEP-only | 302 | 63.6 | +37.7 | +42.1 | $+5,747 |
+| KEEP-only recent | 114 | 59.6 | +50.0 | +51.9 | $+1,721 |
+
+- KEEP strategies (11): S173, S174, S210, S218, S350, S397, S398, S401, S403, S404, S406
+- KILL strategies (15): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-13T11:00:59.770339-04:00","date":"2026-08-13","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":117.7,"phases_s":{"reconcile":0.91,"cancel":0.08,"manage":26.76,"protective_stops":1.95,"scan":77.16,"entries":7.47,"reconcile2":0.65},"signals":44,"placed":0,"equity":134131.27,"open_positions":25,"pending_orders":0,"open_lots":52,"submitted_today":60,"filled_today":62,"unattributed_contracts":0,"top_signals":["S210:DKNG","S210:AXP","S210:KMB","S210:GIS","S211:TWLO","S211:DIS","S212:NFLX","S212:DKNG"],"github_run":"6975","github_run_id":"31713033902","status":"ok","data_quality":{"clean":{"n":797,"win":42.16,"med":-47.14,"avg":11.51,"pnl":7998.53},"tainted":{"n":1722,"win":33.04,"med":-38.81,"avg":10.56,"pnl":-8929.34},"keep_only":{"n":302,"win":63.58,"med":37.69,"avg":42.14,"pnl":5747.45},"keep_only_recent":{"n":114,"win":59.65,"med":50.0,"avg":51.94,"pnl":1721.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S403","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+15:09:42  INFO      Mode: exits
+15:09:42  INFO        Daily log -> logs/daily/2026-08-13.md
+15:09:42  INFO        Daily log reconciled -> logs/daily/2026-08-13.md (0 ledger rows)
+15:09:42  INFO        place_all_stops: checking 3 positions...
+15:09:42  INFO        STOP skipped ACGL: fractional (0.7073 shares) — software exit will handle it
+15:09:43  INFO        STOP already live AES @ $14.65
+15:09:43  INFO        STOP skipped AFL: fractional (0.7729 shares) — software exit will handle it
+15:09:43  INFO        [positions] 3/3 (3 valid)
+15:09:43  INFO        Daily log -> logs/daily/2026-08-13.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:09 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $465.92|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  ACGL  P&L -0.0%  $-0.03                                           HOLD|
+|  AES  P&L +0.0%  $+0.03                                            HOLD|
+|  AFL  P&L +0.4%  $+0.34                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=52 paper_keys=yes dry_run=False
+  alpaca positions=27
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-08-13T11:09:45.831959-04:00 ===
+
+[Run context]
+Paper auth OK — equity $133752.12, account PA36KS87UPRS
+
+[Setup]
+Active buckets: 1024 | Strategies: S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419
+2026-08-13 11:09:48,469 INFO   EXIT [b94|lab0094_s211_w1_0928_1005_r1|S211] stop_loss (-50.0%) SELL 1 DIS260814C00105000 @<= 0.22
+2026-08-13 11:09:49,318 INFO   EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-52.9%) SELL 4 PATH260814C00015500 @<= 0.09
+2026-08-13 11:09:52,648 INFO   EXIT [b97|lab0097_s211_w2_1005_1045_r2|S211] stop_loss (-54.5%) SELL 1 DIS260814C00106000 @<= 0.06
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S203, S204, S205, S206, S207, S208, S209, S210, S211, S212, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S360, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S405, S406, S407, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 114/117 symbols
+```
+
+---
