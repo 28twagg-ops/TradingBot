@@ -2100,3 +2100,61 @@ Fetched daily bars for 114/117 symbols
 ### Options bot full output
 
 ```text
+
+## Run 20260813T134654Z
+
+- UTC timestamp: `20260813T134654Z`
+- GitHub run: [#6960](https://github.com/28twagg-ops/TradingBot/actions/runs/31706514298)
+- Run id: `31706514298`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 782 | 42.2 | -47.1 | +12.1 | $+8,202 |
+| TAINTED | 1701 | 33.1 | -39.0 | +10.2 | $-8,382 |
+| KEEP-only | 275 | 64.7 | +37.7 | +42.1 | $+5,447 |
+| KEEP-only recent | 88 | 61.4 | +51.2 | +54.0 | $+1,398 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S403, S404, S406
+- KILL strategies (15): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-13T09:25:52.698758-04:00","date":"2026-08-13","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.6,"phases_s":{"reconcile":0.12},"signals":0,"placed":0,"equity":131207.66,"open_positions":26,"pending_orders":0,"open_lots":24,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"6956","github_run_id":"31704800085","status":"ok","data_quality":{"clean":{"n":782,"win":42.2,"med":-47.14,"avg":12.07,"pnl":8202.42},"tainted":{"n":1701,"win":33.1,"med":-39.02,"avg":10.24,"pnl":-8382.34},"keep_only":{"n":275,"win":64.73,"med":37.69,"avg":42.15,"pnl":5447.45},"keep_only_recent":{"n":88,"win":61.36,"med":51.22,"avg":53.96,"pnl":1398.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S403","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+13:46:55  INFO      Mode: morning_scan
+13:46:56  INFO        [positions] 3/3 (3 valid)
+13:46:56  INFO        Universe cache hit: 903 tickers (tickers_2026-08-13.json)
+13:46:57  INFO        [universe] 40/900 (40 valid)
+13:46:58  INFO        [universe] 80/900 (80 valid)
+13:47:00  INFO        [universe] 120/900 (120 valid)
+13:47:01  INFO        [universe] 160/900 (160 valid)
+13:47:03  INFO        [universe] 200/900 (199 valid)
+13:47:10  INFO        [universe] 240/900 (238 valid)
+13:47:24  INFO        [universe] 280/900 (278 valid)
+13:47:34  INFO        [universe] 320/900 (318 valid)
+13:47:47  INFO        [universe] 360/900 (358 valid)
+13:47:58  INFO        [universe] 400/900 (397 valid)
+13:48:11  INFO        [universe] 440/900 (437 valid)
+13:48:21  INFO        [universe] 480/900 (477 valid)
+13:48:34  INFO        [universe] 520/900 (517 valid)
+13:48:47  INFO        [universe] 560/900 (557 valid)
+13:48:58  INFO        [universe] 600/900 (597 valid)
+13:49:11  INFO        [universe] 640/900 (637 valid)
+13:49:21  INFO        [universe] 680/900 (677 valid)
+13:49:34  INFO        [universe] 720/900 (717 valid)
+13:49:47  INFO        [universe] 760/900 (757 valid)
+13:49:58  INFO        [universe] 800/900 (797 valid)
+13:50:11  INFO        [universe] 840/900 (836 valid)
+```
+
+### Options bot full output
+
+```text
