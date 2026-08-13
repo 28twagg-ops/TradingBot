@@ -1,0 +1,44 @@
+2026-08-13 13:09:22,563  WARNING   could not list positions: {"code":50410000,"message":"request timed out"}
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=31 paper_keys=yes dry_run=False
+  alpaca positions=0
+  FLAG b0|ORPHAN|8a83de94 missing from Alpaca
+  FLAG b0|ORPHAN|9095bc32 missing from Alpaca
+  FLAG b419|S365|eac2479e missing from Alpaca
+  FLAG b418|S365|46f439ef missing from Alpaca
+  FLAG b193|S218|ed0c0108 missing from Alpaca
+  FLAG b192|S218|14191605 missing from Alpaca
+  FLAG b264|S403|6c246a7c missing from Alpaca
+  FLAG b263|S403|ba374707 missing from Alpaca
+  FLAG b262|S403|1776b262 missing from Alpaca
+  FLAG b83|S210|d93af879 missing from Alpaca
+  FLAG b82|S210|820d02b3 missing from Alpaca
+  FLAG b81|S210|89f5929a missing from Alpaca
+  FLAG b80|S210|0541fdcd missing from Alpaca
+  FLAG b433|S366|ee74ae12 missing from Alpaca
+  FLAG b432|S366|25078c04 missing from Alpaca
+  FLAG b449|S367|7eae09da missing from Alpaca
+  FLAG b448|S367|61b1450d missing from Alpaca
+  FLAG b435|S366|b7b58e7b missing from Alpaca
+  FLAG b434|S366|d629c93f missing from Alpaca
+  FLAG b0|ORPHAN|01168fbc missing from Alpaca
+  FLAG b0|ORPHAN|cf24d548 missing from Alpaca
+  FLAG b267|S403|f8156b9e missing from Alpaca
+  FLAG b266|S403|5be9772a missing from Alpaca
+  FLAG b113|S212|c2cea551 missing from Alpaca
+  FLAG b112|S212|6390f4bc missing from Alpaca
+  FLAG b85|S210|626a0200 missing from Alpaca
+  FLAG b84|S210|3558c7d5 missing from Alpaca
+  FLAG b0|ORPHAN|34cc09ed missing from Alpaca
+  FLAG b100|S211|b512110f missing from Alpaca
+  FLAG b0|ORPHAN|016c361d missing from Alpaca
+  FLAG b0|ORPHAN|977a90ea missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-08-13T13:09:24.507875-04:00 ===
+
+[Run context]

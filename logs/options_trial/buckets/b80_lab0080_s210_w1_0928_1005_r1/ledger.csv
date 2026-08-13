@@ -25,3 +25,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-12 13:59:58.264174+00:00,entry,80,lab0080_s210_w1_0928_1005_r1,S210,af83fe346a31,LLY,LLY260814C01300000,1,0.2,0.17,17.0,,,,-0.01,,0.5,-0.5,0.15384615384615383,MA8 1179.07 crossed above MA21,2662c213-0ff5-450c-8918-97f069cbf3e2
 2026-08-12T21:09:11Z,reconcile,80,lab0080_s210_w1_0928_1005_r1,S210,af83fe346a31,LLY,LLY260814C01300000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-13 14:07:04.523471+00:00,entry,80,lab0080_s210_w1_0928_1005_r1,S210,0541fdcd21df,DKNG,DKNG260821C00027000,1,0.32,0.31,31.0,,,,-0.01,,0.75,-0.75,0.19999999999999996,MA8 24.05 crossed above MA21,4a1cc1ba-7900-4c55-bd49-7bf0e204888e
+2026-08-13T17:09:22Z,reconcile,80,lab0080_s210_w1_0928_1005_r1,S210,0541fdcd21df,DKNG,DKNG260821C00027000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

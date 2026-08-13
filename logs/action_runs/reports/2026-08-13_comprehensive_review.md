@@ -14104,3 +14104,134 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260813T170629Z
+
+- UTC timestamp: `20260813T170629Z`
+- GitHub run: [#7000](https://github.com/28twagg-ops/TradingBot/actions/runs/31723924830)
+- Run id: `31723924830`
+- Live bot: exit=`0`, duration=`3s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 804 | 41.8 | -47.5 | +10.9 | $+7,781 |
+| TAINTED | 1728 | 33.1 | -38.8 | +11.7 | $-8,922 |
+| KEEP-only | 304 | 63.2 | +37.6 | +41.5 | $+5,700 |
+| KEEP-only recent | 116 | 58.6 | +50.0 | +50.2 | $+1,674 |
+
+- KEEP strategies (11): S173, S174, S210, S218, S350, S397, S398, S401, S403, S404, S406
+- KILL strategies (15): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-13T12:55:59.801460-04:00","date":"2026-08-13","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":174.7,"phases_s":{"reconcile":0.46,"cancel":0.12,"manage":3.25,"protective_stops":0.94},"signals":0,"placed":0,"equity":132293.12,"open_positions":0,"pending_orders":0,"open_lots":31,"submitted_today":68,"filled_today":68,"unattributed_contracts":0,"top_signals":[],"github_run":"6998","github_run_id":"31723084167","status":"ok","data_quality":{"clean":{"n":804,"win":41.79,"med":-47.48,"avg":10.94,"pnl":7780.53},"tainted":{"n":1728,"win":33.1,"med":-38.81,"avg":11.71,"pnl":-8922.34},"keep_only":{"n":304,"win":63.16,"med":37.59,"avg":41.53,"pnl":5700.45},"keep_only_recent":{"n":116,"win":58.62,"med":50.0,"avg":50.17,"pnl":1674.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S403","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+17:06:30  INFO      Mode: exits
+17:06:31  INFO        Daily log -> logs/daily/2026-08-13.md
+17:06:31  INFO        Daily log reconciled -> logs/daily/2026-08-13.md (0 ledger rows)
+17:06:31  INFO        place_all_stops: checking 3 positions...
+17:06:31  INFO        STOP skipped ACGL: fractional (0.7073 shares) — software exit will handle it
+17:06:31  INFO        STOP already live AES @ $14.65
+17:06:31  INFO        STOP skipped AFL: fractional (0.7729 shares) — software exit will handle it
+17:06:32  INFO        [positions] 3/3 (3 valid)
+17:06:32  INFO        Daily log -> logs/daily/2026-08-13.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         17:06 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $466.19|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  AES  P&L +0.0%  $+0.00                                            HOLD|
+|  ACGL  P&L +0.0%  $+0.02                                           HOLD|
+|  AFL  P&L +0.6%  $+0.59                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+2026-08-13 13:09:22,563  WARNING   could not list positions: {"code":50410000,"message":"request timed out"}
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=31 paper_keys=yes dry_run=False
+  alpaca positions=0
+  FLAG b0|ORPHAN|8a83de94 missing from Alpaca
+  FLAG b0|ORPHAN|9095bc32 missing from Alpaca
+  FLAG b419|S365|eac2479e missing from Alpaca
+  FLAG b418|S365|46f439ef missing from Alpaca
+  FLAG b193|S218|ed0c0108 missing from Alpaca
+  FLAG b192|S218|14191605 missing from Alpaca
+  FLAG b264|S403|6c246a7c missing from Alpaca
+  FLAG b263|S403|ba374707 missing from Alpaca
+  FLAG b262|S403|1776b262 missing from Alpaca
+  FLAG b83|S210|d93af879 missing from Alpaca
+  FLAG b82|S210|820d02b3 missing from Alpaca
+  FLAG b81|S210|89f5929a missing from Alpaca
+  FLAG b80|S210|0541fdcd missing from Alpaca
+  FLAG b433|S366|ee74ae12 missing from Alpaca
+  FLAG b432|S366|25078c04 missing from Alpaca
+  FLAG b449|S367|7eae09da missing from Alpaca
+  FLAG b448|S367|61b1450d missing from Alpaca
+  FLAG b435|S366|b7b58e7b missing from Alpaca
+  FLAG b434|S366|d629c93f missing from Alpaca
+  FLAG b0|ORPHAN|01168fbc missing from Alpaca
+  FLAG b0|ORPHAN|cf24d548 missing from Alpaca
+  FLAG b267|S403|f8156b9e missing from Alpaca
+  FLAG b266|S403|5be9772a missing from Alpaca
+  FLAG b113|S212|c2cea551 missing from Alpaca
+  FLAG b112|S212|6390f4bc missing from Alpaca
+  FLAG b85|S210|626a0200 missing from Alpaca
+  FLAG b84|S210|3558c7d5 missing from Alpaca
+  FLAG b0|ORPHAN|34cc09ed missing from Alpaca
+  FLAG b100|S211|b512110f missing from Alpaca
+  FLAG b0|ORPHAN|016c361d missing from Alpaca
+  FLAG b0|ORPHAN|977a90ea missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-08-13T13:09:24.507875-04:00 ===
+
+[Run context]
+```
+
+---
