@@ -978,6 +978,16 @@
       "qty": 1,
       "reason": "stop_loss (-100.0%)",
       "submitted": "2026-08-12T16:01:34"
+    },
+    {
+      "order_id": "af5ace8d-6c48-4c55-b88d-9ce18d9b87ac",
+      "lot_id": "409f35e51c03",
+      "bucket_id": 236,
+      "strategy_id": "S401",
+      "occ_symbol": "CVX260814C00200000",
+      "qty": 1,
+      "reason": "take_profit (+57.1%)",
+      "submitted": "2026-08-13T10:36:07"
     }
   ],
   "bucket_open_premium": {
