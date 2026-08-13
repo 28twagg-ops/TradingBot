@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,18,9,2026-07-27,True,17,22.2,-39.04,-62.8,87.5,-98.51,-419.89,"AAPL,CELH,DIS,LLY,PATH,TTD,XOM",ORPHAN,stop_loss (-96.7%); stop_loss (-63.0%); reconcile_fill…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,18,8,2026-07-27,True,17,22.2,-39.04,-62.8,87.5,-98.51,-419.89,"AAPL,CELH,DIS,LLY,PATH,TTD,XOM",ORPHAN,stop_loss (-96.7%); stop_loss (-63.0%); reconcile_fill…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -389,8 +389,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 387,lab0387_s362_w6_1400_1430_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 388,lab0388_s362_w7_1500_1530_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 389,lab0389_s362_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
-390,lab0390_s363_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-13,False,,,,,,,0,MARA,S363,,entered_no_exit
-391,lab0391_s363_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-13,False,,,,,,,0,MARA,S363,,entered_no_exit
+390,lab0390_s363_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-13,False,,,,,,,0,MARA,S363,,entered_no_exit
+391,lab0391_s363_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-13,False,,,,,,,0,MARA,S363,,entered_no_exit
 392,lab0392_s363_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-10,False,,,,,,,0,,,,idle
 393,lab0393_s363_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-10,False,,,,,,,0,,,,idle
 394,lab0394_s363_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-10,False,,,,,,,0,,,,idle
