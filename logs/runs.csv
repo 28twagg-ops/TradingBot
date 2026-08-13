@@ -5066,3 +5066,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-13 19:21:00,exits,bull,466.66,209.57,0,0,0,3,ACGL|AES|AFL,both
 2026-08-13 19:25:56,exits,bull,466.64,209.57,0,0,0,3,ACGL|AES|AFL,both
 2026-08-13 19:49:32,scan_evening,bull,466.72,209.57,33,0,0,3,ACGL|AES|AFL,both
+2026-08-13 19:54:31,scan_evening,bull,466.93,209.57,34,0,0,3,ACGL|AES|AFL,both
