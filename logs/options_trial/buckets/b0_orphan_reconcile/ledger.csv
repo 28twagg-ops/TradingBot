@@ -399,12 +399,12 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-13T13:34:29Z,reconcile,0,orphan_reconcile,ORPHAN,5db59d4ad10f,UBER,UBER260814C00081000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-13 13:30:04.101936+00:00,exit,0,orphan_reconcile,ORPHAN,d9953782f360,AAPL,AAPL260814C00317500,1,,0.01,61.13,-98.36,-60.13,stop_loss (-96.7%),,-0.01,0.5,-0.5,,,57f310f2-01f8-45fb-b769-099d2af05515
 2026-08-13 13:30:04.106192+00:00,exit,0,orphan_reconcile,ORPHAN,d9953782f360,AAPL,AAPL260814C00317500,2,,0.17,122.26,-72.19,-88.26,stop_loss (-63.0%),,-0.01,0.5,-0.5,,,566724fc-8671-4728-b27f-59ac8728ed4c
-2026-08-13T13:55:00Z,reconcile,0,orphan_reconcile,ORPHAN,d9953782f360,AAPL,AAPL260814C00317500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-13T13:55:00Z,reconcile,0,orphan_reconcile,ORPHAN,4798ec8c5dee,C,C260814C00139000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-13T13:55:01Z,reconcile,0,orphan_reconcile,ORPHAN,312dbb345131,CVNA,CVNA260814C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-13T13:55:01Z,reconcile,0,orphan_reconcile,ORPHAN,36b3780de9ce,MCD,MCD260814C00280000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-13T13:55:01Z,reconcile,0,orphan_reconcile,ORPHAN,2bf8b0ff780b,PATH,PATH260828C00016500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-13T13:55:01Z,reconcile,0,orphan_reconcile,ORPHAN,bf641e7d4ac0,SNOW,SNOW260814C00360000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T13:59:48Z,reconcile,0,orphan_reconcile,ORPHAN,d9953782f360,AAPL,AAPL260814C00317500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T13:59:48Z,reconcile,0,orphan_reconcile,ORPHAN,4798ec8c5dee,C,C260814C00139000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T13:59:48Z,reconcile,0,orphan_reconcile,ORPHAN,312dbb345131,CVNA,CVNA260814C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T13:59:48Z,reconcile,0,orphan_reconcile,ORPHAN,36b3780de9ce,MCD,MCD260814C00280000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T13:59:48Z,reconcile,0,orphan_reconcile,ORPHAN,2bf8b0ff780b,PATH,PATH260828C00016500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T13:59:48Z,reconcile,0,orphan_reconcile,ORPHAN,bf641e7d4ac0,SNOW,SNOW260814C00360000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-13 13:40:45.101240+00:00,exit,0,orphan_reconcile,ORPHAN,4387ab24b863,CELH,CELH260814C00028000,2,,0.36,51.5,39.81,20.5,reconcile_fill,,-0.01,0.5,-0.5,,,40ac2996-155a-4ad4-92bb-75511dc0c451
 2026-08-13 13:40:11.019282+00:00,exit,0,orphan_reconcile,ORPHAN,4387ab24b863,CELH,CELH260814C00028000,2,,0.04,51.5,-84.47,-43.5,reconcile_fill,,-0.01,0.5,-0.5,,,74db05b0-aca2-49ac-9f64-8fac3fd666fc
 2026-08-13 13:34:37.798477+00:00,exit,0,orphan_reconcile,ORPHAN,4387ab24b863,CELH,CELH260814C00028000,1,,0.04,25.75,-84.47,-21.75,stop_loss (-93.5%),,-0.01,0.5,-0.5,,,7c2bd9de-68a7-42ae-81eb-3a40f542c3ff

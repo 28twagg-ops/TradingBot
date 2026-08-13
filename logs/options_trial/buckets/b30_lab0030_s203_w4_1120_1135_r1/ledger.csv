@@ -13,4 +13,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-12T14:30:59Z,reconcile,30,lab0030_s203_w4_1120_1135_r1,S203,2e8fa2157116,MARA,MARA260814P00009000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-12 15:29:23.961856+00:00,entry,30,lab0030_s203_w4_1120_1135_r1,S203,95c1a7e7ec51,ARM,ARM260814P00245000,1,0.56,0.55,55.0,,,,-0.01,,0.75,-0.75,0.2135922330097086,gap +4.1% red close,29f5c246-bd73-4984-8975-fb1b518d8acc
 2026-08-12T18:01:00Z,reconcile,30,lab0030_s203_w4_1120_1135_r1,S203,95c1a7e7ec51,ARM,ARM260814P00245000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-11 15:21:57.915701+00:00,entry,30,lab0030_s203_w4_1120_1135_r1,S203,3f5be333949d,MARA,MARA260814P00009000,1,0.09,0.09,9.0,,,,-0.01,,0.5,-0.5,,,a00b6b09-4dfb-42a6-b78b-2cd12c1a4bbb
+2026-08-11 15:21:57.915701+00:00,entry,30,lab0030_s203_w4_1120_1135_r1,S203,1c1e37b76d6f,MARA,MARA260814P00009000,1,0.09,0.09,9.0,,,,-0.01,,0.5,-0.5,,,a00b6b09-4dfb-42a6-b78b-2cd12c1a4bbb

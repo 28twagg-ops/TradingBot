@@ -182,7 +182,7 @@
       "entry_order_id": "orphan:XOM260814C00170000"
     },
     {
-      "lot_id": "d8b878508ca3",
+      "lot_id": "656bb444574f",
       "bucket_id": 94,
       "profile_name": "lab0094_s211_w1_0928_1005_r1",
       "strategy_id": "S211",
@@ -198,11 +198,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-13T13:55:02.520882+00:00",
+      "entry_date": "2026-08-13T13:59:49.832129+00:00",
       "entry_order_id": "3cd2e430-77d2-4831-a035-e62925fa37fb"
     },
     {
-      "lot_id": "f25b27c6ced3",
+      "lot_id": "27f1b4f80eb3",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
       "strategy_id": "ORPHAN",
@@ -218,11 +218,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-13T13:55:04.323408+00:00",
+      "entry_date": "2026-08-13T13:59:52.117848+00:00",
       "entry_order_id": "orphan:CELH260814C00028000"
     },
     {
-      "lot_id": "8a83de94d864",
+      "lot_id": "ba8845709602",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
       "strategy_id": "ORPHAN",
@@ -238,11 +238,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-13T13:55:04.323479+00:00",
+      "entry_date": "2026-08-13T13:59:52.117962+00:00",
       "entry_order_id": "orphan:DIS260814C00105000"
     },
     {
-      "lot_id": "395ff943d622",
+      "lot_id": "adcc2c2b52b3",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
       "strategy_id": "ORPHAN",
@@ -258,11 +258,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-13T13:55:04.323538+00:00",
+      "entry_date": "2026-08-13T13:59:52.118056+00:00",
       "entry_order_id": "orphan:LLY260814C01300000"
     },
     {
-      "lot_id": "9095bc323183",
+      "lot_id": "a4e2648e3172",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
       "strategy_id": "ORPHAN",
@@ -278,11 +278,11 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-13T13:55:04.323593+00:00",
+      "entry_date": "2026-08-13T13:59:52.118146+00:00",
       "entry_order_id": "orphan:PATH260814C00014500"
     },
     {
-      "lot_id": "9290a2eb6691",
+      "lot_id": "2e458ab7c4d4",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
       "strategy_id": "ORPHAN",
@@ -298,7 +298,7 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-13T13:55:04.323660+00:00",
+      "entry_date": "2026-08-13T13:59:52.118255+00:00",
       "entry_order_id": "orphan:PATH260814C00015000"
     }
   ],
