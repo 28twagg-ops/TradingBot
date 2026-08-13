@@ -11512,3 +11512,9 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-13T13:00:57Z,reconcile,0,orphan_reconcile,ORPHAN,8c94dd36ec8c,AAPL,AAPL260812C00315000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-13T13:00:57Z,reconcile,0,orphan_reconcile,ORPHAN,e480c540b6a2,AAPL,AAPL260812C00317500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-13T13:00:57Z,reconcile,0,orphan_reconcile,ORPHAN,2f2b17aaee89,AAPL,AAPL260812C00320000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T13:34:29Z,reconcile,0,orphan_reconcile,ORPHAN,cd5fda708821,AAPL,AAPL260817C00320000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T13:34:29Z,reconcile,0,orphan_reconcile,ORPHAN,f10eefde8e5b,CVNA,CVNA260814C00074000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T13:34:29Z,reconcile,0,orphan_reconcile,ORPHAN,ce546f7d0974,CVNA,CVNA260814C00076000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T13:34:29Z,reconcile,0,orphan_reconcile,ORPHAN,5db59d4ad10f,UBER,UBER260814C00081000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13 13:30:04.101936+00:00,exit,0,orphan_reconcile,ORPHAN,d9953782f360,AAPL,AAPL260814C00317500,1,,0.01,61.13,-98.36,-60.13,stop_loss (-96.7%),,-0.01,0.5,-0.5,,,57f310f2-01f8-45fb-b769-099d2af05515
+2026-08-13 13:30:04.106192+00:00,exit,0,orphan_reconcile,ORPHAN,d9953782f360,AAPL,AAPL260814C00317500,2,,0.17,122.26,-72.19,-88.26,stop_loss (-63.0%),,-0.01,0.5,-0.5,,,566724fc-8671-4728-b27f-59ac8728ed4c
