@@ -2,7 +2,7 @@ strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,win
 S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),126,60,39,21,195.14,65.16,-63.62,-50.0,969.21,3080.0,8,13,24,10,9,21.7
 S397,GapDown_ITM1,3d,watch,building sample (8-19 exits),88,19,16,3,55.55,57.53,-64.53,42.0,123.43,629.0,4,13,31,7,5,36.8
 S357,GapDown_21DTE,21d,watch,building sample (8-19 exits),40,18,14,4,32.91,55.07,-67.86,47.06,73.68,323.0,7,13,0,2,3,44.4
-S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),71,26,17,9,71.7,50.88,-78.91,-52.31,316.0,481.0,5,13,19,2,7,34.6
+S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),71,27,17,10,67.25,50.88,-78.62,-52.08,316.0,466.0,5,13,19,3,7,33.3
 S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),88,27,20,7,35.8,50.77,-94.27,-30.05,130.88,571.0,3,13,32,10,5,33.3
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),132,59,34,25,58.78,36.36,-71.9,-48.75,166.67,957.0,8,17,10,7,7,42.4
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),95,35,24,11,86.51,25.45,-67.0,-42.02,111.91,1036.0,5,13,24,2,5,37.1
