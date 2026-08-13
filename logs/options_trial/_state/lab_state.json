@@ -382,26 +382,6 @@
       "entry_order_id": "orphan:PATH260821C00015500"
     },
     {
-      "lot_id": "f8156b9e4636",
-      "bucket_id": 267,
-      "profile_name": "lab0267_s403_w3_1045_1120_r2",
-      "strategy_id": "S403",
-      "occ_symbol": "DKNG260821C00026500",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 41.0,
-      "entry_price": 0.41,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-13T14:47:08.143236+00:00",
-      "entry_order_id": "b8bbbc86-6595-449a-ab1d-8aa504282b45"
-    },
-    {
       "lot_id": "5be9772a0341",
       "bucket_id": 266,
       "profile_name": "lab0266_s403_w3_1045_1120_r1",
@@ -605,14 +585,14 @@
       "submitted": "2026-08-13T14:01:02"
     },
     {
-      "order_id": "99aec0d7-181d-4427-893a-34435d437d7f",
-      "lot_id": "f8156b9e4636",
-      "bucket_id": 267,
+      "order_id": "2f360e19-0a02-46ad-a962-84a3fe42785b",
+      "lot_id": "5be9772a0341",
+      "bucket_id": 266,
       "strategy_id": "S403",
       "occ_symbol": "DKNG260821C00026500",
       "qty": 1,
       "reason": "stop_loss (-51.2%)",
-      "submitted": "2026-08-13T14:20:52"
+      "submitted": "2026-08-13T14:25:56"
     }
   ],
   "bucket_open_premium": {
@@ -632,7 +612,6 @@
     "b448": 56.00000000000001,
     "b435": 45.0,
     "b434": 45.0,
-    "b267": 41.0,
     "b266": 41.0,
     "b113": 41.0,
     "b112": 41.0,
@@ -1187,7 +1166,8 @@
     "e55258e2-6e35-41d1-bc42-63644461cbbc",
     "1b58e6a8-455a-4b41-9051-6cf8316fcb6e",
     "f69f6fe7-45be-4afc-a4b1-b1fcc2f23e7b",
-    "36342856-28be-4239-90c1-eceb302a4036"
+    "36342856-28be-4239-90c1-eceb302a4036",
+    "99aec0d7-181d-4427-893a-34435d437d7f"
   ],
   "submitted_today": 68,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
