@@ -11663,3 +11663,10 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10 15:30:16.933054+00:00,entry,114,lab0114_s212_w4_1120_1135_r1,S212,92f785486347,C,C260814C00139000,1,0.68,0.68,68.0,,,,-0.01,,0.5,-0.5,,,edbb66ef-fd99-4486-bac7-9c6543046de7
 2026-08-10 15:26:11.294147+00:00,entry,101,lab0101_s211_w4_1120_1135_r2,S211,5a63699eb1e1,PFE,PFE260814C00027000,1,0.3,0.3,30.0,,,,-0.01,,0.5,-0.5,,,bbf48cec-4cb5-45d8-9231-e9e63f7235d5
 2026-08-10 15:26:11.297410+00:00,entry,100,lab0100_s211_w4_1120_1135_r1,S211,5202651d23da,PFE,PFE260814C00027000,1,0.3,0.3,30.0,,,,-0.01,,0.5,-0.5,,,f56096fd-4e2d-4fd6-8778-2c822d7b8f1e
+2026-08-13T14:16:33Z,reconcile,913,lab0913_s412_w1_0928_1005_r2,S412,62213f0351bc,MARA,MARA260814C00010500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T14:16:33Z,reconcile,912,lab0912_s412_w1_0928_1005_r1,S412,506a4522e9e8,MARA,MARA260814C00010500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T14:16:33Z,reconcile,165,lab0165_s216_w1_0928_1005_r2,S216,64d6d912877e,MARA,MARA260814C00010500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T14:16:33Z,reconcile,164,lab0164_s216_w1_0928_1005_r1,S216,91b7a9214c30,MARA,MARA260814C00010500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T14:16:33Z,reconcile,0,orphan_reconcile,ORPHAN,e25931d08dc7,MARA,MARA260814C00010500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13 14:17:46.478483+00:00,entry,237,lab0237_s401_w2_1005_1045_r2,S401,75297a5bc647,CVX,CVX260814C00200000,1,0.15,0.14,14.0,,,,-0.01,,0.5,-0.5,0.2068965517241379,gap -0.81% green,c38b7036-77e7-4b58-83ea-5975ecdc2c73
+2026-08-13 14:17:46.341760+00:00,entry,236,lab0236_s401_w2_1005_1045_r1,S401,409f35e51c03,CVX,CVX260814C00200000,1,0.15,0.14,14.0,,,,-0.01,,0.5,-0.5,0.2068965517241379,gap -0.81% green,a3041663-68e0-4939-9b09-9fee021c7e41
