@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-13
 
-_Generated 2026-08-13T14:31:05.433960_
+_Generated 2026-08-13T14:35:55.290930_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-08-13T14:31:05.433960_
 
 ## Attribution health
 
-- Total exits: **2536**
+- Total exits: **2537**
 - Orphan exits (b0/orphan_reconcile): **332**
 - Orphan rate: **13.1%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -123,7 +123,7 @@ _Generated 2026-08-13T14:31:05.433960_
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 38 | 10.5 | -55.91 | -78.86 | -66.10 | +8.89 | 17 | 21 | 3 | $-786.00 | 36.8% | non-positive median return |
 | S360 (RubberBand_1DTE) | 1d | drop | 49 | 10.2 | -56.41 | -81.50 | -70.37 | -6.89 | 13 | 34 | 11 | $-913.00 | 22.4% | non-positive median return |
 | S354 (GapDown_5DTE) | 5d | drop | 44 | 31.8 | -58.10 | -92.16 | -76.47 | +138.38 | 13 | 21 | 11 | $-13.00 | 29.5% | non-positive median return |
-| S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 80 | 13.8 | -69.05 | -98.18 | -81.11 | +52.21 | 17 | 37 | 11 | $-2,178.00 | 36.2% | non-positive median return |
+| S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 81 | 13.6 | -68.09 | -98.18 | -80.88 | +51.47 | 17 | 37 | 12 | $-2,199.00 | 35.8% | non-positive median return |
 | S363 (RubberBand_5DTE) | 5d | drop | 30 | 36.7 | -73.91 | -92.82 | -89.90 | +61.07 | 10 | 23 | 9 | $-735.00 | 36.7% | non-positive median return |
 
 ## Comparison groups
@@ -195,7 +195,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 |---|---|---:|---:|---:|---:|---:|---:|
 | S210 | 3d ATM MA cross 8/21 | 64 | +6.98 | -83.48 | -50.17 | 38 | 5 |
 | S211 | 3d ATM MA cross 21/50 | 39 | -31.58 | -84.13 | -50.09 | 38 | 17 |
-| S212 | 3d ATM MA bounce 50 | 80 | -69.05 | -98.18 | -81.11 | 37 | 11 |
+| S212 | 3d ATM MA bounce 50 | 81 | -68.09 | -98.18 | -80.88 | 37 | 12 |
 | S213 | 3d ATM MA bounce 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S215 | 3d ATM MA reclaim 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
@@ -249,7 +249,7 @@ _Pipeline evaluation as of 2026-08-13. Auto-kill thresholds: median<-25% at n>=1
 | S209 | GapDown_Recovery | 6 | -61.46% | 0% | WATCH | 15 |
 | S210 | MA_Cross_8_21 | 64 | +6.98% | 52% | INSUFFICIENT | 17 |
 | S211 | MA_Cross_21_50 | 39 | -31.58% | 28% | INSUFFICIENT | 17 |
-| S212 | MA_Bounce_50 | 80 | -69.05% | 14% | INSUFFICIENT | 17 |
+| S212 | MA_Bounce_50 | 81 | -68.09% | 14% | INSUFFICIENT | 17 |
 | S213 | MA_Bounce_200 | 0 | — | — | NEW | 0 |
 | S214 | MA_Death_Cross | 0 | — | — | NEW | 0 |
 | S215 | MA_Reclaim_200 | 0 | — | — | NEW | 0 |
