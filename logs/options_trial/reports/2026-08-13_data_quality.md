@@ -7,12 +7,12 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 
 | Slice | n | Win% | Med% | Avg% | Realized $ |
 |---|---:|---:|---:|---:|---:|
-| ALL | 2543 | 35.9 | -41.2 | +13.0 | $-729 |
-| CLEAN (perfect running) | 815 | 41.8 | -47.5 | +15.6 | $+8,194 |
+| ALL | 2545 | 35.9 | -41.2 | +13.0 | $-706 |
+| CLEAN (perfect running) | 817 | 41.9 | -47.5 | +15.6 | $+8,217 |
 | TAINTED (errors/outages) | 1728 | 33.1 | -38.8 | +11.7 | $-8,922 |
-| CLEAN since 2026-08-03 | 499 | 31.3 | -51.6 | +2.6 | $-4,106 |
-| KEEP-only (CLEAN keepers) | 291 | 63.9 | +37.7 | +43.8 | $+5,731 |
-| KEEP-only since 2026-08-03 | 103 | 60.2 | +50.0 | +57.7 | $+1,705 |
+| CLEAN since 2026-08-03 | 501 | 31.3 | -51.6 | +2.6 | $-4,083 |
+| KEEP-only (CLEAN keepers) | 292 | 63.7 | +37.6 | +43.5 | $+5,715 |
+| KEEP-only since 2026-08-03 | 104 | 59.6 | +50.0 | +56.6 | $+1,689 |
 
 ## Known outage / degraded days
 
@@ -42,7 +42,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | 2026-08-10 | BUGGY | 128 | 72 | 22 | -51.2 |
 | 2026-08-11 | BUGGY | 92 | 37 | 25 | -53.0 |
 | 2026-08-12 | BUGGY | 45 | 1 | 16 | -70.8 |
-| 2026-08-13 | BUGGY | 39 | 6 | 36 | -48.4 |
+| 2026-08-13 | BUGGY | 41 | 6 | 37 | -48.4 |
 
 ## CLEAN strategy kill list (n>=10, med<=-20%)
 
@@ -62,7 +62,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | S364 | 14 | 42.9 | -50.7 | -14.7 | $-188 |
 | S403 | 19 | 36.8 | -48.4 | -15.3 | $-99 |
 | S408 | 16 | 31.2 | -45.6 | +32.3 | $+45 |
-| S211 | 11 | 36.4 | -45.5 | -12.3 | $-70 |
+| S211 | 12 | 41.7 | -45.3 | -5.2 | $-31 |
 | S165 | 61 | 37.7 | -24.2 | +20.4 | $+507 |
 
 ## CLEAN strategy keep list (n>=10, med>=0, win>=50%)
@@ -74,8 +74,8 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | S350 | 12 | 58.3 | +64.9 | +30.4 | $+85 |
 | S406 | 16 | 56.2 | +58.3 | +123.1 | $+521 |
 | S173 | 105 | 61.9 | +51.6 | +43.1 | $+2,562 |
-| S210 | 18 | 61.1 | +50.9 | +23.1 | $+19 |
 | S218 | 18 | 55.6 | +48.9 | +67.8 | $+339 |
+| S210 | 19 | 57.9 | +48.3 | +19.2 | $+3 |
 | S174 | 54 | 68.5 | +30.1 | +5.5 | $+325 |
 | S401 | 27 | 51.9 | +23.7 | +42.0 | $+300 |
 | S398 | 16 | 50.0 | +3.8 | +46.9 | $+359 |

@@ -82,7 +82,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 80,lab0080_s210_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-13,False,,,,,,,0,DKNG,S210,,entered_no_exit
 81,lab0081_s210_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-13,False,,,,,,,0,DKNG,S210,,entered_no_exit
 82,lab0082_s210_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-13,False,,,,,,,0,DKNG,S210,,entered_no_exit
-83,lab0083_s210_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-13,False,,,,,,,0,DKNG,S210,,entered_no_exit
+83,lab0083_s210_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-13,False,,0.0,-51.61,-51.61,-51.61,-51.61,-16.0,DKNG,S210,stop_loss (-54.8%),closed
 84,lab0084_s210_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-13,False,,,,,,,0,DKNG,S210,,entered_no_exit
 85,lab0085_s210_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-13,False,,,,,,,0,DKNG,S210,,entered_no_exit
 86,lab0086_s210_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-13,False,,,,,,,0,AXP,S210,,entered_no_exit
@@ -99,7 +99,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 97,lab0097_s211_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-13,False,,0.0,-45.45,-45.45,-45.45,-45.45,-5.0,DIS,S211,reconcile_fill,closed
 98,lab0098_s211_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-13,False,,100.0,1733.33,1733.33,1733.33,1733.33,52.0,DIS,S211,reconcile_fill,closed
 99,lab0099_s211_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-13,False,,,,,,,0,DIS,S211,,entered_no_exit
-100,lab0100_s211_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-13,False,,,,,,,0,DIS,S211,,entered_no_exit
+100,lab0100_s211_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-08-13,False,,100.0,73.58,73.58,73.58,73.58,39.0,DIS,S211,take_profit (+73.6%),closed
 101,lab0101_s211_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-13,False,,,,,,,0,DIS,S211,,entered_no_exit
 102,lab0102_s211_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 103,lab0103_s211_w5_1300_1330_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
