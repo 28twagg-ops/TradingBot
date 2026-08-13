@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "b66f72cd77c7",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "XOM260814C00170000",
-      "underlying": "XOM",
-      "qty": 2,
-      "entry_cost": 6.0,
-      "entry_price": 0.03,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-12T21:16:48.763772+00:00",
-      "entry_order_id": "orphan:XOM260814C00170000"
-    },
-    {
       "lot_id": "8a83de94d864",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -402,26 +382,6 @@
       "entry_order_id": "e799efcc-5322-4988-a44e-76092e93074b"
     },
     {
-      "lot_id": "e80fc83a43e3",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "PATH260814C00015500",
-      "underlying": "PATH",
-      "qty": 4,
-      "entry_cost": 68.0,
-      "entry_price": 0.17,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-13T14:12:34.758119+00:00",
-      "entry_order_id": "orphan:PATH260814C00015500"
-    },
-    {
       "lot_id": "01168fbc0684",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -640,6 +600,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-13T15:26:03.421814+00:00",
       "entry_order_id": "orphan:DIS260814C00104000"
+    },
+    {
+      "lot_id": "977a90eaedf7",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "XOM260814C00170000",
+      "underlying": "XOM",
+      "qty": 2,
+      "entry_cost": 6.0,
+      "entry_price": 0.03,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-13T16:53:29.897925+00:00",
+      "entry_order_id": "orphan:XOM260814C00170000"
     }
   ],
   "pending_orders": [],
@@ -666,7 +646,7 @@
     }
   ],
   "bucket_open_premium": {
-    "b0": 901.0,
+    "b0": 833.0,
     "b419": 50.0,
     "b418": 50.0,
     "b193": 25.0,
@@ -1236,7 +1216,8 @@
     "20c7ccb0-5dd3-4008-9d5b-7cd0d1437695",
     "52cad618-02d4-493c-ad45-ad1baf8a09f2",
     "472b463a-be52-4b4d-8b79-597fa99efed0",
-    "e55258e2-6e35-41d1-bc42-63644461cbbc"
+    "e55258e2-6e35-41d1-bc42-63644461cbbc",
+    "1b58e6a8-455a-4b41-9051-6cf8316fcb6e"
   ],
   "submitted_today": 68,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
