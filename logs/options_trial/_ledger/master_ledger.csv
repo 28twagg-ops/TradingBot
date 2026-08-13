@@ -11716,3 +11716,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-13 15:28:21.469108+00:00,entry,86,lab0086_s210_w4_1120_1135_r1,S210,a494d31dc4bd,AXP,AXP260814C00345000,1,0.67,0.62,62.0,,,,-0.01,,0.5,-0.5,0.2479338842975207,MA8 343.02 crossed above MA21,1fd88c43-987c-4ddf-9c39-0ba22030c182
 2026-08-13 15:31:00.946033+00:00,exit,265,lab0265_s403_w2_1005_1045_r2,S403,2062db7d86e7,DKNG,DKNG260821C00027000,1,,0.15,31.0,-51.61,-16.0,stop_loss (-51.6%),,-0.01,0.5,-0.5,,,20c7ccb0-5dd3-4008-9d5b-7cd0d1437695
 2026-08-13 15:31:00.708465+00:00,exit,87,lab0087_s210_w4_1120_1135_r2,S210,a1520015e5a7,AXP,AXP260814C00345000,1,,0.31,62.0,-50.0,-31.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,52cad618-02d4-493c-ad45-ad1baf8a09f2
+2026-08-13T15:36:00Z,reconcile,901,lab0901_s411_w2_1005_1045_r2,S411,cf02ac0eb859,ARM,ARM260814C00310000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-13T15:36:00Z,reconcile,900,lab0900_s411_w2_1005_1045_r1,S411,201f21fcddfd,ARM,ARM260814C00310000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
