@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,22,5,2026-07-27,True,17,36.4,-12.51,-52.78,200.0,-98.51,-141.89,"AAPL,CELH,DIS,LLY,PATH,TTD,XOM",ORPHAN,stop_loss (-96.7%); stop_loss (-63.0%); reconcile_fill…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,23,4,2026-07-27,True,17,39.1,159.05,-51.02,3933.33,-98.51,94.11,"AAPL,CELH,DIS,LLY,PATH,TTD,XOM",ORPHAN,stop_loss (-96.7%); stop_loss (-63.0%); reconcile_fill…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
