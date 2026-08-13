@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "55847465121c",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "PATH260821C00016500",
-      "underlying": "PATH",
-      "qty": 1,
-      "entry_cost": 21.0,
-      "entry_price": 0.21,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-12T21:16:48.763241+00:00",
-      "entry_order_id": "orphan:PATH260821C00016500"
-    },
-    {
       "lot_id": "b66f72cd77c7",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -100,26 +80,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-13T13:55:04.323593+00:00",
       "entry_order_id": "orphan:PATH260814C00014500"
-    },
-    {
-      "lot_id": "9290a2eb6691",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "PATH260814C00015000",
-      "underlying": "PATH",
-      "qty": 4,
-      "entry_cost": 160.0,
-      "entry_price": 0.4,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-13T13:55:04.323660+00:00",
-      "entry_order_id": "orphan:PATH260814C00015000"
     },
     {
       "lot_id": "eac2479e3d34",
@@ -982,7 +942,72 @@
       "entry_order_id": "orphan:DIS260814C00107000"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "ffd089ec-6081-4144-8f19-3a6ea28daa95",
+      "bucket_id": 100,
+      "strategy_id": "S211",
+      "occ_symbol": "DIS260814C00104000",
+      "underlying": "DIS",
+      "qty": 1,
+      "limit": 0.58,
+      "profile_name": "lab0100_s211_w4_1120_1135_r1",
+      "submitted": "2026-08-13",
+      "detail": "MA21 crossed above MA50",
+      "spread_frac": 0.18518518518518512,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "5255e48a-ed66-4a2b-ab33-353514ab1e3b",
+      "bucket_id": 101,
+      "strategy_id": "S211",
+      "occ_symbol": "DIS260814C00104000",
+      "underlying": "DIS",
+      "qty": 1,
+      "limit": 0.58,
+      "profile_name": "lab0101_s211_w4_1120_1135_r2",
+      "submitted": "2026-08-13",
+      "detail": "MA21 crossed above MA50",
+      "spread_frac": 0.18518518518518512,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "c95c18ab-0867-4a33-8c57-0a05d5a4d755",
+      "bucket_id": 240,
+      "strategy_id": "S401",
+      "occ_symbol": "CVX260814C00200000",
+      "underlying": "CVX",
+      "qty": 1,
+      "limit": 0.25,
+      "profile_name": "lab0240_s401_w4_1120_1135_r1",
+      "submitted": "2026-08-13",
+      "detail": "gap -0.81% green",
+      "spread_frac": 0.03921568627450984,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "fca8596d-e57d-43fd-96b0-5feacf0fcdd2",
+      "bucket_id": 241,
+      "strategy_id": "S401",
+      "occ_symbol": "CVX260814C00200000",
+      "underlying": "CVX",
+      "qty": 1,
+      "limit": 0.25,
+      "profile_name": "lab0241_s401_w4_1120_1135_r2",
+      "submitted": "2026-08-13",
+      "detail": "gap -0.81% green",
+      "spread_frac": 0.03921568627450984,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    }
+  ],
   "pending_exits": [
     {
       "order_id": "5adcca08-8d53-4392-9086-c1f65c97b0f7",
@@ -996,7 +1021,7 @@
     }
   ],
   "bucket_open_premium": {
-    "b0": 1165.0,
+    "b0": 984.0,
     "b94": 42.0,
     "b419": 50.0,
     "b418": 50.0,
@@ -1098,7 +1123,11 @@
     "266|S403|2026-08-13",
     "267|S403|2026-08-13",
     "98|S211|2026-08-13",
-    "99|S211|2026-08-13"
+    "99|S211|2026-08-13",
+    "100|S211|2026-08-13",
+    "101|S211|2026-08-13",
+    "240|S401|2026-08-13",
+    "241|S401|2026-08-13"
   ],
   "processed_orders": [
     "c22df2ae-8337-437b-b19d-c7abcd371b76",
@@ -1561,9 +1590,11 @@
     "bfd2a796-5aa7-4f86-9801-93bc921a0ce1",
     "b76e2a6b-b835-44a5-9c5c-b72b44dd9018",
     "4ff7c907-5d91-4dcf-ac4c-182a0781de4b",
-    "4cbca058-8ea6-4ec6-86d1-c7e80dc1e9f3"
+    "4cbca058-8ea6-4ec6-86d1-c7e80dc1e9f3",
+    "d8c898da-8e41-468a-a1be-82e63edc1dbe",
+    "8ccfc778-a20b-4f95-b7bf-b4c558b2a492"
   ],
-  "submitted_today": 62,
+  "submitted_today": 66,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-08-13"
 }

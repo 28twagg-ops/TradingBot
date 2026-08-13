@@ -430,3 +430,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-13T14:50:49Z,reconcile,0,orphan_reconcile,ORPHAN,a6e4228a9ab5,MARA,MARA260814C00010000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-13 15:01:25.396937+00:00,exit,0,orphan_reconcile,ORPHAN,1831a297dc54,TTD,TTD260828C00014000,2,,0.56,72.0,55.56,40.0,take_profit (+52.8%),,-0.01,0.5,-0.5,,,2add466d-4381-4f42-ad4c-84de4e23cac6
 2026-08-13 15:11:30.868011+00:00,exit,0,orphan_reconcile,ORPHAN,067750c6129f,DIS,DIS260814C00106000,1,,0.05,11.0,-54.55,-6.0,stop_loss (-54.5%),,-0.01,0.5,-0.5,,,b76e2a6b-b835-44a5-9c5c-b72b44dd9018
+2026-08-13 15:21:02.040722+00:00,exit,0,orphan_reconcile,ORPHAN,55847465121c,PATH,PATH260821C00016500,1,,0.05,21.0,-76.19,-16.0,stop_loss (-76.2%),,-0.01,0.5,-0.5,,,d8c898da-8e41-468a-a1be-82e63edc1dbe
+2026-08-13 15:21:00.381048+00:00,exit,0,orphan_reconcile,ORPHAN,9290a2eb6691,PATH,PATH260814C00015000,4,,0.18,160.0,-55.0,-88.0,stop_loss (-55.0%),,-0.01,0.5,-0.5,,,8ccfc778-a20b-4f95-b7bf-b4c558b2a492
