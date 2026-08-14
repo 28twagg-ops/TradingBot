@@ -25161,3 +25161,276 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ### Options bot full output
 
 ```text
+
+## Run 20260814T195624Z
+
+- UTC timestamp: `20260814T195624Z`
+- GitHub run: [#7166](https://github.com/28twagg-ops/TradingBot/actions/runs/31835437775)
+- Run id: `31835437775`
+- Live bot: exit=`0`, duration=`231s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-14T15:25:56.545329-04:00","date":"2026-08-14","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":9.6,"phases_s":{"reconcile":0.5,"cancel":0.16,"manage":6.38,"protective_stops":1.71},"signals":0,"placed":0,"equity":121599.11,"open_positions":27,"pending_orders":0,"open_lots":61,"submitted_today":77,"filled_today":73,"unattributed_contracts":0,"top_signals":[],"github_run":"7160","github_run_id":"31833144353","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1761,"win":33.05,"med":-39.29,"avg":12.19,"pnl":-9205.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+19:56:25  INFO      Mode: scan
+19:56:26  INFO        [positions] 2/2 (2 valid)
+19:56:26  INFO        Universe cache hit: 903 tickers (tickers_2026-08-14.json)
+19:56:27  INFO        [universe] 40/901 (40 valid)
+19:56:29  INFO        [universe] 80/901 (80 valid)
+19:56:30  INFO        [universe] 120/901 (120 valid)
+19:56:32  INFO        [universe] 160/901 (160 valid)
+19:56:34  INFO        [universe] 200/901 (199 valid)
+19:56:41  INFO        [universe] 240/901 (238 valid)
+19:56:52  INFO        [universe] 280/901 (278 valid)
+19:57:05  INFO        [universe] 320/901 (318 valid)
+19:57:16  INFO        [universe] 360/901 (358 valid)
+19:57:29  INFO        [universe] 400/901 (397 valid)
+19:57:40  INFO        [universe] 440/901 (437 valid)
+19:57:54  INFO        [universe] 480/901 (477 valid)
+19:58:04  INFO        [universe] 520/901 (517 valid)
+19:58:18  INFO        [universe] 560/901 (557 valid)
+19:58:28  INFO        [universe] 600/901 (597 valid)
+19:58:39  INFO        [universe] 640/901 (637 valid)
+19:58:52  INFO        [universe] 680/901 (677 valid)
+19:59:03  INFO        [universe] 720/901 (717 valid)
+19:59:17  INFO        [universe] 760/901 (757 valid)
+19:59:27  INFO        [universe] 800/901 (797 valid)
+19:59:41  INFO        [universe] 840/901 (836 valid)
+19:59:52  INFO        [universe] 880/901 (876 valid)
+19:59:59  INFO        [universe] 901/901 (897 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $467.20|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-08-14|
+|  Universe                                                          both|
+|  Mo~  Aug: VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $467.20|
+|  Cash                                                           $303.46|
+|  Reserve                                          $23.36  (always kept)|
+|  Available                                    $280.10  (for new trades)|
+|  Trade size             $70.08  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (2 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ACGL     Pullback50      $69.85     $97.48   $98.75   +1.3%   $+0.90  |
+|  AFL      Pullback50      $93.90     $120.39  $121.48  +0.9%   $+0.85  |
+|                                                                        |
+|  Total invested                                                 $163.74|
+|  Total open P&L                                                  $+1.74|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (83542.3m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AFL  P&L +0.9%  $+0.85                                            HOLD|
+|  ACGL  P&L +1.3%  $+0.90                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  39                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AMD      Pullback50      eq     $512.95  53.2   -0.67   50MA bounce (+|
+|  ADI      Pullback50      eq     $387.77  58.8   -1.88   50MA bounce (-|
+|  FIX      Pullback50      eq     $1779.~  53.6   -1.16   50MA bounce (-|
+|  ED       Pullback50      eq     $108.80  38.1   -2.83   50MA bounce (-|
+|  D        Pullback50      eq     $68.64   39.2   -1.51   50MA bounce (-|
+|  ECL      Pullback50      eq     $276.10  56.0   -2.23   50MA bounce (+|
+|  ESS      Pullback50      eq     $288.20  47.4   -0.74   50MA bounce (-|
+|  ES       Pullback50      eq     $72.33   36.8   -1.74   50MA bounce (-|
+|  EVRG     Pullback50      eq     $83.99   38.7   -2.49   50MA bounce (-|
+|  HAL      Pullback50      eq     $34.48   62.8   -0.88   50MA bounce (-|
+|  IBKR     Pullback50      eq     $92.06   49.6   -2.03   50MA bounce (+|
+|  JBHT     Pullback50      eq     $280.19  49.3   -1.61   50MA bounce (+|
+|  KDP      Pullback50      eq     $31.39   59.9   -1.06   50MA bounce (+|
+|  L        Pullback50      eq     $113.22  20.4   -2.19   50MA bounce (+|
+|  MPWR     Pullback50      eq     $1399.~  55.1   -1.43   50MA bounce (-|
+|  RL       Pullback50      eq     $388.36  55.8   -1.05   50MA bounce (-|
+|  VRT      Pullback50      eq     $294.61  52.3   -0.77   50MA bounce (-|
+|  WRB      Pullback50      eq     $70.58   22.3   -1.72   50MA bounce (-|
+|  XEL      Pullback50      eq     $79.20   41.1   -2.38   50MA bounce (-|
+|  ALLY     Pullback50      eq     $44.90   59.6   -1.11   50MA bounce (+|
+|  ALV      Pullback50      eq     $122.06  56.4   -1.24   50MA bounce (+|
+|  ARW      Pullback50      eq     $213.83  50.4   -1.39   50MA bounce (-|
+|  CBT      Pullback50      eq     $87.59   46.3   -1.14   50MA bounce (-|
+|  CUBE     Pullback50      eq     $41.49   41.2   -1.17   50MA bounce (+|
+|  FCFS     Pullback50      eq     $214.56  58.0   -1.20   50MA bounce (-|
+|  GBCI     Pullback50      eq     $49.95   56.6   -1.84   50MA bounce (-|
+|  KEX      Pullback50      eq     $138.43  39.4   -1.84   50MA bounce (-|
+|  JAZZ     Pullback50      eq     $244.96  37.0   -1.11   50MA bounce (+|
+|  PII      Pullback50      eq     $69.24   39.4   0.06    50MA bounce (-|
+|  R        Pullback50      eq     $263.98  44.2   -1.60   50MA bounce (-|20:00:01  ERROR       BUY FAILED AMD: {"code":40010001,"message":"client_order_id must be unique"}
+20:00:01  INFO        BUY  ADI  $70.08  [Pullback50]  id=cd71db91-7ea7-468a-974b-9db0eeed8272
+20:00:15  INFO        place_all_stops: checking 2 positions...
+20:00:15  INFO        STOP skipped ACGL: fractional (0.7073 shares) — software exit will handle it
+20:00:15  INFO        STOP skipped AFL: fractional (0.7729 shares) — software exit will handle it
+20:00:15  INFO        Daily log -> logs/daily/2026-08-14.md
+20:00:15  INFO        Dashboard written → logs/dashboard.md
+
+|  POR      Pullback50      eq     $50.75   47.1   -1.47   50MA bounce (-|
+|  SLAB     Pullback50      eq     $218.31  58.7   -1.26   50MA bounce (+|
+|  SMTC     Pullback50      eq     $140.44  59.5   -1.38   50MA bounce (-|
+|  SIGI     Pullback50      eq     $94.31   56.7   -1.31   50MA bounce (-|
+|  SNX      Pullback50      eq     $258.89  66.8   -1.20   50MA bounce (-|
+|  TCBI     Pullback50      eq     $100.99  66.8   -1.29   50MA bounce (-|
+|  TNL      Pullback50      eq     $75.40   47.0   -1.67   50MA bounce (+|
+|  VC       Pullback50      eq     $108.32  61.5   -1.80   50MA bounce (+|
+|  WAL      Pullback50      eq     $82.31   48.6   -1.20   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AMD  Pullback50                                    $70.08|
+|    ENTER [eq] ADI  Pullback50                                    $70.08|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] FIX  Pullback50                                      cap 3|
+|    SKIP [eq] ED  Pullback50                                       cap 3|
+|    SKIP [eq] D  Pullback50                                        cap 3|
+|    SKIP [eq] ECL  Pullback50                                      cap 3|
+|    SKIP [eq] ESS  Pullback50                                      cap 3|
+|    SKIP [eq] ES  Pullback50                                       cap 3|
+|    SKIP [eq] EVRG  Pullback50                                     cap 3|
+|    SKIP [eq] HAL  Pullback50                                      cap 3|
+|    SKIP [eq] IBKR  Pullback50                                     cap 3|
+|    SKIP [eq] JBHT  Pullback50                                     cap 3|
+|    SKIP [eq] KDP  Pullback50                                      cap 3|
+|    SKIP [eq] L  Pullback50                                        cap 3|
+|    SKIP [eq] MPWR  Pullback50                                     cap 3|
+|    SKIP [eq] RL  Pullback50                                       cap 3|
+|    SKIP [eq] VRT  Pullback50                                      cap 3|
+|    SKIP [eq] WRB  Pullback50                                      cap 3|
+|    SKIP [eq] XEL  Pullback50                                      cap 3|
+|    SKIP [eq] ALLY  Pullback50                                     cap 3|
+|    SKIP [eq] ALV  Pullback50                                      cap 3|
+|    SKIP [eq] ARW  Pullback50                                      cap 3|
+|    SKIP [eq] CBT  Pullback50                                      cap 3|
+|    SKIP [eq] CUBE  Pullback50                                     cap 3|
+|    SKIP [eq] FCFS  Pullback50                                     cap 3|
+|    SKIP [eq] GBCI  Pullback50                                     cap 3|
+|    SKIP [eq] KEX  Pullback50                                      cap 3|
+|    SKIP [eq] JAZZ  Pullback50                                     cap 3|
+|    SKIP [eq] PII  Pullback50                                      cap 3|
+|    SKIP [eq] R  Pullback50                                        cap 3|
+|    SKIP [eq] POR  Pullback50                                      cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] SMTC  Pullback50                                     cap 3|
+|    SKIP [eq] SIGI  Pullback50                                     cap 3|
+|    SKIP [eq] SNX  Pullback50                                      cap 3|
+|    SKIP [eq] TCBI  Pullback50                                     cap 3|
+|    SKIP [eq] TNL  Pullback50                                      cap 3|
+|    SKIP [eq] VC  Pullback50                                       cap 3|
+|    SKIP [eq] WAL  Pullback50                                      cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      1|
++------------------------------------------------------------------------+
+|  ADI                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 1 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Scanned                                                            897|
+|  Signals                                                             39|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  1 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             2|
+|  Equity                                                         $467.15|
+|  Cash                                                           $303.46|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
