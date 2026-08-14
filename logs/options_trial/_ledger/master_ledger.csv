@@ -11839,3 +11839,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-14T14:20:50Z,reconcile,276,lab0276_s350_w1_0928_1005_r1,S350,bd1582a373ee,MSTR,MSTR260814C00096000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-14 14:21:12.635420+00:00,entry,265,lab0265_s403_w2_1005_1045_r2,S403,ce27dcf6aa42,META,META260817C00622500,1,0.49,0.49,49.0,,,,-0.01,,0.75,-0.75,0.19780219780219788,touch MA50 green,1f5828a6-2934-4c95-8cde-a38d6f5f47f8
 2026-08-14 14:21:12.628441+00:00,entry,264,lab0264_s403_w2_1005_1045_r1,S403,6ee113403eda,META,META260817C00622500,1,0.49,0.49,49.0,,,,-0.01,,0.75,-0.75,0.19780219780219788,touch MA50 green,f9ead5e2-c9e3-4c0c-b397-b138847f9507
+2026-08-14T14:25:54Z,reconcile,283,lab0283_s351_w2_1005_1045_r2,S351,15c7567c92bf,MSTR,MSTR260814C00100000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-14T14:25:54Z,reconcile,282,lab0282_s351_w2_1005_1045_r1,S351,2d160cbdfafb,MSTR,MSTR260814C00100000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
