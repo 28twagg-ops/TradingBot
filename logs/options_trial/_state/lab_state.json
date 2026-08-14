@@ -582,26 +582,6 @@
       "entry_order_id": "91321345-249e-4ab4-8027-210130bdcde4"
     },
     {
-      "lot_id": "4304283bab0d",
-      "bucket_id": 279,
-      "profile_name": "lab0279_s350_w2_1005_1045_r2",
-      "strategy_id": "S350",
-      "occ_symbol": "MSTR260814C00101000",
-      "underlying": "MSTR",
-      "qty": 1,
-      "entry_cost": 3.0,
-      "entry_price": 0.03,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-14T14:07:16.844365+00:00",
-      "entry_order_id": "91a38bc7-46d5-41db-b4d5-cf9ad0ada2de"
-    },
-    {
       "lot_id": "89f15483ceb5",
       "bucket_id": 278,
       "profile_name": "lab0278_s350_w2_1005_1045_r1",
@@ -820,6 +800,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-14T14:22:13.510733+00:00",
       "entry_order_id": "f9ead5e2-c9e3-4c0c-b397-b138847f9507"
+    },
+    {
+      "lot_id": "bc8048f66841",
+      "bucket_id": 97,
+      "profile_name": "lab0097_s211_w2_1005_1045_r2",
+      "strategy_id": "S211",
+      "occ_symbol": "SLB260821C00055000",
+      "underlying": "SLB",
+      "qty": 1,
+      "entry_cost": 42.0,
+      "entry_price": 0.42,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-14T14:30:57.122504+00:00",
+      "entry_order_id": "b017772a-d6f1-4cee-94ed-6e8f009fc950"
+    },
+    {
+      "lot_id": "168e2036bf09",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "SLB260821C00055000",
+      "underlying": "SLB",
+      "qty": 1,
+      "entry_cost": 42.0,
+      "entry_price": 0.42,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-14T14:30:57.251814+00:00",
+      "entry_order_id": "orphan:SLB260821C00055000"
     }
   ],
   "pending_orders": [
@@ -918,38 +938,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
-    },
-    {
-      "order_id": "3940981f-0e24-491d-8924-0b43a6b67716",
-      "bucket_id": 96,
-      "strategy_id": "S211",
-      "occ_symbol": "SLB260821C00055000",
-      "underlying": "SLB",
-      "qty": 1,
-      "limit": 0.42,
-      "profile_name": "lab0096_s211_w2_1005_1045_r1",
-      "submitted": "2026-08-14",
-      "detail": "MA21 crossed above MA50",
-      "spread_frac": 0.17721518987341772,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "b017772a-d6f1-4cee-94ed-6e8f009fc950",
-      "bucket_id": 97,
-      "strategy_id": "S211",
-      "occ_symbol": "SLB260821C00055000",
-      "underlying": "SLB",
-      "qty": 1,
-      "limit": 0.42,
-      "profile_name": "lab0097_s211_w2_1005_1045_r2",
-      "submitted": "2026-08-14",
-      "detail": "MA21 crossed above MA50",
-      "spread_frac": 0.17721518987341772,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
     }
   ],
   "pending_exits": [
@@ -962,16 +950,6 @@
       "qty": 1,
       "reason": "stop_loss (-100.0%)",
       "submitted": "2026-08-14T09:55:06"
-    },
-    {
-      "order_id": "117094c3-9be8-419a-a6c4-b0b67986f294",
-      "lot_id": "4304283bab0d",
-      "bucket_id": 279,
-      "strategy_id": "S350",
-      "occ_symbol": "MSTR260814C00101000",
-      "qty": 1,
-      "reason": "stop_loss (-66.7%)",
-      "submitted": "2026-08-14T10:11:12"
     }
   ],
   "bucket_open_premium": {
@@ -993,7 +971,7 @@
     "b305": 25.0,
     "b263": 44.0,
     "b262": 44.0,
-    "b0": 483.0,
+    "b0": 525.0,
     "b816": 25.0,
     "b787": 25.0,
     "b786": 25.0,
@@ -1001,7 +979,6 @@
     "b314": 25.0,
     "b307": 25.0,
     "b306": 25.0,
-    "b279": 3.0,
     "b278": 3.0,
     "b817": 25.0,
     "b803": 69.0,
@@ -1009,7 +986,8 @@
     "b795": 51.0,
     "b779": 69.0,
     "b265": 49.0,
-    "b264": 49.0
+    "b264": 49.0,
+    "b97": 42.0
   },
   "session_date": "2026-08-14",
   "entries_locked": [
@@ -1531,7 +1509,11 @@
     "8af41822-3145-49ab-87dd-013c8fd68724",
     "155f35ae-87bc-447c-bfce-f7a6ebf87aa8",
     "1f5828a6-2934-4c95-8cde-a38d6f5f47f8",
-    "f9ead5e2-c9e3-4c0c-b397-b138847f9507"
+    "f9ead5e2-c9e3-4c0c-b397-b138847f9507",
+    "b017772a-d6f1-4cee-94ed-6e8f009fc950",
+    "3940981f-0e24-491d-8924-0b43a6b67716",
+    "75ebf904-b48a-4ac4-be42-4be18561619e",
+    "117094c3-9be8-419a-a6c4-b0b67986f294"
   ],
   "submitted_today": 48,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
