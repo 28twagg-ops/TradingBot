@@ -882,26 +882,6 @@
       "entry_order_id": "5b834fd9-42e0-41df-888d-2ead9949f292"
     },
     {
-      "lot_id": "c27479d93963",
-      "bucket_id": 797,
-      "profile_name": "lab0797_s399_w3_1045_1120_r2",
-      "strategy_id": "S399",
-      "occ_symbol": "MSTR260821C00104000",
-      "underlying": "MSTR",
-      "qty": 1,
-      "entry_cost": 50.0,
-      "entry_price": 0.5,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-14T14:52:13.291225+00:00",
-      "entry_order_id": "77da847e-395a-4672-8fbb-b51719ed9a52"
-    },
-    {
       "lot_id": "3b54aec80f34",
       "bucket_id": 796,
       "profile_name": "lab0796_s399_w3_1045_1120_r1",
@@ -1295,14 +1275,14 @@
       "submitted": "2026-08-14T12:41:53"
     },
     {
-      "order_id": "5c58cc66-601b-4648-b5cb-68a2a63412e1",
-      "lot_id": "c27479d93963",
-      "bucket_id": 797,
+      "order_id": "335d25a9-5d5f-4397-827c-ba128de4565b",
+      "lot_id": "3b54aec80f34",
+      "bucket_id": 796,
       "strategy_id": "S399",
       "occ_symbol": "MSTR260821C00104000",
       "qty": 1,
-      "reason": "take_profit (+52.0%)",
-      "submitted": "2026-08-14T12:41:55"
+      "reason": "take_profit (+50.0%)",
+      "submitted": "2026-08-14T13:26:00"
     }
   ],
   "bucket_open_premium": {
@@ -1345,7 +1325,6 @@
     "b308": 23.0,
     "b818": 23.0,
     "b819": 23.0,
-    "b797": 50.0,
     "b796": 50.0,
     "b780": 73.0,
     "b239": 43.0,
@@ -1897,7 +1876,8 @@
     "4cb889b6-19b8-4f88-841f-330345ee9c87",
     "c1249871-403d-4942-aea1-58694f882bef",
     "765711f0-1da8-4e47-adca-2d2eef1e6e9a",
-    "9e51c3a4-9f0d-4abd-9f42-6205a71a371d"
+    "9e51c3a4-9f0d-4abd-9f42-6205a71a371d",
+    "5c58cc66-601b-4648-b5cb-68a2a63412e1"
   ],
   "submitted_today": 77,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
