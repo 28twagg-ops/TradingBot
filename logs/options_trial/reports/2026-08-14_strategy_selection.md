@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-08-14
 
-_Generated 2026-08-14T11:37:46.865339_
+_Generated 2026-08-14T11:41:06.318052_
 
 ## Summary
 
@@ -123,7 +123,7 @@ _Generated 2026-08-14T11:37:46.865339_
 | S351 (GapDown_1DTE) | 1d | drop | 50 | 22.0 | -54.92 | -81.63 | -69.97 | +171.88 | 14 | 38 | 5 | $-257.00 | 26.0% | non-positive median return |
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 39 | 10.3 | -56.25 | -78.81 | -68.77 | +2.90 | 18 | 24 | 4 | $-796.00 | 35.9% | non-positive median return |
 | S360 (RubberBand_1DTE) | 1d | drop | 49 | 10.2 | -56.41 | -81.50 | -70.37 | -6.89 | 14 | 38 | 11 | $-913.00 | 22.4% | non-positive median return |
-| S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 83 | 13.3 | -68.09 | -98.15 | -81.35 | +51.47 | 18 | 44 | 14 | $-2,246.00 | 34.9% | non-positive median return |
+| S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 83 | 13.3 | -68.09 | -98.15 | -81.35 | +51.47 | 18 | 46 | 14 | $-2,246.00 | 34.9% | non-positive median return |
 | S363 (RubberBand_5DTE) | 5d | drop | 30 | 36.7 | -73.91 | -92.82 | -89.90 | +61.07 | 11 | 23 | 9 | $-735.00 | 36.7% | non-positive median return |
 
 ## Comparison groups
@@ -195,7 +195,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 |---|---|---:|---:|---:|---:|---:|---:|
 | S210 | 3d ATM MA cross 8/21 | 68 | -5.30 | -82.21 | -51.32 | 42 | 9 |
 | S211 | 3d ATM MA cross 21/50 | 41 | -31.58 | -81.13 | -51.47 | 46 | 19 |
-| S212 | 3d ATM MA bounce 50 | 83 | -68.09 | -98.15 | -81.35 | 44 | 14 |
+| S212 | 3d ATM MA bounce 50 | 83 | -68.09 | -98.15 | -81.35 | 46 | 14 |
 | S213 | 3d ATM MA bounce 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S215 | 3d ATM MA reclaim 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
