@@ -1109,3 +1109,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-12 19:51:48,2026-08-12,SELL,AKAM,Pullback50,122.86,93.09,-0.18,-0.17,0,midline (-0.2%),bull,466.1
 2026-08-12 19:52:18,2026-08-12,SELL,ALGN,Pullback50,174.14,93.06,-0.13,-0.12,0,midline (-0.1%),bull,465.94
 2026-08-14 13:46:31,2026-08-14,SELL,AES,Pullback50,14.74,94.22,0.14,0.13,3,max_hold 3d (+0.1%),bull,466.85
+2026-08-14 15:11:08,2026-08-14,SELL,AAPL,Pullback50,304.39,69.66,-0.56,-0.39,0,stop_loss (-0.6%),bull,466.81

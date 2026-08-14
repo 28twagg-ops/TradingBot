@@ -744,3 +744,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-08-12 19:51:48,2026-08-12,SELL,AKAM,Pullback50,122.84,122.59,122.858,93.09,0.0147,0.0136,limit_fill_position_check_full,midline (-0.2%),bull
 2026-08-12 19:52:18,2026-08-12,SELL,ALGN,Pullback50,174.265,174.05,174.142,93.06,-0.0706,-0.0657,limit_fill_position_check_full,midline (-0.1%),bull
 2026-08-14 13:46:31,2026-08-14,SELL,AES,Pullback50,14.74,14.74,14.7402,94.22,0.0014,0.0013,limit_fill_position_check_full,max_hold 3d (+0.1%),bull
+2026-08-14 15:11:08,2026-08-14,SELL,AAPL,Pullback50,304.3869,,304.3869,69.66,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
