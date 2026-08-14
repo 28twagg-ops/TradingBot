@@ -23,3 +23,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-07 14:06:31.434189+00:00,exit,818,lab0818_s405_w3_1045_1120_r1,S405,3cd23c1aa73e,AAPL,AAPL260812C00315000,1,,0.06,40.0,-85.0,-34.0,reconcile_fill,,-0.01,0.5,-0.5,,,bd69469d-b143-42eb-8020-d44fa0b0df28
 2026-08-10 14:48:06.333462+00:00,entry,818,lab0818_s405_w3_1045_1120_r1,S405,c8abce55cc76,AAPL,AAPL260812C00315000,1,0.4,0.4,40.0,,,,-0.01,,0.5,-0.5,,,1435c1fb-21a4-4c70-8c34-0c3b2322f25c
 2026-08-12T21:09:11Z,reconcile,818,lab0818_s405_w3_1045_1120_r1,S405,c8abce55cc76,AAPL,AAPL260812C00315000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-14 14:47:18.666185+00:00,entry,818,lab0818_s405_w3_1045_1120_r1,S405,69fd8c48f5a2,MARA,MARA260821C00009500,1,0.24,0.23,23.0,,,,-0.01,,0.75,-0.75,0.22222222222222215,gap -2.2%,bd5a08aa-fdf3-48f7-bb9f-8dcd9c35ca2b
