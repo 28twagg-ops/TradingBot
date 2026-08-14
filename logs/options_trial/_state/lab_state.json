@@ -222,7 +222,7 @@
       "entry_order_id": "orphan:XOM260814C00170000"
     },
     {
-      "lot_id": "013ff8e3c397",
+      "lot_id": "d535f1867378",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
       "strategy_id": "ORPHAN",
@@ -238,23 +238,12 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-08-14T13:55:04.361535+00:00",
+      "entry_date": "2026-08-14T13:59:57.636044+00:00",
       "entry_order_id": "orphan:DIS260814C00104000"
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "51ffafee-d1bb-422e-8221-95fb8e8661a4",
-      "lot_id": "977a90eaedf7",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "XOM260814C00170000",
-      "qty": 1,
-      "reason": "stop_loss (-100.0%)",
-      "submitted": "2026-08-14T09:55:06"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b80": 31.0,
     "b433": 47.0,
@@ -758,10 +747,11 @@
     "89cdaef8-cb98-4721-8b61-8cbd87df79ca",
     "4f19e918-4a80-43cb-aec8-6cb6b2550021",
     "47848c6c-d0cb-4684-9081-56763cb7e6d4",
+    "2c87295c-24e5-4726-baf5-b8a13403cc8a",
+    "ddb0f701-d32a-4376-b4ca-adfc1e0c9d9a",
     "40baf7fd-c2aa-4edd-88b3-bfbb7c286883",
     "12aff481-ec68-4bdc-afb1-ba63be4c6d34",
-    "cec61c75-8199-43da-88dd-39eaf2bd11ed",
-    "2c87295c-24e5-4726-baf5-b8a13403cc8a"
+    "cec61c75-8199-43da-88dd-39eaf2bd11ed"
   ],
   "submitted_today": 0,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
