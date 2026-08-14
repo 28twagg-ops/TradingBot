@@ -1225,44 +1225,14 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "51ffafee-d1bb-422e-8221-95fb8e8661a4",
-      "lot_id": "977a90eaedf7",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "XOM260814C00170000",
-      "qty": 1,
-      "reason": "stop_loss (-100.0%)",
-      "submitted": "2026-08-14T09:55:06"
-    },
-    {
-      "order_id": "4d827b31-d8ac-4a06-b15d-bf01d7a23d72",
+      "order_id": "8976d316-396f-44dd-8f54-f19888b676f5",
       "lot_id": "186fe0652040",
       "bucket_id": 262,
       "strategy_id": "S403",
       "occ_symbol": "META260817C00625000",
       "qty": 1,
-      "reason": "stop_loss (-54.5%)",
-      "submitted": "2026-08-14T10:40:55"
-    },
-    {
-      "order_id": "baade96a-fd7a-4ea1-b633-33cf3e435973",
-      "lot_id": "dcb055d637f0",
-      "bucket_id": 287,
-      "strategy_id": "S351",
-      "occ_symbol": "MSTR260814C00098000",
-      "qty": 1,
-      "reason": "take_profit (+66.7%)",
-      "submitted": "2026-08-14T12:41:53"
-    },
-    {
-      "order_id": "335d25a9-5d5f-4397-827c-ba128de4565b",
-      "lot_id": "3b54aec80f34",
-      "bucket_id": 796,
-      "strategy_id": "S399",
-      "occ_symbol": "MSTR260821C00104000",
-      "qty": 1,
-      "reason": "take_profit (+50.0%)",
-      "submitted": "2026-08-14T13:26:00"
+      "reason": "stop_loss (-86.4%)",
+      "submitted": "2026-08-14T16:01:30"
     }
   ],
   "bucket_open_premium": {
