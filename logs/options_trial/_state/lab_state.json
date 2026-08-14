@@ -1160,6 +1160,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-14T15:05:59.194228+00:00",
       "entry_order_id": "d9b76370-7cca-49ba-baea-2052436bcb8a"
+    },
+    {
+      "lot_id": "dcb055d637f0",
+      "bucket_id": 287,
+      "profile_name": "lab0287_s351_w4_1120_1135_r2",
+      "strategy_id": "S351",
+      "occ_symbol": "MSTR260814C00098000",
+      "underlying": "MSTR",
+      "qty": 1,
+      "entry_cost": 3.0,
+      "entry_price": 0.03,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-14T15:22:43.760148+00:00",
+      "entry_order_id": "73da301c-43cf-483a-bea6-793291f32790"
+    },
+    {
+      "lot_id": "820f1b3c4386",
+      "bucket_id": 286,
+      "profile_name": "lab0286_s351_w4_1120_1135_r1",
+      "strategy_id": "S351",
+      "occ_symbol": "MSTR260814C00098000",
+      "underlying": "MSTR",
+      "qty": 1,
+      "entry_cost": 3.0,
+      "entry_price": 0.03,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-14T15:22:43.797566+00:00",
+      "entry_order_id": "4cb889b6-19b8-4f88-841f-330345ee9c87"
     }
   ],
   "pending_orders": [
@@ -1207,6 +1247,38 @@
       "submitted": "2026-08-14",
       "detail": "low=138.16 MA50=137.06 touch+green",
       "spread_frac": 0.125,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "9e51c3a4-9f0d-4abd-9f42-6205a71a371d",
+      "bucket_id": 114,
+      "strategy_id": "S212",
+      "occ_symbol": "MCD260821C00290000",
+      "underlying": "MCD",
+      "qty": 1,
+      "limit": 0.17,
+      "profile_name": "lab0114_s212_w4_1120_1135_r1",
+      "submitted": "2026-08-14",
+      "detail": "low=271.27 MA50=273.66 touch+green",
+      "spread_frac": 0.24999999999999986,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "765711f0-1da8-4e47-adca-2d2eef1e6e9a",
+      "bucket_id": 115,
+      "strategy_id": "S212",
+      "occ_symbol": "MCD260821C00290000",
+      "underlying": "MCD",
+      "qty": 1,
+      "limit": 0.17,
+      "profile_name": "lab0115_s212_w4_1120_1135_r2",
+      "submitted": "2026-08-14",
+      "detail": "low=271.27 MA50=273.66 touch+green",
+      "spread_frac": 0.24999999999999986,
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
@@ -1283,7 +1355,9 @@
     "b98": 71.0,
     "b784": 22.0,
     "b773": 71.0,
-    "b772": 71.0
+    "b772": 71.0,
+    "b287": 3.0,
+    "b286": 3.0
   },
   "session_date": "2026-08-14",
   "entries_locked": [
@@ -1357,7 +1431,11 @@
     "98|S211|2026-08-14",
     "99|S211|2026-08-14",
     "238|S401|2026-08-14",
-    "239|S401|2026-08-14"
+    "239|S401|2026-08-14",
+    "114|S212|2026-08-14",
+    "115|S212|2026-08-14",
+    "286|S351|2026-08-14",
+    "287|S351|2026-08-14"
   ],
   "processed_orders": [
     "88b24066-5228-4787-bfc8-1fa4c0ac267f",
@@ -1810,9 +1888,11 @@
     "c17d611c-2c72-44f2-bea7-bf634d271ce9",
     "d9b76370-7cca-49ba-baea-2052436bcb8a",
     "af5ace8d-6c48-4c55-b88d-9ce18d9b87ac",
-    "a4522571-cf55-4284-811b-cfc99f5c91a5"
+    "a4522571-cf55-4284-811b-cfc99f5c91a5",
+    "73da301c-43cf-483a-bea6-793291f32790",
+    "4cb889b6-19b8-4f88-841f-330345ee9c87"
   ],
-  "submitted_today": 71,
+  "submitted_today": 75,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-08-14"
 }
