@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,2,9,2026-07-27,True,18,50.0,1022.32,1022.32,2133.33,-88.68,17.0,"DIS,XOM",ORPHAN,reconcile_fill; reconcile_fill,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,2,8,2026-07-27,True,18,50.0,1022.32,1022.32,2133.33,-88.68,17.0,"DIS,XOM",ORPHAN,reconcile_fill; reconcile_fill,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -97,8 +97,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 95,lab0095_s211_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
 96,lab0096_s211_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-14,False,,,,,,,0,SLB,S211,,entered_no_exit
 97,lab0097_s211_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-14,False,,,,,,,0,SLB,S211,,entered_no_exit
-98,lab0098_s211_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
-99,lab0099_s211_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
+98,lab0098_s211_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-14,False,,,,,,,0,SLB,S211,,entered_no_exit
+99,lab0099_s211_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-14,False,,,,,,,0,SLB,S211,,entered_no_exit
 100,lab0100_s211_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
 101,lab0101_s211_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
 102,lab0102_s211_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
@@ -235,10 +235,10 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 233,lab0233_s400_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 234,lab0234_s401_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
 235,lab0235_s401_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
-236,lab0236_s401_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
-237,lab0237_s401_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
-238,lab0238_s401_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-14,False,,,,,,,0,PFE,S401,,entered_no_exit
-239,lab0239_s401_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-14,False,,,,,,,0,PFE,S401,,entered_no_exit
+236,lab0236_s401_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-13,False,,,,,,,0,,,,open
+237,lab0237_s401_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-13,False,,,,,,,0,,,,open
+238,lab0238_s401_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,2,2026-08-14,False,,,,,,,0,PFE,S401,,entered_no_exit
+239,lab0239_s401_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,2,2026-08-14,False,,,,,,,0,PFE,S401,,entered_no_exit
 240,lab0240_s401_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-11,False,,,,,,,0,,,,idle
 241,lab0241_s401_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-11,False,,,,,,,0,,,,idle
 242,lab0242_s401_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
@@ -783,8 +783,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 781,lab0781_s397_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-14,False,,,,,,,0,MSTR,S397,,entered_no_exit
 782,lab0782_s397_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-12,False,,,,,,,0,,,,idle
 783,lab0783_s397_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-12,False,,,,,,,0,,,,idle
-784,lab0784_s398_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-10,False,,,,,,,0,,,,idle
-785,lab0785_s398_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-10,False,,,,,,,0,,,,idle
+784,lab0784_s398_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-14,False,,,,,,,0,MARA,S398,,entered_no_exit
+785,lab0785_s398_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-14,False,,,,,,,0,MARA,S398,,entered_no_exit
 786,lab0786_s398_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-14,False,,,,,,,0,MARA,S398,,entered_no_exit
 787,lab0787_s398_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-14,False,,,,,,,0,MARA,S398,,entered_no_exit
 788,lab0788_s398_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-14,False,,,,,,,0,MARA,S398,,entered_no_exit
@@ -813,8 +813,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 811,lab0811_s404_w6_1400_1430_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 812,lab0812_s404_w7_1500_1530_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 813,lab0813_s404_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
-814,lab0814_s405_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-10,False,,,,,,,0,,,,idle
-815,lab0815_s405_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-10,False,,,,,,,0,,,,idle
+814,lab0814_s405_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-14,False,,,,,,,0,MARA,S405,,entered_no_exit
+815,lab0815_s405_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-08-14,False,,,,,,,0,MARA,S405,,entered_no_exit
 816,lab0816_s405_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-14,False,,,,,,,0,MARA,S405,,entered_no_exit
 817,lab0817_s405_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-14,False,,,,,,,0,MARA,S405,,entered_no_exit
 818,lab0818_s405_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-08-14,False,,,,,,,0,MARA,S405,,entered_no_exit
