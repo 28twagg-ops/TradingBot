@@ -1283,6 +1283,16 @@
       "qty": 1,
       "reason": "take_profit (+50.0%)",
       "submitted": "2026-08-14T13:26:00"
+    },
+    {
+      "order_id": "c3e30b45-9106-4e37-812e-fe2de8a07004",
+      "lot_id": "89f15483ceb5",
+      "bucket_id": 278,
+      "strategy_id": "S350",
+      "occ_symbol": "MSTR260814C00101000",
+      "qty": 1,
+      "reason": "stop_loss (-66.7%)",
+      "submitted": "2026-08-14T13:50:59"
     }
   ],
   "bucket_open_premium": {
