@@ -820,6 +820,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-08-14T14:11:03.071512+00:00",
       "entry_order_id": "orphan:MSTR260821C00105000"
+    },
+    {
+      "lot_id": "15c7567c92bf",
+      "bucket_id": 283,
+      "profile_name": "lab0283_s351_w2_1005_1045_r2",
+      "strategy_id": "S351",
+      "occ_symbol": "MSTR260814C00100000",
+      "underlying": "MSTR",
+      "qty": 1,
+      "entry_cost": 3.0,
+      "entry_price": 0.03,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-14T14:17:30.634177+00:00",
+      "entry_order_id": "8af41822-3145-49ab-87dd-013c8fd68724"
+    },
+    {
+      "lot_id": "2d160cbdfafb",
+      "bucket_id": 282,
+      "profile_name": "lab0282_s351_w2_1005_1045_r1",
+      "strategy_id": "S351",
+      "occ_symbol": "MSTR260814C00100000",
+      "underlying": "MSTR",
+      "qty": 1,
+      "entry_cost": 3.0,
+      "entry_price": 0.03,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-14T14:17:30.672232+00:00",
+      "entry_order_id": "155f35ae-87bc-447c-bfce-f7a6ebf87aa8"
     }
   ],
   "pending_orders": [
@@ -950,6 +990,38 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
+    },
+    {
+      "order_id": "3940981f-0e24-491d-8924-0b43a6b67716",
+      "bucket_id": 96,
+      "strategy_id": "S211",
+      "occ_symbol": "SLB260821C00055000",
+      "underlying": "SLB",
+      "qty": 1,
+      "limit": 0.42,
+      "profile_name": "lab0096_s211_w2_1005_1045_r1",
+      "submitted": "2026-08-14",
+      "detail": "MA21 crossed above MA50",
+      "spread_frac": 0.17721518987341772,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "b017772a-d6f1-4cee-94ed-6e8f009fc950",
+      "bucket_id": 97,
+      "strategy_id": "S211",
+      "occ_symbol": "SLB260821C00055000",
+      "underlying": "SLB",
+      "qty": 1,
+      "limit": 0.42,
+      "profile_name": "lab0097_s211_w2_1005_1045_r2",
+      "submitted": "2026-08-14",
+      "detail": "MA21 crossed above MA50",
+      "spread_frac": 0.17721518987341772,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
   "pending_exits": [
@@ -1009,7 +1081,9 @@
     "b803": 69.0,
     "b802": 69.0,
     "b795": 51.0,
-    "b779": 69.0
+    "b779": 69.0,
+    "b283": 3.0,
+    "b282": 3.0
   },
   "session_date": "2026-08-14",
   "entries_locked": [
@@ -1056,7 +1130,11 @@
     "816|S405|2026-08-14",
     "817|S405|2026-08-14",
     "264|S403|2026-08-14",
-    "265|S403|2026-08-14"
+    "265|S403|2026-08-14",
+    "96|S211|2026-08-14",
+    "97|S211|2026-08-14",
+    "282|S351|2026-08-14",
+    "283|S351|2026-08-14"
   ],
   "processed_orders": [
     "12a192c7-0f3b-4cf3-8e48-bcc5183f4cfa",
@@ -1523,9 +1601,11 @@
     "92fba22c-d1c0-46ca-8c79-2ff829535755",
     "f98afddc-36a8-4414-8b75-5399b678c810",
     "53ee82af-3e74-4201-86e4-355a2f165466",
-    "247797c7-da60-4d27-8ac2-6622ae22120a"
+    "247797c7-da60-4d27-8ac2-6622ae22120a",
+    "8af41822-3145-49ab-87dd-013c8fd68724",
+    "155f35ae-87bc-447c-bfce-f7a6ebf87aa8"
   ],
-  "submitted_today": 44,
+  "submitted_today": 48,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-08-14"
 }
