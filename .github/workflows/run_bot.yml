@@ -102,7 +102,7 @@ jobs:
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
           LIVE_OPTIONS_SHARE: "0.50"
           LIVE_OPTIONS_MAX_POS: "1"
-          LIVE_OPTIONS_ALLOW: "S210,S406,S218,S350,S404,S397"
+          LIVE_OPTIONS_ALLOW: "S404,S406,S218,S210"
         run: |
           set +e
           set -o pipefail

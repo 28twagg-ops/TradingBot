@@ -5,7 +5,8 @@ options_live_micro.py -- LIVE options sleeve on the rubber-band brokerage accoun
 NOT the 1024-bucket paper lab. Account split is the only live-specific cap:
   - 50% of equity reserved for options (LIVE_OPTIONS_SHARE)
   - 1 open contract (same as paper max_contracts)
-  - allow-list of paper KEEP names
+  - allow-list of paper KEEP names, ranked by CLEAN win rate
+  - one strategy per signal family (only one GapDown: S404, not S397/S350 too)
 
 Trade mechanics copy the paper baseline bucket (not extra live rules):
   buy ask-0.01, max_premium $75, OI>=100, spread<=25%, TP +50% / SL -50%,
@@ -62,15 +63,24 @@ BUY_LIMIT_OFFSET = -0.01
 SELL_LIMIT_OFFSET = -0.01
 MIN_OPEN_INTEREST = 100
 MAX_SPREAD_FRAC = 0.25
+# CLEAN win-rate order (Aug 17). One name per signal family so GapDown is
+# not double-counted (S404 OTM2 100% win; dropped S397 ITM1 and S350 0DTE).
 ALLOW = [
     s.strip()
     for s in os.getenv(
         "LIVE_OPTIONS_ALLOW",
-        "S210,S406,S218,S350,S404,S397",
+        "S404,S406,S218,S210",
     ).split(",")
     if s.strip()
 ]
 PRIORITY = {sid: i for i, sid in enumerate(ALLOW)}
+SIGNAL_FAMILY = {
+    "S404": "gapdown", "S397": "gapdown", "S350": "gapdown",
+    "S398": "gapdown", "S165": "gapdown",
+    "S406": "rubberband", "S174": "rubberband",
+    "S218": "bb",
+    "S210": "ma",
+}
 
 ROOT = Path(__file__).resolve().parent.parent / "logs" / "options_live_micro"
 STATE_PATH = ROOT / "state.json"
@@ -396,6 +406,20 @@ def ensure_stops(trade, state: dict) -> None:
                 rl(f"LIVE PROT STOP failed {occ}: {exc2 or exc}")
 
 
+def _dedupe_hits(hits: list) -> list:
+    """One hit per (signal family, symbol). Keeps the higher-win-rate strategy."""
+    best: dict = {}
+    for h in hits:
+        fam = SIGNAL_FAMILY.get(h.strategy_id, h.strategy_id)
+        key = (fam, h.symbol)
+        prev = best.get(key)
+        if prev is None or PRIORITY.get(h.strategy_id, 99) < PRIORITY.get(prev.strategy_id, 99):
+            best[key] = h
+    out = list(best.values())
+    out.sort(key=lambda h: (PRIORITY.get(h.strategy_id, 99), h.symbol))
+    return out
+
+
 def scan_hits(stock) -> list:
     strats = _allow_strats()
     if not strats:
@@ -425,7 +449,7 @@ def scan_hits(stock) -> list:
         except Exception:
             continue
     hits.sort(key=lambda h: PRIORITY.get(h.strategy_id, 99))
-    return hits
+    return _dedupe_hits(hits)
 
 
 def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
