@@ -1,3 +1,29 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=48 paper_keys=yes dry_run=False
+  alpaca positions=18
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-08-17T11:50:51.241189-04:00 ===
+
+[Run context]
+2026-08-17 11:50:51,335 WARNING paper get_account failed attempt 1/3: {"code":50010000,"message":"internal server error occurred"}
+2026-08-17 11:51:01,380 WARNING paper get_account failed attempt 2/3: {"code":50010000,"message":"internal server error occurred"}
+2026-08-17 11:51:11,407 ERROR paper get_account failed after 3 attempts: {"code":50010000,"message":"internal server error occurred"}
+FATAL: paper API auth failed. This bot requires ALPACA_PAPER_KEY and ALPACA_PAPER_SECRET (not the live equity-bot keys). Detail: {"code":50010000,"message":"internal server error occurred"}
+elapsed=20.3s
+STATUS: options_morning_bot auth failed (PAPER) elapsed=20.3s. run=#7246 https://github.com/28twagg-ops/TradingBot/actions/runs/32043514071
+Evaluation complete: 100 strategies evaluated, 0 killed, 0 promote candidates.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-17_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-17_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+STALE WARNING: 1 bucket(s) with open lots and last_entry >5d
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-17_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-17_strategy_selection.csv
+Summary: keep=0 watch=79 drop=26
+Orphan rate: 13.4% (345/2582) ALERT
 # Options signal frequency
 
 _Generated 2026-08-17T11:51:16.127538_
@@ -100,3 +126,29 @@ Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:
 
 - Pre-router-fix (before 2026-07-17 commit `56660c9e`): S163/S166 were starved — expect zeros until a post-fix entry-window gap-down day.
 - Controlled layout places one ENTRY per matching bucket×strategy; raw counts inflate, unique underlyings do not.
+
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/signal_frequency.md
+## Ledger health — 2026-08-17
+| Check                       | Count | Status |
+|-----------------------------|------:|--------|
+| Current stuck (state)       |     0 | OK |
+| Orphaned lots (post-stable) |   822 | WARN | <<<
+| Missing exit records (post) |   822 | WARN | <<<
+| State/ledger mismatches     |     6 | WARN | <<<
+| Total open lots             |    48 | INFO |
+| Total closed lots           |  1770 | INFO |
+| Pre-cutoff audit debt       |     0 | INFO |
+| Transition audit debt       |   744 | INFO |
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_health.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-17_data_quality.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-17_data_quality.csv
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/latest_data_quality.json
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/latest_data_quality_snippet.md
+CLEAN n=821 med=-47.5% | TAINTED n=1761 med=-39.3% | KEEP-only n=294 med=+37.5% | KILL=16 KEEP=10
+Wrote /home/runner/work/TradingBot/TradingBot/logs/dashboard.html
+equity=467.92 router=CONFIRMED leaderboard_rows=105
+Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
+| 1 | MomReversal | 14 | 43% | +0.39% | -0.69% | -1.92% | 1.95 | 1.6d | $+3.40 | WATCH |
+| 2 | unknown | 32 | 19% | -0.03% | -0.59% | -1.27% | 1.44 | 0.0d | $+0.29 | ACTIVE |
