@@ -14011,3 +14011,139 @@ Buckets:      1024
 ```
 
 ---
+
+## Run 20260817T194128Z
+
+- UTC timestamp: `20260817T194128Z`
+- GitHub run: [#7284](https://github.com/28twagg-ops/TradingBot/actions/runs/32061609376)
+- Run id: `32061609376`
+- Live bot: exit=`0`, duration=`216s`
+- Live options: exit=`0`, duration=`1s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-17T14:36:25.682949-04:00","date":"2026-08-17","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":276.6,"phases_s":{"reconcile":20.55,"cancel":0.12,"manage":10.45,"protective_stops":3.94},"signals":0,"placed":0,"equity":null,"open_positions":14,"pending_orders":0,"open_lots":45,"submitted_today":0,"filled_today":0,"unattributed_contracts":1,"top_signals":[],"github_run":"7272","github_run_id":"32055605614","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1761,"win":33.05,"med":-39.29,"avg":12.19,"pnl":-9205.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+19:41:29  INFO      Mode: evening_prep
+19:41:29  INFO        Universe cache hit: 903 tickers (tickers_2026-08-17.json)
+19:41:31  INFO        [prep_universe] 40/903 (40 valid)
+19:41:32  INFO        [prep_universe] 80/903 (80 valid)
+19:41:33  INFO        [prep_universe] 120/903 (120 valid)
+19:41:35  INFO        [prep_universe] 160/903 (160 valid)
+19:41:36  INFO        [prep_universe] 200/903 (199 valid)
+19:41:44  INFO        [prep_universe] 240/903 (238 valid)
+19:41:54  INFO        [prep_universe] 280/903 (278 valid)
+19:42:08  INFO        [prep_universe] 320/903 (318 valid)
+19:42:18  INFO        [prep_universe] 360/903 (358 valid)
+19:42:31  INFO        [prep_universe] 400/903 (397 valid)
+19:42:42  INFO        [prep_universe] 440/903 (437 valid)
+19:42:55  INFO        [prep_universe] 480/903 (477 valid)
+19:43:08  INFO        [prep_universe] 520/903 (517 valid)
+19:43:19  INFO        [prep_universe] 560/903 (557 valid)
+19:43:32  INFO        [prep_universe] 600/903 (597 valid)
+19:43:42  INFO        [prep_universe] 640/903 (637 valid)
+19:43:55  INFO        [prep_universe] 680/903 (677 valid)
+19:44:06  INFO        [prep_universe] 720/903 (717 valid)
+19:44:19  INFO        [prep_universe] 760/903 (757 valid)
+19:44:32  INFO        [prep_universe] 800/903 (797 valid)
+19:44:42  INFO        [prep_universe] 840/903 (836 valid)
+19:44:55  INFO        [prep_universe] 880/903 (876 valid)
+19:45:02  INFO        [prep_universe] 903/903 (899 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      EVENING_PREP|
+|  Time                                                         19:41 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $467.79|
++========================================================================+
+
++========================================================================+
+|                              EVENING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/evening_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       0|
+|  Invested                                                         $0.00|
+|  Open P&L                                                        $+0.00|
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                0|
+|                                                                        |
+|  No open sell orders.                                                  |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      0|
+|  Signal candidates                                                   31|
+|  Universe scanned                                                   903|
++========================================================================+
+```
+
+### Live options micro full output
+
+```text
+=== options_live_micro LIVE 2026-08-17T15:45:05.457021-04:00 share=50% ===
+2026-08-17 15:45:05,457 INFO === options_live_micro LIVE 2026-08-17T15:45:05.457021-04:00 share=50% ===
+Live account equity $467.79 cash $467.79 #225458845 options_level=3
+2026-08-17 15:45:05,559 INFO Live account equity $467.79 cash $467.79 #225458845 options_level=3
+Live micro: manage/exits only
+2026-08-17 15:45:05,644 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-08-17 15:45:05,673 INFO Live micro done. open_options=0 lots=0
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=45 paper_keys=yes dry_run=False
+  alpaca positions=17
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-08-17T15:45:07.558960-04:00 ===
+
+[Run context]
+2026-08-17 15:45:07,700 WARNING paper get_account failed attempt 1/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 8s
+2026-08-17 15:45:15,748 WARNING paper get_account failed attempt 2/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 16s
+```
+
+---
