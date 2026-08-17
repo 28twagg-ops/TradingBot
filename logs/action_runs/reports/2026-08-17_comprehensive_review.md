@@ -1874,3 +1874,143 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ### Options bot full output
 
 ```text
+
+## Run 20260817T134115Z
+
+- UTC timestamp: `20260817T134115Z`
+- GitHub run: [#7223](https://github.com/28twagg-ops/TradingBot/actions/runs/32036190083)
+- Run id: `32036190083`
+- Live bot: exit=`0`, duration=`217s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-17T09:44:54.553615-04:00","date":"2026-08-17","mode":"auth_failed","header":"FATAL auth failed (wrong keys?)","elapsed_s":20.5,"phases_s":{},"signals":0,"placed":0,"equity":null,"open_positions":0,"pending_orders":0,"open_lots":51,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"7223","github_run_id":"32036190083","status":"ok"}
+```
+
+### Live bot full output
+
+```text
+13:41:16  INFO      Mode: morning_prep
+13:41:17  INFO        [prep_positions] 3/3 (3 valid)
+13:41:17  INFO        Universe cache hit: 903 tickers (tickers_2026-08-17.json)
+13:41:18  INFO        [prep_universe] 40/900 (40 valid)
+13:41:22  INFO        [prep_universe] 80/900 (80 valid)
+13:41:23  INFO        [prep_universe] 120/900 (120 valid)
+13:41:24  INFO        [prep_universe] 160/900 (160 valid)
+13:41:26  INFO        [prep_universe] 200/900 (199 valid)
+13:41:33  INFO        [prep_universe] 240/900 (238 valid)
+13:41:43  INFO        [prep_universe] 280/900 (278 valid)
+13:41:57  INFO        [prep_universe] 320/900 (318 valid)
+13:42:07  INFO        [prep_universe] 360/900 (358 valid)
+13:42:21  INFO        [prep_universe] 400/900 (397 valid)
+13:42:31  INFO        [prep_universe] 440/900 (437 valid)
+13:42:44  INFO        [prep_universe] 480/900 (477 valid)
+13:42:55  INFO        [prep_universe] 520/900 (517 valid)
+13:43:08  INFO        [prep_universe] 560/900 (557 valid)
+13:43:18  INFO        [prep_universe] 600/900 (597 valid)
+13:43:32  INFO        [prep_universe] 640/900 (637 valid)
+13:43:45  INFO        [prep_universe] 680/900 (677 valid)
+13:43:55  INFO        [prep_universe] 720/900 (717 valid)
+13:44:09  INFO        [prep_universe] 760/900 (757 valid)
+13:44:19  INFO        [prep_universe] 800/900 (797 valid)
+13:44:32  INFO        [prep_universe] 840/900 (836 valid)
+13:44:43  INFO        [prep_universe] 880/900 (876 valid)
+13:44:49  INFO        [prep_universe] 900/900 (896 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         13:41 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $468.27|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       3|
+|  Invested                                                       $234.89|
+|  Open P&L                                                        $+2.82|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ACGL     Pullback50      $70.15     $97.48   $99.18   +1.7%   $+1.20  |
+|  ADI      Pullback50      $70.47     $391.34  $393.57  +0.6%   $+0.40  |
+|  AFL      Pullback50      $94.27     $120.39  $121.96  +1.3%   $+1.22  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                0|
+|                                                                        |
+|  No open sell orders.                                                  |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      3|
+|  Signal candidates                                                   37|
+|  Universe scanned                                                   900|
++========================================================================+
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=56 paper_keys=yes dry_run=False
+  alpaca positions=20
+  FLAG b433|S366|ee74ae12 missing from Alpaca
+  FLAG b432|S366|25078c04 missing from Alpaca
+  FLAG b435|S366|b7b58e7b missing from Alpaca
+  FLAG b434|S366|d629c93f missing from Alpaca
+  FLAG b113|S212|4afafe62 missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-08-17T09:44:54.553615-04:00 ===
+
+[Run context]
+2026-08-17 09:44:54,748 WARNING paper get_account failed attempt 1/3: {"code":50010000,"message":"internal server error occurred"}
+2026-08-17 09:45:04,826 WARNING paper get_account failed attempt 2/3: {"code":50010000,"message":"internal server error occurred"}
+2026-08-17 09:45:14,939 ERROR paper get_account failed after 3 attempts: {"code":50010000,"message":"internal server error occurred"}
+FATAL: paper API auth failed. This bot requires ALPACA_PAPER_KEY and ALPACA_PAPER_SECRET (not the live equity-bot keys). Detail: {"code":50010000,"message":"internal server error occurred"}
+elapsed=20.5s
+STATUS: options_morning_bot auth failed (PAPER) elapsed=20.5s. run=#7223 https://github.com/28twagg-ops/TradingBot/actions/runs/32036190083
+Evaluation complete: 100 strategies evaluated, 0 killed, 0 promote candidates.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-17_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-17_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+STALE WARNING: 1 bucket(s) with open lots and last_entry >5d
+```
+
+---

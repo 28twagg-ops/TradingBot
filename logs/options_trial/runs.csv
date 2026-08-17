@@ -3169,3 +3169,4 @@ timestamp,date,mode,elapsed_s,signals,placed,equity,reconcile_s,cancel_s,manage_
 2026-08-17 09:16:00,2026-08-17,after_hours,20.9,0,0,,,,,,
 2026-08-17 09:20:57,2026-08-17,after_hours,20.9,0,0,,,,,,
 2026-08-17 09:25:58,2026-08-17,after_hours,20.7,0,0,,,,,,
+2026-08-17 09:44:54,2026-08-17,auth_failed,20.5,0,0,,,,,,
