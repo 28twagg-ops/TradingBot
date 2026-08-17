@@ -1115,3 +1115,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-17 13:47:10,2026-08-17,SELL,AFL,Pullback50,122.23,94.48,1.55,1.44,5,max_hold 5d (+1.5%),bull,468.64
 2026-08-17 13:47:31,2026-08-17,SELL,ACGL,Pullback50,99.26,70.21,1.9,1.31,5,max_hold 5d (+1.9%),bull,468.59
 2026-08-17 13:56:45,2026-08-17,SELL,AMD,Pullback50,512.06,70.24,-0.05,-0.04,0,midline (-0.1%),bull,468.5
+2026-08-17 16:00:51,2026-08-17,SELL,AXP,Pullback50,338.66,69.89,-0.56,-0.39,0,stop_loss (-0.6%),bull,467.84
