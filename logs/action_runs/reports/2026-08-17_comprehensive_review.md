@@ -16711,3 +16711,129 @@ WARN: get_account failed ({"code":50010000,"message":"internal server error occu
 ### Options bot full output
 
 ```text
+
+## Run 20260817T220613Z
+
+- UTC timestamp: `20260817T220613Z`
+- GitHub run: [#7313](https://github.com/28twagg-ops/TradingBot/actions/runs/32074337902)
+- Run id: `32074337902`
+- Live bot: exit=`0`, duration=`1s`
+- Live options: exit=`0`, duration=`1s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-17T14:36:25.682949-04:00","date":"2026-08-17","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":276.6,"phases_s":{"reconcile":20.55,"cancel":0.12,"manage":10.45,"protective_stops":3.94},"signals":0,"placed":0,"equity":null,"open_positions":14,"pending_orders":0,"open_lots":45,"submitted_today":0,"filled_today":0,"unattributed_contracts":1,"top_signals":[],"github_run":"7272","github_run_id":"32055605614","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1761,"win":33.05,"med":-39.29,"avg":12.19,"pnl":-9205.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+22:06:14  INFO      Mode: ext_exits
+22:06:14  INFO        Daily log -> logs/daily/2026-08-17.md
+22:06:14  INFO        Daily log reconciled -> logs/daily/2026-08-17.md (8 ledger rows)
+22:06:14  INFO        Daily log -> logs/daily/2026-08-17.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                         EXT_EXITS|
+|  Time                                                         22:06 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $467.81|
++========================================================================+
+
++========================================================================+
+|                       EXIT CHECK [EXTENDED HRS]                        |
++========================================================================+
+|  Exit log~  stop-0.5% / 3d max  (midline skipped — close already final)|
++------------------------------------------------------------------------+
+|  AES  P&L +0.1%  $+0.10          HOLDING until 9:35am scan (Pullback50)|
++========================================================================+
+
++========================================================================+
+|                          EXTENDED HOURS SELLS                          |
++========================================================================+
+|                                                                        |
+|  No extended-hours sells this run.                                     |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                         ext_exits|
+|  Candidates                                                           1|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro full output
+
+```text
+=== options_live_micro LIVE 2026-08-17T18:06:15.649884-04:00 share=50% ===
+2026-08-17 18:06:15,649 INFO === options_live_micro LIVE 2026-08-17T18:06:15.649884-04:00 share=50% ===
+Live account equity $467.81 cash $397.55 #225458845 options_level=3
+2026-08-17 18:06:15,909 INFO Live account equity $467.81 cash $397.55 #225458845 options_level=3
+Live micro done. open_options=0 lots=0
+2026-08-17 18:06:15,960 INFO Live micro done. open_options=0 lots=0
+```
+
+### Options bot full output
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=45 paper_keys=yes dry_run=False
+  alpaca positions=17
+options_reconcile: done
+Layout: controlled:1024:lab0000_s200_w1_0928_1005_r1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1024:lab0000_s200_w1_0928_1005_r1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1024
+=== options_morning_bot (PAPER) 2026-08-17T18:06:17.941790-04:00 ===
+
+[Run context]
+After hours (18:06 ET) — exit summary only.
+2026-08-17 18:06:18,021 WARNING paper get_account failed attempt 1/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 8s
+2026-08-17 18:06:26,035 WARNING paper get_account failed attempt 2/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 16s
+2026-08-17 18:06:42,046 WARNING paper get_account failed attempt 3/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 24s
+2026-08-17 18:07:06,058 WARNING paper get_account failed attempt 4/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 32s
+2026-08-17 18:07:38,070 WARNING paper get_account failed attempt 5/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 40s
+2026-08-17 18:08:18,083 ERROR paper get_account failed after 6 attempts: {"code":50010000,"message":"internal server error occurred"}
+WARN: get_account failed ({"code":50010000,"message":"internal server error occurred"}) but positions OK (n=17). Keys are fine; Alpaca account endpoint is flaky. Continuing manage/exits; skipping new entries until equity is readable.
+2026-08-17 18:08:18,115 WARNING paper get_account failed attempt 1/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 8s
+2026-08-17 18:08:26,126 WARNING paper get_account failed attempt 2/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 16s
+2026-08-17 18:08:42,137 WARNING paper get_account failed attempt 3/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 24s
+2026-08-17 18:09:06,149 WARNING paper get_account failed attempt 4/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 32s
+2026-08-17 18:09:38,161 WARNING paper get_account failed attempt 5/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 40s
+2026-08-17 18:10:18,172 ERROR paper get_account failed after 6 attempts: {"code":50010000,"message":"internal server error occurred"}
+2026-08-17 18:10:18,192 WARNING lab get_account failed attempt 1/3: {"code":50010000,"message":"internal server error occurred"}
+```
+
+---
