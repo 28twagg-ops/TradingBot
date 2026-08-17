@@ -1,0 +1,48 @@
+15:00:56  INFO      Mode: exits
+15:00:56  INFO        Daily log -> logs/daily/2026-08-17.md
+15:00:56  INFO        Daily log reconciled -> logs/daily/2026-08-17.md (4 ledger rows)
+15:00:56  INFO        place_all_stops: checking 2 positions...
+15:00:56  INFO        STOP skipped AFL: fractional (0.5761 shares) — software exit will handle it
+15:00:56  INFO        STOP skipped AXP: fractional (0.2064 shares) — software exit will handle it
+15:00:57  INFO        [positions] 2/2 (2 valid)
+15:00:57  INFO        Daily log -> logs/daily/2026-08-17.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:00 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $468.20|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  AXP  P&L -0.3%  $-0.20                                            HOLD|
+|  AFL  P&L -0.2%  $-0.15                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
