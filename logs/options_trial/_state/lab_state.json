@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "0541fdcd21df",
-      "bucket_id": 80,
-      "profile_name": "lab0080_s210_w1_0928_1005_r1",
-      "strategy_id": "S210",
-      "occ_symbol": "DKNG260821C00027000",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 31.0,
-      "entry_price": 0.31,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-13T14:07:10.552107+00:00",
-      "entry_order_id": "4a1cc1ba-7900-4c55-bd49-7bf0e204888e"
-    },
-    {
       "lot_id": "7eae09da93c5",
       "bucket_id": 449,
       "profile_name": "lab0449_s367_w2_1005_1045_r2",
@@ -1036,7 +1016,6 @@
     }
   ],
   "bucket_open_premium": {
-    "b80": 31.0,
     "b449": 56.00000000000001,
     "b448": 56.00000000000001,
     "b112": 41.0,
