@@ -122,6 +122,10 @@ jobs:
             python scripts/options_reconcile.py || echo "reconcile failed (non-fatal)"
             python scripts/init_options_trial.py
             python scripts/options_morning_bot.py
+            opt_rc=$?
+            if [ "$opt_rc" -ne 0 ]; then
+              echo "WARNING: options_morning_bot exited $opt_rc (workflow still continues)"
+            fi
             python scripts/options_strategy_lab.py --evaluate || echo "strategy eval failed (non-fatal)"
             python scripts/options_daily_bucket_report.py
             python scripts/options_strategy_selection_report.py

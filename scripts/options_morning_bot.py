@@ -400,18 +400,48 @@ def _console_bucket_leaderboard(state: LabState, *, top_n: int = 4) -> None:
 #  Clients
 # --------------------------------------------------------------------------- #
 
-def get_paper_account_safe(client, retries=3, wait=10):
-    """Retry wrapper for paper Alpaca get_account (mirrors rubber band helper)."""
+def _is_transient_alpaca_error(exc: Exception) -> bool:
+    msg = str(exc).lower()
+    return any(
+        tok in msg
+        for tok in (
+            "50010000",
+            "internal server error",
+            "502",
+            "503",
+            "504",
+            "timeout",
+            "timed out",
+            "temporarily unavailable",
+            "connection",
+        )
+    ) and "401" not in msg and "unauthorized" not in msg and "forbidden" not in msg
+
+
+def get_paper_account_safe(client, retries=6, wait=8):
+    """Retry wrapper for paper Alpaca get_account. Alpaca 500s are common and transient."""
+    last = None
     for i in range(retries):
         try:
             return client.get_account()
         except Exception as e:
+            last = e
+            transient = _is_transient_alpaca_error(e)
+            if i < retries - 1 and transient:
+                sleep_s = wait * (i + 1)
+                log.warning(
+                    "paper get_account failed attempt %s/%s (transient): %s; sleep %ss",
+                    i + 1, retries, e, sleep_s,
+                )
+                time.sleep(sleep_s)
+                continue
             if i < retries - 1:
                 log.warning("paper get_account failed attempt %s/%s: %s", i + 1, retries, e)
                 time.sleep(wait)
             else:
                 log.error("paper get_account failed after %s attempts: %s", retries, e)
                 raise
+    raise last  # pragma: no cover
 
 
 def get_clients():
@@ -423,17 +453,36 @@ def get_clients():
 
 
 def verify_paper_auth(trade) -> bool:
-    """Fail fast with a clear log if paper keys are wrong or missing."""
+    """Confirm paper keys work. get_account 500s are NOT wrong keys — fall back to positions."""
     try:
         acct = get_paper_account_safe(trade)
         rl(f"Paper auth OK — equity ${float(acct.equity):.2f}, "
            f"account {getattr(acct, 'account_number', '?')}")
         return True
     except Exception as exc:
-        rl("FATAL: paper API auth failed. This bot requires ALPACA_PAPER_KEY and "
-           "ALPACA_PAPER_SECRET (not the live equity-bot keys). "
-           f"Detail: {exc}")
-        return False
+        # Reconcile already listed positions successfully on 2026-08-17 while
+        # get_account returned 50010000. Treat that as degraded, not fatal.
+        try:
+            pos = list(trade.get_all_positions() or [])
+            rl(
+                f"WARN: get_account failed ({exc}) but positions OK "
+                f"(n={len(pos)}). Keys are fine; Alpaca account endpoint is flaky. "
+                "Continuing manage/exits; skipping new entries until equity is readable."
+            )
+            return True
+        except Exception as exc2:
+            if _is_transient_alpaca_error(exc):
+                rl(
+                    "FATAL: Alpaca paper API is down (not wrong keys). "
+                    f"get_account={exc} | positions={exc2}"
+                )
+            else:
+                rl(
+                    "FATAL: paper API auth failed. Check ALPACA_PAPER_KEY / "
+                    "ALPACA_PAPER_SECRET (not the live equity-bot keys). "
+                    f"Detail: {exc}"
+                )
+            return False
 
 def _is_option_symbol(sym: str) -> bool:
     return bool(OCC_RE.match(sym or ""))
@@ -1663,7 +1712,12 @@ def run() -> int:
     placed = 0
     signals_n = 0
     top_signals: list[str] = []
-    if _hm_between(now, ENTRY_START, ENTRY_END):
+    if _hm_between(now, ENTRY_START, ENTRY_END) and equity is None:
+        section("Scan + entries")
+        rl("Skipping new entries: paper get_account unavailable (Alpaca 500). Manage/exits still ran.")
+        header = "manage-only (no equity snapshot)"
+        mode = "manage-only"
+    elif _hm_between(now, ENTRY_START, ENTRY_END):
         section("Scan + entries")
         universe = get_universe()
         strat_ids = ", ".join(s.id for s in PAPER_STRATEGIES)
