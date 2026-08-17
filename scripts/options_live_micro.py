@@ -63,8 +63,7 @@ BUY_LIMIT_OFFSET = -0.01
 SELL_LIMIT_OFFSET = -0.01
 MIN_OPEN_INTEREST = 100
 MAX_SPREAD_FRAC = 0.25
-# CLEAN win-rate order (Aug 17). One name per signal family so GapDown is
-# not double-counted (S404 OTM2 100% win; dropped S397 ITM1 and S350 0DTE).
+# Membership list. Trade order is CLEAN win rate (then median), not this string order.
 ALLOW = [
     s.strip()
     for s in os.getenv(
@@ -73,7 +72,15 @@ ALLOW = [
     ).split(",")
     if s.strip()
 ]
-PRIORITY = {sid: i for i, sid in enumerate(ALLOW)}
+# CLEAN 2026-08-17: (win%, median%). Live always tries higher win first.
+CLEAN_RANK = {
+    "S404": (100.0, 80.1),
+    "S397": (100.0, 71.8),
+    "S406": (56.2, 58.3),
+    "S218": (55.6, 48.9),
+    "S210": (55.0, 46.6),
+    "S350": (53.8, 53.3),
+}
 SIGNAL_FAMILY = {
     "S404": "gapdown", "S397": "gapdown", "S350": "gapdown",
     "S398": "gapdown", "S165": "gapdown",
@@ -145,6 +152,11 @@ def append_ledger(row: dict) -> None:
         w.writerow(full)
 
 
+def _win_key(sid: str) -> tuple:
+    win, med = CLEAN_RANK.get(sid, (0.0, -999.0))
+    return (-win, -med, sid)
+
+
 def _strat(sid: str):
     for s in PAPER_STRATEGIES:
         if s.id == sid:
@@ -155,12 +167,13 @@ def _strat(sid: str):
 def _allow_strats() -> list:
     seen: set[str] = set()
     out = []
+    allow = set(ALLOW)
     for s in PAPER_STRATEGIES:
-        if s.id not in PRIORITY or s.id in seen:
+        if s.id not in allow or s.id in seen:
             continue
         seen.add(s.id)
         out.append(s)
-    out.sort(key=lambda s: PRIORITY.get(s.id, 99))
+    out.sort(key=lambda s: _win_key(s.id))
     return out
 
 
@@ -413,10 +426,10 @@ def _dedupe_hits(hits: list) -> list:
         fam = SIGNAL_FAMILY.get(h.strategy_id, h.strategy_id)
         key = (fam, h.symbol)
         prev = best.get(key)
-        if prev is None or PRIORITY.get(h.strategy_id, 99) < PRIORITY.get(prev.strategy_id, 99):
+        if prev is None or _win_key(h.strategy_id) < _win_key(prev.strategy_id):
             best[key] = h
     out = list(best.values())
-    out.sort(key=lambda h: (PRIORITY.get(h.strategy_id, 99), h.symbol))
+    out.sort(key=lambda h: (_win_key(h.strategy_id), h.symbol))
     return out
 
 
@@ -448,7 +461,7 @@ def scan_hits(stock) -> list:
                     hits.append(hit)
         except Exception:
             continue
-    hits.sort(key=lambda h: PRIORITY.get(h.strategy_id, 99))
+    hits.sort(key=lambda h: _win_key(h.strategy_id))
     return _dedupe_hits(hits)
 
 
@@ -465,12 +478,17 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
     room = min(max(0.0, cash), max(0.0, sleeve - deployed))
     max_prem = min(PAPER_MAX_PREMIUM, room)
     allow = [s.id for s in _allow_strats()]
+    rank_txt = ", ".join(
+        f"{sid} {CLEAN_RANK.get(sid, (0, 0))[0]:.0f}%win"
+        for sid in allow
+    )
     rl(
         f"Live micro sleeve ${sleeve:.0f} ({SHARE:.0%} of ${equity:.0f}) "
         f"deployed ${deployed:.0f} max_prem ${max_prem:.0f} "
         f"(paper baseline ${PAPER_MAX_PREMIUM:.0f} / tp={TAKE_PROFIT:+.0%} "
-        f"sl={STOP_LOSS:+.0%}) allow={','.join(allow)}"
+        f"sl={STOP_LOSS:+.0%})"
     )
+    rl(f"Live micro entry order (CLEAN win): {rank_txt}")
     if max_prem <= 0:
         rl("Live micro: no cash/sleeve room -- skip entries")
         return 0
@@ -482,10 +500,14 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
     for hit in hits:
         if placed or open_count(trade, state) >= MAX_POS:
             break
+        win, med = CLEAN_RANK.get(hit.strategy_id, (0.0, 0.0))
+        rl(f"  try {hit.strategy_id} {win:.0f}%win/{med:+.0f}%med {hit.symbol}")
         arm = make_arm(hit.strategy_id, sleeve, max_prem)
         if not arm:
             continue
         st = _strat(hit.strategy_id)
+        if not st:
+            continue
         cand = om._pick_option_from_chain(
             opt, ref, hit.symbol, hit.price,
             st.dte_min, st.dte_max, st.dte_target, arm,
@@ -524,7 +546,7 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
                 "order_id": str(o.id), "reason": hit.detail,
             })
             rl(
-                f"LIVE BUY {hit.strategy_id} {hit.symbol} {cand['symbol']} "
+                f"LIVE BUY {hit.strategy_id} {win:.0f}%win {hit.symbol} {cand['symbol']} "
                 f"limit={limit:.2f} ask={cand['ask']:.2f} cost=${cand['cost']:.0f} id={o.id}"
             )
             placed = 1
@@ -552,8 +574,13 @@ def run() -> int:
         acct = trade.get_account()
         equity = float(acct.equity)
         cash = float(acct.cash)
+        opt_lvl = (
+            getattr(acct, "options_trading_level", None)
+            or getattr(acct, "options_approved_level", None)
+            or "?"
+        )
         rl(f"Live account equity ${equity:.2f} cash ${cash:.2f} "
-           f"#{getattr(acct, 'account_number', '?')}")
+           f"#{getattr(acct, 'account_number', '?')} options_level={opt_lvl}")
     except Exception as exc:
         rl(f"FATAL live get_account: {exc}")
         return 0

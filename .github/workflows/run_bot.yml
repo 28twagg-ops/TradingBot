@@ -94,7 +94,9 @@ jobs:
           exit 0
 
       # Live options micro-sleeve: 50% of the rubber-band brokerage account.
-      # Allow-list KEEP names only. Paper 1024-bucket lab stays PAPER below.
+      # LIVE_OPTIONS_ALLOW is membership only; options_live_micro.py always
+      # tries higher CLEAN win-rate names first (S404 > S406 > S218 > S210).
+      # Paper 1024-bucket lab stays PAPER below.
       - name: Run live options micro-sleeve (LIVE, 50% equity)
         continue-on-error: true
         env:
