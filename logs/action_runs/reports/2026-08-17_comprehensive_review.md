@@ -2014,3 +2014,67 @@ STALE WARNING: 1 bucket(s) with open lots and last_entry >5d
 ```
 
 ---
+
+## Run 20260817T134618Z
+
+- UTC timestamp: `20260817T134618Z`
+- GitHub run: [#7224](https://github.com/28twagg-ops/TradingBot/actions/runs/32036523991)
+- Run id: `32036523991`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-17T09:25:58.605711-04:00","date":"2026-08-17","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":20.7,"phases_s":{},"signals":0,"placed":0,"equity":null,"open_positions":0,"pending_orders":0,"open_lots":56,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"7220","github_run_id":"32034996116","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1761,"win":33.05,"med":-39.29,"avg":12.19,"pnl":-9205.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+13:46:19  INFO      Mode: morning_scan
+13:46:20  INFO        [positions] 3/3 (3 valid)
+13:46:20  INFO        SELL LIMIT ADI  qty=0.179051464  limit=$393.54  id=fc76803f-f888-47e4-ad73-31fd3b6b65b8
+13:46:50  INFO        SELL LIMIT filled ADI (confirmed by position check)
+13:46:50  INFO        TX logged: SELL ADI  P&L 0.76%
+13:46:50  INFO        SELL LIMIT AFL  qty=0.772917566  limit=$122.04  id=42a0b699-c33e-4ef8-9d96-483ae8f617ae
+13:47:10  INFO        SELL LIMIT filled AFL (confirmed by position check)
+13:47:10  INFO        TX logged: SELL AFL  P&L 1.55%
+13:47:11  INFO        SELL LIMIT ACGL  qty=0.707310067  limit=$99.13  id=cbcd0f58-a49b-49b6-a143-019d54e591b0
+13:47:31  INFO        SELL LIMIT filled ACGL (confirmed by position check)
+13:47:31  INFO        TX logged: SELL ACGL  P&L 1.9%
+13:47:31  INFO        Universe cache hit: 903 tickers (tickers_2026-08-17.json)
+13:47:31  INFO        [universe] 40/903 (40 valid)
+13:47:33  INFO        [universe] 80/903 (80 valid)
+13:47:34  INFO        [universe] 120/903 (120 valid)
+13:47:35  INFO        [universe] 160/903 (160 valid)
+13:47:37  INFO        [universe] 200/903 (199 valid)
+13:47:44  INFO        [universe] 240/903 (238 valid)
+13:47:57  INFO        [universe] 280/903 (278 valid)
+13:48:07  INFO        [universe] 320/903 (318 valid)
+13:48:20  INFO        [universe] 360/903 (358 valid)
+13:48:33  INFO        [universe] 400/903 (397 valid)
+13:48:43  INFO        [universe] 440/903 (437 valid)
+13:48:56  INFO        [universe] 480/903 (477 valid)
+13:49:09  INFO        [universe] 520/903 (517 valid)
+13:49:19  INFO        [universe] 560/903 (557 valid)
+13:49:32  INFO        [universe] 600/903 (597 valid)
+13:49:45  INFO        [universe] 640/903 (637 valid)
+13:49:55  INFO        [universe] 680/903 (677 valid)
+13:50:08  INFO        [universe] 720/903 (717 valid)
+```
+
+### Options bot full output
+
+```text
