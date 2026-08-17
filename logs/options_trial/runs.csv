@@ -3212,3 +3212,4 @@ timestamp,date,mode,elapsed_s,signals,placed,equity,reconcile_s,cancel_s,manage_
 2026-08-17 13:45:56,2026-08-17,auth_failed,20.2,0,0,,,,,,
 2026-08-17 13:55:57,2026-08-17,auth_failed,20.3,0,0,,,,,,
 2026-08-17 14:05:54,2026-08-17,manage-only,279.0,0,0,,20.56,0.12,13.08,,
+2026-08-17 14:16:03,2026-08-17,manage-only,282.5,0,0,,20.75,0.16,15.68,,
