@@ -2258,3 +2258,66 @@ STALE WARNING: 1 bucket(s) with open lots and last_entry >5d
 ### Options bot full output
 
 ```text
+
+## Run 20260817T135613Z
+
+- UTC timestamp: `20260817T135613Z`
+- GitHub run: [#7226](https://github.com/28twagg-ops/TradingBot/actions/runs/32037160818)
+- Run id: `32037160818`
+- Live bot: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-17T09:25:58.605711-04:00","date":"2026-08-17","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":20.7,"phases_s":{},"signals":0,"placed":0,"equity":null,"open_positions":0,"pending_orders":0,"open_lots":56,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"7220","github_run_id":"32034996116","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1761,"win":33.05,"med":-39.29,"avg":12.19,"pnl":-9205.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+13:56:14  INFO      Mode: morning_scan
+13:56:15  INFO        [positions] 3/3 (3 valid)
+13:56:15  INFO        SELL LIMIT AMD  qty=0.137177745  limit=$511.05  id=6f84c475-03b9-47e3-b9f0-698c70a91170
+13:56:45  INFO        SELL LIMIT filled AMD (confirmed by position check)
+13:56:45  INFO        TX logged: SELL AMD  P&L -0.05%
+13:56:45  INFO        Universe cache hit: 903 tickers (tickers_2026-08-17.json)
+13:56:46  INFO        [universe] 40/901 (40 valid)
+13:56:48  INFO        [universe] 80/901 (80 valid)
+13:56:49  INFO        [universe] 120/901 (120 valid)
+13:56:50  INFO        [universe] 160/901 (160 valid)
+13:56:52  INFO        [universe] 200/901 (199 valid)
+13:56:59  INFO        [universe] 240/901 (238 valid)
+13:57:12  INFO        [universe] 280/901 (278 valid)
+13:57:22  INFO        [universe] 320/901 (318 valid)
+13:57:35  INFO        [universe] 360/901 (358 valid)
+13:57:48  INFO        [universe] 400/901 (397 valid)
+13:57:59  INFO        [universe] 440/901 (437 valid)
+13:58:12  INFO        [universe] 480/901 (477 valid)
+13:58:25  INFO        [universe] 520/901 (517 valid)
+13:58:35  INFO        [universe] 560/901 (557 valid)
+13:58:48  INFO        [universe] 600/901 (597 valid)
+13:58:58  INFO        [universe] 640/901 (637 valid)
+13:59:11  INFO        [universe] 680/901 (677 valid)
+13:59:24  INFO        [universe] 720/901 (717 valid)
+13:59:34  INFO        [universe] 760/901 (757 valid)
+13:59:47  INFO        [universe] 800/901 (797 valid)
+14:00:00  INFO        [universe] 840/901 (836 valid)
+14:00:10  INFO        [universe] 880/901 (876 valid)
+14:00:17  INFO        [universe] 901/901 (897 valid)
+```
+
+### Options bot full output
+
+```text

@@ -1,0 +1,152 @@
+13:56:14  INFO      Mode: morning_scan
+13:56:15  INFO        [positions] 3/3 (3 valid)
+13:56:15  INFO        SELL LIMIT AMD  qty=0.137177745  limit=$511.05  id=6f84c475-03b9-47e3-b9f0-698c70a91170
+13:56:45  INFO        SELL LIMIT filled AMD (confirmed by position check)
+13:56:45  INFO        TX logged: SELL AMD  P&L -0.05%
+13:56:45  INFO        Universe cache hit: 903 tickers (tickers_2026-08-17.json)
+13:56:46  INFO        [universe] 40/901 (40 valid)
+13:56:48  INFO        [universe] 80/901 (80 valid)
+13:56:49  INFO        [universe] 120/901 (120 valid)
+13:56:50  INFO        [universe] 160/901 (160 valid)
+13:56:52  INFO        [universe] 200/901 (199 valid)
+13:56:59  INFO        [universe] 240/901 (238 valid)
+13:57:12  INFO        [universe] 280/901 (278 valid)
+13:57:22  INFO        [universe] 320/901 (318 valid)
+13:57:35  INFO        [universe] 360/901 (358 valid)
+13:57:48  INFO        [universe] 400/901 (397 valid)
+13:57:59  INFO        [universe] 440/901 (437 valid)
+13:58:12  INFO        [universe] 480/901 (477 valid)
+13:58:25  INFO        [universe] 520/901 (517 valid)
+13:58:35  INFO        [universe] 560/901 (557 valid)
+13:58:48  INFO        [universe] 600/901 (597 valid)
+13:58:58  INFO        [universe] 640/901 (637 valid)
+13:59:11  INFO        [universe] 680/901 (677 valid)
+13:59:24  INFO        [universe] 720/901 (717 valid)
+13:59:34  INFO        [universe] 760/901 (757 valid)
+13:59:47  INFO        [universe] 800/901 (797 valid)
+14:00:00  INFO        [universe] 840/901 (836 valid)
+14:00:10  INFO        [universe] 880/901 (876 valid)
+14:00:17  INFO        [universe] 901/901 (897 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $468.43|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-08-17|
+|  Universe                                                          both|
+|  Mo~  Aug: VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity                                                         $468.43|
+|  Cash                                                           $257.75|
+|  Reserve                                          $23.42  (always kept)|
+|  Available                                    $234.33  (for new trades)|
+|  Trade size             $70.26  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                           HOLDINGS  (3 open)                           |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AFL      Pullback50      $70.20     $122.00  $121.86  -0.1%   $-0.08  |
+|  AMD      Pullback50      $70.24     $512.33  $512.07  -0.1%   $-0.04  |
+|  AXP      Pullback50      $70.23     $340.56  $340.33  -0.1%   $-0.05  |
+|                                                                        |
+|  Total invested                                                 $210.68|
+|  Total open P&L                                                  $-0.16|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (56170.8m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AFL  P&L -0.1%  $-0.08                                            HOLD|
+|  AXP  P&L -0.1%  $-0.05                                            HOLD|
+|  AMD  P&L -0.1%  $-0.04                           EXIT: midline (-0.1%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  35                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  ADI      Pullback50      eq     $394.41  65.7   -2.38   50MA bounce (+|
+|  BXP      Pullback50      eq     $68.02   43.2   -1.81   50MA bounce (+|
+|  BG       Pullback50      eq     $114.20  44.1   -1.79   50MA bounce (-|
+|  CB       Pullback50      eq     $345.09  24.6   -1.99   50MA bounce (+|
+|  DE       Pullback50      eq     $606.89  36.4   -2.63   50MA bounce (+|
+|  ECL      Pullback50      eq     $274.50  35.8   -2.75   50MA bounce (+|
+|  ESS      Pullback50      eq     $287.24  41.5   -1.98   50MA bounce (-|
+|  FTV      Pullback50      eq     $61.39   37.4   -1.92   50MA bounce (+|
+|  GS       Pullback50      eq     $1046.~  53.3   -2.70   50MA bounce (-|
+|  HLT      Pullback50      eq     $328.78  55.5   -2.47   50MA bounce (-|
+|  LLY      Pullback50      eq     $1180.~  43.2   -1.92   50MA bounce (+|
+|  L        Pullback50      eq     $113.58  15.8   -2.70   50MA bounce (+|
+|  MRVL     Pullback50      eq     $234.90  75.3   -2.40   50MA bounce (-|
+|  PSA      Pullback50      eq     $323.33  41.1   -1.52   50MA bounce (+|
+|  RSG      Pullback50      eq     $214.64  46.0   -3.07   50MA bounce (+|
+|  RCL      Pullback50      eq     $303.40  28.8   -1.67   50MA bounce (+|
+|  SNA      Pullback50      eq     $401.48  29.8   -2.33   50MA bounce (-|
+|  SYY      Pullback50      eq     $82.25   33.6   -1.60   50MA bounce (+|
+|  WRB      Pullback50      eq     $70.57   18.0   -2.33   50MA bounce (-|
+|  CR       Pullback50      eq     $217.47  41.9   -1.80   50MA bounce (+|
+|  CUBE     Pullback50      eq     $41.32   36.7   -2.42   50MA bounce (+|
+|  FCFS     Pullback50      eq     $215.38  58.7   -1.43   50MA bounce (+|
+|  GBCI     Pullback50      eq     $49.85   52.5   -2.39   50MA bounce (-|
+|  KEX      Pullback50      eq     $139.22  40.4   -2.26   50MA bounce (+|
+|  JAZZ     Pullback50      eq     $245.41  35.3   -1.88   50MA bounce (+|
+|  LSCC     Pullback50      eq     $134.66  62.5   -1.97   50MA bounce (-|
+|  MUSA     Pullback50      eq     $581.75  44.7   -2.05   50MA bounce (+|
+|  POR      Pullback50      eq     $50.68   47.2   -2.39   50MA bounce (-|14:00:20  INFO        place_all_stops: checking 2 positions...
+14:00:20  INFO        STOP skipped AFL: fractional (0.5761 shares) — software exit will handle it
+14:00:20  INFO        STOP skipped AXP: fractional (0.2064 shares) — software exit will handle it
+14:00:20  INFO        Daily log -> logs/daily/2026-08-17.md
