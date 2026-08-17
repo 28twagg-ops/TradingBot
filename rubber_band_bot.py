@@ -66,7 +66,7 @@ GITHUB SECRETS required:
   ALPACA_SECRET_KEY
 """
 
-import os, json, time, logging, csv, math, random
+import os, json, time, logging, csv, math, random, re
 import socket
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, date
@@ -141,6 +141,11 @@ SEASONAL_SIZE_PCT    = 0.20   # RETAINED (unused for sizing since 2026-07-18 sch
 OFFSCHEDULE_SIZE_PCT = 0.15   # tightened 2026-08-12 (was 0.20) while stops overrun
 CASH_RESERVE_PCT     = 0.05   # sim-validated at 5% (Test 18)
 MIN_TRADE_SIZE       = 0.01   # effectively no floor while keeping sizing math safe
+# Live options sleeve (scripts/options_live_micro.py) takes this share of equity.
+# Rubber-band new buys stay inside the remaining stock sleeve so the two
+# strategies do not stack 100% of a ~$467 account into one side.
+LIVE_OPTIONS_SHARE   = float(os.getenv("LIVE_OPTIONS_SHARE", "0.50"))
+OCC_OPTION_RE        = re.compile(r"^[A-Z]+\d{6}[CP]\d{8}$")
 
 # ---- Exit rules (v7 -- deep param sweep validated, 7yr 899 stocks) ----------
 # Midline only: price crosses above 20-day moving average
@@ -1000,10 +1005,38 @@ def get_account_safe(client, retries=3, wait=10):
                 raise
 
 
+def is_option_symbol(sym) -> bool:
+    return bool(OCC_OPTION_RE.match(str(sym or "")))
+
+
+def is_option_position(p) -> bool:
+    ac = str(getattr(p, "asset_class", "") or "")
+    if "option" in ac.lower():
+        return True
+    return is_option_symbol(getattr(p, "symbol", ""))
+
+
+def stock_sleeve_avail(equity, cash, positions) -> tuple:
+    """Cash available for new stock buys after reserve + live-options sleeve."""
+    reserve = equity * CASH_RESERVE_PCT
+    stock_mv = 0.0
+    for p in (positions or {}).values():
+        try:
+            stock_mv += abs(float(p.get("market_value") or p.get("dollar_amt") or 0))
+        except Exception:
+            pass
+    stock_cap = equity * max(0.0, 1.0 - LIVE_OPTIONS_SHARE)
+    stock_room = max(0.0, stock_cap - stock_mv)
+    avail = min(max(0.0, cash - reserve), stock_room)
+    return avail, stock_mv, stock_cap
+
+
 def get_positions(client):
     try:
         out = {}
         for p in client.get_all_positions():
+            if is_option_position(p):
+                continue
             out[p.symbol] = {
                 "ticker": p.symbol, "qty": float(p.qty),
                 "market_value": float(p.market_value),
@@ -1642,6 +1675,8 @@ def cancel_stop_orders(client, ticker):
     """Cancel ALL open sell orders for a ticker (stop, stop-limit, and stuck
     limit sells from previous do_sell() calls).  Called before a
     software-triggered exit so we never have two conflicting sell orders."""
+    if is_option_symbol(ticker):
+        return
     try:
         req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[ticker])
         for o in client.get_orders(req):
@@ -1658,10 +1693,10 @@ def cancel_stop_orders(client, ticker):
 
 def ensure_stop(client, ticker, entry_price, qty):
     """Place a GTC stop-MARKET sell order.
-    Trigger = entry × (1 + EXIT_STOP_LOSS)   e.g. -0.5%
+    Trigger = entry x (1 + EXIT_STOP_LOSS)   e.g. -0.5%
 
     Why stop-MARKET (not stop-LIMIT):
-      A stop-LIMIT at -1% will NOT fill if the stock gaps down -6% overnight —
+      A stop-LIMIT at -1% will NOT fill if the stock gaps down -6% overnight -
       the order triggers but the price is already below the limit, so it sits
       unfilled until the software exit catches it at 9:35am (or never if the
       morning run misses like May 1st). A stop-MARKET converts to a market order
@@ -1669,7 +1704,10 @@ def ensure_stop(client, ticker, entry_price, qty):
       You still lose the gap amount, but you're OUT at the open instead of
       riding further intraday decline.
 
-    Skipped silently if a GTC stop already exists for this ticker."""
+    Skipped silently if a GTC stop already exists for this ticker.
+    Live options are managed by options_live_micro.py - never attach stock stops."""
+    if is_option_symbol(ticker):
+        return False
     stop_price = round(entry_price * (1.0 + EXIT_STOP_LOSS), 2)
     # Alpaca rejects GTC orders on fractional quantities — floor to whole shares.
     # At small account sizes some positions will be < 1 share; skip the stop for
@@ -1721,6 +1759,8 @@ def place_all_stops(client):
             return
         log.info(f"  place_all_stops: checking {len(positions)} positions...")
         for p in positions:
+            if is_option_position(p):
+                continue
             ensure_stop(client, p.symbol,
                         float(p.avg_entry_price), float(p.qty))
     except Exception as e:
@@ -1785,6 +1825,8 @@ def place_eod_stops(client):
             return
         log.info(f"  place_eod_stops: updating {len(positions)} stops to current price...")
         for p in positions:
+            if is_option_position(p):
+                continue
             qty       = float(p.qty)
             stop_qty  = math.floor(qty)
             cur_price = float(p.current_price)
@@ -3478,7 +3520,9 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
 
 def run_scan(client, equity, cash, rgm, mode_name="scan"):
     today = date.today(); month = today.month; sc = SCHEDULE[month]
-    reserve = equity * CASH_RESERVE_PCT; avail = max(0.0, cash - reserve)
+    reserve = equity * CASH_RESERVE_PCT
+    positions = enrich(client, get_positions(client))
+    avail, stock_mv, stock_cap = stock_sleeve_avail(equity, cash, positions)
 
     hdr("RUBBER BAND BOT v8  --  DAILY SCAN")
     row("Mode",     "PAPER" if PAPER_TRADING else "*** LIVE ***")
@@ -3494,14 +3538,16 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     row("Equity",    f"${equity:,.2f}")
     row("Cash",      f"${cash:,.2f}")
     row("Reserve",   f"${reserve:,.2f}  (always kept)")
-    row("Available",     f"${avail:,.2f}  (for new trades)")
+    row("Stock sleeve", f"${stock_mv:,.2f} / ${stock_cap:,.2f}  "
+        f"({(1.0-LIVE_OPTIONS_SHARE):.0%} equity; "
+        f"{LIVE_OPTIONS_SHARE:.0%} reserved for live options)")
+    row("Available",     f"${avail:,.2f}  (new stock buys)")
     row("Trade size", f"${equity*OFFSCHEDULE_SIZE_PCT:,.2f}  ({OFFSCHEDULE_SIZE_PCT*100:.0f}% per signal — all strategies equal)")
     ftr()
 
-    positions = enrich(client, get_positions(client))
     entries_today = _count_buys_today()
     # Dynamic entry cap: cash slots + MAX_OPEN_POSITIONS concurrent holdings.
-    max_trades = max(1, int(avail // MIN_TRADE_SIZE))
+    max_trades = max(1, int(avail // MIN_TRADE_SIZE)) if avail > 0 else 0
     if not ab_test_active() and MAX_OPEN_POSITIONS:
         max_trades = min(max_trades, max(0, MAX_OPEN_POSITIONS - len(positions)))
 
@@ -3888,7 +3934,8 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         already_held   = set(positions.keys())
         viable         = [s for s in all_sigs if s["ticker"] not in already_held]
         entries = 0; buys_log = []; unconfirmed_buys = 0; pending_buys = []
-        cash = float(get_account_safe(client).cash); avail = max(0.0, cash - reserve)
+        cash = float(get_account_safe(client).cash)
+        avail, stock_mv, stock_cap = stock_sleeve_avail(equity, cash, positions)
         n_open = len(positions)
 
         if ab_test_active():
