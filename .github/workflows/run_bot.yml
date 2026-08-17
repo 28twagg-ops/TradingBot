@@ -102,8 +102,6 @@ jobs:
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
           LIVE_OPTIONS_SHARE: "0.50"
           LIVE_OPTIONS_MAX_POS: "1"
-          LIVE_OPTIONS_PREMIUM_FRAC: "0.25"
-          LIVE_OPTIONS_MAX_PREMIUM: "60"
           LIVE_OPTIONS_ALLOW: "S210,S406,S218,S350,S404,S397"
         run: |
           set +e

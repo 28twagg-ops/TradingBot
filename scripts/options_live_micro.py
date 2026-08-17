@@ -2,12 +2,14 @@
 """
 options_live_micro.py -- LIVE options sleeve on the rubber-band brokerage account.
 
-NOT the 1024-bucket paper lab. Caps (the $467-account rules we discussed):
+NOT the 1024-bucket paper lab. Account split is the only live-specific cap:
   - 50% of equity reserved for options (LIVE_OPTIONS_SHARE)
-  - 1 open contract
-  - premium <= 25% of that sleeve (~12.5% of total equity, hard-capped at $60)
-  - take-profit +50% / stop-loss -40% + broker-resting protective stop
-  - allow-list only (CLEAN KEEP / cheap-premium names)
+  - 1 open contract (same as paper max_contracts)
+  - allow-list of paper KEEP names
+
+Trade mechanics copy the paper baseline bucket (not extra live rules):
+  buy ask-0.01, max_premium $75, OI>=100, spread<=25%, TP +50% / SL -50%,
+  EOD 15:30, market exit 15:50, broker-resting protective stop.
 
 Uses ALPACA_API_KEY / ALPACA_SECRET_KEY (live). Always exits 0 for GHA.
 """
@@ -34,9 +36,10 @@ from alpaca.trading.requests import (
     StopOrderRequest,
 )
 from alpaca.data.historical import OptionHistoricalDataClient, StockHistoricalDataClient
+from alpaca.data.requests import OptionChainRequest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from options_lab import EffectiveArm  # noqa: E402
+from options_lab import EffectiveArm, entry_limit_price  # noqa: E402
 from options_oi import make_trading_client  # noqa: E402
 from options_signals import PAPER_STRATEGIES  # noqa: E402
 from options_universe import get_universe, to_alpaca_symbol  # noqa: E402
@@ -51,10 +54,14 @@ API_SECRET = os.getenv("ALPACA_SECRET_KEY")
 
 SHARE = float(os.getenv("LIVE_OPTIONS_SHARE", "0.50"))
 MAX_POS = int(os.getenv("LIVE_OPTIONS_MAX_POS", "1"))
-PREMIUM_FRAC = float(os.getenv("LIVE_OPTIONS_PREMIUM_FRAC", "0.25"))
-MAX_PREMIUM_ABS = float(os.getenv("LIVE_OPTIONS_MAX_PREMIUM", "60"))
+# Paper baseline BucketProfile (options_lab.py) -- do not tighten these live.
+PAPER_MAX_PREMIUM = 75.0
 TAKE_PROFIT = 0.50
-STOP_LOSS = -0.40
+STOP_LOSS = -0.50
+BUY_LIMIT_OFFSET = -0.01
+SELL_LIMIT_OFFSET = -0.01
+MIN_OPEN_INTEREST = 100
+MAX_SPREAD_FRAC = 0.25
 ALLOW = [
     s.strip()
     for s in os.getenv(
@@ -135,13 +142,11 @@ def _strat(sid: str):
     return None
 
 
-def _allow_strats(skip_0dte: bool) -> list:
+def _allow_strats() -> list:
     seen: set[str] = set()
     out = []
     for s in PAPER_STRATEGIES:
         if s.id not in PRIORITY or s.id in seen:
-            continue
-        if skip_0dte and (s.id == "S350" or int(getattr(s, "dte_target", 3) or 3) == 0):
             continue
         seen.add(s.id)
         out.append(s)
@@ -189,13 +194,16 @@ def make_arm(sid: str, sleeve: float, max_premium: float) -> EffectiveArm | None
         profile_name="live_micro",
         strategy_id=sid,
         virtual_equity=sleeve,
+        buy_limit_offset=BUY_LIMIT_OFFSET,
         max_premium=max_premium,
-        max_spread_frac=0.25,
-        min_open_interest=50,
+        max_spread_frac=MAX_SPREAD_FRAC,
+        min_open_interest=MIN_OPEN_INTEREST,
         account_cap=1.0,
         max_contracts=1,
+        sell_limit_offset=SELL_LIMIT_OFFSET,
         take_profit=TAKE_PROFIT,
         stop_loss=STOP_LOSS,
+        market_exit_eod=True,
         option_type=getattr(st, "option_type", "call") or "call",
         strike_offset=int(getattr(st, "strike_offset", 0) or 0),
         dte_target=st.dte_target,
@@ -262,7 +270,24 @@ def _cancel_protective(trade, occ: str) -> None:
         pass
 
 
-def manage(trade, state: dict, now: datetime) -> None:
+def _option_bid(opt, occ: str) -> float | None:
+    try:
+        m = re.match(r"^[A-Z]+", occ or "")
+        underlying = m.group(0) if m else None
+        if not underlying:
+            return None
+        ch = opt.get_option_chain(OptionChainRequest(underlying_symbol=underlying))
+        snap = ch.get(occ) if ch else None
+        lq = getattr(snap, "latest_quote", None) if snap else None
+        bid = getattr(lq, "bid_price", None) if lq else None
+        if bid and float(bid) > 0:
+            return float(bid)
+    except Exception:
+        return None
+    return None
+
+
+def manage(trade, opt, state: dict, now: datetime) -> None:
     eod = _ge(now, om.EOD_SWEEP)
     pos = {str(getattr(p, "symbol", "")): p for p in option_positions(trade)}
     for lot in active_lots(state):
@@ -289,17 +314,32 @@ def manage(trade, state: dict, now: datetime) -> None:
         if not reason:
             continue
         _cancel_protective(trade, occ)
+        sell_qty = min(qty, int(lot["qty"]))
+        bid = _option_bid(opt, occ)
+        sell_limit = round(max(0.01, (bid or 0.01) + SELL_LIMIT_OFFSET), 2)
+        use_market = _ge(now, om.EOD_MARKET) or (not bid)
+        no_quote = (not bid) or float(bid or 0) <= 0.01 or plpc <= -0.99
+        if no_quote:
+            use_market = False
+            sell_limit = 0.01
         try:
-            o = trade.submit_order(MarketOrderRequest(
-                symbol=occ, qty=min(qty, int(lot["qty"])),
-                side=OrderSide.SELL, time_in_force=TimeInForce.DAY,
-                client_order_id=cid_exit(),
-            ))
-            rl(f"LIVE EXIT {reason} {occ} x{qty} id={o.id}")
+            if use_market:
+                o = trade.submit_order(MarketOrderRequest(
+                    symbol=occ, qty=sell_qty, side=OrderSide.SELL,
+                    time_in_force=TimeInForce.DAY, client_order_id=cid_exit(),
+                ))
+            else:
+                o = trade.submit_order(LimitOrderRequest(
+                    symbol=occ, qty=sell_qty, side=OrderSide.SELL,
+                    time_in_force=TimeInForce.DAY, limit_price=sell_limit,
+                    client_order_id=cid_exit(),
+                ))
+            how = "MARKET" if use_market else f"limit={sell_limit:.2f}"
+            rl(f"LIVE EXIT {reason} {occ} x{sell_qty} {how} id={o.id}")
             lot["qty"] = 0
             append_ledger({
                 "ts": now.isoformat(), "event": "exit",
-                "strategy_id": lot.get("strategy_id"), "occ": occ, "qty": qty,
+                "strategy_id": lot.get("strategy_id"), "occ": occ, "qty": sell_qty,
                 "reason": reason, "return_pct": round(plpc * 100, 2),
                 "order_id": str(o.id),
             })
@@ -356,8 +396,8 @@ def ensure_stops(trade, state: dict) -> None:
                 rl(f"LIVE PROT STOP failed {occ}: {exc2 or exc}")
 
 
-def scan_hits(stock, skip_0dte: bool) -> list:
-    strats = _allow_strats(skip_0dte)
+def scan_hits(stock) -> list:
+    strats = _allow_strats()
     if not strats:
         return []
     universe = get_universe()
@@ -389,7 +429,7 @@ def scan_hits(stock, skip_0dte: bool) -> list:
 
 
 def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
-          now: datetime, skip_0dte: bool) -> int:
+          now: datetime) -> int:
     if not _between(now, om.ENTRY_START, om.ENTRY_END):
         rl("Live micro: outside entry window")
         return 0
@@ -398,20 +438,19 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
         return 0
     sleeve = max(0.0, equity * SHARE)
     deployed = option_mv(trade)
-    room = min(max(0.0, cash - equity * 0.05), max(0.0, sleeve - deployed))
-    max_prem = min(MAX_PREMIUM_ABS, sleeve * PREMIUM_FRAC, room)
-    if max_prem < 15:
-        rl(f"Live micro: premium room ${max_prem:.0f} too small -- skip entries")
-        return 0
-    allow = [s.id for s in _allow_strats(skip_0dte)]
+    room = min(max(0.0, cash), max(0.0, sleeve - deployed))
+    max_prem = min(PAPER_MAX_PREMIUM, room)
+    allow = [s.id for s in _allow_strats()]
     rl(
         f"Live micro sleeve ${sleeve:.0f} ({SHARE:.0%} of ${equity:.0f}) "
         f"deployed ${deployed:.0f} max_prem ${max_prem:.0f} "
-        f"tp={TAKE_PROFIT:+.0%} sl={STOP_LOSS:+.0%} allow={','.join(allow)}"
+        f"(paper baseline ${PAPER_MAX_PREMIUM:.0f} / tp={TAKE_PROFIT:+.0%} "
+        f"sl={STOP_LOSS:+.0%}) allow={','.join(allow)}"
     )
-    if skip_0dte:
-        rl("Live micro: skipping 0DTE (S350) -- equity under $25k PDT")
-    hits = scan_hits(stock, skip_0dte)
+    if max_prem <= 0:
+        rl("Live micro: no cash/sleeve room -- skip entries")
+        return 0
+    hits = scan_hits(stock)
     rl(f"Live micro signals: {len(hits)}")
     placed = 0
     chain_cache: dict = {}
@@ -433,11 +472,12 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
             continue
         if cand["cost"] > max_prem + 0.01:
             continue
+        limit = entry_limit_price(arm, cand["bid"], cand["ask"], cand["mid"])
         try:
             o = trade.submit_order(LimitOrderRequest(
                 symbol=cand["symbol"], qty=1, side=OrderSide.BUY,
                 time_in_force=TimeInForce.DAY,
-                limit_price=round(float(cand["ask"]), 2),
+                limit_price=limit,
                 client_order_id=cid_entry(),
             ))
             lot = {
@@ -446,7 +486,7 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
                 "occ": cand["symbol"],
                 "underlying": hit.symbol,
                 "qty": 1,
-                "entry_price": float(cand["ask"]),
+                "entry_price": float(limit),
                 "take_profit": TAKE_PROFIT,
                 "stop_loss": STOP_LOSS,
                 "order_id": str(o.id),
@@ -456,12 +496,12 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
             append_ledger({
                 "ts": now.isoformat(), "event": "entry",
                 "strategy_id": hit.strategy_id, "occ": cand["symbol"],
-                "qty": 1, "limit": cand["ask"], "cost": cand["cost"],
+                "qty": 1, "limit": limit, "cost": cand["cost"],
                 "order_id": str(o.id), "reason": hit.detail,
             })
             rl(
                 f"LIVE BUY {hit.strategy_id} {hit.symbol} {cand['symbol']} "
-                f"ask={cand['ask']:.2f} cost=${cand['cost']:.0f} id={o.id}"
+                f"limit={limit:.2f} ask={cand['ask']:.2f} cost=${cand['cost']:.0f} id={o.id}"
             )
             placed = 1
         except Exception as exc:
@@ -500,21 +540,17 @@ def run() -> int:
     in_session = _between(now, om.ENTRY_START, om.HARD_STOP)
     if not in_session:
         if _ge(now, om.HARD_STOP):
-            manage(trade, state, now)
+            manage(trade, opt, state, now)
         else:
             rl("Live micro: outside 9:28-16:05 ET")
         n = len(option_positions(trade))
         rl(f"Live micro done. open_options={n} lots={len(active_lots(state))}")
         return 0
 
-    manage(trade, state, now)
+    manage(trade, opt, state, now)
     ensure_stops(trade, state)
     if _between(now, om.ENTRY_START, om.ENTRY_END):
-        allow_0dte = os.getenv("LIVE_OPTIONS_ALLOW_0DTE", "").strip().lower() in (
-            "1", "true", "yes",
-        )
-        skip_0dte = (equity < 25000) and not allow_0dte
-        place(trade, opt, ref, stock, equity, cash, state, now, skip_0dte)
+        place(trade, opt, ref, stock, equity, cash, state, now)
         ensure_stops(trade, state)
     else:
         rl("Live micro: manage/exits only")
