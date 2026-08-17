@@ -1,0 +1,27 @@
+19:56:33  INFO      Mode: scan
+19:56:34  INFO        [positions] 3/3 (3 valid)
+19:56:34  INFO        SELL LIMIT ADI  qty=0.17951539  limit=$389.37  id=bf793b3d-2288-438b-952b-d6aa55d2b530
+19:57:05  INFO        SELL LIMIT filled ADI (confirmed by position check)
+19:57:05  INFO        TX logged: SELL ADI  P&L -0.17%
+19:57:05  INFO        SELL LIMIT BG  qty=0.609832417  limit=$115.13  id=e6b59840-f727-4028-be80-4c0feebcd889
+19:57:36  INFO        SELL LIMIT filled BG (confirmed by position check)
+19:57:36  INFO        TX logged: SELL BG  P&L 0.05%
+19:57:36  INFO        Universe cache hit: 903 tickers (tickers_2026-08-17.json)
+19:57:37  INFO        [universe] 40/902 (40 valid)
+19:57:38  INFO        [universe] 80/902 (80 valid)
+19:57:40  INFO        [universe] 120/902 (120 valid)
+19:57:41  INFO        [universe] 160/902 (160 valid)
+19:57:43  INFO        [universe] 200/902 (199 valid)
+19:57:50  INFO        [universe] 240/902 (238 valid)
+19:58:00  INFO        [universe] 280/902 (278 valid)
+19:58:14  INFO        [universe] 320/902 (318 valid)
+19:58:27  INFO        [universe] 360/902 (358 valid)
+19:58:37  INFO        [universe] 400/902 (397 valid)
+19:58:50  INFO        [universe] 440/902 (437 valid)
+19:59:01  INFO        [universe] 480/902 (477 valid)
+19:59:14  INFO        [universe] 520/902 (517 valid)
+19:59:24  INFO        [universe] 560/902 (557 valid)
+19:59:38  INFO        [universe] 600/902 (597 valid)
+19:59:51  INFO        [universe] 640/902 (637 valid)
+20:00:01  INFO        [universe] 680/902 (677 valid)
+20:00:15  INFO        [universe] 720/902 (717 valid)

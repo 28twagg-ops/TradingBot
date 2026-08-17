@@ -752,3 +752,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-08-17 13:56:45,2026-08-17,SELL,AMD,Pullback50,512.07,511.05,512.062,70.24,-0.0016,-0.0011,limit_fill_position_check_full,midline (-0.1%),bull
 2026-08-17 16:00:51,2026-08-17,SELL,AXP,Pullback50,338.66,,338.66,69.89,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-08-17 17:40:56,2026-08-17,SELL,AFL,Pullback50,121.38,,121.38,69.92,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-08-17 19:57:05,2026-08-17,SELL,ADI,Pullback50,390.155,389.37,390.116,70.03,-0.01,-0.007,limit_fill_position_check_full,midline (-0.2%),bull
+2026-08-17 19:57:36,2026-08-17,SELL,BG,Pullback50,115.165,115.13,115.14,70.22,-0.0217,-0.0152,limit_fill_position_check_full,midline (+0.1%),bull
