@@ -1016,6 +1016,70 @@ def is_option_position(p) -> bool:
     return is_option_symbol(getattr(p, "symbol", ""))
 
 
+def option_sleeve_snapshot(client) -> list:
+    """Live option lots only — never mixed into rubber-band stock holdings."""
+    out = []
+    try:
+        for p in client.get_all_positions() or []:
+            if not is_option_position(p):
+                continue
+            try:
+                qty = float(getattr(p, "qty", 0) or 0)
+            except Exception:
+                qty = 0.0
+            if qty == 0:
+                continue
+            try:
+                mv = float(getattr(p, "market_value", 0) or 0)
+            except Exception:
+                mv = 0.0
+            try:
+                entry = float(getattr(p, "avg_entry_price", 0) or 0)
+            except Exception:
+                entry = 0.0
+            try:
+                now_px = float(getattr(p, "current_price", 0) or 0)
+            except Exception:
+                now_px = 0.0
+            try:
+                pnl = float(getattr(p, "unrealized_pl", 0) or 0)
+            except Exception:
+                pnl = 0.0
+            try:
+                pnl_pct = float(getattr(p, "unrealized_plpc", 0) or 0) * 100
+            except Exception:
+                pnl_pct = 0.0
+            out.append({
+                "symbol": str(getattr(p, "symbol", "") or ""),
+                "qty": qty,
+                "market_value": mv,
+                "entry_price": entry,
+                "current_price": now_px,
+                "pnl_dollar": pnl,
+                "pnl_pct": pnl_pct,
+            })
+    except Exception as e:
+        log.warning(f"option_sleeve_snapshot failed: {e}")
+    return out
+
+
+def _today_options_ledger_rows() -> list:
+    path = LOG_DIR / "options_live_micro" / "ledger.csv"
+    if not path.exists():
+        return []
+    today = str(date.today())
+    rows = []
+    try:
+        with open(path, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                ts = str(r.get("ts") or "")
+                if ts.startswith(today):
+                    rows.append(r)
+    except Exception as e:
+        log.warning(f"options ledger read failed: {e}")
+    return rows
+
+
 def stock_sleeve_avail(equity, cash, positions) -> tuple:
     """Cash available for new stock buys after reserve + live-options sleeve."""
     reserve = equity * CASH_RESERVE_PCT
@@ -2434,21 +2498,30 @@ def _read_existing_signals_section(path):
 
 
 def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells,
-                preserve_existing_signals=False):
+                preserve_existing_signals=False, client=None, option_lots=None):
     sc = SCHEDULE[month]
-    op_pnl = sum(p.get("pnl_dollar", 0) for p in positions.values())
+    stock_pnl = sum(p.get("pnl_dollar", 0) for p in positions.values())
+    stock_mv = sum(abs(p.get("dollar_amt") or p.get("market_value") or 0)
+                   for p in positions.values())
+    lots = option_lots if option_lots is not None else (
+        option_sleeve_snapshot(client) if client is not None else []
+    )
+    opt_mv = sum(abs(x.get("market_value") or 0) for x in lots)
+    opt_pnl = sum(x.get("pnl_dollar") or 0 for x in lots)
     fname  = DAILY_DIR / f"{today}.md"
     L = [f"# Daily Log -- {today}", "",
-         "## Account", "| | |", "|---|---|",
+         "## Account (total)", "| | |", "|---|---|",
          f"| Equity | **${equity:,.2f}** |",
          f"| Cash | ${cash:,.2f} |",
          f"| Reserve | ${equity*CASH_RESERVE_PCT:,.2f} |",
-         f"| Open P&L | ${op_pnl:+,.2f} |",
          f"| Regime | {rgm.upper()} |",
-         f"| Universe | {UNIVERSE} |",
-        f"| Exit mode | midline / stop{EXIT_STOP_LOSS*100:.1f}% / {EXIT_DAYS_MAX}d max |",
+         f"| Universe | {UNIVERSE} |", "",
+         "## Stocks (rubber-band)", "| | |", "|---|---|",
+         f"| Market value | ${stock_mv:,.2f} |",
+         f"| Open P&L | ${stock_pnl:+,.2f} |",
+         f"| Exit mode | midline / stop{EXIT_STOP_LOSS*100:.1f}% / {EXIT_DAYS_MAX}d max |",
          f"| Strategies | {sc['p']} + {sc['s']} (display only — schedule not enforced) |", "",
-         "## Holdings"]
+         "### Stock holdings"]
     if positions:
         L += ["| Ticker | Strategy | Invested | Entry | Now | P&L% | P&L$ | Days |",
               "|--------|----------|----------|-------|-----|------|------|------|"]
@@ -2461,8 +2534,8 @@ def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells
                      f"| ${p['entry_price']:.2f} | ${p['current_price']:.2f} "
                      f"| {p['pnl_pct']:+.2f}% | ${p['pnl_dollar']:+.2f} | {dh} |")
     else:
-        L.append("_No open positions._")
-    L += ["", "## Trades today"]
+        L.append("_No open stock positions._")
+    L += ["", "### Stock trades today"]
     # Source of truth: ledger entries from transactions.csv for this date.
     # This captures exits placed outside the current in-memory scan run too.
     ledger_today = []
@@ -2512,7 +2585,40 @@ def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells
         for s in sells:
             L.append(f"| {s['t']} | SELL | {s['tk']} | {s['st']} | ${s['px']:.2f} | -- | {s['why']} |")
     else:
-        L.append("_No trades today._")
+        L.append("_No stock trades today._")
+    L += ["", "## Options (live micro)", "| | |", "|---|---|",
+          f"| Market value | ${opt_mv:,.2f} |",
+          f"| Open P&L | ${opt_pnl:+,.2f} |",
+          f"| Rules | 1 contract, TP +50% / SL -50%, max premium $75 |", ""]
+    L.append("### Option holdings")
+    if lots:
+        L += ["| Contract | Qty | Entry | Now | P&L% | P&L$ | MV |",
+              "|----------|-----|-------|-----|------|------|-----|"]
+        for x in lots:
+            L.append(
+                f"| {x.get('symbol','')} | {x.get('qty',0):.0f} "
+                f"| ${x.get('entry_price',0):.2f} | ${x.get('current_price',0):.2f} "
+                f"| {x.get('pnl_pct',0):+.1f}% | ${x.get('pnl_dollar',0):+.2f} "
+                f"| ${x.get('market_value',0):.2f} |"
+            )
+    else:
+        L.append("_No open option positions._")
+    opt_ledger = _today_options_ledger_rows()
+    L += ["", "### Option trades today"]
+    if opt_ledger:
+        L += ["| Time | Event | Strategy | Contract | Qty | Limit | Cost | Note |",
+              "|------|-------|----------|----------|-----|-------|------|------|"]
+        for r in opt_ledger:
+            ts = str(r.get("ts") or "")
+            tm = ts[11:16] if len(ts) >= 16 else "--:--"
+            note = r.get("reason") or r.get("return_pct") or "--"
+            L.append(
+                f"| {tm} | {r.get('event','')} | {r.get('strategy_id','')} | "
+                f"{r.get('occ','')} | {r.get('qty','')} | {r.get('limit','')} | "
+                f"{r.get('cost','')} | {note} |"
+            )
+    else:
+        L.append("_No option trades today._")
     existing_signals = None
     if preserve_existing_signals and not signals:
         existing_signals = _read_existing_signals_section(fname)
@@ -3165,7 +3271,8 @@ def reconcile_daily_log(client, equity, cash, rgm):
         positions = enrich(client, get_positions(client))
         write_daily(today, equity, cash, rgm, today.month, positions,
                     signals=[], buys=[], sells=[],
-                    preserve_existing_signals=fname.exists())
+                    preserve_existing_signals=fname.exists(),
+                    client=client)
         log.info(f"  Daily log reconciled -> {fname} ({len(ledger)} ledger rows)")
     except Exception as e:
         log.warning(f"  reconcile_daily_log failed: {e}")
@@ -3226,7 +3333,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
                         continue
                     already_sold_today.add(_r["ticker"])
 
-    hdr(f"EXIT CHECK{eh_tag}")
+    hdr("STOCKS EXIT CHECK")
     exit_desc = f"stop{EXIT_STOP_LOSS*100:.1f}% / {EXIT_DAYS_MAX}d max"
     if not extended_hours:
         exit_desc += "  (midline at EOD only)"
@@ -3490,6 +3597,27 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
     row("Logged exits", str(exits))
     ftr()
 
+    opt_lots = option_sleeve_snapshot(client)
+    hdr("OPTIONS SLEEVE  (managed by options_live_micro)")
+    if opt_lots:
+        trow("CONTRACT", "ENTRY", "NOW", "P&L%", "P&L$", "MV",
+             widths=[22, 7, 7, 7, 8, 8])
+        div()
+        for x in opt_lots:
+            trow(x.get("symbol", ""),
+                 f"${x.get('entry_price', 0):.2f}",
+                 f"${x.get('current_price', 0):.2f}",
+                 f"{x.get('pnl_pct', 0):+.1f}%",
+                 f"${x.get('pnl_dollar', 0):+.2f}",
+                 f"${x.get('market_value', 0):.2f}",
+                 widths=[22, 7, 7, 7, 8, 8])
+        blank()
+        row("Options open P&L",
+            f"${sum(x.get('pnl_dollar') or 0 for x in opt_lots):+,.2f}")
+    else:
+        blank(); row("No open option positions."); blank()
+    ftr()
+
     hdr("STOP-LOSS BREACHES THIS RUN")
     if stop_breaches:
         for tk, frac in sorted(stop_breaches.items(), key=lambda kv: kv[1]):
@@ -3511,7 +3639,7 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
     log_run(run_mode_name, rgm, eq2, ca2, 0, 0, exits, positions_after)
     # Keep daily markdown in sync for non-scan exit runs too.
     write_daily(date.today(), eq2, ca2, rgm, date.today().month, positions_after, [], [], [],
-                preserve_existing_signals=True)
+                preserve_existing_signals=True, client=client)
     if ab_test_active() or ab_load_registry().get("entries"):
         ab_write_dashboard(eq2, ca2, positions_after)
 
@@ -3537,12 +3665,16 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     ftr()
 
     hdr("ACCOUNT")
-    row("Equity",    f"${equity:,.2f}")
+    row("Equity (total)", f"${equity:,.2f}")
     row("Cash",      f"${cash:,.2f}")
     row("Reserve",   f"${reserve:,.2f}  (always kept)")
-    row("Stock sleeve", f"${stock_mv:,.2f} / ${stock_cap:,.2f}  "
+    row("Stocks MV", f"${stock_mv:,.2f} / ${stock_cap:,.2f}  "
         f"({(1.0-LIVE_OPTIONS_SHARE):.0%} equity; "
         f"{LIVE_OPTIONS_SHARE:.0%} reserved for live options)")
+    opt_lots = option_sleeve_snapshot(client)
+    opt_mv = sum(abs(x.get("market_value") or 0) for x in opt_lots)
+    opt_pnl = sum(x.get("pnl_dollar") or 0 for x in opt_lots)
+    row("Options MV", f"${opt_mv:,.2f}  open P&L ${opt_pnl:+,.2f}  ({len(opt_lots)} contract)")
     row("Available",     f"${avail:,.2f}  (new stock buys)")
     row("Trade size", f"${equity*OFFSCHEDULE_SIZE_PCT:,.2f}  ({OFFSCHEDULE_SIZE_PCT*100:.0f}% per signal — all strategies equal)")
     ftr()
@@ -3581,7 +3713,7 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
         signals_cache_ok = False
         plan_note = "disabled (parity mode)"
 
-    hdr(f"HOLDINGS  ({len(positions)} open)")
+    hdr(f"STOCK HOLDINGS  ({len(positions)} open)")
     if positions:
         if ab_test_active():
             trow("GRP","TICKER","STRATEGY","INVESTED","ENTRY","NOW","P&L%","P&L$",
@@ -4116,7 +4248,8 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     scan_run_mode = "scan_morning" if mode_name == "morning_scan" else "scan_evening"
     log_run(scan_run_mode, rgm, eq2, ca2, len(all_sigs), entries, exits, pos2,
             cache_hit=(plan_ok or signals_cache_ok))
-    write_daily(today, eq2, ca2, rgm, month, pos2, all_sigs, buys_log, sells_log)
+    write_daily(today, eq2, ca2, rgm, month, pos2, all_sigs, buys_log, sells_log,
+                client=client)
     write_dashboard()
     if ab_test_active() or ab_load_registry().get("entries"):
         ab_write_dashboard(eq2, ca2, pos2)

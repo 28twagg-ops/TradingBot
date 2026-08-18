@@ -605,8 +605,11 @@ def run() -> int:
     manage(trade, opt, state, now)
     ensure_stops(trade, state)
     if _between(now, om.ENTRY_START, om.ENTRY_END):
-        place(trade, opt, ref, stock, equity, cash, state, now)
-        ensure_stops(trade, state)
+        if open_count(trade, state) >= MAX_POS:
+            rl("Live micro: at max 1 option — manage/exits only (no new buys)")
+        else:
+            place(trade, opt, ref, stock, equity, cash, state, now)
+            ensure_stops(trade, state)
     else:
         rl("Live micro: manage/exits only")
     n = len(option_positions(trade))
