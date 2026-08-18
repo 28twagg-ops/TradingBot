@@ -6474,3 +6474,120 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260818T195104Z
+
+- UTC timestamp: `20260818T195104Z`
+- GitHub run: [#7418](https://github.com/28twagg-ops/TradingBot/actions/runs/32178838077)
+- Run id: `32178838077`
+- Live bot: exit=`0`, duration=`245s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260818T195104Z_live_bot.log`, `logs/action_runs/20260818T195104Z_live_options.log`, `logs/action_runs/20260818T195104Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+... (97 earlier lines - see full log file)
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  21                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AZO      VWAP_Reclaim    eq     $3085.~  44.2   1.43    VWAP reclaim V|
+|  BRK-B    Pullback50      eq     $502.98  45.0   -1.98   50MA bounce (+|
+|  CDW      Pullback50      eq     $135.59  37.2   -1.03   50MA bounce (-|
+|  CNC      Pullback50      eq     $65.39   57.9   -1.22   50MA bounce (+|
+|  CHD      Pullback50      eq     $99.25   48.0   -1.72   50MA bounce (+|
+|  C        Pullback50      eq     $137.75  74.8   -1.85   50MA bounce (+|
+|  CL       Pullback50      eq     $91.49   42.4   -1.07   50MA bounce (-|
+|  EIX      Pullback50      eq     $73.29   36.9   -0.82   50MA bounce (-|
+|  EBAY     RSIRecovery     eq     $102.73  31.2   0.58    RSI 25.5→31.2 |
+|  HLT      Pullback50      eq     $327.90  55.3   -1.38   50MA bounce (-|
+|  HUM      Pullback50      eq     $384.17  60.2   -1.15   50MA bounce (+|
+|  KDP      Pullback50      eq     $30.95   46.5   -1.96   50MA bounce (-|
+|  MS       Pullback50      eq     $217.29  73.9   -1.74   50MA bounce (+|
+|  PM       RSIRecovery     eq     $187.63  33.6   0.31    RSI 25.2→33.6 |
+|  RCL      Pullback50      eq     $300.38  25.3   -1.12   50MA bounce (-|
+|  VTR      Pullback50      eq     $91.50   37.4   -1.58   50MA bounce (+|
+|  BKH      Pullback50      eq     $73.16   51.1   -0.79   50MA bounce (-|
+|  DT       VWAP_Reclaim    eq     $49.25   65.2   2.51    VWAP reclaim V|
+|  SLAB     Pullback50      eq     $218.97  70.0   -1.83   50MA bounce (+|
+|  UGI      VWAP_Reclaim    eq     $38.59   61.1   4.12    VWAP reclaim V|
+|  VNOM     Pullback50      eq     $43.54   51.6   -0.47   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |19:55:09  INFO        place_all_stops: checking 2 positions...
+19:55:09  INFO        STOP skipped AAPL: fractional (0.2496 shares) — software exit will handle it
+19:55:09  INFO        STOP-MARKET placed MNST  qty=1 (pos=1.6350)  stop=$47.17  id=71e2cd59-a36f-4a65-bd40-bf3f3a434a03
+19:55:09  INFO        place_eod_stops: updating 2 stops to current price...
+19:55:09  INFO        EOD stop skip AAPL: 0.2496 shares (fractional) — ext_exits will cover
+19:55:09  INFO        EOD stop: cancelled old stop MNST
+19:55:09  WARNING     EOD stop failed MNST: {"available":"0.634956125","code":40310000,"existing_qty":"1.634956125","held_for_orders":"1","message":"insufficient qty available for order (requested: 1, available: 0.634956125)","symbol":"MNST"}
+19:55:09  INFO        Daily log -> logs/daily/2026-08-18.md
+19:55:09  INFO        Dashboard written → logs/dashboard.md
+
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Scanned                                                            897|
+|  Signals                                                             21|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             2|
+|  Equity                                                         $517.00|
+|  Cash                                                           $361.93|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-18T15:55:10.110171-04:00 share=50% ===
+2026-08-18 15:55:10,110 INFO === options_live_micro LIVE 2026-08-18T15:55:10.110171-04:00 share=50% ===
+Live account equity $517.01 cash $361.93 #225458845 options_level=3
+2026-08-18 15:55:10,153 INFO Live account equity $517.01 cash $361.93 #225458845 options_level=3
+Live micro: manage/exits only
+2026-08-18 15:55:10,180 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-08-18 15:55:10,189 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---

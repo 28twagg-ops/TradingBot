@@ -5399,3 +5399,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-18 19:21:02,exits,bull,514.9,433.9,0,0,0,0,,both
 2026-08-18 19:26:15,exits,bull,511.9,433.9,0,0,0,0,,both
 2026-08-18 19:50:02,scan_evening,bull,516.82,284.29,24,0,0,3,AAPL|CNC|MNST,both
+2026-08-18 19:55:09,scan_evening,bull,517.0,361.93,21,0,1,2,AAPL|MNST,both
