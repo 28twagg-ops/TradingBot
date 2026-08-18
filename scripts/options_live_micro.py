@@ -335,6 +335,10 @@ def manage(trade, opt, state: dict, now: datetime) -> None:
         elif eod:
             reason = "EOD"
         if not reason:
+            rl(
+                f"Live micro hold {lot.get('strategy_id')} {occ} "
+                f"{plpc:+.1%} (tp {tp:+.0%} / sl {sl:+.0%})"
+            )
             continue
         _cancel_protective(trade, occ)
         sell_qty = min(qty, int(lot["qty"]))

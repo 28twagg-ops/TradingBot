@@ -58,13 +58,22 @@ jobs:
           day=$(date -u '+%Y-%m-%d')
           mkdir -p logs/action_runs
           mkdir -p logs/action_runs/reports
+          LIVE_LOG="logs/action_runs/${ts}_live_bot.log"
+          LIVE_OPTIONS_LOG="logs/action_runs/${ts}_live_options.log"
+          OPTIONS_LOG="logs/action_runs/${ts}_options_bot.log"
+          touch "$LIVE_LOG" "$LIVE_OPTIONS_LOG"
+          if [ "${OPTIONS_PAPER_ENABLED:-0}" = "1" ]; then
+            touch "$OPTIONS_LOG"
+          else
+            echo "Paper options bot disabled (OPTIONS_PAPER_ENABLED=${OPTIONS_PAPER_ENABLED:-0})" > "$OPTIONS_LOG"
+          fi
           echo "RUN_STAMP=$ts" >> "$GITHUB_ENV"
           echo "RUN_DAY=$day" >> "$GITHUB_ENV"
           echo "RUN_NUMBER=${GITHUB_RUN_NUMBER}" >> "$GITHUB_ENV"
           echo "RUN_ID=${GITHUB_RUN_ID}" >> "$GITHUB_ENV"
-          echo "LIVE_LOG=logs/action_runs/${ts}_live_bot.log" >> "$GITHUB_ENV"
-          echo "LIVE_OPTIONS_LOG=logs/action_runs/${ts}_live_options.log" >> "$GITHUB_ENV"
-          echo "OPTIONS_LOG=logs/action_runs/${ts}_options_bot.log" >> "$GITHUB_ENV"
+          echo "LIVE_LOG=$LIVE_LOG" >> "$GITHUB_ENV"
+          echo "LIVE_OPTIONS_LOG=$LIVE_OPTIONS_LOG" >> "$GITHUB_ENV"
+          echo "OPTIONS_LOG=$OPTIONS_LOG" >> "$GITHUB_ENV"
           echo "DAY_REVIEW_DOC=logs/action_runs/reports/${day}_comprehensive_review.md" >> "$GITHUB_ENV"
           echo "DAY_RUN_INDEX=logs/action_runs/reports/${day}_run_index.csv" >> "$GITHUB_ENV"
           echo "LIVE_BOT_EXIT=0" >> "$GITHUB_ENV"
@@ -198,6 +207,7 @@ jobs:
       - name: Append run to daily comprehensive review
         if: always()
         run: |
+          set +e
           if [ ! -f "$DAY_REVIEW_DOC" ]; then
             {
               echo "# Daily Comprehensive Action Review — ${RUN_DAY}"
@@ -207,7 +217,7 @@ jobs:
             } > "$DAY_REVIEW_DOC"
           fi
           if [ ! -f "$DAY_RUN_INDEX" ]; then
-            echo "run_stamp,run_number,run_id,live_exit,options_exit,live_duration_s,options_duration_s,event_type" > "$DAY_RUN_INDEX"
+            echo "run_stamp,run_number,run_id,live_exit,live_options_exit,options_exit,live_duration_s,live_options_duration_s,options_duration_s,event_type" > "$DAY_RUN_INDEX"
           fi
 
           {
@@ -218,12 +228,12 @@ jobs:
             echo "- Run id: \`${RUN_ID}\`"
             echo "- Live bot: exit=\`${LIVE_BOT_EXIT:-0}\`, duration=\`${LIVE_BOT_DURATION_S:-0}s\`"
             echo "- Live options: exit=\`${LIVE_OPTIONS_EXIT:-0}\`, duration=\`${LIVE_OPTIONS_DURATION_S:-0}s\`"
-            echo "- Options bot: exit=\`${OPTIONS_BOT_EXIT:-0}\`, duration=\`${OPTIONS_BOT_DURATION_S:-0}s\`"
-            if [ -f "logs/options_trial/reports/latest_data_quality_snippet.md" ]; then
+            echo "- Paper options: exit=\`${OPTIONS_BOT_EXIT:-0}\`, duration=\`${OPTIONS_BOT_DURATION_S:-0}s\`"
+            if [ "${OPTIONS_PAPER_ENABLED:-0}" = "1" ] && [ -f "logs/options_trial/reports/latest_data_quality_snippet.md" ]; then
               echo
               cat logs/options_trial/reports/latest_data_quality_snippet.md
             fi
-            if [ -f "logs/options_trial/runs.jsonl" ]; then
+            if [ "${OPTIONS_PAPER_ENABLED:-0}" = "1" ] && [ -f "logs/options_trial/runs.jsonl" ]; then
               echo "- Options structured summary (latest JSON):"
               echo '```json'
               tail -n 1 logs/options_trial/runs.jsonl
@@ -233,27 +243,25 @@ jobs:
             echo "### Live bot full output"
             echo
             echo '```text'
-            cat "$LIVE_LOG"
+            if [ -f "$LIVE_LOG" ]; then cat "$LIVE_LOG"; else echo "(missing $LIVE_LOG)"; fi
             echo '```'
             echo
-            if [ -f "$LIVE_OPTIONS_LOG" ]; then
-              echo "### Live options micro full output"
-              echo
-              echo '```text'
-              cat "$LIVE_OPTIONS_LOG"
-              echo '```'
-              echo
-            fi
-            echo "### Options bot full output"
+            echo "### Live options micro full output"
             echo
             echo '```text'
-            cat "$OPTIONS_LOG"
+            if [ -f "$LIVE_OPTIONS_LOG" ]; then cat "$LIVE_OPTIONS_LOG"; else echo "(missing $LIVE_OPTIONS_LOG)"; fi
+            echo '```'
+            echo
+            echo "### Paper options bot full output"
+            echo
+            echo '```text'
+            if [ -f "$OPTIONS_LOG" ]; then cat "$OPTIONS_LOG"; else echo "(missing $OPTIONS_LOG)"; fi
             echo '```'
             echo
             echo "---"
             echo
           } >> "$DAY_REVIEW_DOC"
-          echo "${RUN_STAMP},${RUN_NUMBER},${RUN_ID},${LIVE_BOT_EXIT:-0},${OPTIONS_BOT_EXIT:-0},${LIVE_BOT_DURATION_S:-0},${OPTIONS_BOT_DURATION_S:-0},${GITHUB_EVENT_NAME:-unknown}" >> "$DAY_RUN_INDEX"
+          echo "${RUN_STAMP},${RUN_NUMBER},${RUN_ID},${LIVE_BOT_EXIT:-0},${LIVE_OPTIONS_EXIT:-0},${OPTIONS_BOT_EXIT:-0},${LIVE_BOT_DURATION_S:-0},${LIVE_OPTIONS_DURATION_S:-0},${OPTIONS_BOT_DURATION_S:-0},${GITHUB_EVENT_NAME:-unknown}" >> "$DAY_RUN_INDEX"
 
       - name: Commit logs back to repo
         if: always()
@@ -328,21 +336,18 @@ jobs:
         run: |
           echo "Live bot exit code: ${LIVE_BOT_EXIT:-0}"
           echo "Live options micro exit code: ${LIVE_OPTIONS_EXIT:-0}"
-          echo "Options bot exit code: ${OPTIONS_BOT_EXIT:-0}"
+          echo "Paper options bot exit code: ${OPTIONS_BOT_EXIT:-0}"
           live=${LIVE_BOT_EXIT:-0}
-          opt=${OPTIONS_BOT_EXIT:-0}
+          live_opt=${LIVE_OPTIONS_EXIT:-0}
           # Bot steps already use continue-on-error so logs can still commit.
-          # Prefer warnings over a red job when only one bot hiccups — otherwise
-          # operators see "This job failed" even after a successful log push,
-          # and cancel/queue chaos can skip the trading day.
-          if [ "$live" -ne 0 ] && [ "$opt" -ne 0 ]; then
-            echo "::error::Both live and options bots failed (live=$live options=$opt). See logs/action_runs/."
+          if [ "$live" -ne 0 ] && [ "$live_opt" -ne 0 ]; then
+            echo "::error::Both live rubber-band and live options failed (live=$live live_options=$live_opt). See logs/action_runs/."
             exit 1
           fi
           if [ "$live" -ne 0 ]; then
             echo "::warning::Live bot failed (exit=$live). See $LIVE_LOG"
           fi
-          if [ "$opt" -ne 0 ]; then
-            echo "::warning::Options bot failed (exit=$opt). See $OPTIONS_LOG"
+          if [ "$live_opt" -ne 0 ]; then
+            echo "::warning::Live options micro failed (exit=$live_opt). See $LIVE_OPTIONS_LOG"
           fi
           echo "Workflow continuing (log commit already attempted)."

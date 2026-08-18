@@ -3263,7 +3263,6 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
             stop_breaches[ticker] = pnl_frac
 
         entry_date = pos.get("entry_date", "")
-        entered_today = (entry_date == str(date.today()))
 
         # ── Stop-loss: Alpaca unrealized P&L — no yfinance needed ─────────
         if pnl_frac <= EXIT_STOP_LOSS:
