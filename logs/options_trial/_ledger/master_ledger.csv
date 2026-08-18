@@ -11953,5 +11953,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-17T16:00:52Z,reconcile,84,lab0084_s210_w3_1045_1120_r1,S210,3558c7d50805,DKNG,DKNG260821C00026500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-18T13:12:08Z,reconcile,262,lab0262_s403_w1_0928_1005_r1,S403,186fe0652040,META,META260817C00625000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-18T13:12:08Z,reconcile,0,orphan_reconcile,ORPHAN,5c5bca0143e1,META,META260817C00625000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-18T14:11:50Z,reconcile,793,lab0793_s399_w1_0928_1005_r2,S399,da0353985882,MARA,MARA260821C00010000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-08-18T14:11:50Z,reconcile,792,lab0792_s399_w1_0928_1005_r1,S399,f60fbedb954c,MARA,MARA260821C00010000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-18T14:07:19Z,reconcile,793,lab0793_s399_w1_0928_1005_r2,S399,da0353985882,MARA,MARA260821C00010000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-18T14:07:19Z,reconcile,792,lab0792_s399_w1_0928_1005_r1,S399,f60fbedb954c,MARA,MARA260821C00010000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
