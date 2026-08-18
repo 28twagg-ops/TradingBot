@@ -88,6 +88,35 @@ def merge_daily_md(src: Path, dst: Path):
         shutil.copy2(src, dst)
 
 
+CANONICAL_RUN_INDEX_FIELDS = [
+    "run_stamp", "run_number", "run_id",
+    "live_exit", "live_options_exit", "options_exit",
+    "live_duration_s", "live_options_duration_s", "options_duration_s",
+    "event_type",
+]
+
+
+def _normalize_run_index_row(row: dict) -> dict:
+    out = {k: str(row.get(k) or "").strip() for k in CANONICAL_RUN_INDEX_FIELDS}
+    ev = out.get("event_type", "")
+    # Rows appended after live_options split but before header migration:
+    # event_type holds live_options_duration_s (numeric).
+    if ev.isdigit():
+        out["live_options_duration_s"] = ev
+        out["options_duration_s"] = "0"
+        out["event_type"] = "workflow_dispatch"
+        out["live_duration_s"] = str(row.get("options_duration_s") or out.get("live_duration_s") or "0")
+        out["options_exit"] = str(row.get("options_exit") or "0")
+        out["live_options_exit"] = "0"
+    elif not out.get("live_options_exit") and "live_options_exit" not in (row.keys() or []):
+        out["live_options_exit"] = "0"
+        out["live_options_duration_s"] = str(row.get("options_duration_s") or "0")
+        out["options_duration_s"] = "0"
+    if not out.get("event_type"):
+        out["event_type"] = "workflow_dispatch"
+    return out
+
+
 def merge_run_index_csv(src: Path, dst: Path):
     """Append-only merge for daily action run index CSVs."""
     if not src.exists():
@@ -96,22 +125,19 @@ def merge_run_index_csv(src: Path, dst: Path):
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(src, dst)
         return
-    src_fields, src_rows = _read_csv(src)
-    dst_fields, dst_rows = _read_csv(dst)
-    all_fields = list(dict.fromkeys((dst_fields or src_fields) + (src_fields or [])))
-    if not all_fields:
-        all_fields = ["run_stamp", "run_number", "run_id", "live_exit",
-                      "options_exit", "live_duration_s", "options_duration_s"]
+    _, src_rows = _read_csv(src)
+    _, dst_rows = _read_csv(dst)
     seen = set()
     merged = []
     for r in dst_rows + src_rows:
-        key = str(r.get("run_stamp") or r.get("run_id") or "")
+        norm = _normalize_run_index_row(r)
+        key = norm.get("run_stamp") or norm.get("run_id") or ""
         if not key or key in seen:
             continue
         seen.add(key)
-        merged.append(r)
+        merged.append(norm)
     merged.sort(key=lambda r: str(r.get("run_stamp") or ""))
-    _write_csv(dst, all_fields, merged)
+    _write_csv(dst, CANONICAL_RUN_INDEX_FIELDS, merged)
 
 
 def merge_comprehensive_review(src: Path, dst: Path):

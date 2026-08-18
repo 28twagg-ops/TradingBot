@@ -3650,6 +3650,15 @@ def run_exits(client, equity, cash, rgm, extended_hours=False):
 
 def run_scan(client, equity, cash, rgm, mode_name="scan"):
     today = date.today(); month = today.month; sc = SCHEDULE[month]
+    if mode_name == "morning_scan":
+        done_marker = LOG_DIR / "daily" / f".morning_scan_{today.isoformat()}.done"
+        if done_marker.exists():
+            log.info(
+                "Morning scan already completed today (%s) — exits-only pass",
+                done_marker.read_text(encoding="utf-8").strip() or "prior run",
+            )
+            run_exits(client, equity, cash, rgm)
+            return
     reserve = equity * CASH_RESERVE_PCT
     positions = enrich(client, get_positions(client))
     avail, stock_mv, stock_cap = stock_sleeve_avail(equity, cash, positions)
@@ -4251,6 +4260,10 @@ def run_scan(client, equity, cash, rgm, mode_name="scan"):
     write_daily(today, eq2, ca2, rgm, month, pos2, all_sigs, buys_log, sells_log,
                 client=client)
     write_dashboard()
+    if mode_name == "morning_scan":
+        marker = LOG_DIR / "daily" / f".morning_scan_{today.isoformat()}.done"
+        marker.parent.mkdir(parents=True, exist_ok=True)
+        marker.write_text(datetime.utcnow().isoformat() + "Z", encoding="utf-8")
     if ab_test_active() or ab_load_registry().get("entries"):
         ab_write_dashboard(eq2, ca2, pos2)
 

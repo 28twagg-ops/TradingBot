@@ -205,88 +205,47 @@ jobs:
 
       - name: Append run to daily comprehensive review
         if: always()
+        continue-on-error: true
+        env:
+          OPTIONS_PAPER_ENABLED: ${{ env.OPTIONS_PAPER_ENABLED }}
         run: |
-          set +e
-          if [ ! -f "$DAY_REVIEW_DOC" ]; then
-            {
-              echo "# Daily Comprehensive Action Review — ${RUN_DAY}"
-              echo
-              echo "_Auto-generated from GitHub Actions run output. This document appends every run for the day._"
-              echo
-            } > "$DAY_REVIEW_DOC"
-          fi
-          if [ ! -f "$DAY_RUN_INDEX" ]; then
-            echo "run_stamp,run_number,run_id,live_exit,live_options_exit,options_exit,live_duration_s,live_options_duration_s,options_duration_s,event_type" > "$DAY_RUN_INDEX"
-          fi
-
-          {
-            echo "## Run ${RUN_STAMP}"
-            echo
-            echo "- UTC timestamp: \`${RUN_STAMP}\`"
-            echo "- GitHub run: [#${RUN_NUMBER}](https://github.com/${GITHUB_REPOSITORY}/actions/runs/${RUN_ID})"
-            echo "- Run id: \`${RUN_ID}\`"
-            echo "- Live bot: exit=\`${LIVE_BOT_EXIT:-0}\`, duration=\`${LIVE_BOT_DURATION_S:-0}s\`"
-            echo "- Live options: exit=\`${LIVE_OPTIONS_EXIT:-0}\`, duration=\`${LIVE_OPTIONS_DURATION_S:-0}s\`"
-            echo "- Paper options: exit=\`${OPTIONS_BOT_EXIT:-0}\`, duration=\`${OPTIONS_BOT_DURATION_S:-0}s\`"
-            if [ "${OPTIONS_PAPER_ENABLED:-0}" = "1" ] && [ -f "logs/options_trial/reports/latest_data_quality_snippet.md" ]; then
-              echo
-              cat logs/options_trial/reports/latest_data_quality_snippet.md
-            fi
-            if [ "${OPTIONS_PAPER_ENABLED:-0}" = "1" ] && [ -f "logs/options_trial/runs.jsonl" ]; then
-              echo "- Options structured summary (latest JSON):"
-              echo '```json'
-              tail -n 1 logs/options_trial/runs.jsonl
-              echo '```'
-            fi
-            echo
-            echo "### Live bot full output"
-            echo
-            echo '```text'
-            if [ -f "$LIVE_LOG" ]; then cat "$LIVE_LOG"; else echo "(missing $LIVE_LOG)"; fi
-            echo '```'
-            echo
-            echo "### Live options micro full output"
-            echo
-            echo '```text'
-            if [ -f "$LIVE_OPTIONS_LOG" ]; then cat "$LIVE_OPTIONS_LOG"; else echo "(missing $LIVE_OPTIONS_LOG)"; fi
-            echo '```'
-            echo
-            echo "### Paper options bot full output"
-            echo
-            echo '```text'
-            if [ -f "$OPTIONS_LOG" ]; then cat "$OPTIONS_LOG"; else echo "(missing $OPTIONS_LOG)"; fi
-            echo '```'
-            echo
-            echo "---"
-            echo
-          } >> "$DAY_REVIEW_DOC"
-          echo "${RUN_STAMP},${RUN_NUMBER},${RUN_ID},${LIVE_BOT_EXIT:-0},${LIVE_OPTIONS_EXIT:-0},${OPTIONS_BOT_EXIT:-0},${LIVE_BOT_DURATION_S:-0},${LIVE_OPTIONS_DURATION_S:-0},${OPTIONS_BOT_DURATION_S:-0},${GITHUB_EVENT_NAME:-unknown}" >> "$DAY_RUN_INDEX"
+          python scripts/append_action_run_review.py || {
+            echo "::warning::Append review failed; per-run log files are still under logs/action_runs/"
+            exit 0
+          }
 
       - name: Commit logs back to repo
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          merge_run_logs() {
+            python scripts/merge_bot_logs.py /tmp/botlogs_run logs
+            if [ -d /tmp/botlogs_run/options_trial ]; then
+              mkdir -p logs/options_trial
+              cp -r /tmp/botlogs_run/options_trial/. logs/options_trial/
+            fi
+            if [ -d /tmp/botlogs_run/options_live_micro ]; then
+              mkdir -p logs/options_live_micro
+              cp -r /tmp/botlogs_run/options_live_micro/. logs/options_live_micro/
+            fi
+          }
+
+          postprocess_logs() {
+            python scripts/reconcile_daily_logs.py logs 14
+            python scripts/daily_slippage_watch.py logs
+          }
+
           git fetch origin main
-          # Stash this run's logs, reset logs/ to remote, merge append-only files
           mkdir -p /tmp/botlogs_run
           cp -r logs/. /tmp/botlogs_run/ 2>/dev/null || true
-          # Clean local logs workspace before switching to remote main snapshot.
           git reset --hard
           git clean -fd logs
           git checkout -B main origin/main
           mkdir -p logs
-          python scripts/merge_bot_logs.py /tmp/botlogs_run logs
-          if [ -d /tmp/botlogs_run/options_trial ]; then
-            mkdir -p logs/options_trial
-            cp -r /tmp/botlogs_run/options_trial/. logs/options_trial/
-          fi
-          if [ -d /tmp/botlogs_run/options_live_micro ]; then
-            mkdir -p logs/options_live_micro
-            cp -r /tmp/botlogs_run/options_live_micro/. logs/options_live_micro/
-          fi
-          python scripts/reconcile_daily_logs.py logs 14
-          python scripts/daily_slippage_watch.py logs
+          merge_run_logs
+          postprocess_logs
           git add logs/
           if git diff --staged --quiet; then
             echo "No log changes to commit"
@@ -294,9 +253,6 @@ jobs:
           fi
           git commit -m "bot run $(date -u '+%Y-%m-%d %H:%M UTC')"
           for attempt in 1 2 3 4 5; do
-            # Rebase this log commit onto the latest remote main right before push.
-            # This avoids repeated non-fast-forward failures when another workflow
-            # lands a commit between our fetch/reset and push.
             git pull --rebase origin main
             if git push origin HEAD:main; then
               echo "Push succeeded on attempt $attempt"
@@ -308,17 +264,7 @@ jobs:
             git clean -fd logs
             git checkout -B main origin/main
             mkdir -p logs
-            python scripts/merge_bot_logs.py /tmp/botlogs_run logs
-            if [ -d /tmp/botlogs_run/options_trial ]; then
-              mkdir -p logs/options_trial
-              cp -r /tmp/botlogs_run/options_trial/. logs/options_trial/
-            fi
-            if [ -d /tmp/botlogs_run/options_live_micro ]; then
-              mkdir -p logs/options_live_micro
-              cp -r /tmp/botlogs_run/options_live_micro/. logs/options_live_micro/
-            fi
-            python scripts/reconcile_daily_logs.py logs 14
-            python scripts/daily_slippage_watch.py logs
+            merge_run_logs
             git add logs/
             if git diff --staged --quiet; then
               echo "No log changes after refresh"

@@ -772,13 +772,34 @@ def _fetch_daily_bars(stock, universe: list[str], start: datetime):
 
 
 def _fetch_daily_bars_cached(stock, universe: list[str], start: datetime):
-    """Session cache: daily bars keyed by calendar day (ET)."""
+    """Session + on-disk cache: daily bars keyed by calendar day (ET)."""
     key = TODAY.isoformat()
     if key in _BARS_CACHE:
         rl_file(f"  Daily bars cache hit ({key})")
         return _BARS_CACHE[key]
+
+    cache_dir = Path(__file__).resolve().parent.parent / "logs" / "cache"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    cache_file = cache_dir / f"options_daily_bars_{key}.parquet"
+    if cache_file.exists():
+        try:
+            df = pd.read_parquet(cache_file)
+            failed: list[str] = []
+            _BARS_CACHE[key] = (df, failed)
+            rl_file(f"  Daily bars disk cache hit ({cache_file.name})")
+            return df, failed
+        except Exception as exc:
+            log.warning("Disk bar cache read failed (%s): %s", cache_file.name, exc)
+
     result = _fetch_daily_bars(stock, universe, start)
     _BARS_CACHE[key] = result
+    df, failed = result
+    if df is not None and not df.empty:
+        try:
+            df.to_parquet(cache_file)
+            rl_file(f"  Daily bars disk cache write ({cache_file.name})")
+        except Exception as exc:
+            log.warning("Disk bar cache write failed: %s", exc)
     return result
 
 
