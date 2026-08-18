@@ -799,3 +799,62 @@ WARN: get_account failed ({"code":50010000,"message":"internal server error occu
 ### Options bot full output
 
 ```text
+
+## Run 20260818T134701Z
+
+- UTC timestamp: `20260818T134701Z`
+- GitHub run: [#7345](https://github.com/28twagg-ops/TradingBot/actions/runs/32144172942)
+- Run id: `32144172942`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-17T19:56:23.633587-04:00","date":"2026-08-17","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":261.1,"phases_s":{"reconcile":140.41},"signals":0,"placed":0,"equity":null,"open_positions":14,"pending_orders":0,"open_lots":45,"submitted_today":0,"filled_today":0,"unattributed_contracts":1,"top_signals":[],"github_run":"7335","github_run_id":"32082431205","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1761,"win":33.05,"med":-39.29,"avg":12.19,"pnl":-9205.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+13:47:02  INFO      Mode: morning_scan
+13:47:04  INFO        Universe cache hit: 903 tickers (tickers_2026-08-18.json)
+13:47:05  INFO        [universe] 40/903 (40 valid)
+13:47:07  INFO        [universe] 80/903 (80 valid)
+13:47:08  INFO        [universe] 120/903 (120 valid)
+13:47:09  INFO        [universe] 160/903 (160 valid)
+13:47:11  INFO        [universe] 200/903 (199 valid)
+13:47:18  INFO        [universe] 240/903 (238 valid)
+13:47:29  INFO        [universe] 280/903 (278 valid)
+13:47:42  INFO        [universe] 320/903 (318 valid)
+13:47:53  INFO        [universe] 360/903 (358 valid)
+13:48:06  INFO        [universe] 400/903 (397 valid)
+13:48:17  INFO        [universe] 440/903 (437 valid)
+13:48:30  INFO        [universe] 480/903 (476 valid)
+13:48:41  INFO        [universe] 520/903 (516 valid)
+13:48:55  INFO        [universe] 560/903 (556 valid)
+13:49:05  INFO        [universe] 600/903 (596 valid)
+13:49:19  INFO        [universe] 640/903 (636 valid)
+13:49:29  INFO        [universe] 680/903 (676 valid)
+13:49:42  INFO        [universe] 720/903 (716 valid)
+13:49:53  INFO        [universe] 760/903 (756 valid)
+13:50:07  INFO        [universe] 800/903 (796 valid)
+13:50:17  INFO        [universe] 840/903 (835 valid)
+13:50:31  INFO        [universe] 880/903 (875 valid)
+```
+
+### Options bot full output
+
+```text
