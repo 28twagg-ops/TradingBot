@@ -5351,3 +5351,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-18 13:26:45,summary,bull,467.77,397.55,0,0,0,1,AES,both
 2026-08-18 14:00:25,scan_morning,bull,467.24,256.98,36,0,0,3,AEE|AFL|AON,both
 2026-08-18 14:07:17,exits,bull,462.32,225.93,0,0,0,3,AEE|AFL|AON,both
+2026-08-18 14:11:47,exits,bull,458.12,225.93,0,0,0,3,AEE|AFL|AON,both
