@@ -1,0 +1,30 @@
+=== options_live_micro LIVE 2026-08-18T10:00:26.145562-04:00 share=50% ===
+2026-08-18 10:00:26,145 INFO === options_live_micro LIVE 2026-08-18T10:00:26.145562-04:00 share=50% ===
+Live account equity $467.24 cash $256.98 #225458845 options_level=3
+2026-08-18 10:00:26,368 INFO Live account equity $467.24 cash $256.98 #225458845 options_level=3
+Live micro sleeve $234 (50% of $467) deployed $0 max_prem $75 (paper baseline $75 / tp=+50% sl=-50%)
+2026-08-18 10:00:26,668 INFO Live micro sleeve $234 (50% of $467) deployed $0 max_prem $75 (paper baseline $75 / tp=+50% sl=-50%)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+2026-08-18 10:00:26,669 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 24
+2026-08-18 10:00:42,850 INFO Live micro signals: 24
+  try S404 100%win/+80%med AFRM
+2026-08-18 10:00:42,909 INFO   try S404 100%win/+80%med AFRM
+  skip S404 AFRM: no contract under $75
+2026-08-18 10:00:43,790 INFO   skip S404 AFRM: no contract under $75
+  try S404 100%win/+80%med AMD
+2026-08-18 10:00:43,852 INFO   try S404 100%win/+80%med AMD
+  skip S404 AMD: no contract under $75
+2026-08-18 10:00:45,032 INFO   skip S404 AMD: no contract under $75
+  try S404 100%win/+80%med ARM
+2026-08-18 10:00:45,092 INFO   try S404 100%win/+80%med ARM
+  skip S404 ARM: no contract under $75
+2026-08-18 10:00:45,596 INFO   skip S404 ARM: no contract under $75
+  try S404 100%win/+80%med AVGO
+2026-08-18 10:00:45,654 INFO   try S404 100%win/+80%med AVGO
+LIVE BUY S404 100%win AVGO AVGO260821C00412500 limit=0.32 ask=0.33 cost=$33 id=7cb280cf-0448-4fed-8ba5-f1f7b1500d48
+2026-08-18 10:00:46,753 INFO LIVE BUY S404 100%win AVGO AVGO260821C00412500 limit=0.32 ask=0.33 cost=$33 id=7cb280cf-0448-4fed-8ba5-f1f7b1500d48
+LIVE PROT STOP AVGO260821C00412500 x1 stop=0.16 id=908c8211-a3df-42c5-aaca-255145878623
+2026-08-18 10:00:46,953 INFO LIVE PROT STOP AVGO260821C00412500 x1 stop=0.16 id=908c8211-a3df-42c5-aaca-255145878623
+Live micro done. open_options=1 lots=1
+2026-08-18 10:00:47,019 INFO Live micro done. open_options=1 lots=1
