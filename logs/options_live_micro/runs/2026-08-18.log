@@ -41,3 +41,8 @@ Live micro done. open_options=1 lots=1
 Live account equity $457.75 cash $225.93 #225458845 options_level=3
 Live micro: already at max 1 option position
 Live micro done. open_options=1 lots=1
+=== options_live_micro LIVE 2026-08-18T10:45:55.396003-04:00 share=50% ===
+Live account equity $458.04 cash $225.93 #225458845 options_level=3
+Live micro hold S404 AVGO260821C00412500 -29.0% (tp +50% / sl -50%)
+Live micro: already at max 1 option position
+Live micro done. open_options=1 lots=1

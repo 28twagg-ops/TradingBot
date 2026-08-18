@@ -1,0 +1,10 @@
+=== options_live_micro LIVE 2026-08-18T10:45:55.396003-04:00 share=50% ===
+2026-08-18 10:45:55,396 INFO === options_live_micro LIVE 2026-08-18T10:45:55.396003-04:00 share=50% ===
+Live account equity $458.04 cash $225.93 #225458845 options_level=3
+2026-08-18 10:45:55,570 INFO Live account equity $458.04 cash $225.93 #225458845 options_level=3
+Live micro hold S404 AVGO260821C00412500 -29.0% (tp +50% / sl -50%)
+2026-08-18 10:45:55,669 INFO Live micro hold S404 AVGO260821C00412500 -29.0% (tp +50% / sl -50%)
+Live micro: already at max 1 option position
+2026-08-18 10:45:55,804 INFO Live micro: already at max 1 option position
+Live micro done. open_options=1 lots=1
+2026-08-18 10:45:55,939 INFO Live micro done. open_options=1 lots=1
