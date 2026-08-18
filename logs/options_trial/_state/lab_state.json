@@ -162,46 +162,6 @@
       "entry_order_id": "3fabaf84-ae7a-4787-a05b-bf694de61b81"
     },
     {
-      "lot_id": "186fe0652040",
-      "bucket_id": 262,
-      "profile_name": "lab0262_s403_w1_0928_1005_r1",
-      "strategy_id": "S403",
-      "occ_symbol": "META260817C00625000",
-      "underlying": "META",
-      "qty": 1,
-      "entry_cost": 44.0,
-      "entry_price": 0.44,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-14T14:02:53.058173+00:00",
-      "entry_order_id": "5b425313-0bfd-4425-a012-36da16825ce9"
-    },
-    {
-      "lot_id": "5c5bca0143e1",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "META260817C00625000",
-      "underlying": "META",
-      "qty": 2,
-      "entry_cost": 88.0,
-      "entry_price": 0.44,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-14T14:02:54.016510+00:00",
-      "entry_order_id": "orphan:META260817C00625000"
-    },
-    {
       "lot_id": "4d6324cf6582",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -913,8 +873,7 @@
     "b321": 43.0,
     "b320": 43.0,
     "b305": 25.0,
-    "b262": 44.0,
-    "b0": 661.8331000000001,
+    "b0": 573.8331000000001,
     "b816": 25.0,
     "b787": 25.0,
     "b786": 25.0,
@@ -946,7 +905,7 @@
     "b115": 17.0,
     "b114": 17.0
   },
-  "session_date": "2026-08-17",
+  "session_date": "2026-08-18",
   "entries_locked": [],
   "processed_orders": [
     "88b24066-5228-4787-bfc8-1fa4c0ac267f",
@@ -1409,5 +1368,5 @@
   ],
   "submitted_today": 0,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
-  "updated": "2026-08-17"
+  "updated": "2026-08-18"
 }
