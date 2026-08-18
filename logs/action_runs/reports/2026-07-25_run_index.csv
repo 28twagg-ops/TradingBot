@@ -1,2 +1,2 @@
-run_stamp,run_number,run_id,live_exit,options_exit,live_duration_s,options_duration_s,event_type
-20260725T010403Z,5103,30137697666,0,0,2,8,schedule
+run_stamp,run_number,run_id,live_exit,live_options_exit,options_exit,live_duration_s,live_options_duration_s,options_duration_s,event_type
+20260725T010403Z,5103,30137697666,0,0,0,2,8,0,schedule

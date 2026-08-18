@@ -1,2 +1,2 @@
-run_stamp,run_number,run_id,live_exit,options_exit,live_duration_s,options_duration_s
-20260715T204540Z,4061,29449474764,0,0,8,5
+run_stamp,run_number,run_id,live_exit,live_options_exit,options_exit,live_duration_s,live_options_duration_s,options_duration_s,event_type
+20260715T204540Z,4061,29449474764,0,0,0,8,5,0,workflow_dispatch
