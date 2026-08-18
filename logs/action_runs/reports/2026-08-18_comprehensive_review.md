@@ -1775,3 +1775,101 @@ Live micro done. open_options=1 lots=1
 ### Options bot full output
 
 ```text
+
+## Run 20260818T144104Z
+
+- UTC timestamp: `20260818T144104Z`
+- GitHub run: [#7356](https://github.com/28twagg-ops/TradingBot/actions/runs/32149727734)
+- Run id: `32149727734`
+- Live bot: exit=`0`, duration=`4s`
+- Live options: exit=`0`, duration=`2s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-17T19:56:23.633587-04:00","date":"2026-08-17","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":261.1,"phases_s":{"reconcile":140.41},"signals":0,"placed":0,"equity":null,"open_positions":14,"pending_orders":0,"open_lots":45,"submitted_today":0,"filled_today":0,"unattributed_contracts":1,"top_signals":[],"github_run":"7335","github_run_id":"32082431205","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1761,"win":33.05,"med":-39.29,"avg":12.19,"pnl":-9205.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+14:41:06  INFO      Mode: exits
+14:41:07  INFO        Daily log -> logs/daily/2026-08-18.md
+14:41:07  INFO        Daily log reconciled -> logs/daily/2026-08-18.md (2 ledger rows)
+14:41:07  INFO        place_all_stops: checking 4 positions...
+14:41:07  INFO        STOP skipped AEE: fractional (0.6341 shares) — software exit will handle it
+14:41:07  INFO        STOP skipped AFL: fractional (0.5726 shares) — software exit will handle it
+14:41:07  INFO        STOP skipped AON: fractional (0.2011 shares) — software exit will handle it
+14:41:07  INFO        [positions] 3/3 (3 valid)
+14:41:07  INFO        Daily log -> logs/daily/2026-08-18.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:41 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $457.75|
++========================================================================+
+
++========================================================================+
+|                               EXIT CHECK                               |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  AEE  P&L -0.4%  $-0.26                                            HOLD|
+|  AON  P&L -0.2%  $-0.16                                            HOLD|
+|  AFL  P&L -0.2%  $-0.12                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro full output
+
+```text
+=== options_live_micro LIVE 2026-08-18T10:41:08.829326-04:00 share=50% ===
+2026-08-18 10:41:08,829 INFO === options_live_micro LIVE 2026-08-18T10:41:08.829326-04:00 share=50% ===
+Live account equity $457.75 cash $225.93 #225458845 options_level=3
+2026-08-18 10:41:09,383 INFO Live account equity $457.75 cash $225.93 #225458845 options_level=3
+Live micro: already at max 1 option position
+2026-08-18 10:41:09,772 INFO Live micro: already at max 1 option position
+Live micro done. open_options=1 lots=1
+2026-08-18 10:41:09,990 INFO Live micro done. open_options=1 lots=1
+```
+
+### Options bot full output
+
+```text
