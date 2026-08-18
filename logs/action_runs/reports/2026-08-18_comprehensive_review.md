@@ -5553,3 +5553,98 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260818T185101Z
+
+- UTC timestamp: `20260818T185101Z`
+- GitHub run: [#7406](https://github.com/28twagg-ops/TradingBot/actions/runs/32173206116)
+- Run id: `32173206116`
+- Live bot: exit=`0`, duration=`2s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260818T185101Z_live_bot.log`, `logs/action_runs/20260818T185101Z_live_options.log`, `logs/action_runs/20260818T185101Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+18:51:02  INFO      Mode: exits
+18:51:03  INFO        Daily log -> logs/daily/2026-08-18.md
+18:51:03  INFO        Daily log reconciled -> logs/daily/2026-08-18.md (5 ledger rows)
+18:51:03  INFO        place_all_stops: checking 2 positions...
+18:51:03  INFO        Daily log -> logs/daily/2026-08-18.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         18:51 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $509.90|
++========================================================================+
+
++========================================================================+
+|                             MORNING CHECK                              |
++========================================================================+
+|                                                                        |
+|  No open stock positions.                                              |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           0|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                0|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|  CONTRACT                ENTRY    NOW      P&L%     P&L$      MV       |
++------------------------------------------------------------------------+
+|  AVGO260821C00412500     $0.31    $0.19    -38.7%   $-12.00   $19.00   |
+|  CELH260821C00030000     $0.70    $0.57    -18.6%   $-13.00   $57.00   |
+|                                                                        |
+|  Options open P&L                                               $-25.00|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-18T14:51:04.265110-04:00 share=50% ===
+2026-08-18 14:51:04,265 INFO === options_live_micro LIVE 2026-08-18T14:51:04.265110-04:00 share=50% ===
+Live account equity $509.90 cash $433.90 #225458845 options_level=3
+2026-08-18 14:51:04,635 INFO Live account equity $509.90 cash $433.90 #225458845 options_level=3
+Live micro hold S404 AVGO260821C00412500 -38.7% (tp +50% / sl -50%)
+2026-08-18 14:51:04,709 INFO Live micro hold S404 AVGO260821C00412500 -38.7% (tp +50% / sl -50%)
+Live micro hold S210 CELH260821C00030000 -18.6% (tp +50% / sl -50%)
+2026-08-18 14:51:04,709 INFO Live micro hold S210 CELH260821C00030000 -18.6% (tp +50% / sl -50%)
+Live micro: manage/exits only
+2026-08-18 14:51:04,825 INFO Live micro: manage/exits only
+Live micro done. open_options=2 lots=2
+2026-08-18 14:51:04,862 INFO Live micro done. open_options=2 lots=2
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
