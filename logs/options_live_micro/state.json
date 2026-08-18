@@ -12,17 +12,6 @@
       "order_id": "7cb280cf-0448-4fed-8ba5-f1f7b1500d48"
     },
     {
-      "lot_id": "035f6e24ef58",
-      "strategy_id": "S406",
-      "occ": "TSLA260821C00357500",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_price": 0.62,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "order_id": "334c6131-c884-4578-a9bb-9d8db19169f5"
-    },
-    {
       "lot_id": "e898a6c1f23e",
       "strategy_id": "S218",
       "occ": "NKE260821C00040000",
