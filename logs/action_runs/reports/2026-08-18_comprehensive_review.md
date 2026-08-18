@@ -6591,3 +6591,120 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260818T195614Z
+
+- UTC timestamp: `20260818T195614Z`
+- GitHub run: [#7419](https://github.com/28twagg-ops/TradingBot/actions/runs/32179306744)
+- Run id: `32179306744`
+- Live bot: exit=`0`, duration=`234s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260818T195614Z_live_bot.log`, `logs/action_runs/20260818T195614Z_live_options.log`, `logs/action_runs/20260818T195614Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+... (124 earlier lines - see full log file)
+|  C        Pullback50      eq     $137.72  74.7   -1.80   50MA bounce (+|
+|  CL       Pullback50      eq     $91.47   42.3   -0.97   50MA bounce (-|
+|  EIX      Pullback50      eq     $73.59   37.8   -0.76   50MA bounce (-|
+|  EBAY     RSIRecovery     eq     $102.49  30.7   0.65    RSI 25.5→30.7 |
+|  HLT      Pullback50      eq     $328.01  55.3   -1.32   50MA bounce (-|
+|  KDP      Pullback50      eq     $30.89   46.0   -1.82   50MA bounce (-|
+|  MS       Pullback50      eq     $217.36  74.1   -1.70   50MA bounce (+|
+|  PM       RSIRecovery     eq     $188.21  34.7   0.40    RSI 25.2→34.7 |
+|  ROST     Pullback50      eq     $236.34  25.4   0.78    50MA bounce (+|
+|  RCL      Pullback50      eq     $300.61  25.4   -1.08   50MA bounce (-|
+|  BC       Pullback50      eq     $81.40   53.0   -0.36   50MA bounce (+|
+|  BKH      Pullback50      eq     $73.21   51.4   -0.64   50MA bounce (-|
+|  DT       VWAP_Reclaim    eq     $49.28   65.3   2.57    VWAP reclaim V|
+|  SNX      Pullback50      eq     $259.94  62.0   0.07    50MA bounce (+|
+|  UGI      VWAP_Reclaim    eq     $38.55   61.0   4.13    VWAP reclaim V|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] BRK-B  Pullback50                                  $77.53|
+|    ENTER [eq] CDW  Pullback50                                    $77.53|19:59:53  INFO        BUY  CDW  $77.53  [Pullback50]  id=2bae2e71-d79f-47a5-b9dc-d09f2f3540ef
+20:00:07  INFO        place_all_stops: checking 3 positions...
+20:00:07  INFO        STOP skipped AAPL: fractional (0.2496 shares) — software exit will handle it
+20:00:07  INFO        STOP skipped CDW: fractional (0.5749 shares) — software exit will handle it
+20:00:07  INFO        STOP-MARKET placed MNST  qty=1 (pos=1.6350)  stop=$47.17  id=9d9d7ab1-8ed6-43a6-8340-c36673b2e814
+20:00:08  INFO        Daily log -> logs/daily/2026-08-18.md
+20:00:08  INFO        Dashboard written → logs/dashboard.md
+
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] CNC  Pullback50                                      cap 3|
+|    SKIP [eq] CHD  Pullback50                                      cap 3|
+|    SKIP [eq] C  Pullback50                                        cap 3|
+|    SKIP [eq] CL  Pullback50                                       cap 3|
+|    SKIP [eq] EIX  Pullback50                                      cap 3|
+|    SKIP [eq] HLT  Pullback50                                      cap 3|
+|    SKIP [eq] KDP  Pullback50                                      cap 3|
+|    SKIP [eq] MS  Pullback50                                       cap 3|
+|    SKIP [eq] ROST  Pullback50                                     cap 3|
+|    SKIP [eq] RCL  Pullback50                                      cap 3|
+|    SKIP [eq] BC  Pullback50                                       cap 3|
+|    SKIP [eq] BKH  Pullback50                                      cap 3|
+|    SKIP [eq] SNX  Pullback50                                      cap 3|
+|    SKIP [eq] EBAY  RSIRecovery                                    cap 3|
+|    SKIP [eq] PM  RSIRecovery                                      cap 3|
+|    SKIP [eq] AZO  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] DT  VWAP_Reclaim                                     cap 3|
+|    SKIP [eq] UGI  VWAP_Reclaim                                    cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      1|
++------------------------------------------------------------------------+
+|  CDW                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 1 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Scanned                                                            897|
+|  Signals                                                             20|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  1 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $516.88|
+|  Cash                                                           $284.41|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-18T16:00:08.880990-04:00 share=50% ===
+2026-08-18 16:00:08,881 INFO === options_live_micro LIVE 2026-08-18T16:00:08.880990-04:00 share=50% ===
+Live account equity $516.88 cash $284.41 #225458845 options_level=3
+2026-08-18 16:00:09,298 INFO Live account equity $516.88 cash $284.41 #225458845 options_level=3
+Live micro: manage/exits only
+2026-08-18 16:00:09,513 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-08-18 16:00:09,582 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---

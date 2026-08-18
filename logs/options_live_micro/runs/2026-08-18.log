@@ -516,7 +516,11 @@ Live micro done. open_options=0 lots=0
 Live account equity $516.82 cash $516.82 #225458845 options_level=3
 Live micro: manage/exits only
 Live micro done. open_options=0 lots=0
-=== options_live_micro LIVE 2026-08-18T15:55:10.110171-04:00 share=50% ===
-Live account equity $517.01 cash $361.93 #225458845 options_level=3
+=== options_live_micro LIVE 2026-08-18T15:50:03.682612-04:00 share=50% ===
+Live account equity $516.84 cash $284.29 #225458845 options_level=3
+Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+=== options_live_micro LIVE 2026-08-18T16:00:08.880990-04:00 share=50% ===
+Live account equity $516.88 cash $284.41 #225458845 options_level=3
 Live micro: manage/exits only
 Live micro done. open_options=0 lots=0
