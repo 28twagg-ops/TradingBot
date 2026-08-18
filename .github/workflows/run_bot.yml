@@ -34,6 +34,9 @@ jobs:
   run-bot:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      # Set to "1" to re-enable the 1024-bucket paper options lab.
+      OPTIONS_PAPER_ENABLED: "0"
 
     steps:
       - name: Checkout repo
@@ -96,7 +99,6 @@ jobs:
       # Live options micro-sleeve: 50% of the rubber-band brokerage account.
       # LIVE_OPTIONS_ALLOW is membership only; options_live_micro.py always
       # tries higher CLEAN win-rate names first (S404 > S406 > S218 > S210).
-      # Paper 1024-bucket lab stays PAPER below.
       - name: Run live options micro-sleeve (LIVE, 50% equity)
         continue-on-error: true
         env:
@@ -127,9 +129,10 @@ jobs:
           echo "Live options micro duration: ${dur}s"
           exit 0
 
-      # Options paper bot: same cron as live bot (every ~5 min). Entry window 9:28-11:35 ET;
-      # manage/exits until 16:05 ET weekdays.
+      # Options paper bot (1024-bucket lab): disabled via OPTIONS_PAPER_ENABLED=0.
+      # Set OPTIONS_PAPER_ENABLED=1 on the job env to turn it back on.
       - name: Run options paper bot (PAPER, 9:28-16:05 ET weekdays)
+        if: env.OPTIONS_PAPER_ENABLED == '1'
         continue-on-error: true
         env:
           ALPACA_PAPER_KEY: ${{ secrets.ALPACA_PAPER_KEY }}

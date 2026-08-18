@@ -66,7 +66,7 @@ GITHUB SECRETS required:
   ALPACA_SECRET_KEY
 """
 
-import os, json, time, logging, csv, math, random, re
+import os, json, time, logging, csv, math, random, re, uuid
 import socket
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, date
@@ -1559,7 +1559,10 @@ def _recent_filled_order(client, ticker, side, limit=20):
 
 def do_buy(client, ticker, dollars, strategy, expected_price=None, fast_submit=False):
     try:
-        cid = f"{strategy}|{ticker}|{date.today()}"[:48]
+        # Alpaca rejects reused client_order_id — append nonce so same-day
+        # rebuys (e.g. sell then re-signal) do not fail.
+        nonce = uuid.uuid4().hex[:6]
+        cid = f"{strategy}|{ticker}|{date.today()}|{nonce}"[:48]
         o = client.submit_order(MarketOrderRequest(
             symbol=ticker, notional=round(dollars, 2),
             side=OrderSide.BUY, time_in_force=TimeInForce.DAY,
