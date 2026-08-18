@@ -6357,3 +6357,120 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260818T194555Z
+
+- UTC timestamp: `20260818T194555Z`
+- GitHub run: [#7417](https://github.com/28twagg-ops/TradingBot/actions/runs/32178369345)
+- Run id: `32178369345`
+- Live bot: exit=`0`, duration=`247s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260818T194555Z_live_bot.log`, `logs/action_runs/20260818T194555Z_live_options.log`, `logs/action_runs/20260818T194555Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+... (122 earlier lines - see full log file)
+|  UGI      VWAP_Reclaim    eq     $38.51   60.8   4.12    VWAP reclaim V|
+|  VNOM     Pullback50      eq     $43.48   51.3   -0.56   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] MNST  MomReversal                                  $77.52|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AAPL  Pullback50                                   $77.52|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] BRK-B  Pullback50                                  $77.52|
+|    ENTER [eq] CNC  Pullback50                                    $77.52|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] CDW  Pullback50                                      cap 3|
+|    SKIP [eq] CHD  Pullback50                                      cap 3|
+|    SKIP [eq] C  Pullback50                                        cap 3|
+|    SKIP [eq] CL  Pullback50                                       cap 3|
+|    SKIP [eq] EIX  Pullback50                                      cap 3|
+|    SKIP [eq] HLT  Pullback50                                      cap 3|
+|    SKIP [eq] KDP  Pullback50                                      cap 3|
+|    SKIP [eq] MS  Pullback50                                       cap 3|
+|    SKIP [eq] PM  Pullback50                                       cap 3|
+|    SKIP [eq] RCL  Pullback50                                      cap 3|19:50:02  INFO        place_all_stops: checking 3 positions...
+19:50:02  INFO        STOP skipped AAPL: fractional (0.2496 shares) — software exit will handle it
+19:50:02  INFO        STOP-MARKET placed CNC  qty=1 (pos=1.1876)  stop=$64.94  id=d3eeff45-2c0e-4b72-9375-2a519d2cf149
+19:50:02  INFO        STOP-MARKET placed MNST  qty=1 (pos=1.6350)  stop=$47.17  id=10fb0685-7929-4fbe-b791-c053c71e4b03
+19:50:02  INFO        place_eod_stops: updating 3 stops to current price...
+19:50:02  INFO        EOD stop skip AAPL: 0.2496 shares (fractional) — ext_exits will cover
+19:50:02  INFO        EOD stop: cancelled old stop CNC
+19:50:02  WARNING     EOD stop failed CNC: {"available":"0.187565116","code":40310000,"existing_qty":"1.187565116","held_for_orders":"1","message":"insufficient qty available for order (requested: 1, available: 0.187565116)","symbol":"CNC"}
+19:50:02  INFO        EOD stop: cancelled old stop MNST
+19:50:02  WARNING     EOD stop failed MNST: {"available":"0.634956125","code":40310000,"existing_qty":"1.634956125","held_for_orders":"1","message":"insufficient qty available for order (requested: 1, available: 0.634956125)","symbol":"MNST"}
+19:50:02  INFO        Daily log -> logs/daily/2026-08-18.md
+19:50:02  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [eq] VTR  Pullback50                                      cap 3|
+|    SKIP [eq] BKH  Pullback50                                      cap 3|
+|    SKIP [eq] PVH  Pullback50                                      cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] SNX  Pullback50                                      cap 3|
+|    SKIP [eq] VNOM  Pullback50                                     cap 3|
+|    SKIP [eq] EBAY  RSIRecovery                                    cap 3|
+|    SKIP [eq] AZO  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] DT  VWAP_Reclaim                                     cap 3|
+|    SKIP [eq] UGI  VWAP_Reclaim                                    cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  MNST                                                 still unconfirmed|
+|  AAPL                                                 still unconfirmed|
+|  CNC                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Scanned                                                            899|
+|  Signals                                                             24|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $516.82|
+|  Cash                                                           $284.29|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-18T15:50:03.682612-04:00 share=50% ===
+2026-08-18 15:50:03,682 INFO === options_live_micro LIVE 2026-08-18T15:50:03.682612-04:00 share=50% ===
+Live account equity $516.84 cash $284.29 #225458845 options_level=3
+2026-08-18 15:50:03,764 INFO Live account equity $516.84 cash $284.29 #225458845 options_level=3
+Live micro: manage/exits only
+2026-08-18 15:50:03,817 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-08-18 15:50:03,831 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
