@@ -858,3 +858,66 @@ WARN: get_account failed ({"code":50010000,"message":"internal server error occu
 ### Options bot full output
 
 ```text
+
+## Run 20260818T135138Z
+
+- UTC timestamp: `20260818T135138Z`
+- GitHub run: [#7346](https://github.com/28twagg-ops/TradingBot/actions/runs/32144665635)
+- Run id: `32144665635`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Options bot: exit=`0`, duration=`0s`
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-17T19:56:23.633587-04:00","date":"2026-08-17","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":261.1,"phases_s":{"reconcile":140.41},"signals":0,"placed":0,"equity":null,"open_positions":14,"pending_orders":0,"open_lots":45,"submitted_today":0,"filled_today":0,"unattributed_contracts":1,"top_signals":[],"github_run":"7335","github_run_id":"32082431205","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1761,"win":33.05,"med":-39.29,"avg":12.19,"pnl":-9205.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot full output
+
+```text
+13:51:39  INFO      Mode: morning_scan
+13:51:41  INFO        [positions] 3/3 (3 valid)
+13:51:41  INFO        SELL MARKET [urgent] AKAM closed
+13:51:43  INFO        TX logged: SELL AKAM  P&L -0.53%
+13:51:44  INFO        SELL LIMIT AES  qty=4.751439214  limit=$14.76  id=e442509f-e86e-486a-a275-80862722dc8a
+13:52:14  INFO        SELL LIMIT filled AES (confirmed by position check)
+13:52:14  INFO        TX logged: SELL AES  P&L 0.0%
+13:52:14  INFO        Universe cache hit: 903 tickers (tickers_2026-08-18.json)
+13:52:16  INFO        [universe] 40/902 (40 valid)
+13:52:17  INFO        [universe] 80/902 (80 valid)
+13:52:18  INFO        [universe] 120/902 (120 valid)
+13:52:20  INFO        [universe] 160/902 (160 valid)
+13:52:21  INFO        [universe] 200/902 (199 valid)
+13:52:29  INFO        [universe] 240/902 (238 valid)
+13:52:39  INFO        [universe] 280/902 (278 valid)
+13:52:52  INFO        [universe] 320/902 (318 valid)
+13:53:03  INFO        [universe] 360/902 (358 valid)
+13:53:16  INFO        [universe] 400/902 (397 valid)
+13:53:27  INFO        [universe] 440/902 (437 valid)
+13:53:40  INFO        [universe] 480/902 (476 valid)
+13:53:51  INFO        [universe] 520/902 (516 valid)
+13:54:04  INFO        [universe] 560/902 (556 valid)
+13:54:15  INFO        [universe] 600/902 (596 valid)
+13:54:28  INFO        [universe] 640/902 (636 valid)
+13:54:42  INFO        [universe] 680/902 (676 valid)
+13:54:52  INFO        [universe] 720/902 (716 valid)
+13:55:06  INFO        [universe] 760/902 (756 valid)
+13:55:16  INFO        [universe] 800/902 (796 valid)
+```
+
+### Options bot full output
+
+```text

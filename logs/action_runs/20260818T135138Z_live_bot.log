@@ -1,0 +1,28 @@
+13:51:39  INFO      Mode: morning_scan
+13:51:41  INFO        [positions] 3/3 (3 valid)
+13:51:41  INFO        SELL MARKET [urgent] AKAM closed
+13:51:43  INFO        TX logged: SELL AKAM  P&L -0.53%
+13:51:44  INFO        SELL LIMIT AES  qty=4.751439214  limit=$14.76  id=e442509f-e86e-486a-a275-80862722dc8a
+13:52:14  INFO        SELL LIMIT filled AES (confirmed by position check)
+13:52:14  INFO        TX logged: SELL AES  P&L 0.0%
+13:52:14  INFO        Universe cache hit: 903 tickers (tickers_2026-08-18.json)
+13:52:16  INFO        [universe] 40/902 (40 valid)
+13:52:17  INFO        [universe] 80/902 (80 valid)
+13:52:18  INFO        [universe] 120/902 (120 valid)
+13:52:20  INFO        [universe] 160/902 (160 valid)
+13:52:21  INFO        [universe] 200/902 (199 valid)
+13:52:29  INFO        [universe] 240/902 (238 valid)
+13:52:39  INFO        [universe] 280/902 (278 valid)
+13:52:52  INFO        [universe] 320/902 (318 valid)
+13:53:03  INFO        [universe] 360/902 (358 valid)
+13:53:16  INFO        [universe] 400/902 (397 valid)
+13:53:27  INFO        [universe] 440/902 (437 valid)
+13:53:40  INFO        [universe] 480/902 (476 valid)
+13:53:51  INFO        [universe] 520/902 (516 valid)
+13:54:04  INFO        [universe] 560/902 (556 valid)
+13:54:15  INFO        [universe] 600/902 (596 valid)
+13:54:28  INFO        [universe] 640/902 (636 valid)
+13:54:42  INFO        [universe] 680/902 (676 valid)
+13:54:52  INFO        [universe] 720/902 (716 valid)
+13:55:06  INFO        [universe] 760/902 (756 valid)
+13:55:16  INFO        [universe] 800/902 (796 valid)
