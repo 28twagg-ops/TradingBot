@@ -1,26 +1,3 @@
 {
-  "lots": [
-    {
-      "lot_id": "758bb852bd60",
-      "strategy_id": "S404",
-      "occ": "AVGO260821C00412500",
-      "underlying": "AVGO",
-      "qty": 1,
-      "entry_price": 0.32,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "order_id": "7cb280cf-0448-4fed-8ba5-f1f7b1500d48"
-    },
-    {
-      "lot_id": "e4e83c4b3bd4",
-      "strategy_id": "S210",
-      "occ": "CELH260821C00030000",
-      "underlying": "CELH",
-      "qty": 1,
-      "entry_price": 0.71,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "order_id": "accf9428-a2cf-4585-9e23-cd6ea4481ce5"
-    }
-  ]
+  "lots": []
 }

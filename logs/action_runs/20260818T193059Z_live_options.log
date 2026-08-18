@@ -1,0 +1,12 @@
+=== options_live_micro LIVE 2026-08-18T15:34:37.235747-04:00 share=50% ===
+2026-08-18 15:34:37,235 INFO === options_live_micro LIVE 2026-08-18T15:34:37.235747-04:00 share=50% ===
+Live account equity $514.90 cash $433.90 #225458845 options_level=3
+2026-08-18 15:34:37,427 INFO Live account equity $514.90 cash $433.90 #225458845 options_level=3
+LIVE EXIT EOD AVGO260821C00412500 x1 limit=0.20 id=5ac7a42f-895b-46c5-8f8e-787813906c13
+2026-08-18 15:34:38,605 INFO LIVE EXIT EOD AVGO260821C00412500 x1 limit=0.20 id=5ac7a42f-895b-46c5-8f8e-787813906c13
+LIVE EXIT EOD CELH260821C00030000 x1 limit=0.63 id=bc9c0fa0-420c-4f89-8125-b82e118eff47
+2026-08-18 15:34:38,884 INFO LIVE EXIT EOD CELH260821C00030000 x1 limit=0.63 id=bc9c0fa0-420c-4f89-8125-b82e118eff47
+Live micro: manage/exits only
+2026-08-18 15:34:38,940 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-08-18 15:34:38,995 INFO Live micro done. open_options=0 lots=0

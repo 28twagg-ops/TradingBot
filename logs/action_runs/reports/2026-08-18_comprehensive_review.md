@@ -6028,3 +6028,116 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260818T193059Z
+
+- UTC timestamp: `20260818T193059Z`
+- GitHub run: [#7414](https://github.com/28twagg-ops/TradingBot/actions/runs/32176937956)
+- Run id: `32176937956`
+- Live bot: exit=`0`, duration=`217s`
+- Live options: exit=`0`, duration=`3s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260818T193059Z_live_bot.log`, `logs/action_runs/20260818T193059Z_live_options.log`, `logs/action_runs/20260818T193059Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+19:31:00  INFO      Mode: evening_prep
+19:31:01  INFO        Universe cache hit: 903 tickers (tickers_2026-08-18.json)
+19:31:02  INFO        [prep_universe] 40/903 (40 valid)
+19:31:04  INFO        [prep_universe] 80/903 (80 valid)
+19:31:06  INFO        [prep_universe] 120/903 (120 valid)
+19:31:07  INFO        [prep_universe] 160/903 (160 valid)
+19:31:09  INFO        [prep_universe] 200/903 (199 valid)
+19:31:14  INFO        [prep_universe] 240/903 (238 valid)
+19:31:28  INFO        [prep_universe] 280/903 (278 valid)
+19:31:38  INFO        [prep_universe] 320/903 (318 valid)
+19:31:52  INFO        [prep_universe] 360/903 (358 valid)
+19:32:02  INFO        [prep_universe] 400/903 (397 valid)
+19:32:16  INFO        [prep_universe] 440/903 (437 valid)
+19:32:27  INFO        [prep_universe] 480/903 (477 valid)
+19:32:40  INFO        [prep_universe] 520/903 (517 valid)
+19:32:50  INFO        [prep_universe] 560/903 (557 valid)
+19:33:03  INFO        [prep_universe] 600/903 (597 valid)
+19:33:14  INFO        [prep_universe] 640/903 (637 valid)
+19:33:28  INFO        [prep_universe] 680/903 (677 valid)
+19:33:38  INFO        [prep_universe] 720/903 (717 valid)
+19:33:52  INFO        [prep_universe] 760/903 (757 valid)
+19:34:02  INFO        [prep_universe] 800/903 (797 valid)
+19:34:16  INFO        [prep_universe] 840/903 (836 valid)
+19:34:27  INFO        [prep_universe] 880/903 (876 valid)
+19:34:34  INFO        [prep_universe] 903/903 (899 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      EVENING_PREP|
+|  Time                                                         19:31 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $511.90|
++========================================================================+
+
++========================================================================+
+|                              EVENING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/evening_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       0|
+|  Invested                                                         $0.00|
+|  Open P&L                                                        $+0.00|
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                2|
+|  TICKER    TYPE              QTY       LIMIT       STOP                |
++------------------------------------------------------------------------+
+|  CELH260~  OrderType.STOP_~  1         0.32        0.35                |
+|  AVGO260~  OrderType.STOP_~  1         0.15        0.16                |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      0|
+|  Signal candidates                                                   26|
+|  Universe scanned                                                   903|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-18T15:34:37.235747-04:00 share=50% ===
+2026-08-18 15:34:37,235 INFO === options_live_micro LIVE 2026-08-18T15:34:37.235747-04:00 share=50% ===
+Live account equity $514.90 cash $433.90 #225458845 options_level=3
+2026-08-18 15:34:37,427 INFO Live account equity $514.90 cash $433.90 #225458845 options_level=3
+LIVE EXIT EOD AVGO260821C00412500 x1 limit=0.20 id=5ac7a42f-895b-46c5-8f8e-787813906c13
+2026-08-18 15:34:38,605 INFO LIVE EXIT EOD AVGO260821C00412500 x1 limit=0.20 id=5ac7a42f-895b-46c5-8f8e-787813906c13
+LIVE EXIT EOD CELH260821C00030000 x1 limit=0.63 id=bc9c0fa0-420c-4f89-8125-b82e118eff47
+2026-08-18 15:34:38,884 INFO LIVE EXIT EOD CELH260821C00030000 x1 limit=0.63 id=bc9c0fa0-420c-4f89-8125-b82e118eff47
+Live micro: manage/exits only
+2026-08-18 15:34:38,940 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-08-18 15:34:38,995 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
