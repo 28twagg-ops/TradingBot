@@ -12,17 +12,6 @@
       "order_id": "7cb280cf-0448-4fed-8ba5-f1f7b1500d48"
     },
     {
-      "lot_id": "e898a6c1f23e",
-      "strategy_id": "S218",
-      "occ": "NKE260821C00040000",
-      "underlying": "NKE",
-      "qty": 1,
-      "entry_price": 0.54,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "order_id": "6fe24f90-9d69-4165-858a-275b5e90e561"
-    },
-    {
       "lot_id": "e4e83c4b3bd4",
       "strategy_id": "S210",
       "occ": "CELH260821C00030000",
