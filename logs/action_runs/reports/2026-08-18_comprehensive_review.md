@@ -6141,3 +6141,111 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260818T193601Z
+
+- UTC timestamp: `20260818T193601Z`
+- GitHub run: [#7415](https://github.com/28twagg-ops/TradingBot/actions/runs/32177425274)
+- Run id: `32177425274`
+- Live bot: exit=`0`, duration=`216s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260818T193601Z_live_bot.log`, `logs/action_runs/20260818T193601Z_live_options.log`, `logs/action_runs/20260818T193601Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+19:36:02  INFO      Mode: evening_prep
+19:36:03  INFO        Universe cache hit: 903 tickers (tickers_2026-08-18.json)
+19:36:04  INFO        [prep_universe] 40/903 (40 valid)
+19:36:05  INFO        [prep_universe] 80/903 (80 valid)
+19:36:07  INFO        [prep_universe] 120/903 (120 valid)
+19:36:09  INFO        [prep_universe] 160/903 (160 valid)
+19:36:11  INFO        [prep_universe] 200/903 (199 valid)
+19:36:16  INFO        [prep_universe] 240/903 (238 valid)
+19:36:29  INFO        [prep_universe] 280/903 (278 valid)
+19:36:40  INFO        [prep_universe] 320/903 (318 valid)
+19:36:54  INFO        [prep_universe] 360/903 (358 valid)
+19:37:04  INFO        [prep_universe] 400/903 (397 valid)
+19:37:17  INFO        [prep_universe] 440/903 (437 valid)
+19:37:28  INFO        [prep_universe] 480/903 (477 valid)
+19:37:41  INFO        [prep_universe] 520/903 (517 valid)
+19:37:52  INFO        [prep_universe] 560/903 (557 valid)
+19:38:05  INFO        [prep_universe] 600/903 (597 valid)
+19:38:16  INFO        [prep_universe] 640/903 (637 valid)
+19:38:29  INFO        [prep_universe] 680/903 (677 valid)
+19:38:40  INFO        [prep_universe] 720/903 (717 valid)
+19:38:53  INFO        [prep_universe] 760/903 (757 valid)
+19:39:04  INFO        [prep_universe] 800/903 (797 valid)
+19:39:17  INFO        [prep_universe] 840/903 (836 valid)
+19:39:28  INFO        [prep_universe] 880/903 (876 valid)
+19:39:35  INFO        [prep_universe] 903/903 (899 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      EVENING_PREP|
+|  Time                                                         19:36 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $516.82|
++========================================================================+
+
++========================================================================+
+|                              EVENING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/evening_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       0|
+|  Invested                                                         $0.00|
+|  Open P&L                                                        $+0.00|
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                0|
+|                                                                        |
+|  No open sell orders.                                                  |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      0|
+|  Signal candidates                                                   25|
+|  Universe scanned                                                   903|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-18T15:39:38.255978-04:00 share=50% ===
+2026-08-18 15:39:38,256 INFO === options_live_micro LIVE 2026-08-18T15:39:38.255978-04:00 share=50% ===
+Live account equity $516.82 cash $516.82 #225458845 options_level=3
+2026-08-18 15:39:38,365 INFO Live account equity $516.82 cash $516.82 #225458845 options_level=3
+Live micro: manage/exits only
+2026-08-18 15:39:38,456 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-08-18 15:39:38,485 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
