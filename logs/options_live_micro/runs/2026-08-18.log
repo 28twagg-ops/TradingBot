@@ -452,3 +452,10 @@ Live micro hold S218 NKE260821C00040000 +46.3% (tp +50% / sl -50%)
 Live micro hold S210 CELH260821C00030000 -25.7% (tp +50% / sl -50%)
 Live micro: manage/exits only
 Live micro done. open_options=3 lots=3
+=== options_live_micro LIVE 2026-08-18T14:20:58.180042-04:00 share=50% ===
+Live account equity $497.93 cash $345.93 #225458845 options_level=3
+Live micro hold S404 AVGO260821C00412500 -35.5% (tp +50% / sl -50%)
+Live micro hold S218 NKE260821C00040000 +48.1% (tp +50% / sl -50%)
+Live micro hold S210 CELH260821C00030000 -25.7% (tp +50% / sl -50%)
+Live micro: manage/exits only
+Live micro done. open_options=3 lots=3
