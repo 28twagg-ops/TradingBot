@@ -1960,3 +1960,100 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260818T145100Z
+
+- UTC timestamp: `20260818T145100Z`
+- GitHub run: [#7358](https://github.com/28twagg-ops/TradingBot/actions/runs/32150752851)
+- Run id: `32150752851`
+- Live bot: exit=`0`, duration=`3s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+
+### Live bot full output
+
+```text
+14:51:01  INFO      Mode: exits
+14:51:02  INFO        Daily log -> logs/daily/2026-08-18.md
+14:51:02  INFO        Daily log reconciled -> logs/daily/2026-08-18.md (2 ledger rows)
+14:51:02  INFO        place_all_stops: checking 4 positions...
+14:51:02  INFO        STOP skipped AEE: fractional (0.6341 shares) — software exit will handle it
+14:51:02  INFO        STOP skipped AFL: fractional (0.5726 shares) — software exit will handle it
+14:51:02  INFO        STOP skipped AON: fractional (0.2011 shares) — software exit will handle it
+14:51:02  INFO        [positions] 3/3 (3 valid)
+14:51:03  INFO        Daily log -> logs/daily/2026-08-18.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:51 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $457.87|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  AEE  P&L -0.4%  $-0.27                                            HOLD|
+|  AFL  P&L -0.1%  $-0.09                                            HOLD|
+|  AON  P&L -0.1%  $-0.04                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|  CONTRACT                ENTRY    NOW      P&L%     P&L$      MV       |
++------------------------------------------------------------------------+
+|  AVGO260821C00412500     $0.31    $0.22    -29.0%   $-9.00    $22.00   |
+|                                                                        |
+|  Options open P&L                                                $-9.00|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro full output
+
+```text
+=== options_live_micro LIVE 2026-08-18T10:51:03.886402-04:00 share=50% ===
+2026-08-18 10:51:03,886 INFO === options_live_micro LIVE 2026-08-18T10:51:03.886402-04:00 share=50% ===
+Live account equity $457.89 cash $225.93 #225458845 options_level=3
+2026-08-18 10:51:04,120 INFO Live account equity $457.89 cash $225.93 #225458845 options_level=3
+Live micro hold S404 AVGO260821C00412500 -29.0% (tp +50% / sl -50%)
+2026-08-18 10:51:04,275 INFO Live micro hold S404 AVGO260821C00412500 -29.0% (tp +50% / sl -50%)
+Live micro: at max 1 option — manage/exits only (no new buys)
+2026-08-18 10:51:04,479 INFO Live micro: at max 1 option — manage/exits only (no new buys)
+Live micro done. open_options=1 lots=1
+2026-08-18 10:51:04,546 INFO Live micro done. open_options=1 lots=1
+```
+
+### Paper options bot full output
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
