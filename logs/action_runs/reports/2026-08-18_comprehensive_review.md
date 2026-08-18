@@ -2057,3 +2057,158 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260818T145549Z
+
+- UTC timestamp: `20260818T145549Z`
+- GitHub run: [#7359](https://github.com/28twagg-ops/TradingBot/actions/runs/32151260816)
+- Run id: `32151260816`
+- Live bot: exit=`0`, duration=`2s`
+- Live options: exit=`0`, duration=`12s`
+- Paper options: exit=`0`, duration=`0s`
+
+### Live bot full output
+
+```text
+14:55:50  INFO      Mode: exits
+14:55:51  INFO        Daily log -> logs/daily/2026-08-18.md
+14:55:51  INFO        Daily log reconciled -> logs/daily/2026-08-18.md (2 ledger rows)
+14:55:51  INFO        place_all_stops: checking 4 positions...
+14:55:51  INFO        STOP skipped AEE: fractional (0.6341 shares) — software exit will handle it
+14:55:51  INFO        STOP skipped AFL: fractional (0.5726 shares) — software exit will handle it
+14:55:51  INFO        STOP skipped AON: fractional (0.2011 shares) — software exit will handle it
+14:55:51  INFO        [positions] 3/3 (3 valid)
+14:55:51  INFO        Daily log -> logs/daily/2026-08-18.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:55 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $458.05|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  AEE  P&L -0.2%  $-0.14                                            HOLD|
+|  AFL  P&L -0.1%  $-0.08                                            HOLD|
+|  AON  P&L -0.0%  $-0.03                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|  CONTRACT                ENTRY    NOW      P&L%     P&L$      MV       |
++------------------------------------------------------------------------+
+|  AVGO260821C00412500     $0.31    $0.22    -29.0%   $-9.00    $22.00   |
+|                                                                        |
+|  Options open P&L                                                $-9.00|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro full output
+
+```text
+=== options_live_micro LIVE 2026-08-18T10:55:52.552675-04:00 share=50% ===
+2026-08-18 10:55:52,552 INFO === options_live_micro LIVE 2026-08-18T10:55:52.552675-04:00 share=50% ===
+Live account equity $458.04 cash $225.93 #225458845 options_level=3
+2026-08-18 10:55:52,655 INFO Live account equity $458.04 cash $225.93 #225458845 options_level=3
+Live micro hold S404 AVGO260821C00412500 -29.0% (tp +50% / sl -50%)
+2026-08-18 10:55:52,789 INFO Live micro hold S404 AVGO260821C00412500 -29.0% (tp +50% / sl -50%)
+Live micro sleeve $229 (50% of $458) deployed $22 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+2026-08-18 10:55:52,898 INFO Live micro sleeve $229 (50% of $458) deployed $22 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+2026-08-18 10:55:52,898 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 22
+2026-08-18 10:56:02,029 INFO Live micro signals: 22
+  skip S404 AFRM: strategy already open (paper bucket rule)
+2026-08-18 10:56:02,030 INFO   skip S404 AFRM: strategy already open (paper bucket rule)
+  skip S404 AMD: strategy already open (paper bucket rule)
+2026-08-18 10:56:02,030 INFO   skip S404 AMD: strategy already open (paper bucket rule)
+  skip S404 ARM: strategy already open (paper bucket rule)
+2026-08-18 10:56:02,030 INFO   skip S404 ARM: strategy already open (paper bucket rule)
+  skip S404 AVGO: strategy already open (paper bucket rule)
+2026-08-18 10:56:02,030 INFO   skip S404 AVGO: strategy already open (paper bucket rule)
+  skip S404 CAT: strategy already open (paper bucket rule)
+2026-08-18 10:56:02,030 INFO   skip S404 CAT: strategy already open (paper bucket rule)
+  skip S404 CVNA: strategy already open (paper bucket rule)
+2026-08-18 10:56:02,030 INFO   skip S404 CVNA: strategy already open (paper bucket rule)
+  skip S404 DOCN: strategy already open (paper bucket rule)
+2026-08-18 10:56:02,030 INFO   skip S404 DOCN: strategy already open (paper bucket rule)
+  skip S404 HOOD: strategy already open (paper bucket rule)
+2026-08-18 10:56:02,031 INFO   skip S404 HOOD: strategy already open (paper bucket rule)
+  skip S404 MARA: strategy already open (paper bucket rule)
+2026-08-18 10:56:02,031 INFO   skip S404 MARA: strategy already open (paper bucket rule)
+  skip S404 META: strategy already open (paper bucket rule)
+2026-08-18 10:56:02,031 INFO   skip S404 META: strategy already open (paper bucket rule)
+  skip S404 NVDA: strategy already open (paper bucket rule)
+2026-08-18 10:56:02,031 INFO   skip S404 NVDA: strategy already open (paper bucket rule)
+  skip S404 PATH: strategy already open (paper bucket rule)
+2026-08-18 10:56:02,031 INFO   skip S404 PATH: strategy already open (paper bucket rule)
+  skip S404 SMCI: strategy already open (paper bucket rule)
+2026-08-18 10:56:02,031 INFO   skip S404 SMCI: strategy already open (paper bucket rule)
+  skip S404 UPST: strategy already open (paper bucket rule)
+2026-08-18 10:56:02,031 INFO   skip S404 UPST: strategy already open (paper bucket rule)
+  try S406 56%win/+58%med AFRM
+2026-08-18 10:56:02,031 INFO   try S406 56%win/+58%med AFRM
+  skip S406 AFRM: no contract under $75
+2026-08-18 10:56:02,384 INFO   skip S406 AFRM: no contract under $75
+  try S406 56%win/+58%med TSLA
+2026-08-18 10:56:02,384 INFO   try S406 56%win/+58%med TSLA
+LIVE BUY S406 56%win TSLA TSLA260821C00357500 limit=0.62 ask=0.63 cost=$63 id=334c6131-c884-4578-a9bb-9d8db19169f5
+2026-08-18 10:56:02,929 INFO LIVE BUY S406 56%win TSLA TSLA260821C00357500 limit=0.62 ask=0.63 cost=$63 id=334c6131-c884-4578-a9bb-9d8db19169f5
+  try S218 56%win/+49%med NKE
+2026-08-18 10:56:02,929 INFO   try S218 56%win/+49%med NKE
+LIVE BUY S218 56%win NKE NKE260821C00040000 limit=0.54 ask=0.55 cost=$55 id=6fe24f90-9d69-4165-858a-275b5e90e561
+2026-08-18 10:56:03,245 INFO LIVE BUY S218 56%win NKE NKE260821C00040000 limit=0.54 ask=0.55 cost=$55 id=6fe24f90-9d69-4165-858a-275b5e90e561
+  skip S218 PG: strategy already open (paper bucket rule)
+2026-08-18 10:56:03,246 INFO   skip S218 PG: strategy already open (paper bucket rule)
+  try S210 55%win/+47%med AXP
+2026-08-18 10:56:03,246 INFO   try S210 55%win/+47%med AXP
+  skip S210 AXP: no contract under $75
+2026-08-18 10:56:03,500 INFO   skip S210 AXP: no contract under $75
+  try S210 55%win/+47%med CELH
+2026-08-18 10:56:03,500 INFO   try S210 55%win/+47%med CELH
+LIVE BUY S210 55%win CELH CELH260821C00030000 limit=0.71 ask=0.72 cost=$72 id=accf9428-a2cf-4585-9e23-cd6ea4481ce5
+2026-08-18 10:56:03,816 INFO LIVE BUY S210 55%win CELH CELH260821C00030000 limit=0.71 ask=0.72 cost=$72 id=accf9428-a2cf-4585-9e23-cd6ea4481ce5
+  skip S210 HOOD: strategy already open (paper bucket rule)
+2026-08-18 10:56:03,816 INFO   skip S210 HOOD: strategy already open (paper bucket rule)
+  skip S210 UNP: strategy already open (paper bucket rule)
+2026-08-18 10:56:03,816 INFO   skip S210 UNP: strategy already open (paper bucket rule)
+Live micro done. open_options=2 lots=4
+2026-08-18 10:56:03,898 INFO Live micro done. open_options=2 lots=4
+```
+
+### Paper options bot full output
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
