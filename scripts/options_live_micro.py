@@ -2,15 +2,15 @@
 """
 options_live_micro.py -- LIVE options sleeve on the rubber-band brokerage account.
 
-NOT the 1024-bucket paper lab. Account split is the only live-specific cap:
+NOT the 1024-bucket paper lab. Live-specific caps only:
   - 50% of equity reserved for options (LIVE_OPTIONS_SHARE)
-  - 1 open contract (same as paper max_contracts)
   - allow-list of paper KEEP names, ranked by CLEAN win rate
   - one strategy per signal family (only one GapDown: S404, not S397/S350 too)
 
-Trade mechanics copy the paper baseline bucket (not extra live rules):
-  buy ask-0.01, max_premium $75, OI>=100, spread<=25%, TP +50% / SL -50%,
-  EOD 15:30, market exit 15:50, broker-resting protective stop.
+Trade mechanics = paper baseline bucket 0 (options_lab.py):
+  1 contract per allow-list strategy (same as paper max_contracts per bucket),
+  buy ask-0.01, max_premium $75, account_cap 95%, OI>=100, spread<=25%,
+  TP +50% / SL -50%, EOD 15:30, market exit 15:50, broker-resting protective stop.
 
 Uses ALPACA_API_KEY / ALPACA_SECRET_KEY (live). Always exits 0 for GHA.
 """
@@ -40,7 +40,7 @@ from alpaca.data.historical import OptionHistoricalDataClient, StockHistoricalDa
 from alpaca.data.requests import OptionChainRequest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from options_lab import EffectiveArm, entry_limit_price  # noqa: E402
+from options_lab import EffectiveArm, entry_limit_price, _merge_arm, BUCKET_EXPERIMENTS, VIRTUAL_BUCKET_USD  # noqa: E402
 from options_oi import make_trading_client  # noqa: E402
 from options_signals import PAPER_STRATEGIES  # noqa: E402
 from options_universe import get_universe, to_alpaca_symbol  # noqa: E402
@@ -54,15 +54,15 @@ API_KEY = os.getenv("ALPACA_API_KEY")
 API_SECRET = os.getenv("ALPACA_SECRET_KEY")
 
 SHARE = float(os.getenv("LIVE_OPTIONS_SHARE", "0.50"))
-MAX_POS = int(os.getenv("LIVE_OPTIONS_MAX_POS", "1"))
-# Paper baseline BucketProfile (options_lab.py) -- do not tighten these live.
-PAPER_MAX_PREMIUM = 75.0
-TAKE_PROFIT = 0.50
-STOP_LOSS = -0.50
-BUY_LIMIT_OFFSET = -0.01
-SELL_LIMIT_OFFSET = -0.01
-MIN_OPEN_INTEREST = 100
-MAX_SPREAD_FRAC = 0.25
+# Paper baseline bucket 0 — do not override these with live-only values.
+PAPER_BASELINE = BUCKET_EXPERIMENTS[0]
+PAPER_MAX_PREMIUM = float(PAPER_BASELINE.max_premium)
+TAKE_PROFIT = float(PAPER_BASELINE.take_profit)
+STOP_LOSS = float(PAPER_BASELINE.stop_loss)
+BUY_LIMIT_OFFSET = float(PAPER_BASELINE.buy_limit_offset)
+SELL_LIMIT_OFFSET = float(PAPER_BASELINE.sell_limit_offset)
+MIN_OPEN_INTEREST = int(PAPER_BASELINE.min_open_interest)
+MAX_SPREAD_FRAC = float(PAPER_BASELINE.max_spread_frac)
 # Membership list. Trade order is CLEAN win rate (then median), not this string order.
 ALLOW = [
     s.strip()
@@ -208,31 +208,20 @@ def open_count(trade, state: dict) -> int:
     return max(len(option_positions(trade)), len(active_lots(state)))
 
 
-def make_arm(sid: str, sleeve: float, max_premium: float) -> EffectiveArm | None:
-    st = _strat(sid)
-    if not st:
+def open_strategy_ids(trade, state: dict) -> set[str]:
+    out: set[str] = set()
+    for lot in active_lots(state):
+        sid = lot.get("strategy_id")
+        if sid:
+            out.add(str(sid))
+    return out
+
+
+def make_arm(sid: str) -> EffectiveArm | None:
+    """Paper baseline bucket 0 arm — same virtual $500 / max_contracts=1 as paper lab."""
+    if not _strat(sid):
         return None
-    return EffectiveArm(
-        bucket_id=0,
-        profile_name="live_micro",
-        strategy_id=sid,
-        virtual_equity=sleeve,
-        buy_limit_offset=BUY_LIMIT_OFFSET,
-        max_premium=max_premium,
-        max_spread_frac=MAX_SPREAD_FRAC,
-        min_open_interest=MIN_OPEN_INTEREST,
-        account_cap=1.0,
-        max_contracts=1,
-        sell_limit_offset=SELL_LIMIT_OFFSET,
-        take_profit=TAKE_PROFIT,
-        stop_loss=STOP_LOSS,
-        market_exit_eod=True,
-        option_type=getattr(st, "option_type", "call") or "call",
-        strike_offset=int(getattr(st, "strike_offset", 0) or 0),
-        dte_target=st.dte_target,
-        dte_min=st.dte_min,
-        dte_max=st.dte_max,
-    )
+    return _merge_arm(PAPER_BASELINE, sid, VIRTUAL_BUCKET_USD)
 
 
 def cid_entry() -> str:
@@ -474,13 +463,9 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
     if not _between(now, om.ENTRY_START, om.ENTRY_END):
         rl("Live micro: outside entry window")
         return 0
-    if open_count(trade, state) >= MAX_POS:
-        rl(f"Live micro: already at max {MAX_POS} option position")
-        return 0
     sleeve = max(0.0, equity * SHARE)
     deployed = option_mv(trade)
-    room = min(max(0.0, cash), max(0.0, sleeve - deployed))
-    max_prem = min(PAPER_MAX_PREMIUM, room)
+    open_strats = open_strategy_ids(trade, state)
     allow = [s.id for s in _allow_strats()]
     rank_txt = ", ".join(
         f"{sid} {CLEAN_RANK.get(sid, (0, 0))[0]:.0f}%win"
@@ -488,29 +473,32 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
     )
     rl(
         f"Live micro sleeve ${sleeve:.0f} ({SHARE:.0%} of ${equity:.0f}) "
-        f"deployed ${deployed:.0f} max_prem ${max_prem:.0f} "
+        f"deployed ${deployed:.0f} open_strategies={len(open_strats)}/{len(allow)} "
         f"(paper baseline ${PAPER_MAX_PREMIUM:.0f} / tp={TAKE_PROFIT:+.0%} "
-        f"sl={STOP_LOSS:+.0%})"
+        f"sl={STOP_LOSS:+.0%} / 1 contract per strategy)"
     )
     rl(f"Live micro entry order (CLEAN win): {rank_txt}")
-    if max_prem <= 0:
-        rl("Live micro: no cash/sleeve room -- skip entries")
-        return 0
     hits = scan_hits(stock)
     rl(f"Live micro signals: {len(hits)}")
     placed = 0
     chain_cache: dict = {}
     oi_cache: dict = {}
     for hit in hits:
-        if placed or open_count(trade, state) >= MAX_POS:
-            break
+        if hit.strategy_id in open_strats:
+            rl(f"  skip {hit.strategy_id} {hit.symbol}: strategy already open (paper bucket rule)")
+            continue
         win, med = CLEAN_RANK.get(hit.strategy_id, (0.0, 0.0))
         rl(f"  try {hit.strategy_id} {win:.0f}%win/{med:+.0f}%med {hit.symbol}")
-        arm = make_arm(hit.strategy_id, sleeve, max_prem)
+        arm = make_arm(hit.strategy_id)
         if not arm:
             continue
         st = _strat(hit.strategy_id)
         if not st:
+            continue
+        room = min(max(0.0, cash), max(0.0, sleeve - option_mv(trade)))
+        max_prem = min(float(arm.max_premium), room)
+        if max_prem <= 0:
+            rl(f"  skip {hit.strategy_id} {hit.symbol}: no sleeve/cash room")
             continue
         cand = om._pick_option_from_chain(
             opt, ref, hit.symbol, hit.price,
@@ -521,6 +509,7 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
             rl(f"  skip {hit.strategy_id} {hit.symbol}: no contract under ${max_prem:.0f}")
             continue
         if cand["cost"] > max_prem + 0.01:
+            rl(f"  skip {hit.strategy_id} {hit.symbol}: cost ${cand['cost']:.0f} > ${max_prem:.0f}")
             continue
         limit = entry_limit_price(arm, cand["bid"], cand["ask"], cand["mid"])
         try:
@@ -537,8 +526,8 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
                 "underlying": hit.symbol,
                 "qty": 1,
                 "entry_price": float(limit),
-                "take_profit": TAKE_PROFIT,
-                "stop_loss": STOP_LOSS,
+                "take_profit": arm.take_profit,
+                "stop_loss": arm.stop_loss,
                 "order_id": str(o.id),
             }
             state.setdefault("lots", []).append(lot)
@@ -553,10 +542,11 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
                 f"LIVE BUY {hit.strategy_id} {win:.0f}%win {hit.symbol} {cand['symbol']} "
                 f"limit={limit:.2f} ask={cand['ask']:.2f} cost=${cand['cost']:.0f} id={o.id}"
             )
-            placed = 1
+            placed += 1
+            open_strats.add(hit.strategy_id)
         except Exception as exc:
             rl(f"LIVE BUY failed {hit.strategy_id} {hit.symbol}: {exc}")
-            break
+            continue
     return placed
 
 
@@ -605,11 +595,8 @@ def run() -> int:
     manage(trade, opt, state, now)
     ensure_stops(trade, state)
     if _between(now, om.ENTRY_START, om.ENTRY_END):
-        if open_count(trade, state) >= MAX_POS:
-            rl("Live micro: at max 1 option — manage/exits only (no new buys)")
-        else:
-            place(trade, opt, ref, stock, equity, cash, state, now)
-            ensure_stops(trade, state)
+        place(trade, opt, ref, stock, equity, cash, state, now)
+        ensure_stops(trade, state)
     else:
         rl("Live micro: manage/exits only")
     n = len(option_positions(trade))
