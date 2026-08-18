@@ -4979,3 +4979,67 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260818T180115Z
+
+- UTC timestamp: `20260818T180115Z`
+- GitHub run: [#7396](https://github.com/28twagg-ops/TradingBot/actions/runs/32168600553)
+- Run id: `32168600553`
+- Live bot: exit=`0`, duration=`3s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260818T180115Z_live_bot.log`, `logs/action_runs/20260818T180115Z_live_options.log`, `logs/action_runs/20260818T180115Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+18:01:16  INFO      Mode: exits
+18:01:17  INFO        Daily log -> logs/daily/2026-08-18.md
+18:01:17  INFO        Daily log reconciled -> logs/daily/2026-08-18.md (5 ledger rows)
+18:01:17  INFO        place_all_stops: checking 3 positions...
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         18:01 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $479.93|
++========================================================================+
+
++========================================================================+
+|                             MORNING CHECK                              |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-18T14:01:18.886677-04:00 share=50% ===
+2026-08-18 14:01:18,886 INFO === options_live_micro LIVE 2026-08-18T14:01:18.886677-04:00 share=50% ===
+Live account equity $479.93 cash $345.93 #225458845 options_level=3
+2026-08-18 14:01:19,126 INFO Live account equity $479.93 cash $345.93 #225458845 options_level=3
+Live micro hold S404 AVGO260821C00412500 -32.3% (tp +50% / sl -50%)
+2026-08-18 14:01:19,287 INFO Live micro hold S404 AVGO260821C00412500 -32.3% (tp +50% / sl -50%)
+Live micro hold S218 NKE260821C00040000 +16.7% (tp +50% / sl -50%)
+2026-08-18 14:01:19,287 INFO Live micro hold S218 NKE260821C00040000 +16.7% (tp +50% / sl -50%)
+Live micro hold S210 CELH260821C00030000 -28.6% (tp +50% / sl -50%)
+2026-08-18 14:01:19,287 INFO Live micro hold S210 CELH260821C00030000 -28.6% (tp +50% / sl -50%)
+Live micro: manage/exits only
+2026-08-18 14:01:19,592 INFO Live micro: manage/exits only
+Live micro done. open_options=3 lots=3
+2026-08-18 14:01:19,667 INFO Live micro done. open_options=3 lots=3
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
