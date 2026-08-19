@@ -2876,3 +2876,113 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260819T152053Z
+
+- UTC timestamp: `20260819T152053Z`
+- GitHub run: [#7496](https://github.com/28twagg-ops/TradingBot/actions/runs/32269414327)
+- Run id: `32269414327`
+- Live bot: exit=`0`, duration=`3s`
+- Live options: exit=`0`, duration=`5s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260819T152053Z_live_bot.log`, `logs/action_runs/20260819T152053Z_live_options.log`, `logs/action_runs/20260819T152053Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+15:20:54  INFO      Mode: exits
+15:20:55  INFO        place_all_stops: checking 4 positions...
+15:20:55  INFO        STOP skipped AAPL: fractional (0.2496 shares) — software exit will handle it
+15:20:55  INFO        STOP skipped CDW: fractional (0.5749 shares) — software exit will handle it
+15:20:55  INFO        STOP already live MNST @ $47.17
+15:20:55  INFO        [positions] 3/3 (3 valid)
+15:20:56  INFO        Daily log -> logs/daily/2026-08-19.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:20 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $452.13|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CDW  P&L +0.2%  $+0.13                                            HOLD|
+|  MNST  P&L +0.4%  $+0.30                                           HOLD|
+|  AAPL  P&L +2.6%  $+2.03                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|  CONTRACT                ENTRY    NOW      P&L%     P&L$      MV       |
++------------------------------------------------------------------------+
+|  AVGO260821C00380000     $0.54    $0.61    +13.0%   $+7.00    $61.00   |
+|                                                                        |
+|  Options open P&L                                                $+7.00|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-19T11:20:57.061530-04:00 share=50% ===
+2026-08-19 11:20:57,061 INFO === options_live_micro LIVE 2026-08-19T11:20:57.061530-04:00 share=50% ===
+Live account equity $452.13 cash $156.13 #225458845 options_level=3
+2026-08-19 11:20:57,300 INFO Live account equity $452.13 cash $156.13 #225458845 options_level=3
+Live micro hold S404 AVGO260821C00380000 +13.0% (tp +50% / sl -50%)
+2026-08-19 11:20:57,445 INFO Live micro hold S404 AVGO260821C00380000 +13.0% (tp +50% / sl -50%)
+Live micro sleeve $226 (50% of $452) deployed $61 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+2026-08-19 11:20:57,661 INFO Live micro sleeve $226 (50% of $452) deployed $61 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+2026-08-19 11:20:57,661 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 3
+2026-08-19 11:20:59,529 INFO Live micro signals: 3
+  skip S404 AVGO: strategy already open (paper bucket rule)
+2026-08-19 11:20:59,529 INFO   skip S404 AVGO: strategy already open (paper bucket rule)
+  try S210 55%win/+47%med EOG
+2026-08-19 11:20:59,530 INFO   try S210 55%win/+47%med EOG
+  skip S210 EOG: no contract under $75
+2026-08-19 11:21:00,584 INFO   skip S210 EOG: no contract under $75
+  try S210 55%win/+47%med UNP
+2026-08-19 11:21:00,584 INFO   try S210 55%win/+47%med UNP
+  skip S210 UNP: no contract under $75
+2026-08-19 11:21:01,019 INFO   skip S210 UNP: no contract under $75
+Live micro done. open_options=1 lots=1
+2026-08-19 11:21:01,237 INFO Live micro done. open_options=1 lots=1
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
