@@ -4537,3 +4537,95 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260819T170146Z
+
+- UTC timestamp: `20260819T170146Z`
+- GitHub run: [#7516](https://github.com/28twagg-ops/TradingBot/actions/runs/32279106830)
+- Run id: `32279106830`
+- Live bot: exit=`0`, duration=`2s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260819T170146Z_live_bot.log`, `logs/action_runs/20260819T170146Z_live_options.log`, `logs/action_runs/20260819T170146Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+17:01:47  INFO      Mode: exits
+17:01:47  INFO        Daily log -> logs/daily/2026-08-19.md
+17:01:47  INFO        Daily log reconciled -> logs/daily/2026-08-19.md (1 ledger rows)
+17:01:47  INFO        place_all_stops: checking 2 positions...
+17:01:47  INFO        STOP skipped AAPL: fractional (0.2496 shares) — software exit will handle it
+17:01:47  INFO        STOP already live MNST @ $47.17
+17:01:48  INFO        [positions] 2/2 (2 valid)
+17:01:48  INFO        Daily log -> logs/daily/2026-08-19.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         17:01 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $471.98|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  MNST  P&L -0.3%  $-0.21                                           HOLD|
+|  AAPL  P&L +1.4%  $+1.11                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-19T13:01:49.000360-04:00 share=50% ===
+2026-08-19 13:01:49,000 INFO === options_live_micro LIVE 2026-08-19T13:01:49.000360-04:00 share=50% ===
+Live account equity $471.98 cash $316.06 #225458845 options_level=3
+2026-08-19 13:01:49,045 INFO Live account equity $471.98 cash $316.06 #225458845 options_level=3
+Live micro: manage/exits only
+2026-08-19 13:01:49,073 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-08-19 13:01:49,081 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
