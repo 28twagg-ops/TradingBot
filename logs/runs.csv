@@ -5510,3 +5510,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-19 19:55:27,scan_evening,bull,472.44,316.0,33,0,1,2,AAPL|MNST,both
 2026-08-19 20:00:49,scan_evening,bull,472.56,395.01,31,0,1,1,MNST,both
 2026-08-19 20:01:53,ext_exits,bull,472.56,395.01,0,0,0,1,MNST,both
+2026-08-19 20:06:21,ext_exits,bull,472.56,395.01,0,0,0,1,MNST,both
