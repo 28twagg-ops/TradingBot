@@ -5483,3 +5483,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-19 16:45:57,exits,bull,472.02,316.06,0,0,0,2,AAPL|MNST,both
 2026-08-19 16:51:18,exits,bull,472.14,316.06,0,0,0,2,AAPL|MNST,both
 2026-08-19 17:01:48,exits,bull,471.98,316.06,0,0,0,2,AAPL|MNST,both
+2026-08-19 17:05:58,exits,bull,472.02,316.06,0,0,0,2,AAPL|MNST,both
