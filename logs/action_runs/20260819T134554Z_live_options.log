@@ -1,0 +1,24 @@
+=== options_live_micro LIVE 2026-08-19T09:49:30.878049-04:00 share=50% ===
+2026-08-19 09:49:30,878 INFO === options_live_micro LIVE 2026-08-19T09:49:30.878049-04:00 share=50% ===
+Live account equity $464.81 cash $177.21 #225458845 options_level=3
+2026-08-19 09:49:30,931 INFO Live account equity $464.81 cash $177.21 #225458845 options_level=3
+Live micro hold S404 AVGO260821C00385000 -22.9% (tp +50% / sl -50%)
+2026-08-19 09:49:30,949 INFO Live micro hold S404 AVGO260821C00385000 -22.9% (tp +50% / sl -50%)
+Live micro sleeve $232 (50% of $465) deployed $54 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+2026-08-19 09:49:30,981 INFO Live micro sleeve $232 (50% of $465) deployed $54 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+2026-08-19 09:49:30,981 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 3
+2026-08-19 09:49:32,625 INFO Live micro signals: 3
+  skip S404 AVGO: strategy already open (paper bucket rule)
+2026-08-19 09:49:32,625 INFO   skip S404 AVGO: strategy already open (paper bucket rule)
+  try S210 55%win/+47%med EOG
+2026-08-19 09:49:32,626 INFO   try S210 55%win/+47%med EOG
+  skip S210 EOG: no contract under $75
+2026-08-19 09:49:32,738 INFO   skip S210 EOG: no contract under $75
+  try S210 55%win/+47%med UNP
+2026-08-19 09:49:32,738 INFO   try S210 55%win/+47%med UNP
+  skip S210 UNP: no contract under $75
+2026-08-19 09:49:32,788 INFO   skip S210 UNP: no contract under $75
+Live micro done. open_options=1 lots=1
+2026-08-19 09:49:32,816 INFO Live micro done. open_options=1 lots=1

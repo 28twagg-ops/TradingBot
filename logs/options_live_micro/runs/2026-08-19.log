@@ -61,3 +61,15 @@ LIVE BUY S404 100%win AVGO AVGO260821C00385000 limit=0.71 ask=0.72 cost=$72 id=6
   skip S210 UNP: no contract under $75
 LIVE PROT STOP AVGO260821C00385000 x1 stop=0.35 id=7acebc3b-7ac9-4c9f-ab7b-b205a1d98aeb
 Live micro done. open_options=1 lots=1
+=== options_live_micro LIVE 2026-08-19T09:49:30.878049-04:00 share=50% ===
+Live account equity $464.81 cash $177.21 #225458845 options_level=3
+Live micro hold S404 AVGO260821C00385000 -22.9% (tp +50% / sl -50%)
+Live micro sleeve $232 (50% of $465) deployed $54 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 3
+  skip S404 AVGO: strategy already open (paper bucket rule)
+  try S210 55%win/+47%med EOG
+  skip S210 EOG: no contract under $75
+  try S210 55%win/+47%med UNP
+  skip S210 UNP: no contract under $75
+Live micro done. open_options=1 lots=1

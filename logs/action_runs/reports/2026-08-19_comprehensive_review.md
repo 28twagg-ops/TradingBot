@@ -979,3 +979,136 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260819T134554Z
+
+- UTC timestamp: `20260819T134554Z`
+- GitHub run: [#7477](https://github.com/28twagg-ops/TradingBot/actions/runs/32259880224)
+- Run id: `32259880224`
+- Live bot: exit=`0`, duration=`216s`
+- Live options: exit=`0`, duration=`2s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260819T134554Z_live_bot.log`, `logs/action_runs/20260819T134554Z_live_options.log`, `logs/action_runs/20260819T134554Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+... (118 earlier lines - see full log file)
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AEE      Pullback50      eq     $110.72  61.1   -2.27   50MA bounce (-|
+|  AON      Pullback50      eq     $346.29  27.0   -1.32   50MA bounce (-|
+|  BXP      Pullback50      eq     $67.61   34.6   -1.82   50MA bounce (-|
+|  BRK-B    Pullback50      eq     $505.00  46.3   -3.13   50MA bounce (+|
+|  CL       Pullback50      eq     $92.31   52.9   -2.63   50MA bounce (+|
+|  ED       Pullback50      eq     $109.24  47.5   -2.89   50MA bounce (-|
+|  CB       Pullback50      eq     $346.57  44.0   -2.80   50MA bounce (+|
+|  DHI      Pullback50      eq     $151.81  56.4   -2.46   50MA bounce (+|
+|  DUK      Pullback50      eq     $124.85  44.8   -1.80   50MA bounce (-|
+|  EVRG     Pullback50      eq     $84.38   57.9   -3.00   50MA bounce (-|
+|  EXR      Pullback50      eq     $148.85  52.5   -1.77   50MA bounce (+|
+|  ESS      Pullback50      eq     $285.89  56.2   -2.01   50MA bounce (-|
+|  ES       Pullback50      eq     $72.61   42.1   -2.20   50MA bounce (+|
+|  FE       Pullback50      eq     $47.63   36.2   -2.18   50MA bounce (-|
+|  F        Pullback50      eq     $14.23   38.6   -2.09   50MA bounce (+|
+|  HRL      Pullback50      eq     $24.73   40.0   -2.57   50MA bounce (-|
+|  HLT      Pullback50      eq     $333.33  58.8   -2.59   50MA bounce (+|
+|  JBHT     Pullback50      eq     $279.45  58.0   -2.46   50MA bounce (-|
+|  KVUE     Pullback50      eq     $19.08   45.8   -2.38   50MA bounce (+|
+|  INVH     Pullback50      eq     $30.05   56.1   -2.21   50MA bounce (+|
+|  KDP      Pullback50      eq     $31.26   47.8   -3.36   50MA bounce (+|
+|  PGR      Pullback50      eq     $213.66  50.6   -2.94   50MA bounce (-|
+|  O        Pullback50      eq     $62.81   34.5   -2.20   50MA bounce (-|
+|  RCL      Pullback50      eq     $302.62  30.0   -1.63   50MA bounce (-|
+|  SPG      Pullback50      eq     $222.34  31.4   -2.69   50MA bounce (-|
+|  VTRS     Pullback50      eq     $16.52   28.3   -2.35   50MA bounce (-|13:49:29  INFO        place_all_stops: checking 4 positions...
+13:49:29  INFO        STOP skipped AAPL: fractional (0.2496 shares) — software exit will handle it
+13:49:29  INFO        STOP skipped CDW: fractional (0.5749 shares) — software exit will handle it
+13:49:29  INFO        STOP already live MNST @ $47.17
+13:49:29  INFO        Daily log -> logs/daily/2026-08-19.md
+13:49:30  INFO        Dashboard written → logs/dashboard.md
+
+|  WRB      Pullback50      eq     $70.75   32.9   -2.75   50MA bounce (-|
+|  WM       Pullback50      eq     $225.85  48.5   -2.52   50MA bounce (-|
+|  WY       Pullback50      eq     $24.26   56.8   -2.20   50MA bounce (-|
+|  XEL      Pullback50      eq     $79.79   61.7   -2.58   50MA bounce (+|
+|  AN       Pullback50      eq     $201.38  29.3   -1.43   50MA bounce (+|
+|  CAVA     Pullback50      eq     $72.60   58.6   -1.56   50MA bounce (+|
+|  CHH      Pullback50      eq     $110.52  47.8   -2.30   50MA bounce (+|
+|  CROX     Pullback50      eq     $129.66  57.0   -1.78   50MA bounce (+|
+|  CUBE     Pullback50      eq     $41.53   53.6   -2.33   50MA bounce (+|
+|  ELAN     Pullback50      eq     $24.41   38.8   -1.37   50MA bounce (-|
+|  ELS      Pullback50      eq     $65.10   47.1   -2.13   50MA bounce (+|
+|  EXEL     Pullback50      eq     $53.80   44.6   -2.13   50MA bounce (-|
+|  FCFS     Pullback50      eq     $214.35  62.1   -1.37   50MA bounce (+|
+|  GATX     Pullback50      eq     $179.95  45.6   -2.26   50MA bounce (+|
+|  KRYS     Pullback50      eq     $343.31  39.8   -0.53   50MA bounce (-|
+|  MUSA     Pullback50      eq     $581.22  41.2   -1.99   50MA bounce (+|
+|  PVH      Pullback50      eq     $80.16   31.9   -2.81   50MA bounce (+|
+|  SSD      Pullback50      eq     $193.20  57.2   -2.24   50MA bounce (-|
+|  TOL      Pullback50      eq     $152.18  52.2   -2.10   50MA bounce (+|
+|  UTHR     Pullback50      eq     $533.49  53.7   -1.88   50MA bounce (-|
+|  VNO      Pullback50      eq     $38.80   42.8   -1.54   50MA bounce (-|
+|  VC       Pullback50      eq     $106.74  56.7   -2.06   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Scanned                                                            896|
+|  Signals                                                             48|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $464.81|
+|  Cash                                                           $177.21|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-19T09:49:30.878049-04:00 share=50% ===
+2026-08-19 09:49:30,878 INFO === options_live_micro LIVE 2026-08-19T09:49:30.878049-04:00 share=50% ===
+Live account equity $464.81 cash $177.21 #225458845 options_level=3
+2026-08-19 09:49:30,931 INFO Live account equity $464.81 cash $177.21 #225458845 options_level=3
+Live micro hold S404 AVGO260821C00385000 -22.9% (tp +50% / sl -50%)
+2026-08-19 09:49:30,949 INFO Live micro hold S404 AVGO260821C00385000 -22.9% (tp +50% / sl -50%)
+Live micro sleeve $232 (50% of $465) deployed $54 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+2026-08-19 09:49:30,981 INFO Live micro sleeve $232 (50% of $465) deployed $54 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+2026-08-19 09:49:30,981 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 3
+2026-08-19 09:49:32,625 INFO Live micro signals: 3
+  skip S404 AVGO: strategy already open (paper bucket rule)
+2026-08-19 09:49:32,625 INFO   skip S404 AVGO: strategy already open (paper bucket rule)
+  try S210 55%win/+47%med EOG
+2026-08-19 09:49:32,626 INFO   try S210 55%win/+47%med EOG
+  skip S210 EOG: no contract under $75
+2026-08-19 09:49:32,738 INFO   skip S210 EOG: no contract under $75
+  try S210 55%win/+47%med UNP
+2026-08-19 09:49:32,738 INFO   try S210 55%win/+47%med UNP
+  skip S210 UNP: no contract under $75
+2026-08-19 09:49:32,788 INFO   skip S210 UNP: no contract under $75
+Live micro done. open_options=1 lots=1
+2026-08-19 09:49:32,816 INFO Live micro done. open_options=1 lots=1
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
