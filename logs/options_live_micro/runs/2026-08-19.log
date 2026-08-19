@@ -291,3 +291,8 @@ Live micro signals: 3
   try S210 55%win/+47%med UNP
   skip S210 UNP: no contract under $75
 Live micro done. open_options=1 lots=1
+=== options_live_micro LIVE 2026-08-19T11:35:54.858229-04:00 share=50% ===
+Live account equity $452.36 cash $156.13 #225458845 options_level=3
+Live micro hold S404 AVGO260821C00380000 +14.8% (tp +50% / sl -50%)
+Live micro: manage/exits only
+Live micro done. open_options=1 lots=1
