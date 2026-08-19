@@ -341,3 +341,7 @@ Live account equity $472.32 cash $233.09 #225458845 options_level=3
 LIVE EXIT take_profit (+53.7%) AVGO260821C00380000 x1 limit=0.80 id=b0c7b4b9-fda4-4256-bffc-e7a1d9e97a1f
 Live micro: manage/exits only
 Live micro done. open_options=1 lots=0
+=== options_live_micro LIVE 2026-08-19T12:36:03.371103-04:00 share=50% ===
+Live account equity $472.22 cash $316.06 #225458845 options_level=3
+Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
