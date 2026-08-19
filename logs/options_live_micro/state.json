@@ -1,15 +1,15 @@
 {
   "lots": [
     {
-      "lot_id": "f4c98e5858e7",
+      "lot_id": "8dc12cf82f2e",
       "strategy_id": "S404",
-      "occ": "AVGO260821C00392500",
+      "occ": "AVGO260821C00385000",
       "underlying": "AVGO",
       "qty": 1,
-      "entry_price": 0.69,
+      "entry_price": 0.71,
       "take_profit": 0.5,
       "stop_loss": -0.5,
-      "order_id": "d756ab40-a7d4-4584-b6b5-985f2b72d1d5"
+      "order_id": "642a7630-c2e1-49d4-ad0f-1b801cad0a11"
     }
   ]
 }
