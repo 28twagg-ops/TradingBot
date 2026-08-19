@@ -22,3 +22,16 @@ Live micro done. open_options=0 lots=0
 Live account equity $517.42 cash $284.37 #225458845 options_level=3
 Live micro: outside 9:28-16:05 ET
 Live micro done. open_options=0 lots=0
+=== options_live_micro LIVE 2026-08-19T09:34:34.436524-04:00 share=50% ===
+Live account equity $518.18 cash $284.37 #225458845 options_level=3
+Live micro sleeve $259 (50% of $518) deployed $0 open_strategies=0/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 3
+  try S404 100%win/+80%med AVGO
+LIVE BUY S404 100%win AVGO AVGO260821C00392500 limit=0.69 ask=0.70 cost=$70 id=d756ab40-a7d4-4584-b6b5-985f2b72d1d5
+  try S210 55%win/+47%med EOG
+  skip S210 EOG: no contract under $75
+  try S210 55%win/+47%med UNP
+  skip S210 UNP: no contract under $75
+LIVE PROT STOP AVGO260821C00392500 x1 stop=0.34 id=33deab3d-1fd0-4c1c-8fb1-7d101ab2f787
+Live micro done. open_options=1 lots=1
