@@ -7132,3 +7132,113 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260819T195622Z
+
+- UTC timestamp: `20260819T195622Z`
+- GitHub run: [#7551](https://github.com/28twagg-ops/TradingBot/actions/runs/32295654307)
+- Run id: `32295654307`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260819T195622Z_live_bot.log`, `logs/action_runs/20260819T195622Z_live_options.log`, `logs/action_runs/20260819T195622Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+... (149 earlier lines - see full log file)
+20:00:49  INFO        place_all_stops: checking 1 positions...
+20:00:49  INFO        STOP-MARKET placed MNST  qty=1 (pos=1.6350)  stop=$47.17  id=eefb2d5e-ee78-4db7-8cdc-dba48fec6f6b
+20:00:49  INFO        Daily log -> logs/daily/2026-08-19.md
+20:00:49  INFO        Dashboard written → logs/dashboard.md
+
+|  LIVN     Pullback50      eq     $80.83   49.6   -0.99   50MA bounce (+|
+|  SMG      RSIRecovery     eq     $61.27   30.6   0.76    RSI 20.7→30.6 |
+|  SSD      Pullback50      eq     $192.92  56.9   -0.20   50MA bounce (-|
+|  UTHR     Pullback50      eq     $529.09  51.6   -0.82   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] JKHY  MA_Squeeze                                   $70.88|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] ARE  Pullback50                                    $70.88|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] AON  Pullback50                                      cap 3|
+|    SKIP [eq] CDW  Pullback50                                      cap 3|
+|    SKIP [eq] DHI  Pullback50                                      cap 3|
+|    SKIP [eq] ESS  Pullback50                                      cap 3|
+|    SKIP [eq] KDP  Pullback50                                      cap 3|
+|    SKIP [eq] KVUE  Pullback50                                     cap 3|
+|    SKIP [eq] O  Pullback50                                        cap 3|
+|    SKIP [eq] ROST  Pullback50                                     cap 3|
+|    SKIP [eq] SPG  Pullback50                                      cap 3|
+|    SKIP [eq] WY  Pullback50                                       cap 3|
+|    SKIP [eq] BRKR  Pullback50                                     cap 3|
+|    SKIP [eq] CHH  Pullback50                                      cap 3|
+|    SKIP [eq] CUBE  Pullback50                                     cap 3|
+|    SKIP [eq] ELAN  Pullback50                                     cap 3|
+|    SKIP [eq] EXEL  Pullback50                                     cap 3|
+|    SKIP [eq] IRT  Pullback50                                      cap 3|
+|    SKIP [eq] KRYS  Pullback50                                     cap 3|
+|    SKIP [eq] LIVN  Pullback50                                     cap 3|
+|    SKIP [eq] SSD  Pullback50                                      cap 3|
+|    SKIP [eq] UTHR  Pullback50                                     cap 3|
+|    SKIP [eq] ARE  RSIRecovery                                     cap 3|
+|    SKIP [eq] COLM  RSIRecovery                                    cap 3|
+|    SKIP [eq] SMG  RSIRecovery                                     cap 3|
+|    SKIP [eq] A  TrendResumption                                   cap 3|
+|    SKIP [eq] EL  TrendResumption                                  cap 3|
+|    SKIP [eq] COIN  VWAP_Reclaim                                   cap 3|
+|    SKIP [eq] LOW  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] PGR  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] TGT  VWAP_Reclaim                                    cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  JKHY                                                 still unconfirmed|
+|  ARE                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Scanned                                                            898|
+|  Signals                                                             31|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             1|
+|  Equity                                                         $472.56|
+|  Cash                                                           $395.01|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
