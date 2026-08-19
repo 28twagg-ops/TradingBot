@@ -1,17 +1,5 @@
 {
-  "lots": [
-    {
-      "lot_id": "98a31807753d",
-      "strategy_id": "S404",
-      "occ": "AVGO260821C00380000",
-      "underlying": "AVGO",
-      "qty": 1,
-      "entry_price": 0.54,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "order_id": "8acba8f2-f296-4ac6-af64-e0ccdaed8e15"
-    }
-  ],
+  "lots": [],
   "used_day": "2026-08-19",
   "used_strategies": [
     "S404"

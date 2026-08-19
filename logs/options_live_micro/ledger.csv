@@ -12,3 +12,4 @@ ts,event,strategy_id,occ,qty,limit,cost,reason,return_pct,order_id
 2026-08-19T09:44:35.396403-04:00,entry,S404,AVGO260821C00385000,1,0.71,72.0,gap -2.0%,,642a7630-c2e1-49d4-ad0f-1b801cad0a11
 2026-08-19T10:12:03.080519-04:00,reconcile_drop,S404,AVGO260821C00385000,1,,,missing_from_broker,,
 2026-08-19T10:12:03.080519-04:00,entry,S404,AVGO260821C00380000,1,0.54,55.00000000000001,gap -2.0%,,8acba8f2-f296-4ac6-af64-e0ccdaed8e15
+2026-08-19T12:32:08.777553-04:00,exit,S404,AVGO260821C00380000,1,,,take_profit (+53.7%),53.7,b0c7b4b9-fda4-4256-bffc-e7a1d9e97a1f
