@@ -3977,3 +3977,99 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260819T162104Z
+
+- UTC timestamp: `20260819T162104Z`
+- GitHub run: [#7508](https://github.com/28twagg-ops/TradingBot/actions/runs/32275307977)
+- Run id: `32275307977`
+- Live bot: exit=`0`, duration=`4s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260819T162104Z_live_bot.log`, `logs/action_runs/20260819T162104Z_live_options.log`, `logs/action_runs/20260819T162104Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+16:21:05  INFO      Mode: exits
+16:21:06  INFO        Daily log -> logs/daily/2026-08-19.md
+16:21:06  INFO        Daily log reconciled -> logs/daily/2026-08-19.md (1 ledger rows)
+16:21:06  INFO        place_all_stops: checking 3 positions...
+16:21:06  INFO        STOP skipped AAPL: fractional (0.2496 shares) — software exit will handle it
+16:21:06  INFO        STOP already live MNST @ $47.17
+16:21:07  INFO        [positions] 2/2 (2 valid)
+16:21:07  INFO        Daily log -> logs/daily/2026-08-19.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         16:21 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $469.51|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  MNST  P&L -0.3%  $-0.24                                           HOLD|
+|  AAPL  P&L +2.1%  $+1.64                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|  CONTRACT                ENTRY    NOW      P&L%     P&L$      MV       |
++------------------------------------------------------------------------+
+|  AVGO260821C00380000     $0.54    $0.80    +48.1%   $+26.00   $80.00   |
+|                                                                        |
+|  Options open P&L                                               $+26.00|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-19T12:21:08.758542-04:00 share=50% ===
+2026-08-19 12:21:08,758 INFO === options_live_micro LIVE 2026-08-19T12:21:08.758542-04:00 share=50% ===
+Live account equity $469.52 cash $233.09 #225458845 options_level=3
+2026-08-19 12:21:09,015 INFO Live account equity $469.52 cash $233.09 #225458845 options_level=3
+Live micro hold S404 AVGO260821C00380000 +48.1% (tp +50% / sl -50%)
+2026-08-19 12:21:09,182 INFO Live micro hold S404 AVGO260821C00380000 +48.1% (tp +50% / sl -50%)
+Live micro: manage/exits only
+2026-08-19 12:21:09,334 INFO Live micro: manage/exits only
+Live micro done. open_options=1 lots=1
+2026-08-19 12:21:09,417 INFO Live micro done. open_options=1 lots=1
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
