@@ -208,13 +208,52 @@ def open_count(trade, state: dict) -> int:
     return max(len(option_positions(trade)), len(active_lots(state)))
 
 
+def _today_iso() -> str:
+    return date.today().isoformat()
+
+
+def used_strategies_today(state: dict) -> set[str]:
+    """One live attempt per allow-list strategy per day (paper max_contracts=1)."""
+    if state.get("used_day") != _today_iso():
+        state["used_day"] = _today_iso()
+        state["used_strategies"] = []
+    return {str(s) for s in (state.get("used_strategies") or []) if s}
+
+
+def mark_strategy_used(state: dict, sid: str) -> None:
+    used = used_strategies_today(state)
+    used.add(str(sid))
+    state["used_day"] = _today_iso()
+    state["used_strategies"] = sorted(used)
+    save_state(state)
+
+
 def open_strategy_ids(trade, state: dict) -> set[str]:
-    out: set[str] = set()
+    out = used_strategies_today(state)
     for lot in active_lots(state):
         sid = lot.get("strategy_id")
         if sid:
             out.add(str(sid))
     return out
+
+
+_WORKING = {
+    "new", "accepted", "pending_new", "accepted_for_bidding",
+    "partially_filled", "held", "pending_replace", "pending_cancel",
+    "done_for_day",
+}
+_FILLED = {"filled"}
+_DEAD = {"canceled", "cancelled", "expired", "rejected", "replaced"}
+
+
+def _order_status(trade, order_id: str) -> str:
+    if not order_id:
+        return ""
+    try:
+        o = trade.get_order_by_id(order_id)
+        return str(getattr(o, "status", "") or "").lower().replace(" ", "_")
+    except Exception:
+        return ""
 
 
 def make_arm(sid: str) -> EffectiveArm | None:
@@ -237,32 +276,44 @@ def cid_stop() -> str:
 
 
 def reconcile(trade, state: dict, now: datetime) -> dict:
+    used_strategies_today(state)
+    for lot in active_lots(state):
+        sid = str(lot.get("strategy_id") or "")
+        if sid and sid not in (state.get("used_strategies") or []):
+            state.setdefault("used_strategies", []).append(sid)
     pos = {str(getattr(p, "symbol", "")): p for p in option_positions(trade)}
     kept = []
     for lot in active_lots(state):
         occ = lot.get("occ")
+        sid = str(lot.get("strategy_id") or "")
         if occ in pos:
+            if lot.get("pending"):
+                lot["pending"] = False
+                rl(f"Live micro fill confirmed {sid} {occ}")
+                append_ledger({
+                    "ts": now.isoformat(), "event": "fill_confirm",
+                    "strategy_id": sid, "occ": occ, "qty": lot.get("qty"),
+                    "order_id": lot.get("order_id"),
+                    "reason": "broker_position",
+                })
             kept.append(lot)
             continue
-        pending = False
-        try:
-            req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[occ], limit=20)
-            for o in trade.get_orders(req) or []:
-                cid = getattr(o, "client_order_id", "") or ""
-                if cid.startswith("OLB") and o.side == OrderSide.BUY:
-                    pending = True
-                    break
-        except Exception:
-            pending = True
-        if pending:
+        st = _order_status(trade, str(lot.get("order_id") or ""))
+        if st in _WORKING or st in _FILLED or not st:
+            # Empty status = lookup failed; keep the lot so we do not rebuy.
+            lot["pending"] = True
             kept.append(lot)
-        else:
-            rl(f"Live micro reconcile: drop {occ} {lot.get('strategy_id')} (not at broker)")
-            append_ledger({
-                "ts": now.isoformat(), "event": "reconcile_drop",
-                "strategy_id": lot.get("strategy_id"), "occ": occ,
-                "qty": lot.get("qty"), "reason": "missing_from_broker",
-            })
+            rl(f"Live micro pending {sid} {occ} order_status={st or 'unknown'}")
+            continue
+        rl(f"Live micro reconcile: unfilled {occ} {sid} status={st} (slot kept for today)")
+        append_ledger({
+            "ts": now.isoformat(), "event": "unfilled",
+            "strategy_id": sid, "occ": occ,
+            "qty": lot.get("qty"), "reason": st or "missing_from_broker",
+            "order_id": lot.get("order_id"),
+        })
+        if sid:
+            mark_strategy_used(state, sid)
     state["lots"] = kept
     save_state(state)
     return state
@@ -529,8 +580,10 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
                 "take_profit": arm.take_profit,
                 "stop_loss": arm.stop_loss,
                 "order_id": str(o.id),
+                "pending": True,
             }
             state.setdefault("lots", []).append(lot)
+            mark_strategy_used(state, hit.strategy_id)
             save_state(state)
             append_ledger({
                 "ts": now.isoformat(), "event": "entry",
