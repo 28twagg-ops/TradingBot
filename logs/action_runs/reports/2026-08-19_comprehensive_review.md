@@ -3302,3 +3302,102 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260819T154057Z
+
+- UTC timestamp: `20260819T154057Z`
+- GitHub run: [#7500](https://github.com/28twagg-ops/TradingBot/actions/runs/32271419883)
+- Run id: `32271419883`
+- Live bot: exit=`0`, duration=`4s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260819T154057Z_live_bot.log`, `logs/action_runs/20260819T154057Z_live_options.log`, `logs/action_runs/20260819T154057Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+15:40:58  INFO      Mode: exits
+15:40:58  INFO        place_all_stops: checking 4 positions...
+15:40:58  INFO        STOP skipped AAPL: fractional (0.2496 shares) — software exit will handle it
+15:40:58  INFO        STOP skipped CDW: fractional (0.5749 shares) — software exit will handle it
+15:40:58  INFO        STOP already live MNST @ $47.17
+15:40:58  INFO        [positions] 3/3 (3 valid)
+15:40:59  INFO        SELL MARKET [urgent] CDW closed
+15:41:01  INFO        TX logged: SELL CDW  P&L -0.54%
+15:41:01  INFO        Daily log -> logs/daily/2026-08-19.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:40 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $454.84|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CDW  P&L -0.5%  $-0.42                         EXIT: stop_loss (-0.5%)|
+|  MNST  P&L +0.1%  $+0.09                                           HOLD|
+|  AAPL  P&L +1.9%  $+1.50                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|  CONTRACT                ENTRY    NOW      P&L%     P&L$      MV       |
++------------------------------------------------------------------------+
+|  AVGO260821C00380000     $0.54    $0.65    +20.4%   $+11.00   $65.00   |
+|                                                                        |
+|  Options open P&L                                               $+11.00|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  CDW                                         -0.54%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-19T11:41:01.780502-04:00 share=50% ===
+2026-08-19 11:41:01,780 INFO === options_live_micro LIVE 2026-08-19T11:41:01.780502-04:00 share=50% ===
+Live account equity $454.70 cash $233.09 #225458845 options_level=3
+2026-08-19 11:41:01,960 INFO Live account equity $454.70 cash $233.09 #225458845 options_level=3
+Live micro hold S404 AVGO260821C00380000 +20.4% (tp +50% / sl -50%)
+2026-08-19 11:41:01,992 INFO Live micro hold S404 AVGO260821C00380000 +20.4% (tp +50% / sl -50%)
+Live micro: manage/exits only
+2026-08-19 11:41:02,008 INFO Live micro: manage/exits only
+Live micro done. open_options=1 lots=1
+2026-08-19 11:41:02,021 INFO Live micro done. open_options=1 lots=1
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
