@@ -5514,3 +5514,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-19 20:11:00,ext_exits,bull,472.56,395.01,0,0,0,1,MNST,both
 2026-08-19 20:16:10,ext_exits,bull,472.59,395.01,0,0,0,1,MNST,both
 2026-08-19 20:20:55,ext_exits,bull,472.7,395.01,0,0,0,1,MNST,both
+2026-08-19 20:26:06,ext_exits,bull,472.7,395.01,0,0,0,1,MNST,both
