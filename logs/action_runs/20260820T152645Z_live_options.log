@@ -1,0 +1,42 @@
+=== options_live_micro LIVE 2026-08-20T11:26:48.196882-04:00 share=50% ===
+2026-08-20 11:26:48,196 INFO === options_live_micro LIVE 2026-08-20T11:26:48.196882-04:00 share=50% ===
+Live account equity $428.69 cash $285.87 #225458845 options_level=3
+2026-08-20 11:26:48,402 INFO Live account equity $428.69 cash $285.87 #225458845 options_level=3
+Live micro hold S218 CL260821C00090000 -23.1% (tp +50% / sl -50%)
+2026-08-20 11:26:48,498 INFO Live micro hold S218 CL260821C00090000 -23.1% (tp +50% / sl -50%)
+Live micro sleeve $214 (50% of $429) deployed $42 open_strategies=3/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
+2026-08-20 11:26:48,603 INFO Live micro sleeve $214 (50% of $429) deployed $42 open_strategies=3/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+2026-08-20 11:26:48,603 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 11
+2026-08-20 11:26:50,235 INFO Live micro signals: 11
+  skip S404 COST: strategy already open (paper bucket rule)
+2026-08-20 11:26:50,235 INFO   skip S404 COST: strategy already open (paper bucket rule)
+  skip S404 CRWD: strategy already open (paper bucket rule)
+2026-08-20 11:26:50,235 INFO   skip S404 CRWD: strategy already open (paper bucket rule)
+  skip S404 HD: strategy already open (paper bucket rule)
+2026-08-20 11:26:50,235 INFO   skip S404 HD: strategy already open (paper bucket rule)
+  skip S404 WMT: strategy already open (paper bucket rule)
+2026-08-20 11:26:50,235 INFO   skip S404 WMT: strategy already open (paper bucket rule)
+  skip S406 COST: strategy already open (paper bucket rule)
+2026-08-20 11:26:50,236 INFO   skip S406 COST: strategy already open (paper bucket rule)
+  skip S406 CPB: strategy already open (paper bucket rule)
+2026-08-20 11:26:50,236 INFO   skip S406 CPB: strategy already open (paper bucket rule)
+  skip S218 CL: strategy already open (paper bucket rule)
+2026-08-20 11:26:50,236 INFO   skip S218 CL: strategy already open (paper bucket rule)
+  skip S218 COST: strategy already open (paper bucket rule)
+2026-08-20 11:26:50,236 INFO   skip S218 COST: strategy already open (paper bucket rule)
+  try S210 55%win/+47%med ABBV
+2026-08-20 11:26:50,236 INFO   try S210 55%win/+47%med ABBV
+  skip S210 ABBV: no contract under $75
+2026-08-20 11:26:50,586 INFO   skip S210 ABBV: no contract under $75
+  try S210 55%win/+47%med SJM
+2026-08-20 11:26:50,586 INFO   try S210 55%win/+47%med SJM
+  skip S210 SJM: no contract under $75
+2026-08-20 11:26:50,730 INFO   skip S210 SJM: no contract under $75
+  try S210 55%win/+47%med XEL
+2026-08-20 11:26:50,731 INFO   try S210 55%win/+47%med XEL
+  skip S210 XEL: no contract under $75
+2026-08-20 11:26:50,874 INFO   skip S210 XEL: no contract under $75
+Live micro done. open_options=2 lots=1
+2026-08-20 11:26:50,980 INFO Live micro done. open_options=2 lots=1
