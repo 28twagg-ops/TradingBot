@@ -9315,3 +9315,99 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260820T205549Z
+
+- UTC timestamp: `20260820T205549Z`
+- GitHub run: [#7695](https://github.com/28twagg-ops/TradingBot/actions/runs/32416660683)
+- Run id: `32416660683`
+- Live bot: exit=`0`, duration=`2s`
+- Live options: exit=`0`, duration=`4s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260820T205549Z_live_bot.log`, `logs/action_runs/20260820T205549Z_live_options.log`, `logs/action_runs/20260820T205549Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+20:55:50  INFO      Mode: ext_exits
+20:55:50  INFO        Daily log -> logs/daily/2026-08-20.md
+20:55:50  INFO        Daily log reconciled -> logs/daily/2026-08-20.md (4 ledger rows)
+20:55:50  INFO        Daily log -> logs/daily/2026-08-20.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                         EXT_EXITS|
+|  Time                                                         20:55 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $413.17|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit log~  stop-0.5% / 3d max  (midline skipped — close already final)|
++------------------------------------------------------------------------+
+|  MNST  P&L +0.2%  $+0.06        HOLDING until 9:35am scan (MomReversal)|
+|  AON  P&L +0.3%  $+0.22          HOLDING until 9:35am scan (Pullback50)|
++========================================================================+
+
++========================================================================+
+|                          EXTENDED HOURS SELLS                          |
++========================================================================+
+|                                                                        |
+|  No extended-hours sells this run.                                     |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                         ext_exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|  CONTRACT                ENTRY    NOW      P&L%     P&L$      MV       |
++------------------------------------------------------------------------+
+|  WMT260821C00110000      $0.09    $0.02    -77.8%   $-7.00    $2.00    |
+|                                                                        |
+|  Options open P&L                                                $-7.00|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-20T16:55:51.735618-04:00 share=50% ===
+2026-08-20 16:55:51,735 INFO === options_live_micro LIVE 2026-08-20T16:55:51.735618-04:00 share=50% ===
+Live account equity $413.17 cash $310.82 #225458845 options_level=3
+2026-08-20 16:55:54,899 INFO Live account equity $413.17 cash $310.82 #225458845 options_level=3
+Live micro done. open_options=1 lots=0
+2026-08-20 16:55:54,942 INFO Live micro done. open_options=1 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
