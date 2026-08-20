@@ -8428,3 +8428,120 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260820T195623Z
+
+- UTC timestamp: `20260820T195623Z`
+- GitHub run: [#7683](https://github.com/28twagg-ops/TradingBot/actions/runs/32411253279)
+- Run id: `32411253279`
+- Live bot: exit=`0`, duration=`232s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260820T195623Z_live_bot.log`, `logs/action_runs/20260820T195623Z_live_options.log`, `logs/action_runs/20260820T195623Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+... (156 earlier lines - see full log file)
+|  NWE      Pullback50      eq     $70.81   61.4   -1.78   50MA bounce (-|
+|  ORI      Pullback50      eq     $41.86   26.0   -1.98   50MA bounce (+|
+|  PB       Pullback50      eq     $72.83   33.6   -1.06   50MA bounce (-|
+|  PNFP     Pullback50      eq     $101.70  40.3   -1.36   50MA bounce (+|
+|  VNO      Pullback50      eq     $38.72   46.1   -0.94   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AES  Pullback50                                    $61.98|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] BXP  Pullback50                                      cap 3|
+|    SKIP [eq] CB  Pullback50                                       cap 3|
+|    SKIP [eq] ELV  Pullback50                                      cap 3|
+|    SKIP [eq] ESS  Pullback50                                      cap 3|
+|    SKIP [eq] ES  Pullback50                                       cap 3|
+|    SKIP [eq] EXR  Pullback50                                      cap 3|
+|    SKIP [eq] HIG  Pullback50                                      cap 3|
+|    SKIP [eq] DOC  Pullback50                                      cap 3|
+|    SKIP [eq] HUM  Pullback50                                      cap 3|
+|    SKIP [eq] MU  Pullback50                                       cap 3|
+|    SKIP [eq] PHM  Pullback50                                      cap 3|
+|    SKIP [eq] O  Pullback50                                        cap 3|
+|    SKIP [eq] TTWO  Pullback50                                     cap 3|
+|    SKIP [eq] TER  Pullback50                                      cap 3|
+|    SKIP [eq] ALV  Pullback50                                      cap 3|
+|    SKIP [eq] ASB  Pullback50                                      cap 3|
+|    SKIP [eq] BC  Pullback50                                       cap 3|
+|    SKIP [eq] BKH  Pullback50                                      cap 3|
+|    SKIP [eq] CAVA  Pullback50                                     cap 3|
+|    SKIP [eq] CHH  Pullback50                                      cap 3|
+|    SKIP [eq] CNO  Pullback50                                      cap 3|
+|    SKIP [eq] CXT  Pullback50                                      cap 3|
+|    SKIP [eq] FFIN  Pullback50                                     cap 3|
+|    SKIP [eq] HIMS  Pullback50                                     cap 3|
+|    SKIP [eq] IRT  Pullback50                                      cap 3|
+|    SKIP [eq] KEX  Pullback50                                      cap 3|
+|    SKIP [eq] NWE  Pullback50                                      cap 3|
+|    SKIP [eq] ORI  Pullback50                                      cap 3|
+|    SKIP [eq] PB  Pullback50                                       cap 3|
+|    SKIP [eq] PNFP  Pullback50                                     cap 3|
+|    SKIP [eq] VNO  Pullback50                                      cap 3|
+|    SKIP [eq] DE  VWAP_Reclaim                                     cap 3|
+|    SKIP [eq] LOW  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] NDSN  VWAP_Reclaim                                   cap 3|
+|    SKIP [eq] PCG  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] CNH  VWAP_Reclaim                                    cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      1|
++------------------------------------------------------------------------+
+|  AES                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 1 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Scanned                                                            897|
+|  Signals                                                             37|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  1 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             2|
+|  Equity                                                         $413.16|
+|  Cash                                                           $310.82|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-20T16:00:15.868426-04:00 share=50% ===
+2026-08-20 16:00:15,868 INFO === options_live_micro LIVE 2026-08-20T16:00:15.868426-04:00 share=50% ===
+Live account equity $413.16 cash $310.82 #225458845 options_level=3
+2026-08-20 16:00:16,067 INFO Live account equity $413.16 cash $310.82 #225458845 options_level=3
+Live micro: manage/exits only
+2026-08-20 16:00:16,237 INFO Live micro: manage/exits only
+Live micro done. open_options=1 lots=0
+2026-08-20 16:00:16,292 INFO Live micro done. open_options=1 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
