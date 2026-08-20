@@ -10,7 +10,7 @@ NOT the 1024-bucket paper lab. Live-specific caps only:
 Trade mechanics = paper baseline bucket 0 (options_lab.py):
   1 contract per allow-list strategy (same as paper max_contracts per bucket),
   buy ask-0.01, max_premium $75, account_cap 95%, OI>=100, spread<=25%,
-  TP +50% / SL -50%, EOD 15:30, market exit 15:50, broker-resting protective stop.
+  TP +50% / SL -40%, EOD 15:30, market exit 15:50, broker-resting protective stop.
 
 Uses ALPACA_API_KEY / ALPACA_SECRET_KEY (live). Always exits 0 for GHA.
 """

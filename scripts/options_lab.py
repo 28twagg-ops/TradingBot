@@ -117,7 +117,7 @@ class BucketProfile:
     sell_limit_offset: float = -0.01  # from bid (negative = below bid)
     sell_at_mid: bool = False
     take_profit: float = 0.50
-    stop_loss: float = -0.50
+    stop_loss: float = -0.40
     eod_only: bool = False            # skip intraday stops; exit at EOD only
     market_exit_eod: bool = True      # use market order after EOD_MARKET if limit fails
     # --- Controlled experiment controls ---
@@ -154,7 +154,7 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
         BucketProfile(0, "baseline",
                       buy_limit_offset=-0.01, sell_limit_offset=-0.01,
                       max_premium=75, account_cap=0.95,
-                      take_profit=0.50, stop_loss=-0.50),
+                      take_profit=0.50, stop_loss=-0.40),
         BucketProfile(1, "patient_buy",
                       buy_limit_offset=-0.05, sell_limit_offset=-0.01,
                       max_premium=60, account_cap=0.95,
@@ -178,7 +178,7 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
         BucketProfile(6, "loose_spread",
                       buy_limit_offset=-0.01, max_spread_frac=0.35,
                       max_premium=70, account_cap=0.95,
-                      take_profit=0.50, stop_loss=-0.50),
+                      take_profit=0.50, stop_loss=-0.40),
         BucketProfile(7, "tight_spread",
                       buy_limit_offset=-0.01, max_spread_frac=0.15,
                       max_premium=65, account_cap=0.95,
@@ -280,7 +280,7 @@ class EffectiveArm:
     sell_limit_offset: float = -0.01
     sell_at_mid: bool = False
     take_profit: float = 0.50
-    stop_loss: float = -0.50
+    stop_loss: float = -0.40
     eod_only: bool = False
     market_exit_eod: bool = True
     strategy_scope: str = "all"
@@ -312,7 +312,7 @@ class VirtualLot:
     sell_limit_offset: float = -0.01
     sell_at_mid: bool = False
     take_profit: float = 0.50
-    stop_loss: float = -0.50
+    stop_loss: float = -0.40
     eod_only: bool = False
     market_exit_eod: bool = True
     entry_date: str = ""
@@ -334,7 +334,7 @@ class PendingOrder:
     spread_frac: float = 0.0
     buy_offset: float = -0.01
     take_profit: float = 0.50
-    stop_loss: float = -0.50
+    stop_loss: float = -0.40
 
 
 @dataclass
@@ -2033,7 +2033,7 @@ def _create_orphan_lot(state: LabState, occ: str, pos, qty: int, *, log_fn) -> N
         buy_limit_offset=-0.01,
         sell_limit_offset=-0.01,
         take_profit=0.50,
-        stop_loss=-0.50,
+        stop_loss=-0.40,
         entry_date=datetime.now(timezone.utc).isoformat(),
         entry_order_id=orphan_key,
     )

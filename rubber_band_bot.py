@@ -2589,7 +2589,7 @@ def write_daily(today, equity, cash, rgm, month, positions, signals, buys, sells
     L += ["", "## Options (live micro)", "| | |", "|---|---|",
           f"| Market value | ${opt_mv:,.2f} |",
           f"| Open P&L | ${opt_pnl:+,.2f} |",
-          f"| Rules | 1 contract per strategy (paper baseline), TP +50% / SL -50%, max premium $75 |", ""]
+          f"| Rules | 1 contract per strategy (paper baseline), TP +50% / SL -40%, max premium $75 |", ""]
     L.append("### Option holdings")
     if lots:
         L += ["| Contract | Qty | Entry | Now | P&L% | P&L$ | MV |",
