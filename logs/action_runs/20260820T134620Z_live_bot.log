@@ -1,0 +1,31 @@
+13:46:21  INFO      Mode: morning_scan
+13:46:22  INFO        [positions] 3/3 (3 valid)
+13:46:22  INFO        SELL LIMIT ARE  qty=1.3956282  limit=$50.50  id=35d7969d-d3aa-45a9-b2ec-8853e3a5de88
+13:46:52  INFO        SELL LIMIT filled ARE (confirmed by position check)
+13:46:52  INFO        TX logged: SELL ARE  P&L -0.34%
+13:46:52  INFO        SELL LIMIT JKHY  qty=0.433959953  limit=$164.97  id=8a468b6a-2350-43d7-a21e-7ecb0a4cf76e
+13:47:23  INFO        SELL LIMIT not filled for JKHY, falling back to market
+13:47:23  INFO        SELL MARKET JKHY closed
+13:47:25  INFO        TX logged: SELL JKHY  P&L 1.05%
+13:47:25  INFO        Universe cache hit: 903 tickers (tickers_2026-08-20.json)
+13:47:26  INFO        [universe] 40/902 (40 valid)
+13:47:27  INFO        [universe] 80/902 (80 valid)
+13:47:29  INFO        [universe] 120/902 (120 valid)
+13:47:31  INFO        [universe] 160/902 (160 valid)
+13:47:32  INFO        [universe] 200/902 (199 valid)
+13:47:39  INFO        [universe] 240/902 (238 valid)
+13:47:50  INFO        [universe] 280/902 (278 valid)
+13:48:03  INFO        [universe] 320/902 (318 valid)
+13:48:13  INFO        [universe] 360/902 (358 valid)
+13:48:26  INFO        [universe] 400/902 (397 valid)
+13:48:39  INFO        [universe] 440/902 (437 valid)
+13:48:49  INFO        [universe] 480/902 (477 valid)
+13:49:02  INFO        [universe] 520/902 (517 valid)
+13:49:15  INFO        [universe] 560/902 (557 valid)
+13:49:25  INFO        [universe] 600/902 (597 valid)
+13:49:38  INFO        [universe] 640/902 (637 valid)
+13:49:51  INFO        [universe] 680/902 (677 valid)
+13:50:02  INFO        [universe] 720/902 (717 valid)
+13:50:15  INFO        [universe] 760/902 (757 valid)
+13:50:25  INFO        [universe] 800/902 (797 valid)
+13:50:39  INFO        [universe] 840/902 (836 valid)
