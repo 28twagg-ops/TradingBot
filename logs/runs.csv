@@ -5578,3 +5578,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-20 15:26:47,exits,bull,428.69,285.87,0,0,0,2,AON|MNST,both
 2026-08-20 15:35:18,exits,bull,438.61,285.87,0,0,0,2,AON|MNST,both
 2026-08-20 15:36:59,exits,bull,438.65,285.87,0,0,0,2,AON|MNST,both
+2026-08-20 15:47:13,exits,bull,438.81,285.87,0,0,0,2,AON|MNST,both
