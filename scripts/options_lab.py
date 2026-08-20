@@ -76,8 +76,8 @@ MIRROR_LIVE = os.environ.get("OPTIONS_MIRROR_LIVE", "0").strip().lower() in (
 ORDER_FETCH_LIMIT = 500
 
 
-def get_lab_account_safe(client, retries=3, wait=10):
-    """Retry wrapper for Alpaca get_account (mirrors rubber_band / morning_bot)."""
+def get_lab_account_safe(client, retries=2, wait=2):
+    """Retry wrapper for Alpaca get_account (fail-fast — long sleeps get GHA cancelled)."""
     for i in range(retries):
         try:
             return client.get_account()

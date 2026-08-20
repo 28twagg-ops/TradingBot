@@ -418,8 +418,36 @@ def _is_transient_alpaca_error(exc: Exception) -> bool:
     ) and "401" not in msg and "unauthorized" not in msg and "forbidden" not in msg
 
 
-def get_paper_account_safe(client, retries=6, wait=8):
-    """Retry wrapper for paper Alpaca get_account. Alpaca 500s are common and transient."""
+# Fail-fast: long get_account backoff (~2min x2) was longer than the ~5min cron,
+# so cancel-in-progress killed every paper run mid-retry (duration_s stuck at 0).
+_EQUITY_CACHE_PATH = Path(__file__).resolve().parent.parent / "logs" / "options_trial" / "_state" / "last_broker_equity.json"
+_paper_equity_from_auth: float | None = None
+
+
+def _save_cached_equity(equity: float) -> None:
+    try:
+        _EQUITY_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        _EQUITY_CACHE_PATH.write_text(
+            json.dumps({"equity": float(equity), "ts": datetime.now().isoformat()}),
+            encoding="utf-8",
+        )
+    except Exception:
+        pass
+
+
+def _load_cached_equity() -> float | None:
+    try:
+        if not _EQUITY_CACHE_PATH.exists():
+            return None
+        raw = json.loads(_EQUITY_CACHE_PATH.read_text(encoding="utf-8"))
+        eq = float(raw.get("equity", 0) or 0)
+        return eq if eq > 0 else None
+    except Exception:
+        return None
+
+
+def get_paper_account_safe(client, retries=3, wait=2):
+    """Retry wrapper for paper Alpaca get_account. Keep short so GHA is not cancelled."""
     last = None
     for i in range(retries):
         try:
@@ -454,9 +482,14 @@ def get_clients():
 
 def verify_paper_auth(trade) -> bool:
     """Confirm paper keys work. get_account 500s are NOT wrong keys — fall back to positions."""
+    global _paper_equity_from_auth
+    _paper_equity_from_auth = None
     try:
         acct = get_paper_account_safe(trade)
-        rl(f"Paper auth OK — equity ${float(acct.equity):.2f}, "
+        eq = float(acct.equity)
+        _paper_equity_from_auth = eq
+        _save_cached_equity(eq)
+        rl(f"Paper auth OK — equity ${eq:.2f}, "
            f"account {getattr(acct, 'account_number', '?')}")
         return True
     except Exception as exc:
@@ -464,10 +497,16 @@ def verify_paper_auth(trade) -> bool:
         # get_account returned 50010000. Treat that as degraded, not fatal.
         try:
             pos = list(trade.get_all_positions() or [])
+            cached = _load_cached_equity()
+            note = (
+                f" Using cached equity ${cached:.2f}."
+                if cached is not None
+                else " No cached equity — new entries skipped until get_account recovers."
+            )
             rl(
                 f"WARN: get_account failed ({exc}) but positions OK "
-                f"(n={len(pos)}). Keys are fine; Alpaca account endpoint is flaky. "
-                "Continuing manage/exits; skipping new entries until equity is readable."
+                f"(n={len(pos)}). Keys are fine; Alpaca account endpoint is flaky."
+                f"{note}"
             )
             return True
         except Exception as exc2:
@@ -1154,10 +1193,11 @@ def _sell_limit(trade, sym: str, qty: int, limit: float, tag: str,
                 bucket_id: int | None = None,
                 strategy_id: str | None = None,
                 lot_id: str | None = None):
-    """Submit a DAY limit sell; retry once with a fresh client_order_id on clash."""
+    """Submit a DAY limit sell; retry on client_order_id clash or transient Alpaca 500."""
     attempts = 0
     cid = client_order_id
-    while attempts < 2:
+    max_attempts = 3
+    while attempts < max_attempts:
         attempts += 1
         try:
             kwargs = dict(
@@ -1171,7 +1211,7 @@ def _sell_limit(trade, sym: str, qty: int, limit: float, tag: str,
             return str(o.id)
         except Exception as exc:
             if (
-                attempts < 2
+                attempts < max_attempts
                 and _is_duplicate_client_order_id_error(exc)
                 and bucket_id is not None
                 and strategy_id
@@ -1179,6 +1219,10 @@ def _sell_limit(trade, sym: str, qty: int, limit: float, tag: str,
             ):
                 cid = make_exit_client_order_id(bucket_id, strategy_id, lot_id)
                 rl_file(f"  EXIT {tag} retry new client_order_id after clash: {exc}")
+                continue
+            if attempts < max_attempts and _is_transient_alpaca_error(exc):
+                time.sleep(2)
+                rl_file(f"  EXIT {tag} retry after transient Alpaca error: {exc}")
                 continue
             rl(f"  EXIT {tag} SELL failed {sym}: {exc}")
             return None
@@ -1320,13 +1364,18 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
 # --------------------------------------------------------------------------- #
 
 def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
-                  now: datetime) -> int:
-    try:
-        acct = get_paper_account_safe(trade)
-        equity = float(acct.equity)
-    except Exception as exc:
-        rl(f"ERROR reading account: {exc}")
-        return 0
+                  now: datetime, equity: float | None = None) -> int:
+    if equity is None:
+        try:
+            acct = get_paper_account_safe(trade, retries=2, wait=2)
+            equity = float(acct.equity)
+            _save_cached_equity(equity)
+        except Exception as exc:
+            equity = _load_cached_equity()
+            if equity is None:
+                rl(f"ERROR reading account: {exc}")
+                return 0
+            rl(f"WARN: entries using cached equity ${equity:.0f} (get_account: {exc})")
 
     buckets = active_bucket_count(equity)
     rl(f"Paper lab: ${equity:.0f} broker equity -> {buckets} bucket(s) "
@@ -1472,10 +1521,21 @@ def _position_snapshots(trade) -> list[dict]:
 
 
 def _snapshot_equity(trade) -> float | None:
+    """Prefer equity already fetched during auth; else one short retry; else cache."""
+    global _paper_equity_from_auth
+    if _paper_equity_from_auth is not None:
+        eq = _paper_equity_from_auth
+        _paper_equity_from_auth = None
+        return eq
     try:
-        return float(get_paper_account_safe(trade).equity)
-    except Exception:
-        return None
+        eq = float(get_paper_account_safe(trade, retries=2, wait=2).equity)
+        _save_cached_equity(eq)
+        return eq
+    except Exception as exc:
+        cached = _load_cached_equity()
+        if cached is not None:
+            rl(f"WARN: using cached paper equity ${cached:.2f} (get_account: {exc})")
+        return cached
 
 def _mark_phase(name: str, t0: float) -> None:
     _run_phases[name] = round(time.perf_counter() - t0, 2)
@@ -1766,13 +1826,13 @@ def run() -> int:
     top_signals: list[str] = []
     if _hm_between(now, ENTRY_START, ENTRY_END) and equity is None:
         section("Scan + entries")
-        rl("Skipping new entries: paper get_account unavailable (Alpaca 500). Manage/exits still ran.")
+        rl("Skipping new entries: paper get_account unavailable and no cached equity. Manage/exits still ran.")
         header = "manage-only (no equity snapshot)"
         mode = "manage-only"
     elif _hm_between(now, ENTRY_START, ENTRY_END):
         section("Scan + entries")
         universe = get_universe()
-        strat_ids = ", ".join(s.id for s in PAPER_STRATEGIES)
+        strat_ids = ", ".join(s.id for s in _active_paper_strategies())
         rl(f"Scanning {len(universe)} symbols for [{strat_ids}] …")
         t0 = time.perf_counter()
         signals = scan_all_signals(stock, universe)
@@ -1784,7 +1844,7 @@ def run() -> int:
         else:
             rl("Found 0 signals across top-5 strategies")
         t0 = time.perf_counter()
-        placed = place_entries(trade, opt, ref, signals, state, now)
+        placed = place_entries(trade, opt, ref, signals, state, now, equity=equity)
         _mark_phase("entries", t0)
         rl(f"Placed {placed} new entry order(s).")
         # Re-reconcile so same-run fills land in ledger/lots before summary.
