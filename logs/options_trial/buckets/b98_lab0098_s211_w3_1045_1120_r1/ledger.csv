@@ -24,3 +24,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-13 13:30:04.144607+00:00,exit,98,lab0098_s211_w3_1045_1120_r1,S211,fd061e978195,DIS,DIS260814C00107000,1,,0.55,3.0,1733.33,52.0,reconcile_fill,,-0.01,0.5,-0.5,,,4ff7c907-5d91-4dcf-ac4c-182a0781de4b
 2026-08-14 14:58:34.845571+00:00,entry,98,lab0098_s211_w3_1045_1120_r1,S211,c05d2ba2bc74,SLB,SLB260821C00054000,1,0.72,0.71,71.0,,,,-0.01,,0.5,-0.5,0.13138686131386856,MA21 crossed above MA50,199be0e1-7fa0-43e9-8671-66bef36974c8
 2026-08-12 15:00:02.219969+00:00,entry,98,lab0098_s211_w3_1045_1120_r1,S211,78067b228505,CVNA,CVNA260814C00074000,1,0.34,0.34,34.0,,,,-0.01,,0.5,-0.5,,,35ec0cd2-2716-4d37-a2f0-c0fb582c7b2d
+2026-08-20T14:46:06Z,reconcile,98,lab0098_s211_w3_1045_1120_r1,S211,c05d2ba2bc74,SLB,SLB260821C00054000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

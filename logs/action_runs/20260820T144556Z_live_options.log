@@ -1,0 +1,44 @@
+=== options_live_micro LIVE 2026-08-20T10:45:59.984352-04:00 share=50% ===
+2026-08-20 10:45:59,984 INFO === options_live_micro LIVE 2026-08-20T10:45:59.984352-04:00 share=50% ===
+Live account equity $440.35 cash $337.91 #225458845 options_level=3
+2026-08-20 10:46:00,256 INFO Live account equity $440.35 cash $337.91 #225458845 options_level=3
+Live micro sleeve $220 (50% of $440) deployed $2 open_strategies=2/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+2026-08-20 10:46:00,648 INFO Live micro sleeve $220 (50% of $440) deployed $2 open_strategies=2/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+2026-08-20 10:46:00,648 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 11
+2026-08-20 10:46:02,535 INFO Live micro signals: 11
+  skip S404 COST: strategy already open (paper bucket rule)
+2026-08-20 10:46:02,535 INFO   skip S404 COST: strategy already open (paper bucket rule)
+  skip S404 CRWD: strategy already open (paper bucket rule)
+2026-08-20 10:46:02,535 INFO   skip S404 CRWD: strategy already open (paper bucket rule)
+  skip S404 HD: strategy already open (paper bucket rule)
+2026-08-20 10:46:02,535 INFO   skip S404 HD: strategy already open (paper bucket rule)
+  skip S404 WMT: strategy already open (paper bucket rule)
+2026-08-20 10:46:02,535 INFO   skip S404 WMT: strategy already open (paper bucket rule)
+  skip S406 COST: strategy already open (paper bucket rule)
+2026-08-20 10:46:02,535 INFO   skip S406 COST: strategy already open (paper bucket rule)
+  skip S406 CPB: strategy already open (paper bucket rule)
+2026-08-20 10:46:02,535 INFO   skip S406 CPB: strategy already open (paper bucket rule)
+  try S218 56%win/+49%med CL
+2026-08-20 10:46:02,536 INFO   try S218 56%win/+49%med CL
+LIVE BUY S218 56%win CL CL260821C00090000 limit=0.52 ask=0.53 cost=$53 id=4099c642-2cc0-4f31-b470-61757da7a595
+2026-08-20 10:46:03,492 INFO LIVE BUY S218 56%win CL CL260821C00090000 limit=0.52 ask=0.53 cost=$53 id=4099c642-2cc0-4f31-b470-61757da7a595
+  skip S218 COST: strategy already open (paper bucket rule)
+2026-08-20 10:46:03,492 INFO   skip S218 COST: strategy already open (paper bucket rule)
+  try S210 55%win/+47%med ABBV
+2026-08-20 10:46:03,492 INFO   try S210 55%win/+47%med ABBV
+  skip S210 ABBV: no contract under $75
+2026-08-20 10:46:04,024 INFO   skip S210 ABBV: no contract under $75
+  try S210 55%win/+47%med SJM
+2026-08-20 10:46:04,024 INFO   try S210 55%win/+47%med SJM
+  skip S210 SJM: no contract under $75
+2026-08-20 10:46:04,437 INFO   skip S210 SJM: no contract under $75
+  try S210 55%win/+47%med XEL
+2026-08-20 10:46:04,437 INFO   try S210 55%win/+47%med XEL
+  skip S210 XEL: no contract under $75
+2026-08-20 10:46:04,847 INFO   skip S210 XEL: no contract under $75
+LIVE PROT STOP CL260821C00090000 x1 stop=0.26 id=f9c6e1e9-ecfc-4364-96f8-36190d133315
+2026-08-20 10:46:05,089 INFO LIVE PROT STOP CL260821C00090000 x1 stop=0.26 id=f9c6e1e9-ecfc-4364-96f8-36190d133315
+Live micro done. open_options=2 lots=1
+2026-08-20 10:46:05,162 INFO Live micro done. open_options=2 lots=1

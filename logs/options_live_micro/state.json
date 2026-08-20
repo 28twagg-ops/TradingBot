@@ -1,7 +1,21 @@
 {
-  "lots": [],
+  "lots": [
+    {
+      "lot_id": "43d5b8411bb4",
+      "strategy_id": "S218",
+      "occ": "CL260821C00090000",
+      "underlying": "CL",
+      "qty": 1,
+      "entry_price": 0.52,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "order_id": "4099c642-2cc0-4f31-b470-61757da7a595",
+      "pending": true
+    }
+  ],
   "used_day": "2026-08-20",
   "used_strategies": [
+    "S218",
     "S404",
     "S406"
   ]
