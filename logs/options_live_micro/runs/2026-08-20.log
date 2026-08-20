@@ -279,8 +279,8 @@ LIVE BUY S218 56%win CL CL260821C00090000 limit=0.52 ask=0.53 cost=$53 id=4099c6
   skip S210 XEL: no contract under $75
 LIVE PROT STOP CL260821C00090000 x1 stop=0.26 id=f9c6e1e9-ecfc-4364-96f8-36190d133315
 Live micro done. open_options=2 lots=1
-=== options_live_micro LIVE 2026-08-20T10:57:00.795760-04:00 share=50% ===
-Live account equity $418.40 cash $285.87 #225458845 options_level=3
+=== options_live_micro LIVE 2026-08-20T11:01:54.347322-04:00 share=50% ===
+Live account equity $418.43 cash $285.87 #225458845 options_level=3
 Live micro fill confirmed S218 CL260821C00090000
 Live micro hold S218 CL260821C00090000 -42.3% (tp +50% / sl -50%)
 Live micro sleeve $209 (50% of $418) deployed $32 open_strategies=3/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
@@ -301,8 +301,8 @@ Live micro signals: 11
   try S210 55%win/+47%med XEL
   skip S210 XEL: no contract under $75
 Live micro done. open_options=2 lots=1
-=== options_live_micro LIVE 2026-08-20T11:07:16.499351-04:00 share=50% ===
-Live account equity $423.68 cash $285.87 #225458845 options_level=3
+=== options_live_micro LIVE 2026-08-20T11:11:55.323254-04:00 share=50% ===
+Live account equity $423.77 cash $285.87 #225458845 options_level=3
 Live micro hold S218 CL260821C00090000 -32.7% (tp +50% / sl -50%)
 Live micro sleeve $212 (50% of $424) deployed $37 open_strategies=3/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
 Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
@@ -322,8 +322,8 @@ Live micro signals: 11
   try S210 55%win/+47%med XEL
   skip S210 XEL: no contract under $75
 Live micro done. open_options=2 lots=1
-=== options_live_micro LIVE 2026-08-20T11:16:33.625411-04:00 share=50% ===
-Live account equity $428.63 cash $285.87 #225458845 options_level=3
+=== options_live_micro LIVE 2026-08-20T11:22:06.958855-04:00 share=50% ===
+Live account equity $428.61 cash $285.87 #225458845 options_level=3
 Live micro hold S218 CL260821C00090000 -23.1% (tp +50% / sl -50%)
 Live micro sleeve $214 (50% of $429) deployed $42 open_strategies=3/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
 Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
