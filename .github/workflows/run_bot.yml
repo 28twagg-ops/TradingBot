@@ -35,8 +35,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      # Paper options: live-control study (same 4 strategies + baseline as live).
-      OPTIONS_PAPER_ENABLED: "1"
+      # Paper options off while Alpaca paper API is returning 500s. Set to "1" to re-enable.
+      OPTIONS_PAPER_ENABLED: "0"
 
     steps:
       - name: Checkout repo
