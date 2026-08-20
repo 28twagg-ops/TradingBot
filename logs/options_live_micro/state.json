@@ -1,18 +1,6 @@
 {
   "lots": [
     {
-      "lot_id": "2359445b10db",
-      "strategy_id": "S404",
-      "occ": "WMT260821C00110000",
-      "underlying": "WMT",
-      "qty": 1,
-      "entry_price": 0.09,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "order_id": "e6cd86dc-0e0a-4897-bbe7-543a0fcc9847",
-      "pending": false
-    },
-    {
       "lot_id": "3e5bbb501c27",
       "strategy_id": "S406",
       "occ": "CPB260821C00023000",

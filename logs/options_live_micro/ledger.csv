@@ -17,3 +17,4 @@ ts,event,strategy_id,occ,qty,limit,cost,reason,return_pct,order_id
 2026-08-20T09:34:32.837652-04:00,entry,S406,CPB260821C00023000,1,0.61,62.0,RB gap -1.6% reclaim,,e00e118a-a87b-4b3e-948e-a89950a35282
 2026-08-20T09:39:29.376335-04:00,fill_confirm,S404,WMT260821C00110000,1,,,broker_position,,e6cd86dc-0e0a-4897-bbe7-543a0fcc9847
 2026-08-20T09:39:29.376335-04:00,fill_confirm,S406,CPB260821C00023000,1,,,broker_position,,e00e118a-a87b-4b3e-948e-a89950a35282
+2026-08-20T10:01:36.379898-04:00,exit,S404,WMT260821C00110000,1,,,stop_loss (-66.7%),-66.67,709af2b2-487c-4768-b9f3-c8bab5fb7bb6
