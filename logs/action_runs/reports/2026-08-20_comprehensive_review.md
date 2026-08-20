@@ -8371,3 +8371,60 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260820T195115Z
+
+- UTC timestamp: `20260820T195115Z`
+- GitHub run: [#7682](https://github.com/28twagg-ops/TradingBot/actions/runs/32410802597)
+- Run id: `32410802597`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260820T195115Z_live_bot.log`, `logs/action_runs/20260820T195115Z_live_options.log`, `logs/action_runs/20260820T195115Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+19:51:16  INFO      Mode: scan
+19:51:17  INFO        [positions] 3/3 (3 valid)
+19:51:18  INFO        SELL LIMIT AES  qty=4.199458178  limit=$14.76  id=2a979c4b-64c4-4118-ac6e-140ad85881b0
+19:51:48  INFO        SELL LIMIT filled AES (confirmed by position check)
+19:51:48  INFO        TX logged: SELL AES  P&L 0.0%
+19:51:48  INFO        Universe cache hit: 903 tickers (tickers_2026-08-20.json)
+19:51:49  INFO        [universe] 40/901 (40 valid)
+19:51:51  INFO        [universe] 80/901 (80 valid)
+19:51:53  INFO        [universe] 120/901 (120 valid)
+19:51:54  INFO        [universe] 160/901 (160 valid)
+19:51:55  INFO        [universe] 200/901 (199 valid)
+19:52:03  INFO        [universe] 240/901 (238 valid)
+19:52:14  INFO        [universe] 280/901 (278 valid)
+19:52:24  INFO        [universe] 320/901 (318 valid)
+19:52:38  INFO        [universe] 360/901 (358 valid)
+19:52:49  INFO        [universe] 400/901 (397 valid)
+19:53:03  INFO        [universe] 440/901 (437 valid)
+19:53:14  INFO        [universe] 480/901 (477 valid)
+19:53:27  INFO        [universe] 520/901 (517 valid)
+19:53:38  INFO        [universe] 560/901 (557 valid)
+19:53:51  INFO        [universe] 600/901 (597 valid)
+19:54:02  INFO        [universe] 640/901 (637 valid)
+19:54:15  INFO        [universe] 680/901 (677 valid)
+19:54:26  INFO        [universe] 720/901 (717 valid)
+19:54:39  INFO        [universe] 760/901 (757 valid)
+19:54:50  INFO        [universe] 800/901 (797 valid)
+19:55:03  INFO        [universe] 840/901 (836 valid)
+19:55:14  INFO        [universe] 880/901 (876 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
