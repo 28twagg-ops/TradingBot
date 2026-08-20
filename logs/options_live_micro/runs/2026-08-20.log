@@ -22,3 +22,32 @@ Live micro done. open_options=0 lots=0
 Live account equity $472.30 cash $394.98 #225458845 options_level=3
 Live micro: outside 9:28-16:05 ET
 Live micro done. open_options=0 lots=0
+=== options_live_micro LIVE 2026-08-20T09:34:32.837652-04:00 share=50% ===
+Live account equity $471.67 cash $300.24 #225458845 options_level=3
+Live micro sleeve $236 (50% of $472) deployed $0 open_strategies=0/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 11
+  try S404 100%win/+80%med COST
+  skip S404 COST: no contract under $75
+  try S404 100%win/+80%med CRWD
+  skip S404 CRWD: no contract under $75
+  try S404 100%win/+80%med HD
+  skip S404 HD: no contract under $75
+  try S404 100%win/+80%med WMT
+LIVE BUY S404 100%win WMT WMT260821C00110000 limit=0.09 ask=0.10 cost=$10 id=e6cd86dc-0e0a-4897-bbe7-543a0fcc9847
+  try S406 56%win/+58%med COST
+  skip S406 COST: no contract under $75
+  try S406 56%win/+58%med CPB
+LIVE BUY S406 56%win CPB CPB260821C00023000 limit=0.61 ask=0.62 cost=$62 id=e00e118a-a87b-4b3e-948e-a89950a35282
+  try S218 56%win/+49%med CL
+  skip S218 CL: no contract under $75
+  try S218 56%win/+49%med COST
+  skip S218 COST: no contract under $75
+  try S210 55%win/+47%med ABBV
+  skip S210 ABBV: no contract under $75
+  try S210 55%win/+47%med SJM
+  skip S210 SJM: no contract under $75
+  try S210 55%win/+47%med XEL
+  skip S210 XEL: no contract under $75
+LIVE PROT STOP CPB260821C00023000 x1 stop=0.30 id=17cd36da-1eae-4243-b2e5-944af72e9976
+Live micro done. open_options=1 lots=2
