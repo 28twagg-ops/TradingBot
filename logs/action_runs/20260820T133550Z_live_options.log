@@ -1,0 +1,54 @@
+=== options_live_micro LIVE 2026-08-20T09:39:29.376335-04:00 share=50% ===
+2026-08-20 09:39:29,376 INFO === options_live_micro LIVE 2026-08-20T09:39:29.376335-04:00 share=50% ===
+Live account equity $443.81 cash $231.15 #225458845 options_level=3
+2026-08-20 09:39:29,612 INFO Live account equity $443.81 cash $231.15 #225458845 options_level=3
+Live micro fill confirmed S404 WMT260821C00110000
+2026-08-20 09:39:29,681 INFO Live micro fill confirmed S404 WMT260821C00110000
+Live micro fill confirmed S406 CPB260821C00023000
+2026-08-20 09:39:29,681 INFO Live micro fill confirmed S406 CPB260821C00023000
+Live micro hold S404 WMT260821C00110000 -33.3% (tp +50% / sl -50%)
+2026-08-20 09:39:29,754 INFO Live micro hold S404 WMT260821C00110000 -33.3% (tp +50% / sl -50%)
+Live micro hold S406 CPB260821C00023000 -41.7% (tp +50% / sl -50%)
+2026-08-20 09:39:29,754 INFO Live micro hold S406 CPB260821C00023000 -41.7% (tp +50% / sl -50%)
+LIVE PROT STOP WMT260821C00110000 x1 stop=0.04 id=34614c71-7372-4108-9da6-2915f0d7a2c8
+2026-08-20 09:39:30,010 INFO LIVE PROT STOP WMT260821C00110000 x1 stop=0.04 id=34614c71-7372-4108-9da6-2915f0d7a2c8
+Live micro sleeve $222 (50% of $444) deployed $41 open_strategies=2/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+2026-08-20 09:39:30,154 INFO Live micro sleeve $222 (50% of $444) deployed $41 open_strategies=2/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+2026-08-20 09:39:30,154 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 11
+2026-08-20 09:39:32,133 INFO Live micro signals: 11
+  skip S404 COST: strategy already open (paper bucket rule)
+2026-08-20 09:39:32,134 INFO   skip S404 COST: strategy already open (paper bucket rule)
+  skip S404 CRWD: strategy already open (paper bucket rule)
+2026-08-20 09:39:32,134 INFO   skip S404 CRWD: strategy already open (paper bucket rule)
+  skip S404 HD: strategy already open (paper bucket rule)
+2026-08-20 09:39:32,134 INFO   skip S404 HD: strategy already open (paper bucket rule)
+  skip S404 WMT: strategy already open (paper bucket rule)
+2026-08-20 09:39:32,134 INFO   skip S404 WMT: strategy already open (paper bucket rule)
+  skip S406 COST: strategy already open (paper bucket rule)
+2026-08-20 09:39:32,134 INFO   skip S406 COST: strategy already open (paper bucket rule)
+  skip S406 CPB: strategy already open (paper bucket rule)
+2026-08-20 09:39:32,134 INFO   skip S406 CPB: strategy already open (paper bucket rule)
+  try S218 56%win/+49%med CL
+2026-08-20 09:39:32,134 INFO   try S218 56%win/+49%med CL
+  skip S218 CL: no contract under $75
+2026-08-20 09:39:32,774 INFO   skip S218 CL: no contract under $75
+  try S218 56%win/+49%med COST
+2026-08-20 09:39:32,774 INFO   try S218 56%win/+49%med COST
+  skip S218 COST: no contract under $75
+2026-08-20 09:39:33,124 INFO   skip S218 COST: no contract under $75
+  try S210 55%win/+47%med ABBV
+2026-08-20 09:39:33,124 INFO   try S210 55%win/+47%med ABBV
+  skip S210 ABBV: no contract under $75
+2026-08-20 09:39:33,407 INFO   skip S210 ABBV: no contract under $75
+  try S210 55%win/+47%med SJM
+2026-08-20 09:39:33,407 INFO   try S210 55%win/+47%med SJM
+  skip S210 SJM: no contract under $75
+2026-08-20 09:39:33,626 INFO   skip S210 SJM: no contract under $75
+  try S210 55%win/+47%med XEL
+2026-08-20 09:39:33,627 INFO   try S210 55%win/+47%med XEL
+  skip S210 XEL: no contract under $75
+2026-08-20 09:39:33,921 INFO   skip S210 XEL: no contract under $75
+Live micro done. open_options=2 lots=2
+2026-08-20 09:39:34,214 INFO Live micro done. open_options=2 lots=2
