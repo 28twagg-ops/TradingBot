@@ -374,3 +374,8 @@ Live account equity $438.81 cash $285.87 #225458845 options_level=3
 Live micro hold S218 CL260821C00090000 -3.8% (tp +50% / sl -50%)
 Live micro: manage/exits only
 Live micro done. open_options=2 lots=1
+=== options_live_micro LIVE 2026-08-20T12:06:33.064550-04:00 share=50% ===
+Live account equity $423.00 cash $285.87 #225458845 options_level=3
+Live micro hold S218 CL260821C00090000 -32.7% (tp +50% / sl -50%)
+Live micro: manage/exits only
+Live micro done. open_options=2 lots=1
