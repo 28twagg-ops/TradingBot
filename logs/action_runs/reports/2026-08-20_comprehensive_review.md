@@ -4225,3 +4225,152 @@ WARN: get_account failed ({"code":50010000,"message":"internal server error occu
 ```
 
 ---
+
+## Run 20260820T161634Z
+
+- UTC timestamp: `20260820T161634Z`
+- GitHub run: [#7639](https://github.com/28twagg-ops/TradingBot/actions/runs/32390927531)
+- Run id: `32390927531`
+- Live bot: exit=`0`, duration=`3s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260820T161634Z_live_bot.log`, `logs/action_runs/20260820T161634Z_live_options.log`, `logs/action_runs/20260820T161634Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-17T19:56:23.633587-04:00","date":"2026-08-17","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":261.1,"phases_s":{"reconcile":140.41},"signals":0,"placed":0,"equity":null,"open_positions":14,"pending_orders":0,"open_lots":45,"submitted_today":0,"filled_today":0,"unattributed_contracts":1,"top_signals":[],"github_run":"7335","github_run_id":"32082431205","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1761,"win":33.05,"med":-39.29,"avg":12.19,"pnl":-9205.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+16:16:35  INFO      Mode: exits
+16:16:36  INFO        Daily log -> logs/daily/2026-08-20.md
+16:16:36  INFO        Daily log reconciled -> logs/daily/2026-08-20.md (3 ledger rows)
+16:16:36  INFO        place_all_stops: checking 4 positions...
+16:16:36  INFO        STOP skipped AON: fractional (0.1994 shares) — software exit will handle it
+16:16:36  INFO        STOP skipped MNST: fractional (0.6350 shares) — software exit will handle it
+16:16:36  INFO        [positions] 2/2 (2 valid)
+16:16:37  INFO        Daily log -> logs/daily/2026-08-20.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         16:16 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $427.86|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  MNST  P&L +0.4%  $+0.11                                           HOLD|
+|  AON  P&L +1.2%  $+0.82                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|  CONTRACT                ENTRY    NOW      P&L%     P&L$      MV       |
++------------------------------------------------------------------------+
+|  CL260821C00090000       $0.52    $0.40    -23.1%   $-12.00   $40.00   |
+|  WMT260821C00110000      $0.09    $0.01    -88.9%   $-8.00    $1.00    |
+|                                                                        |
+|  Options open P&L                                               $-20.00|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-20T12:16:37.963397-04:00 share=50% ===
+2026-08-20 12:16:37,963 INFO === options_live_micro LIVE 2026-08-20T12:16:37.963397-04:00 share=50% ===
+Live account equity $427.86 cash $285.87 #225458845 options_level=3
+2026-08-20 12:16:38,222 INFO Live account equity $427.86 cash $285.87 #225458845 options_level=3
+Live micro hold S218 CL260821C00090000 -23.1% (tp +50% / sl -50%)
+2026-08-20 12:16:38,388 INFO Live micro hold S218 CL260821C00090000 -23.1% (tp +50% / sl -50%)
+Live micro: manage/exits only
+2026-08-20 12:16:38,538 INFO Live micro: manage/exits only
+Live micro done. open_options=2 lots=1
+2026-08-20 12:16:38,619 INFO Live micro done. open_options=2 lots=1
+```
+
+### Paper options bot (tail)
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=35 paper_keys=yes dry_run=False
+  alpaca positions=12
+options_reconcile: done
+Layout: grid:100:baseline (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> grid:100:baseline)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-08-20T12:16:40.207159-04:00 ===
+
+[Run context]
+2026-08-20 12:16:40,446 WARNING paper get_account failed attempt 1/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 8s
+2026-08-20 12:16:48,522 WARNING paper get_account failed attempt 2/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 16s
+2026-08-20 12:17:04,624 WARNING paper get_account failed attempt 3/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 24s
+2026-08-20 12:17:28,715 WARNING paper get_account failed attempt 4/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 32s
+2026-08-20 12:18:00,864 WARNING paper get_account failed attempt 5/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 40s
+2026-08-20 12:18:40,941 ERROR paper get_account failed after 6 attempts: {"code":50010000,"message":"internal server error occurred"}
+WARN: get_account failed ({"code":50010000,"message":"internal server error occurred"}) but positions OK (n=12). Keys are fine; Alpaca account endpoint is flaky. Continuing manage/exits; skipping new entries until equity is readable.
+2026-08-20 12:18:41,120 WARNING paper get_account failed attempt 1/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 8s
+2026-08-20 12:18:49,200 WARNING paper get_account failed attempt 2/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 16s
+2026-08-20 12:19:05,282 WARNING paper get_account failed attempt 3/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 24s
+2026-08-20 12:19:29,360 WARNING paper get_account failed attempt 4/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 32s
+2026-08-20 12:20:01,437 WARNING paper get_account failed attempt 5/6 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 40s
+2026-08-20 12:20:41,513 ERROR paper get_account failed after 6 attempts: {"code":50010000,"message":"internal server error occurred"}
+2026-08-20 12:20:41,596 WARNING lab get_account failed attempt 1/3: {"code":50010000,"message":"internal server error occurred"}
+2026-08-20 12:20:51,675 WARNING lab get_account failed attempt 2/3: {"code":50010000,"message":"internal server error occurred"}
+2026-08-20 12:21:01,752 ERROR lab get_account failed after 3 attempts: {"code":50010000,"message":"internal server error occurred"}
+
+[Setup]
+LIVE MIRROR control study — strategies: S210, S218, S404, S406 | baseline arm only (same TP/SL as live micro)
+Allowed (new entries only): S210, S218, S404, S406
+  EXIT [b776|lab0776_s397_w1_0928_1005_r1|S397] take_profit (+229.8%) SELL failed MARA260821C00009000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b0|orphan_reconcile|ORPHAN] take_profit (+229.8%) SELL failed MARA260821C00009000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b115|lab0115_s212_w4_1120_1135_r2|S212] stop_loss (-100.0%) SELL failed MCD260821C00290000: {"code":50010000,"message":"internal server error occurred"}
+```
+
+---
