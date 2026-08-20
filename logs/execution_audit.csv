@@ -765,3 +765,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-08-19 19:56:53,2026-08-19,SELL,AAPL,Pullback50,316.56,316.55,316.554,79.01,-0.0019,-0.0015,limit_fill_position_check_full,midline (+1.9%),bull
 2026-08-20 13:46:52,2026-08-20,SELL,ARE,Pullback50,50.605,50.5,50.5,70.48,-0.2075,-0.1462,limit_fill_position_check_full,midline (-0.3%),bull
 2026-08-20 13:47:25,2026-08-20,SELL,JKHY,MA_Squeeze,165.3,164.97,165.03,71.62,-0.1633,-0.117,market_fallback_full,midline (+1.1%),bull
+2026-08-20 13:57:10,2026-08-20,SELL,ARE,Pullback50,50.74,50.64,50.64,69.7,-0.1971,-0.1374,limit_fill_position_check_full,midline (-0.2%),bull

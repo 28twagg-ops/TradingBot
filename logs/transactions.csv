@@ -1130,3 +1130,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-19 19:56:53,2026-08-19,SELL,AAPL,Pullback50,316.55,79.01,1.93,1.5,1,midline (+1.9%),bull,472.53
 2026-08-20 13:46:52,2026-08-20,SELL,ARE,Pullback50,50.5,70.48,-0.34,-0.24,0,midline (-0.3%),bull,475.77
 2026-08-20 13:47:25,2026-08-20,SELL,JKHY,MA_Squeeze,165.03,71.62,1.05,0.75,0,midline (+1.1%),bull,475.59
+2026-08-20 13:57:10,2026-08-20,SELL,ARE,Pullback50,50.64,69.7,-0.18,-0.12,0,midline (-0.2%),bull,446.26
