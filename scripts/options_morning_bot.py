@@ -52,7 +52,7 @@ from options_lab import (
     active_bucket_count, arms_for_signal,
     build_bucket_leaderboard, build_reflected_leaderboard,
     cancel_dropped_strategy_entries, cancel_unfilled_lab_entries,
-    DROPPED_STRATEGIES, TOP_BUCKET_PCT,
+    DROPPED_STRATEGIES, ALLOWED_STRATEGIES, MIRROR_LIVE, TOP_BUCKET_PCT,
     entry_limit_price, exit_limit_price,
     exit_reason_for_lot, has_open_lab_entry, load_state,
     lock_entry_slot, make_entry_client_order_id,
@@ -662,6 +662,18 @@ def ensure_protective_stops(trade, state: LabState) -> int:
 #  Signal scan (top 5 strategies)
 # --------------------------------------------------------------------------- #
 
+def _active_paper_strategies() -> list:
+    """PAPER_STRATEGIES filtered by allow/drop lists (live-control study)."""
+    out = []
+    for s in PAPER_STRATEGIES:
+        if s.id in DROPPED_STRATEGIES:
+            continue
+        if ALLOWED_STRATEGIES and s.id not in ALLOWED_STRATEGIES:
+            continue
+        out.append(s)
+    return out or list(PAPER_STRATEGIES)
+
+
 def _strategy_by_id(sid: str) -> StrategyConfig | None:
     for s in PAPER_STRATEGIES:
         if s.id == sid:
@@ -692,8 +704,11 @@ def scan_all_signals(stock, universe: list[str]) -> list[SignalHit]:
     else:
         rl(f"Fetched daily bars for {n_ok}/{len(universe)} symbols")
 
-    priority = {s.id: i for i, s in enumerate(PAPER_STRATEGIES)}
+    active = _active_paper_strategies()
+    active_ids = {s.id for s in active}
+    priority = {s.id: i for i, s in enumerate(active)}
     controlled = bool(os.getenv("OPTIONS_CONTROLLED_LAYOUT"))
+    mirror = MIRROR_LIVE or bool(ALLOWED_STRATEGIES)
     for sym in universe:
         try:
             alpaca_sym = to_alpaca_symbol(sym)
@@ -703,10 +718,14 @@ def scan_all_signals(stock, universe: list[str]) -> list[SignalHit]:
             hits = scan_symbol(sub, sym, TODAY, MIN_UNDERLYING_PX)
             if not hits:
                 continue
-            if controlled:
-                # Controlled layout: emit ALL strategy hits per symbol so every
-                # strategy bucket receives signals. arms_for_signal() already
-                # routes each hit to its own bucket — no double-buying risk.
+            if active_ids:
+                hits = [h for h in hits if h.strategy_id in active_ids]
+            if not hits:
+                continue
+            if controlled or mirror:
+                # Controlled layout OR live-mirror control study: keep every
+                # allowed-strategy hit so paper can open one lot per strategy
+                # (same concurrency model as options_live_micro).
                 for hit in hits:
                     out.append(hit)
             else:
@@ -1693,10 +1712,20 @@ def run() -> int:
     _mark_phase("reconcile", t0)
 
     section("Setup")
-    n_active = active_bucket_count(equity or 0)
-    top_note = f" (top {TOP_BUCKET_PCT:.0%} by med return)" if TOP_BUCKET_PCT > 0 else ""
-    rl(f"Active buckets: {n_active}{top_note} | "
-       f"Strategies: {', '.join(s.id for s in PAPER_STRATEGIES)}")
+    active = _active_paper_strategies()
+    if MIRROR_LIVE:
+        rl(
+            f"LIVE MIRROR control study — strategies: "
+            f"{', '.join(s.id for s in active)} | "
+            f"baseline arm only (same TP/SL as live micro)"
+        )
+    else:
+        n_active = active_bucket_count(equity or 0)
+        top_note = f" (top {TOP_BUCKET_PCT:.0%} by med return)" if TOP_BUCKET_PCT > 0 else ""
+        rl(f"Active buckets: {n_active}{top_note} | "
+           f"Strategies: {', '.join(s.id for s in active)}")
+    if ALLOWED_STRATEGIES:
+        rl(f"Allowed (new entries only): {', '.join(sorted(ALLOWED_STRATEGIES))}")
     if DROPPED_STRATEGIES:
         rl(f"Dropped (no new entries; ex-reflected P&L): "
            f"{', '.join(sorted(DROPPED_STRATEGIES))}")

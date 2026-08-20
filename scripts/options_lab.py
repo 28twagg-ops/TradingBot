@@ -64,6 +64,15 @@ DROPPED_STRATEGIES: frozenset[str] = frozenset(
     s.strip() for s in os.environ.get("OPTIONS_DROPPED_STRATEGIES", "S174,S173").split(",")
     if s.strip()
 )
+# If set, ONLY these strategy ids get new paper entries (live-control study).
+ALLOWED_STRATEGIES: frozenset[str] = frozenset(
+    s.strip() for s in os.environ.get("OPTIONS_ALLOWED_STRATEGIES", "").split(",")
+    if s.strip()
+)
+# Mirror live micro: one baseline arm per allowed strategy (TP/SL from bucket 0).
+MIRROR_LIVE = os.environ.get("OPTIONS_MIRROR_LIVE", "0").strip().lower() in (
+    "1", "true", "yes", "on",
+)
 ORDER_FETCH_LIMIT = 500
 
 
@@ -661,6 +670,17 @@ def active_buckets(equity: float) -> list[BucketProfile]:
 def arms_for_signal(strategy_id: str, equity: float) -> list[EffectiveArm]:
     if strategy_id in DROPPED_STRATEGIES:
         return []
+    if ALLOWED_STRATEGIES and strategy_id not in ALLOWED_STRATEGIES:
+        return []
+    # Live-control study: same mechanics as options_live_micro (baseline bucket 0).
+    if MIRROR_LIVE:
+        baseline = next(
+            (b for b in BUCKET_EXPERIMENTS if b.name == "baseline"),
+            BUCKET_EXPERIMENTS[0] if BUCKET_EXPERIMENTS else None,
+        )
+        if baseline is None:
+            return []
+        return [_merge_arm(baseline, strategy_id, equity)]
     return [
         _merge_arm(b, strategy_id, equity)
         for b in active_buckets(equity)

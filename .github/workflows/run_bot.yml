@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      # Paper options lab: top 20% of buckets only (faster). Set to "0" to disable.
+      # Paper options: live-control study (same 4 strategies + baseline as live).
       OPTIONS_PAPER_ENABLED: "1"
 
     steps:
@@ -137,7 +137,7 @@ jobs:
           echo "Live options micro duration: ${dur}s"
           exit 0
 
-      # Options paper bot: top 20% of buckets by median return (not full 1024).
+      # Paper options: live-control study — same 4 strategies + baseline TP/SL as live.
       - name: Run options paper bot (PAPER, 9:28-16:05 ET weekdays)
         if: env.OPTIONS_PAPER_ENABLED == '1'
         continue-on-error: true
@@ -145,11 +145,11 @@ jobs:
           ALPACA_PAPER_KEY: ${{ secrets.ALPACA_PAPER_KEY }}
           ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
           OPTIONS_PAPER_UNLIMITED: "1"
-          OPTIONS_CONTROLLED_LAYOUT: "1"
-          OPTIONS_BUCKET_COUNT: "1024"
-          # Only trade the top 20% of buckets ranked by median return.
-          OPTIONS_TOP_BUCKET_PCT: "0.20"
-          # Keep ALL strategies live for observation; ranking culls weak buckets.
+          # Mirror live micro (not the 1024-bucket lab) as a paper control.
+          OPTIONS_MIRROR_LIVE: "1"
+          OPTIONS_ALLOWED_STRATEGIES: "S404,S406,S218,S210"
+          OPTIONS_CONTROLLED_LAYOUT: "0"
+          OPTIONS_TOP_BUCKET_PCT: "0"
           OPTIONS_DROPPED_STRATEGIES: ""
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
           GITHUB_RUN_ID: ${{ github.run_id }}
