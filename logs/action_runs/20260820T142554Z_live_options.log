@@ -1,0 +1,44 @@
+=== options_live_micro LIVE 2026-08-20T10:25:58.095972-04:00 share=50% ===
+2026-08-20 10:25:58,096 INFO === options_live_micro LIVE 2026-08-20T10:25:58.095972-04:00 share=50% ===
+Live account equity $440.16 cash $337.91 #225458845 options_level=3
+2026-08-20 10:25:58,343 INFO Live account equity $440.16 cash $337.91 #225458845 options_level=3
+Live micro sleeve $220 (50% of $440) deployed $2 open_strategies=2/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+2026-08-20 10:25:58,650 INFO Live micro sleeve $220 (50% of $440) deployed $2 open_strategies=2/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+2026-08-20 10:25:58,650 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 11
+2026-08-20 10:26:00,560 INFO Live micro signals: 11
+  skip S404 COST: strategy already open (paper bucket rule)
+2026-08-20 10:26:00,561 INFO   skip S404 COST: strategy already open (paper bucket rule)
+  skip S404 CRWD: strategy already open (paper bucket rule)
+2026-08-20 10:26:00,561 INFO   skip S404 CRWD: strategy already open (paper bucket rule)
+  skip S404 HD: strategy already open (paper bucket rule)
+2026-08-20 10:26:00,561 INFO   skip S404 HD: strategy already open (paper bucket rule)
+  skip S404 WMT: strategy already open (paper bucket rule)
+2026-08-20 10:26:00,561 INFO   skip S404 WMT: strategy already open (paper bucket rule)
+  skip S406 COST: strategy already open (paper bucket rule)
+2026-08-20 10:26:00,561 INFO   skip S406 COST: strategy already open (paper bucket rule)
+  skip S406 CPB: strategy already open (paper bucket rule)
+2026-08-20 10:26:00,561 INFO   skip S406 CPB: strategy already open (paper bucket rule)
+  try S218 56%win/+49%med CL
+2026-08-20 10:26:00,562 INFO   try S218 56%win/+49%med CL
+  skip S218 CL: no contract under $75
+2026-08-20 10:26:01,430 INFO   skip S218 CL: no contract under $75
+  try S218 56%win/+49%med COST
+2026-08-20 10:26:01,430 INFO   try S218 56%win/+49%med COST
+  skip S218 COST: no contract under $75
+2026-08-20 10:26:02,133 INFO   skip S218 COST: no contract under $75
+  try S210 55%win/+47%med ABBV
+2026-08-20 10:26:02,133 INFO   try S210 55%win/+47%med ABBV
+  skip S210 ABBV: no contract under $75
+2026-08-20 10:26:02,461 INFO   skip S210 ABBV: no contract under $75
+  try S210 55%win/+47%med SJM
+2026-08-20 10:26:02,461 INFO   try S210 55%win/+47%med SJM
+  skip S210 SJM: no contract under $75
+2026-08-20 10:26:02,870 INFO   skip S210 SJM: no contract under $75
+  try S210 55%win/+47%med XEL
+2026-08-20 10:26:02,870 INFO   try S210 55%win/+47%med XEL
+  skip S210 XEL: no contract under $75
+2026-08-20 10:26:03,292 INFO   skip S210 XEL: no contract under $75
+Live micro done. open_options=1 lots=0
+2026-08-20 10:26:03,433 INFO Live micro done. open_options=1 lots=0
