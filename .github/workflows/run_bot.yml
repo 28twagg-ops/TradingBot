@@ -35,8 +35,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      # Set to "1" to re-enable the 1024-bucket paper options lab.
-      OPTIONS_PAPER_ENABLED: "0"
+      # Paper options lab: top 20% of buckets only (faster). Set to "0" to disable.
+      OPTIONS_PAPER_ENABLED: "1"
 
     steps:
       - name: Checkout repo
@@ -137,8 +137,7 @@ jobs:
           echo "Live options micro duration: ${dur}s"
           exit 0
 
-      # Options paper bot (1024-bucket lab): disabled via OPTIONS_PAPER_ENABLED=0.
-      # Set OPTIONS_PAPER_ENABLED=1 on the job env to turn it back on.
+      # Options paper bot: top 20% of buckets by median return (not full 1024).
       - name: Run options paper bot (PAPER, 9:28-16:05 ET weekdays)
         if: env.OPTIONS_PAPER_ENABLED == '1'
         continue-on-error: true
@@ -148,8 +147,9 @@ jobs:
           OPTIONS_PAPER_UNLIMITED: "1"
           OPTIONS_CONTROLLED_LAYOUT: "1"
           OPTIONS_BUCKET_COUNT: "1024"
-          # Keep ALL strategies live for ~1 week observation (incl. CLEAN KILL names).
-          # Data-quality report still tags KILL/KEEP; revisit drop list after that window.
+          # Only trade the top 20% of buckets ranked by median return.
+          OPTIONS_TOP_BUCKET_PCT: "0.20"
+          # Keep ALL strategies live for observation; ranking culls weak buckets.
           OPTIONS_DROPPED_STRATEGIES: ""
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
           GITHUB_RUN_ID: ${{ github.run_id }}

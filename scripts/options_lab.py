@@ -44,6 +44,14 @@ VIRTUAL_BUCKET_USD = float(os.environ.get("OPTIONS_VIRTUAL_BUCKET_USD", "500"))
 PAPER_UNLIMITED_BUCKETS = os.environ.get("OPTIONS_PAPER_UNLIMITED", "1") != "0"
 TARGET_BUCKET_PROFILES = int(os.environ.get("OPTIONS_BUCKET_COUNT", "100"))
 CONTROLLED_LAYOUT = os.environ.get("OPTIONS_CONTROLLED_LAYOUT", "0") == "1"
+# When set (e.g. 0.20), only the top fraction of buckets by median return
+# receive NEW entries. Open lots in other buckets still manage/exit normally.
+try:
+    TOP_BUCKET_PCT = float(os.environ.get("OPTIONS_TOP_BUCKET_PCT", "0") or 0)
+except (TypeError, ValueError):
+    TOP_BUCKET_PCT = 0.0
+TOP_BUCKET_PCT = max(0.0, min(1.0, TOP_BUCKET_PCT))
+_TOP_BUCKET_IDS_CACHE: list[int] | None = None
 STATE_VERSION = 5
 
 ORPHAN_BUCKET_ID = 0
@@ -598,6 +606,9 @@ def _merge_arm(bucket: BucketProfile, strategy_id: str,
 
 
 def active_bucket_count(equity: float) -> int:
+    if TOP_BUCKET_PCT > 0:
+        n = max(1, int(round(len(BUCKET_EXPERIMENTS) * TOP_BUCKET_PCT)))
+        return min(n, len(BUCKET_EXPERIMENTS))
     if PAPER_UNLIMITED_BUCKETS:
         return len(BUCKET_EXPERIMENTS)
     if equity <= 0:
@@ -610,8 +621,41 @@ def bucket_virtual_equity(equity: float = 0) -> float:
     return VIRTUAL_BUCKET_USD
 
 
+def _top_bucket_ids(n: int) -> list[int]:
+    """Rank buckets by median return (exits), then fill with remaining ids."""
+    global _TOP_BUCKET_IDS_CACHE
+    if _TOP_BUCKET_IDS_CACHE is not None and len(_TOP_BUCKET_IDS_CACHE) >= n:
+        return _TOP_BUCKET_IDS_CACHE[:n]
+    ranked: list[int] = []
+    try:
+        board = build_bucket_leaderboard()
+        ranked = [r.bucket_id for r in board.rows]
+    except Exception:
+        ranked = []
+    seen = set(ranked)
+    for b in BUCKET_EXPERIMENTS:
+        if b.bucket_id not in seen:
+            ranked.append(b.bucket_id)
+            seen.add(b.bucket_id)
+    _TOP_BUCKET_IDS_CACHE = ranked
+    return ranked[:n]
+
+
 def active_buckets(equity: float) -> list[BucketProfile]:
-    return BUCKET_EXPERIMENTS[:active_bucket_count(equity)]
+    n = active_bucket_count(equity)
+    if TOP_BUCKET_PCT > 0:
+        want = set(_top_bucket_ids(n))
+        by_id = {b.bucket_id: b for b in BUCKET_EXPERIMENTS}
+        out = [by_id[i] for i in _top_bucket_ids(n) if i in by_id]
+        # Preserve order from ranking; fall back if catalog shrank.
+        if len(out) < n:
+            for b in BUCKET_EXPERIMENTS:
+                if b.bucket_id not in want:
+                    out.append(b)
+                if len(out) >= n:
+                    break
+        return out[:n]
+    return BUCKET_EXPERIMENTS[:n]
 
 
 def arms_for_signal(strategy_id: str, equity: float) -> list[EffectiveArm]:
@@ -1531,7 +1575,8 @@ def format_trial_stats(
         lines.append(
             f"Active buckets: {nb} of {len(BUCKET_EXPERIMENTS)} profiles "
             f"(${VIRTUAL_BUCKET_USD:,.0f} virtual each)"
-            + (" — paper unlimited mode" if PAPER_UNLIMITED_BUCKETS else "")
+            + (" — paper unlimited mode" if PAPER_UNLIMITED_BUCKETS and TOP_BUCKET_PCT <= 0 else "")
+            + (f" — top {TOP_BUCKET_PCT:.0%} by median return" if TOP_BUCKET_PCT > 0 else "")
         )
         if not PAPER_UNLIMITED_BUCKETS and fundable < len(BUCKET_EXPERIMENTS):
             lines.append(

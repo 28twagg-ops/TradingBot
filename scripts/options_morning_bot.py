@@ -52,7 +52,7 @@ from options_lab import (
     active_bucket_count, arms_for_signal,
     build_bucket_leaderboard, build_reflected_leaderboard,
     cancel_dropped_strategy_entries, cancel_unfilled_lab_entries,
-    DROPPED_STRATEGIES,
+    DROPPED_STRATEGIES, TOP_BUCKET_PCT,
     entry_limit_price, exit_limit_price,
     exit_reason_for_lot, has_open_lab_entry, load_state,
     lock_entry_slot, make_entry_client_order_id,
@@ -1693,7 +1693,9 @@ def run() -> int:
     _mark_phase("reconcile", t0)
 
     section("Setup")
-    rl(f"Active buckets: {active_bucket_count(equity or 0)} | "
+    n_active = active_bucket_count(equity or 0)
+    top_note = f" (top {TOP_BUCKET_PCT:.0%} by med return)" if TOP_BUCKET_PCT > 0 else ""
+    rl(f"Active buckets: {n_active}{top_note} | "
        f"Strategies: {', '.join(s.id for s in PAPER_STRATEGIES)}")
     if DROPPED_STRATEGIES:
         rl(f"Dropped (no new entries; ex-reflected P&L): "
