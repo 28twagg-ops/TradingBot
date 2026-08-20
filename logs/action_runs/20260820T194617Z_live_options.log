@@ -1,0 +1,8 @@
+=== options_live_micro LIVE 2026-08-20T15:50:09.607340-04:00 share=50% ===
+2026-08-20 15:50:09,607 INFO === options_live_micro LIVE 2026-08-20T15:50:09.607340-04:00 share=50% ===
+Live account equity $413.36 cash $248.82 #225458845 options_level=3
+2026-08-20 15:50:09,667 INFO Live account equity $413.36 cash $248.82 #225458845 options_level=3
+Live micro: manage/exits only
+2026-08-20 15:50:09,719 INFO Live micro: manage/exits only
+Live micro done. open_options=1 lots=0
+2026-08-20 15:50:09,762 INFO Live micro done. open_options=1 lots=0
