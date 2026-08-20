@@ -1,18 +1,5 @@
 {
-  "lots": [
-    {
-      "lot_id": "3e5bbb501c27",
-      "strategy_id": "S406",
-      "occ": "CPB260821C00023000",
-      "underlying": "CPB",
-      "qty": 1,
-      "entry_price": 0.61,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "order_id": "e00e118a-a87b-4b3e-948e-a89950a35282",
-      "pending": false
-    }
-  ],
+  "lots": [],
   "used_day": "2026-08-20",
   "used_strategies": [
     "S404",
