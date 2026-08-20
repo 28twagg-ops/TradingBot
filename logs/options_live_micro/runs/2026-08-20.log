@@ -509,3 +509,7 @@ Live account equity $408.52 cash $285.87 #225458845 options_level=3
 LIVE EXIT stop_loss (-61.5%) CL260821C00090000 x1 limit=0.21 id=84851455-0853-4fcb-869d-28a9fd16be44
 Live micro: manage/exits only
 Live micro done. open_options=1 lots=0
+=== options_live_micro LIVE 2026-08-20T15:26:00.007522-04:00 share=50% ===
+Live account equity $413.41 cash $310.83 #225458845 options_level=3
+Live micro: manage/exits only
+Live micro done. open_options=1 lots=0
