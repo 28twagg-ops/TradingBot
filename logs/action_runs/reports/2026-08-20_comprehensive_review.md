@@ -1005,3 +1005,57 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260820T135152Z
+
+- UTC timestamp: `20260820T135152Z`
+- GitHub run: [#7610](https://github.com/28twagg-ops/TradingBot/actions/runs/32376523368)
+- Run id: `32376523368`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260820T135152Z_live_bot.log`, `logs/action_runs/20260820T135152Z_live_options.log`, `logs/action_runs/20260820T135152Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+13:51:53  INFO      Mode: morning_scan
+13:51:53  INFO        [positions] 1/1 (1 valid)
+13:51:53  INFO        Universe cache hit: 903 tickers (tickers_2026-08-20.json)
+13:51:55  INFO        [universe] 40/902 (40 valid)
+13:51:56  INFO        [universe] 80/902 (80 valid)
+13:51:57  INFO        [universe] 120/902 (120 valid)
+13:51:59  INFO        [universe] 160/902 (160 valid)
+13:52:00  INFO        [universe] 200/902 (199 valid)
+13:52:10  INFO        [universe] 240/902 (238 valid)
+13:52:21  INFO        [universe] 280/902 (278 valid)
+13:52:34  INFO        [universe] 320/902 (318 valid)
+13:52:47  INFO        [universe] 360/902 (358 valid)
+13:52:57  INFO        [universe] 400/902 (397 valid)
+13:53:10  INFO        [universe] 440/902 (437 valid)
+13:53:20  INFO        [universe] 480/902 (477 valid)
+13:53:34  INFO        [universe] 520/902 (517 valid)
+13:53:47  INFO        [universe] 560/902 (557 valid)
+13:53:57  INFO        [universe] 600/902 (597 valid)
+13:54:10  INFO        [universe] 640/902 (637 valid)
+13:54:23  INFO        [universe] 680/902 (677 valid)
+13:54:33  INFO        [universe] 720/902 (717 valid)
+13:54:46  INFO        [universe] 760/902 (757 valid)
+13:54:59  INFO        [universe] 800/902 (797 valid)
+13:55:09  INFO        [universe] 840/902 (836 valid)
+13:55:23  INFO        [universe] 880/902 (876 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
