@@ -2033,3 +2033,133 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260820T144140Z
+
+- UTC timestamp: `20260820T144140Z`
+- GitHub run: [#7620](https://github.com/28twagg-ops/TradingBot/actions/runs/32381502517)
+- Run id: `32381502517`
+- Live bot: exit=`0`, duration=`2s`
+- Live options: exit=`0`, duration=`3s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260820T144140Z_live_bot.log`, `logs/action_runs/20260820T144140Z_live_options.log`, `logs/action_runs/20260820T144140Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+14:41:41  INFO      Mode: exits
+14:41:41  INFO        Daily log -> logs/daily/2026-08-20.md
+14:41:41  INFO        Daily log reconciled -> logs/daily/2026-08-20.md (3 ledger rows)
+14:41:41  INFO        place_all_stops: checking 3 positions...
+14:41:41  INFO        STOP skipped AON: fractional (0.1994 shares) — software exit will handle it
+14:41:41  INFO        STOP skipped MNST: fractional (0.6350 shares) — software exit will handle it
+14:41:41  INFO        [positions] 2/2 (2 valid)
+14:41:42  INFO        Daily log -> logs/daily/2026-08-20.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:41 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $440.17|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  MNST  P&L -0.3%  $-0.08                                           HOLD|
+|  AON  P&L +0.4%  $+0.28                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|  CONTRACT                ENTRY    NOW      P&L%     P&L$      MV       |
++------------------------------------------------------------------------+
+|  WMT260821C00110000      $0.09    $0.02    -77.8%   $-7.00    $2.00    |
+|                                                                        |
+|  Options open P&L                                                $-7.00|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-20T10:41:42.735108-04:00 share=50% ===
+2026-08-20 10:41:42,735 INFO === options_live_micro LIVE 2026-08-20T10:41:42.735108-04:00 share=50% ===
+Live account equity $440.17 cash $337.91 #225458845 options_level=3
+2026-08-20 10:41:42,810 INFO Live account equity $440.17 cash $337.91 #225458845 options_level=3
+Live micro sleeve $220 (50% of $440) deployed $2 open_strategies=2/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+2026-08-20 10:41:42,890 INFO Live micro sleeve $220 (50% of $440) deployed $2 open_strategies=2/4 (paper baseline $75 / tp=+50% sl=-50% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+2026-08-20 10:41:42,891 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 11
+2026-08-20 10:41:44,553 INFO Live micro signals: 11
+  skip S404 COST: strategy already open (paper bucket rule)
+2026-08-20 10:41:44,553 INFO   skip S404 COST: strategy already open (paper bucket rule)
+  skip S404 CRWD: strategy already open (paper bucket rule)
+2026-08-20 10:41:44,553 INFO   skip S404 CRWD: strategy already open (paper bucket rule)
+  skip S404 HD: strategy already open (paper bucket rule)
+2026-08-20 10:41:44,553 INFO   skip S404 HD: strategy already open (paper bucket rule)
+  skip S404 WMT: strategy already open (paper bucket rule)
+2026-08-20 10:41:44,553 INFO   skip S404 WMT: strategy already open (paper bucket rule)
+  skip S406 COST: strategy already open (paper bucket rule)
+2026-08-20 10:41:44,553 INFO   skip S406 COST: strategy already open (paper bucket rule)
+  skip S406 CPB: strategy already open (paper bucket rule)
+2026-08-20 10:41:44,553 INFO   skip S406 CPB: strategy already open (paper bucket rule)
+  try S218 56%win/+49%med CL
+2026-08-20 10:41:44,554 INFO   try S218 56%win/+49%med CL
+  skip S218 CL: no contract under $75
+2026-08-20 10:41:44,714 INFO   skip S218 CL: no contract under $75
+  try S218 56%win/+49%med COST
+2026-08-20 10:41:44,714 INFO   try S218 56%win/+49%med COST
+  skip S218 COST: no contract under $75
+2026-08-20 10:41:44,782 INFO   skip S218 COST: no contract under $75
+  try S210 55%win/+47%med ABBV
+2026-08-20 10:41:44,783 INFO   try S210 55%win/+47%med ABBV
+  skip S210 ABBV: no contract under $75
+2026-08-20 10:41:44,836 INFO   skip S210 ABBV: no contract under $75
+  try S210 55%win/+47%med SJM
+2026-08-20 10:41:44,836 INFO   try S210 55%win/+47%med SJM
+  skip S210 SJM: no contract under $75
+2026-08-20 10:41:44,875 INFO   skip S210 SJM: no contract under $75
+  try S210 55%win/+47%med XEL
+2026-08-20 10:41:44,876 INFO   try S210 55%win/+47%med XEL
+  skip S210 XEL: no contract under $75
+2026-08-20 10:41:44,953 INFO   skip S210 XEL: no contract under $75
+Live micro done. open_options=1 lots=0
+2026-08-20 10:41:45,002 INFO Live micro done. open_options=1 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
