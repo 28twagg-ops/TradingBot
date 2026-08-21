@@ -25832,8 +25832,8 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-08-21.log
 elapsed=1.4s reconcile=0.3s cancel=0.15s manage=0.15s
 
-=== 15:49:51 ET — manage-only (past entry window) [elapsed=0.7s reconcile=0.09s cancel=0.04s manage=0.04s] ===
-=== options_morning_bot (PAPER) 2026-08-21T15:49:51.661505-04:00 ===
+=== 16:01:58 ET — manage-only (past entry window) [elapsed=1.3s reconcile=0.27s cancel=0.14s manage=0.13s] ===
+=== options_morning_bot (PAPER) 2026-08-21T16:01:58.130693-04:00 ===
 
 [Run context]
 Paper auth OK — equity $999987.95, account PA33P8KT02IL
@@ -26341,6 +26341,16 @@ Per-bucket exit stats (all time)
   b99|lab0099_s211_w3_1045_1120_r2  n=  7  avg=+103.9%  med=+107.7%  realized=$+179.00
   b9|c009_s165_w2_1005_1045_r1  n=  7  avg=-74.4%  med=-66.2%  realized=$-301.00
 ========================================================
+
+[Exit summary]
+========================================================
+OPTIONS EXIT SUMMARY — 2026-08-21
+========================================================
+Account equity: $999,987.95
+Open positions: flat
+
+No closed trades today.
+========================================================
 +========================================================================+
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
@@ -26389,5 +26399,5 @@ Per-bucket exit stats (all time)
 |  No open option positions                                              |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-08-21.log
-elapsed=0.7s reconcile=0.09s cancel=0.04s manage=0.04s
+elapsed=1.3s reconcile=0.27s cancel=0.14s manage=0.13s
 
