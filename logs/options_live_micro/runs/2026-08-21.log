@@ -22,3 +22,17 @@ Live micro done. open_options=1 lots=0
 Live account equity $413.37 cash $310.80 #225458845 options_level=3
 Live micro: outside 9:28-16:05 ET
 Live micro done. open_options=1 lots=0
+=== options_live_micro LIVE 2026-08-21T09:39:59.985488-04:00 share=50% ===
+Live account equity $411.40 cash $248.82 #225458845 options_level=3
+Live micro sleeve $206 (50% of $411) deployed $0 open_strategies=0/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 4
+  try S218 56%win/+49%med COST
+  skip S218 COST: no contract under $75
+  try S218 56%win/+49%med SYK
+  skip S218 SYK: no contract under $75
+  try S210 55%win/+47%med AMD
+  skip S210 AMD: no contract under $75
+  try S210 55%win/+47%med COIN
+  skip S210 COIN: no contract under $75
+Live micro done. open_options=1 lots=0

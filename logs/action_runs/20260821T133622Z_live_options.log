@@ -1,0 +1,28 @@
+=== options_live_micro LIVE 2026-08-21T09:39:59.985488-04:00 share=50% ===
+2026-08-21 09:39:59,985 INFO === options_live_micro LIVE 2026-08-21T09:39:59.985488-04:00 share=50% ===
+Live account equity $411.40 cash $248.82 #225458845 options_level=3
+2026-08-21 09:40:00,113 INFO Live account equity $411.40 cash $248.82 #225458845 options_level=3
+Live micro sleeve $206 (50% of $411) deployed $0 open_strategies=0/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
+2026-08-21 09:40:00,285 INFO Live micro sleeve $206 (50% of $411) deployed $0 open_strategies=0/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+2026-08-21 09:40:00,285 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 4
+2026-08-21 09:40:15,615 INFO Live micro signals: 4
+  try S218 56%win/+49%med COST
+2026-08-21 09:40:15,616 INFO   try S218 56%win/+49%med COST
+  skip S218 COST: no contract under $75
+2026-08-21 09:40:15,921 INFO   skip S218 COST: no contract under $75
+  try S218 56%win/+49%med SYK
+2026-08-21 09:40:15,921 INFO   try S218 56%win/+49%med SYK
+  skip S218 SYK: no contract under $75
+2026-08-21 09:40:16,075 INFO   skip S218 SYK: no contract under $75
+  try S210 55%win/+47%med AMD
+2026-08-21 09:40:16,075 INFO   try S210 55%win/+47%med AMD
+  skip S210 AMD: no contract under $75
+2026-08-21 09:40:16,270 INFO   skip S210 AMD: no contract under $75
+  try S210 55%win/+47%med COIN
+2026-08-21 09:40:16,271 INFO   try S210 55%win/+47%med COIN
+  skip S210 COIN: no contract under $75
+2026-08-21 09:40:16,451 INFO   skip S210 COIN: no contract under $75
+Live micro done. open_options=1 lots=0
+2026-08-21 09:40:16,632 INFO Live micro done. open_options=1 lots=0

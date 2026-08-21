@@ -642,3 +642,137 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260821T133622Z
+
+- UTC timestamp: `20260821T133622Z`
+- GitHub run: [#7739](https://github.com/28twagg-ops/TradingBot/actions/runs/32487600554)
+- Run id: `32487600554`
+- Live bot: exit=`0`, duration=`217s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260821T133622Z_live_bot.log`, `logs/action_runs/20260821T133622Z_live_options.log`, `logs/action_runs/20260821T133622Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+13:36:24  INFO      Mode: morning_prep
+13:36:24  INFO        [prep_positions] 3/3 (3 valid)
+13:36:24  INFO      Fetching tickers (universe=both)...
+13:36:24  INFO        S&P 500: 503
+13:36:25  INFO        MidCap 400: 400
+13:36:25  INFO        Total: 903 tickers
+13:36:26  INFO        [prep_universe] 40/900 (40 valid)
+13:36:29  INFO        [prep_universe] 80/900 (80 valid)
+13:36:31  INFO        [prep_universe] 120/900 (120 valid)
+13:36:33  INFO        [prep_universe] 160/900 (160 valid)
+13:36:36  INFO        [prep_universe] 200/900 (199 valid)
+13:36:41  INFO        [prep_universe] 240/900 (238 valid)
+13:36:52  INFO        [prep_universe] 280/900 (278 valid)
+13:37:03  INFO        [prep_universe] 320/900 (318 valid)
+13:37:16  INFO        [prep_universe] 360/900 (358 valid)
+13:37:27  INFO        [prep_universe] 400/900 (397 valid)
+13:37:38  INFO        [prep_universe] 440/900 (437 valid)
+13:37:51  INFO        [prep_universe] 480/900 (477 valid)
+13:38:02  INFO        [prep_universe] 520/900 (517 valid)
+13:38:16  INFO        [prep_universe] 560/900 (557 valid)
+13:38:26  INFO        [prep_universe] 600/900 (597 valid)
+13:38:40  INFO        [prep_universe] 640/900 (637 valid)
+13:38:51  INFO        [prep_universe] 680/900 (677 valid)
+13:39:04  INFO        [prep_universe] 720/900 (717 valid)
+13:39:14  INFO        [prep_universe] 760/900 (757 valid)
+13:39:27  INFO        [prep_universe] 800/900 (797 valid)
+13:39:39  INFO        [prep_universe] 840/900 (836 valid)
+13:39:50  INFO        [prep_universe] 880/900 (876 valid)
+13:39:57  INFO        [prep_universe] 900/900 (896 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         13:36 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $410.96|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       3|
+|  Invested                                                       $162.14|
+|  Open P&L                                                        $+0.11|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AES      Pullback50      $61.95     $14.76   $14.76   -0.0%   $-0.02  |
+|  AON      Pullback50      $70.10     $350.82  $351.51  +0.2%   $+0.14  |
+|  MNST     MomReversal     $30.09     $47.41   $47.39   -0.0%   $-0.01  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                0|
+|                                                                        |
+|  No open sell orders.                                                  |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      2|
+|  Signal candidates                                                   27|
+|  Universe scanned                                                   900|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-21T09:39:59.985488-04:00 share=50% ===
+2026-08-21 09:39:59,985 INFO === options_live_micro LIVE 2026-08-21T09:39:59.985488-04:00 share=50% ===
+Live account equity $411.40 cash $248.82 #225458845 options_level=3
+2026-08-21 09:40:00,113 INFO Live account equity $411.40 cash $248.82 #225458845 options_level=3
+Live micro sleeve $206 (50% of $411) deployed $0 open_strategies=0/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
+2026-08-21 09:40:00,285 INFO Live micro sleeve $206 (50% of $411) deployed $0 open_strategies=0/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+2026-08-21 09:40:00,285 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 4
+2026-08-21 09:40:15,615 INFO Live micro signals: 4
+  try S218 56%win/+49%med COST
+2026-08-21 09:40:15,616 INFO   try S218 56%win/+49%med COST
+  skip S218 COST: no contract under $75
+2026-08-21 09:40:15,921 INFO   skip S218 COST: no contract under $75
+  try S218 56%win/+49%med SYK
+2026-08-21 09:40:15,921 INFO   try S218 56%win/+49%med SYK
+  skip S218 SYK: no contract under $75
+2026-08-21 09:40:16,075 INFO   skip S218 SYK: no contract under $75
+  try S210 55%win/+47%med AMD
+2026-08-21 09:40:16,075 INFO   try S210 55%win/+47%med AMD
+  skip S210 AMD: no contract under $75
+2026-08-21 09:40:16,270 INFO   skip S210 AMD: no contract under $75
+  try S210 55%win/+47%med COIN
+2026-08-21 09:40:16,271 INFO   try S210 55%win/+47%med COIN
+  skip S210 COIN: no contract under $75
+2026-08-21 09:40:16,451 INFO   skip S210 COIN: no contract under $75
+Live micro done. open_options=1 lots=0
+2026-08-21 09:40:16,632 INFO Live micro done. open_options=1 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
