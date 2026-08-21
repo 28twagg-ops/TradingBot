@@ -511,3 +511,19 @@ Live micro cancel-scan COST260828C01000000: no non-OLS sell to cancel
 LIVE PROT check COST260828C01000000: have_ols=True open_matched=1 ols_id=ab9b8a23-2f03-4a3a-b25a-799118f49712 ols_type=stop
 Live micro: manage/exits only
 Live micro done. open_options=2 lots=1
+=== options_live_micro LIVE 2026-08-21T13:16:00.189267-04:00 share=25% ===
+Live account equity $317.12 cash $201.38 #225458845 options_level=3
+Live micro cancel-scan WMT260821C00110000: symbol-scoped n=1
+Live micro cancel stale sell WMT260821C00110000 id=f16f44d2-1eda-48c7-b211-978e99629c33 cid=OLX|b29fcd84de36 broker_sym='WMT260821C00110000'
+Live micro orphan_adopt WMT260821C00110000 x1 entry=0.09
+Live micro hold ORPHAN COST260828C01000000 -28.6% (tp +50% / sl -40%)
+Live micro cancel-scan WMT260821C00110000: symbol-scoped empty; open_book n=1
+  open_order id=ab9b8a23-2f03-4a3a-b25a-799118f49712 sym='COST260828C01000000' side=OrderSide.SELL status=OrderStatus.NEW cid='OLS|1f926a83750f' type=OrderType.STOP
+Live micro cancel-scan WMT260821C00110000: matched n=0
+Live micro cancel-scan WMT260821C00110000: no non-OLS sell to cancel
+LIVE EXIT stop_loss (-100.0%) WMT260821C00110000 x1 limit=0.01 id=46bd0091-3272-4c4d-9423-444ff6f3f236
+Live micro cancel-scan COST260828C01000000: symbol-scoped n=1
+Live micro cancel-scan COST260828C01000000: no non-OLS sell to cancel
+LIVE PROT check COST260828C01000000: have_ols=True open_matched=1 ols_id=ab9b8a23-2f03-4a3a-b25a-799118f49712 ols_type=stop
+Live micro: manage/exits only
+Live micro done. open_options=2 lots=1
