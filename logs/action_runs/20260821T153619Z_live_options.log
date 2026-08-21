@@ -1,0 +1,18 @@
+=== options_live_micro LIVE 2026-08-21T11:36:22.069672-04:00 share=25% ===
+2026-08-21 11:36:22,069 INFO === options_live_micro LIVE 2026-08-21T11:36:22.069672-04:00 share=25% ===
+Live account equity $318.12 cash $201.38 #225458845 options_level=3
+2026-08-21 11:36:22,264 INFO Live account equity $318.12 cash $201.38 #225458845 options_level=3
+Live micro cancel stale sell WMT260821C00110000 id=3aaa3d92-527f-4510-b9b4-b647aa5a176b cid=OLX|9928b2eb7548
+2026-08-21 11:36:22,443 INFO Live micro cancel stale sell WMT260821C00110000 id=3aaa3d92-527f-4510-b9b4-b647aa5a176b cid=OLX|9928b2eb7548
+Live micro orphan_adopt WMT260821C00110000 x1 entry=0.09
+2026-08-21 11:36:22,443 INFO Live micro orphan_adopt WMT260821C00110000 x1 entry=0.09
+Live micro hold ORPHAN COST260828C01000000 -27.0% (tp +50% / sl -40%)
+2026-08-21 11:36:22,503 INFO Live micro hold ORPHAN COST260828C01000000 -27.0% (tp +50% / sl -40%)
+Live micro cancel stale sell WMT260821C00110000 id=3aaa3d92-527f-4510-b9b4-b647aa5a176b cid=OLX|9928b2eb7548
+2026-08-21 11:36:22,676 INFO Live micro cancel stale sell WMT260821C00110000 id=3aaa3d92-527f-4510-b9b4-b647aa5a176b cid=OLX|9928b2eb7548
+LIVE EXIT stop_loss (-100.0%) WMT260821C00110000 x1 limit=0.01 id=ee49b930-f7d9-4c6c-9652-b9f241ba72eb
+2026-08-21 11:36:23,313 INFO LIVE EXIT stop_loss (-100.0%) WMT260821C00110000 x1 limit=0.01 id=ee49b930-f7d9-4c6c-9652-b9f241ba72eb
+Live micro: manage/exits only
+2026-08-21 11:36:23,486 INFO Live micro: manage/exits only
+Live micro done. open_options=2 lots=1
+2026-08-21 11:36:23,545 INFO Live micro done. open_options=2 lots=1
