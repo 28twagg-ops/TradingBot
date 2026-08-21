@@ -1,0 +1,24 @@
+=== options_live_micro LIVE 2026-08-21T11:00:15.796380-04:00 share=50% ===
+2026-08-21 11:00:15,796 INFO === options_live_micro LIVE 2026-08-21T11:00:15.796380-04:00 share=50% ===
+Live account equity $327.61 cash $129.42 #225458845 options_level=3
+2026-08-21 11:00:15,886 INFO Live account equity $327.61 cash $129.42 #225458845 options_level=3
+Live micro sleeve $164 (50% of $328) deployed $69 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
+2026-08-21 11:00:15,991 INFO Live micro sleeve $164 (50% of $328) deployed $69 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+2026-08-21 11:00:15,991 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 4
+2026-08-21 11:00:17,669 INFO Live micro signals: 4
+  try S218 56%win/+49%med COST
+2026-08-21 11:00:17,669 INFO   try S218 56%win/+49%med COST
+LIVE BUY failed S218 COST: {"buy_limit_price":"0.63","code":40310000,"existing_order_id":"622ffbfc-8e23-41cb-900c-8ad08e486bd6","message":"potential wash trade detected. use complex orders","reject_reason":"sell order exists, buy limit price should be less than existing sell limit price","sell_limit_price":"0.35"}
+2026-08-21 11:00:18,604 INFO LIVE BUY failed S218 COST: {"buy_limit_price":"0.63","code":40310000,"existing_order_id":"622ffbfc-8e23-41cb-900c-8ad08e486bd6","message":"potential wash trade detected. use complex orders","reject_reason":"sell order exists, buy limit price should be less than existing sell limit price","sell_limit_price":"0.35"}
+  try S218 56%win/+49%med SYK
+2026-08-21 11:00:18,604 INFO   try S218 56%win/+49%med SYK
+  skip S218 SYK: no contract under $75
+2026-08-21 11:00:19,168 INFO   skip S218 SYK: no contract under $75
+  skip S210 AMD: strategy already open (paper bucket rule)
+2026-08-21 11:00:19,168 INFO   skip S210 AMD: strategy already open (paper bucket rule)
+  skip S210 COIN: strategy already open (paper bucket rule)
+2026-08-21 11:00:19,168 INFO   skip S210 COIN: strategy already open (paper bucket rule)
+Live micro done. open_options=3 lots=0
+2026-08-21 11:00:19,219 INFO Live micro done. open_options=3 lots=0
