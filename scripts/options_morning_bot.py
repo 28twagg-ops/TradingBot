@@ -53,6 +53,7 @@ from options_lab import (
     build_bucket_leaderboard, build_reflected_leaderboard,
     cancel_dropped_strategy_entries, cancel_unfilled_lab_entries,
     DROPPED_STRATEGIES, ALLOWED_STRATEGIES, MIRROR_LIVE, TOP_BUCKET_PCT,
+    LIVE_1TO1_BUCKET_ID, LIVE_1TO1_PROFILE_NAME, get_live_1to1_bucket,
     entry_limit_price, exit_limit_price,
     exit_reason_for_lot, has_open_lab_entry, load_state,
     lock_entry_slot, make_entry_client_order_id,
@@ -84,6 +85,26 @@ REAL_ACCOUNT_OPTIONS_CAP = 0.90   # never deploy >90% of real equity in options
 MAX_NEW_ENTRIES_PER_RUN = 100     # signals x buckets (grid mode)
 BAR_CHUNK_SIZE      = 80
 SCAN_LOOKBACK_DAYS  = 260  # need ~200+ bars for MA200 pattern scanners (S170/S172)
+
+# Match live micro lottery filter when OPTIONS_MIRROR_LIVE=1.
+MIRROR_MIN_ENTRY_COST = float(os.getenv("LIVE_OPTIONS_MIN_COST", "20"))
+
+# Same family / CLEAN rank as options_live_micro (mirror 1:1 dedupe).
+SIGNAL_FAMILY = {
+    "S404": "gapdown", "S397": "gapdown", "S350": "gapdown",
+    "S398": "gapdown", "S165": "gapdown",
+    "S406": "rubberband", "S174": "rubberband",
+    "S218": "bb",
+    "S210": "ma",
+}
+CLEAN_RANK = {
+    "S404": (100.0, 80.1),
+    "S397": (100.0, 71.8),
+    "S406": (56.2, 58.3),
+    "S218": (55.6, 48.9),
+    "S210": (55.0, 46.6),
+    "S350": (53.8, 53.3),
+}
 
 # Time windows (ET)
 ENTRY_START = (9, 28)
@@ -574,42 +595,69 @@ def cancel_stale_option_orders(trade) -> int:
     return n
 
 
-def _has_protective_stop(trade, occ: str, lot_id: str | None = None) -> bool:
-    """True if a resting LS… stop already covers this OCC (optionally lot)."""
+def _order_type_value(o) -> str:
+    t = getattr(o, "type", None) or getattr(o, "order_type", None) or ""
+    if t == OrderType.STOP:
+        return "stop"
+    if t == OrderType.STOP_LIMIT:
+        return "stop_limit"
+    if hasattr(t, "value"):
+        return str(t.value).lower()
+    return str(t).lower().split(".")[-1]
+
+
+def _is_stop_market_order(o) -> bool:
+    t = getattr(o, "type", None) or getattr(o, "order_type", None)
+    if t == OrderType.STOP:
+        return True
+    if t == OrderType.STOP_LIMIT:
+        return False
+    return _order_type_value(o) == "stop"
+
+
+def _list_protective_stops(trade, occ: str) -> list:
+    """Open LS-tagged sell stops for OCC."""
+    out = []
     try:
         req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[occ], limit=50)
-        for o in trade.get_orders(req) or []:
-            cid = getattr(o, "client_order_id", "") or ""
-            if not is_protective_stop_client_order_id(cid):
-                continue
-            if getattr(o, "side", None) != OrderSide.SELL and str(
-                    getattr(o, "side", "")).lower() != "sell":
-                continue
-            otype = getattr(o, "order_type", None) or getattr(o, "type", None)
-            otype_s = str(otype).lower() if otype is not None else ""
-            if "stop" not in otype_s and otype not in (OrderType.STOP, OrderType.STOP_LIMIT):
-                # Still treat LS-tagged sells as protective
-                pass
-            if lot_id:
-                short = lot_id.replace("-", "")[:6]
-                if short and short not in cid.replace("-", ""):
-                    continue
-            return True
+        orders = list(trade.get_orders(req) or [])
     except Exception:
-        return False
+        orders = []
+    for o in orders:
+        cid = getattr(o, "client_order_id", "") or ""
+        if not is_protective_stop_client_order_id(cid):
+            continue
+        if getattr(o, "side", None) != OrderSide.SELL and str(
+                getattr(o, "side", "")).lower() != "sell":
+            continue
+        out.append(o)
+    return out
+
+
+def _has_protective_stop(trade, occ: str, lot_id: str | None = None) -> bool:
+    """True if a resting LS… stop already covers this OCC (optionally lot)."""
+    for o in _list_protective_stops(trade, occ):
+        cid = getattr(o, "client_order_id", "") or ""
+        if lot_id:
+            short = lot_id.replace("-", "")[:6]
+            if short and short not in cid.replace("-", ""):
+                continue
+        return True
     return False
 
 
 def ensure_protective_stops(trade, state: LabState) -> int:
-    """Place resting broker stop-limits at each lot's stop_loss so exits still
-    fire if GitHub Actions / this bot is down.
+    """Place resting broker stops at each lot's stop_loss so exits still fire
+    if GitHub Actions / this bot is down.
 
-    Uses StopLimit (preferred) then Stop-Market fallback. Prefers GTC, falls
+    Mirror (live 1:1): stop-market first, upgrade legacy stop-limits.
+    Otherwise: stop-limit preferred, then stop-market. Prefers GTC, falls
     back to DAY if the broker rejects GTC for that contract.
     """
     placed = 0
     skipped = 0
     failed = 0
+    upgraded = 0
     # One stop per OCC (aggregate qty) — Alpaca rejects overselling the position.
     by_occ: dict[str, list] = {}
     for lot in state.lots:
@@ -618,14 +666,48 @@ def ensure_protective_stops(trade, state: LabState) -> int:
         by_occ.setdefault(lot.occ_symbol, []).append(lot)
 
     open_exit_sells = open_option_sell_symbols(trade, include_protective_stops=False)
+    market_first = bool(MIRROR_LIVE)
 
     for occ, lots in by_occ.items():
         if occ in open_exit_sells:
             skipped += 1
             continue
-        if _has_protective_stop(trade, occ):
+
+        existing = _list_protective_stops(trade, occ)
+        stop_mkts = [o for o in existing if _is_stop_market_order(o)]
+        stop_lims = [o for o in existing if not _is_stop_market_order(o)]
+
+        if market_first and stop_mkts:
+            for o in stop_lims:
+                try:
+                    trade.cancel_order_by_id(o.id)
+                    rl_file(f"  PROT drop stop-limit after stop-mkt {occ} id={o.id}")
+                except Exception as exc:
+                    rl_file(f"  PROT cancel failed {occ} id={getattr(o, 'id', '?')}: {exc}")
             skipped += 1
             continue
+
+        if market_first and stop_lims and not stop_mkts:
+            cancel_ok = True
+            for o in stop_lims:
+                try:
+                    trade.cancel_order_by_id(o.id)
+                    rl_file(
+                        f"  PROT upgrade {occ}: cancel stop-limit "
+                        f"id={o.id} type={_order_type_value(o)}"
+                    )
+                except Exception as exc:
+                    cancel_ok = False
+                    rl_file(f"  PROT upgrade cancel failed {occ}: {exc}")
+            if not cancel_ok:
+                skipped += 1
+                continue
+            upgraded += 1
+            # fall through to place stop-market
+        elif existing:
+            skipped += 1
+            continue
+
         # Use the tightest (most protective) stop among lots sharing OCC
         primary = min(lots, key=lambda l: float(l.stop_loss))
         qty = sum(int(l.qty) for l in lots)
@@ -634,72 +716,100 @@ def ensure_protective_stops(trade, state: LabState) -> int:
         entry = float(primary.entry_price)
         sl = float(primary.stop_loss)
         if sl >= 0:
-            # No downside stop configured
             skipped += 1
             continue
         stop_px = round(max(0.01, entry * (1.0 + sl)), 2)
-        # Limit slightly below stop so a gap-down still has a chance to fill
         limit_px = round(max(0.01, stop_px * 0.92), 2)
 
         order_id = None
         last_err = None
         for tif in (TimeInForce.GTC, TimeInForce.DAY):
-            # Fresh client_order_id every attempt — Alpaca rejects reused CIDs.
             cid_limit = make_protective_stop_client_order_id(
                 primary.bucket_id, primary.strategy_id, primary.lot_id)
             cid_mkt = make_protective_stop_client_order_id(
                 primary.bucket_id, primary.strategy_id, primary.lot_id)
-            try:
-                o = trade.submit_order(StopLimitOrderRequest(
-                    symbol=occ,
-                    qty=qty,
-                    side=OrderSide.SELL,
-                    time_in_force=tif,
-                    stop_price=stop_px,
-                    limit_price=limit_px,
-                    client_order_id=cid_limit[:48],
-                ))
-                order_id = str(o.id)
-                rl_file(
-                    f"  PROT STOP-LIMIT {occ} x{qty} stop={stop_px:.2f} "
-                    f"lim={limit_px:.2f} tif={tif.value} "
-                    f"sl={sl:+.0%} entry={entry:.2f} id={o.id}"
-                )
-                break
-            except Exception as exc:
-                last_err = exc
+
+            attempts = []
+            if market_first:
+                attempts = [("mkt", cid_mkt), ("limit", cid_limit)]
+            else:
+                attempts = [("limit", cid_limit), ("mkt", cid_mkt)]
+
+            for kind, cid in attempts:
                 try:
-                    o = trade.submit_order(StopOrderRequest(
-                        symbol=occ,
-                        qty=qty,
-                        side=OrderSide.SELL,
-                        time_in_force=tif,
-                        stop_price=stop_px,
-                        client_order_id=cid_mkt[:48],
-                    ))
-                    order_id = str(o.id)
-                    rl_file(
-                        f"  PROT STOP-MKT {occ} x{qty} stop={stop_px:.2f} "
-                        f"tif={tif.value} sl={sl:+.0%} id={o.id}"
-                    )
+                    if kind == "mkt":
+                        o = trade.submit_order(StopOrderRequest(
+                            symbol=occ,
+                            qty=qty,
+                            side=OrderSide.SELL,
+                            time_in_force=tif,
+                            stop_price=stop_px,
+                            client_order_id=cid[:48],
+                        ))
+                        order_id = str(o.id)
+                        rl_file(
+                            f"  PROT STOP-MKT {occ} x{qty} stop={stop_px:.2f} "
+                            f"tif={tif.value} sl={sl:+.0%} id={o.id}"
+                        )
+                    else:
+                        o = trade.submit_order(StopLimitOrderRequest(
+                            symbol=occ,
+                            qty=qty,
+                            side=OrderSide.SELL,
+                            time_in_force=tif,
+                            stop_price=stop_px,
+                            limit_price=limit_px,
+                            client_order_id=cid[:48],
+                        ))
+                        order_id = str(o.id)
+                        rl_file(
+                            f"  PROT STOP-LIMIT {occ} x{qty} stop={stop_px:.2f} "
+                            f"lim={limit_px:.2f} tif={tif.value} "
+                            f"sl={sl:+.0%} entry={entry:.2f} id={o.id}"
+                        )
                     break
-                except Exception as exc2:
-                    last_err = exc2
+                except Exception as exc:
+                    last_err = exc
                     continue
+            if order_id:
+                break
         if order_id:
             placed += 1
         else:
             failed += 1
             rl_file(f"  PROT STOP failed {occ}: {last_err}")
 
-    if placed or failed:
-        rl(f"Protective stops: placed={placed} already={skipped} failed={failed}")
+    if placed or failed or upgraded:
+        rl(
+            f"Protective stops: placed={placed} upgraded={upgraded} "
+            f"already={skipped} failed={failed}"
+            + (" (market-first)" if market_first else "")
+        )
     return placed
 
 
 # --------------------------------------------------------------------------- #
 #  Signal scan (top 5 strategies)
 # --------------------------------------------------------------------------- #
+
+def _win_key(strategy_id: str) -> tuple:
+    wr, med = CLEAN_RANK.get(strategy_id, (0.0, 0.0))
+    return (-wr, -med, strategy_id)
+
+
+def _dedupe_mirror_hits(hits: list) -> list:
+    """One hit per (signal family, symbol) — same concurrency model as live micro."""
+    best: dict = {}
+    for h in hits:
+        fam = SIGNAL_FAMILY.get(h.strategy_id, h.strategy_id)
+        key = (fam, h.symbol)
+        prev = best.get(key)
+        if prev is None or _win_key(h.strategy_id) < _win_key(prev.strategy_id):
+            best[key] = h
+    out = list(best.values())
+    out.sort(key=lambda h: (_win_key(h.strategy_id), h.symbol))
+    return out
+
 
 def _active_paper_strategies() -> list:
     """PAPER_STRATEGIES filtered by allow/drop lists (live-control study)."""
@@ -773,7 +883,10 @@ def scan_all_signals(stock, universe: list[str]) -> list[SignalHit]:
                 out.append(hits[0])
         except Exception:
             continue
-    out.sort(key=lambda h: priority.get(h.strategy_id, 99))
+    if MIRROR_LIVE:
+        out = _dedupe_mirror_hits(out)
+    else:
+        out.sort(key=lambda h: priority.get(h.strategy_id, 99))
     return out
 
 
@@ -1436,6 +1549,13 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
                 rl_file(f"  [b{arm.bucket_id}|{arm.profile_name}] {hit.strategy_id} "
                         f"{hit.symbol} (tier: {tier}): no tradeable {opt_type}")
                 continue
+            if MIRROR_LIVE and cand["cost"] < MIRROR_MIN_ENTRY_COST - 0.01:
+                rl_file(
+                    f"  [b{arm.bucket_id}|{arm.profile_name}] skip {hit.strategy_id} "
+                    f"{hit.symbol}: cost ${cand['cost']:.0f} "
+                    f"< min ${MIRROR_MIN_ENTRY_COST:.0f} (lottery ticket filter)"
+                )
+                continue
             if real_open + cand["cost"] > real_cap:
                 skip_cap += 1
                 rl_file(f"  [b{arm.bucket_id}] real account cap (${real_cap:.0f}) — skip")
@@ -1774,10 +1894,13 @@ def run() -> int:
     section("Setup")
     active = _active_paper_strategies()
     if MIRROR_LIVE:
+        twin = get_live_1to1_bucket()
+        bid = twin.bucket_id if twin else LIVE_1TO1_BUCKET_ID
+        bname = twin.name if twin else LIVE_1TO1_PROFILE_NAME
         rl(
-            f"LIVE MIRROR control study — strategies: "
+            f"LIVE 1:1 bucket b{bid} {bname} — "
             f"{', '.join(s.id for s in active)} | "
-            f"baseline arm only (same TP/SL as live micro)"
+            f"TP+50%/SL-40% | stop-mkt | min ${MIRROR_MIN_ENTRY_COST:.0f}"
         )
     else:
         n_active = active_bucket_count(equity or 0)

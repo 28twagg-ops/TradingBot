@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      # Paper options: LIVE MIRROR control on new ~$1M paper account.
+      # Paper options: live_1to1 (b90) twin of live micro on ~$1M paper account.
       # Same 4 strategies + baseline TP/SL as live micro. Set to "0" to disable.
       OPTIONS_PAPER_ENABLED: "1"
 
@@ -141,7 +141,7 @@ jobs:
           echo "Live options micro duration: ${dur}s"
           exit 0
 
-      # Paper options: live-control study — same 4 strategies + baseline TP/SL as live.
+      # Paper options: live 1:1 control — same strategies + arm as live micro (b90 live_1to1).
       - name: Run options paper bot (PAPER, 9:28-16:05 ET weekdays)
         if: env.OPTIONS_PAPER_ENABLED == '1'
         continue-on-error: true
@@ -149,9 +149,10 @@ jobs:
           ALPACA_PAPER_KEY: ${{ secrets.ALPACA_PAPER_KEY }}
           ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
           OPTIONS_PAPER_UNLIMITED: "1"
-          # Mirror live micro (not the 1024-bucket lab) as a paper control.
+          # Dedicated live_1to1 bucket (1:1 with options_live_micro).
           OPTIONS_MIRROR_LIVE: "1"
-          OPTIONS_ALLOWED_STRATEGIES: "S404,S406,S218,S210"
+          OPTIONS_ALLOWED_STRATEGIES: "S404,S406,S218"
+          LIVE_OPTIONS_MIN_COST: "20"
           OPTIONS_CONTROLLED_LAYOUT: "0"
           OPTIONS_TOP_BUCKET_PCT: "0"
           OPTIONS_DROPPED_STRATEGIES: ""

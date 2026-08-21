@@ -69,10 +69,13 @@ ALLOWED_STRATEGIES: frozenset[str] = frozenset(
     s.strip() for s in os.environ.get("OPTIONS_ALLOWED_STRATEGIES", "").split(",")
     if s.strip()
 )
-# Mirror live micro: one baseline arm per allowed strategy (TP/SL from bucket 0).
+# Mirror live micro: dedicated live_1to1 arm per allowed strategy (not baseline b0).
 MIRROR_LIVE = os.environ.get("OPTIONS_MIRROR_LIVE", "0").strip().lower() in (
     "1", "true", "yes", "on",
 )
+# Stable bucket id inside the 100-profile grid — 1:1 twin of options_live_micro.
+LIVE_1TO1_BUCKET_ID = 90
+LIVE_1TO1_PROFILE_NAME = "live_1to1"
 ORDER_FETCH_LIMIT = 500
 
 
@@ -140,6 +143,46 @@ class BucketProfile:
     dte_max: int = 7
 
 
+def live_1to1_profile() -> BucketProfile:
+    """1:1 twin of options_live_micro (paper baseline arm + live allow-list)."""
+    return BucketProfile(
+        LIVE_1TO1_BUCKET_ID,
+        LIVE_1TO1_PROFILE_NAME,
+        buy_limit_offset=-0.01,
+        sell_limit_offset=-0.01,
+        max_premium=75,
+        max_spread_frac=0.25,
+        min_open_interest=100,
+        account_cap=0.95,
+        max_contracts=1,
+        take_profit=0.50,
+        stop_loss=-0.40,
+    )
+
+
+def _inject_live_1to1(profiles: list[BucketProfile]) -> list[BucketProfile]:
+    """Replace grid slot 90 with the dedicated live twin (stable bucket id)."""
+    twin = live_1to1_profile()
+    out = list(profiles)
+    for i, p in enumerate(out):
+        if p.bucket_id == LIVE_1TO1_BUCKET_ID:
+            out[i] = twin
+            return out
+    out.append(twin)
+    out.sort(key=lambda p: p.bucket_id)
+    return out
+
+
+def get_live_1to1_bucket() -> BucketProfile | None:
+    return next(
+        (
+            b for b in BUCKET_EXPERIMENTS
+            if b.bucket_id == LIVE_1TO1_BUCKET_ID or b.name == LIVE_1TO1_PROFILE_NAME
+        ),
+        None,
+    )
+
+
 # Experiment grid — generated up to TARGET_BUCKET_PROFILES variants.
 def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
     n = target if target is not None else TARGET_BUCKET_PROFILES
@@ -157,7 +200,7 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
             if len(profiles) >= n:
                 break
             profiles.append(BucketProfile(**d))
-        return profiles
+        return _inject_live_1to1(profiles)
 
     core = [
         BucketProfile(0, "baseline",
@@ -194,7 +237,7 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
                       take_profit=0.40, stop_loss=-0.35),
     ]
     if n <= len(core):
-        return core[:n]
+        return _inject_live_1to1(core[:n])
 
     buy_offs = [-0.10, -0.08, -0.05, -0.03, -0.02, -0.01, 0.0]
     sell_offs = [-0.05, -0.03, -0.02, -0.01, 0.0]
@@ -233,7 +276,7 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
                 stop_loss=sl,
                 eod_only=eod,
             ))
-    return profiles[:n]
+    return _inject_live_1to1(profiles[:n])
 
 
 BUCKET_EXPERIMENTS: list[BucketProfile] = _build_bucket_experiments()
@@ -241,6 +284,8 @@ BUCKET_EXPERIMENTS: list[BucketProfile] = _build_bucket_experiments()
 
 def experiment_layout_id() -> str:
     mode = "controlled" if CONTROLLED_LAYOUT else "grid"
+    if MIRROR_LIVE:
+        return f"{mode}:{len(BUCKET_EXPERIMENTS)}:{LIVE_1TO1_PROFILE_NAME}"
     head = BUCKET_EXPERIMENTS[0].name if BUCKET_EXPERIMENTS else "none"
     return f"{mode}:{len(BUCKET_EXPERIMENTS)}:{head}"
 
@@ -597,7 +642,7 @@ def ensure_trial_layout() -> None:
 
 def _merge_arm(bucket: BucketProfile, strategy_id: str,
                equity: float = VIRTUAL_BUCKET_USD) -> EffectiveArm:
-    tweaks = {} if CONTROLLED_LAYOUT else STRATEGY_TWEAKS.get(strategy_id, {})
+    tweaks = {} if (CONTROLLED_LAYOUT or MIRROR_LIVE) else STRATEGY_TWEAKS.get(strategy_id, {})
     vals = {f.name: getattr(bucket, f.name) for f in fields(BucketProfile)
             if f.name not in ("bucket_id", "name")}
     for k, v in tweaks.items():
@@ -672,15 +717,10 @@ def arms_for_signal(strategy_id: str, equity: float) -> list[EffectiveArm]:
         return []
     if ALLOWED_STRATEGIES and strategy_id not in ALLOWED_STRATEGIES:
         return []
-    # Live-control study: same mechanics as options_live_micro (baseline bucket 0).
+    # Live-control study: dedicated live_1to1 bucket (1:1 with options_live_micro).
     if MIRROR_LIVE:
-        baseline = next(
-            (b for b in BUCKET_EXPERIMENTS if b.name == "baseline"),
-            BUCKET_EXPERIMENTS[0] if BUCKET_EXPERIMENTS else None,
-        )
-        if baseline is None:
-            return []
-        return [_merge_arm(baseline, strategy_id, equity)]
+        twin = get_live_1to1_bucket() or live_1to1_profile()
+        return [_merge_arm(twin, strategy_id, equity)]
     return [
         _merge_arm(b, strategy_id, equity)
         for b in active_buckets(equity)
