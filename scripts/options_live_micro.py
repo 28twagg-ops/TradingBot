@@ -29,7 +29,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from alpaca.trading.client import TradingClient
-from alpaca.trading.enums import OrderSide, QueryOrderStatus, TimeInForce
+from alpaca.trading.enums import OrderSide, OrderType, QueryOrderStatus, TimeInForce
 from alpaca.trading.requests import (
     GetOrdersRequest,
     LimitOrderRequest,
@@ -608,6 +608,54 @@ def manage(trade, opt, state: dict, now: datetime) -> None:
     save_state(state)
 
 
+def _order_type_value(o) -> str:
+    t = getattr(o, "type", None) or getattr(o, "order_type", None) or ""
+    if t == OrderType.STOP:
+        return "stop"
+    if t == OrderType.STOP_LIMIT:
+        return "stop_limit"
+    if hasattr(t, "value"):
+        return str(t.value).lower()
+    return str(t).lower().split(".")[-1]
+
+
+def _is_stop_market_order(o) -> bool:
+    """True for stop (market) orders; False for stop_limit / other."""
+    t = getattr(o, "type", None) or getattr(o, "order_type", None)
+    if t == OrderType.STOP:
+        return True
+    if t == OrderType.STOP_LIMIT:
+        return False
+    return _order_type_value(o) == "stop"
+
+
+def _place_protective_stop(trade, occ: str, broker_sym: str, qty: int, stop_px: float) -> bool:
+    """Submit stop-market first; fall back to stop-limit. Returns True on success."""
+    lim = round(max(0.01, stop_px * 0.92), 2)
+    try:
+        o = trade.submit_order(StopOrderRequest(
+            symbol=broker_sym, qty=qty, side=OrderSide.SELL,
+            time_in_force=TimeInForce.DAY, stop_price=stop_px,
+            client_order_id=cid_stop(),
+        ))
+        rl(f"LIVE PROT STOP-MKT {occ} x{qty} stop={stop_px:.2f} id={o.id}")
+        return True
+    except Exception as exc:
+        rl(f"LIVE PROT STOP-MKT rejected {occ}: {exc}; trying stop-limit")
+        try:
+            o = trade.submit_order(StopLimitOrderRequest(
+                symbol=broker_sym, qty=qty, side=OrderSide.SELL,
+                time_in_force=TimeInForce.GTC,
+                stop_price=stop_px, limit_price=lim,
+                client_order_id=cid_stop(),
+            ))
+            rl(f"LIVE PROT STOP {occ} x{qty} stop={stop_px:.2f} lim={lim:.2f} id={o.id}")
+            return True
+        except Exception as exc2:
+            rl(f"LIVE PROT STOP failed {occ} (both market+limit): mkt={exc} lim={exc2}")
+            return False
+
+
 def ensure_stops(trade, state: dict) -> None:
     pos = {str(getattr(p, "symbol", "")): p for p in option_positions(trade)}
     for lot in active_lots(state):
@@ -623,25 +671,51 @@ def ensure_stops(trade, state: dict) -> None:
         if p is None:
             rl(f"LIVE PROT skip {occ}: not in broker positions")
             continue
-        have = False
-        ols_id = None
+        ols_orders: list = []
         try:
             open_for_occ = _list_open_orders(trade, str(occ))
             for o in open_for_occ:
                 cid = str(getattr(o, "client_order_id", "") or "")
                 if cid.startswith("OLS"):
-                    have = True
-                    ols_id = getattr(o, "id", None)
-                    break
+                    ols_orders.append(o)
+            ols_id = getattr(ols_orders[0], "id", None) if ols_orders else None
+            ols_types = ",".join(_order_type_value(o) or "?" for o in ols_orders) or "-"
             rl(
-                f"LIVE PROT check {occ}: have_ols={have} "
-                f"open_matched={len(open_for_occ)} ols_id={ols_id or '-'}"
+                f"LIVE PROT check {occ}: have_ols={bool(ols_orders)} "
+                f"open_matched={len(open_for_occ)} ols_id={ols_id or '-'} "
+                f"ols_type={ols_types}"
             )
         except Exception as exc:
             rl(f"LIVE PROT check failed {occ} (will still try place): {exc}")
-            have = False
-        if have:
+            ols_orders = []
+
+        stop_mkts = [o for o in ols_orders if _is_stop_market_order(o)]
+        stop_lims = [o for o in ols_orders if not _is_stop_market_order(o)]
+
+        # Already have stop-market protection — drop any leftover stop-limits.
+        if stop_mkts:
+            for o in stop_lims:
+                _cancel_order_id(
+                    trade, str(getattr(o, "id", "")),
+                    f"drop stop-limit after stop-mkt {occ}",
+                )
             continue
+
+        # Upgrade legacy OLS stop-limit → stop-market (gap fills).
+        if stop_lims:
+            canceled_ok = True
+            for o in stop_lims:
+                oid = str(getattr(o, "id", "") or "")
+                rl(
+                    f"LIVE PROT upgrade {occ}: cancel stop-limit "
+                    f"id={oid} type={_order_type_value(o)}"
+                )
+                if not _cancel_order_id(trade, oid, f"upgrade stop-limit {occ}"):
+                    canceled_ok = False
+            if not canceled_ok:
+                rl(f"LIVE PROT upgrade abort {occ}: keep existing stop-limit")
+                continue
+
         entry = float(lot.get("entry_price") or 0) or float(
             getattr(p, "avg_entry_price", 0) or 0
         )
@@ -650,30 +724,9 @@ def ensure_stops(trade, state: dict) -> None:
             rl(f"LIVE PROT skip {occ}: bad entry/sl entry={entry} sl={sl}")
             continue
         stop_px = round(max(0.01, entry * (1.0 + sl)), 2)
-        lim = round(max(0.01, stop_px * 0.92), 2)
         qty = int(lot["qty"])
-        # Prefer stop-market so gaps still exit (stop-limit often never fills).
-        try:
-            o = trade.submit_order(StopOrderRequest(
-                symbol=str(getattr(p, "symbol", None) or occ), qty=qty,
-                side=OrderSide.SELL,
-                time_in_force=TimeInForce.DAY, stop_price=stop_px,
-                client_order_id=cid_stop(),
-            ))
-            rl(f"LIVE PROT STOP-MKT {occ} x{qty} stop={stop_px:.2f} id={o.id}")
-        except Exception as exc:
-            rl(f"LIVE PROT STOP-MKT rejected {occ}: {exc}; trying stop-limit")
-            try:
-                o = trade.submit_order(StopLimitOrderRequest(
-                    symbol=str(getattr(p, "symbol", None) or occ), qty=qty,
-                    side=OrderSide.SELL,
-                    time_in_force=TimeInForce.GTC,
-                    stop_price=stop_px, limit_price=lim,
-                    client_order_id=cid_stop(),
-                ))
-                rl(f"LIVE PROT STOP {occ} x{qty} stop={stop_px:.2f} lim={lim:.2f} id={o.id}")
-            except Exception as exc2:
-                rl(f"LIVE PROT STOP failed {occ} (both market+limit): mkt={exc} lim={exc2}")
+        broker_sym = str(getattr(p, "symbol", None) or occ)
+        _place_protective_stop(trade, str(occ), broker_sym, qty, stop_px)
 
 
 def _dedupe_hits(hits: list) -> list:
