@@ -1,0 +1,18 @@
+=== options_live_micro LIVE 2026-08-21T16:31:12.173117-04:00 share=25% ===
+2026-08-21 16:31:12,173 INFO === options_live_micro LIVE 2026-08-21T16:31:12.173117-04:00 share=25% ===
+Live account equity $307.09 cash $236.27 #225458845 options_level=3
+2026-08-21 16:31:12,384 INFO Live account equity $307.09 cash $236.27 #225458845 options_level=3
+Live micro cancel-scan WMT260821C00110000: symbol-scoped empty; open_book n=2
+2026-08-21 16:31:12,677 INFO Live micro cancel-scan WMT260821C00110000: symbol-scoped empty; open_book n=2
+  open_order id=f949fbdb-453d-4c82-b144-2b542aa62b29 sym='AES' side=OrderSide.BUY status=OrderStatus.ACCEPTED cid='Pullback50|AES|2026-08-21|2fe42e' type=OrderType.MARKET
+2026-08-21 16:31:12,677 INFO   open_order id=f949fbdb-453d-4c82-b144-2b542aa62b29 sym='AES' side=OrderSide.BUY status=OrderStatus.ACCEPTED cid='Pullback50|AES|2026-08-21|2fe42e' type=OrderType.MARKET
+  open_order id=ae3ea832-f930-4a09-b9dd-c006699a16fd sym='DE' side=OrderSide.BUY status=OrderStatus.ACCEPTED cid='EarningsDrift|DE|2026-08-21|43029e' type=OrderType.MARKET
+2026-08-21 16:31:12,677 INFO   open_order id=ae3ea832-f930-4a09-b9dd-c006699a16fd sym='DE' side=OrderSide.BUY status=OrderStatus.ACCEPTED cid='EarningsDrift|DE|2026-08-21|43029e' type=OrderType.MARKET
+Live micro cancel-scan WMT260821C00110000: matched n=0
+2026-08-21 16:31:12,677 INFO Live micro cancel-scan WMT260821C00110000: matched n=0
+Live micro cancel-scan WMT260821C00110000: no non-OLS sell to cancel
+2026-08-21 16:31:12,677 INFO Live micro cancel-scan WMT260821C00110000: no non-OLS sell to cancel
+LIVE EXIT failed WMT260821C00110000: {"code":42210000,"message":"contract \"WMT260821C00110000\" is expired"}
+2026-08-21 16:31:13,260 INFO LIVE EXIT failed WMT260821C00110000: {"code":42210000,"message":"contract \"WMT260821C00110000\" is expired"}
+Live micro done. open_options=1 lots=1
+2026-08-21 16:31:13,318 INFO Live micro done. open_options=1 lots=1
