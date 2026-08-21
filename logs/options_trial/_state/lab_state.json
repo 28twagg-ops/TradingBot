@@ -1,32 +1,9 @@
 {
   "version": 5,
-  "lots": [
-    {
-      "lot_id": "30b73a373b67",
-      "bucket_id": 0,
-      "profile_name": "baseline",
-      "strategy_id": "S210",
-      "occ_symbol": "AMD260824C00500000",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 28.000000000000004,
-      "entry_price": 0.28,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-21T15:16:59.161656+00:00",
-      "entry_order_id": "eecf050a-aa02-4c95-ae14-dbcd4ec6a435"
-    }
-  ],
+  "lots": [],
   "pending_orders": [],
   "pending_exits": [],
-  "bucket_open_premium": {
-    "b0": 28.000000000000004
-  },
+  "bucket_open_premium": {},
   "session_date": "2026-08-21",
   "entries_locked": [
     "0|S210|2026-08-21"

@@ -2,3 +2,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-07-06T09:34:30.695185-04:00,entry,0,baseline,S173,06217961c7b9,PLTR,PLTR260710C00138000,1,0.91,,92.0,,,,-0.01,,0.6,-0.4,0.022,MR gap -1.6% green
 2026-07-06T10:03:38.403491-04:00,entry,0,baseline,S174,0ded1741d6ee,PYPL,PYPL260710C00044500,1,0.64,,65.0,,,,-0.01,,0.5,-0.5,0.047,RB gap -2.2% reclaim
 2026-08-21 15:16:58.376375+00:00,entry,0,baseline,S210,30b73a373b67,AMD,AMD260824C00500000,1,0.29,0.28,28.0,,,,-0.01,,0.75,-0.6000000000000001,0.10526315789473673,MA8 484.47 crossed above MA21,eecf050a-aa02-4c95-ae14-dbcd4ec6a435
+2026-08-21T19:39:35Z,reconcile,0,baseline,S210,30b73a373b67,AMD,AMD260824C00500000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

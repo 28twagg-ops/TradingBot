@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,baseline,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-08-21,False,,,,,,,0,AMD,S210,,entered_no_exit
+0,baseline,ask-0.01,bid-0.01,50.0,-40.0,1,0,0,2026-08-21,False,,,,,,,0,AMD,S210,,entered_no_exit
 1,patient_buy,ask-0.05,bid-0.01,45.0,-40.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,aggressive_buy,mid,bid-0.02,55.0,-45.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,tight_stops,ask-0.01,bid-0.01,30.0,-25.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
