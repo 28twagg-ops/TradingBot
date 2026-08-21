@@ -10,7 +10,7 @@
       "take_profit": 0.5,
       "stop_loss": -0.4,
       "order_id": "d46f8249-4f0d-4167-bd7b-a6b0747ab0ab",
-      "pending": true
+      "pending": false
     }
   ],
   "used_day": "2026-08-21",

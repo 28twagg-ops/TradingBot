@@ -49,3 +49,18 @@ LIVE BUY failed S218 COST: {"buy_limit_price":"0.61","code":40310000,"existing_o
 LIVE BUY S210 55%win AMD AMD260824C00497500 limit=0.62 ask=0.63 cost=$63 id=d46f8249-4f0d-4167-bd7b-a6b0747ab0ab
   skip S210 COIN: strategy already open (paper bucket rule)
 Live micro done. open_options=4 lots=1
+=== options_live_micro LIVE 2026-08-21T10:06:44.105633-04:00 share=50% ===
+Live account equity $355.34 cash $95.47 #225458845 options_level=3
+Live micro fill confirmed S210 AMD260824C00497500
+Live micro hold S210 AMD260824C00497500 -16.1% (tp +50% / sl -40%)
+LIVE PROT STOP AMD260824C00497500 x1 stop=0.37 id=75d65e1a-192d-4ee2-af7b-07262a798c38
+Live micro sleeve $178 (50% of $355) deployed $131 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 4
+  try S218 56%win/+49%med COST
+  skip S218 COST: cost $58 > $47
+  try S218 56%win/+49%med SYK
+  skip S218 SYK: no contract under $47
+  skip S210 AMD: strategy already open (paper bucket rule)
+  skip S210 COIN: strategy already open (paper bucket rule)
+Live micro done. open_options=4 lots=1
