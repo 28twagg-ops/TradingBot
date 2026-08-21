@@ -1,5 +1,18 @@
 {
-  "lots": [],
+  "lots": [
+    {
+      "lot_id": "48e77f976eee",
+      "strategy_id": "ORPHAN",
+      "occ": "COST260828C01000000",
+      "underlying": "COST",
+      "qty": 1,
+      "entry_price": 0.63,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "order_id": "orphan:COST260828C01000000",
+      "pending": false
+    }
+  ],
   "used_day": "2026-08-21",
   "used_strategies": [
     "S210"

@@ -1,0 +1,20 @@
+=== options_live_micro LIVE 2026-08-21T11:20:57.290054-04:00 share=25% ===
+2026-08-21 11:20:57,290 INFO === options_live_micro LIVE 2026-08-21T11:20:57.290054-04:00 share=25% ===
+Live account equity $322.21 cash $187.42 #225458845 options_level=3
+2026-08-21 11:20:57,481 INFO Live account equity $322.21 cash $187.42 #225458845 options_level=3
+Live micro orphan_adopt AMD260824C00502500 x1 entry=0.62
+2026-08-21 11:20:57,600 INFO Live micro orphan_adopt AMD260824C00502500 x1 entry=0.62
+Live micro orphan_adopt COST260828C01000000 x1 entry=0.63
+2026-08-21 11:20:57,658 INFO Live micro orphan_adopt COST260828C01000000 x1 entry=0.63
+Live micro orphan_adopt WMT260821C00110000 x1 entry=0.09
+2026-08-21 11:20:57,716 INFO Live micro orphan_adopt WMT260821C00110000 x1 entry=0.09
+LIVE EXIT stop_loss (-77.4%) AMD260824C00502500 x1 limit=0.11 id=d6ae2ebe-9f16-46f6-9f85-5571a76bf5a9
+2026-08-21 11:20:59,253 INFO LIVE EXIT stop_loss (-77.4%) AMD260824C00502500 x1 limit=0.11 id=d6ae2ebe-9f16-46f6-9f85-5571a76bf5a9
+Live micro hold ORPHAN COST260828C01000000 -20.6% (tp +50% / sl -40%)
+2026-08-21 11:20:59,253 INFO Live micro hold ORPHAN COST260828C01000000 -20.6% (tp +50% / sl -40%)
+LIVE EXIT stop_loss (-100.0%) WMT260821C00110000 x1 limit=0.01 id=fb05cfc6-9da8-4f7d-923c-21eb890bbe11
+2026-08-21 11:20:59,728 INFO LIVE EXIT stop_loss (-100.0%) WMT260821C00110000 x1 limit=0.01 id=fb05cfc6-9da8-4f7d-923c-21eb890bbe11
+Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+2026-08-21 11:20:59,847 INFO Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+Live micro done. open_options=2 lots=1
+2026-08-21 11:21:00,032 INFO Live micro done. open_options=2 lots=1
