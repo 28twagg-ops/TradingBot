@@ -1,0 +1,8 @@
+=== options_live_micro LIVE 2026-08-21T17:01:06.240924-04:00 share=25% ===
+2026-08-21 17:01:06,240 INFO === options_live_micro LIVE 2026-08-21T17:01:06.240924-04:00 share=25% ===
+Live account equity $307.09 cash $236.27 #225458845 options_level=3
+2026-08-21 17:01:06,335 INFO Live account equity $307.09 cash $236.27 #225458845 options_level=3
+Live micro skip orphan WMT260821C00110000: expired (await broker settlement)
+2026-08-21 17:01:06,361 INFO Live micro skip orphan WMT260821C00110000: expired (await broker settlement)
+Live micro done. open_options=1 lots=0
+2026-08-21 17:01:06,415 INFO Live micro done. open_options=1 lots=0
