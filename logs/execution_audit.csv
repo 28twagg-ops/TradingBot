@@ -771,3 +771,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-08-21 13:47:04,2026-08-21,SELL,MNST,MomReversal,47.61,47.59,47.596,30.22,-0.0294,-0.0089,limit_fill_position_check_full,max_hold 3d (+0.4%),bull
 2026-08-21 13:56:48,2026-08-21,SELL,AES,Pullback50,14.77,14.76,14.765,58.36,-0.0339,-0.0198,limit_fill_position_check_full,midline (+0.0%),bull
 2026-08-21 15:05:57,2026-08-21,SELL,AME,Pullback50,238.3,,238.3,57.98,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
+2026-08-21 19:51:32,2026-08-21,SELL,DE,EarningsDrift,652.5099,652.14,652.214,46.0,-0.0453,-0.0209,limit_fill_position_check_full,midline (-0.1%),bull
+2026-08-21 19:52:03,2026-08-21,SELL,AES,Pullback50,14.755,14.75,14.755,46.02,0.0,0.0,limit_fill_position_check_full,midline (+0.0%),bull
