@@ -495,3 +495,102 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260821T132552Z
+
+- UTC timestamp: `20260821T132552Z`
+- GitHub run: [#7737](https://github.com/28twagg-ops/TradingBot/actions/runs/32486721595)
+- Run id: `32486721595`
+- Live bot: exit=`0`, duration=`2s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260821T132552Z_live_bot.log`, `logs/action_runs/20260821T132552Z_live_options.log`, `logs/action_runs/20260821T132552Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+13:25:53  INFO      Mode: summary
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                           SUMMARY|
+|  Time                                                         13:25 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $413.37|
++========================================================================+
+
++========================================================================+
+|                             ACCOUNT STATUS                             |
++========================================================================+
+|  Equity                                                         $413.37|
+|  Cash                                                           $310.80|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Total invested                                                 $100.57|
+|  Open P&L                                                        $+0.51|
++========================================================================+
+
++========================================================================+
+|                     STOCK HOLDINGS  (2 positions)                      |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AON      Pullback50      $70.39     $350.82  $352.95  +0.6%   $+0.43  |
+|  MNST     MomReversal     $30.19     $47.41   $47.54   +0.3%   $+0.08  |
+|                                                                        |
+|  Total invested                                                 $100.57|
+|  Total open P&L                                                  $+0.51|
++========================================================================+
+
++========================================================================+
+|                     OPTION HOLDINGS  (1 contracts)                     |
++========================================================================+
+|  CONTRACT                ENTRY    NOW      P&L%     P&L$      MV       |
++------------------------------------------------------------------------+
+|  WMT260821C00110000      $0.09    $0.02    -77.8%   $-7.00    $2.00    |
+|                                                                        |
+|  Options open P&L                                                $-7.00|
++========================================================================+
+
++========================================================================+
+|                        EXIT LOGIC ACTIVE  (v8)                         |
++========================================================================+
+|  Profit target                              price > 20-day MA (midline)|
+|  Stop loss                                             -0.5% from entry|
+|  Time stop                                          max 3 calendar days|
++========================================================================+
+
++========================================================================+
+|                          RECENT TRANSACTIONS                           |
++========================================================================+
+|  2026-08-20  SELL  AES  Pullback50  $62.00  P&L $+0.00                 |
+|  2026-08-20  SELL  ARE  Pullback50  $69.70  P&L $-0.12                 |
+|  2026-08-20  SELL  JKHY  MA_Squeeze  $71.62  P&L $+0.75                |
+|  2026-08-20  SELL  ARE  Pullback50  $70.48  P&L $-0.24                 |
+|  2026-08-19  SELL  AAPL  Pullback50  $79.01  P&L $+1.50                |
+|  2026-08-19  SELL  JKHY  MA_Squeeze  $70.80  P&L $+0.05                |
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-21T09:25:55.382649-04:00 share=50% ===
+2026-08-21 09:25:55,382 INFO === options_live_micro LIVE 2026-08-21T09:25:55.382649-04:00 share=50% ===
+Live account equity $413.37 cash $310.80 #225458845 options_level=3
+2026-08-21 09:25:55,600 INFO Live account equity $413.37 cash $310.80 #225458845 options_level=3
+Live micro: outside 9:28-16:05 ET
+2026-08-21 09:25:55,660 INFO Live micro: outside 9:28-16:05 ET
+Live micro done. open_options=1 lots=0
+2026-08-21 09:25:55,719 INFO Live micro done. open_options=1 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
