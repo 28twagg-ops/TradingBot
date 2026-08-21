@@ -64,3 +64,16 @@ Live micro signals: 4
   skip S210 AMD: strategy already open (paper bucket rule)
   skip S210 COIN: strategy already open (paper bucket rule)
 Live micro done. open_options=4 lots=1
+=== options_live_micro LIVE 2026-08-21T10:10:57.919419-04:00 share=50% ===
+Live account equity $343.47 cash $95.47 #225458845 options_level=3
+Live micro hold S210 AMD260824C00497500 -29.0% (tp +50% / sl -40%)
+Live micro sleeve $172 (50% of $343) deployed $119 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 4
+  try S218 56%win/+49%med COST
+  skip S218 COST: cost $61 > $53
+  try S218 56%win/+49%med SYK
+  skip S218 SYK: no contract under $53
+  skip S210 AMD: strategy already open (paper bucket rule)
+  skip S210 COIN: strategy already open (paper bucket rule)
+Live micro done. open_options=4 lots=1
