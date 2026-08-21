@@ -95,3 +95,5 @@ ts,event,strategy_id,occ,qty,limit,cost,reason,return_pct,order_id
 2026-08-21T14:29:22.511714-04:00,exit,ORPHAN,WMT260821C00110000,1,,,stop_loss (-100.0%),-100.0,5cdbb30b-c8ba-416c-a9e9-6bf8611aff39
 2026-08-21T14:30:53.936707-04:00,orphan_adopt,ORPHAN,WMT260821C00110000,1,0.09,9.0,broker_position_untracked,,orphan:WMT260821C00110000
 2026-08-21T14:30:53.936707-04:00,exit,ORPHAN,WMT260821C00110000,1,,,stop_loss (-100.0%),-100.0,86408a1b-2afa-44ca-a4ef-993c1a1c407d
+2026-08-21T14:35:52.506710-04:00,orphan_adopt,ORPHAN,WMT260821C00110000,1,0.09,9.0,broker_position_untracked,,orphan:WMT260821C00110000
+2026-08-21T14:35:52.506710-04:00,exit,ORPHAN,WMT260821C00110000,1,,,stop_loss (-100.0%),-100.0,fd3fa3d8-ed4b-4f16-b74b-82e4980adfd4
