@@ -297,6 +297,61 @@ def _parse_occ(sym: str) -> tuple[str, str, str, str] | None:
     return m.group(1), m.group(2), m.group(3), m.group(4)
 
 
+def _occ_expiry_date(occ: str) -> date | None:
+    """Parse OCC YYMMDD expiration (equity options use 20YY)."""
+    parsed = _parse_occ(occ)
+    if not parsed:
+        return None
+    yymmdd = parsed[1]
+    try:
+        yy, mm, dd = int(yymmdd[:2]), int(yymmdd[2:4]), int(yymmdd[4:6])
+        return date(2000 + yy, mm, dd)
+    except Exception:
+        return None
+
+
+def _occ_is_expired(occ: str, now: datetime) -> bool:
+    """True when contract can no longer be traded (past expiry calendar day close)."""
+    exp = _occ_expiry_date(occ)
+    if not exp:
+        return False
+    today = now.date() if hasattr(now, "date") else date.today()
+    if exp < today:
+        return True
+    # Equity options stop trading at the close on expiration day.
+    if exp == today and _ge(now, (16, 0)):
+        return True
+    return False
+
+
+def _exc_is_expired_contract(exc: Exception) -> bool:
+    text = str(exc).lower()
+    return "42210000" in text or "is expired" in text
+
+
+def _known_expired(state: dict) -> set[str]:
+    return {str(x) for x in (state.get("known_expired") or []) if x}
+
+
+def _mark_known_expired(state: dict, occ: str, now: datetime, reason: str) -> None:
+    """Persist OCC so reconcile never re-adopts / retries exits."""
+    occ = str(occ or "")
+    if not occ:
+        return
+    ke = list(state.get("known_expired") or [])
+    if occ not in ke:
+        ke.append(occ)
+        rl(f"Live micro known_expired +{occ} ({reason})")
+    # Drop ancient entries so state stays small (OCC embeds expiry).
+    pruned: list[str] = []
+    today = now.date() if hasattr(now, "date") else date.today()
+    for sym in ke:
+        exp = _occ_expiry_date(sym)
+        if exp is None or (today - exp).days <= 14:
+            pruned.append(sym)
+    state["known_expired"] = pruned
+
+
 def _order_matches_occ(order_sym: str, occ: str) -> bool:
     """Robust OCC match — Alpaca sometimes differs on formatting/strike padding."""
     a, b = _norm_occ(order_sym), _norm_occ(occ)
@@ -471,9 +526,15 @@ def reconcile(trade, state: dict, now: datetime) -> dict:
     state["lots"] = kept
 
     # Adopt broker option positions the bot does not track (bleed-stop P0).
+    # Skip expired contracts — Alpaca rejects sells (42210000) and they settle alone.
     tracked = {str(l.get("occ") or "") for l in active_lots(state)}
+    ignored = _known_expired(state)
     for occ, p in pos.items():
         if not occ or occ in tracked:
+            continue
+        if occ in ignored or _occ_is_expired(occ, now):
+            _mark_known_expired(state, occ, now, "skip_orphan_expired")
+            rl(f"Live micro skip orphan {occ}: expired (await broker settlement)")
             continue
         try:
             qty = int(float(getattr(p, "qty", 0) or 0))
@@ -549,6 +610,25 @@ def manage(trade, opt, state: dict, now: datetime) -> None:
         p = pos.get(occ)
         if not p:
             continue
+        # Already worthless / unsellable — clear locally; broker settles separately.
+        if _occ_is_expired(str(occ), now) or str(occ) in _known_expired(state):
+            try:
+                plpc = float(getattr(p, "unrealized_plpc", 0) or 0)
+                settle_qty = int(float(getattr(p, "qty", 0) or 0))
+            except Exception:
+                plpc = -1.0
+                settle_qty = int(lot.get("qty") or 0)
+            lot["qty"] = 0
+            _mark_known_expired(state, str(occ), now, "manage_expired")
+            append_ledger({
+                "ts": now.isoformat(), "event": "expired_settle",
+                "strategy_id": lot.get("strategy_id"), "occ": occ,
+                "qty": settle_qty,
+                "reason": "contract_expired",
+                "return_pct": round(plpc * 100, 2),
+            })
+            rl(f"LIVE EXIT expired-settle {occ} (no sell; await broker)")
+            continue
         try:
             plpc = float(getattr(p, "unrealized_plpc", 0) or 0)
             qty = int(float(getattr(p, "qty", 0) or 0))
@@ -604,6 +684,16 @@ def manage(trade, opt, state: dict, now: datetime) -> None:
             })
         except Exception as exc:
             rl(f"LIVE EXIT failed {occ}: {exc}")
+            if _exc_is_expired_contract(exc):
+                lot["qty"] = 0
+                _mark_known_expired(state, str(occ), now, "exit_rejected_expired")
+                append_ledger({
+                    "ts": now.isoformat(), "event": "expired_settle",
+                    "strategy_id": lot.get("strategy_id"), "occ": occ,
+                    "qty": sell_qty, "reason": "exit_rejected_expired",
+                    "return_pct": round(plpc * 100, 2),
+                })
+                rl(f"LIVE EXIT expired-settle {occ} (422/expired; no retry)")
     state["lots"] = active_lots(state)
     save_state(state)
 
@@ -657,10 +747,14 @@ def _place_protective_stop(trade, occ: str, broker_sym: str, qty: int, stop_px: 
 
 
 def ensure_stops(trade, state: dict) -> None:
+    now = _now()
     pos = {str(getattr(p, "symbol", "")): p for p in option_positions(trade)}
     for lot in active_lots(state):
         occ = lot.get("occ")
         if not occ:
+            continue
+        if _occ_is_expired(str(occ), now) or str(occ) in _known_expired(state):
+            rl(f"LIVE PROT skip {occ}: expired")
             continue
         p = pos.get(occ)
         if p is None:
