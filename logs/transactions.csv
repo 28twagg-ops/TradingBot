@@ -1132,3 +1132,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-20 13:47:25,2026-08-20,SELL,JKHY,MA_Squeeze,165.03,71.62,1.05,0.75,0,midline (+1.1%),bull,475.59
 2026-08-20 13:57:10,2026-08-20,SELL,ARE,Pullback50,50.64,69.7,-0.18,-0.12,0,midline (-0.2%),bull,446.26
 2026-08-20 19:51:48,2026-08-20,SELL,AES,Pullback50,14.77,62.0,0.0,0.0,0,midline (+0.0%),bull,413.51
+2026-08-21 13:46:44,2026-08-21,SELL,AES,Pullback50,14.76,61.95,-0.03,-0.02,0,midline (-0.0%),bull,401.38
+2026-08-21 13:47:04,2026-08-21,SELL,MNST,MomReversal,47.6,30.22,0.43,0.13,3,max_hold 3d (+0.4%),bull,401.37
