@@ -2478,3 +2478,113 @@ Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
 ```
 
 ---
+
+## Run 20260821T151315Z
+
+- UTC timestamp: `20260821T151315Z`
+- GitHub run: [#7758](https://github.com/28twagg-ops/TradingBot/actions/runs/32496118480)
+- Run id: `32496118480`
+- Live bot: exit=`0`, duration=`3s`
+- Live options: exit=`0`, duration=`3s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260821T151315Z_live_bot.log`, `logs/action_runs/20260821T151315Z_live_options.log`, `logs/action_runs/20260821T151315Z_options_bot.log`
+
+### Live bot (tail)
+
+```text
+15:13:16  INFO      Mode: exits
+15:13:17  INFO        Daily log -> logs/daily/2026-08-21.md
+15:13:17  INFO        Daily log reconciled -> logs/daily/2026-08-21.md (4 ledger rows)
+15:13:17  INFO        place_all_stops: checking 4 positions...
+15:13:17  INFO        STOP skipped AON: fractional (0.1994 shares) — software exit will handle it
+15:13:17  INFO        [positions] 1/1 (1 valid)
+15:13:18  INFO        Daily log -> logs/daily/2026-08-21.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:13 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $322.21|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  AON  P&L +1.2%  $+0.83                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           1|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|  CONTRACT                ENTRY    NOW      P&L%     P&L$      MV       |
++------------------------------------------------------------------------+
+|  AMD260824C00502500      $0.62    $0.14    -77.4%   $-48.00   $14.00   |
+|  COST260828C01000000     $0.63    $0.50    -20.6%   $-13.00   $50.00   |
+|  WMT260821C00110000      $0.09    $0.00    -100.0%  $-9.00    $0.00    |
+|                                                                        |
+|  Options open P&L                                               $-70.00|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-21T11:13:18.790568-04:00 share=50% ===
+2026-08-21 11:13:18,790 INFO === options_live_micro LIVE 2026-08-21T11:13:18.790568-04:00 share=50% ===
+Live account equity $322.21 cash $187.42 #225458845 options_level=3
+2026-08-21 11:13:19,010 INFO Live account equity $322.21 cash $187.42 #225458845 options_level=3
+Live micro sleeve $161 (50% of $322) deployed $64 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
+2026-08-21 11:13:19,257 INFO Live micro sleeve $161 (50% of $322) deployed $64 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+2026-08-21 11:13:19,257 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
+Live micro signals: 4
+2026-08-21 11:13:20,532 INFO Live micro signals: 4
+  try S218 56%win/+49%med COST
+2026-08-21 11:13:20,532 INFO   try S218 56%win/+49%med COST
+LIVE BUY failed S218 COST: {"buy_limit_price":"0.6","code":40310000,"existing_order_id":"622ffbfc-8e23-41cb-900c-8ad08e486bd6","message":"potential wash trade detected. use complex orders","reject_reason":"sell order exists, buy limit price should be less than existing sell limit price","sell_limit_price":"0.35"}
+2026-08-21 11:13:21,170 INFO LIVE BUY failed S218 COST: {"buy_limit_price":"0.6","code":40310000,"existing_order_id":"622ffbfc-8e23-41cb-900c-8ad08e486bd6","message":"potential wash trade detected. use complex orders","reject_reason":"sell order exists, buy limit price should be less than existing sell limit price","sell_limit_price":"0.35"}
+  try S218 56%win/+49%med SYK
+2026-08-21 11:13:21,171 INFO   try S218 56%win/+49%med SYK
+  skip S218 SYK: no contract under $75
+2026-08-21 11:13:21,406 INFO   skip S218 SYK: no contract under $75
+  skip S210 AMD: strategy already open (paper bucket rule)
+2026-08-21 11:13:21,406 INFO   skip S210 AMD: strategy already open (paper bucket rule)
+  skip S210 COIN: strategy already open (paper bucket rule)
+2026-08-21 11:13:21,406 INFO   skip S210 COIN: strategy already open (paper bucket rule)
+Live micro done. open_options=3 lots=0
+2026-08-21 11:13:21,529 INFO Live micro done. open_options=3 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+Paper options bot disabled (OPTIONS_PAPER_ENABLED=0)
+```
+
+---
