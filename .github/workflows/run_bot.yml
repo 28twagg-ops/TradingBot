@@ -91,7 +91,7 @@ jobs:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
           BOT_MODE: ${{ github.event.inputs.mode || 'auto' }}
-          LIVE_OPTIONS_SHARE: "0.50"
+          LIVE_OPTIONS_SHARE: "0.25"
         run: |
           set +e
           set -o pipefail
@@ -106,16 +106,19 @@ jobs:
           echo "Live bot duration: ${dur}s"
           exit 0
 
-      # Live options micro-sleeve: 50% of the rubber-band brokerage account.
+      # Live options micro-sleeve: 25% while orphans/stops are cleaned up.
+      # LIVE_OPTIONS_ENTRIES=0 = manage/orphan only (no new buys).
       # LIVE_OPTIONS_ALLOW is membership only; options_live_micro.py always
-      # tries higher CLEAN win-rate names first (S404 > S406 > S218 > S210).
-      - name: Run live options micro-sleeve (LIVE, 50% equity)
+      # tries higher CLEAN win-rate names first (S404 > S406 > S218).
+      - name: Run live options micro-sleeve (LIVE, 25% equity, entries paused)
         continue-on-error: true
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
-          LIVE_OPTIONS_SHARE: "0.50"
-          LIVE_OPTIONS_ALLOW: "S404,S406,S218,S210"
+          LIVE_OPTIONS_SHARE: "0.25"
+          LIVE_OPTIONS_ENTRIES: "0"
+          LIVE_OPTIONS_ALLOW: "S404,S406,S218"
+          LIVE_OPTIONS_MIN_COST: "20"
         run: |
           set +e
           set -o pipefail

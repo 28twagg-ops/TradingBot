@@ -3,14 +3,15 @@
 options_live_micro.py -- LIVE options sleeve on the rubber-band brokerage account.
 
 NOT the 1024-bucket paper lab. Live-specific caps only:
-  - 50% of equity reserved for options (LIVE_OPTIONS_SHARE)
+  - LIVE_OPTIONS_SHARE of equity reserved for options (default 25%)
   - allow-list of paper KEEP names, ranked by CLEAN win rate
   - one strategy per signal family (only one GapDown: S404, not S397/S350 too)
+  - LIVE_OPTIONS_ENTRIES=0 pauses new buys (manage/orphan adopt still run)
 
 Trade mechanics = paper baseline bucket 0 (options_lab.py):
   1 contract per allow-list strategy (same as paper max_contracts per bucket),
-  buy ask-0.01, max_premium $75, account_cap 95%, OI>=100, spread<=25%,
-  TP +50% / SL -40%, EOD 15:30, market exit 15:50, broker-resting protective stop.
+  buy ask-0.01, max_premium $75, min cost $20, account_cap 95%, OI>=100, spread<=25%,
+  TP +50% / SL -40%, EOD 15:30, market exit 15:50, broker-resting protective stop-market.
 
 Uses ALPACA_API_KEY / ALPACA_SECRET_KEY (live). Always exits 0 for GHA.
 """
@@ -53,7 +54,13 @@ OCC_RE = re.compile(r"^[A-Z]+\d{6}[CP]\d{8}$")
 API_KEY = os.getenv("ALPACA_API_KEY")
 API_SECRET = os.getenv("ALPACA_SECRET_KEY")
 
-SHARE = float(os.getenv("LIVE_OPTIONS_SHARE", "0.50"))
+SHARE = float(os.getenv("LIVE_OPTIONS_SHARE", "0.25"))
+# 0/false = manage + orphan adopt only (no new buys).
+ENTRIES_ENABLED = os.getenv("LIVE_OPTIONS_ENTRIES", "1").strip().lower() not in (
+    "0", "false", "no", "off",
+)
+# Skip lottery-ticket premiums (cost = premium * 100).
+MIN_ENTRY_COST = float(os.getenv("LIVE_OPTIONS_MIN_COST", "20"))
 # Paper baseline bucket 0 — do not override these with live-only values.
 PAPER_BASELINE = BUCKET_EXPERIMENTS[0]
 PAPER_MAX_PREMIUM = float(PAPER_BASELINE.max_premium)
@@ -64,11 +71,12 @@ SELL_LIMIT_OFFSET = float(PAPER_BASELINE.sell_limit_offset)
 MIN_OPEN_INTEREST = int(PAPER_BASELINE.min_open_interest)
 MAX_SPREAD_FRAC = float(PAPER_BASELINE.max_spread_frac)
 # Membership list. Trade order is CLEAN win rate (then median), not this string order.
+# Default drops S210 (full-sample paper median non-positive).
 ALLOW = [
     s.strip()
     for s in os.getenv(
         "LIVE_OPTIONS_ALLOW",
-        "S404,S406,S218,S210",
+        "S404,S406,S218",
     ).split(",")
     if s.strip()
 ]
@@ -229,10 +237,11 @@ def mark_strategy_used(state: dict, sid: str) -> None:
 
 
 def open_strategy_ids(trade, state: dict) -> set[str]:
-    out = used_strategies_today(state)
+    """Strategies with an active tracked lot (not merely attempted today)."""
+    out: set[str] = set()
     for lot in active_lots(state):
         sid = lot.get("strategy_id")
-        if sid:
+        if sid and sid != "ORPHAN":
             out.add(str(sid))
     return out
 
@@ -275,11 +284,39 @@ def cid_stop() -> str:
     return f"OLS|{uuid.uuid4().hex[:12]}"[:48]
 
 
+def _cancel_stale_exit_sells(trade, occ: str) -> int:
+    """Cancel open non-OLS sells on OCC (unblocks wash-trade; keeps OLS stops)."""
+    n = 0
+    try:
+        req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[occ], limit=50)
+        for o in trade.get_orders(req) or []:
+            cid = str(getattr(o, "client_order_id", "") or "")
+            side = str(getattr(o, "side", "") or "").lower()
+            if "sell" not in side:
+                continue
+            if cid.startswith("OLS"):
+                continue
+            try:
+                trade.cancel_order_by_id(o.id)
+                n += 1
+                rl(f"Live micro cancel stale sell {occ} id={o.id} cid={cid or '-'}")
+            except Exception as exc:
+                rl(f"Live micro cancel sell failed {occ} id={getattr(o, 'id', '?')}: {exc}")
+    except Exception as exc:
+        rl(f"Live micro list orders failed {occ}: {exc}")
+    return n
+
+
+def _underlying_from_occ(occ: str) -> str:
+    m = re.match(r"^([A-Z]+)", occ or "")
+    return m.group(1) if m else (occ or "")
+
+
 def reconcile(trade, state: dict, now: datetime) -> dict:
     used_strategies_today(state)
     for lot in active_lots(state):
         sid = str(lot.get("strategy_id") or "")
-        if sid and sid not in (state.get("used_strategies") or []):
+        if sid and sid not in (state.get("used_strategies") or []) and sid != "ORPHAN":
             state.setdefault("used_strategies", []).append(sid)
     pos = {str(getattr(p, "symbol", "")): p for p in option_positions(trade)}
     kept = []
@@ -312,9 +349,45 @@ def reconcile(trade, state: dict, now: datetime) -> dict:
             "qty": lot.get("qty"), "reason": st or "missing_from_broker",
             "order_id": lot.get("order_id"),
         })
-        if sid:
+        if sid and sid != "ORPHAN":
             mark_strategy_used(state, sid)
     state["lots"] = kept
+
+    # Adopt broker option positions the bot does not track (bleed-stop P0).
+    tracked = {str(l.get("occ") or "") for l in active_lots(state)}
+    for occ, p in pos.items():
+        if not occ or occ in tracked:
+            continue
+        try:
+            qty = int(float(getattr(p, "qty", 0) or 0))
+        except Exception:
+            continue
+        if qty <= 0:
+            continue
+        entry = float(getattr(p, "avg_entry_price", 0) or 0)
+        _cancel_stale_exit_sells(trade, occ)
+        lot = {
+            "lot_id": uuid.uuid4().hex[:12],
+            "strategy_id": "ORPHAN",
+            "occ": occ,
+            "underlying": _underlying_from_occ(occ),
+            "qty": qty,
+            "entry_price": entry if entry > 0 else 0.01,
+            "take_profit": TAKE_PROFIT,
+            "stop_loss": STOP_LOSS,
+            "order_id": f"orphan:{occ}",
+            "pending": False,
+        }
+        state.setdefault("lots", []).append(lot)
+        append_ledger({
+            "ts": now.isoformat(), "event": "orphan_adopt",
+            "strategy_id": "ORPHAN", "occ": occ, "qty": qty,
+            "limit": entry, "cost": round(entry * 100 * qty, 2),
+            "reason": "broker_position_untracked",
+            "order_id": lot["order_id"],
+        })
+        rl(f"Live micro orphan_adopt {occ} x{qty} entry={entry:.2f}")
+
     save_state(state)
     return state
 
@@ -381,6 +454,7 @@ def manage(trade, opt, state: dict, now: datetime) -> None:
             )
             continue
         _cancel_protective(trade, occ)
+        _cancel_stale_exit_sells(trade, occ)
         sell_qty = min(qty, int(lot["qty"]))
         bid = _option_bid(opt, occ)
         sell_limit = round(max(0.01, (bid or 0.01) + SELL_LIMIT_OFFSET), 2)
@@ -443,22 +517,23 @@ def ensure_stops(trade, state: dict) -> None:
         stop_px = round(max(0.01, entry * (1.0 + sl)), 2)
         lim = round(max(0.01, stop_px * 0.92), 2)
         qty = int(lot["qty"])
+        # Prefer stop-market so gaps still exit (stop-limit often never fills).
         try:
-            o = trade.submit_order(StopLimitOrderRequest(
+            o = trade.submit_order(StopOrderRequest(
                 symbol=occ, qty=qty, side=OrderSide.SELL,
-                time_in_force=TimeInForce.GTC,
-                stop_price=stop_px, limit_price=lim,
+                time_in_force=TimeInForce.DAY, stop_price=stop_px,
                 client_order_id=cid_stop(),
             ))
-            rl(f"LIVE PROT STOP {occ} x{qty} stop={stop_px:.2f} id={o.id}")
+            rl(f"LIVE PROT STOP-MKT {occ} x{qty} stop={stop_px:.2f} id={o.id}")
         except Exception as exc:
             try:
-                o = trade.submit_order(StopOrderRequest(
+                o = trade.submit_order(StopLimitOrderRequest(
                     symbol=occ, qty=qty, side=OrderSide.SELL,
-                    time_in_force=TimeInForce.DAY, stop_price=stop_px,
+                    time_in_force=TimeInForce.GTC,
+                    stop_price=stop_px, limit_price=lim,
                     client_order_id=cid_stop(),
                 ))
-                rl(f"LIVE PROT STOP-MKT {occ} x{qty} stop={stop_px:.2f} id={o.id}")
+                rl(f"LIVE PROT STOP {occ} x{qty} stop={stop_px:.2f} lim={lim:.2f} id={o.id}")
             except Exception as exc2:
                 rl(f"LIVE PROT STOP failed {occ}: {exc2 or exc}")
 
@@ -514,9 +589,13 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
     if not _between(now, om.ENTRY_START, om.ENTRY_END):
         rl("Live micro: outside entry window")
         return 0
+    if not ENTRIES_ENABLED:
+        rl("Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only")
+        return 0
     sleeve = max(0.0, equity * SHARE)
     deployed = option_mv(trade)
     open_strats = open_strategy_ids(trade, state)
+    used_today = used_strategies_today(state)
     allow = [s.id for s in _allow_strats()]
     rank_txt = ", ".join(
         f"{sid} {CLEAN_RANK.get(sid, (0, 0))[0]:.0f}%win"
@@ -526,7 +605,7 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
         f"Live micro sleeve ${sleeve:.0f} ({SHARE:.0%} of ${equity:.0f}) "
         f"deployed ${deployed:.0f} open_strategies={len(open_strats)}/{len(allow)} "
         f"(paper baseline ${PAPER_MAX_PREMIUM:.0f} / tp={TAKE_PROFIT:+.0%} "
-        f"sl={STOP_LOSS:+.0%} / 1 contract per strategy)"
+        f"sl={STOP_LOSS:+.0%} / 1 contract per strategy / min_cost ${MIN_ENTRY_COST:.0f})"
     )
     rl(f"Live micro entry order (CLEAN win): {rank_txt}")
     hits = scan_hits(stock)
@@ -535,6 +614,9 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
     chain_cache: dict = {}
     oi_cache: dict = {}
     for hit in hits:
+        if hit.strategy_id in used_today:
+            rl(f"  skip {hit.strategy_id} {hit.symbol}: already attempted today")
+            continue
         if hit.strategy_id in open_strats:
             rl(f"  skip {hit.strategy_id} {hit.symbol}: strategy already open (paper bucket rule)")
             continue
@@ -558,6 +640,12 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
         )
         if not cand:
             rl(f"  skip {hit.strategy_id} {hit.symbol}: no contract under ${max_prem:.0f}")
+            continue
+        if cand["cost"] < MIN_ENTRY_COST - 0.01:
+            rl(
+                f"  skip {hit.strategy_id} {hit.symbol}: cost ${cand['cost']:.0f} "
+                f"< min ${MIN_ENTRY_COST:.0f} (lottery ticket filter)"
+            )
             continue
         if cand["cost"] > max_prem + 0.01:
             rl(f"  skip {hit.strategy_id} {hit.symbol}: cost ${cand['cost']:.0f} > ${max_prem:.0f}")
@@ -597,6 +685,7 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
             )
             placed += 1
             open_strats.add(hit.strategy_id)
+            used_today.add(hit.strategy_id)
         except Exception as exc:
             rl(f"LIVE BUY failed {hit.strategy_id} {hit.symbol}: {exc}")
             continue
