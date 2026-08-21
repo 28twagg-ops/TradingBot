@@ -284,28 +284,128 @@ def cid_stop() -> str:
     return f"OLS|{uuid.uuid4().hex[:12]}"[:48]
 
 
+def _norm_occ(sym: str) -> str:
+    """Normalize OCC-ish symbols for comparison (case, non-alnum stripped)."""
+    return re.sub(r"[^A-Z0-9]", "", str(sym or "").upper())
+
+
+def _parse_occ(sym: str) -> tuple[str, str, str, str] | None:
+    """Return (root, yymmdd, cp, strike8) or None."""
+    m = re.match(r"^([A-Z]+)(\d{6})([CP])(\d{8})$", _norm_occ(sym))
+    if not m:
+        return None
+    return m.group(1), m.group(2), m.group(3), m.group(4)
+
+
+def _order_matches_occ(order_sym: str, occ: str) -> bool:
+    """Robust OCC match — Alpaca sometimes differs on formatting/strike padding."""
+    a, b = _norm_occ(order_sym), _norm_occ(occ)
+    if not a or not b:
+        return False
+    if a == b:
+        return True
+    if a.endswith(b) or b.endswith(a):
+        return True
+    pa, pb = _parse_occ(a), _parse_occ(b)
+    if not pa or not pb:
+        # Fallback: same root ticker contained + same trailing 15 chars (date+cp+strike-ish)
+        return a[-15:] == b[-15:] if len(a) >= 15 and len(b) >= 15 else False
+    root_a, d_a, cp_a, k_a = pa
+    root_b, d_b, cp_b, k_b = pb
+    if root_a != root_b or d_a != d_b or cp_a != cp_b:
+        return False
+    # Strike: compare as ints (leading zeros / padding differences).
+    try:
+        return int(k_a) == int(k_b)
+    except Exception:
+        return k_a == k_b
+
+
+def _list_open_orders(trade, occ: str | None = None) -> list:
+    """List open orders; optionally filter to those matching OCC."""
+    try:
+        req = GetOrdersRequest(status=QueryOrderStatus.OPEN, limit=200)
+        orders = list(trade.get_orders(req) or [])
+    except Exception as exc:
+        rl(f"Live micro list open orders failed: {exc}")
+        return []
+    if occ is None:
+        return orders
+    return [o for o in orders if _order_matches_occ(str(getattr(o, "symbol", "") or ""), occ)]
+
+
+def _order_dbg(o) -> str:
+    return (
+        f"id={getattr(o, 'id', '?')} "
+        f"sym={getattr(o, 'symbol', '?')!r} "
+        f"side={getattr(o, 'side', '?')} "
+        f"status={getattr(o, 'status', '?')} "
+        f"cid={getattr(o, 'client_order_id', '') or '-'!r} "
+        f"type={getattr(o, 'type', getattr(o, 'order_type', '?'))}"
+    )
+
+
+def _extract_wash_existing_order_id(exc: Exception) -> str | None:
+    """Pull existing_order_id from Alpaca wash-trade rejection JSON/text."""
+    text = str(exc)
+    m = re.search(r'"existing_order_id"\s*:\s*"([0-9a-fA-F-]{20,})"', text)
+    if m:
+        return m.group(1)
+    m = re.search(r"existing_order_id['\"]?\s*[:=]\s*['\"]([0-9a-fA-F-]{20,})", text)
+    if m:
+        return m.group(1)
+    # Dict-like repr from alpaca-py
+    m = re.search(r"existing_order_id['\"]:\s*['\"]([0-9a-fA-F-]{20,})", text)
+    if m:
+        return m.group(1)
+    return None
+
+
+def _cancel_order_id(trade, order_id: str, reason: str) -> bool:
+    if not order_id:
+        return False
+    try:
+        trade.cancel_order_by_id(order_id)
+        rl(f"Live micro cancel by id ({reason}) id={order_id}")
+        return True
+    except Exception as exc:
+        rl(f"Live micro cancel by id failed ({reason}) id={order_id}: {exc}")
+        return False
+
+
 def _cancel_stale_exit_sells(trade, occ: str) -> int:
     """Cancel open non-OLS sells on OCC (unblocks wash-trade; keeps OLS stops)."""
     n = 0
-    orders = []
+    scoped: list = []
     try:
-        # Prefer symbol-scoped query; fall back to full open book (option OCC
-        # filters are flaky on some Alpaca SDK versions).
         req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[occ], limit=50)
-        orders = list(trade.get_orders(req) or [])
-    except Exception:
-        orders = []
-    if not orders:
+        scoped = list(trade.get_orders(req) or [])
+    except Exception as exc:
+        rl(f"Live micro symbol-scoped orders query failed {occ}: {exc}")
+        scoped = []
+
+    if scoped:
+        candidates = scoped
+        rl(f"Live micro cancel-scan {occ}: symbol-scoped n={len(candidates)}")
+    else:
         try:
-            req = GetOrdersRequest(status=QueryOrderStatus.OPEN, limit=100)
-            orders = [
-                o for o in (trade.get_orders(req) or [])
-                if str(getattr(o, "symbol", "") or "") == occ
-            ]
+            req = GetOrdersRequest(status=QueryOrderStatus.OPEN, limit=200)
+            all_open = list(trade.get_orders(req) or [])
         except Exception as exc:
             rl(f"Live micro list orders failed {occ}: {exc}")
             return 0
-    for o in orders:
+        # Debug: dump every open order when OCC-scoped query is empty so we
+        # can see how Alpaca labels the COST sell (symbol format mismatch).
+        rl(f"Live micro cancel-scan {occ}: symbol-scoped empty; open_book n={len(all_open)}")
+        for o in all_open:
+            rl(f"  open_order {_order_dbg(o)}")
+        candidates = [
+            o for o in all_open
+            if _order_matches_occ(str(getattr(o, "symbol", "") or ""), occ)
+        ]
+        rl(f"Live micro cancel-scan {occ}: matched n={len(candidates)}")
+
+    for o in candidates:
         cid = str(getattr(o, "client_order_id", "") or "")
         side = str(getattr(o, "side", "") or "").lower()
         if "sell" not in side:
@@ -315,9 +415,12 @@ def _cancel_stale_exit_sells(trade, occ: str) -> int:
         try:
             trade.cancel_order_by_id(o.id)
             n += 1
-            rl(f"Live micro cancel stale sell {occ} id={o.id} cid={cid or '-'}")
+            rl(f"Live micro cancel stale sell {occ} id={o.id} cid={cid or '-'} "
+               f"broker_sym={getattr(o, 'symbol', '')!r}")
         except Exception as exc:
             rl(f"Live micro cancel sell failed {occ} id={getattr(o, 'id', '?')}: {exc}")
+    if n == 0:
+        rl(f"Live micro cancel-scan {occ}: no non-OLS sell to cancel")
     return n
 
 
@@ -379,6 +482,10 @@ def reconcile(trade, state: dict, now: datetime) -> dict:
         if qty <= 0:
             continue
         entry = float(getattr(p, "avg_entry_price", 0) or 0)
+        if entry <= 0:
+            rl(f"WARN orphan_adopt {occ}: avg_entry_price missing; "
+               f"using 0.01 placeholder (TP/SL % will be wrong until filled mark)")
+            entry = 0.01
         _cancel_stale_exit_sells(trade, occ)
         lot = {
             "lot_id": uuid.uuid4().hex[:12],
@@ -386,7 +493,7 @@ def reconcile(trade, state: dict, now: datetime) -> dict:
             "occ": occ,
             "underlying": _underlying_from_occ(occ),
             "qty": qty,
-            "entry_price": entry if entry > 0 else 0.01,
+            "entry_price": entry,
             "take_profit": TAKE_PROFIT,
             "stop_loss": STOP_LOSS,
             "order_id": f"orphan:{occ}",
@@ -407,17 +514,14 @@ def reconcile(trade, state: dict, now: datetime) -> dict:
 
 
 def _cancel_protective(trade, occ: str) -> None:
-    try:
-        req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[occ], limit=50)
-        for o in trade.get_orders(req) or []:
-            cid = getattr(o, "client_order_id", "") or ""
-            if cid.startswith("OLS"):
-                try:
-                    trade.cancel_order_by_id(o.id)
-                except Exception:
-                    pass
-    except Exception:
-        pass
+    for o in _list_open_orders(trade, occ):
+        cid = getattr(o, "client_order_id", "") or ""
+        if cid.startswith("OLS"):
+            try:
+                trade.cancel_order_by_id(o.id)
+                rl(f"Live micro cancel OLS stop {occ} id={o.id}")
+            except Exception as exc:
+                rl(f"Live micro cancel OLS failed {occ}: {exc}")
 
 
 def _option_bid(opt, occ: str) -> float | None:
@@ -508,25 +612,42 @@ def ensure_stops(trade, state: dict) -> None:
     pos = {str(getattr(p, "symbol", "")): p for p in option_positions(trade)}
     for lot in active_lots(state):
         occ = lot.get("occ")
-        if not occ or occ not in pos:
+        if not occ:
             continue
+        p = pos.get(occ)
+        if p is None:
+            for sym, cand in pos.items():
+                if _order_matches_occ(sym, str(occ)):
+                    p = cand
+                    break
+        if p is None:
+            rl(f"LIVE PROT skip {occ}: not in broker positions")
+            continue
+        have = False
+        ols_id = None
         try:
-            req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[occ], limit=20)
-            have = False
-            for o in trade.get_orders(req) or []:
-                cid = getattr(o, "client_order_id", "") or ""
+            open_for_occ = _list_open_orders(trade, str(occ))
+            for o in open_for_occ:
+                cid = str(getattr(o, "client_order_id", "") or "")
                 if cid.startswith("OLS"):
                     have = True
+                    ols_id = getattr(o, "id", None)
                     break
-            if have:
-                continue
-        except Exception:
+            rl(
+                f"LIVE PROT check {occ}: have_ols={have} "
+                f"open_matched={len(open_for_occ)} ols_id={ols_id or '-'}"
+            )
+        except Exception as exc:
+            rl(f"LIVE PROT check failed {occ} (will still try place): {exc}")
+            have = False
+        if have:
             continue
         entry = float(lot.get("entry_price") or 0) or float(
-            getattr(pos[occ], "avg_entry_price", 0) or 0
+            getattr(p, "avg_entry_price", 0) or 0
         )
         sl = float(lot.get("stop_loss") or STOP_LOSS)
         if entry <= 0 or sl >= 0:
+            rl(f"LIVE PROT skip {occ}: bad entry/sl entry={entry} sl={sl}")
             continue
         stop_px = round(max(0.01, entry * (1.0 + sl)), 2)
         lim = round(max(0.01, stop_px * 0.92), 2)
@@ -534,22 +655,25 @@ def ensure_stops(trade, state: dict) -> None:
         # Prefer stop-market so gaps still exit (stop-limit often never fills).
         try:
             o = trade.submit_order(StopOrderRequest(
-                symbol=occ, qty=qty, side=OrderSide.SELL,
+                symbol=str(getattr(p, "symbol", None) or occ), qty=qty,
+                side=OrderSide.SELL,
                 time_in_force=TimeInForce.DAY, stop_price=stop_px,
                 client_order_id=cid_stop(),
             ))
             rl(f"LIVE PROT STOP-MKT {occ} x{qty} stop={stop_px:.2f} id={o.id}")
         except Exception as exc:
+            rl(f"LIVE PROT STOP-MKT rejected {occ}: {exc}; trying stop-limit")
             try:
                 o = trade.submit_order(StopLimitOrderRequest(
-                    symbol=occ, qty=qty, side=OrderSide.SELL,
+                    symbol=str(getattr(p, "symbol", None) or occ), qty=qty,
+                    side=OrderSide.SELL,
                     time_in_force=TimeInForce.GTC,
                     stop_price=stop_px, limit_price=lim,
                     client_order_id=cid_stop(),
                 ))
                 rl(f"LIVE PROT STOP {occ} x{qty} stop={stop_px:.2f} lim={lim:.2f} id={o.id}")
             except Exception as exc2:
-                rl(f"LIVE PROT STOP failed {occ}: {exc2 or exc}")
+                rl(f"LIVE PROT STOP failed {occ} (both market+limit): mkt={exc} lim={exc2}")
 
 
 def _dedupe_hits(hits: list) -> list:
@@ -702,6 +826,15 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
             used_today.add(hit.strategy_id)
         except Exception as exc:
             rl(f"LIVE BUY failed {hit.strategy_id} {hit.symbol}: {exc}")
+            oid = _extract_wash_existing_order_id(exc)
+            if oid:
+                rl(f"Live micro wash-trade self-heal: cancel existing_order_id={oid}")
+                if _cancel_order_id(trade, oid, "wash_trade_existing_order_id"):
+                    # Also clear any other stale sells on candidate OCC if known.
+                    try:
+                        _cancel_stale_exit_sells(trade, cand["symbol"])
+                    except Exception:
+                        pass
             continue
     return placed
 
