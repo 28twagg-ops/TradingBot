@@ -911,3 +911,7 @@ Live account equity $307.09 cash $236.27 #225458845 options_level=3
 Live micro known_expired +WMT260821C00110000 (manage_expired)
 LIVE EXIT expired-settle WMT260821C00110000 (no sell; await broker)
 Live micro done. open_options=1 lots=0
+=== options_live_micro LIVE 2026-08-21T16:55:55.923001-04:00 share=25% ===
+Live account equity $307.09 cash $236.27 #225458845 options_level=3
+Live micro skip orphan WMT260821C00110000: expired (await broker settlement)
+Live micro done. open_options=1 lots=0
