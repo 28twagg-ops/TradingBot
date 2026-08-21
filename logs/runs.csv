@@ -5669,3 +5669,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-21 14:06:43,exits,bull,355.34,95.47,0,0,0,2,AME|AON,both
 2026-08-21 14:10:57,exits,bull,343.47,95.47,0,0,0,2,AME|AON,both
 2026-08-21 14:15:58,exits,bull,332.63,95.47,0,0,0,2,AME|AON,both
+2026-08-21 14:22:12,exits,bull,333.7,129.42,0,0,0,2,AME|AON,both
