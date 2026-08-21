@@ -174,8 +174,8 @@ LIVE BUY failed S218 COST: {"buy_limit_price":"0.6","code":40310000,"existing_or
   skip S210 AMD: strategy already open (paper bucket rule)
   skip S210 COIN: strategy already open (paper bucket rule)
 Live micro done. open_options=3 lots=0
-=== options_live_micro LIVE 2026-08-21T11:00:15.796380-04:00 share=50% ===
-Live account equity $327.61 cash $129.42 #225458845 options_level=3
+=== options_live_micro LIVE 2026-08-21T11:01:22.195599-04:00 share=50% ===
+Live account equity $327.56 cash $129.42 #225458845 options_level=3
 Live micro sleeve $164 (50% of $328) deployed $69 open_strategies=1/4 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy)
 Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win, S210 55%win
 Live micro signals: 4
