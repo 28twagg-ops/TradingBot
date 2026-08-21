@@ -287,23 +287,37 @@ def cid_stop() -> str:
 def _cancel_stale_exit_sells(trade, occ: str) -> int:
     """Cancel open non-OLS sells on OCC (unblocks wash-trade; keeps OLS stops)."""
     n = 0
+    orders = []
     try:
+        # Prefer symbol-scoped query; fall back to full open book (option OCC
+        # filters are flaky on some Alpaca SDK versions).
         req = GetOrdersRequest(status=QueryOrderStatus.OPEN, symbols=[occ], limit=50)
-        for o in trade.get_orders(req) or []:
-            cid = str(getattr(o, "client_order_id", "") or "")
-            side = str(getattr(o, "side", "") or "").lower()
-            if "sell" not in side:
-                continue
-            if cid.startswith("OLS"):
-                continue
-            try:
-                trade.cancel_order_by_id(o.id)
-                n += 1
-                rl(f"Live micro cancel stale sell {occ} id={o.id} cid={cid or '-'}")
-            except Exception as exc:
-                rl(f"Live micro cancel sell failed {occ} id={getattr(o, 'id', '?')}: {exc}")
-    except Exception as exc:
-        rl(f"Live micro list orders failed {occ}: {exc}")
+        orders = list(trade.get_orders(req) or [])
+    except Exception:
+        orders = []
+    if not orders:
+        try:
+            req = GetOrdersRequest(status=QueryOrderStatus.OPEN, limit=100)
+            orders = [
+                o for o in (trade.get_orders(req) or [])
+                if str(getattr(o, "symbol", "") or "") == occ
+            ]
+        except Exception as exc:
+            rl(f"Live micro list orders failed {occ}: {exc}")
+            return 0
+    for o in orders:
+        cid = str(getattr(o, "client_order_id", "") or "")
+        side = str(getattr(o, "side", "") or "").lower()
+        if "sell" not in side:
+            continue
+        if cid.startswith("OLS"):
+            continue
+        try:
+            trade.cancel_order_by_id(o.id)
+            n += 1
+            rl(f"Live micro cancel stale sell {occ} id={o.id} cid={cid or '-'}")
+        except Exception as exc:
+            rl(f"Live micro cancel sell failed {occ} id={getattr(o, 'id', '?')}: {exc}")
     return n
 
 
@@ -735,6 +749,11 @@ def run() -> int:
         return 0
 
     manage(trade, opt, state, now)
+    # Clear leftover exit sells on tracked lots so protective stops can rest.
+    for lot in active_lots(state):
+        occ = lot.get("occ")
+        if occ:
+            _cancel_stale_exit_sells(trade, str(occ))
     ensure_stops(trade, state)
     if _between(now, om.ENTRY_START, om.ENTRY_END):
         place(trade, opt, ref, stock, equity, cash, state, now)
