@@ -1,0 +1,32 @@
+=== options_live_micro LIVE 2026-08-21T11:41:04.034997-04:00 share=25% ===
+2026-08-21 11:41:04,035 INFO === options_live_micro LIVE 2026-08-21T11:41:04.034997-04:00 share=25% ===
+Live account equity $318.11 cash $201.38 #225458845 options_level=3
+2026-08-21 11:41:04,274 INFO Live account equity $318.11 cash $201.38 #225458845 options_level=3
+Live micro cancel-scan WMT260821C00110000: symbol-scoped n=1
+2026-08-21 11:41:04,447 INFO Live micro cancel-scan WMT260821C00110000: symbol-scoped n=1
+Live micro cancel stale sell WMT260821C00110000 id=ee49b930-f7d9-4c6c-9652-b9f241ba72eb cid=OLX|bea95270a22d broker_sym='WMT260821C00110000'
+2026-08-21 11:41:04,520 INFO Live micro cancel stale sell WMT260821C00110000 id=ee49b930-f7d9-4c6c-9652-b9f241ba72eb cid=OLX|bea95270a22d broker_sym='WMT260821C00110000'
+Live micro orphan_adopt WMT260821C00110000 x1 entry=0.09
+2026-08-21 11:41:04,521 INFO Live micro orphan_adopt WMT260821C00110000 x1 entry=0.09
+Live micro hold ORPHAN COST260828C01000000 -27.0% (tp +50% / sl -40%)
+2026-08-21 11:41:04,619 INFO Live micro hold ORPHAN COST260828C01000000 -27.0% (tp +50% / sl -40%)
+Live micro cancel-scan WMT260821C00110000: symbol-scoped empty; open_book n=1
+2026-08-21 11:41:04,837 INFO Live micro cancel-scan WMT260821C00110000: symbol-scoped empty; open_book n=1
+  open_order id=622ffbfc-8e23-41cb-900c-8ad08e486bd6 sym='COST260828C01000000' side=OrderSide.SELL status=OrderStatus.NEW cid='OLS|f7a537090f81' type=OrderType.STOP_LIMIT
+2026-08-21 11:41:04,837 INFO   open_order id=622ffbfc-8e23-41cb-900c-8ad08e486bd6 sym='COST260828C01000000' side=OrderSide.SELL status=OrderStatus.NEW cid='OLS|f7a537090f81' type=OrderType.STOP_LIMIT
+Live micro cancel-scan WMT260821C00110000: matched n=0
+2026-08-21 11:41:04,838 INFO Live micro cancel-scan WMT260821C00110000: matched n=0
+Live micro cancel-scan WMT260821C00110000: no non-OLS sell to cancel
+2026-08-21 11:41:04,838 INFO Live micro cancel-scan WMT260821C00110000: no non-OLS sell to cancel
+LIVE EXIT stop_loss (-100.0%) WMT260821C00110000 x1 limit=0.01 id=fd466332-45c9-41a7-8586-cea992705e87
+2026-08-21 11:41:05,857 INFO LIVE EXIT stop_loss (-100.0%) WMT260821C00110000 x1 limit=0.01 id=fd466332-45c9-41a7-8586-cea992705e87
+Live micro cancel-scan COST260828C01000000: symbol-scoped n=1
+2026-08-21 11:41:05,930 INFO Live micro cancel-scan COST260828C01000000: symbol-scoped n=1
+Live micro cancel-scan COST260828C01000000: no non-OLS sell to cancel
+2026-08-21 11:41:05,930 INFO Live micro cancel-scan COST260828C01000000: no non-OLS sell to cancel
+LIVE PROT check COST260828C01000000: have_ols=True open_matched=1 ols_id=622ffbfc-8e23-41cb-900c-8ad08e486bd6
+2026-08-21 11:41:06,075 INFO LIVE PROT check COST260828C01000000: have_ols=True open_matched=1 ols_id=622ffbfc-8e23-41cb-900c-8ad08e486bd6
+Live micro: manage/exits only
+2026-08-21 11:41:06,075 INFO Live micro: manage/exits only
+Live micro done. open_options=2 lots=1
+2026-08-21 11:41:06,148 INFO Live micro done. open_options=2 lots=1
