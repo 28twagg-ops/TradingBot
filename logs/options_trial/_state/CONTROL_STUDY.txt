@@ -1,0 +1,9 @@
+Paper LIVE MIRROR control study (restarted 2026-08-21)
+=====================================================
+Paper account: NEW ~$1,000,000 (keys in GitHub secrets ALPACA_PAPER_*)
+Mode: OPTIONS_MIRROR_LIVE=1
+Strategies: S404, S406, S218, S210 (same allow-list as live micro)
+Rules: baseline arm only — TP +50% / SL -40%, max premium $75, 1 contract/strategy
+Purpose: compare paper fills vs live micro on the same signals/rules
+Lab state lots cleared on restart (old account positions discarded)
+Historical ledgers under logs/options_trial/_ledger/ retained for research
