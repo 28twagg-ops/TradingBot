@@ -12998,3 +12998,132 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260821T195621Z
+
+- UTC timestamp: `20260821T195621Z`
+- GitHub run: [#7815](https://github.com/28twagg-ops/TradingBot/actions/runs/32520909977)
+- Run id: `32520909977`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260821T195621Z_live_bot.log`, `logs/action_runs/20260821T195621Z_live_options.log`, `logs/action_runs/20260821T195621Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-21T15:49:51.661505-04:00","date":"2026-08-21","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":0.7,"phases_s":{"reconcile":0.09,"cancel":0.04,"manage":0.04,"protective_stops":0.02},"signals":0,"placed":0,"equity":999987.95,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":1,"filled_today":1,"unattributed_contracts":0,"top_signals":[],"github_run":"7813","github_run_id":"32520060239","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1761,"win":33.05,"med":-39.29,"avg":12.19,"pnl":-9205.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (67 earlier lines - see full log file)
+|                                                                        |
+|  Total invested                                                  $70.81|
+|  Total open P&L                                                  $+0.85|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (93622.2m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AON  P&L +1.2%  $+0.85                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  26                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.77   59.0   0.60    50MA bounce (+|
+|  CAH      Pullback50      eq     $229.46  41.5   -1.90   50MA bounce (-|
+|  CNC      Pullback50      eq     $64.75   52.4   -1.14   50MA bounce (-|
+|  CL       Pullback50      eq     $90.97   54.4   -1.62   50MA bounce (-|
+|  CHD      Pullback50      eq     $98.66   45.1   -1.47   50MA bounce (+|
+|  CTVA     Pullback50      eq     $81.83   71.6   -0.83   50MA bounce (-|
+|  DE       EarningsDrift   eq     $649.29  64.1   1.37    post-earnings |
+|  ETN      Pullback50      eq     $419.97  39.4   -1.02   50MA bounce (+|
+|  ESS      Pullback50      eq     $288.21  53.8   -1.37   50MA bounce (-|
+|  DOC      Pullback50      eq     $21.32   45.7   -1.04   50MA bounce (-|
+|  KMB      Pullback50      eq     $109.36  54.3   -0.96   50MA bounce (+|
+|  KVUE     Pullback50      eq     $19.09   51.3   -1.42   50MA bounce (+|
+|  PHM      Pullback50      eq     $129.04  49.6   -1.67   50MA bounce (+|
+|  SYF      TrendResumpti~  eq     $79.49   56.7   0.86    HH/HL resumpti|
+|  VMRK     Pullback50      eq     $66.75   46.3   0.01    50MA bounce (-|
+|  AVT      Pullback50      eq     $88.70   49.7   -0.92   50MA bounce (-|
+|  BJ       RSIRecovery     eq     $96.66   48.6   1.59    RSI 21.1→48.6 |
+|  BJ       VWAP_Reclaim    eq     $96.66   48.6   1.59    VWAP reclaim V|
+|  CG       VWAP_Reclaim    eq     $49.24   51.1   1.72    VWAP reclaim V|
+|  CXT      Pullback50      eq     $50.29   39.6   -1.84   50MA bounce (+|
+|  EXEL     Pullback50      eq     $54.08   47.1   -1.63   50MA bounce (-|
+|  FCFS     TrendResumpti~  eq     $225.57  61.8   1.28    HH/HL resumpti|
+|  FCFS     VWAP_Reclaim    eq     $225.57  61.8   1.28    VWAP reclaim V|
+|  GHC      Pullback50      eq     $1171.~  37.3   0.75    50MA bounce (-|
+|  KRYS     Pullback50      eq     $346.33  72.1   -0.65   50MA bounce (+|
+|  TEX      Pullback50      eq     $66.52   55.8   -0.75   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+20:00:04  INFO        BUY  DE  $46.06  [EarningsDrift]  id=ae3ea832-f930-4a09-b9dd-c006699a16fd
+20:00:05  INFO        BUY  AES  $46.06  [Pullback50]  id=f949fbdb-453d-4c82-b144-2b542aa62b29
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
