@@ -20226,11 +20226,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-08-21.log
 elapsed=1.5s reconcile=0.09s cancel=0.05s manage=0.79s
 
-=== 14:49:54 ET — manage-only (past entry window) [elapsed=2.6s reconcile=0.3s cancel=0.12s manage=1.4s] ===
-=== options_morning_bot (PAPER) 2026-08-21T14:49:54.672548-04:00 ===
+=== 14:51:12 ET — manage-only (past entry window) [elapsed=2.8s reconcile=0.29s cancel=0.14s manage=1.54s] ===
+=== options_morning_bot (PAPER) 2026-08-21T14:51:12.127381-04:00 ===
 
 [Run context]
-Paper auth OK — equity $999993.97, account PA33P8KT02IL
+Paper auth OK — equity $999995.97, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> grid:100:live_1to1
 
 [Setup]
@@ -20244,14 +20244,14 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $999,993.97
+Account equity: $999,995.97
 Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Realized (sold):     $-998.81 all-time  |  $+0.00 today
-  Open (not sold yet): $-6.00 unrealized (virtual lots)
+  Open (not sold yet): $-4.00 unrealized (virtual lots)
   Premium deployed:    $28.00 in open positions
-  Combined P&L:        $-1,004.81 (reflected realized + open virtual)
+  Combined P&L:        $-1,002.81 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     11998
@@ -20261,7 +20261,7 @@ Ledger (master)
   Avg return/trade: +13.1%  median -41.2%
 
 Open virtual lots (by bucket)
-  b0 baseline                prem=$    28  real=$ +0.00  open=$ -6.00  lots=1  [S210:AMDx1]
+  b0 baseline                prem=$    28  real=$ +0.00  open=$ -4.00  lots=1  [S210:AMDx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-40%
   b56 g056_lim_tp20_sl65      prem=$     0  real=$+20.52  open=$ +0.00  lots=0  [-]
        buy: ask-0.10  sell: bid-0.05  tp=+20% sl=-65%
@@ -20305,7 +20305,7 @@ Open virtual lots (by bucket)
   (62 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  AMD260824C00500000  qty=1  cost=$28.00  return=-21.4%  open P&L=$-6.00
+  AMD260824C00500000  qty=1  cost=$28.00  return=-14.3%  open P&L=$-4.00
 
 Per-bucket exit stats (all time)
   b0|c000_s173_w1_0928_1005_r1  n= 22  avg=+24.8%  med=+34.9%  realized=$+283.00
@@ -20739,7 +20739,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $999,993.97                                              |
+|Equity       : $999,995.97                                              |
 |Open Risk    : 1 lots (1 broker pos)                                    |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -20782,8 +20782,8 @@ Per-bucket exit stats (all time)
 +========================================================================+
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
-|  AMD260824C00500000            1    -21.4%   $     -6.00               |
+|  AMD260824C00500000            1    -14.3%   $     -4.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-08-21.log
-elapsed=2.6s reconcile=0.3s cancel=0.12s manage=1.4s
+elapsed=2.8s reconcile=0.29s cancel=0.14s manage=1.54s
 
