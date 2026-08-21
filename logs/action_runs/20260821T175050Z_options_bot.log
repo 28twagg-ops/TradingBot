@@ -1,3 +1,84 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=1 paper_keys=yes dry_run=False
+  alpaca positions=1
+options_reconcile: done
+Layout: grid:100:live_1to1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> grid:100:live_1to1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-08-21T13:50:55.765669-04:00 ===
+
+[Run context]
+Paper auth OK — equity $999993.97, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Allowed (new entries only): S218, S404, S406
+
+[Manage only]
+Past entry window; manage/exit only.
+
+[Portfolio snapshot]
++========================================================================+
+|[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
++========================================================================+
+|-- ACCOUNT STATUS (manage-only) --                                      |
+|Equity       : $999,993.97                                              |
+|Open Risk    : 1 lots (1 broker pos)                                    |
+|Today's Run  : 0 signals -> 0 orders submitted                          |
+|                                                                        |
+|-- SYSTEM HEALTH --                                                     |
+|Zombies      : 0 (Ledger is clean)                                      |
+|Lab Status   : 1 Active Lots | 0 Pending Orders                         |
+|Auto-Matrix  : (Pending EOD report generation)                          |
++========================================================================+
++========================================================================+
+|[DATA QUALITY: CLEAN vs ERRORS vs KEEP-ONLY]                            |
++========================================================================+
+|  CLEAN              n=821   win= 41.8%  med= -47.5%  $+8,207           |
+|  TAINTED            n=1761  win= 33.0%  med= -39.3%  $-9,205           |
+|  KEEP-only          n=294   win= 63.3%  med= +37.5%  $+5,699           |
+|  KEEP recent        n=106   win= 58.5%  med= +50.0%  $+1,673           |
+|  KEEP(10): S173,S174,S210,S218,S350,S397,S398,S401...                  |
+|  KILL(16): ORPHAN,S165,S203,S207,S211,S212,S217,S351...                |
++========================================================================+
++========================================================================+
+|[+++ OVERPERFORMING STRATEGIES (n>=10)]                                 |
++========================================================================+
+|  BKT  PROFILE                   WIN%   MED%   TOTAL TRADES             |
+|  ---------------------------------------------------------             |
+|  b832 lab0832_s406_w3_1045..  82%  +126.9%    11                       |
+|  b238 lab0238_s401_w3_1045..  80%  +109.5%    15                       |
+|  b861 lab0861_s408_w3_1045..  73%  +100.0%    11                       |
+|  b365 lab0365_s361_w2_1005..  90%  +82.8%    10                        |
++========================================================================+
+|[--- UNDERPERFORMING STRATEGIES (n>=10)]                                |
++========================================================================+
+|  BKT  PROFILE                   WIN%   MED%   TOTAL TRADES             |
+|  ---------------------------------------------------------             |
+|  b47  g047_lim_tp20_sl50       4%  -78.0%    28                        |
+|  b109 c109_s202_w3_1045_11..   0%  -77.5%    10                        |
+|  b114 lab0114_s212_w4_1120..   0%  -73.5%    11                        |
+|  b113 lab0113_s212_w3_1045..   7%  -71.4%    15                        |
++========================================================================+
++========================================================================+
+|[OPEN OPTIONS (1)]                                                      |
++========================================================================+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|  ---------------------------------------------------------             |
+|  AMD260824C00500000            1    -21.4%   $     -6.00               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-08-21.log
+elapsed=1.6s reconcile=0.08s cancel=0.02s manage=1.06s
+STATUS: options_morning_bot run complete (PAPER) elapsed=1.6s. run=#7790 https://github.com/28twagg-ops/TradingBot/actions/runs/32510201054
+Evaluation complete: 100 strategies evaluated, 0 killed, 0 promote candidates.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-21_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-21_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-21_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-21_strategy_selection.csv
+Summary: keep=0 watch=79 drop=26
+Orphan rate: 13.4% (345/2582) ALERT
 # Options signal frequency
 
 _Generated 2026-08-21T13:51:02.441170_
@@ -100,3 +181,30 @@ Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:
 
 - Pre-router-fix (before 2026-07-17 commit `56660c9e`): S163/S166 were starved — expect zeros until a post-fix entry-window gap-down day.
 - Controlled layout places one ENTRY per matching bucket×strategy; raw counts inflate, unique underlyings do not.
+
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/signal_frequency.md
+## Ledger health — 2026-08-21
+| Check                       | Count | Status |
+|-----------------------------|------:|--------|
+| Current stuck (state)       |     0 | OK |
+| Orphaned lots (post-stable) |   975 | WARN | <<<
+| Missing exit records (post) |   975 | WARN | <<<
+| State/ledger mismatches     |     0 | OK |
+| Total open lots             |     1 | INFO |
+| Total closed lots           |  1770 | INFO |
+| Pre-cutoff audit debt       |     0 | INFO |
+| Transition audit debt       |   744 | INFO |
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_health.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-21_data_quality.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-21_data_quality.csv
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/latest_data_quality.json
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/latest_data_quality_snippet.md
+CLEAN n=821 med=-47.5% | TAINTED n=1761 med=-39.3% | KEEP-only n=294 med=+37.5% | KILL=16 KEEP=10
+Wrote /home/runner/work/TradingBot/TradingBot/logs/dashboard.html
+equity=316.87 router=CONFIRMED leaderboard_rows=105
+Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
+| 1 | MA_Squeeze | 2 | 100% | +0.56% | +0.56% | +0.17% | 999.00 | 0.0d | $+0.80 | WATCH |
+| 2 | MomReversal | 15 | 47% | +0.39% | -0.60% | -1.81% | 1.99 | 1.7d | $+3.53 | WATCH |
+| 3 | unknown | 32 | 19% | -0.03% | -0.59% | -1.27% | 1.44 | 0.0d | $+0.29 | ACTIVE |
