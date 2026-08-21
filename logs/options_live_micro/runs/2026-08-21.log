@@ -906,3 +906,8 @@ Live micro cancel-scan WMT260821C00110000: matched n=0
 Live micro cancel-scan WMT260821C00110000: no non-OLS sell to cancel
 LIVE EXIT failed WMT260821C00110000: {"code":42210000,"message":"contract \"WMT260821C00110000\" is expired"}
 Live micro done. open_options=1 lots=1
+=== options_live_micro LIVE 2026-08-21T16:51:02.255067-04:00 share=25% ===
+Live account equity $307.09 cash $236.27 #225458845 options_level=3
+Live micro known_expired +WMT260821C00110000 (manage_expired)
+LIVE EXIT expired-settle WMT260821C00110000 (no sell; await broker)
+Live micro done. open_options=1 lots=0
