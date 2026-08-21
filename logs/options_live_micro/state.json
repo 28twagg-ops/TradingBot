@@ -1,5 +1,20 @@
 {
-  "lots": [],
+  "lots": [
+    {
+      "lot_id": "cd1a0b9afa68",
+      "strategy_id": "S210",
+      "occ": "AMD260824C00497500",
+      "underlying": "AMD",
+      "qty": 1,
+      "entry_price": 0.62,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "order_id": "d46f8249-4f0d-4167-bd7b-a6b0747ab0ab",
+      "pending": true
+    }
+  ],
   "used_day": "2026-08-21",
-  "used_strategies": []
+  "used_strategies": [
+    "S210"
+  ]
 }
