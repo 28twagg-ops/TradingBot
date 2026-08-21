@@ -1,0 +1,215 @@
+19:45:50  INFO      Mode: scan
+19:45:50  INFO        [positions] 1/1 (1 valid)
+19:45:50  INFO        Universe cache hit: 903 tickers (tickers_2026-08-21.json)
+19:45:52  INFO        [universe] 40/902 (40 valid)
+19:45:55  INFO        [universe] 80/902 (80 valid)
+19:45:57  INFO        [universe] 120/902 (120 valid)
+19:46:00  INFO        [universe] 160/902 (160 valid)
+19:46:03  INFO        [universe] 200/902 (199 valid)
+19:46:05  INFO        [universe] 240/902 (238 valid)
+19:46:17  INFO        [universe] 280/902 (278 valid)
+19:46:28  INFO        [universe] 320/902 (318 valid)
+19:46:40  INFO        [universe] 360/902 (358 valid)
+19:46:53  INFO        [universe] 400/902 (397 valid)
+19:47:04  INFO        [universe] 440/902 (437 valid)
+19:47:17  INFO        [universe] 480/902 (477 valid)
+19:47:28  INFO        [universe] 520/902 (517 valid)
+19:47:39  INFO        [universe] 560/902 (557 valid)
+19:47:52  INFO        [universe] 600/902 (597 valid)
+19:48:03  INFO        [universe] 640/902 (637 valid)
+19:48:16  INFO        [universe] 680/902 (677 valid)
+19:48:28  INFO        [universe] 720/902 (717 valid)
+19:48:41  INFO        [universe] 760/902 (757 valid)
+19:48:52  INFO        [universe] 800/902 (797 valid)
+19:49:03  INFO        [universe] 840/902 (836 valid)
+19:49:16  INFO        [universe] 880/902 (876 valid)
+19:49:23  INFO        [universe] 902/902 (898 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $307.05|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-08-21|
+|  Universe                                                          both|
+|  Mo~  Aug: VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $307.05|
+|  Cash                                                           $236.35|
+|  Reserve                                          $15.35  (always kept)|
+|  Stocks~  $70.70 / $230.29  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $-9.00  (1 contract)|
+|  Available                                    $159.59  (new stock buys)|
+|  Trade size             $46.06  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (1 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AON      Pullback50      $70.70     $350.82  $354.52  +1.1%   $+0.74  |
+|                                                                        |
+|  Total invested                                                  $70.70|
+|  Total open P&L                                                  $+0.74|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (93611.7m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AON  P&L +1.1%  $+0.74                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  23                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.77   59.0   -0.23   50MA bounce (+|
+|  CHD      Pullback50      eq     $98.72   45.3   -1.58   50MA bounce (+|
+|  CNC      Pullback50      eq     $64.75   52.4   -1.19   50MA bounce (-|
+|  CL       Pullback50      eq     $91.11   54.9   -1.72   50MA bounce (-|
+|  CTVA     Pullback50      eq     $81.53   70.9   -0.96   50MA bounce (-|
+|  DE       EarningsDrift   eq     $651.30  64.6   1.13    post-earnings |
+|  ETN      Pullback50      eq     $420.17  39.6   -1.07   50MA bounce (+|
+|  ESS      Pullback50      eq     $288.25  53.8   -1.43   50MA bounce (-|
+|  DOC      Pullback50      eq     $21.32   45.7   -1.17   50MA bounce (-|
+|  KVUE     Pullback50      eq     $19.09   51.3   -1.48   50MA bounce (+|
+|  KMB      Pullback50      eq     $109.38  54.3   -1.01   50MA bounce (+|
+|  PHM      Pullback50      eq     $129.12  49.7   -1.75   50MA bounce (+|
+|  SYF      TrendResumpti~  eq     $79.58   57.0   0.65    HH/HL resumpti|
+|  AMG      Pullback50      eq     $356.50  32.0   -1.28   50MA bounce (-|
+|  AVT      Pullback50      eq     $88.91   50.0   -1.15   50MA bounce (-|
+|  BJ       RSIRecovery     eq     $95.15   43.2   1.35    RSI 21.1→43.2 |
+|  BJ       VWAP_Reclaim    eq     $95.15   43.2   1.35    VWAP reclaim V|
+|  CG       VWAP_Reclaim    eq     $49.33   52.6   1.47    VWAP reclaim V|
+|  EXEL     Pullback50      eq     $54.11   47.2   -1.72   50MA bounce (-|
+|  FCFS     TrendResumpti~  eq     $226.94  62.6   0.79    HH/HL resumpti|
+|  GHC      Pullback50      eq     $1164.~  34.2   0.22    50MA bounce (-|
+|  KRYS     Pullback50      eq     $345.88  71.9   -0.77   50MA bounce (+|
+|  TEX      Pullback50      eq     $66.66   56.2   -0.91   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] DE  EarningsDrift                                  $46.06|19:49:26  INFO        BUY  DE  $46.06  [EarningsDrift]  id=3c303115-db92-47e2-8ea2-3f5b7f7e6d94
+19:49:26  INFO        BUY  AES  $46.06  [Pullback50]  id=10f7cd8f-08f9-48b8-b42e-b033cf72bbae
+19:49:48  INFO        place_all_stops: checking 4 positions...
+19:49:48  INFO        STOP-MARKET placed AES  qty=3 (pos=3.1189)  stop=$14.69  id=a975cb89-f5bb-496a-b5a4-917a8bcea5ed
+19:49:48  INFO        STOP skipped AON: fractional (0.1994 shares) — software exit will handle it
+19:49:48  INFO        STOP skipped DE: fractional (0.0705 shares) — software exit will handle it
+19:49:48  INFO        place_eod_stops: updating 4 stops to current price...
+19:49:48  INFO        EOD stop: cancelled old stop AES
+19:49:48  INFO        EOD stop placed AES @ $14.69  (cur $14.76  qty=3)
+19:49:48  INFO        EOD stop skip AON: 0.1994 shares (fractional) — ext_exits will cover
+19:49:48  INFO        EOD stop skip DE: 0.0705 shares (fractional) — ext_exits will cover
+19:49:48  INFO        Daily log -> logs/daily/2026-08-21.md
+19:49:48  INFO        Dashboard written → logs/dashboard.md
+
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AES  Pullback50                                    $46.06|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] CHD  Pullback50                                      cap 3|
+|    SKIP [eq] CNC  Pullback50                                      cap 3|
+|    SKIP [eq] CL  Pullback50                                       cap 3|
+|    SKIP [eq] CTVA  Pullback50                                     cap 3|
+|    SKIP [eq] ETN  Pullback50                                      cap 3|
+|    SKIP [eq] ESS  Pullback50                                      cap 3|
+|    SKIP [eq] DOC  Pullback50                                      cap 3|
+|    SKIP [eq] KVUE  Pullback50                                     cap 3|
+|    SKIP [eq] KMB  Pullback50                                      cap 3|
+|    SKIP [eq] PHM  Pullback50                                      cap 3|
+|    SKIP [eq] AMG  Pullback50                                      cap 3|
+|    SKIP [eq] AVT  Pullback50                                      cap 3|
+|    SKIP [eq] EXEL  Pullback50                                     cap 3|
+|    SKIP [eq] GHC  Pullback50                                      cap 3|
+|    SKIP [eq] KRYS  Pullback50                                     cap 3|
+|    SKIP [eq] TEX  Pullback50                                      cap 3|
+|    SKIP [eq] BJ  RSIRecovery                                      cap 3|
+|    SKIP [eq] SYF  TrendResumption                                 cap 3|
+|    SKIP [eq] FCFS  TrendResumption                                cap 3|
+|    SKIP [eq] BJ  VWAP_Reclaim                                     cap 3|
+|    SKIP [eq] CG  VWAP_Reclaim                                     cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  DE                                                   still unconfirmed|
+|  AES                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Scanned                                                            898|
+|  Signals                                                             23|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $307.09|
+|  Cash                                                           $144.25|
++========================================================================+
