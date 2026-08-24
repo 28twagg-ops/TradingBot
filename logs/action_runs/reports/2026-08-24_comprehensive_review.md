@@ -1551,3 +1551,132 @@ Fetched daily bars for 114/117 symbols
 ```
 
 ---
+
+## Run 20260824T135118Z
+
+- UTC timestamp: `20260824T135118Z`
+- GitHub run: [#7874](https://github.com/28twagg-ops/TradingBot/actions/runs/32735010436)
+- Run id: `32735010436`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260824T135118Z_live_bot.log`, `logs/action_runs/20260824T135118Z_live_options.log`, `logs/action_runs/20260824T135118Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-24T09:28:09.803448-04:00","date":"2026-08-24","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":55.2,"phases_s":{"reconcile":0.09,"cancel":0.02,"manage":0.04,"protective_stops":0.02,"scan":54.59,"entries":0.02},"signals":0,"placed":0,"equity":999987.88,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"7869","github_run_id":"32732556989","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1761,"win":33.05,"med":-39.29,"avg":12.19,"pnl":-9205.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (65 earlier lines - see full log file)
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (66245.9m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  47                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.77   65.5   -1.28   50MA bounce (+|
+|  AXP      Pullback50      eq     $341.92  45.1   -2.72   50MA bounce (-|
+|  AIG      Pullback50      eq     $77.58   40.3   -3.01   50MA bounce (-|
+|  AME      Pullback50      eq     $239.47  27.8   -2.14   50MA bounce (-|
+|  BRK-B    Pullback50      eq     $502.61  39.2   -3.15   50MA bounce (+|
+|  CAH      Pullback50      eq     $231.30  46.9   -2.75   50MA bounce (-|
+|  CDW      Pullback50      eq     $136.26  31.5   -1.62   50MA bounce (-|
+|  CNC      Pullback50      eq     $65.65   53.8   -1.63   50MA bounce (+|
+|  CB       Pullback50      eq     $345.74  46.7   -2.93   50MA bounce (+|
+|  CL       Pullback50      eq     $92.30   49.0   -2.68   50MA bounce (+|
+|  CFG      Pullback50      eq     $70.86   35.5   -2.43   50MA bounce (-|
+|  DHI      Pullback50      eq     $150.43  50.1   -2.97   50MA bounce (-|
+|  EIX      Pullback50      eq     $73.41   57.1   -2.07   50MA bounce (-|
+|  EXR      Pullback50      eq     $146.84  36.5   -1.58   50MA bounce (-|
+|  DOC      Pullback50      eq     $21.61   49.8   -2.29   50MA bounce (+|
+|  HLT      Pullback50      eq     $331.64  64.3   -2.71   50MA bounce (+|
+|  MTB      Pullback50      eq     $244.22  34.9   -2.51   50MA bounce (+|
+|  MS       Pullback50      eq     $215.34  47.5   -2.43   50MA bounce (-|
+|  PNC      Pullback50      eq     $246.85  38.3   -2.40   50MA bounce (-|
+|  PFG      Pullback50      eq     $112.25  38.1   -1.73   50MA bounce (+|
+|  PLD      Pullback50      eq     $142.69  63.7   -1.17   50MA bounce (-|
+|  PSA      Pullback50      eq     $323.15  42.9   -1.86   50MA bounce (+|
+|  O        Pullback50      eq     $63.31   53.8   -2.05   50MA bounce (+|
+|  RF       Pullback50      eq     $30.98   36.1   -2.98   50MA bounce (+|
+|  TFC      Pullback50      eq     $51.30   39.3   -3.23   50MA bounce (-|
+|  USB      Pullback50      eq     $62.87   39.9   -2.20   50MA bounce (+|
+|  URI      Pullback50      eq     $1100.~  36.6   -2.96   50MA bounce (+|
+|  WM       Pullback50      eq     $227.54  56.3   -2.78   50MA bounce (-|
+|  AM       Pullback50      eq     $22.07   52.4   -2.14   50MA bounce (-|
+|  AMG      Pullback50      eq     $358.99  32.0   -2.84   50MA bounce (-|
+|  BC       Pullback50      eq     $81.24   41.5   -2.50   50MA bounce (+|
+|  CHH      Pullback50      eq     $110.74  54.7   -2.30   50MA bounce (+|
+|  CUZ      Pullback50      eq     $30.08   40.1   -2.31   50MA bounce (-|
+|  ELAN     Pullback50      eq     $24.41   44.2   -1.37   50MA bounce (-|
+|  EPR      Pullback50      eq     $60.72   47.2   -2.98   50MA bounce (+|
+|  EWBC     Pullback50      eq     $131.35  43.1   -2.80   50MA bounce (-|
+|  FFIN     Pullback50      eq     $34.48   36.1   -3.21   50MA bounce (-|
+|  GATX     Pullback50      eq     $178.60  40.7   -2.20   50MA bounce (-|
+|  GHC      Pullback50      eq     $1173.~  38.8   -2.80   50MA bounce (+|
+|  HWC      Pullback50      eq     $75.96   35.7   -3.07   50MA bounce (+|
+|  MSM      Pullback50      eq     $120.67  36.4   -3.26   50MA bounce (-|
+|  ONB      Pullback50      eq     $26.04   30.8   -2.85   50MA bounce (-|
+|  PB       Pullback50      eq     $73.65   40.9   -2.69   50MA bounce (+|
+|  RS       Pullback50      eq     $396.96  40.8   -1.87   50MA bounce (-|
+|  SLAB     Pullback50      eq     $218.04  46.8   -2.15   50MA bounce (-|
+|  UNM      Pullback50      eq     $88.86   43.0   -2.32   50MA bounce (-|
+|  ZION     Pullback50      eq     $69.04   35.5   -2.47   50MA bounce (-|13:54:58  INFO        BUY  AES  $46.24  [Pullback50]  id=ae031e08-91e4-47f5-b1fb-0a7f6e7e2212
+13:54:58  INFO        BUY  AXP  $46.24  [Pullback50]  id=2429b0eb-768c-4d37-a348-cf5dfc0a53e8
+13:54:59  INFO        BUY  AIG  $46.24  [Pullback50]  id=556cd0d0-ffb8-4e3b-977f-bfa0c1918dbe
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
