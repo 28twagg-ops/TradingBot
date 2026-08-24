@@ -5857,3 +5857,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-24 21:51:41,ext_exits,bull,307.99,215.6,0,0,0,2,AIG|GOOGL,both
 2026-08-24 21:55:52,ext_exits,bull,307.99,215.6,0,0,0,2,AIG|GOOGL,both
 2026-08-24 22:01:02,ext_exits,bull,307.98,215.6,0,0,0,2,AIG|GOOGL,both
+2026-08-24 22:05:53,ext_exits,bull,307.98,215.6,0,0,0,2,AIG|GOOGL,both
