@@ -1138,3 +1138,6 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-21 15:05:57,2026-08-21,SELL,AME,Pullback50,238.3,57.98,-0.65,-0.38,0,stop_loss (-0.6%),bull,328.38
 2026-08-21 19:51:32,2026-08-21,SELL,DE,EarningsDrift,652.21,46.0,-0.07,-0.03,0,midline (-0.1%),bull,307.0
 2026-08-21 19:52:03,2026-08-21,SELL,AES,Pullback50,14.76,46.02,0.0,0.0,0,midline (+0.0%),bull,306.98
+2026-08-24 13:46:51,2026-08-24,SELL,AES,Pullback50,14.76,46.09,0.1,0.05,0,midline (+0.1%),bull,308.45
+2026-08-24 13:47:21,2026-08-24,SELL,DE,EarningsDrift,657.82,46.18,0.26,0.12,0,midline (+0.3%),bull,308.39
+2026-08-24 13:47:42,2026-08-24,SELL,AON,Pullback50,360.55,71.9,3.11,2.18,4,max_hold 4d (+3.1%),bull,308.28

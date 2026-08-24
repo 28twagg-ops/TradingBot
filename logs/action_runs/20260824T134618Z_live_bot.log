@@ -1,0 +1,29 @@
+13:46:19  INFO      Mode: morning_scan
+13:46:20  INFO        [positions] 3/3 (3 valid)
+13:46:21  INFO        SELL LIMIT AES  qty=3.122033898  limit=$14.76  id=f1246543-a3a2-4789-9e06-8b310fa05a55
+13:46:51  INFO        SELL LIMIT filled AES (confirmed by position check)
+13:46:51  INFO        TX logged: SELL AES  P&L 0.1%
+13:46:51  INFO        SELL LIMIT DE  qty=0.070207802  limit=$657.01  id=cf03c000-5551-46d2-b3bf-94e77614a743
+13:47:21  INFO        SELL LIMIT filled DE (confirmed by position check)
+13:47:21  INFO        TX logged: SELL DE  P&L 0.26%
+13:47:21  INFO        SELL LIMIT AON  qty=0.199420778  limit=$360.36  id=98effcc2-d092-45b3-8f98-f7f5f37c5b20
+13:47:41  INFO        SELL LIMIT filled AON (confirmed by position check)
+13:47:42  INFO        TX logged: SELL AON  P&L 3.11%
+13:47:42  INFO        Universe cache hit: 903 tickers (tickers_2026-08-24.json)
+13:47:43  INFO        [universe] 40/903 (40 valid)
+13:47:44  INFO        [universe] 80/903 (80 valid)
+13:47:45  INFO        [universe] 120/903 (120 valid)
+13:47:47  INFO        [universe] 160/903 (160 valid)
+13:47:48  INFO        [universe] 200/903 (199 valid)
+13:47:55  INFO        [universe] 240/903 (238 valid)
+13:48:06  INFO        [universe] 280/903 (278 valid)
+13:48:19  INFO        [universe] 320/903 (318 valid)
+13:48:33  INFO        [universe] 360/903 (358 valid)
+13:48:43  INFO        [universe] 400/903 (397 valid)
+13:48:56  INFO        [universe] 440/903 (437 valid)
+13:49:06  INFO        [universe] 480/903 (477 valid)
+13:49:19  INFO        [universe] 520/903 (517 valid)
+13:49:32  INFO        [universe] 560/903 (557 valid)
+13:49:42  INFO        [universe] 600/903 (597 valid)
+13:49:56  INFO        [universe] 640/903 (637 valid)
+13:50:06  INFO        [universe] 680/903 (677 valid)
