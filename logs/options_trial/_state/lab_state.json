@@ -4,10 +4,8 @@
   "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {},
-  "session_date": "2026-08-21",
-  "entries_locked": [
-    "0|S210|2026-08-21"
-  ],
+  "session_date": "2026-08-24",
+  "entries_locked": [],
   "processed_orders": [
     "88b24066-5228-4787-bfc8-1fa4c0ac267f",
     "de934505-7c85-4be9-8c87-4ee33a7334a8",
@@ -468,7 +466,7 @@
     "5c58cc66-601b-4648-b5cb-68a2a63412e1",
     "eecf050a-aa02-4c95-ae14-dbcd4ec6a435"
   ],
-  "submitted_today": 1,
+  "submitted_today": 0,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
-  "updated": "2026-08-21"
+  "updated": "2026-08-24"
 }
