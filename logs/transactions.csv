@@ -1144,3 +1144,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-24 13:57:27,2026-08-24,SELL,AXP,Pullback50,342.38,46.21,-0.07,-0.03,0,midline (-0.1%),bull,308.17
 2026-08-24 13:57:57,2026-08-24,SELL,AES,Pullback50,14.76,46.23,-0.04,-0.02,0,midline (-0.0%),bull,308.14
 2026-08-24 15:40:58,2026-08-24,SELL,AIG,Pullback50,77.28,45.96,-0.59,-0.27,0,stop_loss (-0.6%),bull,307.98
+2026-08-24 19:52:08,2026-08-24,SELL,AES,Pullback50,14.76,46.19,-0.01,-0.0,0,midline (-0.0%),bull,307.91
