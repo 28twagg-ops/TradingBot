@@ -40,7 +40,7 @@ from alpaca.trading.requests import (
 )
 from alpaca.trading.enums import OrderSide, TimeInForce, QueryOrderStatus, OrderType
 from alpaca.data.historical import OptionHistoricalDataClient, StockHistoricalDataClient
-from alpaca.data.requests import OptionChainRequest, StockBarsRequest
+from alpaca.data.requests import OptionChainRequest, StockBarsRequest, StockSnapshotRequest
 from alpaca.data.timeframe import TimeFrame
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -906,6 +906,141 @@ def _fetch_one_bar(stock, alpaca_sym: str, start: datetime):
     return None
 
 
+def _bars_max_date(df: pd.DataFrame | None) -> date | None:
+    """Latest calendar date (ET) present in a multi-index bars frame."""
+    if df is None or getattr(df, "empty", True):
+        return None
+    try:
+        ts = df.index.get_level_values(-1)
+        last = pd.Timestamp(ts.max())
+        if last.tzinfo is not None:
+            last = last.tz_convert(ET)
+        return last.date()
+    except Exception:
+        return None
+
+
+def _bars_cover_today(df: pd.DataFrame | None, today: date | None = None) -> bool:
+    today = today or TODAY
+    mx = _bars_max_date(df)
+    return mx is not None and mx >= today
+
+
+def _symbols_missing_today(df: pd.DataFrame, today: date | None = None) -> list[str]:
+    """Alpaca symbols whose last daily bar is before today."""
+    today = today or TODAY
+    missing: list[str] = []
+    if df is None or df.empty:
+        return missing
+    try:
+        symbols = df.index.get_level_values(0).unique()
+    except Exception:
+        return missing
+    for sym in symbols:
+        try:
+            sub = df.xs(sym, level=0)
+            last = pd.Timestamp(sub.index.max())
+            if last.tzinfo is not None:
+                last = last.tz_convert(ET)
+            if last.date() < today:
+                missing.append(str(sym))
+        except Exception:
+            missing.append(str(sym))
+    return missing
+
+
+def _bar_row_from_snap_bar(bar, ts_fallback: datetime) -> dict | None:
+    if bar is None:
+        return None
+    try:
+        ts = getattr(bar, "timestamp", None) or ts_fallback
+        return {
+            "open": float(bar.open),
+            "high": float(bar.high),
+            "low": float(bar.low),
+            "close": float(bar.close),
+            "volume": float(getattr(bar, "volume", 0) or 0),
+            "timestamp": pd.Timestamp(ts),
+        }
+    except Exception:
+        return None
+
+
+def _backfill_today_from_snapshots(
+    stock, df: pd.DataFrame, missing: list[str], today: date
+) -> pd.DataFrame:
+    """Append today's (possibly partial) daily bar via stock snapshots.
+
+    Alpaca day bars often lag / omit the current session early on; snapshots
+    expose `daily_bar` for the live session so gap/BB scanners can fire.
+    """
+    if not missing:
+        return df
+    added = 0
+    rows: list[pd.DataFrame] = []
+    # Snapshot API accepts batches; keep chunks modest.
+    for i in range(0, len(missing), 50):
+        batch = missing[i:i + 50]
+        try:
+            snaps = stock.get_stock_snapshot(
+                StockSnapshotRequest(symbol_or_symbols=batch)
+            ) or {}
+        except Exception as exc:
+            log.warning("Snapshot backfill failed batch %d: %s", i, exc)
+            continue
+        if not isinstance(snaps, dict):
+            # Some SDK versions return a mapping-like object
+            try:
+                snaps = dict(snaps)
+            except Exception:
+                continue
+        noon = datetime(today.year, today.month, today.day, 12, 0, tzinfo=ET)
+        for sym in batch:
+            snap = snaps.get(sym)
+            if snap is None:
+                continue
+            daily = getattr(snap, "daily_bar", None)
+            row = _bar_row_from_snap_bar(daily, noon)
+            if row is None:
+                continue
+            # Reject snapshot bars that aren't for today.
+            try:
+                bts = pd.Timestamp(row["timestamp"])
+                if bts.tzinfo is not None:
+                    bts = bts.tz_convert(ET)
+                if bts.date() < today:
+                    continue
+            except Exception:
+                pass
+            part = pd.DataFrame(
+                [{
+                    "open": row["open"],
+                    "high": row["high"],
+                    "low": row["low"],
+                    "close": row["close"],
+                    "volume": row["volume"],
+                }],
+                index=pd.MultiIndex.from_tuples(
+                    [(sym, pd.Timestamp(row["timestamp"]))],
+                    names=["symbol", "timestamp"],
+                ),
+            )
+            rows.append(part)
+            added += 1
+    if not rows:
+        rl_file(f"  Daily bars snapshot backfill: 0/{len(missing)} symbols got today")
+        return df
+    extra = pd.concat(rows)
+    combined = pd.concat([df, extra])
+    if combined.index.duplicated().any():
+        combined = combined[~combined.index.duplicated(keep="last")]
+    rl_file(
+        f"  Daily bars snapshot backfill: +{added}/{len(missing)} symbols "
+        f"(max_date={_bars_max_date(combined)})"
+    )
+    return combined
+
+
 def _fetch_daily_bars(stock, universe: list[str], start: datetime):
     """Fetch daily bars in chunks; per-symbol fallback if a chunk fails."""
     chunks: list[pd.DataFrame] = []
@@ -943,11 +1078,25 @@ def _fetch_daily_bars(stock, universe: list[str], start: datetime):
 
 
 def _fetch_daily_bars_cached(stock, universe: list[str], start: datetime):
-    """Session + on-disk cache: daily bars keyed by calendar day (ET)."""
+    """Session + on-disk cache keyed by calendar day (ET).
+
+    Never reuse a cache whose latest bar is before today — that blacked out
+    all scanners after weekends (max date stayed on Friday). Incomplete
+    fetches are backfilled from stock snapshots and are not written to disk
+    until they cover today.
+    """
     key = TODAY.isoformat()
+
     if key in _BARS_CACHE:
-        rl_file(f"  Daily bars cache hit ({key})")
-        return _BARS_CACHE[key]
+        df, failed = _BARS_CACHE[key]
+        if df is not None and _bars_cover_today(df):
+            rl_file(f"  Daily bars cache hit ({key})")
+            return df, failed
+        _BARS_CACHE.pop(key, None)
+        rl_file(
+            f"  Daily bars session cache stale "
+            f"(max={_bars_max_date(df)} < {TODAY}); refetching"
+        )
 
     cache_dir = Path(__file__).resolve().parent.parent / "logs" / "cache"
     cache_dir.mkdir(parents=True, exist_ok=True)
@@ -955,22 +1104,50 @@ def _fetch_daily_bars_cached(stock, universe: list[str], start: datetime):
     if cache_file.exists():
         try:
             df = pd.read_parquet(cache_file)
-            failed: list[str] = []
-            _BARS_CACHE[key] = (df, failed)
-            rl_file(f"  Daily bars disk cache hit ({cache_file.name})")
-            return df, failed
+            if _bars_cover_today(df):
+                failed_disk: list[str] = []
+                _BARS_CACHE[key] = (df, failed_disk)
+                rl_file(f"  Daily bars disk cache hit ({cache_file.name})")
+                return df, failed_disk
+            rl_file(
+                f"  Daily bars disk cache stale "
+                f"({cache_file.name} max={_bars_max_date(df)}); refetching"
+            )
+            try:
+                cache_file.unlink()
+            except Exception:
+                pass
         except Exception as exc:
             log.warning("Disk bar cache read failed (%s): %s", cache_file.name, exc)
 
     result = _fetch_daily_bars(stock, universe, start)
-    _BARS_CACHE[key] = result
     df, failed = result
-    if df is not None and not df.empty:
+    if df is not None and not df.empty and not _bars_cover_today(df):
+        missing = _symbols_missing_today(df)
+        rl_file(
+            f"  Daily bars incomplete after fetch "
+            f"(max={_bars_max_date(df)}, missing_today={len(missing)}); "
+            f"snapshot backfill"
+        )
+        df = _backfill_today_from_snapshots(stock, df, missing, TODAY)
+        result = (df, failed)
+
+    if df is not None and not df.empty and _bars_cover_today(df):
+        _BARS_CACHE[key] = result
         try:
             df.to_parquet(cache_file)
-            rl_file(f"  Daily bars disk cache write ({cache_file.name})")
+            rl_file(
+                f"  Daily bars disk cache write ({cache_file.name} "
+                f"max={_bars_max_date(df)})"
+            )
         except Exception as exc:
             log.warning("Disk bar cache write failed: %s", exc)
+    else:
+        # Do not pin an incomplete frame in session/disk — next run retries.
+        rl_file(
+            f"  Daily bars still incomplete "
+            f"(max={_bars_max_date(df) if df is not None else None}); not caching"
+        )
     return result
 
 
