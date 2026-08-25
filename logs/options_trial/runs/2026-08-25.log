@@ -32151,11 +32151,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-08-25.log
 elapsed=1.2s reconcile=0.06s cancel=0.02s manage=0.44s
 
-=== 15:45:38 ET — manage-only (past entry window) [elapsed=1.6s reconcile=0.06s cancel=0.03s manage=0.7s] ===
-=== options_morning_bot (PAPER) 2026-08-25T15:45:38.594882-04:00 ===
+=== 15:40:08 ET — manage-only (past entry window) [elapsed=1.1s reconcile=0.08s cancel=0.03s manage=0.56s] ===
+=== options_morning_bot (PAPER) 2026-08-25T15:40:08.943224-04:00 ===
 
 [Run context]
-Paper auth OK — equity $999985.85, account PA33P8KT02IL
+Paper auth OK — equity $999979.85, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> grid:100:live_1to1
 
 [Setup]
@@ -32169,14 +32169,14 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $999,985.85
+Account equity: $999,979.85
 Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Realized (sold):     $-998.81 all-time  |  $+0.00 today
-  Open (not sold yet): $-2.00 unrealized (virtual lots)
+  Open (not sold yet): $-8.00 unrealized (virtual lots)
   Premium deployed:    $54.00 in open positions
-  Combined P&L:        $-1,000.81 (reflected realized + open virtual)
+  Combined P&L:        $-1,006.81 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     12000
@@ -32230,7 +32230,7 @@ Open virtual lots (by bucket)
   (62 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  NKE260828C00039500  qty=1  cost=$54.00  return=-3.7%  open P&L=$-2.00
+  NKE260828C00039500  qty=1  cost=$54.00  return=-14.8%  open P&L=$-8.00
 
 Per-bucket exit stats (all time)
   b0|c000_s173_w1_0928_1005_r1  n= 22  avg=+24.8%  med=+34.9%  realized=$+283.00
@@ -32664,7 +32664,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $999,985.85                                              |
+|Equity       : $999,979.85                                              |
 |Open Risk    : 1 lots (1 broker pos)                                    |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -32707,8 +32707,8 @@ Per-bucket exit stats (all time)
 +========================================================================+
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
-|  NKE260828C00039500            1     -3.7%   $     -2.00               |
+|  NKE260828C00039500            1    -14.8%   $     -8.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-08-25.log
-elapsed=1.6s reconcile=0.06s cancel=0.03s manage=0.7s
+elapsed=1.1s reconcile=0.08s cancel=0.03s manage=0.56s
 
