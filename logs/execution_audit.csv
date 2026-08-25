@@ -782,3 +782,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-08-24 19:52:08,2026-08-24,SELL,AES,Pullback50,14.755,14.75,14.755,46.19,0.0,0.0,limit_fill_position_check_full,midline (-0.0%),bull
 2026-08-25 13:47:24,2026-08-25,SELL,AIG,Pullback50,76.85,,76.85,45.88,0.0,0.0,market_urgent_full,stop_loss (-0.9%),bull
 2026-08-25 13:47:54,2026-08-25,SELL,AES,Pullback50,14.75,14.74,14.7402,46.15,-0.0664,-0.0307,limit_fill_position_check_full,midline (+0.0%),bull
+2026-08-25 13:57:31,2026-08-25,SELL,CAH,Pullback50,234.3,233.83,234.134,46.12,-0.0708,-0.0327,limit_fill_position_check_full,midline (+0.0%),bull
