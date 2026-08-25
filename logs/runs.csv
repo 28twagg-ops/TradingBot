@@ -5888,3 +5888,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-25 13:55:27,scan_morning,bull,307.52,169.12,10,0,0,3,AAPL|CAH|GOOGL,both
 2026-08-25 14:07:03,exits,bull,307.32,215.24,0,0,0,2,AAPL|GOOGL,both
 2026-08-25 14:11:09,exits,bull,307.28,215.24,0,0,0,2,AAPL|GOOGL,both
+2026-08-25 14:15:55,exits,bull,307.35,215.24,0,0,0,2,AAPL|GOOGL,both
