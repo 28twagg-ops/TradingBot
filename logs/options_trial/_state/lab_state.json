@@ -1,11 +1,36 @@
 {
   "version": 5,
-  "lots": [],
+  "lots": [
+    {
+      "lot_id": "dd4ea13e1f69",
+      "bucket_id": 90,
+      "profile_name": "live_1to1",
+      "strategy_id": "S404",
+      "occ_symbol": "NKE260828C00039500",
+      "underlying": "NKE",
+      "qty": 1,
+      "entry_cost": 54.0,
+      "entry_price": 0.54,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-25T14:08:05.319201+00:00",
+      "entry_order_id": "66aa0346-2660-418a-97c6-75c939d3691d"
+    }
+  ],
   "pending_orders": [],
   "pending_exits": [],
-  "bucket_open_premium": {},
+  "bucket_open_premium": {
+    "b90": 54.0
+  },
   "session_date": "2026-08-25",
-  "entries_locked": [],
+  "entries_locked": [
+    "90|S404|2026-08-25"
+  ],
   "processed_orders": [
     "88b24066-5228-4787-bfc8-1fa4c0ac267f",
     "de934505-7c85-4be9-8c87-4ee33a7334a8",
@@ -464,9 +489,10 @@
     "765711f0-1da8-4e47-adca-2d2eef1e6e9a",
     "9e51c3a4-9f0d-4abd-9f42-6205a71a371d",
     "5c58cc66-601b-4648-b5cb-68a2a63412e1",
-    "eecf050a-aa02-4c95-ae14-dbcd4ec6a435"
+    "eecf050a-aa02-4c95-ae14-dbcd4ec6a435",
+    "66aa0346-2660-418a-97c6-75c939d3691d"
   ],
-  "submitted_today": 0,
+  "submitted_today": 1,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-08-25"
 }
