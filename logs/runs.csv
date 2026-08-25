@@ -5983,3 +5983,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-25 23:20:56,ext_exits,bull,306.97,214.84,0,0,0,2,DECK|NKE,both
 2026-08-25 23:25:53,ext_exits,bull,306.97,214.84,0,0,0,2,DECK|NKE,both
 2026-08-25 23:30:57,ext_exits,bull,306.9,214.84,0,0,0,2,DECK|NKE,both
+2026-08-25 23:36:40,ext_exits,bull,306.92,214.84,0,0,0,2,DECK|NKE,both
