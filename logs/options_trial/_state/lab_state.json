@@ -1,32 +1,9 @@
 {
   "version": 5,
-  "lots": [
-    {
-      "lot_id": "dd4ea13e1f69",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S404",
-      "occ_symbol": "NKE260828C00039500",
-      "underlying": "NKE",
-      "qty": 1,
-      "entry_cost": 54.0,
-      "entry_price": 0.54,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-25T14:08:05.319201+00:00",
-      "entry_order_id": "66aa0346-2660-418a-97c6-75c939d3691d"
-    }
-  ],
+  "lots": [],
   "pending_orders": [],
   "pending_exits": [],
-  "bucket_open_premium": {
-    "b90": 54.0
-  },
+  "bucket_open_premium": {},
   "session_date": "2026-08-26",
   "entries_locked": [],
   "processed_orders": [
