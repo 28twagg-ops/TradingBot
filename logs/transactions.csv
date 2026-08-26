@@ -1152,3 +1152,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-25 14:50:56,2026-08-25,SELL,AAPL,Pullback50,309.53,45.89,-0.55,-0.25,0,stop_loss (-0.5%),bull,307.05
 2026-08-26 13:45:59,2026-08-26,SELL,NKE,MomReversal,39.02,6.5,-1.16,-0.08,1,stop_loss (-1.2%),bull,306.6
 2026-08-26 13:51:01,2026-08-26,SELL,AME,Pullback50,244.44,45.74,-0.53,-0.24,0,stop_loss (-0.5%),bull,306.39
+2026-08-26 16:05:59,2026-08-26,SELL,DECK,MomReversal,88.56,45.77,-0.61,-0.28,1,stop_loss (-0.6%),bull,306.05
