@@ -1,11 +1,54 @@
 {
   "version": 5,
-  "lots": [],
-  "pending_orders": [],
+  "lots": [
+    {
+      "lot_id": "44a9781e59ac",
+      "bucket_id": 90,
+      "profile_name": "live_1to1",
+      "strategy_id": "S404",
+      "occ_symbol": "MARA260828C00012000",
+      "underlying": "MARA",
+      "qty": 1,
+      "entry_cost": 24.0,
+      "entry_price": 0.24,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-08-26T13:42:31.207591+00:00",
+      "entry_order_id": "ad07ec53-f601-4602-8024-1d27603e99c1"
+    }
+  ],
+  "pending_orders": [
+    {
+      "order_id": "24ca2409-7acf-44eb-8e3e-817185761dd4",
+      "bucket_id": 90,
+      "strategy_id": "S406",
+      "occ_symbol": "MSTR260828C00136000",
+      "underlying": "MSTR",
+      "qty": 1,
+      "limit": 0.6,
+      "profile_name": "live_1to1",
+      "submitted": "2026-08-26",
+      "detail": "RB gap -2.8% reclaim",
+      "spread_frac": 0.15929203539823006,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.6000000000000001
+    }
+  ],
   "pending_exits": [],
-  "bucket_open_premium": {},
+  "bucket_open_premium": {
+    "b90": 24.0
+  },
   "session_date": "2026-08-26",
-  "entries_locked": [],
+  "entries_locked": [
+    "90|S404|2026-08-26",
+    "90|S406|2026-08-26"
+  ],
   "processed_orders": [
     "88b24066-5228-4787-bfc8-1fa4c0ac267f",
     "de934505-7c85-4be9-8c87-4ee33a7334a8",
@@ -465,9 +508,10 @@
     "9e51c3a4-9f0d-4abd-9f42-6205a71a371d",
     "5c58cc66-601b-4648-b5cb-68a2a63412e1",
     "eecf050a-aa02-4c95-ae14-dbcd4ec6a435",
-    "66aa0346-2660-418a-97c6-75c939d3691d"
+    "66aa0346-2660-418a-97c6-75c939d3691d",
+    "ad07ec53-f601-4602-8024-1d27603e99c1"
   ],
-  "submitted_today": 0,
+  "submitted_today": 2,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-08-26"
 }
