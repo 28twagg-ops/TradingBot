@@ -6092,3 +6092,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-26 23:40:56,ext_exits,bull,306.54,213.92,0,0,0,2,AES|APH,both
 2026-08-26 23:45:58,ext_exits,bull,306.54,213.92,0,0,0,2,AES|APH,both
 2026-08-26 23:50:55,ext_exits,bull,306.54,213.92,0,0,0,2,AES|APH,both
+2026-08-26 23:55:57,ext_exits,bull,306.54,213.92,0,0,0,2,AES|APH,both
