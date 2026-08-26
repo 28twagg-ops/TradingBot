@@ -12003,3 +12003,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-26 13:42:29.567975+00:00,entry,90,live_1to1,S404,44a9781e59ac,MARA,MARA260828C00012000,1,0.25,0.24,24.0,,,,-0.01,,0.75,-0.6000000000000001,0.08000000000000007,gap -2.3%,ad07ec53-f601-4602-8024-1d27603e99c1
 2026-08-26 13:52:18.660570+00:00,entry,90,live_1to1,S406,5b1b4373c392,MSTR,MSTR260828C00136000,1,0.6,0.6,60.0,,,,-0.01,,0.75,-0.6000000000000001,0.15929203539823006,RB gap -2.8% reclaim,24ca2409-7acf-44eb-8e3e-817185761dd4
 2026-08-26T14:46:43Z,reconcile,90,live_1to1,S406,5b1b4373c392,MSTR,MSTR260828C00136000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-26T14:56:03Z,reconcile,90,live_1to1,S404,44a9781e59ac,MARA,MARA260828C00012000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

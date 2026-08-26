@@ -1,32 +1,9 @@
 {
   "version": 5,
-  "lots": [
-    {
-      "lot_id": "44a9781e59ac",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S404",
-      "occ_symbol": "MARA260828C00012000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 24.0,
-      "entry_price": 0.24,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-26T13:42:31.207591+00:00",
-      "entry_order_id": "ad07ec53-f601-4602-8024-1d27603e99c1"
-    }
-  ],
+  "lots": [],
   "pending_orders": [],
   "pending_exits": [],
-  "bucket_open_premium": {
-    "b90": 24.0
-  },
+  "bucket_open_premium": {},
   "session_date": "2026-08-26",
   "entries_locked": [
     "90|S404|2026-08-26",
