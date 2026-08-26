@@ -5994,3 +5994,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-26 13:16:01,summary,bull,306.85,214.84,0,0,0,2,DECK|NKE,both
 2026-08-26 13:20:57,summary,bull,306.87,214.84,0,0,0,2,DECK|NKE,both
 2026-08-26 13:46:23,scan_morning,bull,306.55,168.6,18,0,1,3,AES|AME|DECK,both
+2026-08-26 13:51:01,exits,bull,306.39,214.31,0,0,1,2,AES|DECK,both

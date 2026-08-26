@@ -1,0 +1,62 @@
+13:50:58  INFO      Mode: morning_scan
+13:50:58  INFO      Morning scan already completed today (2026-08-26T13:46:23.311110Z) — exits-only pass
+13:50:58  INFO        Daily log -> logs/daily/2026-08-26.md
+13:50:58  INFO        Daily log reconciled -> logs/daily/2026-08-26.md (1 ledger rows)
+13:50:58  INFO        place_all_stops: checking 3 positions...
+13:50:58  INFO        STOP already live AES @ $14.65
+13:50:58  INFO        STOP skipped AME: fractional (0.1871 shares) — software exit will handle it
+13:50:58  INFO        STOP skipped DECK: fractional (0.5168 shares) — software exit will handle it
+13:50:59  INFO        [positions] 3/3 (3 valid)
+13:50:59  INFO        SELL MARKET [urgent] AME closed
+13:51:01  INFO        TX logged: SELL AME  P&L -0.53%
+13:51:01  INFO        Daily log -> logs/daily/2026-08-26.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:50 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $306.40|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  AME  P&L -0.5%  $-0.24                         EXIT: stop_loss (-0.5%)|
+|  AES  P&L -0.0%  $-0.02                                            HOLD|
+|  DECK  P&L +0.1%  $+0.05                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  AME                                         -0.53%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
