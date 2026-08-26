@@ -6050,3 +6050,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-26 19:50:01,scan_evening,bull,305.82,168.27,50,0,0,3,AES|APH|SMTC,both
 2026-08-26 20:01:04,ext_exits,bull,306.21,168.27,0,0,0,3,AES|APH|SMTC,both
 2026-08-26 20:05:54,ext_exits,bull,306.46,168.27,0,0,0,3,AES|APH|SMTC,both
+2026-08-26 20:11:04,ext_exits,bull,306.39,168.27,0,0,0,3,AES|APH|SMTC,both
