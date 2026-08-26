@@ -1,0 +1,183 @@
+13:45:56  INFO      Mode: morning_scan
+13:45:57  INFO        SELL MARKET [urgent] NKE closed
+13:45:59  INFO        TX logged: SELL NKE  P&L -1.16%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $306.60|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-08-26|
+|  Universe                                                          both|
+|  Mo~  Aug: VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $306.60|
+|  Cash                                                           $254.07|
+|  Reserve                                          $15.33  (always kept)|
+|  Stocks~  $52.53 / $229.95  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $177.42  (new stock buys)|
+|  Trade size             $45.99  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (2 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  DECK     MomReversal     $46.03     $89.11   $89.07   -0.0%   $-0.02  |
+|  NKE      MomReversal     $6.50      $39.48   $39.02   -1.2%   $-0.08  |
+|                                                                        |
+|  Total invested                                                  $52.53|
+|  Total open P&L                                                  $-0.09|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (10.4m))|
+|  Cached exits                                                         0|
+|  Cached signals                                                      18|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  NKE  P&L -1.2%  $-0.08                         EXIT: stop_loss (-1.2%)|
+|  DECK  P&L -0.0%  $-0.02                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                   1|
+|  NKE                                         -1.16%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           901|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  18                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.73   55.9   -1.87   50MA bounce (+|
+|  AME      Pullback50      eq     $243.44  38.2   -2.35   50MA bounce (+|
+|  AAPL     Pullback50      eq     $310.44  47.3   -1.83   50MA bounce (-|
+|  BRK-B    Pullback50      eq     $504.51  33.8   -3.31   50MA bounce (+|
+|  CNC      Pullback50      eq     $65.33   53.5   -2.21   50MA bounce (+|
+|  CB       Pullback50      eq     $344.23  36.7   -2.99   50MA bounce (-|
+|  CL       Pullback50      eq     $91.59   44.1   -2.59   50MA bounce (-|
+|  KHC      Pullback50      eq     $24.86   48.9   -2.32   50MA bounce (-|
+|  NUE      Pullback50      eq     $249.12  28.8   -1.64   50MA bounce (+|
+|  TTWO     Pullback50      eq     $240.40  55.9   -2.17   50MA bounce (-|
+|  WMB      Pullback50      eq     $72.69   52.6   -2.26   50MA bounce (-|
+|  AM       Pullback50      eq     $22.18   59.1   -2.06   50MA bounce (-|
+|  BC       Pullback50      eq     $81.06   49.2   -2.44   50MA bounce (+|
+|  CLH      Pullback50      eq     $309.31  51.7   -2.57   50MA bounce (+|
+|  FLR      Pullback50      eq     $51.60   56.2   -1.73   50MA bounce (+|
+|  SMTC     Pullback50      eq     $137.19  51.2   -0.52   50MA bounce (+|
+|  TNL      Pullback50      eq     $74.35   40.6   -2.31   50MA bounce (-|
+|  WCC      Pullback50      eq     $341.33  33.8   -2.31   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+13:46:00  INFO        BUY  AES  $45.99  [Pullback50]  id=50e38e3d-d71e-4dd2-8003-74ee64632ec1
+13:46:00  INFO        BUY  AME  $45.99  [Pullback50]  id=c9f9087b-1a98-441b-af3a-30d5a702f0c9
+13:46:22  INFO        place_all_stops: checking 3 positions...
+13:46:22  INFO        STOP-MARKET placed AES  qty=3 (pos=3.1225)  stop=$14.65  id=4dd0b325-478b-4e43-90d7-fb3b440b048e
+13:46:22  INFO        STOP skipped AME: fractional (0.1871 shares) — software exit will handle it
+13:46:22  INFO        STOP skipped DECK: fractional (0.5168 shares) — software exit will handle it
+13:46:23  INFO        Daily log -> logs/daily/2026-08-26.md
+13:46:23  INFO        Dashboard written → logs/dashboard.md
+|    ENTER [eq] AES  Pullback50                                    $45.99|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AME  Pullback50                                    $45.99|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] AAPL  Pullback50                                     cap 3|
+|    SKIP [eq] BRK-B  Pullback50                                    cap 3|
+|    SKIP [eq] CNC  Pullback50                                      cap 3|
+|    SKIP [eq] CB  Pullback50                                       cap 3|
+|    SKIP [eq] CL  Pullback50                                       cap 3|
+|    SKIP [eq] KHC  Pullback50                                      cap 3|
+|    SKIP [eq] NUE  Pullback50                                      cap 3|
+|    SKIP [eq] TTWO  Pullback50                                     cap 3|
+|    SKIP [eq] WMB  Pullback50                                      cap 3|
+|    SKIP [eq] AM  Pullback50                                       cap 3|
+|    SKIP [eq] BC  Pullback50                                       cap 3|
+|    SKIP [eq] CLH  Pullback50                                      cap 3|
+|    SKIP [eq] FLR  Pullback50                                      cap 3|
+|    SKIP [eq] SMTC  Pullback50                                     cap 3|
+|    SKIP [eq] TNL  Pullback50                                      cap 3|
+|    SKIP [eq] WCC  Pullback50                                      cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  AES                                                  still unconfirmed|
+|  AME                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             18|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             3|
+|  Equity                                                         $306.55|
+|  Cash                                                           $168.60|
++========================================================================+
