@@ -6004,3 +6004,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-26 14:31:02,exits,bull,306.47,214.31,0,0,0,2,AES|DECK,both
 2026-08-26 14:35:59,exits,bull,306.35,214.31,0,0,0,2,AES|DECK,both
 2026-08-26 14:41:03,exits,bull,306.28,214.31,0,0,0,2,AES|DECK,both
+2026-08-26 14:46:41,exits,bull,306.25,214.31,0,0,0,2,AES|DECK,both
