@@ -1,0 +1,28 @@
+13:56:55  INFO      Mode: morning_scan
+13:56:56  INFO        [positions] 3/3 (3 valid)
+13:56:56  INFO        SELL MARKET [urgent] APH closed
+13:56:58  INFO        TX logged: SELL APH  P&L -0.57%
+13:56:58  INFO        SELL order cancelled AES  type=OrderType.STOP  id=e8aa95ff-1973-4975-824e-479e73f6c2ef
+13:56:59  INFO        SELL LIMIT AES  qty=3.022008841  limit=$14.72  id=ddb51092-6e89-4dd2-b00b-0daff75a4ab7
+13:57:29  INFO        SELL LIMIT filled AES (confirmed by position check)
+13:57:29  INFO        TX logged: SELL AES  P&L -0.04%
+13:57:29  INFO        Universe cache hit: 903 tickers (tickers_2026-08-27.json)
+13:57:30  INFO        [universe] 40/902 (40 valid)
+13:57:31  INFO        [universe] 80/902 (80 valid)
+13:57:33  INFO        [universe] 120/902 (120 valid)
+13:57:34  INFO        [universe] 160/902 (160 valid)
+13:57:35  INFO        [universe] 200/902 (199 valid)
+13:57:42  INFO        [universe] 240/902 (238 valid)
+13:57:55  INFO        [universe] 280/902 (278 valid)
+13:58:05  INFO        [universe] 320/902 (318 valid)
+13:58:19  INFO        [universe] 360/902 (358 valid)
+13:58:32  INFO        [universe] 400/902 (397 valid)
+13:58:42  INFO        [universe] 440/902 (437 valid)
+13:58:55  INFO        [universe] 480/902 (477 valid)
+13:59:08  INFO        [universe] 520/902 (517 valid)
+13:59:18  INFO        [universe] 560/902 (557 valid)
+13:59:31  INFO        [universe] 600/902 (597 valid)
+13:59:41  INFO        [universe] 640/902 (637 valid)
+13:59:54  INFO        [universe] 680/902 (677 valid)
+14:00:08  INFO        [universe] 720/902 (717 valid)
+14:00:18  INFO        [universe] 760/902 (757 valid)

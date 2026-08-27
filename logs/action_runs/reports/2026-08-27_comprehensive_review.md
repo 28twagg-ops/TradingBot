@@ -1746,3 +1746,79 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20260827T135654Z
+
+- UTC timestamp: `20260827T135654Z`
+- GitHub run: [#8271](https://github.com/28twagg-ops/TradingBot/actions/runs/33079364994)
+- Run id: `33079364994`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260827T135654Z_live_bot.log`, `logs/action_runs/20260827T135654Z_live_options.log`, `logs/action_runs/20260827T135654Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-27T09:26:00.020967-04:00","date":"2026-08-27","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.1,"phases_s":{"reconcile":0.35},"signals":0,"placed":0,"equity":999930.56,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"8265","github_run_id":"33076705414","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1761,"win":33.05,"med":-39.29,"avg":12.19,"pnl":-9205.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+13:56:55  INFO      Mode: morning_scan
+13:56:56  INFO        [positions] 3/3 (3 valid)
+13:56:56  INFO        SELL MARKET [urgent] APH closed
+13:56:58  INFO        TX logged: SELL APH  P&L -0.57%
+13:56:58  INFO        SELL order cancelled AES  type=OrderType.STOP  id=e8aa95ff-1973-4975-824e-479e73f6c2ef
+13:56:59  INFO        SELL LIMIT AES  qty=3.022008841  limit=$14.72  id=ddb51092-6e89-4dd2-b00b-0daff75a4ab7
+13:57:29  INFO        SELL LIMIT filled AES (confirmed by position check)
+13:57:29  INFO        TX logged: SELL AES  P&L -0.04%
+13:57:29  INFO        Universe cache hit: 903 tickers (tickers_2026-08-27.json)
+13:57:30  INFO        [universe] 40/902 (40 valid)
+13:57:31  INFO        [universe] 80/902 (80 valid)
+13:57:33  INFO        [universe] 120/902 (120 valid)
+13:57:34  INFO        [universe] 160/902 (160 valid)
+13:57:35  INFO        [universe] 200/902 (199 valid)
+13:57:42  INFO        [universe] 240/902 (238 valid)
+13:57:55  INFO        [universe] 280/902 (278 valid)
+13:58:05  INFO        [universe] 320/902 (318 valid)
+13:58:19  INFO        [universe] 360/902 (358 valid)
+13:58:32  INFO        [universe] 400/902 (397 valid)
+13:58:42  INFO        [universe] 440/902 (437 valid)
+13:58:55  INFO        [universe] 480/902 (477 valid)
+13:59:08  INFO        [universe] 520/902 (517 valid)
+13:59:18  INFO        [universe] 560/902 (557 valid)
+13:59:31  INFO        [universe] 600/902 (597 valid)
+13:59:41  INFO        [universe] 640/902 (637 valid)
+13:59:54  INFO        [universe] 680/902 (677 valid)
+14:00:08  INFO        [universe] 720/902 (717 valid)
+14:00:18  INFO        [universe] 760/902 (757 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
