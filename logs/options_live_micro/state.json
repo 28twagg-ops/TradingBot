@@ -1,22 +1,7 @@
 {
-  "lots": [
-    {
-      "lot_id": "1ff1764683c3",
-      "strategy_id": "S218",
-      "occ": "BAC260828C00062000",
-      "underlying": "BAC",
-      "qty": 1,
-      "entry_price": 0.31,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "order_id": "717ded36-8a17-4589-900b-4905166b45f0",
-      "pending": true
-    }
-  ],
+  "lots": [],
   "used_day": "2026-08-27",
-  "used_strategies": [
-    "S218"
-  ],
+  "used_strategies": [],
   "known_expired": [
     "WMT260821C00110000"
   ]
