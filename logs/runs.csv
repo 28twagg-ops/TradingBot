@@ -6103,3 +6103,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-27 14:01:43,exits,bull,291.31,176.79,0,0,0,1,AON,both
 2026-08-27 14:05:53,exits,bull,313.31,176.79,0,0,0,1,AON,both
 2026-08-27 14:11:37,exits,bull,305.2,176.79,0,0,0,1,AON,both
+2026-08-27 14:16:25,exits,bull,293.03,221.03,0,0,1,0,,both
