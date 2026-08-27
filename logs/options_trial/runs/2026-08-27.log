@@ -9066,11 +9066,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-08-27.log
 elapsed=29.9s reconcile=0.2s cancel=0.03s manage=0.39s scan=28.36s entries=0.29s
 
-=== 10:53:55 ET — entry+manage (0 new) [elapsed=56.2s reconcile=0.24s cancel=0.06s manage=0.64s scan=54.0s entries=0.45s] ===
-=== options_morning_bot (PAPER) 2026-08-27T10:53:55.872283-04:00 ===
+=== 10:56:22 ET — entry+manage (0 new) [elapsed=56.3s reconcile=0.29s cancel=0.07s manage=0.69s scan=53.83s entries=0.56s] ===
+=== options_morning_bot (PAPER) 2026-08-27T10:56:22.747917-04:00 ===
 
 [Run context]
-Paper auth OK — equity $999925.53, account PA33P8KT02IL
+Paper auth OK — equity $999926.53, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> grid:100:live_1to1
 
 [Setup]
@@ -9082,7 +9082,7 @@ Scanning 117 symbols for [S218, S404, S406] …
   Daily bars disk cache hit (options_daily_bars_2026-08-27.parquet)
 Fetched daily bars for 113/117 symbols
 Found 4 signal(s); top: ['S404:CELH', 'S404:HRL', 'S404:MRK', 'S406:MRK']
-Paper lab: $999926 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+Paper lab: $999927 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
   [b90|live_1to1] S406 MRK (tier: slow): no tradeable call
   Skipped: 1 no tradeable call
 Placed 0 new entry order(s).
@@ -9091,14 +9091,14 @@ Placed 0 new entry order(s).
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $999,925.53
+Account equity: $999,926.53
 Active buckets: 100 of 100 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Realized (sold):     $-998.81 all-time  |  $+0.00 today
-  Open (not sold yet): $-4.00 unrealized (virtual lots)
+  Open (not sold yet): $-3.00 unrealized (virtual lots)
   Premium deployed:    $31.00 in open positions
-  Combined P&L:        $-1,002.81 (reflected realized + open virtual)
+  Combined P&L:        $-1,001.81 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     12006
@@ -9152,7 +9152,7 @@ Open virtual lots (by bucket)
   (62 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  CELH260904C00036000  qty=1  cost=$31.00  return=-12.9%  open P&L=$-4.00
+  CELH260904C00036000  qty=1  cost=$31.00  return=-9.7%  open P&L=$-3.00
 
 Per-bucket exit stats (all time)
   b0|c000_s173_w1_0928_1005_r1  n= 22  avg=+24.8%  med=+34.9%  realized=$+283.00
@@ -9586,7 +9586,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (entry+manage) --                                     |
-|Equity       : $999,925.53                                              |
+|Equity       : $999,926.53                                              |
 |Open Risk    : 1 lots (1 broker pos)                                    |
 |Today's Run  : 4 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -9629,8 +9629,8 @@ Per-bucket exit stats (all time)
 +========================================================================+
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
-|  CELH260904C00036000           1    -12.9%   $     -4.00               |
+|  CELH260904C00036000           1     -9.7%   $     -3.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-08-27.log
-elapsed=56.2s reconcile=0.24s cancel=0.06s manage=0.64s scan=54.0s entries=0.45s
+elapsed=56.3s reconcile=0.29s cancel=0.07s manage=0.69s scan=53.83s entries=0.56s
 
