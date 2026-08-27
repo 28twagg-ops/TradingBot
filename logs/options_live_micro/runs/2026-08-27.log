@@ -22,11 +22,11 @@ Live micro done. open_options=0 lots=0
 Live account equity $306.68 cash $213.92 #225458845 options_level=3
 Live micro: outside 9:28-16:05 ET
 Live micro done. open_options=0 lots=0
-=== options_live_micro LIVE 2026-08-27T09:40:05.437615-04:00 share=25% ===
-Live account equity $305.64 cash $213.92 #225458845 options_level=3
-Live micro sleeve $76 (25% of $306) deployed $0 open_strategies=0/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+=== options_live_micro LIVE 2026-08-27T09:34:30.969226-04:00 share=25% ===
+Live account equity $306.02 cash $213.92 #225458845 options_level=3
+Live micro sleeve $77 (25% of $306) deployed $0 open_strategies=0/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
 Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
-Live micro signals: 10
+Live micro signals: 4
   try S404 100%win/+80%med CELH
   skip S404 CELH: no contract under $75
   try S404 100%win/+80%med HRL
@@ -35,14 +35,18 @@ Live micro signals: 10
   skip S404 MRK: no contract under $75
   try S406 56%win/+58%med MRK
   skip S406 MRK: no contract under $75
-  try S218 56%win/+49%med AXP
-  skip S218 AXP: no contract under $75
-  try S218 56%win/+49%med BAC
-LIVE BUY S218 56%win BAC BAC260828C00062000 limit=0.31 ask=0.32 cost=$32 id=717ded36-8a17-4589-900b-4905166b45f0
-  skip S218 HD: already attempted today
-  skip S218 MMM: already attempted today
-  skip S218 NKE: already attempted today
-  skip S218 WFC: already attempted today
-LIVE PROT check BAC260828C00062000: have_ols=False open_matched=0 ols_id=- ols_type=-
-LIVE PROT STOP-MKT BAC260828C00062000 x1 stop=0.19 id=9ab5b626-a8be-4010-8d22-062a2f933bd9
+Live micro done. open_options=0 lots=0
+=== options_live_micro LIVE 2026-08-27T09:55:23.299197-04:00 share=25% ===
+Live account equity $293.42 cash $158.76 #225458845 options_level=3
+Live micro sleeve $73 (25% of $293) deployed $0 open_strategies=0/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+Live micro signals: 4
+  try S404 100%win/+80%med CELH
+LIVE BUY S404 100%win CELH CELH260828C00033000 limit=0.72 ask=0.73 cost=$73 id=2a15f2d5-ee80-4fa5-9b68-8e453a417674
+  skip S404 HRL: already attempted today
+  skip S404 MRK: already attempted today
+  try S406 56%win/+58%med MRK
+  skip S406 MRK: no contract under $9
+LIVE PROT check CELH260828C00033000: have_ols=False open_matched=0 ols_id=- ols_type=-
+LIVE PROT STOP-MKT CELH260828C00033000 x1 stop=0.43 id=7d84f967-1e61-45bc-b0bf-d20a31a63a3d
 Live micro done. open_options=1 lots=1

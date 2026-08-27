@@ -1,0 +1,28 @@
+=== options_live_micro LIVE 2026-08-27T09:55:23.299197-04:00 share=25% ===
+2026-08-27 09:55:23,299 INFO === options_live_micro LIVE 2026-08-27T09:55:23.299197-04:00 share=25% ===
+Live account equity $293.42 cash $158.76 #225458845 options_level=3
+2026-08-27 09:55:23,523 INFO Live account equity $293.42 cash $158.76 #225458845 options_level=3
+Live micro sleeve $73 (25% of $293) deployed $0 open_strategies=0/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+2026-08-27 09:55:23,739 INFO Live micro sleeve $73 (25% of $293) deployed $0 open_strategies=0/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+2026-08-27 09:55:23,739 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+Live micro signals: 4
+2026-08-27 09:55:24,825 INFO Live micro signals: 4
+  try S404 100%win/+80%med CELH
+2026-08-27 09:55:24,826 INFO   try S404 100%win/+80%med CELH
+LIVE BUY S404 100%win CELH CELH260828C00033000 limit=0.72 ask=0.73 cost=$73 id=2a15f2d5-ee80-4fa5-9b68-8e453a417674
+2026-08-27 09:55:25,392 INFO LIVE BUY S404 100%win CELH CELH260828C00033000 limit=0.72 ask=0.73 cost=$73 id=2a15f2d5-ee80-4fa5-9b68-8e453a417674
+  skip S404 HRL: already attempted today
+2026-08-27 09:55:25,392 INFO   skip S404 HRL: already attempted today
+  skip S404 MRK: already attempted today
+2026-08-27 09:55:25,392 INFO   skip S404 MRK: already attempted today
+  try S406 56%win/+58%med MRK
+2026-08-27 09:55:25,392 INFO   try S406 56%win/+58%med MRK
+  skip S406 MRK: no contract under $9
+2026-08-27 09:55:25,569 INFO   skip S406 MRK: no contract under $9
+LIVE PROT check CELH260828C00033000: have_ols=False open_matched=0 ols_id=- ols_type=-
+2026-08-27 09:55:25,678 INFO LIVE PROT check CELH260828C00033000: have_ols=False open_matched=0 ols_id=- ols_type=-
+LIVE PROT STOP-MKT CELH260828C00033000 x1 stop=0.43 id=7d84f967-1e61-45bc-b0bf-d20a31a63a3d
+2026-08-27 09:55:25,749 INFO LIVE PROT STOP-MKT CELH260828C00033000 x1 stop=0.43 id=7d84f967-1e61-45bc-b0bf-d20a31a63a3d
+Live micro done. open_options=1 lots=1
+2026-08-27 09:55:25,825 INFO Live micro done. open_options=1 lots=1

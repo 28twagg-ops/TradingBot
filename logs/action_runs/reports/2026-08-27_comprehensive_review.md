@@ -1571,3 +1571,178 @@ Live micro done. open_options=1 lots=1
 ```
 
 ---
+
+## Run 20260827T135123Z
+
+- UTC timestamp: `20260827T135123Z`
+- GitHub run: [#8270](https://github.com/28twagg-ops/TradingBot/actions/runs/33078915062)
+- Run id: `33078915062`
+- Live bot: exit=`0`, duration=`239s`
+- Live options: exit=`0`, duration=`3s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260827T135123Z_live_bot.log`, `logs/action_runs/20260827T135123Z_live_options.log`, `logs/action_runs/20260827T135123Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-27T09:26:00.020967-04:00","date":"2026-08-27","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.1,"phases_s":{"reconcile":0.35},"signals":0,"placed":0,"equity":999930.56,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"8265","github_run_id":"33076705414","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1761,"win":33.05,"med":-39.29,"avg":12.19,"pnl":-9205.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (156 earlier lines - see full log file)
+|  SLAB     Pullback50      eq     $218.71  45.2   -2.44   50MA bounce (+|
+|  TREX     Pullback50      eq     $46.51   35.1   -1.58   50MA bounce (-|
+|  UBSI     Pullback50      eq     $47.11   34.8   -2.91   50MA bounce (-|
+|  VNO      Pullback50      eq     $38.95   46.7   -1.35   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AES  Pullback50                                    $44.51|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AON  Pullback50                                    $44.51|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] AAPL  Pullback50                                     cap 3|
+|    SKIP [eq] ACGL  Pullback50                                     cap 3|
+|    SKIP [eq] BRK-B  Pullback50                                    cap 3|
+|    SKIP [eq] BF-B  Pullback50                                     cap 3|
+|    SKIP [eq] CTVA  Pullback50                                     cap 3|
+|    SKIP [eq] DDOG  Pullback50                                     cap 3|
+|    SKIP [eq] GS  Pullback50                                       cap 3|
+|    SKIP [eq] DOC  Pullback50                                      cap 3|
+|    SKIP [eq] HUM  Pullback50                                      cap 3|
+|    SKIP [eq] KHC  Pullback50                                      cap 3|
+|    SKIP [eq] LYV  Pullback50                                      cap 3|
+|    SKIP [eq] MS  Pullback50                                       cap 3|
+|    SKIP [eq] PFG  Pullback50                                      cap 3|
+|    SKIP [eq] PLD  Pullback50                                      cap 3|
+|    SKIP [eq] ROST  Pullback50                                     cap 3|
+|    SKIP [eq] USB  Pullback50                                      cap 3|
+|    SKIP [eq] VTR  Pullback50                                      cap 3|
+|    SKIP [eq] VTRS  Pullback50                                     cap 3|
+|    SKIP [eq] WST  Pullback50                                      cap 3|
+|    SKIP [eq] ASB  Pullback50                                      cap 3|
+|    SKIP [eq] BRKR  Pullback50                                     cap 3|
+|    SKIP [eq] CDP  Pullback50                                      cap 3|
+|    SKIP [eq] CHH  Pullback50                                      cap 3|
+|    SKIP [eq] CSL  Pullback50                                      cap 3|
+|    SKIP [eq] KEX  Pullback50                                      cap 3|
+|    SKIP [eq] LIVN  Pullback50                                     cap 3|
+|    SKIP [eq] MTN  Pullback50                                      cap 3|
+|    SKIP [eq] NLY  Pullback50                                      cap 3|
+|    SKIP [eq] ORI  Pullback50                                      cap 3|
+|    SKIP [eq] PNFP  Pullback50                                     cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] TREX  Pullback50                                     cap 3|
+|    SKIP [eq] UBSI  Pullback50                                     cap 3|
+|    SKIP [eq] VNO  Pullback50                                      cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  AES                                                  still unconfirmed|
+|  AON                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Scanned                                                            898|
+|  Signals                                                             36|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $293.42|
+|  Cash                                                           $158.76|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-27T09:55:23.299197-04:00 share=25% ===
+2026-08-27 09:55:23,299 INFO === options_live_micro LIVE 2026-08-27T09:55:23.299197-04:00 share=25% ===
+Live account equity $293.42 cash $158.76 #225458845 options_level=3
+2026-08-27 09:55:23,523 INFO Live account equity $293.42 cash $158.76 #225458845 options_level=3
+Live micro sleeve $73 (25% of $293) deployed $0 open_strategies=0/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+2026-08-27 09:55:23,739 INFO Live micro sleeve $73 (25% of $293) deployed $0 open_strategies=0/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+2026-08-27 09:55:23,739 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+Live micro signals: 4
+2026-08-27 09:55:24,825 INFO Live micro signals: 4
+  try S404 100%win/+80%med CELH
+2026-08-27 09:55:24,826 INFO   try S404 100%win/+80%med CELH
+LIVE BUY S404 100%win CELH CELH260828C00033000 limit=0.72 ask=0.73 cost=$73 id=2a15f2d5-ee80-4fa5-9b68-8e453a417674
+2026-08-27 09:55:25,392 INFO LIVE BUY S404 100%win CELH CELH260828C00033000 limit=0.72 ask=0.73 cost=$73 id=2a15f2d5-ee80-4fa5-9b68-8e453a417674
+  skip S404 HRL: already attempted today
+2026-08-27 09:55:25,392 INFO   skip S404 HRL: already attempted today
+  skip S404 MRK: already attempted today
+2026-08-27 09:55:25,392 INFO   skip S404 MRK: already attempted today
+  try S406 56%win/+58%med MRK
+2026-08-27 09:55:25,392 INFO   try S406 56%win/+58%med MRK
+  skip S406 MRK: no contract under $9
+2026-08-27 09:55:25,569 INFO   skip S406 MRK: no contract under $9
+LIVE PROT check CELH260828C00033000: have_ols=False open_matched=0 ols_id=- ols_type=-
+2026-08-27 09:55:25,678 INFO LIVE PROT check CELH260828C00033000: have_ols=False open_matched=0 ols_id=- ols_type=-
+LIVE PROT STOP-MKT CELH260828C00033000 x1 stop=0.43 id=7d84f967-1e61-45bc-b0bf-d20a31a63a3d
+2026-08-27 09:55:25,749 INFO LIVE PROT STOP-MKT CELH260828C00033000 x1 stop=0.43 id=7d84f967-1e61-45bc-b0bf-d20a31a63a3d
+Live micro done. open_options=1 lots=1
+2026-08-27 09:55:25,825 INFO Live micro done. open_options=1 lots=1
+```
+
+### Paper options bot (tail)
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=0 paper_keys=yes dry_run=False
+  alpaca positions=0
+options_reconcile: done
+Layout: grid:100:live_1to1 (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> grid:100:live_1to1)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-08-27T09:55:27.374553-04:00 ===
+
+[Run context]
+Paper auth OK — equity $999930.56, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Allowed (new entries only): S218, S404, S406
+
+[Scan + entries]
+Scanning 117 symbols for [S218, S404, S406] …
+Fetched daily bars for 113/117 symbols
+```
+
+---
