@@ -1,0 +1,32 @@
+=== options_live_micro LIVE 2026-08-27T10:11:37.918679-04:00 share=25% ===
+2026-08-27 10:11:37,918 INFO === options_live_micro LIVE 2026-08-27T10:11:37.918679-04:00 share=25% ===
+Live account equity $305.20 cash $176.79 #225458845 options_level=3
+2026-08-27 10:11:37,964 INFO Live account equity $305.20 cash $176.79 #225458845 options_level=3
+Live micro hold S404 CELH260828C00033000 +16.7% (tp +50% / sl -40%)
+2026-08-27 10:11:38,003 INFO Live micro hold S404 CELH260828C00033000 +16.7% (tp +50% / sl -40%)
+Live micro cancel-scan CELH260828C00033000: symbol-scoped n=1
+2026-08-27 10:11:38,014 INFO Live micro cancel-scan CELH260828C00033000: symbol-scoped n=1
+Live micro cancel-scan CELH260828C00033000: no non-OLS sell to cancel
+2026-08-27 10:11:38,014 INFO Live micro cancel-scan CELH260828C00033000: no non-OLS sell to cancel
+LIVE PROT check CELH260828C00033000: have_ols=True open_matched=1 ols_id=7d84f967-1e61-45bc-b0bf-d20a31a63a3d ols_type=stop
+2026-08-27 10:11:38,047 INFO LIVE PROT check CELH260828C00033000: have_ols=True open_matched=1 ols_id=7d84f967-1e61-45bc-b0bf-d20a31a63a3d ols_type=stop
+Live micro sleeve $76 (25% of $305) deployed $84 open_strategies=1/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+2026-08-27 10:11:38,100 INFO Live micro sleeve $76 (25% of $305) deployed $84 open_strategies=1/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+2026-08-27 10:11:38,100 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+Live micro signals: 4
+2026-08-27 10:11:39,179 INFO Live micro signals: 4
+  skip S404 CELH: already attempted today
+2026-08-27 10:11:39,179 INFO   skip S404 CELH: already attempted today
+  skip S404 HRL: already attempted today
+2026-08-27 10:11:39,179 INFO   skip S404 HRL: already attempted today
+  skip S404 MRK: already attempted today
+2026-08-27 10:11:39,179 INFO   skip S404 MRK: already attempted today
+  try S406 56%win/+58%med MRK
+2026-08-27 10:11:39,179 INFO   try S406 56%win/+58%med MRK
+  skip S406 MRK: no sleeve/cash room
+2026-08-27 10:11:39,192 INFO   skip S406 MRK: no sleeve/cash room
+LIVE PROT check CELH260828C00033000: have_ols=True open_matched=1 ols_id=7d84f967-1e61-45bc-b0bf-d20a31a63a3d ols_type=stop
+2026-08-27 10:11:39,210 INFO LIVE PROT check CELH260828C00033000: have_ols=True open_matched=1 ols_id=7d84f967-1e61-45bc-b0bf-d20a31a63a3d ols_type=stop
+Live micro done. open_options=1 lots=1
+2026-08-27 10:11:39,218 INFO Live micro done. open_options=1 lots=1
