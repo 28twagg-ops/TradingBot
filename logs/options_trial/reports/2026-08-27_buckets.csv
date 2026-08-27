@@ -89,7 +89,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 87,g087_mid_tp30_sl30,mid,bid-0.05,30.0,-30.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
 88,g088_eod_tp30_sl30,ask-0.10,bid-0.05,30.0,-30.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 89,g089_lim_tp30_sl30,ask-0.10,bid-0.05,30.0,-30.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
-90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,2026-08-26,False,,,,,,,0,,,,idle
+90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-08-27,False,,,,,,,0,CELH,S404,,entered_no_exit
 91,g091_eod_tp30_sl30,ask-0.10,bid-0.05,30.0,-30.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 92,g092_lim_tp30_sl40,ask-0.10,bid-0.05,30.0,-40.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 93,g093_mid_tp30_sl40,mid,bid-0.05,30.0,-40.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
