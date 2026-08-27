@@ -1,0 +1,16 @@
+=== options_live_micro LIVE 2026-08-27T13:56:22.987019-04:00 share=25% ===
+2026-08-27 13:56:22,987 INFO === options_live_micro LIVE 2026-08-27T13:56:22.987019-04:00 share=25% ===
+Live account equity $261.03 cash $221.03 #225458845 options_level=3
+2026-08-27 13:56:23,037 INFO Live account equity $261.03 cash $221.03 #225458845 options_level=3
+Live micro cancel OLS stop CELH260828C00033000 id=7d84f967-1e61-45bc-b0bf-d20a31a63a3d
+2026-08-27 13:56:23,076 INFO Live micro cancel OLS stop CELH260828C00033000 id=7d84f967-1e61-45bc-b0bf-d20a31a63a3d
+Live micro cancel-scan CELH260828C00033000: symbol-scoped n=1
+2026-08-27 13:56:23,085 INFO Live micro cancel-scan CELH260828C00033000: symbol-scoped n=1
+Live micro cancel-scan CELH260828C00033000: no non-OLS sell to cancel
+2026-08-27 13:56:23,085 INFO Live micro cancel-scan CELH260828C00033000: no non-OLS sell to cancel
+LIVE EXIT stop_loss (-44.4%) CELH260828C00033000 x1 limit=0.37 id=cdd09e70-651b-41b3-bc98-6b06622b77a3
+2026-08-27 13:56:23,538 INFO LIVE EXIT stop_loss (-44.4%) CELH260828C00033000 x1 limit=0.37 id=cdd09e70-651b-41b3-bc98-6b06622b77a3
+Live micro: manage/exits only
+2026-08-27 13:56:23,546 INFO Live micro: manage/exits only
+Live micro done. open_options=1 lots=0
+2026-08-27 13:56:23,554 INFO Live micro done. open_options=1 lots=0

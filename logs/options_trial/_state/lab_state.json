@@ -23,7 +23,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "862bbf0f-a599-4b0e-af52-db0e13678355",
+      "lot_id": "8e6492b4c1df",
+      "bucket_id": 90,
+      "strategy_id": "S404",
+      "occ_symbol": "CELH260904C00036000",
+      "qty": 1,
+      "reason": "stop_loss (-41.9%)",
+      "submitted": "2026-08-27T13:56:25"
+    }
+  ],
   "bucket_open_premium": {
     "b90": 31.0
   },
