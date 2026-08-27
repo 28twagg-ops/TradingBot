@@ -339,3 +339,11 @@ Live micro cancel-scan CELH260828C00033000: no non-OLS sell to cancel
 LIVE PROT check CELH260828C00033000: have_ols=True open_matched=1 ols_id=7d84f967-1e61-45bc-b0bf-d20a31a63a3d ols_type=stop
 Live micro: manage/exits only
 Live micro done. open_options=1 lots=1
+=== options_live_micro LIVE 2026-08-27T11:46:00.496977-04:00 share=25% ===
+Live account equity $298.03 cash $221.03 #225458845 options_level=3
+Live micro hold S404 CELH260828C00033000 +6.9% (tp +50% / sl -40%)
+Live micro cancel-scan CELH260828C00033000: symbol-scoped n=1
+Live micro cancel-scan CELH260828C00033000: no non-OLS sell to cancel
+LIVE PROT check CELH260828C00033000: have_ols=True open_matched=1 ols_id=7d84f967-1e61-45bc-b0bf-d20a31a63a3d ols_type=stop
+Live micro: manage/exits only
+Live micro done. open_options=1 lots=1
