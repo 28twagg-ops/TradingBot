@@ -1347,3 +1347,175 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20260827T133629Z
+
+- UTC timestamp: `20260827T133629Z`
+- GitHub run: [#8267](https://github.com/28twagg-ops/TradingBot/actions/runs/33077580171)
+- Run id: `33077580171`
+- Live bot: exit=`0`, duration=`215s`
+- Live options: exit=`0`, duration=`7s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260827T133629Z_live_bot.log`, `logs/action_runs/20260827T133629Z_live_options.log`, `logs/action_runs/20260827T133629Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1761 | 33.0 | -39.3 | +12.2 | $-9,205 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-27T09:26:00.020967-04:00","date":"2026-08-27","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.1,"phases_s":{"reconcile":0.35},"signals":0,"placed":0,"equity":999930.56,"open_positions":0,"pending_orders":0,"open_lots":0,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"8265","github_run_id":"33076705414","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1761,"win":33.05,"med":-39.29,"avg":12.19,"pnl":-9205.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+13:36:30  INFO      Mode: morning_prep
+13:36:31  INFO        [prep_positions] 2/2 (2 valid)
+13:36:31  INFO      Fetching tickers (universe=both)...
+13:36:31  INFO        S&P 500: 503
+13:36:32  INFO        MidCap 400: 400
+13:36:32  INFO        Total: 903 tickers
+13:36:32  INFO        [prep_universe] 40/901 (40 valid)
+13:36:34  INFO        [prep_universe] 80/901 (80 valid)
+13:36:35  INFO        [prep_universe] 120/901 (120 valid)
+13:36:36  INFO        [prep_universe] 160/901 (160 valid)
+13:36:37  INFO        [prep_universe] 200/901 (199 valid)
+13:36:44  INFO        [prep_universe] 240/901 (238 valid)
+13:36:57  INFO        [prep_universe] 280/901 (278 valid)
+13:37:10  INFO        [prep_universe] 320/901 (318 valid)
+13:37:20  INFO        [prep_universe] 360/901 (358 valid)
+13:37:33  INFO        [prep_universe] 400/901 (397 valid)
+13:37:46  INFO        [prep_universe] 440/901 (437 valid)
+13:37:56  INFO        [prep_universe] 480/901 (477 valid)
+13:38:09  INFO        [prep_universe] 520/901 (517 valid)
+13:38:21  INFO        [prep_universe] 560/901 (557 valid)
+13:38:35  INFO        [prep_universe] 600/901 (597 valid)
+13:38:45  INFO        [prep_universe] 640/901 (637 valid)
+13:38:57  INFO        [prep_universe] 680/901 (677 valid)
+13:39:10  INFO        [prep_universe] 720/901 (717 valid)
+13:39:20  INFO        [prep_universe] 760/901 (757 valid)
+13:39:33  INFO        [prep_universe] 800/901 (797 valid)
+13:39:46  INFO        [prep_universe] 840/901 (836 valid)
+13:39:56  INFO        [prep_universe] 880/901 (876 valid)
+13:40:03  INFO        [prep_universe] 901/901 (897 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         13:36 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $305.81|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       2|
+|  Invested                                                        $91.89|
+|  Open P&L                                                        $+0.01|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AES      Pullback50      $45.98     $14.73   $14.72   -0.0%   $-0.00  |
+|  APH      Pullback50      $45.91     $161.66  $161.70  +0.0%   $+0.01  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                1|
+|  TICKER    TYPE              QTY       LIMIT       STOP                |
++------------------------------------------------------------------------+
+|  AES       OrderType.STOP    3         None        14.65               |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      1|
+|  Signal candidates                                                   37|
+|  Universe scanned                                                   901|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-27T09:40:05.437615-04:00 share=25% ===
+2026-08-27 09:40:05,437 INFO === options_live_micro LIVE 2026-08-27T09:40:05.437615-04:00 share=25% ===
+Live account equity $305.64 cash $213.92 #225458845 options_level=3
+2026-08-27 09:40:05,578 INFO Live account equity $305.64 cash $213.92 #225458845 options_level=3
+Live micro sleeve $76 (25% of $306) deployed $0 open_strategies=0/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+2026-08-27 09:40:05,736 INFO Live micro sleeve $76 (25% of $306) deployed $0 open_strategies=0/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+2026-08-27 09:40:05,736 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+Live micro signals: 10
+2026-08-27 09:40:10,572 INFO Live micro signals: 10
+  try S404 100%win/+80%med CELH
+2026-08-27 09:40:10,572 INFO   try S404 100%win/+80%med CELH
+  skip S404 CELH: no contract under $75
+2026-08-27 09:40:10,935 INFO   skip S404 CELH: no contract under $75
+  try S404 100%win/+80%med HRL
+2026-08-27 09:40:10,935 INFO   try S404 100%win/+80%med HRL
+  skip S404 HRL: no contract under $75
+2026-08-27 09:40:11,112 INFO   skip S404 HRL: no contract under $75
+  try S404 100%win/+80%med MRK
+2026-08-27 09:40:11,112 INFO   try S404 100%win/+80%med MRK
+  skip S404 MRK: no contract under $75
+2026-08-27 09:40:11,250 INFO   skip S404 MRK: no contract under $75
+  try S406 56%win/+58%med MRK
+2026-08-27 09:40:11,250 INFO   try S406 56%win/+58%med MRK
+  skip S406 MRK: no contract under $75
+2026-08-27 09:40:11,395 INFO   skip S406 MRK: no contract under $75
+  try S218 56%win/+49%med AXP
+2026-08-27 09:40:11,395 INFO   try S218 56%win/+49%med AXP
+  skip S218 AXP: no contract under $75
+2026-08-27 09:40:11,519 INFO   skip S218 AXP: no contract under $75
+  try S218 56%win/+49%med BAC
+2026-08-27 09:40:11,519 INFO   try S218 56%win/+49%med BAC
+LIVE BUY S218 56%win BAC BAC260828C00062000 limit=0.31 ask=0.32 cost=$32 id=717ded36-8a17-4589-900b-4905166b45f0
+2026-08-27 09:40:11,714 INFO LIVE BUY S218 56%win BAC BAC260828C00062000 limit=0.31 ask=0.32 cost=$32 id=717ded36-8a17-4589-900b-4905166b45f0
+  skip S218 HD: already attempted today
+2026-08-27 09:40:11,714 INFO   skip S218 HD: already attempted today
+  skip S218 MMM: already attempted today
+2026-08-27 09:40:11,714 INFO   skip S218 MMM: already attempted today
+  skip S218 NKE: already attempted today
+2026-08-27 09:40:11,714 INFO   skip S218 NKE: already attempted today
+  skip S218 WFC: already attempted today
+2026-08-27 09:40:11,714 INFO   skip S218 WFC: already attempted today
+LIVE PROT check BAC260828C00062000: have_ols=False open_matched=0 ols_id=- ols_type=-
+2026-08-27 09:40:11,791 INFO LIVE PROT check BAC260828C00062000: have_ols=False open_matched=0 ols_id=- ols_type=-
+LIVE PROT STOP-MKT BAC260828C00062000 x1 stop=0.19 id=9ab5b626-a8be-4010-8d22-062a2f933bd9
+2026-08-27 09:40:11,835 INFO LIVE PROT STOP-MKT BAC260828C00062000 x1 stop=0.19 id=9ab5b626-a8be-4010-8d22-062a2f933bd9
+Live micro done. open_options=1 lots=1
+2026-08-27 09:40:11,872 INFO Live micro done. open_options=1 lots=1
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
