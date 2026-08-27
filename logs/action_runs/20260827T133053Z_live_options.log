@@ -1,0 +1,28 @@
+=== options_live_micro LIVE 2026-08-27T09:34:30.969226-04:00 share=25% ===
+2026-08-27 09:34:30,969 INFO === options_live_micro LIVE 2026-08-27T09:34:30.969226-04:00 share=25% ===
+Live account equity $306.02 cash $213.92 #225458845 options_level=3
+2026-08-27 09:34:31,211 INFO Live account equity $306.02 cash $213.92 #225458845 options_level=3
+Live micro sleeve $77 (25% of $306) deployed $0 open_strategies=0/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+2026-08-27 09:34:31,511 INFO Live micro sleeve $77 (25% of $306) deployed $0 open_strategies=0/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+2026-08-27 09:34:31,511 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+Live micro signals: 4
+2026-08-27 09:34:36,049 INFO Live micro signals: 4
+  try S404 100%win/+80%med CELH
+2026-08-27 09:34:36,049 INFO   try S404 100%win/+80%med CELH
+  skip S404 CELH: no contract under $75
+2026-08-27 09:34:36,694 INFO   skip S404 CELH: no contract under $75
+  try S404 100%win/+80%med HRL
+2026-08-27 09:34:36,694 INFO   try S404 100%win/+80%med HRL
+  skip S404 HRL: no contract under $75
+2026-08-27 09:34:36,924 INFO   skip S404 HRL: no contract under $75
+  try S404 100%win/+80%med MRK
+2026-08-27 09:34:36,924 INFO   try S404 100%win/+80%med MRK
+  skip S404 MRK: no contract under $75
+2026-08-27 09:34:37,139 INFO   skip S404 MRK: no contract under $75
+  try S406 56%win/+58%med MRK
+2026-08-27 09:34:37,139 INFO   try S406 56%win/+58%med MRK
+  skip S406 MRK: no contract under $75
+2026-08-27 09:34:37,402 INFO   skip S406 MRK: no contract under $75
+Live micro done. open_options=0 lots=0
+2026-08-27 09:34:37,545 INFO Live micro done. open_options=0 lots=0
