@@ -6187,3 +6187,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-27 23:01:01,ext_exits,bull,266.23,226.14,0,0,0,1,SYNA,both
 2026-08-27 23:06:08,ext_exits,bull,266.23,226.14,0,0,0,1,SYNA,both
 2026-08-27 23:12:31,ext_exits,bull,266.23,226.14,0,0,0,1,SYNA,both
+2026-08-27 23:16:05,ext_exits,bull,266.23,226.14,0,0,0,1,SYNA,both
