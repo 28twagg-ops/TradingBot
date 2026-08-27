@@ -1,0 +1,146 @@
+19:46:36  INFO      Mode: scan
+19:46:36  INFO        Universe cache hit: 903 tickers (tickers_2026-08-27.json)
+19:46:37  INFO        [universe] 40/903 (40 valid)
+19:46:39  INFO        [universe] 80/903 (80 valid)
+19:46:40  INFO        [universe] 120/903 (120 valid)
+19:46:41  INFO        [universe] 160/903 (160 valid)
+19:46:42  INFO        [universe] 200/903 (199 valid)
+19:46:50  INFO        [universe] 240/903 (238 valid)
+19:47:03  INFO        [universe] 280/903 (278 valid)
+19:47:15  INFO        [universe] 320/903 (318 valid)
+19:47:25  INFO        [universe] 360/903 (358 valid)
+19:47:38  INFO        [universe] 400/903 (397 valid)
+19:47:51  INFO        [universe] 440/903 (437 valid)
+19:48:01  INFO        [universe] 480/903 (477 valid)
+19:48:14  INFO        [universe] 520/903 (517 valid)
+19:48:27  INFO        [universe] 560/903 (557 valid)
+19:48:40  INFO        [universe] 600/903 (597 valid)
+19:48:50  INFO        [universe] 640/903 (637 valid)
+19:49:03  INFO        [universe] 680/903 (677 valid)
+19:49:15  INFO        [universe] 720/903 (717 valid)
+19:49:25  INFO        [universe] 760/903 (757 valid)
+19:49:38  INFO        [universe] 800/903 (797 valid)
+19:49:51  INFO        [universe] 840/903 (836 valid)
+19:50:01  INFO        [universe] 880/903 (876 valid)
+19:50:08  INFO        [universe] 903/903 (899 valid)
+19:50:10  INFO        BUY  SYNA  $39.90  [MomReversal]  id=961ac9c5-608b-4889-9169-df8801b316f2
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $266.00|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-08-27|
+|  Universe                                                          both|
+|  Mo~  Aug: VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $266.00|
+|  Cash                                                           $266.00|
+|  Reserve                                          $13.30  (always kept)|
+|  Stocks ~  $0.00 / $199.50  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $199.50  (new stock buys)|
+|  Trade size             $39.90  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (0 open)                        |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (stale (102252.4m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  40                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.72   49.1   -1.07   50MA bounce (-|
+|  ADBE     TrendResumpti~  eq     $290.37  63.6   0.73    HH/HL resumpti|
+|  AAPL     Pullback50      eq     $313.94  50.8   -1.13   50MA bounce (+|
+|  BRK-B    Pullback50      eq     $502.79  34.6   -1.98   50MA bounce (+|
+|  BF-B     Pullback50      eq     $27.40   39.6   -1.39   50MA bounce (+|
+|  CDNS     Pullback50      eq     $346.32  55.2   -1.40   50MA bounce (-|
+|  CNC      Pullback50      eq     $65.70   49.8   -1.20   50MA bounce (+|
+|  CL       Pullback50      eq     $91.11   41.7   -1.60   50MA bounce (-|
+|  CTVA     Pullback50      eq     $82.89   79.3   -1.22   50MA bounce (+|
+|  EIX      Pullback50      eq     $73.72   65.3   -0.96   50MA bounce (-|
+|  F        Pullback50      eq     $13.99   50.2   -1.14   50MA bounce (-|
+|  IRM      Pullback50      eq     $123.00  54.3   -1.21   50MA bounce (-|
+|  KMB      Pullback50      eq     $109.81  50.5   -0.60   50MA bounce (+|
+|  KVUE     Pullback50      eq     $19.17   48.6   -1.62   50MA bounce (+|
+|  KHC      Pullback50      eq     $25.05   47.2   -0.48   50MA bounce (-|
+|  MS       Pullback50      eq     $214.89  47.6   -1.88   50MA bounce (-|
+|  PFG      Pullback50      eq     $112.44  45.3   -0.76   50MA bounce (+|
+|  PLD      Pullback50      eq     $142.34  60.3   -0.63   50MA bounce (-|
+|  CRM      TrendResumpti~  eq     $253.66  80.9   4.08    HH/HL resumpti|
+|  USB      Pullback50      eq     $62.45   38.6   -1.25   50MA bounce (-|
+|  VTR      Pullback50      eq     $92.87   48.4   -1.90   50MA bounce (+|
+|  ASB      Pullback50      eq     $30.84   42.4   -2.30   50MA bounce (-|
+|  AYI      Pullback50      eq     $342.75  35.1   -1.52   50MA bounce (+|
+|  BKH      Pullback50      eq     $73.38   42.1   -1.40   50MA bounce (-|
+|  CBSH     Pullback50      eq     $58.16   41.2   -2.18   50MA bounce (-|
+|  GATX     Pullback50      eq     $178.40  52.3   -1.62   50MA bounce (-|
+|  HOMB     Pullback50      eq     $29.73   28.5   -1.61   50MA bounce (-|
+|  HQY      RubberBand      eq     $93.56   24.5   4.09    RSI           |
+|  LIVN     Pullback50      eq     $79.91   62.5   -1.21   50MA bounce (-|
+|  MSM      Pullback50      eq     $122.11  48.3   -1.83   50MA bounce (+|
+|  NLY      Pullback50      eq     $23.07   50.5   -1.43   50MA bounce (+|
+|  NWE      Pullback50      eq     $70.86   42.5   -1.05   50MA bounce (-|
+|  ORI      Pullback50      eq     $42.30   39.0   -2.12   50MA bounce (+|
+|  PB       Pullback50      eq     $72.80   40.5   -1.62   50MA bounce (-|
+|  PNFP     Pullback50      eq     $101.40  37.4   -1.21   50MA bounce (-|
+|  SLAB     Pullback50      eq     $218.99  47.9   -1.51   50MA bounce (+|
+|  SYNA     MomReversal     eq     $96.88   35.8   2.00    -33.7% drop/60|
+|  UBSI     Pullback50      eq     $47.55   39.6   -1.57   50MA bounce (+|
+|  UMBF     Pullback50      eq     $144.87  47.8   -0.31   50MA bounce (+|
+|  UTHR     Pullback50      eq     $530.23  45.9   -0.96   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] SYNA  MomReversal                                  $39.90|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|19:50:10  INFO        BUY  AES  $39.90  [Pullback50]  id=5a601008-dd04-4051-ac7a-31fec46285da
+19:50:10  INFO        BUY  AAPL  $39.90  [Pullback50]  id=e4363c3f-6f69-4229-8a70-adab229aded1
