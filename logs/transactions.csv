@@ -1160,3 +1160,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-27 19:52:05,2026-08-27,SELL,AAPL,Pullback50,314.18,39.93,0.09,0.04,0,midline (+0.1%),bull,266.0
 2026-08-27 19:56:57,2026-08-27,SELL,AES,Pullback50,14.72,39.88,-0.01,-0.0,0,midline (-0.0%),bull,266.0
 2026-08-28 13:57:00,2026-08-28,SELL,AES,Pullback50,14.73,38.49,-0.01,-0.0,0,midline (-0.0%),bull,257.85
+2026-08-28 14:06:26,2026-08-28,SELL,WSO,MomReversal,312.87,39.5,-0.98,-0.39,0,stop_loss (-1.0%),bull,241.56

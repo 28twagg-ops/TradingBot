@@ -1,0 +1,61 @@
+14:06:24  INFO      Mode: exits
+14:06:24  INFO        Daily log -> logs/daily/2026-08-28.md
+14:06:24  INFO        Daily log reconciled -> logs/daily/2026-08-28.md (1 ledger rows)
+14:06:24  INFO        place_all_stops: checking 3 positions...
+14:06:24  INFO        STOP skipped SYNA: fractional (0.4108 shares) — software exit will handle it
+14:06:24  INFO        STOP skipped WSO: fractional (0.1263 shares) — software exit will handle it
+14:06:24  INFO        [positions] 2/2 (2 valid)
+14:06:24  INFO        SELL MARKET [urgent] WSO closed
+14:06:26  INFO        TX logged: SELL WSO  P&L -0.98%
+14:06:26  INFO        Daily log -> logs/daily/2026-08-28.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:06 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $242.55|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  WSO  P&L -1.0%  $-0.39                         EXIT: stop_loss (-1.0%)|
+|  SYNA  P&L +0.0%  $+0.02                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|  CONTRACT                ENTRY    NOW      P&L%     P&L$      MV       |
++------------------------------------------------------------------------+
+|  MARA260904C00011500     $0.56    $0.32    -42.9%   $-24.00   $32.00   |
+|                                                                        |
+|  Options open P&L                                               $-24.00|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  WSO                                         -0.98%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+

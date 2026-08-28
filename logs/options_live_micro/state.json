@@ -1,18 +1,5 @@
 {
-  "lots": [
-    {
-      "lot_id": "80332197e4f7",
-      "strategy_id": "S404",
-      "occ": "MARA260904C00011500",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_price": 0.57,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "order_id": "f9a90613-3b1f-47f3-af32-703fb3d6e7a9",
-      "pending": false
-    }
-  ],
+  "lots": [],
   "used_day": "2026-08-28",
   "used_strategies": [
     "S404"

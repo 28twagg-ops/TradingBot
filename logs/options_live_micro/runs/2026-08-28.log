@@ -58,3 +58,20 @@ Live micro signals: 5
   skip S218 MCD: no contract under $17
 LIVE PROT check MARA260904C00011500: have_ols=True open_matched=1 ols_id=397ceec6-0682-42c7-957b-4bacc1f1dab5 ols_type=stop
 Live micro done. open_options=1 lots=1
+=== options_live_micro LIVE 2026-08-28T10:06:27.651674-04:00 share=25% ===
+Live account equity $241.56 cash $169.65 #225458845 options_level=3
+Live micro cancel OLS stop MARA260904C00011500 id=397ceec6-0682-42c7-957b-4bacc1f1dab5
+Live micro cancel-scan MARA260904C00011500: symbol-scoped n=1
+Live micro cancel-scan MARA260904C00011500: no non-OLS sell to cancel
+LIVE EXIT stop_loss (-42.9%) MARA260904C00011500 x1 limit=0.29 id=94f0622f-1675-4871-9b36-73d5fc0f2bde
+Live micro sleeve $60 (25% of $242) deployed $32 open_strategies=0/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+Live micro signals: 5
+  skip S404 COIN: already attempted today
+  skip S404 MARA: already attempted today
+  skip S404 MSTR: already attempted today
+  try S406 56%win/+58%med MRK
+  skip S406 MRK: no contract under $60
+  try S218 56%win/+49%med MCD
+  skip S218 MCD: no contract under $60
+Live micro done. open_options=0 lots=0
