@@ -1,0 +1,163 @@
+19:56:22  INFO      Mode: scan
+19:56:23  INFO        [positions] 3/3 (3 valid)
+19:56:23  INFO        Universe cache hit: 903 tickers (tickers_2026-08-28.json)
+19:56:25  INFO        [universe] 40/900 (40 valid)
+19:56:26  INFO        [universe] 80/900 (80 valid)
+19:56:27  INFO        [universe] 120/900 (120 valid)
+19:56:29  INFO        [universe] 160/900 (160 valid)
+19:56:30  INFO        [universe] 200/900 (199 valid)
+19:56:41  INFO        [universe] 240/900 (238 valid)
+19:56:54  INFO        [universe] 280/900 (278 valid)
+19:57:04  INFO        [universe] 320/900 (318 valid)
+19:57:17  INFO        [universe] 360/900 (358 valid)
+19:57:30  INFO        [universe] 400/900 (397 valid)
+19:57:40  INFO        [universe] 440/900 (437 valid)
+19:57:53  INFO        [universe] 480/900 (477 valid)
+19:58:06  INFO        [universe] 520/900 (517 valid)
+19:58:16  INFO        [universe] 560/900 (557 valid)
+19:58:29  INFO        [universe] 600/900 (597 valid)
+19:58:42  INFO        [universe] 640/900 (637 valid)
+19:58:52  INFO        [universe] 680/900 (677 valid)
+19:59:05  INFO        [universe] 720/900 (717 valid)
+19:59:18  INFO        [universe] 760/900 (757 valid)
+19:59:28  INFO        [universe] 800/900 (797 valid)
+19:59:41  INFO        [universe] 840/900 (836 valid)
+19:59:54  INFO        [universe] 880/900 (876 valid)
+19:59:58  INFO        [universe] 900/900 (896 valid)
+20:00:00  INFO        place_all_stops: checking 3 positions...
+20:00:00  INFO        STOP skipped GOOGL: fractional (0.1012 shares) — software exit will handle it
+20:00:00  INFO        STOP skipped HIG: fractional (0.2538 shares) — software exit will handle it
+20:00:00  INFO        STOP skipped PHM: fractional (0.2733 shares) — software exit will handle it
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $234.21|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-08-28|
+|  Universe                                                          both|
+|  Mo~  Aug: VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $234.21|
+|  Cash                                                           $128.83|
+|  Reserve                                          $11.71  (always kept)|
+|  Stock~  $105.37 / $175.66  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $70.28  (new stock buys)|
+|  Trade size             $35.13  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  GOOGL    Pullback50      $35.09     $347.20  $346.90  -0.1%   $-0.03  |
+|  HIG      Pullback50      $35.14     $138.36  $138.44  +0.1%   $+0.02  |
+|  PHM      Pullback50      $35.14     $128.52  $128.61  +0.1%   $+0.02  |
+|                                                                        |
+|  Total invested                                                 $105.37|
+|  Total open P&L                                                  $+0.01|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (stale (103702.2m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  GOOGL  P&L -0.1%  $-0.03                                          HOLD|
+|  HIG  P&L +0.1%  $+0.02                                            HOLD|
+|  PHM  P&L +0.1%  $+0.02                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 3|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  13                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AZO      RSIRecovery     eq     $2967.~  38.3   0.65    RSI 28.6→38.3 |
+|  BRK-B    Pullback50      eq     $505.23  28.0   -1.24   50MA bounce (+|
+|  SCHW     TrendResumpti~  eq     $110.28  56.1   0.72    HH/HL resumpti|
+|  EW       Pullback50      eq     $90.06   40.7   -2.30   50MA bounce (+|
+|  LYV      Pullback50      eq     $180.91  44.4   -1.55   50MA bounce (-|
+|  RJF      VWAP_Reclaim    eq     $179.42  50.7   1.54    VWAP reclaim V|
+|  WFC      Pullback50      eq     $86.57   45.9   -0.98   50MA bounce (+|
+|  ASB      Pullback50      eq     $30.95   43.2   2.78    50MA bounce (-|
+|  CXT      Pullback50      eq     $50.28   44.3   -1.15   50MA bounce (-|
+|  GHC      Pullback50      eq     $1162.~  45.8   0.71    50MA bounce (-|
+|  LIVN     Pullback50      eq     $80.25   62.8   -1.06   50MA bounce (-|
+|  SFM      Pullback50      eq     $81.45   42.6   -1.87   50MA bounce (-|
+|  VMI      MomReversal     eq     $476.27  38.8   1.24    -13.0% drop/60|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|20:00:00  INFO        Daily log -> logs/daily/2026-08-28.md
+20:00:00  INFO        Dashboard written → logs/dashboard.md
+
+|  Strategy  VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Scanned                                                            896|
+|  Signals                                                             13|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $234.17|
+|  Cash                                                           $128.83|
++========================================================================+
