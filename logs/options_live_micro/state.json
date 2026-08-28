@@ -1,18 +1,5 @@
 {
-  "lots": [
-    {
-      "lot_id": "20b8ef65790c",
-      "strategy_id": "S218",
-      "occ": "MCD260904C00272500",
-      "underlying": "MCD",
-      "qty": 1,
-      "entry_price": 0.28,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "order_id": "f74f8bb5-e3c7-4f4f-a6a6-f9a8457ee933",
-      "pending": false
-    }
-  ],
+  "lots": [],
   "used_day": "2026-08-28",
   "used_strategies": [
     "S218",
