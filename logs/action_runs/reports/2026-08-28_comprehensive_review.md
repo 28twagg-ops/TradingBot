@@ -4446,3 +4446,218 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260828T150910Z
+
+- UTC timestamp: `20260828T150910Z`
+- GitHub run: [#8417](https://github.com/28twagg-ops/TradingBot/actions/runs/33183383156)
+- Run id: `33183383156`
+- Live bot: exit=`0`, duration=`3s`
+- Live options: exit=`0`, duration=`3s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260828T150910Z_live_bot.log`, `logs/action_runs/20260828T150910Z_live_options.log`, `logs/action_runs/20260828T150910Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 821 | 41.8 | -47.5 | +15.4 | $+8,207 |
+| TAINTED | 1762 | 33.0 | -39.2 | +12.2 | $-9,207 |
+| KEEP-only | 294 | 63.3 | +37.5 | +42.9 | $+5,699 |
+| KEEP-only recent | 106 | 58.5 | +50.0 | +54.8 | $+1,673 |
+
+- KEEP strategies (10): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406
+- KILL strategies (16): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-08-28T11:09:18.677963-04:00","date":"2026-08-28","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":55.3,"phases_s":{"reconcile":0.24,"cancel":0.06,"manage":0.83,"protective_stops":0.17,"scan":52.82,"entries":0.56},"signals":5,"placed":0,"equity":999908.38,"open_positions":2,"pending_orders":0,"open_lots":2,"submitted_today":2,"filled_today":2,"unattributed_contracts":0,"top_signals":["S404:COIN","S404:MARA","S404:MSTR","S406:MRK","S218:MCD"],"github_run":"8417","github_run_id":"33183383156","status":"ok","data_quality":{"clean":{"n":821,"win":41.78,"med":-47.45,"avg":15.44,"pnl":8206.53},"tainted":{"n":1762,"win":33.03,"med":-39.16,"avg":12.18,"pnl":-9207.34},"keep_only":{"n":294,"win":63.27,"med":37.5,"avg":42.89,"pnl":5699.45},"keep_only_recent":{"n":106,"win":58.49,"med":50.0,"avg":54.78,"pnl":1673.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+15:09:12  INFO      Mode: exits
+15:09:13  INFO        Daily log -> logs/daily/2026-08-28.md
+15:09:13  INFO        Daily log reconciled -> logs/daily/2026-08-28.md (3 ledger rows)
+15:09:13  INFO        place_all_stops: checking 1 positions...
+15:09:13  INFO        Daily log -> logs/daily/2026-08-28.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:09 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $236.22|
++========================================================================+
+
++========================================================================+
+|                             MORNING CHECK                              |
++========================================================================+
+|                                                                        |
+|  No open stock positions.                                              |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           0|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                0|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|  CONTRACT                ENTRY    NOW      P&L%     P&L$      MV       |
++------------------------------------------------------------------------+
+|  MCD260904C00272500      $0.28    $0.23    -17.9%   $-5.00    $23.00   |
+|                                                                        |
+|  Options open P&L                                                $-5.00|
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-08-28T11:09:14.456429-04:00 share=25% ===
+2026-08-28 11:09:14,456 INFO === options_live_micro LIVE 2026-08-28T11:09:14.456429-04:00 share=25% ===
+Live account equity $236.22 cash $213.22 #225458845 options_level=3
+2026-08-28 11:09:14,681 INFO Live account equity $236.22 cash $213.22 #225458845 options_level=3
+Live micro hold S218 MCD260904C00272500 -17.9% (tp +50% / sl -40%)
+2026-08-28 11:09:14,810 INFO Live micro hold S218 MCD260904C00272500 -17.9% (tp +50% / sl -40%)
+Live micro cancel-scan MCD260904C00272500: symbol-scoped n=1
+2026-08-28 11:09:14,870 INFO Live micro cancel-scan MCD260904C00272500: symbol-scoped n=1
+Live micro cancel-scan MCD260904C00272500: no non-OLS sell to cancel
+2026-08-28 11:09:14,870 INFO Live micro cancel-scan MCD260904C00272500: no non-OLS sell to cancel
+LIVE PROT check MCD260904C00272500: have_ols=True open_matched=1 ols_id=a4b5deb0-49eb-4793-95dd-18fe41f9fbb3 ols_type=stop
+2026-08-28 11:09:14,986 INFO LIVE PROT check MCD260904C00272500: have_ols=True open_matched=1 ols_id=a4b5deb0-49eb-4793-95dd-18fe41f9fbb3 ols_type=stop
+Live micro sleeve $59 (25% of $236) deployed $23 open_strategies=1/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+2026-08-28 11:09:15,048 INFO Live micro sleeve $59 (25% of $236) deployed $23 open_strategies=1/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+2026-08-28 11:09:15,048 INFO Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+Live micro signals: 5
+2026-08-28 11:09:16,109 INFO Live micro signals: 5
+  skip S404 COIN: already attempted today
+2026-08-28 11:09:16,109 INFO   skip S404 COIN: already attempted today
+  skip S404 MARA: already attempted today
+2026-08-28 11:09:16,110 INFO   skip S404 MARA: already attempted today
+  skip S404 MSTR: already attempted today
+2026-08-28 11:09:16,110 INFO   skip S404 MSTR: already attempted today
+  try S406 56%win/+58%med MRK
+2026-08-28 11:09:16,110 INFO   try S406 56%win/+58%med MRK
+  skip S406 MRK: no contract under $36
+2026-08-28 11:09:16,645 INFO   skip S406 MRK: no contract under $36
+  skip S218 MCD: already attempted today
+2026-08-28 11:09:16,645 INFO   skip S218 MCD: already attempted today
+LIVE PROT check MCD260904C00272500: have_ols=True open_matched=1 ols_id=a4b5deb0-49eb-4793-95dd-18fe41f9fbb3 ols_type=stop
+2026-08-28 11:09:16,764 INFO LIVE PROT check MCD260904C00272500: have_ols=True open_matched=1 ols_id=a4b5deb0-49eb-4793-95dd-18fe41f9fbb3 ols_type=stop
+Live micro done. open_options=1 lots=1
+2026-08-28 11:09:16,830 INFO Live micro done. open_options=1 lots=1
+```
+
+### Paper options bot (tail)
+
+```text
+... (8 earlier lines - see full log file)
+=== options_morning_bot (PAPER) 2026-08-28T11:09:18.677963-04:00 ===
+
+[Run context]
+Paper auth OK — equity $999908.38, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Allowed (new entries only): S218, S404, S406
+
+[Scan + entries]
+Scanning 117 symbols for [S218, S404, S406] …
+Fetched daily bars for 113/117 symbols
+Found 5 signal(s); top: ['S404:COIN', 'S404:MARA', 'S404:MSTR', 'S406:MRK', 'S218:MCD']
+Paper lab: $999908 broker equity -> 100 bucket(s) ($500 virtual each, unlimited paper)
+  Skipped: 1 no tradeable call, 3 already attempted today
+Placed 0 new entry order(s).
+
+[Portfolio snapshot]
++========================================================================+
+|[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
++========================================================================+
+|-- ACCOUNT STATUS (entry+manage) --                                     |
+|Equity       : $999,908.38                                              |
+|Open Risk    : 2 lots (2 broker pos)                                    |
+|Today's Run  : 5 signals -> 0 orders submitted                          |
+|                                                                        |
+|-- SYSTEM HEALTH --                                                     |
+|Zombies      : 0 (Ledger is clean)                                      |
+|Lab Status   : 2 Active Lots | 0 Pending Orders                         |
+|Auto-Matrix  : (Pending EOD report generation)                          |
++========================================================================+
++========================================================================+
+|[DATA QUALITY: CLEAN vs ERRORS vs KEEP-ONLY]                            |
++========================================================================+
+|  CLEAN              n=821   win= 41.8%  med= -47.5%  $+8,207           |
+|  TAINTED            n=1762  win= 33.0%  med= -39.2%  $-9,207           |
+|  KEEP-only          n=294   win= 63.3%  med= +37.5%  $+5,699           |
+|  KEEP recent        n=106   win= 58.5%  med= +50.0%  $+1,673           |
+|  KEEP(10): S173,S174,S210,S218,S350,S397,S398,S401...                  |
+|  KILL(16): ORPHAN,S165,S203,S207,S211,S212,S217,S351...                |
++========================================================================+
++========================================================================+
+|[+++ OVERPERFORMING STRATEGIES (n>=10)]                                 |
++========================================================================+
+|  BKT  PROFILE                   WIN%   MED%   TOTAL TRADES             |
+|  ---------------------------------------------------------             |
+|  b832 lab0832_s406_w3_1045..  82%  +126.9%    11                       |
+|  b238 lab0238_s401_w3_1045..  80%  +109.5%    15                       |
+|  b861 lab0861_s408_w3_1045..  73%  +100.0%    11                       |
+|  b365 lab0365_s361_w2_1005..  90%  +82.8%    10                        |
++========================================================================+
+|[--- UNDERPERFORMING STRATEGIES (n>=10)]                                |
++========================================================================+
+|  BKT  PROFILE                   WIN%   MED%   TOTAL TRADES             |
+|  ---------------------------------------------------------             |
+|  b47  g047_lim_tp20_sl50       4%  -78.0%    28                        |
+|  b109 c109_s202_w3_1045_11..   0%  -77.5%    10                        |
+|  b114 lab0114_s212_w4_1120..   0%  -73.5%    11                        |
+|  b113 lab0113_s212_w3_1045..   7%  -71.4%    15                        |
++========================================================================+
++========================================================================+
+|[OPEN OPTIONS (2)]                                                      |
++========================================================================+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|  ---------------------------------------------------------             |
+|  MCD260904C00270000            1    -17.0%   $     -9.00               |
+|  MARA260904C00012000           1     +0.0%   $     +0.00               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-08-28.log
+elapsed=55.3s reconcile=0.24s cancel=0.06s manage=0.83s scan=52.82s entries=0.56s
+STATUS: options_morning_bot run complete (PAPER) elapsed=55.3s. run=#8417 https://github.com/28twagg-ops/TradingBot/actions/runs/33183383156
+Evaluation complete: 100 strategies evaluated, 0 killed, 0 promote candidates.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-28_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-28_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+STALE WARNING: 1 bucket(s) with open lots and last_entry >5d
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-28_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-28_strategy_selection.csv
+Summary: keep=0 watch=79 drop=26
+Orphan rate: 13.4% (345/2583) ALERT
+```
+
+---
