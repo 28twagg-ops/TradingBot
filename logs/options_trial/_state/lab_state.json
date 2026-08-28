@@ -43,18 +43,7 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "d0362d5f-aeac-40a1-a5f9-aee388542bbf",
-      "lot_id": "5cb077e6ef86",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "MARA260904C00012000",
-      "qty": 1,
-      "reason": "stop_loss (-45.0%)",
-      "submitted": "2026-08-28T16:00:04"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b0": 20.0,
     "b90": 53.0
