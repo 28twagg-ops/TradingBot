@@ -140,3 +140,18 @@ Live micro signals: 5
   try S218 56%win/+49%med MCD
   skip S218 MCD: no contract under $60
 Live micro done. open_options=0 lots=0
+=== options_live_micro LIVE 2026-08-28T10:38:39.053590-04:00 share=25% ===
+Live account equity $241.27 cash $241.27 #225458845 options_level=3
+Live micro sleeve $60 (25% of $241) deployed $0 open_strategies=0/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+Live micro signals: 5
+  skip S404 COIN: already attempted today
+  skip S404 MARA: already attempted today
+  skip S404 MSTR: already attempted today
+  try S406 56%win/+58%med MRK
+  skip S406 MRK: no contract under $60
+  try S218 56%win/+49%med MCD
+LIVE BUY S218 56%win MCD MCD260904C00272500 limit=0.28 ask=0.29 cost=$29 id=f74f8bb5-e3c7-4f4f-a6a6-f9a8457ee933
+LIVE PROT check MCD260904C00272500: have_ols=False open_matched=0 ols_id=- ols_type=-
+LIVE PROT STOP-MKT MCD260904C00272500 x1 stop=0.17 id=a4b5deb0-49eb-4793-95dd-18fe41f9fbb3
+Live micro done. open_options=1 lots=1
