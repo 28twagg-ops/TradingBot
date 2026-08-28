@@ -1,45 +1,45 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-08-21 14:00 UTC*
+*Updated: 2026-08-28 13:55 UTC*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $371.41 |
+| **Current Equity** | $256.79 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | -25.72% ($-128.59) |
+| **Total Return** | -48.64% ($-243.21) |
 | **Peak Equity** | $517.42 |
-| **Max Drawdown** | -28.22% |
-| **Current Cash** | $157.52 |
-| **Open Positions** | 2 (AME|AON) |
-| **Last Bot Run** | 2026-08-21 14:00:25 |
+| **Max Drawdown** | -50.37% |
+| **Current Cash** | $91.65 |
+| **Open Positions** | 3 (AES|SYNA|WSO) |
+| **Last Bot Run** | 2026-08-28 13:55:22 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 778 |
-| **Wins / Losses** | 250 / 528 |
-| **Win Rate** | 32.1% |
-| **Avg Win** | +1.79% |
-| **Avg Loss** | -1.18% |
-| **Profit Factor** | 0.96x |
+| **Total Closed Trades** | 802 |
+| **Wins / Losses** | 255 / 547 |
+| **Win Rate** | 31.8% |
+| **Avg Win** | +1.77% |
+| **Avg Loss** | -1.15% |
+| **Profit Factor** | 0.95x |
 | **Avg Hold Days** | 1.2d |
-| **Total Realised P&L** | $-6.09 |
+| **Total Realised P&L** | $-6.46 |
 
 ## Exit Reasons
 | Exit Type | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `stop_loss` | 434 | 0% | -1.40% |
-| `midline` | 236 | 69% | +1.23% |
-| `max_hold` | 108 | 80% | +1.29% |
+| `stop_loss` | 444 | 0% | -1.38% |
+| `midline` | 249 | 67% | +1.16% |
+| `max_hold` | 109 | 80% | +1.31% |
 
 ## Strategy Breakdown
 | Strategy | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `Pullback50` | 581 | 34% | -0.12% |
+| `Pullback50` | 603 | 34% | -0.12% |
 | `GapDown` | 97 | 26% | -0.94% |
 | `VolumeSpike` | 37 | 11% | -0.56% |
 | `unknown` | 20 | 25% | +0.31% |
-| `MomReversal` | 17 | 41% | +0.22% |
+| `MomReversal` | 19 | 37% | +0.11% |
 | `RSIRecovery` | 14 | 29% | +0.68% |
 | `EarningsDrift` | 7 | 57% | -0.03% |
 | `GoldenPocket` | 3 | 33% | -4.15% |
@@ -81,31 +81,33 @@
 | 2026-08-14 | $467.35 | +1.56 |
 | 2026-08-18 | $517.09 | +49.74 |
 | 2026-08-20 | $413.12 | -103.97 |
-| 2026-08-21 | $371.41 | -41.71 |
+| 2026-08-24 | $307.91 | -105.21 |
+| 2026-08-26 | $306.54 | -1.37 |
+| 2026-08-28 | $256.79 | -49.75 |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
 |---|---|---|---|---|---|---|
-| 2026-08-21 | **AES** | `Pullback50` | +0.03% | $+0.02 | 0d | midline (+0.0%) |
-| 2026-08-21 | **MNST** | `MomReversal` | +0.43% | $+0.13 | 3d | max_hold 3d (+0.4%) |
-| 2026-08-21 | **AES** | `Pullback50` | -0.03% | $-0.02 | 0d | midline (-0.0%) |
-| 2026-08-20 | **AES** | `Pullback50` | +0.00% | $+0.00 | 0d | midline (+0.0%) |
-| 2026-08-20 | **ARE** | `Pullback50` | -0.18% | $-0.12 | 0d | midline (-0.2%) |
-| 2026-08-20 | **JKHY** | `MA_Squeeze` | +1.05% | $+0.75 | 0d | midline (+1.1%) |
-| 2026-08-20 | **ARE** | `Pullback50` | -0.34% | $-0.24 | 0d | midline (-0.3%) |
-| 2026-08-19 | **AAPL** | `Pullback50` | +1.93% | $+1.50 | 1d | midline (+1.9%) |
-| 2026-08-19 | **JKHY** | `MA_Squeeze` | +0.07% | $+0.05 | 0d | midline (+0.1%) |
-| 2026-08-19 | **CDW** | `Pullback50` | -0.54% | $-0.42 | 1d | stop_loss (-0.5%) |
-| 2026-08-18 | **CNC** | `Pullback50` | +0.19% | $+0.14 | 0d | midline (+0.2%) |
-| 2026-08-18 | **AON** | `Pullback50` | -0.51% | $-0.36 | 0d | stop_loss (-0.5%) |
-| 2026-08-18 | **AEE** | `Pullback50` | -0.58% | $-0.40 | 0d | stop_loss (-0.6%) |
-| 2026-08-18 | **AFL** | `Pullback50` | -0.52% | $-0.36 | 0d | stop_loss (-0.5%) |
-| 2026-08-18 | **AES** | `Pullback50` | +0.00% | $+0.00 | 0d | midline (+0.0%) |
-| 2026-08-18 | **AKAM** | `Pullback50` | -0.53% | $-0.37 | 0d | stop_loss (-0.5%) |
-| 2026-08-17 | **BG** | `Pullback50` | +0.05% | $+0.04 | 0d | midline (+0.1%) |
-| 2026-08-17 | **ADI** | `Pullback50` | -0.17% | $-0.12 | 0d | midline (-0.2%) |
-| 2026-08-17 | **AFL** | `Pullback50` | -0.51% | $-0.36 | 0d | stop_loss (-0.5%) |
-| 2026-08-17 | **AXP** | `Pullback50` | -0.56% | $-0.39 | 0d | stop_loss (-0.6%) |
+| 2026-08-27 | **AES** | `Pullback50` | -0.01% | $-0.00 | 0d | midline (-0.0%) |
+| 2026-08-27 | **AAPL** | `Pullback50` | +0.09% | $+0.04 | 0d | midline (+0.1%) |
+| 2026-08-27 | **AON** | `Pullback50` | -0.53% | $-0.24 | 0d | stop_loss (-0.5%) |
+| 2026-08-27 | **AES** | `Pullback50` | -0.04% | $-0.02 | 0d | midline (-0.0%) |
+| 2026-08-27 | **APH** | `Pullback50` | -0.57% | $-0.26 | 1d | stop_loss (-0.6%) |
+| 2026-08-27 | **AES** | `Pullback50` | -0.01% | $-0.00 | 1d | midline (-0.0%) |
+| 2026-08-26 | **DECK** | `MomReversal` | -0.61% | $-0.28 | 1d | stop_loss (-0.6%) |
+| 2026-08-26 | **AME** | `Pullback50` | -0.53% | $-0.24 | 0d | stop_loss (-0.5%) |
+| 2026-08-26 | **NKE** | `MomReversal` | -1.16% | $-0.08 | 1d | stop_loss (-1.2%) |
+| 2026-08-25 | **AAPL** | `Pullback50` | -0.55% | $-0.25 | 0d | stop_loss (-0.5%) |
+| 2026-08-25 | **GOOGL** | `Pullback50` | -0.55% | $-0.25 | 1d | stop_loss (-0.6%) |
+| 2026-08-25 | **CAH** | `Pullback50` | +0.03% | $+0.01 | 0d | midline (+0.0%) |
+| 2026-08-25 | **AES** | `Pullback50` | +0.00% | $+0.00 | 0d | midline (+0.0%) |
+| 2026-08-25 | **AIG** | `Pullback50` | -0.91% | $-0.42 | 1d | stop_loss (-0.9%) |
+| 2026-08-24 | **AES** | `Pullback50` | -0.01% | $-0.00 | 0d | midline (-0.0%) |
+| 2026-08-24 | **AIG** | `Pullback50` | -0.59% | $-0.27 | 0d | stop_loss (-0.6%) |
+| 2026-08-24 | **AES** | `Pullback50` | -0.04% | $-0.02 | 0d | midline (-0.0%) |
+| 2026-08-24 | **AXP** | `Pullback50` | -0.07% | $-0.03 | 0d | midline (-0.1%) |
+| 2026-08-24 | **AON** | `Pullback50` | +3.11% | $+2.18 | 4d | max_hold 4d (+3.1%) |
+| 2026-08-24 | **DE** | `Pullback50` | +0.26% | $+0.12 | 0d | midline (+0.3%) |
 
 ---
 *Auto-generated after every EOD scan. View on GitHub: `logs/dashboard.md`*
