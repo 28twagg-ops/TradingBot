@@ -12008,3 +12008,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-27T18:11:51Z,reconcile,90,live_1to1,S404,8e6492b4c1df,CELH,CELH260904C00036000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-28 14:14:16.256773+00:00,entry,90,live_1to1,S404,0d6c58654278,MARA,MARA260904C00012000,1,0.21,0.2,20.0,,,,-0.01,,0.75,-0.6000000000000001,0.046511627906976785,gap -2.9%,a3d1978f-75df-4688-be4e-bdbc8feb3ac4
 2026-08-27 17:56:25.541975+00:00,exit,90,live_1to1,S404,0d6c58654278,MARA,MARA260904C00012000,1,,0.18,20.0,-10.0,-2.0,reconcile_fill,,-0.01,0.5,-0.4,,,862bbf0f-a599-4b0e-af52-db0e13678355
+2026-08-28 14:26:29.563648+00:00,entry,90,live_1to1,S218,ebd144e2a009,MCD,MCD260904C00270000,1,0.55,0.53,53.0,,,,-0.01,,0.5,-0.4,0.2400000000000001,low=260.32 BB_lower=260.59 touch+green,e0c4d6fe-34e2-4a8b-9ba1-305a9d4011e4
