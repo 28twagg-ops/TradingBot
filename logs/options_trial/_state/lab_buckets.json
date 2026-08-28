@@ -2,8 +2,8 @@
   {
     "bucket_id": 0,
     "profile": "baseline",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 20.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 1,

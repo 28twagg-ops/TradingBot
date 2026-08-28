@@ -7,3 +7,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-26T14:56:03Z,reconcile,90,live_1to1,S404,44a9781e59ac,MARA,MARA260828C00012000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-27 14:27:02.260472+00:00,entry,90,live_1to1,S404,8e6492b4c1df,CELH,CELH260904C00036000,1,0.32,0.31,31.0,,,,-0.01,,0.75,-0.6000000000000001,0.12903225806451624,gap -3.8%,e0fd007c-02f1-4781-b0cc-495b33e8d606
 2026-08-27T18:11:51Z,reconcile,90,live_1to1,S404,8e6492b4c1df,CELH,CELH260904C00036000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-08-28 14:14:16.256773+00:00,entry,90,live_1to1,S404,0d6c58654278,MARA,MARA260904C00012000,1,0.21,0.2,20.0,,,,-0.01,,0.75,-0.6000000000000001,0.046511627906976785,gap -2.9%,a3d1978f-75df-4688-be4e-bdbc8feb3ac4
+2026-08-27 17:56:25.541975+00:00,exit,90,live_1to1,S404,0d6c58654278,MARA,MARA260904C00012000,1,,0.18,20.0,-10.0,-2.0,reconcile_fill,,-0.01,0.5,-0.4,,,862bbf0f-a599-4b0e-af52-db0e13678355
