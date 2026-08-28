@@ -22,3 +22,20 @@ Live micro done. open_options=0 lots=0
 Live account equity $265.97 cash $226.12 #225458845 options_level=3
 Live micro: outside 9:28-16:05 ET
 Live micro done. open_options=0 lots=0
+=== options_live_micro LIVE 2026-08-28T09:34:35.056702-04:00 share=25% ===
+Live account equity $266.44 cash $146.33 #225458845 options_level=3
+Live micro sleeve $67 (25% of $266) deployed $0 open_strategies=0/3 (paper baseline $75 / tp=+50% sl=-40% / 1 contract per strategy / min_cost $20)
+Live micro entry order (CLEAN win): S404 100%win, S406 56%win, S218 56%win
+Live micro signals: 5
+  try S404 100%win/+80%med COIN
+  skip S404 COIN: no contract under $67
+  try S404 100%win/+80%med MARA
+LIVE BUY S404 100%win MARA MARA260904C00011500 limit=0.57 ask=0.58 cost=$58 id=f9a90613-3b1f-47f3-af32-703fb3d6e7a9
+  skip S404 MSTR: already attempted today
+  try S406 56%win/+58%med MRK
+  skip S406 MRK: no contract under $17
+  try S218 56%win/+49%med MCD
+  skip S218 MCD: no contract under $17
+LIVE PROT check MARA260904C00011500: have_ols=False open_matched=0 ols_id=- ols_type=-
+LIVE PROT STOP-MKT MARA260904C00011500 x1 stop=0.34 id=397ceec6-0682-42c7-957b-4bacc1f1dab5
+Live micro done. open_options=1 lots=1
