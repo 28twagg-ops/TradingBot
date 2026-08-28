@@ -1,0 +1,16 @@
+=== options_live_micro LIVE 2026-08-28T12:25:59.376089-04:00 share=25% ===
+2026-08-28 12:25:59,376 INFO === options_live_micro LIVE 2026-08-28T12:25:59.376089-04:00 share=25% ===
+Live account equity $231.22 cash $213.22 #225458845 options_level=3
+2026-08-28 12:25:59,603 INFO Live account equity $231.22 cash $213.22 #225458845 options_level=3
+Live micro hold S218 MCD260904C00272500 -35.7% (tp +50% / sl -40%)
+2026-08-28 12:25:59,750 INFO Live micro hold S218 MCD260904C00272500 -35.7% (tp +50% / sl -40%)
+Live micro cancel-scan MCD260904C00272500: symbol-scoped n=1
+2026-08-28 12:25:59,820 INFO Live micro cancel-scan MCD260904C00272500: symbol-scoped n=1
+Live micro cancel-scan MCD260904C00272500: no non-OLS sell to cancel
+2026-08-28 12:25:59,820 INFO Live micro cancel-scan MCD260904C00272500: no non-OLS sell to cancel
+LIVE PROT check MCD260904C00272500: have_ols=True open_matched=1 ols_id=a4b5deb0-49eb-4793-95dd-18fe41f9fbb3 ols_type=stop
+2026-08-28 12:25:59,963 INFO LIVE PROT check MCD260904C00272500: have_ols=True open_matched=1 ols_id=a4b5deb0-49eb-4793-95dd-18fe41f9fbb3 ols_type=stop
+Live micro: manage/exits only
+2026-08-28 12:25:59,964 INFO Live micro: manage/exits only
+Live micro done. open_options=1 lots=1
+2026-08-28 12:26:00,038 INFO Live micro done. open_options=1 lots=1
