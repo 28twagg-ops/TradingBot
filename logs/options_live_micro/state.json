@@ -1,22 +1,20 @@
 {
   "lots": [
     {
-      "lot_id": "80332197e4f7",
-      "strategy_id": "S404",
+      "lot_id": "fb62d6d05b31",
+      "strategy_id": "ORPHAN",
       "occ": "MARA260904C00011500",
       "underlying": "MARA",
       "qty": 1,
-      "entry_price": 0.57,
+      "entry_price": 0.56,
       "take_profit": 0.5,
       "stop_loss": -0.4,
-      "order_id": "f9a90613-3b1f-47f3-af32-703fb3d6e7a9",
-      "pending": true
+      "order_id": "orphan:MARA260904C00011500",
+      "pending": false
     }
   ],
   "used_day": "2026-08-28",
-  "used_strategies": [
-    "S404"
-  ],
+  "used_strategies": [],
   "known_expired": [
     "WMT260821C00110000"
   ]
