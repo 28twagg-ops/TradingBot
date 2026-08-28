@@ -6269,3 +6269,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-28 20:16:15,ext_exits,bull,234.16,128.83,0,0,0,3,GOOGL|HIG|PHM,both
 2026-08-28 20:21:07,ext_exits,bull,234.16,128.83,0,0,0,3,GOOGL|HIG|PHM,both
 2026-08-28 20:29:44,ext_exits,bull,234.13,128.83,0,0,0,3,GOOGL|HIG|PHM,both
+2026-08-28 20:31:05,ext_exits,bull,234.13,128.83,0,0,0,3,GOOGL|HIG|PHM,both
