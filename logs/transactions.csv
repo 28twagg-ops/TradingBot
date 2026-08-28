@@ -1159,3 +1159,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-27 14:16:25,2026-08-27,SELL,AON,Pullback50,349.43,44.26,-0.53,-0.24,0,stop_loss (-0.5%),bull,293.03
 2026-08-27 19:52:05,2026-08-27,SELL,AAPL,Pullback50,314.18,39.93,0.09,0.04,0,midline (+0.1%),bull,266.0
 2026-08-27 19:56:57,2026-08-27,SELL,AES,Pullback50,14.72,39.88,-0.01,-0.0,0,midline (-0.0%),bull,266.0
+2026-08-28 13:57:00,2026-08-28,SELL,AES,Pullback50,14.73,38.49,-0.01,-0.0,0,midline (-0.0%),bull,257.85

@@ -794,3 +794,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-08-27 14:16:25,2026-08-27,SELL,AON,Pullback50,349.43,,349.43,44.26,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
 2026-08-27 19:52:05,2026-08-27,SELL,AAPL,Pullback50,314.18,314.16,314.182,39.93,0.0006,0.0003,limit_fill_position_check_full,midline (+0.1%),bull
 2026-08-27 19:56:57,2026-08-27,SELL,AES,Pullback50,14.725,14.72,14.7241,39.88,-0.0061,-0.0024,limit_fill_position_check_full,midline (-0.0%),bull
+2026-08-28 13:57:00,2026-08-28,SELL,AES,Pullback50,14.735,14.73,14.7303,38.49,-0.0319,-0.0123,limit_fill_position_check_full,midline (-0.0%),bull
