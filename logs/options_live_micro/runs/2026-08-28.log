@@ -438,3 +438,7 @@ Live micro cancel-scan MCD260904C00272500: no non-OLS sell to cancel
 LIVE EXIT stop_loss (-53.6%) MCD260904C00272500 x1 limit=0.10 id=31fd75c7-9627-4cf3-b800-02ba82f86494
 Live micro: manage/exits only
 Live micro done. open_options=1 lots=0
+=== options_live_micro LIVE 2026-08-28T12:51:00.008382-04:00 share=25% ===
+Live account equity $234.19 cash $234.19 #225458845 options_level=3
+Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
