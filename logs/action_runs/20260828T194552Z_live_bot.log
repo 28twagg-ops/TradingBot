@@ -1,0 +1,176 @@
+19:45:53  INFO      Mode: scan
+19:45:53  INFO        Universe cache hit: 903 tickers (tickers_2026-08-28.json)
+19:45:54  INFO        [universe] 40/903 (40 valid)
+19:45:55  INFO        [universe] 80/903 (80 valid)
+19:45:56  INFO        [universe] 120/903 (120 valid)
+19:45:57  INFO        [universe] 160/903 (160 valid)
+19:45:58  INFO        [universe] 200/903 (199 valid)
+19:46:07  INFO        [universe] 240/903 (238 valid)
+19:46:17  INFO        [universe] 280/903 (278 valid)
+19:46:30  INFO        [universe] 320/903 (318 valid)
+19:46:43  INFO        [universe] 360/903 (358 valid)
+19:46:56  INFO        [universe] 400/903 (397 valid)
+19:47:05  INFO        [universe] 440/903 (437 valid)
+19:47:18  INFO        [universe] 480/903 (477 valid)
+19:47:31  INFO        [universe] 520/903 (517 valid)
+19:47:44  INFO        [universe] 560/903 (557 valid)
+19:47:53  INFO        [universe] 600/903 (597 valid)
+19:48:06  INFO        [universe] 640/903 (637 valid)
+19:48:19  INFO        [universe] 680/903 (677 valid)
+19:48:32  INFO        [universe] 720/903 (717 valid)
+19:48:41  INFO        [universe] 760/903 (757 valid)
+19:48:54  INFO        [universe] 800/903 (797 valid)
+19:49:07  INFO        [universe] 840/903 (836 valid)
+19:49:20  INFO        [universe] 880/903 (876 valid)
+19:49:26  INFO        [universe] 903/903 (899 valid)
+19:49:28  INFO        BUY  GOOGL  $35.13  [Pullback50]  id=d24b1ce0-ce56-48c4-96fd-67a45d25b765
+19:49:28  ERROR       BUY FAILED BRK-B: {"code":42210000,"message":"asset \"BRK-B\" not found"}
+19:49:28  INFO        BUY  HIG  $35.13  [Pullback50]  id=9462c0b5-faef-4649-9892-67c91212d26f
+19:49:28  INFO        BUY  PHM  $35.13  [Pullback50]  id=e8e322a5-4d6d-4425-aa32-266495fb6bf1
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:45 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $234.19|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-08-28|
+|  Universe                                                          both|
+|  Mo~  Aug: VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $234.19|
+|  Cash                                                           $234.19|
+|  Reserve                                          $11.71  (always kept)|
+|  Stocks ~  $0.00 / $175.64  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $175.64  (new stock buys)|
+|  Trade size             $35.13  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (0 open)                        |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (stale (103691.7m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  12                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  GOOGL    Pullback50      eq     $347.73  39.3   -1.06   50MA bounce (-|
+|  AZO      RSIRecovery     eq     $2959.~  37.1   0.35    RSI 28.6→37.1 |
+|  BRK-B    Pullback50      eq     $506.18  29.2   -1.39   50MA bounce (+|
+|  SCHW     TrendResumpti~  eq     $110.60  56.8   0.53    HH/HL resumpti|
+|  HIG      Pullback50      eq     $138.36  42.5   -1.60   50MA bounce (+|
+|  PHM      Pullback50      eq     $128.42  47.1   -2.20   50MA bounce (-|
+|  RJF      VWAP_Reclaim    eq     $179.22  50.3   1.31    VWAP reclaim V|
+|  WFC      Pullback50      eq     $86.52   45.7   -1.21   50MA bounce (+|
+|  AMH      Pullback50      eq     $33.66   44.3   -2.24   50MA bounce (-|
+|  AN       Pullback50      eq     $201.94  39.9   -0.99   50MA bounce (+|
+|  LIVN     Pullback50      eq     $80.21   62.7   -1.19   50MA bounce (-|
+|  SFM      Pullback50      eq     $81.42   42.6   -2.18   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] GOOGL  Pullback50                                  $35.13|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] BRK-B  Pullback50                                  $35.13|
+|    ENTER [eq] HIG  Pullback50                                    $35.13|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] PHM  Pullback50                                    $35.13|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] WFC  Pullback50                                      cap 3|
+|    SKIP [eq] AMH  Pullback50                                      cap 3|
+|    SKIP [eq] AN  Pullback50                                       cap 3|
+|    SKIP [eq] LIVN  Pullback50                                     cap 3|
+|    SKIP [eq] SFM  Pullback50                                      cap 3|
+|    SKIP [eq] AZO  RSIRecovery                                     cap 3|
+|    SKIP [eq] SCHW  TrendResumption                                cap 3|
+|    SKIP [eq] RJF  VWAP_Reclaim                                    cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  GOOGL                                                still unconfirmed|
+|  HIG                                                  still unconfirmed|
+|  PHM                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |19:49:58  INFO        place_all_stops: checking 3 positions...
+19:49:58  INFO        STOP skipped GOOGL: fractional (0.1012 shares) — software exit will handle it
+19:49:58  INFO        STOP skipped HIG: fractional (0.2538 shares) — software exit will handle it
+19:49:58  INFO        STOP skipped PHM: fractional (0.2733 shares) — software exit will handle it
+19:49:58  INFO        place_eod_stops: updating 3 stops to current price...
+19:49:58  INFO        EOD stop skip GOOGL: 0.1012 shares (fractional) — ext_exits will cover
+19:49:58  INFO        EOD stop skip HIG: 0.2538 shares (fractional) — ext_exits will cover
+19:49:58  INFO        EOD stop skip PHM: 0.2733 shares (fractional) — ext_exits will cover
+19:49:58  INFO        Daily log -> logs/daily/2026-08-28.md
+19:49:58  INFO        Dashboard written → logs/dashboard.md
+
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Scanned                                                            899|
+|  Signals                                                             12|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $234.24|
+|  Cash                                                           $128.83|
++========================================================================+
