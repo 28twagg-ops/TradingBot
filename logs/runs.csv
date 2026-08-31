@@ -6389,3 +6389,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-31 20:01:29,ext_exits,bull,232.49,197.55,0,0,0,1,EQIX,both
 2026-08-31 20:05:54,ext_exits,bull,232.59,197.55,0,0,0,1,EQIX,both
 2026-08-31 20:11:03,ext_exits,bull,232.59,197.55,0,0,0,1,EQIX,both
+2026-08-31 20:16:00,ext_exits,bull,232.59,197.55,0,0,0,1,EQIX,both
