@@ -48,11 +48,8 @@
     "b0": 20.0,
     "b90": 53.0
   },
-  "session_date": "2026-08-28",
-  "entries_locked": [
-    "90|S404|2026-08-28",
-    "90|S218|2026-08-28"
-  ],
+  "session_date": "2026-08-31",
+  "entries_locked": [],
   "processed_orders": [
     "88b24066-5228-4787-bfc8-1fa4c0ac267f",
     "de934505-7c85-4be9-8c87-4ee33a7334a8",
@@ -520,7 +517,7 @@
     "862bbf0f-a599-4b0e-af52-db0e13678355",
     "e0c4d6fe-34e2-4a8b-9ba1-305a9d4011e4"
   ],
-  "submitted_today": 2,
+  "submitted_today": 0,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
-  "updated": "2026-08-28"
+  "updated": "2026-08-31"
 }
