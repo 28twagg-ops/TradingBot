@@ -73,6 +73,20 @@ ALLOWED_STRATEGIES: frozenset[str] = frozenset(
 MIRROR_LIVE = os.environ.get("OPTIONS_MIRROR_LIVE", "0").strip().lower() in (
     "1", "true", "yes", "on",
 )
+# Run controlled-layout variation buckets alongside b90 live_1to1 (not mirror-only).
+VARIATION_STUDY = os.environ.get("OPTIONS_VARIATION_STUDY", "0").strip().lower() in (
+    "1", "true", "yes", "on",
+)
+# Strategies the live twin bucket (b90) may trade — must match LIVE_OPTIONS_ALLOW.
+_MIRROR_STRAT_RAW = os.environ.get("OPTIONS_MIRROR_STRATEGIES", "").strip()
+if _MIRROR_STRAT_RAW:
+    MIRROR_STRATEGIES: frozenset[str] = frozenset(
+        s.strip() for s in _MIRROR_STRAT_RAW.split(",") if s.strip()
+    )
+elif ALLOWED_STRATEGIES:
+    MIRROR_STRATEGIES = ALLOWED_STRATEGIES
+else:
+    MIRROR_STRATEGIES = frozenset({"S404", "S406", "S218"})
 # Stable bucket id inside the 100-profile grid — 1:1 twin of options_live_micro.
 LIVE_1TO1_BUCKET_ID = 90
 LIVE_1TO1_PROFILE_NAME = "live_1to1"
@@ -284,6 +298,8 @@ BUCKET_EXPERIMENTS: list[BucketProfile] = _build_bucket_experiments()
 
 def experiment_layout_id() -> str:
     mode = "controlled" if CONTROLLED_LAYOUT else "grid"
+    if MIRROR_LIVE and VARIATION_STUDY:
+        return f"{mode}:{len(BUCKET_EXPERIMENTS)}:{LIVE_1TO1_PROFILE_NAME}+variations"
     if MIRROR_LIVE:
         return f"{mode}:{len(BUCKET_EXPERIMENTS)}:{LIVE_1TO1_PROFILE_NAME}"
     head = BUCKET_EXPERIMENTS[0].name if BUCKET_EXPERIMENTS else "none"
@@ -349,6 +365,14 @@ class EffectiveArm:
     @property
     def bucket_key(self) -> str:
         return f"b{self.bucket_id}"
+
+
+def is_live_1to1_arm(arm: EffectiveArm) -> bool:
+    """True for the strict live-micro twin bucket (no tier offsets / lottery rules)."""
+    return (
+        arm.bucket_id == LIVE_1TO1_BUCKET_ID
+        or arm.profile_name == LIVE_1TO1_PROFILE_NAME
+    )
 
 
 @dataclass
@@ -642,7 +666,8 @@ def ensure_trial_layout() -> None:
 
 def _merge_arm(bucket: BucketProfile, strategy_id: str,
                equity: float = VIRTUAL_BUCKET_USD) -> EffectiveArm:
-    tweaks = {} if (CONTROLLED_LAYOUT or MIRROR_LIVE) else STRATEGY_TWEAKS.get(strategy_id, {})
+    no_tweaks = CONTROLLED_LAYOUT or (MIRROR_LIVE and not VARIATION_STUDY)
+    tweaks = {} if no_tweaks else STRATEGY_TWEAKS.get(strategy_id, {})
     vals = {f.name: getattr(bucket, f.name) for f in fields(BucketProfile)
             if f.name not in ("bucket_id", "name")}
     for k, v in tweaks.items():
@@ -715,12 +740,29 @@ def active_buckets(equity: float) -> list[BucketProfile]:
 def arms_for_signal(strategy_id: str, equity: float) -> list[EffectiveArm]:
     if strategy_id in DROPPED_STRATEGIES:
         return []
+    arms: list[EffectiveArm] = []
+
+    # Strict live twin (b90): same strategies as options_live_micro, baseline arm only.
+    if MIRROR_LIVE and strategy_id in MIRROR_STRATEGIES:
+        twin = get_live_1to1_bucket() or live_1to1_profile()
+        arms.append(_merge_arm(twin, strategy_id, equity))
+
+    if VARIATION_STUDY:
+        for b in active_buckets(equity):
+            if b.bucket_id == LIVE_1TO1_BUCKET_ID:
+                continue
+            if b.strategy_scope not in ("all", strategy_id):
+                continue
+            if b.strategy_scope in DROPPED_STRATEGIES:
+                continue
+            arms.append(_merge_arm(b, strategy_id, equity))
+        return arms
+
+    if MIRROR_LIVE:
+        return arms
+
     if ALLOWED_STRATEGIES and strategy_id not in ALLOWED_STRATEGIES:
         return []
-    # Live-control study: dedicated live_1to1 bucket (1:1 with options_live_micro).
-    if MIRROR_LIVE:
-        twin = get_live_1to1_bucket() or live_1to1_profile()
-        return [_merge_arm(twin, strategy_id, equity)]
     return [
         _merge_arm(b, strategy_id, equity)
         for b in active_buckets(equity)

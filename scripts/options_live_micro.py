@@ -55,6 +55,10 @@ API_KEY = os.getenv("ALPACA_API_KEY")
 API_SECRET = os.getenv("ALPACA_SECRET_KEY")
 
 SHARE = float(os.getenv("LIVE_OPTIONS_SHARE", "0.25"))
+# Hard dollar cap on options sleeve (0 = percent-only). Use with STOCK_CASH_RESERVE for 50/50 splits.
+MAX_OPTIONS_CAP = float(os.getenv("LIVE_OPTIONS_MAX_CAP", "0"))
+# Cash that must remain available for the stock bot after an options entry (shared account).
+STOCK_CASH_RESERVE = float(os.getenv("LIVE_STOCK_CASH_RESERVE", "0"))
 # 0/false = manage + orphan adopt only (no new buys).
 ENTRIES_ENABLED = os.getenv("LIVE_OPTIONS_ENTRIES", "1").strip().lower() not in (
     "0", "false", "no", "off",
@@ -206,6 +210,24 @@ def option_mv(trade) -> float:
         except Exception:
             pass
     return total
+
+
+def options_sleeve(equity: float) -> float:
+    """Max options market value allowed (percent cap, optional fixed dollar ceiling)."""
+    cap = max(0.0, equity * SHARE)
+    if MAX_OPTIONS_CAP > 0:
+        cap = min(cap, MAX_OPTIONS_CAP)
+    return cap
+
+
+def entry_room(cash: float, equity: float, trade) -> float:
+    """Buying power for a new options entry without touching the stock reserve."""
+    sleeve_room = max(0.0, options_sleeve(equity) - option_mv(trade))
+    if STOCK_CASH_RESERVE > 0:
+        cash_room = max(0.0, cash - STOCK_CASH_RESERVE)
+    else:
+        cash_room = max(0.0, cash)
+    return min(cash_room, sleeve_room)
 
 
 def active_lots(state: dict) -> list:
@@ -877,7 +899,7 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
     if not ENTRIES_ENABLED:
         rl("Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only")
         return 0
-    sleeve = max(0.0, equity * SHARE)
+    sleeve = options_sleeve(equity)
     deployed = option_mv(trade)
     open_strats = open_strategy_ids(trade, state)
     used_today = used_strategies_today(state)
@@ -886,9 +908,14 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
         f"{sid} {CLEAN_RANK.get(sid, (0, 0))[0]:.0f}%win"
         for sid in allow
     )
+    cap_note = f" max_cap ${MAX_OPTIONS_CAP:.0f}" if MAX_OPTIONS_CAP > 0 else ""
+    reserve_note = (
+        f" stock_reserve ${STOCK_CASH_RESERVE:.0f}" if STOCK_CASH_RESERVE > 0 else ""
+    )
     rl(
-        f"Live micro sleeve ${sleeve:.0f} ({SHARE:.0%} of ${equity:.0f}) "
-        f"deployed ${deployed:.0f} open_strategies={len(open_strats)}/{len(allow)} "
+        f"Live micro sleeve ${sleeve:.0f} ({SHARE:.0%} of ${equity:.0f}{cap_note}) "
+        f"deployed ${deployed:.0f} cash ${cash:.0f}{reserve_note} "
+        f"open_strategies={len(open_strats)}/{len(allow)} "
         f"(paper baseline ${PAPER_MAX_PREMIUM:.0f} / tp={TAKE_PROFIT:+.0%} "
         f"sl={STOP_LOSS:+.0%} / 1 contract per strategy / min_cost ${MIN_ENTRY_COST:.0f})"
     )
@@ -913,10 +940,16 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
         st = _strat(hit.strategy_id)
         if not st:
             continue
-        room = min(max(0.0, cash), max(0.0, sleeve - option_mv(trade)))
+        room = entry_room(cash, equity, trade)
         max_prem = min(float(arm.max_premium), room)
         if max_prem <= 0:
-            rl(f"  skip {hit.strategy_id} {hit.symbol}: no sleeve/cash room")
+            if STOCK_CASH_RESERVE > 0 and cash <= STOCK_CASH_RESERVE + 0.01:
+                rl(
+                    f"  skip {hit.strategy_id} {hit.symbol}: "
+                    f"cash ${cash:.0f} at/below stock reserve ${STOCK_CASH_RESERVE:.0f}"
+                )
+            else:
+                rl(f"  skip {hit.strategy_id} {hit.symbol}: no sleeve/cash room")
             continue
         cand = om._pick_option_from_chain(
             opt, ref, hit.symbol, hit.price,

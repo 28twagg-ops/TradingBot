@@ -52,8 +52,10 @@ from options_lab import (
     active_bucket_count, arms_for_signal,
     build_bucket_leaderboard, build_reflected_leaderboard,
     cancel_dropped_strategy_entries, cancel_unfilled_lab_entries,
-    DROPPED_STRATEGIES, ALLOWED_STRATEGIES, MIRROR_LIVE, TOP_BUCKET_PCT,
+    DROPPED_STRATEGIES, ALLOWED_STRATEGIES, MIRROR_LIVE, VARIATION_STUDY,
+    MIRROR_STRATEGIES, TOP_BUCKET_PCT,
     LIVE_1TO1_BUCKET_ID, LIVE_1TO1_PROFILE_NAME, get_live_1to1_bucket,
+    is_live_1to1_arm,
     entry_limit_price, exit_limit_price,
     exit_reason_for_lot, has_open_lab_entry, load_state,
     lock_entry_slot, make_entry_client_order_id,
@@ -817,6 +819,10 @@ def _active_paper_strategies() -> list:
     for s in PAPER_STRATEGIES:
         if s.id in DROPPED_STRATEGIES:
             continue
+        # Variation study scans the full lab; b90 twin filters at arms_for_signal.
+        if VARIATION_STUDY:
+            out.append(s)
+            continue
         if ALLOWED_STRATEGIES and s.id not in ALLOWED_STRATEGIES:
             continue
         out.append(s)
@@ -858,6 +864,7 @@ def scan_all_signals(stock, universe: list[str]) -> list[SignalHit]:
     priority = {s.id: i for i, s in enumerate(active)}
     controlled = bool(os.getenv("OPTIONS_CONTROLLED_LAYOUT"))
     mirror = MIRROR_LIVE or bool(ALLOWED_STRATEGIES)
+    multi_strategy = controlled or mirror or VARIATION_STUDY
     for sym in universe:
         try:
             alpaca_sym = to_alpaca_symbol(sym)
@@ -871,7 +878,7 @@ def scan_all_signals(stock, universe: list[str]) -> list[SignalHit]:
                 hits = [h for h in hits if h.strategy_id in active_ids]
             if not hits:
                 continue
-            if controlled or mirror:
+            if controlled or multi_strategy:
                 # Controlled layout OR live-mirror control study: keep every
                 # allowed-strategy hit so paper can open one lot per strategy
                 # (same concurrency model as options_live_micro).
@@ -883,9 +890,9 @@ def scan_all_signals(stock, universe: list[str]) -> list[SignalHit]:
                 out.append(hits[0])
         except Exception:
             continue
-    if MIRROR_LIVE:
+    if MIRROR_LIVE and not VARIATION_STUDY:
         out = _dedupe_mirror_hits(out)
-    else:
+    elif not VARIATION_STUDY:
         out.sort(key=lambda h: priority.get(h.strategy_id, 99))
     return out
 
@@ -1710,11 +1717,15 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
             if state.bucket_holds_underlying(arm.bucket_id, hit.symbol):
                 continue
             tier = get_stock_tier(hit.symbol)
-            adjusted_arm = _apply_tier_offsets(arm, tier)
-            
-            # Widen DTE search bounds if fast tier to give more room
-            search_dte_min = strat.dte_min
-            search_dte_max = strat.dte_max + (2 if tier == "fast" else 0)
+            if is_live_1to1_arm(arm):
+                # Strict 1:1 with options_live_micro — baseline arm, no tier skew.
+                adjusted_arm = arm
+                search_dte_min = strat.dte_min
+                search_dte_max = strat.dte_max
+            else:
+                adjusted_arm = _apply_tier_offsets(arm, tier)
+                search_dte_min = strat.dte_min
+                search_dte_max = strat.dte_max + (2 if tier == "fast" else 0)
             
             cand = _pick_option_from_chain(
                 opt, ref, hit.symbol, hit.price,
@@ -1726,7 +1737,7 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
                 rl_file(f"  [b{arm.bucket_id}|{arm.profile_name}] {hit.strategy_id} "
                         f"{hit.symbol} (tier: {tier}): no tradeable {opt_type}")
                 continue
-            if MIRROR_LIVE and cand["cost"] < MIRROR_MIN_ENTRY_COST - 0.01:
+            if is_live_1to1_arm(adjusted_arm) and cand["cost"] < MIRROR_MIN_ENTRY_COST - 0.01:
                 rl_file(
                     f"  [b{arm.bucket_id}|{arm.profile_name}] skip {hit.strategy_id} "
                     f"{hit.symbol}: cost ${cand['cost']:.0f} "
@@ -2076,15 +2087,24 @@ def run() -> int:
         bname = twin.name if twin else LIVE_1TO1_PROFILE_NAME
         rl(
             f"LIVE 1:1 bucket b{bid} {bname} — "
-            f"{', '.join(s.id for s in active)} | "
+            f"{', '.join(sorted(MIRROR_STRATEGIES))} | "
             f"TP+50%/SL-40% | stop-mkt | min ${MIRROR_MIN_ENTRY_COST:.0f}"
         )
+        if VARIATION_STUDY:
+            n_var = sum(
+                1 for b in active_buckets(equity or 0)
+                if b.bucket_id != LIVE_1TO1_BUCKET_ID
+            )
+            rl(
+                f"Variation study: {n_var} lab bucket(s) "
+                f"(controlled layout, tier offsets on)"
+            )
     else:
         n_active = active_bucket_count(equity or 0)
         top_note = f" (top {TOP_BUCKET_PCT:.0%} by med return)" if TOP_BUCKET_PCT > 0 else ""
         rl(f"Active buckets: {n_active}{top_note} | "
            f"Strategies: {', '.join(s.id for s in active)}")
-    if ALLOWED_STRATEGIES:
+    if ALLOWED_STRATEGIES and not VARIATION_STUDY:
         rl(f"Allowed (new entries only): {', '.join(sorted(ALLOWED_STRATEGIES))}")
     if DROPPED_STRATEGIES:
         rl(f"Dropped (no new entries; ex-reflected P&L): "
