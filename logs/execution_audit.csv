@@ -803,3 +803,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-08-31 14:11:06,2026-08-31,SELL,F,Pullback50,13.945,,13.945,6.82,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-08-31 14:31:08,2026-08-31,SELL,PH,Pullback50,980.17,,980.17,34.69,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
 2026-08-31 15:21:09,2026-08-31,SELL,PFG,Pullback50,110.77,,110.77,34.74,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-08-31 19:51:48,2026-08-31,SELL,FFIV,Pullback50,407.16,406.35,406.858,34.8,-0.0742,-0.0258,limit_fill_position_check_full,midline (+0.0%),bull
+2026-08-31 19:52:19,2026-08-31,SELL,ARE,Pullback50,51.44,51.43,51.434,34.98,-0.0117,-0.0041,limit_fill_position_check_full,midline (+0.5%),bull

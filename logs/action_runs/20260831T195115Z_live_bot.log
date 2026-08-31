@@ -1,0 +1,28 @@
+19:51:16  INFO      Mode: scan
+19:51:17  INFO        [positions] 3/3 (3 valid)
+19:51:17  INFO        SELL LIMIT FFIV  qty=0.085537693  limit=$406.35  id=303e8c58-2b7e-487a-aed6-f55b388cd2af
+19:51:48  INFO        SELL LIMIT filled FFIV (confirmed by position check)
+19:51:48  INFO        TX logged: SELL FFIV  P&L 0.02%
+19:51:48  INFO        SELL LIMIT ARE  qty=0.680184403  limit=$51.43  id=fe91080d-47d3-4039-acc3-1d19ddb6b8fd
+19:52:19  INFO        SELL LIMIT filled ARE (confirmed by position check)
+19:52:19  INFO        TX logged: SELL ARE  P&L 0.47%
+19:52:19  INFO        Universe cache hit: 903 tickers (tickers_2026-08-31.json)
+19:52:20  INFO        [universe] 40/902 (40 valid)
+19:52:21  INFO        [universe] 80/902 (80 valid)
+19:52:22  INFO        [universe] 120/902 (120 valid)
+19:52:24  INFO        [universe] 160/902 (160 valid)
+19:52:25  INFO        [universe] 200/902 (199 valid)
+19:52:32  INFO        [universe] 240/902 (238 valid)
+19:52:45  INFO        [universe] 280/902 (278 valid)
+19:52:56  INFO        [universe] 320/902 (318 valid)
+19:53:09  INFO        [universe] 360/902 (358 valid)
+19:53:19  INFO        [universe] 400/902 (397 valid)
+19:53:33  INFO        [universe] 440/902 (437 valid)
+19:53:46  INFO        [universe] 480/902 (477 valid)
+19:53:56  INFO        [universe] 520/902 (517 valid)
+19:54:10  INFO        [universe] 560/902 (557 valid)
+19:54:20  INFO        [universe] 600/902 (597 valid)
+19:54:33  INFO        [universe] 640/902 (637 valid)
+19:54:43  INFO        [universe] 680/902 (677 valid)
+19:54:57  INFO        [universe] 720/902 (717 valid)
+19:55:07  INFO        [universe] 760/902 (757 valid)
