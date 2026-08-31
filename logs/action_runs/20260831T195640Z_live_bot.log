@@ -1,0 +1,148 @@
+19:56:42  INFO      Mode: scan
+19:56:42  INFO        [positions] 1/1 (1 valid)
+19:56:42  INFO        Universe cache hit: 903 tickers (tickers_2026-08-31.json)
+19:56:43  INFO        [universe] 40/902 (40 valid)
+19:56:45  INFO        [universe] 80/902 (80 valid)
+19:56:46  INFO        [universe] 120/902 (120 valid)
+19:56:47  INFO        [universe] 160/902 (160 valid)
+19:56:48  INFO        [universe] 200/902 (199 valid)
+19:56:55  INFO        [universe] 240/902 (238 valid)
+19:57:08  INFO        [universe] 280/902 (278 valid)
+19:57:21  INFO        [universe] 320/902 (318 valid)
+19:57:31  INFO        [universe] 360/902 (358 valid)
+19:57:44  INFO        [universe] 400/902 (397 valid)
+19:57:57  INFO        [universe] 440/902 (437 valid)
+19:58:07  INFO        [universe] 480/902 (477 valid)
+19:58:20  INFO        [universe] 520/902 (517 valid)
+19:58:33  INFO        [universe] 560/902 (557 valid)
+19:58:43  INFO        [universe] 600/902 (597 valid)
+19:58:56  INFO        [universe] 640/902 (637 valid)
+19:59:09  INFO        [universe] 680/902 (677 valid)
+19:59:19  INFO        [universe] 720/902 (717 valid)
+19:59:32  INFO        [universe] 760/902 (757 valid)
+19:59:45  INFO        [universe] 800/902 (797 valid)
+19:59:55  INFO        [universe] 840/902 (836 valid)
+20:00:08  INFO        [universe] 880/902 (876 valid)
+20:00:15  INFO        [universe] 902/902 (898 valid)
+20:00:17  INFO        BUY  NVT  $34.89  [MomReversal]  id=b28a0ae2-d0dc-4d3c-90a2-217d6e9c7c13
+20:00:17  ERROR       BUY FAILED BRK-B: {"code":42210000,"message":"asset \"BRK-B\" not found"}
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $232.59|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-08-31|
+|  Universe                                                          both|
+|  Mo~  Aug: VolumeSpike + 52wkLow (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $232.59|
+|  Cash                                                           $197.55|
+|  Reserve                                          $11.63  (always kept)|
+|  Stocks~  $35.04 / $174.44  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $139.41  (new stock buys)|
+|  Trade size             $34.89  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (1 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  EQIX     Pullback50      $35.04     $1040.~  $1046.~  +0.6%   $+0.22  |
+|                                                                        |
+|  Total invested                                                  $35.04|
+|  Total open P&L                                                  $+0.22|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (stale (108022.5m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  EQIX  P&L +0.6%  $+0.22                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Aug  |  Regime: BULL                                           |
+|  Primary: VolumeSpike  |  Secondary: 52wkLow (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  20                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  BRK-B    Pullback50      eq     $504.53  27.0   -2.00   50MA bounce (+|
+|  DLR      Pullback50      eq     $185.76  43.4   -0.68   50MA bounce (-|
+|  FFIV     Pullback50      eq     $407.73  47.5   -1.09   50MA bounce (+|
+|  F        Pullback50      eq     $13.96   49.8   -0.92   50MA bounce (-|
+|  HWM      RubberBand      eq     $245.66  24.7   3.76    RSI           |
+|  KMI      Pullback50      eq     $32.31   56.3   -0.30   50MA bounce (+|
+|  LULU     VWAP_Reclaim    eq     $120.36  43.2   1.53    VWAP reclaim V|
+|  MU       Pullback50      eq     $958.79  61.9   -1.60   50MA bounce (+|
+|  TSLA     VWAP_Reclaim    eq     $368.68  65.2   1.72    VWAP reclaim V|
+|  WFC      Pullback50      eq     $86.50   46.0   0.16    50MA bounce (+|
+|  WELL     Pullback50      eq     $236.78  75.9   0.24    50MA bounce (+|
+|  AVT      Pullback50      eq     $89.59   39.7   -0.88   50MA bounce (+|
+|  CFR      Pullback50      eq     $161.12  32.8   -1.18   50MA bounce (-|
+|  EXEL     Pullback50      eq     $54.64   64.9   -1.36   50MA bounce (+|
+|  NVST     Pullback50      eq     $27.13   32.0   -1.25   50MA bounce (+|
+|  NVT      MomReversal     eq     $151.34  35.6   0.73    -13.0% drop/60|
+|  OLLI     VWAP_Reclaim    eq     $75.23   42.4   2.94    VWAP reclaim V|
+|  SFM      Pullback50      eq     $82.16   45.7   -0.73   50MA bounce (+|
+|  SLAB     Pullback50      eq     $219.09  51.6   -0.71   50MA bounce (+|
+|  WCC      Pullback50      eq     $340.46  38.3   -1.92   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] NVT  MomReversal                                   $34.89|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] BRK-B  Pullback50                                  $34.89|
+|    ENTER [eq] DLR  Pullback50                                    $34.89|20:00:17  INFO        BUY  DLR  $34.89  [Pullback50]  id=cd0e3a52-9c9f-48a3-a3d2-c62f4b3a9471
