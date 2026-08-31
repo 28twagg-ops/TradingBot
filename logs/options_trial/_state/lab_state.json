@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "5cb077e6ef86",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "MARA260904C00012000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 20.0,
-      "entry_price": 0.2,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-28T14:14:16.858030+00:00",
-      "entry_order_id": "orphan:MARA260904C00012000"
-    },
-    {
       "lot_id": "ebd144e2a009",
       "bucket_id": 90,
       "profile_name": "live_1to1",
@@ -45,7 +25,6 @@
   "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {
-    "b0": 20.0,
     "b90": 53.0
   },
   "session_date": "2026-08-31",
