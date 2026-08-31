@@ -1,0 +1,61 @@
+14:11:02  INFO      Mode: exits
+14:11:03  INFO        Daily log -> logs/daily/2026-08-31.md
+14:11:03  INFO        Daily log reconciled -> logs/daily/2026-08-31.md (3 ledger rows)
+14:11:03  INFO        place_all_stops: checking 3 positions...
+14:11:03  INFO        STOP skipped F: fractional (0.4893 shares) — software exit will handle it
+14:11:03  INFO        STOP skipped PFG: fractional (0.3136 shares) — software exit will handle it
+14:11:03  INFO        STOP skipped PH: fractional (0.0354 shares) — software exit will handle it
+14:11:03  INFO        [positions] 3/3 (3 valid)
+14:11:04  INFO        SELL MARKET [urgent] F closed
+14:11:06  INFO        TX logged: SELL F  P&L -0.58%
+14:11:06  INFO        Daily log -> logs/daily/2026-08-31.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:11 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $232.61|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  F  P&L -0.6%  $-0.04                           EXIT: stop_loss (-0.6%)|
+|  PH  P&L -0.1%  $-0.05                                             HOLD|
+|  PFG  P&L -0.1%  $-0.03                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  F                                           -0.58%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+

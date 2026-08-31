@@ -1165,3 +1165,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-31 13:46:08,2026-08-31,SELL,GOOGL,Pullback50,340.3,34.42,-1.99,-0.7,3,stop_loss (-2.0%),bull,232.9
 2026-08-31 13:46:11,2026-08-31,SELL,PHM,Pullback50,126.57,34.59,-1.52,-0.53,3,stop_loss (-1.5%),bull,232.88
 2026-08-31 13:46:32,2026-08-31,SELL,HIG,Pullback50,138.26,35.1,-0.01,-0.0,3,max_hold 3d (-0.0%),bull,232.86
+2026-08-31 14:11:06,2026-08-31,SELL,F,Pullback50,13.95,6.82,-0.58,-0.04,0,stop_loss (-0.6%),bull,232.61
