@@ -6323,3 +6323,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-08-31 14:06:05,exits,bull,232.66,128.1,0,0,0,3,F|PFG|PH,both
 2026-08-31 14:11:06,exits,bull,232.61,162.85,0,0,1,2,PFG|PH,both
 2026-08-31 14:17:14,exits,bull,232.5,162.85,0,0,0,2,PFG|PH,both
+2026-08-31 14:21:06,exits,bull,232.41,162.85,0,0,0,2,PFG|PH,both
