@@ -1,3 +1,35 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=1 paper_keys=yes dry_run=False
+  alpaca positions=1
+options_reconcile: done
+Layout: controlled:100:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:100:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      100
+=== options_morning_bot (PAPER) 2026-08-31T14:16:06.218337-04:00 ===
+
+[Run context]
+Paper auth OK — equity $999899.32, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Traceback (most recent call last):
+  File "/home/runner/work/TradingBot/TradingBot/scripts/options_morning_bot.py", line 2209, in <module>
+    sys.exit(run())
+             ^^^^^
+  File "/home/runner/work/TradingBot/TradingBot/scripts/options_morning_bot.py", line 2095, in run
+    1 for b in active_buckets(equity or 0)
+               ^^^^^^^^^^^^^^
+NameError: name 'active_buckets' is not defined. Did you mean: 'active_bucket_count'?
+WARNING: options_morning_bot exited 1 (workflow still continues)
+Evaluation complete: 100 strategies evaluated, 0 killed, 0 promote candidates.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-31_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-31_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-31_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-31_strategy_selection.csv
+Summary: keep=0 watch=79 drop=26
+Orphan rate: 13.4% (345/2583) ALERT
 # Options signal frequency
 
 _Generated 2026-08-31T14:16:12.315066_
@@ -100,3 +132,30 @@ Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:
 
 - Pre-router-fix (before 2026-07-17 commit `56660c9e`): S163/S166 were starved — expect zeros until a post-fix entry-window gap-down day.
 - Controlled layout places one ENTRY per matching bucket×strategy; raw counts inflate, unique underlyings do not.
+
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/signal_frequency.md
+## Ledger health — 2026-08-31
+| Check                       | Count | Status |
+|-----------------------------|------:|--------|
+| Current stuck (state)       |     0 | OK |
+| Orphaned lots (post-stable) |   977 | WARN | <<<
+| Missing exit records (post) |   977 | WARN | <<<
+| State/ledger mismatches     |     0 | OK |
+| Total open lots             |     1 | INFO |
+| Total closed lots           |  1771 | INFO |
+| Pre-cutoff audit debt       |     0 | INFO |
+| Transition audit debt       |   744 | INFO |
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_health.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-31_data_quality.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-08-31_data_quality.csv
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/latest_data_quality.json
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/latest_data_quality_snippet.md
+CLEAN n=821 med=-47.5% | TAINTED n=1762 med=-39.2% | KEEP-only n=294 med=+37.5% | KILL=16 KEEP=10
+Wrote /home/runner/work/TradingBot/TradingBot/logs/dashboard.html
+equity=232.23 router=CONFIRMED leaderboard_rows=105
+Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
+| 1 | MA_Squeeze | 2 | 100% | +0.56% | +0.56% | +0.17% | 999.00 | 0.0d | $+0.80 | WATCH |
+| 2 | MomReversal | 19 | 37% | +0.14% | -0.61% | -1.38% | 1.57 | 1.5d | $+2.57 | WATCH |
+| 3 | unknown | 32 | 19% | -0.03% | -0.59% | -1.27% | 1.44 | 0.0d | $+0.29 | ACTIVE |
