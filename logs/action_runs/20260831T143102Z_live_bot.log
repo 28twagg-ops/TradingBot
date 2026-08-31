@@ -1,0 +1,59 @@
+14:31:04  INFO      Mode: exits
+14:31:05  INFO        Daily log -> logs/daily/2026-08-31.md
+14:31:05  INFO        Daily log reconciled -> logs/daily/2026-08-31.md (4 ledger rows)
+14:31:05  INFO        place_all_stops: checking 2 positions...
+14:31:05  INFO        STOP skipped PFG: fractional (0.3136 shares) — software exit will handle it
+14:31:05  INFO        STOP skipped PH: fractional (0.0354 shares) — software exit will handle it
+14:31:05  INFO        [positions] 2/2 (2 valid)
+14:31:05  INFO        SELL MARKET [urgent] PH closed
+14:31:08  INFO        TX logged: SELL PH  P&L -0.65%
+14:31:08  INFO        Daily log -> logs/daily/2026-08-31.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:31 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $232.37|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  PH  P&L -0.7%  $-0.23                          EXIT: stop_loss (-0.7%)|
+|  PFG  P&L -0.3%  $-0.09                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  PH                                          -0.65%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
