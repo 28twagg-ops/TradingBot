@@ -1,5 +1,5 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
-S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),127,60,39,21,195.14,65.16,-63.62,-50.0,969.21,3080.0,8,32,0,0,9,21.7
+S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),128,60,39,21,195.14,65.16,-63.62,-50.0,969.21,3080.0,8,32,1,0,9,21.7
 S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),99,22,19,3,54.92,59.72,-50.06,41.18,116.29,733.0,4,32,0,0,7,31.8
 S357,GapDown_21DTE,21d,watch,building sample (8-19 exits),40,18,14,4,32.91,55.07,-67.86,47.06,73.68,323.0,7,32,0,0,3,44.4
 S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),104,32,23,9,33.83,50.39,-91.67,-11.75,122.93,661.0,4,32,1,0,7,28.1
