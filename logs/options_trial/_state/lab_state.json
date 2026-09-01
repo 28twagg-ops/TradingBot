@@ -27,7 +27,7 @@
   "bucket_open_premium": {
     "b90": 53.0
   },
-  "session_date": "2026-08-31",
+  "session_date": "2026-09-01",
   "entries_locked": [],
   "processed_orders": [
     "88b24066-5228-4787-bfc8-1fa4c0ac267f",
@@ -498,5 +498,5 @@
   ],
   "submitted_today": 0,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
-  "updated": "2026-08-31"
+  "updated": "2026-09-01"
 }
