@@ -1,32 +1,9 @@
 {
   "version": 5,
-  "lots": [
-    {
-      "lot_id": "ebd144e2a009",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S218",
-      "occ_symbol": "MCD260904C00270000",
-      "underlying": "MCD",
-      "qty": 1,
-      "entry_cost": 53.0,
-      "entry_price": 0.53,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-08-28T14:26:33.166647+00:00",
-      "entry_order_id": "e0c4d6fe-34e2-4a8b-9ba1-305a9d4011e4"
-    }
-  ],
+  "lots": [],
   "pending_orders": [],
   "pending_exits": [],
-  "bucket_open_premium": {
-    "b90": 53.0
-  },
+  "bucket_open_premium": {},
   "session_date": "2026-09-01",
   "entries_locked": [],
   "processed_orders": [

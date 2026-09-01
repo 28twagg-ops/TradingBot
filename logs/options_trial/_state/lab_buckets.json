@@ -542,8 +542,8 @@
   {
     "bucket_id": 90,
     "profile": "live_1to1",
-    "open_premium": 53.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 91,
