@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-01
 
-_Generated 2026-09-01T11:03:34.360644_
+_Generated 2026-09-01T11:07:28.930543_
 
 ## Summary
 
@@ -112,7 +112,7 @@ _Generated 2026-09-01T11:03:34.360644_
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 245 | 29.8 | -38.18 | -63.39 | -54.55 | +81.82 | 57 | 2 | 0 | $-1,828.78 | 26.1% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 42 | 42.9 | -42.31 | -91.43 | -63.64 | +77.78 | 32 | 2 | 0 | $-226.00 | 31.0% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 56 | 33.9 | -42.86 | -83.93 | -65.20 | +103.47 | 32 | 0 | 0 | $-118.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
-| S399 (GapDown_OTM1) | 3d | drop | 43 | 44.2 | -46.67 | -84.92 | -67.34 | +138.80 | 32 | 0 | 0 | $-64.00 | 37.2% | non-positive median return |
+| S399 (GapDown_OTM1) | 3d | drop | 43 | 44.2 | -46.67 | -84.92 | -67.34 | +138.80 | 32 | 2 | 0 | $-64.00 | 37.2% | non-positive median return |
 | S359 (RubberBand_0DTE) | 0d | drop | 23 | 17.4 | -46.67 | -71.43 | -70.37 | +61.82 | 29 | 0 | 0 | $-323.00 | 43.5% | non-positive median return |
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 36 | 0 | 0 | $-822.00 | 43.2% | manually paused — excluded from new entries & reflected P&L |
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 32 | 0 | 0 | $+33.00 | 26.3% | manually paused — excluded from new entries & reflected P&L |

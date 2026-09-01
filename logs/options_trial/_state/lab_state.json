@@ -1000,6 +1000,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-01T15:03:24.899624+00:00",
       "entry_order_id": "8a6e8982-4665-4264-a487-37fa6c8f510f"
+    },
+    {
+      "lot_id": "ed5d91abef7a",
+      "bucket_id": 797,
+      "profile_name": "lab0797_s399_w3_1045_1120_r2",
+      "strategy_id": "S399",
+      "occ_symbol": "AMD260904C00500000",
+      "underlying": "AMD",
+      "qty": 1,
+      "entry_cost": 39.0,
+      "entry_price": 0.39,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-01T15:06:03.409177+00:00",
+      "entry_order_id": "81c9a0b0-00d3-44b3-b85b-a4965d6a599d"
+    },
+    {
+      "lot_id": "b042d07befbc",
+      "bucket_id": 796,
+      "profile_name": "lab0796_s399_w3_1045_1120_r1",
+      "strategy_id": "S399",
+      "occ_symbol": "AMD260904C00500000",
+      "underlying": "AMD",
+      "qty": 1,
+      "entry_cost": 39.0,
+      "entry_price": 0.39,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-01T15:06:03.450516+00:00",
+      "entry_order_id": "b6e179a1-57da-4429-a621-cde07093b9aa"
     }
   ],
   "pending_orders": [
@@ -1079,38 +1119,6 @@
       "submitted": "2026-09-01",
       "detail": "RB gap -1.8% reclaim",
       "spread_frac": 0.060606060606060656,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "b6e179a1-57da-4429-a621-cde07093b9aa",
-      "bucket_id": 796,
-      "strategy_id": "S399",
-      "occ_symbol": "AMD260904C00500000",
-      "underlying": "AMD",
-      "qty": 1,
-      "limit": 0.39,
-      "profile_name": "lab0796_s399_w3_1045_1120_r1",
-      "submitted": "2026-09-01",
-      "detail": "gap -2.3%",
-      "spread_frac": 0.025316455696202552,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "81c9a0b0-00d3-44b3-b85b-a4965d6a599d",
-      "bucket_id": 797,
-      "strategy_id": "S399",
-      "occ_symbol": "AMD260904C00500000",
-      "underlying": "AMD",
-      "qty": 1,
-      "limit": 0.39,
-      "profile_name": "lab0797_s399_w3_1045_1120_r2",
-      "submitted": "2026-09-01",
-      "detail": "gap -2.3%",
-      "spread_frac": 0.025316455696202552,
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
@@ -1294,7 +1302,9 @@
     "b381": 35.0,
     "b380": 35.0,
     "b239": 35.0,
-    "b238": 35.0
+    "b238": 35.0,
+    "b797": 39.0,
+    "b796": 39.0
   },
   "session_date": "2026-09-01",
   "entries_locked": [
@@ -1780,7 +1790,9 @@
     "30488814-d9eb-4e7f-b4bb-b43d06b39213",
     "ac11be09-1e9a-47b5-95c6-94ca114cf60e",
     "4c4d7f50-9d4e-4950-9f4e-ec4c39246ae9",
-    "8a6e8982-4665-4264-a487-37fa6c8f510f"
+    "8a6e8982-4665-4264-a487-37fa6c8f510f",
+    "81c9a0b0-00d3-44b3-b85b-a4965d6a599d",
+    "b6e179a1-57da-4429-a621-cde07093b9aa"
   ],
   "submitted_today": 67,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
