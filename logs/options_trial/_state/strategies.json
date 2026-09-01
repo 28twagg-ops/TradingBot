@@ -32,5 +32,12 @@
     },
     "S163": {}
   },
-  "dropped_strategies": []
+  "dropped_strategies": [
+    "S203",
+    "S207",
+    "S212",
+    "S360",
+    "S405",
+    "S407"
+  ]
 }
