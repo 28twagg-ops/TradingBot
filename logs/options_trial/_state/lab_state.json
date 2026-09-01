@@ -1623,6 +1623,26 @@
       "qty": 1,
       "reason": "take_profit (+57.1%)",
       "submitted": "2026-09-01T12:06:14"
+    },
+    {
+      "order_id": "f2bd8324-ecf2-411e-b8c8-b8f67295647c",
+      "lot_id": "304daf0ac50e",
+      "bucket_id": 1154,
+      "strategy_id": "S164",
+      "occ_symbol": "AMD260902C00477500",
+      "qty": 1,
+      "reason": "stop_loss (-53.8%)",
+      "submitted": "2026-09-01T13:51:24"
+    },
+    {
+      "order_id": "13db326d-7ab1-4c82-b2d2-d88a18cc0f9a",
+      "lot_id": "d8d456df0cdf",
+      "bucket_id": 292,
+      "strategy_id": "S352",
+      "occ_symbol": "AMD260902C00480000",
+      "qty": 1,
+      "reason": "stop_loss (-52.9%)",
+      "submitted": "2026-09-01T13:51:26"
     }
   ],
   "bucket_open_premium": {
