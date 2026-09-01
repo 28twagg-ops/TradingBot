@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-01
 
-_Generated 2026-09-01T14:06:47.420394_
+_Generated 2026-09-01T14:11:15.739624_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-01T14:06:47.420394_
 
 ## Attribution health
 
-- Total exits: **2592**
+- Total exits: **2593**
 - Orphan exits (b0/orphan_reconcile): **345**
 - Orphan rate: **13.3%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -120,7 +120,7 @@ _Generated 2026-09-01T14:06:47.420394_
 | S355 (GapDown_7DTE) | 7d | drop | 49 | 38.8 | -48.57 | -74.48 | -63.41 | +134.39 | 32 | 4 | 0 | $+105.00 | 24.5% | non-positive median return |
 | S354 (GapDown_5DTE) | 5d | drop | 45 | 33.3 | -52.31 | -92.16 | -76.47 | +138.30 | 32 | 0 | 0 | $-7.00 | 31.1% | non-positive median return |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 35 | 20.0 | -52.63 | -84.46 | -71.24 | +168.86 | 36 | 0 | 0 | $-511.00 | 45.7% | non-positive median return |
-| S351 (GapDown_1DTE) | 1d | drop | 50 | 22.0 | -54.92 | -81.63 | -69.97 | +171.88 | 32 | 2 | 0 | $-257.00 | 26.0% | non-positive median return |
+| S351 (GapDown_1DTE) | 1d | drop | 51 | 21.6 | -53.85 | -81.63 | -69.68 | +171.88 | 32 | 2 | 1 | $-274.00 | 25.5% | non-positive median return |
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 40 | 10.0 | -55.91 | -78.77 | -67.43 | -3.10 | 36 | 2 | 1 | $-797.00 | 35.0% | manually paused — excluded from new entries & reflected P&L |
 | S360 (RubberBand_1DTE) | 1d | drop | 49 | 10.2 | -56.41 | -81.50 | -70.37 | -6.89 | 32 | 0 | 0 | $-913.00 | 22.4% | manually paused — excluded from new entries & reflected P&L |
 | S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 83 | 13.3 | -68.09 | -98.15 | -81.35 | +51.47 | 36 | 0 | 0 | $-2,246.00 | 34.9% | manually paused — excluded from new entries & reflected P&L |
@@ -260,7 +260,7 @@ _Pipeline evaluation as of 2026-09-01. Auto-kill thresholds: median<-25% at n>=1
 | S220 | Pullback50 | 0 | — | — | NEW | 0 |
 | S221 | GoldenPocket | 0 | — | — | NEW | 0 |
 | S350 | GapDown_0DTE | 35 | +11.76% | 51% | INSUFFICIENT | 32 |
-| S351 | GapDown_1DTE | 50 | -54.92% | 22% | INSUFFICIENT | 32 |
+| S351 | GapDown_1DTE | 51 | -53.85% | 22% | INSUFFICIENT | 32 |
 | S352 | GapDown_2DTE | 34 | -27.95% | 44% | INSUFFICIENT | 32 |
 | S353 | GapDown_3DTE | 20 | -34.69% | 40% | INSUFFICIENT | 32 |
 | S354 | GapDown_5DTE | 45 | -52.31% | 33% | INSUFFICIENT | 32 |
