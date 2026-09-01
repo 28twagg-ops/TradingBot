@@ -94,6 +94,38 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.4
+    },
+    {
+      "order_id": "315674dd-6c08-4af9-b493-234cb7498392",
+      "bucket_id": 28,
+      "strategy_id": "S203",
+      "occ_symbol": "MDT260904P00088000",
+      "underlying": "MDT",
+      "qty": 1,
+      "limit": 0.24,
+      "profile_name": "lab0028_s203_w3_1045_1120_r1",
+      "submitted": "2026-09-01",
+      "detail": "gap +3.7% red close",
+      "spread_frac": 0.17391304347826092,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "c56052ab-0e97-4e4d-8f69-5616517155fd",
+      "bucket_id": 29,
+      "strategy_id": "S203",
+      "occ_symbol": "MDT260904P00088000",
+      "underlying": "MDT",
+      "qty": 1,
+      "limit": 0.24,
+      "profile_name": "lab0029_s203_w3_1045_1120_r2",
+      "submitted": "2026-09-01",
+      "detail": "gap +3.7% red close",
+      "spread_frac": 0.17391304347826092,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
   "pending_exits": [],
@@ -108,7 +140,9 @@
     "90|S404|2026-09-01",
     "90|S218|2026-09-01",
     "26|S203|2026-09-01",
-    "27|S203|2026-09-01"
+    "27|S203|2026-09-01",
+    "28|S203|2026-09-01",
+    "29|S203|2026-09-01"
   ],
   "processed_orders": [
     "88b24066-5228-4787-bfc8-1fa4c0ac267f",
@@ -580,7 +614,7 @@
     "fd8f4457-f647-4de2-a496-2a324648892f",
     "17a04633-9b6d-4b26-8e96-818d719c26f1"
   ],
-  "submitted_today": 5,
+  "submitted_today": 7,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-01"
 }
