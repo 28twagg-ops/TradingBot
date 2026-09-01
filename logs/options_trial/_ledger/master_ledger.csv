@@ -12112,3 +12112,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-01 15:56:40.442903+00:00,exit,917,lab0917_s412_w3_1045_1120_r2,S412,2fe1b475fa18,NVDA,NVDA260904C00227500,1,,0.6,35.0,71.43,25.0,take_profit (+68.6%),,-0.01,0.5,-0.5,,,983862d2-5e4e-4b1c-942f-f6fcf2321047
 2026-09-01 16:01:49.374148+00:00,exit,916,lab0916_s412_w3_1045_1120_r1,S412,3f8d13bde282,NVDA,NVDA260904C00227500,1,,0.57,35.0,62.86,22.0,take_profit (+62.9%),,-0.01,0.5,-0.5,,,d777f722-13a7-4530-997a-1950388a8ce5
 2026-09-01T16:20:59Z,reconcile,90,live_1to1,S218,613009cbf06c,SHOP,SHOP260904C00152500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-01T16:36:00Z,reconcile,26,lab0026_s203_w2_1005_1045_r1,S203,06e537197037,MDT,MDT260904P00085000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
