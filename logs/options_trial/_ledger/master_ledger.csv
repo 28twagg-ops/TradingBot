@@ -12012,3 +12012,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-31T13:39:57Z,reconcile,0,orphan_reconcile,ORPHAN,5cb077e6ef86,MARA,MARA260904C00012000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-01T13:34:40Z,reconcile,90,live_1to1,S218,ebd144e2a009,MCD,MCD260904C00270000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-01 14:32:03.478555+00:00,entry,90,live_1to1,S406,8a297e289a35,NVDA,NVDA260904C00225000,1,0.6,0.59,59.0,,,,-0.01,,0.5,-0.4,0.016528925619834725,RB gap -1.8% reclaim,30938af9-7e35-486b-be91-576c54689b34
+2026-09-01 14:42:05.115468+00:00,entry,27,lab0027_s203_w2_1005_1045_r2,S203,5351d4952174,MDT,MDT260904P00085000,1,0.05,0.04,4.0,,,,-0.01,,0.5,-0.5,0.18181818181818174,gap +3.7% red close,fd8f4457-f647-4de2-a496-2a324648892f
+2026-09-01 14:42:04.853070+00:00,entry,26,lab0026_s203_w2_1005_1045_r1,S203,06e537197037,MDT,MDT260904P00085000,1,0.05,0.04,4.0,,,,-0.01,,0.5,-0.5,0.18181818181818174,gap +3.7% red close,17a04633-9b6d-4b26-8e96-818d719c26f1
