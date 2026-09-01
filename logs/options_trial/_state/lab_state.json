@@ -1250,6 +1250,38 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
+    },
+    {
+      "order_id": "a9eca3de-147b-4b8d-bc8c-1c9cb9436bae",
+      "bucket_id": 1112,
+      "strategy_id": "S166",
+      "occ_symbol": "MSTR260904C00140000",
+      "underlying": "MSTR",
+      "qty": 1,
+      "limit": 0.62,
+      "profile_name": "lab1112_s166_w3_1045_1120_r1",
+      "submitted": "2026-09-01",
+      "detail": "gap -3.7%",
+      "spread_frac": 0.08264462809917363,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "496d798c-a396-41e1-b8b1-69af8d2540f7",
+      "bucket_id": 1113,
+      "strategy_id": "S166",
+      "occ_symbol": "MSTR260904C00140000",
+      "underlying": "MSTR",
+      "qty": 1,
+      "limit": 0.62,
+      "profile_name": "lab1113_s166_w3_1045_1120_r2",
+      "submitted": "2026-09-01",
+      "detail": "gap -3.7%",
+      "spread_frac": 0.08264462809917363,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
     }
   ],
   "pending_exits": [
@@ -1385,7 +1417,9 @@
     "266|S403|2026-09-01",
     "267|S403|2026-09-01",
     "182|S217|2026-09-01",
-    "183|S217|2026-09-01"
+    "183|S217|2026-09-01",
+    "1112|S166|2026-09-01",
+    "1113|S166|2026-09-01"
   ],
   "processed_orders": [
     "739356df-ed0d-4044-8bb8-663fa2ae5071",
@@ -1805,7 +1839,7 @@
     "81c9a0b0-00d3-44b3-b85b-a4965d6a599d",
     "b6e179a1-57da-4429-a621-cde07093b9aa"
   ],
-  "submitted_today": 67,
+  "submitted_today": 69,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-01"
 }
