@@ -1,0 +1,30 @@
+19:51:48  INFO      Mode: scan
+19:51:48  INFO        [positions] 3/3 (3 valid)
+19:51:48  INFO        SELL LIMIT GME  qty=1.839092643  limit=$18.87  id=757d63c6-d967-48bf-9dbd-bc7fd6b3ace8
+19:52:18  INFO        SELL LIMIT filled GME (confirmed by position check)
+19:52:18  INFO        TX logged: SELL GME  P&L 0.06%
+19:52:18  INFO        Universe cache hit: 903 tickers (tickers_2026-09-01.json)
+19:52:19  INFO        [universe] 40/901 (40 valid)
+19:52:20  INFO        [universe] 80/901 (80 valid)
+19:52:21  INFO        [universe] 120/901 (120 valid)
+19:52:23  INFO        [universe] 160/901 (160 valid)
+19:52:24  INFO        [universe] 200/901 (199 valid)
+19:52:31  INFO        [universe] 240/901 (238 valid)
+19:52:44  INFO        [universe] 280/901 (278 valid)
+19:52:57  INFO        [universe] 320/901 (318 valid)
+19:53:07  INFO        [universe] 360/901 (358 valid)
+19:53:20  INFO        [universe] 400/901 (397 valid)
+19:53:33  INFO        [universe] 440/901 (437 valid)
+19:53:42  INFO        [universe] 480/901 (477 valid)
+19:53:55  INFO        [universe] 520/901 (517 valid)
+19:54:08  INFO        [universe] 560/901 (557 valid)
+19:54:21  INFO        [universe] 600/901 (597 valid)
+19:54:31  INFO        [universe] 640/901 (637 valid)
+19:54:44  INFO        [universe] 680/901 (677 valid)
+19:54:56  INFO        [universe] 720/901 (717 valid)
+19:54:57  ERROR     $MOG-A: possibly delisted; no price data found  (1d 2025-09-06 19:54:57.204645 -> 2026-09-01 19:54:57.204650)
+19:54:57  ERROR     
+1 Failed download:
+19:54:57  ERROR     ['MOG-A']: possibly delisted; no price data found  (1d 2025-09-06 19:54:57.204645 -> 2026-09-01 19:54:57.204650)
+19:55:06  INFO        [universe] 760/901 (756 valid)
+19:55:19  INFO        [universe] 800/901 (796 valid)

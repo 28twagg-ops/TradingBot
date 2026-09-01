@@ -15301,3 +15301,81 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260901T195147Z
+
+- UTC timestamp: `20260901T195147Z`
+- GitHub run: [#8738](https://github.com/28twagg-ops/TradingBot/actions/runs/33551794276)
+- Run id: `33551794276`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260901T195147Z_live_bot.log`, `logs/action_runs/20260901T195147Z_live_options.log`, `logs/action_runs/20260901T195147Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 832 | 41.8 | -47.2 | +15.3 | $+8,190 |
+| TAINTED | 1762 | 33.0 | -39.2 | +12.2 | $-9,207 |
+| KEEP-only | 308 | 63.0 | +37.5 | +41.9 | $+5,683 |
+| KEEP-only recent | 120 | 58.3 | +50.0 | +50.8 | $+1,657 |
+
+- KEEP strategies (11): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406, S412
+- KILL strategies (17): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S352, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-01T15:45:26.233685-04:00","date":"2026-09-01","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":25.9,"phases_s":{"reconcile":0.32,"cancel":0.19,"manage":22.99,"protective_stops":1.7},"signals":0,"placed":0,"equity":999401.07,"open_positions":28,"pending_orders":0,"open_lots":74,"submitted_today":127,"filled_today":92,"unattributed_contracts":0,"top_signals":[],"github_run":"8736","github_run_id":"33550832626","status":"ok","data_quality":{"clean":{"n":832,"win":41.83,"med":-47.2,"avg":15.32,"pnl":8189.53},"tainted":{"n":1762,"win":33.03,"med":-39.16,"avg":12.18,"pnl":-9207.34},"keep_only":{"n":308,"win":62.99,"med":37.5,"avg":41.88,"pnl":5683.45},"keep_only_recent":{"n":120,"win":58.33,"med":50.0,"avg":50.79,"pnl":1657.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406","S412"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S352","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+19:51:48  INFO      Mode: scan
+19:51:48  INFO        [positions] 3/3 (3 valid)
+19:51:48  INFO        SELL LIMIT GME  qty=1.839092643  limit=$18.87  id=757d63c6-d967-48bf-9dbd-bc7fd6b3ace8
+19:52:18  INFO        SELL LIMIT filled GME (confirmed by position check)
+19:52:18  INFO        TX logged: SELL GME  P&L 0.06%
+19:52:18  INFO        Universe cache hit: 903 tickers (tickers_2026-09-01.json)
+19:52:19  INFO        [universe] 40/901 (40 valid)
+19:52:20  INFO        [universe] 80/901 (80 valid)
+19:52:21  INFO        [universe] 120/901 (120 valid)
+19:52:23  INFO        [universe] 160/901 (160 valid)
+19:52:24  INFO        [universe] 200/901 (199 valid)
+19:52:31  INFO        [universe] 240/901 (238 valid)
+19:52:44  INFO        [universe] 280/901 (278 valid)
+19:52:57  INFO        [universe] 320/901 (318 valid)
+19:53:07  INFO        [universe] 360/901 (358 valid)
+19:53:20  INFO        [universe] 400/901 (397 valid)
+19:53:33  INFO        [universe] 440/901 (437 valid)
+19:53:42  INFO        [universe] 480/901 (477 valid)
+19:53:55  INFO        [universe] 520/901 (517 valid)
+19:54:08  INFO        [universe] 560/901 (557 valid)
+19:54:21  INFO        [universe] 600/901 (597 valid)
+19:54:31  INFO        [universe] 640/901 (637 valid)
+19:54:44  INFO        [universe] 680/901 (677 valid)
+19:54:56  INFO        [universe] 720/901 (717 valid)
+19:54:57  ERROR     $MOG-A: possibly delisted; no price data found  (1d 2025-09-06 19:54:57.204645 -> 2026-09-01 19:54:57.204650)
+19:54:57  ERROR     
+1 Failed download:
+19:54:57  ERROR     ['MOG-A']: possibly delisted; no price data found  (1d 2025-09-06 19:54:57.204645 -> 2026-09-01 19:54:57.204650)
+19:55:06  INFO        [universe] 760/901 (756 valid)
+19:55:19  INFO        [universe] 800/901 (796 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
