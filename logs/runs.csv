@@ -6508,3 +6508,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-01 19:16:07,exits,bull,231.4,231.4,0,0,0,0,,both
 2026-09-01 19:21:01,exits,bull,231.4,231.4,0,0,0,0,,both
 2026-09-01 19:26:01,exits,bull,231.4,231.4,0,0,0,0,,both
+2026-09-01 20:00:21,scan_evening,bull,231.37,162.01,18,0,0,2,BWXT|SYNA,both
