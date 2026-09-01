@@ -49,7 +49,7 @@ from options_oi import make_trading_client, fetch_open_interest
 from options_signals import PAPER_STRATEGIES, SignalHit, scan_symbol, StrategyConfig
 from options_lab import (
     VIRTUAL_BUCKET_USD, PAPER_UNLIMITED_BUCKETS, EffectiveArm, LabState,
-    active_bucket_count, arms_for_signal,
+    active_bucket_count, active_buckets, arms_for_signal,
     build_bucket_leaderboard, build_reflected_leaderboard,
     cancel_dropped_strategy_entries, cancel_unfilled_lab_entries,
     DROPPED_STRATEGIES, ALLOWED_STRATEGIES, MIRROR_LIVE, VARIATION_STUDY,
