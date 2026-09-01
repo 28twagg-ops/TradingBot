@@ -1170,3 +1170,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-08-31 15:21:09,2026-08-31,SELL,PFG,Pullback50,110.77,34.74,-0.52,-0.18,0,stop_loss (-0.5%),bull,232.23
 2026-08-31 19:51:48,2026-08-31,SELL,FFIV,Pullback50,406.86,34.8,0.02,0.01,0,midline (+0.0%),bull,232.5
 2026-08-31 19:52:19,2026-08-31,SELL,ARE,Pullback50,51.43,34.98,0.47,0.16,0,midline (+0.5%),bull,232.52
+2026-09-01 13:46:02,2026-09-01,SELL,NVT,MomReversal,147.59,34.43,-1.28,-0.45,0,stop_loss (-1.3%),bull,231.75
+2026-09-01 13:46:04,2026-09-01,SELL,DLR,Pullback50,184.66,34.69,-0.54,-0.19,0,stop_loss (-0.5%),bull,231.71
