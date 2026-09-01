@@ -1800,6 +1800,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-01T15:23:50.493534+00:00",
       "entry_order_id": "21f0a444-53d7-4c70-814a-c69a48b79634"
+    },
+    {
+      "lot_id": "915762ffc1a3",
+      "bucket_id": 267,
+      "profile_name": "lab0267_s403_w3_1045_1120_r2",
+      "strategy_id": "S403",
+      "occ_symbol": "WFC260904C00088000",
+      "underlying": "WFC",
+      "qty": 1,
+      "entry_cost": 47.0,
+      "entry_price": 0.47,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-01T15:36:14.668551+00:00",
+      "entry_order_id": "1ca0e183-d693-484a-952e-b2070a8d7717"
+    },
+    {
+      "lot_id": "cebd0044a08a",
+      "bucket_id": 266,
+      "profile_name": "lab0266_s403_w3_1045_1120_r1",
+      "strategy_id": "S403",
+      "occ_symbol": "WFC260904C00088000",
+      "underlying": "WFC",
+      "qty": 1,
+      "entry_cost": 47.0,
+      "entry_price": 0.47,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-01T15:36:14.713265+00:00",
+      "entry_order_id": "e36e4778-aae4-4f15-a1f1-f5d762f34ed8"
     }
   ],
   "pending_orders": [
@@ -1978,38 +2018,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
-    },
-    {
-      "order_id": "e36e4778-aae4-4f15-a1f1-f5d762f34ed8",
-      "bucket_id": 266,
-      "strategy_id": "S403",
-      "occ_symbol": "WFC260904C00088000",
-      "underlying": "WFC",
-      "qty": 1,
-      "limit": 0.47,
-      "profile_name": "lab0266_s403_w3_1045_1120_r1",
-      "submitted": "2026-09-01",
-      "detail": "touch MA50 green",
-      "spread_frac": 0.13333333333333333,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "1ca0e183-d693-484a-952e-b2070a8d7717",
-      "bucket_id": 267,
-      "strategy_id": "S403",
-      "occ_symbol": "WFC260904C00088000",
-      "underlying": "WFC",
-      "qty": 1,
-      "limit": 0.47,
-      "profile_name": "lab0267_s403_w3_1045_1120_r2",
-      "submitted": "2026-09-01",
-      "detail": "touch MA50 green",
-      "spread_frac": 0.13333333333333333,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
     },
     {
       "order_id": "a9eca3de-147b-4b8d-bc8c-1c9cb9436bae",
@@ -2465,7 +2473,9 @@
     "b835": 19.0,
     "b834": 19.0,
     "b369": 15.0,
-    "b368": 15.0
+    "b368": 15.0,
+    "b267": 47.0,
+    "b266": 47.0
   },
   "session_date": "2026-09-01",
   "entries_locked": [
@@ -3051,7 +3061,9 @@
     "3eec8b49-8623-483b-b3bb-1dc7ade2c005",
     "dac78d0c-b54a-400e-b0e7-f1c0733d00d4",
     "830b8cb4-4e14-4b36-92f9-cc857aed3904",
-    "21f0a444-53d7-4c70-814a-c69a48b79634"
+    "21f0a444-53d7-4c70-814a-c69a48b79634",
+    "1ca0e183-d693-484a-952e-b2070a8d7717",
+    "e36e4778-aae4-4f15-a1f1-f5d762f34ed8"
   ],
   "submitted_today": 127,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
