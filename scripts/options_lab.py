@@ -69,6 +69,12 @@ ALLOWED_STRATEGIES: frozenset[str] = frozenset(
     s.strip() for s in os.environ.get("OPTIONS_ALLOWED_STRATEGIES", "").split(",")
     if s.strip()
 )
+# Variation study: scan + lab/promising buckets for this cohort only (empty = all).
+VARIATION_STRATEGIES: frozenset[str] = frozenset(
+    s.strip() for s in os.environ.get("OPTIONS_VARIATION_STRATEGIES", "").split(",")
+    if s.strip()
+)
+PROMISING_EXTRA_BUCKET_START = 2000
 # Mirror live micro: dedicated live_1to1 arm per allowed strategy (not baseline b0).
 MIRROR_LIVE = os.environ.get("OPTIONS_MIRROR_LIVE", "0").strip().lower() in (
     "1", "true", "yes", "on",
@@ -197,6 +203,60 @@ def get_live_1to1_bucket() -> BucketProfile | None:
     )
 
 
+def _lab_registry_strategy_ids() -> frozenset[str]:
+    try:
+        from scripts.options_strategy_lab import load_or_init_lab
+    except ImportError:
+        from options_strategy_lab import load_or_init_lab
+    return frozenset(s.strategy_id for s in load_or_init_lab().active_strategies())
+
+
+def _promising_extra_strategy_ids() -> list[str]:
+    """Paper-only strategies (S397, S401, …) not in the S200 lab registry."""
+    if not VARIATION_STRATEGIES:
+        return []
+    lab_ids = _lab_registry_strategy_ids()
+    out: list[str] = []
+    for sid in sorted(VARIATION_STRATEGIES):
+        if sid in DROPPED_STRATEGIES:
+            continue
+        if sid in MIRROR_STRATEGIES:
+            continue
+        if sid in lab_ids:
+            continue
+        out.append(sid)
+    return out
+
+
+def _inject_promising_extra_buckets(profiles: list[BucketProfile]) -> list[BucketProfile]:
+    """One baseline bucket per promising non-lab strategy (trial-run keepers)."""
+    extras = _promising_extra_strategy_ids()
+    if not extras:
+        return profiles
+    used = {p.bucket_id for p in profiles}
+    next_id = max(PROMISING_EXTRA_BUCKET_START, max(used, default=0) + 1)
+    for sid in extras:
+        while next_id in used:
+            next_id += 1
+        profiles.append(BucketProfile(
+            next_id,
+            f"promising_{sid.lower()}_baseline",
+            strategy_scope=sid,
+            buy_limit_offset=-0.01,
+            sell_limit_offset=-0.01,
+            max_premium=75,
+            max_spread_frac=0.25,
+            min_open_interest=100,
+            account_cap=0.95,
+            max_contracts=1,
+            take_profit=0.50,
+            stop_loss=-0.40,
+        ))
+        used.add(next_id)
+        next_id += 1
+    return profiles
+
+
 # Experiment grid — generated up to TARGET_BUCKET_PROFILES variants.
 def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
     n = target if target is not None else TARGET_BUCKET_PROFILES
@@ -208,13 +268,15 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
         except ImportError:
             from options_strategy_lab import load_or_init_lab
         lab = load_or_init_lab()
-        bucket_dicts = lab.generate_buckets(start_idx=0)
+        cohort = VARIATION_STRATEGIES if VARIATION_STRATEGIES else None
+        bucket_dicts = lab.generate_buckets(start_idx=0, strategy_ids=cohort)
         profiles: list[BucketProfile] = []
         for d in bucket_dicts:
             if len(profiles) >= n:
                 break
             profiles.append(BucketProfile(**d))
-        return _inject_live_1to1(profiles)
+        profiles = _inject_live_1to1(profiles)
+        return _inject_promising_extra_buckets(profiles)
 
     core = [
         BucketProfile(0, "baseline",
@@ -748,6 +810,8 @@ def arms_for_signal(strategy_id: str, equity: float) -> list[EffectiveArm]:
         arms.append(_merge_arm(twin, strategy_id, equity))
 
     if VARIATION_STUDY:
+        if VARIATION_STRATEGIES and strategy_id not in VARIATION_STRATEGIES:
+            return arms
         for b in active_buckets(equity):
             if b.bucket_id == LIVE_1TO1_BUCKET_ID:
                 continue

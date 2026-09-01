@@ -155,9 +155,13 @@ jobs:
           OPTIONS_VARIATION_STUDY: "1"
           OPTIONS_CONTROLLED_LAYOUT: "1"
           OPTIONS_MIRROR_STRATEGIES: "S404,S406,S218"
+          # Full parallel paper study: all ~100 lab strategies + ~109 signal scanners.
+          # Only drop proven CLEAN killers (med <= -55%, n>=10). Live stays paused.
+          OPTIONS_DROPPED_STRATEGIES: "S212,S203,S207,S360,S405,S407"
+          OPTIONS_BUCKET_COUNT: "1800"
+          OPTIONS_MAX_NEW_ENTRIES_PER_RUN: "400"
           LIVE_OPTIONS_MIN_COST: "20"
           OPTIONS_TOP_BUCKET_PCT: "0"
-          OPTIONS_DROPPED_STRATEGIES: ""
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
           GITHUB_RUN_ID: ${{ github.run_id }}
           GITHUB_REPOSITORY: ${{ github.repository }}
@@ -177,6 +181,7 @@ jobs:
             # after-hours summaries with open position visibility.
             python scripts/options_reconcile.py || echo "reconcile failed (non-fatal)"
             python scripts/init_options_trial.py
+            python scripts/options_paper_probe.py || echo "paper probe failed (non-fatal)"
             python scripts/options_morning_bot.py
             opt_rc=$?
             if [ "$opt_rc" -ne 0 ]; then

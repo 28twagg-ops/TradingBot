@@ -127,15 +127,22 @@ class StrategyLab:
 
     # ---- bucket generation ---------------------------------------------- #
 
-    def generate_buckets(self, start_idx: int = 88) -> list[dict]:
+    def generate_buckets(
+        self,
+        start_idx: int = 88,
+        strategy_ids: frozenset[str] | None = None,
+    ) -> list[dict]:
         """
         Returns list of bucket-definition dicts for all active strategies.
         Each dict mirrors the kwargs for BucketProfile in options_lab.py.
         start_idx: first bucket_id to assign (default 88, after existing 0-87).
+        strategy_ids: when set, only emit buckets for these strategy ids.
         """
         buckets: list[dict] = []
         idx = start_idx
         for spec in self.active_strategies():
+            if strategy_ids and spec.strategy_id not in strategy_ids:
+                continue
             windows = self.WINDOWS_MORNING.copy()
             if not spec.signal_name.lower().startswith("gap"):
                 windows.extend(self.WINDOWS_AFT)

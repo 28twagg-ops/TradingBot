@@ -46,13 +46,14 @@ from alpaca.data.timeframe import TimeFrame
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from options_universe import get_universe, to_alpaca_symbol, get_stock_tier
 from options_oi import make_trading_client, fetch_open_interest
-from options_signals import PAPER_STRATEGIES, SignalHit, scan_symbol, StrategyConfig
+from options_signals import PAPER_STRATEGIES, ALL_KNOWN_STRATEGIES, SignalHit, scan_symbol, StrategyConfig
 from options_lab import (
     VIRTUAL_BUCKET_USD, PAPER_UNLIMITED_BUCKETS, EffectiveArm, LabState,
     active_bucket_count, active_buckets, arms_for_signal,
     build_bucket_leaderboard, build_reflected_leaderboard,
     cancel_dropped_strategy_entries, cancel_unfilled_lab_entries,
     DROPPED_STRATEGIES, ALLOWED_STRATEGIES, MIRROR_LIVE, VARIATION_STUDY,
+    VARIATION_STRATEGIES,
     MIRROR_STRATEGIES, TOP_BUCKET_PCT,
     LIVE_1TO1_BUCKET_ID, LIVE_1TO1_PROFILE_NAME, get_live_1to1_bucket,
     is_live_1to1_arm,
@@ -84,7 +85,7 @@ MAX_SPREAD_FRAC     = 0.25         # default; arms may override
 MIN_UNDERLYING_PX   = 3.0
 REAL_ACCOUNT_OPTIONS_CAP = 0.90   # never deploy >90% of real equity in options
 
-MAX_NEW_ENTRIES_PER_RUN = 100     # signals x buckets (grid mode)
+MAX_NEW_ENTRIES_PER_RUN = int(os.getenv("OPTIONS_MAX_NEW_ENTRIES_PER_RUN", "100"))
 BAR_CHUNK_SIZE      = 80
 SCAN_LOOKBACK_DAYS  = 260  # need ~200+ bars for MA200 pattern scanners (S170/S172)
 
@@ -813,24 +814,34 @@ def _dedupe_mirror_hits(hits: list) -> list:
     return out
 
 
+def _strategy_scan_pool() -> list[StrategyConfig]:
+    """Strategies eligible for signal scan (includes resurrected S173 when in cohort)."""
+    if VARIATION_STRATEGIES:
+        want = VARIATION_STRATEGIES | MIRROR_STRATEGIES
+        return [s for s in ALL_KNOWN_STRATEGIES if s.id in want]
+    return list(PAPER_STRATEGIES)
+
+
 def _active_paper_strategies() -> list:
     """PAPER_STRATEGIES filtered by allow/drop lists (live-control study)."""
     out = []
-    for s in PAPER_STRATEGIES:
+    for s in _strategy_scan_pool():
         if s.id in DROPPED_STRATEGIES:
             continue
-        # Variation study scans the full lab; b90 twin filters at arms_for_signal.
         if VARIATION_STUDY:
+            if VARIATION_STRATEGIES:
+                if s.id not in VARIATION_STRATEGIES and s.id not in MIRROR_STRATEGIES:
+                    continue
             out.append(s)
             continue
         if ALLOWED_STRATEGIES and s.id not in ALLOWED_STRATEGIES:
             continue
         out.append(s)
-    return out or list(PAPER_STRATEGIES)
+    return out or _strategy_scan_pool()
 
 
 def _strategy_by_id(sid: str) -> StrategyConfig | None:
-    for s in PAPER_STRATEGIES:
+    for s in ALL_KNOWN_STRATEGIES:
         if s.id == sid:
             return s
     return None
@@ -2095,9 +2106,13 @@ def run() -> int:
                 1 for b in active_buckets(equity or 0)
                 if b.bucket_id != LIVE_1TO1_BUCKET_ID
             )
+            cohort = (
+                ", ".join(sorted(VARIATION_STRATEGIES))
+                if VARIATION_STRATEGIES else "all paper strategies"
+            )
             rl(
-                f"Variation study: {n_var} lab bucket(s) "
-                f"(controlled layout, tier offsets on)"
+                f"Variation study: {n_var} lab/promising bucket(s) | "
+                f"cohort: {cohort} | max {MAX_NEW_ENTRIES_PER_RUN} new entries/run"
             )
     else:
         n_active = active_bucket_count(equity or 0)
