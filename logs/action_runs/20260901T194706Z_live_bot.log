@@ -1,0 +1,146 @@
+19:47:07  INFO      Mode: scan
+19:47:08  INFO        Universe cache hit: 903 tickers (tickers_2026-09-01.json)
+19:47:09  INFO        [universe] 40/903 (40 valid)
+19:47:12  INFO        [universe] 80/903 (80 valid)
+19:47:13  INFO        [universe] 120/903 (120 valid)
+19:47:14  INFO        [universe] 160/903 (160 valid)
+19:47:16  INFO        [universe] 200/903 (199 valid)
+19:47:23  INFO        [universe] 240/903 (238 valid)
+19:47:33  INFO        [universe] 280/903 (278 valid)
+19:47:46  INFO        [universe] 320/903 (318 valid)
+19:47:59  INFO        [universe] 360/903 (358 valid)
+19:48:09  INFO        [universe] 400/903 (397 valid)
+19:48:22  INFO        [universe] 440/903 (437 valid)
+19:48:35  INFO        [universe] 480/903 (477 valid)
+19:48:45  INFO        [universe] 520/903 (517 valid)
+19:48:58  INFO        [universe] 560/903 (557 valid)
+19:49:11  INFO        [universe] 600/903 (597 valid)
+19:49:21  INFO        [universe] 640/903 (637 valid)
+19:49:34  INFO        [universe] 680/903 (677 valid)
+19:49:47  INFO        [universe] 720/903 (717 valid)
+19:49:57  INFO        [universe] 760/903 (757 valid)
+19:50:10  INFO        [universe] 800/903 (797 valid)
+19:50:23  INFO        [universe] 840/903 (836 valid)
+19:50:33  INFO        [universe] 880/903 (876 valid)
+19:50:40  INFO        [universe] 903/903 (899 valid)
+19:50:42  INFO        BUY  GME  $34.71  [EarningsDrift]  id=cbbbe8b6-7da4-4d4a-96ab-d6461c132c00
+19:50:42  INFO        BUY  BWXT  $34.71  [MomReversal]  id=f4604b4b-8f90-47d5-91ce-d61e064741b7
+19:50:42  INFO        BUY  SYNA  $34.71  [MomReversal]  id=eb18b3b4-0429-44e0-8c97-af459620725e
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:47 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $231.40|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-09-01|
+|  Universe                                                          both|
+|  Mo~  Sep: GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $231.40|
+|  Cash                                                           $231.40|
+|  Reserve                                          $11.57  (always kept)|
+|  Stocks ~  $0.00 / $173.55  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $173.55  (new stock buys)|
+|  Trade size             $34.71  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (0 open)                        |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (stale (109453.0m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  24                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.78   60.7   -1.27   50MA bounce (+|
+|  MO       Pullback50      eq     $69.66   68.2   -0.79   50MA bounce (-|
+|  CNC      Pullback50      eq     $65.07   41.6   -0.57   50MA bounce (-|
+|  CI       Pullback50      eq     $282.06  55.6   -1.00   50MA bounce (-|
+|  EIX      RSIRecovery     eq     $58.41   35.3   2.53    RSI 26.3→35.3 |
+|  HWM      RSIRecovery     eq     $254.48  33.1   0.79    RSI 24.5→33.1 |
+|  PCG      RSIRecovery     eq     $14.06   30.7   2.00    RSI 24.5→30.7 |
+|  SPGI     VWAP_Reclaim    eq     $440.60  69.6   2.67    VWAP reclaim V|
+|  SYF      Pullback50      eq     $76.73   40.6   -0.84   50MA bounce (+|
+|  VTR      Pullback50      eq     $92.10   67.0   -1.15   50MA bounce (-|
+|  VTRS     Pullback50      eq     $16.64   62.7   -1.31   50MA bounce (-|
+|  WFC      Pullback50      eq     $86.75   39.9   0.38    50MA bounce (+|
+|  AN       Pullback50      eq     $203.79  42.4   -0.54   50MA bounce (+|
+|  ATR      Pullback50      eq     $131.82  42.7   -1.30   50MA bounce (+|
+|  AVT      Pullback50      eq     $89.30   36.6   -1.63   50MA bounce (+|
+|  BWXT     MomReversal     eq     $160.67  37.5   1.00    -13.6% drop/60|
+|  BWXT     RSIRecovery     eq     $160.67  37.5   1.00    RSI 29.4→37.5 |
+|  CCK      Pullback50      eq     $116.52  37.2   -1.39   50MA bounce (+|
+|  GME      EarningsDrift   eq     $18.87   55.3   2.01    post-earnings |
+|  LIVN     Pullback50      eq     $80.20   47.5   -0.93   50MA bounce (-|
+|  SLAB     Pullback50      eq     $219.27  54.5   -0.70   50MA bounce (+|
+|  SMTC     Pullback50      eq     $133.03  46.3   -0.60   50MA bounce (-|
+|  SYNA     MomReversal     eq     $95.37   27.3   0.75    -22.3% drop/60|
+|  TXNM     VWAP_Reclaim    eq     $57.80   63.1   3.50    VWAP reclaim V|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] GME  EarningsDrift                                 $34.71|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] BWXT  MomReversal                                  $34.71|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] SYNA  MomReversal                                  $34.71|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] AES  Pullback50                                      cap 3|
+|    SKIP [eq] MO  Pullback50                                       cap 3|
+|    SKIP [eq] CNC  Pullback50                                      cap 3|
+|    SKIP [eq] CI  Pullback50                                       cap 3|
+|    SKIP [eq] SYF  Pullback50                                      cap 3|
+|    SKIP [eq] VTR  Pullback50                                      cap 3|
+|    SKIP [eq] VTRS  Pullback50                                     cap 3|
+|    SKIP [eq] WFC  Pullback50                                      cap 3|
+|    SKIP [eq] AN  Pullback50                                       cap 3|
+|    SKIP [eq] ATR  Pullback50                                      cap 3|
+|    SKIP [eq] AVT  Pullback50                                      cap 3|

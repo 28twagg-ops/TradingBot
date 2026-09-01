@@ -15172,3 +15172,132 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260901T194706Z
+
+- UTC timestamp: `20260901T194706Z`
+- GitHub run: [#8737](https://github.com/28twagg-ops/TradingBot/actions/runs/33551308793)
+- Run id: `33551308793`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260901T194706Z_live_bot.log`, `logs/action_runs/20260901T194706Z_live_options.log`, `logs/action_runs/20260901T194706Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 832 | 41.8 | -47.2 | +15.3 | $+8,190 |
+| TAINTED | 1762 | 33.0 | -39.2 | +12.2 | $-9,207 |
+| KEEP-only | 308 | 63.0 | +37.5 | +41.9 | $+5,683 |
+| KEEP-only recent | 120 | 58.3 | +50.0 | +50.8 | $+1,657 |
+
+- KEEP strategies (11): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406, S412
+- KILL strategies (17): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S352, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-01T15:40:05.053233-04:00","date":"2026-09-01","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":20.8,"phases_s":{"reconcile":0.08,"cancel":0.05,"manage":19.86,"protective_stops":0.27},"signals":0,"placed":0,"equity":999357.07,"open_positions":28,"pending_orders":0,"open_lots":74,"submitted_today":127,"filled_today":92,"unattributed_contracts":0,"top_signals":[],"github_run":"8735","github_run_id":"33550343569","status":"ok","data_quality":{"clean":{"n":832,"win":41.83,"med":-47.2,"avg":15.32,"pnl":8189.53},"tainted":{"n":1762,"win":33.03,"med":-39.16,"avg":12.18,"pnl":-9207.34},"keep_only":{"n":308,"win":62.99,"med":37.5,"avg":41.88,"pnl":5683.45},"keep_only_recent":{"n":120,"win":58.33,"med":50.0,"avg":50.79,"pnl":1657.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406","S412"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S352","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (66 earlier lines - see full log file)
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (stale (109453.0m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  24                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.78   60.7   -1.27   50MA bounce (+|
+|  MO       Pullback50      eq     $69.66   68.2   -0.79   50MA bounce (-|
+|  CNC      Pullback50      eq     $65.07   41.6   -0.57   50MA bounce (-|
+|  CI       Pullback50      eq     $282.06  55.6   -1.00   50MA bounce (-|
+|  EIX      RSIRecovery     eq     $58.41   35.3   2.53    RSI 26.3→35.3 |
+|  HWM      RSIRecovery     eq     $254.48  33.1   0.79    RSI 24.5→33.1 |
+|  PCG      RSIRecovery     eq     $14.06   30.7   2.00    RSI 24.5→30.7 |
+|  SPGI     VWAP_Reclaim    eq     $440.60  69.6   2.67    VWAP reclaim V|
+|  SYF      Pullback50      eq     $76.73   40.6   -0.84   50MA bounce (+|
+|  VTR      Pullback50      eq     $92.10   67.0   -1.15   50MA bounce (-|
+|  VTRS     Pullback50      eq     $16.64   62.7   -1.31   50MA bounce (-|
+|  WFC      Pullback50      eq     $86.75   39.9   0.38    50MA bounce (+|
+|  AN       Pullback50      eq     $203.79  42.4   -0.54   50MA bounce (+|
+|  ATR      Pullback50      eq     $131.82  42.7   -1.30   50MA bounce (+|
+|  AVT      Pullback50      eq     $89.30   36.6   -1.63   50MA bounce (+|
+|  BWXT     MomReversal     eq     $160.67  37.5   1.00    -13.6% drop/60|
+|  BWXT     RSIRecovery     eq     $160.67  37.5   1.00    RSI 29.4→37.5 |
+|  CCK      Pullback50      eq     $116.52  37.2   -1.39   50MA bounce (+|
+|  GME      EarningsDrift   eq     $18.87   55.3   2.01    post-earnings |
+|  LIVN     Pullback50      eq     $80.20   47.5   -0.93   50MA bounce (-|
+|  SLAB     Pullback50      eq     $219.27  54.5   -0.70   50MA bounce (+|
+|  SMTC     Pullback50      eq     $133.03  46.3   -0.60   50MA bounce (-|
+|  SYNA     MomReversal     eq     $95.37   27.3   0.75    -22.3% drop/60|
+|  TXNM     VWAP_Reclaim    eq     $57.80   63.1   3.50    VWAP reclaim V|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] GME  EarningsDrift                                 $34.71|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] BWXT  MomReversal                                  $34.71|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] SYNA  MomReversal                                  $34.71|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] AES  Pullback50                                      cap 3|
+|    SKIP [eq] MO  Pullback50                                       cap 3|
+|    SKIP [eq] CNC  Pullback50                                      cap 3|
+|    SKIP [eq] CI  Pullback50                                       cap 3|
+|    SKIP [eq] SYF  Pullback50                                      cap 3|
+|    SKIP [eq] VTR  Pullback50                                      cap 3|
+|    SKIP [eq] VTRS  Pullback50                                     cap 3|
+|    SKIP [eq] WFC  Pullback50                                      cap 3|
+|    SKIP [eq] AN  Pullback50                                       cap 3|
+|    SKIP [eq] ATR  Pullback50                                      cap 3|
+|    SKIP [eq] AVT  Pullback50                                      cap 3|
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
