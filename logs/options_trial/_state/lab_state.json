@@ -842,26 +842,6 @@
       "entry_order_id": "b221f277-c7ad-4596-9aa2-cf35f170725c"
     },
     {
-      "lot_id": "8f8775703b86",
-      "bucket_id": 199,
-      "profile_name": "lab0199_s218_w4_1120_1135_r2",
-      "strategy_id": "S218",
-      "occ_symbol": "SPY260904C00772000",
-      "underlying": "SPY",
-      "qty": 1,
-      "entry_cost": 66.0,
-      "entry_price": 0.66,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-01T15:23:49.539617+00:00",
-      "entry_order_id": "6bcf5632-7d28-43e2-ab76-ce8689664c8d"
-    },
-    {
       "lot_id": "fa5cda048736",
       "bucket_id": 198,
       "profile_name": "lab0198_s218_w4_1120_1135_r1",
@@ -1523,16 +1503,6 @@
       "qty": 1,
       "reason": "take_profit (+57.1%)",
       "submitted": "2026-09-01T12:06:14"
-    },
-    {
-      "order_id": "54bda8bb-c8ff-4e8f-a916-f210e72d63cd",
-      "lot_id": "8f8775703b86",
-      "bucket_id": 199,
-      "strategy_id": "S218",
-      "occ_symbol": "SPY260904C00772000",
-      "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-09-01T14:46:15"
     }
   ],
   "bucket_open_premium": {
@@ -1578,7 +1548,6 @@
     "b796": 39.0,
     "b269": 50.0,
     "b268": 50.0,
-    "b199": 66.0,
     "b198": 66.0,
     "b425": 69.0,
     "b424": 69.0,
@@ -2208,7 +2177,8 @@
     "8a9c1701-5ba3-4930-a7f2-6875854e3727",
     "309a0a0e-0705-4831-8d50-bd2ef7fb456e",
     "13db326d-7ab1-4c82-b2d2-d88a18cc0f9a",
-    "379cb956-05c6-4d16-b53f-3c37f0d09eca"
+    "379cb956-05c6-4d16-b53f-3c37f0d09eca",
+    "54bda8bb-c8ff-4e8f-a916-f210e72d63cd"
   ],
   "submitted_today": 127,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

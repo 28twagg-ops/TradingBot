@@ -198,7 +198,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 196,lab0196_s218_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-01,False,,,,,,,0,GOOGL,S218,,entered_no_exit
 197,lab0197_s218_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-01,False,,,,,,,0,GOOGL,S218,,entered_no_exit
 198,lab0198_s218_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-01,False,,,,,,,0,SPY,S218,,entered_no_exit
-199,lab0199_s218_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-01,False,,,,,,,0,SPY,S218,,entered_no_exit
+199,lab0199_s218_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-01,False,,0.0,-48.48,-48.48,-48.48,-48.48,-32.0,SPY,S218,stop_loss (-50.0%),closed
 200,lab0200_s218_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 201,lab0201_s218_w5_1300_1330_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 202,lab0202_s218_w6_1400_1430_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
