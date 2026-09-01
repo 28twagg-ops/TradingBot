@@ -11897,3 +11897,53 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260901T181557Z
+
+- UTC timestamp: `20260901T181557Z`
+- GitHub run: [#8719](https://github.com/28twagg-ops/TradingBot/actions/runs/33542517204)
+- Run id: `33542517204`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260901T181557Z_live_bot.log`, `logs/action_runs/20260901T181557Z_live_options.log`, `logs/action_runs/20260901T181557Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 831 | 41.9 | -47.1 | +15.4 | $+8,222 |
+| TAINTED | 1762 | 33.0 | -39.2 | +12.2 | $-9,207 |
+| KEEP-only | 307 | 63.2 | +37.5 | +42.2 | $+5,715 |
+| KEEP-only recent | 119 | 58.8 | +50.0 | +51.6 | $+1,689 |
+
+- KEEP strategies (11): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406, S412
+- KILL strategies (17): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S352, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-01T14:11:00.911170-04:00","date":"2026-09-01","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":13.1,"phases_s":{"reconcile":0.3,"cancel":0.08,"manage":11.52,"protective_stops":0.64},"signals":0,"placed":0,"equity":999057.11,"open_positions":27,"pending_orders":0,"open_lots":75,"submitted_today":127,"filled_today":92,"unattributed_contracts":0,"top_signals":[],"github_run":"8718","github_run_id":"33542030794","status":"ok","data_quality":{"clean":{"n":831,"win":41.88,"med":-47.14,"avg":15.4,"pnl":8221.53},"tainted":{"n":1762,"win":33.03,"med":-39.16,"avg":12.18,"pnl":-9207.34},"keep_only":{"n":307,"win":63.19,"med":37.5,"avg":42.17,"pnl":5715.45},"keep_only_recent":{"n":119,"win":58.82,"med":50.0,"avg":51.62,"pnl":1689.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406","S412"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S352","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+18:15:58  INFO      Mode: exits
+18:18:12  WARNING   get_account failed attempt 1/3: HTTPSConnectionPool(host='api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.alpaca.markets', port=443) at 0x7f58e0e1bd90>, 'Connection to api.alpaca.markets timed out. (connect timeout=None)')) retrying in 10s
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
