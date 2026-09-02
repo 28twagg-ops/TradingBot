@@ -19,3 +19,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-13 14:02:35.891933+00:00,entry,164,lab0164_s216_w1_0928_1005_r1,S216,91b7a9214c30,MARA,MARA260814C00010500,1,0.04,0.03,3.0,,,,-0.01,,0.75,-0.75,0.22222222222222227,RSI crossed 30: 29.9 -> 32.9,cdea73a3-76a8-47c0-97b7-19c71470df0b
 2026-08-13T14:16:33Z,reconcile,164,lab0164_s216_w1_0928_1005_r1,S216,91b7a9214c30,MARA,MARA260814C00010500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-02 14:03:30.426987+00:00,entry,164,lab0164_s216_w1_0928_1005_r1,S216,68e3380e7b40,IWM,IWM260904C00296000,1,0.57,0.56,56.0,,,,-0.01,,0.5,-0.5,0.035087719298245446,RSI crossed 30: 28.9 -> 31.8,28642106-2277-4e2b-9ca8-0c4609345a3d
+2026-09-02T19:16:21Z,reconcile,164,lab0164_s216_w1_0928_1005_r1,S216,68e3380e7b40,IWM,IWM260904C00296000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

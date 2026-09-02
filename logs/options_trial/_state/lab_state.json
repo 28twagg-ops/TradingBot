@@ -362,26 +362,6 @@
       "entry_order_id": "315635f6-24b1-4fca-9a2e-87a962e79b37"
     },
     {
-      "lot_id": "68e3380e7b40",
-      "bucket_id": 164,
-      "profile_name": "lab0164_s216_w1_0928_1005_r1",
-      "strategy_id": "S216",
-      "occ_symbol": "IWM260904C00296000",
-      "underlying": "IWM",
-      "qty": 1,
-      "entry_cost": 56.00000000000001,
-      "entry_price": 0.56,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-02T14:03:36.953679+00:00",
-      "entry_order_id": "28642106-2277-4e2b-9ca8-0c4609345a3d"
-    },
-    {
       "lot_id": "bc51d8374aac",
       "bucket_id": 913,
       "profile_name": "lab0913_s412_w1_0928_1005_r2",
@@ -2383,18 +2363,7 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "c0f70198-ffff-4d1f-8cd9-1269c709eb32",
-      "lot_id": "68e3380e7b40",
-      "bucket_id": 164,
-      "strategy_id": "S216",
-      "occ_symbol": "IWM260904C00296000",
-      "qty": 1,
-      "reason": "take_profit (+57.1%)",
-      "submitted": "2026-09-02T15:11:21"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b437": 61.0,
     "b436": 61.0,
@@ -2414,7 +2383,6 @@
     "b1143": 32.0,
     "b1142": 32.0,
     "b798": 35.0,
-    "b164": 56.00000000000001,
     "b913": 16.0,
     "b912": 16.0,
     "b885": 72.0,
