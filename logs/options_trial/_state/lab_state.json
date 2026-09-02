@@ -1482,26 +1482,6 @@
       "entry_order_id": "c0076bb9-4437-4541-82de-447c9c821d1e"
     },
     {
-      "lot_id": "3669bec2a785",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "RBLX260904C00042000",
-      "underlying": "RBLX",
-      "qty": 1,
-      "entry_cost": 39.0,
-      "entry_price": 0.39,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-02T14:27:32.274467+00:00",
-      "entry_order_id": "orphan:RBLX260904C00042000"
-    },
-    {
       "lot_id": "3edbd6d853e9",
       "bucket_id": 167,
       "profile_name": "lab0167_s216_w2_1005_1045_r2",
@@ -2563,18 +2543,7 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "4fa24c65-63d3-4cae-bc90-b1f92c3f4c3d",
-      "lot_id": "3669bec2a785",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "RBLX260904C00042000",
-      "qty": 1,
-      "reason": "stop_loss (-48.7%)",
-      "submitted": "2026-09-02T11:51:18"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b437": 61.0,
     "b436": 61.0,
@@ -2650,7 +2619,6 @@
     "b195": 57.99999999999999,
     "b901": 39.0,
     "b900": 39.0,
-    "b0": 89.2,
     "b167": 47.0,
     "b166": 47.0,
     "b196": 35.0,
@@ -2676,6 +2644,7 @@
     "b182": 56.99999999999999,
     "b193": 45.0,
     "b192": 45.0,
+    "b0": 50.2,
     "b315": 35.0,
     "b314": 35.0,
     "b1139": 35.0,
@@ -3336,7 +3305,8 @@
     "4b749c52-030f-4b49-86f5-ba9b9cfdbdff",
     "c95eb6cb-40ef-4baf-affe-64685e8881fd",
     "9857c402-0859-4b66-8e97-29f773f51e02",
-    "16315338-b687-40a2-a6a1-8643b3fed1ae"
+    "16315338-b687-40a2-a6a1-8643b3fed1ae",
+    "4fa24c65-63d3-4cae-bc90-b1f92c3f4c3d"
   ],
   "submitted_today": 201,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
