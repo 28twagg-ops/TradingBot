@@ -2082,26 +2082,6 @@
       "entry_order_id": "orphan:GOOGL260904C00347500"
     },
     {
-      "lot_id": "3f87e61d6a43",
-      "bucket_id": 902,
-      "profile_name": "lab0902_s411_w3_1045_1120_r1",
-      "strategy_id": "S411",
-      "occ_symbol": "RBLX260904C00041000",
-      "underlying": "RBLX",
-      "qty": 1,
-      "entry_cost": 64.0,
-      "entry_price": 0.64,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-02T14:52:26.922482+00:00",
-      "entry_order_id": "29398c0e-157d-4355-8379-b629b05447d2"
-    },
-    {
       "lot_id": "d16584e4679d",
       "bucket_id": 315,
       "profile_name": "lab0315_s355_w2_1005_1045_r2",
@@ -2755,14 +2735,24 @@
       "submitted": "2026-09-02T12:06:05"
     },
     {
-      "order_id": "368a90d3-6e35-4c98-b509-f4016fb66772",
-      "lot_id": "3f87e61d6a43",
-      "bucket_id": 902,
-      "strategy_id": "S411",
-      "occ_symbol": "RBLX260904C00041000",
+      "order_id": "4b749c52-030f-4b49-86f5-ba9b9cfdbdff",
+      "lot_id": "5ff67af05f9a",
+      "bucket_id": 777,
+      "strategy_id": "S397",
+      "occ_symbol": "PANW260904C00375000",
       "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-09-02T12:06:07"
+      "reason": "stop_loss (-58.8%)",
+      "submitted": "2026-09-02T12:12:01"
+    },
+    {
+      "order_id": "a6050209-2493-4164-a29b-005564f65d3d",
+      "lot_id": "ae6ac8d90fe6",
+      "bucket_id": 905,
+      "strategy_id": "S411",
+      "occ_symbol": "RBLX260904C00041500",
+      "qty": 1,
+      "reason": "stop_loss (-51.1%)",
+      "submitted": "2026-09-02T12:12:03"
     }
   ],
   "bucket_open_premium": {
@@ -2869,7 +2859,6 @@
     "b182": 56.99999999999999,
     "b193": 45.0,
     "b192": 45.0,
-    "b902": 64.0,
     "b315": 35.0,
     "b314": 35.0,
     "b1139": 35.0,
@@ -3528,7 +3517,8 @@
     "4b5d6d01-bcea-4e91-8ac2-18603eb36f1a",
     "79d046ba-0c5d-47f9-a4d7-1a227457a4f6",
     "fe4c528d-e57d-4d01-a683-86f53b0c1ab8",
-    "31b7feab-d38e-4e3f-9b77-c74e259e100b"
+    "31b7feab-d38e-4e3f-9b77-c74e259e100b",
+    "368a90d3-6e35-4c98-b509-f4016fb66772"
   ],
   "submitted_today": 201,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
