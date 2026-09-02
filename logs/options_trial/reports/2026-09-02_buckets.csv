@@ -376,7 +376,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 374,lab0374_s361_w7_1500_1530_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 375,lab0375_s361_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 376,lab0376_s362_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-02,False,,,,,,,0,MARA,S362,,entered_no_exit
-377,lab0377_s362_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-02,False,,,,,,,0,MARA,S362,,entered_no_exit
+377,lab0377_s362_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-02,False,,100.0,57.14,57.14,57.14,57.14,4.0,MARA,S362,take_profit (+57.1%),closed
 378,lab0378_s362_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-02,False,,,,,,,0,MARA,S362,,entered_no_exit
 379,lab0379_s362_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-02,False,,,,,,,0,MARA,S362,,entered_no_exit
 380,lab0380_s362_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-09-02,False,,100.0,102.86,102.86,102.86,102.86,36.0,"MARA,NVDA",S362,take_profit (+100.0%),closed
