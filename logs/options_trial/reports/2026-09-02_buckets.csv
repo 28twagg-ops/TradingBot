@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-21,False,,,,,,,0,,,,idle
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-08-21,True,12,,,,,,0,,,,stale_open
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -89,7 +89,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 87,lab0087_s210_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
 88,lab0088_s210_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 89,lab0089_s210_w5_1300_1330_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
-90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,2026-09-01,False,,,,,,,0,,,,idle
+90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,1,0,0,2026-09-02,False,,,,,,,0,RBLX,S406,,entered_no_exit
 91,lab0091_s210_w6_1400_1430_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 92,lab0092_s210_w7_1500_1530_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 93,lab0093_s210_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
@@ -899,8 +899,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 897,lab0897_s410_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 898,lab0898_s411_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
 899,lab0899_s411_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
-900,lab0900_s411_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
-901,lab0901_s411_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-13,False,,,,,,,0,,,,idle
+900,lab0900_s411_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-02,False,,,,,,,0,RBLX,S411,,entered_no_exit
+901,lab0901_s411_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-02,False,,,,,,,0,RBLX,S411,,entered_no_exit
 902,lab0902_s411_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-01,False,,,,,,,0,,,,idle
 903,lab0903_s411_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-01,False,,,,,,,0,,,,idle
 904,lab0904_s411_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-01,False,,,,,,,0,,,,idle

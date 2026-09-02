@@ -15,3 +15,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-01 15:00:32.378884+00:00,entry,90,live_1to1,S218,613009cbf06c,SHOP,SHOP260904C00152500,1,0.41,0.32,32.0,,,,-0.01,,0.5,-0.4,0.2399999999999999,low=141.55 BB_lower=142.54 touch+green,a04d2488-dce6-409c-9358-2ede0b821384
 2026-09-01T15:56:03Z,reconcile,90,live_1to1,S406,8a297e289a35,NVDA,NVDA260904C00225000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-01T16:20:59Z,reconcile,90,live_1to1,S218,613009cbf06c,SHOP,SHOP260904C00152500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-02 14:24:14.786365+00:00,entry,90,live_1to1,S406,02bebdadd22b,RBLX,RBLX260904C00042000,1,0.45,0.39,39.0,,,,-0.01,,0.5,-0.4,0.2168674698795181,RB gap -1.9% reclaim,5e8f7fda-77a7-4869-8963-bb3b1071fe4c
+2026-09-01 15:51:23.663076+00:00,exit,90,live_1to1,S406,02bebdadd22b,RBLX,RBLX260904C00042000,1,,0.95,39.0,143.59,56.0,reconcile_fill,,-0.01,0.5,-0.4,,,7a23f569-1589-41e3-87f8-88756484840a

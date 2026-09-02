@@ -26,3 +26,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-12T21:09:10Z,reconcile,901,lab0901_s411_w2_1005_1045_r2,S411,759d78be674d,CELH,CELH260814C00028000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-13 14:58:23.422499+00:00,entry,901,lab0901_s411_w2_1005_1045_r2,S411,cf02ac0eb859,ARM,ARM260814C00310000,1,0.67,0.67,67.0,,,,-0.01,,0.75,-0.75,0.1250000000000001,RB gap -1.8% reclaim,3cee0af6-345d-44fb-ab4c-3de04c3903a1
 2026-08-13T15:36:00Z,reconcile,901,lab0901_s411_w2_1005_1045_r2,S411,cf02ac0eb859,ARM,ARM260814C00310000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-02 14:24:14.788414+00:00,entry,901,lab0901_s411_w2_1005_1045_r2,S411,4b003909264b,RBLX,RBLX260904C00042000,1,0.45,0.39,39.0,,,,-0.01,,0.75,-0.75,0.2168674698795181,RB gap -1.9% reclaim,ee527b95-f3b7-4a01-80b2-f1a3fcf7419f
