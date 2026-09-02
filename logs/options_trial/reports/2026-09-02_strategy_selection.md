@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-02
 
-_Generated 2026-09-02T11:22:39.399558_
+_Generated 2026-09-02T11:27:46.888329_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-02T11:22:39.399558_
 
 ## Attribution health
 
-- Total exits: **2618**
+- Total exits: **2619**
 - Orphan exits (b0/orphan_reconcile): **346**
 - Orphan rate: **13.2%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -120,7 +120,7 @@ _Generated 2026-09-02T11:22:39.399558_
 | S399 (GapDown_OTM1) | 3d | drop | 44 | 43.2 | -49.05 | -84.64 | -67.00 | +138.20 | 33 | 8 | 1 | $-82.00 | 36.4% | non-positive median return |
 | S354 (GapDown_5DTE) | 5d | drop | 45 | 33.3 | -52.31 | -92.16 | -76.47 | +138.30 | 33 | 0 | 0 | $-7.00 | 31.1% | non-positive median return |
 | S351 (GapDown_1DTE) | 1d | drop | 51 | 21.6 | -53.85 | -81.63 | -69.68 | +171.88 | 33 | 4 | 1 | $-274.00 | 25.5% | non-positive median return |
-| S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 36 | 19.4 | -53.98 | -83.79 | -75.81 | +153.12 | 37 | 6 | 1 | $-529.00 | 44.4% | non-positive median return |
+| S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 37 | 18.9 | -55.32 | -83.13 | -75.81 | +137.38 | 37 | 6 | 2 | $-545.00 | 43.2% | non-positive median return |
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 40 | 10.0 | -55.91 | -78.77 | -67.43 | -3.10 | 37 | 2 | 1 | $-797.00 | 35.0% | manually paused — excluded from new entries & reflected P&L |
 | S360 (RubberBand_1DTE) | 1d | drop | 49 | 10.2 | -56.41 | -81.50 | -70.37 | -6.89 | 33 | 0 | 0 | $-913.00 | 22.4% | manually paused — excluded from new entries & reflected P&L |
 | S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 83 | 13.3 | -68.09 | -98.15 | -81.35 | +51.47 | 37 | 0 | 0 | $-2,246.00 | 34.9% | manually paused — excluded from new entries & reflected P&L |
@@ -205,7 +205,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S216 | 3d ATM RSI x30 | 36 | -53.98 | -83.79 | -75.81 | 6 | 1 |
+| S216 | 3d ATM RSI x30 | 37 | -55.32 | -83.13 | -75.81 | 6 | 2 |
 | S217 | 3d ATM RSI<25 bounce | 42 | -46.15 | -79.75 | -60.00 | 6 | 2 |
 | S218 | 3d ATM BB lower touch | 62 | +36.36 | -71.43 | -51.49 | 12 | 2 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
@@ -253,7 +253,7 @@ _Pipeline evaluation as of 2026-09-02. Auto-kill thresholds: median<-25% at n>=1
 | S213 | MA_Bounce_200 | 0 | — | — | NEW | 0 |
 | S214 | MA_Death_Cross | 0 | — | — | NEW | 0 |
 | S215 | MA_Reclaim_200 | 0 | — | — | NEW | 0 |
-| S216 | RSI_Oversold_Cross | 36 | -53.98% | 19% | INSUFFICIENT | 37 |
+| S216 | RSI_Oversold_Cross | 37 | -55.32% | 19% | INSUFFICIENT | 37 |
 | S217 | RSI_25_Bounce | 42 | -46.15% | 38% | INSUFFICIENT | 37 |
 | S218 | BB_Lower_Touch | 62 | +36.36% | 56% | INSUFFICIENT | 37 |
 | S219 | Volume_Climax_Up | 0 | — | — | NEW | 0 |
