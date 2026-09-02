@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-09-02 15:22:04.336518+00:00,entry,1128,lab1128_s168_w4_1120_1135_r1,S168,5423d537c495,MARA,MARA260911C00010500,1,0.37,0.36,36.0,,,,-0.01,,0.75,-0.75,0.054054054054054106,gap -2.2%,ee000b3e-f342-4feb-8934-9f1fd1573542

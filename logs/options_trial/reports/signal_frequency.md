@@ -1,6 +1,6 @@
 # Options signal frequency
 
-_Generated 2026-09-02T11:17:20.886541_
+_Generated 2026-09-02T11:22:42.837400_
 
 Headline counts are **unique (strategy, underlying, date)** from `ENTRY` lines in `logs/options_trial/runs/*.log`.
 Raw log-line counts (multi-bucket duplicates) are shown below for debug.
@@ -54,7 +54,7 @@ Raw log-line counts (multi-bucket duplicates) are shown below for debug.
 | w1     |    3 |    2 |    7 |    1 |    3 |    2 |    0 |    0 |    0 |    0 |    0 |    7 |    1 |    26 |
 | w2     |    6 |    5 |   11 |    5 |    6 |    5 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    47 |
 | w3     |    7 |    6 |   13 |    4 |    7 |    5 |    0 |    0 |    0 |    0 |    0 |    7 |    4 |    53 |
-| w4     |    5 |    3 |    9 |    2 |    4 |    4 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    36 |
+| w4     |    5 |    4 |   10 |    2 |    5 |    5 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    40 |
 
 Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:20–11:35. Parsed from controlled-layout profile names in ENTRY log lines.
 
@@ -63,11 +63,11 @@ Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:
 | Strategy | Raw log lines (includes multi-bucket duplicates) | Unique underlying symbols |
 |----------|-------------------------------------------------:|--------------------------:|
 | S163 | 223 | 9 |
-| S164 | 243 | 10 |
-| S165 | 1689 | 23 |
+| S164 | 245 | 10 |
+| S165 | 1691 | 23 |
 | S166 | 109 | 6 |
-| S167 | 243 | 10 |
-| S168 | 166 | 8 |
+| S167 | 245 | 10 |
+| S168 | 170 | 8 |
 | S169 | 0 | 0 |
 | S170 | 0 | 0 |
 | S171 | 0 | 0 |
@@ -98,7 +98,7 @@ Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:
 | 2026-07-28 |    6 |    8 |    8 |    8 |    8 |    6 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    44 |
 | 2026-07-29 |   10 |   10 |   10 |    8 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    48 |
 | 2026-09-01 |    8 |    6 |    6 |    2 |    6 |    6 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    34 |
-| 2026-09-02 |   10 |    8 |    8 |    2 |    8 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    46 |
+| 2026-09-02 |   10 |   10 |   10 |    2 |   10 |   14 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    56 |
 
 ## Notes
 

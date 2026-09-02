@@ -1010,8 +1010,8 @@
   {
     "bucket_id": 168,
     "profile": "lab0168_s216_w3_1045_1120_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 23.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 169,
@@ -1442,14 +1442,14 @@
   {
     "bucket_id": 240,
     "profile": "lab0240_s401_w4_1120_1135_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 32.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 241,
     "profile": "lab0241_s401_w4_1120_1135_r2",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 32.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 242,
@@ -2462,14 +2462,14 @@
   {
     "bucket_id": 410,
     "profile": "lab0410_s364_w4_1120_1135_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 36.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 411,
     "profile": "lab0411_s364_w4_1120_1135_r2",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 36.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 412,
@@ -2630,14 +2630,14 @@
   {
     "bucket_id": 438,
     "profile": "lab0438_s366_w4_1120_1135_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 53.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 439,
     "profile": "lab0439_s366_w4_1120_1135_r2",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 53.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 440,
@@ -5426,14 +5426,14 @@
   {
     "bucket_id": 904,
     "profile": "lab0904_s411_w4_1120_1135_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 45.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 905,
     "profile": "lab0905_s411_w4_1120_1135_r2",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 45.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 906,
@@ -6770,14 +6770,14 @@
   {
     "bucket_id": 1128,
     "profile": "lab1128_s168_w4_1120_1135_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 36.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 1129,
     "profile": "lab1129_s168_w4_1120_1135_r2",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 36.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 1130,
