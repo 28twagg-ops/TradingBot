@@ -2760,6 +2760,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-02T15:32:21.192343+00:00",
       "entry_order_id": "d152e423-d5ce-4412-ba44-a4273754a58b"
+    },
+    {
+      "lot_id": "8539e1f8ede3",
+      "bucket_id": 199,
+      "profile_name": "lab0199_s218_w4_1120_1135_r2",
+      "strategy_id": "S218",
+      "occ_symbol": "AFRM260904C00078000",
+      "underlying": "AFRM",
+      "qty": 1,
+      "entry_cost": 25.0,
+      "entry_price": 0.25,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-02T15:36:51.760300+00:00",
+      "entry_order_id": "cbe4fb06-f086-4d26-bc17-3cf2be37e4b6"
+    },
+    {
+      "lot_id": "a29f0405e20b",
+      "bucket_id": 198,
+      "profile_name": "lab0198_s218_w4_1120_1135_r1",
+      "strategy_id": "S218",
+      "occ_symbol": "AFRM260904C00078000",
+      "underlying": "AFRM",
+      "qty": 1,
+      "entry_cost": 25.0,
+      "entry_price": 0.25,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-02T15:36:51.797483+00:00",
+      "entry_order_id": "15daf7b0-bff6-4b64-a9c5-567be28297ac"
     }
   ],
   "pending_orders": [
@@ -3836,38 +3876,6 @@
       "stop_loss": -0.75
     },
     {
-      "order_id": "15daf7b0-bff6-4b64-a9c5-567be28297ac",
-      "bucket_id": 198,
-      "strategy_id": "S218",
-      "occ_symbol": "AFRM260904C00078000",
-      "underlying": "AFRM",
-      "qty": 1,
-      "limit": 0.25,
-      "profile_name": "lab0198_s218_w4_1120_1135_r1",
-      "submitted": "2026-09-02",
-      "detail": "low=69.24 BB_lower=71.18 touch+green",
-      "spread_frac": 0.2127659574468086,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "cbe4fb06-f086-4d26-bc17-3cf2be37e4b6",
-      "bucket_id": 199,
-      "strategy_id": "S218",
-      "occ_symbol": "AFRM260904C00078000",
-      "underlying": "AFRM",
-      "qty": 1,
-      "limit": 0.25,
-      "profile_name": "lab0199_s218_w4_1120_1135_r2",
-      "submitted": "2026-09-02",
-      "detail": "low=69.24 BB_lower=71.18 touch+green",
-      "spread_frac": 0.2127659574468086,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
       "order_id": "6747ced3-8b5c-43bc-bb71-75658db2ab17",
       "bucket_id": 782,
       "strategy_id": "S397",
@@ -4102,7 +4110,9 @@
     "b834": 3.0,
     "b799": 3.0,
     "b185": 23.0,
-    "b184": 23.0
+    "b184": 23.0,
+    "b199": 25.0,
+    "b198": 25.0
   },
   "session_date": "2026-09-02",
   "entries_locked": [
@@ -4724,7 +4734,9 @@
     "2159dfb6-0481-40e9-8354-45f3f8f9bd0c",
     "a95e90b9-c333-4f34-859e-79c52f5c4d26",
     "a7f35484-2c0a-4270-bab0-43d487fddf22",
-    "d152e423-d5ce-4412-ba44-a4273754a58b"
+    "d152e423-d5ce-4412-ba44-a4273754a58b",
+    "cbe4fb06-f086-4d26-bc17-3cf2be37e4b6",
+    "15daf7b0-bff6-4b64-a9c5-567be28297ac"
   ],
   "submitted_today": 201,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
