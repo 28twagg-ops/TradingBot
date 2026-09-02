@@ -1,0 +1,45 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=74 paper_keys=yes dry_run=False
+  alpaca positions=26
+  FLAG b197|S218|a29e65f5 missing from Alpaca
+  FLAG b196|S218|5faa0e4b missing from Alpaca
+  FLAG b861|S408|15841d91 missing from Alpaca
+  FLAG b860|S408|b52661bc missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1164:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1164
+PROBE OK: paper account status=AccountStatus.ACTIVE equity=$999,343.92
+  buying_power=$3,973,859.68 cash=$996,464.92
+  open option orders: 20
+    AMD260902C00480000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=0.16
+    SMCI260911C00040000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=0.82
+    SMCI260904C00038500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=0.73
+    NVDA260904C00227500 OrderSide.SELL qty=4 status=OrderStatus.NEW limit=None
+    SPY260904C00772000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+  open option positions: 26
+    AMD260902C00477500 qty=-1 mkt=$-25.00
+    AMD260902C00480000 qty=1 mkt=$6.00
+    AMD260904C00495000 qty=4 mkt=$180.00
+    AMD260904C00497500 qty=12 mkt=$456.00
+    AMD260904C00500000 qty=2 mkt=$60.00
+PROBE: check-only pass (use --smoke-entry to place a test order)
+=== options_morning_bot (PAPER) 2026-09-02T09:40:24.105676-04:00 ===
+
+[Run context]
+Paper auth OK — equity $999347.92, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
+Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+2026-09-02 09:40:27,232 INFO   EXIT [b284|lab0284_s351_w3_1045_1120_r1|S351] stop_loss (-82.4%) SELL 1 AMD260902C00480000 @<= 0.03
+  EXIT [b798|lab0798_s399_w4_1120_1135_r1|S399] stop_loss (-51.4%) SELL failed AMD260904C00502500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+2026-09-02 09:40:42,592 INFO   EXIT [b269|lab0269_s403_w4_1120_1135_r2|S403] take_profit (+54.6%) SELL 1 WFC260904C00088000 @<= 0.71
+Protective stops: placed=1 upgraded=0 already=19 failed=4 (market-first)
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S204, S205, S206, S208, S209, S210, S211, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S406, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 113/117 symbols
