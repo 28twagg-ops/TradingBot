@@ -12121,32 +12121,9 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-01 18:01:15.168341+00:00,exit,292,lab0292_s352_w3_1045_1120_r1,S352,d8d456df0cdf,AMD,AMD260902C00480000,1,,0.17,34.0,-50.0,-17.0,stop_loss (-52.9%),,-0.01,0.5,-0.5,,,13db326d-7ab1-4c82-b2d2-d88a18cc0f9a
 2026-09-01 18:06:36.239664+00:00,exit,285,lab0285_s351_w3_1045_1120_r2,S351,36c08cc7c095,AMD,AMD260902C00480000,1,,0.17,34.0,-50.0,-17.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,379cb956-05c6-4d16-b53f-3c37f0d09eca
 2026-09-01 18:46:33.686860+00:00,exit,199,lab0199_s218_w4_1120_1135_r2,S218,8f8775703b86,SPY,SPY260904C00772000,1,,0.34,66.0,-48.48,-32.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,54bda8bb-c8ff-4e8f-a916-f210e72d63cd
-2026-09-02T13:34:59Z,reconcile,197,lab0197_s218_w3_1045_1120_r2,S218,a29e65f5ab61,GOOGL,GOOGL260904C00347500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:34:59Z,reconcile,196,lab0196_s218_w3_1045_1120_r1,S218,5faa0e4b649d,GOOGL,GOOGL260904C00347500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:34:59Z,reconcile,861,lab0861_s408_w3_1045_1120_r2,S408,15841d91941a,NVDA,NVDA260904C00237500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:34:59Z,reconcile,860,lab0860_s408_w3_1045_1120_r1,S408,b52661bc54fc,NVDA,NVDA260904C00237500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,805,lab0805_s404_w3_1045_1120_r2,S404,219de775384c,AMD,AMD260904C00495000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,804,lab0804_s404_w3_1045_1120_r1,S404,c5d24808e056,AMD,AMD260904C00495000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,789,lab0789_s398_w3_1045_1120_r2,S398,d2011a2ffff8,AMD,AMD260904C00497500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,788,lab0788_s398_w3_1045_1120_r1,S398,340df09e779c,AMD,AMD260904C00497500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,781,lab0781_s397_w3_1045_1120_r2,S397,206cc1b142ac,AMD,AMD260904C00495000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,780,lab0780_s397_w3_1045_1120_r1,S397,8763abf3a23a,AMD,AMD260904C00495000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,301,lab0301_s353_w3_1045_1120_r2,S353,d09e2e018add,AMD,AMD260904C00497500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,300,lab0300_s353_w3_1045_1120_r1,S353,53b2ae21b8ff,AMD,AMD260904C00497500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,284,lab0284_s351_w3_1045_1120_r1,S351,fff2a0df6abd,AMD,AMD260902C00480000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,1141,lab1141_s163_w3_1045_1120_r2,S163,2b1283198c57,AMD,AMD260904C00497500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,1140,lab1140_s163_w3_1045_1120_r1,S163,9494c3771f38,AMD,AMD260904C00497500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,1099,lab1099_s167_w3_1045_1120_r2,S167,a0af6cbb7878,AMD,AMD260904C00497500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,1098,lab1098_s167_w3_1045_1120_r1,S167,7acae97881e1,AMD,AMD260904C00497500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,1127,lab1127_s168_w3_1045_1120_r2,S168,eb7bd373b30c,AMD,AMD260904C00497500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,1126,lab1126_s168_w3_1045_1120_r1,S168,56986cebad7d,AMD,AMD260904C00497500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,1057,lab1057_s165_w3_1045_1120_r2,S165,aca5d4c91a77,AMD,AMD260904C00497500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,1056,lab1056_s165_w3_1045_1120_r1,S165,cbb3cc2e4d7b,AMD,AMD260904C00497500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,797,lab0797_s399_w3_1045_1120_r2,S399,ed5d91abef7a,AMD,AMD260904C00500000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,796,lab0796_s399_w3_1045_1120_r1,S399,b042d07befbc,AMD,AMD260904C00500000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02T13:55:44Z,reconcile,198,lab0198_s218_w4_1120_1135_r1,S218,fa5cda048736,SPY,SPY260904C00772000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-02 13:40:42.708637+00:00,exit,269,lab0269_s403_w4_1120_1135_r2,S403,d33bd635507c,WFC,WFC260904C00088000,1,,0.74,50.0,48.0,24.0,reconcile_fill,,-0.01,0.5,-0.5,,,558ff3d6-e32f-47b1-847e-b48455afd2a0
-2026-09-02 13:43:22.186393+00:00,exit,317,lab0317_s355_w3_1045_1120_r2,S355,f7091f38bf73,SMCI,SMCI260911C00040000,1,,0.82,52.0,57.69,30.0,take_profit (+61.5%),,-0.01,0.5,-0.5,,,8abaa5f7-da3c-4cb7-a654-7d1601614811
-2026-09-02 13:43:22.191329+00:00,exit,303,lab0303_s353_w4_1120_1135_r2,S353,22e73045293c,SMCI,SMCI260904C00038500,1,,0.73,49.0,48.98,24.0,take_profit (+53.1%),,-0.01,0.5,-0.5,,,666b46d1-c7d7-4f13-8e3c-2fd01bc47c00
-2026-09-02 13:35:15.275097+00:00,exit,799,lab0799_s399_w4_1120_1135_r2,S399,d542a80cc578,AMD,AMD260904C00502500,1,,0.17,35.0,-51.43,-18.0,stop_loss (-51.4%),,-0.01,0.5,-0.5,,,53cab274-7e5a-4cc5-8f5e-f71bdedf7621
-2026-09-02 13:35:06.076576+00:00,exit,807,lab0807_s404_w4_1120_1135_r2,S404,d464df0e55d4,SMCI,SMCI260904C00038000,1,,0.95,62.0,53.23,33.0,take_profit (+53.2%),,-0.01,0.5,-0.5,,,8cc31389-bc2d-4785-87bb-787a6b2ec9d0
+2026-09-02T13:40:21Z,reconcile,197,lab0197_s218_w3_1045_1120_r2,S218,a29e65f5ab61,GOOGL,GOOGL260904C00347500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-02T13:40:21Z,reconcile,196,lab0196_s218_w3_1045_1120_r1,S218,5faa0e4b649d,GOOGL,GOOGL260904C00347500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-02T13:40:21Z,reconcile,861,lab0861_s408_w3_1045_1120_r2,S408,15841d91941a,NVDA,NVDA260904C00237500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-02T13:40:21Z,reconcile,860,lab0860_s408_w3_1045_1120_r1,S408,b52661bc54fc,NVDA,NVDA260904C00237500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-02 13:35:15.275097+00:00,exit,799,lab0799_s399_w4_1120_1135_r2,S399,d542a80cc578,AMD,AMD260904C00502500,1,,0.17,35.0,-51.43,-18.0,reconcile_fill,,-0.01,0.5,-0.5,,,53cab274-7e5a-4cc5-8f5e-f71bdedf7621
+2026-09-02 13:35:06.076576+00:00,exit,807,lab0807_s404_w4_1120_1135_r2,S404,d464df0e55d4,SMCI,SMCI260904C00038000,1,,0.95,62.0,53.23,33.0,reconcile_fill,,-0.01,0.5,-0.5,,,8cc31389-bc2d-4785-87bb-787a6b2ec9d0
