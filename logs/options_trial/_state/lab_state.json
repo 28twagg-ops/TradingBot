@@ -402,26 +402,6 @@
       "entry_order_id": "28642106-2277-4e2b-9ca8-0c4609345a3d"
     },
     {
-      "lot_id": "5ff67af05f9a",
-      "bucket_id": 777,
-      "profile_name": "lab0777_s397_w1_0928_1005_r2",
-      "strategy_id": "S397",
-      "occ_symbol": "PANW260904C00375000",
-      "underlying": "PANW",
-      "qty": 1,
-      "entry_cost": 17.0,
-      "entry_price": 0.17,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-02T14:03:37.082427+00:00",
-      "entry_order_id": "d07197af-a6b3-4a12-a7f7-537390dcf261"
-    },
-    {
       "lot_id": "c2ec8635ebc6",
       "bucket_id": 776,
       "profile_name": "lab0776_s397_w1_0928_1005_r1",
@@ -2202,26 +2182,6 @@
       "entry_order_id": "87ebf189-05ff-4f06-8703-576467ba4f4a"
     },
     {
-      "lot_id": "44f121d84073",
-      "bucket_id": 916,
-      "profile_name": "lab0916_s412_w3_1045_1120_r1",
-      "strategy_id": "S412",
-      "occ_symbol": "RBLX260904C00043000",
-      "underlying": "RBLX",
-      "qty": 1,
-      "entry_cost": 16.0,
-      "entry_price": 0.16,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-02T14:56:19.311184+00:00",
-      "entry_order_id": "4d770d75-d5fb-4dfd-ad1c-f99c965039c1"
-    },
-    {
       "lot_id": "35e2a7af8d60",
       "bucket_id": 333,
       "profile_name": "lab0333_s357_w3_1045_1120_r2",
@@ -2360,26 +2320,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-02T15:11:05.813666+00:00",
       "entry_order_id": "fcae1a58-ab56-4e0d-8dc7-329cfa46727b"
-    },
-    {
-      "lot_id": "ae6ac8d90fe6",
-      "bucket_id": 905,
-      "profile_name": "lab0905_s411_w4_1120_1135_r2",
-      "strategy_id": "S411",
-      "occ_symbol": "RBLX260904C00041500",
-      "underlying": "RBLX",
-      "qty": 1,
-      "entry_cost": 45.0,
-      "entry_price": 0.45,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-02T15:22:18.692465+00:00",
-      "entry_order_id": "9161d104-c074-4386-8ba8-b67e1ee5e02d"
     },
     {
       "lot_id": "078bfee813e5",
@@ -2725,34 +2665,24 @@
       "submitted": "2026-09-02T12:06:05"
     },
     {
-      "order_id": "a4b0d42e-f071-4c40-bc0e-ac188f53e072",
-      "lot_id": "44f121d84073",
-      "bucket_id": 916,
-      "strategy_id": "S412",
-      "occ_symbol": "RBLX260904C00043000",
-      "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-09-02T12:06:05"
-    },
-    {
-      "order_id": "4b749c52-030f-4b49-86f5-ba9b9cfdbdff",
-      "lot_id": "5ff67af05f9a",
-      "bucket_id": 777,
+      "order_id": "d8875da6-65f4-4005-82ab-65eddd177504",
+      "lot_id": "c2ec8635ebc6",
+      "bucket_id": 776,
       "strategy_id": "S397",
       "occ_symbol": "PANW260904C00375000",
       "qty": 1,
-      "reason": "stop_loss (-58.8%)",
-      "submitted": "2026-09-02T12:12:01"
+      "reason": "stop_loss (-64.7%)",
+      "submitted": "2026-09-02T12:16:11"
     },
     {
-      "order_id": "a6050209-2493-4164-a29b-005564f65d3d",
-      "lot_id": "ae6ac8d90fe6",
-      "bucket_id": 905,
+      "order_id": "c95eb6cb-40ef-4baf-affe-64685e8881fd",
+      "lot_id": "078bfee813e5",
+      "bucket_id": 904,
       "strategy_id": "S411",
       "occ_symbol": "RBLX260904C00041500",
       "qty": 1,
-      "reason": "stop_loss (-51.1%)",
-      "submitted": "2026-09-02T12:12:03"
+      "reason": "stop_loss (-53.3%)",
+      "submitted": "2026-09-02T12:16:15"
     }
   ],
   "bucket_open_premium": {
@@ -2776,7 +2706,6 @@
     "b798": 35.0,
     "b165": 56.00000000000001,
     "b164": 56.00000000000001,
-    "b777": 17.0,
     "b776": 17.0,
     "b913": 16.0,
     "b912": 16.0,
@@ -2865,7 +2794,6 @@
     "b1138": 35.0,
     "b1125": 35.0,
     "b1124": 35.0,
-    "b916": 16.0,
     "b333": 51.0,
     "b332": 51.0,
     "b317": 34.0,
@@ -2873,7 +2801,6 @@
     "b434": 51.0,
     "b331": 51.0,
     "b330": 51.0,
-    "b905": 45.0,
     "b904": 45.0,
     "b241": 32.0,
     "b240": 32.0,
@@ -3518,7 +3445,9 @@
     "79d046ba-0c5d-47f9-a4d7-1a227457a4f6",
     "fe4c528d-e57d-4d01-a683-86f53b0c1ab8",
     "31b7feab-d38e-4e3f-9b77-c74e259e100b",
-    "368a90d3-6e35-4c98-b509-f4016fb66772"
+    "368a90d3-6e35-4c98-b509-f4016fb66772",
+    "a6050209-2493-4164-a29b-005564f65d3d",
+    "4b749c52-030f-4b49-86f5-ba9b9cfdbdff"
   ],
   "submitted_today": 201,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
