@@ -1179,3 +1179,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-09-02 13:51:34,2026-09-02,SELL,SYNA,MomReversal,94.8,34.43,-0.78,-0.27,1,stop_loss (-0.8%),bull,230.55
 2026-09-02 13:57:20,2026-09-02,SELL,AIZ,Pullback50,281.79,34.26,-0.92,-0.32,0,stop_loss (-0.9%),bull,230.28
 2026-09-02 13:57:51,2026-09-02,SELL,AES,Pullback50,14.77,34.57,-0.02,-0.01,0,midline (-0.0%),bull,230.29
+2026-09-02 19:52:03,2026-09-02,SELL,AES,Pullback50,14.78,34.5,-0.07,-0.03,0,midline (-0.1%),bull,230.21
+2026-09-02 19:52:34,2026-09-02,SELL,MO,Pullback50,69.81,34.52,0.01,0.0,0,midline (+0.0%),bull,230.2
