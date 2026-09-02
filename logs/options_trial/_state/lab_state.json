@@ -1580,6 +1580,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-02T14:27:32.274467+00:00",
       "entry_order_id": "orphan:RBLX260904C00042000"
+    },
+    {
+      "lot_id": "3edbd6d853e9",
+      "bucket_id": 167,
+      "profile_name": "lab0167_s216_w2_1005_1045_r2",
+      "strategy_id": "S216",
+      "occ_symbol": "IWM260904C00297000",
+      "underlying": "IWM",
+      "qty": 1,
+      "entry_cost": 47.0,
+      "entry_price": 0.47,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-02T14:42:18.024391+00:00",
+      "entry_order_id": "dffead8b-7586-4f81-8aac-64744eb1691f"
+    },
+    {
+      "lot_id": "de03a8e655d7",
+      "bucket_id": 166,
+      "profile_name": "lab0166_s216_w2_1005_1045_r1",
+      "strategy_id": "S216",
+      "occ_symbol": "IWM260904C00297000",
+      "underlying": "IWM",
+      "qty": 1,
+      "entry_cost": 47.0,
+      "entry_price": 0.47,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-02T14:42:18.068562+00:00",
+      "entry_order_id": "1d651dce-1bb8-4bd0-8b66-6f259039ce8e"
     }
   ],
   "pending_orders": [
@@ -2400,7 +2440,9 @@
     "b195": 57.99999999999999,
     "b901": 39.0,
     "b900": 39.0,
-    "b0": 39.0
+    "b0": 39.0,
+    "b167": 47.0,
+    "b166": 47.0
   },
   "session_date": "2026-09-02",
   "entries_locked": [
@@ -2514,7 +2556,9 @@
     "779|S397|2026-09-02",
     "90|S404|2026-09-02",
     "802|S404|2026-09-02",
-    "803|S404|2026-09-02"
+    "803|S404|2026-09-02",
+    "166|S216|2026-09-02",
+    "167|S216|2026-09-02"
   ],
   "processed_orders": [
     "5eb53793-15e2-4bc9-aa7c-a7e6ad6e0dc7",
@@ -2969,9 +3013,11 @@
     "c0076bb9-4437-4541-82de-447c9c821d1e",
     "5e8f7fda-77a7-4869-8963-bb3b1071fe4c",
     "7a23f569-1589-41e3-87f8-88756484840a",
-    "d0362d5f-aeac-40a1-a5f9-aee388542bbf"
+    "d0362d5f-aeac-40a1-a5f9-aee388542bbf",
+    "dffead8b-7586-4f81-8aac-64744eb1691f",
+    "1d651dce-1bb8-4bd0-8b66-6f259039ce8e"
   ],
-  "submitted_today": 111,
+  "submitted_today": 113,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-02"
 }

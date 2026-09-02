@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-02
 
-_Generated 2026-09-02T10:37:08.522428_
+_Generated 2026-09-02T10:42:23.519195_
 
 ## Summary
 
@@ -119,7 +119,7 @@ _Generated 2026-09-02T10:37:08.522428_
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 33 | 0 | 0 | $+33.00 | 26.3% | manually paused — excluded from new entries & reflected P&L |
 | S399 (GapDown_OTM1) | 3d | drop | 44 | 43.2 | -49.05 | -84.64 | -67.00 | +138.20 | 33 | 6 | 1 | $-82.00 | 36.4% | non-positive median return |
 | S354 (GapDown_5DTE) | 5d | drop | 45 | 33.3 | -52.31 | -92.16 | -76.47 | +138.30 | 33 | 0 | 0 | $-7.00 | 31.1% | non-positive median return |
-| S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 35 | 20.0 | -52.63 | -84.46 | -71.24 | +168.86 | 37 | 2 | 0 | $-511.00 | 45.7% | non-positive median return |
+| S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 35 | 20.0 | -52.63 | -84.46 | -71.24 | +168.86 | 37 | 4 | 0 | $-511.00 | 45.7% | non-positive median return |
 | S351 (GapDown_1DTE) | 1d | drop | 51 | 21.6 | -53.85 | -81.63 | -69.68 | +171.88 | 33 | 4 | 1 | $-274.00 | 25.5% | non-positive median return |
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 40 | 10.0 | -55.91 | -78.77 | -67.43 | -3.10 | 37 | 2 | 1 | $-797.00 | 35.0% | manually paused — excluded from new entries & reflected P&L |
 | S360 (RubberBand_1DTE) | 1d | drop | 49 | 10.2 | -56.41 | -81.50 | -70.37 | -6.89 | 33 | 0 | 0 | $-913.00 | 22.4% | manually paused — excluded from new entries & reflected P&L |
@@ -205,7 +205,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S216 | 3d ATM RSI x30 | 35 | -52.63 | -84.46 | -71.24 | 2 | 0 |
+| S216 | 3d ATM RSI x30 | 35 | -52.63 | -84.46 | -71.24 | 4 | 0 |
 | S217 | 3d ATM RSI<25 bounce | 42 | -46.15 | -79.75 | -60.00 | 4 | 2 |
 | S218 | 3d ATM BB lower touch | 61 | +36.36 | -71.43 | -48.48 | 7 | 1 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |

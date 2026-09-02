@@ -998,14 +998,14 @@
   {
     "bucket_id": 166,
     "profile": "lab0166_s216_w2_1005_1045_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 47.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 167,
     "profile": "lab0167_s216_w2_1005_1045_r2",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 47.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 168,
