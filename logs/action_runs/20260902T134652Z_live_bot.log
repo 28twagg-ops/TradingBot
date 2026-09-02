@@ -1,0 +1,27 @@
+13:46:53  INFO      Mode: morning_scan
+13:46:54  INFO        [positions] 3/3 (3 valid)
+13:46:54  INFO        SELL MARKET [urgent] BWXT closed
+13:46:57  INFO        TX logged: SELL BWXT  P&L -2.31%
+13:46:57  INFO        SELL LIMIT GME  qty=1.84816196  limit=$18.95  id=43ac7571-6e1f-49d2-982c-ab04d2f01de1
+13:47:27  INFO        SELL LIMIT filled GME (confirmed by position check)
+13:47:27  INFO        TX logged: SELL GME  P&L 1.01%
+13:47:27  INFO        Universe cache hit: 903 tickers (tickers_2026-09-02.json)
+13:47:28  INFO        [universe] 40/902 (40 valid)
+13:47:30  INFO        [universe] 80/902 (80 valid)
+13:47:31  INFO        [universe] 120/902 (120 valid)
+13:47:32  INFO        [universe] 160/902 (160 valid)
+13:47:33  INFO        [universe] 200/902 (199 valid)
+13:47:41  INFO        [universe] 240/902 (238 valid)
+13:47:54  INFO        [universe] 280/902 (278 valid)
+13:48:04  INFO        [universe] 320/902 (318 valid)
+13:48:17  INFO        [universe] 360/902 (358 valid)
+13:48:30  INFO        [universe] 400/902 (397 valid)
+13:48:40  INFO        [universe] 440/902 (437 valid)
+13:48:54  INFO        [universe] 480/902 (477 valid)
+13:49:04  INFO        [universe] 520/902 (517 valid)
+13:49:17  INFO        [universe] 560/902 (557 valid)
+13:49:30  INFO        [universe] 600/902 (597 valid)
+13:49:41  INFO        [universe] 640/902 (637 valid)
+13:49:54  INFO        [universe] 680/902 (677 valid)
+13:50:04  INFO        [universe] 720/902 (717 valid)
+13:50:17  INFO        [universe] 760/902 (757 valid)

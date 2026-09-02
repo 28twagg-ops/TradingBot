@@ -809,3 +809,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-09-01 13:46:04,2026-09-01,SELL,DLR,Pullback50,184.665,,184.665,34.69,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
 2026-09-01 14:11:02,2026-09-01,SELL,EQIX,Pullback50,1034.2,,1034.2,34.63,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-09-01 19:52:18,2026-09-01,SELL,GME,EarningsDrift,18.88,18.87,18.8729,34.71,-0.0376,-0.0131,limit_fill_position_check_full,midline (+0.1%),bull
+2026-09-02 13:46:57,2026-09-02,SELL,BWXT,MomReversal,157.3875,,157.3875,33.9,0.0,0.0,market_urgent_full,stop_loss (-2.3%),bull
+2026-09-02 13:47:27,2026-09-02,SELL,GME,EarningsDrift,18.96,18.95,18.9543,35.03,-0.0301,-0.0105,limit_fill_position_check_full,midline (+1.0%),bull
