@@ -1176,3 +1176,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-09-01 19:52:18,2026-09-01,SELL,GME,EarningsDrift,18.87,34.71,0.06,0.02,0,midline (+0.1%),bull,231.38
 2026-09-02 13:46:57,2026-09-02,SELL,BWXT,MomReversal,157.39,33.9,-2.31,-0.8,1,stop_loss (-2.3%),bull,230.74
 2026-09-02 13:47:27,2026-09-02,SELL,GME,EarningsDrift,18.95,35.03,1.01,0.35,0,midline (+1.0%),bull,230.81
+2026-09-02 13:51:34,2026-09-02,SELL,SYNA,MomReversal,94.8,34.43,-0.78,-0.27,1,stop_loss (-0.8%),bull,230.55

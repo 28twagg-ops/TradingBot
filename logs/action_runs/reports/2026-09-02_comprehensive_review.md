@@ -1674,3 +1674,198 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20260902T135130Z
+
+- UTC timestamp: `20260902T135130Z`
+- GitHub run: [#8798](https://github.com/28twagg-ops/TradingBot/actions/runs/33638161863)
+- Run id: `33638161863`
+- Live bot: exit=`0`, duration=`253s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260902T135130Z_live_bot.log`, `logs/action_runs/20260902T135130Z_live_options.log`, `logs/action_runs/20260902T135130Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 832 | 41.8 | -47.2 | +15.3 | $+8,190 |
+| TAINTED | 1762 | 33.0 | -39.2 | +12.2 | $-9,207 |
+| KEEP-only | 308 | 63.0 | +37.5 | +41.9 | $+5,683 |
+| KEEP-only recent | 120 | 58.3 | +50.0 | +50.8 | $+1,657 |
+
+- KEEP strategies (11): S173, S174, S210, S218, S350, S397, S398, S401, S404, S406, S412
+- KILL strategies (17): ORPHAN, S165, S203, S207, S211, S212, S217, S351, S352, S354, S355, S360, S364, S403, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-02T09:26:05.719709-04:00","date":"2026-09-02","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.7,"phases_s":{"reconcile":0.11},"signals":0,"placed":0,"equity":999332.06,"open_positions":28,"pending_orders":0,"open_lots":74,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"8793","github_run_id":"33635582162","status":"ok","data_quality":{"clean":{"n":832,"win":41.83,"med":-47.2,"avg":15.32,"pnl":8189.53},"tainted":{"n":1762,"win":33.03,"med":-39.16,"avg":12.18,"pnl":-9207.34},"keep_only":{"n":308,"win":62.99,"med":37.5,"avg":41.88,"pnl":5683.45},"keep_only_recent":{"n":120,"win":58.33,"med":50.0,"avg":50.79,"pnl":1657.0},"keep_strategies":["S173","S174","S210","S218","S350","S397","S398","S401","S404","S406","S412"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S217","S351","S352","S354","S355","S360","S364","S403","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (146 earlier lines - see full log file)
+|  SSB      Pullback50      eq     $105.47  28.2   -2.21   50MA bounce (+|
+|                                                                        |13:55:11  INFO        BUY  AES  $34.59  [Pullback50]  id=350e468e-1474-4bdd-9af0-d1d9ee6e272f
+13:55:11  INFO        BUY  AMZN  $34.59  [Pullback50]  id=4ae62db2-423b-4609-97da-0ab7122ca63e
+13:55:12  INFO        BUY  AIZ  $34.59  [Pullback50]  id=f16989b8-d53e-45cd-b756-c1cdc261349c
+13:55:42  INFO        place_all_stops: checking 3 positions...
+13:55:42  INFO        STOP-MARKET placed AES  qty=2 (pos=2.3412)  stop=$14.70  id=71d0ee6f-7feb-448a-8e56-39549cfe244c
+13:55:42  INFO        STOP skipped AIZ: fractional (0.1216 shares) — software exit will handle it
+13:55:42  INFO        STOP skipped AMZN: fractional (0.1353 shares) — software exit will handle it
+13:55:42  INFO        Daily log -> logs/daily/2026-09-02.md
+13:55:42  INFO        Dashboard written → logs/dashboard.md
+
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AES  Pullback50                                    $34.59|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AMZN  Pullback50                                   $34.59|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AIZ  Pullback50                                    $34.59|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] BRK-B  Pullback50                                    cap 3|
+|    SKIP [eq] CNC  Pullback50                                      cap 3|
+|    SKIP [eq] CI  Pullback50                                       cap 3|
+|    SKIP [eq] LLY  Pullback50                                      cap 3|
+|    SKIP [eq] MU  Pullback50                                       cap 3|
+|    SKIP [eq] NTRS  Pullback50                                     cap 3|
+|    SKIP [eq] PRU  Pullback50                                      cap 3|
+|    SKIP [eq] SW  Pullback50                                       cap 3|
+|    SKIP [eq] SWK  Pullback50                                      cap 3|
+|    SKIP [eq] STLD  Pullback50                                     cap 3|
+|    SKIP [eq] AFG  Pullback50                                      cap 3|
+|    SKIP [eq] ARWR  Pullback50                                     cap 3|
+|    SKIP [eq] AVT  Pullback50                                      cap 3|
+|    SKIP [eq] BRKR  Pullback50                                     cap 3|
+|    SKIP [eq] CFR  Pullback50                                      cap 3|
+|    SKIP [eq] ELAN  Pullback50                                     cap 3|
+|    SKIP [eq] HQY  Pullback50                                      cap 3|
+|    SKIP [eq] NLY  Pullback50                                      cap 3|
+|    SKIP [eq] NVST  Pullback50                                     cap 3|
+|    SKIP [eq] ORI  Pullback50                                      cap 3|
+|    SKIP [eq] RS  Pullback50                                       cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] SNX  Pullback50                                      cap 3|
+|    SKIP [eq] SSB  Pullback50                                      cap 3|
+|    SKIP [eq] DELL  TrendResumption                                cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  AES                                                  still unconfirmed|
+|  AMZN                                                 still unconfirmed|
+|  AIZ                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            899|
+|  Signals                                                             28|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             3|
+|  Equity                                                         $230.23|
+|  Cash                                                           $126.81|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-09-02T09:55:43.536834-04:00 share=25% ===
+2026-09-02 09:55:43,536 INFO === options_live_micro LIVE 2026-09-02T09:55:43.536834-04:00 share=25% ===
+Live account equity $230.22 cash $126.81 #225458845 options_level=3
+2026-09-02 09:55:43,704 INFO Live account equity $230.22 cash $126.81 #225458845 options_level=3
+Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+2026-09-02 09:55:43,848 INFO Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+Live micro done. open_options=0 lots=0
+2026-09-02 09:55:43,943 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=70 paper_keys=yes dry_run=False
+  alpaca positions=21
+  FLAG b805|S404|219de775 missing from Alpaca
+  FLAG b804|S404|c5d24808 missing from Alpaca
+  FLAG b789|S398|d2011a2f missing from Alpaca
+  FLAG b788|S398|340df09e missing from Alpaca
+  FLAG b781|S397|206cc1b1 missing from Alpaca
+  FLAG b780|S397|8763abf3 missing from Alpaca
+  FLAG b301|S353|d09e2e01 missing from Alpaca
+  FLAG b300|S353|53b2ae21 missing from Alpaca
+  FLAG b284|S351|fff2a0df missing from Alpaca
+  FLAG b1141|S163|2b128319 missing from Alpaca
+  FLAG b1140|S163|9494c377 missing from Alpaca
+  FLAG b1099|S167|a0af6cbb missing from Alpaca
+  FLAG b1098|S167|7acae978 missing from Alpaca
+  FLAG b1127|S168|eb7bd373 missing from Alpaca
+  FLAG b1126|S168|56986ceb missing from Alpaca
+  FLAG b1057|S165|aca5d4c9 missing from Alpaca
+  FLAG b1056|S165|cbb3cc2e missing from Alpaca
+  FLAG b797|S399|ed5d91ab missing from Alpaca
+  FLAG b796|S399|b042d07b missing from Alpaca
+  FLAG b198|S218|fa5cda04 missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1164:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1164
+PROBE OK: paper account status=AccountStatus.ACTIVE equity=$998,929.37
+  buying_power=$3,976,769.48 cash=$997,192.37
+  open option orders: 14
+    SMCI260904C00038000 OrderSide.SELL qty=3 status=OrderStatus.NEW limit=None
+    NVDA260904C00227500 OrderSide.SELL qty=4 status=OrderStatus.NEW limit=None
+    NVDA260909C00232500 OrderSide.SELL qty=3 status=OrderStatus.NEW limit=None
+    MARA260918C00011000 OrderSide.SELL qty=2 status=OrderStatus.NEW limit=None
+    MARA260925C00011500 OrderSide.SELL qty=2 status=OrderStatus.NEW limit=None
+  open option positions: 21
+    AMD260902C00477500 qty=-1 mkt=$-4.00
+    AMD260904C00502500 qty=1 mkt=$10.00
+    BA260904C00212500 qty=2 mkt=$122.00
+    DKNG260918C00026000 qty=2 mkt=$90.00
+    MARA260904C00010000 qty=2 mkt=$68.00
+PROBE: check-only pass (use --smoke-entry to place a test order)
+=== options_morning_bot (PAPER) 2026-09-02T09:55:46.556430-04:00 ===
+
+[Run context]
+Paper auth OK — equity $998922.37, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
+Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+  EXIT [b798|lab0798_s399_w4_1120_1135_r1|S399] stop_loss (-71.4%) SELL failed AMD260904C00502500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+2026-09-02 09:55:52,314 INFO   EXIT [b268|lab0268_s403_w4_1120_1135_r1|S403] take_profit (+77.3%) SELL 1 WFC260904C00088000 @<= 0.87
+Protective stops: placed=2 upgraded=0 already=15 failed=2 (market-first)
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S204, S205, S206, S208, S209, S210, S211, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S406, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 113/117 symbols
+```
+
+---

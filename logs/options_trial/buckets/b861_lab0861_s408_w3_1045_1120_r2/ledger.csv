@@ -28,4 +28,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10 15:15:23.485856+00:00,entry,861,lab0861_s408_w3_1045_1120_r2,S408,fa200f55afe1,AAPL,AAPL260814C00320000,1,0.34,0.34,34.0,,,,-0.01,,0.5,-0.5,,,2e9ebcb8-c75a-415c-af5b-b8b12ebc93bb
 2026-08-10 15:15:23.485856+00:00,entry,861,lab0861_s408_w3_1045_1120_r2,S408,8f787eebeaac,AAPL,AAPL260814C00320000,1,0.34,0.34,34.0,,,,-0.01,,0.5,-0.5,,,2e9ebcb8-c75a-415c-af5b-b8b12ebc93bb
 2026-09-01 15:01:55.871381+00:00,entry,861,lab0861_s408_w3_1045_1120_r2,S408,15841d91941a,NVDA,NVDA260904C00237500,1,0.06,0.05,5.0,,,,-0.01,,0.75,-0.75,0.15384615384615397,RB gap -1.8% reclaim,1d8273fa-81bd-47e9-9833-4ae6e0d7af10
-2026-09-02T13:40:21Z,reconcile,861,lab0861_s408_w3_1045_1120_r2,S408,15841d91941a,NVDA,NVDA260904C00237500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-02T13:34:59Z,reconcile,861,lab0861_s408_w3_1045_1120_r2,S408,15841d91941a,NVDA,NVDA260904C00237500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
