@@ -12320,3 +12320,6 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-02T16:16:07Z,reconcile,916,lab0916_s412_w3_1045_1120_r1,S412,44f121d84073,RBLX,RBLX260904C00043000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-02 16:12:03.560765+00:00,exit,905,lab0905_s411_w4_1120_1135_r2,S411,ae6ac8d90fe6,RBLX,RBLX260904C00041500,1,,0.22,45.0,-51.11,-23.0,stop_loss (-51.1%),,-0.01,0.5,-0.5,,,a6050209-2493-4164-a29b-005564f65d3d
 2026-09-02 16:12:01.072961+00:00,exit,777,lab0777_s397_w1_0928_1005_r2,S397,5ff67af05f9a,PANW,PANW260904C00375000,1,,0.07,17.0,-58.82,-10.0,stop_loss (-58.8%),,-0.01,0.5,-0.5,,,4b749c52-030f-4b49-86f5-ba9b9cfdbdff
+2026-09-02T16:21:06Z,reconcile,776,lab0776_s397_w1_0928_1005_r1,S397,c2ec8635ebc6,PANW,PANW260904C00375000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-02 16:16:15.793023+00:00,exit,904,lab0904_s411_w4_1120_1135_r1,S411,078bfee813e5,RBLX,RBLX260904C00041500,1,,0.21,45.0,-53.33,-24.0,stop_loss (-53.3%),,-0.01,0.5,-0.5,,,c95eb6cb-40ef-4baf-affe-64685e8881fd
+2026-09-02 16:17:38.198293+00:00,exit,197,lab0197_s218_w3_1045_1120_r2,S218,cdc112996c69,UPST,UPST260904C00029000,1,,0.18,35.0,-48.57,-17.0,stop_loss (-51.4%),,-0.01,0.5,-0.5,,,9857c402-0859-4b66-8e97-29f773f51e02
