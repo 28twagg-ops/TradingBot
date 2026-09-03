@@ -14,3 +14,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-13 14:02:38.592711+00:00,entry,345,lab0345_s359_w1_0928_1005_r2,S359,e023bfd275a1,MARA,MARA260814C00010000,1,0.11,0.1,10.0,,,,-0.01,,0.75,-0.75,0.0869565217391304,RB gap -1.6% reclaim,e8eb561d-a4df-42b2-9ef6-a68ad427b6a1
 2026-08-13T14:50:49Z,reconcile,345,lab0345_s359_w1_0928_1005_r2,S359,e023bfd275a1,MARA,MARA260814C00010000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-02 14:02:58.087973+00:00,entry,345,lab0345_s359_w1_0928_1005_r2,S359,eacfd86e5a52,MARA,MARA260904C00011000,1,0.08,0.07,7.0,,,,-0.01,,0.75,-0.75,0.11764705882352937,RB gap -2.2% reclaim,74e35325-59da-4442-bf20-8f25a4210e81
+2026-09-03 13:40:26.475634+00:00,exit,345,lab0345_s359_w1_0928_1005_r2,S359,eacfd86e5a52,MARA,MARA260904C00011000,1,,0.15,7.0,114.29,8.0,reconcile_fill,,-0.01,0.5,-0.5,,,5d7a7ae6-e69b-47f8-9776-4593b19b1c07
