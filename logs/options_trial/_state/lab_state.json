@@ -202,26 +202,6 @@
       "entry_order_id": "c0076bb9-4437-4541-82de-447c9c821d1e"
     },
     {
-      "lot_id": "cfc472522fef",
-      "bucket_id": 833,
-      "profile_name": "lab0833_s406_w3_1045_1120_r2",
-      "strategy_id": "S406",
-      "occ_symbol": "MARA260904C00011000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 7.000000000000001,
-      "entry_price": 0.07,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-02T14:47:50.008494+00:00",
-      "entry_order_id": "cd5ccbc2-44d9-45d6-91f9-560684b9422c"
-    },
-    {
       "lot_id": "afe154430e27",
       "bucket_id": 832,
       "profile_name": "lab0832_s406_w3_1045_1120_r1",
@@ -480,26 +460,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-02T15:22:18.880446+00:00",
       "entry_order_id": "a8fdece4-2ca2-4851-873b-035d252fa94e"
-    },
-    {
-      "lot_id": "61b2836f0d7c",
-      "bucket_id": 410,
-      "profile_name": "lab0410_s364_w4_1120_1135_r1",
-      "strategy_id": "S364",
-      "occ_symbol": "MARA260911C00010500",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 36.0,
-      "entry_price": 0.36,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-02T15:22:18.955746+00:00",
-      "entry_order_id": "e86a171f-06f1-4401-9362-5fa11521a2dc"
     },
     {
       "lot_id": "0a48178a8d93",
@@ -1282,26 +1242,6 @@
       "entry_order_id": "403d1df0-6171-44d8-b9fd-3a9b40b34ad2"
     },
     {
-      "lot_id": "626aee22cbcc",
-      "bucket_id": 803,
-      "profile_name": "lab0803_s404_w2_1005_1045_r2",
-      "strategy_id": "S404",
-      "occ_symbol": "AVGO260904C00357500",
-      "underlying": "AVGO",
-      "qty": 1,
-      "entry_cost": 73.0,
-      "entry_price": 0.73,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-03T14:21:02.836011+00:00",
-      "entry_order_id": "dec1b8c2-ef23-46f1-af8b-fa1969efa840"
-    },
-    {
       "lot_id": "7ac388adb2e1",
       "bucket_id": 802,
       "profile_name": "lab0802_s404_w2_1005_1045_r1",
@@ -1708,24 +1648,24 @@
       "submitted": "2026-09-03T10:46:28"
     },
     {
-      "order_id": "1dddb842-a90d-49e2-ad73-bad8bfd3ffb3",
-      "lot_id": "61b2836f0d7c",
-      "bucket_id": 410,
-      "strategy_id": "S364",
-      "occ_symbol": "MARA260911C00010500",
+      "order_id": "17c66f4f-2f07-436b-938f-616dd307ee98",
+      "lot_id": "a29c65ad7a0a",
+      "bucket_id": 1096,
+      "strategy_id": "S167",
+      "occ_symbol": "MARA260904C00010500",
       "qty": 1,
-      "reason": "take_profit (+257.3%)",
-      "submitted": "2026-09-03T11:06:12"
+      "reason": "take_profit (+515.0%)",
+      "submitted": "2026-09-03T11:11:10"
     },
     {
-      "order_id": "a1f2d94c-92f2-407b-bc8a-8f7ccbba0ec3",
-      "lot_id": "626aee22cbcc",
-      "bucket_id": 803,
-      "strategy_id": "S404",
-      "occ_symbol": "AVGO260904C00357500",
+      "order_id": "7b7924ae-0be1-4ea8-8ffd-66e1a0b187e4",
+      "lot_id": "0a48178a8d93",
+      "bucket_id": 1129,
+      "strategy_id": "S168",
+      "occ_symbol": "MARA260911C00010500",
       "qty": 1,
-      "reason": "take_profit (+54.8%)",
-      "submitted": "2026-09-03T11:06:22"
+      "reason": "take_profit (+249.0%)",
+      "submitted": "2026-09-03T11:11:12"
     }
   ],
   "bucket_open_premium": {
@@ -1739,7 +1679,6 @@
     "b1054": 19.0,
     "b901": 39.0,
     "b900": 39.0,
-    "b833": 7.000000000000001,
     "b832": 7.000000000000001,
     "b797": 7.000000000000001,
     "b796": 7.000000000000001,
@@ -1753,7 +1692,6 @@
     "b292": 7.000000000000001,
     "b439": 53.0,
     "b438": 53.0,
-    "b410": 36.0,
     "b1129": 36.0,
     "b1128": 36.0,
     "b801": 66.0,
@@ -1793,7 +1731,6 @@
     "b306": 59.0,
     "b1111": 59.0,
     "b1110": 59.0,
-    "b803": 73.0,
     "b802": 73.0,
     "b779": 73.0,
     "b778": 73.0,
@@ -2371,7 +2308,10 @@
     "3cba6985-c9a1-4d39-8df8-f5b3ffb38599",
     "9d4dcdcc-02ff-4807-8190-b5bfa22fa2c3",
     "8724b8fe-8063-40a6-9678-f579c730a80d",
-    "cb55fff8-f5b5-49d8-b589-8cdaa4847cc0"
+    "cb55fff8-f5b5-49d8-b589-8cdaa4847cc0",
+    "1dddb842-a90d-49e2-ad73-bad8bfd3ffb3",
+    "14a36a6c-aee5-45f7-afef-5585ffc37a39",
+    "a1f2d94c-92f2-407b-bc8a-8f7ccbba0ec3"
   ],
   "submitted_today": 69,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
