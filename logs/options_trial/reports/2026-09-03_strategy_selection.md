@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-03
 
-_Generated 2026-09-03T12:11:17.669382_
+_Generated 2026-09-03T12:16:10.444107_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-03T12:11:17.669382_
 
 ## Attribution health
 
-- Total exits: **2765**
+- Total exits: **2767**
 - Orphan exits (b0/orphan_reconcile): **348**
 - Orphan rate: **12.6%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -20,9 +20,9 @@ _Generated 2026-09-03T12:11:17.669382_
 
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 3 | 100.0 | +510.53 | +186.91 | +308.26 | +527.37 | 44 | 6 | 3 | $+251.00 | 66.7% | insufficient sample (<8 exits) |
+| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 4 | 100.0 | +318.26 | +112.00 | +121.00 | +525.26 | 44 | 6 | 4 | $+314.00 | 50.0% | insufficient sample (<8 exits) |
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 7 | 100.0 | +217.14 | +92.68 | +137.84 | +262.22 | 44 | 12 | 7 | $+479.00 | 85.7% | insufficient sample (<8 exits) |
-| S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 6 | 100.0 | +105.44 | +81.08 | +81.50 | +202.86 | 44 | 12 | 6 | $+291.00 | 83.3% | insufficient sample (<8 exits) |
+| S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 7 | 100.0 | +89.66 | +81.08 | +81.92 | +202.28 | 44 | 12 | 7 | $+343.00 | 71.4% | insufficient sample (<8 exits) |
 | S396 (GapDown_ITM2) | 3d | watch | 4 | 75.0 | +83.82 | -35.16 | +35.39 | +95.00 | 28 | 4 | 3 | $+120.00 | 100.0% | insufficient sample (<8 exits) |
 | S353 (GapDown_3DTE) | 3d | watch | 27 | 55.6 | +78.95 | -81.60 | -71.22 | +246.32 | 34 | 10 | 7 | $+213.00 | 33.3% | fat left tail (p10 < -45%) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 1 | 100.0 | +72.88 | +72.88 | +72.88 | +72.88 | 44 | 8 | 1 | $+43.00 | 100.0% | insufficient sample (<8 exits) |
@@ -136,19 +136,19 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S163 | 7d ATM | 6 | +105.44 | +81.08 | +81.50 | 12 | 6 |
+| S163 | 7d ATM | 7 | +89.66 | +81.08 | +81.92 | 12 | 7 |
 | S164 | 1d ATM | 9 | -50.00 | -88.89 | -77.78 | 6 | 3 |
 | S165 | 3d ATM | 246 | -38.18 | -63.37 | -54.29 | 6 | 1 |
 | S168 | 5d ATM | 7 | +217.14 | +92.68 | +137.84 | 12 | 7 |
 
 ### GapDown Strike comparison
 
-- Status: **INSUFFICIENT** | Best median: **S167** (+510.53%) | Best p10: **S167** (+186.91%)
+- Status: **INSUFFICIENT** | Best median: **S167** (+318.26%) | Best p10: **S167** (+112.00%)
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S165 | 3d ATM | 246 | -38.18 | -63.37 | -54.29 | 6 | 1 |
-| S167 | 3d 1-OTM | 3 | +510.53 | +186.91 | +308.26 | 6 | 3 |
+| S167 | 3d 1-OTM | 4 | +318.26 | +112.00 | +121.00 | 6 | 4 |
 
 ### New Pattern Strategies — GapDown signal independent
 
@@ -224,11 +224,11 @@ _Pipeline evaluation as of 2026-09-03. Auto-kill thresholds: median<-25% at n>=1
 
 | Strategy | Signal | n | Median% | WR% | Status | Days |
 |----------|--------|---|---------|-----|--------|------|
-| S163 | A1 GapDown ATM call EO | 6 | +105.44% | 100% | WATCH | 44 |
+| S163 | A1 GapDown ATM call EO | 7 | +89.66% | 100% | WATCH | 44 |
 | S164 | GapDown ATM 1-DTE — P2 | 9 | -50.00% | 22% | WATCH | 44 |
 | S165 | GapDown long call 3 DT | 246 | -38.18% | 30% | INSUFFICIENT | 59 |
 | S166 | GapDown strong call | 1 | +72.88% | 100% | WATCH | 44 |
-| S167 | GapDown long call 3 DT | 3 | +510.53% | 100% | WATCH | 44 |
+| S167 | GapDown long call 3 DT | 4 | +318.26% | 100% | WATCH | 44 |
 | S168 | GapDown ATM 5-DTE — P2 | 7 | +217.14% | 100% | WATCH | 44 |
 | S169 | BB Squeeze Breakout ca | 0 | — | — | NEW | 0 |
 | S170 | Golden Pocket call 3 D | 0 | — | — | NEW | 0 |
