@@ -12460,3 +12460,7 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-03 14:26:16.921975+00:00,exit,315,lab0315_s355_w2_1005_1045_r2,S355,d16584e4679d,MARA,MARA260911C00010500,1,,1.04,35.0,197.14,69.0,take_profit (+185.3%),,-0.01,0.5,-0.5,,,eaaf5959-0c64-4ea1-b917-e0f9920e7b6a
 2026-09-03 14:31:11.588670+00:00,exit,795,lab0795_s399_w2_1005_1045_r2,S399,20905d693b4c,MARA,MARA260904C00011000,1,,0.54,7.0,671.43,47.0,take_profit (+700.0%),,-0.01,0.5,-0.5,,,37819507-e506-4477-ad0d-a0d95bb7b7e3
 2026-09-03 14:31:06.688223+00:00,exit,314,lab0314_s355_w2_1005_1045_r1,S355,5f59ae9cc7a8,MARA,MARA260911C00010500,1,,1.13,35.0,222.86,78.0,take_profit (+213.0%),,-0.01,0.5,-0.5,,,35ae1d92-ba1d-44d9-b0be-c777a25469d5
+2026-09-03T14:41:09Z,reconcile,83,lab0083_s210_w2_1005_1045_r2,S210,fbaafbaab1a1,META,META260904C00645000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-03T14:41:09Z,reconcile,82,lab0082_s210_w2_1005_1045_r1,S210,0bda9c51399e,META,META260904C00645000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-03 14:36:24.862219+00:00,exit,794,lab0794_s399_w2_1005_1045_r1,S399,ebcbd684c59e,MARA,MARA260904C00011000,1,,0.51,7.0,628.57,44.0,take_profit (+657.1%),,-0.01,0.5,-0.5,,,6466c953-af12-4a42-b4fb-17cc711005c9
+2026-09-03 14:36:24.067897+00:00,exit,1139,lab1139_s163_w2_1005_1045_r2,S163,25cfa9aee460,MARA,MARA260911C00010500,1,,1.07,35.0,205.71,72.0,take_profit (+196.4%),,-0.01,0.5,-0.5,,,bb630952-147d-4a8e-9325-7f5eb90d4280
