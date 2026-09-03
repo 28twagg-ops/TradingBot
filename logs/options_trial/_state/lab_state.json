@@ -2102,46 +2102,6 @@
       "entry_order_id": "fcae1a58-ab56-4e0d-8dc7-329cfa46727b"
     },
     {
-      "lot_id": "2ed268dbcb11",
-      "bucket_id": 241,
-      "profile_name": "lab0241_s401_w4_1120_1135_r2",
-      "strategy_id": "S401",
-      "occ_symbol": "ARM260904C00255000",
-      "underlying": "ARM",
-      "qty": 1,
-      "entry_cost": 32.0,
-      "entry_price": 0.32,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-02T15:22:18.767436+00:00",
-      "entry_order_id": "1a305392-6638-48f0-a2c2-dd59eb5ecfa1"
-    },
-    {
-      "lot_id": "588fbdd93762",
-      "bucket_id": 240,
-      "profile_name": "lab0240_s401_w4_1120_1135_r1",
-      "strategy_id": "S401",
-      "occ_symbol": "ARM260904C00255000",
-      "underlying": "ARM",
-      "qty": 1,
-      "entry_cost": 32.0,
-      "entry_price": 0.32,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-02T15:22:18.805220+00:00",
-      "entry_order_id": "c98edec1-828e-451e-b14d-8897c52f21eb"
-    },
-    {
       "lot_id": "7f5217d01964",
       "bucket_id": 439,
       "profile_name": "lab0439_s366_w4_1120_1135_r2",
@@ -2363,7 +2323,88 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "51d76d28-8494-402c-8837-2c42fd72a4e8",
+      "lot_id": "bc51d8374aac",
+      "bucket_id": 913,
+      "strategy_id": "S412",
+      "occ_symbol": "MARA260904C00010500",
+      "qty": 1,
+      "reason": "take_profit (+81.8%)",
+      "submitted": "2026-09-03T09:34:47"
+    },
+    {
+      "order_id": "c35fe800-371b-4405-b50e-3aa033f499a0",
+      "lot_id": "792435891e33",
+      "bucket_id": 239,
+      "strategy_id": "S401",
+      "occ_symbol": "NVDA260904C00227500",
+      "qty": 1,
+      "reason": "take_profit (+471.4%)",
+      "submitted": "2026-09-03T09:34:49"
+    },
+    {
+      "order_id": "e270f3c1-f604-441c-9aff-96408d0a6ca5",
+      "lot_id": "8539e1f8ede3",
+      "bucket_id": 199,
+      "strategy_id": "S218",
+      "occ_symbol": "AFRM260904C00078000",
+      "qty": 1,
+      "reason": "stop_loss (-72.0%)",
+      "submitted": "2026-09-03T09:34:49"
+    },
+    {
+      "order_id": "10f146e4-262d-4adf-9909-58f1aa8f7350",
+      "lot_id": "c9912ae4210b",
+      "bucket_id": 798,
+      "strategy_id": "S399",
+      "occ_symbol": "AMD260904C00502500",
+      "qty": 1,
+      "reason": "stop_loss (-88.6%)",
+      "submitted": "2026-09-03T09:34:50"
+    },
+    {
+      "order_id": "27eb0495-d505-418d-9525-c3ca29652036",
+      "lot_id": "838c5c05bf85",
+      "bucket_id": 407,
+      "strategy_id": "S364",
+      "occ_symbol": "MARA260911C00010500",
+      "qty": 1,
+      "reason": "take_profit (+57.9%)",
+      "submitted": "2026-09-03T09:34:51"
+    },
+    {
+      "order_id": "4983488a-c06f-4e94-93e2-837170976b06",
+      "lot_id": "659349677342",
+      "bucket_id": 425,
+      "strategy_id": "S365",
+      "occ_symbol": "MSFT260918C00545000",
+      "qty": 1,
+      "reason": "take_profit (+62.3%)",
+      "submitted": "2026-09-03T09:34:52"
+    },
+    {
+      "order_id": "50a96f7f-10d1-43de-8e68-49bcdd708fde",
+      "lot_id": "d52dcbe9e665",
+      "bucket_id": 362,
+      "strategy_id": "S361",
+      "occ_symbol": "MARA260904C00011000",
+      "qty": 1,
+      "reason": "take_profit (+85.7%)",
+      "submitted": "2026-09-03T09:34:53"
+    },
+    {
+      "order_id": "9e2fba3b-807e-4577-b58e-2bc25b2389a9",
+      "lot_id": "59dd91d2f733",
+      "bucket_id": 194,
+      "strategy_id": "S218",
+      "occ_symbol": "GOOGL260904C00347500",
+      "qty": 1,
+      "reason": "take_profit (+119.1%)",
+      "submitted": "2026-09-03T09:34:55"
+    }
+  ],
   "bucket_open_premium": {
     "b437": 61.0,
     "b436": 61.0,
@@ -2470,8 +2511,6 @@
     "b434": 51.0,
     "b331": 51.0,
     "b330": 51.0,
-    "b241": 32.0,
-    "b240": 32.0,
     "b439": 53.0,
     "b438": 53.0,
     "b411": 36.0,
