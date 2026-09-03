@@ -1880,8 +1880,8 @@
   {
     "bucket_id": 313,
     "profile": "lab0313_s355_w1_0928_1005_r2",
-    "open_premium": 58.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 314,
@@ -4664,8 +4664,8 @@
   {
     "bucket_id": 777,
     "profile": "lab0777_s397_w1_0928_1005_r2",
-    "open_premium": 66.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 778,
@@ -4712,8 +4712,8 @@
   {
     "bucket_id": 785,
     "profile": "lab0785_s398_w1_0928_1005_r2",
-    "open_premium": 50.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 786,
@@ -6734,8 +6734,8 @@
   {
     "bucket_id": 1122,
     "profile": "lab1122_s168_w1_0928_1005_r1",
-    "open_premium": 45.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 1123,
