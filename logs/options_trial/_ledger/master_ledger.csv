@@ -12573,3 +12573,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-03T16:26:19Z,reconcile,86,lab0086_s210_w4_1120_1135_r1,S210,bf0ce69274a1,META,META260904C00645000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-03 16:21:20.440221+00:00,exit,1150,lab1150_s164_w1_0928_1005_r1,S164,2be7a280d41e,AVGO,AVGO260904C00362500,1,,1.28,50.0,156.0,78.0,take_profit (+171.6%),,-0.01,0.5,-0.5,,,a2cbf8b7-c6ea-449f-aecc-fc8f19bc6d04
 2026-09-03 16:21:29.988483+00:00,exit,309,lab0309_s354_w3_1045_1120_r2,S354,5d4b152040e2,AVGO,AVGO260909C00380000,1,,0.68,37.0,83.78,31.0,take_profit (+75.7%),,-0.01,0.5,-0.5,,,c0a17913-daf0-4cda-8cf5-8aeebe8a1b91
+2026-09-03 16:26:26.900173+00:00,exit,1053,lab1053_s165_w1_0928_1005_r2,S165,23605fdc8330,AVGO,AVGO260904C00362500,1,,1.21,50.0,142.0,71.0,take_profit (+145.3%),,-0.01,0.5,-0.5,,,5a85d02d-a26a-4d0b-974f-1b9cf2994b53
+2026-09-03 16:27:47.334530+00:00,exit,308,lab0308_s354_w3_1045_1120_r1,S354,23668c50d296,AVGO,AVGO260909C00380000,1,,0.63,37.0,70.27,26.0,take_profit (+64.9%),,-0.01,0.5,-0.5,,,429f0af9-e102-46c2-a01f-d837325fa6c4

@@ -91,13 +91,13 @@ S174,RubberBand long call EOD,RubberBand (dropped),drop,non-positive median retu
 S173,MomReversal long call,MomRev,drop,non-positive median return,1625,415,154,261,15.19,-31.51,-77.18,-62.95,101.9,62.64,8,59,0,0,12,27.5
 S355,GapDown_7DTE,7d,drop,non-positive median return,105,57,27,30,23.08,-37.14,-70.21,-62.5,190.0,489.0,9,34,9,8,8,29.8
 S211,MA_Cross_21_50,3d ATM MA cross 21/50,drop,non-positive median return,124,43,12,31,29.37,-38.1,-80.62,-55.6,102.82,-207.0,9,38,4,2,10,34.9
-S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1434,246,74,172,-3.85,-38.18,-63.37,-54.29,81.82,-1728.78,8,59,6,1,13,26.0
+S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1434,247,75,172,-3.26,-38.18,-63.34,-54.03,82.6,-1657.78,8,59,6,2,13,26.3
 S405,GapDown_OTM3,3d,drop,manually paused — excluded from new entries & reflected P&L,115,56,19,37,-8.5,-42.86,-83.93,-65.2,103.47,-118.0,8,34,0,0,8,26.8
 S359,RubberBand_0DTE,0d,drop,non-positive median return,66,27,8,19,54.98,-44.44,-71.43,-69.4,185.71,-176.0,4,31,4,4,5,37.0
 S207,GapDown_AtSupport,3d ATM gap-support,drop,manually paused — excluded from new entries & reflected P&L,62,37,2,35,-38.6,-47.06,-63.64,-55.71,-6.06,-822.0,2,38,0,0,3,43.2
 S407,RubberBand_ITM2,3d,drop,manually paused — excluded from new entries & reflected P&L,96,38,11,27,29.82,-47.73,-83.88,-61.54,266.42,33.0,7,34,0,0,7,26.3
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,drop,non-positive median return,112,47,16,31,31.91,-50.0,-82.0,-60.0,147.33,237.0,10,38,14,7,4,63.8
-S354,GapDown_5DTE,5d,drop,non-positive median return,89,50,20,30,6.74,-51.19,-92.16,-76.23,137.87,194.0,7,34,6,5,7,28.0
+S354,GapDown_5DTE,5d,drop,non-positive median return,89,51,21,30,7.98,-50.77,-92.16,-75.99,137.78,220.0,7,34,6,6,7,27.5
 S351,GapDown_1DTE,1d,drop,non-positive median return,154,53,13,40,8.2,-52.94,-80.44,-69.09,192.71,-105.0,10,34,6,3,8,24.5
 S216,RSI_Oversold_Cross,3d ATM RSI x30,drop,non-positive median return,120,38,8,30,4.62,-53.98,-82.47,-74.25,121.64,-517.0,5,38,6,3,7,42.1
 S203,GapUp_Fade,3d ATM gap-up fade (put),drop,manually paused — excluded from new entries & reflected P&L,112,40,4,36,-45.27,-55.91,-78.77,-67.43,-3.1,-797.0,8,38,2,1,8,35.0
