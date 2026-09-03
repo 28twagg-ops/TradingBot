@@ -7,12 +7,12 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 
 | Slice | n | Win% | Med% | Avg% | Realized $ |
 |---|---:|---:|---:|---:|---:|
-| ALL | 2769 | 39.0 | -37.1 | +24.6 | $+5,624 |
-| CLEAN (perfect running) | 997 | 49.2 | -7.7 | +46.4 | $+14,759 |
+| ALL | 2771 | 39.0 | -37.1 | +24.6 | $+5,733 |
+| CLEAN (perfect running) | 999 | 49.3 | -7.7 | +46.6 | $+14,868 |
 | TAINTED (errors/outages) | 1772 | 33.2 | -39.0 | +12.3 | $-9,135 |
-| CLEAN since 2026-08-03 | 681 | 44.9 | -46.7 | +51.2 | $+2,460 |
-| KEEP-only (CLEAN keepers) | 552 | 63.6 | +50.9 | +74.5 | $+10,079 |
-| KEEP-only since 2026-08-03 | 344 | 60.2 | +53.4 | +91.6 | $+4,822 |
+| CLEAN since 2026-08-03 | 683 | 45.1 | -46.7 | +51.4 | $+2,569 |
+| KEEP-only (CLEAN keepers) | 553 | 63.7 | +51.0 | +74.5 | $+10,110 |
+| KEEP-only since 2026-08-03 | 345 | 60.3 | +53.6 | +91.5 | $+4,853 |
 
 ## Known outage / degraded days
 
@@ -48,7 +48,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | 2026-08-31 | BUGGY | 1 | 1 | 0 | -71.8 |
 | 2026-09-01 | BUGGY | 13 | 2 | 46 | -25.0 |
 | 2026-09-02 | BUGGY | 41 | 2 | 56 | +50.0 |
-| 2026-09-03 | BUGGY | 131 | 5 | 95 | +115.8 |
+| 2026-09-03 | BUGGY | 133 | 5 | 96 | +115.8 |
 
 ## CLEAN strategy kill list (n>=10, med<=-20%)
 
@@ -67,6 +67,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | S351 | 17 | 17.6 | -50.0 | +20.4 | $+42 |
 | S411 | 12 | 33.3 | -50.0 | -21.3 | $-163 |
 | S365 | 10 | 30.0 | -49.6 | -21.2 | $-156 |
+| S164 | 10 | 40.0 | -49.0 | +98.5 | $+268 |
 | S211 | 14 | 35.7 | -45.8 | -14.0 | $-35 |
 | S408 | 18 | 38.9 | -43.5 | +35.0 | $+54 |
 
@@ -85,6 +86,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | S398 | 20 | 60.0 | +57.5 | +60.1 | $+498 |
 | S363 | 12 | 58.3 | +56.8 | +15.4 | $-24 |
 | S357 | 10 | 80.0 | +55.0 | +43.3 | $+218 |
+| S354 | 21 | 52.4 | +54.2 | +27.2 | $+247 |
 | S399 | 17 | 58.8 | +53.3 | +195.6 | $+218 |
 | S364 | 21 | 61.9 | +53.1 | +30.3 | $+112 |
 | S173 | 105 | 61.9 | +51.6 | +43.1 | $+2,562 |
@@ -96,7 +98,6 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | S174 | 54 | 68.5 | +30.1 | +5.5 | $+325 |
 | S355 | 32 | 50.0 | +6.4 | +43.4 | $+460 |
 | S359 | 12 | 50.0 | +3.9 | +155.8 | $+4 |
-| S354 | 20 | 50.0 | +2.1 | +24.3 | $+216 |
 
 ## Notes
 

@@ -12568,3 +12568,8 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-03 16:11:13.321913+00:00,exit,1136,lab1136_s163_w1_0928_1005_r1,S163,7a400c776206,AVGO,AVGO260909C00372500,1,,1.1,58.0,89.66,52.0,take_profit (+89.7%),,-0.01,0.5,-0.5,,,6a467fab-9855-4e69-b512-50a53dcba1d7
 2026-09-03 16:16:13.115422+00:00,exit,1151,lab1151_s164_w1_0928_1005_r2,S164,3a76ec1ec7aa,AVGO,AVGO260904C00362500,1,,1.12,50.0,124.0,62.0,take_profit (+125.0%),,-0.01,0.5,-0.5,,,742fbcbd-f96c-448d-9f56-e865bff789ae
 2026-09-03 16:16:05.845610+00:00,exit,1109,lab1109_s166_w1_0928_1005_r2,S166,13e6701b6208,AVGO,AVGO260909C00372500,1,,1.03,58.0,77.59,45.0,take_profit (+77.6%),,-0.01,0.5,-0.5,,,3d30c297-e48f-45a9-87b6-78af9b875709
+2026-09-03T16:26:19Z,reconcile,1108,lab1108_s166_w1_0928_1005_r1,S166,7d8cd83bd0ac,AVGO,AVGO260909C00372500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-03T16:26:19Z,reconcile,87,lab0087_s210_w4_1120_1135_r2,S210,8730c504cc1d,META,META260904C00645000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-03T16:26:19Z,reconcile,86,lab0086_s210_w4_1120_1135_r1,S210,bf0ce69274a1,META,META260904C00645000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-03 16:21:20.440221+00:00,exit,1150,lab1150_s164_w1_0928_1005_r1,S164,2be7a280d41e,AVGO,AVGO260904C00362500,1,,1.28,50.0,156.0,78.0,take_profit (+171.6%),,-0.01,0.5,-0.5,,,a2cbf8b7-c6ea-449f-aecc-fc8f19bc6d04
+2026-09-03 16:21:29.988483+00:00,exit,309,lab0309_s354_w3_1045_1120_r2,S354,5d4b152040e2,AVGO,AVGO260909C00380000,1,,0.68,37.0,83.78,31.0,take_profit (+75.7%),,-0.01,0.5,-0.5,,,c0a17913-daf0-4cda-8cf5-8aeebe8a1b91
