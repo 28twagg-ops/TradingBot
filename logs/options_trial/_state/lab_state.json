@@ -282,26 +282,6 @@
       "entry_order_id": "657f939f-307b-466c-83e0-e03374d73f7d"
     },
     {
-      "lot_id": "af47c5a2e70f",
-      "bucket_id": 182,
-      "profile_name": "lab0182_s217_w3_1045_1120_r1",
-      "strategy_id": "S217",
-      "occ_symbol": "BA260904C00212500",
-      "underlying": "BA",
-      "qty": 1,
-      "entry_cost": 20.0,
-      "entry_price": 0.2,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-03T14:52:36.480043+00:00",
-      "entry_order_id": "16f801b6-dcb5-40bc-995f-972580a79e28"
-    },
-    {
       "lot_id": "32be36ecc809",
       "bucket_id": 99,
       "profile_name": "lab0099_s211_w3_1045_1120_r2",
@@ -423,16 +403,6 @@
       "qty": 1,
       "reason": "stop_loss (-66.7%)",
       "submitted": "2026-09-03T12:11:14"
-    },
-    {
-      "order_id": "f5d8c8db-e3e6-40d7-ad6c-f38b5178d181",
-      "lot_id": "af47c5a2e70f",
-      "bucket_id": 182,
-      "strategy_id": "S217",
-      "occ_symbol": "BA260904C00212500",
-      "qty": 1,
-      "reason": "take_profit (+100.0%)",
-      "submitted": "2026-09-03T13:26:11"
     }
   ],
   "bucket_open_premium": {
@@ -450,7 +420,6 @@
     "b178": 63.0,
     "b85": 25.0,
     "b84": 25.0,
-    "b182": 20.0,
     "b99": 3.0,
     "b1112": 37.0,
     "b1127": 37.0,
