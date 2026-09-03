@@ -24,3 +24,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-10 14:47:37.050024+00:00,entry,367,lab0367_s361_w3_1045_1120_r2,S361,aa3b815303aa,AAPL,AAPL260812C00315000,1,0.41,0.41,41.0,,,,-0.01,,0.5,-0.5,,,e6a78aa6-ac08-4bb5-a4ab-d3dc1551d698
 2026-08-12T21:09:09Z,reconcile,367,lab0367_s361_w3_1045_1120_r2,S361,aa3b815303aa,AAPL,AAPL260812C00315000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-02 14:47:04.859605+00:00,entry,367,lab0367_s361_w3_1045_1120_r2,S361,aba0c43c13c0,MARA,MARA260904C00011000,1,0.08,0.07,7.0,,,,-0.01,,0.75,-0.75,0.11764705882352937,RB gap -2.2% reclaim,f53125a7-7245-4685-839a-d354e19ab37d
+2026-09-03 15:52:15.660227+00:00,exit,367,lab0367_s361_w3_1045_1120_r2,S361,aba0c43c13c0,MARA,MARA260904C00011000,1,,0.79,7.0,1028.57,72.0,take_profit (+1014.3%),,-0.01,0.5,-0.5,,,2195d5ae-3ded-4596-87e3-87d8eb90d4fb
