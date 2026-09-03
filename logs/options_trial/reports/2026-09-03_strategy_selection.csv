@@ -89,10 +89,10 @@ S352,GapDown_2DTE,2d,drop,non-positive median return,118,37,18,19,29.68,-17.65,-
 S174,RubberBand long call EOD,RubberBand (dropped),drop,non-positive median return,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,59,0,0,6,50.4
 S173,MomReversal long call,MomRev,drop,non-positive median return,1625,415,154,261,15.19,-31.51,-77.18,-62.95,101.9,62.64,8,59,0,0,12,27.5
 S211,MA_Cross_21_50,3d ATM MA cross 21/50,drop,non-positive median return,122,41,12,29,34.05,-31.58,-81.13,-51.47,107.69,-203.0,8,38,2,0,9,36.6
-S355,GapDown_7DTE,7d,drop,non-positive median return,105,53,23,30,13.53,-37.5,-71.68,-63.41,137.58,255.0,9,34,9,4,7,28.3
+S355,GapDown_7DTE,7d,drop,non-positive median return,105,54,24,30,17.4,-37.32,-71.31,-63.18,172.84,333.0,9,34,9,5,7,29.6
 S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1434,245,73,172,-6.01,-38.18,-63.39,-54.55,81.82,-1828.78,7,59,6,0,12,26.1
 S405,GapDown_OTM3,3d,drop,manually paused — excluded from new entries & reflected P&L,115,56,19,37,-8.5,-42.86,-83.93,-65.2,103.47,-118.0,8,34,0,0,8,26.8
-S399,GapDown_OTM1,3d,drop,non-positive median return,141,45,20,25,16.81,-46.67,-84.36,-66.67,137.6,-79.0,8,34,11,2,8,35.6
+S399,GapDown_OTM1,3d,drop,non-positive median return,141,46,21,25,31.04,-46.41,-84.09,-66.67,145.0,-32.0,8,34,11,3,8,34.8
 S359,RubberBand_0DTE,0d,drop,non-positive median return,66,25,6,19,-13.76,-46.67,-71.43,-70.37,131.43,-304.0,4,31,4,2,5,40.0
 S207,GapDown_AtSupport,3d ATM gap-support,drop,manually paused — excluded from new entries & reflected P&L,62,37,2,35,-38.6,-47.06,-63.64,-55.71,-6.06,-822.0,2,38,0,0,3,43.2
 S407,RubberBand_ITM2,3d,drop,manually paused — excluded from new entries & reflected P&L,96,38,11,27,29.82,-47.73,-83.88,-61.54,266.42,33.0,7,34,0,0,7,26.3
