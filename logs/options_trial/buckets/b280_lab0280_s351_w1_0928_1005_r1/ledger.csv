@@ -26,3 +26,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-14 14:02:45.550065+00:00,entry,280,lab0280_s351_w1_0928_1005_r1,S351,e990d51a6e8d,MSTR,MSTR260814C00099000,1,0.07,0.06,6.0,,,,-0.01,,0.75,-0.75,0.13333333333333325,gap -2.2%,44306a1c-1894-464a-8cf0-e4f6a0269364
 2026-08-14T14:11:00Z,reconcile,280,lab0280_s351_w1_0928_1005_r1,S351,e990d51a6e8d,MSTR,MSTR260814C00099000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-03 14:05:25.083627+00:00,entry,280,lab0280_s351_w1_0928_1005_r1,S351,43565ca5d795,AVGO,AVGO260904C00362500,1,0.47,0.46,46.0,,,,-0.01,,0.75,-0.75,0.042553191489361625,gap -4.2%,a6eb280c-fc43-44a5-a0a7-0671eb013444
+2026-09-03T16:46:18Z,reconcile,280,lab0280_s351_w1_0928_1005_r1,S351,43565ca5d795,AVGO,AVGO260904C00362500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
