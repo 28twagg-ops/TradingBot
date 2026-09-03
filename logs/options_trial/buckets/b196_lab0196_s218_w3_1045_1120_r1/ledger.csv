@@ -20,3 +20,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-01 15:03:13.695447+00:00,entry,196,lab0196_s218_w3_1045_1120_r1,S218,5faa0e4b649d,GOOGL,GOOGL260904C00347500,1,0.61,0.61,61.0,,,,-0.01,,0.5,-0.5,0.13793103448275854,low=333.05 BB_lower=333.25 touch+green,c500a760-c9a0-442d-b974-b65889b9f83a
 2026-09-02T13:34:59Z,reconcile,196,lab0196_s218_w3_1045_1120_r1,S218,5faa0e4b649d,GOOGL,GOOGL260904C00347500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-02 14:47:16.731170+00:00,entry,196,lab0196_s218_w3_1045_1120_r1,S218,f4d3d209540f,UPST,UPST260904C00029000,1,0.36,0.35,35.0,,,,-0.01,,0.75,-0.75,0.14492753623188404,low=27.20 BB_lower=27.64 touch+green,3c981111-d740-4670-82e0-8856b5001b2a
+2026-09-03 14:11:07.992171+00:00,exit,196,lab0196_s218_w3_1045_1120_r1,S218,f4d3d209540f,UPST,UPST260904C00029000,1,,0.16,35.0,-54.29,-19.0,stop_loss (-54.3%),,-0.01,0.5,-0.5,,,7eea029d-45db-4950-bf2d-aa9bf26c1aef
