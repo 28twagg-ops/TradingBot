@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-09-03 14:03:26.783771+00:00,entry,1150,lab1150_s164_w1_0928_1005_r1,S164,2be7a280d41e,AVGO,AVGO260904C00362500,1,0.51,0.5,50.0,,,,-0.01,,0.75,-0.75,0.08000000000000007,gap -4.2%,e9b89a69-3390-4468-89f2-43f83e575158

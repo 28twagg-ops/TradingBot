@@ -6683,3 +6683,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-03 13:16:03,summary,bull,230.35,195.68,0,0,0,1,AMZN,both
 2026-09-03 13:20:59,summary,bull,230.33,195.68,0,0,0,1,AMZN,both
 2026-09-03 13:26:07,summary,bull,230.35,195.68,0,0,0,1,AMZN,both
+2026-09-03 14:02:14,exits,bull,230.32,161.14,0,0,0,2,AMZN|CNM,both
