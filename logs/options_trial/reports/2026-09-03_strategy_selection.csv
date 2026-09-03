@@ -1,6 +1,6 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
 S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,insufficient sample (<8 exits),94,2,2,0,521.06,521.06,512.63,515.79,529.48,198.0,1,44,6,2,1,100.0
-S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,insufficient sample (<8 exits),80,6,6,0,211.53,232.85,137.84,171.85,263.89,455.0,1,44,12,6,1,100.0
+S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,insufficient sample (<8 exits),80,7,7,0,188.93,217.14,92.68,137.84,262.22,479.0,1,44,12,7,2,85.7
 S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),95,5,5,0,139.2,128.12,81.08,81.08,203.43,243.0,1,44,12,5,1,100.0
 S396,GapDown_ITM2,3d,watch,insufficient sample (<8 exits),22,4,3,1,45.32,83.82,-35.16,35.39,95.0,120.0,2,28,4,3,1,100.0
 S166,GapDown strong call,3d ATM strong,watch,insufficient sample (<8 exits),44,1,1,0,72.88,72.88,72.88,72.88,72.88,43.0,1,44,8,1,1,100.0
@@ -8,7 +8,7 @@ S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),137,69,48,21,220.18,72.
 S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),109,26,21,5,46.51,59.72,-74.86,39.04,115.88,773.0,6,34,10,4,9,26.9
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),105,43,32,11,155.39,57.14,-59.71,-10.87,725.71,1359.0,7,34,10,8,6,30.2
 S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),46,23,19,4,43.5,57.14,-60.62,47.06,79.74,530.0,8,34,6,5,4,34.8
-S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),115,38,27,11,32.68,52.0,-91.67,-15.27,115.34,826.0,6,34,11,6,10,23.7
+S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),115,39,28,11,33.55,53.23,-91.67,-13.51,114.07,870.0,6,34,11,7,10,23.1
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),92,41,26,15,58.43,50.88,-66.1,-51.22,258.33,808.0,8,34,12,9,10,22.0
 S353,GapDown_3DTE,3d,watch,fat left tail (p10 < -45%),92,25,13,12,36.58,48.98,-82.61,-72.73,155.3,95.0,6,34,10,5,6,36.0
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),147,68,39,29,56.11,41.03,-71.43,-49.55,165.11,1130.0,12,38,14,8,11,36.8
