@@ -12448,3 +12448,13 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-03 14:22:26.449640+00:00,exit,263,lab0263_s403_w1_0928_1005_r2,S403,02a2ebabb2b7,QQQ,QQQ260904C00719000,1,,0.88,58.0,51.72,30.0,take_profit (+50.0%),,-0.01,0.5,-0.5,,,7384bdf9-bd8c-41fd-8d11-fcc2464c6c69
 2026-09-03 14:21:05.211988+00:00,exit,335,lab0335_s357_w4_1120_1135_r2,S357,d0ee7efdc2d2,MARA,MARA260925C00011500,1,,0.77,49.0,57.14,28.0,take_profit (+57.1%),,-0.01,0.5,-0.5,,,a4170449-81e4-46c8-bbdb-6bda954b6ebc
 2026-09-03 14:23:25.761879+00:00,exit,1126,lab1126_s168_w3_1045_1120_r1,S168,b78d1d49b9b0,MARA,MARA260911C00010500,1,,0.95,37.0,156.76,58.0,take_profit (+160.3%),,-0.01,0.5,-0.5,,,eb5fb1fe-c120-4d70-aac6-943568692594
+2026-09-03T14:31:03Z,reconcile,334,lab0334_s357_w4_1120_1135_r1,S357,c4bc66e97220,MARA,MARA260925C00011500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-03T14:31:03Z,reconcile,167,lab0167_s216_w2_1005_1045_r2,S216,3edbd6d853e9,IWM,IWM260904C00297000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-03T14:31:03Z,reconcile,166,lab0166_s216_w2_1005_1045_r1,S216,de03a8e655d7,IWM,IWM260904C00297000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-03T14:31:03Z,reconcile,262,lab0262_s403_w1_0928_1005_r1,S403,2f732bf77e92,QQQ,QQQ260904C00719000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-03T14:31:03Z,reconcile,80,lab0080_s210_w1_0928_1005_r1,S210,eb614ab91f11,META,META260904C00647500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-03 14:26:54.305279+00:00,exit,331,lab0331_s357_w2_1005_1045_r2,S357,a2482a5fc5a5,MARA,MARA260925C00011000,1,,1.09,51.0,113.73,58.0,take_profit (+107.8%),,-0.01,0.5,-0.5,,,64e6982c-0d0d-4535-bc77-7184ae080125
+2026-09-03 14:26:16.658318+00:00,exit,830,lab0830_s406_w2_1005_1045_r1,S406,654c6285a8cd,MARA,MARA260904C00011000,1,,0.49,7.0,600.0,42.0,take_profit (+571.4%),,-0.01,0.5,-0.5,,,99791180-43b4-4443-9f4b-050d5ede43a6
+2026-09-03 14:26:16.308437+00:00,exit,291,lab0291_s352_w2_1005_1045_r2,S352,85d1f829899f,MARA,MARA260904C00010500,1,,0.86,19.0,352.63,67.0,take_profit (+359.9%),,-0.01,0.5,-0.5,,,7000f381-83ad-4134-b450-a45272e1d58a
+2026-09-03 14:26:16.924488+00:00,exit,1143,lab1143_s163_w4_1120_1135_r2,S163,efe43edfa120,MARA,MARA260911C00011000,1,,0.73,32.0,128.12,41.0,take_profit (+121.9%),,-0.01,0.5,-0.5,,,7fae42d9-583e-4b96-b0ff-e4dc60a19288
+2026-09-03 14:26:16.921975+00:00,exit,315,lab0315_s355_w2_1005_1045_r2,S355,d16584e4679d,MARA,MARA260911C00010500,1,,1.04,35.0,197.14,69.0,take_profit (+185.3%),,-0.01,0.5,-0.5,,,eaaf5959-0c64-4ea1-b917-e0f9920e7b6a
