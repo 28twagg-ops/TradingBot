@@ -1560,6 +1560,56 @@
       "qty": 1,
       "reason": "take_profit (+536.4%)",
       "submitted": "2026-09-03T11:31:20"
+    },
+    {
+      "order_id": "bc50fec4-5076-49af-a185-b3bc51882351",
+      "lot_id": "c2b87fd10601",
+      "bucket_id": 801,
+      "strategy_id": "S404",
+      "occ_symbol": "AVGO260904C00360000",
+      "qty": 1,
+      "reason": "take_profit (+66.7%)",
+      "submitted": "2026-09-03T11:36:10"
+    },
+    {
+      "order_id": "314028ce-238f-44c1-a4f5-bf34791a75b8",
+      "lot_id": "04b74a07cce4",
+      "bucket_id": 1111,
+      "strategy_id": "S166",
+      "occ_symbol": "AVGO260909C00370000",
+      "qty": 1,
+      "reason": "take_profit (+67.8%)",
+      "submitted": "2026-09-03T11:36:11"
+    },
+    {
+      "order_id": "60ac4f41-5887-4006-b5a0-630d1e0f8ad2",
+      "lot_id": "43f4a3bac94d",
+      "bucket_id": 793,
+      "strategy_id": "S399",
+      "occ_symbol": "AVGO260904C00365000",
+      "qty": 1,
+      "reason": "take_profit (+63.6%)",
+      "submitted": "2026-09-03T11:36:12"
+    },
+    {
+      "order_id": "1d5af125-4e2e-4dea-9640-268e5b3c6f79",
+      "lot_id": "d8b4bd85c017",
+      "bucket_id": 380,
+      "strategy_id": "S362",
+      "occ_symbol": "MARA260904C00011000",
+      "qty": 1,
+      "reason": "take_profit (+971.4%)",
+      "submitted": "2026-09-03T11:36:15"
+    },
+    {
+      "order_id": "61a766fb-d7d3-4aa7-97fc-f9f7aa3d2ac1",
+      "lot_id": "cd1df9abd644",
+      "bucket_id": 268,
+      "strategy_id": "S403",
+      "occ_symbol": "QQQ260904C00723000",
+      "qty": 1,
+      "reason": "take_profit (+63.1%)",
+      "submitted": "2026-09-03T11:36:18"
     }
   ],
   "bucket_open_premium": {
