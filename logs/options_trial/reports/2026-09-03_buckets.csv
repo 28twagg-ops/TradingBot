@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,2,2026-08-21,True,13,100.0,20.8,20.8,20.8,20.8,13.6,AVGO,ORPHAN,take_profit (+53.4%),closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-08-21,False,,100.0,20.8,20.8,20.8,20.8,13.6,AVGO,ORPHAN,take_profit (+53.4%),closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -276,7 +276,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 274,lab0274_s403_w7_1500_1530_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 275,lab0275_s403_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 276,lab0276_s350_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-03,False,,,,,,,0,AVGO,S350,,entered_no_exit
-277,lab0277_s350_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-03,False,,,,,,,0,AVGO,S350,,entered_no_exit
+277,lab0277_s350_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-03,False,,100.0,114.0,114.0,114.0,114.0,57.0,AVGO,S350,take_profit (+114.9%),closed
 278,lab0278_s350_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-09-02,False,,100.0,500.0,500.0,500.0,500.0,95.0,MARA,S350,take_profit (+504.3%),closed
 279,lab0279_s350_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-09-02,False,,100.0,500.0,500.0,500.0,500.0,95.0,MARA,S350,take_profit (+509.6%),closed
 280,lab0280_s351_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-03,False,,,,,,,0,AVGO,S351,,entered_no_exit
@@ -304,7 +304,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 302,lab0302_s353_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-01,False,,,,,,,0,,,,idle
 303,lab0303_s353_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-01,False,,,,,,,0,,,,idle
 304,lab0304_s354_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-03,False,,,,,,,0,AVGO,S354,,entered_no_exit
-305,lab0305_s354_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-03,False,,,,,,,0,AVGO,S354,,entered_no_exit
+305,lab0305_s354_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-03,False,,100.0,77.59,77.59,77.59,77.59,45.0,AVGO,S354,take_profit (+77.6%),closed
 306,lab0306_s354_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-03,False,,100.0,66.1,66.1,66.1,66.1,39.0,AVGO,S354,take_profit (+66.1%),closed
 307,lab0307_s354_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-03,False,,100.0,54.24,54.24,54.24,54.24,32.0,AVGO,S354,take_profit (+50.8%),closed
 308,lab0308_s354_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-03,False,,,,,,,0,AVGO,S354,,entered_no_exit
@@ -365,7 +365,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 363,lab0363_s361_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-02,False,,,,,,,0,,,,idle
 364,lab0364_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-09-02,False,,100.0,900.0,900.0,900.0,900.0,63.0,MARA,S361,take_profit (+885.7%),closed
 365,lab0365_s361_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-09-02,False,,100.0,828.57,828.57,828.57,828.57,58.0,MARA,S361,take_profit (+828.6%),closed
-366,lab0366_s361_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-09-02,False,,,,,,,0,,,,open
+366,lab0366_s361_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-09-02,False,,100.0,1042.86,1042.86,1042.86,1042.86,73.0,MARA,S361,take_profit (+1028.6%),closed
 367,lab0367_s361_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-09-02,False,,100.0,1028.57,1028.57,1028.57,1028.57,72.0,MARA,S361,take_profit (+1014.3%),closed
 368,lab0368_s361_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-01,False,,,,,,,0,,,,idle
 369,lab0369_s361_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-01,False,,,,,,,0,,,,idle

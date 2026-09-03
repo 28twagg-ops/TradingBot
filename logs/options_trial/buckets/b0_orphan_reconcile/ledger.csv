@@ -467,3 +467,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-02 17:41:55.693282+00:00,exit,0,orphan_reconcile,ORPHAN,3669bec2a785,RBLX,RBLX260904C00042000,1,,0.21,39.0,-46.15,-18.0,stop_loss (-48.7%),,-0.01,0.5,-0.4,,,4fa24c65-63d3-4cae-bc90-b1f92c3f4c3d
 2026-09-03T14:26:03Z,reconcile,0,orphan_reconcile,ORPHAN,f98fb5483c60,GOOGL,GOOGL260904C00347500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-03 14:21:16.214510+00:00,exit,0,orphan_reconcile,ORPHAN,0db2affff89e,AVGO,AVGO260904C00360000,1,,0.79,65.4,20.8,13.6,take_profit (+53.4%),,-0.01,0.5,-0.4,,,57dc1ea1-7983-42a2-8d79-c8d8efd58091
+2026-09-03T16:01:14Z,reconcile,0,orphan_reconcile,ORPHAN,25e20ce3b05f,AVGO,AVGO260904C00360000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-03T16:01:14Z,reconcile,0,orphan_reconcile,ORPHAN,0a9cc87eab87,AVGO,AVGO260904C00367500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
