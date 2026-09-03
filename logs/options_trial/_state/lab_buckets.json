@@ -6656,8 +6656,8 @@
   {
     "bucket_id": 1109,
     "profile": "lab1109_s166_w1_0928_1005_r2",
-    "open_premium": 58.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 1110,
@@ -6908,8 +6908,8 @@
   {
     "bucket_id": 1151,
     "profile": "lab1151_s164_w1_0928_1005_r2",
-    "open_premium": 50.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 1152,
