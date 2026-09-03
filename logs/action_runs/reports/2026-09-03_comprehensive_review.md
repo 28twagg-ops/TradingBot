@@ -4018,3 +4018,192 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260903T145650Z
+
+- UTC timestamp: `20260903T145650Z`
+- GitHub run: [#8943](https://github.com/28twagg-ops/TradingBot/actions/runs/33769647977)
+- Run id: `33769647977`
+- Live bot: exit=`0`, duration=`1s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`68s`
+- Full logs: `logs/action_runs/20260903T145650Z_live_bot.log`, `logs/action_runs/20260903T145650Z_live_options.log`, `logs/action_runs/20260903T145650Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 943 | 46.4 | -38.2 | +29.8 | $+11,481 |
+| TAINTED | 1771 | 33.2 | -39.0 | +12.3 | $-9,109 |
+| KEEP-only | 412 | 64.3 | +48.1 | +56.1 | $+7,296 |
+| KEEP-only recent | 221 | 62.4 | +55.9 | +72.9 | $+3,210 |
+
+- KEEP strategies (17): S173, S174, S210, S218, S350, S352, S357, S361, S362, S363, S364, S397, S398, S401, S404, S406, S412
+- KILL strategies (20): ORPHAN, S165, S203, S207, S211, S212, S216, S217, S351, S354, S355, S359, S360, S365, S366, S403, S405, S407, S408, S411
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-03T10:56:55.232624-04:00","date":"2026-09-03","mode":"entry+manage","header":"entry+manage (10 new)","elapsed_s":57.0,"phases_s":{"reconcile":0.09,"cancel":0.02,"manage":5.07,"protective_stops":0.57,"scan":46.39,"entries":3.14,"reconcile2":0.71},"signals":67,"placed":10,"equity":1003809.64,"open_positions":25,"pending_orders":0,"open_lots":91,"submitted_today":67,"filled_today":67,"unattributed_contracts":0,"top_signals":["S210:NVDA","S210:META","S165:AVGO","S164:AVGO","S168:AVGO","S167:AVGO","S166:AVGO","S163:AVGO"],"github_run":"8943","github_run_id":"33769647977","status":"ok","data_quality":{"clean":{"n":943,"win":46.45,"med":-38.24,"avg":29.84,"pnl":11481.13},"tainted":{"n":1771,"win":33.2,"med":-39.02,"avg":12.34,"pnl":-9109.34},"keep_only":{"n":412,"win":64.32,"med":48.12,"avg":56.07,"pnl":7296.45},"keep_only_recent":{"n":221,"win":62.44,"med":55.88,"avg":72.88,"pnl":3210.0},"keep_strategies":["S173","S174","S210","S218","S350","S352","S357","S361","S362","S363","S364","S397","S398","S401","S404","S406","S412"],"kill_strategies":["ORPHAN","S165","S203","S207","S211","S212","S216","S217","S351","S354","S355","S359","S360","S365","S366","S403","S405","S407","S408","S411"]}}
+```
+
+### Live bot (tail)
+
+```text
+14:56:51  INFO      Mode: exits
+14:56:51  INFO        Daily log -> logs/daily/2026-09-03.md
+14:56:51  INFO        Daily log reconciled -> logs/daily/2026-09-03.md (3 ledger rows)
+14:56:51  INFO        place_all_stops: checking 1 positions...
+14:56:51  INFO        STOP skipped AMZN: fractional (0.1353 shares) — software exit will handle it
+14:56:51  INFO        [positions] 1/1 (1 valid)
+14:56:51  INFO        Daily log -> logs/daily/2026-09-03.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $230.09|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  AMZN  P&L +0.3%  $+0.11                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           1|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-09-03T10:56:52.470951-04:00 share=25% ===
+2026-09-03 10:56:52,471 INFO === options_live_micro LIVE 2026-09-03T10:56:52.470951-04:00 share=25% ===
+Live account equity $230.09 cash $195.40 #225458845 options_level=3
+2026-09-03 10:56:52,542 INFO Live account equity $230.09 cash $195.40 #225458845 options_level=3
+Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+2026-09-03 10:56:52,585 INFO Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+Live micro done. open_options=0 lots=0
+2026-09-03 10:56:52,599 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+... (192 earlier lines - see full log file)
+| w1     |    4 |    3 |    8 |    2 |    4 |    3 |    0 |    0 |    0 |    0 |    0 |    7 |    1 |    32 |
+| w2     |    6 |    5 |   11 |    6 |    6 |    5 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    48 |
+| w3     |    8 |    6 |   13 |    5 |    7 |    6 |    0 |    0 |    0 |    0 |    0 |    7 |    4 |    56 |
+| w4     |    5 |    4 |   10 |    2 |    5 |    5 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    40 |
+
+Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:20–11:35. Parsed from controlled-layout profile names in ENTRY log lines.
+
+## Raw vs unique totals
+
+| Strategy | Raw log lines (includes multi-bucket duplicates) | Unique underlying symbols |
+|----------|-------------------------------------------------:|--------------------------:|
+| S163 | 231 | 10 |
+| S164 | 249 | 11 |
+| S165 | 1695 | 24 |
+| S166 | 121 | 7 |
+| S167 | 249 | 11 |
+| S168 | 178 | 9 |
+| S169 | 0 | 0 |
+| S170 | 0 | 0 |
+| S171 | 0 | 0 |
+| S172 | 0 | 0 |
+| S175 | 0 | 0 |
+| S173 | 1911 | 17 |
+| S174 | 891 | 7 |
+
+### Raw log lines per day (debug / multi-bucket)
+
+| Date       | S163 | S164 | S165 | S166 | S167 | S168 | S169 | S170 | S171 | S172 | S175 | S173 | S174 | Total |
+|------------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|------:|
+| 2026-07-07 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |    0 |   100 |
+| 2026-07-08 |    0 |    0 |  100 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |  100 |   300 |
+| 2026-07-09 |    0 |    0 |   24 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |   15 |   139 |
+| 2026-07-10 |    0 |    0 |  242 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  230 |  202 |   674 |
+| 2026-07-13 |    0 |    0 |  190 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  212 |  188 |   590 |
+| 2026-07-14 |    0 |    0 |  194 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  185 |  106 |   485 |
+| 2026-07-15 |    0 |    0 |  146 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  154 |   58 |   358 |
+| 2026-07-16 |    0 |    0 |  179 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  205 |   58 |   442 |
+| 2026-07-17 |    0 |    0 |  127 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  207 |   58 |   392 |
+| 2026-07-20 |    0 |    0 |  107 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  143 |   58 |   308 |
+| 2026-07-21 |   30 |   35 |  113 |   30 |   35 |   35 |    0 |    0 |    0 |    0 |    0 |  118 |   48 |   444 |
+| 2026-07-22 |   40 |   47 |   86 |   15 |   45 |   20 |    0 |    0 |    0 |    0 |    0 |   77 |    0 |   330 |
+| 2026-07-23 |   30 |   42 |   50 |   15 |   40 |   20 |    0 |    0 |    0 |    0 |    0 |   40 |    0 |   237 |
+| 2026-07-24 |   75 |   87 |   85 |   15 |   77 |   55 |    0 |    0 |    0 |    0 |    0 |   40 |    0 |   434 |
+| 2026-07-27 |   14 |    0 |   14 |   14 |   14 |   14 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    70 |
+| 2026-07-28 |    6 |    8 |    8 |    8 |    8 |    6 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    44 |
+| 2026-07-29 |   10 |   10 |   10 |    8 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    48 |
+| 2026-09-01 |    8 |    6 |    6 |    2 |    6 |    6 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    34 |
+| 2026-09-02 |   10 |   10 |   10 |    2 |   10 |   14 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    56 |
+| 2026-09-03 |    8 |    4 |    4 |   12 |    4 |    8 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    40 |
+
+## Notes
+
+- Pre-router-fix (before 2026-07-17 commit `56660c9e`): S163/S166 were starved — expect zeros until a post-fix entry-window gap-down day.
+- Controlled layout places one ENTRY per matching bucket×strategy; raw counts inflate, unique underlyings do not.
+
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/signal_frequency.md
+## Ledger health — 2026-09-03
+| Check                       | Count | Status |
+|-----------------------------|------:|--------|
+| Current stuck (state)       |     0 | OK |
+| Orphaned lots (post-stable) |   981 | WARN | <<<
+| Missing exit records (post) |   981 | WARN | <<<
+| State/ledger mismatches     |     1 | WARN | <<<
+| Total open lots             |    91 | INFO |
+| Total closed lots           |  1899 | INFO |
+| Pre-cutoff audit debt       |     0 | INFO |
+| Transition audit debt       |   744 | INFO |
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_health.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-03_data_quality.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-03_data_quality.csv
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/latest_data_quality.json
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/latest_data_quality_snippet.md
+CLEAN n=943 med=-38.2% | TAINTED n=1771 med=-39.0% | KEEP-only n=412 med=+48.1% | KILL=20 KEEP=17
+Wrote /home/runner/work/TradingBot/TradingBot/logs/dashboard.html
+equity=230.09 router=CONFIRMED leaderboard_rows=105
+Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
+| 1 | MA_Squeeze | 2 | 100% | +0.56% | +0.56% | +0.17% | 999.00 | 0.0d | $+0.80 | WATCH |
+| 2 | unknown | 32 | 19% | -0.03% | -0.59% | -1.27% | 1.44 | 0.0d | $+0.29 | ACTIVE |
+```
+
+---
