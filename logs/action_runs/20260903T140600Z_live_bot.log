@@ -1,0 +1,59 @@
+14:06:01  INFO      Mode: exits
+14:06:02  INFO        Daily log -> logs/daily/2026-09-03.md
+14:06:02  INFO        Daily log reconciled -> logs/daily/2026-09-03.md (2 ledger rows)
+14:06:02  INFO        place_all_stops: checking 2 positions...
+14:06:02  INFO        STOP skipped AMZN: fractional (0.1353 shares) — software exit will handle it
+14:06:02  INFO        STOP skipped CNM: fractional (0.7799 shares) — software exit will handle it
+14:06:02  INFO        [positions] 2/2 (2 valid)
+14:06:02  INFO        SELL MARKET [urgent] CNM closed
+14:06:04  INFO        TX logged: SELL CNM  P&L -0.7%
+14:06:05  INFO        Daily log -> logs/daily/2026-09-03.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:06 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $230.32|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  CNM  P&L -0.7%  $-0.24                         EXIT: stop_loss (-0.7%)|
+|  AMZN  P&L +0.9%  $+0.33                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  CNM                                         -0.70%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
