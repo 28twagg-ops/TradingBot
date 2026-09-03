@@ -1,4 +1,5 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
+S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,insufficient sample (<8 exits),94,1,1,0,510.53,510.53,510.53,510.53,510.53,97.0,1,44,6,1,1,100.0
 S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,insufficient sample (<8 exits),80,4,4,0,185.35,186.95,130.27,147.3,239.14,265.0,1,44,12,4,1,100.0
 S163,A1 GapDown ATM call EOD,7d ATM,watch,insufficient sample (<8 exits),95,5,5,0,139.2,128.12,81.08,81.08,203.43,243.0,1,44,12,5,1,100.0
 S396,GapDown_ITM2,3d,watch,insufficient sample (<8 exits),22,4,3,1,45.32,83.82,-35.16,35.39,95.0,120.0,2,28,4,3,1,100.0
@@ -6,7 +7,7 @@ S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),137,67,46,21,198.18,72.
 S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),46,23,19,4,43.5,57.14,-60.62,47.06,79.74,530.0,8,34,6,5,4,34.8
 S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),109,24,19,5,44.11,54.46,-81.28,33.74,116.09,663.0,5,34,10,2,9,29.2
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),105,41,30,11,115.59,52.63,-60.0,-30.43,137.14,1223.0,7,34,10,6,6,31.7
-S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),90,39,24,15,55.07,50.88,-68.37,-51.22,269.86,664.0,8,34,10,7,10,23.1
+S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),90,40,25,15,57.97,50.88,-67.24,-51.22,264.1,758.0,8,34,10,8,10,22.5
 S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),115,35,24,11,29.43,50.0,-91.67,-29.1,119.13,676.0,5,34,11,3,9,25.7
 S353,GapDown_3DTE,3d,watch,fat left tail (p10 < -45%),92,25,13,12,36.58,48.98,-82.61,-72.73,155.3,95.0,6,34,10,5,6,36.0
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),147,68,39,29,56.11,41.03,-71.43,-49.55,165.11,1130.0,12,38,14,8,11,36.8
@@ -18,7 +19,6 @@ S401,Any_Gap_Down_Small,3d,watch,fat left tail (p10 < -45%),188,94,48,46,59.8,7.
 S398,GapDown_ATM,3d,watch,fat left tail (p10 < -45%),117,44,23,21,34.2,3.33,-68.29,-56.25,157.11,702.0,7,34,6,2,8,34.1
 S358,GapDown_30DTE,30d,watch,insufficient sample (<8 exits),14,4,2,2,1.35,0.84,-51.39,-51.39,54.49,-21.0,3,30,0,0,2,50.0
 S166,GapDown strong call,3d ATM strong,watch,insufficient sample (<8 exits),42,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,44,6,0,0,0.0
-S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,insufficient sample (<8 exits),94,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,44,6,0,0,0.0
 S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S170,Golden Pocket call 3 DTE,3d ATM golden pocket,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S171,VWAP Reclaim call 3 DTE,3d ATM VWAP reclaim,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
@@ -92,7 +92,7 @@ S211,MA_Cross_21_50,3d ATM MA cross 21/50,drop,non-positive median return,124,42
 S355,GapDown_7DTE,7d,drop,non-positive median return,105,55,25,30,21.79,-37.14,-70.95,-62.95,191.25,421.0,9,34,9,6,7,30.9
 S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1434,245,73,172,-6.01,-38.18,-63.39,-54.55,81.82,-1828.78,7,59,6,0,12,26.1
 S405,GapDown_OTM3,3d,drop,manually paused — excluded from new entries & reflected P&L,115,56,19,37,-8.5,-42.86,-83.93,-65.2,103.47,-118.0,8,34,0,0,8,26.8
-S359,RubberBand_0DTE,0d,drop,non-positive median return,66,26,7,19,20.28,-45.55,-71.43,-69.88,150.0,-243.0,4,31,4,3,5,38.5
+S359,RubberBand_0DTE,0d,drop,non-positive median return,66,27,8,19,54.98,-44.44,-71.43,-69.4,185.71,-176.0,4,31,4,4,5,37.0
 S399,GapDown_OTM1,3d,drop,non-positive median return,141,47,22,25,43.76,-46.15,-83.81,-66.67,162.0,12.0,8,34,11,4,8,34.0
 S207,GapDown_AtSupport,3d ATM gap-support,drop,manually paused — excluded from new entries & reflected P&L,62,37,2,35,-38.6,-47.06,-63.64,-55.71,-6.06,-822.0,2,38,0,0,3,43.2
 S407,RubberBand_ITM2,3d,drop,manually paused — excluded from new entries & reflected P&L,96,38,11,27,29.82,-47.73,-83.88,-61.54,266.42,33.0,7,34,0,0,7,26.3

@@ -15,3 +15,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-14 14:21:12.628441+00:00,entry,264,lab0264_s403_w2_1005_1045_r1,S403,6ee113403eda,META,META260817C00622500,1,0.49,0.49,49.0,,,,-0.01,,0.75,-0.75,0.19780219780219788,touch MA50 green,f9ead5e2-c9e3-4c0c-b397-b138847f9507
 2026-08-14T14:45:52Z,reconcile,264,lab0264_s403_w2_1005_1045_r1,S403,6ee113403eda,META,META260817C00622500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-03 14:15:46.142025+00:00,entry,264,lab0264_s403_w2_1005_1045_r1,S403,f2840022356d,C,C260904C00137000,1,0.51,0.51,51.0,,,,-0.01,,0.5,-0.5,0.18947368421052638,touch MA50 green,81ad5977-5557-4c83-8109-db0342be05b6
+2026-09-03T15:06:08Z,reconcile,264,lab0264_s403_w2_1005_1045_r1,S403,f2840022356d,C,C260904C00137000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
