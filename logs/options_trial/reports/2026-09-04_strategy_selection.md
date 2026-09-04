@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-04
 
-_Generated 2026-09-04T11:08:01.168888_
+_Generated 2026-09-04T11:13:06.850002_
 
 ## Summary
 
@@ -99,7 +99,7 @@ _Generated 2026-09-04T11:08:01.168888_
 | S356 (GapDown_14DTE) | 14d | watch | 18 | 27.8 | -23.31 | -52.29 | -50.00 | +53.99 | 35 | 8 | 1 | $-125.00 | 33.3% | early sample with non-positive median |
 | S365 (RubberBand_14DTE) | 14d | watch | 16 | 37.5 | -24.16 | -73.45 | -51.80 | +65.47 | 35 | 12 | 4 | $-77.00 | 37.5% | early sample with non-positive median |
 | S367 (RubberBand_30DTE) | 30d | watch | 2 | 0.0 | -38.20 | -48.75 | -44.79 | -27.64 | 31 | 0 | 0 | $-55.00 | 100.0% | insufficient sample (<8 exits) |
-| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 11 | 36.4 | -50.00 | -88.89 | -65.67 | +531.58 | 45 | 12 | 5 | $+260.00 | 45.5% | early sample with non-positive median |
+| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 11 | 36.4 | -50.00 | -88.89 | -65.67 | +531.58 | 45 | 14 | 5 | $+260.00 | 45.5% | early sample with non-positive median |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 35 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
 | S366 (RubberBand_21DTE) | 21d | watch | 12 | 33.3 | -50.42 | -56.92 | -56.92 | +95.91 | 31 | 10 | 4 | $-77.00 | 66.7% | early sample with non-positive median |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 10 | 0.0 | -60.53 | -74.54 | -66.39 | -37.62 | 38 | 6 | 0 | $-171.00 | 40.0% | early sample with non-positive median |
@@ -137,7 +137,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S163 | 7d ATM | 9 | +82.76 | +71.35 | +81.08 | 18 | 9 |
-| S164 | 1d ATM | 11 | -50.00 | -88.89 | -65.67 | 12 | 5 |
+| S164 | 1d ATM | 11 | -50.00 | -88.89 | -65.67 | 14 | 5 |
 | S165 | 3d ATM | 249 | -38.00 | -63.29 | -53.52 | 12 | 4 |
 | S168 | 5d ATM | 8 | +186.95 | +52.33 | +102.52 | 15 | 8 |
 
