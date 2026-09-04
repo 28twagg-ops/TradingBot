@@ -1,0 +1,3 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-09-04 15:32:49.556510+00:00,entry,1156,lab1156_s164_w4_1120_1135_r1,S164,de6e7655014d,TSLA,TSLA260904C00365000,1,0.1,0.09,9.0,,,,-0.01,,0.75,-0.75,0.09523809523809518,gap -3.8%,fd13b7eb-8453-4aa2-ba9c-cc66fdf3c77b
+2026-09-04 15:32:12.268751+00:00,entry,1156,lab1156_s164_w4_1120_1135_r1,S164,d41ff6085fb5,TSLA,TSLA260904C00365000,1,0.09,0.09,9.0,,,,-0.01,,0.5,-0.5,,,6eb4660c-de0a-4ae7-b5eb-d7aa7cf7bcf4

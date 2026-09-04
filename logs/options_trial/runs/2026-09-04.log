@@ -18811,12 +18811,19 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-09-04.log
 elapsed=96.9s reconcile=0.16s cancel=0.03s manage=8.17s scan=35.5s entries=23.17s
 
-=== 11:26:41 ET — entry+manage (5 new) [elapsed=222.6s reconcile=1.42s cancel=0.03s manage=8.23s scan=45.53s entries=139.64s] ===
-=== options_morning_bot (PAPER) 2026-09-04T11:26:41.325021-04:00 ===
+=== 11:31:50 ET — entry+manage (8 new) [elapsed=195.1s reconcile=1.25s cancel=0.03s manage=9.49s scan=46.84s entries=109.84s] ===
+=== options_morning_bot (PAPER) 2026-09-04T11:31:50.008083-04:00 ===
 
 [Run context]
-Paper auth OK — equity $1005168.85, account PA33P8KT02IL
+Paper auth OK — equity $1004969.56, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations
+  reconcile: entry fill b799|S399 PATH x1 @ 0.09
+  reconcile: entry fill b798|S399 PATH x1 @ 0.09
+  reconcile: entry fill b1129|S168 PATH x1 @ 0.09
+  reconcile: entry fill b1128|S168 PATH x1 @ 0.09
+  reconcile: reattributed orphan -> b326|S356 MARA x1 @ 0.46
+  reconcile: entry fill b326|S356 MARA x1 @ 0.46
+  reconcile: exit fill b0|ORPHAN TTD -45.5%
   reconcile: reattributed orphan -> b185|S217 BA x1 @ 0.51
   reconcile: entry fill b185|S217 BA x1 @ 0.51
   reconcile: entry fill b184|S217 BA x1 @ 0.51
@@ -18824,14 +18831,17 @@ Paper auth OK — equity $1005168.85, account PA33P8KT02IL
   reconcile: entry fill b86|S210 WFC x1 @ 0.59
   reconcile: entry fill b835|S406 MARA x1 @ 0.13
   reconcile: entry fill b834|S406 MARA x1 @ 0.13
-  reconcile: reattributed orphan -> b425|S365 MARA x1 @ 0.44
   reconcile: entry fill b425|S365 MARA x1 @ 0.44
   reconcile: entry fill b424|S365 MARA x1 @ 0.44
   reconcile: entry fill b327|S356 MARA x1 @ 0.44
   reconcile: entry fill b326|S356 MARA x1 @ 0.44
   reconcile: entry fill b241|S401 CRWD x1 @ 0.47
   reconcile: entry fill b240|S401 CRWD x1 @ 0.47
-  reconcile: exit fill b326|S356 MARA +100.0%
+  reconcile: entry fill b307|S354 PATH x1 @ 0.07
+  reconcile: entry fill b306|S354 PATH x1 @ 0.07
+  reconcile: entry fill b1125|S168 PATH x1 @ 0.07
+  reconcile: entry fill b1124|S168 PATH x1 @ 0.07
+  reconcile: exit fill b326|S356 MARA +91.3%
   reconcile: orphan lot b0 BA260911C00220000 x1 @ 0.53 (legacy/unattributed)
   reconcile: orphan lot b0 MARA260918C00012000 x2 @ 0.47 (legacy/unattributed)
 
@@ -18839,41 +18849,44 @@ Paper auth OK — equity $1005168.85, account PA33P8KT02IL
 LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
 Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
 Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
-  EXIT [b85|lab0085_s210_w3_1045_1120_r2|S210] take_profit (+160.0%) SELL failed NVDA260904C00232500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  EXIT [b84|lab0084_s210_w3_1045_1120_r1|S210] take_profit (+160.0%) SELL failed NVDA260904C00232500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  cancelled protective stop TTD260911C00015000 id=a1b063bb-c528-4b64-9515-73041062dad7
-  EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-45.5%) SELL 1 TTD260911C00015000 @<= 0.15  id=582c9c56-3655-4fc5-aa0f-026774b7995f
-  EXIT [b901|lab0901_s411_w2_1005_1045_r2|S411] take_profit (+100.0%) SELL failed RBLX260904C00042000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  EXIT [b900|lab0900_s411_w2_1005_1045_r1|S411] take_profit (+100.0%) SELL failed RBLX260904C00042000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  cancelled protective stop PATH260911C00017000 id=5beae9e9-6e69-4959-b0a2-a5fb4ff15add
+  EXIT [b797|lab0797_s399_w3_1045_1120_r2|S399] stop_loss (-58.8%) SELL 1 PATH260911C00017000 @<= 0.04  id=a78785d8-f35a-437f-beab-3f9dc3efac2d
+  EXIT [b795|lab0795_s399_w2_1005_1045_r2|S399] stop_loss (-76.7%) SELL 1 PATH260911C00017500 @<= 0.03  id=ffb5b532-ec47-4ddf-b16e-5516583bf205
+  cancelled protective stop PATH260911C00016500 id=faab9faa-761e-49b6-90b5-83a4325496d3
+  EXIT [b21|lab0021_s202_w3_1045_1120_r2|S202] stop_loss (-53.1%) SELL 1 PATH260911C00016500 @<= 0.16  id=d840db47-452f-4097-a7b2-ca513e0f25cd
+  EXIT [b85|lab0085_s210_w3_1045_1120_r2|S210] take_profit (+88.0%) SELL failed NVDA260904C00232500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b84|lab0084_s210_w3_1045_1120_r1|S210] take_profit (+88.0%) SELL failed NVDA260904C00232500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b901|lab0901_s411_w2_1005_1045_r2|S411] take_profit (+74.4%) SELL failed RBLX260904C00042000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b900|lab0900_s411_w2_1005_1045_r1|S411] take_profit (+74.4%) SELL failed RBLX260904C00042000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed RBLX260904C00042000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed NVDA260904C00232500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed AVGO260909C00380000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed AVGO260911C00385000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed MARA260918C00012000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  PROT upgrade MARA260904C00012000: cancel stop-limit id=b0fcdf27-4130-41a9-a6d1-875345431da4 type=stop_limit
-  PROT STOP-LIMIT MARA260904C00012000 x1 stop=0.01 lim=0.01 tif=gtc sl=-50% entry=0.03 id=72c7784b-bfb6-4dea-b74d-f8026328a613
-  PROT STOP failed TTD260911C00015000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  PROT STOP failed PATH260911C00017500: {"buy_limit_price":"0.08","code":40310000,"existing_order_id":"49872dce-101e-472d-8bc6-4ab31140a1d8","message":"potential wash trade detected. use complex orders","reject_reason":"buy order exists, sell limit price should be greater than existing buy limit price","sell_limit_price":"0.06"}
-  PROT STOP failed MARA260911C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  PROT upgrade MARA260904C00012000: cancel stop-limit id=f63201de-ac53-4e45-9370-712778972edb type=stop_limit
+  PROT STOP-LIMIT MARA260904C00012000 x1 stop=0.01 lim=0.01 tif=gtc sl=-50% entry=0.03 id=d3accc1e-1832-4a75-a164-7a6681927d56
+  PROT STOP failed PATH260911C00017000: {"available":"1","code":40310000,"existing_qty":"1","held_for_orders":"0","message":"insufficient qty available for order (requested: 2, available: 1)","symbol":"PATH260911C00017000"}
   PROT STOP failed BA260911C00220000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed MARA260925C00012000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-Protective stops: placed=1 upgraded=1 already=31 failed=10 (market-first)
+Protective stops: placed=1 upgraded=1 already=33 failed=8 (market-first)
 
 [Scan + entries]
 Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S204, S205, S206, S208, S209, S210, S211, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S406, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
   Daily bars disk cache hit (options_daily_bars_2026-09-04.parquet)
 Fetched daily bars for 113/117 symbols
 Found 308 signal(s); top: ['S165:TSLA', 'S164:TSLA', 'S168:TSLA', 'S167:TSLA', 'S166:TSLA', 'S163:TSLA', 'S350:TSLA', 'S351:TSLA']
-Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimited paper)
+Paper lab: $1004970 broker equity -> 1164 bucket(s) ($500 virtual each, unlimited paper)
   [b1058 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"277e1a53-25f8-4c05-beab-b22d7e28a2bb","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b1059 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"277e1a53-25f8-4c05-beab-b22d7e28a2bb","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b1128 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"277e1a53-25f8-4c05-beab-b22d7e28a2bb","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b1129 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"277e1a53-25f8-4c05-beab-b22d7e28a2bb","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  ENTRY [b1156|lab1156_s164_w4_1120_1135_r1|S164] BUY 1x TSLA260904C00365000 (gap -3.8%|fast) limit=0.10 (ask=0.11 off=-0.01) tp=+75% sl=-75% pending id=fd13b7eb-8453-4aa2-ba9c-cc66fdf3c77b
+  ENTRY [b1157|lab1157_s164_w4_1120_1135_r2|S164] BUY 1x TSLA260904C00365000 (gap -3.8%|fast) limit=0.10 (ask=0.11 off=-0.01) tp=+75% sl=-75% pending id=34390971-4bb2-4d8e-a380-4989eeac1744
   [b1100 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"277e1a53-25f8-4c05-beab-b22d7e28a2bb","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b1101 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"277e1a53-25f8-4c05-beab-b22d7e28a2bb","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b1115 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"cdbf2409-78f1-40e7-8e3c-97ba91d42c65","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b1142 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"cdbf2409-78f1-40e7-8e3c-97ba91d42c65","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b1143 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"cdbf2409-78f1-40e7-8e3c-97ba91d42c65","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  ENTRY [b286|lab0286_s351_w4_1120_1135_r1|S351] BUY 1x TSLA260904C00365000 (gap -3.8%|fast) limit=0.10 (ask=0.11 off=-0.01) tp=+75% sl=-75% pending id=ffd99047-db8a-4eb0-b5d5-75c3d987d355
+  ENTRY [b287|lab0287_s351_w4_1120_1135_r2|S351] BUY 1x TSLA260904C00365000 (gap -3.8%|fast) limit=0.10 (ask=0.11 off=-0.01) tp=+75% sl=-75% pending id=a201d458-372d-405a-b559-276bb73282bb
   [b294 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"277e1a53-25f8-4c05-beab-b22d7e28a2bb","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b295 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"277e1a53-25f8-4c05-beab-b22d7e28a2bb","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b302 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"277e1a53-25f8-4c05-beab-b22d7e28a2bb","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
@@ -18882,7 +18895,6 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b311 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"277e1a53-25f8-4c05-beab-b22d7e28a2bb","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b318 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"cdbf2409-78f1-40e7-8e3c-97ba91d42c65","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b319 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"cdbf2409-78f1-40e7-8e3c-97ba91d42c65","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b326|lab0326_s356_w4_1120_1135_r1] S356 TSLA (tier: fast): no tradeable call
   [b334|lab0334_s357_w4_1120_1135_r1] S357 TSLA (tier: fast): no tradeable call
   [b335|lab0335_s357_w4_1120_1135_r2] S357 TSLA (tier: fast): no tradeable call
   [b342|lab0342_s358_w4_1120_1135_r1] S358 TSLA (tier: fast): no tradeable call
@@ -18895,16 +18907,12 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b783 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"36dd0bae-399f-4adb-b0ad-b7396e917bf8","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b790 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"277e1a53-25f8-4c05-beab-b22d7e28a2bb","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b791 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"277e1a53-25f8-4c05-beab-b22d7e28a2bb","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b798 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"d652b9e4-160b-47ad-a5bd-65eb9972044c","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b799 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"d652b9e4-160b-47ad-a5bd-65eb9972044c","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b806 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"36dd0bae-399f-4adb-b0ad-b7396e917bf8","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b807 TSLA] ENTRY failed: {"code":40310000,"existing_order_id":"36dd0bae-399f-4adb-b0ad-b7396e917bf8","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b170|lab0170_s216_w4_1120_1135_r1] S216 AMD (tier: fast): no tradeable call
   [b171|lab0171_s216_w4_1120_1135_r2] S216 AMD (tier: fast): no tradeable call
   [b1058|lab1058_s165_w4_1120_1135_r1] S165 COIN (tier: fast): no tradeable call
   [b1059|lab1059_s165_w4_1120_1135_r2] S165 COIN (tier: fast): no tradeable call
-  [b1128|lab1128_s168_w4_1120_1135_r1] S168 COIN (tier: fast): no tradeable call
-  [b1129|lab1129_s168_w4_1120_1135_r2] S168 COIN (tier: fast): no tradeable call
   [b1100|lab1100_s167_w4_1120_1135_r1] S167 COIN (tier: fast): no tradeable call
   [b1101|lab1101_s167_w4_1120_1135_r2] S167 COIN (tier: fast): no tradeable call
   [b1115|lab1115_s166_w4_1120_1135_r2] S166 COIN (tier: fast): no tradeable call
@@ -18918,7 +18926,6 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b311|lab0311_s354_w4_1120_1135_r2] S354 COIN (tier: fast): no tradeable call
   [b318|lab0318_s355_w4_1120_1135_r1] S355 COIN (tier: fast): no tradeable call
   [b319|lab0319_s355_w4_1120_1135_r2] S355 COIN (tier: fast): no tradeable call
-  [b326|lab0326_s356_w4_1120_1135_r1] S356 COIN (tier: fast): no tradeable call
   [b334|lab0334_s357_w4_1120_1135_r1] S357 COIN (tier: fast): no tradeable call
   [b335|lab0335_s357_w4_1120_1135_r2] S357 COIN (tier: fast): no tradeable call
   [b342|lab0342_s358_w4_1120_1135_r1] S358 COIN (tier: fast): no tradeable call
@@ -18931,14 +18938,10 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b783|lab0783_s397_w4_1120_1135_r2] S397 COIN (tier: fast): no tradeable call
   [b790|lab0790_s398_w4_1120_1135_r1] S398 COIN (tier: fast): no tradeable call
   [b791|lab0791_s398_w4_1120_1135_r2] S398 COIN (tier: fast): no tradeable call
-  [b798|lab0798_s399_w4_1120_1135_r1] S399 COIN (tier: fast): no tradeable call
-  [b799|lab0799_s399_w4_1120_1135_r2] S399 COIN (tier: fast): no tradeable call
   [b806|lab0806_s404_w4_1120_1135_r1] S404 COIN (tier: fast): no tradeable call
   [b807|lab0807_s404_w4_1120_1135_r2] S404 COIN (tier: fast): no tradeable call
   [b1058 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"db645f00-9d2f-4810-8b9e-be3f4bb035b5","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b1059 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"db645f00-9d2f-4810-8b9e-be3f4bb035b5","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b1128 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"db645f00-9d2f-4810-8b9e-be3f4bb035b5","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b1129 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"db645f00-9d2f-4810-8b9e-be3f4bb035b5","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b1100 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"db645f00-9d2f-4810-8b9e-be3f4bb035b5","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b1101 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"db645f00-9d2f-4810-8b9e-be3f4bb035b5","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b1115 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"db645f00-9d2f-4810-8b9e-be3f4bb035b5","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
@@ -18952,7 +18955,6 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b311 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"db645f00-9d2f-4810-8b9e-be3f4bb035b5","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b318 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"db645f00-9d2f-4810-8b9e-be3f4bb035b5","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b319 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"db645f00-9d2f-4810-8b9e-be3f4bb035b5","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  ENTRY [b326|lab0326_s356_w4_1120_1135_r1|S356] BUY 1x MARA260918C00012000 (gap -3.6%|fast) limit=0.47 (ask=0.48 off=-0.01) tp=+75% sl=-75% pending id=86c31a3c-d126-472d-a960-ce3b41a7a8af
   [b334|lab0334_s357_w4_1120_1135_r1] S357 MARA (tier: fast): no tradeable call
   [b335|lab0335_s357_w4_1120_1135_r2] S357 MARA (tier: fast): no tradeable call
   [b342|lab0342_s358_w4_1120_1135_r1] S358 MARA (tier: fast): no tradeable call
@@ -18977,8 +18979,6 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b783 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"ff979546-1abc-40c4-a9d2-f5016045dfdf","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b790 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"db645f00-9d2f-4810-8b9e-be3f4bb035b5","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b791 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"db645f00-9d2f-4810-8b9e-be3f4bb035b5","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b798 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"30aeb0b3-3cb5-409e-876c-2353aa0cd498","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b799 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"30aeb0b3-3cb5-409e-876c-2353aa0cd498","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b806 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"ff979546-1abc-40c4-a9d2-f5016045dfdf","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b807 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"ff979546-1abc-40c4-a9d2-f5016045dfdf","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b862|lab0862_s408_w4_1120_1135_r1] S408 MARA (tier: fast): no tradeable call
@@ -18993,8 +18993,6 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b919 MARA] ENTRY failed: {"code":40310000,"existing_order_id":"30aeb0b3-3cb5-409e-876c-2353aa0cd498","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b1058|lab1058_s165_w4_1120_1135_r1] S165 MSTR (tier: fast): no tradeable call
   [b1059|lab1059_s165_w4_1120_1135_r2] S165 MSTR (tier: fast): no tradeable call
-  [b1128|lab1128_s168_w4_1120_1135_r1] S168 MSTR (tier: fast): no tradeable call
-  [b1129|lab1129_s168_w4_1120_1135_r2] S168 MSTR (tier: fast): no tradeable call
   [b1100|lab1100_s167_w4_1120_1135_r1] S167 MSTR (tier: fast): no tradeable call
   [b1101|lab1101_s167_w4_1120_1135_r2] S167 MSTR (tier: fast): no tradeable call
   [b1115|lab1115_s166_w4_1120_1135_r2] S166 MSTR (tier: fast): no tradeable call
@@ -19034,8 +19032,6 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b783|lab0783_s397_w4_1120_1135_r2] S397 MSTR (tier: fast): no tradeable call
   [b790|lab0790_s398_w4_1120_1135_r1] S398 MSTR (tier: fast): no tradeable call
   [b791|lab0791_s398_w4_1120_1135_r2] S398 MSTR (tier: fast): no tradeable call
-  [b798|lab0798_s399_w4_1120_1135_r1] S399 MSTR (tier: fast): no tradeable call
-  [b799|lab0799_s399_w4_1120_1135_r2] S399 MSTR (tier: fast): no tradeable call
   [b806|lab0806_s404_w4_1120_1135_r1] S404 MSTR (tier: fast): no tradeable call
   [b807|lab0807_s404_w4_1120_1135_r2] S404 MSTR (tier: fast): no tradeable call
   [b862|lab0862_s408_w4_1120_1135_r1] S408 MSTR (tier: fast): no tradeable call
@@ -19050,8 +19046,6 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b919|lab0919_s412_w4_1120_1135_r2] S412 MSTR (tier: fast): no tradeable call
   [b1058|lab1058_s165_w4_1120_1135_r1] S165 HOOD (tier: fast): no tradeable call
   [b1059|lab1059_s165_w4_1120_1135_r2] S165 HOOD (tier: fast): no tradeable call
-  [b1128|lab1128_s168_w4_1120_1135_r1] S168 HOOD (tier: fast): no tradeable call
-  [b1129|lab1129_s168_w4_1120_1135_r2] S168 HOOD (tier: fast): no tradeable call
   [b1100|lab1100_s167_w4_1120_1135_r1] S167 HOOD (tier: fast): no tradeable call
   [b1101|lab1101_s167_w4_1120_1135_r2] S167 HOOD (tier: fast): no tradeable call
   [b1115|lab1115_s166_w4_1120_1135_r2] S166 HOOD (tier: fast): no tradeable call
@@ -19079,28 +19073,24 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b783|lab0783_s397_w4_1120_1135_r2] S397 HOOD (tier: fast): no tradeable call
   [b790|lab0790_s398_w4_1120_1135_r1] S398 HOOD (tier: fast): no tradeable call
   [b791|lab0791_s398_w4_1120_1135_r2] S398 HOOD (tier: fast): no tradeable call
-  [b798|lab0798_s399_w4_1120_1135_r1] S399 HOOD (tier: fast): no tradeable call
-  [b799|lab0799_s399_w4_1120_1135_r2] S399 HOOD (tier: fast): no tradeable call
   [b806|lab0806_s404_w4_1120_1135_r1] S404 HOOD (tier: fast): no tradeable call
   [b807|lab0807_s404_w4_1120_1135_r2] S404 HOOD (tier: fast): no tradeable call
   [b170|lab0170_s216_w4_1120_1135_r1] S216 DDOG (tier: fast): no tradeable call
   [b171|lab0171_s216_w4_1120_1135_r2] S216 DDOG (tier: fast): no tradeable call
-  [b1058|lab1058_s165_w4_1120_1135_r1] S165 UPST (tier: fast): no tradeable call
-  [b1059|lab1059_s165_w4_1120_1135_r2] S165 UPST (tier: fast): no tradeable call
-  [b1128|lab1128_s168_w4_1120_1135_r1] S168 UPST (tier: fast): no tradeable call
-  [b1129|lab1129_s168_w4_1120_1135_r2] S168 UPST (tier: fast): no tradeable call
-  [b1100|lab1100_s167_w4_1120_1135_r1] S167 UPST (tier: fast): no tradeable call
-  [b1101|lab1101_s167_w4_1120_1135_r2] S167 UPST (tier: fast): no tradeable call
-  [b1142|lab1142_s163_w4_1120_1135_r1] S163 UPST (tier: fast): no tradeable call
-  [b1143|lab1143_s163_w4_1120_1135_r2] S163 UPST (tier: fast): no tradeable call
+  [b1058 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"aea9f8ef-c80b-490c-9c45-b914e4a537e4","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b1059 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"aea9f8ef-c80b-490c-9c45-b914e4a537e4","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b1100 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"aea9f8ef-c80b-490c-9c45-b914e4a537e4","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b1101 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"aea9f8ef-c80b-490c-9c45-b914e4a537e4","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b1142 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"aea9f8ef-c80b-490c-9c45-b914e4a537e4","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b1143 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"aea9f8ef-c80b-490c-9c45-b914e4a537e4","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b294|lab0294_s352_w4_1120_1135_r1] S352 UPST (tier: fast): no tradeable call
   [b295|lab0295_s352_w4_1120_1135_r2] S352 UPST (tier: fast): no tradeable call
   [b302|lab0302_s353_w4_1120_1135_r1] S353 UPST (tier: fast): no tradeable call
   [b303|lab0303_s353_w4_1120_1135_r2] S353 UPST (tier: fast): no tradeable call
-  [b310|lab0310_s354_w4_1120_1135_r1] S354 UPST (tier: fast): no tradeable call
-  [b311|lab0311_s354_w4_1120_1135_r2] S354 UPST (tier: fast): no tradeable call
-  [b318|lab0318_s355_w4_1120_1135_r1] S355 UPST (tier: fast): no tradeable call
-  [b319|lab0319_s355_w4_1120_1135_r2] S355 UPST (tier: fast): no tradeable call
+  [b310 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"aea9f8ef-c80b-490c-9c45-b914e4a537e4","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b311 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"aea9f8ef-c80b-490c-9c45-b914e4a537e4","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b318 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"aea9f8ef-c80b-490c-9c45-b914e4a537e4","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b319 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"aea9f8ef-c80b-490c-9c45-b914e4a537e4","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b334|lab0334_s357_w4_1120_1135_r1] S357 UPST (tier: fast): no tradeable call
   [b335|lab0335_s357_w4_1120_1135_r2] S357 UPST (tier: fast): no tradeable call
   [b342|lab0342_s358_w4_1120_1135_r1] S358 UPST (tier: fast): no tradeable call
@@ -19109,18 +19099,14 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b767|lab0767_s395_w4_1120_1135_r2] S395 UPST (tier: fast): no tradeable call
   [b774|lab0774_s396_w4_1120_1135_r1] S396 UPST (tier: fast): no tradeable call
   [b775|lab0775_s396_w4_1120_1135_r2] S396 UPST (tier: fast): no tradeable call
-  [b782 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"8768f97e-5d87-4562-974b-0902a8d59948","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b783 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"8768f97e-5d87-4562-974b-0902a8d59948","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b790|lab0790_s398_w4_1120_1135_r1] S398 UPST (tier: fast): no tradeable call
-  [b791|lab0791_s398_w4_1120_1135_r2] S398 UPST (tier: fast): no tradeable call
-  [b798 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"8768f97e-5d87-4562-974b-0902a8d59948","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b799 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"8768f97e-5d87-4562-974b-0902a8d59948","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b806 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"8768f97e-5d87-4562-974b-0902a8d59948","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b807 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"8768f97e-5d87-4562-974b-0902a8d59948","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  ENTRY [b782|lab0782_s397_w4_1120_1135_r1|S397] BUY 1x UPST260911C00028500 (gap -2.1%|fast) limit=0.65 (ask=0.66 off=-0.01) tp=+75% sl=-75% pending id=d2c325b7-83aa-4478-8d27-174ecb5cf295
+  ENTRY [b783|lab0783_s397_w4_1120_1135_r2|S397] BUY 1x UPST260911C00028500 (gap -2.1%|fast) limit=0.65 (ask=0.66 off=-0.01) tp=+75% sl=-75% pending id=2fe639af-7daa-4de8-99f4-9522acc416f7
+  [b790 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"aea9f8ef-c80b-490c-9c45-b914e4a537e4","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b791 UPST] ENTRY failed: {"code":40310000,"existing_order_id":"aea9f8ef-c80b-490c-9c45-b914e4a537e4","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  ENTRY [b806|lab0806_s404_w4_1120_1135_r1|S404] BUY 1x UPST260911C00028500 (gap -2.1%|fast) limit=0.65 (ask=0.66 off=-0.01) tp=+75% sl=-75% pending id=6e368fb7-2587-479e-8975-301a7f2c8fc0
+  ENTRY [b807|lab0807_s404_w4_1120_1135_r2|S404] BUY 1x UPST260911C00028500 (gap -2.1%|fast) limit=0.65 (ask=0.66 off=-0.01) tp=+75% sl=-75% pending id=425ad82a-b054-4993-a75e-562ea27f7ae4
   [b1058|lab1058_s165_w4_1120_1135_r1] S165 ZS (tier: fast): no tradeable call
   [b1059|lab1059_s165_w4_1120_1135_r2] S165 ZS (tier: fast): no tradeable call
-  [b1128|lab1128_s168_w4_1120_1135_r1] S168 ZS (tier: fast): no tradeable call
-  [b1129|lab1129_s168_w4_1120_1135_r2] S168 ZS (tier: fast): no tradeable call
   [b1100|lab1100_s167_w4_1120_1135_r1] S167 ZS (tier: fast): no tradeable call
   [b1101|lab1101_s167_w4_1120_1135_r2] S167 ZS (tier: fast): no tradeable call
   [b1115|lab1115_s166_w4_1120_1135_r2] S166 ZS (tier: fast): no tradeable call
@@ -19158,14 +19144,8 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b767|lab0767_s395_w4_1120_1135_r2] S395 ZS (tier: fast): no tradeable call
   [b774|lab0774_s396_w4_1120_1135_r1] S396 ZS (tier: fast): no tradeable call
   [b775|lab0775_s396_w4_1120_1135_r2] S396 ZS (tier: fast): no tradeable call
-  [b782|lab0782_s397_w4_1120_1135_r1] S397 ZS (tier: fast): no tradeable call
-  [b783|lab0783_s397_w4_1120_1135_r2] S397 ZS (tier: fast): no tradeable call
   [b790|lab0790_s398_w4_1120_1135_r1] S398 ZS (tier: fast): no tradeable call
   [b791|lab0791_s398_w4_1120_1135_r2] S398 ZS (tier: fast): no tradeable call
-  [b798|lab0798_s399_w4_1120_1135_r1] S399 ZS (tier: fast): no tradeable call
-  [b799|lab0799_s399_w4_1120_1135_r2] S399 ZS (tier: fast): no tradeable call
-  [b806|lab0806_s404_w4_1120_1135_r1] S404 ZS (tier: fast): no tradeable call
-  [b807|lab0807_s404_w4_1120_1135_r2] S404 ZS (tier: fast): no tradeable call
   [b862|lab0862_s408_w4_1120_1135_r1] S408 ZS (tier: fast): no tradeable call
   [b863|lab0863_s408_w4_1120_1135_r2] S408 ZS (tier: fast): no tradeable call
   [b876|lab0876_s409_w4_1120_1135_r1] S409 ZS (tier: fast): no tradeable call
@@ -19176,25 +19156,23 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b905|lab0905_s411_w4_1120_1135_r2] S411 ZS (tier: fast): no tradeable call
   [b918|lab0918_s412_w4_1120_1135_r1] S412 ZS (tier: fast): no tradeable call
   [b919|lab0919_s412_w4_1120_1135_r2] S412 ZS (tier: fast): no tradeable call
-  [b1058 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"faab9faa-761e-49b6-90b5-83a4325496d3","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b1059 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"faab9faa-761e-49b6-90b5-83a4325496d3","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  ENTRY [b1128|lab1128_s168_w4_1120_1135_r1|S168] BUY 1x PATH260911C00017500 (gap -10.9%|fast) limit=0.10 (ask=0.11 off=-0.01) tp=+75% sl=-75% pending id=1b0e3c87-62c2-470b-83f9-e14b4222e9db
-  ENTRY [b1129|lab1129_s168_w4_1120_1135_r2|S168] BUY 1x PATH260911C00017500 (gap -10.9%|fast) limit=0.10 (ask=0.11 off=-0.01) tp=+75% sl=-75% pending id=83ba1275-7780-4b8f-8ac5-5864685ece3c
-  [b1100 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"faab9faa-761e-49b6-90b5-83a4325496d3","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b1101 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"faab9faa-761e-49b6-90b5-83a4325496d3","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b1115 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"faab9faa-761e-49b6-90b5-83a4325496d3","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b1142 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"faab9faa-761e-49b6-90b5-83a4325496d3","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b1143 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"faab9faa-761e-49b6-90b5-83a4325496d3","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b1058|lab1058_s165_w4_1120_1135_r1] S165 PATH (tier: fast): no tradeable call
+  [b1059|lab1059_s165_w4_1120_1135_r2] S165 PATH (tier: fast): no tradeable call
+  [b1100|lab1100_s167_w4_1120_1135_r1] S167 PATH (tier: fast): no tradeable call
+  [b1101|lab1101_s167_w4_1120_1135_r2] S167 PATH (tier: fast): no tradeable call
+  [b1115|lab1115_s166_w4_1120_1135_r2] S166 PATH (tier: fast): no tradeable call
+  [b1142|lab1142_s163_w4_1120_1135_r1] S163 PATH (tier: fast): no tradeable call
+  [b1143|lab1143_s163_w4_1120_1135_r2] S163 PATH (tier: fast): no tradeable call
   [b22 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"e0f0420c-dc50-428d-8aee-4ccf8ebc4913","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b23 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"e0f0420c-dc50-428d-8aee-4ccf8ebc4913","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b294|lab0294_s352_w4_1120_1135_r1] S352 PATH (tier: fast): no tradeable call
   [b295|lab0295_s352_w4_1120_1135_r2] S352 PATH (tier: fast): no tradeable call
   [b302|lab0302_s353_w4_1120_1135_r1] S353 PATH (tier: fast): no tradeable call
   [b303|lab0303_s353_w4_1120_1135_r2] S353 PATH (tier: fast): no tradeable call
-  [b310 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"faab9faa-761e-49b6-90b5-83a4325496d3","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b311 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"faab9faa-761e-49b6-90b5-83a4325496d3","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b318 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"faab9faa-761e-49b6-90b5-83a4325496d3","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b319 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"faab9faa-761e-49b6-90b5-83a4325496d3","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b310|lab0310_s354_w4_1120_1135_r1] S354 PATH (tier: fast): no tradeable call
+  [b311|lab0311_s354_w4_1120_1135_r2] S354 PATH (tier: fast): no tradeable call
+  [b318|lab0318_s355_w4_1120_1135_r1] S355 PATH (tier: fast): no tradeable call
+  [b319|lab0319_s355_w4_1120_1135_r2] S355 PATH (tier: fast): no tradeable call
   [b334 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"83b1b56f-760d-4318-b589-89dba3ed8751","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b335 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"83b1b56f-760d-4318-b589-89dba3ed8751","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b342|lab0342_s358_w4_1120_1135_r1] S358 PATH (tier: fast): no tradeable call
@@ -19203,16 +19181,10 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b767|lab0767_s395_w4_1120_1135_r2] S395 PATH (tier: fast): no tradeable call
   [b774 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"d62fcd2a-4fe9-4304-9f86-c5a9cf6ee343","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b775 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"d62fcd2a-4fe9-4304-9f86-c5a9cf6ee343","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b782 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"e0f0420c-dc50-428d-8aee-4ccf8ebc4913","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b783 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"e0f0420c-dc50-428d-8aee-4ccf8ebc4913","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b790 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"faab9faa-761e-49b6-90b5-83a4325496d3","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b791 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"faab9faa-761e-49b6-90b5-83a4325496d3","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  ENTRY [b798|lab0798_s399_w4_1120_1135_r1|S399] BUY 1x PATH260911C00017500 (gap -10.9%|fast) limit=0.10 (ask=0.11 off=-0.01) tp=+75% sl=-75% pending id=6c983cae-a2bb-4d61-af5d-6a90e95e40a3
-  ENTRY [b799|lab0799_s399_w4_1120_1135_r2|S399] BUY 1x PATH260911C00017500 (gap -10.9%|fast) limit=0.10 (ask=0.11 off=-0.01) tp=+75% sl=-75% pending id=b7b7798a-f2bc-400d-87c0-a4275070b8d2
-  [b806 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"e0f0420c-dc50-428d-8aee-4ccf8ebc4913","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b807 PATH] ENTRY failed: {"code":40310000,"existing_order_id":"e0f0420c-dc50-428d-8aee-4ccf8ebc4913","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b268 MS] ENTRY failed: {"code":40310000,"existing_order_id":"48280577-bbc1-4693-86a4-84721f483920","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
-  [b269 MS] ENTRY failed: {"code":40310000,"existing_order_id":"48280577-bbc1-4693-86a4-84721f483920","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b790|lab0790_s398_w4_1120_1135_r1] S398 PATH (tier: fast): no tradeable call
+  [b791|lab0791_s398_w4_1120_1135_r2] S398 PATH (tier: fast): no tradeable call
+  [b268 MS] ENTRY failed: {"code":40310000,"existing_order_id":"10dcd288-e017-4541-9a81-b26c6c9f89e2","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b269 MS] ENTRY failed: {"code":40310000,"existing_order_id":"10dcd288-e017-4541-9a81-b26c6c9f89e2","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
   [b198|lab0198_s218_w4_1120_1135_r1] S218 BLK (tier: neutral): no tradeable call
   [b199|lab0199_s218_w4_1120_1135_r2] S218 BLK (tier: neutral): no tradeable call
   [b198|lab0198_s218_w4_1120_1135_r1] S218 MMM (tier: neutral): no tradeable call
@@ -19291,66 +19263,67 @@ Paper lab: $1005169 broker equity -> 1164 bucket(s) ($500 virtual each, unlimite
   [b905|lab0905_s411_w4_1120_1135_r2] S411 EXC (tier: slow): no tradeable call
   [b918|lab0918_s412_w4_1120_1135_r1] S412 EXC (tier: slow): no tradeable call
   [b919|lab0919_s412_w4_1120_1135_r2] S412 EXC (tier: slow): no tradeable call
-  Skipped: 332 no tradeable call, 6 already attempted today, 32 open order exists, 5 pending order
-Placed 5 new entry order(s).
+  Skipped: 309 no tradeable call, 6 already attempted today, 36 pending order
+Placed 8 new entry order(s).
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations
-  reconcile: entry fill b799|S399 PATH x1 @ 0.09
-  reconcile: entry fill b798|S399 PATH x1 @ 0.09
-  reconcile: entry fill b1129|S168 PATH x1 @ 0.09
-  reconcile: entry fill b1128|S168 PATH x1 @ 0.09
-  reconcile: reattributed orphan -> b326|S356 MARA x1 @ 0.46
-  reconcile: entry fill b326|S356 MARA x1 @ 0.46
-  reconcile: exit fill b0|ORPHAN TTD -45.5%
+  reconcile: entry fill b287|S351 TSLA x1 @ 0.09
+  reconcile: entry fill b286|S351 TSLA x1 @ 0.09
+  reconcile: entry fill b1157|S164 TSLA x1 @ 0.09
+  reconcile: entry fill b1156|S164 TSLA x1 @ 0.09
+  reconcile: exit fill b797|S399 PATH -58.8%
+  reconcile: entry fill b287|S351 TSLA x1 @ 0.09
+  reconcile: entry fill b286|S351 TSLA x1 @ 0.09
+  reconcile: entry fill b1157|S164 TSLA x1 @ 0.09
+  reconcile: entry fill b1156|S164 TSLA x1 @ 0.09
   PROT STOP failed RBLX260904C00042000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed NVDA260904C00232500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed AVGO260909C00380000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed AVGO260911C00385000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed MARA260918C00012000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  PROT upgrade MARA260904C00012000: cancel stop-limit id=72c7784b-bfb6-4dea-b74d-f8026328a613 type=stop_limit
-  PROT STOP-LIMIT MARA260904C00012000 x1 stop=0.01 lim=0.01 tif=gtc sl=-50% entry=0.03 id=f63201de-ac53-4e45-9370-712778972edb
-  PROT STOP-MKT TTD260911C00015000 x1 stop=0.17 tif=gtc sl=-50% id=5cde61c7-f3cc-47b6-ac24-a537d8625e82
-  PROT STOP failed PATH260911C00017500: {"buy_limit_price":"0.08","code":40310000,"existing_order_id":"49872dce-101e-472d-8bc6-4ab31140a1d8","message":"potential wash trade detected. use complex orders","reject_reason":"buy order exists, sell limit price should be greater than existing buy limit price","sell_limit_price":"0.06"}
-  PROT STOP-MKT MARA260911C00012500 x6 stop=0.07 tif=gtc sl=-50% id=d2781000-ad64-47da-8d67-4049ff26b3c1
+  PROT upgrade MARA260904C00012000: cancel stop-limit id=d3accc1e-1832-4a75-a164-7a6681927d56 type=stop_limit
+  PROT STOP-LIMIT MARA260904C00012000 x1 stop=0.01 lim=0.01 tif=gtc sl=-50% entry=0.03 id=cd54b452-2afc-41f4-aa9b-7981e8fed6a4
+  PROT STOP-LIMIT PATH260911C00017000 x1 stop=0.09 lim=0.08 tif=gtc sl=-50% entry=0.17 id=3dfdacd8-1667-45c0-9702-677180e87031
   PROT STOP failed BA260911C00220000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed MARA260925C00012000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-Protective stops: placed=3 upgraded=1 already=31 failed=8 (market-first)
+  PROT STOP-MKT TSLA260904C00365000 x8 stop=0.04 tif=gtc sl=-50% id=3dae0054-83ec-40e7-a7f6-a878f0be7e98
+Protective stops: placed=3 upgraded=1 already=33 failed=7 (market-first)
 
 [Portfolio snapshot]
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $1,005,168.85
+Account equity: $1,004,969.56
 Active buckets: 1164 of 1164 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
-  Reflected (ex-S203,S207,S212,S360,S405,S407): $+11,763.12 all-time  |  $+224.83 today
-  Raw (incl dropped):     $+6,900.12 all-time  |  $+224.83 today
-  Open (not sold yet): $-1,227.30 unrealized (virtual lots)
-                       $-1,466.80 unrealized (broker total)
-  Premium deployed:    $6,995.12 in open positions
-  Combined P&L:        $+10,535.82 (reflected realized + open virtual)
+  Reflected (ex-S203,S207,S212,S360,S405,S407): $+11,751.12 all-time  |  $+214.83 today
+  Raw (incl dropped):     $+6,888.12 all-time  |  $+214.83 today
+  Open (not sold yet): $-1,254.76 unrealized (virtual lots)
+                       $-1,476.80 unrealized (broker total)
+  Premium deployed:    $7,122.68 in open positions
+  Combined P&L:        $+10,496.36 (reflected realized + open virtual)
 
 Ledger (master)
-  Total events:     12802
-  Today entries:    174
-  Today exits (reflected): 13
-  All-time exits (reflected): 2505  wins 42%
+  Total events:     12815
+  Today entries:    186
+  Today exits (reflected): 14
+  All-time exits (reflected): 2506  wins 42%
   Avg return/trade: +31.9%  median -25.4%
 
 Open virtual lots (by bucket)
-  b0 lab0000_s200_w1_0928_1005_r1  prem=$   500  real=$ +0.00  open=$ +0.00  lots=8  [ORPHAN:TSLAx2, ORPHAN:MARAx1, ORPHAN:TSLAx1, ORPHAN:TSLAx1 +4 more]
+  b0 lab0000_s200_w1_0928_1005_r1  prem=$   547  real=$ +0.00  open=$ +0.00  lots=8  [ORPHAN:TSLAx2, ORPHAN:MARAx1, ORPHAN:TSLAx1, ORPHAN:TSLAx1 +4 more]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b16 lab0016_s202_w1_0928_1005_r1  prem=$    47  real=$-47.00  open=$ -5.00  lots=1  [S202:PATHx1]
+  b16 lab0016_s202_w1_0928_1005_r1  prem=$    47  real=$-47.00  open=$ -7.00  lots=1  [S202:PATHx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b17 lab0017_s202_w1_0928_1005_r2  prem=$    47  real=$-56.00  open=$ -5.00  lots=1  [S202:PATHx1]
+  b17 lab0017_s202_w1_0928_1005_r2  prem=$    47  real=$-56.00  open=$ -7.00  lots=1  [S202:PATHx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b18 lab0018_s202_w2_1005_1045_r1  prem=$    45  real=$-29.00  open=$-19.00  lots=1  [S202:PATHx1]
+  b18 lab0018_s202_w2_1005_1045_r1  prem=$    45  real=$-29.00  open=$-22.00  lots=1  [S202:PATHx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b19 lab0019_s202_w2_1005_1045_r2  prem=$    45  real=$-22.00  open=$-19.00  lots=1  [S202:PATHx1]
+  b19 lab0019_s202_w2_1005_1045_r2  prem=$    45  real=$-22.00  open=$-22.00  lots=1  [S202:PATHx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b20 lab0020_s202_w3_1045_1120_r1  prem=$    32  real=$ -6.00  open=$-16.00  lots=1  [S202:PATHx1]
+  b20 lab0020_s202_w3_1045_1120_r1  prem=$    32  real=$ -6.00  open=$-18.00  lots=1  [S202:PATHx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b21 lab0021_s202_w3_1045_1120_r2  prem=$    32  real=$ -8.00  open=$-16.00  lots=1  [S202:PATHx1]
+  b21 lab0021_s202_w3_1045_1120_r2  prem=$    32  real=$ -8.00  open=$-18.00  lots=1  [S202:PATHx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b73 lab0073_s209_w1_0928_1005_r2  prem=$     0  real=$-11.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -19364,42 +19337,42 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b80 lab0080_s210_w1_0928_1005_r1  prem=$     0  real=$ +4.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b81 lab0081_s210_w1_0928_1005_r2  prem=$    33  real=$ -4.00  open=$-15.00  lots=1  [S210:TTDx1]
+  b81 lab0081_s210_w1_0928_1005_r2  prem=$    33  real=$ -4.00  open=$-14.00  lots=1  [S210:TTDx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b82 lab0082_s210_w2_1005_1045_r1  prem=$    39  real=$-105.00  open=$-12.00  lots=1  [S210:WFCx1]
+  b82 lab0082_s210_w2_1005_1045_r1  prem=$    39  real=$-105.00  open=$ -8.00  lots=1  [S210:WFCx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b83 lab0083_s210_w2_1005_1045_r2  prem=$    39  real=$+18.00  open=$-12.00  lots=1  [S210:WFCx1]
+  b83 lab0083_s210_w2_1005_1045_r2  prem=$    39  real=$+18.00  open=$ -8.00  lots=1  [S210:WFCx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b84 lab0084_s210_w3_1045_1120_r1  prem=$    25  real=$-202.00  open=$+25.00  lots=1  [S210:NVDAx1]
+  b84 lab0084_s210_w3_1045_1120_r1  prem=$    25  real=$-202.00  open=$+21.00  lots=1  [S210:NVDAx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b85 lab0085_s210_w3_1045_1120_r2  prem=$    25  real=$+81.00  open=$+25.00  lots=1  [S210:NVDAx1]
+  b85 lab0085_s210_w3_1045_1120_r2  prem=$    25  real=$+81.00  open=$+21.00  lots=1  [S210:NVDAx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b86 lab0086_s210_w4_1120_1135_r1  prem=$    59  real=$+31.00  open=$ -6.00  lots=1  [S210:WFCx1]
+  b86 lab0086_s210_w4_1120_1135_r1  prem=$    59  real=$+31.00  open=$ +1.00  lots=1  [S210:WFCx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b87 lab0087_s210_w4_1120_1135_r2  prem=$    59  real=$ +4.00  open=$ -6.00  lots=1  [S210:WFCx1]
+  b87 lab0087_s210_w4_1120_1135_r2  prem=$    59  real=$ +4.00  open=$ +1.00  lots=1  [S210:WFCx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  (283 more active bucket(s) omitted)
-  (861 quiet bucket profile(s) — no trades yet)
+  (285 more active bucket(s) omitted)
+  (859 quiet bucket profile(s) — no trades yet)
 
 Pending orders: 8
   b828 S406 MARA limit=0.07
   b829 S406 MARA limit=0.07
-  b1124 S168 PATH limit=0.08
-  b1125 S168 PATH limit=0.08
-  b306 S354 PATH limit=0.08
+  b860 S408 PEP limit=0.14
+  b861 S408 PEP limit=0.14
+  b782 S397 UPST limit=0.65
 
 Alpaca option positions
-  AVGO260904C00367500  qty=-1  cost=$18.00  return=+77.8%  open P&L=$+14.00
-  AVGO260909C00380000  qty=3  cost=$111.00  return=+32.4%  open P&L=$+36.00
-  AVGO260911C00385000  qty=1  cost=$72.00  return=+1.4%  open P&L=$+1.00
+  AVGO260904C00367500  qty=-1  cost=$18.00  return=+83.3%  open P&L=$+15.00
+  AVGO260909C00380000  qty=3  cost=$111.00  return=+18.9%  open P&L=$+21.00
+  AVGO260911C00385000  qty=1  cost=$72.00  return=-6.9%  open P&L=$-5.00
   BA260904C00215000  qty=-1  cost=$27.00  return=+92.6%  open P&L=$+25.00
   BA260904C00217500  qty=-1  cost=$11.00  return=+90.9%  open P&L=$+10.00
-  BA260911C00217500  qty=2  cost=$144.00  return=+5.6%  open P&L=$+8.00
+  BA260911C00217500  qty=2  cost=$144.00  return=+6.9%  open P&L=$+10.00
   BA260911C00220000  qty=4  cost=$212.00  return=-15.1%  open P&L=$-32.00
-  CRWD260911C00235000  qty=2  cost=$94.00  return=-19.1%  open P&L=$-18.00
-  IWM260908C00297000  qty=2  cost=$84.00  return=+14.3%  open P&L=$+12.00
+  CRWD260911C00235000  qty=2  cost=$94.00  return=-23.4%  open P&L=$-22.00
+  IWM260908C00297000  qty=2  cost=$84.00  return=+16.7%  open P&L=$+14.00
   MARA260904C00012000  qty=-12  cost=$12.00  return=+0.0%  open P&L=$+0.00
-  MARA260911C00011000  qty=2  cost=$144.00  return=-11.1%  open P&L=$-16.00
+  MARA260911C00011000  qty=2  cost=$144.00  return=-9.7%  open P&L=$-14.00
   MARA260911C00011500  qty=10  cost=$460.00  return=-15.2%  open P&L=$-70.00
   MARA260911C00012000  qty=7  cost=$196.00  return=-17.9%  open P&L=$-35.00
   MARA260911C00012500  qty=6  cost=$82.00  return=-4.9%  open P&L=$-4.00
@@ -19407,35 +19380,36 @@ Alpaca option positions
   MARA260918C00012000  qty=17  cost=$792.00  return=-7.7%  open P&L=$-61.00
   MARA260925C00012000  qty=2  cost=$118.00  return=-1.7%  open P&L=$-2.00
   MARA260925C00012500  qty=4  cost=$200.00  return=-12.0%  open P&L=$-24.00
-  MS260911C00222500  qty=2  cost=$144.00  return=-23.6%  open P&L=$-34.00
+  MS260911C00222500  qty=2  cost=$144.00  return=-22.2%  open P&L=$-32.00
   MS260911C00225000  qty=2  cost=$70.00  return=-17.1%  open P&L=$-12.00
   NFLX260911C00083000  qty=2  cost=$86.00  return=-34.9%  open P&L=$-30.00
-  NKE260925C00040000  qty=2  cost=$122.00  return=-18.0%  open P&L=$-22.00
-  NVDA260904C00232500  qty=2  cost=$50.00  return=+100.0%  open P&L=$+50.00
-  PATH260911C00015000  qty=2  cost=$144.00  return=-6.9%  open P&L=$-10.00
-  PATH260911C00015500  qty=2  cost=$94.00  return=-10.6%  open P&L=$-10.00
-  PATH260911C00016000  qty=2  cost=$90.00  return=-42.2%  open P&L=$-38.00
-  PATH260911C00016500  qty=2  cost=$64.00  return=-50.0%  open P&L=$-32.00
-  PATH260911C00017000  qty=2  cost=$34.00  return=-58.8%  open P&L=$-20.00
-  PATH260911C00017500  qty=6  cost=$58.00  return=-27.6%  open P&L=$-16.00
+  NKE260925C00040000  qty=2  cost=$122.00  return=-16.4%  open P&L=$-20.00
+  NVDA260904C00232500  qty=2  cost=$50.00  return=+84.0%  open P&L=$+42.00
+  PATH260911C00015000  qty=2  cost=$144.00  return=-16.7%  open P&L=$-24.00
+  PATH260911C00015500  qty=2  cost=$94.00  return=-14.9%  open P&L=$-14.00
+  PATH260911C00016000  qty=2  cost=$90.00  return=-48.9%  open P&L=$-44.00
+  PATH260911C00016500  qty=2  cost=$64.00  return=-56.2%  open P&L=$-36.00
+  PATH260911C00017000  qty=1  cost=$17.00  return=-58.8%  open P&L=$-10.00
+  PATH260911C00017500  qty=10  cost=$86.00  return=-76.7%  open P&L=$-66.00
   PATH260925C00017000  qty=2  cost=$90.00  return=-33.3%  open P&L=$-30.00
   RBLX260904C00041000  qty=-1  cost=$31.00  return=-519.4%  open P&L=$-161.00
-  RBLX260904C00041500  qty=-1  cost=$21.00  return=-585.7%  open P&L=$-123.00
+  RBLX260904C00041500  qty=-1  cost=$21.00  return=-523.8%  open P&L=$-110.00
   RBLX260904C00042000  qty=2  cost=$78.00  return=+74.4%  open P&L=$+58.00
-  TSLA260909C00377500  qty=1  cost=$73.00  return=-9.6%  open P&L=$-7.00
-  TSLA260909C00380000  qty=4  cost=$292.00  return=-24.7%  open P&L=$-72.00
-  TSLA260909C00382500  qty=6  cost=$372.00  return=-25.8%  open P&L=$-96.00
-  TSLA260909C00385000  qty=4  cost=$292.80  return=-46.7%  open P&L=$-136.80
-  TSLA260909C00387500  qty=12  cost=$691.00  return=-41.0%  open P&L=$-283.00
+  TSLA260904C00365000  qty=8  cost=$72.00  return=+0.0%  open P&L=$+0.00
+  TSLA260909C00377500  qty=1  cost=$73.00  return=-6.8%  open P&L=$-5.00
+  TSLA260909C00380000  qty=4  cost=$292.00  return=-23.3%  open P&L=$-68.00
+  TSLA260909C00382500  qty=6  cost=$372.00  return=-24.2%  open P&L=$-90.00
+  TSLA260909C00385000  qty=4  cost=$292.80  return=-45.4%  open P&L=$-132.80
+  TSLA260909C00387500  qty=12  cost=$691.00  return=-39.2%  open P&L=$-271.00
   TSLA260909C00390000  qty=4  cost=$195.00  return=-38.5%  open P&L=$-75.00
-  TSLA260911C00390000  qty=5  cost=$315.00  return=-3.2%  open P&L=$-10.00
-  TSLA260911C00395000  qty=6  cost=$360.00  return=-21.7%  open P&L=$-78.00
-  TTD260911C00015000  qty=1  cost=$33.00  return=-45.5%  open P&L=$-15.00
+  TSLA260911C00390000  qty=5  cost=$315.00  return=+0.0%  open P&L=$+0.00
+  TSLA260911C00395000  qty=6  cost=$360.00  return=-20.0%  open P&L=$-72.00
+  TTD260911C00015000  qty=1  cost=$33.00  return=-42.4%  open P&L=$-14.00
   UPST260911C00029000  qty=4  cost=$196.00  return=-18.4%  open P&L=$-36.00
   UPST260911C00030000  qty=6  cost=$144.00  return=-12.5%  open P&L=$-18.00
   UPST260911C00030500  qty=2  cost=$40.00  return=-35.0%  open P&L=$-14.00
-  WFC260911C00090000  qty=2  cost=$118.00  return=-10.2%  open P&L=$-12.00
-  WFC260911C00091000  qty=2  cost=$78.00  return=-30.8%  open P&L=$-24.00
+  WFC260911C00090000  qty=2  cost=$118.00  return=+1.7%  open P&L=$+2.00
+  WFC260911C00091000  qty=2  cost=$78.00  return=-20.5%  open P&L=$-16.00
 
 Per-bucket exit stats (all time)
   b0|c000_s173_w1_0928_1005_r1  n= 22  avg=+24.8%  med=+34.9%  realized=$+283.00
@@ -19605,7 +19579,7 @@ Per-bucket exit stats (all time)
   b323|lab0323_s356_w2_1005_1045_r2  n=  2  avg=-34.5%  med=-18.9%  realized=$-37.00
   b324|lab0324_s356_w3_1045_1120_r1  n=  3  avg=-33.3%  med=-25.0%  realized=$-45.00
   b325|lab0325_s356_w3_1045_1120_r2  n=  3  avg=-28.4%  med=-19.4%  realized=$-39.00
-  b326|lab0326_s356_w4_1120_1135_r1  n=  1  avg=+100.0%  med=+100.0%  realized=$+44.00
+  b326|lab0326_s356_w4_1120_1135_r1  n=  1  avg=+91.3%  med=+91.3%  realized=$+42.00
   b327|lab0327_s356_w4_1120_1135_r2  n=  2  avg=+0.6%  med=+52.0%  realized=$-5.00
   b328|lab0328_s357_w1_0928_1005_r1  n=  3  avg=+3.8%  med=+47.1%  realized=$+7.00
   b329|lab0329_s357_w1_0928_1005_r2  n=  3  avg=+3.8%  med=+47.1%  realized=$+7.00
@@ -19756,7 +19730,7 @@ Per-bucket exit stats (all time)
   b794|lab0794_s399_w2_1005_1045_r1  n= 10  avg=+89.4%  med=+58.6%  realized=$-58.00
   b795|lab0795_s399_w2_1005_1045_r2  n= 10  avg=+60.6%  med=-46.1%  realized=$-67.00
   b796|lab0796_s399_w3_1045_1120_r1  n=  1  avg=+957.1%  med=+957.1%  realized=$+67.00
-  b797|lab0797_s399_w3_1045_1120_r2  n= 10  avg=+46.4%  med=-63.6%  realized=$-130.00
+  b797|lab0797_s399_w3_1045_1120_r2  n= 11  avg=+36.8%  med=-63.6%  realized=$-140.00
   b798|lab0798_s399_w4_1120_1135_r1  n=  4  avg=+28.7%  med=+134.0%  realized=$+78.00
   b799|lab0799_s399_w4_1120_1135_r2  n=  6  avg=+53.8%  med=+100.0%  realized=$+91.00
   b79|g079_eod_tp30_sl20  n=  1  avg=+34.2%  med=+34.2%  realized=$+27.40
@@ -19868,22 +19842,22 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (entry+manage) --                                     |
-|Equity       : $1,005,168.85                                            |
-|Open Risk    : 152 lots (47 broker pos)                                 |
-|Today's Run  : 308 signals -> 5 orders submitted                        |
+|Equity       : $1,004,969.56                                            |
+|Open Risk    : 163 lots (48 broker pos)                                 |
+|Today's Run  : 308 signals -> 8 orders submitted                        |
 |                                                                        |
 |-- SYSTEM HEALTH --                                                     |
 |Zombies      : 0 (Ledger is clean)                                      |
-|Lab Status   : 152 Active Lots | 8 Pending Orders                       |
+|Lab Status   : 163 Active Lots | 8 Pending Orders                       |
 |Auto-Matrix  : (Pending EOD report generation)                          |
 +========================================================================+
 +========================================================================+
 |[DATA QUALITY: CLEAN vs ERRORS vs KEEP-ONLY]                            |
 +========================================================================+
-|  CLEAN              n=1021  win= 49.9%  med=  +0.0%  $+15,481          |
-|  TAINTED            n=1787  win= 33.6%  med= -38.2%  $-8,581           |
-|  KEEP-only          n=546   win= 63.9%  med= +51.2%  $+10,150          |
-|  KEEP recent        n=338   win= 60.7%  med= +53.8%  $+4,893           |
+|  CLEAN              n=1021  win= 49.9%  med=  +0.0%  $+15,486          |
+|  TAINTED            n=1788  win= 33.6%  med= -38.3%  $-8,598           |
+|  KEEP-only          n=547   win= 63.8%  med= +51.0%  $+10,140          |
+|  KEEP recent        n=339   win= 60.5%  med= +53.6%  $+4,883           |
 |  KEEP(22): S173,S174,S210,S218,S350,S352,S353,S354...                  |
 |  KILL(17): ORPHAN,S164,S203,S207,S211,S212,S216,S217...                |
 +========================================================================+
@@ -19909,30 +19883,36 @@ Per-bucket exit stats (all time)
 +========================================================================+
 |[PENDING ORDERS (8)]                                                    |
 +========================================================================+
-|  Top groups: S406:MARA(2), S168:PATH(2), S354:PATH(2)                  |
+|  Top groups: S406:MARA(2), S408:PEP(2), S397:UPST(2)                   |
 |  ---------------------------------------------------------             |
 |  b828 S406 MARA     limit=0.07                                         |
 |  b829 S406 MARA     limit=0.07                                         |
-|  b1124 S168 PATH     limit=0.08                                        |
-|  b1125 S168 PATH     limit=0.08                                        |
-|  b306 S354 PATH     limit=0.08                                         |
+|  b860 S408 PEP      limit=0.14                                         |
+|  b861 S408 PEP      limit=0.14                                         |
+|  b782 S397 UPST     limit=0.65                                         |
 |  ... 3 more pending order(s)                                           |
 +========================================================================+
 +========================================================================+
-|[OPEN OPTIONS (47)]                                                     |
+|[PENDING EXITS (2)]                                                     |
++========================================================================+
+|  b795 S399 PATH260911C00017500 x1 stop_loss (-76.7%)                   |
+|  b21  S202 PATH260911C00016500 x1 stop_loss (-53.1%)                   |
++========================================================================+
++========================================================================+
+|[OPEN OPTIONS (48)]                                                     |
 +========================================================================+
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
-|  TSLA260909C00387500          12    -41.0%   $   -283.00               |
+|  TSLA260909C00387500          12    -39.2%   $   -271.00               |
 |  RBLX260904C00041000          -1   -519.4%   $   -161.00               |
-|  TSLA260909C00385000           4    -46.7%   $   -136.80               |
-|  RBLX260904C00041500          -1   -585.7%   $   -123.00               |
-|  TSLA260909C00382500           6    -25.8%   $    -96.00               |
-|  TSLA260911C00395000           6    -21.7%   $    -78.00               |
+|  TSLA260909C00385000           4    -45.4%   $   -132.80               |
+|  RBLX260904C00041500          -1   -523.8%   $   -110.00               |
+|  TSLA260909C00382500           6    -24.2%   $    -90.00               |
 |  TSLA260909C00390000           4    -38.5%   $    -75.00               |
-|  TSLA260909C00380000           4    -24.7%   $    -72.00               |
-|  ... 39 more position(s)                                               |
+|  TSLA260911C00395000           6    -20.0%   $    -72.00               |
+|  MARA260911C00011500          10    -15.2%   $    -70.00               |
+|  ... 40 more position(s)                                               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-09-04.log
-elapsed=222.6s reconcile=1.42s cancel=0.03s manage=8.23s scan=45.53s entries=139.64s
+elapsed=195.1s reconcile=1.25s cancel=0.03s manage=9.49s scan=46.84s entries=109.84s
 
