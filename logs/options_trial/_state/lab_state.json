@@ -1502,26 +1502,6 @@
       "entry_order_id": "orphan:TSLA260909C00382500"
     },
     {
-      "lot_id": "43e59e00bcbe",
-      "bucket_id": 82,
-      "profile_name": "lab0082_s210_w2_1005_1045_r1",
-      "strategy_id": "S210",
-      "occ_symbol": "WFC260911C00091000",
-      "underlying": "WFC",
-      "qty": 1,
-      "entry_cost": 39.0,
-      "entry_price": 0.39,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-04T14:11:03.098820+00:00",
-      "entry_order_id": "92a8f930-566f-4083-81e6-c34356905109"
-    },
-    {
       "lot_id": "b7e553ef4e0b",
       "bucket_id": 315,
       "profile_name": "lab0315_s355_w2_1005_1045_r2",
@@ -2583,18 +2563,7 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "efbf6ae7-afed-46f6-b0ad-49f93540c145",
-      "lot_id": "43e59e00bcbe",
-      "bucket_id": 82,
-      "strategy_id": "S210",
-      "occ_symbol": "WFC260911C00091000",
-      "qty": 1,
-      "reason": "take_profit (+61.5%)",
-      "submitted": "2026-09-04T14:41:08"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b437": 61.0,
     "b436": 61.0,
@@ -2669,7 +2638,6 @@
     "b1097": 62.0,
     "b1096": 62.0,
     "b1055": 62.0,
-    "b82": 39.0,
     "b315": 57.99999999999999,
     "b314": 57.99999999999999,
     "b433": 49.0,
