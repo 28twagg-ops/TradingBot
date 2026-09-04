@@ -1182,26 +1182,6 @@
       "entry_order_id": "236e3ccb-e4f2-43ef-9254-51fc79931d24"
     },
     {
-      "lot_id": "2280c3f74dde",
-      "bucket_id": 18,
-      "profile_name": "lab0018_s202_w2_1005_1045_r1",
-      "strategy_id": "S202",
-      "occ_symbol": "PATH260911C00016000",
-      "underlying": "PATH",
-      "qty": 1,
-      "entry_cost": 45.0,
-      "entry_price": 0.45,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-04T14:08:55.679467+00:00",
-      "entry_order_id": "add27264-2ea6-4762-ad81-64e28d2cffef"
-    },
-    {
       "lot_id": "361232eb5b07",
       "bucket_id": 435,
       "profile_name": "lab0435_s366_w2_1005_1045_r2",
@@ -3183,18 +3163,7 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "55f8e8e6-09cd-474c-a75a-caff76643d60",
-      "lot_id": "2280c3f74dde",
-      "bucket_id": 18,
-      "strategy_id": "S202",
-      "occ_symbol": "PATH260911C00016000",
-      "qty": 1,
-      "reason": "stop_loss (-51.1%)",
-      "submitted": "2026-09-04T11:51:18"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b437": 61.0,
     "b436": 61.0,
@@ -3254,7 +3223,6 @@
     "b237": 42.0,
     "b236": 42.0,
     "b794": 11.0,
-    "b18": 45.0,
     "b435": 51.0,
     "b434": 51.0,
     "b421": 50.0,
