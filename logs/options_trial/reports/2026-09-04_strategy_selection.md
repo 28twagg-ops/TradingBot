@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-04
 
-_Generated 2026-09-04T10:49:06.638494_
+_Generated 2026-09-04T10:53:10.618259_
 
 ## Summary
 
@@ -26,11 +26,11 @@ _Generated 2026-09-04T10:49:06.638494_
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 9 | 100.0 | +82.76 | +71.35 | +81.08 | +201.14 | 45 | 18 | 9 | $+394.00 | 55.6% | building sample (8-19 exits) |
 | S353 (GapDown_3DTE) | 3d | watch | 27 | 55.6 | +78.95 | -81.60 | -71.22 | +246.32 | 35 | 12 | 7 | $+213.00 | 33.3% | fat left tail (p10 < -45%) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 6 | 100.0 | +75.23 | +61.38 | +68.63 | +148.00 | 45 | 13 | 6 | $+293.00 | 66.7% | insufficient sample (<8 exits) |
-| S406 (RubberBand_ITM3) | 3d | watch | 69 | 69.6 | +72.55 | -63.41 | -6.38 | +972.63 | 35 | 13 | 9 | $+3,382.00 | 21.7% | fat left tail (p10 < -45%) |
-| S397 (GapDown_ITM1) | 3d | watch | 27 | 81.5 | +61.90 | -71.66 | +39.48 | +115.78 | 35 | 14 | 5 | $+830.00 | 25.9% | fat left tail (p10 < -45%) |
+| S406 (RubberBand_ITM3) | 3d | watch | 69 | 69.6 | +72.55 | -63.41 | -6.38 | +972.63 | 35 | 15 | 9 | $+3,382.00 | 21.7% | fat left tail (p10 < -45%) |
+| S397 (GapDown_ITM1) | 3d | watch | 27 | 81.5 | +61.90 | -71.66 | +39.48 | +115.78 | 35 | 16 | 5 | $+830.00 | 25.9% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 43 | 74.4 | +57.14 | -59.71 | -10.87 | +725.71 | 35 | 10 | 8 | $+1,359.00 | 30.2% | fat left tail (p10 < -45%) |
 | S357 (GapDown_21DTE) | 21d | watch | 23 | 82.6 | +57.14 | -60.62 | +47.06 | +79.74 | 35 | 8 | 5 | $+530.00 | 34.8% | fat left tail (p10 < -45%) |
-| S404 (GapDown_OTM2) | 3d | watch | 41 | 70.7 | +53.23 | -91.67 | -17.02 | +122.22 | 35 | 17 | 9 | $+916.00 | 22.0% | fat left tail (p10 < -45%) |
+| S404 (GapDown_OTM2) | 3d | watch | 41 | 70.7 | +53.23 | -91.67 | -17.02 | +122.22 | 35 | 19 | 9 | $+916.00 | 22.0% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 42 | 64.3 | +50.88 | -65.09 | -50.51 | +251.16 | 35 | 14 | 10 | $+833.00 | 21.4% | fat left tail (p10 < -45%) |
 | S361 (RubberBand_2DTE) | 2d | watch | 41 | 56.1 | +44.83 | -68.52 | -53.33 | +253.33 | 35 | 8 | 7 | $+212.00 | 26.8% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 69 | 56.5 | +36.36 | -71.43 | -48.57 | +164.89 | 39 | 15 | 9 | $+1,111.00 | 36.2% | fat left tail (p10 < -45%) |
@@ -102,7 +102,7 @@ _Generated 2026-09-04T10:49:06.638494_
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 11 | 36.4 | -50.00 | -88.89 | -65.67 | +531.58 | 45 | 12 | 5 | $+260.00 | 45.5% | early sample with non-positive median |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 35 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
 | S366 (RubberBand_21DTE) | 21d | watch | 12 | 33.3 | -50.42 | -56.92 | -56.92 | +95.91 | 31 | 10 | 4 | $-77.00 | 66.7% | early sample with non-positive median |
-| S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 10 | 0.0 | -60.53 | -74.54 | -66.39 | -37.62 | 38 | 4 | 0 | $-171.00 | 40.0% | early sample with non-positive median |
+| S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 10 | 0.0 | -60.53 | -74.54 | -66.39 | -37.62 | 38 | 6 | 0 | $-171.00 | 40.0% | early sample with non-positive median |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 6 | 0.0 | -61.46 | -82.78 | -69.36 | -50.75 | 37 | 0 | 0 | $-210.00 | 83.3% | insufficient sample (<8 exits) |
 | S408 (RubberBand_ITM1) | 3d | drop | 45 | 48.9 | +0.00 | -69.49 | -55.56 | +746.23 | 32 | 6 | 2 | $+1,104.00 | 22.2% | non-positive median return |
 | S411 (RubberBand_OTM2) | 3d | drop | 33 | 48.5 | +0.00 | -56.72 | -51.67 | +37.88 | 32 | 12 | 4 | $-321.00 | 27.3% | non-positive median return |
@@ -170,7 +170,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 |---|---|---:|---:|---:|---:|---:|---:|
 | S200 | 3d ATM gap-aggr | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S201 | 3d ATM gap-mild | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
-| S202 | 3d ATM gap-monster | 10 | -60.53 | -74.54 | -66.39 | 4 | 0 |
+| S202 | 3d ATM gap-monster | 10 | -60.53 | -74.54 | -66.39 | 6 | 0 |
 | S204 | 3d ATM gap-up cont | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S205 | 3d ATM gap-highvol | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S206 | 3d ATM gap-trend | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
