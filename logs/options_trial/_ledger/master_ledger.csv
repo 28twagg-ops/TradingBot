@@ -12722,3 +12722,8 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-04 14:17:03.990814+00:00,entry,858,lab0858_s408_w2_1005_1045_r1,S408,c61e6f2646a7,MARA,MARA260911C00013500,1,0.07,0.06,6.0,,,,-0.01,,0.75,-0.75,0.13333333333333325,RB gap -3.6% reclaim,50b6e024-3389-433f-92f8-b32f1a21691b
 2026-09-04 14:16:13.409300+00:00,exit,345,lab0345_s359_w1_0928_1005_r2,S359,083e528cd399,MARA,MARA260904C00012000,1,,0.01,3.0,-66.67,-2.0,stop_loss (-66.7%),,-0.01,0.5,-0.5,,,c9111068-ee1c-49b5-ab80-9776d4789346
 2026-09-04 14:16:06.236465+00:00,exit,90,live_1to1,S404,d7b9b1b87fe8,TSLA,TSLA260909C00385000,1,,0.43,74.0,-41.89,-31.0,stop_loss (-41.3%),,-0.01,0.5,-0.4,,,2255bad9-1ba3-48de-8aaf-e50a751f1eff
+2026-09-04T14:21:10Z,reconcile,277,lab0277_s350_w1_0928_1005_r2,S350,5700069ad92f,TSLA,TSLA260904C00367500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-04T14:21:10Z,reconcile,276,lab0276_s350_w1_0928_1005_r1,S350,4b3053e135a6,TSLA,TSLA260904C00367500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-04T14:21:10Z,reconcile,1151,lab1151_s164_w1_0928_1005_r2,S164,ecd263e29fcd,TSLA,TSLA260904C00367500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-04T14:21:10Z,reconcile,1150,lab1150_s164_w1_0928_1005_r1,S164,8d9844651056,TSLA,TSLA260904C00367500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-04 14:22:09.543344+00:00,entry,90,live_1to1,S404,5e2e74cf9c51,TSLA,TSLA260909C00377500,1,0.74,0.73,73.0,,,,-0.01,,0.5,-0.4,0.01342281879194632,gap -3.8%,e90a62b5-c54b-4b1d-b607-b9ae2f902305
