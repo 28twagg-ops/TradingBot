@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-04
 
-_Generated 2026-09-04T10:58:01.306311_
+_Generated 2026-09-04T11:03:37.757070_
 
 ## Summary
 
@@ -29,7 +29,7 @@ _Generated 2026-09-04T10:58:01.306311_
 | S406 (RubberBand_ITM3) | 3d | watch | 69 | 69.6 | +72.55 | -63.41 | -6.38 | +972.63 | 35 | 15 | 9 | $+3,382.00 | 21.7% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 27 | 81.5 | +61.90 | -71.66 | +39.48 | +115.78 | 35 | 16 | 5 | $+830.00 | 25.9% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 43 | 74.4 | +57.14 | -59.71 | -10.87 | +725.71 | 35 | 10 | 8 | $+1,359.00 | 30.2% | fat left tail (p10 < -45%) |
-| S357 (GapDown_21DTE) | 21d | watch | 23 | 82.6 | +57.14 | -60.62 | +47.06 | +79.74 | 35 | 8 | 5 | $+530.00 | 34.8% | fat left tail (p10 < -45%) |
+| S357 (GapDown_21DTE) | 21d | watch | 23 | 82.6 | +57.14 | -60.62 | +47.06 | +79.74 | 35 | 10 | 5 | $+530.00 | 34.8% | fat left tail (p10 < -45%) |
 | S404 (GapDown_OTM2) | 3d | watch | 41 | 70.7 | +53.23 | -91.67 | -17.02 | +122.22 | 35 | 19 | 9 | $+916.00 | 22.0% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 42 | 64.3 | +50.88 | -65.09 | -50.51 | +251.16 | 35 | 16 | 10 | $+833.00 | 21.4% | fat left tail (p10 < -45%) |
 | S361 (RubberBand_2DTE) | 2d | watch | 41 | 56.1 | +44.83 | -68.52 | -53.33 | +253.33 | 35 | 8 | 7 | $+212.00 | 26.8% | fat left tail (p10 < -45%) |
@@ -96,8 +96,8 @@ _Generated 2026-09-04T10:58:01.306311_
 | S417 (BBSqueeze_OTM1) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S418 (BBSqueeze_OTM2) | 7d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S356 (GapDown_14DTE) | 14d | watch | 18 | 27.8 | -23.31 | -52.29 | -50.00 | +53.99 | 35 | 6 | 1 | $-125.00 | 33.3% | early sample with non-positive median |
-| S365 (RubberBand_14DTE) | 14d | watch | 16 | 37.5 | -24.16 | -73.45 | -51.80 | +65.47 | 35 | 10 | 4 | $-77.00 | 37.5% | early sample with non-positive median |
+| S356 (GapDown_14DTE) | 14d | watch | 18 | 27.8 | -23.31 | -52.29 | -50.00 | +53.99 | 35 | 8 | 1 | $-125.00 | 33.3% | early sample with non-positive median |
+| S365 (RubberBand_14DTE) | 14d | watch | 16 | 37.5 | -24.16 | -73.45 | -51.80 | +65.47 | 35 | 12 | 4 | $-77.00 | 37.5% | early sample with non-positive median |
 | S367 (RubberBand_30DTE) | 30d | watch | 2 | 0.0 | -38.20 | -48.75 | -44.79 | -27.64 | 31 | 0 | 0 | $-55.00 | 100.0% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 11 | 36.4 | -50.00 | -88.89 | -65.67 | +531.58 | 45 | 12 | 5 | $+260.00 | 45.5% | early sample with non-positive median |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 35 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |

@@ -8,7 +8,7 @@ S166,GapDown strong call,3d ATM strong,watch,insufficient sample (<8 exits),49,6
 S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),142,69,48,21,220.18,72.55,-63.41,-6.38,972.63,3382.0,11,35,15,9,11,21.7
 S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),115,27,22,5,47.99,61.9,-71.66,39.48,115.78,830.0,6,35,16,5,9,25.9
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),105,43,32,11,155.39,57.14,-59.71,-10.87,725.71,1359.0,7,35,10,8,6,30.2
-S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),48,23,19,4,43.5,57.14,-60.62,47.06,79.74,530.0,8,35,8,5,4,34.8
+S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),50,23,19,4,43.5,57.14,-60.62,47.06,79.74,530.0,8,35,10,5,4,34.8
 S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),123,41,29,12,33.88,53.23,-91.67,-17.02,122.22,916.0,7,35,19,9,11,22.0
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),96,42,27,15,57.86,50.88,-65.09,-50.51,251.16,833.0,8,35,16,10,11,21.4
 S361,RubberBand_2DTE,2d,watch,fat left tail (p10 < -45%),109,41,23,18,114.68,44.83,-68.52,-53.33,253.33,212.0,7,35,8,7,8,26.8
@@ -75,8 +75,8 @@ S416,BBSqueeze_ATM,0d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0
 S417,BBSqueeze_OTM1,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S418,BBSqueeze_OTM2,7d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S419,BBSqueeze_OTM3,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
-S356,GapDown_14DTE,14d,watch,early sample with non-positive median,54,18,5,13,-13.37,-23.31,-52.29,-50.0,53.99,-125.0,5,35,6,1,5,33.3
-S365,RubberBand_14DTE,14d,watch,early sample with non-positive median,46,16,6,10,2.92,-24.16,-73.45,-51.8,65.47,-77.0,5,35,10,4,5,37.5
+S356,GapDown_14DTE,14d,watch,early sample with non-positive median,56,18,5,13,-13.37,-23.31,-52.29,-50.0,53.99,-125.0,5,35,8,1,5,33.3
+S365,RubberBand_14DTE,14d,watch,early sample with non-positive median,48,16,6,10,2.92,-24.16,-73.45,-51.8,65.47,-77.0,5,35,12,4,5,37.5
 S367,RubberBand_30DTE,30d,watch,insufficient sample (<8 exits),10,2,0,2,-38.2,-38.2,-48.75,-44.79,-27.64,-55.0,2,31,0,0,1,100.0
 S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,early sample with non-positive median,110,11,4,7,81.5,-50.0,-88.89,-65.67,531.58,260.0,4,45,12,5,4,45.5
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),20,6,1,5,-33.91,-50.0,-66.67,-62.5,14.93,-5.0,2,35,0,0,2,83.3
