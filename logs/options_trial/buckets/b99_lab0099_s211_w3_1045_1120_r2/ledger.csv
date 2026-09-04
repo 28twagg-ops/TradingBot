@@ -25,4 +25,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-12 15:00:02.248005+00:00,entry,99,lab0099_s211_w3_1045_1120_r2,S211,f711c2390eb6,CVNA,CVNA260814C00074000,1,0.34,0.34,34.0,,,,-0.01,,0.5,-0.5,,,4182847c-4e1e-4fbf-9724-6a32dafe25e2
 2026-08-20T14:46:06Z,reconcile,99,lab0099_s211_w3_1045_1120_r2,S211,8ac90a4a2272,SLB,SLB260821C00054000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-03 14:57:49.032464+00:00,entry,99,lab0099_s211_w3_1045_1120_r2,S211,32be36ecc809,DKNG,DKNG260904C00026000,1,0.04,0.03,3.0,,,,-0.01,,0.75,-0.75,0.22222222222222227,MA21 crossed above MA50,95bbf60d-ab23-48e0-9763-de65cc15b6aa
-2026-09-04T13:55:04Z,reconcile,99,lab0099_s211_w3_1045_1120_r2,S211,32be36ecc809,DKNG,DKNG260904C00026000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-04T13:40:12Z,reconcile,99,lab0099_s211_w3_1045_1120_r2,S211,32be36ecc809,DKNG,DKNG260904C00026000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
