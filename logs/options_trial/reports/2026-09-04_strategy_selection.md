@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-04
 
-_Generated 2026-09-04T10:09:18.701332_
+_Generated 2026-09-04T10:12:55.396936_
 
 ## Summary
 
@@ -11,9 +11,9 @@ _Generated 2026-09-04T10:09:18.701332_
 
 ## Attribution health
 
-- Total exits: **2797**
+- Total exits: **2798**
 - Orphan exits (b0/orphan_reconcile): **351**
-- Orphan rate: **12.6%** (warn if >10%)
+- Orphan rate: **12.5%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
 
 ## Strategy scoreboard
@@ -101,23 +101,23 @@ _Generated 2026-09-04T10:09:18.701332_
 | S367 (RubberBand_30DTE) | 30d | watch | 2 | 0.0 | -38.20 | -48.75 | -44.79 | -27.64 | 31 | 0 | 0 | $-55.00 | 100.0% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 11 | 36.4 | -50.00 | -88.89 | -65.67 | +531.58 | 45 | 12 | 5 | $+260.00 | 45.5% | early sample with non-positive median |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 35 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
-| S366 (RubberBand_21DTE) | 21d | watch | 11 | 27.3 | -51.72 | -56.92 | -56.92 | +96.08 | 31 | 8 | 3 | $-127.00 | 72.7% | early sample with non-positive median |
+| S366 (RubberBand_21DTE) | 21d | watch | 12 | 33.3 | -50.42 | -56.92 | -56.92 | +95.91 | 31 | 10 | 4 | $-77.00 | 66.7% | early sample with non-positive median |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 10 | 0.0 | -60.53 | -74.54 | -66.39 | -37.62 | 38 | 4 | 0 | $-171.00 | 40.0% | early sample with non-positive median |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 6 | 0.0 | -61.46 | -82.78 | -69.36 | -50.75 | 37 | 0 | 0 | $-210.00 | 83.3% | insufficient sample (<8 exits) |
 | S408 (RubberBand_ITM1) | 3d | drop | 45 | 48.9 | +0.00 | -69.49 | -55.56 | +746.23 | 32 | 4 | 2 | $+1,104.00 | 22.2% | non-positive median return |
 | S411 (RubberBand_OTM2) | 3d | drop | 33 | 48.5 | +0.00 | -56.72 | -51.67 | +37.88 | 32 | 12 | 4 | $-321.00 | 27.3% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 36 | 47.2 | -2.90 | -51.79 | -23.26 | +114.15 | 35 | 12 | 7 | $+110.00 | 22.2% | non-positive median return |
-| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 70 | 47.1 | -6.25 | -81.57 | -51.09 | +66.07 | 39 | 10 | 2 | $-173.00 | 21.4% | non-positive median return |
+| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 70 | 47.1 | -6.25 | -81.57 | -51.09 | +66.07 | 39 | 12 | 2 | $-173.00 | 21.4% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 60 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 60 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
-| S355 (GapDown_7DTE) | 7d | drop | 57 | 47.4 | -37.14 | -70.21 | -62.50 | +190.00 | 35 | 11 | 8 | $+489.00 | 29.8% | non-positive median return |
+| S355 (GapDown_7DTE) | 7d | drop | 57 | 47.4 | -37.14 | -70.21 | -62.50 | +190.00 | 35 | 13 | 8 | $+489.00 | 29.8% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 249 | 30.9 | -38.00 | -63.29 | -53.52 | +84.90 | 60 | 10 | 4 | $-1,526.78 | 26.5% | non-positive median return |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 43 | 27.9 | -38.10 | -80.62 | -55.60 | +102.82 | 39 | 4 | 2 | $-207.00 | 34.9% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 56 | 33.9 | -42.86 | -83.93 | -65.20 | +103.47 | 35 | 0 | 0 | $-118.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S359 (RubberBand_0DTE) | 0d | drop | 27 | 29.6 | -44.44 | -71.43 | -69.40 | +185.71 | 32 | 8 | 4 | $-176.00 | 37.0% | non-positive median return |
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 39 | 0 | 0 | $-822.00 | 43.2% | manually paused — excluded from new entries & reflected P&L |
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 35 | 0 | 0 | $+33.00 | 26.3% | manually paused — excluded from new entries & reflected P&L |
-| S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 50 | 36.0 | -48.59 | -80.50 | -59.70 | +138.30 | 39 | 14 | 10 | $+255.00 | 60.0% | non-positive median return |
+| S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 50 | 36.0 | -48.59 | -80.50 | -59.70 | +138.30 | 39 | 16 | 10 | $+255.00 | 60.0% | non-positive median return |
 | S354 (GapDown_5DTE) | 5d | drop | 51 | 41.2 | -50.77 | -92.16 | -75.99 | +137.78 | 35 | 8 | 6 | $+220.00 | 27.5% | non-positive median return |
 | S351 (GapDown_1DTE) | 1d | drop | 56 | 26.8 | -52.55 | -78.66 | -68.17 | +261.46 | 35 | 12 | 6 | $+101.00 | 23.2% | non-positive median return |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 38 | 21.1 | -53.98 | -82.47 | -74.25 | +121.64 | 39 | 6 | 3 | $-517.00 | 42.1% | non-positive median return |
@@ -193,7 +193,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S210 | 3d ATM MA cross 8/21 | 70 | -6.25 | -81.57 | -51.09 | 10 | 2 |
+| S210 | 3d ATM MA cross 8/21 | 70 | -6.25 | -81.57 | -51.09 | 12 | 2 |
 | S211 | 3d ATM MA cross 21/50 | 43 | -38.10 | -80.62 | -55.60 | 4 | 2 |
 | S212 | 3d ATM MA bounce 50 | 83 | -68.09 | -98.15 | -81.35 | 0 | 0 |
 | S213 | 3d ATM MA bounce 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
@@ -206,7 +206,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S216 | 3d ATM RSI x30 | 38 | -53.98 | -82.47 | -74.25 | 6 | 3 |
-| S217 | 3d ATM RSI<25 bounce | 50 | -48.59 | -80.50 | -59.70 | 14 | 10 |
+| S217 | 3d ATM RSI<25 bounce | 50 | -48.59 | -80.50 | -59.70 | 16 | 10 |
 | S218 | 3d ATM BB lower touch | 68 | +41.03 | -71.43 | -49.55 | 14 | 8 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
@@ -275,7 +275,7 @@ _Pipeline evaluation as of 2026-09-04. Auto-kill thresholds: median<-25% at n>=1
 | S363 | RubberBand_5DTE | 32 | -68.84% | 41% | INSUFFICIENT | 32 |
 | S364 | RubberBand_7DTE | 50 | +23.90% | 52% | INSUFFICIENT | 35 |
 | S365 | RubberBand_14DTE | 16 | -24.16% | 38% | INSUFFICIENT | 35 |
-| S366 | RubberBand_21DTE | 11 | -51.72% | 27% | WATCH | 31 |
+| S366 | RubberBand_21DTE | 12 | -50.42% | 33% | WATCH | 31 |
 | S367 | RubberBand_30DTE | 2 | -38.20% | 0% | WATCH | 31 |
 | S368 | BBSqueeze_0DTE | 0 | — | — | NEW | 0 |
 | S369 | BBSqueeze_1DTE | 0 | — | — | NEW | 0 |
