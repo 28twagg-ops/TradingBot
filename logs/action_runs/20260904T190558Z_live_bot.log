@@ -1,0 +1,59 @@
+19:05:59  INFO      Mode: exits
+19:06:00  INFO        place_all_stops: checking 3 positions...
+19:06:00  INFO        STOP skipped AMZN: fractional (0.1353 shares) — software exit will handle it
+19:06:00  INFO        STOP skipped APD: fractional (0.1144 shares) — software exit will handle it
+19:06:00  INFO        STOP skipped LII: fractional (0.0895 shares) — software exit will handle it
+19:06:00  INFO        [positions] 3/3 (3 valid)
+19:06:00  INFO        SELL MARKET [urgent] APD closed
+19:06:03  INFO        TX logged: SELL APD  P&L -0.61%
+19:06:03  INFO        Daily log -> logs/daily/2026-09-04.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         19:06 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $230.39|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  APD  P&L -0.6%  $-0.21                         EXIT: stop_loss (-0.6%)|
+|  LII  P&L +0.8%  $+0.28                                            HOLD|
+|  AMZN  P&L +1.0%  $+0.35                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  APD                                         -0.61%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
