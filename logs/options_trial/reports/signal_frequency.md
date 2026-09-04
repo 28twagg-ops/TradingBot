@@ -1,6 +1,6 @@
 # Options signal frequency
 
-_Generated 2026-09-04T10:02:59.307472_
+_Generated 2026-09-04T10:09:22.651579_
 
 Headline counts are **unique (strategy, underlying, date)** from `ENTRY` lines in `logs/options_trial/runs/*.log`.
 Raw log-line counts (multi-bucket duplicates) are shown below for debug.
@@ -27,18 +27,18 @@ Raw log-line counts (multi-bucket duplicates) are shown below for debug.
 | 2026-09-01 |    2 |    2 |    2 |    1 |    2 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    11 |
 | 2026-09-02 |    1 |    1 |    1 |    1 |    1 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     6 |
 | 2026-09-03 |    1 |    1 |    1 |    1 |    1 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     6 |
-| 2026-09-04 |    1 |    1 |    0 |    1 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     4 |
+| 2026-09-04 |    2 |    2 |    1 |    2 |    1 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    10 |
 
 ## Per-strategy summary (unique underlyings)
 
 | Strategy | Unique entries | Active days | Avg unique / active day | Est. active days to n=30 exits* |
 |----------|---------------:|------------:|------------------------:|--------------------------------|
-| S163 | 11 | 10 | 1.1 | ~35 active signal-days |
-| S164 | 12 | 9 | 1.3 | ~29 active signal-days |
-| S165 | 24 | 16 | 1.5 | ~25 active signal-days |
-| S166 | 8 | 8 | 1.0 | ~38 active signal-days |
-| S167 | 11 | 9 | 1.2 | ~31 active signal-days |
-| S168 | 10 | 8 | 1.2 | ~30 active signal-days |
+| S163 | 12 | 10 | 1.2 | ~32 active signal-days |
+| S164 | 13 | 9 | 1.4 | ~26 active signal-days |
+| S165 | 25 | 17 | 1.5 | ~26 active signal-days |
+| S166 | 9 | 8 | 1.1 | ~34 active signal-days |
+| S167 | 12 | 10 | 1.2 | ~32 active signal-days |
+| S168 | 11 | 8 | 1.4 | ~28 active signal-days |
 | S169 | 0 | 0 | 0.0 | inf (no unique entries yet) |
 | S170 | 0 | 0 | 0.0 | inf (no unique entries yet) |
 | S171 | 0 | 0 | 0.0 | inf (no unique entries yet) |
@@ -54,7 +54,7 @@ Raw log-line counts (multi-bucket duplicates) are shown below for debug.
 | Window | S163 | S164 | S165 | S166 | S167 | S168 | S169 | S170 | S171 | S172 | S175 | S173 | S174 | Total |
 |--------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|------:|
 | w1     |    5 |    4 |    8 |    3 |    4 |    4 |    0 |    0 |    0 |    0 |    0 |    7 |    1 |    36 |
-| w2     |    6 |    5 |   11 |    6 |    6 |    5 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    48 |
+| w2     |    7 |    6 |   12 |    7 |    7 |    6 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    54 |
 | w3     |    8 |    6 |   13 |    5 |    7 |    6 |    0 |    0 |    0 |    0 |    0 |    7 |    4 |    56 |
 | w4     |    6 |    4 |   10 |    3 |    5 |    6 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    43 |
 
@@ -64,12 +64,12 @@ Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:
 
 | Strategy | Raw log lines (includes multi-bucket duplicates) | Unique underlying symbols |
 |----------|-------------------------------------------------:|--------------------------:|
-| S163 | 237 | 11 |
-| S164 | 253 | 12 |
-| S165 | 1695 | 24 |
-| S166 | 129 | 8 |
-| S167 | 249 | 11 |
-| S168 | 182 | 10 |
+| S163 | 241 | 12 |
+| S164 | 257 | 13 |
+| S165 | 1699 | 25 |
+| S166 | 133 | 9 |
+| S167 | 253 | 12 |
+| S168 | 184 | 11 |
 | S169 | 0 | 0 |
 | S170 | 0 | 0 |
 | S171 | 0 | 0 |
@@ -102,7 +102,7 @@ Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:
 | 2026-09-01 |    8 |    6 |    6 |    2 |    6 |    6 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    34 |
 | 2026-09-02 |   10 |   10 |   10 |    2 |   10 |   14 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    56 |
 | 2026-09-03 |   10 |    4 |    4 |   16 |    4 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    48 |
-| 2026-09-04 |    4 |    4 |    0 |    4 |    0 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    14 |
+| 2026-09-04 |    8 |    8 |    4 |    8 |    4 |    4 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    36 |
 
 ## Notes
 

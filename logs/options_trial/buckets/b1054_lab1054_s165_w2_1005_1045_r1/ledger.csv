@@ -1,3 +1,5 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-09-02 14:07:03.914052+00:00,entry,1054,lab1054_s165_w2_1005_1045_r1,S165,a7ecbd1d2520,MARA,MARA260904C00010500,1,0.2,0.19,19.0,,,,-0.01,,0.75,-0.75,0.04878048780487795,gap -2.2%,9ddc23eb-0016-47ba-b478-a1f8fdc139c6
 2026-09-03T15:46:04Z,reconcile,1054,lab1054_s165_w2_1005_1045_r1,S165,a7ecbd1d2520,MARA,MARA260904C00010500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-04 14:07:06.719891+00:00,entry,1054,lab1054_s165_w2_1005_1045_r1,S165,491134d32198,TSLA,TSLA260909C00382500,1,0.62,0.62,62.0,,,,-0.01,,0.75,-0.75,0.03225806451612906,gap -3.8%,b8be25d0-f45a-4db2-aaf3-db4b7029a56b
+2026-09-03 15:42:39.556402+00:00,exit,1054,lab1054_s165_w2_1005_1045_r1,S165,491134d32198,TSLA,TSLA260909C00382500,1,,1.2,62.0,93.55,58.0,reconcile_fill,,-0.01,0.5,-0.5,,,ae249e0c-ba28-49c0-ab84-630795472da3
