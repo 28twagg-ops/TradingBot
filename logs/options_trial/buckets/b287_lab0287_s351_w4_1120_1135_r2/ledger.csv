@@ -31,3 +31,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-17T13:01:00Z,reconcile,287,lab0287_s351_w4_1120_1135_r2,S351,dcb055d637f0,MSTR,MSTR260814C00098000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-04 15:32:49.943846+00:00,entry,287,lab0287_s351_w4_1120_1135_r2,S351,ae32295b54f9,TSLA,TSLA260904C00365000,1,0.09,0.09,9.0,,,,-0.01,,0.5,-0.5,,,a201d458-372d-405a-b559-276bb73282bb
 2026-09-04 15:32:12.272973+00:00,entry,287,lab0287_s351_w4_1120_1135_r2,S351,2bded8a706c4,TSLA,TSLA260904C00365000,1,0.09,0.09,9.0,,,,-0.01,,0.5,-0.5,,,b2befecd-1cec-4ea7-aecc-67e01620afbb
+2026-09-04T16:46:30Z,reconcile,287,lab0287_s351_w4_1120_1135_r2,S351,ae32295b54f9,TSLA,TSLA260904C00365000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-04T16:46:31Z,reconcile,287,lab0287_s351_w4_1120_1135_r2,S351,2bded8a706c4,TSLA,TSLA260904C00365000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
