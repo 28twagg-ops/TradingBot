@@ -85,7 +85,7 @@ S209,GapDown_Recovery,3d ATM gap-recovery,watch,insufficient sample (<8 exits),3
 S408,RubberBand_ITM1,3d,drop,non-positive median return,112,45,22,23,150.8,0.0,-69.49,-55.56,746.23,1104.0,7,32,6,2,7,22.2
 S411,RubberBand_OTM2,3d,drop,non-positive median return,105,33,16,17,-14.45,0.0,-56.72,-51.67,37.88,-321.0,6,32,12,4,8,27.3
 S412,RubberBand_OTM3,3d,drop,non-positive median return,111,36,17,19,23.56,-2.9,-51.79,-23.26,114.15,110.0,8,35,12,7,9,22.2
-S210,MA_Cross_8_21,3d ATM MA cross 8/21,drop,non-positive median return,165,70,33,37,7.72,-6.25,-81.57,-51.09,66.07,-173.0,7,39,14,2,12,21.4
+S210,MA_Cross_8_21,3d ATM MA cross 8/21,drop,non-positive median return,165,71,34,37,8.33,-6.25,-81.25,-50.96,64.71,-143.0,8,39,14,3,13,21.1
 S399,GapDown_OTM1,3d,drop,non-positive median return,152,55,27,28,71.19,-17.24,-84.36,-66.67,183.89,148.0,9,35,22,12,11,29.1
 S174,RubberBand long call EOD,RubberBand (dropped),drop,non-positive median return,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,60,0,0,6,50.4
 S355,GapDown_7DTE,7d,drop,non-positive median return,111,58,28,30,23.45,-26.38,-69.85,-61.88,189.38,517.0,10,35,15,9,9,29.3
