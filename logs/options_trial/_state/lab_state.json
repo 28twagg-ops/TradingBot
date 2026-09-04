@@ -2262,26 +2262,6 @@
       "entry_order_id": "8b6e4fc0-86fc-4109-b5d1-826ccc6ebfce"
     },
     {
-      "lot_id": "f74071339da9",
-      "bucket_id": 267,
-      "profile_name": "lab0267_s403_w3_1045_1120_r2",
-      "strategy_id": "S403",
-      "occ_symbol": "MS260911C00225000",
-      "underlying": "MS",
-      "qty": 1,
-      "entry_cost": 35.0,
-      "entry_price": 0.35,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-04T14:56:11.941221+00:00",
-      "entry_order_id": "5ff90776-2590-4269-bb3e-be9a7fc2f7e1"
-    },
-    {
       "lot_id": "098fc05397d1",
       "bucket_id": 266,
       "profile_name": "lab0266_s403_w3_1045_1120_r1",
@@ -2685,14 +2665,24 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "39717b41-b452-4bfe-9447-74131e8b9fbb",
-      "lot_id": "f74071339da9",
-      "bucket_id": 267,
+      "order_id": "a5a638b1-77cd-45a7-8906-d5ca46ea838c",
+      "lot_id": "75ade40b4119",
+      "bucket_id": 265,
+      "strategy_id": "S403",
+      "occ_symbol": "MS260911C00222500",
+      "qty": 1,
+      "reason": "take_profit (+50.0%)",
+      "submitted": "2026-09-04T14:01:08"
+    },
+    {
+      "order_id": "374b07a2-38da-43b1-b268-41ea336683b2",
+      "lot_id": "098fc05397d1",
+      "bucket_id": 266,
       "strategy_id": "S403",
       "occ_symbol": "MS260911C00225000",
       "qty": 1,
-      "reason": "take_profit (+54.3%)",
-      "submitted": "2026-09-04T13:41:23"
+      "reason": "take_profit (+62.9%)",
+      "submitted": "2026-09-04T14:01:12"
     }
   ],
   "bucket_open_premium": {
@@ -2803,7 +2793,6 @@
     "b804": 49.0,
     "b781": 49.0,
     "b780": 49.0,
-    "b267": 35.0,
     "b266": 35.0,
     "b183": 55.00000000000001,
     "b423": 42.0,
@@ -3439,7 +3428,8 @@
     "4410be5d-2367-41d4-b7f0-198b9be89937",
     "bd9b3fde-38ec-4f98-807f-7b27a965099a",
     "d840db47-452f-4097-a7b2-ca513e0f25cd",
-    "1ed02ad9-3282-4641-9def-5d6dafc7292d"
+    "1ed02ad9-3282-4641-9def-5d6dafc7292d",
+    "39717b41-b452-4bfe-9447-74131e8b9fbb"
   ],
   "submitted_today": 143,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
