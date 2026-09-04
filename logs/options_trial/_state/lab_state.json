@@ -1902,26 +1902,6 @@
       "entry_order_id": "2fe28b13-5fee-42c2-98af-a92c9600445c"
     },
     {
-      "lot_id": "2981fc01e742",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S218",
-      "occ_symbol": "PEP260911C00142000",
-      "underlying": "PEP",
-      "qty": 1,
-      "entry_cost": 43.0,
-      "entry_price": 0.43,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-04T14:16:04.724233+00:00",
-      "entry_order_id": "e28d7779-4fa2-451a-ab61-5afc5ed71c61"
-    },
-    {
       "lot_id": "2154e9f87368",
       "bucket_id": 859,
       "profile_name": "lab0859_s408_w2_1005_1045_r2",
@@ -2231,7 +2211,7 @@
     "b912": 28.000000000000004,
     "b899": 46.0,
     "b898": 46.0,
-    "b90": 162.0,
+    "b90": 119.0,
     "b792": 28.000000000000004,
     "b419": 52.0,
     "b405": 28.000000000000004,
@@ -2880,7 +2860,8 @@
     "a1e83658-1580-4c8a-9b79-66947df5a0a0",
     "5ca3ec61-7b07-4c11-acad-b00650fd81f9",
     "4e9c3860-19eb-448c-ae0e-3602f272bc68",
-    "76ae00d8-8ec2-4fe3-818d-b88636c10c50"
+    "76ae00d8-8ec2-4fe3-818d-b88636c10c50",
+    "a72e2653-e5bd-4e7d-a68f-6e9766ad63fd"
   ],
   "submitted_today": 97,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
