@@ -473,3 +473,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-03 15:56:39.639686+00:00,exit,0,orphan_reconcile,ORPHAN,5d6ac9ba7cda,TSLA,TSLA260909C00390000,1,,1.56,48.75,220.0,107.25,reconcile_fill,,-0.01,0.5,-0.4,,,90079185-3998-4623-af09-0fee9c03ca53
 2026-09-03 15:56:12.354869+00:00,exit,0,orphan_reconcile,ORPHAN,5d6ac9ba7cda,TSLA,TSLA260909C00390000,1,,0.52,48.75,6.67,3.25,reconcile_fill,,-0.01,0.5,-0.4,,,20f5a896-5698-45cc-932d-9b1dc41471ef
 2026-09-04 15:26:50.089373+00:00,exit,0,orphan_reconcile,ORPHAN,e47d5611f499,TTD,TTD260911C00015000,1,,0.18,33.0,-45.45,-15.0,stop_loss (-45.5%),,-0.01,0.5,-0.4,,,582c9c56-3655-4fc5-aa0f-026774b7995f
+2026-09-04T18:16:06Z,reconcile,0,orphan_reconcile,ORPHAN,c5231537b23c,MS,MS260911C00222500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-04 18:11:18.000013+00:00,exit,0,orphan_reconcile,ORPHAN,19cb76754714,TSLA,TSLA260909C00390000,1,,1.14,48.75,133.85,65.25,take_profit (+58.3%),,-0.01,0.5,-0.4,,,e575aa85-246d-47e8-bd5e-f824cb813463

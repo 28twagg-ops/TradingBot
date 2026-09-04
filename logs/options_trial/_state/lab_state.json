@@ -568,8 +568,8 @@
       "strategy_id": "ORPHAN",
       "occ_symbol": "TSLA260909C00390000",
       "underlying": "TSLA",
-      "qty": 2,
-      "entry_cost": 97.5,
+      "qty": 1,
+      "entry_cost": 48.75,
       "entry_price": 0.4875,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
@@ -1782,26 +1782,6 @@
       "entry_order_id": "a1e83658-1580-4c8a-9b79-66947df5a0a0"
     },
     {
-      "lot_id": "c5231537b23c",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "MS260911C00222500",
-      "underlying": "MS",
-      "qty": 1,
-      "entry_cost": 72.0,
-      "entry_price": 0.72,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-04T14:27:53.707162+00:00",
-      "entry_order_id": "orphan:MS260911C00222500"
-    },
-    {
       "lot_id": "1ec1c616b46f",
       "bucket_id": 789,
       "profile_name": "lab0789_s398_w3_1045_1120_r2",
@@ -2623,18 +2603,7 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "e575aa85-246d-47e8-bd5e-f824cb813463",
-      "lot_id": "c5231537b23c",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "MS260911C00222500",
-      "qty": 1,
-      "reason": "take_profit (+58.3%)",
-      "submitted": "2026-09-04T14:11:17"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b437": 61.0,
     "b436": 61.0,
@@ -2664,7 +2633,7 @@
     "b1123": 49.0,
     "b1053": 56.00000000000001,
     "b1052": 56.00000000000001,
-    "b0": 500.125,
+    "b0": 379.375,
     "b769": 72.0,
     "b768": 72.0,
     "b17": 47.0,
@@ -3378,7 +3347,8 @@
     "d840db47-452f-4097-a7b2-ca513e0f25cd",
     "1ed02ad9-3282-4641-9def-5d6dafc7292d",
     "39717b41-b452-4bfe-9447-74131e8b9fbb",
-    "a5a638b1-77cd-45a7-8906-d5ca46ea838c"
+    "a5a638b1-77cd-45a7-8906-d5ca46ea838c",
+    "e575aa85-246d-47e8-bd5e-f824cb813463"
   ],
   "submitted_today": 143,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

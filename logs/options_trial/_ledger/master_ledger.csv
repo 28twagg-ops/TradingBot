@@ -12846,3 +12846,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-04 17:56:25.889041+00:00,exit,267,lab0267_s403_w3_1045_1120_r2,S403,f74071339da9,MS,MS260911C00225000,1,,0.55,35.0,57.14,20.0,take_profit (+54.3%),,-0.01,0.5,-0.5,,,39717b41-b452-4bfe-9447-74131e8b9fbb
 2026-09-04T18:11:05Z,reconcile,266,lab0266_s403_w3_1045_1120_r1,S403,098fc05397d1,MS,MS260911C00225000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-04 18:06:53.120853+00:00,exit,265,lab0265_s403_w2_1005_1045_r2,S403,75ade40b4119,MS,MS260911C00222500,1,,1.09,72.0,51.39,37.0,take_profit (+50.0%),,-0.01,0.5,-0.5,,,a5a638b1-77cd-45a7-8906-d5ca46ea838c
+2026-09-04T18:16:06Z,reconcile,0,orphan_reconcile,ORPHAN,c5231537b23c,MS,MS260911C00222500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-04 18:11:18.000013+00:00,exit,0,orphan_reconcile,ORPHAN,19cb76754714,TSLA,TSLA260909C00390000,1,,1.14,48.75,133.85,65.25,take_profit (+58.3%),,-0.01,0.5,-0.4,,,e575aa85-246d-47e8-bd5e-f824cb813463
