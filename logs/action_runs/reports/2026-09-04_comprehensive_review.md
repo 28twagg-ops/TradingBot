@@ -14897,3 +14897,132 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260904T195636Z
+
+- UTC timestamp: `20260904T195636Z`
+- GitHub run: [#9135](https://github.com/28twagg-ops/TradingBot/actions/runs/33913595978)
+- Run id: `33913595978`
+- Live bot: exit=`0`, duration=`217s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260904T195636Z_live_bot.log`, `logs/action_runs/20260904T195636Z_live_options.log`, `logs/action_runs/20260904T195636Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1028 | 50.1 | +8.6 | +47.6 | $+15,654 |
+| TAINTED | 1790 | 33.5 | -38.3 | +12.8 | $-8,613 |
+| KEEP-only | 551 | 64.2 | +51.4 | +73.6 | $+10,279 |
+| KEEP-only recent | 343 | 61.2 | +53.6 | +90.2 | $+5,022 |
+
+- KEEP strategies (22): S173, S174, S210, S218, S350, S352, S353, S354, S355, S357, S361, S362, S363, S364, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (18): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S359, S360, S365, S366, S405, S407, S408, S411
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-04T15:44:57.567985-04:00","date":"2026-09-04","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":21.9,"phases_s":{"reconcile":0.34,"cancel":0.15,"manage":17.15,"protective_stops":3.77},"signals":0,"placed":0,"equity":1005246.43,"open_positions":41,"pending_orders":0,"open_lots":128,"submitted_today":143,"filled_today":186,"unattributed_contracts":0,"top_signals":[],"github_run":"9132","github_run_id":"33912329082","status":"ok","data_quality":{"clean":{"n":1028,"win":50.1,"med":8.63,"avg":47.58,"pnl":15654.21},"tainted":{"n":1790,"win":33.52,"med":-38.34,"avg":12.76,"pnl":-8612.84},"keep_only":{"n":551,"win":64.25,"med":51.39,"avg":73.64,"pnl":10279.45},"keep_only_recent":{"n":343,"win":61.22,"med":53.57,"avg":90.18,"pnl":5022.0},"keep_strategies":["S173","S174","S210","S218","S350","S352","S353","S354","S355","S357","S361","S362","S363","S364","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S359","S360","S365","S366","S405","S407","S408","S411"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (128 earlier lines - see full log file)
+|  IBKR     Pullback50      eq     $92.75   47.4   -1.74   50MA bounce (+|
+|  JBHT     Pullback50      eq     $273.62  42.7   -0.71   50MA bounce (-|
+|  KEYS     Pullback50      eq     $326.70  29.8   -1.11   50MA bounce (+|
+|  JCI      Pullback50      eq     $144.76  33.2   -1.50   50MA bounce (+|
+|  KLAC     MomReversal     eq     $186.09  32.0   0.31    -91.3% drop/60|
+|  KLAC     RSIRecovery     eq     $186.09  32.0   0.31    RSI 14.6→32.0 |
+|  MDLZ     Pullback50      eq     $61.27   44.1   -0.62   50MA bounce (-|
+|  MCO      Pullback50      eq     $493.33  58.2   -2.16   50MA bounce (+|
+|  STX      Pullback50      eq     $848.34  31.0   -1.24   50MA bounce (-|
+|  TFC      Pullback50      eq     $51.73   44.7   -2.26   50MA bounce (+|
+|  USB      Pullback50      eq     $63.40   41.1   -1.75   50MA bounce (+|
+|  VRT      Pullback50      eq     $280.52  44.1   -1.45   50MA bounce (-|
+|  VTRS     Pullback50      eq     $16.89   63.0   -1.60   50MA bounce (+|
+|  WAB      Pullback50      eq     $282.59  28.3   -1.96   50MA bounce (-|
+|  ASB      Pullback50      eq     $31.07   37.3   -0.83   50MA bounce (+|
+|  BKH      Pullback50      eq     $73.12   48.3   -1.28   50MA bounce (-|
+|  CBSH     Pullback50      eq     $58.39   36.4   -2.32   50MA bounce (-|20:00:12  INFO        place_all_stops: checking 3 positions...
+20:00:12  INFO        STOP skipped AMZN: fractional (0.1353 shares) — software exit will handle it
+20:00:12  INFO        STOP skipped FLEX: fractional (0.3161 shares) — software exit will handle it
+20:00:12  INFO        STOP skipped LII: fractional (0.0895 shares) — software exit will handle it
+20:00:12  INFO        Daily log -> logs/daily/2026-09-04.md
+20:00:12  INFO        Dashboard written → logs/dashboard.md
+
+|  CFR      Pullback50      eq     $162.88  33.3   -0.94   50MA bounce (+|
+|  CHE      Pullback50      eq     $520.84  47.3   -1.44   50MA bounce (+|
+|  EEFT     Pullback50      eq     $73.81   60.1   -0.54   50MA bounce (-|
+|  ELAN     Pullback50      eq     $24.46   57.6   -0.90   50MA bounce (-|
+|  EWBC     Pullback50      eq     $130.82  35.3   -1.98   50MA bounce (-|
+|  EPR      Pullback50      eq     $60.19   47.4   0.62    50MA bounce (-|
+|  FIVE     EarningsDrift   eq     $252.37  58.5   0.66    post-earnings |
+|  GATX     Pullback50      eq     $178.12  42.9   -1.57   50MA bounce (-|
+|  HWC      Pullback50      eq     $75.83   34.1   -0.90   50MA bounce (-|
+|  HOMB     Pullback50      eq     $30.16   35.4   -2.03   50MA bounce (+|
+|  IESC     MomReversal     eq     $322.75  8.0    1.59    -52.4% drop/60|
+|  JAZZ     Pullback50      eq     $246.78  48.6   -0.79   50MA bounce (-|
+|  KNX      Pullback50      eq     $72.08   48.3   0.27    50MA bounce (-|
+|  MSM      Pullback50      eq     $121.53  44.0   -1.84   50MA bounce (-|
+|  NLY      Pullback50      eq     $22.84   38.6   -0.55   50MA bounce (-|
+|  NWE      Pullback50      eq     $70.76   49.6   -0.94   50MA bounce (-|
+|  NVT      Pullback50      eq     $155.97  30.3   -0.45   50MA bounce (-|
+|  ONB      Pullback50      eq     $26.07   34.2   -1.65   50MA bounce (-|
+|  OZK      Pullback50      eq     $50.39   43.5   -1.45   50MA bounce (-|
+|  ROIV     Pullback50      eq     $34.93   41.5   -0.45   50MA bounce (-|
+|  RYAN     Pullback50      eq     $41.90   51.5   -1.15   50MA bounce (-|
+|  RS       Pullback50      eq     $401.03  36.3   -0.56   50MA bounce (+|
+|  SFM      Pullback50      eq     $81.30   51.4   -0.74   50MA bounce (-|
+|  SITM     Pullback50      eq     $612.10  29.9   -0.99   50MA bounce (+|
+|  TRU      Pullback50      eq     $79.90   53.0   3.19    50MA bounce (+|
+|  UBSI     Pullback50      eq     $47.87   37.5   -1.74   50MA bounce (+|
+|  UMBF     Pullback50      eq     $143.73  31.5   -1.29   50MA bounce (-|
+|  VFC      MomReversal     eq     $13.46   33.0   0.57    -18.0% drop/60|
+|  VFC      RSIRecovery     eq     $13.46   33.0   0.57    RSI 22.0→33.0 |
+|  USFD     Pullback50      eq     $104.15  33.5   -1.60   50MA bounce (+|
+|  WTS      Pullback50      eq     $363.30  34.2   0.12    50MA bounce (+|
+|  XPO      RSIRecovery     eq     $193.18  32.2   1.15    RSI 18.6→32.2 |
+|  ZION     Pullback50      eq     $69.36   39.1   -1.53   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            897|
+|  Signals                                                             58|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $230.56|
+|  Cash                                                           $126.02|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
