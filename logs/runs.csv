@@ -6879,3 +6879,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-04 20:16:17,ext_exits,bull,230.49,126.02,0,0,0,3,AMZN|FLEX|LII,both
 2026-09-04 20:21:11,ext_exits,bull,230.5,126.02,0,0,0,3,AMZN|FLEX|LII,both
 2026-09-04 20:25:59,ext_exits,bull,230.5,126.02,0,0,0,3,AMZN|FLEX|LII,both
+2026-09-04 20:31:01,ext_exits,bull,230.52,126.02,0,0,0,3,AMZN|FLEX|LII,both
