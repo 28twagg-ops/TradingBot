@@ -1602,26 +1602,6 @@
       "entry_order_id": "orphan:TSLA260911C00395000"
     },
     {
-      "lot_id": "96b767c65f14",
-      "bucket_id": 181,
-      "profile_name": "lab0181_s217_w2_1005_1045_r2",
-      "strategy_id": "S217",
-      "occ_symbol": "BA260911C00217500",
-      "underlying": "BA",
-      "qty": 1,
-      "entry_cost": 72.0,
-      "entry_price": 0.72,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-04T14:12:34.401964+00:00",
-      "entry_order_id": "542f2691-7170-4292-b3aa-cbb18353f1d9"
-    },
-    {
       "lot_id": "c043e7a8ddf5",
       "bucket_id": 180,
       "profile_name": "lab0180_s217_w2_1005_1045_r1",
@@ -2102,26 +2082,6 @@
       "entry_order_id": "a0304168-7c5d-463c-b811-92ae4970091a"
     },
     {
-      "lot_id": "96749b3c3456",
-      "bucket_id": 805,
-      "profile_name": "lab0805_s404_w3_1045_1120_r2",
-      "strategy_id": "S404",
-      "occ_symbol": "UPST260911C00029000",
-      "underlying": "UPST",
-      "qty": 1,
-      "entry_cost": 49.0,
-      "entry_price": 0.49,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-04T14:52:45.042846+00:00",
-      "entry_order_id": "8434454a-b020-4715-b24d-f761e6f2323e"
-    },
-    {
       "lot_id": "c61e5d0ae3e6",
       "bucket_id": 804,
       "profile_name": "lab0804_s404_w3_1045_1120_r1",
@@ -2565,14 +2525,14 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "b01f589e-901f-4991-bf58-cc20794b0970",
-      "lot_id": "96b767c65f14",
-      "bucket_id": 181,
+      "order_id": "26156b19-f318-48e0-93db-46680e5b7e0f",
+      "lot_id": "c043e7a8ddf5",
+      "bucket_id": 180,
       "strategy_id": "S217",
       "occ_symbol": "BA260911C00217500",
       "qty": 1,
       "reason": "take_profit (+50.0%)",
-      "submitted": "2026-09-04T15:34:54"
+      "submitted": "2026-09-04T16:01:26"
     }
   ],
   "bucket_open_premium": {
@@ -2653,7 +2613,6 @@
     "b314": 57.99999999999999,
     "b433": 49.0,
     "b432": 49.0,
-    "b181": 72.0,
     "b180": 72.0,
     "b859": 6.0,
     "b858": 6.0,
@@ -2676,7 +2635,6 @@
     "b831": 13.0,
     "b830": 13.0,
     "b20": 32.0,
-    "b805": 49.0,
     "b804": 49.0,
     "b781": 49.0,
     "b780": 49.0,
@@ -3318,7 +3276,9 @@
     "39717b41-b452-4bfe-9447-74131e8b9fbb",
     "a5a638b1-77cd-45a7-8906-d5ca46ea838c",
     "e575aa85-246d-47e8-bd5e-f824cb813463",
-    "32a895a2-d36b-4507-ab00-bd3aadf0047b"
+    "32a895a2-d36b-4507-ab00-bd3aadf0047b",
+    "269304ca-1f54-4076-afaf-252c9ae6d0c8",
+    "b01f589e-901f-4991-bf58-cc20794b0970"
   ],
   "submitted_today": 143,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
