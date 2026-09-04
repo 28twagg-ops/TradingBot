@@ -2763,7 +2763,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "1ed02ad9-3282-4641-9def-5d6dafc7292d",
+      "lot_id": "0d7c58f3c56c",
+      "bucket_id": 87,
+      "strategy_id": "S210",
+      "occ_symbol": "WFC260911C00090000",
+      "qty": 1,
+      "reason": "take_profit (+50.8%)",
+      "submitted": "2026-09-04T12:56:16"
+    }
+  ],
   "bucket_open_premium": {
     "b437": 61.0,
     "b436": 61.0,
