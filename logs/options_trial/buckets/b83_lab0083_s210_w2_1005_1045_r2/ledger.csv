@@ -24,3 +24,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-03 14:07:23.646210+00:00,entry,83,lab0083_s210_w2_1005_1045_r2,S210,fbaafbaab1a1,META,META260904C00645000,1,0.47,0.47,47.0,,,,-0.01,,0.75,-0.75,0.02105263157894739,MA8 582.19 crossed above MA21,6d98a79e-6126-4cc9-9688-f715afcc3fc4
 2026-09-03T14:41:09Z,reconcile,83,lab0083_s210_w2_1005_1045_r2,S210,fbaafbaab1a1,META,META260904C00645000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-04 14:10:18.078303+00:00,entry,83,lab0083_s210_w2_1005_1045_r2,S210,e81cb7ac62e4,WFC,WFC260911C00091000,1,0.42,0.39,39.0,,,,-0.01,,0.5,-0.5,0.12345679012345676,MA8 87.28 crossed above MA21,26d47d38-3c0d-44fc-bf0c-42c21a6a0e10
+2026-09-04 18:36:13.644227+00:00,exit,83,lab0083_s210_w2_1005_1045_r2,S210,e81cb7ac62e4,WFC,WFC260911C00091000,1,,0.6,39.0,53.85,21.0,take_profit (+53.8%),,-0.01,0.5,-0.5,,,32a895a2-d36b-4507-ab00-bd3aadf0047b
