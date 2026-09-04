@@ -29,3 +29,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-17T14:55:59Z,reconcile,80,lab0080_s210_w1_0928_1005_r1,S210,0541fdcd21df,DKNG,DKNG260821C00027000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-03 14:04:26.908957+00:00,entry,80,lab0080_s210_w1_0928_1005_r1,S210,eb614ab91f11,META,META260904C00647500,1,0.43,0.43,43.0,,,,-0.01,,0.75,-0.75,0.14634146341463414,MA8 582.19 crossed above MA21,83f30a30-6c23-4e2d-97fe-927e3f36e80b
 2026-09-03T14:31:03Z,reconcile,80,lab0080_s210_w1_0928_1005_r1,S210,eb614ab91f11,META,META260904C00647500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-04 14:00:04.135255+00:00,entry,80,lab0080_s210_w1_0928_1005_r1,S210,623cd92836a5,TTD,TTD260911C00015000,1,0.33,0.33,33.0,,,,-0.01,,0.75,-0.75,0.1250000000000001,MA8 13.99 crossed above MA21,c3e2afb5-2cd4-41fc-b07b-ca8193c63302
+2026-09-03 14:26:19.124398+00:00,exit,80,lab0080_s210_w1_0928_1005_r1,S210,623cd92836a5,TTD,TTD260911C00015000,1,,0.21,33.0,-36.36,-12.0,reconcile_fill,,-0.01,0.5,-0.5,,,acf64207-4968-416b-8ba6-50140e964f97
