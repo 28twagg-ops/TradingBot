@@ -1,0 +1,287 @@
+13:46:28  INFO      Mode: morning_scan
+13:46:29  INFO        [positions] 2/2 (2 valid)
+13:46:29  INFO        Universe cache hit: 903 tickers (tickers_2026-09-04.json)
+13:46:30  INFO        [universe] 40/901 (40 valid)
+13:46:31  INFO        [universe] 80/901 (80 valid)
+13:46:32  INFO        [universe] 120/901 (120 valid)
+13:46:34  INFO        [universe] 160/901 (160 valid)
+13:46:36  INFO        [universe] 200/901 (199 valid)
+13:46:43  INFO        [universe] 240/901 (238 valid)
+13:46:56  INFO        [universe] 280/901 (278 valid)
+13:47:06  INFO        [universe] 320/901 (318 valid)
+13:47:19  INFO        [universe] 360/901 (358 valid)
+13:47:32  INFO        [universe] 400/901 (397 valid)
+13:47:42  INFO        [universe] 440/901 (437 valid)
+13:47:55  INFO        [universe] 480/901 (477 valid)
+13:48:08  INFO        [universe] 520/901 (517 valid)
+13:48:18  INFO        [universe] 560/901 (557 valid)
+13:48:31  INFO        [universe] 600/901 (597 valid)
+13:48:44  INFO        [universe] 640/901 (637 valid)
+13:48:57  INFO        [universe] 680/901 (677 valid)
+13:49:07  INFO        [universe] 720/901 (717 valid)
+13:49:20  INFO        [universe] 760/901 (757 valid)
+13:49:32  INFO        [universe] 800/901 (797 valid)
+13:49:42  INFO        [universe] 840/901 (837 valid)
+13:49:55  INFO        [universe] 880/901 (877 valid)
+13:50:02  INFO        [universe] 901/901 (898 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $230.59|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-09-04|
+|  Universe                                                          both|
+|  Mo~  Sep: GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $230.59|
+|  Cash                                                           $160.84|
+|  Reserve                                          $11.53  (always kept)|
+|  Stocks~  $69.75 / $172.94  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $103.19  (new stock buys)|
+|  Trade size             $34.59  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (2 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AMZN     Pullback50      $34.97     $255.49  $258.38  +1.1%   $+0.39  |
+|  LII      MomReversal     $34.78     $386.29  $388.74  +0.6%   $+0.22  |
+|                                                                        |
+|  Total invested                                                  $69.75|
+|  Total open P&L                                                  $+0.61|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (12971.0m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  LII  P&L +0.6%  $+0.22                                            HOLD|
+|  AMZN  P&L +1.1%  $+0.39                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  62                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  APD      Pullback50      eq     $302.71  52.5   -2.59   50MA bounce (+|
+|  MO       Pullback50      eq     $69.66   74.6   -2.63   50MA bounce (-|
+|  AMCR     Pullback50      eq     $45.09   47.4   -2.66   50MA bounce (-|
+|  BALL     Pullback50      eq     $62.84   62.4   -3.10   50MA bounce (-|
+|  TECH     Pullback50      eq     $72.44   51.8   -2.38   50MA bounce (+|
+|  BXP      Pullback50      eq     $68.38   56.5   -3.05   50MA bounce (-|
+|  BRK-B    Pullback50      eq     $506.57  62.4   -2.90   50MA bounce (+|
+|  CB       Pullback50      eq     $345.74  55.9   -2.70   50MA bounce (-|
+|  CHD      Pullback50      eq     $98.34   51.4   -3.24   50MA bounce (-|
+|  CI       Pullback50      eq     $283.70  61.5   -2.88   50MA bounce (+|
+|  CFG      Pullback50      eq     $71.00   35.4   -2.31   50MA bounce (-|
+|  DLR      Pullback50      eq     $188.47  36.0   -1.60   50MA bounce (+|
+|  ECL      Pullback50      eq     $278.50  53.6   -2.19   50MA bounce (-|
+|  EQIX     Pullback50      eq     $1042.~  33.4   -2.66   50MA bounce (-|
+|  FTNT     Pullback50      eq     $158.19  51.8   -2.70   50MA bounce (-|
+|  HIG      Pullback50      eq     $139.07  56.4   -1.68   50MA bounce (-|
+|  IBKR     Pullback50      eq     $92.06   46.4   -2.46   50MA bounce (+|
+|  JCI      Pullback50      eq     $144.06  31.4   -2.85   50MA bounce (-|
+|  KEYS     Pullback50      eq     $328.92  31.5   -1.46   50MA bounce (+|
+|  MTD      Pullback50      eq     $1348.~  29.6   -1.72   50MA bounce (-|
+|  MDLZ     Pullback50      eq     $61.29   44.2   -3.23   50MA bounce (-|
+|  MS       Pullback50      eq     $216.76  47.9   -3.58   50MA bounce (+|
+|  ROST     Pullback50      eq     $232.54  46.4   -1.77   50MA bounce (-|
+|  SBUX     Pullback50      eq     $106.19  45.0   -3.11   50MA bounce (+|
+|  TFC      Pullback50      eq     $51.61   43.8   -3.42   50MA bounce (+|
+|  USB      Pullback50      eq     $63.53   41.8   -2.99   50MA bounce (+|
+|  UNP      Pullback50      eq     $290.74  37.5   -2.79   50MA bounce (-|
+|  GWW      Pullback50      eq     $1327.~  52.5   -2.38   50MA bounce (-|13:50:04  INFO        BUY  APD  $34.59  [Pullback50]  id=be3f8e9f-f71e-4754-acbe-fbdd03cafa8a
+
+|  WAB      Pullback50      eq     $281.61  26.6   -2.58   50MA bounce (-|
+|  WMB      Pullback50      eq     $74.01   52.1   -1.65   50MA bounce (+|
+|  AHR      Pullback50      eq     $55.78   57.8   -1.42   50MA bounce (+|
+|  AM       Pullback50      eq     $22.35   53.8   -1.77   50MA bounce (+|
+|  AMG      Pullback50      eq     $364.59  44.6   -2.64   50MA bounce (+|
+|  ARMK     Pullback50      eq     $57.16   21.9   -2.00   50MA bounce (-|
+|  ASB      Pullback50      eq     $31.05   37.0   -2.48   50MA bounce (+|
+|  BKH      Pullback50      eq     $73.32   49.6   -2.80   50MA bounce (-|
+|  CBSH     Pullback50      eq     $58.20   34.9   -3.33   50MA bounce (-|
+|  CCK      Pullback50      eq     $115.40  46.7   -2.41   50MA bounce (-|
+|  CFR      Pullback50      eq     $163.26  34.9   -3.17   50MA bounce (+|
+|  EPR      Pullback50      eq     $60.58   50.7   -2.67   50MA bounce (-|
+|  EWBC     Pullback50      eq     $130.66  34.7   -2.87   50MA bounce (-|
+|  FHI      Pullback50      eq     $61.45   36.8   -3.00   50MA bounce (+|
+|  HOMB     Pullback50      eq     $30.05   33.0   -3.14   50MA bounce (-|
+|  JAZZ     Pullback50      eq     $248.15  49.8   -0.98   50MA bounce (-|
+|  LEA      Pullback50      eq     $132.41  66.7   -2.58   50MA bounce (+|
+|  LIVN     Pullback50      eq     $80.83   47.5   -2.81   50MA bounce (+|
+|  LFUS     Pullback50      eq     $424.00  31.3   -2.32   50MA bounce (-|
+|  NLY      Pullback50      eq     $22.82   38.0   -2.84   50MA bounce (-|
+|  NVT      Pullback50      eq     $156.45  30.9   -0.92   50MA bounce (-|
+|  NWE      Pullback50      eq     $70.94   50.8   -2.85   50MA bounce (-|
+|  ORI      Pullback50      eq     $42.00   43.5   -2.92   50MA bounce (-|
+|  OZK      Pullback50      eq     $50.36   43.2   -2.99   50MA bounce (-|
+|  PNFP     Pullback50      eq     $101.33  33.0   -3.01   50MA bounce (-|
+|  RS       Pullback50      eq     $398.85  34.8   -1.89   50MA bounce (+|
+|  SCI      Pullback50      eq     $81.92   47.0   -3.78   50MA bounce (+|
+|  SIRI     Pullback50      eq     $29.82   56.9   -2.29   50MA bounce (+|
+|  SITM     Pullback50      eq     $608.00  29.0   -2.60   50MA bounce (-|
+|  SLM      Pullback50      eq     $26.25   38.8   -2.52   50MA bounce (+|
+|  UBSI     Pullback50      eq     $47.78   36.3   -3.12   50MA bounce (+|
+|  UMBF     Pullback50      eq     $143.92  32.1   -2.67   50MA bounce (-|
+|  WTS      Pullback50      eq     $362.03  33.0   -3.06   50MA bounce (-|
+|  ZION     Pullback50      eq     $69.32   38.9   -2.74   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] APD  Pullback50                                    $34.59|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] MO  Pullback50                                       cap 3|
+|    SKIP [eq] AMCR  Pullback50                                     cap 3|
+|    SKIP [eq] BALL  Pullback50                                     cap 3|
+|    SKIP [eq] TECH  Pullback50                                     cap 3|
+|    SKIP [eq] BXP  Pullback50                                      cap 3|
+|    SKIP [eq] BRK-B  Pullback50                                    cap 3|
+|    SKIP [eq] CB  Pullback50                                       cap 3|
+|    SKIP [eq] CHD  Pullback50                                      cap 3|
+|    SKIP [eq] CI  Pullback50                                       cap 3|
+|    SKIP [eq] CFG  Pullback50                                      cap 3|
+|    SKIP [eq] DLR  Pullback50                                      cap 3|
+|    SKIP [eq] ECL  Pullback50                                      cap 3|
+|    SKIP [eq] EQIX  Pullback50                                     cap 3|
+|    SKIP [eq] FTNT  Pullback50                                     cap 3|
+|    SKIP [eq] HIG  Pullback50                                      cap 3|
+|    SKIP [eq] IBKR  Pullback50                                     cap 3|
+|    SKIP [eq] JCI  Pullback50                                      cap 3|
+|    SKIP [eq] KEYS  Pullback50                                     cap 3|
+|    SKIP [eq] MTD  Pullback50                                      cap 3|
+|    SKIP [eq] MDLZ  Pullback50                                     cap 3|
+|    SKIP [eq] MS  Pullback50                                       cap 3|
+|    SKIP [eq] ROST  Pullback50                                     cap 3|
+|    SKIP [eq] SBUX  Pullback50                                     cap 3|
+|    SKIP [eq] TFC  Pullback50                                      cap 3|
+|    SKIP [eq] USB  Pullback50                                      cap 3|
+|    SKIP [eq] UNP  Pullback50                                      cap 3|
+|    SKIP [eq] GWW  Pullback50                                      cap 3|
+|    SKIP [eq] WAB  Pullback50                                      cap 3|
+|    SKIP [eq] WMB  Pullback50                                      cap 3|
+|    SKIP [eq] AHR  Pullback50                                      cap 3|
+|    SKIP [eq] AM  Pullback50                                       cap 3|
+|    SKIP [eq] AMG  Pullback50                                      cap 3|
+|    SKIP [eq] ARMK  Pullback50                                     cap 3|
+|    SKIP [eq] ASB  Pullback50                                      cap 3|
+|    SKIP [eq] BKH  Pullback50                                      cap 3|
+|    SKIP [eq] CBSH  Pullback50                                     cap 3|
+|    SKIP [eq] CCK  Pullback50                                      cap 3|
+|    SKIP [eq] CFR  Pullback50                                      cap 3|
+|    SKIP [eq] EPR  Pullback50                                      cap 3|
+|    SKIP [eq] EWBC  Pullback50                                     cap 3|
+|    SKIP [eq] FHI  Pullback50                                      cap 3|
+|    SKIP [eq] HOMB  Pullback50                                     cap 3|
+|    SKIP [eq] JAZZ  Pullback50                                     cap 3|
+|    SKIP [eq] LEA  Pullback50                                      cap 3|
+|    SKIP [eq] LIVN  Pullback50                                     cap 3|
+|    SKIP [eq] LFUS  Pullback50                                     cap 3|
+|    SKIP [eq] NLY  Pullback50                                      cap 3|
+|    SKIP [eq] NVT  Pullback50                                      cap 3|
+|    SKIP [eq] NWE  Pullback50                                      cap 3|
+|    SKIP [eq] ORI  Pullback50                                      cap 3|
+|    SKIP [eq] OZK  Pullback50                                      cap 3|
+|    SKIP [eq] PNFP  Pullback50                                     cap 3|
+|    SKIP [eq] RS  Pullback50                                       cap 3|
+|    SKIP [eq] SCI  Pullback50                                      cap 3|
+|    SKIP [eq] SIRI  Pullback50                                     cap 3|
+|    SKIP [eq] SITM  Pullback50                                     cap 3|
+|    SKIP [eq] SLM  Pullback50                                      cap 3|
+|    SKIP [eq] UBSI  Pullback50                                     cap 3|
+|    SKIP [eq] UMBF  Pullback50                                     cap 3|
+|    SKIP [eq] WTS  Pullback50                                      cap 3|
+|    SKIP [eq] ZION  Pullback50                                     cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      1|
++------------------------------------------------------------------------+
+|  APD                                                  still unconfirmed|
++========================================================================+
++========================================================================+13:50:18  INFO        place_all_stops: checking 3 positions...
+13:50:18  INFO        STOP skipped AMZN: fractional (0.1353 shares) — software exit will handle it
+13:50:18  INFO        STOP skipped APD: fractional (0.1144 shares) — software exit will handle it
+13:50:18  INFO        STOP skipped LII: fractional (0.0895 shares) — software exit will handle it
+13:50:18  INFO        Daily log -> logs/daily/2026-09-04.md
+13:50:18  INFO        Dashboard written → logs/dashboard.md
+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 1 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            898|
+|  Signals                                                             62|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  1 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $230.38|
+|  Cash                                                           $126.25|
++========================================================================+

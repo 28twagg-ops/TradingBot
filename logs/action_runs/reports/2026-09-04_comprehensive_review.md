@@ -1432,3 +1432,132 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20260904T134627Z
+
+- UTC timestamp: `20260904T134627Z`
+- GitHub run: [#9061](https://github.com/28twagg-ops/TradingBot/actions/runs/33879795145)
+- Run id: `33879795145`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260904T134627Z_live_bot.log`, `logs/action_runs/20260904T134627Z_live_options.log`, `logs/action_runs/20260904T134627Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1010 | 49.8 | +0.0 | +47.0 | $+15,267 |
+| TAINTED | 1772 | 33.2 | -39.0 | +12.3 | $-9,135 |
+| KEEP-only | 554 | 63.7 | +51.2 | +74.5 | $+10,136 |
+| KEEP-only recent | 346 | 60.4 | +53.8 | +91.5 | $+4,879 |
+
+- KEEP strategies (23): S173, S174, S210, S218, S350, S352, S353, S354, S355, S357, S359, S361, S362, S363, S364, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (16): ORPHAN, S164, S203, S207, S211, S212, S216, S217, S351, S360, S365, S366, S405, S407, S408, S411
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-04T09:26:09.324838-04:00","date":"2026-09-04","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.8,"phases_s":{"reconcile":0.15},"signals":0,"placed":0,"equity":1007263.09,"open_positions":15,"pending_orders":0,"open_lots":19,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"9057","github_run_id":"33877933750","status":"ok","data_quality":{"clean":{"n":1010,"win":49.8,"med":0.0,"avg":46.97,"pnl":15267.13},"tainted":{"n":1772,"win":33.18,"med":-39.02,"avg":12.29,"pnl":-9135.34},"keep_only":{"n":554,"win":63.72,"med":51.18,"avg":74.54,"pnl":10136.45},"keep_only_recent":{"n":346,"win":60.4,"med":53.78,"avg":91.49,"pnl":4879.0},"keep_strategies":["S173","S174","S210","S218","S350","S352","S353","S354","S355","S357","S359","S361","S362","S363","S364","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S203","S207","S211","S212","S216","S217","S351","S360","S365","S366","S405","S407","S408","S411"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (207 earlier lines - see full log file)
+|    SKIP [eq] MTD  Pullback50                                      cap 3|
+|    SKIP [eq] MDLZ  Pullback50                                     cap 3|
+|    SKIP [eq] MS  Pullback50                                       cap 3|
+|    SKIP [eq] ROST  Pullback50                                     cap 3|
+|    SKIP [eq] SBUX  Pullback50                                     cap 3|
+|    SKIP [eq] TFC  Pullback50                                      cap 3|
+|    SKIP [eq] USB  Pullback50                                      cap 3|
+|    SKIP [eq] UNP  Pullback50                                      cap 3|
+|    SKIP [eq] GWW  Pullback50                                      cap 3|
+|    SKIP [eq] WAB  Pullback50                                      cap 3|
+|    SKIP [eq] WMB  Pullback50                                      cap 3|
+|    SKIP [eq] AHR  Pullback50                                      cap 3|
+|    SKIP [eq] AM  Pullback50                                       cap 3|
+|    SKIP [eq] AMG  Pullback50                                      cap 3|
+|    SKIP [eq] ARMK  Pullback50                                     cap 3|
+|    SKIP [eq] ASB  Pullback50                                      cap 3|
+|    SKIP [eq] BKH  Pullback50                                      cap 3|
+|    SKIP [eq] CBSH  Pullback50                                     cap 3|
+|    SKIP [eq] CCK  Pullback50                                      cap 3|
+|    SKIP [eq] CFR  Pullback50                                      cap 3|
+|    SKIP [eq] EPR  Pullback50                                      cap 3|
+|    SKIP [eq] EWBC  Pullback50                                     cap 3|
+|    SKIP [eq] FHI  Pullback50                                      cap 3|
+|    SKIP [eq] HOMB  Pullback50                                     cap 3|
+|    SKIP [eq] JAZZ  Pullback50                                     cap 3|
+|    SKIP [eq] LEA  Pullback50                                      cap 3|
+|    SKIP [eq] LIVN  Pullback50                                     cap 3|
+|    SKIP [eq] LFUS  Pullback50                                     cap 3|
+|    SKIP [eq] NLY  Pullback50                                      cap 3|
+|    SKIP [eq] NVT  Pullback50                                      cap 3|
+|    SKIP [eq] NWE  Pullback50                                      cap 3|
+|    SKIP [eq] ORI  Pullback50                                      cap 3|
+|    SKIP [eq] OZK  Pullback50                                      cap 3|
+|    SKIP [eq] PNFP  Pullback50                                     cap 3|
+|    SKIP [eq] RS  Pullback50                                       cap 3|
+|    SKIP [eq] SCI  Pullback50                                      cap 3|
+|    SKIP [eq] SIRI  Pullback50                                     cap 3|
+|    SKIP [eq] SITM  Pullback50                                     cap 3|
+|    SKIP [eq] SLM  Pullback50                                      cap 3|
+|    SKIP [eq] UBSI  Pullback50                                     cap 3|
+|    SKIP [eq] UMBF  Pullback50                                     cap 3|
+|    SKIP [eq] WTS  Pullback50                                      cap 3|
+|    SKIP [eq] ZION  Pullback50                                     cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      1|
++------------------------------------------------------------------------+
+|  APD                                                  still unconfirmed|
++========================================================================+
++========================================================================+13:50:18  INFO        place_all_stops: checking 3 positions...
+13:50:18  INFO        STOP skipped AMZN: fractional (0.1353 shares) — software exit will handle it
+13:50:18  INFO        STOP skipped APD: fractional (0.1144 shares) — software exit will handle it
+13:50:18  INFO        STOP skipped LII: fractional (0.0895 shares) — software exit will handle it
+13:50:18  INFO        Daily log -> logs/daily/2026-09-04.md
+13:50:18  INFO        Dashboard written → logs/dashboard.md
+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 1 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            898|
+|  Signals                                                             62|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  1 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $230.38|
+|  Cash                                                           $126.25|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
