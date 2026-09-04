@@ -1042,26 +1042,6 @@
       "entry_order_id": "orphan:MARA260911C00011500"
     },
     {
-      "lot_id": "91591d9c1d4d",
-      "bucket_id": 81,
-      "profile_name": "lab0081_s210_w1_0928_1005_r2",
-      "strategy_id": "S210",
-      "occ_symbol": "TTD260911C00015000",
-      "underlying": "TTD",
-      "qty": 1,
-      "entry_cost": 33.0,
-      "entry_price": 0.33,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-04T14:01:20.200557+00:00",
-      "entry_order_id": "a63437a4-73ba-4008-9fff-1efb0cf70bcb"
-    },
-    {
       "lot_id": "9adcf55268d8",
       "bucket_id": 885,
       "profile_name": "lab0885_s410_w1_0928_1005_r2",
@@ -3203,7 +3183,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "55f8e8e6-09cd-474c-a75a-caff76643d60",
+      "lot_id": "2280c3f74dde",
+      "bucket_id": 18,
+      "strategy_id": "S202",
+      "occ_symbol": "PATH260911C00016000",
+      "qty": 1,
+      "reason": "stop_loss (-51.1%)",
+      "submitted": "2026-09-04T11:51:18"
+    }
+  ],
   "bucket_open_premium": {
     "b437": 61.0,
     "b436": 61.0,
@@ -3256,7 +3247,6 @@
     "b1136": 46.0,
     "b1109": 46.0,
     "b1122": 46.0,
-    "b81": 33.0,
     "b885": 72.0,
     "b884": 72.0,
     "b321": 49.0,
