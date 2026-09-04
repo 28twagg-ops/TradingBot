@@ -237,8 +237,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 235,lab0235_s401_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-04,False,,,,,,,0,NFLX,S401,,entered_no_exit
 236,lab0236_s401_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-04,False,,,,,,,0,IWM,S401,,entered_no_exit
 237,lab0237_s401_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-04,False,,100.0,50.0,50.0,50.0,50.0,21.0,IWM,S401,take_profit (+52.4%),closed
-238,lab0238_s401_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-04,False,,,,,,,0,NFLX,S401,,entered_no_exit
-239,lab0239_s401_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-04,False,,,,,,,0,NFLX,S401,,entered_no_exit
+238,lab0238_s401_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-04,False,,,,,,,0,NFLX,S401,,entered_no_exit
+239,lab0239_s401_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-04,False,,,,,,,0,NFLX,S401,,entered_no_exit
 240,lab0240_s401_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-04,False,,,,,,,0,CRWD,S401,,entered_no_exit
 241,lab0241_s401_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-04,False,,,,,,,0,CRWD,S401,,entered_no_exit
 242,lab0242_s401_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
