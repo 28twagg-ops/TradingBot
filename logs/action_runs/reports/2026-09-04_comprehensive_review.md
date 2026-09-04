@@ -1561,3 +1561,189 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20260904T135126Z
+
+- UTC timestamp: `20260904T135126Z`
+- GitHub run: [#9062](https://github.com/28twagg-ops/TradingBot/actions/runs/33880255123)
+- Run id: `33880255123`
+- Live bot: exit=`0`, duration=`216s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260904T135126Z_live_bot.log`, `logs/action_runs/20260904T135126Z_live_options.log`, `logs/action_runs/20260904T135126Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1010 | 49.8 | +0.0 | +47.0 | $+15,267 |
+| TAINTED | 1772 | 33.2 | -39.0 | +12.3 | $-9,135 |
+| KEEP-only | 554 | 63.7 | +51.2 | +74.5 | $+10,136 |
+| KEEP-only recent | 346 | 60.4 | +53.8 | +91.5 | $+4,879 |
+
+- KEEP strategies (23): S173, S174, S210, S218, S350, S352, S353, S354, S355, S357, S359, S361, S362, S363, S364, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (16): ORPHAN, S164, S203, S207, S211, S212, S216, S217, S351, S360, S365, S366, S405, S407, S408, S411
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-04T09:26:09.324838-04:00","date":"2026-09-04","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.8,"phases_s":{"reconcile":0.15},"signals":0,"placed":0,"equity":1007263.09,"open_positions":15,"pending_orders":0,"open_lots":19,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"9057","github_run_id":"33877933750","status":"ok","data_quality":{"clean":{"n":1010,"win":49.8,"med":0.0,"avg":46.97,"pnl":15267.13},"tainted":{"n":1772,"win":33.18,"med":-39.02,"avg":12.29,"pnl":-9135.34},"keep_only":{"n":554,"win":63.72,"med":51.18,"avg":74.54,"pnl":10136.45},"keep_only_recent":{"n":346,"win":60.4,"med":53.78,"avg":91.49,"pnl":4879.0},"keep_strategies":["S173","S174","S210","S218","S350","S352","S353","S354","S355","S357","S359","S361","S362","S363","S364","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S203","S207","S211","S212","S216","S217","S351","S360","S365","S366","S405","S407","S408","S411"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (126 earlier lines - see full log file)
+|  CI       Pullback50      eq     $283.53  61.2   -2.84   50MA bounce (+|
+|  CFG      Pullback50      eq     $70.91   34.9   -2.31   50MA bounce (-|
+|  DLR      Pullback50      eq     $188.29  35.7   -1.56   50MA bounce (+|
+|  ECL      Pullback50      eq     $278.30  53.3   -2.18   50MA bounce (-|
+|  EQIX     Pullback50      eq     $1041.~  33.0   -2.65   50MA bounce (-|
+|  FTNT     Pullback50      eq     $157.57  51.3   -2.68   50MA bounce (-|
+|  IBKR     Pullback50      eq     $92.15   46.5   -2.45   50MA bounce (+|
+|  JCI      Pullback50      eq     $143.94  31.1   -2.83   50MA bounce (-|
+|  KEYS     Pullback50      eq     $328.01  30.8   -1.45   50MA bounce (+|
+|  MDLZ     Pullback50      eq     $61.29   44.2   -3.22   50MA bounce (-|
+|  MS       Pullback50      eq     $216.50  47.5   -3.57   50MA bounce (+|
+|  QCOM     Pullback50      eq     $170.16  63.1   -2.71   50MA bounce (+|
+|  ROST     Pullback50      eq     $232.31  46.1   -1.76   50MA bounce (-|
+|  STX      Pullback50      eq     $847.79  30.9   -2.36   50MA bounce (-|
+|  SBUX     Pullback50      eq     $105.96  44.2   -3.09   50MA bounce (+|
+|  TFC      Pullback50      eq     $51.52   43.3   -3.41   50MA bounce (-|
+|  USB      Pullback50      eq     $63.49   41.6   -2.98   50MA bounce (+|
+|  UNP      Pullback50      eq     $290.93  37.8   -2.78   50MA bounce (-|
+|  VTRS     Pullback50      eq     $16.85   62.1   -2.18   50MA bounce (+|
+|  WAB      Pullback50      eq     $282.22  27.7   -2.55   50MA bounce (-|13:55:02  INFO        place_all_stops: checking 3 positions...
+13:55:02  INFO        STOP skipped AMZN: fractional (0.1353 shares) — software exit will handle it
+13:55:02  INFO        STOP skipped APD: fractional (0.1144 shares) — software exit will handle it
+13:55:02  INFO        STOP skipped LII: fractional (0.0895 shares) — software exit will handle it
+13:55:02  INFO        Daily log -> logs/daily/2026-09-04.md
+13:55:02  INFO        Dashboard written → logs/dashboard.md
+
+|  WMB      Pullback50      eq     $74.08   52.3   -1.63   50MA bounce (+|
+|  AM       Pullback50      eq     $22.31   52.9   -1.76   50MA bounce (-|
+|  AHR      Pullback50      eq     $55.58   56.2   -1.40   50MA bounce (+|
+|  AMG      Pullback50      eq     $365.11  45.0   -2.63   50MA bounce (+|
+|  ASB      Pullback50      eq     $31.01   36.4   -2.44   50MA bounce (-|
+|  BKH      Pullback50      eq     $73.32   49.6   -2.79   50MA bounce (-|
+|  CFR      Pullback50      eq     $163.25  34.9   -3.17   50MA bounce (+|
+|  CXT      Pullback50      eq     $50.63   51.4   -2.87   50MA bounce (-|
+|  EPR      Pullback50      eq     $60.65   51.3   -2.66   50MA bounce (-|
+|  EWBC     Pullback50      eq     $130.62  34.5   -2.86   50MA bounce (-|
+|  FHI      Pullback50      eq     $61.42   36.7   -2.99   50MA bounce (+|
+|  HOMB     Pullback50      eq     $30.06   33.2   -3.13   50MA bounce (-|
+|  JAZZ     Pullback50      eq     $248.30  49.9   -0.97   50MA bounce (-|
+|  LFUS     Pullback50      eq     $423.92  31.3   -2.32   50MA bounce (-|
+|  LIVN     Pullback50      eq     $81.04   48.3   -2.81   50MA bounce (+|
+|  LEA      Pullback50      eq     $132.27  66.5   -2.57   50MA bounce (+|
+|  NOVT     Pullback50      eq     $149.79  30.9   -2.95   50MA bounce (-|
+|  NWE      Pullback50      eq     $70.91   50.6   -2.82   50MA bounce (-|
+|  NLY      Pullback50      eq     $22.80   37.7   -2.80   50MA bounce (-|
+|  ORI      Pullback50      eq     $41.92   42.7   -2.91   50MA bounce (-|
+|  OZK      Pullback50      eq     $50.35   43.1   -2.98   50MA bounce (-|
+|  PNFP     Pullback50      eq     $101.51  33.6   -3.00   50MA bounce (-|
+|  RS       Pullback50      eq     $398.85  34.8   -1.89   50MA bounce (+|
+|  SCI      Pullback50      eq     $81.85   46.7   -3.78   50MA bounce (+|
+|  SLM      Pullback50      eq     $26.21   38.4   -2.50   50MA bounce (+|
+|  UMBF     Pullback50      eq     $143.87  32.0   -2.67   50MA bounce (-|
+|  UBSI     Pullback50      eq     $47.72   35.4   -3.11   50MA bounce (+|
+|  USFD     Pullback50      eq     $104.08  33.3   -2.66   50MA bounce (+|
+|  WTS      Pullback50      eq     $360.42  31.4   -3.04   50MA bounce (-|
+|  ZION     Pullback50      eq     $69.35   39.1   -2.73   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            897|
+|  Signals                                                             56|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $230.62|
+|  Cash                                                           $126.25|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-09-04T09:55:03.299904-04:00 share=25% ===
+2026-09-04 09:55:03,299 INFO === options_live_micro LIVE 2026-09-04T09:55:03.299904-04:00 share=25% ===
+Live account equity $230.62 cash $126.25 #225458845 options_level=3
+2026-09-04 09:55:03,342 INFO Live account equity $230.62 cash $126.25 #225458845 options_level=3
+Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+2026-09-04 09:55:03,380 INFO Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+Live micro done. open_options=0 lots=0
+2026-09-04 09:55:03,395 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=19 paper_keys=yes dry_run=False
+  alpaca positions=16
+  FLAG b316|S355|d7e1a5e1 missing from Alpaca
+  FLAG b96|S211|837bd36f missing from Alpaca
+  FLAG b99|S211|32be36ec missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1164:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1164
+PROBE OK: paper account status=AccountStatus.ACTIVE equity=$1,006,838.20
+  buying_power=$3,994,648.80 cash=$1,004,712.20
+  open option orders: 14
+    TSLA260909C00387500 OrderSide.SELL qty=12 status=OrderStatus.NEW limit=None
+    TSLA260909C00390000 OrderSide.SELL qty=4 status=OrderStatus.NEW limit=None
+    TSLA260909C00385000 OrderSide.SELL qty=5 status=OrderStatus.NEW limit=None
+    AVGO260909C00372500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    AVGO260904C00367500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+  open option positions: 16
+    AVGO260909C00380000 qty=3 mkt=$180.00
+    AVGO260911C00385000 qty=1 mkt=$92.00
+    BA260904C00210000 qty=2 mkt=$144.00
+    BA260904C00215000 qty=-1 mkt=$-4.00
+    BA260904C00217500 qty=-1 mkt=$-3.00
+PROBE: check-only pass (use --smoke-entry to place a test order)
+=== options_morning_bot (PAPER) 2026-09-04T09:55:06.281437-04:00 ===
+
+[Run context]
+Paper auth OK — equity $1006836.20, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
+Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+2026-09-04 09:55:08,420 INFO   EXIT [b281|lab0281_s351_w1_0928_1005_r2|S351] stop_loss (-58.3%) SELL 1 TSLA260904C00375000 @<= 0.14
+  EXIT [b439|lab0439_s366_w4_1120_1135_r2|S366] take_profit (+100.0%) SELL failed MARA260925C00011000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b438|lab0438_s366_w4_1120_1135_r1|S366] take_profit (+100.0%) SELL failed MARA260925C00011000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b85|lab0085_s210_w3_1045_1120_r2|S210] take_profit (+920.0%) SELL failed NVDA260904C00232500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b84|lab0084_s210_w3_1045_1120_r1|S210] take_profit (+920.0%) SELL failed NVDA260904C00232500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b1112|lab1112_s166_w3_1045_1120_r1|S166] take_profit (+62.2%) SELL failed AVGO260909C00380000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b1127|lab1127_s168_w3_1045_1120_r2|S168] take_profit (+62.2%) SELL failed AVGO260909C00380000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b1126|lab1126_s168_w3_1045_1120_r1|S168] take_profit (+62.2%) SELL failed AVGO260909C00380000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b293|lab0293_s352_w3_1045_1120_r2|S352] take_profit (+500.0%) SELL failed MARA260904C00011000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b292|lab0292_s352_w3_1045_1120_r1|S352] take_profit (+500.0%) SELL failed MARA260904C00011000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+Protective stops: placed=0 upgraded=0 already=5 failed=7 (market-first)
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S204, S205, S206, S208, S209, S210, S211, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S406, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 113/117 symbols
+```
+
+---
