@@ -1786,3 +1786,86 @@ Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
 ```
 
 ---
+
+## Run 20260907T135627Z
+
+- UTC timestamp: `20260907T135627Z`
+- GitHub run: [#9195](https://github.com/28twagg-ops/TradingBot/actions/runs/34130061801)
+- Run id: `34130061801`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260907T135627Z_live_bot.log`, `logs/action_runs/20260907T135627Z_live_options.log`, `logs/action_runs/20260907T135627Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1029 | 50.1 | +12.5 | +47.6 | $+15,692 |
+| TAINTED | 1791 | 33.5 | -38.4 | +12.7 | $-8,651 |
+| KEEP-only | 551 | 64.2 | +51.4 | +73.6 | $+10,279 |
+| KEEP-only recent | 343 | 61.2 | +53.6 | +90.2 | $+5,022 |
+
+- KEEP strategies (22): S173, S174, S210, S218, S350, S352, S353, S354, S355, S357, S361, S362, S363, S364, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (18): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S359, S360, S365, S366, S405, S407, S408, S411
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-07T09:26:09.685385-04:00","date":"2026-09-07","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":11.4,"phases_s":{"reconcile":4.4},"signals":0,"placed":0,"equity":1005125.39,"open_positions":30,"pending_orders":0,"open_lots":121,"submitted_today":0,"filled_today":0,"unattributed_contracts":1,"top_signals":[],"github_run":"9189","github_run_id":"34127273953","status":"ok","data_quality":{"clean":{"n":1029,"win":50.15,"med":12.5,"avg":47.58,"pnl":15692.21},"tainted":{"n":1791,"win":33.5,"med":-38.36,"avg":12.71,"pnl":-8650.84},"keep_only":{"n":551,"win":64.25,"med":51.39,"avg":73.64,"pnl":10279.45},"keep_only_recent":{"n":343,"win":61.22,"med":53.57,"avg":90.18,"pnl":5022.0},"keep_strategies":["S173","S174","S210","S218","S350","S352","S353","S354","S355","S357","S361","S362","S363","S364","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S359","S360","S365","S366","S405","S407","S408","S411"]}}
+```
+
+### Live bot (tail)
+
+```text
+13:56:28  INFO      Mode: morning_scan
+13:56:29  INFO        [positions] 3/3 (3 valid)
+13:56:29  INFO        SELL order cancelled FLEX  type=OrderType.MARKET  id=b2639ab7-a562-4203-983b-79af98e3a1b5
+13:56:29  INFO        SELL LIMIT FLEX  qty=0.31607724  limit=$109.29  id=5d9c0711-30ba-4f01-ab00-a7821ce9240c
+13:56:50  INFO        SELL LIMIT not filled for FLEX, falling back to market
+13:56:50  INFO        SELL MARKET FLEX closed
+13:56:52  INFO        SELL order cancelled LII  type=OrderType.MARKET  id=24abc6d1-219c-4a22-93aa-426be7af75e5
+13:56:52  INFO        SELL LIMIT LII  qty=0.089467389  limit=$389.75  id=6e8f22b1-8d20-41f7-a8a4-684673027c16
+13:57:13  INFO        SELL LIMIT not filled for LII, falling back to market
+13:57:13  INFO        SELL MARKET LII closed
+13:57:15  INFO        SELL order cancelled AMZN  type=OrderType.MARKET  id=17720d00-91a8-475f-bbf0-b501c3c9fe70
+13:57:15  INFO        SELL LIMIT AMZN  qty=0.135349882  limit=$257.99  id=13caeaf6-defd-42ef-9265-d8390d7835e6
+13:57:35  INFO        SELL LIMIT not filled for AMZN, falling back to market
+13:57:35  INFO        SELL MARKET AMZN closed
+13:57:38  INFO        Universe cache hit: 903 tickers (tickers_2026-09-07.json)
+13:57:39  INFO        [universe] 40/900 (40 valid)
+13:57:40  INFO        [universe] 80/900 (80 valid)
+13:57:42  INFO        [universe] 120/900 (120 valid)
+13:57:43  INFO        [universe] 160/900 (160 valid)
+13:57:44  INFO        [universe] 200/900 (199 valid)
+13:57:52  INFO        [universe] 240/900 (238 valid)
+13:58:05  INFO        [universe] 280/900 (278 valid)
+13:58:15  INFO        [universe] 320/900 (318 valid)
+13:58:28  INFO        [universe] 360/900 (358 valid)
+13:58:39  INFO        [universe] 400/900 (397 valid)
+13:58:52  INFO        [universe] 440/900 (437 valid)
+13:59:05  INFO        [universe] 480/900 (477 valid)
+13:59:15  INFO        [universe] 520/900 (517 valid)
+13:59:28  INFO        [universe] 560/900 (557 valid)
+13:59:39  INFO        [universe] 600/900 (597 valid)
+13:59:52  INFO        [universe] 640/900 (637 valid)
+14:00:02  INFO        [universe] 680/900 (677 valid)
+14:00:15  INFO        [universe] 720/900 (717 valid)
+14:00:28  INFO        [universe] 760/900 (757 valid)
+14:00:39  INFO        [universe] 800/900 (797 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
