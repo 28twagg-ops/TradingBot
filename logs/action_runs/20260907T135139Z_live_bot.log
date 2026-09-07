@@ -1,0 +1,31 @@
+13:51:42  INFO      Mode: morning_scan
+13:51:43  INFO        [positions] 3/3 (3 valid)
+13:51:43  INFO        SELL order cancelled FLEX  type=OrderType.MARKET  id=fce5036e-87cf-4f61-88c2-9fff60cd2d67
+13:51:43  INFO        SELL LIMIT FLEX  qty=0.31607724  limit=$109.29  id=a84fc78a-7e4b-4cd5-9ae9-44bf5cf54c53
+13:52:03  INFO        SELL LIMIT not filled for FLEX, falling back to market
+13:52:03  INFO        SELL MARKET FLEX closed
+13:52:06  INFO        SELL order cancelled LII  type=OrderType.MARKET  id=add6c6be-ec55-48a5-a1f7-d895e0c2c9f8
+13:52:06  INFO        SELL LIMIT LII  qty=0.089467389  limit=$389.75  id=a8800010-0bf8-42cb-a89d-2ff43df57112
+13:52:26  INFO        SELL LIMIT not filled for LII, falling back to market
+13:52:26  INFO        SELL MARKET LII closed
+13:52:28  INFO        SELL order cancelled AMZN  type=OrderType.MARKET  id=d4d909db-5f04-4245-b5c6-e63ef6f7b159
+13:52:29  INFO        SELL LIMIT AMZN  qty=0.135349882  limit=$257.99  id=9a7093ff-7468-4a94-969a-19e568fbbfa6
+13:52:49  INFO        SELL LIMIT not filled for AMZN, falling back to market
+13:52:49  INFO        SELL MARKET AMZN closed
+13:52:51  INFO        Universe cache hit: 903 tickers (tickers_2026-09-07.json)
+13:52:52  INFO        [universe] 40/900 (40 valid)
+13:52:53  INFO        [universe] 80/900 (80 valid)
+13:52:54  INFO        [universe] 120/900 (120 valid)
+13:52:55  INFO        [universe] 160/900 (160 valid)
+13:52:57  INFO        [universe] 200/900 (199 valid)
+13:53:04  INFO        [universe] 240/900 (238 valid)
+13:53:17  INFO        [universe] 280/900 (278 valid)
+13:53:30  INFO        [universe] 320/900 (318 valid)
+13:53:40  INFO        [universe] 360/900 (358 valid)
+13:53:53  INFO        [universe] 400/900 (397 valid)
+13:54:06  INFO        [universe] 440/900 (437 valid)
+13:54:16  INFO        [universe] 480/900 (477 valid)
+13:54:29  INFO        [universe] 520/900 (517 valid)
+13:54:42  INFO        [universe] 560/900 (557 valid)
+13:54:52  INFO        [universe] 600/900 (597 valid)
+13:55:05  INFO        [universe] 640/900 (637 valid)
