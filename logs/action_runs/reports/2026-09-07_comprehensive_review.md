@@ -15489,3 +15489,219 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_
 ```
 
 ---
+
+## Run 20260907T195112Z
+
+- UTC timestamp: `20260907T195112Z`
+- GitHub run: [#9266](https://github.com/28twagg-ops/TradingBot/actions/runs/34157080574)
+- Run id: `34157080574`
+- Live bot: exit=`0`, duration=`218s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260907T195112Z_live_bot.log`, `logs/action_runs/20260907T195112Z_live_options.log`, `logs/action_runs/20260907T195112Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1029 | 50.1 | +12.5 | +47.6 | $+15,692 |
+| TAINTED | 1791 | 33.5 | -38.4 | +12.7 | $-8,651 |
+| KEEP-only | 551 | 64.2 | +51.4 | +73.6 | $+10,279 |
+| KEEP-only recent | 343 | 61.2 | +53.6 | +90.2 | $+5,022 |
+
+- KEEP strategies (22): S173, S174, S210, S218, S350, S352, S353, S354, S355, S357, S361, S362, S363, S364, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (18): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S359, S360, S365, S366, S405, S407, S408, S411
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-07T15:54:54.088607-04:00","date":"2026-09-07","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":18.6,"phases_s":{"reconcile":0.38,"cancel":0.18,"manage":15.07,"protective_stops":2.4},"signals":0,"placed":0,"equity":1005240.75,"open_positions":30,"pending_orders":0,"open_lots":121,"submitted_today":0,"filled_today":0,"unattributed_contracts":1,"top_signals":[],"github_run":"9266","github_run_id":"34157080574","status":"ok","data_quality":{"clean":{"n":1029,"win":50.15,"med":12.5,"avg":47.58,"pnl":15692.21},"tainted":{"n":1791,"win":33.5,"med":-38.36,"avg":12.71,"pnl":-8650.84},"keep_only":{"n":551,"win":64.25,"med":51.39,"avg":73.64,"pnl":10279.45},"keep_only_recent":{"n":343,"win":61.22,"med":53.57,"avg":90.18,"pnl":5022.0},"keep_strategies":["S173","S174","S210","S218","S350","S352","S353","S354","S355","S357","S361","S362","S363","S364","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S359","S360","S365","S366","S405","S407","S408","S411"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (164 earlier lines - see full log file)
+|  TFC      Pullback50      eq     $51.65   44.1   -1.07   50MA bounce (+|
+|  USB      Pullback50      eq     $63.37   41.0   -0.62   50MA bounce (+|
+|  VRT      Pullback50      eq     $280.53  44.1   -0.77   50MA bounce (-|
+|  VTRS     Pullback50      eq     $16.88   62.8   -0.89   50MA bounce (+|
+|  VMC      RSIRecovery     eq     $262.63  34.6   0.88    RSI 29.0→34.6 |
+|  WAB      Pullback50      eq     $282.86  28.8   -1.45   50MA bounce (-|
+|  WY       RSIRecovery     eq     $23.02   33.3   0.32    RSI 29.1→33.3 |
+|  AAON     MomReversal     eq     $79.40   33.2   0.36    -34.4% drop/60|
+|  ALGM     MomReversal     eq     $36.61   26.0   1.05    -17.8% drop/60|
+|  ASB      Pullback50      eq     $31.07   37.3   0.06    50MA bounce (+|
+|  BKH      Pullback50      eq     $73.21   48.9   -0.19   50MA bounce (-|
+|  CBSH     Pullback50      eq     $58.37   36.1   -1.37   50MA bounce (-|
+|  CFR      Pullback50      eq     $162.62  32.4   0.80    50MA bounce (+|
+|  CFR      RSIRecovery     eq     $162.62  32.4   0.80    RSI 28.9→32.4 |
+|  CHE      Pullback50      eq     $519.84  46.7   -1.06   50MA bounce (+|
+|  CRUS     MomReversal     eq     $113.21  33.7   0.95    -28.3% drop/60|
+|  EEFT     Pullback50      eq     $73.81   60.1   0.16    50MA bounce (-|
+|  ELAN     Pullback50      eq     $24.50   57.9   -0.62   50MA bounce (-|
+|  EWBC     Pullback50      eq     $130.77  35.1   -1.30   50MA bounce (-|
+|  FIVE     EarningsDrift   eq     $252.20  58.5   1.36    post-earnings |
+|  FIVE     VWAP_Reclaim    eq     $252.20  58.5   1.36    VWAP reclaim V|
+|  GATX     Pullback50      eq     $178.11  42.9   -0.94   50MA bounce (-|
+|  HOMB     Pullback50      eq     $30.15   35.1   -1.02   50MA bounce (+|
+|  HWC      Pullback50      eq     $75.84   34.2   0.55    50MA bounce (-|
+|  HWC      RSIRecovery     eq     $75.84   34.2   0.55    RSI 29.5→34.2 |
+|  IESC     MomReversal     eq     $322.57  7.9    2.00    -52.4% drop/60|
+|  JAZZ     Pullback50      eq     $246.81  48.7   -0.71   50MA bounce (-|
+|  KNX      Pullback50      eq     $71.99   48.0   1.39    50MA bounce (-|
+|  MKSI     MomReversal     eq     $260.31  19.3   1.39    -17.6% drop/60|
+|  MSM      Pullback50      eq     $121.41  43.8   -1.24   50MA bounce (-|
+|  MTZ      MomReversal     eq     $237.19  11.0   0.37    -29.3% drop/60|
+|  NLY      Pullback50      eq     $22.81   37.8   0.09    50MA bounce (-|
+|  NVT      Pullback50      eq     $156.03  30.4   -0.33   50MA bounce (-|
+|  NWE      Pullback50      eq     $70.78   49.8   0.35    50MA bounce (-|
+|  OZK      Pullback50      eq     $50.43   43.9   -0.63   50MA bounce (-|
+|  PVH      RSIRecovery     eq     $74.33   41.4   0.64    RSI 29.8→41.4 |
+|  ROIV     Pullback50      eq     $34.93   41.5   -0.30   50MA bounce (-|
+|  RYAN     Pullback50      eq     $41.91   51.5   -0.66   50MA bounce (-|
+|  RS       Pullback50      eq     $400.51  36.0   -0.08   50MA bounce (+|
+|  SAIA     MomReversal     eq     $357.94  37.6   0.34    -22.8% drop/60|
+|  SCI      Pullback50      eq     $82.21   48.4   2.36    50MA bounce (+|
+|  SCI      VWAP_Reclaim    eq     $82.21   48.4   2.36    VWAP reclaim V|
+|  SFM      Pullback50      eq     $81.40   51.6   0.08    50MA bounce (-|
+|  SITM     Pullback50      eq     $612.09  29.9   -0.57   50MA bounce (+|
+|  STRL     MomReversal     eq     $486.49  23.1   0.31    -36.8% drop/60|
+|  TRU      Pullback50      eq     $79.88   53.0   3.49    50MA bounce (+|
+|  UBSI     Pullback50      eq     $47.83   37.0   -0.75   50MA bounce (+|
+|  UMBF     Pullback50      eq     $143.76  31.6   -0.57   50MA bounce (-|
+|  USFD     Pullback50      eq     $104.04  33.2   -1.11   50MA bounce (+|
+|  VFC      MomReversal     eq     $13.45   32.9   1.64    -18.0% drop/60|
+|  VFC      RSIRecovery     eq     $13.45   32.9   1.64    RSI 22.0→32.9 |
+|  WTS      Pullback50      eq     $363.13  34.1   2.06    50MA bounce (+|
+|  WTS      RSIRecovery     eq     $363.13  34.1   2.06    RSI 26.8→34.1 |
+|  WTS      VWAP_Reclaim    eq     $363.13  34.1   2.06    VWAP reclaim V|
+|  XPO      RSIRecovery     eq     $193.10  32.1   2.02    RSI 18.6→32.1 |
+|  ZION     Pullback50      eq     $69.37   39.2   -1.22   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            896|
+|  Signals                                                             90|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $230.56|
+|  Cash                                                           $126.02|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-09-07T15:54:51.359460-04:00 share=25% ===
+2026-09-07 15:54:51,359 INFO === options_live_micro LIVE 2026-09-07T15:54:51.359460-04:00 share=25% ===
+Live account equity $230.56 cash $126.02 #225458845 options_level=3
+2026-09-07 15:54:51,552 INFO Live account equity $230.56 cash $126.02 #225458845 options_level=3
+Live micro: manage/exits only
+2026-09-07 15:54:51,722 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-09-07 15:54:51,781 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+... (34 earlier lines - see full log file)
+Protective stops: placed=0 upgraded=0 already=26 failed=3 (market-first)
+
+[Manage only]
+Past entry window; manage/exit only.
+
+[Portfolio snapshot]
++========================================================================+
+|[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
++========================================================================+
+|-- ACCOUNT STATUS (manage-only) --                                      |
+|Equity       : $1,005,240.75                                            |
+|Open Risk    : 121 lots (30 broker pos)                                 |
+|Today's Run  : 0 signals -> 0 orders submitted                          |
+|                                                                        |
+|-- SYSTEM HEALTH --                                                     |
+|Zombies      : 1 WARN: See reconcile                                    |
+|Lab Status   : 121 Active Lots | 0 Pending Orders                       |
+|Auto-Matrix  : (Pending EOD report generation)                          |
++========================================================================+
++========================================================================+
+|[DATA QUALITY: CLEAN vs ERRORS vs KEEP-ONLY]                            |
++========================================================================+
+|  CLEAN              n=1029  win= 50.1%  med= +12.5%  $+15,692          |
+|  TAINTED            n=1791  win= 33.5%  med= -38.4%  $-8,651           |
+|  KEEP-only          n=551   win= 64.2%  med= +51.4%  $+10,279          |
+|  KEEP recent        n=343   win= 61.2%  med= +53.6%  $+5,022           |
+|  KEEP(22): S173,S174,S210,S218,S350,S352,S353,S354...                  |
+|  KILL(18): ORPHAN,S164,S202,S203,S207,S211,S212,S216...                |
++========================================================================+
++========================================================================+
+|[+++ OVERPERFORMING STRATEGIES (n>=10)]                                 |
++========================================================================+
+|  BKT  PROFILE                   WIN%   MED%   TOTAL TRADES             |
+|  ---------------------------------------------------------             |
+|  b832 lab0832_s406_w3_1045..  83%  +138.5%    12                       |
+|  b238 lab0238_s401_w3_1045..  81%  +115.2%    16                       |
+|  b861 lab0861_s408_w3_1045..  73%  +100.0%    11                       |
+|  b833 lab0833_s406_w3_1045..  86%  +98.1%    14                        |
++========================================================================+
+|[--- UNDERPERFORMING STRATEGIES (n>=10)]                                |
++========================================================================+
+|  BKT  PROFILE                   WIN%   MED%   TOTAL TRADES             |
+|  ---------------------------------------------------------             |
+|  b47  lab0047_s205_w4_1120..   4%  -78.0%    28                        |
+|  b307 lab0307_s354_w2_1005..  30%  -69.9%    10                        |
+|  b84  lab0084_s210_w3_1045..  42%  -67.4%    12                        |
+|  b1   lab0001_s200_w1_0928..   0%  -65.8%    10                        |
++========================================================================+
++========================================================================+
+|[PENDING EXITS (1)]                                                     |
++========================================================================+
+|  b180 S217 BA260911C00217500 x1 take_profit (+50.0%)                   |
++========================================================================+
++========================================================================+
+|[OPEN OPTIONS (30)]                                                     |
++========================================================================+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|  ---------------------------------------------------------             |
+|  TSLA260909C00387500          12    -41.0%   $   -283.00               |
+|  TSLA260909C00385000           4    -48.1%   $   -141.00               |
+|  TSLA260909C00382500           6    -29.0%   $   -108.00               |
+|  TSLA260909C00380000           4    -30.1%   $    -88.00               |
+|  TSLA260911C00395000           6    -23.3%   $    -84.00               |
+|  TSLA260909C00390000           4    -38.5%   $    -75.00               |
+|  UPST260911C00029000           3    -49.0%   $    -72.00               |
+|  MARA260911C00011500          10    -15.2%   $    -70.00               |
+|  ... 22 more position(s)                                               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-09-07.log
+elapsed=18.6s reconcile=0.38s cancel=0.18s manage=15.07s
+STATUS: options_morning_bot run complete (PAPER) elapsed=18.6s. run=#9266 https://github.com/28twagg-ops/TradingBot/actions/runs/34157080574
+Evaluation complete: 100 strategies evaluated, 0 killed, 0 promote candidates.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-07_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-07_buckets.csv
+Summary: 0 buckets closed trades, $+0.00 realized
+STALE WARNING: 3 bucket(s) with open lots and last_entry >5d
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-07_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-07_strategy_selection.csv
+Summary: keep=0 watch=83 drop=22
+Orphan rate: 12.5% (353/2820) ALERT
+```
+
+---
