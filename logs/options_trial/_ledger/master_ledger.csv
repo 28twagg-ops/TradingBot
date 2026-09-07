@@ -12852,3 +12852,8 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-04T18:46:06Z,reconcile,82,lab0082_s210_w2_1005_1045_r1,S210,43e59e00bcbe,WFC,WFC260911C00091000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-04 19:55:22.525760+00:00,exit,805,lab0805_s404_w3_1045_1120_r2,S404,96749b3c3456,UPST,UPST260911C00029000,1,,0.11,49.0,-77.55,-38.0,reconcile_fill,,-0.01,0.5,-0.5,,,269304ca-1f54-4076-afaf-252c9ae6d0c8
 2026-09-04 19:45:05.029255+00:00,exit,181,lab0181_s217_w2_1005_1045_r2,S217,96b767c65f14,BA,BA260911C00217500,1,,1.1,72.0,52.78,38.0,take_profit (+50.0%),,-0.01,0.5,-0.5,,,b01f589e-901f-4991-bf58-cc20794b0970
+2026-09-07T13:01:11Z,reconcile,901,lab0901_s411_w2_1005_1045_r2,S411,4b003909264b,RBLX,RBLX260904C00042000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-07T13:01:11Z,reconcile,900,lab0900_s411_w2_1005_1045_r1,S411,15ce3087a85a,RBLX,RBLX260904C00042000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-07T13:01:11Z,reconcile,85,lab0085_s210_w3_1045_1120_r2,S210,8454aee974d4,NVDA,NVDA260904C00232500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-07T13:01:11Z,reconcile,84,lab0084_s210_w3_1045_1120_r1,S210,31fdc99e4930,NVDA,NVDA260904C00232500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-07T13:01:11Z,reconcile,344,lab0344_s359_w1_0928_1005_r1,S359,0a1b9be25f7c,MARA,MARA260904C00012000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
