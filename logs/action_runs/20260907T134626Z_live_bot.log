@@ -1,0 +1,30 @@
+13:46:27  INFO      Mode: morning_scan
+13:46:28  INFO        [positions] 3/3 (3 valid)
+13:46:28  INFO        SELL LIMIT FLEX  qty=0.31607724  limit=$109.29  id=6e61ecb8-b4e9-452f-aa01-1aa34e1f863e
+13:46:49  INFO        SELL LIMIT not filled for FLEX, falling back to market
+13:46:49  INFO        SELL MARKET FLEX closed
+13:46:52  INFO        SELL LIMIT LII  qty=0.089467389  limit=$389.75  id=d3e3312f-1cf8-4ef7-8a4a-f746674a04a6
+13:47:12  INFO        SELL LIMIT not filled for LII, falling back to market
+13:47:12  INFO        SELL MARKET LII closed
+13:47:15  INFO        SELL LIMIT AMZN  qty=0.135349882  limit=$257.99  id=ffeda294-8513-442a-9471-07909aeaca29
+13:47:35  INFO        SELL LIMIT not filled for AMZN, falling back to market
+13:47:35  INFO        SELL MARKET AMZN closed
+13:47:38  INFO        Universe cache hit: 903 tickers (tickers_2026-09-07.json)
+13:47:39  INFO        [universe] 40/900 (40 valid)
+13:47:40  INFO        [universe] 80/900 (80 valid)
+13:47:41  INFO        [universe] 120/900 (120 valid)
+13:47:43  INFO        [universe] 160/900 (160 valid)
+13:47:44  INFO        [universe] 200/900 (199 valid)
+13:47:51  INFO        [universe] 240/900 (238 valid)
+13:48:05  INFO        [universe] 280/900 (278 valid)
+13:48:15  INFO        [universe] 320/900 (318 valid)
+13:48:28  INFO        [universe] 360/900 (358 valid)
+13:48:38  INFO        [universe] 400/900 (397 valid)
+13:48:52  INFO        [universe] 440/900 (437 valid)
+13:49:02  INFO        [universe] 480/900 (477 valid)
+13:49:15  INFO        [universe] 520/900 (517 valid)
+13:49:29  INFO        [universe] 560/900 (557 valid)
+13:49:39  INFO        [universe] 600/900 (597 valid)
+13:49:52  INFO        [universe] 640/900 (637 valid)
+13:50:03  INFO        [universe] 680/900 (677 valid)
+13:50:16  INFO        [universe] 720/900 (717 valid)
