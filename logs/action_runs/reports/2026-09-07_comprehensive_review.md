@@ -15152,3 +15152,215 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260907T193612Z
+
+- UTC timestamp: `20260907T193612Z`
+- GitHub run: [#9263](https://github.com/28twagg-ops/TradingBot/actions/runs/34156133280)
+- Run id: `34156133280`
+- Live bot: exit=`0`, duration=`217s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260907T193612Z_live_bot.log`, `logs/action_runs/20260907T193612Z_live_options.log`, `logs/action_runs/20260907T193612Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1029 | 50.1 | +12.5 | +47.6 | $+15,692 |
+| TAINTED | 1791 | 33.5 | -38.4 | +12.7 | $-8,651 |
+| KEEP-only | 551 | 64.2 | +51.4 | +73.6 | $+10,279 |
+| KEEP-only recent | 343 | 61.2 | +53.6 | +90.2 | $+5,022 |
+
+- KEEP strategies (22): S173, S174, S210, S218, S350, S352, S353, S354, S355, S357, S361, S362, S363, S364, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (18): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S359, S360, S365, S366, S405, S407, S408, S411
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-07T15:39:53.679883-04:00","date":"2026-09-07","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":16.1,"phases_s":{"reconcile":0.11,"cancel":0.04,"manage":15.0,"protective_stops":0.49},"signals":0,"placed":0,"equity":1005240.75,"open_positions":30,"pending_orders":0,"open_lots":121,"submitted_today":0,"filled_today":0,"unattributed_contracts":1,"top_signals":[],"github_run":"9263","github_run_id":"34156133280","status":"ok","data_quality":{"clean":{"n":1029,"win":50.15,"med":12.5,"avg":47.58,"pnl":15692.21},"tainted":{"n":1791,"win":33.5,"med":-38.36,"avg":12.71,"pnl":-8650.84},"keep_only":{"n":551,"win":64.25,"med":51.39,"avg":73.64,"pnl":10279.45},"keep_only_recent":{"n":343,"win":61.22,"med":53.57,"avg":90.18,"pnl":5022.0},"keep_strategies":["S173","S174","S210","S218","S350","S352","S353","S354","S355","S357","S361","S362","S363","S364","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S359","S360","S365","S366","S405","S407","S408","S411"]}}
+```
+
+### Live bot (tail)
+
+```text
+19:36:13  INFO      Mode: evening_prep
+19:36:13  INFO        [prep_positions] 3/3 (3 valid)
+19:36:13  INFO        Universe cache hit: 903 tickers (tickers_2026-09-07.json)
+19:36:14  INFO        [prep_universe] 40/900 (40 valid)
+19:36:15  INFO        [prep_universe] 80/900 (80 valid)
+19:36:16  INFO        [prep_universe] 120/900 (120 valid)
+19:36:18  INFO        [prep_universe] 160/900 (160 valid)
+19:36:19  INFO        [prep_universe] 200/900 (199 valid)
+19:36:29  INFO        [prep_universe] 240/900 (238 valid)
+19:36:39  INFO        [prep_universe] 280/900 (278 valid)
+19:36:52  INFO        [prep_universe] 320/900 (318 valid)
+19:37:04  INFO        [prep_universe] 360/900 (358 valid)
+19:37:15  INFO        [prep_universe] 400/900 (397 valid)
+19:37:28  INFO        [prep_universe] 440/900 (437 valid)
+19:37:40  INFO        [prep_universe] 480/900 (477 valid)
+19:37:50  INFO        [prep_universe] 520/900 (517 valid)
+19:38:03  INFO        [prep_universe] 560/900 (557 valid)
+19:38:16  INFO        [prep_universe] 600/900 (597 valid)
+19:38:29  INFO        [prep_universe] 640/900 (637 valid)
+19:38:39  INFO        [prep_universe] 680/900 (677 valid)
+19:38:52  INFO        [prep_universe] 720/900 (717 valid)
+19:39:04  INFO        [prep_universe] 760/900 (757 valid)
+19:39:14  INFO        [prep_universe] 800/900 (797 valid)
+19:39:27  INFO        [prep_universe] 840/900 (837 valid)
+19:39:40  INFO        [prep_universe] 880/900 (877 valid)
+19:39:47  INFO        [prep_universe] 900/900 (896 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      EVENING_PREP|
+|  Time                                                         19:36 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $230.56|
++========================================================================+
+
++========================================================================+
+|                              EVENING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/evening_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       3|
+|  Invested                                                       $104.54|
+|  Open P&L                                                        $+0.83|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AMZN     unknown         $34.99     $255.49  $258.51  +1.2%   $+0.41  |
+|  FLEX     unknown         $34.61     $109.37  $109.51  +0.1%   $+0.04  |
+|  LII      unknown         $34.94     $386.29  $390.53  +1.1%   $+0.38  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                3|
+|  TICKER    TYPE              QTY       LIMIT       STOP                |
++------------------------------------------------------------------------+
+|  FLEX      OrderType.MARKET  0.31607~  None        None                |
+|  LII       OrderType.MARKET  0.08946~  None        None                |
+|  AMZN      OrderType.MARKET  0.13534~  None        None                |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      0|
+|  Signal candidates                                                   90|
+|  Universe scanned                                                   900|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-09-07T15:39:50.191220-04:00 share=25% ===
+2026-09-07 15:39:50,191 INFO === options_live_micro LIVE 2026-09-07T15:39:50.191220-04:00 share=25% ===
+Live account equity $230.56 cash $126.02 #225458845 options_level=3
+2026-09-07 15:39:50,480 INFO Live account equity $230.56 cash $126.02 #225458845 options_level=3
+Live micro: manage/exits only
+2026-09-07 15:39:50,529 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-09-07 15:39:50,540 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+... (159 earlier lines - see full log file)
+| S173 | 17 | 9 | 1.9 | ~20 active signal-days |
+| S174 | 7 | 4 | 1.8 | ~22 active signal-days |
+
+\* Formula: `ceil(30 / (avg_unique_per_active_day * 80%))`. Update when real exit rates are known.
+
+## Signal frequency by window (all time, unique strategy×symbol×date×window)
+
+| Window | S163 | S164 | S165 | S166 | S167 | S168 | S169 | S170 | S171 | S172 | S175 | S173 | S174 | Total |
+|--------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|------:|
+| w1     |    5 |    4 |    8 |    3 |    4 |    4 |    0 |    0 |    0 |    0 |    0 |    7 |    1 |    36 |
+| w2     |    7 |    6 |   12 |    7 |    7 |    6 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    54 |
+| w3     |    9 |    7 |   14 |    6 |    8 |    6 |    0 |    0 |    0 |    0 |    0 |    7 |    4 |    61 |
+| w4     |    6 |    4 |   10 |    3 |    5 |    7 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    44 |
+
+Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:20–11:35. Parsed from controlled-layout profile names in ENTRY log lines.
+
+## Raw vs unique totals
+
+| Strategy | Raw log lines (includes multi-bucket duplicates) | Unique underlying symbols |
+|----------|-------------------------------------------------:|--------------------------:|
+| S163 | 245 | 12 |
+| S164 | 263 | 13 |
+| S165 | 1703 | 26 |
+| S166 | 135 | 9 |
+| S167 | 257 | 13 |
+| S168 | 190 | 11 |
+| S169 | 0 | 0 |
+| S170 | 0 | 0 |
+| S171 | 0 | 0 |
+| S172 | 0 | 0 |
+| S175 | 0 | 0 |
+| S173 | 1911 | 17 |
+| S174 | 891 | 7 |
+
+### Raw log lines per day (debug / multi-bucket)
+
+| Date       | S163 | S164 | S165 | S166 | S167 | S168 | S169 | S170 | S171 | S172 | S175 | S173 | S174 | Total |
+|------------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|------:|
+| 2026-07-07 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |    0 |   100 |
+| 2026-07-08 |    0 |    0 |  100 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |  100 |   300 |
+| 2026-07-09 |    0 |    0 |   24 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |   15 |   139 |
+| 2026-07-10 |    0 |    0 |  242 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  230 |  202 |   674 |
+| 2026-07-13 |    0 |    0 |  190 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  212 |  188 |   590 |
+| 2026-07-14 |    0 |    0 |  194 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  185 |  106 |   485 |
+| 2026-07-15 |    0 |    0 |  146 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  154 |   58 |   358 |
+| 2026-07-16 |    0 |    0 |  179 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  205 |   58 |   442 |
+| 2026-07-17 |    0 |    0 |  127 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  207 |   58 |   392 |
+| 2026-07-20 |    0 |    0 |  107 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  143 |   58 |   308 |
+| 2026-07-21 |   30 |   35 |  113 |   30 |   35 |   35 |    0 |    0 |    0 |    0 |    0 |  118 |   48 |   444 |
+| 2026-07-22 |   40 |   47 |   86 |   15 |   45 |   20 |    0 |    0 |    0 |    0 |    0 |   77 |    0 |   330 |
+| 2026-07-23 |   30 |   42 |   50 |   15 |   40 |   20 |    0 |    0 |    0 |    0 |    0 |   40 |    0 |   237 |
+| 2026-07-24 |   75 |   87 |   85 |   15 |   77 |   55 |    0 |    0 |    0 |    0 |    0 |   40 |    0 |   434 |
+| 2026-07-27 |   14 |    0 |   14 |   14 |   14 |   14 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    70 |
+| 2026-07-28 |    6 |    8 |    8 |    8 |    8 |    6 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    44 |
+| 2026-07-29 |   10 |   10 |   10 |    8 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    48 |
+| 2026-09-01 |    8 |    6 |    6 |    2 |    6 |    6 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    34 |
+| 2026-09-02 |   10 |   10 |   10 |    2 |   10 |   14 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    56 |
+| 2026-09-03 |   10 |    4 |    4 |   16 |    4 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    48 |
+| 2026-09-04 |   12 |   14 |    8 |   10 |    8 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    62 |
+
+## Notes
+
+- Pre-router-fix (before 2026-07-17 commit `56660c9e`): S163/S166 were starved — expect zeros until a post-fix entry-window gap-down day.
+- Controlled layout places one ENTRY per matching bucket×strategy; raw counts inflate, unique underlyings do not.
+
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/signal_frequency.md
+## Ledger health — 2026-09-07
+| Check                       | Count | Status |
+|-----------------------------|------:|--------|
+| Current stuck (state)       |     2 | WARN | <<<
+| Orphaned lots (post-stable) |  1034 | WARN | <<<
+| Missing exit records (post) |  1032 | WARN | <<<
+| State/ledger mismatches     |     7 | WARN | <<<
+| Total open lots             |   121 | INFO |
+| Total closed lots           |  2000 | INFO |
+| Pre-cutoff audit debt       |     0 | INFO |
+| Transition audit debt       |   744 | INFO |
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_health.md
+```
+
+---
