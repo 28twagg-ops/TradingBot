@@ -1,0 +1,61 @@
+16:41:01  INFO      Mode: exits
+16:41:02  INFO        place_all_stops: checking 3 positions...
+16:41:02  INFO        STOP skipped AMZN: fractional (0.1353 shares) — software exit will handle it
+16:41:02  INFO        STOP skipped FLEX: fractional (0.3161 shares) — software exit will handle it
+16:41:02  INFO        STOP skipped LII: fractional (0.0895 shares) — software exit will handle it
+16:41:02  INFO        [positions] 3/3 (3 valid)
+16:41:02  INFO        SELL order cancelled FLEX  type=OrderType.MARKET  id=ec5a619a-9915-40de-a283-0bdce349022b
+16:41:03  INFO        SELL LIMIT FLEX  qty=0.31607724  limit=$109.29  id=36310cfe-a908-4964-99d1-99219a1f17d2
+16:41:23  INFO        SELL LIMIT not filled for FLEX, falling back to market
+16:41:23  INFO        SELL MARKET FLEX closed
+16:41:26  INFO        Daily log -> logs/daily/2026-09-07.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         16:41 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $230.56|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  FLEX  P&L +0.1%  $+0.04                      EXIT: max_hold 3d (+0.1%)|
+|  FLEX         PARTIAL SELL (0.3161 sh remain) — will retry this session|
+|  LII  P&L +1.1%  $+0.38                                            HOLD|
+|  AMZN  P&L +1.2%  $+0.41                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  0 filled  |  1 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
