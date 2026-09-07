@@ -1,0 +1,71 @@
+14:06:01  INFO      Mode: exits
+14:06:02  INFO        place_all_stops: checking 3 positions...
+14:06:02  INFO        STOP skipped AMZN: fractional (0.1353 shares) — software exit will handle it
+14:06:02  INFO        STOP skipped FLEX: fractional (0.3161 shares) — software exit will handle it
+14:06:02  INFO        STOP skipped LII: fractional (0.0895 shares) — software exit will handle it
+14:06:03  INFO        [positions] 3/3 (3 valid)
+14:06:03  INFO        SELL order cancelled FLEX  type=OrderType.MARKET  id=71ae8648-fcb1-4cf1-af28-d359570530b1
+14:06:03  INFO        SELL LIMIT FLEX  qty=0.31607724  limit=$109.29  id=64a2c122-f620-4abe-9662-e9218478c145
+14:06:23  INFO        SELL LIMIT not filled for FLEX, falling back to market
+14:06:23  INFO        SELL MARKET FLEX closed
+14:06:26  INFO        SELL order cancelled LII  type=OrderType.MARKET  id=5829566b-1860-4ebe-bf80-7c859c5e2128
+14:06:26  INFO        SELL LIMIT LII  qty=0.089467389  limit=$389.75  id=37b6e967-4797-4e90-9ba8-f859b79d66f0
+14:06:46  INFO        SELL LIMIT not filled for LII, falling back to market
+14:06:46  INFO        SELL MARKET LII closed
+14:06:48  INFO        SELL order cancelled AMZN  type=OrderType.MARKET  id=3a13858c-f577-4d2a-9ed1-13e66578e932
+14:06:49  INFO        SELL LIMIT AMZN  qty=0.135349882  limit=$257.99  id=60468ac1-17db-4cf1-987d-6edfa83b9c63
+14:07:09  INFO        SELL LIMIT not filled for AMZN, falling back to market
+14:07:09  INFO        SELL MARKET AMZN closed
+14:07:12  INFO        Daily log -> logs/daily/2026-09-07.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:06 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $230.56|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  FLEX  P&L +0.1%  $+0.04                      EXIT: max_hold 3d (+0.1%)|
+|  FLEX         PARTIAL SELL (0.3161 sh remain) — will retry this session|
+|  LII  P&L +1.1%  $+0.38                       EXIT: max_hold 4d (+1.1%)|
+|  LII          PARTIAL SELL (0.0895 sh remain) — will retry this session|
+|  AMZN  P&L +1.2%  $+0.41                      EXIT: max_hold 5d (+1.2%)|
+|  AMZN         PARTIAL SELL (0.1353 sh remain) — will retry this session|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  3 attempted  |  0 filled  |  3 partial  |  0 pending  |  0 failed|
+|  Holds                                                                0|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
