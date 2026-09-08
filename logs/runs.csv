@@ -7075,3 +7075,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-08 15:51:38,exits,bull,230.29,161.23,0,0,0,2,AMCR|APD,both
 2026-09-08 15:56:03,exits,bull,230.27,161.23,0,0,0,2,AMCR|APD,both
 2026-09-08 16:01:08,exits,bull,230.15,195.62,0,0,1,1,AMCR,both
+2026-09-08 16:06:02,exits,bull,230.14,195.62,0,0,0,1,AMCR,both
