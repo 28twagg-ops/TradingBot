@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-08
 
-_Generated 2026-09-08T10:32:28.820976_
+_Generated 2026-09-08T10:37:24.718971_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-08T10:32:28.820976_
 
 ## Attribution health
 
-- Total exits: **2832**
+- Total exits: **2833**
 - Orphan exits (b0/orphan_reconcile): **353**
 - Orphan rate: **12.5%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -33,7 +33,7 @@ _Generated 2026-09-08T10:32:28.820976_
 | S403 (Any_MA50_Touch) | 3d | watch | 44 | 65.9 | +50.93 | -63.07 | -49.10 | +236.83 | 39 | 8 | 2 | $+890.00 | 20.5% | fat left tail (p10 < -45%) |
 | S404 (GapDown_OTM2) | 3d | watch | 45 | 64.4 | +50.00 | -91.67 | -41.89 | +117.95 | 39 | 13 | 5 | $+789.00 | 20.0% | fat left tail (p10 < -45%) |
 | S361 (RubberBand_2DTE) | 2d | watch | 41 | 56.1 | +44.83 | -68.52 | -53.33 | +253.33 | 39 | 4 | 0 | $+212.00 | 26.8% | fat left tail (p10 < -45%) |
-| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 69 | 56.5 | +36.36 | -71.43 | -48.57 | +164.89 | 43 | 4 | 1 | $+1,111.00 | 36.2% | fat left tail (p10 < -45%) |
+| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 69 | 56.5 | +36.36 | -71.43 | -48.57 | +164.89 | 43 | 6 | 1 | $+1,111.00 | 36.2% | fat left tail (p10 < -45%) |
 | S364 (RubberBand_7DTE) | 7d | watch | 50 | 52.0 | +23.90 | -85.97 | -57.98 | +188.89 | 39 | 2 | 0 | $+92.00 | 38.0% | fat left tail (p10 < -45%) |
 | S350 (GapDown_0DTE) | 0d | watch | 39 | 56.4 | +17.65 | -63.53 | -52.09 | +260.00 | 39 | 10 | 0 | $+764.00 | 33.3% | fat left tail (p10 < -45%) |
 | S352 (GapDown_2DTE) | 2d | watch | 40 | 52.5 | +13.04 | -76.27 | -51.85 | +342.77 | 39 | 6 | 2 | $+176.00 | 27.5% | fat left tail (p10 < -45%) |
@@ -103,7 +103,7 @@ _Generated 2026-09-08T10:32:28.820976_
 | S366 (RubberBand_21DTE) | 21d | watch | 12 | 33.3 | -50.42 | -56.92 | -56.92 | +95.91 | 35 | 4 | 2 | $-77.00 | 66.7% | early sample with non-positive median |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 12 | 0.0 | -56.77 | -73.59 | -65.84 | -38.58 | 42 | 6 | 2 | $-208.00 | 33.3% | early sample with non-positive median |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 6 | 0.0 | -61.46 | -82.78 | -69.36 | -50.75 | 41 | 0 | 0 | $-210.00 | 83.3% | insufficient sample (<8 exits) |
-| S408 (RubberBand_ITM1) | 3d | drop | 46 | 47.8 | +0.00 | -69.28 | -55.56 | +731.12 | 36 | 6 | 1 | $+1,102.00 | 21.7% | non-positive median return |
+| S408 (RubberBand_ITM1) | 3d | drop | 47 | 46.8 | +0.00 | -69.06 | -57.13 | +716.00 | 36 | 6 | 2 | $+1,100.00 | 21.3% | non-positive median return |
 | S411 (RubberBand_OTM2) | 3d | drop | 33 | 48.5 | +0.00 | -56.72 | -51.67 | +37.88 | 36 | 6 | 0 | $-321.00 | 27.3% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 36 | 47.2 | -2.90 | -51.79 | -23.26 | +114.15 | 39 | 6 | 0 | $+110.00 | 22.2% | non-positive median return |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 72 | 48.6 | -5.30 | -80.79 | -50.83 | +63.95 | 43 | 6 | 2 | $-122.00 | 20.8% | non-positive median return |
@@ -207,7 +207,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 |---|---|---:|---:|---:|---:|---:|---:|
 | S216 | 3d ATM RSI x30 | 38 | -53.98 | -82.47 | -74.25 | 4 | 0 |
 | S217 | 3d ATM RSI<25 bounce | 54 | -46.15 | -79.25 | -58.01 | 6 | 3 |
-| S218 | 3d ATM BB lower touch | 69 | +36.36 | -71.43 | -48.57 | 4 | 1 |
+| S218 | 3d ATM BB lower touch | 69 | +36.36 | -71.43 | -48.57 | 6 | 1 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
 ### Other
@@ -317,7 +317,7 @@ _Pipeline evaluation as of 2026-09-08. Auto-kill thresholds: median<-25% at n>=1
 | S405 | GapDown_OTM3 | 56 | -42.86% | 34% | INSUFFICIENT | 39 |
 | S406 | RubberBand_ITM3 | 69 | +72.55% | 70% | INSUFFICIENT | 39 |
 | S407 | RubberBand_ITM2 | 38 | -47.73% | 29% | INSUFFICIENT | 39 |
-| S408 | RubberBand_ITM1 | 46 | +0.00% | 48% | INSUFFICIENT | 36 |
+| S408 | RubberBand_ITM1 | 47 | +0.00% | 47% | INSUFFICIENT | 36 |
 | S409 | RubberBand_ATM | 0 | — | — | NEW | 0 |
 | S410 | RubberBand_OTM1 | 6 | +8.42% | 50% | WATCH | 33 |
 | S411 | RubberBand_OTM2 | 33 | +0.00% | 48% | INSUFFICIENT | 36 |
