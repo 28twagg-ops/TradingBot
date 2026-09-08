@@ -1,17 +1,17 @@
 # Options strategy selection report — 2026-09-08
 
-_Generated 2026-09-08T14:26:27.776835_
+_Generated 2026-09-08T14:31:46.074841_
 
 ## Summary
 
 - Strategies analyzed: **105**
 - Keep: **0**
-- Watch: **82**
-- Drop: **23**
+- Watch: **83**
+- Drop: **22**
 
 ## Attribution health
 
-- Total exits: **2880**
+- Total exits: **2883**
 - Orphan exits (b0/orphan_reconcile): **357**
 - Orphan rate: **12.4%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -20,7 +20,7 @@ _Generated 2026-09-08T14:26:27.776835_
 
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 11 | 90.9 | +118.92 | +50.00 | +78.02 | +255.56 | 49 | 11 | 3 | $+547.00 | 54.5% | building sample (8-19 exits) |
+| S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 12 | 83.3 | +117.57 | -54.46 | +52.50 | +254.86 | 49 | 11 | 4 | $+510.00 | 50.0% | building sample (8-19 exits) |
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 6 | 66.7 | +116.00 | -55.36 | -15.02 | +521.06 | 49 | 10 | 2 | $+252.00 | 33.3% | insufficient sample (<8 exits) |
 | S396 (GapDown_ITM2) | 3d | watch | 4 | 75.0 | +83.82 | -35.16 | +35.39 | +95.00 | 33 | 2 | 0 | $+120.00 | 100.0% | insufficient sample (<8 exits) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 11 | 100.0 | +81.08 | +64.86 | +73.78 | +200.00 | 49 | 8 | 2 | $+478.00 | 45.5% | building sample (8-19 exits) |
@@ -30,14 +30,15 @@ _Generated 2026-09-08T14:26:27.776835_
 | S397 (GapDown_ITM1) | 3d | watch | 29 | 75.9 | +57.53 | -70.11 | +19.15 | +115.58 | 39 | 12 | 2 | $+757.00 | 24.1% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 43 | 74.4 | +57.14 | -59.71 | -10.87 | +725.71 | 39 | 6 | 0 | $+1,359.00 | 30.2% | fat left tail (p10 < -45%) |
 | S357 (GapDown_21DTE) | 21d | watch | 24 | 79.2 | +55.04 | -76.29 | +47.06 | +78.98 | 39 | 4 | 1 | $+490.00 | 33.3% | fat left tail (p10 < -45%) |
+| S410 (RubberBand_OTM1) | 3d | watch | 7 | 57.1 | +51.39 | -72.33 | -58.46 | +87.26 | 33 | 2 | 1 | $+70.00 | 85.7% | insufficient sample (<8 exits) |
 | S403 (Any_MA50_Touch) | 3d | watch | 46 | 67.4 | +50.88 | -61.05 | -48.23 | +222.50 | 39 | 10 | 4 | $+925.00 | 19.6% | fat left tail (p10 < -45%) |
 | S404 (GapDown_OTM2) | 3d | watch | 45 | 64.4 | +50.00 | -91.67 | -41.89 | +117.95 | 39 | 15 | 5 | $+789.00 | 20.0% | fat left tail (p10 < -45%) |
 | S361 (RubberBand_2DTE) | 2d | watch | 41 | 56.1 | +44.83 | -68.52 | -53.33 | +253.33 | 39 | 6 | 0 | $+212.00 | 26.8% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 74 | 56.8 | +41.03 | -70.00 | -47.61 | +161.14 | 43 | 8 | 6 | $+1,214.00 | 33.8% | fat left tail (p10 < -45%) |
 | S364 (RubberBand_7DTE) | 7d | watch | 50 | 52.0 | +23.90 | -85.97 | -57.98 | +188.89 | 39 | 2 | 0 | $+92.00 | 38.0% | fat left tail (p10 < -45%) |
+| S412 (RubberBand_OTM3) | 3d | watch | 38 | 50.0 | +15.91 | -51.79 | -21.26 | +113.49 | 39 | 8 | 2 | $+150.00 | 21.1% | fat left tail (p10 < -45%) |
 | S350 (GapDown_0DTE) | 0d | watch | 41 | 53.7 | +15.00 | -62.75 | -50.00 | +260.00 | 39 | 10 | 2 | $+713.00 | 31.7% | fat left tail (p10 < -45%) |
 | S401 (Any_Gap_Down_Small) | 3d | watch | 96 | 52.1 | +8.97 | -83.94 | -48.74 | +273.08 | 39 | 14 | 2 | $+1,209.00 | 33.3% | fat left tail (p10 < -45%) |
-| S410 (RubberBand_OTM1) | 3d | watch | 6 | 50.0 | +8.42 | -73.28 | -63.48 | +89.63 | 33 | 2 | 0 | $+33.00 | 83.3% | insufficient sample (<8 exits) |
 | S411 (RubberBand_OTM2) | 3d | watch | 36 | 52.8 | +5.20 | -56.72 | -51.46 | +54.09 | 36 | 10 | 3 | $-200.00 | 25.0% | fat left tail (p10 < -45%) |
 | S398 (GapDown_ATM) | 3d | watch | 48 | 52.1 | +3.33 | -68.29 | -54.65 | +156.23 | 39 | 10 | 2 | $+732.00 | 31.2% | fat left tail (p10 < -45%) |
 | S358 (GapDown_30DTE) | 30d | watch | 4 | 50.0 | +0.84 | -51.39 | -51.39 | +54.49 | 35 | 0 | 0 | $-21.00 | 50.0% | insufficient sample (<8 exits) |
@@ -103,7 +104,6 @@ _Generated 2026-09-08T14:26:27.776835_
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 12 | 0.0 | -56.77 | -73.59 | -65.84 | -38.58 | 42 | 6 | 2 | $-208.00 | 33.3% | early sample with non-positive median |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 6 | 0.0 | -61.46 | -82.78 | -69.36 | -50.75 | 41 | 0 | 0 | $-210.00 | 83.3% | insufficient sample (<8 exits) |
 | S408 (RubberBand_ITM1) | 3d | drop | 47 | 46.8 | +0.00 | -69.06 | -57.13 | +716.00 | 36 | 8 | 2 | $+1,100.00 | 21.3% | non-positive median return |
-| S412 (RubberBand_OTM3) | 3d | drop | 37 | 48.6 | -2.22 | -51.79 | -23.26 | +113.82 | 39 | 8 | 1 | $+132.00 | 21.6% | non-positive median return |
 | S352 (GapDown_2DTE) | 2d | drop | 42 | 50.0 | -2.30 | -74.64 | -51.84 | +336.07 | 39 | 6 | 4 | $+120.00 | 26.2% | non-positive median return |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 75 | 49.3 | -4.35 | -79.42 | -50.96 | +72.84 | 43 | 12 | 5 | $-85.00 | 20.0% | non-positive median return |
 | S355 (GapDown_7DTE) | 7d | drop | 59 | 49.2 | -15.62 | -69.48 | -61.25 | +188.75 | 39 | 6 | 2 | $+553.00 | 28.8% | non-positive median return |
@@ -132,14 +132,14 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 ### GapDown DTE comparison
 
-- Status: **OK** | Best median: **S168** (+118.92%) | Best p10: **S163** (+64.86%)
+- Status: **OK** | Best median: **S168** (+117.57%) | Best p10: **S163** (+64.86%)
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S163 | 7d ATM | 11 | +81.08 | +64.86 | +73.78 | 8 | 2 |
 | S164 | 1d ATM | 11 | -50.00 | -88.89 | -65.67 | 16 | 0 |
 | S165 | 3d ATM | 249 | -38.00 | -63.29 | -53.52 | 10 | 0 |
-| S168 | 5d ATM | 11 | +118.92 | +50.00 | +78.02 | 11 | 3 |
+| S168 | 5d ATM | 12 | +117.57 | -54.46 | +52.50 | 11 | 4 |
 
 ### GapDown Strike comparison
 
@@ -229,7 +229,7 @@ _Pipeline evaluation as of 2026-09-08. Auto-kill thresholds: median<-25% at n>=1
 | S165 | GapDown long call 3 DT | 249 | -38.00% | 31% | INSUFFICIENT | 64 |
 | S166 | GapDown strong call | 8 | +75.23% | 100% | WATCH | 49 |
 | S167 | GapDown long call 3 DT | 6 | +116.00% | 67% | WATCH | 49 |
-| S168 | GapDown ATM 5-DTE — P2 | 11 | +118.92% | 91% | WATCH | 49 |
+| S168 | GapDown ATM 5-DTE — P2 | 12 | +117.57% | 83% | WATCH | 49 |
 | S169 | BB Squeeze Breakout ca | 0 | — | — | NEW | 0 |
 | S170 | Golden Pocket call 3 D | 0 | — | — | NEW | 0 |
 | S171 | VWAP Reclaim call 3 DT | 0 | — | — | NEW | 0 |
@@ -319,9 +319,9 @@ _Pipeline evaluation as of 2026-09-08. Auto-kill thresholds: median<-25% at n>=1
 | S407 | RubberBand_ITM2 | 38 | -47.73% | 29% | INSUFFICIENT | 39 |
 | S408 | RubberBand_ITM1 | 47 | +0.00% | 47% | INSUFFICIENT | 36 |
 | S409 | RubberBand_ATM | 0 | — | — | NEW | 0 |
-| S410 | RubberBand_OTM1 | 6 | +8.42% | 50% | WATCH | 33 |
+| S410 | RubberBand_OTM1 | 7 | +51.39% | 57% | WATCH | 33 |
 | S411 | RubberBand_OTM2 | 36 | +5.20% | 53% | INSUFFICIENT | 36 |
-| S412 | RubberBand_OTM3 | 37 | -2.22% | 49% | INSUFFICIENT | 39 |
+| S412 | RubberBand_OTM3 | 38 | +15.91% | 50% | INSUFFICIENT | 39 |
 | S413 | BBSqueeze_ITM3 | 0 | — | — | NEW | 0 |
 | S414 | BBSqueeze_ITM2 | 0 | — | — | NEW | 0 |
 | S415 | BBSqueeze_ITM1 | 0 | — | — | NEW | 0 |
@@ -347,6 +347,7 @@ _Pipeline evaluation as of 2026-09-08. Auto-kill thresholds: median<-25% at n>=1
 | S361 | 41 | +44.83% | 56% | Tyler review |
 | S218 | 74 | +41.03% | 57% | Tyler review |
 | S364 | 50 | +23.90% | 52% | Tyler review |
+| S412 | 38 | +15.91% | 50% | Tyler review |
 | S350 | 41 | +15.00% | 54% | Tyler review |
 | S401 | 96 | +8.97% | 52% | Tyler review |
 | S411 | 36 | +5.20% | 53% | Tyler review |
