@@ -2742,26 +2742,6 @@
       "entry_order_id": "orphan:SNOW260911C00365000"
     },
     {
-      "lot_id": "a98cc00799da",
-      "bucket_id": 170,
-      "profile_name": "lab0170_s216_w4_1120_1135_r1",
-      "strategy_id": "S216",
-      "occ_symbol": "AVGO260911C00402500",
-      "underlying": "AVGO",
-      "qty": 1,
-      "entry_cost": 42.0,
-      "entry_price": 0.42,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-08T15:36:55.801121+00:00",
-      "entry_order_id": "bbfdb643-8e81-4fac-b7e2-6dda2ec0a49f"
-    },
-    {
       "lot_id": "1dd70207ec04",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -2803,16 +2783,6 @@
       "qty": 1,
       "reason": "take_profit (+61.0%)",
       "submitted": "2026-09-08T11:51:50"
-    },
-    {
-      "order_id": "a928c4f1-f746-4882-91b3-7cf85690fd12",
-      "lot_id": "a98cc00799da",
-      "bucket_id": 170,
-      "strategy_id": "S216",
-      "occ_symbol": "AVGO260911C00402500",
-      "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-09-08T12:46:28"
     }
   ],
   "bucket_open_premium": {
@@ -2948,8 +2918,7 @@
     "b240": 31.0,
     "b863": 13.0,
     "b862": 13.0,
-    "b87": 41.0,
-    "b170": 42.0
+    "b87": 41.0
   },
   "session_date": "2026-09-08",
   "entries_locked": [
