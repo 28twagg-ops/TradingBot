@@ -1162,46 +1162,6 @@
       "entry_order_id": "8b999f8b-1e8d-45e4-94e9-cf4d56841e30"
     },
     {
-      "lot_id": "cf976a4aa440",
-      "bucket_id": 800,
-      "profile_name": "lab0800_s404_w1_0928_1005_r1",
-      "strategy_id": "S404",
-      "occ_symbol": "SHOP260911C00148000",
-      "underlying": "SHOP",
-      "qty": 1,
-      "entry_cost": 56.99999999999999,
-      "entry_price": 0.57,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-08T14:04:20.023478+00:00",
-      "entry_order_id": "a23ff5f6-e580-425e-9770-9c9e9389e1e2"
-    },
-    {
-      "lot_id": "323033c51741",
-      "bucket_id": 777,
-      "profile_name": "lab0777_s397_w1_0928_1005_r2",
-      "strategy_id": "S397",
-      "occ_symbol": "SHOP260911C00148000",
-      "underlying": "SHOP",
-      "qty": 1,
-      "entry_cost": 56.99999999999999,
-      "entry_price": 0.57,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-08T14:04:20.045676+00:00",
-      "entry_order_id": "2639ba5e-df46-42e3-8e8e-b19f029ab364"
-    },
-    {
       "lot_id": "3fc7847aadd3",
       "bucket_id": 776,
       "profile_name": "lab0776_s397_w1_0928_1005_r1",
@@ -2800,18 +2760,7 @@
       "stop_loss": -0.5
     }
   ],
-  "pending_exits": [
-    {
-      "order_id": "ecc4116a-f94c-48a9-90e5-fdb15564a2d3",
-      "lot_id": "cf976a4aa440",
-      "bucket_id": 800,
-      "strategy_id": "S404",
-      "occ_symbol": "SHOP260911C00148000",
-      "qty": 1,
-      "reason": "stop_loss (-57.9%)",
-      "submitted": "2026-09-08T10:21:12"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b437": 61.0,
     "b436": 61.0,
@@ -2868,8 +2817,6 @@
     "b276": 37.0,
     "b1137": 37.0,
     "b1136": 37.0,
-    "b800": 56.99999999999999,
-    "b777": 56.99999999999999,
     "b776": 56.99999999999999,
     "b857": 6.0,
     "b856": 6.0,
@@ -3513,7 +3460,9 @@
     "2812c1d3-b4b5-451e-add5-c3ba06fb18c0",
     "3401c585-2b5d-4d62-b2f5-726017e42142",
     "6d8f3cf4-b936-497b-a52b-8ba5e9fe3d49",
-    "5dff18a8-668c-4353-8cce-df381ce8adc8"
+    "5dff18a8-668c-4353-8cce-df381ce8adc8",
+    "ecc4116a-f94c-48a9-90e5-fdb15564a2d3",
+    "be0cd47b-36c9-428b-85a0-e9b6ef43d425"
   ],
   "submitted_today": 95,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
