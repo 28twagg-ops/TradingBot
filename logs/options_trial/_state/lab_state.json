@@ -3033,6 +3033,16 @@
       "qty": 1,
       "reason": "take_profit (+61.0%)",
       "submitted": "2026-09-08T11:51:50"
+    },
+    {
+      "order_id": "7db8f5ca-dfc0-4da1-ac16-e11147cadd67",
+      "lot_id": "5abcf1eda381",
+      "bucket_id": 1140,
+      "strategy_id": "S163",
+      "occ_symbol": "TSLA260911C00390000",
+      "qty": 1,
+      "reason": "take_profit (+57.1%)",
+      "submitted": "2026-09-08T11:56:15"
     }
   ],
   "bucket_open_premium": {
