@@ -5492,8 +5492,8 @@
   {
     "bucket_id": 915,
     "profile": "lab0915_s412_w2_1005_1045_r2",
-    "open_premium": 51.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 916,

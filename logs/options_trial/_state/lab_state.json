@@ -1262,26 +1262,6 @@
       "entry_order_id": "67a8f349-af52-4e43-89cf-58d393bd1b41"
     },
     {
-      "lot_id": "607dd732717b",
-      "bucket_id": 915,
-      "profile_name": "lab0915_s412_w2_1005_1045_r2",
-      "strategy_id": "S412",
-      "occ_symbol": "CRWD260911C00225000",
-      "underlying": "CRWD",
-      "qty": 1,
-      "entry_cost": 51.0,
-      "entry_price": 0.51,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-08T14:08:22.849343+00:00",
-      "entry_order_id": "edbfdadc-ca84-45cd-b7f8-e8a32aded13a"
-    },
-    {
       "lot_id": "4f8f3ed4c630",
       "bucket_id": 914,
       "profile_name": "lab0914_s412_w2_1005_1045_r1",
@@ -2705,14 +2685,34 @@
       "submitted": "2026-09-08T13:21:24"
     },
     {
-      "order_id": "3afed2e5-3c49-4dcb-8967-928483b2a20f",
-      "lot_id": "607dd732717b",
-      "bucket_id": 915,
+      "order_id": "80646982-5f5e-473c-90b2-53da3ecbd14f",
+      "lot_id": "1f40c1374f55",
+      "bucket_id": 900,
+      "strategy_id": "S411",
+      "occ_symbol": "CRWD260911C00222500",
+      "qty": 1,
+      "reason": "take_profit (+59.4%)",
+      "submitted": "2026-09-08T13:46:14"
+    },
+    {
+      "order_id": "c0d43c39-4df2-405b-97d8-e3a4c3ac316f",
+      "lot_id": "daaa3d43a5ec",
+      "bucket_id": 905,
+      "strategy_id": "S411",
+      "occ_symbol": "PANW260911C00360000",
+      "qty": 1,
+      "reason": "take_profit (+59.4%)",
+      "submitted": "2026-09-08T13:46:17"
+    },
+    {
+      "order_id": "582bb3db-5ebd-46c0-973e-7550a4b09da4",
+      "lot_id": "4f8f3ed4c630",
+      "bucket_id": 914,
       "strategy_id": "S412",
       "occ_symbol": "CRWD260911C00225000",
       "qty": 1,
-      "reason": "take_profit (+50.3%)",
-      "submitted": "2026-09-08T13:31:25"
+      "reason": "take_profit (+63.0%)",
+      "submitted": "2026-09-08T13:46:18"
     }
   ],
   "bucket_open_premium": {
@@ -2779,7 +2779,6 @@
     "b167": 40.0,
     "b166": 40.0,
     "b237": 37.0,
-    "b915": 51.0,
     "b914": 51.0,
     "b379": 46.0,
     "b378": 46.0,
@@ -3437,7 +3436,8 @@
     "e33caea0-0c93-41c9-8851-2080792db28b",
     "66468f04-f50f-49bc-bc65-da9bf815ed59",
     "c1c1eabb-4730-4af5-b0cb-189d3769abf2",
-    "995ed860-3600-49d9-8d05-e36d0dff306f"
+    "995ed860-3600-49d9-8d05-e36d0dff306f",
+    "3afed2e5-3c49-4dcb-8967-928483b2a20f"
   ],
   "submitted_today": 139,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
