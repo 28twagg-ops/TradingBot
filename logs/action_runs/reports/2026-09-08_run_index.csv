@@ -1,2 +1,3 @@
 run_stamp,run_number,run_id,live_exit,live_options_exit,options_exit,live_duration_s,live_options_duration_s,options_duration_s,event_type
 20260908T130103Z,9316,34229308033,0,0,0,1,0,12,workflow_dispatch
+20260908T130606Z,9317,34229800731,0,0,0,1,1,12,workflow_dispatch
