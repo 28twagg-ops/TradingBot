@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-08
 
-_Generated 2026-09-08T14:46:35.573232_
+_Generated 2026-09-08T14:51:25.132831_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-08T14:46:35.573232_
 
 ## Attribution health
 
-- Total exits: **2884**
+- Total exits: **2885**
 - Orphan exits (b0/orphan_reconcile): **357**
 - Orphan rate: **12.4%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -28,7 +28,7 @@ _Generated 2026-09-08T14:46:35.573232_
 | S406 (RubberBand_ITM3) | 3d | watch | 74 | 71.6 | +72.81 | -61.97 | -4.79 | +965.79 | 39 | 8 | 5 | $+3,431.00 | 20.3% | fat left tail (p10 < -45%) |
 | S353 (GapDown_3DTE) | 3d | watch | 28 | 53.6 | +63.97 | -81.10 | -70.46 | +237.37 | 39 | 6 | 1 | $+191.00 | 32.1% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 29 | 75.9 | +57.53 | -70.11 | +19.15 | +115.58 | 39 | 12 | 2 | $+757.00 | 24.1% | fat left tail (p10 < -45%) |
-| S362 (RubberBand_3DTE) | 3d | watch | 43 | 74.4 | +57.14 | -59.71 | -10.87 | +725.71 | 39 | 6 | 0 | $+1,359.00 | 30.2% | fat left tail (p10 < -45%) |
+| S362 (RubberBand_3DTE) | 3d | watch | 44 | 75.0 | +56.35 | -59.57 | -1.08 | +710.00 | 39 | 6 | 1 | $+1,374.00 | 29.5% | fat left tail (p10 < -45%) |
 | S357 (GapDown_21DTE) | 21d | watch | 24 | 79.2 | +55.04 | -76.29 | +47.06 | +78.98 | 39 | 4 | 1 | $+490.00 | 33.3% | fat left tail (p10 < -45%) |
 | S410 (RubberBand_OTM1) | 3d | watch | 7 | 57.1 | +51.39 | -72.33 | -58.46 | +87.26 | 33 | 2 | 1 | $+70.00 | 85.7% | insufficient sample (<8 exits) |
 | S403 (Any_MA50_Touch) | 3d | watch | 46 | 67.4 | +50.88 | -61.05 | -48.23 | +222.50 | 39 | 10 | 4 | $+925.00 | 19.6% | fat left tail (p10 < -45%) |
@@ -271,7 +271,7 @@ _Pipeline evaluation as of 2026-09-08. Auto-kill thresholds: median<-25% at n>=1
 | S359 | RubberBand_0DTE | 30 | -44.44% | 33% | INSUFFICIENT | 36 |
 | S360 | RubberBand_1DTE | 49 | -56.41% | 10% | INSUFFICIENT | 39 |
 | S361 | RubberBand_2DTE | 41 | +44.83% | 56% | INSUFFICIENT | 39 |
-| S362 | RubberBand_3DTE | 43 | +57.14% | 74% | INSUFFICIENT | 39 |
+| S362 | RubberBand_3DTE | 44 | +56.35% | 75% | INSUFFICIENT | 39 |
 | S363 | RubberBand_5DTE | 32 | -68.84% | 41% | INSUFFICIENT | 36 |
 | S364 | RubberBand_7DTE | 50 | +23.90% | 52% | INSUFFICIENT | 39 |
 | S365 | RubberBand_14DTE | 17 | +0.00% | 41% | INSUFFICIENT | 39 |
@@ -341,7 +341,7 @@ _Pipeline evaluation as of 2026-09-08. Auto-kill thresholds: median<-25% at n>=1
 | Strategy | n | Median% | WR% | Recommendation |
 |----------|---|---------|-----|----------------|
 | S406 | 74 | +72.81% | 72% | Tyler review |
-| S362 | 43 | +57.14% | 74% | Tyler review |
+| S362 | 44 | +56.35% | 75% | Tyler review |
 | S403 | 46 | +50.88% | 67% | Tyler review |
 | S404 | 45 | +50.00% | 64% | Tyler review |
 | S361 | 41 | +44.83% | 56% | Tyler review |

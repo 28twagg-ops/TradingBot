@@ -13124,3 +13124,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-08 18:29:57.666993+00:00,exit,885,lab0885_s410_w1_0928_1005_r2,S410,9adcf55268d8,MARA,MARA260911C00011000,1,,1.09,72.0,51.39,37.0,take_profit (+50.0%),,-0.01,0.5,-0.5,,,a291d89c-8c5f-4434-9c0e-460c1e5be1e7
 2026-09-08T18:36:15Z,reconcile,884,lab0884_s410_w1_0928_1005_r1,S410,8744a33b2855,MARA,MARA260911C00011000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-08 18:31:41.693362+00:00,exit,912,lab0912_s412_w1_0928_1005_r1,S412,fed20e6584a3,MARA,MARA260911C00012000,1,,0.45,27.0,66.67,18.0,take_profit (+62.2%),,-0.01,0.5,-0.5,,,814f49eb-19d1-464a-a0ee-edf0d97c4922
+2026-09-08 18:46:28.376080+00:00,exit,377,lab0377_s362_w1_0928_1005_r2,S362,63294cab8202,MARA,MARA260911C00012000,1,,0.42,27.0,55.56,15.0,take_profit (+51.4%),,-0.01,0.5,-0.5,,,314c5761-b136-4c5b-92de-08fd75cb6a3e
