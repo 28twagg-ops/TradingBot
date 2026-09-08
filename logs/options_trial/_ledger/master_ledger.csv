@@ -13103,3 +13103,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-08T17:36:08Z,reconcile,0,orphan_reconcile,ORPHAN,5e136a537ba8,COIN,COIN260911C00207500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-08 17:31:29.922525+00:00,exit,901,lab0901_s411_w2_1005_1045_r2,S411,f85abab76866,CRWD,CRWD260911C00222500,1,,1.04,69.0,50.72,35.0,take_profit (+50.7%),,-0.01,0.5,-0.5,,,66468f04-f50f-49bc-bc65-da9bf815ed59
 2026-09-08 17:31:20.484733+00:00,exit,0,orphan_reconcile,ORPHAN,ba2d8ea97b62,MARA,MARA260918C00012000,1,,0.25,46.62,-46.38,-21.62,stop_loss (-45.2%),,-0.01,0.5,-0.4,,,c1c1eabb-4730-4af5-b0cb-189d3769abf2
+2026-09-08 17:38:27.716865+00:00,exit,0,orphan_reconcile,ORPHAN,27edebbef995,SNOW,SNOW260911C00367500,1,,0.34,56.0,-39.29,-22.0,stop_loss (-42.9%),,-0.01,0.5,-0.4,,,995ed860-3600-49d9-8d05-e36d0dff306f
