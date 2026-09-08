@@ -1642,26 +1642,6 @@
       "entry_order_id": "18270e2b-3d18-494a-a977-5a39d698bfcb"
     },
     {
-      "lot_id": "1f40c1374f55",
-      "bucket_id": 900,
-      "profile_name": "lab0900_s411_w2_1005_1045_r1",
-      "strategy_id": "S411",
-      "occ_symbol": "CRWD260911C00222500",
-      "underlying": "CRWD",
-      "qty": 1,
-      "entry_cost": 69.0,
-      "entry_price": 0.69,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-08T14:11:15.910899+00:00",
-      "entry_order_id": "9417798a-df12-4c69-9bec-7044ba7b016e"
-    },
-    {
       "lot_id": "59c0c8744255",
       "bucket_id": 899,
       "profile_name": "lab0899_s411_w1_0928_1005_r2",
@@ -2382,26 +2362,6 @@
       "entry_order_id": "fe1732e7-284a-4bb9-898e-b941bd8e36cc"
     },
     {
-      "lot_id": "daaa3d43a5ec",
-      "bucket_id": 905,
-      "profile_name": "lab0905_s411_w4_1120_1135_r2",
-      "strategy_id": "S411",
-      "occ_symbol": "PANW260911C00360000",
-      "underlying": "PANW",
-      "qty": 1,
-      "entry_cost": 69.0,
-      "entry_price": 0.69,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-08T15:24:02.434407+00:00",
-      "entry_order_id": "ac12ffa4-5281-4def-8aa7-c13d6bad379f"
-    },
-    {
       "lot_id": "69bff6a8b0ff",
       "bucket_id": 904,
       "profile_name": "lab0904_s411_w4_1120_1135_r1",
@@ -2685,26 +2645,6 @@
       "submitted": "2026-09-08T13:21:24"
     },
     {
-      "order_id": "80646982-5f5e-473c-90b2-53da3ecbd14f",
-      "lot_id": "1f40c1374f55",
-      "bucket_id": 900,
-      "strategy_id": "S411",
-      "occ_symbol": "CRWD260911C00222500",
-      "qty": 1,
-      "reason": "take_profit (+59.4%)",
-      "submitted": "2026-09-08T13:46:14"
-    },
-    {
-      "order_id": "c0d43c39-4df2-405b-97d8-e3a4c3ac316f",
-      "lot_id": "daaa3d43a5ec",
-      "bucket_id": 905,
-      "strategy_id": "S411",
-      "occ_symbol": "PANW260911C00360000",
-      "qty": 1,
-      "reason": "take_profit (+59.4%)",
-      "submitted": "2026-09-08T13:46:17"
-    },
-    {
       "order_id": "582bb3db-5ebd-46c0-973e-7550a4b09da4",
       "lot_id": "4f8f3ed4c630",
       "bucket_id": 914,
@@ -2798,7 +2738,6 @@
     "b778": 57.99999999999999,
     "b299": 40.0,
     "b298": 40.0,
-    "b900": 69.0,
     "b899": 69.0,
     "b898": 69.0,
     "b90": 69.0,
@@ -2835,7 +2774,6 @@
     "b380": 40.0,
     "b367": 27.0,
     "b366": 27.0,
-    "b905": 69.0,
     "b904": 69.0,
     "b799": 42.0,
     "b798": 42.0,
@@ -3437,7 +3375,9 @@
     "66468f04-f50f-49bc-bc65-da9bf815ed59",
     "c1c1eabb-4730-4af5-b0cb-189d3769abf2",
     "995ed860-3600-49d9-8d05-e36d0dff306f",
-    "3afed2e5-3c49-4dcb-8967-928483b2a20f"
+    "3afed2e5-3c49-4dcb-8967-928483b2a20f",
+    "c0d43c39-4df2-405b-97d8-e3a4c3ac316f",
+    "80646982-5f5e-473c-90b2-53da3ecbd14f"
   ],
   "submitted_today": 139,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
