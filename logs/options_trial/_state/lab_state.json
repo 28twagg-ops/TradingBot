@@ -1482,26 +1482,6 @@
       "entry_order_id": "3537eb41-bf95-4a02-9397-e38593448869"
     },
     {
-      "lot_id": "bd2e7b709677",
-      "bucket_id": 1153,
-      "profile_name": "lab1153_s164_w2_1005_1045_r2",
-      "strategy_id": "S164",
-      "occ_symbol": "SHOP260911C00146000",
-      "underlying": "SHOP",
-      "qty": 1,
-      "entry_cost": 56.00000000000001,
-      "entry_price": 0.56,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-08T14:21:10.888376+00:00",
-      "entry_order_id": "33df9834-de6a-4bb6-aa91-f2e74dd30a15"
-    },
-    {
       "lot_id": "8c6ba46c6926",
       "bucket_id": 1152,
       "profile_name": "lab1152_s164_w2_1005_1045_r1",
@@ -1600,26 +1580,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-08T14:41:08.871431+00:00",
       "entry_order_id": "83fb21d2-4443-42a0-9bda-8f174582a00b"
-    },
-    {
-      "lot_id": "c063ce52553a",
-      "bucket_id": 83,
-      "profile_name": "lab0083_s210_w2_1005_1045_r2",
-      "strategy_id": "S210",
-      "occ_symbol": "SNOW260911C00367500",
-      "underlying": "SNOW",
-      "qty": 1,
-      "entry_cost": 56.00000000000001,
-      "entry_price": 0.56,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-08T14:42:17.322227+00:00",
-      "entry_order_id": "b6c4ca38-2fb4-4064-b545-e634d73829ac"
     },
     {
       "lot_id": "0aae1fae161d",
@@ -2175,16 +2135,6 @@
       "submitted": "2026-09-08T13:46:18"
     },
     {
-      "order_id": "93a19e75-5052-4415-885e-623a42fdbbe5",
-      "lot_id": "bd2e7b709677",
-      "bucket_id": 1153,
-      "strategy_id": "S164",
-      "occ_symbol": "SHOP260911C00146000",
-      "qty": 1,
-      "reason": "stop_loss (-66.1%)",
-      "submitted": "2026-09-08T14:31:41"
-    },
-    {
       "order_id": "865ad3ba-1e14-410f-9d9c-ffc8339f0cc6",
       "lot_id": "b201cf8b207e",
       "bucket_id": 362,
@@ -2205,14 +2155,14 @@
       "submitted": "2026-09-08T15:16:37"
     },
     {
-      "order_id": "a2ebf280-dc32-44bb-b7d4-a71a384d8c07",
-      "lot_id": "c063ce52553a",
-      "bucket_id": 83,
-      "strategy_id": "S210",
-      "occ_symbol": "SNOW260911C00367500",
+      "order_id": "52f5e939-a8a5-4234-8ece-0297fecbf8b2",
+      "lot_id": "8c6ba46c6926",
+      "bucket_id": 1152,
+      "strategy_id": "S164",
+      "occ_symbol": "SHOP260911C00146000",
       "qty": 1,
-      "reason": "stop_loss (-51.8%)",
-      "submitted": "2026-09-08T15:21:32"
+      "reason": "stop_loss (-57.1%)",
+      "submitted": "2026-09-08T15:34:49"
     }
   ],
   "bucket_open_premium": {
@@ -2290,13 +2240,11 @@
     "b0": 229.6764,
     "b795": 24.0,
     "b794": 24.0,
-    "b1153": 56.00000000000001,
     "b1152": 56.00000000000001,
     "b1055": 56.00000000000001,
     "b1054": 56.00000000000001,
     "b793": 38.0,
     "b792": 38.0,
-    "b83": 56.00000000000001,
     "b197": 67.0,
     "b196": 67.0,
     "b805": 17.0,
@@ -2935,7 +2883,8 @@
     "77081917-ed74-4077-83d0-8778ca17dfb7",
     "98254875-bb0b-44b9-baa9-4fc34998a69e",
     "a05f9c54-90ba-4af6-9ac3-b0dc22d66871",
-    "a79cd496-41af-4646-876e-57c49c67381f"
+    "a79cd496-41af-4646-876e-57c49c67381f",
+    "93a19e75-5052-4415-885e-623a42fdbbe5"
   ],
   "submitted_today": 139,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
