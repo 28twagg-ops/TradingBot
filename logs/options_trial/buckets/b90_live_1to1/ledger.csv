@@ -29,3 +29,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-04 14:41:14.403018+00:00,exit,90,live_1to1,S218,2981fc01e742,PEP,PEP260911C00142000,1,,0.24,43.0,-44.19,-19.0,stop_loss (-44.2%),,-0.01,0.5,-0.4,,,a72e2653-e5bd-4e7d-a68f-6e9766ad63fd
 2026-09-08T13:34:49Z,reconcile,90,live_1to1,S406,7f115fd5305b,MARA,MARA260911C00011500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-08T13:34:50Z,reconcile,90,live_1to1,S404,5e2e74cf9c51,TSLA,TSLA260909C00377500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-08 14:04:21.865332+00:00,entry,90,live_1to1,S218,0944b622de94,GOOGL,GOOGL260911C00347500,1,0.61,0.61,61.0,,,,-0.01,,0.5,-0.4,0.06666666666666674,low=334.73 BB_lower=334.97 touch+green,a89e3ffd-5939-4e77-b99a-6eb000b28e48
+2026-09-08 14:08:13.583050+00:00,entry,90,live_1to1,S404,780be4ac6540,SHOP,SHOP260911C00147000,1,0.63,0.63,63.0,,,,-0.01,,0.5,-0.4,0.22608695652173916,gap -2.3%,7d1a3011-7008-43b9-aa83-07d84e9cfbb6
