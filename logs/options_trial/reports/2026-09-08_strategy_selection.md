@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-08
 
-_Generated 2026-09-08T11:03:24.078261_
+_Generated 2026-09-08T11:08:19.189127_
 
 ## Summary
 
@@ -11,8 +11,8 @@ _Generated 2026-09-08T11:03:24.078261_
 
 ## Attribution health
 
-- Total exits: **2843**
-- Orphan exits (b0/orphan_reconcile): **353**
+- Total exits: **2844**
+- Orphan exits (b0/orphan_reconcile): **354**
 - Orphan rate: **12.4%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
 
@@ -106,7 +106,7 @@ _Generated 2026-09-08T11:03:24.078261_
 | S408 (RubberBand_ITM1) | 3d | drop | 47 | 46.8 | +0.00 | -69.06 | -57.13 | +716.00 | 36 | 6 | 2 | $+1,100.00 | 21.3% | non-positive median return |
 | S411 (RubberBand_OTM2) | 3d | drop | 33 | 48.5 | +0.00 | -56.72 | -51.67 | +37.88 | 36 | 8 | 0 | $-321.00 | 27.3% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 36 | 47.2 | -2.90 | -51.79 | -23.26 | +114.15 | 39 | 8 | 0 | $+110.00 | 22.2% | non-positive median return |
-| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 73 | 49.3 | -4.35 | -80.33 | -50.70 | +63.20 | 43 | 8 | 3 | $-114.00 | 20.5% | non-positive median return |
+| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 73 | 49.3 | -4.35 | -80.33 | -50.70 | +63.20 | 43 | 10 | 3 | $-114.00 | 20.5% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 64 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
 | S355 (GapDown_7DTE) | 7d | drop | 58 | 48.3 | -26.38 | -69.85 | -61.88 | +189.38 | 39 | 6 | 1 | $+517.00 | 29.3% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 64 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
@@ -193,7 +193,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S210 | 3d ATM MA cross 8/21 | 73 | -4.35 | -80.33 | -50.70 | 8 | 3 |
+| S210 | 3d ATM MA cross 8/21 | 73 | -4.35 | -80.33 | -50.70 | 10 | 3 |
 | S211 | 3d ATM MA cross 21/50 | 43 | -38.10 | -80.62 | -55.60 | 0 | 0 |
 | S212 | 3d ATM MA bounce 50 | 83 | -68.09 | -98.15 | -81.35 | 0 | 0 |
 | S213 | 3d ATM MA bounce 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
