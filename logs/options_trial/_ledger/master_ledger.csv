@@ -13099,3 +13099,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-08 17:01:35.024403+00:00,exit,265,lab0265_s403_w2_1005_1045_r2,S403,1667bee33377,AMZN,AMZN260911C00267500,1,,0.55,37.0,48.65,18.0,take_profit (+52.1%),,-0.01,0.5,-0.5,,,1f639c42-bcf6-4b6c-a6c8-c2b8a8c441d0
 2026-09-08 17:06:17.326302+00:00,exit,264,lab0264_s403_w2_1005_1045_r1,S403,1d5d0a7e6061,AMZN,AMZN260911C00267500,1,,0.54,37.0,45.95,17.0,take_profit (+52.1%),,-0.01,0.5,-0.5,,,2c2a606c-bfdc-4578-bb33-6468e340804e
 2026-09-08T17:16:14Z,reconcile,170,lab0170_s216_w4_1120_1135_r1,S216,a98cc00799da,AVGO,AVGO260911C00402500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-08 17:26:32.977254+00:00,exit,797,lab0797_s399_w3_1045_1120_r2,S399,a1d1a899584f,COIN,COIN260911C00207500,1,,0.2,42.0,-52.38,-22.0,stop_loss (-52.4%),,-0.01,0.5,-0.5,,,e33caea0-0c93-41c9-8851-2080792db28b
