@@ -2203,6 +2203,16 @@
       "qty": 1,
       "reason": "take_profit (+58.8%)",
       "submitted": "2026-09-08T15:16:37"
+    },
+    {
+      "order_id": "a2ebf280-dc32-44bb-b7d4-a71a384d8c07",
+      "lot_id": "c063ce52553a",
+      "bucket_id": 83,
+      "strategy_id": "S210",
+      "occ_symbol": "SNOW260911C00367500",
+      "qty": 1,
+      "reason": "stop_loss (-51.8%)",
+      "submitted": "2026-09-08T15:21:32"
     }
   ],
   "bucket_open_premium": {
