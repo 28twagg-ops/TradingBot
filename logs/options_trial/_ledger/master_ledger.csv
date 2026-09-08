@@ -13130,5 +13130,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-08 19:06:29.054227+00:00,exit,363,lab0363_s361_w1_0928_1005_r2,S361,a0106cbba47c,MARA,MARA260911C00012000,1,,0.45,27.0,66.67,18.0,take_profit (+62.2%),,-0.01,0.5,-0.5,,,98254875-bb0b-44b9-baa9-4fc34998a69e
 2026-09-08 19:06:27.004805+00:00,exit,421,lab0421_s365_w2_1005_1045_r2,S365,d723d6561641,MARA,MARA260918C00012000,1,,0.74,50.0,48.0,24.0,take_profit (+58.8%),,-0.01,0.5,-0.5,,,a05f9c54-90ba-4af6-9ac3-b0dc22d66871
 2026-09-08 19:12:43.250701+00:00,exit,420,lab0420_s365_w2_1005_1045_r1,S365,81f4d7e4999b,MARA,MARA260918C00012000,1,,0.77,50.0,54.0,27.0,take_profit (+63.1%),,-0.01,0.5,-0.5,,,a79cd496-41af-4646-876e-57c49c67381f
-2026-09-08T19:40:09Z,reconcile,83,lab0083_s210_w2_1005_1045_r2,S210,c063ce52553a,SNOW,SNOW260911C00367500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-08T19:34:42Z,reconcile,83,lab0083_s210_w2_1005_1045_r2,S210,c063ce52553a,SNOW,SNOW260911C00367500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-08 19:32:19.195453+00:00,exit,1153,lab1153_s164_w2_1005_1045_r2,S164,bd2e7b709677,SHOP,SHOP260911C00146000,1,,0.24,56.0,-57.14,-32.0,stop_loss (-66.1%),,-0.01,0.5,-0.5,,,93a19e75-5052-4415-885e-623a42fdbbe5
