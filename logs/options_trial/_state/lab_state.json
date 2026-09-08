@@ -742,26 +742,6 @@
       "entry_order_id": "d838ad4a-0abb-4017-85e8-397a3f76a14f"
     },
     {
-      "lot_id": "eee9715f9d70",
-      "bucket_id": 184,
-      "profile_name": "lab0184_s217_w4_1120_1135_r1",
-      "strategy_id": "S217",
-      "occ_symbol": "BA260911C00220000",
-      "underlying": "BA",
-      "qty": 1,
-      "entry_cost": 51.0,
-      "entry_price": 0.51,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-04T15:26:41.766295+00:00",
-      "entry_order_id": "aeda2cce-bec1-4aa2-9cf1-67ff01b040c7"
-    },
-    {
       "lot_id": "3f453f25a795",
       "bucket_id": 835,
       "profile_name": "lab0835_s406_w4_1120_1135_r2",
@@ -2972,14 +2952,14 @@
       "submitted": "2026-09-08T11:11:17"
     },
     {
-      "order_id": "482ad0de-cf39-4607-a01c-06ef858c2754",
-      "lot_id": "eee9715f9d70",
-      "bucket_id": 184,
-      "strategy_id": "S217",
-      "occ_symbol": "BA260911C00220000",
+      "order_id": "7da45deb-068e-41fa-ae93-76d16efbacf1",
+      "lot_id": "5c0eaecc994d",
+      "bucket_id": 194,
+      "strategy_id": "S218",
+      "occ_symbol": "MCD260911C00265000",
       "qty": 1,
-      "reason": "take_profit (+52.8%)",
-      "submitted": "2026-09-08T11:11:21"
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-09-08T11:16:11"
     }
   ],
   "bucket_open_premium": {
@@ -3019,7 +2999,6 @@
     "b324": 42.0,
     "b333": 59.0,
     "b332": 59.0,
-    "b184": 51.0,
     "b835": 13.0,
     "b834": 13.0,
     "b425": 44.0,
