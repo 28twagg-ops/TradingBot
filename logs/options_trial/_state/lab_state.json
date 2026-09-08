@@ -1962,26 +1962,6 @@
       "entry_order_id": "3537eb41-bf95-4a02-9397-e38593448869"
     },
     {
-      "lot_id": "10885d96b1bd",
-      "bucket_id": 283,
-      "profile_name": "lab0283_s351_w2_1005_1045_r2",
-      "strategy_id": "S351",
-      "occ_symbol": "SHOP260911C00146000",
-      "underlying": "SHOP",
-      "qty": 1,
-      "entry_cost": 56.00000000000001,
-      "entry_price": 0.56,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-08T14:21:10.277615+00:00",
-      "entry_order_id": "6ad16ef7-98ff-4cb0-a340-52f975654d61"
-    },
-    {
       "lot_id": "ae841f6e19b9",
       "bucket_id": 282,
       "profile_name": "lab0282_s351_w2_1005_1045_r1",
@@ -2925,14 +2905,14 @@
       "submitted": "2026-09-08T11:51:50"
     },
     {
-      "order_id": "9d04d9d0-5953-4d8b-8330-63fe0a366dbe",
-      "lot_id": "10885d96b1bd",
-      "bucket_id": 283,
+      "order_id": "928ae123-2355-4c3f-8bfe-89e4de85c995",
+      "lot_id": "ae841f6e19b9",
+      "bucket_id": 282,
       "strategy_id": "S351",
       "occ_symbol": "SHOP260911C00146000",
       "qty": 1,
       "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-09-08T12:16:32"
+      "submitted": "2026-09-08T12:21:21"
     }
   ],
   "bucket_open_premium": {
@@ -3033,7 +3013,6 @@
     "b234": 34.0,
     "b795": 24.0,
     "b794": 24.0,
-    "b283": 56.00000000000001,
     "b282": 56.00000000000001,
     "b279": 56.00000000000001,
     "b278": 56.00000000000001,
@@ -3656,7 +3635,8 @@
     "7db8f5ca-dfc0-4da1-ac16-e11147cadd67",
     "601f67a3-422d-468a-8471-02e29644bda7",
     "f6fe2e15-f0c5-4b6d-923e-28a2e90ca32c",
-    "9ffb90c1-e863-45ac-a9fc-54e6c71ac059"
+    "9ffb90c1-e863-45ac-a9fc-54e6c71ac059",
+    "9d04d9d0-5953-4d8b-8330-63fe0a366dbe"
   ],
   "submitted_today": 139,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
