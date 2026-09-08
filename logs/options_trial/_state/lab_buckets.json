@@ -6842,8 +6842,8 @@
   {
     "bucket_id": 1140,
     "profile": "lab1140_s163_w3_1045_1120_r1",
-    "open_premium": 63.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 1141,

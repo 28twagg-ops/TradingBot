@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-08
 
-_Generated 2026-09-08T11:56:19.078984_
+_Generated 2026-09-08T12:01:25.536090_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-08T11:56:19.078984_
 
 ## Attribution health
 
-- Total exits: **2852**
+- Total exits: **2853**
 - Orphan exits (b0/orphan_reconcile): **354**
 - Orphan rate: **12.4%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -23,7 +23,7 @@ _Generated 2026-09-08T11:56:19.078984_
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 4 | 100.0 | +318.26 | +112.00 | +121.00 | +525.26 | 49 | 10 | 0 | $+314.00 | 50.0% | insufficient sample (<8 exits) |
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 10 | 100.0 | +137.84 | +53.00 | +106.08 | +257.23 | 49 | 11 | 2 | $+584.00 | 60.0% | building sample (8-19 exits) |
 | S396 (GapDown_ITM2) | 3d | watch | 4 | 75.0 | +83.82 | -35.16 | +35.39 | +95.00 | 33 | 2 | 0 | $+120.00 | 100.0% | insufficient sample (<8 exits) |
-| S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 10 | 100.0 | +81.92 | +72.16 | +76.22 | +200.57 | 49 | 8 | 1 | $+441.00 | 50.0% | building sample (8-19 exits) |
+| S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 11 | 100.0 | +81.08 | +64.86 | +73.78 | +200.00 | 49 | 8 | 2 | $+478.00 | 45.5% | building sample (8-19 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 7 | 100.0 | +77.59 | +62.55 | +70.04 | +205.71 | 49 | 5 | 1 | $+394.00 | 71.4% | insufficient sample (<8 exits) |
 | S406 (RubberBand_ITM3) | 3d | watch | 71 | 70.4 | +72.41 | -63.41 | -6.38 | +965.79 | 39 | 8 | 2 | $+3,398.00 | 21.1% | fat left tail (p10 < -45%) |
 | S353 (GapDown_3DTE) | 3d | watch | 28 | 53.6 | +63.97 | -81.10 | -70.46 | +237.37 | 39 | 6 | 1 | $+191.00 | 32.1% | fat left tail (p10 < -45%) |
@@ -132,11 +132,11 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 ### GapDown DTE comparison
 
-- Status: **OK** | Best median: **S168** (+137.84%) | Best p10: **S163** (+72.16%)
+- Status: **OK** | Best median: **S168** (+137.84%) | Best p10: **S163** (+64.86%)
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S163 | 7d ATM | 10 | +81.92 | +72.16 | +76.22 | 8 | 1 |
+| S163 | 7d ATM | 11 | +81.08 | +64.86 | +73.78 | 8 | 2 |
 | S164 | 1d ATM | 11 | -50.00 | -88.89 | -65.67 | 16 | 0 |
 | S165 | 3d ATM | 249 | -38.00 | -63.29 | -53.52 | 10 | 0 |
 | S168 | 5d ATM | 10 | +137.84 | +53.00 | +106.08 | 11 | 2 |
@@ -224,7 +224,7 @@ _Pipeline evaluation as of 2026-09-08. Auto-kill thresholds: median<-25% at n>=1
 
 | Strategy | Signal | n | Median% | WR% | Status | Days |
 |----------|--------|---|---------|-----|--------|------|
-| S163 | A1 GapDown ATM call EO | 10 | +81.92% | 100% | WATCH | 49 |
+| S163 | A1 GapDown ATM call EO | 11 | +81.08% | 100% | WATCH | 49 |
 | S164 | GapDown ATM 1-DTE — P2 | 11 | -50.00% | 36% | WATCH | 49 |
 | S165 | GapDown long call 3 DT | 249 | -38.00% | 31% | INSUFFICIENT | 64 |
 | S166 | GapDown strong call | 7 | +77.59% | 100% | WATCH | 49 |

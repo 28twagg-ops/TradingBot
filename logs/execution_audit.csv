@@ -822,3 +822,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-09-03 19:54:32,2026-09-03,SELL,ACGL,Pullback50,100.04,99.84,100.034,34.56,-0.006,-0.0021,limit_fill_position_check_full,midline (-0.0%),bull
 2026-09-04 19:06:03,2026-09-04,SELL,APD,Pullback50,300.34,,300.34,34.37,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-09-08 13:57:55,2026-09-08,SELL,ABBV,Pullback50,251.31,,251.31,34.41,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-09-08 16:01:08,2026-09-08,SELL,APD,Pullback50,298.08,,298.08,34.39,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
