@@ -13100,3 +13100,6 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-08 17:06:17.326302+00:00,exit,264,lab0264_s403_w2_1005_1045_r1,S403,1d5d0a7e6061,AMZN,AMZN260911C00267500,1,,0.54,37.0,45.95,17.0,take_profit (+52.1%),,-0.01,0.5,-0.5,,,2c2a606c-bfdc-4578-bb33-6468e340804e
 2026-09-08T17:16:14Z,reconcile,170,lab0170_s216_w4_1120_1135_r1,S216,a98cc00799da,AVGO,AVGO260911C00402500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-08 17:26:32.977254+00:00,exit,797,lab0797_s399_w3_1045_1120_r2,S399,a1d1a899584f,COIN,COIN260911C00207500,1,,0.2,42.0,-52.38,-22.0,stop_loss (-52.4%),,-0.01,0.5,-0.5,,,e33caea0-0c93-41c9-8851-2080792db28b
+2026-09-08T17:36:08Z,reconcile,0,orphan_reconcile,ORPHAN,5e136a537ba8,COIN,COIN260911C00207500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-08 17:31:29.922525+00:00,exit,901,lab0901_s411_w2_1005_1045_r2,S411,f85abab76866,CRWD,CRWD260911C00222500,1,,1.04,69.0,50.72,35.0,take_profit (+50.7%),,-0.01,0.5,-0.5,,,66468f04-f50f-49bc-bc65-da9bf815ed59
+2026-09-08 17:31:20.484733+00:00,exit,0,orphan_reconcile,ORPHAN,ba2d8ea97b62,MARA,MARA260918C00012000,1,,0.25,46.62,-46.38,-21.62,stop_loss (-45.2%),,-0.01,0.5,-0.4,,,c1c1eabb-4730-4af5-b0cb-189d3769abf2

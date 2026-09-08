@@ -481,3 +481,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-08 15:06:14.154232+00:00,exit,0,orphan_reconcile,ORPHAN,3fbf6f01fcfd,BA,BA260911C00220000,1,,0.82,53.0,54.72,29.0,take_profit (+54.7%),,-0.01,0.5,-0.4,,,e910e01f-7d0f-4c87-9cb2-0163e9348cd3
 2026-09-08T16:11:19Z,reconcile,0,orphan_reconcile,ORPHAN,6de284dc07d0,TSLA,TSLA260911C00390000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-08 16:06:06.787084+00:00,exit,0,orphan_reconcile,ORPHAN,79a2ba3ef76f,TSLA,TSLA260911C00395000,1,,1.12,60.0,86.67,52.0,take_profit (+77.8%),,-0.01,0.5,-0.4,,,f6fe2e15-f0c5-4b6d-923e-28a2e90ca32c
+2026-09-08T17:36:08Z,reconcile,0,orphan_reconcile,ORPHAN,5e136a537ba8,COIN,COIN260911C00207500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-08 17:31:20.484733+00:00,exit,0,orphan_reconcile,ORPHAN,ba2d8ea97b62,MARA,MARA260918C00012000,1,,0.25,46.62,-46.38,-21.62,stop_loss (-45.2%),,-0.01,0.5,-0.4,,,c1c1eabb-4730-4af5-b0cb-189d3769abf2
