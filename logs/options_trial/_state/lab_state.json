@@ -2802,26 +2802,6 @@
       "entry_order_id": "orphan:SNOW260911C00365000"
     },
     {
-      "lot_id": "34ad6955f07c",
-      "bucket_id": 171,
-      "profile_name": "lab0171_s216_w4_1120_1135_r2",
-      "strategy_id": "S216",
-      "occ_symbol": "AVGO260911C00402500",
-      "underlying": "AVGO",
-      "qty": 1,
-      "entry_cost": 42.0,
-      "entry_price": 0.42,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-08T15:36:55.754003+00:00",
-      "entry_order_id": "514f74ba-5b78-42c7-b34e-f5ea2acbfa2e"
-    },
-    {
       "lot_id": "a98cc00799da",
       "bucket_id": 170,
       "profile_name": "lab0170_s216_w4_1120_1135_r1",
@@ -2895,14 +2875,14 @@
       "submitted": "2026-09-08T12:26:20"
     },
     {
-      "order_id": "7546d8d8-2440-4256-801a-756804d9798c",
-      "lot_id": "34ad6955f07c",
-      "bucket_id": 171,
+      "order_id": "a928c4f1-f746-4882-91b3-7cf85690fd12",
+      "lot_id": "a98cc00799da",
+      "bucket_id": 170,
       "strategy_id": "S216",
       "occ_symbol": "AVGO260911C00402500",
       "qty": 1,
       "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-09-08T12:41:12"
+      "submitted": "2026-09-08T12:46:28"
     }
   ],
   "bucket_open_premium": {
@@ -3042,7 +3022,6 @@
     "b863": 13.0,
     "b862": 13.0,
     "b87": 41.0,
-    "b171": 42.0,
     "b170": 42.0
   },
   "session_date": "2026-09-08",
@@ -3626,7 +3605,8 @@
     "f6fe2e15-f0c5-4b6d-923e-28a2e90ca32c",
     "9ffb90c1-e863-45ac-a9fc-54e6c71ac059",
     "9d04d9d0-5953-4d8b-8330-63fe0a366dbe",
-    "928ae123-2355-4c3f-8bfe-89e4de85c995"
+    "928ae123-2355-4c3f-8bfe-89e4de85c995",
+    "7546d8d8-2440-4256-801a-756804d9798c"
   ],
   "submitted_today": 139,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
