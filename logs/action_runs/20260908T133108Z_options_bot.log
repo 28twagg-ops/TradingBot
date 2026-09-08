@@ -1,0 +1,102 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=121 paper_keys=yes dry_run=False
+  alpaca positions=17
+  FLAG b801|S404|5285b9fe missing from Alpaca
+  FLAG b800|S404|989dc9a2 missing from Alpaca
+  FLAG b793|S399|65545b91 missing from Alpaca
+  FLAG b785|S398|11cad46d missing from Alpaca
+  FLAG b784|S398|29b4a6a8 missing from Alpaca
+  FLAG b777|S397|a87f071a missing from Alpaca
+  FLAG b776|S397|8342baa4 missing from Alpaca
+  FLAG b305|S354|913fb10d missing from Alpaca
+  FLAG b304|S354|2fc49b73 missing from Alpaca
+  FLAG b297|S353|4bec65f7 missing from Alpaca
+  FLAG b296|S353|49818722 missing from Alpaca
+  FLAG b289|S352|a754313d missing from Alpaca
+  FLAG b288|S352|94c9d80a missing from Alpaca
+  FLAG b1095|S167|271a61d0 missing from Alpaca
+  FLAG b1094|S167|5719dd09 missing from Alpaca
+  FLAG b1123|S168|537044dd missing from Alpaca
+  FLAG b1053|S165|24d7cdcb missing from Alpaca
+  FLAG b1052|S165|f3c25f0e missing from Alpaca
+  FLAG b0|ORPHAN|19cb7675 missing from Alpaca
+  FLAG b769|S396|dee68d48 missing from Alpaca
+  FLAG b768|S396|b42bcd2e missing from Alpaca
+  FLAG b17|S202|cd4cb496 missing from Alpaca
+  FLAG b16|S202|64636843 missing from Alpaca
+  FLAG b913|S412|b3e4dda2 missing from Alpaca
+  FLAG b912|S412|d7862491 missing from Alpaca
+  FLAG b899|S411|01f19e7a missing from Alpaca
+  FLAG b898|S411|146c5042 missing from Alpaca
+  FLAG b90|S406|7f115fd5 missing from Alpaca
+  FLAG b792|S399|6dbafdfc missing from Alpaca
+  FLAG b405|S364|ee6d042e missing from Alpaca
+  FLAG b404|S364|b5bf5868 missing from Alpaca
+  FLAG b391|S363|27abfa07 missing from Alpaca
+  FLAG b390|S363|315d92f7 missing from Alpaca
+  FLAG b313|S355|3eee2971 missing from Alpaca
+  FLAG b312|S355|5cdecd71 missing from Alpaca
+  FLAG b1137|S163|50900b75 missing from Alpaca
+  FLAG b1136|S163|73249aea missing from Alpaca
+  FLAG b1109|S166|f04751eb missing from Alpaca
+  FLAG b1122|S168|090a3a14 missing from Alpaca
+  FLAG b0|ORPHAN|916c1acd missing from Alpaca
+  FLAG b787|S398|c35b80bf missing from Alpaca
+  FLAG b786|S398|115f87aa missing from Alpaca
+  FLAG b1097|S167|f505f56b missing from Alpaca
+  FLAG b1096|S167|f1a33d8e missing from Alpaca
+  FLAG b1055|S165|881135f4 missing from Alpaca
+  FLAG b0|ORPHAN|12a1c6cd missing from Alpaca
+  FLAG b180|S217|c043e7a8 missing from Alpaca
+  FLAG b859|S408|2154e9f8 missing from Alpaca
+  FLAG b858|S408|c61e6f26 missing from Alpaca
+  FLAG b90|S404|5e2e74cf missing from Alpaca
+  FLAG b789|S398|1ec1c616 missing from Alpaca
+  FLAG b788|S398|6f1d3691 missing from Alpaca
+  FLAG b309|S354|ccef31e9 missing from Alpaca
+  FLAG b308|S354|6a421c94 missing from Alpaca
+  FLAG b1099|S167|57912312 missing from Alpaca
+  FLAG b1098|S167|266b2b97 missing from Alpaca
+  FLAG b1057|S165|d6b3e8db missing from Alpaca
+  FLAG b1056|S165|2e74b9d5 missing from Alpaca
+  FLAG b241|S401|a1f93441 missing from Alpaca
+  FLAG b240|S401|f2cc4a68 missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1164:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1164
+PROBE OK: paper account status=AccountStatus.ACTIVE equity=$1,003,624.18
+  buying_power=$3,952,031.24 cash=$1,037,457.75
+  open option orders: 16
+    UPST260911C00029000 OrderSide.SELL qty=3 status=OrderStatus.NEW limit=None
+    AVGO260911C00385000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    MARA260918C00012000 OrderSide.SELL qty=16 status=OrderStatus.NEW limit=None
+    MARA260911C00012500 OrderSide.SELL qty=6 status=OrderStatus.NEW limit=None
+    MARA260925C00012500 OrderSide.SELL qty=4 status=OrderStatus.NEW limit=None
+  open option positions: 16
+    AVGO260909C00380000 qty=3 mkt=$417.00
+    AVGO260911C00385000 qty=1 mkt=$207.00
+    BA260911C00220000 qty=4 mkt=$200.00
+    MARA260911C00011000 qty=2 mkt=$114.00
+    MARA260911C00012500 qty=6 mkt=$60.00
+PROBE: check-only pass (use --smoke-entry to place a test order)
+=== options_morning_bot (PAPER) 2026-09-08T09:34:53.315393-04:00 ===
+
+[Run context]
+Paper auth OK — equity $1003644.47, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
+Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+2026-09-08 09:34:55,406 INFO   EXIT [b1112|lab1112_s166_w3_1045_1120_r1|S166] take_profit (+281.1%) SELL 1 AVGO260909C00380000 @<= 1.38
+  EXIT [b20|lab0020_s202_w3_1045_1120_r1|S202] stop_loss (-100.0%) SELL failed PATH260911C00016500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+2026-09-08 09:34:56,512 INFO   EXIT [b1114|lab1114_s166_w4_1120_1135_r1|S166] take_profit (+197.2%) SELL 1 AVGO260911C00385000 @<= 1.75
+2026-09-08 09:35:00,327 INFO   EXIT [b331|lab0331_s357_w2_1005_1045_r2|S357] stop_loss (-88.9%) SELL 1 PATH260925C00017000 @<= 0.02
+Protective stops: placed=2 upgraded=0 already=10 failed=3 (market-first)
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S204, S205, S206, S208, S209, S210, S211, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S406, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 113/117 symbols
