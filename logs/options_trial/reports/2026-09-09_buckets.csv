@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,2,2026-08-21,True,19,100.0,75.47,75.47,75.47,75.47,40.0,UNH,ORPHAN,take_profit (+77.4%),closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,3,2026-08-21,True,19,100.0,75.47,75.47,75.47,75.47,40.0,UNH,ORPHAN,take_profit (+77.4%),closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -83,8 +83,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 81,lab0081_s210_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-09,False,,100.0,69.86,69.86,69.86,69.86,51.0,C,S210,take_profit (+69.9%),closed
 82,lab0082_s210_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-09,False,,100.0,50.94,50.94,50.94,50.94,27.0,UNH,S210,take_profit (+60.4%),closed
 83,lab0083_s210_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-09,False,,,,,,,0,UNH,S210,,entered_no_exit
-84,lab0084_s210_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-08,False,,,,,,,0,,,,idle
-85,lab0085_s210_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-08,False,,,,,,,0,,,,idle
+84,lab0084_s210_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-09,False,,,,,,,0,C,S210,,entered_no_exit
+85,lab0085_s210_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-09,False,,,,,,,0,C,S210,,entered_no_exit
 86,lab0086_s210_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-08,False,,,,,,,0,,,,idle
 87,lab0087_s210_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-09-08,False,,0.0,-60.98,-60.98,-60.98,-60.98,-25.0,SNOW,S210,stop_loss (-68.3%),closed
 88,lab0088_s210_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
@@ -778,7 +778,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 776,lab0776_s397_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-08,False,,,,,,,0,,,,idle
 777,lab0777_s397_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-08,False,,,,,,,0,,,,idle
 778,lab0778_s397_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-09-08,False,,,,,,,0,,,,open
-779,lab0779_s397_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-09-08,False,,,,,,,0,,,,open
+779,lab0779_s397_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-09-08,False,,100.0,108.62,108.62,108.62,108.62,63.0,ZS,S397,take_profit (+87.9%),closed
 780,lab0780_s397_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-08,False,,,,,,,0,,,,idle
 781,lab0781_s397_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-08,False,,,,,,,0,,,,idle
 782,lab0782_s397_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-01,False,,,,,,,0,,,,idle
