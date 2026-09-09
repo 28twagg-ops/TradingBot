@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-09
 
-_Generated 2026-09-09T11:01:58.092625_
+_Generated 2026-09-09T11:07:26.024578_
 
 ## Summary
 
@@ -33,7 +33,7 @@ _Generated 2026-09-09T11:01:58.092625_
 | S403 (Any_MA50_Touch) | 3d | watch | 46 | 67.4 | +50.88 | -61.05 | -48.23 | +222.50 | 40 | 6 | 2 | $+925.00 | 19.6% | fat left tail (p10 < -45%) |
 | S361 (RubberBand_2DTE) | 2d | watch | 42 | 57.1 | +50.36 | -68.33 | -47.61 | +246.00 | 40 | 6 | 1 | $+230.00 | 26.2% | fat left tail (p10 < -45%) |
 | S404 (GapDown_OTM2) | 3d | watch | 47 | 63.8 | +50.00 | -91.67 | -41.58 | +115.81 | 40 | 7 | 5 | $+817.00 | 19.1% | fat left tail (p10 < -45%) |
-| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 74 | 56.8 | +41.03 | -70.00 | -47.61 | +161.14 | 44 | 9 | 5 | $+1,214.00 | 33.8% | fat left tail (p10 < -45%) |
+| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 74 | 56.8 | +41.03 | -70.00 | -47.61 | +161.14 | 44 | 10 | 5 | $+1,214.00 | 33.8% | fat left tail (p10 < -45%) |
 | S364 (RubberBand_7DTE) | 7d | watch | 50 | 52.0 | +23.90 | -85.97 | -57.98 | +188.89 | 40 | 0 | 0 | $+92.00 | 38.0% | fat left tail (p10 < -45%) |
 | S353 (GapDown_3DTE) | 3d | watch | 30 | 50.0 | +15.51 | -85.57 | -72.91 | +219.48 | 40 | 4 | 3 | $+125.00 | 30.0% | fat left tail (p10 < -45%) |
 | S350 (GapDown_0DTE) | 0d | watch | 41 | 53.7 | +15.00 | -62.75 | -50.00 | +260.00 | 40 | 4 | 2 | $+713.00 | 31.7% | fat left tail (p10 < -45%) |
@@ -207,7 +207,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 |---|---|---:|---:|---:|---:|---:|---:|
 | S216 | 3d ATM RSI x30 | 40 | -53.98 | -81.15 | -71.13 | 9 | 2 |
 | S217 | 3d ATM RSI<25 bounce | 57 | -46.15 | -78.50 | -55.56 | 4 | 3 |
-| S218 | 3d ATM BB lower touch | 74 | +41.03 | -70.00 | -47.61 | 9 | 5 |
+| S218 | 3d ATM BB lower touch | 74 | +41.03 | -70.00 | -47.61 | 10 | 5 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
 ### Other

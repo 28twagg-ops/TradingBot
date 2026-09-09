@@ -1340,26 +1340,29 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-09T15:01:11.238865+00:00",
       "entry_order_id": "28a722ed-1e16-460f-9a55-3ee0ba461cb5"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "c6f288bb-afaa-49a9-90aa-91f4b1b080bb",
+      "lot_id": "89db6292312d",
       "bucket_id": 90,
+      "profile_name": "live_1to1",
       "strategy_id": "S218",
       "occ_symbol": "ZS260911C00177500",
       "underlying": "ZS",
       "qty": 1,
-      "limit": 0.62,
-      "profile_name": "live_1to1",
-      "submitted": "2026-09-09",
-      "detail": "low=161.15 BB_lower=161.37 touch+green",
-      "spread_frac": 0.13559322033898297,
-      "buy_offset": -0.01,
+      "entry_cost": 62.0,
+      "entry_price": 0.62,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
       "take_profit": 0.5,
-      "stop_loss": -0.4
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-09T15:06:16.990817+00:00",
+      "entry_order_id": "c6f288bb-afaa-49a9-90aa-91f4b1b080bb"
     }
   ],
+  "pending_orders": [],
   "pending_exits": [
     {
       "order_id": "f993f5a5-615d-4aa0-92ec-8e1f4a6f6c58",
@@ -1429,7 +1432,7 @@
     "b778": 57.99999999999999,
     "b899": 69.0,
     "b898": 69.0,
-    "b90": 69.0,
+    "b90": 131.0,
     "b1055": 56.00000000000001,
     "b1054": 56.00000000000001,
     "b903": 56.00000000000001,
@@ -1890,7 +1893,8 @@
     "ecb92d24-1718-4eed-97d3-0a2d3a950e7a",
     "52c226d0-2758-4fee-9e2d-a14a8374ac7a",
     "e410c1f1-dbc0-4f31-aae1-e2749ba78011",
-    "28a722ed-1e16-460f-9a55-3ee0ba461cb5"
+    "28a722ed-1e16-460f-9a55-3ee0ba461cb5",
+    "c6f288bb-afaa-49a9-90aa-91f4b1b080bb"
   ],
   "submitted_today": 20,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
