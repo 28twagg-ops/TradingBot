@@ -41,4 +41,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-04 15:22:45.376394+00:00,entry,240,lab0240_s401_w4_1120_1135_r1,S401,f2cc4a68369f,CRWD,CRWD260911C00235000,1,0.47,0.47,47.0,,,,-0.01,,0.5,-0.5,,,935784fc-c4f6-479d-af07-10b2146a225f
 2026-09-08T13:34:50Z,reconcile,240,lab0240_s401_w4_1120_1135_r1,S401,f2cc4a68369f,CRWD,CRWD260911C00235000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-08 15:22:20.987830+00:00,entry,240,lab0240_s401_w4_1120_1135_r1,S401,9574402ba070,AMZN,AMZN260911C00270000,1,0.32,0.31,31.0,,,,-0.01,,0.75,-0.75,0.030769230769230795,gap -0.71% green,3ae819c6-3a9b-4e8b-af0b-2ea5eeb3e618
-2026-09-09T13:40:12Z,reconcile,240,lab0240_s401_w4_1120_1135_r1,S401,9574402ba070,AMZN,AMZN260911C00270000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-09T13:34:42Z,reconcile,240,lab0240_s401_w4_1120_1135_r1,S401,9574402ba070,AMZN,AMZN260911C00270000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
