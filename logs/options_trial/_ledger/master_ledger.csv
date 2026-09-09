@@ -13219,3 +13219,12 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-09T15:41:11Z,reconcile,90,live_1to1,S218,89db6292312d,ZS,ZS260911C00177500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-09 16:26:11.305994+00:00,exit,90,live_1to1,S406,e88d02221a56,CRWD,CRWD260911C00222500,1,,0.41,69.0,-40.58,-28.0,stop_loss (-40.6%),,-0.01,0.5,-0.4,,,1911b971-9598-4350-bba1-5d19b34cc553
 2026-09-09 16:32:49.936779+00:00,exit,169,lab0169_s216_w3_1045_1120_r2,S216,6f753087ca30,BA,BA260911C00217500,1,,0.22,44.0,-50.0,-22.0,stop_loss (-52.3%),,-0.01,0.5,-0.5,,,b8b97245-fde7-45b7-90bb-7f47f24ce7ce
+2026-09-09T16:41:26Z,reconcile,914,lab0914_s412_w2_1005_1045_r1,S412,4f8f3ed4c630,CRWD,CRWD260911C00225000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-09T16:41:26Z,reconcile,379,lab0379_s362_w2_1005_1045_r2,S362,4008e9d2661e,CRWD,CRWD260911C00225000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-09T16:41:26Z,reconcile,378,lab0378_s362_w2_1005_1045_r1,S362,cf846f3704e1,CRWD,CRWD260911C00225000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-09T16:41:26Z,reconcile,365,lab0365_s361_w2_1005_1045_r2,S361,777be0c8d86f,CRWD,CRWD260911C00225000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-09T16:41:26Z,reconcile,364,lab0364_s361_w2_1005_1045_r1,S361,e76a0681ddb8,CRWD,CRWD260911C00225000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-09T16:41:26Z,reconcile,347,lab0347_s359_w2_1005_1045_r2,S359,fa733afa7b06,CRWD,CRWD260911C00225000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-09T16:41:26Z,reconcile,346,lab0346_s359_w2_1005_1045_r1,S359,f79f77589b46,CRWD,CRWD260911C00225000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-09T16:41:26Z,reconcile,168,lab0168_s216_w3_1045_1120_r1,S216,a125ef690065,BA,BA260911C00217500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-09 16:38:43.641713+00:00,exit,280,lab0280_s351_w1_0928_1005_r1,S351,5352fd0e5208,ZS,ZS260911C00180000,1,,0.19,37.0,-48.65,-18.0,stop_loss (-50.5%),,-0.01,0.5,-0.5,,,eed56db2-3b38-4aa1-89cc-68736a90f638
