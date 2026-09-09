@@ -36,3 +36,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-08 15:01:22.874526+00:00,exit,90,live_1to1,S218,0944b622de94,GOOGL,GOOGL260911C00347500,1,,1.07,61.0,75.41,46.0,take_profit (+75.4%),,-0.01,0.5,-0.4,,,acf07f91-4f27-4ee0-9b7d-90a400855670
 2026-09-09 15:04:24.114746+00:00,entry,90,live_1to1,S218,89db6292312d,ZS,ZS260911C00177500,1,0.62,0.62,62.0,,,,-0.01,,0.5,-0.4,0.13559322033898297,low=161.15 BB_lower=161.37 touch+green,c6f288bb-afaa-49a9-90aa-91f4b1b080bb
 2026-09-09T15:41:11Z,reconcile,90,live_1to1,S218,89db6292312d,ZS,ZS260911C00177500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-09 16:26:11.305994+00:00,exit,90,live_1to1,S406,e88d02221a56,CRWD,CRWD260911C00222500,1,,0.41,69.0,-40.58,-28.0,stop_loss (-40.6%),,-0.01,0.5,-0.4,,,1911b971-9598-4350-bba1-5d19b34cc553
