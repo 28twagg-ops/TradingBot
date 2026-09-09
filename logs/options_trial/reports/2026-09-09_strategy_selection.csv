@@ -83,7 +83,7 @@ S366,RubberBand_21DTE,21d,watch,early sample with non-positive median,44,12,4,8,
 S202,GapDown_Monster,3d ATM gap-monster,watch,early sample with non-positive median,48,12,0,12,-55.94,-56.77,-73.59,-65.84,-38.58,-208.0,6,43,0,0,4,33.3
 S209,GapDown_Recovery,3d ATM gap-recovery,watch,insufficient sample (<8 exits),30,6,0,6,-64.99,-61.46,-82.78,-69.36,-50.75,-210.0,2,42,0,0,2,83.3
 S408,RubberBand_ITM1,3d,drop,non-positive median return,118,47,22,25,141.55,0.0,-69.06,-57.13,716.0,1100.0,8,37,6,2,8,21.3
-S210,MA_Cross_8_21,3d ATM MA cross 8/21,drop,non-positive median return,173,76,37,39,8.8,-5.3,-78.96,-51.22,71.48,-110.0,10,44,8,2,14,19.7
+S210,MA_Cross_8_21,3d ATM MA cross 8/21,drop,non-positive median return,175,77,37,40,8.08,-6.25,-78.5,-51.22,70.13,-135.0,10,44,10,3,15,19.5
 S355,GapDown_7DTE,7d,drop,non-positive median return,111,59,29,30,24.02,-15.62,-69.48,-61.25,188.75,553.0,11,40,0,1,9,28.8
 S352,GapDown_2DTE,2d,drop,non-positive median return,124,44,21,23,52.05,-17.65,-73.93,-51.85,324.88,81.0,11,40,4,4,10,25.0
 S356,GapDown_14DTE,14d,drop,non-positive median return,59,23,10,13,1.72,-19.44,-51.5,-48.15,57.51,8.0,7,40,0,4,5,26.1
@@ -99,7 +99,7 @@ S207,GapDown_AtSupport,3d ATM gap-support,drop,manually paused — excluded from
 S407,RubberBand_ITM2,3d,drop,manually paused — excluded from new entries & reflected P&L,96,38,11,27,29.82,-47.73,-83.88,-61.54,266.42,33.0,7,40,0,0,7,26.3
 S354,GapDown_5DTE,5d,drop,non-positive median return,95,51,21,30,7.98,-50.77,-92.16,-75.99,137.78,220.0,7,40,0,0,7,27.5
 S351,GapDown_1DTE,1d,drop,non-positive median return,170,58,15,43,15.95,-52.09,-77.47,-66.52,236.04,45.0,12,40,4,2,11,22.4
-S216,RSI_Oversold_Cross,3d ATM RSI x30,drop,non-positive median return,126,40,8,32,1.43,-53.98,-81.15,-71.13,90.16,-566.0,7,44,6,2,8,40.0
+S216,RSI_Oversold_Cross,3d ATM RSI x30,drop,non-positive median return,127,40,8,32,1.43,-53.98,-81.15,-71.13,90.16,-566.0,7,44,7,2,8,40.0
 S203,GapUp_Fade,3d ATM gap-up fade (put),drop,manually paused — excluded from new entries & reflected P&L,112,40,4,36,-45.27,-55.91,-78.77,-67.43,-3.1,-797.0,8,44,0,0,8,35.0
 S360,RubberBand_1DTE,1d,drop,manually paused — excluded from new entries & reflected P&L,114,49,5,44,-48.75,-56.41,-81.5,-70.37,-6.89,-913.0,8,40,0,0,12,22.4
 S212,MA_Bounce_50,3d ATM MA bounce 50,drop,manually paused — excluded from new entries & reflected P&L,176,83,11,72,-44.99,-68.09,-98.15,-81.35,51.47,-2246.0,9,44,0,0,11,34.9

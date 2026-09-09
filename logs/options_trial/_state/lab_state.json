@@ -1262,26 +1262,6 @@
       "entry_order_id": "1e0fab79-3333-441a-888b-784327468bef"
     },
     {
-      "lot_id": "6a86a95b42c3",
-      "bucket_id": 798,
-      "profile_name": "lab0798_s399_w4_1120_1135_r1",
-      "strategy_id": "S399",
-      "occ_symbol": "MSTR260911C00160000",
-      "underlying": "MSTR",
-      "qty": 1,
-      "entry_cost": 42.0,
-      "entry_price": 0.42,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-08T15:24:02.512613+00:00",
-      "entry_order_id": "62070193-6b95-43df-9f5f-28732f286b56"
-    },
-    {
       "lot_id": "f297001d90f2",
       "bucket_id": 863,
       "profile_name": "lab0863_s408_w4_1120_1135_r2",
@@ -1440,26 +1420,49 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-09T14:03:00.715255+00:00",
       "entry_order_id": "c6a758ef-872a-4aec-aed5-da05e0154484"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "9767e17f-3dd5-4079-b3ca-81fcdf14b161",
-      "bucket_id": 165,
-      "strategy_id": "S216",
-      "occ_symbol": "BA260911C00220000",
-      "underlying": "BA",
+      "lot_id": "ed167628b124",
+      "bucket_id": 82,
+      "profile_name": "lab0082_s210_w2_1005_1045_r1",
+      "strategy_id": "S210",
+      "occ_symbol": "UNH260911C00402500",
+      "underlying": "UNH",
       "qty": 1,
-      "limit": 0.3,
-      "profile_name": "lab0165_s216_w1_0928_1005_r2",
-      "submitted": "2026-09-09",
-      "detail": "RSI crossed 30: 28.6 -> 30.1",
-      "spread_frac": 0.03278688524590167,
-      "buy_offset": -0.01,
+      "entry_cost": 53.0,
+      "entry_price": 0.53,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
       "take_profit": 0.5,
-      "stop_loss": -0.5
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-09T14:07:42.046054+00:00",
+      "entry_order_id": "eee052d1-8209-4fd6-9da0-35f8828b4c72"
+    },
+    {
+      "lot_id": "042fbf40c025",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "UNH260911C00402500",
+      "underlying": "UNH",
+      "qty": 1,
+      "entry_cost": 53.0,
+      "entry_price": 0.53,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-09T14:07:42.237961+00:00",
+      "entry_order_id": "orphan:UNH260911C00402500"
     }
   ],
+  "pending_orders": [],
   "pending_exits": [
     {
       "order_id": "f993f5a5-615d-4aa0-92ec-8e1f4a6f6c58",
@@ -1546,14 +1549,14 @@
     "b367": 27.0,
     "b366": 27.0,
     "b904": 69.0,
-    "b798": 42.0,
     "b863": 13.0,
     "b862": 13.0,
-    "b0": 153.1764,
+    "b0": 206.1764,
     "b81": 73.0,
     "b80": 73.0,
     "b235": 37.0,
-    "b234": 37.0
+    "b234": 37.0,
+    "b82": 53.0
   },
   "session_date": "2026-09-09",
   "entries_locked": [
@@ -1561,7 +1564,9 @@
     "235|S401|2026-09-09",
     "80|S210|2026-09-09",
     "81|S210|2026-09-09",
-    "165|S216|2026-09-09"
+    "165|S216|2026-09-09",
+    "82|S210|2026-09-09",
+    "83|S210|2026-09-09"
   ],
   "processed_orders": [
     "f7d86205-1407-4990-9169-8e5ef19153e2",
@@ -2053,9 +2058,13 @@
     "2ab77e1a-20ae-4651-97dc-a04a5798c372",
     "885c421b-6226-4f2b-8a00-684dd29ef501",
     "c6a758ef-872a-4aec-aed5-da05e0154484",
-    "7cfefc41-21a2-4a81-9212-6966712e99ce"
+    "7cfefc41-21a2-4a81-9212-6966712e99ce",
+    "9767e17f-3dd5-4079-b3ca-81fcdf14b161",
+    "bfb1771a-20b9-4ba5-9a79-4193b0a04182",
+    "eee052d1-8209-4fd6-9da0-35f8828b4c72",
+    "a2ebf280-dc32-44bb-b7d4-a71a384d8c07"
   ],
-  "submitted_today": 5,
+  "submitted_today": 7,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-09"
 }
