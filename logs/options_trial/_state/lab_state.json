@@ -1210,6 +1210,16 @@
       "qty": 1,
       "reason": "stop_loss (-61.5%)",
       "submitted": "2026-09-09T09:46:12"
+    },
+    {
+      "order_id": "7e91c595-c5a8-4855-af2c-bc135bf8d275",
+      "lot_id": "ee248567741d",
+      "bucket_id": 779,
+      "strategy_id": "S397",
+      "occ_symbol": "ZS260911C00175000",
+      "qty": 1,
+      "reason": "take_profit (+87.9%)",
+      "submitted": "2026-09-09T10:41:11"
     }
   ],
   "bucket_open_premium": {
