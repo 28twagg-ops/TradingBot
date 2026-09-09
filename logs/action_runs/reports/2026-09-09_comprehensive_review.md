@@ -15001,3 +15001,132 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260909T194708Z
+
+- UTC timestamp: `20260909T194708Z`
+- GitHub run: [#9529](https://github.com/28twagg-ops/TradingBot/actions/runs/34396898928)
+- Run id: `34396898928`
+- Live bot: exit=`0`, duration=`247s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260909T194708Z_live_bot.log`, `logs/action_runs/20260909T194708Z_live_options.log`, `logs/action_runs/20260909T194708Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1124 | 50.0 | +2.4 | +44.1 | $+15,928 |
+| TAINTED | 1805 | 33.6 | -38.4 | +12.5 | $-8,747 |
+| KEEP-only | 639 | 63.4 | +51.4 | +70.5 | $+11,196 |
+| KEEP-only recent | 431 | 60.6 | +53.3 | +82.2 | $+5,939 |
+
+- KEEP strategies (25): S163, S168, S173, S174, S210, S218, S350, S352, S353, S354, S355, S357, S359, S361, S362, S363, S364, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (18): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S356, S360, S365, S366, S405, S407, S408, S411
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-09T15:40:18.783727-04:00","date":"2026-09-09","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":4.4,"phases_s":{"reconcile":0.21,"cancel":0.07,"manage":2.61,"protective_stops":0.95},"signals":0,"placed":0,"equity":1003054.08,"open_positions":19,"pending_orders":0,"open_lots":49,"submitted_today":28,"filled_today":24,"unattributed_contracts":0,"top_signals":[],"github_run":"9527","github_run_id":"34395918505","status":"ok","data_quality":{"clean":{"n":1124,"win":50.0,"med":2.38,"avg":44.07,"pnl":15927.59},"tainted":{"n":1805,"win":33.57,"med":-38.36,"avg":12.49,"pnl":-8746.84},"keep_only":{"n":639,"win":63.38,"med":51.39,"avg":70.55,"pnl":11196.45},"keep_only_recent":{"n":431,"win":60.56,"med":53.33,"avg":82.23,"pnl":5939.0},"keep_strategies":["S163","S168","S173","S174","S210","S218","S350","S352","S353","S354","S355","S357","S359","S361","S362","S363","S364","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S356","S360","S365","S366","S405","S407","S408","S411"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (129 earlier lines - see full log file)
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] FSLR  MomReversal                                  $34.32|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] TXT  MomReversal                                   $34.32|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] CNM  MomReversal                                   $34.32|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] M  MomReversal                                       cap 3|
+|    SKIP [eq] WH  MomReversal                                      cap 3|
+|    SKIP [eq] AES  Pullback50                                      cap 3|
+|    SKIP [eq] AAPL  Pullback50                                     cap 3|
+|    SKIP [eq] AIZ  Pullback50                                      cap 3|
+|    SKIP [eq] BIIB  Pullback50                                     cap 3|19:51:14  INFO        place_all_stops: checking 3 positions...
+19:51:14  INFO        STOP skipped CNM: fractional (0.8221 shares) — software exit will handle it
+19:51:14  INFO        STOP skipped FSLR: fractional (0.1688 shares) — software exit will handle it
+19:51:14  INFO        STOP skipped TXT: fractional (0.4289 shares) — software exit will handle it
+19:51:14  INFO        place_eod_stops: updating 3 stops to current price...
+19:51:14  INFO        EOD stop skip CNM: 0.8221 shares (fractional) — ext_exits will cover
+19:51:14  INFO        EOD stop skip FSLR: 0.1688 shares (fractional) — ext_exits will cover
+19:51:14  INFO        EOD stop skip TXT: 0.4289 shares (fractional) — ext_exits will cover
+19:51:14  INFO        Daily log -> logs/daily/2026-09-09.md
+19:51:14  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [eq] XYZ  Pullback50                                      cap 3|
+|    SKIP [eq] BRK-B  Pullback50                                    cap 3|
+|    SKIP [eq] CTAS  Pullback50                                     cap 3|
+|    SKIP [eq] COHR  Pullback50                                     cap 3|
+|    SKIP [eq] EQIX  Pullback50                                     cap 3|
+|    SKIP [eq] FFIV  Pullback50                                     cap 3|
+|    SKIP [eq] MS  Pullback50                                       cap 3|
+|    SKIP [eq] PGR  Pullback50                                      cap 3|
+|    SKIP [eq] STLD  Pullback50                                     cap 3|
+|    SKIP [eq] TRV  Pullback50                                      cap 3|
+|    SKIP [eq] ZBH  Pullback50                                      cap 3|
+|    SKIP [eq] COKE  Pullback50                                     cap 3|
+|    SKIP [eq] CXT  Pullback50                                      cap 3|
+|    SKIP [eq] FHI  Pullback50                                      cap 3|
+|    SKIP [eq] LFUS  Pullback50                                     cap 3|
+|    SKIP [eq] MTSI  Pullback50                                     cap 3|
+|    SKIP [eq] THG  Pullback50                                      cap 3|
+|    SKIP [eq] VIAV  Pullback50                                     cap 3|
+|    SKIP [eq] HCA  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] EQH  VWAP_Reclaim                                    cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  FSLR                                                 still unconfirmed|
+|  TXT                                                  still unconfirmed|
+|  CNM                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            900|
+|  Signals                                                             29|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $228.76|
+|  Cash                                                           $125.88|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
