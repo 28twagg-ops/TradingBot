@@ -828,3 +828,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-09-09 13:47:51,2026-09-09,SELL,MKSI,MomReversal,263.74,,263.74,34.18,0.0,0.0,market_urgent_full,stop_loss (-0.9%),bull
 2026-09-09 13:57:54,2026-09-09,SELL,C,Pullback50,136.1699,136.13,136.16,34.3,-0.0073,-0.0025,limit_fill_position_check_full,midline (-0.1%),bull
 2026-09-09 13:58:25,2026-09-09,SELL,AAPL,Pullback50,317.1,317.07,317.078,34.4,-0.0069,-0.0024,limit_fill_position_check_full,midline (+0.1%),bull
+2026-09-09 16:11:14,2026-09-09,SELL,BAX,Pullback50,24.695,,24.695,9.45,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
