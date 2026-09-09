@@ -1073,6 +1073,16 @@
       "qty": 1,
       "reason": "stop_loss (-50.7%)",
       "submitted": "2026-09-09T14:31:15"
+    },
+    {
+      "order_id": "c51e123b-c0a6-4ad3-aa21-39c1e2b58dbf",
+      "lot_id": "9ed74f9937f2",
+      "bucket_id": 239,
+      "strategy_id": "S401",
+      "occ_symbol": "HD260911C00320000",
+      "qty": 1,
+      "reason": "stop_loss (-50.8%)",
+      "submitted": "2026-09-09T15:11:13"
     }
   ],
   "bucket_open_premium": {
