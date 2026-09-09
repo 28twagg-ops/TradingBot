@@ -47,3 +47,4 @@ run_stamp,run_number,run_id,live_exit,live_options_exit,options_exit,live_durati
 20260909T164606Z,9493,34378670891,0,0,0,2,1,16,workflow_dispatch
 20260909T165104Z,9494,34379188185,0,0,0,3,2,23,workflow_dispatch
 20260909T165612Z,9495,34379702240,0,0,0,2,1,15,workflow_dispatch
+20260909T170106Z,9496,34380202832,0,0,0,1,1,19,workflow_dispatch
