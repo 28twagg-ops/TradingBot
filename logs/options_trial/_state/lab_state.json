@@ -1143,6 +1143,16 @@
       "qty": 1,
       "reason": "take_profit (+106.9%)",
       "submitted": "2026-09-09T10:46:23"
+    },
+    {
+      "order_id": "481dbefc-bcba-48ea-b6a7-fd92193d240b",
+      "lot_id": "3b3d16fdb4e3",
+      "bucket_id": 87,
+      "strategy_id": "S210",
+      "occ_symbol": "UNH260911C00407500",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-09-09T13:41:25"
     }
   ],
   "bucket_open_premium": {
