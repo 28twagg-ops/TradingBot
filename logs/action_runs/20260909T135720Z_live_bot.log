@@ -1,0 +1,24 @@
+13:57:22  INFO      Mode: morning_scan
+13:57:23  INFO        [positions] 3/3 (3 valid)
+13:57:23  INFO        SELL LIMIT C  qty=0.251889353  limit=$136.13  id=905397e0-77af-4f40-9738-1fdfb573b368
+13:57:54  INFO        SELL LIMIT filled C (confirmed by position check)
+13:57:54  INFO        TX logged: SELL C  P&L -0.09%
+13:57:54  INFO        SELL LIMIT AAPL  qty=0.108504639  limit=$317.07  id=e5b9fbd4-f5ce-44c5-9d5a-8a5ecae16cd4
+13:58:24  INFO        SELL LIMIT filled AAPL (confirmed by position check)
+13:58:25  INFO        TX logged: SELL AAPL  P&L 0.11%
+13:58:25  INFO        Universe cache hit: 903 tickers (tickers_2026-09-09.json)
+13:58:26  INFO        [universe] 40/902 (40 valid)
+13:58:27  INFO        [universe] 80/902 (80 valid)
+13:58:28  INFO        [universe] 120/902 (120 valid)
+13:58:29  INFO        [universe] 160/902 (160 valid)
+13:58:30  INFO        [universe] 200/902 (199 valid)
+13:58:37  INFO        [universe] 240/902 (238 valid)
+13:58:51  INFO        [universe] 280/902 (278 valid)
+13:59:01  INFO        [universe] 320/902 (318 valid)
+13:59:14  INFO        [universe] 360/902 (358 valid)
+13:59:27  INFO        [universe] 400/902 (397 valid)
+13:59:37  INFO        [universe] 440/902 (437 valid)
+13:59:50  INFO        [universe] 480/902 (477 valid)
+14:00:04  INFO        [universe] 520/902 (517 valid)
+14:00:15  INFO        [universe] 560/902 (557 valid)
+14:00:25  INFO        [universe] 600/902 (597 valid)
