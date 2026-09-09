@@ -484,4 +484,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-08T17:36:08Z,reconcile,0,orphan_reconcile,ORPHAN,5e136a537ba8,COIN,COIN260911C00207500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-08 17:31:20.484733+00:00,exit,0,orphan_reconcile,ORPHAN,ba2d8ea97b62,MARA,MARA260918C00012000,1,,0.25,46.62,-46.38,-21.62,stop_loss (-45.2%),,-0.01,0.5,-0.4,,,c1c1eabb-4730-4af5-b0cb-189d3769abf2
 2026-09-08 17:38:27.716865+00:00,exit,0,orphan_reconcile,ORPHAN,27edebbef995,SNOW,SNOW260911C00367500,1,,0.34,56.0,-39.29,-22.0,stop_loss (-42.9%),,-0.01,0.5,-0.4,,,995ed860-3600-49d9-8d05-e36d0dff306f
-2026-09-09T13:40:12Z,reconcile,0,orphan_reconcile,ORPHAN,aec42dbdd398,AMZN,AMZN260911C00267500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-09T13:34:42Z,reconcile,0,orphan_reconcile,ORPHAN,aec42dbdd398,AMZN,AMZN260911C00267500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-09T14:01:53Z,reconcile,0,orphan_reconcile,ORPHAN,ca6c25d8b04c,SNOW,SNOW260911C00365000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
