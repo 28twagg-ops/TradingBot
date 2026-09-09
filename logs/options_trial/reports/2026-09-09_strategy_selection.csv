@@ -93,7 +93,7 @@ S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1444,249,77,
 S211,MA_Cross_21_50,3d ATM MA cross 21/50,drop,non-positive median return,124,43,12,31,29.37,-38.1,-80.62,-55.6,102.82,-207.0,9,44,0,0,10,34.9
 S405,GapDown_OTM3,3d,drop,manually paused — excluded from new entries & reflected P&L,115,56,19,37,-8.5,-42.86,-83.93,-65.2,103.47,-118.0,8,40,0,0,8,26.8
 S359,RubberBand_0DTE,0d,drop,non-positive median return,74,30,10,20,50.26,-44.44,-71.43,-67.98,164.28,-151.0,6,37,4,2,5,33.3
-S217,RSI_25_Bounce,3d ATM RSI<25 bounce,drop,non-positive median return,118,56,23,33,34.19,-46.15,-78.75,-56.38,132.35,465.0,12,44,0,2,4,53.6
+S217,RSI_25_Bounce,3d ATM RSI<25 bounce,drop,non-positive median return,120,57,24,33,34.53,-46.15,-78.5,-55.56,131.76,493.0,12,44,2,3,5,52.6
 S399,GapDown_OTM1,3d,drop,non-positive median return,160,59,27,32,61.66,-46.67,-85.72,-66.67,181.3,48.0,11,40,8,3,11,27.1
 S207,GapDown_AtSupport,3d ATM gap-support,drop,manually paused — excluded from new entries & reflected P&L,62,37,2,35,-38.6,-47.06,-63.64,-55.71,-6.06,-822.0,2,44,0,0,3,43.2
 S407,RubberBand_ITM2,3d,drop,manually paused — excluded from new entries & reflected P&L,96,38,11,27,29.82,-47.73,-83.88,-61.54,266.42,33.0,7,40,0,0,7,26.3
