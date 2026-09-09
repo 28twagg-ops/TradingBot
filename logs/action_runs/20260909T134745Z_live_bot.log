@@ -1,0 +1,26 @@
+13:47:46  INFO      Mode: morning_scan
+13:47:46  INFO        [positions] 2/2 (2 valid)
+13:47:46  INFO        SELL MARKET [urgent] MGM closed
+13:47:49  INFO        TX logged: SELL MGM  P&L -1.21%
+13:47:49  INFO        SELL MARKET [urgent] MKSI closed
+13:47:51  INFO        TX logged: SELL MKSI  P&L -0.91%
+13:47:51  INFO        Universe cache hit: 903 tickers (tickers_2026-09-09.json)
+13:47:52  INFO        [universe] 40/903 (40 valid)
+13:47:53  INFO        [universe] 80/903 (80 valid)
+13:47:54  INFO        [universe] 120/903 (120 valid)
+13:47:56  INFO        [universe] 160/903 (160 valid)
+13:47:57  INFO        [universe] 200/903 (199 valid)
+13:48:04  INFO        [universe] 240/903 (238 valid)
+13:48:17  INFO        [universe] 280/903 (278 valid)
+13:48:27  INFO        [universe] 320/903 (318 valid)
+13:48:40  INFO        [universe] 360/903 (358 valid)
+13:48:53  INFO        [universe] 400/903 (397 valid)
+13:49:03  INFO        [universe] 440/903 (437 valid)
+13:49:16  INFO        [universe] 480/903 (477 valid)
+13:49:29  INFO        [universe] 520/903 (517 valid)
+13:49:42  INFO        [universe] 560/903 (557 valid)
+13:49:52  INFO        [universe] 600/903 (597 valid)
+13:50:05  INFO        [universe] 640/903 (637 valid)
+13:50:18  INFO        [universe] 680/903 (677 valid)
+13:50:28  INFO        [universe] 720/903 (717 valid)
+13:50:41  INFO        [universe] 760/903 (757 valid)

@@ -824,3 +824,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-09-08 13:57:55,2026-09-08,SELL,ABBV,Pullback50,251.31,,251.31,34.41,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
 2026-09-08 16:01:08,2026-09-08,SELL,APD,Pullback50,298.08,,298.08,34.39,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-09-08 16:41:07,2026-09-08,SELL,AMCR,Pullback50,44.59,,44.59,34.4,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
+2026-09-09 13:47:49,2026-09-09,SELL,MGM,MomReversal,40.425,,40.425,34.07,0.0,0.0,market_urgent_full,stop_loss (-1.2%),bull
+2026-09-09 13:47:51,2026-09-09,SELL,MKSI,MomReversal,263.74,,263.74,34.18,0.0,0.0,market_urgent_full,stop_loss (-0.9%),bull
