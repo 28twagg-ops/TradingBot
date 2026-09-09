@@ -7270,3 +7270,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-09 22:16:02,ext_exits,bull,228.78,125.88,0,0,0,3,CNM|FSLR|TXT,both
 2026-09-09 22:21:40,ext_exits,bull,228.78,125.88,0,0,0,3,CNM|FSLR|TXT,both
 2026-09-09 22:25:58,ext_exits,bull,228.78,125.88,0,0,0,3,CNM|FSLR|TXT,both
+2026-09-09 22:31:04,ext_exits,bull,228.78,125.88,0,0,0,3,CNM|FSLR|TXT,both
