@@ -7165,3 +7165,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-08 23:46:02,ext_exits,bull,229.51,160.77,0,0,0,2,MGM|MKSI,both
 2026-09-08 23:51:19,ext_exits,bull,229.51,160.77,0,0,0,2,MGM|MKSI,both
 2026-09-08 23:56:10,ext_exits,bull,229.51,160.77,0,0,0,2,MGM|MKSI,both
+2026-09-09 13:01:12,summary,bull,229.18,160.77,0,0,0,2,MGM|MKSI,both
