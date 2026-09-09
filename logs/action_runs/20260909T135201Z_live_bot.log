@@ -1,0 +1,212 @@
+13:52:02  INFO      Mode: morning_scan
+13:52:03  INFO        Universe cache hit: 903 tickers (tickers_2026-09-09.json)
+13:52:04  INFO        [universe] 40/903 (40 valid)
+13:52:05  INFO        [universe] 80/903 (80 valid)
+13:52:06  INFO        [universe] 120/903 (120 valid)
+13:52:08  INFO        [universe] 160/903 (160 valid)
+13:52:09  INFO        [universe] 200/903 (199 valid)
+13:52:16  INFO        [universe] 240/903 (238 valid)
+13:52:27  INFO        [universe] 280/903 (278 valid)
+13:52:40  INFO        [universe] 320/903 (318 valid)
+13:52:53  INFO        [universe] 360/903 (358 valid)
+13:53:04  INFO        [universe] 400/903 (397 valid)
+13:53:17  INFO        [universe] 440/903 (437 valid)
+13:53:27  INFO        [universe] 480/903 (477 valid)
+13:53:40  INFO        [universe] 520/903 (517 valid)
+13:53:54  INFO        [universe] 560/903 (557 valid)
+13:54:04  INFO        [universe] 600/903 (597 valid)
+13:54:17  INFO        [universe] 640/903 (637 valid)
+13:54:27  INFO        [universe] 680/903 (677 valid)
+13:54:40  INFO        [universe] 720/903 (717 valid)
+13:54:54  INFO        [universe] 760/903 (757 valid)
+13:55:04  INFO        [universe] 800/903 (797 valid)
+13:55:17  INFO        [universe] 840/903 (837 valid)
+13:55:28  INFO        [universe] 880/903 (877 valid)
+13:55:34  INFO        [universe] 903/903 (900 valid)
+13:55:37  INFO        BUY  AAPL  $34.34  [Pullback50]  id=169e3df8-9f96-4e58-800c-6fcb8ce76fc8
+13:55:37  INFO        BUY  BAX  $34.34  [Pullback50]  id=3eb46712-bb13-4950-9176-8488eb0a2fdc
+13:55:37  ERROR       BUY FAILED BRK-B: {"code":42210000,"message":"asset \"BRK-B\" not found"}
+13:55:37  INFO        BUY  C  $34.34  [Pullback50]  id=e7580fd6-a054-4dd6-b2b3-80afe3552b67
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:52 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $228.95|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-09-09|
+|  Universe                                                          both|
+|  Mo~  Sep: GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $228.95|
+|  Cash                                                           $228.95|
+|  Reserve                                          $11.45  (always kept)|
+|  Stocks ~  $0.00 / $171.71  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $171.71  (new stock buys)|
+|  Trade size             $34.34  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (0 open)                        |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (20176.5m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  32                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AAPL     Pullback50      eq     $316.13  49.2   -3.13   50MA bounce (-|
+|  BAX      Pullback50      eq     $24.80   26.5   -3.02   50MA bounce (-|
+|  BRK-B    Pullback50      eq     $504.30  58.4   -2.93   50MA bounce (+|
+|  C        Pullback50      eq     $135.77  57.8   -2.59   50MA bounce (+|
+|  COHR     Pullback50      eq     $306.30  58.6   -1.98   50MA bounce (+|
+|  EQIX     Pullback50      eq     $1044.~  39.5   -2.55   50MA bounce (+|
+|  F        Pullback50      eq     $14.12   44.1   -2.95   50MA bounce (+|
+|  GRMN     Pullback50      eq     $275.00  16.7   -2.07   50MA bounce (+|
+|  HAS      Pullback50      eq     $90.12   35.1   -2.73   50MA bounce (+|
+|  JPM      Pullback50      eq     $352.20  43.0   -3.00   50MA bounce (+|
+|  JBHT     Pullback50      eq     $273.77  51.2   -2.40   50MA bounce (-|
+|  MDLZ     Pullback50      eq     $61.83   31.3   -2.97   50MA bounce (+|
+|  STLD     Pullback50      eq     $244.05  61.2   -1.78   50MA bounce (+|
+|  SYY      Pullback50      eq     $82.52   50.3   -2.70   50MA bounce (-|
+|  TRV      Pullback50      eq     $363.80  51.9   -2.50   50MA bounce (-|
+|  VTRS     Pullback50      eq     $16.75   59.0   -2.10   50MA bounce (-|
+|  WAB      Pullback50      eq     $282.15  36.5   -2.62   50MA bounce (-|
+|  WELL     Pullback50      eq     $238.17  54.6   -2.16   50MA bounce (+|
+|  ZBH      Pullback50      eq     $94.56   30.9   -2.16   50MA bounce (-|
+|  ALV      Pullback50      eq     $121.27  47.9   -2.71   50MA bounce (+|
+|  ARMK     Pullback50      eq     $57.49   34.8   -2.64   50MA bounce (-|
+|  KEX      Pullback50      eq     $139.28  51.6   -3.03   50MA bounce (+|
+|  KRYS     Pullback50      eq     $351.67  54.7   -2.41   50MA bounce (+|
+|  LFUS     Pullback50      eq     $423.74  56.3   -2.11   50MA bounce (-|
+|  NLY      Pullback50      eq     $22.92   31.5   -2.90   50MA bounce (+|
+|  OGE      Pullback50      eq     $47.50   55.6   -2.81   50MA bounce (-|
+|  PK       Pullback50      eq     $15.10   36.9   -2.85   50MA bounce (+|
+|  SBRA     Pullback50      eq     $20.84   56.5   -1.52   50MA bounce (+|
+|  SLM      Pullback50      eq     $26.19   46.1   -2.59   50MA bounce (+|
+|  USFD     Pullback50      eq     $103.86  35.9   -2.51   50MA bounce (+|
+|  VIAV     Pullback50      eq     $39.47   52.4   -2.01   50MA bounce (-|
+|  WTS      Pullback50      eq     $358.62  37.3   -2.92   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AAPL  Pullback50                                   $34.34|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] BAX  Pullback50                                    $34.34|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] BRK-B  Pullback50                                  $34.34|
+|    ENTER [eq] C  Pullback50                                      $34.34|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] COHR  Pullback50                                     cap 3|
+|    SKIP [eq] EQIX  Pullback50                                     cap 3|13:56:07  INFO        place_all_stops: checking 3 positions...
+13:56:07  INFO        STOP skipped AAPL: fractional (0.1085 shares) — software exit will handle it
+13:56:07  INFO        STOP-MARKET placed BAX  qty=1 (pos=1.3828)  stop=$24.70  id=524059d2-0ef3-4e03-bd0d-ef5f74360a46
+13:56:07  INFO        STOP skipped C: fractional (0.2519 shares) — software exit will handle it
+13:56:08  INFO        Daily log -> logs/daily/2026-09-09.md
+13:56:08  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [eq] F  Pullback50                                        cap 3|
+|    SKIP [eq] GRMN  Pullback50                                     cap 3|
+|    SKIP [eq] HAS  Pullback50                                      cap 3|
+|    SKIP [eq] JPM  Pullback50                                      cap 3|
+|    SKIP [eq] JBHT  Pullback50                                     cap 3|
+|    SKIP [eq] MDLZ  Pullback50                                     cap 3|
+|    SKIP [eq] STLD  Pullback50                                     cap 3|
+|    SKIP [eq] SYY  Pullback50                                      cap 3|
+|    SKIP [eq] TRV  Pullback50                                      cap 3|
+|    SKIP [eq] VTRS  Pullback50                                     cap 3|
+|    SKIP [eq] WAB  Pullback50                                      cap 3|
+|    SKIP [eq] WELL  Pullback50                                     cap 3|
+|    SKIP [eq] ZBH  Pullback50                                      cap 3|
+|    SKIP [eq] ALV  Pullback50                                      cap 3|
+|    SKIP [eq] ARMK  Pullback50                                     cap 3|
+|    SKIP [eq] KEX  Pullback50                                      cap 3|
+|    SKIP [eq] KRYS  Pullback50                                     cap 3|
+|    SKIP [eq] LFUS  Pullback50                                     cap 3|
+|    SKIP [eq] NLY  Pullback50                                      cap 3|
+|    SKIP [eq] OGE  Pullback50                                      cap 3|
+|    SKIP [eq] PK  Pullback50                                       cap 3|
+|    SKIP [eq] SBRA  Pullback50                                     cap 3|
+|    SKIP [eq] SLM  Pullback50                                      cap 3|
+|    SKIP [eq] USFD  Pullback50                                     cap 3|
+|    SKIP [eq] VIAV  Pullback50                                     cap 3|
+|    SKIP [eq] WTS  Pullback50                                      cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  AAPL                                                 still unconfirmed|
+|  BAX                                                  still unconfirmed|
+|  C                                                    still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            900|
+|  Signals                                                             32|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $228.92|
+|  Cash                                                           $125.96|
++========================================================================+
