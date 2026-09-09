@@ -1133,6 +1133,16 @@
       "qty": 1,
       "reason": "stop_loss (-50.7%)",
       "submitted": "2026-09-09T14:31:15"
+    },
+    {
+      "order_id": "1c22f000-5dc1-4379-b136-e9ecb97c44d9",
+      "lot_id": "e859bd3af79f",
+      "bucket_id": 86,
+      "strategy_id": "S210",
+      "occ_symbol": "UNH260911C00407500",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-09-09T14:36:17"
     }
   ],
   "bucket_open_premium": {
