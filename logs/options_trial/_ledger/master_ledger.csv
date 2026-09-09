@@ -13216,3 +13216,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-09 15:27:11.201112+00:00,entry,87,lab0087_s210_w4_1120_1135_r2,S210,3b3d16fdb4e3,UNH,UNH260911C00407500,1,0.63,0.62,62.0,,,,-0.01,,0.5,-0.5,0.2068965517241379,MA8 397.34 crossed above MA21,b84d0c00-a77f-4ba5-8e2b-69925b384b03
 2026-09-09 15:27:11.211753+00:00,entry,86,lab0086_s210_w4_1120_1135_r1,S210,e859bd3af79f,UNH,UNH260911C00407500,1,0.63,0.62,62.0,,,,-0.01,,0.5,-0.5,0.2068965517241379,MA8 397.34 crossed above MA21,2d0a3fd4-a95a-4756-b25c-97f812649cb2
 2026-09-09 15:26:23.390719+00:00,exit,0,orphan_reconcile,ORPHAN,1dd70207ec04,TSLA,TSLA260911C00395000,1,,0.36,60.0,-40.0,-24.0,stop_loss (-41.7%),,-0.01,0.5,-0.4,,,5676e6c5-2748-4207-9940-c6d6956c6a0b
+2026-09-09T15:41:11Z,reconcile,90,live_1to1,S218,89db6292312d,ZS,ZS260911C00177500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
