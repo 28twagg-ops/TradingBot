@@ -7195,3 +7195,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-09 15:41:09,exits,bull,229.03,194.66,0,0,0,1,BAX,both
 2026-09-09 15:46:16,exits,bull,228.98,194.66,0,0,0,1,BAX,both
 2026-09-09 15:51:12,exits,bull,229.0,194.66,0,0,0,1,BAX,both
+2026-09-09 15:56:43,exits,bull,228.93,194.66,0,0,0,1,BAX,both
