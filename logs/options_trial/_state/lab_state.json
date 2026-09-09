@@ -1462,7 +1462,40 @@
       "entry_order_id": "orphan:UNH260911C00402500"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "987fb2a1-2362-488c-ab95-42345938d9c6",
+      "bucket_id": 180,
+      "strategy_id": "S217",
+      "occ_symbol": "LLY260911C01200000",
+      "underlying": "LLY",
+      "qty": 1,
+      "limit": 0.57,
+      "profile_name": "lab0180_s217_w2_1005_1045_r1",
+      "submitted": "2026-09-09",
+      "detail": "RSI=11.4 green",
+      "spread_frac": 0.18867924528301883,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "1833081e-d25a-4482-979d-c992484a82a0",
+      "bucket_id": 181,
+      "strategy_id": "S217",
+      "occ_symbol": "LLY260911C01200000",
+      "underlying": "LLY",
+      "qty": 1,
+      "limit": 0.57,
+      "profile_name": "lab0181_s217_w2_1005_1045_r2",
+      "submitted": "2026-09-09",
+      "detail": "RSI=11.4 green",
+      "spread_frac": 0.18867924528301883,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    }
+  ],
   "pending_exits": [
     {
       "order_id": "f993f5a5-615d-4aa0-92ec-8e1f4a6f6c58",
@@ -1483,6 +1516,16 @@
       "qty": 1,
       "reason": "stop_loss (-65.1%)",
       "submitted": "2026-09-09T10:01:58"
+    },
+    {
+      "order_id": "e62c511d-2216-4cf0-aee5-1ed3c6f81529",
+      "lot_id": "335f382818d7",
+      "bucket_id": 857,
+      "strategy_id": "S408",
+      "occ_symbol": "MARA260911C00013500",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-09-09T10:11:11"
     }
   ],
   "bucket_open_premium": {
@@ -1566,7 +1609,9 @@
     "81|S210|2026-09-09",
     "165|S216|2026-09-09",
     "82|S210|2026-09-09",
-    "83|S210|2026-09-09"
+    "83|S210|2026-09-09",
+    "180|S217|2026-09-09",
+    "181|S217|2026-09-09"
   ],
   "processed_orders": [
     "f7d86205-1407-4990-9169-8e5ef19153e2",
@@ -2064,7 +2109,7 @@
     "eee052d1-8209-4fd6-9da0-35f8828b4c72",
     "a2ebf280-dc32-44bb-b7d4-a71a384d8c07"
   ],
-  "submitted_today": 7,
+  "submitted_today": 9,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-09"
 }
