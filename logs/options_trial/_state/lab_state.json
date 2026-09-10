@@ -2582,26 +2582,6 @@
       "entry_order_id": "orphan:UPST260918C00027500"
     },
     {
-      "lot_id": "6bd5c4eaad89",
-      "bucket_id": 918,
-      "profile_name": "lab0918_s412_w4_1120_1135_r1",
-      "strategy_id": "S412",
-      "occ_symbol": "CVNA260911C00074000",
-      "underlying": "CVNA",
-      "qty": 1,
-      "entry_cost": 31.0,
-      "entry_price": 0.31,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T15:31:25.586968+00:00",
-      "entry_order_id": "842d0354-b233-44bd-9554-f8901fcccdba"
-    },
-    {
       "lot_id": "24a97d7db5d3",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -2643,16 +2623,6 @@
       "qty": 1,
       "reason": "stop_loss (-40.0%)",
       "submitted": "2026-09-10T12:07:50"
-    },
-    {
-      "order_id": "33438d1f-1777-4381-8a79-352aa111fff1",
-      "lot_id": "6bd5c4eaad89",
-      "bucket_id": 918,
-      "strategy_id": "S412",
-      "occ_symbol": "CVNA260911C00074000",
-      "qty": 1,
-      "reason": "stop_loss (-61.3%)",
-      "submitted": "2026-09-10T12:41:30"
     }
   ],
   "bucket_open_premium": {
@@ -2781,8 +2751,7 @@
     "b904": 62.0,
     "b369": 38.0,
     "b368": 38.0,
-    "b170": 37.0,
-    "b918": 31.0
+    "b170": 37.0
   },
   "session_date": "2026-09-10",
   "entries_locked": [
