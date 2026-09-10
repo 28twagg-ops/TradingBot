@@ -1382,26 +1382,6 @@
       "entry_order_id": "164d252b-fef5-475c-9097-2c3f660a1fd9"
     },
     {
-      "lot_id": "b5982a3477f6",
-      "bucket_id": 363,
-      "profile_name": "lab0363_s361_w1_0928_1005_r2",
-      "strategy_id": "S361",
-      "occ_symbol": "TSLA260911C00387500",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 47.0,
-      "entry_price": 0.47,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T14:06:21.195285+00:00",
-      "entry_order_id": "28f7619a-e395-4835-ba8b-e697510463ed"
-    },
-    {
       "lot_id": "1090e704d3da",
       "bucket_id": 345,
       "profile_name": "lab0345_s359_w1_0928_1005_r2",
@@ -2580,6 +2560,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-10T14:18:16.535399+00:00",
       "entry_order_id": "orphan:TSLA260914C00392500"
+    },
+    {
+      "lot_id": "9162434ca9bf",
+      "bucket_id": 90,
+      "profile_name": "live_1to1",
+      "strategy_id": "S406",
+      "occ_symbol": "SMCI260911C00039000",
+      "underlying": "SMCI",
+      "qty": 1,
+      "entry_cost": 65.0,
+      "entry_price": 0.65,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-10T14:22:51.463160+00:00",
+      "entry_order_id": "f0bee6af-e518-433d-9cde-3c3cab446ec4"
     }
   ],
   "pending_orders": [
@@ -2771,7 +2771,7 @@
     "b192": 32.0,
     "b801": 68.0,
     "b800": 68.0,
-    "b90": 123.0,
+    "b90": 188.0,
     "b793": 35.0,
     "b792": 35.0,
     "b777": 68.0,
@@ -2794,7 +2794,6 @@
     "b390": 55.00000000000001,
     "b377": 55.00000000000001,
     "b376": 55.00000000000001,
-    "b363": 47.0,
     "b345": 47.0,
     "b344": 47.0,
     "b235": 55.00000000000001,
@@ -2905,7 +2904,8 @@
     "82|S210|2026-09-10",
     "83|S210|2026-09-10",
     "378|S362|2026-09-10",
-    "379|S362|2026-09-10"
+    "379|S362|2026-09-10",
+    "90|S406|2026-09-10"
   ],
   "processed_orders": [
     "7f37564c-777c-4c5d-a3af-e4fc66d3f85c",
@@ -3360,9 +3360,11 @@
     "a8ca6eb7-4376-424a-8e64-b378a7814ded",
     "2ca68664-3996-4cb1-b1d1-0fbc83ee6511",
     "86fab656-8424-414c-9328-07a1c37e0737",
-    "7bc177ab-a05b-4469-b83b-3d723c492461"
+    "7bc177ab-a05b-4469-b83b-3d723c492461",
+    "f0bee6af-e518-433d-9cde-3c3cab446ec4",
+    "9f348a6f-a13f-4eea-be96-553575534bf8"
   ],
-  "submitted_today": 56,
+  "submitted_today": 57,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-10"
 }
