@@ -13591,3 +13591,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10 16:36:20.666412+00:00,exit,0,orphan_reconcile,ORPHAN,ab045f5f0970,TSLA,TSLA260914C00392500,1,,0.36,60.5,-40.5,-24.5,stop_loss (-42.1%),,-0.01,0.5,-0.4,,,21df4ca0-60b4-452a-a3d3-a2248268cb83
 2026-09-10 16:37:09.976824+00:00,exit,919,lab0919_s412_w4_1120_1135_r2,S412,c9d983822330,CVNA,CVNA260911C00074000,1,,0.12,31.0,-61.29,-19.0,stop_loss (-64.5%),,-0.01,0.5,-0.5,,,92556b5b-074b-4363-8ef7-02ff0940d943
 2026-09-10T16:46:16Z,reconcile,918,lab0918_s412_w4_1120_1135_r1,S412,6bd5c4eaad89,CVNA,CVNA260911C00074000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10 16:51:24.695257+00:00,exit,95,lab0095_s211_w1_0928_1005_r2,S211,0837c41ff1b5,C,C260911C00139000,1,,0.33,71.0,-53.52,-38.0,stop_loss (-53.5%),,-0.01,0.5,-0.5,,,749f3a60-c6bd-4ff6-a4d8-e9100a2dad53
+2026-09-10 16:54:03.260470+00:00,exit,0,orphan_reconcile,ORPHAN,c915cb3a03f3,AMD,AMD260914C00550000,1,,0.37,60.0,-38.33,-23.0,stop_loss (-40.0%),,-0.01,0.5,-0.4,,,fcb72034-930c-490d-a44b-e8a350df9185
