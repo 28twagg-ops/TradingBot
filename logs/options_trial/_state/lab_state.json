@@ -922,46 +922,6 @@
       "entry_order_id": "82d03237-ed92-4397-b4ca-a71b10377bd1"
     },
     {
-      "lot_id": "bfe6d7553416",
-      "bucket_id": 859,
-      "profile_name": "lab0859_s408_w2_1005_1045_r2",
-      "strategy_id": "S408",
-      "occ_symbol": "TSLA260914C00400000",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 28.999999999999996,
-      "entry_price": 0.29,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T14:09:11.200977+00:00",
-      "entry_order_id": "4f3bd74f-4b96-47ce-98d9-7ceb2f410d53"
-    },
-    {
-      "lot_id": "52f5b5c21b63",
-      "bucket_id": 858,
-      "profile_name": "lab0858_s408_w2_1005_1045_r1",
-      "strategy_id": "S408",
-      "occ_symbol": "TSLA260914C00400000",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 28.999999999999996,
-      "entry_price": 0.29,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T14:09:11.237293+00:00",
-      "entry_order_id": "8822774e-d9cd-4510-bda0-71ef71a789be"
-    },
-    {
       "lot_id": "a3cebfd0f56a",
       "bucket_id": 802,
       "profile_name": "lab0802_s404_w2_1005_1045_r1",
@@ -2023,6 +1983,16 @@
       "qty": 1,
       "reason": "stop_loss (-50.0%)",
       "submitted": "2026-09-10T15:22:29"
+    },
+    {
+      "order_id": "1324487a-de91-4a95-85d6-509b2ddd7091",
+      "lot_id": "2d470900cf6a",
+      "bucket_id": 901,
+      "strategy_id": "S411",
+      "occ_symbol": "TSLA260914C00390000",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-09-10T15:26:22"
     }
   ],
   "bucket_open_premium": {
@@ -2072,8 +2042,6 @@
     "b392": 62.0,
     "b901": 68.0,
     "b900": 68.0,
-    "b859": 28.999999999999996,
-    "b858": 28.999999999999996,
     "b802": 60.0,
     "b779": 60.0,
     "b267": 31.0,
