@@ -7365,3 +7365,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-10 20:01:19,scan_evening,bull,227.38,159.03,42,0,1,2,ABBV|RL,both
 2026-09-10 20:02:38,ext_exits,bull,227.38,159.03,0,0,0,2,ABBV|RL,both
 2026-09-10 20:06:15,ext_exits,bull,227.38,159.03,0,0,0,2,ABBV|RL,both
+2026-09-10 20:11:11,ext_exits,bull,227.38,159.03,0,0,0,2,ABBV|RL,both
