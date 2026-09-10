@@ -742,26 +742,6 @@
       "entry_order_id": "345ba0c7-9cab-4353-b867-405af44fa7a5"
     },
     {
-      "lot_id": "7a6b68f54efc",
-      "bucket_id": 390,
-      "profile_name": "lab0390_s363_w1_0928_1005_r1",
-      "strategy_id": "S363",
-      "occ_symbol": "TSLA260914C00395000",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 55.00000000000001,
-      "entry_price": 0.55,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T14:06:21.096198+00:00",
-      "entry_order_id": "bae95899-6258-487d-814d-3c59edadc155"
-    },
-    {
       "lot_id": "dd5be304eba8",
       "bucket_id": 377,
       "profile_name": "lab0377_s362_w1_0928_1005_r2",
@@ -2335,14 +2315,14 @@
       "submitted": "2026-09-10T10:46:21"
     },
     {
-      "order_id": "74b82bcd-80ad-4724-81a4-63865fcab3d3",
-      "lot_id": "7a6b68f54efc",
-      "bucket_id": 390,
-      "strategy_id": "S363",
-      "occ_symbol": "TSLA260914C00395000",
+      "order_id": "a5badebc-0b4e-4656-abe4-d365f0f84d48",
+      "lot_id": "d4fe72d0da97",
+      "bucket_id": 807,
+      "strategy_id": "S404",
+      "occ_symbol": "AMD260911C00532500",
       "qty": 1,
-      "reason": "stop_loss (-50.9%)",
-      "submitted": "2026-09-10T13:17:49"
+      "reason": "stop_loss (-51.1%)",
+      "submitted": "2026-09-10T13:26:28"
     }
   ],
   "bucket_open_premium": {
@@ -2383,7 +2363,6 @@
     "b1136": 42.0,
     "b193": 32.0,
     "b192": 32.0,
-    "b390": 55.00000000000001,
     "b377": 55.00000000000001,
     "b376": 55.00000000000001,
     "b235": 55.00000000000001,
@@ -2988,7 +2967,8 @@
     "46e8736c-7d8a-408f-8569-6f43bc8dbcba",
     "1df7d503-1462-427e-9200-f4e9d2ee58b4",
     "a3e469f3-bf12-428e-aa42-0e1c230622f6",
-    "1b6c9c5a-92c1-4ffe-90c0-26d5b6e0ca63"
+    "1b6c9c5a-92c1-4ffe-90c0-26d5b6e0ca63",
+    "74b82bcd-80ad-4724-81a4-63865fcab3d3"
   ],
   "submitted_today": 117,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
