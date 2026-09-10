@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-10
 
-_Generated 2026-09-10T13:56:40.306935_
+_Generated 2026-09-10T14:01:53.661468_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-10T13:56:40.306935_
 
 ## Attribution health
 
-- Total exits: **2995**
+- Total exits: **2996**
 - Orphan exits (b0/orphan_reconcile): **371**
 - Orphan rate: **12.4%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -30,7 +30,7 @@ _Generated 2026-09-10T13:56:40.306935_
 | S362 (RubberBand_3DTE) | 3d | watch | 45 | 75.6 | +57.14 | -59.43 | +8.70 | +694.28 | 41 | 10 | 2 | $+1,392.00 | 28.9% | fat left tail (p10 < -45%) |
 | S357 (GapDown_21DTE) | 21d | watch | 24 | 79.2 | +55.04 | -76.29 | +47.06 | +78.98 | 41 | 1 | 1 | $+490.00 | 33.3% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 49 | 69.4 | +50.88 | -58.02 | -47.73 | +201.00 | 41 | 14 | 5 | $+1,014.00 | 24.5% | fat left tail (p10 < -45%) |
-| S404 (GapDown_OTM2) | 3d | watch | 48 | 62.5 | +48.14 | -91.67 | -41.42 | +114.74 | 41 | 17 | 6 | $+793.00 | 18.8% | fat left tail (p10 < -45%) |
+| S404 (GapDown_OTM2) | 3d | watch | 49 | 61.2 | +46.27 | -91.67 | -41.89 | +113.68 | 41 | 17 | 7 | $+764.00 | 18.4% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 77 | 57.1 | +45.71 | -68.57 | -45.00 | +157.85 | 45 | 20 | 8 | $+1,261.00 | 32.5% | fat left tail (p10 < -45%) |
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 8 | 50.0 | +25.32 | -71.88 | -59.49 | +516.85 | 51 | 10 | 4 | $+206.00 | 25.0% | building sample (8-19 exits) |
 | S364 (RubberBand_7DTE) | 7d | watch | 50 | 52.0 | +23.90 | -85.97 | -57.98 | +188.89 | 41 | 8 | 0 | $+92.00 | 38.0% | fat left tail (p10 < -45%) |
@@ -313,7 +313,7 @@ _Pipeline evaluation as of 2026-09-10. Auto-kill thresholds: median<-25% at n>=1
 | S401 | Any_Gap_Down_Small | 99 | +9.62% | 53% | INSUFFICIENT | 41 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
 | S403 | Any_MA50_Touch | 49 | +50.88% | 69% | INSUFFICIENT | 41 |
-| S404 | GapDown_OTM2 | 48 | +48.14% | 62% | INSUFFICIENT | 41 |
+| S404 | GapDown_OTM2 | 49 | +46.27% | 61% | INSUFFICIENT | 41 |
 | S405 | GapDown_OTM3 | 56 | -42.86% | 34% | INSUFFICIENT | 41 |
 | S406 | RubberBand_ITM3 | 77 | +72.55% | 70% | INSUFFICIENT | 41 |
 | S407 | RubberBand_ITM2 | 38 | -47.73% | 29% | INSUFFICIENT | 41 |
@@ -344,7 +344,7 @@ _Pipeline evaluation as of 2026-09-10. Auto-kill thresholds: median<-25% at n>=1
 | S397 | 31 | +57.53% | 74% | Tyler review |
 | S362 | 45 | +57.14% | 76% | Tyler review |
 | S403 | 49 | +50.88% | 69% | Tyler review |
-| S404 | 48 | +48.14% | 62% | Tyler review |
+| S404 | 49 | +46.27% | 61% | Tyler review |
 | S218 | 77 | +45.71% | 57% | Tyler review |
 | S364 | 50 | +23.90% | 52% | Tyler review |
 | S361 | 47 | +17.78% | 53% | Tyler review |
