@@ -13571,3 +13571,7 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10 16:07:42.546912+00:00,exit,299,lab0299_s353_w2_1005_1045_r2,S353,5d7452122a3a,AMD,AMD260914C00552500,1,,0.22,55.0,-60.0,-33.0,stop_loss (-60.0%),,-0.01,0.5,-0.5,,,322bbad8-6b14-4155-b02a-cfed21ad7041
 2026-09-10 16:07:38.195383+00:00,exit,0,orphan_reconcile,ORPHAN,55e62d9bb7cb,MARA,MARA260911C00012000,1,,0.1,18.0,-44.44,-8.0,stop_loss (-44.4%),,-0.01,0.5,-0.4,,,b5db926d-d530-49cb-8ecf-10ad10050411
 2026-09-10 16:07:34.695195+00:00,exit,1154,lab1154_s164_w3_1045_1120_r1,S164,60db7a0b05f0,MSTR,MSTR260911C00140000,1,,0.3,60.0,-50.0,-30.0,stop_loss (-50.3%),,-0.01,0.5,-0.5,,,516e20cd-af16-487c-b064-64564726e2b3
+2026-09-10T16:16:11Z,reconcile,0,orphan_reconcile,ORPHAN,5aabfa7739a7,AMD,AMD260914C00552500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10 16:11:30.607582+00:00,exit,367,lab0367_s361_w3_1045_1120_r2,S361,4ec7e6d2b1dc,MARA,MARA260911C00012000,1,,0.09,18.0,-50.0,-9.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,5074929b-b47e-41d5-afb2-e941c6be92d4
+2026-09-10 16:11:24.133967+00:00,exit,0,orphan_reconcile,ORPHAN,6ddb02823df7,AMZN,AMZN260914C00260000,1,,0.22,55.0,-60.0,-33.0,stop_loss (-60.0%),,-0.01,0.5,-0.4,,,2a611c87-5ee1-4797-8cd6-87eaf40d7a90
+2026-09-10 16:11:20.418968+00:00,exit,1057,lab1057_s165_w3_1045_1120_r2,S165,f9ce05fd5fb7,MSTR,MSTR260911C00140000,1,,0.28,60.0,-53.33,-32.0,stop_loss (-53.6%),,-0.01,0.5,-0.5,,,ac38cfab-afdf-4b18-b817-4d9942eea499
