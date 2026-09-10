@@ -7295,3 +7295,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-10 13:21:02,summary,bull,227.99,125.88,0,0,0,3,CNM|FSLR|TXT,both
 2026-09-10 13:26:16,summary,bull,227.82,125.88,0,0,0,3,CNM|FSLR|TXT,both
 2026-09-10 13:56:10,scan_morning,bull,227.38,125.1,25,0,0,3,ABBV|AES|MO,both
+2026-09-10 14:02:03,exits,bull,227.16,227.16,0,0,1,0,,both
