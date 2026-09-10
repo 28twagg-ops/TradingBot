@@ -742,26 +742,6 @@
       "entry_order_id": "345ba0c7-9cab-4353-b867-405af44fa7a5"
     },
     {
-      "lot_id": "23d11ea11ed5",
-      "bucket_id": 912,
-      "profile_name": "lab0912_s412_w1_0928_1005_r1",
-      "strategy_id": "S412",
-      "occ_symbol": "TSLA260914C00395000",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 55.00000000000001,
-      "entry_price": 0.55,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T14:06:20.801395+00:00",
-      "entry_order_id": "379eb0e1-134b-4af9-97b6-6986b1502245"
-    },
-    {
       "lot_id": "6c55a3fb08c3",
       "bucket_id": 899,
       "profile_name": "lab0899_s411_w1_0928_1005_r2",
@@ -2455,14 +2435,14 @@
       "submitted": "2026-09-10T10:46:21"
     },
     {
-      "order_id": "a3e469f3-bf12-428e-aa42-0e1c230622f6",
-      "lot_id": "23d11ea11ed5",
-      "bucket_id": 912,
-      "strategy_id": "S412",
+      "order_id": "1b6c9c5a-92c1-4ffe-90c0-26d5b6e0ca63",
+      "lot_id": "ffdcc157ce5c",
+      "bucket_id": 391,
+      "strategy_id": "S363",
       "occ_symbol": "TSLA260914C00395000",
       "qty": 1,
       "reason": "stop_loss (-50.9%)",
-      "submitted": "2026-09-10T13:06:29"
+      "submitted": "2026-09-10T13:11:07"
     }
   ],
   "bucket_open_premium": {
@@ -2503,7 +2483,6 @@
     "b1136": 42.0,
     "b193": 32.0,
     "b192": 32.0,
-    "b912": 55.00000000000001,
     "b899": 73.0,
     "b391": 55.00000000000001,
     "b390": 55.00000000000001,
@@ -3112,7 +3091,8 @@
     "fcb72034-930c-490d-a44b-e8a350df9185",
     "8f06f6c3-8586-4200-9738-a09098b0187c",
     "46e8736c-7d8a-408f-8569-6f43bc8dbcba",
-    "1df7d503-1462-427e-9200-f4e9d2ee58b4"
+    "1df7d503-1462-427e-9200-f4e9d2ee58b4",
+    "a3e469f3-bf12-428e-aa42-0e1c230622f6"
   ],
   "submitted_today": 117,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
