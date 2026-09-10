@@ -302,26 +302,6 @@
       "entry_order_id": "86c31a3c-d126-472d-a960-ce3b41a7a8af"
     },
     {
-      "lot_id": "2591fa20bf38",
-      "bucket_id": 784,
-      "profile_name": "lab0784_s398_w1_0928_1005_r1",
-      "strategy_id": "S398",
-      "occ_symbol": "ZS260911C00180000",
-      "underlying": "ZS",
-      "qty": 1,
-      "entry_cost": 32.0,
-      "entry_price": 0.32,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-08T14:06:18.154598+00:00",
-      "entry_order_id": "122143f5-1a96-4c44-9700-5e07400b7b36"
-    },
-    {
       "lot_id": "f581ba4e6b53",
       "bucket_id": 1095,
       "profile_name": "lab1095_s167_w1_0928_1005_r2",
@@ -2736,7 +2716,18 @@
       "stop_loss": -0.75
     }
   ],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "94aa2962-5a85-4650-a927-8bdef13b312b",
+      "lot_id": "ea78576830a1",
+      "bucket_id": 85,
+      "strategy_id": "S210",
+      "occ_symbol": "C260911C00140000",
+      "qty": 1,
+      "reason": "stop_loss (-50.8%)",
+      "submitted": "2026-09-10T10:11:19"
+    }
+  ],
   "bucket_open_premium": {
     "b435": 51.0,
     "b434": 51.0,
@@ -2753,7 +2744,6 @@
     "b424": 44.0,
     "b327": 44.0,
     "b326": 46.0,
-    "b784": 32.0,
     "b1095": 32.0,
     "b1094": 32.0,
     "b1123": 32.0,
@@ -3358,7 +3348,8 @@
     "a68f3669-a212-4ad1-9f2a-923d9b1dfd9d",
     "75e51aab-7d19-43f0-8f7d-f6bfc9638658",
     "949fd246-5632-4af0-985a-49be501c9022",
-    "1045e094-1d32-4b53-9f23-6493d7b859c2"
+    "1045e094-1d32-4b53-9f23-6493d7b859c2",
+    "dd6bb4de-3a9b-4f02-80a7-0ba2afb705e1"
   ],
   "submitted_today": 54,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
