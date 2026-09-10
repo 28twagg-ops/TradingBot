@@ -4,13 +4,13 @@ S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,insufficient sample (<
 S396,GapDown_ITM2,3d,watch,insufficient sample (<8 exits),26,4,3,1,45.32,83.82,-35.16,35.39,95.0,120.0,2,35,2,0,1,100.0
 S166,GapDown strong call,3d ATM strong,watch,building sample (8-19 exits),49,8,8,0,113.61,75.23,63.34,67.08,194.5,436.0,2,51,0,2,3,62.5
 S163,A1 GapDown ATM call EOD,7d ATM,watch,building sample (8-19 exits),105,15,13,2,76.5,74.6,-7.32,66.03,171.25,514.0,4,51,4,6,4,33.3
-S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),150,75,53,22,206.83,72.55,-61.49,-6.38,965.79,3403.0,13,41,6,6,12,20.0
-S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),123,30,23,7,42.54,59.72,-67.51,24.01,115.48,820.0,8,41,8,3,11,23.3
+S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),150,76,53,23,203.64,72.48,-61.02,-13.69,965.79,3377.0,14,41,6,7,13,19.7
 S410,RubberBand_OTM1,3d,watch,building sample (8-19 exits),26,8,5,3,23.03,58.34,-71.37,-53.45,88.78,120.0,4,35,2,2,2,87.5
-S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),113,45,34,11,151.2,57.14,-59.43,8.7,694.28,1392.0,8,41,8,2,6,28.9
+S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),125,31,23,8,38.8,57.53,-73.33,-19.3,115.38,776.0,9,41,10,4,12,22.6
+S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),115,45,34,11,151.2,57.14,-59.43,8.7,694.28,1392.0,8,41,10,2,6,28.9
 S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),51,24,19,5,37.99,55.04,-76.29,47.06,78.98,490.0,9,41,1,1,5,33.3
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),106,46,31,15,57.25,50.88,-61.05,-48.23,222.5,925.0,10,41,10,2,12,19.6
-S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),133,47,30,17,25.7,50.0,-91.67,-41.58,115.81,817.0,9,41,10,5,14,19.1
+S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),135,47,30,17,25.7,50.0,-91.67,-41.58,115.81,817.0,9,41,12,5,14,19.1
 S361,RubberBand_2DTE,2d,watch,fat left tail (p10 < -45%),119,43,24,19,110.8,44.83,-68.15,-41.88,238.66,228.0,9,41,10,2,9,25.6
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),164,75,42,33,51.29,36.36,-69.53,-46.74,160.04,1194.0,15,45,16,6,14,33.3
 S364,RubberBand_7DTE,7d,watch,fat left tail (p10 < -45%),102,50,26,24,20.88,23.9,-85.97,-57.98,188.89,92.0,11,41,4,0,5,38.0

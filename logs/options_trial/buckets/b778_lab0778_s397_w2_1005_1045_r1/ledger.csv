@@ -29,3 +29,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-08T13:55:53Z,reconcile,778,lab0778_s397_w2_1005_1045_r1,S397,4f36dcc351a9,TSLA,TSLA260909C00380000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-08 14:09:03.037476+00:00,entry,778,lab0778_s397_w2_1005_1045_r1,S397,463ee241d2f1,ZS,ZS260911C00175000,1,0.58,0.58,58.0,,,,-0.01,,0.75,-0.75,0.08849557522123883,gap -2.5%,c316e615-f66e-4c76-946b-e886bc5b8f52
 2026-09-10T13:40:30Z,reconcile,778,lab0778_s397_w2_1005_1045_r1,S397,463ee241d2f1,ZS,ZS260911C00175000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10 14:14:28.716580+00:00,entry,778,lab0778_s397_w2_1005_1045_r1,S397,b54a334bf45f,AMD,AMD260914C00550000,1,0.6,0.6,60.0,,,,-0.01,,0.75,-0.75,0.17857142857142852,gap -2.3%,89fc8559-cbb4-49c3-bca1-41f459428645
+2026-09-10 13:35:55.599923+00:00,exit,778,lab0778_s397_w2_1005_1045_r1,S397,b54a334bf45f,AMD,AMD260914C00550000,1,,0.16,60.0,-73.33,-44.0,reconcile_fill,,-0.01,0.5,-0.5,,,730cc65b-d3e2-4dd5-bae3-4a56a40a17a9
