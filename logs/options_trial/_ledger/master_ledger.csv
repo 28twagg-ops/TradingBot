@@ -13560,3 +13560,14 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10T16:07:30Z,reconcile,1058,lab1058_s165_w4_1120_1135_r1,S165,437cdd776f7e,AMD,AMD260911C00535000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-10T16:07:30Z,reconcile,0,orphan_reconcile,ORPHAN,259c472fbdea,AMD,AMD260911C00535000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-10 16:01:40.730348+00:00,exit,366,lab0366_s361_w3_1045_1120_r1,S361,b2c97d8fa12f,MARA,MARA260911C00012000,1,,0.29,18.0,61.11,11.0,stop_loss (-50.9%),,-0.01,0.5,-0.5,,,3491165c-d201-4b39-9c5a-dc131318b4ae
+2026-09-10T16:11:09Z,reconcile,831,lab0831_s406_w2_1005_1045_r2,S406,fa4141e2f9f4,SMCI,SMCI260911C00040000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10T16:11:10Z,reconcile,830,lab0830_s406_w2_1005_1045_r1,S406,86a540448a7b,SMCI,SMCI260911C00040000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10T16:11:10Z,reconcile,291,lab0291_s352_w2_1005_1045_r2,S352,1ba8020df3c9,SMCI,SMCI260911C00040000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10T16:11:10Z,reconcile,290,lab0290_s352_w2_1005_1045_r1,S352,39265ef5b6f5,SMCI,SMCI260911C00040000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10T16:11:10Z,reconcile,1153,lab1153_s164_w2_1005_1045_r2,S164,73cab2d6ebfa,SMCI,SMCI260911C00040000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10T16:11:10Z,reconcile,1152,lab1152_s164_w2_1005_1045_r1,S164,69c761134d32,SMCI,SMCI260911C00040000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10T16:11:10Z,reconcile,97,lab0097_s211_w2_1005_1045_r2,S211,19480a003129,C,C260911C00140000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10T16:11:10Z,reconcile,96,lab0096_s211_w2_1005_1045_r1,S211,b4ecaebdbdee,C,C260911C00140000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10 16:07:42.546912+00:00,exit,299,lab0299_s353_w2_1005_1045_r2,S353,5d7452122a3a,AMD,AMD260914C00552500,1,,0.22,55.0,-60.0,-33.0,stop_loss (-60.0%),,-0.01,0.5,-0.5,,,322bbad8-6b14-4155-b02a-cfed21ad7041
+2026-09-10 16:07:38.195383+00:00,exit,0,orphan_reconcile,ORPHAN,55e62d9bb7cb,MARA,MARA260911C00012000,1,,0.1,18.0,-44.44,-8.0,stop_loss (-44.4%),,-0.01,0.5,-0.4,,,b5db926d-d530-49cb-8ecf-10ad10050411
+2026-09-10 16:07:34.695195+00:00,exit,1154,lab1154_s164_w3_1045_1120_r1,S164,60db7a0b05f0,MSTR,MSTR260911C00140000,1,,0.3,60.0,-50.0,-30.0,stop_loss (-50.3%),,-0.01,0.5,-0.5,,,516e20cd-af16-487c-b064-64564726e2b3

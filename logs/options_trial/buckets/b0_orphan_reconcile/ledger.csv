@@ -498,3 +498,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10 15:26:47.765925+00:00,exit,0,orphan_reconcile,ORPHAN,e1ebd5d91637,SMCI,SMCI260911C00040500,1,,0.15,28.0,-46.43,-13.0,stop_loss (-46.4%),,-0.01,0.5,-0.4,,,e73540c1-5cab-4174-b506-64586254ff2a
 2026-09-10 15:56:17.925736+00:00,exit,0,orphan_reconcile,ORPHAN,69e173e845ed,MARA,MARA260911C00012500,1,,0.04,7.0,-42.86,-3.0,stop_loss (-42.9%),,-0.01,0.5,-0.4,,,b6d28268-0632-4608-81b0-3885cb909a6d
 2026-09-10T16:07:30Z,reconcile,0,orphan_reconcile,ORPHAN,259c472fbdea,AMD,AMD260911C00535000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10 16:07:38.195383+00:00,exit,0,orphan_reconcile,ORPHAN,55e62d9bb7cb,MARA,MARA260911C00012000,1,,0.1,18.0,-44.44,-8.0,stop_loss (-44.4%),,-0.01,0.5,-0.4,,,b5db926d-d530-49cb-8ecf-10ad10050411
