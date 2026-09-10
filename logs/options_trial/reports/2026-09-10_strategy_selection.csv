@@ -5,9 +5,9 @@ S166,GapDown strong call,3d ATM strong,watch,building sample (8-19 exits),49,8,8
 S163,A1 GapDown ATM call EOD,7d ATM,watch,building sample (8-19 exits),109,15,13,2,76.5,74.6,-7.32,66.03,171.25,514.0,4,51,8,6,4,33.3
 S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),154,77,54,23,204.52,72.55,-60.54,-6.38,965.79,3396.0,14,41,10,8,13,19.5
 S410,RubberBand_OTM1,3d,watch,building sample (8-19 exits),26,8,5,3,23.03,58.34,-71.37,-53.45,88.78,120.0,4,35,2,2,2,87.5
-S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),129,31,23,8,38.8,57.53,-73.33,-19.3,115.38,776.0,9,41,14,4,12,22.6
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),115,45,34,11,151.2,57.14,-59.43,8.7,694.28,1392.0,8,41,10,2,6,28.9
 S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),51,24,19,5,37.99,55.04,-76.29,47.06,78.98,490.0,9,41,1,1,5,33.3
+S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),129,32,23,9,35.84,54.46,-72.49,-56.38,115.32,743.0,9,41,14,5,12,21.9
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),110,49,34,15,57.33,50.88,-58.02,-47.73,201.0,1014.0,11,41,14,5,12,24.5
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),168,77,44,33,51.45,45.71,-68.57,-45.0,157.85,1261.0,16,45,20,8,14,32.5
 S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),140,51,30,21,19.95,45.21,-91.67,-50.41,111.54,702.0,10,41,17,9,15,17.6
@@ -84,7 +84,7 @@ S412,RubberBand_OTM3,3d,drop,non-positive median return,126,47,20,27,12.32,-3.57
 S210,MA_Cross_8_21,3d ATM MA cross 8/21,drop,non-positive median return,187,84,40,44,7.36,-6.25,-74.98,-51.22,71.78,-121.0,11,45,22,10,17,17.9
 S398,GapDown_ATM,3d,drop,non-positive median return,134,51,25,26,27.42,-11.43,-68.29,-55.0,155.56,670.0,9,41,11,5,11,31.4
 S355,GapDown_7DTE,7d,drop,non-positive median return,119,59,29,30,24.02,-15.62,-69.48,-61.25,188.75,553.0,11,41,8,1,9,28.8
-S352,GapDown_2DTE,2d,drop,non-positive median return,132,44,21,23,52.05,-17.65,-73.93,-51.85,324.88,81.0,11,41,12,4,10,25.0
+S352,GapDown_2DTE,2d,drop,non-positive median return,132,45,21,24,49.79,-17.65,-73.57,-51.85,319.29,61.0,12,41,12,5,10,24.4
 S356,GapDown_14DTE,14d,drop,non-positive median return,59,23,10,13,1.72,-19.44,-51.5,-48.15,57.51,8.0,7,41,0,4,5,26.1
 S174,RubberBand long call EOD,RubberBand (dropped),drop,non-positive median return,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,66,0,0,6,50.4
 S353,GapDown_3DTE,3d,drop,non-positive median return,100,32,15,17,70.09,-26.32,-84.12,-72.79,206.62,55.0,9,41,6,5,8,28.1
