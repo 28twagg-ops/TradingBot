@@ -542,8 +542,8 @@
   {
     "bucket_id": 90,
     "profile": "live_1to1",
-    "open_premium": 123.0,
-    "open_lots": 2
+    "open_premium": 188.0,
+    "open_lots": 3
   },
   {
     "bucket_id": 91,
@@ -1004,8 +1004,8 @@
   {
     "bucket_id": 167,
     "profile": "lab0167_s216_w2_1005_1045_r2",
-    "open_premium": 44.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 168,
@@ -1580,8 +1580,8 @@
   {
     "bucket_id": 263,
     "profile": "lab0263_s403_w1_0928_1005_r2",
-    "open_premium": 50.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 264,
@@ -4718,14 +4718,14 @@
   {
     "bucket_id": 786,
     "profile": "lab0786_s398_w2_1005_1045_r1",
-    "open_premium": 28.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 787,
     "profile": "lab0787_s398_w2_1005_1045_r2",
-    "open_premium": 28.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 788,
@@ -4772,8 +4772,8 @@
   {
     "bucket_id": 795,
     "profile": "lab0795_s399_w2_1005_1045_r2",
-    "open_premium": 28.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 796,
@@ -5510,14 +5510,14 @@
   {
     "bucket_id": 918,
     "profile": "lab0918_s412_w4_1120_1135_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 31.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 919,
     "profile": "lab0919_s412_w4_1120_1135_r2",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 31.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 920,
@@ -6578,14 +6578,14 @@
   {
     "bucket_id": 1096,
     "profile": "lab1096_s167_w2_1005_1045_r1",
-    "open_premium": 28.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 1097,
     "profile": "lab1097_s167_w2_1005_1045_r2",
-    "open_premium": 28.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 1098,
