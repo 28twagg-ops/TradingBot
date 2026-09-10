@@ -1,6 +1,6 @@
 # Options signal frequency
 
-_Generated 2026-09-10T11:13:39.168306_
+_Generated 2026-09-10T11:18:34.794013_
 
 Headline counts are **unique (strategy, underlying, date)** from `ENTRY` lines in `logs/options_trial/runs/*.log`.
 Raw log-line counts (multi-bucket duplicates) are shown below for debug.
@@ -66,12 +66,12 @@ Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:
 
 | Strategy | Raw log lines (includes multi-bucket duplicates) | Unique underlying symbols |
 |----------|-------------------------------------------------:|--------------------------:|
-| S163 | 255 | 14 |
+| S163 | 257 | 14 |
 | S164 | 279 | 18 |
 | S165 | 1715 | 30 |
 | S166 | 135 | 9 |
 | S167 | 273 | 17 |
-| S168 | 202 | 14 |
+| S168 | 204 | 14 |
 | S169 | 0 | 0 |
 | S170 | 0 | 0 |
 | S171 | 0 | 0 |
@@ -106,7 +106,7 @@ Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:
 | 2026-09-03 |   10 |    4 |    4 |   16 |    4 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    48 |
 | 2026-09-04 |   12 |   14 |    8 |   10 |    8 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    62 |
 | 2026-09-08 |    4 |    8 |    8 |    0 |    8 |    8 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    36 |
-| 2026-09-10 |    6 |    8 |    4 |    0 |    8 |    4 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    30 |
+| 2026-09-10 |    8 |    8 |    4 |    0 |    8 |    6 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    34 |
 
 ## Notes
 
