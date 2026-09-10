@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-10
 
-_Generated 2026-09-10T14:16:36.192970_
+_Generated 2026-09-10T14:21:25.659721_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-10T14:16:36.192970_
 
 ## Attribution health
 
-- Total exits: **3000**
+- Total exits: **3001**
 - Orphan exits (b0/orphan_reconcile): **371**
 - Orphan rate: **12.4%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -105,10 +105,10 @@ _Generated 2026-09-10T14:16:36.192970_
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 84 | 47.6 | -6.25 | -74.98 | -51.22 | +71.78 | 45 | 22 | 10 | $-121.00 | 17.9% | non-positive median return |
 | S398 (GapDown_ATM) | 3d | drop | 51 | 49.0 | -11.43 | -68.29 | -55.00 | +155.56 | 41 | 11 | 5 | $+670.00 | 31.4% | non-positive median return |
 | S355 (GapDown_7DTE) | 7d | drop | 59 | 49.2 | -15.62 | -69.48 | -61.25 | +188.75 | 41 | 8 | 1 | $+553.00 | 28.8% | non-positive median return |
-| S352 (GapDown_2DTE) | 2d | drop | 45 | 46.7 | -17.65 | -73.57 | -51.85 | +319.29 | 41 | 12 | 5 | $+61.00 | 24.4% | non-positive median return |
 | S356 (GapDown_14DTE) | 14d | drop | 23 | 43.5 | -19.44 | -51.50 | -48.15 | +57.51 | 41 | 0 | 4 | $+8.00 | 26.1% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 66 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
 | S353 (GapDown_3DTE) | 3d | drop | 32 | 46.9 | -26.32 | -84.12 | -72.79 | +206.62 | 41 | 6 | 5 | $+55.00 | 28.1% | non-positive median return |
+| S352 (GapDown_2DTE) | 2d | drop | 46 | 45.7 | -27.95 | -73.22 | -51.84 | +313.69 | 41 | 12 | 6 | $+43.00 | 23.9% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 66 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 250 | 30.8 | -38.09 | -63.27 | -53.52 | +84.61 | 66 | 8 | 1 | $-1,558.78 | 26.4% | non-positive median return |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 44 | 27.3 | -40.48 | -80.36 | -54.73 | +100.38 | 45 | 4 | 1 | $-245.00 | 34.1% | non-positive median return |
@@ -261,7 +261,7 @@ _Pipeline evaluation as of 2026-09-10. Auto-kill thresholds: median<-25% at n>=1
 | S221 | GoldenPocket | 0 | — | — | NEW | 0 |
 | S350 | GapDown_0DTE | 43 | +11.76% | 51% | INSUFFICIENT | 41 |
 | S351 | GapDown_1DTE | 60 | -52.09% | 25% | INSUFFICIENT | 41 |
-| S352 | GapDown_2DTE | 45 | -17.65% | 47% | INSUFFICIENT | 41 |
+| S352 | GapDown_2DTE | 46 | -27.95% | 46% | INSUFFICIENT | 41 |
 | S353 | GapDown_3DTE | 32 | -26.32% | 47% | INSUFFICIENT | 41 |
 | S354 | GapDown_5DTE | 51 | -50.77% | 41% | INSUFFICIENT | 41 |
 | S355 | GapDown_7DTE | 59 | -15.62% | 49% | INSUFFICIENT | 41 |
