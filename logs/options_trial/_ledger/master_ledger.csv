@@ -13587,3 +13587,6 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10T16:36:04Z,reconcile,279,lab0279_s350_w2_1005_1045_r2,S350,671c7ede624b,SMCI,SMCI260911C00039500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-10T16:36:04Z,reconcile,278,lab0278_s350_w2_1005_1045_r1,S350,0e1fb23ba62c,SMCI,SMCI260911C00039500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-10T16:36:04Z,reconcile,90,live_1to1,S406,9162434ca9bf,SMCI,SMCI260911C00039000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10T16:41:07Z,reconcile,796,lab0796_s399_w3_1045_1120_r1,S399,afed52fc389f,COIN,COIN260911C00187500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10 16:36:20.666412+00:00,exit,0,orphan_reconcile,ORPHAN,ab045f5f0970,TSLA,TSLA260914C00392500,1,,0.36,60.5,-40.5,-24.5,stop_loss (-42.1%),,-0.01,0.5,-0.4,,,21df4ca0-60b4-452a-a3d3-a2248268cb83
+2026-09-10 16:37:09.976824+00:00,exit,919,lab0919_s412_w4_1120_1135_r2,S412,c9d983822330,CVNA,CVNA260911C00074000,1,,0.12,31.0,-61.29,-19.0,stop_loss (-64.5%),,-0.01,0.5,-0.5,,,92556b5b-074b-4363-8ef7-02ff0940d943
