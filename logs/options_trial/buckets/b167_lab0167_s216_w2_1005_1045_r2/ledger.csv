@@ -26,4 +26,3 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-02 14:42:17.188870+00:00,entry,167,lab0167_s216_w2_1005_1045_r2,S216,3edbd6d853e9,IWM,IWM260904C00297000,1,0.48,0.47,47.0,,,,-0.01,,0.5,-0.5,0.020618556701030948,RSI crossed 30: 28.9 -> 31.8,dffead8b-7586-4f81-8aac-64744eb1691f
 2026-09-03T14:31:03Z,reconcile,167,lab0167_s216_w2_1005_1045_r2,S216,3edbd6d853e9,IWM,IWM260904C00297000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-08 14:07:15.281645+00:00,entry,167,lab0167_s216_w2_1005_1045_r2,S216,a5a3c0f53b4d,AVGO,AVGO260911C00400000,1,0.41,0.4,40.0,,,,-0.01,,0.75,-0.75,0.04878048780487795,RSI crossed 30: 29.2 -> 42.9,17656c09-589e-49fb-90b8-27c7643c01b8
-2026-09-10 13:40:34.662670+00:00,exit,167,lab0167_s216_w2_1005_1045_r2,S216,a5a3c0f53b4d,AVGO,AVGO260911C00400000,1,,0.01,40.0,-97.5,-39.0,reconcile_fill,,-0.01,0.5,-0.5,,,cfa1dbe9-ea55-47ad-8f89-bb515964aea1
