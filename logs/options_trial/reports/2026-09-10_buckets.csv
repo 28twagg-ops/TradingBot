@@ -168,7 +168,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 166,lab0166_s216_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-09-08,False,,,,,,,0,,,,open
 167,lab0167_s216_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-09-10,False,,0.0,-74.89,-74.89,-52.27,-97.5,-62.0,"AVGO,BA",S216,stop_loss (-97.5%); stop_loss (-50.0%),closed
 168,lab0168_s216_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,0,2026-09-10,False,,,,,,,0,"AXP,BA",S216,,entered_no_exit
-169,lab0169_s216_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,AXP,S216,,entered_no_exit
+169,lab0169_s216_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-10,False,,,,,,,0,AXP,S216,,entered_no_exit
 170,lab0170_s216_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,UPST,S216,,entered_no_exit
 171,lab0171_s216_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-10,False,,,,,,,0,UPST,S216,,entered_no_exit
 172,lab0172_s216_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -193,7 +193,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 191,lab0191_s217_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 192,lab0192_s218_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,AMZN,S218,,entered_no_exit
 193,lab0193_s218_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,AMZN,S218,,entered_no_exit
-194,lab0194_s218_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,GOOGL,S218,,entered_no_exit
+194,lab0194_s218_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-10,False,,100.0,60.34,60.34,60.34,60.34,35.0,GOOGL,S218,take_profit (+72.4%),closed
 195,lab0195_s218_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-10,False,,100.0,55.17,55.17,55.17,55.17,32.0,GOOGL,S218,take_profit (+55.2%),closed
 196,lab0196_s218_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,GOOGL,S218,,entered_no_exit
 197,lab0197_s218_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,GOOGL,S218,,entered_no_exit
@@ -856,7 +856,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 854,lab0854_s407_w7_1500_1530_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 855,lab0855_s407_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 856,lab0856_s408_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-10,False,,,,,,,0,TSLA,S408,,entered_no_exit
-857,lab0857_s408_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,TSLA,S408,,entered_no_exit
+857,lab0857_s408_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-10,False,,,,,,,0,TSLA,S408,,entered_no_exit
 858,lab0858_s408_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,TSLA,S408,,entered_no_exit
 859,lab0859_s408_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,TSLA,S408,,entered_no_exit
 860,lab0860_s408_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,TSLA,S408,,entered_no_exit
@@ -912,7 +912,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 910,lab0910_s411_w7_1500_1530_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 911,lab0911_s411_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 912,lab0912_s412_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,TSLA,S412,,entered_no_exit
-913,lab0913_s412_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,TSLA,S412,,entered_no_exit
+913,lab0913_s412_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-10,False,,0.0,-49.09,-49.09,-49.09,-49.09,-27.0,TSLA,S412,stop_loss (-50.9%),closed
 914,lab0914_s412_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-10,False,,0.0,-51.85,-51.85,-51.85,-51.85,-28.0,SMCI,S412,stop_loss (-50.9%),closed
 915,lab0915_s412_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-10,False,,0.0,-51.85,-51.85,-51.85,-51.85,-28.0,SMCI,S412,stop_loss (-50.9%),closed
 916,lab0916_s412_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-09-10,False,,0.0,-85.71,-85.71,-85.71,-85.71,-6.0,"CVNA,MARA",S412,stop_loss (-85.7%),closed

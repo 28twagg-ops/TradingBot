@@ -13595,3 +13595,7 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10 16:54:03.260470+00:00,exit,0,orphan_reconcile,ORPHAN,c915cb3a03f3,AMD,AMD260914C00550000,1,,0.37,60.0,-38.33,-23.0,stop_loss (-40.0%),,-0.01,0.5,-0.4,,,fcb72034-930c-490d-a44b-e8a350df9185
 2026-09-10T17:01:14Z,reconcile,94,lab0094_s211_w1_0928_1005_r1,S211,50e4efac702e,C,C260911C00139000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-10 16:56:30.518338+00:00,exit,195,lab0195_s218_w2_1005_1045_r2,S218,526c42100319,GOOGL,GOOGL260914C00340000,1,,0.9,58.0,55.17,32.0,take_profit (+55.2%),,-0.01,0.5,-0.5,,,8f06f6c3-8586-4200-9738-a09098b0187c
+2026-09-10T17:06:11Z,reconcile,857,lab0857_s408_w1_0928_1005_r2,S408,6eca79d8d5e0,TSLA,TSLA260914C00402500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10T17:06:12Z,reconcile,169,lab0169_s216_w3_1045_1120_r2,S216,7cd434e2edfd,AXP,AXP260911C00327500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10 17:01:35.507783+00:00,exit,194,lab0194_s218_w2_1005_1045_r1,S218,774d13fb304b,GOOGL,GOOGL260914C00340000,1,,0.93,58.0,60.34,35.0,take_profit (+72.4%),,-0.01,0.5,-0.5,,,46e8736c-7d8a-408f-8569-6f43bc8dbcba
+2026-09-10 17:05:27.166156+00:00,exit,913,lab0913_s412_w1_0928_1005_r2,S412,344dfa3ac9a3,TSLA,TSLA260914C00395000,1,,0.28,55.0,-49.09,-27.0,stop_loss (-50.9%),,-0.01,0.5,-0.5,,,1df7d503-1462-427e-9200-f4e9d2ee58b4
