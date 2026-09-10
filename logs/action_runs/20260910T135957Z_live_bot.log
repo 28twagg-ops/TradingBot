@@ -1,0 +1,7 @@
+13:59:58  INFO      Mode: morning_scan
+13:59:59  INFO        [positions] 3/3 (3 valid)
+13:59:59  INFO        SELL order cancelled AES  type=OrderType.STOP  id=3ec801bd-c5fe-4419-9699-42d0c260fbe2
+13:59:59  INFO        SELL LIMIT AES  qty=2.301304679  limit=$14.81  id=e9f78f97-63ad-423d-b350-f96b40b04793
+14:00:29  INFO        SELL LIMIT filled AES (confirmed by position check)
+14:00:29  INFO        TX logged: SELL AES  P&L 0.03%
+14:00:29  INFO        SELL LIMIT MO  qty=0.494747838  limit=$68.88  id=f765c7c1-fd3c-4370-bd35-5cb715d2aaae
