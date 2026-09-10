@@ -1880,26 +1880,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-10T15:28:48.003350+00:00",
       "entry_order_id": "orphan:UPST260918C00027500"
-    },
-    {
-      "lot_id": "24a97d7db5d3",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "AMZN260914C00260000",
-      "underlying": "AMZN",
-      "qty": 1,
-      "entry_cost": 55.0,
-      "entry_price": 0.55,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T16:16:14.346155+00:00",
-      "entry_order_id": "orphan:AMZN260914C00260000"
     }
   ],
   "pending_orders": [],
@@ -1923,6 +1903,26 @@
       "qty": 1,
       "reason": "stop_loss (-50.0%)",
       "submitted": "2026-09-10T15:22:29"
+    },
+    {
+      "order_id": "600302c5-9767-4e97-831c-e8b12b6a0b8d",
+      "lot_id": "2ac693119e46",
+      "bucket_id": 900,
+      "strategy_id": "S411",
+      "occ_symbol": "TSLA260914C00390000",
+      "qty": 1,
+      "reason": "stop_loss (-51.5%)",
+      "submitted": "2026-09-10T15:34:46"
+    },
+    {
+      "order_id": "bf6bf749-a8dc-4f92-bdc6-abbe91cff156",
+      "lot_id": "b3b081b6d048",
+      "bucket_id": 407,
+      "strategy_id": "S364",
+      "occ_symbol": "SMCI260918C00042000",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-09-10T15:55:43"
     }
   ],
   "bucket_open_premium": {
@@ -1962,7 +1962,7 @@
     "b1136": 42.0,
     "b193": 32.0,
     "b192": 32.0,
-    "b0": 242.5454,
+    "b0": 187.5454,
     "b331": 59.0,
     "b315": 38.0,
     "b314": 38.0,

@@ -14950,3 +14950,219 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260910T195134Z
+
+- UTC timestamp: `20260910T195134Z`
+- GitHub run: [#9662](https://github.com/28twagg-ops/TradingBot/actions/runs/34522727414)
+- Run id: `34522727414`
+- Live bot: exit=`0`, duration=`246s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260910T195134Z_live_bot.log`, `logs/action_runs/20260910T195134Z_live_options.log`, `logs/action_runs/20260910T195134Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1175 | 48.5 | -22.9 | +40.6 | $+15,153 |
+| TAINTED | 1827 | 33.3 | -38.8 | +12.0 | $-9,106 |
+| KEEP-only | 583 | 63.3 | +51.4 | +67.3 | $+10,446 |
+| KEEP-only recent | 386 | 61.1 | +53.4 | +80.3 | $+5,801 |
+
+- KEEP strategies (21): S163, S168, S173, S174, S210, S218, S350, S353, S354, S355, S357, S361, S362, S363, S364, S397, S399, S401, S403, S404, S406
+- KILL strategies (21): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S352, S356, S360, S365, S366, S398, S405, S407, S408, S411, S412
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-10T15:55:43.344703-04:00","date":"2026-09-10","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":6.9,"phases_s":{"reconcile":0.12,"cancel":0.04,"manage":5.66,"protective_stops":0.53},"signals":0,"placed":0,"equity":999261.91,"open_positions":28,"pending_orders":0,"open_lots":94,"submitted_today":117,"filled_today":213,"unattributed_contracts":0,"top_signals":[],"github_run":"9662","github_run_id":"34522727414","status":"ok","data_quality":{"clean":{"n":1175,"win":48.51,"med":-22.95,"avg":40.6,"pnl":15153.09},"tainted":{"n":1827,"win":33.33,"med":-38.81,"avg":11.98,"pnl":-9105.84},"keep_only":{"n":583,"win":63.29,"med":51.39,"avg":67.28,"pnl":10446.45},"keep_only_recent":{"n":386,"win":61.14,"med":53.45,"avg":80.3,"pnl":5801.0},"keep_strategies":["S163","S168","S173","S174","S210","S218","S350","S353","S354","S355","S357","S361","S362","S363","S364","S397","S399","S401","S403","S404","S406"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S352","S356","S360","S365","S366","S398","S405","S407","S408","S411","S412"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (142 earlier lines - see full log file)
+|    ENTER [eq] ABBV  Pullback50                                   $34.07|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AES  Pullback50                                    $34.07|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|19:55:39  INFO        place_all_stops: checking 3 positions...
+19:55:39  INFO        STOP skipped ABBV: fractional (0.1339 shares) — software exit will handle it
+19:55:39  INFO        STOP-MARKET placed AES  qty=2 (pos=2.2986)  stop=$14.74  id=863df9ff-d447-428c-bfea-adade35ec407
+19:55:39  INFO        STOP skipped RL: fractional (0.1016 shares) — software exit will handle it
+19:55:39  INFO        place_eod_stops: updating 3 stops to current price...
+19:55:39  INFO        EOD stop skip ABBV: 0.1339 shares (fractional) — ext_exits will cover
+19:55:39  INFO        EOD stop: cancelled old stop AES
+19:55:39  WARNING     EOD stop failed AES: {"available":"0.298604877","code":40310000,"existing_qty":"2.298604877","held_for_orders":"2","message":"insufficient qty available for order (requested: 2, available: 0.298604877)","symbol":"AES"}
+19:55:39  INFO        EOD stop skip RL: 0.1016 shares (fractional) — ext_exits will cover
+19:55:39  INFO        Daily log -> logs/daily/2026-09-10.md
+19:55:39  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [eq] A  Pullback50                                        cap 3|
+|    SKIP [eq] ADP  Pullback50                                      cap 3|
+|    SKIP [eq] CNC  Pullback50                                      cap 3|
+|    SKIP [eq] FAST  Pullback50                                     cap 3|
+|    SKIP [eq] FTNT  Pullback50                                     cap 3|
+|    SKIP [eq] HAS  Pullback50                                      cap 3|
+|    SKIP [eq] PM  Pullback50                                       cap 3|
+|    SKIP [eq] PRU  Pullback50                                      cap 3|
+|    SKIP [eq] V  Pullback50                                        cap 3|
+|    SKIP [eq] ALV  Pullback50                                      cap 3|
+|    SKIP [eq] BWA  Pullback50                                      cap 3|
+|    SKIP [eq] CFR  Pullback50                                      cap 3|
+|    SKIP [eq] KEX  Pullback50                                      cap 3|
+|    SKIP [eq] SBRA  Pullback50                                     cap 3|
+|    SKIP [eq] SANM  Pullback50                                     cap 3|
+|    SKIP [eq] SHC  Pullback50                                      cap 3|
+|    SKIP [eq] SITM  Pullback50                                     cap 3|
+|    SKIP [eq] SSB  Pullback50                                      cap 3|
+|    SKIP [eq] UBSI  Pullback50                                     cap 3|
+|    SKIP [eq] ISRG  RSIRecovery                                    cap 3|
+|    SKIP [eq] KVUE  RSIRecovery                                    cap 3|
+|    SKIP [eq] PKG  RSIRecovery                                     cap 3|
+|    SKIP [eq] AVAV  RSIRecovery                                    cap 3|
+|    SKIP [eq] BAH  RSIRecovery                                     cap 3|
+|    SKIP [eq] CHWY  RSIRecovery                                    cap 3|
+|    SKIP [eq] LH  RubberBand                                       cap 3|
+|    SKIP [eq] AAPL  TrendResumption                                cap 3|
+|    SKIP [eq] ELV  TrendResumption                                 cap 3|
+|    SKIP [eq] AAPL  VWAP_Reclaim                                   cap 3|
+|    SKIP [eq] ELV  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] HLI  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] SITM  VWAP_Reclaim                                   cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  RL                                                   still unconfirmed|
+|  ABBV                                                 still unconfirmed|
+|  AES                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            900|
+|  Signals                                                             35|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $227.14|
+|  Cash                                                           $124.98|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-09-10T15:55:40.654383-04:00 share=25% ===
+2026-09-10 15:55:40,654 INFO === options_live_micro LIVE 2026-09-10T15:55:40.654383-04:00 share=25% ===
+Live account equity $227.15 cash $124.98 #225458845 options_level=3
+2026-09-10 15:55:40,698 INFO Live account equity $227.15 cash $124.98 #225458845 options_level=3
+Live micro: manage/exits only
+2026-09-10 15:55:40,721 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-09-10 15:55:40,737 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+... (48 earlier lines - see full log file)
+Past entry window; manage/exit only.
+
+[Portfolio snapshot]
++========================================================================+
+|[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
++========================================================================+
+|-- ACCOUNT STATUS (manage-only) --                                      |
+|Equity       : $999,261.91                                              |
+|Open Risk    : 94 lots (28 broker pos)                                  |
+|Today's Run  : 0 signals -> 0 orders submitted                          |
+|                                                                        |
+|-- SYSTEM HEALTH --                                                     |
+|Zombies      : 0 (Ledger is clean)                                      |
+|Lab Status   : 94 Active Lots | 0 Pending Orders                        |
+|Auto-Matrix  : (Pending EOD report generation)                          |
++========================================================================+
++========================================================================+
+|[DATA QUALITY: CLEAN vs ERRORS vs KEEP-ONLY]                            |
++========================================================================+
+|  CLEAN              n=1175  win= 48.5%  med= -22.9%  $+15,153          |
+|  TAINTED            n=1827  win= 33.3%  med= -38.8%  $-9,106           |
+|  KEEP-only          n=583   win= 63.3%  med= +51.4%  $+10,446          |
+|  KEEP recent        n=386   win= 61.1%  med= +53.4%  $+5,801           |
+|  KEEP(21): S163,S168,S173,S174,S210,S218,S350,S353...                  |
+|  KILL(21): ORPHAN,S164,S202,S203,S207,S211,S212,S216...                |
++========================================================================+
++========================================================================+
+|[+++ OVERPERFORMING STRATEGIES (n>=10)]                                 |
++========================================================================+
+|  BKT  PROFILE                   WIN%   MED%   TOTAL TRADES             |
+|  ---------------------------------------------------------             |
+|  b832 lab0832_s406_w3_1045..  85%  +126.9%    13                       |
+|  b238 lab0238_s401_w3_1045..  81%  +115.2%    16                       |
+|  b861 lab0861_s408_w3_1045..  73%  +100.0%    11                       |
+|  b365 lab0365_s361_w2_1005..  91%  +82.8%    11                        |
++========================================================================+
+|[--- UNDERPERFORMING STRATEGIES (n>=10)]                                |
++========================================================================+
+|  BKT  PROFILE                   WIN%   MED%   TOTAL TRADES             |
+|  ---------------------------------------------------------             |
+|  b47  lab0047_s205_w4_1120..   4%  -78.0%    28                        |
+|  b167 lab0167_s216_w2_1005..  20%  -71.8%    10                        |
+|  b307 lab0307_s354_w2_1005..  30%  -69.9%    10                        |
+|  b1   lab0001_s200_w1_0928..   0%  -65.8%    10                        |
++========================================================================+
++========================================================================+
+|[PENDING EXITS (4)]                                                     |
++========================================================================+
+|  b1151 S164 ZS260911C00180000 x1 stop_loss (-75.9%)                    |
+|  b861 S408 TSLA260914C00405000 x1 stop_loss (-50.0%)                   |
+|  b900 S411 TSLA260914C00390000 x1 stop_loss (-51.5%)                   |
+|  b407 S364 SMCI260918C00042000 x1 stop_loss (-50.0%)                   |
++========================================================================+
++========================================================================+
+|[OPEN OPTIONS (28)]                                                     |
++========================================================================+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|  ---------------------------------------------------------             |
+|  MARA260918C00012000          44    -11.6%   $   -232.00               |
+|  ZS260911C00180000             4    -94.0%   $   -124.62               |
+|  SHOP260911C00146000           2   -100.0%   $   -112.00               |
+|  SMCI260918C00042000           3    -50.0%   $    -93.00               |
+|  AMD260914C00550000            2    -53.3%   $    -64.00               |
+|  COIN260911C00182500           4    -23.9%   $    -64.00               |
+|  QQQ260914C00725000            2    -44.4%   $    -56.00               |
+|  TSLA260914C00387500           2    -41.9%   $    -52.00               |
+|  ... 20 more position(s)                                               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-09-10.log
+elapsed=6.9s reconcile=0.12s cancel=0.04s manage=5.66s
+STATUS: options_morning_bot run complete (PAPER) elapsed=6.9s. run=#9662 https://github.com/28twagg-ops/TradingBot/actions/runs/34522727414
+Evaluation complete: 100 strategies evaluated, 0 killed, 0 promote candidates.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-10_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-10_buckets.csv
+Summary: 49 buckets closed trades, $-1,020.50 realized
+STALE WARNING: 16 bucket(s) with open lots and last_entry >5d
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-10_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-10_strategy_selection.csv
+Summary: keep=0 watch=79 drop=26
+Orphan rate: 12.4% (371/3002) ALERT
+```
+
+---

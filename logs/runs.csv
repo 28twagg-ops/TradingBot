@@ -7361,3 +7361,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-10 19:16:00,exits,bull,227.16,227.16,0,0,0,0,,both
 2026-09-10 19:22:14,exits,bull,227.16,227.16,0,0,0,0,,both
 2026-09-10 19:26:07,exits,bull,227.16,227.16,0,0,0,0,,both
+2026-09-10 19:55:39,scan_evening,bull,227.14,124.98,35,0,0,3,ABBV|AES|RL,both
