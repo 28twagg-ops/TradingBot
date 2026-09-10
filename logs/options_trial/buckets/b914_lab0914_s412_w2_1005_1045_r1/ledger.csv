@@ -25,3 +25,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-08 14:07:13.239405+00:00,entry,914,lab0914_s412_w2_1005_1045_r1,S412,4f8f3ed4c630,CRWD,CRWD260911C00225000,1,0.52,0.51,51.0,,,,-0.01,,0.75,-0.75,0.2083333333333334,RB gap -1.5% reclaim,f6184714-dce2-4f81-875b-5972a89cb26d
 2026-09-09T16:41:26Z,reconcile,914,lab0914_s412_w2_1005_1045_r1,S412,4f8f3ed4c630,CRWD,CRWD260911C00225000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-10 14:07:46.122506+00:00,entry,914,lab0914_s412_w2_1005_1045_r1,S412,a6e1f031febd,SMCI,SMCI260911C00039500,1,0.55,0.54,54.0,,,,-0.01,,0.75,-0.75,0.15384615384615397,RB gap -2.6% reclaim,588102cb-59fa-43d0-ac16-8fb2890d2650
+2026-09-10 16:26:18.422698+00:00,exit,914,lab0914_s412_w2_1005_1045_r1,S412,a6e1f031febd,SMCI,SMCI260911C00039500,1,,0.26,54.0,-51.85,-28.0,stop_loss (-50.9%),,-0.01,0.5,-0.5,,,ab24dc39-b0ef-4c9a-ae46-9e67cd08244b
