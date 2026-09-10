@@ -490,4 +490,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-09 14:36:34.004630+00:00,exit,0,orphan_reconcile,ORPHAN,042fbf40c025,UNH,UNH260911C00402500,1,,0.93,53.0,75.47,40.0,take_profit (+77.4%),,-0.01,0.5,-0.4,,,3555c29b-1910-4d63-8e0c-4710917e8f72
 2026-09-09 15:26:23.390719+00:00,exit,0,orphan_reconcile,ORPHAN,1dd70207ec04,TSLA,TSLA260911C00395000,1,,0.36,60.0,-40.0,-24.0,stop_loss (-41.7%),,-0.01,0.5,-0.4,,,5676e6c5-2748-4207-9940-c6d6956c6a0b
 2026-09-09 17:01:13.453724+00:00,exit,0,orphan_reconcile,ORPHAN,73261dc3fea7,BA,BA260911C00215000,1,,0.38,66.0,-42.42,-28.0,stop_loss (-42.4%),,-0.01,0.5,-0.4,,,e735fa34-d05a-4e84-a49f-6cf7664e46ee
-2026-09-10 14:02:33.681173+00:00,exit,0,orphan_reconcile,ORPHAN,02a17d1d6233,C,C260911C00140000,1,,0.36,59.0,-38.98,-23.0,stop_loss (-40.7%),,-0.01,0.5,-0.4,,,8be13a6c-6086-447e-a20a-49c4afbec112
+2026-09-10 14:02:33.681173+00:00,exit,0,orphan_reconcile,ORPHAN,02a17d1d6233,C,C260911C00140000,1,,0.36,59.0,-38.98,-23.0,reconcile_fill,,-0.01,0.5,-0.4,,,8be13a6c-6086-447e-a20a-49c4afbec112
