@@ -914,7 +914,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 912,lab0912_s412_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,TSLA,S412,,entered_no_exit
 913,lab0913_s412_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,TSLA,S412,,entered_no_exit
 914,lab0914_s412_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,SMCI,S412,,entered_no_exit
-915,lab0915_s412_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,SMCI,S412,,entered_no_exit
+915,lab0915_s412_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-10,False,,0.0,-51.85,-51.85,-51.85,-51.85,-28.0,SMCI,S412,stop_loss (-50.9%),closed
 916,lab0916_s412_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-09-10,False,,0.0,-85.71,-85.71,-85.71,-85.71,-6.0,"CVNA,MARA",S412,stop_loss (-85.7%),closed
 917,lab0917_s412_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-10,False,,,,,,,0,MSTR,S412,,entered_no_exit
 918,lab0918_s412_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,CVNA,S412,,entered_no_exit

@@ -13579,3 +13579,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10T16:22:47Z,reconcile,834,lab0834_s406_w4_1120_1135_r1,S406,ab3c940ff4c9,MARA,MARA260911C00013000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-10T16:22:47Z,reconcile,90,live_1to1,S404,e06146ef7743,AMD,AMD260914C00547500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-10 16:18:28.953318+00:00,exit,789,lab0789_s398_w3_1045_1120_r2,S398,9bb3d94257c0,COIN,COIN260911C00185000,1,,0.21,42.0,-50.0,-21.0,stop_loss (-50.5%),,-0.01,0.5,-0.5,,,eb8b77dc-e904-4ab7-9191-a3f23d5af9df
+2026-09-10 16:22:53.504988+00:00,exit,915,lab0915_s412_w2_1005_1045_r2,S412,37dec28ef156,SMCI,SMCI260911C00039500,1,,0.26,54.0,-51.85,-28.0,stop_loss (-50.9%),,-0.01,0.5,-0.5,,,666cecb2-4a40-41aa-bd87-4eb8b07354a8
