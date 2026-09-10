@@ -16,3 +16,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-02 15:35:41.801301+00:00,entry,199,lab0199_s218_w4_1120_1135_r2,S218,8539e1f8ede3,AFRM,AFRM260904C00078000,1,0.25,0.25,25.0,,,,-0.01,,0.75,-0.75,0.2127659574468086,low=69.24 BB_lower=71.18 touch+green,cbe4fb06-f086-4d26-bc17-3cf2be37e4b6
 2026-09-03T13:45:51Z,reconcile,199,lab0199_s218_w4_1120_1135_r2,S218,8539e1f8ede3,AFRM,AFRM260904C00078000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-10 15:23:56.341521+00:00,entry,199,lab0199_s218_w4_1120_1135_r2,S218,7afa3df2ea07,NKE,NKE260911C00037000,1,0.38,0.38,38.0,,,,-0.01,,0.5,-0.5,,,f1c48c21-50b7-45e9-94f8-663245fe085d
+2026-09-10T18:31:18Z,reconcile,199,lab0199_s218_w4_1120_1135_r2,S218,7afa3df2ea07,NKE,NKE260911C00037000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
