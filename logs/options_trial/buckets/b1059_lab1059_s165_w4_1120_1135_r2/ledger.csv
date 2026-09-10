@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-09-10 15:22:28.574831+00:00,entry,1059,lab1059_s165_w4_1120_1135_r2,S165,1a2733443717,AMD,AMD260911C00535000,1,0.47,0.46,46.0,,,,-0.01,,0.75,-0.75,0.10989010989010987,gap -2.3%,132f77ac-3281-47f6-8698-b6a0a860c716
