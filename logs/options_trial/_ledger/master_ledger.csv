@@ -13517,3 +13517,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10 15:31:43.821458+00:00,exit,167,lab0167_s216_w2_1005_1045_r2,S216,84921684209a,BA,BA260911C00212500,1,,0.21,44.0,-52.27,-23.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,ed041934-7344-42aa-bda2-4765e85cb2c8
 2026-09-10 15:31:31.708228+00:00,exit,263,lab0263_s403_w1_0928_1005_r2,S403,f85ba2456544,AAPL,AAPL260914C00332500,1,,0.87,50.0,74.0,37.0,take_profit (+78.2%),,-0.01,0.5,-0.5,,,89313425-cc82-49ac-914d-9627f6b853ef
 2026-09-10T15:41:08Z,reconcile,262,lab0262_s403_w1_0928_1005_r1,S403,2af2cf71a609,AAPL,AAPL260914C00332500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10T15:46:07Z,reconcile,863,lab0863_s408_w4_1120_1135_r2,S408,6f3dc7184018,SMCI,SMCI260911C00042000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
