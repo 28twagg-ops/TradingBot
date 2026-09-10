@@ -13613,3 +13613,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10T17:56:19Z,reconcile,84,lab0084_s210_w3_1045_1120_r1,S210,745d538928f8,UNH,UNH260911C00400000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-10 18:01:22.070389+00:00,exit,807,lab0807_s404_w4_1120_1135_r2,S404,d4fe72d0da97,AMD,AMD260911C00532500,1,,0.3,59.0,-49.15,-29.0,stop_loss (-51.1%),,-0.01,0.5,-0.5,,,a5badebc-0b4e-4656-abe4-d365f0f84d48
 2026-09-10 18:04:03.693743+00:00,exit,803,lab0803_s404_w2_1005_1045_r2,S404,296d7d52de0a,AMD,AMD260914C00550000,1,,0.29,60.0,-51.67,-31.0,stop_loss (-55.0%),,-0.01,0.5,-0.5,,,3c376de1-4633-4fd8-ab6e-cd4f7839c19c
+2026-09-10T18:11:27Z,reconcile,164,lab0164_s216_w1_0928_1005_r1,S216,808c97092d2c,BA,BA260911C00210000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-10 18:06:55.678390+00:00,exit,806,lab0806_s404_w4_1120_1135_r1,S404,2ce3fb7f5919,AMD,AMD260911C00532500,1,,0.28,59.0,-52.54,-31.0,stop_loss (-52.7%),,-0.01,0.5,-0.5,,,38b03def-3473-45b5-a497-5cc6b3f24006
