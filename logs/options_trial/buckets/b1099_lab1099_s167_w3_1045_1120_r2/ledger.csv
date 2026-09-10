@@ -3,4 +3,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-02T13:55:44Z,reconcile,1099,lab1099_s167_w3_1045_1120_r2,S167,a0af6cbb7878,AMD,AMD260904C00497500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-04 14:47:40.442210+00:00,entry,1099,lab1099_s167_w3_1045_1120_r2,S167,57912312bcc9,UPST,UPST260911C00030000,1,0.25,0.24,24.0,,,,-0.01,,0.75,-0.75,0.12244897959183673,gap -2.1%,ef02f96c-d544-40ea-8092-fdab3b3946d7
 2026-09-08T13:34:50Z,reconcile,1099,lab1099_s167_w3_1045_1120_r2,S167,57912312bcc9,UPST,UPST260911C00030000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-10 14:47:54.364507+00:00,entry,1099,lab1099_s167_w3_1045_1120_r2,S167,ccfb9a4133b7,MARA,MARA260911C00012500,1,0.08,0.07,7.0,,,,-0.01,,0.75,-0.75,0.11764705882352937,gap -2.3%,248ccf9e-4469-47de-bca4-c86b01ff3ba1
+2026-09-10 14:47:54.364507+00:00,entry,1099,lab1099_s167_w3_1045_1120_r2,S167,2328bcb0b5ae,MARA,MARA260911C00012500,1,0.07,0.07,7.0,,,,-0.01,,0.5,-0.5,,,248ccf9e-4469-47de-bca4-c86b01ff3ba1
