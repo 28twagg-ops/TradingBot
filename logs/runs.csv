@@ -7377,3 +7377,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-10 20:56:11,ext_exits,bull,227.38,159.03,0,0,0,2,ABBV|RL,both
 2026-09-10 21:01:18,ext_exits,bull,227.38,159.03,0,0,0,2,ABBV|RL,both
 2026-09-10 21:06:15,ext_exits,bull,227.38,159.03,0,0,0,2,ABBV|RL,both
+2026-09-10 21:11:08,ext_exits,bull,227.38,159.03,0,0,0,2,ABBV|RL,both
