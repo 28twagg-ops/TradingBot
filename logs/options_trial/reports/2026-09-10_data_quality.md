@@ -8,11 +8,11 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | Slice | n | Win% | Med% | Avg% | Realized $ |
 |---|---:|---:|---:|---:|---:|
 | ALL | 2964 | 39.6 | -37.0 | +23.8 | $+6,687 |
-| CLEAN (perfect running) | 1143 | 49.6 | -2.7 | +42.8 | $+15,789 |
-| TAINTED (errors/outages) | 1821 | 33.3 | -39.0 | +11.9 | $-9,102 |
-| CLEAN since 2026-08-03 | 827 | 46.2 | -43.8 | +45.4 | $+3,489 |
-| KEEP-only (CLEAN keepers) | 635 | 63.1 | +51.4 | +67.6 | $+11,142 |
-| KEEP-only since 2026-08-03 | 427 | 60.2 | +53.3 | +78.0 | $+5,885 |
+| CLEAN (perfect running) | 1141 | 49.6 | -2.7 | +42.9 | $+15,773 |
+| TAINTED (errors/outages) | 1823 | 33.4 | -39.0 | +11.9 | $-9,086 |
+| CLEAN since 2026-08-03 | 825 | 46.2 | -43.8 | +45.5 | $+3,473 |
+| KEEP-only (CLEAN keepers) | 634 | 63.1 | +51.2 | +67.7 | $+11,115 |
+| KEEP-only since 2026-08-03 | 426 | 60.1 | +53.3 | +78.1 | $+5,858 |
 
 ## Known outage / degraded days
 
@@ -52,7 +52,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | 2026-09-04 | BUGGY | 29 | 10 | 59 | +50.0 |
 | 2026-09-08 | BUGGY | 72 | 6 | 56 | +46.3 |
 | 2026-09-09 | BUGGY | 41 | 12 | 24 | -48.4 |
-| 2026-09-10 | BUGGY | 27 | 8 | 18 | -53.1 |
+| 2026-09-10 | BUGGY | 27 | 10 | 18 | -53.1 |
 
 ## CLEAN strategy kill list (n>=10, med<=-20%)
 
@@ -64,7 +64,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | S405 | 24 | 33.3 | -57.4 | -4.1 | $-38 |
 | S407 | 10 | 40.0 | -57.0 | -5.4 | $-50 |
 | S203 | 12 | 0.0 | -56.9 | -57.9 | $-261 |
-| ORPHAN | 116 | 25.0 | -54.8 | +13.3 | $+4,193 |
+| ORPHAN | 115 | 25.2 | -55.0 | +13.7 | $+4,204 |
 | S207 | 13 | 15.4 | -54.3 | -40.5 | $-341 |
 | S216 | 15 | 33.3 | -51.7 | -22.2 | $-99 |
 | S366 | 12 | 33.3 | -50.4 | -5.7 | $-77 |
@@ -99,7 +99,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | S173 | 105 | 61.9 | +51.6 | +43.1 | $+2,562 |
 | S401 | 33 | 57.6 | +50.0 | +60.6 | $+619 |
 | S355 | 33 | 51.5 | +50.0 | +43.8 | $+496 |
-| S403 | 34 | 61.8 | +49.6 | +21.9 | $+435 |
+| S403 | 33 | 60.6 | +49.1 | +21.0 | $+408 |
 | S218 | 30 | 53.3 | +48.9 | +49.0 | $+517 |
 | S210 | 29 | 55.2 | +48.3 | +13.9 | $+73 |
 | S352 | 19 | 52.6 | +38.9 | +98.6 | $+51 |
