@@ -1,2 +1,2 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
-2026-09-10 15:22:29.079095+00:00,entry,1100,lab1100_s167_w4_1120_1135_r1,S167,63a8a3dbdbd6,AMD,AMD260911C00535000,1,0.47,0.46,46.0,,,,-0.01,,0.75,-0.75,0.10989010989010987,gap -2.3%,13d8a780-0c16-479b-9a10-12dc4dab697b
+2026-09-10 15:22:29.079095+00:00,entry,1100,lab1100_s167_w4_1120_1135_r1,S167,3de495a2e7eb,AMD,AMD260911C00535000,1,0.46,0.46,46.0,,,,-0.01,,0.5,-0.5,,,13d8a780-0c16-479b-9a10-12dc4dab697b
