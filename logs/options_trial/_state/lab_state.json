@@ -302,26 +302,6 @@
       "entry_order_id": "86c31a3c-d126-472d-a960-ce3b41a7a8af"
     },
     {
-      "lot_id": "b8567cd61466",
-      "bucket_id": 1122,
-      "profile_name": "lab1122_s168_w1_0928_1005_r1",
-      "strategy_id": "S168",
-      "occ_symbol": "ZS260911C00180000",
-      "underlying": "ZS",
-      "qty": 1,
-      "entry_cost": 32.0,
-      "entry_price": 0.32,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-08T14:06:18.291089+00:00",
-      "entry_order_id": "9568d064-cabd-47aa-9e04-1020a2cc78f4"
-    },
-    {
       "lot_id": "0f76d850d929",
       "bucket_id": 1151,
       "profile_name": "lab1151_s164_w1_0928_1005_r2",
@@ -1402,26 +1382,6 @@
       "entry_order_id": "orphan:TSLA260914C00402500"
     },
     {
-      "lot_id": "99bde468825f",
-      "bucket_id": 236,
-      "profile_name": "lab0236_s401_w2_1005_1045_r1",
-      "strategy_id": "S401",
-      "occ_symbol": "GOOGL260914C00340000",
-      "underlying": "GOOGL",
-      "qty": 1,
-      "entry_cost": 57.99999999999999,
-      "entry_price": 0.58,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T14:09:10.018237+00:00",
-      "entry_order_id": "6633b2ed-847b-40f1-b3bf-d20ca011b3ba"
-    },
-    {
       "lot_id": "526c42100319",
       "bucket_id": 195,
       "profile_name": "lab0195_s218_w2_1005_1045_r2",
@@ -2460,6 +2420,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-10T14:31:14.071445+00:00",
       "entry_order_id": "84b9653e-a4b4-4d06-a50c-101d9887523f"
+    },
+    {
+      "lot_id": "5d7452122a3a",
+      "bucket_id": 299,
+      "profile_name": "lab0299_s353_w2_1005_1045_r2",
+      "strategy_id": "S353",
+      "occ_symbol": "AMD260914C00552500",
+      "underlying": "AMD",
+      "qty": 1,
+      "entry_cost": 55.00000000000001,
+      "entry_price": 0.55,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-10T14:42:23.103259+00:00",
+      "entry_order_id": "8f9d260f-20d3-4b02-86b0-96f9865dfc01"
+    },
+    {
+      "lot_id": "5aabfa7739a7",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "AMD260914C00552500",
+      "underlying": "AMD",
+      "qty": 1,
+      "entry_cost": 55.0,
+      "entry_price": 0.55,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-10T14:42:23.363023+00:00",
+      "entry_order_id": "orphan:AMD260914C00552500"
     }
   ],
   "pending_orders": [
@@ -2609,7 +2609,6 @@
     "b424": 44.0,
     "b327": 44.0,
     "b326": 46.0,
-    "b1122": 32.0,
     "b1151": 32.0,
     "b1150": 32.0,
     "b1053": 32.0,
@@ -2661,8 +2660,7 @@
     "b376": 55.00000000000001,
     "b235": 55.00000000000001,
     "b234": 55.00000000000001,
-    "b0": 377.7002,
-    "b236": 57.99999999999999,
+    "b0": 432.7002,
     "b195": 57.99999999999999,
     "b194": 57.99999999999999,
     "b265": 51.0,
@@ -2708,7 +2706,8 @@
     "b378": 48.0,
     "b167": 44.0,
     "b97": 49.0,
-    "b96": 49.0
+    "b96": 49.0,
+    "b299": 55.00000000000001
   },
   "session_date": "2026-09-10",
   "entries_locked": [
@@ -2771,7 +2770,9 @@
     "90|S406|2026-09-10",
     "96|S211|2026-09-10",
     "97|S211|2026-09-10",
-    "167|S216|2026-09-10"
+    "167|S216|2026-09-10",
+    "298|S353|2026-09-10",
+    "299|S353|2026-09-10"
   ],
   "processed_orders": [
     "7f37564c-777c-4c5d-a3af-e4fc66d3f85c",
@@ -3237,9 +3238,14 @@
     "8564a385-5ece-46db-b83d-f93da4fe21bd",
     "a097349c-267a-41d2-b87b-f303ae5d4954",
     "34b55d8f-420b-4759-ab41-8abff510b8ab",
-    "4056825d-9c47-4fbd-bf8f-0e53c4d476d5"
+    "4056825d-9c47-4fbd-bf8f-0e53c4d476d5",
+    "8f9d260f-20d3-4b02-86b0-96f9865dfc01",
+    "5d306924-0ac1-48cd-9352-52e99b63d540",
+    "c7e53db7-b2b1-41a2-9c84-41776f6c91ad",
+    "f6abddcd-7a0d-4f10-89fe-ad0e32a49d98",
+    "6c72a290-9e1a-44e1-b230-dbc1a0325e2b"
   ],
-  "submitted_today": 60,
+  "submitted_today": 62,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-10"
 }
