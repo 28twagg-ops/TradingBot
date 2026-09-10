@@ -1822,46 +1822,6 @@
       "entry_order_id": "2e8fe721-26e4-4aab-b0b1-1e654b5dd02e"
     },
     {
-      "lot_id": "f985d52fd577",
-      "bucket_id": 369,
-      "profile_name": "lab0369_s361_w4_1120_1135_r2",
-      "strategy_id": "S361",
-      "occ_symbol": "TSLA260911C00382500",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 38.0,
-      "entry_price": 0.38,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T15:26:32.225007+00:00",
-      "entry_order_id": "b205d2fd-3629-4257-a37c-ef8ac804b480"
-    },
-    {
-      "lot_id": "f2b309b1219c",
-      "bucket_id": 368,
-      "profile_name": "lab0368_s361_w4_1120_1135_r1",
-      "strategy_id": "S361",
-      "occ_symbol": "TSLA260911C00382500",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 38.0,
-      "entry_price": 0.38,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T15:26:32.274617+00:00",
-      "entry_order_id": "7b7d7bea-2363-4a80-8afa-bef977e23195"
-    },
-    {
       "lot_id": "dc0ed772cb1f",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -1963,16 +1923,6 @@
       "qty": 1,
       "reason": "stop_loss (-50.0%)",
       "submitted": "2026-09-10T15:22:29"
-    },
-    {
-      "order_id": "600302c5-9767-4e97-831c-e8b12b6a0b8d",
-      "lot_id": "2ac693119e46",
-      "bucket_id": 900,
-      "strategy_id": "S411",
-      "occ_symbol": "TSLA260914C00390000",
-      "qty": 1,
-      "reason": "stop_loss (-51.5%)",
-      "submitted": "2026-09-10T15:34:46"
     }
   ],
   "bucket_open_premium": {
@@ -2067,8 +2017,6 @@
     "b1128": 48.0,
     "b905": 62.0,
     "b904": 62.0,
-    "b369": 38.0,
-    "b368": 38.0,
     "b170": 37.0
   },
   "session_date": "2026-09-10",
