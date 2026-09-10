@@ -3862,46 +3862,6 @@
       "entry_order_id": "orphan:MARA260918C00012000"
     },
     {
-      "lot_id": "5272b82d00c7",
-      "bucket_id": 269,
-      "profile_name": "lab0269_s403_w4_1120_1135_r2",
-      "strategy_id": "S403",
-      "occ_symbol": "AAPL260914C00335000",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 52.0,
-      "entry_price": 0.52,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T15:28:47.557521+00:00",
-      "entry_order_id": "c6aeb79d-8a8b-493e-99ca-5bc1055b10dd"
-    },
-    {
-      "lot_id": "45bdb579e1c9",
-      "bucket_id": 268,
-      "profile_name": "lab0268_s403_w4_1120_1135_r1",
-      "strategy_id": "S403",
-      "occ_symbol": "AAPL260914C00335000",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 52.0,
-      "entry_price": 0.52,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T15:28:47.607714+00:00",
-      "entry_order_id": "78635393-ac30-41ca-ad93-6be66b6d7d15"
-    },
-    {
       "lot_id": "dda18a8828a4",
       "bucket_id": 170,
       "profile_name": "lab0170_s216_w4_1120_1135_r1",
@@ -4033,6 +3993,16 @@
       "qty": 1,
       "reason": "stop_loss (-75.9%)",
       "submitted": "2026-09-10T10:46:21"
+    },
+    {
+      "order_id": "ead483a6-258c-4c1a-a61b-261fd3d31608",
+      "lot_id": "09794278725f",
+      "bucket_id": 367,
+      "strategy_id": "S361",
+      "occ_symbol": "MSTR260911C00141000",
+      "qty": 1,
+      "reason": "stop_loss (-52.8%)",
+      "submitted": "2026-09-10T11:51:16"
     }
   ],
   "bucket_open_premium": {
@@ -4219,8 +4189,6 @@
     "b904": 62.0,
     "b369": 38.0,
     "b368": 38.0,
-    "b269": 52.0,
-    "b268": 52.0,
     "b170": 37.0,
     "b834": 3.0,
     "b919": 31.0,

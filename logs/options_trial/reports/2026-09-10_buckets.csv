@@ -267,8 +267,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 265,lab0265_s403_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-10,False,,100.0,49.02,49.02,49.02,49.02,25.0,AAPL,S403,take_profit (+56.4%),closed
 266,lab0266_s403_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,V,S403,,entered_no_exit
 267,lab0267_s403_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,V,S403,,entered_no_exit
-268,lab0268_s403_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,AAPL,S403,,entered_no_exit
-269,lab0269_s403_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-10,False,,,,,,,0,AAPL,S403,,entered_no_exit
+268,lab0268_s403_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-10,False,,,,,,,0,AAPL,S403,,entered_no_exit
+269,lab0269_s403_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-10,False,,,,,,,0,AAPL,S403,,entered_no_exit
 270,lab0270_s403_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 271,lab0271_s403_w5_1300_1330_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 272,lab0272_s403_w6_1400_1430_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
