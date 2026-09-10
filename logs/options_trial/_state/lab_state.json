@@ -2013,6 +2013,16 @@
       "qty": 1,
       "reason": "stop_loss (-75.9%)",
       "submitted": "2026-09-10T10:46:21"
+    },
+    {
+      "order_id": "9a058d27-efb3-4199-ae7d-3493890b8135",
+      "lot_id": "63fea2cfb9dc",
+      "bucket_id": 861,
+      "strategy_id": "S408",
+      "occ_symbol": "TSLA260914C00405000",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-09-10T15:22:29"
     }
   ],
   "bucket_open_premium": {
