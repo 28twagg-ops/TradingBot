@@ -3,4 +3,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-02T13:55:44Z,reconcile,1057,lab1057_s165_w3_1045_1120_r2,S165,aca5d4c91a77,AMD,AMD260904C00497500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-04 14:47:40.245338+00:00,entry,1057,lab1057_s165_w3_1045_1120_r2,S165,d6b3e8db05f5,UPST,UPST260911C00030000,1,0.25,0.24,24.0,,,,-0.01,,0.75,-0.75,0.12244897959183673,gap -2.1%,e65a69d1-9f58-4dbd-8881-bf2ffe792367
 2026-09-08T13:34:50Z,reconcile,1057,lab1057_s165_w3_1045_1120_r2,S165,d6b3e8db05f5,UPST,UPST260911C00030000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-10 14:48:18.079342+00:00,entry,1057,lab1057_s165_w3_1045_1120_r2,S165,1796f9ab9189,MSTR,MSTR260911C00140000,1,0.6,0.6,60.0,,,,-0.01,,0.5,-0.5,,,b2f7d5f5-854e-4c0d-a292-c9b51f639d9c
+2026-09-10 14:48:18.079342+00:00,entry,1057,lab1057_s165_w3_1045_1120_r2,S165,f9ce05fd5fb7,MSTR,MSTR260911C00140000,1,0.61,0.6,60.0,,,,-0.01,,0.75,-0.75,0.06666666666666674,gap -3.2%,b2f7d5f5-854e-4c0d-a292-c9b51f639d9c
