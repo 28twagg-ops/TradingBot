@@ -1,6 +1,6 @@
-# Ledger health — 2026-09-09
+# Ledger health — 2026-09-10
 
-_Generated 2026-09-09T19:56:18.243808_
+_Generated 2026-09-10T09:01:26.929510_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -10,9 +10,9 @@ State file: OK
 
 | Check                       | Count | Status |
 |-----------------------------|------:|--------|
-| Current stuck (state)       |     0 | OK |
-| Orphaned lots (post-stable) |  1071 | WARN |
-| Missing exit records (post) |  1071 | WARN |
+| Current stuck (state)       |    15 | WARN |
+| Orphaned lots (post-stable) |  1202 | WARN |
+| Missing exit records (post) |  1187 | WARN |
 | State/ledger mismatches     |     2 | WARN |
 | Total open lots             |    46 | INFO |
 | Total closed lots           |  2102 | INFO |
@@ -25,7 +25,27 @@ Notes:
 - **Pre-cutoff debt** = entry_date < 2026-07-06 (INFO).
 - **Transition debt** = 2026-07-06..2026-07-21 lot_id churn after attribution fix (INFO, not WARN).
 
-_Orphaned ledger detail omitted (1071 rows) — see note above on historical lot_id churn._
+## Current stuck lots
+
+| lot_id | strategy | symbol | entry_day | age_days |
+|--------|----------|--------|-----------|---------:|
+| 361232eb5b07 | S366 | MARA | 2026-09-04 | 6 |
+| c749b9facdbb | S366 | MARA | 2026-09-04 | 6 |
+| 53ee58608a69 | S366 | MARA | 2026-09-04 | 6 |
+| 01aab77eeb4e | S366 | MARA | 2026-09-04 | 6 |
+| 4850d0ee6357 | S357 | PATH | 2026-09-04 | 6 |
+| 3b55ba0967c8 | S365 | MARA | 2026-09-04 | 6 |
+| d52b6db3a02a | S365 | MARA | 2026-09-04 | 6 |
+| 40a2c3f0b67b | S356 | MARA | 2026-09-04 | 6 |
+| 75ca2d7b5bd3 | S356 | MARA | 2026-09-04 | 6 |
+| 956c4b15bfde | S357 | MARA | 2026-09-04 | 6 |
+| 616989650086 | S357 | MARA | 2026-09-04 | 6 |
+| 7158e568e740 | S365 | MARA | 2026-09-04 | 6 |
+| a93bf29b9fc7 | S365 | MARA | 2026-09-04 | 6 |
+| dc5a40562a7d | S356 | MARA | 2026-09-04 | 6 |
+| 75790593d310 | S356 | MARA | 2026-09-04 | 6 |
+
+_Orphaned ledger detail omitted (1202 rows) — see note above on historical lot_id churn._
 
 ## State/ledger mismatches
 
