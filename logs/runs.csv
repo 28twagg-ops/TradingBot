@@ -7488,3 +7488,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-11 20:00:57,scan_evening,bull,227.01,124.86,32,0,0,3,AMZN|AVAV|TKR,both
 2026-09-11 20:02:24,ext_exits,bull,227.18,124.86,0,0,0,3,AMZN|AVAV|TKR,both
 2026-09-11 20:06:06,ext_exits,bull,227.18,158.78,0,0,0,2,AMZN|TKR,both
+2026-09-11 20:11:10,ext_exits,bull,227.22,158.78,0,0,0,2,AMZN|TKR,both
