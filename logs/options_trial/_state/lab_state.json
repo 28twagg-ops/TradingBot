@@ -922,26 +922,6 @@
       "entry_order_id": "f1950375-3c07-4298-b4f8-519f74543427"
     },
     {
-      "lot_id": "e7586c6ae7e0",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "UPST260918C00027500",
-      "underlying": "UPST",
-      "qty": 1,
-      "entry_cost": 37.0,
-      "entry_price": 0.37,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T15:28:48.003350+00:00",
-      "entry_order_id": "orphan:UPST260918C00027500"
-    },
-    {
       "lot_id": "1cfeb793d106",
       "bucket_id": 180,
       "profile_name": "lab0180_s217_w2_1005_1045_r1",
@@ -1003,16 +983,6 @@
       "qty": 1,
       "reason": "take_profit (+56.8%)",
       "submitted": "2026-09-11T11:46:08"
-    },
-    {
-      "order_id": "9ba07f64-a0b8-4877-aaa9-391ec0b4c8c3",
-      "lot_id": "e7586c6ae7e0",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "UPST260918C00027500",
-      "qty": 1,
-      "reason": "stop_loss (-40.5%)",
-      "submitted": "2026-09-11T12:43:49"
     }
   ],
   "bucket_open_premium": {
@@ -1060,7 +1030,7 @@
     "b1142": 48.0,
     "b1129": 48.0,
     "b1128": 48.0,
-    "b0": 82.2727,
+    "b0": 45.2727,
     "b170": 37.0,
     "b180": 50.0,
     "b264": 42.0
@@ -1522,7 +1492,8 @@
     "6536b76a-96cb-4555-b68d-01987ec0c459",
     "334414f1-389a-40ae-bfcd-cb62f377e588",
     "adc2228a-7061-4d88-b442-0e6b2869952d",
-    "7f81129d-782b-4c03-8436-1fb1c849eb1d"
+    "7f81129d-782b-4c03-8436-1fb1c849eb1d",
+    "9ba07f64-a0b8-4877-aaa9-391ec0b4c8c3"
   ],
   "submitted_today": 4,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

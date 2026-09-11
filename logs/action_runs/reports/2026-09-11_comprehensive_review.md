@@ -8201,3 +8201,147 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260911T164721Z
+
+- UTC timestamp: `20260911T164721Z`
+- GitHub run: [#9757](https://github.com/28twagg-ops/TradingBot/actions/runs/34623779791)
+- Run id: `34623779791`
+- Live bot: exit=`0`, duration=`46s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260911T164721Z_live_bot.log`, `logs/action_runs/20260911T164721Z_live_options.log`, `logs/action_runs/20260911T164721Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1204 | 49.2 | -10.1 | +40.8 | $+15,812 |
+| TAINTED | 1828 | 33.4 | -38.8 | +12.0 | $-9,082 |
+| KEEP-only | 626 | 63.3 | +51.4 | +64.2 | $+10,734 |
+| KEEP-only recent | 429 | 61.3 | +53.3 | +74.5 | $+6,089 |
+
+- KEEP strategies (23): S163, S168, S173, S174, S210, S218, S350, S353, S354, S355, S356, S357, S361, S362, S363, S364, S365, S397, S399, S401, S403, S404, S406
+- KILL strategies (19): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S352, S360, S366, S398, S405, S407, S408, S411, S412
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-11T12:37:56.186729-04:00","date":"2026-09-11","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":169.3,"phases_s":{"reconcile":0.08,"cancel":0.03,"manage":168.44,"protective_stops":0.2},"signals":0,"placed":0,"equity":1000553.9,"open_positions":17,"pending_orders":0,"open_lots":49,"submitted_today":4,"filled_today":4,"unattributed_contracts":0,"top_signals":[],"github_run":"9755","github_run_id":"34622828844","status":"ok","data_quality":{"clean":{"n":1204,"win":49.17,"med":-10.1,"avg":40.78,"pnl":15811.82},"tainted":{"n":1828,"win":33.37,"med":-38.81,"avg":12.01,"pnl":-9081.84},"keep_only":{"n":626,"win":63.26,"med":51.39,"avg":64.19,"pnl":10734.45},"keep_only_recent":{"n":429,"win":61.31,"med":53.33,"avg":74.49,"pnl":6089.0},"keep_strategies":["S163","S168","S173","S174","S210","S218","S350","S353","S354","S355","S356","S357","S361","S362","S363","S364","S365","S397","S399","S401","S403","S404","S406"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S352","S360","S366","S398","S405","S407","S408","S411","S412"]}}
+```
+
+### Live bot (tail)
+
+```text
+16:47:22  INFO      Mode: exits
+16:47:45  INFO        Daily log -> logs/daily/2026-09-11.md
+16:47:45  INFO        Daily log reconciled -> logs/daily/2026-09-11.md (3 ledger rows)
+16:47:45  INFO        place_all_stops: checking 1 positions...
+16:47:45  INFO        STOP skipped AMZN: fractional (0.1335 shares) — software exit will handle it
+16:48:07  INFO        [positions] 1/1 (1 valid)
+16:48:07  INFO        Daily log -> logs/daily/2026-09-11.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         16:47 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $227.20|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  AMZN  P&L -0.1%  $-0.04                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           1|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-09-11T12:48:08.435059-04:00 share=25% ===
+2026-09-11 12:48:08,435 INFO === options_live_micro LIVE 2026-09-11T12:48:08.435059-04:00 share=25% ===
+Live account equity $227.18 cash $193.04 #225458845 options_level=3
+2026-09-11 12:48:08,641 INFO Live account equity $227.18 cash $193.04 #225458845 options_level=3
+Live micro: manage/exits only
+2026-09-11 12:48:08,808 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-09-11 12:48:08,864 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=49 paper_keys=yes dry_run=False
+  alpaca positions=18
+options_reconcile: done
+Layout: controlled:1164:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1164
+PROBE OK: paper account status=AccountStatus.ACTIVE equity=$1,000,485.88
+  buying_power=$3,941,099.92 cash=$1,034,489.88
+  open option orders: 11
+    MARA260918C00012000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=0.72
+    ABBV260918C00270000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=0.19
+    HD260918C00325000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    MARA260925C00012000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    MARA260911C00011500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+  open option positions: 17
+    ABBV260918C00270000 qty=1 mkt=$18.00
+    AMD260914C00547500 qty=-1 mkt=$-21.00
+    AMD260914C00550000 qty=2 mkt=$20.00
+    AMD260914C00552500 qty=-1 mkt=$-14.00
+    AMZN260914C00262500 qty=2 mkt=$42.00
+PROBE: check-only pass (use --smoke-entry to place a test order)
+=== options_morning_bot (PAPER) 2026-09-11T12:48:11.855088-04:00 ===
+
+[Run context]
+Paper auth OK — equity $1000485.88, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
+Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+  EXIT [b862|lab0862_s408_w4_1120_1135_r1|S408] stop_loss (-100.0%) SELL failed CRWD260911C00235000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b1055|lab1055_s165_w2_1005_1045_r2|S165] stop_loss (-100.0%) SELL failed SHOP260911C00146000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b1054|lab1054_s165_w2_1005_1045_r1|S165] stop_loss (-100.0%) SELL failed SHOP260911C00146000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b330|lab0330_s357_w2_1005_1045_r1|S357] stop_loss (-88.9%) SELL failed PATH260925C00017000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+```
+
+---
