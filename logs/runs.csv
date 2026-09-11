@@ -7512,3 +7512,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-11 21:56:04,ext_exits,bull,227.22,158.78,0,0,0,2,AMZN|TKR,both
 2026-09-11 22:01:08,ext_exits,bull,227.21,158.78,0,0,0,2,AMZN|TKR,both
 2026-09-11 22:06:03,ext_exits,bull,227.2,158.78,0,0,0,2,AMZN|TKR,both
+2026-09-11 22:11:10,ext_exits,bull,227.2,158.78,0,0,0,2,AMZN|TKR,both
