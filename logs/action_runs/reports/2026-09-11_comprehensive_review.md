@@ -1750,3 +1750,132 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20260911T135212Z
+
+- UTC timestamp: `20260911T135212Z`
+- GitHub run: [#9722](https://github.com/28twagg-ops/TradingBot/actions/runs/34606577102)
+- Run id: `34606577102`
+- Live bot: exit=`0`, duration=`248s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260911T135212Z_live_bot.log`, `logs/action_runs/20260911T135212Z_live_options.log`, `logs/action_runs/20260911T135212Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1176 | 48.5 | -23.1 | +40.5 | $+15,122 |
+| TAINTED | 1827 | 33.3 | -38.8 | +12.0 | $-9,106 |
+| KEEP-only | 584 | 63.2 | +51.2 | +67.1 | $+10,415 |
+| KEEP-only recent | 387 | 61.0 | +53.3 | +80.0 | $+5,770 |
+
+- KEEP strategies (21): S163, S168, S173, S174, S210, S218, S350, S353, S354, S355, S357, S361, S362, S363, S364, S397, S399, S401, S403, S404, S406
+- KILL strategies (21): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S352, S356, S360, S365, S366, S398, S405, S407, S408, S411, S412
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-11T09:26:15.992436-04:00","date":"2026-09-11","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.3,"phases_s":{"reconcile":0.49},"signals":0,"placed":0,"equity":998581.0,"open_positions":27,"pending_orders":0,"open_lots":91,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"9717","github_run_id":"34604175612","status":"ok","data_quality":{"clean":{"n":1176,"win":48.47,"med":-23.12,"avg":40.52,"pnl":15122.09},"tainted":{"n":1827,"win":33.33,"med":-38.81,"avg":11.98,"pnl":-9105.84},"keep_only":{"n":584,"win":63.18,"med":51.18,"avg":67.07,"pnl":10415.45},"keep_only_recent":{"n":387,"win":60.98,"med":53.33,"avg":79.96,"pnl":5770.0},"keep_strategies":["S163","S168","S173","S174","S210","S218","S350","S353","S354","S355","S357","S361","S362","S363","S364","S397","S399","S401","S403","S404","S406"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S352","S356","S360","S365","S366","S398","S405","S407","S408","S411","S412"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (96 earlier lines - see full log file)
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  24                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  ALLE     Pullback50      eq     $153.07  30.8   -0.81   50MA bounce (-|
+|  AME      Pullback50      eq     $239.49  49.9   -2.76   50MA bounce (-|
+|  ADP      Pullback50      eq     $266.45  32.0   -2.82   50MA bounce (+|
+|  TECH     Pullback50      eq     $72.25   47.3   -2.27   50MA bounce (+|
+|  CTAS     Pullback50      eq     $200.62  43.1   -3.09   50MA bounce (+|
+|  DLR      Pullback50      eq     $187.12  44.1   -1.53   50MA bounce (+|
+|  EMR      Pullback50      eq     $151.11  39.5   -3.08   50MA bounce (+|
+|  EQIX     Pullback50      eq     $1034.~  40.4   -1.91   50MA bounce (-|
+|  FFIV     Pullback50      eq     $404.02  58.7   -2.41   50MA bounce (+|
+|  GRMN     Pullback50      eq     $276.17  22.1   -2.06   50MA bounce (+|
+|  JCI      Pullback50      eq     $144.72  53.6   -2.98   50MA bounce (-|
+|  SYY      Pullback50      eq     $83.29   45.9   -1.97   50MA bounce (+|
+|  WMB      Pullback50      eq     $73.08   60.5   -1.86   50MA bounce (-|
+|  ATI      Pullback50      eq     $202.14  45.2   -0.86   50MA bounce (-|
+|  CART     Pullback50      eq     $47.51   39.8   -2.15   50MA bounce (-|
+|  CGNX     Pullback50      eq     $63.30   59.2   -2.52   50MA bounce (-|
+|  CXT      Pullback50      eq     $51.50   58.0   -2.81   50MA bounce (+|
+|  ENTG     Pullback50      eq     $140.34  46.8   -2.08   50MA bounce (+|
+|  ITT      Pullback50      eq     $200.17  41.5   -2.79   50MA bounce (-|
+|  LFUS     Pullback50      eq     $425.43  57.5   -2.03   50MA bounce (+|
+|  MSM      Pullback50      eq     $121.83  54.8   -3.19   50MA bounce (-|
+|  PATH     Pullback50      eq     $14.26   38.0   -3.10   50MA bounce (+|
+|  SLAB     Pullback50      eq     $219.56  64.2   -2.19   50MA bounce (+|
+|  VIAV     Pullback50      eq     $38.86   49.9   -2.08   50MA bounce (-|
+|                                                                        |
++========================================================================+13:56:19  INFO        place_all_stops: checking 2 positions...
+13:56:19  INFO        STOP skipped AMZN: fractional (0.1335 shares) — software exit will handle it
+13:56:19  INFO        STOP skipped RL: fractional (0.1016 shares) — software exit will handle it
+13:56:19  INFO        Daily log -> logs/daily/2026-09-11.md
+13:56:19  INFO        Dashboard written → logs/dashboard.md
+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            899|
+|  Signals                                                             24|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             2|
+|  Equity                                                         $227.51|
+|  Cash                                                           $159.31|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
