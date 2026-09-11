@@ -7419,3 +7419,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-11 13:26:11,summary,bull,228.5,159.03,0,0,0,2,ABBV|RL,both
 2026-09-11 13:56:19,scan_morning,bull,227.51,159.31,24,0,1,2,AMZN|RL,both
 2026-09-11 14:02:01,exits,bull,227.64,159.31,0,0,0,2,AMZN|RL,both
+2026-09-11 14:06:16,exits,bull,227.52,159.31,0,0,0,2,AMZN|RL,both
