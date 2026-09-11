@@ -1082,26 +1082,6 @@
       "entry_order_id": "orphan:UPST260918C00027500"
     },
     {
-      "lot_id": "726f35e389e3",
-      "bucket_id": 181,
-      "profile_name": "lab0181_s217_w2_1005_1045_r2",
-      "strategy_id": "S217",
-      "occ_symbol": "HD260918C00325000",
-      "underlying": "HD",
-      "qty": 1,
-      "entry_cost": 50.0,
-      "entry_price": 0.5,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-11T14:12:23.180739+00:00",
-      "entry_order_id": "8a2bca37-43ba-4370-9725-239d02101857"
-    },
-    {
       "lot_id": "1cfeb793d106",
       "bucket_id": 180,
       "profile_name": "lab0180_s217_w2_1005_1045_r1",
@@ -1122,7 +1102,40 @@
       "entry_order_id": "e63173f8-ddae-4ef8-a853-8b352c781553"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "f6229f82-b7b2-462b-8093-1585d58ffc1a",
+      "bucket_id": 264,
+      "strategy_id": "S403",
+      "occ_symbol": "ABBV260918C00270000",
+      "underlying": "ABBV",
+      "qty": 1,
+      "limit": 0.42,
+      "profile_name": "lab0264_s403_w2_1005_1045_r1",
+      "submitted": "2026-09-11",
+      "detail": "touch MA50 green",
+      "spread_frac": 0.15,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "7b480557-2559-4fc8-9ec4-93cf94a5960f",
+      "bucket_id": 265,
+      "strategy_id": "S403",
+      "occ_symbol": "ABBV260918C00270000",
+      "underlying": "ABBV",
+      "qty": 1,
+      "limit": 0.42,
+      "profile_name": "lab0265_s403_w2_1005_1045_r2",
+      "submitted": "2026-09-11",
+      "detail": "touch MA50 green",
+      "spread_frac": 0.15,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    }
+  ],
   "pending_exits": [
     {
       "order_id": "334414f1-389a-40ae-bfcd-cb62f377e588",
@@ -1198,13 +1211,14 @@
     "b1129": 48.0,
     "b1128": 48.0,
     "b170": 37.0,
-    "b181": 50.0,
     "b180": 50.0
   },
   "session_date": "2026-09-11",
   "entries_locked": [
     "180|S217|2026-09-11",
-    "181|S217|2026-09-11"
+    "181|S217|2026-09-11",
+    "264|S403|2026-09-11",
+    "265|S403|2026-09-11"
   ],
   "processed_orders": [
     "73077efc-7aa7-4992-9770-f5158f3c6c95",
@@ -1645,9 +1659,10 @@
     "f77393a8-0c94-44bc-b3e1-941d7cad54c4",
     "d1f6539f-1d88-4913-9ca2-25acf02d33ce",
     "b0a96631-6cfa-447c-80f0-35067bc991f9",
-    "71b81694-e956-479a-b0ed-2cb5effff07e"
+    "71b81694-e956-479a-b0ed-2cb5effff07e",
+    "da725c9f-c61b-4196-a84d-39bb3bed9512"
   ],
-  "submitted_today": 2,
+  "submitted_today": 4,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-11"
 }
