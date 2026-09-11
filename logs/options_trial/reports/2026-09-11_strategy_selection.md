@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-11
 
-_Generated 2026-09-11T10:27:35.176515_
+_Generated 2026-09-11T10:32:11.799671_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-11T10:27:35.176515_
 
 ## Attribution health
 
-- Total exits: **3022**
+- Total exits: **3023**
 - Orphan exits (b0/orphan_reconcile): **371**
 - Orphan rate: **12.3%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -32,7 +32,7 @@ _Generated 2026-09-11T10:27:35.176515_
 | S403 (Any_MA50_Touch) | 3d | watch | 50 | 70.0 | +50.93 | -57.01 | -47.67 | +193.84 | 42 | 14 | 6 | $+1,049.00 | 24.0% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 79 | 58.2 | +47.83 | -67.62 | -45.00 | +155.65 | 46 | 20 | 10 | $+1,311.00 | 31.6% | fat left tail (p10 < -45%) |
 | S404 (GapDown_OTM2) | 3d | watch | 51 | 58.8 | +45.21 | -91.67 | -50.41 | +111.54 | 42 | 17 | 9 | $+702.00 | 17.6% | fat left tail (p10 < -45%) |
-| S365 (RubberBand_14DTE) | 14d | watch | 21 | 52.4 | +38.46 | -63.33 | -50.79 | +73.81 | 42 | 0 | 5 | $+62.00 | 33.3% | fat left tail (p10 < -45%) |
+| S365 (RubberBand_14DTE) | 14d | watch | 22 | 54.5 | +43.23 | -62.23 | -50.17 | +73.16 | 42 | 0 | 6 | $+86.00 | 36.4% | fat left tail (p10 < -45%) |
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 8 | 50.0 | +25.32 | -71.88 | -59.49 | +516.85 | 52 | 10 | 4 | $+206.00 | 25.0% | building sample (8-19 exits) |
 | S361 (RubberBand_2DTE) | 2d | watch | 47 | 53.2 | +17.78 | -67.41 | -50.47 | +209.33 | 42 | 16 | 6 | $+180.00 | 23.4% | fat left tail (p10 < -45%) |
 | S401 (Any_Gap_Down_Small) | 3d | watch | 101 | 53.5 | +15.79 | -74.00 | -48.65 | +273.08 | 42 | 18 | 5 | $+1,338.00 | 31.7% | fat left tail (p10 < -45%) |
@@ -274,7 +274,7 @@ _Pipeline evaluation as of 2026-09-11. Auto-kill thresholds: median<-25% at n>=1
 | S362 | RubberBand_3DTE | 45 | +57.14% | 76% | INSUFFICIENT | 42 |
 | S363 | RubberBand_5DTE | 34 | -64.23% | 38% | INSUFFICIENT | 39 |
 | S364 | RubberBand_7DTE | 52 | +2.70% | 50% | INSUFFICIENT | 42 |
-| S365 | RubberBand_14DTE | 21 | +38.46% | 52% | INSUFFICIENT | 42 |
+| S365 | RubberBand_14DTE | 22 | +43.23% | 55% | INSUFFICIENT | 42 |
 | S366 | RubberBand_21DTE | 13 | -49.12% | 38% | WATCH | 38 |
 | S367 | RubberBand_30DTE | 2 | -38.20% | 0% | WATCH | 38 |
 | S368 | BBSqueeze_0DTE | 0 | — | — | NEW | 0 |
