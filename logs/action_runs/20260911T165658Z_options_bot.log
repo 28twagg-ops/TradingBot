@@ -1,0 +1,38 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=48 paper_keys=yes dry_run=False
+  alpaca positions=18
+options_reconcile: done
+Layout: controlled:1164:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1164
+PROBE OK: paper account status=AccountStatus.ACTIVE equity=$1,000,298.88
+  buying_power=$3,940,855.52 cash=$1,034,489.88
+  open option orders: 12
+    UPST260918C00027500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    MARA260918C00012000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=0.72
+    ABBV260918C00270000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=0.19
+    HD260918C00325000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    MARA260925C00012000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+  open option positions: 17
+    ABBV260918C00270000 qty=1 mkt=$18.00
+    AMD260914C00547500 qty=-1 mkt=$-21.00
+    AMD260914C00550000 qty=2 mkt=$20.00
+    AMD260914C00552500 qty=-1 mkt=$-13.00
+    AMZN260914C00262500 qty=2 mkt=$40.00
+PROBE: check-only pass (use --smoke-entry to place a test order)
+=== options_morning_bot (PAPER) 2026-09-11T12:57:49.194636-04:00 ===
+
+[Run context]
+Paper auth OK — equity $1000302.88, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
+Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+  EXIT [b802|lab0802_s404_w2_1005_1045_r1|S404] stop_loss (-83.3%) SELL failed AMD260914C00550000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b779|lab0779_s397_w2_1005_1045_r2|S397] stop_loss (-83.3%) SELL failed AMD260914C00550000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b330|lab0330_s357_w2_1005_1045_r1|S357] stop_loss (-88.9%) SELL failed PATH260925C00017000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b862|lab0862_s408_w4_1120_1135_r1|S408] stop_loss (-100.0%) SELL failed CRWD260911C00235000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b1055|lab1055_s165_w2_1005_1045_r2|S165] stop_loss (-100.0%) SELL failed SHOP260911C00146000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b1054|lab1054_s165_w2_1005_1045_r1|S165] stop_loss (-100.0%) SELL failed SHOP260911C00146000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
