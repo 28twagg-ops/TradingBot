@@ -40257,25 +40257,25 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-09-11.log
 elapsed=8.3s reconcile=0.51s cancel=0.23s manage=4.72s
 
-=== 15:34:46 ET — manage-only (past entry window) [elapsed=4.0s reconcile=0.2s cancel=0.07s manage=2.39s] ===
-=== options_morning_bot (PAPER) 2026-09-11T15:34:46.280126-04:00 ===
+=== 15:40:02 ET — manage-only (past entry window) [elapsed=10.3s reconcile=0.58s cancel=0.24s manage=6.24s] ===
+=== options_morning_bot (PAPER) 2026-09-11T15:40:02.330974-04:00 ===
 
 [Run context]
-Paper auth OK — equity $999990.86, account PA33P8KT02IL
+Paper auth OK — equity $999992.41, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations
 
 [Setup]
 LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
 Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
 Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+  EXIT [b802|lab0802_s404_w2_1005_1045_r1|S404] stop_loss (-83.3%) SELL failed AMD260914C00550000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b779|lab0779_s397_w2_1005_1045_r2|S397] stop_loss (-83.3%) SELL failed AMD260914C00550000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b862|lab0862_s408_w4_1120_1135_r1|S408] EOD SELL failed CRWD260911C00235000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b330|lab0330_s357_w2_1005_1045_r1|S357] stop_loss (-91.1%) SELL failed PATH260925C00017000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   EXIT [b1055|lab1055_s165_w2_1005_1045_r2|S165] EOD SELL failed SHOP260911C00146000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   EXIT [b1054|lab1054_s165_w2_1005_1045_r1|S165] EOD SELL failed SHOP260911C00146000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  EXIT [b862|lab0862_s408_w4_1120_1135_r1|S408] EOD SELL failed CRWD260911C00235000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  EXIT [b802|lab0802_s404_w2_1005_1045_r1|S404] stop_loss (-76.7%) SELL failed AMD260914C00550000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  EXIT [b779|lab0779_s397_w2_1005_1045_r2|S397] stop_loss (-76.7%) SELL failed AMD260914C00550000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   EXIT skip MARA260918C00012000: open sell already pending
   EXIT skip ZS260911C00180000: open sell already pending
-  EXIT [b330|lab0330_s357_w2_1005_1045_r1|S357] stop_loss (-91.1%) SELL failed PATH260925C00017000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed MARA260925C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed PATH260925C00017000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed SHOP260911C00146000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
@@ -40290,16 +40290,16 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $999,990.86
+Account equity: $999,992.41
 Active buckets: 1164 of 1164 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S203,S207,S212,S360,S405,S407): $+11,577.98 all-time  |  $+698.73 today
   Raw (incl dropped):     $+6,714.98 all-time  |  $+698.73 today
-  Open (not sold yet): $-334.38 unrealized (virtual lots)
-                       $-232.00 unrealized (broker total)
+  Open (not sold yet): $-309.87 unrealized (virtual lots)
+                       $-204.00 unrealized (broker total)
   Premium deployed:    $2,125.27 in open positions
-  Combined P&L:        $+11,243.60 (reflected realized + open virtual)
+  Combined P&L:        $+11,268.11 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     13684
@@ -40353,21 +40353,21 @@ Open virtual lots (by bucket)
   (863 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  AMD260914C00547500  qty=-1  cost=$36.00  return=+30.6%  open P&L=$+11.00
-  AMD260914C00550000  qty=2  cost=$120.00  return=-76.7%  open P&L=$-92.00
-  AMD260914C00552500  qty=-1  cost=$32.00  return=+62.5%  open P&L=$+20.00
-  AMZN260914C00262500  qty=2  cost=$64.00  return=-12.5%  open P&L=$-8.00
+  AMD260914C00547500  qty=-1  cost=$36.00  return=+33.3%  open P&L=$+12.00
+  AMD260914C00550000  qty=2  cost=$120.00  return=-83.3%  open P&L=$-100.00
+  AMD260914C00552500  qty=-1  cost=$32.00  return=+65.6%  open P&L=$+21.00
+  AMZN260914C00262500  qty=2  cost=$64.00  return=-9.4%  open P&L=$-6.00
   CRWD260911C00222500  qty=-1  cost=$31.00  return=+96.8%  open P&L=$+30.00
   CRWD260911C00235000  qty=1  cost=$13.00  return=-100.0%  open P&L=$-13.00
   HD260918C00325000  qty=1  cost=$50.00  return=-28.0%  open P&L=$-14.00
-  MARA260911C00012000  qty=-1  cost=$9.00  return=+77.8%  open P&L=$+7.00
-  MARA260918C00012000  qty=33  cost=$1,494.00  return=+1.6%  open P&L=$+24.00
-  MARA260925C00012500  qty=3  cost=$150.00  return=+2.0%  open P&L=$+3.00
+  MARA260911C00012000  qty=-1  cost=$9.00  return=+88.9%  open P&L=$+8.00
+  MARA260918C00012000  qty=33  cost=$1,494.00  return=+3.8%  open P&L=$+57.00
+  MARA260925C00012500  qty=3  cost=$150.00  return=+0.0%  open P&L=$+0.00
   PATH260911C00017000  qty=-1  cost=$10.00  return=+90.0%  open P&L=$+9.00
   PATH260925C00017000  qty=1  cost=$45.00  return=-91.1%  open P&L=$-41.00
   SHOP260911C00146000  qty=2  cost=$112.00  return=-100.0%  open P&L=$-112.00
   SHOP260911C00148000  qty=-1  cost=$26.00  return=+96.2%  open P&L=$+25.00
-  UPST260918C00027500  qty=1  cost=$37.00  return=-45.9%  open P&L=$-17.00
+  UPST260918C00027500  qty=1  cost=$37.00  return=-43.2%  open P&L=$-16.00
   ZS260911C00180000  qty=2  cost=$64.00  return=-100.0%  open P&L=$-64.00
 
 Per-bucket exit stats (all time)
@@ -40804,7 +40804,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $999,990.86                                              |
+|Equity       : $999,992.41                                              |
 |Open Risk    : 47 lots (16 broker pos)                                  |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -40853,15 +40853,15 @@ Per-bucket exit stats (all time)
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
 |  SHOP260911C00146000           2   -100.0%   $   -112.00               |
-|  AMD260914C00550000            2    -76.7%   $    -92.00               |
+|  AMD260914C00550000            2    -83.3%   $   -100.00               |
 |  ZS260911C00180000             2   -100.0%   $    -64.00               |
+|  MARA260918C00012000          33     +3.8%   $    +57.00               |
 |  PATH260925C00017000           1    -91.1%   $    -41.00               |
 |  CRWD260911C00222500          -1    +96.8%   $    +30.00               |
 |  SHOP260911C00148000          -1    +96.2%   $    +25.00               |
-|  MARA260918C00012000          33     +1.6%   $    +24.00               |
-|  AMD260914C00552500           -1    +62.5%   $    +20.00               |
+|  AMD260914C00552500           -1    +65.6%   $    +21.00               |
 |  ... 8 more position(s)                                                |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-09-11.log
-elapsed=4.0s reconcile=0.2s cancel=0.07s manage=2.39s
+elapsed=10.3s reconcile=0.58s cancel=0.24s manage=6.24s
 
