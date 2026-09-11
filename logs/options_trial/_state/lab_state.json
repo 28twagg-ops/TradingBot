@@ -182,26 +182,6 @@
       "entry_order_id": "64f8c91b-7095-4d0d-abad-2d8069b95d87"
     },
     {
-      "lot_id": "30e52c41b965",
-      "bucket_id": 404,
-      "profile_name": "lab0404_s364_w1_0928_1005_r1",
-      "strategy_id": "S364",
-      "occ_symbol": "MARA260918C00012000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 42.0,
-      "entry_price": 0.42,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T14:06:19.947604+00:00",
-      "entry_order_id": "d3e99014-aca3-4d10-ad64-9ebb0db7c802"
-    },
-    {
       "lot_id": "88c72b094b56",
       "bucket_id": 313,
       "profile_name": "lab0313_s355_w1_0928_1005_r2",
@@ -1035,14 +1015,14 @@
       "submitted": "2026-09-11T11:11:13"
     },
     {
-      "order_id": "adc2228a-7061-4d88-b442-0e6b2869952d",
-      "lot_id": "30e52c41b965",
-      "bucket_id": 404,
-      "strategy_id": "S364",
+      "order_id": "7f81129d-782b-4c03-8436-1fb1c849eb1d",
+      "lot_id": "88c72b094b56",
+      "bucket_id": 313,
+      "strategy_id": "S355",
       "occ_symbol": "MARA260918C00012000",
       "qty": 1,
-      "reason": "take_profit (+63.5%)",
-      "submitted": "2026-09-11T11:31:12"
+      "reason": "take_profit (+54.6%)",
+      "submitted": "2026-09-11T11:36:21"
     }
   ],
   "bucket_open_premium": {
@@ -1055,7 +1035,6 @@
     "b1055": 56.00000000000001,
     "b1054": 56.00000000000001,
     "b862": 13.0,
-    "b404": 42.0,
     "b313": 42.0,
     "b312": 42.0,
     "b305": 42.0,
@@ -1552,7 +1531,8 @@
     "129d8494-0f16-40ec-b64f-9596c56b4ec0",
     "f689e943-0286-48f6-9bc1-2b25764d259f",
     "6536b76a-96cb-4555-b68d-01987ec0c459",
-    "334414f1-389a-40ae-bfcd-cb62f377e588"
+    "334414f1-389a-40ae-bfcd-cb62f377e588",
+    "adc2228a-7061-4d88-b442-0e6b2869952d"
   ],
   "submitted_today": 4,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
