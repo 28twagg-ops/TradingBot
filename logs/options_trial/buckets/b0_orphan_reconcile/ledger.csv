@@ -504,3 +504,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10 16:36:20.666412+00:00,exit,0,orphan_reconcile,ORPHAN,ab045f5f0970,TSLA,TSLA260914C00392500,1,,0.36,60.5,-40.5,-24.5,stop_loss (-42.1%),,-0.01,0.5,-0.4,,,21df4ca0-60b4-452a-a3d3-a2248268cb83
 2026-09-10 16:54:03.260470+00:00,exit,0,orphan_reconcile,ORPHAN,c915cb3a03f3,AMD,AMD260914C00550000,1,,0.37,60.0,-38.33,-23.0,stop_loss (-40.0%),,-0.01,0.5,-0.4,,,fcb72034-930c-490d-a44b-e8a350df9185
 2026-09-10T19:55:41Z,reconcile,0,orphan_reconcile,ORPHAN,24a97d7db5d3,AMZN,AMZN260914C00260000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-11T15:31:07Z,reconcile,0,orphan_reconcile,ORPHAN,a447d8346b3a,MARA,MARA260911C00011000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-11 15:30:20.203061+00:00,exit,0,orphan_reconcile,ORPHAN,dc0ed772cb1f,MARA,MARA260918C00012000,1,,1.29,45.27,184.94,83.73,take_profit (+113.3%),,-0.01,0.5,-0.4,,,334414f1-389a-40ae-bfcd-cb62f377e588

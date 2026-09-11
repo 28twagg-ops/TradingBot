@@ -17,7 +17,7 @@ S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,building sample (8-19 
 S361,RubberBand_2DTE,2d,watch,fat left tail (p10 < -45%),125,47,25,22,99.48,17.78,-67.41,-50.47,209.33,180.0,10,42,16,6,10,23.4
 S401,Any_Gap_Down_Small,3d,watch,fat left tail (p10 < -45%),214,101,54,47,60.07,15.79,-74.0,-48.65,273.08,1338.0,15,42,18,5,16,31.7
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),93,43,22,21,54.57,11.76,-65.89,-52.76,246.29,658.0,10,42,8,4,9,30.2
-S364,RubberBand_7DTE,7d,watch,fat left tail (p10 < -45%),106,52,26,26,18.06,2.7,-85.29,-57.27,179.06,27.0,13,42,8,2,6,36.5
+S364,RubberBand_7DTE,7d,watch,fat left tail (p10 < -45%),106,53,27,26,18.93,8.33,-85.29,-56.92,169.24,54.0,13,42,8,3,6,37.7
 S358,GapDown_30DTE,30d,watch,insufficient sample (<8 exits),14,4,2,2,1.35,0.84,-51.39,-51.39,54.49,-21.0,3,38,0,0,2,50.0
 S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S170,Golden Pocket call 3 DTE,3d ATM golden pocket,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
