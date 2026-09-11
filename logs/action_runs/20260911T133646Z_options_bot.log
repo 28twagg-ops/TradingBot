@@ -1,0 +1,58 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=91 paper_keys=yes dry_run=False
+  alpaca positions=23
+  FLAG b900|S411|2ac69311 missing from Alpaca
+  FLAG b805|S404|933ff6a9 missing from Alpaca
+  FLAG b804|S404|183ba985 missing from Alpaca
+  FLAG b781|S397|747e68a7 missing from Alpaca
+  FLAG b780|S397|9e1f70ce missing from Alpaca
+  FLAG b861|S408|63fea2cf missing from Alpaca
+  FLAG b860|S408|0b8c0d6d missing from Alpaca
+  FLAG b285|S351|355c8ee9 missing from Alpaca
+  FLAG b284|S351|d8b95c2b missing from Alpaca
+  FLAG b905|S411|8ee5841b missing from Alpaca
+  FLAG b904|S411|135984dc missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1164:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1164
+PROBE OK: paper account status=AccountStatus.ACTIVE equity=$999,598.12
+  buying_power=$3,934,175.88 cash=$1,032,536.62
+  open option orders: 12
+    AVGO260911C00400000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=0.01
+    AMD260914C00547500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=0.36
+    UPST260918C00027500 OrderSide.SELL qty=2 status=OrderStatus.NEW limit=None
+    MARA260911C00011500 OrderSide.SELL qty=2 status=OrderStatus.NEW limit=None
+    MARA261002C00012500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+  open option positions: 22
+    AMD260914C00550000 qty=2 mkt=$12.00
+    AMD260914C00552500 qty=-1 mkt=$-20.00
+    AMZN260914C00262500 qty=2 mkt=$62.00
+    AVGO260911C00400000 qty=1 mkt=$0.00
+    CRWD260911C00222500 qty=-1 mkt=$-3.00
+PROBE: check-only pass (use --smoke-entry to place a test order)
+=== options_morning_bot (PAPER) 2026-09-11T09:40:29.155287-04:00 ===
+
+[Run context]
+Paper auth OK — equity $999614.12, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
+Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+2026-09-11 09:40:31,379 INFO   EXIT [b392|lab0392_s363_w2_1005_1045_r1|S363] stop_loss (-54.8%) SELL 1 SMCI260918C00042000 @<= 0.29
+  EXIT [b862|lab0862_s408_w4_1120_1135_r1|S408] stop_loss (-100.0%) SELL failed CRWD260911C00235000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b1055|lab1055_s165_w2_1005_1045_r2|S165] stop_loss (-100.0%) SELL failed SHOP260911C00146000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b1054|lab1054_s165_w2_1005_1045_r1|S165] stop_loss (-100.0%) SELL failed SHOP260911C00146000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b802|lab0802_s404_w2_1005_1045_r1|S404] stop_loss (-90.0%) SELL failed AMD260914C00550000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b779|lab0779_s397_w2_1005_1045_r2|S397] stop_loss (-90.0%) SELL failed AMD260914C00550000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+2026-09-11 09:40:35,153 INFO   EXIT [b1053|lab1053_s165_w1_0928_1005_r2|S165] stop_loss (-96.9%) SELL 1 ZS260911C00180000 @<= 0.02
+2026-09-11 09:40:36,893 INFO   EXIT [b238|lab0238_s401_w3_1045_1120_r1|S401] take_profit (+55.3%) SELL 1 GOOGL260914C00345000 @<= 0.59
+  EXIT [b330|lab0330_s357_w2_1005_1045_r1|S357] stop_loss (-88.9%) SELL failed PATH260925C00017000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+Protective stops: placed=1 upgraded=0 already=9 failed=7 (market-first)
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S204, S205, S206, S208, S209, S210, S211, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S406, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 113/117 symbols

@@ -15,4 +15,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-08 15:22:39.398327+00:00,entry,905,lab0905_s411_w4_1120_1135_r2,S411,daaa3d43a5ec,PANW,PANW260911C00360000,1,0.72,0.69,69.0,,,,-0.01,,0.75,-0.75,0.24615384615384622,RB gap -1.7% reclaim,ac12ffa4-5281-4def-8aa7-c13d6bad379f
 2026-09-08 17:46:17.109355+00:00,exit,905,lab0905_s411_w4_1120_1135_r2,S411,daaa3d43a5ec,PANW,PANW260911C00360000,1,,1.1,69.0,59.42,41.0,take_profit (+59.4%),,-0.01,0.5,-0.5,,,c0d43c39-4df2-405b-97d8-e3a4c3ac316f
 2026-09-10 15:22:28.422438+00:00,entry,905,lab0905_s411_w4_1120_1135_r2,S411,8ee5841b1367,TSLA,TSLA260914C00387500,1,0.62,0.62,62.0,,,,-0.01,,0.5,-0.5,,,4e788e54-60f8-428f-84bf-06f8c37c6fda
-2026-09-11T13:34:47Z,reconcile,905,lab0905_s411_w4_1120_1135_r2,S411,8ee5841b1367,TSLA,TSLA260914C00387500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-11T13:40:26Z,reconcile,905,lab0905_s411_w4_1120_1135_r2,S411,8ee5841b1367,TSLA,TSLA260914C00387500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
