@@ -1,6 +1,6 @@
-# Ledger health — 2026-09-10
+# Ledger health — 2026-09-11
 
-_Generated 2026-09-10T19:56:22.529246_
+_Generated 2026-09-11T09:01:37.476218_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -29,21 +29,21 @@ Notes:
 
 | lot_id | strategy | symbol | entry_day | age_days |
 |--------|----------|--------|-----------|---------:|
-| 361232eb5b07 | S366 | MARA | 2026-09-04 | 6 |
-| c749b9facdbb | S366 | MARA | 2026-09-04 | 6 |
-| 53ee58608a69 | S366 | MARA | 2026-09-04 | 6 |
-| 01aab77eeb4e | S366 | MARA | 2026-09-04 | 6 |
-| 4850d0ee6357 | S357 | PATH | 2026-09-04 | 6 |
-| 3b55ba0967c8 | S365 | MARA | 2026-09-04 | 6 |
-| d52b6db3a02a | S365 | MARA | 2026-09-04 | 6 |
-| 40a2c3f0b67b | S356 | MARA | 2026-09-04 | 6 |
-| 75ca2d7b5bd3 | S356 | MARA | 2026-09-04 | 6 |
-| 956c4b15bfde | S357 | MARA | 2026-09-04 | 6 |
-| 616989650086 | S357 | MARA | 2026-09-04 | 6 |
-| 7158e568e740 | S365 | MARA | 2026-09-04 | 6 |
-| a93bf29b9fc7 | S365 | MARA | 2026-09-04 | 6 |
-| dc5a40562a7d | S356 | MARA | 2026-09-04 | 6 |
-| 75790593d310 | S356 | MARA | 2026-09-04 | 6 |
+| 361232eb5b07 | S366 | MARA | 2026-09-04 | 7 |
+| c749b9facdbb | S366 | MARA | 2026-09-04 | 7 |
+| 53ee58608a69 | S366 | MARA | 2026-09-04 | 7 |
+| 01aab77eeb4e | S366 | MARA | 2026-09-04 | 7 |
+| 4850d0ee6357 | S357 | PATH | 2026-09-04 | 7 |
+| 3b55ba0967c8 | S365 | MARA | 2026-09-04 | 7 |
+| d52b6db3a02a | S365 | MARA | 2026-09-04 | 7 |
+| 40a2c3f0b67b | S356 | MARA | 2026-09-04 | 7 |
+| 75ca2d7b5bd3 | S356 | MARA | 2026-09-04 | 7 |
+| 956c4b15bfde | S357 | MARA | 2026-09-04 | 7 |
+| 616989650086 | S357 | MARA | 2026-09-04 | 7 |
+| 7158e568e740 | S365 | MARA | 2026-09-04 | 7 |
+| a93bf29b9fc7 | S365 | MARA | 2026-09-04 | 7 |
+| dc5a40562a7d | S356 | MARA | 2026-09-04 | 7 |
+| 75790593d310 | S356 | MARA | 2026-09-04 | 7 |
 
 _Orphaned ledger detail omitted (1200 rows) — see note above on historical lot_id churn._
 
