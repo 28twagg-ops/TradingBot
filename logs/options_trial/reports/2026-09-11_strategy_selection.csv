@@ -1,6 +1,6 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
 S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,building sample (8-19 exits),95,14,10,4,93.52,109.46,-72.32,-37.05,253.46,462.0,3,52,8,6,5,42.9
-S396,GapDown_ITM2,3d,watch,insufficient sample (<8 exits),26,5,4,1,59.59,93.06,-19.48,74.58,108.33,190.0,3,36,2,1,1,100.0
+S396,GapDown_ITM2,3d,watch,insufficient sample (<8 exits),26,6,5,1,63.82,89.03,-3.8,77.19,106.25,241.0,3,36,2,2,1,100.0
 S166,GapDown strong call,3d ATM strong,watch,building sample (8-19 exits),49,8,8,0,113.61,75.23,63.34,67.08,194.5,436.0,2,52,0,2,3,62.5
 S163,A1 GapDown ATM call EOD,7d ATM,watch,building sample (8-19 exits),109,15,13,2,76.5,74.6,-7.32,66.03,171.25,514.0,4,52,8,6,4,33.3
 S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),154,77,54,23,204.52,72.55,-60.54,-6.38,965.79,3396.0,14,42,10,8,13,19.5

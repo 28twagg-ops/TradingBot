@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-11
 
-_Generated 2026-09-11T10:12:28.523480_
+_Generated 2026-09-11T10:17:08.520461_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-11T10:12:28.523480_
 
 ## Attribution health
 
-- Total exits: **3019**
+- Total exits: **3020**
 - Orphan exits (b0/orphan_reconcile): **371**
 - Orphan rate: **12.3%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -21,7 +21,7 @@ _Generated 2026-09-11T10:12:28.523480_
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 14 | 71.4 | +109.46 | -72.32 | -37.05 | +253.46 | 52 | 8 | 6 | $+462.00 | 42.9% | building sample (8-19 exits) |
-| S396 (GapDown_ITM2) | 3d | watch | 5 | 80.0 | +93.06 | -19.48 | +74.58 | +108.33 | 36 | 2 | 1 | $+190.00 | 100.0% | insufficient sample (<8 exits) |
+| S396 (GapDown_ITM2) | 3d | watch | 6 | 83.3 | +89.03 | -3.80 | +77.19 | +106.25 | 36 | 2 | 2 | $+241.00 | 100.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 8 | 100.0 | +75.23 | +63.34 | +67.08 | +194.50 | 52 | 0 | 2 | $+436.00 | 62.5% | building sample (8-19 exits) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 15 | 86.7 | +74.60 | -7.32 | +66.03 | +171.25 | 52 | 8 | 6 | $+514.00 | 33.3% | building sample (8-19 exits) |
 | S406 (RubberBand_ITM3) | 3d | watch | 77 | 70.1 | +72.55 | -60.54 | -6.38 | +965.79 | 42 | 10 | 8 | $+3,396.00 | 19.5% | fat left tail (p10 < -45%) |
@@ -305,7 +305,7 @@ _Pipeline evaluation as of 2026-09-11. Auto-kill thresholds: median<-25% at n>=1
 | S393 | VolClimax_21DTE | 0 | — | — | NEW | 0 |
 | S394 | VolClimax_30DTE | 0 | — | — | NEW | 0 |
 | S395 | GapDown_ITM3 | 0 | — | — | NEW | 0 |
-| S396 | GapDown_ITM2 | 5 | +93.06% | 80% | WATCH | 36 |
+| S396 | GapDown_ITM2 | 6 | +89.03% | 83% | WATCH | 36 |
 | S397 | GapDown_ITM1 | 32 | +54.46% | 72% | INSUFFICIENT | 42 |
 | S398 | GapDown_ATM | 51 | -11.43% | 49% | INSUFFICIENT | 42 |
 | S399 | GapDown_OTM1 | 61 | -46.67% | 44% | INSUFFICIENT | 42 |

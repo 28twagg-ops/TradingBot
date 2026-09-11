@@ -322,26 +322,6 @@
       "entry_order_id": "64f8c91b-7095-4d0d-abad-2d8069b95d87"
     },
     {
-      "lot_id": "e278cd5f8b07",
-      "bucket_id": 768,
-      "profile_name": "lab0768_s396_w1_0928_1005_r1",
-      "strategy_id": "S396",
-      "occ_symbol": "MARA260911C00011000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 60.0,
-      "entry_price": 0.6,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T14:06:19.885492+00:00",
-      "entry_order_id": "13fdcbad-5fe5-456b-8167-bf5d47dd69a6"
-    },
-    {
       "lot_id": "357aa8341cbb",
       "bucket_id": 405,
       "profile_name": "lab0405_s364_w1_0928_1005_r2",
@@ -1225,14 +1205,14 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "f77393a8-0c94-44bc-b3e1-941d7cad54c4",
-      "lot_id": "e278cd5f8b07",
-      "bucket_id": 768,
-      "strategy_id": "S396",
-      "occ_symbol": "MARA260911C00011000",
+      "order_id": "d1f6539f-1d88-4913-9ca2-25acf02d33ce",
+      "lot_id": "40a2c3f0b67b",
+      "bucket_id": 325,
+      "strategy_id": "S356",
+      "occ_symbol": "MARA260918C00012000",
       "qty": 1,
-      "reason": "take_profit (+83.3%)",
-      "submitted": "2026-09-11T10:11:22"
+      "reason": "take_profit (+59.0%)",
+      "submitted": "2026-09-11T10:16:10"
     }
   ],
   "bucket_open_premium": {
@@ -1252,7 +1232,6 @@
     "b1055": 56.00000000000001,
     "b1054": 56.00000000000001,
     "b862": 13.0,
-    "b768": 60.0,
     "b405": 42.0,
     "b404": 42.0,
     "b313": 42.0,
@@ -1736,7 +1715,8 @@
     "2210f74f-de0c-4f00-83c4-e5f197cc1287",
     "8a2bca37-43ba-4370-9725-239d02101857",
     "e63173f8-ddae-4ef8-a853-8b352c781553",
-    "944b8b73-6ac7-4f05-92ce-1ffd3caa6838"
+    "944b8b73-6ac7-4f05-92ce-1ffd3caa6838",
+    "f77393a8-0c94-44bc-b3e1-941d7cad54c4"
   ],
   "submitted_today": 2,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
