@@ -32,4 +32,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-04 14:47:02.125585+00:00,entry,285,lab0285_s351_w3_1045_1120_r2,S351,f9daffc9ae72,TSLA,TSLA260904C00365000,1,0.23,0.22,22.0,,,,-0.01,,0.75,-0.75,0.042553191489361625,gap -3.8%,83b1d833-2201-4665-ac05-7ba9c6de50fc
 2026-09-04T15:26:39Z,reconcile,285,lab0285_s351_w3_1045_1120_r2,S351,f9daffc9ae72,TSLA,TSLA260904C00365000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-10 15:00:29.230880+00:00,entry,285,lab0285_s351_w3_1045_1120_r2,S351,355c8ee9dc3d,COIN,COIN260911C00185000,1,0.4,0.4,40.0,,,,-0.01,,0.75,-0.75,0.18666666666666654,gap -2.2%,5eb16ec5-bb4b-41cf-ba4b-4de1f0fd4809
-2026-09-11T13:34:47Z,reconcile,285,lab0285_s351_w3_1045_1120_r2,S351,355c8ee9dc3d,COIN,COIN260911C00185000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-11T13:40:26Z,reconcile,285,lab0285_s351_w3_1045_1120_r2,S351,355c8ee9dc3d,COIN,COIN260911C00185000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
