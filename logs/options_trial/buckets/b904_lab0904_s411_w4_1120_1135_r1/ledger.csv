@@ -15,3 +15,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-08 15:22:39.403651+00:00,entry,904,lab0904_s411_w4_1120_1135_r1,S411,69bff6a8b0ff,PANW,PANW260911C00360000,1,0.72,0.69,69.0,,,,-0.01,,0.75,-0.75,0.24615384615384622,RB gap -1.7% reclaim,1e0fab79-3333-441a-888b-784327468bef
 2026-09-09 14:21:15.598831+00:00,exit,904,lab0904_s411_w4_1120_1135_r1,S411,69bff6a8b0ff,PANW,PANW260911C00360000,1,,0.33,69.0,-52.17,-36.0,stop_loss (-52.2%),,-0.01,0.5,-0.5,,,a2c6ee1c-74b1-48e1-b7fc-0d8f97dcd5a8
 2026-09-10 15:22:28.187672+00:00,entry,904,lab0904_s411_w4_1120_1135_r1,S411,135984dc5475,TSLA,TSLA260914C00387500,1,0.62,0.62,62.0,,,,-0.01,,0.5,-0.5,,,2e8fe721-26e4-4aab-b0b1-1e654b5dd02e
+2026-09-11T13:34:47Z,reconcile,904,lab0904_s411_w4_1120_1135_r1,S411,135984dc5475,TSLA,TSLA260914C00387500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
