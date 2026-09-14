@@ -13689,5 +13689,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-14T13:01:18Z,reconcile,1055,lab1055_s165_w2_1005_1045_r2,S165,453361e9da9e,SHOP,SHOP260911C00146000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-14T13:01:18Z,reconcile,1054,lab1054_s165_w2_1005_1045_r1,S165,fedee58f3fc9,SHOP,SHOP260911C00146000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-14T13:01:18Z,reconcile,862,lab0862_s408_w4_1120_1135_r1,S408,88d252b440b0,CRWD,CRWD260911C00235000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-14T13:40:19Z,reconcile,193,lab0193_s218_w1_0928_1005_r2,S218,235f18c1ecc2,AMZN,AMZN260914C00262500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-14T13:40:19Z,reconcile,192,lab0192_s218_w1_0928_1005_r1,S218,0277ef32e042,AMZN,AMZN260914C00262500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-14T13:34:45Z,reconcile,193,lab0193_s218_w1_0928_1005_r2,S218,235f18c1ecc2,AMZN,AMZN260914C00262500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-14T13:34:45Z,reconcile,192,lab0192_s218_w1_0928_1005_r1,S218,0277ef32e042,AMZN,AMZN260914C00262500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
