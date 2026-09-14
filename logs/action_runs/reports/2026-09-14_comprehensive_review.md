@@ -1783,3 +1783,194 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20260914T140215Z
+
+- UTC timestamp: `20260914T140215Z`
+- GitHub run: [#9856](https://github.com/28twagg-ops/TradingBot/actions/runs/34852741555)
+- Run id: `34852741555`
+- Live bot: exit=`0`, duration=`4s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260914T140215Z_live_bot.log`, `logs/action_runs/20260914T140215Z_live_options.log`, `logs/action_runs/20260914T140215Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1204 | 49.2 | -10.1 | +40.8 | $+15,812 |
+| TAINTED | 1829 | 33.4 | -38.8 | +12.0 | $-9,097 |
+| KEEP-only | 626 | 63.3 | +51.4 | +64.2 | $+10,734 |
+| KEEP-only recent | 429 | 61.3 | +53.3 | +74.5 | $+6,089 |
+
+- KEEP strategies (23): S163, S168, S173, S174, S210, S218, S350, S353, S354, S355, S356, S357, S361, S362, S363, S364, S365, S397, S399, S401, S403, S404, S406
+- KILL strategies (19): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S352, S360, S366, S398, S405, S407, S408, S411, S412
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-14T09:26:21.164064-04:00","date":"2026-09-14","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":11.8,"phases_s":{"reconcile":4.75},"signals":0,"placed":0,"equity":1000241.84,"open_positions":8,"pending_orders":0,"open_lots":41,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"9849","github_run_id":"34849104508","status":"ok","data_quality":{"clean":{"n":1204,"win":49.17,"med":-10.1,"avg":40.78,"pnl":15811.82},"tainted":{"n":1829,"win":33.35,"med":-38.81,"avg":11.98,"pnl":-9096.84},"keep_only":{"n":626,"win":63.26,"med":51.39,"avg":64.19,"pnl":10734.45},"keep_only_recent":{"n":429,"win":61.31,"med":53.33,"avg":74.49,"pnl":6089.0},"keep_strategies":["S163","S168","S173","S174","S210","S218","S350","S353","S354","S355","S356","S357","S361","S362","S363","S364","S365","S397","S399","S401","S403","S404","S406"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S352","S360","S366","S398","S405","S407","S408","S411","S412"]}}
+```
+
+### Live bot (tail)
+
+```text
+14:02:16  INFO      Mode: exits
+14:02:17  INFO        Daily log -> logs/daily/2026-09-14.md
+14:02:17  INFO        Daily log reconciled -> logs/daily/2026-09-14.md (1 ledger rows)
+14:02:17  INFO        place_all_stops: checking 2 positions...
+14:02:17  INFO        STOP skipped ALL: fractional (0.1317 shares) — software exit will handle it
+14:02:17  INFO        STOP skipped ALLE: fractional (0.2206 shares) — software exit will handle it
+14:02:18  INFO        [positions] 2/2 (2 valid)
+14:02:18  INFO        Daily log -> logs/daily/2026-09-14.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:02 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $226.32|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  ALL  P&L -0.0%  $-0.01                                            HOLD|
+|  ALLE  P&L +0.6%  $+0.20                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-09-14T10:02:19.542004-04:00 share=25% ===
+2026-09-14 10:02:19,542 INFO === options_live_micro LIVE 2026-09-14T10:02:19.542004-04:00 share=25% ===
+Live account equity $226.32 cash $158.29 #225458845 options_level=3
+2026-09-14 10:02:19,851 INFO Live account equity $226.32 cash $158.29 #225458845 options_level=3
+Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+2026-09-14 10:02:20,124 INFO Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+Live micro done. open_options=0 lots=0
+2026-09-14 10:02:20,318 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+... (153 earlier lines - see full log file)
+  [b289 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b296 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b297 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b776 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b777 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b784 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b785 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b792 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b793 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b90 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b800 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b801 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1052 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1053 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1150 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1151 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1122 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1123 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1094 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1095 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1108 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1109 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b16 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b17 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b280 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b281 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b288 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b289 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b296 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b297 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b362 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b363 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b376 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b377 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b390 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b391 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b418 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b419 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b776 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b777 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b784 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b785 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b792 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b793 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b90 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b800 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b801 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b90 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b828 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b829 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b856 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b857 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b898 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b899 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b912 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b913 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b234 UPST] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b235 UPST] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b178 CELH] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b179 CELH] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b90 QQQ] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b192 QQQ] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b193 QQQ] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b234 QQQ] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b235 QQQ] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b90 IWM] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b192 IWM] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b193 IWM] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b178 HD] ENTRY failed: {"code":40310000,"existing_order_id":"efbafaec-2349-45fb-b0c3-9c9099e0c949","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b179 HD] ENTRY failed: {"code":40310000,"existing_order_id":"efbafaec-2349-45fb-b0c3-9c9099e0c949","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b234 HD] ENTRY failed: {"code":40310000,"existing_order_id":"efbafaec-2349-45fb-b0c3-9c9099e0c949","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b235 HD] ENTRY failed: {"code":40310000,"existing_order_id":"efbafaec-2349-45fb-b0c3-9c9099e0c949","message":"potential wash trade detected. use complex orders","reject_reason":"opposite side market/stop order exists"}
+  [b80 BAC] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b81 BAC] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b80 MS] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b81 MS] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b234 MS] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b235 MS] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b234 BA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b235 BA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+```
+
+---
