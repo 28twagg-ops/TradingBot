@@ -14501,3 +14501,132 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260914T194637Z
+
+- UTC timestamp: `20260914T194637Z`
+- GitHub run: [#9925](https://github.com/28twagg-ops/TradingBot/actions/runs/34888770063)
+- Run id: `34888770063`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260914T194637Z_live_bot.log`, `logs/action_runs/20260914T194637Z_live_options.log`, `logs/action_runs/20260914T194637Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1204 | 49.2 | -10.1 | +40.8 | $+15,812 |
+| TAINTED | 1829 | 33.4 | -38.8 | +12.0 | $-9,097 |
+| KEEP-only | 626 | 63.3 | +51.4 | +64.2 | $+10,734 |
+| KEEP-only recent | 429 | 61.3 | +53.3 | +74.5 | $+6,089 |
+
+- KEEP strategies (23): S163, S168, S173, S174, S210, S218, S350, S353, S354, S355, S356, S357, S361, S362, S363, S364, S365, S397, S399, S401, S403, S404, S406
+- KILL strategies (19): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S352, S360, S366, S398, S405, S407, S408, S411, S412
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-14T15:26:14.703685-04:00","date":"2026-09-14","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":18.5,"phases_s":{"reconcile":2.59,"cancel":0.13,"manage":5.91,"protective_stops":1.0},"signals":0,"placed":0,"equity":1000241.84,"open_positions":8,"pending_orders":0,"open_lots":39,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"9921","github_run_id":"34886746747","status":"ok","data_quality":{"clean":{"n":1204,"win":49.17,"med":-10.1,"avg":40.78,"pnl":15811.82},"tainted":{"n":1829,"win":33.35,"med":-38.81,"avg":11.98,"pnl":-9096.84},"keep_only":{"n":626,"win":63.26,"med":51.39,"avg":64.19,"pnl":10734.45},"keep_only_recent":{"n":429,"win":61.31,"med":53.33,"avg":74.49,"pnl":6089.0},"keep_strategies":["S163","S168","S173","S174","S210","S218","S350","S353","S354","S355","S356","S357","S361","S362","S363","S364","S365","S397","S399","S401","S403","S404","S406"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S352","S360","S366","S398","S405","S407","S408","S411","S412"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (67 earlier lines - see full log file)
+|                                                                        |
+|  Total invested                                                  $34.22|
+|  Total open P&L                                                  $+0.30|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (stale (128172.5m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  ALLE  P&L +0.9%  $+0.30                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  41                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.82   63.0   -1.67   50MA bounce (+|
+|  AMD      Pullback50      eq     $496.00  61.3   0.53    50MA bounce (-|
+|  ALL      Pullback50      eq     $258.17  47.5   -1.03   50MA bounce (+|
+|  GOOGL    Pullback50      eq     $348.93  50.7   0.63    50MA bounce (+|
+|  GOOG     Pullback50      eq     $345.42  50.7   0.08    50MA bounce (+|
+|  AMZN     Pullback50      eq     $253.67  41.0   -0.84   50MA bounce (-|
+|  AJG      Pullback50      eq     $253.51  36.6   -0.58   50MA bounce (-|
+|  TECH     Pullback50      eq     $72.23   44.0   -0.37   50MA bounce (+|
+|  DHR      Pullback50      eq     $203.14  29.6   -1.41   50MA bounce (+|
+|  DASH     Pullback50      eq     $203.34  30.1   -2.24   50MA bounce (-|
+|  EBAY     Pullback50      eq     $109.16  54.2   -0.80   50MA bounce (+|
+|  FDS      Pullback50      eq     $276.63  37.4   -0.38   50MA bounce (+|
+|  INCY     Pullback50      eq     $122.49  39.2   -1.20   50MA bounce (+|
+|  INTC     Pullback50      eq     $97.47   63.0   -0.67   50MA bounce (-|
+|  JBHT     Pullback50      eq     $273.77  63.6   -1.40   50MA bounce (-|
+|  MU       Pullback50      eq     $928.25  52.9   -0.51   50MA bounce (+|
+|  NVDA     Pullback50      eq     $212.07  52.4   -0.58   50MA bounce (-|
+|  PAYX     Pullback50      eq     $118.55  33.1   -1.13   50MA bounce (+|
+|  PANW     VWAP_Reclaim    eq     $377.08  56.6   1.50    VWAP reclaim V|
+|  PRU      Pullback50      eq     $119.32  41.4   -2.16   50MA bounce (-|
+|  SYF      Pullback50      eq     $76.14   35.8   -2.15   50MA bounce (-|
+|  VLTO     Pullback50      eq     $95.95   33.7   -1.70   50MA bounce (+|
+|  VTRS     Pullback50      eq     $16.75   53.8   -1.35   50MA bounce (-|
+|  WTW      Pullback50      eq     $323.67  30.8   -1.87   50MA bounce (+|
+|  AFG      Pullback50      eq     $143.47  46.8   -1.87   50MA bounce (+|
+|  AN       Pullback50      eq     $206.15  69.1   -1.11   50MA bounce (+|
+|  CBSH     Pullback50      eq     $58.63   50.1   -1.61   50MA bounce (-|
+|  CFR      Pullback50      eq     $163.40  46.8   -1.49   50MA bounce (+|
+|  FAF      Pullback50      eq     $72.95   52.6   -1.24   50MA bounce (+|
+|  GHC      Pullback50      eq     $1168.~  48.5   -0.82   50MA bounce (+|19:50:13  INFO        BUY  AES  $33.93  [Pullback50]  id=f126d047-6feb-4690-828a-1e548a22d896
+19:50:13  INFO        BUY  AMD  $33.93  [Pullback50]  id=6479794c-3128-43b9-8c78-4fef525aecaa
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
