@@ -1,0 +1,190 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=39 paper_keys=yes dry_run=False
+  alpaca positions=9
+options_reconcile: done
+Layout: controlled:1164:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1164
+PROBE FAIL: {"code":50010000,"message":"internal server error occurred"}
+paper probe failed (non-fatal)
+=== options_morning_bot (PAPER) 2026-09-14T11:27:57.421639-04:00 ===
+
+[Run context]
+2026-09-14 11:27:57,649 WARNING paper get_account failed attempt 1/3 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 2s
+2026-09-14 11:27:59,746 WARNING paper get_account failed attempt 2/3 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 4s
+2026-09-14 11:28:03,831 ERROR paper get_account failed after 3 attempts: {"code":50010000,"message":"internal server error occurred"}
+WARN: get_account failed ({"code":50010000,"message":"internal server error occurred"}) but positions OK (n=9). Keys are fine; Alpaca account endpoint is flaky. Using cached equity $1000241.84.
+2026-09-14 11:28:03,977 WARNING paper get_account failed attempt 1/2 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 2s
+2026-09-14 11:28:06,076 ERROR paper get_account failed after 2 attempts: {"code":50010000,"message":"internal server error occurred"}
+WARN: using cached paper equity $1000241.84 (get_account: {"code":50010000,"message":"internal server error occurred"})
+2026-09-14 11:28:06,185 WARNING lab get_account failed attempt 1/2: {"code":50010000,"message":"internal server error occurred"}
+2026-09-14 11:28:08,276 ERROR lab get_account failed after 2 attempts: {"code":50010000,"message":"internal server error occurred"}
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
+Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+  EXIT [b802|lab0802_s404_w2_1005_1045_r1|S404] stop_loss (-100.0%) SELL failed AMD260914C00550000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b779|lab0779_s397_w2_1005_1045_r2|S397] stop_loss (-100.0%) SELL failed AMD260914C00550000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b330|lab0330_s357_w2_1005_1045_r1|S357] stop_loss (-82.2%) SELL failed PATH260925C00017000: {"code":50010000,"message":"internal server error occurred"}
+Protective stops: placed=0 upgraded=0 already=1 failed=4 (market-first)
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S204, S205, S206, S208, S209, S210, S211, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S406, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 113/117 symbols
+Found 309 signal(s); top: ['S165:NVDA', 'S164:NVDA', 'S168:NVDA', 'S167:NVDA', 'S166:NVDA', 'S163:NVDA', 'S350:NVDA', 'S351:NVDA']
+Paper lab: $1000242 broker equity -> 1164 bucket(s) ($500 virtual each, unlimited paper)
+  [b1058 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1059 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1156 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1157 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1100 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1101 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1114 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1115 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b286 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b287 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b294 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b295 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b302 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b303 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b782 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b783 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b790 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b791 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b798 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b799 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b90 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b806 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b807 NVDA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b100 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b101 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b240 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b241 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b368 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b369 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b382 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b383 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b90 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b834 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b835 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b862 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b863 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b904 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b905 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b918 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b919 TSLA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1058 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1059 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1156 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1157 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1100 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1101 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1114 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1115 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b22 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b23 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b286 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b287 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b294 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b295 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b302 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b303 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b782 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b783 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b790 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b791 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b798 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b799 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b90 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b806 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b807 AMD] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1058 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1059 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1156 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1157 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1100 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1101 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1114 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1115 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b22 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b23 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b286 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b287 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b294 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b295 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b302 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b303 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b782 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b783 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b790 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b791 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b798 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b799 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b90 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b806 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b807 SMCI] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1058 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1059 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1156 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1157 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1100 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1101 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1114 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1115 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b286 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b287 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b294 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b295 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b302 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b303 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b782 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b783 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b790 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b791 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b798 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b799 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b90 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b806 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b807 AVGO] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1058 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1059 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1156 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1157 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1100 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1101 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1114 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b1115 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b22 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b23 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b286 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b287 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b294 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b295 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b302 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b303 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b368 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b369 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b382 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b383 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b424 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b425 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b782 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b783 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b790 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b791 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b798 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b799 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b90 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b806 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b807 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b90 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b834 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b835 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b904 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b905 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b918 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b919 MARA] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b240 UPST] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
+  [b241 UPST] ENTRY failed: {"code":50010000,"message":"internal server error occurred"}
