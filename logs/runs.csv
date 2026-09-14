@@ -7540,3 +7540,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-14 13:16:09,summary,bull,226.36,158.78,0,0,0,2,AMZN|TKR,both
 2026-09-14 13:21:11,summary,bull,226.37,158.78,0,0,0,2,AMZN|TKR,both
 2026-09-14 13:26:16,summary,bull,226.4,158.78,0,0,0,2,AMZN|TKR,both
+2026-09-14 13:56:29,scan_morning,bull,226.3,158.29,43,0,1,2,ALL|ALLE,both

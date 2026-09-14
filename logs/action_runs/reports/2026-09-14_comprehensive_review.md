@@ -1584,3 +1584,132 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20260914T135222Z
+
+- UTC timestamp: `20260914T135222Z`
+- GitHub run: [#9854](https://github.com/28twagg-ops/TradingBot/actions/runs/34851699467)
+- Run id: `34851699467`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260914T135222Z_live_bot.log`, `logs/action_runs/20260914T135222Z_live_options.log`, `logs/action_runs/20260914T135222Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1204 | 49.2 | -10.1 | +40.8 | $+15,812 |
+| TAINTED | 1829 | 33.4 | -38.8 | +12.0 | $-9,097 |
+| KEEP-only | 626 | 63.3 | +51.4 | +64.2 | $+10,734 |
+| KEEP-only recent | 429 | 61.3 | +53.3 | +74.5 | $+6,089 |
+
+- KEEP strategies (23): S163, S168, S173, S174, S210, S218, S350, S353, S354, S355, S356, S357, S361, S362, S363, S364, S365, S397, S399, S401, S403, S404, S406
+- KILL strategies (19): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S352, S360, S366, S398, S405, S407, S408, S411, S412
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-14T09:26:21.164064-04:00","date":"2026-09-14","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":11.8,"phases_s":{"reconcile":4.75},"signals":0,"placed":0,"equity":1000241.84,"open_positions":8,"pending_orders":0,"open_lots":41,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"9849","github_run_id":"34849104508","status":"ok","data_quality":{"clean":{"n":1204,"win":49.17,"med":-10.1,"avg":40.78,"pnl":15811.82},"tainted":{"n":1829,"win":33.35,"med":-38.81,"avg":11.98,"pnl":-9096.84},"keep_only":{"n":626,"win":63.26,"med":51.39,"avg":64.19,"pnl":10734.45},"keep_only_recent":{"n":429,"win":61.31,"med":53.33,"avg":74.49,"pnl":6089.0},"keep_strategies":["S163","S168","S173","S174","S210","S218","S350","S353","S354","S355","S356","S357","S361","S362","S363","S364","S365","S397","S399","S401","S403","S404","S406"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S352","S360","S366","S398","S405","S407","S408","S411","S412"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (116 earlier lines - see full log file)
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  43                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  GOOGL    Pullback50      eq     $345.53  47.9   -2.81   50MA bounce (-|
+|  GOOG     Pullback50      eq     $341.95  47.6   -3.02   50MA bounce (-|
+|  AMZN     Pullback50      eq     $253.91  41.2   -2.68   50MA bounce (-|
+|  AES      Pullback50      eq     $14.81   62.3   -2.40   50MA bounce (+|
+|  TECH     Pullback50      eq     $72.28   45.9   -2.34   50MA bounce (+|
+|  XYZ      Pullback50      eq     $79.90   46.5   -2.28   50MA bounce (-|
+|  BF-B     Pullback50      eq     $26.90   37.8   -2.49   50MA bounce (-|
+|  CB       Pullback50      eq     $343.62  47.3   -2.74   50MA bounce (-|
+|  EBAY     Pullback50      eq     $108.63  53.2   -2.03   50MA bounce (-|
+|  BEN      Pullback50      eq     $33.47   39.4   -2.28   50MA bounce (-|
+|  FCX      Pullback50      eq     $68.11   30.6   -2.11   50MA bounce (+|
+|  HIG      Pullback50      eq     $138.65  49.1   -2.25   50MA bounce (-|
+|  PANW     Pullback50      eq     $351.10  50.1   -1.76   50MA bounce (+|
+|  PAYX     Pullback50      eq     $117.95  31.3   -2.68   50MA bounce (+|
+|  PRU      Pullback50      eq     $119.97  43.3   -2.82   50MA bounce (-|
+|  SYF      Pullback50      eq     $76.20   36.1   -2.95   50MA bounce (-|
+|  USB      Pullback50      eq     $63.03   54.5   -3.46   50MA bounce (-|
+|  VLTO     Pullback50      eq     $96.58   37.4   -2.44   50MA bounce (+|
+|  VTRS     Pullback50      eq     $16.65   52.1   -2.46   50MA bounce (-|
+|  WRB      Pullback50      eq     $71.25   60.4   -1.89   50MA bounce (+|
+|  ZBH      Pullback50      eq     $96.20   37.0   -2.40   50MA bounce (+|
+|  AN       Pullback50      eq     $206.62  69.6   -2.15   50MA bounce (+|
+|  BJ       Pullback50      eq     $93.41   37.5   -1.68   50MA bounce (+|
+|  CBSH     Pullback50      eq     $58.78   51.7   -3.03   50MA bounce (-|
+|  CFR      Pullback50      eq     $164.60  50.6   -3.22   50MA bounce (+|
+|  FAF      Pullback50      eq     $72.67   51.6   -2.35   50MA bounce (-|13:56:29  INFO        place_all_stops: checking 2 positions...
+13:56:29  INFO        STOP skipped ALL: fractional (0.1317 shares) — software exit will handle it
+13:56:29  INFO        STOP skipped ALLE: fractional (0.2206 shares) — software exit will handle it
+13:56:29  INFO        Daily log -> logs/daily/2026-09-14.md
+13:56:29  INFO        Dashboard written → logs/dashboard.md
+
+|  FLR      Pullback50      eq     $52.42   53.7   -2.55   50MA bounce (+|
+|  GEF      Pullback50      eq     $82.92   37.1   -2.25   50MA bounce (+|
+|  HRB      Pullback50      eq     $46.55   17.0   -2.23   50MA bounce (+|
+|  HWC      Pullback50      eq     $75.72   55.2   -2.90   50MA bounce (-|
+|  HOMB     Pullback50      eq     $30.20   52.4   -3.11   50MA bounce (-|
+|  LEA      Pullback50      eq     $130.24  64.3   -2.56   50MA bounce (-|
+|  LIVN     Pullback50      eq     $79.52   55.2   -2.85   50MA bounce (-|
+|  MOH      Pullback50      eq     $209.66  64.2   -2.18   50MA bounce (+|
+|  ORI      Pullback50      eq     $41.82   48.5   -2.83   50MA bounce (-|
+|  PATH     Pullback50      eq     $14.29   37.3   -3.01   50MA bounce (+|
+|  SBRA     Pullback50      eq     $20.68   54.0   -1.52   50MA bounce (-|
+|  SHC      Pullback50      eq     $18.57   38.7   -1.41   50MA bounce (+|
+|  SIRI     Pullback50      eq     $29.62   59.9   -2.38   50MA bounce (-|
+|  SLAB     Pullback50      eq     $219.50  60.1   -2.02   50MA bounce (+|
+|  TCBI     Pullback50      eq     $99.41   56.7   -3.19   50MA bounce (-|
+|  UBSI     Pullback50      eq     $47.65   48.5   -3.30   50MA bounce (-|
+|  ZION     Pullback50      eq     $69.72   60.4   -2.53   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            899|
+|  Signals                                                             43|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             2|
+|  Equity                                                         $226.30|
+|  Cash                                                           $158.29|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
