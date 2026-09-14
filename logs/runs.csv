@@ -7575,3 +7575,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-14 16:41:09,exits,bull,226.37,192.01,0,0,0,1,ALLE,both
 2026-09-14 16:46:10,exits,bull,226.4,192.01,0,0,0,1,ALLE,both
 2026-09-14 16:51:03,exits,bull,226.48,192.01,0,0,0,1,ALLE,both
+2026-09-14 16:56:04,exits,bull,226.49,192.01,0,0,0,1,ALLE,both
