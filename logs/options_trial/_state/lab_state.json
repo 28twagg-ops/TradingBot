@@ -1082,26 +1082,6 @@
       "entry_order_id": "f89f213c-5698-486a-bd80-0d67ca3489dc"
     },
     {
-      "lot_id": "09cb2a8a2709",
-      "bucket_id": 235,
-      "profile_name": "lab0235_s401_w1_0928_1005_r2",
-      "strategy_id": "S401",
-      "occ_symbol": "MSFT260918C00517500",
-      "underlying": "MSFT",
-      "qty": 1,
-      "entry_cost": 68.0,
-      "entry_price": 0.68,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-15T14:06:28.140245+00:00",
-      "entry_order_id": "b357c1da-a2ef-47ea-9351-26ecd6048cbe"
-    },
-    {
       "lot_id": "b9231ec11375",
       "bucket_id": 234,
       "profile_name": "lab0234_s401_w1_0928_1005_r1",
@@ -2925,14 +2905,14 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "2d0da150-12ea-4e24-83b3-96a8dc64e048",
-      "lot_id": "80281917db97",
-      "bucket_id": 861,
-      "strategy_id": "S408",
-      "occ_symbol": "MSTR260918C00157500",
-      "qty": 1,
-      "reason": "take_profit (+76.5%)",
-      "submitted": "2026-09-15T11:42:11"
+      "order_id": "8b3826b9-1c8c-4fdb-8c29-b2e0152ffef3",
+      "lot_id": "df7e85af155e",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "MARA260918C00012000",
+      "qty": 2,
+      "reason": "stop_loss (-46.7%)",
+      "submitted": "2026-09-15T16:02:08"
     }
   ],
   "bucket_open_premium": {
@@ -2990,7 +2970,6 @@
     "b1150": 19.0,
     "b1053": 19.0,
     "b1052": 19.0,
-    "b235": 68.0,
     "b234": 68.0,
     "b167": 46.0,
     "b915": 18.0,
@@ -3730,7 +3709,8 @@
     "ba399242-2909-49f7-b71f-3ea44d466bfe",
     "50f7aa67-94e2-4a51-a6bd-1507573e2bc7",
     "2a0aa4b0-b92a-4704-b5fe-ece072fb8eac",
-    "a0d5f2a5-10d3-48ac-8af3-ef6b5778d360"
+    "a0d5f2a5-10d3-48ac-8af3-ef6b5778d360",
+    "1d9ac580-aed2-4be6-ad5a-b37f54a48b49"
   ],
   "submitted_today": 189,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
