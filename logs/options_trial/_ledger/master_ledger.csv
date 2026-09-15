@@ -13693,6 +13693,6 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-14T13:34:45Z,reconcile,192,lab0192_s218_w1_0928_1005_r1,S218,0277ef32e042,AMZN,AMZN260914C00262500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-15T13:01:20Z,reconcile,802,lab0802_s404_w2_1005_1045_r1,S404,a3cebfd0f56a,AMD,AMD260914C00550000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-15T13:01:20Z,reconcile,779,lab0779_s397_w2_1005_1045_r2,S397,279de315d281,AMD,AMD260914C00550000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-15T13:40:30Z,reconcile,330,lab0330_s357_w2_1005_1045_r1,S357,4850d0ee6357,PATH,PATH260925C00017000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-15T13:40:30Z,reconcile,180,lab0180_s217_w2_1005_1045_r1,S217,1cfeb793d106,HD,HD260918C00325000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-15 13:34:57.087459+00:00,exit,0,orphan_reconcile,ORPHAN,dc0ed772cb1f,MARA,MARA260918C00012000,1,,0.23,45.27,-49.2,-22.27,reconcile_fill,,-0.01,0.5,-0.4,,,1327f99f-fe47-436b-b972-9bc7943cf6e9
+2026-09-15T13:34:53Z,reconcile,180,lab0180_s217_w2_1005_1045_r1,S217,1cfeb793d106,HD,HD260918C00325000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-15T13:45:55Z,reconcile,330,lab0330_s357_w2_1005_1045_r1,S357,4850d0ee6357,PATH,PATH260925C00017000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-15 13:34:57.087459+00:00,exit,0,orphan_reconcile,ORPHAN,dc0ed772cb1f,MARA,MARA260918C00012000,1,,0.23,45.27,-49.2,-22.27,stop_loss (-49.7%),,-0.01,0.5,-0.4,,,1327f99f-fe47-436b-b972-9bc7943cf6e9
