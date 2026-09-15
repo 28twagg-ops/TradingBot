@@ -13897,3 +13897,9 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-15 15:31:33.616932+00:00,exit,804,lab0804_s404_w3_1045_1120_r1,S404,a896a430a4bb,COIN,COIN260918C00200000,1,,1.25,72.0,73.61,53.0,take_profit (+73.6%),,-0.01,0.5,-0.5,,,595a3d05-7f28-4480-b3ad-4628cd1d4560
 2026-09-15 15:31:30.523002+00:00,exit,0,orphan_reconcile,ORPHAN,3951f5783e17,MSTR,MSTR260918C00145000,1,,1.16,74.0,56.76,42.0,take_profit (+51.4%),,-0.01,0.5,-0.4,,,45459d6a-2b28-49e8-ba03-c4e939c25548
 2026-09-15T15:36:15Z,reconcile,858,lab0858_s408_w2_1005_1045_r1,S408,b3583db472c6,MSTR,MSTR260918C00150000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-15T15:42:07Z,reconcile,194,lab0194_s218_w2_1005_1045_r1,S218,2281071676f7,MS,MS260918C00212500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-15T15:42:08Z,reconcile,0,orphan_reconcile,ORPHAN,a18f3ba26839,COIN,COIN260918C00205000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-15 15:36:36.128244+00:00,exit,0,orphan_reconcile,ORPHAN,22709155a481,NKE,NKE260918C00036500,1,,0.8,46.0,73.91,34.0,take_profit (+60.0%),,-0.01,0.5,-0.4,,,80f4608b-b939-436d-8a1b-0d51529f8774
+2026-09-15 15:36:35.225212+00:00,exit,781,lab0781_s397_w3_1045_1120_r2,S397,725e7d40b022,COIN,COIN260918C00200000,1,,1.25,72.0,73.61,53.0,take_profit (+73.6%),,-0.01,0.5,-0.5,,,b89c7403-b912-4d84-ac41-181d60c10409
+2026-09-15 15:36:24.619164+00:00,exit,833,lab0833_s406_w3_1045_1120_r2,S406,8fdad641606c,MSTR,MSTR260918C00147000,1,,0.96,63.0,52.38,33.0,take_profit (+52.4%),,-0.01,0.5,-0.5,,,44662bea-9b08-4852-a453-32f1f2e1affd
+2026-09-15 15:36:26.605327+00:00,exit,856,lab0856_s408_w1_0928_1005_r1,S408,57c3ad2e4562,MSTR,MSTR260918C00152500,1,,0.53,33.0,60.61,20.0,take_profit (+54.5%),,-0.01,0.5,-0.5,,,8c143e25-5ff7-47cc-89c6-405b4657e1c8

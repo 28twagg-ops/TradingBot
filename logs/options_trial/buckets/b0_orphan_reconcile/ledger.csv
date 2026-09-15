@@ -512,3 +512,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-15 14:41:15.410423+00:00,exit,0,orphan_reconcile,ORPHAN,887a398506d2,AMD,AMD260916C00540000,1,,0.28,48.0,-41.67,-20.0,stop_loss (-41.7%),,-0.01,0.5,-0.4,,,94d0a02b-0e50-4e6c-be1a-bf46bb891774
 2026-09-15 15:16:13.704396+00:00,exit,0,orphan_reconcile,ORPHAN,dbdd74147a7c,BAC,BAC260918C00060000,1,,0.36,60.0,-40.0,-24.0,stop_loss (-40.0%),,-0.01,0.5,-0.4,,,96d5fae6-ac53-46a6-9b24-b43ed1a487bb
 2026-09-15 15:31:30.523002+00:00,exit,0,orphan_reconcile,ORPHAN,3951f5783e17,MSTR,MSTR260918C00145000,1,,1.16,74.0,56.76,42.0,take_profit (+51.4%),,-0.01,0.5,-0.4,,,45459d6a-2b28-49e8-ba03-c4e939c25548
+2026-09-15T15:42:08Z,reconcile,0,orphan_reconcile,ORPHAN,a18f3ba26839,COIN,COIN260918C00205000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-15 15:36:36.128244+00:00,exit,0,orphan_reconcile,ORPHAN,22709155a481,NKE,NKE260918C00036500,1,,0.8,46.0,73.91,34.0,take_profit (+60.0%),,-0.01,0.5,-0.4,,,80f4608b-b939-436d-8a1b-0d51529f8774
