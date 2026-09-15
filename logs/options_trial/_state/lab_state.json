@@ -1282,26 +1282,6 @@
       "entry_order_id": "69d2c5d7-e8a7-4e81-80a3-6384d486061d"
     },
     {
-      "lot_id": "b3583db472c6",
-      "bucket_id": 858,
-      "profile_name": "lab0858_s408_w2_1005_1045_r1",
-      "strategy_id": "S408",
-      "occ_symbol": "MSTR260918C00150000",
-      "underlying": "MSTR",
-      "qty": 1,
-      "entry_cost": 42.0,
-      "entry_price": 0.42,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-15T14:08:48.475697+00:00",
-      "entry_order_id": "1b6764b5-e694-4476-9fa9-cbfe2d50d968"
-    },
-    {
       "lot_id": "fd14c1d539b1",
       "bucket_id": 915,
       "profile_name": "lab0915_s412_w2_1005_1045_r2",
@@ -3906,14 +3886,54 @@
   ],
   "pending_exits": [
     {
-      "order_id": "e002bbc5-2a1e-4158-b0d7-bdfd1ed30bb5",
-      "lot_id": "b3583db472c6",
-      "bucket_id": 858,
+      "order_id": "8c143e25-5ff7-47cc-89c6-405b4657e1c8",
+      "lot_id": "57c3ad2e4562",
+      "bucket_id": 856,
       "strategy_id": "S408",
-      "occ_symbol": "MSTR260918C00150000",
+      "occ_symbol": "MSTR260918C00152500",
+      "qty": 1,
+      "reason": "take_profit (+54.5%)",
+      "submitted": "2026-09-15T11:36:23"
+    },
+    {
+      "order_id": "44662bea-9b08-4852-a453-32f1f2e1affd",
+      "lot_id": "8fdad641606c",
+      "bucket_id": 833,
+      "strategy_id": "S406",
+      "occ_symbol": "MSTR260918C00147000",
       "qty": 1,
       "reason": "take_profit (+52.4%)",
-      "submitted": "2026-09-15T11:31:29"
+      "submitted": "2026-09-15T11:36:24"
+    },
+    {
+      "order_id": "8e5aff19-e761-4c2e-8b02-1cbbac40d97b",
+      "lot_id": "2281071676f7",
+      "bucket_id": 194,
+      "strategy_id": "S218",
+      "occ_symbol": "MS260918C00212500",
+      "qty": 1,
+      "reason": "stop_loss (-69.1%)",
+      "submitted": "2026-09-15T11:36:32"
+    },
+    {
+      "order_id": "b89c7403-b912-4d84-ac41-181d60c10409",
+      "lot_id": "725e7d40b022",
+      "bucket_id": 781,
+      "strategy_id": "S397",
+      "occ_symbol": "COIN260918C00200000",
+      "qty": 1,
+      "reason": "take_profit (+73.6%)",
+      "submitted": "2026-09-15T11:36:35"
+    },
+    {
+      "order_id": "80f4608b-b939-436d-8a1b-0d51529f8774",
+      "lot_id": "a18f3ba26839",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "COIN260918C00205000",
+      "qty": 1,
+      "reason": "take_profit (+60.0%)",
+      "submitted": "2026-09-15T11:36:36"
     }
   ],
   "bucket_open_premium": {
@@ -3981,7 +4001,6 @@
     "b792": 38.0,
     "b194": 55.00000000000001,
     "b167": 46.0,
-    "b858": 42.0,
     "b915": 18.0,
     "b914": 18.0,
     "b901": 32.0,

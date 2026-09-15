@@ -13896,3 +13896,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-15 15:31:35.854054+00:00,exit,797,lab0797_s399_w3_1045_1120_r2,S399,0bb3f3cbb6ea,COIN,COIN260918C00205000,1,,0.82,50.0,64.0,32.0,take_profit (+64.0%),,-0.01,0.5,-0.5,,,b55a5b94-8523-4740-a55d-8a38864ed7f1
 2026-09-15 15:31:33.616932+00:00,exit,804,lab0804_s404_w3_1045_1120_r1,S404,a896a430a4bb,COIN,COIN260918C00200000,1,,1.25,72.0,73.61,53.0,take_profit (+73.6%),,-0.01,0.5,-0.5,,,595a3d05-7f28-4480-b3ad-4628cd1d4560
 2026-09-15 15:31:30.523002+00:00,exit,0,orphan_reconcile,ORPHAN,3951f5783e17,MSTR,MSTR260918C00145000,1,,1.16,74.0,56.76,42.0,take_profit (+51.4%),,-0.01,0.5,-0.4,,,45459d6a-2b28-49e8-ba03-c4e939c25548
+2026-09-15T15:36:15Z,reconcile,858,lab0858_s408_w2_1005_1045_r1,S408,b3583db472c6,MSTR,MSTR260918C00150000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
