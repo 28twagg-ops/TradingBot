@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-15
 
-_Generated 2026-09-15T12:06:21.827927_
+_Generated 2026-09-15T12:11:29.133041_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-15T12:06:21.827927_
 
 ## Attribution health
 
-- Total exits: **3072**
+- Total exits: **3073**
 - Orphan exits (b0/orphan_reconcile): **380**
 - Orphan rate: **12.4%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -31,7 +31,7 @@ _Generated 2026-09-15T12:06:21.827927_
 | S397 (GapDown_ITM1) | 3d | watch | 34 | 70.6 | +54.46 | -70.80 | -55.44 | +115.19 | 46 | 8 | 1 | $+762.00 | 23.5% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 54 | 68.5 | +50.93 | -54.96 | -47.87 | +185.67 | 46 | 8 | 4 | $+1,050.00 | 22.2% | fat left tail (p10 < -45%) |
 | S365 (RubberBand_14DTE) | 14d | watch | 23 | 56.5 | +48.00 | -61.14 | -49.56 | +72.51 | 46 | 4 | 4 | $+113.00 | 39.1% | fat left tail (p10 < -45%) |
-| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 81 | 58.0 | +47.83 | -66.67 | -45.00 | +153.45 | 50 | 7 | 3 | $+1,325.00 | 30.9% | fat left tail (p10 < -45%) |
+| S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 82 | 57.3 | +46.77 | -66.47 | -45.00 | +153.11 | 50 | 7 | 4 | $+1,321.00 | 30.5% | fat left tail (p10 < -45%) |
 | S404 (GapDown_OTM2) | 3d | watch | 54 | 61.1 | +45.74 | -91.67 | -47.33 | +110.05 | 46 | 9 | 2 | $+811.00 | 18.5% | fat left tail (p10 < -45%) |
 | S356 (GapDown_14DTE) | 14d | watch | 27 | 51.9 | +36.00 | -51.16 | -35.65 | +66.60 | 46 | 2 | 4 | $+123.00 | 37.0% | fat left tail (p10 < -45%) |
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 8 | 50.0 | +25.32 | -71.88 | -59.49 | +516.85 | 56 | 6 | 0 | $+206.00 | 25.0% | building sample (8-19 exits) |
@@ -201,13 +201,13 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 ### Phase-1 RSI/BB/Vol
 
-- Status: **INSUFFICIENT** | Best median: **S218** (+47.83%) | Best p10: **S219** (+0.00%)
+- Status: **INSUFFICIENT** | Best median: **S218** (+46.77%) | Best p10: **S219** (+0.00%)
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S216 | 3d ATM RSI x30 | 49 | -52.63 | -88.61 | -75.81 | 2 | 1 |
 | S217 | 3d ATM RSI<25 bounce | 58 | -45.08 | -78.25 | -55.42 | 2 | 1 |
-| S218 | 3d ATM BB lower touch | 81 | +47.83 | -66.67 | -45.00 | 7 | 3 |
+| S218 | 3d ATM BB lower touch | 82 | +46.77 | -66.47 | -45.00 | 7 | 4 |
 | S219 | 3d ATM vol climax up | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 
 ### Other
@@ -255,7 +255,7 @@ _Pipeline evaluation as of 2026-09-15. Auto-kill thresholds: median<-25% at n>=1
 | S215 | MA_Reclaim_200 | 0 | — | — | NEW | 0 |
 | S216 | RSI_Oversold_Cross | 49 | -52.63% | 18% | INSUFFICIENT | 50 |
 | S217 | RSI_25_Bounce | 58 | -45.08% | 41% | INSUFFICIENT | 50 |
-| S218 | BB_Lower_Touch | 81 | +47.83% | 58% | INSUFFICIENT | 50 |
+| S218 | BB_Lower_Touch | 82 | +46.77% | 57% | INSUFFICIENT | 50 |
 | S219 | Volume_Climax_Up | 0 | — | — | NEW | 0 |
 | S220 | Pullback50 | 0 | — | — | NEW | 0 |
 | S221 | GoldenPocket | 0 | — | — | NEW | 0 |
@@ -344,7 +344,7 @@ _Pipeline evaluation as of 2026-09-15. Auto-kill thresholds: median<-25% at n>=1
 | S362 | 47 | +55.56% | 72% | Tyler review |
 | S397 | 34 | +54.46% | 71% | Tyler review |
 | S403 | 54 | +50.93% | 69% | Tyler review |
-| S218 | 81 | +47.83% | 58% | Tyler review |
+| S218 | 82 | +46.77% | 57% | Tyler review |
 | S404 | 54 | +45.74% | 61% | Tyler review |
 | S364 | 54 | +23.90% | 52% | Tyler review |
 | S401 | 103 | +15.79% | 53% | Tyler review |
