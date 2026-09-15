@@ -7773,3 +7773,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-15 23:31:15,ext_exits,bull,224.93,157.09,0,0,0,2,AAL|ALLE,both
 2026-09-15 23:36:10,ext_exits,bull,224.93,157.09,0,0,0,2,AAL|ALLE,both
 2026-09-15 23:41:08,ext_exits,bull,224.93,157.09,0,0,0,2,AAL|ALLE,both
+2026-09-15 23:46:16,ext_exits,bull,224.95,157.09,0,0,0,2,AAL|ALLE,both
