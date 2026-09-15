@@ -791,7 +791,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 789,lab0789_s398_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-10,False,,,,,,,0,,,,idle
 790,lab0790_s398_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-15,False,,,,,,,0,MARA,S398,,entered_no_exit
 791,lab0791_s398_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-15,False,,,,,,,0,MARA,S398,,entered_no_exit
-792,lab0792_s399_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-15,False,,,,,,,0,COIN,S399,,entered_no_exit
+792,lab0792_s399_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-15,False,,,,,,,0,COIN,S399,,entered_no_exit
 793,lab0793_s399_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-15,False,,100.0,57.89,57.89,57.89,57.89,22.0,COIN,S399,take_profit (+55.3%),closed
 794,lab0794_s399_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-15,False,,,,,,,0,MARA,S399,,entered_no_exit
 795,lab0795_s399_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-15,False,,,,,,,0,MARA,S399,,entered_no_exit
@@ -861,8 +861,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 859,lab0859_s408_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-15,False,,100.0,57.14,57.14,57.14,57.14,24.0,MSTR,S408,take_profit (+54.8%),closed
 860,lab0860_s408_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-15,False,,,,,,,0,MSTR,S408,,entered_no_exit
 861,lab0861_s408_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-15,False,,,,,,,0,MSTR,S408,,entered_no_exit
-862,lab0862_s408_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-15,False,,,,,,,0,MSTR,S408,,entered_no_exit
-863,lab0863_s408_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-15,False,,,,,,,0,MSTR,S408,,entered_no_exit
+862,lab0862_s408_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-15,False,,,,,,,0,MSTR,S408,,entered_no_exit
+863,lab0863_s408_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-15,False,,,,,,,0,MSTR,S408,,entered_no_exit
 864,lab0864_s408_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 865,lab0865_s408_w5_1300_1330_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 866,lab0866_s408_w6_1400_1430_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
