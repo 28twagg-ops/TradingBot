@@ -722,26 +722,6 @@
       "entry_order_id": "25d4a0f9-3db8-4e89-ac09-45ca8e3a399c"
     },
     {
-      "lot_id": "dfdd94347811",
-      "bucket_id": 376,
-      "profile_name": "lab0376_s362_w1_0928_1005_r1",
-      "strategy_id": "S362",
-      "occ_symbol": "PATH260918C00015500",
-      "underlying": "PATH",
-      "qty": 1,
-      "entry_cost": 10.0,
-      "entry_price": 0.1,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-15T14:04:27.619924+00:00",
-      "entry_order_id": "8df2d52e-8f0a-4992-bbfa-75525cc04c64"
-    },
-    {
       "lot_id": "e1ac73e01893",
       "bucket_id": 363,
       "profile_name": "lab0363_s361_w1_0928_1005_r2",
@@ -2869,7 +2849,6 @@
     "b1128": 48.0,
     "b193": 60.0,
     "b192": 60.0,
-    "b376": 10.0,
     "b363": 20.0,
     "b362": 20.0,
     "b345": 10.0,
@@ -3534,7 +3513,8 @@
     "c8055bdb-b25a-4b12-a150-abfadcde163c",
     "d335747c-2d33-4d4a-944e-e24718a91ace",
     "442a59b9-a7f5-478f-957b-1f9ddd678068",
-    "628b595c-4594-4098-aae4-7286d50bdeb0"
+    "628b595c-4594-4098-aae4-7286d50bdeb0",
+    "a41c077f-3d4e-41bf-8737-d542d622b873"
   ],
   "submitted_today": 111,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
