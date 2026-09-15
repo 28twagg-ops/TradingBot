@@ -2602,26 +2602,6 @@
       "entry_order_id": "18a3b016-9af2-466b-94ad-68222de1d2c3"
     },
     {
-      "lot_id": "0bb3f3cbb6ea",
-      "bucket_id": 797,
-      "profile_name": "lab0797_s399_w3_1045_1120_r2",
-      "strategy_id": "S399",
-      "occ_symbol": "COIN260918C00205000",
-      "underlying": "COIN",
-      "qty": 1,
-      "entry_cost": 50.0,
-      "entry_price": 0.5,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-15T14:48:43.591722+00:00",
-      "entry_order_id": "508eb87c-f776-4c75-b043-3bc375ebb130"
-    },
-    {
       "lot_id": "a18f3ba26839",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -2662,26 +2642,6 @@
       "entry_order_id": "orphan:PATH260918C00016000"
     },
     {
-      "lot_id": "3951f5783e17",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "MSTR260918C00145000",
-      "underlying": "MSTR",
-      "qty": 1,
-      "entry_cost": 74.0,
-      "entry_price": 0.74,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-15T14:51:12.888261+00:00",
-      "entry_order_id": "orphan:MSTR260918C00145000"
-    },
-    {
       "lot_id": "d8310518ce3f",
       "bucket_id": 238,
       "profile_name": "lab0238_s401_w3_1045_1120_r1",
@@ -2700,26 +2660,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-15T14:52:43.070454+00:00",
       "entry_order_id": "d8c3ac15-a1ac-4d2b-877a-08c6b3a99176"
-    },
-    {
-      "lot_id": "a896a430a4bb",
-      "bucket_id": 804,
-      "profile_name": "lab0804_s404_w3_1045_1120_r1",
-      "strategy_id": "S404",
-      "occ_symbol": "COIN260918C00200000",
-      "underlying": "COIN",
-      "qty": 1,
-      "entry_cost": 72.0,
-      "entry_price": 0.72,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-15T14:52:43.144565+00:00",
-      "entry_order_id": "38df0bb8-abf6-4e8d-8f8a-c96b73fef422"
     },
     {
       "lot_id": "725e7d40b022",
@@ -3898,9 +3838,84 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
+    },
+    {
+      "order_id": "5bace907-e60d-4c72-b5ec-9e103a9e23e0",
+      "bucket_id": 904,
+      "strategy_id": "S411",
+      "occ_symbol": "DDOG260918C00250000",
+      "underlying": "DDOG",
+      "qty": 1,
+      "limit": 0.67,
+      "profile_name": "lab0904_s411_w4_1120_1135_r1",
+      "submitted": "2026-09-15",
+      "detail": "RB gap -2.6% reclaim",
+      "spread_frac": 0.17600000000000016,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "aede80f9-3bd0-4fa7-88e5-8b0eddb4cfa8",
+      "bucket_id": 905,
+      "strategy_id": "S411",
+      "occ_symbol": "DDOG260918C00250000",
+      "underlying": "DDOG",
+      "qty": 1,
+      "limit": 0.67,
+      "profile_name": "lab0905_s411_w4_1120_1135_r2",
+      "submitted": "2026-09-15",
+      "detail": "RB gap -2.6% reclaim",
+      "spread_frac": 0.17600000000000016,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "41b9fbeb-b272-45d8-9f0a-c6fea15f96b9",
+      "bucket_id": 170,
+      "strategy_id": "S216",
+      "occ_symbol": "MCD260918C00265000",
+      "underlying": "MCD",
+      "qty": 1,
+      "limit": 0.18,
+      "profile_name": "lab0170_s216_w4_1120_1135_r1",
+      "submitted": "2026-09-15",
+      "detail": "RSI crossed 30: 28.6 -> 30.7",
+      "spread_frac": 0.2352941176470589,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "2281ed59-6cfe-46e6-9e07-8f8bc54a9a43",
+      "bucket_id": 171,
+      "strategy_id": "S216",
+      "occ_symbol": "MCD260918C00265000",
+      "underlying": "MCD",
+      "qty": 1,
+      "limit": 0.18,
+      "profile_name": "lab0171_s216_w4_1120_1135_r2",
+      "submitted": "2026-09-15",
+      "detail": "RSI crossed 30: 28.6 -> 30.7",
+      "spread_frac": 0.2352941176470589,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "e002bbc5-2a1e-4158-b0d7-bdfd1ed30bb5",
+      "lot_id": "b3583db472c6",
+      "bucket_id": 858,
+      "strategy_id": "S408",
+      "occ_symbol": "MSTR260918C00150000",
+      "qty": 1,
+      "reason": "take_profit (+52.4%)",
+      "submitted": "2026-09-15T11:31:29"
+    }
+  ],
   "bucket_open_premium": {
     "b434": 51.0,
     "b433": 49.0,
@@ -4001,7 +4016,7 @@
     "b1055": 46.0,
     "b1054": 46.0,
     "b236": 63.0,
-    "b0": 443.8956,
+    "b0": 369.8956,
     "b887": 68.0,
     "b886": 68.0,
     "b771": 68.0,
@@ -4029,9 +4044,7 @@
     "b267": 3.0,
     "b833": 63.0,
     "b832": 63.0,
-    "b797": 50.0,
     "b238": 55.00000000000001,
-    "b804": 72.0,
     "b781": 72.0,
     "b780": 72.0,
     "b913": 15.0,
@@ -4254,7 +4267,11 @@
     "240|S401|2026-09-15",
     "241|S401|2026-09-15",
     "834|S406|2026-09-15",
-    "835|S406|2026-09-15"
+    "835|S406|2026-09-15",
+    "904|S411|2026-09-15",
+    "905|S411|2026-09-15",
+    "170|S216|2026-09-15",
+    "171|S216|2026-09-15"
   ],
   "processed_orders": [
     "d41ddd25-fa84-4968-bade-ed52d2a06fea",
@@ -4701,9 +4718,12 @@
     "82a50ed5-1afc-4108-8277-90be1b30db3f",
     "4871e2f0-a296-4148-80b0-f2515c23de24",
     "459fabc3-04a6-4066-854c-7105c2cd7f01",
-    "2b5eece4-c7a5-41c0-a705-04d947f43be4"
+    "2b5eece4-c7a5-41c0-a705-04d947f43be4",
+    "b55a5b94-8523-4740-a55d-8a38864ed7f1",
+    "595a3d05-7f28-4480-b3ad-4628cd1d4560",
+    "45459d6a-2b28-49e8-ba03-c4e939c25548"
   ],
-  "submitted_today": 185,
+  "submitted_today": 189,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-15"
 }
