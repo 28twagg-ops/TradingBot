@@ -3133,6 +3133,26 @@
       "qty": 1,
       "reason": "take_profit (+76.5%)",
       "submitted": "2026-09-15T11:42:11"
+    },
+    {
+      "order_id": "ba399242-2909-49f7-b71f-3ea44d466bfe",
+      "lot_id": "6f7f01b37d67",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "SNOW260918C00347500",
+      "qty": 1,
+      "reason": "stop_loss (-41.3%)",
+      "submitted": "2026-09-15T14:01:12"
+    },
+    {
+      "order_id": "1319b193-ec1a-4cf1-b778-9bda20f141a2",
+      "lot_id": "321cf0389664",
+      "bucket_id": 786,
+      "strategy_id": "S398",
+      "occ_symbol": "SNOW260918C00350000",
+      "qty": 1,
+      "reason": "stop_loss (-63.0%)",
+      "submitted": "2026-09-15T14:01:13"
     }
   ],
   "bucket_open_premium": {
