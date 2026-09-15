@@ -1747,3 +1747,132 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20260915T135216Z
+
+- UTC timestamp: `20260915T135216Z`
+- GitHub run: [#9986](https://github.com/28twagg-ops/TradingBot/actions/runs/34977572365)
+- Run id: `34977572365`
+- Live bot: exit=`0`, duration=`237s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260915T135216Z_live_bot.log`, `logs/action_runs/20260915T135216Z_live_options.log`, `logs/action_runs/20260915T135216Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1204 | 49.2 | -10.1 | +40.8 | $+15,812 |
+| TAINTED | 1829 | 33.4 | -38.8 | +12.0 | $-9,097 |
+| KEEP-only | 626 | 63.3 | +51.4 | +64.2 | $+10,734 |
+| KEEP-only recent | 429 | 61.3 | +53.3 | +74.5 | $+6,089 |
+
+- KEEP strategies (23): S163, S168, S173, S174, S210, S218, S350, S353, S354, S355, S356, S357, S361, S362, S363, S364, S365, S397, S399, S401, S403, S404, S406
+- KILL strategies (19): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S352, S360, S366, S398, S405, S407, S408, S411, S412
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-15T09:26:09.377657-04:00","date":"2026-09-15","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.7,"phases_s":{"reconcile":0.12},"signals":0,"placed":0,"equity":1000993.44,"open_positions":5,"pending_orders":0,"open_lots":37,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"9981","github_run_id":"34974850745","status":"ok","data_quality":{"clean":{"n":1204,"win":49.17,"med":-10.1,"avg":40.78,"pnl":15811.82},"tainted":{"n":1829,"win":33.35,"med":-38.81,"avg":11.98,"pnl":-9096.84},"keep_only":{"n":626,"win":63.26,"med":51.39,"avg":64.19,"pnl":10734.45},"keep_only_recent":{"n":429,"win":61.31,"med":53.33,"avg":74.49,"pnl":6089.0},"keep_strategies":["S163","S168","S173","S174","S210","S218","S350","S353","S354","S355","S356","S357","S361","S362","S363","S364","S365","S397","S399","S401","S403","S404","S406"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S352","S360","S366","S398","S405","S407","S408","S411","S412"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (128 earlier lines - see full log file)
+|  CBSH     Pullback50      eq     $58.86   57.9   -3.07   50MA bounce (+|
+|  CFR      Pullback50      eq     $163.72  51.2   -3.22   50MA bounce (+|
+|  CVLT     Pullback50      eq     $138.70  57.7   -2.83   50MA bounce (+|
+|  HOMB     Pullback50      eq     $30.18   55.1   -3.09   50MA bounce (-|
+|  HWC      Pullback50      eq     $76.07   58.4   -2.79   50MA bounce (-|
+|  KEX      Pullback50      eq     $139.25  54.6   -3.38   50MA bounce (-|
+|  SIRI     Pullback50      eq     $29.58   57.6   -2.40   50MA bounce (-|
+|  SLAB     Pullback50      eq     $219.60  58.5   -2.09   50MA bounce (+|
+|  TOST     Pullback50      eq     $32.94   25.4   -2.43   50MA bounce (+|
+|  UBSI     Pullback50      eq     $48.13   57.2   -3.33   50MA bounce (+|
+|  ZION     Pullback50      eq     $69.59   61.9   -2.53   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AMZN  Pullback50                                   $33.79|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|13:55:51  INFO        BUY  APO  $33.79  [Pullback50]  id=4979f33c-0eea-48b2-ae5c-a2f2833250ee
+13:56:13  INFO        place_all_stops: checking 3 positions...
+13:56:13  INFO        STOP skipped ALLE: fractional (0.2206 shares) — software exit will handle it
+13:56:13  INFO        STOP skipped AMZN: fractional (0.1339 shares) — software exit will handle it
+13:56:13  INFO        STOP skipped APO: fractional (0.2624 shares) — software exit will handle it
+13:56:13  INFO        Daily log -> logs/daily/2026-09-15.md
+13:56:13  INFO        Dashboard written → logs/dashboard.md
+
+|    ENTER [eq] APO  Pullback50                                    $33.79|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] CFG  Pullback50                                      cap 3|
+|    SKIP [eq] DHR  Pullback50                                      cap 3|
+|    SKIP [eq] FDS  Pullback50                                      cap 3|
+|    SKIP [eq] NVDA  Pullback50                                     cap 3|
+|    SKIP [eq] STLD  Pullback50                                     cap 3|
+|    SKIP [eq] TFC  Pullback50                                      cap 3|
+|    SKIP [eq] USB  Pullback50                                      cap 3|
+|    SKIP [eq] AN  Pullback50                                       cap 3|
+|    SKIP [eq] CART  Pullback50                                     cap 3|
+|    SKIP [eq] CBSH  Pullback50                                     cap 3|
+|    SKIP [eq] CFR  Pullback50                                      cap 3|
+|    SKIP [eq] CVLT  Pullback50                                     cap 3|
+|    SKIP [eq] HOMB  Pullback50                                     cap 3|
+|    SKIP [eq] HWC  Pullback50                                      cap 3|
+|    SKIP [eq] KEX  Pullback50                                      cap 3|
+|    SKIP [eq] SIRI  Pullback50                                     cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] TOST  Pullback50                                     cap 3|
+|    SKIP [eq] UBSI  Pullback50                                     cap 3|
+|    SKIP [eq] ZION  Pullback50                                     cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  AMZN                                                 still unconfirmed|
+|  APO                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            900|
+|  Signals                                                             22|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $225.17|
+|  Cash                                                           $123.67|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
