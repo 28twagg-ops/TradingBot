@@ -1442,26 +1442,6 @@
       "entry_order_id": "c6efe594-4904-4c05-9414-07dbb137b7d8"
     },
     {
-      "lot_id": "8a5128cb1be5",
-      "bucket_id": 787,
-      "profile_name": "lab0787_s398_w2_1005_1045_r2",
-      "strategy_id": "S398",
-      "occ_symbol": "SNOW260918C00350000",
-      "underlying": "SNOW",
-      "qty": 1,
-      "entry_cost": 46.0,
-      "entry_price": 0.46,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-15T14:08:49.165234+00:00",
-      "entry_order_id": "eff1d99c-c33b-4f10-9715-ab97989b0bec"
-    },
-    {
       "lot_id": "d296ff4c2922",
       "bucket_id": 299,
       "profile_name": "lab0299_s353_w2_1005_1045_r2",
@@ -3035,14 +3015,24 @@
       "submitted": "2026-09-15T11:42:11"
     },
     {
-      "order_id": "50f7aa67-94e2-4a51-a6bd-1507573e2bc7",
-      "lot_id": "8a5128cb1be5",
-      "bucket_id": 787,
-      "strategy_id": "S398",
+      "order_id": "a0d5f2a5-10d3-48ac-8af3-ef6b5778d360",
+      "lot_id": "39a2b8c44f0e",
+      "bucket_id": 829,
+      "strategy_id": "S406",
+      "occ_symbol": "MSTR260918C00148000",
+      "qty": 1,
+      "reason": "stop_loss (-51.6%)",
+      "submitted": "2026-09-15T14:46:12"
+    },
+    {
+      "order_id": "2a0aa4b0-b92a-4704-b5fe-ece072fb8eac",
+      "lot_id": "d296ff4c2922",
+      "bucket_id": 299,
+      "strategy_id": "S353",
       "occ_symbol": "SNOW260918C00350000",
       "qty": 1,
-      "reason": "stop_loss (-54.3%)",
-      "submitted": "2026-09-15T14:41:45"
+      "reason": "stop_loss (-52.2%)",
+      "submitted": "2026-09-15T14:46:14"
     }
   ],
   "bucket_open_premium": {
@@ -3118,7 +3108,6 @@
     "b364": 18.0,
     "b347": 18.0,
     "b346": 18.0,
-    "b787": 46.0,
     "b299": 46.0,
     "b298": 46.0,
     "b291": 46.0,
@@ -3842,7 +3831,8 @@
     "c4c69553-3829-4b39-9e9f-2feea8c5f6a7",
     "1a7e5530-7cc7-4dce-8291-99cbe33678d8",
     "1319b193-ec1a-4cf1-b778-9bda20f141a2",
-    "ba399242-2909-49f7-b71f-3ea44d466bfe"
+    "ba399242-2909-49f7-b71f-3ea44d466bfe",
+    "50f7aa67-94e2-4a51-a6bd-1507573e2bc7"
   ],
   "submitted_today": 189,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
