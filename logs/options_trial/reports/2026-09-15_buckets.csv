@@ -827,7 +827,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 825,lab0825_s405_w6_1400_1430_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 826,lab0826_s405_w7_1500_1530_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 827,lab0827_s405_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
-828,lab0828_s406_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-15,False,,,,,,,0,MSTR,S406,,entered_no_exit
+828,lab0828_s406_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-15,False,,,,,,,0,MSTR,S406,,entered_no_exit
 829,lab0829_s406_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-15,False,,0.0,-51.56,-51.56,-51.56,-51.56,-33.0,MSTR,S406,stop_loss (-51.6%),closed
 830,lab0830_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-15,False,,,,,,,0,MARA,S406,,entered_no_exit
 831,lab0831_s406_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-15,False,,,,,,,0,MARA,S406,,entered_no_exit

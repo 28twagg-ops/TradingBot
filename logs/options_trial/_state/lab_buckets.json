@@ -4970,8 +4970,8 @@
   {
     "bucket_id": 828,
     "profile": "lab0828_s406_w1_0928_1005_r1",
-    "open_premium": 64.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 829,

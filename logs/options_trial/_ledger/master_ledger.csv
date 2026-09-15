@@ -13922,3 +13922,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-15T18:51:07Z,reconcile,832,lab0832_s406_w3_1045_1120_r1,S406,d7f2f8c1e5f8,MSTR,MSTR260918C00147000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-15 18:46:14.629779+00:00,exit,299,lab0299_s353_w2_1005_1045_r2,S353,d296ff4c2922,SNOW,SNOW260918C00350000,1,,0.22,46.0,-52.17,-24.0,stop_loss (-52.2%),,-0.01,0.5,-0.5,,,2a0aa4b0-b92a-4704-b5fe-ece072fb8eac
 2026-09-15 18:46:12.737165+00:00,exit,829,lab0829_s406_w1_0928_1005_r2,S406,39a2b8c44f0e,MSTR,MSTR260918C00148000,1,,0.31,64.0,-51.56,-33.0,stop_loss (-51.6%),,-0.01,0.5,-0.5,,,a0d5f2a5-10d3-48ac-8af3-ef6b5778d360
+2026-09-15T18:56:20Z,reconcile,828,lab0828_s406_w1_0928_1005_r1,S406,091837b59e7e,MSTR,MSTR260918C00148000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
