@@ -5,8 +5,8 @@ S166,GapDown strong call,3d ATM strong,watch,building sample (8-19 exits),49,8,8
 S163,A1 GapDown ATM call EOD,7d ATM,watch,building sample (8-19 exits),111,15,13,2,76.5,74.6,-7.32,66.03,171.25,514.0,4,56,2,0,4,33.3
 S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),159,78,55,23,202.05,72.48,-60.06,-6.38,965.79,3400.0,14,46,5,0,14,19.2
 S410,RubberBand_OTM1,3d,watch,building sample (8-19 exits),28,9,6,3,31.77,65.28,-70.41,-48.44,101.53,181.0,5,40,2,1,2,88.9
-S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),119,45,34,11,151.2,57.14,-59.43,8.7,694.28,1392.0,8,46,4,0,6,28.9
 S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),51,25,20,5,39.32,57.14,-74.18,47.06,78.22,532.0,10,46,0,1,5,32.0
+S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),119,46,34,12,146.83,56.35,-59.28,-20.65,678.57,1387.0,9,46,4,1,7,28.3
 S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),131,32,23,9,35.84,54.46,-72.49,-56.38,115.32,743.0,9,46,2,0,12,21.9
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),116,53,36,17,55.18,50.88,-55.31,-47.92,186.0,1048.0,12,46,6,3,15,22.6
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),173,80,47,33,52.02,48.91,-67.15,-45.0,154.55,1352.0,17,50,5,2,15,31.2
@@ -74,7 +74,7 @@ S416,BBSqueeze_ATM,0d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0
 S417,BBSqueeze_OTM1,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S418,BBSqueeze_OTM2,7d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S419,BBSqueeze_OTM3,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
-S367,RubberBand_30DTE,30d,watch,insufficient sample (<8 exits),10,2,0,2,-38.2,-38.2,-48.75,-44.79,-27.64,-55.0,2,42,0,0,1,100.0
+S367,RubberBand_30DTE,30d,watch,insufficient sample (<8 exits),12,2,0,2,-38.2,-38.2,-48.75,-44.79,-27.64,-55.0,2,42,2,0,1,100.0
 S366,RubberBand_21DTE,21d,watch,early sample with non-positive median,44,13,5,8,-1.53,-49.12,-56.92,-56.92,95.73,-52.0,4,42,0,1,2,61.5
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),20,6,1,5,-33.91,-50.0,-66.67,-62.5,14.93,-5.0,2,46,0,0,2,83.3
 S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,early sample with non-positive median,130,16,4,12,31.09,-51.78,-96.88,-88.89,343.79,81.0,8,56,4,2,7,31.2
