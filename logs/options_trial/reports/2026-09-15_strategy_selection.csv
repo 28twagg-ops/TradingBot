@@ -3,14 +3,14 @@ S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,building sample (8-19 exits),99,
 S396,GapDown_ITM2,3d,watch,insufficient sample (<8 exits),28,6,5,1,63.82,89.03,-3.8,77.19,106.25,241.0,3,40,2,2,1,100.0
 S166,GapDown strong call,3d ATM strong,watch,building sample (8-19 exits),49,8,8,0,113.61,75.23,63.34,67.08,194.5,436.0,2,56,0,0,3,62.5
 S163,A1 GapDown ATM call EOD,7d ATM,watch,building sample (8-19 exits),111,15,13,2,76.5,74.6,-7.32,66.03,171.25,514.0,4,56,2,0,4,33.3
-S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),158,77,54,23,204.52,72.55,-60.54,-6.38,965.79,3396.0,14,46,4,0,13,19.5
+S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),159,78,55,23,202.05,72.48,-60.06,-6.38,965.79,3400.0,14,46,5,0,14,19.2
 S410,RubberBand_OTM1,3d,watch,building sample (8-19 exits),28,9,6,3,31.77,65.28,-70.41,-48.44,101.53,181.0,5,40,2,1,2,88.9
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),119,45,34,11,151.2,57.14,-59.43,8.7,694.28,1392.0,8,46,4,0,6,28.9
 S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),51,25,20,5,39.32,57.14,-74.18,47.06,78.22,532.0,10,46,0,1,5,32.0
 S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),129,32,23,9,35.84,54.46,-72.49,-56.38,115.32,743.0,9,46,0,0,12,21.9
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),116,53,36,17,55.18,50.88,-55.31,-47.92,186.0,1048.0,12,46,6,3,15,22.6
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),173,80,47,33,52.02,48.91,-67.15,-45.0,154.55,1352.0,17,50,5,2,15,31.2
-S365,RubberBand_14DTE,14d,watch,fat left tail (p10 < -45%),52,23,13,10,20.22,48.0,-61.14,-49.56,72.51,113.0,7,46,2,4,5,39.1
+S365,RubberBand_14DTE,14d,watch,fat left tail (p10 < -45%),54,23,13,10,20.22,48.0,-61.14,-49.56,72.51,113.0,7,46,4,4,5,39.1
 S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),140,51,30,21,19.95,45.21,-91.67,-50.41,111.54,702.0,10,46,0,0,15,17.6
 S356,GapDown_14DTE,14d,watch,fat left tail (p10 < -45%),59,27,14,13,11.32,36.0,-51.16,-35.65,66.6,123.0,8,46,0,4,5,37.0
 S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,building sample (8-19 exits),114,8,4,4,127.45,25.32,-71.88,-59.49,516.85,206.0,3,56,4,0,4,25.0

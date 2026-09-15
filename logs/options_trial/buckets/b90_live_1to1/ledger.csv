@@ -51,3 +51,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10T17:21:01Z,reconcile,90,live_1to1,S218,a5d50cb07fae,GOOGL,GOOGL260914C00340000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-15 14:04:23.096826+00:00,entry,90,live_1to1,S218,ef0c00f910ef,BAC,BAC260918C00060000,1,0.61,0.6,60.0,,,,-0.01,,0.5,-0.4,0.15652173913043474,low=59.00 BB_lower=59.91 touch+green,2d7ac633-84b5-41d9-a7e5-59801fdc0bb5
 2026-09-10 17:18:11.407608+00:00,exit,90,live_1to1,S218,ef0c00f910ef,BAC,BAC260918C00060000,1,,1.01,60.0,68.33,41.0,reconcile_fill,,-0.01,0.5,-0.4,,,2648cdab-831b-40ea-a0bb-c2416716aa53
+2026-09-15 14:15:53.058118+00:00,entry,90,live_1to1,S406,992882c0820d,PATH,PATH260918C00014500,1,0.36,0.34,34.0,,,,-0.01,,0.5,-0.4,0.05555555555555561,RB gap -2.0% reclaim,7344dedc-310c-475e-bc6e-85fd32d2e663
+2026-09-10 16:31:33.801732+00:00,exit,90,live_1to1,S406,992882c0820d,PATH,PATH260918C00014500,1,,0.38,34.0,11.76,4.0,reconcile_fill,,-0.01,0.5,-0.4,,,e634183c-d470-4c54-8c8f-4ffc09f368aa

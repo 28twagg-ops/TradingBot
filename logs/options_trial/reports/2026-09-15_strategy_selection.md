@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-15
 
-_Generated 2026-09-15T10:12:33.974486_
+_Generated 2026-09-15T10:18:03.402143_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-15T10:12:33.974486_
 
 ## Attribution health
 
-- Total exits: **3041**
+- Total exits: **3042**
 - Orphan exits (b0/orphan_reconcile): **375**
 - Orphan rate: **12.3%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -24,14 +24,14 @@ _Generated 2026-09-15T10:12:33.974486_
 | S396 (GapDown_ITM2) | 3d | watch | 6 | 83.3 | +89.03 | -3.80 | +77.19 | +106.25 | 40 | 2 | 2 | $+241.00 | 100.0% | insufficient sample (<8 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 8 | 100.0 | +75.23 | +63.34 | +67.08 | +194.50 | 56 | 0 | 0 | $+436.00 | 62.5% | building sample (8-19 exits) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 15 | 86.7 | +74.60 | -7.32 | +66.03 | +171.25 | 56 | 2 | 0 | $+514.00 | 33.3% | building sample (8-19 exits) |
-| S406 (RubberBand_ITM3) | 3d | watch | 77 | 70.1 | +72.55 | -60.54 | -6.38 | +965.79 | 46 | 4 | 0 | $+3,396.00 | 19.5% | fat left tail (p10 < -45%) |
+| S406 (RubberBand_ITM3) | 3d | watch | 78 | 70.5 | +72.48 | -60.06 | -6.38 | +965.79 | 46 | 5 | 0 | $+3,400.00 | 19.2% | fat left tail (p10 < -45%) |
 | S410 (RubberBand_OTM1) | 3d | watch | 9 | 66.7 | +65.28 | -70.41 | -48.44 | +101.53 | 40 | 2 | 1 | $+181.00 | 88.9% | building sample (8-19 exits) |
 | S362 (RubberBand_3DTE) | 3d | watch | 45 | 75.6 | +57.14 | -59.43 | +8.70 | +694.28 | 46 | 4 | 0 | $+1,392.00 | 28.9% | fat left tail (p10 < -45%) |
 | S357 (GapDown_21DTE) | 21d | watch | 25 | 80.0 | +57.14 | -74.18 | +47.06 | +78.22 | 46 | 0 | 1 | $+532.00 | 32.0% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 32 | 71.9 | +54.46 | -72.49 | -56.38 | +115.32 | 46 | 0 | 0 | $+743.00 | 21.9% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 53 | 67.9 | +50.88 | -55.31 | -47.92 | +186.00 | 46 | 6 | 3 | $+1,048.00 | 22.6% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 80 | 58.8 | +48.91 | -67.15 | -45.00 | +154.55 | 50 | 5 | 2 | $+1,352.00 | 31.2% | fat left tail (p10 < -45%) |
-| S365 (RubberBand_14DTE) | 14d | watch | 23 | 56.5 | +48.00 | -61.14 | -49.56 | +72.51 | 46 | 2 | 4 | $+113.00 | 39.1% | fat left tail (p10 < -45%) |
+| S365 (RubberBand_14DTE) | 14d | watch | 23 | 56.5 | +48.00 | -61.14 | -49.56 | +72.51 | 46 | 4 | 4 | $+113.00 | 39.1% | fat left tail (p10 < -45%) |
 | S404 (GapDown_OTM2) | 3d | watch | 51 | 58.8 | +45.21 | -91.67 | -50.41 | +111.54 | 46 | 0 | 0 | $+702.00 | 17.6% | fat left tail (p10 < -45%) |
 | S356 (GapDown_14DTE) | 14d | watch | 27 | 51.9 | +36.00 | -51.16 | -35.65 | +66.60 | 46 | 0 | 4 | $+123.00 | 37.0% | fat left tail (p10 < -45%) |
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 8 | 50.0 | +25.32 | -71.88 | -59.49 | +516.85 | 56 | 4 | 0 | $+206.00 | 25.0% | building sample (8-19 exits) |
@@ -315,7 +315,7 @@ _Pipeline evaluation as of 2026-09-15. Auto-kill thresholds: median<-25% at n>=1
 | S403 | Any_MA50_Touch | 53 | +50.88% | 68% | INSUFFICIENT | 46 |
 | S404 | GapDown_OTM2 | 51 | +45.21% | 59% | INSUFFICIENT | 46 |
 | S405 | GapDown_OTM3 | 56 | -42.86% | 34% | INSUFFICIENT | 46 |
-| S406 | RubberBand_ITM3 | 77 | +72.55% | 70% | INSUFFICIENT | 46 |
+| S406 | RubberBand_ITM3 | 78 | +72.48% | 71% | INSUFFICIENT | 46 |
 | S407 | RubberBand_ITM2 | 38 | -47.73% | 29% | INSUFFICIENT | 46 |
 | S408 | RubberBand_ITM1 | 52 | -6.25% | 42% | INSUFFICIENT | 43 |
 | S409 | RubberBand_ATM | 0 | — | — | NEW | 0 |
@@ -340,7 +340,7 @@ _Pipeline evaluation as of 2026-09-15. Auto-kill thresholds: median<-25% at n>=1
 
 | Strategy | n | Median% | WR% | Recommendation |
 |----------|---|---------|-----|----------------|
-| S406 | 77 | +72.55% | 70% | Tyler review |
+| S406 | 78 | +72.48% | 71% | Tyler review |
 | S362 | 45 | +57.14% | 76% | Tyler review |
 | S397 | 32 | +54.46% | 72% | Tyler review |
 | S403 | 53 | +50.88% | 68% | Tyler review |
