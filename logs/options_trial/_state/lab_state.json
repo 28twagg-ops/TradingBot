@@ -3233,6 +3233,16 @@
       "qty": 1,
       "reason": "take_profit (+76.5%)",
       "submitted": "2026-09-15T11:42:11"
+    },
+    {
+      "order_id": "c4c69553-3829-4b39-9e9f-2feea8c5f6a7",
+      "lot_id": "0aaa3422f996",
+      "bucket_id": 793,
+      "strategy_id": "S399",
+      "occ_symbol": "COIN260918C00210000",
+      "qty": 1,
+      "reason": "take_profit (+55.3%)",
+      "submitted": "2026-09-15T11:51:35"
     }
   ],
   "bucket_open_premium": {
