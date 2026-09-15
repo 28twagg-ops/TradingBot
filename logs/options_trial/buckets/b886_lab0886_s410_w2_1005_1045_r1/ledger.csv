@@ -5,3 +5,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-06 14:14:28.788308+00:00,entry,886,lab0886_s410_w2_1005_1045_r1,S410,04f39b06ec45,PATH,PATH260807C00013000,1,0.67,0.67,67.0,,,,-0.01,,0.5,-0.5,,,79466839-4978-4bd9-a8a2-772b0207cf95
 2026-08-13 14:12:32.067347+00:00,entry,886,lab0886_s410_w2_1005_1045_r1,S410,ea8ea3cba74b,MARA,MARA260814C00009000,1,0.67,0.64,64.0,,,,-0.01,,0.75,-0.75,0.15873015873015886,RB gap -1.6% reclaim,1c341ee8-04b8-4e74-b4cc-53e79def6bc2
 2026-08-13T16:40:51Z,reconcile,886,lab0886_s410_w2_1005_1045_r1,S410,ea8ea3cba74b,MARA,MARA260814C00009000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-15 14:10:39.340081+00:00,entry,886,lab0886_s410_w2_1005_1045_r1,S410,a7ad4146ad64,PATH,PATH260918C00014000,1,0.69,0.68,68.0,,,,-0.01,,0.75,-0.75,0.18750000000000003,RB gap -2.0% reclaim,587652b6-b39e-4f5f-bf72-894f6dc3e9a2
