@@ -13908,3 +13908,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-15T15:46:15Z,reconcile,0,orphan_reconcile,ORPHAN,aca45f6ebd44,MSTR,MSTR260918C00152500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-15T15:46:15Z,reconcile,780,lab0780_s397_w3_1045_1120_r1,S397,2d8f18f4b577,COIN,COIN260918C00200000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-15 15:42:17.541353+00:00,exit,0,orphan_reconcile,ORPHAN,125f2541210f,PATH,PATH260918C00014500,1,,0.5,34.0,47.06,16.0,take_profit (+51.5%),,-0.01,0.5,-0.4,,,eb50e373-8da4-4e58-8cca-30649a27c975
+2026-09-15 15:52:15.372487+00:00,exit,793,lab0793_s399_w1_0928_1005_r2,S399,0aaa3422f996,COIN,COIN260918C00210000,1,,0.6,38.0,57.89,22.0,take_profit (+55.3%),,-0.01,0.5,-0.5,,,c4c69553-3829-4b39-9e9f-2feea8c5f6a7
