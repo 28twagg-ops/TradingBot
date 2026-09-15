@@ -1,0 +1,25 @@
+13:47:59  INFO      Mode: morning_scan
+13:48:00  INFO        [positions] 3/3 (3 valid)
+13:48:00  INFO        SELL MARKET [urgent] ROL closed
+13:48:03  INFO        TX logged: SELL ROL  P&L -1.59%
+13:48:03  INFO        SELL MARKET [urgent] AAL closed
+13:48:05  INFO        TX logged: SELL AAL  P&L -0.54%
+13:48:05  INFO        Universe cache hit: 903 tickers (tickers_2026-09-15.json)
+13:48:06  INFO        [universe] 40/902 (40 valid)
+13:48:08  INFO        [universe] 80/902 (80 valid)
+13:48:09  INFO        [universe] 120/902 (120 valid)
+13:48:10  INFO        [universe] 160/902 (160 valid)
+13:48:12  INFO        [universe] 200/902 (199 valid)
+13:48:19  INFO        [universe] 240/902 (238 valid)
+13:48:32  INFO        [universe] 280/902 (278 valid)
+13:48:43  INFO        [universe] 320/902 (318 valid)
+13:48:56  INFO        [universe] 360/902 (358 valid)
+13:49:06  INFO        [universe] 400/902 (398 valid)
+13:49:20  INFO        [universe] 440/902 (438 valid)
+13:49:30  INFO        [universe] 480/902 (478 valid)
+13:49:43  INFO        [universe] 520/902 (518 valid)
+13:49:54  INFO        [universe] 560/902 (558 valid)
+13:50:07  INFO        [universe] 600/902 (598 valid)
+13:50:20  INFO        [universe] 640/902 (638 valid)
+13:50:31  INFO        [universe] 680/902 (678 valid)
+13:50:44  INFO        [universe] 720/902 (718 valid)
