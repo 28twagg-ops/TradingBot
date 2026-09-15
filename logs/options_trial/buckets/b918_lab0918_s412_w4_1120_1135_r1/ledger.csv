@@ -18,3 +18,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-02T14:06:07Z,reconcile,918,lab0918_s412_w4_1120_1135_r1,S412,99cd29ed7634,TSLA,TSLA260904C00385000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-10 15:29:35.342297+00:00,entry,918,lab0918_s412_w4_1120_1135_r1,S412,6bd5c4eaad89,CVNA,CVNA260911C00074000,1,0.31,0.31,31.0,,,,-0.01,,0.5,-0.5,,,842d0354-b233-44bd-9554-f8901fcccdba
 2026-09-10T16:46:16Z,reconcile,918,lab0918_s412_w4_1120_1135_r1,S412,6bd5c4eaad89,CVNA,CVNA260911C00074000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-15 15:22:04.066631+00:00,entry,918,lab0918_s412_w4_1120_1135_r1,S412,f9e04a773114,MARA,MARA260918C00012000,1,0.22,0.21,21.0,,,,-0.01,,0.75,-0.75,0.2439024390243903,RB gap -2.0% reclaim,6ab7ba68-207d-4cb5-b562-cb65b3e314d3
+2026-09-10 16:43:21.117846+00:00,exit,918,lab0918_s412_w4_1120_1135_r1,S412,f9e04a773114,MARA,MARA260918C00012000,1,,0.13,21.0,-38.1,-8.0,reconcile_fill,,-0.01,0.5,-0.5,,,33438d1f-1777-4381-8a79-352aa111fff1
