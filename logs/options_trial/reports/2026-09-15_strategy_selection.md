@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-15
 
-_Generated 2026-09-15T10:52:55.535387_
+_Generated 2026-09-15T10:57:43.753170_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-15T10:52:55.535387_
 
 ## Attribution health
 
-- Total exits: **3053**
+- Total exits: **3054**
 - Orphan exits (b0/orphan_reconcile): **376**
 - Orphan rate: **12.3%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -104,7 +104,7 @@ _Generated 2026-09-15T10:52:55.535387_
 | S411 (RubberBand_OTM2) | 3d | drop | 43 | 48.8 | +0.00 | -57.37 | -51.92 | +56.10 | 43 | 6 | 3 | $-328.00 | 20.9% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 48 | 43.8 | -3.57 | -52.91 | -47.99 | +113.49 | 46 | 6 | 0 | $+19.00 | 16.7% | non-positive median return |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 84 | 47.6 | -6.25 | -74.98 | -51.22 | +71.78 | 50 | 0 | 0 | $-121.00 | 17.9% | non-positive median return |
-| S408 (RubberBand_ITM1) | 3d | drop | 52 | 42.3 | -6.25 | -80.44 | -58.84 | +641.82 | 43 | 4 | 1 | $+1,024.00 | 19.2% | non-positive median return |
+| S408 (RubberBand_ITM1) | 3d | drop | 53 | 41.5 | -6.25 | -79.39 | -59.26 | +628.08 | 43 | 6 | 2 | $+1,013.00 | 18.9% | non-positive median return |
 | S398 (GapDown_ATM) | 3d | drop | 51 | 49.0 | -11.43 | -68.29 | -55.00 | +155.56 | 46 | 4 | 0 | $+670.00 | 31.4% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 71 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
 | S353 (GapDown_3DTE) | 3d | drop | 32 | 46.9 | -26.32 | -84.12 | -72.79 | +206.62 | 46 | 4 | 0 | $+55.00 | 28.1% | non-positive median return |
@@ -317,7 +317,7 @@ _Pipeline evaluation as of 2026-09-15. Auto-kill thresholds: median<-25% at n>=1
 | S405 | GapDown_OTM3 | 56 | -42.86% | 34% | INSUFFICIENT | 46 |
 | S406 | RubberBand_ITM3 | 78 | +72.48% | 71% | INSUFFICIENT | 46 |
 | S407 | RubberBand_ITM2 | 38 | -47.73% | 29% | INSUFFICIENT | 46 |
-| S408 | RubberBand_ITM1 | 52 | -6.25% | 42% | INSUFFICIENT | 43 |
+| S408 | RubberBand_ITM1 | 53 | -6.25% | 42% | INSUFFICIENT | 43 |
 | S409 | RubberBand_ATM | 0 | — | — | NEW | 0 |
 | S410 | RubberBand_OTM1 | 9 | +65.28% | 67% | WATCH | 40 |
 | S411 | RubberBand_OTM2 | 43 | +0.00% | 49% | INSUFFICIENT | 43 |

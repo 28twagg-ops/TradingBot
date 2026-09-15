@@ -2980,6 +2980,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-15T14:52:43.393332+00:00",
       "entry_order_id": "orphan:MARA260918C00012000"
+    },
+    {
+      "lot_id": "80281917db97",
+      "bucket_id": 861,
+      "profile_name": "lab0861_s408_w3_1045_1120_r2",
+      "strategy_id": "S408",
+      "occ_symbol": "MSTR260918C00157500",
+      "underlying": "MSTR",
+      "qty": 1,
+      "entry_cost": 17.0,
+      "entry_price": 0.17,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-15T14:57:31.701813+00:00",
+      "entry_order_id": "b33d937b-1b71-46f7-a191-90e3e48cc489"
+    },
+    {
+      "lot_id": "d2b945db64b7",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "MSTR260918C00157500",
+      "underlying": "MSTR",
+      "qty": 1,
+      "entry_cost": 17.0,
+      "entry_price": 0.17,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-15T14:57:31.928821+00:00",
+      "entry_order_id": "orphan:MSTR260918C00157500"
     }
   ],
   "pending_orders": [
@@ -3460,7 +3500,7 @@
     "b1150": 19.0,
     "b1053": 19.0,
     "b1052": 19.0,
-    "b0": 396.8933,
+    "b0": 413.8933,
     "b235": 68.0,
     "b234": 68.0,
     "b793": 38.0,
@@ -3541,7 +3581,8 @@
     "b781": 72.0,
     "b780": 72.0,
     "b913": 15.0,
-    "b912": 15.0
+    "b912": 15.0,
+    "b861": 17.0
   },
   "session_date": "2026-09-15",
   "entries_locked": [
@@ -3693,7 +3734,9 @@
     "168|S216|2026-09-15",
     "169|S216|2026-09-15",
     "196|S218|2026-09-15",
-    "197|S218|2026-09-15"
+    "197|S218|2026-09-15",
+    "860|S408|2026-09-15",
+    "861|S408|2026-09-15"
   ],
   "processed_orders": [
     "3555c29b-1910-4d63-8e0c-4710917e8f72",
@@ -4190,9 +4233,12 @@
     "5d299231-758a-41a4-8977-3404e9632575",
     "1b54716a-67fa-4e10-bbf2-676197850a27",
     "eb38e856-1093-4a38-9b37-3572cad7e745",
-    "67ec3d63-2337-4ef7-8a06-2deb5d0f2a51"
+    "67ec3d63-2337-4ef7-8a06-2deb5d0f2a51",
+    "b33d937b-1b71-46f7-a191-90e3e48cc489",
+    "1fca6e1f-74a5-47a1-bbe7-3973ac43f8d6",
+    "4f8e401f-1820-49c9-b509-d919d30922ec"
   ],
-  "submitted_today": 149,
+  "submitted_today": 151,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-15"
 }
