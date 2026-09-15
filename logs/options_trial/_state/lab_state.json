@@ -720,30 +720,31 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-10T15:26:32.571658+00:00",
       "entry_order_id": "orphan:MARA260918C00012000"
-    },
-    {
-      "lot_id": "1cfeb793d106",
-      "bucket_id": 180,
-      "profile_name": "lab0180_s217_w2_1005_1045_r1",
-      "strategy_id": "S217",
-      "occ_symbol": "HD260918C00325000",
-      "underlying": "HD",
-      "qty": 1,
-      "entry_cost": 50.0,
-      "entry_price": 0.5,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-11T14:12:23.223282+00:00",
-      "entry_order_id": "e63173f8-ddae-4ef8-a853-8b352c781553"
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "f22b3b2f-481e-4dbe-8397-649751438ff0",
+      "lot_id": "4850d0ee6357",
+      "bucket_id": 330,
+      "strategy_id": "S357",
+      "occ_symbol": "PATH260925C00017000",
+      "qty": 1,
+      "reason": "stop_loss (-100.0%)",
+      "submitted": "2026-09-15T09:34:56"
+    },
+    {
+      "order_id": "1327f99f-fe47-436b-b972-9bc7943cf6e9",
+      "lot_id": "dc0ed772cb1f",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "MARA260918C00012000",
+      "qty": 1,
+      "reason": "stop_loss (-49.7%)",
+      "submitted": "2026-09-15T09:34:56"
+    }
+  ],
   "bucket_open_premium": {
     "b434": 51.0,
     "b433": 49.0,
@@ -780,8 +781,7 @@
     "b1142": 48.0,
     "b1129": 48.0,
     "b1128": 48.0,
-    "b0": 45.2727,
-    "b180": 50.0
+    "b0": 45.2727
   },
   "session_date": "2026-09-15",
   "entries_locked": [],
