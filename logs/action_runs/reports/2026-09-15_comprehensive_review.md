@@ -15200,3 +15200,132 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260915T195634Z
+
+- UTC timestamp: `20260915T195634Z`
+- GitHub run: [#10059](https://github.com/28twagg-ops/TradingBot/actions/runs/35016454187)
+- Run id: `35016454187`
+- Live bot: exit=`0`, duration=`248s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260915T195634Z_live_bot.log`, `logs/action_runs/20260915T195634Z_live_options.log`, `logs/action_runs/20260915T195634Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1234 | 49.0 | -15.9 | +39.8 | $+15,949 |
+| TAINTED | 1844 | 33.5 | -38.8 | +12.2 | $-9,169 |
+| KEEP-only | 642 | 62.8 | +51.2 | +62.6 | $+10,866 |
+| KEEP-only recent | 445 | 60.7 | +53.3 | +71.9 | $+6,221 |
+
+- KEEP strategies (23): S163, S168, S173, S174, S210, S218, S350, S353, S354, S355, S356, S357, S361, S362, S363, S364, S365, S397, S399, S401, S403, S404, S406
+- KILL strategies (20): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S352, S359, S360, S366, S398, S405, S407, S408, S411, S412
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-15T15:40:20.869162-04:00","date":"2026-09-15","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":9.9,"phases_s":{"reconcile":0.43,"cancel":0.19,"manage":7.2,"protective_stops":1.35},"signals":0,"placed":0,"equity":1000232.47,"open_positions":22,"pending_orders":0,"open_lots":146,"submitted_today":189,"filled_today":159,"unattributed_contracts":0,"top_signals":[],"github_run":"10055","github_run_id":"35014490858","status":"ok","data_quality":{"clean":{"n":1234,"win":49.03,"med":-15.93,"avg":39.79,"pnl":15948.55},"tainted":{"n":1844,"win":33.46,"med":-38.81,"avg":12.21,"pnl":-9168.84},"keep_only":{"n":642,"win":62.77,"med":51.18,"avg":62.64,"pnl":10866.45},"keep_only_recent":{"n":445,"win":60.67,"med":53.33,"avg":71.89,"pnl":6221.0},"keep_strategies":["S163","S168","S173","S174","S210","S218","S350","S353","S354","S355","S356","S357","S361","S362","S363","S364","S365","S397","S399","S401","S403","S404","S406"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S352","S359","S360","S366","S398","S405","S407","S408","S411","S412"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (99 earlier lines - see full log file)
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  27                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  MO       Pullback50      eq     $69.77   58.5   -0.42   50MA bounce (+|
+|  TECH     Pullback50      eq     $72.34   50.4   -0.51   50MA bounce (+|
+|  CTVA     Pullback50      eq     $83.20   50.5   -0.69   50MA bounce (-|
+|  FDS      Pullback50      eq     $277.35  41.1   -0.89   50MA bounce (+|
+|  INCY     Pullback50      eq     $121.67  33.2   -0.72   50MA bounce (-|
+|  JPM      Pullback50      eq     $353.54  45.9   1.55    50MA bounce (+|
+|  JPM      VWAP_Reclaim    eq     $353.54  45.9   1.55    VWAP reclaim V|
+|  MDLZ     Pullback50      eq     $62.02   40.4   -2.43   50MA bounce (+|
+|  PAYX     Pullback50      eq     $118.24  34.2   -1.14   50MA bounce (+|
+|  VTRS     Pullback50      eq     $16.64   48.3   -1.29   50MA bounce (-|
+|  WRB      Pullback50      eq     $71.18   72.0   -0.21   50MA bounce (+|
+|  WTW      Pullback50      eq     $322.02  31.8   -1.73   50MA bounce (+|
+|  AFG      Pullback50      eq     $143.75  50.3   -1.07   50MA bounce (+|
+|  BIO      VWAP_Reclaim    eq     $377.97  37.6   2.10    VWAP reclaim V|
+|  FAF      Pullback50      eq     $72.90   48.5   0.45    50MA bounce (-|
+|  FTI      Pullback50      eq     $74.92   49.2   -0.43   50MA bounce (+|
+|  HOMB     Pullback50      eq     $30.20   55.3   -1.65   50MA bounce (-|
+|  HWC      Pullback50      eq     $75.93   57.7   -0.48   50MA bounce (-|
+|  ILMN     VWAP_Reclaim    eq     $222.44  48.4   1.66    VWAP reclaim V|
+|  KNSL     RSIRecovery     eq     $368.21  34.4   0.37    RSI 26.2→34.4 |
+|  KEX      Pullback50      eq     $139.18  54.4   -1.39   50MA bounce (-|
+|  KTOS     MomReversal     eq     $47.60   26.8   0.56    -12.2% drop/60|
+|  SIRI     Pullback50      eq     $29.52   57.2   -1.06   50MA bounce (-|
+|  SLAB     Pullback50      eq     $219.91  60.2   -1.25   50MA bounce (+|
+|  UBSI     Pullback50      eq     $47.85   54.7   -0.23   50MA bounce (+|20:00:42  INFO        place_all_stops: checking 2 positions...
+20:00:42  INFO        STOP-MARKET placed AAL  qty=2 (pos=2.6412)  stop=$12.70  id=14acd1d7-c302-4c4a-831e-5e02c78c0db7
+20:00:42  INFO        STOP skipped ALLE: fractional (0.2206 shares) — software exit will handle it
+20:00:42  INFO        Daily log -> logs/daily/2026-09-15.md
+20:00:42  INFO        Dashboard written → logs/dashboard.md
+
+|  VAL      VWAP_Reclaim    eq     $88.09   53.9   1.53    VWAP reclaim V|
+|  UNM      VWAP_Reclaim    eq     $95.92   69.1   1.87    VWAP reclaim V|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            899|
+|  Signals                                                             27|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             2|
+|  Equity                                                         $224.93|
+|  Cash                                                           $157.09|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
