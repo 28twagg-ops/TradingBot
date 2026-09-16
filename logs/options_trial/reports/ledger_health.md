@@ -1,6 +1,6 @@
 # Ledger health — 2026-09-16
 
-_Generated 2026-09-16T10:22:49.429846_
+_Generated 2026-09-16T10:28:00.072628_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
