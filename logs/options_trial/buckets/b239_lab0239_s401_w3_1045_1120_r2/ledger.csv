@@ -50,4 +50,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-15 14:51:55.545509+00:00,entry,239,lab0239_s401_w3_1045_1120_r2,S401,7a3f30ad911f,META,META260918C00720000,1,0.55,0.55,55.0,,,,-0.01,,0.75,-0.75,0.09345794392523372,gap -0.95% green,c075c500-2a50-4920-ac13-74a9feb31d7a
 2026-09-15 15:21:20.461343+00:00,exit,239,lab0239_s401_w3_1045_1120_r2,S401,7a3f30ad911f,META,META260918C00720000,1,,0.94,55.0,70.91,39.0,take_profit (+69.1%),,-0.01,0.5,-0.5,,,90bd156e-cd2d-43dd-8b49-0b858ae5233b
 2026-09-16 14:48:10.179860+00:00,entry,239,lab0239_s401_w3_1045_1120_r2,S401,6dd17bff3d24,MSFT,MSFT260918C00507500,1,0.64,0.63,63.0,,,,-0.01,,0.5,-0.5,0.22222222222222224,gap -0.82% green,e14a7549-6e7e-48d4-a7c7-a37f74594587
-2026-09-16T20:00:36Z,reconcile,239,lab0239_s401_w3_1045_1120_r2,S401,6dd17bff3d24,MSFT,MSFT260918C00507500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-16T20:02:20Z,reconcile,239,lab0239_s401_w3_1045_1120_r2,S401,6dd17bff3d24,MSFT,MSFT260918C00507500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
