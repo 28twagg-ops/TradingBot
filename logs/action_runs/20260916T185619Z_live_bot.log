@@ -1,0 +1,59 @@
+18:56:20  INFO      Mode: exits
+18:56:21  INFO        Daily log -> logs/daily/2026-09-16.md
+18:56:21  INFO        Daily log reconciled -> logs/daily/2026-09-16.md (2 ledger rows)
+18:56:21  INFO        place_all_stops: checking 2 positions...
+18:56:21  INFO        STOP skipped ABNB: fractional (0.2010 shares) — software exit will handle it
+18:56:21  INFO        STOP skipped ALLE: fractional (0.2206 shares) — software exit will handle it
+18:56:21  INFO        [positions] 2/2 (2 valid)
+18:56:21  INFO        SELL MARKET [urgent] ALLE closed
+18:56:23  INFO        TX logged: SELL ALLE  P&L -0.73%
+18:56:23  INFO        Daily log -> logs/daily/2026-09-16.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         18:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $224.36|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  ALLE  P&L -0.7%  $-0.25                        EXIT: stop_loss (-0.7%)|
+|  ABNB  P&L -0.2%  $-0.06                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  ALLE                                        -0.73%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
