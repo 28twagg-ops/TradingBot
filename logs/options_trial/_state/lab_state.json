@@ -1182,26 +1182,6 @@
       "entry_order_id": "c6efe594-4904-4c05-9414-07dbb137b7d8"
     },
     {
-      "lot_id": "5654869219b0",
-      "bucket_id": 236,
-      "profile_name": "lab0236_s401_w2_1005_1045_r1",
-      "strategy_id": "S401",
-      "occ_symbol": "META260918C00727500",
-      "underlying": "META",
-      "qty": 1,
-      "entry_cost": 63.0,
-      "entry_price": 0.63,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-15T14:08:50.105681+00:00",
-      "entry_order_id": "8d80f631-b783-4593-8b73-cfe4e9c4ddf8"
-    },
-    {
       "lot_id": "a0d8ae385be9",
       "bucket_id": 449,
       "profile_name": "lab0449_s367_w2_1005_1045_r2",
@@ -2585,16 +2565,6 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "f1cbecc9-4747-4c33-a4cd-7a5954ba9ad2",
-      "lot_id": "5654869219b0",
-      "bucket_id": 236,
-      "strategy_id": "S401",
-      "occ_symbol": "META260918C00727500",
-      "qty": 1,
-      "reason": "stop_loss (-50.8%)",
-      "submitted": "2026-09-16T11:26:15"
-    },
-    {
       "order_id": "1417ae6e-81d2-4f1d-b342-978567eecd2a",
       "lot_id": "9943eadcdf3e",
       "bucket_id": 315,
@@ -2623,6 +2593,16 @@
       "qty": 1,
       "reason": "stop_loss (-67.2%)",
       "submitted": "2026-09-16T14:06:24"
+    },
+    {
+      "order_id": "51dbb99e-b8bc-489f-b10a-fb3dcd1dde40",
+      "lot_id": "8c870393046a",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "GTLB260925C00052000",
+      "qty": 1,
+      "reason": "stop_loss (-42.9%)",
+      "submitted": "2026-09-16T14:11:22"
     }
   ],
   "bucket_open_premium": {
@@ -2685,7 +2665,6 @@
     "b364": 18.0,
     "b347": 18.0,
     "b346": 18.0,
-    "b236": 63.0,
     "b449": 45.0,
     "b448": 45.0,
     "b899": 30.0,
