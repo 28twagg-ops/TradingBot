@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-16
 
-_Generated 2026-09-16T15:17:13.709509_
+_Generated 2026-09-16T15:21:22.514454_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-16T15:17:13.709509_
 
 ## Attribution health
 
-- Total exits: **3127**
+- Total exits: **3128**
 - Orphan exits (b0/orphan_reconcile): **394**
 - Orphan rate: **12.6%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -95,7 +95,7 @@ _Generated 2026-09-16T15:17:13.709509_
 | S417 (BBSqueeze_OTM1) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S418 (BBSqueeze_OTM2) | 7d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S367 (RubberBand_30DTE) | 30d | watch | 2 | 0.0 | -38.20 | -48.75 | -44.79 | -27.64 | 43 | 2 | 0 | $-55.00 | 100.0% | insufficient sample (<8 exits) |
+| S367 (RubberBand_30DTE) | 30d | watch | 3 | 0.0 | -48.89 | -50.89 | -50.14 | -29.78 | 43 | 2 | 1 | $-77.00 | 66.7% | insufficient sample (<8 exits) |
 | S366 (RubberBand_21DTE) | 21d | watch | 13 | 38.5 | -49.12 | -56.92 | -56.92 | +95.73 | 43 | 0 | 0 | $-52.00 | 61.5% | early sample with non-positive median |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 47 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 16 | 25.0 | -51.78 | -96.88 | -88.89 | +343.79 | 57 | 8 | 0 | $+81.00 | 31.2% | early sample with non-positive median |
@@ -276,7 +276,7 @@ _Pipeline evaluation as of 2026-09-16. Auto-kill thresholds: median<-25% at n>=1
 | S364 | RubberBand_7DTE | 55 | +8.33% | 51% | INSUFFICIENT | 47 |
 | S365 | RubberBand_14DTE | 24 | +43.23% | 54% | INSUFFICIENT | 47 |
 | S366 | RubberBand_21DTE | 13 | -49.12% | 38% | WATCH | 43 |
-| S367 | RubberBand_30DTE | 2 | -38.20% | 0% | WATCH | 43 |
+| S367 | RubberBand_30DTE | 3 | -48.89% | 0% | WATCH | 43 |
 | S368 | BBSqueeze_0DTE | 0 | — | — | NEW | 0 |
 | S369 | BBSqueeze_1DTE | 0 | — | — | NEW | 0 |
 | S370 | BBSqueeze_2DTE | 0 | — | — | NEW | 0 |
