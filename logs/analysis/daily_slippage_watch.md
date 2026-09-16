@@ -1,25 +1,31 @@
 # Daily Slippage Watch
-*Updated: 2026-09-16 13:45 UTC*
+*Updated: 2026-09-16 13:50 UTC*
 
 Tracks **stop P&L** (position loss vs entry) vs **execution slippage** (fill vs limit). Target: stops near -0.5% trigger when no overnight gap.
 
 | Day | Stops | Mean stop | Overshoot vs -0.5% | Within -1% | SELL slip | Status |
 |-----|-------|-----------|---------------------|------------|-----------|--------|
-| 2026-09-15 | 4 | -0.85% | -0.35pp | 3/4 | -0.0336% | **OK** |
-| 2026-09-14 | 1 | -0.58% | -0.08pp | 1/1 | -0.0336% | **OK** |
-| 2026-09-11 | 1 | -0.73% | -0.23pp | 1/1 | -0.0336% | **OK** |
-| 2026-09-10 | 4 | -0.97% | -0.47pp | 2/4 | -0.0336% | **WATCH** |
-| 2026-09-09 | 3 | -0.88% | -0.38pp | 2/3 | -0.0336% | **OK** |
-| 2026-09-08 | 3 | -0.55% | -0.05pp | 3/3 | -0.0336% | **OK** |
-| 2026-09-04 | 1 | -0.61% | -0.11pp | 1/1 | -0.0336% | **OK** |
-| 2026-09-03 | 1 | -0.70% | -0.20pp | 1/1 | -0.0336% | **OK** |
+| 2026-09-16 | 1 | -0.63% | -0.13pp | 1/1 | -0.0335% | **OK** |
+| 2026-09-15 | 4 | -0.85% | -0.35pp | 3/4 | -0.0335% | **OK** |
+| 2026-09-14 | 1 | -0.58% | -0.08pp | 1/1 | -0.0335% | **OK** |
+| 2026-09-11 | 1 | -0.73% | -0.23pp | 1/1 | -0.0335% | **OK** |
+| 2026-09-10 | 4 | -0.97% | -0.47pp | 2/4 | -0.0335% | **WATCH** |
+| 2026-09-09 | 3 | -0.88% | -0.38pp | 2/3 | -0.0335% | **OK** |
+| 2026-09-08 | 3 | -0.55% | -0.05pp | 3/3 | -0.0335% | **OK** |
+| 2026-09-04 | 1 | -0.61% | -0.11pp | 1/1 | -0.0335% | **OK** |
+| 2026-09-03 | 1 | -0.70% | -0.20pp | 1/1 | -0.0335% | **OK** |
 
 ## Today (2026-09-16) detail
 
-_No stop losses recorded today._
+- Stop count: **1**
+- Mean stop P&L: **-0.63%** (overshoot -0.13pp)
+- Within -1.0%: 1/1
+- Worst: AAL -0.6%
+- Stop execution methods:
+  - `limit_fill_position_check_full`: 1
 
 ## Historical baseline (all logs)
-- Stop samples: 475
+- Stop samples: 476
 - Mean stop P&L: -1.35%
 - Mean overshoot: -0.85pp
 

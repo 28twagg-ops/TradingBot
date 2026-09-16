@@ -847,3 +847,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-09-15 14:06:22,2026-09-15,SELL,AMZN,Pullback50,250.505,,250.505,33.54,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
 2026-09-15 14:06:24,2026-09-15,SELL,APO,Pullback50,127.96,,127.96,33.58,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-09-15 19:57:08,2026-09-15,SELL,MO,Pullback50,69.78,69.77,69.774,33.72,-0.0086,-0.0029,limit_fill_position_check_full,midline (+0.0%),bull
+2026-09-16 13:46:46,2026-09-16,SELL,AAL,MomReversal,12.8301,12.83,12.8333,33.9,0.0249,0.0085,limit_fill_position_check_full,stop_loss (-0.6%),bull
