@@ -7879,3 +7879,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-16 21:56:09,ext_exits,bull,224.23,156.74,0,0,0,2,CTAS|RBC,both
 2026-09-16 22:01:10,ext_exits,bull,224.05,156.74,0,0,0,2,CTAS|RBC,both
 2026-09-16 22:06:03,ext_exits,bull,224.05,156.74,0,0,0,2,CTAS|RBC,both
+2026-09-16 22:11:07,ext_exits,bull,224.05,156.74,0,0,0,2,CTAS|RBC,both
