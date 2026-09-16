@@ -522,3 +522,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16 13:34:55.721663+00:00,exit,0,orphan_reconcile,ORPHAN,cc7b1c7c6c24,MARA,MARA260918C00011500,1,,0.08,30.44,-73.72,-22.44,reconcile_fill,,-0.01,0.5,-0.4,,,5d29c3f2-8963-4b03-9c80-83410ccb0b4c
 2026-09-16 13:30:04.146100+00:00,exit,0,orphan_reconcile,ORPHAN,df7e85af155e,MARA,MARA260918C00012000,2,,0.14,60.01,-53.34,-32.01,stop_loss (-46.7%),,-0.01,0.5,-0.4,,,8b3826b9-1c8c-4fdb-8c29-b2e0152ffef3
 2026-09-16 14:12:24.233492+00:00,exit,0,orphan_reconcile,ORPHAN,a8d1a9056fba,PLTR,PLTR260918C00182500,1,,0.24,39.0,-38.46,-15.0,stop_loss (-41.0%),,-0.01,0.5,-0.4,,,4e2cba5c-f22c-4209-a8fe-cd18d1afee8f
+2026-09-16 16:24:20.712842+00:00,exit,0,orphan_reconcile,ORPHAN,cac6c3a523f7,AAPL,AAPL260918C00342500,1,,0.33,55.5,-40.54,-22.5,stop_loss (-42.3%),,-0.01,0.5,-0.4,,,54747bd5-0b7b-47be-8017-39b6787ca097

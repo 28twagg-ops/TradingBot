@@ -2522,26 +2522,6 @@
       "entry_order_id": "136bbcc9-3a4a-4b96-a3d1-0ffe1780e185"
     },
     {
-      "lot_id": "cac6c3a523f7",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "AAPL260918C00342500",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 55.5,
-      "entry_price": 0.555,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-16T14:16:13.259209+00:00",
-      "entry_order_id": "orphan:AAPL260918C00342500"
-    },
-    {
       "lot_id": "bedefa5f2a97",
       "bucket_id": 265,
       "profile_name": "lab0265_s403_w2_1005_1045_r2",
@@ -3205,14 +3185,14 @@
       "submitted": "2026-09-16T12:01:43"
     },
     {
-      "order_id": "54747bd5-0b7b-47be-8017-39b6787ca097",
-      "lot_id": "cac6c3a523f7",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "AAPL260918C00342500",
+      "order_id": "8916e270-e1d7-47bd-a534-5e962e2b50da",
+      "lot_id": "c2fb135431c1",
+      "bucket_id": 90,
+      "strategy_id": "S218",
+      "occ_symbol": "UNH260918C00392500",
       "qty": 1,
-      "reason": "stop_loss (-42.3%)",
-      "submitted": "2026-09-16T12:21:24"
+      "reason": "stop_loss (-43.8%)",
+      "submitted": "2026-09-16T12:26:24"
     }
   ],
   "bucket_open_premium": {
@@ -3291,7 +3271,7 @@
     "b800": 30.0,
     "b777": 30.0,
     "b776": 30.0,
-    "b0": 480.0445,
+    "b0": 424.5445,
     "b916": 3.0,
     "b267": 3.0,
     "b913": 15.0,
@@ -3932,7 +3912,8 @@
     "21bb0b86-9422-4262-a4d6-e4164435fbe8",
     "7f5a4e5b-ca82-442c-9793-4192f1a8ca16",
     "d6790a85-26a0-4e52-aad0-5f595932405c",
-    "dc774c62-7957-4aee-9e3e-062de766d893"
+    "dc774c62-7957-4aee-9e3e-062de766d893",
+    "54747bd5-0b7b-47be-8017-39b6787ca097"
   ],
   "submitted_today": 92,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
