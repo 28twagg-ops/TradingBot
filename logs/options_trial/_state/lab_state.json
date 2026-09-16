@@ -2162,26 +2162,6 @@
       "entry_order_id": "4be42f49-04bf-4b26-af01-f59b93bef7e8"
     },
     {
-      "lot_id": "920087d8df60",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S406",
-      "occ_symbol": "CRWD260918C00260000",
-      "underlying": "CRWD",
-      "qty": 1,
-      "entry_cost": 62.0,
-      "entry_price": 0.62,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-16T13:59:05.853680+00:00",
-      "entry_order_id": "90073b80-7361-42fb-81d7-af9910ab109b"
-    },
-    {
       "lot_id": "44b3537f2f5f",
       "bucket_id": 363,
       "profile_name": "lab0363_s361_w1_0928_1005_r2",
@@ -3342,6 +3322,54 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
+    },
+    {
+      "order_id": "dc3b6426-c463-488e-b2d6-ea9fbc0e0868",
+      "bucket_id": 834,
+      "strategy_id": "S406",
+      "occ_symbol": "FSLY260918C00026500",
+      "underlying": "FSLY",
+      "qty": 1,
+      "limit": 0.27,
+      "profile_name": "lab0834_s406_w4_1120_1135_r1",
+      "submitted": "2026-09-16",
+      "detail": "RB gap -1.9% reclaim",
+      "spread_frac": 0.2400000000000001,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "d741facd-7d77-4430-a097-5ffe570a7ba9",
+      "bucket_id": 835,
+      "strategy_id": "S406",
+      "occ_symbol": "FSLY260918C00026500",
+      "underlying": "FSLY",
+      "qty": 1,
+      "limit": 0.27,
+      "profile_name": "lab0835_s406_w4_1120_1135_r2",
+      "submitted": "2026-09-16",
+      "detail": "RB gap -1.9% reclaim",
+      "spread_frac": 0.2400000000000001,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "21bb0b86-9422-4262-a4d6-e4164435fbe8",
+      "bucket_id": 918,
+      "strategy_id": "S412",
+      "occ_symbol": "FSLY260918C00025500",
+      "underlying": "FSLY",
+      "qty": 1,
+      "limit": 0.52,
+      "profile_name": "lab0918_s412_w4_1120_1135_r1",
+      "submitted": "2026-09-16",
+      "detail": "RB gap -1.9% reclaim",
+      "spread_frac": 0.23157894736842116,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
     }
   ],
   "pending_exits": [],
@@ -3452,7 +3480,6 @@
     "b241": 52.0,
     "b240": 52.0,
     "b235": 39.0,
-    "b90": 110.0,
     "b363": 44.0,
     "b362": 44.0,
     "b345": 44.0,
@@ -3467,6 +3494,7 @@
     "b900": 60.0,
     "b193": 48.0,
     "b192": 48.0,
+    "b90": 48.0,
     "b803": 65.0,
     "b802": 65.0,
     "b779": 65.0,
@@ -3577,7 +3605,10 @@
     "381|S362|2026-09-16",
     "917|S412|2026-09-16",
     "182|S217|2026-09-16",
-    "183|S217|2026-09-16"
+    "183|S217|2026-09-16",
+    "834|S406|2026-09-16",
+    "835|S406|2026-09-16",
+    "918|S412|2026-09-16"
   ],
   "processed_orders": [
     "f09d49f3-4733-4a49-afde-de6db87dedea",
@@ -4037,9 +4068,10 @@
     "4c4605e6-c2e6-4c29-86a4-8ae674b01e9e",
     "114b335e-a79f-4144-8beb-41d96f843981",
     "e9bde846-7773-443a-93ed-555fd61977b4",
-    "4206e51c-753c-4f2d-83ad-d77ec4222dc5"
+    "4206e51c-753c-4f2d-83ad-d77ec4222dc5",
+    "5a8f0250-c8b3-4a0c-9194-ec0ac0f65a1e"
   ],
-  "submitted_today": 81,
+  "submitted_today": 84,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-16"
 }
