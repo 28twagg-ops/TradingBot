@@ -7,4 +7,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-08-12T21:09:11Z,reconcile,771,lab0771_s396_w2_1005_1045_r2,S396,d36c07d1bd23,PATH,PATH260821C00015000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-08-12 14:08:16.542081+00:00,entry,771,lab0771_s396_w2_1005_1045_r2,S396,1da5230056ba,PATH,PATH260821C00015000,1,0.71,0.71,71.0,,,,-0.01,,0.5,-0.5,,,5e5da0cf-0527-452a-beb4-188e181906eb
 2026-09-15 14:10:39.462105+00:00,entry,771,lab0771_s396_w2_1005_1045_r2,S396,785cfd7f98c2,PATH,PATH260918C00014000,1,0.69,0.68,68.0,,,,-0.01,,0.75,-0.75,0.18750000000000003,gap -2.0%,1a1f5e1f-07ea-45d4-a6bf-efba7023a072
-2026-09-16T13:34:49Z,reconcile,771,lab0771_s396_w2_1005_1045_r2,S396,785cfd7f98c2,PATH,PATH260918C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-16T13:40:32Z,reconcile,771,lab0771_s396_w2_1005_1045_r2,S396,785cfd7f98c2,PATH,PATH260918C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
