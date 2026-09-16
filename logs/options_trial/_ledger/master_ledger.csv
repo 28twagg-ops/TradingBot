@@ -14113,3 +14113,10 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16T18:11:13Z,reconcile,236,lab0236_s401_w2_1005_1045_r1,S401,5654869219b0,META,META260918C00727500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-16 18:12:06.192013+00:00,exit,0,orphan_reconcile,ORPHAN,8c870393046a,GTLB,GTLB260925C00052000,1,,0.5,70.0,-28.57,-20.0,stop_loss (-42.9%),,-0.01,0.5,-0.4,,,51dbb99e-b8bc-489f-b10a-fb3dcd1dde40
 2026-09-16T18:36:18Z,reconcile,266,lab0266_s403_w3_1045_1120_r1,S403,999e3d94d863,QQQ,QQQ260918C00725000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-16T18:41:12Z,reconcile,263,lab0263_s403_w1_0928_1005_r2,S403,c97772de9ab6,QQQ,QQQ260918C00723000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-16T18:41:12Z,reconcile,262,lab0262_s403_w1_0928_1005_r1,S403,857bc88fea5d,QQQ,QQQ260918C00723000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-16T18:41:12Z,reconcile,234,lab0234_s401_w1_0928_1005_r1,S401,325bd0547f47,MSFT,MSFT260918C00510000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-16T18:41:12Z,reconcile,265,lab0265_s403_w2_1005_1045_r2,S403,bedefa5f2a97,QQQ,QQQ260918C00724000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-16T18:41:12Z,reconcile,264,lab0264_s403_w2_1005_1045_r1,S403,6af9f09f2d46,QQQ,QQQ260918C00724000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-16T18:41:12Z,reconcile,197,lab0197_s218_w3_1045_1120_r2,S218,503567764dfb,UNH,UNH260918C00390000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-16 18:38:23.108804+00:00,exit,0,orphan_reconcile,ORPHAN,cc7b1c7c6c24,MARA,MARA260918C00011500,1,,0.19,30.44,-37.59,-11.44,stop_loss (-44.2%),,-0.01,0.5,-0.4,,,779e7a97-ad81-4188-b97b-4216ce07acfd
