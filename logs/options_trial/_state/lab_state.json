@@ -3310,6 +3310,38 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
+    },
+    {
+      "order_id": "42f103b0-9bd9-440e-b5e8-530ba306569b",
+      "bucket_id": 182,
+      "strategy_id": "S217",
+      "occ_symbol": "HON260918C00215000",
+      "underlying": "HON",
+      "qty": 1,
+      "limit": 0.62,
+      "profile_name": "lab0182_s217_w3_1045_1120_r1",
+      "submitted": "2026-09-16",
+      "detail": "RSI=24.4 green",
+      "spread_frac": 0.19130434782608693,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "c3add3f9-9425-4108-8cf8-cab41a08d8fa",
+      "bucket_id": 183,
+      "strategy_id": "S217",
+      "occ_symbol": "HON260918C00215000",
+      "underlying": "HON",
+      "qty": 1,
+      "limit": 0.62,
+      "profile_name": "lab0183_s217_w3_1045_1120_r2",
+      "submitted": "2026-09-16",
+      "detail": "RSI=24.4 green",
+      "spread_frac": 0.19130434782608693,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
   "pending_exits": [],
@@ -3543,7 +3575,9 @@
     "266|S403|2026-09-16",
     "380|S362|2026-09-16",
     "381|S362|2026-09-16",
-    "917|S412|2026-09-16"
+    "917|S412|2026-09-16",
+    "182|S217|2026-09-16",
+    "183|S217|2026-09-16"
   ],
   "processed_orders": [
     "f09d49f3-4733-4a49-afde-de6db87dedea",
@@ -4005,7 +4039,7 @@
     "e9bde846-7773-443a-93ed-555fd61977b4",
     "4206e51c-753c-4f2d-83ad-d77ec4222dc5"
   ],
-  "submitted_today": 79,
+  "submitted_today": 81,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-16"
 }
