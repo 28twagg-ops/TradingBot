@@ -530,3 +530,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16 18:02:44.745387+00:00,exit,0,orphan_reconcile,ORPHAN,5a5c36f249e4,NKE,NKE260918C00036500,1,,0.26,46.0,-43.48,-20.0,stop_loss (-43.5%),,-0.01,0.5,-0.4,,,30de8289-4583-45e8-a0b2-0260e5d00701
 2026-09-16 18:12:06.192013+00:00,exit,0,orphan_reconcile,ORPHAN,8c870393046a,GTLB,GTLB260925C00052000,1,,0.5,70.0,-28.57,-20.0,stop_loss (-42.9%),,-0.01,0.5,-0.4,,,51dbb99e-b8bc-489f-b10a-fb3dcd1dde40
 2026-09-16 18:38:23.108804+00:00,exit,0,orphan_reconcile,ORPHAN,cc7b1c7c6c24,MARA,MARA260918C00011500,1,,0.19,30.44,-37.59,-11.44,stop_loss (-44.2%),,-0.01,0.5,-0.4,,,779e7a97-ad81-4188-b97b-4216ce07acfd
+2026-09-16 18:41:25.232832+00:00,exit,0,orphan_reconcile,ORPHAN,04fa9f891afd,MARA,MARA260918C00011500,1,,0.18,30.44,-40.88,-12.44,stop_loss (-40.9%),,-0.01,0.5,-0.4,,,9c2059e3-0390-4221-9a55-9837995958a0

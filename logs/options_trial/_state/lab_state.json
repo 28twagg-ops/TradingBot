@@ -2380,26 +2380,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-16T15:27:46.523378+00:00",
       "entry_order_id": "42f103b0-9bd9-440e-b5e8-530ba306569b"
-    },
-    {
-      "lot_id": "04fa9f891afd",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "MARA260918C00011500",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 30.4444,
-      "entry_price": 0.304444,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-16T18:41:15.005889+00:00",
-      "entry_order_id": "orphan:MARA260918C00011500"
     }
   ],
   "pending_orders": [],
@@ -2445,14 +2425,14 @@
       "submitted": "2026-09-16T14:41:18"
     },
     {
-      "order_id": "9c2059e3-0390-4221-9a55-9837995958a0",
-      "lot_id": "04fa9f891afd",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "MARA260918C00011500",
+      "order_id": "7fe4243d-b7a1-44aa-bbf6-92e545257f08",
+      "lot_id": "3ee7330da66f",
+      "bucket_id": 235,
+      "strategy_id": "S401",
+      "occ_symbol": "PLTR260918C00182500",
       "qty": 1,
-      "reason": "stop_loss (-40.9%)",
-      "submitted": "2026-09-16T14:41:25"
+      "reason": "take_profit (+53.8%)",
+      "submitted": "2026-09-16T14:46:24"
     }
   ],
   "bucket_open_premium": {
@@ -2525,7 +2505,7 @@
     "b776": 30.0,
     "b916": 3.0,
     "b267": 3.0,
-    "b0": 124.4444,
+    "b0": 94.0,
     "b913": 15.0,
     "b912": 15.0,
     "b861": 17.0,
@@ -3152,7 +3132,8 @@
     "5710a45c-cd8d-4a72-bcda-5bcc5418a7ee",
     "b7a60a41-774f-43f1-98e1-a469fee93b3f",
     "51dbb99e-b8bc-489f-b10a-fb3dcd1dde40",
-    "779e7a97-ad81-4188-b97b-4216ce07acfd"
+    "779e7a97-ad81-4188-b97b-4216ce07acfd",
+    "9c2059e3-0390-4221-9a55-9837995958a0"
   ],
   "submitted_today": 92,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

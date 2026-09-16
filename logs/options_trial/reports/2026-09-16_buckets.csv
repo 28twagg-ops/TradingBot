@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,11,4,2026-08-21,True,26,0.0,-44.51,-42.86,-28.57,-73.72,-207.39,"AAPL,CRWD,GTLB,MARA,MSTR,NKE,PLTR,UNH",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-46.7%)…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,12,3,2026-08-21,True,26,0.0,-44.21,-42.02,-28.57,-73.72,-219.83,"AAPL,CRWD,GTLB,MARA,MSTR,NKE,PLTR,UNH",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-46.7%)…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
