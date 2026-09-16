@@ -3073,6 +3073,26 @@
       "qty": 1,
       "reason": "stop_loss (-60.0%)",
       "submitted": "2026-09-16T12:47:27"
+    },
+    {
+      "order_id": "de7e97e5-5815-4de8-bb67-452e922f7bf7",
+      "lot_id": "2f28b44c2f5e",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "UNH260918C00390000",
+      "qty": 1,
+      "reason": "stop_loss (-42.9%)",
+      "submitted": "2026-09-16T12:56:19"
+    },
+    {
+      "order_id": "39ae7fe3-a04a-4fc6-9168-8e6313c2cddd",
+      "lot_id": "bf15e7065d25",
+      "bucket_id": 195,
+      "strategy_id": "S218",
+      "occ_symbol": "UNH260918C00392500",
+      "qty": 1,
+      "reason": "stop_loss (-52.1%)",
+      "submitted": "2026-09-16T12:56:25"
     }
   ],
   "bucket_open_premium": {
