@@ -1,0 +1,187 @@
+19:47:14  INFO      Mode: scan
+19:47:14  INFO        Universe cache hit: 903 tickers (tickers_2026-09-16.json)
+19:47:15  INFO        [universe] 40/903 (40 valid)
+19:47:17  INFO        [universe] 80/903 (80 valid)
+19:47:18  INFO        [universe] 120/903 (120 valid)
+19:47:19  INFO        [universe] 160/903 (160 valid)
+19:47:20  INFO        [universe] 200/903 (199 valid)
+19:47:27  INFO        [universe] 240/903 (238 valid)
+19:47:40  INFO        [universe] 280/903 (278 valid)
+19:47:51  INFO        [universe] 320/903 (318 valid)
+19:48:04  INFO        [universe] 360/903 (358 valid)
+19:48:14  INFO        [universe] 400/903 (398 valid)
+19:48:28  INFO        [universe] 440/903 (438 valid)
+19:48:41  INFO        [universe] 480/903 (478 valid)
+19:48:51  INFO        [universe] 520/903 (518 valid)
+19:49:04  INFO        [universe] 560/903 (558 valid)
+19:49:14  INFO        [universe] 600/903 (598 valid)
+19:49:27  INFO        [universe] 640/903 (638 valid)
+19:49:40  INFO        [universe] 680/903 (678 valid)
+19:49:51  INFO        [universe] 720/903 (718 valid)
+19:50:04  INFO        [universe] 760/903 (758 valid)
+19:50:17  INFO        [universe] 800/903 (798 valid)
+19:50:27  INFO        [universe] 840/903 (838 valid)
+19:50:40  INFO        [universe] 880/903 (878 valid)
+19:50:47  INFO        [universe] 903/903 (901 valid)
+19:50:50  INFO        BUY  CIEN  $33.63  [MomReversal]  id=165e6a02-8428-4389-8d94-69f5ad89bd7e
+19:50:50  INFO        BUY  RBC  $33.63  [MomReversal]  id=a9ea454a-3251-4c2c-b4cc-f50e3cd2a60a
+19:50:50  INFO        BUY  CTAS  $33.63  [Pullback50]  id=31c64421-1f02-40aa-ac95-8114a3e39650
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:47 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $224.18|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-09-16|
+|  Universe                                                          both|
+|  Mo~  Sep: GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $224.18|
+|  Cash                                                           $224.18|
+|  Reserve                                          $11.21  (always kept)|
+|  Stocks ~  $0.00 / $168.13  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $168.13  (new stock buys)|
+|  Trade size             $33.63  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (0 open)                        |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (stale (131053.1m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  18                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  CIEN     MomReversal     eq     $339.50  33.1   0.71    -26.2% drop/60|
+|  CTAS     Pullback50      eq     $199.16  32.8   -1.33   50MA bounce (-|
+|  EBAY     Pullback50      eq     $109.21  60.6   -1.18   50MA bounce (+|
+|  EW       Pullback50      eq     $88.73   42.7   0.66    50MA bounce (-|
+|  EW       RSIRecovery     eq     $88.73   42.7   0.66    RSI 26.8→42.7 |
+|  FDS      Pullback50      eq     $274.80  40.3   -1.26   50MA bounce (-|
+|  INTC     TrendResumpti~  eq     $100.80  64.8   0.56    HH/HL resumpti|
+|  JKHY     RSIRecovery     eq     $158.79  32.6   0.71    RSI 22.5→32.6 |
+|  LITE     VWAP_Reclaim    eq     $915.50  47.8   1.35    VWAP reclaim V|
+|  MDLZ     Pullback50      eq     $62.38   44.1   -2.32   50MA bounce (+|
+|  NVDA     Pullback50      eq     $214.18  53.2   -1.11   50MA bounce (+|
+|  VLTO     Pullback50      eq     $95.99   38.2   -1.77   50MA bounce (+|
+|  VTRS     Pullback50      eq     $16.91   51.2   -1.28   50MA bounce (+|
+|  DOCN     Pullback50      eq     $123.19  55.7   -1.18   50MA bounce (+|
+|  GEF      Pullback50      eq     $82.87   38.2   0.03    50MA bounce (+|
+|  OPCH     VWAP_Reclaim    eq     $24.51   55.2   2.13    VWAP reclaim V|
+|  RBC      MomReversal     eq     $483.12  32.1   0.51    -25.2% drop/60|
+|  SN       Pullback50      eq     $170.81  34.7   0.01    50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] CIEN  MomReversal                                  $33.63|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] RBC  MomReversal                                   $33.63|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] CTAS  Pullback50                                   $33.63|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] EBAY  Pullback50                                     cap 3|
+|    SKIP [eq] EW  Pullback50                                       cap 3|
+|    SKIP [eq] FDS  Pullback50                                      cap 3|
+|    SKIP [eq] MDLZ  Pullback50                                     cap 3|
+|    SKIP [eq] NVDA  Pullback50                                     cap 3|
+|    SKIP [eq] VLTO  Pullback50                                     cap 3|
+|    SKIP [eq] VTRS  Pullback50                                     cap 3|
+|    SKIP [eq] DOCN  Pullback50                                     cap 3|
+|    SKIP [eq] GEF  Pullback50                                      cap 3|
+|    SKIP [eq] SN  Pullback50                                       cap 3|
+|    SKIP [eq] EW  RSIRecovery                                      cap 3|
+|    SKIP [eq] JKHY  RSIRecovery                                    cap 3|
+|    SKIP [eq] INTC  TrendResumption                                cap 3|
+|    SKIP [eq] LITE  VWAP_Reclaim                                   cap 3|
+|    SKIP [eq] OPCH  VWAP_Reclaim                                   cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |19:51:20  INFO        place_all_stops: checking 3 positions...
+19:51:20  INFO        STOP skipped CIEN: fractional (0.0987 shares) — software exit will handle it
+19:51:20  INFO        STOP skipped CTAS: fractional (0.1690 shares) — software exit will handle it
+19:51:20  INFO        STOP skipped RBC: fractional (0.0693 shares) — software exit will handle it
+19:51:20  INFO        place_eod_stops: updating 3 stops to current price...
+19:51:20  INFO        EOD stop skip CIEN: 0.0987 shares (fractional) — ext_exits will cover
+19:51:20  INFO        EOD stop skip CTAS: 0.1690 shares (fractional) — ext_exits will cover
+19:51:20  INFO        EOD stop skip RBC: 0.0693 shares (fractional) — ext_exits will cover
+19:51:20  INFO        Daily log -> logs/daily/2026-09-16.md
+19:51:20  INFO        Dashboard written → logs/dashboard.md
+
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  CIEN                                                 still unconfirmed|
+|  RBC                                                  still unconfirmed|
+|  CTAS                                                 still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            901|
+|  Signals                                                             18|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $224.18|
+|  Cash                                                           $123.32|
++========================================================================+

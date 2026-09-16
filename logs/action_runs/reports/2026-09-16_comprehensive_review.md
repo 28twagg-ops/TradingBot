@@ -15366,3 +15366,132 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260916T194713Z
+
+- UTC timestamp: `20260916T194713Z`
+- GitHub run: [#10188](https://github.com/28twagg-ops/TradingBot/actions/runs/35142426961)
+- Run id: `35142426961`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260916T194713Z_live_bot.log`, `logs/action_runs/20260916T194713Z_live_options.log`, `logs/action_runs/20260916T194713Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1270 | 48.3 | -24.6 | +38.0 | $+15,688 |
+| TAINTED | 1859 | 33.4 | -39.0 | +12.1 | $-9,274 |
+| KEEP-only | 663 | 62.0 | +50.9 | +60.5 | $+10,921 |
+| KEEP-only recent | 466 | 59.7 | +53.1 | +68.4 | $+6,276 |
+
+- KEEP strategies (23): S163, S168, S173, S174, S210, S218, S350, S353, S354, S355, S356, S357, S361, S362, S363, S364, S365, S397, S399, S401, S403, S404, S406
+- KILL strategies (20): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S352, S359, S360, S366, S398, S405, S407, S408, S411, S412
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-16T15:40:17.547175-04:00","date":"2026-09-16","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":10.0,"phases_s":{"reconcile":0.58,"cancel":0.24,"manage":6.2,"protective_stops":2.17},"signals":0,"placed":0,"equity":997646.27,"open_positions":19,"pending_orders":0,"open_lots":96,"submitted_today":92,"filled_today":80,"unattributed_contracts":0,"top_signals":[],"github_run":"10186","github_run_id":"35141424782","status":"ok","data_quality":{"clean":{"n":1270,"win":48.27,"med":-24.62,"avg":38.03,"pnl":15688.16},"tainted":{"n":1859,"win":33.41,"med":-38.98,"avg":12.07,"pnl":-9274.28},"keep_only":{"n":663,"win":61.99,"med":50.88,"avg":60.45,"pnl":10921.45},"keep_only_recent":{"n":466,"win":59.66,"med":53.09,"avg":68.36,"pnl":6276.0},"keep_strategies":["S163","S168","S173","S174","S210","S218","S350","S353","S354","S355","S356","S357","S361","S362","S363","S364","S365","S397","S399","S401","S403","S404","S406"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S352","S359","S360","S366","S398","S405","S407","S408","S411","S412"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (107 earlier lines - see full log file)
+|  LITE     VWAP_Reclaim    eq     $915.50  47.8   1.35    VWAP reclaim V|
+|  MDLZ     Pullback50      eq     $62.38   44.1   -2.32   50MA bounce (+|
+|  NVDA     Pullback50      eq     $214.18  53.2   -1.11   50MA bounce (+|
+|  VLTO     Pullback50      eq     $95.99   38.2   -1.77   50MA bounce (+|
+|  VTRS     Pullback50      eq     $16.91   51.2   -1.28   50MA bounce (+|
+|  DOCN     Pullback50      eq     $123.19  55.7   -1.18   50MA bounce (+|
+|  GEF      Pullback50      eq     $82.87   38.2   0.03    50MA bounce (+|
+|  OPCH     VWAP_Reclaim    eq     $24.51   55.2   2.13    VWAP reclaim V|
+|  RBC      MomReversal     eq     $483.12  32.1   0.51    -25.2% drop/60|
+|  SN       Pullback50      eq     $170.81  34.7   0.01    50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] CIEN  MomReversal                                  $33.63|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] RBC  MomReversal                                   $33.63|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] CTAS  Pullback50                                   $33.63|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] EBAY  Pullback50                                     cap 3|
+|    SKIP [eq] EW  Pullback50                                       cap 3|
+|    SKIP [eq] FDS  Pullback50                                      cap 3|
+|    SKIP [eq] MDLZ  Pullback50                                     cap 3|
+|    SKIP [eq] NVDA  Pullback50                                     cap 3|
+|    SKIP [eq] VLTO  Pullback50                                     cap 3|
+|    SKIP [eq] VTRS  Pullback50                                     cap 3|
+|    SKIP [eq] DOCN  Pullback50                                     cap 3|
+|    SKIP [eq] GEF  Pullback50                                      cap 3|
+|    SKIP [eq] SN  Pullback50                                       cap 3|
+|    SKIP [eq] EW  RSIRecovery                                      cap 3|
+|    SKIP [eq] JKHY  RSIRecovery                                    cap 3|
+|    SKIP [eq] INTC  TrendResumption                                cap 3|
+|    SKIP [eq] LITE  VWAP_Reclaim                                   cap 3|
+|    SKIP [eq] OPCH  VWAP_Reclaim                                   cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |19:51:20  INFO        place_all_stops: checking 3 positions...
+19:51:20  INFO        STOP skipped CIEN: fractional (0.0987 shares) — software exit will handle it
+19:51:20  INFO        STOP skipped CTAS: fractional (0.1690 shares) — software exit will handle it
+19:51:20  INFO        STOP skipped RBC: fractional (0.0693 shares) — software exit will handle it
+19:51:20  INFO        place_eod_stops: updating 3 stops to current price...
+19:51:20  INFO        EOD stop skip CIEN: 0.0987 shares (fractional) — ext_exits will cover
+19:51:20  INFO        EOD stop skip CTAS: 0.1690 shares (fractional) — ext_exits will cover
+19:51:20  INFO        EOD stop skip RBC: 0.0693 shares (fractional) — ext_exits will cover
+19:51:20  INFO        Daily log -> logs/daily/2026-09-16.md
+19:51:20  INFO        Dashboard written → logs/dashboard.md
+
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  CIEN                                                 still unconfirmed|
+|  RBC                                                  still unconfirmed|
+|  CTAS                                                 still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            901|
+|  Signals                                                             18|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $224.18|
+|  Cash                                                           $123.32|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
