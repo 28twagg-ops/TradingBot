@@ -9,3 +9,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-15 14:07:25.309001+00:00,entry,1097,lab1097_s167_w2_1005_1045_r2,S167,8553d8d65d9a,SNOW,SNOW260918C00350000,1,0.47,0.46,46.0,,,,-0.01,,0.75,-0.75,0.23255813953488366,gap -2.2%,27587a76-f6d9-470a-a7ed-f3096c5c1c93
 2026-09-16T13:40:31Z,reconcile,1097,lab1097_s167_w2_1005_1045_r2,S167,8553d8d65d9a,SNOW,SNOW260918C00350000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-16 14:44:09.112954+00:00,entry,1097,lab1097_s167_w2_1005_1045_r2,S167,192e9b16181a,EOG,EOG260918C00150000,1,0.67,0.65,65.0,,,,-0.01,,0.5,-0.5,0.17600000000000016,gap -2.4%,f2980cba-4495-4bed-8c8c-016bd3ae4468
+2026-09-16T15:01:25Z,reconcile,1097,lab1097_s167_w2_1005_1045_r2,S167,192e9b16181a,EOG,EOG260918C00150000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
