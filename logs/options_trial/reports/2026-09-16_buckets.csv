@@ -265,7 +265,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 263,lab0263_s403_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-16,False,,,,,,,0,QQQ,S403,,entered_no_exit
 264,lab0264_s403_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-16,False,,,,,,,0,QQQ,S403,,entered_no_exit
 265,lab0265_s403_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-16,False,,,,,,,0,QQQ,S403,,entered_no_exit
-266,lab0266_s403_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-16,False,,,,,,,0,QQQ,S403,,entered_no_exit
+266,lab0266_s403_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-16,False,,,,,,,0,QQQ,S403,,entered_no_exit
 267,lab0267_s403_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-09-15,False,,,,,,,0,,,,open
 268,lab0268_s403_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-10,False,,,,,,,0,,,,idle
 269,lab0269_s403_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-10,False,,,,,,,0,,,,idle

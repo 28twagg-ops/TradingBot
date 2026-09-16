@@ -2422,26 +2422,6 @@
       "entry_order_id": "8240d516-1005-4339-abad-f7fd7eec264c"
     },
     {
-      "lot_id": "999e3d94d863",
-      "bucket_id": 266,
-      "profile_name": "lab0266_s403_w3_1045_1120_r1",
-      "strategy_id": "S403",
-      "occ_symbol": "QQQ260918C00725000",
-      "underlying": "QQQ",
-      "qty": 1,
-      "entry_cost": 63.0,
-      "entry_price": 0.63,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-16T15:02:42.317457+00:00",
-      "entry_order_id": "4c4605e6-c2e6-4c29-86a4-8ae674b01e9e"
-    },
-    {
       "lot_id": "64be1a5162f9",
       "bucket_id": 101,
       "profile_name": "lab0101_s211_w4_1120_1135_r2",
@@ -2573,6 +2553,36 @@
       "qty": 1,
       "reason": "stop_loss (-67.2%)",
       "submitted": "2026-09-16T14:06:24"
+    },
+    {
+      "order_id": "b893280f-7cbd-4fb9-ae72-257ff78107b6",
+      "lot_id": "325bd0547f47",
+      "bucket_id": 234,
+      "strategy_id": "S401",
+      "occ_symbol": "MSFT260918C00510000",
+      "qty": 1,
+      "reason": "stop_loss (-53.7%)",
+      "submitted": "2026-09-16T14:36:24"
+    },
+    {
+      "order_id": "779e7a97-ad81-4188-b97b-4216ce07acfd",
+      "lot_id": "cc7b1c7c6c24",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "MARA260918C00011500",
+      "qty": 1,
+      "reason": "stop_loss (-44.2%)",
+      "submitted": "2026-09-16T14:36:27"
+    },
+    {
+      "order_id": "d53b1005-4aae-4240-a94e-1f1a10709f47",
+      "lot_id": "503567764dfb",
+      "bucket_id": 197,
+      "strategy_id": "S218",
+      "occ_symbol": "UNH260918C00390000",
+      "qty": 1,
+      "reason": "stop_loss (-52.9%)",
+      "submitted": "2026-09-16T14:36:28"
     }
   ],
   "bucket_open_premium": {
@@ -2694,7 +2704,6 @@
     "b168": 25.0,
     "b367": 55.00000000000001,
     "b366": 55.00000000000001,
-    "b266": 63.0,
     "b101": 71.0,
     "b100": 70.0,
     "b799": 34.0,
