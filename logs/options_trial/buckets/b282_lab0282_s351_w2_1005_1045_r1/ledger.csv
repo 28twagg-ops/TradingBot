@@ -42,4 +42,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10 14:07:39.662319+00:00,entry,282,lab0282_s351_w2_1005_1045_r1,S351,a9e26dab8dbf,SMCI,SMCI260911C00039500,1,0.55,0.54,54.0,,,,-0.01,,0.75,-0.75,0.13333333333333344,gap -2.6%,6b9831b4-84bf-4585-848c-afc08671579d
 2026-09-10T16:36:04Z,reconcile,282,lab0282_s351_w2_1005_1045_r1,S351,a9e26dab8dbf,SMCI,SMCI260911C00039500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-15 14:07:25.587066+00:00,entry,282,lab0282_s351_w2_1005_1045_r1,S351,903af79d62c3,SNOW,SNOW260918C00350000,1,0.47,0.46,46.0,,,,-0.01,,0.75,-0.75,0.23255813953488366,gap -2.2%,f47cd1d6-0f18-4ec8-a29c-7d74c4e616c0
-2026-09-16T13:40:31Z,reconcile,282,lab0282_s351_w2_1005_1045_r1,S351,903af79d62c3,SNOW,SNOW260918C00350000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-16T13:34:49Z,reconcile,282,lab0282_s351_w2_1005_1045_r1,S351,903af79d62c3,SNOW,SNOW260918C00350000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
