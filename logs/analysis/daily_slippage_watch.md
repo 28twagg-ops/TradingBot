@@ -1,32 +1,32 @@
 # Daily Slippage Watch
-*Updated: 2026-09-16 19:51 UTC*
+*Updated: 2026-09-16 19:55 UTC*
 
 Tracks **stop P&L** (position loss vs entry) vs **execution slippage** (fill vs limit). Target: stops near -0.5% trigger when no overnight gap.
 
 | Day | Stops | Mean stop | Overshoot vs -0.5% | Within -1% | SELL slip | Status |
 |-----|-------|-----------|---------------------|------------|-----------|--------|
-| 2026-09-16 | 4 | -0.65% | -0.15pp | 4/4 | -0.0334% | **OK** |
-| 2026-09-15 | 4 | -0.85% | -0.35pp | 3/4 | -0.0334% | **OK** |
-| 2026-09-14 | 1 | -0.58% | -0.08pp | 1/1 | -0.0334% | **OK** |
-| 2026-09-11 | 1 | -0.73% | -0.23pp | 1/1 | -0.0334% | **OK** |
-| 2026-09-10 | 4 | -0.97% | -0.47pp | 2/4 | -0.0334% | **WATCH** |
-| 2026-09-09 | 3 | -0.88% | -0.38pp | 2/3 | -0.0334% | **OK** |
-| 2026-09-08 | 3 | -0.55% | -0.05pp | 3/3 | -0.0334% | **OK** |
-| 2026-09-04 | 1 | -0.61% | -0.11pp | 1/1 | -0.0334% | **OK** |
-| 2026-09-03 | 1 | -0.70% | -0.20pp | 1/1 | -0.0334% | **OK** |
+| 2026-09-16 | 5 | -0.62% | -0.12pp | 5/5 | -0.0332% | **OK** |
+| 2026-09-15 | 4 | -0.85% | -0.35pp | 3/4 | -0.0332% | **OK** |
+| 2026-09-14 | 1 | -0.58% | -0.08pp | 1/1 | -0.0332% | **OK** |
+| 2026-09-11 | 1 | -0.73% | -0.23pp | 1/1 | -0.0332% | **OK** |
+| 2026-09-10 | 4 | -0.97% | -0.47pp | 2/4 | -0.0332% | **WATCH** |
+| 2026-09-09 | 3 | -0.88% | -0.38pp | 2/3 | -0.0332% | **OK** |
+| 2026-09-08 | 3 | -0.55% | -0.05pp | 3/3 | -0.0332% | **OK** |
+| 2026-09-04 | 1 | -0.61% | -0.11pp | 1/1 | -0.0332% | **OK** |
+| 2026-09-03 | 1 | -0.70% | -0.20pp | 1/1 | -0.0332% | **OK** |
 
 ## Today (2026-09-16) detail
 
-- Stop count: **4**
-- Mean stop P&L: **-0.65%** (overshoot -0.15pp)
-- Within -1.0%: 4/4
-- Worst: ALLE -0.7%, ABNB -0.7%, AAL -0.6%, ALL -0.6%
+- Stop count: **5**
+- Mean stop P&L: **-0.62%** (overshoot -0.12pp)
+- Within -1.0%: 5/5
+- Worst: ALLE -0.7%, ABNB -0.7%, AAL -0.6%, ALL -0.6%, CIEN -0.5%
 - Stop execution methods:
-  - `market_urgent_full`: 3
+  - `market_urgent_full`: 4
   - `limit_fill_position_check_full`: 1
 
 ## Historical baseline (all logs)
-- Stop samples: 479
+- Stop samples: 480
 - Mean stop P&L: -1.34%
 - Mean overshoot: -0.84pp
 

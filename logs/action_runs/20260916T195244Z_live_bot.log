@@ -1,0 +1,23 @@
+19:52:45  INFO      Mode: scan
+19:52:46  INFO        [positions] 3/3 (3 valid)
+19:52:46  INFO        SELL MARKET [urgent] CIEN closed
+19:52:48  INFO        TX logged: SELL CIEN  P&L -0.52%
+19:52:48  INFO        Universe cache hit: 903 tickers (tickers_2026-09-16.json)
+19:52:49  INFO        [universe] 40/901 (40 valid)
+19:52:50  INFO        [universe] 80/901 (80 valid)
+19:52:51  INFO        [universe] 120/901 (120 valid)
+19:52:52  INFO        [universe] 160/901 (160 valid)
+19:52:53  INFO        [universe] 200/901 (199 valid)
+19:53:03  INFO        [universe] 240/901 (238 valid)
+19:53:15  INFO        [universe] 280/901 (278 valid)
+19:53:25  INFO        [universe] 320/901 (318 valid)
+19:53:38  INFO        [universe] 360/901 (358 valid)
+19:53:51  INFO        [universe] 400/901 (398 valid)
+19:54:01  INFO        [universe] 440/901 (438 valid)
+19:54:14  INFO        [universe] 480/901 (478 valid)
+19:54:27  INFO        [universe] 520/901 (518 valid)
+19:54:40  INFO        [universe] 560/901 (558 valid)
+19:54:49  INFO        [universe] 600/901 (598 valid)
+19:55:02  INFO        [universe] 640/901 (638 valid)
+19:55:15  INFO        [universe] 680/901 (678 valid)
+19:55:25  INFO        [universe] 720/901 (718 valid)
