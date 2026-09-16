@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,12,3,2026-08-21,True,26,0.0,-44.21,-42.02,-28.57,-73.72,-219.83,"AAPL,CRWD,GTLB,MARA,MSTR,NKE,PLTR,UNH",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-46.7%)…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,13,2,2026-08-21,True,26,0.0,-43.98,-41.27,-28.57,-73.72,-245.83,"AAPL,CRWD,GTLB,MARA,MSFT,MSTR,NKE,PLTR,UNH",ORPHAN,reconcile_fill; reconcile_fill; stop_loss (-46.7%)…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -803,7 +803,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 801,lab0801_s404_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-15,False,,,,,,,0,,,,idle
 802,lab0802_s404_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-09-16,False,,100.0,60.15,60.15,63.38,56.92,82.0,"CRWD,SNOW",S404,reconcile_fill; take_profit (+55.3%),closed
 803,lab0803_s404_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-09-16,False,,100.0,67.9,67.9,78.87,56.92,93.0,"CRWD,SNOW",S404,take_profit (+76.1%); take_profit (+58.4%),closed
-804,lab0804_s404_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-16,False,,,,,,,0,GTLB,S404,,entered_no_exit
+804,lab0804_s404_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-16,False,,0.0,-35.71,-35.71,-35.71,-35.71,-25.0,GTLB,S404,stop_loss (-50.0%),closed
 805,lab0805_s404_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-16,False,,0.0,-71.43,-71.43,-71.43,-71.43,-50.0,GTLB,S404,stop_loss (-100.0%),closed
 806,lab0806_s404_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-09-15,False,,100.0,74.6,74.6,74.6,74.6,47.0,SNOW,S404,take_profit (+74.6%),closed
 807,lab0807_s404_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-09-15,False,,100.0,52.38,52.38,52.38,52.38,33.0,SNOW,S404,take_profit (+50.8%),closed
