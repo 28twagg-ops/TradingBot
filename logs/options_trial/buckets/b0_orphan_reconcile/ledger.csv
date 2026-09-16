@@ -526,3 +526,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16 16:32:10.020051+00:00,exit,0,orphan_reconcile,ORPHAN,929c5e995380,UNH,UNH260918C00392500,1,,0.27,48.0,-43.75,-21.0,stop_loss (-43.8%),,-0.01,0.5,-0.4,,,d71a9848-d615-4d5d-8988-9e3a79781e1e
 2026-09-16 16:56:19.823930+00:00,exit,0,orphan_reconcile,ORPHAN,2f28b44c2f5e,UNH,UNH260918C00390000,1,,0.4,70.0,-42.86,-30.0,stop_loss (-42.9%),,-0.01,0.5,-0.4,,,de7e97e5-5815-4de8-bb67-452e922f7bf7
 2026-09-16T18:02:38Z,reconcile,0,orphan_reconcile,ORPHAN,75cf3de43134,CRWD,CRWD260918C00262500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-16 18:02:51.320495+00:00,exit,0,orphan_reconcile,ORPHAN,c6ef69d5991d,CRWD,CRWD260918C00275000,1,,0.07,13.0,-46.15,-6.0,stop_loss (-46.2%),,-0.01,0.5,-0.4,,,9dca651e-186e-48b7-b1fa-ec6362ce1ac6
+2026-09-16 18:02:44.745387+00:00,exit,0,orphan_reconcile,ORPHAN,5a5c36f249e4,NKE,NKE260918C00036500,1,,0.26,46.0,-43.48,-20.0,stop_loss (-43.5%),,-0.01,0.5,-0.4,,,30de8289-4583-45e8-a0b2-0260e5d00701
