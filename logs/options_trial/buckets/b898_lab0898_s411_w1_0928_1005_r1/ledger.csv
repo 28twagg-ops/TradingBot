@@ -12,3 +12,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10 14:03:12.635075+00:00,entry,898,lab0898_s411_w1_0928_1005_r1,S411,aeb88bd8c1ba,TSLA,TSLA260914C00392500,1,0.73,0.73,73.0,,,,-0.01,,0.5,-0.5,,,9cc1a24c-51dd-491c-84a6-7b67e337a1f9
 2026-09-09 19:16:14.788626+00:00,exit,898,lab0898_s411_w1_0928_1005_r1,S411,aeb88bd8c1ba,TSLA,TSLA260914C00392500,1,,0.31,73.0,-57.53,-42.0,reconcile_fill,,-0.01,0.5,-0.5,,,e13d885b-2a33-412f-8a95-f1b12708843c
 2026-09-15 14:38:17.580028+00:00,entry,898,lab0898_s411_w1_0928_1005_r1,S411,056857faf564,MARA,MARA260918C00011500,1,0.3,0.3,30.0,,,,-0.01,,0.75,-0.75,0.03278688524590167,RB gap -2.0% reclaim,4d88b5af-a33e-4a85-8ab3-f812f2eff1bb
+2026-09-16T18:51:21Z,reconcile,898,lab0898_s411_w1_0928_1005_r1,S411,056857faf564,MARA,MARA260918C00011500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
