@@ -2022,26 +2022,6 @@
       "entry_order_id": "e7f4e0e7-0893-4cce-8f2b-59b3c38eb7d0"
     },
     {
-      "lot_id": "c57578b6501f",
-      "bucket_id": 799,
-      "profile_name": "lab0799_s399_w4_1120_1135_r2",
-      "strategy_id": "S399",
-      "occ_symbol": "CRWD260918C00270000",
-      "underlying": "CRWD",
-      "qty": 1,
-      "entry_cost": 34.0,
-      "entry_price": 0.34,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-16T15:27:46.340665+00:00",
-      "entry_order_id": "5e75364e-391e-4a77-80e7-d02b322f757e"
-    },
-    {
       "lot_id": "92951809f5e9",
       "bucket_id": 798,
       "profile_name": "lab0798_s399_w4_1120_1135_r1",
@@ -2105,16 +2085,6 @@
       "submitted": "2026-09-16T12:47:27"
     },
     {
-      "order_id": "7d0f854e-c312-48db-a3df-b4f3179b63d0",
-      "lot_id": "c57578b6501f",
-      "bucket_id": 799,
-      "strategy_id": "S399",
-      "occ_symbol": "CRWD260918C00270000",
-      "qty": 1,
-      "reason": "stop_loss (-60.7%)",
-      "submitted": "2026-09-16T14:51:31"
-    },
-    {
       "order_id": "95d4a605-978b-4da1-9269-dc9db47fff4d",
       "lot_id": "5a194e946746",
       "bucket_id": 367,
@@ -2123,6 +2093,16 @@
       "qty": 1,
       "reason": "stop_loss (-54.5%)",
       "submitted": "2026-09-16T15:01:23"
+    },
+    {
+      "order_id": "474cdf1b-75ba-4ded-ba61-7c8fa8676ce7",
+      "lot_id": "92951809f5e9",
+      "bucket_id": 798,
+      "strategy_id": "S399",
+      "occ_symbol": "CRWD260918C00270000",
+      "qty": 1,
+      "reason": "stop_loss (-54.1%)",
+      "submitted": "2026-09-16T15:11:29"
     }
   ],
   "bucket_open_premium": {
@@ -2226,7 +2206,6 @@
     "b366": 55.00000000000001,
     "b101": 71.0,
     "b100": 70.0,
-    "b799": 34.0,
     "b798": 34.0,
     "b182": 60.0
   },
@@ -2812,7 +2791,8 @@
     "9c2059e3-0390-4221-9a55-9837995958a0",
     "14a0d3d5-de95-4c7b-98c2-4d739ede18fe",
     "aa3029b7-8090-4b06-aac9-655cb059e4fa",
-    "73c995a3-1959-45ba-b8de-80c8fbfa1074"
+    "73c995a3-1959-45ba-b8de-80c8fbfa1074",
+    "7d0f854e-c312-48db-a3df-b4f3179b63d0"
   ],
   "submitted_today": 92,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
