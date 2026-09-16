@@ -7836,3 +7836,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-16 18:02:36,exits,bull,224.65,156.98,0,0,0,2,ABNB|ALLE,both
 2026-09-16 18:06:14,exits,bull,224.67,156.98,0,0,0,2,ABNB|ALLE,both
 2026-09-16 18:11:11,exits,bull,224.81,156.98,0,0,0,2,ABNB|ALLE,both
+2026-09-16 18:16:12,exits,bull,224.77,156.98,0,0,0,2,ABNB|ALLE,both

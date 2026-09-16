@@ -14111,3 +14111,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16 18:03:05.843218+00:00,exit,805,lab0805_s404_w3_1045_1120_r2,S404,e2072b857818,GTLB,GTLB260925C00052000,1,,0.2,70.0,-71.43,-50.0,stop_loss (-100.0%),,-0.01,0.5,-0.5,,,5710a45c-cd8d-4a72-bcda-5bcc5418a7ee
 2026-09-16 18:03:04.411580+00:00,exit,833,lab0833_s406_w3_1045_1120_r2,S406,fb5d78d011c8,CRWD,CRWD260918C00270000,1,,0.17,27.0,-37.04,-10.0,stop_loss (-50.8%),,-0.01,0.5,-0.5,,,b7a60a41-774f-43f1-98e1-a469fee93b3f
 2026-09-16T18:11:13Z,reconcile,236,lab0236_s401_w2_1005_1045_r1,S401,5654869219b0,META,META260918C00727500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-16 18:12:06.192013+00:00,exit,0,orphan_reconcile,ORPHAN,8c870393046a,GTLB,GTLB260925C00052000,1,,0.5,70.0,-28.57,-20.0,stop_loss (-42.9%),,-0.01,0.5,-0.4,,,51dbb99e-b8bc-489f-b10a-fb3dcd1dde40

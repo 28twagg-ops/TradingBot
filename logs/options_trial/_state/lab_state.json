@@ -2342,26 +2342,6 @@
       "entry_order_id": "362335f2-3a7c-4eaa-8b35-2d8bd14f0f14"
     },
     {
-      "lot_id": "8c870393046a",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "GTLB260925C00052000",
-      "underlying": "GTLB",
-      "qty": 1,
-      "entry_cost": 70.0,
-      "entry_price": 0.7,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-16T14:51:17.599477+00:00",
-      "entry_order_id": "orphan:GTLB260925C00052000"
-    },
-    {
       "lot_id": "8b83fa239f61",
       "bucket_id": 168,
       "profile_name": "lab0168_s216_w3_1045_1120_r1",
@@ -2593,16 +2573,6 @@
       "qty": 1,
       "reason": "stop_loss (-67.2%)",
       "submitted": "2026-09-16T14:06:24"
-    },
-    {
-      "order_id": "51dbb99e-b8bc-489f-b10a-fb3dcd1dde40",
-      "lot_id": "8c870393046a",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "GTLB260925C00052000",
-      "qty": 1,
-      "reason": "stop_loss (-42.9%)",
-      "submitted": "2026-09-16T14:11:22"
     }
   ],
   "bucket_open_premium": {
@@ -2673,7 +2643,7 @@
     "b800": 30.0,
     "b777": 30.0,
     "b776": 30.0,
-    "b0": 194.4445,
+    "b0": 124.4445,
     "b916": 3.0,
     "b267": 3.0,
     "b913": 15.0,
@@ -3307,7 +3277,8 @@
     "9dca651e-186e-48b7-b1fa-ec6362ce1ac6",
     "30de8289-4583-45e8-a0b2-0260e5d00701",
     "5710a45c-cd8d-4a72-bcda-5bcc5418a7ee",
-    "b7a60a41-774f-43f1-98e1-a469fee93b3f"
+    "b7a60a41-774f-43f1-98e1-a469fee93b3f",
+    "51dbb99e-b8bc-489f-b10a-fb3dcd1dde40"
   ],
   "submitted_today": 92,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
