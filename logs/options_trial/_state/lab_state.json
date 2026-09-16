@@ -1702,26 +1702,6 @@
       "entry_order_id": "c3e994ee-4383-40c5-96a4-32bd662787e6"
     },
     {
-      "lot_id": "6dd17bff3d24",
-      "bucket_id": 239,
-      "profile_name": "lab0239_s401_w3_1045_1120_r2",
-      "strategy_id": "S401",
-      "occ_symbol": "MSFT260918C00507500",
-      "underlying": "MSFT",
-      "qty": 1,
-      "entry_cost": 63.0,
-      "entry_price": 0.63,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-16T14:48:42.327511+00:00",
-      "entry_order_id": "e14a7549-6e7e-48d4-a7c7-a37f74594587"
-    },
-    {
       "lot_id": "149b7278387d",
       "bucket_id": 860,
       "profile_name": "lab0860_s408_w3_1045_1120_r1",
@@ -1905,44 +1885,44 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "1417ae6e-81d2-4f1d-b342-978567eecd2a",
+      "order_id": "de5ba896-8733-408f-afa2-c176c16c5a77",
       "lot_id": "9943eadcdf3e",
       "bucket_id": 315,
       "strategy_id": "S355",
       "occ_symbol": "MARA260918C00012000",
       "qty": 1,
-      "reason": "stop_loss (-53.4%)",
-      "submitted": "2026-09-16T12:01:43"
+      "reason": "stop_loss (-80.0%)",
+      "submitted": "2026-09-16T16:00:38"
     },
     {
-      "order_id": "c6d070fe-2c3d-49d9-85f5-f53eadfcd5c4",
+      "order_id": "98a754f8-799c-4a96-b505-d4537feeedbb",
       "lot_id": "149b7278387d",
       "bucket_id": 860,
       "strategy_id": "S408",
       "occ_symbol": "CRWD260918C00285000",
       "qty": 1,
-      "reason": "stop_loss (-60.0%)",
-      "submitted": "2026-09-16T12:47:27"
+      "reason": "stop_loss (-80.0%)",
+      "submitted": "2026-09-16T16:00:38"
     },
     {
-      "order_id": "95d4a605-978b-4da1-9269-dc9db47fff4d",
+      "order_id": "d7acbdf3-1e8f-4542-b565-5497abf4c6d3",
+      "lot_id": "3d643651084f",
+      "bucket_id": 916,
+      "strategy_id": "S412",
+      "occ_symbol": "PATH260918C00016000",
+      "qty": 1,
+      "reason": "stop_loss (-100.0%)",
+      "submitted": "2026-09-16T16:00:39"
+    },
+    {
+      "order_id": "3dee652d-8f4f-4e4e-904f-52e92fefa11a",
       "lot_id": "5a194e946746",
       "bucket_id": 367,
       "strategy_id": "S361",
       "occ_symbol": "FSLY260918C00025000",
       "qty": 1,
-      "reason": "stop_loss (-54.5%)",
-      "submitted": "2026-09-16T15:01:23"
-    },
-    {
-      "order_id": "f3951686-0550-4141-8e48-ab6a669c6675",
-      "lot_id": "6dd17bff3d24",
-      "bucket_id": 239,
-      "strategy_id": "S401",
-      "occ_symbol": "MSFT260918C00507500",
-      "qty": 1,
-      "reason": "stop_loss (-50.8%)",
-      "submitted": "2026-09-16T15:21:17"
+      "reason": "stop_loss (-63.6%)",
+      "submitted": "2026-09-16T16:00:40"
     }
   ],
   "bucket_open_premium": {
@@ -2031,7 +2011,6 @@
     "b783": 63.0,
     "b779": 65.0,
     "b778": 65.0,
-    "b239": 63.0,
     "b860": 5.0,
     "b781": 70.0,
     "b168": 25.0,
