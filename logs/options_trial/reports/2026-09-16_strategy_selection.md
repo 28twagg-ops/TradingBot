@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-16
 
-_Generated 2026-09-16T10:53:12.210331_
+_Generated 2026-09-16T10:58:47.829440_
 
 ## Summary
 
@@ -38,7 +38,7 @@ _Generated 2026-09-16T10:53:12.210331_
 | S401 (Any_Gap_Down_Small) | 3d | watch | 106 | 52.8 | +12.70 | -74.00 | -48.62 | +250.18 | 47 | 14 | 5 | $+1,324.00 | 30.2% | fat left tail (p10 < -45%) |
 | S350 (GapDown_0DTE) | 0d | watch | 43 | 51.2 | +11.76 | -65.89 | -52.76 | +246.29 | 47 | 4 | 0 | $+658.00 | 30.2% | fat left tail (p10 < -45%) |
 | S364 (RubberBand_7DTE) | 7d | watch | 55 | 50.9 | +8.33 | -85.29 | -57.62 | +149.58 | 47 | 2 | 1 | $+65.00 | 38.2% | fat left tail (p10 < -45%) |
-| S361 (RubberBand_2DTE) | 2d | watch | 49 | 51.0 | +1.85 | -67.04 | -50.00 | +194.67 | 47 | 8 | 2 | $+160.00 | 22.4% | fat left tail (p10 < -45%) |
+| S361 (RubberBand_2DTE) | 2d | watch | 49 | 51.0 | +1.85 | -67.04 | -50.00 | +194.67 | 47 | 10 | 2 | $+160.00 | 22.4% | fat left tail (p10 < -45%) |
 | S411 (RubberBand_OTM2) | 3d | watch | 44 | 50.0 | +1.35 | -57.29 | -51.80 | +55.43 | 44 | 9 | 1 | $-291.00 | 20.5% | fat left tail (p10 < -45%) |
 | S358 (GapDown_30DTE) | 30d | watch | 4 | 50.0 | +0.84 | -51.39 | -51.39 | +54.49 | 43 | 0 | 0 | $-21.00 | 50.0% | insufficient sample (<8 exits) |
 | S169 (BB Squeeze Breakout call 3 DTE) | 3d ATM BB squeeze | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
