@@ -852,3 +852,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-09-16 18:56:23,2026-09-16,SELL,ALLE,Pullback50,152.61,,152.61,33.67,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
 2026-09-16 19:17:02,2026-09-16,SELL,ABNB,Pullback50,166.9,,166.9,33.55,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-09-16 19:52:48,2026-09-16,SELL,CIEN,MomReversal,338.76,,338.97,33.44,0.062,0.0207,market_urgent_full,stop_loss (-0.5%),bull
+2026-09-17 13:47:15,2026-09-17,SELL,RBC,MomReversal,504.79,503.78,504.922,35.01,0.0261,0.0092,limit_fill_position_check_full,midline (+4.1%),bull
+2026-09-17 13:47:46,2026-09-17,SELL,CIEN,MomReversal,371.76,371.02,371.07,35.57,-0.1856,-0.066,limit_fill_position_check_full,midline (+6.0%),bull

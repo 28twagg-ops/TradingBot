@@ -34,4 +34,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-15 14:22:38.354024+00:00,entry,779,lab0779_s397_w2_1005_1045_r2,S397,6bbfec45a550,SNOW,SNOW260918C00345000,1,0.72,0.71,71.0,,,,-0.01,,0.75,-0.75,0.22900763358778628,gap -2.2%,2a37c1a9-4a7d-473a-85cc-c7c621142934
 2026-09-16 13:57:56.269107+00:00,exit,779,lab0779_s397_w2_1005_1045_r2,S397,6bbfec45a550,SNOW,SNOW260918C00345000,1,,1.24,71.0,74.65,53.0,take_profit (+74.6%),,-0.01,0.5,-0.5,,,5cd0795d-0875-47e1-9aea-ad692ed7a38f
 2026-09-16 14:12:22.772533+00:00,entry,779,lab0779_s397_w2_1005_1045_r2,S397,01866ade510d,CRWD,CRWD260918C00260000,1,0.66,0.65,65.0,,,,-0.01,,0.75,-0.75,0.1269841269841271,gap -2.3%,8980c2d7-f36c-4aa8-a758-32e5152b47c2
-2026-09-17T13:34:51Z,reconcile,779,lab0779_s397_w2_1005_1045_r2,S397,01866ade510d,CRWD,CRWD260918C00260000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-17T13:40:22Z,reconcile,779,lab0779_s397_w2_1005_1045_r2,S397,01866ade510d,CRWD,CRWD260918C00260000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

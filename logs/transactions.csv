@@ -1217,3 +1217,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-09-16 18:56:23,2026-09-16,SELL,ALLE,Pullback50,152.61,33.67,-0.73,-0.25,2,stop_loss (-0.7%),bull,224.35
 2026-09-16 19:17:02,2026-09-16,SELL,ABNB,Pullback50,166.9,33.55,-0.65,-0.22,0,stop_loss (-0.6%),bull,224.18
 2026-09-16 19:52:48,2026-09-16,SELL,CIEN,MomReversal,338.97,33.44,-0.52,-0.18,0,stop_loss (-0.5%),bull,223.99
+2026-09-17 13:47:15,2026-09-17,SELL,RBC,MomReversal,504.92,35.01,4.1,1.38,1,midline (+4.1%),bull,227.2
+2026-09-17 13:47:46,2026-09-17,SELL,CIEN,MomReversal,371.07,35.57,6.04,2.03,0,midline (+6.0%),bull,227.17

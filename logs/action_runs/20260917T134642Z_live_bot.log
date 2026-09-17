@@ -1,0 +1,28 @@
+13:46:43  INFO      Mode: morning_scan
+13:46:44  INFO        [positions] 3/3 (3 valid)
+13:46:45  INFO        SELL LIMIT RBC  qty=0.069332453  limit=$503.78  id=ad11e33c-3dcd-49bf-8432-19451afc9579
+13:47:15  INFO        SELL LIMIT filled RBC (confirmed by position check)
+13:47:15  INFO        TX logged: SELL RBC  P&L 4.1%
+13:47:15  INFO        SELL LIMIT CIEN  qty=0.095864232  limit=$371.02  id=ee2e7cac-e720-4933-827e-d85e29850378
+13:47:46  INFO        SELL LIMIT filled CIEN (confirmed by position check)
+13:47:46  INFO        TX logged: SELL CIEN  P&L 6.04%
+13:47:46  INFO        Universe cache hit: 903 tickers (tickers_2026-09-17.json)
+13:47:47  INFO        [universe] 40/902 (40 valid)
+13:47:48  INFO        [universe] 80/902 (80 valid)
+13:47:49  INFO        [universe] 120/902 (120 valid)
+13:47:50  INFO        [universe] 160/902 (160 valid)
+13:47:51  INFO        [universe] 200/902 (199 valid)
+13:47:59  INFO        [universe] 240/902 (238 valid)
+13:48:12  INFO        [universe] 280/902 (278 valid)
+13:48:25  INFO        [universe] 320/902 (318 valid)
+13:48:35  INFO        [universe] 360/902 (358 valid)
+13:48:48  INFO        [universe] 400/902 (398 valid)
+13:48:59  INFO        [universe] 440/902 (438 valid)
+13:49:12  INFO        [universe] 480/902 (478 valid)
+13:49:25  INFO        [universe] 520/902 (518 valid)
+13:49:35  INFO        [universe] 560/902 (558 valid)
+13:49:48  INFO        [universe] 600/902 (598 valid)
+13:50:01  INFO        [universe] 640/902 (638 valid)
+13:50:11  INFO        [universe] 680/902 (678 valid)
+13:50:25  INFO        [universe] 720/902 (718 valid)
+13:50:35  INFO        [universe] 760/902 (758 valid)
