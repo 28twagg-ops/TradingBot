@@ -1,6 +1,6 @@
 # Ledger health — 2026-09-17
 
-_Generated 2026-09-17T13:46:32.917328_
+_Generated 2026-09-17T13:51:29.963368_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -10,12 +10,12 @@ State file: OK
 
 | Check                       | Count | Status |
 |-----------------------------|------:|--------|
-| Current stuck (state)       |     8 | WARN |
-| Orphaned lots (post-stable) |  1373 | WARN |
+| Current stuck (state)       |     7 | WARN |
+| Orphaned lots (post-stable) |  1372 | WARN |
 | Missing exit records (post) |  1365 | WARN |
 | State/ledger mismatches     |     3 | WARN |
-| Total open lots             |    89 | INFO |
-| Total closed lots           |  2318 | INFO |
+| Total open lots             |    88 | INFO |
+| Total closed lots           |  2319 | INFO |
 | Pre-cutoff audit debt       |     0 | INFO |
 | Transition audit debt       |   744 | INFO |
 
@@ -32,13 +32,12 @@ Notes:
 | c749b9facdbb | S366 | MARA | 2026-09-04 | 13 |
 | 53ee58608a69 | S366 | MARA | 2026-09-04 | 13 |
 | 01aab77eeb4e | S366 | MARA | 2026-09-04 | 13 |
-| aede53d9d451 | S354 | MARA | 2026-09-10 | 7 |
 | b7f46a6ed532 | S163 | MARA | 2026-09-10 | 7 |
 | 7772468d72fe | S163 | MARA | 2026-09-10 | 7 |
 | b7a0810f1625 | S168 | MARA | 2026-09-10 | 7 |
 | af2fd15cfdcf | S168 | MARA | 2026-09-10 | 7 |
 
-_Orphaned ledger detail omitted (1373 rows) — see note above on historical lot_id churn._
+_Orphaned ledger detail omitted (1372 rows) — see note above on historical lot_id churn._
 
 ## State/ledger mismatches
 
