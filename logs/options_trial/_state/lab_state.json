@@ -1773,6 +1773,16 @@
       "qty": 1,
       "reason": "stop_loss (-50.5%)",
       "submitted": "2026-09-17T14:01:27"
+    },
+    {
+      "order_id": "8d9cf4e4-b862-478b-8f48-26064ea03383",
+      "lot_id": "7ff026e7ed49",
+      "bucket_id": 167,
+      "strategy_id": "S216",
+      "occ_symbol": "IWM260921C00290000",
+      "qty": 1,
+      "reason": "stop_loss (-50.9%)",
+      "submitted": "2026-09-17T14:46:22"
     }
   ],
   "bucket_open_premium": {
