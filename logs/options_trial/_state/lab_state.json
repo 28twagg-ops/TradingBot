@@ -1542,26 +1542,6 @@
       "entry_order_id": "a2931983-4440-471e-8e5d-42cc5768932b"
     },
     {
-      "lot_id": "817e776bd219",
-      "bucket_id": 170,
-      "profile_name": "lab0170_s216_w4_1120_1135_r1",
-      "strategy_id": "S216",
-      "occ_symbol": "MCD260918C00252500",
-      "underlying": "MCD",
-      "qty": 1,
-      "entry_cost": 40.0,
-      "entry_price": 0.4,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-17T15:22:43.436928+00:00",
-      "entry_order_id": "bed0428c-57ef-43da-bbe8-9d82c4b00562"
-    },
-    {
       "lot_id": "a32067769464",
       "bucket_id": 101,
       "profile_name": "lab0101_s211_w4_1120_1135_r2",
@@ -1753,16 +1733,6 @@
       "qty": 1,
       "reason": "stop_loss (-50.5%)",
       "submitted": "2026-09-17T14:01:27"
-    },
-    {
-      "order_id": "ad010521-abc4-4ca7-9a22-0459f5bcc5f0",
-      "lot_id": "817e776bd219",
-      "bucket_id": 170,
-      "strategy_id": "S216",
-      "occ_symbol": "MCD260918C00252500",
-      "qty": 1,
-      "reason": "stop_loss (-55.0%)",
-      "submitted": "2026-09-17T15:34:59"
     }
   ],
   "bucket_open_premium": {
@@ -1841,7 +1811,6 @@
     "b796": 20.0,
     "b241": 51.0,
     "b240": 51.0,
-    "b170": 40.0,
     "b101": 7.000000000000001,
     "b100": 7.000000000000001,
     "b905": 70.0,

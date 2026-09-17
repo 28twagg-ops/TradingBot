@@ -15,3 +15,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10 15:28:35.833385+00:00,entry,170,lab0170_s216_w4_1120_1135_r1,S216,dda18a8828a4,UPST,UPST260918C00027500,1,0.38,0.37,37.0,,,,-0.01,,0.75,-0.75,0.1971830985915493,RSI crossed 30: 29.0 -> 32.1,f1950375-3c07-4298-b4f8-519f74543427
 2026-09-11T20:02:26Z,reconcile,170,lab0170_s216_w4_1120_1135_r1,S216,dda18a8828a4,UPST,UPST260918C00027500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-17 15:22:38.609453+00:00,entry,170,lab0170_s216_w4_1120_1135_r1,S216,817e776bd219,MCD,MCD260918C00252500,1,0.41,0.4,40.0,,,,-0.01,,0.5,-0.5,0.15384615384615383,RSI crossed 30: 26.1 -> 33.3,bed0428c-57ef-43da-bbe8-9d82c4b00562
+2026-09-17T19:40:17Z,reconcile,170,lab0170_s216_w4_1120_1135_r1,S216,817e776bd219,MCD,MCD260918C00252500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
