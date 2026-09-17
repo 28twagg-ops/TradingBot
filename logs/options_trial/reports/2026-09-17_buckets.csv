@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,5,2026-08-21,True,27,,,,,,0,,,,stale_open
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,6,2026-08-21,True,27,,,,,,0,,,,stale_open
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -365,8 +365,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 363,lab0363_s361_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-16,False,,,,,,,0,,,,idle
 364,lab0364_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-09-15,False,,,,,,,0,,,,open
 365,lab0365_s361_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-09-15,False,,,,,,,0,,,,open
-366,lab0366_s361_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-16,False,,,,,,,0,,,,idle
-367,lab0367_s361_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-09-16,False,,0.0,-81.82,-81.82,-81.82,-81.82,-45.0,FSLY,S361,reconcile_fill,closed
+366,lab0366_s361_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-17,False,,0.0,-50.0,-50.0,-50.0,-50.0,-25.0,CRWD,S361,reconcile_fill,closed
+367,lab0367_s361_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-09-17,False,,0.0,-81.82,-81.82,-81.82,-81.82,-45.0,"CRWD,FSLY",S361,reconcile_fill,closed
 368,lab0368_s361_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-09-15,False,,,,,,,0,,,,open
 369,lab0369_s361_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-09-15,False,,,,,,,0,,,,open
 370,lab0370_s361_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
