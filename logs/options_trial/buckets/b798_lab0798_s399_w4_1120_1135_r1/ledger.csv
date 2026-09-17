@@ -32,3 +32,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10T16:07:30Z,reconcile,798,lab0798_s399_w4_1120_1135_r1,S399,4a73f0e2a2c0,MARA,MARA260911C00012500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-16 15:27:19.645785+00:00,entry,798,lab0798_s399_w4_1120_1135_r1,S399,92951809f5e9,CRWD,CRWD260918C00270000,1,0.35,0.34,34.0,,,,-0.01,,0.75,-0.75,0.11764705882352937,gap -2.3%,3c3f377b-525a-4363-913d-32afc559ea3a
 2026-09-16T19:17:04Z,reconcile,798,lab0798_s399_w4_1120_1135_r1,S399,92951809f5e9,CRWD,CRWD260918C00270000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-17 15:29:28.106177+00:00,entry,798,lab0798_s399_w4_1120_1135_r1,S399,5b8ade151101,CRWD,CRWD260918C00260000,1,0.32,0.32,32.0,,,,-0.01,,0.75,-0.75,0.09523809523809532,gap -2.2%,bd524520-c026-4828-8db2-8b9a2b0a83e4
+2026-09-16 19:14:22.065878+00:00,exit,798,lab0798_s399_w4_1120_1135_r1,S399,5b8ade151101,CRWD,CRWD260918C00260000,1,,0.15,32.0,-53.12,-17.0,reconcile_fill,,-0.01,0.5,-0.5,,,474cdf1b-75ba-4ded-ba61-7c8fa8676ce7
