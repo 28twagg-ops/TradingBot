@@ -7,12 +7,12 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 
 | Slice | n | Win% | Med% | Avg% | Realized $ |
 |---|---:|---:|---:|---:|---:|
-| ALL | 3143 | 39.4 | -37.9 | +23.0 | $+6,303 |
-| CLEAN (perfect running) | 1274 | 48.1 | -25.6 | +37.7 | $+15,600 |
+| ALL | 3144 | 39.4 | -38.0 | +23.0 | $+6,301 |
+| CLEAN (perfect running) | 1275 | 48.1 | -26.2 | +37.6 | $+15,598 |
 | TAINTED (errors/outages) | 1869 | 33.4 | -39.0 | +13.0 | $-9,297 |
-| CLEAN since 2026-08-03 | 958 | 44.7 | -43.6 | +38.2 | $+3,301 |
-| KEEP-only (CLEAN keepers) | 665 | 61.8 | +50.9 | +60.0 | $+10,855 |
-| KEEP-only since 2026-08-03 | 468 | 59.4 | +53.0 | +67.7 | $+6,210 |
+| CLEAN since 2026-08-03 | 959 | 44.6 | -43.8 | +38.1 | $+3,299 |
+| KEEP-only (CLEAN keepers) | 666 | 61.7 | +50.4 | +59.9 | $+10,853 |
+| KEEP-only since 2026-08-03 | 469 | 59.3 | +52.9 | +67.5 | $+6,208 |
 
 ## Known outage / degraded days
 
@@ -56,7 +56,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | 2026-09-11 | BUGGY | 36 | 8 | 69 | +63.2 |
 | 2026-09-15 | BUGGY | 36 | 5 | 42 | -41.5 |
 | 2026-09-16 | BUGGY | 49 | 14 | 29 | -42.9 |
-| 2026-09-17 | BUGGY | 8 | 4 | 0 | -71.5 |
+| 2026-09-17 | BUGGY | 9 | 4 | 0 | -71.0 |
 
 ## CLEAN strategy kill list (n>=10, med<=-20%)
 
@@ -97,7 +97,6 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | S361 | 20 | 65.0 | +59.1 | +203.6 | $+295 |
 | S404 | 38 | 68.4 | +56.9 | +35.6 | $+923 |
 | S357 | 12 | 75.0 | +55.0 | +34.6 | $+220 |
-| S399 | 23 | 52.2 | +52.6 | +140.9 | $+198 |
 | S364 | 26 | 57.7 | +51.6 | +22.5 | $+65 |
 | S173 | 105 | 61.9 | +51.6 | +43.1 | $+2,562 |
 | S401 | 37 | 56.8 | +50.0 | +58.4 | $+665 |
@@ -108,6 +107,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | S218 | 39 | 51.3 | +47.8 | +38.4 | $+533 |
 | S356 | 15 | 60.0 | +42.0 | +13.2 | $+54 |
 | S174 | 54 | 68.5 | +30.1 | +5.5 | $+325 |
+| S399 | 24 | 50.0 | +17.7 | +132.9 | $+196 |
 | S354 | 24 | 50.0 | +2.1 | +21.5 | $+221 |
 | S363 | 14 | 50.0 | +1.9 | +6.1 | $-79 |
 
