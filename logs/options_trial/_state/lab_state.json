@@ -62,26 +62,6 @@
       "entry_order_id": "40cd0350-b43e-484c-925e-1e9808bad1e0"
     },
     {
-      "lot_id": "2f8f3b3c1da0",
-      "bucket_id": 311,
-      "profile_name": "lab0311_s354_w4_1120_1135_r2",
-      "strategy_id": "S354",
-      "occ_symbol": "MARA260918C00012000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 48.0,
-      "entry_price": 0.48,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-10T15:26:30.931703+00:00",
-      "entry_order_id": "e586845b-58c0-48cd-b703-cdf4b2a06072"
-    },
-    {
       "lot_id": "aede53d9d451",
       "bucket_id": 310,
       "profile_name": "lab0310_s354_w4_1120_1135_r1",
@@ -1562,26 +1542,6 @@
       "entry_order_id": "f2bf8945-090b-43ba-84d6-971169728343"
     },
     {
-      "lot_id": "c39e425a6747",
-      "bucket_id": 168,
-      "profile_name": "lab0168_s216_w3_1045_1120_r1",
-      "strategy_id": "S216",
-      "occ_symbol": "BAC260918C00058000",
-      "underlying": "BAC",
-      "qty": 1,
-      "entry_cost": 39.0,
-      "entry_price": 0.39,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-17T14:56:19.440202+00:00",
-      "entry_order_id": "1a3255bd-9adc-493d-a24d-0e06dea192b9"
-    },
-    {
       "lot_id": "1d79395b7a8c",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -1923,33 +1883,12 @@
       "qty": 1,
       "reason": "take_profit (+68.8%)",
       "submitted": "2026-09-17T10:41:22"
-    },
-    {
-      "order_id": "1d3ab243-9d43-47c9-a1b5-56ce18619e3d",
-      "lot_id": "c39e425a6747",
-      "bucket_id": 168,
-      "strategy_id": "S216",
-      "occ_symbol": "BAC260918C00058000",
-      "qty": 1,
-      "reason": "take_profit (+59.0%)",
-      "submitted": "2026-09-17T12:36:11"
-    },
-    {
-      "order_id": "252fae75-b235-45f8-8151-65454532fb4c",
-      "lot_id": "2f8f3b3c1da0",
-      "bucket_id": 311,
-      "strategy_id": "S354",
-      "occ_symbol": "MARA260918C00012000",
-      "qty": 1,
-      "reason": "stop_loss (-57.6%)",
-      "submitted": "2026-09-17T12:41:22"
     }
   ],
   "bucket_open_premium": {
     "b434": 51.0,
     "b433": 49.0,
     "b432": 49.0,
-    "b311": 48.0,
     "b310": 48.0,
     "b1143": 48.0,
     "b1142": 48.0,
@@ -2022,7 +1961,6 @@
     "b265": 43.0,
     "b264": 43.0,
     "b238": 35.0,
-    "b168": 39.0,
     "b266": 37.0,
     "b797": 20.0,
     "b796": 20.0,
@@ -2599,7 +2537,8 @@
     "f049f860-a46e-4963-901f-54d459cb0207",
     "88bb53dc-7bf8-4038-8185-81517872a2ab",
     "1235b609-02cd-4a19-9a83-3e73876a66cd",
-    "a5559f8a-6ee1-417d-b9b1-2ddc70d4e863"
+    "a5559f8a-6ee1-417d-b9b1-2ddc70d4e863",
+    "252fae75-b235-45f8-8151-65454532fb4c"
   ],
   "submitted_today": 59,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
