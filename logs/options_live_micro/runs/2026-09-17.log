@@ -22,7 +22,15 @@ Live micro done. open_options=0 lots=0
 Live account equity $224.26 cash $156.74 #225458845 options_level=3
 Live micro: outside 9:28-16:05 ET
 Live micro done. open_options=0 lots=0
-=== options_live_micro LIVE 2026-09-17T09:40:21.388058-04:00 share=25% ===
-Live account equity $226.42 cash $123.12 #225458845 options_level=3
+=== options_live_micro LIVE 2026-09-17T09:34:49.688741-04:00 share=25% ===
+Live account equity $225.79 cash $123.12 #225458845 options_level=3
+Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+Live micro done. open_options=0 lots=0
+=== options_live_micro LIVE 2026-09-17T09:55:58.792131-04:00 share=25% ===
+Live account equity $226.99 cash $125.54 #225458845 options_level=3
+Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+Live micro done. open_options=0 lots=0
+=== options_live_micro LIVE 2026-09-17T10:02:05.106393-04:00 share=25% ===
+Live account equity $226.70 cash $226.70 #225458845 options_level=3
 Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
 Live micro done. open_options=0 lots=0
