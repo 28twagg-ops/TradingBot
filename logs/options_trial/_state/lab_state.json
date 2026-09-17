@@ -1802,26 +1802,6 @@
       "entry_order_id": "90144fdb-759c-4c9b-a37d-abea19bcd1e7"
     },
     {
-      "lot_id": "487268429604",
-      "bucket_id": 833,
-      "profile_name": "lab0833_s406_w3_1045_1120_r2",
-      "strategy_id": "S406",
-      "occ_symbol": "CRWD260918C00265000",
-      "underlying": "CRWD",
-      "qty": 1,
-      "entry_cost": 20.0,
-      "entry_price": 0.2,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-17T15:06:35.670924+00:00",
-      "entry_order_id": "2c3186ef-cebc-4017-8779-3d9d77ec7041"
-    },
-    {
       "lot_id": "c297dbff4b36",
       "bucket_id": 832,
       "profile_name": "lab0832_s406_w3_1045_1120_r1",
@@ -2155,14 +2135,24 @@
       "submitted": "2026-09-17T11:56:10"
     },
     {
-      "order_id": "9f57ef7b-6282-4559-96f3-46251df69ed7",
-      "lot_id": "487268429604",
-      "bucket_id": 833,
+      "order_id": "9f428256-71d7-4b16-a574-1fe739146b2c",
+      "lot_id": "f27a6711e93e",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "PATH260918C00014000",
+      "qty": 3,
+      "reason": "stop_loss (-44.4%)",
+      "submitted": "2026-09-17T12:01:26"
+    },
+    {
+      "order_id": "1235b609-02cd-4a19-9a83-3e73876a66cd",
+      "lot_id": "c297dbff4b36",
+      "bucket_id": 832,
       "strategy_id": "S406",
       "occ_symbol": "CRWD260918C00265000",
       "qty": 1,
       "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-09-17T11:56:12"
+      "submitted": "2026-09-17T12:01:27"
     }
   ],
   "bucket_open_premium": {
@@ -2252,7 +2242,6 @@
     "b169": 39.0,
     "b168": 39.0,
     "b266": 37.0,
-    "b833": 20.0,
     "b832": 20.0,
     "b797": 20.0,
     "b796": 20.0,
@@ -2818,7 +2807,8 @@
     "c6f49dcb-7094-42ae-859c-946dcd8e235c",
     "826f332c-de17-4e4d-b1ae-74be48109af2",
     "462a0ba2-5284-4da1-817e-910f08f9b9c9",
-    "9936b189-8ad4-4919-b10d-3bb270c93826"
+    "9936b189-8ad4-4919-b10d-3bb270c93826",
+    "9f57ef7b-6282-4559-96f3-46251df69ed7"
   ],
   "submitted_today": 59,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
