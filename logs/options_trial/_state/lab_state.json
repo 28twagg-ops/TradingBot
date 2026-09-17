@@ -1823,6 +1823,16 @@
       "qty": 1,
       "reason": "take_profit (+68.8%)",
       "submitted": "2026-09-17T10:41:22"
+    },
+    {
+      "order_id": "fe6a4fc7-35b2-411c-a7e0-9bf7b2852350",
+      "lot_id": "aede53d9d451",
+      "bucket_id": 310,
+      "strategy_id": "S354",
+      "occ_symbol": "MARA260918C00012000",
+      "qty": 1,
+      "reason": "stop_loss (-54.1%)",
+      "submitted": "2026-09-17T13:46:20"
     }
   ],
   "bucket_open_premium": {
