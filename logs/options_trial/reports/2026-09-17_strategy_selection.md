@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-17
 
-_Generated 2026-09-17T12:21:30.441944_
+_Generated 2026-09-17T12:26:31.838090_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-17T12:21:30.441944_
 
 ## Attribution health
 
-- Total exits: **3172**
+- Total exits: **3173**
 - Orphan exits (b0/orphan_reconcile): **395**
 - Orphan rate: **12.4%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -124,7 +124,7 @@ _Generated 2026-09-17T12:21:30.441944_
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 40 | 10.0 | -55.91 | -78.77 | -67.43 | -3.10 | 52 | 0 | 0 | $-797.00 | 35.0% | manually paused — excluded from new entries & reflected P&L |
 | S360 (RubberBand_1DTE) | 1d | drop | 49 | 10.2 | -56.41 | -81.50 | -70.37 | -6.89 | 48 | 0 | 0 | $-913.00 | 22.4% | manually paused — excluded from new entries & reflected P&L |
 | S212 (MA_Bounce_50) | 3d ATM MA bounce 50 | drop | 83 | 13.3 | -68.09 | -98.15 | -81.35 | +51.47 | 52 | 0 | 0 | $-2,246.00 | 34.9% | manually paused — excluded from new entries & reflected P&L |
-| S363 (RubberBand_5DTE) | 5d | drop | 37 | 35.1 | -72.31 | -92.31 | -88.46 | +74.82 | 45 | 0 | 3 | $-845.00 | 32.4% | non-positive median return |
+| S363 (RubberBand_5DTE) | 5d | drop | 38 | 34.2 | -73.66 | -92.31 | -87.62 | +72.19 | 45 | 0 | 4 | $-881.00 | 34.2% | non-positive median return |
 
 ## Comparison groups
 
@@ -272,7 +272,7 @@ _Pipeline evaluation as of 2026-09-17. Auto-kill thresholds: median<-25% at n>=1
 | S360 | RubberBand_1DTE | 49 | -56.41% | 10% | INSUFFICIENT | 48 |
 | S361 | RubberBand_2DTE | 51 | -4.26% | 49% | INSUFFICIENT | 48 |
 | S362 | RubberBand_3DTE | 47 | +55.56% | 72% | INSUFFICIENT | 48 |
-| S363 | RubberBand_5DTE | 37 | -72.31% | 35% | INSUFFICIENT | 45 |
+| S363 | RubberBand_5DTE | 38 | -73.66% | 34% | INSUFFICIENT | 45 |
 | S364 | RubberBand_7DTE | 59 | -5.88% | 47% | INSUFFICIENT | 48 |
 | S365 | RubberBand_14DTE | 24 | +43.23% | 54% | INSUFFICIENT | 48 |
 | S366 | RubberBand_21DTE | 13 | -49.12% | 38% | WATCH | 44 |
