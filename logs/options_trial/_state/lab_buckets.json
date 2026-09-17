@@ -6860,8 +6860,8 @@
   {
     "bucket_id": 1143,
     "profile": "lab1143_s163_w4_1120_1135_r2",
-    "open_premium": 48.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 1144,
