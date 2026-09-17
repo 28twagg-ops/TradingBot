@@ -14146,3 +14146,8 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16 19:28:05.334387+00:00,exit,165,lab0165_s216_w1_0928_1005_r2,S216,a88211862f7a,NKE,NKE260918C00036000,1,,0.3,62.0,-51.61,-32.0,stop_loss (-51.6%),,-0.01,0.5,-0.5,,,bcee8a3b-6cc2-4433-8054-b3a7c28a1ce8
 2026-09-16T19:45:34Z,reconcile,164,lab0164_s216_w1_0928_1005_r1,S216,84c2ba2f17fa,NKE,NKE260918C00036000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-16T20:02:20Z,reconcile,239,lab0239_s401_w3_1045_1120_r2,S401,6dd17bff3d24,MSFT,MSFT260918C00507500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-17T13:34:51Z,reconcile,779,lab0779_s397_w2_1005_1045_r2,S397,01866ade510d,CRWD,CRWD260918C00260000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-17T13:34:51Z,reconcile,778,lab0778_s397_w2_1005_1045_r1,S397,9ab83dc63636,CRWD,CRWD260918C00260000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-17 13:30:05.468793+00:00,exit,367,lab0367_s361_w3_1045_1120_r2,S361,5a194e946746,FSLY,FSLY260918C00025000,1,,0.1,55.0,-81.82,-45.0,reconcile_fill,,-0.01,0.5,-0.5,,,3dee652d-8f4f-4e4e-904f-52e92fefa11a
+2026-09-17 13:31:32.171550+00:00,exit,916,lab0916_s412_w3_1045_1120_r1,S412,3d643651084f,PATH,PATH260918C00016000,1,,0.01,3.0,-66.67,-2.0,reconcile_fill,,-0.01,0.5,-0.5,,,d7acbdf3-1e8f-4542-b565-5497abf4c6d3
+2026-09-17 13:30:04.731430+00:00,exit,315,lab0315_s355_w2_1005_1045_r2,S355,9943eadcdf3e,MARA,MARA260918C00012000,1,,0.11,38.0,-71.05,-27.0,reconcile_fill,,-0.01,0.5,-0.5,,,de5ba896-8733-408f-afa2-c176c16c5a77
