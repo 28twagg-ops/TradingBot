@@ -8034,3 +8034,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-18 13:56:09,exits,bull,226.14,192.26,0,0,0,1,BLDR,both
 2026-09-18 14:01:19,exits,bull,225.96,225.96,0,0,1,0,,both
 2026-09-18 14:06:17,exits,bull,225.96,225.96,0,0,0,0,,both
+2026-09-18 14:11:13,exits,bull,225.96,225.96,0,0,0,0,,both
