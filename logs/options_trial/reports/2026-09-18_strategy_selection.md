@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-18
 
-_Generated 2026-09-18T13:22:25.155084_
+_Generated 2026-09-18T13:26:34.460083_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-18T13:22:25.155084_
 
 ## Attribution health
 
-- Total exits: **3240**
+- Total exits: **3241**
 - Orphan exits (b0/orphan_reconcile): **397**
 - Orphan rate: **12.2%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -118,7 +118,7 @@ _Generated 2026-09-18T13:22:25.155084_
 | S399 (GapDown_OTM1) | 3d | drop | 70 | 44.3 | -46.41 | -83.55 | -66.67 | +153.00 | 49 | 18 | 8 | $+27.00 | 22.9% | non-positive median return |
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 53 | 0 | 0 | $-822.00 | 43.2% | manually paused — excluded from new entries & reflected P&L |
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 49 | 0 | 0 | $+33.00 | 26.3% | manually paused — excluded from new entries & reflected P&L |
-| S351 (GapDown_1DTE) | 1d | drop | 63 | 28.6 | -51.35 | -75.68 | -62.50 | +299.58 | 49 | 12 | 3 | $+131.00 | 20.6% | non-positive median return |
+| S351 (GapDown_1DTE) | 1d | drop | 64 | 29.7 | -50.67 | -75.68 | -62.50 | +320.36 | 49 | 12 | 4 | $+196.00 | 20.3% | non-positive median return |
 | S354 (GapDown_5DTE) | 5d | drop | 57 | 36.8 | -52.31 | -87.93 | -76.47 | +137.26 | 49 | 2 | 6 | $+19.00 | 35.1% | non-positive median return |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 56 | 17.9 | -52.45 | -87.73 | -72.95 | +71.04 | 53 | 19 | 6 | $-852.00 | 28.6% | non-positive median return |
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 40 | 10.0 | -55.91 | -78.77 | -67.43 | -3.10 | 53 | 0 | 0 | $-797.00 | 35.0% | manually paused — excluded from new entries & reflected P&L |
@@ -260,7 +260,7 @@ _Pipeline evaluation as of 2026-09-18. Auto-kill thresholds: median<-25% at n>=1
 | S220 | Pullback50 | 0 | — | — | NEW | 0 |
 | S221 | GoldenPocket | 0 | — | — | NEW | 0 |
 | S350 | GapDown_0DTE | 45 | +15.00% | 53% | INSUFFICIENT | 49 |
-| S351 | GapDown_1DTE | 63 | -51.35% | 29% | INSUFFICIENT | 49 |
+| S351 | GapDown_1DTE | 64 | -50.67% | 30% | INSUFFICIENT | 49 |
 | S352 | GapDown_2DTE | 50 | -2.30% | 50% | INSUFFICIENT | 49 |
 | S353 | GapDown_3DTE | 37 | +48.98% | 51% | INSUFFICIENT | 49 |
 | S354 | GapDown_5DTE | 57 | -52.31% | 37% | INSUFFICIENT | 49 |
