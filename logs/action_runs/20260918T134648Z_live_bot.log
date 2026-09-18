@@ -1,0 +1,150 @@
+13:46:49  INFO      Mode: morning_scan
+13:46:50  INFO        SELL MARKET [urgent] CIEN closed
+13:46:53  INFO        TX logged: SELL CIEN  P&L -2.32%
+13:46:53  INFO        SELL LIMIT VICR  qty=0.154767325  limit=$221.99  id=4535ae83-76f5-406b-93ff-83b12f0076d9
+13:47:23  INFO        SELL LIMIT filled VICR (confirmed by position check)
+13:47:23  INFO        TX logged: SELL VICR  P&L 1.28%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $226.23|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-09-18|
+|  Universe                                                          both|
+|  Mo~  Sep: GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $226.23|
+|  Cash                                                           $124.72|
+|  Reserve                                          $11.31  (always kept)|
+|  Stock~  $101.51 / $169.67  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $68.16  (new stock buys)|
+|  Trade size             $33.93  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  BLDR     MomReversal     $33.89     $57.27   $57.10   -0.3%   $-0.10  |
+|  CIEN     MomReversal     $33.20     $357.43  $349.12  -2.3%   $-0.79  |
+|  VICR     MA_Squeeze      $34.42     $219.62  $222.43  +1.3%   $+0.43  |
+|                                                                        |
+|  Total invested                                                 $101.51|
+|  Total open P&L                                                  $-0.46|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                     yes (fresh (6.4m))|
+|  Cached exits                                                         2|
+|  Cached signals                                                      18|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  CIEN  P&L -2.3%  $-0.79                        EXIT: stop_loss (-2.3%)|
+|  BLDR  P&L -0.3%  $-0.10                                           HOLD|
+|  VICR  P&L +1.3%  $+0.43                          EXIT: midline (-0.2%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 2 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                   1|
+|  CIEN                                        -2.32%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           900|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  18                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  MO       Pullback50      eq     $69.38   54.8   -2.65   50MA bounce (+|
+|  ETN      Pullback50      eq     $413.37  54.2   -2.71   50MA bounce (-|
+|  EW       Pullback50      eq     $88.29   43.4   -2.58   50MA bounce (-|
+|  FAST     Pullback50      eq     $49.10   44.0   -2.99   50MA bounce (+|
+|  KMI      Pullback50      eq     $31.52   49.5   -2.15   50MA bounce (-|
+|  MCK      Pullback50      eq     $873.72  44.0   -2.52   50MA bounce (+|
+|  OKE      Pullback50      eq     $92.83   42.5   -2.52   50MA bounce (-|
+|  PM       Pullback50      eq     $188.69  44.6   -2.75   50MA bounce (-|
+|  TER      Pullback50      eq     $360.75  51.6   -2.44   50MA bounce (-|
+|  VZ       Pullback50      eq     $47.71   34.4   -2.99   50MA bounce (+|
+|  ESNT     Pullback50      eq     $66.92   37.0   -2.21   50MA bounce (-|
+|  HOG      Pullback50      eq     $26.55   38.3   -3.11   50MA bounce (-|
+|  KRYS     Pullback50      eq     $341.13  41.7   -2.57   50MA bounce (-|
+|  LNTH     Pullback50      eq     $100.86  51.5   -2.61   50MA bounce (-|
+|  NOV      Pullback50      eq     $20.34   39.9   -2.59   50MA bounce (-|
+|  PAG      Pullback50      eq     $213.70  39.8   -2.22   50MA bounce (-|
+|  PK       Pullback50      eq     $14.98   34.5   -2.47   50MA bounce (-|
+|  SANM     Pullback50      eq     $198.98  53.2   -2.40   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+13:47:23  INFO        place_all_stops: checking 1 positions...
+13:47:23  INFO        STOP skipped BLDR: fractional (0.5935 shares) — software exit will handle it
+13:47:24  INFO        Daily log -> logs/daily/2026-09-18.md
+13:47:24  INFO        Dashboard written → logs/dashboard.md
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             18|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                2|
+|  Open pos                                                             1|
+|  Equity                                                         $226.15|
+|  Cash                                                           $192.26|
++========================================================================+

@@ -36,4 +36,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16 14:12:22.772533+00:00,entry,779,lab0779_s397_w2_1005_1045_r2,S397,01866ade510d,CRWD,CRWD260918C00260000,1,0.66,0.65,65.0,,,,-0.01,,0.75,-0.75,0.1269841269841271,gap -2.3%,8980c2d7-f36c-4aa8-a758-32e5152b47c2
 2026-09-17T13:34:51Z,reconcile,779,lab0779_s397_w2_1005_1045_r2,S397,01866ade510d,CRWD,CRWD260918C00260000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-17 14:06:58.889742+00:00,entry,779,lab0779_s397_w2_1005_1045_r2,S397,eb8be0fbc0c0,CRWD,CRWD260918C00257500,1,0.66,0.65,65.0,,,,-0.01,,0.75,-0.75,0.1967213114754098,gap -2.2%,ec4fb6c7-f3aa-4024-9222-daa79b2bd719
-2026-09-18T13:34:56Z,reconcile,779,lab0779_s397_w2_1005_1045_r2,S397,eb8be0fbc0c0,CRWD,CRWD260918C00257500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-18T13:47:26Z,reconcile,779,lab0779_s397_w2_1005_1045_r2,S397,eb8be0fbc0c0,CRWD,CRWD260918C00257500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

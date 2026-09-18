@@ -8029,3 +8029,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-18 13:16:05,summary,bull,226.7,226.7,0,0,0,0,,both
 2026-09-18 13:21:09,summary,bull,226.7,226.7,0,0,0,0,,both
 2026-09-18 13:26:14,summary,bull,226.7,226.7,0,0,0,0,,both
+2026-09-18 13:47:24,scan_morning,bull,226.15,192.26,18,0,2,1,BLDR,both

@@ -857,3 +857,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-09-17 13:57:39,2026-09-17,SELL,CTAS,Pullback50,197.2,,197.2,33.33,0.0,0.0,market_urgent_full,stop_loss (-0.9%),bull
 2026-09-17 13:58:09,2026-09-17,SELL,GLW,Pullback50,153.37,153.25,153.388,33.94,0.0117,0.004,limit_fill_position_check_full,midline (-0.4%),bull
 2026-09-17 14:02:03,2026-09-17,SELL,AMP,Pullback50,542.77,,542.77,33.9,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-09-18 13:46:52,2026-09-18,SELL,CIEN,MomReversal,349.125,,349.125,33.2,0.0,0.0,market_urgent_full,stop_loss (-2.3%),bull
+2026-09-18 13:47:23,2026-09-18,SELL,VICR,MA_Squeeze,222.43,221.99,222.172,34.38,-0.116,-0.0399,limit_fill_position_check_full,midline (-0.2%),bull
