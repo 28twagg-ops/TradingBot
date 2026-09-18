@@ -29,3 +29,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16 19:28:05.334387+00:00,exit,165,lab0165_s216_w1_0928_1005_r2,S216,a88211862f7a,NKE,NKE260918C00036000,1,,0.3,62.0,-51.61,-32.0,stop_loss (-51.6%),,-0.01,0.5,-0.5,,,bcee8a3b-6cc2-4433-8054-b3a7c28a1ce8
 2026-09-17 13:41:03.108465+00:00,entry,165,lab0165_s216_w1_0928_1005_r2,S216,ea6549175dbe,UBER,UBER260918C00072000,1,0.29,0.29,29.0,,,,-0.01,,0.5,-0.5,,,643ebe82-aaf7-4ade-84b7-cead4daee32e
 2026-09-18T13:47:26Z,reconcile,165,lab0165_s216_w1_0928_1005_r2,S216,ea6549175dbe,UBER,UBER260918C00072000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-18 14:02:26.203244+00:00,entry,165,lab0165_s216_w1_0928_1005_r2,S216,9b029aa89c9a,CELH,CELH260925C00029000,1,0.54,0.53,53.0,,,,-0.01,,0.75,-0.75,0.13592233009708748,RSI crossed 30: 29.8 -> 31.6,d7d46406-4d2f-4814-8851-faff6d1eaf41
