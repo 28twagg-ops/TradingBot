@@ -14976,3 +14976,132 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260918T195201Z
+
+- UTC timestamp: `20260918T195201Z`
+- GitHub run: [#10453](https://github.com/28twagg-ops/TradingBot/actions/runs/35388127035)
+- Run id: `35388127035`
+- Live bot: exit=`0`, duration=`251s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260918T195201Z_live_bot.log`, `logs/action_runs/20260918T195201Z_live_options.log`, `logs/action_runs/20260918T195201Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1367 | 49.2 | -12.5 | +44.2 | $+17,587 |
+| TAINTED | 1882 | 33.3 | -38.9 | +12.7 | $-9,546 |
+| KEEP-only | 751 | 61.9 | +51.4 | +69.9 | $+12,368 |
+| KEEP-only recent | 557 | 60.1 | +53.6 | +81.0 | $+8,146 |
+
+- KEEP strategies (25): S163, S167, S168, S173, S174, S210, S218, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (18): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S354, S355, S360, S363, S366, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-18T15:45:54.599776-04:00","date":"2026-09-18","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":19.6,"phases_s":{"reconcile":0.16,"cancel":0.05,"manage":18.14,"protective_stops":0.7},"signals":0,"placed":0,"equity":997702.11,"open_positions":30,"pending_orders":0,"open_lots":68,"submitted_today":97,"filled_today":81,"unattributed_contracts":0,"top_signals":[],"github_run":"10451","github_run_id":"35387209133","status":"ok","data_quality":{"clean":{"n":1367,"win":49.23,"med":-12.5,"avg":44.2,"pnl":17587.16},"tainted":{"n":1882,"win":33.32,"med":-38.9,"avg":12.69,"pnl":-9546.28},"keep_only":{"n":751,"win":61.92,"med":51.39,"avg":69.85,"pnl":12368.45},"keep_only_recent":{"n":557,"win":60.14,"med":53.57,"avg":80.97,"pnl":8146.0},"keep_strategies":["S163","S167","S168","S173","S174","S210","S218","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S354","S355","S360","S363","S366","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (159 earlier lines - see full log file)
+|    ENTER [eq] YETI  EarningsDrift                                $33.89|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] PPG  MomReversal                                   $33.89|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] TJX  MomReversal                                   $33.89|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] ABNB  Pullback50                                     cap 3|
+|    SKIP [eq] MO  Pullback50                                       cap 3|
+|    SKIP [eq] AMZN  Pullback50                                     cap 3|
+|    SKIP [eq] AMP  Pullback50                                      cap 3|
+|    SKIP [eq] ADI  Pullback50                                      cap 3|
+|    SKIP [eq] TECH  Pullback50                                     cap 3|
+|    SKIP [eq] BRK-B  Pullback50                                    cap 3|
+|    SKIP [eq] DRI  Pullback50                                      cap 3|
+|    SKIP [eq] EW  Pullback50                                       cap 3|
+|    SKIP [eq] EMR  Pullback50                                      cap 3|
+|    SKIP [eq] HUM  Pullback50                                      cap 3|
+|    SKIP [eq] IBKR  Pullback50                                     cap 3|
+|    SKIP [eq] JCI  Pullback50                                      cap 3|
+|    SKIP [eq] KMI  Pullback50                                      cap 3|
+|    SKIP [eq] MA  Pullback50                                       cap 3|
+|    SKIP [eq] MCK  Pullback50                                      cap 3|
+|    SKIP [eq] NDAQ  Pullback50                                     cap 3|
+|    SKIP [eq] PM  Pullback50                                       cap 3|
+|    SKIP [eq] PGR  Pullback50                                      cap 3|
+|    SKIP [eq] PWR  Pullback50                                      cap 3|
+|    SKIP [eq] TER  Pullback50                                      cap 3|
+|    SKIP [eq] V  Pullback50                                        cap 3|
+|    SKIP [eq] WFC  Pullback50                                      cap 3|
+|    SKIP [eq] ZBH  Pullback50                                      cap 3|
+|    SKIP [eq] AFG  Pullback50                                      cap 3|
+|    SKIP [eq] ESNT  Pullback50                                     cap 3|
+|    SKIP [eq] GEF  Pullback50                                      cap 3|
+|    SKIP [eq] ITT  Pullback50                                      cap 3|
+|    SKIP [eq] KEX  Pullback50                                      cap 3|
+|    SKIP [eq] MSM  Pullback50                                      cap 3|
+|    SKIP [eq] MTSI  Pullback50                                     cap 3|
+|    SKIP [eq] PK  Pullback50                                       cap 3|
+|    SKIP [eq] SEIC  Pullback50                                     cap 3|
+|    SKIP [eq] SANM  Pullback50                                     cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] WCC  Pullback50                                      cap 3|
+|    SKIP [eq] XRAY  RSIRecovery                                    cap 3|
+|    SKIP [eq] LAD  RubberBand                                      cap 3|
+|    SKIP [eq] COIN  VWAP_Reclaim                                   cap 3|
+|    SKIP [eq] TRGP  VWAP_Reclaim                                   cap 3|
+|    SKIP [eq] VOYA  VWAP_Reclaim                                   cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  YETI                                                 still unconfirmed|
+|  PPG                                                  still unconfirmed|
+|  TJX                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            901|
+|  Signals                                                             44|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $225.88|
+|  Cash                                                           $124.32|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
