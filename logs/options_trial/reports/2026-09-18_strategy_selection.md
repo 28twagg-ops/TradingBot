@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-18
 
-_Generated 2026-09-18T11:36:22.738136_
+_Generated 2026-09-18T11:41:22.309308_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-18T11:36:22.738136_
 
 ## Attribution health
 
-- Total exits: **3221**
+- Total exits: **3222**
 - Orphan exits (b0/orphan_reconcile): **397**
 - Orphan rate: **12.3%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -99,8 +99,8 @@ _Generated 2026-09-18T11:36:22.738136_
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 49 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 12 | 0.0 | -56.77 | -73.59 | -65.84 | -38.58 | 52 | 2 | 0 | $-208.00 | 33.3% | early sample with non-positive median |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 6 | 0.0 | -61.46 | -82.78 | -69.36 | -50.75 | 51 | 0 | 0 | $-210.00 | 83.3% | insufficient sample (<8 exits) |
+| S361 (RubberBand_2DTE) | 2d | drop | 52 | 50.0 | -1.20 | -68.33 | -50.23 | +246.00 | 49 | 14 | 5 | $+141.00 | 21.2% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 53 | 43.4 | -3.57 | -54.67 | -47.62 | +117.28 | 49 | 13 | 4 | $+101.00 | 17.0% | non-positive median return |
-| S361 (RubberBand_2DTE) | 2d | drop | 51 | 49.0 | -4.26 | -68.52 | -50.47 | +180.00 | 49 | 14 | 4 | $+90.00 | 21.6% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 59 | 47.5 | -5.88 | -86.10 | -69.32 | +110.27 | 49 | 4 | 5 | $-89.00 | 42.4% | non-positive median return |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 84 | 47.6 | -6.25 | -74.98 | -51.22 | +71.78 | 53 | 6 | 0 | $-121.00 | 17.9% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 57 | 43.9 | -6.25 | -75.22 | -58.70 | +573.13 | 46 | 18 | 4 | $+1,105.00 | 17.5% | non-positive median return |
@@ -270,7 +270,7 @@ _Pipeline evaluation as of 2026-09-18. Auto-kill thresholds: median<-25% at n>=1
 | S358 | GapDown_30DTE | 4 | +0.84% | 50% | WATCH | 45 |
 | S359 | RubberBand_0DTE | 33 | -46.67% | 30% | INSUFFICIENT | 46 |
 | S360 | RubberBand_1DTE | 49 | -56.41% | 10% | INSUFFICIENT | 49 |
-| S361 | RubberBand_2DTE | 51 | -4.26% | 49% | INSUFFICIENT | 49 |
+| S361 | RubberBand_2DTE | 52 | -1.20% | 50% | INSUFFICIENT | 49 |
 | S362 | RubberBand_3DTE | 49 | +57.14% | 73% | INSUFFICIENT | 49 |
 | S363 | RubberBand_5DTE | 38 | -73.66% | 34% | INSUFFICIENT | 46 |
 | S364 | RubberBand_7DTE | 59 | -5.88% | 47% | INSUFFICIENT | 49 |
