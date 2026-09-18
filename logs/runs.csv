@@ -8099,3 +8099,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-18 19:21:13,exits,bull,225.96,225.96,0,0,0,0,,both
 2026-09-18 19:26:11,exits,bull,225.96,225.96,0,0,0,0,,both
 2026-09-18 19:56:12,scan_evening,bull,225.88,124.32,44,0,0,3,PPG|TJX|YETI,both
+2026-09-18 20:01:57,ext_exits,bull,225.82,158.2,0,0,0,2,PPG|TJX,both
