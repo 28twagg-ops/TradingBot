@@ -534,6 +534,3 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16 19:01:24.671844+00:00,exit,0,orphan_reconcile,ORPHAN,f542914e02cb,MSFT,MSFT260918C00507500,1,,0.37,63.0,-41.27,-26.0,stop_loss (-41.3%),,-0.01,0.5,-0.4,,,aa3029b7-8090-4b06-aac9-655cb059e4fa
 2026-09-17 16:01:26.116285+00:00,exit,0,orphan_reconcile,ORPHAN,f27a6711e93e,PATH,PATH260918C00014000,3,,0.1,54.0,-44.44,-24.0,stop_loss (-44.4%),,-0.01,0.5,-0.4,,,9f428256-71d7-4b16-a574-1fe739146b2c
 2026-09-17 17:31:47.212214+00:00,exit,0,orphan_reconcile,ORPHAN,b9db7b073077,IWM,IWM260921C00290000,1,,0.34,55.0,-38.18,-21.0,stop_loss (-40.0%),,-0.01,0.5,-0.4,,,b32c5b68-3711-4d50-a7dc-7d6397be9501
-2026-09-18T13:34:56Z,reconcile,0,orphan_reconcile,ORPHAN,92d6ead45f7f,LLY,LLY260918C01225000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:57Z,reconcile,0,orphan_reconcile,ORPHAN,1d79395b7a8c,XOM,XOM260918C00165000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18 13:30:05.477626+00:00,exit,0,orphan_reconcile,ORPHAN,4ad03a11d251,PATH,PATH260918C00016000,1,,0.02,3.0,-33.33,-1.0,stop_loss (-92.0%),,-0.01,0.5,-0.4,,,82f6f94c-6982-4ec2-a0b9-4f641c2f2935

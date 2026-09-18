@@ -14273,22 +14273,3 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-17 17:56:15.604473+00:00,exit,1142,lab1142_s163_w4_1120_1135_r1,S163,7772468d72fe,MARA,MARA260918C00012000,1,,0.13,48.0,-72.92,-35.0,stop_loss (-54.1%),,-0.01,0.5,-0.5,,,59ecc01c-6cbe-4fb6-a77c-8f4f13e29959
 2026-09-17T18:51:14Z,reconcile,167,lab0167_s216_w2_1005_1045_r2,S216,7ff026e7ed49,IWM,IWM260921C00290000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-17T19:45:37Z,reconcile,170,lab0170_s216_w4_1120_1135_r1,S216,817e776bd219,MCD,MCD260918C00252500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:56Z,reconcile,0,orphan_reconcile,ORPHAN,92d6ead45f7f,LLY,LLY260918C01225000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:56Z,reconcile,165,lab0165_s216_w1_0928_1005_r2,S216,ea6549175dbe,UBER,UBER260918C00072000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:56Z,reconcile,164,lab0164_s216_w1_0928_1005_r1,S216,860979baa9cc,UBER,UBER260918C00072000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:56Z,reconcile,181,lab0181_s217_w2_1005_1045_r2,S217,bb4a175def8c,PATH,PATH260918C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:56Z,reconcile,779,lab0779_s397_w2_1005_1045_r2,S397,eb8be0fbc0c0,CRWD,CRWD260918C00257500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:57Z,reconcile,778,lab0778_s397_w2_1005_1045_r1,S397,9af34f50c14f,CRWD,CRWD260918C00257500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:57Z,reconcile,794,lab0794_s399_w2_1005_1045_r1,S399,24008571fd56,CRWD,CRWD260918C00262500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:57Z,reconcile,238,lab0238_s401_w3_1045_1120_r1,S401,71d52528f57d,XOM,XOM260918C00165000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:57Z,reconcile,0,orphan_reconcile,ORPHAN,1d79395b7a8c,XOM,XOM260918C00165000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:57Z,reconcile,796,lab0796_s399_w3_1045_1120_r1,S399,fc72dff55070,CRWD,CRWD260918C00265000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:57Z,reconcile,905,lab0905_s411_w4_1120_1135_r2,S411,f124c56d5904,CRWD,CRWD260918C00255000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:57Z,reconcile,904,lab0904_s411_w4_1120_1135_r1,S411,587ebec97f9d,CRWD,CRWD260918C00255000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:57Z,reconcile,807,lab0807_s404_w4_1120_1135_r2,S404,b94d2100eccd,CRWD,CRWD260918C00255000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:57Z,reconcile,806,lab0806_s404_w4_1120_1135_r1,S404,8fc58b3b540c,CRWD,CRWD260918C00255000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18T13:34:57Z,reconcile,782,lab0782_s397_w4_1120_1135_r1,S397,df23aa2d907d,CRWD,CRWD260918C00255000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-18 13:30:05.404021+00:00,exit,1129,lab1129_s168_w4_1120_1135_r2,S168,b7a0810f1625,MARA,MARA260918C00012000,1,,0.23,48.0,-52.08,-25.0,stop_loss (-68.2%),,-0.01,0.5,-0.5,,,9c01bdc0-75b8-4e35-ae3a-69a3fd87e16c
-2026-09-18 13:30:05.325788+00:00,exit,265,lab0265_s403_w2_1005_1045_r2,S403,e996ae35e97f,SLB,SLB260918C00052500,1,,0.01,43.0,-97.67,-42.0,stop_loss (-58.5%),,-0.01,0.5,-0.5,,,8dc8cde2-c246-4ff1-8980-385a3ec3c27d
-2026-09-18 13:30:05.477626+00:00,exit,0,orphan_reconcile,ORPHAN,4ad03a11d251,PATH,PATH260918C00016000,1,,0.02,3.0,-33.33,-1.0,stop_loss (-92.0%),,-0.01,0.5,-0.4,,,82f6f94c-6982-4ec2-a0b9-4f641c2f2935
-2026-09-18 13:30:05.526752+00:00,exit,235,lab0235_s401_w1_0928_1005_r2,S401,d49f8c5acae1,XOM,XOM260918C00172500,1,,0.01,3.0,-66.67,-2.0,stop_loss (-66.7%),,-0.01,0.5,-0.5,,,3bdcb7d8-fcf8-487c-8e7f-c540b5f4faf9

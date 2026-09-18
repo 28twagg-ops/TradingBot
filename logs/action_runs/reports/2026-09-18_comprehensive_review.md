@@ -1346,3 +1346,79 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20260918T133649Z
+
+- UTC timestamp: `20260918T133649Z`
+- GitHub run: [#10378](https://github.com/28twagg-ops/TradingBot/actions/runs/35351059721)
+- Run id: `35351059721`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260918T133649Z_live_bot.log`, `logs/action_runs/20260918T133649Z_live_options.log`, `logs/action_runs/20260918T133649Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1311 | 47.5 | -33.3 | +35.9 | $+15,191 |
+| TAINTED | 1873 | 33.4 | -39.0 | +12.9 | $-9,351 |
+| KEEP-only | 611 | 62.4 | +50.0 | +61.8 | $+10,167 |
+| KEEP-only recent | 428 | 61.2 | +53.3 | +74.4 | $+6,557 |
+
+- KEEP strategies (20): S163, S168, S173, S174, S210, S218, S350, S353, S356, S357, S361, S362, S364, S365, S397, S399, S401, S403, S404, S406
+- KILL strategies (22): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S352, S354, S355, S359, S360, S363, S366, S398, S405, S407, S408, S412
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-18T09:26:18.299529-04:00","date":"2026-09-18","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.9,"phases_s":{"reconcile":0.28},"signals":0,"placed":0,"equity":996522.61,"open_positions":24,"pending_orders":0,"open_lots":84,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"10376","github_run_id":"35350083477","status":"ok","data_quality":{"clean":{"n":1311,"win":47.52,"med":-33.33,"avg":35.94,"pnl":15191.16},"tainted":{"n":1873,"win":33.37,"med":-38.98,"avg":12.92,"pnl":-9351.28},"keep_only":{"n":611,"win":62.36,"med":50.0,"avg":61.84,"pnl":10167.45},"keep_only_recent":{"n":428,"win":61.21,"med":53.33,"avg":74.4,"pnl":6557.0},"keep_strategies":["S163","S168","S173","S174","S210","S218","S350","S353","S356","S357","S361","S362","S364","S365","S397","S399","S401","S403","S404","S406"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S352","S354","S355","S359","S360","S363","S366","S398","S405","S407","S408","S412"]}}
+```
+
+### Live bot (tail)
+
+```text
+13:36:51  INFO      Mode: morning_prep
+13:36:53  INFO        [prep_positions] 3/3 (3 valid)
+13:36:53  INFO      Fetching tickers (universe=both)...
+13:36:53  INFO        S&P 500: 503
+13:36:54  INFO        MidCap 400: 400
+13:36:54  INFO        Total: 903 tickers
+13:36:55  INFO        [prep_universe] 40/900 (40 valid)
+13:36:57  INFO        [prep_universe] 80/900 (80 valid)
+13:36:58  INFO        [prep_universe] 120/900 (120 valid)
+13:36:59  INFO        [prep_universe] 160/900 (160 valid)
+13:37:00  INFO        [prep_universe] 200/900 (199 valid)
+13:37:08  INFO        [prep_universe] 240/900 (238 valid)
+13:37:18  INFO        [prep_universe] 280/900 (278 valid)
+13:37:32  INFO        [prep_universe] 320/900 (318 valid)
+13:37:42  INFO        [prep_universe] 360/900 (358 valid)
+13:37:56  INFO        [prep_universe] 400/900 (398 valid)
+13:38:09  INFO        [prep_universe] 440/900 (438 valid)
+13:38:19  INFO        [prep_universe] 480/900 (478 valid)
+13:38:33  INFO        [prep_universe] 520/900 (518 valid)
+13:38:43  INFO        [prep_universe] 560/900 (558 valid)
+13:38:56  INFO        [prep_universe] 600/900 (598 valid)
+13:39:07  INFO        [prep_universe] 640/900 (638 valid)
+13:39:20  INFO        [prep_universe] 680/900 (678 valid)
+13:39:31  INFO        [prep_universe] 720/900 (718 valid)
+13:39:44  INFO        [prep_universe] 760/900 (758 valid)
+13:39:55  INFO        [prep_universe] 800/900 (798 valid)
+13:40:08  INFO        [prep_universe] 840/900 (838 valid)
+13:40:18  INFO        [prep_universe] 880/900 (878 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
