@@ -62,26 +62,6 @@
       "entry_order_id": "40cd0350-b43e-484c-925e-1e9808bad1e0"
     },
     {
-      "lot_id": "081c01fd11ca",
-      "bucket_id": 1053,
-      "profile_name": "lab1053_s165_w1_0928_1005_r2",
-      "strategy_id": "S165",
-      "occ_symbol": "MARA260918C00012000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 19.0,
-      "entry_price": 0.19,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-15T14:04:28.692424+00:00",
-      "entry_order_id": "2d0341d4-d018-4f03-a2fe-c095793ea618"
-    },
-    {
       "lot_id": "04c59a15e95d",
       "bucket_id": 1052,
       "profile_name": "lab1052_s165_w1_0928_1005_r1",
@@ -2278,6 +2258,22 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
+    },
+    {
+      "order_id": "ad6d4806-47af-4832-aa30-1596e376a965",
+      "bucket_id": 860,
+      "strategy_id": "S408",
+      "occ_symbol": "NFLX260925C00079000",
+      "underlying": "NFLX",
+      "qty": 1,
+      "limit": 0.06,
+      "profile_name": "lab0860_s408_w3_1045_1120_r1",
+      "submitted": "2026-09-18",
+      "detail": "RB gap -5.4% reclaim",
+      "spread_frac": 0.15384615384615397,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
     }
   ],
   "pending_exits": [
@@ -2296,7 +2292,6 @@
     "b434": 51.0,
     "b433": 49.0,
     "b432": 49.0,
-    "b1053": 19.0,
     "b1052": 19.0,
     "b915": 18.0,
     "b914": 18.0,
@@ -2476,7 +2471,8 @@
     "238|S401|2026-09-18",
     "239|S401|2026-09-18",
     "832|S406|2026-09-18",
-    "833|S406|2026-09-18"
+    "833|S406|2026-09-18",
+    "860|S408|2026-09-18"
   ],
   "processed_orders": [
     "16f02ac5-34af-407b-922c-3c8f2ffdc206",
@@ -2881,9 +2877,10 @@
     "1865affc-1516-4af9-8313-e49ec3cacd0b",
     "5bb97ce0-5a8f-4080-8399-6eacff60799a",
     "315e8da2-df2e-49dd-9bd1-093a29ef93ca",
-    "c0129de7-e88f-44df-a574-3459329c28a0"
+    "c0129de7-e88f-44df-a574-3459329c28a0",
+    "9ee2e5d8-363c-462c-8ac6-7e8630d96ecd"
   ],
-  "submitted_today": 80,
+  "submitted_today": 81,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-18"
 }
