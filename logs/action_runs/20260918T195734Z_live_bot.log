@@ -1,0 +1,23 @@
+19:57:35  INFO      Mode: scan
+19:57:37  INFO        [positions] 3/3 (3 valid)
+19:57:37  INFO        SELL LIMIT YETI  qty=0.802311262  limit=$42.14  id=e59cb586-a240-492f-b304-57e1a8668c02
+19:58:08  INFO        SELL LIMIT filled YETI (confirmed by position check)
+19:58:08  INFO        TX logged: SELL YETI  P&L 0.02%
+19:58:08  INFO        Universe cache hit: 903 tickers (tickers_2026-09-18.json)
+19:58:09  INFO        [universe] 40/901 (40 valid)
+19:58:10  INFO        [universe] 80/901 (80 valid)
+19:58:11  INFO        [universe] 120/901 (120 valid)
+19:58:13  INFO        [universe] 160/901 (160 valid)
+19:58:14  INFO        [universe] 200/901 (199 valid)
+19:58:21  INFO        [universe] 240/901 (238 valid)
+19:58:34  INFO        [universe] 280/901 (278 valid)
+19:58:45  INFO        [universe] 320/901 (318 valid)
+19:58:58  INFO        [universe] 360/901 (358 valid)
+19:59:09  INFO        [universe] 400/901 (398 valid)
+19:59:22  INFO        [universe] 440/901 (438 valid)
+19:59:33  INFO        [universe] 480/901 (478 valid)
+19:59:46  INFO        [universe] 520/901 (518 valid)
+19:59:56  INFO        [universe] 560/901 (558 valid)
+20:00:10  INFO        [universe] 600/901 (598 valid)
+20:00:23  INFO        [universe] 640/901 (638 valid)
+20:00:34  INFO        [universe] 680/901 (678 valid)
