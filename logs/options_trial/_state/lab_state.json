@@ -62,26 +62,6 @@
       "entry_order_id": "40cd0350-b43e-484c-925e-1e9808bad1e0"
     },
     {
-      "lot_id": "eab36c6d1fa2",
-      "bucket_id": 379,
-      "profile_name": "lab0379_s362_w2_1005_1045_r2",
-      "strategy_id": "S362",
-      "occ_symbol": "MARA260918C00012000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 18.0,
-      "entry_price": 0.18,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-15T14:08:48.866383+00:00",
-      "entry_order_id": "1bdde1a6-7f89-4b03-a837-019a6a8b2452"
-    },
-    {
       "lot_id": "7ce3e84ac80f",
       "bucket_id": 378,
       "profile_name": "lab0378_s362_w2_1005_1045_r1",
@@ -2358,6 +2338,38 @@
       "buy_offset": -0.01,
       "take_profit": 0.3,
       "stop_loss": -0.3
+    },
+    {
+      "order_id": "cd0c1801-0c7d-47cd-bc50-d7c4564fc36f",
+      "bucket_id": 798,
+      "strategy_id": "S399",
+      "occ_symbol": "NFLX260925C00077000",
+      "underlying": "NFLX",
+      "qty": 1,
+      "limit": 0.12,
+      "profile_name": "lab0798_s399_w4_1120_1135_r1",
+      "submitted": "2026-09-18",
+      "detail": "gap -5.4%",
+      "spread_frac": 0.1666666666666667,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "37b265d5-2f93-49c2-aaf8-68def20f7401",
+      "bucket_id": 799,
+      "strategy_id": "S399",
+      "occ_symbol": "NFLX260925C00077000",
+      "underlying": "NFLX",
+      "qty": 1,
+      "limit": 0.12,
+      "profile_name": "lab0799_s399_w4_1120_1135_r2",
+      "submitted": "2026-09-18",
+      "detail": "gap -5.4%",
+      "spread_frac": 0.1666666666666667,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
     }
   ],
   "pending_exits": [
@@ -2376,7 +2388,6 @@
     "b434": 51.0,
     "b433": 49.0,
     "b432": 49.0,
-    "b379": 18.0,
     "b378": 18.0,
     "b365": 18.0,
     "b364": 18.0,
@@ -2569,7 +2580,9 @@
     "240|S401|2026-09-18",
     "241|S401|2026-09-18",
     "834|S406|2026-09-18",
-    "835|S406|2026-09-18"
+    "835|S406|2026-09-18",
+    "798|S399|2026-09-18",
+    "799|S399|2026-09-18"
   ],
   "processed_orders": [
     "16f02ac5-34af-407b-922c-3c8f2ffdc206",
@@ -2986,9 +2999,10 @@
     "9ccb8c94-0ac3-4bc7-85c6-a3a9008b65ae",
     "e0b3bd75-742e-418f-a2c3-8efb206dce05",
     "5f4c0f5a-b94f-499a-9e0b-a9742815a3d2",
-    "e5d468cf-a3c6-4a2c-95fb-3a4698165850"
+    "e5d468cf-a3c6-4a2c-95fb-3a4698165850",
+    "8ca6e61d-f6a5-4b75-9a07-88a277ec4a36"
   ],
-  "submitted_today": 93,
+  "submitted_today": 95,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-18"
 }
