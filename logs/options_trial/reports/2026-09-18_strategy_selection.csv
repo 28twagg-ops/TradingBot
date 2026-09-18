@@ -1,5 +1,5 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
-S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,building sample (8-19 exits),118,9,5,4,129.08,106.0,-71.88,-55.36,514.74,233.0,4,59,8,1,4,33.3
+S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,building sample (8-19 exits),118,10,6,4,133.54,116.0,-71.88,-55.36,512.63,266.0,4,59,8,2,4,40.0
 S396,GapDown_ITM2,3d,watch,insufficient sample (<8 exits),28,6,5,1,63.82,89.03,-3.8,77.19,106.25,241.0,3,43,2,0,1,100.0
 S166,GapDown strong call,3d ATM strong,watch,building sample (8-19 exits),51,8,8,0,113.61,75.23,63.34,67.08,194.5,436.0,2,59,2,0,3,62.5
 S163,A1 GapDown ATM call EOD,7d ATM,watch,fat left tail (p10 < -45%),115,21,13,8,34.4,67.21,-74.47,-64.29,128.12,319.0,6,59,6,6,4,52.4
@@ -75,7 +75,7 @@ S419,BBSqueeze_OTM3,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,
 S367,RubberBand_30DTE,30d,watch,insufficient sample (<8 exits),12,3,0,3,-41.76,-48.89,-50.89,-50.14,-29.78,-77.0,3,45,2,1,2,66.7
 S366,RubberBand_21DTE,21d,watch,early sample with non-positive median,44,13,5,8,-1.53,-49.12,-56.92,-56.92,95.73,-52.0,4,45,0,0,2,61.5
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),20,6,1,5,-33.91,-50.0,-66.67,-62.5,14.93,-5.0,2,49,0,0,2,83.3
-S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,early sample with non-positive median,134,16,4,12,31.09,-51.78,-96.88,-88.89,343.79,81.0,8,59,8,0,7,31.2
+S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,early sample with non-positive median,136,16,4,12,31.09,-51.78,-96.88,-88.89,343.79,81.0,8,59,10,0,7,31.2
 S202,GapDown_Monster,3d ATM gap-monster,watch,early sample with non-positive median,50,12,0,12,-55.94,-56.77,-73.59,-65.84,-38.58,-208.0,6,52,2,0,4,33.3
 S209,GapDown_Recovery,3d ATM gap-recovery,watch,insufficient sample (<8 exits),30,6,0,6,-64.99,-61.46,-82.78,-69.36,-50.75,-210.0,2,51,0,0,2,83.3
 S412,RubberBand_OTM3,3d,drop,non-positive median return,139,51,21,30,25.12,-3.57,-55.38,-48.36,112.5,0.0,13,49,13,2,14,15.7
