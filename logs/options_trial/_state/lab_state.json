@@ -102,26 +102,6 @@
       "entry_order_id": "orphan:PATH260918C00016000"
     },
     {
-      "lot_id": "12959d61e723",
-      "bucket_id": 913,
-      "profile_name": "lab0913_s412_w1_0928_1005_r2",
-      "strategy_id": "S412",
-      "occ_symbol": "MARA260918C00012000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 15.0,
-      "entry_price": 0.15,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-15T14:52:43.255722+00:00",
-      "entry_order_id": "eb38e856-1093-4a38-9b37-3572cad7e745"
-    },
-    {
       "lot_id": "64c30d2d2458",
       "bucket_id": 912,
       "profile_name": "lab0912_s412_w1_0928_1005_r1",
@@ -1955,14 +1935,14 @@
       "submitted": "2026-09-17T16:03:35"
     },
     {
-      "order_id": "3176f176-7ab4-4f78-a553-8c3d6d4ac653",
-      "lot_id": "12959d61e723",
-      "bucket_id": 913,
+      "order_id": "1cae2625-9fda-4440-aa41-a856bb5a086a",
+      "lot_id": "64c30d2d2458",
+      "bucket_id": 912,
       "strategy_id": "S412",
       "occ_symbol": "MARA260918C00012000",
       "qty": 1,
-      "reason": "take_profit (+247.5%)",
-      "submitted": "2026-09-18T11:56:16"
+      "reason": "take_profit (+267.9%)",
+      "submitted": "2026-09-18T12:01:20"
     }
   ],
   "bucket_open_premium": {
@@ -1971,7 +1951,6 @@
     "b432": 49.0,
     "b267": 3.0,
     "b0": 297.0,
-    "b913": 15.0,
     "b912": 15.0,
     "b861": 17.0,
     "b919": 21.0,
@@ -2585,7 +2564,8 @@
     "e633e43f-d2ba-41ac-8a33-fe41c1086233",
     "53818444-2100-4ca3-8022-50ac261ba060",
     "94e40ed2-34f2-4360-aada-1de93c8ab6c0",
-    "2ea5eed5-d21a-4dd5-a102-c039a67ca4f9"
+    "2ea5eed5-d21a-4dd5-a102-c039a67ca4f9",
+    "3176f176-7ab4-4f78-a553-8c3d6d4ac653"
   ],
   "submitted_today": 97,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
