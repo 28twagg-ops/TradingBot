@@ -74,8 +74,8 @@ S418,BBSqueeze_OTM2,7d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,
 S419,BBSqueeze_OTM3,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S367,RubberBand_30DTE,30d,watch,insufficient sample (<8 exits),12,3,0,3,-41.76,-48.89,-50.89,-50.14,-29.78,-77.0,3,45,2,1,2,66.7
 S366,RubberBand_21DTE,21d,watch,early sample with non-positive median,44,13,5,8,-1.53,-49.12,-56.92,-56.92,95.73,-52.0,4,45,0,0,2,61.5
+S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,early sample with non-positive median,136,17,5,12,40.09,-50.0,-96.88,-88.89,323.16,116.0,9,59,10,1,7,29.4
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),20,6,1,5,-33.91,-50.0,-66.67,-62.5,14.93,-5.0,2,49,0,0,2,83.3
-S164,GapDown ATM 1-DTE — P2B arm,1d ATM,watch,early sample with non-positive median,136,16,4,12,31.09,-51.78,-96.88,-88.89,343.79,81.0,8,59,10,0,7,31.2
 S202,GapDown_Monster,3d ATM gap-monster,watch,early sample with non-positive median,50,12,0,12,-55.94,-56.77,-73.59,-65.84,-38.58,-208.0,6,52,2,0,4,33.3
 S209,GapDown_Recovery,3d ATM gap-recovery,watch,insufficient sample (<8 exits),30,6,0,6,-64.99,-61.46,-82.78,-69.36,-50.75,-210.0,2,51,0,0,2,83.3
 S412,RubberBand_OTM3,3d,drop,non-positive median return,139,51,21,30,25.12,-3.57,-55.38,-48.36,112.5,0.0,13,49,13,2,14,15.7
