@@ -15,6 +15,7 @@ S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),129,55,37,18,52.61,50.88
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),192,89,47,42,41.74,36.36,-67.62,-49.09,150.69,1113.0,19,53,21,9,17,33.7
 S356,GapDown_14DTE,14d,watch,fat left tail (p10 < -45%),63,27,14,13,11.32,36.0,-51.16,-35.65,66.6,123.0,8,49,4,0,5,37.0
 S361,RubberBand_2DTE,2d,watch,fat left tail (p10 < -45%),139,55,29,26,101.86,17.78,-67.78,-50.0,293.33,317.0,13,49,14,8,13,23.6
+S353,GapDown_3DTE,3d,watch,fat left tail (p10 < -45%),108,36,18,18,81.23,15.51,-82.11,-70.46,255.26,177.0,11,49,8,4,9,25.0
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),99,45,24,21,58.69,15.0,-65.1,-51.35,232.57,714.0,11,49,6,2,9,28.9
 S401,Any_Gap_Down_Small,3d,watch,fat left tail (p10 < -45%),246,115,60,55,69.81,9.62,-85.93,-49.51,273.08,1272.0,18,49,30,14,19,27.8
 S411,RubberBand_OTM2,3d,watch,fat left tail (p10 < -45%),138,46,24,22,-5.14,5.2,-57.12,-51.6,60.56,-160.0,12,46,17,3,13,19.6
@@ -85,7 +86,6 @@ S364,RubberBand_7DTE,7d,drop,non-positive median return,110,59,28,31,11.46,-5.88
 S210,MA_Cross_8_21,3d ATM MA cross 8/21,drop,non-positive median return,195,84,40,44,7.36,-6.25,-74.98,-51.22,71.78,-121.0,11,53,6,0,17,17.9
 S408,RubberBand_ITM1,3d,drop,non-positive median return,143,57,25,32,117.62,-6.25,-75.22,-58.7,573.13,1105.0,13,46,18,4,11,17.5
 S352,GapDown_2DTE,2d,drop,non-positive median return,140,48,23,25,51.66,-17.65,-72.5,-51.8,302.5,97.0,13,49,8,2,10,22.9
-S353,GapDown_3DTE,3d,drop,non-positive median return,108,35,17,18,74.02,-17.95,-82.61,-71.22,208.42,107.0,11,49,8,3,9,25.7
 S174,RubberBand long call EOD,RubberBand (dropped),drop,non-positive median return,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,74,0,0,6,50.4
 S173,MomReversal long call,MomRev,drop,non-positive median return,1625,415,154,261,15.19,-31.51,-77.18,-62.95,101.9,62.64,8,74,0,0,12,27.5
 S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1456,252,79,173,-0.93,-36.64,-63.24,-53.52,87.27,-1485.78,10,74,8,2,15,26.2

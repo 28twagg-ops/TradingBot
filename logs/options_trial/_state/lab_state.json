@@ -122,26 +122,6 @@
       "entry_order_id": "b33d937b-1b71-46f7-a191-90e3e48cc489"
     },
     {
-      "lot_id": "488a3351edec",
-      "bucket_id": 303,
-      "profile_name": "lab0303_s353_w4_1120_1135_r2",
-      "strategy_id": "S353",
-      "occ_symbol": "MARA260918C00012000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 21.0,
-      "entry_price": 0.21,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-15T15:23:21.409367+00:00",
-      "entry_order_id": "d35fb3d1-2903-4461-9504-a241d0228942"
-    },
-    {
       "lot_id": "973be83660a5",
       "bucket_id": 302,
       "profile_name": "lab0302_s353_w4_1120_1135_r1",
@@ -1715,14 +1695,24 @@
       "submitted": "2026-09-17T16:03:35"
     },
     {
-      "order_id": "db86df84-1204-4f4a-9602-0eb229df5d64",
-      "lot_id": "488a3351edec",
-      "bucket_id": 303,
+      "order_id": "8218357d-bc47-4ca0-9ed0-58ff0db97764",
+      "lot_id": "7db2538fe994",
+      "bucket_id": 98,
+      "strategy_id": "S211",
+      "occ_symbol": "META260921C00705000",
+      "qty": 1,
+      "reason": "stop_loss (-50.8%)",
+      "submitted": "2026-09-18T13:01:32"
+    },
+    {
+      "order_id": "3cc57b9e-088f-4062-bbd4-3da2576aeb66",
+      "lot_id": "973be83660a5",
+      "bucket_id": 302,
       "strategy_id": "S353",
       "occ_symbol": "MARA260918C00012000",
       "qty": 1,
       "reason": "take_profit (+359.9%)",
-      "submitted": "2026-09-18T12:46:27"
+      "submitted": "2026-09-18T13:01:34"
     }
   ],
   "bucket_open_premium": {
@@ -1732,7 +1722,6 @@
     "b267": 3.0,
     "b0": 297.0,
     "b861": 17.0,
-    "b303": 21.0,
     "b302": 21.0,
     "b295": 21.0,
     "b294": 21.0,
@@ -2343,7 +2332,8 @@
     "9b86f0d8-5a54-48ea-aa5e-e11123c8f244",
     "d52d97ad-7dbf-4d14-9acb-9909b3ae8645",
     "9e337d07-3d19-4e44-b39e-c03ebadc8042",
-    "f96ccfc8-e6fa-4b86-81b3-f470e6819783"
+    "f96ccfc8-e6fa-4b86-81b3-f470e6819783",
+    "db86df84-1204-4f4a-9602-0eb229df5d64"
   ],
   "submitted_today": 97,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
