@@ -1,6 +1,6 @@
-# Ledger health — 2026-09-17
+# Ledger health — 2026-09-18
 
-_Generated 2026-09-17T19:56:15.441408_
+_Generated 2026-09-18T09:01:33.886946_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -29,11 +29,11 @@ Notes:
 
 | lot_id | strategy | symbol | entry_day | age_days |
 |--------|----------|--------|-----------|---------:|
-| c749b9facdbb | S366 | MARA | 2026-09-04 | 13 |
-| 53ee58608a69 | S366 | MARA | 2026-09-04 | 13 |
-| 01aab77eeb4e | S366 | MARA | 2026-09-04 | 13 |
-| b7a0810f1625 | S168 | MARA | 2026-09-10 | 7 |
-| af2fd15cfdcf | S168 | MARA | 2026-09-10 | 7 |
+| c749b9facdbb | S366 | MARA | 2026-09-04 | 14 |
+| 53ee58608a69 | S366 | MARA | 2026-09-04 | 14 |
+| 01aab77eeb4e | S366 | MARA | 2026-09-04 | 14 |
+| b7a0810f1625 | S168 | MARA | 2026-09-10 | 8 |
+| af2fd15cfdcf | S168 | MARA | 2026-09-10 | 8 |
 
 _Orphaned ledger detail omitted (1370 rows) — see note above on historical lot_id churn._
 
