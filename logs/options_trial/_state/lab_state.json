@@ -1442,46 +1442,6 @@
       "entry_order_id": "6bfb5891-0bcb-4958-bf1b-ddb24bad9f5f"
     },
     {
-      "lot_id": "4c7ca6f786bf",
-      "bucket_id": 83,
-      "profile_name": "lab0083_s210_w2_1005_1045_r2",
-      "strategy_id": "S210",
-      "occ_symbol": "GOOGL260921C00360000",
-      "underlying": "GOOGL",
-      "qty": 1,
-      "entry_cost": 59.0,
-      "entry_price": 0.59,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-18T14:21:18.289224+00:00",
-      "entry_order_id": "f9b98ded-77f1-412d-801a-a48bd8ee1545"
-    },
-    {
-      "lot_id": "41cf1a84502f",
-      "bucket_id": 82,
-      "profile_name": "lab0082_s210_w2_1005_1045_r1",
-      "strategy_id": "S210",
-      "occ_symbol": "GOOGL260921C00360000",
-      "underlying": "GOOGL",
-      "qty": 1,
-      "entry_cost": 59.0,
-      "entry_price": 0.59,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-18T14:21:18.592805+00:00",
-      "entry_order_id": "112d5daf-0797-4b24-b2c8-5c0f508f384e"
-    },
-    {
       "lot_id": "aa2a9854c102",
       "bucket_id": 265,
       "profile_name": "lab0265_s403_w2_1005_1045_r2",
@@ -1863,6 +1823,16 @@
       "qty": 1,
       "reason": "take_profit (+334.4%)",
       "submitted": "2026-09-18T12:21:11"
+    },
+    {
+      "order_id": "57761194-ac4a-4762-a08d-86608c514bea",
+      "lot_id": "6ebbc230bef1",
+      "bucket_id": 99,
+      "strategy_id": "S211",
+      "occ_symbol": "META260921C00705000",
+      "qty": 1,
+      "reason": "stop_loss (-50.8%)",
+      "submitted": "2026-09-18T12:26:30"
     }
   ],
   "bucket_open_premium": {
@@ -1935,8 +1905,6 @@
     "b164": 53.0,
     "b181": 40.0,
     "b180": 40.0,
-    "b83": 59.0,
-    "b82": 59.0,
     "b265": 27.0,
     "b859": 7.000000000000001,
     "b166": 35.0,

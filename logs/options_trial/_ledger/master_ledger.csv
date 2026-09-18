@@ -14422,3 +14422,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-18 16:06:18.834878+00:00,exit,919,lab0919_s412_w4_1120_1135_r2,S412,3a8442d7cc33,MARA,MARA260918C00012000,1,,0.74,21.0,252.38,53.0,take_profit (+273.0%),,-0.01,0.5,-0.5,,,f0c5f6f0-8c0e-4768-b43c-8f4dc27d5276
 2026-09-18 16:13:28.149069+00:00,exit,791,lab0791_s398_w4_1120_1135_r2,S398,ffc3c0e53229,MARA,MARA260918C00012000,1,,0.75,21.0,257.14,54.0,take_profit (+273.0%),,-0.01,0.5,-0.5,,,a1a67d02-6132-4679-9ab1-2cc14fa6db42
 2026-09-18 16:16:26.934845+00:00,exit,790,lab0790_s398_w4_1120_1135_r1,S398,fba51d15d6db,MARA,MARA260918C00012000,1,,0.8,21.0,280.95,59.0,take_profit (+308.8%),,-0.01,0.5,-0.5,,,f124a529-f6c5-434e-a5e0-fd3069d4c679
+2026-09-18T16:26:16Z,reconcile,83,lab0083_s210_w2_1005_1045_r2,S210,4c7ca6f786bf,GOOGL,GOOGL260921C00360000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-18T16:26:16Z,reconcile,82,lab0082_s210_w2_1005_1045_r1,S210,41cf1a84502f,GOOGL,GOOGL260921C00360000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
