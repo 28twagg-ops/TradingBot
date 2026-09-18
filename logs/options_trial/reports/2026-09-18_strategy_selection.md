@@ -1,17 +1,17 @@
 # Options strategy selection report — 2026-09-18
 
-_Generated 2026-09-18T13:41:20.446770_
+_Generated 2026-09-18T13:46:42.070571_
 
 ## Summary
 
 - Strategies analyzed: **105**
 - Keep: **0**
-- Watch: **82**
-- Drop: **23**
+- Watch: **81**
+- Drop: **24**
 
 ## Attribution health
 
-- Total exits: **3244**
+- Total exits: **3245**
 - Orphan exits (b0/orphan_reconcile): **397**
 - Orphan rate: **12.2%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -98,7 +98,6 @@ _Generated 2026-09-18T13:41:20.446770_
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S367 (RubberBand_30DTE) | 30d | watch | 3 | 0.0 | -48.89 | -50.89 | -50.14 | -29.78 | 45 | 2 | 1 | $-77.00 | 66.7% | insufficient sample (<8 exits) |
 | S366 (RubberBand_21DTE) | 21d | watch | 13 | 38.5 | -49.12 | -56.92 | -56.92 | +95.73 | 45 | 0 | 0 | $-52.00 | 61.5% | early sample with non-positive median |
-| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | watch | 19 | 36.8 | -50.00 | -96.88 | -83.34 | +365.36 | 59 | 12 | 3 | $+217.00 | 26.3% | early sample with non-positive median |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 49 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 12 | 0.0 | -56.77 | -73.59 | -65.84 | -38.58 | 52 | 2 | 0 | $-208.00 | 33.3% | early sample with non-positive median |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 6 | 0.0 | -61.46 | -82.78 | -69.36 | -50.75 | 51 | 0 | 0 | $-210.00 | 83.3% | insufficient sample (<8 exits) |
@@ -118,6 +117,7 @@ _Generated 2026-09-18T13:41:20.446770_
 | S399 (GapDown_OTM1) | 3d | drop | 70 | 44.3 | -46.41 | -83.55 | -66.67 | +153.00 | 49 | 18 | 8 | $+27.00 | 22.9% | non-positive median return |
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 53 | 0 | 0 | $-822.00 | 43.2% | manually paused — excluded from new entries & reflected P&L |
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 49 | 0 | 0 | $+33.00 | 26.3% | manually paused — excluded from new entries & reflected P&L |
+| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | drop | 20 | 40.0 | -50.00 | -96.88 | -80.56 | +361.73 | 59 | 12 | 4 | $+289.00 | 30.0% | non-positive median return |
 | S351 (GapDown_1DTE) | 1d | drop | 64 | 29.7 | -50.67 | -75.68 | -62.50 | +320.36 | 49 | 12 | 4 | $+196.00 | 20.3% | non-positive median return |
 | S354 (GapDown_5DTE) | 5d | drop | 57 | 36.8 | -52.31 | -87.93 | -76.47 | +137.26 | 49 | 2 | 6 | $+19.00 | 35.1% | non-positive median return |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 56 | 17.9 | -52.45 | -87.73 | -72.95 | +71.04 | 53 | 19 | 6 | $-852.00 | 28.6% | non-positive median return |
@@ -137,7 +137,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S163 | 7d ATM | 21 | +67.21 | -74.47 | -64.29 | 6 | 6 |
-| S164 | 1d ATM | 19 | -50.00 | -96.88 | -83.34 | 12 | 3 |
+| S164 | 1d ATM | 20 | -50.00 | -96.88 | -80.56 | 12 | 4 |
 | S165 | 3d ATM | 252 | -36.64 | -63.24 | -53.52 | 8 | 2 |
 | S168 | 5d ATM | 20 | +78.02 | -74.52 | -66.07 | 4 | 6 |
 
@@ -225,7 +225,7 @@ _Pipeline evaluation as of 2026-09-18. Auto-kill thresholds: median<-25% at n>=1
 | Strategy | Signal | n | Median% | WR% | Status | Days |
 |----------|--------|---|---------|-----|--------|------|
 | S163 | A1 GapDown ATM call EO | 21 | +67.21% | 62% | INSUFFICIENT | 59 |
-| S164 | GapDown ATM 1-DTE — P2 | 19 | -50.00% | 37% | INSUFFICIENT | 59 |
+| S164 | GapDown ATM 1-DTE — P2 | 20 | -50.00% | 40% | INSUFFICIENT | 59 |
 | S165 | GapDown long call 3 DT | 252 | -36.64% | 31% | INSUFFICIENT | 74 |
 | S166 | GapDown strong call | 8 | +75.23% | 100% | WATCH | 59 |
 | S167 | GapDown long call 3 DT | 12 | +134.06% | 67% | WATCH | 59 |
