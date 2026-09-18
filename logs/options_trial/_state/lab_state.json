@@ -62,26 +62,6 @@
       "entry_order_id": "40cd0350-b43e-484c-925e-1e9808bad1e0"
     },
     {
-      "lot_id": "f36611240415",
-      "bucket_id": 280,
-      "profile_name": "lab0280_s351_w1_0928_1005_r1",
-      "strategy_id": "S351",
-      "occ_symbol": "MARA260918C00012000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 19.0,
-      "entry_price": 0.19,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-15T14:04:28.353479+00:00",
-      "entry_order_id": "cf28851c-7b8d-4a3e-b732-d95bdc7c7e28"
-    },
-    {
       "lot_id": "a49c3133462d",
       "bucket_id": 277,
       "profile_name": "lab0277_s350_w1_0928_1005_r2",
@@ -1482,26 +1462,6 @@
       "entry_order_id": "eb787328-c76a-44a3-996a-1efbd2d6d394"
     },
     {
-      "lot_id": "a7fe4290f8b8",
-      "bucket_id": 94,
-      "profile_name": "lab0094_s211_w1_0928_1005_r1",
-      "strategy_id": "S211",
-      "occ_symbol": "META260921C00720000",
-      "underlying": "META",
-      "qty": 1,
-      "entry_cost": 19.0,
-      "entry_price": 0.19,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-18T13:48:32.640252+00:00",
-      "entry_order_id": "7ba85af7-8348-4c63-a9b6-969993eefd2c"
-    },
-    {
       "lot_id": "b9ef71d211aa",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -2020,6 +1980,66 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-18T14:12:17.636283+00:00",
       "entry_order_id": "6bfb5891-0bcb-4958-bf1b-ddb24bad9f5f"
+    },
+    {
+      "lot_id": "4c7ca6f786bf",
+      "bucket_id": 83,
+      "profile_name": "lab0083_s210_w2_1005_1045_r2",
+      "strategy_id": "S210",
+      "occ_symbol": "GOOGL260921C00360000",
+      "underlying": "GOOGL",
+      "qty": 1,
+      "entry_cost": 59.0,
+      "entry_price": 0.59,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-18T14:21:18.289224+00:00",
+      "entry_order_id": "f9b98ded-77f1-412d-801a-a48bd8ee1545"
+    },
+    {
+      "lot_id": "41cf1a84502f",
+      "bucket_id": 82,
+      "profile_name": "lab0082_s210_w2_1005_1045_r1",
+      "strategy_id": "S210",
+      "occ_symbol": "GOOGL260921C00360000",
+      "underlying": "GOOGL",
+      "qty": 1,
+      "entry_cost": 59.0,
+      "entry_price": 0.59,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-18T14:21:18.592805+00:00",
+      "entry_order_id": "112d5daf-0797-4b24-b2c8-5c0f508f384e"
+    },
+    {
+      "lot_id": "aa2a9854c102",
+      "bucket_id": 265,
+      "profile_name": "lab0265_s403_w2_1005_1045_r2",
+      "strategy_id": "S403",
+      "occ_symbol": "V260925C00385000",
+      "underlying": "V",
+      "qty": 1,
+      "entry_cost": 27.0,
+      "entry_price": 0.27,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-18T14:22:05.247455+00:00",
+      "entry_order_id": "8da81009-02d5-4b0c-9e9c-110f741db0d0"
     }
   ],
   "pending_orders": [
@@ -2198,38 +2218,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
-    },
-    {
-      "order_id": "112d5daf-0797-4b24-b2c8-5c0f508f384e",
-      "bucket_id": 82,
-      "strategy_id": "S210",
-      "occ_symbol": "GOOGL260921C00360000",
-      "underlying": "GOOGL",
-      "qty": 1,
-      "limit": 0.59,
-      "profile_name": "lab0082_s210_w2_1005_1045_r1",
-      "submitted": "2026-09-18",
-      "detail": "MA8 342.95 crossed above MA21",
-      "spread_frac": 0.10526315789473673,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "f9b98ded-77f1-412d-801a-a48bd8ee1545",
-      "bucket_id": 83,
-      "strategy_id": "S210",
-      "occ_symbol": "GOOGL260921C00360000",
-      "underlying": "GOOGL",
-      "qty": 1,
-      "limit": 0.59,
-      "profile_name": "lab0083_s210_w2_1005_1045_r2",
-      "submitted": "2026-09-18",
-      "detail": "MA8 342.95 crossed above MA21",
-      "spread_frac": 0.10526315789473673,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
     }
   ],
   "pending_exits": [
@@ -2248,7 +2236,6 @@
     "b434": 51.0,
     "b433": 49.0,
     "b432": 49.0,
-    "b280": 19.0,
     "b277": 19.0,
     "b276": 19.0,
     "b1095": 19.0,
@@ -2319,7 +2306,6 @@
     "b1136": 35.0,
     "b1109": 35.0,
     "b1108": 35.0,
-    "b94": 19.0,
     "b801": 50.0,
     "b800": 50.0,
     "b777": 50.0,
@@ -2342,7 +2328,10 @@
     "b279": 12.0,
     "b278": 12.0,
     "b181": 40.0,
-    "b180": 40.0
+    "b180": 40.0,
+    "b83": 59.0,
+    "b82": 59.0,
+    "b265": 27.0
   },
   "session_date": "2026-09-18",
   "entries_locked": [
@@ -2413,7 +2402,8 @@
     "96|S211|2026-09-18",
     "97|S211|2026-09-18",
     "82|S210|2026-09-18",
-    "83|S210|2026-09-18"
+    "83|S210|2026-09-18",
+    "265|S403|2026-09-18"
   ],
   "processed_orders": [
     "1bdde1a6-7f89-4b03-a837-019a6a8b2452",
@@ -2895,9 +2885,13 @@
     "6bfb5891-0bcb-4958-bf1b-ddb24bad9f5f",
     "fb624de0-3dd2-4bf6-a352-b1e71bda225d",
     "2456ecf1-90d1-433a-88d1-4669129588f5",
-    "147de10b-c773-457a-9088-dc03d4b89df7"
+    "147de10b-c773-457a-9088-dc03d4b89df7",
+    "f9b98ded-77f1-412d-801a-a48bd8ee1545",
+    "112d5daf-0797-4b24-b2c8-5c0f508f384e",
+    "8da81009-02d5-4b0c-9e9c-110f741db0d0",
+    "69b49546-f8dc-444b-8bf8-fa60d233104b"
   ],
-  "submitted_today": 68,
+  "submitted_today": 69,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-18"
 }
