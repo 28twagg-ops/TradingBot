@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-18
 
-_Generated 2026-09-18T10:47:46.425330_
+_Generated 2026-09-18T10:52:32.059485_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-18T10:47:46.425330_
 
 ## Attribution health
 
-- Total exits: **3211**
+- Total exits: **3212**
 - Orphan exits (b0/orphan_reconcile): **397**
 - Orphan rate: **12.4%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -22,6 +22,7 @@ _Generated 2026-09-18T10:47:46.425330_
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 10 | 60.0 | +116.00 | -71.88 | -55.36 | +512.63 | 59 | 8 | 2 | $+266.00 | 40.0% | building sample (8-19 exits) |
 | S396 (GapDown_ITM2) | 3d | watch | 6 | 83.3 | +89.03 | -3.80 | +77.19 | +106.25 | 43 | 2 | 0 | $+241.00 | 100.0% | insufficient sample (<8 exits) |
+| S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 20 | 60.0 | +78.02 | -74.52 | -66.07 | +249.27 | 59 | 4 | 6 | $+435.00 | 60.0% | fat left tail (p10 < -45%) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 8 | 100.0 | +75.23 | +63.34 | +67.08 | +194.50 | 59 | 2 | 0 | $+436.00 | 62.5% | building sample (8-19 exits) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 21 | 61.9 | +67.21 | -74.47 | -64.29 | +128.12 | 59 | 6 | 6 | $+319.00 | 52.4% | fat left tail (p10 < -45%) |
 | S406 (RubberBand_ITM3) | 3d | watch | 89 | 68.5 | +66.67 | -56.52 | -37.04 | +924.59 | 49 | 21 | 11 | $+3,492.00 | 16.9% | fat left tail (p10 < -45%) |
@@ -29,7 +30,6 @@ _Generated 2026-09-18T10:47:46.425330_
 | S397 (GapDown_ITM1) | 3d | watch | 37 | 73.0 | +61.90 | -68.28 | -53.97 | +115.78 | 49 | 17 | 4 | $+952.00 | 21.6% | fat left tail (p10 < -45%) |
 | S357 (GapDown_21DTE) | 21d | watch | 25 | 80.0 | +57.14 | -74.18 | +47.06 | +78.22 | 49 | 2 | 0 | $+532.00 | 32.0% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 47 | 72.3 | +55.56 | -59.14 | -30.43 | +662.86 | 49 | 8 | 2 | $+1,382.00 | 27.7% | fat left tail (p10 < -45%) |
-| S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 19 | 57.9 | +53.33 | -74.58 | -66.07 | +249.97 | 59 | 4 | 5 | $+389.00 | 57.9% | building sample (8-19 exits) |
 | S404 (GapDown_OTM2) | 3d | watch | 64 | 64.1 | +51.58 | -87.43 | -41.42 | +110.05 | 49 | 20 | 12 | $+1,120.00 | 15.6% | fat left tail (p10 < -45%) |
 | S365 (RubberBand_14DTE) | 14d | watch | 26 | 57.7 | +51.00 | -63.48 | -50.17 | +76.38 | 49 | 5 | 3 | $+155.00 | 42.3% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 55 | 67.3 | +50.88 | -62.06 | -48.16 | +185.33 | 49 | 17 | 1 | $+1,008.00 | 21.8% | fat left tail (p10 < -45%) |
@@ -132,14 +132,14 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 ### GapDown DTE comparison
 
-- Status: **OK** | Best median: **S163** (+67.21%) | Best p10: **S165** (-63.27%)
+- Status: **OK** | Best median: **S168** (+78.02%) | Best p10: **S165** (-63.27%)
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S163 | 7d ATM | 21 | +67.21 | -74.47 | -64.29 | 6 | 6 |
 | S164 | 1d ATM | 16 | -51.78 | -96.88 | -88.89 | 10 | 0 |
 | S165 | 3d ATM | 250 | -38.09 | -63.27 | -53.52 | 8 | 0 |
-| S168 | 5d ATM | 19 | +53.33 | -74.58 | -66.07 | 4 | 5 |
+| S168 | 5d ATM | 20 | +78.02 | -74.52 | -66.07 | 4 | 6 |
 
 ### GapDown Strike comparison
 
@@ -229,7 +229,7 @@ _Pipeline evaluation as of 2026-09-18. Auto-kill thresholds: median<-25% at n>=1
 | S165 | GapDown long call 3 DT | 250 | -38.09% | 31% | INSUFFICIENT | 74 |
 | S166 | GapDown strong call | 8 | +75.23% | 100% | WATCH | 59 |
 | S167 | GapDown long call 3 DT | 10 | +116.00% | 60% | WATCH | 59 |
-| S168 | GapDown ATM 5-DTE — P2 | 19 | +53.33% | 58% | INSUFFICIENT | 59 |
+| S168 | GapDown ATM 5-DTE — P2 | 20 | +78.02% | 60% | INSUFFICIENT | 59 |
 | S169 | BB Squeeze Breakout ca | 0 | — | — | NEW | 0 |
 | S170 | Golden Pocket call 3 D | 0 | — | — | NEW | 0 |
 | S171 | VWAP Reclaim call 3 DT | 0 | — | — | NEW | 0 |
