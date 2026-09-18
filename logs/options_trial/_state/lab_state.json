@@ -62,26 +62,6 @@
       "entry_order_id": "40cd0350-b43e-484c-925e-1e9808bad1e0"
     },
     {
-      "lot_id": "4ec8d01c4f11",
-      "bucket_id": 276,
-      "profile_name": "lab0276_s350_w1_0928_1005_r1",
-      "strategy_id": "S350",
-      "occ_symbol": "MARA260918C00012000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 19.0,
-      "entry_price": 0.19,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-15T14:04:28.420582+00:00",
-      "entry_order_id": "c4dfb1bd-aa07-4911-a961-5507865b7e5c"
-    },
-    {
       "lot_id": "e79733c975e5",
       "bucket_id": 1095,
       "profile_name": "lab1095_s167_w1_0928_1005_r2",
@@ -2020,6 +2000,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-18T14:22:05.247455+00:00",
       "entry_order_id": "8da81009-02d5-4b0c-9e9c-110f741db0d0"
+    },
+    {
+      "lot_id": "c6e243569b46",
+      "bucket_id": 859,
+      "profile_name": "lab0859_s408_w2_1005_1045_r2",
+      "strategy_id": "S408",
+      "occ_symbol": "VZ260925C00050000",
+      "underlying": "VZ",
+      "qty": 1,
+      "entry_cost": 7.000000000000001,
+      "entry_price": 0.07,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-18T14:32:35.767011+00:00",
+      "entry_order_id": "f82dc77a-ba4d-4e34-bcd8-50b2e5097311"
     }
   ],
   "pending_orders": [
@@ -2216,7 +2216,6 @@
     "b434": 51.0,
     "b433": 49.0,
     "b432": 49.0,
-    "b276": 19.0,
     "b1095": 19.0,
     "b1094": 19.0,
     "b1123": 19.0,
@@ -2310,7 +2309,8 @@
     "b180": 40.0,
     "b83": 59.0,
     "b82": 59.0,
-    "b265": 27.0
+    "b265": 27.0,
+    "b859": 7.000000000000001
   },
   "session_date": "2026-09-18",
   "entries_locked": [
@@ -2382,7 +2382,8 @@
     "97|S211|2026-09-18",
     "82|S210|2026-09-18",
     "83|S210|2026-09-18",
-    "265|S403|2026-09-18"
+    "265|S403|2026-09-18",
+    "859|S408|2026-09-18"
   ],
   "processed_orders": [
     "1bdde1a6-7f89-4b03-a837-019a6a8b2452",
@@ -2869,9 +2870,11 @@
     "112d5daf-0797-4b24-b2c8-5c0f508f384e",
     "8da81009-02d5-4b0c-9e9c-110f741db0d0",
     "69b49546-f8dc-444b-8bf8-fa60d233104b",
-    "b2eb2ffb-871c-482c-a169-f373385c8a17"
+    "b2eb2ffb-871c-482c-a169-f373385c8a17",
+    "f82dc77a-ba4d-4e34-bcd8-50b2e5097311",
+    "6ba58a94-db5c-4ef5-bf34-c4c7c10f6c6e"
   ],
-  "submitted_today": 69,
+  "submitted_today": 70,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-18"
 }
