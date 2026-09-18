@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-18
 
-_Generated 2026-09-18T13:11:23.695312_
+_Generated 2026-09-18T13:16:29.266194_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-18T13:11:23.695312_
 
 ## Attribution health
 
-- Total exits: **3238**
+- Total exits: **3239**
 - Orphan exits (b0/orphan_reconcile): **397**
 - Orphan rate: **12.3%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -102,11 +102,11 @@ _Generated 2026-09-18T13:11:23.695312_
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 49 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 12 | 0.0 | -56.77 | -73.59 | -65.84 | -38.58 | 52 | 2 | 0 | $-208.00 | 33.3% | early sample with non-positive median |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 6 | 0.0 | -61.46 | -82.78 | -69.36 | -50.75 | 51 | 0 | 0 | $-210.00 | 83.3% | insufficient sample (<8 exits) |
+| S352 (GapDown_2DTE) | 2d | drop | 50 | 50.0 | -2.30 | -71.79 | -51.65 | +338.46 | 49 | 8 | 4 | $+237.00 | 22.0% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 56 | 46.4 | -3.57 | -53.62 | -47.62 | +189.35 | 49 | 13 | 7 | $+265.00 | 21.4% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 59 | 47.5 | -5.88 | -86.10 | -69.32 | +110.27 | 49 | 4 | 5 | $-89.00 | 42.4% | non-positive median return |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 84 | 47.6 | -6.25 | -74.98 | -51.22 | +71.78 | 53 | 6 | 0 | $-121.00 | 17.9% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 57 | 43.9 | -6.25 | -75.22 | -58.70 | +573.13 | 46 | 18 | 4 | $+1,105.00 | 17.5% | non-positive median return |
-| S352 (GapDown_2DTE) | 2d | drop | 49 | 49.0 | -17.65 | -72.14 | -51.79 | +338.81 | 49 | 8 | 3 | $+168.00 | 22.4% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 74 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 74 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 252 | 31.3 | -36.64 | -63.24 | -53.52 | +87.27 | 74 | 8 | 2 | $-1,485.78 | 26.2% | non-positive median return |
@@ -261,7 +261,7 @@ _Pipeline evaluation as of 2026-09-18. Auto-kill thresholds: median<-25% at n>=1
 | S221 | GoldenPocket | 0 | — | — | NEW | 0 |
 | S350 | GapDown_0DTE | 45 | +15.00% | 53% | INSUFFICIENT | 49 |
 | S351 | GapDown_1DTE | 62 | -51.67% | 27% | INSUFFICIENT | 49 |
-| S352 | GapDown_2DTE | 49 | -17.65% | 49% | INSUFFICIENT | 49 |
+| S352 | GapDown_2DTE | 50 | -2.30% | 50% | INSUFFICIENT | 49 |
 | S353 | GapDown_3DTE | 37 | +48.98% | 51% | INSUFFICIENT | 49 |
 | S354 | GapDown_5DTE | 57 | -52.31% | 37% | INSUFFICIENT | 49 |
 | S355 | GapDown_7DTE | 67 | -37.50% | 45% | INSUFFICIENT | 49 |
