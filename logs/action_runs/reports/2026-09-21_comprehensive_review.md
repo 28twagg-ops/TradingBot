@@ -14536,3 +14536,162 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260921T193111Z
+
+- UTC timestamp: `20260921T193111Z`
+- GitHub run: [#10581](https://github.com/28twagg-ops/TradingBot/actions/runs/35645194636)
+- Run id: `35645194636`
+- Live bot: exit=`0`, duration=`215s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260921T193111Z_live_bot.log`, `logs/action_runs/20260921T193111Z_live_options.log`, `logs/action_runs/20260921T193111Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1367 | 49.2 | -12.5 | +44.2 | $+17,587 |
+| TAINTED | 1882 | 33.3 | -38.9 | +12.7 | $-9,546 |
+| KEEP-only | 751 | 61.9 | +51.4 | +69.9 | $+12,368 |
+| KEEP-only recent | 557 | 60.1 | +53.6 | +81.0 | $+8,146 |
+
+- KEEP strategies (25): S163, S167, S168, S173, S174, S210, S218, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (18): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S354, S355, S360, S363, S366, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-21T15:26:18.113425-04:00","date":"2026-09-21","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":154.4,"phases_s":{"reconcile":2.46,"cancel":0.17,"manage":139.27,"protective_stops":3.46},"signals":0,"placed":0,"equity":997158.09,"open_positions":15,"pending_orders":0,"open_lots":50,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"10580","github_run_id":"35644671793","status":"ok","data_quality":{"clean":{"n":1367,"win":49.23,"med":-12.5,"avg":44.2,"pnl":17587.16},"tainted":{"n":1882,"win":33.32,"med":-38.9,"avg":12.69,"pnl":-9546.28},"keep_only":{"n":751,"win":61.92,"med":51.39,"avg":69.85,"pnl":12368.45},"keep_only_recent":{"n":557,"win":60.14,"med":53.57,"avg":80.97,"pnl":8146.0},"keep_strategies":["S163","S167","S168","S173","S174","S210","S218","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S354","S355","S360","S363","S366","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+19:31:12  INFO      Mode: evening_prep
+19:31:13  INFO        [prep_positions] 2/2 (2 valid)
+19:31:13  INFO        Universe cache hit: 901 tickers (tickers_2026-09-21.json)
+19:31:14  INFO        [prep_universe] 40/899 (40 valid)
+19:31:15  INFO        [prep_universe] 80/899 (80 valid)
+19:31:16  INFO        [prep_universe] 120/899 (120 valid)
+19:31:17  INFO        [prep_universe] 160/899 (160 valid)
+19:31:19  INFO        [prep_universe] 200/899 (199 valid)
+19:31:26  INFO        [prep_universe] 240/899 (238 valid)
+19:31:39  INFO        [prep_universe] 280/899 (278 valid)
+19:31:52  INFO        [prep_universe] 320/899 (318 valid)
+19:32:02  INFO        [prep_universe] 360/899 (358 valid)
+19:32:15  INFO        [prep_universe] 400/899 (398 valid)
+19:32:27  INFO        [prep_universe] 440/899 (438 valid)
+19:32:40  INFO        [prep_universe] 480/899 (478 valid)
+19:32:50  INFO        [prep_universe] 520/899 (518 valid)
+19:33:03  INFO        [prep_universe] 560/899 (558 valid)
+19:33:16  INFO        [prep_universe] 600/899 (598 valid)
+19:33:26  INFO        [prep_universe] 640/899 (638 valid)
+19:33:39  INFO        [prep_universe] 680/899 (678 valid)
+19:33:52  INFO        [prep_universe] 720/899 (718 valid)
+19:34:02  INFO        [prep_universe] 760/899 (758 valid)
+19:34:15  INFO        [prep_universe] 800/899 (798 valid)
+19:34:27  INFO        [prep_universe] 840/899 (838 valid)
+19:34:40  INFO        [prep_universe] 880/899 (878 valid)
+19:34:44  INFO        [prep_universe] 899/899 (897 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      EVENING_PREP|
+|  Time                                                         19:31 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $226.91|
++========================================================================+
+
++========================================================================+
+|                              EVENING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/evening_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       2|
+|  Invested                                                        $68.80|
+|  Open P&L                                                        $+1.00|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  EQIX     Pullback50      $34.63     $1035.~  $1058.~  +2.1%   $+0.73  |
+|  SCHW     Pullback50      $34.17     $106.15  $107.00  +0.8%   $+0.27  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                0|
+|                                                                        |
+|  No open sell orders.                                                  |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      1|
+|  Signal candidates                                                   36|
+|  Universe scanned                                                   899|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-09-21T15:34:47.563522-04:00 share=25% ===
+2026-09-21 15:34:47,563 INFO === options_live_micro LIVE 2026-09-21T15:34:47.563522-04:00 share=25% ===
+Live account equity $226.88 cash $158.11 #225458845 options_level=3
+2026-09-21 15:34:47,601 INFO Live account equity $226.88 cash $158.11 #225458845 options_level=3
+Live micro: manage/exits only
+2026-09-21 15:34:47,626 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-09-21 15:34:47,642 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=50 paper_keys=yes dry_run=False
+  alpaca positions=16
+options_reconcile: done
+Layout: controlled:1164:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1164
+PROBE FAIL: {"code":50010000,"message":"internal server error occurred"}
+paper probe failed (non-fatal)
+=== options_morning_bot (PAPER) 2026-09-21T15:34:50.324263-04:00 ===
+
+[Run context]
+2026-09-21 15:34:50,369 WARNING paper get_account failed attempt 1/3 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 2s
+2026-09-21 15:34:52,384 WARNING paper get_account failed attempt 2/3 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 4s
+2026-09-21 15:34:56,396 ERROR paper get_account failed after 3 attempts: {"code":50010000,"message":"internal server error occurred"}
+WARN: get_account failed ({"code":50010000,"message":"internal server error occurred"}) but positions OK (n=16). Keys are fine; Alpaca account endpoint is flaky. Using cached equity $997158.09.
+2026-09-21 15:34:56,420 WARNING paper get_account failed attempt 1/2 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 2s
+2026-09-21 15:34:58,431 ERROR paper get_account failed after 2 attempts: {"code":50010000,"message":"internal server error occurred"}
+WARN: using cached paper equity $997158.09 (get_account: {"code":50010000,"message":"internal server error occurred"})
+2026-09-21 15:34:58,479 WARNING lab get_account failed attempt 1/2: {"code":50010000,"message":"internal server error occurred"}
+2026-09-21 15:35:00,519 ERROR lab get_account failed after 2 attempts: {"code":50010000,"message":"internal server error occurred"}
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
+Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+  EXIT [b321|lab0321_s356_w1_0928_1005_r2|S356] take_profit (+52.7%) SELL failed NFLX261002C00076000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b320|lab0320_s356_w1_0928_1005_r1|S356] take_profit (+52.7%) SELL failed NFLX261002C00076000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b239|lab0239_s401_w3_1045_1120_r2|S401] stop_loss (-63.8%) SELL failed MDT260925C00094000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b238|lab0238_s401_w3_1045_1120_r1|S401] stop_loss (-63.8%) SELL failed MDT260925C00094000: {"code":50010000,"message":"internal server error occurred"}
+```
+
+---
