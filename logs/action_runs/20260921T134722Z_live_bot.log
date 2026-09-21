@@ -1,0 +1,25 @@
+13:47:24  INFO      Mode: morning_scan
+13:47:24  INFO        [positions] 2/2 (2 valid)
+13:47:24  INFO        SELL MARKET [urgent] PPG closed
+13:47:26  INFO        TX logged: SELL PPG  P&L -0.67%
+13:47:26  INFO        SELL LIMIT TJX  qty=0.26575884  limit=$128.92  id=201a8168-9269-4134-9d7e-a97bdc38481b
+13:47:46  INFO        SELL LIMIT filled TJX (confirmed by position check)
+13:47:46  INFO        TX logged: SELL TJX  P&L 1.17%
+13:47:46  INFO        Universe cache hit: 901 tickers (tickers_2026-09-21.json)
+13:47:47  INFO        [universe] 40/901 (40 valid)
+13:47:48  INFO        [universe] 80/901 (80 valid)
+13:47:49  INFO        [universe] 120/901 (120 valid)
+13:47:51  INFO        [universe] 160/901 (160 valid)
+13:47:52  INFO        [universe] 200/901 (199 valid)
+13:48:01  INFO        [universe] 240/901 (238 valid)
+13:48:11  INFO        [universe] 280/901 (278 valid)
+13:48:24  INFO        [universe] 320/901 (318 valid)
+13:48:37  INFO        [universe] 360/901 (358 valid)
+13:48:47  INFO        [universe] 400/901 (398 valid)
+13:49:00  INFO        [universe] 440/901 (438 valid)
+13:49:12  INFO        [universe] 480/901 (478 valid)
+13:49:25  INFO        [universe] 520/901 (518 valid)
+13:49:35  INFO        [universe] 560/901 (558 valid)
+13:49:48  INFO        [universe] 600/901 (598 valid)
+13:50:01  INFO        [universe] 640/901 (638 valid)
+13:50:11  INFO        [universe] 680/901 (678 valid)

@@ -1628,3 +1628,76 @@ Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
 ```
 
 ---
+
+## Run 20260921T134722Z
+
+- UTC timestamp: `20260921T134722Z`
+- GitHub run: [#10512](https://github.com/28twagg-ops/TradingBot/actions/runs/35607608853)
+- Run id: `35607608853`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260921T134722Z_live_bot.log`, `logs/action_runs/20260921T134722Z_live_options.log`, `logs/action_runs/20260921T134722Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1367 | 49.2 | -12.5 | +44.2 | $+17,587 |
+| TAINTED | 1882 | 33.3 | -38.9 | +12.7 | $-9,546 |
+| KEEP-only | 751 | 61.9 | +51.4 | +69.9 | $+12,368 |
+| KEEP-only recent | 557 | 60.1 | +53.6 | +81.0 | $+8,146 |
+
+- KEEP strategies (25): S163, S167, S168, S173, S174, S210, S218, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (18): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S354, S355, S360, S363, S366, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-21T09:26:07.398042-04:00","date":"2026-09-21","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":10.7,"phases_s":{"reconcile":4.13},"signals":0,"placed":0,"equity":997158.09,"open_positions":20,"pending_orders":0,"open_lots":59,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"10508","github_run_id":"35605467972","status":"ok","data_quality":{"clean":{"n":1367,"win":49.23,"med":-12.5,"avg":44.2,"pnl":17587.16},"tainted":{"n":1882,"win":33.32,"med":-38.9,"avg":12.69,"pnl":-9546.28},"keep_only":{"n":751,"win":61.92,"med":51.39,"avg":69.85,"pnl":12368.45},"keep_only_recent":{"n":557,"win":60.14,"med":53.57,"avg":80.97,"pnl":8146.0},"keep_strategies":["S163","S167","S168","S173","S174","S210","S218","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S354","S355","S360","S363","S366","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+13:47:24  INFO      Mode: morning_scan
+13:47:24  INFO        [positions] 2/2 (2 valid)
+13:47:24  INFO        SELL MARKET [urgent] PPG closed
+13:47:26  INFO        TX logged: SELL PPG  P&L -0.67%
+13:47:26  INFO        SELL LIMIT TJX  qty=0.26575884  limit=$128.92  id=201a8168-9269-4134-9d7e-a97bdc38481b
+13:47:46  INFO        SELL LIMIT filled TJX (confirmed by position check)
+13:47:46  INFO        TX logged: SELL TJX  P&L 1.17%
+13:47:46  INFO        Universe cache hit: 901 tickers (tickers_2026-09-21.json)
+13:47:47  INFO        [universe] 40/901 (40 valid)
+13:47:48  INFO        [universe] 80/901 (80 valid)
+13:47:49  INFO        [universe] 120/901 (120 valid)
+13:47:51  INFO        [universe] 160/901 (160 valid)
+13:47:52  INFO        [universe] 200/901 (199 valid)
+13:48:01  INFO        [universe] 240/901 (238 valid)
+13:48:11  INFO        [universe] 280/901 (278 valid)
+13:48:24  INFO        [universe] 320/901 (318 valid)
+13:48:37  INFO        [universe] 360/901 (358 valid)
+13:48:47  INFO        [universe] 400/901 (398 valid)
+13:49:00  INFO        [universe] 440/901 (438 valid)
+13:49:12  INFO        [universe] 480/901 (478 valid)
+13:49:25  INFO        [universe] 520/901 (518 valid)
+13:49:35  INFO        [universe] 560/901 (558 valid)
+13:49:48  INFO        [universe] 600/901 (598 valid)
+13:50:01  INFO        [universe] 640/901 (638 valid)
+13:50:11  INFO        [universe] 680/901 (678 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
