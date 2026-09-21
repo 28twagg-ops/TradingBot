@@ -15184,3 +15184,74 @@ Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
 ```
 
 ---
+
+## Run 20260921T195754Z
+
+- UTC timestamp: `20260921T195754Z`
+- GitHub run: [#10586](https://github.com/28twagg-ops/TradingBot/actions/runs/35647795335)
+- Run id: `35647795335`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260921T195754Z_live_bot.log`, `logs/action_runs/20260921T195754Z_live_options.log`, `logs/action_runs/20260921T195754Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1367 | 49.2 | -12.5 | +44.2 | $+17,587 |
+| TAINTED | 1882 | 33.3 | -38.9 | +12.7 | $-9,546 |
+| KEEP-only | 751 | 61.9 | +51.4 | +69.9 | $+12,368 |
+| KEEP-only recent | 557 | 60.1 | +53.6 | +81.0 | $+8,146 |
+
+- KEEP strategies (25): S163, S167, S168, S173, S174, S210, S218, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (18): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S354, S355, S360, S363, S366, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-21T15:26:18.113425-04:00","date":"2026-09-21","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":154.4,"phases_s":{"reconcile":2.46,"cancel":0.17,"manage":139.27,"protective_stops":3.46},"signals":0,"placed":0,"equity":997158.09,"open_positions":15,"pending_orders":0,"open_lots":50,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"10580","github_run_id":"35644671793","status":"ok","data_quality":{"clean":{"n":1367,"win":49.23,"med":-12.5,"avg":44.2,"pnl":17587.16},"tainted":{"n":1882,"win":33.32,"med":-38.9,"avg":12.69,"pnl":-9546.28},"keep_only":{"n":751,"win":61.92,"med":51.39,"avg":69.85,"pnl":12368.45},"keep_only_recent":{"n":557,"win":60.14,"med":53.57,"avg":80.97,"pnl":8146.0},"keep_strategies":["S163","S167","S168","S173","S174","S210","S218","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S354","S355","S360","S363","S366","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+19:57:55  INFO      Mode: scan
+19:57:56  INFO        [positions] 2/2 (2 valid)
+19:57:56  INFO        SELL MARKET [urgent] ESAB closed
+19:57:58  INFO        TX logged: SELL ESAB  P&L -0.75%
+19:57:58  INFO        Universe cache hit: 901 tickers (tickers_2026-09-21.json)
+19:57:59  INFO        [universe] 40/900 (40 valid)
+19:58:01  INFO        [universe] 80/900 (80 valid)
+19:58:02  INFO        [universe] 120/900 (120 valid)
+19:58:03  INFO        [universe] 160/900 (160 valid)
+19:58:04  INFO        [universe] 200/900 (199 valid)
+19:58:12  INFO        [universe] 240/900 (238 valid)
+19:58:25  INFO        [universe] 280/900 (278 valid)
+19:58:35  INFO        [universe] 320/900 (318 valid)
+19:58:48  INFO        [universe] 360/900 (358 valid)
+19:59:01  INFO        [universe] 400/900 (398 valid)
+19:59:11  INFO        [universe] 440/900 (438 valid)
+19:59:24  INFO        [universe] 480/900 (478 valid)
+19:59:37  INFO        [universe] 520/900 (518 valid)
+19:59:47  INFO        [universe] 560/900 (558 valid)
+20:00:00  INFO        [universe] 600/900 (598 valid)
+20:00:13  INFO        [universe] 640/900 (638 valid)
+20:00:23  INFO        [universe] 680/900 (678 valid)
+20:00:36  INFO        [universe] 720/900 (718 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
