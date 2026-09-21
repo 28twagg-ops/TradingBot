@@ -1701,3 +1701,182 @@ Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
 ```
 
 ---
+
+## Run 20260921T135703Z
+
+- UTC timestamp: `20260921T135703Z`
+- GitHub run: [#10514](https://github.com/28twagg-ops/TradingBot/actions/runs/35608664749)
+- Run id: `35608664749`
+- Live bot: exit=`0`, duration=`217s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260921T135703Z_live_bot.log`, `logs/action_runs/20260921T135703Z_live_options.log`, `logs/action_runs/20260921T135703Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1367 | 49.2 | -12.5 | +44.2 | $+17,587 |
+| TAINTED | 1882 | 33.3 | -38.9 | +12.7 | $-9,546 |
+| KEEP-only | 751 | 61.9 | +51.4 | +69.9 | $+12,368 |
+| KEEP-only recent | 557 | 60.1 | +53.6 | +81.0 | $+8,146 |
+
+- KEEP strategies (25): S163, S167, S168, S173, S174, S210, S218, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (18): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S354, S355, S360, S363, S366, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-21T09:26:07.398042-04:00","date":"2026-09-21","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":10.7,"phases_s":{"reconcile":4.13},"signals":0,"placed":0,"equity":997158.09,"open_positions":20,"pending_orders":0,"open_lots":59,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"10508","github_run_id":"35605467972","status":"ok","data_quality":{"clean":{"n":1367,"win":49.23,"med":-12.5,"avg":44.2,"pnl":17587.16},"tainted":{"n":1882,"win":33.32,"med":-38.9,"avg":12.69,"pnl":-9546.28},"keep_only":{"n":751,"win":61.92,"med":51.39,"avg":69.85,"pnl":12368.45},"keep_only_recent":{"n":557,"win":60.14,"med":53.57,"avg":80.97,"pnl":8146.0},"keep_strategies":["S163","S167","S168","S173","S174","S210","S218","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S354","S355","S360","S363","S366","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (76 earlier lines - see full log file)
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                   no (stale (4336.6m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  EQIX  P&L -0.1%  $-0.05                                           HOLD|
+|  DRI  P&L -0.0%  $-0.01                                            HOLD|
+|  SCHW  P&L +0.1%  $+0.03                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 3|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                          SIGNALS FOUND  --  6                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  KMI      Pullback50      eq     $31.64   42.8   -1.73   50MA bounce (-|
+|  AFG      Pullback50      eq     $142.37  49.2   -1.49   50MA bounce (-|
+|  BMRN     Pullback50      eq     $64.39   46.4   -2.08   50MA bounce (+|
+|  EGP      Pullback50      eq     $203.50  60.7   -1.34   50MA bounce (-|
+|  ESNT     Pullback50      eq     $67.99   53.2   -1.49   50MA bounce (+|
+|  NWE      Pullback50      eq     $70.53   56.3   -2.10   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            896|
+|  Signals                                                              6|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|14:00:40  INFO        Daily log -> logs/daily/2026-09-21.md
+14:00:40  INFO        Dashboard written → logs/dashboard.md
+
+|  Equity                                                         $226.16|
+|  Cash                                                           $124.40|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-09-21T10:00:41.186131-04:00 share=25% ===
+2026-09-21 10:00:41,186 INFO === options_live_micro LIVE 2026-09-21T10:00:41.186131-04:00 share=25% ===
+Live account equity $226.16 cash $124.40 #225458845 options_level=3
+2026-09-21 10:00:41,391 INFO Live account equity $226.16 cash $124.40 #225458845 options_level=3
+Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+2026-09-21 10:00:41,566 INFO Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+Live micro done. open_options=0 lots=0
+2026-09-21 10:00:41,683 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=59 paper_keys=yes dry_run=False
+  alpaca positions=16
+  FLAG b263|S403|6d60396d missing from Alpaca
+  FLAG b262|S403|2ab6f725 missing from Alpaca
+  FLAG b857|S408|900c4578 missing from Alpaca
+  FLAG b856|S408|be48d4c7 missing from Alpaca
+  FLAG b859|S408|c6e24356 missing from Alpaca
+  FLAG b833|S406|36a270eb missing from Alpaca
+  FLAG b832|S406|b8c8ee94 missing from Alpaca
+  FLAG b863|S408|96caf8a7 missing from Alpaca
+  FLAG b862|S408|392891dd missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1164:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1164
+PROBE FAIL: {"code":50010000,"message":"internal server error occurred"}
+paper probe failed (non-fatal)
+=== options_morning_bot (PAPER) 2026-09-21T10:00:44.721005-04:00 ===
+
+[Run context]
+2026-09-21 10:00:45,039 WARNING paper get_account failed attempt 1/3 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 2s
+2026-09-21 10:00:47,107 WARNING paper get_account failed attempt 2/3 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 4s
+2026-09-21 10:00:51,191 ERROR paper get_account failed after 3 attempts: {"code":50010000,"message":"internal server error occurred"}
+WARN: get_account failed ({"code":50010000,"message":"internal server error occurred"}) but positions OK (n=16). Keys are fine; Alpaca account endpoint is flaky. Using cached equity $997158.09.
+2026-09-21 10:00:51,329 WARNING paper get_account failed attempt 1/2 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 2s
+2026-09-21 10:00:53,391 ERROR paper get_account failed after 2 attempts: {"code":50010000,"message":"internal server error occurred"}
+WARN: using cached paper equity $997158.09 (get_account: {"code":50010000,"message":"internal server error occurred"})
+2026-09-21 10:00:53,481 WARNING lab get_account failed attempt 1/2: {"code":50010000,"message":"internal server error occurred"}
+2026-09-21 10:00:55,560 ERROR lab get_account failed after 2 attempts: {"code":50010000,"message":"internal server error occurred"}
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
+Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+  EXIT [b434|lab0434_s366_w2_1005_1045_r1|S366] take_profit (+137.6%) SELL failed MARA260925C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b433|lab0433_s366_w1_0928_1005_r2|S366] take_profit (+137.6%) SELL failed MARA260925C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b432|lab0432_s366_w1_0928_1005_r1|S366] take_profit (+137.6%) SELL failed MARA260925C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b239|lab0239_s401_w3_1045_1120_r2|S401] stop_loss (-84.1%) SELL failed MDT260925C00094000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b238|lab0238_s401_w3_1045_1120_r1|S401] stop_loss (-84.1%) SELL failed MDT260925C00094000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b241|lab0241_s401_w4_1120_1135_r2|S401] stop_loss (-84.1%) SELL failed MDT260925C00094000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b240|lab0240_s401_w4_1120_1135_r1|S401] stop_loss (-84.1%) SELL failed MDT260925C00094000: {"code":50010000,"message":"internal server error occurred"}
+```
+
+---
