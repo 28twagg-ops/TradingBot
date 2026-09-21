@@ -5354,3 +5354,165 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260921T153253Z
+
+- UTC timestamp: `20260921T153253Z`
+- GitHub run: [#10533](https://github.com/28twagg-ops/TradingBot/actions/runs/35619348216)
+- Run id: `35619348216`
+- Live bot: exit=`0`, duration=`5s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260921T153253Z_live_bot.log`, `logs/action_runs/20260921T153253Z_live_options.log`, `logs/action_runs/20260921T153253Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1367 | 49.2 | -12.5 | +44.2 | $+17,587 |
+| TAINTED | 1882 | 33.3 | -38.9 | +12.7 | $-9,546 |
+| KEEP-only | 751 | 61.9 | +51.4 | +69.9 | $+12,368 |
+| KEEP-only recent | 557 | 60.1 | +53.6 | +81.0 | $+8,146 |
+
+- KEEP strategies (25): S163, S167, S168, S173, S174, S210, S218, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (18): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S354, S355, S360, S363, S366, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-21T11:26:24.236159-04:00","date":"2026-09-21","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":103.1,"phases_s":{"reconcile":2.48,"cancel":0.12,"manage":32.22,"protective_stops":3.12,"scan":40.38,"entries":15.8},"signals":59,"placed":0,"equity":997158.09,"open_positions":15,"pending_orders":0,"open_lots":50,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":["S165:CRWD","S164:CRWD","S168:CRWD","S167:CRWD","S163:CRWD","S209:CRWD","S350:CRWD","S351:CRWD"],"github_run":"10532","github_run_id":"35618783503","status":"ok","data_quality":{"clean":{"n":1367,"win":49.23,"med":-12.5,"avg":44.2,"pnl":17587.16},"tainted":{"n":1882,"win":33.32,"med":-38.9,"avg":12.69,"pnl":-9546.28},"keep_only":{"n":751,"win":61.92,"med":51.39,"avg":69.85,"pnl":12368.45},"keep_only_recent":{"n":557,"win":60.14,"med":53.57,"avg":80.97,"pnl":8146.0},"keep_strategies":["S163","S167","S168","S173","S174","S210","S218","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S354","S355","S360","S363","S366","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+15:32:56  INFO      Mode: exits
+15:32:56  INFO        Daily log -> logs/daily/2026-09-21.md
+15:32:56  INFO        Daily log reconciled -> logs/daily/2026-09-21.md (2 ledger rows)
+15:32:57  INFO        place_all_stops: checking 3 positions...
+15:32:57  INFO        STOP skipped DRI: fractional (0.1604 shares) — software exit will handle it
+15:32:57  INFO        STOP skipped EQIX: fractional (0.0327 shares) — software exit will handle it
+15:32:57  INFO        STOP skipped SCHW: fractional (0.3194 shares) — software exit will handle it
+15:32:57  INFO        [positions] 3/3 (3 valid)
+15:32:57  INFO        Daily log -> logs/daily/2026-09-21.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:32 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $226.61|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  SCHW  P&L +0.4%  $+0.13                                           HOLD|
+|  DRI  P&L +0.4%  $+0.13                                            HOLD|
+|  EQIX  P&L +0.7%  $+0.25                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-09-21T11:32:58.740786-04:00 share=25% ===
+2026-09-21 11:32:58,740 INFO === options_live_micro LIVE 2026-09-21T11:32:58.740786-04:00 share=25% ===
+Live account equity $226.61 cash $124.40 #225458845 options_level=3
+2026-09-21 11:32:59,236 INFO Live account equity $226.61 cash $124.40 #225458845 options_level=3
+Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+2026-09-21 11:32:59,438 INFO Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+Live micro done. open_options=0 lots=0
+2026-09-21 11:32:59,571 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=50 paper_keys=yes dry_run=False
+  alpaca positions=16
+options_reconcile: done
+Layout: controlled:1164:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1164
+PROBE FAIL: {"code":50010000,"message":"internal server error occurred"}
+paper probe failed (non-fatal)
+=== options_morning_bot (PAPER) 2026-09-21T11:33:02.542808-04:00 ===
+
+[Run context]
+2026-09-21 11:33:02,776 WARNING paper get_account failed attempt 1/3 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 2s
+2026-09-21 11:33:04,851 WARNING paper get_account failed attempt 2/3 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 4s
+2026-09-21 11:33:08,928 ERROR paper get_account failed after 3 attempts: {"code":50010000,"message":"internal server error occurred"}
+WARN: get_account failed ({"code":50010000,"message":"internal server error occurred"}) but positions OK (n=16). Keys are fine; Alpaca account endpoint is flaky. Using cached equity $997158.09.
+2026-09-21 11:33:09,118 WARNING paper get_account failed attempt 1/2 (transient): {"code":50010000,"message":"internal server error occurred"}; sleep 2s
+2026-09-21 11:33:11,192 ERROR paper get_account failed after 2 attempts: {"code":50010000,"message":"internal server error occurred"}
+WARN: using cached paper equity $997158.09 (get_account: {"code":50010000,"message":"internal server error occurred"})
+2026-09-21 11:33:11,316 WARNING lab get_account failed attempt 1/2: {"code":50010000,"message":"internal server error occurred"}
+2026-09-21 11:33:13,451 ERROR lab get_account failed after 2 attempts: {"code":50010000,"message":"internal server error occurred"}
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
+Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+  EXIT [b899|lab0899_s411_w1_0928_1005_r2|S411] take_profit (+53.4%) SELL failed NFLX260925C00074000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b898|lab0898_s411_w1_0928_1005_r1|S411] take_profit (+53.4%) SELL failed NFLX260925C00074000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b801|lab0801_s404_w1_0928_1005_r2|S404] take_profit (+53.4%) SELL failed NFLX260925C00074000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b800|lab0800_s404_w1_0928_1005_r1|S404] take_profit (+53.4%) SELL failed NFLX260925C00074000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b90|live_1to1|S404] take_profit (+53.4%) SELL failed NFLX260925C00074000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b777|lab0777_s397_w1_0928_1005_r2|S397] take_profit (+53.4%) SELL failed NFLX260925C00074000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b776|lab0776_s397_w1_0928_1005_r1|S397] take_profit (+53.4%) SELL failed NFLX260925C00074000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b434|lab0434_s366_w2_1005_1045_r1|S366] take_profit (+129.5%) SELL failed MARA260925C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b433|lab0433_s366_w1_0928_1005_r2|S366] take_profit (+129.5%) SELL failed MARA260925C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b432|lab0432_s366_w1_0928_1005_r1|S366] take_profit (+129.5%) SELL failed MARA260925C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b239|lab0239_s401_w3_1045_1120_r2|S401] stop_loss (-65.2%) SELL failed MDT260925C00094000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b238|lab0238_s401_w3_1045_1120_r1|S401] stop_loss (-65.2%) SELL failed MDT260925C00094000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b241|lab0241_s401_w4_1120_1135_r2|S401] stop_loss (-65.2%) SELL failed MDT260925C00094000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b240|lab0240_s401_w4_1120_1135_r1|S401] stop_loss (-65.2%) SELL failed MDT260925C00094000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b181|lab0181_s217_w2_1005_1045_r2|S217] stop_loss (-62.5%) SELL failed BAC260925C00059000: {"code":50010000,"message":"internal server error occurred"}
+  EXIT [b180|lab0180_s217_w2_1005_1045_r1|S217] stop_loss (-62.5%) SELL failed BAC260925C00059000: {"code":50010000,"message":"internal server error occurred"}
+Protective stops: placed=0 upgraded=0 already=5 failed=8 (market-first)
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S204, S205, S206, S208, S209, S210, S211, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S406, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 113/117 symbols
+Found 59 signal(s); top: ['S165:CRWD', 'S164:CRWD', 'S168:CRWD', 'S167:CRWD', 'S163:CRWD', 'S209:CRWD', 'S350:CRWD', 'S351:CRWD']
+Paper lab: $997158 broker equity -> 1164 bucket(s) ($500 virtual each, unlimited paper)
+```
+
+---
