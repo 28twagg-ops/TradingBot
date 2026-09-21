@@ -30,4 +30,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-17 14:07:00.058953+00:00,entry,859,lab0859_s408_w2_1005_1045_r2,S408,8f0a5decc0ee,CRWD,CRWD260918C00270000,1,0.11,0.1,10.0,,,,-0.01,,0.75,-0.75,0.18181818181818174,RB gap -2.2% reclaim,7475d895-f6eb-447f-8e62-c163b4802825
 2026-09-17 14:12:25.691429+00:00,exit,859,lab0859_s408_w2_1005_1045_r2,S408,8f0a5decc0ee,CRWD,CRWD260918C00270000,1,,0.06,10.0,-40.0,-4.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,e01ead61-a5d3-43a7-9cd2-2f24c2938a81
 2026-09-18 14:32:35.157039+00:00,entry,859,lab0859_s408_w2_1005_1045_r2,S408,c6e243569b46,VZ,VZ260925C00050000,1,0.08,0.07,7.0,,,,-0.01,,0.3,-0.3,0.24999999999999986,RB gap -1.7% reclaim,f82dc77a-ba4d-4e34-bcd8-50b2e5097311
-2026-09-21T14:00:42Z,reconcile,859,lab0859_s408_w2_1005_1045_r2,S408,c6e243569b46,VZ,VZ260925C00050000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-21T14:02:52Z,reconcile,859,lab0859_s408_w2_1005_1045_r2,S408,c6e243569b46,VZ,VZ260925C00050000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
