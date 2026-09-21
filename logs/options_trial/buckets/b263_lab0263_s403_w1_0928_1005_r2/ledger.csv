@@ -29,4 +29,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16 14:02:04.307608+00:00,entry,263,lab0263_s403_w1_0928_1005_r2,S403,c97772de9ab6,QQQ,QQQ260918C00723000,1,0.73,0.73,73.0,,,,-0.01,,0.5,-0.5,0.01360544217687076,touch MA50 green,14e3d6ae-82a6-4f0d-b283-2c1c414dcaa3
 2026-09-16T18:41:12Z,reconcile,263,lab0263_s403_w1_0928_1005_r2,S403,c97772de9ab6,QQQ,QQQ260918C00723000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-18 13:48:28.658681+00:00,entry,263,lab0263_s403_w1_0928_1005_r2,S403,6d60396d6552,V,V260925C00380000,1,0.64,0.63,63.0,,,,-0.01,,0.5,-0.5,0.08000000000000007,touch MA50 green,9514b987-c147-45d0-b981-f700495294dd
-2026-09-21T14:02:52Z,reconcile,263,lab0263_s403_w1_0928_1005_r2,S403,6d60396d6552,V,V260925C00380000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-21T14:00:42Z,reconcile,263,lab0263_s403_w1_0928_1005_r2,S403,6d60396d6552,V,V260925C00380000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
