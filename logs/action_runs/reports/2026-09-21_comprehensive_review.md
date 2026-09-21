@@ -14926,3 +14926,132 @@ Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
 ```
 
 ---
+
+## Run 20260921T194646Z
+
+- UTC timestamp: `20260921T194646Z`
+- GitHub run: [#10584](https://github.com/28twagg-ops/TradingBot/actions/runs/35646765082)
+- Run id: `35646765082`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260921T194646Z_live_bot.log`, `logs/action_runs/20260921T194646Z_live_options.log`, `logs/action_runs/20260921T194646Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1367 | 49.2 | -12.5 | +44.2 | $+17,587 |
+| TAINTED | 1882 | 33.3 | -38.9 | +12.7 | $-9,546 |
+| KEEP-only | 751 | 61.9 | +51.4 | +69.9 | $+12,368 |
+| KEEP-only recent | 557 | 60.1 | +53.6 | +81.0 | $+8,146 |
+
+- KEEP strategies (25): S163, S167, S168, S173, S174, S210, S218, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (18): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S354, S355, S360, S363, S366, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-21T15:26:18.113425-04:00","date":"2026-09-21","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":154.4,"phases_s":{"reconcile":2.46,"cancel":0.17,"manage":139.27,"protective_stops":3.46},"signals":0,"placed":0,"equity":997158.09,"open_positions":15,"pending_orders":0,"open_lots":50,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"10580","github_run_id":"35644671793","status":"ok","data_quality":{"clean":{"n":1367,"win":49.23,"med":-12.5,"avg":44.2,"pnl":17587.16},"tainted":{"n":1882,"win":33.32,"med":-38.9,"avg":12.69,"pnl":-9546.28},"keep_only":{"n":751,"win":61.92,"med":51.39,"avg":69.85,"pnl":12368.45},"keep_only_recent":{"n":557,"win":60.14,"med":53.57,"avg":80.97,"pnl":8146.0},"keep_strategies":["S163","S167","S168","S173","S174","S210","S218","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S354","S355","S360","S363","S366","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (69 earlier lines - see full log file)
+|  EQIX     Pullback50      $34.72     $1035.~  $1060.~  +2.4%   $+0.82  |
+|  SCHW     Pullback50      $34.07     $106.15  $106.69  +0.5%   $+0.17  |
+|                                                                        |
+|  Total invested                                                  $68.79|
+|  Total open P&L                                                  $+0.99|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (stale (138252.7m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  SCHW  P&L +0.5%  $+0.17                                           HOLD|
+|  EQIX  P&L +2.4%  $+0.82                          EXIT: midline (+2.4%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  35                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  ABNB     Pullback50      eq     $167.67  24.5   -1.42   50MA bounce (+|
+|  AMZN     Pullback50      eq     $258.56  48.6   -0.42   50MA bounce (+|
+|  AME      Pullback50      eq     $242.07  58.1   -2.01   50MA bounce (+|
+|  ADP      Pullback50      eq     $270.42  31.8   -0.77   50MA bounce (+|
+|  C        Pullback50      eq     $135.37  59.1   -0.49   50MA bounce (+|
+|  DRI      Pullback50      eq     $211.83  47.4   0.68    50MA bounce (+|
+|  DDOG     Pullback50      eq     $244.03  53.8   -1.39   50MA bounce (+|
+|  DLR      Pullback50      eq     $187.26  52.2   -1.04   50MA bounce (-|
+|  EMR      Pullback50      eq     $151.65  48.7   -2.07   50MA bounce (+|
+|  BEN      Pullback50      eq     $33.65   45.8   -0.87   50MA bounce (-|
+|  GRMN     Pullback50      eq     $280.15  45.2   -1.15   50MA bounce (+|
+|  GM       Pullback50      eq     $84.72   46.8   -0.68   50MA bounce (-|
+|  IVZ      Pullback50      eq     $31.34   40.3   -0.99   50MA bounce (+|
+|  JCI      Pullback50      eq     $144.24  60.1   -1.60   50MA bounce (-|
+|  KMI      Pullback50      eq     $31.75   44.0   -0.88   50MA bounce (-|
+|  LRCX     Pullback50      eq     $304.06  51.0   -0.43   50MA bounce (-|
+|  META     VWAP_Reclaim    eq     $748.41  87.6   2.67    VWAP reclaim V|
+|  NDAQ     Pullback50      eq     $94.56   40.9   -1.46   50MA bounce (+|
+|  NWS      Pullback50      eq     $32.85   34.9   -0.80   50MA bounce (-|
+|  PWR      Pullback50      eq     $644.59  61.8   -1.56   50MA bounce (+|
+|  SLB      Pullback50      eq     $51.85   20.0   -1.10   50MA bounce (-|
+|  TXN      Pullback50      eq     $271.08  59.4   -0.70   50MA bounce (-|
+|  VLTO     Pullback50      eq     $95.13   36.4   -0.76   50MA bounce (-|
+|  VRTX     Pullback50      eq     $511.89  30.3   -1.04   50MA bounce (+|
+|  V        Pullback50      eq     $369.91  38.6   -0.82   50MA bounce (+|
+|  WBD      RSIRecovery     eq     $30.79   72.7   4.18    RSI 28.3→72.7 |
+|  AMG      Pullback50      eq     $365.11  48.0   -1.38   50MA bounce (+|19:50:53  INFO        BUY  SITM  $34.03  [EarningsDrift]  id=d19e0654-340c-4d26-a6a9-7bc788896a7a
+19:50:53  INFO        BUY  ESAB  $34.03  [MomReversal]  id=823b0a19-d718-49ef-bf57-806234bf30bc
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
