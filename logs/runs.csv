@@ -8162,3 +8162,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-21 14:28:29,exits,bull,226.63,124.4,0,0,0,3,DRI|EQIX|SCHW,both
 2026-09-21 14:31:35,exits,bull,226.52,124.4,0,0,0,3,DRI|EQIX|SCHW,both
 2026-09-21 14:36:14,exits,bull,226.42,124.4,0,0,0,3,DRI|EQIX|SCHW,both
+2026-09-21 14:41:06,exits,bull,226.5,124.4,0,0,0,3,DRI|EQIX|SCHW,both
