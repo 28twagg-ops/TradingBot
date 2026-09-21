@@ -8147,3 +8147,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-18 23:46:07,ext_exits,bull,225.94,158.2,0,0,0,2,PPG|TJX,both
 2026-09-18 23:51:13,ext_exits,bull,225.94,158.2,0,0,0,2,PPG|TJX,both
 2026-09-18 23:56:06,ext_exits,bull,225.94,158.2,0,0,0,2,PPG|TJX,both
+2026-09-21 13:01:16,summary,bull,225.92,158.2,0,0,0,2,PPG|TJX,both
