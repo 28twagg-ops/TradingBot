@@ -31,3 +31,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16 14:08:43.442254+00:00,entry,193,lab0193_s218_w1_0928_1005_r2,S218,cc6628d23fcc,UNH,UNH260918C00392500,1,0.54,0.48,48.0,,,,-0.01,,0.5,-0.5,0.22222222222222232,low=375.07 BB_lower=375.50 touch+green,2706b0cd-b4f9-4330-8f2b-8f1762e49bfc
 2026-09-16 17:06:14.577406+00:00,exit,193,lab0193_s218_w1_0928_1005_r2,S218,cc6628d23fcc,UNH,UNH260918C00392500,1,,0.24,48.0,-50.0,-24.0,stop_loss (-54.2%),,-0.01,0.5,-0.5,,,8b61dab5-7076-4df3-afcc-059d80726192
 2026-09-18 13:48:29.519499+00:00,entry,193,lab0193_s218_w1_0928_1005_r2,S218,7f838dd6c021,BAC,BAC260925C00058000,1,0.68,0.67,67.0,,,,-0.01,,0.5,-0.5,0.12307692307692303,low=57.52 BB_lower=57.88 touch+green,d38cc9fc-491d-4c54-a61b-2828d0b95dfe
+2026-09-22T14:16:23Z,reconcile,193,lab0193_s218_w1_0928_1005_r2,S218,7f838dd6c021,BAC,BAC260925C00058000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
