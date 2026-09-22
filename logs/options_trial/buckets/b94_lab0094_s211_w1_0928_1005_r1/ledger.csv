@@ -28,3 +28,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-18 13:48:17.887380+00:00,entry,94,lab0094_s211_w1_0928_1005_r1,S211,a7fe4290f8b8,META,META260921C00720000,1,0.2,0.19,19.0,,,,-0.01,,0.75,-0.75,0.2105263157894736,MA21 crossed above MA50,7ba85af7-8348-4c63-a9b6-969993eefd2c
 2026-09-18T14:21:16Z,reconcile,94,lab0094_s211_w1_0928_1005_r1,S211,a7fe4290f8b8,META,META260921C00720000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-22 14:04:11.775723+00:00,entry,94,lab0094_s211_w1_0928_1005_r1,S211,874188d01259,AMD,AMD260923C00652500,1,0.54,0.53,53.0,,,,-0.01,,0.75,-0.75,0.09523809523809532,MA21 crossed above MA50,3e521aa8-9b03-4617-9ee8-6ad28a9d749f
+2026-09-22T17:01:21Z,reconcile,94,lab0094_s211_w1_0928_1005_r1,S211,874188d01259,AMD,AMD260923C00652500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
