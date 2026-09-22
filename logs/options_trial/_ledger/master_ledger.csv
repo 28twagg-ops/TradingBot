@@ -14516,3 +14516,9 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-22 14:17:28.606750+00:00,entry,365,lab0365_s361_w2_1005_1045_r2,S361,7711c433c700,LLY,LLY260925C01250000,1,0.4,0.39,39.0,,,,-0.01,,0.5,-0.5,0.24657534246575336,RB gap -1.6% reclaim,1cbbc569-a98d-458c-b2d8-e4fbd3ae5c81
 2026-09-22 14:17:28.461627+00:00,entry,364,lab0364_s361_w2_1005_1045_r1,S361,59fabacfaf7f,LLY,LLY260925C01250000,1,0.4,0.39,39.0,,,,-0.01,,0.5,-0.5,0.24657534246575336,RB gap -1.6% reclaim,3f5d49e7-bab9-4f49-bfd6-1b291afb01b7
 2026-09-22 14:26:25.351181+00:00,exit,90,live_1to1,S404,079d1482d2f0,NFLX,NFLX260925C00074000,1,,0.28,50.0,-44.0,-22.0,stop_loss (-43.0%),,-0.01,0.5,-0.4,,,20a58a5b-d127-4b8f-9b25-e81fe1b95452
+2026-09-22T14:36:27Z,reconcile,899,lab0899_s411_w1_0928_1005_r2,S411,ec3e589865a8,NFLX,NFLX260925C00074000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:36:27Z,reconcile,898,lab0898_s411_w1_0928_1005_r1,S411,b94c5e1ce192,NFLX,NFLX260925C00074000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:36:27Z,reconcile,801,lab0801_s404_w1_0928_1005_r2,S404,db09bb6be740,NFLX,NFLX260925C00074000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:36:27Z,reconcile,800,lab0800_s404_w1_0928_1005_r1,S404,17c2be81fabf,NFLX,NFLX260925C00074000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:36:27Z,reconcile,777,lab0777_s397_w1_0928_1005_r2,S397,f2a21fd2e0bf,NFLX,NFLX260925C00074000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:36:27Z,reconcile,776,lab0776_s397_w1_0928_1005_r1,S397,3db1804c0e12,NFLX,NFLX260925C00074000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
