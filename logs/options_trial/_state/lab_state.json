@@ -453,6 +453,16 @@
       "qty": 1,
       "reason": "stop_loss (-53.2%)",
       "submitted": "2026-09-22T11:41:38"
+    },
+    {
+      "order_id": "bcde0c95-4bd8-4f6d-880f-c4a7ce2f3e60",
+      "lot_id": "233b9250a511",
+      "bucket_id": 419,
+      "strategy_id": "S365",
+      "occ_symbol": "NFLX261002C00077000",
+      "qty": 1,
+      "reason": "stop_loss (-51.2%)",
+      "submitted": "2026-09-22T13:46:55"
     }
   ],
   "bucket_open_premium": {
