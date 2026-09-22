@@ -540,6 +540,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-22T14:47:16.451524+00:00",
       "entry_order_id": "c8a1c650-2afd-49e9-9ed9-8110a40e3c1d"
+    },
+    {
+      "lot_id": "90cfd76cea10",
+      "bucket_id": 169,
+      "profile_name": "lab0169_s216_w3_1045_1120_r2",
+      "strategy_id": "S216",
+      "occ_symbol": "MCD260925C00260000",
+      "underlying": "MCD",
+      "qty": 1,
+      "entry_cost": 59.0,
+      "entry_price": 0.59,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-22T14:56:23.981314+00:00",
+      "entry_order_id": "c57b50b0-2a8e-4a52-8821-f4a98a5e2578"
+    },
+    {
+      "lot_id": "70d8f5d2698f",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "MCD260925C00260000",
+      "underlying": "MCD",
+      "qty": 1,
+      "entry_cost": 59.0,
+      "entry_price": 0.59,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-22T14:56:24.118381+00:00",
+      "entry_order_id": "orphan:MCD260925C00260000"
     }
   ],
   "pending_orders": [
@@ -574,38 +614,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
-    },
-    {
-      "order_id": "1f45b3c2-3dec-4efc-9f5b-a66103f74a9c",
-      "bucket_id": 168,
-      "strategy_id": "S216",
-      "occ_symbol": "MCD260925C00260000",
-      "underlying": "MCD",
-      "qty": 1,
-      "limit": 0.59,
-      "profile_name": "lab0168_s216_w3_1045_1120_r1",
-      "submitted": "2026-09-22",
-      "detail": "RSI crossed 30: 19.7 -> 31.4",
-      "spread_frac": 0.2018348623853211,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "c57b50b0-2a8e-4a52-8821-f4a98a5e2578",
-      "bucket_id": 169,
-      "strategy_id": "S216",
-      "occ_symbol": "MCD260925C00260000",
-      "underlying": "MCD",
-      "qty": 1,
-      "limit": 0.59,
-      "profile_name": "lab0169_s216_w3_1045_1120_r2",
-      "submitted": "2026-09-22",
-      "detail": "RSI crossed 30: 19.7 -> 31.4",
-      "spread_frac": 0.2018348623853211,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
     }
   ],
   "pending_exits": [
@@ -628,6 +636,16 @@
       "qty": 1,
       "reason": "stop_loss (-100.0%)",
       "submitted": "2026-09-22T10:16:29"
+    },
+    {
+      "order_id": "65fd984f-02d6-4f0e-a353-50b9356c7445",
+      "lot_id": "413d3156bf3c",
+      "bucket_id": 237,
+      "strategy_id": "S401",
+      "occ_symbol": "AMD260923C00657500",
+      "qty": 1,
+      "reason": "stop_loss (-51.1%)",
+      "submitted": "2026-09-22T10:56:26"
     }
   ],
   "bucket_open_premium": {
@@ -657,7 +675,9 @@
     "b365": 39.0,
     "b364": 39.0,
     "b239": 35.0,
-    "b238": 35.0
+    "b238": 35.0,
+    "b169": 59.0,
+    "b0": 59.0
   },
   "session_date": "2026-09-22",
   "entries_locked": [
@@ -1166,7 +1186,10 @@
     "20a58a5b-d127-4b8f-9b25-e81fe1b95452",
     "6dbb781e-90b9-4556-8a41-09802275fe83",
     "c8a1c650-2afd-49e9-9ed9-8110a40e3c1d",
-    "67f9f0c1-5979-452d-ac43-3f7b1f333b00"
+    "67f9f0c1-5979-452d-ac43-3f7b1f333b00",
+    "c57b50b0-2a8e-4a52-8821-f4a98a5e2578",
+    "1f45b3c2-3dec-4efc-9f5b-a66103f74a9c",
+    "1d3ab243-9d43-47c9-a1b5-56ce18619e3d"
   ],
   "submitted_today": 23,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
