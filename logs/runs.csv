@@ -8389,3 +8389,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-22 23:31:11,ext_exits,bull,225.63,191.68,0,0,0,1,CCL,both
 2026-09-22 23:36:14,ext_exits,bull,225.63,191.68,0,0,0,1,CCL,both
 2026-09-22 23:41:13,ext_exits,bull,225.63,191.68,0,0,0,1,CCL,both
+2026-09-22 23:46:09,ext_exits,bull,225.62,191.68,0,0,0,1,CCL,both
