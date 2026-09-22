@@ -342,26 +342,6 @@
       "entry_order_id": "f03cdd79-723b-43e8-af9d-9ce7a8bc3c72"
     },
     {
-      "lot_id": "17948b482918",
-      "bucket_id": 167,
-      "profile_name": "lab0167_s216_w2_1005_1045_r2",
-      "strategy_id": "S216",
-      "occ_symbol": "MCD260925C00272500",
-      "underlying": "MCD",
-      "qty": 1,
-      "entry_cost": 4.0,
-      "entry_price": 0.04,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-22T14:11:56.952877+00:00",
-      "entry_order_id": "ec0428f5-d633-4d58-a1a5-02cfd59fc234"
-    },
-    {
       "lot_id": "4103e29d2c68",
       "bucket_id": 166,
       "profile_name": "lab0166_s216_w2_1005_1045_r1",
@@ -628,16 +608,6 @@
       "submitted": "2026-09-22T10:11:19"
     },
     {
-      "order_id": "b95ebc65-56d0-4061-846b-ed198da39dc8",
-      "lot_id": "17948b482918",
-      "bucket_id": 167,
-      "strategy_id": "S216",
-      "occ_symbol": "MCD260925C00272500",
-      "qty": 1,
-      "reason": "stop_loss (-100.0%)",
-      "submitted": "2026-09-22T10:16:29"
-    },
-    {
       "order_id": "65fd984f-02d6-4f0e-a353-50b9356c7445",
       "lot_id": "413d3156bf3c",
       "bucket_id": 237,
@@ -646,6 +616,16 @@
       "qty": 1,
       "reason": "stop_loss (-51.1%)",
       "submitted": "2026-09-22T10:56:26"
+    },
+    {
+      "order_id": "64ce19b5-5d25-48e9-adec-cf01fdcd40eb",
+      "lot_id": "4103e29d2c68",
+      "bucket_id": 166,
+      "strategy_id": "S216",
+      "occ_symbol": "MCD260925C00272500",
+      "qty": 1,
+      "reason": "stop_loss (-100.0%)",
+      "submitted": "2026-09-22T11:01:22"
     }
   ],
   "bucket_open_premium": {
@@ -666,7 +646,6 @@
     "b236": 47.0,
     "b97": 47.0,
     "b96": 47.0,
-    "b167": 4.0,
     "b166": 4.0,
     "b914": 39.0,
     "b90": 39.0,
@@ -1189,7 +1168,8 @@
     "67f9f0c1-5979-452d-ac43-3f7b1f333b00",
     "c57b50b0-2a8e-4a52-8821-f4a98a5e2578",
     "1f45b3c2-3dec-4efc-9f5b-a66103f74a9c",
-    "1d3ab243-9d43-47c9-a1b5-56ce18619e3d"
+    "1d3ab243-9d43-47c9-a1b5-56ce18619e3d",
+    "b95ebc65-56d0-4061-846b-ed198da39dc8"
   ],
   "submitted_today": 23,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
