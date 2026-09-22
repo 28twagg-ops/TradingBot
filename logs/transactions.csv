@@ -1232,3 +1232,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-09-21 19:47:19,2026-09-21,SELL,EQIX,Pullback50,1060.57,34.7,2.41,0.82,0,midline (+2.4%),bull,226.9
 2026-09-21 19:52:53,2026-09-21,SELL,SITM,EarningsDrift,641.54,34.07,0.23,0.08,0,midline (+0.2%),bull,226.78
 2026-09-21 19:57:58,2026-09-21,SELL,ESAB,MomReversal,66.78,33.77,-0.75,-0.25,0,stop_loss (-0.7%),bull,226.68
+2026-09-22 13:47:00,2026-09-22,SELL,SCHW,Pullback50,103.96,33.2,-2.06,-0.7,1,stop_loss (-2.1%),bull,225.72

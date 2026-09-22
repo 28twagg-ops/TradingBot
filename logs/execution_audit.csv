@@ -867,3 +867,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-09-21 19:47:19,2026-09-21,SELL,EQIX,Pullback50,1060.98,1058.86,1060.572,34.7,-0.0385,-0.0133,limit_fill_position_check_full,midline (+2.4%),bull
 2026-09-21 19:52:53,2026-09-21,SELL,SITM,EarningsDrift,641.715,640.43,641.544,34.07,-0.0266,-0.0091,limit_fill_position_check_full,midline (+0.2%),bull
 2026-09-21 19:57:58,2026-09-21,SELL,ESAB,MomReversal,66.67,,66.78,33.77,0.165,0.0557,market_urgent_full,stop_loss (-0.7%),bull
+2026-09-22 13:47:00,2026-09-22,SELL,SCHW,Pullback50,103.96,,103.96,33.2,0.0,0.0,market_urgent_full,stop_loss (-2.1%),bull
