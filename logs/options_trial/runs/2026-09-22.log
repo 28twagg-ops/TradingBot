@@ -45762,22 +45762,22 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-09-22.log
 elapsed=6.7s reconcile=0.47s cancel=0.21s manage=4.37s
 
-=== 15:34:56 ET — manage-only (past entry window) [elapsed=2.8s reconcile=0.1s cancel=0.04s manage=2.02s] ===
-=== options_morning_bot (PAPER) 2026-09-22T15:34:56.396532-04:00 ===
+=== 15:40:12 ET — manage-only (past entry window) [elapsed=3.5s reconcile=0.12s cancel=0.04s manage=2.67s] ===
+=== options_morning_bot (PAPER) 2026-09-22T15:40:12.257182-04:00 ===
 
 [Run context]
-Paper auth OK — equity $995814.80, account PA33P8KT02IL
+Paper auth OK — equity $995858.80, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations
 
 [Setup]
 LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
 Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
 Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
-  EXIT skip MCD260925C00272500: open sell already pending
   EXIT skip AXP260925C00325000: open sell already pending
-  EXIT [b434|lab0434_s366_w2_1005_1045_r1|S366] take_profit (+155.7%) SELL failed MARA260925C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  EXIT [b433|lab0433_s366_w1_0928_1005_r2|S366] take_profit (+155.7%) SELL failed MARA260925C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  EXIT [b432|lab0432_s366_w1_0928_1005_r1|S366] take_profit (+155.7%) SELL failed MARA260925C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT skip MCD260925C00272500: open sell already pending
+  EXIT [b434|lab0434_s366_w2_1005_1045_r1|S366] take_profit (+153.7%) SELL failed MARA260925C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b433|lab0433_s366_w1_0928_1005_r2|S366] take_profit (+153.7%) SELL failed MARA260925C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b432|lab0432_s366_w1_0928_1005_r1|S366] take_profit (+153.7%) SELL failed MARA260925C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed MARA260925C00012500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
 Protective stops: placed=0 upgraded=0 already=8 failed=1 (market-first)
 
@@ -45788,16 +45788,16 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $995,814.80
+Account equity: $995,858.80
 Active buckets: 1164 of 1164 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S203,S207,S212,S360,S405,S407): $+12,583.88 all-time  |  $-324.00 today
   Raw (incl dropped):     $+7,720.88 all-time  |  $-324.00 today
-  Open (not sold yet): $+114.00 unrealized (virtual lots)
-                       $-246.00 unrealized (broker total)
+  Open (not sold yet): $+160.00 unrealized (virtual lots)
+                       $-195.00 unrealized (broker total)
   Premium deployed:    $758.00 in open positions
-  Combined P&L:        $+12,697.88 (reflected realized + open virtual)
+  Combined P&L:        $+12,743.88 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     14548
@@ -45851,17 +45851,17 @@ Open virtual lots (by bucket)
   (853 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  AMZN260925C00267500  qty=2  cost=$54.00  return=+29.6%  open P&L=$+16.00
+  AMZN260925C00267500  qty=2  cost=$54.00  return=+25.9%  open P&L=$+14.00
   AXP260925C00325000  qty=1  cost=$38.00  return=-84.2%  open P&L=$-32.00
-  LLY260925C01250000  qty=3  cost=$117.00  return=-20.5%  open P&L=$-24.00
-  MARA260925C00011500  qty=-1  cost=$16.00  return=-1318.8%  open P&L=$-211.00
-  MARA260925C00012000  qty=-1  cost=$29.00  return=-513.8%  open P&L=$-149.00
-  MARA260925C00012500  qty=3  cost=$149.00  return=+155.7%  open P&L=$+232.00
-  MCD260925C00260000  qty=2  cost=$118.00  return=+1.7%  open P&L=$+2.00
+  LLY260925C01250000  qty=3  cost=$117.00  return=+7.7%  open P&L=$+9.00
+  MARA260925C00011500  qty=-1  cost=$16.00  return=-1306.2%  open P&L=$-209.00
+  MARA260925C00012000  qty=-1  cost=$29.00  return=-503.4%  open P&L=$-146.00
+  MARA260925C00012500  qty=3  cost=$149.00  return=+153.7%  open P&L=$+229.00
+  MCD260925C00260000  qty=2  cost=$118.00  return=+18.6%  open P&L=$+22.00
   MCD260925C00272500  qty=1  cost=$4.00  return=-100.0%  open P&L=$-4.00
   NFLX261002C00076000  qty=2  cost=$110.00  return=-34.5%  open P&L=$-38.00
   NFLX261009C00078000  qty=2  cost=$108.00  return=-27.8%  open P&L=$-30.00
-  RBLX260925C00053000  qty=2  cost=$60.00  return=-13.3%  open P&L=$-8.00
+  RBLX260925C00053000  qty=2  cost=$60.00  return=-16.7%  open P&L=$-10.00
 
 Per-bucket exit stats (all time)
   b0|c000_s173_w1_0928_1005_r1  n= 22  avg=+24.8%  med=+34.9%  realized=$+283.00
@@ -46306,7 +46306,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $995,814.80                                              |
+|Equity       : $995,858.80                                              |
 |Open Risk    : 18 lots (11 broker pos)                                  |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -46355,16 +46355,16 @@ Per-bucket exit stats (all time)
 +========================================================================+
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
-|  MARA260925C00012500           3   +155.7%   $   +232.00               |
-|  MARA260925C00011500          -1  -1318.8%   $   -211.00               |
-|  MARA260925C00012000          -1   -513.8%   $   -149.00               |
+|  MARA260925C00012500           3   +153.7%   $   +229.00               |
+|  MARA260925C00011500          -1  -1306.2%   $   -209.00               |
+|  MARA260925C00012000          -1   -503.4%   $   -146.00               |
 |  NFLX261002C00076000           2    -34.5%   $    -38.00               |
 |  AXP260925C00325000            1    -84.2%   $    -32.00               |
 |  NFLX261009C00078000           2    -27.8%   $    -30.00               |
-|  LLY260925C01250000            3    -20.5%   $    -24.00               |
-|  AMZN260925C00267500           2    +29.6%   $    +16.00               |
+|  MCD260925C00260000            2    +18.6%   $    +22.00               |
+|  AMZN260925C00267500           2    +25.9%   $    +14.00               |
 |  ... 3 more position(s)                                                |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-09-22.log
-elapsed=2.8s reconcile=0.1s cancel=0.04s manage=2.02s
+elapsed=3.5s reconcile=0.12s cancel=0.04s manage=2.67s
 
