@@ -365,24 +365,24 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "6ea250bb-393a-45af-971d-4339a424eb54",
-      "lot_id": "e327b9911a87",
-      "bucket_id": 196,
-      "strategy_id": "S218",
-      "occ_symbol": "AXP260925C00325000",
-      "qty": 1,
-      "reason": "stop_loss (-55.3%)",
-      "submitted": "2026-09-22T10:11:19"
-    },
-    {
-      "order_id": "64ce19b5-5d25-48e9-adec-cf01fdcd40eb",
+      "order_id": "93a01274-9854-4c91-9c0f-236b3dedf279",
       "lot_id": "4103e29d2c68",
       "bucket_id": 166,
       "strategy_id": "S216",
       "occ_symbol": "MCD260925C00272500",
       "qty": 1,
       "reason": "stop_loss (-100.0%)",
-      "submitted": "2026-09-22T11:01:22"
+      "submitted": "2026-09-22T16:00:50"
+    },
+    {
+      "order_id": "8db36335-fcfa-4557-92b6-73a20b266d58",
+      "lot_id": "e327b9911a87",
+      "bucket_id": 196,
+      "strategy_id": "S218",
+      "occ_symbol": "AXP260925C00325000",
+      "qty": 1,
+      "reason": "stop_loss (-86.8%)",
+      "submitted": "2026-09-22T16:00:51"
     }
   ],
   "bucket_open_premium": {
