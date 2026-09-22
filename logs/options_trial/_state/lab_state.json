@@ -520,9 +520,82 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-22T14:17:31.425498+00:00",
       "entry_order_id": "3f5d49e7-bab9-4f49-bfd6-1b291afb01b7"
+    },
+    {
+      "lot_id": "4774ddd3628c",
+      "bucket_id": 239,
+      "profile_name": "lab0239_s401_w3_1045_1120_r2",
+      "strategy_id": "S401",
+      "occ_symbol": "META260923C00805000",
+      "underlying": "META",
+      "qty": 1,
+      "entry_cost": 35.0,
+      "entry_price": 0.35,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-22T14:47:16.411163+00:00",
+      "entry_order_id": "6dbb781e-90b9-4556-8a41-09802275fe83"
+    },
+    {
+      "lot_id": "6f588f846cd6",
+      "bucket_id": 238,
+      "profile_name": "lab0238_s401_w3_1045_1120_r1",
+      "strategy_id": "S401",
+      "occ_symbol": "META260923C00805000",
+      "underlying": "META",
+      "qty": 1,
+      "entry_cost": 35.0,
+      "entry_price": 0.35,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-22T14:47:16.451524+00:00",
+      "entry_order_id": "c8a1c650-2afd-49e9-9ed9-8110a40e3c1d"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "b0ffbfc3-3582-4982-8aab-98fdb711b95e",
+      "bucket_id": 98,
+      "strategy_id": "S211",
+      "occ_symbol": "RBLX260925C00052000",
+      "underlying": "RBLX",
+      "qty": 1,
+      "limit": 0.43,
+      "profile_name": "lab0098_s211_w3_1045_1120_r1",
+      "submitted": "2026-09-22",
+      "detail": "MA21 crossed above MA50",
+      "spread_frac": 0.12048192771084333,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "b096d219-1388-4a1b-8477-49b6a020c59e",
+      "bucket_id": 99,
+      "strategy_id": "S211",
+      "occ_symbol": "RBLX260925C00052000",
+      "underlying": "RBLX",
+      "qty": 1,
+      "limit": 0.43,
+      "profile_name": "lab0099_s211_w3_1045_1120_r2",
+      "submitted": "2026-09-22",
+      "detail": "MA21 crossed above MA50",
+      "spread_frac": 0.12048192771084333,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    }
+  ],
   "pending_exits": [
     {
       "order_id": "6ea250bb-393a-45af-971d-4339a424eb54",
@@ -543,6 +616,16 @@
       "qty": 1,
       "reason": "stop_loss (-100.0%)",
       "submitted": "2026-09-22T10:16:29"
+    },
+    {
+      "order_id": "67f9f0c1-5979-452d-ac43-3f7b1f333b00",
+      "lot_id": "05a6021dd801",
+      "bucket_id": 915,
+      "strategy_id": "S412",
+      "occ_symbol": "LLY260925C01250000",
+      "qty": 1,
+      "reason": "take_profit (+66.7%)",
+      "submitted": "2026-09-22T10:46:21"
     }
   ],
   "bucket_open_premium": {
@@ -571,7 +654,9 @@
     "b379": 39.0,
     "b378": 39.0,
     "b365": 39.0,
-    "b364": 39.0
+    "b364": 39.0,
+    "b239": 35.0,
+    "b238": 35.0
   },
   "session_date": "2026-09-22",
   "entries_locked": [
@@ -591,7 +676,11 @@
     "379|S362|2026-09-22",
     "90|S406|2026-09-22",
     "914|S412|2026-09-22",
-    "915|S412|2026-09-22"
+    "915|S412|2026-09-22",
+    "238|S401|2026-09-22",
+    "239|S401|2026-09-22",
+    "98|S211|2026-09-22",
+    "99|S211|2026-09-22"
   ],
   "processed_orders": [
     "16f02ac5-34af-407b-922c-3c8f2ffdc206",
@@ -1071,9 +1160,11 @@
     "9d171142-a3ea-42b3-987d-2de290377077",
     "1cbbc569-a98d-458c-b2d8-e4fbd3ae5c81",
     "3f5d49e7-bab9-4f49-bfd6-1b291afb01b7",
-    "20a58a5b-d127-4b8f-9b25-e81fe1b95452"
+    "20a58a5b-d127-4b8f-9b25-e81fe1b95452",
+    "6dbb781e-90b9-4556-8a41-09802275fe83",
+    "c8a1c650-2afd-49e9-9ed9-8110a40e3c1d"
   ],
-  "submitted_today": 17,
+  "submitted_today": 21,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-22"
 }
