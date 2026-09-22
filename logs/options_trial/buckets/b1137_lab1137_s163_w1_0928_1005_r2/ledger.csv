@@ -8,3 +8,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10 13:42:19.281974+00:00,exit,1137,lab1137_s163_w1_0928_1005_r2,S163,dc79895ee2d3,ZS,ZS260911C00180000,1,,0.08,37.0,-78.38,-29.0,reconcile_fill,,-0.01,0.5,-0.5,,,c3f0f592-a5b0-41d2-b0c8-cb91c020782f
 2026-09-16 15:47:11.686536+00:00,exit,1137,lab1137_s163_w1_0928_1005_r2,S163,5e485e4ed6c4,MARA,MARA260918C00012000,1,,0.16,42.0,-61.9,-26.0,stop_loss (-50.1%),,-0.01,0.5,-0.5,,,d6790a85-26a0-4e52-aad0-5f595932405c
 2026-09-18 13:48:18.836897+00:00,entry,1137,lab1137_s163_w1_0928_1005_r2,S163,eb3634ce8e03,NFLX,NFLX260925C00075000,1,0.36,0.35,35.0,,,,-0.01,,0.75,-0.75,0.08450704225352106,gap -5.4%,bd89eada-061d-495a-af28-f0882910f491
+2026-09-22T14:03:20Z,reconcile,1137,lab1137_s163_w1_0928_1005_r2,S163,eb3634ce8e03,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

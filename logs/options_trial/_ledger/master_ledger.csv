@@ -14464,3 +14464,31 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-21T14:00:42Z,reconcile,832,lab0832_s406_w3_1045_1120_r1,S406,b8c8ee94632c,VZ,VZ260925C00048000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-21T14:00:42Z,reconcile,863,lab0863_s408_w4_1120_1135_r2,S408,96caf8a798fa,NFLX,NFLX260925C00079000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-21T14:00:42Z,reconcile,862,lab0862_s408_w4_1120_1135_r1,S408,392891dd86ca,NFLX,NFLX260925C00079000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:20Z,reconcile,405,lab0405_s364_w1_0928_1005_r2,S364,a16f0ecdba1e,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:20Z,reconcile,404,lab0404_s364_w1_0928_1005_r1,S364,3e4c55245da9,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:20Z,reconcile,1137,lab1137_s163_w1_0928_1005_r2,S163,eb3634ce8e03,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:20Z,reconcile,1136,lab1136_s163_w1_0928_1005_r1,S163,2823f3e86206,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:20Z,reconcile,1109,lab1109_s166_w1_0928_1005_r2,S166,2fdf42372b60,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:21Z,reconcile,1108,lab1108_s166_w1_0928_1005_r1,S166,7b1beb3d0e0f,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:21Z,reconcile,391,lab0391_s363_w1_0928_1005_r2,S363,4ba14ae42a55,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:21Z,reconcile,390,lab0390_s363_w1_0928_1005_r1,S363,c788377f0649,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:21Z,reconcile,313,lab0313_s355_w1_0928_1005_r2,S355,984759d4c564,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:21Z,reconcile,312,lab0312_s355_w1_0928_1005_r1,S355,dacd1791e24e,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:22Z,reconcile,305,lab0305_s354_w1_0928_1005_r2,S354,6dc65bc6a15c,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:22Z,reconcile,304,lab0304_s354_w1_0928_1005_r1,S354,6736c54570d8,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:22Z,reconcile,17,lab0017_s202_w1_0928_1005_r2,S202,241d31cb7f28,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:22Z,reconcile,16,lab0016_s202_w1_0928_1005_r1,S202,ad64fe3e82ea,NFLX,NFLX260925C00075000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:22Z,reconcile,829,lab0829_s406_w1_0928_1005_r2,S406,de7e8e3804d0,NFLX,NFLX260925C00076000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:22Z,reconcile,793,lab0793_s399_w1_0928_1005_r2,S399,07072f69c573,NFLX,NFLX260925C00076000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:22Z,reconcile,792,lab0792_s399_w1_0928_1005_r1,S399,e462bb91ddac,NFLX,NFLX260925C00076000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:22Z,reconcile,0,orphan_reconcile,ORPHAN,ff6c86c178cc,NFLX,NFLX260925C00076000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:22Z,reconcile,181,lab0181_s217_w2_1005_1045_r2,S217,c7770ada09ea,BAC,BAC260925C00059000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22T14:03:22Z,reconcile,180,lab0180_s217_w2_1005_1045_r1,S217,09e9090ab983,BAC,BAC260925C00059000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-22 13:35:56.103554+00:00,exit,166,lab0166_s216_w2_1005_1045_r1,S216,8f4e96f740d9,CELH,CELH260925C00029500,1,,0.3,35.0,-14.29,-5.0,stop_loss (-88.6%),,-0.01,0.5,-0.5,,,a30e495a-fd36-49a1-8271-b02bb779d5d0
+2026-09-22 13:35:03.982524+00:00,exit,239,lab0239_s401_w3_1045_1120_r2,S401,d87b5ed435e6,MDT,MDT260925C00094000,1,,0.11,70.0,-84.29,-59.0,stop_loss (-84.1%),,-0.01,0.5,-0.5,,,b990c3f1-9a3d-4e53-9a9c-f84c9abf59be
+2026-09-22 14:04:12.178336+00:00,entry,235,lab0235_s401_w1_0928_1005_r2,S401,cbcc09c099db,AMD,AMD260923C00652500,1,0.54,0.53,53.0,,,,-0.01,,0.75,-0.75,0.09523809523809532,gap -1.45% green,1c9dbcd4-cb02-48a2-ae8a-48d8f219674c
+2026-09-22 14:04:11.894647+00:00,entry,234,lab0234_s401_w1_0928_1005_r1,S401,4b9ff2bd7f49,AMD,AMD260923C00652500,1,0.54,0.53,53.0,,,,-0.01,,0.75,-0.75,0.09523809523809532,gap -1.45% green,e4bab1b8-5bd6-427d-bd7b-cf6df1056f40
+2026-09-22 14:04:11.766835+00:00,entry,95,lab0095_s211_w1_0928_1005_r2,S211,17f7ce963d08,AMD,AMD260923C00652500,1,0.54,0.53,53.0,,,,-0.01,,0.75,-0.75,0.09523809523809532,MA21 crossed above MA50,923226d2-e35f-4670-9b8c-1e571f8ff9be
+2026-09-22 14:04:11.775723+00:00,entry,94,lab0094_s211_w1_0928_1005_r1,S211,874188d01259,AMD,AMD260923C00652500,1,0.54,0.53,53.0,,,,-0.01,,0.75,-0.75,0.09523809523809532,MA21 crossed above MA50,3e521aa8-9b03-4617-9ee8-6ad28a9d749f
+2026-09-22 14:03:29.103642+00:00,exit,0,orphan_reconcile,ORPHAN,4d58aa709fac,AXP,AXP260925C00325000,1,,0.2,38.0,-47.37,-18.0,stop_loss (-47.4%),,-0.01,0.5,-0.4,,,822ae21e-7a93-4a1b-a44e-36601288343f
+2026-09-22 14:03:26.716709+00:00,exit,238,lab0238_s401_w3_1045_1120_r1,S401,b803e19d9d9b,MDT,MDT260925C00094000,1,,0.11,70.0,-84.29,-59.0,stop_loss (-84.1%),,-0.01,0.5,-0.5,,,aeeaca1e-6591-4edf-aa2f-0a1541f9492b
