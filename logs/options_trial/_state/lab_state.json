@@ -162,26 +162,6 @@
       "entry_order_id": "199ac81c-266e-4029-9ab2-6dc5bc76a216"
     },
     {
-      "lot_id": "f3ae02dc102b",
-      "bucket_id": 96,
-      "profile_name": "lab0096_s211_w2_1005_1045_r1",
-      "strategy_id": "S211",
-      "occ_symbol": "AMD260923C00657500",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 47.0,
-      "entry_price": 0.47,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-22T14:07:14.448899+00:00",
-      "entry_order_id": "f03cdd79-723b-43e8-af9d-9ce7a8bc3c72"
-    },
-    {
       "lot_id": "4103e29d2c68",
       "bucket_id": 166,
       "profile_name": "lab0166_s216_w2_1005_1045_r1",
@@ -403,16 +383,6 @@
       "qty": 1,
       "reason": "stop_loss (-100.0%)",
       "submitted": "2026-09-22T11:01:22"
-    },
-    {
-      "order_id": "5d354ac2-a6a5-4162-9918-7461d434211d",
-      "lot_id": "f3ae02dc102b",
-      "bucket_id": 96,
-      "strategy_id": "S211",
-      "occ_symbol": "AMD260923C00657500",
-      "qty": 1,
-      "reason": "stop_loss (-51.1%)",
-      "submitted": "2026-09-22T15:16:31"
     }
   ],
   "bucket_open_premium": {
@@ -424,7 +394,6 @@
     "b321": 55.00000000000001,
     "b320": 55.00000000000001,
     "b196": 38.0,
-    "b96": 47.0,
     "b166": 4.0,
     "b378": 39.0,
     "b365": 39.0,
