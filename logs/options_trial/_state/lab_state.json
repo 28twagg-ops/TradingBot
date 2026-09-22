@@ -540,6 +540,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-22T14:56:24.118381+00:00",
       "entry_order_id": "orphan:MCD260925C00260000"
+    },
+    {
+      "lot_id": "74f43d6280fb",
+      "bucket_id": 101,
+      "profile_name": "lab0101_s211_w4_1120_1135_r2",
+      "strategy_id": "S211",
+      "occ_symbol": "RBLX260925C00053000",
+      "underlying": "RBLX",
+      "qty": 1,
+      "entry_cost": 30.0,
+      "entry_price": 0.3,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-22T15:22:40.281709+00:00",
+      "entry_order_id": "98701883-aaff-469e-8268-cdc0ecae37c7"
+    },
+    {
+      "lot_id": "9661e8cb51a0",
+      "bucket_id": 100,
+      "profile_name": "lab0100_s211_w4_1120_1135_r1",
+      "strategy_id": "S211",
+      "occ_symbol": "RBLX260925C00053000",
+      "underlying": "RBLX",
+      "qty": 1,
+      "entry_cost": 30.0,
+      "entry_price": 0.3,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-22T15:22:40.312524+00:00",
+      "entry_order_id": "c19dddfc-981e-4687-8c6c-e2f02369b2ca"
     }
   ],
   "pending_orders": [
@@ -571,6 +611,38 @@
       "submitted": "2026-09-22",
       "detail": "MA21 crossed above MA50",
       "spread_frac": 0.12048192771084333,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "c37012ef-0d12-4ea9-96e0-f2ad44db5ab4",
+      "bucket_id": 240,
+      "strategy_id": "S401",
+      "occ_symbol": "AMZN260925C00267500",
+      "underlying": "AMZN",
+      "qty": 1,
+      "limit": 0.27,
+      "profile_name": "lab0240_s401_w4_1120_1135_r1",
+      "submitted": "2026-09-22",
+      "detail": "gap -1.29% green",
+      "spread_frac": 0.03636363636363639,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "509dec01-b073-4b15-af75-474736c40b0f",
+      "bucket_id": 241,
+      "strategy_id": "S401",
+      "occ_symbol": "AMZN260925C00267500",
+      "underlying": "AMZN",
+      "qty": 1,
+      "limit": 0.27,
+      "profile_name": "lab0241_s401_w4_1120_1135_r2",
+      "submitted": "2026-09-22",
+      "detail": "gap -1.29% green",
+      "spread_frac": 0.03636363636363639,
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
@@ -635,7 +707,9 @@
     "b239": 35.0,
     "b238": 35.0,
     "b169": 59.0,
-    "b0": 59.0
+    "b0": 59.0,
+    "b101": 30.0,
+    "b100": 30.0
   },
   "session_date": "2026-09-22",
   "entries_locked": [
@@ -661,7 +735,11 @@
     "98|S211|2026-09-22",
     "99|S211|2026-09-22",
     "168|S216|2026-09-22",
-    "169|S216|2026-09-22"
+    "169|S216|2026-09-22",
+    "240|S401|2026-09-22",
+    "241|S401|2026-09-22",
+    "100|S211|2026-09-22",
+    "101|S211|2026-09-22"
   ],
   "processed_orders": [
     "16f02ac5-34af-407b-922c-3c8f2ffdc206",
@@ -1149,9 +1227,11 @@
     "1f45b3c2-3dec-4efc-9f5b-a66103f74a9c",
     "1d3ab243-9d43-47c9-a1b5-56ce18619e3d",
     "b95ebc65-56d0-4061-846b-ed198da39dc8",
-    "65fd984f-02d6-4f0e-a353-50b9356c7445"
+    "65fd984f-02d6-4f0e-a353-50b9356c7445",
+    "98701883-aaff-469e-8268-cdc0ecae37c7",
+    "c19dddfc-981e-4687-8c6c-e2f02369b2ca"
   ],
-  "submitted_today": 23,
+  "submitted_today": 27,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-22"
 }
