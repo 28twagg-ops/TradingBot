@@ -1561,3 +1561,132 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20260922T135150Z
+
+- UTC timestamp: `20260922T135150Z`
+- GitHub run: [#10645](https://github.com/28twagg-ops/TradingBot/actions/runs/35736116988)
+- Run id: `35736116988`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260922T135150Z_live_bot.log`, `logs/action_runs/20260922T135150Z_live_options.log`, `logs/action_runs/20260922T135150Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1367 | 49.2 | -12.5 | +44.2 | $+17,587 |
+| TAINTED | 1882 | 33.3 | -38.9 | +12.7 | $-9,546 |
+| KEEP-only | 751 | 61.9 | +51.4 | +69.9 | $+12,368 |
+| KEEP-only recent | 557 | 60.1 | +53.6 | +81.0 | $+8,146 |
+
+- KEEP strategies (25): S163, S167, S168, S173, S174, S210, S218, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S399, S401, S403, S404, S406, S412
+- KILL strategies (18): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S354, S355, S360, S363, S366, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-22T09:26:16.263253-04:00","date":"2026-09-22","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.9,"phases_s":{"reconcile":0.24},"signals":0,"placed":0,"equity":997314.89,"open_positions":15,"pending_orders":0,"open_lots":50,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"10640","github_run_id":"35733314601","status":"ok","data_quality":{"clean":{"n":1367,"win":49.23,"med":-12.5,"avg":44.2,"pnl":17587.16},"tainted":{"n":1882,"win":33.32,"med":-38.9,"avg":12.69,"pnl":-9546.28},"keep_only":{"n":751,"win":61.92,"med":51.39,"avg":69.85,"pnl":12368.45},"keep_only_recent":{"n":557,"win":60.14,"med":53.57,"avg":80.97,"pnl":8146.0},"keep_strategies":["S163","S167","S168","S173","S174","S210","S218","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S399","S401","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S354","S355","S360","S363","S366","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (121 earlier lines - see full log file)
+|  LIVN     Pullback50      eq     $79.35   47.3   -2.35   50MA bounce (-|
+|  MSM      Pullback50      eq     $121.52  63.4   -1.79   50MA bounce (-|
+|  MTSI     Pullback50      eq     $276.79  55.9   -2.12   50MA bounce (+|
+|  SN       Pullback50      eq     $170.16  44.4   -1.59   50MA bounce (-|
+|  WTRG     Pullback50      eq     $40.51   43.1   -2.89   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AES  Pullback50                                    $33.86|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AMZN  Pullback50                                   $33.86|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AME  Pullback50                                    $33.86|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] BRK-B  Pullback50                                    cap 3|
+|    SKIP [eq] KO  Pullback50                                       cap 3|
+|    SKIP [eq] DLR  Pullback50                                      cap 3|
+|    SKIP [eq] EW  Pullback50                                       cap 3|
+|    SKIP [eq] EQIX  Pullback50                                     cap 3|
+|    SKIP [eq] XOM  Pullback50                                      cap 3|
+|    SKIP [eq] JCI  Pullback50                                      cap 3|
+|    SKIP [eq] KDP  Pullback50                                      cap 3|13:55:55  INFO        place_all_stops: checking 3 positions...
+13:55:55  INFO        STOP-MARKET placed AES  qty=2 (pos=2.2782)  stop=$14.78  id=f773abbb-714b-453c-aa3b-9010190308a0
+13:55:55  INFO        STOP skipped AME: fractional (0.1397 shares) — software exit will handle it
+13:55:55  INFO        STOP skipped AMZN: fractional (0.1315 shares) — software exit will handle it
+13:55:55  INFO        Daily log -> logs/daily/2026-09-22.md
+13:55:55  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [eq] LH  Pullback50                                       cap 3|
+|    SKIP [eq] LRCX  Pullback50                                     cap 3|
+|    SKIP [eq] DGX  Pullback50                                      cap 3|
+|    SKIP [eq] PWR  Pullback50                                      cap 3|
+|    SKIP [eq] SJM  Pullback50                                      cap 3|
+|    SKIP [eq] UAL  Pullback50                                      cap 3|
+|    SKIP [eq] WSM  Pullback50                                      cap 3|
+|    SKIP [eq] ASH  Pullback50                                      cap 3|
+|    SKIP [eq] CLH  Pullback50                                      cap 3|
+|    SKIP [eq] GHC  Pullback50                                      cap 3|
+|    SKIP [eq] KRYS  Pullback50                                     cap 3|
+|    SKIP [eq] LIVN  Pullback50                                     cap 3|
+|    SKIP [eq] MSM  Pullback50                                      cap 3|
+|    SKIP [eq] MTSI  Pullback50                                     cap 3|
+|    SKIP [eq] SN  Pullback50                                       cap 3|
+|    SKIP [eq] WTRG  Pullback50                                     cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  AES                                                  still unconfirmed|
+|  AMZN                                                 still unconfirmed|
+|  AME                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            899|
+|  Signals                                                             27|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $225.74|
+|  Cash                                                           $124.17|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
