@@ -242,26 +242,6 @@
       "entry_order_id": "480ae8c3-f825-40d2-bae1-d851243bdcae"
     },
     {
-      "lot_id": "079d1482d2f0",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S404",
-      "occ_symbol": "NFLX260925C00074000",
-      "underlying": "NFLX",
-      "qty": 1,
-      "entry_cost": 50.0,
-      "entry_price": 0.5,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-18T13:51:16.047199+00:00",
-      "entry_order_id": "c0fba12c-9f38-4c12-adaa-36ba3d9268dd"
-    },
-    {
       "lot_id": "f2a21fd2e0bf",
       "bucket_id": 777,
       "profile_name": "lab0777_s397_w1_0928_1005_r2",
@@ -683,16 +663,6 @@
       "qty": 1,
       "reason": "stop_loss (-100.0%)",
       "submitted": "2026-09-22T10:16:29"
-    },
-    {
-      "order_id": "20a58a5b-d127-4b8f-9b25-e81fe1b95452",
-      "lot_id": "079d1482d2f0",
-      "bucket_id": 90,
-      "strategy_id": "S404",
-      "occ_symbol": "NFLX260925C00074000",
-      "qty": 1,
-      "reason": "stop_loss (-43.0%)",
-      "submitted": "2026-09-22T10:26:25"
     }
   ],
   "bucket_open_premium": {
@@ -708,7 +678,6 @@
     "b320": 55.00000000000001,
     "b801": 50.0,
     "b800": 50.0,
-    "b90": 89.0,
     "b777": 50.0,
     "b776": 50.0,
     "b196": 38.0,
@@ -724,6 +693,7 @@
     "b166": 4.0,
     "b915": 39.0,
     "b914": 39.0,
+    "b90": 39.0,
     "b379": 39.0,
     "b378": 39.0,
     "b365": 39.0,
@@ -1226,7 +1196,8 @@
     "b27f6716-19d5-4a4f-af29-f9bd54934089",
     "9d171142-a3ea-42b3-987d-2de290377077",
     "1cbbc569-a98d-458c-b2d8-e4fbd3ae5c81",
-    "3f5d49e7-bab9-4f49-bfd6-1b291afb01b7"
+    "3f5d49e7-bab9-4f49-bfd6-1b291afb01b7",
+    "20a58a5b-d127-4b8f-9b25-e81fe1b95452"
   ],
   "submitted_today": 17,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

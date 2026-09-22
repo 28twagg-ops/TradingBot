@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-22
 
-_Generated 2026-09-22T10:27:14.959553_
+_Generated 2026-09-22T10:32:24.987111_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-22T10:27:14.959553_
 
 ## Attribution health
 
-- Total exits: **3259**
+- Total exits: **3260**
 - Orphan exits (b0/orphan_reconcile): **400**
 - Orphan rate: **12.3%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -30,9 +30,9 @@ _Generated 2026-09-22T10:27:14.959553_
 | S397 (GapDown_ITM1) | 3d | watch | 37 | 73.0 | +61.90 | -68.28 | -53.97 | +115.78 | 53 | 2 | 0 | $+952.00 | 21.6% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 51 | 74.5 | +57.14 | -58.57 | -10.87 | +600.00 | 53 | 2 | 4 | $+1,620.00 | 25.5% | fat left tail (p10 < -45%) |
 | S357 (GapDown_21DTE) | 21d | watch | 25 | 80.0 | +57.14 | -74.18 | +47.06 | +78.22 | 53 | 2 | 0 | $+532.00 | 32.0% | fat left tail (p10 < -45%) |
-| S404 (GapDown_OTM2) | 3d | watch | 64 | 64.1 | +51.58 | -87.43 | -41.42 | +110.05 | 53 | 3 | 0 | $+1,120.00 | 15.6% | fat left tail (p10 < -45%) |
 | S365 (RubberBand_14DTE) | 14d | watch | 26 | 57.7 | +51.00 | -63.48 | -50.17 | +76.38 | 53 | 1 | 2 | $+155.00 | 42.3% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 55 | 67.3 | +50.88 | -62.06 | -48.16 | +185.33 | 53 | 3 | 1 | $+1,008.00 | 21.8% | fat left tail (p10 < -45%) |
+| S404 (GapDown_OTM2) | 3d | watch | 65 | 63.1 | +50.77 | -86.02 | -41.89 | +109.55 | 53 | 3 | 1 | $+1,098.00 | 15.4% | fat left tail (p10 < -45%) |
 | S353 (GapDown_3DTE) | 3d | watch | 37 | 51.4 | +48.98 | -81.60 | -69.70 | +313.33 | 53 | 0 | 4 | $+247.00 | 27.0% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 90 | 53.3 | +36.36 | -67.15 | -48.96 | +150.35 | 57 | 7 | 1 | $+1,133.00 | 33.3% | fat left tail (p10 < -45%) |
 | S356 (GapDown_14DTE) | 14d | watch | 27 | 51.9 | +36.00 | -51.16 | -35.65 | +66.60 | 53 | 2 | 0 | $+123.00 | 37.0% | fat left tail (p10 < -45%) |
@@ -313,7 +313,7 @@ _Pipeline evaluation as of 2026-09-22. Auto-kill thresholds: median<-25% at n>=1
 | S401 | Any_Gap_Down_Small | 119 | +6.94% | 50% | INSUFFICIENT | 53 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
 | S403 | Any_MA50_Touch | 55 | +50.88% | 67% | INSUFFICIENT | 53 |
-| S404 | GapDown_OTM2 | 64 | +51.58% | 64% | INSUFFICIENT | 53 |
+| S404 | GapDown_OTM2 | 65 | +50.77% | 63% | INSUFFICIENT | 53 |
 | S405 | GapDown_OTM3 | 56 | -42.86% | 34% | INSUFFICIENT | 53 |
 | S406 | RubberBand_ITM3 | 89 | +66.67% | 69% | INSUFFICIENT | 53 |
 | S407 | RubberBand_ITM2 | 38 | -47.73% | 29% | INSUFFICIENT | 53 |
@@ -343,8 +343,8 @@ _Pipeline evaluation as of 2026-09-22. Auto-kill thresholds: median<-25% at n>=1
 | S406 | 89 | +66.67% | 69% | Tyler review |
 | S397 | 37 | +61.90% | 73% | Tyler review |
 | S362 | 51 | +57.14% | 75% | Tyler review |
-| S404 | 64 | +51.58% | 64% | Tyler review |
 | S403 | 55 | +50.88% | 67% | Tyler review |
+| S404 | 65 | +50.77% | 63% | Tyler review |
 | S353 | 37 | +48.98% | 51% | Tyler review |
 | S218 | 90 | +36.36% | 53% | Tyler review |
 | S361 | 55 | +17.78% | 53% | Tyler review |
