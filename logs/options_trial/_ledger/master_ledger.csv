@@ -14547,9 +14547,8 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-22T17:51:17Z,reconcile,419,lab0419_s365_w1_0928_1005_r2,S365,233b9250a511,NFLX,NFLX261002C00077000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-22 19:06:48.549468+00:00,exit,97,lab0097_s211_w2_1005_1045_r2,S211,66635b7db512,AMD,AMD260923C00657500,1,,0.23,47.0,-51.06,-24.0,stop_loss (-53.2%),,-0.01,0.5,-0.5,,,cc887ffa-e6f3-4767-b140-ace32b720489
 2026-09-22T19:21:15Z,reconcile,96,lab0096_s211_w2_1005_1045_r1,S211,f3ae02dc102b,AMD,AMD260923C00657500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-23T13:40:29Z,reconcile,196,lab0196_s218_w3_1045_1120_r1,S218,e327b9911a87,AXP,AXP260925C00325000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-23T13:40:29Z,reconcile,169,lab0169_s216_w3_1045_1120_r2,S216,90cfd76cea10,MCD,MCD260925C00260000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-23T13:40:29Z,reconcile,0,orphan_reconcile,ORPHAN,70d8f5d2698f,MCD,MCD260925C00260000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-23T13:40:29Z,reconcile,241,lab0241_s401_w4_1120_1135_r2,S401,16297965eb94,AMZN,AMZN260925C00267500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-23T13:40:29Z,reconcile,240,lab0240_s401_w4_1120_1135_r1,S401,d0418d8fbb94,AMZN,AMZN260925C00267500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-23 13:34:59.844409+00:00,exit,378,lab0378_s362_w2_1005_1045_r1,S362,72281b3df81b,LLY,LLY260925C01250000,1,,0.75,39.0,92.31,36.0,reconcile_fill,,-0.01,0.5,-0.5,,,ba1a67bb-25ef-4d8f-98dc-f8765dacbab4
+2026-09-23T13:34:54Z,reconcile,196,lab0196_s218_w3_1045_1120_r1,S218,e327b9911a87,AXP,AXP260925C00325000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T13:34:54Z,reconcile,169,lab0169_s216_w3_1045_1120_r2,S216,90cfd76cea10,MCD,MCD260925C00260000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T13:34:54Z,reconcile,0,orphan_reconcile,ORPHAN,70d8f5d2698f,MCD,MCD260925C00260000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T13:34:54Z,reconcile,241,lab0241_s401_w4_1120_1135_r2,S401,16297965eb94,AMZN,AMZN260925C00267500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T13:34:54Z,reconcile,240,lab0240_s401_w4_1120_1135_r1,S401,d0418d8fbb94,AMZN,AMZN260925C00267500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
