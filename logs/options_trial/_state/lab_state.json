@@ -442,15 +442,15 @@
       "entry_order_id": "a82a54f0-e908-4f4a-80a9-f82aeb7a22f9"
     },
     {
-      "lot_id": "739389bf9afe",
-      "bucket_id": 831,
-      "profile_name": "lab0831_s406_w2_1005_1045_r2",
-      "strategy_id": "S406",
-      "occ_symbol": "COIN260925C00230000",
-      "underlying": "COIN",
+      "lot_id": "2c3d25a241c2",
+      "bucket_id": 83,
+      "profile_name": "lab0083_s210_w2_1005_1045_r2",
+      "strategy_id": "S210",
+      "occ_symbol": "PLTR260925C00200000",
+      "underlying": "PLTR",
       "qty": 1,
-      "entry_cost": 20.0,
-      "entry_price": 0.2,
+      "entry_cost": 40.0,
+      "entry_price": 0.4,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
@@ -458,19 +458,19 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-09-23T14:11:23.676004+00:00",
-      "entry_order_id": "16f205a9-5d4e-43ca-87fe-130dddacfc6f"
+      "entry_date": "2026-09-23T14:17:03.439029+00:00",
+      "entry_order_id": "7186d6f2-2062-45e2-9b5b-2ba7d00f31d3"
     },
     {
-      "lot_id": "63746966ca5e",
-      "bucket_id": 830,
-      "profile_name": "lab0830_s406_w2_1005_1045_r1",
-      "strategy_id": "S406",
-      "occ_symbol": "COIN260925C00230000",
-      "underlying": "COIN",
+      "lot_id": "01df06e6156e",
+      "bucket_id": 82,
+      "profile_name": "lab0082_s210_w2_1005_1045_r1",
+      "strategy_id": "S210",
+      "occ_symbol": "PLTR260925C00200000",
+      "underlying": "PLTR",
       "qty": 1,
-      "entry_cost": 20.0,
-      "entry_price": 0.2,
+      "entry_cost": 40.0,
+      "entry_price": 0.4,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
@@ -478,8 +478,8 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-09-23T14:11:23.716551+00:00",
-      "entry_order_id": "8039bc81-84e2-4129-aa73-a1963ff648ec"
+      "entry_date": "2026-09-23T14:17:03.463114+00:00",
+      "entry_order_id": "5d5a14a5-09ae-488f-a1ff-3e12a79b4156"
     }
   ],
   "pending_orders": [
@@ -514,38 +514,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
-    },
-    {
-      "order_id": "5d5a14a5-09ae-488f-a1ff-3e12a79b4156",
-      "bucket_id": 82,
-      "strategy_id": "S210",
-      "occ_symbol": "PLTR260925C00200000",
-      "underlying": "PLTR",
-      "qty": 1,
-      "limit": 0.41,
-      "profile_name": "lab0082_s210_w2_1005_1045_r1",
-      "submitted": "2026-09-23",
-      "detail": "MA8 178.50 crossed above MA21",
-      "spread_frac": 0.024096385542168697,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "7186d6f2-2062-45e2-9b5b-2ba7d00f31d3",
-      "bucket_id": 83,
-      "strategy_id": "S210",
-      "occ_symbol": "PLTR260925C00200000",
-      "underlying": "PLTR",
-      "qty": 1,
-      "limit": 0.41,
-      "profile_name": "lab0083_s210_w2_1005_1045_r2",
-      "submitted": "2026-09-23",
-      "detail": "MA8 178.50 crossed above MA21",
-      "spread_frac": 0.024096385542168697,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
     }
   ],
   "pending_exits": [],
@@ -571,8 +539,8 @@
     "b900": 64.0,
     "b829": 15.0,
     "b828": 15.0,
-    "b831": 20.0,
-    "b830": 20.0
+    "b83": 40.0,
+    "b82": 40.0
   },
   "session_date": "2026-09-23",
   "entries_locked": [
@@ -1020,7 +988,9 @@
     "75fc43d7-fe94-4b06-ae23-7acc1f6bd194",
     "a82a54f0-e908-4f4a-80a9-f82aeb7a22f9",
     "16f205a9-5d4e-43ca-87fe-130dddacfc6f",
-    "8039bc81-84e2-4129-aa73-a1963ff648ec"
+    "8039bc81-84e2-4129-aa73-a1963ff648ec",
+    "7186d6f2-2062-45e2-9b5b-2ba7d00f31d3",
+    "5d5a14a5-09ae-488f-a1ff-3e12a79b4156"
   ],
   "submitted_today": 24,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
