@@ -14547,9 +14547,26 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-22T17:51:17Z,reconcile,419,lab0419_s365_w1_0928_1005_r2,S365,233b9250a511,NFLX,NFLX261002C00077000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-22 19:06:48.549468+00:00,exit,97,lab0097_s211_w2_1005_1045_r2,S211,66635b7db512,AMD,AMD260923C00657500,1,,0.23,47.0,-51.06,-24.0,stop_loss (-53.2%),,-0.01,0.5,-0.5,,,cc887ffa-e6f3-4767-b140-ace32b720489
 2026-09-22T19:21:15Z,reconcile,96,lab0096_s211_w2_1005_1045_r1,S211,f3ae02dc102b,AMD,AMD260923C00657500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-23T13:40:29Z,reconcile,196,lab0196_s218_w3_1045_1120_r1,S218,e327b9911a87,AXP,AXP260925C00325000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-23T13:40:29Z,reconcile,169,lab0169_s216_w3_1045_1120_r2,S216,90cfd76cea10,MCD,MCD260925C00260000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-23T13:40:29Z,reconcile,0,orphan_reconcile,ORPHAN,70d8f5d2698f,MCD,MCD260925C00260000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-23T13:40:29Z,reconcile,241,lab0241_s401_w4_1120_1135_r2,S401,16297965eb94,AMZN,AMZN260925C00267500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-23T13:40:29Z,reconcile,240,lab0240_s401_w4_1120_1135_r1,S401,d0418d8fbb94,AMZN,AMZN260925C00267500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-23 13:34:59.844409+00:00,exit,378,lab0378_s362_w2_1005_1045_r1,S362,72281b3df81b,LLY,LLY260925C01250000,1,,0.75,39.0,92.31,36.0,reconcile_fill,,-0.01,0.5,-0.5,,,ba1a67bb-25ef-4d8f-98dc-f8765dacbab4
+2026-09-23T13:34:54Z,reconcile,196,lab0196_s218_w3_1045_1120_r1,S218,e327b9911a87,AXP,AXP260925C00325000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T13:34:54Z,reconcile,169,lab0169_s216_w3_1045_1120_r2,S216,90cfd76cea10,MCD,MCD260925C00260000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T13:34:54Z,reconcile,0,orphan_reconcile,ORPHAN,70d8f5d2698f,MCD,MCD260925C00260000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T13:34:54Z,reconcile,241,lab0241_s401_w4_1120_1135_r2,S401,16297965eb94,AMZN,AMZN260925C00267500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T13:34:54Z,reconcile,240,lab0240_s401_w4_1120_1135_r1,S401,d0418d8fbb94,AMZN,AMZN260925C00267500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T14:02:21Z,reconcile,329,lab0329_s357_w1_0928_1005_r2,S357,45f7639a8800,NFLX,NFLX261009C00078000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T14:02:21Z,reconcile,328,lab0328_s357_w1_0928_1005_r1,S357,bc87eec33d45,NFLX,NFLX261009C00078000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T14:02:21Z,reconcile,321,lab0321_s356_w1_0928_1005_r2,S356,b88dccac15cf,NFLX,NFLX261002C00076000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T14:02:21Z,reconcile,320,lab0320_s356_w1_0928_1005_r1,S356,9f149c497b99,NFLX,NFLX261002C00076000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T14:02:21Z,reconcile,378,lab0378_s362_w2_1005_1045_r1,S362,72281b3df81b,LLY,LLY260925C01250000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T14:02:21Z,reconcile,365,lab0365_s361_w2_1005_1045_r2,S361,7711c433c700,LLY,LLY260925C01250000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T14:02:21Z,reconcile,364,lab0364_s361_w2_1005_1045_r1,S361,59fabacfaf7f,LLY,LLY260925C01250000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23 13:43:03.977214+00:00,exit,101,lab0101_s211_w4_1120_1135_r2,S211,74f43d6280fb,RBLX,RBLX260925C00053000,1,,0.03,30.0,-90.0,-27.0,stop_loss (-93.3%),,-0.01,0.5,-0.5,,,93a5d758-3aff-4428-96c7-28372886dee8
+2026-09-23 14:03:28.296912+00:00,entry,263,lab0263_s403_w1_0928_1005_r2,S403,646dc646e006,XOM,XOM260925C00165000,1,0.54,0.53,53.0,,,,-0.01,,0.5,-0.5,0.22222222222222232,touch MA50 green,f6695dab-61ab-460d-955b-2c18df277e76
+2026-09-23 14:03:28.021794+00:00,entry,262,lab0262_s403_w1_0928_1005_r1,S403,f11790081dd1,XOM,XOM260925C00165000,1,0.54,0.53,53.0,,,,-0.01,,0.5,-0.5,0.22222222222222232,touch MA50 green,d457254a-b049-455f-9ca2-229f50e062a6
+2026-09-23 14:03:27.724811+00:00,entry,179,lab0179_s217_w1_0928_1005_r2,S217,4e81a2586a46,BAC,BAC260925C00057000,1,0.22,0.21,21.0,,,,-0.01,,0.5,-0.5,0.1395348837209302,RSI=15.7 green,4a3fd775-e70c-4237-b560-aa3443641ad8
+2026-09-23 14:03:27.696583+00:00,entry,178,lab0178_s217_w1_0928_1005_r1,S217,3f7bf4716326,BAC,BAC260925C00057000,1,0.22,0.21,21.0,,,,-0.01,,0.5,-0.5,0.1395348837209302,RSI=15.7 green,c3530800-49ef-4db1-83e4-964ee75ed614
+2026-09-23 14:03:27.319424+00:00,entry,193,lab0193_s218_w1_0928_1005_r2,S218,68854f455ee7,JPM,JPM260925C00347500,1,0.51,0.5,50.0,,,,-0.01,,0.5,-0.5,0.1666666666666667,low=336.98 BB_lower=341.49 touch+green,3fa1e4e2-4ca4-4a9c-8cb9-5da51bb944ab
+2026-09-23 14:03:27.190696+00:00,entry,192,lab0192_s218_w1_0928_1005_r1,S218,0ed7051bc6da,JPM,JPM260925C00347500,1,0.51,0.5,50.0,,,,-0.01,,0.5,-0.5,0.1666666666666667,low=336.98 BB_lower=341.49 touch+green,fc594438-b5ea-4aa7-a865-c3d5f27346a7
+2026-09-23 14:03:26.987967+00:00,entry,90,live_1to1,S218,9cc80777c568,JPM,JPM260925C00347500,1,0.51,0.5,50.0,,,,-0.01,,0.5,-0.4,0.1666666666666667,low=336.98 BB_lower=341.49 touch+green,864fb3fb-9bbd-4fa7-895c-69033f58a0c7
+2026-09-23 14:03:24.561855+00:00,entry,81,lab0081_s210_w1_0928_1005_r2,S210,227035a7574f,PLTR,PLTR260925C00202500,1,0.36,0.35,35.0,,,,-0.01,,0.75,-0.75,0.17647058823529413,MA8 178.50 crossed above MA21,766c5a49-c68e-47d9-9ccd-43db50a81412
+2026-09-23 14:03:24.434407+00:00,entry,80,lab0080_s210_w1_0928_1005_r1,S210,87c908e7e4e7,PLTR,PLTR260925C00202500,1,0.36,0.35,35.0,,,,-0.01,,0.75,-0.75,0.17647058823529413,MA8 178.50 crossed above MA21,fd0dfcb5-60da-4c70-9427-35f55c28f45f
+2026-09-23 14:02:25.490800+00:00,exit,100,lab0100_s211_w4_1120_1135_r1,S211,9661e8cb51a0,RBLX,RBLX260925C00053000,1,,0.03,30.0,-90.0,-27.0,stop_loss (-90.0%),,-0.01,0.5,-0.5,,,ba2dd092-5024-4b5f-9d30-27450a4e8489
