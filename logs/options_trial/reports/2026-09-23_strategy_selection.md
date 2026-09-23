@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-23
 
-_Generated 2026-09-23T10:17:42.507570_
+_Generated 2026-09-23T10:22:29.235035_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-23T10:17:42.507570_
 
 ## Attribution health
 
-- Total exits: **3274**
+- Total exits: **3277**
 - Orphan exits (b0/orphan_reconcile): **400**
 - Orphan rate: **12.2%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -25,10 +25,10 @@ _Generated 2026-09-23T10:17:42.507570_
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 20 | 60.0 | +78.02 | -74.52 | -66.07 | +249.27 | 64 | 0 | 0 | $+435.00 | 60.0% | fat left tail (p10 < -45%) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 8 | 100.0 | +75.23 | +63.34 | +67.08 | +194.50 | 64 | 0 | 0 | $+436.00 | 62.5% | building sample (8-19 exits) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 21 | 61.9 | +67.21 | -74.47 | -64.29 | +128.12 | 64 | 0 | 0 | $+319.00 | 52.4% | fat left tail (p10 < -45%) |
-| S406 (RubberBand_ITM3) | 3d | watch | 90 | 68.9 | +66.67 | -56.26 | -36.69 | +919.44 | 54 | 6 | 1 | $+3,518.00 | 16.7% | fat left tail (p10 < -45%) |
 | S410 (RubberBand_OTM1) | 3d | watch | 9 | 66.7 | +65.28 | -70.41 | -48.44 | +101.53 | 48 | 0 | 0 | $+181.00 | 88.9% | building sample (8-19 exits) |
+| S406 (RubberBand_ITM3) | 3d | watch | 92 | 67.4 | +65.16 | -55.96 | -41.69 | +908.61 | 54 | 6 | 3 | $+3,481.00 | 16.3% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 37 | 73.0 | +61.90 | -68.28 | -53.97 | +115.78 | 54 | 0 | 0 | $+952.00 | 21.6% | fat left tail (p10 < -45%) |
-| S362 (RubberBand_3DTE) | 3d | watch | 52 | 75.0 | +58.80 | -58.50 | -1.08 | +572.38 | 54 | 2 | 1 | $+1,647.00 | 25.0% | fat left tail (p10 < -45%) |
+| S362 (RubberBand_3DTE) | 3d | watch | 53 | 75.5 | +60.47 | -58.43 | +8.70 | +544.76 | 54 | 4 | 2 | $+1,679.00 | 24.5% | fat left tail (p10 < -45%) |
 | S357 (GapDown_21DTE) | 21d | watch | 25 | 80.0 | +57.14 | -74.18 | +47.06 | +78.22 | 54 | 0 | 0 | $+532.00 | 32.0% | fat left tail (p10 < -45%) |
 | S365 (RubberBand_14DTE) | 14d | watch | 26 | 57.7 | +51.00 | -63.48 | -50.17 | +76.38 | 54 | 0 | 0 | $+155.00 | 42.3% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 55 | 67.3 | +50.88 | -62.06 | -48.16 | +185.33 | 54 | 2 | 0 | $+1,008.00 | 21.8% | fat left tail (p10 < -45%) |
@@ -36,7 +36,7 @@ _Generated 2026-09-23T10:17:42.507570_
 | S353 (GapDown_3DTE) | 3d | watch | 37 | 51.4 | +48.98 | -81.60 | -69.70 | +313.33 | 54 | 0 | 0 | $+247.00 | 27.0% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 90 | 53.3 | +36.36 | -67.15 | -48.96 | +150.35 | 58 | 3 | 0 | $+1,133.00 | 33.3% | fat left tail (p10 < -45%) |
 | S356 (GapDown_14DTE) | 14d | watch | 27 | 51.9 | +36.00 | -51.16 | -35.65 | +66.60 | 54 | 0 | 0 | $+123.00 | 37.0% | fat left tail (p10 < -45%) |
-| S361 (RubberBand_2DTE) | 2d | watch | 55 | 52.7 | +17.78 | -67.78 | -50.00 | +293.33 | 54 | 2 | 0 | $+317.00 | 23.6% | fat left tail (p10 < -45%) |
+| S361 (RubberBand_2DTE) | 2d | watch | 55 | 52.7 | +17.78 | -67.78 | -50.00 | +293.33 | 54 | 4 | 0 | $+317.00 | 23.6% | fat left tail (p10 < -45%) |
 | S350 (GapDown_0DTE) | 0d | watch | 45 | 53.3 | +15.00 | -65.10 | -51.35 | +232.57 | 54 | 0 | 0 | $+714.00 | 28.9% | fat left tail (p10 < -45%) |
 | S411 (RubberBand_OTM2) | 3d | watch | 46 | 52.2 | +5.20 | -57.12 | -51.60 | +60.56 | 51 | 2 | 0 | $-160.00 | 19.6% | fat left tail (p10 < -45%) |
 | S398 (GapDown_ATM) | 3d | watch | 57 | 50.9 | +3.33 | -68.29 | -54.29 | +176.92 | 54 | 0 | 0 | $+789.00 | 28.1% | fat left tail (p10 < -45%) |
@@ -101,7 +101,7 @@ _Generated 2026-09-23T10:17:42.507570_
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 12 | 0.0 | -56.77 | -73.59 | -65.84 | -38.58 | 57 | 0 | 0 | $-208.00 | 33.3% | early sample with non-positive median |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 6 | 0.0 | -61.46 | -82.78 | -69.36 | -50.75 | 56 | 0 | 0 | $-210.00 | 83.3% | insufficient sample (<8 exits) |
 | S352 (GapDown_2DTE) | 2d | drop | 50 | 50.0 | -2.30 | -71.79 | -51.65 | +338.46 | 54 | 0 | 0 | $+237.00 | 22.0% | non-positive median return |
-| S412 (RubberBand_OTM3) | 3d | drop | 58 | 48.3 | -2.90 | -52.91 | -47.59 | +164.14 | 54 | 2 | 2 | $+323.00 | 20.7% | non-positive median return |
+| S412 (RubberBand_OTM3) | 3d | drop | 58 | 48.3 | -2.90 | -52.91 | -47.59 | +164.14 | 54 | 4 | 2 | $+323.00 | 20.7% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 59 | 47.5 | -5.88 | -86.10 | -69.32 | +110.27 | 54 | 0 | 0 | $-89.00 | 42.4% | non-positive median return |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 84 | 47.6 | -6.25 | -74.98 | -51.22 | +71.78 | 58 | 4 | 0 | $-121.00 | 17.9% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 57 | 43.9 | -6.25 | -75.22 | -58.70 | +573.13 | 51 | 0 | 0 | $+1,105.00 | 17.5% | non-positive median return |
@@ -112,7 +112,7 @@ _Generated 2026-09-23T10:17:42.507570_
 | S355 (GapDown_7DTE) | 7d | drop | 67 | 44.8 | -37.50 | -79.35 | -64.15 | +158.18 | 54 | 0 | 0 | $+351.00 | 37.3% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 56 | 33.9 | -42.86 | -83.93 | -65.20 | +103.47 | 54 | 0 | 0 | $-118.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 52 | 25.0 | -43.65 | -89.11 | -54.73 | +105.25 | 58 | 6 | 4 | $-310.00 | 28.8% | non-positive median return |
-| S359 (RubberBand_0DTE) | 0d | drop | 35 | 34.3 | -44.44 | -71.43 | -67.55 | +248.09 | 51 | 0 | 0 | $-123.00 | 28.6% | non-positive median return |
+| S359 (RubberBand_0DTE) | 0d | drop | 35 | 34.3 | -44.44 | -71.43 | -67.55 | +248.09 | 51 | 2 | 0 | $-123.00 | 28.6% | non-positive median return |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 61 | 39.3 | -46.15 | -77.50 | -55.56 | +129.41 | 58 | 2 | 0 | $+423.00 | 49.2% | non-positive median return |
 | S399 (GapDown_OTM1) | 3d | drop | 70 | 44.3 | -46.41 | -83.55 | -66.67 | +153.00 | 54 | 0 | 0 | $+27.00 | 22.9% | non-positive median return |
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 58 | 0 | 0 | $-822.00 | 43.2% | manually paused — excluded from new entries & reflected P&L |
@@ -271,7 +271,7 @@ _Pipeline evaluation as of 2026-09-23. Auto-kill thresholds: median<-25% at n>=1
 | S359 | RubberBand_0DTE | 35 | -44.44% | 34% | INSUFFICIENT | 51 |
 | S360 | RubberBand_1DTE | 49 | -56.41% | 10% | INSUFFICIENT | 54 |
 | S361 | RubberBand_2DTE | 55 | +17.78% | 53% | INSUFFICIENT | 54 |
-| S362 | RubberBand_3DTE | 52 | +58.80% | 75% | INSUFFICIENT | 54 |
+| S362 | RubberBand_3DTE | 53 | +60.47% | 75% | INSUFFICIENT | 54 |
 | S363 | RubberBand_5DTE | 38 | -73.66% | 34% | INSUFFICIENT | 51 |
 | S364 | RubberBand_7DTE | 59 | -5.88% | 47% | INSUFFICIENT | 54 |
 | S365 | RubberBand_14DTE | 26 | +51.00% | 58% | INSUFFICIENT | 54 |
@@ -315,7 +315,7 @@ _Pipeline evaluation as of 2026-09-23. Auto-kill thresholds: median<-25% at n>=1
 | S403 | Any_MA50_Touch | 55 | +50.88% | 67% | INSUFFICIENT | 54 |
 | S404 | GapDown_OTM2 | 65 | +50.77% | 63% | INSUFFICIENT | 54 |
 | S405 | GapDown_OTM3 | 56 | -42.86% | 34% | INSUFFICIENT | 54 |
-| S406 | RubberBand_ITM3 | 90 | +66.67% | 69% | INSUFFICIENT | 54 |
+| S406 | RubberBand_ITM3 | 92 | +65.16% | 67% | INSUFFICIENT | 54 |
 | S407 | RubberBand_ITM2 | 38 | -47.73% | 29% | INSUFFICIENT | 54 |
 | S408 | RubberBand_ITM1 | 57 | -6.25% | 44% | INSUFFICIENT | 51 |
 | S409 | RubberBand_ATM | 0 | — | — | NEW | 0 |
@@ -340,9 +340,9 @@ _Pipeline evaluation as of 2026-09-23. Auto-kill thresholds: median<-25% at n>=1
 
 | Strategy | n | Median% | WR% | Recommendation |
 |----------|---|---------|-----|----------------|
-| S406 | 90 | +66.67% | 69% | Tyler review |
+| S406 | 92 | +65.16% | 67% | Tyler review |
 | S397 | 37 | +61.90% | 73% | Tyler review |
-| S362 | 52 | +58.80% | 75% | Tyler review |
+| S362 | 53 | +60.47% | 75% | Tyler review |
 | S403 | 55 | +50.88% | 67% | Tyler review |
 | S404 | 65 | +50.77% | 63% | Tyler review |
 | S353 | 37 | +48.98% | 51% | Tyler review |
