@@ -1,0 +1,17 @@
+13:48:53  INFO      Mode: morning_scan
+13:48:53  INFO        [positions] 1/1 (1 valid)
+13:48:54  INFO        SELL MARKET [urgent] CCL closed
+13:48:56  INFO        TX logged: SELL CCL  P&L -3.19%
+13:48:56  INFO        Universe cache hit: 901 tickers (tickers_2026-09-23.json)
+13:48:57  INFO        [universe] 40/901 (40 valid)
+13:48:58  INFO        [universe] 80/901 (80 valid)
+13:49:00  INFO        [universe] 120/901 (120 valid)
+13:49:01  INFO        [universe] 160/901 (160 valid)
+13:49:02  INFO        [universe] 200/901 (199 valid)
+13:49:10  INFO        [universe] 240/901 (238 valid)
+13:49:23  INFO        [universe] 280/901 (278 valid)
+13:49:33  INFO        [universe] 320/901 (318 valid)
+13:49:46  INFO        [universe] 360/901 (358 valid)
+13:49:59  INFO        [universe] 400/901 (398 valid)
+13:50:09  INFO        [universe] 440/901 (438 valid)
+13:50:22  INFO        [universe] 480/901 (478 valid)
