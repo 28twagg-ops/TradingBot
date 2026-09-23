@@ -14597,3 +14597,14 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-23 14:21:23.705504+00:00,exit,829,lab0829_s406_w1_0928_1005_r2,S406,d4295b74d884,COIN,COIN260925C00235000,1,,0.07,15.0,-53.33,-8.0,stop_loss (-53.3%),,-0.01,0.5,-0.5,,,7434fba9-1962-46d5-ab10-fd92840f33ea
 2026-09-23 13:34:59.844409+00:00,exit,378,lab0378_s362_w2_1005_1045_r1,S362,69867ece9a2a,COIN,COIN260925C00220000,1,,0.75,43.0,74.42,32.0,reconcile_fill,,-0.01,0.5,-0.5,,,ba1a67bb-25ef-4d8f-98dc-f8765dacbab4
 2026-09-23 14:26:22.489866+00:00,exit,193,lab0193_s218_w1_0928_1005_r2,S218,68854f455ee7,JPM,JPM260925C00347500,1,,0.76,50.0,52.0,26.0,take_profit (+52.0%),,-0.01,0.5,-0.5,,,83a86bb5-8e0f-4f01-b58a-dc97803b4809
+2026-09-23T14:31:24Z,reconcile,901,lab0901_s411_w2_1005_1045_r2,S411,d38c2cbf395d,COIN,COIN260925C00220000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T14:31:24Z,reconcile,900,lab0900_s411_w2_1005_1045_r1,S411,12b64ac263d8,COIN,COIN260925C00220000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T14:31:24Z,reconcile,379,lab0379_s362_w2_1005_1045_r2,S362,e0eee164766d,COIN,COIN260925C00220000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T14:31:24Z,reconcile,365,lab0365_s361_w2_1005_1045_r2,S361,71b537ac2c1c,COIN,COIN260925C00220000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T14:31:24Z,reconcile,364,lab0364_s361_w2_1005_1045_r1,S361,3e09e22d4309,COIN,COIN260925C00220000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T14:31:24Z,reconcile,347,lab0347_s359_w2_1005_1045_r2,S359,6ffa028213d4,COIN,COIN260925C00220000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T14:31:24Z,reconcile,346,lab0346_s359_w2_1005_1045_r1,S359,98d38d42862d,COIN,COIN260925C00220000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T14:31:24Z,reconcile,0,orphan_reconcile,ORPHAN,46536d715200,COIN,COIN260925C00220000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23 14:32:12.776784+00:00,entry,859,lab0859_s408_w2_1005_1045_r2,S408,fd45af483e0a,COIN,COIN260925C00230000,1,0.16,0.15,15.0,,,,-0.01,,0.75,-0.75,0.19354838709677416,RB gap -1.5% reclaim,3f50fcb3-8872-429a-94fb-3baedef9d507
+2026-09-23 14:32:12.647724+00:00,entry,858,lab0858_s408_w2_1005_1045_r1,S408,753d233a4301,COIN,COIN260925C00230000,1,0.16,0.15,15.0,,,,-0.01,,0.75,-0.75,0.19354838709677416,RB gap -1.5% reclaim,a1e8c250-51dc-4db3-b3a2-ec1194c984c3
+2026-09-23 14:31:29.949049+00:00,exit,192,lab0192_s218_w1_0928_1005_r1,S218,0ed7051bc6da,JPM,JPM260925C00347500,1,,0.78,50.0,56.0,28.0,take_profit (+58.0%),,-0.01,0.5,-0.5,,,b8bbc26e-be84-44a0-95e1-42c2ac468d3c
