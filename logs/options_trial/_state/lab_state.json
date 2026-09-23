@@ -360,46 +360,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-23T15:17:25.644912+00:00",
       "entry_order_id": "be6977e5-1b4e-4393-8441-c5e76147718c"
-    },
-    {
-      "lot_id": "4fa9d231aae7",
-      "bucket_id": 863,
-      "profile_name": "lab0863_s408_w4_1120_1135_r2",
-      "strategy_id": "S408",
-      "occ_symbol": "COIN260925C00235000",
-      "underlying": "COIN",
-      "qty": 1,
-      "entry_cost": 11.0,
-      "entry_price": 0.11,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-23T15:22:16.593398+00:00",
-      "entry_order_id": "1545a1c9-3bd3-41bc-8606-e90aafeb9157"
-    },
-    {
-      "lot_id": "0ff1dc543373",
-      "bucket_id": 862,
-      "profile_name": "lab0862_s408_w4_1120_1135_r1",
-      "strategy_id": "S408",
-      "occ_symbol": "COIN260925C00235000",
-      "underlying": "COIN",
-      "qty": 1,
-      "entry_cost": 11.0,
-      "entry_price": 0.11,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-23T15:22:16.619125+00:00",
-      "entry_order_id": "d070f808-1475-4150-98e6-362a9969916d"
     }
   ],
   "pending_orders": [],
@@ -453,9 +413,7 @@
     "b195": 10.0,
     "b0": 10.0,
     "b85": 38.0,
-    "b84": 38.0,
-    "b863": 11.0,
-    "b862": 11.0
+    "b84": 38.0
   },
   "session_date": "2026-09-23",
   "entries_locked": [
