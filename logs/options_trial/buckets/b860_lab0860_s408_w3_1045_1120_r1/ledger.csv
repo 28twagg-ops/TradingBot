@@ -34,3 +34,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16 14:47:40.887078+00:00,entry,860,lab0860_s408_w3_1045_1120_r1,S408,149b7278387d,CRWD,CRWD260918C00285000,1,0.06,0.05,5.0,,,,-0.01,,0.75,-0.75,0.15384615384615397,RB gap -2.3% reclaim,b2cd2d73-9dca-45d9-94ed-67895b4deafc
 2026-09-17T13:55:59Z,reconcile,860,lab0860_s408_w3_1045_1120_r1,S408,149b7278387d,CRWD,CRWD260918C00285000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-23 14:57:31.058051+00:00,entry,860,lab0860_s408_w3_1045_1120_r1,S408,f876d2af0235,COIN,COIN260925C00240000,1,0.09,0.08,8.0,,,,-0.01,,0.75,-0.75,0.22222222222222227,RB gap -1.5% reclaim,ddd9a6c5-3750-426f-9af4-5da924b7a520
+2026-09-23 16:58:27.148487+00:00,exit,860,lab0860_s408_w3_1045_1120_r1,S408,f876d2af0235,COIN,COIN260925C00240000,1,,0.05,8.0,-37.5,-3.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,d21e9d89-9ab7-47cf-aaf5-8c90e4fb82de
