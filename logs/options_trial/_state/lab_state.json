@@ -480,6 +480,86 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-23T15:02:51.493033+00:00",
       "entry_order_id": "73764706-d32c-4f98-835f-441bca4fe707"
+    },
+    {
+      "lot_id": "ace7ec91a8b4",
+      "bucket_id": 267,
+      "profile_name": "lab0267_s403_w3_1045_1120_r2",
+      "strategy_id": "S403",
+      "occ_symbol": "XOM260925C00167500",
+      "underlying": "XOM",
+      "qty": 1,
+      "entry_cost": 17.0,
+      "entry_price": 0.17,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-23T15:07:26.837077+00:00",
+      "entry_order_id": "c10cf658-833c-4526-931d-e60c7df167b4"
+    },
+    {
+      "lot_id": "fc9318c6071a",
+      "bucket_id": 266,
+      "profile_name": "lab0266_s403_w3_1045_1120_r1",
+      "strategy_id": "S403",
+      "occ_symbol": "XOM260925C00167500",
+      "underlying": "XOM",
+      "qty": 1,
+      "entry_cost": 17.0,
+      "entry_price": 0.17,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-23T15:07:26.877964+00:00",
+      "entry_order_id": "b5881d40-cba8-41b7-a7de-9afcec5c089f"
+    },
+    {
+      "lot_id": "af55691b4ba0",
+      "bucket_id": 183,
+      "profile_name": "lab0183_s217_w3_1045_1120_r2",
+      "strategy_id": "S217",
+      "occ_symbol": "BAC260925C00058000",
+      "underlying": "BAC",
+      "qty": 1,
+      "entry_cost": 4.0,
+      "entry_price": 0.04,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-23T15:07:26.919454+00:00",
+      "entry_order_id": "453c0032-86e2-4dcf-a426-30a47caa729f"
+    },
+    {
+      "lot_id": "1ee5deacd7df",
+      "bucket_id": 182,
+      "profile_name": "lab0182_s217_w3_1045_1120_r1",
+      "strategy_id": "S217",
+      "occ_symbol": "BAC260925C00058000",
+      "underlying": "BAC",
+      "qty": 1,
+      "entry_cost": 4.0,
+      "entry_price": 0.04,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-23T15:07:26.959815+00:00",
+      "entry_order_id": "673b7de7-dff6-457a-afe6-a57ec587c96a"
     }
   ],
   "pending_orders": [
@@ -669,7 +749,11 @@
     "b860": 8.0,
     "b0": 8.0,
     "b367": 48.0,
-    "b366": 48.0
+    "b366": 48.0,
+    "b267": 17.0,
+    "b266": 17.0,
+    "b183": 4.0,
+    "b182": 4.0
   },
   "session_date": "2026-09-23",
   "entries_locked": [
@@ -722,7 +806,11 @@
     "916|S412|2026-09-23",
     "917|S412|2026-09-23",
     "366|S361|2026-09-23",
-    "367|S361|2026-09-23"
+    "367|S361|2026-09-23",
+    "182|S217|2026-09-23",
+    "183|S217|2026-09-23",
+    "266|S403|2026-09-23",
+    "267|S403|2026-09-23"
   ],
   "processed_orders": [
     "5ab95767-52f4-45cc-ab04-bac81c635cf6",
@@ -1173,9 +1261,13 @@
     "7883b1b3-a189-4376-8d21-7dd00aca6715",
     "9b3be49a-6caf-4791-958a-40bfbd4ed788",
     "18ffbd13-2efe-4d6a-8d28-66ed08a74085",
-    "73764706-d32c-4f98-835f-441bca4fe707"
+    "73764706-d32c-4f98-835f-441bca4fe707",
+    "c10cf658-833c-4526-931d-e60c7df167b4",
+    "b5881d40-cba8-41b7-a7de-9afcec5c089f",
+    "453c0032-86e2-4dcf-a426-30a47caa729f",
+    "673b7de7-dff6-457a-afe6-a57ec587c96a"
   ],
-  "submitted_today": 50,
+  "submitted_today": 54,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-23"
 }
