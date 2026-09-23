@@ -442,26 +442,6 @@
       "entry_order_id": "d070f808-1475-4150-98e6-362a9969916d"
     },
     {
-      "lot_id": "e62d9d0fcdac",
-      "bucket_id": 199,
-      "profile_name": "lab0199_s218_w4_1120_1135_r2",
-      "strategy_id": "S218",
-      "occ_symbol": "JPM260925C00350000",
-      "underlying": "JPM",
-      "qty": 1,
-      "entry_cost": 24.0,
-      "entry_price": 0.24,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-23T15:27:16.022070+00:00",
-      "entry_order_id": "54019df2-c819-4ab2-8587-c453316426ef"
-    },
-    {
       "lot_id": "f1b3dead6fbe",
       "bucket_id": 198,
       "profile_name": "lab0198_s218_w4_1120_1135_r1",
@@ -515,14 +495,14 @@
       "submitted": "2026-09-23T11:41:36"
     },
     {
-      "order_id": "84e7d1cb-f18c-4128-a409-f2f86ef7dc78",
-      "lot_id": "e62d9d0fcdac",
-      "bucket_id": 199,
+      "order_id": "13aa36eb-de5f-42df-86c9-8f1aad608349",
+      "lot_id": "f1b3dead6fbe",
+      "bucket_id": 198,
       "strategy_id": "S218",
       "occ_symbol": "JPM260925C00350000",
       "qty": 1,
       "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-09-23T13:06:30"
+      "submitted": "2026-09-23T13:11:24"
     }
   ],
   "bucket_open_premium": {
@@ -548,7 +528,6 @@
     "b84": 38.0,
     "b863": 11.0,
     "b862": 11.0,
-    "b199": 24.0,
     "b198": 24.0
   },
   "session_date": "2026-09-23",
@@ -1092,7 +1071,8 @@
     "6f8bbbc6-1b7c-4665-92cd-b4c93e37e488",
     "9a69e3f7-0871-457c-98c8-13aedf65ded8",
     "8a91b7cb-3c6d-4338-862b-9561c3cdce67",
-    "d21e9d89-9ab7-47cf-aaf5-8c90e4fb82de"
+    "d21e9d89-9ab7-47cf-aaf5-8c90e4fb82de",
+    "84e7d1cb-f18c-4128-a409-f2f86ef7dc78"
   ],
   "submitted_today": 72,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
