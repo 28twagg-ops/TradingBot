@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-23
 
-_Generated 2026-09-23T10:42:10.243478_
+_Generated 2026-09-23T10:47:35.832895_
 
 ## Summary
 
@@ -105,7 +105,7 @@ _Generated 2026-09-23T10:42:10.243478_
 | S364 (RubberBand_7DTE) | 7d | drop | 59 | 47.5 | -5.88 | -86.10 | -69.32 | +110.27 | 54 | 0 | 0 | $-89.00 | 42.4% | non-positive median return |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 84 | 47.6 | -6.25 | -74.98 | -51.22 | +71.78 | 58 | 4 | 0 | $-121.00 | 17.9% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 57 | 43.9 | -6.25 | -75.22 | -58.70 | +573.13 | 51 | 2 | 0 | $+1,105.00 | 17.5% | non-positive median return |
-| S401 (Any_Gap_Down_Small) | 3d | drop | 123 | 48.8 | -6.67 | -84.29 | -50.98 | +265.13 | 54 | 12 | 8 | $+939.00 | 26.0% | non-positive median return |
+| S401 (Any_Gap_Down_Small) | 3d | drop | 123 | 48.8 | -6.67 | -84.29 | -50.98 | +265.13 | 54 | 14 | 8 | $+939.00 | 26.0% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 79 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 79 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 254 | 31.9 | -35.29 | -63.24 | -53.47 | +91.67 | 79 | 0 | 0 | $-1,331.78 | 26.0% | non-positive median return |
