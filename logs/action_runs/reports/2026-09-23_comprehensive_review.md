@@ -8160,3 +8160,110 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260923T165504Z
+
+- UTC timestamp: `20260923T165504Z`
+- GitHub run: [#10813](https://github.com/28twagg-ops/TradingBot/actions/runs/35891467397)
+- Run id: `35891467397`
+- Live bot: exit=`0`, duration=`5s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260923T165504Z_live_bot.log`, `logs/action_runs/20260923T165504Z_live_options.log`, `logs/action_runs/20260923T165504Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1400 | 49.1 | -15.9 | +43.1 | $+17,392 |
+| TAINTED | 1887 | 33.4 | -38.8 | +12.8 | $-9,483 |
+| KEEP-only | 725 | 62.5 | +52.0 | +70.2 | $+11,950 |
+| KEEP-only recent | 532 | 60.7 | +54.5 | +81.8 | $+7,705 |
+
+- KEEP strategies (24): S163, S167, S168, S173, S174, S210, S218, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S399, S403, S404, S406, S412
+- KILL strategies (19): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S354, S355, S360, S363, S366, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-23T12:46:40.179794-04:00","date":"2026-09-23","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":6.5,"phases_s":{"reconcile":0.41,"cancel":0.18,"manage":4.35,"protective_stops":0.97},"signals":0,"placed":0,"equity":996298.62,"open_positions":17,"pending_orders":0,"open_lots":31,"submitted_today":72,"filled_today":52,"unattributed_contracts":0,"top_signals":[],"github_run":"10812","github_run_id":"35890901343","status":"ok","data_quality":{"clean":{"n":1400,"win":49.07,"med":-15.93,"avg":43.08,"pnl":17392.16},"tainted":{"n":1887,"win":33.39,"med":-38.81,"avg":12.83,"pnl":-9483.28},"keep_only":{"n":725,"win":62.48,"med":52.0,"avg":70.2,"pnl":11950.45},"keep_only_recent":{"n":532,"win":60.71,"med":54.55,"avg":81.77,"pnl":7705.0},"keep_strategies":["S163","S167","S168","S173","S174","S210","S218","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S399","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S354","S355","S360","S363","S366","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+16:55:04  INFO      Mode: exits
+16:55:05  INFO        Daily log -> logs/daily/2026-09-23.md
+16:55:05  INFO        Daily log reconciled -> logs/daily/2026-09-23.md (2 ledger rows)
+16:55:05  INFO        place_all_stops: checking 2 positions...
+16:55:05  INFO        STOP skipped ADM: fractional (0.4077 shares) — software exit will handle it
+16:55:05  INFO        STOP skipped COP: fractional (0.2639 shares) — software exit will handle it
+16:55:06  INFO        [positions] 2/2 (2 valid)
+16:55:06  INFO        SELL MARKET [urgent] ADM closed
+16:55:08  INFO        TX logged: SELL ADM  P&L -0.75%
+16:55:08  INFO        Daily log -> logs/daily/2026-09-23.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         16:55 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $224.70|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  ADM  P&L -0.7%  $-0.25                         EXIT: stop_loss (-0.7%)|
+|  COP  P&L +0.2%  $+0.07                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  ADM                                         -0.75%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
