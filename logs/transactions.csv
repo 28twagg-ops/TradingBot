@@ -1238,3 +1238,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-09-22 13:58:57,2026-09-22,SELL,AME,Pullback50,242.67,33.91,0.18,0.06,0,midline (+0.2%),bull,225.79
 2026-09-22 19:57:10,2026-09-22,SELL,NCLH,MomReversal,14.28,5.11,-0.58,-0.03,0,stop_loss (-0.6%),bull,225.47
 2026-09-23 13:48:56,2026-09-23,SELL,CCL,MomReversal,21.62,11.15,-3.19,-0.37,1,stop_loss (-3.2%),bull,224.83
+2026-09-23 13:58:14,2026-09-23,SELL,TECH,Pullback50,72.55,33.71,0.0,0.0,0,midline (+0.0%),bull,224.76
