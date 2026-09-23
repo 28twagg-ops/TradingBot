@@ -1,49 +1,49 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-09-08 13:50 UTC*
+*Updated: 2026-09-23 13:56 UTC*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $230.58 |
+| **Current Equity** | $224.74 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | -53.88% ($-269.42) |
+| **Total Return** | -55.05% ($-275.26) |
 | **Peak Equity** | $517.42 |
-| **Max Drawdown** | -56.28% |
-| **Current Cash** | $126.88 |
-| **Open Positions** | 3 (ABBV|AMCR|APD) |
-| **Last Bot Run** | 2026-09-08 13:50:58 |
+| **Max Drawdown** | -56.70% |
+| **Current Cash** | $123.70 |
+| **Open Positions** | 3 (ADM|COP|TECH) |
+| **Last Bot Run** | 2026-09-23 13:56:25 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 829 |
-| **Wins / Losses** | 260 / 569 |
-| **Win Rate** | 31.4% |
-| **Avg Win** | +1.74% |
-| **Avg Loss** | -1.13% |
-| **Profit Factor** | 0.93x |
-| **Avg Hold Days** | 1.2d |
-| **Total Realised P&L** | $-10.91 |
+| **Total Closed Trades** | 881 |
+| **Wins / Losses** | 273 / 608 |
+| **Win Rate** | 31.0% |
+| **Avg Win** | +1.72% |
+| **Avg Loss** | -1.11% |
+| **Profit Factor** | 0.91x |
+| **Avg Hold Days** | 1.1d |
+| **Total Realised P&L** | $-13.99 |
 
 ## Exit Reasons
 | Exit Type | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `stop_loss` | 459 | 0% | -1.37% |
-| `midline` | 260 | 67% | +1.12% |
-| `max_hold` | 110 | 79% | +1.30% |
+| `stop_loss` | 490 | 0% | -1.34% |
+| `midline` | 280 | 66% | +1.09% |
+| `max_hold` | 111 | 79% | +1.30% |
 
 ## Strategy Breakdown
 | Strategy | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `Pullback50` | 622 | 33% | -0.13% |
-| `GapDown` | 97 | 26% | -0.94% |
+| `Pullback50` | 654 | 33% | -0.13% |
+| `GapDown` | 101 | 26% | -0.88% |
 | `VolumeSpike` | 37 | 11% | -0.56% |
-| `MomReversal` | 25 | 28% | -0.18% |
+| `MomReversal` | 37 | 19% | -0.47% |
 | `unknown` | 20 | 25% | +0.31% |
-| `RSIRecovery` | 14 | 29% | +0.68% |
-| `EarningsDrift` | 9 | 67% | +0.10% |
+| `RSIRecovery` | 15 | 27% | +0.58% |
+| `EarningsDrift` | 11 | 73% | +0.10% |
 | `GoldenPocket` | 3 | 33% | -4.15% |
-| `MA_Squeeze` | 2 | 100% | +0.56% |
+| `MA_Squeeze` | 3 | 100% | +0.80% |
 
 ## Equity Timeline
 | Date | Equity | Change |
@@ -87,31 +87,36 @@
 | 2026-09-01 | $231.93 | -2.18 |
 | 2026-09-03 | $230.48 | -1.45 |
 | 2026-09-07 | $230.56 | +0.08 |
-| 2026-09-08 | $230.58 | +0.02 |
+| 2026-09-09 | $229.02 | -1.54 |
+| 2026-09-11 | $227.21 | -1.81 |
+| 2026-09-15 | $224.95 | -2.26 |
+| 2026-09-17 | $226.70 | +1.75 |
+| 2026-09-21 | $226.69 | -0.01 |
+| 2026-09-23 | $224.74 | -1.95 |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
 |---|---|---|---|---|---|---|
-| 2026-09-04 | **APD** | `Pullback50` | -0.61% | $-0.21 | 0d | stop_loss (-0.6%) |
-| 2026-09-03 | **ACGL** | `Pullback50` | -0.00% | $-0.00 | 0d | midline (-0.0%) |
-| 2026-09-03 | **CNM** | `MomReversal` | -0.70% | $-0.24 | 0d | stop_loss (-0.7%) |
-| 2026-09-03 | **ACGL** | `Pullback50` | +0.00% | $+0.00 | 0d | midline (+0.0%) |
-| 2026-09-03 | **AES** | `Pullback50` | +0.00% | $+0.00 | 0d | midline (+0.0%) |
-| 2026-09-02 | **MO** | `Pullback50` | +0.01% | $+0.00 | 0d | midline (+0.0%) |
-| 2026-09-02 | **AES** | `Pullback50` | -0.07% | $-0.03 | 0d | midline (-0.1%) |
-| 2026-09-02 | **AES** | `Pullback50` | -0.02% | $-0.01 | 0d | midline (-0.0%) |
-| 2026-09-02 | **AIZ** | `Pullback50` | -0.92% | $-0.32 | 0d | stop_loss (-0.9%) |
-| 2026-09-02 | **SYNA** | `MomReversal` | -0.78% | $-0.27 | 1d | stop_loss (-0.8%) |
-| 2026-09-02 | **GME** | `EarningsDrift` | +1.01% | $+0.35 | 0d | midline (+1.0%) |
-| 2026-09-02 | **BWXT** | `MomReversal` | -2.31% | $-0.80 | 1d | stop_loss (-2.3%) |
-| 2026-09-01 | **GME** | `EarningsDrift` | +0.06% | $+0.02 | 0d | midline (+0.1%) |
-| 2026-09-01 | **EQIX** | `Pullback50` | -0.56% | $-0.19 | 1d | stop_loss (-0.6%) |
-| 2026-09-01 | **DLR** | `Pullback50` | -0.54% | $-0.19 | 0d | stop_loss (-0.5%) |
-| 2026-09-01 | **NVT** | `MomReversal` | -1.28% | $-0.45 | 0d | stop_loss (-1.3%) |
-| 2026-08-31 | **ARE** | `Pullback50` | +0.47% | $+0.16 | 0d | midline (+0.5%) |
-| 2026-08-31 | **FFIV** | `Pullback50` | +0.02% | $+0.01 | 0d | midline (+0.0%) |
-| 2026-08-31 | **PFG** | `Pullback50` | -0.52% | $-0.18 | 0d | stop_loss (-0.5%) |
-| 2026-08-31 | **PH** | `Pullback50` | -0.65% | $-0.23 | 0d | stop_loss (-0.7%) |
+| 2026-09-23 | **CCL** | `MomReversal` | -3.19% | $-0.37 | 1d | stop_loss (-3.2%) |
+| 2026-09-22 | **NCLH** | `MomReversal` | -0.58% | $-0.03 | 0d | stop_loss (-0.6%) |
+| 2026-09-22 | **AME** | `Pullback50` | +0.18% | $+0.06 | 0d | midline (+0.2%) |
+| 2026-09-22 | **AMZN** | `Pullback50` | -0.03% | $-0.01 | 0d | midline (-0.0%) |
+| 2026-09-22 | **AES** | `Pullback50` | -0.04% | $-0.01 | 0d | midline (-0.0%) |
+| 2026-09-22 | **SCHW** | `Pullback50` | -2.06% | $-0.70 | 1d | stop_loss (-2.1%) |
+| 2026-09-21 | **ESAB** | `RSIRecovery` | -0.75% | $-0.25 | 0d | stop_loss (-0.7%) |
+| 2026-09-21 | **SITM** | `EarningsDrift` | +0.23% | $+0.08 | 0d | midline (+0.2%) |
+| 2026-09-21 | **EQIX** | `Pullback50` | +2.41% | $+0.82 | 0d | midline (+2.4%) |
+| 2026-09-21 | **DRI** | `Pullback50` | -0.56% | $-0.19 | 0d | stop_loss (-0.6%) |
+| 2026-09-21 | **TJX** | `Pullback50` | +1.17% | $+0.39 | 3d | max_hold 3d (+1.2%) |
+| 2026-09-21 | **PPG** | `MomReversal` | -0.67% | $-0.23 | 3d | stop_loss (-0.7%) |
+| 2026-09-18 | **YETI** | `EarningsDrift` | +0.02% | $+0.01 | 0d | midline (+0.0%) |
+| 2026-09-18 | **BLDR** | `MomReversal` | -0.75% | $-0.26 | 0d | stop_loss (-0.8%) |
+| 2026-09-18 | **VICR** | `MA_Squeeze` | +1.28% | $+0.43 | 0d | midline (-0.2%) |
+| 2026-09-18 | **CIEN** | `GapDown` | -2.32% | $-0.79 | 0d | stop_loss (-2.3%) |
+| 2026-09-17 | **AMP** | `Pullback50` | -0.51% | $-0.17 | 0d | stop_loss (-0.5%) |
+| 2026-09-17 | **GLW** | `Pullback50` | -0.40% | $-0.14 | 0d | midline (-0.4%) |
+| 2026-09-17 | **CTAS** | `Pullback50` | -0.87% | $-0.29 | 1d | stop_loss (-0.9%) |
+| 2026-09-17 | **CIEN** | `GapDown` | +6.04% | $+2.03 | 0d | midline (+6.0%) |
 
 ---
 *Auto-generated after every EOD scan. View on GitHub: `logs/dashboard.md`*

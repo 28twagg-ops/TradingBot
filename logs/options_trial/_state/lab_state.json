@@ -162,6 +162,26 @@
       "entry_order_id": "fa1dfa1e-1d64-45e6-8ba7-cda5a6706423"
     },
     {
+      "lot_id": "72281b3df81b",
+      "bucket_id": 378,
+      "profile_name": "lab0378_s362_w2_1005_1045_r1",
+      "strategy_id": "S362",
+      "occ_symbol": "LLY260925C01250000",
+      "underlying": "LLY",
+      "qty": 1,
+      "entry_cost": 39.0,
+      "entry_price": 0.39,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-22T14:17:31.347406+00:00",
+      "entry_order_id": "9d171142-a3ea-42b3-987d-2de290377077"
+    },
+    {
       "lot_id": "7711c433c700",
       "bucket_id": 365,
       "profile_name": "lab0365_s361_w2_1005_1045_r2",
@@ -243,7 +263,28 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "93a5d758-3aff-4428-96c7-28372886dee8",
+      "lot_id": "74f43d6280fb",
+      "bucket_id": 101,
+      "strategy_id": "S211",
+      "occ_symbol": "RBLX260925C00053000",
+      "qty": 1,
+      "reason": "stop_loss (-93.3%)",
+      "submitted": "2026-09-23T09:34:58"
+    },
+    {
+      "order_id": "ba1a67bb-25ef-4d8f-98dc-f8765dacbab4",
+      "lot_id": "72281b3df81b",
+      "bucket_id": 378,
+      "strategy_id": "S362",
+      "occ_symbol": "LLY260925C01250000",
+      "qty": 1,
+      "reason": "take_profit (+92.3%)",
+      "submitted": "2026-09-23T09:34:59"
+    }
+  ],
   "bucket_open_premium": {
     "b434": 51.0,
     "b433": 49.0,
@@ -253,6 +294,7 @@
     "b321": 55.00000000000001,
     "b320": 55.00000000000001,
     "b166": 4.0,
+    "b378": 39.0,
     "b365": 39.0,
     "b364": 39.0,
     "b101": 30.0,
@@ -758,8 +800,7 @@
     "f018fea9-3f68-4013-ae08-d5f670aa4e98",
     "c7020131-a9cb-49f6-82d0-0987b42b1db2",
     "77d4ae24-5e00-45a7-b3df-d3027d8e1276",
-    "cc887ffa-e6f3-4767-b140-ace32b720489",
-    "ba1a67bb-25ef-4d8f-98dc-f8765dacbab4"
+    "cc887ffa-e6f3-4767-b140-ace32b720489"
   ],
   "submitted_today": 0,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

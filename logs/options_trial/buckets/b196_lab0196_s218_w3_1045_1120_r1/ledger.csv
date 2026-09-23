@@ -32,4 +32,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16 14:48:29.323892+00:00,entry,196,lab0196_s218_w3_1045_1120_r1,S218,96e9f4aaf3f1,UNH,UNH260918C00390000,1,0.71,0.7,70.0,,,,-0.01,,0.5,-0.5,0.16541353383458643,low=375.07 BB_lower=375.50 touch+green,b5c457de-1dab-4992-80a2-423367176906
 2026-09-15 16:12:52.259524+00:00,exit,196,lab0196_s218_w3_1045_1120_r1,S218,96e9f4aaf3f1,UNH,UNH260918C00390000,1,,0.1,70.0,-85.71,-60.0,reconcile_fill,,-0.01,0.5,-0.5,,,b0050ff7-56e7-46eb-a9f5-fd12c1cc2c79
 2026-09-18 15:35:13.702545+00:00,entry,196,lab0196_s218_w3_1045_1120_r1,S218,e327b9911a87,AXP,AXP260925C00325000,1,0.38,0.38,38.0,,,,-0.01,,0.5,-0.5,0.1971830985915493,low=309.24 BB_lower=310.01 touch+green,199ac81c-266e-4029-9ab2-6dc5bc76a216
-2026-09-23T13:40:29Z,reconcile,196,lab0196_s218_w3_1045_1120_r1,S218,e327b9911a87,AXP,AXP260925C00325000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T13:34:54Z,reconcile,196,lab0196_s218_w3_1045_1120_r1,S218,e327b9911a87,AXP,AXP260925C00325000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
