@@ -302,26 +302,6 @@
       "entry_order_id": "492a8c9f-d059-4afb-a849-d99ff31f1af2"
     },
     {
-      "lot_id": "2c3d25a241c2",
-      "bucket_id": 83,
-      "profile_name": "lab0083_s210_w2_1005_1045_r2",
-      "strategy_id": "S210",
-      "occ_symbol": "PLTR260925C00200000",
-      "underlying": "PLTR",
-      "qty": 1,
-      "entry_cost": 40.0,
-      "entry_price": 0.4,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-23T14:17:03.439029+00:00",
-      "entry_order_id": "7186d6f2-2062-45e2-9b5b-2ba7d00f31d3"
-    },
-    {
       "lot_id": "01df06e6156e",
       "bucket_id": 82,
       "profile_name": "lab0082_s210_w2_1005_1045_r1",
@@ -460,6 +440,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-23T14:47:33.156597+00:00",
       "entry_order_id": "3f03ca45-c313-4cf1-8194-cdeca9cbfcc1"
+    },
+    {
+      "lot_id": "58e881c67c61",
+      "bucket_id": 197,
+      "profile_name": "lab0197_s218_w3_1045_1120_r2",
+      "strategy_id": "S218",
+      "occ_symbol": "JPM260925C00360000",
+      "underlying": "JPM",
+      "qty": 1,
+      "entry_cost": 5.0,
+      "entry_price": 0.05,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-23T14:51:59.307622+00:00",
+      "entry_order_id": "76e12f37-df2a-4beb-b9f1-2fd38f0ae85d"
+    },
+    {
+      "lot_id": "6ec7c70a6aac",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "JPM260925C00360000",
+      "underlying": "JPM",
+      "qty": 1,
+      "entry_cost": 5.0,
+      "entry_price": 0.05,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-23T14:51:59.462900+00:00",
+      "entry_order_id": "orphan:JPM260925C00360000"
     }
   ],
   "pending_orders": [
@@ -577,14 +597,15 @@
     "b234": 50.0,
     "b237": 55.00000000000001,
     "b236": 55.00000000000001,
-    "b83": 40.0,
     "b82": 40.0,
     "b915": 56.00000000000001,
     "b914": 56.00000000000001,
     "b859": 15.0,
     "b858": 15.0,
     "b239": 39.0,
-    "b238": 39.0
+    "b238": 39.0,
+    "b197": 5.0,
+    "b0": 5.0
   },
   "session_date": "2026-09-23",
   "entries_locked": [
@@ -627,7 +648,9 @@
     "902|S411|2026-09-23",
     "903|S411|2026-09-23",
     "238|S401|2026-09-23",
-    "239|S401|2026-09-23"
+    "239|S401|2026-09-23",
+    "196|S218|2026-09-23",
+    "197|S218|2026-09-23"
   ],
   "processed_orders": [
     "5ab95767-52f4-45cc-ab04-bac81c635cf6",
@@ -1067,9 +1090,13 @@
     "a1e8c250-51dc-4db3-b3a2-ec1194c984c3",
     "b8bbc26e-be84-44a0-95e1-42c2ac468d3c",
     "4020f022-a0af-44f2-a7af-7bdd1c09e3f4",
-    "3f03ca45-c313-4cf1-8194-cdeca9cbfcc1"
+    "3f03ca45-c313-4cf1-8194-cdeca9cbfcc1",
+    "76e12f37-df2a-4beb-b9f1-2fd38f0ae85d",
+    "acd8f9ad-c691-42bc-97cd-f2f553f3b7d7",
+    "8075793f-e8ba-4c06-8da3-15cc90cc2642",
+    "8db36335-fcfa-4557-92b6-73a20b266d58"
   ],
-  "submitted_today": 40,
+  "submitted_today": 42,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-23"
 }
