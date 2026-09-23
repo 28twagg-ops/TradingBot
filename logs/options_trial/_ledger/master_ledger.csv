@@ -14639,3 +14639,6 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-23 15:26:51.904246+00:00,entry,199,lab0199_s218_w4_1120_1135_r2,S218,e62d9d0fcdac,JPM,JPM260925C00350000,1,0.24,0.24,24.0,,,,-0.01,,0.5,-0.5,0.22222222222222215,low=336.98 BB_lower=341.49 touch+green,54019df2-c819-4ab2-8587-c453316426ef
 2026-09-23 15:26:51.915760+00:00,entry,198,lab0198_s218_w4_1120_1135_r1,S218,f1b3dead6fbe,JPM,JPM260925C00350000,1,0.24,0.24,24.0,,,,-0.01,,0.5,-0.5,0.22222222222222215,low=336.98 BB_lower=341.49 touch+green,6f8bbbc6-1b7c-4665-92cd-b4c93e37e488
 2026-09-23 15:31:34.284838+00:00,exit,238,lab0238_s401_w3_1045_1120_r1,S401,f5334d83b0a6,SHOP,SHOP260925C00149000,1,,0.68,39.0,74.36,29.0,take_profit (+66.7%),,-0.01,0.5,-0.5,,,9a69e3f7-0871-457c-98c8-13aedf65ded8
+2026-09-23T15:51:18Z,reconcile,179,lab0179_s217_w1_0928_1005_r2,S217,4e81a2586a46,BAC,BAC260925C00057000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T15:51:18Z,reconcile,178,lab0178_s217_w1_0928_1005_r1,S217,3f7bf4716326,BAC,BAC260925C00057000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-23T15:51:18Z,reconcile,90,live_1to1,S218,9cc80777c568,JPM,JPM260925C00347500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
