@@ -600,6 +600,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-23T15:12:26.615256+00:00",
       "entry_order_id": "orphan:MS260925C00210000"
+    },
+    {
+      "lot_id": "30df91ad52f8",
+      "bucket_id": 85,
+      "profile_name": "lab0085_s210_w3_1045_1120_r2",
+      "strategy_id": "S210",
+      "occ_symbol": "PLTR260925C00202500",
+      "underlying": "PLTR",
+      "qty": 1,
+      "entry_cost": 38.0,
+      "entry_price": 0.38,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-23T15:17:25.604792+00:00",
+      "entry_order_id": "fc7020ad-cffe-46dd-b8f2-853c72bc6340"
+    },
+    {
+      "lot_id": "bb698992dab1",
+      "bucket_id": 84,
+      "profile_name": "lab0084_s210_w3_1045_1120_r1",
+      "strategy_id": "S210",
+      "occ_symbol": "PLTR260925C00202500",
+      "underlying": "PLTR",
+      "qty": 1,
+      "entry_cost": 38.0,
+      "entry_price": 0.38,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-23T15:17:25.644912+00:00",
+      "entry_order_id": "be6977e5-1b4e-4393-8441-c5e76147718c"
     }
   ],
   "pending_orders": [
@@ -762,7 +802,9 @@
     "b266": 17.0,
     "b183": 4.0,
     "b182": 4.0,
-    "b195": 10.0
+    "b195": 10.0,
+    "b85": 38.0,
+    "b84": 38.0
   },
   "session_date": "2026-09-23",
   "entries_locked": [
@@ -819,7 +861,9 @@
     "182|S217|2026-09-23",
     "183|S217|2026-09-23",
     "266|S403|2026-09-23",
-    "267|S403|2026-09-23"
+    "267|S403|2026-09-23",
+    "84|S210|2026-09-23",
+    "85|S210|2026-09-23"
   ],
   "processed_orders": [
     "5ab95767-52f4-45cc-ab04-bac81c635cf6",
@@ -1277,9 +1321,11 @@
     "673b7de7-dff6-457a-afe6-a57ec587c96a",
     "82c92531-e212-47ca-bc3f-99ce7f29d1e2",
     "66b3a5d5-eda2-4c79-aad0-8c94bd450ea2",
-    "89cbf57c-b6be-4f24-bfbb-f6d41827eb68"
+    "89cbf57c-b6be-4f24-bfbb-f6d41827eb68",
+    "fc7020ad-cffe-46dd-b8f2-853c72bc6340",
+    "be6977e5-1b4e-4393-8441-c5e76147718c"
   ],
-  "submitted_today": 54,
+  "submitted_today": 56,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-23"
 }

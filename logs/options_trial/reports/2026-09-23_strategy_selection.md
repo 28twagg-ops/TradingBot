@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-23
 
-_Generated 2026-09-23T11:12:29.398142_
+_Generated 2026-09-23T11:17:30.176879_
 
 ## Summary
 
@@ -102,7 +102,7 @@ _Generated 2026-09-23T11:12:29.398142_
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 6 | 0.0 | -61.46 | -82.78 | -69.36 | -50.75 | 56 | 0 | 0 | $-210.00 | 83.3% | insufficient sample (<8 exits) |
 | S352 (GapDown_2DTE) | 2d | drop | 50 | 50.0 | -2.30 | -71.79 | -51.65 | +338.46 | 54 | 0 | 0 | $+237.00 | 22.0% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 58 | 48.3 | -2.90 | -52.91 | -47.59 | +164.14 | 54 | 4 | 2 | $+323.00 | 20.7% | non-positive median return |
-| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 87 | 49.4 | -4.35 | -73.30 | -50.96 | +80.00 | 58 | 4 | 3 | $-10.00 | 17.2% | non-positive median return |
+| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 87 | 49.4 | -4.35 | -73.30 | -50.96 | +80.00 | 58 | 6 | 3 | $-10.00 | 17.2% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 59 | 47.5 | -5.88 | -86.10 | -69.32 | +110.27 | 54 | 0 | 0 | $-89.00 | 42.4% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 58 | 43.1 | -6.25 | -81.48 | -59.12 | +559.39 | 51 | 4 | 0 | $+1,098.00 | 17.2% | non-positive median return |
 | S401 (Any_Gap_Down_Small) | 3d | drop | 123 | 48.8 | -6.67 | -84.29 | -50.98 | +265.13 | 54 | 14 | 8 | $+939.00 | 26.0% | non-positive median return |
@@ -193,7 +193,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S210 | 3d ATM MA cross 8/21 | 87 | -4.35 | -73.30 | -50.96 | 4 | 3 |
+| S210 | 3d ATM MA cross 8/21 | 87 | -4.35 | -73.30 | -50.96 | 6 | 3 |
 | S211 | 3d ATM MA cross 21/50 | 52 | -43.65 | -89.11 | -54.73 | 6 | 4 |
 | S212 | 3d ATM MA bounce 50 | 83 | -68.09 | -98.15 | -81.35 | 0 | 0 |
 | S213 | 3d ATM MA bounce 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
