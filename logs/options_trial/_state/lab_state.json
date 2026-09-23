@@ -362,26 +362,6 @@
       "entry_order_id": "a1e8c250-51dc-4db3-b3a2-ec1194c984c3"
     },
     {
-      "lot_id": "8424b5fd193f",
-      "bucket_id": 239,
-      "profile_name": "lab0239_s401_w3_1045_1120_r2",
-      "strategy_id": "S401",
-      "occ_symbol": "SHOP260925C00149000",
-      "underlying": "SHOP",
-      "qty": 1,
-      "entry_cost": 39.0,
-      "entry_price": 0.39,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-23T14:47:33.117036+00:00",
-      "entry_order_id": "4020f022-a0af-44f2-a7af-7bdd1c09e3f4"
-    },
-    {
       "lot_id": "f5334d83b0a6",
       "bucket_id": 238,
       "profile_name": "lab0238_s401_w3_1045_1120_r1",
@@ -680,6 +660,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-23T15:22:16.619125+00:00",
       "entry_order_id": "d070f808-1475-4150-98e6-362a9969916d"
+    },
+    {
+      "lot_id": "e62d9d0fcdac",
+      "bucket_id": 199,
+      "profile_name": "lab0199_s218_w4_1120_1135_r2",
+      "strategy_id": "S218",
+      "occ_symbol": "JPM260925C00350000",
+      "underlying": "JPM",
+      "qty": 1,
+      "entry_cost": 24.0,
+      "entry_price": 0.24,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-23T15:27:16.022070+00:00",
+      "entry_order_id": "54019df2-c819-4ab2-8587-c453316426ef"
+    },
+    {
+      "lot_id": "f1b3dead6fbe",
+      "bucket_id": 198,
+      "profile_name": "lab0198_s218_w4_1120_1135_r1",
+      "strategy_id": "S218",
+      "occ_symbol": "JPM260925C00350000",
+      "underlying": "JPM",
+      "qty": 1,
+      "entry_cost": 24.0,
+      "entry_price": 0.24,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-23T15:27:16.062243+00:00",
+      "entry_order_id": "6f8bbbc6-1b7c-4665-92cd-b4c93e37e488"
     }
   ],
   "pending_orders": [
@@ -1002,38 +1022,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
-    },
-    {
-      "order_id": "6f8bbbc6-1b7c-4665-92cd-b4c93e37e488",
-      "bucket_id": 198,
-      "strategy_id": "S218",
-      "occ_symbol": "JPM260925C00350000",
-      "underlying": "JPM",
-      "qty": 1,
-      "limit": 0.24,
-      "profile_name": "lab0198_s218_w4_1120_1135_r1",
-      "submitted": "2026-09-23",
-      "detail": "low=336.98 BB_lower=341.49 touch+green",
-      "spread_frac": 0.22222222222222215,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "54019df2-c819-4ab2-8587-c453316426ef",
-      "bucket_id": 199,
-      "strategy_id": "S218",
-      "occ_symbol": "JPM260925C00350000",
-      "underlying": "JPM",
-      "qty": 1,
-      "limit": 0.24,
-      "profile_name": "lab0199_s218_w4_1120_1135_r2",
-      "submitted": "2026-09-23",
-      "detail": "low=336.98 BB_lower=341.49 touch+green",
-      "spread_frac": 0.22222222222222215,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
     }
   ],
   "pending_exits": [],
@@ -1056,7 +1044,6 @@
     "b914": 56.00000000000001,
     "b859": 15.0,
     "b858": 15.0,
-    "b239": 39.0,
     "b238": 39.0,
     "b860": 8.0,
     "b0": 18.0,
@@ -1070,7 +1057,9 @@
     "b85": 38.0,
     "b84": 38.0,
     "b863": 11.0,
-    "b862": 11.0
+    "b862": 11.0,
+    "b199": 24.0,
+    "b198": 24.0
   },
   "session_date": "2026-09-23",
   "entries_locked": [
@@ -1607,7 +1596,10 @@
     "fc7020ad-cffe-46dd-b8f2-853c72bc6340",
     "be6977e5-1b4e-4393-8441-c5e76147718c",
     "1545a1c9-3bd3-41bc-8606-e90aafeb9157",
-    "d070f808-1475-4150-98e6-362a9969916d"
+    "d070f808-1475-4150-98e6-362a9969916d",
+    "7837744c-d237-49b9-8e82-25b76bae61b5",
+    "54019df2-c819-4ab2-8587-c453316426ef",
+    "6f8bbbc6-1b7c-4665-92cd-b4c93e37e488"
   ],
   "submitted_today": 72,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
