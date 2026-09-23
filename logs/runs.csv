@@ -8503,3 +8503,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-23 23:11:14,ext_exits,bull,224.67,123.5,0,0,0,3,COP|MLM|MO,both
 2026-09-23 23:16:12,ext_exits,bull,224.67,123.5,0,0,0,3,COP|MLM|MO,both
 2026-09-23 23:21:10,ext_exits,bull,224.67,123.5,0,0,0,3,COP|MLM|MO,both
+2026-09-23 23:26:11,ext_exits,bull,224.73,123.5,0,0,0,3,COP|MLM|MO,both
