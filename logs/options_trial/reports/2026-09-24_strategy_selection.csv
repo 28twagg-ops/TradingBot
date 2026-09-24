@@ -95,7 +95,7 @@ S359,RubberBand_0DTE,0d,drop,non-positive median return,92,35,12,23,52.9,-44.44,
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,drop,non-positive median return,145,65,24,41,24.08,-46.15,-77.5,-57.14,119.55,375.0,15,59,11,4,10,46.2
 S207,GapDown_AtSupport,3d ATM gap-support,drop,manually paused — excluded from new entries & reflected P&L,62,37,2,35,-38.6,-47.06,-63.64,-55.71,-6.06,-822.0,2,59,0,0,3,43.2
 S407,RubberBand_ITM2,3d,drop,manually paused — excluded from new entries & reflected P&L,96,38,11,27,29.82,-47.73,-83.88,-61.54,266.42,33.0,7,55,0,0,7,26.3
-S399,GapDown_OTM1,3d,drop,non-positive median return,194,73,31,42,46.66,-50.0,-83.2,-66.67,148.0,-46.0,16,55,8,3,14,21.9
+S399,GapDown_OTM1,3d,drop,non-positive median return,194,74,31,43,45.33,-50.0,-83.14,-66.67,147.0,-64.0,16,55,8,4,14,21.6
 S164,GapDown ATM 1-DTE — P2B arm,1d ATM,drop,non-positive median return,146,20,8,12,76.1,-50.0,-96.88,-80.56,361.73,289.0,9,65,8,0,7,30.0
 S351,GapDown_1DTE,1d,drop,non-positive median return,196,64,19,45,27.46,-50.67,-75.68,-62.5,320.36,196.0,14,55,6,0,12,20.3
 S216,RSI_Oversold_Cross,3d ATM RSI x30,drop,non-positive median return,167,62,13,49,-9.51,-51.67,-86.57,-69.25,69.46,-814.0,13,59,9,5,16,25.8

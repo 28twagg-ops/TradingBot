@@ -1422,26 +1422,6 @@
       "entry_order_id": "2398f720-6062-4860-aede-56c5c35035cc"
     },
     {
-      "lot_id": "0f6c3f5a2df2",
-      "bucket_id": 796,
-      "profile_name": "lab0796_s399_w3_1045_1120_r1",
-      "strategy_id": "S399",
-      "occ_symbol": "AMD260928C00680000",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 35.0,
-      "entry_price": 0.35,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-24T14:48:33.307722+00:00",
-      "entry_order_id": "baf7b184-705f-48bd-80d2-5420eab85581"
-    },
-    {
       "lot_id": "50db9aa98e3c",
       "bucket_id": 84,
       "profile_name": "lab0084_s210_w3_1045_1120_r1",
@@ -3035,14 +3015,14 @@
       "submitted": "2026-09-24T11:26:50"
     },
     {
-      "order_id": "573bb7e7-ccd6-4d0d-b5d5-5edbd25310dc",
-      "lot_id": "0f6c3f5a2df2",
-      "bucket_id": 796,
-      "strategy_id": "S399",
-      "occ_symbol": "AMD260928C00680000",
+      "order_id": "5f1a6f30-7d2e-4791-b982-78413f85787b",
+      "lot_id": "7b0beca44f3d",
+      "bucket_id": 199,
+      "strategy_id": "S218",
+      "occ_symbol": "MCD260925C00250000",
       "qty": 1,
-      "reason": "stop_loss (-52.2%)",
-      "submitted": "2026-09-24T11:36:57"
+      "reason": "stop_loss (-57.1%)",
+      "submitted": "2026-09-24T11:41:30"
     }
   ],
   "bucket_open_premium": {
@@ -3113,7 +3093,6 @@
     "b1140": 62.0,
     "b1127": 62.0,
     "b1126": 62.0,
-    "b796": 35.0,
     "b84": 30.0,
     "b789": 38.0,
     "b788": 38.0,
@@ -3756,7 +3735,8 @@
     "dbcfbd0f-4515-4ab7-b690-9d72b8f9e081",
     "88783c11-a23f-4097-9019-30fbe756c7b2",
     "b06bf070-3cb1-4fc7-b142-faae5ec94ac3",
-    "20050c59-32c9-4d95-b959-d0d738211e93"
+    "20050c59-32c9-4d95-b959-d0d738211e93",
+    "573bb7e7-ccd6-4d0d-b5d5-5edbd25310dc"
   ],
   "submitted_today": 138,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
