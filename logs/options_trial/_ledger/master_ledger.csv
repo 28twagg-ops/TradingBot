@@ -15011,3 +15011,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-24T16:11:29Z,reconcile,1156,lab1156_s164_w4_1120_1135_r1,S164,d20eca60b9ac,ARM,ARM260925C00335000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24T16:11:29Z,reconcile,1059,lab1059_s165_w4_1120_1135_r2,S165,c50fb042267c,ARM,ARM260925C00335000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24T16:11:29Z,reconcile,1058,lab1058_s165_w4_1120_1135_r1,S165,ed4449bc4eea,ARM,ARM260925C00335000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24 16:11:40.918813+00:00,exit,101,lab0101_s211_w4_1120_1135_r2,S211,ac332ef2743e,ARM,ARM260925C00337500,1,,0.08,48.0,-83.33,-40.0,stop_loss (-83.3%),,-0.01,0.5,-0.5,,,ca3bea29-f370-4a93-8c5f-62b370175616
+2026-09-24 16:11:40.253079+00:00,exit,799,lab0799_s399_w4_1120_1135_r2,S399,e24179a3cddf,ARM,ARM260925C00340000,1,,0.15,39.0,-61.54,-24.0,stop_loss (-61.5%),,-0.01,0.5,-0.5,,,3544bd99-c4af-448c-b870-4c745c2bfd1e

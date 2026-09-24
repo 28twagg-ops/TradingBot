@@ -90,12 +90,12 @@ S408,RubberBand_ITM1,3d,drop,non-positive median return,157,61,25,36,105.15,-33.
 S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1464,254,81,173,1.96,-35.29,-63.24,-53.47,91.67,-1331.78,10,80,8,0,15,26.0
 S355,GapDown_7DTE,7d,drop,non-positive median return,129,67,30,37,14.41,-37.5,-79.35,-64.15,158.18,351.0,14,55,8,0,9,37.3
 S405,GapDown_OTM3,3d,drop,manually paused — excluded from new entries & reflected P&L,115,56,19,37,-8.5,-42.86,-83.93,-65.2,103.47,-118.0,8,55,0,0,8,26.8
-S211,MA_Cross_21_50,3d ATM MA cross 21/50,drop,non-positive median return,154,54,13,41,38.85,-43.65,-87.34,-53.77,100.38,-349.0,13,59,12,5,17,27.8
+S211,MA_Cross_21_50,3d ATM MA cross 21/50,drop,non-positive median return,154,55,13,42,36.63,-44.44,-87.33,-55.6,97.95,-389.0,14,59,12,6,17,27.3
 S359,RubberBand_0DTE,0d,drop,non-positive median return,92,35,12,23,52.9,-44.44,-71.43,-67.55,248.09,-123.0,9,52,6,0,8,28.6
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,drop,non-positive median return,145,65,24,41,24.08,-46.15,-77.5,-57.14,119.55,375.0,15,59,11,4,10,46.2
 S207,GapDown_AtSupport,3d ATM gap-support,drop,manually paused — excluded from new entries & reflected P&L,62,37,2,35,-38.6,-47.06,-63.64,-55.71,-6.06,-822.0,2,59,0,0,3,43.2
 S407,RubberBand_ITM2,3d,drop,manually paused — excluded from new entries & reflected P&L,96,38,11,27,29.82,-47.73,-83.88,-61.54,266.42,33.0,7,55,0,0,7,26.3
-S399,GapDown_OTM1,3d,drop,non-positive median return,194,74,31,43,45.33,-50.0,-83.14,-66.67,147.0,-64.0,16,55,8,4,14,21.6
+S399,GapDown_OTM1,3d,drop,non-positive median return,194,75,31,44,43.91,-50.0,-83.07,-66.67,146.0,-88.0,16,55,8,5,14,21.3
 S164,GapDown ATM 1-DTE — P2B arm,1d ATM,drop,non-positive median return,146,20,8,12,76.1,-50.0,-96.88,-80.56,361.73,289.0,9,65,8,0,7,30.0
 S351,GapDown_1DTE,1d,drop,non-positive median return,196,64,19,45,27.46,-50.67,-75.68,-62.5,320.36,196.0,14,55,6,0,12,20.3
 S216,RSI_Oversold_Cross,3d ATM RSI x30,drop,non-positive median return,167,62,13,49,-9.51,-51.67,-86.57,-69.25,69.46,-814.0,13,59,9,5,16,25.8
