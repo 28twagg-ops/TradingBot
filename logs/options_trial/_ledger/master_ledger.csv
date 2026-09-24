@@ -14655,11 +14655,8 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-23T19:12:16Z,reconcile,236,lab0236_s401_w2_1005_1045_r1,S401,39205d374690,HOOD,HOOD260925C00134000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-23T19:21:41Z,reconcile,863,lab0863_s408_w4_1120_1135_r2,S408,4fa9d231aae7,COIN,COIN260925C00235000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-23T19:21:41Z,reconcile,862,lab0862_s408_w4_1120_1135_r1,S408,0ff1dc543373,COIN,COIN260925C00235000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-24T13:40:41Z,reconcile,915,lab0915_s412_w2_1005_1045_r2,S412,0987e7a621dd,COIN,COIN260925C00217500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-24T13:40:41Z,reconcile,914,lab0914_s412_w2_1005_1045_r1,S412,857c33cc52b8,COIN,COIN260925C00217500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-24T13:40:41Z,reconcile,859,lab0859_s408_w2_1005_1045_r2,S408,fd45af483e0a,COIN,COIN260925C00230000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-24T13:40:41Z,reconcile,858,lab0858_s408_w2_1005_1045_r1,S408,753d233a4301,COIN,COIN260925C00230000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-24T13:40:41Z,reconcile,367,lab0367_s361_w3_1045_1120_r2,S361,dac1f5d644e5,COIN,COIN260925C00220000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-24T13:40:41Z,reconcile,366,lab0366_s361_w3_1045_1120_r1,S361,9565c2425700,COIN,COIN260925C00220000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24T13:34:58Z,reconcile,367,lab0367_s361_w3_1045_1120_r2,S361,dac1f5d644e5,COIN,COIN260925C00220000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24T13:34:58Z,reconcile,366,lab0366_s361_w3_1045_1120_r1,S361,9565c2425700,COIN,COIN260925C00220000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24 13:30:08.472481+00:00,exit,183,lab0183_s217_w3_1045_1120_r2,S217,af55691b4ba0,BAC,BAC260925C00058000,1,,0.01,4.0,-75.0,-3.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,7d8f9752-8e2c-45fd-a2d7-2a02d1c4aee7
+2026-09-24 13:30:08.220191+00:00,exit,859,lab0859_s408_w2_1005_1045_r2,S408,fd45af483e0a,COIN,COIN260925C00230000,1,,0.03,15.0,-80.0,-12.0,stop_loss (-66.7%),,-0.01,0.5,-0.5,,,1d37811f-f957-4cd8-8de7-bbc772b4a29d
 2026-09-24 13:30:08.257827+00:00,exit,195,lab0195_s218_w2_1005_1045_r2,S218,2fc48824d6cf,MS,MS260925C00210000,1,,0.02,10.0,-80.0,-8.0,stop_loss (-80.0%),,-0.01,0.5,-0.5,,,fa1ddaae-e18a-49a4-8752-e89fcbfb6752
