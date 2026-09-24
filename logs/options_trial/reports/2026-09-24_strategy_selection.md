@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-24
 
-_Generated 2026-09-24T11:46:39.079784_
+_Generated 2026-09-24T11:51:48.335639_
 
 ## Summary
 
@@ -11,8 +11,8 @@ _Generated 2026-09-24T11:46:39.079784_
 
 ## Attribution health
 
-- Total exits: **3327**
-- Orphan exits (b0/orphan_reconcile): **403**
+- Total exits: **3328**
+- Orphan exits (b0/orphan_reconcile): **404**
 - Orphan rate: **12.1%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
 

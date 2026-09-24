@@ -42,26 +42,6 @@
       "entry_order_id": "673b7de7-dff6-457a-afe6-a57ec587c96a"
     },
     {
-      "lot_id": "ca4efb952018",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "MS260925C00210000",
-      "underlying": "MS",
-      "qty": 1,
-      "entry_cost": 10.0,
-      "entry_price": 0.1,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-23T15:12:26.615256+00:00",
-      "entry_order_id": "orphan:MS260925C00210000"
-    },
-    {
       "lot_id": "7acace26e11b",
       "bucket_id": 263,
       "profile_name": "lab0263_s403_w1_0928_1005_r2",
@@ -2542,26 +2522,6 @@
       "entry_order_id": "c162eeef-d20c-4be2-b341-d5ab26f539fe"
     },
     {
-      "lot_id": "3e88e3aae540",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "MCD260925C00250000",
-      "underlying": "MCD",
-      "qty": 1,
-      "entry_cost": 7.0,
-      "entry_price": 0.07,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-24T15:26:44.657295+00:00",
-      "entry_order_id": "orphan:MCD260925C00250000"
-    },
-    {
       "lot_id": "5ec849b376f0",
       "bucket_id": 905,
       "profile_name": "lab0905_s411_w4_1120_1135_r2",
@@ -2940,6 +2900,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-24T15:33:17.854316+00:00",
       "entry_order_id": "20050c59-32c9-4d95-b959-d0d738211e93"
+    },
+    {
+      "lot_id": "52ec4353653c",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "MS260925C00210000",
+      "underlying": "MS",
+      "qty": 1,
+      "entry_cost": 10.0,
+      "entry_price": 0.1,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-24T15:51:30.604037+00:00",
+      "entry_order_id": "orphan:MS260925C00210000"
     }
   ],
   "pending_orders": [],
@@ -2993,22 +2973,11 @@
       "qty": 1,
       "reason": "stop_loss (-66.7%)",
       "submitted": "2026-09-24T11:26:50"
-    },
-    {
-      "order_id": "9ccfc7b1-74fc-495c-aa97-66ed903adc08",
-      "lot_id": "3e88e3aae540",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "MCD260925C00250000",
-      "qty": 1,
-      "reason": "stop_loss (-57.1%)",
-      "submitted": "2026-09-24T11:46:27"
     }
   ],
   "bucket_open_premium": {
     "b166": 4.0,
     "b182": 4.0,
-    "b0": 212.0,
     "b263": 65.0,
     "b262": 65.0,
     "b418": 59.0,
@@ -3021,6 +2990,7 @@
     "b391": 55.00000000000001,
     "b390": 55.00000000000001,
     "b81": 37.0,
+    "b0": 205.0,
     "b421": 46.0,
     "b420": 46.0,
     "b407": 39.0,
@@ -3716,7 +3686,8 @@
     "b06bf070-3cb1-4fc7-b142-faae5ec94ac3",
     "20050c59-32c9-4d95-b959-d0d738211e93",
     "573bb7e7-ccd6-4d0d-b5d5-5edbd25310dc",
-    "5f1a6f30-7d2e-4791-b982-78413f85787b"
+    "5f1a6f30-7d2e-4791-b982-78413f85787b",
+    "9ccfc7b1-74fc-495c-aa97-66ed903adc08"
   ],
   "submitted_today": 138,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
