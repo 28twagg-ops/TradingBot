@@ -307,7 +307,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 305,lab0305_s354_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MARA,S354,,entered_no_exit
 306,lab0306_s354_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MARA,S354,,entered_no_exit
 307,lab0307_s354_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MARA,S354,,entered_no_exit
-308,lab0308_s354_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,SMCI,S354,,entered_no_exit
+308,lab0308_s354_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,53.23,53.23,53.23,53.23,33.0,SMCI,S354,take_profit (+55.7%),closed
 309,lab0309_s354_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,53.23,53.23,53.23,53.23,33.0,SMCI,S354,take_profit (+55.7%),closed
 310,lab0310_s354_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MARA,S354,,entered_no_exit
 311,lab0311_s354_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MARA,S354,,entered_no_exit
@@ -1153,7 +1153,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 1151,lab1151_s164_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,AMD,S164,,entered_no_exit
 1152,lab1152_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,SMCI,S164,,entered_no_exit
 1153,lab1153_s164_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,SMCI,S164,,entered_no_exit
-1154,lab1154_s164_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,SMCI,S164,,entered_no_exit
+1154,lab1154_s164_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,142.11,142.11,142.11,142.11,54.0,SMCI,S164,take_profit (+137.1%),closed
 1155,lab1155_s164_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,134.21,134.21,134.21,134.21,51.0,SMCI,S164,take_profit (+121.6%),closed
 1156,lab1156_s164_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,ARM,S164,,entered_no_exit
 1157,lab1157_s164_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,ARM,S164,,entered_no_exit
