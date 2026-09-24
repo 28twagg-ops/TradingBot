@@ -8584,3 +8584,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-24 19:16:17,exits,bull,225.22,157.09,0,0,0,2,AES|COP,both
 2026-09-24 19:21:12,exits,bull,225.19,157.09,0,0,0,2,AES|COP,both
 2026-09-24 19:26:19,exits,bull,225.15,157.09,0,0,0,2,AES|COP,both
+2026-09-24 19:56:22,scan_evening,bull,225.0,123.46,36,0,0,3,AES|COP|KNF,both
