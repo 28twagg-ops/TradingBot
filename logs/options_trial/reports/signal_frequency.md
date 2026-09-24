@@ -1,6 +1,6 @@
 # Options signal frequency
 
-_Generated 2026-09-24T11:17:44.407177_
+_Generated 2026-09-24T11:24:53.230535_
 
 Headline counts are **unique (strategy, underlying, date)** from `ENTRY` lines in `logs/options_trial/runs/*.log`.
 Raw log-line counts (multi-bucket duplicates) are shown below for debug.
@@ -33,17 +33,17 @@ Raw log-line counts (multi-bucket duplicates) are shown below for debug.
 | 2026-09-15 |    1 |    2 |    2 |    0 |    2 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     9 |
 | 2026-09-16 |    1 |    1 |    1 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     4 |
 | 2026-09-18 |    1 |    1 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     3 |
-| 2026-09-24 |    2 |    1 |    1 |    0 |    1 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     7 |
+| 2026-09-24 |    2 |    2 |    2 |    0 |    2 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    10 |
 
 ## Per-strategy summary (unique underlyings)
 
 | Strategy | Unique entries | Active days | Avg unique / active day | Est. active days to n=30 exits* |
 |----------|---------------:|------------:|------------------------:|--------------------------------|
 | S163 | 19 | 16 | 1.2 | ~32 active signal-days |
-| S164 | 23 | 15 | 1.5 | ~25 active signal-days |
-| S165 | 34 | 22 | 1.5 | ~25 active signal-days |
+| S164 | 24 | 15 | 1.6 | ~24 active signal-days |
+| S165 | 35 | 22 | 1.6 | ~24 active signal-days |
 | S166 | 10 | 9 | 1.1 | ~34 active signal-days |
-| S167 | 21 | 15 | 1.4 | ~27 active signal-days |
+| S167 | 22 | 15 | 1.5 | ~26 active signal-days |
 | S168 | 18 | 12 | 1.5 | ~25 active signal-days |
 | S169 | 0 | 0 | 0.0 | inf (no unique entries yet) |
 | S170 | 0 | 0 | 0.0 | inf (no unique entries yet) |
@@ -62,7 +62,7 @@ Raw log-line counts (multi-bucket duplicates) are shown below for debug.
 | w1     |    7 |    6 |   10 |    4 |    6 |    6 |    0 |    0 |    0 |    0 |    0 |    7 |    1 |    47 |
 | w2     |   11 |   12 |   16 |    7 |   12 |   10 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    77 |
 | w3     |   11 |   12 |   18 |    6 |   11 |    8 |    0 |    0 |    0 |    0 |    0 |    7 |    4 |    77 |
-| w4     |    6 |    5 |   11 |    3 |    6 |    7 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    47 |
+| w4     |    7 |    6 |   12 |    3 |    7 |    8 |    0 |    0 |    0 |    0 |    0 |    6 |    3 |    52 |
 
 Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:20–11:35. Parsed from controlled-layout profile names in ENTRY log lines.
 
@@ -70,12 +70,12 @@ Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:
 
 | Strategy | Raw log lines (includes multi-bucket duplicates) | Unique underlying symbols |
 |----------|-------------------------------------------------:|--------------------------:|
-| S163 | 281 | 19 |
-| S164 | 317 | 23 |
-| S165 | 1745 | 34 |
+| S163 | 283 | 19 |
+| S164 | 321 | 24 |
+| S165 | 1749 | 35 |
 | S166 | 139 | 10 |
-| S167 | 303 | 21 |
-| S168 | 224 | 18 |
+| S167 | 306 | 22 |
+| S168 | 226 | 18 |
 | S169 | 0 | 0 |
 | S170 | 0 | 0 |
 | S171 | 0 | 0 |
@@ -114,7 +114,7 @@ Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:
 | 2026-09-15 |    4 |   14 |   14 |    0 |   14 |    8 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    54 |
 | 2026-09-16 |    4 |    4 |    4 |    0 |    4 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    16 |
 | 2026-09-18 |    4 |    8 |    0 |    4 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    16 |
-| 2026-09-24 |   10 |   10 |   10 |    0 |   10 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    50 |
+| 2026-09-24 |   12 |   14 |   14 |    0 |   13 |   12 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    65 |
 
 ## Notes
 

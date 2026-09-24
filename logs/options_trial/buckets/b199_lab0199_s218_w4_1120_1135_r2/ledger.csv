@@ -19,3 +19,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10T18:31:18Z,reconcile,199,lab0199_s218_w4_1120_1135_r2,S218,7afa3df2ea07,NKE,NKE260911C00037000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-23 15:26:51.904246+00:00,entry,199,lab0199_s218_w4_1120_1135_r2,S218,e62d9d0fcdac,JPM,JPM260925C00350000,1,0.24,0.24,24.0,,,,-0.01,,0.5,-0.5,0.22222222222222215,low=336.98 BB_lower=341.49 touch+green,54019df2-c819-4ab2-8587-c453316426ef
 2026-09-23 17:06:30.856241+00:00,exit,199,lab0199_s218_w4_1120_1135_r2,S218,e62d9d0fcdac,JPM,JPM260925C00350000,1,,0.12,24.0,-50.0,-12.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,84e7d1cb-f18c-4128-a409-f2f86ef7dc78
+2026-09-24 15:24:12.978389+00:00,entry,199,lab0199_s218_w4_1120_1135_r2,S218,fdfac29a2067,MCD,MCD260925C00250000,1,0.08,0.07,7.0,,,,-0.01,,0.5,-0.5,0.24999999999999986,low=238.74 BB_lower=239.79 touch+green,9b33e44f-949f-456b-a2ec-b36ad903d2af
