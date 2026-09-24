@@ -1,6 +1,6 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
 S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,building sample (8-19 exits),124,12,8,4,165.65,134.06,-70.23,-55.36,492.33,403.0,4,65,6,0,4,50.0
-S396,GapDown_ITM2,3d,watch,insufficient sample (<8 exits),28,6,5,1,63.82,89.03,-3.8,77.19,106.25,241.0,3,49,0,0,1,100.0
+S396,GapDown_ITM2,3d,watch,insufficient sample (<8 exits),30,6,5,1,63.82,89.03,-3.8,77.19,106.25,241.0,3,49,2,0,1,100.0
 S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,fat left tail (p10 < -45%),105,20,12,8,75.54,78.02,-74.52,-66.07,249.27,435.0,5,65,6,0,5,60.0
 S166,GapDown strong call,3d ATM strong,watch,building sample (8-19 exits),51,8,8,0,113.61,75.23,63.34,67.08,194.5,436.0,2,65,0,0,3,62.5
 S163,A1 GapDown ATM call EOD,7d ATM,watch,fat left tail (p10 < -45%),121,21,13,8,34.4,67.21,-74.47,-64.29,128.12,319.0,6,65,6,0,4,52.4
@@ -17,8 +17,8 @@ S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),207,9
 S356,GapDown_14DTE,14d,watch,fat left tail (p10 < -45%),63,27,14,13,11.32,36.0,-51.16,-35.65,66.6,123.0,8,55,0,0,5,37.0
 S361,RubberBand_2DTE,2d,watch,fat left tail (p10 < -45%),151,55,29,26,101.86,17.78,-67.78,-50.0,293.33,317.0,13,55,12,0,13,23.6
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),103,45,24,21,58.69,15.0,-65.1,-51.35,232.57,714.0,11,55,4,0,9,28.9
-S401,Any_Gap_Down_Small,3d,watch,fat left tail (p10 < -45%),266,127,64,63,61.46,6.94,-84.29,-50.98,249.23,1062.0,21,55,20,12,23,25.2
 S411,RubberBand_OTM2,3d,watch,fat left tail (p10 < -45%),146,46,24,22,-5.14,5.2,-57.12,-51.6,60.56,-160.0,12,52,8,0,13,19.6
+S401,Any_Gap_Down_Small,3d,watch,fat left tail (p10 < -45%),266,128,64,64,60.61,3.47,-84.29,-50.98,245.25,1039.0,21,55,20,13,23,25.0
 S398,GapDown_ATM,3d,watch,fat left tail (p10 < -45%),148,57,29,28,37.4,3.33,-68.29,-54.29,176.92,789.0,11,55,6,0,12,28.1
 S358,GapDown_30DTE,30d,watch,insufficient sample (<8 exits),14,4,2,2,1.35,0.84,-51.39,-51.39,54.49,-21.0,3,51,0,0,2,50.0
 S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
@@ -67,7 +67,7 @@ S393,VolClimax_21DTE,21d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.
 S394,VolClimax_30DTE,30d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S395,GapDown_ITM3,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S402,Any_High_Volume,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
-S409,RubberBand_ATM,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
+S409,RubberBand_ATM,3d,watch,insufficient sample (<8 exits),2,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,2,0,0,0.0
 S413,BBSqueeze_ITM3,0d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S414,BBSqueeze_ITM2,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S415,BBSqueeze_ITM1,7d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0

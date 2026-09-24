@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-09-24 14:59:26.602197+00:00,entry,874,lab0874_s409_w3_1045_1120_r1,S409,4eec22384f35,SMCI,SMCI260925C00040000,1,0.72,0.72,72.0,,,,-0.01,,0.75,-0.75,0.027777777777777804,RB gap -2.4% reclaim,f227e106-873a-4e36-8217-41e0741a8d04
