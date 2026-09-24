@@ -1754,3 +1754,132 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20260924T135659Z
+
+- UTC timestamp: `20260924T135659Z`
+- GitHub run: [#10910](https://github.com/28twagg-ops/TradingBot/actions/runs/36008996221)
+- Run id: `36008996221`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260924T135659Z_live_bot.log`, `logs/action_runs/20260924T135659Z_live_options.log`, `logs/action_runs/20260924T135659Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1403 | 49.0 | -17.2 | +42.9 | $+17,366 |
+| TAINTED | 1887 | 33.4 | -38.8 | +12.8 | $-9,483 |
+| KEEP-only | 727 | 62.3 | +51.7 | +69.9 | $+11,927 |
+| KEEP-only recent | 534 | 60.5 | +54.3 | +81.2 | $+7,682 |
+
+- KEEP strategies (24): S163, S167, S168, S173, S174, S210, S218, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S399, S403, S404, S406, S412
+- KILL strategies (19): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S354, S355, S360, S363, S366, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-24T09:26:33.290399-04:00","date":"2026-09-24","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.9,"phases_s":{"reconcile":0.3},"signals":0,"placed":0,"equity":996607.46,"open_positions":11,"pending_orders":0,"open_lots":18,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"10904","github_run_id":"36005507693","status":"ok","data_quality":{"clean":{"n":1403,"win":48.97,"med":-17.19,"avg":42.88,"pnl":17366.16},"tainted":{"n":1887,"win":33.39,"med":-38.81,"avg":12.83,"pnl":-9483.28},"keep_only":{"n":727,"win":62.31,"med":51.72,"avg":69.85,"pnl":11927.45},"keep_only_recent":{"n":534,"win":60.49,"med":54.33,"avg":81.25,"pnl":7682.0},"keep_strategies":["S163","S167","S168","S173","S174","S210","S218","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S399","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S354","S355","S360","S363","S366","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (72 earlier lines - see full log file)
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                   no (stale (8656.6m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  COP  P&L +1.6%  $+0.52                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  36                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.84   62.8   -2.37   50MA bounce (+|
+|  COHR     Pullback50      eq     $295.35  58.5   -2.44   50MA bounce (-|
+|  GLW      Pullback50      eq     $153.97  55.3   -2.14   50MA bounce (+|
+|  CPAY     Pullback50      eq     $397.37  27.0   -2.63   50MA bounce (-|
+|  DRI      Pullback50      eq     $210.88  41.7   -2.14   50MA bounce (-|
+|  ECL      Pullback50      eq     $277.78  47.8   -2.34   50MA bounce (-|
+|  EG       Pullback50      eq     $375.50  39.4   -1.16   50MA bounce (+|
+|  JCI      Pullback50      eq     $144.79  54.4   -2.28   50MA bounce (-|
+|  LLY      Pullback50      eq     $1182.~  57.5   -2.53   50MA bounce (+|
+|  MAR      Pullback50      eq     $353.79  67.4   -1.92   50MA bounce (+|
+|  MA       Pullback50      eq     $564.67  32.9   -2.29   50MA bounce (-|
+|  MDLZ     Pullback50      eq     $62.01   54.7   -2.39   50MA bounce (-|
+|  OXY      Pullback50      eq     $58.28   41.4   -2.48   50MA bounce (-|
+|  PFG      Pullback50      eq     $114.18  37.7   -1.79   50MA bounce (+|
+|  DGX      Pullback50      eq     $235.31  45.1   -1.89   50MA bounce (+|
+|  RSG      Pullback50      eq     $215.81  32.1   -2.59   50MA bounce (-|
+|  VLTO     Pullback50      eq     $96.97   46.2   -1.61   50MA bounce (+|
+|  WAB      Pullback50      eq     $291.06  64.8   -2.39   50MA bounce (+|
+|  V        Pullback50      eq     $365.24  33.6   -1.52   50MA bounce (-|
+|  WELL     Pullback50      eq     $236.54  42.7   -1.51   50MA bounce (-|
+|  AIT      Pullback50      eq     $334.83  62.7   -1.61   50MA bounce (-|
+|  CLH      Pullback50      eq     $315.19  43.7   -2.80   50MA bounce (+|
+|  COKE     Pullback50      eq     $188.91  39.2   -1.27   50MA bounce (-|
+|  EGP      Pullback50      eq     $204.91  68.2   -1.43   50MA bounce (+|
+|  FLS      Pullback50      eq     $76.41   47.7   -2.82   50MA bounce (+|
+|  GEF      Pullback50      eq     $84.81   48.7   -2.49   50MA bounce (+|
+|  GHC      Pullback50      eq     $1153.~  60.8   -2.23   50MA bounce (-|
+|  KRYS     Pullback50      eq     $342.18  29.4   -1.34   50MA bounce (-|
+|  MSA      Pullback50      eq     $183.12  40.5   -1.78   50MA bounce (-|
+|  MTSI     Pullback50      eq     $271.06  54.4   -2.10   50MA bounce (-|14:00:37  INFO        BUY  AES  $33.82  [Pullback50]  id=453fc7d4-d9bf-4da7-bc65-35e42ea7e63c
+14:00:37  INFO        BUY  COHR  $33.82  [Pullback50]  id=58c57615-1866-4aa9-9b56-c593c0606ec4
+14:00:59  INFO        place_all_stops: checking 3 positions...
+14:00:59  INFO        STOP-MARKET placed AES  qty=2 (pos=2.2786)  stop=$14.76  id=ece6dc00-a212-48e4-8cc9-2f123fae6f53
+14:00:59  INFO        STOP skipped COHR: fractional (0.1141 shares) — software exit will handle it
+14:00:59  INFO        STOP skipped COP: fractional (0.2639 shares) — software exit will handle it
+14:00:59  INFO        Daily log -> logs/daily/2026-09-24.md
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---

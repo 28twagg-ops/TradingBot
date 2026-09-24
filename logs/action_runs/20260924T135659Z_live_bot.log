@@ -1,0 +1,236 @@
+13:57:01  INFO      Mode: morning_scan
+13:57:02  INFO        [positions] 1/1 (1 valid)
+13:57:02  INFO        Universe cache hit: 901 tickers (tickers_2026-09-24.json)
+13:57:03  INFO        [universe] 40/900 (40 valid)
+13:57:04  INFO        [universe] 80/900 (80 valid)
+13:57:05  INFO        [universe] 120/900 (120 valid)
+13:57:07  INFO        [universe] 160/900 (160 valid)
+13:57:08  INFO        [universe] 200/900 (199 valid)
+13:57:15  INFO        [universe] 240/900 (238 valid)
+13:57:28  INFO        [universe] 280/900 (278 valid)
+13:57:41  INFO        [universe] 320/900 (318 valid)
+13:57:51  INFO        [universe] 360/900 (358 valid)
+13:58:04  INFO        [universe] 400/900 (398 valid)
+13:58:17  INFO        [universe] 440/900 (438 valid)
+13:58:27  INFO        [universe] 480/900 (478 valid)
+13:58:40  INFO        [universe] 520/900 (518 valid)
+13:58:53  INFO        [universe] 560/900 (558 valid)
+13:59:03  INFO        [universe] 600/900 (598 valid)
+13:59:16  INFO        [universe] 640/900 (638 valid)
+13:59:29  INFO        [universe] 680/900 (678 valid)
+13:59:39  INFO        [universe] 720/900 (718 valid)
+13:59:52  INFO        [universe] 760/900 (758 valid)
+14:00:05  INFO        [universe] 800/900 (798 valid)
+14:00:15  INFO        [universe] 840/900 (838 valid)
+14:00:28  INFO        [universe] 880/900 (878 valid)
+14:00:35  INFO        [universe] 900/900 (898 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:57 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $225.44|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-09-24|
+|  Universe                                                          both|
+|  Mo~  Sep: GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $225.44|
+|  Cash                                                           $191.21|
+|  Reserve                                          $11.27  (always kept)|
+|  Stocks~  $34.23 / $169.08  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $134.85  (new stock buys)|
+|  Trade size             $33.82  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (1 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  COP      Pullback50      $34.23     $127.75  $129.74  +1.6%   $+0.52  |
+|                                                                        |
+|  Total invested                                                  $34.23|
+|  Total open P&L                                                  $+0.52|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                   no (stale (8656.6m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  COP  P&L +1.6%  $+0.52                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  36                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.84   62.8   -2.37   50MA bounce (+|
+|  COHR     Pullback50      eq     $295.35  58.5   -2.44   50MA bounce (-|
+|  GLW      Pullback50      eq     $153.97  55.3   -2.14   50MA bounce (+|
+|  CPAY     Pullback50      eq     $397.37  27.0   -2.63   50MA bounce (-|
+|  DRI      Pullback50      eq     $210.88  41.7   -2.14   50MA bounce (-|
+|  ECL      Pullback50      eq     $277.78  47.8   -2.34   50MA bounce (-|
+|  EG       Pullback50      eq     $375.50  39.4   -1.16   50MA bounce (+|
+|  JCI      Pullback50      eq     $144.79  54.4   -2.28   50MA bounce (-|
+|  LLY      Pullback50      eq     $1182.~  57.5   -2.53   50MA bounce (+|
+|  MAR      Pullback50      eq     $353.79  67.4   -1.92   50MA bounce (+|
+|  MA       Pullback50      eq     $564.67  32.9   -2.29   50MA bounce (-|
+|  MDLZ     Pullback50      eq     $62.01   54.7   -2.39   50MA bounce (-|
+|  OXY      Pullback50      eq     $58.28   41.4   -2.48   50MA bounce (-|
+|  PFG      Pullback50      eq     $114.18  37.7   -1.79   50MA bounce (+|
+|  DGX      Pullback50      eq     $235.31  45.1   -1.89   50MA bounce (+|
+|  RSG      Pullback50      eq     $215.81  32.1   -2.59   50MA bounce (-|
+|  VLTO     Pullback50      eq     $96.97   46.2   -1.61   50MA bounce (+|
+|  WAB      Pullback50      eq     $291.06  64.8   -2.39   50MA bounce (+|
+|  V        Pullback50      eq     $365.24  33.6   -1.52   50MA bounce (-|
+|  WELL     Pullback50      eq     $236.54  42.7   -1.51   50MA bounce (-|
+|  AIT      Pullback50      eq     $334.83  62.7   -1.61   50MA bounce (-|
+|  CLH      Pullback50      eq     $315.19  43.7   -2.80   50MA bounce (+|
+|  COKE     Pullback50      eq     $188.91  39.2   -1.27   50MA bounce (-|
+|  EGP      Pullback50      eq     $204.91  68.2   -1.43   50MA bounce (+|
+|  FLS      Pullback50      eq     $76.41   47.7   -2.82   50MA bounce (+|
+|  GEF      Pullback50      eq     $84.81   48.7   -2.49   50MA bounce (+|
+|  GHC      Pullback50      eq     $1153.~  60.8   -2.23   50MA bounce (-|
+|  KRYS     Pullback50      eq     $342.18  29.4   -1.34   50MA bounce (-|
+|  MSA      Pullback50      eq     $183.12  40.5   -1.78   50MA bounce (-|
+|  MTSI     Pullback50      eq     $271.06  54.4   -2.10   50MA bounce (-|14:00:37  INFO        BUY  AES  $33.82  [Pullback50]  id=453fc7d4-d9bf-4da7-bc65-35e42ea7e63c
+14:00:37  INFO        BUY  COHR  $33.82  [Pullback50]  id=58c57615-1866-4aa9-9b56-c593c0606ec4
+14:00:59  INFO        place_all_stops: checking 3 positions...
+14:00:59  INFO        STOP-MARKET placed AES  qty=2 (pos=2.2786)  stop=$14.76  id=ece6dc00-a212-48e4-8cc9-2f123fae6f53
+14:00:59  INFO        STOP skipped COHR: fractional (0.1141 shares) — software exit will handle it
+14:00:59  INFO        STOP skipped COP: fractional (0.2639 shares) — software exit will handle it
+14:00:59  INFO        Daily log -> logs/daily/2026-09-24.md
+14:00:59  INFO        Dashboard written → logs/dashboard.md
+
+|  MUR      Pullback50      eq     $36.80   47.9   -1.97   50MA bounce (-|
+|  PK       Pullback50      eq     $15.13   51.6   -1.91   50MA bounce (-|
+|  SHC      Pullback50      eq     $18.51   41.6   -1.62   50MA bounce (-|
+|  SN       Pullback50      eq     $170.94  45.1   -1.71   50MA bounce (-|
+|  TTC      Pullback50      eq     $96.14   66.0   -1.71   50MA bounce (+|
+|  TTMI     Pullback50      eq     $124.61  58.1   -2.24   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AES  Pullback50                                    $33.82|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] COHR  Pullback50                                   $33.82|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] GLW  Pullback50                                      cap 3|
+|    SKIP [eq] CPAY  Pullback50                                     cap 3|
+|    SKIP [eq] DRI  Pullback50                                      cap 3|
+|    SKIP [eq] ECL  Pullback50                                      cap 3|
+|    SKIP [eq] EG  Pullback50                                       cap 3|
+|    SKIP [eq] JCI  Pullback50                                      cap 3|
+|    SKIP [eq] LLY  Pullback50                                      cap 3|
+|    SKIP [eq] MAR  Pullback50                                      cap 3|
+|    SKIP [eq] MA  Pullback50                                       cap 3|
+|    SKIP [eq] MDLZ  Pullback50                                     cap 3|
+|    SKIP [eq] OXY  Pullback50                                      cap 3|
+|    SKIP [eq] PFG  Pullback50                                      cap 3|
+|    SKIP [eq] DGX  Pullback50                                      cap 3|
+|    SKIP [eq] RSG  Pullback50                                      cap 3|
+|    SKIP [eq] VLTO  Pullback50                                     cap 3|
+|    SKIP [eq] WAB  Pullback50                                      cap 3|
+|    SKIP [eq] V  Pullback50                                        cap 3|
+|    SKIP [eq] WELL  Pullback50                                     cap 3|
+|    SKIP [eq] AIT  Pullback50                                      cap 3|
+|    SKIP [eq] CLH  Pullback50                                      cap 3|
+|    SKIP [eq] COKE  Pullback50                                     cap 3|
+|    SKIP [eq] EGP  Pullback50                                      cap 3|
+|    SKIP [eq] FLS  Pullback50                                      cap 3|
+|    SKIP [eq] GEF  Pullback50                                      cap 3|
+|    SKIP [eq] GHC  Pullback50                                      cap 3|
+|    SKIP [eq] KRYS  Pullback50                                     cap 3|
+|    SKIP [eq] MSA  Pullback50                                      cap 3|
+|    SKIP [eq] MTSI  Pullback50                                     cap 3|
+|    SKIP [eq] MUR  Pullback50                                      cap 3|
+|    SKIP [eq] PK  Pullback50                                       cap 3|
+|    SKIP [eq] SHC  Pullback50                                      cap 3|
+|    SKIP [eq] SN  Pullback50                                       cap 3|
+|    SKIP [eq] TTC  Pullback50                                      cap 3|
+|    SKIP [eq] TTMI  Pullback50                                     cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  AES                                                  still unconfirmed|
+|  COHR                                                 still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            898|
+|  Signals                                                             36|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $225.48|
+|  Cash                                                           $123.59|
++========================================================================+
