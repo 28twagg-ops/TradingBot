@@ -1,6 +1,6 @@
 # Ledger health — 2026-09-24
 
-_Generated 2026-09-24T10:04:45.602522_
+_Generated 2026-09-24T10:09:20.737959_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -10,12 +10,12 @@ State file: OK
 
 | Check                       | Count | Status |
 |-----------------------------|------:|--------|
-| Current stuck (state)       |     3 | WARN |
-| Orphaned lots (post-stable) |  1581 | WARN |
+| Current stuck (state)       |     2 | WARN |
+| Orphaned lots (post-stable) |  1580 | WARN |
 | Missing exit records (post) |  1578 | WARN |
-| State/ledger mismatches     |     4 | WARN |
-| Total open lots             |    63 | INFO |
-| Total closed lots           |  2430 | INFO |
+| State/ledger mismatches     |     5 | WARN |
+| Total open lots             |   103 | INFO |
+| Total closed lots           |  2433 | INFO |
 | Pre-cutoff audit debt       |     0 | INFO |
 | Transition audit debt       |   744 | INFO |
 
@@ -29,15 +29,15 @@ Notes:
 
 | lot_id | strategy | symbol | entry_day | age_days |
 |--------|----------|--------|-----------|---------:|
-| c749b9facdbb | S366 | MARA | 2026-09-04 | 20 |
 | 53ee58608a69 | S366 | MARA | 2026-09-04 | 20 |
 | 01aab77eeb4e | S366 | MARA | 2026-09-04 | 20 |
 
-_Orphaned ledger detail omitted (1581 rows) — see note above on historical lot_id churn._
+_Orphaned ledger detail omitted (1580 rows) — see note above on historical lot_id churn._
 
 ## State/ledger mismatches
 
-- `890ad6c3ba50`
-- `bef81add1e9f`
+- `33540ce5b718`
+- `46533a25f6fc`
+- `90ceb5261d18`
+- `b5676237bf5c`
 - `ca4efb952018`
-- `f251ecba69fa`

@@ -29,4 +29,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16T18:51:21Z,reconcile,777,lab0777_s397_w1_0928_1005_r2,S397,426047b33a13,MARA,MARA260918C00011500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-18 13:48:31.968523+00:00,entry,777,lab0777_s397_w1_0928_1005_r2,S397,f2a21fd2e0bf,NFLX,NFLX260925C00074000,1,0.5,0.5,50.0,,,,-0.01,,0.75,-0.75,0.08163265306122457,gap -5.4%,3e05097c-ec06-4905-b5c4-0dbf54e4114e
 2026-09-22T14:36:27Z,reconcile,777,lab0777_s397_w1_0928_1005_r2,S397,f2a21fd2e0bf,NFLX,NFLX260925C00074000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-24 14:03:34.178116+00:00,entry,777,lab0777_s397_w1_0928_1005_r2,S397,d547fb4edced,AMD,AMD260925C00652500,1,0.64,0.63,63.0,,,,-0.01,,0.75,-0.75,0.13114754098360668,gap -2.3%,dc6038e9-99e7-4f3e-a2b2-d31a9f623599
+2026-09-24 14:03:34.178116+00:00,entry,777,lab0777_s397_w1_0928_1005_r2,S397,7f67830b67a7,AMD,AMD260925C00652500,1,0.63,0.63,63.0,,,,-0.01,,0.5,-0.5,,,dc6038e9-99e7-4f3e-a2b2-d31a9f623599

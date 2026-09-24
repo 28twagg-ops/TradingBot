@@ -9,4 +9,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-22T14:16:23Z,reconcile,179,lab0179_s217_w1_0928_1005_r2,S217,c276df9006ec,BAC,BAC260925C00058000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-23 14:03:27.724811+00:00,entry,179,lab0179_s217_w1_0928_1005_r2,S217,4e81a2586a46,BAC,BAC260925C00057000,1,0.22,0.21,21.0,,,,-0.01,,0.5,-0.5,0.1395348837209302,RSI=15.7 green,4a3fd775-e70c-4237-b560-aa3443641ad8
 2026-09-23T15:51:18Z,reconcile,179,lab0179_s217_w1_0928_1005_r2,S217,4e81a2586a46,BAC,BAC260925C00057000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-24 14:04:25.906504+00:00,entry,179,lab0179_s217_w1_0928_1005_r2,S217,27c26c3e5274,JPM,JPM260925C00345000,1,0.36,0.35,35.0,,,,-0.01,,0.5,-0.5,0.08450704225352106,RSI=22.9 green,3b1037e8-981d-4dfd-9669-13c4bb05a5a6
+2026-09-24 14:04:25.906504+00:00,entry,179,lab0179_s217_w1_0928_1005_r2,S217,b3d3614245d6,JPM,JPM260925C00345000,1,0.35,0.35,35.0,,,,-0.01,,0.5,-0.5,,,3b1037e8-981d-4dfd-9669-13c4bb05a5a6

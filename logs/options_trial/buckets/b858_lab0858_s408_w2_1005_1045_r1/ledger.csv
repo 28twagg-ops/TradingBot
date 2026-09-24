@@ -29,4 +29,6 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-17 14:07:00.076014+00:00,entry,858,lab0858_s408_w2_1005_1045_r1,S408,8ec0fff4327b,CRWD,CRWD260918C00270000,1,0.11,0.1,10.0,,,,-0.01,,0.75,-0.75,0.18181818181818174,RB gap -2.2% reclaim,2263d801-76cf-49d2-863d-c42ca3a18427
 2026-09-21T13:01:18Z,reconcile,858,lab0858_s408_w2_1005_1045_r1,S408,8ec0fff4327b,CRWD,CRWD260918C00270000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-23 14:32:12.647724+00:00,entry,858,lab0858_s408_w2_1005_1045_r1,S408,753d233a4301,COIN,COIN260925C00230000,1,0.16,0.15,15.0,,,,-0.01,,0.75,-0.75,0.19354838709677416,RB gap -1.5% reclaim,a1e8c250-51dc-4db3-b3a2-ec1194c984c3
-2026-09-24T14:02:34Z,reconcile,858,lab0858_s408_w2_1005_1045_r1,S408,753d233a4301,COIN,COIN260925C00230000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24T13:40:41Z,reconcile,858,lab0858_s408_w2_1005_1045_r1,S408,753d233a4301,COIN,COIN260925C00230000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24 14:08:25.768870+00:00,entry,858,lab0858_s408_w2_1005_1045_r1,S408,74c69f67473f,HOOD,HOOD260925C00129000,1,0.24,0.23,23.0,,,,-0.01,,0.75,-0.75,0.1276595744680851,RB gap -2.6% reclaim,ed403d72-a953-4b99-85f4-f138675d07bd
+2026-09-24 13:35:03.388456+00:00,exit,858,lab0858_s408_w2_1005_1045_r1,S408,74c69f67473f,HOOD,HOOD260925C00129000,1,,0.05,23.0,-78.26,-18.0,reconcile_fill,,-0.01,0.5,-0.5,,,136e2be3-39da-48e9-8f8d-d4dd2600ffe1
