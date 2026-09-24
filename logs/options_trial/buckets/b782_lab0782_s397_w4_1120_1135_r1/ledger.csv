@@ -22,3 +22,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-18T13:47:26Z,reconcile,782,lab0782_s397_w4_1120_1135_r1,S397,df23aa2d907d,CRWD,CRWD260918C00255000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24 15:28:27.338321+00:00,entry,782,lab0782_s397_w4_1120_1135_r1,S397,88b156e52ef4,AMD,AMD260925C00642500,1,0.63,0.63,63.0,,,,-0.01,,0.5,-0.5,,,de39c676-058f-48ae-a2fe-1aa6ae7e42a4
 2026-09-24 15:29:31.187618+00:00,entry,782,lab0782_s397_w4_1120_1135_r1,S397,e4c147867f21,HOOD,HOOD260925C00124000,1,0.71,0.71,71.0,,,,-0.01,,0.75,-0.75,0.05714285714285704,gap -2.6%,7b27d226-26e6-4ece-ae39-10803159ecc1
+2026-09-24T16:51:18Z,reconcile,782,lab0782_s397_w4_1120_1135_r1,S397,88b156e52ef4,AMD,AMD260925C00642500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24 16:46:29.083734+00:00,exit,782,lab0782_s397_w4_1120_1135_r1,S397,e4c147867f21,HOOD,HOOD260925C00124000,1,,2.17,71.0,205.63,146.0,take_profit (+239.7%),,-0.01,0.5,-0.5,,,eee154b6-cddf-427b-ac18-b4eafc17879c
