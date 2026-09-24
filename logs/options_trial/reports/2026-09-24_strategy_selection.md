@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-24
 
-_Generated 2026-09-24T11:12:17.698839_
+_Generated 2026-09-24T11:17:40.707185_
 
 ## Summary
 
@@ -11,8 +11,8 @@ _Generated 2026-09-24T11:12:17.698839_
 
 ## Attribution health
 
-- Total exits: **3321**
-- Orphan exits (b0/orphan_reconcile): **402**
+- Total exits: **3323**
+- Orphan exits (b0/orphan_reconcile): **403**
 - Orphan rate: **12.1%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
 
@@ -100,7 +100,7 @@ _Generated 2026-09-24T11:12:17.698839_
 | S367 (RubberBand_30DTE) | 30d | watch | 3 | 0.0 | -48.89 | -50.89 | -50.14 | -29.78 | 51 | 0 | 0 | $-77.00 | 66.7% | insufficient sample (<8 exits) |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 55 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 12 | 0.0 | -56.77 | -73.59 | -65.84 | -38.58 | 58 | 0 | 0 | $-208.00 | 33.3% | early sample with non-positive median |
-| S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 6 | 0.0 | -61.46 | -82.78 | -69.36 | -50.75 | 57 | 4 | 0 | $-210.00 | 83.3% | insufficient sample (<8 exits) |
+| S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 7 | 0.0 | -64.71 | -80.40 | -68.79 | -50.75 | 57 | 4 | 1 | $-212.00 | 71.4% | insufficient sample (<8 exits) |
 | S352 (GapDown_2DTE) | 2d | drop | 50 | 50.0 | -2.30 | -71.79 | -51.65 | +338.46 | 55 | 6 | 0 | $+237.00 | 22.0% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 58 | 48.3 | -2.90 | -52.91 | -47.59 | +164.14 | 55 | 10 | 2 | $+323.00 | 20.7% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 59 | 47.5 | -5.88 | -86.10 | -69.32 | +110.27 | 55 | 6 | 0 | $-89.00 | 42.4% | non-positive median return |
@@ -176,7 +176,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | S206 | 3d ATM gap-trend | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
 | S207 | 3d ATM gap-support | 37 | -47.06 | -63.64 | -55.71 | 0 | 0 |
 | S208 | 3d ATM gap-ma200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
-| S209 | 3d ATM gap-recovery | 6 | -61.46 | -82.78 | -69.36 | 4 | 0 |
+| S209 | 3d ATM gap-recovery | 7 | -64.71 | -80.40 | -68.79 | 4 | 1 |
 
 ### Phase-1 Bearish Gap & MA
 
@@ -246,7 +246,7 @@ _Pipeline evaluation as of 2026-09-24. Auto-kill thresholds: median<-25% at n>=1
 | S206 | GapDown_WithTrend | 0 | — | — | NEW | 0 |
 | S207 | GapDown_AtSupport | 37 | -47.06% | 5% | INSUFFICIENT | 59 |
 | S208 | GapDown_AboveMA200 | 0 | — | — | NEW | 0 |
-| S209 | GapDown_Recovery | 6 | -61.46% | 0% | WATCH | 57 |
+| S209 | GapDown_Recovery | 7 | -64.71% | 0% | WATCH | 57 |
 | S210 | MA_Cross_8_21 | 91 | -6.25% | 47% | INSUFFICIENT | 59 |
 | S211 | MA_Cross_21_50 | 54 | -43.65% | 24% | INSUFFICIENT | 59 |
 | S212 | MA_Bounce_50 | 83 | -68.09% | 13% | INSUFFICIENT | 59 |
