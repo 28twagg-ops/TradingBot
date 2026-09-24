@@ -15038,3 +15038,11 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-24 16:36:55.770802+00:00,exit,367,lab0367_s361_w3_1045_1120_r2,S361,fa74e14514ec,SMCI,SMCI260925C00041500,1,,0.52,26.0,100.0,26.0,take_profit (+85.5%),,-0.01,0.5,-0.5,,,e17a5deb-9cc1-417a-a855-35643ef2ae32
 2026-09-24 16:31:50.476381+00:00,exit,0,orphan_reconcile,ORPHAN,b5676237bf5c,AMZN,AMZN260928C00255000,1,,0.33,45.0,-26.67,-12.0,stop_loss (-46.5%),,-0.01,0.5,-0.4,,,e956307a-2547-4e50-a3d0-f0c01ff4a167
 2026-09-24 16:37:15.211304+00:00,exit,97,lab0097_s211_w2_1005_1045_r2,S211,cc5366e84665,ARM,ARM260925C00347500,1,,0.36,48.0,-25.0,-12.0,stop_loss (-58.3%),,-0.01,0.5,-0.5,,,41ec48f5-0317-4ab2-a9e7-978c9113ea1b
+2026-09-24T16:41:25Z,reconcile,90,live_1to1,S218,d1ed7843e24d,AMZN,AMZN260928C00252500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24T16:41:25Z,reconcile,0,orphan_reconcile,ORPHAN,2415dd10a37f,ARM,ARM260925C00347500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24T16:41:25Z,reconcile,366,lab0366_s361_w3_1045_1120_r1,S361,eed70d7a3ce0,SMCI,SMCI260925C00041500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24T16:41:25Z,reconcile,772,lab0772_s396_w3_1045_1120_r1,S396,c23aedcd2e1a,SMCI,SMCI260925C00040000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24T16:41:25Z,reconcile,100,lab0100_s211_w4_1120_1135_r1,S211,f09e4c509e95,ARM,ARM260925C00337500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24 16:41:09.132340+00:00,exit,806,lab0806_s404_w4_1120_1135_r1,S404,d776a074b201,AMD,AMD260925C00642500,1,,1.89,63.0,200.0,126.0,take_profit (+196.8%),,-0.01,0.5,-0.5,,,513d9c90-782e-482e-8142-46e6b1d44594
+2026-09-24 16:37:35.863573+00:00,exit,263,lab0263_s403_w1_0928_1005_r2,S403,7acace26e11b,SPY,SPY260928C00774000,1,,1.11,65.0,70.77,46.0,take_profit (+69.2%),,-0.01,0.5,-0.5,,,7227b44c-973c-4799-acaa-d20b7a7f3ba5
+2026-09-24 16:37:38.727165+00:00,exit,789,lab0789_s398_w3_1045_1120_r2,S398,c06f6ca35c12,SMCI,SMCI260925C00041000,1,,0.8,38.0,110.53,42.0,take_profit (+101.0%),,-0.01,0.5,-0.5,,,2f3d04b0-9ccd-496a-b590-8d5fbfc0e2a7
