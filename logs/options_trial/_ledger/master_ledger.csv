@@ -15003,3 +15003,6 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-24T16:01:19Z,reconcile,90,live_1to1,S404,bb1bbd9c32cb,AMD,AMD260925C00645000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24 15:56:28.133631+00:00,exit,833,lab0833_s406_w3_1045_1120_r2,S406,46d2b95bfaba,AMD,AMD260928C00680000,1,,0.16,32.0,-50.0,-16.0,stop_loss (-52.2%),,-0.01,0.5,-0.5,,,34669c8e-3583-4da2-9273-3b86c883805e
 2026-09-24 15:58:57.280111+00:00,exit,195,lab0195_s218_w2_1005_1045_r2,S218,d469f9e6002d,MCD,MCD260925C00245000,1,,0.26,43.0,-39.53,-17.0,reconcile_fill,,-0.01,0.5,-0.5,,,40cd906e-021f-476b-ab07-6d4807f4b582
+2026-09-24T16:06:29Z,reconcile,85,lab0085_s210_w3_1045_1120_r2,S210,e2e2efff8cb3,LLY,LLY260925C01250000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24T16:06:29Z,reconcile,84,lab0084_s210_w3_1045_1120_r1,S210,50db9aa98e3c,LLY,LLY260925C01250000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24T16:06:29Z,reconcile,832,lab0832_s406_w3_1045_1120_r1,S406,ef6e5067a5c9,AMD,AMD260928C00680000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
