@@ -34,3 +34,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16 18:36:28.260784+00:00,exit,197,lab0197_s218_w3_1045_1120_r2,S218,3a0b55bff107,AXP,AXP260925C00325000,1,,0.33,38.0,-13.16,-5.0,reconcile_fill,,-0.01,0.5,-0.5,,,d53b1005-4aae-4240-a94e-1f1a10709f47
 2026-09-23 14:51:58.224619+00:00,entry,197,lab0197_s218_w3_1045_1120_r2,S218,58e881c67c61,JPM,JPM260925C00360000,1,0.05,0.05,5.0,,,,-0.01,,0.5,-0.5,0.18181818181818174,low=336.98 BB_lower=341.49 touch+green,76e12f37-df2a-4beb-b9f1-2fd38f0ae85d
 2026-09-23T14:56:24Z,reconcile,197,lab0197_s218_w3_1045_1120_r2,S218,58e881c67c61,JPM,JPM260925C00360000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24 15:05:24.918294+00:00,entry,197,lab0197_s218_w3_1045_1120_r2,S218,c84c8b5826a3,JPM,JPM260925C00342500,1,0.45,0.4,40.0,,,,-0.01,,0.5,-0.5,0.1904761904761905,low=337.15 BB_lower=338.65 touch+green,8e4d6fb0-9a5e-4434-b245-fcc1784f0643
