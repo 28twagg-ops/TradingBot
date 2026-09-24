@@ -1056,7 +1056,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 1054,lab1054_s165_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,SMCI,S165,,entered_no_exit
 1055,lab1055_s165_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,SMCI,S165,,entered_no_exit
 1056,lab1056_s165_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,SMCI,S165,,entered_no_exit
-1057,lab1057_s165_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,SMCI,S165,,entered_no_exit
+1057,lab1057_s165_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,144.74,144.74,144.74,144.74,55.0,SMCI,S165,take_profit (+137.1%),closed
 1058,lab1058_s165_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,ARM,S165,,entered_no_exit
 1059,lab1059_s165_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,ARM,S165,,entered_no_exit
 1060,lab1060_s165_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
@@ -1140,7 +1140,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 1138,lab1138_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MARA,S163,,entered_no_exit
 1139,lab1139_s163_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MARA,S163,,entered_no_exit
 1140,lab1140_s163_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,SMCI,S163,,entered_no_exit
-1141,lab1141_s163_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,SMCI,S163,,entered_no_exit
+1141,lab1141_s163_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,53.23,53.23,53.23,53.23,33.0,SMCI,S163,take_profit (+55.7%),closed
 1142,lab1142_s163_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-10,False,,,,,,,0,,,,idle
 1143,lab1143_s163_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-10,False,,,,,,,0,,,,idle
 1144,lab1144_s163_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
