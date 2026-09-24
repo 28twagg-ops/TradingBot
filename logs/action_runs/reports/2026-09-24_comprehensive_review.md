@@ -1607,3 +1607,81 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20260924T134654Z
+
+- UTC timestamp: `20260924T134654Z`
+- GitHub run: [#10908](https://github.com/28twagg-ops/TradingBot/actions/runs/36007810077)
+- Run id: `36007810077`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260924T134654Z_live_bot.log`, `logs/action_runs/20260924T134654Z_live_options.log`, `logs/action_runs/20260924T134654Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1403 | 49.0 | -17.2 | +42.9 | $+17,366 |
+| TAINTED | 1887 | 33.4 | -38.8 | +12.8 | $-9,483 |
+| KEEP-only | 727 | 62.3 | +51.7 | +69.9 | $+11,927 |
+| KEEP-only recent | 534 | 60.5 | +54.3 | +81.2 | $+7,682 |
+
+- KEEP strategies (24): S163, S167, S168, S173, S174, S210, S218, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S399, S403, S404, S406, S412
+- KILL strategies (19): ORPHAN, S164, S202, S203, S207, S211, S212, S216, S217, S351, S354, S355, S360, S363, S366, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-24T09:26:33.290399-04:00","date":"2026-09-24","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.9,"phases_s":{"reconcile":0.3},"signals":0,"placed":0,"equity":996607.46,"open_positions":11,"pending_orders":0,"open_lots":18,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"10904","github_run_id":"36005507693","status":"ok","data_quality":{"clean":{"n":1403,"win":48.97,"med":-17.19,"avg":42.88,"pnl":17366.16},"tainted":{"n":1887,"win":33.39,"med":-38.81,"avg":12.83,"pnl":-9483.28},"keep_only":{"n":727,"win":62.31,"med":51.72,"avg":69.85,"pnl":11927.45},"keep_only_recent":{"n":534,"win":60.49,"med":54.33,"avg":81.25,"pnl":7682.0},"keep_strategies":["S163","S167","S168","S173","S174","S210","S218","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S399","S403","S404","S406","S412"],"kill_strategies":["ORPHAN","S164","S202","S203","S207","S211","S212","S216","S217","S351","S354","S355","S360","S363","S366","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+13:46:55  INFO      Mode: morning_scan
+13:46:56  INFO        [positions] 3/3 (3 valid)
+13:46:56  INFO        SELL MARKET [urgent] MLM closed
+13:46:58  INFO        TX logged: SELL MLM  P&L -0.8%
+13:46:58  INFO        SELL LIMIT MO  qty=0.489122542  limit=$70.17  id=511ed5cf-be00-4c66-a244-25a341e2ac4a
+13:47:29  INFO        SELL LIMIT filled MO (confirmed by position check)
+13:47:29  INFO        TX logged: SELL MO  P&L 1.93%
+13:47:29  INFO        Universe cache hit: 901 tickers (tickers_2026-09-24.json)
+13:47:30  INFO        [universe] 40/900 (40 valid)
+13:47:31  INFO        [universe] 80/900 (80 valid)
+13:47:32  INFO        [universe] 120/900 (120 valid)
+13:47:33  INFO        [universe] 160/900 (160 valid)
+13:47:35  INFO        [universe] 200/900 (199 valid)
+13:47:42  INFO        [universe] 240/900 (238 valid)
+13:47:55  INFO        [universe] 280/900 (278 valid)
+13:48:08  INFO        [universe] 320/900 (318 valid)
+13:48:18  INFO        [universe] 360/900 (358 valid)
+13:48:31  INFO        [universe] 400/900 (398 valid)
+13:48:41  INFO        [universe] 440/900 (438 valid)
+13:48:54  INFO        [universe] 480/900 (478 valid)
+13:49:07  INFO        [universe] 520/900 (518 valid)
+13:49:17  INFO        [universe] 560/900 (558 valid)
+13:49:31  INFO        [universe] 600/900 (598 valid)
+13:49:44  INFO        [universe] 640/900 (638 valid)
+13:49:54  INFO        [universe] 680/900 (678 valid)
+13:50:07  INFO        [universe] 720/900 (718 valid)
+13:50:17  INFO        [universe] 760/900 (758 valid)
+13:50:30  INFO        [universe] 800/900 (798 valid)
+13:50:44  INFO        [universe] 840/900 (838 valid)
+13:50:54  INFO        [universe] 880/900 (878 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
