@@ -1105,34 +1105,54 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "178b421b-3cc8-4172-9558-de5fa25c1a09",
+      "order_id": "f07603fd-7199-4e68-aeca-8fd13f10c4e3",
       "lot_id": "4103e29d2c68",
       "bucket_id": 166,
       "strategy_id": "S216",
       "occ_symbol": "MCD260925C00272500",
       "qty": 1,
       "reason": "stop_loss (-100.0%)",
-      "submitted": "2026-09-23T16:02:38"
+      "submitted": "2026-09-24T16:04:51"
     },
     {
-      "order_id": "b357ba1b-58f8-4b6f-bea4-bcd3b90d95fb",
+      "order_id": "8fc1a248-63b5-41eb-8858-659f6f73da1d",
+      "lot_id": "6eb8f18aa248",
+      "bucket_id": 169,
+      "strategy_id": "S216",
+      "occ_symbol": "V260925C00370000",
+      "qty": 1,
+      "reason": "take_profit (+50.8%)",
+      "submitted": "2026-09-24T16:04:51"
+    },
+    {
+      "order_id": "63907fa8-eeae-4d33-8221-498f5402ca73",
+      "lot_id": "1ee5deacd7df",
+      "bucket_id": 182,
+      "strategy_id": "S217",
+      "occ_symbol": "BAC260925C00058000",
+      "qty": 1,
+      "reason": "stop_loss (-75.0%)",
+      "submitted": "2026-09-24T16:04:52"
+    },
+    {
+      "order_id": "9078ea9c-b1c6-4503-823e-f80ca9249c09",
+      "lot_id": "52ec4353653c",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "MS260925C00210000",
+      "qty": 1,
+      "reason": "stop_loss (-100.0%)",
+      "submitted": "2026-09-24T16:04:52"
+    },
+    {
+      "order_id": "f66495df-b792-4078-9829-cebe35ea7fa5",
       "lot_id": "9d0564fb9dc4",
       "bucket_id": 76,
       "strategy_id": "S209",
       "occ_symbol": "MARA260925C00014500",
       "qty": 1,
       "reason": "stop_loss (-66.7%)",
-      "submitted": "2026-09-24T11:26:50"
-    },
-    {
-      "order_id": "ebd38912-9a4d-4cbd-9ebf-8671c6c3af8c",
-      "lot_id": "c84c8b5826a3",
-      "bucket_id": 197,
-      "strategy_id": "S218",
-      "occ_symbol": "JPM260925C00342500",
-      "qty": 1,
-      "reason": "take_profit (+52.1%)",
-      "submitted": "2026-09-24T12:56:20"
+      "submitted": "2026-09-24T16:04:53"
     }
   ],
   "bucket_open_premium": {
