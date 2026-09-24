@@ -1,5 +1,5 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
-S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,building sample (8-19 exits),125,13,9,4,163.84,142.11,-68.58,-55.36,474.14,457.0,5,65,7,1,5,46.2
+S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,building sample (8-19 exits),125,14,10,4,160.78,134.06,-66.92,-15.02,455.94,503.0,5,65,7,2,5,42.9
 S396,GapDown_ITM2,3d,watch,insufficient sample (<8 exits),30,7,6,1,67.21,87.5,11.87,79.79,104.17,304.0,4,49,2,1,2,85.7
 S409,RubberBand_ATM,3d,watch,insufficient sample (<8 exits),2,2,2,0,81.94,81.94,79.72,80.56,84.17,118.0,1,0,2,2,1,100.0
 S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,fat left tail (p10 < -45%),105,20,12,8,75.54,78.02,-74.52,-66.07,249.27,435.0,5,65,6,0,5,60.0
