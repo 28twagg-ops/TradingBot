@@ -662,26 +662,6 @@
       "entry_order_id": "f490e868-e179-471e-899c-ed63f35459e8"
     },
     {
-      "lot_id": "21ace66ff8ee",
-      "bucket_id": 1126,
-      "profile_name": "lab1126_s168_w3_1045_1120_r1",
-      "strategy_id": "S168",
-      "occ_symbol": "SMCI261002C00043500",
-      "underlying": "SMCI",
-      "qty": 1,
-      "entry_cost": 62.0,
-      "entry_price": 0.62,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-24T14:48:33.214604+00:00",
-      "entry_order_id": "2398f720-6062-4860-aede-56c5c35035cc"
-    },
-    {
       "lot_id": "c760932b4a74",
       "bucket_id": 437,
       "profile_name": "lab0437_s366_w3_1045_1120_r2",
@@ -1275,14 +1255,14 @@
       "submitted": "2026-09-24T12:56:20"
     },
     {
-      "order_id": "16dab3c4-c779-4829-9417-1a503879a5f3",
-      "lot_id": "21ace66ff8ee",
-      "bucket_id": 1126,
-      "strategy_id": "S168",
+      "order_id": "b5781f37-9f0f-4205-a639-aa2f1c0b6453",
+      "lot_id": "d27b6427d52a",
+      "bucket_id": 409,
+      "strategy_id": "S364",
       "occ_symbol": "SMCI261002C00043500",
       "qty": 1,
-      "reason": "take_profit (+70.5%)",
-      "submitted": "2026-09-24T14:22:47"
+      "reason": "take_profit (+77.0%)",
+      "submitted": "2026-09-24T14:26:21"
     }
   ],
   "bucket_open_premium": {
@@ -1319,7 +1299,6 @@
     "b167": 53.0,
     "b169": 59.0,
     "b168": 59.0,
-    "b1126": 62.0,
     "b437": 57.99999999999999,
     "b436": 57.99999999999999,
     "b409": 59.0,
@@ -1973,7 +1952,8 @@
     "b6fb6752-042a-4ec0-a68e-c99d438ca499",
     "c2335887-ea25-4062-90bc-954b8026fcc8",
     "76ab001a-35e7-442f-90fe-215d886e3ea7",
-    "27eb004b-78bc-4c8e-a5d3-4e97b3c212cf"
+    "27eb004b-78bc-4c8e-a5d3-4e97b3c212cf",
+    "16dab3c4-c779-4829-9417-1a503879a5f3"
   ],
   "submitted_today": 138,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
