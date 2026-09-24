@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-24
 
-_Generated 2026-09-24T10:17:45.739440_
+_Generated 2026-09-24T10:22:31.795831_
 
 ## Summary
 
@@ -104,7 +104,7 @@ _Generated 2026-09-24T10:17:45.739440_
 | S352 (GapDown_2DTE) | 2d | drop | 50 | 50.0 | -2.30 | -71.79 | -51.65 | +338.46 | 55 | 4 | 0 | $+237.00 | 22.0% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 58 | 48.3 | -2.90 | -52.91 | -47.59 | +164.14 | 55 | 8 | 2 | $+323.00 | 20.7% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 59 | 47.5 | -5.88 | -86.10 | -69.32 | +110.27 | 55 | 4 | 0 | $-89.00 | 42.4% | non-positive median return |
-| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 90 | 47.8 | -6.25 | -71.61 | -51.51 | +78.70 | 59 | 7 | 6 | $-78.00 | 18.9% | non-positive median return |
+| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 90 | 47.8 | -6.25 | -71.61 | -51.51 | +78.70 | 59 | 8 | 6 | $-78.00 | 18.9% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 80 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 80 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 61 | 41.0 | -33.33 | -81.48 | -60.00 | +518.18 | 52 | 10 | 3 | $+1,057.00 | 16.4% | non-positive median return |
@@ -193,7 +193,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S210 | 3d ATM MA cross 8/21 | 90 | -6.25 | -71.61 | -51.51 | 7 | 6 |
+| S210 | 3d ATM MA cross 8/21 | 90 | -6.25 | -71.61 | -51.51 | 8 | 6 |
 | S211 | 3d ATM MA cross 21/50 | 52 | -43.65 | -89.11 | -54.73 | 6 | 4 |
 | S212 | 3d ATM MA bounce 50 | 83 | -68.09 | -98.15 | -81.35 | 0 | 0 |
 | S213 | 3d ATM MA bounce 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
