@@ -861,7 +861,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 859,lab0859_s408_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,0.0,-86.96,-86.96,-86.96,-86.96,-20.0,HOOD,S408,reconcile_fill,closed
 860,lab0860_s408_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,SMCI,S408,,entered_no_exit
 861,lab0861_s408_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,SMCI,S408,,entered_no_exit
-862,lab0862_s408_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,SMCI,S408,,entered_no_exit
+862,lab0862_s408_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,SMCI,S408,,entered_no_exit
 863,lab0863_s408_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,100.0,100.0,100.0,100.0,3.0,SMCI,S408,take_profit (+66.7%),closed
 864,lab0864_s408_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 865,lab0865_s408_w5_1300_1330_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
@@ -1126,7 +1126,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 1124,lab1124_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MARA,S168,,entered_no_exit
 1125,lab1125_s168_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MARA,S168,,entered_no_exit
 1126,lab1126_s168_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,SMCI,S168,,entered_no_exit
-1127,lab1127_s168_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,SMCI,S168,,entered_no_exit
+1127,lab1127_s168_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,62.9,62.9,62.9,62.9,39.0,SMCI,S168,take_profit (+63.9%),closed
 1128,lab1128_s168_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-10,False,,,,,,,0,,,,idle
 1129,lab1129_s168_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-10,False,,,,,,,0,,,,idle
 1130,lab1130_s168_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle

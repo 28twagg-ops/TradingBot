@@ -15079,3 +15079,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-24T17:46:50Z,reconcile,79,lab0079_s209_w4_1120_1135_r2,S209,c0afb2c48f1c,MARA,MARA260925C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24T17:46:50Z,reconcile,78,lab0078_s209_w4_1120_1135_r1,S209,6967553193c5,MARA,MARA260925C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24 18:16:07.547231+00:00,exit,1140,lab1140_s163_w3_1045_1120_r1,S163,16aa000153f7,SMCI,SMCI261002C00043500,1,,0.98,62.0,58.06,36.0,take_profit (+59.0%),,-0.01,0.5,-0.5,,,76ab001a-35e7-442f-90fe-215d886e3ea7
+2026-09-24T18:22:42Z,reconcile,862,lab0862_s408_w4_1120_1135_r1,S408,6e2333243157,SMCI,SMCI260925C00044500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24 18:17:41.133677+00:00,exit,1127,lab1127_s168_w3_1045_1120_r2,S168,aed229ac6823,SMCI,SMCI261002C00043500,1,,1.01,62.0,62.9,39.0,take_profit (+63.9%),,-0.01,0.5,-0.5,,,27eb004b-78bc-4c8e-a5d3-4e97b3c212cf
