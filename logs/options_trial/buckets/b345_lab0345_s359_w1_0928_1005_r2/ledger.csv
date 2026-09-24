@@ -28,3 +28,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-18 13:48:21.495806+00:00,entry,345,lab0345_s359_w1_0928_1005_r2,S359,e631e1fe6916,NFLX,NFLX260918C00074000,1,0.05,0.04,4.0,,,,-0.01,,0.75,-0.75,0.18181818181818174,RB gap -5.4% reclaim,1204be58-0c4e-45d2-abb6-448bd5f5b53c
 2026-09-18T13:56:11Z,reconcile,345,lab0345_s359_w1_0928_1005_r2,S359,e631e1fe6916,NFLX,NFLX260918C00074000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24 14:03:33.518860+00:00,entry,345,lab0345_s359_w1_0928_1005_r2,S359,4ad2abacd0f8,AMD,AMD260925C00652500,1,0.63,0.63,63.0,,,,-0.01,,0.5,-0.5,,,f950b9f3-921b-4545-b9ac-a0141824e5af
+2026-09-24T14:56:33Z,reconcile,345,lab0345_s359_w1_0928_1005_r2,S359,4ad2abacd0f8,AMD,AMD260925C00652500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
