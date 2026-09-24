@@ -2973,6 +2973,16 @@
       "qty": 1,
       "reason": "stop_loss (-66.7%)",
       "submitted": "2026-09-24T11:26:50"
+    },
+    {
+      "order_id": "34669c8e-3583-4da2-9273-3b86c883805e",
+      "lot_id": "46d2b95bfaba",
+      "bucket_id": 833,
+      "strategy_id": "S406",
+      "occ_symbol": "AMD260928C00680000",
+      "qty": 1,
+      "reason": "stop_loss (-52.2%)",
+      "submitted": "2026-09-24T11:56:28"
     }
   ],
   "bucket_open_premium": {
