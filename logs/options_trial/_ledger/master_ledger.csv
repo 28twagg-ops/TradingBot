@@ -15076,3 +15076,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-24 17:26:38.132188+00:00,exit,1141,lab1141_s163_w3_1045_1120_r2,S163,399f922d40b3,SMCI,SMCI261002C00043500,1,,0.95,62.0,53.23,33.0,take_profit (+55.7%),,-0.01,0.5,-0.5,,,b6fb6752-042a-4ec0-a68e-c99d438ca499
 2026-09-24 17:28:15.171682+00:00,exit,1057,lab1057_s165_w3_1045_1120_r2,S165,5460022f55ce,SMCI,SMCI260925C00041000,1,,0.93,38.0,144.74,55.0,take_profit (+137.1%),,-0.01,0.5,-0.5,,,c2335887-ea25-4062-90bc-954b8026fcc8
 2026-09-24T17:36:38Z,reconcile,1056,lab1056_s165_w3_1045_1120_r1,S165,6e0d6630a26d,SMCI,SMCI260925C00041000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24T17:46:50Z,reconcile,79,lab0079_s209_w4_1120_1135_r2,S209,c0afb2c48f1c,MARA,MARA260925C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24T17:46:50Z,reconcile,78,lab0078_s209_w4_1120_1135_r1,S209,6967553193c5,MARA,MARA260925C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
