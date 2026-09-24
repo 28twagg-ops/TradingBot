@@ -192,7 +192,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 190,lab0190_s217_w7_1500_1530_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 191,lab0191_s217_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 192,lab0192_s218_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,AMZN,S218,,entered_no_exit
-193,lab0193_s218_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,AMZN,S218,,entered_no_exit
+193,lab0193_s218_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,58.33,58.33,58.33,58.33,14.0,AMZN,S218,take_profit (+54.2%),closed
 194,lab0194_s218_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MCD,S218,,entered_no_exit
 195,lab0195_s218_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-09-24,False,,0.0,-59.77,-59.77,-39.53,-80.0,-25.0,"MCD,MS",S218,stop_loss (-80.0%); reconcile_fill,closed
 196,lab0196_s218_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,JPM,S218,,entered_no_exit
@@ -283,7 +283,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 281,lab0281_s351_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,AMD,S351,,entered_no_exit
 282,lab0282_s351_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,SMCI,S351,,entered_no_exit
 283,lab0283_s351_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,SMCI,S351,,entered_no_exit
-284,lab0284_s351_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,SMCI,S351,,entered_no_exit
+284,lab0284_s351_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,128.95,128.95,128.95,128.95,49.0,SMCI,S351,take_profit (+124.2%),closed
 285,lab0285_s351_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,118.42,118.42,118.42,118.42,45.0,SMCI,S351,take_profit (+111.3%),closed
 286,lab0286_s351_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-15,False,,,,,,,0,,,,idle
 287,lab0287_s351_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-15,False,,,,,,,0,,,,idle
@@ -315,7 +315,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 313,lab0313_s355_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MARA,S355,,entered_no_exit
 314,lab0314_s355_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MARA,S355,,entered_no_exit
 315,lab0315_s355_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MARA,S355,,entered_no_exit
-316,lab0316_s355_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,SMCI,S355,,entered_no_exit
+316,lab0316_s355_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,53.23,53.23,53.23,53.23,33.0,SMCI,S355,take_profit (+54.1%),closed
 317,lab0317_s355_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,50.0,50.0,50.0,50.0,31.0,SMCI,S355,take_profit (+52.5%),closed
 318,lab0318_s355_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MARA,S355,,entered_no_exit
 319,lab0319_s355_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,MARA,S355,,entered_no_exit
