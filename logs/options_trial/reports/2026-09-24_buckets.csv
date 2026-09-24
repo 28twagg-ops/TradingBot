@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,5,4,2026-08-21,True,34,20.0,-20.93,-32.56,65.22,-70.0,-16.0,"AMZN,ARM,HOOD,MS,SMCI",ORPHAN,stop_loss (-40.6%); take_profit (+60.9%); stop_loss (-46.5%)…,closed
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,6,3,2026-08-21,True,34,33.3,-14.9,-29.62,65.22,-70.0,-7.0,"AMZN,ARM,HOOD,MARA,MS,SMCI",ORPHAN,stop_loss (-40.6%); take_profit (+60.9%); stop_loss (-46.5%)…,closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -291,7 +291,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 289,lab0289_s352_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,AMD,S352,,entered_no_exit
 290,lab0290_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,SMCI,S352,,entered_no_exit
 291,lab0291_s352_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,SMCI,S352,,entered_no_exit
-292,lab0292_s352_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,SMCI,S352,,entered_no_exit
+292,lab0292_s352_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,155.26,155.26,155.26,155.26,59.0,SMCI,S352,take_profit (+155.2%),closed
 293,lab0293_s352_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,118.42,118.42,118.42,118.42,45.0,SMCI,S352,take_profit (+113.9%),closed
 294,lab0294_s352_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-15,False,,,,,,,0,,,,idle
 295,lab0295_s352_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-15,False,,,,,,,0,,,,idle

@@ -222,26 +222,6 @@
       "entry_order_id": "58e40aee-3805-4bde-867a-03634558ae61"
     },
     {
-      "lot_id": "90ceb5261d18",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "MARA261009C00014000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 59.0,
-      "entry_price": 0.59,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-24T14:06:35.286007+00:00",
-      "entry_order_id": "orphan:MARA261009C00014000"
-    },
-    {
       "lot_id": "23f213ef8374",
       "bucket_id": 421,
       "profile_name": "lab0421_s365_w2_1005_1045_r2",
@@ -1002,26 +982,6 @@
       "entry_order_id": "2398f720-6062-4860-aede-56c5c35035cc"
     },
     {
-      "lot_id": "fe6920585bf4",
-      "bucket_id": 292,
-      "profile_name": "lab0292_s352_w3_1045_1120_r1",
-      "strategy_id": "S352",
-      "occ_symbol": "SMCI260925C00041000",
-      "underlying": "SMCI",
-      "qty": 1,
-      "entry_cost": 38.0,
-      "entry_price": 0.38,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-24T14:51:20.477085+00:00",
-      "entry_order_id": "5a2f3258-701f-4403-aa50-d6b139c8a2fa"
-    },
-    {
       "lot_id": "ec7095cdb4e8",
       "bucket_id": 285,
       "profile_name": "lab0285_s351_w3_1045_1120_r2",
@@ -1762,26 +1722,6 @@
       "entry_order_id": "orphan:MS260925C00210000"
     },
     {
-      "lot_id": "f1ba8a13db62",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "AMZN260928C00255000",
-      "underlying": "AMZN",
-      "qty": 1,
-      "entry_cost": 45.0,
-      "entry_price": 0.45,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-24T16:37:25.682513+00:00",
-      "entry_order_id": "orphan:AMZN260928C00255000"
-    },
-    {
       "lot_id": "b11f80ab93c8",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -1800,6 +1740,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-24T16:51:20.828958+00:00",
       "entry_order_id": "orphan:HOOD260925C00124000"
+    },
+    {
+      "lot_id": "05d99f7f477c",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "MARA261009C00014000",
+      "underlying": "MARA",
+      "qty": 1,
+      "entry_cost": 59.0,
+      "entry_price": 0.59,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-24T16:56:18.154602+00:00",
+      "entry_order_id": "orphan:MARA261009C00014000"
     }
   ],
   "pending_orders": [],
@@ -1835,26 +1795,6 @@
       "submitted": "2026-09-24T12:51:22"
     },
     {
-      "order_id": "32a53d8f-ca30-4780-aa10-48cec0023ee8",
-      "lot_id": "f1ba8a13db62",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "AMZN260928C00255000",
-      "qty": 1,
-      "reason": "take_profit (+51.1%)",
-      "submitted": "2026-09-24T12:51:22"
-    },
-    {
-      "order_id": "a5ab2283-4db5-4a0b-9e5a-7d1183337dab",
-      "lot_id": "fe6920585bf4",
-      "bucket_id": 292,
-      "strategy_id": "S352",
-      "occ_symbol": "SMCI260925C00041000",
-      "qty": 1,
-      "reason": "take_profit (+155.2%)",
-      "submitted": "2026-09-24T12:51:23"
-    },
-    {
       "order_id": "c2fd19b8-1fc7-426b-b82f-d5e03cabe496",
       "lot_id": "6e2333243157",
       "bucket_id": 862,
@@ -1863,6 +1803,36 @@
       "qty": 1,
       "reason": "take_profit (+100.0%)",
       "submitted": "2026-09-24T12:51:23"
+    },
+    {
+      "order_id": "ebd38912-9a4d-4cbd-9ebf-8671c6c3af8c",
+      "lot_id": "c84c8b5826a3",
+      "bucket_id": 197,
+      "strategy_id": "S218",
+      "occ_symbol": "JPM260925C00342500",
+      "qty": 1,
+      "reason": "take_profit (+52.1%)",
+      "submitted": "2026-09-24T12:56:20"
+    },
+    {
+      "order_id": "c2fbe3e5-c277-4976-b0b0-db0dc1fd7882",
+      "lot_id": "6aaaa09bb283",
+      "bucket_id": 235,
+      "strategy_id": "S401",
+      "occ_symbol": "AMZN260928C00257500",
+      "qty": 1,
+      "reason": "take_profit (+62.5%)",
+      "submitted": "2026-09-24T12:56:21"
+    },
+    {
+      "order_id": "1a9f27e7-de77-42aa-816a-b407c3d5cae6",
+      "lot_id": "ec7095cdb4e8",
+      "bucket_id": 285,
+      "strategy_id": "S351",
+      "occ_symbol": "SMCI260925C00041000",
+      "qty": 1,
+      "reason": "take_profit (+111.3%)",
+      "submitted": "2026-09-24T12:56:21"
     }
   ],
   "bucket_open_premium": {
@@ -1877,7 +1847,6 @@
     "b404": 55.00000000000001,
     "b391": 55.00000000000001,
     "b390": 55.00000000000001,
-    "b0": 185.0,
     "b421": 46.0,
     "b420": 46.0,
     "b407": 39.0,
@@ -1916,7 +1885,6 @@
     "b1140": 62.0,
     "b1127": 62.0,
     "b1126": 62.0,
-    "b292": 38.0,
     "b285": 38.0,
     "b284": 38.0,
     "b1099": 38.0,
@@ -1952,7 +1920,8 @@
     "b783": 71.0,
     "b198": 31.0,
     "b185": 31.0,
-    "b184": 31.0
+    "b184": 31.0,
+    "b0": 140.0
   },
   "session_date": "2026-09-24",
   "entries_locked": [
@@ -2563,7 +2532,9 @@
     "37379478-8e26-4283-9fea-93820e03ce24",
     "eee154b6-cddf-427b-ac18-b4eafc17879c",
     "2cb2206e-c7b3-4507-9c25-4c3502ddb6f3",
-    "8a4646ee-50f7-41fc-9dd3-a8bf948e324c"
+    "8a4646ee-50f7-41fc-9dd3-a8bf948e324c",
+    "a5ab2283-4db5-4a0b-9e5a-7d1183337dab",
+    "32a53d8f-ca30-4780-aa10-48cec0023ee8"
   ],
   "submitted_today": 138,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

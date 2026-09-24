@@ -15058,3 +15058,6 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-24 16:46:29.083734+00:00,exit,782,lab0782_s397_w4_1120_1135_r1,S397,e4c147867f21,HOOD,HOOD260925C00124000,1,,2.17,71.0,205.63,146.0,take_profit (+239.7%),,-0.01,0.5,-0.5,,,eee154b6-cddf-427b-ac18-b4eafc17879c
 2026-09-24 16:49:44.516747+00:00,exit,863,lab0863_s408_w4_1120_1135_r2,S408,d321c313fc6e,SMCI,SMCI260925C00044500,1,,0.06,3.0,100.0,3.0,take_profit (+66.7%),,-0.01,0.5,-0.5,,,2cb2206e-c7b3-4507-9c25-4c3502ddb6f3
 2026-09-24 16:46:23.931171+00:00,exit,293,lab0293_s352_w3_1045_1120_r2,S352,00be60f48999,SMCI,SMCI260925C00041000,1,,0.83,38.0,118.42,45.0,take_profit (+113.9%),,-0.01,0.5,-0.5,,,8a4646ee-50f7-41fc-9dd3-a8bf948e324c
+2026-09-24T16:56:15Z,reconcile,0,orphan_reconcile,ORPHAN,f1ba8a13db62,AMZN,AMZN260928C00255000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24 16:51:23.943293+00:00,exit,292,lab0292_s352_w3_1045_1120_r1,S352,fe6920585bf4,SMCI,SMCI260925C00041000,1,,0.97,38.0,155.26,59.0,take_profit (+155.2%),,-0.01,0.5,-0.5,,,a5ab2283-4db5-4a0b-9e5a-7d1183337dab
+2026-09-24 16:51:22.767673+00:00,exit,0,orphan_reconcile,ORPHAN,90ceb5261d18,MARA,MARA261009C00014000,1,,0.68,59.0,15.25,9.0,take_profit (+51.1%),,-0.01,0.5,-0.4,,,32a53d8f-ca30-4780-aa10-48cec0023ee8
