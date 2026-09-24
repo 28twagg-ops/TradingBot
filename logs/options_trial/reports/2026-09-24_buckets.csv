@@ -1,5 +1,5 @@
 bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits,open_lots,last_entry,stale,stale_days,win_rate_pct,avg_return_pct,med_return_pct,best_return_pct,worst_return_pct,realized_usd,symbols,strategies,exit_reasons,status
-0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,5,2026-08-21,True,34,,,,,,0,,,,stale_open
+0,lab0000_s200_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,0,2,3,2026-08-21,True,34,50.0,12.3,12.3,65.22,-40.62,17.0,"HOOD,SMCI",ORPHAN,stop_loss (-40.6%); take_profit (+60.9%),closed
 1,lab0001_s200_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-27,False,,,,,,,0,,,,idle
 2,lab0002_s200_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 3,lab0003_s200_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
@@ -829,7 +829,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 827,lab0827_s405_w7_1500_1530_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle
 828,lab0828_s406_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,0,2026-09-24,False,,,,,,,0,SMCI,S406,,entered_no_exit
 829,lab0829_s406_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,SMCI,S406,,entered_no_exit
-830,lab0830_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-24,False,,,,,,,0,HOOD,S406,,entered_no_exit
+830,lab0830_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,71.79,71.79,71.79,71.79,28.0,HOOD,S406,take_profit (+74.4%),closed
 831,lab0831_s406_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-24,False,,100.0,56.41,56.41,56.41,56.41,22.0,HOOD,S406,take_profit (+53.8%),closed
 832,lab0832_s406_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-18,False,,,,,,,0,,,,idle
 833,lab0833_s406_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-18,False,,,,,,,0,,,,idle
