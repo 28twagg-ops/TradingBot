@@ -8592,3 +8592,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-24 20:21:22,ext_exits,bull,224.88,157.2,0,0,0,2,COP|KNF,both
 2026-09-24 20:26:21,ext_exits,bull,224.88,157.2,0,0,0,2,COP|KNF,both
 2026-09-24 20:32:58,ext_exits,bull,224.88,157.2,0,0,0,2,COP|KNF,both
+2026-09-24 20:36:55,ext_exits,bull,224.88,157.2,0,0,0,2,COP|KNF,both
