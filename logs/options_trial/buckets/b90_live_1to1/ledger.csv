@@ -77,3 +77,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-24 14:03:34.432735+00:00,entry,90,live_1to1,S404,3226810b279d,AMD,AMD260925C00652500,1,0.63,0.63,63.0,,,,-0.01,,0.5,-0.4,,,9b478990-a816-4d1f-97be-e6a2829c4f9a
 2026-09-23 15:48:03.270987+00:00,exit,90,live_1to1,S218,d8dd6d734586,AMZN,AMZN260928C00255000,1,,0.31,45.0,-31.11,-14.0,reconcile_fill,,-0.01,0.5,-0.4,,,26372236-1a9b-417a-8c70-80e150075ad0
 2026-09-24 14:08:07.804921+00:00,entry,90,live_1to1,S218,d1ed7843e24d,AMZN,AMZN260928C00252500,1,0.74,0.74,74.0,,,,-0.01,,0.5,-0.4,0.06896551724137938,low=245.73 BB_lower=244.81 touch+green,138d60ae-02eb-474b-a883-946cef07e041
+2026-09-24T14:46:22Z,reconcile,90,live_1to1,S406,1c0fb85ebf45,SMCI,SMCI260925C00041000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-24 14:47:31.287189+00:00,entry,90,live_1to1,S406,3d59cb2507b7,SMCI,SMCI260925C00041000,1,0.43,0.42,42.0,,,,-0.01,,0.5,-0.4,0.14634146341463414,RB gap -2.4% reclaim,123fe11e-7aa1-45c9-bb58-b92e512a917e
