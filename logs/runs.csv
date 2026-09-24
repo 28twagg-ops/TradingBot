@@ -8587,3 +8587,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-24 19:56:22,scan_evening,bull,225.0,123.46,36,0,0,3,AES|COP|KNF,both
 2026-09-24 20:04:47,ext_exits,bull,224.88,157.2,0,0,0,2,COP|KNF,both
 2026-09-24 20:08:00,ext_exits,bull,224.88,157.2,0,0,0,2,COP|KNF,both
+2026-09-24 20:11:19,ext_exits,bull,224.88,157.2,0,0,0,2,COP|KNF,both
