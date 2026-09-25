@@ -8661,3 +8661,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-25 15:36:15,exits,bull,224.16,190.32,0,0,0,1,COP,both
 2026-09-25 15:41:30,exits,bull,224.16,190.32,0,0,0,1,COP,both
 2026-09-25 15:46:26,exits,bull,224.2,190.32,0,0,0,1,COP,both
+2026-09-25 15:51:15,exits,bull,224.2,190.32,0,0,0,1,COP,both
