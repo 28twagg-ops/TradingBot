@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-25
 
-_Generated 2026-09-25T12:56:41.300242_
+_Generated 2026-09-25T13:01:45.438579_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-25T12:56:41.300242_
 
 ## Attribution health
 
-- Total exits: **3412**
+- Total exits: **3413**
 - Orphan exits (b0/orphan_reconcile): **409**
 - Orphan rate: **12.0%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -117,8 +117,8 @@ _Generated 2026-09-25T12:56:41.300242_
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 60 | 0 | 0 | $-822.00 | 43.2% | manually paused — excluded from new entries & reflected P&L |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 68 | 35.3 | -47.08 | -78.25 | -59.12 | +112.16 | 60 | 17 | 7 | $+301.00 | 44.1% | non-positive median return |
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 56 | 0 | 0 | $+33.00 | 26.3% | manually paused — excluded from new entries & reflected P&L |
-| S399 (GapDown_OTM1) | 3d | drop | 75 | 41.3 | -50.00 | -83.07 | -66.67 | +146.00 | 56 | 14 | 5 | $-88.00 | 21.3% | non-positive median return |
 | S351 (GapDown_1DTE) | 1d | drop | 67 | 32.8 | -50.00 | -75.68 | -62.33 | +315.71 | 56 | 12 | 3 | $+305.00 | 19.4% | non-positive median return |
+| S399 (GapDown_OTM1) | 3d | drop | 76 | 40.8 | -50.72 | -83.01 | -66.67 | +145.00 | 56 | 14 | 6 | $-90.00 | 21.1% | non-positive median return |
 | S354 (GapDown_5DTE) | 5d | drop | 59 | 39.0 | -51.61 | -86.52 | -75.99 | +137.09 | 56 | 11 | 2 | $+85.00 | 33.9% | non-positive median return |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 63 | 22.2 | -51.67 | -86.04 | -68.93 | +69.15 | 60 | 13 | 6 | $-784.00 | 25.4% | non-positive median return |
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 40 | 10.0 | -55.91 | -78.77 | -67.43 | -3.10 | 60 | 0 | 0 | $-797.00 | 35.0% | manually paused — excluded from new entries & reflected P&L |
@@ -308,7 +308,7 @@ _Pipeline evaluation as of 2026-09-25. Auto-kill thresholds: median<-25% at n>=1
 | S396 | GapDown_ITM2 | 7 | +87.50% | 86% | WATCH | 50 |
 | S397 | GapDown_ITM1 | 39 | +66.67% | 74% | INSUFFICIENT | 56 |
 | S398 | GapDown_ATM | 59 | +3.33% | 53% | INSUFFICIENT | 56 |
-| S399 | GapDown_OTM1 | 75 | -50.00% | 41% | INSUFFICIENT | 56 |
+| S399 | GapDown_OTM1 | 76 | -50.72% | 41% | INSUFFICIENT | 56 |
 | S400 | Any_Green_Close | 6 | -50.00% | 17% | WATCH | 56 |
 | S401 | Any_Gap_Down_Small | 131 | +8.33% | 51% | INSUFFICIENT | 56 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
