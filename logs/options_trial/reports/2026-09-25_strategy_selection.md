@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-25
 
-_Generated 2026-09-25T12:41:47.800002_
+_Generated 2026-09-25T12:46:26.679943_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-25T12:41:47.800002_
 
 ## Attribution health
 
-- Total exits: **3410**
+- Total exits: **3411**
 - Orphan exits (b0/orphan_reconcile): **409**
 - Orphan rate: **12.0%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -104,6 +104,7 @@ _Generated 2026-09-25T12:41:47.800002_
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 56 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 12 | 0.0 | -56.77 | -73.59 | -65.84 | -38.58 | 59 | 0 | 0 | $-208.00 | 33.3% | early sample with non-positive median |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 7 | 0.0 | -64.71 | -80.40 | -68.79 | -50.75 | 58 | 6 | 1 | $-212.00 | 71.4% | insufficient sample (<8 exits) |
+| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | drop | 24 | 50.0 | -2.42 | -94.48 | -62.30 | +337.14 | 66 | 14 | 4 | $+433.00 | 25.0% | non-positive median return |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 95 | 48.4 | -6.25 | -71.05 | -51.41 | +82.76 | 60 | 19 | 11 | $-6.00 | 17.9% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 62 | 41.9 | -19.79 | -81.48 | -59.81 | +518.18 | 53 | 18 | 4 | $+1,060.00 | 16.1% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 81 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
@@ -116,7 +117,6 @@ _Generated 2026-09-25T12:41:47.800002_
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 60 | 0 | 0 | $-822.00 | 43.2% | manually paused — excluded from new entries & reflected P&L |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 68 | 35.3 | -47.08 | -78.25 | -59.12 | +112.16 | 60 | 17 | 7 | $+301.00 | 44.1% | non-positive median return |
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 56 | 0 | 0 | $+33.00 | 26.3% | manually paused — excluded from new entries & reflected P&L |
-| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | drop | 23 | 47.8 | -48.08 | -95.28 | -67.46 | +339.05 | 66 | 14 | 3 | $+410.00 | 26.1% | non-positive median return |
 | S399 (GapDown_OTM1) | 3d | drop | 75 | 41.3 | -50.00 | -83.07 | -66.67 | +146.00 | 56 | 14 | 5 | $-88.00 | 21.3% | non-positive median return |
 | S351 (GapDown_1DTE) | 1d | drop | 66 | 31.8 | -50.00 | -75.68 | -62.41 | +317.26 | 56 | 12 | 2 | $+290.00 | 19.7% | non-positive median return |
 | S354 (GapDown_5DTE) | 5d | drop | 59 | 39.0 | -51.61 | -86.52 | -75.99 | +137.09 | 56 | 11 | 2 | $+85.00 | 33.9% | non-positive median return |
@@ -137,7 +137,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S163 | 7d ATM | 23 | +64.86 | -74.16 | -63.09 | 10 | 2 |
-| S164 | 1d ATM | 23 | -48.08 | -95.28 | -67.46 | 14 | 3 |
+| S164 | 1d ATM | 24 | -2.42 | -94.48 | -62.30 | 14 | 4 |
 | S165 | 3d ATM | 255 | -35.29 | -63.24 | -53.42 | 12 | 1 |
 | S168 | 5d ATM | 22 | +66.12 | -74.26 | -62.57 | 10 | 2 |
 
@@ -225,7 +225,7 @@ _Pipeline evaluation as of 2026-09-25. Auto-kill thresholds: median<-25% at n>=1
 | Strategy | Signal | n | Median% | WR% | Status | Days |
 |----------|--------|---|---------|-----|--------|------|
 | S163 | A1 GapDown ATM call EO | 23 | +64.86% | 65% | INSUFFICIENT | 66 |
-| S164 | GapDown ATM 1-DTE — P2 | 23 | -48.08% | 48% | INSUFFICIENT | 66 |
+| S164 | GapDown ATM 1-DTE — P2 | 24 | -2.42% | 50% | INSUFFICIENT | 66 |
 | S165 | GapDown long call 3 DT | 255 | -35.29% | 32% | INSUFFICIENT | 81 |
 | S166 | GapDown strong call | 8 | +75.23% | 100% | WATCH | 66 |
 | S167 | GapDown long call 3 DT | 14 | +134.06% | 71% | WATCH | 66 |
