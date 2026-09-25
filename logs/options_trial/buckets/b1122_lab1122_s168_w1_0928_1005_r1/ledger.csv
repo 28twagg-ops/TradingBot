@@ -10,4 +10,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-15 14:02:56.073646+00:00,entry,1122,lab1122_s168_w1_0928_1005_r1,S168,0ae8bfe0bad1,MARA,MARA260918C00012000,1,0.2,0.19,19.0,,,,-0.01,,0.75,-0.75,0.04878048780487795,gap -2.0%,21b35df8-9096-43c0-9dbc-e2e342959d59
 2026-09-18 14:51:26.885722+00:00,exit,1122,lab1122_s168_w1_0928_1005_r1,S168,0ae8bfe0bad1,MARA,MARA260918C00012000,1,,0.65,19.0,242.11,46.0,take_profit (+232.2%),,-0.01,0.5,-0.5,,,5bb97ce0-5a8f-4080-8399-6eacff60799a
 2026-09-24 14:12:12.231994+00:00,entry,1122,lab1122_s168_w1_0928_1005_r1,S168,8e9d1a64ae4a,MARA,MARA261002C00014000,1,0.35,0.35,35.0,,,,-0.01,,0.5,-0.5,,,fed0a695-f6c6-4f43-9132-606f0c18785a
-2026-09-25T13:40:31Z,reconcile,1122,lab1122_s168_w1_0928_1005_r1,S168,8e9d1a64ae4a,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:34:59Z,reconcile,1122,lab1122_s168_w1_0928_1005_r1,S168,8e9d1a64ae4a,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

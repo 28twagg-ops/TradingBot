@@ -881,3 +881,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-09-24 19:48:24,2026-09-24,SELL,AES,Pullback50,14.865,14.86,14.8645,33.87,-0.0034,-0.0011,limit_fill_position_check_full,midline (+0.2%),bull
 2026-09-24 19:58:34,2026-09-24,SELL,AES,Pullback50,14.85,14.85,14.8545,33.74,0.0303,0.0102,limit_fill_position_check_full,midline (-0.0%),bull
 2026-09-25 13:47:01,2026-09-25,SELL,KNF,MomReversal,52.94,,52.94,33.28,0.0,0.0,market_urgent_full,stop_loss (-1.4%),bull
+2026-09-25 13:53:13,2026-09-25,SELL,GOOGL,Pullback50,344.3973,343.71,344.328,33.59,-0.0201,-0.0068,limit_fill_position_check_full,midline (-0.0%),bull
+2026-09-25 13:53:43,2026-09-25,SELL,GOOG,Pullback50,340.93,340.9,340.916,33.59,-0.0041,-0.0014,limit_fill_position_check_full,midline (-0.0%),bull

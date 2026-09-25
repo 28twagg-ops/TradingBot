@@ -1,0 +1,22 @@
+13:52:42  INFO      Mode: morning_scan
+13:52:43  INFO        [positions] 3/3 (3 valid)
+13:52:43  INFO        SELL LIMIT GOOGL  qty=0.097563382  limit=$343.71  id=f049cf58-193e-492d-9c48-06179aa10c5a
+13:53:13  INFO        SELL LIMIT filled GOOGL (confirmed by position check)
+13:53:13  INFO        TX logged: SELL GOOGL  P&L -0.04%
+13:53:13  INFO        SELL LIMIT GOOG  qty=0.098530687  limit=$340.90  id=f6756137-7414-40d0-ada5-ff5f5e316937
+13:53:43  INFO        SELL LIMIT filled GOOG (confirmed by position check)
+13:53:43  INFO        TX logged: SELL GOOG  P&L -0.02%
+13:53:43  INFO        Universe cache hit: 903 tickers (tickers_2026-09-25.json)
+13:53:44  INFO        [universe] 40/902 (40 valid)
+13:53:45  INFO        [universe] 80/902 (80 valid)
+13:53:46  INFO        [universe] 120/902 (120 valid)
+13:53:48  INFO        [universe] 160/902 (160 valid)
+13:53:49  INFO        [universe] 200/902 (199 valid)
+13:53:56  INFO        [universe] 240/902 (238 valid)
+13:54:09  INFO        [universe] 280/902 (278 valid)
+13:54:22  INFO        [universe] 320/902 (318 valid)
+13:54:32  INFO        [universe] 360/902 (358 valid)
+13:54:45  INFO        [universe] 400/902 (398 valid)
+13:54:57  INFO        [universe] 440/902 (438 valid)
+13:55:08  INFO        [universe] 480/902 (478 valid)
+13:55:21  INFO        [universe] 520/902 (518 valid)
