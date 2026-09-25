@@ -15263,3 +15263,7 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-25 15:32:21.961960+00:00,entry,782,lab0782_s397_w4_1120_1135_r1,S397,1d5c32671b51,DKNG,DKNG261002C00021500,1,0.6,0.59,59.0,,,,-0.01,,0.75,-0.75,0.15929203539823006,gap -2.1%,144cba2f-8cff-463d-883e-450abe292cf1
 2026-09-25 16:02:10.054150+00:00,exit,82,lab0082_s210_w2_1005_1045_r1,S210,df957a7335c1,SPY,SPY260928C00773000,1,,1.43,65.0,120.0,78.0,take_profit (+116.9%),,-0.01,0.5,-0.5,,,2bd80482-fa90-4e0f-b2d0-fbb445c639cf
 2026-09-25 16:01:27.368162+00:00,exit,263,lab0263_s403_w1_0928_1005_r2,S403,c2d903ff5030,SPY,SPY260928C00774000,1,,1.09,65.0,67.69,44.0,take_profit (+77.0%),,-0.01,0.5,-0.5,,,f50af06f-6f2c-42dc-8811-da7d59dcf177
+2026-09-25T16:12:33Z,reconcile,0,orphan_reconcile,ORPHAN,c20ee5e2ba19,SPY,SPY260928C00773000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T16:12:33Z,reconcile,262,lab0262_s403_w1_0928_1005_r1,S403,4c8706591ee3,SPY,SPY260928C00774000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25 16:06:32.863435+00:00,exit,0,orphan_reconcile,ORPHAN,52ec4353653c,MS,MS260925C00210000,1,,1.9,10.0,1800.0,180.0,take_profit (+180.0%),,-0.01,0.5,-0.4,,,b89f70fb-be4f-4def-9bf8-5c8e4fd92b25
+2026-09-25 16:06:31.067500+00:00,exit,87,lab0087_s210_w4_1120_1135_r2,S210,900132230941,SPY,SPY260928C00775000,1,,1.18,56.0,110.71,62.0,take_profit (+103.6%),,-0.01,0.5,-0.5,,,507ebf83-0cd4-44dc-92b7-46a7d168cffa
