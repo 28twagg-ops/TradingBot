@@ -2458,6 +2458,86 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
+    },
+    {
+      "order_id": "4c07a769-a286-4102-adad-8393de25fb10",
+      "bucket_id": 185,
+      "strategy_id": "S217",
+      "occ_symbol": "CVNA261002C00069000",
+      "underlying": "CVNA",
+      "qty": 1,
+      "limit": 0.49,
+      "profile_name": "lab0185_s217_w4_1120_1135_r2",
+      "submitted": "2026-09-25",
+      "detail": "RSI=23.9 green",
+      "spread_frac": 0.19780219780219788,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "c3ca6524-25ca-45de-b1aa-1cc3ec59c406",
+      "bucket_id": 1156,
+      "strategy_id": "S164",
+      "occ_symbol": "NKE260925C00035500",
+      "underlying": "NKE",
+      "qty": 1,
+      "limit": 0.35,
+      "profile_name": "lab1156_s164_w4_1120_1135_r1",
+      "submitted": "2026-09-25",
+      "detail": "gap -2.1%",
+      "spread_frac": 0.14925373134328357,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "10606856-0767-4775-a829-5c040ba58ee7",
+      "bucket_id": 1157,
+      "strategy_id": "S164",
+      "occ_symbol": "NKE260925C00035500",
+      "underlying": "NKE",
+      "qty": 1,
+      "limit": 0.35,
+      "profile_name": "lab1157_s164_w4_1120_1135_r2",
+      "submitted": "2026-09-25",
+      "detail": "gap -2.1%",
+      "spread_frac": 0.14925373134328357,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "2c036419-151f-42a0-a193-a2c8b063ae68",
+      "bucket_id": 240,
+      "strategy_id": "S401",
+      "occ_symbol": "SLB261002C00053000",
+      "underlying": "SLB",
+      "qty": 1,
+      "limit": 0.48,
+      "profile_name": "lab0240_s401_w4_1120_1135_r1",
+      "submitted": "2026-09-25",
+      "detail": "gap -0.70% green",
+      "spread_frac": 0.1075268817204301,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "53a19d06-8ded-4102-a521-27e7b069f00f",
+      "bucket_id": 241,
+      "strategy_id": "S401",
+      "occ_symbol": "SLB261002C00053000",
+      "underlying": "SLB",
+      "qty": 1,
+      "limit": 0.48,
+      "profile_name": "lab0241_s401_w4_1120_1135_r2",
+      "submitted": "2026-09-25",
+      "detail": "gap -0.70% green",
+      "spread_frac": 0.1075268817204301,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
   "pending_exits": [
@@ -2683,7 +2763,12 @@
     "797|S399|2026-09-25",
     "84|S210|2026-09-25",
     "85|S210|2026-09-25",
-    "183|S217|2026-09-25"
+    "183|S217|2026-09-25",
+    "185|S217|2026-09-25",
+    "1156|S164|2026-09-25",
+    "1157|S164|2026-09-25",
+    "240|S401|2026-09-25",
+    "241|S401|2026-09-25"
   ],
   "processed_orders": [
     "864fb3fb-9bbd-4fa7-895c-69033f58a0c7",
@@ -3182,7 +3267,7 @@
     "1e48c63d-79b6-436b-bd49-8d9d468e46f9",
     "e5e39d48-6e00-4b63-b555-1be1c7b828e2"
   ],
-  "submitted_today": 121,
+  "submitted_today": 126,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-25"
 }
