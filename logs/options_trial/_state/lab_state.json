@@ -1122,26 +1122,6 @@
       "entry_order_id": "e898b602-0439-4fd8-87fb-1d5a1ef1ded7"
     },
     {
-      "lot_id": "818cca78d854",
-      "bucket_id": 181,
-      "profile_name": "lab0181_s217_w2_1005_1045_r2",
-      "strategy_id": "S217",
-      "occ_symbol": "HD261002C00310000",
-      "underlying": "HD",
-      "qty": 1,
-      "entry_cost": 34.0,
-      "entry_price": 0.34,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-25T14:08:23.575302+00:00",
-      "entry_order_id": "84c7b713-6ea7-482a-8fa4-4c94f790ec9d"
-    },
-    {
       "lot_id": "d722d11d533a",
       "bucket_id": 793,
       "profile_name": "lab0793_s399_w1_0928_1005_r2",
@@ -2253,16 +2233,6 @@
       "qty": 1,
       "reason": "stop_loss (-58.7%)",
       "submitted": "2026-09-25T09:57:06"
-    },
-    {
-      "order_id": "1cc8f5b9-5098-41df-860d-45b3508c025c",
-      "lot_id": "818cca78d854",
-      "bucket_id": 181,
-      "strategy_id": "S217",
-      "occ_symbol": "HD261002C00310000",
-      "qty": 1,
-      "reason": "take_profit (+58.8%)",
-      "submitted": "2026-09-25T12:12:36"
     }
   ],
   "bucket_open_premium": {
@@ -2320,7 +2290,6 @@
     "b858": 37.0,
     "b831": 57.99999999999999,
     "b830": 57.99999999999999,
-    "b181": 34.0,
     "b793": 53.0,
     "b792": 53.0,
     "b313": 33.0,
