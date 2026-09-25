@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-25
 
-_Generated 2026-09-25T10:08:35.614716_
+_Generated 2026-09-25T10:12:36.884779_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-25T10:08:35.614716_
 
 ## Attribution health
 
-- Total exits: **3393**
+- Total exits: **3395**
 - Orphan exits (b0/orphan_reconcile): **407**
 - Orphan rate: **12.0%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -99,8 +99,8 @@ _Generated 2026-09-25T10:08:35.614716_
 | S417 (BBSqueeze_OTM1) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S418 (BBSqueeze_OTM2) | 7d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S366 (RubberBand_21DTE) | 21d | watch | 16 | 50.0 | -0.05 | -56.92 | -54.32 | +95.21 | 52 | 2 | 3 | $+35.00 | 50.0% | early sample with non-positive median |
 | S367 (RubberBand_30DTE) | 30d | watch | 3 | 0.0 | -48.89 | -50.89 | -50.14 | -29.78 | 52 | 0 | 0 | $-77.00 | 66.7% | insufficient sample (<8 exits) |
+| S366 (RubberBand_21DTE) | 21d | watch | 17 | 47.1 | -49.12 | -56.92 | -53.45 | +95.04 | 52 | 2 | 4 | $+5.00 | 52.9% | early sample with non-positive median |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 56 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
 | S202 (GapDown_Monster) | 3d ATM gap-monster | watch | 12 | 0.0 | -56.77 | -73.59 | -65.84 | -38.58 | 59 | 0 | 0 | $-208.00 | 33.3% | early sample with non-positive median |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 7 | 0.0 | -64.71 | -80.40 | -68.79 | -50.75 | 58 | 6 | 1 | $-212.00 | 71.4% | insufficient sample (<8 exits) |
@@ -109,7 +109,7 @@ _Generated 2026-09-25T10:08:35.614716_
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 81 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 81 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 255 | 32.2 | -35.29 | -63.24 | -53.42 | +93.89 | 81 | 10 | 1 | $-1,276.78 | 25.9% | non-positive median return |
-| S355 (GapDown_7DTE) | 7d | drop | 69 | 46.4 | -37.14 | -78.22 | -64.00 | +148.41 | 56 | 10 | 2 | $+415.00 | 36.2% | non-positive median return |
+| S355 (GapDown_7DTE) | 7d | drop | 70 | 45.7 | -37.32 | -77.65 | -63.85 | +143.53 | 56 | 10 | 3 | $+389.00 | 37.1% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 56 | 33.9 | -42.86 | -83.93 | -65.20 | +103.47 | 56 | 0 | 0 | $-118.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 56 | 23.2 | -43.65 | -86.66 | -54.73 | +95.51 | 60 | 12 | 7 | $-401.00 | 26.8% | non-positive median return |
 | S359 (RubberBand_0DTE) | 0d | drop | 35 | 34.3 | -44.44 | -71.43 | -67.55 | +248.09 | 53 | 10 | 0 | $-123.00 | 28.6% | non-positive median return |
@@ -264,7 +264,7 @@ _Pipeline evaluation as of 2026-09-25. Auto-kill thresholds: median<-25% at n>=1
 | S352 | GapDown_2DTE | 52 | +13.04% | 52% | INSUFFICIENT | 56 |
 | S353 | GapDown_3DTE | 37 | +48.98% | 51% | INSUFFICIENT | 56 |
 | S354 | GapDown_5DTE | 59 | -51.61% | 39% | INSUFFICIENT | 56 |
-| S355 | GapDown_7DTE | 69 | -37.14% | 46% | INSUFFICIENT | 56 |
+| S355 | GapDown_7DTE | 70 | -37.32% | 46% | INSUFFICIENT | 56 |
 | S356 | GapDown_14DTE | 27 | +36.00% | 52% | INSUFFICIENT | 56 |
 | S357 | GapDown_21DTE | 25 | +57.14% | 80% | INSUFFICIENT | 56 |
 | S358 | GapDown_30DTE | 4 | +0.84% | 50% | WATCH | 52 |
@@ -275,7 +275,7 @@ _Pipeline evaluation as of 2026-09-25. Auto-kill thresholds: median<-25% at n>=1
 | S363 | RubberBand_5DTE | 39 | -72.31% | 36% | INSUFFICIENT | 53 |
 | S364 | RubberBand_7DTE | 63 | +8.33% | 51% | INSUFFICIENT | 56 |
 | S365 | RubberBand_14DTE | 28 | +43.23% | 54% | INSUFFICIENT | 56 |
-| S366 | RubberBand_21DTE | 16 | -0.05% | 50% | INSUFFICIENT | 52 |
+| S366 | RubberBand_21DTE | 17 | -49.12% | 47% | INSUFFICIENT | 52 |
 | S367 | RubberBand_30DTE | 3 | -48.89% | 0% | WATCH | 52 |
 | S368 | BBSqueeze_0DTE | 0 | — | — | NEW | 0 |
 | S369 | BBSqueeze_1DTE | 0 | — | — | NEW | 0 |
