@@ -1100,8 +1100,8 @@
   {
     "bucket_id": 183,
     "profile": "lab0183_s217_w3_1045_1120_r2",
-    "open_premium": 40.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 184,
@@ -1190,8 +1190,8 @@
   {
     "bucket_id": 198,
     "profile": "lab0198_s218_w4_1120_1135_r1",
-    "open_premium": 31.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 199,
