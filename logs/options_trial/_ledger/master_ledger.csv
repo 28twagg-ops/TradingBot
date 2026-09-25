@@ -15273,3 +15273,8 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-25 16:46:23.811588+00:00,exit,285,lab0285_s351_w3_1045_1120_r2,S351,ed6a81d5d58e,NKE,NKE260925C00035500,1,,0.49,34.0,44.12,15.0,take_profit (+61.8%),,-0.01,0.5,-0.5,,,b47fad6a-313b-4129-82c6-8f7f084260bc
 2026-09-25 16:56:37.529561+00:00,exit,795,lab0795_s399_w2_1005_1045_r2,S399,b956bffd4b69,DKNG,DKNG261002C00025000,1,,0.01,3.0,-66.67,-2.0,stop_loss (-66.7%),,-0.01,0.5,-0.5,,,e2f45f37-0138-460b-a700-1f11a9511aaa
 2026-09-25T17:06:33Z,reconcile,794,lab0794_s399_w2_1005_1045_r1,S399,1493cd41496e,DKNG,DKNG261002C00025000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T17:16:17Z,reconcile,239,lab0239_s401_w3_1045_1120_r2,S401,62760e03bd7d,TTD,TTD261002C00013500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T17:16:17Z,reconcile,197,lab0197_s218_w3_1045_1120_r2,S218,4cb0bccc2fd3,TTD,TTD261002C00013500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T17:16:17Z,reconcile,199,lab0199_s218_w4_1120_1135_r2,S218,468da7219aca,TTD,TTD261002C00013500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T17:16:17Z,reconcile,198,lab0198_s218_w4_1120_1135_r1,S218,47bdabbd476d,TTD,TTD261002C00013500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T17:16:17Z,reconcile,0,orphan_reconcile,ORPHAN,436cb6570560,TTD,TTD261002C00013500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
