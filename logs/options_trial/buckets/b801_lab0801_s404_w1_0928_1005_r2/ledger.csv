@@ -30,3 +30,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-22T14:36:27Z,reconcile,801,lab0801_s404_w1_0928_1005_r2,S404,db09bb6be740,NFLX,NFLX260925C00074000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24 14:03:34.581018+00:00,entry,801,lab0801_s404_w1_0928_1005_r2,S404,9d271357730e,AMD,AMD260925C00652500,1,0.63,0.63,63.0,,,,-0.01,,0.5,-0.5,,,6746cc62-99f2-4d44-ae93-9f104718b4d6
 2026-09-24T14:56:33Z,reconcile,801,lab0801_s404_w1_0928_1005_r2,S404,9d271357730e,AMD,AMD260925C00652500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25 14:00:53.111636+00:00,entry,801,lab0801_s404_w1_0928_1005_r2,S404,4212e76f8406,DKNG,DKNG261002C00021000,1,0.72,0.72,72.0,,,,-0.01,,0.75,-0.75,0.16296296296296292,gap -2.1%,ffcbc35e-e53a-457f-9183-4d703122656c
