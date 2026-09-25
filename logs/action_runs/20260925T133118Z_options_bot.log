@@ -1,0 +1,75 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=55 paper_keys=yes dry_run=False
+  alpaca positions=16
+  FLAG b182|S217|1ee5deac missing from Alpaca
+  FLAG b313|S355|7cd7364f missing from Alpaca
+  FLAG b312|S355|701d857b missing from Alpaca
+  FLAG b305|S354|be81694b missing from Alpaca
+  FLAG b304|S354|83cbcf5c missing from Alpaca
+  FLAG b407|S364|e3631db2 missing from Alpaca
+  FLAG b406|S364|1a908a71 missing from Alpaca
+  FLAG b393|S363|d774b079 missing from Alpaca
+  FLAG b392|S363|2bac38c5 missing from Alpaca
+  FLAG b315|S355|082099ad missing from Alpaca
+  FLAG b314|S355|c1c792c6 missing from Alpaca
+  FLAG b307|S354|e475bc43 missing from Alpaca
+  FLAG b306|S354|09906e47 missing from Alpaca
+  FLAG b1139|S163|fb350c4b missing from Alpaca
+  FLAG b1138|S163|59763089 missing from Alpaca
+  FLAG b1125|S168|577dd84f missing from Alpaca
+  FLAG b1124|S168|df03928c missing from Alpaca
+  FLAG b1137|S163|8769e380 missing from Alpaca
+  FLAG b1136|S163|28c5f119 missing from Alpaca
+  FLAG b1123|S168|bdd3fc1b missing from Alpaca
+  FLAG b1122|S168|8e9d1a64 missing from Alpaca
+  FLAG b167|S216|c2b7214d missing from Alpaca
+  FLAG b919|S412|07761773 missing from Alpaca
+  FLAG b918|S412|a7424798 missing from Alpaca
+  FLAG b369|S361|aeab0d40 missing from Alpaca
+  FLAG b368|S361|0f1513f0 missing from Alpaca
+  FLAG b905|S411|5ec849b3 missing from Alpaca
+  FLAG b904|S411|a172c811 missing from Alpaca
+  FLAG b806|S404|207b10b2 missing from Alpaca
+  FLAG b783|S397|8a0dcd91 missing from Alpaca
+  FLAG b0|ORPHAN|b11f80ab missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1164:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1164
+PROBE OK: paper account status=AccountStatus.ACTIVE equity=$996,170.77
+  buying_power=$3,934,239.88 cash=$1,030,948.77
+  open option orders: 10
+    MCD260925C00272500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=0.01
+    MS260925C00210000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=0.01
+    MARA260925C00014500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=0.01
+    SMCI260925C00040000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    SMCI260925C00042000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+  open option positions: 15
+    JPM260925C00342500 qty=6 mkt=$306.00
+    JPM260925C00345000 qty=-1 mkt=$-24.00
+    MARA260925C00011500 qty=-1 mkt=$-116.00
+    MARA260925C00012000 qty=-1 mkt=$-66.00
+    MARA260925C00014500 qty=1 mkt=$0.00
+PROBE: check-only pass (use --smoke-entry to place a test order)
+=== options_morning_bot (PAPER) 2026-09-25T09:35:01.788418-04:00 ===
+
+[Run context]
+Paper auth OK — equity $996176.77, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
+Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+  EXIT [b391|lab0391_s363_w1_0928_1005_r2|S363] take_profit (+61.8%) SELL failed SMCI261002C00044500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b390|lab0390_s363_w1_0928_1005_r1|S363] take_profit (+61.8%) SELL failed SMCI261002C00044500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b194|lab0194_s218_w2_1005_1045_r1|S218] stop_loss (-95.3%) SELL failed MCD260925C00245000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+2026-09-25 09:35:05,145 INFO   EXIT [b421|lab0421_s365_w2_1005_1045_r2|S365] stop_loss (-50.0%) SELL 1 MARA261009C00014500 @<= 0.24
+2026-09-25 09:35:06,925 INFO   EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-44.1%) SELL 1 MARA261009C00014000 @<= 0.34
+2026-09-25 09:35:08,137 INFO   EXIT [b168|lab0168_s216_w3_1045_1120_r1|S216] stop_loss (-61.0%) SELL 1 V260925C00370000 @<= 0.24
+Protective stops: placed=0 upgraded=0 already=7 failed=4 (market-first)
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S204, S205, S206, S208, S209, S210, S211, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S406, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 113/117 symbols
