@@ -29,3 +29,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-09T18:41:11Z,reconcile,86,lab0086_s210_w4_1120_1135_r1,S210,e859bd3af79f,UNH,UNH260911C00407500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-10 15:22:29.294313+00:00,entry,86,lab0086_s210_w4_1120_1135_r1,S210,9d92cc9b473e,AMD,AMD260911C00535000,1,0.46,0.46,46.0,,,,-0.01,,0.5,-0.5,,,3067c0cd-38e9-40a1-928e-a31e33b8fcae
 2026-09-09 18:36:36.548334+00:00,exit,86,lab0086_s210_w4_1120_1135_r1,S210,9d92cc9b473e,AMD,AMD260911C00535000,1,,0.32,46.0,-30.43,-14.0,reconcile_fill,,-0.01,0.5,-0.5,,,1c22f000-5dc1-4379-b136-e9ecb97c44d9
+2026-09-25 15:32:30.934232+00:00,entry,86,lab0086_s210_w4_1120_1135_r1,S210,8da79f439707,SPY,SPY260928C00775000,1,0.57,0.56,56.0,,,,-0.01,,0.5,-0.5,0.09009009009008997,MA8 766.21 crossed above MA21,9ef8f790-9588-4fc7-9e6c-bdbca35af0bc
