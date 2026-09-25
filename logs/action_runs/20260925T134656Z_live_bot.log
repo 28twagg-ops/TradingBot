@@ -1,0 +1,211 @@
+13:46:57  INFO      Mode: morning_scan
+13:46:58  INFO        [positions] 2/2 (2 valid)
+13:46:59  INFO        SELL MARKET [urgent] KNF closed
+13:47:01  INFO        TX logged: SELL KNF  P&L -1.39%
+13:47:01  INFO        Universe cache hit: 903 tickers (tickers_2026-09-25.json)
+13:47:02  INFO        [universe] 40/902 (40 valid)
+13:47:04  INFO        [universe] 80/902 (80 valid)
+13:47:05  INFO        [universe] 120/902 (120 valid)
+13:47:06  INFO        [universe] 160/902 (160 valid)
+13:47:07  INFO        [universe] 200/902 (199 valid)
+13:47:15  INFO        [universe] 240/902 (238 valid)
+13:47:28  INFO        [universe] 280/902 (278 valid)
+13:47:38  INFO        [universe] 320/902 (318 valid)
+13:47:51  INFO        [universe] 360/902 (358 valid)
+13:48:02  INFO        [universe] 400/902 (398 valid)
+13:48:15  INFO        [universe] 440/902 (438 valid)
+13:48:25  INFO        [universe] 480/902 (478 valid)
+13:48:39  INFO        [universe] 520/902 (518 valid)
+13:48:52  INFO        [universe] 560/902 (558 valid)
+13:49:02  INFO        [universe] 600/902 (598 valid)
+13:49:15  INFO        [universe] 640/902 (638 valid)
+13:49:26  INFO        [universe] 680/902 (678 valid)
+13:49:39  INFO        [universe] 720/902 (718 valid)
+13:49:52  INFO        [universe] 760/902 (758 valid)
+13:50:02  INFO        [universe] 800/902 (798 valid)
+13:50:16  INFO        [universe] 840/902 (838 valid)
+13:50:26  INFO        [universe] 880/902 (878 valid)
+13:50:33  INFO        [universe] 902/902 (900 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $224.12|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-09-25|
+|  Universe                                                          both|
+|  Mo~  Sep: GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $224.12|
+|  Cash                                                           $157.20|
+|  Reserve                                          $11.21  (always kept)|
+|  Stocks~  $66.95 / $168.09  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $101.14  (new stock buys)|
+|  Trade size             $33.62  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (2 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  COP      Pullback50      $33.67     $127.75  $127.60  -0.1%   $-0.04  |
+|  KNF      MomReversal     $33.28     $53.69   $52.94   -1.4%   $-0.47  |
+|                                                                        |
+|  Total invested                                                  $66.95|
+|  Total open P&L                                                  $-0.51|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (10086.5m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  KNF  P&L -1.4%  $-0.47                         EXIT: stop_loss (-1.4%)|
+|  COP  P&L -0.1%  $-0.04                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                   1|
+|  KNF                                         -1.39%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  21                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  GOOG     Pullback50      eq     $340.53  54.1   -2.38   50MA bounce (-|
+|  GOOGL    Pullback50      eq     $343.91  54.0   -2.58   50MA bounce (-|
+|  FIX      Pullback50      eq     $1661.~  55.4   -2.00   50MA bounce (-|
+|  ECL      Pullback50      eq     $276.59  45.3   -2.36   50MA bounce (-|
+|  EXPD     Pullback50      eq     $184.60  42.8   -1.98   50MA bounce (+|
+|  XOM      Pullback50      eq     $160.27  51.4   -2.01   50MA bounce (+|
+|  IEX      Pullback50      eq     $229.51  61.2   -2.52   50MA bounce (+|
+|  KDP      Pullback50      eq     $30.90   33.1   -2.35   50MA bounce (-|
+|  MAR      Pullback50      eq     $352.13  65.9   -1.92   50MA bounce (-|
+|  MCK      Pullback50      eq     $865.01  34.8   -1.74   50MA bounce (-|
+|  MSI      Pullback50      eq     $457.44  40.7   -2.52   50MA bounce (+|
+|  ROK      Pullback50      eq     $436.01  51.7   -2.87   50MA bounce (-|
+|  VLTO     Pullback50      eq     $96.27   49.8   -1.68   50MA bounce (+|
+|  APPF     Pullback50      eq     $204.02  41.2   -2.32   50MA bounce (+|
+|  CLH      Pullback50      eq     $315.63  47.3   -2.95   50MA bounce (+|
+|  FLS      Pullback50      eq     $76.44   49.4   -2.93   50MA bounce (+|
+|  LFUS     Pullback50      eq     $425.77  53.3   -1.80   50MA bounce (+|
+|  MSM      Pullback50      eq     $120.76  47.7   -1.97   50MA bounce (-|
+|  MSA      Pullback50      eq     $183.58  39.8   -1.85   50MA bounce (-|
+|  SEIC     Pullback50      eq     $105.68  29.0   -1.23   50MA bounce (+|
+|  UNM      Pullback50      eq     $91.78   36.4   -1.52   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+13:50:36  INFO        BUY  GOOG  $33.62  [Pullback50]  id=a411fb4e-4a41-4661-ae68-ec578e6df32e
+13:50:36  INFO        BUY  GOOGL  $33.62  [Pullback50]  id=c7f13ee7-4616-4966-bd6c-49a923e6d780
+13:50:58  INFO        place_all_stops: checking 3 positions...
+13:50:58  INFO        STOP skipped COP: fractional (0.2639 shares) — software exit will handle it
+13:50:58  INFO        STOP skipped GOOG: fractional (0.0985 shares) — software exit will handle it
+13:50:58  INFO        STOP skipped GOOGL: fractional (0.0976 shares) — software exit will handle it
+13:50:59  INFO        Daily log -> logs/daily/2026-09-25.md
+13:50:59  INFO        Dashboard written → logs/dashboard.md
+|    ENTER [eq] GOOG  Pullback50                                   $33.62|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] GOOGL  Pullback50                                  $33.62|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] FIX  Pullback50                                      cap 3|
+|    SKIP [eq] ECL  Pullback50                                      cap 3|
+|    SKIP [eq] EXPD  Pullback50                                     cap 3|
+|    SKIP [eq] XOM  Pullback50                                      cap 3|
+|    SKIP [eq] IEX  Pullback50                                      cap 3|
+|    SKIP [eq] KDP  Pullback50                                      cap 3|
+|    SKIP [eq] MAR  Pullback50                                      cap 3|
+|    SKIP [eq] MCK  Pullback50                                      cap 3|
+|    SKIP [eq] MSI  Pullback50                                      cap 3|
+|    SKIP [eq] ROK  Pullback50                                      cap 3|
+|    SKIP [eq] VLTO  Pullback50                                     cap 3|
+|    SKIP [eq] APPF  Pullback50                                     cap 3|
+|    SKIP [eq] CLH  Pullback50                                      cap 3|
+|    SKIP [eq] FLS  Pullback50                                      cap 3|
+|    SKIP [eq] LFUS  Pullback50                                     cap 3|
+|    SKIP [eq] MSM  Pullback50                                      cap 3|
+|    SKIP [eq] MSA  Pullback50                                      cap 3|
+|    SKIP [eq] SEIC  Pullback50                                     cap 3|
+|    SKIP [eq] UNM  Pullback50                                      cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  GOOG                                                 still unconfirmed|
+|  GOOGL                                                still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            900|
+|  Signals                                                             21|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             3|
+|  Equity                                                         $224.13|
+|  Cash                                                           $123.14|
++========================================================================+

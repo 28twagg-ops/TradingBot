@@ -1654,3 +1654,132 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20260925T134656Z
+
+- UTC timestamp: `20260925T134656Z`
+- GitHub run: [#11040](https://github.com/28twagg-ops/TradingBot/actions/runs/36142946327)
+- Run id: `36142946327`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260925T134656Z_live_bot.log`, `logs/action_runs/20260925T134656Z_live_options.log`, `logs/action_runs/20260925T134656Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1487 | 50.2 | +13.1 | +43.0 | $+19,456 |
+| TAINTED | 1897 | 33.3 | -39.0 | +12.5 | $-9,668 |
+| KEEP-only | 837 | 62.4 | +52.2 | +64.9 | $+14,152 |
+| KEEP-only recent | 640 | 61.6 | +55.4 | +74.2 | $+10,070 |
+
+- KEEP strategies (26): S163, S164, S167, S168, S173, S174, S210, S218, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S401, S403, S404, S406, S411, S412
+- KILL strategies (17): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S351, S354, S355, S360, S363, S399, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-25T09:26:21.595011-04:00","date":"2026-09-25","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.2,"phases_s":{"reconcile":0.47},"signals":0,"placed":0,"equity":996677.55,"open_positions":21,"pending_orders":0,"open_lots":55,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"11036","github_run_id":"36140809077","status":"ok","data_quality":{"clean":{"n":1487,"win":50.17,"med":13.11,"avg":43.01,"pnl":19456.16},"tainted":{"n":1897,"win":33.26,"med":-38.98,"avg":12.54,"pnl":-9668.28},"keep_only":{"n":837,"win":62.37,"med":52.17,"avg":64.85,"pnl":14152.45},"keep_only_recent":{"n":640,"win":61.56,"med":55.36,"avg":74.2,"pnl":10070.0},"keep_strategies":["S163","S164","S167","S168","S173","S174","S210","S218","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S401","S403","S404","S406","S411","S412"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S351","S354","S355","S360","S363","S399","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (70 earlier lines - see full log file)
+|                                                                        |
+|  Total invested                                                  $66.95|
+|  Total open P&L                                                  $-0.51|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (10086.5m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  KNF  P&L -1.4%  $-0.47                         EXIT: stop_loss (-1.4%)|
+|  COP  P&L -0.1%  $-0.04                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                   1|
+|  KNF                                         -1.39%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  21                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  GOOG     Pullback50      eq     $340.53  54.1   -2.38   50MA bounce (-|
+|  GOOGL    Pullback50      eq     $343.91  54.0   -2.58   50MA bounce (-|
+|  FIX      Pullback50      eq     $1661.~  55.4   -2.00   50MA bounce (-|
+|  ECL      Pullback50      eq     $276.59  45.3   -2.36   50MA bounce (-|
+|  EXPD     Pullback50      eq     $184.60  42.8   -1.98   50MA bounce (+|
+|  XOM      Pullback50      eq     $160.27  51.4   -2.01   50MA bounce (+|
+|  IEX      Pullback50      eq     $229.51  61.2   -2.52   50MA bounce (+|
+|  KDP      Pullback50      eq     $30.90   33.1   -2.35   50MA bounce (-|
+|  MAR      Pullback50      eq     $352.13  65.9   -1.92   50MA bounce (-|
+|  MCK      Pullback50      eq     $865.01  34.8   -1.74   50MA bounce (-|
+|  MSI      Pullback50      eq     $457.44  40.7   -2.52   50MA bounce (+|
+|  ROK      Pullback50      eq     $436.01  51.7   -2.87   50MA bounce (-|
+|  VLTO     Pullback50      eq     $96.27   49.8   -1.68   50MA bounce (+|
+|  APPF     Pullback50      eq     $204.02  41.2   -2.32   50MA bounce (+|
+|  CLH      Pullback50      eq     $315.63  47.3   -2.95   50MA bounce (+|
+|  FLS      Pullback50      eq     $76.44   49.4   -2.93   50MA bounce (+|
+|  LFUS     Pullback50      eq     $425.77  53.3   -1.80   50MA bounce (+|
+|  MSM      Pullback50      eq     $120.76  47.7   -1.97   50MA bounce (-|
+|  MSA      Pullback50      eq     $183.58  39.8   -1.85   50MA bounce (-|
+|  SEIC     Pullback50      eq     $105.68  29.0   -1.23   50MA bounce (+|
+|  UNM      Pullback50      eq     $91.78   36.4   -1.52   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+13:50:36  INFO        BUY  GOOG  $33.62  [Pullback50]  id=a411fb4e-4a41-4661-ae68-ec578e6df32e
+13:50:36  INFO        BUY  GOOGL  $33.62  [Pullback50]  id=c7f13ee7-4616-4966-bd6c-49a923e6d780
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
