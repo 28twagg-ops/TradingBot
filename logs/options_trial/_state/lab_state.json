@@ -2233,6 +2233,16 @@
       "qty": 1,
       "reason": "stop_loss (-58.7%)",
       "submitted": "2026-09-25T09:57:06"
+    },
+    {
+      "order_id": "bf202c07-d7a4-4759-ac19-06eb494a9a4c",
+      "lot_id": "f7177f94efe4",
+      "bucket_id": 1155,
+      "strategy_id": "S164",
+      "occ_symbol": "NKE260925C00035500",
+      "qty": 1,
+      "reason": "take_profit (+55.7%)",
+      "submitted": "2026-09-25T12:31:36"
     }
   ],
   "bucket_open_premium": {
