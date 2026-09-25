@@ -1863,7 +1863,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "ccaaf0bf-e8db-48b3-9645-bdb1e1777bb5",
+      "lot_id": "7f2a1cc1b930",
+      "bucket_id": 281,
+      "strategy_id": "S351",
+      "occ_symbol": "NKE260925C00035000",
+      "qty": 1,
+      "reason": "EOD",
+      "submitted": "2026-09-25T15:35:35"
+    }
+  ],
   "bucket_open_premium": {
     "b166": 4.0,
     "b391": 55.00000000000001,
