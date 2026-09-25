@@ -1162,26 +1162,6 @@
       "entry_order_id": "84c7b713-6ea7-482a-8fa4-4c94f790ec9d"
     },
     {
-      "lot_id": "df957a7335c1",
-      "bucket_id": 82,
-      "profile_name": "lab0082_s210_w2_1005_1045_r1",
-      "strategy_id": "S210",
-      "occ_symbol": "SPY260928C00773000",
-      "underlying": "SPY",
-      "qty": 1,
-      "entry_cost": 65.0,
-      "entry_price": 0.65,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-25T14:08:23.699749+00:00",
-      "entry_order_id": "990c2efd-3c1c-483a-9e0c-93faf3afe9d2"
-    },
-    {
       "lot_id": "d722d11d533a",
       "bucket_id": 793,
       "profile_name": "lab0793_s399_w1_0928_1005_r2",
@@ -2122,26 +2102,6 @@
       "entry_order_id": "8e82aaff-b503-4108-8012-d18e2df8921a"
     },
     {
-      "lot_id": "c2d903ff5030",
-      "bucket_id": 263,
-      "profile_name": "lab0263_s403_w1_0928_1005_r2",
-      "strategy_id": "S403",
-      "occ_symbol": "SPY260928C00774000",
-      "underlying": "SPY",
-      "qty": 1,
-      "entry_cost": 65.0,
-      "entry_price": 0.65,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-25T15:28:02.578086+00:00",
-      "entry_order_id": "8c471a99-0f97-430a-b1f6-1b5ea6334e43"
-    },
-    {
       "lot_id": "4c8706591ee3",
       "bucket_id": 262,
       "profile_name": "lab0262_s403_w1_0928_1005_r1",
@@ -2355,24 +2315,34 @@
       "submitted": "2026-09-25T09:57:06"
     },
     {
-      "order_id": "f50af06f-6f2c-42dc-8811-da7d59dcf177",
-      "lot_id": "c2d903ff5030",
-      "bucket_id": 263,
+      "order_id": "507ebf83-0cd4-44dc-92b7-46a7d168cffa",
+      "lot_id": "900132230941",
+      "bucket_id": 87,
+      "strategy_id": "S210",
+      "occ_symbol": "SPY260928C00775000",
+      "qty": 1,
+      "reason": "take_profit (+103.6%)",
+      "submitted": "2026-09-25T12:06:30"
+    },
+    {
+      "order_id": "b89f70fb-be4f-4def-9bf8-5c8e4fd92b25",
+      "lot_id": "c20ee5e2ba19",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "SPY260928C00773000",
+      "qty": 1,
+      "reason": "take_profit (+180.0%)",
+      "submitted": "2026-09-25T12:06:32"
+    },
+    {
+      "order_id": "3ea47872-1997-4f22-93f6-943ae5d0a756",
+      "lot_id": "4c8706591ee3",
+      "bucket_id": 262,
       "strategy_id": "S403",
       "occ_symbol": "SPY260928C00774000",
       "qty": 1,
-      "reason": "take_profit (+77.0%)",
-      "submitted": "2026-09-25T12:01:27"
-    },
-    {
-      "order_id": "2bd80482-fa90-4e0f-b2d0-fbb445c639cf",
-      "lot_id": "df957a7335c1",
-      "bucket_id": 82,
-      "strategy_id": "S210",
-      "occ_symbol": "SPY260928C00773000",
-      "qty": 1,
-      "reason": "take_profit (+116.9%)",
-      "submitted": "2026-09-25T12:01:30"
+      "reason": "take_profit (+137.7%)",
+      "submitted": "2026-09-25T12:06:34"
     }
   ],
   "bucket_open_premium": {
@@ -2389,7 +2359,7 @@
     "b310": 42.0,
     "b184": 31.0,
     "b0": 250.0,
-    "b263": 119.0,
+    "b263": 54.0,
     "b913": 71.0,
     "b912": 71.0,
     "b857": 31.0,
@@ -2431,7 +2401,6 @@
     "b831": 57.99999999999999,
     "b830": 57.99999999999999,
     "b181": 34.0,
-    "b82": 65.0,
     "b793": 53.0,
     "b792": 53.0,
     "b313": 33.0,
@@ -3065,7 +3034,9 @@
     "a044e809-11d6-4346-aedc-4679809d8ef9",
     "de6a42cf-3eea-4228-9402-b00c1512dd52",
     "3a544188-d162-4dcd-b519-f562cbe67e59",
-    "144cba2f-8cff-463d-883e-450abe292cf1"
+    "144cba2f-8cff-463d-883e-450abe292cf1",
+    "2bd80482-fa90-4e0f-b2d0-fbb445c639cf",
+    "f50af06f-6f2c-42dc-8811-da7d59dcf177"
   ],
   "submitted_today": 149,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
