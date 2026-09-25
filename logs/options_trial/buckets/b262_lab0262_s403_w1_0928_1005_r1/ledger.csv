@@ -28,3 +28,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-23T16:57:03Z,reconcile,262,lab0262_s403_w1_0928_1005_r1,S403,f11790081dd1,XOM,XOM260925C00165000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24 14:04:22.631857+00:00,entry,262,lab0262_s403_w1_0928_1005_r1,S403,097ab6d1b7d9,SPY,SPY260928C00774000,1,0.65,0.65,65.0,,,,-0.01,,0.5,-0.5,,,408a8809-98c7-4227-9d8f-82dc4d1b1f70
 2026-09-24T16:46:20Z,reconcile,262,lab0262_s403_w1_0928_1005_r1,S403,097ab6d1b7d9,SPY,SPY260928C00774000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25 13:58:44.602285+00:00,entry,262,lab0262_s403_w1_0928_1005_r1,S403,cde1466005e8,XOM,XOM261002C00167500,1,0.55,0.54,54.0,,,,-0.01,,0.5,-0.5,0.1747572815533982,touch MA50 green,30cf8c25-d137-4d13-ab5d-685204fe9ae7
+2026-09-24 16:41:39.400859+00:00,exit,262,lab0262_s403_w1_0928_1005_r1,S403,cde1466005e8,XOM,XOM261002C00167500,1,,1.31,54.0,142.59,77.0,reconcile_fill,,-0.01,0.5,-0.5,,,8bc84d67-ca3c-4177-89f9-19ff8cbc682c

@@ -18,3 +18,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-21T14:00:42Z,reconcile,856,lab0856_s408_w1_0928_1005_r1,S408,be48d4c7996a,NFLX,NFLX260925C00078000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24 14:03:37.166189+00:00,entry,856,lab0856_s408_w1_0928_1005_r1,S408,3510ac89c47d,SMCI,SMCI260925C00043000,1,0.15,0.15,15.0,,,,-0.01,,0.5,-0.5,,,364b961c-4603-4d25-b7f4-e3bbb002f234
 2026-09-24T14:46:22Z,reconcile,856,lab0856_s408_w1_0928_1005_r1,S408,3510ac89c47d,SMCI,SMCI260925C00043000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25 13:58:40.176024+00:00,entry,856,lab0856_s408_w1_0928_1005_r1,S408,62b18f666304,NKE,NKE261002C00040000,1,0.32,0.31,31.0,,,,-0.01,,0.5,-0.5,0.16393442622950813,RB gap -2.1% reclaim,61be6747-dc2a-4431-b2cd-2ee9c24d4f15

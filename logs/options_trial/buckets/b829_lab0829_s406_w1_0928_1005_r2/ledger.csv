@@ -22,3 +22,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-23 14:21:23.705504+00:00,exit,829,lab0829_s406_w1_0928_1005_r2,S406,d4295b74d884,COIN,COIN260925C00235000,1,,0.07,15.0,-53.33,-8.0,stop_loss (-53.3%),,-0.01,0.5,-0.5,,,7434fba9-1962-46d5-ab10-fd92840f33ea
 2026-09-24 14:03:36.997545+00:00,entry,829,lab0829_s406_w1_0928_1005_r2,S406,726ddb72aa1b,SMCI,SMCI260925C00042000,1,0.32,0.32,32.0,,,,-0.01,,0.5,-0.5,,,86581139-3db2-48b8-a25a-eea217a645d9
 2026-09-24T14:46:22Z,reconcile,829,lab0829_s406_w1_0928_1005_r2,S406,726ddb72aa1b,SMCI,SMCI260925C00042000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25 13:58:39.760151+00:00,entry,829,lab0829_s406_w1_0928_1005_r2,S406,18d8a9cd291d,NKE,NKE261002C00038500,1,0.57,0.56,56.0,,,,-0.01,,0.5,-0.5,0.053097345132743216,RB gap -2.1% reclaim,25db8b40-fde9-400c-a862-7b291806125a

@@ -84,3 +84,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-24T16:01:19Z,reconcile,90,live_1to1,S404,bb1bbd9c32cb,AMD,AMD260925C00645000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24 16:36:36.625330+00:00,exit,90,live_1to1,S406,3d59cb2507b7,SMCI,SMCI260925C00041000,1,,0.73,42.0,73.81,31.0,take_profit (+85.6%),,-0.01,0.5,-0.4,,,29b63f3a-ef84-4153-a481-3ff519775549
 2026-09-24T16:41:25Z,reconcile,90,live_1to1,S218,d1ed7843e24d,AMZN,AMZN260928C00252500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25 13:58:05.119850+00:00,entry,90,live_1to1,S218,bd9253105d44,TTD,TTD261002C00012500,1,0.56,0.55,55.0,,,,-0.01,,0.5,-0.4,0.150943396226415,low=12.53 BB_lower=12.48 touch+green,46c9c55d-3d01-4414-b44c-7e3b762d398b
+2026-09-24 16:40:51.371800+00:00,exit,90,live_1to1,S218,bd9253105d44,TTD,TTD261002C00012500,1,,1.11,55.0,101.82,56.0,reconcile_fill,,-0.01,0.5,-0.4,,,a6482392-92ce-4b5f-8317-b94d74861411

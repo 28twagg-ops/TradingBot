@@ -15088,35 +15088,62 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-24 18:45:16.006185+00:00,exit,405,lab0405_s364_w1_0928_1005_r2,S364,ad28449e9824,SMCI,SMCI261002C00044500,1,,0.84,55.0,52.73,29.0,take_profit (+50.9%),,-0.01,0.5,-0.5,,,349f9fa2-8150-4aa9-921c-19b14ebeffe9
 2026-09-24T18:51:22Z,reconcile,394,lab0394_s363_w3_1045_1120_r1,S363,b3591d756696,SMCI,SMCI261002C00043500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24 18:48:08.590493+00:00,exit,404,lab0404_s364_w1_0928_1005_r1,S364,af03cc2d7a1b,SMCI,SMCI261002C00044500,1,,0.87,55.0,58.18,32.0,take_profit (+56.4%),,-0.01,0.5,-0.5,,,a209cc53-6163-4609-93e2-ea9772cec190
-2026-09-25T13:34:58Z,reconcile,182,lab0182_s217_w3_1045_1120_r1,S217,1ee5deacd7df,BAC,BAC260925C00058000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:58Z,reconcile,313,lab0313_s355_w1_0928_1005_r2,S355,7cd7364f3fd8,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:58Z,reconcile,312,lab0312_s355_w1_0928_1005_r1,S355,701d857baa25,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:58Z,reconcile,305,lab0305_s354_w1_0928_1005_r2,S354,be81694bbc9a,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:58Z,reconcile,304,lab0304_s354_w1_0928_1005_r1,S354,83cbcf5cf566,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:58Z,reconcile,407,lab0407_s364_w2_1005_1045_r2,S364,e3631db259e1,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:58Z,reconcile,406,lab0406_s364_w2_1005_1045_r1,S364,1a908a716d98,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:58Z,reconcile,393,lab0393_s363_w2_1005_1045_r2,S363,d774b0793975,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,392,lab0392_s363_w2_1005_1045_r1,S363,2bac38c54976,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,315,lab0315_s355_w2_1005_1045_r2,S355,082099adc3d5,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,314,lab0314_s355_w2_1005_1045_r1,S355,c1c792c64903,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,307,lab0307_s354_w2_1005_1045_r2,S354,e475bc43e66d,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,306,lab0306_s354_w2_1005_1045_r1,S354,09906e47e98d,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,1139,lab1139_s163_w2_1005_1045_r2,S163,fb350c4ba29c,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,1138,lab1138_s163_w2_1005_1045_r1,S163,5976308935c7,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,1125,lab1125_s168_w2_1005_1045_r2,S168,577dd84f3e53,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,1124,lab1124_s168_w2_1005_1045_r1,S168,df03928cdb74,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,1137,lab1137_s163_w1_0928_1005_r2,S163,8769e380e13e,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,1136,lab1136_s163_w1_0928_1005_r1,S163,28c5f119da96,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,1123,lab1123_s168_w1_0928_1005_r2,S168,bdd3fc1b2162,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,1122,lab1122_s168_w1_0928_1005_r1,S168,8e9d1a64ae4a,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,167,lab0167_s216_w2_1005_1045_r2,S216,c2b7214d9ce9,VZ,VZ260925C00047000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,919,lab0919_s412_w4_1120_1135_r2,S412,0776177303d7,HOOD,HOOD260925C00126000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,918,lab0918_s412_w4_1120_1135_r1,S412,a7424798c62b,HOOD,HOOD260925C00126000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,369,lab0369_s361_w4_1120_1135_r2,S361,aeab0d40b41c,HOOD,HOOD260925C00126000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,368,lab0368_s361_w4_1120_1135_r1,S361,0f1513f0d2a5,HOOD,HOOD260925C00126000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,905,lab0905_s411_w4_1120_1135_r2,S411,5ec849b376f0,HOOD,HOOD260925C00125000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,904,lab0904_s411_w4_1120_1135_r1,S411,a172c811d35d,HOOD,HOOD260925C00125000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,806,lab0806_s404_w4_1120_1135_r1,S404,207b10b287ce,HOOD,HOOD260925C00124000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,783,lab0783_s397_w4_1120_1135_r2,S397,8a0dcd910728,HOOD,HOOD260925C00124000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-25T13:34:59Z,reconcile,0,orphan_reconcile,ORPHAN,b11f80ab93c8,HOOD,HOOD260925C00124000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:30Z,reconcile,182,lab0182_s217_w3_1045_1120_r1,S217,1ee5deacd7df,BAC,BAC260925C00058000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:30Z,reconcile,313,lab0313_s355_w1_0928_1005_r2,S355,7cd7364f3fd8,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:30Z,reconcile,312,lab0312_s355_w1_0928_1005_r1,S355,701d857baa25,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:30Z,reconcile,305,lab0305_s354_w1_0928_1005_r2,S354,be81694bbc9a,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:30Z,reconcile,304,lab0304_s354_w1_0928_1005_r1,S354,83cbcf5cf566,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:30Z,reconcile,407,lab0407_s364_w2_1005_1045_r2,S364,e3631db259e1,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:30Z,reconcile,406,lab0406_s364_w2_1005_1045_r1,S364,1a908a716d98,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:30Z,reconcile,393,lab0393_s363_w2_1005_1045_r2,S363,d774b0793975,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:30Z,reconcile,392,lab0392_s363_w2_1005_1045_r1,S363,2bac38c54976,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:30Z,reconcile,315,lab0315_s355_w2_1005_1045_r2,S355,082099adc3d5,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,314,lab0314_s355_w2_1005_1045_r1,S355,c1c792c64903,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,307,lab0307_s354_w2_1005_1045_r2,S354,e475bc43e66d,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,306,lab0306_s354_w2_1005_1045_r1,S354,09906e47e98d,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,1139,lab1139_s163_w2_1005_1045_r2,S163,fb350c4ba29c,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,1138,lab1138_s163_w2_1005_1045_r1,S163,5976308935c7,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,1125,lab1125_s168_w2_1005_1045_r2,S168,577dd84f3e53,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,1124,lab1124_s168_w2_1005_1045_r1,S168,df03928cdb74,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,1137,lab1137_s163_w1_0928_1005_r2,S163,8769e380e13e,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,1136,lab1136_s163_w1_0928_1005_r1,S163,28c5f119da96,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,1123,lab1123_s168_w1_0928_1005_r2,S168,bdd3fc1b2162,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,1122,lab1122_s168_w1_0928_1005_r1,S168,8e9d1a64ae4a,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,167,lab0167_s216_w2_1005_1045_r2,S216,c2b7214d9ce9,VZ,VZ260925C00047000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,919,lab0919_s412_w4_1120_1135_r2,S412,0776177303d7,HOOD,HOOD260925C00126000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,918,lab0918_s412_w4_1120_1135_r1,S412,a7424798c62b,HOOD,HOOD260925C00126000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,369,lab0369_s361_w4_1120_1135_r2,S361,aeab0d40b41c,HOOD,HOOD260925C00126000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,368,lab0368_s361_w4_1120_1135_r1,S361,0f1513f0d2a5,HOOD,HOOD260925C00126000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,905,lab0905_s411_w4_1120_1135_r2,S411,5ec849b376f0,HOOD,HOOD260925C00125000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,904,lab0904_s411_w4_1120_1135_r1,S411,a172c811d35d,HOOD,HOOD260925C00125000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,806,lab0806_s404_w4_1120_1135_r1,S404,207b10b287ce,HOOD,HOOD260925C00124000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,783,lab0783_s397_w4_1120_1135_r2,S397,8a0dcd910728,HOOD,HOOD260925C00124000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,0,orphan_reconcile,ORPHAN,b11f80ab93c8,HOOD,HOOD260925C00124000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25 13:36:38.773974+00:00,exit,0,orphan_reconcile,ORPHAN,05d99f7f477c,MARA,MARA261009C00014000,1,,0.34,59.0,-42.37,-25.0,reconcile_fill,,-0.01,0.5,-0.4,,,90998f4d-8b87-4ff1-a897-a85d9165ce1f
+2026-09-25 13:35:34.113818+00:00,exit,421,lab0421_s365_w2_1005_1045_r2,S365,23f213ef8374,MARA,MARA261009C00014500,1,,0.24,46.0,-47.83,-22.0,reconcile_fill,,-0.01,0.5,-0.5,,,4bf9ba41-045b-4129-a09b-a14dca1ec149
 2026-09-25 13:30:03.906942+00:00,exit,169,lab0169_s216_w3_1045_1120_r2,S216,6eb8f18aa248,V,V260925C00370000,1,,0.89,59.0,50.85,30.0,reconcile_fill,,-0.01,0.5,-0.5,,,8fc1a248-63b5-41eb-8858-659f6f73da1d
+2026-09-25T13:57:01Z,reconcile,418,lab0418_s365_w1_0928_1005_r1,S365,7e67cf73d517,MARA,MARA261009C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25 13:58:44.613183+00:00,entry,263,lab0263_s403_w1_0928_1005_r2,S403,3eabcde932dc,XOM,XOM261002C00167500,1,0.55,0.54,54.0,,,,-0.01,,0.5,-0.5,0.1747572815533982,touch MA50 green,190418be-c58d-467f-9887-ae4a246a3e3f
+2026-09-25 13:58:44.602285+00:00,entry,262,lab0262_s403_w1_0928_1005_r1,S403,cde1466005e8,XOM,XOM261002C00167500,1,0.55,0.54,54.0,,,,-0.01,,0.5,-0.5,0.1747572815533982,touch MA50 green,30cf8c25-d137-4d13-ab5d-685204fe9ae7
+2026-09-25 13:58:44.091283+00:00,entry,913,lab0913_s412_w1_0928_1005_r2,S412,97e54812e581,NKE,NKE261002C00038000,1,0.72,0.71,71.0,,,,-0.01,,0.5,-0.5,0.16296296296296292,RB gap -2.1% reclaim,9c7cc184-0371-46a1-888b-b193cca8a62a
+2026-09-25 13:58:40.950067+00:00,entry,912,lab0912_s412_w1_0928_1005_r1,S412,cd504ce17d57,NKE,NKE261002C00038000,1,0.72,0.71,71.0,,,,-0.01,,0.5,-0.5,0.16296296296296292,RB gap -2.1% reclaim,d8c5f94f-14ba-4b32-91a5-8a005abf29e4
+2026-09-25 13:58:40.360670+00:00,entry,857,lab0857_s408_w1_0928_1005_r2,S408,fc5ba3a45e0f,NKE,NKE261002C00040000,1,0.32,0.31,31.0,,,,-0.01,,0.5,-0.5,0.16393442622950813,RB gap -2.1% reclaim,5e8caf81-0a7c-4d3a-a2e2-8186c7f3e62e
+2026-09-25 13:58:40.176024+00:00,entry,856,lab0856_s408_w1_0928_1005_r1,S408,62b18f666304,NKE,NKE261002C00040000,1,0.32,0.31,31.0,,,,-0.01,,0.5,-0.5,0.16393442622950813,RB gap -2.1% reclaim,61be6747-dc2a-4431-b2cd-2ee9c24d4f15
+2026-09-25 13:58:39.760151+00:00,entry,829,lab0829_s406_w1_0928_1005_r2,S406,18d8a9cd291d,NKE,NKE261002C00038500,1,0.57,0.56,56.0,,,,-0.01,,0.5,-0.5,0.053097345132743216,RB gap -2.1% reclaim,25db8b40-fde9-400c-a862-7b291806125a
+2026-09-25 13:58:36.452838+00:00,entry,828,lab0828_s406_w1_0928_1005_r1,S406,89c3ca3043ba,NKE,NKE261002C00038500,1,0.57,0.56,56.0,,,,-0.01,,0.5,-0.5,0.053097345132743216,RB gap -2.1% reclaim,529e0fca-4409-4839-b60d-a6ce4a7e8353
+2026-09-25 13:58:33.901146+00:00,entry,405,lab0405_s364_w1_0928_1005_r2,S364,2e2b7dbe88f6,NKE,NKE261002C00038000,1,0.72,0.71,71.0,,,,-0.01,,0.5,-0.5,0.16296296296296292,RB gap -2.1% reclaim,192fe86d-7a85-4aeb-9e4a-15f32feeceaf
+2026-09-25 13:58:33.748123+00:00,entry,404,lab0404_s364_w1_0928_1005_r1,S364,9d0435e919d4,NKE,NKE261002C00038000,1,0.72,0.71,71.0,,,,-0.01,,0.5,-0.5,0.16296296296296292,RB gap -2.1% reclaim,949deb07-5774-4516-849f-6aebaf2c5932
+2026-09-25 13:58:30.812086+00:00,entry,281,lab0281_s351_w1_0928_1005_r2,S351,7f2a1cc1b930,NKE,NKE260925C00035000,1,0.68,0.67,67.0,,,,-0.01,,0.5,-0.5,0.1068702290076335,gap -2.1%,cc6f151d-2cef-4bc8-93d8-3b6e985a040b
+2026-09-25 13:58:30.791927+00:00,entry,280,lab0280_s351_w1_0928_1005_r1,S351,0fafaa6efb15,NKE,NKE260925C00035000,1,0.68,0.67,67.0,,,,-0.01,,0.5,-0.5,0.1068702290076335,gap -2.1%,110b3c55-a2ac-445f-97a2-be84e060bf4b
+2026-09-25 13:58:30.295248+00:00,entry,277,lab0277_s350_w1_0928_1005_r2,S350,c937de76a67f,NKE,NKE260925C00035000,1,0.68,0.67,67.0,,,,-0.01,,0.5,-0.5,0.1068702290076335,gap -2.1%,79605a5c-bfb7-410f-bd30-426f94c10d2d
+2026-09-25 13:58:29.989391+00:00,entry,276,lab0276_s350_w1_0928_1005_r1,S350,4ba5a00488d3,NKE,NKE260925C00035000,1,0.68,0.67,67.0,,,,-0.01,,0.5,-0.5,0.1068702290076335,gap -2.1%,2a24220e-3be0-4c69-83c7-3b71b6f18e16
+2026-09-25 13:58:28.477466+00:00,entry,1151,lab1151_s164_w1_0928_1005_r2,S164,f455ae180491,NKE,NKE260925C00035000,1,0.68,0.67,67.0,,,,-0.01,,0.5,-0.5,0.1068702290076335,gap -2.1%,e9802bc8-4377-4058-b2de-315d6f697aae
+2026-09-25 13:58:28.173002+00:00,entry,1150,lab1150_s164_w1_0928_1005_r1,S164,8d043338457d,NKE,NKE260925C00035000,1,0.68,0.67,67.0,,,,-0.01,,0.5,-0.5,0.1068702290076335,gap -2.1%,1b098012-d156-4b03-b68d-b750ddaf6802
+2026-09-25 13:58:27.573165+00:00,entry,81,lab0081_s210_w1_0928_1005_r2,S210,dc672997ca35,SPY,SPY260928C00775000,1,0.62,0.61,61.0,,,,-0.01,,0.5,-0.5,0.08264462809917363,MA8 766.21 crossed above MA21,60803a5d-8104-48c0-8f0b-c70e8b501eef
+2026-09-25 13:58:27.310090+00:00,entry,80,lab0080_s210_w1_0928_1005_r1,S210,c107de089a95,SPY,SPY260928C00775000,1,0.62,0.61,61.0,,,,-0.01,,0.5,-0.5,0.08264462809917363,MA8 766.21 crossed above MA21,28f22c4a-d655-4a41-b65f-fd12776c32d4
+2026-09-25 13:58:05.119850+00:00,entry,90,live_1to1,S218,bd9253105d44,TTD,TTD261002C00012500,1,0.56,0.55,55.0,,,,-0.01,,0.5,-0.4,0.150943396226415,low=12.53 BB_lower=12.48 touch+green,46c9c55d-3d01-4414-b44c-7e3b762d398b
+2026-09-25 13:58:04.656545+00:00,entry,165,lab0165_s216_w1_0928_1005_r2,S216,5d7c0be9b89c,NFLX,NFLX261002C00074000,1,0.37,0.36,36.0,,,,-0.01,,0.75,-0.75,0.02666666666666669,RSI crossed 30: 26.6 -> 32.6,74553130-7f8d-4c81-ad4f-2daad6afb5cf
+2026-09-25 13:58:04.519830+00:00,entry,164,lab0164_s216_w1_0928_1005_r1,S216,5ffa0bf998fe,NFLX,NFLX261002C00074000,1,0.37,0.36,36.0,,,,-0.01,,0.75,-0.75,0.02666666666666669,RSI crossed 30: 26.6 -> 32.6,953d013f-73a9-4e74-a10d-3bd6a39131bb
+2026-09-24 16:41:39.400859+00:00,exit,262,lab0262_s403_w1_0928_1005_r1,S403,cde1466005e8,XOM,XOM261002C00167500,1,,1.31,54.0,142.59,77.0,reconcile_fill,,-0.01,0.5,-0.5,,,8bc84d67-ca3c-4177-89f9-19ff8cbc682c
+2026-09-24 16:42:00.642819+00:00,exit,81,lab0081_s210_w1_0928_1005_r2,S210,dc672997ca35,SPY,SPY260928C00775000,1,,0.62,61.0,1.64,1.0,reconcile_fill,,-0.01,0.5,-0.5,,,2da413a3-8413-45b1-99db-874ebf070fad
+2026-09-24 16:40:51.371800+00:00,exit,90,live_1to1,S218,bd9253105d44,TTD,TTD261002C00012500,1,,1.11,55.0,101.82,56.0,reconcile_fill,,-0.01,0.5,-0.4,,,a6482392-92ce-4b5f-8317-b94d74861411
