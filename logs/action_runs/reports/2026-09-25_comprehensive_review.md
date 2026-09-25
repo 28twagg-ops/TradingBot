@@ -14797,3 +14797,132 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260925T195156Z
+
+- UTC timestamp: `20260925T195156Z`
+- GitHub run: [#11113](https://github.com/28twagg-ops/TradingBot/actions/runs/36182069327)
+- Run id: `36182069327`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260925T195156Z_live_bot.log`, `logs/action_runs/20260925T195156Z_live_options.log`, `logs/action_runs/20260925T195156Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1507 | 50.2 | +12.5 | +43.6 | $+19,711 |
+| TAINTED | 1908 | 33.4 | -38.8 | +12.7 | $-9,602 |
+| KEEP-only | 798 | 63.3 | +52.8 | +66.8 | $+13,806 |
+| KEEP-only recent | 603 | 62.5 | +56.9 | +76.9 | $+9,721 |
+
+- KEEP strategies (25): S163, S164, S167, S168, S173, S174, S210, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S401, S403, S404, S406, S411, S412
+- KILL strategies (19): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S354, S355, S360, S363, S366, S399, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-25T15:45:35.890678-04:00","date":"2026-09-25","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":13.1,"phases_s":{"reconcile":0.44,"cancel":0.21,"manage":8.58,"protective_stops":3.33},"signals":0,"placed":0,"equity":996835.69,"open_positions":30,"pending_orders":0,"open_lots":92,"submitted_today":149,"filled_today":107,"unattributed_contracts":0,"top_signals":[],"github_run":"11111","github_run_id":"36181067905","status":"ok","data_quality":{"clean":{"n":1507,"win":50.17,"med":12.5,"avg":43.64,"pnl":19711.16},"tainted":{"n":1908,"win":33.39,"med":-38.81,"avg":12.66,"pnl":-9602.28},"keep_only":{"n":798,"win":63.28,"med":52.75,"avg":66.75,"pnl":13806.45},"keep_only_recent":{"n":603,"win":62.52,"med":56.92,"avg":76.9,"pnl":9721.0},"keep_strategies":["S163","S164","S167","S168","S173","S174","S210","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S401","S403","S404","S406","S411","S412"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S354","S355","S360","S363","S366","S399","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (65 earlier lines - see full log file)
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (stale (144017.8m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  47                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.88   68.6   -1.44   50MA bounce (+|
+|  GOOG     Pullback50      eq     $341.38  54.7   -1.50   50MA bounce (-|
+|  GOOGL    Pullback50      eq     $344.10  54.1   -1.48   50MA bounce (-|
+|  MO       Pullback50      eq     $68.74   49.0   -1.78   50MA bounce (-|
+|  AMAT     Pullback50      eq     $487.44  60.7   -1.24   50MA bounce (-|
+|  TECH     Pullback50      eq     $72.63   59.4   -1.18   50MA bounce (+|
+|  BRK-B    Pullback50      eq     $505.47  49.3   -1.26   50MA bounce (-|
+|  CAT      Pullback50      eq     $822.23  52.8   -1.52   50MA bounce (-|
+|  C        Pullback50      eq     $134.53  41.7   -1.00   50MA bounce (+|
+|  FIX      Pullback50      eq     $1657.~  55.0   -1.13   50MA bounce (-|
+|  CVS      MomReversal     eq     $89.20   28.6   0.83    -14.9% drop/60|
+|  ECL      Pullback50      eq     $279.97  51.1   -1.38   50MA bounce (+|
+|  XOM      Pullback50      eq     $160.71  52.2   -1.19   50MA bounce (+|
+|  FLEX     Pullback50      eq     $114.80  56.8   -0.62   50MA bounce (-|
+|  IEX      Pullback50      eq     $230.32  62.4   -1.74   50MA bounce (+|
+|  IVZ      Pullback50      eq     $31.04   33.2   0.75    50MA bounce (-|
+|  LLY      Pullback50      eq     $1186.~  62.6   -1.53   50MA bounce (+|
+|  MAR      Pullback50      eq     $352.56  66.2   -1.10   50MA bounce (-|
+|  MA       Pullback50      eq     $567.35  39.7   -1.21   50MA bounce (-|
+|  MSFT     VWAP_Reclaim    eq     $516.53  60.1   1.51    VWAP reclaim V|
+|  MCK      Pullback50      eq     $866.48  35.2   -1.29   50MA bounce (-|
+|  MSI      Pullback50      eq     $456.47  39.7   -1.84   50MA bounce (-|
+|  PH       Pullback50      eq     $978.38  55.8   -1.23   50MA bounce (-|
+|  PRU      Pullback50      eq     $119.56  40.7   -1.61   50MA bounce (-|
+|  DGX      Pullback50      eq     $236.87  49.7   -1.22   50MA bounce (+|
+|  ROST     Pullback50      eq     $236.11  58.0   -1.35   50MA bounce (-|
+|  TT       Pullback50      eq     $455.36  55.6   -0.02   50MA bounce (-|
+|  VLTO     Pullback50      eq     $97.11   53.7   -0.82   50MA bounce (+|
+|  V        Pullback50      eq     $367.37  40.6   -0.82   50MA bounce (-|
+|  WSM      Pullback50      eq     $231.91  55.0   -1.82   50MA bounce (-|
+|  APPF     Pullback50      eq     $204.06  41.2   -1.81   50MA bounce (+|
+|  AVNT     Pullback50      eq     $41.40   30.0   -2.09   50MA bounce (-|
+|  AYI      MomReversal     eq     $318.27  39.2   0.62    -13.4% drop/60|
+|  BJ       Pullback50      eq     $93.87   51.5   -1.13   50MA bounce (+|
+|  CHE      RSIRecovery     eq     $511.97  42.6   0.32    RSI 15.5→42.6 |
+|  CNO      Pullback50      eq     $54.04   27.2   -1.40   50MA bounce (-|
+|  COKE     Pullback50      eq     $190.30  51.5   -0.61   50MA bounce (+|
+|  CROX     Pullback50      eq     $126.11  63.5   -1.43   50MA bounce (+|
+|  EVR      MomReversal     eq     $262.44  20.9   1.53    -23.0% drop/60|
+|  GHC      Pullback50      eq     $1155.~  57.2   -1.27   50MA bounce (-|
+|  MSA      Pullback50      eq     $182.73  37.7   -1.09   50MA bounce (-|
+|  MOG-A    Pullback50      eq     $390.30  65.4   0.41    50MA bounce (-|
+|  MSM      Pullback50      eq     $121.31  49.7   -1.05   50MA bounce (-|
+|  PCTY     Pullback50      eq     $143.68  34.2   -0.64   50MA bounce (-|
+|  SEIC     Pullback50      eq     $105.66  28.9   -0.57   50MA bounce (+|
+|  SYNA     Pullback50      eq     $102.77  54.2   -1.17   50MA bounce (+|
+|  WTS      Pullback50      eq     $358.50  44.4   -1.17   50MA bounce (-|19:55:34  INFO        BUY  CVS  $33.58  [MomReversal]  id=1b913381-d64b-4716-8610-9bfd2864df0c
+19:55:34  INFO        BUY  AYI  $33.58  [MomReversal]  id=28d4dce6-d1d2-4fa5-9dfc-cb27dc281b68
+19:55:34  INFO        BUY  EVR  $33.58  [MomReversal]  id=56c783c9-0a20-441d-a281-2d628aa56858
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
