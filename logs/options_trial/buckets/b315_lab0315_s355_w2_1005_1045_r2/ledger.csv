@@ -36,4 +36,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-10 14:07:52.492685+00:00,entry,315,lab0315_s355_w2_1005_1045_r2,S355,9943eadcdf3e,MARA,MARA260918C00012000,1,0.39,0.38,38.0,,,,-0.01,,0.75,-0.75,0.22222222222222227,gap -2.3%,f3bac5cd-f97c-4983-970a-036391107a0a
 2026-09-17 13:30:04.731430+00:00,exit,315,lab0315_s355_w2_1005_1045_r2,S355,9943eadcdf3e,MARA,MARA260918C00012000,1,,0.11,38.0,-71.05,-27.0,reconcile_fill,,-0.01,0.5,-0.5,,,de5ba896-8733-408f-afa2-c176c16c5a77
 2026-09-24 14:07:54.284395+00:00,entry,315,lab0315_s355_w2_1005_1045_r2,S355,082099adc3d5,MARA,MARA261002C00014000,1,0.4,0.39,39.0,,,,-0.01,,0.75,-0.75,0.049999999999999906,gap -2.1%,45342d7f-d00b-48cf-a68c-9d194550ddaf
-2026-09-25T13:34:59Z,reconcile,315,lab0315_s355_w2_1005_1045_r2,S355,082099adc3d5,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:30Z,reconcile,315,lab0315_s355_w2_1005_1045_r2,S355,082099adc3d5,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

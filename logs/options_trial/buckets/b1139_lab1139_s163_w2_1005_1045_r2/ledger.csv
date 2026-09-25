@@ -8,4 +8,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16 14:44:09.235168+00:00,entry,1139,lab1139_s163_w2_1005_1045_r2,S163,935f7620e75e,EOG,EOG260918C00150000,1,0.67,0.65,65.0,,,,-0.01,,0.5,-0.5,0.17600000000000016,gap -2.4%,d85e9346-b332-45f9-ad4c-60b907400702
 2026-09-16T15:01:25Z,reconcile,1139,lab1139_s163_w2_1005_1045_r2,S163,935f7620e75e,EOG,EOG260918C00150000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24 14:11:29.701655+00:00,entry,1139,lab1139_s163_w2_1005_1045_r2,S163,fb350c4ba29c,MARA,MARA261002C00014000,1,0.37,0.37,37.0,,,,-0.01,,0.75,-0.75,0.054054054054054106,gap -2.1%,e33f07ff-846d-4266-acf8-fba4bed7d4ca
-2026-09-25T13:34:59Z,reconcile,1139,lab1139_s163_w2_1005_1045_r2,S163,fb350c4ba29c,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,1139,lab1139_s163_w2_1005_1045_r2,S163,fb350c4ba29c,MARA,MARA261002C00014000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

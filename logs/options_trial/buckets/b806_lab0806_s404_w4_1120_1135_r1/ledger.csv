@@ -24,4 +24,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-24 15:28:27.358725+00:00,entry,806,lab0806_s404_w4_1120_1135_r1,S404,d776a074b201,AMD,AMD260925C00642500,1,0.63,0.63,63.0,,,,-0.01,,0.5,-0.5,,,993cd440-9ebd-4ad0-ba4e-f697e3512925
 2026-09-24 15:29:31.171804+00:00,entry,806,lab0806_s404_w4_1120_1135_r1,S404,207b10b287ce,HOOD,HOOD260925C00124000,1,0.71,0.71,71.0,,,,-0.01,,0.75,-0.75,0.05714285714285704,gap -2.6%,eb06bb0b-15db-4e23-8ff8-63d63bb4ac9f
 2026-09-24 16:41:09.132340+00:00,exit,806,lab0806_s404_w4_1120_1135_r1,S404,d776a074b201,AMD,AMD260925C00642500,1,,1.89,63.0,200.0,126.0,take_profit (+196.8%),,-0.01,0.5,-0.5,,,513d9c90-782e-482e-8142-46e6b1d44594
-2026-09-25T13:34:59Z,reconcile,806,lab0806_s404_w4_1120_1135_r1,S404,207b10b287ce,HOOD,HOOD260925C00124000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,806,lab0806_s404_w4_1120_1135_r1,S404,207b10b287ce,HOOD,HOOD260925C00124000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

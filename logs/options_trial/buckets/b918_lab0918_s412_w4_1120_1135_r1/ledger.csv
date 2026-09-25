@@ -25,4 +25,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-17 15:27:56.589280+00:00,entry,918,lab0918_s412_w4_1120_1135_r1,S412,40372cd24996,CRWD,CRWD260918C00260000,1,0.34,0.34,34.0,,,,-0.01,,0.75,-0.75,0.12121212121212116,RB gap -2.2% reclaim,ba1d6f52-e243-417c-98f4-b995af404a5d
 2026-09-16 17:26:19.270931+00:00,exit,918,lab0918_s412_w4_1120_1135_r1,S412,40372cd24996,CRWD,CRWD260918C00260000,1,,0.25,34.0,-26.47,-9.0,reconcile_fill,,-0.01,0.5,-0.5,,,b2fef713-5229-4794-b7d7-9e1e7b92c4dd
 2026-09-24 15:23:56.218586+00:00,entry,918,lab0918_s412_w4_1120_1135_r1,S412,a7424798c62b,HOOD,HOOD260925C00126000,1,0.46,0.46,46.0,,,,-0.01,,0.5,-0.5,,,577cffd7-9dee-4ce9-9638-4b9550e42859
-2026-09-25T13:34:59Z,reconcile,918,lab0918_s412_w4_1120_1135_r1,S412,a7424798c62b,HOOD,HOOD260925C00126000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T13:40:31Z,reconcile,918,lab0918_s412_w4_1120_1135_r1,S412,a7424798c62b,HOOD,HOOD260925C00126000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
