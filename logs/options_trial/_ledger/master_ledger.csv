@@ -15285,3 +15285,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-25T19:16:38Z,reconcile,1156,lab1156_s164_w4_1120_1135_r1,S164,4a77bf3d8029,NKE,NKE260925C00035500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-25T19:16:38Z,reconcile,287,lab0287_s351_w4_1120_1135_r2,S351,a796af97b3d5,NKE,NKE260925C00035500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-25T19:16:39Z,reconcile,286,lab0286_s351_w4_1120_1135_r1,S351,4cc35c6690a3,NKE,NKE260925C00035500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T19:28:37Z,reconcile,420,lab0420_s365_w2_1005_1045_r1,S365,672004d1cac1,MARA,MARA261009C00014500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),

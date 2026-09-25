@@ -62,26 +62,6 @@
       "entry_order_id": "58e40aee-3805-4bde-867a-03634558ae61"
     },
     {
-      "lot_id": "672004d1cac1",
-      "bucket_id": 420,
-      "profile_name": "lab0420_s365_w2_1005_1045_r1",
-      "strategy_id": "S365",
-      "occ_symbol": "MARA261009C00014500",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 46.0,
-      "entry_price": 0.46,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-24T14:09:00.680845+00:00",
-      "entry_order_id": "4cca8135-d10f-457c-a029-facff97f2acd"
-    },
-    {
       "lot_id": "527bbf6b18a7",
       "bucket_id": 194,
       "profile_name": "lab0194_s218_w2_1005_1045_r1",
@@ -1883,23 +1863,11 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "c96e9ad2-e996-4768-8d25-91d03d179dac",
-      "lot_id": "672004d1cac1",
-      "bucket_id": 420,
-      "strategy_id": "S365",
-      "occ_symbol": "MARA261009C00014500",
-      "qty": 1,
-      "reason": "stop_loss (-58.7%)",
-      "submitted": "2026-09-25T09:57:06"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b166": 4.0,
     "b391": 55.00000000000001,
     "b390": 55.00000000000001,
-    "b420": 46.0,
     "b194": 43.0,
     "b168": 59.0,
     "b436": 57.99999999999999,
