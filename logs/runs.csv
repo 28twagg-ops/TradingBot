@@ -8731,3 +8731,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-25 21:51:14,ext_exits,bull,223.93,156.73,0,0,0,2,CVS|EVR,both
 2026-09-25 21:56:24,ext_exits,bull,223.93,156.73,0,0,0,2,CVS|EVR,both
 2026-09-25 22:01:20,ext_exits,bull,223.93,156.73,0,0,0,2,CVS|EVR,both
+2026-09-25 22:06:10,ext_exits,bull,223.93,156.73,0,0,0,2,CVS|EVR,both
