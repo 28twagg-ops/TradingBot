@@ -1638,6 +1638,38 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
+    },
+    {
+      "order_id": "31f75a37-f0ac-4f33-b89c-1854d88eeb80",
+      "bucket_id": 322,
+      "strategy_id": "S356",
+      "occ_symbol": "DKNG261009C00022500",
+      "underlying": "DKNG",
+      "qty": 1,
+      "limit": 0.43,
+      "profile_name": "lab0322_s356_w2_1005_1045_r1",
+      "submitted": "2026-09-25",
+      "detail": "gap -2.1%",
+      "spread_frac": 0.14634146341463414,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "91bd92d5-59e1-4567-8899-f51e601f96dd",
+      "bucket_id": 323,
+      "strategy_id": "S356",
+      "occ_symbol": "DKNG261009C00022500",
+      "underlying": "DKNG",
+      "qty": 1,
+      "limit": 0.43,
+      "profile_name": "lab0323_s356_w2_1005_1045_r2",
+      "submitted": "2026-09-25",
+      "detail": "gap -2.1%",
+      "spread_frac": 0.14634146341463414,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
     }
   ],
   "pending_exits": [
@@ -1792,7 +1824,9 @@
     "830|S406|2026-09-25",
     "831|S406|2026-09-25",
     "858|S408|2026-09-25",
-    "859|S408|2026-09-25"
+    "859|S408|2026-09-25",
+    "322|S356|2026-09-25",
+    "323|S356|2026-09-25"
   ],
   "processed_orders": [
     "864fb3fb-9bbd-4fa7-895c-69033f58a0c7",
@@ -2256,7 +2290,7 @@
     "9e7345b2-a9da-4917-b08e-893f5538416b",
     "fe90f908-41f5-43e9-8681-ed1dd2461e80"
   ],
-  "submitted_today": 69,
+  "submitted_today": 71,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-25"
 }
