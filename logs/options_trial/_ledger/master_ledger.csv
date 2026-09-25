@@ -15280,3 +15280,8 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-25T17:16:17Z,reconcile,0,orphan_reconcile,ORPHAN,436cb6570560,TTD,TTD261002C00013500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-25 17:26:22.364869+00:00,exit,0,orphan_reconcile,ORPHAN,3ec384e8a37a,XOM,XOM261002C00170000,1,,0.17,29.0,-41.38,-12.0,stop_loss (-41.4%),,-0.01,0.5,-0.4,,,d056c0ab-c039-41c7-ad64-ac696df9fbd0
 2026-09-25T18:51:25Z,reconcile,0,orphan_reconcile,ORPHAN,bee0378ecd6b,TTD,TTD261002C00012500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T19:16:38Z,reconcile,284,lab0284_s351_w3_1045_1120_r1,S351,db69960c08da,NKE,NKE260925C00035500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T19:16:38Z,reconcile,1157,lab1157_s164_w4_1120_1135_r2,S164,ec94cdf2b682,NKE,NKE260925C00035500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T19:16:38Z,reconcile,1156,lab1156_s164_w4_1120_1135_r1,S164,4a77bf3d8029,NKE,NKE260925C00035500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T19:16:38Z,reconcile,287,lab0287_s351_w4_1120_1135_r2,S351,a796af97b3d5,NKE,NKE260925C00035500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-25T19:16:39Z,reconcile,286,lab0286_s351_w4_1120_1135_r1,S351,4cc35c6690a3,NKE,NKE260925C00035500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
