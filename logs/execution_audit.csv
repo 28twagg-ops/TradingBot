@@ -884,3 +884,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-09-25 13:53:13,2026-09-25,SELL,GOOGL,Pullback50,344.3973,343.71,344.328,33.59,-0.0201,-0.0068,limit_fill_position_check_full,midline (-0.0%),bull
 2026-09-25 13:53:43,2026-09-25,SELL,GOOG,Pullback50,340.93,340.9,340.916,33.59,-0.0041,-0.0014,limit_fill_position_check_full,midline (-0.0%),bull
 2026-09-25 17:06:31,2026-09-25,SELL,COP,Pullback50,127.11,,127.11,33.54,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-09-25 19:58:06,2026-09-25,SELL,AYI,MomReversal,318.5,317.86,318.434,33.58,-0.0207,-0.007,limit_fill_position_check_full,midline (+0.0%),bull

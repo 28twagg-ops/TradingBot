@@ -8705,4 +8705,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-25 19:16:36,exits,bull,223.86,223.86,0,0,0,0,,both
 2026-09-25 19:21:19,exits,bull,223.86,223.86,0,0,0,0,,both
 2026-09-25 19:28:35,exits,bull,223.86,223.86,0,0,0,0,,both
-2026-09-25 19:56:04,scan_evening,bull,223.91,123.15,47,0,0,3,AYI|CVS|EVR,both,246.4,False
+2026-09-25 19:56:04,scan_evening,bull,223.91,123.15,47,0,0,3,AYI|CVS|EVR,both
