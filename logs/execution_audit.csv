@@ -890,3 +890,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-09-28 13:52:37,2026-09-28,SELL,GOOGL,Pullback50,342.75,342.61,342.752,33.55,0.0006,0.0002,limit_fill_position_check_full,midline (-0.1%),bull
 2026-09-28 13:53:07,2026-09-28,SELL,AKAM,Pullback50,112.555,112.33,112.492,33.59,-0.056,-0.0188,limit_fill_position_check_full,midline (-0.0%),bull
 2026-09-28 13:53:38,2026-09-28,SELL,AES,Pullback50,14.874,14.87,14.8736,33.56,-0.0027,-0.0009,limit_fill_position_check_full,midline (-0.0%),bull
+2026-09-28 19:53:07,2026-09-28,SELL,AES,Pullback50,14.87,14.87,14.8733,33.53,0.0222,0.0074,limit_fill_position_check_full,midline (-0.0%),bull
