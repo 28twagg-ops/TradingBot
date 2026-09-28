@@ -2982,26 +2982,6 @@
       "entry_order_id": "126244a8-8782-41a5-8e2b-f8ff7eb5c642"
     },
     {
-      "lot_id": "82b2c3f2a807",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "CVNA261002C00066000",
-      "underlying": "CVNA",
-      "qty": 1,
-      "entry_cost": 51.3333,
-      "entry_price": 0.513333,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-28T15:17:01.078124+00:00",
-      "entry_order_id": "orphan:CVNA261002C00066000"
-    },
-    {
       "lot_id": "99bb4fc7419f",
       "bucket_id": 285,
       "profile_name": "lab0285_s351_w3_1045_1120_r2",
@@ -3403,16 +3383,6 @@
       "qty": 1,
       "reason": "stop_loss (-42.3%)",
       "submitted": "2026-09-28T11:29:12"
-    },
-    {
-      "order_id": "baab6afe-c7af-4786-ab06-293297118940",
-      "lot_id": "82b2c3f2a807",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "CVNA261002C00066000",
-      "qty": 1,
-      "reason": "stop_loss (-41.6%)",
-      "submitted": "2026-09-28T11:49:14"
     }
   ],
   "bucket_open_premium": {
@@ -3427,7 +3397,7 @@
     "b828": 56.00000000000001,
     "b405": 71.0,
     "b404": 71.0,
-    "b0": 361.8333,
+    "b0": 310.5,
     "b90": 131.0,
     "b785": 68.0,
     "b784": 68.0,
@@ -4152,7 +4122,8 @@
     "95e08be5-4d1e-428b-bd94-21947fb5fb01",
     "c2fd19b8-1fc7-426b-b82f-d5e03cabe496",
     "8b31d836-e0cd-4b35-b5a6-3e0a34b1ca60",
-    "1ed97353-3e28-42aa-8d98-d9ad7eaf968c"
+    "1ed97353-3e28-42aa-8d98-d9ad7eaf968c",
+    "baab6afe-c7af-4786-ab06-293297118940"
   ],
   "submitted_today": 103,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
