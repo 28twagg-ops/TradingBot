@@ -3022,26 +3022,6 @@
       "entry_order_id": "a0868b48-f07c-42f8-b255-77d891a18680"
     },
     {
-      "lot_id": "e4a967f0a1e4",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "MSFT260928C00512500",
-      "underlying": "MSFT",
-      "qty": 1,
-      "entry_cost": 54.0,
-      "entry_price": 0.54,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-28T15:19:49.482224+00:00",
-      "entry_order_id": "orphan:MSFT260928C00512500"
-    },
-    {
       "lot_id": "c516594b96ad",
       "bucket_id": 917,
       "profile_name": "lab0917_s412_w3_1045_1120_r2",
@@ -3425,14 +3405,14 @@
       "submitted": "2026-09-28T11:29:12"
     },
     {
-      "order_id": "1ed97353-3e28-42aa-8d98-d9ad7eaf968c",
-      "lot_id": "e4a967f0a1e4",
+      "order_id": "baab6afe-c7af-4786-ab06-293297118940",
+      "lot_id": "82b2c3f2a807",
       "bucket_id": 0,
       "strategy_id": "ORPHAN",
-      "occ_symbol": "MSFT260928C00512500",
+      "occ_symbol": "CVNA261002C00066000",
       "qty": 1,
-      "reason": "stop_loss (-40.7%)",
-      "submitted": "2026-09-28T11:41:42"
+      "reason": "stop_loss (-41.6%)",
+      "submitted": "2026-09-28T11:49:14"
     }
   ],
   "bucket_open_premium": {
@@ -3447,7 +3427,7 @@
     "b828": 56.00000000000001,
     "b405": 71.0,
     "b404": 71.0,
-    "b0": 415.8333,
+    "b0": 361.8333,
     "b90": 131.0,
     "b785": 68.0,
     "b784": 68.0,
@@ -4171,7 +4151,8 @@
     "142a1bc6-583d-484e-a33b-cd8cae4888dc",
     "95e08be5-4d1e-428b-bd94-21947fb5fb01",
     "c2fd19b8-1fc7-426b-b82f-d5e03cabe496",
-    "8b31d836-e0cd-4b35-b5a6-3e0a34b1ca60"
+    "8b31d836-e0cd-4b35-b5a6-3e0a34b1ca60",
+    "1ed97353-3e28-42aa-8d98-d9ad7eaf968c"
   ],
   "submitted_today": 103,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

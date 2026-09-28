@@ -15459,3 +15459,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-28 15:34:53.782507+00:00,exit,0,orphan_reconcile,ORPHAN,f56ad039ed5a,MCD,MCD261002C00245000,1,,0.17,25.0,-32.0,-8.0,stop_loss (-40.0%),,-0.01,0.5,-0.4,,,95e08be5-4d1e-428b-bd94-21947fb5fb01
 2026-09-24 18:19:21.160008+00:00,exit,862,lab0862_s408_w4_1120_1135_r1,S408,10e6108abbcd,PLTR,PLTR261002C00212500,1,,0.07,12.0,-41.67,-5.0,reconcile_fill,,-0.01,0.5,-0.5,,,c2fd19b8-1fc7-426b-b82f-d5e03cabe496
 2026-09-24 16:22:05.088180+00:00,exit,834,lab0834_s406_w4_1120_1135_r1,S406,947d0fbda315,PLTR,PLTR261002C00207500,1,,0.31,26.0,19.23,5.0,reconcile_fill,,-0.01,0.5,-0.5,,,8b31d836-e0cd-4b35-b5a6-3e0a34b1ca60
+2026-09-28 15:41:42.312808+00:00,exit,0,orphan_reconcile,ORPHAN,e4a967f0a1e4,MSFT,MSFT260928C00512500,1,,0.33,54.0,-38.89,-21.0,stop_loss (-40.7%),,-0.01,0.5,-0.4,,,1ed97353-3e28-42aa-8d98-d9ad7eaf968c

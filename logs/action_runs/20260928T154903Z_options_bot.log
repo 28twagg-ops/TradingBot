@@ -1,3 +1,119 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=170 paper_keys=yes dry_run=False
+  alpaca positions=46
+options_reconcile: done
+Layout: controlled:1164:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1164
+PROBE OK: paper account status=AccountStatus.ACTIVE equity=$995,591.63
+  buying_power=$3,839,786.26 cash=$971,924.01
+  open option orders: 20
+    PLTR261002C00212500 OrderSide.SELL qty=2 status=OrderStatus.NEW limit=None
+    DKNG261002C00023000 OrderSide.SELL qty=2 status=OrderStatus.NEW limit=None
+    MCD261002C00245000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    PLTR261002C00207500 OrderSide.SELL qty=2 status=OrderStatus.NEW limit=None
+    CVNA261002C00069000 OrderSide.SELL qty=10 status=OrderStatus.NEW limit=None
+  open option positions: 42
+    BAC261002C00056000 qty=1 mkt=$62.00
+    BAC261002C00057000 qty=2 mkt=$52.00
+    CVNA261002C00066000 qty=9 mkt=$270.00
+    CVNA261002C00067000 qty=12 mkt=$240.00
+    CVNA261002C00068000 qty=8 mkt=$104.00
+PROBE: check-only pass (use --smoke-entry to place a test order)
+=== options_morning_bot (PAPER) 2026-09-28T11:49:09.255268-04:00 ===
+
+[Run context]
+Paper auth OK — equity $995587.51, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
+Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+  EXIT [b86|lab0086_s210_w4_1120_1135_r1|S210] stop_loss (-94.6%) SELL failed SPY260928C00775000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+2026-09-28 11:49:14,334 INFO   EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-41.6%) SELL 1 CVNA261002C00066000 @<= 0.27
+Protective stops: placed=1 upgraded=0 already=38 failed=2 (market-first)
+
+[Manage only]
+Past entry window; manage/exit only.
+
+[Portfolio snapshot]
++========================================================================+
+|[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
++========================================================================+
+|-- ACCOUNT STATUS (manage-only) --                                      |
+|Equity       : $995,587.51                                              |
+|Open Risk    : 169 lots (42 broker pos)                                 |
+|Today's Run  : 0 signals -> 0 orders submitted                          |
+|                                                                        |
+|-- SYSTEM HEALTH --                                                     |
+|Zombies      : 0 (Ledger is clean)                                      |
+|Lab Status   : 169 Active Lots | 0 Pending Orders                       |
+|Auto-Matrix  : (Pending EOD report generation)                          |
++========================================================================+
++========================================================================+
+|[DATA QUALITY: CLEAN vs ERRORS vs KEEP-ONLY]                            |
++========================================================================+
+|  CLEAN              n=1513  win= 50.2%  med=  +4.8%  $+19,751          |
+|  TAINTED            n=1920  win= 33.5%  med= -38.6%  $-9,344           |
+|  KEEP-only          n=800   win= 63.2%  med= +52.8%  $+13,831          |
+|  KEEP recent        n=605   win= 62.5%  med= +56.9%  $+9,746           |
+|  KEEP(25): S163,S164,S167,S168,S173,S174,S210,S350...                  |
+|  KILL(19): ORPHAN,S202,S203,S207,S211,S212,S216,S217...                |
++========================================================================+
++========================================================================+
+|[+++ OVERPERFORMING STRATEGIES (n>=10)]                                 |
++========================================================================+
+|  BKT  PROFILE                   WIN%   MED%   TOTAL TRADES             |
+|  ---------------------------------------------------------             |
+|  b280 lab0280_s351_w1_0928..  70%  +134.8%    10                       |
+|  b276 lab0276_s350_w1_0928..  70%  +102.9%    10                       |
+|  b238 lab0238_s401_w3_1045..  81%  +100.0%    21                       |
+|  b365 lab0365_s361_w2_1005..  92%  +82.8%    12                        |
++========================================================================+
+|[--- UNDERPERFORMING STRATEGIES (n>=10)]                                |
++========================================================================+
+|  BKT  PROFILE                   WIN%   MED%   TOTAL TRADES             |
+|  ---------------------------------------------------------             |
+|  b47  lab0047_s205_w4_1120..   4%  -78.0%    28                        |
+|  b307 lab0307_s354_w2_1005..  30%  -69.9%    10                        |
+|  b1   lab0001_s200_w1_0928..   0%  -65.8%    10                        |
+|  b41  lab0041_s205_w1_0928..  12%  -65.3%    16                        |
++========================================================================+
++========================================================================+
+|[PENDING EXITS (3)]                                                     |
++========================================================================+
+|  b787 S398 CVNA261002C00067000 x1 stop_loss (-52.8%)                   |
+|  b0   ORPHAN CVNA261002C00068000 x1 stop_loss (-42.3%)                 |
+|  b0   ORPHAN CVNA261002C00066000 x1 stop_loss (-41.6%)                 |
++========================================================================+
++========================================================================+
+|[OPEN OPTIONS (42)]                                                     |
++========================================================================+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|  ---------------------------------------------------------             |
+|  CVNA261002C00067000          12    -55.1%   $   -294.00               |
+|  CVNA261002C00066000           8    -41.6%   $   -170.67               |
+|  NKE261002C00038000           15    +13.4%   $   +138.00               |
+|  CVNA261002C00068000           8    -50.0%   $   -104.00               |
+|  MSFT260930C00527500           8    -25.0%   $   -104.00               |
+|  CVNA261002C00070000           7    -92.9%   $    -91.00               |
+|  WFC261002C00083000            4    -31.9%   $    -86.00               |
+|  MSFT261002C00530000           4    +26.8%   $    +76.00               |
+|  ... 34 more position(s)                                               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-09-28.log
+elapsed=11.4s reconcile=0.25s cancel=0.09s manage=9.02s
+STATUS: options_morning_bot run complete (PAPER) elapsed=11.4s. run=#11196 https://github.com/28twagg-ops/TradingBot/actions/runs/36445947215
+Evaluation complete: 100 strategies evaluated, 0 killed, 0 promote candidates.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-28_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-28_buckets.csv
+Summary: 8 buckets closed trades, $+191.00 realized
+STALE WARNING: 1 bucket(s) with open lots and last_entry >5d
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-28_strategy_selection.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-28_strategy_selection.csv
+Summary: keep=0 watch=84 drop=21
+Orphan rate: 12.0% (412/3433) ALERT
 # Options signal frequency
 
 _Generated 2026-09-28T11:49:27.105557_
@@ -124,3 +240,29 @@ Windows (ET): w1 09:28–10:05 · w2 10:05–10:45 · w3 10:45–11:20 · w4 11:
 
 - Pre-router-fix (before 2026-07-17 commit `56660c9e`): S163/S166 were starved — expect zeros until a post-fix entry-window gap-down day.
 - Controlled layout places one ENTRY per matching bucket×strategy; raw counts inflate, unique underlyings do not.
+
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/signal_frequency.md
+## Ledger health — 2026-09-28
+| Check                       | Count | Status |
+|-----------------------------|------:|--------|
+| Current stuck (state)       |     0 | OK |
+| Orphaned lots (post-stable) |  1589 | WARN | <<<
+| Missing exit records (post) |  1589 | WARN | <<<
+| State/ledger mismatches     |     9 | WARN | <<<
+| Total open lots             |   169 | INFO |
+| Total closed lots           |  2554 | INFO |
+| Pre-cutoff audit debt       |     0 | INFO |
+| Transition audit debt       |   744 | INFO |
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_health.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-28_data_quality.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-28_data_quality.csv
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/latest_data_quality.json
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/latest_data_quality_snippet.md
+CLEAN n=1513 med=+4.8% | TAINTED n=1920 med=-38.6% | KEEP-only n=800 med=+52.8% | KILL=19 KEEP=25
+Wrote /home/runner/work/TradingBot/TradingBot/logs/dashboard.html
+equity=223.66 router=CONFIRMED leaderboard_rows=105
+Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
+| 1 | MA_Squeeze | 3 | 100% | +0.80% | +1.05% | +0.27% | 999.00 | 0.0d | $+1.23 | WATCH |
+| 2 | unknown | 32 | 19% | -0.03% | -0.59% | -1.27% | 1.44 | 0.0d | $+0.29 | ACTIVE |
