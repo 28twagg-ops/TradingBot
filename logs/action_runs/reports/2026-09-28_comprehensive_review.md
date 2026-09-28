@@ -8430,3 +8430,189 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20260928T170957Z
+
+- UTC timestamp: `20260928T170957Z`
+- GitHub run: [#11212](https://github.com/28twagg-ops/TradingBot/actions/runs/36455613897)
+- Run id: `36455613897`
+- Live bot: exit=`0`, duration=`2s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260928T170957Z_live_bot.log`, `logs/action_runs/20260928T170957Z_live_options.log`, `logs/action_runs/20260928T170957Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1523 | 50.2 | +4.8 | +43.2 | $+19,872 |
+| TAINTED | 1921 | 33.5 | -38.8 | +12.7 | $-9,355 |
+| KEEP-only | 807 | 63.2 | +52.8 | +66.1 | $+13,947 |
+| KEEP-only recent | 612 | 62.4 | +56.9 | +75.9 | $+9,862 |
+
+- KEEP strategies (25): S163, S164, S167, S168, S173, S174, S210, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S401, S403, S404, S406, S411, S412
+- KILL strategies (19): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S354, S355, S360, S363, S366, S399, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-28T13:10:03.476165-04:00","date":"2026-09-28","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":15.1,"phases_s":{"reconcile":0.31,"cancel":0.08,"manage":13.27,"protective_stops":0.81},"signals":0,"placed":0,"equity":996533.19,"open_positions":40,"pending_orders":0,"open_lots":153,"submitted_today":103,"filled_today":121,"unattributed_contracts":0,"top_signals":[],"github_run":"11212","github_run_id":"36455613897","status":"ok","data_quality":{"clean":{"n":1525,"win":50.1,"med":4.48,"avg":43.09,"pnl":19836.83},"tainted":{"n":1922,"win":33.51,"med":-38.81,"avg":12.7,"pnl":-9363.28},"keep_only":{"n":808,"win":63.12,"med":52.75,"avg":65.93,"pnl":13919.45},"keep_only_recent":{"n":613,"win":62.32,"med":56.92,"avg":75.66,"pnl":9834.0},"keep_strategies":["S163","S164","S167","S168","S173","S174","S210","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S401","S403","S404","S406","S411","S412"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S354","S355","S360","S363","S366","S399","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+17:09:58  INFO      Mode: exits
+17:09:59  INFO        Daily log -> logs/daily/2026-09-28.md
+17:09:59  INFO        Daily log reconciled -> logs/daily/2026-09-28.md (5 ledger rows)
+17:09:59  INFO        Daily log -> logs/daily/2026-09-28.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         17:09 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $223.66|
++========================================================================+
+
++========================================================================+
+|                             MORNING CHECK                              |
++========================================================================+
+|                                                                        |
+|  No open stock positions.                                              |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           0|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                0|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-09-28T13:10:00.369306-04:00 share=25% ===
+2026-09-28 13:10:00,369 INFO === options_live_micro LIVE 2026-09-28T13:10:00.369306-04:00 share=25% ===
+Live account equity $223.66 cash $223.66 #225458845 options_level=3
+2026-09-28 13:10:00,412 INFO Live account equity $223.66 cash $223.66 #225458845 options_level=3
+Live micro: manage/exits only
+2026-09-28 13:10:00,435 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-09-28 13:10:00,442 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+... (36 earlier lines - see full log file)
+  EXIT [b84|lab0084_s210_w3_1045_1120_r1|S210] take_profit (+51.9%) SELL failed MSFT260930C00525000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+Protective stops: placed=1 upgraded=0 already=33 failed=5 (market-first)
+
+[Manage only]
+Past entry window; manage/exit only.
+
+[Portfolio snapshot]
++========================================================================+
+|[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
++========================================================================+
+|-- ACCOUNT STATUS (manage-only) --                                      |
+|Equity       : $996,533.19                                              |
+|Open Risk    : 153 lots (40 broker pos)                                 |
+|Today's Run  : 0 signals -> 0 orders submitted                          |
+|                                                                        |
+|-- SYSTEM HEALTH --                                                     |
+|Zombies      : 0 (Ledger is clean)                                      |
+|Lab Status   : 153 Active Lots | 0 Pending Orders                       |
+|Auto-Matrix  : (Pending EOD report generation)                          |
++========================================================================+
++========================================================================+
+|[DATA QUALITY: CLEAN vs ERRORS vs KEEP-ONLY]                            |
++========================================================================+
+|  CLEAN              n=1525  win= 50.1%  med=  +4.5%  $+19,837          |
+|  TAINTED            n=1922  win= 33.5%  med= -38.8%  $-9,363           |
+|  KEEP-only          n=808   win= 63.1%  med= +52.8%  $+13,919          |
+|  KEEP recent        n=613   win= 62.3%  med= +56.9%  $+9,834           |
+|  KEEP(25): S163,S164,S167,S168,S173,S174,S210,S350...                  |
+|  KILL(19): ORPHAN,S202,S203,S207,S211,S212,S216,S217...                |
++========================================================================+
++========================================================================+
+|[+++ OVERPERFORMING STRATEGIES (n>=10)]                                 |
++========================================================================+
+|  BKT  PROFILE                   WIN%   MED%   TOTAL TRADES             |
+|  ---------------------------------------------------------             |
+|  b280 lab0280_s351_w1_0928..  70%  +134.8%    10                       |
+|  b276 lab0276_s350_w1_0928..  70%  +102.9%    10                       |
+|  b238 lab0238_s401_w3_1045..  81%  +100.0%    21                       |
+|  b365 lab0365_s361_w2_1005..  92%  +82.8%    12                        |
++========================================================================+
+|[--- UNDERPERFORMING STRATEGIES (n>=10)]                                |
++========================================================================+
+|  BKT  PROFILE                   WIN%   MED%   TOTAL TRADES             |
+|  ---------------------------------------------------------             |
+|  b47  lab0047_s205_w4_1120..   4%  -78.0%    28                        |
+|  b307 lab0307_s354_w2_1005..  30%  -69.9%    10                        |
+|  b1   lab0001_s200_w1_0928..   0%  -65.8%    10                        |
+|  b41  lab0041_s205_w1_0928..  12%  -65.3%    16                        |
++========================================================================+
++========================================================================+
+|[PENDING EXITS (4)]                                                     |
++========================================================================+
+|  b787 S398 CVNA261002C00067000 x1 stop_loss (-52.8%)                   |
+|  b0   ORPHAN CVNA261002C00068000 x1 stop_loss (-42.3%)                 |
+|  b292 S352 CVNA261002C00066000 x1 stop_loss (-51.3%)                   |
+|  b281 S351 CVNA261002C00070000 x1 stop_loss (-57.1%)                   |
++========================================================================+
++========================================================================+
+|[OPEN OPTIONS (40)]                                                     |
++========================================================================+
+|  SYMBOL                      QTY    RET%        OPEN P&L               |
+|  ---------------------------------------------------------             |
+|  NKE261002C00038000           15    +33.7%   $   +348.00               |
+|  CVNA261002C00067000          12    -61.8%   $   -330.00               |
+|  CVNA261002C00068000           8    -65.4%   $   -136.00               |
+|  NKE261002C00038500            6    +38.3%   $   +128.00               |
+|  WFC261002C00083000            4    -39.3%   $   -106.00               |
+|  CVNA261002C00066000           4    -51.3%   $   -105.33               |
+|  DKNG261002C00021500          22     +8.5%   $   +102.00               |
+|  DKNG261002C00021000           4    +20.8%   $    +60.00               |
+|  ... 32 more position(s)                                               |
++========================================================================+
+Full detail: logs/options_trial/runs/2026-09-28.log
+elapsed=15.1s reconcile=0.31s cancel=0.08s manage=13.27s
+STATUS: options_morning_bot run complete (PAPER) elapsed=15.1s. run=#11212 https://github.com/28twagg-ops/TradingBot/actions/runs/36455613897
+Evaluation complete: 100 strategies evaluated, 0 killed, 0 promote candidates.
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-28_buckets.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-09-28_buckets.csv
+Summary: 20 buckets closed trades, $+257.67 realized
+STALE WARNING: 1 bucket(s) with open lots and last_entry >5d
+```
+
+---
