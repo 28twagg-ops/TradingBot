@@ -14,4 +14,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-25 14:56:45.904354+00:00,entry,179,lab0179_s217_w1_0928_1005_r2,S217,29d1def0cedc,CVNA,CVNA261002C00070000,1,0.37,0.35,35.0,,,,-0.01,,0.75,-0.75,0.2352941176470589,RSI=23.9 green,beede225-0c31-476e-b9ed-2114ca4d4435
 2026-09-24 14:04:25.906504+00:00,entry,179,lab0179_s217_w1_0928_1005_r2,S217,2aa52cd39a41,JPM,JPM260925C00345000,1,0.35,0.35,35.0,,,,-0.01,,0.5,-0.5,,,3b1037e8-981d-4dfd-9669-13c4bb05a5a6
 2026-09-28T13:01:27Z,reconcile,179,lab0179_s217_w1_0928_1005_r2,S217,2aa52cd39a41,JPM,JPM260925C00345000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-28T13:35:02Z,reconcile,179,lab0179_s217_w1_0928_1005_r2,S217,29d1def0cedc,CVNA,CVNA261002C00070000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-28T13:48:13Z,reconcile,179,lab0179_s217_w1_0928_1005_r2,S217,29d1def0cedc,CVNA,CVNA261002C00070000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-28 13:50:29.891166+00:00,entry,179,lab0179_s217_w1_0928_1005_r2,S217,ed77e2039bec,MCD,MCD261002C00242500,1,0.66,0.65,65.0,,,,-0.01,,0.5,-0.5,0.21487603305785125,RSI=21.4 green,a0be3c3b-a92b-41ea-92b7-af59da4ddfad

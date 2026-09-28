@@ -8760,3 +8760,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-28 13:16:27,summary,bull,224.2,156.73,0,0,0,2,CVS|EVR,both
 2026-09-28 13:21:25,summary,bull,224.01,156.73,0,0,0,2,CVS|EVR,both
 2026-09-28 13:26:30,summary,bull,224.01,156.73,0,0,0,2,CVS|EVR,both
+2026-09-28 13:48:11,scan_morning,bull,223.61,122.96,25,0,2,3,AES|AKAM|GOOGL,both
