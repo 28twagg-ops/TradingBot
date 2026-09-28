@@ -1,5 +1,5 @@
 # Rubber Band Strategy Leaderboard
-*Updated: 2026-09-28 17:10 UTC*
+*Updated: 2026-09-28 19:40 UTC*
 *All strategies equal weight since 2026-07-18 schedule removal*
 
 | Rank | Strategy | n | WR% | Avg PnL% | Med PnL% | p10% | PF | Avg Hold | Total $ | Status |
