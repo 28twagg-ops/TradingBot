@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-28
 
-_Generated 2026-09-28T14:41:43.895680_
+_Generated 2026-09-28T14:46:52.849135_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-28T14:41:43.895680_
 
 ## Attribution health
 
-- Total exits: **3463**
+- Total exits: **3464**
 - Orphan exits (b0/orphan_reconcile): **416**
 - Orphan rate: **12.0%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -119,8 +119,8 @@ _Generated 2026-09-28T14:41:43.895680_
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 59 | 0 | 0 | $+33.00 | 26.3% | manually paused — excluded from new entries & reflected P&L |
 | S351 (GapDown_1DTE) | 1d | drop | 72 | 36.1 | -50.00 | -75.66 | -61.96 | +298.36 | 59 | 23 | 8 | $+388.00 | 18.1% | non-positive median return |
 | S399 (GapDown_OTM1) | 3d | drop | 78 | 39.7 | -50.72 | -83.97 | -66.67 | +143.00 | 59 | 16 | 8 | $-128.00 | 20.5% | non-positive median return |
+| S354 (GapDown_5DTE) | 5d | drop | 63 | 36.5 | -51.61 | -85.01 | -75.99 | +136.20 | 59 | 19 | 6 | $+30.00 | 31.7% | non-positive median return |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 63 | 22.2 | -51.67 | -86.04 | -68.93 | +69.15 | 63 | 13 | 2 | $-784.00 | 25.4% | non-positive median return |
-| S354 (GapDown_5DTE) | 5d | drop | 62 | 37.1 | -51.96 | -85.06 | -76.23 | +136.56 | 59 | 19 | 5 | $+43.00 | 32.3% | non-positive median return |
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 40 | 10.0 | -55.91 | -78.77 | -67.43 | -3.10 | 63 | 0 | 0 | $-797.00 | 35.0% | manually paused — excluded from new entries & reflected P&L |
 | S360 (RubberBand_1DTE) | 1d | drop | 49 | 10.2 | -56.41 | -81.50 | -70.37 | -6.89 | 59 | 0 | 0 | $-913.00 | 22.4% | manually paused — excluded from new entries & reflected P&L |
 | S363 (RubberBand_5DTE) | 5d | drop | 41 | 39.0 | -65.38 | -92.31 | -85.11 | +90.62 | 56 | 11 | 3 | $-739.00 | 31.7% | non-positive median return |
@@ -263,7 +263,7 @@ _Pipeline evaluation as of 2026-09-28. Auto-kill thresholds: median<-25% at n>=1
 | S351 | GapDown_1DTE | 72 | -50.00% | 36% | INSUFFICIENT | 59 |
 | S352 | GapDown_2DTE | 56 | -17.65% | 48% | INSUFFICIENT | 59 |
 | S353 | GapDown_3DTE | 42 | -34.69% | 45% | INSUFFICIENT | 59 |
-| S354 | GapDown_5DTE | 62 | -51.96% | 37% | INSUFFICIENT | 59 |
+| S354 | GapDown_5DTE | 63 | -51.61% | 37% | INSUFFICIENT | 59 |
 | S355 | GapDown_7DTE | 71 | -37.50% | 45% | INSUFFICIENT | 59 |
 | S356 | GapDown_14DTE | 27 | +36.00% | 52% | INSUFFICIENT | 59 |
 | S357 | GapDown_21DTE | 25 | +57.14% | 80% | INSUFFICIENT | 59 |
