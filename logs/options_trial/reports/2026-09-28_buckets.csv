@@ -80,7 +80,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 78,lab0078_s209_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-24,False,,,,,,,0,,,,idle
 79,lab0079_s209_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-24,False,,,,,,,0,,,,idle
 80,lab0080_s210_w1_0928_1005_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-28,False,,,,,,,0,MSFT,S210,,entered_no_exit
-81,lab0081_s210_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-28,False,,,,,,,0,MSFT,S210,,entered_no_exit
+81,lab0081_s210_w1_0928_1005_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-28,False,,100.0,57.75,57.75,57.75,57.75,41.0,MSFT,S210,take_profit (+59.2%),closed
 82,lab0082_s210_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-28,False,,,,,,,0,MSFT,S210,,entered_no_exit
 83,lab0083_s210_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-28,False,,,,,,,0,MSFT,S210,,entered_no_exit
 84,lab0084_s210_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-28,False,,,,,,,0,MSFT,S210,,entered_no_exit
@@ -394,7 +394,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 392,lab0392_s363_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-28,False,,,,,,,0,MSFT,S363,,entered_no_exit
 393,lab0393_s363_w2_1005_1045_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-28,False,,,,,,,0,MSFT,S363,,entered_no_exit
 394,lab0394_s363_w3_1045_1120_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-09-28,False,,,,,,,0,"DKNG,MSFT",S363,,entered_no_exit
-395,lab0395_s363_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-09-28,False,,,,,,,0,MSFT,S363,,entered_no_exit
+395,lab0395_s363_w3_1045_1120_r2,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-09-28,False,,100.0,60.56,60.56,60.56,60.56,43.0,MSFT,S363,take_profit (+62.0%),closed
 396,lab0396_s363_w4_1120_1135_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-10,False,,,,,,,0,,,,idle
 397,lab0397_s363_w4_1120_1135_r2,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-10,False,,,,,,,0,,,,idle
 398,lab0398_s363_w5_1300_1330_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,,False,,,,,,,0,,,,idle

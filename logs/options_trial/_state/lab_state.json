@@ -1302,26 +1302,6 @@
       "entry_order_id": "144cba2f-8cff-463d-883e-450abe292cf1"
     },
     {
-      "lot_id": "99ab6148081a",
-      "bucket_id": 81,
-      "profile_name": "lab0081_s210_w1_0928_1005_r2",
-      "strategy_id": "S210",
-      "occ_symbol": "MSFT260930C00522500",
-      "underlying": "MSFT",
-      "qty": 1,
-      "entry_cost": 71.0,
-      "entry_price": 0.71,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-28T13:50:39.377561+00:00",
-      "entry_order_id": "da389914-0214-4c20-82f8-72326d77447c"
-    },
-    {
       "lot_id": "47e1032d9975",
       "bucket_id": 80,
       "profile_name": "lab0080_s210_w1_0928_1005_r1",
@@ -2382,26 +2362,6 @@
       "entry_order_id": "dc1bf369-103f-45ab-a818-7249d9b3695c"
     },
     {
-      "lot_id": "9348c2397a85",
-      "bucket_id": 395,
-      "profile_name": "lab0395_s363_w3_1045_1120_r2",
-      "strategy_id": "S363",
-      "occ_symbol": "MSFT261002C00530000",
-      "underlying": "MSFT",
-      "qty": 1,
-      "entry_cost": 71.0,
-      "entry_price": 0.71,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-28T14:59:01.609808+00:00",
-      "entry_order_id": "3bb4c188-9dc5-4c3a-b3eb-0eff1ec91e37"
-    },
-    {
       "lot_id": "0a46874e9365",
       "bucket_id": 1141,
       "profile_name": "lab1141_s163_w3_1045_1120_r2",
@@ -3405,24 +3365,24 @@
       "submitted": "2026-09-28T12:11:36"
     },
     {
-      "order_id": "f436e3b8-7d8b-43ac-aca4-af98683c818d",
-      "lot_id": "99ab6148081a",
-      "bucket_id": 81,
+      "order_id": "6c880bf6-1f1c-4e9b-a576-28f30c77b79c",
+      "lot_id": "47e1032d9975",
+      "bucket_id": 80,
       "strategy_id": "S210",
       "occ_symbol": "MSFT260930C00522500",
       "qty": 1,
-      "reason": "take_profit (+59.2%)",
-      "submitted": "2026-09-28T12:11:38"
+      "reason": "take_profit (+52.1%)",
+      "submitted": "2026-09-28T12:16:25"
     },
     {
-      "order_id": "72577164-20d1-4972-8a0d-9c5f63c7edf5",
-      "lot_id": "9348c2397a85",
-      "bucket_id": 395,
-      "strategy_id": "S363",
+      "order_id": "bf8627a4-3297-4984-967c-0b4dbc85cfac",
+      "lot_id": "0a46874e9365",
+      "bucket_id": 1141,
+      "strategy_id": "S163",
       "occ_symbol": "MSFT261002C00530000",
       "qty": 1,
-      "reason": "take_profit (+62.0%)",
-      "submitted": "2026-09-28T12:11:43"
+      "reason": "take_profit (+56.3%)",
+      "submitted": "2026-09-28T12:16:31"
     }
   ],
   "bucket_open_premium": {
@@ -3491,7 +3451,6 @@
     "b806": 59.0,
     "b783": 59.0,
     "b782": 59.0,
-    "b81": 71.0,
     "b80": 71.0,
     "b899": 60.0,
     "b898": 60.0,
@@ -3542,7 +3501,6 @@
     "b167": 67.0,
     "b166": 67.0,
     "b183": 25.0,
-    "b395": 71.0,
     "b1141": 71.0,
     "b1140": 71.0,
     "b301": 53.0,
@@ -4163,7 +4121,9 @@
     "c2fd19b8-1fc7-426b-b82f-d5e03cabe496",
     "8b31d836-e0cd-4b35-b5a6-3e0a34b1ca60",
     "1ed97353-3e28-42aa-8d98-d9ad7eaf968c",
-    "baab6afe-c7af-4786-ab06-293297118940"
+    "baab6afe-c7af-4786-ab06-293297118940",
+    "72577164-20d1-4972-8a0d-9c5f63c7edf5",
+    "f436e3b8-7d8b-43ac-aca4-af98683c818d"
   ],
   "submitted_today": 103,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
