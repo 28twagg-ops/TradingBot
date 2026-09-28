@@ -30,4 +30,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-16T15:01:25Z,reconcile,787,lab0787_s398_w2_1005_1045_r2,S398,fd610747e10d,EOG,EOG260918C00150000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24 14:07:41.525931+00:00,entry,787,lab0787_s398_w2_1005_1045_r2,S398,f7a476b85f34,SMCI,SMCI260925C00041500,1,0.47,0.45,45.0,,,,-0.01,,0.75,-0.75,0.042553191489361625,gap -2.4%,1f6d50b1-46a0-4fc4-b3e0-53d37fddacea
 2026-09-24T14:46:22Z,reconcile,787,lab0787_s398_w2_1005_1045_r2,S398,f7a476b85f34,SMCI,SMCI260925C00041500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-28 14:14:08.878579+00:00,entry,787,lab0787_s398_w2_1005_1045_r2,S398,c97538381239,CVNA,CVNA261002C00067000,1,0.46,0.45,45.0,,,,-0.01,,0.75,-0.75,0.23809523809523805,gap -2.1%,26d285f2-ca9a-42ad-9c29-beb7e4986fa2
+2026-09-28 14:14:08.878579+00:00,entry,787,lab0787_s398_w2_1005_1045_r2,S398,7e92758e6ae2,CVNA,CVNA261002C00067000,1,0.45,0.45,45.0,,,,-0.01,,0.5,-0.5,,,26d285f2-ca9a-42ad-9c29-beb7e4986fa2

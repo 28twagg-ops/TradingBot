@@ -34,4 +34,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-24T13:40:41Z,reconcile,914,lab0914_s412_w2_1005_1045_r1,S412,857c33cc52b8,COIN,COIN260925C00217500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24 14:07:42.673168+00:00,entry,914,lab0914_s412_w2_1005_1045_r1,S412,3e1678bebfe3,SMCI,SMCI260925C00041500,1,0.46,0.45,45.0,,,,-0.01,,0.75,-0.75,0.16091954022988494,RB gap -2.4% reclaim,73e5f963-141c-4940-bca2-725d87642b56
 2026-09-24T14:46:22Z,reconcile,914,lab0914_s412_w2_1005_1045_r1,S412,3e1678bebfe3,SMCI,SMCI260925C00041500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-28 14:20:18.805673+00:00,entry,914,lab0914_s412_w2_1005_1045_r1,S412,6f79588faf3e,MSFT,MSFT260930C00527500,1,0.52,0.52,52.0,,,,-0.01,,0.5,-0.5,,,69e0139e-4a26-4f3a-b2b2-7d05bd3e5c61
+2026-09-28 14:20:18.805673+00:00,entry,914,lab0914_s412_w2_1005_1045_r1,S412,e8596fd60230,MSFT,MSFT260930C00527500,1,0.55,0.52,52.0,,,,-0.01,,0.5,-0.5,0.1747572815533982,RB gap -2.1% reclaim,69e0139e-4a26-4f3a-b2b2-7d05bd3e5c61
