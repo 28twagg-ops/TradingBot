@@ -1743,3 +1743,183 @@ Paper lab: $996009 broker equity -> 1164 bucket(s) ($500 virtual each, unlimited
 ```
 
 ---
+
+## Run 20260928T135205Z
+
+- UTC timestamp: `20260928T135205Z`
+- GitHub run: [#11173](https://github.com/28twagg-ops/TradingBot/actions/runs/36431443478)
+- Run id: `36431443478`
+- Live bot: exit=`0`, duration=`93s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260928T135205Z_live_bot.log`, `logs/action_runs/20260928T135205Z_live_options.log`, `logs/action_runs/20260928T135205Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1508 | 50.2 | +8.6 | +43.6 | $+19,714 |
+| TAINTED | 1908 | 33.4 | -38.8 | +12.7 | $-9,602 |
+| KEEP-only | 798 | 63.3 | +52.8 | +66.8 | $+13,806 |
+| KEEP-only recent | 603 | 62.5 | +56.9 | +76.9 | $+9,721 |
+
+- KEEP strategies (25): S163, S164, S167, S168, S173, S174, S210, S350, S352, S353, S356, S357, S359, S361, S362, S364, S365, S397, S398, S401, S403, S404, S406, S411, S412
+- KILL strategies (19): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S354, S355, S360, S363, S366, S399, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-28T09:26:34.508343-04:00","date":"2026-09-28","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":11.4,"phases_s":{"reconcile":4.51},"signals":0,"placed":0,"equity":996963.17,"open_positions":18,"pending_orders":0,"open_lots":77,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"11168","github_run_id":"36428453493","status":"ok","data_quality":{"clean":{"n":1508,"win":50.2,"med":8.63,"avg":43.62,"pnl":19714.16},"tainted":{"n":1908,"win":33.39,"med":-38.81,"avg":12.66,"pnl":-9602.28},"keep_only":{"n":798,"win":63.28,"med":52.75,"avg":66.75,"pnl":13806.45},"keep_only_recent":{"n":603,"win":62.52,"med":56.92,"avg":76.9,"pnl":9721.0},"keep_strategies":["S163","S164","S167","S168","S173","S174","S210","S350","S352","S353","S356","S357","S359","S361","S362","S364","S365","S397","S398","S401","S403","S404","S406","S411","S412"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S354","S355","S360","S363","S366","S399","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (80 earlier lines - see full log file)
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 3 | filled 3 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 0|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                          cached signals (signals fresh (11.6m))|
+|  Universe scanned in prep                                           901|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  25                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.87   60.0   -2.34   50MA bounce (+|
+|  AKAM     Pullback50      eq     $113.39  59.1   -0.64   50MA bounce (+|
+|  GOOGL    Pullback50      eq     $342.47  52.9   -2.63   50MA bounce (-|
+|  MO       Pullback50      eq     $69.16   57.6   -2.62   50MA bounce (+|
+|  GOOG     Pullback50      eq     $338.92  52.7   -2.46   50MA bounce (-|
+|  TECH     Pullback50      eq     $72.58   64.6   -2.44   50MA bounce (+|
+|  ECL      Pullback50      eq     $278.29  50.3   -2.45   50MA bounce (+|
+|  FCX      Pullback50      eq     $70.08   31.1   -2.39   50MA bounce (+|
+|  IEX      Pullback50      eq     $230.22  59.3   -2.56   50MA bounce (+|
+|  INCY     Pullback50      eq     $123.88  48.8   -2.09   50MA bounce (+|
+|  LLY      Pullback50      eq     $1188.~  75.9   -2.64   50MA bounce (+|
+|  MSI      Pullback50      eq     $456.45  43.7   -2.57   50MA bounce (-|
+|  PM       Pullback50      eq     $191.33  64.1   -2.20   50MA bounce (+|
+|  DGX      Pullback50      eq     $235.81  50.4   -2.00   50MA bounce (-|
+|  ROST     Pullback50      eq     $237.11  61.6   -2.52   50MA bounce (-|
+|  TT       Pullback50      eq     $452.12  54.6   -2.52   50MA bounce (-|
+|  V        Pullback50      eq     $368.14  49.3   -1.50   50MA bounce (-|
+|  ITT      Pullback50      eq     $205.80  54.2   -1.90   50MA bounce (+|
+|  MOG-A    Pullback50      eq     $387.81  66.3   -1.51   50MA bounce (-|
+|  MSM      Pullback50      eq     $121.86  55.2   -2.02   50MA bounce (+|
+|  QLYS     Pullback50      eq     $171.02  50.4   -2.08   50MA bounce (+|
+|  RNR      Pullback50      eq     $326.53  56.3   -2.10   50MA bounce (+|
+|  TTC      Pullback50      eq     $96.85   60.7   -1.87   50MA bounce (+|13:53:38  INFO        Daily log -> logs/daily/2026-09-28.md
+13:53:38  INFO        Dashboard written → logs/dashboard.md
+
+|  UNM      Pullback50      eq     $91.61   41.2   -1.51   50MA bounce (+|
+|  WTS      Pullback50      eq     $357.67  45.7   -1.74   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             25|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                3|
+|  Open pos                                                             0|
+|  Equity                                                         $223.66|
+|  Cash                                                           $223.66|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-09-28T09:53:39.021959-04:00 share=25% ===
+2026-09-28 09:53:39,022 INFO === options_live_micro LIVE 2026-09-28T09:53:39.021959-04:00 share=25% ===
+Live account equity $223.66 cash $223.66 #225458845 options_level=3
+2026-09-28 09:53:39,096 INFO Live account equity $223.66 cash $223.66 #225458845 options_level=3
+Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+2026-09-28 09:53:39,139 INFO Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+Live micro done. open_options=0 lots=0
+2026-09-28 09:53:39,169 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=69 paper_keys=yes dry_run=False
+  alpaca positions=24
+  FLAG b318|S355|c3aa6da9 missing from Alpaca
+  FLAG b311|S354|6ee30227 missing from Alpaca
+  FLAG b310|S354|45a22a8b missing from Alpaca
+  State updated with reconciled lots.
+options_reconcile: done
+Layout: controlled:1164:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      1164
+PROBE OK: paper account status=AccountStatus.ACTIVE equity=$996,012.91
+  buying_power=$3,849,929.26 cash=$975,012.53
+  open option orders: 20
+    MSFT260928C00510000 OrderSide.SELL qty=4 status=OrderStatus.NEW limit=None
+    MCD261002C00242500 OrderSide.SELL qty=2 status=OrderStatus.NEW limit=None
+    CVNA261002C00070000 OrderSide.BUY qty=1 status=OrderStatus.NEW limit=0.14
+    CVNA261002C00070000 OrderSide.BUY qty=1 status=OrderStatus.NEW limit=0.14
+    CVNA261002C00070000 OrderSide.BUY qty=1 status=OrderStatus.NEW limit=0.14
+  open option positions: 20
+    DKNG261002C00021000 qty=4 mkt=$272.00
+    DKNG261002C00021500 qty=22 mkt=$1,034.00
+    DKNG261002C00022000 qty=4 mkt=$116.00
+    DKNG261002C00022500 qty=2 mkt=$32.00
+    DKNG261009C00022500 qty=2 mkt=$80.00
+PROBE: check-only pass (use --smoke-entry to place a test order)
+=== options_morning_bot (PAPER) 2026-09-28T09:53:41.889632-04:00 ===
+
+[Run context]
+Paper auth OK — equity $996013.03, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
+Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
+2026-09-28 09:53:45,151 INFO   EXIT [b345|lab0345_s359_w1_0928_1005_r2|S359] take_profit (+80.6%) SELL 1 MSFT260928C00510000 @<= 1.07
+  EXIT [b86|lab0086_s210_w4_1120_1135_r1|S210] stop_loss (-91.1%) SELL failed SPY260928C00775000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+Protective stops: placed=3 upgraded=0 already=14 failed=2 (market-first)
+
+[Scan + entries]
+Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S202, S204, S205, S206, S208, S209, S210, S211, S213, S214, S215, S216, S217, S218, S219, S220, S221, S400, S401, S402, S403, S350, S351, S352, S353, S354, S355, S356, S357, S358, S359, S361, S362, S363, S364, S365, S366, S367, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S395, S396, S397, S398, S399, S404, S406, S408, S409, S410, S411, S412, S413, S414, S415, S416, S417, S418, S419] …
+Fetched daily bars for 113/117 symbols
+Found 464 signal(s); top: ['S401:PLTR', 'S359:PLTR', 'S361:PLTR', 'S362:PLTR', 'S363:PLTR', 'S364:PLTR', 'S365:PLTR', 'S366:PLTR']
+Paper lab: $996013 broker equity -> 1164 bucket(s) ($500 virtual each, unlimited paper)
+```
+
+---

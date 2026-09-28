@@ -31,4 +31,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-24T14:56:33Z,reconcile,344,lab0344_s359_w1_0928_1005_r1,S359,6f5cfdc03986,AMD,AMD260925C00652500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-25 14:02:17.520304+00:00,entry,344,lab0344_s359_w1_0928_1005_r1,S359,7e2020faf6dc,NKE,NKE260925C00035000,1,0.64,0.6,60.0,,,,-0.01,,0.5,-0.5,0.04724409448818902,RB gap -2.1% reclaim,8bba8503-cb6e-4279-b3d4-c4b845599023
 2026-09-28T13:01:27Z,reconcile,344,lab0344_s359_w1_0928_1005_r1,S359,7e2020faf6dc,NKE,NKE260925C00035000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-28 13:50:21.628439+00:00,entry,344,lab0344_s359_w1_0928_1005_r1,S359,db6e86f29c22,MSFT,MSFT260928C00510000,1,0.66,0.65,65.0,,,,-0.01,,0.5,-0.5,0.1269841269841271,RB gap -2.1% reclaim,8fdad19d-7842-4c83-8fa3-2b3996e25ab6
+2026-09-28 13:50:21.628439+00:00,entry,344,lab0344_s359_w1_0928_1005_r1,S359,9a994085c6a6,MSFT,MSFT260928C00510000,1,0.65,0.65,65.0,,,,-0.01,,0.5,-0.5,,,8fdad19d-7842-4c83-8fa3-2b3996e25ab6

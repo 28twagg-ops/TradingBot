@@ -1,0 +1,160 @@
+13:52:06  INFO      Mode: morning_scan
+13:52:07  INFO        [positions] 3/3 (3 valid)
+13:52:07  INFO        SELL LIMIT GOOGL  qty=0.09787172  limit=$342.61  id=84db6b60-92fd-4232-bcf4-172ee01f2768
+13:52:37  INFO        SELL LIMIT filled GOOGL (confirmed by position check)
+13:52:37  INFO        TX logged: SELL GOOGL  P&L -0.07%
+13:52:37  INFO        SELL LIMIT AKAM  qty=0.298638911  limit=$112.33  id=ae0575c0-39bd-4d30-879f-942e3085049e
+13:53:07  INFO        SELL LIMIT filled AKAM (confirmed by position check)
+13:53:07  INFO        TX logged: SELL AKAM  P&L -0.03%
+13:53:07  INFO        SELL order cancelled AES  type=OrderType.STOP  id=43881840-a6e3-4c98-9dff-9b85aaf9f451
+13:53:08  INFO        SELL LIMIT AES  qty=2.256343898  limit=$14.87  id=b17923da-c7fc-4fea-b6e5-bf0c21d96881
+13:53:38  INFO        SELL LIMIT filled AES (confirmed by position check)
+13:53:38  INFO        TX logged: SELL AES  P&L -0.01%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:52 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $223.63|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-09-28|
+|  Universe                                                          both|
+|  Mo~  Sep: GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $223.63|
+|  Cash                                                           $122.96|
+|  Reserve                                          $11.18  (always kept)|
+|  Stock~  $100.67 / $167.72  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $67.05  (new stock buys)|
+|  Trade size             $33.54  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AES      Pullback50      $33.56     $14.88   $14.88   -0.0%   $-0.00  |
+|  AKAM     Pullback50      $33.56     $112.41  $112.37  -0.0%   $-0.01  |
+|  GOOGL    Pullback50      $33.55     $343.00  $342.76  -0.1%   $-0.02  |
+|                                                                        |
+|  Total invested                                                 $100.67|
+|  Total open P&L                                                  $-0.04|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (11.6m); positions refreshed live)|
+|  Cached signals                                                      25|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  GOOGL  P&L -0.1%  $-0.02                         EXIT: midline (-0.1%)|
+|  AKAM  P&L -0.0%  $-0.01                          EXIT: midline (-0.0%)|
+|  AES  P&L -0.0%  $-0.00                           EXIT: midline (-0.0%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 3 | filled 3 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 0|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                          cached signals (signals fresh (11.6m))|
+|  Universe scanned in prep                                           901|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  25                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.87   60.0   -2.34   50MA bounce (+|
+|  AKAM     Pullback50      eq     $113.39  59.1   -0.64   50MA bounce (+|
+|  GOOGL    Pullback50      eq     $342.47  52.9   -2.63   50MA bounce (-|
+|  MO       Pullback50      eq     $69.16   57.6   -2.62   50MA bounce (+|
+|  GOOG     Pullback50      eq     $338.92  52.7   -2.46   50MA bounce (-|
+|  TECH     Pullback50      eq     $72.58   64.6   -2.44   50MA bounce (+|
+|  ECL      Pullback50      eq     $278.29  50.3   -2.45   50MA bounce (+|
+|  FCX      Pullback50      eq     $70.08   31.1   -2.39   50MA bounce (+|
+|  IEX      Pullback50      eq     $230.22  59.3   -2.56   50MA bounce (+|
+|  INCY     Pullback50      eq     $123.88  48.8   -2.09   50MA bounce (+|
+|  LLY      Pullback50      eq     $1188.~  75.9   -2.64   50MA bounce (+|
+|  MSI      Pullback50      eq     $456.45  43.7   -2.57   50MA bounce (-|
+|  PM       Pullback50      eq     $191.33  64.1   -2.20   50MA bounce (+|
+|  DGX      Pullback50      eq     $235.81  50.4   -2.00   50MA bounce (-|
+|  ROST     Pullback50      eq     $237.11  61.6   -2.52   50MA bounce (-|
+|  TT       Pullback50      eq     $452.12  54.6   -2.52   50MA bounce (-|
+|  V        Pullback50      eq     $368.14  49.3   -1.50   50MA bounce (-|
+|  ITT      Pullback50      eq     $205.80  54.2   -1.90   50MA bounce (+|
+|  MOG-A    Pullback50      eq     $387.81  66.3   -1.51   50MA bounce (-|
+|  MSM      Pullback50      eq     $121.86  55.2   -2.02   50MA bounce (+|
+|  QLYS     Pullback50      eq     $171.02  50.4   -2.08   50MA bounce (+|
+|  RNR      Pullback50      eq     $326.53  56.3   -2.10   50MA bounce (+|
+|  TTC      Pullback50      eq     $96.85   60.7   -1.87   50MA bounce (+|13:53:38  INFO        Daily log -> logs/daily/2026-09-28.md
+13:53:38  INFO        Dashboard written → logs/dashboard.md
+
+|  UNM      Pullback50      eq     $91.61   41.2   -1.51   50MA bounce (+|
+|  WTS      Pullback50      eq     $357.67  45.7   -1.74   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             25|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                3|
+|  Open pos                                                             0|
+|  Equity                                                         $223.66|
+|  Cash                                                           $223.66|
++========================================================================+
