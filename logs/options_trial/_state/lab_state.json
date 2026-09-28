@@ -1502,26 +1502,6 @@
       "entry_order_id": "db77d5db-7ab6-49f7-85ec-8c8210be3c2a"
     },
     {
-      "lot_id": "1f78196ee14c",
-      "bucket_id": 1139,
-      "profile_name": "lab1139_s163_w2_1005_1045_r2",
-      "strategy_id": "S163",
-      "occ_symbol": "CVNA261002C00067000",
-      "underlying": "CVNA",
-      "qty": 1,
-      "entry_cost": 45.0,
-      "entry_price": 0.45,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-28T14:17:10.617990+00:00",
-      "entry_order_id": "3c934005-c1c8-4d5a-ac25-ff19cd3c000f"
-    },
-    {
       "lot_id": "def919ae013b",
       "bucket_id": 1138,
       "profile_name": "lab1138_s163_w2_1005_1045_r1",
@@ -2935,14 +2915,34 @@
       "submitted": "2026-09-28T13:13:09"
     },
     {
-      "order_id": "e0d97fce-3dc5-4d2f-93ef-4a95b03e61d4",
-      "lot_id": "1f78196ee14c",
-      "bucket_id": 1139,
+      "order_id": "ea00263f-a587-4598-bd92-bea8ea6cc369",
+      "lot_id": "c4d9b09904a4",
+      "bucket_id": 795,
+      "strategy_id": "S399",
+      "occ_symbol": "CVNA261002C00068000",
+      "qty": 1,
+      "reason": "stop_loss (-53.8%)",
+      "submitted": "2026-09-28T13:26:26"
+    },
+    {
+      "order_id": "c4fff6f4-831d-4069-b900-713eb138c86a",
+      "lot_id": "def919ae013b",
+      "bucket_id": 1138,
       "strategy_id": "S163",
       "occ_symbol": "CVNA261002C00067000",
       "qty": 1,
-      "reason": "stop_loss (-55.1%)",
-      "submitted": "2026-09-28T13:21:42"
+      "reason": "stop_loss (-59.6%)",
+      "submitted": "2026-09-28T13:26:27"
+    },
+    {
+      "order_id": "f6765a92-a60f-4b30-ba49-4e6093f97466",
+      "lot_id": "a0d2f13ea1e9",
+      "bucket_id": 309,
+      "strategy_id": "S354",
+      "occ_symbol": "CVNA261002C00066000",
+      "qty": 1,
+      "reason": "stop_loss (-51.3%)",
+      "submitted": "2026-09-28T13:26:36"
     }
   ],
   "bucket_open_premium": {
@@ -3020,7 +3020,6 @@
     "b280": 14.000000000000002,
     "b1151": 14.000000000000002,
     "b1150": 14.000000000000002,
-    "b1139": 45.0,
     "b1138": 45.0,
     "b1097": 45.0,
     "b1096": 45.0,
@@ -3683,7 +3682,8 @@
     "8e3726e8-2135-429f-9994-2efcbecd5717",
     "7b92b447-d467-4ba3-a9d2-2074a28ad276",
     "bc1c8894-1a38-4c0b-999f-749e12769c4b",
-    "d90a2366-e5e4-4aca-8e5e-ffe6aadfc707"
+    "d90a2366-e5e4-4aca-8e5e-ffe6aadfc707",
+    "e0d97fce-3dc5-4d2f-93ef-4a95b03e61d4"
   ],
   "submitted_today": 103,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
