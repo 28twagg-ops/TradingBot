@@ -7,12 +7,12 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 
 | Slice | n | Win% | Med% | Avg% | Realized $ |
 |---|---:|---:|---:|---:|---:|
-| ALL | 3460 | 40.8 | -35.7 | +25.9 | $+10,298 |
-| CLEAN (perfect running) | 1536 | 49.9 | +0.0 | +42.5 | $+19,697 |
+| ALL | 3462 | 40.7 | -36.0 | +25.8 | $+10,243 |
+| CLEAN (perfect running) | 1538 | 49.8 | -1.2 | +42.4 | $+19,642 |
 | TAINTED (errors/outages) | 1924 | 33.5 | -38.9 | +12.6 | $-9,399 |
-| CLEAN since 2026-08-03 | 1220 | 47.6 | -37.8 | +44.2 | $+7,397 |
-| KEEP-only (CLEAN keepers) | 814 | 62.7 | +52.4 | +65.0 | $+13,786 |
-| KEEP-only since 2026-08-03 | 619 | 61.7 | +56.4 | +74.4 | $+9,701 |
+| CLEAN since 2026-08-03 | 1222 | 47.5 | -38.1 | +44.0 | $+7,342 |
+| KEEP-only (CLEAN keepers) | 815 | 62.6 | +52.4 | +64.9 | $+13,760 |
+| KEEP-only since 2026-08-03 | 620 | 61.6 | +56.2 | +74.1 | $+9,675 |
 
 ## Known outage / degraded days
 
@@ -62,7 +62,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | 2026-09-23 | BUGGY | 19 | 5 | 47 | +0.0 |
 | 2026-09-24 | BUGGY | 99 | 15 | 67 | +58.2 |
 | 2026-09-25 | BUGGY | 29 | 8 | 48 | -37.5 |
-| 2026-09-28 | BUGGY | 36 | 8 | 33 | -49.6 |
+| 2026-09-28 | BUGGY | 38 | 8 | 32 | -51.7 |
 
 ## CLEAN strategy kill list (n>=10, med<=-20%)
 
@@ -81,7 +81,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | S217 | 41 | 36.6 | -50.0 | +29.7 | $+170 |
 | S363 | 20 | 45.0 | -50.0 | -4.5 | $-137 |
 | S366 | 17 | 47.1 | -49.1 | +6.1 | $+5 |
-| ORPHAN | 162 | 22.8 | -45.8 | +13.9 | $+3,859 |
+| ORPHAN | 163 | 22.7 | -46.1 | +13.4 | $+3,830 |
 | S351 | 32 | 43.8 | -41.9 | +50.4 | $+362 |
 | S399 | 33 | 42.4 | -41.7 | +91.2 | $+111 |
 | S355 | 42 | 47.6 | -39.2 | +27.9 | $+386 |
@@ -92,7 +92,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 
 | strategy | n | win% | med% | avg% | $ |
 |---|---:|---:|---:|---:|---:|
-| S167 | 14 | 71.4 | +134.1 | +160.8 | $+503 |
+| S167 | 15 | 66.7 | +126.0 | +146.2 | $+477 |
 | S362 | 25 | 80.0 | +102.9 | +250.7 | $+981 |
 | S168 | 20 | 65.0 | +86.0 | +81.2 | $+508 |
 | S350 | 22 | 59.1 | +85.3 | +79.1 | $+388 |
