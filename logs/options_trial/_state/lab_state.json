@@ -1482,26 +1482,6 @@
       "entry_order_id": "1c1cfddb-d148-43af-ada3-7ece7bce52d8"
     },
     {
-      "lot_id": "5d6919fd266e",
-      "bucket_id": 281,
-      "profile_name": "lab0281_s351_w1_0928_1005_r2",
-      "strategy_id": "S351",
-      "occ_symbol": "CVNA261002C00070000",
-      "underlying": "CVNA",
-      "qty": 1,
-      "entry_cost": 14.000000000000002,
-      "entry_price": 0.14,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-28T14:07:37.704010+00:00",
-      "entry_order_id": "9a382666-4159-432c-91b9-bec43117fc64"
-    },
-    {
       "lot_id": "b05a08cb60ac",
       "bucket_id": 280,
       "profile_name": "lab0280_s351_w1_0928_1005_r1",
@@ -1560,26 +1540,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-28T14:07:37.773400+00:00",
       "entry_order_id": "db77d5db-7ab6-49f7-85ec-8c8210be3c2a"
-    },
-    {
-      "lot_id": "7e92758e6ae2",
-      "bucket_id": 787,
-      "profile_name": "lab0787_s398_w2_1005_1045_r2",
-      "strategy_id": "S398",
-      "occ_symbol": "CVNA261002C00067000",
-      "underlying": "CVNA",
-      "qty": 1,
-      "entry_cost": 45.0,
-      "entry_price": 0.45,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-28T14:17:10.530405+00:00",
-      "entry_order_id": "26d285f2-ca9a-42ad-9c29-beb7e4986fa2"
     },
     {
       "lot_id": "5374bb1c06f1",
@@ -2260,26 +2220,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-28T14:59:01.517135+00:00",
       "entry_order_id": "dc1bf369-103f-45ab-a818-7249d9b3695c"
-    },
-    {
-      "lot_id": "59f53693f623",
-      "bucket_id": 292,
-      "profile_name": "lab0292_s352_w3_1045_1120_r1",
-      "strategy_id": "S352",
-      "occ_symbol": "CVNA261002C00066000",
-      "underlying": "CVNA",
-      "qty": 1,
-      "entry_cost": 53.0,
-      "entry_price": 0.53,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-28T14:59:02.049001+00:00",
-      "entry_order_id": "5f1b839c-2d9a-4cff-b68a-77f21955eb61"
     },
     {
       "lot_id": "b00ea8763a52",
@@ -3065,16 +3005,6 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "b3d66054-4ae4-47a5-9889-87c9870acf95",
-      "lot_id": "7e92758e6ae2",
-      "bucket_id": 787,
-      "strategy_id": "S398",
-      "occ_symbol": "CVNA261002C00067000",
-      "qty": 1,
-      "reason": "stop_loss (-52.8%)",
-      "submitted": "2026-09-28T11:29:08"
-    },
-    {
       "order_id": "bc1c8894-1a38-4c0b-999f-749e12769c4b",
       "lot_id": "c7ff91d71819",
       "bucket_id": 0,
@@ -3085,24 +3015,34 @@
       "submitted": "2026-09-28T11:29:12"
     },
     {
-      "order_id": "17edff16-f3c9-4e30-9756-35f958fa1b5d",
-      "lot_id": "59f53693f623",
-      "bucket_id": 292,
-      "strategy_id": "S352",
-      "occ_symbol": "CVNA261002C00066000",
-      "qty": 1,
-      "reason": "stop_loss (-51.3%)",
-      "submitted": "2026-09-28T13:10:04"
-    },
-    {
-      "order_id": "fb36ed8b-c67b-4d95-8801-fd4e6ce6dd49",
-      "lot_id": "5d6919fd266e",
-      "bucket_id": 281,
+      "order_id": "601f2261-a56b-4808-8e3b-c4932c8890b4",
+      "lot_id": "b05a08cb60ac",
+      "bucket_id": 280,
       "strategy_id": "S351",
       "occ_symbol": "CVNA261002C00070000",
       "qty": 1,
-      "reason": "stop_loss (-57.1%)",
-      "submitted": "2026-09-28T13:10:08"
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-09-28T13:13:09"
+    },
+    {
+      "order_id": "7b92b447-d467-4ba3-a9d2-2074a28ad276",
+      "lot_id": "fc5ba3a45e0f",
+      "bucket_id": 857,
+      "strategy_id": "S408",
+      "occ_symbol": "NKE261002C00040000",
+      "qty": 1,
+      "reason": "take_profit (+54.8%)",
+      "submitted": "2026-09-28T13:13:16"
+    },
+    {
+      "order_id": "8e3726e8-2135-429f-9994-2efcbecd5717",
+      "lot_id": "7f8572d9c8da",
+      "bucket_id": 859,
+      "strategy_id": "S408",
+      "occ_symbol": "NKE261002C00039500",
+      "qty": 1,
+      "reason": "take_profit (+56.8%)",
+      "submitted": "2026-09-28T13:13:18"
     }
   ],
   "bucket_open_premium": {
@@ -3179,11 +3119,9 @@
     "b362": 40.0,
     "b235": 40.0,
     "b234": 40.0,
-    "b281": 14.000000000000002,
     "b280": 14.000000000000002,
     "b1151": 14.000000000000002,
     "b1150": 14.000000000000002,
-    "b787": 45.0,
     "b786": 45.0,
     "b1139": 45.0,
     "b1138": 45.0,
@@ -3217,7 +3155,6 @@
     "b167": 67.0,
     "b166": 67.0,
     "b183": 25.0,
-    "b292": 53.0,
     "b239": 52.0,
     "b238": 52.0,
     "b19": 17.0,
@@ -3840,9 +3777,12 @@
     "7372b0d9-1eb5-4e4c-ba02-02d66212a31e",
     "5d7ca76f-c121-4e5d-b246-3ed71c86046e",
     "16654041-8ba4-464e-beee-87ec1a864379",
+    "fb36ed8b-c67b-4d95-8801-fd4e6ce6dd49",
+    "17edff16-f3c9-4e30-9756-35f958fa1b5d",
     "288a62dc-cfcd-4f1b-8140-51ad13a3f43a",
     "c4346827-fc46-478e-8277-940bd2f23f8b",
-    "1ac6bdff-9787-49ae-a859-023533e5afce"
+    "1ac6bdff-9787-49ae-a859-023533e5afce",
+    "b3d66054-4ae4-47a5-9889-87c9870acf95"
   ],
   "submitted_today": 103,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

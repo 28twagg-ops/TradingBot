@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-28
 
-_Generated 2026-09-28T13:10:20.566580_
+_Generated 2026-09-28T13:13:26.964961_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-28T13:10:20.566580_
 
 ## Attribution health
 
-- Total exits: **3447**
+- Total exits: **3450**
 - Orphan exits (b0/orphan_reconcile): **414**
 - Orphan rate: **12.0%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -42,7 +42,7 @@ _Generated 2026-09-28T13:10:20.566580_
 | S401 (Any_Gap_Down_Small) | 3d | watch | 131 | 51.1 | +8.33 | -84.29 | -50.88 | +233.33 | 59 | 18 | 6 | $+1,090.00 | 24.4% | fat left tail (p10 < -45%) |
 | S364 (RubberBand_7DTE) | 7d | watch | 63 | 50.8 | +8.33 | -85.29 | -63.64 | +89.11 | 59 | 8 | 4 | $+69.00 | 39.7% | fat left tail (p10 < -45%) |
 | S411 (RubberBand_OTM2) | 3d | watch | 50 | 56.0 | +7.90 | -56.80 | -51.32 | +65.60 | 56 | 14 | 4 | $+1.00 | 18.0% | fat left tail (p10 < -45%) |
-| S398 (GapDown_ATM) | 3d | watch | 59 | 52.5 | +3.33 | -68.29 | -53.70 | +176.24 | 59 | 12 | 2 | $+884.00 | 27.1% | fat left tail (p10 < -45%) |
+| S398 (GapDown_ATM) | 3d | watch | 60 | 51.7 | +3.33 | -68.29 | -53.41 | +175.90 | 59 | 12 | 3 | $+861.00 | 26.7% | fat left tail (p10 < -45%) |
 | S358 (GapDown_30DTE) | 30d | watch | 4 | 50.0 | +0.84 | -51.39 | -51.39 | +54.49 | 55 | 0 | 0 | $-21.00 | 50.0% | insufficient sample (<8 exits) |
 | S169 (BB Squeeze Breakout call 3 DTE) | 3d ATM BB squeeze | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S170 (Golden Pocket call 3 DTE) | 3d ATM golden pocket | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -104,7 +104,7 @@ _Generated 2026-09-28T13:10:20.566580_
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 7 | 0.0 | -64.71 | -80.40 | -68.79 | -50.75 | 61 | 6 | 1 | $-212.00 | 71.4% | insufficient sample (<8 exits) |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | drop | 24 | 50.0 | -2.42 | -94.48 | -62.30 | +337.14 | 69 | 20 | 4 | $+433.00 | 25.0% | non-positive median return |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 97 | 49.5 | -4.35 | -71.05 | -51.22 | +82.71 | 63 | 19 | 10 | $+75.00 | 17.5% | non-positive median return |
-| S352 (GapDown_2DTE) | 2d | drop | 55 | 49.1 | -17.65 | -73.57 | -51.85 | +334.29 | 59 | 14 | 5 | $+294.00 | 20.0% | non-positive median return |
+| S352 (GapDown_2DTE) | 2d | drop | 56 | 48.2 | -17.65 | -73.22 | -52.09 | +333.34 | 59 | 14 | 6 | $+266.00 | 19.6% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 84 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 84 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 63 | 41.3 | -33.33 | -81.48 | -59.63 | +518.18 | 56 | 14 | 4 | $+1,055.00 | 15.9% | non-positive median return |
@@ -117,7 +117,7 @@ _Generated 2026-09-28T13:10:20.566580_
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 63 | 0 | 0 | $-822.00 | 43.2% | manually paused — excluded from new entries & reflected P&L |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 70 | 35.7 | -47.08 | -80.23 | -59.70 | +107.23 | 63 | 20 | 9 | $+292.00 | 42.9% | non-positive median return |
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 59 | 0 | 0 | $+33.00 | 26.3% | manually paused — excluded from new entries & reflected P&L |
-| S351 (GapDown_1DTE) | 1d | drop | 71 | 36.6 | -50.00 | -75.68 | -62.03 | +309.52 | 59 | 23 | 7 | $+396.00 | 18.3% | non-positive median return |
+| S351 (GapDown_1DTE) | 1d | drop | 72 | 36.1 | -50.00 | -75.66 | -61.96 | +298.36 | 59 | 23 | 8 | $+388.00 | 18.1% | non-positive median return |
 | S399 (GapDown_OTM1) | 3d | drop | 77 | 40.3 | -51.43 | -84.19 | -66.67 | +144.00 | 59 | 16 | 7 | $-115.00 | 20.8% | non-positive median return |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 63 | 22.2 | -51.67 | -86.04 | -68.93 | +69.15 | 63 | 13 | 2 | $-784.00 | 25.4% | non-positive median return |
 | S354 (GapDown_5DTE) | 5d | drop | 60 | 38.3 | -51.96 | -85.81 | -75.75 | +137.01 | 59 | 19 | 3 | $+78.00 | 33.3% | non-positive median return |
@@ -260,8 +260,8 @@ _Pipeline evaluation as of 2026-09-28. Auto-kill thresholds: median<-25% at n>=1
 | S220 | Pullback50 | 0 | — | — | NEW | 0 |
 | S221 | GoldenPocket | 0 | — | — | NEW | 0 |
 | S350 | GapDown_0DTE | 46 | +16.32% | 54% | INSUFFICIENT | 59 |
-| S351 | GapDown_1DTE | 71 | -50.00% | 37% | INSUFFICIENT | 59 |
-| S352 | GapDown_2DTE | 55 | -17.65% | 49% | INSUFFICIENT | 59 |
+| S351 | GapDown_1DTE | 72 | -50.00% | 36% | INSUFFICIENT | 59 |
+| S352 | GapDown_2DTE | 56 | -17.65% | 48% | INSUFFICIENT | 59 |
 | S353 | GapDown_3DTE | 41 | -34.69% | 46% | INSUFFICIENT | 59 |
 | S354 | GapDown_5DTE | 60 | -51.96% | 38% | INSUFFICIENT | 59 |
 | S355 | GapDown_7DTE | 71 | -37.50% | 45% | INSUFFICIENT | 59 |
@@ -307,7 +307,7 @@ _Pipeline evaluation as of 2026-09-28. Auto-kill thresholds: median<-25% at n>=1
 | S395 | GapDown_ITM3 | 0 | — | — | NEW | 0 |
 | S396 | GapDown_ITM2 | 7 | +87.50% | 86% | WATCH | 53 |
 | S397 | GapDown_ITM1 | 39 | +66.67% | 74% | INSUFFICIENT | 59 |
-| S398 | GapDown_ATM | 59 | +3.33% | 53% | INSUFFICIENT | 59 |
+| S398 | GapDown_ATM | 60 | +3.33% | 52% | INSUFFICIENT | 59 |
 | S399 | GapDown_OTM1 | 77 | -51.43% | 40% | INSUFFICIENT | 59 |
 | S400 | Any_Green_Close | 6 | -50.00% | 17% | WATCH | 59 |
 | S401 | Any_Gap_Down_Small | 131 | +8.33% | 51% | INSUFFICIENT | 59 |
@@ -352,7 +352,7 @@ _Pipeline evaluation as of 2026-09-28. Auto-kill thresholds: median<-25% at n>=1
 | S401 | 131 | +8.33% | 51% | Tyler review |
 | S364 | 63 | +8.33% | 51% | Tyler review |
 | S411 | 50 | +7.90% | 56% | Tyler review |
-| S398 | 59 | +3.33% | 53% | Tyler review |
+| S398 | 60 | +3.33% | 52% | Tyler review |
 
 ## Notes
 
