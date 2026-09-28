@@ -16869,11 +16869,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-09-28.log
 elapsed=10.5s reconcile=0.25s cancel=0.04s manage=9.12s
 
-=== 12:29:27 ET — manage-only (past entry window) [elapsed=20.8s reconcile=0.71s cancel=0.24s manage=15.23s] ===
-=== options_morning_bot (PAPER) 2026-09-28T12:29:27.583069-04:00 ===
+=== 12:31:45 ET — manage-only (past entry window) [elapsed=19.0s reconcile=0.69s cancel=0.23s manage=13.43s] ===
+=== options_morning_bot (PAPER) 2026-09-28T12:31:45.343233-04:00 ===
 
 [Run context]
-Paper auth OK — equity $997199.27, account PA33P8KT02IL
+Paper auth OK — equity $996989.24, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:1164:live_1to1+variations
   reconcile: exit fill b1140|S163 MSFT +85.9%
   reconcile: exit fill b85|S210 MSFT +76.9%
@@ -16884,18 +16884,17 @@ Paper auth OK — equity $997199.27, account PA33P8KT02IL
 LIVE 1:1 bucket b90 live_1to1 — S218, S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
 Variation study: 1163 lab/promising bucket(s) | cohort: all paper strategies | max 400 new entries/run
 Dropped (no new entries; ex-reflected P&L): S203, S207, S212, S360, S405, S407
-  EXIT [b0|orphan_reconcile|ORPHAN] take_profit (+98.6%) SELL failed MSFT261002C00530000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  EXIT [b84|lab0084_s210_w3_1045_1120_r1|S210] take_profit (+101.9%) SELL failed MSFT260930C00525000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  EXIT skip CVNA261002C00067000: open sell already pending
-  EXIT [b86|lab0086_s210_w4_1120_1135_r1|S210] stop_loss (-85.7%) SELL failed SPY260928C00775000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT skip CVNA261002C00070000: open sell already pending
   EXIT skip CVNA261002C00068000: open sell already pending
   EXIT skip CVNA261002C00069000: open sell already pending
-  EXIT [b288|lab0288_s352_w1_0928_1005_r1|S352] stop_loss (-71.4%) SELL 1 CVNA261002C00070000 @<= 0.05  id=c4346827-fc46-478e-8277-940bd2f23f8b
+  EXIT [b0|orphan_reconcile|ORPHAN] take_profit (+76.1%) SELL failed MSFT261002C00530000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT skip CVNA261002C00067000: open sell already pending
+  EXIT [b86|lab0086_s210_w4_1120_1135_r1|S210] stop_loss (-91.1%) SELL failed SPY260928C00775000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b84|lab0084_s210_w3_1045_1120_r1|S210] take_profit (+71.2%) SELL failed MSFT260930C00525000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed SPY260928C00775000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  PROT STOP-MKT CVNA261002C00066000 x6 stop=0.27 tif=gtc sl=-50% id=bf45dac2-9b6f-4ee1-bb94-a23f8bdf660a
   PROT STOP failed MSFT261002C00530000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed MSFT260930C00525000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-Protective stops: placed=1 upgraded=0 already=35 failed=3 (market-first)
+Protective stops: placed=0 upgraded=0 already=36 failed=3 (market-first)
 
 [Manage only]
 Past entry window; manage/exit only.
@@ -16904,16 +16903,16 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $997,199.27
+Account equity: $996,989.24
 Active buckets: 1164 of 1164 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S203,S207,S212,S360,S405,S407): $+15,396.55 all-time  |  $+317.67 today
   Raw (incl dropped):     $+10,533.55 all-time  |  $+317.67 today
-  Open (not sold yet): $+319.54 unrealized (virtual lots)
-                       $+316.00 unrealized (broker total)
+  Open (not sold yet): $+222.58 unrealized (virtual lots)
+                       $+222.00 unrealized (broker total)
   Premium deployed:    $7,048.50 in open positions
-  Combined P&L:        $+15,716.09 (reflected realized + open virtual)
+  Combined P&L:        $+15,619.13 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     15473
@@ -16929,9 +16928,9 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b17 lab0017_s202_w1_0928_1005_r2  prem=$     0  real=$-56.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b18 lab0018_s202_w2_1005_1045_r1  prem=$    17  real=$-29.00  open=$ +5.00  lots=1  [S202:RBLXx1]
+  b18 lab0018_s202_w2_1005_1045_r1  prem=$    17  real=$-29.00  open=$ +4.00  lots=1  [S202:RBLXx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b19 lab0019_s202_w2_1005_1045_r2  prem=$    17  real=$-43.00  open=$ +5.00  lots=1  [S202:RBLXx1]
+  b19 lab0019_s202_w2_1005_1045_r2  prem=$    17  real=$-43.00  open=$ +4.00  lots=1  [S202:RBLXx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b20 lab0020_s202_w3_1045_1120_r1  prem=$     0  real=$ -6.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -16951,15 +16950,15 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b81 lab0081_s210_w1_0928_1005_r2  prem=$     0  real=$+118.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b82 lab0082_s210_w2_1005_1045_r1  prem=$    52  real=$+44.00  open=$+15.00  lots=1  [S210:MSFTx1]
+  b82 lab0082_s210_w2_1005_1045_r1  prem=$    52  real=$+44.00  open=$+10.00  lots=1  [S210:MSFTx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b83 lab0083_s210_w2_1005_1045_r2  prem=$    52  real=$ -9.00  open=$+15.00  lots=1  [S210:MSFTx1]
+  b83 lab0083_s210_w2_1005_1045_r2  prem=$    52  real=$ -9.00  open=$+10.00  lots=1  [S210:MSFTx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b84 lab0084_s210_w3_1045_1120_r1  prem=$    52  real=$-264.00  open=$+47.00  lots=1  [S210:MSFTx1]
+  b84 lab0084_s210_w3_1045_1120_r1  prem=$    52  real=$-264.00  open=$+37.00  lots=1  [S210:MSFTx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b85 lab0085_s210_w3_1045_1120_r2  prem=$     0  real=$+43.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b86 lab0086_s210_w4_1120_1135_r1  prem=$    56  real=$+67.00  open=$-49.00  lots=1  [S210:SPYx1]
+  b86 lab0086_s210_w4_1120_1135_r1  prem=$    56  real=$+67.00  open=$-51.00  lots=1  [S210:SPYx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b87 lab0087_s210_w4_1120_1135_r2  prem=$     0  real=$+41.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -16967,45 +16966,45 @@ Open virtual lots (by bucket)
   (848 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  BAC261002C00056000  qty=1  cost=$69.00  return=-11.6%  open P&L=$-8.00
+  BAC261002C00056000  qty=1  cost=$69.00  return=-10.1%  open P&L=$-7.00
   BAC261002C00057000  qty=2  cost=$80.00  return=-37.5%  open P&L=$-30.00
-  CVNA261002C00066000  qty=6  cost=$308.00  return=-43.5%  open P&L=$-134.00
+  CVNA261002C00066000  qty=6  cost=$308.00  return=-45.5%  open P&L=$-140.00
   CVNA261002C00067000  qty=12  cost=$534.00  return=-57.3%  open P&L=$-306.00
   CVNA261002C00068000  qty=8  cost=$208.00  return=-50.0%  open P&L=$-104.00
   CVNA261002C00069000  qty=10  cost=$130.00  return=-76.9%  open P&L=$-100.00
   CVNA261002C00070000  qty=5  cost=$70.00  return=-71.4%  open P&L=$-50.00
-  DKNG261002C00021000  qty=4  cost=$288.00  return=+27.8%  open P&L=$+80.00
+  DKNG261002C00021000  qty=4  cost=$288.00  return=+26.4%  open P&L=$+76.00
   DKNG261002C00021500  qty=22  cost=$1,196.00  return=+17.7%  open P&L=$+212.00
   DKNG261002C00022000  qty=4  cost=$132.00  return=+21.2%  open P&L=$+28.00
-  DKNG261002C00022500  qty=2  cost=$46.00  return=+13.0%  open P&L=$+6.00
+  DKNG261002C00022500  qty=2  cost=$46.00  return=+8.7%  open P&L=$+4.00
   DKNG261002C00023000  qty=2  cost=$28.00  return=+0.0%  open P&L=$+0.00
   DKNG261002C00023500  qty=1  cost=$9.00  return=-11.1%  open P&L=$-1.00
   DKNG261009C00022500  qty=2  cost=$84.00  return=+14.3%  open P&L=$+12.00
   DKNG261016C00023000  qty=1  cost=$54.00  return=+1.9%  open P&L=$+1.00
   DKNG261016C00023500  qty=2  cost=$86.00  return=-16.3%  open P&L=$-14.00
-  HOOD261002C00129000  qty=2  cost=$104.00  return=+15.4%  open P&L=$+16.00
+  HOOD261002C00129000  qty=2  cost=$104.00  return=+9.6%  open P&L=$+10.00
   LLY261002C01300000  qty=2  cost=$77.00  return=-22.1%  open P&L=$-17.00
-  MARA261002C00013000  qty=2  cost=$66.00  return=-18.2%  open P&L=$-12.00
+  MARA261002C00013000  qty=2  cost=$66.00  return=-21.2%  open P&L=$-14.00
   MCD261002C00245000  qty=1  cost=$25.00  return=-40.0%  open P&L=$-10.00
-  MSFT260930C00525000  qty=1  cost=$52.00  return=+90.4%  open P&L=$+47.00
-  MSFT260930C00527500  qty=8  cost=$416.00  return=+28.8%  open P&L=$+120.00
-  MSFT261002C00530000  qty=1  cost=$71.00  return=+90.1%  open P&L=$+64.00
-  MSFT261002C00535000  qty=2  cost=$130.00  return=+30.8%  open P&L=$+40.00
+  MSFT260930C00525000  qty=1  cost=$52.00  return=+71.2%  open P&L=$+37.00
+  MSFT260930C00527500  qty=8  cost=$416.00  return=+19.2%  open P&L=$+80.00
+  MSFT261002C00530000  qty=1  cost=$71.00  return=+77.5%  open P&L=$+55.00
+  MSFT261002C00535000  qty=2  cost=$130.00  return=+13.8%  open P&L=$+18.00
   NKE261002C00038000  qty=15  cost=$1,032.00  return=+41.0%  open P&L=$+423.00
-  NKE261002C00038500  qty=6  cost=$334.00  return=+43.7%  open P&L=$+146.00
+  NKE261002C00038500  qty=6  cost=$334.00  return=+41.9%  open P&L=$+140.00
   NKE261002C00039500  qty=2  cost=$74.00  return=+43.2%  open P&L=$+32.00
-  NKE261002C00040000  qty=2  cost=$62.00  return=+41.9%  open P&L=$+26.00
-  PLTR261002C00200000  qty=2  cost=$144.00  return=+13.9%  open P&L=$+20.00
-  PLTR261002C00202500  qty=3  cost=$183.00  return=-11.5%  open P&L=$-21.00
+  NKE261002C00040000  qty=2  cost=$62.00  return=+45.2%  open P&L=$+28.00
+  PLTR261002C00200000  qty=2  cost=$144.00  return=+15.3%  open P&L=$+22.00
+  PLTR261002C00202500  qty=3  cost=$183.00  return=-9.8%  open P&L=$-18.00
   PLTR261002C00205000  qty=6  cost=$240.00  return=-10.0%  open P&L=$-24.00
   PLTR261002C00207500  qty=2  cost=$52.00  return=-7.7%  open P&L=$-4.00
   PLTR261002C00212500  qty=2  cost=$24.00  return=-8.3%  open P&L=$-2.00
-  RBLX261002C00047500  qty=4  cost=$68.00  return=+29.4%  open P&L=$+20.00
-  SMCI261002C00044500  qty=2  cost=$110.00  return=+23.6%  open P&L=$+26.00
-  SPY260928C00773000  qty=-1  cost=$13.00  return=-23.1%  open P&L=$-3.00
-  SPY260928C00775000  qty=1  cost=$56.00  return=-87.5%  open P&L=$-49.00
+  RBLX261002C00047500  qty=4  cost=$68.00  return=+23.5%  open P&L=$+16.00
+  SMCI261002C00044500  qty=2  cost=$110.00  return=+29.1%  open P&L=$+32.00
+  SPY260928C00773000  qty=-1  cost=$13.00  return=+0.0%  open P&L=$+0.00
+  SPY260928C00775000  qty=1  cost=$56.00  return=-91.1%  open P&L=$-51.00
   WFC261002C00083000  qty=4  cost=$270.00  return=-30.4%  open P&L=$-82.00
-  XOM261002C00167500  qty=2  cost=$108.00  return=-20.4%  open P&L=$-22.00
+  XOM261002C00167500  qty=2  cost=$108.00  return=-18.5%  open P&L=$-20.00
   XOM261002C00170000  qty=1  cost=$29.00  return=-34.5%  open P&L=$-10.00
 
 Per-bucket exit stats (all time)
@@ -17456,7 +17455,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $997,199.27                                              |
+|Equity       : $996,989.24                                              |
 |Open Risk    : 157 lots (40 broker pos)                                 |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -17495,12 +17494,11 @@ Per-bucket exit stats (all time)
 |  b41  lab0041_s205_w1_0928..  12%  -65.3%    16                        |
 +========================================================================+
 +========================================================================+
-|[PENDING EXITS (4)]                                                     |
+|[PENDING EXITS (3)]                                                     |
 +========================================================================+
 |  b787 S398 CVNA261002C00067000 x1 stop_loss (-52.8%)                   |
 |  b0   ORPHAN CVNA261002C00068000 x1 stop_loss (-42.3%)                 |
 |  b311 S354 CVNA261002C00069000 x1 stop_loss (-76.9%)                   |
-|  b288 S352 CVNA261002C00070000 x1 stop_loss (-71.4%)                   |
 +========================================================================+
 +========================================================================+
 |[OPEN OPTIONS (40)]                                                     |
@@ -17510,13 +17508,13 @@ Per-bucket exit stats (all time)
 |  NKE261002C00038000           15    +41.0%   $   +423.00               |
 |  CVNA261002C00067000          12    -57.3%   $   -306.00               |
 |  DKNG261002C00021500          22    +17.7%   $   +212.00               |
-|  NKE261002C00038500            6    +43.7%   $   +146.00               |
-|  CVNA261002C00066000           6    -43.5%   $   -134.00               |
-|  MSFT260930C00527500           8    +28.8%   $   +120.00               |
+|  CVNA261002C00066000           6    -45.5%   $   -140.00               |
+|  NKE261002C00038500            6    +41.9%   $   +140.00               |
 |  CVNA261002C00068000           8    -50.0%   $   -104.00               |
 |  CVNA261002C00069000          10    -76.9%   $   -100.00               |
+|  WFC261002C00083000            4    -30.4%   $    -82.00               |
 |  ... 32 more position(s)                                               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-09-28.log
-elapsed=20.8s reconcile=0.71s cancel=0.24s manage=15.23s
+elapsed=19.0s reconcile=0.69s cancel=0.23s manage=13.43s
 
