@@ -3173,6 +3173,16 @@
       "qty": 1,
       "reason": "stop_loss (-76.9%)",
       "submitted": "2026-09-28T12:11:36"
+    },
+    {
+      "order_id": "16654041-8ba4-464e-beee-87ec1a864379",
+      "lot_id": "181031dc3d7d",
+      "bucket_id": 0,
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "BAC261002C00057000",
+      "qty": 1,
+      "reason": "stop_loss (-45.0%)",
+      "submitted": "2026-09-28T12:36:35"
     }
   ],
   "bucket_open_premium": {
