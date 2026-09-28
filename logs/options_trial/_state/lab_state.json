@@ -1502,26 +1502,6 @@
       "entry_order_id": "db77d5db-7ab6-49f7-85ec-8c8210be3c2a"
     },
     {
-      "lot_id": "5374bb1c06f1",
-      "bucket_id": 786,
-      "profile_name": "lab0786_s398_w2_1005_1045_r1",
-      "strategy_id": "S398",
-      "occ_symbol": "CVNA261002C00067000",
-      "underlying": "CVNA",
-      "qty": 1,
-      "entry_cost": 45.0,
-      "entry_price": 0.45,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-28T14:17:10.573863+00:00",
-      "entry_order_id": "1326315b-d73a-4342-912b-86a3ad3c125d"
-    },
-    {
       "lot_id": "1f78196ee14c",
       "bucket_id": 1139,
       "profile_name": "lab1139_s163_w2_1005_1045_r2",
@@ -2955,14 +2935,14 @@
       "submitted": "2026-09-28T13:13:09"
     },
     {
-      "order_id": "d90a2366-e5e4-4aca-8e5e-ffe6aadfc707",
-      "lot_id": "5374bb1c06f1",
-      "bucket_id": 786,
-      "strategy_id": "S398",
+      "order_id": "e0d97fce-3dc5-4d2f-93ef-4a95b03e61d4",
+      "lot_id": "1f78196ee14c",
+      "bucket_id": 1139,
+      "strategy_id": "S163",
       "occ_symbol": "CVNA261002C00067000",
       "qty": 1,
       "reason": "stop_loss (-55.1%)",
-      "submitted": "2026-09-28T13:17:54"
+      "submitted": "2026-09-28T13:21:42"
     }
   ],
   "bucket_open_premium": {
@@ -3040,7 +3020,6 @@
     "b280": 14.000000000000002,
     "b1151": 14.000000000000002,
     "b1150": 14.000000000000002,
-    "b786": 45.0,
     "b1139": 45.0,
     "b1138": 45.0,
     "b1097": 45.0,
@@ -3703,7 +3682,8 @@
     "b3d66054-4ae4-47a5-9889-87c9870acf95",
     "8e3726e8-2135-429f-9994-2efcbecd5717",
     "7b92b447-d467-4ba3-a9d2-2074a28ad276",
-    "bc1c8894-1a38-4c0b-999f-749e12769c4b"
+    "bc1c8894-1a38-4c0b-999f-749e12769c4b",
+    "d90a2366-e5e4-4aca-8e5e-ffe6aadfc707"
   ],
   "submitted_today": 103,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
