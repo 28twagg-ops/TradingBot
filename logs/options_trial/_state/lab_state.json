@@ -102,26 +102,6 @@
       "entry_order_id": "d8c5f94f-14ba-4b32-91a5-8a005abf29e4"
     },
     {
-      "lot_id": "fc5ba3a45e0f",
-      "bucket_id": 857,
-      "profile_name": "lab0857_s408_w1_0928_1005_r2",
-      "strategy_id": "S408",
-      "occ_symbol": "NKE261002C00040000",
-      "underlying": "NKE",
-      "qty": 1,
-      "entry_cost": 31.0,
-      "entry_price": 0.31,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-25T13:58:50.494292+00:00",
-      "entry_order_id": "5e8caf81-0a7c-4d3a-a2e2-8186c7f3e62e"
-    },
-    {
       "lot_id": "62b18f666304",
       "bucket_id": 856,
       "profile_name": "lab0856_s408_w1_0928_1005_r1",
@@ -540,26 +520,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-25T14:01:22.781301+00:00",
       "entry_order_id": "61dc91a8-1e6f-4b9a-a643-b8b298f6d01f"
-    },
-    {
-      "lot_id": "7f8572d9c8da",
-      "bucket_id": 859,
-      "profile_name": "lab0859_s408_w2_1005_1045_r2",
-      "strategy_id": "S408",
-      "occ_symbol": "NKE261002C00039500",
-      "underlying": "NKE",
-      "qty": 1,
-      "entry_cost": 37.0,
-      "entry_price": 0.37,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-25T14:08:23.326965+00:00",
-      "entry_order_id": "933fd3f8-dddb-47e2-aa64-1b618e6f641c"
     },
     {
       "lot_id": "fade81ec7343",
@@ -2502,26 +2462,6 @@
       "entry_order_id": "59009d0f-b36a-4f22-bae4-3c41b87a0eb9"
     },
     {
-      "lot_id": "c7ff91d71819",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "CVNA261002C00068000",
-      "underlying": "CVNA",
-      "qty": 1,
-      "entry_cost": 26.0,
-      "entry_price": 0.26,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-28T14:59:02.968498+00:00",
-      "entry_order_id": "orphan:CVNA261002C00068000"
-    },
-    {
       "lot_id": "9f14bd1ab822",
       "bucket_id": 0,
       "profile_name": "orphan_reconcile",
@@ -3005,16 +2945,6 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "bc1c8894-1a38-4c0b-999f-749e12769c4b",
-      "lot_id": "c7ff91d71819",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "CVNA261002C00068000",
-      "qty": 1,
-      "reason": "stop_loss (-42.3%)",
-      "submitted": "2026-09-28T11:29:12"
-    },
-    {
       "order_id": "601f2261-a56b-4808-8e3b-c4932c8890b4",
       "lot_id": "b05a08cb60ac",
       "bucket_id": 280,
@@ -3025,24 +2955,14 @@
       "submitted": "2026-09-28T13:13:09"
     },
     {
-      "order_id": "7b92b447-d467-4ba3-a9d2-2074a28ad276",
-      "lot_id": "fc5ba3a45e0f",
-      "bucket_id": 857,
-      "strategy_id": "S408",
-      "occ_symbol": "NKE261002C00040000",
+      "order_id": "d90a2366-e5e4-4aca-8e5e-ffe6aadfc707",
+      "lot_id": "5374bb1c06f1",
+      "bucket_id": 786,
+      "strategy_id": "S398",
+      "occ_symbol": "CVNA261002C00067000",
       "qty": 1,
-      "reason": "take_profit (+54.8%)",
-      "submitted": "2026-09-28T13:13:16"
-    },
-    {
-      "order_id": "8e3726e8-2135-429f-9994-2efcbecd5717",
-      "lot_id": "7f8572d9c8da",
-      "bucket_id": 859,
-      "strategy_id": "S408",
-      "occ_symbol": "NKE261002C00039500",
-      "qty": 1,
-      "reason": "take_profit (+56.8%)",
-      "submitted": "2026-09-28T13:13:18"
+      "reason": "stop_loss (-55.1%)",
+      "submitted": "2026-09-28T13:17:54"
     }
   ],
   "bucket_open_premium": {
@@ -3051,13 +2971,12 @@
     "b263": 54.0,
     "b913": 71.0,
     "b912": 71.0,
-    "b857": 31.0,
     "b856": 31.0,
     "b829": 56.00000000000001,
     "b828": 56.00000000000001,
     "b405": 71.0,
     "b404": 71.0,
-    "b0": 270.5,
+    "b0": 244.5,
     "b90": 131.0,
     "b785": 68.0,
     "b784": 68.0,
@@ -3073,7 +2992,6 @@
     "b800": 72.0,
     "b777": 72.0,
     "b776": 72.0,
-    "b859": 37.0,
     "b858": 37.0,
     "b831": 57.99999999999999,
     "b830": 57.99999999999999,
@@ -3782,7 +3700,10 @@
     "288a62dc-cfcd-4f1b-8140-51ad13a3f43a",
     "c4346827-fc46-478e-8277-940bd2f23f8b",
     "1ac6bdff-9787-49ae-a859-023533e5afce",
-    "b3d66054-4ae4-47a5-9889-87c9870acf95"
+    "b3d66054-4ae4-47a5-9889-87c9870acf95",
+    "8e3726e8-2135-429f-9994-2efcbecd5717",
+    "7b92b447-d467-4ba3-a9d2-2074a28ad276",
+    "bc1c8894-1a38-4c0b-999f-749e12769c4b"
   ],
   "submitted_today": 103,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
