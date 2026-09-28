@@ -35,3 +35,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-23T19:21:41Z,reconcile,862,lab0862_s408_w4_1120_1135_r1,S408,0ff1dc543373,COIN,COIN260925C00235000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-24 15:23:05.278384+00:00,entry,862,lab0862_s408_w4_1120_1135_r1,S408,6e2333243157,SMCI,SMCI260925C00044500,1,0.03,0.03,3.0,,,,-0.01,,0.5,-0.5,,,7c7738d1-9ef9-4367-b8ad-c99ad9dab06a
 2026-09-24T18:22:42Z,reconcile,862,lab0862_s408_w4_1120_1135_r1,S408,6e2333243157,SMCI,SMCI260925C00044500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-28 15:33:58.150840+00:00,entry,862,lab0862_s408_w4_1120_1135_r1,S408,10e6108abbcd,PLTR,PLTR261002C00212500,1,0.12,0.12,12.0,,,,-0.01,,0.5,-0.5,,,c978606d-2280-462f-b4f1-18f8ef8b1a36
+2026-09-24 18:19:21.160008+00:00,exit,862,lab0862_s408_w4_1120_1135_r1,S408,10e6108abbcd,PLTR,PLTR261002C00212500,1,,0.07,12.0,-41.67,-5.0,reconcile_fill,,-0.01,0.5,-0.5,,,c2fd19b8-1fc7-426b-b82f-d5e03cabe496

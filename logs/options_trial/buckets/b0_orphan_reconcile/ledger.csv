@@ -567,3 +567,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-25T18:51:25Z,reconcile,0,orphan_reconcile,ORPHAN,bee0378ecd6b,TTD,TTD261002C00012500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-28T13:01:27Z,reconcile,0,orphan_reconcile,ORPHAN,0a75dce76898,MS,MS260925C00210000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-28T13:48:13Z,reconcile,0,orphan_reconcile,ORPHAN,7b0f4512fef7,TTD,TTD261002C00013000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-28 15:34:53.782507+00:00,exit,0,orphan_reconcile,ORPHAN,f56ad039ed5a,MCD,MCD261002C00245000,1,,0.17,25.0,-32.0,-8.0,stop_loss (-40.0%),,-0.01,0.5,-0.4,,,95e08be5-4d1e-428b-bd94-21947fb5fb01
