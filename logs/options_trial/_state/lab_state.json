@@ -2122,26 +2122,6 @@
       "entry_order_id": "ae4032ef-8edf-48f4-bf62-2c5dca293e08"
     },
     {
-      "lot_id": "181031dc3d7d",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "BAC261002C00057000",
-      "underlying": "BAC",
-      "qty": 1,
-      "entry_cost": 40.0,
-      "entry_price": 0.4,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-28T14:20:24.779045+00:00",
-      "entry_order_id": "orphan:BAC261002C00057000"
-    },
-    {
       "lot_id": "33d84c516583",
       "bucket_id": 421,
       "profile_name": "lab0421_s365_w2_1005_1045_r2",
@@ -3175,16 +3155,6 @@
       "submitted": "2026-09-28T12:11:36"
     },
     {
-      "order_id": "16654041-8ba4-464e-beee-87ec1a864379",
-      "lot_id": "181031dc3d7d",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "BAC261002C00057000",
-      "qty": 1,
-      "reason": "stop_loss (-45.0%)",
-      "submitted": "2026-09-28T12:36:35"
-    },
-    {
       "order_id": "288a62dc-cfcd-4f1b-8140-51ad13a3f43a",
       "lot_id": "22d415b23fd3",
       "bucket_id": 293,
@@ -3207,7 +3177,7 @@
     "b828": 56.00000000000001,
     "b405": 71.0,
     "b404": 71.0,
-    "b0": 310.5,
+    "b0": 270.5,
     "b90": 131.0,
     "b785": 68.0,
     "b784": 68.0,
@@ -3931,7 +3901,8 @@
     "3d275270-4586-42a5-9a99-e7726e6b170e",
     "37a3f1bf-a129-4bbd-9332-ea2cb2169ce5",
     "7372b0d9-1eb5-4e4c-ba02-02d66212a31e",
-    "5d7ca76f-c121-4e5d-b246-3ed71c86046e"
+    "5d7ca76f-c121-4e5d-b246-3ed71c86046e",
+    "16654041-8ba4-464e-beee-87ec1a864379"
   ],
   "submitted_today": 103,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
