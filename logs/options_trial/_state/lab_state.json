@@ -2655,14 +2655,14 @@
       "submitted": "2026-09-28T14:01:41"
     },
     {
-      "order_id": "16bdbc19-7bea-4ce5-ad95-f6c04ecd1e03",
-      "lot_id": "577937e6686c",
-      "bucket_id": 291,
-      "strategy_id": "S352",
-      "occ_symbol": "CVNA261002C00068000",
+      "order_id": "e2d17083-6a9f-400c-b712-dbd289d74181",
+      "lot_id": "cefef1c6850d",
+      "bucket_id": 394,
+      "strategy_id": "S363",
+      "occ_symbol": "DKNG261002C00023500",
       "qty": 1,
-      "reason": "stop_loss (-65.4%)",
-      "submitted": "2026-09-28T15:04:51"
+      "reason": "stop_loss (-66.7%)",
+      "submitted": "2026-09-28T15:06:55"
     }
   ],
   "bucket_open_premium": {
