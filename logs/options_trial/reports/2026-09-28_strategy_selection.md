@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-28
 
-_Generated 2026-09-28T14:16:39.499946_
+_Generated 2026-09-28T14:22:02.811452_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-28T14:16:39.499946_
 
 ## Attribution health
 
-- Total exits: **3459**
+- Total exits: **3460**
 - Orphan exits (b0/orphan_reconcile): **415**
 - Orphan rate: **12.0%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -120,7 +120,7 @@ _Generated 2026-09-28T14:16:39.499946_
 | S351 (GapDown_1DTE) | 1d | drop | 72 | 36.1 | -50.00 | -75.66 | -61.96 | +298.36 | 59 | 23 | 8 | $+388.00 | 18.1% | non-positive median return |
 | S399 (GapDown_OTM1) | 3d | drop | 77 | 40.3 | -51.43 | -84.19 | -66.67 | +144.00 | 59 | 16 | 7 | $-115.00 | 20.8% | non-positive median return |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 63 | 22.2 | -51.67 | -86.04 | -68.93 | +69.15 | 63 | 13 | 2 | $-784.00 | 25.4% | non-positive median return |
-| S354 (GapDown_5DTE) | 5d | drop | 61 | 37.7 | -52.31 | -85.11 | -76.47 | +136.92 | 59 | 19 | 4 | $+67.00 | 32.8% | non-positive median return |
+| S354 (GapDown_5DTE) | 5d | drop | 62 | 37.1 | -51.96 | -85.06 | -76.23 | +136.56 | 59 | 19 | 5 | $+43.00 | 32.3% | non-positive median return |
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 40 | 10.0 | -55.91 | -78.77 | -67.43 | -3.10 | 63 | 0 | 0 | $-797.00 | 35.0% | manually paused — excluded from new entries & reflected P&L |
 | S360 (RubberBand_1DTE) | 1d | drop | 49 | 10.2 | -56.41 | -81.50 | -70.37 | -6.89 | 59 | 0 | 0 | $-913.00 | 22.4% | manually paused — excluded from new entries & reflected P&L |
 | S363 (RubberBand_5DTE) | 5d | drop | 41 | 39.0 | -65.38 | -92.31 | -85.11 | +90.62 | 56 | 11 | 3 | $-739.00 | 31.7% | non-positive median return |
@@ -263,7 +263,7 @@ _Pipeline evaluation as of 2026-09-28. Auto-kill thresholds: median<-25% at n>=1
 | S351 | GapDown_1DTE | 72 | -50.00% | 36% | INSUFFICIENT | 59 |
 | S352 | GapDown_2DTE | 56 | -17.65% | 48% | INSUFFICIENT | 59 |
 | S353 | GapDown_3DTE | 42 | -34.69% | 45% | INSUFFICIENT | 59 |
-| S354 | GapDown_5DTE | 61 | -52.31% | 38% | INSUFFICIENT | 59 |
+| S354 | GapDown_5DTE | 62 | -51.96% | 37% | INSUFFICIENT | 59 |
 | S355 | GapDown_7DTE | 71 | -37.50% | 45% | INSUFFICIENT | 59 |
 | S356 | GapDown_14DTE | 27 | +36.00% | 52% | INSUFFICIENT | 59 |
 | S357 | GapDown_21DTE | 25 | +57.14% | 80% | INSUFFICIENT | 59 |
