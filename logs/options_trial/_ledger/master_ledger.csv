@@ -15500,12 +15500,12 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-28 18:51:34.305211+00:00,exit,299,lab0299_s353_w2_1005_1045_r2,S353,fc55e1fe0698,CVNA,CVNA261002C00068000,1,,0.12,26.0,-53.85,-14.0,stop_loss (-53.8%),,-0.01,0.5,-0.5,,,a0851afd-8aa1-44ca-b489-621325ae3558
 2026-09-28 18:56:21.035694+00:00,exit,298,lab0298_s353_w2_1005_1045_r1,S353,28640fee77be,CVNA,CVNA261002C00068000,1,,0.12,26.0,-53.85,-14.0,stop_loss (-53.8%),,-0.01,0.5,-0.5,,,e190a156-f7bc-413e-a9cb-62acdbab9c84
 2026-09-28T19:11:29Z,reconcile,394,lab0394_s363_w3_1045_1120_r1,S363,cefef1c6850d,DKNG,DKNG261002C00023500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-28T20:04:51Z,reconcile,858,lab0858_s408_w2_1005_1045_r1,S408,fade81ec7343,NKE,NKE261002C00039500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-28T20:04:51Z,reconcile,237,lab0237_s401_w2_1005_1045_r2,S401,c2fd335cf8b1,MARA,MARA261002C00013000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-28T20:04:51Z,reconcile,236,lab0236_s401_w2_1005_1045_r1,S401,58db79e02f9e,MARA,MARA261002C00013000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-28T20:04:51Z,reconcile,183,lab0183_s217_w3_1045_1120_r2,S217,fddae8320195,MCD,MCD261002C00245000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-28T20:04:51Z,reconcile,917,lab0917_s412_w3_1045_1120_r2,S412,c516594b96ad,DKNG,DKNG261002C00023000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-28T20:04:51Z,reconcile,916,lab0916_s412_w3_1045_1120_r1,S412,f3e5d2a6bf10,DKNG,DKNG261002C00023000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-28 19:40:43.923950+00:00,exit,1125,lab1125_s168_w2_1005_1045_r2,S168,9c20e9cf67d0,CVNA,CVNA261002C00067000,1,,0.19,42.0,-54.76,-23.0,reconcile_fill,,-0.01,0.5,-0.5,,,3987fc61-ee37-4399-ae56-0cb303d1851f
+2026-09-28T19:40:22Z,reconcile,858,lab0858_s408_w2_1005_1045_r1,S408,fade81ec7343,NKE,NKE261002C00039500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-28T19:40:22Z,reconcile,237,lab0237_s401_w2_1005_1045_r2,S401,c2fd335cf8b1,MARA,MARA261002C00013000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-28T19:40:22Z,reconcile,236,lab0236_s401_w2_1005_1045_r1,S401,58db79e02f9e,MARA,MARA261002C00013000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-28T19:40:22Z,reconcile,917,lab0917_s412_w3_1045_1120_r2,S412,c516594b96ad,DKNG,DKNG261002C00023000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-28T19:40:22Z,reconcile,916,lab0916_s412_w3_1045_1120_r1,S412,f3e5d2a6bf10,DKNG,DKNG261002C00023000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-28 19:28:53.559064+00:00,exit,1096,lab1096_s167_w2_1005_1045_r1,S167,e88f8c2d8eae,CVNA,CVNA261002C00067000,1,,0.2,45.0,-55.56,-25.0,reconcile_fill,,-0.01,0.5,-0.5,,,da693a00-d3e7-4be8-8069-7022af86b533
 2026-09-28 19:32:27.549805+00:00,exit,302,lab0302_s353_w4_1120_1135_r1,S353,039478371cb4,CVNA,CVNA261002C00069000,1,,0.07,13.0,-46.15,-6.0,stop_loss (-53.8%),,-0.01,0.5,-0.5,,,ca8e1396-fec6-432e-89d5-c40ecfbb4716
+2026-09-28T20:06:55Z,reconcile,183,lab0183_s217_w3_1045_1120_r2,S217,fddae8320195,MCD,MCD261002C00245000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-28 19:40:43.923950+00:00,exit,1125,lab1125_s168_w2_1005_1045_r2,S168,9c20e9cf67d0,CVNA,CVNA261002C00067000,1,,0.19,42.0,-54.76,-23.0,stop_loss (-57.3%),,-0.01,0.5,-0.5,,,3987fc61-ee37-4399-ae56-0cb303d1851f

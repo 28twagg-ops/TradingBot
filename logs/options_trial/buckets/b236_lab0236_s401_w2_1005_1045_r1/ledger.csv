@@ -52,4 +52,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-24 14:07:43.004568+00:00,entry,236,lab0236_s401_w2_1005_1045_r1,S401,89a2d55f26c2,COIN,COIN260925C00210000,1,0.4,0.39,39.0,,,,-0.01,,0.75,-0.75,0.21621621621621612,gap -0.69% green,2024032b-1cb6-433e-96a6-b9b036349ad3
 2026-09-24 14:36:38.202468+00:00,exit,236,lab0236_s401_w2_1005_1045_r1,S401,89a2d55f26c2,COIN,COIN260925C00210000,1,,0.8,39.0,105.13,41.0,take_profit (+102.6%),,-0.01,0.5,-0.5,,,4f8d1329-a433-4694-ac4e-4f35c282b4cd
 2026-09-28 14:08:21.077019+00:00,entry,236,lab0236_s401_w2_1005_1045_r1,S401,58db79e02f9e,MARA,MARA261002C00013000,1,0.34,0.33,33.0,,,,-0.01,,0.75,-0.75,0.02898550724637668,gap -0.64% green,1502928b-c5ee-452e-b8dd-bed732a04493
-2026-09-28T20:04:51Z,reconcile,236,lab0236_s401_w2_1005_1045_r1,S401,58db79e02f9e,MARA,MARA261002C00013000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-28T19:40:22Z,reconcile,236,lab0236_s401_w2_1005_1045_r1,S401,58db79e02f9e,MARA,MARA261002C00013000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
