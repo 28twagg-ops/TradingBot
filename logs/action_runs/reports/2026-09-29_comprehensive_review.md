@@ -1646,3 +1646,132 @@ Scanning 117 symbols for [S165, S164, S168, S167, S166, S163, S169, S170, S171, 
 ```
 
 ---
+
+## Run 20260929T134708Z
+
+- UTC timestamp: `20260929T134708Z`
+- GitHub run: [#11304](https://github.com/28twagg-ops/TradingBot/actions/runs/36577408191)
+- Run id: `36577408191`
+- Live bot: exit=`0`, duration=`229s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20260929T134708Z_live_bot.log`, `logs/action_runs/20260929T134708Z_live_options.log`, `logs/action_runs/20260929T134708Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1545 | 49.6 | -7.7 | +42.0 | $+19,545 |
+| TAINTED | 1925 | 33.5 | -39.0 | +12.6 | $-9,424 |
+| KEEP-only | 794 | 62.7 | +52.3 | +62.6 | $+13,455 |
+| KEEP-only recent | 600 | 61.8 | +56.2 | +71.6 | $+9,417 |
+
+- KEEP strategies (24): S163, S164, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S397, S398, S401, S403, S404, S406, S411, S412
+- KILL strategies (20): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-09-29T09:26:33.211793-04:00","date":"2026-09-29","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.4,"phases_s":{"reconcile":0.54},"signals":0,"placed":0,"equity":994607.48,"open_positions":30,"pending_orders":0,"open_lots":120,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"11300","github_run_id":"36574927117","status":"ok","data_quality":{"clean":{"n":1545,"win":49.58,"med":-7.69,"avg":41.96,"pnl":19544.83},"tainted":{"n":1925,"win":33.45,"med":-38.98,"avg":12.59,"pnl":-9424.28},"keep_only":{"n":794,"win":62.72,"med":52.28,"avg":62.62,"pnl":13455.45},"keep_only_recent":{"n":600,"win":61.83,"med":56.2,"avg":71.58,"pnl":9417.0},"keep_strategies":["S163","S164","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S397","S398","S401","S403","S404","S406","S411","S412"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S399","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (157 earlier lines - see full log file)
+|  QLYS     Pullback50      eq     $171.47  50.7   -2.07   50MA bounce (+|
+|  REXR     Pullback50      eq     $37.37   53.4   -2.37   50MA bounce (-|
+|  SEIC     Pullback50      eq     $104.86  36.9   -1.21   50MA bounce (-|
+|  THC      Pullback50      eq     $258.22  38.2   -1.28   50MA bounce (+|
+|  WTS      Pullback50      eq     $358.76  53.5   -1.67   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AES  Pullback50                                    $33.58|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] MO  Pullback50                                       cap 3|
+|    SKIP [eq] TECH  Pullback50                                     cap 3|
+|    SKIP [eq] BRK-B  Pullback50                                    cap 3|
+|    SKIP [eq] CAT  Pullback50                                      cap 3|
+|    SKIP [eq] CTAS  Pullback50                                     cap 3|
+|    SKIP [eq] KO  Pullback50                                       cap 3|
+|    SKIP [eq] DVN  Pullback50                                      cap 3|
+|    SKIP [eq] EME  Pullback50                                      cap 3|
+|    SKIP [eq] ECL  Pullback50                                      cap 3|
+|    SKIP [eq] XOM  Pullback50                                      cap 3|
+|    SKIP [eq] GEV  Pullback50                                      cap 3|
+|    SKIP [eq] INCY  Pullback50                                     cap 3|
+|    SKIP [eq] KDP  Pullback50                                      cap 3|
+|    SKIP [eq] MA  Pullback50                                       cap 3|
+|    SKIP [eq] MET  Pullback50                                      cap 3|
+|    SKIP [eq] PFG  Pullback50                                      cap 3|
+|    SKIP [eq] DGX  Pullback50                                      cap 3|
+|    SKIP [eq] VLTO  Pullback50                                     cap 3|
+|    SKIP [eq] V  Pullback50                                        cap 3|
+|    SKIP [eq] WAB  Pullback50                                      cap 3|
+|    SKIP [eq] AIT  Pullback50                                      cap 3|
+|    SKIP [eq] CLH  Pullback50                                      cap 3|
+|    SKIP [eq] CR  Pullback50                                       cap 3|
+|    SKIP [eq] EGP  Pullback50                                      cap 3|
+|    SKIP [eq] HIMS  Pullback50                                     cap 3|
+|    SKIP [eq] ITT  Pullback50                                      cap 3|
+|    SKIP [eq] LECO  Pullback50                                     cap 3|
+|    SKIP [eq] MANH  Pullback50                                     cap 3|
+|    SKIP [eq] MSA  Pullback50                                      cap 3|
+|    SKIP [eq] MOG-A  Pullback50                                    cap 3|
+|    SKIP [eq] MSM  Pullback50                                      cap 3|
+|    SKIP [eq] QLYS  Pullback50                                     cap 3|
+|    SKIP [eq] REXR  Pullback50                                     cap 3|
+|    SKIP [eq] SEIC  Pullback50                                     cap 3|
+|    SKIP [eq] THC  Pullback50                                      cap 3|
+|    SKIP [eq] WTS  Pullback50                                      cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      1|
++------------------------------------------------------------------------+
+|  AES                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 1 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            899|
+|  Signals                                                             37|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  1 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $223.77|
+|  Cash                                                           $122.99|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
