@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-29
 
-_Generated 2026-09-29T15:11:33.404555_
+_Generated 2026-09-29T15:16:43.598456_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-29T15:11:33.404555_
 
 ## Attribution health
 
-- Total exits: **3522**
+- Total exits: **3524**
 - Orphan exits (b0/orphan_reconcile): **420**
 - Orphan rate: **11.9%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -29,9 +29,9 @@ _Generated 2026-09-29T15:11:33.404555_
 | S406 (RubberBand_ITM3) | 3d | watch | 103 | 66.0 | +61.29 | -58.10 | -45.57 | +805.96 | 60 | 12 | 4 | $+3,460.00 | 14.6% | fat left tail (p10 < -45%) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 27 | 63.0 | +58.73 | -73.54 | -60.95 | +105.04 | 70 | 8 | 4 | $+438.00 | 40.7% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 43 | 67.4 | +57.53 | -65.40 | -54.95 | +119.05 | 60 | 8 | 4 | $+1,122.00 | 18.6% | fat left tail (p10 < -45%) |
-| S362 (RubberBand_3DTE) | 3d | watch | 55 | 72.7 | +57.14 | -58.30 | -30.43 | +489.52 | 60 | 12 | 2 | $+1,602.00 | 23.6% | fat left tail (p10 < -45%) |
+| S362 (RubberBand_3DTE) | 3d | watch | 56 | 71.4 | +57.14 | -58.23 | -35.32 | +461.90 | 60 | 12 | 3 | $+1,572.00 | 23.2% | fat left tail (p10 < -45%) |
 | S357 (GapDown_21DTE) | 21d | watch | 25 | 80.0 | +57.14 | -74.18 | +47.06 | +78.22 | 60 | 0 | 0 | $+532.00 | 32.0% | fat left tail (p10 < -45%) |
-| S403 (Any_MA50_Touch) | 3d | watch | 67 | 65.7 | +50.98 | -63.38 | -48.16 | +184.67 | 60 | 10 | 4 | $+1,339.00 | 17.9% | fat left tail (p10 < -45%) |
+| S403 (Any_MA50_Touch) | 3d | watch | 68 | 64.7 | +50.93 | -63.16 | -48.79 | +184.33 | 60 | 10 | 5 | $+1,301.00 | 17.6% | fat left tail (p10 < -45%) |
 | S404 (GapDown_OTM2) | 3d | watch | 73 | 60.3 | +50.00 | -76.33 | -44.00 | +110.82 | 60 | 9 | 5 | $+1,188.00 | 13.7% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 106 | 51.9 | +29.29 | -69.05 | -49.77 | +147.50 | 64 | 13 | 3 | $+1,195.00 | 28.3% | fat left tail (p10 < -45%) |
 | S365 (RubberBand_14DTE) | 14d | watch | 30 | 50.0 | +19.23 | -63.72 | -51.40 | +74.32 | 60 | 7 | 3 | $+45.00 | 43.3% | fat left tail (p10 < -45%) |
@@ -271,7 +271,7 @@ _Pipeline evaluation as of 2026-09-29. Auto-kill thresholds: median<-25% at n>=1
 | S359 | RubberBand_0DTE | 39 | -39.29% | 41% | INSUFFICIENT | 57 |
 | S360 | RubberBand_1DTE | 49 | -56.41% | 10% | INSUFFICIENT | 60 |
 | S361 | RubberBand_2DTE | 58 | +9.82% | 52% | INSUFFICIENT | 60 |
-| S362 | RubberBand_3DTE | 55 | +57.14% | 73% | INSUFFICIENT | 60 |
+| S362 | RubberBand_3DTE | 56 | +57.14% | 71% | INSUFFICIENT | 60 |
 | S363 | RubberBand_5DTE | 41 | -65.38% | 39% | INSUFFICIENT | 57 |
 | S364 | RubberBand_7DTE | 63 | +8.33% | 51% | INSUFFICIENT | 60 |
 | S365 | RubberBand_14DTE | 30 | +19.23% | 50% | INSUFFICIENT | 60 |
@@ -312,7 +312,7 @@ _Pipeline evaluation as of 2026-09-29. Auto-kill thresholds: median<-25% at n>=1
 | S400 | Any_Green_Close | 6 | -50.00% | 17% | WATCH | 60 |
 | S401 | Any_Gap_Down_Small | 131 | +8.33% | 51% | INSUFFICIENT | 60 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
-| S403 | Any_MA50_Touch | 67 | +50.98% | 66% | INSUFFICIENT | 60 |
+| S403 | Any_MA50_Touch | 68 | +50.93% | 65% | INSUFFICIENT | 60 |
 | S404 | GapDown_OTM2 | 73 | +50.00% | 60% | INSUFFICIENT | 60 |
 | S405 | GapDown_OTM3 | 56 | -42.86% | 34% | INSUFFICIENT | 60 |
 | S406 | RubberBand_ITM3 | 103 | +61.29% | 66% | INSUFFICIENT | 60 |
@@ -342,8 +342,8 @@ _Pipeline evaluation as of 2026-09-29. Auto-kill thresholds: median<-25% at n>=1
 |----------|---|---------|-----|----------------|
 | S406 | 103 | +61.29% | 66% | Tyler review |
 | S397 | 43 | +57.53% | 67% | Tyler review |
-| S362 | 55 | +57.14% | 73% | Tyler review |
-| S403 | 67 | +50.98% | 66% | Tyler review |
+| S362 | 56 | +57.14% | 71% | Tyler review |
+| S403 | 68 | +50.93% | 65% | Tyler review |
 | S404 | 73 | +50.00% | 60% | Tyler review |
 | S218 | 106 | +29.29% | 52% | Tyler review |
 | S365 | 30 | +19.23% | 50% | Tyler review |

@@ -39,3 +39,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-25 16:01:27.368162+00:00,exit,263,lab0263_s403_w1_0928_1005_r2,S403,c2d903ff5030,SPY,SPY260928C00774000,1,,1.09,65.0,67.69,44.0,take_profit (+77.0%),,-0.01,0.5,-0.5,,,f50af06f-6f2c-42dc-8811-da7d59dcf177
 2026-09-29T13:40:50Z,reconcile,263,lab0263_s403_w1_0928_1005_r2,S403,3eabcde932dc,XOM,XOM261002C00167500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-29 13:57:52.084217+00:00,entry,263,lab0263_s403_w1_0928_1005_r2,S403,d4eb69eeea6c,CVX,CVX261002C00210000,1,0.72,0.71,71.0,,,,-0.01,,0.5,-0.5,0.17910447761194032,touch MA50 green,f229f0c0-4e05-406e-85f4-821488d80db4
+2026-09-29 19:11:24.853692+00:00,exit,263,lab0263_s403_w1_0928_1005_r2,S403,d4eb69eeea6c,CVX,CVX261002C00210000,1,,0.33,71.0,-53.52,-38.0,stop_loss (-53.6%),,-0.01,0.5,-0.5,,,12fbbd95-6945-48de-87c0-da309ed5cb66

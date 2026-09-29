@@ -542,26 +542,6 @@
       "entry_order_id": "89c312cd-37b9-411f-8250-1e3b6756e63c"
     },
     {
-      "lot_id": "d4eb69eeea6c",
-      "bucket_id": 263,
-      "profile_name": "lab0263_s403_w1_0928_1005_r2",
-      "strategy_id": "S403",
-      "occ_symbol": "CVX261002C00210000",
-      "underlying": "CVX",
-      "qty": 1,
-      "entry_cost": 71.0,
-      "entry_price": 0.71,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-29T13:57:59.064884+00:00",
-      "entry_order_id": "f229f0c0-4e05-406e-85f4-821488d80db4"
-    },
-    {
       "lot_id": "af23f1c2bd4b",
       "bucket_id": 262,
       "profile_name": "lab0262_s403_w1_0928_1005_r1",
@@ -1262,26 +1242,6 @@
       "entry_order_id": "8be4bbcf-b0ec-4341-8b79-3d5ea1377d70"
     },
     {
-      "lot_id": "f01ce71c5e51",
-      "bucket_id": 381,
-      "profile_name": "lab0381_s362_w3_1045_1120_r2",
-      "strategy_id": "S362",
-      "occ_symbol": "OXY261002C00056000",
-      "underlying": "OXY",
-      "qty": 1,
-      "entry_cost": 59.0,
-      "entry_price": 0.59,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-29T15:31:26.877269+00:00",
-      "entry_order_id": "59db6e97-9167-4ad2-b19c-ac979858db3e"
-    },
-    {
       "lot_id": "4177d994383a",
       "bucket_id": 380,
       "profile_name": "lab0380_s362_w3_1045_1120_r1",
@@ -1355,24 +1315,14 @@
       "submitted": "2026-09-29T14:06:33"
     },
     {
-      "order_id": "12fbbd95-6945-48de-87c0-da309ed5cb66",
-      "lot_id": "d4eb69eeea6c",
-      "bucket_id": 263,
+      "order_id": "55d3c40c-111f-4e63-a784-e9d7bf16ad59",
+      "lot_id": "af23f1c2bd4b",
+      "bucket_id": 262,
       "strategy_id": "S403",
       "occ_symbol": "CVX261002C00210000",
       "qty": 1,
       "reason": "stop_loss (-53.6%)",
-      "submitted": "2026-09-29T15:11:24"
-    },
-    {
-      "order_id": "31b85ca1-34ba-4b5d-8cb0-57cd0dcc6957",
-      "lot_id": "f01ce71c5e51",
-      "bucket_id": 381,
-      "strategy_id": "S362",
-      "occ_symbol": "OXY261002C00056000",
-      "qty": 1,
-      "reason": "stop_loss (-50.8%)",
-      "submitted": "2026-09-29T15:11:26"
+      "submitted": "2026-09-29T15:16:34"
     }
   ],
   "bucket_open_premium": {
@@ -1403,7 +1353,6 @@
     "b0": 75.0,
     "b419": 72.0,
     "b418": 72.0,
-    "b263": 71.0,
     "b262": 71.0,
     "b235": 60.0,
     "b234": 60.0,
@@ -1437,7 +1386,6 @@
     "b184": 68.0,
     "b171": 38.0,
     "b170": 38.0,
-    "b381": 59.0,
     "b380": 59.0,
     "b367": 59.0,
     "b366": 59.0
@@ -1962,7 +1910,9 @@
     "4ef4de91-d67c-4def-9da0-90cd87c2f588",
     "bc863c72-f62f-43ff-94d5-5e50e6b88f71",
     "f5665c7d-a348-4eac-9eb7-86e024d83baf",
-    "42ca7e0e-88d7-4abb-94ba-193e549ed1ee"
+    "42ca7e0e-88d7-4abb-94ba-193e549ed1ee",
+    "31b85ca1-34ba-4b5d-8cb0-57cd0dcc6957",
+    "12fbbd95-6945-48de-87c0-da309ed5cb66"
   ],
   "submitted_today": 80,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
