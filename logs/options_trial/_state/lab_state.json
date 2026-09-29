@@ -542,46 +542,6 @@
       "entry_order_id": "e853a82c-06cc-4f96-8bd0-fe1d25546d19"
     },
     {
-      "lot_id": "917ea3cfd87f",
-      "bucket_id": 804,
-      "profile_name": "lab0804_s404_w3_1045_1120_r1",
-      "strategy_id": "S404",
-      "occ_symbol": "DKNG261002C00021500",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 57.99999999999999,
-      "entry_price": 0.58,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-25T14:48:12.573468+00:00",
-      "entry_order_id": "9b5603e4-b4d3-419a-8146-7a4915aaf038"
-    },
-    {
-      "lot_id": "715044463ff2",
-      "bucket_id": 781,
-      "profile_name": "lab0781_s397_w3_1045_1120_r2",
-      "strategy_id": "S397",
-      "occ_symbol": "DKNG261002C00021500",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 57.99999999999999,
-      "entry_price": 0.58,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-25T14:48:12.616644+00:00",
-      "entry_order_id": "67c8948c-8b69-4c17-bfcc-cb641b4de567"
-    },
-    {
       "lot_id": "a1247733c5e5",
       "bucket_id": 780,
       "profile_name": "lab0780_s397_w3_1045_1120_r1",
@@ -2040,6 +2000,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-29T14:47:16.487201+00:00",
       "entry_order_id": "858e4dd6-6616-4864-83f0-bfa737489762"
+    },
+    {
+      "lot_id": "8c88e3d8626f",
+      "bucket_id": 861,
+      "profile_name": "lab0861_s408_w3_1045_1120_r2",
+      "strategy_id": "S408",
+      "occ_symbol": "PEP261002C00133000",
+      "underlying": "PEP",
+      "qty": 1,
+      "entry_cost": 10.0,
+      "entry_price": 0.1,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-29T14:53:20.171860+00:00",
+      "entry_order_id": "c48e8b99-8d17-4975-b198-468cc1cf71eb"
+    },
+    {
+      "lot_id": "56100961464e",
+      "bucket_id": 860,
+      "profile_name": "lab0860_s408_w3_1045_1120_r1",
+      "strategy_id": "S408",
+      "occ_symbol": "PEP261002C00133000",
+      "underlying": "PEP",
+      "qty": 1,
+      "entry_cost": 10.0,
+      "entry_price": 0.1,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-29T14:53:20.217757+00:00",
+      "entry_order_id": "795574e8-c71c-4277-831c-6629577bb83a"
     }
   ],
   "pending_orders": [
@@ -2204,18 +2204,7 @@
       "stop_loss": -0.5
     }
   ],
-  "pending_exits": [
-    {
-      "order_id": "fdfe5469-b21f-4c3f-9bb3-bd38e3632a31",
-      "lot_id": "917ea3cfd87f",
-      "bucket_id": 804,
-      "strategy_id": "S404",
-      "occ_symbol": "DKNG261002C00021500",
-      "qty": 1,
-      "reason": "stop_loss (-55.9%)",
-      "submitted": "2026-09-29T10:31:29"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b391": 55.00000000000001,
     "b390": 55.00000000000001,
@@ -2244,8 +2233,6 @@
     "b830": 57.99999999999999,
     "b793": 53.0,
     "b792": 53.0,
-    "b804": 57.99999999999999,
-    "b781": 57.99999999999999,
     "b780": 57.99999999999999,
     "b791": 54.0,
     "b790": 54.0,
@@ -2316,7 +2303,9 @@
     "b183": 7.000000000000001,
     "b182": 7.000000000000001,
     "b169": 26.0,
-    "b168": 26.0
+    "b168": 26.0,
+    "b861": 10.0,
+    "b860": 10.0
   },
   "session_date": "2026-09-29",
   "entries_locked": [
@@ -2377,7 +2366,9 @@
     "422|S365|2026-09-29",
     "423|S365|2026-09-29",
     "916|S412|2026-09-29",
-    "917|S412|2026-09-29"
+    "917|S412|2026-09-29",
+    "860|S408|2026-09-29",
+    "861|S408|2026-09-29"
   ],
   "processed_orders": [
     "2975faf2-1762-4bcc-baea-5458da5678a0",
@@ -2868,9 +2859,13 @@
     "4daa27b3-8170-4343-b2e4-acfcaf01ef00",
     "fee2d030-6c9d-48c8-92bb-2f2a29cbc570",
     "f23b2cc4-c812-47a8-bc15-af9288edafa4",
-    "858e4dd6-6616-4864-83f0-bfa737489762"
+    "858e4dd6-6616-4864-83f0-bfa737489762",
+    "fdfe5469-b21f-4c3f-9bb3-bd38e3632a31",
+    "c48e8b99-8d17-4975-b198-468cc1cf71eb",
+    "795574e8-c71c-4277-831c-6629577bb83a",
+    "93c8fa23-3beb-4ec5-b164-497016251073"
   ],
-  "submitted_today": 58,
+  "submitted_today": 60,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-29"
 }
