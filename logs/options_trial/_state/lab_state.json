@@ -1062,26 +1062,6 @@
       "entry_order_id": "fb88a95b-2317-4a15-8966-8a3819a038d1"
     },
     {
-      "lot_id": "5743e0b692e3",
-      "bucket_id": 794,
-      "profile_name": "lab0794_s399_w2_1005_1045_r1",
-      "strategy_id": "S399",
-      "occ_symbol": "MDLZ261002C00059000",
-      "underlying": "MDLZ",
-      "qty": 1,
-      "entry_cost": 70.0,
-      "entry_price": 0.7,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-29T14:36:44.075912+00:00",
-      "entry_order_id": "2636aac7-ee0d-4d8f-ae86-ec25d13a00ed"
-    },
-    {
       "lot_id": "85e767426122",
       "bucket_id": 167,
       "profile_name": "lab0167_s216_w2_1005_1045_r2",
@@ -1743,18 +1723,7 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "ec4c99d1-b227-41a7-b4fb-986d72c677c1",
-      "lot_id": "5743e0b692e3",
-      "bucket_id": 794,
-      "strategy_id": "S399",
-      "occ_symbol": "MDLZ261002C00059000",
-      "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-09-29T13:31:32"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b913": 71.0,
     "b912": 71.0,
@@ -1807,7 +1776,6 @@
     "b236": 27.0,
     "b195": 27.0,
     "b194": 27.0,
-    "b794": 70.0,
     "b167": 40.0,
     "b166": 40.0,
     "b435": 73.0,
