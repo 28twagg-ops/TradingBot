@@ -38,3 +38,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-25 14:12:49.847060+00:00,exit,197,lab0197_s218_w3_1045_1120_r2,S218,c84c8b5826a3,JPM,JPM260925C00342500,1,,0.25,40.0,-37.5,-15.0,stop_loss (-52.1%),,-0.01,0.5,-0.5,,,fe90f908-41f5-43e9-8681-ed1dd2461e80
 2026-09-25 14:47:18.992667+00:00,entry,197,lab0197_s218_w3_1045_1120_r2,S218,4cb0bccc2fd3,TTD,TTD261002C00013500,1,0.13,0.12,12.0,,,,-0.01,,0.75,-0.75,0.15384615384615397,low=12.53 BB_lower=12.48 touch+green,4a05de47-2d0f-4af2-a225-d5a0c1ce4a04
 2026-09-25T17:16:17Z,reconcile,197,lab0197_s218_w3_1045_1120_r2,S218,4cb0bccc2fd3,TTD,TTD261002C00013500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29 14:46:48.836485+00:00,entry,197,lab0197_s218_w3_1045_1120_r2,S218,d5cc120e0747,MCD,MCD261002C00250000,1,0.08,0.07,7.0,,,,-0.01,,0.5,-0.5,0.11764705882352937,low=232.06 BB_lower=231.40 touch+green,c5285b66-4e27-4707-bca4-c19b572c1af0
