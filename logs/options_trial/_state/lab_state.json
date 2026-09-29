@@ -542,26 +542,6 @@
       "entry_order_id": "6928a095-2b3f-4d26-aec2-02445906a80e"
     },
     {
-      "lot_id": "92f22269eb0f",
-      "bucket_id": 1111,
-      "profile_name": "lab1111_s166_w2_1005_1045_r2",
-      "strategy_id": "S166",
-      "occ_symbol": "RBLX261002C00047500",
-      "underlying": "RBLX",
-      "qty": 1,
-      "entry_cost": 17.0,
-      "entry_price": 0.17,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-28T14:59:02.280593+00:00",
-      "entry_order_id": "d324a73f-06ab-4f68-9e7e-7704076cfa49"
-    },
-    {
       "lot_id": "556661683341",
       "bucket_id": 1110,
       "profile_name": "lab1110_s166_w2_1005_1045_r1",
@@ -1829,7 +1809,6 @@
     "b420": 54.0,
     "b239": 52.0,
     "b238": 52.0,
-    "b1111": 17.0,
     "b1110": 17.0,
     "b1157": 13.0,
     "b1156": 13.0,
@@ -2350,7 +2329,8 @@
     "86513c38-53ac-42c7-8a30-b032a3781caa",
     "ab5c7183-7697-40d6-8539-53adb031e53b",
     "95f59c2f-fe2e-48ce-9d69-a5708ae91a54",
-    "2fefa4fe-c59e-49eb-bc4b-b132a34e441c"
+    "2fefa4fe-c59e-49eb-bc4b-b132a34e441c",
+    "29ebc00b-a5cf-43e3-b922-308af0d62bbc"
   ],
   "submitted_today": 60,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
