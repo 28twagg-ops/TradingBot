@@ -1102,46 +1102,6 @@
       "entry_order_id": "437bc02b-ccef-4c65-a0e9-087bd0af7794"
     },
     {
-      "lot_id": "b837f03464cc",
-      "bucket_id": 290,
-      "profile_name": "lab0290_s352_w2_1005_1045_r1",
-      "strategy_id": "S352",
-      "occ_symbol": "CVNA261002C00068000",
-      "underlying": "CVNA",
-      "qty": 1,
-      "entry_cost": 26.0,
-      "entry_price": 0.26,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-28T14:59:02.746040+00:00",
-      "entry_order_id": "59009d0f-b36a-4f22-bae4-3c41b87a0eb9"
-    },
-    {
-      "lot_id": "b77fa31df0f8",
-      "bucket_id": 286,
-      "profile_name": "lab0286_s351_w4_1120_1135_r1",
-      "strategy_id": "S351",
-      "occ_symbol": "CVNA261002C00069000",
-      "underlying": "CVNA",
-      "qty": 1,
-      "entry_cost": 13.0,
-      "entry_price": 0.13,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-28T15:38:26.764778+00:00",
-      "entry_order_id": "a2850403-ec55-491d-833e-b09a182c2af5"
-    },
-    {
       "lot_id": "9528e5fd64ad",
       "bucket_id": 1157,
       "profile_name": "lab1157_s164_w4_1120_1135_r2",
@@ -1826,6 +1786,38 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
+    },
+    {
+      "order_id": "ab5c7183-7697-40d6-8539-53adb031e53b",
+      "bucket_id": 264,
+      "strategy_id": "S403",
+      "occ_symbol": "CVX261002C00215000",
+      "underlying": "CVX",
+      "qty": 1,
+      "limit": 0.14,
+      "profile_name": "lab0264_s403_w2_1005_1045_r1",
+      "submitted": "2026-09-29",
+      "detail": "touch MA50 green",
+      "spread_frac": 0.2222222222222222,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "86513c38-53ac-42c7-8a30-b032a3781caa",
+      "bucket_id": 265,
+      "strategy_id": "S403",
+      "occ_symbol": "CVX261002C00215000",
+      "underlying": "CVX",
+      "qty": 1,
+      "limit": 0.14,
+      "profile_name": "lab0265_s403_w2_1005_1045_r2",
+      "submitted": "2026-09-29",
+      "detail": "touch MA50 green",
+      "spread_frac": 0.2222222222222222,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
   "pending_exits": [
@@ -1896,8 +1888,6 @@
     "b18": 17.0,
     "b1111": 17.0,
     "b1110": 17.0,
-    "b290": 26.0,
-    "b286": 13.0,
     "b1157": 13.0,
     "b1156": 13.0,
     "b0": 71.0,
@@ -1955,7 +1945,9 @@
     "378|S362|2026-09-29",
     "379|S362|2026-09-29",
     "914|S412|2026-09-29",
-    "915|S412|2026-09-29"
+    "915|S412|2026-09-29",
+    "264|S403|2026-09-29",
+    "265|S403|2026-09-29"
   ],
   "processed_orders": [
     "2975faf2-1762-4bcc-baea-5458da5678a0",
@@ -2411,9 +2403,11 @@
     "b96cc22c-d610-4cae-b3bd-abc99d9f3cca",
     "d6b23ac0-ece7-4984-9e3d-7a3cfe47f78b",
     "ea569ea5-261b-4d5a-835d-41f5d212ea52",
-    "ca7202fc-3f40-4d1f-a5ee-aa13c367a97a"
+    "ca7202fc-3f40-4d1f-a5ee-aa13c367a97a",
+    "be7e7c4e-32dc-4af3-a304-cfb48a49746c",
+    "9b3e7183-8472-40d5-ab93-a8ac95edb38b"
   ],
-  "submitted_today": 34,
+  "submitted_today": 36,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-29"
 }
