@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-29
 
-_Generated 2026-09-29T10:32:34.611260_
+_Generated 2026-09-29T10:37:37.209226_
 
 ## Summary
 
@@ -118,7 +118,7 @@ _Generated 2026-09-29T10:32:34.611260_
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 70 | 35.7 | -47.08 | -80.23 | -59.70 | +107.23 | 64 | 13 | 4 | $+292.00 | 42.9% | non-positive median return |
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 60 | 0 | 0 | $+33.00 | 26.3% | manually paused — excluded from new entries & reflected P&L |
 | S351 (GapDown_1DTE) | 1d | drop | 75 | 37.3 | -50.00 | -75.68 | -62.03 | +264.88 | 60 | 17 | 9 | $+414.00 | 17.3% | non-positive median return |
-| S399 (GapDown_OTM1) | 3d | drop | 79 | 39.2 | -51.43 | -83.76 | -66.67 | +142.00 | 60 | 8 | 4 | $-140.00 | 20.3% | non-positive median return |
+| S399 (GapDown_OTM1) | 3d | drop | 79 | 39.2 | -51.43 | -83.76 | -66.67 | +142.00 | 60 | 10 | 4 | $-140.00 | 20.3% | non-positive median return |
 | S354 (GapDown_5DTE) | 5d | drop | 66 | 36.4 | -51.96 | -84.87 | -75.26 | +135.12 | 60 | 10 | 7 | $+23.00 | 30.3% | non-positive median return |
 | S216 (RSI_Oversold_Cross) | 3d ATM RSI x30 | drop | 67 | 20.9 | -52.27 | -83.93 | -71.08 | +67.91 | 64 | 8 | 5 | $-978.00 | 23.9% | non-positive median return |
 | S203 (GapUp_Fade) | 3d ATM gap-up fade (put) | drop | 40 | 10.0 | -55.91 | -78.77 | -67.43 | -3.10 | 64 | 0 | 0 | $-797.00 | 35.0% | manually paused — excluded from new entries & reflected P&L |
