@@ -15510,3 +15510,32 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-28T20:06:55Z,reconcile,183,lab0183_s217_w3_1045_1120_r2,S217,fddae8320195,MCD,MCD261002C00245000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-28 19:40:43.923950+00:00,exit,1125,lab1125_s168_w2_1005_1045_r2,S168,9c20e9cf67d0,CVNA,CVNA261002C00067000,1,,0.19,42.0,-54.76,-23.0,stop_loss (-57.3%),,-0.01,0.5,-0.5,,,3987fc61-ee37-4399-ae56-0cb303d1851f
 2026-09-29T13:01:31Z,reconcile,86,lab0086_s210_w4_1120_1135_r1,S210,8da79f439707,SPY,SPY260928C00775000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,263,lab0263_s403_w1_0928_1005_r2,S403,3eabcde932dc,XOM,XOM261002C00167500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,265,lab0265_s403_w2_1005_1045_r2,S403,b80b4c9829a9,XOM,XOM261002C00170000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,377,lab0377_s362_w1_0928_1005_r2,S362,cf588856eb6e,PLTR,PLTR261002C00205000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,376,lab0376_s362_w1_0928_1005_r1,S362,23f383f29b4d,PLTR,PLTR261002C00205000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,363,lab0363_s361_w1_0928_1005_r2,S361,0128b299464e,PLTR,PLTR261002C00205000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,362,lab0362_s361_w1_0928_1005_r1,S361,7043c90d2d55,PLTR,PLTR261002C00205000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,235,lab0235_s401_w1_0928_1005_r2,S401,aab77879c764,PLTR,PLTR261002C00205000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,234,lab0234_s401_w1_0928_1005_r1,S401,ef2f7f9c3c91,PLTR,PLTR261002C00205000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,915,lab0915_s412_w2_1005_1045_r2,S412,1292c040b0c7,MSFT,MSFT260930C00527500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,914,lab0914_s412_w2_1005_1045_r1,S412,e8596fd60230,MSFT,MSFT260930C00527500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,393,lab0393_s363_w2_1005_1045_r2,S363,361b9d4d0cb0,MSFT,MSFT261002C00535000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,392,lab0392_s363_w2_1005_1045_r1,S363,e5f64cc84ec2,MSFT,MSFT261002C00535000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,379,lab0379_s362_w2_1005_1045_r2,S362,c12ca7e60b17,MSFT,MSFT260930C00527500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,378,lab0378_s362_w2_1005_1045_r1,S362,b910e5938089,MSFT,MSFT260930C00527500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,365,lab0365_s361_w2_1005_1045_r2,S361,4bd5eeb03939,MSFT,MSFT260930C00527500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,364,lab0364_s361_w2_1005_1045_r1,S361,eec245317d8f,MSFT,MSFT260930C00527500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,83,lab0083_s210_w2_1005_1045_r2,S210,113f3d4c4955,MSFT,MSFT260930C00527500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,82,lab0082_s210_w2_1005_1045_r1,S210,f24ba9a9b04f,MSFT,MSFT260930C00527500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,182,lab0182_s217_w3_1045_1120_r1,S217,898f369ef011,BAC,BAC261002C00056000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,0,orphan_reconcile,ORPHAN,c0a8c9e7ada3,XOM,XOM261002C00167500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29 13:30:04.979861+00:00,exit,165,lab0165_s216_w1_0928_1005_r2,S216,72a76d104c99,WFC,WFC261002C00083000,1,,0.25,68.0,-63.24,-43.0,reconcile_fill,,-0.01,0.5,-0.5,,,6558caa9-a22d-41ce-8bf8-3dc81d83966e
+2026-09-29 13:30:05.050191+00:00,exit,1124,lab1124_s168_w2_1005_1045_r1,S168,14fcadae309b,CVNA,CVNA261002C00067000,1,,0.13,42.0,-69.05,-29.0,reconcile_fill,,-0.01,0.5,-0.5,,,15dd8b5f-17da-42b0-901b-9287749a0ce9
+2026-09-29 13:30:04.991043+00:00,exit,280,lab0280_s351_w1_0928_1005_r1,S351,b05a08cb60ac,CVNA,CVNA261002C00070000,1,,0.03,14.0,-78.57,-11.0,reconcile_fill,,-0.01,0.5,-0.5,,,62f6dc51-069a-489b-81c8-231622e1f375
+2026-09-29 13:30:04.986733+00:00,exit,291,lab0291_s352_w2_1005_1045_r2,S352,577937e6686c,CVNA,CVNA261002C00068000,1,,0.05,26.0,-80.77,-21.0,reconcile_fill,,-0.01,0.5,-0.5,,,ac255961-aed8-45c5-a211-38628c20254a
+2026-09-29 13:30:04.997146+00:00,exit,90,live_1to1,S406,535b087a073e,PLTR,PLTR261002C00202500,1,,0.24,63.0,-61.9,-39.0,reconcile_fill,,-0.01,0.5,-0.4,,,39df8a02-7d9e-4a66-b9e3-b3b21d4f8195
+2026-09-29 13:30:05.062137+00:00,exit,308,lab0308_s354_w3_1045_1120_r1,S354,1df0d5f8a950,CVNA,CVNA261002C00066000,1,,0.22,50.0,-56.0,-28.0,reconcile_fill,,-0.01,0.5,-0.5,,,a88cffb6-701c-431d-b38f-9131177a5ead
+2026-09-29 13:30:04.994149+00:00,exit,863,lab0863_s408_w4_1120_1135_r2,S408,34be010bf399,PLTR,PLTR261002C00212500,1,,0.02,12.0,-83.33,-10.0,reconcile_fill,,-0.01,0.5,-0.5,,,9c929631-9fdd-4bbc-8ee7-6c0f9c0df70d
+2026-09-29 13:30:04.984463+00:00,exit,295,lab0295_s352_w4_1120_1135_r2,S352,4187e2adfef6,CVNA,CVNA261002C00069000,1,,0.05,13.0,-61.54,-8.0,reconcile_fill,,-0.01,0.5,-0.5,,,9408627e-6275-43e6-b582-7451be05c8cd
+2026-09-29 13:30:04.988542+00:00,exit,0,orphan_reconcile,ORPHAN,d8483095b2ce,PLTR,PLTR261002C00207500,1,,0.08,26.0,-69.23,-18.0,reconcile_fill,,-0.01,0.5,-0.4,,,dbc57648-f4f0-49e5-9ae9-0ff3eb590f99
