@@ -1722,26 +1722,6 @@
       "entry_order_id": "6d426c0b-31bb-476d-915d-f2bef9e873b0"
     },
     {
-      "lot_id": "7a91e9837d7d",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "OXY261002C00059000",
-      "underlying": "OXY",
-      "qty": 1,
-      "entry_cost": 5.0,
-      "entry_price": 0.05,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-29T14:27:57.551067+00:00",
-      "entry_order_id": "orphan:OXY261002C00059000"
-    },
-    {
       "lot_id": "bcf6b6a31ccc",
       "bucket_id": 795,
       "profile_name": "lab0795_s399_w2_1005_1045_r2",
@@ -1780,41 +1760,49 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-29T14:36:44.075912+00:00",
       "entry_order_id": "2636aac7-ee0d-4d8f-ae86-ec25d13a00ed"
+    },
+    {
+      "lot_id": "85e767426122",
+      "bucket_id": 167,
+      "profile_name": "lab0167_s216_w2_1005_1045_r2",
+      "strategy_id": "S216",
+      "occ_symbol": "UBER261002C00071000",
+      "underlying": "UBER",
+      "qty": 1,
+      "entry_cost": 40.0,
+      "entry_price": 0.4,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-29T14:41:31.911572+00:00",
+      "entry_order_id": "43099b89-7605-4d77-80c4-5b22dc9bc637"
+    },
+    {
+      "lot_id": "491bcdb6941c",
+      "bucket_id": 166,
+      "profile_name": "lab0166_s216_w2_1005_1045_r1",
+      "strategy_id": "S216",
+      "occ_symbol": "UBER261002C00071000",
+      "underlying": "UBER",
+      "qty": 1,
+      "entry_cost": 40.0,
+      "entry_price": 0.4,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-29T14:41:31.938565+00:00",
+      "entry_order_id": "5ca2b4fd-9944-4338-9bef-8f14e42f2775"
     }
   ],
   "pending_orders": [
-    {
-      "order_id": "5ca2b4fd-9944-4338-9bef-8f14e42f2775",
-      "bucket_id": 166,
-      "strategy_id": "S216",
-      "occ_symbol": "UBER261002C00071000",
-      "underlying": "UBER",
-      "qty": 1,
-      "limit": 0.4,
-      "profile_name": "lab0166_s216_w2_1005_1045_r1",
-      "submitted": "2026-09-29",
-      "detail": "RSI crossed 30: 28.1 -> 40.5",
-      "spread_frac": 0.024691358024691242,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "43099b89-7605-4d77-80c4-5b22dc9bc637",
-      "bucket_id": 167,
-      "strategy_id": "S216",
-      "occ_symbol": "UBER261002C00071000",
-      "underlying": "UBER",
-      "qty": 1,
-      "limit": 0.4,
-      "profile_name": "lab0167_s216_w2_1005_1045_r2",
-      "submitted": "2026-09-29",
-      "detail": "RSI crossed 30: 28.1 -> 40.5",
-      "spread_frac": 0.024691358024691242,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
     {
       "order_id": "4dfd6605-6f03-4158-bd9c-4c7a1bbe85e7",
       "bucket_id": 180,
@@ -1875,6 +1863,38 @@
       "submitted": "2026-09-29",
       "detail": "touch MA50 green",
       "spread_frac": 0.2222222222222222,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "f6db0298-99f7-49d7-84cb-9b45ac5fd0a1",
+      "bucket_id": 434,
+      "strategy_id": "S366",
+      "occ_symbol": "OXY261023C00059000",
+      "underlying": "OXY",
+      "qty": 1,
+      "limit": 0.73,
+      "profile_name": "lab0434_s366_w2_1005_1045_r1",
+      "submitted": "2026-09-29",
+      "detail": "RB gap -1.9% reclaim",
+      "spread_frac": 0.14492753623188404,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "6cbf859c-9058-4d26-b71e-5cc1fb7881af",
+      "bucket_id": 435,
+      "strategy_id": "S366",
+      "occ_symbol": "OXY261023C00059000",
+      "underlying": "OXY",
+      "qty": 1,
+      "limit": 0.73,
+      "profile_name": "lab0435_s366_w2_1005_1045_r2",
+      "submitted": "2026-09-29",
+      "detail": "RB gap -1.9% reclaim",
+      "spread_frac": 0.14492753623188404,
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
@@ -1947,7 +1967,7 @@
     "b1110": 17.0,
     "b1157": 13.0,
     "b1156": 13.0,
-    "b0": 76.0,
+    "b0": 71.0,
     "b419": 72.0,
     "b418": 72.0,
     "b377": 71.0,
@@ -1978,7 +1998,9 @@
     "b194": 27.0,
     "b859": 5.0,
     "b795": 70.0,
-    "b794": 70.0
+    "b794": 70.0,
+    "b167": 40.0,
+    "b166": 40.0
   },
   "session_date": "2026-09-29",
   "entries_locked": [
@@ -2021,7 +2043,9 @@
     "858|S408|2026-09-29",
     "859|S408|2026-09-29",
     "794|S399|2026-09-29",
-    "795|S399|2026-09-29"
+    "795|S399|2026-09-29",
+    "434|S366|2026-09-29",
+    "435|S366|2026-09-29"
   ],
   "processed_orders": [
     "2975faf2-1762-4bcc-baea-5458da5678a0",
@@ -2497,9 +2521,12 @@
     "80cb1dae-00c8-4202-a3f1-6da2b1a21350",
     "ab8e9cab-21cb-4fd5-be29-ebd43fa25c2e",
     "df1e4d2b-e806-49f1-a200-74eef818013f",
-    "2636aac7-ee0d-4d8f-ae86-ec25d13a00ed"
+    "2636aac7-ee0d-4d8f-ae86-ec25d13a00ed",
+    "43099b89-7605-4d77-80c4-5b22dc9bc637",
+    "5ca2b4fd-9944-4338-9bef-8f14e42f2775",
+    "b2831a89-5529-4d36-a20a-406d44ff6aaa"
   ],
-  "submitted_today": 40,
+  "submitted_today": 42,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-09-29"
 }
