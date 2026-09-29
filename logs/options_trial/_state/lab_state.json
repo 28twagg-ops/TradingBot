@@ -1202,26 +1202,6 @@
       "entry_order_id": "8be4bbcf-b0ec-4341-8b79-3d5ea1377d70"
     },
     {
-      "lot_id": "4177d994383a",
-      "bucket_id": 380,
-      "profile_name": "lab0380_s362_w3_1045_1120_r1",
-      "strategy_id": "S362",
-      "occ_symbol": "OXY261002C00056000",
-      "underlying": "OXY",
-      "qty": 1,
-      "entry_cost": 59.0,
-      "entry_price": 0.59,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-29T15:31:26.920612+00:00",
-      "entry_order_id": "46676345-645d-46d2-98e5-58bbfd1d45ba"
-    },
-    {
       "lot_id": "41ec2e5cdc30",
       "bucket_id": 367,
       "profile_name": "lab0367_s361_w3_1045_1120_r2",
@@ -1275,14 +1255,24 @@
       "submitted": "2026-09-29T14:06:33"
     },
     {
-      "order_id": "1955583b-a380-4367-abcd-6e8f950d0ba8",
-      "lot_id": "4177d994383a",
-      "bucket_id": 380,
-      "strategy_id": "S362",
-      "occ_symbol": "OXY261002C00056000",
+      "order_id": "a616ffb9-23df-4bcb-a35c-41efa697881c",
+      "lot_id": "d1c4a4b7a96a",
+      "bucket_id": 832,
+      "strategy_id": "S406",
+      "occ_symbol": "CVX261002C00212500",
       "qty": 1,
-      "reason": "stop_loss (-50.8%)",
-      "submitted": "2026-09-29T15:47:32"
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-09-29T15:52:37"
+    },
+    {
+      "order_id": "bad321e0-83f3-42dd-b9ae-f6390dd1aa3c",
+      "lot_id": "fd6a6b458926",
+      "bucket_id": 919,
+      "strategy_id": "S412",
+      "occ_symbol": "COP261002C00129000",
+      "qty": 1,
+      "reason": "stop_loss (-63.9%)",
+      "submitted": "2026-09-29T15:52:38"
     }
   ],
   "bucket_open_premium": {
@@ -1345,7 +1335,6 @@
     "b184": 68.0,
     "b171": 38.0,
     "b170": 38.0,
-    "b380": 59.0,
     "b367": 59.0,
     "b366": 59.0
   },
@@ -1873,7 +1862,8 @@
     "31b85ca1-34ba-4b5d-8cb0-57cd0dcc6957",
     "12fbbd95-6945-48de-87c0-da309ed5cb66",
     "55d3c40c-111f-4e63-a784-e9d7bf16ad59",
-    "6191fe97-b156-46c7-b4ba-cfa4ec01bffe"
+    "6191fe97-b156-46c7-b4ba-cfa4ec01bffe",
+    "1955583b-a380-4367-abcd-6e8f950d0ba8"
   ],
   "submitted_today": 80,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
