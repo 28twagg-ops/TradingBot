@@ -2003,7 +2003,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "e9ead3bc-dbb4-4fcb-81f8-3dd4aa8609a7",
+      "lot_id": "55aa4ca8b5cc",
+      "bucket_id": 169,
+      "strategy_id": "S216",
+      "occ_symbol": "UPST261002C00024500",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-09-29T12:11:44"
+    }
+  ],
   "bucket_open_premium": {
     "b391": 55.00000000000001,
     "b390": 55.00000000000001,
