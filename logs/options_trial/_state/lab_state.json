@@ -1880,6 +1880,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-29T15:23:16.424181+00:00",
       "entry_order_id": "orphan:CVX261002C00220000"
+    },
+    {
+      "lot_id": "8b4ad5a03173",
+      "bucket_id": 171,
+      "profile_name": "lab0171_s216_w4_1120_1135_r2",
+      "strategy_id": "S216",
+      "occ_symbol": "CVNA261002C00069000",
+      "underlying": "CVNA",
+      "qty": 1,
+      "entry_cost": 38.0,
+      "entry_price": 0.38,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-29T15:26:45.814314+00:00",
+      "entry_order_id": "bf75450f-6966-40b9-aae5-633f4fbffab9"
+    },
+    {
+      "lot_id": "c7dfdfefbb95",
+      "bucket_id": 170,
+      "profile_name": "lab0170_s216_w4_1120_1135_r1",
+      "strategy_id": "S216",
+      "occ_symbol": "CVNA261002C00069000",
+      "underlying": "CVNA",
+      "qty": 1,
+      "entry_cost": 38.0,
+      "entry_price": 0.38,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-29T15:26:45.859051+00:00",
+      "entry_order_id": "8be4bbcf-b0ec-4341-8b79-3d5ea1377d70"
     }
   ],
   "pending_orders": [
@@ -1978,38 +2018,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
-    },
-    {
-      "order_id": "8be4bbcf-b0ec-4341-8b79-3d5ea1377d70",
-      "bucket_id": 170,
-      "strategy_id": "S216",
-      "occ_symbol": "CVNA261002C00069000",
-      "underlying": "CVNA",
-      "qty": 1,
-      "limit": 0.4,
-      "profile_name": "lab0170_s216_w4_1120_1135_r1",
-      "submitted": "2026-09-29",
-      "detail": "RSI crossed 30: 21.4 -> 30.2",
-      "spread_frac": 0.24657534246575336,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "bf75450f-6966-40b9-aae5-633f4fbffab9",
-      "bucket_id": 171,
-      "strategy_id": "S216",
-      "occ_symbol": "CVNA261002C00069000",
-      "underlying": "CVNA",
-      "qty": 1,
-      "limit": 0.4,
-      "profile_name": "lab0171_s216_w4_1120_1135_r2",
-      "submitted": "2026-09-29",
-      "detail": "RSI crossed 30: 21.4 -> 30.2",
-      "spread_frac": 0.24657534246575336,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
     },
     {
       "order_id": "9f336b5d-e2ce-4058-ae1a-175802b4bcd4",
@@ -2200,7 +2208,9 @@
     "b240": 72.0,
     "b834": 4.0,
     "b185": 68.0,
-    "b184": 68.0
+    "b184": 68.0,
+    "b171": 38.0,
+    "b170": 38.0
   },
   "session_date": "2026-09-29",
   "entries_locked": [
@@ -2702,7 +2712,9 @@
     "240d5857-fd31-410b-afe1-aa73b0718180",
     "c965a622-72f4-405e-b13f-c06d47c35893",
     "44677608-3100-420e-88da-9da4372ada9b",
-    "f5ba2625-fd4c-4300-b577-7bd61dd9832f"
+    "f5ba2625-fd4c-4300-b577-7bd61dd9832f",
+    "bf75450f-6966-40b9-aae5-633f4fbffab9",
+    "8be4bbcf-b0ec-4341-8b79-3d5ea1377d70"
   ],
   "submitted_today": 80,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
