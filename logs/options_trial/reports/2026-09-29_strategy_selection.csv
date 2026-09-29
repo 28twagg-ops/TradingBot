@@ -81,6 +81,7 @@ S366,RubberBand_21DTE,21d,watch,early sample with non-positive median,48,17,8,9,
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),20,6,1,5,-33.91,-50.0,-66.67,-62.5,14.93,-5.0,2,60,0,0,2,83.3
 S202,GapDown_Monster,3d ATM gap-monster,watch,early sample with non-positive median,52,12,0,12,-55.94,-56.77,-73.59,-65.84,-38.58,-208.0,6,63,2,0,4,33.3
 S209,GapDown_Recovery,3d ATM gap-recovery,watch,insufficient sample (<8 exits),36,7,0,7,-65.23,-64.71,-80.4,-68.79,-50.75,-212.0,3,62,0,0,3,71.4
+S164,GapDown ATM 1-DTE — P2B arm,1d ATM,drop,non-positive median return,158,26,13,13,74.59,-2.42,-92.88,-56.25,333.34,438.0,12,70,12,4,10,23.1
 S210,MA_Cross_8_21,3d ATM MA cross 8/21,drop,non-positive median return,220,97,48,49,10.01,-4.35,-71.05,-51.22,82.71,75.0,15,64,14,4,19,17.5
 S408,RubberBand_ITM1,3d,drop,non-positive median return,163,65,28,37,101.29,-6.25,-81.48,-59.26,518.18,1093.0,17,57,6,2,14,18.5
 S174,RubberBand long call EOD,RubberBand (dropped),drop,non-positive median return,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,85,0,0,6,50.4
@@ -95,7 +96,6 @@ S353,GapDown_3DTE,3d,drop,non-positive median return,116,45,19,26,61.44,-46.15,-
 S207,GapDown_AtSupport,3d ATM gap-support,drop,manually paused — excluded from new entries & reflected P&L,62,37,2,35,-38.6,-47.06,-63.64,-55.71,-6.06,-822.0,2,64,0,0,3,43.2
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,drop,non-positive median return,160,70,25,45,18.47,-47.08,-80.23,-59.7,107.23,292.0,16,64,13,4,11,42.9
 S407,RubberBand_ITM2,3d,drop,manually paused — excluded from new entries & reflected P&L,96,38,11,27,29.82,-47.73,-83.88,-61.54,266.42,33.0,7,60,0,0,7,26.3
-S164,GapDown ATM 1-DTE — P2B arm,1d ATM,drop,non-positive median return,158,25,12,13,74.15,-48.08,-93.68,-57.14,335.24,426.0,12,70,12,3,10,24.0
 S351,GapDown_1DTE,1d,drop,non-positive median return,213,75,28,47,31.61,-50.0,-75.68,-62.03,264.88,414.0,18,60,17,9,16,17.3
 S399,GapDown_OTM1,3d,drop,non-positive median return,202,79,31,48,38.33,-51.43,-83.76,-66.67,142.0,-140.0,19,60,8,4,16,20.3
 S354,GapDown_5DTE,5d,drop,non-positive median return,122,66,24,42,-3.04,-51.96,-84.87,-75.26,135.12,23.0,12,60,10,7,9,30.3
