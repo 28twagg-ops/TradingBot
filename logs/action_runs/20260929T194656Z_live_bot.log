@@ -1,0 +1,186 @@
+19:46:57  INFO      Mode: scan
+19:46:58  INFO        BUY  NCLH  $33.48  [EarningsDrift]  id=1f6b50a7-cd53-4c44-8488-e0c4f99508e2
+19:46:58  INFO        BUY  CMS  $33.48  [MomReversal]  id=f957896b-4ce7-4349-a98e-82f17738a341
+19:46:58  INFO        BUY  AES  $33.48  [Pullback50]  id=af88fffa-26e0-4284-9f83-dc386c84b72c
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $223.19|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-09-29|
+|  Universe                                                          both|
+|  Mo~  Sep: GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $223.19|
+|  Cash                                                           $223.19|
+|  Reserve                                          $11.16  (always kept)|
+|  Stocks ~  $0.00 / $167.39  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $167.39  (new stock buys)|
+|  Trade size             $33.48  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (0 open)                        |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                     yes (fresh (5.8m))|
+|  Cached exits                                                         0|
+|  Cached signals                                                      27|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           903|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  27                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.88   64.1   1.50    50MA bounce (+|
+|  AES      VWAP_Reclaim    eq     $14.88   64.1   1.50    VWAP reclaim V|
+|  MO       Pullback50      eq     $68.62   55.4   -1.69   50MA bounce (-|
+|  TECH     Pullback50      eq     $72.41   57.3   -0.79   50MA bounce (+|
+|  BRK-B    Pullback50      eq     $502.73  45.3   -1.09   50MA bounce (-|
+|  CMS      MomReversal     eq     $63.44   17.7   1.24    -16.9% drop/60|
+|  KO       Pullback50      eq     $86.92   46.1   -1.72   50MA bounce (-|
+|  DVN      Pullback50      eq     $46.51   40.3   -1.15   50MA bounce (-|
+|  EW       Pullback50      eq     $87.81   55.6   -1.70   50MA bounce (-|
+|  XOM      Pullback50      eq     $161.39  44.7   -1.41   50MA bounce (+|
+|  HUM      Pullback50      eq     $387.24  42.7   0.56    50MA bounce (+|
+|  MA       Pullback50      eq     $564.79  47.3   -1.44   50MA bounce (-|
+|  NCLH     EarningsDrift   eq     $14.90   50.9   0.61    post-earnings |
+|  TT       Pullback50      eq     $455.34  58.2   -0.84   50MA bounce (-|
+|  VLTO     Pullback50      eq     $96.56   58.8   -1.11   50MA bounce (+|
+|  V        Pullback50      eq     $366.95  49.4   -0.88   50MA bounce (-|
+|  CLH      Pullback50      eq     $311.96  43.8   -2.09   50MA bounce (-|
+|  CR       Pullback50      eq     $208.44  62.4   -1.53   50MA bounce (-|
+|  DUOL     Pullback50      eq     $141.78  52.0   -1.26   50MA bounce (+|
+|  EGP      Pullback50      eq     $203.38  69.2   -0.58   50MA bounce (+|
+|  EXLS     Pullback50      eq     $34.49   45.4   -1.08   50MA bounce (-|
+|  MANH     Pullback50      eq     $199.68  41.7   -1.29   50MA bounce (-|
+|  M        Pullback50      eq     $23.32   63.4   -0.89   50MA bounce (+|
+|  MOG-A    Pullback50      eq     $390.49  70.3   -0.42   50MA bounce (-|
+|  REXR     Pullback50      eq     $37.35   53.2   -1.57   50MA bounce (-|
+|  SHC      Pullback50      eq     $18.62   55.4   -1.03   50MA bounce (+|
+|  WTS      Pullback50      eq     $358.43  53.1   -1.11   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] NCLH  EarningsDrift                                $33.48|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] CMS  MomReversal                                   $33.48|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AES  Pullback50                                    $33.48|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] MO  Pullback50                                       cap 3|
+|    SKIP [eq] TECH  Pullback50                                     cap 3|
+|    SKIP [eq] BRK-B  Pullback50                                    cap 3|
+|    SKIP [eq] KO  Pullback50                                       cap 3|
+|    SKIP [eq] DVN  Pullback50                                      cap 3|19:47:27  INFO        place_all_stops: checking 3 positions...
+19:47:27  INFO        STOP-MARKET placed AES  qty=2 (pos=2.2497)  stop=$14.80  id=45a5b3d1-53ef-4e69-a475-99269730005a
+19:47:27  INFO        STOP skipped CMS: fractional (0.5274 shares) — software exit will handle it
+19:47:27  INFO        STOP-MARKET placed NCLH  qty=2 (pos=2.2528)  stop=$14.78  id=86132e77-e170-469a-9037-c97c4cea80ab
+19:47:27  INFO        place_eod_stops: updating 3 stops to current price...
+19:47:27  INFO        EOD stop: cancelled old stop AES
+19:47:27  WARNING     EOD stop failed AES: {"available":"0.249747899","code":40310000,"existing_qty":"2.249747899","held_for_orders":"2","message":"insufficient qty available for order (requested: 2, available: 0.249747899)","symbol":"AES"}
+19:47:27  INFO        EOD stop skip CMS: 0.5274 shares (fractional) — ext_exits will cover
+19:47:27  INFO        EOD stop: cancelled old stop NCLH
+19:47:27  WARNING     EOD stop failed NCLH: {"available":"0.252776842","code":40310000,"existing_qty":"2.252776842","held_for_orders":"2","message":"insufficient qty available for order (requested: 2, available: 0.252776842)","symbol":"NCLH"}
+19:47:27  INFO        Daily log -> logs/daily/2026-09-29.md
+19:47:27  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [eq] EW  Pullback50                                       cap 3|
+|    SKIP [eq] XOM  Pullback50                                      cap 3|
+|    SKIP [eq] HUM  Pullback50                                      cap 3|
+|    SKIP [eq] MA  Pullback50                                       cap 3|
+|    SKIP [eq] TT  Pullback50                                       cap 3|
+|    SKIP [eq] VLTO  Pullback50                                     cap 3|
+|    SKIP [eq] V  Pullback50                                        cap 3|
+|    SKIP [eq] CLH  Pullback50                                      cap 3|
+|    SKIP [eq] CR  Pullback50                                       cap 3|
+|    SKIP [eq] DUOL  Pullback50                                     cap 3|
+|    SKIP [eq] EGP  Pullback50                                      cap 3|
+|    SKIP [eq] EXLS  Pullback50                                     cap 3|
+|    SKIP [eq] MANH  Pullback50                                     cap 3|
+|    SKIP [eq] M  Pullback50                                        cap 3|
+|    SKIP [eq] MOG-A  Pullback50                                    cap 3|
+|    SKIP [eq] REXR  Pullback50                                     cap 3|
+|    SKIP [eq] SHC  Pullback50                                      cap 3|
+|    SKIP [eq] WTS  Pullback50                                      cap 3|
+|    SKIP [eq] AES  VWAP_Reclaim                                    cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  NCLH                                                 still unconfirmed|
+|  CMS                                                  still unconfirmed|
+|  AES                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             27|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $223.10|
+|  Cash                                                           $122.78|
++========================================================================+
