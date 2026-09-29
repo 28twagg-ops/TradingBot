@@ -574,5 +574,9 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-28 17:14:26.874444+00:00,exit,0,orphan_reconcile,ORPHAN,c7ff91d71819,CVNA,CVNA261002C00068000,1,,0.16,26.0,-38.46,-10.0,stop_loss (-42.3%),,-0.01,0.5,-0.4,,,bc1c8894-1a38-4c0b-999f-749e12769c4b
 2026-09-28T18:38:41Z,reconcile,0,orphan_reconcile,ORPHAN,d05e4694540e,LLY,LLY261002C01300000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-28 18:33:41.976979+00:00,exit,0,orphan_reconcile,ORPHAN,5565e4b07070,XOM,XOM261002C00167500,1,,0.25,54.0,-53.7,-29.0,stop_loss (-61.0%),,-0.01,0.5,-0.4,,,1c5b82b2-79c9-49aa-aa33-469cc4a93e14
-2026-09-29T13:35:06Z,reconcile,0,orphan_reconcile,ORPHAN,c0a8c9e7ada3,XOM,XOM261002C00167500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
-2026-09-29 13:30:04.988542+00:00,exit,0,orphan_reconcile,ORPHAN,d8483095b2ce,PLTR,PLTR261002C00207500,1,,0.08,26.0,-69.23,-18.0,reconcile_fill,,-0.01,0.5,-0.4,,,dbc57648-f4f0-49e5-9ae9-0ff3eb590f99
+2026-09-29T13:40:51Z,reconcile,0,orphan_reconcile,ORPHAN,d8483095b2ce,PLTR,PLTR261002C00207500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:40:51Z,reconcile,0,orphan_reconcile,ORPHAN,2a6c4c357293,PLTR,PLTR261002C00212500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:40:51Z,reconcile,0,orphan_reconcile,ORPHAN,c0a8c9e7ada3,XOM,XOM261002C00167500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29 13:35:25.339624+00:00,exit,0,orphan_reconcile,ORPHAN,af2fd2ff7b37,DKNG,DKNG261016C00023500,1,,0.06,43.0,-86.05,-37.0,reconcile_fill,,-0.01,0.5,-0.4,,,777c691a-2f82-46c8-b116-ac330d3aed1c
+2026-09-29 13:30:04.988542+00:00,exit,0,orphan_reconcile,ORPHAN,9f14bd1ab822,MSFT,MSFT261002C00530000,1,,0.08,71.0,-88.73,-63.0,reconcile_fill,,-0.01,0.5,-0.4,,,dbc57648-f4f0-49e5-9ae9-0ff3eb590f99
+2026-09-29 13:45:51.753049+00:00,exit,0,orphan_reconcile,ORPHAN,79a4122d48cf,DKNG,DKNG261016C00023500,1,,0.24,43.0,-44.19,-19.0,reconcile_fill,,-0.01,0.5,-0.4,,,9dadda6a-5917-4061-b798-7fc47aab03b8
