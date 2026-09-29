@@ -15696,3 +15696,13 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-29 17:21:27.250885+00:00,exit,165,lab0165_s216_w1_0928_1005_r2,S216,4c7f9038a13d,UBER,UBER261002C00073000,1,,0.07,14.0,-50.0,-7.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,646127f4-38a2-4c8a-a068-31614ab8e548
 2026-09-29T17:31:29Z,reconcile,164,lab0164_s216_w1_0928_1005_r1,S216,a34207f5ed3e,UBER,UBER261002C00073000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-29T17:36:26Z,reconcile,794,lab0794_s399_w2_1005_1045_r1,S399,5743e0b692e3,MDLZ,MDLZ261002C00059000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T18:01:26Z,reconcile,915,lab0915_s412_w2_1005_1045_r2,S412,f016479284c1,OXY,OXY261002C00057000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T18:01:26Z,reconcile,914,lab0914_s412_w2_1005_1045_r1,S412,c5e2abba1736,OXY,OXY261002C00057000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T18:01:26Z,reconcile,379,lab0379_s362_w2_1005_1045_r2,S362,2aac12e0aa4a,OXY,OXY261002C00057000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T18:01:26Z,reconcile,378,lab0378_s362_w2_1005_1045_r1,S362,735c2e639f28,OXY,OXY261002C00057000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T18:01:26Z,reconcile,365,lab0365_s361_w2_1005_1045_r2,S361,4ba407051cc9,OXY,OXY261002C00057000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T18:01:26Z,reconcile,364,lab0364_s361_w2_1005_1045_r1,S361,312391966c78,OXY,OXY261002C00057000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T18:01:26Z,reconcile,237,lab0237_s401_w2_1005_1045_r2,S401,ded178ccb446,OXY,OXY261002C00057000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T18:01:26Z,reconcile,236,lab0236_s401_w2_1005_1045_r1,S401,5ce06c7b05f4,OXY,OXY261002C00057000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T18:01:26Z,reconcile,195,lab0195_s218_w2_1005_1045_r2,S218,bb7af52b11fd,OXY,OXY261002C00057000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T18:01:26Z,reconcile,194,lab0194_s218_w2_1005_1045_r1,S218,805891eb18e6,OXY,OXY261002C00057000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
