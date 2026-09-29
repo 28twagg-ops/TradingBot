@@ -15509,3 +15509,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-28 19:32:27.549805+00:00,exit,302,lab0302_s353_w4_1120_1135_r1,S353,039478371cb4,CVNA,CVNA261002C00069000,1,,0.07,13.0,-46.15,-6.0,stop_loss (-53.8%),,-0.01,0.5,-0.5,,,ca8e1396-fec6-432e-89d5-c40ecfbb4716
 2026-09-28T20:06:55Z,reconcile,183,lab0183_s217_w3_1045_1120_r2,S217,fddae8320195,MCD,MCD261002C00245000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-28 19:40:43.923950+00:00,exit,1125,lab1125_s168_w2_1005_1045_r2,S168,9c20e9cf67d0,CVNA,CVNA261002C00067000,1,,0.19,42.0,-54.76,-23.0,stop_loss (-57.3%),,-0.01,0.5,-0.5,,,3987fc61-ee37-4399-ae56-0cb303d1851f
+2026-09-29T13:01:31Z,reconcile,86,lab0086_s210_w4_1120_1135_r1,S210,8da79f439707,SPY,SPY260928C00775000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
