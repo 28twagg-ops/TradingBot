@@ -15709,3 +15709,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-29 18:01:29.497172+00:00,exit,90,live_1to1,S406,6d3205f99eab,CVX,CVX261002C00210000,1,,0.39,72.0,-45.83,-33.0,stop_loss (-45.2%),,-0.01,0.5,-0.4,,,db2f822d-8933-4253-a038-65a51f82a7f9
 2026-09-29T18:32:19Z,reconcile,264,lab0264_s403_w2_1005_1045_r1,S403,e79f0e5bce82,CVX,CVX261002C00215000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-29 18:41:46.890106+00:00,exit,377,lab0377_s362_w1_0928_1005_r2,S362,221c0079d90a,CVX,CVX261002C00210000,1,,0.33,71.0,-53.52,-38.0,stop_loss (-53.6%),,-0.01,0.5,-0.5,,,c8bec4ff-f3cc-4fa6-9508-3c68ed58eef8
+2026-09-29 18:46:36.040820+00:00,exit,376,lab0376_s362_w1_0928_1005_r1,S362,20104c903b22,CVX,CVX261002C00210000,1,,0.32,71.0,-54.93,-39.0,stop_loss (-55.0%),,-0.01,0.5,-0.5,,,7113b8eb-d0f2-4bde-a5ec-eb0e42b8da6b

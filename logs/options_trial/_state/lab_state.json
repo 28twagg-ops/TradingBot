@@ -542,26 +542,6 @@
       "entry_order_id": "89c312cd-37b9-411f-8250-1e3b6756e63c"
     },
     {
-      "lot_id": "20104c903b22",
-      "bucket_id": 376,
-      "profile_name": "lab0376_s362_w1_0928_1005_r1",
-      "strategy_id": "S362",
-      "occ_symbol": "CVX261002C00210000",
-      "underlying": "CVX",
-      "qty": 1,
-      "entry_cost": 71.0,
-      "entry_price": 0.71,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-29T13:57:58.940021+00:00",
-      "entry_order_id": "56ac6333-a074-46b3-a55f-24f46cb0a143"
-    },
-    {
       "lot_id": "e0f32523a227",
       "bucket_id": 363,
       "profile_name": "lab0363_s361_w1_0928_1005_r2",
@@ -1485,14 +1465,14 @@
       "submitted": "2026-09-29T14:32:24"
     },
     {
-      "order_id": "7113b8eb-d0f2-4bde-a5ec-eb0e42b8da6b",
-      "lot_id": "20104c903b22",
-      "bucket_id": 376,
-      "strategy_id": "S362",
+      "order_id": "f5665c7d-a348-4eac-9eb7-86e024d83baf",
+      "lot_id": "e0f32523a227",
+      "bucket_id": 363,
+      "strategy_id": "S361",
       "occ_symbol": "CVX261002C00210000",
       "qty": 1,
       "reason": "stop_loss (-55.0%)",
-      "submitted": "2026-09-29T14:46:36"
+      "submitted": "2026-09-29T14:53:07"
     }
   ],
   "bucket_open_premium": {
@@ -1523,7 +1503,6 @@
     "b0": 75.0,
     "b419": 72.0,
     "b418": 72.0,
-    "b376": 71.0,
     "b363": 71.0,
     "b362": 71.0,
     "b263": 71.0,
@@ -2082,7 +2061,8 @@
     "eeb1f90a-01a4-4318-91f5-0b944f2d13f4",
     "646127f4-38a2-4c8a-a068-31614ab8e548",
     "db2f822d-8933-4253-a038-65a51f82a7f9",
-    "c8bec4ff-f3cc-4fa6-9508-3c68ed58eef8"
+    "c8bec4ff-f3cc-4fa6-9508-3c68ed58eef8",
+    "7113b8eb-d0f2-4bde-a5ec-eb0e42b8da6b"
   ],
   "submitted_today": 80,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
