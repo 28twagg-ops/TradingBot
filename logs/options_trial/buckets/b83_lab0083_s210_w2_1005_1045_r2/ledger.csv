@@ -43,4 +43,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-25 14:07:50.263537+00:00,entry,83,lab0083_s210_w2_1005_1045_r2,S210,1fa2060fa987,SPY,SPY260928C00773000,1,0.66,0.65,65.0,,,,-0.01,,0.5,-0.5,0.015037593984962419,MA8 766.21 crossed above MA21,d7f6e1fc-52f1-44f4-b793-05f028475103
 2026-09-24 14:41:47.772784+00:00,exit,83,lab0083_s210_w2_1005_1045_r2,S210,1fa2060fa987,SPY,SPY260928C00773000,1,,0.2,65.0,-69.23,-45.0,reconcile_fill,,-0.01,0.5,-0.5,,,26d79ff0-eb0b-4133-ad2c-3e8f22624f9a
 2026-09-28 14:20:18.814976+00:00,entry,83,lab0083_s210_w2_1005_1045_r2,S210,113f3d4c4955,MSFT,MSFT260930C00527500,1,0.55,0.52,52.0,,,,-0.01,,0.5,-0.5,0.1747572815533982,MA8 501.38 crossed above MA21,ccd8aed6-a772-464c-9d50-60c9993da9b2
-2026-09-29T13:40:51Z,reconcile,83,lab0083_s210_w2_1005_1045_r2,S210,113f3d4c4955,MSFT,MSFT260930C00527500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29T13:35:06Z,reconcile,83,lab0083_s210_w2_1005_1045_r2,S210,113f3d4c4955,MSFT,MSFT260930C00527500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
