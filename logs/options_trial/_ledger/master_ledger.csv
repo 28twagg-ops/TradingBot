@@ -15682,3 +15682,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-29 15:29:33.951122+00:00,entry,366,lab0366_s361_w3_1045_1120_r1,S361,84c88e8feb37,OXY,OXY261002C00056000,1,0.59,0.59,59.0,,,,-0.01,,0.5,-0.5,0.16216216216216212,RB gap -1.9% reclaim,660980b8-9b80-4329-b8f0-91c2a41a00ee
 2026-09-29T16:01:30Z,reconcile,239,lab0239_s401_w3_1045_1120_r2,S401,b00ea8763a52,HOOD,HOOD261002C00129000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-29T16:01:30Z,reconcile,238,lab0238_s401_w3_1045_1120_r1,S401,4594223cea4b,HOOD,HOOD261002C00129000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
+2026-09-29 16:12:09.419879+00:00,exit,169,lab0169_s216_w3_1045_1120_r2,S216,55aa4ca8b5cc,UPST,UPST261002C00024500,1,,0.14,26.0,-46.15,-12.0,stop_loss (-50.0%),,-0.01,0.5,-0.5,,,e9ead3bc-dbb4-4fcb-81f8-3dd4aa8609a7
