@@ -8962,3 +8962,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-29 20:26:15,ext_exits,bull,223.06,122.69,0,0,0,2,CMS|NCLH,both
 2026-09-29 20:31:36,ext_exits,bull,223.46,122.69,0,0,0,2,CMS|NCLH,both
 2026-09-29 20:36:23,ext_exits,bull,223.22,122.69,0,0,0,2,CMS|NCLH,both
+2026-09-29 20:41:47,ext_exits,bull,223.22,122.69,0,0,0,2,CMS|NCLH,both
