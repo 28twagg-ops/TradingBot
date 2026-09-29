@@ -1442,26 +1442,6 @@
       "entry_order_id": "fee2d030-6c9d-48c8-92bb-2f2a29cbc570"
     },
     {
-      "lot_id": "fb3c7026abe4",
-      "bucket_id": 168,
-      "profile_name": "lab0168_s216_w3_1045_1120_r1",
-      "strategy_id": "S216",
-      "occ_symbol": "UPST261002C00024500",
-      "underlying": "UPST",
-      "qty": 1,
-      "entry_cost": 26.0,
-      "entry_price": 0.26,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-29T14:47:16.487201+00:00",
-      "entry_order_id": "858e4dd6-6616-4864-83f0-bfa737489762"
-    },
-    {
       "lot_id": "8c88e3d8626f",
       "bucket_id": 861,
       "profile_name": "lab0861_s408_w3_1045_1120_r2",
@@ -1983,18 +1963,7 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "1e2113bc-0791-4105-ba7e-cc74a3265037",
-      "lot_id": "fb3c7026abe4",
-      "bucket_id": 168,
-      "strategy_id": "S216",
-      "occ_symbol": "UPST261002C00024500",
-      "qty": 1,
-      "reason": "stop_loss (-53.8%)",
-      "submitted": "2026-09-29T12:16:52"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b391": 55.00000000000001,
     "b390": 55.00000000000001,
@@ -2066,7 +2035,6 @@
     "b196": 7.000000000000001,
     "b183": 7.000000000000001,
     "b182": 7.000000000000001,
-    "b168": 26.0,
     "b861": 10.0,
     "b860": 10.0,
     "b181": 33.0,
