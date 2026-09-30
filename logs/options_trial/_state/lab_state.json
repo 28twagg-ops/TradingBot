@@ -685,14 +685,14 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "6246b292-6c2a-4cbb-bd3e-a6669454e5e2",
+      "order_id": "f6e1f2d4-40df-4e7b-9e97-a7b42d609116",
       "lot_id": "68b4e3b5888e",
       "bucket_id": 1156,
       "strategy_id": "S164",
       "occ_symbol": "CVNA261002C00069000",
       "qty": 1,
-      "reason": "stop_loss (-72.5%)",
-      "submitted": "2026-09-30T15:21:45"
+      "reason": "stop_loss (-76.5%)",
+      "submitted": "2026-09-30T16:00:48"
     }
   ],
   "bucket_open_premium": {

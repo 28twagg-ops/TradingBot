@@ -1,0 +1,167 @@
+19:57:04  INFO      Mode: scan
+19:57:05  INFO        [positions] 3/3 (3 valid)
+19:57:05  INFO        Universe cache hit: 903 tickers (tickers_2026-09-30.json)
+19:57:06  INFO        [universe] 40/900 (40 valid)
+19:57:07  INFO        [universe] 80/900 (80 valid)
+19:57:08  INFO        [universe] 120/900 (120 valid)
+19:57:10  INFO        [universe] 160/900 (160 valid)
+19:57:11  INFO        [universe] 200/900 (199 valid)
+19:57:21  INFO        [universe] 240/900 (238 valid)
+19:57:31  INFO        [universe] 280/900 (278 valid)
+19:57:44  INFO        [universe] 320/900 (318 valid)
+19:57:57  INFO        [universe] 360/900 (358 valid)
+19:58:07  INFO        [universe] 400/900 (398 valid)
+19:58:20  INFO        [universe] 440/900 (438 valid)
+19:58:30  INFO        [universe] 480/900 (478 valid)
+19:58:43  INFO        [universe] 520/900 (518 valid)
+19:58:56  INFO        [universe] 560/900 (558 valid)
+19:59:06  INFO        [universe] 600/900 (598 valid)
+19:59:19  INFO        [universe] 640/900 (638 valid)
+19:59:32  INFO        [universe] 680/900 (678 valid)
+19:59:42  INFO        [universe] 720/900 (718 valid)
+19:59:55  INFO        [universe] 760/900 (758 valid)
+20:00:08  INFO        [universe] 800/900 (798 valid)
+20:00:19  INFO        [universe] 840/900 (838 valid)
+20:00:31  INFO        [universe] 880/900 (878 valid)
+20:00:38  INFO        [universe] 900/900 (898 valid)
+20:00:40  INFO        place_all_stops: checking 3 positions...
+20:00:40  INFO        STOP skipped FCN: fractional (0.2495 shares) — software exit will handle it
+20:00:40  INFO        STOP skipped LNT: fractional (0.5286 shares) — software exit will handle it
+20:00:40  INFO        STOP skipped PNW: fractional (0.3597 shares) — software exit will handle it
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:57 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $223.03|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-09-30|
+|  Universe                                                          both|
+|  Mo~  Sep: GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $223.03|
+|  Cash                                                           $122.56|
+|  Reserve                                          $11.15  (always kept)|
+|  Stock~  $100.47 / $167.27  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $66.80  (new stock buys)|
+|  Trade size             $33.45  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  FCN      MomReversal     $33.44     $133.92  $134.03  +0.1%   $+0.03  |
+|  LNT      MomReversal     $33.51     $63.21   $63.39   +0.3%   $+0.10  |
+|  PNW      MomReversal     $33.52     $92.88   $93.19   +0.3%   $+0.11  |
+|                                                                        |
+|  Total invested                                                 $100.47|
+|  Total open P&L                                                  $+0.24|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                   no (stale (1455.9m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  FCN  P&L +0.1%  $+0.03                                            HOLD|
+|  LNT  P&L +0.3%  $+0.10                                            HOLD|
+|  PNW  P&L +0.3%  $+0.11                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 3|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Sep  |  Regime: BULL                                           |
+|  Primary: GapDown  |  Secondary: VolumeSpike (display only — schedule ~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  17                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.90   73.3   0.31    50MA bounce (+|
+|  TECH     Pullback50      eq     $72.53   70.9   -1.33   50MA bounce (+|
+|  CBOE     RSIRecovery     eq     $275.11  42.2   1.41    RSI 28.6→42.2 |
+|  DXCM     Pullback50      eq     $86.41   58.2   -0.67   50MA bounce (+|
+|  FITB     MomReversal     eq     $50.69   28.5   0.37    -12.5% drop/60|
+|  GDDY     Pullback50      eq     $95.73   49.3   -0.82   50MA bounce (-|
+|  HII      RSIRecovery     eq     $268.17  34.3   0.44    RSI 19.8→34.3 |
+|  PPL      RSIRecovery     eq     $33.08   36.1   2.06    RSI 24.9→36.1 |
+|  SNPS     VWAP_Reclaim    eq     $434.45  65.8   2.57    VWAP reclaim V|
+|  DBX      Pullback50      eq     $33.94   45.0   -0.25   50MA bounce (-|
+|  IDCC     Pullback50      eq     $326.69  37.0   -1.16   50MA bounce (+|
+|  LNTH     RSIRecovery     eq     $99.56   33.2   1.65    RSI 28.0→33.2 |
+|  MUR      Pullback50      eq     $37.02   43.0   -0.64   50MA bounce (+|
+|  PLNT     MomReversal     eq     $42.23   27.8   0.51    -19.3% drop/60|
+|  SYNA     Pullback50      eq     $101.45  59.2   -1.01   50MA bounce (+|
+|  UTHR     VWAP_Reclaim    eq     $541.74  64.6   3.32    VWAP reclaim V|
+|  VLY      MomReversal     eq     $12.63   19.2   0.43    -15.0% drop/60|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+20:00:40  INFO        Daily log -> logs/daily/2026-09-30.md
+20:00:40  INFO        Dashboard written → logs/dashboard.md
+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy  GapDown + VolumeSpike (display only — schedule not enforced)|
+|  Scanned                                                            898|
+|  Signals                                                             17|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $223.06|
+|  Cash                                                           $122.56|
++========================================================================+
