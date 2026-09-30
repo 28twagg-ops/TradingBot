@@ -9029,3 +9029,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-30 15:31:38,exits,bull,223.19,155.84,0,0,0,2,AES|EBAY,both
 2026-09-30 15:42:03,exits,bull,223.12,155.84,0,0,0,2,AES|EBAY,both
 2026-09-30 15:48:39,exits,bull,223.03,155.84,0,0,0,2,AES|EBAY,both
+2026-09-30 15:51:32,exits,bull,222.99,155.84,0,0,0,2,AES|EBAY,both
