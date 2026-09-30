@@ -118,7 +118,8 @@ jobs:
           LIVE_OPTIONS_MAX_CAP: "250"
           LIVE_STOCK_CASH_RESERVE: "250"
           LIVE_OPTIONS_ENTRIES: "0"
-          LIVE_OPTIONS_ALLOW: "S404,S406,S218"
+          # S218 is CLEAN-KILL as of late Sep — keep live allow aligned with paper twin.
+          LIVE_OPTIONS_ALLOW: "S404,S406"
           LIVE_OPTIONS_MIN_COST: "20"
         run: |
           set +e
@@ -154,12 +155,15 @@ jobs:
           OPTIONS_MIRROR_LIVE: "1"
           OPTIONS_VARIATION_STUDY: "1"
           OPTIONS_CONTROLLED_LAYOUT: "1"
-          OPTIONS_MIRROR_STRATEGIES: "S404,S406,S218"
-          # Full parallel paper study: all ~100 lab strategies + ~109 signal scanners.
-          # Only drop proven CLEAN killers (med <= -55%, n>=10). Live stays paused.
-          OPTIONS_DROPPED_STRATEGIES: "S212,S203,S207,S360,S405,S407"
+          # Twin = S404+S406 only (S218 now CLEAN-KILL). b91 s406_only also runs in code.
+          OPTIONS_MIRROR_STRATEGIES: "S404,S406"
+          # Hard drops + dynamic CLEAN kill list (OPTIONS_BLOCK_KILL_STRATEGIES=1).
+          OPTIONS_DROPPED_STRATEGIES: "S212,S203,S207,S360,S405,S407,S202,S216,S211,S351,S354,S355,S363,S366,S408,S217"
+          OPTIONS_BLOCK_KILL_STRATEGIES: "1"
+          OPTIONS_BLOCK_SHARED_OCC: "1"
           OPTIONS_BUCKET_COUNT: "1800"
-          OPTIONS_MAX_NEW_ENTRIES_PER_RUN: "400"
+          # Cut stack pressure / uncovered OCC collisions.
+          OPTIONS_MAX_NEW_ENTRIES_PER_RUN: "150"
           LIVE_OPTIONS_MIN_COST: "20"
           OPTIONS_TOP_BUCKET_PCT: "0"
           GITHUB_RUN_NUMBER: ${{ github.run_number }}

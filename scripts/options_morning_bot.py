@@ -53,10 +53,12 @@ from options_lab import (
     build_bucket_leaderboard, build_reflected_leaderboard,
     cancel_dropped_strategy_entries, cancel_unfilled_lab_entries,
     DROPPED_STRATEGIES, ALLOWED_STRATEGIES, MIRROR_LIVE, VARIATION_STUDY,
-    VARIATION_STRATEGIES,
+    VARIATION_STRATEGIES, BLOCK_SHARED_OCC,
     MIRROR_STRATEGIES, TOP_BUCKET_PCT,
     LIVE_1TO1_BUCKET_ID, LIVE_1TO1_PROFILE_NAME, get_live_1to1_bucket,
-    is_live_1to1_arm,
+    S406_ONLY_BUCKET_ID, S406_ONLY_PROFILE_NAME, get_s406_only_bucket,
+    is_live_1to1_arm, is_priority_twin_arm, occ_already_claimed,
+    twin_claims_occ, sort_lots_for_exit, effective_dropped_strategies,
     entry_limit_price, exit_limit_price,
     exit_reason_for_lot, has_open_lab_entry, load_state,
     lock_entry_slot, make_entry_client_order_id,
@@ -824,9 +826,10 @@ def _strategy_scan_pool() -> list[StrategyConfig]:
 
 def _active_paper_strategies() -> list:
     """PAPER_STRATEGIES filtered by allow/drop lists (live-control study)."""
+    dropped = effective_dropped_strategies()
     out = []
     for s in _strategy_scan_pool():
-        if s.id in DROPPED_STRATEGIES:
+        if s.id in dropped:
             continue
         if VARIATION_STUDY:
             if VARIATION_STRATEGIES:
@@ -1496,6 +1499,11 @@ def _is_duplicate_client_order_id_error(exc: Exception) -> bool:
     return "client_order_id" in msg and ("unique" in msg or "duplicate" in msg)
 
 
+def _is_uncovered_option_error(exc: Exception) -> bool:
+    msg = str(exc).lower()
+    return "uncovered option" in msg or "not eligible to trade uncovered" in msg
+
+
 def _sell_limit(trade, sym: str, qty: int, limit: float, tag: str,
                 client_order_id: str | None = None,
                 bucket_id: int | None = None,
@@ -1532,6 +1540,12 @@ def _sell_limit(trade, sym: str, qty: int, limit: float, tag: str,
                 time.sleep(2)
                 rl_file(f"  EXIT {tag} retry after transient Alpaca error: {exc}")
                 continue
+            if _is_uncovered_option_error(exc):
+                rl(
+                    f"  EXIT {tag} SELL blocked (uncovered/shared OCC) {sym} "
+                    f"x{qty}: {exc}"
+                )
+                return None
             rl(f"  EXIT {tag} SELL failed {sym}: {exc}")
             return None
     return None
@@ -1571,7 +1585,8 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
         except Exception:
             bid = None
 
-        for lot in list(state.lots_for_occ(occ)):
+        # Twin lots first so shared-OCC stacks don't leave b90/b91 uncovered.
+        for lot in sort_lots_for_exit(list(state.lots_for_occ(occ))):
             if lot.qty <= 0:
                 continue
             if state.pending_exit_for_lot(lot.lot_id):
@@ -1581,7 +1596,11 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
                 continue
             sell_qty = min(lot.qty, pos_qty)
             if sell_qty <= 0:
-                continue
+                rl_file(
+                    f"  EXIT skip [b{lot.bucket_id}|{lot.strategy_id}] {occ}: "
+                    f"no broker qty left (shared OCC stack)"
+                )
+                break
             # Re-check broker open sells (another lot on same OCC may have just submitted).
             if occ in open_sells or state.pending_exit_for_occ(occ):
                 rl(f"  EXIT skip {occ}: open sell already pending", console=False)
@@ -1606,6 +1625,7 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
                 sell_limit = 0.01
 
             exit_oid = None
+            uncovered = False
             if use_market:
                 for attempt in range(2):
                     try:
@@ -1623,6 +1643,13 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
                            f"return={ret_pct:+.1f}%")
                         break
                     except Exception as exc:
+                        if _is_uncovered_option_error(exc):
+                            uncovered = True
+                            rl(
+                                f"  EXIT {tag} uncovered/shared-OCC block {occ} "
+                                f"x{sell_qty}: wait for reconcile"
+                            )
+                            break
                         if (
                             attempt == 0
                             and _is_duplicate_client_order_id_error(exc)
@@ -1646,6 +1673,8 @@ def manage_exits(trade, opt, state: LabState, now: datetime) -> None:
                                 f"@<= 0.01 return={ret_pct:+.1f}%"
                             )
                         break
+                if uncovered:
+                    break
                 if not exit_oid:
                     rl(f"  EXIT {tag} market+limit failed {occ}")
                     continue
@@ -1696,6 +1725,7 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
     placed = 0
     skip_no_chain = skip_cap = skip_full = 0
     skip_locked = skip_open = skip_pending = 0
+    skip_shared_occ = 0
     chain_cache: dict = {}
     oi_cache: dict = {}
     if _entries_blocked(state, signals, equity, now, trade):
@@ -1728,7 +1758,7 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
             if state.bucket_holds_underlying(arm.bucket_id, hit.symbol):
                 continue
             tier = get_stock_tier(hit.symbol)
-            if is_live_1to1_arm(arm):
+            if is_priority_twin_arm(arm):
                 # Strict 1:1 with options_live_micro — baseline arm, no tier skew.
                 adjusted_arm = arm
                 search_dte_min = strat.dte_min
@@ -1748,7 +1778,29 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
                 rl_file(f"  [b{arm.bucket_id}|{arm.profile_name}] {hit.strategy_id} "
                         f"{hit.symbol} (tier: {tier}): no tradeable {opt_type}")
                 continue
-            if is_live_1to1_arm(adjusted_arm) and cand["cost"] < MIRROR_MIN_ENTRY_COST - 0.01:
+            occ = cand["symbol"]
+            # Prevent stacking many virtual lots on one broker OCC (uncovered exits).
+            if BLOCK_SHARED_OCC:
+                if twin_claims_occ(state, occ) and not is_priority_twin_arm(adjusted_arm):
+                    skip_shared_occ += 1
+                    rl_file(
+                        f"  [b{arm.bucket_id}|{arm.profile_name}] skip {hit.strategy_id} "
+                        f"{hit.symbol}: OCC {occ} reserved by twin bucket"
+                    )
+                    continue
+                if occ_already_claimed(
+                    state, occ, except_bucket_id=adjusted_arm.bucket_id
+                ):
+                    skip_shared_occ += 1
+                    rl_file(
+                        f"  [b{arm.bucket_id}|{arm.profile_name}] skip {hit.strategy_id} "
+                        f"{hit.symbol}: OCC {occ} already claimed by another bucket"
+                    )
+                    continue
+            if (
+                is_priority_twin_arm(adjusted_arm)
+                and cand["cost"] < MIRROR_MIN_ENTRY_COST - 0.01
+            ):
                 rl_file(
                     f"  [b{arm.bucket_id}|{arm.profile_name}] skip {hit.strategy_id} "
                     f"{hit.symbol}: cost ${cand['cost']:.0f} "
@@ -1792,7 +1844,10 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
                     log.info(entry_msg)
             except Exception as exc:
                 rl(f"  [b{arm.bucket_id} {hit.symbol}] ENTRY failed: {exc}")
-    if skip_no_chain or skip_cap or skip_full or skip_locked or skip_open or skip_pending:
+    if (
+        skip_no_chain or skip_cap or skip_full or skip_locked
+        or skip_open or skip_pending or skip_shared_occ
+    ):
         parts = []
         if skip_no_chain:
             parts.append(f"{skip_no_chain} no tradeable call")
@@ -1806,6 +1861,8 @@ def place_entries(trade, opt, ref, signals: list[SignalHit], state: LabState,
             parts.append(f"{skip_open} open order exists")
         if skip_pending:
             parts.append(f"{skip_pending} pending order")
+        if skip_shared_occ:
+            parts.append(f"{skip_shared_occ} shared-OCC")
         rl(f"  Skipped: {', '.join(parts)}")
     return placed
 
@@ -2101,10 +2158,17 @@ def run() -> int:
             f"{', '.join(sorted(MIRROR_STRATEGIES))} | "
             f"TP+50%/SL-40% | stop-mkt | min ${MIRROR_MIN_ENTRY_COST:.0f}"
         )
+        s406 = get_s406_only_bucket()
+        s406_id = s406.bucket_id if s406 else S406_ONLY_BUCKET_ID
+        s406_name = s406.name if s406 else S406_ONLY_PROFILE_NAME
+        rl(
+            f"S406-only twin b{s406_id} {s406_name} — "
+            f"S406 | TP+50%/SL-40% | paper edge test"
+        )
         if VARIATION_STUDY:
             n_var = sum(
                 1 for b in active_buckets(equity or 0)
-                if b.bucket_id != LIVE_1TO1_BUCKET_ID
+                if b.bucket_id not in (LIVE_1TO1_BUCKET_ID, S406_ONLY_BUCKET_ID)
             )
             cohort = (
                 ", ".join(sorted(VARIATION_STRATEGIES))
@@ -2121,9 +2185,12 @@ def run() -> int:
            f"Strategies: {', '.join(s.id for s in active)}")
     if ALLOWED_STRATEGIES and not VARIATION_STUDY:
         rl(f"Allowed (new entries only): {', '.join(sorted(ALLOWED_STRATEGIES))}")
-    if DROPPED_STRATEGIES:
+    dropped_now = effective_dropped_strategies()
+    if dropped_now:
         rl(f"Dropped (no new entries; ex-reflected P&L): "
-           f"{', '.join(sorted(DROPPED_STRATEGIES))}")
+           f"{', '.join(sorted(dropped_now))}")
+    if BLOCK_SHARED_OCC:
+        rl("Shared-OCC entry block ON (one lab lot per contract)")
 
     t0 = time.perf_counter()
     cancel_stale_option_orders(trade)
@@ -2131,11 +2198,11 @@ def run() -> int:
     if n_drop:
         rl(f"Cancelled {n_drop} dropped-strategy entry order(s).")
     # Drop pending entry records for paused strategies so slots free up.
-    if DROPPED_STRATEGIES and state.pending_orders:
+    if dropped_now and state.pending_orders:
         before = len(state.pending_orders)
         state.pending_orders = [
             p for p in state.pending_orders
-            if p.strategy_id not in DROPPED_STRATEGIES
+            if p.strategy_id not in dropped_now
         ]
         cleared = before - len(state.pending_orders)
         if cleared:

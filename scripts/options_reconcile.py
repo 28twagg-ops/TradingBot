@@ -3,7 +3,8 @@ options_reconcile.py — Detect lots in state that are no longer in Alpaca, and 
 
 If an open lot in lab_state.json is NOT in the Alpaca positions list, it means it
 was closed manually, expired, or otherwise removed from the broker. This script
-zeroes the quantity in the state and appends a reconcile exit to the ledger.
+backfills exit P&L from filled sell orders when possible, otherwise zeroes the
+lot and appends a missing_from_broker reconcile row.
 
 PAPER ONLY (ALPACA_PAPER_KEY / ALPACA_PAPER_SECRET). Always exits 0 for GHA.
 
@@ -23,8 +24,10 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from options_lab import (  # noqa: E402
+    ORDER_FETCH_LIMIT,
     STATE_PATH,
     append_ledger,
+    attribute_vanished_lots,
     load_state,
     save_state,
 )
@@ -44,6 +47,20 @@ def _position_symbols(trade) -> set[str]:
     except Exception as e:
         log.warning("could not list positions: %s", e)
     return out
+
+
+def _fetch_closed_orders(trade) -> list:
+    from alpaca.trading.requests import GetOrdersRequest
+    from alpaca.trading.enums import QueryOrderStatus
+
+    try:
+        return list(trade.get_orders(
+            GetOrdersRequest(status=QueryOrderStatus.CLOSED, limit=ORDER_FETCH_LIMIT)
+        ) or [])
+    except Exception as e:
+        log.warning("could not list closed orders: %s", e)
+        return []
+
 
 def run(dry_run: bool = False) -> int:
     key = os.getenv("ALPACA_PAPER_KEY")
@@ -70,47 +87,57 @@ def run(dry_run: bool = False) -> int:
         print(f"  WARN: paper client init failed: {e}")
         return 0
 
-    mutated = False
-    for lot in open_lots:
-        if lot.occ_symbol not in positions:
-            print(f"  FLAG b{lot.bucket_id}|{lot.strategy_id}|{lot.lot_id[:8]} missing from Alpaca")
-            if not dry_run:
-                # Lot is no longer in broker. Reconcile it out.
-                lot.qty = 0
-                mutated = True
-                
-                try:
-                    append_ledger({
-                        "ts": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-                        "event": "reconcile",
-                        "bucket_id": lot.bucket_id,
-                        "profile": lot.profile_name,
-                        "strategy_id": lot.strategy_id,
-                        "lot_id": lot.lot_id,
-                        "symbol": lot.underlying,
-                        "occ": lot.occ_symbol,
-                        "qty": 0,
-                        "limit": "",
-                        "fill_price": "",
-                        "cost": 0,
-                        "return_pct": "",
-                        "pnl_usd": "",
-                        "reason": "missing_from_broker",
-                        "buy_offset": "",
-                        "sell_offset": "",
-                        "take_profit": "",
-                        "stop_loss": "",
-                        "spread_frac": "",
-                        "detail": "lot closed outside of bot (expired/manual)",
-                        "order_id": "",
-                    })
-                except Exception as e:
-                    log.warning("ledger append failed: %s", e)
+    missing = [l for l in open_lots if l.occ_symbol not in positions]
+    if not missing:
+        print("  No missing lots.")
+        print("options_reconcile: done")
+        return 0
 
-    if mutated and not dry_run:
-        save_state(state)
-        print("  State updated with reconciled lots.")
-        
+    print(f"  FLAG {len(missing)} lot(s) missing from Alpaca")
+    for lot in missing:
+        print(f"    b{lot.bucket_id}|{lot.strategy_id}|{lot.lot_id[:8]} {lot.occ_symbol}")
+
+    if dry_run:
+        print("  dry-run — no state/ledger changes")
+        print("options_reconcile: done")
+        return 0
+
+    orders = _fetch_closed_orders(trade)
+    n = attribute_vanished_lots(state, missing, orders, log_fn=print)
+    # Any leftovers without qty still get a ghost clear (attribute sets qty=0).
+    leftover = [l for l in state.lots if int(l.qty) > 0 and l.occ_symbol not in positions]
+    for lot in leftover:
+        lot.qty = 0
+        try:
+            append_ledger({
+                "ts": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                "event": "reconcile",
+                "bucket_id": lot.bucket_id,
+                "profile": lot.profile_name,
+                "strategy_id": lot.strategy_id,
+                "lot_id": lot.lot_id,
+                "symbol": lot.underlying,
+                "occ": lot.occ_symbol,
+                "qty": 0,
+                "limit": "",
+                "fill_price": "",
+                "cost": round(lot.entry_cost, 2),
+                "return_pct": "",
+                "pnl_usd": "",
+                "reason": "missing_from_broker",
+                "buy_offset": "",
+                "sell_offset": "",
+                "take_profit": lot.take_profit,
+                "stop_loss": lot.stop_loss,
+                "spread_frac": "",
+                "detail": "lot closed outside of bot (expired/manual)",
+                "order_id": "",
+            })
+        except Exception as e:
+            log.warning("ledger append failed: %s", e)
+    state.lots = [l for l in state.lots if int(l.qty) > 0]
+    save_state(state)
+    print(f"  State updated (attributed/cleared={n}, leftover={len(leftover)}).")
     print("options_reconcile: done")
     return 0
 

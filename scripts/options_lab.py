@@ -64,6 +64,14 @@ DROPPED_STRATEGIES: frozenset[str] = frozenset(
     s.strip() for s in os.environ.get("OPTIONS_DROPPED_STRATEGIES", "S174,S173").split(",")
     if s.strip()
 )
+# Merge CLEAN kill list from latest data-quality report into the drop set.
+BLOCK_KILL_STRATEGIES = os.environ.get(
+    "OPTIONS_BLOCK_KILL_STRATEGIES", "1"
+).strip().lower() in ("1", "true", "yes", "on")
+# Refuse new entries onto an OCC already held/pending by another lab lot.
+BLOCK_SHARED_OCC = os.environ.get(
+    "OPTIONS_BLOCK_SHARED_OCC", "1"
+).strip().lower() in ("1", "true", "yes", "on")
 # If set, ONLY these strategy ids get new paper entries (live-control study).
 ALLOWED_STRATEGIES: frozenset[str] = frozenset(
     s.strip() for s in os.environ.get("OPTIONS_ALLOWED_STRATEGIES", "").split(",")
@@ -96,7 +104,12 @@ else:
 # Stable bucket id inside the 100-profile grid — 1:1 twin of options_live_micro.
 LIVE_1TO1_BUCKET_ID = 90
 LIVE_1TO1_PROFILE_NAME = "live_1to1"
+# Paper-only S406 twin (best KEEP leader) — same TP/SL as live micro.
+S406_ONLY_BUCKET_ID = 91
+S406_ONLY_PROFILE_NAME = "s406_only"
 ORDER_FETCH_LIMIT = 500
+_PRIORITY_TWIN_IDS = frozenset({LIVE_1TO1_BUCKET_ID, S406_ONLY_BUCKET_ID})
+_PRIORITY_TWIN_NAMES = frozenset({LIVE_1TO1_PROFILE_NAME, S406_ONLY_PROFILE_NAME})
 
 
 def get_lab_account_safe(client, retries=2, wait=2):
@@ -180,17 +193,41 @@ def live_1to1_profile() -> BucketProfile:
     )
 
 
-def _inject_live_1to1(profiles: list[BucketProfile]) -> list[BucketProfile]:
-    """Replace grid slot 90 with the dedicated live twin (stable bucket id)."""
-    twin = live_1to1_profile()
+def s406_only_profile() -> BucketProfile:
+    """Paper-only S406 twin with live-micro TP/SL (isolated edge test)."""
+    return BucketProfile(
+        S406_ONLY_BUCKET_ID,
+        S406_ONLY_PROFILE_NAME,
+        buy_limit_offset=-0.01,
+        sell_limit_offset=-0.01,
+        max_premium=75,
+        max_spread_frac=0.25,
+        min_open_interest=100,
+        account_cap=0.95,
+        max_contracts=1,
+        take_profit=0.50,
+        stop_loss=-0.40,
+        strategy_scope="S406",
+    )
+
+
+def _replace_or_append_profile(
+    profiles: list[BucketProfile], twin: BucketProfile
+) -> list[BucketProfile]:
     out = list(profiles)
     for i, p in enumerate(out):
-        if p.bucket_id == LIVE_1TO1_BUCKET_ID:
+        if p.bucket_id == twin.bucket_id:
             out[i] = twin
             return out
     out.append(twin)
     out.sort(key=lambda p: p.bucket_id)
     return out
+
+
+def _inject_live_1to1(profiles: list[BucketProfile]) -> list[BucketProfile]:
+    """Replace grid slots 90/91 with dedicated twin buckets (stable ids)."""
+    out = _replace_or_append_profile(profiles, live_1to1_profile())
+    return _replace_or_append_profile(out, s406_only_profile())
 
 
 def get_live_1to1_bucket() -> BucketProfile | None:
@@ -201,6 +238,42 @@ def get_live_1to1_bucket() -> BucketProfile | None:
         ),
         None,
     )
+
+
+def get_s406_only_bucket() -> BucketProfile | None:
+    return next(
+        (
+            b for b in BUCKET_EXPERIMENTS
+            if b.bucket_id == S406_ONLY_BUCKET_ID or b.name == S406_ONLY_PROFILE_NAME
+        ),
+        None,
+    )
+
+
+def kill_strategies_from_dq() -> frozenset[str]:
+    """CLEAN kill list from latest data-quality report (ORPHAN excluded)."""
+    path = TRIAL_ROOT / "reports" / "latest_data_quality.json"
+    try:
+        raw = json.loads(path.read_text(encoding="utf-8"))
+        kills = {
+            str(s).strip()
+            for s in (raw.get("kill_strategies") or [])
+            if str(s).strip() and str(s).strip().upper() != "ORPHAN"
+        }
+        return frozenset(kills)
+    except Exception:
+        return frozenset()
+
+
+def effective_dropped_strategies() -> frozenset[str]:
+    """Env drop list plus optional CLEAN kill list (never blocks live-mirror set)."""
+    dropped = set(DROPPED_STRATEGIES)
+    if BLOCK_KILL_STRATEGIES:
+        dropped |= set(kill_strategies_from_dq())
+    # Keep the live twin strategies tradable even if a report tags them KILL.
+    dropped -= set(MIRROR_STRATEGIES)
+    dropped.discard("S406")  # protected for s406_only twin
+    return frozenset(dropped)
 
 
 def _lab_registry_strategy_ids() -> frozenset[str]:
@@ -434,6 +507,61 @@ def is_live_1to1_arm(arm: EffectiveArm) -> bool:
     return (
         arm.bucket_id == LIVE_1TO1_BUCKET_ID
         or arm.profile_name == LIVE_1TO1_PROFILE_NAME
+    )
+
+
+def is_priority_twin_arm(arm: EffectiveArm | VirtualLot | BucketProfile) -> bool:
+    """True for b90 live_1to1 or b91 s406_only — exit/entry priority over study buckets."""
+    bid = getattr(arm, "bucket_id", None)
+    name = getattr(arm, "profile_name", None) or getattr(arm, "name", None)
+    return bid in _PRIORITY_TWIN_IDS or name in _PRIORITY_TWIN_NAMES
+
+
+def occ_already_claimed(
+    state: LabState,
+    occ: str,
+    *,
+    except_bucket_id: int | None = None,
+) -> bool:
+    """True if another lab lot or pending buy already owns this OCC."""
+    for lot in state.lots:
+        if lot.qty <= 0 or lot.occ_symbol != occ:
+            continue
+        if except_bucket_id is not None and lot.bucket_id == except_bucket_id:
+            continue
+        return True
+    for p in state.pending_orders:
+        if p.occ_symbol != occ:
+            continue
+        if except_bucket_id is not None and p.bucket_id == except_bucket_id:
+            continue
+        return True
+    return False
+
+
+def twin_claims_occ(state: LabState, occ: str) -> bool:
+    """True if a priority twin already holds or has a pending buy on OCC."""
+    for lot in state.lots:
+        if lot.qty > 0 and lot.occ_symbol == occ and is_priority_twin_arm(lot):
+            return True
+    for p in state.pending_orders:
+        if p.occ_symbol == occ and (
+            p.bucket_id in _PRIORITY_TWIN_IDS
+            or p.profile_name in _PRIORITY_TWIN_NAMES
+        ):
+            return True
+    return False
+
+
+def sort_lots_for_exit(lots: list[VirtualLot]) -> list[VirtualLot]:
+    """Exit twin lots first, then oldest — reduces shared-OCC uncovered failures."""
+    return sorted(
+        lots,
+        key=lambda l: (
+            0 if is_priority_twin_arm(l) else 1,
+            l.entry_date or "",
+            l.lot_id,
+        ),
     )
 
 
@@ -800,7 +928,8 @@ def active_buckets(equity: float) -> list[BucketProfile]:
 
 
 def arms_for_signal(strategy_id: str, equity: float) -> list[EffectiveArm]:
-    if strategy_id in DROPPED_STRATEGIES:
+    dropped = effective_dropped_strategies()
+    if strategy_id in dropped:
         return []
     arms: list[EffectiveArm] = []
 
@@ -809,15 +938,21 @@ def arms_for_signal(strategy_id: str, equity: float) -> list[EffectiveArm]:
         twin = get_live_1to1_bucket() or live_1to1_profile()
         arms.append(_merge_arm(twin, strategy_id, equity))
 
+    # Paper-only S406 twin (b91) — isolated KEEP-leader test.
+    if strategy_id == "S406" and (MIRROR_LIVE or VARIATION_STUDY):
+        s406 = get_s406_only_bucket() or s406_only_profile()
+        arms.append(_merge_arm(s406, strategy_id, equity))
+
     if VARIATION_STUDY:
         if VARIATION_STRATEGIES and strategy_id not in VARIATION_STRATEGIES:
             return arms
+        skip_ids = set(_PRIORITY_TWIN_IDS)
         for b in active_buckets(equity):
-            if b.bucket_id == LIVE_1TO1_BUCKET_ID:
+            if b.bucket_id in skip_ids:
                 continue
             if b.strategy_scope not in ("all", strategy_id):
                 continue
-            if b.strategy_scope in DROPPED_STRATEGIES:
+            if b.strategy_scope in dropped:
                 continue
             arms.append(_merge_arm(b, strategy_id, equity))
         return arms
@@ -831,7 +966,8 @@ def arms_for_signal(strategy_id: str, equity: float) -> list[EffectiveArm]:
         _merge_arm(b, strategy_id, equity)
         for b in active_buckets(equity)
         if b.strategy_scope in ("all", strategy_id)
-        and b.strategy_scope not in DROPPED_STRATEGIES
+        and b.strategy_scope not in dropped
+        and b.bucket_id not in _PRIORITY_TWIN_IDS
     ]
 
 
@@ -1145,11 +1281,12 @@ def cancel_unfilled_lab_entries(trade, log_fn=None) -> int:
 
 
 def cancel_dropped_strategy_entries(trade, log_fn=None) -> int:
-    """Cancel open buy orders tagged to DROPPED_STRATEGIES (no new entries)."""
+    """Cancel open buy orders tagged to effective dropped strategies (no new entries)."""
     from alpaca.trading.requests import GetOrdersRequest
     from alpaca.trading.enums import QueryOrderStatus
 
-    if not DROPPED_STRATEGIES:
+    dropped = effective_dropped_strategies()
+    if not dropped:
         return 0
     n = 0
     try:
@@ -1160,7 +1297,7 @@ def cancel_dropped_strategy_entries(trade, log_fn=None) -> int:
             if not cid.startswith("LB") or side != "buy":
                 continue
             parsed = parse_lab_client_order_id(cid)
-            if not parsed or parsed.get("strategy_id") not in DROPPED_STRATEGIES:
+            if not parsed or parsed.get("strategy_id") not in dropped:
                 continue
             try:
                 trade.cancel_order_by_id(o.id)
@@ -2169,6 +2306,157 @@ def _fetch_lab_orders(trade) -> tuple[list, list]:
     return closed_orders, open_orders
 
 
+def _order_filled_at_key(o) -> str:
+    return str(getattr(o, "filled_at", "") or getattr(o, "updated_at", "") or "")
+
+
+def _iter_filled_option_sells(orders, occ: str):
+    """Yield filled/partial sell orders for OCC, oldest fill first."""
+    rows = []
+    for o in orders:
+        if getattr(o, "symbol", "") != occ:
+            continue
+        if _norm_order_field(getattr(o, "side", "")) != "sell":
+            continue
+        status = _norm_order_field(getattr(o, "status", ""))
+        if status not in ("filled", "partially_filled"):
+            continue
+        filled_qty = int(float(getattr(o, "filled_qty", 0) or 0))
+        if filled_qty <= 0:
+            continue
+        rows.append(o)
+    rows.sort(key=_order_filled_at_key)
+    return rows
+
+
+def _match_sell_to_lot(state: LabState, lot: VirtualLot, sells: list) -> Any | None:
+    """Prefer LX client_order_id match; else first unused filled sell."""
+    lot_short = lot.lot_id.replace("-", "").lower()[:6]
+    for o in sells:
+        oid = str(getattr(o, "id", "") or "")
+        if not oid or state.order_already_logged(oid):
+            continue
+        cid = getattr(o, "client_order_id", "") or ""
+        parsed = parse_exit_client_order_id(cid)
+        if not parsed:
+            continue
+        if parsed["bucket_id"] != lot.bucket_id:
+            continue
+        if parsed["strategy_id"] != lot.strategy_id:
+            continue
+        if parsed["lot_short"] and not lot_short.startswith(parsed["lot_short"]):
+            # lot_short is prefix of compact lot id
+            compact = lot.lot_id.replace("-", "").lower()
+            if not compact.startswith(parsed["lot_short"]):
+                continue
+        return o
+    for o in sells:
+        oid = str(getattr(o, "id", "") or "")
+        if oid and not state.order_already_logged(oid):
+            return o
+    return None
+
+
+def attribute_vanished_lots(
+    state: LabState,
+    missing_lots: list[VirtualLot],
+    orders: list,
+    *,
+    log_fn=print,
+) -> int:
+    """Backfill exit P&L for lots gone from the broker using filled sell orders.
+
+    Returns number of lots attributed (with or without a matched fill).
+    """
+    if not missing_lots:
+        return 0
+    by_occ: dict[str, list[VirtualLot]] = {}
+    for lot in missing_lots:
+        by_occ.setdefault(lot.occ_symbol, []).append(lot)
+
+    attributed = 0
+    for occ, lots in by_occ.items():
+        sells = _iter_filled_option_sells(orders, occ)
+        for lot in sort_lots_for_exit(lots):
+            if lot.qty <= 0:
+                continue
+            matched = _match_sell_to_lot(state, lot, sells)
+            if matched is not None:
+                try:
+                    fill_px = float(getattr(matched, "filled_avg_price", 0) or 0)
+                except Exception:
+                    fill_px = 0.0
+                filled_qty = int(float(getattr(matched, "filled_qty", 0) or 0))
+                qty = min(lot.qty, max(1, filled_qty))
+                entry_px = lot.entry_price or (
+                    lot.entry_cost / (lot.qty * 100) if lot.qty else 0.0
+                )
+                if entry_px > 0 and fill_px > 0:
+                    return_pct = (fill_px - entry_px) / entry_px * 100.0
+                else:
+                    return_pct = 0.0
+                oid = str(getattr(matched, "id", "") or "")
+                ts = _order_filled_at_key(matched)
+                reason = "broker_fill_backfill"
+                pe = next(
+                    (p for p in state.pending_exits if p.order_id == oid), None
+                )
+                if pe and pe.reason:
+                    reason = pe.reason
+                append_exit_ledger_from_fill(
+                    state,
+                    lot,
+                    order_id=oid or f"backfill:{lot.lot_id}",
+                    qty=qty,
+                    fill_price=fill_px,
+                    return_pct=return_pct,
+                    reason=reason,
+                    ts=ts or None,
+                )
+                clear_pending_exit(state, oid)
+                log_fn(
+                    f"  reconcile: backfill exit b{lot.bucket_id}|{lot.strategy_id} "
+                    f"{lot.underlying} {return_pct:+.1f}% fill={fill_px:.2f}"
+                )
+            else:
+                # No sell fill found — still clear the ghost lot with empty P&L.
+                try:
+                    append_ledger({
+                        "ts": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                        "event": "reconcile",
+                        "bucket_id": lot.bucket_id,
+                        "profile": lot.profile_name,
+                        "strategy_id": lot.strategy_id,
+                        "lot_id": lot.lot_id,
+                        "symbol": lot.underlying,
+                        "occ": lot.occ_symbol,
+                        "qty": 0,
+                        "limit": "",
+                        "fill_price": "",
+                        "cost": round(lot.entry_cost, 2),
+                        "return_pct": "",
+                        "pnl_usd": "",
+                        "reason": "missing_from_broker",
+                        "buy_offset": "",
+                        "sell_offset": "",
+                        "take_profit": lot.take_profit,
+                        "stop_loss": lot.stop_loss,
+                        "spread_frac": "",
+                        "detail": "lot closed outside of bot; no sell fill found",
+                        "order_id": "",
+                    })
+                except Exception as exc:
+                    log_fn(f"  reconcile: missing ledger append failed: {exc}")
+                lot.qty = 0
+                log_fn(
+                    f"  reconcile: missing_from_broker b{lot.bucket_id}|"
+                    f"{lot.strategy_id} {lot.underlying} (no fill)"
+                )
+            attributed += 1
+    state.lots = [l for l in state.lots if l.qty > 0]
+    return attributed
+
+
 def _create_orphan_lot(state: LabState, occ: str, pos, qty: int, *, log_fn) -> None:
     if qty <= 0:
         return
@@ -2509,8 +2797,17 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
             _process_entry_fill(o)
             need = pos_qty - sum(l.qty for l in state.lots_for_occ(occ))
 
-    # --- 5) Drop lots for closed positions ---
+    # --- 5) Attribute vanished lots from sell fills, then drop ghosts ---
     alive_occs = set(pos_by_occ)
+    missing = [
+        l for l in state.lots
+        if l.qty > 0 and l.occ_symbol not in alive_occs
+    ]
+    if missing:
+        n_attr = attribute_vanished_lots(
+            state, missing, all_orders, log_fn=log_fn
+        )
+        log_fn(f"  reconcile: attributed/cleared {n_attr} vanished lot(s)")
     before = len(state.lots)
     state.lots = [l for l in state.lots if l.occ_symbol in alive_occs and l.qty > 0]
     if len(state.lots) < before:
@@ -2530,12 +2827,49 @@ def reconcile_with_broker(trade, state: LabState, log_fn=print) -> LabState:
             continue
         if lot_qty > pos_qty:
             trim = lot_qty - pos_qty
-            for lot in sorted(lots, key=lambda x: x.entry_date):
+            sells = _iter_filled_option_sells(all_orders, occ)
+            for lot in sort_lots_for_exit(lots):
                 if trim <= 0:
                     break
                 cut = min(lot.qty, trim)
-                lot.qty -= cut
-                lot.entry_cost *= (1 - cut / (lot.qty + cut)) if (lot.qty + cut) else 0
+                if cut <= 0:
+                    continue
+                matched = _match_sell_to_lot(state, lot, sells)
+                if matched is not None:
+                    try:
+                        fill_px = float(
+                            getattr(matched, "filled_avg_price", 0) or 0
+                        )
+                    except Exception:
+                        fill_px = 0.0
+                    entry_px = lot.entry_price or (
+                        lot.entry_cost / (lot.qty * 100) if lot.qty else 0.0
+                    )
+                    if entry_px > 0 and fill_px > 0:
+                        return_pct = (fill_px - entry_px) / entry_px * 100.0
+                    else:
+                        return_pct = 0.0
+                    oid = str(getattr(matched, "id", "") or "")
+                    append_exit_ledger_from_fill(
+                        state,
+                        lot,
+                        order_id=oid or f"trim:{lot.lot_id}:{cut}",
+                        qty=cut,
+                        fill_price=fill_px,
+                        return_pct=return_pct,
+                        reason="broker_qty_trim_backfill",
+                        ts=_order_filled_at_key(matched) or None,
+                    )
+                    clear_pending_exit(state, oid)
+                    log_fn(
+                        f"  reconcile: trim-backfill b{lot.bucket_id}|"
+                        f"{lot.strategy_id} {occ} x{cut} {return_pct:+.1f}%"
+                    )
+                else:
+                    lot.qty -= cut
+                    lot.entry_cost *= (
+                        (1 - cut / (lot.qty + cut)) if (lot.qty + cut) else 0
+                    )
                 trim -= cut
             state.lots = [l for l in state.lots if l.qty > 0]
             log_fn(f"  reconcile: trimmed {occ} lots to match pos qty {pos_qty}")
