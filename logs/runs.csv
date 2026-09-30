@@ -9085,3 +9085,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-09-30 21:06:20,ext_exits,bull,223.04,122.56,0,0,0,3,FCN|LNT|PNW,both
 2026-09-30 21:11:19,ext_exits,bull,223.04,122.56,0,0,0,3,FCN|LNT|PNW,both
 2026-09-30 21:16:19,ext_exits,bull,223.04,122.56,0,0,0,3,FCN|LNT|PNW,both
+2026-09-30 21:21:30,ext_exits,bull,223.04,122.56,0,0,0,3,FCN|LNT|PNW,both
