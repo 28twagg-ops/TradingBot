@@ -642,26 +642,6 @@
       "entry_order_id": "16293917-ef2d-4882-b848-ee97367c5e43"
     },
     {
-      "lot_id": "9593e0f4f18b",
-      "bucket_id": 240,
-      "profile_name": "lab0240_s401_w4_1120_1135_r1",
-      "strategy_id": "S401",
-      "occ_symbol": "COP261002C00129000",
-      "underlying": "COP",
-      "qty": 1,
-      "entry_cost": 72.0,
-      "entry_price": 0.72,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-29T15:23:15.992913+00:00",
-      "entry_order_id": "bdfb7dfe-9dec-4cd7-9762-aa61b8f6d51e"
-    },
-    {
       "lot_id": "ece55102e91b",
       "bucket_id": 185,
       "profile_name": "lab0185_s217_w4_1120_1135_r2",
@@ -773,16 +753,6 @@
       "qty": 1,
       "reason": "stop_loss (-64.7%)",
       "submitted": "2026-09-30T09:35:10"
-    },
-    {
-      "order_id": "ba920918-0376-4862-80eb-0a8745661359",
-      "lot_id": "9593e0f4f18b",
-      "bucket_id": 240,
-      "strategy_id": "S401",
-      "occ_symbol": "COP261002C00129000",
-      "qty": 1,
-      "reason": "stop_loss (-66.7%)",
-      "submitted": "2026-09-30T11:21:24"
     }
   ],
   "bucket_open_premium": {
@@ -818,7 +788,6 @@
     "b434": 73.0,
     "b423": 73.0,
     "b422": 73.0,
-    "b240": 72.0,
     "b185": 68.0,
     "b184": 68.0,
     "b171": 38.0,
@@ -1293,7 +1262,8 @@
     "dcaa6e76-8dcd-4a9f-a5e8-e1fc87834b4d",
     "67b66f46-b955-4370-8dcb-03aaf24ae4d3",
     "ecd4aee6-2bad-4345-8c5f-7eaae5731f34",
-    "850a5d91-edb9-4abf-8ee5-37a3b414ca6f"
+    "850a5d91-edb9-4abf-8ee5-37a3b414ca6f",
+    "ba920918-0376-4862-80eb-0a8745661359"
   ],
   "submitted_today": 1,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
