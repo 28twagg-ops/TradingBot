@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-30
 
-_Generated 2026-09-30T11:18:13.785163_
+_Generated 2026-09-30T11:22:02.939174_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-30T11:18:13.785163_
 
 ## Attribution health
 
-- Total exits: **3548**
+- Total exits: **3549**
 - Orphan exits (b0/orphan_reconcile): **420**
 - Orphan rate: **11.8%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -39,7 +39,7 @@ _Generated 2026-09-30T11:18:13.785163_
 | S356 (GapDown_14DTE) | 14d | watch | 28 | 50.0 | +8.54 | -52.29 | -47.22 | +64.61 | 61 | 0 | 1 | $+96.00 | 35.7% | fat left tail (p10 < -45%) |
 | S364 (RubberBand_7DTE) | 7d | watch | 63 | 50.8 | +8.33 | -85.29 | -63.64 | +89.11 | 61 | 0 | 0 | $+69.00 | 39.7% | fat left tail (p10 < -45%) |
 | S411 (RubberBand_OTM2) | 3d | watch | 51 | 54.9 | +7.69 | -56.72 | -51.25 | +65.22 | 58 | 4 | 1 | $-28.00 | 17.6% | fat left tail (p10 < -45%) |
-| S401 (Any_Gap_Down_Small) | 3d | watch | 133 | 50.4 | +6.94 | -84.20 | -50.98 | +232.12 | 61 | 12 | 2 | $+1,022.00 | 24.1% | fat left tail (p10 < -45%) |
+| S401 (Any_Gap_Down_Small) | 3d | watch | 134 | 50.0 | +3.47 | -84.15 | -50.98 | +231.51 | 61 | 12 | 3 | $+974.00 | 23.9% | fat left tail (p10 < -45%) |
 | S358 (GapDown_30DTE) | 30d | watch | 4 | 50.0 | +0.84 | -51.39 | -51.39 | +54.49 | 57 | 0 | 0 | $-21.00 | 50.0% | insufficient sample (<8 exits) |
 | S169 (BB Squeeze Breakout call 3 DTE) | 3d ATM BB squeeze | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S170 (Golden Pocket call 3 DTE) | 3d ATM golden pocket | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -310,7 +310,7 @@ _Pipeline evaluation as of 2026-09-30. Auto-kill thresholds: median<-25% at n>=1
 | S398 | GapDown_ATM | 62 | -4.05% | 50% | INSUFFICIENT | 61 |
 | S399 | GapDown_OTM1 | 80 | -50.72% | 39% | INSUFFICIENT | 61 |
 | S400 | Any_Green_Close | 6 | -50.00% | 17% | WATCH | 61 |
-| S401 | Any_Gap_Down_Small | 133 | +6.94% | 50% | INSUFFICIENT | 61 |
+| S401 | Any_Gap_Down_Small | 134 | +3.47% | 50% | INSUFFICIENT | 61 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
 | S403 | Any_MA50_Touch | 70 | +50.88% | 63% | INSUFFICIENT | 61 |
 | S404 | GapDown_OTM2 | 73 | +50.00% | 60% | INSUFFICIENT | 61 |
@@ -350,7 +350,7 @@ _Pipeline evaluation as of 2026-09-30. Auto-kill thresholds: median<-25% at n>=1
 | S350 | 46 | +16.32% | 54% | Tyler review |
 | S364 | 63 | +8.33% | 51% | Tyler review |
 | S411 | 51 | +7.69% | 55% | Tyler review |
-| S401 | 133 | +6.94% | 50% | Tyler review |
+| S401 | 134 | +3.47% | 50% | Tyler review |
 
 ## Notes
 
