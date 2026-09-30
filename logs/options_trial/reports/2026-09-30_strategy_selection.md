@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-09-30
 
-_Generated 2026-09-30T11:12:23.727095_
+_Generated 2026-09-30T11:18:13.785163_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-09-30T11:12:23.727095_
 
 ## Attribution health
 
-- Total exits: **3547**
+- Total exits: **3548**
 - Orphan exits (b0/orphan_reconcile): **420**
 - Orphan rate: **11.8%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -100,8 +100,8 @@ _Generated 2026-09-30T11:12:23.727095_
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | drop | 26 | 50.0 | -2.42 | -92.88 | -56.25 | +333.34 | 71 | 6 | 2 | $+438.00 | 23.1% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 64 | 46.9 | -3.57 | -56.46 | -49.11 | +125.92 | 61 | 10 | 4 | $+212.00 | 18.8% | non-positive median return |
 | S398 (GapDown_ATM) | 3d | drop | 62 | 50.0 | -4.05 | -68.28 | -55.24 | +173.78 | 61 | 2 | 3 | $+801.00 | 25.8% | non-positive median return |
-| S361 (RubberBand_2DTE) | 2d | drop | 61 | 49.2 | -4.26 | -66.67 | -53.52 | +283.33 | 61 | 12 | 5 | $+151.00 | 21.3% | non-positive median return |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 97 | 49.5 | -4.35 | -71.05 | -51.22 | +82.71 | 65 | 6 | 2 | $+75.00 | 17.5% | non-positive median return |
+| S361 (RubberBand_2DTE) | 2d | drop | 62 | 48.4 | -5.46 | -66.67 | -53.52 | +281.11 | 61 | 12 | 6 | $+103.00 | 21.0% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 67 | 43.3 | -6.25 | -81.48 | -59.63 | +573.13 | 58 | 6 | 4 | $+1,137.00 | 17.9% | manually paused — excluded from new entries & reflected P&L |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 86 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
 | S352 (GapDown_2DTE) | 2d | drop | 60 | 46.7 | -27.95 | -75.36 | -52.83 | +329.52 | 61 | 8 | 8 | $+249.00 | 18.3% | non-positive median return |
@@ -270,7 +270,7 @@ _Pipeline evaluation as of 2026-09-30. Auto-kill thresholds: median<-25% at n>=1
 | S358 | GapDown_30DTE | 4 | +0.84% | 50% | WATCH | 57 |
 | S359 | RubberBand_0DTE | 39 | -39.29% | 41% | INSUFFICIENT | 58 |
 | S360 | RubberBand_1DTE | 49 | -56.41% | 10% | INSUFFICIENT | 61 |
-| S361 | RubberBand_2DTE | 61 | -4.26% | 49% | INSUFFICIENT | 61 |
+| S361 | RubberBand_2DTE | 62 | -5.46% | 48% | INSUFFICIENT | 61 |
 | S362 | RubberBand_3DTE | 59 | +55.56% | 68% | INSUFFICIENT | 61 |
 | S363 | RubberBand_5DTE | 41 | -65.38% | 39% | INSUFFICIENT | 58 |
 | S364 | RubberBand_7DTE | 63 | +8.33% | 51% | INSUFFICIENT | 61 |
