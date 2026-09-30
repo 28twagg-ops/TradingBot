@@ -8160,11 +8160,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-09-30.log
 elapsed=40.4s reconcile=0.4s cancel=0.12s manage=2.68s scan=35.1s entries=0.08s
 
-=== 11:03:52 ET — entry+manage (0 new) [elapsed=40.0s reconcile=0.39s cancel=0.12s manage=2.59s scan=34.84s entries=0.08s] ===
-=== options_morning_bot (PAPER) 2026-09-30T11:03:52.521277-04:00 ===
+=== 11:06:34 ET — entry+manage (0 new) [elapsed=33.4s reconcile=0.25s cancel=0.08s manage=2.82s scan=28.98s entries=0.04s] ===
+=== options_morning_bot (PAPER) 2026-09-30T11:06:34.899543-04:00 ===
 
 [Run context]
-Paper auth OK — equity $991069.94, account PA33P8KT02IL
+Paper auth OK — equity $991034.27, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:77:live_1to1+variations
 
 [Setup]
@@ -8174,11 +8174,11 @@ Variation study: 75 lab/promising bucket(s) | cohort: 75 unique (S163, S164, S16
 Dropped (no new entries; ex-reflected P&L): S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
 Shared-OCC entry block ON (one lab lot per contract)
   EXIT skip OXY261023C00059000: open sell already pending
+  EXIT skip CVNA261002C00069000: open sell already pending
   EXIT [b421|lab0421_s365_w2_1005_1045_r2|S365] stop_loss (-86.0%) SELL blocked (uncovered/shared OCC) DKNG261016C00023500 x1: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   EXIT skip COP261002C00129000: open sell already pending
-  EXIT skip CVNA261002C00069000: open sell already pending
   EXIT [b0|orphan_reconcile|ORPHAN] stop_loss (-100.0%) SELL blocked (uncovered/shared OCC) CVX261002C00220000 x1: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  EXIT [b0|orphan_reconcile|ORPHAN] take_profit (+76.1%) SELL blocked (uncovered/shared OCC) MSFT261002C00530000 x1: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b0|orphan_reconcile|ORPHAN] take_profit (+73.2%) SELL blocked (uncovered/shared OCC) MSFT261002C00530000 x1: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed DKNG261016C00023500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed MSFT261002C00530000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed CVX261002C00220000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
@@ -8189,7 +8189,7 @@ Scanning 117 symbols for [S164, S168, S167, S166, S163, S169, S170, S171, S172, 
   Daily bars disk cache hit (options_daily_bars_2026-09-30.parquet)
 Fetched daily bars for 113/117 symbols
 Found 5 signal(s); top: ['S403:ROKU', 'S403:GOOGL', 'S403:SPY', 'S403:LLY', 'S210:COST']
-Paper lab: $991070 broker equity -> 77 bucket(s) ($500 virtual each, unlimited paper)
+Paper lab: $991034 broker equity -> 77 bucket(s) ($500 virtual each, unlimited paper)
   All bucket slots blocked or closed for today's signals — skip entry loop.
 Placed 0 new entry order(s).
 
@@ -8197,16 +8197,16 @@ Placed 0 new entry order(s).
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $991,069.94
+Account equity: $991,034.27
 Active buckets: 77 of 77 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+13,483.55 all-time  |  $-348.00 today
   Raw (incl dropped):     $+8,364.55 all-time  |  $-472.00 today
-  Open (not sold yet): $-563.00 unrealized (virtual lots)
-                       $-559.00 unrealized (broker total)
+  Open (not sold yet): $-567.00 unrealized (virtual lots)
+                       $-561.00 unrealized (broker total)
   Premium deployed:    $2,552.00 in open positions
-  Combined P&L:        $+12,920.55 (reflected realized + open virtual)
+  Combined P&L:        $+12,916.55 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     15743
@@ -8225,16 +8225,16 @@ Open virtual lots (by bucket)
   (74 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  BAC261002C00055000  qty=2  cost=$136.00  return=-44.1%  open P&L=$-60.00
+  BAC261002C00055000  qty=2  cost=$136.00  return=-48.5%  open P&L=$-66.00
   COP261002C00129000  qty=4  cost=$288.00  return=-68.1%  open P&L=$-196.00
   CVNA261002C00069000  qty=4  cost=$102.00  return=-64.7%  open P&L=$-66.00
-  CVX261002C00210000  qty=-1  cost=$33.00  return=+0.0%  open P&L=$+0.00
+  CVX261002C00210000  qty=-1  cost=$33.00  return=-3.0%  open P&L=$-1.00
   CVX261002C00220000  qty=1  cost=$4.00  return=-100.0%  open P&L=$-4.00
   CVX261016C00220000  qty=2  cost=$144.00  return=-40.3%  open P&L=$-58.00
   DKNG261009C00022500  qty=-1  cost=$21.00  return=+47.6%  open P&L=$+10.00
   DKNG261016C00023500  qty=1  cost=$43.00  return=-86.0%  open P&L=$-37.00
-  MSFT260930C00522500  qty=-1  cost=$32.00  return=-18.8%  open P&L=$-6.00
-  MSFT261002C00530000  qty=1  cost=$71.00  return=+70.4%  open P&L=$+50.00
+  MSFT260930C00522500  qty=-1  cost=$32.00  return=-9.4%  open P&L=$-3.00
+  MSFT261002C00530000  qty=1  cost=$71.00  return=+73.2%  open P&L=$+52.00
   NKE261002C00038000  qty=15  cost=$1,032.00  return=+1.7%  open P&L=$+18.00
   NKE261002C00038500  qty=6  cost=$334.00  return=-3.0%  open P&L=$-10.00
   OXY261016C00058000  qty=2  cost=$146.00  return=-35.6%  open P&L=$-52.00
@@ -8610,7 +8610,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (entry+manage) --                                     |
-|Equity       : $991,069.94                                              |
+|Equity       : $991,034.27                                              |
 |Open Risk    : 42 lots (15 broker pos)                                  |
 |Today's Run  : 5 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -8662,14 +8662,14 @@ Per-bucket exit stats (all time)
 |  ---------------------------------------------------------             |
 |  COP261002C00129000            4    -68.1%   $   -196.00               |
 |  OXY261023C00059000            2    -72.6%   $   -106.00               |
+|  BAC261002C00055000            2    -48.5%   $    -66.00               |
 |  CVNA261002C00069000           4    -64.7%   $    -66.00               |
-|  BAC261002C00055000            2    -44.1%   $    -60.00               |
 |  CVX261016C00220000            2    -40.3%   $    -58.00               |
+|  MSFT261002C00530000           1    +73.2%   $    +52.00               |
 |  OXY261016C00058000            2    -35.6%   $    -52.00               |
-|  MSFT261002C00530000           1    +70.4%   $    +50.00               |
 |  OXY261023C00060000            2    -39.6%   $    -42.00               |
 |  ... 7 more position(s)                                                |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-09-30.log
-elapsed=40.0s reconcile=0.39s cancel=0.12s manage=2.59s scan=34.84s entries=0.08s
+elapsed=33.4s reconcile=0.25s cancel=0.08s manage=2.82s scan=28.98s entries=0.04s
 
