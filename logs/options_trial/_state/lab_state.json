@@ -542,6 +542,26 @@
       "entry_order_id": "89c312cd-37b9-411f-8250-1e3b6756e63c"
     },
     {
+      "lot_id": "f34188f654f7",
+      "bucket_id": 234,
+      "profile_name": "lab0234_s401_w1_0928_1005_r1",
+      "strategy_id": "S401",
+      "occ_symbol": "MCD261002C00240000",
+      "underlying": "MCD",
+      "qty": 1,
+      "entry_cost": 60.0,
+      "entry_price": 0.6,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-29T13:57:59.189092+00:00",
+      "entry_order_id": "9ded31d9-147f-46a1-aed9-1478bd663855"
+    },
+    {
       "lot_id": "f9ef0c39a6b3",
       "bucket_id": 193,
       "profile_name": "lab0193_s218_w1_0928_1005_r2",
@@ -1022,6 +1042,26 @@
       "entry_order_id": "8be4bbcf-b0ec-4341-8b79-3d5ea1377d70"
     },
     {
+      "lot_id": "41ec2e5cdc30",
+      "bucket_id": 367,
+      "profile_name": "lab0367_s361_w3_1045_1120_r2",
+      "strategy_id": "S361",
+      "occ_symbol": "OXY261002C00056000",
+      "underlying": "OXY",
+      "qty": 1,
+      "entry_cost": 59.0,
+      "entry_price": 0.59,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-09-29T15:31:26.963945+00:00",
+      "entry_order_id": "bf0cbd1c-8466-4071-b6e6-da80f34b71f8"
+    },
+    {
       "lot_id": "84c88e8feb37",
       "bucket_id": 366,
       "profile_name": "lab0366_s361_w3_1045_1120_r1",
@@ -1045,24 +1085,54 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "bf42f4c3-93fd-42dc-bf69-edd343c66eba",
-      "lot_id": "f9ef0c39a6b3",
-      "bucket_id": 193,
-      "strategy_id": "S218",
-      "occ_symbol": "MCD261002C00240000",
+      "order_id": "5aa57b07-d54e-4025-bec7-d9c06ee3b931",
+      "lot_id": "9528e5fd64ad",
+      "bucket_id": 1157,
+      "strategy_id": "S164",
+      "occ_symbol": "CVNA261002C00069000",
       "qty": 1,
-      "reason": "stop_loss (-71.7%)",
-      "submitted": "2026-09-30T09:40:47"
+      "reason": "stop_loss (-64.7%)",
+      "submitted": "2026-09-30T09:35:10"
     },
     {
-      "order_id": "67fb692d-7c14-41ab-91fb-e04c86899ce9",
-      "lot_id": "84c88e8feb37",
-      "bucket_id": 366,
+      "order_id": "67b66f46-b955-4370-8dcb-03aaf24ae4d3",
+      "lot_id": "b2d3cab6a47a",
+      "bucket_id": 435,
+      "strategy_id": "S366",
+      "occ_symbol": "OXY261023C00059000",
+      "qty": 1,
+      "reason": "stop_loss (-72.6%)",
+      "submitted": "2026-09-30T09:35:11"
+    },
+    {
+      "order_id": "3bbcc098-54b3-4056-8110-1d2226f7e0a5",
+      "lot_id": "41ec2e5cdc30",
+      "bucket_id": 367,
       "strategy_id": "S361",
       "occ_symbol": "OXY261002C00056000",
       "qty": 1,
-      "reason": "stop_loss (-59.3%)",
-      "submitted": "2026-09-30T09:40:48"
+      "reason": "stop_loss (-55.9%)",
+      "submitted": "2026-09-30T09:35:11"
+    },
+    {
+      "order_id": "a3b4de7b-95e8-4a65-88de-22b5d6d95a06",
+      "lot_id": "e2e34820a808",
+      "bucket_id": 382,
+      "strategy_id": "S362",
+      "occ_symbol": "COP261002C00129000",
+      "qty": 1,
+      "reason": "stop_loss (-72.2%)",
+      "submitted": "2026-09-30T09:35:14"
+    },
+    {
+      "order_id": "dbf9fd8f-ac8c-433f-ad24-9e74627fd569",
+      "lot_id": "f34188f654f7",
+      "bucket_id": 234,
+      "strategy_id": "S401",
+      "occ_symbol": "MCD261002C00240000",
+      "qty": 1,
+      "reason": "stop_loss (-63.3%)",
+      "submitted": "2026-09-30T09:35:16"
     }
   ],
   "bucket_open_premium": {
@@ -1093,6 +1163,7 @@
     "b0": 75.0,
     "b419": 72.0,
     "b418": 72.0,
+    "b234": 60.0,
     "b193": 60.0,
     "b192": 60.0,
     "b179": 60.0,
@@ -1116,6 +1187,7 @@
     "b184": 68.0,
     "b171": 38.0,
     "b170": 38.0,
+    "b367": 59.0,
     "b366": 59.0
   },
   "session_date": "2026-09-30",
@@ -1567,8 +1639,6 @@
     "affca402-725b-4547-b562-3cb96dca7109",
     "c4beb996-02c5-417a-ac4e-8341e2422cf2",
     "82aadb25-f2d2-4efd-bc73-43052f7ae278",
-    "dbf9fd8f-ac8c-433f-ad24-9e74627fd569",
-    "3bbcc098-54b3-4056-8110-1d2226f7e0a5",
     "aed2d0e5-e327-4906-9d21-202b0eef4f60",
     "98a54f70-7af9-437c-b316-70e3a29e9a16",
     "e19b0db7-4f6c-425d-a0a8-8be49410c027"
