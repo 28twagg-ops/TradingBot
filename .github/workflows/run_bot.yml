@@ -143,8 +143,8 @@ jobs:
           echo "Live options micro duration: ${dur}s"
           exit 0
 
-      # Paper options: b90 live_1to1 (strict twin of live micro) + controlled-layout
-      # variation buckets (different strategies / TP-SL / windows) for profitability study.
+      # Paper options: b90 live_1to1 twin + >=75 unique promising strategies
+      # (one bucket each — not TP/SL window replicas of the same signal).
       - name: Run options paper bot (PAPER, 9:28-16:05 ET weekdays)
         if: env.OPTIONS_PAPER_ENABLED == '1'
         continue-on-error: true
@@ -155,6 +155,10 @@ jobs:
           OPTIONS_MIRROR_LIVE: "1"
           OPTIONS_VARIATION_STUDY: "1"
           OPTIONS_CONTROLLED_LAYOUT: "1"
+          # Auto-rank CLEAN KEEP + strong watches + untested siblings of winning families.
+          OPTIONS_PROMISING_COHORT: "1"
+          OPTIONS_PROMISING_MIN: "75"
+          OPTIONS_ONE_BUCKET_PER_STRATEGY: "1"
           # Twin = S404+S406 only (S218 now CLEAN-KILL). b91 s406_only also runs in code.
           OPTIONS_MIRROR_STRATEGIES: "S404,S406"
           # Hard drops + dynamic CLEAN kill list (OPTIONS_BLOCK_KILL_STRATEGIES=1).
@@ -162,8 +166,8 @@ jobs:
           OPTIONS_BLOCK_KILL_STRATEGIES: "1"
           OPTIONS_BLOCK_SHARED_OCC: "1"
           OPTIONS_BUCKET_COUNT: "1800"
-          # Cut stack pressure / uncovered OCC collisions.
-          OPTIONS_MAX_NEW_ENTRIES_PER_RUN: "150"
+          # Enough room for one entry per promising strategy when many signals fire.
+          OPTIONS_MAX_NEW_ENTRIES_PER_RUN: "200"
           LIVE_OPTIONS_MIN_COST: "20"
           OPTIONS_TOP_BUCKET_PCT: "0"
           GITHUB_RUN_NUMBER: ${{ github.run_number }}

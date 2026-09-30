@@ -131,26 +131,35 @@ class StrategyLab:
         self,
         start_idx: int = 88,
         strategy_ids: frozenset[str] | None = None,
+        *,
+        compact: bool = False,
     ) -> list[dict]:
         """
         Returns list of bucket-definition dicts for all active strategies.
         Each dict mirrors the kwargs for BucketProfile in options_lab.py.
         start_idx: first bucket_id to assign (default 88, after existing 0-87).
         strategy_ids: when set, only emit buckets for these strategy ids.
+        compact: one primary morning window + 1 rep per strategy (cohort paper test).
         """
         buckets: list[dict] = []
         idx = start_idx
         for spec in self.active_strategies():
             if strategy_ids and spec.strategy_id not in strategy_ids:
                 continue
-            windows = self.WINDOWS_MORNING.copy()
-            if not spec.signal_name.lower().startswith("gap"):
-                windows.extend(self.WINDOWS_AFT)
-            if spec.dte_target == 0:
-                windows = self.WINDOWS_MORNING[:2]
-            
+            if compact:
+                # One arm per strategy so a large cohort can all get paper fills.
+                windows = [self.WINDOWS_MORNING[1]]  # w2 10:05-10:45
+                reps = 1
+            else:
+                windows = self.WINDOWS_MORNING.copy()
+                if not spec.signal_name.lower().startswith("gap"):
+                    windows.extend(self.WINDOWS_AFT)
+                if spec.dte_target == 0:
+                    windows = self.WINDOWS_MORNING[:2]
+                reps = spec.reps
+
             for win_tag, start_hm, end_hm in windows:
-                for rep in range(spec.reps):
+                for rep in range(reps):
                     name = (f"lab{idx:04d}_{spec.strategy_id.lower()}"
                             f"_{win_tag}_r{rep + 1}")
                     buckets.append({

@@ -77,10 +77,23 @@ ALLOWED_STRATEGIES: frozenset[str] = frozenset(
     s.strip() for s in os.environ.get("OPTIONS_ALLOWED_STRATEGIES", "").split(",")
     if s.strip()
 )
-# Variation study: scan + lab/promising buckets for this cohort only (empty = all).
+# One dedicated bucket per cohort strategy (skip window×rep replicas).
+ONE_BUCKET_PER_STRATEGY = os.environ.get(
+    "OPTIONS_ONE_BUCKET_PER_STRATEGY", "0"
+).strip().lower() in ("1", "true", "yes", "on")
+# Auto-pick >=N unique non-kill strategies from CLEAN KEEP + strong watches.
+_PROMISING_COHORT_RAW = os.environ.get("OPTIONS_PROMISING_COHORT", "0").strip().lower()
+PROMISING_COHORT = _PROMISING_COHORT_RAW in ("1", "true", "yes", "on", "auto")
+try:
+    PROMISING_MIN = max(1, int(os.environ.get("OPTIONS_PROMISING_MIN", "75") or 75))
+except (TypeError, ValueError):
+    PROMISING_MIN = 75
+# Variation study cohort (empty = all paper strategies). "auto"/@promising resolved later.
+_VARIATION_STRAT_RAW = os.environ.get("OPTIONS_VARIATION_STRATEGIES", "").strip()
+_VARIATION_AUTO = _VARIATION_STRAT_RAW.lower() in ("auto", "@promising", "@auto")
 VARIATION_STRATEGIES: frozenset[str] = frozenset(
-    s.strip() for s in os.environ.get("OPTIONS_VARIATION_STRATEGIES", "").split(",")
-    if s.strip()
+    s.strip() for s in _VARIATION_STRAT_RAW.split(",")
+    if s.strip() and not _VARIATION_AUTO
 )
 PROMISING_EXTRA_BUCKET_START = 2000
 # Mirror live micro: dedicated live_1to1 arm per allowed strategy (not baseline b0).
@@ -276,6 +289,162 @@ def effective_dropped_strategies() -> frozenset[str]:
     return frozenset(dropped)
 
 
+def _strategy_family(name: str) -> str:
+    n = (name or "").lower()
+    if "rubber" in n:
+        return "RubberBand"
+    if "gap" in n:
+        return "GapDown"
+    if "bbsqueeze" in n or "bb squeeze" in n:
+        return "BBSqueeze"
+    if "volclimax" in n or "volume_climax" in n or "volume climax" in n:
+        return "VolClimax"
+    if "pullback" in n:
+        return "Pullback"
+    if "golden" in n:
+        return "GoldenPocket"
+    if "rsi" in n:
+        return "RSI"
+    if "any_" in n:
+        return "Any"
+    if any(x in n for x in ("ma_", "ma ", "cross", "bounce", "reclaim", "death")):
+        return "MA"
+    return "Other"
+
+
+def _latest_selection_rows() -> dict[str, dict]:
+    reports = TRIAL_ROOT / "reports"
+    paths = sorted(reports.glob("*_strategy_selection.csv"))
+    if not paths:
+        return {}
+    out: dict[str, dict] = {}
+    try:
+        with paths[-1].open(newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                sid = (row.get("strategy_id") or "").strip()
+                if sid.startswith("S"):
+                    out[sid] = row
+    except Exception:
+        return {}
+    return out
+
+
+def build_promising_cohort(min_n: int | None = None) -> list[str]:
+    """Rank unique paper strategies: CLEAN KEEP, then +med watches, then family peers."""
+    n_want = PROMISING_MIN if min_n is None else max(1, int(min_n))
+    try:
+        from scripts.options_signals import PAPER_STRATEGIES
+    except ImportError:
+        from options_signals import PAPER_STRATEGIES
+
+    dq_path = TRIAL_ROOT / "reports" / "latest_data_quality.json"
+    keep: set[str] = set()
+    kill: set[str] = set(effective_dropped_strategies())
+    try:
+        raw = json.loads(dq_path.read_text(encoding="utf-8"))
+        keep = {str(s).strip() for s in (raw.get("keep_strategies") or []) if str(s).strip()}
+        kill |= {
+            str(s).strip()
+            for s in (raw.get("kill_strategies") or [])
+            if str(s).strip() and str(s).strip().upper() != "ORPHAN"
+        }
+    except Exception:
+        pass
+    kill -= set(MIRROR_STRATEGIES)
+    kill.discard("S406")
+
+    rows = _latest_selection_rows()
+    seen: set[str] = set()
+    paper: list[Any] = []
+    for s in PAPER_STRATEGIES:
+        if s.id in seen:
+            continue
+        seen.add(s.id)
+        paper.append(s)
+
+    keep_fams = {_strategy_family(s.name) for s in paper if s.id in keep}
+
+    def _fnum(row: dict, *keys: str) -> float | None:
+        for k in keys:
+            v = row.get(k)
+            if v in (None, ""):
+                continue
+            try:
+                return float(str(v).replace("%", "").replace("+", "").replace(",", ""))
+            except (TypeError, ValueError):
+                continue
+        return None
+
+    ranked: list[tuple] = []
+    for s in paper:
+        if s.id in kill:
+            continue
+        row = rows.get(s.id, {})
+        med = _fnum(row, "med_return_pct", "med_pct")
+        try:
+            exits = int(float(row.get("exits") or 0))
+        except (TypeError, ValueError):
+            exits = 0
+        rec = (row.get("recommendation") or "").lower()
+        fam = _strategy_family(s.name)
+        if s.id in keep:
+            tier = 5
+        elif med is not None and med > 0 and exits >= 8:
+            tier = 4
+        elif med is not None and med > 0 and exits > 0:
+            tier = 3
+        elif exits == 0 and fam in keep_fams:
+            tier = 2
+        elif exits == 0:
+            tier = 1
+        elif med is not None and med > -25:
+            tier = 1
+        else:
+            tier = 0
+        if rec == "drop" and s.id not in keep:
+            tier = min(tier, 1)
+        ranked.append((tier, med if med is not None else -999.0, exits, s.id))
+
+    ranked.sort(key=lambda t: (-t[0], -t[1], -t[2], t[3]))
+    cohort = [t[3] for t in ranked[:n_want]]
+    # Always include live-mirror strategies in the paper cohort.
+    for sid in sorted(MIRROR_STRATEGIES):
+        if sid not in cohort and sid not in kill:
+            cohort.append(sid)
+    return cohort
+
+
+def resolve_variation_strategies() -> frozenset[str]:
+    """Final cohort used by paper scan/buckets (explicit list or auto promising)."""
+    if VARIATION_STRATEGIES:
+        return VARIATION_STRATEGIES
+    if PROMISING_COHORT or _VARIATION_AUTO:
+        return frozenset(build_promising_cohort())
+    return frozenset()
+
+
+# Resolve auto cohort after helpers exist (module-level scan filters use this).
+if PROMISING_COHORT or _VARIATION_AUTO:
+    VARIATION_STRATEGIES = frozenset(build_promising_cohort())
+    try:
+        _cohort_path = TRIAL_ROOT / "_state" / "promising_cohort.json"
+        _cohort_path.parent.mkdir(parents=True, exist_ok=True)
+        _cohort_path.write_text(
+            json.dumps(
+                {
+                    "as_of": date.today().isoformat(),
+                    "min_n": PROMISING_MIN,
+                    "count": len(VARIATION_STRATEGIES),
+                    "strategies": sorted(VARIATION_STRATEGIES),
+                },
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
+    except Exception:
+        pass
+
+
 def _lab_registry_strategy_ids() -> frozenset[str]:
     try:
         from scripts.options_strategy_lab import load_or_init_lab
@@ -285,30 +454,33 @@ def _lab_registry_strategy_ids() -> frozenset[str]:
 
 
 def _promising_extra_strategy_ids() -> list[str]:
-    """Paper-only strategies (S397, S401, …) not in the S200 lab registry."""
-    if not VARIATION_STRATEGIES:
+    """Cohort strategies missing a dedicated strategy_scope bucket after lab generate."""
+    cohort = VARIATION_STRATEGIES
+    if not cohort:
         return []
-    lab_ids = _lab_registry_strategy_ids()
-    out: list[str] = []
-    for sid in sorted(VARIATION_STRATEGIES):
-        if sid in DROPPED_STRATEGIES:
-            continue
-        if sid in MIRROR_STRATEGIES:
-            continue
-        if sid in lab_ids:
-            continue
-        out.append(sid)
-    return out
+    return sorted(sid for sid in cohort if sid not in DROPPED_STRATEGIES)
 
 
 def _inject_promising_extra_buckets(profiles: list[BucketProfile]) -> list[BucketProfile]:
-    """One baseline bucket per promising non-lab strategy (trial-run keepers)."""
-    extras = _promising_extra_strategy_ids()
-    if not extras:
+    """Ensure every cohort strategy has at least one dedicated baseline bucket."""
+    want = set(_promising_extra_strategy_ids())
+    if not want:
+        return profiles
+    covered = {
+        p.strategy_scope for p in profiles
+        if p.strategy_scope and p.strategy_scope != "all"
+    }
+    # Twins cover their scopes without needing extras.
+    if any(p.bucket_id == LIVE_1TO1_BUCKET_ID for p in profiles):
+        covered |= set(MIRROR_STRATEGIES)
+    if any(p.bucket_id == S406_ONLY_BUCKET_ID for p in profiles):
+        covered.add("S406")
+    missing = sorted(want - covered)
+    if not missing:
         return profiles
     used = {p.bucket_id for p in profiles}
     next_id = max(PROMISING_EXTRA_BUCKET_START, max(used, default=0) + 1)
-    for sid in extras:
+    for sid in missing:
         while next_id in used:
             next_id += 1
         profiles.append(BucketProfile(
@@ -324,6 +496,8 @@ def _inject_promising_extra_buckets(profiles: list[BucketProfile]) -> list[Bucke
             max_contracts=1,
             take_profit=0.50,
             stop_loss=-0.40,
+            buy_start_hm="10:05",
+            buy_end_hm="10:45",
         ))
         used.add(next_id)
         next_id += 1
@@ -342,7 +516,11 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
             from options_strategy_lab import load_or_init_lab
         lab = load_or_init_lab()
         cohort = VARIATION_STRATEGIES if VARIATION_STRATEGIES else None
-        bucket_dicts = lab.generate_buckets(start_idx=0, strategy_ids=cohort)
+        bucket_dicts = lab.generate_buckets(
+            start_idx=0,
+            strategy_ids=cohort,
+            compact=ONE_BUCKET_PER_STRATEGY,
+        )
         profiles: list[BucketProfile] = []
         for d in bucket_dicts:
             if len(profiles) >= n:

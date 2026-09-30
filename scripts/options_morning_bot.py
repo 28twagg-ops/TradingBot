@@ -2170,10 +2170,13 @@ def run() -> int:
                 1 for b in active_buckets(equity or 0)
                 if b.bucket_id not in (LIVE_1TO1_BUCKET_ID, S406_ONLY_BUCKET_ID)
             )
-            cohort = (
-                ", ".join(sorted(VARIATION_STRATEGIES))
-                if VARIATION_STRATEGIES else "all paper strategies"
-            )
+            if VARIATION_STRATEGIES:
+                ids = sorted(VARIATION_STRATEGIES)
+                shown = ", ".join(ids[:12])
+                more = f" … +{len(ids) - 12} more" if len(ids) > 12 else ""
+                cohort = f"{len(ids)} unique ({shown}{more})"
+            else:
+                cohort = "all paper strategies"
             rl(
                 f"Variation study: {n_var} lab/promising bucket(s) | "
                 f"cohort: {cohort} | max {MAX_NEW_ENTRIES_PER_RUN} new entries/run"
