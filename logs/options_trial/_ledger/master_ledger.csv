@@ -15750,3 +15750,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-30 15:51:11.150269+00:00,exit,185,lab0185_s217_w4_1120_1135_r2,S217,ece55102e91b,BAC,BAC261002C00055000,1,,0.31,68.0,-54.41,-37.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,78b9c464-3ab5-41a2-a1f7-ff8e9fe22c7c
 2026-09-30T15:51:34Z,reconcile,184,lab0184_s217_w4_1120_1135_r1,S217,a3c33805fb77,BAC,BAC261002C00055000,0,,,68.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
 2026-09-30 19:19:05.800504+00:00,exit,1157,lab1157_s164_w4_1120_1135_r2,S164,9528e5fd64ad,CVNA,CVNA261002C00069000,1,,0.1,13.0,-23.08,-3.0,stop_loss (-64.7%),,-0.01,0.5,-0.5,,,5aa57b07-d54e-4025-bec7-d9c06ee3b931
+2026-10-01 13:30:02.552545+00:00,exit,1156,lab1156_s164_w4_1120_1135_r1,S164,68b4e3b5888e,CVNA,CVNA261002C00069000,1,,0.06,13.0,-53.85,-7.0,reconcile_fill,,-0.01,0.5,-0.5,,,f6e1f2d4-40df-4e7b-9e97-a7b42d609116
