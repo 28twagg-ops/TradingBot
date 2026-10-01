@@ -593,6 +593,16 @@
       "qty": 1,
       "reason": "stop_loss (-100.0%)",
       "submitted": "2026-10-01T09:35:15"
+    },
+    {
+      "order_id": "35e29d13-d54d-42cd-b011-dcff42a8c148",
+      "lot_id": "db6053b11a33",
+      "bucket_id": 432,
+      "strategy_id": "S366",
+      "occ_symbol": "OXY261023C00060000",
+      "qty": 1,
+      "reason": "take_profit (+50.9%)",
+      "submitted": "2026-10-01T10:36:43"
     }
   ],
   "bucket_open_premium": {
