@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-01
 
-_Generated 2026-10-01T10:37:40.420749_
+_Generated 2026-10-01T10:42:46.453984_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-10-01T10:37:40.420749_
 
 ## Attribution health
 
-- Total exits: **3558**
+- Total exits: **3559**
 - Orphan exits (b0/orphan_reconcile): **421**
 - Orphan rate: **11.8%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -114,7 +114,7 @@ _Generated 2026-10-01T10:37:40.420749_
 | S353 (GapDown_3DTE) | 3d | drop | 45 | 42.2 | -46.15 | -82.61 | -69.70 | +264.21 | 62 | 8 | 8 | $+125.00 | 22.2% | non-positive median return |
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 66 | 0 | 0 | $-822.00 | 43.2% | manually paused — excluded from new entries & reflected P&L |
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 62 | 0 | 0 | $+33.00 | 26.3% | manually paused — excluded from new entries & reflected P&L |
-| S366 (RubberBand_21DTE) | 21d | drop | 20 | 40.0 | -49.12 | -57.38 | -54.32 | +94.51 | 58 | 4 | 3 | $-90.00 | 45.0% | manually paused — excluded from new entries & reflected P&L |
+| S366 (RubberBand_21DTE) | 21d | drop | 21 | 42.9 | -49.12 | -56.92 | -53.45 | +94.34 | 58 | 4 | 4 | $-63.00 | 42.9% | manually paused — excluded from new entries & reflected P&L |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 75 | 33.3 | -49.18 | -79.00 | -60.00 | +99.05 | 66 | 15 | 5 | $+158.00 | 40.0% | manually paused — excluded from new entries & reflected P&L |
 | S351 (GapDown_1DTE) | 1d | drop | 75 | 37.3 | -50.00 | -75.68 | -62.03 | +264.88 | 62 | 11 | 6 | $+414.00 | 17.3% | manually paused — excluded from new entries & reflected P&L |
 | S399 (GapDown_OTM1) | 3d | drop | 80 | 38.8 | -50.72 | -83.55 | -66.67 | +141.00 | 62 | 4 | 3 | $-170.00 | 20.0% | non-positive median return |
@@ -275,7 +275,7 @@ _Pipeline evaluation as of 2026-10-01. Auto-kill thresholds: median<-25% at n>=1
 | S363 | RubberBand_5DTE | 41 | -65.38% | 39% | INSUFFICIENT | 59 |
 | S364 | RubberBand_7DTE | 63 | +8.33% | 51% | INSUFFICIENT | 62 |
 | S365 | RubberBand_14DTE | 32 | +19.23% | 50% | INSUFFICIENT | 62 |
-| S366 | RubberBand_21DTE | 20 | -49.12% | 40% | INSUFFICIENT | 58 |
+| S366 | RubberBand_21DTE | 21 | -49.12% | 43% | INSUFFICIENT | 58 |
 | S367 | RubberBand_30DTE | 3 | -48.89% | 0% | WATCH | 58 |
 | S368 | BBSqueeze_0DTE | 0 | — | — | NEW | 0 |
 | S369 | BBSqueeze_1DTE | 0 | — | — | NEW | 0 |
