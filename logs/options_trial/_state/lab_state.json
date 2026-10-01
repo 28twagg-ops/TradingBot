@@ -442,46 +442,6 @@
       "entry_order_id": "1cb56d47-2004-41b0-963d-16a584ddba74"
     },
     {
-      "lot_id": "37f6c6331b80",
-      "bucket_id": 0,
-      "profile_name": "orphan_reconcile",
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "MSFT261002C00530000",
-      "underlying": "MSFT",
-      "qty": 1,
-      "entry_cost": 71.0,
-      "entry_price": 0.71,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-29T13:40:54.535748+00:00",
-      "entry_order_id": "orphan:MSFT261002C00530000"
-    },
-    {
-      "lot_id": "d07137dc6068",
-      "bucket_id": 419,
-      "profile_name": "lab0419_s365_w1_0928_1005_r2",
-      "strategy_id": "S365",
-      "occ_symbol": "CVX261016C00220000",
-      "underlying": "CVX",
-      "qty": 1,
-      "entry_cost": 72.0,
-      "entry_price": 0.72,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-29T13:57:58.816189+00:00",
-      "entry_order_id": "49696a8a-ac03-48cc-905b-e990e5fb18db"
-    },
-    {
       "lot_id": "575fa62acd4f",
       "bucket_id": 418,
       "profile_name": "lab0418_s365_w1_0928_1005_r1",
@@ -502,26 +462,6 @@
       "entry_order_id": "89c312cd-37b9-411f-8250-1e3b6756e63c"
     },
     {
-      "lot_id": "8f40effcc4b2",
-      "bucket_id": 433,
-      "profile_name": "lab0433_s366_w1_0928_1005_r2",
-      "strategy_id": "S366",
-      "occ_symbol": "OXY261023C00060000",
-      "underlying": "OXY",
-      "qty": 1,
-      "entry_cost": 53.0,
-      "entry_price": 0.53,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-29T14:01:20.820899+00:00",
-      "entry_order_id": "858c8d06-7e2f-4e1f-8aae-bd8bc4012a19"
-    },
-    {
       "lot_id": "db6053b11a33",
       "bucket_id": 432,
       "profile_name": "lab0432_s366_w1_0928_1005_r1",
@@ -540,26 +480,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-29T14:01:20.846320+00:00",
       "entry_order_id": "b96cc22c-d610-4cae-b3bd-abc99d9f3cca"
-    },
-    {
-      "lot_id": "c6f77f42882d",
-      "bucket_id": 434,
-      "profile_name": "lab0434_s366_w2_1005_1045_r1",
-      "strategy_id": "S366",
-      "occ_symbol": "OXY261023C00059000",
-      "underlying": "OXY",
-      "qty": 1,
-      "entry_cost": 73.0,
-      "entry_price": 0.73,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-09-29T14:46:18.603093+00:00",
-      "entry_order_id": "f6db0298-99f7-49d7-84cb-9b45ac5fd0a1"
     },
     {
       "lot_id": "25266b46de80",
@@ -665,36 +585,6 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "356a9291-e3a9-445a-8c3e-1c26e0dd82ce",
-      "lot_id": "8f40effcc4b2",
-      "bucket_id": 433,
-      "strategy_id": "S366",
-      "occ_symbol": "OXY261023C00060000",
-      "qty": 1,
-      "reason": "stop_loss (-67.9%)",
-      "submitted": "2026-10-01T09:35:12"
-    },
-    {
-      "order_id": "7c416055-46bb-49b2-8c01-626fc76e9277",
-      "lot_id": "d07137dc6068",
-      "bucket_id": 419,
-      "strategy_id": "S365",
-      "occ_symbol": "CVX261016C00220000",
-      "qty": 1,
-      "reason": "stop_loss (-51.4%)",
-      "submitted": "2026-10-01T09:35:13"
-    },
-    {
-      "order_id": "a1d44784-97df-4c93-8bd3-46ae3a02f273",
-      "lot_id": "c6f77f42882d",
-      "bucket_id": 434,
-      "strategy_id": "S366",
-      "occ_symbol": "OXY261023C00059000",
-      "qty": 1,
-      "reason": "stop_loss (-50.7%)",
-      "submitted": "2026-10-01T09:35:14"
-    },
-    {
       "order_id": "540e73cf-1ff2-44e7-95fa-c121e28dc409",
       "lot_id": "aee8303ec6d8",
       "bucket_id": 0,
@@ -703,16 +593,6 @@
       "qty": 1,
       "reason": "stop_loss (-100.0%)",
       "submitted": "2026-10-01T09:35:15"
-    },
-    {
-      "order_id": "346ea9a5-59ed-4ab5-ad57-d15d4f566765",
-      "lot_id": "37f6c6331b80",
-      "bucket_id": 0,
-      "strategy_id": "ORPHAN",
-      "occ_symbol": "MSFT261002C00530000",
-      "qty": 1,
-      "reason": "take_profit (+104.2%)",
-      "submitted": "2026-10-01T09:35:16"
     }
   ],
   "bucket_open_premium": {
@@ -738,14 +618,11 @@
     "b793": 53.0,
     "b792": 53.0,
     "b421": 43.0,
-    "b0": 75.0,
-    "b419": 72.0,
     "b418": 72.0,
-    "b433": 53.0,
     "b432": 53.0,
-    "b434": 73.0,
     "b423": 73.0,
     "b422": 73.0,
+    "b0": 4.0,
     "b171": 38.0,
     "b170": 38.0
   },
@@ -1220,7 +1097,11 @@
     "ba920918-0376-4862-80eb-0a8745661359",
     "78b9c464-3ab5-41a2-a1f7-ff8e9fe22c7c",
     "5aa57b07-d54e-4025-bec7-d9c06ee3b931",
-    "f6e1f2d4-40df-4e7b-9e97-a7b42d609116"
+    "f6e1f2d4-40df-4e7b-9e97-a7b42d609116",
+    "346ea9a5-59ed-4ab5-ad57-d15d4f566765",
+    "a1d44784-97df-4c93-8bd3-46ae3a02f273",
+    "7c416055-46bb-49b2-8c01-626fc76e9277",
+    "356a9291-e3a9-445a-8c3e-1c26e0dd82ce"
   ],
   "submitted_today": 0,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
