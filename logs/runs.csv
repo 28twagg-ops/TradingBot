@@ -9141,3 +9141,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-01 15:11:29,exits,bull,223.61,121.77,0,0,0,3,AES|BBY|FCN,both
 2026-10-01 15:16:24,exits,bull,223.65,121.77,0,0,0,3,AES|BBY|FCN,both
 2026-10-01 15:21:32,exits,bull,223.79,121.77,0,0,0,3,AES|BBY|FCN,both
+2026-10-01 15:32:02,exits,bull,223.77,121.77,0,0,0,3,AES|BBY|FCN,both
