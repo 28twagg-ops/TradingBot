@@ -14531,3 +14531,80 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261001T194727Z
+
+- UTC timestamp: `20261001T194727Z`
+- GitHub run: [#11640](https://github.com/28twagg-ops/TradingBot/actions/runs/36916570163)
+- Run id: `36916570163`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261001T194727Z_live_bot.log`, `logs/action_runs/20261001T194727Z_live_options.log`, `logs/action_runs/20261001T194727Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1608 | 48.1 | -27.6 | +38.8 | $+18,114 |
+| TAINTED | 1953 | 33.1 | -40.0 | +12.2 | $-9,990 |
+| KEEP-only | 779 | 60.8 | +50.9 | +59.2 | $+11,978 |
+| KEEP-only recent | 586 | 59.2 | +53.3 | +67.1 | $+7,917 |
+
+- KEEP strategies (23): S163, S164, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S397, S398, S403, S404, S406, S411, S412
+- KILL strategies (21): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-10-01T15:40:47.655151-04:00","date":"2026-10-01","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":3.7,"phases_s":{"reconcile":0.26,"cancel":0.11,"manage":1.75,"protective_stops":1.01},"signals":0,"placed":0,"equity":992120.64,"open_positions":11,"pending_orders":0,"open_lots":26,"submitted_today":1,"filled_today":1,"unattributed_contracts":0,"top_signals":[],"github_run":"11638","github_run_id":"36915349348","status":"ok","data_quality":{"clean":{"n":1608,"win":48.13,"med":-27.62,"avg":38.84,"pnl":18113.83},"tainted":{"n":1953,"win":33.08,"med":-40.0,"avg":12.24,"pnl":-9990.28},"keep_only":{"n":779,"win":60.85,"med":50.85,"avg":59.21,"pnl":11978.45},"keep_only_recent":{"n":586,"win":59.22,"med":53.33,"avg":67.09,"pnl":7917.0},"keep_strategies":["S163","S164","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S397","S398","S403","S404","S406","S411","S412"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+19:47:28  INFO      Mode: scan
+19:47:29  INFO        [positions] 2/2 (2 valid)
+19:47:29  INFO        SELL order cancelled AES  type=OrderType.STOP  id=3a6171a0-7520-4db8-84f9-9c4fd0dd80bf
+19:47:29  INFO        SELL LIMIT AES  qty=2.241702983  limit=$14.92  id=2bcfc697-109b-4418-a016-2e06aff8248f
+19:47:59  INFO        SELL LIMIT filled AES (confirmed by position check)
+19:47:59  INFO        TX logged: SELL AES  P&L 0.1%
+19:48:00  INFO        SELL LIMIT FCN  qty=0.249477299  limit=$142.52  id=b50081b6-a231-4552-89a4-2f50f64e5215
+19:48:30  INFO        SELL LIMIT filled FCN (confirmed by position check)
+19:48:30  INFO        TX logged: SELL FCN  P&L 6.57%
+19:48:30  INFO        Universe cache hit: 903 tickers (tickers_2026-10-01.json)
+19:48:31  INFO        [universe] 40/903 (40 valid)
+19:48:32  INFO        [universe] 80/903 (80 valid)
+19:48:34  INFO        [universe] 120/903 (120 valid)
+19:48:35  INFO        [universe] 160/903 (160 valid)
+19:48:36  INFO        [universe] 200/903 (199 valid)
+19:48:43  INFO        [universe] 240/903 (238 valid)
+19:48:56  INFO        [universe] 280/903 (278 valid)
+19:49:06  INFO        [universe] 320/903 (318 valid)
+19:49:20  INFO        [universe] 360/903 (358 valid)
+19:49:33  INFO        [universe] 400/903 (398 valid)
+19:49:43  INFO        [universe] 440/903 (438 valid)
+19:49:56  INFO        [universe] 480/903 (478 valid)
+19:50:09  INFO        [universe] 520/903 (518 valid)
+19:50:20  INFO        [universe] 560/903 (558 valid)
+19:50:33  INFO        [universe] 600/903 (598 valid)
+19:50:43  INFO        [universe] 640/903 (638 valid)
+19:50:56  INFO        [universe] 680/903 (678 valid)
+19:51:09  INFO        [universe] 720/903 (718 valid)
+19:51:19  INFO        [universe] 760/903 (758 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---

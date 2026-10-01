@@ -1,0 +1,29 @@
+19:47:28  INFO      Mode: scan
+19:47:29  INFO        [positions] 2/2 (2 valid)
+19:47:29  INFO        SELL order cancelled AES  type=OrderType.STOP  id=3a6171a0-7520-4db8-84f9-9c4fd0dd80bf
+19:47:29  INFO        SELL LIMIT AES  qty=2.241702983  limit=$14.92  id=2bcfc697-109b-4418-a016-2e06aff8248f
+19:47:59  INFO        SELL LIMIT filled AES (confirmed by position check)
+19:47:59  INFO        TX logged: SELL AES  P&L 0.1%
+19:48:00  INFO        SELL LIMIT FCN  qty=0.249477299  limit=$142.52  id=b50081b6-a231-4552-89a4-2f50f64e5215
+19:48:30  INFO        SELL LIMIT filled FCN (confirmed by position check)
+19:48:30  INFO        TX logged: SELL FCN  P&L 6.57%
+19:48:30  INFO        Universe cache hit: 903 tickers (tickers_2026-10-01.json)
+19:48:31  INFO        [universe] 40/903 (40 valid)
+19:48:32  INFO        [universe] 80/903 (80 valid)
+19:48:34  INFO        [universe] 120/903 (120 valid)
+19:48:35  INFO        [universe] 160/903 (160 valid)
+19:48:36  INFO        [universe] 200/903 (199 valid)
+19:48:43  INFO        [universe] 240/903 (238 valid)
+19:48:56  INFO        [universe] 280/903 (278 valid)
+19:49:06  INFO        [universe] 320/903 (318 valid)
+19:49:20  INFO        [universe] 360/903 (358 valid)
+19:49:33  INFO        [universe] 400/903 (398 valid)
+19:49:43  INFO        [universe] 440/903 (438 valid)
+19:49:56  INFO        [universe] 480/903 (478 valid)
+19:50:09  INFO        [universe] 520/903 (518 valid)
+19:50:20  INFO        [universe] 560/903 (558 valid)
+19:50:33  INFO        [universe] 600/903 (598 valid)
+19:50:43  INFO        [universe] 640/903 (638 valid)
+19:50:56  INFO        [universe] 680/903 (678 valid)
+19:51:09  INFO        [universe] 720/903 (718 valid)
+19:51:19  INFO        [universe] 760/903 (758 valid)
