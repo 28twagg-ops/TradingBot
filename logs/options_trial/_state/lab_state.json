@@ -520,26 +520,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-09-29T15:26:45.859051+00:00",
       "entry_order_id": "8be4bbcf-b0ec-4341-8b79-3d5ea1377d70"
-    },
-    {
-      "lot_id": "c0785d503a80",
-      "bucket_id": 12,
-      "profile_name": "lab0012_s403_w2_1005_1045_r1",
-      "strategy_id": "S403",
-      "occ_symbol": "XOM261002C00167500",
-      "underlying": "XOM",
-      "qty": 1,
-      "entry_cost": 15.0,
-      "entry_price": 0.15,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-01T14:11:19.065613+00:00",
-      "entry_order_id": "7cc25814-b243-4d31-b697-a0bd473ddf6a"
     }
   ],
   "pending_orders": [],
@@ -570,8 +550,7 @@
     "b418": 72.0,
     "b422": 73.0,
     "b171": 38.0,
-    "b170": 38.0,
-    "b12": 15.0
+    "b170": 38.0
   },
   "session_date": "2026-10-01",
   "entries_locked": [
@@ -1054,7 +1033,8 @@
     "bd8e4d2f-2abc-45a7-bb54-f4d2e479d07a",
     "7cc25814-b243-4d31-b697-a0bd473ddf6a",
     "35e29d13-d54d-42cd-b011-dcff42a8c148",
-    "540e73cf-1ff2-44e7-95fa-c121e28dc409"
+    "540e73cf-1ff2-44e7-95fa-c121e28dc409",
+    "e592089a-a88d-401c-b99a-0c6a26373e54"
   ],
   "submitted_today": 1,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
