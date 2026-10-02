@@ -420,7 +420,18 @@
       "stop_loss": -0.5
     }
   ],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "aa9bdf57-3efa-4c21-8965-87c9d3255361",
+      "lot_id": "7e676e0660d1",
+      "bucket_id": 59,
+      "strategy_id": "S412",
+      "occ_symbol": "NKE261009C00036000",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-10-02T11:21:34"
+    }
+  ],
   "bucket_open_premium": {
     "b829": 56.00000000000001,
     "b828": 56.00000000000001,
