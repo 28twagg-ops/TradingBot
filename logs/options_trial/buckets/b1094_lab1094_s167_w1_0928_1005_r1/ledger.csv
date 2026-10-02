@@ -10,4 +10,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-24 14:04:19.894315+00:00,entry,1094,lab1094_s167_w1_0928_1005_r1,S167,e3d3d4dd12ab,AMD,AMD260925C00655000,1,0.48,0.48,48.0,,,,-0.01,,0.5,-0.5,,,37e72ee7-782d-452a-8db6-4cebee964bea
 2026-09-24T14:56:33Z,reconcile,1094,lab1094_s167_w1_0928_1005_r1,S167,e3d3d4dd12ab,AMD,AMD260925C00655000,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-25 14:00:47.660889+00:00,entry,1094,lab1094_s167_w1_0928_1005_r1,S167,74d7cb42e718,NKE,NKE261002C00038000,1,0.68,0.68,68.0,,,,-0.01,,0.5,-0.5,0.044444444444444314,gap -2.1%,cc8df2de-722d-4123-a3e6-00197c64a261
-2026-10-02T13:51:04Z,reconcile,1094,lab1094_s167_w1_0928_1005_r1,S167,74d7cb42e718,NKE,NKE261002C00038000,0,,,68.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
+2026-10-02T13:35:02Z,reconcile,1094,lab1094_s167_w1_0928_1005_r1,S167,74d7cb42e718,NKE,NKE261002C00038000,0,,,68.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
