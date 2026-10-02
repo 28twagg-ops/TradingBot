@@ -9341,3 +9341,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-02 22:01:29,ext_exits,bull,223.72,156.38,0,0,0,2,CMI|LNT,both
 2026-10-02 22:06:27,ext_exits,bull,223.72,156.38,0,0,0,2,CMI|LNT,both
 2026-10-02 22:11:34,ext_exits,bull,223.72,156.38,0,0,0,2,CMI|LNT,both
+2026-10-02 22:16:20,ext_exits,bull,223.72,156.38,0,0,0,2,CMI|LNT,both
