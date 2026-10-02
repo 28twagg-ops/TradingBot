@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-10-02 14:07:08.569307+00:00,entry,22,lab0022_s365_w2_1005_1045_r1,S365,62b713e542be,COP,COP261016C00135000,1,0.65,0.64,64.0,,,,-0.01,,0.5,-0.5,0.23728813559322032,RB gap -1.6% reclaim,dcc04194-6266-40d2-b1b6-46bf6b054b19
