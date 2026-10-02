@@ -9292,3 +9292,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-02 17:36:23,exits,bull,223.77,189.93,0,0,0,1,CMI,both
 2026-10-02 17:41:31,exits,bull,223.73,189.93,0,0,0,1,CMI,both
 2026-10-02 17:46:20,exits,bull,223.75,189.93,0,0,0,1,CMI,both
+2026-10-02 17:51:28,exits,bull,223.77,189.93,0,0,0,1,CMI,both
