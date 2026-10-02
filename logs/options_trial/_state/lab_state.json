@@ -223,18 +223,7 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "e83bb713-f8a5-45a3-b479-aa0a49d1581b",
-      "lot_id": "18d8a9cd291d",
-      "bucket_id": 829,
-      "strategy_id": "S406",
-      "occ_symbol": "NKE261002C00038500",
-      "qty": 1,
-      "reason": "stop_loss (-100.0%)",
-      "submitted": "2026-10-02T09:35:07"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b829": 56.00000000000001,
     "b828": 56.00000000000001,
