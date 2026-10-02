@@ -1,0 +1,239 @@
+19:47:02  INFO      Mode: scan
+19:47:03  INFO        [positions] 1/1 (1 valid)
+19:47:03  INFO        Universe cache hit: 903 tickers (tickers_2026-10-02.json)
+19:47:04  INFO        [universe] 40/902 (40 valid)
+19:47:06  INFO        [universe] 80/902 (80 valid)
+19:47:07  INFO        [universe] 120/902 (120 valid)
+19:47:08  INFO        [universe] 160/902 (160 valid)
+19:47:09  INFO        [universe] 200/902 (199 valid)
+19:47:16  INFO        [universe] 240/902 (238 valid)
+19:47:29  INFO        [universe] 280/902 (278 valid)
+19:47:41  INFO        [universe] 320/902 (318 valid)
+19:47:54  INFO        [universe] 360/902 (358 valid)
+19:48:04  INFO        [universe] 400/902 (398 valid)
+19:48:17  INFO        [universe] 440/902 (438 valid)
+19:48:30  INFO        [universe] 480/902 (478 valid)
+19:48:40  INFO        [universe] 520/902 (518 valid)
+19:48:53  INFO        [universe] 560/902 (558 valid)
+19:49:06  INFO        [universe] 600/902 (598 valid)
+19:49:16  INFO        [universe] 640/902 (638 valid)
+19:49:29  INFO        [universe] 680/902 (678 valid)
+19:49:42  INFO        [universe] 720/902 (718 valid)
+19:49:52  INFO        [universe] 760/902 (758 valid)
+19:50:05  INFO        [universe] 800/902 (798 valid)
+19:50:18  INFO        [universe] 840/902 (838 valid)
+19:50:28  INFO        [universe] 880/902 (878 valid)
+19:50:34  INFO        [universe] 902/902 (900 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:47 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $224.01|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-10-02|
+|  Universe                                                          both|
+|  Mon~  Oct: RubberBand + GapDown (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $224.01|
+|  Cash                                                           $189.93|
+|  Reserve                                          $11.20  (always kept)|
+|  Stocks~  $34.08 / $168.01  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $133.93  (new stock buys)|
+|  Trade size             $33.60  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (1 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  CMI      MomReversal     $34.08     $522.53  $530.01  +1.4%   $+0.48  |
+|                                                                        |
+|  Total invested                                                  $34.08|
+|  Total open P&L                                                  $+0.48|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                   no (stale (4325.9m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  CMI  P&L +1.4%  $+0.48                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  35                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  LNT      MomReversal     eq     $64.39   35.7   0.70    -14.9% drop/60|
+|  LNT      RSIRecovery     eq     $64.39   35.7   0.70    RSI 29.1→35.7 |
+|  GOOG     Pullback50      eq     $339.86  44.9   -0.98   50MA bounce (-|
+|  GOOGL    Pullback50      eq     $343.07  44.6   -1.26   50MA bounce (-|
+|  BRK-B    Pullback50      eq     $503.32  36.8   -0.97   50MA bounce (-|
+|  CSCO     Pullback50      eq     $111.89  54.9   -0.98   50MA bounce (-|
+|  COP      Pullback50      eq     $126.86  34.8   -1.09   50MA bounce (-|
+|  EBAY     Pullback50      eq     $107.08  44.6   -0.82   50MA bounce (-|
+|  GDDY     Pullback50      eq     $96.98   40.0   -0.90   50MA bounce (+|
+|  HLT      Pullback50      eq     $319.45  60.2   -2.33   50MA bounce (+|
+|  HUM      Pullback50      eq     $388.82  40.1   -1.52   50MA bounce (+|
+|  NCLH     EarningsDrift   eq     $15.14   56.7   1.05    post-earnings |
+|  OXY      Pullback50      eq     $57.86   38.3   -1.58   50MA bounce (-|
+|  PM       Pullback50      eq     $188.35  35.0   -1.63   50MA bounce (-|
+|  STX      Pullback50      eq     $848.29  56.0   3.68    50MA bounce (-|
+|  SOLV     Pullback50      eq     $88.31   40.6   -1.09   50MA bounce (+|
+|  TRGP     Pullback50      eq     $281.81  44.0   -0.74   50MA bounce (+|
+|  VRSN     Pullback50      eq     $288.49  39.7   -1.33   50MA bounce (-|
+|  AVNT     Pullback50      eq     $41.56   54.0   -1.32   50MA bounce (-|
+|  BTSG     Pullback50      eq     $60.33   50.1   -0.56   50MA bounce (-|
+|  CNO      Pullback50      eq     $54.07   36.1   -1.24   50MA bounce (-|
+|  COKE     Pullback50      eq     $192.13  37.3   -0.63   50MA bounce (+|
+|  DAR      Pullback50      eq     $63.02   42.8   -1.12   50MA bounce (-|
+|  EHC      Pullback50      eq     $119.92  41.0   -0.64   50MA bounce (-|
+|  ITT      Pullback50      eq     $206.82  58.4   -1.47   50MA bounce (+|
+|  LNTH     Pullback50      eq     $100.02  44.3   -1.70   50MA bounce (-|
+|  MEDP     Pullback50      eq     $601.57  52.8   -0.41   50MA bounce (+|
+|  PR       Pullback50      eq     $22.11   37.8   -0.87   50MA bounce (-|
+|  ROKU     Pullback50      eq     $152.30  21.0   -1.08   50MA bounce (-|19:50:36  INFO        BUY  NCLH  $33.60  [EarningsDrift]  id=80fcc6bb-65e1-43f6-8f9b-7fecbbd4af55
+19:50:36  INFO        BUY  LNT  $33.60  [MomReversal]  id=262e5730-bc45-4a6f-8c28-0e58cece5e67
+19:50:57  INFO        place_all_stops: checking 3 positions...
+19:50:57  INFO        STOP skipped CMI: fractional (0.0643 shares) — software exit will handle it
+19:50:57  INFO        STOP skipped LNT: fractional (0.5218 shares) — software exit will handle it
+19:50:57  INFO        STOP-MARKET placed NCLH  qty=2 (pos=2.2204)  stop=$15.05  id=75b0ab9f-f762-4737-8e33-fb1903ce9f02
+19:50:57  INFO        place_eod_stops: updating 3 stops to current price...
+19:50:57  INFO        EOD stop skip CMI: 0.0643 shares (fractional) — ext_exits will cover
+19:50:57  INFO        EOD stop skip LNT: 0.5218 shares (fractional) — ext_exits will cover
+19:50:57  INFO        EOD stop: cancelled old stop NCLH
+19:50:58  WARNING     EOD stop failed NCLH: {"available":"0.220374838","code":40310000,"existing_qty":"2.220374838","held_for_orders":"2","message":"insufficient qty available for order (requested: 2, available: 0.220374838)","symbol":"NCLH"}
+19:50:58  INFO        Daily log -> logs/daily/2026-10-02.md
+19:50:58  INFO        Dashboard written → logs/dashboard.md
+
+|  RS       Pullback50      eq     $399.32  61.6   -0.63   50MA bounce (-|
+|  RNR      Pullback50      eq     $324.58  39.4   -0.89   50MA bounce (-|
+|  ST       Pullback50      eq     $43.53   66.0   -0.85   50MA bounce (-|
+|  UGI      Pullback50      eq     $37.10   43.4   -0.68   50MA bounce (+|
+|  VMI      Pullback50      eq     $479.01  57.3   -0.83   50MA bounce (-|
+|  WTS      Pullback50      eq     $364.14  69.1   -0.49   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] NCLH  EarningsDrift                                $33.60|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] LNT  MomReversal                                   $33.60|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] GOOG  Pullback50                                     cap 3|
+|    SKIP [eq] GOOGL  Pullback50                                    cap 3|
+|    SKIP [eq] BRK-B  Pullback50                                    cap 3|
+|    SKIP [eq] CSCO  Pullback50                                     cap 3|
+|    SKIP [eq] COP  Pullback50                                      cap 3|
+|    SKIP [eq] EBAY  Pullback50                                     cap 3|
+|    SKIP [eq] GDDY  Pullback50                                     cap 3|
+|    SKIP [eq] HLT  Pullback50                                      cap 3|
+|    SKIP [eq] HUM  Pullback50                                      cap 3|
+|    SKIP [eq] OXY  Pullback50                                      cap 3|
+|    SKIP [eq] PM  Pullback50                                       cap 3|
+|    SKIP [eq] STX  Pullback50                                      cap 3|
+|    SKIP [eq] SOLV  Pullback50                                     cap 3|
+|    SKIP [eq] TRGP  Pullback50                                     cap 3|
+|    SKIP [eq] VRSN  Pullback50                                     cap 3|
+|    SKIP [eq] AVNT  Pullback50                                     cap 3|
+|    SKIP [eq] BTSG  Pullback50                                     cap 3|
+|    SKIP [eq] CNO  Pullback50                                      cap 3|
+|    SKIP [eq] COKE  Pullback50                                     cap 3|
+|    SKIP [eq] DAR  Pullback50                                      cap 3|
+|    SKIP [eq] EHC  Pullback50                                      cap 3|
+|    SKIP [eq] ITT  Pullback50                                      cap 3|
+|    SKIP [eq] LNTH  Pullback50                                     cap 3|
+|    SKIP [eq] MEDP  Pullback50                                     cap 3|
+|    SKIP [eq] PR  Pullback50                                       cap 3|
+|    SKIP [eq] ROKU  Pullback50                                     cap 3|
+|    SKIP [eq] RS  Pullback50                                       cap 3|
+|    SKIP [eq] RNR  Pullback50                                      cap 3|
+|    SKIP [eq] ST  Pullback50                                       cap 3|
+|    SKIP [eq] UGI  Pullback50                                      cap 3|
+|    SKIP [eq] VMI  Pullback50                                      cap 3|
+|    SKIP [eq] WTS  Pullback50                                      cap 3|
+|    SKIP [eq] LNT  RSIRecovery                                     cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  NCLH                                                 still unconfirmed|
+|  LNT                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   RubberBand + GapDown (display only — schedule not enforced)|
+|  Scanned                                                            900|
+|  Signals                                                             35|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $223.93|
+|  Cash                                                           $122.75|
++========================================================================+

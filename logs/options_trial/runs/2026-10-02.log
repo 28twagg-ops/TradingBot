@@ -38514,11 +38514,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-10-02.log
 elapsed=6.2s reconcile=0.43s cancel=0.2s manage=3.12s
 
-=== 15:35:03 ET — manage-only (past entry window) [elapsed=6.0s reconcile=0.23s cancel=0.11s manage=4.05s] ===
-=== options_morning_bot (PAPER) 2026-10-02T15:35:03.405780-04:00 ===
+=== 15:40:42 ET — manage-only (past entry window) [elapsed=6.6s reconcile=0.47s cancel=0.22s manage=3.08s] ===
+=== options_morning_bot (PAPER) 2026-10-02T15:40:42.667826-04:00 ===
 
 [Run context]
-Paper auth OK — equity $988710.59, account PA33P8KT02IL
+Paper auth OK — equity $988582.49, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:77:live_1to1+variations
 
 [Setup]
@@ -38527,18 +38527,15 @@ S406-only twin b91 s406_only — S406 | TP+50%/SL-40% | paper edge test
 Variation study: 75 lab/promising bucket(s) | cohort: 75 unique (S163, S164, S166, S167, S168, S169, S170, S171, S172, S175, S200, S201 … +63 more) | max 200 new entries/run
 Dropped (no new entries; ex-reflected P&L): S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
 Shared-OCC entry block ON (one lab lot per contract)
-  EXIT [b421|lab0421_s365_w2_1005_1045_r2|S365] stop_loss (-90.7%) SELL blocked (uncovered/shared OCC) DKNG261016C00023500 x1: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   EXIT skip NKE261002C00038500: open sell already pending
-  cancelled protective stop ABBV261009C00270000 id=c9c2b44b-e37f-4e2e-8539-37c4895fcb77
-  EXIT [b12|lab0012_s403_w2_1005_1045_r1|S403] take_profit (+56.1%) SELL 1 ABBV261009C00270000 @<= 1.00  id=e7a26637-c813-4504-a7ff-a5ec52df115a
   EXIT [b171|lab0171_s216_w4_1120_1135_r2|S216] EOD SELL blocked (uncovered/shared OCC) CVNA261002C00069000 x1: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   EXIT [b170|lab0170_s216_w4_1120_1135_r1|S216] EOD SELL blocked (uncovered/shared OCC) CVNA261002C00069000 x1: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b421|lab0421_s365_w2_1005_1045_r2|S365] stop_loss (-95.3%) SELL blocked (uncovered/shared OCC) DKNG261016C00023500 x1: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed DKNG261016C00023500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed CVX261016C00220000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed CVNA261002C00069000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
   PROT STOP failed OXY261009C00058000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  PROT STOP failed ABBV261009C00270000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-Protective stops: placed=0 upgraded=0 already=6 failed=5 (market-first)
+Protective stops: placed=0 upgraded=0 already=6 failed=4 (market-first)
 
 [Manage only]
 Past entry window; manage/exit only.
@@ -38547,36 +38544,36 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $988,710.59
+Account equity: $988,582.49
 Active buckets: 77 of 77 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
-  Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+13,385.55 all-time  |  $+38.00 today
-  Raw (incl dropped):     $+8,161.55 all-time  |  $+38.00 today
-  Open (not sold yet): $-423.00 unrealized (virtual lots)
-                       $-545.00 unrealized (broker total)
-  Premium deployed:    $877.00 in open positions
-  Combined P&L:        $+12,962.55 (reflected realized + open virtual)
+  Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+13,422.55 all-time  |  $+75.00 today
+  Raw (incl dropped):     $+8,198.55 all-time  |  $+75.00 today
+  Open (not sold yet): $-432.00 unrealized (virtual lots)
+                       $-554.00 unrealized (broker total)
+  Premium deployed:    $811.00 in open positions
+  Combined P&L:        $+12,990.55 (reflected realized + open virtual)
 
 Ledger (master)
-  Total events:     15794
+  Total events:     15795
   Today entries:    12
-  Today exits (reflected): 6
-  All-time exits (reflected): 2708  wins 44%
+  Today exits (reflected): 7
+  All-time exits (reflected): 2709  wins 44%
   Avg return/trade: +30.9%  median -23.3%
 
 Open virtual lots (by bucket)
-  b12 lab0012_s403_w2_1005_1045_r1  prem=$    66  real=$-39.00  open=$ +0.00  lots=1  [S403:ABBVx1]
+  b12 lab0012_s403_w2_1005_1045_r1  prem=$     0  real=$ -2.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b13 lab0013_s350_w2_1005_1045_r1  prem=$     0  real=$+53.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b15 lab0015_s356_w2_1005_1045_r1  prem=$    68  real=$ +0.00  open=$+17.00  lots=1  [S356:NKEx1]
+  b15 lab0015_s356_w2_1005_1045_r1  prem=$    68  real=$ +0.00  open=$+16.00  lots=1  [S356:NKEx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b16 lab0016_s357_w2_1005_1045_r1  prem=$    53  real=$ +0.00  open=$+13.00  lots=1  [S357:NKEx1]
+  b16 lab0016_s357_w2_1005_1045_r1  prem=$    53  real=$ +0.00  open=$+12.00  lots=1  [S357:NKEx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b21 lab0021_s364_w2_1005_1045_r1  prem=$     9  real=$ +0.00  open=$ +1.00  lots=1  [S364:OXYx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b22 lab0022_s365_w2_1005_1045_r1  prem=$    64  real=$ +0.00  open=$-11.00  lots=1  [S365:COPx1]
+  b22 lab0022_s365_w2_1005_1045_r1  prem=$    64  real=$ +0.00  open=$-12.00  lots=1  [S365:COPx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b55 lab0055_s406_w2_1005_1045_r1  prem=$     0  real=$ -7.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -38586,25 +38583,25 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b90 live_1to1               prem=$    19  real=$+10.00  open=$ +7.00  lots=1  [S404:NKEx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-40%
-  b91 s406_only               prem=$    73  real=$ +0.00  open=$+21.00  lots=1  [S406:OXYx1]
+  b91 s406_only               prem=$    73  real=$ +0.00  open=$+17.00  lots=1  [S406:OXYx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-40%
   (66 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  COP261016C00135000  qty=1  cost=$64.00  return=-17.2%  open P&L=$-11.00
+  COP261016C00135000  qty=1  cost=$64.00  return=-18.8%  open P&L=$-12.00
   CVNA261002C00066000  qty=-1  cost=$6.00  return=+16.7%  open P&L=$+1.00
   CVNA261002C00068000  qty=-1  cost=$11.00  return=+54.5%  open P&L=$+6.00
   CVNA261002C00069000  qty=2  cost=$76.00  return=-100.0%  open P&L=$-76.00
   CVX261002C00210000  qty=-1  cost=$33.00  return=+97.0%  open P&L=$+32.00
   CVX261016C00220000  qty=1  cost=$72.00  return=-30.6%  open P&L=$-22.00
   DKNG261009C00022500  qty=-1  cost=$21.00  return=+85.7%  open P&L=$+18.00
-  DKNG261016C00023500  qty=1  cost=$43.00  return=-90.7%  open P&L=$-39.00
+  DKNG261016C00023500  qty=1  cost=$43.00  return=-95.3%  open P&L=$-41.00
   NKE261002C00038500  qty=6  cost=$334.00  return=-100.0%  open P&L=$-334.00
   NKE261009C00035000  qty=1  cost=$19.00  return=+36.8%  open P&L=$+7.00
-  NKE261016C00034000  qty=1  cost=$68.00  return=+25.0%  open P&L=$+17.00
-  NKE261023C00035000  qty=1  cost=$53.00  return=+24.5%  open P&L=$+13.00
+  NKE261016C00034000  qty=1  cost=$68.00  return=+23.5%  open P&L=$+16.00
+  NKE261023C00035000  qty=1  cost=$53.00  return=+22.6%  open P&L=$+12.00
   OXY261002C00056000  qty=-1  cost=$27.00  return=-663.0%  open P&L=$-179.00
-  OXY261009C00058000  qty=1  cost=$73.00  return=+28.8%  open P&L=$+21.00
+  OXY261009C00058000  qty=1  cost=$73.00  return=+23.3%  open P&L=$+17.00
   OXY261009C00062000  qty=1  cost=$9.00  return=+11.1%  open P&L=$+1.00
 
 Per-bucket exit stats (all time)
@@ -38658,7 +38655,7 @@ Per-bucket exit stats (all time)
   b1155|lab1155_s164_w3_1045_1120_r2  n=  3  avg=+43.1%  med=+43.2%  realized=$+42.00
   b1156|lab1156_s164_w4_1120_1135_r1  n=  2  avg=+144.5%  med=+342.9%  realized=$+65.00
   b1157|lab1157_s164_w4_1120_1135_r2  n=  2  avg=+150.4%  med=+323.8%  realized=$+65.00
-  b12|lab0012_s403_w2_1005_1045_r1  n=  2  avg=-55.0%  med=-50.0%  realized=$-39.00
+  b12|lab0012_s403_w2_1005_1045_r1  n=  3  avg=-18.0%  med=-50.0%  realized=$-2.00
   b132|c132_s164_w1_0928_1005_r5  n=  2  avg=-65.7%  med=-53.6%  realized=$-37.00
   b135|c135_s164_w4_1120_1135_r5  n=  1  avg=-50.0%  med=-50.0%  realized=$-4.00
   b13|lab0013_s350_w2_1005_1045_r1  n=  1  avg=+74.7%  med=+74.7%  realized=$+53.00
@@ -38980,20 +38977,20 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $988,710.59                                              |
-|Open Risk    : 17 lots (15 broker pos)                                  |
+|Equity       : $988,582.49                                              |
+|Open Risk    : 16 lots (15 broker pos)                                  |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
 |-- SYSTEM HEALTH --                                                     |
 |Zombies      : 0 (Ledger is clean)                                      |
-|Lab Status   : 17 Active Lots | 0 Pending Orders                        |
+|Lab Status   : 16 Active Lots | 0 Pending Orders                        |
 |Auto-Matrix  : (Pending EOD report generation)                          |
 +========================================================================+
 +========================================================================+
 |[DATA QUALITY: CLEAN vs ERRORS vs KEEP-ONLY]                            |
 +========================================================================+
 |  CLEAN              n=1612  win= 48.1%  med= -27.6%  $+18,181          |
-|  TAINTED            n=1955  win= 33.0%  med= -40.0%  $-10,019          |
+|  TAINTED            n=1956  win= 33.1%  med= -40.0%  $-9,982           |
 |  KEEP-only          n=783   win= 60.8%  med= +50.9%  $+12,045          |
 |  KEEP recent        n=590   win= 59.2%  med= +53.3%  $+7,984           |
 |  KEEP(23): S163,S164,S167,S168,S173,S174,S210,S350...                  |
@@ -39019,11 +39016,6 @@ Per-bucket exit stats (all time)
 |  b84  g084_mid_tp30_sl30      36%  -63.8%    14                        |
 +========================================================================+
 +========================================================================+
-|[PENDING EXITS (1)]                                                     |
-+========================================================================+
-|  b12  S403 ABBV261009C00270000 x1 take_profit (+56.1%)                 |
-+========================================================================+
-+========================================================================+
 |[OPEN OPTIONS (15)]                                                     |
 +========================================================================+
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
@@ -39031,13 +39023,13 @@ Per-bucket exit stats (all time)
 |  NKE261002C00038500            6   -100.0%   $   -334.00               |
 |  OXY261002C00056000           -1   -663.0%   $   -179.00               |
 |  CVNA261002C00069000           2   -100.0%   $    -76.00               |
-|  DKNG261016C00023500           1    -90.7%   $    -39.00               |
+|  DKNG261016C00023500           1    -95.3%   $    -41.00               |
 |  CVX261002C00210000           -1    +97.0%   $    +32.00               |
 |  CVX261016C00220000            1    -30.6%   $    -22.00               |
-|  OXY261009C00058000            1    +28.8%   $    +21.00               |
 |  DKNG261009C00022500          -1    +85.7%   $    +18.00               |
+|  OXY261009C00058000            1    +23.3%   $    +17.00               |
 |  ... 7 more position(s)                                                |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-10-02.log
-elapsed=6.0s reconcile=0.23s cancel=0.11s manage=4.05s
+elapsed=6.6s reconcile=0.47s cancel=0.22s manage=3.08s
 
