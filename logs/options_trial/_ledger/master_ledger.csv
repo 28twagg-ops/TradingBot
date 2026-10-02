@@ -15775,3 +15775,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-10-02T13:51:04Z,reconcile,1122,lab1122_s168_w1_0928_1005_r1,S168,60824a4f94fb,NKE,NKE261002C00038000,0,,,68.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
 2026-10-02T13:51:04Z,reconcile,1053,lab1053_s165_w1_0928_1005_r2,S165,736da7fa1059,NKE,NKE261002C00038000,0,,,68.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
 2026-10-02T13:51:04Z,reconcile,1052,lab1052_s165_w1_0928_1005_r1,S165,5aa2635aa5e0,NKE,NKE261002C00038000,0,,,68.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
+2026-10-02 14:00:17.281758+00:00,entry,90,live_1to1,S404,20e2bf5baa4c,NKE,NKE261009C00035000,1,0.19,0.19,19.0,,,,-0.01,,0.5,-0.4,0.16216216216216217,gap -7.4%,82e18e2b-f4fc-4f73-b2d8-8668f6bf320d
