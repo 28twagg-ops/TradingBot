@@ -222,19 +222,41 @@
       "entry_order_id": "8be4bbcf-b0ec-4341-8b79-3d5ea1377d70"
     }
   ],
-  "pending_orders": [],
-  "pending_exits": [
+  "pending_orders": [
     {
-      "order_id": "e83bb713-f8a5-45a3-b479-aa0a49d1581b",
-      "lot_id": "18d8a9cd291d",
-      "bucket_id": 829,
-      "strategy_id": "S406",
-      "occ_symbol": "NKE261002C00038500",
+      "order_id": "82e18e2b-f4fc-4f73-b2d8-8668f6bf320d",
+      "bucket_id": 90,
+      "strategy_id": "S404",
+      "occ_symbol": "NKE261009C00035000",
+      "underlying": "NKE",
       "qty": 1,
-      "reason": "stop_loss (-100.0%)",
-      "submitted": "2026-10-02T09:35:07"
+      "limit": 0.19,
+      "profile_name": "live_1to1",
+      "submitted": "2026-10-02",
+      "detail": "gap -7.4%",
+      "spread_frac": 0.16216216216216217,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.4
+    },
+    {
+      "order_id": "1896c8e1-4d96-4f35-aa18-aa1b92062602",
+      "bucket_id": 90,
+      "strategy_id": "S406",
+      "occ_symbol": "OXY261009C00059000",
+      "underlying": "OXY",
+      "qty": 1,
+      "limit": 0.63,
+      "profile_name": "live_1to1",
+      "submitted": "2026-10-02",
+      "detail": "RB gap -1.6% reclaim",
+      "spread_frac": 0.16949152542372875,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.4
     }
   ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b829": 56.00000000000001,
     "b828": 56.00000000000001,
@@ -249,7 +271,10 @@
     "b170": 38.0
   },
   "session_date": "2026-10-02",
-  "entries_locked": [],
+  "entries_locked": [
+    "90|S404|2026-10-02",
+    "90|S406|2026-10-02"
+  ],
   "processed_orders": [
     "110b3c55-a2ac-445f-97a2-be84e060bf4b",
     "79605a5c-bfb7-410f-bd30-426f94c10d2d",
@@ -730,7 +755,7 @@
     "540e73cf-1ff2-44e7-95fa-c121e28dc409",
     "e592089a-a88d-401c-b99a-0c6a26373e54"
   ],
-  "submitted_today": 0,
+  "submitted_today": 2,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-02"
 }

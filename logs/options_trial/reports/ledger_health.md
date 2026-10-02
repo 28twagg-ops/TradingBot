@@ -1,6 +1,6 @@
 # Ledger health — 2026-10-02
 
-_Generated 2026-10-02T09:26:34.556590_
+_Generated 2026-10-02T09:58:15.538829_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -10,11 +10,11 @@ State file: OK
 
 | Check                       | Count | Status |
 |-----------------------------|------:|--------|
-| Current stuck (state)       |    21 | WARN |
+| Current stuck (state)       |     6 | WARN |
 | Orphaned lots (post-stable) |  1838 | WARN |
-| Missing exit records (post) |  1817 | WARN |
+| Missing exit records (post) |  1832 | WARN |
 | State/ledger mismatches     |     0 | OK |
-| Total open lots             |    26 | INFO |
+| Total open lots             |    11 | INFO |
 | Total closed lots           |  2672 | INFO |
 | Pre-cutoff audit debt       |     0 | INFO |
 | Transition audit debt       |   744 | INFO |
@@ -29,23 +29,8 @@ Notes:
 
 | lot_id | strategy | symbol | entry_day | age_days |
 |--------|----------|--------|-----------|---------:|
-| 97e54812e581 | S412 | NKE | 2026-09-25 | 7 |
-| cd504ce17d57 | S412 | NKE | 2026-09-25 | 7 |
 | 18d8a9cd291d | S406 | NKE | 2026-09-25 | 7 |
 | 89c3ca3043ba | S406 | NKE | 2026-09-25 | 7 |
-| 2e2b7dbe88f6 | S364 | NKE | 2026-09-25 | 7 |
-| 9d0435e919d4 | S364 | NKE | 2026-09-25 | 7 |
-| a9ac3e75cc9c | S404 | NKE | 2026-09-25 | 7 |
-| 801e26c21ddd | S398 | NKE | 2026-09-25 | 7 |
-| fbdfb716ce45 | S398 | NKE | 2026-09-25 | 7 |
-| 4d094b033538 | S163 | NKE | 2026-09-25 | 7 |
-| 60d4b8ef839f | S163 | NKE | 2026-09-25 | 7 |
-| 31e53303cac8 | S167 | NKE | 2026-09-25 | 7 |
-| 74d7cb42e718 | S167 | NKE | 2026-09-25 | 7 |
-| 934ce252885e | S168 | NKE | 2026-09-25 | 7 |
-| 60824a4f94fb | S168 | NKE | 2026-09-25 | 7 |
-| 736da7fa1059 | S165 | NKE | 2026-09-25 | 7 |
-| 5aa2635aa5e0 | S165 | NKE | 2026-09-25 | 7 |
 | 6aff5a6b90ac | S406 | NKE | 2026-09-25 | 7 |
 | 6b5580213d99 | S406 | NKE | 2026-09-25 | 7 |
 | d722d11d533a | S399 | NKE | 2026-09-25 | 7 |
