@@ -362,24 +362,7 @@
       "entry_order_id": "5195641f-3f69-4e18-a1ae-03206133ceec"
     }
   ],
-  "pending_orders": [
-    {
-      "order_id": "3e72b26a-c880-435c-9064-8284355bb892",
-      "bucket_id": 18,
-      "strategy_id": "S359",
-      "occ_symbol": "OXY261002C00057000",
-      "underlying": "OXY",
-      "qty": 1,
-      "limit": 0.31,
-      "profile_name": "lab0018_s359_w2_1005_1045_r1",
-      "submitted": "2026-10-02",
-      "detail": "RB gap -1.6% reclaim",
-      "spread_frac": 0.2068965517241379,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    }
-  ],
+  "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {
     "b829": 56.00000000000001,
