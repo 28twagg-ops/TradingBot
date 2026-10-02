@@ -9315,3 +9315,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-02 19:50:58,scan_evening,bull,223.93,122.75,35,0,0,3,CMI|LNT|NCLH,both
 2026-10-02 20:00:57,scan_evening,bull,223.92,156.38,32,0,0,2,CMI|LNT,both
 2026-10-02 20:03:26,ext_exits,bull,223.92,156.38,0,0,0,2,CMI|LNT,both
+2026-10-02 20:06:28,ext_exits,bull,223.92,156.38,0,0,0,2,CMI|LNT,both
