@@ -82,7 +82,24 @@
       "entry_order_id": "6b1342ea-3be6-408b-8045-8b0b8509f49f"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "b9034d9c-7cf8-43f3-b834-a1dc345d9d3c",
+      "bucket_id": 55,
+      "strategy_id": "S406",
+      "occ_symbol": "BMY261009C00062000",
+      "underlying": "BMY",
+      "qty": 1,
+      "limit": 0.1,
+      "profile_name": "lab0055_s406_w2_1005_1045_r1",
+      "submitted": "2026-10-05",
+      "detail": "RB gap -2.1% reclaim",
+      "spread_frac": 0.09523809523809518,
+      "buy_offset": -0.01,
+      "take_profit": 0.3,
+      "stop_loss": -0.3
+    }
+  ],
   "pending_exits": [],
   "bucket_open_premium": {
     "b421": 43.0,
@@ -91,7 +108,9 @@
     "b91": 73.0
   },
   "session_date": "2026-10-05",
-  "entries_locked": [],
+  "entries_locked": [
+    "55|S406|2026-10-05"
+  ],
   "processed_orders": [
     "c9662e18-93ac-4ed4-a018-297ecb0dcdfb",
     "7f254af0-68aa-49b2-8486-138901ac4276",
@@ -494,7 +513,7 @@
     "fbd36f14-7673-40fb-bd4a-135b0edfa4ba",
     "b39a5f63-c3d7-44cf-b5b4-56afa1e858a7"
   ],
-  "submitted_today": 0,
+  "submitted_today": 1,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-05"
 }
