@@ -68,7 +68,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 66,lab0066_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 67,lab0067_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-02,False,,,,,,,0,,,,idle
 90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,0,1,0,2026-10-02,False,,0.0,-47.37,-47.37,-47.37,-47.37,-9.0,NKE,S404,broker_fill_backfill,closed
-91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,0,0,1,2026-10-02,False,,,,,,,0,,,,open
+91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,0,1,0,2026-10-02,False,,100.0,67.12,67.12,67.12,67.12,49.0,OXY,S406,take_profit (+65.8%),closed
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2001,promising_s170_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2002,promising_s171_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
