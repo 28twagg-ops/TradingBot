@@ -1,0 +1,31 @@
+13:47:19  INFO      Mode: morning_scan
+13:47:20  INFO        [positions] 3/3 (3 valid)
+13:47:20  INFO        SELL MARKET [urgent] CMI closed
+13:47:23  INFO        TX logged: SELL CMI  P&L -0.58%
+13:47:23  INFO        SELL MARKET [urgent] NCLH closed
+13:47:25  INFO        TX logged: SELL NCLH  P&L -0.56%
+13:47:25  INFO        SELL LIMIT LNT  qty=0.521843151  limit=$64.11  id=6dbc1ddf-bd44-4001-9fad-a6758ca93b83
+13:47:46  INFO        SELL LIMIT filled LNT (confirmed by position check)
+13:47:46  INFO        TX logged: SELL LNT  P&L -0.34%
+13:47:46  INFO        Universe cache hit: 903 tickers (tickers_2026-10-05.json)
+13:47:47  INFO        [universe] 40/903 (40 valid)
+13:47:48  INFO        [universe] 80/903 (80 valid)
+13:47:49  INFO        [universe] 120/903 (120 valid)
+13:47:50  INFO        [universe] 160/903 (160 valid)
+13:47:51  INFO        [universe] 200/903 (199 valid)
+13:47:59  INFO        [universe] 240/903 (238 valid)
+13:48:12  INFO        [universe] 280/903 (278 valid)
+13:48:22  INFO        [universe] 320/903 (318 valid)
+13:48:35  INFO        [universe] 360/903 (358 valid)
+13:48:49  INFO        [universe] 400/903 (398 valid)
+13:48:59  INFO        [universe] 440/903 (438 valid)
+13:49:12  INFO        [universe] 480/903 (478 valid)
+13:49:22  INFO        [universe] 520/903 (518 valid)
+13:49:36  INFO        [universe] 560/903 (558 valid)
+13:49:49  INFO        [universe] 600/903 (598 valid)
+13:49:59  INFO        [universe] 640/903 (638 valid)
+13:50:12  INFO        [universe] 680/903 (678 valid)
+13:50:22  INFO        [universe] 720/903 (718 valid)
+13:50:35  INFO        [universe] 760/903 (758 valid)
+13:50:49  INFO        [universe] 800/903 (798 valid)
+13:50:59  INFO        [universe] 840/903 (838 valid)

@@ -15802,4 +15802,3 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-10-05T13:01:38Z,reconcile,792,lab0792_s399_w1_0928_1005_r1,S399,de5f6ea50825,NKE,NKE261002C00038500,0,,,53.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
 2026-10-05T13:01:38Z,reconcile,171,lab0171_s216_w4_1120_1135_r2,S216,8b4ad5a03173,CVNA,CVNA261002C00069000,0,,,38.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
 2026-10-05T13:01:38Z,reconcile,170,lab0170_s216_w4_1120_1135_r1,S216,c7dfdfefbb95,CVNA,CVNA261002C00069000,0,,,38.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
-2026-10-05 13:30:25.404207+00:00,exit,90,live_1to1,S404,20e2bf5baa4c,NKE,NKE261009C00035000,1,,0.1,19.0,-47.37,-9.0,broker_fill_backfill,,-0.01,0.5,-0.4,,,ab85a7fb-e7f4-4b21-baf6-c9f2b7ff11cb

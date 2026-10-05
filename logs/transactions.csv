@@ -1272,3 +1272,6 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-10-02 13:47:29,2026-10-02,SELL,BA,MomReversal,192.42,33.25,-1.04,-0.35,0,stop_loss (-1.0%),bull,224.36
 2026-10-02 16:56:24,2026-10-02,SELL,CMS,MomReversal,63.73,33.43,-0.51,-0.17,0,stop_loss (-0.5%),bull,223.76
 2026-10-02 19:53:09,2026-10-02,SELL,NCLH,EarningsDrift,15.14,33.63,0.15,0.05,0,midline (+0.2%),bull,223.98
+2026-10-05 13:47:23,2026-10-05,SELL,CMI,MomReversal,519.49,33.4,-0.58,-0.2,3,stop_loss (-0.6%),bull,222.99
+2026-10-05 13:47:25,2026-10-05,SELL,NCLH,EarningsDrift,15.07,33.39,-0.56,-0.19,0,stop_loss (-0.6%),bull,222.99
+2026-10-05 13:47:46,2026-10-05,SELL,LNT,MomReversal,64.12,33.46,-0.34,-0.11,3,max_hold 3d (-0.3%),bull,222.98
