@@ -4485,3 +4485,102 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261005T151507Z
+
+- UTC timestamp: `20261005T151507Z`
+- GitHub run: [#11849](https://github.com/28twagg-ops/TradingBot/actions/runs/37330594868)
+- Run id: `37330594868`
+- Live bot: exit=`0`, duration=`2s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261005T151507Z_live_bot.log`, `logs/action_runs/20261005T151507Z_live_options.log`, `logs/action_runs/20261005T151507Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1614 | 48.2 | -26.7 | +38.8 | $+18,267 |
+| TAINTED | 1959 | 33.0 | -40.0 | +12.0 | $-10,116 |
+| KEEP-only | 785 | 60.9 | +50.9 | +59.0 | $+12,131 |
+| KEEP-only recent | 592 | 59.3 | +53.3 | +66.7 | $+8,070 |
+
+- KEEP strategies (23): S163, S164, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S397, S398, S403, S404, S406, S411, S412
+- KILL strategies (21): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-10-05T11:06:26.057714-04:00","date":"2026-10-05","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":27.1,"phases_s":{"reconcile":0.38,"cancel":0.12,"manage":1.2,"protective_stops":0.55,"scan":23.56,"entries":0.75},"signals":25,"placed":0,"equity":987230.87,"open_positions":5,"pending_orders":0,"open_lots":4,"submitted_today":1,"filled_today":1,"unattributed_contracts":0,"top_signals":["S210:MPC","S164:BMY","S168:BMY","S167:BMY","S163:BMY","S350:BMY","S352:BMY","S356:BMY"],"github_run":"11848","github_run_id":"37329895799","status":"ok","data_quality":{"clean":{"n":1614,"win":48.2,"med":-26.67,"avg":38.81,"pnl":18266.83},"tainted":{"n":1959,"win":32.98,"med":-40.0,"avg":12.04,"pnl":-10116.28},"keep_only":{"n":785,"win":60.89,"med":50.88,"avg":58.98,"pnl":12131.45},"keep_only_recent":{"n":592,"win":59.29,"med":53.33,"avg":66.7,"pnl":8070.0},"keep_strategies":["S163","S164","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S397","S398","S403","S404","S406","S411","S412"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+15:15:08  INFO      Mode: exits
+15:15:09  INFO        Daily log -> logs/daily/2026-10-05.md
+15:15:09  INFO        Daily log reconciled -> logs/daily/2026-10-05.md (3 ledger rows)
+15:15:09  INFO        Daily log -> logs/daily/2026-10-05.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:15 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $222.98|
++========================================================================+
+
++========================================================================+
+|                             MORNING CHECK                              |
++========================================================================+
+|                                                                        |
+|  No open stock positions.                                              |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           0|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                0|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
