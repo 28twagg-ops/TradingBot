@@ -15806,3 +15806,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-10-05 13:30:25.404207+00:00,exit,90,live_1to1,S404,20e2bf5baa4c,NKE,NKE261009C00035000,1,,0.1,19.0,-47.37,-9.0,broker_fill_backfill,,-0.01,0.5,-0.4,,,ab85a7fb-e7f4-4b21-baf6-c9f2b7ff11cb
 2026-10-05 13:37:53.622568+00:00,exit,22,lab0022_s365_w2_1005_1045_r1,S365,62b713e542be,COP,COP261016C00135000,1,,0.22,64.0,-65.62,-42.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,fbd36f14-7673-40fb-bd4a-135b0edfa4ba
 2026-10-05 13:45:17.392667+00:00,exit,21,lab0021_s364_w2_1005_1045_r1,S364,1d8ac4971d41,OXY,OXY261009C00062000,1,,0.04,9.0,-55.56,-5.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,b39a5f63-c3d7-44cf-b5b4-56afa1e858a7
+2026-10-05 14:38:04.815379+00:00,entry,55,lab0055_s406_w2_1005_1045_r1,S406,ff40ce871686,BMY,BMY261009C00062000,1,0.1,0.08,8.0,,,,-0.01,,0.3,-0.3,0.09523809523809518,RB gap -2.1% reclaim,b9034d9c-7cf8-43f3-b834-a1dc345d9d3c
