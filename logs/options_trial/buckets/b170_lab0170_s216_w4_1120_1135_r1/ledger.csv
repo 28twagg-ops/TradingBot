@@ -17,3 +17,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-09-17 15:22:38.609453+00:00,entry,170,lab0170_s216_w4_1120_1135_r1,S216,817e776bd219,MCD,MCD260918C00252500,1,0.41,0.4,40.0,,,,-0.01,,0.5,-0.5,0.15384615384615383,RSI crossed 30: 26.1 -> 33.3,bed0428c-57ef-43da-bbe8-9d82c4b00562
 2026-09-17T19:45:37Z,reconcile,170,lab0170_s216_w4_1120_1135_r1,S216,817e776bd219,MCD,MCD260918C00252500,0,,,0,,,missing_from_broker,,,,,,lot closed outside of bot (expired/manual),
 2026-09-29 15:26:21.425883+00:00,entry,170,lab0170_s216_w4_1120_1135_r1,S216,c7dfdfefbb95,CVNA,CVNA261002C00069000,1,0.4,0.38,38.0,,,,-0.01,,0.75,-0.75,0.24657534246575336,RSI crossed 30: 21.4 -> 30.2,8be4bbcf-b0ec-4341-8b79-3d5ea1377d70
+2026-10-05T13:01:38Z,reconcile,170,lab0170_s216_w4_1120_1135_r1,S216,c7dfdfefbb95,CVNA,CVNA261002C00069000,0,,,38.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,

@@ -1,6 +1,6 @@
-# Ledger health — 2026-10-02
+# Ledger health — 2026-10-05
 
-_Generated 2026-10-02T19:56:29.646844_
+_Generated 2026-10-05T09:01:47.598244_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -10,11 +10,11 @@ State file: OK
 
 | Check                       | Count | Status |
 |-----------------------------|------:|--------|
-| Current stuck (state)       |     6 | WARN |
-| Orphaned lots (post-stable) |  1838 | WARN |
-| Missing exit records (post) |  1832 | WARN |
+| Current stuck (state)       |     2 | WARN |
+| Orphaned lots (post-stable) |  1915 | WARN |
+| Missing exit records (post) |  1913 | WARN |
 | State/ledger mismatches     |     0 | OK |
-| Total open lots             |    16 | INFO |
+| Total open lots             |     8 | INFO |
 | Total closed lots           |  2679 | INFO |
 | Pre-cutoff audit debt       |     0 | INFO |
 | Transition audit debt       |   744 | INFO |
@@ -29,11 +29,7 @@ Notes:
 
 | lot_id | strategy | symbol | entry_day | age_days |
 |--------|----------|--------|-----------|---------:|
-| 18d8a9cd291d | S406 | NKE | 2026-09-25 | 7 |
-| 89c3ca3043ba | S406 | NKE | 2026-09-25 | 7 |
-| 6aff5a6b90ac | S406 | NKE | 2026-09-25 | 7 |
-| 6b5580213d99 | S406 | NKE | 2026-09-25 | 7 |
-| d722d11d533a | S399 | NKE | 2026-09-25 | 7 |
-| de5f6ea50825 | S399 | NKE | 2026-09-25 | 7 |
+| 33d84c516583 | S365 | DKNG | 2026-09-28 | 7 |
+| 575fa62acd4f | S365 | CVX | 2026-09-29 | 6 |
 
-_Orphaned ledger detail omitted (1838 rows) — see note above on historical lot_id churn._
+_Orphaned ledger detail omitted (1915 rows) — see note above on historical lot_id churn._
