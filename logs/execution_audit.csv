@@ -910,3 +910,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-10-05 13:47:23,2026-10-05,SELL,CMI,MomReversal,519.485,,519.485,33.4,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-10-05 13:47:25,2026-10-05,SELL,NCLH,EarningsDrift,15.065,,15.075,33.39,0.0664,0.0222,market_urgent_full,stop_loss (-0.6%),bull
 2026-10-05 13:47:46,2026-10-05,SELL,LNT,MomReversal,64.13,64.11,64.118,33.46,-0.0187,-0.0063,limit_fill_position_check_full,max_hold 3d (-0.3%),bull
+2026-10-06 13:59:26,2026-10-06,SELL,AES,Pullback50,14.905,14.9,14.905,33.43,0.0,0.0,limit_fill_position_check_full,midline (-0.0%),bull
+2026-10-06 13:59:57,2026-10-06,SELL,AVGO,Pullback50,371.66,371.63,371.638,33.55,-0.0059,-0.002,limit_fill_position_check_full,midline (+0.4%),bull

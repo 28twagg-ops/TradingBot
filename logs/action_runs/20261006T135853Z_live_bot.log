@@ -1,0 +1,17 @@
+13:58:54  INFO      Mode: morning_scan
+13:58:55  INFO        [positions] 3/3 (3 valid)
+13:58:55  INFO        SELL order cancelled AES  type=OrderType.STOP  id=a16de0c5-bbef-4643-922c-8451e9f31c97
+13:58:55  INFO        SELL LIMIT AES  qty=2.242798409  limit=$14.90  id=dc688927-94ff-45cf-ba1f-3dd4e500505a
+13:59:26  INFO        SELL LIMIT filled AES (confirmed by position check)
+13:59:26  INFO        TX logged: SELL AES  P&L -0.03%
+13:59:26  INFO        SELL LIMIT AVGO  qty=0.090281265  limit=$371.63  id=1c315936-d14e-41c0-b950-c5e457ccf1d9
+13:59:57  INFO        SELL LIMIT filled AVGO (confirmed by position check)
+13:59:57  INFO        TX logged: SELL AVGO  P&L 0.45%
+13:59:57  INFO        Universe cache hit: 903 tickers (tickers_2026-10-06.json)
+13:59:58  INFO        [universe] 40/902 (40 valid)
+14:00:00  INFO        [universe] 80/902 (80 valid)
+14:00:01  INFO        [universe] 120/902 (120 valid)
+14:00:02  INFO        [universe] 160/902 (160 valid)
+14:00:04  INFO        [universe] 200/902 (199 valid)
+14:00:11  INFO        [universe] 240/902 (238 valid)
+14:00:22  INFO        [universe] 280/902 (278 valid)
