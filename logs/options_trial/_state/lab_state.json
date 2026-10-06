@@ -22,26 +22,6 @@
       "entry_order_id": "1cb56d47-2004-41b0-963d-16a584ddba74"
     },
     {
-      "lot_id": "80ad379310d4",
-      "bucket_id": 6,
-      "profile_name": "lab0006_s210_w2_1005_1045_r1",
-      "strategy_id": "S210",
-      "occ_symbol": "GOOGL261009C00360000",
-      "underlying": "GOOGL",
-      "qty": 1,
-      "entry_cost": 52.0,
-      "entry_price": 0.52,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-06T14:07:38.225663+00:00",
-      "entry_order_id": "1f99e7fc-7b17-4fe3-9267-911b6848b010"
-    },
-    {
       "lot_id": "cc161c6b9615",
       "bucket_id": 12,
       "profile_name": "lab0012_s403_w2_1005_1045_r1",
@@ -63,21 +43,9 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "d7bb6cfc-238b-4ca2-864e-9fd9e0ef47c7",
-      "lot_id": "80ad379310d4",
-      "bucket_id": 6,
-      "strategy_id": "S210",
-      "occ_symbol": "GOOGL261009C00360000",
-      "qty": 1,
-      "reason": "take_profit (+50.0%)",
-      "submitted": "2026-10-06T11:21:36"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b421": 43.0,
-    "b6": 52.0,
     "b12": 55.00000000000001
   },
   "session_date": "2026-10-06",
@@ -492,7 +460,8 @@
     "1f99e7fc-7b17-4fe3-9267-911b6848b010",
     "dd6866ed-eb05-4a4e-8c20-8676c8a8254c",
     "1c977e79-1f39-4dbc-b319-69fcd4303e7d",
-    "76cd3c95-075c-43b3-8d48-281d8d886987"
+    "76cd3c95-075c-43b3-8d48-281d8d886987",
+    "d7bb6cfc-238b-4ca2-864e-9fd9e0ef47c7"
   ],
   "submitted_today": 2,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
