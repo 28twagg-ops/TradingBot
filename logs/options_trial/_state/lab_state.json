@@ -103,7 +103,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "1c977e79-1f39-4dbc-b319-69fcd4303e7d",
+      "lot_id": "bd0a414ffc0e",
+      "bucket_id": 15,
+      "strategy_id": "S356",
+      "occ_symbol": "NKE261016C00034000",
+      "qty": 1,
+      "reason": "take_profit (+51.5%)",
+      "submitted": "2026-10-06T10:57:48"
+    }
+  ],
   "bucket_open_premium": {
     "b421": 43.0,
     "b15": 68.0,
