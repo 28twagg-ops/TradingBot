@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-10-02 14:08:08.516822+00:00,entry,16,lab0016_s357_w2_1005_1045_r1,S357,10e5ddf9994d,NKE,NKE261023C00035000,1,0.54,0.53,53.0,,,,-0.01,,0.5,-0.5,0.07547169811320761,gap -7.4%,bf1ca45e-9b6d-4b4a-b7e4-2e8457adc89d
+2026-10-06 15:02:34.661409+00:00,exit,16,lab0016_s357_w2_1005_1045_r1,S357,10e5ddf9994d,NKE,NKE261023C00035000,1,,0.81,53.0,52.83,28.0,take_profit (+50.9%),,-0.01,0.5,-0.5,,,76cd3c95-075c-43b3-8d48-281d8d886987

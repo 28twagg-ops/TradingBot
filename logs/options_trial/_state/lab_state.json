@@ -22,26 +22,6 @@
       "entry_order_id": "1cb56d47-2004-41b0-963d-16a584ddba74"
     },
     {
-      "lot_id": "10e5ddf9994d",
-      "bucket_id": 16,
-      "profile_name": "lab0016_s357_w2_1005_1045_r1",
-      "strategy_id": "S357",
-      "occ_symbol": "NKE261023C00035000",
-      "underlying": "NKE",
-      "qty": 1,
-      "entry_cost": 53.0,
-      "entry_price": 0.53,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-02T14:11:21.323603+00:00",
-      "entry_order_id": "bf1ca45e-9b6d-4b4a-b7e4-2e8457adc89d"
-    },
-    {
       "lot_id": "80ad379310d4",
       "bucket_id": 6,
       "profile_name": "lab0006_s210_w2_1005_1045_r1",
@@ -83,21 +63,9 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "76cd3c95-075c-43b3-8d48-281d8d886987",
-      "lot_id": "10e5ddf9994d",
-      "bucket_id": 16,
-      "strategy_id": "S357",
-      "occ_symbol": "NKE261023C00035000",
-      "qty": 1,
-      "reason": "take_profit (+50.9%)",
-      "submitted": "2026-10-06T11:01:55"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b421": 43.0,
-    "b16": 53.0,
     "b6": 52.0,
     "b12": 55.00000000000001
   },
@@ -512,7 +480,8 @@
     "ea55b88e-6ffb-4b8b-a565-196ac098f63f",
     "1f99e7fc-7b17-4fe3-9267-911b6848b010",
     "dd6866ed-eb05-4a4e-8c20-8676c8a8254c",
-    "1c977e79-1f39-4dbc-b319-69fcd4303e7d"
+    "1c977e79-1f39-4dbc-b319-69fcd4303e7d",
+    "76cd3c95-075c-43b3-8d48-281d8d886987"
   ],
   "submitted_today": 2,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
