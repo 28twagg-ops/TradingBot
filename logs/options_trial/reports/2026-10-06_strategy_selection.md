@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-06
 
-_Generated 2026-10-06T10:58:31.706638_
+_Generated 2026-10-06T11:02:50.401175_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-10-06T10:58:31.706638_
 
 ## Attribution health
 
-- Total exits: **3574**
+- Total exits: **3575**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **11.8%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -33,9 +33,9 @@ _Generated 2026-10-06T10:58:31.706638_
 | S362 (RubberBand_3DTE) | 3d | watch | 59 | 67.8 | +55.56 | -60.78 | -50.42 | +379.05 | 67 | 0 | 0 | $+1,447.00 | 22.0% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 72 | 62.5 | +50.88 | -62.25 | -50.00 | +182.09 | 67 | 2 | 1 | $+1,261.00 | 16.7% | fat left tail (p10 < -45%) |
 | S404 (GapDown_OTM2) | 3d | watch | 74 | 59.5 | +48.14 | -75.71 | -46.53 | +110.46 | 67 | 1 | 1 | $+1,179.00 | 13.5% | fat left tail (p10 < -45%) |
+| S356 (GapDown_14DTE) | 14d | watch | 29 | 51.7 | +36.00 | -52.08 | -46.30 | +62.61 | 67 | 1 | 1 | $+132.00 | 34.5% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 109 | 50.5 | +22.22 | -71.43 | -50.00 | +146.00 | 71 | 0 | 0 | $+1,086.00 | 27.5% | fat left tail (p10 < -45%) |
 | S350 (GapDown_0DTE) | 0d | watch | 47 | 55.3 | +17.65 | -64.32 | -50.67 | +218.86 | 67 | 1 | 1 | $+853.00 | 27.7% | fat left tail (p10 < -45%) |
-| S356 (GapDown_14DTE) | 14d | watch | 28 | 50.0 | +8.54 | -52.29 | -47.22 | +64.61 | 67 | 1 | 0 | $+96.00 | 35.7% | fat left tail (p10 < -45%) |
 | S411 (RubberBand_OTM2) | 3d | watch | 51 | 54.9 | +7.69 | -56.72 | -51.25 | +65.22 | 64 | 0 | 0 | $-28.00 | 17.6% | fat left tail (p10 < -45%) |
 | S364 (RubberBand_7DTE) | 7d | watch | 64 | 50.0 | +2.70 | -85.29 | -63.64 | +88.35 | 67 | 1 | 1 | $+64.00 | 39.1% | fat left tail (p10 < -45%) |
 | S358 (GapDown_30DTE) | 30d | watch | 4 | 50.0 | +0.84 | -51.39 | -51.39 | +54.49 | 63 | 0 | 0 | $-21.00 | 50.0% | insufficient sample (<8 exits) |
@@ -265,7 +265,7 @@ _Pipeline evaluation as of 2026-10-06. Auto-kill thresholds: median<-25% at n>=1
 | S353 | GapDown_3DTE | 45 | -46.15% | 42% | INSUFFICIENT | 67 |
 | S354 | GapDown_5DTE | 66 | -51.96% | 36% | INSUFFICIENT | 67 |
 | S355 | GapDown_7DTE | 71 | -37.50% | 45% | INSUFFICIENT | 67 |
-| S356 | GapDown_14DTE | 28 | +8.54% | 50% | INSUFFICIENT | 67 |
+| S356 | GapDown_14DTE | 29 | +36.00% | 52% | INSUFFICIENT | 67 |
 | S357 | GapDown_21DTE | 25 | +57.14% | 80% | INSUFFICIENT | 67 |
 | S358 | GapDown_30DTE | 4 | +0.84% | 50% | WATCH | 63 |
 | S359 | RubberBand_0DTE | 39 | -39.29% | 41% | INSUFFICIENT | 64 |
