@@ -60,17 +60,58 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-02T14:11:21.323603+00:00",
       "entry_order_id": "bf1ca45e-9b6d-4b4a-b7e4-2e8457adc89d"
+    },
+    {
+      "lot_id": "80ad379310d4",
+      "bucket_id": 6,
+      "profile_name": "lab0006_s210_w2_1005_1045_r1",
+      "strategy_id": "S210",
+      "occ_symbol": "GOOGL261009C00360000",
+      "underlying": "GOOGL",
+      "qty": 1,
+      "entry_cost": 52.0,
+      "entry_price": 0.52,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-06T14:07:38.225663+00:00",
+      "entry_order_id": "1f99e7fc-7b17-4fe3-9267-911b6848b010"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "dd6866ed-eb05-4a4e-8c20-8676c8a8254c",
+      "bucket_id": 12,
+      "strategy_id": "S403",
+      "occ_symbol": "V261009C00380000",
+      "underlying": "V",
+      "qty": 1,
+      "limit": 0.55,
+      "profile_name": "lab0012_s403_w2_1005_1045_r1",
+      "submitted": "2026-10-06",
+      "detail": "touch MA50 green",
+      "spread_frac": 0.07407407407407414,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    }
+  ],
   "pending_exits": [],
   "bucket_open_premium": {
     "b421": 43.0,
     "b15": 68.0,
-    "b16": 53.0
+    "b16": 53.0,
+    "b6": 52.0
   },
   "session_date": "2026-10-06",
-  "entries_locked": [],
+  "entries_locked": [
+    "6|S210|2026-10-06",
+    "12|S403|2026-10-06"
+  ],
   "processed_orders": [
     "c9662e18-93ac-4ed4-a018-297ecb0dcdfb",
     "7f254af0-68aa-49b2-8486-138901ac4276",
@@ -474,9 +515,10 @@
     "b39a5f63-c3d7-44cf-b5b4-56afa1e858a7",
     "b9034d9c-7cf8-43f3-b834-a1dc345d9d3c",
     "791e2d63-d97d-4cf6-b130-04aa604ec9da",
-    "ea55b88e-6ffb-4b8b-a565-196ac098f63f"
+    "ea55b88e-6ffb-4b8b-a565-196ac098f63f",
+    "1f99e7fc-7b17-4fe3-9267-911b6848b010"
   ],
-  "submitted_today": 0,
+  "submitted_today": 2,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-06"
 }

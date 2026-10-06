@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-10-06 14:07:36.327644+00:00,entry,6,lab0006_s210_w2_1005_1045_r1,S210,80ad379310d4,GOOGL,GOOGL261009C00360000,1,0.53,0.52,52.0,,,,-0.01,,0.5,-0.5,0.07692307692307698,MA8 343.17 crossed above MA21,1f99e7fc-7b17-4fe3-9267-911b6848b010
