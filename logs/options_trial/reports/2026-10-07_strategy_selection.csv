@@ -85,6 +85,7 @@ S174,RubberBand long call EOD,RubberBand (dropped),drop,non-positive median retu
 S352,GapDown_2DTE,2d,drop,non-positive median return,155,60,28,32,50.99,-27.95,-75.36,-52.83,329.52,249.0,16,68,1,0,12,18.3
 S173,MomReversal long call,MomRev,drop,non-positive median return,1625,415,154,261,15.19,-31.51,-77.18,-62.95,101.9,62.64,8,93,0,0,12,27.5
 S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1470,255,82,173,2.52,-35.29,-63.24,-53.42,93.89,-1276.78,11,93,0,0,16,25.9
+S164,GapDown ATM 1-DTE — P2B arm,1d ATM,drop,non-positive median return,160,30,14,16,63.05,-35.58,-89.69,-53.78,325.72,438.0,16,78,1,1,10,20.0
 S355,GapDown_7DTE,7d,drop,manually paused — excluded from new entries & reflected P&L,133,71,32,39,13.44,-37.5,-77.08,-63.7,138.64,367.0,17,68,0,0,9,38.0
 S359,RubberBand_0DTE,0d,drop,non-positive median return,101,39,16,23,54.17,-39.29,-71.43,-64.91,235.08,-12.0,11,65,1,0,10,25.6
 S405,GapDown_OTM3,3d,drop,manually paused — excluded from new entries & reflected P&L,115,56,19,37,-8.5,-42.86,-83.93,-65.2,103.47,-118.0,8,68,0,0,8,26.8
@@ -92,7 +93,6 @@ S211,MA_Cross_21_50,3d ATM MA cross 21/50,drop,manually paused — excluded from
 S353,GapDown_3DTE,3d,drop,non-positive median return,116,45,19,26,61.44,-46.15,-82.61,-69.7,264.21,125.0,12,68,0,0,10,22.2
 S207,GapDown_AtSupport,3d ATM gap-support,drop,manually paused — excluded from new entries & reflected P&L,62,37,2,35,-38.6,-47.06,-63.64,-55.71,-6.06,-822.0,2,72,0,0,3,43.2
 S407,RubberBand_ITM2,3d,drop,manually paused — excluded from new entries & reflected P&L,96,38,11,27,29.82,-47.73,-83.88,-61.54,266.42,33.0,7,68,0,0,7,26.3
-S164,GapDown ATM 1-DTE — P2B arm,1d ATM,drop,non-positive median return,160,29,13,16,62.54,-48.08,-90.49,-53.85,327.62,406.0,15,78,1,0,10,20.7
 S366,RubberBand_21DTE,21d,drop,manually paused — excluded from new entries & reflected P&L,50,21,9,12,0.28,-49.12,-56.92,-53.45,94.34,-63.0,8,64,0,0,3,42.9
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,drop,manually paused — excluded from new entries & reflected P&L,166,75,25,50,13.94,-49.18,-79.0,-60.0,99.05,158.0,18,72,0,0,11,40.0
 S351,GapDown_1DTE,1d,drop,manually paused — excluded from new entries & reflected P&L,213,75,28,47,31.61,-50.0,-75.68,-62.03,264.88,414.0,18,68,0,0,16,17.3
