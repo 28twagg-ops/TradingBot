@@ -27,11 +27,8 @@
   "bucket_open_premium": {
     "b421": 43.0
   },
-  "session_date": "2026-10-06",
-  "entries_locked": [
-    "6|S210|2026-10-06",
-    "12|S403|2026-10-06"
-  ],
+  "session_date": "2026-10-07",
+  "entries_locked": [],
   "processed_orders": [
     "c9662e18-93ac-4ed4-a018-297ecb0dcdfb",
     "7f254af0-68aa-49b2-8486-138901ac4276",
@@ -443,7 +440,7 @@
     "d7bb6cfc-238b-4ca2-864e-9fd9e0ef47c7",
     "f988a95b-bb89-49ba-866d-13df7b696d4a"
   ],
-  "submitted_today": 2,
+  "submitted_today": 0,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
-  "updated": "2026-10-06"
+  "updated": "2026-10-07"
 }
