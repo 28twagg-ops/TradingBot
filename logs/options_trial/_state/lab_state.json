@@ -403,7 +403,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "d5fa5571-348d-49c5-8c8e-a72a2f76c03a",
+      "lot_id": "a3671e8b9297",
+      "bucket_id": 64,
+      "strategy_id": "S166",
+      "occ_symbol": "MSTR261009C00170000",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-10-07T13:06:32"
+    }
+  ],
   "bucket_open_premium": {
     "b421": 43.0,
     "b53": 9.0,
