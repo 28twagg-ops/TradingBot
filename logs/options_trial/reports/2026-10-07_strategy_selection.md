@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-07
 
-_Generated 2026-10-07T17:36:36.218537_
+_Generated 2026-10-07T17:41:20.731347_
 
 ## Summary
 
