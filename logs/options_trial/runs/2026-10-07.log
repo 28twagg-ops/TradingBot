@@ -16287,11 +16287,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-10-07.log
 elapsed=11.9s reconcile=0.45s cancel=0.23s manage=8.7s
 
-=== 12:30:18 ET — manage-only (past entry window) [elapsed=13.3s reconcile=0.26s cancel=0.12s manage=11.49s] ===
-=== options_morning_bot (PAPER) 2026-10-07T12:30:18.135381-04:00 ===
+=== 12:32:40 ET — manage-only (past entry window) [elapsed=11.5s reconcile=0.5s cancel=0.21s manage=8.31s] ===
+=== options_morning_bot (PAPER) 2026-10-07T12:32:40.162353-04:00 ===
 
 [Run context]
-Paper auth OK — equity $986965.34, account PA33P8KT02IL
+Paper auth OK — equity $986890.84, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:77:live_1to1+variations
 
 [Setup]
@@ -16311,16 +16311,16 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $986,965.34
+Account equity: $986,890.84
 Active buckets: 77 of 77 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+13,503.55 all-time  |  $+62.00 today
   Raw (incl dropped):     $+8,279.55 all-time  |  $+62.00 today
-  Open (not sold yet): $-130.00 unrealized (virtual lots)
-                       $-110.00 unrealized (broker total)
+  Open (not sold yet): $-114.00 unrealized (virtual lots)
+                       $-94.00 unrealized (broker total)
   Premium deployed:    $1,012.00 in open positions
-  Combined P&L:        $+13,373.55 (reflected realized + open virtual)
+  Combined P&L:        $+13,389.55 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     15847
@@ -16344,29 +16344,29 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b18 lab0018_s359_w2_1005_1045_r1  prem=$    54  real=$ +0.00  open=$ +1.00  lots=1  [S359:SMCIx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b19 lab0019_s361_w2_1005_1045_r1  prem=$    56  real=$ +0.00  open=$ -4.00  lots=1  [S361:AMDx1]
+  b19 lab0019_s361_w2_1005_1045_r1  prem=$    56  real=$ +0.00  open=$ -1.00  lots=1  [S361:AMDx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b20 lab0020_s362_w2_1005_1045_r1  prem=$    61  real=$ +0.00  open=$ -5.00  lots=1  [S362:ARMx1]
+  b20 lab0020_s362_w2_1005_1045_r1  prem=$    61  real=$ +0.00  open=$ -4.00  lots=1  [S362:ARMx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b21 lab0021_s364_w2_1005_1045_r1  prem=$     0  real=$ -5.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b22 lab0022_s365_w2_1005_1045_r1  prem=$     0  real=$-42.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b51 lab0051_s396_w2_1005_1045_r1  prem=$    57  real=$ +0.00  open=$-23.00  lots=1  [S396:MARAx1]
+  b51 lab0051_s396_w2_1005_1045_r1  prem=$    57  real=$ +0.00  open=$-21.00  lots=1  [S396:MARAx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b52 lab0052_s397_w2_1005_1045_r1  prem=$    67  real=$ +0.00  open=$ +6.00  lots=1  [S397:COINx1]
+  b52 lab0052_s397_w2_1005_1045_r1  prem=$    67  real=$ +0.00  open=$ +7.00  lots=1  [S397:COINx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b53 lab0053_s398_w2_1005_1045_r1  prem=$     9  real=$ +0.00  open=$ -3.00  lots=1  [S398:Cx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b54 lab0054_s404_w2_1005_1045_r1  prem=$     0  real=$-15.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b55 lab0055_s406_w2_1005_1045_r1  prem=$    48  real=$ -3.00  open=$ -3.00  lots=1  [S406:AMDx1]
+  b55 lab0055_s406_w2_1005_1045_r1  prem=$    48  real=$ -3.00  open=$ -4.00  lots=1  [S406:AMDx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b58 lab0058_s411_w2_1005_1045_r1  prem=$     0  real=$-26.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b59 lab0059_s412_w2_1005_1045_r1  prem=$     0  real=$ -4.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b63 lab0063_s167_w2_1005_1045_r1  prem=$    65  real=$ +0.00  open=$ -1.00  lots=1  [S167:AMDx1]
+  b63 lab0063_s167_w2_1005_1045_r1  prem=$    65  real=$ +0.00  open=$ +0.00  lots=1  [S167:AMDx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b64 lab0064_s166_w2_1005_1045_r1  prem=$    40  real=$ +0.00  open=$-12.00  lots=1  [S166:MSTRx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -16374,24 +16374,24 @@ Open virtual lots (by bucket)
   (52 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  AMD261009C00682500  qty=1  cost=$65.00  return=-1.5%  open P&L=$-1.00
-  AMD261009C00685000  qty=1  cost=$56.00  return=-7.1%  open P&L=$-4.00
-  AMD261009C00687500  qty=1  cost=$48.00  return=-6.2%  open P&L=$-3.00
-  ARM261009C00325000  qty=1  cost=$61.00  return=-8.2%  open P&L=$-5.00
+  AMD261009C00682500  qty=1  cost=$65.00  return=+0.0%  open P&L=$+0.00
+  AMD261009C00685000  qty=1  cost=$56.00  return=-1.8%  open P&L=$-1.00
+  AMD261009C00687500  qty=1  cost=$48.00  return=-8.3%  open P&L=$-4.00
+  ARM261009C00325000  qty=1  cost=$61.00  return=-6.6%  open P&L=$-4.00
   C261009C00131000  qty=1  cost=$9.00  return=-33.3%  open P&L=$-3.00
-  COIN261009C00190000  qty=1  cost=$67.00  return=+9.0%  open P&L=$+6.00
-  COIN261009C00192500  qty=1  cost=$47.00  return=+0.0%  open P&L=$+0.00
+  COIN261009C00190000  qty=1  cost=$67.00  return=+10.4%  open P&L=$+7.00
+  COIN261009C00192500  qty=1  cost=$47.00  return=+6.4%  open P&L=$+3.00
   DKNG261009C00022500  qty=-1  cost=$21.00  return=+95.2%  open P&L=$+20.00
   DKNG261016C00023500  qty=1  cost=$43.00  return=-100.0%  open P&L=$-43.00
   HOOD261009C00113000  qty=1  cost=$53.00  return=+7.5%  open P&L=$+4.00
-  MARA261009C00010000  qty=1  cost=$57.00  return=-40.4%  open P&L=$-23.00
-  MARA261016C00011000  qty=1  cost=$31.00  return=-38.7%  open P&L=$-12.00
+  MARA261009C00010000  qty=1  cost=$57.00  return=-36.8%  open P&L=$-21.00
+  MARA261016C00011000  qty=1  cost=$31.00  return=-35.5%  open P&L=$-11.00
   MARA261023C00011000  qty=1  cost=$46.00  return=-30.4%  open P&L=$-14.00
   MARA261030C00011500  qty=1  cost=$44.00  return=-27.3%  open P&L=$-12.00
   MARA261106C00011500  qty=1  cost=$56.00  return=-21.4%  open P&L=$-12.00
-  MSTR261009C00165000  qty=1  cost=$63.00  return=+4.8%  open P&L=$+3.00
+  MSTR261009C00165000  qty=1  cost=$63.00  return=+6.3%  open P&L=$+4.00
   MSTR261009C00170000  qty=1  cost=$40.00  return=-30.0%  open P&L=$-12.00
-  SMCI261009C00045000  qty=2  cost=$125.00  return=+13.6%  open P&L=$+17.00
+  SMCI261009C00045000  qty=2  cost=$125.00  return=+16.8%  open P&L=$+21.00
   SMCI261009C00045500  qty=1  cost=$54.00  return=+1.9%  open P&L=$+1.00
   XOM261009C00167500  qty=1  cost=$47.00  return=-36.2%  open P&L=$-17.00
 
@@ -16776,7 +16776,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $986,965.34                                              |
+|Equity       : $986,890.84                                              |
 |Open Risk    : 20 lots (20 broker pos)                                  |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -16820,15 +16820,15 @@ Per-bucket exit stats (all time)
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
 |  DKNG261016C00023500           1   -100.0%   $    -43.00               |
-|  MARA261009C00010000           1    -40.4%   $    -23.00               |
+|  MARA261009C00010000           1    -36.8%   $    -21.00               |
+|  SMCI261009C00045000           2    +16.8%   $    +21.00               |
 |  DKNG261009C00022500          -1    +95.2%   $    +20.00               |
-|  SMCI261009C00045000           2    +13.6%   $    +17.00               |
 |  XOM261009C00167500            1    -36.2%   $    -17.00               |
 |  MARA261023C00011000           1    -30.4%   $    -14.00               |
-|  MARA261016C00011000           1    -38.7%   $    -12.00               |
 |  MARA261030C00011500           1    -27.3%   $    -12.00               |
+|  MARA261106C00011500           1    -21.4%   $    -12.00               |
 |  ... 12 more position(s)                                               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-10-07.log
-elapsed=13.3s reconcile=0.26s cancel=0.12s manage=11.49s
+elapsed=11.5s reconcile=0.5s cancel=0.21s manage=8.31s
 
