@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-10-07 14:07:56.457563+00:00,entry,54,lab0054_s404_w2_1005_1045_r1,S404,9aeb2e86e2f9,MARA,MARA261009C00010500,1,0.3,0.29,29.0,,,,-0.01,,0.75,-0.75,0.10169491525423717,gap -3.1%,e6e7b87f-43cd-4932-9fc1-8e617cd71825
+2026-10-07 15:29:07.688812+00:00,exit,54,lab0054_s404_w2_1005_1045_r1,S404,9aeb2e86e2f9,MARA,MARA261009C00010500,1,,0.14,29.0,-51.72,-15.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,80c87ec7-5c27-40ff-8086-71cf569e54a6
