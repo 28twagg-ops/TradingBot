@@ -13,7 +13,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 11,lab0011_s402_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 12,lab0012_s403_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-07,False,,100.0,55.77,55.77,55.77,55.77,29.0,AVGO,S403,take_profit (+55.8%),closed
 13,lab0013_s350_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-07,False,,0.0,-40.0,-40.0,-40.0,-40.0,-2.0,MARA,S350,broker_fill_backfill,closed
-14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,HOOD,S352,,entered_no_exit
+14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-07,False,,100.0,52.83,52.83,52.83,52.83,28.0,HOOD,S352,take_profit (+52.8%),closed
 15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,MARA,S356,,entered_no_exit
 16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,MARA,S357,,entered_no_exit
 17,lab0017_s358_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,MARA,S358,,entered_no_exit

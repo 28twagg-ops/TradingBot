@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-07
 
-_Generated 2026-10-07T14:56:33.209894_
+_Generated 2026-10-07T15:01:45.108078_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-10-07T14:56:33.209894_
 
 ## Attribution health
 
-- Total exits: **3590**
+- Total exits: **3591**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **11.8%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -102,8 +102,8 @@ _Generated 2026-10-07T14:56:33.209894_
 | S398 (GapDown_ATM) | 3d | drop | 62 | 50.0 | -4.05 | -68.28 | -55.24 | +173.78 | 68 | 1 | 0 | $+801.00 | 25.8% | non-positive median return |
 | S361 (RubberBand_2DTE) | 2d | drop | 63 | 49.2 | -4.26 | -66.67 | -53.52 | +278.89 | 68 | 1 | 1 | $+136.00 | 20.6% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 67 | 43.3 | -6.25 | -81.48 | -59.63 | +573.13 | 65 | 0 | 0 | $+1,137.00 | 17.9% | manually paused — excluded from new entries & reflected P&L |
+| S352 (GapDown_2DTE) | 2d | drop | 61 | 47.5 | -17.65 | -75.00 | -52.83 | +328.57 | 68 | 1 | 1 | $+277.00 | 18.0% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 93 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
-| S352 (GapDown_2DTE) | 2d | drop | 60 | 46.7 | -27.95 | -75.36 | -52.83 | +329.52 | 68 | 1 | 0 | $+249.00 | 18.3% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 93 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 255 | 32.2 | -35.29 | -63.24 | -53.42 | +93.89 | 93 | 0 | 0 | $-1,276.78 | 25.9% | non-positive median return |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | drop | 30 | 46.7 | -35.58 | -89.69 | -53.78 | +325.72 | 78 | 1 | 1 | $+438.00 | 20.0% | non-positive median return |
@@ -261,7 +261,7 @@ _Pipeline evaluation as of 2026-10-07. Auto-kill thresholds: median<-25% at n>=1
 | S221 | GoldenPocket | 0 | — | — | NEW | 0 |
 | S350 | GapDown_0DTE | 48 | +16.32% | 54% | INSUFFICIENT | 68 |
 | S351 | GapDown_1DTE | 75 | -50.00% | 37% | INSUFFICIENT | 68 |
-| S352 | GapDown_2DTE | 60 | -27.95% | 47% | INSUFFICIENT | 68 |
+| S352 | GapDown_2DTE | 61 | -17.65% | 48% | INSUFFICIENT | 68 |
 | S353 | GapDown_3DTE | 45 | -46.15% | 42% | INSUFFICIENT | 68 |
 | S354 | GapDown_5DTE | 66 | -51.96% | 36% | INSUFFICIENT | 68 |
 | S355 | GapDown_7DTE | 71 | -37.50% | 45% | INSUFFICIENT | 68 |
