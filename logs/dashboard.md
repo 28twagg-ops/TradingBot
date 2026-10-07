@@ -1,41 +1,41 @@
 # 📊 Rubber Band Bot — Performance Dashboard
-*Updated: 2026-10-07 14:01 UTC*
+*Updated: 2026-10-07 20:01 UTC*
 
 ## Account Snapshot
 | | |
 |---|---|
-| **Current Equity** | $223.44 |
+| **Current Equity** | $224.43 |
 | **Starting Equity** | $500.00 |
-| **Total Return** | -55.31% ($-276.56) |
+| **Total Return** | -55.11% ($-275.57) |
 | **Peak Equity** | $517.42 |
 | **Max Drawdown** | -56.94% |
-| **Current Cash** | $122.95 |
-| **Open Positions** | 3 (AES|AMZN|GOOG) |
-| **Last Bot Run** | 2026-10-07 14:01:45 |
+| **Current Cash** | $224.43 |
+| **Open Positions** | 0 () |
+| **Last Bot Run** | 2026-10-07 20:01:26 |
 
 ## Trade Performance (Closed Trades)
 | Metric | Value |
 |---|---|
-| **Total Closed Trades** | 924 |
-| **Wins / Losses** | 285 / 639 |
-| **Win Rate** | 30.8% |
+| **Total Closed Trades** | 927 |
+| **Wins / Losses** | 287 / 640 |
+| **Win Rate** | 31.0% |
 | **Avg Win** | +1.69% |
 | **Avg Loss** | -1.07% |
 | **Profit Factor** | 0.92x |
 | **Avg Hold Days** | 1.1d |
-| **Total Realised P&L** | $-13.63 |
+| **Total Realised P&L** | $-12.70 |
 
 ## Exit Reasons
 | Exit Type | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
 | `stop_loss` | 505 | 0% | -1.32% |
-| `midline` | 306 | 64% | +1.04% |
+| `midline` | 309 | 64% | +1.04% |
 | `max_hold` | 113 | 79% | +1.28% |
 
 ## Strategy Breakdown
 | Strategy | Trades | Win Rate | Avg P&L% |
 |---|---|---|---|
-| `Pullback50` | 683 | 33% | -0.13% |
+| `Pullback50` | 686 | 33% | -0.12% |
 | `GapDown` | 101 | 26% | -0.88% |
 | `MomReversal` | 47 | 21% | -0.31% |
 | `VolumeSpike` | 37 | 11% | -0.56% |
@@ -81,11 +81,14 @@
 | 2026-09-25 | $223.97 | -1.65 |
 | 2026-09-30 | $223.04 | -0.93 |
 | 2026-10-05 | $222.98 | -0.06 |
-| 2026-10-07 | $223.44 | +0.46 |
+| 2026-10-07 | $224.43 | +1.45 |
 
 ## Recent Closed Trades
 | Date | Ticker | Strategy | P&L% | P&L$ | Hold | Exit Reason |
 |---|---|---|---|---|---|---|
+| 2026-10-07 | **AMZN** | `Pullback50` | +1.62% | $+0.54 | 0d | midline (+1.6%) |
+| 2026-10-07 | **GOOG** | `Pullback50` | +1.18% | $+0.39 | 0d | midline (+1.2%) |
+| 2026-10-07 | **AES** | `Pullback50` | -0.01% | $-0.00 | 0d | midline (-0.0%) |
 | 2026-10-07 | **TECH** | `Pullback50` | +0.01% | $+0.00 | 0d | midline (+0.0%) |
 | 2026-10-07 | **AES** | `Pullback50` | -0.04% | $-0.01 | 0d | midline (-0.0%) |
 | 2026-10-07 | **AMGN** | `Pullback50` | -0.25% | $-0.08 | 0d | midline (-0.2%) |
@@ -103,9 +106,6 @@
 | 2026-10-01 | **BBY** | `Pullback50` | -0.54% | $-0.18 | 0d | stop_loss (-0.5%) |
 | 2026-09-30 | **AES** | `Pullback50` | +0.16% | $+0.05 | 0d | midline (+0.2%) |
 | 2026-09-30 | **EBAY** | `Pullback50` | -0.50% | $-0.17 | 0d | stop_loss (-0.5%) |
-| 2026-09-30 | **CMS** | `MomReversal` | -0.55% | $-0.02 | 1d | stop_loss (-0.5%) |
-| 2026-09-30 | **GOOG** | `Pullback50` | -0.02% | $-0.01 | 0d | midline (-0.0%) |
-| 2026-09-30 | **NCLH** | `EarningsDrift` | +0.50% | $+0.17 | 1d | midline (+0.5%) |
 
 ---
 *Auto-generated after every EOD scan. View on GitHub: `logs/dashboard.md`*
