@@ -62,13 +62,13 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 60,lab0060_s413_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-05,False,,,,,,,0,,,,idle
 61,lab0061_s414_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-05,False,,,,,,,0,,,,idle
 62,lab0062_s415_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
-63,lab0063_s167_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,AMD,S167,,entered_no_exit
+63,lab0063_s167_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-07,False,,100.0,53.85,53.85,53.85,53.85,35.0,AMD,S167,take_profit (+53.8%),closed
 64,lab0064_s166_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-07,False,,0.0,-50.0,-50.0,-50.0,-50.0,-20.0,MSTR,S166,stop_loss (-50.0%),closed
 65,lab0065_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,MARA,S168,,entered_no_exit
 66,lab0066_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,COIN,S163,,entered_no_exit
 67,lab0067_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-07,False,,100.0,78.05,78.05,78.05,78.05,32.0,AMD,S164,take_profit (+78.0%),closed
 90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,3,1,2,2026-10-07,False,,100.0,60.27,60.27,60.27,60.27,44.0,"AMD,MSTR,SMCI","S404,S406",broker_fill_backfill,closed
-91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-10-07,False,,,,,,,0,SMCI,S406,,entered_no_exit
+91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,1,0,2026-10-07,False,,100.0,44.62,44.62,44.62,44.62,29.0,SMCI,S406,take_profit (+50.4%),closed
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2001,promising_s170_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2002,promising_s171_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
