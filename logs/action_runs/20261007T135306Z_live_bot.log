@@ -1,0 +1,22 @@
+13:53:09  INFO      Mode: morning_scan
+13:53:09  INFO        [positions] 3/3 (3 valid)
+13:53:10  INFO        SELL LIMIT AMGN  qty=0.081136393  limit=$411.52  id=a848ee6f-84d1-40fa-98a5-bdc75e1df55a
+13:53:40  INFO        SELL LIMIT filled AMGN (confirmed by position check)
+13:53:40  INFO        TX logged: SELL AMGN  P&L -0.25%
+13:53:40  INFO        SELL LIMIT AES  qty=2.248273735  limit=$14.91  id=328b4a5d-8d56-4a56-943c-cd46f4089193
+13:54:10  INFO        SELL LIMIT filled AES (confirmed by position check)
+13:54:10  INFO        TX logged: SELL AES  P&L -0.04%
+13:54:10  INFO        SELL LIMIT TECH  qty=0.462761113  limit=$72.48  id=d19bc4a0-9a60-4392-837d-4d34a3a87947
+13:54:40  INFO        SELL LIMIT filled TECH (confirmed by position check)
+13:54:40  INFO        TX logged: SELL TECH  P&L 0.01%
+13:54:40  INFO        Universe cache hit: 903 tickers (tickers_2026-10-07.json)
+13:54:41  INFO        [universe] 40/903 (40 valid)
+13:54:44  INFO        [universe] 80/903 (80 valid)
+13:54:45  INFO        [universe] 120/903 (120 valid)
+13:54:46  INFO        [universe] 160/903 (160 valid)
+13:54:47  INFO        [universe] 200/903 (199 valid)
+13:54:55  INFO        [universe] 240/903 (238 valid)
+13:55:08  INFO        [universe] 280/903 (278 valid)
+13:55:18  INFO        [universe] 320/903 (318 valid)
+13:55:31  INFO        [universe] 360/903 (358 valid)
+13:55:41  INFO        [universe] 400/903 (398 valid)
