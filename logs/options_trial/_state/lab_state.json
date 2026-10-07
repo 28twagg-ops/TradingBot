@@ -62,26 +62,6 @@
       "entry_order_id": "53ecb06e-1f15-43df-8729-6c1883bb129b"
     },
     {
-      "lot_id": "a3671e8b9297",
-      "bucket_id": 64,
-      "profile_name": "lab0064_s166_w2_1005_1045_r1",
-      "strategy_id": "S166",
-      "occ_symbol": "MSTR261009C00170000",
-      "underlying": "MSTR",
-      "qty": 1,
-      "entry_cost": 40.0,
-      "entry_price": 0.4,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-07T14:08:07.861471+00:00",
-      "entry_order_id": "80ae4ba8-b1a5-4eae-9568-585bddfe4ff9"
-    },
-    {
       "lot_id": "34f73cd4af10",
       "bucket_id": 16,
       "profile_name": "lab0016_s357_w2_1005_1045_r1",
@@ -403,23 +383,11 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "d5fa5571-348d-49c5-8c8e-a72a2f76c03a",
-      "lot_id": "a3671e8b9297",
-      "bucket_id": 64,
-      "strategy_id": "S166",
-      "occ_symbol": "MSTR261009C00170000",
-      "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-10-07T13:06:32"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b421": 43.0,
     "b53": 9.0,
     "b14": 53.0,
-    "b64": 40.0,
     "b16": 44.0,
     "b15": 46.0,
     "b65": 31.0,
@@ -902,7 +870,8 @@
     "ed2e3ab6-3dc1-4d94-89f6-d47c06a276bf",
     "80c87ec7-5c27-40ff-8086-71cf569e54a6",
     "1d90e293-bedd-4645-b6d5-b7e18d7c1b4b",
-    "c2fc833a-b417-471a-b096-4fa9386429ca"
+    "c2fc833a-b417-471a-b096-4fa9386429ca",
+    "d5fa5571-348d-49c5-8c8e-a72a2f76c03a"
   ],
   "submitted_today": 23,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
