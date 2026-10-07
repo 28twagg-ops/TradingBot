@@ -400,6 +400,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-07T14:17:41.764929+00:00",
       "entry_order_id": "ba02e723-82f8-4837-a6b3-2eee61e76487"
+    },
+    {
+      "lot_id": "0b86ed5cf740",
+      "bucket_id": 20,
+      "profile_name": "lab0020_s362_w2_1005_1045_r1",
+      "strategy_id": "S362",
+      "occ_symbol": "ARM261009C00325000",
+      "underlying": "ARM",
+      "qty": 1,
+      "entry_cost": 61.0,
+      "entry_price": 0.61,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-07T14:33:00.025510+00:00",
+      "entry_order_id": "a1540dc9-0465-4170-ab56-794b38f17a0c"
     }
   ],
   "pending_orders": [
@@ -456,7 +476,8 @@
     "b51": 56.99999999999999,
     "b52": 67.0,
     "b91": 65.0,
-    "b17": 56.00000000000001
+    "b17": 56.00000000000001,
+    "b20": 61.0
   },
   "session_date": "2026-10-07",
   "entries_locked": [
@@ -479,7 +500,8 @@
     "58|S411|2026-10-07",
     "14|S352|2026-10-07",
     "53|S398|2026-10-07",
-    "17|S358|2026-10-07"
+    "17|S358|2026-10-07",
+    "20|S362|2026-10-07"
   ],
   "processed_orders": [
     "c9662e18-93ac-4ed4-a018-297ecb0dcdfb",
@@ -911,9 +933,10 @@
     "ca9a38b8-88ec-4c5f-9664-7f0f2d98d35e",
     "b99b7ed3-3458-4ff6-855a-fb7156dc946e",
     "ba02e723-82f8-4837-a6b3-2eee61e76487",
-    "9ef5f8d6-ec34-4e94-8b37-98c8695b7849"
+    "9ef5f8d6-ec34-4e94-8b37-98c8695b7849",
+    "a1540dc9-0465-4170-ab56-794b38f17a0c"
   ],
-  "submitted_today": 20,
+  "submitted_today": 21,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-07"
 }
