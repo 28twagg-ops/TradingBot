@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-10-02 14:17:33.453067+00:00,entry,91,s406_only,S406,2cf36932a040,OXY,OXY261009C00058000,1,0.74,0.73,73.0,,,,-0.01,,0.5,-0.4,0.17391304347826086,RB gap -1.6% reclaim,6b1342ea-3be6-408b-8045-8b0b8509f49f
 2026-10-05 14:42:04.590298+00:00,exit,91,s406_only,S406,2cf36932a040,OXY,OXY261009C00058000,1,,1.22,73.0,67.12,49.0,take_profit (+65.8%),,-0.01,0.5,-0.4,,,791e2d63-d97d-4cf6-b130-04aa604ec9da
+2026-10-07 14:12:57.024592+00:00,entry,91,s406_only,S406,46060461ed60,SMCI,SMCI261009C00045000,1,0.65,0.65,65.0,,,,-0.01,,0.5,-0.4,0.046511627906976785,RB gap -2.0% reclaim,ca9a38b8-88ec-4c5f-9664-7f0f2d98d35e

@@ -12,11 +12,11 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 10,lab0010_s219_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 11,lab0011_s402_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 12,lab0012_s403_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,AVGO,S403,,entered_no_exit
-13,lab0013_s350_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,MARA,S350,,entered_no_exit
+13,lab0013_s350_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-07,False,,0.0,-40.0,-40.0,-40.0,-40.0,-2.0,MARA,S350,broker_fill_backfill,closed
 14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,HOOD,S352,,entered_no_exit
 15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,MARA,S356,,entered_no_exit
 16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,MARA,S357,,entered_no_exit
-17,lab0017_s358_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-18,False,,,,,,,0,,,,idle
+17,lab0017_s358_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,MARA,S358,,entered_no_exit
 18,lab0018_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,SMCI,S359,,entered_no_exit
 19,lab0019_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,AMD,S361,,entered_no_exit
 20,lab0020_s362_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-09-04,False,,,,,,,0,,,,idle
@@ -50,8 +50,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 48,lab0048_s393_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 49,lab0049_s394_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 50,lab0050_s395_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
-51,lab0051_s396_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
-52,lab0052_s397_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
+51,lab0051_s396_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,MARA,S396,,entered_no_exit
+52,lab0052_s397_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,COIN,S397,,entered_no_exit
 53,lab0053_s398_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,C,S398,,entered_no_exit
 54,lab0054_s404_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,MARA,S404,,entered_no_exit
 55,lab0055_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,AMD,S406,,entered_no_exit
@@ -67,8 +67,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 65,lab0065_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,MARA,S168,,entered_no_exit
 66,lab0066_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 67,lab0067_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,AMD,S164,,entered_no_exit
-90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-10-07,False,,,,,,,0,AMD,S404,,entered_no_exit
-91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,2026-10-02,False,,,,,,,0,,,,idle
+90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,0,2,2026-10-07,False,,,,,,,0,"AMD,SMCI","S404,S406",,entered_no_exit
+91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-10-07,False,,,,,,,0,SMCI,S406,,entered_no_exit
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2001,promising_s170_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2002,promising_s171_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
