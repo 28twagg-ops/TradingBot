@@ -142,26 +142,6 @@
       "entry_order_id": "a006a4fe-cf0e-408a-90d3-3df441392ff7"
     },
     {
-      "lot_id": "1c703dd8e766",
-      "bucket_id": 12,
-      "profile_name": "lab0012_s403_w2_1005_1045_r1",
-      "strategy_id": "S403",
-      "occ_symbol": "AVGO261009C00387500",
-      "underlying": "AVGO",
-      "qty": 1,
-      "entry_cost": 52.0,
-      "entry_price": 0.52,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-07T14:08:07.886908+00:00",
-      "entry_order_id": "539f4946-8807-4562-9f9d-c14dabc842b7"
-    },
-    {
       "lot_id": "9e0a98d61b8f",
       "bucket_id": 18,
       "profile_name": "lab0018_s359_w2_1005_1045_r1",
@@ -443,18 +423,7 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "1d90e293-bedd-4645-b6d5-b7e18d7c1b4b",
-      "lot_id": "1c703dd8e766",
-      "bucket_id": 12,
-      "strategy_id": "S403",
-      "occ_symbol": "AVGO261009C00387500",
-      "qty": 1,
-      "reason": "take_profit (+55.8%)",
-      "submitted": "2026-10-07T11:42:26"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b421": 43.0,
     "b53": 9.0,
@@ -463,7 +432,6 @@
     "b16": 44.0,
     "b15": 46.0,
     "b65": 31.0,
-    "b12": 52.0,
     "b18": 54.0,
     "b55": 48.0,
     "b19": 56.00000000000001,
@@ -942,7 +910,8 @@
     "22a98282-f6d5-493a-bd88-977b6a378307",
     "1790e622-2ebe-490a-81a0-de2d56807fb5",
     "ed2e3ab6-3dc1-4d94-89f6-d47c06a276bf",
-    "80c87ec7-5c27-40ff-8086-71cf569e54a6"
+    "80c87ec7-5c27-40ff-8086-71cf569e54a6",
+    "1d90e293-bedd-4645-b6d5-b7e18d7c1b4b"
   ],
   "submitted_today": 23,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
