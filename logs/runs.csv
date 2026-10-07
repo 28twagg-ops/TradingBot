@@ -9637,3 +9637,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-07 20:01:26,scan_evening,bull,224.43,224.43,33,0,0,0,,both
 2026-10-07 20:03:04,ext_exits,bull,224.43,224.43,0,0,0,0,,both
 2026-10-07 20:06:19,ext_exits,bull,224.43,224.43,0,0,0,0,,both
+2026-10-07 20:11:41,ext_exits,bull,224.43,224.43,0,0,0,0,,both
