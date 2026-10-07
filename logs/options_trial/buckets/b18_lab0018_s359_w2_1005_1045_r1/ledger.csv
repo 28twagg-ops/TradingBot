@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-10-07 14:07:49.273115+00:00,entry,18,lab0018_s359_w2_1005_1045_r1,S359,9e0a98d61b8f,SMCI,SMCI261009C00045500,1,0.55,0.54,54.0,,,,-0.01,,0.75,-0.75,0.07407407407407414,RB gap -2.0% reclaim,d535a1e3-c7af-4d03-8adb-89b8442cf1ae

@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-10-07 14:08:01.429038+00:00,entry,14,lab0014_s352_w2_1005_1045_r1,S352,ae9286d36c8b,HOOD,HOOD261009C00113000,1,0.54,0.53,53.0,,,,-0.01,,0.75,-0.75,0.056074766355140235,gap -3.2%,53ecb06e-1f15-43df-8729-6c1883bb129b
