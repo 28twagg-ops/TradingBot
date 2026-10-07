@@ -443,7 +443,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "1d90e293-bedd-4645-b6d5-b7e18d7c1b4b",
+      "lot_id": "1c703dd8e766",
+      "bucket_id": 12,
+      "strategy_id": "S403",
+      "occ_symbol": "AVGO261009C00387500",
+      "qty": 1,
+      "reason": "take_profit (+55.8%)",
+      "submitted": "2026-10-07T11:42:26"
+    }
+  ],
   "bucket_open_premium": {
     "b421": 43.0,
     "b53": 9.0,
