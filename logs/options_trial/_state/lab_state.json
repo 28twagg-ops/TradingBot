@@ -382,26 +382,6 @@
       "entry_order_id": "a5e44407-2ca6-4994-acdf-2731ea55e47d"
     },
     {
-      "lot_id": "3d99556c1504",
-      "bucket_id": 58,
-      "profile_name": "lab0058_s411_w2_1005_1045_r1",
-      "strategy_id": "S411",
-      "occ_symbol": "PANW261009C00440000",
-      "underlying": "PANW",
-      "qty": 1,
-      "entry_cost": 39.0,
-      "entry_price": 0.39,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-07T15:01:44.220657+00:00",
-      "entry_order_id": "22a98282-f6d5-493a-bd88-977b6a378307"
-    },
-    {
       "lot_id": "3c0424509fad",
       "bucket_id": 90,
       "profile_name": "live_1to1",
@@ -423,18 +403,7 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "c2fc833a-b417-471a-b096-4fa9386429ca",
-      "lot_id": "3d99556c1504",
-      "bucket_id": 58,
-      "strategy_id": "S411",
-      "occ_symbol": "PANW261009C00440000",
-      "qty": 1,
-      "reason": "stop_loss (-66.7%)",
-      "submitted": "2026-10-07T12:06:56"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b421": 43.0,
     "b53": 9.0,
@@ -454,8 +423,7 @@
     "b17": 56.00000000000001,
     "b20": 61.0,
     "b66": 47.0,
-    "b6": 47.0,
-    "b58": 39.0
+    "b6": 47.0
   },
   "session_date": "2026-10-07",
   "entries_locked": [
@@ -922,7 +890,8 @@
     "1790e622-2ebe-490a-81a0-de2d56807fb5",
     "ed2e3ab6-3dc1-4d94-89f6-d47c06a276bf",
     "80c87ec7-5c27-40ff-8086-71cf569e54a6",
-    "1d90e293-bedd-4645-b6d5-b7e18d7c1b4b"
+    "1d90e293-bedd-4645-b6d5-b7e18d7c1b4b",
+    "c2fc833a-b417-471a-b096-4fa9386429ca"
   ],
   "submitted_today": 23,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
