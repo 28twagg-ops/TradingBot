@@ -15,7 +15,7 @@ S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),184,74,44,30,22.72,48.14,-
 S356,GapDown_14DTE,14d,watch,fat left tail (p10 < -45%),67,29,15,14,10.15,36.0,-52.08,-46.3,62.61,132.0,10,68,1,1,6,34.5
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),225,109,55,54,36.11,22.22,-71.43,-50.0,146.0,1086.0,25,72,0,0,19,27.5
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),111,48,26,22,58.78,16.32,-63.93,-50.34,212.0,851.0,14,68,1,1,11,27.1
-S411,RubberBand_OTM2,3d,watch,fat left tail (p10 < -45%),154,51,28,23,0.27,7.69,-56.72,-51.25,65.22,-28.0,14,65,0,0,15,17.6
+S411,RubberBand_OTM2,3d,watch,fat left tail (p10 < -45%),155,51,28,23,0.27,7.69,-56.72,-51.25,65.22,-28.0,14,65,1,0,15,17.6
 S364,RubberBand_7DTE,7d,watch,fat left tail (p10 < -45%),119,64,32,32,13.99,2.7,-85.29,-63.64,88.35,64.0,17,68,0,1,8,39.1
 S358,GapDown_30DTE,30d,watch,insufficient sample (<8 exits),15,4,2,2,1.35,0.84,-51.39,-51.39,54.49,-21.0,3,64,1,0,2,50.0
 S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
