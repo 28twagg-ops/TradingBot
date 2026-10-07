@@ -19,7 +19,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 17,lab0017_s358_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,MARA,S358,,entered_no_exit
 18,lab0018_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-07,False,,100.0,70.37,70.37,70.37,70.37,38.0,SMCI,S359,take_profit (+66.7%),closed
 19,lab0019_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-07,False,,100.0,58.93,58.93,58.93,58.93,33.0,AMD,S361,take_profit (+58.9%),closed
-20,lab0020_s362_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,ARM,S362,,entered_no_exit
+20,lab0020_s362_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-07,False,,0.0,-50.82,-50.82,-50.82,-50.82,-31.0,ARM,S362,broker_fill_backfill,closed
 21,lab0021_s364_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-02,False,,,,,,,0,,,,idle
 22,lab0022_s365_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-02,False,,,,,,,0,,,,idle
 23,lab0023_s368_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-31,False,,,,,,,0,,,,idle
@@ -67,7 +67,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 65,lab0065_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,MARA,S168,,entered_no_exit
 66,lab0066_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-07,False,,,,,,,0,COIN,S163,,entered_no_exit
 67,lab0067_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-07,False,,100.0,78.05,78.05,78.05,78.05,32.0,AMD,S164,take_profit (+78.0%),closed
-90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,3,2,1,2026-10-07,False,,100.0,60.14,60.14,60.27,60.0,80.0,"AMD,MSTR,SMCI","S404,S406",broker_fill_backfill; take_profit (+52.0%),closed
+90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,3,3,0,2026-10-07,False,,66.7,26.86,60.0,60.27,-39.68,55.0,"AMD,MSTR,SMCI","S404,S406",broker_fill_backfill; take_profit (+52.0%); broker_fill_backfill,closed
 91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,1,0,2026-10-07,False,,100.0,44.62,44.62,44.62,44.62,29.0,SMCI,S406,take_profit (+50.4%),closed
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2001,promising_s170_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
