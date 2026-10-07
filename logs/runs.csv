@@ -9579,3 +9579,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-07 14:11:31,exits,bull,223.37,122.95,0,0,0,3,AES|AMZN|GOOG,both
 2026-10-07 14:16:37,exits,bull,223.27,122.95,0,0,0,3,AES|AMZN|GOOG,both
 2026-10-07 14:21:55,exits,bull,223.38,122.95,0,0,0,3,AES|AMZN|GOOG,both
+2026-10-07 14:26:39,exits,bull,223.24,122.95,0,0,0,3,AES|AMZN|GOOG,both
