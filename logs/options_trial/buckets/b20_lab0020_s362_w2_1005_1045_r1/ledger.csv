@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-10-07 14:32:53.953424+00:00,entry,20,lab0020_s362_w2_1005_1045_r1,S362,0b86ed5cf740,ARM,ARM261009C00325000,1,0.62,0.61,61.0,,,,-0.01,,0.75,-0.75,0.21052631578947364,RB gap -3.8% reclaim,a1540dc9-0465-4170-ab56-794b38f17a0c
 2026-10-07 19:55:00.707857+00:00,exit,20,lab0020_s362_w2_1005_1045_r1,S362,0b86ed5cf740,ARM,ARM261009C00325000,1,,0.3,61.0,-50.82,-31.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,aef9e1bf-e698-4dd8-be9b-1ec91cff0a9b
+2026-10-08 14:07:25.650813+00:00,entry,20,lab0020_s362_w2_1005_1045_r1,S362,c3dcc835871a,AVGO,AVGO261012C00387500,1,0.51,0.5,50.0,,,,-0.01,,0.75,-0.75,0.1666666666666667,RB gap -1.6% reclaim,552b311a-08d3-48f5-b7ca-2e7a72678b86
