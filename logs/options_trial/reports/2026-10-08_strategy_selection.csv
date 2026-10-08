@@ -17,7 +17,6 @@ S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),112,49,26,23,56.9,15.0,-63
 S356,GapDown_14DTE,14d,watch,fat left tail (p10 < -45%),67,30,15,15,8.21,8.54,-51.88,-47.45,60.62,110.0,11,69,1,2,6,36.7
 S411,RubberBand_OTM2,3d,watch,fat left tail (p10 < -45%),156,53,29,24,0.12,7.69,-57.37,-51.39,64.52,-16.0,16,66,2,2,16,17.0
 S364,RubberBand_7DTE,7d,watch,fat left tail (p10 < -45%),120,64,32,32,13.99,2.7,-85.29,-63.64,88.35,64.0,17,69,1,1,8,39.1
-S210,MA_Cross_8_21,3d ATM MA cross 8/21,watch,fat left tail (p10 < -45%),223,99,50,49,12.48,1.64,-71.05,-51.22,83.79,202.0,17,73,3,2,21,17.2
 S358,GapDown_30DTE,30d,watch,insufficient sample (<8 exits),15,4,2,2,1.35,0.84,-51.39,-51.39,54.49,-21.0,3,65,1,0,2,50.0
 S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S170,Golden Pocket call 3 DTE,3d ATM golden pocket,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
@@ -77,6 +76,7 @@ S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),20,6,1,5,-33.91,-50
 S209,GapDown_Recovery,3d ATM gap-recovery,watch,insufficient sample (<8 exits),36,7,0,7,-65.23,-64.71,-80.4,-68.79,-50.75,-212.0,3,71,0,0,3,71.4
 S401,Any_Gap_Down_Small,3d,drop,non-positive median return,284,135,67,68,57.31,0.0,-84.1,-51.33,230.91,928.0,22,69,0,0,25,23.7
 S365,RubberBand_14DTE,14d,drop,non-positive median return,69,35,17,18,7.4,0.0,-64.1,-52.0,71.21,7.0,15,69,0,2,8,37.1
+S210,MA_Cross_8_21,3d ATM MA cross 8/21,drop,non-positive median return,223,100,50,50,11.85,-1.35,-71.05,-51.22,83.32,180.0,17,73,3,3,22,17.0
 S412,RubberBand_OTM3,3d,drop,non-positive median return,165,65,30,35,43.9,-3.57,-56.3,-49.09,125.79,208.0,18,69,1,0,17,18.5
 S361,RubberBand_2DTE,2d,drop,non-positive median return,166,63,31,32,85.8,-4.26,-66.67,-53.52,278.89,136.0,17,69,1,1,17,20.6
 S408,RubberBand_ITM1,3d,drop,manually paused — excluded from new entries & reflected P&L,167,67,29,38,112.6,-6.25,-81.48,-59.63,573.13,1137.0,18,66,0,0,16,17.9
