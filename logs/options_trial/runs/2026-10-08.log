@@ -39576,11 +39576,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-10-08.log
 elapsed=3.5s reconcile=0.47s cancel=0.29s manage=1.21s
 
-=== 15:35:04 ET — manage-only (past entry window) [elapsed=3.3s reconcile=0.42s cancel=0.19s manage=1.37s] ===
-=== options_morning_bot (PAPER) 2026-10-08T15:35:04.202276-04:00 ===
+=== 15:40:38 ET — manage-only (past entry window) [elapsed=1.8s reconcile=0.19s cancel=0.08s manage=0.65s] ===
+=== options_morning_bot (PAPER) 2026-10-08T15:40:38.283933-04:00 ===
 
 [Run context]
-Paper auth OK — equity $989163.19, account PA33P8KT02IL
+Paper auth OK — equity $989268.69, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:77:live_1to1+variations
 
 [Setup]
@@ -39600,16 +39600,16 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $989,163.19
+Account equity: $989,268.69
 Active buckets: 77 of 77 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+13,586.55 all-time  |  $-67.00 today
   Raw (incl dropped):     $+8,362.55 all-time  |  $-67.00 today
-  Open (not sold yet): $-62.00 unrealized (virtual lots)
-                       $-45.00 unrealized (broker total)
+  Open (not sold yet): $-60.00 unrealized (virtual lots)
+                       $-43.00 unrealized (broker total)
   Premium deployed:    $141.00 in open positions
-  Combined P&L:        $+13,524.55 (reflected realized + open virtual)
+  Combined P&L:        $+13,526.55 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     15901
@@ -39665,7 +39665,7 @@ Open virtual lots (by bucket)
 Alpaca option positions
   DKNG261009C00022500  qty=-1  cost=$21.00  return=+81.0%  open P&L=$+17.00
   DKNG261016C00023500  qty=1  cost=$43.00  return=-95.3%  open P&L=$-41.00
-  MARA261016C00010500  qty=1  cost=$26.00  return=-15.4%  open P&L=$-4.00
+  MARA261016C00010500  qty=1  cost=$26.00  return=-7.7%  open P&L=$-2.00
   MARA261106C00011500  qty=1  cost=$56.00  return=-33.9%  open P&L=$-19.00
   UPST261016C00026000  qty=1  cost=$16.00  return=+12.5%  open P&L=$+2.00
 
@@ -40061,7 +40061,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $989,163.19                                              |
+|Equity       : $989,268.69                                              |
 |Open Risk    : 4 lots (5 broker pos)                                    |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -40107,9 +40107,9 @@ Per-bucket exit stats (all time)
 |  DKNG261016C00023500           1    -95.3%   $    -41.00               |
 |  MARA261106C00011500           1    -33.9%   $    -19.00               |
 |  DKNG261009C00022500          -1    +81.0%   $    +17.00               |
-|  MARA261016C00010500           1    -15.4%   $     -4.00               |
+|  MARA261016C00010500           1     -7.7%   $     -2.00               |
 |  UPST261016C00026000           1    +12.5%   $     +2.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-10-08.log
-elapsed=3.3s reconcile=0.42s cancel=0.19s manage=1.37s
+elapsed=1.8s reconcile=0.19s cancel=0.08s manage=0.65s
 
