@@ -420,37 +420,61 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-08T14:07:31.168111+00:00",
       "entry_order_id": "f30c4874-1a38-43c8-a840-a56284775c65"
-    }
-  ],
-  "pending_orders": [
-    {
-      "order_id": "8c631012-ba8a-4066-b077-20b776a8b9ba",
-      "bucket_id": 21,
-      "strategy_id": "S364",
-      "occ_symbol": "AVGO261014C00400000",
-      "underlying": "AVGO",
-      "qty": 1,
-      "limit": 0.43,
-      "profile_name": "lab0021_s364_w2_1005_1045_r1",
-      "submitted": "2026-10-08",
-      "detail": "RB gap -1.6% reclaim",
-      "spread_frac": 0.14634146341463414,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
     },
     {
-      "order_id": "693271cf-a032-47fe-993a-485e2ffde89d",
+      "lot_id": "4a7687691df4",
       "bucket_id": 58,
+      "profile_name": "lab0058_s411_w2_1005_1045_r1",
       "strategy_id": "S411",
       "occ_symbol": "AVGO261012C00385000",
       "underlying": "AVGO",
       "qty": 1,
-      "limit": 0.65,
-      "profile_name": "lab0058_s411_w2_1005_1045_r1",
+      "entry_cost": 64.0,
+      "entry_price": 0.64,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-08T14:11:39.985502+00:00",
+      "entry_order_id": "693271cf-a032-47fe-993a-485e2ffde89d"
+    },
+    {
+      "lot_id": "25e5e143dbd5",
+      "bucket_id": 21,
+      "profile_name": "lab0021_s364_w2_1005_1045_r1",
+      "strategy_id": "S364",
+      "occ_symbol": "AVGO261014C00400000",
+      "underlying": "AVGO",
+      "qty": 1,
+      "entry_cost": 43.0,
+      "entry_price": 0.43,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-08T14:11:39.989984+00:00",
+      "entry_order_id": "8c631012-ba8a-4066-b077-20b776a8b9ba"
+    }
+  ],
+  "pending_orders": [
+    {
+      "order_id": "12903ed5-2683-4b73-8067-071bb7ff1493",
+      "bucket_id": 19,
+      "strategy_id": "S361",
+      "occ_symbol": "AVGO261009C00380000",
+      "underlying": "AVGO",
+      "qty": 1,
+      "limit": 0.36,
+      "profile_name": "lab0019_s361_w2_1005_1045_r1",
       "submitted": "2026-10-08",
       "detail": "RB gap -1.6% reclaim",
-      "spread_frac": 0.07874015748031503,
+      "spread_frac": 0.11428571428571424,
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
@@ -477,7 +501,9 @@
     "b65": 52.0,
     "b67": 53.0,
     "b6": 43.0,
-    "b12": 56.00000000000001
+    "b12": 56.00000000000001,
+    "b58": 64.0,
+    "b21": 43.0
   },
   "session_date": "2026-10-08",
   "entries_locked": [
@@ -499,7 +525,8 @@
     "14|S352|2026-10-08",
     "54|S404|2026-10-08",
     "59|S412|2026-10-08",
-    "12|S403|2026-10-08"
+    "12|S403|2026-10-08",
+    "19|S361|2026-10-08"
   ],
   "processed_orders": [
     "c9662e18-93ac-4ed4-a018-297ecb0dcdfb",
@@ -974,9 +1001,11 @@
     "137947c2-85f5-4770-8c07-a0422e3e13b2",
     "14df48f9-3af8-411c-a552-ebbe4387e4a4",
     "f3758a21-71dc-46af-a672-cac90a231a99",
-    "f30c4874-1a38-43c8-a840-a56284775c65"
+    "f30c4874-1a38-43c8-a840-a56284775c65",
+    "693271cf-a032-47fe-993a-485e2ffde89d",
+    "8c631012-ba8a-4066-b077-20b776a8b9ba"
   ],
-  "submitted_today": 19,
+  "submitted_today": 20,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-08"
 }
