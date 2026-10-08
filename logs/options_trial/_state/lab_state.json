@@ -122,26 +122,6 @@
       "entry_order_id": "3c42f715-6a00-4245-9fd9-39b10dcd6d84"
     },
     {
-      "lot_id": "5ca4030a4fff",
-      "bucket_id": 14,
-      "profile_name": "lab0014_s352_w2_1005_1045_r1",
-      "strategy_id": "S352",
-      "occ_symbol": "ARM261009C00302500",
-      "underlying": "ARM",
-      "qty": 1,
-      "entry_cost": 44.0,
-      "entry_price": 0.44,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-08T14:07:31.086428+00:00",
-      "entry_order_id": "7a9162a7-3d3b-495f-91b4-43a4f7467aed"
-    },
-    {
       "lot_id": "347b9031e693",
       "bucket_id": 52,
       "profile_name": "lab0052_s397_w2_1005_1045_r1",
@@ -282,24 +262,7 @@
       "entry_order_id": "8c631012-ba8a-4066-b077-20b776a8b9ba"
     }
   ],
-  "pending_orders": [
-    {
-      "order_id": "12903ed5-2683-4b73-8067-071bb7ff1493",
-      "bucket_id": 19,
-      "strategy_id": "S361",
-      "occ_symbol": "AVGO261009C00380000",
-      "underlying": "AVGO",
-      "qty": 1,
-      "limit": 0.36,
-      "profile_name": "lab0019_s361_w2_1005_1045_r1",
-      "submitted": "2026-10-08",
-      "detail": "RB gap -1.6% reclaim",
-      "spread_frac": 0.11428571428571424,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    }
-  ],
+  "pending_orders": [],
   "pending_exits": [
     {
       "order_id": "1eae6472-e77d-47a3-9786-ef57faabda30",
@@ -312,14 +275,14 @@
       "submitted": "2026-10-08T11:21:50"
     },
     {
-      "order_id": "c9b24b8a-658a-46bb-8048-7ac9703740f6",
-      "lot_id": "5ca4030a4fff",
-      "bucket_id": 14,
-      "strategy_id": "S352",
-      "occ_symbol": "ARM261009C00302500",
+      "order_id": "b3a4306f-1314-485e-a7fa-87940fcc1971",
+      "lot_id": "46a9dc01a0c8",
+      "bucket_id": 54,
+      "strategy_id": "S404",
+      "occ_symbol": "ARM261009C00300000",
       "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-10-08T11:36:34"
+      "reason": "stop_loss (-51.7%)",
+      "submitted": "2026-10-08T11:41:44"
     }
   ],
   "bucket_open_premium": {
@@ -329,7 +292,6 @@
     "b91": 59.0,
     "b59": 16.0,
     "b54": 60.0,
-    "b14": 44.0,
     "b52": 21.0,
     "b66": 26.0,
     "b55": 38.0,
@@ -845,7 +807,8 @@
     "deb2b20a-fc16-4ee1-ba85-22f85ba58d63",
     "31a83775-b9cd-44b1-bce2-405dd77d46a5",
     "c7183fe6-5b12-4d65-a3e9-b19c6d671af3",
-    "4b9e0cd3-7cb8-4a8e-8999-cc505987be4c"
+    "4b9e0cd3-7cb8-4a8e-8999-cc505987be4c",
+    "c9b24b8a-658a-46bb-8048-7ac9703740f6"
   ],
   "submitted_today": 20,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
