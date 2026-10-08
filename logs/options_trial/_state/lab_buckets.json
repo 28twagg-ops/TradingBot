@@ -404,8 +404,8 @@
   {
     "bucket_id": 67,
     "profile": "lab0067_s164_w2_1005_1045_r1",
-    "open_premium": 53.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 90,

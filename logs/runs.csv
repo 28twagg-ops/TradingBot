@@ -9704,3 +9704,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-08 14:51:37,exits,bull,225.55,157.41,0,0,0,2,KTOS|OC,both
 2026-10-08 14:56:40,exits,bull,225.37,157.41,0,0,0,2,KTOS|OC,both
 2026-10-08 15:01:57,exits,bull,225.31,157.41,0,0,0,2,KTOS|OC,both
+2026-10-08 15:06:32,exits,bull,225.2,157.41,0,0,0,2,KTOS|OC,both
