@@ -30960,11 +30960,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-10-08.log
 elapsed=2.2s reconcile=0.27s cancel=0.13s manage=0.77s
 
-=== 14:10:13 ET — manage-only (past entry window) [elapsed=2.8s reconcile=0.4s cancel=0.18s manage=1.12s] ===
-=== options_morning_bot (PAPER) 2026-10-08T14:10:13.900528-04:00 ===
+=== 14:12:45 ET — manage-only (past entry window) [elapsed=2.8s reconcile=0.39s cancel=0.18s manage=1.0s] ===
+=== options_morning_bot (PAPER) 2026-10-08T14:12:45.015993-04:00 ===
 
 [Run context]
-Paper auth OK — equity $988787.69, account PA33P8KT02IL
+Paper auth OK — equity $988728.21, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:77:live_1to1+variations
 
 [Setup]
@@ -30985,7 +30985,7 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $988,787.69
+Account equity: $988,728.21
 Active buckets: 77 of 77 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
@@ -31447,7 +31447,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $988,787.69                                              |
+|Equity       : $988,728.21                                              |
 |Open Risk    : 5 lots (6 broker pos)                                    |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -31503,5 +31503,5 @@ Per-bucket exit stats (all time)
 |  UPST261016C00026000           1     +6.2%   $     +1.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-10-08.log
-elapsed=2.8s reconcile=0.4s cancel=0.18s manage=1.12s
+elapsed=2.8s reconcile=0.39s cancel=0.18s manage=1.0s
 
