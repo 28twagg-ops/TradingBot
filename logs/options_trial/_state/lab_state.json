@@ -120,26 +120,29 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-08T13:58:14.508075+00:00",
       "entry_order_id": "d301e950-3d88-4082-8c95-f1dab17af50b"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "434b55ca-c281-4f57-8d9b-13a365799380",
+      "lot_id": "312886df9b1b",
       "bucket_id": 90,
+      "profile_name": "live_1to1",
       "strategy_id": "S404",
       "occ_symbol": "SMCI261009C00044000",
       "underlying": "SMCI",
       "qty": 1,
-      "limit": 0.62,
-      "profile_name": "live_1to1",
-      "submitted": "2026-10-08",
-      "detail": "gap -2.0%",
-      "spread_frac": 0.04878048780487809,
-      "buy_offset": -0.01,
+      "entry_cost": 62.0,
+      "entry_price": 0.62,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
       "take_profit": 0.5,
-      "stop_loss": -0.4
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-08T14:01:38.564700+00:00",
+      "entry_order_id": "434b55ca-c281-4f57-8d9b-13a365799380"
     }
   ],
+  "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {
     "b421": 43.0,
@@ -147,7 +150,7 @@
     "b15": 46.0,
     "b17": 56.00000000000001,
     "b91": 59.0,
-    "b90": 73.0
+    "b90": 135.0
   },
   "session_date": "2026-10-08",
   "entries_locked": [
@@ -613,7 +616,8 @@
     "ff59c02d-1f1e-4df6-96fb-2e273f6c3798",
     "72b1c26f-c060-4a55-96ea-62779075981d",
     "d4b38304-21c7-4cca-9b92-520e0bc6ca3b",
-    "d301e950-3d88-4082-8c95-f1dab17af50b"
+    "d301e950-3d88-4082-8c95-f1dab17af50b",
+    "434b55ca-c281-4f57-8d9b-13a365799380"
   ],
   "submitted_today": 3,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
