@@ -15088,3 +15088,132 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261008T195234Z
+
+- UTC timestamp: `20261008T195234Z`
+- GitHub run: [#12296](https://github.com/28twagg-ops/TradingBot/actions/runs/37834894699)
+- Run id: `37834894699`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261008T195234Z_live_bot.log`, `logs/action_runs/20261008T195234Z_live_options.log`, `logs/action_runs/20261008T195234Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1642 | 48.5 | -24.6 | +38.6 | $+18,670 |
+| TAINTED | 1977 | 32.8 | -40.0 | +11.7 | $-10,307 |
+| KEEP-only | 812 | 61.2 | +51.0 | +57.9 | $+12,554 |
+| KEEP-only recent | 619 | 59.8 | +53.3 | +65.0 | $+8,493 |
+
+- KEEP strategies (23): S163, S164, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S397, S398, S403, S404, S406, S411, S412
+- KILL strategies (21): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-10-08T15:46:05.020101-04:00","date":"2026-10-08","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":2.3,"phases_s":{"reconcile":0.23,"cancel":0.11,"manage":1.11,"protective_stops":0.35},"signals":0,"placed":0,"equity":989193.89,"open_positions":5,"pending_orders":0,"open_lots":4,"submitted_today":20,"filled_today":19,"unattributed_contracts":0,"top_signals":[],"github_run":"12294","github_run_id":"37833648143","status":"ok","data_quality":{"clean":{"n":1642,"win":48.54,"med":-24.62,"avg":38.56,"pnl":18669.83},"tainted":{"n":1977,"win":32.78,"med":-40.0,"avg":11.67,"pnl":-10307.28},"keep_only":{"n":812,"win":61.21,"med":50.96,"avg":57.93,"pnl":12554.45},"keep_only_recent":{"n":619,"win":59.77,"med":53.33,"avg":64.99,"pnl":8493.0},"keep_strategies":["S163","S164","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S397","S398","S403","S404","S406","S411","S412"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (66 earlier lines - see full log file)
+|  OC       MomReversal     $34.82     $113.39  $117.34  +3.5%   $+1.17  |
+|                                                                        |
+|  Total invested                                                  $34.82|
+|  Total open P&L                                                  $+1.17|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (12971.5m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  OC  P&L +3.5%  $+1.17                                             HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  57                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.94   75.6   -0.09   50MA bounce (+|
+|  ADP      Pullback50      eq     $271.58  50.4   -1.05   50MA bounce (-|
+|  BAC      MomReversal     eq     $53.43   18.7   0.84    -13.2% drop/60|
+|  BDX      Pullback50      eq     $182.21  52.6   -0.72   50MA bounce (+|
+|  BRK-B    Pullback50      eq     $510.23  50.7   -0.73   50MA bounce (+|
+|  CMG      RSIRecovery     eq     $33.20   48.4   3.60    RSI 22.9→48.4 |
+|  CHD      Pullback50      eq     $97.80   66.6   -1.85   50MA bounce (-|
+|  CTAS     Pullback50      eq     $200.81  54.6   -1.60   50MA bounce (+|
+|  CFG      RSIRecovery     eq     $63.88   31.4   0.33    RSI 23.2→31.4 |
+|  KO       Pullback50      eq     $87.89   48.1   -1.54   50MA bounce (-|
+|  CB       Pullback50      eq     $343.62  54.0   -1.00   50MA bounce (+|
+|  DE       Pullback50      eq     $651.32  36.9   -0.38   50MA bounce (-|
+|  ECL      Pullback50      eq     $281.46  65.8   -1.36   50MA bounce (+|
+|  EL       Pullback50      eq     $94.43   52.1   -1.08   50MA bounce (-|
+|  EG       Pullback50      eq     $372.94  47.4   -0.46   50MA bounce (+|
+|  FAST     Pullback50      eq     $50.58   61.7   -1.18   50MA bounce (+|
+|  FCX      Pullback50      eq     $71.11   48.3   -1.59   50MA bounce (-|
+|  HAS      Pullback50      eq     $92.52   66.5   -1.29   50MA bounce (+|
+|  HST      Pullback50      eq     $22.64   66.7   -1.11   50MA bounce (-|
+|  ICE      Pullback50      eq     $155.34  49.7   -1.90   50MA bounce (-|
+|  IFF      Pullback50      eq     $84.56   59.2   -1.60   50MA bounce (+|
+|  IQV      Pullback50      eq     $258.86  42.1   -0.96   50MA bounce (+|
+|  KDP      Pullback50      eq     $31.27   52.0   -1.14   50MA bounce (-|
+|  MA       Pullback50      eq     $573.01  55.7   -0.34   50MA bounce (+|
+|  MDT      RSIRecovery     eq     $88.07   36.1   3.03    RSI 21.5→36.1 |
+|  MRK      Pullback50      eq     $142.38  40.2   -0.79   50MA bounce (-|
+|  PEP      RSIRecovery     eq     $127.66  43.1   1.37    RSI 17.3→43.1 |
+|  RSG      Pullback50      eq     $217.09  47.9   -0.90   50MA bounce (+|
+|  RMD      Pullback50      eq     $226.26  53.1   -1.13   50MA bounce (+|19:56:10  INFO        BUY  BAC  $33.84  [MomReversal]  id=b57e36e2-f6bb-4670-b0cb-86ad77ed6a7d
+19:56:10  INFO        BUY  WY  $33.84  [MomReversal]  id=993503e8-bf36-4ed9-bb65-13bfa731fe0d
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
