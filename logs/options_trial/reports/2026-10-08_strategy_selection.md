@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-08
 
-_Generated 2026-10-08T14:21:34.593363_
+_Generated 2026-10-08T14:26:30.588784_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-10-08T14:21:34.593363_
 
 ## Attribution health
 
-- Total exits: **3618**
+- Total exits: **3619**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **11.7%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -27,8 +27,8 @@ _Generated 2026-10-08T14:21:34.593363_
 | S166 (GapDown strong call) | 3d ATM strong | watch | 11 | 72.7 | +67.21 | -88.24 | +2.78 | +160.87 | 79 | 1 | 1 | $+386.00 | 45.5% | building sample (8-19 exits) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 28 | 60.7 | +58.39 | -75.64 | -62.50 | +101.20 | 79 | 2 | 1 | $+393.00 | 39.3% | fat left tail (p10 < -45%) |
 | S406 (RubberBand_ITM3) | 3d | watch | 114 | 65.8 | +56.33 | -55.87 | -44.69 | +557.14 | 69 | 7 | 8 | $+3,644.00 | 13.2% | fat left tail (p10 < -45%) |
-| S357 (GapDown_21DTE) | 21d | watch | 26 | 80.8 | +55.04 | -72.08 | +47.06 | +77.47 | 69 | 1 | 1 | $+560.00 | 30.8% | fat left tail (p10 < -45%) |
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 25 | 56.0 | +53.33 | -73.62 | -54.84 | +245.99 | 79 | 2 | 2 | $+450.00 | 52.0% | fat left tail (p10 < -45%) |
+| S357 (GapDown_21DTE) | 21d | watch | 27 | 77.8 | +52.94 | -69.97 | +47.06 | +76.71 | 69 | 1 | 2 | $+539.00 | 29.6% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 61 | 67.2 | +52.63 | -60.00 | -50.82 | +323.81 | 69 | 2 | 2 | $+1,441.00 | 21.3% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 45 | 64.4 | +51.39 | -65.28 | -53.97 | +118.39 | 69 | 2 | 2 | $+1,092.00 | 20.0% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 75 | 62.7 | +50.88 | -61.50 | -50.00 | +178.36 | 69 | 3 | 3 | $+1,301.00 | 16.0% | fat left tail (p10 < -45%) |
@@ -266,7 +266,7 @@ _Pipeline evaluation as of 2026-10-08. Auto-kill thresholds: median<-25% at n>=1
 | S354 | GapDown_5DTE | 66 | -51.96% | 36% | INSUFFICIENT | 69 |
 | S355 | GapDown_7DTE | 71 | -37.50% | 45% | INSUFFICIENT | 69 |
 | S356 | GapDown_14DTE | 30 | +8.54% | 50% | INSUFFICIENT | 69 |
-| S357 | GapDown_21DTE | 26 | +55.04% | 81% | INSUFFICIENT | 69 |
+| S357 | GapDown_21DTE | 27 | +52.94% | 78% | INSUFFICIENT | 69 |
 | S358 | GapDown_30DTE | 4 | +0.84% | 50% | WATCH | 65 |
 | S359 | RubberBand_0DTE | 41 | -39.29% | 44% | INSUFFICIENT | 66 |
 | S360 | RubberBand_1DTE | 49 | -56.41% | 10% | INSUFFICIENT | 69 |
