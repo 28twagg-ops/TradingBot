@@ -1,5 +1,5 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
-S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,building sample (8-19 exits),133,17,11,6,128.91,121.05,-63.42,-55.36,401.35,487.0,7,79,2,1,7,35.3
+S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,building sample (8-19 exits),133,18,11,7,118.97,113.53,-62.01,-55.36,383.16,469.0,8,79,2,2,7,33.3
 S396,GapDown_ITM2,3d,watch,building sample (8-19 exits),31,8,6,2,52.23,86.25,-61.5,42.78,102.08,274.0,5,63,1,1,2,87.5
 S409,RubberBand_ATM,3d,watch,insufficient sample (<8 exits),2,2,2,0,81.94,81.94,79.72,80.56,84.17,118.0,1,14,0,0,1,100.0
 S410,RubberBand_OTM1,3d,watch,building sample (8-19 exits),32,10,7,3,35.64,67.85,-69.45,-23.48,101.51,231.0,6,63,0,0,3,80.0
@@ -11,7 +11,7 @@ S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),55,26,21,5,39.84,55.04,-
 S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),166,44,29,15,36.78,54.46,-65.34,-54.46,118.72,1103.0,14,69,2,1,16,20.5
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),141,61,41,20,126.58,52.63,-60.0,-50.82,323.81,1441.0,16,69,2,2,14,21.3
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),159,74,46,28,44.82,50.88,-61.75,-50.0,179.6,1263.0,23,69,3,2,23,16.2
-S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),187,77,45,32,21.43,46.27,-73.88,-47.37,109.38,1183.0,18,69,5,4,22,13.0
+S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),187,78,45,33,20.64,45.74,-73.27,-46.53,109.02,1158.0,19,69,5,5,22,12.8
 S356,GapDown_14DTE,14d,watch,fat left tail (p10 < -45%),67,29,15,14,10.15,36.0,-52.08,-46.3,62.61,132.0,10,69,1,1,6,34.5
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),225,109,55,54,36.11,22.22,-71.43,-50.0,146.0,1086.0,25,73,0,0,19,27.5
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),112,49,26,23,56.9,15.0,-63.53,-50.0,205.14,849.0,15,69,2,2,11,26.5
