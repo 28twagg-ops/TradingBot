@@ -1,0 +1,51 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=10 paper_keys=yes dry_run=False
+  alpaca positions=11
+  FLAG 5 lot(s) missing from Alpaca
+    b65|S168|a25464a1 MARA261016C00011000
+    b51|S396|2a51458e MARA261009C00010000
+    b52|S397|59806b61 COIN261009C00190000
+    b66|S163|d832ca5a COIN261009C00192500
+    b6|S210|279a68c9 XOM261009C00167500
+  reconcile: backfill exit b65|S168 MARA -54.8% fill=0.14
+  reconcile: backfill exit b51|S396 MARA -52.6% fill=0.27
+  reconcile: backfill exit b52|S397 COIN -28.4% fill=0.48
+  reconcile: backfill exit b66|S163 COIN -95.7% fill=0.02
+  reconcile: backfill exit b6|S210 XOM +214.9% fill=1.48
+  State updated (attributed/cleared=5, leftover=0).
+options_reconcile: done
+Layout: controlled:77:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:77:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      77
+PROBE OK: paper account status=AccountStatus.ACTIVE equity=$987,367.76
+  buying_power=$3,827,496.24 cash=$979,920.16
+  open option orders: 4
+    MARA261106C00011500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    MARA261023C00011000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    MARA261030C00011500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    C261009C00131000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+  open option positions: 6
+    C261009C00131000 qty=1 mkt=$5.00
+    DKNG261009C00022500 qty=-1 mkt=$-10.00
+    DKNG261016C00023500 qty=1 mkt=$0.00
+    MARA261023C00011000 qty=1 mkt=$25.00
+    MARA261030C00011500 qty=1 mkt=$27.00
+PROBE: check-only pass (use --smoke-entry to place a test order)
+=== options_morning_bot (PAPER) 2026-10-08T09:40:51.225146-04:00 ===
+
+[Run context]
+Paper auth OK — equity $987364.26, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+S406-only twin b91 s406_only — S406 | TP+50%/SL-40% | paper edge test
+Variation study: 75 lab/promising bucket(s) | cohort: 75 unique (S163, S164, S166, S167, S168, S169, S170, S171, S172, S175, S200, S201 … +63 more) | max 200 new entries/run
+Dropped (no new entries; ex-reflected P&L): S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
+Shared-OCC entry block ON (one lab lot per contract)
+  EXIT [b421|lab0421_s365_w2_1005_1045_r2|S365] stop_loss (-100.0%) SELL blocked (uncovered/shared OCC) DKNG261016C00023500 x1: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+Protective stops: placed=0 upgraded=0 already=4 failed=1 (market-first)
+
+[Scan + entries]
+Scanning 117 symbols for [S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S204, S205, S206, S208, S210, S213, S214, S215, S219, S220, S221, S402, S403, S350, S352, S356, S357, S358, S359, S361, S362, S364, S365, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S395, S396, S397, S398, S404, S406, S409, S410, S411, S412, S413, S414, S415] …
+Fetched daily bars for 113/117 symbols
