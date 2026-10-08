@@ -1,5 +1,5 @@
 # Daily Slippage Watch
-*Updated: 2026-10-07 23:57 UTC*
+*Updated: 2026-10-08 13:02 UTC*
 
 Tracks **stop P&L** (position loss vs entry) vs **execution slippage** (fill vs limit). Target: stops near -0.5% trigger when no overnight gap.
 
@@ -12,9 +12,8 @@ Tracks **stop P&L** (position loss vs entry) vs **execution slippage** (fill vs 
 | 2026-09-29 | 2 | -0.53% | -0.03pp | 2/2 | -0.0309% | **OK** |
 | 2026-09-28 | 1 | -0.94% | -0.44pp | 1/1 | -0.0309% | **WATCH** |
 | 2026-09-25 | 2 | -0.94% | -0.44pp | 1/2 | -0.0309% | **WATCH** |
-| 2026-09-24 | 2 | -0.86% | -0.36pp | 2/2 | -0.0309% | **OK** |
 
-## Today (2026-10-07) detail
+## Today (2026-10-08) detail
 
 _No stop losses recorded today._
 
