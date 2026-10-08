@@ -310,6 +310,16 @@
       "qty": 1,
       "reason": "take_profit (+50.0%)",
       "submitted": "2026-10-08T11:21:50"
+    },
+    {
+      "order_id": "c9b24b8a-658a-46bb-8048-7ac9703740f6",
+      "lot_id": "5ca4030a4fff",
+      "bucket_id": 14,
+      "strategy_id": "S352",
+      "occ_symbol": "ARM261009C00302500",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-10-08T11:36:34"
     }
   ],
   "bucket_open_premium": {
