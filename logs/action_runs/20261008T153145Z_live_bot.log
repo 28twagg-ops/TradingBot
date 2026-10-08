@@ -1,0 +1,59 @@
+15:31:47  INFO      Mode: exits
+15:31:47  INFO        Daily log -> logs/daily/2026-10-08.md
+15:31:47  INFO        Daily log reconciled -> logs/daily/2026-10-08.md (1 ledger rows)
+15:31:47  INFO        place_all_stops: checking 2 positions...
+15:31:47  INFO        STOP skipped KTOS: fractional (0.7976 shares) — software exit will handle it
+15:31:47  INFO        STOP skipped OC: fractional (0.2968 shares) — software exit will handle it
+15:31:48  INFO        [positions] 2/2 (2 valid)
+15:31:48  INFO        SELL MARKET [urgent] KTOS closed
+15:31:50  INFO        TX logged: SELL KTOS  P&L -0.83%
+15:31:50  INFO        Daily log -> logs/daily/2026-10-08.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:31 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $224.82|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  KTOS  P&L -0.8%  $-0.28                        EXIT: stop_loss (-0.8%)|
+|  OC  P&L +1.1%  $+0.39                                             HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  KTOS                                        -0.83%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
