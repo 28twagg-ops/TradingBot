@@ -9783,3 +9783,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-08 21:51:27,ext_exits,bull,225.75,123.09,0,0,0,3,BAC|OC|WY,both
 2026-10-08 21:56:36,ext_exits,bull,225.74,123.09,0,0,0,3,BAC|OC|WY,both
 2026-10-08 22:02:29,ext_exits,bull,225.73,123.09,0,0,0,3,BAC|OC|WY,both
+2026-10-08 22:06:26,ext_exits,bull,225.73,123.09,0,0,0,3,BAC|OC|WY,both
