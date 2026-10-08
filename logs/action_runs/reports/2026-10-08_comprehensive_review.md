@@ -4594,3 +4594,156 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261008T151500Z
+
+- UTC timestamp: `20261008T151500Z`
+- GitHub run: [#12240](https://github.com/28twagg-ops/TradingBot/actions/runs/37798480356)
+- Run id: `37798480356`
+- Live bot: exit=`0`, duration=`2s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261008T151500Z_live_bot.log`, `logs/action_runs/20261008T151500Z_live_options.log`, `logs/action_runs/20261008T151500Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1635 | 48.6 | -24.1 | +38.8 | $+18,730 |
+| TAINTED | 1973 | 32.8 | -40.0 | +11.8 | $-10,230 |
+| KEEP-only | 805 | 61.5 | +51.4 | +58.6 | $+12,614 |
+| KEEP-only recent | 612 | 60.1 | +53.3 | +65.9 | $+8,553 |
+
+- KEEP strategies (23): S163, S164, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S397, S398, S403, S404, S406, S411, S412
+- KILL strategies (21): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-10-08T11:06:36.512477-04:00","date":"2026-10-08","mode":"entry+manage","header":"entry+manage (0 new)","elapsed_s":44.7,"phases_s":{"reconcile":0.46,"cancel":0.12,"manage":5.56,"protective_stops":1.53,"scan":34.72,"entries":0.07,"reconcile2":0.4},"signals":97,"placed":0,"equity":987240.93,"open_positions":16,"pending_orders":1,"open_lots":15,"submitted_today":20,"filled_today":19,"unattributed_contracts":0,"top_signals":["S210:TSLA","S164:SMCI","S168:SMCI","S167:SMCI","S163:SMCI","S350:SMCI","S352:SMCI","S356:SMCI"],"github_run":"12239","github_run_id":"37797795173","status":"ok","data_quality":{"clean":{"n":1635,"win":48.62,"med":-24.14,"avg":38.81,"pnl":18729.83},"tainted":{"n":1973,"win":32.84,"med":-40.0,"avg":11.79,"pnl":-10230.28},"keep_only":{"n":805,"win":61.49,"med":51.39,"avg":58.6,"pnl":12614.45},"keep_only_recent":{"n":612,"win":60.13,"med":53.33,"avg":65.94,"pnl":8553.0},"keep_strategies":["S163","S164","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S397","S398","S403","S404","S406","S411","S412"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+15:15:01  INFO      Mode: exits
+15:15:01  INFO        Daily log -> logs/daily/2026-10-08.md
+15:15:01  INFO        Daily log reconciled -> logs/daily/2026-10-08.md (1 ledger rows)
+15:15:01  INFO        place_all_stops: checking 2 positions...
+15:15:01  INFO        STOP skipped KTOS: fractional (0.7976 shares) — software exit will handle it
+15:15:01  INFO        STOP skipped OC: fractional (0.2968 shares) — software exit will handle it
+15:15:01  INFO        [positions] 2/2 (2 valid)
+15:15:01  INFO        Daily log -> logs/daily/2026-10-08.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         15:15 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $224.93|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  KTOS  P&L -0.4%  $-0.12                                           HOLD|
+|  OC  P&L +1.0%  $+0.34                                             HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-10-08T11:15:02.712083-04:00 share=25% ===
+2026-10-08 11:15:02,712 INFO === options_live_micro LIVE 2026-10-08T11:15:02.712083-04:00 share=25% ===
+Live account equity $224.93 cash $157.41 #225458845 options_level=3
+2026-10-08 11:15:02,755 INFO Live account equity $224.93 cash $157.41 #225458845 options_level=3
+Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+2026-10-08 11:15:02,777 INFO Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+Live micro done. open_options=0 lots=0
+2026-10-08 11:15:02,791 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=15 paper_keys=yes dry_run=False
+  alpaca positions=21
+  No missing lots.
+options_reconcile: done
+Layout: controlled:77:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:77:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      77
+PROBE OK: paper account status=AccountStatus.ACTIVE equity=$987,120.91
+  buying_power=$3,824,692.40 cash=$979,550.41
+  open option orders: 15
+    AVGO261009C00380000 OrderSide.BUY qty=1 status=OrderStatus.NEW limit=0.36
+    AVGO261014C00400000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    V261009C00380000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    TSLA261012C00392500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    SMCI261016C00048000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+  open option positions: 16
+    ARM261009C00300000 qty=1 mkt=$40.00
+    ARM261009C00302500 qty=1 mkt=$28.00
+    AVGO261012C00390000 qty=1 mkt=$49.00
+    AVGO261014C00400000 qty=1 mkt=$54.00
+    CVNA261009C00064000 qty=1 mkt=$35.00
+PROBE: check-only pass (use --smoke-entry to place a test order)
+=== options_morning_bot (PAPER) 2026-10-08T11:15:05.407699-04:00 ===
+
+[Run context]
+Paper auth OK — equity $987122.41, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+S406-only twin b91 s406_only — S406 | TP+50%/SL-40% | paper edge test
+Variation study: 75 lab/promising bucket(s) | cohort: 75 unique (S163, S164, S166, S167, S168, S169, S170, S171, S172, S175, S200, S201 … +63 more) | max 200 new entries/run
+Dropped (no new entries; ex-reflected P&L): S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
+Shared-OCC entry block ON (one lab lot per contract)
+  EXIT [b421|lab0421_s365_w2_1005_1045_r2|S365] stop_loss (-95.3%) SELL blocked (uncovered/shared OCC) DKNG261016C00023500 x1: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+2026-10-08 11:15:11,581 INFO   EXIT [b91|s406_only|S406] stop_loss (-40.7%) SELL 1 CVNA261009C00064000 @<= 0.36
+2026-10-08 11:15:12,711 INFO   EXIT [b15|lab0015_s356_w2_1005_1045_r1|S356] stop_loss (-50.0%) SELL 1 MARA261023C00011000 @<= 0.24
+Protective stops: placed=0 upgraded=0 already=14 failed=1 (market-first)
+
+[Scan + entries]
+Scanning 117 symbols for [S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S204, S205, S206, S208, S210, S213, S214, S215, S219, S220, S221, S402, S403, S350, S352, S356, S357, S358, S359, S361, S362, S364, S365, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S395, S396, S397, S398, S404, S406, S409, S410, S411, S412, S413, S414, S415] …
+Fetched daily bars for 113/117 symbols
+```
+
+---
