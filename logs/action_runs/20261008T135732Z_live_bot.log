@@ -1,0 +1,57 @@
+13:57:33  INFO      Mode: morning_scan
+13:57:33  INFO      Morning scan already completed today (2026-10-08T13:51:26.926766Z) — exits-only pass
+13:57:33  INFO        Daily log -> logs/daily/2026-10-08.md
+13:57:33  INFO        Daily log reconciled -> logs/daily/2026-10-08.md (1 ledger rows)
+13:57:33  INFO        place_all_stops: checking 2 positions...
+13:57:33  INFO        STOP skipped KTOS: fractional (0.7976 shares) — software exit will handle it
+13:57:33  INFO        STOP skipped OC: fractional (0.2968 shares) — software exit will handle it
+13:57:33  INFO        [positions] 2/2 (2 valid)
+13:57:34  INFO        Daily log -> logs/daily/2026-10-08.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:57 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $225.40|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  KTOS  P&L +0.6%  $+0.20                                           HOLD|
+|  OC  P&L +1.4%  $+0.48                                             HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+

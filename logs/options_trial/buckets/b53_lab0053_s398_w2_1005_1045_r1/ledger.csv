@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-10-07 14:08:06.912098+00:00,entry,53,lab0053_s398_w2_1005_1045_r1,S398,5a03bc9a38ce,C,C261009C00131000,1,0.1,0.09,9.0,,,,-0.01,,0.5,-0.5,0.20000000000000004,gap -2.0%,e2c9db4d-8027-4017-a5ea-7ba09a98b093
+2026-10-08 13:48:16.115279+00:00,exit,53,lab0053_s398_w2_1005_1045_r1,S398,5a03bc9a38ce,C,C261009C00131000,1,,0.04,9.0,-55.56,-5.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,72b1c26f-c060-4a55-96ea-62779075981d
