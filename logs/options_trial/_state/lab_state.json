@@ -82,6 +82,26 @@
       "entry_order_id": "188192c6-403b-40ca-bf61-f600b855e2cf"
     },
     {
+      "lot_id": "a25464a1b6c5",
+      "bucket_id": 65,
+      "profile_name": "lab0065_s168_w2_1005_1045_r1",
+      "strategy_id": "S168",
+      "occ_symbol": "MARA261016C00011000",
+      "underlying": "MARA",
+      "qty": 1,
+      "entry_cost": 31.0,
+      "entry_price": 0.31,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-07T14:08:07.882567+00:00",
+      "entry_order_id": "a006a4fe-cf0e-408a-90d3-3df441392ff7"
+    },
+    {
       "lot_id": "2fcbff111293",
       "bucket_id": 17,
       "profile_name": "lab0017_s358_w2_1005_1045_r1",
@@ -100,16 +120,49 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-07T14:17:41.764929+00:00",
       "entry_order_id": "ba02e723-82f8-4837-a6b3-2eee61e76487"
+    },
+    {
+      "lot_id": "279a68c9ec17",
+      "bucket_id": 6,
+      "profile_name": "lab0006_s210_w2_1005_1045_r1",
+      "strategy_id": "S210",
+      "occ_symbol": "XOM261009C00167500",
+      "underlying": "XOM",
+      "qty": 1,
+      "entry_cost": 47.0,
+      "entry_price": 0.47,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-07T14:43:48.468064+00:00",
+      "entry_order_id": "a5e44407-2ca6-4994-acdf-2731ea55e47d"
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "ff59c02d-1f1e-4df6-96fb-2e273f6c3798",
+      "lot_id": "279a68c9ec17",
+      "bucket_id": 6,
+      "strategy_id": "S210",
+      "occ_symbol": "XOM261009C00167500",
+      "qty": 1,
+      "reason": "take_profit (+214.9%)",
+      "submitted": "2026-10-08T09:35:10"
+    }
+  ],
   "bucket_open_premium": {
     "b421": 43.0,
     "b53": 9.0,
     "b16": 44.0,
     "b15": 46.0,
-    "b17": 56.00000000000001
+    "b65": 31.0,
+    "b17": 56.00000000000001,
+    "b6": 47.0
   },
   "session_date": "2026-10-08",
   "entries_locked": [],
@@ -564,11 +617,9 @@
     "34f59e9d-318e-4b69-8c6d-56fb2a57aea7",
     "aef9e1bf-e698-4dd8-be9b-1ec91cff0a9b",
     "34cac7bb-93fa-4b67-bf6a-e46e1e398df4",
-    "d609b621-aa31-4a5d-bebb-f0d65ad2520b",
     "7c4a6caa-4d30-47ec-9646-89cf58542984",
     "3b13cf74-911f-4128-95da-c54590833692",
-    "5e35a2f3-1f3f-4717-8d2a-583ed601375a",
-    "ff59c02d-1f1e-4df6-96fb-2e273f6c3798"
+    "5e35a2f3-1f3f-4717-8d2a-583ed601375a"
   ],
   "submitted_today": 0,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
