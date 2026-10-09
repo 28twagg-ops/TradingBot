@@ -1347,3 +1347,128 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20261009T133719Z
+
+- UTC timestamp: `20261009T133719Z`
+- GitHub run: [#12353](https://github.com/28twagg-ops/TradingBot/actions/runs/37937870856)
+- Run id: `37937870856`
+- Live bot: exit=`0`, duration=`215s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261009T133719Z_live_bot.log`, `logs/action_runs/20261009T133719Z_live_options.log`, `logs/action_runs/20261009T133719Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1642 | 48.5 | -24.6 | +38.6 | $+18,670 |
+| TAINTED | 1977 | 32.8 | -40.0 | +11.7 | $-10,307 |
+| KEEP-only | 812 | 61.2 | +51.0 | +57.9 | $+12,554 |
+| KEEP-only recent | 619 | 59.8 | +53.3 | +65.0 | $+8,493 |
+
+- KEEP strategies (23): S163, S164, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S397, S398, S403, S404, S406, S411, S412
+- KILL strategies (21): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-10-09T09:26:46.060914-04:00","date":"2026-10-09","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.1,"phases_s":{"reconcile":0.32},"signals":0,"placed":0,"equity":988416.13,"open_positions":5,"pending_orders":0,"open_lots":4,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"12351","github_run_id":"37936678236","status":"ok","data_quality":{"clean":{"n":1642,"win":48.54,"med":-24.62,"avg":38.56,"pnl":18669.83},"tainted":{"n":1977,"win":32.78,"med":-40.0,"avg":11.67,"pnl":-10307.28},"keep_only":{"n":812,"win":61.21,"med":50.96,"avg":57.93,"pnl":12554.45},"keep_only_recent":{"n":619,"win":59.77,"med":53.33,"avg":64.99,"pnl":8493.0},"keep_strategies":["S163","S164","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S397","S398","S403","S404","S406","S411","S412"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+13:37:21  INFO      Mode: morning_prep
+13:37:22  INFO        [prep_positions] 2/2 (2 valid)
+13:37:22  INFO      Fetching tickers (universe=both)...
+13:37:22  INFO        S&P 500: 503
+13:37:22  INFO        MidCap 400: 400
+13:37:22  INFO        Total: 903 tickers
+13:37:23  INFO        [prep_universe] 40/901 (40 valid)
+13:37:25  INFO        [prep_universe] 80/901 (80 valid)
+13:37:26  INFO        [prep_universe] 120/901 (120 valid)
+13:37:27  INFO        [prep_universe] 160/901 (160 valid)
+13:37:28  INFO        [prep_universe] 200/901 (199 valid)
+13:37:35  INFO        [prep_universe] 240/901 (238 valid)
+13:37:48  INFO        [prep_universe] 280/901 (278 valid)
+13:38:01  INFO        [prep_universe] 320/901 (318 valid)
+13:38:12  INFO        [prep_universe] 360/901 (358 valid)
+13:38:25  INFO        [prep_universe] 400/901 (398 valid)
+13:38:35  INFO        [prep_universe] 440/901 (438 valid)
+13:38:48  INFO        [prep_universe] 480/901 (477 valid)
+13:39:01  INFO        [prep_universe] 520/901 (517 valid)
+13:39:11  INFO        [prep_universe] 560/901 (557 valid)
+13:39:24  INFO        [prep_universe] 600/901 (597 valid)
+13:39:38  INFO        [prep_universe] 640/901 (637 valid)
+13:39:48  INFO        [prep_universe] 680/901 (677 valid)
+13:40:01  INFO        [prep_universe] 720/901 (717 valid)
+13:40:11  INFO        [prep_universe] 760/901 (757 valid)
+13:40:24  INFO        [prep_universe] 800/901 (797 valid)
+13:40:37  INFO        [prep_universe] 840/901 (837 valid)
+13:40:47  INFO        [prep_universe] 880/901 (877 valid)
+13:40:54  INFO        [prep_universe] 901/901 (898 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         13:37 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $225.35|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       2|
+|  Invested                                                        $68.71|
+|  Open P&L                                                        $+1.23|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  BAC      MomReversal     $34.07     $53.41   $53.78   +0.7%   $+0.24  |
+|  OC       MomReversal     $34.65     $113.39  $116.75  +3.0%   $+1.00  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                0|
+|                                                                        |
+|  No open sell orders.                                                  |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      0|
+|  Signal candidates                                                   49|
+|  Universe scanned                                                   901|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
