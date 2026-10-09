@@ -102,26 +102,6 @@
       "entry_order_id": "25bfd8b1-e1f6-45cf-a209-c55b978c1081"
     },
     {
-      "lot_id": "7394f5ed9829",
-      "bucket_id": 91,
-      "profile_name": "s406_only",
-      "strategy_id": "S406",
-      "occ_symbol": "T261016C00023000",
-      "underlying": "T",
-      "qty": 1,
-      "entry_cost": 31.0,
-      "entry_price": 0.31,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-09T14:11:52.242403+00:00",
-      "entry_order_id": "b3a197d6-a2b0-4abb-885f-9366a2f1a238"
-    },
-    {
       "lot_id": "8bc1e2ae0707",
       "bucket_id": 54,
       "profile_name": "lab0054_s406_w2_1005_1045_r1",
@@ -258,7 +238,6 @@
     "b90": 86.0,
     "b15": 72.0,
     "b65": 56.00000000000001,
-    "b91": 31.0,
     "b54": 14.000000000000002,
     "b12": 37.0,
     "b20": 45.0,
@@ -687,7 +666,8 @@
     "bf5fed39-a65d-4d4b-a79c-34d9f5fa561b",
     "fb5b7222-4e33-4762-943e-cc5184ccc107",
     "9e99f9e1-7d76-499e-9ee2-b8dfa9c7726c",
-    "eae97160-ef72-4dd5-9ab6-c198b9e4b4cd"
+    "eae97160-ef72-4dd5-9ab6-c198b9e4b4cd",
+    "45ea20f7-edf4-4273-ba20-45a33209a75c"
   ],
   "submitted_today": 13,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

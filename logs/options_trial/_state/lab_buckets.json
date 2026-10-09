@@ -416,8 +416,8 @@
   {
     "bucket_id": 91,
     "profile": "s406_only",
-    "open_premium": 31.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 2000,
