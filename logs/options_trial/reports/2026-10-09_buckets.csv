@@ -53,7 +53,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 51,lab0051_s397_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-07,False,,,,,,,0,,,,idle
 52,lab0052_s398_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-08,False,,,,,,,0,,,,idle
 53,lab0053_s404_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-07,False,,,,,,,0,,,,idle
-54,lab0054_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-08,False,,,,,,,0,,,,idle
+54,lab0054_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-09,False,,,,,,,0,AAPL,S406,,entered_no_exit
 55,lab0055_s409_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-08,False,,,,,,,0,,,,idle
 56,lab0056_s410_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-09,False,,,,,,,0,,,,idle
 57,lab0057_s411_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-09,False,,,,,,,0,,,,idle
@@ -68,7 +68,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 66,lab0066_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-10-09,False,,0.0,-50.0,-50.0,-50.0,-50.0,-13.0,"AAPL,MARA",S163,broker_fill_backfill,closed
 67,lab0067_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-08,False,,,,,,,0,,,,idle
 90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,0,2,2026-10-09,False,,,,,,,0,"AAPL,T","S404,S406",,entered_no_exit
-91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,2026-10-08,False,,,,,,,0,,,,idle
+91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-10-09,False,,,,,,,0,T,S406,,entered_no_exit
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2001,promising_s170_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2002,promising_s171_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle

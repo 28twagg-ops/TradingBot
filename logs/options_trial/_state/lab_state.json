@@ -120,6 +120,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-09T14:07:24.347094+00:00",
       "entry_order_id": "25bfd8b1-e1f6-45cf-a209-c55b978c1081"
+    },
+    {
+      "lot_id": "7394f5ed9829",
+      "bucket_id": 91,
+      "profile_name": "s406_only",
+      "strategy_id": "S406",
+      "occ_symbol": "T261016C00023000",
+      "underlying": "T",
+      "qty": 1,
+      "entry_cost": 31.0,
+      "entry_price": 0.31,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-09T14:11:52.242403+00:00",
+      "entry_order_id": "b3a197d6-a2b0-4abb-885f-9366a2f1a238"
+    },
+    {
+      "lot_id": "8bc1e2ae0707",
+      "bucket_id": 54,
+      "profile_name": "lab0054_s406_w2_1005_1045_r1",
+      "strategy_id": "S406",
+      "occ_symbol": "AAPL261012C00342500",
+      "underlying": "AAPL",
+      "qty": 1,
+      "entry_cost": 14.000000000000002,
+      "entry_price": 0.14,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-09T14:12:55.851203+00:00",
+      "entry_order_id": "9b6ae6c4-e16e-45fd-823e-706673ace529"
     }
   ],
   "pending_orders": [
@@ -188,20 +228,36 @@
       "stop_loss": -0.5
     },
     {
-      "order_id": "b3a197d6-a2b0-4abb-885f-9366a2f1a238",
-      "bucket_id": 91,
-      "strategy_id": "S406",
-      "occ_symbol": "T261016C00023000",
-      "underlying": "T",
+      "order_id": "fb5b7222-4e33-4762-943e-cc5184ccc107",
+      "bucket_id": 20,
+      "strategy_id": "S364",
+      "occ_symbol": "AAPL261016C00347500",
+      "underlying": "AAPL",
       "qty": 1,
-      "limit": 0.31,
-      "profile_name": "s406_only",
+      "limit": 0.45,
+      "profile_name": "lab0020_s364_w2_1005_1045_r1",
       "submitted": "2026-10-09",
-      "detail": "RB gap -10.0% reclaim",
-      "spread_frac": 0.24561403508771928,
+      "detail": "RB gap -2.6% reclaim",
+      "spread_frac": 0.16470588235294117,
       "buy_offset": -0.01,
       "take_profit": 0.5,
-      "stop_loss": -0.4
+      "stop_loss": -0.5
+    },
+    {
+      "order_id": "9e99f9e1-7d76-499e-9ee2-b8dfa9c7726c",
+      "bucket_id": 21,
+      "strategy_id": "S365",
+      "occ_symbol": "AAPL261023C00355000",
+      "underlying": "AAPL",
+      "qty": 1,
+      "limit": 0.51,
+      "profile_name": "lab0021_s365_w2_1005_1045_r1",
+      "submitted": "2026-10-09",
+      "detail": "RB gap -2.6% reclaim",
+      "spread_frac": 0.08000000000000007,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
   "pending_exits": [],
@@ -210,7 +266,9 @@
     "b90": 86.0,
     "b15": 72.0,
     "b66": 62.0,
-    "b65": 56.00000000000001
+    "b65": 56.00000000000001,
+    "b91": 31.0,
+    "b54": 14.000000000000002
   },
   "session_date": "2026-10-09",
   "entries_locked": [
@@ -223,7 +281,10 @@
     "15|S356|2026-10-09",
     "16|S357|2026-10-09",
     "12|S403|2026-10-09",
-    "91|S406|2026-10-09"
+    "91|S406|2026-10-09",
+    "20|S364|2026-10-09",
+    "21|S365|2026-10-09",
+    "54|S406|2026-10-09"
   ],
   "processed_orders": [
     "6aed62d2-8026-4cf5-a8d2-7f05a6d4bd38",
@@ -626,9 +687,11 @@
     "706b1639-ca96-440a-a13e-38c3c8fb6459",
     "89f565b2-8b27-4e10-94d5-10acbefef524",
     "4b819430-c12e-457c-a299-8b8c2b4afd4a",
-    "25bfd8b1-e1f6-45cf-a209-c55b978c1081"
+    "25bfd8b1-e1f6-45cf-a209-c55b978c1081",
+    "b3a197d6-a2b0-4abb-885f-9366a2f1a238",
+    "9b6ae6c4-e16e-45fd-823e-706673ace529"
   ],
-  "submitted_today": 10,
+  "submitted_today": 13,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-09"
 }
