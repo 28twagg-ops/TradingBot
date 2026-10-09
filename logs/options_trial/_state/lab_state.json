@@ -180,6 +180,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-09T14:16:30.900796+00:00",
       "entry_order_id": "bf5fed39-a65d-4d4b-a79c-34d9f5fa561b"
+    },
+    {
+      "lot_id": "63c088a7b0db",
+      "bucket_id": 20,
+      "profile_name": "lab0020_s364_w2_1005_1045_r1",
+      "strategy_id": "S364",
+      "occ_symbol": "AAPL261016C00347500",
+      "underlying": "AAPL",
+      "qty": 1,
+      "entry_cost": 45.0,
+      "entry_price": 0.45,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-09T14:26:31.376909+00:00",
+      "entry_order_id": "fb5b7222-4e33-4762-943e-cc5184ccc107"
     }
   ],
   "pending_orders": [
@@ -232,22 +252,6 @@
       "stop_loss": -0.5
     },
     {
-      "order_id": "fb5b7222-4e33-4762-943e-cc5184ccc107",
-      "bucket_id": 20,
-      "strategy_id": "S364",
-      "occ_symbol": "AAPL261016C00347500",
-      "underlying": "AAPL",
-      "qty": 1,
-      "limit": 0.45,
-      "profile_name": "lab0020_s364_w2_1005_1045_r1",
-      "submitted": "2026-10-09",
-      "detail": "RB gap -2.6% reclaim",
-      "spread_frac": 0.16470588235294117,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
       "order_id": "9e99f9e1-7d76-499e-9ee2-b8dfa9c7726c",
       "bucket_id": 21,
       "strategy_id": "S365",
@@ -273,7 +277,8 @@
     "b65": 56.00000000000001,
     "b91": 31.0,
     "b54": 14.000000000000002,
-    "b12": 37.0
+    "b12": 37.0,
+    "b20": 45.0
   },
   "session_date": "2026-10-09",
   "entries_locked": [
@@ -695,7 +700,8 @@
     "25bfd8b1-e1f6-45cf-a209-c55b978c1081",
     "b3a197d6-a2b0-4abb-885f-9366a2f1a238",
     "9b6ae6c4-e16e-45fd-823e-706673ace529",
-    "bf5fed39-a65d-4d4b-a79c-34d9f5fa561b"
+    "bf5fed39-a65d-4d4b-a79c-34d9f5fa561b",
+    "fb5b7222-4e33-4762-943e-cc5184ccc107"
   ],
   "submitted_today": 13,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
