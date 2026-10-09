@@ -1288,3 +1288,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-10-08 15:31:50,2026-10-08,SELL,KTOS,MomReversal,41.84,33.37,-0.83,-0.28,0,stop_loss (-0.8%),bull,224.79
 2026-10-09 13:53:36,2026-10-09,SELL,AES,Pullback50,14.93,33.71,-0.05,-0.02,0,midline (-0.0%),bull,224.87
 2026-10-09 17:11:27,2026-10-09,SELL,OC,MomReversal,112.81,33.48,-0.51,-0.17,1,stop_loss (-0.5%),bull,224.32
+2026-10-09 19:48:30,2026-10-09,SELL,AES,Pullback50,14.93,33.68,-0.07,-0.02,0,midline (-0.1%),bull,224.46
