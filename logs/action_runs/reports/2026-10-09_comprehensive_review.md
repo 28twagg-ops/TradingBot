@@ -15165,3 +15165,132 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261009T195230Z
+
+- UTC timestamp: `20261009T195230Z`
+- GitHub run: [#12428](https://github.com/28twagg-ops/TradingBot/actions/runs/37982909185)
+- Run id: `37982909185`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261009T195230Z_live_bot.log`, `logs/action_runs/20261009T195230Z_live_options.log`, `logs/action_runs/20261009T195230Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1651 | 48.7 | -23.3 | +38.5 | $+18,821 |
+| TAINTED | 1980 | 32.7 | -40.0 | +11.6 | $-10,355 |
+| KEEP-only | 820 | 61.5 | +51.4 | +57.8 | $+12,733 |
+| KEEP-only recent | 627 | 60.1 | +53.3 | +64.7 | $+8,672 |
+
+- KEEP strategies (23): S163, S164, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S397, S398, S403, S404, S406, S411, S412
+- KILL strategies (21): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-10-09T15:46:09.216208-04:00","date":"2026-10-09","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":1.0,"phases_s":{"reconcile":0.11,"cancel":0.04,"manage":0.29,"protective_stops":0.08},"signals":0,"placed":0,"equity":989212.62,"open_positions":3,"pending_orders":0,"open_lots":2,"submitted_today":13,"filled_today":10,"unattributed_contracts":0,"top_signals":[],"github_run":"12426","github_run_id":"37981771337","status":"ok","data_quality":{"clean":{"n":1651,"win":48.7,"med":-23.29,"avg":38.54,"pnl":18820.83},"tainted":{"n":1980,"win":32.73,"med":-40.0,"avg":11.59,"pnl":-10355.28},"keep_only":{"n":820,"win":61.46,"med":51.39,"avg":57.79,"pnl":12733.45},"keep_only_recent":{"n":627,"win":60.13,"med":53.33,"avg":64.72,"pnl":8672.0},"keep_strategies":["S163","S164","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S397","S398","S403","S404","S406","S411","S412"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (67 earlier lines - see full log file)
+|                                                                        |
+|  Total invested                                                  $34.38|
+|  Total open P&L                                                  $+0.55|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (14411.4m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  BAC  P&L +1.6%  $+0.55                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  47                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AMGN     Pullback50      eq     $415.80  63.4   -1.30   50MA bounce (+|
+|  ADP      Pullback50      eq     $271.36  51.8   -1.32   50MA bounce (-|
+|  BDX      Pullback50      eq     $183.22  55.0   -1.00   50MA bounce (+|
+|  TECH     Pullback50      eq     $72.51   51.7   -1.63   50MA bounce (+|
+|  CDW      Pullback50      eq     $142.65  45.3   -0.68   50MA bounce (+|
+|  CNC      Pullback50      eq     $65.52   52.4   -1.14   50MA bounce (+|
+|  CHD      Pullback50      eq     $97.99   64.5   -2.10   50MA bounce (-|
+|  KO       Pullback50      eq     $88.09   55.8   -2.18   50MA bounce (+|
+|  GLW      Pullback50      eq     $156.70  48.4   -0.88   50MA bounce (+|
+|  ETN      Pullback50      eq     $429.18  45.9   -1.17   50MA bounce (+|
+|  ELV      VWAP_Reclaim    eq     $413.14  52.9   1.63    VWAP reclaim V|
+|  FAST     Pullback50      eq     $50.67   58.3   -1.79   50MA bounce (+|
+|  FITB     MomReversal     eq     $50.42   28.3   0.64    -15.1% drop/60|
+|  HST      Pullback50      eq     $22.64   58.5   -1.49   50MA bounce (-|
+|  HUM      TrendResumpti~  eq     $431.66  69.4   3.23    HH/HL resumpti|
+|  ICE      Pullback50      eq     $155.97  51.4   -1.85   50MA bounce (+|
+|  LLY      Pullback50      eq     $1176.~  53.4   -1.70   50MA bounce (+|
+|  MRNA     VWAP_Reclaim    eq     $222.28  71.6   1.22    VWAP reclaim V|
+|  RSG      Pullback50      eq     $217.16  58.6   -0.86   50MA bounce (+|
+|  SOLV     Pullback50      eq     $87.61   41.9   -1.04   50MA bounce (-|
+|  TRV      Pullback50      eq     $368.64  46.8   -1.42   50MA bounce (-|
+|  URI      Pullback50      eq     $1057.~  55.3   -1.05   50MA bounce (-|
+|  VLTO     Pullback50      eq     $97.03   59.2   -1.40   50MA bounce (+|
+|  GWW      Pullback50      eq     $1290.~  53.6   -2.11   50MA bounce (-|
+|  WMB      Pullback50      eq     $72.78   55.3   -0.60   50MA bounce (+|
+|  AIT      Pullback50      eq     $335.51  63.6   -1.17   50MA bounce (-|
+|  BRKR     Pullback50      eq     $58.77   43.1   -2.20   50MA bounce (+|
+|  CART     Pullback50      eq     $47.84   62.3   -1.50   50MA bounce (+|
+|  CLF      VWAP_Reclaim    eq     $12.95   58.3   1.09    VWAP reclaim V|
+|  DBX      Pullback50      eq     $34.53   42.8   -1.37   50MA bounce (-|19:56:06  INFO        BUY  FITB  $33.67  [MomReversal]  id=3e540f51-c203-426e-948b-f7f2804e48fc
+19:56:06  INFO        BUY  AMGN  $33.67  [Pullback50]  id=5bfb5fe5-099f-4502-9490-64bd83f85359
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
