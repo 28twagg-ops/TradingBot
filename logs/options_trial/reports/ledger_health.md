@@ -1,6 +1,6 @@
-# Ledger health — 2026-10-08
+# Ledger health — 2026-10-09
 
-_Generated 2026-10-08T19:56:26.470703_
+_Generated 2026-10-09T09:01:43.021350_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -29,6 +29,6 @@ Notes:
 
 | lot_id | strategy | symbol | entry_day | age_days |
 |--------|----------|--------|-----------|---------:|
-| 33d84c516583 | S365 | DKNG | 2026-09-28 | 10 |
+| 33d84c516583 | S365 | DKNG | 2026-09-28 | 11 |
 
 _Orphaned ledger detail omitted (1914 rows) — see note above on historical lot_id churn._
