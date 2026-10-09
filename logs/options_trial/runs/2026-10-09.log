@@ -39390,11 +39390,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-10-09.log
 elapsed=1.4s reconcile=0.22s cancel=0.1s manage=0.41s
 
-=== 15:46:09 ET — manage-only (past entry window) [elapsed=1.0s reconcile=0.11s cancel=0.04s manage=0.29s] ===
-=== options_morning_bot (PAPER) 2026-10-09T15:46:09.216208-04:00 ===
+=== 15:40:45 ET — manage-only (past entry window) [elapsed=1.6s reconcile=0.24s cancel=0.1s manage=0.55s] ===
+=== options_morning_bot (PAPER) 2026-10-09T15:40:45.926322-04:00 ===
 
 [Run context]
-Paper auth OK — equity $989212.62, account PA33P8KT02IL
+Paper auth OK — equity $989213.82, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:77:live_1to1+variations
 
 [Setup]
@@ -39414,16 +39414,16 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $989,212.62
+Account equity: $989,213.82
 Active buckets: 77 of 77 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+13,689.55 all-time  |  $+103.00 today
   Raw (incl dropped):     $+8,465.55 all-time  |  $+103.00 today
-  Open (not sold yet): $-34.00 unrealized (virtual lots)
-                       $-14.00 unrealized (broker total)
+  Open (not sold yet): $-35.00 unrealized (virtual lots)
+                       $-15.00 unrealized (broker total)
   Premium deployed:    $80.00 in open positions
-  Combined P&L:        $+13,655.55 (reflected realized + open virtual)
+  Combined P&L:        $+13,654.55 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     15923
@@ -39435,7 +39435,7 @@ Ledger (master)
 Open virtual lots (by bucket)
   b6 lab0006_s210_w2_1005_1045_r1  prem=$     0  real=$+105.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b12 lab0012_s403_w2_1005_1045_r1  prem=$    37  real=$+38.00  open=$ +9.00  lots=1  [S403:PFEx1]
+  b12 lab0012_s403_w2_1005_1045_r1  prem=$    37  real=$+38.00  open=$ +8.00  lots=1  [S403:PFEx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b13 lab0013_s350_w2_1005_1045_r1  prem=$     0  real=$+49.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -39470,7 +39470,7 @@ Open virtual lots (by bucket)
 Alpaca option positions
   DKNG261009C00022500  qty=-1  cost=$21.00  return=+95.2%  open P&L=$+20.00
   DKNG261016C00023500  qty=1  cost=$43.00  return=-100.0%  open P&L=$-43.00
-  PFE261016C00028000  qty=1  cost=$37.00  return=+24.3%  open P&L=$+9.00
+  PFE261016C00028000  qty=1  cost=$37.00  return=+21.6%  open P&L=$+8.00
 
 Per-bucket exit stats (all time)
   b0|c000_s173_w1_0928_1005_r1  n= 22  avg=+24.8%  med=+34.9%  realized=$+283.00
@@ -39868,7 +39868,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $989,212.62                                              |
+|Equity       : $989,213.82                                              |
 |Open Risk    : 2 lots (3 broker pos)                                    |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -39913,8 +39913,8 @@ Per-bucket exit stats (all time)
 |  ---------------------------------------------------------             |
 |  DKNG261016C00023500           1   -100.0%   $    -43.00               |
 |  DKNG261009C00022500          -1    +95.2%   $    +20.00               |
-|  PFE261016C00028000            1    +24.3%   $     +9.00               |
+|  PFE261016C00028000            1    +21.6%   $     +8.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-10-09.log
-elapsed=1.0s reconcile=0.11s cancel=0.04s manage=0.29s
+elapsed=1.6s reconcile=0.24s cancel=0.1s manage=0.55s
 

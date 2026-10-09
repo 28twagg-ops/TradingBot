@@ -1289,3 +1289,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-10-09 13:53:36,2026-10-09,SELL,AES,Pullback50,14.93,33.71,-0.05,-0.02,0,midline (-0.0%),bull,224.87
 2026-10-09 17:11:27,2026-10-09,SELL,OC,MomReversal,112.81,33.48,-0.51,-0.17,1,stop_loss (-0.5%),bull,224.32
 2026-10-09 19:48:30,2026-10-09,SELL,AES,Pullback50,14.93,33.68,-0.07,-0.02,0,midline (-0.1%),bull,224.46
+2026-10-09 19:58:37,2026-10-09,SELL,AMGN,Pullback50,414.72,33.64,-0.06,-0.02,0,midline (-0.1%),bull,224.4

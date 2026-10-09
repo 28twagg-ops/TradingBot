@@ -924,3 +924,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-10-09 13:53:36,2026-10-09,SELL,AES,Pullback50,14.93,14.93,14.9334,33.71,0.0228,0.0077,limit_fill_position_check_full,midline (-0.0%),bull
 2026-10-09 17:11:27,2026-10-09,SELL,OC,MomReversal,112.81,,112.81,33.48,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
 2026-10-09 19:48:30,2026-10-09,SELL,AES,Pullback50,14.925,14.92,14.925,33.68,0.0,0.0,limit_fill_position_check_full,midline (-0.1%),bull
+2026-10-09 19:58:37,2026-10-09,SELL,AMGN,Pullback50,414.67,413.84,414.722,33.64,0.0125,0.0042,limit_fill_position_check_full,midline (-0.1%),bull

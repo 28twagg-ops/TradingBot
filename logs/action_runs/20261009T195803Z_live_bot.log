@@ -1,0 +1,22 @@
+19:58:05  INFO      Mode: scan
+19:58:06  INFO        [positions] 3/3 (3 valid)
+19:58:06  INFO        SELL LIMIT AMGN  qty=0.081113906  limit=$413.84  id=7eee45aa-58d6-4d67-bb19-d8490a69d9be
+19:58:36  INFO        SELL LIMIT filled AMGN (confirmed by position check)
+19:58:37  INFO        TX logged: SELL AMGN  P&L -0.06%
+19:58:37  INFO        Universe cache hit: 903 tickers (tickers_2026-10-09.json)
+19:58:37  INFO        [universe] 40/901 (40 valid)
+19:58:39  INFO        [universe] 80/901 (80 valid)
+19:58:40  INFO        [universe] 120/901 (120 valid)
+19:58:41  INFO        [universe] 160/901 (160 valid)
+19:58:42  INFO        [universe] 200/901 (199 valid)
+19:58:49  INFO        [universe] 240/901 (238 valid)
+19:59:02  INFO        [universe] 280/901 (278 valid)
+19:59:15  INFO        [universe] 320/901 (318 valid)
+19:59:25  INFO        [universe] 360/901 (358 valid)
+19:59:39  INFO        [universe] 400/901 (398 valid)
+19:59:49  INFO        [universe] 440/901 (438 valid)
+20:00:02  INFO        [universe] 480/901 (477 valid)
+20:00:16  INFO        [universe] 520/901 (517 valid)
+20:00:26  INFO        [universe] 560/901 (557 valid)
+20:00:39  INFO        [universe] 600/901 (597 valid)
+20:00:50  INFO        [universe] 640/901 (637 valid)
