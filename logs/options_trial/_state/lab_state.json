@@ -160,6 +160,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-09T14:12:55.851203+00:00",
       "entry_order_id": "9b6ae6c4-e16e-45fd-823e-706673ace529"
+    },
+    {
+      "lot_id": "54815ed0d7ff",
+      "bucket_id": 12,
+      "profile_name": "lab0012_s403_w2_1005_1045_r1",
+      "strategy_id": "S403",
+      "occ_symbol": "PFE261016C00028000",
+      "underlying": "PFE",
+      "qty": 1,
+      "entry_cost": 37.0,
+      "entry_price": 0.37,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-09T14:16:30.900796+00:00",
+      "entry_order_id": "bf5fed39-a65d-4d4b-a79c-34d9f5fa561b"
     }
   ],
   "pending_orders": [
@@ -212,22 +232,6 @@
       "stop_loss": -0.5
     },
     {
-      "order_id": "bf5fed39-a65d-4d4b-a79c-34d9f5fa561b",
-      "bucket_id": 12,
-      "strategy_id": "S403",
-      "occ_symbol": "PFE261016C00028000",
-      "underlying": "PFE",
-      "qty": 1,
-      "limit": 0.37,
-      "profile_name": "lab0012_s403_w2_1005_1045_r1",
-      "submitted": "2026-10-09",
-      "detail": "touch MA50 green",
-      "spread_frac": 0.054054054054054106,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
       "order_id": "fb5b7222-4e33-4762-943e-cc5184ccc107",
       "bucket_id": 20,
       "strategy_id": "S364",
@@ -268,7 +272,8 @@
     "b66": 62.0,
     "b65": 56.00000000000001,
     "b91": 31.0,
-    "b54": 14.000000000000002
+    "b54": 14.000000000000002,
+    "b12": 37.0
   },
   "session_date": "2026-10-09",
   "entries_locked": [
@@ -689,7 +694,8 @@
     "4b819430-c12e-457c-a299-8b8c2b4afd4a",
     "25bfd8b1-e1f6-45cf-a209-c55b978c1081",
     "b3a197d6-a2b0-4abb-885f-9366a2f1a238",
-    "9b6ae6c4-e16e-45fd-823e-706673ace529"
+    "9b6ae6c4-e16e-45fd-823e-706673ace529",
+    "bf5fed39-a65d-4d4b-a79c-34d9f5fa561b"
   ],
   "submitted_today": 13,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
