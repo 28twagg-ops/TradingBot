@@ -143,7 +143,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "e48e2d86-898d-4585-b0ca-194adf597492",
+      "lot_id": "235f980197df",
+      "bucket_id": 90,
+      "strategy_id": "S404",
+      "occ_symbol": "AAPL261012C00340000",
+      "qty": 1,
+      "reason": "take_profit (+50.0%)",
+      "submitted": "2026-10-09T14:21:50"
+    }
+  ],
   "bucket_open_premium": {
     "b421": 43.0,
     "b90": 34.0,
