@@ -64,7 +64,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 62,lab0062_s416_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-04,False,,,,,,,0,,,,idle
 63,lab0063_s167_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-08,False,,,,,,,0,,,,idle
 64,lab0064_s166_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-07,False,,,,,,,0,,,,idle
-65,lab0065_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-09,False,,,,,,,0,AAPL,S168,,entered_no_exit
+65,lab0065_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-09,False,,100.0,57.14,57.14,57.14,57.14,32.0,AAPL,S168,take_profit (+57.1%),closed
 66,lab0066_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-10-09,False,,50.0,3.23,3.23,56.45,-50.0,22.0,"AAPL,MARA",S163,broker_fill_backfill; take_profit (+56.5%),closed
 67,lab0067_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-08,False,,,,,,,0,,,,idle
 90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,1,1,2026-10-09,False,,0.0,-42.31,-42.31,-42.31,-42.31,-22.0,"AAPL,T","S404,S406",broker_fill_backfill,closed
