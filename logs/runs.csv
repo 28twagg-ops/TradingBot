@@ -9925,3 +9925,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-09 23:26:30,ext_exits,bull,224.51,156.38,0,0,0,2,BAC|FITB,both
 2026-10-09 23:31:22,ext_exits,bull,224.51,156.38,0,0,0,2,BAC|FITB,both
 2026-10-09 23:36:20,ext_exits,bull,224.55,156.38,0,0,0,2,BAC|FITB,both
+2026-10-09 23:41:19,ext_exits,bull,224.55,156.38,0,0,0,2,BAC|FITB,both
