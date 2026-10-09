@@ -9855,3 +9855,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-09 17:11:28,exits,bull,224.32,156.38,0,0,1,2,AES|BAC,both
 2026-10-09 17:16:25,exits,bull,224.31,156.38,0,0,0,2,AES|BAC,both
 2026-10-09 17:21:48,exits,bull,224.32,156.38,0,0,0,2,AES|BAC,both
+2026-10-09 17:26:16,exits,bull,224.27,156.38,0,0,0,2,AES|BAC,both
