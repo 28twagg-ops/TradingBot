@@ -9883,3 +9883,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-09 19:56:27,scan_evening,bull,224.43,122.74,47,0,0,3,AMGN|BAC|FITB,both
 2026-10-09 20:02:37,ext_exits,bull,224.48,156.38,0,0,0,2,BAC|FITB,both
 2026-10-09 20:06:19,ext_exits,bull,224.48,156.38,0,0,0,2,BAC|FITB,both
+2026-10-09 20:11:31,ext_exits,bull,224.5,156.38,0,0,0,2,BAC|FITB,both
