@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-10-09 14:12:52.742074+00:00,entry,54,lab0054_s406_w2_1005_1045_r1,S406,8bc1e2ae0707,AAPL,AAPL261012C00342500,1,0.15,0.14,14.0,,,,-0.01,,0.5,-0.5,0.06451612903225812,RB gap -2.6% reclaim,9b6ae6c4-e16e-45fd-823e-706673ace529
+2026-10-09 18:31:37.250435+00:00,exit,54,lab0054_s406_w2_1005_1045_r1,S406,8bc1e2ae0707,AAPL,AAPL261012C00342500,1,,0.24,14.0,71.43,10.0,take_profit (+71.4%),,-0.01,0.5,-0.5,,,482972f8-3c7e-4d5e-aa3b-ab80d7f993a4
