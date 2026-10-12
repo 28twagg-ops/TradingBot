@@ -42,7 +42,24 @@
       "entry_order_id": "bf5fed39-a65d-4d4b-a79c-34d9f5fa561b"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "549a6c82-c95a-492a-9544-8800609d33c2",
+      "bucket_id": 6,
+      "strategy_id": "S210",
+      "occ_symbol": "AAPL261014C00350000",
+      "underlying": "AAPL",
+      "qty": 1,
+      "limit": 0.46,
+      "profile_name": "lab0006_s210_w2_1005_1045_r1",
+      "submitted": "2026-10-12",
+      "detail": "MA8 335.75 crossed above MA21",
+      "spread_frac": 0.04347826086956514,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
+    }
+  ],
   "pending_exits": [
     {
       "order_id": "74adf1c3-1620-4c73-bd2b-1a6a87ab2eac",
@@ -60,7 +77,9 @@
     "b12": 37.0
   },
   "session_date": "2026-10-12",
-  "entries_locked": [],
+  "entries_locked": [
+    "6|S210|2026-10-12"
+  ],
   "processed_orders": [
     "6aed62d2-8026-4cf5-a8d2-7f05a6d4bd38",
     "8f138a71-cf3b-429c-bad1-b2764d3d54f9",
@@ -478,7 +497,7 @@
     "fb67a5eb-9dff-410b-bf34-ffda11cecddc",
     "537a38de-7d02-4d75-97c2-f857745addaa"
   ],
-  "submitted_today": 0,
+  "submitted_today": 1,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-12"
 }
