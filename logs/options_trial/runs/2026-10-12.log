@@ -37830,11 +37830,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-10-12.log
 elapsed=2.1s reconcile=0.42s cancel=0.18s manage=0.77s
 
-=== 15:35:03 ET — manage-only (past entry window) [elapsed=1.4s reconcile=0.13s cancel=0.08s manage=0.67s] ===
-=== options_morning_bot (PAPER) 2026-10-12T15:35:03.108997-04:00 ===
+=== 15:40:40 ET — manage-only (past entry window) [elapsed=2.6s reconcile=0.46s cancel=0.22s manage=0.97s] ===
+=== options_morning_bot (PAPER) 2026-10-12T15:40:40.894960-04:00 ===
 
 [Run context]
-Paper auth OK — equity $990185.50, account PA33P8KT02IL
+Paper auth OK — equity $990171.00, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:77:live_1to1+variations
 
 [Setup]
@@ -37852,15 +37852,15 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $990,185.50
+Account equity: $990,171.00
 Active buckets: 77 of 77 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+13,686.55 all-time  |  $-3.00 today
   Raw (incl dropped):     $+8,462.55 all-time  |  $-3.00 today
-  Open (not sold yet): $-58.00 unrealized (virtual lots)
+  Open (not sold yet): $-57.00 unrealized (virtual lots)
   Premium deployed:    $115.00 in open positions
-  Combined P&L:        $+13,628.55 (reflected realized + open virtual)
+  Combined P&L:        $+13,629.55 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     15927
@@ -37898,14 +37898,14 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b67 lab0067_s164_w2_1005_1045_r1  prem=$     0  real=$-17.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b90 live_1to1               prem=$    72  real=$+96.00  open=$-15.00  lots=1  [S404:ARMx1]
+  b90 live_1to1               prem=$    72  real=$+96.00  open=$-14.00  lots=1  [S404:ARMx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-40%
   b91 s406_only               prem=$     0  real=$+48.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-40%
   (61 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  ARM261016C00285000  qty=1  cost=$72.00  return=-20.8%  open P&L=$-15.00
+  ARM261016C00285000  qty=1  cost=$72.00  return=-19.4%  open P&L=$-14.00
   DKNG261016C00023500  qty=1  cost=$43.00  return=-100.0%  open P&L=$-43.00
 
 Per-bucket exit stats (all time)
@@ -38304,7 +38304,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $990,185.50                                              |
+|Equity       : $990,171.00                                              |
 |Open Risk    : 2 lots (2 broker pos)                                    |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -38353,8 +38353,8 @@ Per-bucket exit stats (all time)
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
 |  DKNG261016C00023500           1   -100.0%   $    -43.00               |
-|  ARM261016C00285000            1    -20.8%   $    -15.00               |
+|  ARM261016C00285000            1    -19.4%   $    -14.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-10-12.log
-elapsed=1.4s reconcile=0.13s cancel=0.08s manage=0.67s
+elapsed=2.6s reconcile=0.46s cancel=0.22s manage=0.97s
 
