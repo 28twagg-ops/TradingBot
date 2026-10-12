@@ -9935,4 +9935,5 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-12 13:16:21,summary,bull,225.02,156.38,0,0,0,2,BAC|FITB,both
 2026-10-12 13:21:33,summary,bull,225.02,156.38,0,0,0,2,BAC|FITB,both
 2026-10-12 13:26:28,summary,bull,225.02,156.38,0,0,0,2,BAC|FITB,both
-2026-10-12 14:01:26,scan_morning,bull,224.75,123.65,34,0,0,3,ADP|CB|TECH,both,244.6,False
+2026-10-12 14:01:26,scan_morning,bull,224.75,123.65,34,0,0,3,ADP|CB|TECH,both
+2026-10-12 14:02:54,exits,bull,224.76,123.65,0,0,0,3,ADP|CB|TECH,both
