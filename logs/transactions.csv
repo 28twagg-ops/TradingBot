@@ -1292,3 +1292,6 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-10-09 19:58:37,2026-10-09,SELL,AMGN,Pullback50,414.72,33.64,-0.06,-0.02,0,midline (-0.1%),bull,224.4
 2026-10-12 13:48:46,2026-10-12,SELL,FITB,MomReversal,50.87,33.87,0.6,0.2,3,max_hold 3d (+0.6%),bull,224.75
 2026-10-12 13:49:07,2026-10-12,SELL,BAC,MomReversal,54.5,34.52,2.1,0.71,4,max_hold 4d (+2.1%),bull,224.75
+2026-10-12 19:47:35,2026-10-12,SELL,TECH,Pullback50,72.54,33.73,0.09,0.03,0,midline (+0.1%),bull,224.98
+2026-10-12 19:48:06,2026-10-12,SELL,ADP,Pullback50,273.6,33.79,0.29,0.1,0,midline (+0.3%),bull,224.98
+2026-10-12 19:48:36,2026-10-12,SELL,CB,Pullback50,345.2,33.81,0.29,0.1,0,midline (+0.3%),bull,224.98
