@@ -40,26 +40,29 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-09T14:16:30.900796+00:00",
       "entry_order_id": "bf5fed39-a65d-4d4b-a79c-34d9f5fa561b"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "1873209f-2936-410b-a827-2890ed435ad2",
+      "lot_id": "c605b736386d",
       "bucket_id": 90,
+      "profile_name": "live_1to1",
       "strategy_id": "S404",
       "occ_symbol": "ARM261016C00285000",
       "underlying": "ARM",
       "qty": 1,
-      "limit": 0.72,
-      "profile_name": "live_1to1",
-      "submitted": "2026-10-12",
-      "detail": "gap -2.2%",
-      "spread_frac": 0.07092198581560273,
-      "buy_offset": -0.01,
+      "entry_cost": 72.0,
+      "entry_price": 0.72,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
       "take_profit": 0.5,
-      "stop_loss": -0.4
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-12T15:01:33.651268+00:00",
+      "entry_order_id": "1873209f-2936-410b-a827-2890ed435ad2"
     }
   ],
+  "pending_orders": [],
   "pending_exits": [
     {
       "order_id": "74adf1c3-1620-4c73-bd2b-1a6a87ab2eac",
@@ -74,7 +77,8 @@
   ],
   "bucket_open_premium": {
     "b421": 43.0,
-    "b12": 37.0
+    "b12": 37.0,
+    "b90": 72.0
   },
   "session_date": "2026-10-12",
   "entries_locked": [
@@ -498,7 +502,8 @@
     "fb67a5eb-9dff-410b-bf34-ffda11cecddc",
     "537a38de-7d02-4d75-97c2-f857745addaa",
     "549a6c82-c95a-492a-9544-8800609d33c2",
-    "c921b440-692b-43a2-b3fe-f9197e301aed"
+    "c921b440-692b-43a2-b3fe-f9197e301aed",
+    "1873209f-2936-410b-a827-2890ed435ad2"
   ],
   "submitted_today": 2,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
