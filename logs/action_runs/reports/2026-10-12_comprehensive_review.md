@@ -1711,3 +1711,132 @@ Fetched daily bars for 113/117 symbols
 ```
 
 ---
+
+## Run 20261012T135721Z
+
+- UTC timestamp: `20261012T135721Z`
+- GitHub run: [#12489](https://github.com/28twagg-ops/TradingBot/actions/runs/38259082613)
+- Run id: `38259082613`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261012T135721Z_live_bot.log`, `logs/action_runs/20261012T135721Z_live_options.log`, `logs/action_runs/20261012T135721Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1651 | 48.7 | -23.3 | +38.5 | $+18,821 |
+| TAINTED | 1980 | 32.7 | -40.0 | +11.6 | $-10,355 |
+| KEEP-only | 820 | 61.5 | +51.4 | +57.8 | $+12,733 |
+| KEEP-only recent | 627 | 60.1 | +53.3 | +64.7 | $+8,672 |
+
+- KEEP strategies (23): S163, S164, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S397, S398, S403, S404, S406, S411, S412
+- KILL strategies (21): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-10-12T09:26:32.538195-04:00","date":"2026-10-12","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.3,"phases_s":{"reconcile":0.44},"signals":0,"placed":0,"equity":989557.01,"open_positions":2,"pending_orders":0,"open_lots":2,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"12483","github_run_id":"38255537772","status":"ok","data_quality":{"clean":{"n":1651,"win":48.7,"med":-23.29,"avg":38.54,"pnl":18820.83},"tainted":{"n":1980,"win":32.73,"med":-40.0,"avg":11.59,"pnl":-10355.28},"keep_only":{"n":820,"win":61.46,"med":51.39,"avg":57.79,"pnl":12733.45},"keep_only_recent":{"n":627,"win":60.13,"med":53.33,"avg":64.72,"pnl":8672.0},"keep_strategies":["S163","S164","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S397","S398","S403","S404","S406","S411","S412"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (66 earlier lines - see full log file)
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (20176.9m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  34                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  ADP      Pullback50      eq     $272.83  54.0   -1.64   50MA bounce (+|
+|  TECH     Pullback50      eq     $72.48   46.7   -2.48   50MA bounce (+|
+|  CB       Pullback50      eq     $343.81  60.8   -1.77   50MA bounce (+|
+|  KO       Pullback50      eq     $88.64   50.2   -2.77   50MA bounce (+|
+|  CHD      Pullback50      eq     $98.40   63.6   -2.88   50MA bounce (+|
+|  CTSH     Pullback50      eq     $60.20   54.8   -1.62   50MA bounce (+|
+|  FANG     Pullback50      eq     $197.30  73.5   -0.96   50MA bounce (+|
+|  ECL      Pullback50      eq     $281.19  57.7   -2.35   50MA bounce (+|
+|  ICE      Pullback50      eq     $156.88  60.2   -2.98   50MA bounce (+|
+|  IFF      Pullback50      eq     $84.41   38.8   -2.55   50MA bounce (-|
+|  LLY      Pullback50      eq     $1184.~  54.1   -2.37   50MA bounce (+|
+|  NDAQ     Pullback50      eq     $94.39   49.5   -2.68   50MA bounce (-|
+|  NWSA     Pullback50      eq     $29.21   49.6   -1.40   50MA bounce (-|
+|  OKE      Pullback50      eq     $91.42   54.0   -1.60   50MA bounce (-|
+|  ROK      Pullback50      eq     $434.65  56.4   -2.61   50MA bounce (+|
+|  RSG      Pullback50      eq     $218.84  62.2   -2.02   50MA bounce (+|
+|  SWKS     Pullback50      eq     $76.89   25.0   -1.18   50MA bounce (+|
+|  STLD     Pullback50      eq     $239.04  55.5   -1.51   50MA bounce (-|
+|  URI      Pullback50      eq     $1062.~  53.9   -2.25   50MA bounce (+|
+|  WAB      Pullback50      eq     $286.98  46.5   -2.71   50MA bounce (-|
+|  AIT      Pullback50      eq     $335.19  55.8   -1.42   50MA bounce (-|
+|  CLH      Pullback50      eq     $318.67  59.0   -3.00   50MA bounce (+|
+|  DBX      Pullback50      eq     $34.72   54.9   -2.01   50MA bounce (+|
+|  FCFS     Pullback50      eq     $215.00  39.7   -2.20   50MA bounce (-|
+|  LNTH     Pullback50      eq     $100.36  59.1   -1.63   50MA bounce (-|
+|  MOH      Pullback50      eq     $198.26  59.7   -2.72   50MA bounce (+|
+|  MUSA     Pullback50      eq     $533.76  64.8   -2.14   50MA bounce (+|
+|  MTDR     Pullback50      eq     $55.48   68.3   -2.69   50MA bounce (+|
+|  REXR     Pullback50      eq     $36.88   38.2   -2.74   50MA bounce (-|
+|  RGEN     Pullback50      eq     $172.97  41.4   -2.28   50MA bounce (-|
+|  ROKU     Pullback50      eq     $152.91  43.0   -2.42   50MA bounce (-|
+|  RS       Pullback50      eq     $402.64  63.5   -1.46   50MA bounce (+|
+|  THC      Pullback50      eq     $264.78  53.3   -1.09   50MA bounce (+|
+|  UNM      Pullback50      eq     $92.61   48.0   -1.60   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] ADP  Pullback50                                    $33.71|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] TECH  Pullback50                                   $33.71|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] CB  Pullback50                                     $33.71|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] KO  Pullback50                                       cap 3|
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
