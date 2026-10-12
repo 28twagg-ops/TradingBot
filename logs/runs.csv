@@ -9939,3 +9939,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-12 14:02:54,exits,bull,224.76,123.65,0,0,0,3,ADP|CB|TECH,both
 2026-10-12 14:06:23,exits,bull,224.78,123.65,0,0,0,3,ADP|CB|TECH,both
 2026-10-12 14:11:25,exits,bull,224.78,123.65,0,0,0,3,ADP|CB|TECH,both
+2026-10-12 14:16:27,exits,bull,224.8,123.65,0,0,0,3,ADP|CB|TECH,both
