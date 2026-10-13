@@ -300,6 +300,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-13T14:36:43.573725+00:00",
       "entry_order_id": "8eba1908-f656-46b2-a131-aff16180138a"
+    },
+    {
+      "lot_id": "762f84ad2274",
+      "bucket_id": 16,
+      "profile_name": "lab0016_s357_w2_1005_1045_r1",
+      "strategy_id": "S357",
+      "occ_symbol": "MARA261106C00010000",
+      "underlying": "MARA",
+      "qty": 1,
+      "entry_cost": 41.0,
+      "entry_price": 0.41,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-13T14:41:27.713121+00:00",
+      "entry_order_id": "f3b17b0c-7dd8-44eb-87f0-eeb99090077b"
+    },
+    {
+      "lot_id": "6224a0d89dd1",
+      "bucket_id": 58,
+      "profile_name": "lab0058_s412_w2_1005_1045_r1",
+      "strategy_id": "S412",
+      "occ_symbol": "WFC261016C00086000",
+      "underlying": "WFC",
+      "qty": 1,
+      "entry_cost": 13.0,
+      "entry_price": 0.13,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-13T14:42:29.778407+00:00",
+      "entry_order_id": "792774f2-43b5-4016-849e-a8be59bc2997"
     }
   ],
   "pending_orders": [
@@ -315,22 +355,6 @@
       "submitted": "2026-10-13",
       "detail": "gap -2.1%",
       "spread_frac": 0.06896551724137917,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "f3b17b0c-7dd8-44eb-87f0-eeb99090077b",
-      "bucket_id": 16,
-      "strategy_id": "S357",
-      "occ_symbol": "MARA261106C00010000",
-      "underlying": "MARA",
-      "qty": 1,
-      "limit": 0.41,
-      "profile_name": "lab0016_s357_w2_1005_1045_r1",
-      "submitted": "2026-10-13",
-      "detail": "gap -2.1%",
-      "spread_frac": 0.15384615384615383,
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
@@ -443,7 +467,9 @@
     "b64": 64.0,
     "b57": 56.00000000000001,
     "b13": 45.0,
-    "b53": 35.0
+    "b53": 35.0,
+    "b16": 41.0,
+    "b58": 13.0
   },
   "session_date": "2026-10-13",
   "entries_locked": [
@@ -469,7 +495,8 @@
     "18|S361|2026-10-13",
     "19|S362|2026-10-13",
     "17|S359|2026-10-13",
-    "21|S365|2026-10-13"
+    "21|S365|2026-10-13",
+    "58|S412|2026-10-13"
   ],
   "processed_orders": [
     "6aed62d2-8026-4cf5-a8d2-7f05a6d4bd38",
@@ -909,9 +936,11 @@
     "8ff45e09-0059-448d-9d64-dd27a076cb94",
     "ba7e135d-f4dc-476f-bdab-2bd69580764b",
     "8eba1908-f656-46b2-a131-aff16180138a",
-    "e19e4bed-48e6-4cea-8cdd-1234a282c178"
+    "e19e4bed-48e6-4cea-8cdd-1234a282c178",
+    "f3b17b0c-7dd8-44eb-87f0-eeb99090077b",
+    "792774f2-43b5-4016-849e-a8be59bc2997"
   ],
-  "submitted_today": 23,
+  "submitted_today": 24,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-13"
 }
