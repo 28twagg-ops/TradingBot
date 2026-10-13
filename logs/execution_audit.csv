@@ -930,3 +930,6 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-10-12 19:47:35,2026-10-12,SELL,TECH,Pullback50,72.545,72.54,72.542,33.73,-0.0041,-0.0014,limit_fill_position_check_full,midline (+0.1%),bull
 2026-10-12 19:48:06,2026-10-12,SELL,ADP,Pullback50,273.62,273.55,273.602,33.79,-0.0066,-0.0022,limit_fill_position_check_full,midline (+0.3%),bull
 2026-10-12 19:48:36,2026-10-12,SELL,CB,Pullback50,345.215,345.06,345.196,33.81,-0.0055,-0.0019,limit_fill_position_check_full,midline (+0.3%),bull
+2026-10-13 13:47:18,2026-10-13,SELL,FICO,MomReversal,734.89,,733.97,33.33,-0.1252,-0.0417,market_urgent_full,stop_loss (-1.2%),bull
+2026-10-13 13:47:49,2026-10-13,SELL,ACGL,Pullback50,97.165,96.97,97.146,33.74,-0.0196,-0.0066,limit_fill_position_check_full,midline (+0.0%),bull
+2026-10-13 13:48:20,2026-10-13,SELL,ADP,Pullback50,276.04,275.49,275.854,33.74,-0.0674,-0.0227,limit_fill_position_check_full,midline (+0.1%),bull

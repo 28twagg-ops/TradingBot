@@ -1,0 +1,29 @@
+13:47:15  INFO      Mode: morning_scan
+13:47:16  INFO        [positions] 3/3 (3 valid)
+13:47:16  INFO        SELL MARKET [urgent] FICO closed
+13:47:18  INFO        TX logged: SELL FICO  P&L -1.21%
+13:47:18  INFO        SELL LIMIT ACGL  qty=0.347262247  limit=$96.97  id=843a0bb0-e752-4310-95ea-1a646f4a6615
+13:47:49  INFO        SELL LIMIT filled ACGL (confirmed by position check)
+13:47:49  INFO        TX logged: SELL ACGL  P&L 0.01%
+13:47:49  INFO        SELL LIMIT ADP  qty=0.122321719  limit=$275.49  id=ea8df351-da6e-42e0-aeda-625d420c1678
+13:48:20  INFO        SELL LIMIT filled ADP (confirmed by position check)
+13:48:20  INFO        TX logged: SELL ADP  P&L 0.14%
+13:48:20  INFO        Universe cache hit: 903 tickers (tickers_2026-10-13.json)
+13:48:21  INFO        [universe] 40/903 (40 valid)
+13:48:22  INFO        [universe] 80/903 (80 valid)
+13:48:23  INFO        [universe] 120/903 (120 valid)
+13:48:24  INFO        [universe] 160/903 (160 valid)
+13:48:25  INFO        [universe] 200/903 (199 valid)
+13:48:32  INFO        [universe] 240/903 (238 valid)
+13:48:46  INFO        [universe] 280/903 (278 valid)
+13:48:59  INFO        [universe] 320/903 (318 valid)
+13:49:09  INFO        [universe] 360/903 (358 valid)
+13:49:22  INFO        [universe] 400/903 (398 valid)
+13:49:32  INFO        [universe] 440/903 (438 valid)
+13:49:46  INFO        [universe] 480/903 (477 valid)
+13:49:59  INFO        [universe] 520/903 (517 valid)
+13:50:09  INFO        [universe] 560/903 (557 valid)
+13:50:22  INFO        [universe] 600/903 (597 valid)
+13:50:32  INFO        [universe] 640/903 (637 valid)
+13:50:45  INFO        [universe] 680/903 (677 valid)
+13:50:59  INFO        [universe] 720/903 (717 valid)
