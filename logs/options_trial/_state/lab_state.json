@@ -283,6 +283,16 @@
       "qty": 1,
       "reason": "take_profit (+56.7%)",
       "submitted": "2026-10-13T11:21:45"
+    },
+    {
+      "order_id": "2ab32516-57e1-41b1-a698-9e65cb1a44cd",
+      "lot_id": "6224a0d89dd1",
+      "bucket_id": 58,
+      "strategy_id": "S412",
+      "occ_symbol": "WFC261016C00086000",
+      "qty": 1,
+      "reason": "stop_loss (-53.8%)",
+      "submitted": "2026-10-13T14:06:43"
     }
   ],
   "bucket_open_premium": {
