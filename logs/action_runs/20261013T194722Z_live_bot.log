@@ -1,0 +1,146 @@
+19:47:23  INFO      Mode: scan
+19:47:24  INFO        Universe cache hit: 903 tickers (tickers_2026-10-13.json)
+19:47:25  INFO        [universe] 40/903 (40 valid)
+19:47:26  INFO        [universe] 80/903 (80 valid)
+19:47:28  INFO        [universe] 120/903 (120 valid)
+19:47:29  INFO        [universe] 160/903 (160 valid)
+19:47:30  INFO        [universe] 200/903 (199 valid)
+19:47:37  INFO        [universe] 240/903 (238 valid)
+19:47:51  INFO        [universe] 280/903 (278 valid)
+19:48:01  INFO        [universe] 320/903 (318 valid)
+19:48:14  INFO        [universe] 360/903 (358 valid)
+19:48:25  INFO        [universe] 400/903 (398 valid)
+19:48:38  INFO        [universe] 440/903 (438 valid)
+19:48:48  INFO        [universe] 480/903 (477 valid)
+19:49:01  INFO        [universe] 520/903 (517 valid)
+19:49:15  INFO        [universe] 560/903 (557 valid)
+19:49:25  INFO        [universe] 600/903 (597 valid)
+19:49:38  INFO        [universe] 640/903 (637 valid)
+19:49:48  INFO        [universe] 680/903 (677 valid)
+19:50:02  INFO        [universe] 720/903 (717 valid)
+19:50:15  INFO        [universe] 760/903 (757 valid)
+19:50:25  INFO        [universe] 800/903 (797 valid)
+19:50:39  INFO        [universe] 840/903 (837 valid)
+19:50:49  INFO        [universe] 880/903 (877 valid)
+19:50:56  INFO        [universe] 903/903 (900 valid)
+19:50:58  INFO        BUY  GS  $33.67  [MomReversal]  id=b53e271f-f796-411e-81b5-637b0bacc8a0
+19:50:58  INFO        BUY  AMZN  $33.67  [Pullback50]  id=e8d8f88e-58f1-4b02-bd69-37d578c158b3
+19:50:58  INFO        BUY  BBY  $33.67  [Pullback50]  id=abc29f8c-f75e-4c5e-8506-ed7868f9f903
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:47 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $224.50|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-10-13|
+|  Universe                                                          both|
+|  Mon~  Oct: RubberBand + GapDown (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $224.50|
+|  Cash                                                           $224.50|
+|  Reserve                                          $11.23  (always kept)|
+|  Stocks ~  $0.00 / $168.38  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $168.38  (new stock buys)|
+|  Trade size             $33.67  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (0 open)                        |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (20166.3m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  25                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AMZN     Pullback50      eq     $259.54  63.9   -2.58   50MA bounce (+|
+|  BBY      Pullback50      eq     $88.28   40.8   -1.97   50MA bounce (+|
+|  TECH     Pullback50      eq     $72.50   49.1   -1.34   50MA bounce (+|
+|  DVA      Pullback50      eq     $182.67  49.2   -1.07   50MA bounce (+|
+|  DE       Pullback50      eq     $648.27  30.5   -0.85   50MA bounce (-|
+|  FANG     Pullback50      eq     $198.34  73.4   -0.46   50MA bounce (+|
+|  ETN      Pullback50      eq     $430.20  44.1   -1.06   50MA bounce (+|
+|  GM       Pullback50      eq     $84.14   50.8   -0.84   50MA bounce (-|
+|  GS       MomReversal     eq     $894.06  31.0   2.06    -15.3% drop/60|
+|  JBL      Pullback50      eq     $318.19  54.7   -0.73   50MA bounce (+|
+|  MPWR     Pullback50      eq     $1319.~  45.6   -1.00   50MA bounce (+|
+|  NUE      Pullback50      eq     $254.00  57.6   -1.52   50MA bounce (-|
+|  SJM      Pullback50      eq     $121.53  47.2   -1.23   50MA bounce (-|
+|  SWKS     Pullback50      eq     $76.71   23.4   -0.90   50MA bounce (+|
+|  STLD     Pullback50      eq     $241.21  57.2   -0.92   50MA bounce (+|
+|  URI      Pullback50      eq     $1064.~  56.6   -1.21   50MA bounce (+|
+|  ACI      VWAP_Reclaim    eq     $12.70   69.8   1.28    VWAP reclaim V|
+|  FCFS     Pullback50      eq     $217.63  52.2   -1.37   50MA bounce (+|
+|  GWRE     Pullback50      eq     $165.27  63.5   -1.55   50MA bounce (-|
+|  IDCC     Pullback50      eq     $332.14  54.4   -1.11   50MA bounce (-|
+|  KEX      Pullback50      eq     $137.19  67.2   -1.59   50MA bounce (+|
+|  LSCC     Pullback50      eq     $121.22  49.4   -1.04   50MA bounce (-|
+|  NOVT     Pullback50      eq     $146.36  52.3   -0.05   50MA bounce (-|
+|  ROKU     Pullback50      eq     $152.87  46.5   -1.89   50MA bounce (-|
+|  TREX     Pullback50      eq     $45.26   60.6   -1.93   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] GS  MomReversal                                    $33.67|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AMZN  Pullback50                                   $33.67|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] BBY  Pullback50                                    $33.67|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] TECH  Pullback50                                     cap 3|
+|    SKIP [eq] DVA  Pullback50                                      cap 3|
+|    SKIP [eq] DE  Pullback50                                       cap 3|
+|    SKIP [eq] FANG  Pullback50                                     cap 3|
+|    SKIP [eq] ETN  Pullback50                                      cap 3|
+|    SKIP [eq] GM  Pullback50                                       cap 3|
+|    SKIP [eq] JBL  Pullback50                                      cap 3|
+|    SKIP [eq] MPWR  Pullback50                                     cap 3|
+|    SKIP [eq] NUE  Pullback50                                      cap 3|
+|    SKIP [eq] SJM  Pullback50                                      cap 3|

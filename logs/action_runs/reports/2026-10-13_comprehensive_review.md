@@ -14394,3 +14394,132 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261013T194722Z
+
+- UTC timestamp: `20261013T194722Z`
+- GitHub run: [#12690](https://github.com/28twagg-ops/TradingBot/actions/runs/38457310863)
+- Run id: `38457310863`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261013T194722Z_live_bot.log`, `logs/action_runs/20261013T194722Z_live_options.log`, `logs/action_runs/20261013T194722Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1659 | 48.8 | -23.3 | +38.4 | $+18,918 |
+| TAINTED | 1984 | 32.7 | -40.0 | +11.5 | $-10,453 |
+| KEEP-only | 837 | 61.5 | +51.6 | +57.3 | $+13,101 |
+| KEEP-only recent | 644 | 60.2 | +53.4 | +63.9 | $+9,040 |
+
+- KEEP strategies (24): S163, S164, S166, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S397, S398, S403, S404, S406, S411, S412
+- KILL strategies (21): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-10-13T15:40:54.855541-04:00","date":"2026-10-13","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":2.1,"phases_s":{"reconcile":0.1,"cancel":0.04,"manage":1.23,"protective_stops":0.12},"signals":0,"placed":0,"equity":990041.59,"open_positions":12,"pending_orders":0,"open_lots":12,"submitted_today":24,"filled_today":20,"unattributed_contracts":0,"top_signals":[],"github_run":"12688","github_run_id":"38455982266","status":"ok","data_quality":{"clean":{"n":1659,"win":48.76,"med":-23.29,"avg":38.43,"pnl":18917.83},"tainted":{"n":1984,"win":32.66,"med":-40.0,"avg":11.46,"pnl":-10453.28},"keep_only":{"n":837,"win":61.53,"med":51.61,"avg":57.32,"pnl":13101.45},"keep_only_recent":{"n":644,"win":60.25,"med":53.45,"avg":63.92,"pnl":9040.0},"keep_strategies":["S163","S164","S166","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S397","S398","S403","S404","S406","S411","S412"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (66 earlier lines - see full log file)
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                  no (stale (20166.3m))|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  25                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AMZN     Pullback50      eq     $259.54  63.9   -2.58   50MA bounce (+|
+|  BBY      Pullback50      eq     $88.28   40.8   -1.97   50MA bounce (+|
+|  TECH     Pullback50      eq     $72.50   49.1   -1.34   50MA bounce (+|
+|  DVA      Pullback50      eq     $182.67  49.2   -1.07   50MA bounce (+|
+|  DE       Pullback50      eq     $648.27  30.5   -0.85   50MA bounce (-|
+|  FANG     Pullback50      eq     $198.34  73.4   -0.46   50MA bounce (+|
+|  ETN      Pullback50      eq     $430.20  44.1   -1.06   50MA bounce (+|
+|  GM       Pullback50      eq     $84.14   50.8   -0.84   50MA bounce (-|
+|  GS       MomReversal     eq     $894.06  31.0   2.06    -15.3% drop/60|
+|  JBL      Pullback50      eq     $318.19  54.7   -0.73   50MA bounce (+|
+|  MPWR     Pullback50      eq     $1319.~  45.6   -1.00   50MA bounce (+|
+|  NUE      Pullback50      eq     $254.00  57.6   -1.52   50MA bounce (-|
+|  SJM      Pullback50      eq     $121.53  47.2   -1.23   50MA bounce (-|
+|  SWKS     Pullback50      eq     $76.71   23.4   -0.90   50MA bounce (+|
+|  STLD     Pullback50      eq     $241.21  57.2   -0.92   50MA bounce (+|
+|  URI      Pullback50      eq     $1064.~  56.6   -1.21   50MA bounce (+|
+|  ACI      VWAP_Reclaim    eq     $12.70   69.8   1.28    VWAP reclaim V|
+|  FCFS     Pullback50      eq     $217.63  52.2   -1.37   50MA bounce (+|
+|  GWRE     Pullback50      eq     $165.27  63.5   -1.55   50MA bounce (-|
+|  IDCC     Pullback50      eq     $332.14  54.4   -1.11   50MA bounce (-|
+|  KEX      Pullback50      eq     $137.19  67.2   -1.59   50MA bounce (+|
+|  LSCC     Pullback50      eq     $121.22  49.4   -1.04   50MA bounce (-|
+|  NOVT     Pullback50      eq     $146.36  52.3   -0.05   50MA bounce (-|
+|  ROKU     Pullback50      eq     $152.87  46.5   -1.89   50MA bounce (-|
+|  TREX     Pullback50      eq     $45.26   60.6   -1.93   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] GS  MomReversal                                    $33.67|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AMZN  Pullback50                                   $33.67|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] BBY  Pullback50                                    $33.67|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] TECH  Pullback50                                     cap 3|
+|    SKIP [eq] DVA  Pullback50                                      cap 3|
+|    SKIP [eq] DE  Pullback50                                       cap 3|
+|    SKIP [eq] FANG  Pullback50                                     cap 3|
+|    SKIP [eq] ETN  Pullback50                                      cap 3|
+|    SKIP [eq] GM  Pullback50                                       cap 3|
+|    SKIP [eq] JBL  Pullback50                                      cap 3|
+|    SKIP [eq] MPWR  Pullback50                                     cap 3|
+|    SKIP [eq] NUE  Pullback50                                      cap 3|
+|    SKIP [eq] SJM  Pullback50                                      cap 3|
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
