@@ -16,7 +16,7 @@ S356,GapDown_14DTE,14d,watch,fat left tail (p10 < -45%),69,31,16,15,9.7,36.0,-51
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),225,109,55,54,36.11,22.22,-71.43,-50.0,146.0,1086.0,25,78,0,0,19,27.5
 S365,RubberBand_14DTE,14d,watch,fat left tail (p10 < -45%),70,36,18,18,8.72,19.23,-64.03,-51.8,70.56,35.0,16,74,1,1,8,36.1
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),113,49,26,23,56.9,15.0,-63.53,-50.0,205.14,849.0,15,74,1,0,11,26.5
-S411,RubberBand_OTM2,3d,watch,fat left tail (p10 < -45%),157,53,29,24,0.12,7.69,-57.37,-51.39,64.52,-16.0,16,71,1,0,16,17.0
+S411,RubberBand_OTM2,3d,watch,fat left tail (p10 < -45%),157,54,29,25,-0.84,7.69,-57.29,-51.6,64.16,-45.0,17,71,1,1,16,16.7
 S364,RubberBand_7DTE,7d,watch,fat left tail (p10 < -45%),121,66,33,33,13.67,2.7,-85.29,-62.31,86.84,68.0,19,74,1,1,9,37.9
 S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S170,Golden Pocket call 3 DTE,3d ATM golden pocket,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
