@@ -340,6 +340,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-13T14:42:29.778407+00:00",
       "entry_order_id": "792774f2-43b5-4016-849e-a8be59bc2997"
+    },
+    {
+      "lot_id": "9e33e90a3f07",
+      "bucket_id": 17,
+      "profile_name": "lab0017_s359_w2_1005_1045_r1",
+      "strategy_id": "S359",
+      "occ_symbol": "AMD261014C00622500",
+      "underlying": "AMD",
+      "qty": 1,
+      "entry_cost": 50.0,
+      "entry_price": 0.5,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-13T14:52:26.607099+00:00",
+      "entry_order_id": "a51e1ec6-f9df-47e8-b943-55d85c044878"
     }
   ],
   "pending_orders": [
@@ -408,22 +428,6 @@
       "stop_loss": -0.5
     },
     {
-      "order_id": "a51e1ec6-f9df-47e8-b943-55d85c044878",
-      "bucket_id": 17,
-      "strategy_id": "S359",
-      "occ_symbol": "AMD261014C00622500",
-      "underlying": "AMD",
-      "qty": 1,
-      "limit": 0.5,
-      "profile_name": "lab0017_s359_w2_1005_1045_r1",
-      "submitted": "2026-10-13",
-      "detail": "RB gap -2.8% reclaim",
-      "spread_frac": 0.10309278350515462,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
       "order_id": "b7bff0fc-7838-4603-aa89-79f428066c0c",
       "bucket_id": 21,
       "strategy_id": "S365",
@@ -469,7 +473,8 @@
     "b13": 45.0,
     "b53": 35.0,
     "b16": 41.0,
-    "b58": 13.0
+    "b58": 13.0,
+    "b17": 50.0
   },
   "session_date": "2026-10-13",
   "entries_locked": [
@@ -938,7 +943,8 @@
     "8eba1908-f656-46b2-a131-aff16180138a",
     "e19e4bed-48e6-4cea-8cdd-1234a282c178",
     "f3b17b0c-7dd8-44eb-87f0-eeb99090077b",
-    "792774f2-43b5-4016-849e-a8be59bc2997"
+    "792774f2-43b5-4016-849e-a8be59bc2997",
+    "a51e1ec6-f9df-47e8-b943-55d85c044878"
   ],
   "submitted_today": 24,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-13
 
-_Generated 2026-10-13T10:47:38.967996_
+_Generated 2026-10-13T10:52:28.909171_
 
 ## Summary
 
@@ -107,7 +107,7 @@ _Generated 2026-10-13T10:47:38.967996_
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 99 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 255 | 32.2 | -35.29 | -63.24 | -53.42 | +93.89 | 99 | 0 | 0 | $-1,276.78 | 25.9% | non-positive median return |
 | S355 (GapDown_7DTE) | 7d | drop | 71 | 45.1 | -37.50 | -77.08 | -63.70 | +138.64 | 74 | 0 | 0 | $+367.00 | 38.0% | manually paused — excluded from new entries & reflected P&L |
-| S359 (RubberBand_0DTE) | 0d | drop | 41 | 43.9 | -39.29 | -71.43 | -63.16 | +228.57 | 71 | 0 | 0 | $+49.00 | 24.4% | non-positive median return |
+| S359 (RubberBand_0DTE) | 0d | drop | 41 | 43.9 | -39.29 | -71.43 | -63.16 | +228.57 | 71 | 1 | 0 | $+49.00 | 24.4% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 56 | 33.9 | -42.86 | -83.93 | -65.20 | +103.47 | 74 | 0 | 0 | $-118.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 56 | 23.2 | -43.65 | -86.66 | -54.73 | +95.51 | 78 | 0 | 0 | $-401.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S353 (GapDown_3DTE) | 3d | drop | 45 | 42.2 | -46.15 | -82.61 | -69.70 | +264.21 | 74 | 0 | 0 | $+125.00 | 22.2% | non-positive median return |

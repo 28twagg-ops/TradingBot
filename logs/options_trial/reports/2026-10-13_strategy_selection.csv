@@ -86,7 +86,7 @@ S352,GapDown_2DTE,2d,drop,non-positive median return,156,62,29,33,49.39,-27.95,-
 S173,MomReversal long call,MomRev,drop,non-positive median return,1625,415,154,261,15.19,-31.51,-77.18,-62.95,101.9,62.64,8,99,0,0,12,27.5
 S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1470,255,82,173,2.52,-35.29,-63.24,-53.42,93.89,-1276.78,11,99,0,0,16,25.9
 S355,GapDown_7DTE,7d,drop,manually paused — excluded from new entries & reflected P&L,133,71,32,39,13.44,-37.5,-77.08,-63.7,138.64,367.0,17,74,0,0,9,38.0
-S359,RubberBand_0DTE,0d,drop,non-positive median return,102,41,18,23,55.11,-39.29,-71.43,-63.16,228.57,49.0,13,71,0,0,12,24.4
+S359,RubberBand_0DTE,0d,drop,non-positive median return,103,41,18,23,55.11,-39.29,-71.43,-63.16,228.57,49.0,13,71,1,0,12,24.4
 S405,GapDown_OTM3,3d,drop,manually paused — excluded from new entries & reflected P&L,115,56,19,37,-8.5,-42.86,-83.93,-65.2,103.47,-118.0,8,74,0,0,8,26.8
 S211,MA_Cross_21_50,3d ATM MA cross 21/50,drop,manually paused — excluded from new entries & reflected P&L,154,56,13,43,35.53,-43.65,-86.66,-54.73,95.51,-401.0,14,78,0,0,17,26.8
 S353,GapDown_3DTE,3d,drop,non-positive median return,116,45,19,26,61.44,-46.15,-82.61,-69.7,264.21,125.0,12,74,0,0,10,22.2
