@@ -222,26 +222,6 @@
       "entry_order_id": "c6e9c015-a3f6-4b84-bb66-31ef22a874ee"
     },
     {
-      "lot_id": "12c8cc3697b9",
-      "bucket_id": 13,
-      "profile_name": "lab0013_s350_w2_1005_1045_r1",
-      "strategy_id": "S350",
-      "occ_symbol": "AMD261014C00627500",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 45.0,
-      "entry_price": 0.45,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-13T14:21:39.477581+00:00",
-      "entry_order_id": "a2231d62-7f07-4a11-90f6-84715c129ecd"
-    },
-    {
       "lot_id": "39f96ee3948e",
       "bucket_id": 53,
       "profile_name": "lab0053_s404_w2_1005_1045_r1",
@@ -342,72 +322,7 @@
       "entry_order_id": "189dd19d-80b2-4835-af70-a79f8470688f"
     }
   ],
-  "pending_orders": [
-    {
-      "order_id": "cc760bcd-b138-4e99-98ad-507d0ba29742",
-      "bucket_id": 65,
-      "strategy_id": "S168",
-      "occ_symbol": "WFC261016C00084000",
-      "underlying": "WFC",
-      "qty": 1,
-      "limit": 0.27,
-      "profile_name": "lab0065_s168_w2_1005_1045_r1",
-      "submitted": "2026-10-13",
-      "detail": "gap -3.3%",
-      "spread_frac": 0.15384615384615397,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "b90087f7-e4bf-4fc5-a778-bc1bb5d38d3e",
-      "bucket_id": 14,
-      "strategy_id": "S352",
-      "occ_symbol": "WFC261016C00082500",
-      "underlying": "WFC",
-      "qty": 1,
-      "limit": 0.59,
-      "profile_name": "lab0014_s352_w2_1005_1045_r1",
-      "submitted": "2026-10-13",
-      "detail": "gap -3.3%",
-      "spread_frac": 0.2018348623853211,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "9459ab65-bbf3-46fc-8945-0e492c249ebd",
-      "bucket_id": 19,
-      "strategy_id": "S362",
-      "occ_symbol": "WFC261016C00085000",
-      "underlying": "WFC",
-      "qty": 1,
-      "limit": 0.19,
-      "profile_name": "lab0019_s362_w2_1005_1045_r1",
-      "submitted": "2026-10-13",
-      "detail": "RB gap -3.3% reclaim",
-      "spread_frac": 0.05128205128205133,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "b7bff0fc-7838-4603-aa89-79f428066c0c",
-      "bucket_id": 21,
-      "strategy_id": "S365",
-      "occ_symbol": "WFC261030C00085000",
-      "underlying": "WFC",
-      "qty": 1,
-      "limit": 0.68,
-      "profile_name": "lab0021_s365_w2_1005_1045_r1",
-      "submitted": "2026-10-13",
-      "detail": "RB gap -3.3% reclaim",
-      "spread_frac": 0.22580645161290308,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    }
-  ],
+  "pending_orders": [],
   "pending_exits": [
     {
       "order_id": "4955a67e-ffd9-4d0d-91b2-e29478cc395e",
@@ -428,16 +343,6 @@
       "qty": 1,
       "reason": "take_profit (+56.7%)",
       "submitted": "2026-10-13T11:21:45"
-    },
-    {
-      "order_id": "a9776701-2fdb-4e97-a579-b1db427e0d06",
-      "lot_id": "12c8cc3697b9",
-      "bucket_id": 13,
-      "strategy_id": "S350",
-      "occ_symbol": "AMD261014C00627500",
-      "qty": 1,
-      "reason": "stop_loss (-51.1%)",
-      "submitted": "2026-10-13T11:26:38"
     }
   ],
   "bucket_open_premium": {
@@ -452,7 +357,6 @@
     "b12": 39.0,
     "b51": 63.0,
     "b63": 20.0,
-    "b13": 45.0,
     "b53": 35.0,
     "b16": 41.0,
     "b58": 13.0,
@@ -930,7 +834,8 @@
     "a51e1ec6-f9df-47e8-b943-55d85c044878",
     "189dd19d-80b2-4835-af70-a79f8470688f",
     "dd1e522a-b008-42d5-bca4-ebd4859d056f",
-    "7151d351-c09d-47c3-b374-18cc85515c74"
+    "7151d351-c09d-47c3-b374-18cc85515c74",
+    "a9776701-2fdb-4e97-a579-b1db427e0d06"
   ],
   "submitted_today": 24,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
