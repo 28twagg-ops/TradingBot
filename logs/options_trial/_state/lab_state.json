@@ -62,26 +62,6 @@
       "entry_order_id": "6c2845f6-3e66-407a-9c49-5bad1749da2d"
     },
     {
-      "lot_id": "e0cb83c535db",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S404",
-      "occ_symbol": "AMD261014C00622500",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 61.0,
-      "entry_price": 0.61,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-13T14:03:59.094935+00:00",
-      "entry_order_id": "778af361-4848-4094-99f4-272abe1e6862"
-    },
-    {
       "lot_id": "836962e2ea72",
       "bucket_id": 50,
       "profile_name": "lab0050_s396_w2_1005_1045_r1",
@@ -398,6 +378,22 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
+    },
+    {
+      "order_id": "9459ab65-bbf3-46fc-8945-0e492c249ebd",
+      "bucket_id": 19,
+      "strategy_id": "S362",
+      "occ_symbol": "WFC261016C00085000",
+      "underlying": "WFC",
+      "qty": 1,
+      "limit": 0.19,
+      "profile_name": "lab0019_s362_w2_1005_1045_r1",
+      "submitted": "2026-10-13",
+      "detail": "RB gap -3.3% reclaim",
+      "spread_frac": 0.05128205128205133,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
   "pending_exits": [
@@ -415,7 +411,7 @@
   "bucket_open_premium": {
     "b421": 43.0,
     "b91": 60.0,
-    "b90": 126.0,
+    "b90": 65.0,
     "b50": 73.0,
     "b15": 45.0,
     "b67": 47.0,
@@ -449,7 +445,8 @@
     "13|S350|2026-10-13",
     "57|S411|2026-10-13",
     "64|S166|2026-10-13",
-    "18|S361|2026-10-13"
+    "18|S361|2026-10-13",
+    "19|S362|2026-10-13"
   ],
   "processed_orders": [
     "6aed62d2-8026-4cf5-a8d2-7f05a6d4bd38",
@@ -885,9 +882,10 @@
     "c6e9c015-a3f6-4b84-bb66-31ef22a874ee",
     "1f420b0a-0350-4f2a-ba41-9a7b1721aec7",
     "a3ff206b-7221-4713-ad5e-e4eb49d30601",
-    "a2231d62-7f07-4a11-90f6-84715c129ecd"
+    "a2231d62-7f07-4a11-90f6-84715c129ecd",
+    "8ff45e09-0059-448d-9d64-dd27a076cb94"
   ],
-  "submitted_today": 20,
+  "submitted_today": 21,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-13"
 }
