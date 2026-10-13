@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-13
 
-_Generated 2026-10-13T14:06:46.171501_
+_Generated 2026-10-13T14:11:46.517349_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-10-13T14:06:46.171501_
 
 ## Attribution health
 
-- Total exits: **3642**
+- Total exits: **3643**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **11.6%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -97,7 +97,7 @@ _Generated 2026-10-13T14:06:46.171501_
 | S358 (GapDown_30DTE) | 30d | watch | 5 | 40.0 | -50.00 | -51.39 | -51.39 | +54.28 | 70 | 0 | 1 | $-49.00 | 40.0% | insufficient sample (<8 exits) |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 7 | 0.0 | -64.71 | -80.40 | -68.79 | -50.75 | 76 | 0 | 0 | $-212.00 | 71.4% | insufficient sample (<8 exits) |
 | S401 (Any_Gap_Down_Small) | 3d | drop | 135 | 49.6 | +0.00 | -84.10 | -51.33 | +230.91 | 74 | 0 | 0 | $+928.00 | 23.7% | non-positive median return |
-| S412 (RubberBand_OTM3) | 3d | drop | 66 | 45.5 | -3.57 | -56.15 | -49.13 | +125.66 | 74 | 1 | 1 | $+200.00 | 18.2% | non-positive median return |
+| S412 (RubberBand_OTM3) | 3d | drop | 67 | 44.8 | -3.57 | -56.00 | -49.58 | +125.53 | 74 | 1 | 2 | $+193.00 | 17.9% | non-positive median return |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 101 | 49.5 | -4.35 | -71.05 | -51.22 | +82.86 | 78 | 2 | 1 | $+157.00 | 16.8% | non-positive median return |
 | S361 (RubberBand_2DTE) | 2d | drop | 64 | 48.4 | -5.46 | -66.67 | -53.52 | +276.66 | 74 | 1 | 1 | $+134.00 | 20.3% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 67 | 43.3 | -6.25 | -81.48 | -59.63 | +573.13 | 71 | 0 | 0 | $+1,137.00 | 17.9% | manually paused — excluded from new entries & reflected P&L |
@@ -321,7 +321,7 @@ _Pipeline evaluation as of 2026-10-13. Auto-kill thresholds: median<-25% at n>=1
 | S409 | RubberBand_ATM | 2 | +81.94% | 100% | WATCH | 19 |
 | S410 | RubberBand_OTM1 | 10 | +67.85% | 70% | WATCH | 68 |
 | S411 | RubberBand_OTM2 | 54 | +7.69% | 54% | INSUFFICIENT | 71 |
-| S412 | RubberBand_OTM3 | 66 | -3.57% | 45% | INSUFFICIENT | 74 |
+| S412 | RubberBand_OTM3 | 67 | -3.57% | 45% | INSUFFICIENT | 74 |
 | S413 | BBSqueeze_ITM3 | 0 | — | — | NEW | 0 |
 | S414 | BBSqueeze_ITM2 | 0 | — | — | NEW | 0 |
 | S415 | BBSqueeze_ITM1 | 0 | — | — | NEW | 0 |
