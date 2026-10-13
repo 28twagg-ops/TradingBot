@@ -10160,3 +10160,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-13 22:51:34,ext_exits,bull,224.54,157.18,0,0,0,2,BBY|GS,both
 2026-10-13 22:56:25,ext_exits,bull,224.52,157.18,0,0,0,2,BBY|GS,both
 2026-10-13 23:01:41,ext_exits,bull,224.46,157.18,0,0,0,2,BBY|GS,both
+2026-10-13 23:06:35,ext_exits,bull,224.5,157.18,0,0,0,2,BBY|GS,both
