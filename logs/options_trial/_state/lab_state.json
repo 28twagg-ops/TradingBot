@@ -202,26 +202,6 @@
       "entry_order_id": "9546e813-00be-47f9-8334-f2c28e9abf70"
     },
     {
-      "lot_id": "e85d6e51292a",
-      "bucket_id": 6,
-      "profile_name": "lab0006_s210_w2_1005_1045_r1",
-      "strategy_id": "S210",
-      "occ_symbol": "AXP261016C00315000",
-      "underlying": "AXP",
-      "qty": 1,
-      "entry_cost": 56.00000000000001,
-      "entry_price": 0.56,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-14T14:32:57.612732+00:00",
-      "entry_order_id": "4e7c99b9-7821-458f-8930-50c4575dd6df"
-    },
-    {
       "lot_id": "e42016856956",
       "bucket_id": 20,
       "profile_name": "lab0020_s364_w2_1005_1045_r1",
@@ -305,14 +285,14 @@
       "submitted": "2026-10-14T13:36:35"
     },
     {
-      "order_id": "d24e06ac-81e9-481d-a103-4037ec5ef96b",
-      "lot_id": "e85d6e51292a",
-      "bucket_id": 6,
-      "strategy_id": "S210",
-      "occ_symbol": "AXP261016C00315000",
+      "order_id": "74b70ea5-316f-4758-9efc-abddba68e610",
+      "lot_id": "762f84ad2274",
+      "bucket_id": 16,
+      "strategy_id": "S357",
+      "occ_symbol": "MARA261106C00010000",
       "qty": 1,
-      "reason": "stop_loss (-53.6%)",
-      "submitted": "2026-10-14T13:51:42"
+      "reason": "stop_loss (-51.2%)",
+      "submitted": "2026-10-14T13:56:40"
     }
   ],
   "bucket_open_premium": {
@@ -326,7 +306,6 @@
     "b49": 64.0,
     "b14": 25.0,
     "b63": 56.99999999999999,
-    "b6": 56.00000000000001,
     "b20": 52.0,
     "b56": 56.99999999999999
   },
@@ -855,7 +834,8 @@
     "ca125322-7f71-422a-9402-9bdce2d18550",
     "3812f818-6e23-4ea2-a059-1403eb68c571",
     "d810013e-ac0a-4d30-a71d-844fb60c7f04",
-    "7a281a23-bbe3-4899-ae4c-dbc88eccc180"
+    "7a281a23-bbe3-4899-ae4c-dbc88eccc180",
+    "d24e06ac-81e9-481d-a103-4037ec5ef96b"
   ],
   "submitted_today": 25,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
