@@ -303,6 +303,16 @@
       "qty": 1,
       "reason": "stop_loss (-50.0%)",
       "submitted": "2026-10-14T13:36:35"
+    },
+    {
+      "order_id": "d24e06ac-81e9-481d-a103-4037ec5ef96b",
+      "lot_id": "e85d6e51292a",
+      "bucket_id": 6,
+      "strategy_id": "S210",
+      "occ_symbol": "AXP261016C00315000",
+      "qty": 1,
+      "reason": "stop_loss (-53.6%)",
+      "submitted": "2026-10-14T13:51:42"
     }
   ],
   "bucket_open_premium": {
