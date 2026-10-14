@@ -420,6 +420,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-14T14:41:29.584988+00:00",
       "entry_order_id": "fe8d5a09-6aeb-4788-a38d-a3779a87bb77"
+    },
+    {
+      "lot_id": "e9668a623edf",
+      "bucket_id": 56,
+      "profile_name": "lab0056_s410_w2_1005_1045_r1",
+      "strategy_id": "S410",
+      "occ_symbol": "UPST261016C00022500",
+      "underlying": "UPST",
+      "qty": 1,
+      "entry_cost": 56.99999999999999,
+      "entry_price": 0.57,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-14T14:56:40.862530+00:00",
+      "entry_order_id": "e967396c-8adf-4ec0-ab36-b292c0f0d8bd"
     }
   ],
   "pending_orders": [
@@ -470,22 +490,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
-    },
-    {
-      "order_id": "e967396c-8adf-4ec0-ab36-b292c0f0d8bd",
-      "bucket_id": 56,
-      "strategy_id": "S410",
-      "occ_symbol": "UPST261016C00022500",
-      "underlying": "UPST",
-      "qty": 1,
-      "limit": 0.57,
-      "profile_name": "lab0056_s410_w2_1005_1045_r1",
-      "submitted": "2026-10-14",
-      "detail": "RB gap -2.9% reclaim",
-      "spread_frac": 0.053097345132743216,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
     }
   ],
   "pending_exits": [
@@ -531,7 +535,8 @@
     "b63": 56.99999999999999,
     "b66": 50.0,
     "b6": 56.00000000000001,
-    "b20": 52.0
+    "b20": 52.0,
+    "b56": 56.99999999999999
   },
   "session_date": "2026-10-14",
   "entries_locked": [
@@ -1047,7 +1052,8 @@
     "a9d6aac4-eed0-4341-beaa-3c009204ec69",
     "4e7c99b9-7821-458f-8930-50c4575dd6df",
     "fe8d5a09-6aeb-4788-a38d-a3779a87bb77",
-    "4864e0be-871f-4d17-b865-b7817c20f292"
+    "4864e0be-871f-4d17-b865-b7817c20f292",
+    "e967396c-8adf-4ec0-ab36-b292c0f0d8bd"
   ],
   "submitted_today": 25,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
