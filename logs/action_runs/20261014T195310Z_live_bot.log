@@ -1,0 +1,21 @@
+19:53:11  INFO      Mode: scan
+19:53:13  INFO        [positions] 3/3 (3 valid)
+19:53:13  INFO        SELL LIMIT APD  qty=0.114862691  limit=$291.41  id=a4cc957e-0474-4c02-99e7-972c565fc70a
+19:53:43  INFO        SELL LIMIT filled APD (confirmed by position check)
+19:53:43  INFO        TX logged: SELL APD  P&L -0.09%
+19:53:43  INFO        Universe cache hit: 903 tickers (tickers_2026-10-14.json)
+19:53:45  INFO        [universe] 40/901 (40 valid)
+19:53:46  INFO        [universe] 80/901 (80 valid)
+19:53:47  INFO        [universe] 120/901 (120 valid)
+19:53:49  INFO        [universe] 160/901 (160 valid)
+19:53:50  INFO        [universe] 200/901 (199 valid)
+19:53:58  INFO        [universe] 240/901 (238 valid)
+19:54:08  INFO        [universe] 280/901 (278 valid)
+19:54:21  INFO        [universe] 320/901 (318 valid)
+19:54:35  INFO        [universe] 360/901 (358 valid)
+19:54:45  INFO        [universe] 400/901 (398 valid)
+19:54:59  INFO        [universe] 440/901 (438 valid)
+19:55:09  INFO        [universe] 480/901 (477 valid)
+19:55:23  INFO        [universe] 520/901 (517 valid)
+19:55:33  INFO        [universe] 560/901 (557 valid)
+19:55:46  INFO        [universe] 600/901 (597 valid)
