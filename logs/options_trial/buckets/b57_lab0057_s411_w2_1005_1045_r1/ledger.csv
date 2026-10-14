@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-10-13 14:18:05.302377+00:00,entry,57,lab0057_s411_w2_1005_1045_r1,S411,e94ae819e7b0,AMD,AMD261014C00625000,1,0.56,0.56,56.0,,,,-0.01,,0.75,-0.75,0.017699115044247607,RB gap -2.8% reclaim,a3ff206b-7221-4713-ad5e-e4eb49d30601
 2026-10-13 15:26:40.380513+00:00,exit,57,lab0057_s411_w2_1005_1045_r1,S411,e94ae819e7b0,AMD,AMD261014C00625000,1,,0.27,56.0,-51.79,-29.0,stop_loss (-51.8%),,-0.01,0.5,-0.5,,,7151d351-c09d-47c3-b374-18cc85515c74
+2026-10-14 14:09:04.043190+00:00,entry,57,lab0057_s411_w2_1005_1045_r1,S411,a131224a0c97,MSTR,MSTR261016C00157500,1,0.6,0.6,60.0,,,,-0.01,,0.75,-0.75,0.05042016806722694,RB gap -1.6% reclaim,fc7d2eec-53dd-4b17-b35a-237bba6d8c4e
