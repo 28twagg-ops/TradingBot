@@ -510,6 +510,22 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
+    },
+    {
+      "order_id": "4e7c99b9-7821-458f-8930-50c4575dd6df",
+      "bucket_id": 6,
+      "strategy_id": "S210",
+      "occ_symbol": "AXP261016C00315000",
+      "underlying": "AXP",
+      "qty": 1,
+      "limit": 0.57,
+      "profile_name": "lab0006_s210_w2_1005_1045_r1",
+      "submitted": "2026-10-14",
+      "detail": "MA8 307.37 crossed above MA21",
+      "spread_frac": 0.23076923076923064,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
   "pending_exits": [
@@ -571,7 +587,8 @@
     "19|S362|2026-10-14",
     "21|S365|2026-10-14",
     "58|S412|2026-10-14",
-    "66|S163|2026-10-14"
+    "66|S163|2026-10-14",
+    "6|S210|2026-10-14"
   ],
   "processed_orders": [
     "6aed62d2-8026-4cf5-a8d2-7f05a6d4bd38",
@@ -1055,7 +1072,7 @@
     "9546e813-00be-47f9-8334-f2c28e9abf70",
     "18d660a9-511c-477b-9e5f-33ddd16c21dd"
   ],
-  "submitted_today": 22,
+  "submitted_today": 23,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-14"
 }
