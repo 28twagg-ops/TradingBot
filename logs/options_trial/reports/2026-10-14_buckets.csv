@@ -13,7 +13,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 11,lab0011_s402_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 12,lab0012_s403_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-10-14,False,,0.0,-57.41,-57.41,-48.15,-66.67,-39.0,AMZN,S403,broker_fill_backfill; broker_fill_backfill,closed
 13,lab0013_s350_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-14,False,,,,,,,0,SMCI,S350,,entered_no_exit
-14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-14,False,,,,,,,0,CRWD,S352,,entered_no_exit
+14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-14,False,,0.0,-48.0,-48.0,-48.0,-48.0,-12.0,CRWD,S352,stop_loss (-60.0%),closed
 15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-10-13,False,,0.0,-48.89,-48.89,-48.89,-48.89,-22.0,MARA,S356,broker_fill_backfill,closed
 16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-10-13,False,,0.0,-48.78,-48.78,-48.78,-48.78,-20.0,MARA,S357,stop_loss (-51.2%),closed
 17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-14,False,,0.0,-52.5,-52.5,-52.5,-52.5,-21.0,COIN,S359,stop_loss (-57.5%),closed
