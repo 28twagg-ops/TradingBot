@@ -262,26 +262,6 @@
       "entry_order_id": "9546e813-00be-47f9-8334-f2c28e9abf70"
     },
     {
-      "lot_id": "735164032beb",
-      "bucket_id": 66,
-      "profile_name": "lab0066_s163_w2_1005_1045_r1",
-      "strategy_id": "S163",
-      "occ_symbol": "ARM261016C00272500",
-      "underlying": "ARM",
-      "qty": 1,
-      "entry_cost": 50.0,
-      "entry_price": 0.5,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-14T14:13:40.388468+00:00",
-      "entry_order_id": "18d660a9-511c-477b-9e5f-33ddd16c21dd"
-    },
-    {
       "lot_id": "e85d6e51292a",
       "bucket_id": 6,
       "profile_name": "lab0006_s210_w2_1005_1045_r1",
@@ -363,16 +343,6 @@
       "qty": 1,
       "reason": "take_profit (+81.8%)",
       "submitted": "2026-10-14T10:46:32"
-    },
-    {
-      "order_id": "ca125322-7f71-422a-9402-9bdce2d18550",
-      "lot_id": "735164032beb",
-      "bucket_id": 66,
-      "strategy_id": "S163",
-      "occ_symbol": "ARM261016C00272500",
-      "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-10-14T12:01:53"
     }
   ],
   "bucket_open_premium": {
@@ -389,7 +359,6 @@
     "b14": 25.0,
     "b51": 66.0,
     "b63": 56.99999999999999,
-    "b66": 50.0,
     "b6": 56.00000000000001,
     "b20": 52.0,
     "b56": 56.99999999999999
@@ -915,7 +884,8 @@
     "6703d079-9e05-4bb1-9c79-1e31789b7508",
     "43e7935c-999c-4e0f-80eb-a26cb9c46147",
     "4a8c774e-4293-46f1-a222-75302aa709a1",
-    "b7d6a7c9-bd00-46a6-8a2c-349a9e8f8351"
+    "b7d6a7c9-bd00-46a6-8a2c-349a9e8f8351",
+    "ca125322-7f71-422a-9402-9bdce2d18550"
   ],
   "submitted_today": 25,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
