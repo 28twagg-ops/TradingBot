@@ -440,6 +440,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-14T14:56:40.862530+00:00",
       "entry_order_id": "e967396c-8adf-4ec0-ab36-b292c0f0d8bd"
+    },
+    {
+      "lot_id": "288811e5e2ca",
+      "bucket_id": 58,
+      "profile_name": "lab0058_s412_w2_1005_1045_r1",
+      "strategy_id": "S412",
+      "occ_symbol": "MS261016C00190000",
+      "underlying": "MS",
+      "qty": 1,
+      "entry_cost": 14.000000000000002,
+      "entry_price": 0.14,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-14T15:01:27.047297+00:00",
+      "entry_order_id": "cb7e4c6d-f543-445a-99a2-4fea18f8053a"
     }
   ],
   "pending_orders": [
@@ -471,22 +491,6 @@
       "submitted": "2026-10-14",
       "detail": "RB gap -7.7% reclaim",
       "spread_frac": 0.15384615384615397,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "cb7e4c6d-f543-445a-99a2-4fea18f8053a",
-      "bucket_id": 58,
-      "strategy_id": "S412",
-      "occ_symbol": "MS261016C00190000",
-      "underlying": "MS",
-      "qty": 1,
-      "limit": 0.15,
-      "profile_name": "lab0058_s412_w2_1005_1045_r1",
-      "submitted": "2026-10-14",
-      "detail": "RB gap -3.3% reclaim",
-      "spread_frac": 0.06451612903225812,
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
@@ -536,7 +540,8 @@
     "b66": 50.0,
     "b6": 56.00000000000001,
     "b20": 52.0,
-    "b56": 56.99999999999999
+    "b56": 56.99999999999999,
+    "b58": 14.000000000000002
   },
   "session_date": "2026-10-14",
   "entries_locked": [
@@ -1053,7 +1058,8 @@
     "4e7c99b9-7821-458f-8930-50c4575dd6df",
     "fe8d5a09-6aeb-4788-a38d-a3779a87bb77",
     "4864e0be-871f-4d17-b865-b7817c20f292",
-    "e967396c-8adf-4ec0-ab36-b292c0f0d8bd"
+    "e967396c-8adf-4ec0-ab36-b292c0f0d8bd",
+    "cb7e4c6d-f543-445a-99a2-4fea18f8053a"
   ],
   "submitted_today": 25,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
