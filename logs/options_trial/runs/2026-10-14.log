@@ -42522,12 +42522,13 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-10-14.log
 elapsed=4.2s reconcile=0.4s cancel=0.19s manage=2.13s
 
-=== 15:40:46 ET — manage-only (past entry window) [elapsed=2.7s reconcile=0.19s cancel=0.07s manage=1.46s] ===
-=== options_morning_bot (PAPER) 2026-10-14T15:40:46.366990-04:00 ===
+=== 16:03:20 ET — manage-only (past entry window) [elapsed=2.0s reconcile=0.09s cancel=0.03s manage=1.08s] ===
+=== options_morning_bot (PAPER) 2026-10-14T16:03:20.505677-04:00 ===
 
 [Run context]
-Paper auth OK — equity $990658.60, account PA33P8KT02IL
+Paper auth OK — equity $990771.10, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:77:live_1to1+variations
+  reconcile: cleared 2 resolved pending exit(s)
 
 [Setup]
 LIVE 1:1 bucket b90 live_1to1 — S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
@@ -42535,12 +42536,14 @@ S406-only twin b91 s406_only — S406 | TP+50%/SL-40% | paper edge test
 Variation study: 75 lab/promising bucket(s) | cohort: 75 unique (S163, S164, S166, S167, S168, S169, S170, S171, S172, S175, S200, S201 … +63 more) | max 200 new entries/run
 Dropped (no new entries; ex-reflected P&L): S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
 Shared-OCC entry block ON (one lab lot per contract)
-  EXIT [b63|lab0063_s167_w2_1005_1045_r1|S167] stop_loss (-57.9%) SELL blocked (uncovered/shared OCC) AMD261016C00637500 x1: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-  EXIT skip DKNG261016C00023500: open sell already pending
-  EXIT skip SMCI261016C00039000: open sell already pending
+  EXIT [b63|lab0063_s167_w2_1005_1045_r1|S167] stop_loss (-59.6%) market failed AMD261016C00637500: {"code":42210000,"message":"options market orders are only allowed during market hours"}
+  EXIT [b63|lab0063_s167_w2_1005_1045_r1|S167] stop_loss (-59.6%) SELL blocked (uncovered/shared OCC) AMD261016C00637500 x1: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  EXIT [b63|lab0063_s167_w2_1005_1045_r1|S167] stop_loss (-59.6%) market+limit failed AMD261016C00637500
+  EXIT [b421|lab0421_s365_w2_1005_1045_r2|S365] stop_loss (-100.0%) SELL 1 DKNG261016C00023500 @<= 0.01  id=e056976e-9889-42f6-971d-845b5e7e8c3f
   PROT STOP failed AMD261016C00640000: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
+  PROT STOP-MKT SMCI261016C00039000 x1 stop=0.11 tif=gtc sl=-50% id=42b94aeb-a0cf-4bfd-a36b-96cfde937ec8
   PROT STOP failed AMD261016C00637500: {"code":40310000,"message":"account not eligible to trade uncovered option contracts"}
-Protective stops: placed=0 upgraded=0 already=5 failed=2 (market-first)
+Protective stops: placed=1 upgraded=0 already=4 failed=2 (market-first)
 
 [Manage only]
 Past entry window; manage/exit only.
@@ -42549,16 +42552,16 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $990,658.60
+Account equity: $990,771.10
 Active buckets: 77 of 77 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+13,073.55 all-time  |  $-615.00 today
   Raw (incl dropped):     $+7,849.55 all-time  |  $-615.00 today
-  Open (not sold yet): $-114.92 unrealized (virtual lots)
-                       $-126.00 unrealized (broker total)
+  Open (not sold yet): $-120.92 unrealized (virtual lots)
+                       $-132.00 unrealized (broker total)
   Premium deployed:    $361.00 in open positions
-  Combined P&L:        $+12,958.63 (reflected realized + open virtual)
+  Combined P&L:        $+12,952.63 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     16012
@@ -42590,7 +42593,7 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b21 lab0021_s365_w2_1005_1045_r1  prem=$     0  real=$+28.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b49 lab0049_s395_w2_1005_1045_r1  prem=$    64  real=$ +0.00  open=$-28.00  lots=1  [S395:MARAx1]
+  b49 lab0049_s395_w2_1005_1045_r1  prem=$    64  real=$ +0.00  open=$-26.00  lots=1  [S395:MARAx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b50 lab0050_s396_w2_1005_1045_r1  prem=$     0  real=$ -5.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -42602,23 +42605,23 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b54 lab0054_s406_w2_1005_1045_r1  prem=$     0  real=$+34.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b56 lab0056_s410_w2_1005_1045_r1  prem=$    57  real=$ +0.00  open=$-18.00  lots=1  [S410:UPSTx1]
+  b56 lab0056_s410_w2_1005_1045_r1  prem=$    57  real=$ +0.00  open=$-23.00  lots=1  [S410:UPSTx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b57 lab0057_s411_w2_1005_1045_r1  prem=$     0  real=$-59.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b63 lab0063_s167_w2_1005_1045_r1  prem=$    57  real=$ +3.00  open=$-33.00  lots=1  [S167:AMDx1]
+  b63 lab0063_s167_w2_1005_1045_r1  prem=$    57  real=$ +3.00  open=$-34.00  lots=1  [S167:AMDx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   (6 more active bucket(s) omitted)
   (51 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  AMD261016C00637500  qty=1  cost=$57.00  return=-57.9%  open P&L=$-33.00
+  AMD261016C00637500  qty=1  cost=$57.00  return=-59.6%  open P&L=$-34.00
   AMD261016C00640000  qty=-1  cost=$39.00  return=+41.0%  open P&L=$+16.00
   DKNG261016C00023500  qty=1  cost=$43.00  return=-100.0%  open P&L=$-43.00
-  MARA261016C00008000  qty=1  cost=$64.00  return=-43.8%  open P&L=$-28.00
+  MARA261016C00008000  qty=1  cost=$64.00  return=-40.6%  open P&L=$-26.00
   SMCI261016C00039000  qty=1  cost=$22.00  return=-45.5%  open P&L=$-10.00
-  SMCI261023C00040000  qty=1  cost=$52.00  return=-19.2%  open P&L=$-10.00
-  UPST261016C00022500  qty=1  cost=$57.00  return=-31.6%  open P&L=$-18.00
+  SMCI261023C00040000  qty=1  cost=$52.00  return=-23.1%  open P&L=$-12.00
+  UPST261016C00022500  qty=1  cost=$57.00  return=-40.4%  open P&L=$-23.00
 
 Per-bucket exit stats (all time)
   b0|c000_s173_w1_0928_1005_r1  n= 22  avg=+24.8%  med=+34.9%  realized=$+283.00
@@ -43021,11 +43024,85 @@ Per-bucket exit stats (all time)
   b99|g099_mid_tp30_sl40  n=  2  avg=+50.5%  med=+70.8%  realized=$+94.89
   b9|c009_s165_w2_1005_1045_r1  n=  7  avg=-74.4%  med=-66.2%  realized=$-301.00
 ========================================================
+
+[Exit summary]
+========================================================
+OPTIONS EXIT SUMMARY — 2026-10-14
+========================================================
+Account equity: $990,771.10
+Open broker positions: 7  unrealized $-132.00
+
+Today's closed trades
+  Count:     29
+  Win rate:  2/29 (7%)
+  Return:    avg -48.1%  med -50.7%  best +55.2%  worst -86.7%
+  Realized:  $-615.00
+
+By strategy
+  S163    n=  2  win=0%  avg=-50.9%
+  S164    n=  2  win=0%  avg=-63.3%
+  S166    n=  1  win=0%  avg=-50.8%
+  S167    n=  1  win=0%  avg=-70.0%
+  S210    n=  2  win=0%  avg=-56.5%
+  S352    n=  1  win=0%  avg=-48.0%
+  S356    n=  1  win=0%  avg=-48.9%
+  S357    n=  1  win=0%  avg=-48.8%
+  S359    n=  1  win=0%  avg=-52.5%
+  S362    n=  1  win=100%  avg=+50.0%
+  S364    n=  1  win=0%  avg=-48.1%
+  S396    n=  2  win=50%  avg=+2.2%
+  S397    n=  1  win=0%  avg=-48.5%
+  S398    n=  1  win=0%  avg=-50.0%
+  S403    n=  2  win=0%  avg=-57.4%
+  S404    n=  1  win=0%  avg=-51.4%
+  S406    n=  6  win=0%  avg=-60.6%
+  S411    n=  1  win=0%  avg=-50.0%
+  S412    n=  1  win=0%  avg=-64.3%
+
+By symbol
+  MARA    n=  7  avg=-53.1%
+  SMCI    n=  3  avg=-33.1%
+  COIN    n=  3  avg=-51.8%
+  MSTR    n=  3  avg=-47.9%
+  AMZN    n=  2  avg=-57.4%
+  AMD     n=  2  avg=-50.3%
+  HOOD    n=  2  avg=-49.4%
+  WFC     n=  1  avg=-86.7%
+  UBER    n=  1  avg=-63.0%
+  MS      n=  1  avg=-64.3%
+  BAC     n=  1  avg=+50.0%
+  ARM     n=  1  avg=-50.0%
+  AXP     n=  1  avg=-50.0%
+  CRWD    n=  1  avg=-48.0%
+
+By exit type
+  take_profit   2
+  stop_loss     11
+  broker_fill_backfill  16
+
+Top buckets today (realized $)
+  b19|lab0019_s362_w2_1005_1045_r1  $+18.00
+  b52|lab0052_s398_w2_1005_1045_r1  $-2.00
+  b50|lab0050_s396_w2_1005_1045_r1  $-5.00
+  b58|lab0058_s412_w2_1005_1045_r1  $-9.00
+  b14|lab0014_s352_w2_1005_1045_r1  $-12.00
+  (16 more bucket profiles with exits)
+
+Recent exits (last 8)
+  17:36:01  b64 lab0064_s166_w2_10  HOOD  S166    -50.8%    $-32.00  broker_fill_backfill
+  17:39:45  b12 lab0012_s403_w2_10  AMZN  S403    -48.1%    $-13.00  broker_fill_backfill
+  17:54:23  b 6 lab0006_s210_w2_10  AXP   S210    -50.0%    $-28.00  stop_loss (-53.6%)
+  18:03:11  b20 lab0020_s364_w2_10  HOOD  S364    -48.1%    $-25.00  stop_loss (-50.0%)
+  18:03:35  b16 lab0016_s357_w2_10  MARA  S357    -48.8%    $-20.00  stop_loss (-51.2%)
+  18:06:40  b14 lab0014_s352_w2_10  CRWD  S352    -48.0%    $-12.00  stop_loss (-60.0%)
+  18:24:11  b54 lab0054_s406_w2_10  MSTR  S406    -53.9%    $-14.00  broker_fill_backfill
+  19:04:15  b57 lab0057_s411_w2_10  MSTR  S411    -50.0%    $-30.00  broker_fill_backfill
+========================================================
 +========================================================================+
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $990,658.60                                              |
+|Equity       : $990,771.10                                              |
 |Open Risk    : 7 lots (7 broker pos)                                    |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -43064,10 +43141,9 @@ Per-bucket exit stats (all time)
 |  b84  g084_mid_tp30_sl30      36%  -63.8%    14                        |
 +========================================================================+
 +========================================================================+
-|[PENDING EXITS (2)]                                                     |
+|[PENDING EXITS (1)]                                                     |
 +========================================================================+
 |  b421 S365 DKNG261016C00023500 x1 stop_loss (-100.0%)                  |
-|  b13  S350 SMCI261016C00039000 x1 take_profit (+81.8%)                 |
 +========================================================================+
 +========================================================================+
 |[OPEN OPTIONS (7)]                                                      |
@@ -43075,13 +43151,13 @@ Per-bucket exit stats (all time)
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
 |  DKNG261016C00023500           1   -100.0%   $    -43.00               |
-|  AMD261016C00637500            1    -57.9%   $    -33.00               |
-|  MARA261016C00008000           1    -43.8%   $    -28.00               |
-|  UPST261016C00022500           1    -31.6%   $    -18.00               |
+|  AMD261016C00637500            1    -59.6%   $    -34.00               |
+|  MARA261016C00008000           1    -40.6%   $    -26.00               |
+|  UPST261016C00022500           1    -40.4%   $    -23.00               |
 |  AMD261016C00640000           -1    +41.0%   $    +16.00               |
+|  SMCI261023C00040000           1    -23.1%   $    -12.00               |
 |  SMCI261016C00039000           1    -45.5%   $    -10.00               |
-|  SMCI261023C00040000           1    -19.2%   $    -10.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-10-14.log
-elapsed=2.7s reconcile=0.19s cancel=0.07s manage=1.46s
+elapsed=2.0s reconcile=0.09s cancel=0.03s manage=1.08s
 
