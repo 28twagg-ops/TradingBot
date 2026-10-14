@@ -2,3 +2,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-10-13 14:34:32.228277+00:00,entry,18,lab0018_s361_w2_1005_1045_r1,S361,b6c5c9cfe9b6,WFC,WFC261016C00088000,1,0.05,0.05,5.0,,,,-0.01,,0.5,-0.5,0.18181818181818174,RB gap -3.3% reclaim,ba7e135d-f4dc-476f-bdab-2bd69580764b
 2026-10-13 14:36:51.339244+00:00,exit,18,lab0018_s361_w2_1005_1045_r1,S361,b6c5c9cfe9b6,WFC,WFC261016C00088000,1,,0.03,5.0,-40.0,-2.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,e19e4bed-48e6-4cea-8cdd-1234a282c178
 2026-10-14 14:07:43.627961+00:00,entry,18,lab0018_s361_w2_1005_1045_r1,S361,548f9e5953f1,HOOD,HOOD261016C00111000,1,0.45,0.44,44.0,,,,-0.01,,0.75,-0.75,0.021978021978021997,RB gap -3.0% reclaim,9986c47d-4ac0-44ab-8510-177d7577b074
+2026-10-14T15:11:55Z,reconcile,18,lab0018_s361_w2_1005_1045_r1,S361,548f9e5953f1,HOOD,HOOD261016C00111000,0,,,44.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
