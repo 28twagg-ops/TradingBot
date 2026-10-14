@@ -1,0 +1,52 @@
+options_reconcile: state=/home/runner/work/TradingBot/TradingBot/logs/options_trial/_state/lab_state.json
+  open_lots=12 paper_keys=yes dry_run=False
+  alpaca positions=11
+  FLAG 6 lot(s) missing from Alpaca
+    b91|S406|0a4cc4a0 WFC261016C00083000
+    b90|S406|c8a2702d SMCI261016C00040500
+    b67|S164|9d44eaf8 SMCI261016C00041000
+    b12|S403|6fd93f4c AMZN261016C00272500
+    b63|S167|b1f68695 MARA261016C00009500
+    b53|S404|39f96ee3 MARA261016C00009000
+  reconcile: backfill exit b91|S406 WFC -86.7% fill=0.08
+  reconcile: backfill exit b90|S406 SMCI -80.0% fill=0.13
+  reconcile: backfill exit b67|S164 SMCI -74.5% fill=0.12
+  reconcile: backfill exit b12|S403 AMZN -66.7% fill=0.13
+  reconcile: backfill exit b63|S167 MARA -70.0% fill=0.06
+  reconcile: backfill exit b53|S404 MARA -51.4% fill=0.17
+  State updated (attributed/cleared=6, leftover=0).
+options_reconcile: done
+Layout: controlled:77:live_1to1+variations (layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:77:live_1to1+variations)
+Trial layout: /home/runner/work/TradingBot/TradingBot/logs/options_trial
+Docs:         skipped (local docs unavailable on this runner)
+Buckets:      77
+PROBE OK: paper account status=AccountStatus.ACTIVE equity=$990,048.87
+  buying_power=$3,839,261.68 cash=$979,676.37
+  open option orders: 6
+    DKNG261016C00023500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=0.01
+    MARA261023C00009500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    MARA261106C00010000 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    UBER261016C00072500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+    MARA261030C00009500 OrderSide.SELL qty=1 status=OrderStatus.NEW limit=None
+  open option positions: 6
+    DKNG261016C00023500 qty=1 mkt=$0.00
+    MARA261016C00008500 qty=1 mkt=$38.00
+    MARA261023C00009500 qty=1 mkt=$17.00
+    MARA261030C00009500 qty=1 mkt=$30.00
+    MARA261106C00010000 qty=1 mkt=$30.00
+PROBE: check-only pass (use --smoke-entry to place a test order)
+=== options_morning_bot (PAPER) 2026-10-14T09:35:09.281193-04:00 ===
+
+[Run context]
+Paper auth OK — equity $990031.11, account PA33P8KT02IL
+
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+S406-only twin b91 s406_only — S406 | TP+50%/SL-40% | paper edge test
+Variation study: 75 lab/promising bucket(s) | cohort: 75 unique (S163, S164, S166, S167, S168, S169, S170, S171, S172, S175, S200, S201 … +63 more) | max 200 new entries/run
+Dropped (no new entries; ex-reflected P&L): S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
+Shared-OCC entry block ON (one lab lot per contract)
+
+[Scan + entries]
+Scanning 117 symbols for [S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S204, S205, S206, S208, S210, S213, S214, S215, S219, S220, S221, S402, S403, S350, S352, S356, S357, S359, S361, S362, S364, S365, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S395, S396, S397, S398, S404, S406, S409, S410, S411, S412, S413, S414, S415, S416] …
+Fetched daily bars for 113/117 symbols
