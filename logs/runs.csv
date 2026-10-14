@@ -10180,3 +10180,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-14 13:51:02,scan_morning,bull,224.43,123.5,30,0,0,3,AMZN|BBY|GS,both
 2026-10-14 13:57:14,exits,bull,224.0,190.47,0,0,0,1,BBY,both
 2026-10-14 14:02:26,exits,bull,223.99,190.47,0,0,0,1,BBY,both
+2026-10-14 14:06:40,exits,bull,223.89,223.89,0,0,1,0,,both
