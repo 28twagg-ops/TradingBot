@@ -19,7 +19,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-14,False,,,,,,,0,COIN,S359,,entered_no_exit
 18,lab0018_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-14,False,,,,,,,0,HOOD,S361,,entered_no_exit
 19,lab0019_s362_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-14,False,,,,,,,0,BAC,S362,,entered_no_exit
-20,lab0020_s364_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-09,False,,,,,,,0,,,,idle
+20,lab0020_s364_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-14,False,,,,,,,0,HOOD,S364,,entered_no_exit
 21,lab0021_s365_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-09,False,,,,,,,0,,,,idle
 22,lab0022_s368_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-02,False,,,,,,,0,,,,idle
 23,lab0023_s369_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-31,False,,,,,,,0,,,,idle
@@ -49,7 +49,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 47,lab0047_s393_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-28,False,,,,,,,0,,,,idle
 48,lab0048_s394_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 49,lab0049_s395_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-14,False,,,,,,,0,MARA,S395,,entered_no_exit
-50,lab0050_s396_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-10-14,False,,0.0,-50.68,-50.68,-50.68,-50.68,-37.0,"MARA,SMCI",S396,broker_fill_backfill,closed
+50,lab0050_s396_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-10-14,False,,50.0,2.25,2.25,55.17,-50.68,-5.0,"MARA,SMCI",S396,broker_fill_backfill; take_profit (+53.4%),closed
 51,lab0051_s397_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-14,False,,,,,,,0,AMD,S397,,entered_no_exit
 52,lab0052_s398_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-14,False,,,,,,,0,MARA,S398,,entered_no_exit
 53,lab0053_s404_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-10-13,False,,0.0,-51.43,-51.43,-51.43,-51.43,-18.0,MARA,S404,broker_fill_backfill,closed
