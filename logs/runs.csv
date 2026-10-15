@@ -10344,3 +10344,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-15 17:16:35,exits,bull,224.55,156.16,0,0,0,2,KEY|PNC,both
 2026-10-15 17:21:45,exits,bull,224.55,156.16,0,0,0,2,KEY|PNC,both
 2026-10-15 17:26:35,exits,bull,224.55,156.16,0,0,0,2,KEY|PNC,both
+2026-10-15 17:31:35,exits,bull,224.55,156.16,0,0,0,2,KEY|PNC,both
