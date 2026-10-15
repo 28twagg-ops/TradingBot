@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-15
 
-_Generated 2026-10-15T10:32:53.627157_
+_Generated 2026-10-15T10:38:16.001815_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-10-15T10:32:53.627157_
 
 ## Attribution health
 
-- Total exits: **3677**
+- Total exits: **3678**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **11.5%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -26,8 +26,8 @@ _Generated 2026-10-15T10:32:53.627157_
 | S166 (GapDown strong call) | 3d ATM strong | watch | 13 | 69.2 | +66.67 | -80.75 | -50.00 | +155.72 | 86 | 3 | 2 | $+388.00 | 38.5% | building sample (8-19 exits) |
 | S410 (RubberBand_OTM1) | 3d | watch | 11 | 63.6 | +65.28 | -68.49 | -58.43 | +101.49 | 70 | 1 | 1 | $+192.00 | 72.7% | building sample (8-19 exits) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 32 | 56.2 | +57.10 | -74.31 | -60.48 | +89.29 | 86 | 3 | 2 | $+375.00 | 40.6% | fat left tail (p10 < -45%) |
-| S406 (RubberBand_ITM3) | 3d | watch | 125 | 61.6 | +53.33 | -59.73 | -45.83 | +382.86 | 76 | 9 | 8 | $+3,430.00 | 12.0% | fat left tail (p10 < -45%) |
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 27 | 55.6 | +53.33 | -74.68 | -60.45 | +244.69 | 86 | 1 | 1 | $+435.00 | 48.1% | fat left tail (p10 < -45%) |
+| S406 (RubberBand_ITM3) | 3d | watch | 126 | 61.1 | +52.98 | -59.55 | -46.28 | +364.28 | 76 | 9 | 9 | $+3,399.00 | 11.9% | fat left tail (p10 < -45%) |
 | S357 (GapDown_21DTE) | 21d | watch | 28 | 75.0 | +52.94 | -67.86 | +23.36 | +75.95 | 76 | 1 | 1 | $+519.00 | 28.6% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 47 | 63.8 | +51.39 | -65.15 | -53.17 | +117.72 | 76 | 3 | 2 | $+1,095.00 | 19.1% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 62 | 67.7 | +51.31 | -59.86 | -50.62 | +322.38 | 76 | 1 | 1 | $+1,459.00 | 21.0% | fat left tail (p10 < -45%) |
@@ -37,7 +37,7 @@ _Generated 2026-10-15T10:32:53.627157_
 | S365 (RubberBand_14DTE) | 14d | watch | 36 | 50.0 | +19.23 | -64.03 | -51.80 | +70.56 | 76 | 0 | 0 | $+35.00 | 36.1% | fat left tail (p10 < -45%) |
 | S350 (GapDown_0DTE) | 0d | watch | 51 | 51.0 | +11.76 | -66.67 | -50.67 | +191.43 | 76 | 3 | 2 | $+806.00 | 27.5% | fat left tail (p10 < -45%) |
 | S356 (GapDown_14DTE) | 14d | watch | 32 | 50.0 | +8.54 | -51.59 | -48.09 | +58.62 | 76 | 1 | 1 | $+127.00 | 37.5% | fat left tail (p10 < -45%) |
-| S411 (RubberBand_OTM2) | 3d | watch | 55 | 52.7 | +7.69 | -57.21 | -51.53 | +63.81 | 73 | 2 | 2 | $-75.00 | 16.4% | fat left tail (p10 < -45%) |
+| S411 (RubberBand_OTM2) | 3d | watch | 55 | 52.7 | +7.69 | -57.21 | -51.53 | +63.81 | 73 | 3 | 2 | $-75.00 | 16.4% | fat left tail (p10 < -45%) |
 | S169 (BB Squeeze Breakout call 3 DTE) | 3d ATM BB squeeze | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S170 (Golden Pocket call 3 DTE) | 3d ATM golden pocket | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S171 (VWAP Reclaim call 3 DTE) | 3d ATM VWAP reclaim | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -315,7 +315,7 @@ _Pipeline evaluation as of 2026-10-15. Auto-kill thresholds: median<-25% at n>=1
 | S403 | Any_MA50_Touch | 78 | +50.88% | 62% | INSUFFICIENT | 76 |
 | S404 | GapDown_OTM2 | 83 | +45.07% | 55% | INSUFFICIENT | 76 |
 | S405 | GapDown_OTM3 | 56 | -42.86% | 34% | INSUFFICIENT | 76 |
-| S406 | RubberBand_ITM3 | 125 | +53.33% | 62% | INSUFFICIENT | 76 |
+| S406 | RubberBand_ITM3 | 126 | +52.98% | 61% | INSUFFICIENT | 76 |
 | S407 | RubberBand_ITM2 | 38 | -47.73% | 29% | INSUFFICIENT | 76 |
 | S408 | RubberBand_ITM1 | 67 | -6.25% | 43% | INSUFFICIENT | 73 |
 | S409 | RubberBand_ATM | 2 | +81.94% | 100% | WATCH | 21 |
@@ -341,7 +341,7 @@ _Pipeline evaluation as of 2026-10-15. Auto-kill thresholds: median<-25% at n>=1
 | Strategy | n | Median% | WR% | Recommendation |
 |----------|---|---------|-----|----------------|
 | S163 | 32 | +57.10% | 56% | Tyler review |
-| S406 | 125 | +53.33% | 62% | Tyler review |
+| S406 | 126 | +52.98% | 61% | Tyler review |
 | S397 | 47 | +51.39% | 64% | Tyler review |
 | S362 | 62 | +51.31% | 68% | Tyler review |
 | S403 | 78 | +50.88% | 62% | Tyler review |

@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-10-15 14:33:28.678116+00:00,entry,56,lab0056_s411_w2_1005_1045_r1,S411,7435bcfa6045,SHOP,SHOP261016C00185000,1,0.1,0.07,7.0,,,,-0.01,,0.75,-0.75,0.20000000000000004,RB gap -4.8% reclaim,ef8c7e6a-dee0-4306-aaa1-88dea641436d

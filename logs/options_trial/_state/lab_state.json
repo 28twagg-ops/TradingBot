@@ -262,24 +262,24 @@
       "entry_order_id": "92a6221f-f7df-49b8-b13c-29b0896c689e"
     },
     {
-      "lot_id": "86f569533d4f",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S406",
-      "occ_symbol": "SHOP261016C00177500",
+      "lot_id": "7435bcfa6045",
+      "bucket_id": 56,
+      "profile_name": "lab0056_s411_w2_1005_1045_r1",
+      "strategy_id": "S411",
+      "occ_symbol": "SHOP261016C00185000",
       "underlying": "SHOP",
       "qty": 1,
-      "entry_cost": 60.0,
-      "entry_price": 0.6,
+      "entry_cost": 7.000000000000001,
+      "entry_price": 0.07,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
       "take_profit": 0.5,
-      "stop_loss": -0.4,
+      "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-10-15T14:26:53.367831+00:00",
-      "entry_order_id": "5784ff29-de72-4b66-99eb-bab6bfe70db1"
+      "entry_date": "2026-10-15T14:37:09.337470+00:00",
+      "entry_order_id": "ef8c7e6a-dee0-4306-aaa1-88dea641436d"
     }
   ],
   "pending_orders": [
@@ -295,22 +295,6 @@
       "submitted": "2026-10-15",
       "detail": "gap -2.7%",
       "spread_frac": 0.03174603174603177,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "ef8c7e6a-dee0-4306-aaa1-88dea641436d",
-      "bucket_id": 56,
-      "strategy_id": "S411",
-      "occ_symbol": "SHOP261016C00185000",
-      "underlying": "SHOP",
-      "qty": 1,
-      "limit": 0.1,
-      "profile_name": "lab0056_s411_w2_1005_1045_r1",
-      "submitted": "2026-10-15",
-      "detail": "RB gap -4.8% reclaim",
-      "spread_frac": 0.20000000000000004,
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
@@ -336,11 +320,21 @@
       "qty": 1,
       "reason": "stop_loss (-96.5%)",
       "submitted": "2026-10-15T10:11:48"
+    },
+    {
+      "order_id": "fd0d350e-8332-4324-8bb2-e4758eb37e13",
+      "lot_id": "7435bcfa6045",
+      "bucket_id": 56,
+      "strategy_id": "S411",
+      "occ_symbol": "SHOP261016C00185000",
+      "qty": 1,
+      "reason": "stop_loss (-85.7%)",
+      "submitted": "2026-10-15T10:37:12"
     }
   ],
   "bucket_open_premium": {
     "b421": 43.0,
-    "b90": 126.0,
+    "b90": 66.0,
     "b63": 56.99999999999999,
     "b6": 55.00000000000001,
     "b52": 44.0,
@@ -351,7 +345,8 @@
     "b13": 64.0,
     "b50": 56.99999999999999,
     "b66": 48.0,
-    "b67": 25.0
+    "b67": 25.0,
+    "b56": 7.000000000000001
   },
   "session_date": "2026-10-15",
   "entries_locked": [
@@ -789,7 +784,9 @@
     "92a6221f-f7df-49b8-b13c-29b0896c689e",
     "619715ee-b184-413c-93ef-a5afcb97307b",
     "5784ff29-de72-4b66-99eb-bab6bfe70db1",
-    "699d7d29-c28a-42a8-9f57-328c4448e192"
+    "699d7d29-c28a-42a8-9f57-328c4448e192",
+    "ef8c7e6a-dee0-4306-aaa1-88dea641436d",
+    "892eda7d-c330-48ed-b1f0-07013c3738cd"
   ],
   "submitted_today": 14,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
