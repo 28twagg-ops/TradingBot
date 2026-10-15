@@ -105,14 +105,14 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "e056976e-9889-42f6-971d-845b5e7e8c3f",
+      "order_id": "1cd27645-f863-4989-a30a-11ad903409d7",
       "lot_id": "33d84c516583",
       "bucket_id": 421,
       "strategy_id": "S365",
       "occ_symbol": "DKNG261016C00023500",
       "qty": 1,
       "reason": "stop_loss (-100.0%)",
-      "submitted": "2026-10-14T16:03:21"
+      "submitted": "2026-10-15T16:01:46"
     }
   ],
   "bucket_open_premium": {
