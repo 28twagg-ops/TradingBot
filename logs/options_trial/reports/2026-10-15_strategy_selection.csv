@@ -5,7 +5,7 @@ S396,GapDown_ITM2,3d,watch,building sample (8-19 exits),34,10,7,3,42.23,79.79,-5
 S166,GapDown strong call,3d ATM strong,watch,building sample (8-19 exits),57,13,9,4,52.67,66.67,-80.75,-50.0,155.72,388.0,6,86,3,2,7,38.5
 S410,RubberBand_OTM1,3d,watch,building sample (8-19 exits),33,11,7,4,26.18,65.28,-68.49,-58.43,101.49,192.0,7,70,1,1,4,72.7
 S163,A1 GapDown ATM call EOD,7d ATM,watch,fat left tail (p10 < -45%),135,32,18,14,20.96,57.1,-74.31,-60.48,89.29,375.0,11,86,3,2,10,40.6
-S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),223,124,77,47,129.52,53.33,-59.91,-45.44,401.43,3467.0,29,76,7,7,27,12.1
+S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),225,124,77,47,129.52,53.33,-59.91,-45.44,401.43,3467.0,29,76,9,7,27,12.1
 S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,fat left tail (p10 < -45%),115,27,15,12,53.64,53.33,-74.68,-60.45,244.69,435.0,10,86,1,1,8,48.1
 S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),56,28,21,7,33.54,52.94,-67.86,23.36,75.95,519.0,13,76,1,1,5,28.6
 S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),169,47,30,17,33.47,51.39,-65.15,-53.17,117.72,1095.0,16,76,3,2,16,19.1
