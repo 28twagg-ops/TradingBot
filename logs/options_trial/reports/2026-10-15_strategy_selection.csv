@@ -1,7 +1,7 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
 S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,building sample (8-19 exits),135,19,11,8,109.02,106.0,-70.38,-55.46,364.96,455.0,9,86,2,1,7,36.8
 S409,RubberBand_ATM,3d,watch,insufficient sample (<8 exits),2,2,2,0,81.94,81.94,79.72,80.56,84.17,118.0,1,21,0,0,1,100.0
-S396,GapDown_ITM2,3d,watch,building sample (8-19 exits),34,10,7,3,42.23,79.79,-55.59,-24.22,97.91,269.0,6,70,3,2,2,80.0
+S396,GapDown_ITM2,3d,watch,building sample (8-19 exits),34,11,8,3,43.15,74.58,-52.63,0.85,95.83,302.0,7,70,3,3,2,72.7
 S166,GapDown strong call,3d ATM strong,watch,building sample (8-19 exits),57,13,9,4,52.67,66.67,-80.75,-50.0,155.72,388.0,6,86,3,2,7,38.5
 S410,RubberBand_OTM1,3d,watch,building sample (8-19 exits),33,11,7,4,26.18,65.28,-68.49,-58.43,101.49,192.0,7,70,1,1,4,72.7
 S163,A1 GapDown ATM call EOD,7d ATM,watch,fat left tail (p10 < -45%),135,32,18,14,20.96,57.1,-74.31,-60.48,89.29,375.0,11,86,3,2,10,40.6
@@ -11,7 +11,7 @@ S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),56,28,21,7,33.54,52.94,-
 S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),169,47,30,17,33.47,51.39,-65.15,-53.17,117.72,1095.0,16,76,3,2,16,19.1
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),142,62,42,20,125.35,51.31,-59.86,-50.62,322.38,1459.0,17,76,1,1,15,21.0
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),162,78,48,30,42.61,50.88,-63.16,-50.0,174.64,1282.0,26,76,2,3,24,15.4
-S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),193,83,46,37,17.44,45.07,-70.48,-49.58,107.66,1053.0,22,76,5,3,24,12.0
+S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),193,84,47,37,17.96,45.14,-70.0,-49.36,107.53,1080.0,23,76,5,4,24,11.9
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),225,109,55,54,36.11,22.22,-71.43,-50.0,146.0,1086.0,25,80,0,0,19,27.5
 S365,RubberBand_14DTE,14d,watch,fat left tail (p10 < -45%),70,36,18,18,8.72,19.23,-64.03,-51.8,70.56,35.0,16,76,0,0,8,36.1
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),115,51,26,25,51.84,11.76,-66.67,-50.67,191.43,806.0,17,76,3,2,12,27.5
