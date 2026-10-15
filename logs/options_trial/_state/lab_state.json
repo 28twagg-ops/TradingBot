@@ -62,26 +62,6 @@
       "entry_order_id": "9546e813-00be-47f9-8334-f2c28e9abf70"
     },
     {
-      "lot_id": "d2bf3d26063e",
-      "bucket_id": 6,
-      "profile_name": "lab0006_s210_w2_1005_1045_r1",
-      "strategy_id": "S210",
-      "occ_symbol": "HD261016C00315000",
-      "underlying": "HD",
-      "qty": 1,
-      "entry_cost": 55.00000000000001,
-      "entry_price": 0.55,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-15T14:08:09.913141+00:00",
-      "entry_order_id": "7f02345f-a2ab-49d6-a28a-7c3179da5828"
-    },
-    {
       "lot_id": "f09a59c0eaee",
       "bucket_id": 14,
       "profile_name": "lab0014_s352_w2_1005_1045_r1",
@@ -260,23 +240,12 @@
       "qty": 1,
       "reason": "stop_loss (-96.5%)",
       "submitted": "2026-10-15T10:11:48"
-    },
-    {
-      "order_id": "8546e046-6090-4b05-9a17-d64e155ef4c3",
-      "lot_id": "d2bf3d26063e",
-      "bucket_id": 6,
-      "strategy_id": "S210",
-      "occ_symbol": "HD261016C00315000",
-      "qty": 1,
-      "reason": "stop_loss (-54.5%)",
-      "submitted": "2026-10-15T11:01:52"
     }
   ],
   "bucket_open_premium": {
     "b421": 43.0,
     "b90": 66.0,
     "b63": 56.99999999999999,
-    "b6": 55.00000000000001,
     "b14": 3.0,
     "b64": 50.0,
     "b51": 53.0,
@@ -726,7 +695,8 @@
     "892eda7d-c330-48ed-b1f0-07013c3738cd",
     "fd0d350e-8332-4324-8bb2-e4758eb37e13",
     "e487b9de-8a71-46d7-a29a-e9a9957ff931",
-    "4501d47a-d752-4ec5-af38-dd2f8825e402"
+    "4501d47a-d752-4ec5-af38-dd2f8825e402",
+    "8546e046-6090-4b05-9a17-d64e155ef4c3"
   ],
   "submitted_today": 14,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
