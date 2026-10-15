@@ -5,10 +5,10 @@ S396,GapDown_ITM2,3d,watch,building sample (8-19 exits),34,11,8,3,43.15,74.58,-5
 S166,GapDown strong call,3d ATM strong,watch,building sample (8-19 exits),57,13,9,4,52.67,66.67,-80.75,-50.0,155.72,388.0,6,86,3,2,7,38.5
 S410,RubberBand_OTM1,3d,watch,building sample (8-19 exits),33,11,7,4,26.18,65.28,-68.49,-58.43,101.49,192.0,7,70,1,1,4,72.7
 S163,A1 GapDown ATM call EOD,7d ATM,watch,fat left tail (p10 < -45%),135,32,18,14,20.96,57.1,-74.31,-60.48,89.29,375.0,11,86,3,2,10,40.6
+S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),169,48,31,17,33.94,53.48,-65.09,-52.78,117.39,1127.0,17,76,3,3,17,18.8
 S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,fat left tail (p10 < -45%),115,27,15,12,53.64,53.33,-74.68,-60.45,244.69,435.0,10,86,1,1,8,48.1
 S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),225,126,77,49,126.59,52.98,-59.55,-46.28,364.28,3399.0,30,76,9,9,29,11.9
 S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),56,28,21,7,33.54,52.94,-67.86,23.36,75.95,519.0,13,76,1,1,5,28.6
-S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),169,47,30,17,33.47,51.39,-65.15,-53.17,117.72,1095.0,16,76,3,2,16,19.1
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),142,62,42,20,125.35,51.31,-59.86,-50.62,322.38,1459.0,17,76,1,1,15,21.0
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),162,78,48,30,42.61,50.88,-63.16,-50.0,174.64,1282.0,26,76,2,3,24,15.4
 S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),193,84,47,37,17.96,45.14,-70.0,-49.36,107.53,1080.0,23,76,5,4,24,11.9
@@ -92,7 +92,7 @@ S211,MA_Cross_21_50,3d ATM MA cross 21/50,drop,manually paused — excluded from
 S353,GapDown_3DTE,3d,drop,non-positive median return,116,45,19,26,61.44,-46.15,-82.61,-69.7,264.21,125.0,12,76,0,0,10,22.2
 S207,GapDown_AtSupport,3d ATM gap-support,drop,manually paused — excluded from new entries & reflected P&L,62,37,2,35,-38.6,-47.06,-63.64,-55.71,-6.06,-822.0,2,80,0,0,3,43.2
 S407,RubberBand_ITM2,3d,drop,manually paused — excluded from new entries & reflected P&L,96,38,11,27,29.82,-47.73,-83.88,-61.54,266.42,33.0,7,76,0,0,7,26.3
-S164,GapDown ATM 1-DTE — P2B arm,1d ATM,drop,non-positive median return,164,33,14,19,51.94,-48.89,-88.89,-53.85,295.89,351.0,18,86,3,2,10,18.2
+S164,GapDown ATM 1-DTE — P2B arm,1d ATM,drop,non-positive median return,164,34,15,19,52.3,-48.48,-88.89,-53.78,281.93,367.0,19,86,3,3,11,17.6
 S366,RubberBand_21DTE,21d,drop,manually paused — excluded from new entries & reflected P&L,50,21,9,12,0.28,-49.12,-56.92,-53.45,94.34,-63.0,8,72,0,0,3,42.9
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,drop,manually paused — excluded from new entries & reflected P&L,166,75,25,50,13.94,-49.18,-79.0,-60.0,99.05,158.0,18,80,0,0,11,40.0
 S351,GapDown_1DTE,1d,drop,manually paused — excluded from new entries & reflected P&L,213,75,28,47,31.61,-50.0,-75.68,-62.03,264.88,414.0,18,76,0,0,16,17.3

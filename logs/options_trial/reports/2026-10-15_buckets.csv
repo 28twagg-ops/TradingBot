@@ -49,7 +49,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 47,lab0047_s393_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-28,False,,,,,,,0,,,,idle
 48,lab0048_s394_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 49,lab0049_s396_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-10-15,False,,50.0,-8.18,-8.18,52.38,-68.75,-11.0,"MARA,SMCI","S395,S396",broker_fill_backfill; take_profit (+52.4%),closed
-50,lab0050_s397_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-15,False,,,,,,,0,NVDA,S397,,entered_no_exit
+50,lab0050_s397_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-15,False,,100.0,56.14,56.14,56.14,56.14,32.0,NVDA,S397,take_profit (+52.6%),closed
 51,lab0051_s398_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-15,False,,,,,,,0,AMD,S398,,entered_no_exit
 52,lab0052_s404_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-15,False,,100.0,61.36,61.36,61.36,61.36,27.0,SMCI,S404,take_profit (+61.4%),closed
 53,lab0053_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-13,False,,,,,,,0,,,,idle
@@ -66,7 +66,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 64,lab0064_s166_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-15,False,,,,,,,0,SMCI,S166,,entered_no_exit
 65,lab0065_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-10-14,False,,0.0,-90.38,-90.38,-90.38,-90.38,-47.0,SMCI,S168,broker_fill_backfill,closed
 66,lab0066_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-15,False,,,,,,,0,NVDA,S163,,entered_no_exit
-67,lab0067_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-15,False,,,,,,,0,NVDA,S164,,entered_no_exit
+67,lab0067_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-15,False,,100.0,64.0,64.0,64.0,64.0,16.0,NVDA,S164,take_profit (+64.0%),closed
 90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,1,1,1,2026-10-15,False,,0.0,-51.67,-51.67,-51.67,-51.67,-31.0,SHOP,S406,stop_loss (-51.7%),closed
 91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,1,0,2026-10-15,False,,0.0,-57.81,-57.81,-57.81,-57.81,-37.0,ZS,S406,stop_loss (-57.8%),closed
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
