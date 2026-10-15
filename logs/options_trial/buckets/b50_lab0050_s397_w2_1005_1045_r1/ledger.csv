@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-10-15 14:07:41.776357+00:00,entry,50,lab0050_s397_w2_1005_1045_r1,S397,5f03bebba4f6,NVDA,NVDA261019C00225000,1,0.58,0.57,57.0,,,,-0.01,,0.75,-0.75,0.08849557522123883,gap -2.7%,669a1ebd-37cd-40ef-8b63-048b0fdbd600

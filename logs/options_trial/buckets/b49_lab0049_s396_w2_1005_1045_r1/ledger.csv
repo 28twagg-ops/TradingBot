@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-10-15 14:07:45.626490+00:00,entry,49,lab0049_s396_w2_1005_1045_r1,S396,aa56fd223269,SMCI,SMCI261016C00033500,1,0.64,0.63,63.0,,,,-0.01,,0.75,-0.75,0.20338983050847453,gap -4.2%,c3b64a9b-85d2-448e-a1a0-f3e644663822
