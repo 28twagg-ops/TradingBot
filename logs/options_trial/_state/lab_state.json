@@ -294,6 +294,22 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.4
+    },
+    {
+      "order_id": "619715ee-b184-413c-93ef-a5afcb97307b",
+      "bucket_id": 91,
+      "strategy_id": "S406",
+      "occ_symbol": "ZS261016C00230000",
+      "underlying": "ZS",
+      "qty": 1,
+      "limit": 0.64,
+      "profile_name": "s406_only",
+      "submitted": "2026-10-15",
+      "detail": "RB gap -1.8% reclaim",
+      "spread_frac": 0.22222222222222224,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.4
     }
   ],
   "pending_exits": [
@@ -346,7 +362,8 @@
     "49|S396|2026-10-15",
     "52|S404|2026-10-15",
     "6|S210|2026-10-15",
-    "90|S406|2026-10-15"
+    "90|S406|2026-10-15",
+    "91|S406|2026-10-15"
   ],
   "processed_orders": [
     "ea00263f-a587-4598-bd92-bea8ea6cc369",
@@ -766,7 +783,7 @@
     "213ef07c-1b62-483a-83fb-b294f3c13812",
     "92a6221f-f7df-49b8-b13c-29b0896c689e"
   ],
-  "submitted_today": 12,
+  "submitted_today": 13,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-15"
 }
