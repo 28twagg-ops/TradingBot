@@ -122,26 +122,6 @@
       "entry_order_id": "2344264b-8c8a-4ec1-8a4b-b86cfb7e6da8"
     },
     {
-      "lot_id": "27f551e68e5a",
-      "bucket_id": 52,
-      "profile_name": "lab0052_s404_w2_1005_1045_r1",
-      "strategy_id": "S404",
-      "occ_symbol": "MARA261023C00008000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 44.0,
-      "entry_price": 0.44,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-16T14:11:35.836506+00:00",
-      "entry_order_id": "b1c006f5-305d-4165-a3e2-473dea1d87c3"
-    },
-    {
       "lot_id": "b7a5e1a87acc",
       "bucket_id": 20,
       "profile_name": "lab0020_s364_w2_1005_1045_r1",
@@ -233,6 +213,16 @@
       "qty": 1,
       "reason": "stop_loss (-94.3%)",
       "submitted": "2026-10-16T10:11:37"
+    },
+    {
+      "order_id": "d568acba-9c14-40f3-a500-5a8cd8e45c37",
+      "lot_id": "b7a5e1a87acc",
+      "bucket_id": 20,
+      "strategy_id": "S364",
+      "occ_symbol": "AVGO261023C00367500",
+      "qty": 1,
+      "reason": "stop_loss (-51.0%)",
+      "submitted": "2026-10-16T14:06:49"
     }
   ],
   "bucket_open_premium": {
@@ -242,7 +232,6 @@
     "b13": 64.0,
     "b6": 57.99999999999999,
     "b15": 40.0,
-    "b52": 44.0,
     "b20": 49.0,
     "b63": 54.0,
     "b66": 56.99999999999999
@@ -725,7 +714,8 @@
     "c12ca7b5-a640-4d24-bae8-7ef35ffb9842",
     "4f0a6e0c-8c06-4ea0-906f-76043ebf0795",
     "7d7c06f8-41e7-447c-8804-ebdc70efba8d",
-    "c07a5963-85a7-41e1-84f5-5a60b6d17d45"
+    "c07a5963-85a7-41e1-84f5-5a60b6d17d45",
+    "dddc769c-ee18-4e96-ab44-9760b6569325"
   ],
   "submitted_today": 16,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
