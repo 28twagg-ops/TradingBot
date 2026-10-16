@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-16
 
-_Generated 2026-10-16T11:52:02.905156_
+_Generated 2026-10-16T11:56:46.449599_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-10-16T11:52:02.905156_
 
 ## Attribution health
 
-- Total exits: **3695**
+- Total exits: **3696**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **11.4%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -37,7 +37,7 @@ _Generated 2026-10-16T11:52:02.905156_
 | S365 (RubberBand_14DTE) | 14d | watch | 36 | 50.0 | +19.23 | -64.03 | -51.80 | +70.56 | 77 | 0 | 0 | $+35.00 | 36.1% | fat left tail (p10 < -45%) |
 | S350 (GapDown_0DTE) | 0d | watch | 51 | 51.0 | +11.76 | -66.67 | -50.67 | +191.43 | 77 | 3 | 2 | $+806.00 | 27.5% | fat left tail (p10 < -45%) |
 | S356 (GapDown_14DTE) | 14d | watch | 32 | 50.0 | +8.54 | -51.59 | -48.09 | +58.62 | 77 | 2 | 1 | $+127.00 | 37.5% | fat left tail (p10 < -45%) |
-| S411 (RubberBand_OTM2) | 3d | watch | 56 | 51.8 | +5.20 | -57.12 | -51.46 | +63.46 | 74 | 4 | 3 | $-77.00 | 16.1% | fat left tail (p10 < -45%) |
+| S411 (RubberBand_OTM2) | 3d | watch | 57 | 50.9 | +2.70 | -57.04 | -51.39 | +63.11 | 74 | 4 | 4 | $-114.00 | 15.8% | fat left tail (p10 < -45%) |
 | S169 (BB Squeeze Breakout call 3 DTE) | 3d ATM BB squeeze | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S170 (Golden Pocket call 3 DTE) | 3d ATM golden pocket | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S171 (VWAP Reclaim call 3 DTE) | 3d ATM VWAP reclaim | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -323,7 +323,7 @@ _Pipeline evaluation as of 2026-10-16. Auto-kill thresholds: median<-25% at n>=1
 | S408 | RubberBand_ITM1 | 67 | -6.25% | 43% | INSUFFICIENT | 74 |
 | S409 | RubberBand_ATM | 2 | +81.94% | 100% | WATCH | 22 |
 | S410 | RubberBand_OTM1 | 11 | +65.28% | 64% | WATCH | 71 |
-| S411 | RubberBand_OTM2 | 56 | +5.20% | 52% | INSUFFICIENT | 74 |
+| S411 | RubberBand_OTM2 | 57 | +2.70% | 51% | INSUFFICIENT | 74 |
 | S412 | RubberBand_OTM3 | 68 | -3.57% | 44% | INSUFFICIENT | 77 |
 | S413 | BBSqueeze_ITM3 | 0 | — | — | NEW | 0 |
 | S414 | BBSqueeze_ITM2 | 0 | — | — | NEW | 0 |
@@ -356,7 +356,7 @@ _Pipeline evaluation as of 2026-10-16. Auto-kill thresholds: median<-25% at n>=1
 | S365 | 36 | +19.23% | 50% | Tyler review |
 | S350 | 51 | +11.76% | 51% | Tyler review |
 | S356 | 32 | +8.54% | 50% | Tyler review |
-| S411 | 56 | +5.20% | 52% | Tyler review |
+| S411 | 57 | +2.70% | 51% | Tyler review |
 
 ## Notes
 

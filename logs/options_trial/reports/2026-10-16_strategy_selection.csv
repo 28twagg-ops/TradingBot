@@ -16,7 +16,7 @@ S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),225,1
 S365,RubberBand_14DTE,14d,watch,fat left tail (p10 < -45%),70,36,18,18,8.72,19.23,-64.03,-51.8,70.56,35.0,16,77,0,0,8,36.1
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),115,51,26,25,51.84,11.76,-66.67,-50.67,191.43,806.0,17,77,3,2,12,27.5
 S356,GapDown_14DTE,14d,watch,fat left tail (p10 < -45%),70,32,16,16,7.87,8.54,-51.59,-48.09,58.62,127.0,13,77,2,1,6,37.5
-S411,RubberBand_OTM2,3d,watch,fat left tail (p10 < -45%),160,56,29,27,-2.22,5.2,-57.12,-51.46,63.46,-77.0,19,74,4,3,17,16.1
+S411,RubberBand_OTM2,3d,watch,fat left tail (p10 < -45%),160,57,29,28,-3.07,2.7,-57.04,-51.39,63.11,-114.0,20,74,4,4,17,15.8
 S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S170,Golden Pocket call 3 DTE,3d ATM golden pocket,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S171,VWAP Reclaim call 3 DTE,3d ATM VWAP reclaim,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
