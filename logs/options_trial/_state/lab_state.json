@@ -125,34 +125,14 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "1cd27645-f863-4989-a30a-11ad903409d7",
-      "lot_id": "33d84c516583",
-      "bucket_id": 421,
-      "strategy_id": "S365",
-      "occ_symbol": "DKNG261016C00023500",
+      "order_id": "763b35f0-240c-4322-84ce-72077af450dc",
+      "lot_id": "7c723c33aa26",
+      "bucket_id": 66,
+      "strategy_id": "S163",
+      "occ_symbol": "AMD261019C00585000",
       "qty": 1,
-      "reason": "stop_loss (-100.0%)",
-      "submitted": "2026-10-15T16:01:46"
-    },
-    {
-      "order_id": "622a688a-608f-4edd-9a63-92e9fabefb7f",
-      "lot_id": "efad7b84075a",
-      "bucket_id": 13,
-      "strategy_id": "S350",
-      "occ_symbol": "AMD261016C00580000",
-      "qty": 1,
-      "reason": "stop_loss (-93.8%)",
-      "submitted": "2026-10-16T10:03:26"
-    },
-    {
-      "order_id": "f9b7e6f9-158d-4b84-ba4e-fdbabef8420d",
-      "lot_id": "39af197fce83",
-      "bucket_id": 51,
-      "strategy_id": "S398",
-      "occ_symbol": "AMD261016C00582500",
-      "qty": 1,
-      "reason": "stop_loss (-94.3%)",
-      "submitted": "2026-10-16T10:11:37"
+      "reason": "stop_loss (-78.9%)",
+      "submitted": "2026-10-16T16:01:43"
     }
   ],
   "bucket_open_premium": {
