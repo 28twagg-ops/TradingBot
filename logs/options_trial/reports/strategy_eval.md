@@ -2,7 +2,7 @@
 
 **DAILY PIPELINE SUMMARY - 2026-10-16**
 
-Active: 100 | Watching: 100 | Killed today: 0 | Promote candidates: 0
+Active: 102 | Watching: 102 | Killed today: 0 | Promote candidates: 0
 
 ## Strategy Pipeline Status
 
@@ -107,6 +107,8 @@ Active: 100 | Watching: 100 | Killed today: 0 | Promote candidates: 0
 | S417 | BBSqueeze_OTM1 | 3 | 0 | - | - | INSUFFICIENT | 80 |
 | S418 | BBSqueeze_OTM2 | 3 | 0 | - | - | INSUFFICIENT | 80 |
 | S419 | BBSqueeze_OTM3 | 3 | 0 | - | - | INSUFFICIENT | 80 |
+| S430 | S430 | 3 | 0 | - | - | INSUFFICIENT | 0 |
+| S432 | S432 | 3 | 0 | - | - | INSUFFICIENT | 0 |
 | UNKNOWN | UNKNOWN | 3 | 0 | - | - | INSUFFICIENT | 79 |
 
 ## Auto-Kill Log
