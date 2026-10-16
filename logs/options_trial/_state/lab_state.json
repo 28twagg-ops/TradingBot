@@ -282,24 +282,7 @@
       "entry_order_id": "57d2c1dd-f47a-44d1-8a93-631e5a6a475d"
     }
   ],
-  "pending_orders": [
-    {
-      "order_id": "281ca125-c5a2-4e74-b854-7c9e717bde29",
-      "bucket_id": 90,
-      "strategy_id": "S406",
-      "occ_symbol": "AVGO261019C00345000",
-      "underlying": "AVGO",
-      "qty": 1,
-      "limit": 0.6,
-      "profile_name": "live_1to1",
-      "submitted": "2026-10-16",
-      "detail": "RB gap -1.7% reclaim",
-      "spread_frac": 0.0677966101694916,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.4
-    }
-  ],
+  "pending_orders": [],
   "pending_exits": [
     {
       "order_id": "1cd27645-f863-4989-a30a-11ad903409d7",
