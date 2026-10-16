@@ -1008,6 +1008,155 @@ for sid, name, base, dtarg, dmin, dmax, strike_offset in _VARIANT_CONFIGS:
                        strike_offset=strike_offset)
     )
 
+# --------------------------------------------------------------------------- #
+#  Day Trader Analytics buckets (additive only — new IDs S430–S432)
+#  Opening-drive / relative-strength style arms for paper analytics.
+# --------------------------------------------------------------------------- #
+
+DAY_TRADER_ANALYTICS_IDS = ("S430", "S431", "S432")
+
+_SPY_CTX: dict[str, float] | None = None
+
+
+def set_spy_context(spy_sub: pd.DataFrame | None, today: date) -> None:
+    """Publish today's SPY open/close for DayTrader RS scanners. Clear with None."""
+    global _SPY_CTX
+    _SPY_CTX = None
+    if spy_sub is None or spy_sub.empty:
+        return
+    df = _pattern_today(spy_sub, today)
+    row = None
+    if df is not None and not df.empty:
+        row = df.iloc[-1]
+    else:
+        prep = _prep_pattern_bars(spy_sub)
+        if prep is not None and not prep.empty:
+            row = prep.iloc[-1]
+    if row is None:
+        return
+    try:
+        opn = float(row["open"])
+        cn = float(row["close"])
+        gap = float(row.get("gap_pct", float("nan")))
+        if opn <= 0 or pd.isna(cn):
+            return
+        _SPY_CTX = {
+            "open": opn,
+            "close": cn,
+            "ret": (cn - opn) / opn,
+            "gap": gap if not pd.isna(gap) else 0.0,
+        }
+    except Exception:
+        _SPY_CTX = None
+
+
+def clear_spy_context() -> None:
+    global _SPY_CTX
+    _SPY_CTX = None
+
+
+def _day_trader_bar(sub: pd.DataFrame, today: date):
+    """Prefer today's stamped bar; fall back to last prepared bar."""
+    df = _pattern_today(sub, today)
+    if df is not None and not df.empty:
+        return df, df.iloc[-1]
+    prep = _prep_pattern_bars(sub)
+    if prep is None or prep.empty:
+        return None, None
+    return prep, prep.iloc[-1]
+
+
+def scan_orb_opening_drive(sub: pd.DataFrame, sym: str, today: date,
+                           min_price: float = 3.0) -> SignalHit | None:
+    """S430 DayTrader ORB / opening-drive proxy on the session bar."""
+    df, last = _day_trader_bar(sub, today)
+    if df is None or last is None:
+        return None
+    cn = float(last["close"])
+    opn = float(last["open"])
+    hi = float(last["high"])
+    gap = float(last.get("gap_pct", 0.0))
+    vz = float(last.get("vz", 0.0))
+    if pd.isna(gap):
+        gap = 0.0
+    if pd.isna(vz):
+        vz = 0.0
+    if any(pd.isna(x) for x in [cn, opn, hi]) or cn < min_price or opn <= 0:
+        return None
+    drive = (cn - opn) / opn
+    if gap >= -0.005 and drive >= 0.004 and hi >= opn * 1.003 and cn > opn:
+        return SignalHit(
+            "S430", "DayTrader_ORB", sym, cn,
+            f"ORB-drive {drive:+.1%} gap {gap:+.1%} VZ={vz:.1f}",
+        )
+    return None
+
+
+def scan_rs_vs_spy(sub: pd.DataFrame, sym: str, today: date,
+                   min_price: float = 3.0) -> SignalHit | None:
+    """S431 DayTrader relative strength vs SPY."""
+    if _SPY_CTX is None:
+        return None
+    if sym.upper() in ("SPY", "QQQ", "IWM", "DIA"):
+        return None
+    df, last = _day_trader_bar(sub, today)
+    if df is None or last is None:
+        return None
+    cn = float(last["close"])
+    opn = float(last["open"])
+    ma20 = float(last.get("ma20", float("nan")))
+    vz = float(last.get("vz", 0.0))
+    if pd.isna(vz):
+        vz = 0.0
+    if any(pd.isna(x) for x in [cn, opn]) or cn < min_price or opn <= 0:
+        return None
+    stock_ret = (cn - opn) / opn
+    spy_ret = float(_SPY_CTX["ret"])
+    rs = stock_ret - spy_ret
+    above_ma = True if pd.isna(ma20) else (cn >= ma20 * 0.995)
+    if stock_ret > 0 and rs >= 0.006 and above_ma and vz >= 0.0:
+        return SignalHit(
+            "S431", "DayTrader_RS", sym, cn,
+            f"RS {rs:+.1%} vs SPY (stock {stock_ret:+.1%} SPY {spy_ret:+.1%})",
+        )
+    return None
+
+
+def scan_orb_with_rs(sub: pd.DataFrame, sym: str, today: date,
+                     min_price: float = 3.0) -> SignalHit | None:
+    """S432 DayTrader ORB that also beats SPY."""
+    orb = scan_orb_opening_drive(sub, sym, today, min_price)
+    if orb is None or _SPY_CTX is None:
+        return None
+    df, last = _day_trader_bar(sub, today)
+    if df is None or last is None:
+        return None
+    cn = float(last["close"])
+    opn = float(last["open"])
+    if opn <= 0:
+        return None
+    stock_ret = (cn - opn) / opn
+    rs = stock_ret - float(_SPY_CTX["ret"])
+    if rs < 0.004:
+        return None
+    return SignalHit(
+        "S432", "DayTrader_ORB_RS", sym, cn,
+        f"{orb.detail} | RS {rs:+.1%}",
+    )
+
+
+DAY_TRADER_ANALYTICS_STRATEGIES: list[StrategyConfig] = [
+    StrategyConfig("S430", "DayTrader_ORB", 3, 1, 7, scan_orb_opening_drive),
+    StrategyConfig("S431", "DayTrader_RS", 3, 1, 7, scan_rs_vs_spy),
+    StrategyConfig("S432", "DayTrader_ORB_RS", 3, 1, 7, scan_orb_with_rs),
+]
+
+_existing_ids = {s.id for s in PAPER_STRATEGIES}
+_collide = [s.id for s in DAY_TRADER_ANALYTICS_STRATEGIES if s.id in _existing_ids]
+if _collide:
+    raise RuntimeError(f"Day Trader Analytics ids collide with existing: {_collide}")
+PAPER_STRATEGIES.extend(DAY_TRADER_ANALYTICS_STRATEGIES)
+
 # Kept for reports / name lookup only — not scanned.
 DROPPED_PAPER_STRATEGIES: list[StrategyConfig] = [
     StrategyConfig("S174", "RubberBand long call EOD", 7, 2, 14, scan_rubber_band),

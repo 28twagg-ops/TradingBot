@@ -293,6 +293,12 @@ def _strategy_family(name: str) -> str:
     n = (name or "").lower()
     if "rubber" in n:
         return "RubberBand"
+    if n.startswith("daytrader") or n.startswith("day_trader") or "daytrader_" in n:
+        return "DayTrader"
+    if n.startswith("orb") or "openingdrive" in n or "opening_drive" in n:
+        return "ORB"
+    if "rs_vs_spy" in n or n.startswith("daytrader_rs") or n == "daytrader_rs":
+        return "DayTrader"
     if "gap" in n:
         return "GapDown"
     if "bbsqueeze" in n or "bb squeeze" in n:
@@ -363,6 +369,8 @@ def build_promising_cohort(min_n: int | None = None) -> list[str]:
         paper.append(s)
 
     keep_fams = {_strategy_family(s.name) for s in paper if s.id in keep}
+    # Day Trader Analytics arms — always paper-test (additive buckets).
+    always_include = ("S430", "S431", "S432")
 
     def _fnum(row: dict, *keys: str) -> float | None:
         for k in keys:
@@ -410,6 +418,11 @@ def build_promising_cohort(min_n: int | None = None) -> list[str]:
     # Always include live-mirror strategies in the paper cohort.
     for sid in sorted(MIRROR_STRATEGIES):
         if sid not in cohort and sid not in kill:
+            cohort.append(sid)
+    # Always include Day Trader Analytics buckets (S430–S432).
+    paper_ids = {s.id for s in paper}
+    for sid in always_include:
+        if sid in paper_ids and sid not in kill and sid not in cohort:
             cohort.append(sid)
     return cohort
 
@@ -480,12 +493,58 @@ def _inject_promising_extra_buckets(profiles: list[BucketProfile]) -> list[Bucke
         return profiles
     used = {p.bucket_id for p in profiles}
     next_id = max(PROMISING_EXTRA_BUCKET_START, max(used, default=0) + 1)
+    day_trader_ids = {"S430", "S431", "S432"}
+    for sid in missing:
+        while next_id in used:
+            next_id += 1
+        # Brand Day Trader Analytics arms distinctly from generic promising extras.
+        if sid in day_trader_ids:
+            pname = f"day_trader_analytics_{sid.lower()}"
+        else:
+            pname = f"promising_{sid.lower()}_baseline"
+        profiles.append(BucketProfile(
+            next_id,
+            pname,
+            strategy_scope=sid,
+            buy_limit_offset=-0.01,
+            sell_limit_offset=-0.01,
+            max_premium=75,
+            max_spread_frac=0.25,
+            min_open_interest=100,
+            account_cap=0.95,
+            max_contracts=1,
+            take_profit=0.50,
+            stop_loss=-0.40,
+            buy_start_hm="10:05",
+            buy_end_hm="10:45",
+        ))
+        used.add(next_id)
+        next_id += 1
+    return profiles
+
+
+def _inject_day_trader_analytics_buckets(profiles: list[BucketProfile]) -> list[BucketProfile]:
+    """Ensure Day Trader Analytics buckets (S430–S432) always exist by name."""
+    want = ("S430", "S431", "S432")
+    covered = {
+        p.strategy_scope for p in profiles
+        if p.strategy_scope in want
+    }
+    # Also treat already-named day_trader_analytics_* as covered.
+    for p in profiles:
+        if (p.name or "").startswith("day_trader_analytics_"):
+            covered.add(p.strategy_scope)
+    missing = [sid for sid in want if sid not in covered]
+    if not missing:
+        return profiles
+    used = {p.bucket_id for p in profiles}
+    next_id = max(PROMISING_EXTRA_BUCKET_START, max(used, default=0) + 1)
     for sid in missing:
         while next_id in used:
             next_id += 1
         profiles.append(BucketProfile(
             next_id,
-            f"promising_{sid.lower()}_baseline",
+            f"day_trader_analytics_{sid.lower()}",
             strategy_scope=sid,
             buy_limit_offset=-0.01,
             sell_limit_offset=-0.01,
@@ -527,7 +586,8 @@ def _build_bucket_experiments(target: int | None = None) -> list[BucketProfile]:
                 break
             profiles.append(BucketProfile(**d))
         profiles = _inject_live_1to1(profiles)
-        return _inject_promising_extra_buckets(profiles)
+        profiles = _inject_promising_extra_buckets(profiles)
+        return _inject_day_trader_analytics_buckets(profiles)
 
     core = [
         BucketProfile(0, "baseline",

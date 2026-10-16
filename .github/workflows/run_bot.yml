@@ -156,6 +156,7 @@ jobs:
           OPTIONS_VARIATION_STUDY: "1"
           OPTIONS_CONTROLLED_LAYOUT: "1"
           # Auto-rank CLEAN KEEP + strong watches + untested siblings of winning families.
+          # Day Trader Analytics buckets (S430 ORB / S431 RS / S432 ORB+RS) always included.
           OPTIONS_PROMISING_COHORT: "1"
           OPTIONS_PROMISING_MIN: "75"
           OPTIONS_ONE_BUCKET_PER_STRATEGY: "1"

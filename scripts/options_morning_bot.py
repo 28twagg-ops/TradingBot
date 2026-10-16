@@ -46,7 +46,10 @@ from alpaca.data.timeframe import TimeFrame
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from options_universe import get_universe, to_alpaca_symbol, get_stock_tier
 from options_oi import make_trading_client, fetch_open_interest
-from options_signals import PAPER_STRATEGIES, ALL_KNOWN_STRATEGIES, SignalHit, scan_symbol, StrategyConfig
+from options_signals import (
+    PAPER_STRATEGIES, ALL_KNOWN_STRATEGIES, SignalHit, scan_symbol, StrategyConfig,
+    set_spy_context, clear_spy_context,
+)
 from options_lab import (
     VIRTUAL_BUCKET_USD, PAPER_UNLIMITED_BUCKETS, EffectiveArm, LabState,
     active_bucket_count, active_buckets, arms_for_signal,
@@ -879,6 +882,24 @@ def scan_all_signals(stock, universe: list[str]) -> list[SignalHit]:
     controlled = bool(os.getenv("OPTIONS_CONTROLLED_LAYOUT"))
     mirror = MIRROR_LIVE or bool(ALLOWED_STRATEGIES)
     multi_strategy = controlled or mirror or VARIATION_STUDY
+
+    # SPY context for Day Trader Analytics RS arms (S431/S432); ignore failures.
+    clear_spy_context()
+    try:
+        spy_key = to_alpaca_symbol("SPY")
+        if spy_key not in symbols_in_df:
+            spy_df = _fetch_one_bar(stock, spy_key, start)
+            if spy_df is not None and not spy_df.empty:
+                if isinstance(spy_df.index, pd.MultiIndex):
+                    spy_sub = spy_df.xs(spy_key, level=0)
+                else:
+                    spy_sub = spy_df
+                set_spy_context(spy_sub, TODAY)
+        else:
+            set_spy_context(df.xs(spy_key, level=0), TODAY)
+    except Exception as exc:
+        rl_file(f"  SPY context for DayTrader RS scanners unavailable: {exc}")
+
     for sym in universe:
         try:
             alpaca_sym = to_alpaca_symbol(sym)
