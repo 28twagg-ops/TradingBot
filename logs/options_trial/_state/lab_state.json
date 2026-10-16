@@ -202,26 +202,6 @@
       "entry_order_id": "7fb411cf-e4ee-4fc1-8e3b-5b32a19586db"
     },
     {
-      "lot_id": "4b0617b989cd",
-      "bucket_id": 67,
-      "profile_name": "lab0067_s164_w2_1005_1045_r1",
-      "strategy_id": "S164",
-      "occ_symbol": "AMD261016C00560000",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 47.0,
-      "entry_price": 0.47,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-16T14:07:35.927596+00:00",
-      "entry_order_id": "41a7d5c6-7b47-4f8d-b786-db96cac37b4d"
-    },
-    {
       "lot_id": "a402c4a27b1b",
       "bucket_id": 2007,
       "profile_name": "day_trader_analytics_s430",
@@ -362,7 +342,24 @@
       "entry_order_id": "52ef0514-e0a5-429e-8f4a-067d1ea0d15c"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "57d2c1dd-f47a-44d1-8a93-631e5a6a475d",
+      "bucket_id": 66,
+      "strategy_id": "S163",
+      "occ_symbol": "AMD261019C00585000",
+      "underlying": "AMD",
+      "qty": 1,
+      "limit": 0.57,
+      "profile_name": "lab0066_s163_w2_1005_1045_r1",
+      "submitted": "2026-10-16",
+      "detail": "gap -2.6%",
+      "spread_frac": 0.09009009009008997,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    }
+  ],
   "pending_exits": [
     {
       "order_id": "1cd27645-f863-4989-a30a-11ad903409d7",
@@ -405,7 +402,6 @@
     "b15": 40.0,
     "b65": 24.0,
     "b18": 36.0,
-    "b67": 47.0,
     "b2007": 37.0,
     "b52": 44.0,
     "b50": 71.0,
@@ -429,7 +425,8 @@
     "2009|S432|2026-10-16",
     "6|S210|2026-10-16",
     "63|S167|2026-10-16",
-    "56|S411|2026-10-16"
+    "56|S411|2026-10-16",
+    "66|S163|2026-10-16"
   ],
   "processed_orders": [
     "ea00263f-a587-4598-bd92-bea8ea6cc369",
@@ -880,9 +877,10 @@
     "f37525e9-ba43-41b8-b999-bf64e26077fe",
     "e08281bb-0e2b-4f6e-938a-c176bbf82d16",
     "9af7c117-b2e0-4de8-a478-fcdf58b802dc",
-    "52ef0514-e0a5-429e-8f4a-067d1ea0d15c"
+    "52ef0514-e0a5-429e-8f4a-067d1ea0d15c",
+    "9f873edb-d972-455f-87b9-92f9e010e0a5"
   ],
-  "submitted_today": 14,
+  "submitted_today": 15,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-16"
 }
