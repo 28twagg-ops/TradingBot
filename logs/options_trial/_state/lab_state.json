@@ -102,26 +102,6 @@
       "entry_order_id": "f815ace3-550a-4b34-a037-893e00dbab07"
     },
     {
-      "lot_id": "2dba021344da",
-      "bucket_id": 91,
-      "profile_name": "s406_only",
-      "strategy_id": "S406",
-      "occ_symbol": "AMD261019C00580000",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 65.0,
-      "entry_price": 0.65,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-16T14:03:23.493177+00:00",
-      "entry_order_id": "5227618d-8fb8-4137-a4fb-d2ff898427cf"
-    },
-    {
       "lot_id": "295ef755c730",
       "bucket_id": 6,
       "profile_name": "lab0006_s210_w2_1005_1045_r1",
@@ -302,26 +282,6 @@
       "entry_order_id": "e08281bb-0e2b-4f6e-938a-c176bbf82d16"
     },
     {
-      "lot_id": "7a5ae5295b55",
-      "bucket_id": 53,
-      "profile_name": "lab0053_s406_w2_1005_1045_r1",
-      "strategy_id": "S406",
-      "occ_symbol": "COIN261023C00215000",
-      "underlying": "COIN",
-      "qty": 1,
-      "entry_cost": 39.0,
-      "entry_price": 0.39,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-16T14:31:51.313726+00:00",
-      "entry_order_id": "52ef0514-e0a5-429e-8f4a-067d1ea0d15c"
-    },
-    {
       "lot_id": "7c723c33aa26",
       "bucket_id": 66,
       "profile_name": "lab0066_s163_w2_1005_1045_r1",
@@ -373,16 +333,6 @@
       "qty": 1,
       "reason": "stop_loss (-94.3%)",
       "submitted": "2026-10-16T10:11:37"
-    },
-    {
-      "order_id": "944bf9a1-a314-4b7b-94b6-c125e6f4b7bb",
-      "lot_id": "7a5ae5295b55",
-      "bucket_id": 53,
-      "strategy_id": "S406",
-      "occ_symbol": "COIN261023C00215000",
-      "qty": 1,
-      "reason": "stop_loss (-59.0%)",
-      "submitted": "2026-10-16T10:56:42"
     }
   ],
   "bucket_open_premium": {
@@ -390,7 +340,6 @@
     "b90": 115.0,
     "b51": 53.0,
     "b13": 64.0,
-    "b91": 65.0,
     "b6": 57.99999999999999,
     "b15": 40.0,
     "b65": 24.0,
@@ -400,7 +349,6 @@
     "b20": 49.0,
     "b63": 54.0,
     "b56": 73.0,
-    "b53": 39.0,
     "b66": 56.99999999999999
   },
   "session_date": "2026-10-16",
@@ -873,7 +821,9 @@
     "52ef0514-e0a5-429e-8f4a-067d1ea0d15c",
     "9f873edb-d972-455f-87b9-92f9e010e0a5",
     "57d2c1dd-f47a-44d1-8a93-631e5a6a475d",
-    "7c02fe62-f3b4-4d03-91ef-5d9f76b2071d"
+    "7c02fe62-f3b4-4d03-91ef-5d9f76b2071d",
+    "f0d7f713-8cd1-460b-b6a1-c1f2d2a42161",
+    "944bf9a1-a314-4b7b-94b6-c125e6f4b7bb"
   ],
   "submitted_today": 15,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
