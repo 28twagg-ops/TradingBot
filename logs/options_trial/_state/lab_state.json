@@ -193,6 +193,16 @@
       "qty": 1,
       "reason": "stop_loss (-94.3%)",
       "submitted": "2026-10-16T10:11:37"
+    },
+    {
+      "order_id": "1528d8d3-e6a7-4ff0-a53f-f0599f14d273",
+      "lot_id": "8edaf261d280",
+      "bucket_id": 15,
+      "strategy_id": "S356",
+      "occ_symbol": "MARA261030C00008500",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-10-16T14:46:40"
     }
   ],
   "bucket_open_premium": {
