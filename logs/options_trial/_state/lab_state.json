@@ -340,6 +340,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-16T14:17:48.837155+00:00",
       "entry_order_id": "f37525e9-ba43-41b8-b999-bf64e26077fe"
+    },
+    {
+      "lot_id": "07e3e4fb0248",
+      "bucket_id": 56,
+      "profile_name": "lab0056_s411_w2_1005_1045_r1",
+      "strategy_id": "S411",
+      "occ_symbol": "AVGO261019C00347500",
+      "underlying": "AVGO",
+      "qty": 1,
+      "entry_cost": 73.0,
+      "entry_price": 0.73,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-16T14:22:38.638883+00:00",
+      "entry_order_id": "e08281bb-0e2b-4f6e-938a-c176bbf82d16"
     }
   ],
   "pending_orders": [
@@ -408,7 +428,8 @@
     "b52": 44.0,
     "b50": 71.0,
     "b20": 49.0,
-    "b63": 54.0
+    "b63": 54.0,
+    "b56": 73.0
   },
   "session_date": "2026-10-16",
   "entries_locked": [
@@ -424,7 +445,8 @@
     "2007|S430|2026-10-16",
     "2009|S432|2026-10-16",
     "6|S210|2026-10-16",
-    "63|S167|2026-10-16"
+    "63|S167|2026-10-16",
+    "56|S411|2026-10-16"
   ],
   "processed_orders": [
     "ea00263f-a587-4598-bd92-bea8ea6cc369",
@@ -872,9 +894,10 @@
     "99f0a87c-7c8c-4652-8b19-b4c92108b7a9",
     "6f0b121b-cc0d-452a-aba2-796e532a8cf9",
     "300e1878-95e5-435b-9d2c-080ec845d9b9",
-    "f37525e9-ba43-41b8-b999-bf64e26077fe"
+    "f37525e9-ba43-41b8-b999-bf64e26077fe",
+    "e08281bb-0e2b-4f6e-938a-c176bbf82d16"
   ],
-  "submitted_today": 13,
+  "submitted_today": 14,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-16"
 }
