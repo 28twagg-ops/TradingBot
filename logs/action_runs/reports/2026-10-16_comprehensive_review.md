@@ -1526,3 +1526,132 @@ Live micro done. open_options=0 lots=0
 ```
 
 ---
+
+## Run 20261016T135739Z
+
+- UTC timestamp: `20261016T135739Z`
+- GitHub run: [#13016](https://github.com/28twagg-ops/TradingBot/actions/runs/38911573388)
+- Run id: `38911573388`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261016T135739Z_live_bot.log`, `logs/action_runs/20261016T135739Z_live_options.log`, `logs/action_runs/20261016T135739Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1685 | 48.4 | -25.0 | +37.4 | $+18,645 |
+| TAINTED | 2002 | 32.4 | -40.4 | +10.8 | $-10,944 |
+| KEEP-only | 826 | 61.0 | +51.0 | +55.4 | $+12,816 |
+| KEEP-only recent | 633 | 59.6 | +53.2 | +61.5 | $+8,755 |
+
+- KEEP strategies (24): S163, S164, S166, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S397, S398, S403, S404, S406, S410, S411
+- KILL strategies (21): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-10-16T09:26:36.454811-04:00","date":"2026-10-16","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.1,"phases_s":{"reconcile":0.44},"signals":0,"placed":0,"equity":993110.45,"open_positions":5,"pending_orders":0,"open_lots":5,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"13010","github_run_id":"38907671014","status":"ok","data_quality":{"clean":{"n":1685,"win":48.43,"med":-25.0,"avg":37.45,"pnl":18644.83},"tainted":{"n":2002,"win":32.37,"med":-40.35,"avg":10.83,"pnl":-10944.28},"keep_only":{"n":826,"win":61.02,"med":50.96,"avg":55.42,"pnl":12816.45},"keep_only_recent":{"n":633,"win":59.56,"med":53.23,"avg":61.55,"pnl":8755.0},"keep_strategies":["S163","S164","S166","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S397","S398","S403","S404","S406","S410","S411"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (67 earlier lines - see full log file)
+|                                                                        |
+|  Total invested                                                  $34.78|
+|  Total open P&L                                                  $+1.18|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                  no (stale (25937.2m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  PNC  P&L +3.5%  $+1.18                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  54                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  ALLE     Pullback50      eq     $157.86  55.2   -2.03   50MA bounce (+|
+|  AMCR     Pullback50      eq     $44.45   65.3   -2.79   50MA bounce (+|
+|  AWK      Pullback50      eq     $134.49  67.8   -2.73   50MA bounce (-|
+|  CINF     Pullback50      eq     $169.93  69.9   -1.90   50MA bounce (+|
+|  CSX      Pullback50      eq     $49.08   74.7   -2.38   50MA bounce (+|
+|  FANG     Pullback50      eq     $197.41  75.1   -2.62   50MA bounce (+|
+|  DD       Pullback50      eq     $132.63  54.6   -2.88   50MA bounce (-|
+|  EW       Pullback50      eq     $88.25   54.6   -2.80   50MA bounce (-|
+|  HSIC     Pullback50      eq     $87.71   58.0   -2.22   50MA bounce (+|
+|  ITW      Pullback50      eq     $275.70  51.9   -2.17   50MA bounce (+|
+|  J        Pullback50      eq     $142.77  60.8   -3.11   50MA bounce (-|
+|  LYV      Pullback50      eq     $174.13  55.0   -2.88   50MA bounce (-|
+|  L        Pullback50      eq     $109.90  69.5   -2.08   50MA bounce (+|
+|  MSI      Pullback50      eq     $462.92  61.2   -3.31   50MA bounce (-|
+|  NWS      Pullback50      eq     $33.31   62.4   -2.88   50MA bounce (+|
+|  NSC      Pullback50      eq     $326.94  72.7   -1.89   50MA bounce (-|
+|  PKG      Pullback50      eq     $237.08  54.4   -3.21   50MA bounce (-|
+|  PH       Pullback50      eq     $975.84  52.4   -2.68   50MA bounce (-|
+|  OKE      Pullback50      eq     $92.33   59.6   -2.96   50MA bounce (-|
+|  PGR      Pullback50      eq     $216.83  59.8   -1.91   50MA bounce (+|
+|  ROK      Pullback50      eq     $428.06  47.6   -2.27   50MA bounce (-|
+|  ROP      Pullback50      eq     $389.89  75.1   -2.55   50MA bounce (+|
+|  SWK      Pullback50      eq     $94.53   69.4   -2.48   50MA bounce (+|
+|  SYF      Pullback50      eq     $75.41   66.9   -2.47   50MA bounce (-|
+|  TRGP     Pullback50      eq     $287.98  59.4   -3.15   50MA bounce (+|
+|  TGT      Pullback50      eq     $158.74  50.6   -2.98   50MA bounce (+|
+|  URI      Pullback50      eq     $1053.~  51.9   -2.20   50MA bounce (+|
+|  WTW      Pullback50      eq     $316.52  75.6   -3.12   50MA bounce (-|
+|  ZBH      Pullback50      eq     $95.69   61.2   -3.05   50MA bounce (+|
+|  AIT      Pullback50      eq     $335.44  47.7   -1.85   50MA bounce (+|14:01:18  INFO        BUY  ALLE  $33.88  [Pullback50]  id=c760b616-01ad-4b32-a798-7fcc3dc79ce9
+14:01:18  INFO        BUY  AMCR  $33.88  [Pullback50]  id=e5cde265-7487-4281-9e95-265a8f6457b6
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---

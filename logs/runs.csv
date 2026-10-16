@@ -10425,3 +10425,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-16 13:16:45,summary,bull,224.2,122.52,0,0,0,3,APD|KEY|PNC,both
 2026-10-16 13:21:40,summary,bull,224.2,122.52,0,0,0,3,APD|KEY|PNC,both
 2026-10-16 13:26:33,summary,bull,224.2,122.52,0,0,0,3,APD|KEY|PNC,both
+2026-10-16 14:01:41,scan_morning,bull,225.85,123.35,54,0,0,3,ALLE|AMCR|PNC,both,239.5,False
