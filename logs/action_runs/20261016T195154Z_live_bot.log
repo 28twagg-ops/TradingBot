@@ -1,0 +1,155 @@
+19:51:56  INFO      Mode: scan
+19:51:56  INFO        [positions] 3/3 (3 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:51 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $225.29|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-10-16|
+|  Universe                                                          both|
+|  Mon~  Oct: RubberBand + GapDown (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $225.29|
+|  Cash                                                           $123.13|
+|  Reserve                                          $11.26  (always kept)|
+|  Stock~  $102.16 / $168.97  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $66.81  (new stock buys)|
+|  Trade size             $33.79  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  CFG      MomReversal     $33.88     $62.90   $63.18   +0.4%   $+0.15  |
+|  MTB      MomReversal     $33.81     $215.23  $215.75  +0.2%   $+0.08  |
+|  PNC      MomReversal     $34.47     $211.72  $217.19  +2.6%   $+0.87  |
+|                                                                        |
+|  Total invested                                                 $102.16|
+|  Total open P&L                                                  $+1.10|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (10.7m); positions refreshed live)|
+|  Cached signals                                                      22|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  MTB  P&L +0.2%  $+0.08                                            HOLD|
+|  CFG  P&L +0.4%  $+0.15                                            HOLD|
+|  PNC  P&L +2.6%  $+0.87                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 3|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                          cached signals (signals fresh (10.7m))|
+|  Universe scanned in prep                                           902|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  22                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  ALL      Pullback50      eq     $246.10  76.0   -1.18   50MA bounce (-|
+|  ALLE     Pullback50      eq     $155.88  51.2   -0.92   50MA bounce (-|
+|  AWK      Pullback50      eq     $134.96  68.8   -1.91   50MA bounce (+|
+|  CFG      MomReversal     eq     $63.06   38.3   2.53    -12.2% drop/60|
+|  FAST     Pullback50      eq     $50.77   51.9   -0.42   50MA bounce (+|
+|  MTB      MomReversal     eq     $215.23  38.1   1.36    -12.5% drop/60|
+|  MSI      Pullback50      eq     $462.91  61.2   -0.21   50MA bounce (-|
+|  NSC      Pullback50      eq     $326.07  71.9   -1.08   50MA bounce (-|
+|  OKE      Pullback50      eq     $93.27   61.5   -1.97   50MA bounce (+|
+|  TT       Pullback50      eq     $459.01  54.7   -1.39   50MA bounce (+|
+|  TRV      VWAP_Reclaim    eq     $388.62  78.5   1.59    VWAP reclaim V|
+|  UNP      Pullback50      eq     $288.95  78.5   -0.81   50MA bounce (+|
+|  WTW      Pullback50      eq     $315.10  74.8   -2.26   50MA bounce (-|
+|  CNO      Pullback50      eq     $54.66   58.9   -1.43   50MA bounce (+|
+|  KEX      Pullback50      eq     $135.98  61.6   -1.17   50MA bounce (-|
+|  KNSL     Pullback50      eq     $362.95  76.7   -1.61   50MA bounce (+|
+|  LAMR     Pullback50      eq     $149.27  63.7   -1.46   50MA bounce (+|
+|  PAG      Pullback50      eq     $212.18  55.3   0.24    50MA bounce (+|
+|  RLI      Pullback50      eq     $60.84   74.4   -1.16   50MA bounce (+|
+|  RYAN     Pullback50      eq     $40.52   63.3   -1.83   50MA bounce (+|
+|  SIGI     Pullback50      eq     $88.77   65.3   -1.68   50MA bounce (-|
+|  SWX      Pullback50      eq     $87.82   79.0   -1.91   50MA bounce (+|
+|                                                                        |19:51:56  INFO        place_all_stops: checking 3 positions...
+19:51:56  INFO        STOP skipped CFG: fractional (0.5363 shares) — software exit will handle it
+19:51:56  INFO        STOP skipped MTB: fractional (0.1567 shares) — software exit will handle it
+19:51:56  INFO        STOP skipped PNC: fractional (0.1587 shares) — software exit will handle it
+19:51:56  INFO        place_eod_stops: updating 3 stops to current price...
+19:51:56  INFO        EOD stop skip CFG: 0.5363 shares (fractional) — ext_exits will cover
+19:51:56  INFO        EOD stop skip MTB: 0.1567 shares (fractional) — ext_exits will cover
+19:51:56  INFO        EOD stop skip PNC: 0.1587 shares (fractional) — ext_exits will cover
+19:51:56  INFO        Daily log -> logs/daily/2026-10-16.md
+19:51:56  INFO        Dashboard written → logs/dashboard.md
+
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   RubberBand + GapDown (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             22|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $225.29|
+|  Cash                                                           $123.13|
++========================================================================+
