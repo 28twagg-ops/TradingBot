@@ -460,5 +460,23 @@
     "profile": "promising_s221_baseline",
     "open_premium": 0.0,
     "open_lots": 0
+  },
+  {
+    "bucket_id": 2007,
+    "profile": "day_trader_analytics_s430",
+    "open_premium": 0.0,
+    "open_lots": 0
+  },
+  {
+    "bucket_id": 2008,
+    "profile": "day_trader_analytics_s431",
+    "open_premium": 0.0,
+    "open_lots": 0
+  },
+  {
+    "bucket_id": 2009,
+    "profile": "day_trader_analytics_s432",
+    "open_premium": 0.0,
+    "open_lots": 0
   }
 ]
