@@ -15,7 +15,6 @@ S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),194,85,47,38,17.16,45.07,-
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),225,109,55,54,36.11,22.22,-71.43,-50.0,146.0,1086.0,25,81,0,0,19,27.5
 S365,RubberBand_14DTE,14d,watch,fat left tail (p10 < -45%),70,36,18,18,8.72,19.23,-64.03,-51.8,70.56,35.0,16,77,0,0,8,36.1
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),115,51,26,25,51.84,11.76,-66.67,-50.67,191.43,806.0,17,77,3,2,12,27.5
-S356,GapDown_14DTE,14d,watch,fat left tail (p10 < -45%),70,32,16,16,7.87,8.54,-51.59,-48.09,58.62,127.0,13,77,2,1,6,37.5
 S411,RubberBand_OTM2,3d,watch,fat left tail (p10 < -45%),160,57,29,28,-3.07,2.7,-57.04,-51.39,63.11,-114.0,20,74,4,4,17,15.8
 S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S170,Golden Pocket call 3 DTE,3d ATM golden pocket,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
@@ -84,6 +83,7 @@ S210,MA_Cross_8_21,3d ATM MA cross 8/21,drop,non-positive median return,228,104,
 S408,RubberBand_ITM1,3d,drop,manually paused — excluded from new entries & reflected P&L,167,67,29,38,112.6,-6.25,-81.48,-59.63,573.13,1137.0,18,74,0,0,16,17.9
 S361,RubberBand_2DTE,2d,drop,non-positive median return,169,65,31,34,81.82,-6.67,-66.67,-53.52,274.44,117.0,19,77,3,2,19,20.0
 S398,GapDown_ATM,3d,drop,non-positive median return,157,64,31,33,32.89,-14.93,-68.26,-55.56,170.23,794.0,16,77,2,1,16,25.0
+S356,GapDown_14DTE,14d,drop,non-positive median return,70,33,16,17,6.11,-18.92,-51.5,-48.89,58.62,107.0,14,77,2,2,6,39.4
 S174,RubberBand long call EOD,RubberBand (dropped),drop,non-positive median return,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,102,0,0,6,50.4
 S173,MomReversal long call,MomRev,drop,non-positive median return,1625,415,154,261,15.19,-31.51,-77.18,-62.95,101.9,62.64,8,102,0,0,12,27.5
 S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1470,255,82,173,2.52,-35.29,-63.24,-53.42,93.89,-1276.78,11,102,0,0,16,25.9
