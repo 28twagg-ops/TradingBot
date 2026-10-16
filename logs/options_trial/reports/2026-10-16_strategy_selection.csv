@@ -1,10 +1,10 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
 S409,RubberBand_ATM,3d,watch,insufficient sample (<8 exits),2,2,2,0,81.94,81.94,79.72,80.56,84.17,118.0,1,22,0,0,1,100.0
-S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,fat left tail (p10 < -45%),136,20,11,9,98.84,79.92,-71.88,-56.12,346.77,401.0,10,87,3,2,7,35.0
 S396,GapDown_ITM2,3d,watch,building sample (8-19 exits),34,11,8,3,43.15,74.58,-52.63,0.85,95.83,302.0,7,71,3,3,2,72.7
 S166,GapDown strong call,3d ATM strong,watch,building sample (8-19 exits),57,14,10,4,53.62,66.34,-77.0,-24.22,153.15,421.0,7,87,3,3,8,35.7
 S410,RubberBand_OTM1,3d,watch,building sample (8-19 exits),33,11,7,4,26.18,65.28,-68.49,-58.43,101.49,192.0,7,71,1,1,4,72.7
 S163,A1 GapDown ATM call EOD,7d ATM,watch,fat left tail (p10 < -45%),136,33,18,15,18.81,56.45,-74.16,-60.0,88.91,351.0,12,87,4,3,11,39.4
+S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,fat left tail (p10 < -45%),136,21,11,10,90.6,53.85,-71.88,-57.78,328.57,361.0,11,87,3,3,7,33.3
 S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),56,28,21,7,33.54,52.94,-67.86,23.36,75.95,519.0,13,77,1,1,5,28.6
 S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),228,129,77,52,122.63,52.63,-58.99,-45.83,308.57,3332.0,31,77,12,12,29,11.6
 S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,fat left tail (p10 < -45%),116,28,15,13,49.94,51.66,-74.63,-57.65,244.05,423.0,11,87,2,2,8,50.0
