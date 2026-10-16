@@ -1,2 +1,3 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-10-16 14:09:21.509081+00:00,entry,2007,day_trader_analytics_s430,S430,a402c4a27b1b,CVNA,CVNA261023C00068000,1,0.38,0.37,37.0,,,,-0.01,,0.75,-0.6000000000000001,0.13698630136986298,ORB-drive +1.6% gap +0.4% VZ=-2.1,6d3caaca-cdbd-4033-ba86-50fb8d94035b
+2026-10-16 15:01:56.900607+00:00,exit,2007,day_trader_analytics_s430,S430,a402c4a27b1b,CVNA,CVNA261023C00068000,1,,0.2,37.0,-45.95,-17.0,stop_loss (-45.9%),,-0.01,0.5,-0.4,,,7c02fe62-f3b4-4d03-91ef-5d9f76b2071d
