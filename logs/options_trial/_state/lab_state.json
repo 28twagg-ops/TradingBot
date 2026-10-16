@@ -300,6 +300,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-16T14:11:35.846569+00:00",
       "entry_order_id": "99f0a87c-7c8c-4652-8b19-b4c92108b7a9"
+    },
+    {
+      "lot_id": "b7a5e1a87acc",
+      "bucket_id": 20,
+      "profile_name": "lab0020_s364_w2_1005_1045_r1",
+      "strategy_id": "S364",
+      "occ_symbol": "AVGO261023C00367500",
+      "underlying": "AVGO",
+      "qty": 1,
+      "entry_cost": 49.0,
+      "entry_price": 0.49,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-16T14:16:46.013958+00:00",
+      "entry_order_id": "300e1878-95e5-435b-9d2c-080ec845d9b9"
+    },
+    {
+      "lot_id": "a5dffe5c19b9",
+      "bucket_id": 63,
+      "profile_name": "lab0063_s167_w2_1005_1045_r1",
+      "strategy_id": "S167",
+      "occ_symbol": "AMD261019C00582500",
+      "underlying": "AMD",
+      "qty": 1,
+      "entry_cost": 54.0,
+      "entry_price": 0.54,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-16T14:17:48.837155+00:00",
+      "entry_order_id": "f37525e9-ba43-41b8-b999-bf64e26077fe"
     }
   ],
   "pending_orders": [
@@ -315,22 +355,6 @@
       "submitted": "2026-10-16",
       "detail": "RB gap -1.5% reclaim",
       "spread_frac": 0.24657534246575336,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "300e1878-95e5-435b-9d2c-080ec845d9b9",
-      "bucket_id": 20,
-      "strategy_id": "S364",
-      "occ_symbol": "AVGO261023C00367500",
-      "underlying": "AVGO",
-      "qty": 1,
-      "limit": 0.49,
-      "profile_name": "lab0020_s364_w2_1005_1045_r1",
-      "submitted": "2026-10-16",
-      "detail": "RB gap -1.7% reclaim",
-      "spread_frac": 0.0833333333333333,
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
@@ -382,7 +406,9 @@
     "b2009": 62.0,
     "b2007": 37.0,
     "b52": 44.0,
-    "b50": 71.0
+    "b50": 71.0,
+    "b20": 49.0,
+    "b63": 54.0
   },
   "session_date": "2026-10-16",
   "entries_locked": [
@@ -397,7 +423,8 @@
     "52|S404|2026-10-16",
     "2007|S430|2026-10-16",
     "2009|S432|2026-10-16",
-    "6|S210|2026-10-16"
+    "6|S210|2026-10-16",
+    "63|S167|2026-10-16"
   ],
   "processed_orders": [
     "ea00263f-a587-4598-bd92-bea8ea6cc369",
@@ -843,9 +870,11 @@
     "b1c006f5-305d-4165-a3e2-473dea1d87c3",
     "e9648214-c23f-4a3f-a221-70f846aac1d8",
     "99f0a87c-7c8c-4652-8b19-b4c92108b7a9",
-    "6f0b121b-cc0d-452a-aba2-796e532a8cf9"
+    "6f0b121b-cc0d-452a-aba2-796e532a8cf9",
+    "300e1878-95e5-435b-9d2c-080ec845d9b9",
+    "f37525e9-ba43-41b8-b999-bf64e26077fe"
   ],
-  "submitted_today": 12,
+  "submitted_today": 13,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-16"
 }
