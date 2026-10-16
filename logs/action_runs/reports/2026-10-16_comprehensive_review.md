@@ -1182,3 +1182,136 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261016T133133Z
+
+- UTC timestamp: `20261016T133133Z`
+- GitHub run: [#13011](https://github.com/28twagg-ops/TradingBot/actions/runs/38908310971)
+- Run id: `38908310971`
+- Live bot: exit=`0`, duration=`217s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261016T133133Z_live_bot.log`, `logs/action_runs/20261016T133133Z_live_options.log`, `logs/action_runs/20261016T133133Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1685 | 48.4 | -25.0 | +37.4 | $+18,645 |
+| TAINTED | 2002 | 32.4 | -40.4 | +10.8 | $-10,944 |
+| KEEP-only | 826 | 61.0 | +51.0 | +55.4 | $+12,816 |
+| KEEP-only recent | 633 | 59.6 | +53.2 | +61.5 | $+8,755 |
+
+- KEEP strategies (24): S163, S164, S166, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S397, S398, S403, S404, S406, S410, S411
+- KILL strategies (21): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-10-16T09:26:36.454811-04:00","date":"2026-10-16","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.1,"phases_s":{"reconcile":0.44},"signals":0,"placed":0,"equity":993110.45,"open_positions":5,"pending_orders":0,"open_lots":5,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"13010","github_run_id":"38907671014","status":"ok","data_quality":{"clean":{"n":1685,"win":48.43,"med":-25.0,"avg":37.45,"pnl":18644.83},"tainted":{"n":2002,"win":32.37,"med":-40.35,"avg":10.83,"pnl":-10944.28},"keep_only":{"n":826,"win":61.02,"med":50.96,"avg":55.42,"pnl":12816.45},"keep_only_recent":{"n":633,"win":59.56,"med":53.23,"avg":61.55,"pnl":8755.0},"keep_strategies":["S163","S164","S166","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S397","S398","S403","S404","S406","S410","S411"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+13:31:34  INFO      Mode: morning_prep
+13:31:35  INFO        [prep_positions] 3/3 (3 valid)
+13:31:35  INFO      Fetching tickers (universe=both)...
+13:31:35  INFO        S&P 500: 503
+13:31:35  INFO        MidCap 400: 400
+13:31:35  INFO        Total: 903 tickers
+13:31:36  INFO        [prep_universe] 40/900 (40 valid)
+13:31:38  INFO        [prep_universe] 80/900 (80 valid)
+13:31:40  INFO        [prep_universe] 120/900 (120 valid)
+13:31:43  INFO        [prep_universe] 160/900 (160 valid)
+13:31:45  INFO        [prep_universe] 200/900 (199 valid)
+13:31:50  INFO        [prep_universe] 240/900 (238 valid)
+13:32:01  INFO        [prep_universe] 280/900 (278 valid)
+13:32:12  INFO        [prep_universe] 320/900 (318 valid)
+13:32:25  INFO        [prep_universe] 360/900 (358 valid)
+13:32:36  INFO        [prep_universe] 400/900 (398 valid)
+13:32:49  INFO        [prep_universe] 440/900 (438 valid)
+13:33:02  INFO        [prep_universe] 480/900 (477 valid)
+13:33:12  INFO        [prep_universe] 520/900 (517 valid)
+13:33:26  INFO        [prep_universe] 560/900 (557 valid)
+13:33:36  INFO        [prep_universe] 600/900 (597 valid)
+13:33:50  INFO        [prep_universe] 640/900 (637 valid)
+13:34:00  INFO        [prep_universe] 680/900 (677 valid)
+13:34:13  INFO        [prep_universe] 720/900 (717 valid)
+13:34:24  INFO        [prep_universe] 760/900 (757 valid)
+13:34:38  INFO        [prep_universe] 800/900 (797 valid)
+13:34:48  INFO        [prep_universe] 840/900 (837 valid)
+13:35:01  INFO        [prep_universe] 880/900 (877 valid)
+13:35:08  INFO        [prep_universe] 900/900 (897 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         13:31 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $225.30|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       3|
+|  Invested                                                       $102.78|
+|  Open P&L                                                        $+1.99|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  APD      Pullback50      $33.74     $296.37  $297.50  +0.4%   $+0.13  |
+|  KEY      MomReversal     $34.39     $19.69   $20.17   +2.4%   $+0.82  |
+|  PNC      MomReversal     $34.64     $211.72  $218.29  +3.1%   $+1.04  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                0|
+|                                                                        |
+|  No open sell orders.                                                  |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      2|
+|  Signal candidates                                                   41|
+|  Universe scanned                                                   900|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-10-16T09:35:10.631737-04:00 share=25% ===
+2026-10-16 09:35:10,631 INFO === options_live_micro LIVE 2026-10-16T09:35:10.631737-04:00 share=25% ===
+Live account equity $225.36 cash $122.52 #225458845 options_level=3
+2026-10-16 09:35:10,843 INFO Live account equity $225.36 cash $122.52 #225458845 options_level=3
+Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+2026-10-16 09:35:11,036 INFO Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+Live micro done. open_options=0 lots=0
+2026-10-16 09:35:11,155 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
