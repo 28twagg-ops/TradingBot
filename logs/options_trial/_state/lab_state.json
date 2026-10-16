@@ -403,6 +403,16 @@
       "qty": 1,
       "reason": "stop_loss (-59.0%)",
       "submitted": "2026-10-16T10:56:42"
+    },
+    {
+      "order_id": "7c02fe62-f3b4-4d03-91ef-5d9f76b2071d",
+      "lot_id": "a402c4a27b1b",
+      "bucket_id": 2007,
+      "strategy_id": "S430",
+      "occ_symbol": "CVNA261023C00068000",
+      "qty": 1,
+      "reason": "stop_loss (-45.9%)",
+      "submitted": "2026-10-16T11:01:56"
     }
   ],
   "bucket_open_premium": {
