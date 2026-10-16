@@ -10511,3 +10511,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-16 21:06:45,ext_exits,bull,225.35,123.13,0,0,0,3,CFG|MTB|PNC,both
 2026-10-16 21:11:35,ext_exits,bull,225.35,123.13,0,0,0,3,CFG|MTB|PNC,both
 2026-10-16 21:16:33,ext_exits,bull,225.35,123.13,0,0,0,3,CFG|MTB|PNC,both
+2026-10-16 21:21:39,ext_exits,bull,225.35,123.13,0,0,0,3,CFG|MTB|PNC,both
