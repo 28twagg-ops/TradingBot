@@ -1,0 +1,231 @@
+19:46:41  INFO      Mode: scan
+19:46:41  INFO        SELL LIMIT AMZN  qty=0.131319584  limit=$263.14  id=7ebcd8ac-a3a9-4d58-ba3a-c89ba8253179
+19:47:11  INFO        SELL LIMIT filled AMZN (confirmed by position check)
+19:47:11  INFO        TX logged: SELL AMZN  P&L 2.52%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $225.28|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-10-19|
+|  Universe                                                          both|
+|  Mon~  Oct: RubberBand + GapDown (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $225.28|
+|  Cash                                                           $190.72|
+|  Reserve                                          $11.26  (always kept)|
+|  Stocks~  $34.56 / $168.96  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $134.40  (new stock buys)|
+|  Trade size             $33.79  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (1 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AMZN     Pullback50      $34.56     $256.70  $263.17  +2.5%   $+0.85  |
+|                                                                        |
+|  Total invested                                                  $34.56|
+|  Total open P&L                                                  $+0.85|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                    yes (fresh (11.2m))|
+|  Cached exits                                                         1|
+|  Cached signals                                                      39|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AMZN  P&L +2.5%  $+0.85                          EXIT: midline (+2.7%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 0|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           902|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  39                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.96   70.2   -1.05   50MA bounce (+|
+|  ALL      Pullback50      eq     $246.12  77.9   -1.21   50MA bounce (-|
+|  AMCR     Pullback50      eq     $44.07   67.1   -1.50   50MA bounce (-|
+|  GOOG     Pullback50      eq     $341.49  54.3   -1.99   50MA bounce (+|
+|  GOOGL    Pullback50      eq     $345.74  54.8   -1.91   50MA bounce (+|
+|  ALLE     Pullback50      eq     $155.59  50.4   -1.61   50MA bounce (-|
+|  BAX      Pullback50      eq     $25.12   66.3   -1.60   50MA bounce (+|
+|  CPAY     Pullback50      eq     $403.97  59.0   -2.08   50MA bounce (-|
+|  CVS      Pullback50      eq     $92.47   68.2   -2.10   50MA bounce (+|
+|  EXPE     Pullback50      eq     $292.98  71.0   -1.11   50MA bounce (+|
+|  FOX      Pullback50      eq     $58.20   61.7   -1.17   50MA bounce (-|
+|  FOXA     Pullback50      eq     $65.20   62.3   -1.33   50MA bounce (-|
+|  JCI      Pullback50      eq     $148.34  48.5   -1.09   50MA bounce (+|
+|  LH       Pullback50      eq     $319.36  62.8   -1.28   50MA bounce (-|
+|  NWS      Pullback50      eq     $32.90   69.9   -2.42   50MA bounce (-|
+|  PKG      Pullback50      eq     $237.68  57.7   -0.37   50MA bounce (-|
+|  PYPL     Pullback50      eq     $56.52   68.1   -1.21   50MA bounce (+|
+|  PH       Pullback50      eq     $971.80  50.6   -1.67   50MA bounce (-|
+|  DGX      Pullback50      eq     $235.42  55.3   -1.31   50MA bounce (-|
+|  ROP      Pullback50      eq     $383.69  78.2   -1.93   50MA bounce (-|
+|  UNP      Pullback50      eq     $288.19  76.0   -1.64   50MA bounce (+|
+|  WTW      Pullback50      eq     $314.37  79.2   -2.45   50MA bounce (-|
+|  ZBH      Pullback50      eq     $94.84   60.1   -2.56   50MA bounce (-|
+|  APPF     Pullback50      eq     $212.66  65.8   -1.45   50MA bounce (+|
+|  CLF      TrendResumpti~  eq     $14.35   79.1   3.89    HH/HL resumpti|
+|  DLB      Pullback50      eq     $60.85   67.4   -1.58   50MA bounce (+|
+|  ENTG     Pullback50      eq     $146.64  43.1   -1.49   50MA bounce (-|19:47:12  INFO        BUY  AES  $33.79  [Pullback50]  id=d6f91ff8-105d-4d89-a148-da7c41d83560
+19:47:12  INFO        BUY  ALL  $33.79  [Pullback50]  id=5c5a9aa1-7d56-4312-bbbd-5e519a6310f2
+19:47:12  INFO        BUY  AMCR  $33.79  [Pullback50]  id=7442dfc3-e3f0-4e0c-bca6-4760f9e5d0cb
+19:47:41  INFO        place_all_stops: checking 3 positions...
+19:47:41  INFO        STOP-MARKET placed AES  qty=2 (pos=2.2584)  stop=$14.88  id=7d430c9b-d0c9-42c8-b8a6-87fabdbae5a9
+19:47:41  INFO        STOP skipped ALL: fractional (0.1371 shares) — software exit will handle it
+19:47:41  INFO        STOP skipped AMCR: fractional (0.7674 shares) — software exit will handle it
+19:47:41  INFO        place_eod_stops: updating 3 stops to current price...
+19:47:41  INFO        EOD stop: cancelled old stop AES
+19:47:41  WARNING     EOD stop failed AES: {"available":"0.258441992","code":40310000,"existing_qty":"2.258441992","held_for_orders":"2","message":"insufficient qty available for order (requested: 2, available: 0.258441992)","symbol":"AES"}
+19:47:41  INFO        EOD stop skip ALL: 0.1371 shares (fractional) — ext_exits will cover
+19:47:41  INFO        EOD stop skip AMCR: 0.7674 shares (fractional) — ext_exits will cover
+19:47:41  INFO        Daily log -> logs/daily/2026-10-19.md
+19:47:41  INFO        Dashboard written → logs/dashboard.md
+
+|  HOG      Pullback50      eq     $26.82   65.5   -1.76   50MA bounce (-|
+|  HXL      Pullback50      eq     $91.77   75.5   -1.59   50MA bounce (+|
+|  LIVN     Pullback50      eq     $78.35   55.2   -1.87   50MA bounce (-|
+|  LNTH     Pullback50      eq     $100.03  62.9   1.27    50MA bounce (-|
+|  PEGA     VWAP_Reclaim    eq     $35.40   61.7   1.08    VWAP reclaim V|
+|  PAG      Pullback50      eq     $212.19  62.4   -0.33   50MA bounce (+|
+|  ROKU     Pullback50      eq     $155.71  66.2   -2.03   50MA bounce (+|
+|  RYAN     Pullback50      eq     $40.57   64.8   -1.80   50MA bounce (+|
+|  SIGI     Pullback50      eq     $88.64   66.0   -2.01   50MA bounce (-|
+|  SCI      Pullback50      eq     $80.94   71.0   -1.96   50MA bounce (+|
+|  SLAB     Pullback50      eq     $221.40  52.6   -1.47   50MA bounce (+|
+|  TXNM     Pullback50      eq     $58.48   49.0   -1.36   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AES  Pullback50                                    $33.79|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] ALL  Pullback50                                    $33.79|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AMCR  Pullback50                                   $33.79|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] GOOG  Pullback50                                     cap 3|
+|    SKIP [eq] GOOGL  Pullback50                                    cap 3|
+|    SKIP [eq] ALLE  Pullback50                                     cap 3|
+|    SKIP [eq] BAX  Pullback50                                      cap 3|
+|    SKIP [eq] CPAY  Pullback50                                     cap 3|
+|    SKIP [eq] CVS  Pullback50                                      cap 3|
+|    SKIP [eq] EXPE  Pullback50                                     cap 3|
+|    SKIP [eq] FOX  Pullback50                                      cap 3|
+|    SKIP [eq] FOXA  Pullback50                                     cap 3|
+|    SKIP [eq] JCI  Pullback50                                      cap 3|
+|    SKIP [eq] LH  Pullback50                                       cap 3|
+|    SKIP [eq] NWS  Pullback50                                      cap 3|
+|    SKIP [eq] PKG  Pullback50                                      cap 3|
+|    SKIP [eq] PYPL  Pullback50                                     cap 3|
+|    SKIP [eq] PH  Pullback50                                       cap 3|
+|    SKIP [eq] DGX  Pullback50                                      cap 3|
+|    SKIP [eq] ROP  Pullback50                                      cap 3|
+|    SKIP [eq] UNP  Pullback50                                      cap 3|
+|    SKIP [eq] WTW  Pullback50                                      cap 3|
+|    SKIP [eq] ZBH  Pullback50                                      cap 3|
+|    SKIP [eq] APPF  Pullback50                                     cap 3|
+|    SKIP [eq] DLB  Pullback50                                      cap 3|
+|    SKIP [eq] ENTG  Pullback50                                     cap 3|
+|    SKIP [eq] HOG  Pullback50                                      cap 3|
+|    SKIP [eq] HXL  Pullback50                                      cap 3|
+|    SKIP [eq] LIVN  Pullback50                                     cap 3|
+|    SKIP [eq] LNTH  Pullback50                                     cap 3|
+|    SKIP [eq] PAG  Pullback50                                      cap 3|
+|    SKIP [eq] ROKU  Pullback50                                     cap 3|
+|    SKIP [eq] RYAN  Pullback50                                     cap 3|
+|    SKIP [eq] SIGI  Pullback50                                     cap 3|
+|    SKIP [eq] SCI  Pullback50                                      cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] TXNM  Pullback50                                     cap 3|
+|    SKIP [eq] CLF  TrendResumption                                 cap 3|
+|    SKIP [eq] PEGA  VWAP_Reclaim                                   cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  AES                                                  still unconfirmed|
+|  ALL                                                  still unconfirmed|
+|  AMCR                                                 still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   RubberBand + GapDown (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             39|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             3|
+|  Equity                                                         $225.26|
+|  Cash                                                           $123.94|
++========================================================================+
