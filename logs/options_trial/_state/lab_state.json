@@ -1,24 +1,7 @@
 {
   "version": 5,
   "lots": [],
-  "pending_orders": [
-    {
-      "order_id": "ceb90eef-1ceb-4fe2-bd20-93006f920a08",
-      "bucket_id": 2009,
-      "strategy_id": "S432",
-      "occ_symbol": "AMZN261023C00267500",
-      "underlying": "AMZN",
-      "qty": 1,
-      "limit": 0.72,
-      "profile_name": "day_trader_analytics_s432",
-      "submitted": "2026-10-19",
-      "detail": "ORB-drive +0.6% gap +2.1% VZ=-3.4 | RS +0.7%",
-      "spread_frac": 0.027777777777777804,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.6000000000000001
-    }
-  ],
+  "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {},
   "session_date": "2026-10-19",
