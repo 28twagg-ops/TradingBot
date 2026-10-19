@@ -1,27 +1,6 @@
 {
   "version": 5,
-  "lots": [
-    {
-      "lot_id": "52569aafa610",
-      "bucket_id": 6,
-      "profile_name": "lab0006_s210_w2_1005_1045_r1",
-      "strategy_id": "S210",
-      "occ_symbol": "CELH261023C00029500",
-      "underlying": "CELH",
-      "qty": 1,
-      "entry_cost": 31.0,
-      "entry_price": 0.31,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-19T14:16:57.989771+00:00",
-      "entry_order_id": "a307d154-a679-415f-a3f6-2019f6cf8082"
-    }
-  ],
+  "lots": [],
   "pending_orders": [
     {
       "order_id": "ceb90eef-1ceb-4fe2-bd20-93006f920a08",
@@ -41,9 +20,7 @@
     }
   ],
   "pending_exits": [],
-  "bucket_open_premium": {
-    "b6": 31.0
-  },
+  "bucket_open_premium": {},
   "session_date": "2026-10-19",
   "entries_locked": [
     "2007|S430|2026-10-19",
@@ -519,7 +496,8 @@
     "763b35f0-240c-4322-84ce-72077af450dc",
     "e976f2db-e7f9-498e-9f55-b4ceb3b522f9",
     "a307d154-a679-415f-a3f6-2019f6cf8082",
-    "d8685641-fb30-4b91-97ca-1c18c96e8758"
+    "d8685641-fb30-4b91-97ca-1c18c96e8758",
+    "14fed527-9f26-4422-a603-6321f7caf2ab"
   ],
   "submitted_today": 3,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
