@@ -10549,3 +10549,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-19 13:16:54,summary,bull,225.2,123.13,0,0,0,3,CFG|MTB|PNC,both
 2026-10-19 13:21:54,summary,bull,225.2,123.13,0,0,0,3,CFG|MTB|PNC,both
 2026-10-19 13:26:39,summary,bull,225.2,123.13,0,0,0,3,CFG|MTB|PNC,both
+2026-10-19 14:03:13,exits,bull,224.82,123.67,0,0,0,3,ALL|AMZN|BAX,both
