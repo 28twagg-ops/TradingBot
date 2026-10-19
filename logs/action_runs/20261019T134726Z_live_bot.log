@@ -1,0 +1,30 @@
+13:47:27  INFO      Mode: morning_scan
+13:47:28  INFO        [positions] 3/3 (3 valid)
+13:47:28  INFO        SELL MARKET [urgent] MTB closed
+13:47:30  INFO        TX logged: SELL MTB  P&L -1.12%
+13:47:30  INFO        SELL LIMIT CFG  qty=0.536265064  limit=$63.00  id=a0e09d73-5cb0-432f-a6cd-718f31b27c19
+13:47:51  INFO        SELL LIMIT filled CFG (confirmed by position check)
+13:47:51  INFO        TX logged: SELL CFG  P&L 0.35%
+13:47:51  INFO        SELL LIMIT PNC  qty=0.15870017  limit=$217.10  id=8eb3a7e1-7843-4c17-bc29-829eea8a6449
+13:48:11  INFO        SELL LIMIT filled PNC (confirmed by position check)
+13:48:12  INFO        TX logged: SELL PNC  P&L 2.79%
+13:48:12  INFO        Universe cache hit: 903 tickers (tickers_2026-10-19.json)
+13:48:12  INFO        [universe] 40/903 (40 valid)
+13:48:14  INFO        [universe] 80/903 (80 valid)
+13:48:15  INFO        [universe] 120/903 (120 valid)
+13:48:16  INFO        [universe] 160/903 (160 valid)
+13:48:17  INFO        [universe] 200/903 (199 valid)
+13:48:24  INFO        [universe] 240/903 (238 valid)
+13:48:37  INFO        [universe] 280/903 (278 valid)
+13:48:50  INFO        [universe] 320/903 (318 valid)
+13:49:00  INFO        [universe] 360/903 (358 valid)
+13:49:13  INFO        [universe] 400/903 (398 valid)
+13:49:26  INFO        [universe] 440/903 (438 valid)
+13:49:37  INFO        [universe] 480/903 (477 valid)
+13:49:49  INFO        [universe] 520/903 (517 valid)
+13:50:02  INFO        [universe] 560/903 (557 valid)
+13:50:13  INFO        [universe] 600/903 (597 valid)
+13:50:26  INFO        [universe] 640/903 (637 valid)
+13:50:36  INFO        [universe] 680/903 (677 valid)
+13:50:49  INFO        [universe] 720/903 (717 valid)
+13:51:02  INFO        [universe] 760/903 (757 valid)
