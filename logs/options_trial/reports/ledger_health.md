@@ -1,6 +1,6 @@
-# Ledger health — 2026-10-16
+# Ledger health — 2026-10-19
 
-_Generated 2026-10-16T19:56:44.089471_
+_Generated 2026-10-19T09:01:56.312483_
 
 Stuck threshold: **>5** days (EXIT_DAYS_MAX=3 + buffer=2).
 
@@ -10,12 +10,12 @@ State file: OK
 
 | Check                       | Count | Status |
 |-----------------------------|------:|--------|
-| Current stuck (state)       |     1 | WARN |
+| Current stuck (state)       |     0 | OK |
 | Orphaned lots (post-stable) |  1914 | WARN |
-| Missing exit records (post) |  1913 | WARN |
+| Missing exit records (post) |  1914 | WARN |
 | State/ledger mismatches     |     0 | OK |
-| Total open lots             |     6 | INFO |
-| Total closed lots           |  2814 | INFO |
+| Total open lots             |     2 | INFO |
+| Total closed lots           |  2815 | INFO |
 | Pre-cutoff audit debt       |     0 | INFO |
 | Transition audit debt       |   744 | INFO |
 
@@ -24,11 +24,5 @@ Notes:
 - **Post-stable orphaned / missing exits** = actionable WARN (entry_date > 2026-07-21).
 - **Pre-cutoff debt** = entry_date < 2026-07-06 (INFO).
 - **Transition debt** = 2026-07-06..2026-07-21 lot_id churn after attribution fix (INFO, not WARN).
-
-## Current stuck lots
-
-| lot_id | strategy | symbol | entry_day | age_days |
-|--------|----------|--------|-----------|---------:|
-| 33d84c516583 | S365 | DKNG | 2026-09-28 | 18 |
 
 _Orphaned ledger detail omitted (1914 rows) — see note above on historical lot_id churn._
