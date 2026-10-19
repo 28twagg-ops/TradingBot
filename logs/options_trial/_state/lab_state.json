@@ -1,11 +1,71 @@
 {
   "version": 5,
-  "lots": [],
-  "pending_orders": [],
+  "lots": [
+    {
+      "lot_id": "6f3036c8ce25",
+      "bucket_id": 2007,
+      "profile_name": "day_trader_analytics_s430",
+      "strategy_id": "S430",
+      "occ_symbol": "PLTR261023C00207500",
+      "underlying": "PLTR",
+      "qty": 1,
+      "entry_cost": 41.0,
+      "entry_price": 0.41,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-19T14:07:59.425951+00:00",
+      "entry_order_id": "e976f2db-e7f9-498e-9f55-b4ceb3b522f9"
+    }
+  ],
+  "pending_orders": [
+    {
+      "order_id": "ceb90eef-1ceb-4fe2-bd20-93006f920a08",
+      "bucket_id": 2009,
+      "strategy_id": "S432",
+      "occ_symbol": "AMZN261023C00267500",
+      "underlying": "AMZN",
+      "qty": 1,
+      "limit": 0.72,
+      "profile_name": "day_trader_analytics_s432",
+      "submitted": "2026-10-19",
+      "detail": "ORB-drive +0.6% gap +2.1% VZ=-3.4 | RS +0.7%",
+      "spread_frac": 0.027777777777777804,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.6000000000000001
+    },
+    {
+      "order_id": "a307d154-a679-415f-a3f6-2019f6cf8082",
+      "bucket_id": 6,
+      "strategy_id": "S210",
+      "occ_symbol": "CELH261023C00029500",
+      "underlying": "CELH",
+      "qty": 1,
+      "limit": 0.33,
+      "profile_name": "lab0006_s210_w2_1005_1045_r1",
+      "submitted": "2026-10-19",
+      "detail": "MA8 28.04 crossed above MA21",
+      "spread_frac": 0.22950819672131145,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    }
+  ],
   "pending_exits": [],
-  "bucket_open_premium": {},
+  "bucket_open_premium": {
+    "b2007": 41.0
+  },
   "session_date": "2026-10-19",
-  "entries_locked": [],
+  "entries_locked": [
+    "2007|S430|2026-10-19",
+    "2009|S432|2026-10-19",
+    "6|S210|2026-10-19"
+  ],
   "processed_orders": [
     "ea00263f-a587-4598-bd92-bea8ea6cc369",
     "73967689-ccb0-4eed-ba74-5304a69bbf1e",
@@ -472,9 +532,10 @@
     "6f42f256-253b-477a-a10e-e701da038990",
     "17137d7a-1c38-46e7-99e4-793e8c214bc2",
     "cde62fb8-4342-4622-8f3a-b7d47d2562f3",
-    "763b35f0-240c-4322-84ce-72077af450dc"
+    "763b35f0-240c-4322-84ce-72077af450dc",
+    "e976f2db-e7f9-498e-9f55-b4ceb3b522f9"
   ],
-  "submitted_today": 0,
+  "submitted_today": 3,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-19"
 }
