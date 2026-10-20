@@ -40193,11 +40193,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-10-20.log
 elapsed=3.3s reconcile=0.51s cancel=0.22s manage=1.31s
 
-=== 15:40:46 ET — manage-only (past entry window) [elapsed=2.5s reconcile=0.33s cancel=0.13s manage=0.95s] ===
-=== options_morning_bot (PAPER) 2026-10-20T15:40:46.642910-04:00 ===
+=== 15:42:53 ET — manage-only (past entry window) [elapsed=2.2s reconcile=0.29s cancel=0.13s manage=0.85s] ===
+=== options_morning_bot (PAPER) 2026-10-20T15:42:53.029133-04:00 ===
 
 [Run context]
-Paper auth OK — equity $993234.35, account PA33P8KT02IL
+Paper auth OK — equity $993149.35, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:79:live_1to1+variations
 
 [Setup]
@@ -40215,15 +40215,15 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $993,234.35
+Account equity: $993,149.35
 Active buckets: 79 of 79 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+12,680.55 all-time  |  $+132.00 today
   Raw (incl dropped):     $+7,456.55 all-time  |  $+132.00 today
-  Open (not sold yet): $-34.00 unrealized (virtual lots)
+  Open (not sold yet): $-35.00 unrealized (virtual lots)
   Premium deployed:    $232.00 in open positions
-  Combined P&L:        $+12,646.55 (reflected realized + open virtual)
+  Combined P&L:        $+12,645.55 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     16111
@@ -40233,9 +40233,9 @@ Ledger (master)
   Avg return/trade: +28.6%  median -27.4%
 
 Open virtual lots (by bucket)
-  b6 lab0006_s210_w2_1005_1045_r1  prem=$    15  real=$ +3.00  open=$ -1.00  lots=1  [S210:TTDx1]
+  b6 lab0006_s210_w2_1005_1045_r1  prem=$    15  real=$ +3.00  open=$ -2.00  lots=1  [S210:TTDx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b12 lab0012_s403_w2_1005_1045_r1  prem=$    44  real=$+19.00  open=$ -6.00  lots=1  [S403:CELHx1]
+  b12 lab0012_s403_w2_1005_1045_r1  prem=$    44  real=$+19.00  open=$ -7.00  lots=1  [S403:CELHx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b13 lab0013_s350_w2_1005_1045_r1  prem=$     0  real=$ +6.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -40251,7 +40251,7 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b19 lab0019_s362_w2_1005_1045_r1  prem=$     0  real=$+18.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b20 lab0020_s364_w2_1005_1045_r1  prem=$    27  real=$-22.00  open=$ +4.00  lots=1  [S364:MARAx1]
+  b20 lab0020_s364_w2_1005_1045_r1  prem=$    27  real=$-22.00  open=$ +5.00  lots=1  [S364:MARAx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b21 lab0021_s365_w2_1005_1045_r1  prem=$    41  real=$+28.00  open=$ +6.00  lots=1  [S365:MARAx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -40277,12 +40277,12 @@ Open virtual lots (by bucket)
   (58 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  CELH261023C00030500  qty=1  cost=$44.00  return=-13.6%  open P&L=$-6.00
+  CELH261023C00030500  qty=1  cost=$44.00  return=-15.9%  open P&L=$-7.00
   FSLY261023C00023000  qty=1  cost=$65.00  return=-46.2%  open P&L=$-30.00
   MARA261023C00007500  qty=1  cost=$40.00  return=-17.5%  open P&L=$-7.00
-  MARA261030C00008000  qty=1  cost=$27.00  return=+14.8%  open P&L=$+4.00
+  MARA261030C00008000  qty=1  cost=$27.00  return=+18.5%  open P&L=$+5.00
   MARA261106C00008000  qty=1  cost=$41.00  return=+14.6%  open P&L=$+6.00
-  TTD261023C00013000  qty=1  cost=$15.00  return=-6.7%  open P&L=$-1.00
+  TTD261023C00013000  qty=1  cost=$15.00  return=-13.3%  open P&L=$-2.00
 
 Per-bucket exit stats (all time)
   b0|c000_s173_w1_0928_1005_r1  n= 22  avg=+24.8%  med=+34.9%  realized=$+283.00
@@ -40700,7 +40700,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $993,234.35                                              |
+|Equity       : $993,149.35                                              |
 |Open Risk    : 6 lots (6 broker pos)                                    |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -40749,12 +40749,12 @@ Per-bucket exit stats (all time)
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
 |  FSLY261023C00023000           1    -46.2%   $    -30.00               |
+|  CELH261023C00030500           1    -15.9%   $     -7.00               |
 |  MARA261023C00007500           1    -17.5%   $     -7.00               |
-|  CELH261023C00030500           1    -13.6%   $     -6.00               |
 |  MARA261106C00008000           1    +14.6%   $     +6.00               |
-|  MARA261030C00008000           1    +14.8%   $     +4.00               |
-|  TTD261023C00013000            1     -6.7%   $     -1.00               |
+|  MARA261030C00008000           1    +18.5%   $     +5.00               |
+|  TTD261023C00013000            1    -13.3%   $     -2.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-10-20.log
-elapsed=2.5s reconcile=0.33s cancel=0.13s manage=0.95s
+elapsed=2.2s reconcile=0.29s cancel=0.13s manage=0.85s
 
