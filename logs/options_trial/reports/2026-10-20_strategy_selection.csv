@@ -17,7 +17,6 @@ S365,RubberBand_14DTE,14d,watch,fat left tail (p10 < -45%),71,36,18,18,8.72,19.2
 S432,DayTrader_ORB_RS,3d,watch,insufficient sample (<8 exits),2,2,1,1,14.84,14.84,-29.29,-12.74,58.97,-18.0,2,4,2,2,2,50.0
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),115,51,26,25,51.84,11.76,-66.67,-50.67,191.43,806.0,17,81,0,0,12,27.5
 S411,RubberBand_OTM2,3d,watch,fat left tail (p10 < -45%),161,57,29,28,-3.07,2.7,-57.04,-51.39,63.11,-114.0,20,78,2,1,17,15.8
-S430,DayTrader_ORB,3d,watch,insufficient sample (<8 exits),3,2,1,1,2.63,2.63,-36.23,-21.66,41.5,4.0,2,4,3,2,2,50.0
 S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S170,Golden Pocket call 3 DTE,3d ATM golden pocket,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S171,VWAP Reclaim call 3 DTE,3d ATM VWAP reclaim,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
@@ -71,6 +70,7 @@ S417,BBSqueeze_OTM1,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,
 S418,BBSqueeze_OTM2,7d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S419,BBSqueeze_OTM3,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S431,DayTrader_RS,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
+S430,DayTrader_ORB,3d,watch,insufficient sample (<8 exits),3,3,1,2,-11.7,-40.38,-44.84,-43.17,32.9,-17.0,3,4,3,3,3,33.3
 S367,RubberBand_30DTE,30d,watch,insufficient sample (<8 exits),12,3,0,3,-41.76,-48.89,-50.89,-50.14,-29.78,-77.0,3,77,0,0,2,66.7
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),20,6,1,5,-33.91,-50.0,-66.67,-62.5,14.93,-5.0,2,81,0,0,2,83.3
 S358,GapDown_30DTE,30d,watch,insufficient sample (<8 exits),15,5,2,3,-8.92,-50.0,-51.39,-51.39,54.28,-49.0,4,77,0,0,3,40.0
