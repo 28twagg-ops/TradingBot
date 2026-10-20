@@ -22,26 +22,6 @@
       "entry_order_id": "755204ce-649f-443a-a95b-3602a96e2f2a"
     },
     {
-      "lot_id": "37fb7db21d1e",
-      "bucket_id": 91,
-      "profile_name": "s406_only",
-      "strategy_id": "S406",
-      "occ_symbol": "MARA261023C00007500",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 22.0,
-      "entry_price": 0.22,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-20T14:06:37.501494+00:00",
-      "entry_order_id": "d1f29753-7d34-44e1-a028-3ef9d6090ec3"
-    },
-    {
       "lot_id": "e83d2f2d266c",
       "bucket_id": 90,
       "profile_name": "live_1to1",
@@ -240,6 +220,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-20T14:13:27.413603+00:00",
       "entry_order_id": "e692506d-2356-4aed-9f25-bfd53036ea4d"
+    },
+    {
+      "lot_id": "2b9527c58276",
+      "bucket_id": 50,
+      "profile_name": "lab0050_s397_w2_1005_1045_r1",
+      "strategy_id": "S397",
+      "occ_symbol": "FSLY261023C00023000",
+      "underlying": "FSLY",
+      "qty": 1,
+      "entry_cost": 65.0,
+      "entry_price": 0.65,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-20T14:23:02.404536+00:00",
+      "entry_order_id": "50a3cff0-a0a5-41c2-83fa-639a1e1cc60d"
     }
   ],
   "pending_orders": [
@@ -274,12 +274,43 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
+    },
+    {
+      "order_id": "7ae3efe3-584b-4f2d-bd71-68e41753e3f1",
+      "bucket_id": 66,
+      "strategy_id": "S164",
+      "occ_symbol": "FSLY261023C00024000",
+      "underlying": "FSLY",
+      "qty": 1,
+      "limit": 0.37,
+      "profile_name": "lab0066_s164_w2_1005_1045_r1",
+      "submitted": "2026-10-20",
+      "detail": "gap -2.7%",
+      "spread_frac": 0.17142857142857143,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    },
+    {
+      "order_id": "7fdb38d2-91fd-44e3-bf24-f09e740d44ed",
+      "bucket_id": 64,
+      "strategy_id": "S168",
+      "occ_symbol": "GE261023C00320000",
+      "underlying": "GE",
+      "qty": 1,
+      "limit": 0.56,
+      "profile_name": "lab0064_s168_w2_1005_1045_r1",
+      "submitted": "2026-10-20",
+      "detail": "gap -2.9%",
+      "spread_frac": 0.2135922330097086,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
   "pending_exits": [],
   "bucket_open_premium": {
     "b90": 123.0,
-    "b91": 22.0,
     "b2009": 10.0,
     "b18": 55.00000000000001,
     "b21": 41.0,
@@ -288,7 +319,8 @@
     "b56": 63.0,
     "b53": 35.0,
     "b17": 48.0,
-    "b6": 15.0
+    "b6": 15.0,
+    "b50": 65.0
   },
   "session_date": "2026-10-20",
   "entries_locked": [
@@ -305,7 +337,10 @@
     "18|S361|2026-10-20",
     "2009|S432|2026-10-20",
     "6|S210|2026-10-20",
-    "19|S362|2026-10-20"
+    "19|S362|2026-10-20",
+    "66|S164|2026-10-20",
+    "50|S397|2026-10-20",
+    "64|S168|2026-10-20"
   ],
   "processed_orders": [
     "ea00263f-a587-4598-bd92-bea8ea6cc369",
@@ -789,9 +824,11 @@
     "87898cec-3577-4527-a909-af33adf80b1e",
     "d6b261e5-e74d-42e1-81d5-947691d0a3b6",
     "cfbc0b43-7e57-472e-89f6-3992e02f50a9",
-    "e692506d-2356-4aed-9f25-bfd53036ea4d"
+    "e692506d-2356-4aed-9f25-bfd53036ea4d",
+    "50a3cff0-a0a5-41c2-83fa-639a1e1cc60d",
+    "5f54bbd0-e0d3-48ab-b760-a4b7e3a1fe94"
   ],
-  "submitted_today": 14,
+  "submitted_today": 17,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-20"
 }
