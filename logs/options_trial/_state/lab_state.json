@@ -286,6 +286,16 @@
       "qty": 1,
       "reason": "take_profit (+63.0%)",
       "submitted": "2026-10-20T10:41:46"
+    },
+    {
+      "order_id": "227f4913-1f57-4025-b705-77dfe4d1d704",
+      "lot_id": "800132dd6944",
+      "bucket_id": 64,
+      "strategy_id": "S168",
+      "occ_symbol": "GE261023C00320000",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-10-20T11:36:57"
     }
   ],
   "bucket_open_premium": {
