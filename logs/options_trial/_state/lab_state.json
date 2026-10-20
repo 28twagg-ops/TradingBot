@@ -220,6 +220,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-20T14:07:40.663872+00:00",
       "entry_order_id": "cfbc0b43-7e57-472e-89f6-3992e02f50a9"
+    },
+    {
+      "lot_id": "b9d50f2eb4b9",
+      "bucket_id": 6,
+      "profile_name": "lab0006_s210_w2_1005_1045_r1",
+      "strategy_id": "S210",
+      "occ_symbol": "TTD261023C00013000",
+      "underlying": "TTD",
+      "qty": 1,
+      "entry_cost": 15.0,
+      "entry_price": 0.15,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-20T14:13:27.413603+00:00",
+      "entry_order_id": "e692506d-2356-4aed-9f25-bfd53036ea4d"
     }
   ],
   "pending_orders": [
@@ -251,7 +271,8 @@
     "b2007": 52.0,
     "b56": 63.0,
     "b53": 35.0,
-    "b17": 48.0
+    "b17": 48.0,
+    "b6": 15.0
   },
   "session_date": "2026-10-20",
   "entries_locked": [
@@ -266,7 +287,8 @@
     "20|S364|2026-10-20",
     "21|S365|2026-10-20",
     "18|S361|2026-10-20",
-    "2009|S432|2026-10-20"
+    "2009|S432|2026-10-20",
+    "6|S210|2026-10-20"
   ],
   "processed_orders": [
     "ea00263f-a587-4598-bd92-bea8ea6cc369",
@@ -749,9 +771,10 @@
     "59dfb89c-84fa-4b7e-a176-1686fcf0345f",
     "87898cec-3577-4527-a909-af33adf80b1e",
     "d6b261e5-e74d-42e1-81d5-947691d0a3b6",
-    "cfbc0b43-7e57-472e-89f6-3992e02f50a9"
+    "cfbc0b43-7e57-472e-89f6-3992e02f50a9",
+    "e692506d-2356-4aed-9f25-bfd53036ea4d"
   ],
-  "submitted_today": 12,
+  "submitted_today": 13,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-20"
 }
