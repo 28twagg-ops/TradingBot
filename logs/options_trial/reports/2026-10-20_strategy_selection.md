@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-20
 
-_Generated 2026-10-20T09:26:49.138070_
+_Generated 2026-10-20T10:03:57.597988_
 
 ## Summary
 
@@ -27,7 +27,7 @@ _Generated 2026-10-20T09:26:49.138070_
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 34 | 52.9 | +54.84 | -77.21 | -61.42 | +88.54 | 91 | 1 | 2 | $+295.00 | 38.2% | fat left tail (p10 < -45%) |
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 21 | 52.4 | +53.85 | -71.88 | -57.78 | +328.57 | 91 | 1 | 1 | $+361.00 | 33.3% | fat left tail (p10 < -45%) |
 | S357 (GapDown_21DTE) | 21d | watch | 28 | 75.0 | +52.94 | -67.86 | +23.36 | +75.95 | 81 | 0 | 0 | $+519.00 | 28.6% | fat left tail (p10 < -45%) |
-| S406 (RubberBand_ITM3) | 3d | watch | 129 | 59.7 | +52.63 | -58.99 | -45.83 | +308.57 | 81 | 3 | 3 | $+3,332.00 | 11.6% | fat left tail (p10 < -45%) |
+| S406 (RubberBand_ITM3) | 3d | watch | 129 | 59.7 | +52.63 | -58.99 | -45.83 | +308.57 | 81 | 4 | 3 | $+3,332.00 | 11.6% | fat left tail (p10 < -45%) |
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 28 | 53.6 | +51.66 | -74.63 | -57.65 | +244.05 | 91 | 1 | 1 | $+423.00 | 50.0% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 49 | 63.3 | +51.39 | -65.03 | -52.38 | +117.06 | 81 | 1 | 1 | $+1,091.00 | 18.4% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 62 | 67.7 | +51.31 | -59.86 | -50.62 | +322.38 | 81 | 0 | 0 | $+1,459.00 | 21.0% | fat left tail (p10 < -45%) |
