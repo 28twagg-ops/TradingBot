@@ -258,6 +258,22 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
+    },
+    {
+      "order_id": "5238f27e-6f84-406a-9d27-385fc2cbfcad",
+      "bucket_id": 19,
+      "strategy_id": "S362",
+      "occ_symbol": "MARA261023C00008000",
+      "underlying": "MARA",
+      "qty": 1,
+      "limit": 0.11,
+      "profile_name": "lab0019_s362_w2_1005_1045_r1",
+      "submitted": "2026-10-20",
+      "detail": "RB gap -2.5% reclaim",
+      "spread_frac": 0.0869565217391304,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
     }
   ],
   "pending_exits": [],
@@ -288,7 +304,8 @@
     "21|S365|2026-10-20",
     "18|S361|2026-10-20",
     "2009|S432|2026-10-20",
-    "6|S210|2026-10-20"
+    "6|S210|2026-10-20",
+    "19|S362|2026-10-20"
   ],
   "processed_orders": [
     "ea00263f-a587-4598-bd92-bea8ea6cc369",
@@ -774,7 +791,7 @@
     "cfbc0b43-7e57-472e-89f6-3992e02f50a9",
     "e692506d-2356-4aed-9f25-bfd53036ea4d"
   ],
-  "submitted_today": 13,
+  "submitted_today": 14,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-20"
 }
