@@ -1,0 +1,21 @@
+13:48:21  INFO      Mode: morning_scan
+13:48:21  INFO        [positions] 3/3 (3 valid)
+13:48:22  INFO        SELL LIMIT AES  qty=2.257601069  limit=$14.96  id=f223d0fc-aeca-46b1-bbd4-c305af8e2efa
+13:48:52  INFO        SELL LIMIT filled AES (confirmed by position check)
+13:48:52  INFO        TX logged: SELL AES  P&L 0.0%
+13:48:52  INFO        SELL LIMIT AMCR  qty=0.766769537  limit=$44.42  id=cc140dca-a330-4386-bb12-8dec22eb9f4f
+13:49:22  INFO        SELL LIMIT filled AMCR (confirmed by position check)
+13:49:22  INFO        TX logged: SELL AMCR  P&L 0.91%
+13:49:22  INFO        SELL LIMIT ALL  qty=0.136924685  limit=$252.92  id=47f4db68-a661-4198-9957-1b7fe9c7982c
+13:49:52  INFO        SELL LIMIT filled ALL (confirmed by position check)
+13:49:52  INFO        TX logged: SELL ALL  P&L 2.83%
+13:49:52  INFO        Universe cache hit: 903 tickers (tickers_2026-10-20.json)
+13:49:53  INFO        [universe] 40/903 (40 valid)
+13:49:54  INFO        [universe] 80/903 (80 valid)
+13:49:56  INFO        [universe] 120/903 (120 valid)
+13:49:57  INFO        [universe] 160/903 (160 valid)
+13:49:58  INFO        [universe] 200/903 (199 valid)
+13:50:05  INFO        [universe] 240/903 (238 valid)
+13:50:18  INFO        [universe] 280/903 (278 valid)
+13:50:28  INFO        [universe] 320/903 (318 valid)
+13:50:41  INFO        [universe] 360/903 (358 valid)

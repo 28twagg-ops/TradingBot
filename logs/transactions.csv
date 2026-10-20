@@ -1318,3 +1318,6 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-10-19 19:52:14,2026-10-19,SELL,ALL,Pullback50,246.57,33.79,0.03,0.01,0,midline (+0.0%),bull,225.35
 2026-10-19 19:52:45,2026-10-19,SELL,AMCR,Pullback50,44.06,33.81,0.08,0.03,0,midline (+0.1%),bull,225.35
 2026-10-19 19:53:16,2026-10-19,SELL,AES,Pullback50,14.96,33.8,0.1,0.03,0,midline (+0.1%),bull,225.34
+2026-10-20 13:48:52,2026-10-20,SELL,AES,Pullback50,14.96,33.78,0.0,0.0,1,midline (+0.0%),bull,226.52
+2026-10-20 13:49:22,2026-10-20,SELL,AMCR,Pullback50,44.44,34.08,0.91,0.31,1,midline (+0.9%),bull,226.47
+2026-10-20 13:49:52,2026-10-20,SELL,ALL,Pullback50,252.99,34.64,2.83,0.96,1,midline (+2.8%),bull,226.45
