@@ -10673,3 +10673,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-20 13:21:47,summary,bull,225.48,123.97,0,0,0,3,AES|ALL|AMCR,both
 2026-10-20 13:26:42,summary,bull,225.5,123.97,0,0,0,3,AES|ALL|AMCR,both
 2026-10-20 14:02:51,exits,bull,226.46,226.46,0,0,0,0,,both
+2026-10-20 14:06:33,exits,bull,226.46,226.46,0,0,0,0,,both
