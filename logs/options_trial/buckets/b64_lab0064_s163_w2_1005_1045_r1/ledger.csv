@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-10-20 15:16:58.031431+00:00,entry,64,lab0064_s163_w2_1005_1045_r1,S168,800132dd6944,GE,GE261023C00320000,1,0.56,0.52,52.0,,,,-0.01,,0.5,-0.5,0.2135922330097086,gap -2.9%,7fdb38d2-91fd-44e3-bf24-f09e740d44ed
