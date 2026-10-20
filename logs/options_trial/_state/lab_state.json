@@ -260,6 +260,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-20T14:27:46.358228+00:00",
       "entry_order_id": "9f982301-d67b-4855-9cff-5f90ca1fc277"
+    },
+    {
+      "lot_id": "284bd3b288cd",
+      "bucket_id": 12,
+      "profile_name": "lab0012_s403_w2_1005_1045_r1",
+      "strategy_id": "S403",
+      "occ_symbol": "CELH261023C00030500",
+      "underlying": "CELH",
+      "qty": 1,
+      "entry_cost": 44.0,
+      "entry_price": 0.44,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-20T14:32:05.775076+00:00",
+      "entry_order_id": "41fbbc85-2bb9-4e0c-bc6b-288e295c3468"
     }
   ],
   "pending_orders": [
@@ -326,25 +346,20 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
-    },
-    {
-      "order_id": "41fbbc85-2bb9-4e0c-bc6b-288e295c3468",
-      "bucket_id": 12,
-      "strategy_id": "S403",
-      "occ_symbol": "CELH261023C00030500",
-      "underlying": "CELH",
-      "qty": 1,
-      "limit": 0.45,
-      "profile_name": "lab0012_s403_w2_1005_1045_r1",
-      "submitted": "2026-10-20",
-      "detail": "touch MA50 green",
-      "spread_frac": 0.1149425287356323,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
     }
   ],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "6955980d-3ac4-4222-aba1-56e62404164d",
+      "lot_id": "e83d2f2d266c",
+      "bucket_id": 90,
+      "strategy_id": "S404",
+      "occ_symbol": "MARA261023C00007000",
+      "qty": 1,
+      "reason": "take_profit (+54.0%)",
+      "submitted": "2026-10-20T10:32:10"
+    }
+  ],
   "bucket_open_premium": {
     "b90": 123.0,
     "b2009": 10.0,
@@ -357,7 +372,8 @@
     "b17": 48.0,
     "b6": 15.0,
     "b50": 65.0,
-    "b52": 40.0
+    "b52": 40.0,
+    "b12": 44.0
   },
   "session_date": "2026-10-20",
   "entries_locked": [
@@ -866,7 +882,8 @@
     "e692506d-2356-4aed-9f25-bfd53036ea4d",
     "50a3cff0-a0a5-41c2-83fa-639a1e1cc60d",
     "5f54bbd0-e0d3-48ab-b760-a4b7e3a1fe94",
-    "9f982301-d67b-4855-9cff-5f90ca1fc277"
+    "9f982301-d67b-4855-9cff-5f90ca1fc277",
+    "41fbbc85-2bb9-4e0c-bc6b-288e295c3468"
   ],
   "submitted_today": 19,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
