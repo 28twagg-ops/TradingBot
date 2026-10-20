@@ -153,6 +153,16 @@
       "qty": 1,
       "reason": "take_profit (+63.0%)",
       "submitted": "2026-10-20T10:41:46"
+    },
+    {
+      "order_id": "d2bb7d96-fd1a-4c12-ab17-fc85a26317f7",
+      "lot_id": "3983bc9333fe",
+      "bucket_id": 66,
+      "strategy_id": "S164",
+      "occ_symbol": "FSLY261023C00024000",
+      "qty": 1,
+      "reason": "stop_loss (-57.1%)",
+      "submitted": "2026-10-20T14:41:47"
     }
   ],
   "bucket_open_premium": {
