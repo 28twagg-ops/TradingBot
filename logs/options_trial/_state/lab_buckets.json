@@ -470,7 +470,7 @@
   {
     "bucket_id": 2009,
     "profile": "day_trader_analytics_s432",
-    "open_premium": 10.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   }
 ]
