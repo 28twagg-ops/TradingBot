@@ -233,6 +233,16 @@
       "qty": 1,
       "reason": "take_profit (+63.0%)",
       "submitted": "2026-10-20T10:41:46"
+    },
+    {
+      "order_id": "33afd99e-fe65-4d76-8fcc-da75e8017761",
+      "lot_id": "cf7564721298",
+      "bucket_id": 53,
+      "strategy_id": "S406",
+      "occ_symbol": "SMCI261023C00034000",
+      "qty": 1,
+      "reason": "take_profit (+54.3%)",
+      "submitted": "2026-10-20T13:52:10"
     }
   ],
   "bucket_open_premium": {
