@@ -16,7 +16,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-15,False,,,,,,,0,,,,idle
 15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-16,False,,,,,,,0,,,,idle
 16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-13,False,,,,,,,0,,,,idle
-17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-20,False,,,,,,,0,SMCI,S359,,entered_no_exit
+17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-20,False,,100.0,60.42,60.42,60.42,60.42,29.0,SMCI,S359,take_profit (+58.3%),closed
 18,lab0018_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-20,False,,100.0,54.55,54.55,54.55,54.55,30.0,HOOD,S361,take_profit (+54.5%),closed
 19,lab0019_s362_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-14,False,,,,,,,0,,,,idle
 20,lab0020_s364_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-20,False,,,,,,,0,MARA,S364,,entered_no_exit
@@ -68,7 +68,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 66,lab0066_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-20,False,,,,,,,0,FSLY,S164,,entered_no_exit
 67,lab0067_s432_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-16,False,,,,,,,0,,,,idle
 68,lab0068_s430_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-17,False,,,,,,,0,,,,idle
-90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,1,1,2026-10-20,False,,100.0,56.0,56.0,56.0,56.0,28.0,"MARA,SMCI","S404,S406",take_profit (+54.0%),closed
+90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,2,0,2026-10-20,False,,100.0,56.77,56.77,57.53,56.0,70.0,"MARA,SMCI","S404,S406",take_profit (+54.0%); take_profit (+56.2%),closed
 91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,1,0,2026-10-20,False,,100.0,54.55,54.55,54.55,54.55,12.0,MARA,S406,take_profit (+54.5%),closed
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2001,promising_s170_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
