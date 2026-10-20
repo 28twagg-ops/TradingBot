@@ -10737,3 +10737,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-20 19:21:45,exits,bull,226.46,226.46,0,0,0,0,,both
 2026-10-20 19:26:46,exits,bull,226.46,226.46,0,0,0,0,,both
 2026-10-20 19:47:08,scan_evening,bull,226.45,124.58,70,0,0,3,ALLE|AMD|MMM,both
+2026-10-20 19:52:37,scan_evening,bull,226.48,192.55,70,0,2,1,AMD,both

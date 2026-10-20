@@ -1,0 +1,205 @@
+19:51:33  INFO      Mode: scan
+19:51:34  INFO        [positions] 3/3 (3 valid)
+19:51:35  INFO        SELL LIMIT ALLE  qty=0.216559534  limit=$156.63  id=6f80e277-0910-40cd-a3f9-3edf974da2a9
+19:52:05  INFO        SELL LIMIT filled ALLE (confirmed by position check)
+19:52:05  INFO        TX logged: SELL ALLE  P&L -0.05%
+19:52:06  INFO        SELL LIMIT MMM  qty=0.199146181  limit=$170.81  id=9d13b7cd-40c9-44ef-b8e0-91a99b3e0707
+19:52:36  INFO        SELL LIMIT filled MMM (confirmed by position check)
+19:52:36  INFO        TX logged: SELL MMM  P&L 0.14%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:51 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $226.43|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-10-20|
+|  Universe                                                          both|
+|  Mon~  Oct: RubberBand + GapDown (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $226.43|
+|  Cash                                                           $124.58|
+|  Reserve                                          $11.32  (always kept)|
+|  Stock~  $101.85 / $169.82  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $67.97  (new stock buys)|
+|  Trade size             $33.96  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ALLE     Pullback50      $33.94     $156.82  $156.74  -0.0%   $-0.02  |
+|  AMD      Pullback50      $33.90     $539.13  $538.23  -0.2%   $-0.06  |
+|  MMM      Pullback50      $34.01     $170.53  $170.76  +0.1%   $+0.05  |
+|                                                                        |
+|  Total invested                                                 $101.85|
+|  Total open P&L                                                  $-0.03|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (16.0m); positions refreshed live)|
+|  Cached signals                                                      70|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AMD  P&L -0.2%  $-0.06                                            HOLD|
+|  ALLE  P&L -0.0%  $-0.02                          EXIT: midline (-0.0%)|
+|  MMM  P&L +0.1%  $+0.05                           EXIT: midline (+0.1%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 2 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                          cached signals (signals fresh (16.0m))|
+|  Universe scanned in prep                                           903|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  70                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  MMM      Pullback50      eq     $170.74  61.8   3.29    50MA bounce (+|
+|  MMM      TrendResumpti~  eq     $170.74  61.8   3.29    HH/HL resumpti|
+|  MMM      VWAP_Reclaim    eq     $170.74  61.8   3.29    VWAP reclaim V|
+|  AMD      Pullback50      eq     $538.26  31.1   -1.71   50MA bounce (-|
+|  ALLE     Pullback50      eq     $156.75  56.4   -1.43   50MA bounce (+|
+|  ADBE     Pullback50      eq     $255.04  62.8   -1.07   50MA bounce (-|
+|  AWK      Pullback50      eq     $135.77  67.1   -1.86   50MA bounce (+|
+|  XYZ      Pullback50      eq     $78.38   66.2   -1.51   50MA bounce (-|
+|  TECH     Pullback50      eq     $72.61   56.4   -0.05   50MA bounce (+|
+|  DD       Pullback50      eq     $132.66  56.5   -2.06   50MA bounce (-|
+|  EW       Pullback50      eq     $88.08   55.7   -2.48   50MA bounce (-|
+|  FLEX     RSIRecovery     eq     $87.86   30.1   0.44    RSI 27.8→30.1 |
+|  FTNT     Pullback50      eq     $170.69  41.8   -1.61   50MA bounce (+|
+|  GL       Pullback50      eq     $169.53  62.5   -1.51   50MA bounce (-|
+|  HPQ      Pullback50      eq     $31.09   48.9   -2.57   50MA bounce (-|
+|  ITW      Pullback50      eq     $274.74  75.1   -1.35   50MA bounce (+|
+|  JCI      Pullback50      eq     $147.56  48.5   -1.45   50MA bounce (+|
+|  LH       Pullback50      eq     $321.43  65.7   -1.87   50MA bounce (+|
+|  LYV      Pullback50      eq     $174.08  60.0   -1.73   50MA bounce (-|
+|  MRVL     Pullback50      eq     $242.39  39.7   -0.78   50MA bounce (+|
+|  MSCI     TrendResumpti~  eq     $592.62  74.3   1.91    HH/HL resumpti|
+|  MSI      Pullback50      eq     $463.65  67.1   -2.53   50MA bounce (-|19:52:37  INFO        place_all_stops: checking 1 positions...
+19:52:37  INFO        STOP skipped AMD: fractional (0.0630 shares) — software exit will handle it
+19:52:37  INFO        place_eod_stops: updating 1 stops to current price...
+19:52:37  INFO        EOD stop skip AMD: 0.0630 shares (fractional) — ext_exits will cover
+19:52:37  INFO        Daily log -> logs/daily/2026-10-20.md
+19:52:37  INFO        Dashboard written → logs/dashboard.md
+
+|  NDAQ     Pullback50      eq     $94.87   60.9   -1.75   50MA bounce (+|
+|  NWS      Pullback50      eq     $33.31   71.4   -1.98   50MA bounce (+|
+|  NSC      Pullback50      eq     $326.36  76.4   -1.02   50MA bounce (-|
+|  OMC      Pullback50      eq     $80.64   80.3   -1.99   50MA bounce (-|
+|  PKG      Pullback50      eq     $239.98  70.0   -1.31   50MA bounce (+|
+|  PSA      Pullback50      eq     $301.90  74.0   -2.62   50MA bounce (+|
+|  DGX      Pullback50      eq     $236.19  54.8   -1.51   50MA bounce (-|
+|  ROK      Pullback50      eq     $428.13  44.5   -1.31   50MA bounce (-|
+|  QCOM     Pullback50      eq     $176.76  40.7   -1.97   50MA bounce (+|
+|  SPG      Pullback50      eq     $206.65  61.4   -1.75   50MA bounce (-|
+|  STLD     VWAP_Reclaim    eq     $243.36  74.7   1.12    VWAP reclaim V|
+|  TDY      VWAP_Reclaim    eq     $625.16  63.8   2.49    VWAP reclaim V|
+|  SWK      Pullback50      eq     $94.25   66.2   -1.85   50MA bounce (+|
+|  URI      Pullback50      eq     $1044.~  59.1   -1.00   50MA bounce (-|
+|  WTW      Pullback50      eq     $317.78  81.3   -2.41   50MA bounce (+|
+|  AIT      Pullback50      eq     $331.74  49.4   -1.91   50MA bounce (-|
+|  ALK      RSIRecovery     eq     $35.03   32.3   2.49    RSI 21.8→32.3 |
+|  ASH      Pullback50      eq     $71.59   69.3   -1.73   50MA bounce (+|
+|  CCK      Pullback50      eq     $113.51  79.9   1.19    50MA bounce (+|
+|  CCK      VWAP_Reclaim    eq     $113.51  79.9   1.19    VWAP reclaim V|
+|  CHE      Pullback50      eq     $513.92  58.3   -1.95   50MA bounce (-|
+|  CNO      Pullback50      eq     $54.73   64.4   -2.03   50MA bounce (+|
+|  CORT     Pullback50      eq     $116.70  52.2   -1.73   50MA bounce (+|
+|  CROX     Pullback50      eq     $121.23  56.7   -2.62   50MA bounce (+|
+|  EGP      Pullback50      eq     $201.23  56.9   -1.33   50MA bounce (+|
+|  EWBC     Pullback50      eq     $128.14  65.0   -2.14   50MA bounce (-|
+|  HOG      Pullback50      eq     $27.05   70.8   -2.06   50MA bounce (+|
+|  GNTX     RSIRecovery     eq     $21.21   41.3   0.85    RSI 29.4→41.3 |
+|  HOMB     Pullback50      eq     $29.29   67.8   -0.57   50MA bounce (-|
+|  HWC      Pullback50      eq     $74.42   63.4   -1.04   50MA bounce (-|
+|  HQY      Pullback50      eq     $95.70   73.3   -1.99   50MA bounce (-|
+|  HXL      Pullback50      eq     $91.73   77.8   -0.68   50MA bounce (+|
+|  KEX      Pullback50      eq     $136.76  65.4   -2.09   50MA bounce (-|
+|  KRC      Pullback50      eq     $34.85   61.0   -0.48   50MA bounce (-|
+|  LNTH     Pullback50      eq     $100.23  65.9   -0.22   50MA bounce (-|
+|  NTNX     Pullback50      eq     $68.11   41.8   -1.84   50MA bounce (-|
+|  ONB      Pullback50      eq     $25.34   60.8   -1.16   50MA bounce (-|
+|  PAG      Pullback50      eq     $212.28  64.6   -0.57   50MA bounce (+|
+|  PEGA     VWAP_Reclaim    eq     $35.84   62.2   2.36    VWAP reclaim V|
+|  PFGC     Pullback50      eq     $97.32   71.5   -1.81   50MA bounce (+|
+|  REXR     Pullback50      eq     $37.16   56.7   -1.84   50MA bounce (-|
+|  SEIC     Pullback50      eq     $107.03  68.4   -1.39   50MA bounce (+|
+|  SLAB     Pullback50      eq     $221.16  44.4   -1.56   50MA bounce (+|
+|  TOST     Pullback50      eq     $32.78   72.8   -1.71   50MA bounce (+|
+|  UBSI     Pullback50      eq     $47.09   59.3   -2.25   50MA bounce (-|
+|  TXNM     Pullback50      eq     $58.55   60.8   -1.70   50MA bounce (+|
+|  WHR      RSIRecovery     eq     $28.30   35.1   0.46    RSI 15.8→35.1 |
+|  WTS      Pullback50      eq     $358.55  55.5   -0.51   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   RubberBand + GapDown (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             70|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                2|
+|  Open pos                                                             1|
+|  Equity                                                         $226.48|
+|  Cash                                                           $192.55|
++========================================================================+
