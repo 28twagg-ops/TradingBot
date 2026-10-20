@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-10-20 14:45:41.307228+00:00,entry,66,lab0066_s164_w2_1005_1045_r1,S164,3983bc9333fe,FSLY,FSLY261023C00024000,1,0.37,0.35,35.0,,,,-0.01,,0.75,-0.75,0.17142857142857143,gap -2.7%,7ae3efe3-584b-4f2d-bd71-68e41753e3f1
