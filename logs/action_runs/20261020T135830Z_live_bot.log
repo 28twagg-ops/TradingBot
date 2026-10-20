@@ -1,0 +1,21 @@
+13:58:31  INFO      Mode: morning_scan
+13:58:31  INFO        [positions] 3/3 (3 valid)
+13:58:31  INFO        SELL LIMIT ALLE  qty=0.216783484  limit=$156.25  id=ef9b0b31-3f16-43f9-9aa8-3c863aa7358e
+13:59:01  INFO        SELL LIMIT filled ALLE (confirmed by position check)
+13:59:01  INFO        TX logged: SELL ALLE  P&L -0.06%
+13:59:01  INFO        SELL LIMIT MMM  qty=0.199910522  limit=$169.82  id=436796c4-67dc-44b5-8dd5-3c7035d30f39
+13:59:31  INFO        SELL LIMIT filled MMM (confirmed by position check)
+13:59:32  INFO        TX logged: SELL MMM  P&L 0.15%
+13:59:32  INFO        SELL LIMIT ADBE  qty=0.133164981  limit=$255.36  id=696f1cc5-46dc-4ae1-9f0d-5cec3c336441
+14:00:02  INFO        SELL LIMIT filled ADBE (confirmed by position check)
+14:00:02  INFO        TX logged: SELL ADBE  P&L 0.23%
+14:00:02  INFO        Universe cache hit: 903 tickers (tickers_2026-10-20.json)
+14:00:03  INFO        [universe] 40/903 (40 valid)
+14:00:04  INFO        [universe] 80/903 (80 valid)
+14:00:06  INFO        [universe] 120/903 (120 valid)
+14:00:07  INFO        [universe] 160/903 (160 valid)
+14:00:10  INFO        [universe] 200/903 (199 valid)
+14:00:15  INFO        [universe] 240/903 (238 valid)
+14:00:28  INFO        [universe] 280/903 (278 valid)
+14:00:38  INFO        [universe] 320/903 (318 valid)
+14:00:51  INFO        [universe] 360/903 (358 valid)

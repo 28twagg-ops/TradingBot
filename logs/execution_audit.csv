@@ -956,3 +956,6 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-10-20 13:48:52,2026-10-20,SELL,AES,Pullback50,14.96,14.96,14.9628,33.78,0.0187,0.0063,limit_fill_position_check_full,midline (+0.0%),bull
 2026-10-20 13:49:22,2026-10-20,SELL,AMCR,Pullback50,44.485,44.42,44.44,34.08,-0.1012,-0.0345,limit_fill_position_check_full,midline (+0.9%),bull
 2026-10-20 13:49:52,2026-10-20,SELL,ALL,Pullback50,253.1,252.92,252.99,34.64,-0.0435,-0.0151,limit_fill_position_check_full,midline (+2.8%),bull
+2026-10-20 13:59:01,2026-10-20,SELL,ALLE,Pullback50,156.56,156.25,156.376,33.9,-0.1175,-0.0398,limit_fill_position_check_full,midline (-0.1%),bull
+2026-10-20 13:59:32,2026-10-20,SELL,MMM,Pullback50,170.0,169.82,169.912,33.97,-0.0518,-0.0176,limit_fill_position_check_full,midline (+0.2%),bull
+2026-10-20 14:00:02,2026-10-20,SELL,ADBE,Pullback50,255.555,255.36,255.438,34.02,-0.0458,-0.0156,limit_fill_position_check_full,midline (+0.2%),bull
