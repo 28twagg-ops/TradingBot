@@ -10885,3 +10885,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-21 21:46:37,ext_exits,bull,225.36,191.44,0,0,0,1,GPK,both
 2026-10-21 21:51:53,ext_exits,bull,225.36,191.44,0,0,0,1,GPK,both
 2026-10-21 21:56:46,ext_exits,bull,225.36,191.44,0,0,0,1,GPK,both
+2026-10-21 22:02:01,ext_exits,bull,225.36,191.44,0,0,0,1,GPK,both
