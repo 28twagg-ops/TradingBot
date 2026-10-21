@@ -14296,3 +14296,75 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261021T193203Z
+
+- UTC timestamp: `20261021T193203Z`
+- GitHub run: [#13480](https://github.com/28twagg-ops/TradingBot/actions/runs/39662169105)
+- Run id: `39662169105`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261021T193203Z_live_bot.log`, `logs/action_runs/20261021T193203Z_live_options.log`, `logs/action_runs/20261021T193203Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1720 | 48.4 | -25.8 | +36.7 | $+18,579 |
+| TAINTED | 2017 | 32.1 | -40.7 | +10.4 | $-11,263 |
+| KEEP-only | 854 | 60.4 | +50.8 | +53.4 | $+12,710 |
+| KEEP-only recent | 661 | 58.9 | +52.9 | +58.7 | $+8,649 |
+
+- KEEP strategies (24): S163, S164, S166, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S397, S398, S403, S404, S406, S410, S411
+- KILL strategies (21): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-10-21T15:26:40.829946-04:00","date":"2026-10-21","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":3.3,"phases_s":{"reconcile":0.27,"cancel":0.13,"manage":2.17,"protective_stops":0.25},"signals":0,"placed":0,"equity":992333.33,"open_positions":5,"pending_orders":0,"open_lots":5,"submitted_today":11,"filled_today":19,"unattributed_contracts":0,"top_signals":[],"github_run":"13479","github_run_id":"39661440455","status":"ok","data_quality":{"clean":{"n":1720,"win":48.37,"med":-25.84,"avg":36.68,"pnl":18578.83},"tainted":{"n":2017,"win":32.13,"med":-40.74,"avg":10.4,"pnl":-11263.28},"keep_only":{"n":854,"win":60.42,"med":50.75,"avg":53.37,"pnl":12710.45},"keep_only_recent":{"n":661,"win":58.85,"med":52.94,"avg":58.65,"pnl":8649.0},"keep_strategies":["S163","S164","S166","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S397","S398","S403","S404","S406","S410","S411"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+19:32:04  INFO      Mode: evening_prep
+19:32:05  INFO        [prep_positions] 1/1 (1 valid)
+19:32:05  INFO        Universe cache hit: 903 tickers (tickers_2026-10-21.json)
+19:32:06  INFO        [prep_universe] 40/902 (40 valid)
+19:32:07  INFO        [prep_universe] 80/902 (80 valid)
+19:32:08  INFO        [prep_universe] 120/902 (120 valid)
+19:32:09  INFO        [prep_universe] 160/902 (160 valid)
+19:32:11  INFO        [prep_universe] 200/902 (199 valid)
+19:32:18  INFO        [prep_universe] 240/902 (238 valid)
+19:32:31  INFO        [prep_universe] 280/902 (278 valid)
+19:32:41  INFO        [prep_universe] 320/902 (318 valid)
+19:32:54  INFO        [prep_universe] 360/902 (358 valid)
+19:33:08  INFO        [prep_universe] 400/902 (398 valid)
+19:33:18  INFO        [prep_universe] 440/902 (438 valid)
+19:33:31  INFO        [prep_universe] 480/902 (477 valid)
+19:33:44  INFO        [prep_universe] 520/902 (517 valid)
+19:33:54  INFO        [prep_universe] 560/902 (557 valid)
+19:34:07  INFO        [prep_universe] 600/902 (597 valid)
+19:34:17  INFO        [prep_universe] 640/902 (637 valid)
+19:34:30  INFO        [prep_universe] 680/902 (677 valid)
+19:34:43  INFO        [prep_universe] 720/902 (717 valid)
+19:34:53  INFO        [prep_universe] 760/902 (757 valid)
+19:35:07  INFO        [prep_universe] 800/902 (797 valid)
+19:35:20  INFO        [prep_universe] 840/902 (837 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
