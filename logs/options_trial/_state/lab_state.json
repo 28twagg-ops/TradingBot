@@ -243,7 +243,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "76529ca2-0e1d-42a2-b33a-2ada4ebdb0d4",
+      "lot_id": "444b345c7d55",
+      "bucket_id": 90,
+      "strategy_id": "S406",
+      "occ_symbol": "VZ261023C00043500",
+      "qty": 1,
+      "reason": "stop_loss (-61.1%)",
+      "submitted": "2026-10-21T11:37:01"
+    }
+  ],
   "bucket_open_premium": {
     "b21": 41.0,
     "b52": 40.0,
