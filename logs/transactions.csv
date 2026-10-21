@@ -1332,3 +1332,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-10-21 18:02:11,2026-10-21,SELL,ADBE,Pullback50,255.08,33.7,-0.57,-0.19,0,stop_loss (-0.6%),bull,225.82
 2026-10-21 19:01:50,2026-10-21,SELL,XYZ,Pullback50,78.31,33.63,-0.76,-0.26,0,stop_loss (-0.8%),bull,225.54
 2026-10-21 19:47:08,2026-10-21,SELL,TECH,Pullback50,72.6,33.91,0.05,0.02,0,midline (+0.1%),bull,225.55
+2026-10-21 19:56:36,2026-10-21,SELL,UAL,MomReversal,101.61,33.64,-0.54,-0.18,0,stop_loss (-0.5%),bull,225.31
