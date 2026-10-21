@@ -2,8 +2,8 @@
   {
     "bucket_id": 0,
     "profile": "lab0000_s200_w2_1005_1045_r1",
-    "open_premium": 37.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 1,
@@ -380,8 +380,8 @@
   {
     "bucket_id": 63,
     "profile": "lab0063_s166_w2_1005_1045_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 51.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 64,
@@ -410,8 +410,8 @@
   {
     "bucket_id": 91,
     "profile": "s406_only",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 60.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 2000,
@@ -470,7 +470,7 @@
   {
     "bucket_id": 2009,
     "profile": "day_trader_analytics_s432",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 37.0,
+    "open_lots": 1
   }
 ]

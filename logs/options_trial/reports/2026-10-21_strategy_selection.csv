@@ -1,11 +1,11 @@
 strategy_id,strategy_name,dte_profile,recommendation,rationale,entries,exits,wins,losses,avg_return_pct,med_return_pct,p10_return_pct,p25_return_pct,p90_return_pct,realized_usd,active_days,days_since_first_entry,entries_last_5d,exits_last_5d,unique_symbols,top_symbol_share_pct
 S409,RubberBand_ATM,3d,watch,insufficient sample (<8 exits),2,2,2,0,81.94,81.94,79.72,80.56,84.17,118.0,1,27,0,0,1,100.0
 S396,GapDown_ITM2,3d,watch,building sample (8-19 exits),34,11,8,3,43.15,74.58,-52.63,0.85,95.83,302.0,7,76,0,0,2,72.7
-S166,GapDown strong call,3d ATM strong,watch,building sample (8-19 exits),57,14,10,4,53.62,66.34,-77.0,-24.22,153.15,421.0,7,92,0,0,8,35.7
+S166,GapDown strong call,3d ATM strong,watch,building sample (8-19 exits),58,14,10,4,53.62,66.34,-77.0,-24.22,153.15,421.0,7,92,1,0,8,35.7
 S410,RubberBand_OTM1,3d,watch,building sample (8-19 exits),33,11,7,4,26.18,65.28,-68.49,-58.43,101.49,192.0,7,76,0,0,4,72.7
 S163,A1 GapDown ATM call EOD,7d ATM,watch,fat left tail (p10 < -45%),136,34,18,16,15.37,54.84,-77.21,-61.42,88.54,295.0,13,92,0,1,12,38.2
 S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,watch,fat left tail (p10 < -45%),137,21,11,10,90.6,53.85,-71.88,-57.78,328.57,361.0,11,92,1,0,7,33.3
-S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),232,132,80,52,121.1,52.98,-58.54,-45.44,266.79,3405.0,32,82,4,3,29,11.4
+S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),233,132,80,52,121.1,52.98,-58.54,-45.44,266.79,3405.0,32,82,5,3,29,11.4
 S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),56,28,21,7,33.54,52.94,-67.86,23.36,75.95,519.0,13,82,0,0,5,28.6
 S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),171,49,31,18,32.21,51.39,-65.03,-52.38,117.06,1091.0,18,82,1,0,17,18.4
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),142,62,42,20,125.35,51.31,-59.86,-50.62,322.38,1459.0,17,82,0,0,15,21.0
@@ -14,7 +14,7 @@ S168,GapDown ATM 5-DTE — P2B arm,5d ATM,watch,fat left tail (p10 < -45%),119,2
 S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),197,87,48,39,16.96,45.07,-68.57,-49.58,107.11,1060.0,25,82,3,1,24,11.5
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),225,109,55,54,36.11,22.22,-71.43,-50.0,146.0,1086.0,25,86,0,0,19,27.5
 S365,RubberBand_14DTE,14d,watch,fat left tail (p10 < -45%),71,36,18,18,8.72,19.23,-64.03,-51.8,70.56,35.0,16,82,1,0,8,36.1
-S432,DayTrader_ORB_RS,3d,watch,insufficient sample (<8 exits),2,2,1,1,14.84,14.84,-29.29,-12.74,58.97,-18.0,2,5,1,1,2,50.0
+S432,DayTrader_ORB_RS,3d,watch,insufficient sample (<8 exits),3,2,1,1,14.84,14.84,-29.29,-12.74,58.97,-18.0,2,5,2,1,2,50.0
 S350,GapDown_0DTE,0d,watch,fat left tail (p10 < -45%),115,51,26,25,51.84,11.76,-66.67,-50.67,191.43,806.0,17,82,0,0,12,27.5
 S411,RubberBand_OTM2,3d,watch,fat left tail (p10 < -45%),161,58,30,28,-2.14,5.2,-56.96,-51.32,62.76,-82.0,21,79,1,1,17,15.5
 S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
