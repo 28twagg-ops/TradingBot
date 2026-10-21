@@ -1,3 +1,5 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-10-21 14:09:05.430589+00:00,entry,64,lab0064_s168_w2_1005_1045_r1,S168,d26359872e48,NFLX,NFLX261030C00070000,1,0.43,0.43,43.0,,,,-0.01,,0.5,-0.5,,,e075153a-6bf5-4323-b0c7-882789a2b42a
 2026-10-21 14:08:34.879726+00:00,entry,64,lab0064_s168_w2_1005_1045_r1,S168,7c5502dc58e9,NFLX,NFLX261030C00070000,1,0.44,0.44,44.0,,,,-0.01,,0.5,-0.5,,,8f4610b6-a69c-418f-a740-9063f350cdab
+2026-10-21 14:38:07.050163+00:00,exit,64,lab0064_s168_w2_1005_1045_r1,S168,d26359872e48,NFLX,NFLX261030C00070000,1,,0.21,43.0,-51.16,-22.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,d8f9fc23-8cca-4061-80a4-815e8bf0828d
+2026-10-21T14:41:40Z,reconcile,64,lab0064_s168_w2_1005_1045_r1,S168,7c5502dc58e9,NFLX,NFLX261030C00070000,0,,,44.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
