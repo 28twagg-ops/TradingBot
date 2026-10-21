@@ -62,7 +62,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 60,lab0060_s416_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-05,False,,,,,,,0,,,,idle
 61,lab0061_s167_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-05,False,,,,,,,0,,,,idle
 62,lab0062_s166_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,1,1,2026-10-21,False,,0.0,-50.0,-50.0,-50.0,-50.0,-14.0,"NFLX,T",S167,broker_fill_backfill,closed
-63,lab0063_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-21,False,,,,,,,0,NFLX,S166,,entered_no_exit
+63,lab0063_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-21,False,,0.0,-47.06,-47.06,-47.06,-47.06,-24.0,NFLX,S166,stop_loss (-51.0%),closed
 64,lab0064_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,1,0,2026-10-21,False,,0.0,-51.16,-51.16,-51.16,-51.16,-22.0,NFLX,S168,broker_fill_backfill,closed
 65,lab0065_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-21,False,,,,,,,0,NFLX,S163,,entered_no_exit
 66,lab0066_s432_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,1,2026-10-21,False,,,,,,,0,NFLX,S164,,entered_no_exit
