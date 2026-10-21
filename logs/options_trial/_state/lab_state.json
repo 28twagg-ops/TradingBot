@@ -42,46 +42,6 @@
       "entry_order_id": "9f982301-d67b-4855-9cff-5f90ca1fc277"
     },
     {
-      "lot_id": "0d031ca9dae7",
-      "bucket_id": 2009,
-      "profile_name": "day_trader_analytics_s432",
-      "strategy_id": "S432",
-      "occ_symbol": "AAPL261023C00350000",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 37.0,
-      "entry_price": 0.37,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-21T14:12:05.691533+00:00",
-      "entry_order_id": "b230e0dc-37f6-43cc-962f-43a073081097"
-    },
-    {
-      "lot_id": "f11a5bdf2c94",
-      "bucket_id": 2007,
-      "profile_name": "day_trader_analytics_s430",
-      "strategy_id": "S430",
-      "occ_symbol": "PLTR261023C00207500",
-      "underlying": "PLTR",
-      "qty": 1,
-      "entry_cost": 41.0,
-      "entry_price": 0.41,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-21T14:12:05.723935+00:00",
-      "entry_order_id": "d2e77ad5-9587-4754-bed0-e0293e424291"
-    },
-    {
       "lot_id": "1674eb7b8e59",
       "bucket_id": 63,
       "profile_name": "lab0063_s166_w2_1005_1045_r1",
@@ -283,33 +243,10 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "d60c1719-4df2-47af-ab37-bedee3f95488",
-      "lot_id": "f11a5bdf2c94",
-      "bucket_id": 2007,
-      "strategy_id": "S430",
-      "occ_symbol": "PLTR261023C00207500",
-      "qty": 1,
-      "reason": "take_profit (+73.2%)",
-      "submitted": "2026-10-21T11:01:45"
-    },
-    {
-      "order_id": "40a5365b-f711-4026-b3d6-f1444d2229a1",
-      "lot_id": "0d031ca9dae7",
-      "bucket_id": 2009,
-      "strategy_id": "S432",
-      "occ_symbol": "AAPL261023C00350000",
-      "qty": 1,
-      "reason": "take_profit (+118.9%)",
-      "submitted": "2026-10-21T11:01:47"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b21": 41.0,
     "b52": 40.0,
-    "b2009": 37.0,
-    "b2007": 41.0,
     "b63": 51.0,
     "b6": 8.0,
     "b15": 51.0,
@@ -759,7 +696,9 @@
     "bf34fe28-525f-444d-a887-99f4004c561b",
     "bdf1b380-f2c7-4c6f-a0b2-1707db8dbd19",
     "d8f9fc23-8cca-4061-80a4-815e8bf0828d",
-    "1c5b4019-9f5b-4210-bbf0-e54917a1be26"
+    "1c5b4019-9f5b-4210-bbf0-e54917a1be26",
+    "40a5365b-f711-4026-b3d6-f1444d2229a1",
+    "d60c1719-4df2-47af-ab37-bedee3f95488"
   ],
   "submitted_today": 11,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

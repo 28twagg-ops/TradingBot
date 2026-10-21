@@ -4,3 +4,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-10-20 14:07:37.797738+00:00,entry,2009,day_trader_analytics_s432,S432,63c854901fe7,UPST,UPST261023C00025500,1,0.11,0.1,10.0,,,,-0.01,,0.75,-0.6000000000000001,0.18181818181818174,ORB-drive +3.3% gap -0.1% VZ=-2.6 | RS +3.0%,285e4065-d107-484a-a5fc-f0014af4311c
 2026-10-20 15:00:21.965765+00:00,exit,2009,day_trader_analytics_s432,S432,63c854901fe7,UPST,UPST261023C00025500,1,,0.17,10.0,70.0,7.0,take_profit (+60.0%),,-0.01,0.5,-0.4,,,5446619c-9ae0-4ee1-83b4-bf372ff49e3f
 2026-10-21 14:09:31.988687+00:00,entry,2009,day_trader_analytics_s432,S432,0d031ca9dae7,AAPL,AAPL261023C00350000,1,0.37,0.37,37.0,,,,-0.01,,0.5,-0.4,,,b230e0dc-37f6-43cc-962f-43a073081097
+2026-10-21 15:01:47.509584+00:00,exit,2009,day_trader_analytics_s432,S432,0d031ca9dae7,AAPL,AAPL261023C00350000,1,,0.81,37.0,118.92,44.0,take_profit (+118.9%),,-0.01,0.5,-0.4,,,40a5365b-f711-4026-b3d6-f1444d2229a1
