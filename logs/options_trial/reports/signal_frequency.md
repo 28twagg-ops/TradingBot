@@ -1,6 +1,6 @@
 # Options signal frequency
 
-_Generated 2026-10-21T19:02:06.330944_
+_Generated 2026-10-21T19:07:03.069653_
 
 Headline counts are **unique (strategy, underlying, date)** from `ENTRY` lines in `logs/options_trial/runs/*.log`.
 Raw log-line counts (multi-bucket duplicates) are shown below for debug.
