@@ -122,26 +122,6 @@
       "entry_order_id": "bfced29f-3e73-4508-be3b-6fcffecf8875"
     },
     {
-      "lot_id": "67559f7fe634",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S404",
-      "occ_symbol": "NFLX261023C00068000",
-      "underlying": "NFLX",
-      "qty": 1,
-      "entry_cost": 47.0,
-      "entry_price": 0.47,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-21T14:12:05.700037+00:00",
-      "entry_order_id": "ce1c4993-ae29-408b-9a70-50434b4243d6"
-    },
-    {
       "lot_id": "c5a9b4a1be88",
       "bucket_id": 62,
       "profile_name": "lab0062_s167_w2_1005_1045_r1",
@@ -280,9 +260,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-21T14:13:35.026022+00:00",
       "entry_order_id": "6484cb18-82b8-4c98-a12f-42078648f9ff"
+    },
+    {
+      "lot_id": "d4c78eddfd1b",
+      "bucket_id": 6,
+      "profile_name": "lab0006_s210_w2_1005_1045_r1",
+      "strategy_id": "S210",
+      "occ_symbol": "MMM261023C00180000",
+      "underlying": "MMM",
+      "qty": 1,
+      "entry_cost": 8.0,
+      "entry_price": 0.08,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-21T14:18:02.996415+00:00",
+      "entry_order_id": "d3170bb8-c248-4ed2-9b15-eb49e81d417d"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "de601674-6dbd-4d82-8484-b4536d0ddb41",
+      "bucket_id": 15,
+      "strategy_id": "S356",
+      "occ_symbol": "NFLX261106C00070000",
+      "underlying": "NFLX",
+      "qty": 1,
+      "limit": 0.52,
+      "profile_name": "lab0015_s356_w2_1005_1045_r1",
+      "submitted": "2026-10-21",
+      "detail": "gap -6.6%",
+      "spread_frac": 0.07843137254901968,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    }
+  ],
   "pending_exits": [
     {
       "order_id": "b5cd5126-1d34-42b4-bb92-3d7c4305e36a",
@@ -302,18 +319,20 @@
     "b52": 40.0,
     "b2009": 37.0,
     "b53": 17.0,
-    "b90": 47.0,
     "b62": 28.000000000000004,
     "b64": 87.0,
     "b66": 27.0,
     "b2007": 41.0,
     "b91": 60.0,
-    "b63": 51.0
+    "b63": 51.0,
+    "b6": 8.0
   },
   "session_date": "2026-10-21",
   "entries_locked": [
     "63|S166|2026-10-21",
-    "91|S406|2026-10-21"
+    "91|S406|2026-10-21",
+    "15|S356|2026-10-21",
+    "6|S210|2026-10-21"
   ],
   "processed_orders": [
     "72801243-1415-4cd4-b07e-e640f600280a",
@@ -724,9 +743,11 @@
     "376a3f75-28c3-4a03-b091-e330097032a2",
     "d2e77ad5-9587-4754-bed0-e0293e424291",
     "516f79c9-0270-472f-bd03-265c9e8c2188",
-    "6484cb18-82b8-4c98-a12f-42078648f9ff"
+    "6484cb18-82b8-4c98-a12f-42078648f9ff",
+    "d3170bb8-c248-4ed2-9b15-eb49e81d417d",
+    "af480faa-8991-47de-9ad2-5764c2badbf4"
   ],
-  "submitted_today": 2,
+  "submitted_today": 4,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-21"
 }
