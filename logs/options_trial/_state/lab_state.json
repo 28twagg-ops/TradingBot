@@ -82,26 +82,6 @@
       "entry_order_id": "de601674-6dbd-4d82-8484-b4536d0ddb41"
     },
     {
-      "lot_id": "09263908bd34",
-      "bucket_id": 53,
-      "profile_name": "lab0053_s406_w2_1005_1045_r1",
-      "strategy_id": "S406",
-      "occ_symbol": "NFLX261023C00069000",
-      "underlying": "NFLX",
-      "qty": 1,
-      "entry_cost": 14.000000000000002,
-      "entry_price": 0.14,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-21T14:22:58.805608+00:00",
-      "entry_order_id": "2ab13702-9a70-4bf0-9534-8153c91b226a"
-    },
-    {
       "lot_id": "6b0ab08f8926",
       "bucket_id": 62,
       "profile_name": "lab0062_s167_w2_1005_1045_r1",
@@ -165,14 +145,14 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "f9b77eae-cf74-44dd-a9f6-52e4ed4bb0a6",
-      "lot_id": "09263908bd34",
-      "bucket_id": 53,
-      "strategy_id": "S406",
-      "occ_symbol": "NFLX261023C00069000",
+      "order_id": "7ea2336c-2ce0-4ff2-933b-e054a556e27b",
+      "lot_id": "771583c0a582",
+      "bucket_id": 21,
+      "strategy_id": "S365",
+      "occ_symbol": "MARA261106C00008000",
       "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-10-21T11:41:53"
+      "reason": "take_profit (+51.2%)",
+      "submitted": "2026-10-21T13:26:58"
     }
   ],
   "bucket_open_premium": {
@@ -180,7 +160,6 @@
     "b52": 40.0,
     "b6": 8.0,
     "b15": 51.0,
-    "b53": 14.000000000000002,
     "b62": 62.0,
     "b65": 50.0,
     "b66": 32.0
@@ -630,7 +609,8 @@
     "76529ca2-0e1d-42a2-b33a-2ada4ebdb0d4",
     "5e330bea-c82b-45e8-9969-6f860a292932",
     "e9f71d1f-b791-4b7c-bd1f-acfe4ec07998",
-    "62cac967-2e12-481c-851e-9f16e59ec4a8"
+    "62cac967-2e12-481c-851e-9f16e59ec4a8",
+    "f9b77eae-cf74-44dd-a9f6-52e4ed4bb0a6"
   ],
   "submitted_today": 11,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
