@@ -1,0 +1,252 @@
+19:46:38  INFO      Mode: scan
+19:46:38  INFO        SELL LIMIT TECH  qty=0.467010252  limit=$72.60  id=e7db798d-0b44-4ffd-9e06-34f4a6aed499
+19:47:08  INFO        SELL LIMIT filled TECH (confirmed by position check)
+19:47:08  INFO        TX logged: SELL TECH  P&L 0.05%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $225.55|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-10-21|
+|  Universe                                                          both|
+|  Mon~  Oct: RubberBand + GapDown (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $225.55|
+|  Cash                                                           $191.64|
+|  Reserve                                          $11.28  (always kept)|
+|  Stocks~  $33.91 / $169.16  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $135.26  (new stock buys)|
+|  Trade size             $33.83  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (1 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  TECH     Pullback50      $33.91     $72.57   $72.61   +0.1%   $+0.02  |
+|                                                                        |
+|  Total invested                                                  $33.91|
+|  Total open P&L                                                  $+0.02|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                     yes (fresh (5.5m))|
+|  Cached exits                                                         1|
+|  Cached signals                                                      49|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  TECH  P&L +0.1%  $+0.02                          EXIT: midline (+0.1%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 0|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           902|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  49                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  COF      Pullback50      eq     $206.81  70.5   0.60    50MA bounce (-|
+|  CSX      Pullback50      eq     $48.23   67.5   -0.88   50MA bounce (-|
+|  DHR      TrendResumpti~  eq     $231.40  70.7   1.42    HH/HL resumpti|
+|  DHR      VWAP_Reclaim    eq     $231.40  70.7   1.42    VWAP reclaim V|
+|  DD       Pullback50      eq     $134.06  61.0   -1.78   50MA bounce (+|
+|  EMR      TrendResumpti~  eq     $163.02  61.6   0.48    HH/HL resumpti|
+|  EW       Pullback50      eq     $88.06   59.8   -1.67   50MA bounce (-|
+|  ESS      Pullback50      eq     $274.56  58.7   -2.10   50MA bounce (-|
+|  IRM      Pullback50      eq     $115.26  58.6   -1.14   50MA bounce (-|
+|  ISRG     VWAP_Reclaim    eq     $431.13  68.1   2.66    VWAP reclaim V|
+|  J        Pullback50      eq     $142.22  56.3   -1.50   50MA bounce (-|
+|  KEYS     Pullback50      eq     $342.78  34.9   -1.72   50MA bounce (-|
+|  LH       Pullback50      eq     $323.11  72.8   -1.98   50MA bounce (+|
+|  MCO      Pullback50      eq     $478.72  68.7   0.97    50MA bounce (+|
+|  MSI      Pullback50      eq     $467.43  68.2   -2.00   50MA bounce (+|
+|  NVDA     Pullback50      eq     $221.19  39.5   -1.76   50MA bounce (-|
+|  OKE      Pullback50      eq     $93.32   68.4   -1.91   50MA bounce (+|
+|  DGX      Pullback50      eq     $239.01  61.9   -1.13   50MA bounce (+|
+|  UAL      MomReversal     eq     $101.34  33.6   2.56    -18.1% drop/60|
+|  UAL      RSIRecovery     eq     $101.34  33.6   2.56    RSI 27.4→33.6 |
+|  VRTX     Pullback50      eq     $526.44  59.7   -0.54   50MA bounce (+|
+|  WAB      Pullback50      eq     $288.49  51.0   3.52    50MA bounce (+|
+|  WAB      TrendResumpti~  eq     $288.49  51.0   3.52    HH/HL resumpti|
+|  WAB      VWAP_Reclaim    eq     $288.49  51.0   3.52    VWAP reclaim V|
+|  WMB      Pullback50      eq     $72.64   59.6   -1.07   50MA bounce (+|
+|  ZBH      Pullback50      eq     $94.89   71.3   -2.05   50MA bounce (-|19:47:08  INFO        BUY  UAL  $33.83  [MomReversal]  id=8e31f398-9de5-4316-8582-ce2b6d2c6760
+19:47:08  INFO        BUY  AAL  $33.83  [MomReversal]  id=17a3cf52-8c2c-4adc-8f14-2282947b41e4
+19:47:08  INFO        BUY  GPK  $33.83  [MomReversal]  id=8b7a488a-f513-4dcd-aa17-e60394f05358
+19:47:38  INFO        place_all_stops: checking 3 positions...
+19:47:38  INFO        STOP-MARKET placed AAL  qty=2 (pos=2.7503)  stop=$12.23  id=26cc9062-d57a-4a0d-8b61-f9f057e02978
+19:47:38  INFO        STOP-MARKET placed GPK  qty=4 (pos=4.0424)  stop=$8.32  id=7c77b407-d616-4bf5-a3c0-244604f074f3
+19:47:38  INFO        STOP skipped UAL: fractional (0.3310 shares) — software exit will handle it
+19:47:38  INFO        place_eod_stops: updating 3 stops to current price...
+19:47:38  INFO        EOD stop: cancelled old stop AAL
+19:47:38  WARNING     EOD stop failed AAL: {"available":"0.750305002","code":40310000,"existing_qty":"2.750305002","held_for_orders":"2","message":"insufficient qty available for order (requested: 2, available: 0.750305002)","symbol":"AAL"}
+19:47:38  INFO        EOD stop: cancelled old stop GPK
+19:47:38  WARNING     EOD stop failed GPK: {"available":"0.042438732","code":40310000,"existing_qty":"4.042438732","held_for_orders":"4","message":"insufficient qty available for order (requested: 4, available: 0.042438732)","symbol":"GPK"}
+19:47:38  INFO        EOD stop skip UAL: 0.3310 shares (fractional) — ext_exits will cover
+
+|  AAL      MomReversal     eq     $12.24   36.7   0.39    -20.3% drop/60|
+|  ASH      Pullback50      eq     $72.12   68.7   -1.74   50MA bounce (+|
+|  BRKR     Pullback50      eq     $59.25   43.0   0.34    50MA bounce (+|
+|  BRKR     RSIRecovery     eq     $59.25   43.0   0.34    RSI 26.3→43.0 |
+|  CACI     Pullback50      eq     $622.41  48.4   -1.46   50MA bounce (-|
+|  CLH      Pullback50      eq     $319.50  60.8   -1.46   50MA bounce (+|
+|  CORT     Pullback50      eq     $116.64  54.1   -1.74   50MA bounce (+|
+|  CR       Pullback50      eq     $204.39  46.2   -1.11   50MA bounce (-|
+|  ENTG     Pullback50      eq     $147.76  40.8   -1.81   50MA bounce (+|
+|  GPK      MomReversal     eq     $8.35    33.8   2.30    -28.4% drop/60|
+|  IDCC     Pullback50      eq     $334.07  45.4   -1.52   50MA bounce (-|
+|  KEX      Pullback50      eq     $137.11  61.2   -0.75   50MA bounce (-|
+|  LNTH     Pullback50      eq     $100.40  66.7   -0.11   50MA bounce (+|
+|  MEDP     VWAP_Reclaim    eq     $657.50  71.5   3.50    VWAP reclaim V|
+|  PEGA     VWAP_Reclaim    eq     $35.84   56.9   1.44    VWAP reclaim V|
+|  PNFP     Pullback50      eq     $97.91   60.3   0.49    50MA bounce (-|
+|  SLAB     Pullback50      eq     $221.48  33.8   -0.91   50MA bounce (+|
+|  TTEK     Pullback50      eq     $35.14   66.2   -2.04   50MA bounce (-|
+|  TXNM     Pullback50      eq     $58.56   51.6   -1.70   50MA bounce (+|
+|  WEX      Pullback50      eq     $187.84  83.7   -2.58   50MA bounce (+|
+|  WCC      Pullback50      eq     $349.85  39.0   -1.20   50MA bounce (-|
+|  WTS      Pullback50      eq     $361.75  53.0   -1.04   50MA bounce (+|
+|  ZION     Pullback50      eq     $65.62   67.6   -0.19   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] UAL  MomReversal                                   $33.83|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AAL  MomReversal                                   $33.83|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] GPK  MomReversal                                   $33.83|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] COF  Pullback50                                      cap 3|
+|    SKIP [eq] CSX  Pullback50                                      cap 3|
+|    SKIP [eq] DD  Pullback50                                       cap 3|
+|    SKIP [eq] EW  Pullback50                                       cap 3|
+|    SKIP [eq] ESS  Pullback50                                      cap 3|
+|    SKIP [eq] IRM  Pullback50                                      cap 3|
+|    SKIP [eq] J  Pullback50                                        cap 3|
+|    SKIP [eq] KEYS  Pullback50                                     cap 3|
+|    SKIP [eq] LH  Pullback50                                       cap 3|
+|    SKIP [eq] MCO  Pullback50                                      cap 3|
+|    SKIP [eq] MSI  Pullback50                                      cap 3|
+|    SKIP [eq] NVDA  Pullback50                                     cap 3|
+|    SKIP [eq] OKE  Pullback50                                      cap 3|
+|    SKIP [eq] DGX  Pullback50                                      cap 3|
+|    SKIP [eq] VRTX  Pullback50                                     cap 3|
+|    SKIP [eq] WAB  Pullback50                                      cap 3|
+|    SKIP [eq] WMB  Pullback50                                      cap 3|
+|    SKIP [eq] ZBH  Pullback50                                      cap 3|
+|    SKIP [eq] ASH  Pullback50                                      cap 3|
+|    SKIP [eq] BRKR  Pullback50                                     cap 3|
+|    SKIP [eq] CACI  Pullback50                                     cap 3|
+|    SKIP [eq] CLH  Pullback50                                      cap 3|
+|    SKIP [eq] CORT  Pullback50                                     cap 3|
+|    SKIP [eq] CR  Pullback50                                       cap 3|
+|    SKIP [eq] ENTG  Pullback50                                     cap 3|
+|    SKIP [eq] IDCC  Pullback50                                     cap 3|
+|    SKIP [eq] KEX  Pullback50                                      cap 3|
+|    SKIP [eq] LNTH  Pullback50                                     cap 3|
+|    SKIP [eq] PNFP  Pullback50                                     cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] TTEK  Pullback50                                     cap 3|
+|    SKIP [eq] TXNM  Pullback50                                     cap 3|
+|    SKIP [eq] WEX  Pullback50                                      cap 3|
+|    SKIP [eq] WCC  Pullback50                                      cap 3|
+|    SKIP [eq] WTS  Pullback50                                      cap 3|
+|    SKIP [eq] ZION  Pullback50                                     cap 3|
+|    SKIP [eq] UAL  RSIRecovery                                     cap 3|
+|    SKIP [eq] BRKR  RSIRecovery                                    cap 3|
+|    SKIP [eq] DHR  TrendResumption                                 cap 3|
+|    SKIP [eq] EMR  TrendResumption                                 cap 3|
+|    SKIP [eq] WAB  TrendResumption                                 cap 3|
+|    SKIP [eq] DHR  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] ISRG  VWAP_Reclaim                                   cap 3|
+|    SKIP [eq] WAB  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] MEDP  VWAP_Reclaim                                   cap 3|
+|    SKIP [eq] PEGA  VWAP_Reclaim                                   cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  UAL                                                  still unconfirmed|
+|  AAL                                                  still unconfirmed|
+|  GPK                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   RubberBand + GapDown (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             49|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             3|
+|  Equity                                                         $225.55|
+|  Cash                                                           $124.09|
++========================================================================+19:47:38  INFO        Daily log -> logs/daily/2026-10-21.md
+19:47:38  INFO        Dashboard written → logs/dashboard.md
+
