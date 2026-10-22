@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-10-22 14:37:43.200869+00:00,entry,55,lab0055_s411_w2_1005_1045_r1,S411,b2b14f18523d,TSLA,TSLA261026C00415000,1,0.69,0.68,68.0,,,,-0.01,,0.75,-0.75,0.0588235294117646,RB gap -3.2% reclaim,b922e330-7729-4eaf-850d-f441a4afc07a

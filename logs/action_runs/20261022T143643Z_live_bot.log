@@ -1,0 +1,59 @@
+14:36:44  INFO      Mode: exits
+14:36:44  INFO        place_all_stops: checking 3 positions...
+14:36:44  INFO        STOP skipped ABNB: fractional (0.1939 shares) — software exit will handle it
+14:36:44  INFO        STOP skipped ADBE: fractional (0.1301 shares) — software exit will handle it
+14:36:44  INFO        STOP already live GPK @ $8.32
+14:36:45  INFO        [positions] 3/3 (3 valid)
+14:36:45  INFO        SELL MARKET [urgent] ABNB closed
+14:36:47  INFO        TX logged: SELL ABNB  P&L -0.6%
+14:36:47  INFO        Daily log -> logs/daily/2026-10-22.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                             EXITS|
+|  Time                                                         14:36 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $226.27|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  ABNB  P&L -0.6%  $-0.20                        EXIT: stop_loss (-0.6%)|
+|  ADBE  P&L +0.4%  $+0.14                                           HOLD|
+|  GPK  P&L +3.2%  $+1.09                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  ABNB                                        -0.60%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
