@@ -303,6 +303,16 @@
       "qty": 1,
       "reason": "stop_loss (-47.4%)",
       "submitted": "2026-10-22T10:47:10"
+    },
+    {
+      "order_id": "2fc614b4-f9f8-4fbb-930e-65d57cfb59ae",
+      "lot_id": "6128befc184b",
+      "bucket_id": 15,
+      "strategy_id": "S356",
+      "occ_symbol": "NFLX261106C00070000",
+      "qty": 1,
+      "reason": "take_profit (+54.9%)",
+      "submitted": "2026-10-22T12:02:15"
     }
   ],
   "bucket_open_premium": {
