@@ -17,7 +17,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-10-21,False,,,,,,,0,,,,open
 16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,MARA,S357,,entered_no_exit
 17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-22,False,,0.0,-53.19,-53.19,-53.19,-53.19,-25.0,TSLA,S359,broker_fill_backfill,closed
-18,lab0018_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,COIN,S361,,entered_no_exit
+18,lab0018_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-22,False,,0.0,-50.0,-50.0,-50.0,-50.0,-19.0,COIN,S361,stop_loss (-50.0%),closed
 19,lab0019_s362_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-22,False,,0.0,-49.09,-49.09,-49.09,-49.09,-27.0,TSLA,S362,broker_fill_backfill,closed
 20,lab0020_s364_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,WFC,S364,,entered_no_exit
 21,lab0021_s365_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,WFC,S365,,entered_no_exit

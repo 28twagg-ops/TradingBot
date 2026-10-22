@@ -122,26 +122,6 @@
       "entry_order_id": "bc3c2cfa-28c7-4ede-8385-a7fe1251cf40"
     },
     {
-      "lot_id": "78806020f556",
-      "bucket_id": 18,
-      "profile_name": "lab0018_s361_w2_1005_1045_r1",
-      "strategy_id": "S361",
-      "occ_symbol": "COIN261023C00182500",
-      "underlying": "COIN",
-      "qty": 1,
-      "entry_cost": 38.0,
-      "entry_price": 0.38,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-22T14:11:37.262622+00:00",
-      "entry_order_id": "7b023866-fd0a-491e-9532-cb15edee42a9"
-    },
-    {
       "lot_id": "498f88fd2636",
       "bucket_id": 63,
       "profile_name": "lab0063_s168_w2_1005_1045_r1",
@@ -349,7 +329,6 @@
     "b64": 37.0,
     "b61": 20.0,
     "b6": 12.0,
-    "b18": 38.0,
     "b63": 59.0,
     "b91": 56.99999999999999,
     "b16": 52.0,
@@ -868,7 +847,8 @@
     "5d69ee09-dc63-45fc-82e3-eda25ab3d63e",
     "bbc75764-2746-46e1-827d-b73fdbb11173",
     "6b0d6f57-17cc-426b-bd94-15134dda400d",
-    "fa35c8d0-a5c3-43a5-95d3-b3a80c2b4476"
+    "fa35c8d0-a5c3-43a5-95d3-b3a80c2b4476",
+    "bb163b75-fabd-4667-9439-9dc8b4aa7fc1"
   ],
   "submitted_today": 28,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
