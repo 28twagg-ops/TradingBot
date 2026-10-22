@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-10-15 14:07:44.086523+00:00,entry,51,lab0051_s398_w2_1005_1045_r1,S398,39af197fce83,AMD,AMD261016C00582500,1,0.54,0.53,53.0,,,,-0.01,,0.75,-0.75,0.20000000000000007,gap -5.4%,5f2cd71e-90b9-4373-86db-00861f9b9419
 2026-10-19T13:01:45Z,reconcile,51,lab0051_s398_w2_1005_1045_r1,S398,39af197fce83,AMD,AMD261016C00582500,0,,,53.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
+2026-10-22 14:07:19.820296+00:00,entry,51,lab0051_s398_w2_1005_1045_r1,S398,2a0bc78fc138,AVGO,AVGO261026C00347500,1,0.51,0.5,50.0,,,,-0.01,,0.75,-0.75,0.1443298969072165,gap -3.3%,6abc25b0-509d-45f8-a669-72ccdf65f676
