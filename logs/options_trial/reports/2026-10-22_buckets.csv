@@ -20,7 +20,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 18,lab0018_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,COIN,S361,,entered_no_exit
 19,lab0019_s362_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,TSLA,S362,,entered_no_exit
 20,lab0020_s364_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-20,False,,,,,,,0,,,,idle
-21,lab0021_s365_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-20,False,,,,,,,0,,,,idle
+21,lab0021_s365_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,WFC,S365,,entered_no_exit
 22,lab0022_s368_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-02,False,,,,,,,0,,,,idle
 23,lab0023_s369_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-31,False,,,,,,,0,,,,idle
 24,lab0024_s370_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-11,False,,,,,,,0,,,,idle
@@ -50,7 +50,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 48,lab0048_s394_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 49,lab0049_s396_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,MARA,S396,,entered_no_exit
 50,lab0050_s397_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,TSLA,S397,,entered_no_exit
-51,lab0051_s398_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,AVGO,S398,,entered_no_exit
+51,lab0051_s398_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-22,False,,0.0,-58.0,-58.0,-58.0,-58.0,-29.0,AVGO,S398,stop_loss (-58.0%),closed
 52,lab0052_s404_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-10-22,False,,0.0,-52.05,-52.05,-50.0,-54.1,-53.0,"MARA,SMCI",S404,broker_fill_backfill; broker_fill_backfill,closed
 53,lab0053_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,TSLA,S406,,entered_no_exit
 54,lab0054_s409_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-14,False,,,,,,,0,,,,idle
@@ -64,7 +64,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 62,lab0062_s166_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-10-22,False,,100.0,51.61,51.61,51.61,51.61,32.0,"SMCI,T","S166,S167",take_profit (+51.6%),closed
 63,lab0063_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,NVDA,S168,,entered_no_exit
 64,lab0064_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,NVDA,S163,,entered_no_exit
-65,lab0065_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-10-22,False,,100.0,50.0,50.0,50.0,50.0,25.0,"NFLX,NVDA","S163,S164",take_profit (+50.0%),closed
+65,lab0065_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-10-22,False,,50.0,1.93,1.93,50.0,-46.15,19.0,"NFLX,NVDA","S163,S164",take_profit (+50.0%); broker_fill_backfill,closed
 66,lab0066_s432_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-10-21,False,,100.0,59.38,59.38,59.38,59.38,19.0,NFLX,S164,take_profit (+59.4%),closed
 67,lab0067_s430_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-16,False,,,,,,,0,,,,idle
 90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-10-22,False,,,,,,,0,NVDA,S404,,entered_no_exit
