@@ -12,3 +12,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-10-15 14:07:42.671896+00:00,entry,13,lab0013_s350_w2_1005_1045_r1,S350,efad7b84075a,AMD,AMD261016C00580000,1,0.65,0.64,64.0,,,,-0.01,,0.75,-0.75,0.07874015748031503,gap -5.4%,d658214d-c4a7-452d-91df-9d6aa5f9aaa5
 2026-10-19T13:01:45Z,reconcile,13,lab0013_s350_w2_1005_1045_r1,S350,efad7b84075a,AMD,AMD261016C00580000,0,,,64.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
 2026-10-22 14:07:15.323986+00:00,entry,13,lab0013_s350_w2_1005_1045_r1,S350,e9d9d4d8ada2,AMD,AMD261023C00560000,1,0.52,0.51,51.0,,,,-0.01,,0.75,-0.75,0.0990099009900991,gap -5.2%,43cfb146-6fb4-4766-862a-ebdac0de8399
+2026-10-22 14:22:35.736568+00:00,exit,13,lab0013_s350_w2_1005_1045_r1,S350,e9d9d4d8ada2,AMD,AMD261023C00560000,1,,0.26,51.0,-49.02,-25.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,37dd9c9a-750e-4217-b854-af16d786cef3
