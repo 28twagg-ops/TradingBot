@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-22
 
-_Generated 2026-10-22T12:56:45.861826_
+_Generated 2026-10-22T13:01:47.512671_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-10-22T12:56:45.861826_
 
 ## Attribution health
 
-- Total exits: **3757**
+- Total exits: **3758**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **11.2%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -27,7 +27,6 @@ _Generated 2026-10-22T12:56:45.861826_
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 35 | 54.3 | +53.23 | -76.82 | -60.95 | +88.16 | 93 | 2 | 2 | $+320.00 | 37.1% | fat left tail (p10 < -45%) |
 | S357 (GapDown_21DTE) | 21d | watch | 28 | 75.0 | +52.94 | -67.86 | +23.36 | +75.95 | 83 | 1 | 0 | $+519.00 | 28.6% | fat left tail (p10 < -45%) |
 | S406 (RubberBand_ITM3) | 3d | watch | 138 | 58.0 | +52.05 | -59.17 | -45.70 | +238.93 | 83 | 11 | 9 | $+3,291.00 | 10.9% | fat left tail (p10 < -45%) |
-| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 23 | 52.2 | +51.61 | -71.88 | -56.67 | +327.62 | 93 | 3 | 2 | $+379.00 | 30.4% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 79 | 60.8 | +50.88 | -64.99 | -50.00 | +173.39 | 83 | 1 | 1 | $+1,250.00 | 15.2% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 63 | 66.7 | +50.00 | -59.71 | -50.41 | +320.95 | 83 | 1 | 1 | $+1,432.00 | 20.6% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 51 | 60.8 | +47.95 | -64.91 | -53.17 | +116.39 | 83 | 2 | 2 | $+1,021.00 | 17.6% | fat left tail (p10 < -45%) |
@@ -39,6 +38,7 @@ _Generated 2026-10-22T12:56:45.861826_
 | S356 (GapDown_14DTE) | 14d | watch | 34 | 50.0 | +8.54 | -51.42 | -48.62 | +58.62 | 83 | 1 | 1 | $+135.00 | 38.2% | fat left tail (p10 < -45%) |
 | S350 (GapDown_0DTE) | 0d | watch | 52 | 50.0 | +5.88 | -66.28 | -50.34 | +188.54 | 83 | 1 | 1 | $+781.00 | 28.8% | fat left tail (p10 < -45%) |
 | S430 (DayTrader_ORB) | 3d | watch | 4 | 50.0 | +5.42 | -44.28 | -41.77 | +68.29 | 6 | 3 | 3 | $+14.00 | 50.0% | insufficient sample (<8 exits) |
+| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 24 | 50.0 | +3.30 | -71.88 | -56.12 | +327.14 | 93 | 3 | 3 | $+370.00 | 29.2% | fat left tail (p10 < -45%) |
 | S411 (RubberBand_OTM2) | 3d | watch | 60 | 50.0 | +1.35 | -56.80 | -51.46 | +62.05 | 80 | 3 | 3 | $-150.00 | 15.0% | fat left tail (p10 < -45%) |
 | S169 (BB Squeeze Breakout call 3 DTE) | 3d ATM BB squeeze | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S170 (Golden Pocket call 3 DTE) | 3d ATM golden pocket | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -146,12 +146,12 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 ### GapDown Strike comparison
 
-- Status: **OK** | Best median: **S167** (+51.61%) | Best p10: **S165** (-63.24%)
+- Status: **OK** | Best median: **S167** (+3.30%) | Best p10: **S165** (-63.24%)
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S165 | 3d ATM | 255 | -35.29 | -63.24 | -53.42 | 0 | 0 |
-| S167 | 3d 1-OTM | 23 | +51.61 | -71.88 | -56.67 | 3 | 2 |
+| S167 | 3d 1-OTM | 24 | +3.30 | -71.88 | -56.12 | 3 | 3 |
 
 ### New Pattern Strategies — GapDown signal independent
 
@@ -231,7 +231,7 @@ _Pipeline evaluation as of 2026-10-22. Auto-kill thresholds: median<-25% at n>=1
 | S164 | GapDown ATM 1-DTE — P2 | 38 | -47.11% | 45% | INSUFFICIENT | 93 |
 | S165 | GapDown long call 3 DT | 255 | -35.29% | 32% | INSUFFICIENT | 108 |
 | S166 | GapDown strong call | 15 | +66.00% | 67% | INSUFFICIENT | 93 |
-| S167 | GapDown long call 3 DT | 23 | +51.61% | 52% | INSUFFICIENT | 93 |
+| S167 | GapDown long call 3 DT | 24 | +3.30% | 50% | INSUFFICIENT | 93 |
 | S168 | GapDown ATM 5-DTE — P2 | 30 | +9.38% | 50% | INSUFFICIENT | 93 |
 | S169 | BB Squeeze Breakout ca | 0 | — | — | NEW | 0 |
 | S170 | Golden Pocket call 3 D | 0 | — | — | NEW | 0 |
