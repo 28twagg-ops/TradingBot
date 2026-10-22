@@ -51,7 +51,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 49,lab0049_s396_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,MARA,S396,,entered_no_exit
 50,lab0050_s397_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,TSLA,S397,,entered_no_exit
 51,lab0051_s404_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,1,1,2026-10-22,False,,0.0,-58.0,-58.0,-58.0,-58.0,-29.0,"AVGO,NVDA","S398,S404",stop_loss (-58.0%),closed
-52,lab0052_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-10-22,False,,0.0,-52.05,-52.05,-50.0,-54.1,-53.0,"MARA,SMCI",S404,broker_fill_backfill; broker_fill_backfill,closed
+52,lab0052_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,2,1,2026-10-22,False,,0.0,-52.05,-52.05,-50.0,-54.1,-53.0,"AMD,MARA,SMCI","S404,S406",broker_fill_backfill; broker_fill_backfill,closed
 53,lab0053_s409_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,TSLA,S406,,entered_no_exit
 54,lab0054_s410_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-14,False,,,,,,,0,,,,idle
 55,lab0055_s411_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,TSLA,S411,,entered_no_exit

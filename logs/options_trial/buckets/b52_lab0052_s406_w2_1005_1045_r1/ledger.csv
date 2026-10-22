@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-10-22 14:46:35.909875+00:00,entry,52,lab0052_s406_w2_1005_1045_r1,S406,330f66d3eeea,AMD,AMD261026C00582500,1,0.22,0.22,22.0,,,,-0.01,,0.75,-0.75,0.1904761904761905,RB gap -5.2% reclaim,5bb72f25-92da-45fa-9a71-8f2cfa5d6edd
