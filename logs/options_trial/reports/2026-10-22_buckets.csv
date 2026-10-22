@@ -14,7 +14,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 12,lab0012_s403_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-20,False,,,,,,,0,,,,idle
 13,lab0013_s350_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-22,False,,0.0,-49.02,-49.02,-49.02,-49.02,-25.0,AMD,S350,broker_fill_backfill,closed
 14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-22,False,,0.0,-53.49,-53.49,-53.49,-53.49,-23.0,SMCI,S352,broker_fill_backfill,closed
-15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-10-21,False,,,,,,,0,,,,open
+15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-10-21,False,,100.0,54.9,54.9,54.9,54.9,28.0,NFLX,S356,take_profit (+54.9%),closed
 16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-22,False,,,,,,,0,MARA,S357,,entered_no_exit
 17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-22,False,,0.0,-53.19,-53.19,-53.19,-53.19,-25.0,TSLA,S359,broker_fill_backfill,closed
 18,lab0018_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-22,False,,0.0,-50.0,-50.0,-50.0,-50.0,-19.0,COIN,S361,stop_loss (-50.0%),closed
@@ -67,7 +67,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 65,lab0065_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-10-22,False,,50.0,1.93,1.93,50.0,-46.15,19.0,"NFLX,NVDA","S163,S164",take_profit (+50.0%); broker_fill_backfill,closed
 66,lab0066_s432_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-10-21,False,,100.0,59.38,59.38,59.38,59.38,19.0,NFLX,S164,take_profit (+59.4%),closed
 67,lab0067_s430_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-16,False,,,,,,,0,,,,idle
-90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,1,1,2026-10-22,False,,0.0,-42.5,-42.5,-42.5,-42.5,-17.0,"NVDA,TSLA","S404,S406",broker_fill_backfill,closed
+90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,2,0,2026-10-22,False,,0.0,-42.27,-42.27,-42.03,-42.5,-46.0,"NVDA,TSLA","S404,S406",broker_fill_backfill; broker_fill_backfill,closed
 91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-10-22,False,,,,,,,0,AMD,S406,,entered_no_exit
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2001,promising_s170_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle

@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "6128befc184b",
-      "bucket_id": 15,
-      "profile_name": "lab0015_s356_w2_1005_1045_r1",
-      "strategy_id": "S356",
-      "occ_symbol": "NFLX261106C00070000",
-      "underlying": "NFLX",
-      "qty": 1,
-      "entry_cost": 51.0,
-      "entry_price": 0.51,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-21T14:21:45.019641+00:00",
-      "entry_order_id": "de601674-6dbd-4d82-8484-b4536d0ddb41"
-    },
-    {
       "lot_id": "aa35a7915873",
       "bucket_id": 49,
       "profile_name": "lab0049_s396_w2_1005_1045_r1",
@@ -260,26 +240,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-22T14:46:53.841397+00:00",
       "entry_order_id": "5bb72f25-92da-45fa-9a71-8f2cfa5d6edd"
-    },
-    {
-      "lot_id": "b999a10c34e8",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S406",
-      "occ_symbol": "TSLA261026C00410000",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 69.0,
-      "entry_price": 0.69,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-22T15:06:55.512661+00:00",
-      "entry_order_id": "2e2e18ac-8fcf-475e-8589-5b3f76052c36"
     }
   ],
   "pending_orders": [],
@@ -303,20 +263,9 @@
       "qty": 1,
       "reason": "stop_loss (-47.4%)",
       "submitted": "2026-10-22T10:47:10"
-    },
-    {
-      "order_id": "2fc614b4-f9f8-4fbb-930e-65d57cfb59ae",
-      "lot_id": "6128befc184b",
-      "bucket_id": 15,
-      "strategy_id": "S356",
-      "occ_symbol": "NFLX261106C00070000",
-      "qty": 1,
-      "reason": "take_profit (+54.9%)",
-      "submitted": "2026-10-22T12:02:15"
     }
   ],
   "bucket_open_premium": {
-    "b15": 51.0,
     "b49": 56.00000000000001,
     "b62": 51.0,
     "b64": 37.0,
@@ -328,8 +277,7 @@
     "b21": 45.0,
     "b20": 32.0,
     "b51": 54.0,
-    "b52": 22.0,
-    "b90": 69.0
+    "b52": 22.0
   },
   "session_date": "2026-10-22",
   "entries_locked": [
@@ -841,7 +789,9 @@
     "bbc75764-2746-46e1-827d-b73fdbb11173",
     "6b0d6f57-17cc-426b-bd94-15134dda400d",
     "fa35c8d0-a5c3-43a5-95d3-b3a80c2b4476",
-    "bb163b75-fabd-4667-9439-9dc8b4aa7fc1"
+    "bb163b75-fabd-4667-9439-9dc8b4aa7fc1",
+    "2fc614b4-f9f8-4fbb-930e-65d57cfb59ae",
+    "1e46f8c1-5389-44bd-9f06-0578739efd8e"
   ],
   "submitted_today": 28,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
