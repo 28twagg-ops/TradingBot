@@ -1,0 +1,57 @@
+13:56:49  INFO      Mode: morning_scan
+13:56:50  INFO      Morning scan already completed today (2026-10-22T13:48:00.354228Z) — exits-only pass
+13:56:50  INFO        place_all_stops: checking 3 positions...
+13:56:50  INFO        STOP skipped ABNB: fractional (0.1939 shares) — software exit will handle it
+13:56:50  INFO        STOP skipped ADBE: fractional (0.1301 shares) — software exit will handle it
+13:56:50  INFO        STOP already live GPK @ $8.32
+13:56:51  INFO        [positions] 3/3 (3 valid)
+13:56:51  INFO        Daily log -> logs/daily/2026-10-22.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $226.14|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  ABNB  P&L -0.0%  $-0.01                                           HOLD|
+|  ADBE  P&L +0.0%  $+0.00                                           HOLD|
+|  GPK  P&L +2.6%  $+0.89                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
