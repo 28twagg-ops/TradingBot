@@ -10951,3 +10951,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-22 16:31:38,exits,bull,228.75,157.29,0,0,0,2,ADBE|GPK,both
 2026-10-22 16:36:57,exits,bull,228.66,157.29,0,0,0,2,ADBE|GPK,both
 2026-10-22 16:41:39,exits,bull,228.72,157.29,0,0,0,2,ADBE|GPK,both
+2026-10-22 16:46:52,exits,bull,228.61,157.29,0,0,0,2,ADBE|GPK,both
