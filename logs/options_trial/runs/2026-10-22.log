@@ -44407,11 +44407,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-10-22.log
 elapsed=4.6s reconcile=0.45s cancel=0.19s manage=2.89s
 
-=== 15:49:22 ET — manage-only (past entry window) [elapsed=5.9s reconcile=0.64s cancel=0.4s manage=3.52s] ===
-=== options_morning_bot (PAPER) 2026-10-22T15:49:22.515382-04:00 ===
+=== 15:53:45 ET — manage-only (past entry window) [elapsed=4.8s reconcile=0.39s cancel=0.18s manage=3.06s] ===
+=== options_morning_bot (PAPER) 2026-10-22T15:53:45.121909-04:00 ===
 
 [Run context]
-Paper auth OK — equity $994176.12, account PA33P8KT02IL
+Paper auth OK — equity $994097.12, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:78:live_1to1+variations
 
 [Setup]
@@ -44420,8 +44420,8 @@ S406-only twin b91 s406_only — S406 | TP+50%/SL-40% | paper edge test
 Variation study: 76 lab/promising bucket(s) | cohort: 76 unique (S163, S164, S166, S167, S168, S169, S170, S171, S172, S175, S200, S201 … +64 more) | max 200 new entries/run
 Dropped (no new entries; ex-reflected P&L): S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S398, S399, S401, S405, S407, S408
 Shared-OCC entry block ON (one lab lot per contract)
-  EXIT skip UPST261023C00025000: open sell already pending
   EXIT skip AMD261026C00575000: open sell already pending
+  EXIT skip UPST261023C00025000: open sell already pending
 
 [Manage only]
 Past entry window; manage/exit only.
@@ -44430,15 +44430,15 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $994,176.12
+Account equity: $994,097.12
 Active buckets: 78 of 78 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+12,176.55 all-time  |  $-363.00 today
   Raw (incl dropped):     $+6,952.55 all-time  |  $-363.00 today
-  Open (not sold yet): $-114.00 unrealized (virtual lots)
+  Open (not sold yet): $-97.00 unrealized (virtual lots)
   Premium deployed:    $325.00 in open positions
-  Combined P&L:        $+12,062.55 (reflected realized + open virtual)
+  Combined P&L:        $+12,079.55 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     16201
@@ -44458,7 +44458,7 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b15 lab0015_s356_w2_1005_1045_r1  prem=$     0  real=$+39.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b16 lab0016_s357_w2_1005_1045_r1  prem=$    52  real=$-13.00  open=$-13.00  lots=1  [S357:MARAx1]
+  b16 lab0016_s357_w2_1005_1045_r1  prem=$    52  real=$-13.00  open=$-10.00  lots=1  [S357:MARAx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b17 lab0017_s359_w2_1005_1045_r1  prem=$     0  real=$ -6.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -44466,7 +44466,7 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b19 lab0019_s362_w2_1005_1045_r1  prem=$     0  real=$ -9.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b20 lab0020_s364_w2_1005_1045_r1  prem=$    32  real=$ -6.00  open=$ -2.00  lots=1  [S364:WFCx1]
+  b20 lab0020_s364_w2_1005_1045_r1  prem=$    32  real=$ -6.00  open=$ +0.00  lots=1  [S364:WFCx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b21 lab0021_s365_w2_1005_1045_r1  prem=$    45  real=$+49.00  open=$ -8.00  lots=1  [S365:WFCx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -44474,15 +44474,15 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b50 lab0050_s397_w2_1005_1045_r1  prem=$     0  real=$-74.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b51 lab0051_s404_w2_1005_1045_r1  prem=$    54  real=$ +0.00  open=$-23.00  lots=1  [S404:NVDAx1]
+  b51 lab0051_s404_w2_1005_1045_r1  prem=$    54  real=$ +0.00  open=$-19.00  lots=1  [S404:NVDAx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b52 lab0052_s406_w2_1005_1045_r1  prem=$    22  real=$ +0.00  open=$ -8.00  lots=1  [S406:AMDx1]
+  b52 lab0052_s406_w2_1005_1045_r1  prem=$    22  real=$ +0.00  open=$ -7.00  lots=1  [S406:AMDx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b55 lab0055_s411_w2_1005_1045_r1  prem=$     0  real=$-34.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b61 lab0061_s167_w2_1005_1045_r1  prem=$     0  real=$ -9.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b62 lab0062_s166_w2_1005_1045_r1  prem=$    51  real=$ +0.00  open=$-16.00  lots=1  [S166:SMCIx1]
+  b62 lab0062_s166_w2_1005_1045_r1  prem=$    51  real=$ +0.00  open=$-12.00  lots=1  [S166:SMCIx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b63 lab0063_s168_w2_1005_1045_r1  prem=$     0  real=$-30.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -44492,13 +44492,13 @@ Open virtual lots (by bucket)
   (53 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  AMD261026C00575000  qty=1  cost=$57.00  return=-61.4%  open P&L=$-35.00
-  AMD261026C00582500  qty=1  cost=$22.00  return=-36.4%  open P&L=$-8.00
-  MARA261113C00008000  qty=1  cost=$52.00  return=-25.0%  open P&L=$-13.00
-  NVDA261026C00222500  qty=1  cost=$54.00  return=-42.6%  open P&L=$-23.00
-  SMCI261030C00037500  qty=1  cost=$51.00  return=-31.4%  open P&L=$-16.00
+  AMD261026C00575000  qty=1  cost=$57.00  return=-56.1%  open P&L=$-32.00
+  AMD261026C00582500  qty=1  cost=$22.00  return=-31.8%  open P&L=$-7.00
+  MARA261113C00008000  qty=1  cost=$52.00  return=-19.2%  open P&L=$-10.00
+  NVDA261026C00222500  qty=1  cost=$54.00  return=-35.2%  open P&L=$-19.00
+  SMCI261030C00037500  qty=1  cost=$51.00  return=-23.5%  open P&L=$-12.00
   UPST261023C00025000  qty=1  cost=$12.00  return=-75.0%  open P&L=$-9.00
-  WFC261030C00086000  qty=1  cost=$32.00  return=-6.2%  open P&L=$-2.00
+  WFC261030C00086000  qty=1  cost=$32.00  return=+0.0%  open P&L=$+0.00
   WFC261106C00087000  qty=1  cost=$45.00  return=-17.8%  open P&L=$-8.00
 
 Per-bucket exit stats (all time)
@@ -44926,7 +44926,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $994,176.12                                              |
+|Equity       : $994,097.12                                              |
 |Open Risk    : 8 lots (8 broker pos)                                    |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -44975,15 +44975,15 @@ Per-bucket exit stats (all time)
 +========================================================================+
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
-|  AMD261026C00575000            1    -61.4%   $    -35.00               |
-|  NVDA261026C00222500           1    -42.6%   $    -23.00               |
-|  SMCI261030C00037500           1    -31.4%   $    -16.00               |
-|  MARA261113C00008000           1    -25.0%   $    -13.00               |
+|  AMD261026C00575000            1    -56.1%   $    -32.00               |
+|  NVDA261026C00222500           1    -35.2%   $    -19.00               |
+|  SMCI261030C00037500           1    -23.5%   $    -12.00               |
+|  MARA261113C00008000           1    -19.2%   $    -10.00               |
 |  UPST261023C00025000           1    -75.0%   $     -9.00               |
-|  AMD261026C00582500            1    -36.4%   $     -8.00               |
 |  WFC261106C00087000            1    -17.8%   $     -8.00               |
-|  WFC261030C00086000            1     -6.2%   $     -2.00               |
+|  AMD261026C00582500            1    -31.8%   $     -7.00               |
+|  WFC261030C00086000            1     +0.0%   $     +0.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-10-22.log
-elapsed=5.9s reconcile=0.64s cancel=0.4s manage=3.52s
+elapsed=4.8s reconcile=0.39s cancel=0.18s manage=3.06s
 
