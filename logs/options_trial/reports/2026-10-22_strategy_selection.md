@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-22
 
-_Generated 2026-10-22T10:07:28.132386_
+_Generated 2026-10-22T10:12:36.776029_
 
 ## Summary
 
@@ -36,7 +36,7 @@ _Generated 2026-10-22T10:07:28.132386_
 | S404 (GapDown_OTM2) | 3d | watch | 90 | 53.3 | +35.09 | -67.15 | -49.79 | +106.70 | 83 | 6 | 4 | $+993.00 | 11.1% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 109 | 50.5 | +22.22 | -71.43 | -50.00 | +146.00 | 87 | 0 | 0 | $+1,086.00 | 27.5% | fat left tail (p10 < -45%) |
 | S350 (GapDown_0DTE) | 0d | watch | 51 | 51.0 | +11.76 | -66.67 | -50.67 | +191.43 | 83 | 1 | 0 | $+806.00 | 27.5% | fat left tail (p10 < -45%) |
-| S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 30 | 50.0 | +9.38 | -74.52 | -54.82 | +242.76 | 93 | 3 | 2 | $+375.00 | 46.7% | fat left tail (p10 < -45%) |
+| S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | watch | 30 | 50.0 | +9.38 | -74.52 | -54.82 | +242.76 | 93 | 4 | 2 | $+375.00 | 46.7% | fat left tail (p10 < -45%) |
 | S430 (DayTrader_ORB) | 3d | watch | 4 | 50.0 | +5.42 | -44.28 | -41.77 | +68.29 | 6 | 3 | 3 | $+14.00 | 50.0% | insufficient sample (<8 exits) |
 | S411 (RubberBand_OTM2) | 3d | watch | 58 | 51.7 | +5.20 | -56.96 | -51.32 | +62.76 | 80 | 2 | 1 | $-82.00 | 15.5% | fat left tail (p10 < -45%) |
 | S169 (BB Squeeze Breakout call 3 DTE) | 3d ATM BB squeeze | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -100,8 +100,8 @@ _Generated 2026-10-22T10:07:28.132386_
 | S401 (Any_Gap_Down_Small) | 3d | drop | 135 | 49.6 | +0.00 | -84.10 | -51.33 | +230.91 | 83 | 0 | 0 | $+928.00 | 23.7% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 69 | 49.3 | -2.94 | -85.29 | -58.33 | +84.56 | 83 | 1 | 1 | $+35.00 | 37.7% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 68 | 44.1 | -3.57 | -58.23 | -50.00 | +125.40 | 83 | 0 | 0 | $+184.00 | 17.6% | non-positive median return |
-| S361 (RubberBand_2DTE) | 2d | drop | 66 | 48.5 | -5.46 | -66.67 | -53.47 | +272.22 | 83 | 1 | 1 | $+147.00 | 19.7% | non-positive median return |
-| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 108 | 48.1 | -6.25 | -69.78 | -51.32 | +84.25 | 87 | 3 | 4 | $+74.00 | 15.7% | non-positive median return |
+| S361 (RubberBand_2DTE) | 2d | drop | 66 | 48.5 | -5.46 | -66.67 | -53.47 | +272.22 | 83 | 2 | 1 | $+147.00 | 19.7% | non-positive median return |
+| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 108 | 48.1 | -6.25 | -69.78 | -51.32 | +84.25 | 87 | 4 | 4 | $+74.00 | 15.7% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 67 | 43.3 | -6.25 | -81.48 | -59.63 | +573.13 | 80 | 0 | 0 | $+1,137.00 | 17.9% | manually paused — excluded from new entries & reflected P&L |
 | S398 (GapDown_ATM) | 3d | drop | 64 | 48.4 | -14.93 | -68.26 | -55.56 | +170.23 | 83 | 1 | 0 | $+794.00 | 25.0% | non-positive median return |
 | S356 (GapDown_14DTE) | 14d | drop | 33 | 48.5 | -18.92 | -51.50 | -48.89 | +58.62 | 83 | 1 | 0 | $+107.00 | 39.4% | non-positive median return |
@@ -142,7 +142,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | S163 | 7d ATM | 35 | +53.23 | -76.82 | -60.95 | 2 | 2 |
 | S164 | 1d ATM | 37 | -48.08 | -88.89 | -53.85 | 4 | 2 |
 | S165 | 3d ATM | 255 | -35.29 | -63.24 | -53.42 | 0 | 0 |
-| S168 | 5d ATM | 30 | +9.38 | -74.52 | -54.82 | 3 | 2 |
+| S168 | 5d ATM | 30 | +9.38 | -74.52 | -54.82 | 4 | 2 |
 
 ### GapDown Strike comparison
 
@@ -196,7 +196,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S210 | 3d ATM MA cross 8/21 | 108 | -6.25 | -69.78 | -51.32 | 3 | 4 |
+| S210 | 3d ATM MA cross 8/21 | 108 | -6.25 | -69.78 | -51.32 | 4 | 4 |
 | S211 | 3d ATM MA cross 21/50 | 56 | -43.65 | -86.66 | -54.73 | 0 | 0 |
 | S212 | 3d ATM MA bounce 50 | 83 | -68.09 | -98.15 | -81.35 | 0 | 0 |
 | S213 | 3d ATM MA bounce 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |

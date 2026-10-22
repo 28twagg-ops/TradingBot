@@ -1,0 +1,2 @@
+ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
+2026-10-22 14:07:50.823446+00:00,entry,63,lab0063_s168_w2_1005_1045_r1,S168,498f88fd2636,NVDA,NVDA261028C00227500,1,0.59,0.59,59.0,,,,-0.01,,0.75,-0.75,0.05128205128205133,gap -2.2%,4be9c7a0-84bb-46d9-98f5-b1385fec8e22
