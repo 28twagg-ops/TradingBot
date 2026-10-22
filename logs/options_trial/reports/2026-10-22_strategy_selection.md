@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-22
 
-_Generated 2026-10-22T14:02:16.413442_
+_Generated 2026-10-22T14:06:49.015231_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-10-22T14:02:16.413442_
 
 ## Attribution health
 
-- Total exits: **3758**
+- Total exits: **3759**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **11.2%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -21,9 +21,9 @@ _Generated 2026-10-22T14:02:16.413442_
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | S409 (RubberBand_ATM) | 3d | watch | 2 | 100.0 | +81.94 | +79.72 | +80.56 | +84.17 | 28 | 0 | 0 | $+118.00 | 100.0% | insufficient sample (<8 exits) |
-| S396 (GapDown_ITM2) | 3d | watch | 11 | 72.7 | +74.58 | -52.63 | +0.85 | +95.83 | 77 | 1 | 0 | $+302.00 | 72.7% | building sample (8-19 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 15 | 66.7 | +66.00 | -73.26 | -48.53 | +150.58 | 93 | 2 | 1 | $+397.00 | 33.3% | building sample (8-19 exits) |
 | S410 (RubberBand_OTM1) | 3d | watch | 11 | 63.6 | +65.28 | -68.49 | -58.43 | +101.49 | 77 | 0 | 0 | $+192.00 | 72.7% | building sample (8-19 exits) |
+| S396 (GapDown_ITM2) | 3d | watch | 12 | 66.7 | +64.88 | -52.44 | -50.17 | +95.55 | 77 | 1 | 1 | $+274.00 | 75.0% | building sample (8-19 exits) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 35 | 54.3 | +53.23 | -76.82 | -60.95 | +88.16 | 93 | 2 | 2 | $+320.00 | 37.1% | fat left tail (p10 < -45%) |
 | S357 (GapDown_21DTE) | 21d | watch | 28 | 75.0 | +52.94 | -67.86 | +23.36 | +75.95 | 83 | 1 | 0 | $+519.00 | 28.6% | fat left tail (p10 < -45%) |
 | S406 (RubberBand_ITM3) | 3d | watch | 138 | 58.0 | +52.05 | -59.17 | -45.70 | +238.93 | 83 | 11 | 9 | $+3,291.00 | 10.9% | fat left tail (p10 < -45%) |
@@ -308,7 +308,7 @@ _Pipeline evaluation as of 2026-10-22. Auto-kill thresholds: median<-25% at n>=1
 | S393 | VolClimax_21DTE | 0 | — | — | NEW | 0 |
 | S394 | VolClimax_30DTE | 0 | — | — | NEW | 0 |
 | S395 | GapDown_ITM3 | 1 | -68.75% | 0% | WATCH | 8 |
-| S396 | GapDown_ITM2 | 11 | +74.58% | 73% | WATCH | 77 |
+| S396 | GapDown_ITM2 | 12 | +64.88% | 67% | WATCH | 77 |
 | S397 | GapDown_ITM1 | 51 | +47.95% | 61% | INSUFFICIENT | 83 |
 | S398 | GapDown_ATM | 65 | -18.42% | 48% | INSUFFICIENT | 83 |
 | S399 | GapDown_OTM1 | 80 | -50.72% | 39% | INSUFFICIENT | 83 |
