@@ -10990,3 +10990,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-22 20:02:10,ext_exits,bull,229.27,125.89,0,0,0,3,ROIV|TECH|XYZ,both
 2026-10-22 20:06:44,ext_exits,bull,229.21,125.89,0,0,0,3,ROIV|TECH|XYZ,both
 2026-10-22 20:11:49,ext_exits,bull,228.82,125.89,0,0,0,3,ROIV|TECH|XYZ,both
+2026-10-22 20:16:50,ext_exits,bull,228.82,125.89,0,0,0,3,ROIV|TECH|XYZ,both
