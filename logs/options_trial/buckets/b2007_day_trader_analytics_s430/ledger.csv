@@ -7,3 +7,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-10-20 15:32:50.516848+00:00,exit,2007,day_trader_analytics_s430,S430,dbf608ab9df7,AVGO,AVGO261023C00360000,1,,0.31,52.0,-40.38,-21.0,stop_loss (-40.4%),,-0.01,0.5,-0.4,,,25776b65-a69b-42d2-9607-1ea3254449c0
 2026-10-21 14:06:03.008805+00:00,entry,2007,day_trader_analytics_s430,S430,f11a5bdf2c94,PLTR,PLTR261023C00207500,1,0.41,0.41,41.0,,,,-0.01,,0.5,-0.4,,,d2e77ad5-9587-4754-bed0-e0293e424291
 2026-10-21 15:01:45.826362+00:00,exit,2007,day_trader_analytics_s430,S430,f11a5bdf2c94,PLTR,PLTR261023C00207500,1,,0.72,41.0,75.61,31.0,take_profit (+73.2%),,-0.01,0.5,-0.4,,,d60c1719-4df2-47af-ab37-bedee3f95488
+2026-10-23 14:07:29.311760+00:00,entry,2007,day_trader_analytics_s430,S430,0f2a6ecdd004,AMD,AMD261026C00560000,1,0.57,0.56,56.0,,,,-0.01,,0.75,-0.6000000000000001,0.128440366972477,ORB-drive +1.2% gap +0.4% VZ=-2.9,39a7ba36-f236-4cb3-996d-928b572a2047

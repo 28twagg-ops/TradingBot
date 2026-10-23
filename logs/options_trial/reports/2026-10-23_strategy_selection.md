@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-23
 
-_Generated 2026-10-23T10:03:01.967466_
+_Generated 2026-10-23T10:07:42.655837_
 
 ## Summary
 
@@ -36,7 +36,7 @@ _Generated 2026-10-23T10:03:01.967466_
 | S432 (DayTrader_ORB_RS) | 3d | watch | 4 | 50.0 | +17.14 | -38.94 | -36.86 | +104.24 | 7 | 3 | 3 | $+21.00 | 25.0% | insufficient sample (<8 exits) |
 | S356 (GapDown_14DTE) | 14d | watch | 34 | 50.0 | +8.54 | -51.42 | -48.62 | +58.62 | 84 | 1 | 1 | $+135.00 | 38.2% | fat left tail (p10 < -45%) |
 | S350 (GapDown_0DTE) | 0d | watch | 52 | 50.0 | +5.88 | -66.28 | -50.34 | +188.54 | 84 | 1 | 1 | $+781.00 | 28.8% | fat left tail (p10 < -45%) |
-| S430 (DayTrader_ORB) | 3d | watch | 4 | 50.0 | +5.42 | -44.28 | -41.77 | +68.29 | 7 | 3 | 3 | $+14.00 | 50.0% | insufficient sample (<8 exits) |
+| S430 (DayTrader_ORB) | 3d | watch | 4 | 50.0 | +5.42 | -44.28 | -41.77 | +68.29 | 7 | 4 | 3 | $+14.00 | 50.0% | insufficient sample (<8 exits) |
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 24 | 50.0 | +3.30 | -71.88 | -56.12 | +327.14 | 94 | 3 | 3 | $+370.00 | 29.2% | fat left tail (p10 < -45%) |
 | S411 (RubberBand_OTM2) | 3d | watch | 60 | 50.0 | +1.35 | -56.80 | -51.46 | +62.05 | 81 | 3 | 3 | $-150.00 | 15.0% | fat left tail (p10 < -45%) |
 | S169 (BB Squeeze Breakout call 3 DTE) | 3d ATM BB squeeze | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -102,7 +102,7 @@ _Generated 2026-10-23T10:03:01.967466_
 | S364 (RubberBand_7DTE) | 7d | drop | 70 | 48.6 | -4.41 | -85.29 | -62.31 | +83.81 | 84 | 2 | 2 | $+14.00 | 37.1% | non-positive median return |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 109 | 47.7 | -6.25 | -71.05 | -51.61 | +83.79 | 88 | 4 | 5 | $+63.00 | 15.6% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 67 | 43.3 | -6.25 | -81.48 | -59.63 | +573.13 | 81 | 0 | 0 | $+1,137.00 | 17.9% | manually paused — excluded from new entries & reflected P&L |
-| S361 (RubberBand_2DTE) | 2d | drop | 67 | 47.8 | -6.67 | -66.67 | -53.42 | +270.00 | 84 | 2 | 2 | $+128.00 | 19.4% | non-positive median return |
+| S361 (RubberBand_2DTE) | 2d | drop | 67 | 47.8 | -6.67 | -66.67 | -53.42 | +270.00 | 84 | 3 | 2 | $+128.00 | 19.4% | non-positive median return |
 | S398 (GapDown_ATM) | 3d | drop | 65 | 47.7 | -18.42 | -68.25 | -55.56 | +168.45 | 84 | 1 | 1 | $+765.00 | 24.6% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 109 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
 | S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | drop | 31 | 48.4 | -31.25 | -74.47 | -54.80 | +242.11 | 94 | 4 | 3 | $+345.00 | 45.2% | non-positive median return |
@@ -110,7 +110,7 @@ _Generated 2026-10-23T10:03:01.967466_
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 255 | 32.2 | -35.29 | -63.24 | -53.42 | +93.89 | 109 | 0 | 0 | $-1,276.78 | 25.9% | non-positive median return |
 | S355 (GapDown_7DTE) | 7d | drop | 71 | 45.1 | -37.50 | -77.08 | -63.70 | +138.64 | 84 | 0 | 0 | $+367.00 | 38.0% | manually paused — excluded from new entries & reflected P&L |
 | S352 (GapDown_2DTE) | 2d | drop | 65 | 44.6 | -38.24 | -73.57 | -52.83 | +311.43 | 84 | 1 | 1 | $+219.00 | 16.9% | non-positive median return |
-| S359 (RubberBand_0DTE) | 0d | drop | 47 | 42.6 | -39.29 | -71.43 | -63.06 | +185.71 | 81 | 3 | 3 | $+43.00 | 21.3% | non-positive median return |
+| S359 (RubberBand_0DTE) | 0d | drop | 47 | 42.6 | -39.29 | -71.43 | -63.06 | +185.71 | 81 | 4 | 3 | $+43.00 | 21.3% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 56 | 33.9 | -42.86 | -83.93 | -65.20 | +103.47 | 84 | 0 | 0 | $-118.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 56 | 23.2 | -43.65 | -86.66 | -54.73 | +95.51 | 88 | 0 | 0 | $-401.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S353 (GapDown_3DTE) | 3d | drop | 45 | 42.2 | -46.15 | -82.61 | -69.70 | +264.21 | 84 | 0 | 0 | $+125.00 | 22.2% | non-positive median return |
