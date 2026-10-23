@@ -160,6 +160,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-23T14:17:31.302638+00:00",
       "entry_order_id": "1b1301d4-d1a2-40f9-8590-bae52e9ff259"
+    },
+    {
+      "lot_id": "01635ad9b372",
+      "bucket_id": 65,
+      "profile_name": "lab0065_s164_w2_1005_1045_r1",
+      "strategy_id": "S164",
+      "occ_symbol": "AXP261023C00320000",
+      "underlying": "AXP",
+      "qty": 1,
+      "entry_cost": 66.0,
+      "entry_price": 0.66,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-23T14:21:46.222465+00:00",
+      "entry_order_id": "b6b834fa-ab98-43c2-97d3-a759bd2738e4"
     }
   ],
   "pending_orders": [
@@ -180,22 +200,6 @@
       "stop_loss": -0.3
     },
     {
-      "order_id": "b6b834fa-ab98-43c2-97d3-a759bd2738e4",
-      "bucket_id": 65,
-      "strategy_id": "S164",
-      "occ_symbol": "AXP261023C00320000",
-      "underlying": "AXP",
-      "qty": 1,
-      "limit": 0.68,
-      "profile_name": "lab0065_s164_w2_1005_1045_r1",
-      "submitted": "2026-10-23",
-      "detail": "gap -3.1%",
-      "spread_frac": 0.13953488372093018,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
       "order_id": "448aa203-329c-4e54-b383-ed76783ad38b",
       "bucket_id": 19,
       "strategy_id": "S362",
@@ -212,23 +216,44 @@
       "stop_loss": -0.75
     },
     {
-      "order_id": "8d8ca5ad-c369-4671-a460-1683490dcea2",
-      "bucket_id": 13,
-      "strategy_id": "S350",
-      "occ_symbol": "AXP261023C00325000",
-      "underlying": "AXP",
+      "order_id": "630b081f-429e-450b-832e-472ccd1bdde9",
+      "bucket_id": 52,
+      "strategy_id": "S406",
+      "occ_symbol": "META261030C00730000",
+      "underlying": "META",
       "qty": 1,
-      "limit": 0.11,
-      "profile_name": "lab0013_s350_w2_1005_1045_r1",
+      "limit": 0.5,
+      "profile_name": "lab0052_s406_w2_1005_1045_r1",
       "submitted": "2026-10-23",
-      "detail": "gap -3.1%",
-      "spread_frac": 0.18181818181818174,
+      "detail": "RB gap -1.6% reclaim",
+      "spread_frac": 0.08163265306122457,
       "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
+      "take_profit": 0.75,
+      "stop_loss": -0.75
     }
   ],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "6e89b92c-1648-4db3-ba46-3b9427a65296",
+      "lot_id": "01635ad9b372",
+      "bucket_id": 65,
+      "strategy_id": "S164",
+      "occ_symbol": "AXP261023C00320000",
+      "qty": 1,
+      "reason": "stop_loss (-53.0%)",
+      "submitted": "2026-10-23T10:21:48"
+    },
+    {
+      "order_id": "a904831e-b64d-47bb-9025-96dfa5506f8a",
+      "lot_id": "10775ef17e9b",
+      "bucket_id": 18,
+      "strategy_id": "S361",
+      "occ_symbol": "META261026C00707500",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-10-23T10:21:49"
+    }
+  ],
   "bucket_open_premium": {
     "b62": 51.0,
     "b16": 52.0,
@@ -236,7 +261,8 @@
     "b18": 16.0,
     "b2007": 56.00000000000001,
     "b6": 41.0,
-    "b2009": 48.0
+    "b2009": 48.0,
+    "b65": 66.0
   },
   "session_date": "2026-10-23",
   "entries_locked": [
@@ -250,7 +276,8 @@
     "65|S164|2026-10-23",
     "19|S362|2026-10-23",
     "90|S406|2026-10-23",
-    "13|S350|2026-10-23"
+    "13|S350|2026-10-23",
+    "52|S406|2026-10-23"
   ],
   "processed_orders": [
     "dd6866ed-eb05-4a4e-8c20-8676c8a8254c",
@@ -654,9 +681,12 @@
     "c13cce41-f227-4937-b1f0-7b7266b0d884",
     "faba3694-78e0-437a-85a5-10b03f9a90ec",
     "1b1301d4-d1a2-40f9-8590-bae52e9ff259",
-    "a62efc7f-dea0-4df8-9447-82f9100f45f5"
+    "a62efc7f-dea0-4df8-9447-82f9100f45f5",
+    "8d8ca5ad-c369-4671-a460-1683490dcea2",
+    "b6b834fa-ab98-43c2-97d3-a759bd2738e4",
+    "aaf16a0f-80f4-4fa9-b44e-149d1478a276"
   ],
-  "submitted_today": 11,
+  "submitted_today": 12,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-23"
 }
