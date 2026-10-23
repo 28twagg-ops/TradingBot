@@ -11044,3 +11044,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-23 13:48:30,scan_morning,bull,227.96,125.43,20,0,2,3,ADI|BMY|FITB,both
 2026-10-23 13:52:43,scan_morning,bull,228.0,193.85,20,0,2,1,ADI,both
 2026-10-23 13:56:27,exits,bull,228.0,193.85,0,0,0,1,ADI,both
+2026-10-23 14:02:02,exits,bull,227.97,193.85,0,0,0,1,ADI,both
