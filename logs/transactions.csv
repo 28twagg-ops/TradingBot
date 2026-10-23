@@ -1344,3 +1344,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-10-23 13:52:12,2026-10-23,SELL,BMY,Pullback50,62.48,34.2,-0.03,-0.01,0,midline (-0.0%),bull,228.01
 2026-10-23 13:52:42,2026-10-23,SELL,FITB,Pullback50,52.88,34.22,-0.01,-0.0,0,midline (-0.0%),bull,228.0
 2026-10-23 14:16:48,2026-10-23,SELL,ADI,Pullback50,386.82,33.94,-0.8,-0.27,0,stop_loss (-0.8%),bull,227.77
+2026-10-23 19:51:36,2026-10-23,SELL,ALGM,MomReversal,31.41,2.54,-0.61,-0.02,0,stop_loss (-0.6%),bull,227.9
+2026-10-23 19:52:06,2026-10-23,SELL,WFRD,EarningsDrift,86.93,34.24,0.23,0.08,0,midline (+0.2%),bull,227.83

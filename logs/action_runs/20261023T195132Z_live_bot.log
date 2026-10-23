@@ -1,0 +1,161 @@
+19:51:33  INFO      Mode: scan
+19:51:34  INFO        [positions] 3/3 (3 valid)
+19:51:34  INFO        SELL MARKET [urgent] ALGM closed
+19:51:36  INFO        TX logged: SELL ALGM  P&L -0.61%
+19:51:36  INFO        SELL LIMIT WFRD  qty=0.393847856  limit=$86.77  id=b221e386-2533-4840-9e2a-d0a28785bd3b
+19:52:06  INFO        SELL LIMIT filled WFRD (confirmed by position check)
+19:52:06  INFO        TX logged: SELL WFRD  P&L 0.23%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:51 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $227.88|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-10-23|
+|  Universe                                                          both|
+|  Mon~  Oct: RubberBand + GapDown (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $227.88|
+|  Cash                                                           $156.76|
+|  Reserve                                          $11.39  (always kept)|
+|  Stocks~  $71.13 / $170.91  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $99.78  (new stock buys)|
+|  Trade size             $34.18  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ALGM     MomReversal     $2.54      $31.60   $31.41   -0.6%   $-0.02  |
+|  WDC      MomReversal     $34.35     $343.14  $345.01  +0.5%   $+0.19  |
+|  WFRD     EarningsDrift   $34.24     $86.73   $86.93   +0.2%   $+0.08  |
+|                                                                        |
+|  Total invested                                                  $71.13|
+|  Total open P&L                                                  $+0.25|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (16.0m); positions refreshed live)|
+|  Cached signals                                                      26|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  ALGM  P&L -0.6%  $-0.02                        EXIT: stop_loss (-0.6%)|
+|  WFRD  P&L +0.2%  $+0.08                          EXIT: midline (+0.2%)|
+|  WDC  P&L +0.5%  $+0.19                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 2 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                   1|
+|  ALGM                                        -0.61%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                          cached signals (signals fresh (16.0m))|
+|  Universe scanned in prep                                           903|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  26                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.97   71.4   -1.61   50MA bounce (+|
+|  TECH     Pullback50      eq     $72.61   52.0   -1.78   50MA bounce (+|
+|  DVN      TrendResumpti~  eq     $51.35   66.2   0.39    HH/HL resumpti|
+|  FITB     Pullback50      eq     $53.19   67.8   -1.48   50MA bounce (+|
+|  IEX      Pullback50      eq     $229.10  40.0   -1.70   50MA bounce (-|
+|  NDSN     Pullback50      eq     $319.12  31.8   -1.27   50MA bounce (-|
+|  QCOM     Pullback50      eq     $175.91  43.8   -1.97   50MA bounce (-|
+|  ROK      Pullback50      eq     $427.11  31.0   -0.78   50MA bounce (-|
+|  USB      Pullback50      eq     $59.72   62.9   -1.68   50MA bounce (-|
+|  WDC      MomReversal     eq     $341.73  25.1   0.51    -35.9% drop/60|
+|  ALGM     MomReversal     eq     $31.61   24.6   0.95    -23.8% drop/60|
+|  APPF     Pullback50      eq     $214.15  57.8   0.42    50MA bounce (+|
+|  AYI      Pullback50      eq     $318.11  67.0   -1.41   50MA bounce (+|
+|  BAH      VWAP_Reclaim    eq     $79.24   82.0   1.01    VWAP reclaim V|
+|  CFR      Pullback50      eq     $157.25  58.4   -2.46   50MA bounce (-|
+|  CORT     RubberBand      eq     $85.59   16.5   3.60    RSI           |
+|  HWC      Pullback50      eq     $73.53   51.7   -1.58   50MA bounce (-|
+|  ONB      Pullback50      eq     $25.32   55.4   -1.44   50MA bounce (-|
+|  PAG      Pullback50      eq     $212.40  67.2   -0.70   50MA bounce (+|
+|  REXR     VWAP_Reclaim    eq     $38.51   60.5   2.76    VWAP reclaim V|
+|  SLAB     Pullback50      eq     $221.18  28.5   -1.54   50MA bounce (+|
+|  SIRI     Pullback50      eq     $27.61   69.4   -1.54   50MA bounce (+|19:52:06  INFO        place_all_stops: checking 1 positions...
+19:52:06  INFO        STOP skipped WDC: fractional (0.0996 shares) — software exit will handle it
+19:52:06  INFO        place_eod_stops: updating 1 stops to current price...
+19:52:06  INFO        EOD stop skip WDC: 0.0996 shares (fractional) — ext_exits will cover
+19:52:06  INFO        Daily log -> logs/daily/2026-10-23.md
+19:52:06  INFO        Dashboard written → logs/dashboard.md
+
+|  UMBF     Pullback50      eq     $135.99  65.6   -1.67   50MA bounce (-|
+|  WFRD     EarningsDrift   eq     $86.26   56.3   0.61    post-earnings |
+|  WTS      Pullback50      eq     $359.27  46.0   -0.12   50MA bounce (-|
+|  ZION     Pullback50      eq     $66.39   68.1   -0.97   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   RubberBand + GapDown (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             26|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                2|
+|  Open pos                                                             1|
+|  Equity                                                         $227.83|
+|  Cash                                                           $193.54|
++========================================================================+
