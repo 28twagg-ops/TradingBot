@@ -122,26 +122,6 @@
       "entry_order_id": "faba3694-78e0-437a-85a5-10b03f9a90ec"
     },
     {
-      "lot_id": "f0f033db0ab8",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S406",
-      "occ_symbol": "META261026C00695000",
-      "underlying": "META",
-      "qty": 1,
-      "entry_cost": 26.0,
-      "entry_price": 0.26,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-23T14:17:31.302638+00:00",
-      "entry_order_id": "1b1301d4-d1a2-40f9-8590-bae52e9ff259"
-    },
-    {
       "lot_id": "5050bd05b55d",
       "bucket_id": 55,
       "profile_name": "lab0055_s411_w2_1005_1045_r1",
@@ -227,7 +207,7 @@
   "bucket_open_premium": {
     "b62": 51.0,
     "b16": 52.0,
-    "b90": 76.0,
+    "b90": 50.0,
     "b2007": 56.00000000000001,
     "b6": 41.0,
     "b2009": 48.0,
@@ -663,7 +643,8 @@
     "57a2632a-cabf-4b21-a444-36c81f6f00ce",
     "448aa203-329c-4e54-b383-ed76783ad38b",
     "630b081f-429e-450b-832e-472ccd1bdde9",
-    "a7dde07b-fd31-4136-9d69-e83e05445553"
+    "a7dde07b-fd31-4136-9d69-e83e05445553",
+    "4895bf8c-b200-474e-9036-d2cfed4d363d"
   ],
   "submitted_today": 13,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
