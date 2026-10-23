@@ -1339,3 +1339,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-10-22 19:52:38,2026-10-22,SELL,TECH,Pullback50,72.67,34.31,0.06,0.02,0,midline (+0.1%),bull,228.84
 2026-10-22 19:53:09,2026-10-22,SELL,XYZ,Pullback50,78.97,34.42,0.34,0.12,0,midline (+0.3%),bull,228.86
 2026-10-22 19:53:40,2026-10-22,SELL,ROIV,EarningsDrift,37.32,34.41,0.4,0.14,0,midline (+0.4%),bull,228.85
+2026-10-23 13:47:29,2026-10-23,SELL,ROIV,EarningsDrift,36.91,33.83,-1.1,-0.38,1,stop_loss (-1.1%),bull,228.06
+2026-10-23 13:47:59,2026-10-23,SELL,TECH,Pullback50,72.57,34.29,-0.09,-0.03,1,midline (-0.1%),bull,228.06
