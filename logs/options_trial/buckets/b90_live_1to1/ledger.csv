@@ -147,3 +147,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-10-23 14:12:34.317012+00:00,exit,90,live_1to1,S406,73ec0520d36e,META,META261026C00700000,1,,0.17,26.0,-34.62,-9.0,stop_loss (-42.3%),,-0.01,0.5,-0.4,,,93dc3bdb-a534-4024-a27f-fd1f90570755
 2026-10-23 14:17:21.512875+00:00,entry,90,live_1to1,S406,f0f033db0ab8,META,META261026C00695000,1,0.27,0.26,26.0,,,,-0.01,,0.5,-0.4,0.19607843137254907,RB gap -1.6% reclaim,1b1301d4-d1a2-40f9-8590-bae52e9ff259
 2026-10-23 15:29:47.860733+00:00,exit,90,live_1to1,S406,f0f033db0ab8,META,META261026C00695000,1,,0.16,26.0,-38.46,-10.0,broker_fill_backfill,,-0.01,0.5,-0.4,,,4895bf8c-b200-474e-9036-d2cfed4d363d
+2026-10-23 17:25:56.401206+00:00,exit,90,live_1to1,S404,7d84c0794c87,T,T261030C00021500,1,,0.3,50.0,-40.0,-20.0,broker_fill_backfill,,-0.01,0.5,-0.4,,,5a692add-3c78-4125-b09f-c19bbdf4f2c7
