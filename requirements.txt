@@ -3,3 +3,11 @@ pandas
 yfinance
 alpaca-py
 pyarrow
+pydantic>=2.0
+PyYAML>=6.0
+requests>=2.31
+pytest>=7.0
+# Myers extras (also in research/myers-stock-investor/requirements.txt):
+# streamlit>=1.28
+# plotly>=5.18
+# scipy>=1.11

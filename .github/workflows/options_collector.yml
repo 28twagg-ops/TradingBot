@@ -5,6 +5,9 @@
 # Internal loop in options_data_collector.py handles 1-min resolution within
 # each 5-min cron window (t+0, t+1, t+2, t+3, t+4 minutes).
 #
+# Canonical code: live-bots/shared/options_data_collector.py (+ data_quality_monitor.py)
+# Entry paths below remain scripts/* wrappers. Data commit paths unchanged: data/*.
+#
 # UTC cron notes (summer EDT = UTC-4):
 #   9:25 AM ET = 13:25 UTC   |   4:10 PM ET = 20:10 UTC
 #   Cron pattern "*/5 13-20 * * 1-5" fires every 5 min from 13:00–20:55 UTC.
