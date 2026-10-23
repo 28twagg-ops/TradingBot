@@ -11113,3 +11113,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-23 19:47:32,scan_evening,bull,227.8,125.29,26,0,0,3,ALGM|WDC|WFRD,both
 2026-10-23 19:52:06,scan_evening,bull,227.83,193.54,26,0,2,1,WDC,both
 2026-10-23 19:57:09,scan_evening,bull,227.76,125.2,26,0,0,2,WDC|WFRD,both
+2026-10-23 20:02:07,ext_exits,bull,227.4,193.21,0,0,0,1,WFRD,both
