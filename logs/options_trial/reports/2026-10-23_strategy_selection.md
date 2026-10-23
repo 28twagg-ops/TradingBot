@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-23
 
-_Generated 2026-10-23T12:17:04.488882_
+_Generated 2026-10-23T12:22:01.142927_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-10-23T12:17:04.488882_
 
 ## Attribution health
 
-- Total exits: **3775**
+- Total exits: **3776**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **11.2%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -35,7 +35,6 @@ _Generated 2026-10-23T12:17:04.488882_
 | S365 (RubberBand_14DTE) | 14d | watch | 38 | 50.0 | +19.23 | -64.77 | -52.19 | +69.26 | 84 | 2 | 2 | $+23.00 | 36.8% | fat left tail (p10 < -45%) |
 | S432 (DayTrader_ORB_RS) | 3d | watch | 4 | 50.0 | +17.14 | -38.94 | -36.86 | +104.24 | 7 | 4 | 3 | $+21.00 | 25.0% | insufficient sample (<8 exits) |
 | S356 (GapDown_14DTE) | 14d | watch | 34 | 50.0 | +8.54 | -51.42 | -48.62 | +58.62 | 84 | 1 | 1 | $+135.00 | 38.2% | fat left tail (p10 < -45%) |
-| S430 (DayTrader_ORB) | 3d | watch | 4 | 50.0 | +5.42 | -44.28 | -41.77 | +68.29 | 7 | 4 | 3 | $+14.00 | 50.0% | insufficient sample (<8 exits) |
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 24 | 50.0 | +3.30 | -71.88 | -56.12 | +327.14 | 94 | 3 | 3 | $+370.00 | 29.2% | fat left tail (p10 < -45%) |
 | S169 (BB Squeeze Breakout call 3 DTE) | 3d ATM BB squeeze | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S170 (Golden Pocket call 3 DTE) | 3d ATM golden pocket | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
@@ -90,6 +89,7 @@ _Generated 2026-10-23T12:17:04.488882_
 | S418 (BBSqueeze_OTM2) | 7d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S431 (DayTrader_RS) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
+| S430 (DayTrader_ORB) | 3d | watch | 5 | 40.0 | -39.29 | -43.72 | -40.38 | +65.85 | 7 | 4 | 4 | $-8.00 | 40.0% | insufficient sample (<8 exits) |
 | S367 (RubberBand_30DTE) | 30d | watch | 3 | 0.0 | -48.89 | -50.89 | -50.14 | -29.78 | 80 | 0 | 0 | $-77.00 | 66.7% | insufficient sample (<8 exits) |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 84 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
 | S358 (GapDown_30DTE) | 30d | watch | 5 | 40.0 | -50.00 | -51.39 | -51.39 | +54.28 | 80 | 0 | 0 | $-49.00 | 40.0% | insufficient sample (<8 exits) |
@@ -332,7 +332,7 @@ _Pipeline evaluation as of 2026-10-23. Auto-kill thresholds: median<-25% at n>=1
 | S417 | BBSqueeze_OTM1 | 0 | — | — | NEW | 0 |
 | S418 | BBSqueeze_OTM2 | 0 | — | — | NEW | 0 |
 | S419 | BBSqueeze_OTM3 | 0 | — | — | NEW | 0 |
-| S430 | DayTrader_ORB | 4 | +5.42% | 50% | WATCH | 7 |
+| S430 | DayTrader_ORB | 5 | -39.29% | 40% | WATCH | 7 |
 | S431 | DayTrader_RS | 0 | — | — | NEW | 0 |
 | S432 | DayTrader_ORB_RS | 4 | +17.14% | 50% | WATCH | 7 |
 
