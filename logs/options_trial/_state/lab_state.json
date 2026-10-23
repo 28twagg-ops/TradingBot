@@ -42,7 +42,27 @@
       "entry_order_id": "fb5c7a13-a70e-4728-9d5f-0788f897aee2"
     },
     {
-      "lot_id": "40af4256f042",
+      "lot_id": "7d84c0794c87",
+      "bucket_id": 90,
+      "profile_name": "live_1to1",
+      "strategy_id": "S404",
+      "occ_symbol": "T261030C00021500",
+      "underlying": "T",
+      "qty": 1,
+      "entry_cost": 50.0,
+      "entry_price": 0.5,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-23T13:52:47.816839+00:00",
+      "entry_order_id": "cbecbd8a-4772-4131-88b6-9893d807dc64"
+    },
+    {
+      "lot_id": "73ec0520d36e",
       "bucket_id": 90,
       "profile_name": "live_1to1",
       "strategy_id": "S406",
@@ -58,38 +78,41 @@
       "stop_loss": -0.4,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-10-23T13:49:19.472793+00:00",
+      "entry_date": "2026-10-23T13:52:47.820266+00:00",
       "entry_order_id": "3f7f0853-e94a-4b32-9ba9-d7a395563971"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "cbecbd8a-4772-4131-88b6-9893d807dc64",
-      "bucket_id": 90,
-      "strategy_id": "S404",
-      "occ_symbol": "T261030C00021500",
-      "underlying": "T",
+      "lot_id": "583aefa4ae56",
+      "bucket_id": 91,
+      "profile_name": "s406_only",
+      "strategy_id": "S406",
+      "occ_symbol": "META261026C00695000",
+      "underlying": "META",
       "qty": 1,
-      "limit": 0.5,
-      "profile_name": "live_1to1",
-      "submitted": "2026-10-23",
-      "detail": "gap -4.4%",
-      "spread_frac": 0.040000000000000036,
-      "buy_offset": -0.01,
+      "entry_cost": 35.0,
+      "entry_price": 0.35,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
       "take_profit": 0.5,
-      "stop_loss": -0.4
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-23T13:53:30.845146+00:00",
+      "entry_order_id": "d18a5012-4bb3-4295-babe-c29331607b89"
     }
   ],
+  "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {
     "b62": 51.0,
     "b16": 52.0,
-    "b90": 26.0
+    "b90": 76.0,
+    "b91": 35.0
   },
   "session_date": "2026-10-23",
   "entries_locked": [
-    "90|S406|2026-10-23",
-    "90|S404|2026-10-23"
+    "91|S406|2026-10-23"
   ],
   "processed_orders": [
     "72801243-1415-4cd4-b07e-e640f600280a",
@@ -579,13 +602,15 @@
     "16c2155f-62ac-4cc3-90a2-70bf37d6eb3d",
     "ccc9c196-4935-4cb4-9833-7c62e23cc50a",
     "9bdbb48b-6dba-4965-a299-187aa4e91122",
+    "5e2128a4-642c-482f-8988-323cff33d633",
+    "547c7f7e-eac0-4931-b4a5-848ced472d58",
     "b5989239-7f67-46c3-b25f-4c58012e3ac1",
     "d8104d37-fdd8-4bd4-9313-351d2159abd2",
+    "cbecbd8a-4772-4131-88b6-9893d807dc64",
     "3f7f0853-e94a-4b32-9ba9-d7a395563971",
-    "5e2128a4-642c-482f-8988-323cff33d633",
-    "547c7f7e-eac0-4931-b4a5-848ced472d58"
+    "d18a5012-4bb3-4295-babe-c29331607b89"
   ],
-  "submitted_today": 2,
+  "submitted_today": 1,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-23"
 }
