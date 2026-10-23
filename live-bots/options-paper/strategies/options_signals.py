@@ -8,13 +8,18 @@ research rankings (return % per trade).
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import date
+from datetime import date, datetime, time as dtime
+from zoneinfo import ZoneInfo
 
 import pandas as pd
 
 GAP_DOWN_THRESH = -0.02
 GAP_STRONG_THRESH = -0.03
 MOM_RB_GAP = -0.015
+_ET = ZoneInfo("America/New_York")
+# DayTrader needs a few minutes of developing session before treating the
+# incomplete daily bar as a usable morning observation (not a completed day).
+_DAY_TRADER_MIN_SESSION_MINUTES = 5
 
 
 @dataclass
@@ -1054,29 +1059,69 @@ def clear_spy_context() -> None:
     _SPY_CTX = None
 
 
-def _day_trader_bar_reject_reason(sub: pd.DataFrame, today: date) -> str | None:
-    """Return a human reason if DayTrader cannot use this series for `today`."""
+def _day_trader_now(now: datetime | None = None) -> datetime:
+    if now is None:
+        return datetime.now(_ET)
+    if now.tzinfo is None:
+        return now.replace(tzinfo=_ET)
+    return now.astimezone(_ET)
+
+
+def _day_trader_bar_reject_reason(
+    sub: pd.DataFrame, today: date, *, now: datetime | None = None
+) -> str | None:
+    """Return a human reason if DayTrader cannot use this series for `today`.
+
+    Rejects: missing/stale sessions, future-dated bars (leakage), and treating
+    an incomplete daily OHLC as a completed morning observation before the
+    session has developed for at least `_DAY_TRADER_MIN_SESSION_MINUTES`.
+    """
     if sub is None or getattr(sub, "empty", True):
         return "missing_bars"
     df = _prep_pattern_bars(sub)
     if df is None or df.empty:
         return "insufficient_history"
     try:
-        last_dt = df.index[-1].date()
+        last_ts = df.index[-1]
+        last_dt = last_ts.date() if hasattr(last_ts, "date") else pd.Timestamp(last_ts).date()
     except Exception:
         return "bad_index"
     if str(last_dt) != str(today):
         return f"stale_session last={last_dt} want={today}"
+    clock = _day_trader_now(now)
+    # Future leakage: bar timestamp after wall clock (bad clock / bad feed).
+    try:
+        bar_ts = pd.Timestamp(last_ts)
+        if bar_ts.tzinfo is None:
+            bar_ts = bar_ts.tz_localize(_ET)
+        else:
+            bar_ts = bar_ts.tz_convert(_ET)
+        if bar_ts.to_pydatetime() > clock + pd.Timedelta(minutes=2):
+            return f"future_bar bar={bar_ts.isoformat()} now={clock.isoformat()}"
+    except Exception:
+        pass
+    # Incomplete daily OHLC is usable mid-session only after open + grace.
+    # Before that, open≈close noise is not a completed morning observation.
+    if clock.date() == today:
+        open_et = datetime.combine(today, dtime(9, 30), tzinfo=_ET)
+        elapsed_min = (clock - open_et).total_seconds() / 60.0
+        if elapsed_min < _DAY_TRADER_MIN_SESSION_MINUTES:
+            return (
+                f"incomplete_morning_obs elapsed_min={elapsed_min:.1f} "
+                f"< {_DAY_TRADER_MIN_SESSION_MINUTES}"
+            )
     return None
 
 
-def _day_trader_bar(sub: pd.DataFrame, today: date):
+def _day_trader_bar(sub: pd.DataFrame, today: date, *, now: datetime | None = None):
     """Return (prepared_df, last_row) only when the last bar is today's session.
 
     Stale-bar fallback removed: yesterday→today signals are forbidden. Callers
     that need diagnostics can use `_day_trader_bar_reject_reason`.
+    Incomplete daily OHLC is not treated as a completed morning observation
+    until a short post-open grace window has elapsed.
     """
-    reason = _day_trader_bar_reject_reason(sub, today)
+    reason = _day_trader_bar_reject_reason(sub, today, now=now)
     if reason is not None:
         return None, None
     df = _pattern_today(sub, today)
@@ -1086,7 +1131,8 @@ def _day_trader_bar(sub: pd.DataFrame, today: date):
 
 
 def scan_orb_opening_drive(sub: pd.DataFrame, sym: str, today: date,
-                           min_price: float = 3.0) -> SignalHit | None:
+                           min_price: float = 3.0,
+                           *, now: datetime | None = None) -> SignalHit | None:
     """S430 DayTrader opening-drive proxy (not a classical ORB breakout).
 
     Uses the live session bar: gap floor, open→close drive ≥0.4%, high ≥
@@ -1094,7 +1140,7 @@ def scan_orb_opening_drive(sub: pd.DataFrame, sym: str, today: date,
     developing daily bar — not a true opening-range breakout. A real ORB
     arm must use a new strategy ID with separate history.
     """
-    df, last = _day_trader_bar(sub, today)
+    df, last = _day_trader_bar(sub, today, now=now)
     if df is None or last is None:
         return None
     cn = float(last["close"])
@@ -1118,13 +1164,14 @@ def scan_orb_opening_drive(sub: pd.DataFrame, sym: str, today: date,
 
 
 def scan_rs_vs_spy(sub: pd.DataFrame, sym: str, today: date,
-                   min_price: float = 3.0) -> SignalHit | None:
+                   min_price: float = 3.0,
+                   *, now: datetime | None = None) -> SignalHit | None:
     """S431 DayTrader relative strength vs SPY."""
     if _SPY_CTX is None:
         return None
     if sym.upper() in ("SPY", "QQQ", "IWM", "DIA"):
         return None
-    df, last = _day_trader_bar(sub, today)
+    df, last = _day_trader_bar(sub, today, now=now)
     if df is None or last is None:
         return None
     cn = float(last["close"])
@@ -1148,12 +1195,13 @@ def scan_rs_vs_spy(sub: pd.DataFrame, sym: str, today: date,
 
 
 def scan_orb_with_rs(sub: pd.DataFrame, sym: str, today: date,
-                     min_price: float = 3.0) -> SignalHit | None:
+                     min_price: float = 3.0,
+                     *, now: datetime | None = None) -> SignalHit | None:
     """S432 DayTrader ORB that also beats SPY."""
-    orb = scan_orb_opening_drive(sub, sym, today, min_price)
+    orb = scan_orb_opening_drive(sub, sym, today, min_price, now=now)
     if orb is None or _SPY_CTX is None:
         return None
-    df, last = _day_trader_bar(sub, today)
+    df, last = _day_trader_bar(sub, today, now=now)
     if df is None or last is None:
         return None
     cn = float(last["close"])
@@ -1181,6 +1229,106 @@ _collide = [s.id for s in DAY_TRADER_ANALYTICS_STRATEGIES if s.id in _existing_i
 if _collide:
     raise RuntimeError(f"Day Trader Analytics ids collide with existing: {_collide}")
 PAPER_STRATEGIES.extend(DAY_TRADER_ANALYTICS_STRATEGIES)
+
+
+# --------------------------------------------------------------------------- #
+#  Profitability research experiments (paper-only, NEW IDs — never renumber)
+#  Hypotheses from CLEAN keepers S406/S404/S397/S362; awaiting forward evidence.
+# --------------------------------------------------------------------------- #
+
+
+def scan_rubber_band_strong_gap(
+    sub: pd.DataFrame, sym: str, today: date, min_price: float = 3.0
+) -> SignalHit | None:
+    """S440: RubberBand reclaim + strong gap (≤−3%). Left-tail quality filter."""
+    last = _today_row(sub, today)
+    if last is None:
+        return None
+    gap = float(last["gap_pct"])
+    lo, hi, cn = float(last["low"]), float(last["high"]), float(last["close"])
+    if pd.isna(gap) or cn < min_price:
+        return None
+    mid = lo + (hi - lo) * 0.5
+    if gap <= GAP_STRONG_THRESH and cn > mid:
+        return SignalHit(
+            "S440", "RubberBand_ITM3_StrongGap", sym, cn,
+            f"RB+strong gap {gap:+.1%} reclaim",
+        )
+    return None
+
+
+def scan_gap_down_otm2_strong(
+    sub: pd.DataFrame, sym: str, today: date, min_price: float = 3.0
+) -> SignalHit | None:
+    """S441: GapDown OTM2 structure with S166-like strong gap (≤−3%)."""
+    return scan_gap_down(
+        sub, sym, today, GAP_STRONG_THRESH,
+        "S441", "GapDown_OTM2_StrongGap", min_price, use_open=True,
+    )
+
+
+def scan_true_orb_15m(
+    sub: pd.DataFrame, sym: str, today: date, min_price: float = 3.0,
+    *, now: datetime | None = None,
+) -> SignalHit | None:
+    """S443: True opening-range proxy — NOT S430.
+
+    Requires ≥15 minutes of session development and a stronger drive/high break
+    than the S430 opening-drive proxy. Separate history forever.
+    """
+    clock = _day_trader_now(now)
+    open_et = datetime.combine(today, dtime(9, 30), tzinfo=_ET)
+    if clock.date() == today and (clock - open_et).total_seconds() < 15 * 60:
+        return None
+    df, last = _day_trader_bar(sub, today, now=now)
+    if df is None or last is None:
+        return None
+    cn = float(last["close"])
+    opn = float(last["open"])
+    hi = float(last["high"])
+    gap = float(last.get("gap_pct", 0.0))
+    if pd.isna(gap):
+        gap = 0.0
+    if any(pd.isna(x) for x in [cn, opn, hi]) or cn < min_price or opn <= 0:
+        return None
+    drive = (cn - opn) / opn
+    # Stronger than S430: drive ≥0.6%, high ≥ open×1.005, mild/no gap-down floor.
+    if gap >= -0.01 and drive >= 0.006 and hi >= opn * 1.005 and cn > opn:
+        return SignalHit(
+            "S443", "TrueORB_15m", sym, cn,
+            f"ORB15 {drive:+.1%} gap {gap:+.1%} hi/open={hi / opn:.4f}",
+        )
+    return None
+
+
+PROFITABILITY_EXPERIMENT_STRATEGIES: list[StrategyConfig] = [
+    # S440: S406 moneyness (ITM3) + strong-gap filter — left-tail hypothesis
+    StrategyConfig(
+        "S440", "RubberBand_ITM3_StrongGap", 3, 1, 7,
+        scan_rubber_band_strong_gap, strike_offset=-3,
+    ),
+    # S441: S404 moneyness (OTM2) + strong gap — gap-quality twin
+    StrategyConfig(
+        "S441", "GapDown_OTM2_StrongGap", 3, 1, 7,
+        scan_gap_down_otm2_strong, strike_offset=2,
+    ),
+    # S442: S406 moneyness with 5-DTE (neighbor to S362 3-DTE RB family)
+    StrategyConfig(
+        "S442", "RubberBand_ITM3_5DTE", 5, 4, 6,
+        lambda sub, sym, t, mp: scan_variant(
+            sub, sym, t, mp, "S442", "S174", "RubberBand_ITM3_5DTE"
+        ),
+        strike_offset=-3,
+    ),
+    # S443: classical ORB-style arm (new ID; never alias S430)
+    StrategyConfig("S443", "TrueORB_15m", 3, 1, 7, scan_true_orb_15m),
+]
+
+_exp_ids = {s.id for s in PAPER_STRATEGIES}
+_exp_collide = [s.id for s in PROFITABILITY_EXPERIMENT_STRATEGIES if s.id in _exp_ids]
+if _exp_collide:
+    raise RuntimeError(f"Profitability experiment ids collide: {_exp_collide}")
+PAPER_STRATEGIES.extend(PROFITABILITY_EXPERIMENT_STRATEGIES)
 
 # Kept for reports / name lookup only — not scanned.
 DROPPED_PAPER_STRATEGIES: list[StrategyConfig] = [

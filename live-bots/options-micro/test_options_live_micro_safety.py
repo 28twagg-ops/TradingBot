@@ -50,6 +50,24 @@ class ParseFlagsTests(unittest.TestCase):
         self.assertEqual(olm.parse_max_options_cap("250"), 250.0)
         self.assertEqual(olm.parse_max_options_cap("100"), 100.0)
 
+    def test_max_cap_rejects_above_250_and_nonfinite(self):
+        """HARD maximum $250 — configs above 250 / NaN / inf clamp to 250."""
+        self.assertEqual(olm.parse_max_options_cap("251"), 250.0)
+        self.assertEqual(olm.parse_max_options_cap("1000"), 250.0)
+        self.assertEqual(olm.parse_max_options_cap("99999"), 250.0)
+        self.assertEqual(olm.parse_max_options_cap("nan"), 250.0)
+        self.assertEqual(olm.parse_max_options_cap("NaN"), 250.0)
+        self.assertEqual(olm.parse_max_options_cap("inf"), 250.0)
+        self.assertEqual(olm.parse_max_options_cap("+inf"), 250.0)
+        self.assertEqual(olm.parse_max_options_cap("-inf"), 250.0)
+        self.assertEqual(olm.parse_max_options_cap("invalid"), 250.0)
+        self.assertEqual(olm.HARD_MAX_OPTIONS_CAP, 250.0)
+
+    def test_options_sleeve_never_exceeds_hard_max(self):
+        olm.MAX_OPTIONS_CAP = 10_000.0  # simulate drifted global
+        olm.SHARE = 0.25
+        self.assertEqual(olm.options_sleeve(100_000), 250.0)
+
     def test_stock_reserve_defaults_to_250(self):
         self.assertEqual(olm.parse_stock_cash_reserve(None), 250.0)
         self.assertEqual(olm.parse_stock_cash_reserve(""), 250.0)
@@ -204,6 +222,90 @@ class DuplicateAndEntriesGateTests(unittest.TestCase):
                           2000.0, 500.0, state, now)
         self.assertEqual(n, 0)
         self.assertIn("S404", state.get("used_strategies", []))
+
+
+class BrokerFailClosedEntryTests(unittest.TestCase):
+    def setUp(self):
+        olm.ENTRIES_ENABLED = True
+        olm.MAX_OPTIONS_CAP = 250.0
+        olm.STOCK_CASH_RESERVE = 250.0
+
+    def test_option_positions_fail_closed_raises(self):
+        trade = MagicMock()
+        trade.get_all_positions.side_effect = RuntimeError("broker down")
+        with self.assertRaises(olm.BrokerQueryError):
+            olm.option_positions(trade, fail_closed=True)
+        # Management path still returns empty (risk-reducing allowed to proceed).
+        self.assertEqual(olm.option_positions(trade, fail_closed=False), [])
+
+    def test_place_aborts_when_positions_query_fails(self):
+        trade = MagicMock()
+        trade.get_all_positions.side_effect = RuntimeError("broker down")
+        trade.get_orders.return_value = []
+        now = datetime(2026, 10, 23, 10, 0, tzinfo=ET)
+        with patch.object(olm, "scan_hits") as scan:
+            n = olm.place(
+                trade, MagicMock(), MagicMock(), MagicMock(),
+                2000.0, 500.0, {"lots": []}, now,
+            )
+        self.assertEqual(n, 0)
+        scan.assert_not_called()
+        trade.submit_order.assert_not_called()
+
+    def test_place_aborts_when_orders_query_fails(self):
+        trade = MagicMock()
+        trade.get_all_positions.return_value = []
+        trade.get_orders.side_effect = RuntimeError("orders down")
+        now = datetime(2026, 10, 23, 10, 0, tzinfo=ET)
+        with patch.object(olm, "scan_hits") as scan:
+            n = olm.place(
+                trade, MagicMock(), MagicMock(), MagicMock(),
+                2000.0, 500.0, {"lots": []}, now,
+            )
+        self.assertEqual(n, 0)
+        scan.assert_not_called()
+
+    def test_hard_cap_blocks_order_path(self):
+        """Even with room math, cost that would exceed $250 hard max is rejected."""
+        trade = MagicMock()
+        trade.get_all_positions.return_value = [
+            SimpleNamespace(
+                symbol="AAPL261016C00150000",
+                asset_class="us_option",
+                market_value="200",
+                qty="1",
+            )
+        ]
+        trade.get_orders.return_value = []
+        now = datetime(2026, 10, 23, 10, 0, tzinfo=ET)
+        hit = SimpleNamespace(
+            strategy_id="S404", symbol="MSFT", price=400.0, detail="gap",
+        )
+        state = {"lots": [], "used_day": now.date().isoformat(), "used_strategies": []}
+        arm = MagicMock(
+            max_premium=75.0, take_profit=0.5, stop_loss=-0.4,
+            buy_limit_offset=-0.01,
+        )
+        cand = {
+            "symbol": "MSFT261016C00400000", "bid": 0.60, "ask": 0.65,
+            "mid": 0.62, "cost": 60.0,  # 200+60 > 250
+        }
+        with patch.object(olm, "scan_hits", return_value=[hit]), \
+             patch.object(olm, "_allow_strats", return_value=[
+                 SimpleNamespace(id="S404", dte_min=1, dte_max=7, dte_target=3),
+             ]), \
+             patch.object(olm, "make_arm", return_value=arm), \
+             patch.object(olm, "_strat", return_value=SimpleNamespace(
+                 id="S404", dte_min=1, dte_max=7, dte_target=3,
+             )), \
+             patch.object(olm.om, "_pick_option_from_chain", return_value=cand), \
+             patch.object(olm, "entry_limit_price", return_value=0.64), \
+             patch.object(olm, "save_state"), \
+             patch.object(olm, "append_ledger"):
+            n = olm.place(trade, MagicMock(), MagicMock(), MagicMock(),
+                          2000.0, 500.0, state, now)
+        self.assertEqual(n, 0)
+        trade.submit_order.assert_not_called()
 
 
 class ManageStillRunsWhenEntriesOff(unittest.TestCase):

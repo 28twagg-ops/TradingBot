@@ -2,6 +2,7 @@
 
 **Source of truth (mechanics):** `live-bots/options-paper/strategies/strategy_registry.json`  
 **Research ranking (2026-10-23):** [`STRATEGY_RESEARCH_2026-10-23.md`](STRATEGY_RESEARCH_2026-10-23.md)  
+**Profitability report:** [`PROFITABILITY_RESEARCH_REPORT.md`](PROFITABILITY_RESEARCH_REPORT.md)  
 **Live gate:** entries OFF (`LIVE_OPTIONS_ENTRIES=0`). This catalog is for navigation, not promotion.
 
 ## Systems (keep separate)
@@ -27,6 +28,17 @@
 | S430 | DayTrader_ORB (opening-drive **proxy**) | DIAGNOSTIC — gather n; not classical ORB |
 | S431 | DayTrader_RS | DIAGNOSTIC — often silent |
 | S432 | DayTrader_ORB_RS | DIAGNOSTIC — gather n |
+
+## Profitability experiments (paper-only, NEW IDs — awaiting forward evidence)
+
+| ID | Name | Hypothesis |
+|---|---|---|
+| S440 | RubberBand_ITM3_StrongGap | Strong gap filter cuts S406 left tail |
+| S441 | GapDown_OTM2_StrongGap | S404 structure + S166 gap quality |
+| S442 | RubberBand_ITM3_5DTE | DTE neighbor to S362/S406 |
+| S443 | TrueORB_15m | Classical ORB ≠ S430 drive proxy |
+
+Paper buckets: `b92 s406_maxprem40`, `b93 s440_rb_stronggap`.
 
 ## Research priority labels (from 2026-10-23 report)
 

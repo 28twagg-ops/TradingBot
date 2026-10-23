@@ -1,0 +1,13 @@
+{
+  "stock_reserve": 250.0,
+  "options_sleeve_research": 250.0,
+  "assumed_med_contract_cost": 55.0,
+  "min_practical_account_usd": 600.0,
+  "rationale": "$250 stock reserve + $250 options research sleeve + ~$100 buffer; below ~$600 concurrent 2-contract options + stock reserve is impractical",
+  "arms": [
+    "S406",
+    "S404",
+    "S397",
+    "S362"
+  ]
+}

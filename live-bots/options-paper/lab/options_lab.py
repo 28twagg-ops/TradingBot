@@ -129,6 +129,11 @@ LIVE_1TO1_PROFILE_NAME = "live_1to1"
 # Paper-only S406 twin (best KEEP leader) — same TP/SL as live micro.
 S406_ONLY_BUCKET_ID = 91
 S406_ONLY_PROFILE_NAME = "s406_only"
+# Paper research twins (profitability experiments) — never change live RB.
+S406_MAXPREM40_BUCKET_ID = 92
+S406_MAXPREM40_PROFILE_NAME = "s406_maxprem40"
+S440_RESEARCH_BUCKET_ID = 93
+S440_RESEARCH_PROFILE_NAME = "s440_rb_stronggap"
 ORDER_FETCH_LIMIT = 500
 _PRIORITY_TWIN_IDS = frozenset({LIVE_1TO1_BUCKET_ID, S406_ONLY_BUCKET_ID})
 _PRIORITY_TWIN_NAMES = frozenset({LIVE_1TO1_PROFILE_NAME, S406_ONLY_PROFILE_NAME})
@@ -233,6 +238,43 @@ def s406_only_profile() -> BucketProfile:
     )
 
 
+def s406_maxprem40_profile() -> BucketProfile:
+    """Paper research: S406 with $40 max premium (left-tail / cost hypothesis)."""
+    return BucketProfile(
+        S406_MAXPREM40_BUCKET_ID,
+        S406_MAXPREM40_PROFILE_NAME,
+        buy_limit_offset=-0.01,
+        sell_limit_offset=-0.01,
+        max_premium=40,
+        max_spread_frac=0.25,
+        min_open_interest=100,
+        account_cap=0.95,
+        max_contracts=1,
+        take_profit=0.50,
+        stop_loss=-0.40,
+        strategy_scope="S406",
+    )
+
+
+def s440_research_profile() -> BucketProfile:
+    """Paper research: S440 RubberBand ITM3 + strong-gap filter."""
+    return BucketProfile(
+        S440_RESEARCH_BUCKET_ID,
+        S440_RESEARCH_PROFILE_NAME,
+        buy_limit_offset=-0.01,
+        sell_limit_offset=-0.01,
+        max_premium=75,
+        max_spread_frac=0.25,
+        min_open_interest=100,
+        account_cap=0.95,
+        max_contracts=1,
+        take_profit=0.50,
+        stop_loss=-0.40,
+        strategy_scope="S440",
+        strike_offset=-3,
+    )
+
+
 def _replace_or_append_profile(
     profiles: list[BucketProfile], twin: BucketProfile
 ) -> list[BucketProfile]:
@@ -247,9 +289,11 @@ def _replace_or_append_profile(
 
 
 def _inject_live_1to1(profiles: list[BucketProfile]) -> list[BucketProfile]:
-    """Replace grid slots 90/91 with dedicated twin buckets (stable ids)."""
+    """Replace grid slots 90/91 (+ research 92/93) with dedicated twin buckets."""
     out = _replace_or_append_profile(profiles, live_1to1_profile())
-    return _replace_or_append_profile(out, s406_only_profile())
+    out = _replace_or_append_profile(out, s406_only_profile())
+    out = _replace_or_append_profile(out, s406_maxprem40_profile())
+    return _replace_or_append_profile(out, s440_research_profile())
 
 
 def get_live_1to1_bucket() -> BucketProfile | None:

@@ -9,13 +9,25 @@ from zoneinfo import ZoneInfo
 
 import numpy as np
 import pandas as pd
+from pathlib import Path
 
-sys.path.insert(0, str(__file__).rsplit("\\", 1)[0] if "\\" in __file__ else str(__file__).rsplit("/", 1)[0])
+_ROOT = Path(__file__).resolve().parents[2]
+for _p in (
+    _ROOT / "live-bots" / "options-paper" / "strategies",
+    _ROOT / "live-bots" / "options-paper" / "bot",
+    _ROOT / "live-bots" / "options-paper" / "lab",
+    _ROOT / "live-bots" / "shared",
+):
+    _s = str(_p)
+    if _s not in sys.path:
+        sys.path.insert(0, _s)
 
 import options_signals as sig  # noqa: E402
 import options_morning_bot as om  # noqa: E402
 
 ET = ZoneInfo("America/New_York")
+# Mid-session clock so incomplete-morning grace does not block unit tests.
+_SESSION_NOW = datetime(2026, 10, 23, 10, 15, tzinfo=ET)
 
 
 def _make_bars(end: date, n: int = 80, last_close_up: bool = True) -> pd.DataFrame:
@@ -45,33 +57,35 @@ class DayTraderBarValidityTests(unittest.TestCase):
     def test_accepts_today_session_bar(self):
         today = date(2026, 10, 23)  # Friday
         bars = _make_bars(today)
-        df, last = sig._day_trader_bar(bars, today)
+        df, last = sig._day_trader_bar(bars, today, now=_SESSION_NOW)
         self.assertIsNotNone(df)
         self.assertIsNotNone(last)
-        self.assertIsNone(sig._day_trader_bar_reject_reason(bars, today))
+        self.assertIsNone(
+            sig._day_trader_bar_reject_reason(bars, today, now=_SESSION_NOW)
+        )
 
     def test_rejects_yesterday_fallback(self):
         today = date(2026, 10, 23)
         yesterday = date(2026, 10, 22)
         bars = _make_bars(yesterday)
-        df, last = sig._day_trader_bar(bars, today)
+        df, last = sig._day_trader_bar(bars, today, now=_SESSION_NOW)
         self.assertIsNone(df)
         self.assertIsNone(last)
-        reason = sig._day_trader_bar_reject_reason(bars, today)
+        reason = sig._day_trader_bar_reject_reason(bars, today, now=_SESSION_NOW)
         self.assertIsNotNone(reason)
         self.assertIn("stale_session", reason)
 
     def test_s430_no_signal_on_stale_bars(self):
         today = date(2026, 10, 23)
         bars = _make_bars(date(2026, 10, 22), last_close_up=True)
-        hit = sig.scan_orb_opening_drive(bars, "AAPL", today)
+        hit = sig.scan_orb_opening_drive(bars, "AAPL", today, now=_SESSION_NOW)
         self.assertIsNone(hit)
 
     def test_s430_fires_on_valid_opening_drive(self):
         today = date(2026, 10, 23)
         bars = _make_bars(today, last_close_up=True)
         # Ensure prior close for mild gap (>= -0.5%)
-        hit = sig.scan_orb_opening_drive(bars, "AAPL", today)
+        hit = sig.scan_orb_opening_drive(bars, "AAPL", today, now=_SESSION_NOW)
         self.assertIsNotNone(hit)
         self.assertEqual(hit.strategy_id, "S430")
         self.assertIn("ORB-drive", hit.detail)
@@ -80,9 +94,33 @@ class DayTraderBarValidityTests(unittest.TestCase):
         saturday = date(2026, 10, 24)
         # bdate_range end=Saturday still ends Friday
         bars = _make_bars(date(2026, 10, 23))
-        df, last = sig._day_trader_bar(bars, saturday)
+        df, last = sig._day_trader_bar(bars, saturday, now=_SESSION_NOW)
         self.assertIsNone(df)
         self.assertIsNone(last)
+
+    def test_rejects_incomplete_morning_observation(self):
+        today = date(2026, 10, 23)
+        bars = _make_bars(today, last_close_up=True)
+        too_early = datetime(2026, 10, 23, 9, 32, tzinfo=ET)
+        reason = sig._day_trader_bar_reject_reason(bars, today, now=too_early)
+        self.assertIsNotNone(reason)
+        self.assertIn("incomplete_morning_obs", reason)
+        self.assertIsNone(
+            sig.scan_orb_opening_drive(bars, "AAPL", today, now=too_early)
+        )
+
+    def test_rejects_future_bar_leakage(self):
+        today = date(2026, 10, 23)
+        bars = _make_bars(today, last_close_up=True)
+        # Force last index into the future relative to session clock.
+        idx = list(bars.index)
+        idx[-1] = pd.Timestamp(datetime(2026, 10, 23, 15, 0, tzinfo=ET))
+        bars = bars.copy()
+        bars.index = pd.DatetimeIndex(idx, tz=ET)
+        early = datetime(2026, 10, 23, 10, 0, tzinfo=ET)
+        reason = sig._day_trader_bar_reject_reason(bars, today, now=early)
+        self.assertIsNotNone(reason)
+        self.assertIn("future_bar", reason)
 
     def test_spy_context_rejects_stale(self):
         today = date(2026, 10, 23)
@@ -101,19 +139,49 @@ class DayTraderBarValidityTests(unittest.TestCase):
         today = date(2026, 10, 23)
         bars = _make_bars(today, last_close_up=True)
         sig.clear_spy_context()
-        self.assertIsNone(sig.scan_rs_vs_spy(bars, "AAPL", today))
+        self.assertIsNone(sig.scan_rs_vs_spy(bars, "AAPL", today, now=_SESSION_NOW))
         # Stale stock with fresh SPY still rejects
         spy = _make_bars(today)
         sig.set_spy_context(spy, today)
         stale = _make_bars(date(2026, 10, 22), last_close_up=True)
-        self.assertIsNone(sig.scan_rs_vs_spy(stale, "AAPL", today))
+        self.assertIsNone(sig.scan_rs_vs_spy(stale, "AAPL", today, now=_SESSION_NOW))
 
     def test_missing_bars(self):
         today = date(2026, 10, 23)
         self.assertEqual(
-            sig._day_trader_bar_reject_reason(pd.DataFrame(), today),
+            sig._day_trader_bar_reject_reason(pd.DataFrame(), today, now=_SESSION_NOW),
             "missing_bars",
         )
+
+
+class DiskCacheFreshnessTests(unittest.TestCase):
+    def test_disk_cache_fresh_respects_ttl(self):
+        import tempfile
+        from pathlib import Path
+        import time as _time
+
+        with tempfile.TemporaryDirectory() as td:
+            p = Path(td) / "bars.parquet"
+            p.write_bytes(b"x")
+            old_ttl = om._BARS_CACHE_TTL_S
+            try:
+                om._BARS_CACHE_TTL_S = 60.0
+                self.assertTrue(om._disk_cache_fresh(p))
+                # Age the file beyond TTL
+                past = _time.time() - 120
+                import os
+                os.utime(p, (past, past))
+                self.assertFalse(om._disk_cache_fresh(p))
+            finally:
+                om._BARS_CACHE_TTL_S = old_ttl
+
+    def test_rth_developing_flag(self):
+        mid = datetime(2026, 10, 23, 11, 0, tzinfo=ET)
+        self.assertTrue(om._in_rth_developing(mid))
+        after = datetime(2026, 10, 23, 17, 0, tzinfo=ET)
+        self.assertFalse(om._in_rth_developing(after))
+        weekend = datetime(2026, 10, 24, 11, 0, tzinfo=ET)
+        self.assertFalse(om._in_rth_developing(weekend))
 
 
 class SnapshotFreshnessTests(unittest.TestCase):

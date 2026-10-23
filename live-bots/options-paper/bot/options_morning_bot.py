@@ -1161,6 +1161,29 @@ def _bars_cache_fresh(fetched_at: float) -> bool:
     return (time.monotonic() - fetched_at) <= _BARS_CACHE_TTL_S
 
 
+def _disk_cache_fresh(cache_file: Path) -> bool:
+    """Same-day disk cache must respect TTL — developing daily OHLC goes stale.
+
+    Without this, a 09:40 snapshot written to parquet could be reused all day,
+    freezing DayTrader S430–S432 mid-session observations.
+    """
+    if _BARS_CACHE_TTL_S <= 0:
+        return True
+    try:
+        age = time.time() - cache_file.stat().st_mtime
+    except OSError:
+        return False
+    return age <= _BARS_CACHE_TTL_S
+
+
+def _in_rth_developing(now: datetime | None = None) -> bool:
+    """True during regular hours when today's daily bar is still incomplete."""
+    now = now or _now_et()
+    if now.weekday() >= 5:
+        return False
+    return _hm_between(now, (9, 30), (16, 0))
+
+
 def _fetch_daily_bars_cached(stock, universe: list[str], start: datetime):
     """Session + on-disk cache keyed by calendar day (ET).
 
@@ -1172,6 +1195,9 @@ def _fetch_daily_bars_cached(stock, universe: list[str], start: datetime):
     Per-symbol freshness: any symbol whose last bar is before today triggers
     refetch/backfill diagnostics. Session cache also expires after
     OPTIONS_BARS_CACHE_TTL_S (default 300s).
+
+    Same-day disk cache also expires by mtime TTL during RTH so incomplete
+    daily OHLC is not treated as a completed morning observation all day.
     """
     key = TODAY.isoformat()
     alpaca_univ = [to_alpaca_symbol(s) for s in universe]
@@ -1216,15 +1242,25 @@ def _fetch_daily_bars_cached(stock, universe: list[str], start: datetime):
         try:
             df = pd.read_parquet(cache_file)
             missing_disk = _symbols_missing_today(df)
-            if _bars_cover_today(df) and not missing_disk:
+            disk_fresh = _disk_cache_fresh(cache_file)
+            # During RTH, never pin developing same-day bars beyond TTL.
+            if (
+                _bars_cover_today(df)
+                and not missing_disk
+                and disk_fresh
+            ):
                 failed_disk: list[str] = []
                 _BARS_CACHE[key] = (df, failed_disk, time.monotonic())
-                rl_file(f"  Daily bars disk cache hit ({cache_file.name})")
+                rl_file(
+                    f"  Daily bars disk cache hit ({cache_file.name} "
+                    f"mtime_ok={disk_fresh})"
+                )
                 return df, failed_disk
             rl_file(
                 f"  Daily bars disk cache stale "
                 f"({cache_file.name} max={_bars_max_date(df)} "
-                f"missing_today={len(missing_disk)}); refetching"
+                f"missing_today={len(missing_disk)} "
+                f"mtime_fresh={disk_fresh}); refetching"
             )
             try:
                 cache_file.unlink()
@@ -1259,12 +1295,19 @@ def _fetch_daily_bars_cached(stock, universe: list[str], start: datetime):
                 f"missing today (will retry next TTL expiry)"
             )
         try:
-            # Only persist to disk when per-symbol coverage is complete.
-            if not still_missing:
+            # Only persist to disk when per-symbol coverage is complete AND
+            # outside RTH. During RTH today's OHLC is still developing —
+            # session TTL cache is enough; disk would freeze morning snapshots.
+            if not still_missing and not _in_rth_developing():
                 df.to_parquet(cache_file)
                 rl_file(
                     f"  Daily bars disk cache write ({cache_file.name} "
                     f"max={_bars_max_date(df)})"
+                )
+            elif not still_missing and _in_rth_developing():
+                rl_file(
+                    "  Daily bars: skip disk write during RTH "
+                    "(developing session OHLC; session TTL only)"
                 )
         except Exception as exc:
             log.warning("Disk bar cache write failed: %s", exc)
