@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-23
 
-_Generated 2026-10-23T10:52:07.310680_
+_Generated 2026-10-23T10:57:38.620655_
 
 ## Summary
 
@@ -105,7 +105,7 @@ _Generated 2026-10-23T10:52:07.310680_
 | S361 (RubberBand_2DTE) | 2d | drop | 68 | 47.1 | -7.50 | -66.67 | -53.38 | +267.78 | 84 | 3 | 3 | $+122.00 | 19.1% | non-positive median return |
 | S398 (GapDown_ATM) | 3d | drop | 65 | 47.7 | -18.42 | -68.25 | -55.56 | +168.45 | 84 | 1 | 1 | $+765.00 | 24.6% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 109 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
-| S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | drop | 31 | 48.4 | -31.25 | -74.47 | -54.80 | +242.11 | 94 | 4 | 3 | $+345.00 | 45.2% | non-positive median return |
+| S168 (GapDown ATM 5-DTE — P2B arm) | 5d ATM | drop | 31 | 48.4 | -31.25 | -74.47 | -54.80 | +242.11 | 94 | 5 | 3 | $+345.00 | 45.2% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 109 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 255 | 32.2 | -35.29 | -63.24 | -53.42 | +93.89 | 109 | 0 | 0 | $-1,276.78 | 25.9% | non-positive median return |
 | S355 (GapDown_7DTE) | 7d | drop | 71 | 45.1 | -37.50 | -77.08 | -63.70 | +138.64 | 84 | 0 | 0 | $+367.00 | 38.0% | manually paused — excluded from new entries & reflected P&L |
@@ -142,7 +142,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | S163 | 7d ATM | 36 | +51.61 | -76.42 | -60.48 | 2 | 3 |
 | S164 | 1d ATM | 39 | -48.08 | -88.89 | -53.71 | 5 | 4 |
 | S165 | 3d ATM | 255 | -35.29 | -63.24 | -53.42 | 0 | 0 |
-| S168 | 5d ATM | 31 | -31.25 | -74.47 | -54.80 | 4 | 3 |
+| S168 | 5d ATM | 31 | -31.25 | -74.47 | -54.80 | 5 | 3 |
 
 ### GapDown Strike comparison
 
