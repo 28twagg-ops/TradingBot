@@ -1,46 +1,41 @@
-"""Verify strategy-critical functions unchanged (static hash of source regions)."""
-import hashlib
-import re
+"""Compatibility wrapper — canonical module: research/other-studies/strategy_parity_check.py
+
+Do not edit trading logic here. GHA and local tools may still invoke this path.
+"""
+from __future__ import annotations
+
+import runpy
+import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-BOT = ROOT / "rubber_band_bot.py"
-
-REGIONS = [
-    ("SCHEDULE", r"^SCHEDULE = \{", r"^MN = "),
-    ("get_signals", r"^def get_signals\(", r"^def has_earnings_soon\("),
-    ("check_exit", r"^def check_exit\(", r"^def get_positions\("),
+_ROOT = Path(__file__).resolve().parents[1]
+_SEARCH = [
+    _ROOT / "live-bots/options-paper/lab",
+    _ROOT / "live-bots/options-paper/strategies",
+    _ROOT / "live-bots/options-paper/bot",
+    _ROOT / "live-bots/options-paper/reporting",
+    _ROOT / "live-bots/options-micro",
+    _ROOT / "live-bots/shared",
+    _ROOT / "live-bots/rubber-band",
+    _ROOT / "research/market-research",
+    _ROOT / "research/other-studies",
+    _ROOT / "research/options-strategies/backtests",
+    _ROOT / "research/options-strategies/experiments"
 ]
+for _p in _SEARCH:
+    _s = str(_p)
+    if _s not in sys.path:
+        sys.path.insert(0, _s)
 
-
-def extract_region(text, start_pat, end_pat):
-    lines = text.splitlines()
-    start_i = end_i = None
-    for i, line in enumerate(lines):
-        if start_i is None and re.match(start_pat, line):
-            start_i = i
-        elif start_i is not None and re.match(end_pat, line):
-            end_i = i
-            break
-    if start_i is None:
-        return None
-    if end_i is None:
-        end_i = len(lines)
-    return "\n".join(lines[start_i:end_i])
-
-
-def main():
-    text = BOT.read_text(encoding="utf-8")
-    print("Strategy parity region hashes (for regression tracking):")
-    for name, start, end in REGIONS:
-        block = extract_region(text, start, end)
-        if not block:
-            print(f"  {name}: MISSING")
-            continue
-        h = hashlib.sha256(block.encode()).hexdigest()[:16]
-        print(f"  {name}: {h} ({len(block.splitlines())} lines)")
-    print("OK — run after changes; hashes should match pre-pipeline if strategy untouched.")
-
+_TARGET = _ROOT / "research" / "other-studies" / "strategy_parity_check.py"
+if not _TARGET.is_file():
+    raise SystemExit(f"wrapper target missing: {_TARGET}")
 
 if __name__ == "__main__":
-    main()
+    sys.argv[0] = str(_TARGET)
+    runpy.run_path(str(_TARGET), run_name="__main__")
+else:
+    # Import-time: load real module into this namespace for `import options_lab` style.
+    _mod = runpy.run_path(str(_TARGET), run_name=__name__)
+    globals().update({k: v for k, v in _mod.items() if not k.startswith("__")})
+    globals()["__file__"] = str(_TARGET)
