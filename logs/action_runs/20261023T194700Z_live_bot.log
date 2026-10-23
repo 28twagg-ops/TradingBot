@@ -1,0 +1,183 @@
+19:47:01  INFO      Mode: scan
+19:47:02  INFO        BUY  WFRD  $34.17  [EarningsDrift]  id=cb718f8e-3cb4-4e3b-8c6c-5b5f23bf3751
+19:47:02  INFO        BUY  WDC  $34.17  [MomReversal]  id=8907a66a-ca85-4b8c-91e4-0d309a4f4991
+19:47:02  INFO        BUY  ALGM  $34.17  [MomReversal]  id=8c98d5ca-7144-49b2-b5eb-8f0e6075ab4f
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         19:47 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $227.77|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-10-23|
+|  Universe                                                          both|
+|  Mon~  Oct: RubberBand + GapDown (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $227.77|
+|  Cash                                                           $227.77|
+|  Reserve                                          $11.39  (always kept)|
+|  Stocks ~  $0.00 / $170.83  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $170.83  (new stock buys)|
+|  Trade size             $34.17  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (0 open)                        |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                    yes (fresh (11.5m))|
+|  Cached exits                                                         0|
+|  Cached signals                                                      26|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           903|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  26                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.97   71.4   -1.61   50MA bounce (+|
+|  TECH     Pullback50      eq     $72.61   52.0   -1.78   50MA bounce (+|
+|  DVN      TrendResumpti~  eq     $51.35   66.2   0.39    HH/HL resumpti|
+|  FITB     Pullback50      eq     $53.19   67.8   -1.48   50MA bounce (+|
+|  IEX      Pullback50      eq     $229.10  40.0   -1.70   50MA bounce (-|
+|  NDSN     Pullback50      eq     $319.12  31.8   -1.27   50MA bounce (-|
+|  QCOM     Pullback50      eq     $175.91  43.8   -1.97   50MA bounce (-|
+|  ROK      Pullback50      eq     $427.11  31.0   -0.78   50MA bounce (-|
+|  USB      Pullback50      eq     $59.72   62.9   -1.68   50MA bounce (-|
+|  WDC      MomReversal     eq     $341.73  25.1   0.51    -35.9% drop/60|
+|  ALGM     MomReversal     eq     $31.61   24.6   0.95    -23.8% drop/60|
+|  APPF     Pullback50      eq     $214.15  57.8   0.42    50MA bounce (+|
+|  AYI      Pullback50      eq     $318.11  67.0   -1.41   50MA bounce (+|
+|  BAH      VWAP_Reclaim    eq     $79.24   82.0   1.01    VWAP reclaim V|
+|  CFR      Pullback50      eq     $157.25  58.4   -2.46   50MA bounce (-|
+|  CORT     RubberBand      eq     $85.59   16.5   3.60    RSI           |
+|  HWC      Pullback50      eq     $73.53   51.7   -1.58   50MA bounce (-|
+|  ONB      Pullback50      eq     $25.32   55.4   -1.44   50MA bounce (-|
+|  PAG      Pullback50      eq     $212.40  67.2   -0.70   50MA bounce (+|
+|  REXR     VWAP_Reclaim    eq     $38.51   60.5   2.76    VWAP reclaim V|
+|  SLAB     Pullback50      eq     $221.18  28.5   -1.54   50MA bounce (+|
+|  SIRI     Pullback50      eq     $27.61   69.4   -1.54   50MA bounce (+|
+|  UMBF     Pullback50      eq     $135.99  65.6   -1.67   50MA bounce (-|
+|  WFRD     EarningsDrift   eq     $86.26   56.3   0.61    post-earnings |
+|  WTS      Pullback50      eq     $359.27  46.0   -0.12   50MA bounce (-|
+|  ZION     Pullback50      eq     $66.39   68.1   -0.97   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] WFRD  EarningsDrift                                $34.17|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] WDC  MomReversal                                   $34.17|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] ALGM  MomReversal                                  $34.17|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] AES  Pullback50                                      cap 3|
+|    SKIP [eq] TECH  Pullback50                                     cap 3|
+|    SKIP [eq] FITB  Pullback50                                     cap 3|
+|    SKIP [eq] IEX  Pullback50                                      cap 3|
+|    SKIP [eq] NDSN  Pullback50                                     cap 3|
+|    SKIP [eq] QCOM  Pullback50                                     cap 3|19:47:32  INFO        place_all_stops: checking 3 positions...
+19:47:32  INFO        STOP-MARKET placed ALGM  qty=1 (pos=1.0809)  stop=$31.44  id=345e23e2-d8b0-4b7f-9bfc-31cedbdd5538
+19:47:32  INFO        STOP skipped WDC: fractional (0.0996 shares) — software exit will handle it
+19:47:32  INFO        STOP skipped WFRD: fractional (0.3938 shares) — software exit will handle it
+19:47:32  INFO        place_eod_stops: updating 3 stops to current price...
+19:47:32  INFO        EOD stop: cancelled old stop ALGM
+19:47:32  INFO        EOD stop placed ALGM @ $31.47  (cur $31.62  qty=1)
+19:47:32  INFO        EOD stop skip WDC: 0.0996 shares (fractional) — ext_exits will cover
+19:47:32  INFO        EOD stop skip WFRD: 0.3938 shares (fractional) — ext_exits will cover
+19:47:32  INFO        Daily log -> logs/daily/2026-10-23.md
+19:47:32  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [eq] ROK  Pullback50                                      cap 3|
+|    SKIP [eq] USB  Pullback50                                      cap 3|
+|    SKIP [eq] APPF  Pullback50                                     cap 3|
+|    SKIP [eq] AYI  Pullback50                                      cap 3|
+|    SKIP [eq] CFR  Pullback50                                      cap 3|
+|    SKIP [eq] HWC  Pullback50                                      cap 3|
+|    SKIP [eq] ONB  Pullback50                                      cap 3|
+|    SKIP [eq] PAG  Pullback50                                      cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] SIRI  Pullback50                                     cap 3|
+|    SKIP [eq] UMBF  Pullback50                                     cap 3|
+|    SKIP [eq] WTS  Pullback50                                      cap 3|
+|    SKIP [eq] ZION  Pullback50                                     cap 3|
+|    SKIP [eq] CORT  RubberBand                                     cap 3|
+|    SKIP [eq] DVN  TrendResumption                                 cap 3|
+|    SKIP [eq] BAH  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] REXR  VWAP_Reclaim                                   cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  WFRD                                                 still unconfirmed|
+|  WDC                                                  still unconfirmed|
+|  ALGM                                                 still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   RubberBand + GapDown (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             26|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $227.80|
+|  Cash                                                           $125.29|
++========================================================================+
