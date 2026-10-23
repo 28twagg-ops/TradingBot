@@ -11154,3 +11154,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-23 23:11:49,ext_exits,bull,227.17,193.21,0,0,0,1,WFRD,both
 2026-10-23 23:16:42,ext_exits,bull,227.17,193.21,0,0,0,1,WFRD,both
 2026-10-23 23:21:39,ext_exits,bull,227.17,193.21,0,0,0,1,WFRD,both
+2026-10-23 23:26:40,ext_exits,bull,227.17,193.21,0,0,0,1,WFRD,both
