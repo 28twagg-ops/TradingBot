@@ -180,6 +180,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-23T14:31:59.268990+00:00",
       "entry_order_id": "448aa203-329c-4e54-b383-ed76783ad38b"
+    },
+    {
+      "lot_id": "2a911ce8ffc4",
+      "bucket_id": 52,
+      "profile_name": "lab0052_s406_w2_1005_1045_r1",
+      "strategy_id": "S406",
+      "occ_symbol": "META261030C00730000",
+      "underlying": "META",
+      "qty": 1,
+      "entry_cost": 49.0,
+      "entry_price": 0.49,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-23T14:51:37.338234+00:00",
+      "entry_order_id": "630b081f-429e-450b-832e-472ccd1bdde9"
     }
   ],
   "pending_orders": [
@@ -198,22 +218,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.3,
       "stop_loss": -0.3
-    },
-    {
-      "order_id": "630b081f-429e-450b-832e-472ccd1bdde9",
-      "bucket_id": 52,
-      "strategy_id": "S406",
-      "occ_symbol": "META261030C00730000",
-      "underlying": "META",
-      "qty": 1,
-      "limit": 0.5,
-      "profile_name": "lab0052_s406_w2_1005_1045_r1",
-      "submitted": "2026-10-23",
-      "detail": "RB gap -1.6% reclaim",
-      "spread_frac": 0.08163265306122457,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
     }
   ],
   "pending_exits": [],
@@ -225,7 +229,8 @@
     "b6": 41.0,
     "b2009": 48.0,
     "b55": 13.0,
-    "b19": 16.0
+    "b19": 16.0,
+    "b52": 49.0
   },
   "session_date": "2026-10-23",
   "entries_locked": [
@@ -652,7 +657,8 @@
     "a904831e-b64d-47bb-9025-96dfa5506f8a",
     "6e89b92c-1648-4db3-ba46-3b9427a65296",
     "57a2632a-cabf-4b21-a444-36c81f6f00ce",
-    "448aa203-329c-4e54-b383-ed76783ad38b"
+    "448aa203-329c-4e54-b383-ed76783ad38b",
+    "630b081f-429e-450b-832e-472ccd1bdde9"
   ],
   "submitted_today": 13,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
