@@ -54,17 +54,107 @@ OCC_RE = re.compile(r"^[A-Z]+\d{6}[CP]\d{8}$")
 API_KEY = os.getenv("ALPACA_API_KEY")
 API_SECRET = os.getenv("ALPACA_SECRET_KEY")
 
-SHARE = float(os.getenv("LIVE_OPTIONS_SHARE", "0.25"))
-# Hard dollar cap on options sleeve (0 = percent-only). Use with STOCK_CASH_RESERVE for 50/50 splits.
-MAX_OPTIONS_CAP = float(os.getenv("LIVE_OPTIONS_MAX_CAP", "0"))
-# Cash that must remain available for the stock bot after an options entry (shared account).
-STOCK_CASH_RESERVE = float(os.getenv("LIVE_STOCK_CASH_RESERVE", "0"))
-# 0/false = manage + orphan adopt only (no new buys).
-ENTRIES_ENABLED = os.getenv("LIVE_OPTIONS_ENTRIES", "1").strip().lower() not in (
-    "0", "false", "no", "off",
-)
+# Hard defaults: entries OFF, $250 options ceiling, $250 stock cash reserve.
+# Missing/invalid LIVE_OPTIONS_ENTRIES → entries DISABLED (fail-closed).
+# Missing/invalid/non-positive LIVE_OPTIONS_MAX_CAP → keep $250 (never uncapped).
+DEFAULT_MAX_OPTIONS_CAP = 250.0
+DEFAULT_STOCK_CASH_RESERVE = 250.0
+DEFAULT_OPTIONS_SHARE = 0.25
+
+_TRUTHY = frozenset({"1", "true", "yes", "on"})
+_FALSY = frozenset({"0", "false", "no", "off"})
+
+
+def parse_entries_enabled(raw: str | None = None) -> bool:
+    """Fail-closed gate for new live buys.
+
+    Missing, empty, or unrecognized values disable entries. Only explicit
+    truthy tokens enable buys. Management / exits / orphan adopt ignore this.
+    """
+    if raw is None:
+        raw = os.getenv("LIVE_OPTIONS_ENTRIES")
+    if raw is None:
+        return False
+    v = str(raw).strip().lower()
+    if not v:
+        return False
+    if v in _TRUTHY:
+        return True
+    if v in _FALSY:
+        return False
+    return False
+
+
+def parse_max_options_cap(raw: str | None = None) -> float:
+    """Hard dollar ceiling on the options sleeve.
+
+    Missing, invalid, zero, or negative values fall back to
+    DEFAULT_MAX_OPTIONS_CAP ($250). Never treat unset as uncapped.
+    """
+    if raw is None:
+        raw = os.getenv("LIVE_OPTIONS_MAX_CAP")
+    if raw is None or str(raw).strip() == "":
+        return DEFAULT_MAX_OPTIONS_CAP
+    try:
+        val = float(str(raw).strip())
+    except (TypeError, ValueError):
+        return DEFAULT_MAX_OPTIONS_CAP
+    if val <= 0:
+        return DEFAULT_MAX_OPTIONS_CAP
+    return val
+
+
+def parse_stock_cash_reserve(raw: str | None = None) -> float:
+    """Cash that must remain for the stock bot on the shared account."""
+    if raw is None:
+        raw = os.getenv("LIVE_STOCK_CASH_RESERVE")
+    if raw is None or str(raw).strip() == "":
+        return DEFAULT_STOCK_CASH_RESERVE
+    try:
+        val = float(str(raw).strip())
+    except (TypeError, ValueError):
+        return DEFAULT_STOCK_CASH_RESERVE
+    if val < 0:
+        return DEFAULT_STOCK_CASH_RESERVE
+    return val
+
+
+def parse_options_share(raw: str | None = None) -> float:
+    if raw is None:
+        raw = os.getenv("LIVE_OPTIONS_SHARE")
+    if raw is None or str(raw).strip() == "":
+        return DEFAULT_OPTIONS_SHARE
+    try:
+        val = float(str(raw).strip())
+    except (TypeError, ValueError):
+        return DEFAULT_OPTIONS_SHARE
+    if val <= 0 or val > 1:
+        return DEFAULT_OPTIONS_SHARE
+    return val
+
+
+def reload_live_flags_from_env() -> None:
+    """Re-read env into module globals (tests + late env injection)."""
+    global SHARE, MAX_OPTIONS_CAP, STOCK_CASH_RESERVE, ENTRIES_ENABLED, MIN_ENTRY_COST
+    SHARE = parse_options_share()
+    MAX_OPTIONS_CAP = parse_max_options_cap()
+    STOCK_CASH_RESERVE = parse_stock_cash_reserve()
+    ENTRIES_ENABLED = parse_entries_enabled()
+    try:
+        MIN_ENTRY_COST = float(os.getenv("LIVE_OPTIONS_MIN_COST", "20"))
+    except (TypeError, ValueError):
+        MIN_ENTRY_COST = 20.0
+
+
+SHARE = parse_options_share()
+MAX_OPTIONS_CAP = parse_max_options_cap()
+STOCK_CASH_RESERVE = parse_stock_cash_reserve()
+ENTRIES_ENABLED = parse_entries_enabled()
 # Skip lottery-ticket premiums (cost = premium * 100).
-MIN_ENTRY_COST = float(os.getenv("LIVE_OPTIONS_MIN_COST", "20"))
+try:
+    MIN_ENTRY_COST = float(os.getenv("LIVE_OPTIONS_MIN_COST", "20"))
+except (TypeError, ValueError):
+    MIN_ENTRY_COST = 20.0
 # Paper baseline bucket 0 — do not override these with live-only values.
 PAPER_BASELINE = BUCKET_EXPERIMENTS[0]
 PAPER_MAX_PREMIUM = float(PAPER_BASELINE.max_premium)
@@ -106,8 +196,8 @@ STATE_PATH = ROOT / "state.json"
 LEDGER_PATH = ROOT / "ledger.csv"
 LOG_PATH = ROOT / "runs" / f"{date.today().isoformat()}.log"
 LEDGER_FIELDS = [
-    "ts", "event", "strategy_id", "occ", "qty", "limit", "cost",
-    "reason", "return_pct", "order_id",
+    "ts", "event", "strategy_id", "lot_id", "occ", "qty", "limit", "cost",
+    "reason", "return_pct", "order_id", "client_order_id",
 ]
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -213,16 +303,99 @@ def option_mv(trade) -> float:
 
 
 def options_sleeve(equity: float) -> float:
-    """Max options market value allowed (percent cap, optional fixed dollar ceiling)."""
+    """Max options notional allowed (percent of equity, hard-capped by MAX_OPTIONS_CAP)."""
     cap = max(0.0, equity * SHARE)
-    if MAX_OPTIONS_CAP > 0:
-        cap = min(cap, MAX_OPTIONS_CAP)
+    # MAX_OPTIONS_CAP is always positive after parse_max_options_cap().
+    cap = min(cap, max(0.0, MAX_OPTIONS_CAP))
     return cap
 
 
-def entry_room(cash: float, equity: float, trade) -> float:
+def reserved_notional(state: dict) -> float:
+    """Explicit sleeve reservation (e.g. in-flight allocation lock)."""
+    try:
+        return max(0.0, float(state.get("reserved_notional") or 0))
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def lot_notional(lot: dict) -> float:
+    """Premium * 100 * qty for a tracked lot (pending or filled)."""
+    try:
+        qty = abs(int(float(lot.get("qty") or 0)))
+        px = abs(float(lot.get("entry_price") or 0))
+    except (TypeError, ValueError):
+        return 0.0
+    if qty <= 0 or px <= 0:
+        return 0.0
+    return px * 100.0 * qty
+
+
+def pending_buy_notional(trade, state: dict) -> float:
+    """Notional of working entry buys not yet reflected in broker positions.
+
+    - Unfilled pending lots (OCC absent from positions): full lot notional
+    - Partial fills: remaining qty on open BUY orders (filled portion is in option_mv)
+    - Open OLB buys without a state lot: remaining notional
+    """
+    pos = option_positions(trade)
+    pos_norm = {_norm_occ(str(getattr(p, "symbol", "") or "")) for p in pos}
+    total = 0.0
+    seen_occ: set[str] = set()
+    for lot in state.get("lots", []) or []:
+        if not lot.get("pending"):
+            continue
+        occ = _norm_occ(str(lot.get("occ") or ""))
+        if not occ:
+            continue
+        if occ in pos_norm:
+            # Partial fill — remainder counted from open orders below.
+            seen_occ.add(occ)
+            continue
+        total += lot_notional(lot)
+        seen_occ.add(occ)
+    try:
+        for o in _list_open_orders(trade, None):
+            side = str(getattr(o, "side", "") or "").lower()
+            if "buy" not in side:
+                continue
+            occ = _norm_occ(str(getattr(o, "symbol", "") or ""))
+            if not occ:
+                continue
+            try:
+                qty = abs(int(float(getattr(o, "qty", 0) or 0)))
+                filled = abs(int(float(getattr(o, "filled_qty", 0) or 0)))
+                remain = max(0, qty - filled)
+                lim = float(getattr(o, "limit_price", 0) or 0)
+            except (TypeError, ValueError):
+                continue
+            if remain <= 0 or lim <= 0:
+                continue
+            # Unfilled remainder (partial or fully open).
+            if occ in pos_norm or occ not in seen_occ:
+                total += lim * 100.0 * remain
+                seen_occ.add(occ)
+    except Exception as exc:
+        rl(f"WARN pending_buy_notional open-orders: {exc}")
+    return total
+
+
+def allocated_options_notional(trade, state: dict) -> float:
+    """Sleeve usage: broker positions + pending/partial buys + reserved.
+
+    Used for room checks so retries / partial fills cannot breach the $250 cap.
+    """
+    return (
+        option_mv(trade)
+        + pending_buy_notional(trade, state)
+        + reserved_notional(state)
+    )
+
+
+def entry_room(cash: float, equity: float, trade, state: dict | None = None) -> float:
     """Buying power for a new options entry without touching the stock reserve."""
-    sleeve_room = max(0.0, options_sleeve(equity) - option_mv(trade))
+    state = state or {}
+    deployed = allocated_options_notional(trade, state)
+    sleeve_room = max(0.0, options_sleeve(equity) - deployed)
     if STOCK_CASH_RESERVE > 0:
         cash_room = max(0.0, cash - STOCK_CASH_RESERVE)
     else:
@@ -549,12 +722,17 @@ def reconcile(trade, state: dict, now: datetime) -> dict:
 
     # Adopt broker option positions the bot does not track (bleed-stop P0).
     # Skip expired contracts — Alpaca rejects sells (42210000) and they settle alone.
-    tracked = {str(l.get("occ") or "") for l in active_lots(state)}
-    ignored = _known_expired(state)
+    # Idempotent: never re-adopt an OCC already in lots or known_expired.
+    tracked = {_norm_occ(str(l.get("occ") or "")) for l in active_lots(state)}
+    ignored = {_norm_occ(x) for x in _known_expired(state)}
+    adopted_today = {
+        _norm_occ(str(x)) for x in (state.get("adopted_occs") or []) if x
+    }
     for occ, p in pos.items():
-        if not occ or occ in tracked:
+        occ_n = _norm_occ(occ)
+        if not occ or not occ_n or occ_n in tracked or occ_n in adopted_today:
             continue
-        if occ in ignored or _occ_is_expired(occ, now):
+        if occ_n in ignored or _occ_is_expired(occ, now):
             _mark_known_expired(state, occ, now, "skip_orphan_expired")
             rl(f"Live micro skip orphan {occ}: expired (await broker settlement)")
             continue
@@ -570,8 +748,9 @@ def reconcile(trade, state: dict, now: datetime) -> dict:
                f"using 0.01 placeholder (TP/SL % will be wrong until filled mark)")
             entry = 0.01
         _cancel_stale_exit_sells(trade, occ)
+        lot_id = uuid.uuid4().hex[:12]
         lot = {
-            "lot_id": uuid.uuid4().hex[:12],
+            "lot_id": lot_id,
             "strategy_id": "ORPHAN",
             "occ": occ,
             "underlying": _underlying_from_occ(occ),
@@ -580,17 +759,22 @@ def reconcile(trade, state: dict, now: datetime) -> dict:
             "take_profit": TAKE_PROFIT,
             "stop_loss": STOP_LOSS,
             "order_id": f"orphan:{occ}",
+            "client_order_id": f"orphan:{occ}",
             "pending": False,
+            "attribution": "ORPHAN",
         }
         state.setdefault("lots", []).append(lot)
+        adopted_today.add(occ_n)
+        state["adopted_occs"] = sorted(adopted_today)
         append_ledger({
             "ts": now.isoformat(), "event": "orphan_adopt",
-            "strategy_id": "ORPHAN", "occ": occ, "qty": qty,
+            "strategy_id": "ORPHAN", "lot_id": lot_id, "occ": occ, "qty": qty,
             "limit": entry, "cost": round(entry * 100 * qty, 2),
             "reason": "broker_position_untracked",
             "order_id": lot["order_id"],
+            "client_order_id": lot["client_order_id"],
         })
-        rl(f"Live micro orphan_adopt {occ} x{qty} entry={entry:.2f}")
+        rl(f"Live micro orphan_adopt {occ} x{qty} entry={entry:.2f} lot={lot_id}")
 
     save_state(state)
     return state
@@ -891,30 +1075,61 @@ def scan_hits(stock) -> list:
     return _dedupe_hits(hits)
 
 
+def _open_buy_strategy_ids(trade, state: dict) -> set[str]:
+    """Strategies with a working entry buy (state pending lot or open broker buy)."""
+    out = set(open_strategy_ids(trade, state))
+    for lot in state.get("lots", []) or []:
+        if lot.get("pending"):
+            sid = str(lot.get("strategy_id") or "")
+            if sid and sid != "ORPHAN":
+                out.add(sid)
+    try:
+        for o in _list_open_orders(trade, None):
+            side = str(getattr(o, "side", "") or "").lower()
+            cid = str(getattr(o, "client_order_id", "") or "")
+            if "buy" not in side:
+                continue
+            if not cid.startswith("OLB"):
+                continue
+            # Map via matching pending/active lot OCC when possible.
+            occ = _norm_occ(str(getattr(o, "symbol", "") or ""))
+            for lot in state.get("lots", []) or []:
+                if _norm_occ(str(lot.get("occ") or "")) == occ:
+                    sid = str(lot.get("strategy_id") or "")
+                    if sid and sid != "ORPHAN":
+                        out.add(sid)
+    except Exception:
+        pass
+    return out
+
+
 def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
           now: datetime) -> int:
     if not _between(now, om.ENTRY_START, om.ENTRY_END):
         rl("Live micro: outside entry window")
         return 0
     if not ENTRIES_ENABLED:
-        rl("Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only")
+        rl(
+            "Live micro: new entries paused "
+            "(LIVE_OPTIONS_ENTRIES fail-closed / disabled); manage/orphans only"
+        )
         return 0
     sleeve = options_sleeve(equity)
-    deployed = option_mv(trade)
-    open_strats = open_strategy_ids(trade, state)
+    deployed = allocated_options_notional(trade, state)
+    open_strats = _open_buy_strategy_ids(trade, state)
     used_today = used_strategies_today(state)
     allow = [s.id for s in _allow_strats()]
     rank_txt = ", ".join(
         f"{sid} {CLEAN_RANK.get(sid, (0, 0))[0]:.0f}%win"
         for sid in allow
     )
-    cap_note = f" max_cap ${MAX_OPTIONS_CAP:.0f}" if MAX_OPTIONS_CAP > 0 else ""
+    cap_note = f" max_cap ${MAX_OPTIONS_CAP:.0f}"
     reserve_note = (
         f" stock_reserve ${STOCK_CASH_RESERVE:.0f}" if STOCK_CASH_RESERVE > 0 else ""
     )
     rl(
         f"Live micro sleeve ${sleeve:.0f} ({SHARE:.0%} of ${equity:.0f}{cap_note}) "
-        f"deployed ${deployed:.0f} cash ${cash:.0f}{reserve_note} "
+        f"allocated ${deployed:.0f} cash ${cash:.0f}{reserve_note} "
         f"open_strategies={len(open_strats)}/{len(allow)} "
         f"(paper baseline ${PAPER_MAX_PREMIUM:.0f} / tp={TAKE_PROFIT:+.0%} "
         f"sl={STOP_LOSS:+.0%} / 1 contract per strategy / min_cost ${MIN_ENTRY_COST:.0f})"
@@ -926,6 +1141,9 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
     chain_cache: dict = {}
     oi_cache: dict = {}
     for hit in hits:
+        # Refresh used/open each iteration so in-loop marks block duplicates.
+        used_today = used_strategies_today(state)
+        open_strats = _open_buy_strategy_ids(trade, state)
         if hit.strategy_id in used_today:
             rl(f"  skip {hit.strategy_id} {hit.symbol}: already attempted today")
             continue
@@ -940,7 +1158,7 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
         st = _strat(hit.strategy_id)
         if not st:
             continue
-        room = entry_room(cash, equity, trade)
+        room = entry_room(cash, equity, trade, state)
         max_prem = min(float(arm.max_premium), room)
         if max_prem <= 0:
             if STOCK_CASH_RESERVE > 0 and cash <= STOCK_CASH_RESERVE + 0.01:
@@ -949,7 +1167,11 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
                     f"cash ${cash:.0f} at/below stock reserve ${STOCK_CASH_RESERVE:.0f}"
                 )
             else:
-                rl(f"  skip {hit.strategy_id} {hit.symbol}: no sleeve/cash room")
+                rl(
+                    f"  skip {hit.strategy_id} {hit.symbol}: no sleeve/cash room "
+                    f"(allocated ${allocated_options_notional(trade, state):.0f} "
+                    f"/ sleeve ${sleeve:.0f})"
+                )
             continue
         cand = om._pick_option_from_chain(
             opt, ref, hit.symbol, hit.price,
@@ -968,16 +1190,22 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
         if cand["cost"] > max_prem + 0.01:
             rl(f"  skip {hit.strategy_id} {hit.symbol}: cost ${cand['cost']:.0f} > ${max_prem:.0f}")
             continue
+        # Mark used BEFORE submit so a crash/retry cannot double-enter.
+        mark_strategy_used(state, hit.strategy_id)
+        used_today.add(hit.strategy_id)
         limit = entry_limit_price(arm, cand["bid"], cand["ask"], cand["mid"])
+        cid = cid_entry()
         try:
             o = trade.submit_order(LimitOrderRequest(
                 symbol=cand["symbol"], qty=1, side=OrderSide.BUY,
                 time_in_force=TimeInForce.DAY,
                 limit_price=limit,
-                client_order_id=cid_entry(),
+                client_order_id=cid,
             ))
+            cid = str(getattr(o, "client_order_id", None) or cid)
+            lot_id = uuid.uuid4().hex[:12]
             lot = {
-                "lot_id": uuid.uuid4().hex[:12],
+                "lot_id": lot_id,
                 "strategy_id": hit.strategy_id,
                 "occ": cand["symbol"],
                 "underlying": hit.symbol,
@@ -986,16 +1214,19 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
                 "take_profit": arm.take_profit,
                 "stop_loss": arm.stop_loss,
                 "order_id": str(o.id),
+                "client_order_id": cid,
                 "pending": True,
+                "attribution": "LIVE_ALLOW",
             }
             state.setdefault("lots", []).append(lot)
-            mark_strategy_used(state, hit.strategy_id)
             save_state(state)
             append_ledger({
                 "ts": now.isoformat(), "event": "entry",
-                "strategy_id": hit.strategy_id, "occ": cand["symbol"],
+                "strategy_id": hit.strategy_id, "lot_id": lot_id,
+                "occ": cand["symbol"],
                 "qty": 1, "limit": limit, "cost": cand["cost"],
-                "order_id": str(o.id), "reason": hit.detail,
+                "order_id": str(o.id), "client_order_id": cid,
+                "reason": hit.detail,
             })
             rl(
                 f"LIVE BUY {hit.strategy_id} {win:.0f}%win {hit.symbol} {cand['symbol']} "
@@ -1003,9 +1234,11 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
             )
             placed += 1
             open_strats.add(hit.strategy_id)
-            used_today.add(hit.strategy_id)
+            # Conservative: treat spent cash as reduced for subsequent hits this run.
+            cash = max(0.0, cash - float(cand["cost"]))
         except Exception as exc:
             rl(f"LIVE BUY failed {hit.strategy_id} {hit.symbol}: {exc}")
+            # Slot stays consumed for the day (duplicate prevention on retry).
             oid = _extract_wash_existing_order_id(exc)
             if oid:
                 rl(f"Live micro wash-trade self-heal: cancel existing_order_id={oid}")
@@ -1020,19 +1253,28 @@ def place(trade, opt, ref, stock, equity: float, cash: float, state: dict,
 
 
 def run() -> int:
+    reload_live_flags_from_env()
     if not API_KEY or not API_SECRET:
         rl("ERROR: ALPACA_API_KEY / ALPACA_SECRET_KEY required for live micro")
         return 0
     now = _now()
-    rl(f"=== options_live_micro LIVE {now.isoformat()} share={SHARE:.0%} ===")
+    rl(
+        f"=== options_live_micro LIVE {now.isoformat()} share={SHARE:.0%} "
+        f"entries={'ON' if ENTRIES_ENABLED else 'OFF'} "
+        f"max_cap=${MAX_OPTIONS_CAP:.0f} stock_reserve=${STOCK_CASH_RESERVE:.0f} ==="
+    )
     if now.weekday() >= 5:
         rl("Weekend -- skip")
         return 0
 
-    trade = TradingClient(API_KEY, API_SECRET, paper=False)
-    opt = OptionHistoricalDataClient(API_KEY, API_SECRET)
-    stock = StockHistoricalDataClient(API_KEY, API_SECRET)
-    ref = make_trading_client(API_KEY, API_SECRET, paper=False)
+    try:
+        trade = TradingClient(API_KEY, API_SECRET, paper=False)
+        opt = OptionHistoricalDataClient(API_KEY, API_SECRET)
+        stock = StockHistoricalDataClient(API_KEY, API_SECRET)
+        ref = make_trading_client(API_KEY, API_SECRET, paper=False)
+    except Exception as exc:
+        rl(f"FATAL live broker client unavailable: {exc}")
+        return 0
     try:
         acct = trade.get_account()
         equity = float(acct.equity)
@@ -1054,6 +1296,7 @@ def run() -> int:
     in_session = _between(now, om.ENTRY_START, om.HARD_STOP)
     if not in_session:
         if _ge(now, om.HARD_STOP):
+            # Entries disabled must NOT block management / exits.
             manage(trade, opt, state, now)
         else:
             rl("Live micro: outside 9:28-16:05 ET")
@@ -1061,6 +1304,7 @@ def run() -> int:
         rl(f"Live micro done. open_options={n} lots={len(active_lots(state))}")
         return 0
 
+    # Always manage / orphan / stops regardless of ENTRIES_ENABLED.
     manage(trade, opt, state, now)
     # Clear leftover exit sells on tracked lots so protective stops can rest.
     for lot in active_lots(state):

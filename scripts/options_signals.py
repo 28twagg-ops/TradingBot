@@ -1019,21 +1019,19 @@ _SPY_CTX: dict[str, float] | None = None
 
 
 def set_spy_context(spy_sub: pd.DataFrame | None, today: date) -> None:
-    """Publish today's SPY open/close for DayTrader RS scanners. Clear with None."""
+    """Publish today's SPY open/close for DayTrader RS scanners. Clear with None.
+
+    Rejects stale (non-session) bars — never use yesterday's SPY as today's context.
+    """
     global _SPY_CTX
     _SPY_CTX = None
     if spy_sub is None or spy_sub.empty:
         return
     df = _pattern_today(spy_sub, today)
-    row = None
-    if df is not None and not df.empty:
-        row = df.iloc[-1]
-    else:
-        prep = _prep_pattern_bars(spy_sub)
-        if prep is not None and not prep.empty:
-            row = prep.iloc[-1]
-    if row is None:
+    if df is None or df.empty:
+        # No valid same-session SPY bar — leave context cleared.
         return
+    row = df.iloc[-1]
     try:
         opn = float(row["open"])
         cn = float(row["close"])
@@ -1045,6 +1043,7 @@ def set_spy_context(spy_sub: pd.DataFrame | None, today: date) -> None:
             "close": cn,
             "ret": (cn - opn) / opn,
             "gap": gap if not pd.isna(gap) else 0.0,
+            "session_date": str(today),
         }
     except Exception:
         _SPY_CTX = None
@@ -1055,20 +1054,46 @@ def clear_spy_context() -> None:
     _SPY_CTX = None
 
 
+def _day_trader_bar_reject_reason(sub: pd.DataFrame, today: date) -> str | None:
+    """Return a human reason if DayTrader cannot use this series for `today`."""
+    if sub is None or getattr(sub, "empty", True):
+        return "missing_bars"
+    df = _prep_pattern_bars(sub)
+    if df is None or df.empty:
+        return "insufficient_history"
+    try:
+        last_dt = df.index[-1].date()
+    except Exception:
+        return "bad_index"
+    if str(last_dt) != str(today):
+        return f"stale_session last={last_dt} want={today}"
+    return None
+
+
 def _day_trader_bar(sub: pd.DataFrame, today: date):
-    """Prefer today's stamped bar; fall back to last prepared bar."""
-    df = _pattern_today(sub, today)
-    if df is not None and not df.empty:
-        return df, df.iloc[-1]
-    prep = _prep_pattern_bars(sub)
-    if prep is None or prep.empty:
+    """Return (prepared_df, last_row) only when the last bar is today's session.
+
+    Stale-bar fallback removed: yesterday→today signals are forbidden. Callers
+    that need diagnostics can use `_day_trader_bar_reject_reason`.
+    """
+    reason = _day_trader_bar_reject_reason(sub, today)
+    if reason is not None:
         return None, None
-    return prep, prep.iloc[-1]
+    df = _pattern_today(sub, today)
+    if df is None or df.empty:
+        return None, None
+    return df, df.iloc[-1]
 
 
 def scan_orb_opening_drive(sub: pd.DataFrame, sym: str, today: date,
                            min_price: float = 3.0) -> SignalHit | None:
-    """S430 DayTrader ORB / opening-drive proxy on the session bar."""
+    """S430 DayTrader opening-drive proxy (not a classical ORB breakout).
+
+    Uses the live session bar: gap floor, open→close drive ≥0.4%, high ≥
+    open×1.003, close > open. This is an *opening-drive proxy* on the
+    developing daily bar — not a true opening-range breakout. A real ORB
+    arm must use a new strategy ID with separate history.
+    """
     df, last = _day_trader_bar(sub, today)
     if df is None or last is None:
         return None

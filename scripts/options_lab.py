@@ -1386,28 +1386,59 @@ def count_filled_entries_today(rows: list[dict] | None = None) -> int:
 
 
 def reconcile_summary(state: LabState, positions: list[dict] | None) -> dict[str, Any]:
-    """Lightweight stats for console summary."""
-    open_lots = sum(1 for l in state.lots if l.qty > 0)
-    orphan_lots = sum(
-        1 for l in state.lots
-        if l.qty > 0 and l.strategy_id == ORPHAN_STRATEGY
+    """Lightweight stats for console summary + attribution diagnostics.
+
+    Does not reclassify P&L. Surfaces CLEAN/TAINTED-relevant orphan / missing-id
+    counts so operators can trust strategy rankings.
+    """
+    open_lots = [l for l in state.lots if l.qty > 0]
+    orphan_lots = [
+        l for l in open_lots
+        if l.strategy_id == ORPHAN_STRATEGY
+    ]
+    missing_lot_id = sum(1 for l in open_lots if not getattr(l, "lot_id", None))
+    missing_strategy = sum(
+        1 for l in open_lots
+        if not l.strategy_id or l.strategy_id in ("", "UNKNOWN")
     )
     broker_n = len(positions or [])
-    lot_qty = sum(l.qty for l in state.lots if l.qty > 0)
+    lot_qty = sum(l.qty for l in open_lots)
     broker_qty = sum(int(p.get("qty", 0) or 0) for p in (positions or []))
     unattributed = max(0, broker_qty - lot_qty)
+    tracked_occ = {
+        str(getattr(l, "occ_symbol", None) or getattr(l, "occ", None) or "")
+        for l in open_lots
+    }
+    tracked_occ.discard("")
+    broker_syms = {
+        str(p.get("symbol") or "") for p in (positions or []) if p.get("symbol")
+    }
+    broker_only = sorted(broker_syms - tracked_occ)
+    state_only = sorted(tracked_occ - broker_syms)
     rows = _read_ledger_rows()
     return {
-        "open_lots": open_lots,
-        "orphan_lots": orphan_lots,
+        "open_lots": len(open_lots),
+        "orphan_lots": len(orphan_lots),
+        "orphan_lot_ids": [l.lot_id for l in orphan_lots if getattr(l, "lot_id", None)],
+        "missing_lot_id_count": missing_lot_id,
+        "missing_strategy_id_count": missing_strategy,
         "broker_positions": broker_n,
         "broker_contracts": broker_qty,
         "virtual_contracts": lot_qty,
         "unattributed_contracts": unattributed,
+        "broker_only_symbols": broker_only[:20],
+        "state_only_symbols": state_only[:20],
         "pending_orders": len(state.pending_orders),
         "pending_exits": len(state.pending_exits),
         "submitted_today": state.submitted_today,
         "filled_today": count_filled_entries_today(rows),
+        "attribution_health": (
+            "CLEAN"
+            if unattributed == 0 and len(orphan_lots) == 0 and missing_lot_id == 0
+            else "TAINTED"
+            if unattributed > 0 or len(orphan_lots) > 0
+            else "WARN"
+        ),
     }
 
 
