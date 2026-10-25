@@ -70,24 +70,26 @@ def run_one(accounts,bars,now):
             action="HOLD"
             for ticker,timestamp,price,s in choices:
                 kind="crypto" if ticker in COINS else "us_equity"
-                qty=acc.holdings.get(kind+":"+ticker,0)
+                order_symbol=ticker.replace("-USD","/USD") if kind=="crypto" else ticker
+                qty=acc.holdings.get(kind+":"+order_symbol,0)
                 if s<0 and qty>1e-8:
                     fee=max(.01,qty*price*(.002 if kind=="crypto" else .001))
                     if qty*price<=fee:continue
                     acc.trade(timestamp=now.isoformat().replace("+00:00","Z"),asset_class=kind,
-                        symbol=ticker,side="SELL",qty=qty,price=price,fee=fee,
+                        symbol=order_symbol,side="SELL",qty=qty,price=price,fee=fee,
                         source_id="YAHOO:"+ticker+":"+timestamp)
                     action="SELL "+ticker;break
             if action=="HOLD":
                 for ticker,timestamp,price,s in choices:
                     kind="crypto" if ticker in COINS else "us_equity"
-                    if s<=0 or acc.holdings.get(kind+":"+ticker,0)>1e-8:continue
+                    order_symbol=ticker.replace("-USD","/USD") if kind=="crypto" else ticker
+                    if s<=0 or acc.holdings.get(kind+":"+order_symbol,0)>1e-8:continue
                     budget=min(40.,acc.cash*.4)
                     qty=math.floor(budget/price/1.01*1e6)/1e6
                     fee=max(.01,qty*price*(.002 if kind=="crypto" else .001))
                     if qty*price<1 or qty*price+fee>acc.cash:continue
                     acc.trade(timestamp=now.isoformat().replace("+00:00","Z"),asset_class=kind,
-                        symbol=ticker,side="BUY",qty=qty,price=price,fee=fee,
+                        symbol=order_symbol,side="BUY",qty=qty,price=price,fee=fee,
                         source_id="YAHOO:"+ticker+":"+timestamp)
                     action="BUY "+ticker;break
             for ticker,timestamp,_,_ in choices:record["seen"][ticker]=timestamp
@@ -95,7 +97,7 @@ def run_one(accounts,bars,now):
             nav=acc.cash;missing=[]
             for key,qty in acc.holdings.items():
                 if qty<=0:continue
-                ticker=key.split(":",1)[1]
+                ticker=key.split(":",1)[1].replace("/USD","-USD")
                 if ticker not in quotes:missing.append(ticker)
                 else:nav+=qty*quotes[ticker]
             verdict=council(acc.statement())
