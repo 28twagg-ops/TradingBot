@@ -17,6 +17,21 @@ class AutonomousTenWorkerTests(unittest.TestCase):
         self.assertEqual(len(r),10)
         self.assertTrue(all(not v["events"] for v in s.values()))
         self.assertTrue(all(x["equity"]==100 for x in r.values()))
+    def test_crypto_paper_buy_is_isolated_and_idempotent(self):
+        s=initial()
+        now=dt.datetime(2026,10,25,20,15,tzinfo=UTC)
+        base=now-dt.timedelta(hours=70)
+        bars=[((base+dt.timedelta(hours=i)).isoformat().replace("+00:00","Z"),
+               float(100+i*2)) for i in range(70)]
+        result=run_one(s,{"BTC-USD":bars},now)
+        self.assertEqual(result["S09"]["action"],"BUY BTC-USD")
+        self.assertEqual(result["S09"]["council"],"REVIEW_REQUIRED")
+        self.assertLess(s["S09"]["cash"],100)
+        self.assertEqual(s["S02"]["cash"],100)
+        n=len(s["S09"]["events"])
+        run_one(s,{"BTC-USD":bars},now)
+        self.assertEqual(len(s["S09"]["events"]),n)
+
     def test_tampered_worker_is_quarantined(self):
         s=initial()
         a=PaperAccount("S09")
