@@ -81,10 +81,11 @@ class PaperAccount:
             owned = self.holdings.get(k, 0.0)
             if qty > owned + 1e-9:
                 raise ValueError("cannot sell more than position")
-            self.cash = round(self.cash + notional - fee, 8)
-            self.holdings[k] = round(owned - qty, 8)
-            if self.cash < -1e-8:
+            next_cash = round(self.cash + notional - fee, 8)
+            if next_cash < -1e-8:
                 raise ValueError("negative cash after fees")
+            self.cash = next_cash
+            self.holdings[k] = round(owned - qty, 8)
         event = {"worker": self.worker_id, "seq": len(self.events) + 1,
                  "timestamp": timestamp, "asset_class": asset_class, "symbol": symbol,
                  "side": side, "qty": qty, "price": price, "fee": fee,
