@@ -27,7 +27,7 @@ class AutonomousTenWorkerTests(unittest.TestCase):
         self.assertEqual(result["S09"]["action"],"BUY BTC-USD")
         self.assertEqual(result["S09"]["council"],"REVIEW_REQUIRED")
         self.assertLess(s["S09"]["cash"],100)
-        self.assertEqual(s["S02"]["cash"],100)
+        self.assertEqual(s["S03"]["cash"],100)
         n=len(s["S09"]["events"])
         run_one(s,{"BTC-USD":bars},now)
         self.assertEqual(len(s["S09"]["events"]),n)
