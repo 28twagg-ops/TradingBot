@@ -1,0 +1,30 @@
+name: TradingBot Arena - isolated PAPER research checks
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 23 * * 1-5'
+    - cron: '23 20 * * 0'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tradingbot-arena-tests
+  cancel-in-progress: false
+
+jobs:
+  arena-safety:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test $100 worker accounts and 3 council validators
+        run: python -m unittest discover -s research/trading-arena/tests -v
+      - name: Validate synthetic demonstration (no real trading)
+        run: python research/trading-arena/arena.py --demo
