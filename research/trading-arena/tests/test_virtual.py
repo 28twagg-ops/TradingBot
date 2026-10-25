@@ -21,7 +21,7 @@ class AutonomousTenWorkerTests(unittest.TestCase):
         s=initial()
         a=PaperAccount("S09")
         a.trade(timestamp="2026-10-25T20:00:00Z",asset_class="crypto",
-            symbol="BTC-USD",side="BUY",qty=.0001,price=80000,
+            symbol="BTC/USD",side="BUY",qty=.0001,price=80000,
             source_id="SYNTHETIC-TEST")
         s["S09"]={"cash":a.cash,"positions":a.holdings,"events":a.events,"seen":{}}
         s["S09"]["events"][0]["price"]=20
