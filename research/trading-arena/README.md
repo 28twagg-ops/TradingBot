@@ -6,7 +6,7 @@
 
 - **10 Strategists** (S01–S10): isolated paper accounts starting at **$100 each**. Every worker can propose buys/sells for U.S. stocks, BTC, ETH, and long options, subject to cash, whole-contract limits, market/data eligibility, and account permissions. Unlimited notional or naked options positions are forbidden.
 - **3 Council judges** (Accounting, Evidence, Risk): independently audit a worker's reports and trades, compare against independently sourced observations, and publish evidence for disagreements. A 2-of-3 vote can prioritize further *paper* research; **votes never override failed hard accounting/data-integrity checks**. The foundation includes three deterministic reviewers plus an **optional** three-call hosted-AI advisory council, not yet wired to the scheduled job.
-- **AI research director** (future integration): searches published studies and generates versioned, testable strategy proposals, with budget constraints, a restricted strategy language, and an isolated testing environment. It never executes unreviewed arbitrary LLM-generated Python.
+- **No central AI Research Director**: workers research independently; a simple scheduler wakes them.
 - **Historical research**: workers can consult existing paper/live research **only as labeled, untrusted prior evidence**, never ground truth. Judges use independently reconstructed trade/market records. Do not claim old data is a clean holdout.
 - **Promotion**: only increases *virtual research budget*, subject to independent forward evidence. Live deployment requires separate explicit human authorization.
 
@@ -45,3 +45,14 @@ The \`--demo\` command uses **clearly synthetic test observations** to demonstra
 - Evidence first: a split council vote does not establish whether a report is true.
 - If a worker is marked suspicious, it may be suspended and its entire history retained.
 - The existing live workflow \`.github/workflows/run_bot.yml\` is untouched.
+
+## Deployed free research mode (current scope)
+
+- 10 autonomous **RULE-BASED** strategies currently execute virtual-only research; they are not 10 independently reasoning LLM instances. A model API (separate service and budget) is necessary for novel web/TikTok idea invention.
+- The scheduled runner is `run_virtual.py`, using completed hourly Yahoo bars for a limited list of stocks, BTC/USD, ETH/USD, SOL/USD. This can run without any Alpaca credentials or expenditure. Its fill prices are *indicative*; no actual Alpaca PAPER order is sent.
+- A separate `arena-ledger` Git branch stores state and virtual scoreboards, and cannot reset your production stock or options ledgers. All workers start with $100 virtual; risk is capped to about $40 per new position, no margin or shorting.
+- Options contracts and the full Alpaca asset catalog are **not yet traded**. The accounting engine can represent whole long options contracts if under the worker's $100 limit, but requires genuine point-in-time option quotes, approval/eligibility validation and broker-paper account isolation before activation.
+- Three deterministic council validators run after virtual trades. `council_ai.py` has optional code for three independent hosted-AI advisory reviewers, which cannot run without a paid or otherwise authorized model API. Missing executable-price corroboration keeps evidence REVIEW_REQUIRED.
+- Free hosted GitHub Models inference was retired in July 2026. No model fees or new AI secrets have been authorized or configured here.
+- Workflow `arena-paper.yml` runs every two hours, and once upon changes merged to main; GitHub scheduled runs can be delayed. GitHub Actions's standard runner use for public repositories is ordinarily free.
+- Virtual scoreboard after first successful job: https://github.com/28twagg-ops/TradingBot/blob/arena-ledger/records/arena/DASHBOARD.md
