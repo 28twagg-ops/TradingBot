@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "mode": "VIRTUAL_PAPER_ONLY",
+  "initial_usd": 100,
+  "hard_usd_cap_per_worker": 100,
+  "allow_margin": false,
+  "allow_shorting": false,
+  "allow_naked_options": false,
+  "allowed_asset_classes": [
+    "us_equity",
+    "crypto",
+    "us_option_long"
+  ],
+  "allowed_crypto_symbols": [
+    "BTC/USD",
+    "ETH/USD",
+    "SOL/USD"
+  ],
+  "workers": [
+    {
+      "id": "S01",
+      "hypothesis": "intraday_noise_vwap",
+      "family": "intraday_momentum"
+    },
+    {
+      "id": "S02",
+      "hypothesis": "long_only_noise",
+      "family": "intraday_momentum"
+    },
+    {
+      "id": "S03",
+      "hypothesis": "mean_reversion",
+      "family": "reversion"
+    },
+    {
+      "id": "S04",
+      "hypothesis": "gap_down_quality",
+      "family": "reversion"
+    },
+    {
+      "id": "S05",
+      "hypothesis": "opening_range_breakout",
+      "family": "momentum"
+    },
+    {
+      "id": "S06",
+      "hypothesis": "relative_strength",
+      "family": "momentum"
+    },
+    {
+      "id": "S07",
+      "hypothesis": "trend_following",
+      "family": "trend"
+    },
+    {
+      "id": "S08",
+      "hypothesis": "volatility_compression",
+      "family": "volatility"
+    },
+    {
+      "id": "S09",
+      "hypothesis": "btc_eth_trend",
+      "family": "crypto"
+    },
+    {
+      "id": "S10",
+      "hypothesis": "long_options_risk_defined",
+      "family": "options"
+    }
+  ],
+  "council": [
+    {
+      "id": "J01",
+      "role": "accounting",
+      "mission": "Recompute account balances from trades and ledger chain"
+    },
+    {
+      "id": "J02",
+      "role": "evidence",
+      "mission": "Audit provenance, timestamped price observations and look-ahead"
+    },
+    {
+      "id": "J03",
+      "role": "risk",
+      "mission": "Audit size limits, exposure, tail-risk and overfitting"
+    }
+  ],
+  "external_research": {
+    "mode": "read_only_context",
+    "must_label_prior_as": "exploratory_or_verified",
+    "blind_judges_to_worker_claims": true
+  },
+  "promotion": {
+    "min_independent_forward_sessions": 60,
+    "vote_threshold": 2,
+    "hard_veto_for_integrity_failures": true,
+    "automatic_real_money_promotion": false
+  }
+}

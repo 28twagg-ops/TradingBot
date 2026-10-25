@@ -1,0 +1,58 @@
+name: TradingBot Arena — zero-cost VIRTUAL paper research
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/trading-arena/**'
+      - '.github/workflows/arena-paper.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */2 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paper-arena-ledger-writes
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Tests (run before any research execution)
+        run: python -m unittest discover -s research/trading-arena/tests -v
+      - name: Install public market data dependencies
+        run: python -m pip install "pandas>=2,<3" "numpy>=1.24,<3" "yfinance>=0.2,<2"
+      - name: Prepare independent paper-ledger branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-remote --exit-code origin refs/heads/arena-ledger >/dev/null; then
+            git fetch origin refs/heads/arena-ledger:refs/remotes/origin/arena-ledger
+            git worktree add --detach /tmp/arena-state origin/arena-ledger
+          else
+            git worktree add --detach /tmp/arena-state HEAD
+          fi
+      - name: Run all 10 simulated workers, never broker orders
+        run: |
+          python research/trading-arena/run_virtual.py --dir /tmp/arena-state/records/arena
+      - name: Commit only Arena state to the separate ledger branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git -C /tmp/arena-state config user.name "paper-arena[bot]"
+          git -C /tmp/arena-state config user.email "paper-arena@users.noreply.github.com"
+          git -C /tmp/arena-state add records/arena/state.json records/arena/last_run.json records/arena/DASHBOARD.md
+          if ! git -C /tmp/arena-state diff --cached --quiet; then
+            git -C /tmp/arena-state commit -m "Arena virtual snapshots"
+            git -C /tmp/arena-state push origin HEAD:refs/heads/arena-ledger
+          fi
