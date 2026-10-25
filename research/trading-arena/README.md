@@ -5,7 +5,7 @@
 ## Desired architecture
 
 - **10 Strategists** (S01–S10): isolated paper accounts starting at **$100 each**. Every worker can propose buys/sells for U.S. stocks, BTC, ETH, and long options, subject to cash, whole-contract limits, market/data eligibility, and account permissions. Unlimited notional or naked options positions are forbidden.
-- **3 Council judges** (Accounting, Evidence, Risk): independently audit a worker's reports and trades, compare against independently sourced observations, and publish evidence for disagreements. A 2-of-3 vote can prioritize further *paper* research; **votes never override failed hard accounting/data-integrity checks**.
+- **3 Council judges** (Accounting, Evidence, Risk): independently audit a worker's reports and trades, compare against independently sourced observations, and publish evidence for disagreements. A 2-of-3 vote can prioritize further *paper* research; **votes never override failed hard accounting/data-integrity checks**. The foundation includes three deterministic reviewers plus an **optional** three-call hosted-AI advisory council, not yet wired to the scheduled job.
 - **AI research director** (future integration): searches published studies and generates versioned, testable strategy proposals, with budget constraints, a restricted strategy language, and an isolated testing environment. It never executes unreviewed arbitrary LLM-generated Python.
 - **Historical research**: workers can consult existing paper/live research **only as labeled, untrusted prior evidence**, never ground truth. Judges use independently reconstructed trade/market records. Do not claim old data is a clean holdout.
 - **Promotion**: only increases *virtual research budget*, subject to independent forward evidence. Live deployment requires separate explicit human authorization.
@@ -17,7 +17,7 @@
 - \`tests/test_arena.py\` validates isolation, options affordability, oversells, tamper detection, and voting.
 - \`.github/workflows/arena-paper.yml\` runs the unit suite on a schedule and manual dispatch **only after merged to the default branch**. Its permission is read-only, and it passes no brokerage credentials.
 
-**Not implemented yet:** real market data collection, actual Alpaca PAPER order routing, independent paper account reconciliation, hosted AI idea generation, long-term append-only storage, a historical full-stack backtest, and the human-audited live release mechanism. Neither this branch nor a scheduled test runner is a fully autonomous 10-bot trading operation. Those are next phases, and must be implemented and tested before any claimed performance is reported.
+**Not implemented yet:** real market data collection, autonomous strategy execution, actual Alpaca PAPER order routing, independent paper account reconciliation, hosted AI idea generation, scheduling of the optional AI council, long-term append-only storage, a historical full-stack backtest, and the human-audited live release mechanism. Neither this branch nor a scheduled test runner is a fully autonomous 10-bot trading operation. Those are next phases, and must be implemented and tested before any claimed performance is reported.
 
 ## Using prior research responsibly
 
