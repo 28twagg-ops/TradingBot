@@ -13,7 +13,8 @@
   ],
   "allowed_crypto_symbols": [
     "BTC/USD",
-    "ETH/USD"
+    "ETH/USD",
+    "SOL/USD"
   ],
   "workers": [
     {
