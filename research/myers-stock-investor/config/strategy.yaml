@@ -1,0 +1,59 @@
+model_version: "1.1.0"
+
+universe:
+  min_market_cap: 1_000_000_000
+  min_avg_dollar_volume: 10_000_000
+  min_years_financials: 3
+  exclude_sectors:
+    - Financial Services
+    - Banks
+    - Insurance
+    - REIT
+    - Real Estate
+  exclude_quote_types:
+    - ETF
+    - MUTUALFUND
+    - INDEX
+
+screening:
+  max_net_debt_to_ebitda: 3.0
+  min_interest_coverage: 3.0
+  min_fcf_years_positive: 2
+
+scoring_weights:
+  cash_quality: 0.25
+  balance_sheet: 0.20
+  business_quality: 0.25
+  valuation: 0.20
+  management_concentration: 0.10
+
+valuation:
+  margin_of_safety_buy: 0.25
+  wacc_default: 0.09
+  terminal_growth: 0.025
+  projection_years: 5
+
+signals:
+  buy_min_score: 70
+  buy_min_confidence: MEDIUM
+  watch_min_score: 55
+
+portfolio:
+  max_positions: 25
+  max_position_weight: 0.05
+  max_sector_weight: 0.25
+  allocation: equal_weight
+  rebalance: quarterly
+
+backtest:
+  initial_cash: 100000
+  commission_bps: 5
+  slippage_bps: 5
+  decision_frequency: quarterly
+  benchmark: SPY
+  # Cash earns 0% unless set (e.g. 0.02 for 2% annual simple approx).
+  cash_annual_rate: 0.0
+  # exploratory | validated — validated refuses unless PIT coverage checks pass.
+  research_mode: exploratory
+
+live_trading_enabled: false

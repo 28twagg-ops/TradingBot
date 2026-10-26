@@ -1,32 +1,41 @@
-"""Local documentation root (TradingBot workspace — not pushed to GitHub).
+"""Compatibility wrapper — canonical module: live-bots/shared/local_docs.py
 
-On GitHub Actions there is no sibling local workspace, so callers should treat
-a missing/unavailable docs root as optional.
+Do not edit trading logic here. GHA and local tools may still invoke this path.
 """
 from __future__ import annotations
 
-import os
+import runpy
+import sys
 from pathlib import Path
 
-GIT_REPO = Path(__file__).resolve().parent.parent
-# Local desktop layout: TradingBot-git/../TradingBot/docs
-LOCAL_DOCS = GIT_REPO.parent / "TradingBot" / "docs"
+_ROOT = Path(__file__).resolve().parents[1]
+_SEARCH = [
+    _ROOT / "live-bots/options-paper/lab",
+    _ROOT / "live-bots/options-paper/strategies",
+    _ROOT / "live-bots/options-paper/bot",
+    _ROOT / "live-bots/options-paper/reporting",
+    _ROOT / "live-bots/options-micro",
+    _ROOT / "live-bots/shared",
+    _ROOT / "live-bots/rubber-band",
+    _ROOT / "research/market-research",
+    _ROOT / "research/other-studies",
+    _ROOT / "research/options-strategies/backtests",
+    _ROOT / "research/options-strategies/experiments"
+]
+for _p in _SEARCH:
+    _s = str(_p)
+    if _s not in sys.path:
+        sys.path.insert(0, _s)
 
+_TARGET = _ROOT / "live-bots" / "shared" / "local_docs.py"
+if not _TARGET.is_file():
+    raise SystemExit(f"wrapper target missing: {_TARGET}")
 
-def local_docs_available() -> bool:
-    """True when we should write human docs (local machine, not GHA)."""
-    if os.environ.get("GITHUB_ACTIONS", "").strip().lower() in ("1", "true", "yes"):
-        return False
-    return True
-
-
-def local_docs(*parts: str) -> Path:
-    """Return (and create) a path under the local docs folder."""
-    if not local_docs_available():
-        # Scratch path inside the runner workspace; never relied on for commits.
-        base = GIT_REPO / "logs" / "_docs_scratch"
-    else:
-        base = LOCAL_DOCS
-    p = base.joinpath(*parts) if parts else base
-    p.mkdir(parents=True, exist_ok=True)
-    return p
+if __name__ == "__main__":
+    sys.argv[0] = str(_TARGET)
+    runpy.run_path(str(_TARGET), run_name="__main__")
+else:
+    # Import-time: load real module into this namespace for `import options_lab` style.
+    _mod = runpy.run_path(str(_TARGET), run_name=__name__)
+    globals().update({k: v for k, v in _mod.items() if not k.startswith("__")})
+    globals()["__file__"] = str(_TARGET)

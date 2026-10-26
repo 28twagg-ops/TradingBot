@@ -3,6 +3,10 @@
 # first_hour_collector.yml — Task 1.4
 # Runs first_hour_collector.py 9:28–10:35 AM ET Monday–Friday.
 #
+# Canonical code: live-bots/shared/first_hour_collector.py
+# Entry below remains scripts/first_hour_collector.py (compat wrapper).
+# Data commit path unchanged: data/first_hour/
+#
 # UTC offset: ET is UTC-4 in EDT (summer) and UTC-5 in EST (winter).
 # This cron targets ~9:25 AM EDT (summer) = 13:25 UTC.
 # For EST (winter, Nov–Mar) adjust to 14:25 UTC and update both the

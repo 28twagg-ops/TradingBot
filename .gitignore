@@ -1,2 +1,15 @@
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.egg-info/
+.DS_Store
+Thumbs.db
+_tmp_commit.txt
