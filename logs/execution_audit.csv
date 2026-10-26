@@ -981,3 +981,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-10-23 14:16:48,2026-10-23,SELL,ADI,Pullback50,386.82,,386.82,33.94,0.0,0.0,market_urgent_full,stop_loss (-0.8%),bull
 2026-10-23 19:51:36,2026-10-23,SELL,ALGM,MomReversal,31.41,,31.41,2.54,0.0,0.0,market_urgent_full,stop_loss (-0.6%),bull
 2026-10-23 19:52:06,2026-10-23,SELL,WFRD,EarningsDrift,86.94,86.77,86.934,34.24,-0.0069,-0.0024,limit_fill_position_check_full,midline (+0.2%),bull
+2026-10-26 13:48:34,2026-10-26,SELL,WFRD,EarningsDrift,86.95,86.78,86.95,34.23,0.0,0.0,market_fallback_full,max_hold 3d (+0.2%),bull
