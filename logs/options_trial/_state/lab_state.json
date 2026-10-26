@@ -142,24 +142,7 @@
       "entry_order_id": "3bb5544e-9082-4d84-ae29-6f97e5e75bdd"
     }
   ],
-  "pending_orders": [
-    {
-      "order_id": "9e5df6b2-33d0-4b1b-adcf-01f215b8ea4c",
-      "bucket_id": 15,
-      "strategy_id": "S356",
-      "occ_symbol": "MARA261113C00007500",
-      "underlying": "MARA",
-      "qty": 1,
-      "limit": 0.29,
-      "profile_name": "lab0015_s356_w2_1005_1045_r1",
-      "submitted": "2026-10-26",
-      "detail": "gap -2.6%",
-      "spread_frac": 0.06896551724137917,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    }
-  ],
+  "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {
     "b6": 41.0,
