@@ -5,6 +5,11 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-26T21:03Z | S07 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
+| 2026-10-26T21:03Z | S05 | Cross-asset trend alignment between BTC-USD and  | ee5acdff1517d4 | HOLD_STUDY_TRADE_SYMBOL_MISMATCH |
+| 2026-10-26T21:03Z | S08 | Cross‑asset momentum spillover between BTC‑USD a | 27c48f9fdaea5a | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-26T21:03Z | S10 | Crypto volatility breakout strategy | 164878380770a9 | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-26T21:03Z | S09 | Crypto Liquidity‑Driven Volatility Breakout | f163e093a85262 | HOLD_NO_CURRENT_ENTRY_SIGNAL |
 | 2026-10-26T14:50Z | S08 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
 | 2026-10-26T14:50Z | S06 | Cross‑asset trend persistence between equity and | bfeb8ba40451e7 | HOLD |
 | 2026-10-26T14:50Z | S03 | Opening‑Range Breakout with Volatility‑Weighted  | 0ede33997afaeb | HOLD_UNTESTED_BACKTEST_SIGNAL |

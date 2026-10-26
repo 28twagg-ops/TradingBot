@@ -299,6 +299,39 @@
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "If over a rolling 30\u2011day window the strategy\u2019s cumulative return falls below the risk\u2011free rate or the win\u2011rate drops below 50% after adjusting for transaction costs, the hypothesis will be rejected.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-26T21:03Z",
+        "id": "ee5acdff1517d4",
+        "topic": "Cross-asset trend alignment between BTC-USD and AAPL",
+        "hypothesis": "When BTC-USD\u2019s 20\u2011minute momentum exceeds 5% and AAPL\u2019s 20\u2011minute momentum is positive, BTC\u2011USD will continue to rise in the next 30 minutes, yielding a profitable momentum breakout.",
+        "candidate": {
+          "family": "momentum",
+          "lookback": 20,
+          "threshold": 0.05
+        },
+        "symbol": "AAPL",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 147,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 147,
+            "end": 210,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_STUDY_TRADE_SYMBOL_MISMATCH",
+        "falsification_test": "If BTC\u2011USD\u2019s next 30\u2011minute return is negative or zero in 10 consecutive instances where both BTC\u2011USD and AAPL exhibit the specified momentum conditions, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
       }
     ]
   },
@@ -455,7 +488,41 @@
         "virtual_action": "HOLD"
       }
     ],
-    "groq_experiments": []
+    "groq_experiments": [
+      {
+        "cycle": "2026-10-26T21:03Z",
+        "id": "27c48f9fdaea5a",
+        "topic": "Cross\u2011asset momentum spillover between BTC\u2011USD and ETH\u2011USD",
+        "hypothesis": "When BTC\u2011USD exhibits a 5\u2011minute intraday momentum surge exceeding 0.08 of its 30\u2011minute moving average, ETH\u2011USD will subsequently display a 3\u2011minute momentum surge exceeding 0.06 of its 30\u2011minute moving average within the next 10 minutes, indicating",
+        "candidate": {
+          "family": "momentum",
+          "lookback": 30,
+          "threshold": 0.08
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 32,
+            "end": 501,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 501,
+            "end": 716,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "If, over a rolling 100\u2011day window, the proportion of BTC\u2011USD momentum surges that are followed by an ETH\u2011USD momentum surge within 10 minutes is less than 30%, the hypothesis is falsified. Additionally, if the cumulative return of the proposed pair trade is negative after accounting for transaction ",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      }
+    ]
   },
   "S09": {
     "events": [],
@@ -476,6 +543,41 @@
         ],
         "virtual_action": "HOLD"
       }
+    ],
+    "groq_experiments": [
+      {
+        "cycle": "2026-10-26T21:03Z",
+        "id": "f163e093a85262",
+        "topic": "Crypto Liquidity\u2011Driven Volatility Breakout",
+        "hypothesis": "When the 5\u2011minute liquidity depth of BTC\u2011USD falls below 1% of its 30\u2011minute average, a breakout above the 5\u2011minute high is more likely to sustain a 1\u2011minute upward move of at least 0.5% than when liquidity is above that threshold.",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 5,
+          "threshold": 0.01
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 501,
+            "returns_pct": -2.015,
+            "drawdown_pct": -2.015,
+            "entries": 2
+          },
+          "retrospective_validation": {
+            "start": 501,
+            "end": 716,
+            "returns_pct": -0.295,
+            "drawdown_pct": -0.295,
+            "entries": 1
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_NO_CURRENT_ENTRY_SIGNAL",
+        "falsification_test": "If over a 12\u2011month period the proportion of low\u2011liquidity breakouts that reach the 0.5% target is less than 30% while the proportion for high\u2011liquidity breakouts is greater than 30%, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      }
     ]
   },
   "S10": {
@@ -495,6 +597,41 @@
           "Risk-Optimized Crypto Trading Bot"
         ],
         "virtual_action": "HOLD"
+      }
+    ],
+    "groq_experiments": [
+      {
+        "cycle": "2026-10-26T21:03Z",
+        "id": "164878380770a9",
+        "topic": "Crypto volatility breakout strategy",
+        "hypothesis": "When BTC-USD\u2019s intraday volatility exceeds the 20\u2011period average by more than 8%, a breakout trade will capture a significant portion of the subsequent price move.",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 20,
+          "threshold": 0.08
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 501,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 501,
+            "end": 716,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "If over a 12\u2011month out\u2011of\u2011sample period the strategy\u2019s cumulative return is not at least 1.5\u00d7 the benchmark (risk\u2011free) or the win rate falls below 55%, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
       }
     ]
   }

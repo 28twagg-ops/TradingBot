@@ -293,5 +293,155 @@
     "live_trading": false,
     "ai_requests": 1,
     "reason": "ValueError"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-10-26T21:03Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Crypto Liquidity\u2011Driven Volatility Breakout",
+    "strategy": {
+      "family": "breakout",
+      "lookback": 5,
+      "threshold": 0.01
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 7,
+        "end": 501,
+        "returns_pct": -2.015,
+        "drawdown_pct": -2.015,
+        "entries": 2
+      },
+      "retrospective_validation": {
+        "start": 501,
+        "end": 716,
+        "returns_pct": -0.295,
+        "drawdown_pct": -0.295,
+        "entries": 1
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_NO_CURRENT_ENTRY_SIGNAL",
+    "experiment_id": "f163e093a85262"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-10-26T21:03Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Crypto volatility breakout strategy",
+    "strategy": {
+      "family": "breakout",
+      "lookback": 20,
+      "threshold": 0.08
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 22,
+        "end": 501,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 501,
+        "end": 716,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+    "experiment_id": "164878380770a9"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-10-26T21:03Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Cross\u2011asset momentum spillover between BTC\u2011USD and ETH\u2011USD",
+    "strategy": {
+      "family": "momentum",
+      "lookback": 30,
+      "threshold": 0.08
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 32,
+        "end": 501,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 501,
+        "end": 716,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+    "experiment_id": "27c48f9fdaea5a"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-10-26T21:03Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Cross-asset trend alignment between BTC-USD and AAPL",
+    "strategy": {
+      "family": "momentum",
+      "lookback": 20,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 22,
+        "end": 147,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 147,
+        "end": 210,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_STUDY_TRADE_SYMBOL_MISMATCH",
+    "experiment_id": "ee5acdff1517d4"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-10-26T21:03Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
   }
 ]
