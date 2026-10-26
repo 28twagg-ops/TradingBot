@@ -1,0 +1,67 @@
+name: Arena — free Groq rolling research
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Rotate one of 10 independent research agents every 30 minutes.
+    - cron: '7,37 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  # Share lock with the existing every-two-hour Arena job.
+  group: paper-arena-ledger-writes
+  cancel-in-progress: false
+
+jobs:
+  rotating-research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Fetch only isolated research source (not production keys/logs)
+        uses: actions/checkout@v4
+        with:
+          path: source
+          sparse-checkout: |
+            research/trading-arena/
+            .github/workflows/groq-research.yml
+          persist-credentials: false
+      - name: Fetch only paper records
+        uses: actions/checkout@v4
+        with:
+          ref: arena-ledger
+          path: ledger
+          sparse-checkout: |
+            records/arena/
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify research safety before inference
+        run: python -m unittest discover -s source/research/trading-arena/tests -v
+      - name: Install only if routine Groq key exists
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          if [ -n "$GROQ_API_KEY" ]; then
+            python -m pip install "pandas>=2,<3" "numpy>=1.24,<3" "yfinance>=0.2,<2"
+          else
+            echo "Awaiting optional free Groq API key; no cloud API charges."
+          fi
+      - name: Allow one researcher to invent, backtest and virtual paper-trade
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python source/research/trading-arena/groq_research.py --dir ledger/records/arena
+      - name: Commit only researcher evidence to the paper-ledger branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd ledger
+          git config user.name "arena-research[bot]"
+          git config user.email "arena-research@users.noreply.github.com"
+          git add -A records/arena/
+          if ! git diff --cached --quiet; then
+            git commit -m "Record autonomous bounded research experiment"
+            git push origin HEAD:refs/heads/arena-ledger
+          fi

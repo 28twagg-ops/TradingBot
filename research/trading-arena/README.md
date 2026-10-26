@@ -84,3 +84,66 @@ Never paste a key into ChatGPT, the repository, or a source file. Once configure
 - Machine-readable AI research: https://github.com/28twagg-ops/TradingBot/blob/arena-ledger/records/arena/ai_report.json
 
 Not yet present: executable autonomous AI-designed backtest variants, all Alpaca supported assets, genuine options-chain fills, Alpaca PAPER-only brokerage routing, independently verified execution quotes, live trading, private social-media browsing or guaranteed profitability. The Council must not claim research proposals are independently verified trading returns. Existing records, paper ledgers and live-bot workflow must remain untouched.
+
+
+## 2026-10: Rotating independent research (Groq daily + Gemini weekly)
+
+This project has **NO AI Research Director**. The 10 paper researchers are allowed
+to change research direction over time and propose original candidate rules.
+The code enforces a safe experiment language, independent-account cash rules,
+and separate historic-vs-forward evidence grades.
+
+### Groq: inexpensive everyday reasoning, free-plan opt-in
+
+- Workflow: .github/workflows/groq-research.yml; one rotating researcher per
+  half-hour (approximately 48 total researcher calls/day). Each of 10 workers
+  gets approximately 4-5 research slots per day, provided GitHub scheduling
+  and Groq rate limits permit. This is NOT an always-on process.
+- Model: openai/gpt-oss-20b via Groq's free API plan, no billing required.
+  Groq publishes limits around 1,000 requests/day and 200,000 tokens/day
+  on this model as of October 2026; exact account limits can be lower.
+  We impose an additional rate cap by scheduling only one call/slot.
+- Each researcher picks its own topic, proposes a hypothesis and parameters
+  (trend, breakout, mean reversion or momentum), runs deterministic
+  chronological next-hour-close historical PROXY tests, and may propose a
+  spot-market virtual buy/sell within its OWN initial $100 account.
+- Experimental variants and fail outcomes are recorded in
+  records/arena/groq_research.json and records/arena/GROQ_RESEARCH.md,
+  committed to arena-ledger. Prior experiments inform subsequent prompts.
+- Source code from LLM output is NEVER executed. The final dispatcher validates
+  quote-supported asset symbols and cash constraints; unsupported options
+  or unavailable symbols can be researched, but not virtually traded.
+- **This is a bounded strategy research DSL, not truly unlimited AI agency.**
+  More research families, online-source retrievers and point-in-time option
+  data remain to be built. Historical proxy backtests do not prove profitability.
+
+**One-time user-only setup:** Create a GroqCloud *Free* account at
+https://console.groq.com/keys ; do not upgrade to paid. Add its key to GitHub
+repository Actions secrets under name GROQ_API_KEY. Do NOT paste it into
+chat, a commit or an issue. Without a key, all Groq jobs simply skip their
+AI calls, and the original scheduled virtual algorithm remains functional.
+
+### Gemini: reserve stronger free-tier review capacity
+
+The original 10-per-day Gemini research cycle is NO LONGER scheduled.
+Instead, the verified existing Gemini_API_Key secret powers up to **three**
+independent weekly council-research reviews at Sunday 19:17 UTC.
+The model's rate cap can still interrupt any review. These advisors
+never certify indicative Yahoo fills or enable live trading. Reports go
+to records/arena/GEMINI_SPECIAL.md and gemini_special.json.
+
+### Practical free-tier boundaries
+
+- Groq free plans remain rate-limited; the 48-call/day routine target is not a
+  guarantee. A Groq 429 halts that cycle without spending money or calling
+  paid providers. Model memory is persisted as explicit per-agent research
+  history, not hidden language-model training.
+- Open-source Ollama models can run without metered cloud API usage on a
+  computer you operate, but that requires local hardware and power.
+- GitHub Actions scheduled jobs can be delayed or skipped; there is no
+  continuously running cloud instance supplied by the subscription.
+- The repo is PUBLIC. Research snapshots are visible, so do not pass private
+  financial records, personal data, brokerage credentials or confidential
+  documents to either external provider or into commit history.
+- Nothing can transfer to live trading without a separate explicit approval
+  and production-only code review.
