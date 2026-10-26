@@ -1,0 +1,12 @@
+[
+  {
+    "worker": "S04",
+    "cycle": "2026-10-26T03:47Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 0,
+    "safe_error": "GROQ_HTTP_403"
+  }
+]
