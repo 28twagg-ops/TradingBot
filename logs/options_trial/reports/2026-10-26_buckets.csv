@@ -70,7 +70,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 68,lab0068_s432_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-17,False,,,,,,,0,,,,idle
 69,lab0069_s430_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-21,False,,,,,,,0,,,,idle
 90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,0,2,2026-10-26,False,,,,,,,0,"MARA,VZ","S404,S406",,entered_no_exit
-91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,2026-10-23,False,,,,,,,0,,,,idle
+91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-10-26,False,,,,,,,0,VZ,S406,,entered_no_exit
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2001,promising_s170_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2002,promising_s171_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
