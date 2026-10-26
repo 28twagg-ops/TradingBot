@@ -56,3 +56,31 @@ The \`--demo\` command uses **clearly synthetic test observations** to demonstra
 - Free hosted GitHub Models inference was retired in July 2026. No model fees or new AI secrets have been authorized or configured here.
 - Workflow `arena-paper.yml` runs every two hours, and once upon changes merged to main; GitHub scheduled runs can be delayed. GitHub Actions's standard runner use for public repositories is ordinarily free.
 - Virtual scoreboard after first successful job: https://github.com/28twagg-ops/TradingBot/blob/arena-ledger/records/arena/DASHBOARD.md
+
+
+## Optional FREE Gemini research agents (October 2026)
+
+There is no Research Director agent. Exactly ten individually prompted strategists and three independent council reviewers use Google's Gemini Developer API when explicitly enabled.
+
+- The gemini_cycle.py script makes at most 13 model requests per day: one per strategist and one per judge. It runs at 19:17 UTC on scheduled days. Existing rule-based virtual monitoring continues every two hours. If Google returns 429/403, it stops requesting AI calls. With no Gemini key, the cycle simply skips.
+- Default model: gemini-2.5-flash-lite. Use a Google AI Studio Free Tier project with **no billing attached**, subject to Google's variable free allowances. A key from a paid project CAN incur charges; this software cannot guarantee $0 billing for a paid project.
+- Each strategist independently receives its specialty, recent observed hourly price bars, curated descriptions of historical studies, and public Crossref academic-paper metadata. Each invents a testable hypothesis and chooses one BUY, SELL or HOLD virtual action.
+- The deterministic order validator accepts only quote-supported symbols, a maximum 40% of remaining cash and $40 per opening order, no margin, shorts or leveraged instruments. These orders are local virtual-paper accounting, not real Alpaca PAPER brokerage orders.
+- Three AI reviewers independently evaluate accounting, evidence and risk, but their votes cannot establish authentic market fills. No worker is promoted to real money or certified profitable by the AI council.
+- No live brokerage keys or transaction records are sent to Gemini. The summarized historical research is tagged exploratory or mixed-quality, and is not treated as an untouched holdout. Google free-tier API input may be used to improve Google's products.
+- Crossref scholarly metadata is the currently implemented live external research source. TikTok and other login-gated websites are NOT automatically scraped. Do not treat model-supplied references as verified sources.
+
+### Required one-time credential setup — user controls Google authorization
+
+1. Open https://aistudio.google.com/apikey and get an API key in a Free Tier project with **billing disabled**.
+2. Open https://github.com/28twagg-ops/TradingBot/settings/secrets/actions and choose New repository secret. Set name GEMINI_API_KEY, paste its value, and save.
+
+Never paste a key into ChatGPT, the repository, or a source file. Once configured, the following scheduled job at 19:17 UTC will attempt AI research without repeated prompting.
+
+### Status and capabilities
+
+- Core virtual dashboard: https://github.com/28twagg-ops/TradingBot/blob/arena-ledger/records/arena/DASHBOARD.md
+- Gemini council results (after first successful Gemini cycle): https://github.com/28twagg-ops/TradingBot/blob/arena-ledger/records/arena/AI_COUNCIL.md
+- Machine-readable AI research: https://github.com/28twagg-ops/TradingBot/blob/arena-ledger/records/arena/ai_report.json
+
+Not yet present: executable autonomous AI-designed backtest variants, all Alpaca supported assets, genuine options-chain fills, Alpaca PAPER-only brokerage routing, independently verified execution quotes, live trading, private social-media browsing or guaranteed profitability. The Council must not claim research proposals are independently verified trading returns. Existing records, paper ledgers and live-bot workflow must remain untouched.
