@@ -4,7 +4,7 @@ S410,RubberBand_OTM1,3d,watch,building sample (8-19 exits),33,11,7,4,26.18,65.28
 S396,GapDown_ITM2,3d,watch,building sample (8-19 exits),36,12,8,4,35.39,64.88,-52.44,-50.17,95.55,274.0,8,81,2,1,2,75.0
 S166,GapDown strong call,3d ATM strong,watch,building sample (8-19 exits),59,16,10,6,40.92,60.78,-69.52,-49.27,148.0,372.0,9,97,1,1,9,31.2
 S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),58,29,21,8,30.33,52.94,-65.75,-47.73,75.19,488.0,14,87,2,1,5,31.0
-S163,A1 GapDown ATM call EOD,7d ATM,watch,fat left tail (p10 < -45%),138,36,19,17,14.55,51.61,-76.42,-60.48,87.79,302.0,14,97,1,2,13,36.1
+S163,A1 GapDown ATM call EOD,7d ATM,watch,fat left tail (p10 < -45%),139,36,19,17,14.55,51.61,-76.42,-60.48,87.79,302.0,14,97,2,2,13,36.1
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),163,79,48,31,41.15,50.88,-64.99,-50.0,173.39,1250.0,27,87,0,0,25,15.2
 S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),246,144,80,64,106.82,50.0,-60.92,-47.32,220.66,3166.0,35,87,11,8,31,10.4
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),144,64,42,22,119.98,50.0,-59.57,-50.2,319.52,1425.0,19,87,2,2,17,20.3
@@ -81,7 +81,7 @@ S412,RubberBand_OTM3,3d,drop,non-positive median return,167,68,30,38,39.49,-3.57
 S364,RubberBand_7DTE,7d,drop,non-positive median return,125,70,34,36,11.41,-4.41,-85.29,-62.31,83.81,14.0,23,87,1,1,11,37.1
 S210,MA_Cross_8_21,3d ATM MA cross 8/21,drop,non-positive median return,233,109,52,57,8.62,-6.25,-71.05,-51.61,83.79,63.0,23,91,2,1,28,15.6
 S408,RubberBand_ITM1,3d,drop,manually paused — excluded from new entries & reflected P&L,167,67,29,38,112.6,-6.25,-81.48,-59.63,573.13,1137.0,18,84,0,0,16,17.9
-S361,RubberBand_2DTE,2d,drop,non-positive median return,172,68,32,36,77.73,-7.5,-66.67,-53.38,267.78,122.0,22,87,2,2,22,19.1
+S361,RubberBand_2DTE,2d,drop,non-positive median return,173,68,32,36,77.73,-7.5,-66.67,-53.38,267.78,122.0,22,87,3,2,22,19.1
 S398,GapDown_ATM,3d,drop,non-positive median return,158,65,31,34,31.49,-18.42,-68.25,-55.56,168.45,765.0,17,87,1,1,16,24.6
 S174,RubberBand long call EOD,RubberBand (dropped),drop,non-positive median return,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,112,0,0,6,50.4
 S173,MomReversal long call,MomRev,drop,non-positive median return,1625,415,154,261,15.19,-31.51,-77.18,-62.95,101.9,62.64,8,112,0,0,12,27.5
