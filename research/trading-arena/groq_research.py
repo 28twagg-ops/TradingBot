@@ -31,11 +31,29 @@ def groq_json(instructions, prompt):
     key=os.getenv("GROQ_API_KEY","").strip()
     if not key:
         raise RuntimeError("NO_GROQ_KEY")
+    candidate_schema={"type":"object","properties":{
+        "family":{"type":"string","enum":["trend","reversion","breakout","momentum"]},
+        "lookback":{"type":"integer"},"threshold":{"type":"number"}},
+        "required":["family","lookback","threshold"],"additionalProperties":False}
+    properties={
+        "research_topic":{"type":"string"},
+        "hypothesis":{"type":"string"},
+        "candidate":candidate_schema,
+        "study_symbol":{"type":["string","null"]},
+        "action":{"type":"string","enum":["BUY","SELL","HOLD"]},
+        "symbol":{"type":["string","null"]},
+        "allocation_fraction":{"type":"number"},
+        "reason":{"type":"string"},
+        "falsification_test":{"type":"string"}}
+    schema={"type":"object","properties":properties,
+            "required":list(properties),"additionalProperties":False}
     body={"model":MODEL, "messages":[
         {"role":"system","content":instructions},
         {"role":"user","content":json.dumps(prompt,allow_nan=False)[:6300]}],
-        "response_format":{"type":"json_object"},
-        "include_reasoning":False, "temperature":.7,"max_completion_tokens":900}
+        "response_format":{"type":"json_schema","json_schema":{
+            "name":"paper_research_hypothesis","strict":True,"schema":schema}},
+        "include_reasoning":False, "reasoning_effort":"low",
+        "temperature":.35,"max_completion_tokens":1800}
     req=urllib.request.Request(API, data=json.dumps(body).encode(),
         method="POST",headers={"Authorization":"Bearer "+key,
                               "Content-Type":"application/json",
