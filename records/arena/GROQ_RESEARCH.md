@@ -1,9 +1,15 @@
-# Autonomous Groq Research — independent $100 virtual accounts
-Not real money. Not official Alpaca PAPER orders. Historical quote-close proxy only.
-One researcher per half-hour slot. Free-tier API required, no paid fallback.
+# Autonomous Groq research — ten independent $100 virtual strategists
+Research attempts are scheduled GitHub jobs, not continuous real-time AI.
+Five overdue researchers can be served per run. No paid inference fallback.
+Historical close proxies are NOT Alpaca fills or validated investment returns.
 
-| UTC cycle | Worker | Topic | Experiment | Virtual action |
+| UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-26T14:50Z | S08 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
+| 2026-10-26T14:50Z | S06 | Cross‑asset trend persistence between equity and | bfeb8ba40451e7 | HOLD |
+| 2026-10-26T14:50Z | S03 | Opening‑Range Breakout with Volatility‑Weighted  | 0ede33997afaeb | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-26T14:50Z | S02 | Short-term intraday momentum for SPY | e37a0aa1a371f1 | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-26T14:50Z | S01 | Intraday VWAP band mean‑reversion with volatilit | 0a234866487b6a | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-26T10:01Z | S07 | Opening‑range breakout in high‑liquidity crypto  | 897d98be53e7c6 | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-26T04:01Z | S05 | Momentum-based breakout in high-volatility crypt | 4dc23053303f8d | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-26T03:59Z | S04 | Crypto Volatility Regime Shift Triggered by Open | 89b9041263177e | BUY BTC-USD (VIRTUAL_CLOSE_PROXY) |
@@ -12,5 +18,6 @@ One researcher per half-hour slot. Free-tier API required, no paid fallback.
 | 2026-10-26T03:48Z | S04 |  | AI_UNAVAILABLE |  |
 | 2026-10-26T03:47Z | S04 |  | AI_UNAVAILABLE |  |
 
-Research candidates are not genuine unseen-data proof, nor executable strategies.
-Old experiments are not deleted; learn from failures before attempting variants.
+## Important validation boundaries
+Backtesting uses hourly price-close approximations, not real executable quotes.
+No strategy is automatically promoted from these experiments into real money.

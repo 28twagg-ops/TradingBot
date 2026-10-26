@@ -143,5 +143,155 @@
     },
     "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
     "experiment_id": "897d98be53e7c6"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-10-26T14:50Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Intraday VWAP band mean\u2011reversion with volatility filter",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 20,
+      "threshold": 0.08
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 22,
+        "end": 142,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 142,
+        "end": 204,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+    "experiment_id": "0a234866487b6a"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-10-26T14:50Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Short-term intraday momentum for SPY",
+    "strategy": {
+      "family": "momentum",
+      "lookback": 20,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 22,
+        "end": 142,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 142,
+        "end": 204,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+    "experiment_id": "e37a0aa1a371f1"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-10-26T14:50Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Opening\u2011Range Breakout with Volatility\u2011Weighted Entry",
+    "strategy": {
+      "family": "breakout",
+      "lookback": 30,
+      "threshold": 0.015
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 32,
+        "end": 142,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 142,
+        "end": 204,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+    "experiment_id": "0ede33997afaeb"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-10-26T14:50Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Cross\u2011asset trend persistence between equity and crypto markets",
+    "strategy": {
+      "family": "breakout",
+      "lookback": 20,
+      "threshold": 0.015
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 22,
+        "end": 142,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 142,
+        "end": 204,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "bfeb8ba40451e7"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-10-26T14:50Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
   }
 ]

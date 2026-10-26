@@ -18,6 +18,41 @@
         ],
         "virtual_action": "HOLD"
       }
+    ],
+    "groq_experiments": [
+      {
+        "cycle": "2026-10-26T14:50Z",
+        "id": "0a234866487b6a",
+        "topic": "Intraday VWAP band mean\u2011reversion with volatility filter",
+        "hypothesis": "When the intraday price deviates more than 8% from the VWAP over a 20\u2011minute lookback, the price will revert to the VWAP within the next 10 minutes, provided the intraday volatility (ATR/price) is below 1.5%",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 20,
+          "threshold": 0.08
+        },
+        "symbol": "SPY",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 142,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 142,
+            "end": 204,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "If over a 3\u2011month backtest the rule fails to produce a net positive return after transaction costs and the win rate drops below 55%, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      }
     ]
   },
   "S02": {
@@ -39,6 +74,41 @@
         ],
         "virtual_action": "HOLD"
       }
+    ],
+    "groq_experiments": [
+      {
+        "cycle": "2026-10-26T14:50Z",
+        "id": "e37a0aa1a371f1",
+        "topic": "Short-term intraday momentum for SPY",
+        "hypothesis": "If the 10\u2011minute price change over the last 20 minutes exceeds 5% relative to the 20\u2011minute moving average, the next 10\u2011minute interval will continue in the same direction with >60% probability.",
+        "candidate": {
+          "family": "momentum",
+          "lookback": 20,
+          "threshold": 0.05
+        },
+        "symbol": "SPY",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 142,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 142,
+            "end": 204,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "Backtest the rule on 2024\u20112026 intraday SPY data; if the win\u2011rate falls below 55% or the average return per trade becomes negative, reject the hypothesis.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      }
     ]
   },
   "S03": {
@@ -58,6 +128,41 @@
           "TRADING MULTIPLE MEAN REVERSION"
         ],
         "virtual_action": "HOLD"
+      }
+    ],
+    "groq_experiments": [
+      {
+        "cycle": "2026-10-26T14:50Z",
+        "id": "0ede33997afaeb",
+        "topic": "Opening\u2011Range Breakout with Volatility\u2011Weighted Entry",
+        "hypothesis": "If the intraday opening range is exceeded by a price move that is at least 1.5\u00d7 the 30\u2011minute ATR, the subsequent price action will trend in the breakout direction for at least 30 minutes, yielding a positive risk\u2011adjusted return.",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 30,
+          "threshold": 0.015
+        },
+        "symbol": "SPY",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 32,
+            "end": 142,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 142,
+            "end": 204,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "Apply the rule to the last 200 trading days of SPY; if fewer than 40% of breakout trades produce a 30\u2011minute trend in the breakout direction, reject the hypothesis.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
       }
     ]
   },
@@ -239,6 +344,41 @@
         ],
         "virtual_action": "BUY SOL-USD (VIRTUAL_CLOSE_PROXY)"
       }
+    ],
+    "groq_experiments": [
+      {
+        "cycle": "2026-10-26T14:50Z",
+        "id": "bfeb8ba40451e7",
+        "topic": "Cross\u2011asset trend persistence between equity and crypto markets",
+        "hypothesis": "When the 20\u2011day moving average of SPY diverges from that of BTC\u2011USD by more than 1.5%, the subsequent 5\u2011day return of SPY is positively correlated with the direction of the divergence, indicating a cross\u2011asset trend effect that can be exploited with ",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 20,
+          "threshold": 0.015
+        },
+        "symbol": "SPY",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 142,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 142,
+            "end": 204,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "If, over the next 12 months, the 5\u2011day return of SPY fails to be statistically significantly higher (p<0.05) when the 20\u2011day MA divergence exceeds 1.5% in the predicted direction, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      }
     ]
   },
   "S07": {
@@ -314,7 +454,8 @@
         ],
         "virtual_action": "HOLD"
       }
-    ]
+    ],
+    "groq_experiments": []
   },
   "S09": {
     "events": [],
