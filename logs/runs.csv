@@ -11228,3 +11228,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-26 18:47:02,exits,bull,227.34,125.0,0,0,0,3,ABT|AES|AME,both
 2026-10-26 18:51:42,exits,bull,227.35,125.0,0,0,0,3,ABT|AES|AME,both
 2026-10-26 18:56:48,exits,bull,227.38,125.0,0,0,0,3,ABT|AES|AME,both
+2026-10-26 19:01:49,exits,bull,227.33,125.0,0,0,0,3,ABT|AES|AME,both
