@@ -1,6 +1,11 @@
 name: Arena — free Groq rolling research
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/trading-arena/groq_research.py'
+      - '.github/workflows/groq-research.yml'
   workflow_dispatch:
   schedule:
     # Rotate one of 10 independent research agents every 30 minutes.
