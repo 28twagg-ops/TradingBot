@@ -82,26 +82,6 @@
       "entry_order_id": "27a5ce7e-ed36-4d6c-b66f-866a923a8e59"
     },
     {
-      "lot_id": "44f1e556f332",
-      "bucket_id": 52,
-      "profile_name": "lab0052_s406_w2_1005_1045_r1",
-      "strategy_id": "S406",
-      "occ_symbol": "CELH261030C00030000",
-      "underlying": "CELH",
-      "qty": 1,
-      "entry_cost": 14.000000000000002,
-      "entry_price": 0.14,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-26T14:07:52.677303+00:00",
-      "entry_order_id": "fd119fec-1ddd-4f5f-b7c4-7d12a6a93e88"
-    },
-    {
       "lot_id": "763881aaf5f0",
       "bucket_id": 49,
       "profile_name": "lab0049_s396_w2_1005_1045_r1",
@@ -265,7 +245,6 @@
     "b6": 41.0,
     "b90": 49.0,
     "b91": 65.0,
-    "b52": 14.000000000000002,
     "b49": 41.0,
     "b16": 40.0,
     "b2009": 48.0,
@@ -727,7 +706,8 @@
     "77f1be23-93ef-4e65-8527-dcfe01544f5a",
     "afae9294-5fe6-4556-a74f-5d72f911dab5",
     "3bb5544e-9082-4d84-ae29-6f97e5e75bdd",
-    "ba557267-db36-4123-a55d-0fa5b455f641"
+    "ba557267-db36-4123-a55d-0fa5b455f641",
+    "789099fc-c663-4c7c-b65c-3a75d24ae958"
   ],
   "submitted_today": 14,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
