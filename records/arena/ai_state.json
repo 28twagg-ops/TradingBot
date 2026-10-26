@@ -160,6 +160,41 @@
         ],
         "virtual_action": "HOLD"
       }
+    ],
+    "groq_experiments": [
+      {
+        "cycle": "2026-10-26T04:01Z",
+        "id": "4dc23053303f8d",
+        "topic": "Momentum-based breakout in high-volatility crypto markets",
+        "hypothesis": "When BTC-USD intraday volatility exceeds the 20\u2011minute rolling standard deviation threshold of 0.08, a subsequent 5\u2011minute momentum surge above 0.04 will generate a profitable short\u2011term trend following trade.",
+        "candidate": {
+          "family": "momentum",
+          "lookback": 20,
+          "threshold": 0.08
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 489,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 489,
+            "end": 699,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "If over a rolling 30\u2011day window the strategy\u2019s cumulative return falls below the risk\u2011free rate or the win\u2011rate drops below 50% after adjusting for transaction costs, the hypothesis will be rejected.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      }
     ]
   },
   "S06": {

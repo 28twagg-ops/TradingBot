@@ -73,5 +73,40 @@
     },
     "action": "BUY BTC-USD (VIRTUAL_CLOSE_PROXY)",
     "experiment_id": "89b9041263177e"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-10-26T04:01Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Momentum-based breakout in high-volatility crypto markets",
+    "strategy": {
+      "family": "momentum",
+      "lookback": 20,
+      "threshold": 0.08
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 22,
+        "end": 489,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 489,
+        "end": 699,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+    "experiment_id": "4dc23053303f8d"
   }
 ]
