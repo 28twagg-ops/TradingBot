@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "da22004bf2a7",
-      "bucket_id": 6,
-      "profile_name": "lab0006_s210_w2_1005_1045_r1",
-      "strategy_id": "S210",
-      "occ_symbol": "DKNG261030C00021500",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 41.0,
-      "entry_price": 0.41,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-23T14:16:53.550365+00:00",
-      "entry_order_id": "c13cce41-f227-4937-b1f0-7b7266b0d884"
-    },
-    {
       "lot_id": "68d290259e50",
       "bucket_id": 90,
       "profile_name": "live_1to1",
@@ -143,20 +123,8 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "4c25d18d-59bb-4c74-be6a-e1a46b053f99",
-      "lot_id": "da22004bf2a7",
-      "bucket_id": 6,
-      "strategy_id": "S210",
-      "occ_symbol": "DKNG261030C00021500",
-      "qty": 1,
-      "reason": "stop_loss (-51.2%)",
-      "submitted": "2026-10-26T12:02:06"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
-    "b6": 41.0,
     "b90": 28.000000000000004,
     "b91": 65.0,
     "b16": 40.0,
@@ -622,7 +590,8 @@
     "ee91e528-bbb7-4f55-bb69-363d7417db25",
     "e2403fe5-53ac-4345-aad3-8891ef3bdd3d",
     "75372493-620a-4cf3-b608-58894589c347",
-    "bf0a6531-1063-4a47-90d6-5d8abf73e267"
+    "bf0a6531-1063-4a47-90d6-5d8abf73e267",
+    "4c25d18d-59bb-4c74-be6a-e1a46b053f99"
   ],
   "submitted_today": 14,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
