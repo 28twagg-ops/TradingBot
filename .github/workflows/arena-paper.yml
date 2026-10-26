@@ -51,7 +51,7 @@ jobs:
         # Never blocks free rule-based paper simulation when no API key is configured.
         env:
           GEMINI_API_KEY: ${{ secrets.Gemini_API_Key }}
-          GEMINI_MODEL: gemini-2.5-flash-lite
+          GEMINI_MODEL: gemini-3.5-flash-lite
         run: |
           if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] || [ "$GITHUB_EVENT_NAME" = "push" ]; then
             python research/trading-arena/gemini_cycle.py --dir /tmp/arena-state/records/arena --force
