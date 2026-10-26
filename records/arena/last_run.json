@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-26T14:53:48.350242+00:00",
+  "timestamp": "2026-10-26T15:15:04.789717+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -27,10 +27,10 @@
       "missing_quotes": []
     },
     "S04": {
-      "action": "HOLD",
-      "cash": 60.33727954,
-      "equity": 99.8786,
-      "ledger_events": 1,
+      "action": "SELL BTC-USD",
+      "cash": 100.15413019,
+      "equity": 100.1541,
+      "ledger_events": 2,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -43,10 +43,10 @@
       "missing_quotes": []
     },
     "S06": {
-      "action": "HOLD",
-      "cash": 100.0,
-      "equity": 100.0,
-      "ledger_events": 0,
+      "action": "BUY SOL-USD",
+      "cash": 60.31687757,
+      "equity": 99.9208,
+      "ledger_events": 1,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -67,18 +67,18 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "HOLD",
-      "cash": 100.0,
-      "equity": 100.0,
-      "ledger_events": 0,
+      "action": "BUY SOL-USD",
+      "cash": 60.31687757,
+      "equity": 99.9208,
+      "ledger_events": 1,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S10": {
-      "action": "HOLD",
-      "cash": 100.0,
-      "equity": 100.0,
-      "ledger_events": 0,
+      "action": "BUY SOL-USD",
+      "cash": 60.31687757,
+      "equity": 99.9208,
+      "ledger_events": 1,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     }
