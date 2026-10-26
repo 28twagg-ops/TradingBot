@@ -329,11 +329,10 @@ def main():
         print("Gemini research waits until 19:17 UTC daily to limit free API usage.")
         return
     directory=Path(args.dir)
-    statepath=directory/"state.json"
-    if not statepath.exists():
-        print("No existing virtual ledger; wait for the virtual runner first.")
-        return
-    accounts=json.loads(statepath.read_text())
+    # AI strategists have *separate* ten $100 accounts from rule-based control bots.
+    # Never reuse or reset records/arena/state.json or its existing trade histories.
+    statepath=directory/"ai_state.json"
+    accounts=json.loads(statepath.read_text()) if statepath.exists() else initial()
     if set(accounts)!={w["id"] for w in CONFIG["workers"]}:
         raise ValueError("Unexpected account IDs")
     feed=market(now)
@@ -348,7 +347,7 @@ def main():
     lines=["# Gemini research council — virtual only",
         "Date: "+result["date"],
         "AI calls: "+str(result["api_calls"])+" of at most "+str(MAX_CALLS),
-        "These are unverified Yahoo price-bar proxies, NOT Alpaca paper trades or verified profits.",
+        "These are ten SEPARATE AI research accounts, each with $100 at inception. They do not reuse rule-based baseline portfolios. Yahoo price bars are NOT Alpaca fills.",
         "Missing independent executions prevents strategy promotion.",
         "",
         "| Worker | Virtual action | Hypothesis |",
@@ -356,6 +355,13 @@ def main():
     for wid,item in result["workers"].items():
         name=safe_text(item.get("hypothesis"),100).replace("|","/").replace("\n"," ")
         lines.append("| "+wid+" | "+str(item.get("action",item.get("status")))+" | "+name+" |")
+    lines+=["","## Independent AI virtual account balances",
+              "| Worker | Cash (USD) | Positions |",
+              "|---|---:|---|"]
+    for wid in sorted(accounts):
+        a=accounts[wid]
+        names=", ".join(str(k)+": "+str(v) for k,v in a.get("positions",{}).items() if v>0) or "None"
+        lines.append("| "+wid+" | "+format(a.get("cash",0),".2f")+" | "+names.replace("|","/")[:220]+" |")
     lines+=["","## Three independent AI council votes"]
     for jid,item in result["council"].items():
         lines.append("- "+jid+" — "+str(item.get("verdict"))+
