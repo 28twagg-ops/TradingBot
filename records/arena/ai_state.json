@@ -3,60 +3,228 @@
     "events": [],
     "cash": 100.0,
     "positions": {},
-    "seen": {}
+    "seen": {},
+    "ai_last_day": "2026-10-26",
+    "ai_research": [
+      {
+        "day": "2026-10-26",
+        "hypothesis": "Given that the prior live records and replications of intraday VWAP-stop noise strategies show sub-1 profit factors and underperformance during negative 12-hour momentum regimes, initiating long positions on slightly negative crypto assets (BTC-USD, ETH-USD, SOL-USD) without a robust multi-timeframe volume confirmation will result in further downside drag.",
+        "test_plan": "Monitor hourly VWAP crossovers and volume spikes across BTC-USD and ETH-USD over the next 24 hours. Wait for a statistically significant positive volume confirmation before committing virtual capital.",
+        "reasoning": "All eligible assets show negative 12-hour returns (-0.75% to -1.65%) and historical replications of intraday VWAP noise band strategies underperform in current market conditions. Therefore, holding cash is the optimal risk-adjusted decision.",
+        "source_titles": [
+          "INTRADAY TRADING PATTERNS IN THE EQUITY OPTIONS MARKETS",
+          "Machine Learning-based Intraday Trading Strategy using Simple Moving Average Crossovers, Traded Volume and VWAP Confirmations",
+          "On-line VWAP Trading Strategies"
+        ],
+        "virtual_action": "HOLD"
+      }
+    ]
   },
   "S02": {
     "events": [],
     "cash": 100.0,
     "positions": {},
-    "seen": {}
+    "seen": {},
+    "ai_last_day": "2026-10-26",
+    "ai_research": [
+      {
+        "day": "2026-10-26",
+        "hypothesis": "Noise trading models in cryptocurrency markets (inspired by informed vs. noise trading structures) suggest that mild negative 12h price drift (-0.75% to -1.65%) coupled with high uncertainty and untrusted social sentiment fails to generate a statistically robust directional edge for unhedged long-only spot deployment.",
+        "test_plan": "Monitor assets experiencing minor intraday pullbacks for mean-reversion continuation versus trend breakdown over a 24-hour forward testing window without committing virtual capital until a positive statistical filter on volume and volatility is satisfied.",
+        "reasoning": "Given the current mild negative returns across eligible assets (BTC, ETH, SOL) and the lack of robust out-of-sample edge for simple long-only noise strategies in current market conditions, maintaining a cash position (HOLD) is the most rigorous approach.",
+        "source_titles": [
+          "CBITS: Crypto BERT Incorporated Trading System",
+          "Informed trading, noise trading and the cost of equity",
+          "Crypto Wash Trading"
+        ],
+        "virtual_action": "HOLD"
+      }
+    ]
   },
   "S03": {
     "events": [],
     "cash": 100.0,
     "positions": {},
-    "seen": {}
+    "seen": {},
+    "ai_last_day": "2026-10-26",
+    "ai_research": [
+      {
+        "day": "2026-10-26",
+        "hypothesis": "Short-term mean-reversion pullbacks of 1.34% to 1.65% over the last 12 hours in major crypto assets like BTC-USD and ETH-USD do not provide a statistically robust edge for immediate entry without wider dispersion band extremes exceeding 2.5 standard deviations.",
+        "test_plan": "Monitor hourly price deviations from the 24-hour moving average across BTC-USD and ETH-USD. Evaluate whether entry signals generated only after a 2.5 standard deviation move yield a positive expectancy over a 24-hour holding period.",
+        "reasoning": "Current 12-hour negative returns (-1.34% for BTC and -1.65% for ETH) reflect mild downward drift but do not cross the high-conviction statistical threshold required for optimal mean-reversion entry according to our falsifiable criteria. Therefore, cash should be preserved with a HOLD action.",
+        "source_titles": [
+          "Optimal Mean Reversion Trading",
+          "TRADING MULTIPLE MEAN REVERSION"
+        ],
+        "virtual_action": "HOLD"
+      }
+    ]
   },
   "S04": {
     "events": [],
     "cash": 100.0,
     "positions": {},
-    "seen": {}
+    "seen": {},
+    "ai_last_day": "2026-10-26",
+    "ai_research": [
+      {
+        "day": "2026-10-26",
+        "hypothesis": "Minor intraday gap-downs (-1.0% to -2.0%) in large-cap crypto assets accompanied by no structural volume anomalies tend to mean-revert within 24 hours under normal market conditions.",
+        "test_plan": "Monitor assets exhibiting a 12-hour return between -1% and -2% at 02:00 UTC, track subsequent 24-hour high-low recovery relative to baseline volatility, and reject the hypothesis if median forward return fails to exceed transaction cost hurdles.",
+        "reasoning": "Although ETH-USD and BTC-USD exhibit minor negative returns over the last 12 hours (-1.65% and -1.34% respectively), current market noise and potential wash trading distortions highlighted in academic literature necessitate caution. Furthermore, holding cash preserves flexibility until a cleaner statistical edge or a sharper gap-down quality signal emerges.",
+        "source_titles": [
+          "CBITS: Crypto BERT Incorporated Trading System",
+          "Crypto Wash Trading"
+        ],
+        "virtual_action": "HOLD"
+      }
+    ]
   },
   "S05": {
     "events": [],
     "cash": 100.0,
     "positions": {},
-    "seen": {}
+    "seen": {},
+    "ai_last_day": "2026-10-26",
+    "ai_research": [
+      {
+        "day": "2026-10-26",
+        "hypothesis": "Applying a standard opening range breakout model to 24/7 crypto spot markets without a fixed daily market open session introduces high false-breakout noise from low-liquidity overnight intervals.",
+        "test_plan": "Define the opening range using the fixed 00:00 to 01:00 UTC hourly bar on BTC-USD, entering long if the price exceeds the high with volume expansion, and test over a rolling 30-day out-of-sample period.",
+        "reasoning": "Current crypto assets are displaying negative 12-hour returns with low volatility compression, providing no clear breakout signals. Therefore, a HOLD action is warranted until a valid opening range breakout condition is met.",
+        "source_titles": [
+          "Opening Range Breakout Stock Trading Algorithmic Model",
+          "Opening Range Breakout",
+          "Enhancing Opening Range Breakout Strategies with LSTM-Based True Range Prediction"
+        ],
+        "virtual_action": "HOLD"
+      }
+    ]
   },
   "S06": {
-    "events": [],
-    "cash": 100.0,
-    "positions": {},
-    "seen": {}
+    "events": [
+      {
+        "worker": "S06",
+        "seq": 1,
+        "timestamp": "2026-10-26T03:21:59.923013Z",
+        "asset_class": "crypto",
+        "symbol": "SOL/USD",
+        "side": "BUY",
+        "qty": 0.098527,
+        "price": 100.48999786376953,
+        "fee": 0.01980195603904724,
+        "multiplier": 1,
+        "source_id": "YAHOO_AI:SOL-USD:2026-10-26T02:00:00Z",
+        "balance_after": 90.07922002,
+        "positions_after": {
+          "crypto:SOL/USD": 0.098527
+        },
+        "previous_hash": "GENESIS",
+        "hash": "63fddabd7131841c21dc0e72b21ab1b0a2e09e5b60fc02171de0fe86c3607303"
+      }
+    ],
+    "cash": 90.07922002,
+    "positions": {
+      "crypto:SOL/USD": 0.098527
+    },
+    "seen": {},
+    "ai_seen": {
+      "SOL-USD": "2026-10-26T02:00:00Z"
+    },
+    "ai_last_day": "2026-10-26",
+    "ai_research": [
+      {
+        "day": "2026-10-26",
+        "hypothesis": "In short-term crypto corrections, assets exhibiting milder negative relative returns over a 12-hour lookback (lower drawdown magnitude) demonstrate relative strength and outperform peers during subsequent market stabilization.",
+        "test_plan": "Enter a long position in SOL-USD based on its superior relative strength (-0.75% vs BTC's -1.34% and ETH's -1.65%) over the last 12 hours. Hold for 24 hours and evaluate whether SOL-USD outperforms the equally-weighted basket return over the holding period. Falsify if SOL-USD underperforms the average of BTC and ETH over the test window.",
+        "reasoning": "SOL-USD shows smaller downside participation (-0.75%) compared to BTC (-1.34%) and ETH (-1.65%) over the past 12 hours. According to relative strength principles, the asset declining the least during a market-wide pullback tends to lead the recovery when buying pressure returns.",
+        "source_titles": [
+          "A Relative Strength Asset Allocation Trading System"
+        ],
+        "virtual_action": "BUY SOL-USD (VIRTUAL_CLOSE_PROXY)"
+      }
+    ]
   },
   "S07": {
     "events": [],
     "cash": 100.0,
     "positions": {},
-    "seen": {}
+    "seen": {},
+    "ai_last_day": "2026-10-26",
+    "ai_research": [
+      {
+        "day": "2026-10-26",
+        "hypothesis": "Short-term negative returns across major crypto assets (BTC-USD, ETH-USD, SOL-USD) over the last 12 hours indicate mild retracement rather than established structural trend continuation under current volatility conditions.",
+        "test_plan": "Monitor price action for a sustained breakout above the 24-hour moving average before entering any trend-following long position.",
+        "reasoning": "As a trend-following agent, minor negative returns without confirmed momentum expansion or clear directional breakouts do not offer a high-probability entry signal. Remaining in cash (HOLD) avoids false breakouts during choppy consolidation phases.",
+        "source_titles": [
+          "A Deep Trend-Following Trading Strategy for Equity Markets",
+          "Trend Following System for Stock Index Trading"
+        ],
+        "virtual_action": "HOLD"
+      }
+    ]
   },
   "S08": {
     "events": [],
     "cash": 100.0,
     "positions": {},
-    "seen": {}
+    "seen": {},
+    "ai_last_day": "2026-10-26",
+    "ai_research": [
+      {
+        "day": "2026-10-26",
+        "hypothesis": "During periods of moderate intraday volatility compression across major crypto assets like BTC-USD following minor negative 12-hour drift, mean-reversion boundary tests fail to achieve statistical significance without concurrent volume expansion, rendering compression-based breakout entries unfalsifiable and unprofitable on a net basis after friction.",
+        "test_plan": "Monitor hourly high-low range compression over a 24-hour rolling window alongside volume moving averages; record false breakout rates exceeding 55% during low-liquidity weekend sessions to confirm lack of edge.",
+        "reasoning": "Given the current low volatility compression state and mixed prior study quality regarding noise-band strategies, no execution signal meets the strict criteria for a profitable risk-adjusted entry. Holding cash preserves capital.",
+        "source_titles": [
+          "CBITS: Crypto BERT Incorporated Trading System",
+          "Foreign Equity Trading and Average Stock-Return Volatility"
+        ],
+        "virtual_action": "HOLD"
+      }
+    ]
   },
   "S09": {
     "events": [],
     "cash": 100.0,
     "positions": {},
-    "seen": {}
+    "seen": {},
+    "ai_last_day": "2026-10-26",
+    "ai_research": [
+      {
+        "day": "2026-10-26",
+        "hypothesis": "Intraday mean-reversion following a mild multi-hour pullback in major crypto pairs (BTC/ETH) lacks robust statistical edge when cointegration tests indicate trending rather than stationary spreads under macro headwinds.",
+        "test_plan": "Observe 12-hour return persistence across BTC-USD and ETH-USD over a 7-day forward window; check if spreads revert to rolling 24-hour mean within 4 hours or continue trend continuation.",
+        "reasoning": "Current market conditions show synchronized negative returns across BTC, ETH, and SOL over the last 12 hours. Given mixed-quality historical signal replication and lack of clear mean-reversion triggers in the current cointegration framework, cash preservation via HOLD is optimal.",
+        "source_titles": [
+          "GARCH-LSTM Long/Short Pair Trading Strategies on ETH/BTC pair",
+          "Time of Day Effect in Cryptocurrency Trading: Evidence from Btc and Eth",
+          "Cointegration between ETH and BTC"
+        ],
+        "virtual_action": "HOLD"
+      }
+    ]
   },
   "S10": {
     "events": [],
     "cash": 100.0,
     "positions": {},
-    "seen": {}
+    "seen": {},
+    "ai_last_day": "2026-10-26",
+    "ai_research": [
+      {
+        "day": "2026-10-26",
+        "hypothesis": "Given that the instruction set allows long options research but strictly prohibits execution without reliable contract chains in the current execution environment, attempting to trade options without verifiable real-time option chains introduces uncontrollable execution slippage and model misspecification.",
+        "test_plan": "Monitor implied volatility surfaces against realized volatility models for BTC and ETH over a rolling 30-day window to identify mispricings before executing risk-defined structures.",
+        "reasoning": "No reliable contract chain data is currently provided in the eligible symbols feed to execute risk-defined long options. Maintaining a HOLD posture preserves capital until valid contract pricing is available.",
+        "source_titles": [
+          "Distribution based Trading Strategies for Crypto Options",
+          "Risk-Optimized Crypto Trading Bot"
+        ],
+        "virtual_action": "HOLD"
+      }
+    ]
   }
 }

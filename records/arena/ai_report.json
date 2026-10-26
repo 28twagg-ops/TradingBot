@@ -4,29 +4,130 @@
   "note": "Market bar close may not be executable; no independent fill proof.",
   "workers": {
     "S01": {
-      "status": "GEMINI_PROVIDER_SETUP_ERROR",
-      "reason": "HTTP_404_NOT_FOUND"
+      "status": "RESEARCHED",
+      "action": "HOLD",
+      "hypothesis": "Given that the prior live records and replications of intraday VWAP-stop noise strategies show sub-1 profit factors and underperformance during negative 12-hour momentum regimes, initiating long positions on slightly negative crypto assets (BTC-USD, ETH-USD, SOL-USD) without a robust multi-timeframe volume confirmation will result in further downside drag.",
+      "test_plan": "Monitor hourly VWAP crossovers and volume spikes across BTC-USD and ETH-USD over the next 24 hours. Wait for a statistically significant positive volume confirmation before committing virtual capital.",
+      "source_titles": [
+        "INTRADAY TRADING PATTERNS IN THE EQUITY OPTIONS MARKETS",
+        "Machine Learning-based Intraday Trading Strategy using Simple Moving Average Crossovers, Traded Volume and VWAP Confirmations",
+        "On-line VWAP Trading Strategies"
+      ]
+    },
+    "S02": {
+      "status": "RESEARCHED",
+      "action": "HOLD",
+      "hypothesis": "Noise trading models in cryptocurrency markets (inspired by informed vs. noise trading structures) suggest that mild negative 12h price drift (-0.75% to -1.65%) coupled with high uncertainty and untrusted social sentiment fails to generate a statistically robust directional edge for unhedged long-only spot deployment.",
+      "test_plan": "Monitor assets experiencing minor intraday pullbacks for mean-reversion continuation versus trend breakdown over a 24-hour forward testing window without committing virtual capital until a positive statistical filter on volume and volatility is satisfied.",
+      "source_titles": [
+        "CBITS: Crypto BERT Incorporated Trading System",
+        "Informed trading, noise trading and the cost of equity",
+        "Crypto Wash Trading"
+      ]
+    },
+    "S03": {
+      "status": "RESEARCHED",
+      "action": "HOLD",
+      "hypothesis": "Short-term mean-reversion pullbacks of 1.34% to 1.65% over the last 12 hours in major crypto assets like BTC-USD and ETH-USD do not provide a statistically robust edge for immediate entry without wider dispersion band extremes exceeding 2.5 standard deviations.",
+      "test_plan": "Monitor hourly price deviations from the 24-hour moving average across BTC-USD and ETH-USD. Evaluate whether entry signals generated only after a 2.5 standard deviation move yield a positive expectancy over a 24-hour holding period.",
+      "source_titles": [
+        "Optimal Mean Reversion Trading",
+        "TRADING MULTIPLE MEAN REVERSION"
+      ]
+    },
+    "S04": {
+      "status": "RESEARCHED",
+      "action": "HOLD",
+      "hypothesis": "Minor intraday gap-downs (-1.0% to -2.0%) in large-cap crypto assets accompanied by no structural volume anomalies tend to mean-revert within 24 hours under normal market conditions.",
+      "test_plan": "Monitor assets exhibiting a 12-hour return between -1% and -2% at 02:00 UTC, track subsequent 24-hour high-low recovery relative to baseline volatility, and reject the hypothesis if median forward return fails to exceed transaction cost hurdles.",
+      "source_titles": [
+        "CBITS: Crypto BERT Incorporated Trading System",
+        "Crypto Wash Trading"
+      ]
+    },
+    "S05": {
+      "status": "RESEARCHED",
+      "action": "HOLD",
+      "hypothesis": "Applying a standard opening range breakout model to 24/7 crypto spot markets without a fixed daily market open session introduces high false-breakout noise from low-liquidity overnight intervals.",
+      "test_plan": "Define the opening range using the fixed 00:00 to 01:00 UTC hourly bar on BTC-USD, entering long if the price exceeds the high with volume expansion, and test over a rolling 30-day out-of-sample period.",
+      "source_titles": [
+        "Opening Range Breakout Stock Trading Algorithmic Model",
+        "Opening Range Breakout",
+        "Enhancing Opening Range Breakout Strategies with LSTM-Based True Range Prediction"
+      ]
+    },
+    "S06": {
+      "status": "RESEARCHED",
+      "action": "BUY SOL-USD (VIRTUAL_CLOSE_PROXY)",
+      "hypothesis": "In short-term crypto corrections, assets exhibiting milder negative relative returns over a 12-hour lookback (lower drawdown magnitude) demonstrate relative strength and outperform peers during subsequent market stabilization.",
+      "test_plan": "Enter a long position in SOL-USD based on its superior relative strength (-0.75% vs BTC's -1.34% and ETH's -1.65%) over the last 12 hours. Hold for 24 hours and evaluate whether SOL-USD outperforms the equally-weighted basket return over the holding period. Falsify if SOL-USD underperforms the average of BTC and ETH over the test window.",
+      "source_titles": [
+        "A Relative Strength Asset Allocation Trading System"
+      ]
+    },
+    "S07": {
+      "status": "RESEARCHED",
+      "action": "HOLD",
+      "hypothesis": "Short-term negative returns across major crypto assets (BTC-USD, ETH-USD, SOL-USD) over the last 12 hours indicate mild retracement rather than established structural trend continuation under current volatility conditions.",
+      "test_plan": "Monitor price action for a sustained breakout above the 24-hour moving average before entering any trend-following long position.",
+      "source_titles": [
+        "A Deep Trend-Following Trading Strategy for Equity Markets",
+        "Trend Following System for Stock Index Trading"
+      ]
+    },
+    "S08": {
+      "status": "RESEARCHED",
+      "action": "HOLD",
+      "hypothesis": "During periods of moderate intraday volatility compression across major crypto assets like BTC-USD following minor negative 12-hour drift, mean-reversion boundary tests fail to achieve statistical significance without concurrent volume expansion, rendering compression-based breakout entries unfalsifiable and unprofitable on a net basis after friction.",
+      "test_plan": "Monitor hourly high-low range compression over a 24-hour rolling window alongside volume moving averages; record false breakout rates exceeding 55% during low-liquidity weekend sessions to confirm lack of edge.",
+      "source_titles": [
+        "CBITS: Crypto BERT Incorporated Trading System",
+        "Foreign Equity Trading and Average Stock-Return Volatility"
+      ]
+    },
+    "S09": {
+      "status": "RESEARCHED",
+      "action": "HOLD",
+      "hypothesis": "Intraday mean-reversion following a mild multi-hour pullback in major crypto pairs (BTC/ETH) lacks robust statistical edge when cointegration tests indicate trending rather than stationary spreads under macro headwinds.",
+      "test_plan": "Observe 12-hour return persistence across BTC-USD and ETH-USD over a 7-day forward window; check if spreads revert to rolling 24-hour mean within 4 hours or continue trend continuation.",
+      "source_titles": [
+        "GARCH-LSTM Long/Short Pair Trading Strategies on ETH/BTC pair",
+        "Time of Day Effect in Cryptocurrency Trading: Evidence from Btc and Eth",
+        "Cointegration between ETH and BTC"
+      ]
+    },
+    "S10": {
+      "status": "RESEARCHED",
+      "action": "HOLD",
+      "hypothesis": "Given that the instruction set allows long options research but strictly prohibits execution without reliable contract chains in the current execution environment, attempting to trade options without verifiable real-time option chains introduces uncontrollable execution slippage and model misspecification.",
+      "test_plan": "Monitor implied volatility surfaces against realized volatility models for BTC and ETH over a rolling 30-day window to identify mispricings before executing risk-defined structures.",
+      "source_titles": [
+        "Distribution based Trading Strategies for Crypto Options",
+        "Risk-Optimized Crypto Trading Bot"
+      ]
     }
   },
   "council": {
     "J01": {
-      "verdict": "NEEDS_MORE_EVIDENCE",
-      "finding": "AI provider not available: HTTP_404_NOT_FOUND"
+      "judge": "J01",
+      "verdict": "REJECT_CLAIM",
+      "finding": "Worker summaries predominantly recommend HOLD positions or identify untrusted virtual pricing contexts, lacking verifiable real-time execution guarantees. S06 attempts a BUY action based on a historical relative strength hypothesis, but historical studies and virtual fills lack independently verified execution prices and cannot be certified as real profit.",
+      "requested_check": "Provide multi-timeframe volume confirmation and independently audited execution price feeds before considering any live capital allocation."
     },
     "J02": {
-      "verdict": "NEEDS_MORE_EVIDENCE",
-      "finding": "AI provider not available: HTTP_404_NOT_FOUND"
+      "judge": "J02",
+      "verdict": "REJECT_CLAIM",
+      "finding": "The overwhelming majority of worker summaries (9 out of 10) advocate for a HOLD action due to lack of statistical edge, low-liquidity noise, or lack of volume confirmation during minor negative momentum regimes. Only one worker (S06) suggests a BUY, which lacks robust validation against the prevailing negative drift and volatility compression noted elsewhere. Furthermore, paper returns cannot be certified as real profit due to execution limitations.",
+      "requested_check": "Provide out-of-sample forward validation with transaction fee adjustments and multi-timeframe volume confirmation before attempting live or scaled deployment on negative crypto momentum regimes."
     },
     "J03": {
       "verdict": "NEEDS_MORE_EVIDENCE",
-      "finding": "AI provider not available: HTTP_404_NOT_FOUND"
+      "finding": "AI model quota exhausted"
     }
   },
-  "api_calls": 0,
-  "quota_exhausted": false,
-  "provider_error": "HTTP_404_NOT_FOUND",
-  "provider_halted": true,
-  "council_disagreement": false,
+  "api_calls": 12,
+  "quota_exhausted": true,
+  "council_disagreement": true,
   "minority_instruction": "Judges may reconsider only after inspecting the independently verified underlying evidence; voting is not evidence.",
   "paper_promotions": 0,
   "live_trading_enabled": false
