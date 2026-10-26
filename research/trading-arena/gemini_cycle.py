@@ -52,6 +52,10 @@ RULES = ("You are ONE independent trading research agent in a $100 VIRTUAL-ONLY 
 class QuotaExhausted(Exception):
     pass
 
+class ProviderConfigurationError(RuntimeError):
+    """Sanitized provider status; never retain tokens, requests or raw response."""
+    pass
+
 
 def gemini_json(role, payload, api_key=None, model=None, timeout=40):
     """Send one capped request, no retry or hidden paid-tier fallback."""
@@ -73,9 +77,17 @@ def gemini_json(role, payload, api_key=None, model=None, timeout=40):
         with urllib.request.urlopen(req, timeout=timeout) as response:
             data=json.load(response)
     except urllib.error.HTTPError as err:
-        if err.code in (429, 403):
-            raise QuotaExhausted("Gemini quota unavailable; stop this day's AI calls") from None
-        raise RuntimeError("Gemini HTTP failure: " + str(err.code)) from None
+        try:
+            failure = json.loads(err.read(1200).decode("utf-8", errors="replace"))
+            status = str(failure.get("error", {}).get("status", "UNKNOWN"))
+        except (ValueError, AttributeError, TypeError):
+            status = "UNKNOWN"
+        # Only fixed-format provider status, never echo provider response or token.
+        if not status.isupper() or len(status) > 45 or not all(c.isupper() or c == "_" for c in status):
+            status = "UNKNOWN"
+        if err.code == 429 or status == "RESOURCE_EXHAUSTED":
+            raise QuotaExhausted("Gemini free quota unavailable") from None
+        raise ProviderConfigurationError("HTTP_"+str(err.code)+"_"+status) from None
     texts=[p.get("text","") for c in data.get("candidates",[])
           for p in c.get("content",{}).get("parts",[]) if "text" in p]
     if not texts:
@@ -271,6 +283,11 @@ def run_cycle(accounts, prices, provider, now):
                                      "hypothesis":decision["hypothesis"],
                                      "test_plan":decision["test_plan"],
                                      "source_titles":decision["source_titles"]}
+        except ProviderConfigurationError as exc:
+            result["provider_error"]=str(exc)
+            result["workers"][wid]={"status":"GEMINI_PROVIDER_SETUP_ERROR","reason":str(exc)}
+            result["provider_halted"]=True
+            break
         except QuotaExhausted:
             result["quota_exhausted"]=True
             result["workers"][wid]={"status":"FREE_QUOTA_EXHAUSTED"}
@@ -284,9 +301,9 @@ def run_cycle(accounts, prices, provider, now):
                        "audit":council(recovered_account(wid,accounts[wid]).statement())["status"]
                        if x.get("status")=="RESEARCHED" else "INCOMPLETE"})
     for judge_id,mandate in JUDGES.items():
-        if result["quota_exhausted"]:
+        if result["quota_exhausted"] or result.get("provider_halted"):
             result["council"][judge_id]={"verdict":"NEEDS_MORE_EVIDENCE",
-                                          "finding":"No remaining free AI quota"}
+                "finding":"AI provider not available: "+str(result.get("provider_error","FREE_QUOTA_EXHAUSTED"))}
             continue
         prompt={"role":judge_id,"completed_worker_summaries":sample,
                 "known_limit":"All Yahoo virtual fills lack independently verified execution prices; "
