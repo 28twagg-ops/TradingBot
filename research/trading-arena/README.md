@@ -73,7 +73,7 @@ There is no Research Director agent. Exactly ten individually prompted strategis
 ### Required one-time credential setup — user controls Google authorization
 
 1. Open https://aistudio.google.com/apikey and get an API key in a Free Tier project with **billing disabled**.
-2. Open https://github.com/28twagg-ops/TradingBot/settings/secrets/actions and choose New repository secret. Set name GEMINI_API_KEY, paste its value, and save.
+2. Open https://github.com/28twagg-ops/TradingBot/settings/secrets/actions and choose New repository secret. Set name Gemini_API_Key (exact capitalization), paste its value, and save. The workflow maps this existing GitHub secret to the internal GEMINI_API_KEY environment variable.
 
 Never paste a key into ChatGPT, the repository, or a source file. Once configured, the following scheduled job at 19:17 UTC will attempt AI research without repeated prompting.
 
