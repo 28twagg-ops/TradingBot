@@ -45,13 +45,20 @@ jobs:
       - name: Run all 10 simulated workers, never broker orders
         run: |
           python research/trading-arena/run_virtual.py --dir /tmp/arena-state/records/arena
+      - name: Optional daily Gemini research and three AI council reviews
+        # Never blocks free rule-based paper simulation when no API key is configured.
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-2.5-flash-lite
+        run: |
+          python research/trading-arena/gemini_cycle.py --dir /tmp/arena-state/records/arena
       - name: Commit only Arena state to the separate ledger branch
         shell: bash
         run: |
           set -euo pipefail
           git -C /tmp/arena-state config user.name "paper-arena[bot]"
           git -C /tmp/arena-state config user.email "paper-arena@users.noreply.github.com"
-          git -C /tmp/arena-state add records/arena/state.json records/arena/last_run.json records/arena/DASHBOARD.md
+          git -C /tmp/arena-state add -A records/arena/
           if ! git -C /tmp/arena-state diff --cached --quiet; then
             git -C /tmp/arena-state commit -m "Arena virtual snapshots"
             git -C /tmp/arena-state push origin HEAD:refs/heads/arena-ledger
