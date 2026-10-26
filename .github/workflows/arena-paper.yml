@@ -10,7 +10,7 @@ on:
   schedule:
     - cron: '17 */2 * * *'
     # Daily Gemini window (the AI script runs only when UTC hour == 19)
-    - cron: '17 19 * * *'
+    - cron: '17 19 * * 0'
 
 permissions:
   contents: write
@@ -47,17 +47,13 @@ jobs:
       - name: Run all 10 simulated workers, never broker orders
         run: |
           python research/trading-arena/run_virtual.py --dir /tmp/arena-state/records/arena
-      - name: Optional daily Gemini research and three AI council reviews
-        # Never blocks free rule-based paper simulation when no API key is configured.
+      - name: Weekly Gemini specialist council (up to three free AI calls)
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '17 19 * * 0')
         env:
           GEMINI_API_KEY: ${{ secrets.Gemini_API_Key }}
           GEMINI_MODEL: gemini-3.5-flash-lite
-        run: |
-          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] || [ "$GITHUB_EVENT_NAME" = "push" ]; then
-            python research/trading-arena/gemini_cycle.py --dir /tmp/arena-state/records/arena --force
-          else
-            python research/trading-arena/gemini_cycle.py --dir /tmp/arena-state/records/arena
-          fi
+        run: python research/trading-arena/gemini_special.py --dir /tmp/arena-state/records/arena
+
       - name: Commit only Arena state to the separate ledger branch
         shell: bash
         run: |
