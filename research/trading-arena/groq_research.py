@@ -35,7 +35,7 @@ def groq_json(instructions, prompt):
         {"role":"system","content":instructions},
         {"role":"user","content":json.dumps(prompt,allow_nan=False)[:6300]}],
         "response_format":{"type":"json_object"},
-        "reasoning_format":"hidden", "temperature":.7,"max_completion_tokens":500}
+        "include_reasoning":False, "temperature":.7,"max_completion_tokens":900}
     req=urllib.request.Request(API, data=json.dumps(body).encode(),
         method="POST",headers={"Authorization":"Bearer "+key,
                               "Content-Type":"application/json"})
@@ -43,8 +43,16 @@ def groq_json(instructions, prompt):
         with urllib.request.urlopen(req,timeout=35) as response:
             response_data=json.load(response)
     except urllib.error.HTTPError as e:
-        # The provider response can contain secrets: only keep numeric status.
-        raise RuntimeError("GROQ_HTTP_"+str(e.code)) from None
+        # Only provider-approved error codes, never provider message or raw response.
+        try:
+            detail=json.loads(e.read(1500).decode("utf-8",errors="replace")).get("error",{})
+            provider_code=detail.get("code") or detail.get("type") or "unknown"
+            provider_code=str(provider_code)
+            if len(provider_code)>75 or not all(c.isalnum() or c in "_-" for c in provider_code):
+                provider_code="unknown"
+        except (ValueError,AttributeError,TypeError):
+            provider_code="unknown"
+        raise RuntimeError("GROQ_HTTP_"+str(e.code)+"_"+provider_code) from None
     message=response_data["choices"][0]["message"]["content"]
     return json.loads(message)
 
