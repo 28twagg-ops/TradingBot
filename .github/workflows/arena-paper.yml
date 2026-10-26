@@ -9,6 +9,8 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 */2 * * *'
+    # Daily Gemini window (the AI script runs only when UTC hour == 19)
+    - cron: '17 19 * * *'
 
 permissions:
   contents: write
