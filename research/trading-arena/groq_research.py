@@ -38,7 +38,8 @@ def groq_json(instructions, prompt):
         "include_reasoning":False, "temperature":.7,"max_completion_tokens":900}
     req=urllib.request.Request(API, data=json.dumps(body).encode(),
         method="POST",headers={"Authorization":"Bearer "+key,
-                              "Content-Type":"application/json"})
+                              "Content-Type":"application/json",
+                              "User-Agent":"TradingBotArena/1.0.0"})
     try:
         with urllib.request.urlopen(req,timeout=35) as response:
             response_data=json.load(response)
