@@ -1349,3 +1349,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-10-26 13:48:34,2026-10-26,SELL,WFRD,EarningsDrift,86.95,34.23,0.21,0.07,3,max_hold 3d (+0.2%),bull,227.24
 2026-10-26 19:47:05,2026-10-26,SELL,AES,Pullback50,15.01,34.12,0.17,0.06,0,midline (+0.2%),bull,227.54
 2026-10-26 19:47:36,2026-10-26,SELL,ABT,Pullback50,104.53,34.4,0.92,0.32,0,midline (+0.7%),bull,227.53
+2026-10-26 19:57:24,2026-10-26,SELL,TECH,Pullback50,72.7,34.12,0.01,0.0,0,midline (+0.0%),bull,227.6

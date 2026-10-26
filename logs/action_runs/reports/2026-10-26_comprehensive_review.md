@@ -15495,3 +15495,219 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261026T195652Z
+
+- UTC timestamp: `20261026T195652Z`
+- GitHub run: [#13881](https://github.com/28twagg-ops/TradingBot/actions/runs/40390989182)
+- Run id: `40390989182`
+- Live bot: exit=`0`, duration=`32s`
+- Live options: exit=`0`, duration=`1s`
+- Paper options: exit=`0`, duration=`14s`
+- Full logs: `logs/action_runs/20261026T195652Z_live_bot.log`, `logs/action_runs/20261026T195652Z_live_options.log`, `logs/action_runs/20261026T195652Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1747 | 48.1 | -30.0 | +35.8 | $+18,420 |
+| TAINTED | 2046 | 31.7 | -41.5 | +9.5 | $-11,950 |
+| KEEP-only | 850 | 60.4 | +50.8 | +51.8 | $+12,478 |
+| KEEP-only recent | 665 | 59.2 | +52.9 | +57.8 | $+8,969 |
+
+- KEEP strategies (24): S163, S164, S166, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S396, S397, S403, S404, S406, S410, S411
+- KILL strategies (22): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S398, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-10-26T15:57:28.309210-04:00","date":"2026-10-26","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":1.2,"phases_s":{"reconcile":0.12,"cancel":0.04,"manage":0.5,"protective_stops":0.06},"signals":0,"placed":0,"equity":992745.95,"open_positions":4,"pending_orders":0,"open_lots":4,"submitted_today":14,"filled_today":13,"unattributed_contracts":0,"top_signals":[],"github_run":"13881","github_run_id":"40390989182","status":"ok","data_quality":{"clean":{"n":1747,"win":48.08,"med":-30.0,"avg":35.81,"pnl":18419.83},"tainted":{"n":2046,"win":31.67,"med":-41.46,"avg":9.53,"pnl":-11950.28},"keep_only":{"n":850,"win":60.35,"med":50.75,"avg":51.76,"pnl":12478.45},"keep_only_recent":{"n":665,"win":59.25,"med":52.94,"avg":57.76,"pnl":8969.0},"keep_strategies":["S163","S164","S166","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S396","S397","S403","S404","S406","S410","S411"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S398","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (89 earlier lines - see full log file)
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                          cached signals (signals fresh (21.3m))|
+|  Universe scanned in prep                                           900|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  34                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  TECH     Pullback50      eq     $72.67   63.3   -1.23   50MA bounce (+|
+|  CDNS     VWAP_Reclaim    eq     $328.95  35.0   1.17    VWAP reclaim V|
+|  CSCO     Pullback50      eq     $110.19  35.6   -1.92   50MA bounce (-|
+|  GD       Pullback50      eq     $356.15  75.5   -2.10   50MA bounce (+|
+|  HPE      Pullback50      eq     $59.01   32.5   -1.81   50MA bounce (-|
+|  IEX      Pullback50      eq     $231.81  43.1   -2.12   50MA bounce (+|
+|  JCI      Pullback50      eq     $148.03  37.1   -0.59   50MA bounce (+|
+|  NDSN     Pullback50      eq     $323.76  38.8   -1.10   50MA bounce (+|
+|  RF       Pullback50      eq     $28.70   71.2   -1.19   50MA bounce (-|
+|  ROK      Pullback50      eq     $432.52  37.8   -1.85   50MA bounce (+|
+|  RTX      Pullback50      eq     $196.84  66.4   -0.82   50MA bounce (+|
+|  SLB      Pullback50      eq     $52.85   61.4   -0.97   50MA bounce (+|
+|  TSLA     TrendResumpti~  eq     $393.26  55.8   0.57    HH/HL resumpti|
+|  SYF      Pullback50      eq     $74.81   59.4   -1.20   50MA bounce (-|
+|  TT       Pullback50      eq     $456.88  40.3   -1.32   50MA bounce (+|
+|  USB      Pullback50      eq     $59.92   63.3   -1.70   50MA bounce (-|
+|  VTR      Pullback50      eq     $87.43   69.2   -1.82   50MA bounce (-|
+|  AHR      Pullback50      eq     $53.40   63.6   -1.88   50MA bounce (+|
+|  AMH      Pullback50      eq     $32.14   69.6   -2.36   50MA bounce (+|
+|  AVNT     Pullback50      eq     $41.26   48.7   -1.23   50MA bounce (-|
+|  CART     VWAP_Reclaim    eq     $58.63   87.2   2.92    VWAP reclaim V|
+|  CFR      Pullback50      eq     $159.32  64.5   -0.02   50MA bounce (+|
+|  CNO      Pullback50      eq     $54.32   51.7   -1.95   50MA bounce (-|19:57:24  INFO        place_all_stops: checking 2 positions...
+19:57:24  INFO        STOP skipped AME: fractional (0.1401 shares) — software exit will handle it
+19:57:24  INFO        STOP already live WHR @ $26.22
+19:57:24  INFO        place_eod_stops: updating 2 stops to current price...
+19:57:24  INFO        EOD stop skip AME: 0.1401 shares (fractional) — ext_exits will cover
+19:57:24  INFO        EOD stop: cancelled old stop WHR
+19:57:24  WARNING     EOD stop failed WHR: {"available":"0.293698339","code":40310000,"existing_qty":"1.293698339","held_for_orders":"1","message":"insufficient qty available for order (requested: 1, available: 0.293698339)","related_orders":["8ff481f5-34ce-40d2-8f81-7008af2d11ff"],"symbol":"WHR"}
+19:57:24  INFO        Daily log -> logs/daily/2026-10-26.md
+19:57:24  INFO        Dashboard written → logs/dashboard.md
+
+|  LECO     RSIRecovery     eq     $259.86  34.4   0.94    RSI 29.9→34.4 |
+|  LNTH     Pullback50      eq     $99.97   50.6   -1.65   50MA bounce (-|
+|  NOV      Pullback50      eq     $20.16   64.0   -1.51   50MA bounce (+|
+|  PAG      Pullback50      eq     $212.35  70.4   -0.75   50MA bounce (+|
+|  PATH     Pullback50      eq     $14.31   65.8   -0.72   50MA bounce (-|
+|  RGEN     Pullback50      eq     $178.08  53.1   -1.21   50MA bounce (+|
+|  SLAB     Pullback50      eq     $221.68  38.5   -1.92   50MA bounce (+|
+|  TXNM     Pullback50      eq     $58.42   45.4   -1.33   50MA bounce (+|
+|  TTMI     RSIRecovery     eq     $87.79   30.5   0.60    RSI 25.4→30.5 |
+|  VNO      Pullback50      eq     $34.96   59.9   -2.56   50MA bounce (-|
+|  WHR      MomReversal     eq     $26.33   35.5   2.67    -29.8% drop/60|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   RubberBand + GapDown (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             34|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             2|
+|  Equity                                                         $227.60|
+|  Cash                                                           $159.40|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-10-26T15:57:25.539936-04:00 share=25% ===
+2026-10-26 15:57:25,539 INFO === options_live_micro LIVE 2026-10-26T15:57:25.539936-04:00 share=25% ===
+Live account equity $227.61 cash $159.40 #225458845 options_level=3
+2026-10-26 15:57:25,585 INFO Live account equity $227.61 cash $159.40 #225458845 options_level=3
+Live micro: manage/exits only
+2026-10-26 15:57:25,611 INFO Live micro: manage/exits only
+Live micro done. open_options=0 lots=0
+2026-10-26 15:57:25,620 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+... (199 earlier lines - see full log file)
+| S173 | 1911 | 17 |
+| S174 | 891 | 7 |
+
+### Raw log lines per day (debug / multi-bucket)
+
+| Date       | S163 | S164 | S165 | S166 | S167 | S168 | S169 | S170 | S171 | S172 | S175 | S173 | S174 | Total |
+|------------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|------:|
+| 2026-07-07 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |    0 |   100 |
+| 2026-07-08 |    0 |    0 |  100 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |  100 |   300 |
+| 2026-07-09 |    0 |    0 |   24 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  100 |   15 |   139 |
+| 2026-07-10 |    0 |    0 |  242 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  230 |  202 |   674 |
+| 2026-07-13 |    0 |    0 |  190 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  212 |  188 |   590 |
+| 2026-07-14 |    0 |    0 |  194 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  185 |  106 |   485 |
+| 2026-07-15 |    0 |    0 |  146 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  154 |   58 |   358 |
+| 2026-07-16 |    0 |    0 |  179 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  205 |   58 |   442 |
+| 2026-07-17 |    0 |    0 |  127 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  207 |   58 |   392 |
+| 2026-07-20 |    0 |    0 |  107 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  143 |   58 |   308 |
+| 2026-07-21 |   30 |   35 |  113 |   30 |   35 |   35 |    0 |    0 |    0 |    0 |    0 |  118 |   48 |   444 |
+| 2026-07-22 |   40 |   47 |   86 |   15 |   45 |   20 |    0 |    0 |    0 |    0 |    0 |   77 |    0 |   330 |
+| 2026-07-23 |   30 |   42 |   50 |   15 |   40 |   20 |    0 |    0 |    0 |    0 |    0 |   40 |    0 |   237 |
+| 2026-07-24 |   75 |   87 |   85 |   15 |   77 |   55 |    0 |    0 |    0 |    0 |    0 |   40 |    0 |   434 |
+| 2026-07-27 |   14 |    0 |   14 |   14 |   14 |   14 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    70 |
+| 2026-07-28 |    6 |    8 |    8 |    8 |    8 |    6 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    44 |
+| 2026-07-29 |   10 |   10 |   10 |    8 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    48 |
+| 2026-09-01 |    8 |    6 |    6 |    2 |    6 |    6 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    34 |
+| 2026-09-02 |   10 |   10 |   10 |    2 |   10 |   14 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    56 |
+| 2026-09-03 |   10 |    4 |    4 |   16 |    4 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    48 |
+| 2026-09-04 |   12 |   14 |    8 |   10 |    8 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    62 |
+| 2026-09-08 |    4 |    8 |    8 |    0 |    8 |    8 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    36 |
+| 2026-09-10 |   10 |   10 |    6 |    0 |   10 |    8 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    44 |
+| 2026-09-15 |    4 |   14 |   14 |    0 |   14 |    8 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    54 |
+| 2026-09-16 |    4 |    4 |    4 |    0 |    4 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    16 |
+| 2026-09-18 |    4 |    8 |    0 |    4 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    16 |
+| 2026-09-24 |   10 |   12 |   12 |    0 |   11 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    55 |
+| 2026-09-25 |   12 |   14 |   12 |    0 |   12 |   12 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    62 |
+| 2026-09-28 |    2 |    4 |    2 |    2 |    2 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    14 |
+| 2026-10-02 |    0 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     2 |
+| 2026-10-07 |    2 |    2 |    0 |    2 |    2 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    10 |
+| 2026-10-08 |    2 |    2 |    0 |    0 |    2 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     8 |
+| 2026-10-09 |    2 |    1 |    0 |    0 |    1 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     6 |
+| 2026-10-13 |    2 |    2 |    0 |    2 |    2 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     9 |
+| 2026-10-14 |    2 |    2 |    0 |    2 |    2 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    10 |
+| 2026-10-15 |    2 |    2 |    0 |    2 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     7 |
+| 2026-10-16 |    2 |    2 |    0 |    0 |    2 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     8 |
+| 2026-10-20 |    1 |    2 |    0 |    0 |    0 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     5 |
+| 2026-10-21 |    2 |    3 |    0 |    2 |    3 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    12 |
+| 2026-10-22 |    2 |    2 |    0 |    2 |    2 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    10 |
+| 2026-10-23 |    0 |    2 |    0 |    0 |    0 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     4 |
+| 2026-10-26 |    2 |    2 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     4 |
+
+## Notes
+
+- Pre-router-fix (before 2026-07-17 commit `56660c9e`): S163/S166 were starved — expect zeros until a post-fix entry-window gap-down day.
+- Controlled layout places one ENTRY per matching bucket×strategy; raw counts inflate, unique underlyings do not.
+
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/signal_frequency.md
+## Ledger health — 2026-10-26
+| Check                       | Count | Status |
+|-----------------------------|------:|--------|
+| Current stuck (state)       |     0 | OK |
+| Orphaned lots (post-stable) |  1917 | WARN | <<<
+| Missing exit records (post) |  1917 | WARN | <<<
+| State/ledger mismatches     |     0 | OK |
+| Total open lots             |     4 | INFO |
+| Total closed lots           |  2904 | INFO |
+| Pre-cutoff audit debt       |     0 | INFO |
+| Transition audit debt       |   744 | INFO |
+
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/ledger_health.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-10-26_data_quality.md
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/2026-10-26_data_quality.csv
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/latest_data_quality.json
+Wrote /home/runner/work/TradingBot/TradingBot/logs/options_trial/reports/latest_data_quality_snippet.md
+CLEAN n=1747 med=-30.0% | TAINTED n=2046 med=-41.5% | KEEP-only n=850 med=+50.8% | KILL=22 KEEP=24
+Wrote /home/runner/work/TradingBot/TradingBot/logs/dashboard.html
+equity=227.6 router=CONFIRMED leaderboard_rows=108
+Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
+| 1 | MA_Squeeze | 3 | 100% | +0.80% | +1.05% | +0.27% | 999.00 | 0.0d | $+1.23 | WATCH |
+| 2 | unknown | 32 | 19% | -0.03% | -0.59% | -1.27% | 1.44 | 0.0d | $+0.29 | ACTIVE |
+```
+
+---
