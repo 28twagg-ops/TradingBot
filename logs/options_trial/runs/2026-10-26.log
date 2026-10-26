@@ -2262,37 +2262,44 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-10-26.log
 elapsed=0.7s reconcile=0.24s
 
-=== 09:26:47 ET — after hours (exit summary) [elapsed=0.7s reconcile=0.09s] ===
-=== options_morning_bot (PAPER) 2026-10-26T09:26:47.594123-04:00 ===
+=== 09:29:12 ET — entry+manage (0 new) [elapsed=51.7s reconcile=0.1s cancel=0.04s manage=0.38s scan=49.79s entries=0.56s] ===
+=== options_morning_bot (PAPER) 2026-10-26T09:29:12.676441-04:00 ===
 
 [Run context]
-After hours (09:26 ET) — exit summary only.
-Paper auth OK — equity $993099.33, account PA33P8KT02IL
+Paper auth OK — equity $993132.33, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:79:live_1to1+variations
 
-[Exit summary]
-========================================================
-OPTIONS EXIT SUMMARY — 2026-10-26
-========================================================
-Account equity: $993,099.33
-Open broker positions: 3  unrealized $-41.00
+[Setup]
+LIVE 1:1 bucket b90 live_1to1 — S404, S406 | TP+50%/SL-40% | stop-mkt | min $20
+S406-only twin b91 s406_only — S406 | TP+50%/SL-40% | paper edge test
+Variation study: 77 lab/promising bucket(s) | cohort: 77 unique (S163, S164, S166, S167, S168, S169, S170, S171, S172, S175, S200, S201 … +65 more) | max 200 new entries/run
+Dropped (no new entries; ex-reflected P&L): S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S398, S399, S401, S405, S407, S408
+Shared-OCC entry block ON (one lab lot per contract)
 
-No closed trades today.
-========================================================
+[Scan + entries]
+Scanning 117 symbols for [S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S204, S205, S206, S208, S210, S213, S214, S215, S219, S220, S221, S402, S403, S350, S352, S356, S357, S359, S361, S362, S364, S365, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S396, S397, S404, S406, S409, S410, S411, S413, S414, S415, S416, S417, S418, S430, S431, S432] …
+  Daily bars incomplete after fetch (max=2026-10-23, missing_today=113); snapshot backfill
+  Daily bars snapshot backfill: 0/113 symbols got today
+  Daily bars still incomplete (max=2026-10-23); not caching
+Fetched daily bars for 113/117 symbols
+Found 49 signal(s); top: ['S430:AMD', 'S432:AMD', 'S430:CRWD', 'S431:CRWD', 'S432:CRWD', 'S430:PANW', 'S432:PANW', 'S430:DDOG']
+Paper lab: $993132 broker equity -> 79 bucket(s) ($500 virtual each, unlimited paper)
+  All bucket slots blocked or closed for today's signals — skip entry loop.
+Placed 0 new entry order(s).
 
 [Portfolio snapshot]
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $993,099.33
+Account equity: $993,132.33
 Active buckets: 79 of 79 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+11,774.55 all-time  |  $+0.00 today
   Raw (incl dropped):     $+6,550.55 all-time  |  $+0.00 today
-  Open (not sold yet): $-41.00 unrealized (virtual lots)
+  Open (not sold yet): $-120.00 unrealized (virtual lots)
   Premium deployed:    $141.00 in open positions
-  Combined P&L:        $+11,733.55 (reflected realized + open virtual)
+  Combined P&L:        $+11,654.55 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     16236
@@ -2302,7 +2309,7 @@ Ledger (master)
   Avg return/trade: +27.3%  median -30.4%
 
 Open virtual lots (by bucket)
-  b6 lab0006_s210_w2_1005_1045_r1  prem=$    41  real=$-12.00  open=$ -5.00  lots=1  [S210:DKNGx1]
+  b6 lab0006_s210_w2_1005_1045_r1  prem=$    41  real=$-12.00  open=$-41.00  lots=1  [S210:DKNGx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b12 lab0012_s403_w2_1005_1045_r1  prem=$     0  real=$-13.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -2312,7 +2319,7 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b15 lab0015_s356_w2_1005_1045_r1  prem=$     0  real=$+39.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b16 lab0016_s357_w2_1005_1045_r1  prem=$    52  real=$-13.00  open=$-21.00  lots=1  [S357:MARAx1]
+  b16 lab0016_s357_w2_1005_1045_r1  prem=$    52  real=$-13.00  open=$-46.00  lots=1  [S357:MARAx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b17 lab0017_s359_w2_1005_1045_r1  prem=$     0  real=$-21.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -2346,9 +2353,9 @@ Open virtual lots (by bucket)
   (54 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  DKNG261030C00021500  qty=1  cost=$41.00  return=-12.2%  open P&L=$-5.00
-  MARA261113C00008000  qty=1  cost=$52.00  return=-40.4%  open P&L=$-21.00
-  SMCI261030C00036500  qty=1  cost=$48.00  return=-31.2%  open P&L=$-15.00
+  DKNG261030C00021500  qty=1  cost=$41.00  return=-100.0%  open P&L=$-41.00
+  MARA261113C00008000  qty=1  cost=$52.00  return=-88.5%  open P&L=$-46.00
+  SMCI261030C00036500  qty=1  cost=$48.00  return=-68.8%  open P&L=$-33.00
 
 Per-bucket exit stats (all time)
   b0|c000_s173_w1_0928_1005_r1  n= 22  avg=+24.8%  med=+34.9%  realized=$+283.00
@@ -2777,10 +2784,10 @@ Per-bucket exit stats (all time)
 +========================================================================+
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
-|-- ACCOUNT STATUS (after_hours) --                                      |
-|Equity       : $993,099.33                                              |
+|-- ACCOUNT STATUS (entry+manage) --                                     |
+|Equity       : $993,132.33                                              |
 |Open Risk    : 3 lots (3 broker pos)                                    |
-|Today's Run  : 0 signals -> 0 orders submitted                          |
+|Today's Run  : 49 signals -> 0 orders submitted                         |
 |                                                                        |
 |-- SYSTEM HEALTH --                                                     |
 |Zombies      : 0 (Ledger is clean)                                      |
@@ -2821,10 +2828,10 @@ Per-bucket exit stats (all time)
 +========================================================================+
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
-|  MARA261113C00008000           1    -40.4%   $    -21.00               |
-|  SMCI261030C00036500           1    -31.2%   $    -15.00               |
-|  DKNG261030C00021500           1    -12.2%   $     -5.00               |
+|  MARA261113C00008000           1    -88.5%   $    -46.00               |
+|  DKNG261030C00021500           1   -100.0%   $    -41.00               |
+|  SMCI261030C00036500           1    -68.8%   $    -33.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-10-26.log
-elapsed=0.7s reconcile=0.09s
+elapsed=51.7s reconcile=0.1s cancel=0.04s manage=0.38s scan=49.79s entries=0.56s
 
