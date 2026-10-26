@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "2cfbdb9a7d31",
-      "bucket_id": 16,
-      "profile_name": "lab0016_s357_w2_1005_1045_r1",
-      "strategy_id": "S357",
-      "occ_symbol": "MARA261113C00008000",
-      "underlying": "MARA",
-      "qty": 1,
-      "entry_cost": 52.0,
-      "entry_price": 0.52,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-22T14:27:38.255834+00:00",
-      "entry_order_id": "fb5c7a13-a70e-4728-9d5f-0788f897aee2"
-    },
-    {
       "lot_id": "da22004bf2a7",
       "bucket_id": 6,
       "profile_name": "lab0006_s210_w2_1005_1045_r1",
@@ -42,15 +22,15 @@
       "entry_order_id": "c13cce41-f227-4937-b1f0-7b7266b0d884"
     },
     {
-      "lot_id": "e3f1a2b496b0",
-      "bucket_id": 2009,
-      "profile_name": "day_trader_analytics_s432",
-      "strategy_id": "S432",
-      "occ_symbol": "SMCI261030C00036500",
-      "underlying": "SMCI",
+      "lot_id": "85f0be3ab96e",
+      "bucket_id": 90,
+      "profile_name": "live_1to1",
+      "strategy_id": "S404",
+      "occ_symbol": "MARA261030C00007000",
+      "underlying": "MARA",
       "qty": 1,
-      "entry_cost": 48.0,
-      "entry_price": 0.48,
+      "entry_cost": 21.0,
+      "entry_price": 0.21,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
@@ -58,19 +38,38 @@
       "stop_loss": -0.4,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-10-23T14:16:53.553543+00:00",
-      "entry_order_id": "faba3694-78e0-437a-85a5-10b03f9a90ec"
+      "entry_date": "2026-10-26T13:53:58.041442+00:00",
+      "entry_order_id": "d8113bf7-5cf8-495c-9105-beb70d980312"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "8fa5d5d1-2cd5-4a29-b6e7-a882dbd1cbbf",
+      "bucket_id": 90,
+      "strategy_id": "S406",
+      "occ_symbol": "VZ261030C00044500",
+      "underlying": "VZ",
+      "qty": 1,
+      "limit": 0.33,
+      "profile_name": "live_1to1",
+      "submitted": "2026-10-26",
+      "detail": "RB gap -2.6% reclaim",
+      "spread_frac": 0.22950819672131145,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.4
+    }
+  ],
   "pending_exits": [],
   "bucket_open_premium": {
-    "b16": 52.0,
     "b6": 41.0,
-    "b2009": 48.0
+    "b90": 21.0
   },
   "session_date": "2026-10-26",
-  "entries_locked": [],
+  "entries_locked": [
+    "90|S404|2026-10-26",
+    "90|S406|2026-10-26"
+  ],
   "processed_orders": [
     "dd6866ed-eb05-4a4e-8c20-8676c8a8254c",
     "1c977e79-1f39-4dbc-b319-69fcd4303e7d",
@@ -490,9 +489,12 @@
     "5a692add-3c78-4125-b09f-c19bbdf4f2c7",
     "aa3e5a6f-d594-4791-9015-5c2ceac14807",
     "e373172d-cdba-48b3-aa9e-45cd2a5ae17f",
-    "c1217366-b3fe-4267-b183-e34d5c9c2841"
+    "c1217366-b3fe-4267-b183-e34d5c9c2841",
+    "1c60f8c6-e80b-4da4-bb5f-0f7df4780b8c",
+    "67344c77-ab91-47cd-9917-08c4353d402f",
+    "d8113bf7-5cf8-495c-9105-beb70d980312"
   ],
-  "submitted_today": 0,
+  "submitted_today": 2,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-26"
 }

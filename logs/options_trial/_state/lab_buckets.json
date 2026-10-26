@@ -98,8 +98,8 @@
   {
     "bucket_id": 16,
     "profile": "lab0016_s357_w2_1005_1045_r1",
-    "open_premium": 52.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   },
   {
     "bucket_id": 17,
@@ -404,8 +404,8 @@
   {
     "bucket_id": 90,
     "profile": "live_1to1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 21.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 91,
@@ -470,7 +470,7 @@
   {
     "bucket_id": 2009,
     "profile": "day_trader_analytics_s432",
-    "open_premium": 48.0,
-    "open_lots": 1
+    "open_premium": 0.0,
+    "open_lots": 0
   }
 ]
