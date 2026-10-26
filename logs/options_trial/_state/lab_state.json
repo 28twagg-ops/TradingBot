@@ -180,6 +180,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-26T14:07:52.695964+00:00",
       "entry_order_id": "5449738c-b3ad-46a6-8412-a05f5acfabe0"
+    },
+    {
+      "lot_id": "5e925356d7c8",
+      "bucket_id": 67,
+      "profile_name": "lab0067_s164_w2_1005_1045_r1",
+      "strategy_id": "S164",
+      "occ_symbol": "MARA261030C00007500",
+      "underlying": "MARA",
+      "qty": 1,
+      "entry_cost": 8.0,
+      "entry_price": 0.08,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-26T14:12:29.923738+00:00",
+      "entry_order_id": "ec4f25e3-695d-4459-ab34-8c136b3af0cf"
     }
   ],
   "pending_orders": [
@@ -241,7 +261,8 @@
     "b49": 41.0,
     "b16": 40.0,
     "b2009": 48.0,
-    "b2007": 37.0
+    "b2007": 37.0,
+    "b67": 8.0
   },
   "session_date": "2026-10-26",
   "entries_locked": [
@@ -255,7 +276,8 @@
     "49|S396|2026-10-26",
     "18|S361|2026-10-26",
     "52|S406|2026-10-26",
-    "55|S411|2026-10-26"
+    "55|S411|2026-10-26",
+    "67|S164|2026-10-26"
   ],
   "processed_orders": [
     "dd6866ed-eb05-4a4e-8c20-8676c8a8254c",
@@ -686,9 +708,10 @@
     "66787f7e-a936-447b-a600-3969a49138a1",
     "63299ad0-eb8d-421e-8b87-3f1a76cef607",
     "b5beb43a-27c1-4811-a14e-514e4ad5d29f",
-    "5449738c-b3ad-46a6-8412-a05f5acfabe0"
+    "5449738c-b3ad-46a6-8412-a05f5acfabe0",
+    "ec4f25e3-695d-4459-ab34-8c136b3af0cf"
   ],
-  "submitted_today": 11,
+  "submitted_today": 12,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-26"
 }
