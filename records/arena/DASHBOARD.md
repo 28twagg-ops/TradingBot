@@ -4,7 +4,7 @@
 Stocks/crypto indicative Yahoo hourly prices; NO options executed.
 All 10 workers start at $100; no real money or new AI charges.
 
-Updated: 2026-10-25T21:25:50.371788+00:00
+Updated: 2026-10-26T00:26:33.863081+00:00
 
 | Worker | Virtual action | Equity | Cash | Council |
 |---|---|---:|---:|---|
