@@ -45,7 +45,7 @@ class GroqResearchTests(unittest.TestCase):
                 "study_symbol":"BTC-USD","action":"HOLD","symbol":None,
                 "allocation_fraction":0,"reason":"research before trading",
                 "falsification_test":"Compare next 60 future closes"}
-        with patch("groq_research.tradable",tradable):
+        with patch("groq_research.tradable",tradable), patch("groq_research.literature",return_value=[]):
             event=one_turn(accounts,feed,fake_model,self.now)
         self.assertEqual(event["status"],"RESEARCHED")
         self.assertEqual(len(calls),1)
