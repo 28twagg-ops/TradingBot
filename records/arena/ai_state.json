@@ -62,9 +62,31 @@
     ]
   },
   "S04": {
-    "events": [],
-    "cash": 100.0,
-    "positions": {},
+    "events": [
+      {
+        "worker": "S04",
+        "seq": 1,
+        "timestamp": "2026-10-26T03:59:12.715473Z",
+        "asset_class": "crypto",
+        "symbol": "BTC/USD",
+        "side": "BUY",
+        "qty": 0.000249,
+        "price": 79466.421875,
+        "fee": 0.03957427809375,
+        "multiplier": 1,
+        "source_id": "YAHOO_AI:BTC-USD:2026-10-26T02:00:00Z",
+        "balance_after": 80.17328667,
+        "positions_after": {
+          "crypto:BTC/USD": 0.000249
+        },
+        "previous_hash": "GENESIS",
+        "hash": "c704c6f10772f3b08ee63bcd888d71710cd7d66ad35cad9e8696b9d083474ae7"
+      }
+    ],
+    "cash": 80.17328667,
+    "positions": {
+      "crypto:BTC/USD": 0.000249
+    },
     "seen": {},
     "ai_last_day": "2026-10-26",
     "ai_research": [
@@ -80,7 +102,44 @@
         "virtual_action": "HOLD"
       }
     ],
-    "groq_experiments": []
+    "groq_experiments": [
+      {
+        "cycle": "2026-10-26T03:59Z",
+        "id": "89b9041263177e",
+        "topic": "Crypto Volatility Regime Shift Triggered by Opening\u2011Range Breakout",
+        "hypothesis": "When BTC\u2011USD\u2019s 5\u2011minute opening range is breached by more than 0.08 of the prior day\u2019s closing price, the subsequent 30\u2011minute return will be positive with probability >70%, indicating a regime shift from low to high volatility that can be exploited ",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 5,
+          "threshold": 0.08
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 489,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 489,
+            "end": 699,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "BUY BTC-USD (VIRTUAL_CLOSE_PROXY)",
+        "falsification_test": "If, over a rolling 200\u2011day window, the proportion of 30\u2011minute post\u2011breakout positive returns falls below 50% or the average return turns negative, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      }
+    ],
+    "ai_seen": {
+      "BTC-USD": "2026-10-26T02:00:00Z"
+    }
   },
   "S05": {
     "events": [],
