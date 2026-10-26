@@ -4,12 +4,16 @@ on:
   push:
     branches: [main]
     paths:
-      - 'research/trading-arena/**'
+      - 'research/trading-arena/arena.py'
+      - 'research/trading-arena/run_virtual.py'
+      - 'research/trading-arena/config.json'
+      - 'research/trading-arena/gemini_special.py'
+      - 'research/trading-arena/gemini_cycle.py'
       - '.github/workflows/arena-paper.yml'
   workflow_dispatch:
   schedule:
     - cron: '17 */2 * * *'
-    # Daily Gemini window (the AI script runs only when UTC hour == 19)
+    # Weekly Sunday specialist council, independent of routine Groq research
     - cron: '17 19 * * 0'
 
 permissions:
