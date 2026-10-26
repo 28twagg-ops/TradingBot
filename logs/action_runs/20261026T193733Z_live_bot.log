@@ -1,0 +1,177 @@
+19:37:34  INFO      Mode: evening_prep
+19:37:35  INFO        [prep_positions] 3/3 (3 valid)
+19:37:35  INFO        Universe cache hit: 903 tickers (tickers_2026-10-26.json)
+19:37:36  INFO        [prep_universe] 40/900 (40 valid)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:568: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  quotes.sort_index(inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:585: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  dividends.set_index("date", inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:587: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  dividends.sort_index(inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:514: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.drop(
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:518: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.rename(columns={
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:568: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  quotes.sort_index(inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/multi.py:220: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  data.rename(columns=ctx.isins, inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:514: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.drop(
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:518: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.rename(columns={
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/multi.py:224: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  data.sort_index(level=0, axis=1, inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/multi.py:220: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  data.rename(columns=ctx.isins, inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/multi.py:224: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  data.sort_index(level=0, axis=1, inplace=True)
+19:37:38  INFO        [prep_universe] 80/900 (80 valid)
+19:37:39  INFO        [prep_universe] 120/900 (120 valid)
+19:37:40  INFO        [prep_universe] 160/900 (160 valid)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:568: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  quotes.sort_index(inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:514: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.drop(
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:518: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.rename(columns={
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/multi.py:220: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  data.rename(columns=ctx.isins, inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/multi.py:224: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  data.sort_index(level=0, axis=1, inplace=True)
+19:37:42  INFO        [prep_universe] 200/900 (199 valid)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:568: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  quotes.sort_index(inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:514: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.drop(
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:518: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.rename(columns={
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/multi.py:220: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  data.rename(columns=ctx.isins, inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/multi.py:224: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  data.sort_index(level=0, axis=1, inplace=True)
+19:37:49  INFO        [prep_universe] 240/900 (238 valid)
+19:38:02  INFO        [prep_universe] 280/900 (278 valid)
+19:38:15  INFO        [prep_universe] 320/900 (318 valid)
+19:38:25  INFO        [prep_universe] 360/900 (358 valid)
+19:38:38  INFO        [prep_universe] 400/900 (398 valid)
+19:38:51  INFO        [prep_universe] 440/900 (438 valid)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:568: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  quotes.sort_index(inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:514: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.drop(
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:518: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.rename(columns={
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/multi.py:220: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  data.rename(columns=ctx.isins, inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/multi.py:224: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  data.sort_index(level=0, axis=1, inplace=True)
+19:39:01  INFO        [prep_universe] 480/900 (477 valid)
+19:39:14  INFO        [prep_universe] 520/900 (517 valid)
+19:39:24  INFO        [prep_universe] 560/900 (557 valid)
+19:39:37  INFO        [prep_universe] 600/900 (597 valid)
+19:39:50  INFO        [prep_universe] 640/900 (637 valid)
+19:40:00  INFO        [prep_universe] 680/900 (677 valid)
+19:40:13  INFO        [prep_universe] 720/900 (717 valid)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:568: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  quotes.sort_index(inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:585: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  dividends.set_index("date", inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:587: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  dividends.sort_index(inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:514: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.drop(
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/utils.py:518: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.rename(columns={
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/multi.py:220: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  data.rename(columns=ctx.isins, inplace=True)
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/yfinance/multi.py:224: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  data.sort_index(level=0, axis=1, inplace=True)
+19:40:26  INFO        [prep_universe] 760/900 (757 valid)
+19:40:37  INFO        [prep_universe] 800/900 (797 valid)
+19:40:50  INFO        [prep_universe] 840/900 (837 valid)
+19:41:03  INFO        [prep_universe] 880/900 (877 valid)
+19:41:07  INFO        [prep_universe] 900/900 (897 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      EVENING_PREP|
+|  Time                                                         19:37 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $227.52|
++========================================================================+
+
++========================================================================+
+|                              EVENING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/evening_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       3|
+|  Invested                                                       $102.52|
+|  Open P&L                                                        $+0.28|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ABT      Pullback50      $34.36     $103.54  $104.38  +0.8%   $+0.28  |
+|  AES      Pullback50      $34.13     $14.99   $15.02   +0.2%   $+0.06  |
+|  AME      Pullback50      $34.03     $243.24  $242.89  -0.1%   $-0.05  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                1|
+|  TICKER    TYPE              QTY       LIMIT       STOP                |
++------------------------------------------------------------------------+
+|  AES       OrderType.STOP    2         None        14.92               |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      2|
+|  Signal candidates                                                   33|
+|  Universe scanned                                                   900|
++========================================================================+
