@@ -147,3 +147,31 @@ to records/arena/GEMINI_SPECIAL.md and gemini_special.json.
   documents to either external provider or into commit history.
 - Nothing can transfer to live trading without a separate explicit approval
   and production-only code review.
+
+
+## Overnight scheduling reliability improvement (October 26, 2026)
+
+GitHub Actions had been configured for twice-hourly Groq research, but the real
+GitHub schedule history showed only one successful overnight *scheduled* Groq
+run. The old worker selection was tied to the hour's time slot, leaving many
+strategists without any chance to research when cron runs slipped or dropped.
+
+The revised Groq workflow now attempts **five different, overdue strategists
+per job**, fairly selected by recorded actual research attempts, and gives
+another set the next time it runs. Its dedicated schedule is every two hours
+at :23 UTC, plus extra overnight attempts at **03:53, 07:53 and 11:53 UTC**.
+The independent two-hour paper workflow, at :17 UTC, also makes a fallback
+research attempt if no Groq research event has been recorded for 70 minutes.
+This is useful redundancy, not a guarantee: GitHub's `schedule` events may
+still be delayed or dropped under load.
+
+Groq usage is conservatively capped at 40 recorded research attempts per UTC
+day, maximum five per job. Provider 403/429 errors halt the current batch;
+there are no retries to a paid provider. A provider's lower token/rate quota
+may restrict throughput further. Do not attach paid billing if the goal is
+zero additional charges.
+
+The model can invent and backtest bounded declarative strategies only.
+Positions remain **virtual**, independent of production credentials. These
+checks do not replace proper quote-level fills or a truly untouched forward
+validation set.

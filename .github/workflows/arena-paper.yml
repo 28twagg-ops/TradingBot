@@ -51,6 +51,13 @@ jobs:
       - name: Run all 10 simulated workers, never broker orders
         run: |
           python research/trading-arena/run_virtual.py --dir /tmp/arena-state/records/arena
+      - name: Overnight Groq research fallback if its own scheduler missed
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          python research/trading-arena/groq_research.py \
+            --dir /tmp/arena-state/records/arena \
+            --batch 5 --skip-if-recent-minutes 70
       - name: Weekly Gemini specialist council (up to three free AI calls)
         if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '17 19 * * 0')
         env:
