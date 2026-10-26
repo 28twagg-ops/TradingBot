@@ -6,16 +6,7 @@ Missing independent executions prevents strategy promotion.
 
 | Worker | Virtual action | Hypothesis |
 |---|---|---|
-| S01 | UNAVAILABLE_OR_INVALID |  |
-| S02 | UNAVAILABLE_OR_INVALID |  |
-| S03 | UNAVAILABLE_OR_INVALID |  |
-| S04 | UNAVAILABLE_OR_INVALID |  |
-| S05 | UNAVAILABLE_OR_INVALID |  |
-| S06 | UNAVAILABLE_OR_INVALID |  |
-| S07 | UNAVAILABLE_OR_INVALID |  |
-| S08 | UNAVAILABLE_OR_INVALID |  |
-| S09 | UNAVAILABLE_OR_INVALID |  |
-| S10 | UNAVAILABLE_OR_INVALID |  |
+| S01 | GEMINI_PROVIDER_SETUP_ERROR |  |
 
 ## Independent AI virtual account balances
 | Worker | Cash (USD) | Positions |
@@ -32,8 +23,8 @@ Missing independent executions prevents strategy promotion.
 | S10 | 100.00 | None |
 
 ## Three independent AI council votes
-- J01 — NEEDS_MORE_EVIDENCE: AI review unavailable: RuntimeError
-- J02 — NEEDS_MORE_EVIDENCE: AI review unavailable: RuntimeError
-- J03 — NEEDS_MORE_EVIDENCE: AI review unavailable: RuntimeError
+- J01 — NEEDS_MORE_EVIDENCE: AI provider not available: HTTP_404_NOT_FOUND
+- J02 — NEEDS_MORE_EVIDENCE: AI provider not available: HTTP_404_NOT_FOUND
+- J03 — NEEDS_MORE_EVIDENCE: AI provider not available: HTTP_404_NOT_FOUND
 
 No independent fill proof, no real-money promotion, no extra AI API calls if free quota runs out.

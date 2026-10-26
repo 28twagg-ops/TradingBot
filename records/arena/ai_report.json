@@ -4,62 +4,28 @@
   "note": "Market bar close may not be executable; no independent fill proof.",
   "workers": {
     "S01": {
-      "status": "UNAVAILABLE_OR_INVALID",
-      "reason": "RuntimeError"
-    },
-    "S02": {
-      "status": "UNAVAILABLE_OR_INVALID",
-      "reason": "RuntimeError"
-    },
-    "S03": {
-      "status": "UNAVAILABLE_OR_INVALID",
-      "reason": "RuntimeError"
-    },
-    "S04": {
-      "status": "UNAVAILABLE_OR_INVALID",
-      "reason": "RuntimeError"
-    },
-    "S05": {
-      "status": "UNAVAILABLE_OR_INVALID",
-      "reason": "RuntimeError"
-    },
-    "S06": {
-      "status": "UNAVAILABLE_OR_INVALID",
-      "reason": "RuntimeError"
-    },
-    "S07": {
-      "status": "UNAVAILABLE_OR_INVALID",
-      "reason": "RuntimeError"
-    },
-    "S08": {
-      "status": "UNAVAILABLE_OR_INVALID",
-      "reason": "RuntimeError"
-    },
-    "S09": {
-      "status": "UNAVAILABLE_OR_INVALID",
-      "reason": "RuntimeError"
-    },
-    "S10": {
-      "status": "UNAVAILABLE_OR_INVALID",
-      "reason": "RuntimeError"
+      "status": "GEMINI_PROVIDER_SETUP_ERROR",
+      "reason": "HTTP_404_NOT_FOUND"
     }
   },
   "council": {
     "J01": {
       "verdict": "NEEDS_MORE_EVIDENCE",
-      "finding": "AI review unavailable: RuntimeError"
+      "finding": "AI provider not available: HTTP_404_NOT_FOUND"
     },
     "J02": {
       "verdict": "NEEDS_MORE_EVIDENCE",
-      "finding": "AI review unavailable: RuntimeError"
+      "finding": "AI provider not available: HTTP_404_NOT_FOUND"
     },
     "J03": {
       "verdict": "NEEDS_MORE_EVIDENCE",
-      "finding": "AI review unavailable: RuntimeError"
+      "finding": "AI provider not available: HTTP_404_NOT_FOUND"
     }
   },
   "api_calls": 0,
   "quota_exhausted": false,
+  "provider_error": "HTTP_404_NOT_FOUND",
+  "provider_halted": true,
   "council_disagreement": false,
   "minority_instruction": "Judges may reconsider only after inspecting the independently verified underlying evidence; voting is not evidence.",
   "paper_promotions": 0,
