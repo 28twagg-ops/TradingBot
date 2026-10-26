@@ -6,6 +6,7 @@ on:
     paths:
       - 'research/trading-arena/groq_research.py'
       - '.github/workflows/groq-research.yml'
+  # A push to this workflow also exercises the free-key path once.
   workflow_dispatch:
   schedule:
     # Rotate one of 10 independent research agents every 30 minutes.
