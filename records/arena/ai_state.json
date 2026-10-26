@@ -259,6 +259,41 @@
         ],
         "virtual_action": "HOLD"
       }
+    ],
+    "groq_experiments": [
+      {
+        "cycle": "2026-10-26T10:01Z",
+        "id": "897d98be53e7c6",
+        "topic": "Opening\u2011range breakout in high\u2011liquidity crypto markets",
+        "hypothesis": "When the 5\u2011minute opening range of BTC\u2011USD exceeds 0.8% of the opening price, the subsequent 30\u2011minute price movement will trend in the same direction with a probability >60% and average return >1.5%",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 20,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 493,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 493,
+            "end": 705,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "If, over a rolling 200\u2011day sample, the proportion of breakout trades that achieve a >1.5% return in the next 30 minutes falls below 60% or the average return drops below 1.5%, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      }
     ]
   },
   "S08": {

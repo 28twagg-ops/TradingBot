@@ -108,5 +108,40 @@
     },
     "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
     "experiment_id": "4dc23053303f8d"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-10-26T10:01Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Opening\u2011range breakout in high\u2011liquidity crypto markets",
+    "strategy": {
+      "family": "breakout",
+      "lookback": 20,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 22,
+        "end": 493,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 493,
+        "end": 705,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+    "experiment_id": "897d98be53e7c6"
   }
 ]
