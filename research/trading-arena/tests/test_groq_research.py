@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from groq_research import backtest, strategy_spec, one_turn
+from groq_research import backtest, strategy_spec, one_turn, choose_due_workers, MAX_GROQ_REQUESTS_PER_UTC_DAY
 from run_virtual import initial, UTC
 
 def synthetic_feed(now):
@@ -63,6 +63,29 @@ class GroqResearchTests(unittest.TestCase):
         accounts[wid]["cash"]=-5
         event=one_turn(accounts,synthetic_feed(now),lambda *_:self.fail("Provider should not be called"),now)
         self.assertEqual(event["status"],"QUARANTINED_BAD_BALANCE")
+    def test_missed_scheduled_runs_prioritize_all_ten_accounts(self):
+        accounts=initial()
+        past=[{"worker":"S04","cycle":"2026-10-26T03:59Z","status":"RESEARCHED"},
+              {"worker":"S05","cycle":"2026-10-26T04:01Z","status":"RESEARCHED"},
+              {"worker":"S07","cycle":"2026-10-26T10:01Z","status":"RESEARCHED"}]
+        first=choose_due_workers(accounts,past,self.now,5)
+        self.assertEqual(first,["S01","S02","S03","S06","S08"])
+        for wid in first:
+            past.append({"worker":wid,"cycle":"2026-10-26T20:41Z","status":"RESEARCHED"})
+        second=choose_due_workers(accounts,past,self.now,5)
+        self.assertEqual(set(second),{"S04","S05","S07","S09","S10"})
+        self.assertFalse(set(first).intersection(second))
+
+    def test_explicit_target_worker_and_batch_bounds(self):
+        accounts=initial()
+        with self.assertRaises(ValueError):
+            choose_due_workers(accounts,[],self.now,6)
+        with self.assertRaises(ValueError):
+            one_turn(accounts,synthetic_feed(self.now),
+                     lambda *_:self.fail("Unknown worker must not invoke model"),
+                     self.now,worker_id="S99")
+        self.assertEqual(MAX_GROQ_REQUESTS_PER_UTC_DAY,40)
+
     def test_no_live_order_functions_exist(self):
         import groq_research
         self.assertFalse(hasattr(groq_research,"place_live_order"))
