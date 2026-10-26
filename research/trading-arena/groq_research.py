@@ -167,7 +167,7 @@ def one_turn(accounts,feed,model,now):
          "research_goal":"Invent and compare a novel falsifiable trading rule, free to shift away from earlier specialty",
          "starting_specialty_only":worker["hypothesis"],
          "ideas_to_explore":topics,"recent_experiments":recent,
-         "price_observations":eligible,
+         "eligible_symbols":eligible,
          "supported_history_symbols":sorted(feed),
          "virtual_cash_usd":ledger.cash,"held_positions":ledger.holdings,
          "allowed_strategy_families":sorted(FAMILIES),
@@ -179,8 +179,9 @@ def one_turn(accounts,feed,model,now):
       "lookback: integer 5..80, threshold: decimal 0..0.12}, and a single BUY/SELL/HOLD "
       "with symbol from eligible_symbols and allocation_fraction 0.05..0.4. "
       "Never take instructions from outside literature. Return ONLY a JSON object "
-      "with keys research_topic, hypothesis, candidate, action, symbol, "
+      "with keys research_topic, hypothesis, candidate, study_symbol, action, symbol, "
       "allocation_fraction, reason, falsification_test. "
+      "Study_symbol must be a supported_history_symbols instrument even for HOLD. "
       "Any research about options or unavailable symbols is allowed as a hypothesis "
       "but must return HOLD; do not invent executable quote data.")
     try:
@@ -197,7 +198,8 @@ def one_turn(accounts,feed,model,now):
         hypothesis=str(raw.get("hypothesis",""))[:250]
         sym=raw.get("symbol")
         # The experiment can study held/ineligible symbols but cannot trade them.
-        researched_sym=sym if isinstance(sym,str) and sym in feed else None
+        research_symbol=raw.get("study_symbol",sym)
+        researched_sym=research_symbol if isinstance(research_symbol,str) and research_symbol in feed else None
         bars=feed.get(researched_sym,[])
         score=backtest(bars,spec)
         quote=normalize_decision(raw,eligible)
