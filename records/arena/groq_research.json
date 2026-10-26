@@ -28,5 +28,15 @@
     "live_trading": false,
     "ai_requests": 0,
     "safe_error": "GROQ_HTTP_403_unknown"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-10-26T03:57Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 0,
+    "safe_error": "GROQ_HTTP_400_json_validate_failed"
   }
 ]
