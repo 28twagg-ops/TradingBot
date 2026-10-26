@@ -46,6 +46,10 @@ jobs:
           python-version: '3.11'
       - name: Verify research safety before inference
         run: python -m unittest discover -s source/research/trading-arena/tests -v
+      - name: Diagnose configured Groq free models without printing credentials
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python source/research/trading-arena/groq_probe.py
       - name: Install only if routine Groq key exists
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
