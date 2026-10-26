@@ -22,7 +22,8 @@ def main():
     if not KEY:
         print("Groq: API key not configured")
         return
-    common={"Authorization":"Bearer "+KEY,"Content-Type":"application/json"}
+    common={"Authorization":"Bearer "+KEY,"Content-Type":"application/json",
+            "User-Agent":"TradingBotArena/1.0.0"}
     available=[]
     req=urllib.request.Request(BASE+"models",headers=common)
     try:
