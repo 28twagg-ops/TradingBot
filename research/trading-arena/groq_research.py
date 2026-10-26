@@ -236,10 +236,20 @@ def one_turn(accounts,feed,model,now):
         bars=feed.get(researched_sym,[])
         score=backtest(bars,spec)
         quote=normalize_decision(raw,eligible)
-        # No trades placed if validation history insufficient or candidate malformed.
-        # Return HOLD on research idea only; separate executable paper order otherwise.
+        # Keep experiment discovery autonomous, but do not convert a strategy
+        # that has NEVER traded, or a mismatched/false signal, into a paper BUY.
+        # This is still a quote-close simulation, NOT a verified next-bar fill.
         if score.get("status")!="HISTORICAL_PROXY_ONLY":
             action="HOLD_INSUFFICIENT_HISTORY"
+        elif quote["action"]=="BUY" and quote["symbol"]!=researched_sym:
+            action="HOLD_STUDY_TRADE_SYMBOL_MISMATCH"
+        elif quote["action"]=="BUY" and (
+             score["research"]["entries"]<1 or
+             score["retrospective_validation"]["entries"]<1):
+            action="HOLD_UNTESTED_BACKTEST_SIGNAL"
+        elif quote["action"]=="BUY" and signal(
+             [float(point[1]) for point in bars],len(bars)-1,spec) is not True:
+            action="HOLD_NO_CURRENT_ENTRY_SIGNAL"
         else:
             action=execute_virtual(wid,record,quote,eligible,now)
         fingerprint=hashlib.sha256(json.dumps({"spec":spec,"symbol":researched_sym},
