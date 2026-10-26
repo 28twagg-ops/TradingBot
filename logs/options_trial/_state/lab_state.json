@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "58e9b551af5d",
-      "bucket_id": 91,
-      "profile_name": "s406_only",
-      "strategy_id": "S406",
-      "occ_symbol": "VZ261030C00043500",
-      "underlying": "VZ",
-      "qty": 1,
-      "entry_cost": 65.0,
-      "entry_price": 0.65,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-26T14:01:42.316399+00:00",
-      "entry_order_id": "27a5ce7e-ed36-4d6c-b66f-866a923a8e59"
-    },
-    {
       "lot_id": "3290391a8a53",
       "bucket_id": 16,
       "profile_name": "lab0016_s357_w2_1005_1045_r1",
@@ -105,7 +85,6 @@
   "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {
-    "b91": 65.0,
     "b16": 40.0,
     "b18": 48.0,
     "b66": 12.0,
@@ -571,7 +550,8 @@
     "75372493-620a-4cf3-b608-58894589c347",
     "bf0a6531-1063-4a47-90d6-5d8abf73e267",
     "4c25d18d-59bb-4c74-be6a-e1a46b053f99",
-    "a800aa9d-0528-4937-bc8d-6ef4a9e6c59a"
+    "a800aa9d-0528-4937-bc8d-6ef4a9e6c59a",
+    "7cf31fb4-d21a-423b-b9f4-c467bfbce0b6"
   ],
   "submitted_today": 14,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
