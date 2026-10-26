@@ -98,8 +98,8 @@
   {
     "bucket_id": 16,
     "profile": "lab0016_s357_w2_1005_1045_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 40.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 17,
@@ -296,8 +296,8 @@
   {
     "bucket_id": 49,
     "profile": "lab0049_s396_w2_1005_1045_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 41.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 50,
@@ -314,8 +314,8 @@
   {
     "bucket_id": 52,
     "profile": "lab0052_s406_w2_1005_1045_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 14.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 53,
@@ -464,8 +464,8 @@
   {
     "bucket_id": 2007,
     "profile": "day_trader_analytics_s430",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 37.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 2008,
@@ -476,7 +476,7 @@
   {
     "bucket_id": 2009,
     "profile": "day_trader_analytics_s432",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 48.0,
+    "open_lots": 1
   }
 ]

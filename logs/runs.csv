@@ -11170,3 +11170,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-26 13:53:03,scan_morning,bull,227.17,125.0,28,0,0,3,ABT|AES|AME,both
 2026-10-26 13:56:49,exits,bull,227.22,125.0,0,0,0,3,ABT|AES|AME,both
 2026-10-26 14:01:38,exits,bull,227.3,125.0,0,0,0,3,ABT|AES|AME,both
+2026-10-26 14:06:58,exits,bull,227.27,125.0,0,0,0,3,ABT|AES|AME,both
