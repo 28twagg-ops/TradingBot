@@ -40,21 +40,41 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-26T13:53:58.041442+00:00",
       "entry_order_id": "d8113bf7-5cf8-495c-9105-beb70d980312"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "8fa5d5d1-2cd5-4a29-b6e7-a882dbd1cbbf",
+      "lot_id": "68d290259e50",
       "bucket_id": 90,
+      "profile_name": "live_1to1",
       "strategy_id": "S406",
       "occ_symbol": "VZ261030C00044500",
       "underlying": "VZ",
       "qty": 1,
-      "limit": 0.33,
-      "profile_name": "live_1to1",
+      "entry_cost": 28.000000000000004,
+      "entry_price": 0.28,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-26T13:56:52.694180+00:00",
+      "entry_order_id": "8fa5d5d1-2cd5-4a29-b6e7-a882dbd1cbbf"
+    }
+  ],
+  "pending_orders": [
+    {
+      "order_id": "27a5ce7e-ed36-4d6c-b66f-866a923a8e59",
+      "bucket_id": 91,
+      "strategy_id": "S406",
+      "occ_symbol": "VZ261030C00043500",
+      "underlying": "VZ",
+      "qty": 1,
+      "limit": 0.66,
+      "profile_name": "s406_only",
       "submitted": "2026-10-26",
       "detail": "RB gap -2.6% reclaim",
-      "spread_frac": 0.22950819672131145,
+      "spread_frac": 0.1612903225806453,
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.4
@@ -63,12 +83,13 @@
   "pending_exits": [],
   "bucket_open_premium": {
     "b6": 41.0,
-    "b90": 21.0
+    "b90": 49.0
   },
   "session_date": "2026-10-26",
   "entries_locked": [
     "90|S404|2026-10-26",
-    "90|S406|2026-10-26"
+    "90|S406|2026-10-26",
+    "91|S406|2026-10-26"
   ],
   "processed_orders": [
     "dd6866ed-eb05-4a4e-8c20-8676c8a8254c",
@@ -492,9 +513,10 @@
     "c1217366-b3fe-4267-b183-e34d5c9c2841",
     "1c60f8c6-e80b-4da4-bb5f-0f7df4780b8c",
     "67344c77-ab91-47cd-9917-08c4353d402f",
-    "d8113bf7-5cf8-495c-9105-beb70d980312"
+    "d8113bf7-5cf8-495c-9105-beb70d980312",
+    "8fa5d5d1-2cd5-4a29-b6e7-a882dbd1cbbf"
   ],
-  "submitted_today": 2,
+  "submitted_today": 3,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-26"
 }
