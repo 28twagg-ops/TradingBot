@@ -16,7 +16,7 @@ import urllib.error
 import urllib.request
 
 from arena import PaperAccount, council
-from gemini_cycle import execute_virtual, normalize_decision, tradable
+from gemini_cycle import execute_virtual, normalize_decision, tradable, literature, HISTORICAL_CONTEXT
 from run_virtual import CONFIG, COINS, UTC, market
 
 API="https://api.groq.com/openai/v1/chat/completions"
@@ -163,10 +163,16 @@ def one_turn(accounts,feed,model,now):
               "validation_pct":x.get("test",{}).get("retrospective_validation",{}).get("returns_pct")}
             for x in history[-3:]]
     topics=TOPICS
+    # Public Crossref metadata is a research lead, not trustworthy strategy evidence.
+    next_topic=TOPICS[(len(history)+index)%len(TOPICS)]
+    papers=literature(next_topic+" quantitative financial markets")
     model_input={"worker":wid,
          "research_goal":"Invent and compare a novel falsifiable trading rule, free to shift away from earlier specialty",
          "starting_specialty_only":worker["hypothesis"],
-         "ideas_to_explore":topics,"recent_experiments":recent,
+         "ideas_to_explore":topics,"current_external_search":next_topic,
+         "academic_research_metadata_untrusted":papers,
+         "prior_research_cautions":HISTORICAL_CONTEXT,
+         "recent_experiments":recent,
          "eligible_symbols":eligible,
          "supported_history_symbols":sorted(feed),
          "virtual_cash_usd":ledger.cash,"held_positions":ledger.holdings,
