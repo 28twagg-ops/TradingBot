@@ -5,6 +5,11 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-27T07:59Z | S05 | Cross‑asset momentum‑driven breakout with volati | 83bd8e6863002e | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-27T07:59Z | S01 | Volatility‑adjusted moving‑average trend capture | 89766009f89e42 | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-27T07:59Z | S10 | Momentum persistence in high‑frequency crypto ma | 45568c88ce6da8 | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-27T07:59Z | S09 | Cross‑Asset Trend Persistence | 69eb7ca6a66a21 | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-27T07:59Z | S08 | Crypto liquidity impact on short‑term volatility | c682a077bcdbed | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-27T07:56Z | S07 | Crypto liquidity and breakout volatility | bea29d096fa9ea | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-27T07:56Z | S04 | Cross-asset trend divergence and reversal | bab59b526abcbd | HOLD_STUDY_TRADE_SYMBOL_MISMATCH |
 | 2026-10-27T07:56Z | S03 | Mean‑reversion of crypto intraday volatility | e5e5ebd56d2c15 | HOLD_UNTESTED_BACKTEST_SIGNAL |
@@ -35,11 +40,6 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 | 2026-10-26T14:50Z | S02 | Short-term intraday momentum for SPY | e37a0aa1a371f1 | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-26T14:50Z | S01 | Intraday VWAP band mean‑reversion with volatilit | 0a234866487b6a | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-26T10:01Z | S07 | Opening‑range breakout in high‑liquidity crypto  | 897d98be53e7c6 | HOLD_UNTESTED_BACKTEST_SIGNAL |
-| 2026-10-26T04:01Z | S05 | Momentum-based breakout in high-volatility crypt | 4dc23053303f8d | HOLD_UNTESTED_BACKTEST_SIGNAL |
-| 2026-10-26T03:59Z | S04 | Crypto Volatility Regime Shift Triggered by Open | 89b9041263177e | BUY BTC-USD (VIRTUAL_CLOSE_PROXY) |
-| 2026-10-26T03:57Z | S04 |  | AI_UNAVAILABLE |  |
-| 2026-10-26T03:52Z | S04 |  | AI_UNAVAILABLE |  |
-| 2026-10-26T03:48Z | S04 |  | AI_UNAVAILABLE |  |
 
 ## Important validation boundaries
 Backtesting uses hourly price-close approximations, not real executable quotes.
