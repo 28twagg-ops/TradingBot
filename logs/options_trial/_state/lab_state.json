@@ -22,46 +22,6 @@
       "entry_order_id": "64ba2b68-09b0-4758-aceb-fe23fc871f63"
     },
     {
-      "lot_id": "7ec5728374cd",
-      "bucket_id": 2009,
-      "profile_name": "day_trader_analytics_s432",
-      "strategy_id": "S432",
-      "occ_symbol": "AMD261028C00587500",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 33.0,
-      "entry_price": 0.33,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-27T14:11:50.875312+00:00",
-      "entry_order_id": "abe208c0-c639-4357-beb8-27a56685e982"
-    },
-    {
-      "lot_id": "ce7332041a4e",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S406",
-      "occ_symbol": "KO261030C00094000",
-      "underlying": "KO",
-      "qty": 1,
-      "entry_cost": 44.0,
-      "entry_price": 0.44,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-27T14:11:50.879248+00:00",
-      "entry_order_id": "7b2b59e3-729b-49c2-b351-27e70ea0f1e8"
-    },
-    {
       "lot_id": "eab9a85006d5",
       "bucket_id": 52,
       "profile_name": "lab0052_s406_w2_1005_1045_r1",
@@ -133,22 +93,10 @@
       "qty": 1,
       "reason": "stop_loss (-60.0%)",
       "submitted": "2026-10-27T10:27:08"
-    },
-    {
-      "order_id": "b58fae82-cc2e-4844-a73b-70d7c5e73249",
-      "lot_id": "7ec5728374cd",
-      "bucket_id": 2009,
-      "strategy_id": "S432",
-      "occ_symbol": "AMD261028C00587500",
-      "qty": 1,
-      "reason": "take_profit (+69.7%)",
-      "submitted": "2026-10-27T11:24:42"
     }
   ],
   "bucket_open_premium": {
     "b2007": 47.0,
-    "b2009": 33.0,
-    "b90": 44.0,
     "b52": 73.0,
     "b66": 35.0,
     "b12": 28.000000000000004
@@ -625,7 +573,9 @@
     "2f74fb8d-a505-4312-974c-e6e1e3936ec1",
     "83a5f08f-d93d-494c-a9ea-9601cf63cda1",
     "2e25ca11-3354-49ab-a19a-cbd175e32f94",
-    "3d20e702-e5ca-48c3-b5a0-ec5d1069ef0a"
+    "3d20e702-e5ca-48c3-b5a0-ec5d1069ef0a",
+    "b58fae82-cc2e-4844-a73b-70d7c5e73249",
+    "68628d64-c2ec-4f21-983a-7973de001692"
   ],
   "submitted_today": 9,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
