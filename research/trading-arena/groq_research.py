@@ -17,7 +17,7 @@ import urllib.request
 
 from arena import PaperAccount, council
 from gemini_cycle import execute_virtual, normalize_decision, tradable, HISTORICAL_CONTEXT
-from open_research import discover, requested_sources, safe_domain, safe_query
+from open_research import discover, requested_sources, safe_domain, safe_query, requires_unavailable_test_inputs
 from run_virtual import CONFIG, COINS, UTC, market
 
 API="https://api.groq.com/openai/v1/chat/completions"
@@ -281,9 +281,11 @@ def one_turn(accounts,feed,model,now,worker_id=None):
                               "cross_asset","options_chain","fundamentals","social_signal","other"}
         if not requested_requirements or any(x not in allowed_requirements for x in requested_requirements):
             raise ValueError("Invalid data requirements")
+        hypothesis_claim=str(raw.get("hypothesis",""))
         supported=(raw.get("hypothesis_timeframe")=="hourly" and
                    requested_requirements==["hourly_close"] and
-                   raw.get("rule_expressible_as_candidate") is True)
+                   raw.get("rule_expressible_as_candidate") is True and
+                   not requires_unavailable_test_inputs(hypothesis_claim))
         spec=strategy_spec(raw) if supported else None
         topic=str(raw.get("research_topic",""))[:100]
         hypothesis=str(raw.get("hypothesis",""))[:250]
