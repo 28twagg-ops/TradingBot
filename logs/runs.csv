@@ -11360,3 +11360,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-27 19:47:55,scan_evening,bull,226.86,124.29,27,0,0,3,AME|LFUS|RCL,both
 2026-10-27 19:52:46,scan_evening,bull,226.58,192.05,27,0,2,1,AME,both
 2026-10-27 19:57:10,scan_evening,bull,226.6,124.09,27,0,0,3,AME|LFUS|RCL,both
+2026-10-27 20:01:52,ext_exits,bull,226.35,124.09,0,0,0,3,AME|LFUS|RCL,both

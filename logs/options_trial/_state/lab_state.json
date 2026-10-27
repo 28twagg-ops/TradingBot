@@ -65,14 +65,14 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "95f9e43d-0326-48f2-a53a-e63efcc2b455",
+      "order_id": "6053a06a-0977-49d3-ad75-a68020a0dcb7",
       "lot_id": "a1cd2dd6f85c",
       "bucket_id": 66,
       "strategy_id": "S164",
       "occ_symbol": "BA261030C00197500",
       "qty": 1,
-      "reason": "stop_loss (-60.0%)",
-      "submitted": "2026-10-27T10:27:08"
+      "reason": "stop_loss (-91.4%)",
+      "submitted": "2026-10-27T16:01:58"
     }
   ],
   "bucket_open_premium": {
