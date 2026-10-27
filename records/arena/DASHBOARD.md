@@ -4,7 +4,7 @@
 Stocks/crypto indicative Yahoo hourly prices; NO options executed.
 All 10 workers start at $100; no real money or new AI charges.
 
-Updated: 2026-10-26T21:03:56.415682+00:00
+Updated: 2026-10-27T01:32:07.597505+00:00
 
 | Worker | Virtual action | Equity | Cash | Council |
 |---|---|---:|---:|---|
@@ -13,11 +13,11 @@ Updated: 2026-10-26T21:03:56.415682+00:00
 | S03 | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
 | S04 | HOLD | 100.15 | 100.15413019 | REVIEW_REQUIRED |
 | S05 | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
-| S06 | SELL SOL-USD | 99.19 | 99.19033366 | REVIEW_REQUIRED |
+| S06 | HOLD | 99.19 | 99.19033366 | REVIEW_REQUIRED |
 | S07 | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
 | S08 | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
-| S09 | HOLD | 99.27 | 60.31687757 | REVIEW_REQUIRED |
-| S10 | SELL SOL-USD | 99.19 | 99.19033366 | REVIEW_REQUIRED |
+| S09 | SELL SOL-USD | 99.35 | 99.34539391 | REVIEW_REQUIRED |
+| S10 | HOLD | 99.19 | 99.19033366 | REVIEW_REQUIRED |
 
 **Review status:** Missing independently executable market quotes means
 the evidence council cannot certify a real-world trading edge.

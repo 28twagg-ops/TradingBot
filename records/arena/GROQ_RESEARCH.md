@@ -5,6 +5,11 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-27T01:32Z | S09 | Crypto liquidity‑driven volatility breakout | 063f46ebba0aaf | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-27T01:32Z | S10 | Crypto volatility mean‑reversion trigger | e5e5ebd56d2c15 | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-27T01:32Z | S08 | Crypto liquidity impact on short‑term volatility | fec7ccae9603d2 | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-27T01:32Z | S07 | Crypto Relative Strength Momentum | 69eb7ca6a66a21 | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-27T01:32Z | S04 | Mean‑reversion on BTC‑USD after a sharp opening‑ | 5a2767c945f1a3 | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-26T21:04Z | S09 |  | AI_UNAVAILABLE |  |
 | 2026-10-26T21:04Z | S06 | Opening‑range breakout on BTC‑USD | dd1b87161c6fc6 | HOLD_NO_CURRENT_ENTRY_SIGNAL |
 | 2026-10-26T21:04Z | S03 | Crypto volatility‑driven momentum reversal | 5a2767c945f1a3 | HOLD |
