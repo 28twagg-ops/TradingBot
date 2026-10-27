@@ -1,3 +1,4 @@
 ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,cost,return_pct,pnl_usd,reason,buy_offset,sell_offset,take_profit,stop_loss,spread_frac,detail,order_id
 2026-10-21 14:37:47.462043+00:00,entry,65,lab0065_s163_w2_1005_1045_r1,S163,5f7c30eaa6c3,NFLX,NFLX261030C00068000,1,0.51,0.5,50.0,,,,-0.01,,0.75,-0.75,0.05940594059405946,gap -6.6%,b2279c1b-c098-44ad-9dd3-3b206045956e
 2026-10-22 13:48:09.414737+00:00,exit,65,lab0065_s163_w2_1005_1045_r1,S163,5f7c30eaa6c3,NFLX,NFLX261030C00068000,1,,0.75,50.0,50.0,25.0,take_profit (+50.0%),,-0.01,0.5,-0.5,,,2acc445e-8d1e-44c8-859e-79fd3f71dc00
+2026-10-27 14:43:35.398062+00:00,entry,65,lab0065_s163_w2_1005_1045_r1,S163,9b86abb46fee,BA,BA261106C00200000,1,0.33,0.3,30.0,,,,-0.01,,0.5,-0.5,0.060606060606060656,gap -2.6%,83a5f08f-d93d-494c-a9ea-9601cf63cda1

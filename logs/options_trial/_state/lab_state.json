@@ -100,6 +100,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-27T14:27:04.753061+00:00",
       "entry_order_id": "36f28b26-8699-4400-b8b2-3a65c9c2e8ad"
+    },
+    {
+      "lot_id": "9b86abb46fee",
+      "bucket_id": 65,
+      "profile_name": "lab0065_s163_w2_1005_1045_r1",
+      "strategy_id": "S163",
+      "occ_symbol": "BA261106C00200000",
+      "underlying": "BA",
+      "qty": 1,
+      "entry_cost": 30.0,
+      "entry_price": 0.3,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-27T14:47:01.293049+00:00",
+      "entry_order_id": "83a5f08f-d93d-494c-a9ea-9601cf63cda1"
     }
   ],
   "pending_orders": [
@@ -118,22 +138,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
-    },
-    {
-      "order_id": "83a5f08f-d93d-494c-a9ea-9601cf63cda1",
-      "bucket_id": 65,
-      "strategy_id": "S163",
-      "occ_symbol": "BA261106C00200000",
-      "underlying": "BA",
-      "qty": 1,
-      "limit": 0.33,
-      "profile_name": "lab0065_s163_w2_1005_1045_r1",
-      "submitted": "2026-10-27",
-      "detail": "gap -2.6%",
-      "spread_frac": 0.060606060606060656,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
     }
   ],
   "pending_exits": [
@@ -146,6 +150,16 @@
       "qty": 1,
       "reason": "stop_loss (-60.0%)",
       "submitted": "2026-10-27T10:27:08"
+    },
+    {
+      "order_id": "2e25ca11-3354-49ab-a19a-cbd175e32f94",
+      "lot_id": "9b86abb46fee",
+      "bucket_id": 65,
+      "strategy_id": "S163",
+      "occ_symbol": "BA261106C00200000",
+      "qty": 1,
+      "reason": "stop_loss (-63.3%)",
+      "submitted": "2026-10-27T10:47:02"
     }
   ],
   "bucket_open_premium": {
@@ -153,7 +167,8 @@
     "b2009": 33.0,
     "b90": 44.0,
     "b52": 73.0,
-    "b66": 35.0
+    "b66": 35.0,
+    "b65": 30.0
   },
   "session_date": "2026-10-27",
   "entries_locked": [
@@ -624,7 +639,8 @@
     "c0acf784-27da-4ecc-8926-29e09550ee85",
     "36f28b26-8699-4400-b8b2-3a65c9c2e8ad",
     "a3aa92f1-9843-495d-8d18-738ebf5840c2",
-    "2f74fb8d-a505-4312-974c-e6e1e3936ec1"
+    "2f74fb8d-a505-4312-974c-e6e1e3936ec1",
+    "83a5f08f-d93d-494c-a9ea-9601cf63cda1"
   ],
   "submitted_today": 9,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
