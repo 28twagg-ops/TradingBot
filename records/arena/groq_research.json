@@ -1208,5 +1208,180 @@
     },
     "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
     "experiment_id": "83bd8e6863002e"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-10-27T09:22Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Crypto liquidity impact on BTC\u2011USD momentum",
+    "strategy": {
+      "family": "momentum",
+      "lookback": 20,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 22,
+        "end": 493,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 493,
+        "end": 705,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+    "experiment_id": "69eb7ca6a66a21"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-10-27T09:22Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Volatility\u2011driven breakout in crypto markets",
+    "strategy": {
+      "family": "breakout",
+      "lookback": 20,
+      "threshold": 0.08
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 22,
+        "end": 493,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 493,
+        "end": 705,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+    "experiment_id": "164878380770a9"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-10-27T09:22Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Cross\u2011asset trend predictability between BTC\u2011USD and ETH\u2011USD",
+    "strategy": {
+      "family": "trend",
+      "lookback": 20,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 22,
+        "end": 493,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 493,
+        "end": 705,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_STUDY_TRADE_SYMBOL_MISMATCH",
+    "experiment_id": "c682a077bcdbed"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-10-27T09:22Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Cross-asset trend divergence and mean\u2011reversion in BTC\u2011USD",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 20,
+      "threshold": 0.08
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 22,
+        "end": 493,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 493,
+        "end": 705,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+    "experiment_id": "e5e5ebd56d2c15"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-10-27T09:22Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Volatility\u2011Adjusted Opening\u2011Range Breakout for BTC\u2011USD",
+    "strategy": {
+      "family": "breakout",
+      "lookback": 30,
+      "threshold": 0.08
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 32,
+        "end": 493,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 493,
+        "end": 705,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+    "experiment_id": "063f46ebba0aaf"
   }
 ]

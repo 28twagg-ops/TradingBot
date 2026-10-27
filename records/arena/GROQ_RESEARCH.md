@@ -5,6 +5,11 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-27T09:22Z | S07 | Volatility‑Adjusted Opening‑Range Breakout for B | 063f46ebba0aaf | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-27T09:22Z | S04 | Cross-asset trend divergence and mean‑reversion  | e5e5ebd56d2c15 | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-27T09:22Z | S03 | Cross‑asset trend predictability between BTC‑USD | c682a077bcdbed | HOLD_STUDY_TRADE_SYMBOL_MISMATCH |
+| 2026-10-27T09:22Z | S02 | Volatility‑driven breakout in crypto markets | 164878380770a9 | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-27T09:22Z | S06 | Crypto liquidity impact on BTC‑USD momentum | 69eb7ca6a66a21 | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-27T07:59Z | S05 | Cross‑asset momentum‑driven breakout with volati | 83bd8e6863002e | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-27T07:59Z | S01 | Volatility‑adjusted moving‑average trend capture | 89766009f89e42 | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-27T07:59Z | S10 | Momentum persistence in high‑frequency crypto ma | 45568c88ce6da8 | HOLD_UNTESTED_BACKTEST_SIGNAL |
@@ -35,11 +40,6 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 | 2026-10-26T21:03Z | S10 | Crypto volatility breakout strategy | 164878380770a9 | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-26T21:03Z | S09 | Crypto Liquidity‑Driven Volatility Breakout | f163e093a85262 | HOLD_NO_CURRENT_ENTRY_SIGNAL |
 | 2026-10-26T14:50Z | S08 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
-| 2026-10-26T14:50Z | S06 | Cross‑asset trend persistence between equity and | bfeb8ba40451e7 | HOLD |
-| 2026-10-26T14:50Z | S03 | Opening‑Range Breakout with Volatility‑Weighted  | 0ede33997afaeb | HOLD_UNTESTED_BACKTEST_SIGNAL |
-| 2026-10-26T14:50Z | S02 | Short-term intraday momentum for SPY | e37a0aa1a371f1 | HOLD_UNTESTED_BACKTEST_SIGNAL |
-| 2026-10-26T14:50Z | S01 | Intraday VWAP band mean‑reversion with volatilit | 0a234866487b6a | HOLD_UNTESTED_BACKTEST_SIGNAL |
-| 2026-10-26T10:01Z | S07 | Opening‑range breakout in high‑liquidity crypto  | 897d98be53e7c6 | HOLD_UNTESTED_BACKTEST_SIGNAL |
 
 ## Important validation boundaries
 Backtesting uses hourly price-close approximations, not real executable quotes.

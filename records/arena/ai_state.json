@@ -273,6 +273,39 @@
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "Apply the rule to the last 12 months of BTC\u2011USD intraday data; if the strategy\u2019s cumulative return is negative or the win rate falls below 50% after accounting for a 0.1% transaction cost, the hypothesis is falsified.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T09:22Z",
+        "id": "164878380770a9",
+        "topic": "Volatility\u2011driven breakout in crypto markets",
+        "hypothesis": "When the 20\u2011minute realized volatility of BTC\u2011USD exceeds 8\u202f% of its 20\u2011minute price range, the next 5\u2011minute return will be positive on average, indicating a breakout opportunity.",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 20,
+          "threshold": 0.08
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 493,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 493,
+            "end": 705,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "Compute the mean 5\u2011minute return following all 20\u2011minute windows where realized volatility >\u202f8\u202f% of the 20\u2011minute price range. If the mean return is not statistically significantly greater than zero (p\u202f>\u202f0.05) or the win rate <\u202f50\u202f%, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
       }
     ]
   },
@@ -393,6 +426,39 @@
         },
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "Compute the 5\u2011minute return distribution for all 20\u2011minute windows where volatility > mean+8%; if the mean return is not significantly negative (p<0.05) or the win\u2011rate falls below 50%, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T09:22Z",
+        "id": "c682a077bcdbed",
+        "topic": "Cross\u2011asset trend predictability between BTC\u2011USD and ETH\u2011USD",
+        "hypothesis": "When BTC\u2011USD exhibits a sustained upward trend over the past 20 days, the next 24\u2011hour return of ETH\u2011USD will be positive and exceed 5% of its current price; conversely, a downward BTC trend predicts a negative ETH return of similar magnitude.",
+        "candidate": {
+          "family": "trend",
+          "lookback": 20,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 493,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 493,
+            "end": 705,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_STUDY_TRADE_SYMBOL_MISMATCH",
+        "falsification_test": "If over a 12\u2011month out\u2011of\u2011sample period the proportion of days where BTC\u2019s 20\u2011day trend direction correctly predicts ETH\u2019s 24\u2011hour return direction falls below 55% or the average ETH return on correctly predicted days is less than 5% of its price, the hypothesis is falsified.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
       }
     ]
@@ -536,6 +602,39 @@
         },
         "paper_action": "HOLD_STUDY_TRADE_SYMBOL_MISMATCH",
         "falsification_test": "If BTC\u2011USD\u2019s 20\u2011day trend remains above or below SPY\u2019s trend by >8\u202f% and the BTC\u2011USD price does not move in the opposite direction (i.e., no reversal) within 5 trading days, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T09:22Z",
+        "id": "e5e5ebd56d2c15",
+        "topic": "Cross-asset trend divergence and mean\u2011reversion in BTC\u2011USD",
+        "hypothesis": "When the 20\u2011minute moving\u2011average trend of BTC\u2011USD diverges from that of SPY by more than 8\u202f% (BTC trending higher or lower), BTC\u2011USD will revert toward the SPY trend over the next 30 minutes, producing a profitable mean\u2011reversion trade.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 20,
+          "threshold": 0.08
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 493,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 493,
+            "end": 705,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "Run an out\u2011of\u2011sample backtest on 2025\u20112026 data; if the strategy\u2019s net PnL is negative or the Sharpe ratio falls below 0.5, reject the hypothesis.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
       }
     ],
@@ -840,6 +939,39 @@
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "Run an out\u2011of\u2011sample backtest on 2024\u20112026 BTC\u2011USD data; if the strategy\u2019s win\u2011rate falls below 55% or its Sharpe ratio drops below 0.5, reject the hypothesis.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T09:22Z",
+        "id": "69eb7ca6a66a21",
+        "topic": "Crypto liquidity impact on BTC\u2011USD momentum",
+        "hypothesis": "Periods of high on\u2011chain liquidity (measured by daily transaction volume) amplify short\u2011term momentum in BTC\u2011USD, producing >5% intraday gains within 20\u2011minute windows.",
+        "candidate": {
+          "family": "momentum",
+          "lookback": 20,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 493,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 493,
+            "end": 705,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "If BTC\u2011USD fails to achieve >5% return in any 20\u2011minute window over the next 5 trading days, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
       }
     ]
   },
@@ -960,6 +1092,39 @@
         },
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "If over a 12\u2011month out\u2011of\u2011sample period the strategy\u2019s Sharpe ratio falls below 0.5 or the win\u2011rate drops below 45%, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T09:22Z",
+        "id": "063f46ebba0aaf",
+        "topic": "Volatility\u2011Adjusted Opening\u2011Range Breakout for BTC\u2011USD",
+        "hypothesis": "When the opening\u2011range breakout exceeds 1.5\u00d7 the 30\u2011minute ATR, BTC\u2011USD will trend upward for at least the next 4 hours, yielding a positive risk\u2011adjusted return.",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 30,
+          "threshold": 0.08
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 32,
+            "end": 493,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 493,
+            "end": 705,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "If over a 12\u2011month rolling window the rule\u2019s cumulative Sharpe ratio falls below 0.5 or the win\u2011rate drops below 45%, the hypothesis is falsified.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
       }
     ]
