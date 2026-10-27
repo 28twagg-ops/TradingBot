@@ -1477,5 +1477,84 @@
     "live_trading": false,
     "ai_requests": 0,
     "safe_error": "GROQ_HTTP_429_rate_limit_exceeded"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-10-27T14:35Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Opening Range Breakout with Volatility Filter on 24/7 Crypto Spot Markets",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "fd6438be012a47",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "opening range breakout crypto hourly volatility filter"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-10-27T14:35Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Cross\u2011asset relative strength between BTC\u2011USD and SPY",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "91bf17bb77fef2",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-10-27T14:35Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Noise trading models in cryptocurrency markets: hypothesis of mild negative 12\u2011hour momentum reversa",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "e1bf4e3e14e04c",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD 12\u2011hour negative return reversal pattern 1\u2011hour momentum"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-10-27T14:35Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 0,
+    "safe_error": "GROQ_HTTP_429_rate_limit_exceeded"
   }
 ]

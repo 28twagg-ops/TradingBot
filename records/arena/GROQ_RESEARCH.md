@@ -5,6 +5,10 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-27T14:35Z | S03 |  | AI_UNAVAILABLE |  |
+| 2026-10-27T14:35Z | S02 | Noise trading models in cryptocurrency markets:  | e1bf4e3e14e04c | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-27T14:35Z | S06 | Cross‑asset relative strength between BTC‑USD an | 91bf17bb77fef2 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-27T14:35Z | S05 | Opening Range Breakout with Volatility Filter on | fd6438be012a47 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-27T13:21Z | S01 |  | AI_UNAVAILABLE |  |
 | 2026-10-27T13:21Z | S10 | Crypto volatility breakout strategy | eee87310db7447 | HOLD |
 | 2026-10-27T13:21Z | S09 | Crypto Pair Co‑Movement Lagged Volatility Spike | b25a1aca1c2bf9 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,10 +40,6 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 | 2026-10-26T21:04Z | S09 |  | AI_UNAVAILABLE |  |
 | 2026-10-26T21:04Z | S06 | Opening‑range breakout on BTC‑USD | dd1b87161c6fc6 | HOLD_NO_CURRENT_ENTRY_SIGNAL |
 | 2026-10-26T21:04Z | S03 | Crypto volatility‑driven momentum reversal | 5a2767c945f1a3 | HOLD |
-| 2026-10-26T21:04Z | S02 | Crypto liquidity impact on intraday momentum | b3979943b068d8 | HOLD_NO_CURRENT_ENTRY_SIGNAL |
-| 2026-10-26T21:04Z | S01 | Crypto volatility breakout strategy | 164878380770a9 | HOLD_UNTESTED_BACKTEST_SIGNAL |
-| 2026-10-26T21:03Z | S07 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
-| 2026-10-26T21:03Z | S05 | Cross-asset trend alignment between BTC-USD and  | ee5acdff1517d4 | HOLD_STUDY_TRADE_SYMBOL_MISMATCH |
 
 ## Important validation boundaries
 Backtesting uses hourly price-close approximations, not real executable quotes.

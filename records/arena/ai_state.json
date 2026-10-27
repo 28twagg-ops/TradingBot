@@ -306,6 +306,44 @@
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "Compute the mean 5\u2011minute return following all 20\u2011minute windows where realized volatility >\u202f8\u202f% of the 20\u2011minute price range. If the mean return is not statistically significantly greater than zero (p\u202f>\u202f0.05) or the win rate <\u202f50\u202f%, the hypothesis is falsified.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T14:35Z",
+        "id": "e1bf4e3e14e04c",
+        "topic": "Noise trading models in cryptocurrency markets: hypothesis of mild negative 12\u2011hour momentum reversa",
+        "hypothesis": "In highly liquid crypto pairs, a mild negative return over the preceding 12 hours (\u2248\u20110.5\u202f% to \u20111\u202f%) signals a temporary over\u2011reaction by noise traders that is followed by a mean\u2011reversion momentum spike within the next 1\u2011hour interval. The effect is ",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to the hourly close series of BTC\u2011USD and ETH\u2011USD for the past 12\u202fmonths. Count the number of times a 12\u2011hour return \u2264\u202f\u20110.01 is followed by a 1\u2011hour return \u2265\u202f+0.02. Compare the observed success rate to the 5\u2011percent chance of a random 1\u2011hour return exceeding +0.02. A statistically sig",
+        "source_search": {
+          "query": "Noise trading models in cryptocurrency markets (inspired by informed vs. noise trading structures) suggest that mild negative 12h",
+          "attempted": [
+            "web",
+            "github",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD 12\u2011hour negative return reversal pattern 1\u2011hour momentum",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -794,6 +832,46 @@
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "If over a 12\u2011month period the average intraday return on the strategy falls below 0.2% or the win\u2011rate drops below 45%, the hypothesis is falsified.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T14:35Z",
+        "id": "fd6438be012a47",
+        "topic": "Opening Range Breakout with Volatility Filter on 24/7 Crypto Spot Markets",
+        "hypothesis": "A simple opening\u2011range breakout strategy, applied to 24/7 crypto spot markets and filtered by a volatility threshold, will generate statistically significant excess returns over a buy\u2011and\u2011hold baseline when evaluated on hourly close prices.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the candidate rule to the hourly close series of BTC\u2011USD, ETH\u2011USD, and SOL\u2011USD over the past 12 months; compare cumulative returns and Sharpe ratio to a buy\u2011and\u2011hold strategy. A failure to achieve a 10% higher cumulative return or a Sharpe ratio above 1.0 will falsify the hypothesis.",
+        "source_search": {
+          "query": "Applying a standard opening range breakout model to 24/7 crypto spot markets without a fixed daily market open session introduces",
+          "attempted": [
+            "web",
+            "github",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "opening range breakout crypto hourly volatility filter",
+        "preferred_sources": [
+          "web",
+          "reddit",
+          "github"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -972,6 +1050,46 @@
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "If BTC\u2011USD fails to achieve >5% return in any 20\u2011minute window over the next 5 trading days, the hypothesis is falsified.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T14:35Z",
+        "id": "91bf17bb77fef2",
+        "topic": "Cross\u2011asset relative strength between BTC\u2011USD and SPY",
+        "hypothesis": "When BTC\u2011USD exhibits a positive 12\u2011hour relative return compared to SPY (i.e., BTC\u2019s 12\u2011hour return minus SPY\u2019s 12\u2011hour return > 0), BTC\u2011USD is more likely to generate a positive hourly return in the following hour.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 12\u2011hour relative return (BTC\u2011USD return \u2013 SPY return). If it exceeds 0, record the next hour\u2019s BTC\u2011USD return. Calculate the mean and standard deviation of these next\u2011hour returns. A statistically significant positive mean (e.g., t\u2011test p<0.05) would support the hypothesis; a mean not si",
+        "source_search": {
+          "query": "In short-term crypto corrections, assets exhibiting milder negative relative returns over a 12-hour lookback (lower drawdown magni",
+          "attempted": [
+            "web",
+            "github",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results",
+        "preferred_sources": [
+          "web",
+          "reddit",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
