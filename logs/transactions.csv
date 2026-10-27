@@ -1352,3 +1352,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-10-26 19:57:24,2026-10-26,SELL,TECH,Pullback50,72.7,34.12,0.01,0.0,0,midline (+0.0%),bull,227.6
 2026-10-27 13:53:21,2026-10-27,SELL,CPAY,Pullback50,398.8,33.83,-0.51,-0.17,0,stop_loss (-0.5%),bull,226.38
 2026-10-27 13:53:52,2026-10-27,SELL,TECH,Pullback50,72.64,34.0,-0.0,-0.0,0,midline (-0.0%),bull,226.42
+2026-10-27 19:52:14,2026-10-27,SELL,LFUS,MomReversal,383.92,33.82,-0.55,-0.19,0,stop_loss (-0.5%),bull,226.59
+2026-10-27 19:52:45,2026-10-27,SELL,RCL,MA_Squeeze,297.0,33.99,-0.03,-0.01,0,midline (-0.0%),bull,226.57
