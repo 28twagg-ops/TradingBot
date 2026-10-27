@@ -22,26 +22,6 @@
       "entry_order_id": "64ba2b68-09b0-4758-aceb-fe23fc871f63"
     },
     {
-      "lot_id": "eab9a85006d5",
-      "bucket_id": 52,
-      "profile_name": "lab0052_s406_w2_1005_1045_r1",
-      "strategy_id": "S406",
-      "occ_symbol": "KO261030C00093000",
-      "underlying": "KO",
-      "qty": 1,
-      "entry_cost": 73.0,
-      "entry_price": 0.73,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-27T14:22:41.412218+00:00",
-      "entry_order_id": "55ebb68d-83dd-4d29-aa52-405adb396940"
-    },
-    {
       "lot_id": "a1cd2dd6f85c",
       "bucket_id": 66,
       "profile_name": "lab0066_s164_w2_1005_1045_r1",
@@ -97,7 +77,6 @@
   ],
   "bucket_open_premium": {
     "b2007": 47.0,
-    "b52": 73.0,
     "b66": 35.0,
     "b12": 28.000000000000004
   },
@@ -575,7 +554,8 @@
     "2e25ca11-3354-49ab-a19a-cbd175e32f94",
     "3d20e702-e5ca-48c3-b5a0-ec5d1069ef0a",
     "b58fae82-cc2e-4844-a73b-70d7c5e73249",
-    "68628d64-c2ec-4f21-983a-7973de001692"
+    "68628d64-c2ec-4f21-983a-7973de001692",
+    "e523ce02-6369-443e-a17a-39a08675ca42"
   ],
   "submitted_today": 9,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
