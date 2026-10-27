@@ -85,6 +85,39 @@
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "If over a rolling 12\u2011month window the strategy\u2019s Sharpe ratio falls below 0.5 or the win rate drops below 45\u202f% after adjusting for transaction costs, the hypothesis is falsified.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T01:32Z",
+        "id": "d02a1c99a8c8a8",
+        "topic": "Opening\u2011Range Breakout with Volatility\u2011Weighted Entry",
+        "hypothesis": "When the intraday opening\u2011range (first 30 minutes) is breached by more than 5% of the range and the 30\u2011minute volatility exceeds the 20\u2011day average, a subsequent price move in the same direction yields a statistically significant positive return over",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 30,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 32,
+            "end": 487,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 487,
+            "end": 696,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "Run a 5\u2011year out\u2011of\u2011sample backtest on BTC\u2011USD, compute the win\u2011rate and Sharpe ratio of the breakout rule. If the win\u2011rate falls below 50% or the Sharpe ratio drops below 0.5, reject the hypothesis.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
       }
     ]
   },
@@ -463,6 +496,39 @@
         },
         "paper_action": "HOLD_STUDY_TRADE_SYMBOL_MISMATCH",
         "falsification_test": "If BTC\u2011USD\u2019s next 30\u2011minute return is negative or zero in 10 consecutive instances where both BTC\u2011USD and AAPL exhibit the specified momentum conditions, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T01:32Z",
+        "id": "279fbbee1578e8",
+        "topic": "Opening Range Breakout with Volatility Filter",
+        "hypothesis": "When the intraday opening range is broken by a price move exceeding 8% of the range width and the implied volatility is above the 20\u2011day average, the asset will trend upward for at least the next 30 minutes.",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 10,
+          "threshold": 0.08
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 12,
+            "end": 487,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 487,
+            "end": 696,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "If over a rolling 12\u2011month period the rule yields a cumulative return below zero or a Sharpe ratio <0.5, the hypothesis is falsified.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
       }
     ]

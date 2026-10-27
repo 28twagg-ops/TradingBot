@@ -768,5 +768,95 @@
     },
     "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
     "experiment_id": "063f46ebba0aaf"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-10-27T01:32Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Opening Range Breakout with Volatility Filter",
+    "strategy": {
+      "family": "breakout",
+      "lookback": 10,
+      "threshold": 0.08
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 12,
+        "end": 487,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 487,
+        "end": 696,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+    "experiment_id": "279fbbee1578e8"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-10-27T01:32Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Opening\u2011Range Breakout with Volatility\u2011Weighted Entry",
+    "strategy": {
+      "family": "breakout",
+      "lookback": 30,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 32,
+        "end": 487,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 487,
+        "end": 696,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+    "experiment_id": "d02a1c99a8c8a8"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-10-27T01:32Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-10-27T01:32Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 0,
+    "safe_error": "GROQ_HTTP_429_rate_limit_exceeded"
   }
 ]
