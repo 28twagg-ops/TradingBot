@@ -674,6 +674,48 @@
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "Run an out\u2011of\u2011sample backtest on 2025\u20112026 data; if the strategy\u2019s net PnL is negative or the Sharpe ratio falls below 0.5, reject the hypothesis.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T14:38Z",
+        "id": "1a7a98d98d9be7",
+        "topic": "Minor intraday gap\u2011down mean\u2011reversion in large\u2011cap crypto assets",
+        "hypothesis": "Large\u2011cap crypto assets that open with a 1\u20132\u202f% gap\u2011down and exhibit no structural volume anomalies tend to mean\u2011revert within the next few hours.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close",
+            "minute_bars",
+            "volume"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "If the next 5 hourly close returns are consistently below the threshold after such gap\u2011downs, the hypothesis is falsified.",
+        "source_search": {
+          "query": "Minor intraday gap-downs (-1.0% to -2.0%) in large-cap crypto assets accompanied by no structural volume anomalies tend to mean-re",
+          "attempted": [
+            "web",
+            "github",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "cryptocurrency intraday gap\u2011down mean\u2011reversion volume anomaly study",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close",
+          "minute_bars",
+          "volume"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ],
     "ai_seen": {
@@ -1244,6 +1286,44 @@
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "If over a 12\u2011month rolling window the rule\u2019s cumulative Sharpe ratio falls below 0.5 or the win\u2011rate drops below 45%, the hypothesis is falsified.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T14:38Z",
+        "id": "c4771fab973b51",
+        "topic": "Hourly Mean Reversion after Negative Streak in Crypto",
+        "hypothesis": "Hourly returns of major crypto assets (BTC\u2011USD, ETH\u2011USD, SOL\u2011USD) tend to revert toward zero after experiencing a streak of three consecutive negative hourly returns, with a statistically significant mean positive return on the fourth hour.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the average return on the hour following a 3\u2011hour negative streak; if the mean is not significantly greater than zero (e.g., p\u2011value > 0.05) the hypothesis is falsified.",
+        "source_search": {
+          "query": "Short-term negative returns across major crypto assets (BTC-USD, ETH-USD, SOL-USD) over the last 12 hours indicate mild retracemen",
+          "attempted": [
+            "web",
+            "github",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "hourly crypto mean reversion after 3 negative streak",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },

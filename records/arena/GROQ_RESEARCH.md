@@ -5,6 +5,10 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-27T14:38Z | S08 |  | AI_UNAVAILABLE |  |
+| 2026-10-27T14:38Z | S01 |  | AI_UNAVAILABLE |  |
+| 2026-10-27T14:38Z | S07 | Hourly Mean Reversion after Negative Streak in C | c4771fab973b51 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-27T14:38Z | S04 | Minor intraday gap‑down mean‑reversion in large‑ | 1a7a98d98d9be7 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-27T14:35Z | S03 |  | AI_UNAVAILABLE |  |
 | 2026-10-27T14:35Z | S02 | Noise trading models in cryptocurrency markets:  | e1bf4e3e14e04c | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-27T14:35Z | S06 | Cross‑asset relative strength between BTC‑USD an | 91bf17bb77fef2 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,10 +40,6 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 | 2026-10-27T01:32Z | S10 | Crypto volatility mean‑reversion trigger | e5e5ebd56d2c15 | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-27T01:32Z | S08 | Crypto liquidity impact on short‑term volatility | fec7ccae9603d2 | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-27T01:32Z | S07 | Crypto Relative Strength Momentum | 69eb7ca6a66a21 | HOLD_UNTESTED_BACKTEST_SIGNAL |
-| 2026-10-27T01:32Z | S04 | Mean‑reversion on BTC‑USD after a sharp opening‑ | 5a2767c945f1a3 | HOLD_UNTESTED_BACKTEST_SIGNAL |
-| 2026-10-26T21:04Z | S09 |  | AI_UNAVAILABLE |  |
-| 2026-10-26T21:04Z | S06 | Opening‑range breakout on BTC‑USD | dd1b87161c6fc6 | HOLD_NO_CURRENT_ENTRY_SIGNAL |
-| 2026-10-26T21:04Z | S03 | Crypto volatility‑driven momentum reversal | 5a2767c945f1a3 | HOLD |
 
 ## Important validation boundaries
 Backtesting uses hourly price-close approximations, not real executable quotes.
