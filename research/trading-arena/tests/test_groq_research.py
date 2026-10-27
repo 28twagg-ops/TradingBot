@@ -44,17 +44,60 @@ class GroqResearchTests(unittest.TestCase):
                 "candidate":{"family":"trend","lookback":12,"threshold":.001},
                 "study_symbol":"BTC-USD","action":"HOLD","symbol":None,
                 "allocation_fraction":0,"reason":"research before trading",
-                "falsification_test":"Compare next 60 future closes"}
-        with patch("groq_research.tradable",tradable), patch("groq_research.literature",return_value=[]):
+                "falsification_test":"Compare next 60 future closes",
+                "next_search_query":"alternative models on forums",
+                "preferred_sources":["reddit","youtube","github"],
+                "site_domain":None,
+                "research_data_requirements":["hourly_close"],
+                "hypothesis_timeframe":"hourly",
+                "rule_expressible_as_candidate":True,
+                "source_indices":[0]}
+        with patch("groq_research.tradable",tradable), patch("groq_research.discover",
+                return_value={"query":"example","attempted":["web"],"found":[
+                    {"platform":"reddit","title":"An unpopular trade idea",
+                     "url":"https://www.reddit.com/r/algotrading/comments/example",
+                     "snippet":"unverified hypothesis","read_level":"public_search_result_only"}]}):
             event=one_turn(accounts,feed,fake_model,self.now)
         self.assertEqual(event["status"],"RESEARCHED")
         self.assertEqual(len(calls),1)
         self.assertIn("eligible_symbols",calls[0])
+        self.assertEqual(event["sources_found"],1)
+        self.assertEqual(event["source_leads"][0]["platform"],"reddit")
+        self.assertEqual(accounts[event["worker"]]["groq_experiments"][0]["next_search_query"],
+                         "alternative models on forums")
         self.assertEqual(event["test"]["status"],"HISTORICAL_PROXY_ONLY")
         self.assertEqual(sum(len(x["events"]) for x in accounts.values()),0)
         again=one_turn(accounts,feed,fake_model,self.now)
         self.assertEqual(again["status"],"ALREADY_EVALUATED")
         self.assertEqual(len(calls),1)
+    def test_agent_can_investigate_unavailable_data_without_fake_backtest_or_trade(self):
+        accounts=initial()
+        feed=synthetic_feed(self.now)
+        def agent(policy,context):
+            return {"research_topic":"TikTok price microstructure hypothesis",
+                "hypothesis":"5 minute orderbook imbalance predicts next candle",
+                "candidate":{"family":"breakout","lookback":8,"threshold":.01},
+                "study_symbol":"BTC-USD","action":"BUY","symbol":"BTC-USD",
+                "allocation_fraction":.3,"reason":"platform tip",
+                "falsification_test":"Compare signed imbalances to future returns",
+                "next_search_query":"BTC order flow TikTok strategy",
+                "preferred_sources":["tiktok","reddit","github"],
+                "site_domain":"example.com",
+                "research_data_requirements":["minute_bars","order_book"],
+                "hypothesis_timeframe":"minute",
+                "rule_expressible_as_candidate":False,
+                "source_indices":[]}
+        with patch("groq_research.discover",return_value={
+            "query":"BTC orderflow","attempted":["tiktok"],"found":[]}):
+            result=one_turn(accounts,feed,agent,self.now,worker_id="S10")
+        self.assertEqual(result["status"],"RESEARCH_IDEA_NEEDS_DATA")
+        self.assertEqual(result["action"],"RESEARCH_ONLY_NEEDS_DATA")
+        self.assertEqual(result["test"]["status"],"PENDING_PROPER_HISTORICAL_DATA")
+        self.assertEqual(accounts["S10"]["groq_experiments"][0]["preferred_sources"],
+                         ["tiktok","reddit","github"])
+        self.assertEqual(accounts["S10"]["cash"],100)
+        self.assertEqual(accounts["S10"]["events"],[])
+
     def test_bad_ledger_is_quarantined_pre_inference(self):
         accounts=initial()
         now=self.now

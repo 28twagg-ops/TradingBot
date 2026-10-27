@@ -175,3 +175,49 @@ The model can invent and backtest bounded declarative strategies only.
 Positions remain **virtual**, independent of production credentials. These
 checks do not replace proper quote-level fills or a truly untouched forward
 validation set.
+
+
+## Open-ended investigator autonomy — public-source prototype (October 2026)
+
+**The investigation scope belongs to each researcher, not a centrally assigned
+market or source whitelist.** The 10 Groq researchers may change research subjects
+at each turn and individually choose their NEXT search query, source categories,
+and even a specific public website. Research leads can come from TikTok,
+YouTube, Reddit, GitHub, blogs, forums, academic papers, or any indexed public
+site. All source leads are logged with URLs and whether only a snippet/metadata
+was actually retrieved, so claimed source provenance can be audited.
+
+**What works:** agent-chosen next-search plans are persisted independently in
+each worker's groq_experiments history; the following run performs up to
+three bounded searches using that plan before the researcher chooses its next
+idea. General/custom/social search uses the publicly reachable Bing RSS search
+index (an unofficial, best-effort interface); GitHub repositories use public
+GitHub search metadata. Only fixed provider endpoints are contacted. Linked
+content is not downloaded or run. Untrusted search snippets are never
+instructions. Missing sources remain explicitly missing; no citations are
+invented. No subscription or platform account is bypassed.
+
+**What does NOT yet work:** watching TikTok/YouTube videos, transcribing audio,
+reading arbitrary sites beyond indexed snippets, opening private/subscription
+pages, researching all derivative instruments with real historical chains,
+or generating/executing arbitrary strategy code. Some sources may be missing or
+blocked by the index. To support those capabilities, additional permitted
+provider APIs and historical market data integrations are needed. We never
+describe search snippets as whole-video or article research.
+
+A new model output separates the **free-form scientific hypothesis** from
+**the executable backtest representation**. All ideas are valid to investigate,
+including those not expressible by the current engine. Unsupported hypotheses
+(minutes, order books, volume, options, true cross-asset dependencies, etc.)
+are recorded as RESEARCH_IDEA_NEEDS_DATA; they are NOT falsely backtested
+against an unrelated hourly single-asset close series or paper traded.
+The only strategies eligible for paper orders are honestly expressible as
+supported single-asset hourly-close rule tests. BUY still requires at least
+three historical research entries, two retrospective validation entries and
+positive validation P&L with fees. This is NOT a scientific proof of real-world
+profit and cannot guarantee a favorable live market.
+
+Model output and online text cannot directly change the source code,
+brokerage integrations, security controls or real-money strategies. The existing
+rule-based virtual scoreboard is a **separate system** and is not proof of AI
+strategy validation. Gemini remains a limited-capacity specialist reviewer.
