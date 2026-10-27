@@ -133,6 +133,16 @@
       "qty": 1,
       "reason": "stop_loss (-60.0%)",
       "submitted": "2026-10-27T10:27:08"
+    },
+    {
+      "order_id": "b58fae82-cc2e-4844-a73b-70d7c5e73249",
+      "lot_id": "7ec5728374cd",
+      "bucket_id": 2009,
+      "strategy_id": "S432",
+      "occ_symbol": "AMD261028C00587500",
+      "qty": 1,
+      "reason": "take_profit (+69.7%)",
+      "submitted": "2026-10-27T11:24:42"
     }
   ],
   "bucket_open_premium": {
