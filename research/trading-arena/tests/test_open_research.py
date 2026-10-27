@@ -5,7 +5,7 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from open_research import (discover, safe_query, safe_domain, requested_sources,
                            search_web, search_github, fetch_public_index,
-                           url_for_display)
+                           url_for_display, requires_unavailable_test_inputs)
 
 class IndependentDiscoveryTests(unittest.TestCase):
     def test_custom_domains_not_whitelisted_to_prestigious_publishers(self):
@@ -15,6 +15,18 @@ class IndependentDiscoveryTests(unittest.TestCase):
         for hostile in ("localhost","127.0.0.1","evil.local","169.254.169.254",
                         "example.com/path","http://example.com","example.com\nabc"):
             self.assertIsNone(safe_domain(hostile))
+    def test_unavailable_data_claims_never_count_as_verified_hourly_backtest(self):
+        for claim in (
+            "When 5-minute BTC momentum spikes, ETH rises",
+            "When the order book depth doubles, prices rise",
+            "If BTC-USD volatility and VWAP diverge, buy",
+            "If BTC and ETH exhibit correlation divergence, rotate positions",
+            "When the opening-range high is broken, buy calls"
+        ):
+            self.assertTrue(requires_unavailable_test_inputs(claim),claim)
+        self.assertFalse(requires_unavailable_test_inputs(
+            "When BTC-USD exceeds the maximum of the prior 20 hourly closes by 1%, buy"))
+
     def test_choice_is_bots_own_for_forums_video_social(self):
         self.assertEqual(requested_sources(["tiktok","reddit","youtube","academic"]),
                          ["tiktok","reddit","youtube"])
