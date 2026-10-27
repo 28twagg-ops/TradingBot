@@ -1247,6 +1247,46 @@
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "If the 5\u2011minute volatility remains above 0.05 for more than three consecutive trading days after a liquidity spike, the hypothesis is falsified.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T13:21Z",
+        "id": "dd64e367245a49",
+        "topic": "Volatility compression in major crypto assets during moderate intraday volatility periods",
+        "hypothesis": "During periods of moderate intraday volatility compression across major crypto assets (e.g., BTC\u2011USD, ETH\u2011USD, SOL\u2011USD), the hourly close price tends to revert toward the 12\u2011hour moving average, producing a statistically significant mean\u2011reversion si",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the percentage of hourly periods where the absolute deviation of the close from the 12\u2011hour moving average exceeds 5\u202f% and compare it to a random\u2011walk benchmark; a significantly lower frequency would falsify the hypothesis.",
+        "source_search": {
+          "query": "During periods of moderate intraday volatility compression across major crypto assets like BTC-USD following minor negative 12-hou",
+          "attempted": [
+            "web",
+            "github",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "volatility compression mean reversion crypto 12\u2011hour moving average",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1369,6 +1409,46 @@
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "Run a rolling 5\u2011minute return analysis over the past 12 months. Count the number of times BTC\u2011USD\u2019s 5\u2011minute return exceeds the 5\u2011percent threshold when both BTC\u2011USD and ETH\u2011USD have been trending up for 20 minutes. If the proportion of successes is not significantly greater than 0.5 (e.g., p\u2011value ",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T13:21Z",
+        "id": "b25a1aca1c2bf9",
+        "topic": "Crypto Pair Co\u2011Movement Lagged Volatility Spike",
+        "hypothesis": "When BTC\u2011USD and ETH\u2011USD exhibit a simultaneous increase in hourly volatility that exceeds their 20\u2011hour moving\u2011average volatility by more than 0.08, the next 5 hours the pair\u2019s price spread (BTC\u2011USD minus ETH\u2011USD) tends to revert toward its 20\u2011hour ",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 5\u2011hour return of the BTC\u2011USD/ETH\u2011USD spread following each volatility\u2011spike event; test if mean return is significantly different from zero using a paired t\u2011test (p<0.05).",
+        "source_search": {
+          "query": "Intraday mean-reversion following a mild multi-hour pullback in major crypto pairs (BTC/ETH) lacks robust statistical edge when co",
+          "attempted": [
+            "web",
+            "github",
+            "reddit"
+          ],
+          "matches": 8
+        },
+        "source_leads": [],
+        "next_search_query": "BTC ETH hourly volatility spike mean reversion spread study",
+        "preferred_sources": [
+          "web",
+          "reddit",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1490,6 +1570,61 @@
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "Backtest the rule on 2024\u20112026 BTC\u2011USD intraday data; if the win rate falls below 55% or the Sharpe ratio drops below 0.5, reject the hypothesis.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T13:21Z",
+        "id": "eee87310db7447",
+        "topic": "Crypto volatility breakout strategy",
+        "hypothesis": "Hourly price of BTC-USD will exceed its 24\u2011hour rolling standard deviation by 1.5\u00d7 (i.e., volatility breakout) and then revert to the mean within the next 12 hours.",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 24,
+          "threshold": 0.015
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 496,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 496,
+            "end": 709,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "If the strategy fails to produce a positive cumulative return over a 12\u2011month backtest with the given lookback and threshold, the hypothesis is falsified.",
+        "source_search": {
+          "query": "Given that the instruction set allows long options research but strictly prohibits execution without reliable contract chains in t",
+          "attempted": [
+            "web",
+            "github",
+            "reddit"
+          ],
+          "matches": 5
+        },
+        "source_leads": [],
+        "next_search_query": "Bitcoin hourly volatility breakout mean reversion strategy research",
+        "preferred_sources": [
+          "web",
+          "reddit",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   }

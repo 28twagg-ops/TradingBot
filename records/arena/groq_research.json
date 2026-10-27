@@ -1383,5 +1383,99 @@
     },
     "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
     "experiment_id": "063f46ebba0aaf"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-10-27T13:21Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Volatility compression in major crypto assets during moderate intraday volatility periods",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "dd64e367245a49",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "volatility compression mean reversion crypto 12\u2011hour moving average"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-10-27T13:21Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Crypto Pair Co\u2011Movement Lagged Volatility Spike",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "b25a1aca1c2bf9",
+    "sources_found": 8,
+    "source_leads": [],
+    "next_search_query": "BTC ETH hourly volatility spike mean reversion spread study"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-10-27T13:21Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Crypto volatility breakout strategy",
+    "strategy": {
+      "family": "breakout",
+      "lookback": 24,
+      "threshold": 0.015
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 26,
+        "end": 496,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 496,
+        "end": 709,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "eee87310db7447",
+    "sources_found": 5,
+    "source_leads": [],
+    "next_search_query": "Bitcoin hourly volatility breakout mean reversion strategy research"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-10-27T13:21Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 0,
+    "safe_error": "GROQ_HTTP_429_rate_limit_exceeded"
   }
 ]
