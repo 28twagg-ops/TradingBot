@@ -157,3 +157,27 @@ def discover(query,channels=None,site_domain=None,web_search=search_web,
     return {"query":q,"attempted":attempted,
             "found":list(unique.values())[:9],
             "note":"Untrusted search metadata only; verify underlying content independently before claiming source evidence"}
+
+
+def requires_unavailable_test_inputs(hypothesis):
+    """Conservative text sanity check; does not veto *research*, only faux tests.
+
+    The current strategy interpreter uses only hourly close levels. VWAP, volume,
+    cross-symbol correlation, minute open ranges, book depth etc need real data
+    and an evaluator before any statement of verified strategy performance.
+    """
+    if not isinstance(hypothesis,str):return True
+    term=hypothesis.lower()
+    unsupported=(r"\b\d+\s*(?:min(?:ute)?s?|sec(?:ond)?s?|ticks?)\b",
+                 r"\b(?:vwap|atr|rsi|liquidity|bid[- ]ask|order[- ]book|order flow|"
+                 r"depth|volume|implied volatility|realized volatility|"
+                 r"opening[- ]range|correlat(?:ion|ed)|cross[- ]asset|"
+                 r"cointegrat|option(?:s)?|calls?|puts?|earnings|news sentiment)\b")
+    if any(re.search(pattern,term) for pattern in unsupported):
+        return True
+    symbols=("BTC","ETH","SOL","AAPL","SPY","QQQ","MSFT")
+    # Two independent instruments means a true multi-series rule.
+    if sum(bool(re.search(r"\b"+symbol+r"(?:-USD)?\b",term,re.I))
+           for symbol in symbols)>1:
+        return True
+    return False
