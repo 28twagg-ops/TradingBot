@@ -5,6 +5,11 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-27T07:56Z | S07 | Crypto liquidity and breakout volatility | bea29d096fa9ea | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-27T07:56Z | S04 | Cross-asset trend divergence and reversal | bab59b526abcbd | HOLD_STUDY_TRADE_SYMBOL_MISMATCH |
+| 2026-10-27T07:56Z | S03 | Mean‑reversion of crypto intraday volatility | e5e5ebd56d2c15 | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-27T07:56Z | S02 | Volatility‑driven breakout in regime‑shifted cry | 897d98be53e7c6 | HOLD_UNTESTED_BACKTEST_SIGNAL |
+| 2026-10-27T07:56Z | S06 | Cross‑asset momentum‑strength trigger for BTC‑US | 69eb7ca6a66a21 | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-27T01:32Z | S03 |  | AI_UNAVAILABLE |  |
 | 2026-10-27T01:32Z | S02 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
 | 2026-10-27T01:32Z | S01 | Opening‑Range Breakout with Volatility‑Weighted  | d02a1c99a8c8a8 | HOLD_UNTESTED_BACKTEST_SIGNAL |
@@ -35,7 +40,6 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 | 2026-10-26T03:57Z | S04 |  | AI_UNAVAILABLE |  |
 | 2026-10-26T03:52Z | S04 |  | AI_UNAVAILABLE |  |
 | 2026-10-26T03:48Z | S04 |  | AI_UNAVAILABLE |  |
-| 2026-10-26T03:47Z | S04 |  | AI_UNAVAILABLE |  |
 
 ## Important validation boundaries
 Backtesting uses hourly price-close approximations, not real executable quotes.
