@@ -914,6 +914,44 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-27T16:52Z",
+        "id": "dd2b2bebac894f",
+        "topic": "Opening Range Breakout with Volatility Filter on 24/7 Crypto Spot Markets",
+        "hypothesis": "In 24/7 crypto spot markets, a simple opening\u2011range breakout strategy that incorporates a volatility filter on the hourly chart will generate statistically significant excess returns over a risk\u2011adjusted benchmark when applied to BTC\u2011USD and ETH\u2011USD.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to the last 3 years of hourly BTC\u2011USD and ETH\u2011USD data; compute annualized Sharpe ratio, win rate, and maximum drawdown. If Sharpe < 0.5 or drawdown > 30%, reject the hypothesis.",
+        "source_search": {
+          "query": "opening range breakout crypto hourly volatility filter",
+          "attempted": [
+            "web",
+            "reddit",
+            "github"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "opening range breakout crypto hourly volatility filter strategy details",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1646,6 +1684,61 @@
         ],
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-27T16:52Z",
+        "id": "536252698ec355",
+        "topic": "BTC-USD hourly trend persistence",
+        "hypothesis": "When the 5\u2011hour simple moving average of BTC\u2011USD exceeds the 20\u2011hour simple moving average, the price will continue to rise over the next 5 hours, justifying a BUY signal.",
+        "candidate": {
+          "family": "trend",
+          "lookback": 5,
+          "threshold": 0.0
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 498,
+            "returns_pct": -29.037,
+            "drawdown_pct": -29.037,
+            "entries": 64
+          },
+          "retrospective_validation": {
+            "start": 498,
+            "end": 712,
+            "returns_pct": -12.375,
+            "drawdown_pct": -13.816,
+            "entries": 27
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Apply the 5\u2011hour SMA > 20\u2011hour SMA rule to the last 2000 hourly BTC\u2011USD closes and count the proportion of times the next 5\u2011hour return is positive. If the success rate is below 55\u202f% the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC ETH hourly volatility spike mean reversion spread study",
+          "attempted": [
+            "web",
+            "reddit",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD 5h SMA 20h SMA trend study",
+        "preferred_sources": [
+          "web",
+          "reddit",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]

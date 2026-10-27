@@ -1624,5 +1624,86 @@
     "live_trading": false,
     "ai_requests": 0,
     "safe_error": "GROQ_HTTP_429_rate_limit_exceeded"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-10-27T16:52Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD hourly trend persistence",
+    "strategy": {
+      "family": "trend",
+      "lookback": 5,
+      "threshold": 0.0
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 7,
+        "end": 498,
+        "returns_pct": -29.037,
+        "drawdown_pct": -29.037,
+        "entries": 64
+      },
+      "retrospective_validation": {
+        "start": 498,
+        "end": 712,
+        "returns_pct": -12.375,
+        "drawdown_pct": -13.816,
+        "entries": 27
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "536252698ec355",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD 5h SMA 20h SMA trend study"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-10-27T16:52Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-10-27T16:52Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Opening Range Breakout with Volatility Filter on 24/7 Crypto Spot Markets",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "dd2b2bebac894f",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "opening range breakout crypto hourly volatility filter strategy details"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-10-27T16:52Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 0,
+    "safe_error": "GROQ_HTTP_429_rate_limit_exceeded"
   }
 ]
