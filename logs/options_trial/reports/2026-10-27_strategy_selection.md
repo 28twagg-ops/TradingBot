@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-27
 
-_Generated 2026-10-27T09:26:48.823833_
+_Generated 2026-10-27T10:03:29.489317_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-10-27T09:26:48.823833_
 
 ## Attribution health
 
-- Total exits: **3793**
+- Total exits: **3795**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **11.1%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -96,13 +96,13 @@ _Generated 2026-10-27T09:26:48.823833_
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 7 | 0.0 | -64.71 | -80.40 | -68.79 | -50.75 | 90 | 0 | 0 | $-212.00 | 71.4% | insufficient sample (<8 exits) |
 | S395 (GapDown_ITM3) | 3d | watch | 1 | 0.0 | -68.75 | -68.75 | -68.75 | -68.75 | 13 | 0 | 0 | $-44.00 | 100.0% | insufficient sample (<8 exits) |
 | S401 (Any_Gap_Down_Small) | 3d | drop | 135 | 49.6 | +0.00 | -84.10 | -51.33 | +230.91 | 88 | 0 | 0 | $+928.00 | 23.7% | non-positive median return |
-| S411 (RubberBand_OTM2) | 3d | drop | 61 | 49.2 | +0.00 | -56.72 | -51.67 | +61.70 | 85 | 2 | 1 | $-157.00 | 14.8% | non-positive median return |
 | S350 (GapDown_0DTE) | 0d | drop | 53 | 49.1 | +0.00 | -66.67 | -51.35 | +185.64 | 88 | 1 | 1 | $+774.00 | 28.3% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 68 | 44.1 | -3.57 | -58.23 | -50.00 | +125.40 | 88 | 0 | 0 | $+184.00 | 17.6% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 70 | 48.6 | -4.41 | -85.29 | -62.31 | +83.81 | 88 | 0 | 1 | $+14.00 | 37.1% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 67 | 43.3 | -6.25 | -81.48 | -59.63 | +573.13 | 85 | 0 | 0 | $+1,137.00 | 17.9% | manually paused — excluded from new entries & reflected P&L |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 110 | 47.3 | -6.31 | -71.05 | -51.51 | +83.32 | 92 | 1 | 2 | $+48.00 | 15.5% | non-positive median return |
-| S361 (RubberBand_2DTE) | 2d | drop | 68 | 47.1 | -7.50 | -66.67 | -53.38 | +267.78 | 88 | 2 | 1 | $+122.00 | 19.1% | non-positive median return |
+| S361 (RubberBand_2DTE) | 2d | drop | 69 | 46.4 | -8.33 | -67.04 | -53.52 | +265.55 | 88 | 2 | 2 | $+84.00 | 18.8% | non-positive median return |
+| S411 (RubberBand_OTM2) | 3d | drop | 62 | 48.4 | -14.29 | -57.45 | -51.76 | +61.48 | 85 | 2 | 2 | $-197.00 | 14.5% | non-positive median return |
 | S398 (GapDown_ATM) | 3d | drop | 65 | 47.7 | -18.42 | -68.25 | -55.56 | +168.45 | 88 | 0 | 0 | $+765.00 | 24.6% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 113 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 113 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
@@ -273,7 +273,7 @@ _Pipeline evaluation as of 2026-10-27. Auto-kill thresholds: median<-25% at n>=1
 | S358 | GapDown_30DTE | 5 | -50.00% | 40% | WATCH | 84 |
 | S359 | RubberBand_0DTE | 48 | -41.86% | 42% | INSUFFICIENT | 85 |
 | S360 | RubberBand_1DTE | 49 | -56.41% | 10% | INSUFFICIENT | 88 |
-| S361 | RubberBand_2DTE | 68 | -7.50% | 47% | INSUFFICIENT | 88 |
+| S361 | RubberBand_2DTE | 69 | -8.33% | 46% | INSUFFICIENT | 88 |
 | S362 | RubberBand_3DTE | 65 | +50.00% | 65% | INSUFFICIENT | 88 |
 | S363 | RubberBand_5DTE | 41 | -65.38% | 39% | INSUFFICIENT | 85 |
 | S364 | RubberBand_7DTE | 70 | -4.41% | 49% | INSUFFICIENT | 88 |
@@ -323,7 +323,7 @@ _Pipeline evaluation as of 2026-10-27. Auto-kill thresholds: median<-25% at n>=1
 | S408 | RubberBand_ITM1 | 67 | -6.25% | 43% | INSUFFICIENT | 85 |
 | S409 | RubberBand_ATM | 2 | +81.94% | 100% | WATCH | 33 |
 | S410 | RubberBand_OTM1 | 11 | +65.28% | 64% | WATCH | 82 |
-| S411 | RubberBand_OTM2 | 61 | +0.00% | 49% | INSUFFICIENT | 85 |
+| S411 | RubberBand_OTM2 | 62 | -14.29% | 48% | INSUFFICIENT | 85 |
 | S412 | RubberBand_OTM3 | 68 | -3.57% | 44% | INSUFFICIENT | 88 |
 | S413 | BBSqueeze_ITM3 | 0 | — | — | NEW | 0 |
 | S414 | BBSqueeze_ITM2 | 0 | — | — | NEW | 0 |
