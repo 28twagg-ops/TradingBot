@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-27T14:35:09.684622+00:00",
+  "timestamp": "2026-10-27T20:45:47.163892+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -27,10 +27,10 @@
       "missing_quotes": []
     },
     "S04": {
-      "action": "HOLD",
-      "cash": 60.47097093,
-      "equity": 100.302,
-      "ledger_events": 3,
+      "action": "SELL SOL-USD",
+      "cash": 100.63981346,
+      "equity": 100.6398,
+      "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -43,10 +43,10 @@
       "missing_quotes": []
     },
     "S06": {
-      "action": "BUY QQQ",
-      "cash": 59.86844342,
-      "equity": 99.1511,
-      "ledger_events": 3,
+      "action": "BUY BTC-USD",
+      "cash": 36.173466,
+      "equity": 99.3747,
+      "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -67,18 +67,18 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "HOLD",
-      "cash": 99.34539391,
-      "equity": 99.3454,
-      "ledger_events": 2,
+      "action": "BUY BTC-USD",
+      "cash": 59.96159184,
+      "equity": 99.2668,
+      "ledger_events": 3,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S10": {
-      "action": "HOLD",
-      "cash": 99.19033366,
-      "equity": 99.1903,
-      "ledger_events": 2,
+      "action": "BUY BTC-USD",
+      "cash": 59.88740182,
+      "equity": 99.1119,
+      "ledger_events": 3,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     }
