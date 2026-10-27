@@ -42,26 +42,6 @@
       "entry_order_id": "77f1be23-93ef-4e65-8527-dcfe01544f5a"
     },
     {
-      "lot_id": "52d20f620526",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S404",
-      "occ_symbol": "BA261030C00195000",
-      "underlying": "BA",
-      "qty": 1,
-      "entry_cost": 50.0,
-      "entry_price": 0.5,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-27T14:06:45.671351+00:00",
-      "entry_order_id": "d01e1d9a-c79c-45ce-97c9-db87c995e2b8"
-    },
-    {
       "lot_id": "728ee1eb0550",
       "bucket_id": 2007,
       "profile_name": "day_trader_analytics_s430",
@@ -140,6 +120,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-27T14:22:41.412218+00:00",
       "entry_order_id": "55ebb68d-83dd-4d29-aa52-405adb396940"
+    },
+    {
+      "lot_id": "a1cd2dd6f85c",
+      "bucket_id": 66,
+      "profile_name": "lab0066_s164_w2_1005_1045_r1",
+      "strategy_id": "S164",
+      "occ_symbol": "BA261030C00197500",
+      "underlying": "BA",
+      "qty": 1,
+      "entry_cost": 35.0,
+      "entry_price": 0.35,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-27T14:27:04.753061+00:00",
+      "entry_order_id": "36f28b26-8699-4400-b8b2-3a65c9c2e8ad"
     }
   ],
   "pending_orders": [
@@ -158,31 +158,26 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
-    },
+    }
+  ],
+  "pending_exits": [
     {
-      "order_id": "36f28b26-8699-4400-b8b2-3a65c9c2e8ad",
+      "order_id": "95f9e43d-0326-48f2-a53a-e63efcc2b455",
+      "lot_id": "a1cd2dd6f85c",
       "bucket_id": 66,
       "strategy_id": "S164",
       "occ_symbol": "BA261030C00197500",
-      "underlying": "BA",
       "qty": 1,
-      "limit": 0.35,
-      "profile_name": "lab0066_s164_w2_1005_1045_r1",
-      "submitted": "2026-10-27",
-      "detail": "gap -2.6%",
-      "spread_frac": 0.11764705882352937,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
+      "reason": "stop_loss (-60.0%)",
+      "submitted": "2026-10-27T10:27:08"
     }
   ],
-  "pending_exits": [],
   "bucket_open_premium": {
     "b16": 40.0,
-    "b66": 12.0,
-    "b90": 94.0,
+    "b66": 47.0,
     "b2007": 47.0,
     "b2009": 33.0,
+    "b90": 44.0,
     "b52": 73.0
   },
   "session_date": "2026-10-27",
@@ -649,7 +644,9 @@
     "7b2b59e3-729b-49c2-b351-27e70ea0f1e8",
     "6b8ef78c-796d-4289-a487-31c83b944546",
     "55ebb68d-83dd-4d29-aa52-405adb396940",
-    "13194fca-1e3c-4634-85f1-f7fa55ce9633"
+    "13194fca-1e3c-4634-85f1-f7fa55ce9633",
+    "c0acf784-27da-4ecc-8926-29e09550ee85",
+    "36f28b26-8699-4400-b8b2-3a65c9c2e8ad"
   ],
   "submitted_today": 8,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

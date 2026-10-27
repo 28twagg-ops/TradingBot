@@ -398,14 +398,14 @@
   {
     "bucket_id": 66,
     "profile": "lab0066_s164_w2_1005_1045_r1",
-    "open_premium": 12.0,
-    "open_lots": 1
+    "open_premium": 47.0,
+    "open_lots": 2
   },
   {
     "bucket_id": 90,
     "profile": "live_1to1",
-    "open_premium": 94.0,
-    "open_lots": 2
+    "open_premium": 44.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 91,
