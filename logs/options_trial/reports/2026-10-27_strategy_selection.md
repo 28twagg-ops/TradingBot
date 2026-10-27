@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-27
 
-_Generated 2026-10-27T10:07:36.027847_
+_Generated 2026-10-27T10:12:29.999769_
 
 ## Summary
 
@@ -29,7 +29,7 @@ _Generated 2026-10-27T10:07:36.027847_
 | S403 (Any_MA50_Touch) | 3d | watch | 79 | 60.8 | +50.88 | -64.99 | -50.00 | +173.39 | 88 | 0 | 0 | $+1,250.00 | 15.2% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 65 | 64.6 | +50.00 | -59.43 | -50.82 | +318.09 | 88 | 2 | 2 | $+1,415.00 | 20.0% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 51 | 60.8 | +47.95 | -64.91 | -53.17 | +116.39 | 88 | 0 | 0 | $+1,021.00 | 17.6% | fat left tail (p10 < -45%) |
-| S406 (RubberBand_ITM3) | 3d | watch | 147 | 54.4 | +44.62 | -60.73 | -47.06 | +216.32 | 88 | 7 | 9 | $+3,117.00 | 10.2% | fat left tail (p10 < -45%) |
+| S406 (RubberBand_ITM3) | 3d | watch | 147 | 54.4 | +44.62 | -60.73 | -47.06 | +216.32 | 88 | 9 | 9 | $+3,117.00 | 10.2% | fat left tail (p10 < -45%) |
 | S404 (GapDown_OTM2) | 3d | watch | 95 | 51.6 | +26.67 | -65.89 | -50.00 | +100.55 | 88 | 3 | 3 | $+902.00 | 10.5% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 109 | 50.5 | +22.22 | -71.43 | -50.00 | +146.00 | 92 | 0 | 0 | $+1,086.00 | 27.5% | fat left tail (p10 < -45%) |
 | S365 (RubberBand_14DTE) | 14d | watch | 38 | 50.0 | +19.23 | -64.77 | -52.19 | +69.26 | 88 | 0 | 1 | $+23.00 | 36.8% | fat left tail (p10 < -45%) |
@@ -89,7 +89,7 @@ _Generated 2026-10-27T10:07:36.027847_
 | S418 (BBSqueeze_OTM2) | 7d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S431 (DayTrader_RS) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S432 (DayTrader_ORB_RS) | 3d | watch | 6 | 33.3 | -36.61 | -45.16 | -39.62 | +94.46 | 11 | 2 | 2 | $-21.00 | 16.7% | insufficient sample (<8 exits) |
+| S432 (DayTrader_ORB_RS) | 3d | watch | 6 | 33.3 | -36.61 | -45.16 | -39.62 | +94.46 | 11 | 3 | 2 | $-21.00 | 16.7% | insufficient sample (<8 exits) |
 | S367 (RubberBand_30DTE) | 30d | watch | 3 | 0.0 | -48.89 | -50.89 | -50.14 | -29.78 | 84 | 0 | 0 | $-77.00 | 66.7% | insufficient sample (<8 exits) |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 88 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
 | S358 (GapDown_30DTE) | 30d | watch | 5 | 40.0 | -50.00 | -51.39 | -51.39 | +54.28 | 84 | 0 | 0 | $-49.00 | 40.0% | insufficient sample (<8 exits) |

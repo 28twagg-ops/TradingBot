@@ -8,7 +8,7 @@ S163,A1 GapDown ATM call EOD,7d ATM,watch,fat left tail (p10 < -45%),139,36,19,1
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),163,79,48,31,41.15,50.88,-64.99,-50.0,173.39,1250.0,27,88,0,0,25,15.2
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),145,65,42,23,117.33,50.0,-59.43,-50.82,318.09,1415.0,20,88,2,2,18,20.0
 S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),172,51,31,20,28.76,47.95,-64.91,-53.17,116.39,1021.0,20,88,0,0,19,17.6
-S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),246,147,80,67,103.74,44.62,-60.73,-47.06,216.32,3117.0,36,88,7,9,31,10.2
+S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),248,147,80,67,103.74,44.62,-60.73,-47.06,216.32,3117.0,36,88,9,9,31,10.2
 S404,GapDown_OTM2,3d,watch,fat left tail (p10 < -45%),204,95,49,46,12.7,26.67,-65.89,-50.0,100.55,902.0,29,88,3,3,26,10.5
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),225,109,55,54,36.11,22.22,-71.43,-50.0,146.0,1086.0,25,92,0,0,19,27.5
 S365,RubberBand_14DTE,14d,watch,fat left tail (p10 < -45%),72,38,19,19,7.68,19.23,-64.77,-52.19,69.26,23.0,18,88,0,1,9,36.8
@@ -68,7 +68,7 @@ S417,BBSqueeze_OTM1,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,
 S418,BBSqueeze_OTM2,7d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S419,BBSqueeze_OTM3,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S431,DayTrader_RS,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
-S432,DayTrader_ORB_RS,3d,watch,insufficient sample (<8 exits),6,6,2,4,4.23,-36.61,-45.16,-39.62,94.46,-21.0,5,11,2,2,6,16.7
+S432,DayTrader_ORB_RS,3d,watch,insufficient sample (<8 exits),7,6,2,4,4.23,-36.61,-45.16,-39.62,94.46,-21.0,5,11,3,2,6,16.7
 S367,RubberBand_30DTE,30d,watch,insufficient sample (<8 exits),12,3,0,3,-41.76,-48.89,-50.89,-50.14,-29.78,-77.0,3,84,0,0,2,66.7
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),20,6,1,5,-33.91,-50.0,-66.67,-62.5,14.93,-5.0,2,88,0,0,2,83.3
 S358,GapDown_30DTE,30d,watch,insufficient sample (<8 exits),15,5,2,3,-8.92,-50.0,-51.39,-51.39,54.28,-49.0,4,84,0,0,3,40.0

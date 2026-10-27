@@ -404,14 +404,14 @@
   {
     "bucket_id": 90,
     "profile": "live_1to1",
-    "open_premium": 50.0,
-    "open_lots": 1
+    "open_premium": 94.0,
+    "open_lots": 2
   },
   {
     "bucket_id": 91,
     "profile": "s406_only",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 26.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 2000,
@@ -470,7 +470,7 @@
   {
     "bucket_id": 2009,
     "profile": "day_trader_analytics_s432",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 33.0,
+    "open_lots": 1
   }
 ]
