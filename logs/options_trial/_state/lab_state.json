@@ -40,25 +40,49 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-26T14:27:44.155796+00:00",
       "entry_order_id": "77f1be23-93ef-4e65-8527-dcfe01544f5a"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "d01e1d9a-c79c-45ce-97c9-db87c995e2b8",
+      "lot_id": "52d20f620526",
       "bucket_id": 90,
+      "profile_name": "live_1to1",
       "strategy_id": "S404",
       "occ_symbol": "BA261030C00195000",
       "underlying": "BA",
       "qty": 1,
-      "limit": 0.53,
-      "profile_name": "live_1to1",
-      "submitted": "2026-10-27",
-      "detail": "gap -2.6%",
-      "spread_frac": 0.16000000000000003,
-      "buy_offset": -0.01,
+      "entry_cost": 50.0,
+      "entry_price": 0.5,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
       "take_profit": 0.5,
-      "stop_loss": -0.4
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-27T14:06:45.671351+00:00",
+      "entry_order_id": "d01e1d9a-c79c-45ce-97c9-db87c995e2b8"
     },
+    {
+      "lot_id": "728ee1eb0550",
+      "bucket_id": 2007,
+      "profile_name": "day_trader_analytics_s430",
+      "strategy_id": "S430",
+      "occ_symbol": "TSLA261030C00432500",
+      "underlying": "TSLA",
+      "qty": 1,
+      "entry_cost": 47.0,
+      "entry_price": 0.47,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-27T14:07:33.848177+00:00",
+      "entry_order_id": "64ba2b68-09b0-4758-aceb-fe23fc871f63"
+    }
+  ],
+  "pending_orders": [
     {
       "order_id": "7b2b59e3-729b-49c2-b351-27e70ea0f1e8",
       "bucket_id": 90,
@@ -74,17 +98,54 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.4
+    },
+    {
+      "order_id": "abe208c0-c639-4357-beb8-27a56685e982",
+      "bucket_id": 2009,
+      "strategy_id": "S432",
+      "occ_symbol": "AMD261028C00587500",
+      "underlying": "AMD",
+      "qty": 1,
+      "limit": 0.33,
+      "profile_name": "day_trader_analytics_s432",
+      "submitted": "2026-10-27",
+      "detail": "ORB-drive +1.7% gap +1.5% VZ=-2.6 | RS +1.9%",
+      "spread_frac": 0.060606060606060656,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.6000000000000001
+    },
+    {
+      "order_id": "3d20e702-e5ca-48c3-b5a0-ec5d1069ef0a",
+      "bucket_id": 12,
+      "strategy_id": "S403",
+      "occ_symbol": "MCD261030C00257500",
+      "underlying": "MCD",
+      "qty": 1,
+      "limit": 0.28,
+      "profile_name": "lab0012_s403_w2_1005_1045_r1",
+      "submitted": "2026-10-27",
+      "detail": "touch MA50 green",
+      "spread_frac": 0.23076923076923064,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
   "pending_exits": [],
   "bucket_open_premium": {
     "b16": 40.0,
-    "b66": 12.0
+    "b66": 12.0,
+    "b90": 50.0,
+    "b2007": 47.0
   },
   "session_date": "2026-10-27",
   "entries_locked": [
     "90|S404|2026-10-27",
-    "90|S406|2026-10-27"
+    "90|S406|2026-10-27",
+    "2007|S430|2026-10-27",
+    "2009|S432|2026-10-27",
+    "12|S403|2026-10-27"
   ],
   "processed_orders": [
     "dd6866ed-eb05-4a4e-8c20-8676c8a8254c",
@@ -532,9 +593,11 @@
     "a800aa9d-0528-4937-bc8d-6ef4a9e6c59a",
     "7cf31fb4-d21a-423b-b9f4-c467bfbce0b6",
     "34f3897e-8879-44ec-a4a4-de45087fb76e",
-    "67abe955-9d3c-4cd6-b39e-07d65dfa5a21"
+    "67abe955-9d3c-4cd6-b39e-07d65dfa5a21",
+    "d01e1d9a-c79c-45ce-97c9-db87c995e2b8",
+    "64ba2b68-09b0-4758-aceb-fe23fc871f63"
   ],
-  "submitted_today": 2,
+  "submitted_today": 5,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-27"
 }
