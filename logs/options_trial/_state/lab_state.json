@@ -223,7 +223,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "b330193f-eae2-43bb-b1c4-bc4571cbdac8",
+      "lot_id": "5759576b6825",
+      "bucket_id": 2009,
+      "strategy_id": "S432",
+      "occ_symbol": "FSLY261030C00030000",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-10-28T11:11:43"
+    }
+  ],
   "bucket_open_premium": {
     "b12": 28.000000000000004,
     "b91": 72.0,
