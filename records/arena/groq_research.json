@@ -2651,5 +2651,122 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC hourly VWAP mean reversion empirical studies 2024 2025"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-10-28T22:39Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Hourly mean reversion after 3 consecutive negative hourly returns in crypto",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "322c952bdb9745",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "empirical evidence of mean reversion after negative streaks in crypto hourly data"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-10-28T22:39Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "safe_error": "GROQ_HTTP_400_unknown"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-10-28T22:40Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD hourly breakout after consolidation",
+    "strategy": {
+      "family": "breakout",
+      "lookback": 20,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "INSUFFICIENT_HOURLY_HISTORY"
+    },
+    "action": "HOLD_INSUFFICIENT_HISTORY",
+    "experiment_id": "13d2913602ac0e",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD breakout after consolidation 3h within 5% of 20h SMA"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-10-28T22:41Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Volatility compression mean reversion in Bitcoin during low volatility periods",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 12,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "INSUFFICIENT_HOURLY_HISTORY"
+    },
+    "action": "HOLD_INSUFFICIENT_HISTORY",
+    "experiment_id": "c41405c8ffc418",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "search for academic papers or independent studies on crypto volatility compression mean reversion using 12\u2011hour moving averages an"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-10-28T22:41Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Intraday gap-down mean\u2011reversion in large\u2011cap crypto assets",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 5,
+      "threshold": 0.01
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 7,
+        "end": 502,
+        "returns_pct": -2.656,
+        "drawdown_pct": -2.84,
+        "entries": 11
+      },
+      "retrospective_validation": {
+        "start": 502,
+        "end": 718,
+        "returns_pct": -1.021,
+        "drawdown_pct": -1.021,
+        "entries": 2
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "fb3bb826ce7c96",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC\u2011USD intraday gap\u2011down mean\u2011reversion 5\u2011hour backtest"
   }
 ]

@@ -1235,6 +1235,57 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T22:41Z",
+        "id": "fb3bb826ce7c96",
+        "topic": "Intraday gap-down mean\u2011reversion in large\u2011cap crypto assets",
+        "hypothesis": "When BTC\u2011USD opens with a gap\u2011down of more than 1% relative to the previous close, the hourly close price tends to revert toward the prior close within the next 5 hours, producing a statistically significant mean\u2011reversion effect.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 5,
+          "threshold": 0.01
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 502,
+            "returns_pct": -2.656,
+            "drawdown_pct": -2.84,
+            "entries": 11
+          },
+          "retrospective_validation": {
+            "start": 502,
+            "end": 718,
+            "returns_pct": -1.021,
+            "drawdown_pct": -1.021,
+            "entries": 2
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the mean and standard deviation of the price change from the gap\u2011down open to the close 5 hours later; a paired t\u2011test against zero with p<0.05 would reject the null hypothesis of no mean\u2011reversion.",
+        "source_search": {
+          "query": "BTC-USD hourly gap-down mean-reversion statistical analysis",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD intraday gap\u2011down mean\u2011reversion 5\u2011hour backtest",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ],
     "ai_seen": {
@@ -2105,6 +2156,44 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T22:39Z",
+        "id": "322c952bdb9745",
+        "topic": "Hourly mean reversion after 3 consecutive negative hourly returns in crypto",
+        "hypothesis": "In major crypto pairs (BTC\u2011USD, ETH\u2011USD, SOL\u2011USD), when the price has declined for three consecutive 1\u2011hour intervals, the next 1\u2011hour interval is more likely to produce a positive return than a negative return, indicating a short\u2011term mean\u2011reversion",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Count the number of 1\u2011hour periods following a 3\u2011hour negative streak where the next hour\u2019s return is positive versus negative. If the proportion of positive returns is not statistically significantly greater than 0.5 (e.g., using a binomial test with p<0.05), the hypothesis is falsified.",
+        "source_search": {
+          "query": "hourly crypto mean reversion after 3 negative streak",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "empirical evidence of mean reversion after negative streaks in crypto hourly data",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -2433,6 +2522,46 @@
         },
         "source_leads": [],
         "next_search_query": "search for academic papers or independent studies on crypto volatility compression mean reversion using 12\u2011hour moving averages",
+        "preferred_sources": [
+          "academic",
+          "web",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T22:41Z",
+        "id": "c41405c8ffc418",
+        "topic": "Volatility compression mean reversion in Bitcoin during low volatility periods",
+        "hypothesis": "When the 12\u2011hour rolling standard deviation of BTC\u2011USD hourly returns falls below its 30\u2011day moving average, the next 12 hours will exhibit a mean\u2011reversion toward the 12\u2011hour moving average of the price",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 12,
+          "threshold": 0.05
+        },
+        "symbol": null,
+        "test": {
+          "status": "INSUFFICIENT_HOURLY_HISTORY"
+        },
+        "paper_action": "HOLD_INSUFFICIENT_HISTORY",
+        "falsification_test": "Compute the 12\u2011hour rolling standard deviation of BTC\u2011USD hourly returns; when it falls below the 30\u2011day moving average, record the subsequent 12\u2011hour price change relative to the 12\u2011hour moving average. If the average absolute deviation is statistically significantly lower than a random walk baseli",
+        "source_search": {
+          "query": "search for academic papers or independent studies on crypto volatility compression mean reversion using 12\u2011hour moving averages",
+          "attempted": [
+            "academic",
+            "web",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for academic papers or independent studies on crypto volatility compression mean reversion using 12\u2011hour moving averages an",
         "preferred_sources": [
           "academic",
           "web",
@@ -2785,6 +2914,42 @@
           }
         ],
         "next_search_query": "BTC-USD 5h SMA 20h SMA trend backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T22:40Z",
+        "id": "13d2913602ac0e",
+        "topic": "BTC-USD hourly breakout after consolidation",
+        "hypothesis": "BTC-USD hourly price tends to break out above its 20\u2011hour simple moving average (SMA) following a period of at least 3 consecutive hours where the price stays within \u00b15% of the 20\u2011hour SMA (a consolidation phase).",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 20,
+          "threshold": 0.05
+        },
+        "symbol": null,
+        "test": {
+          "status": "INSUFFICIENT_HOURLY_HISTORY"
+        },
+        "paper_action": "HOLD_INSUFFICIENT_HISTORY",
+        "falsification_test": "Backtest the breakout rule on the hourly close series of BTC\u2011USD for the past 2 years, recording entry, exit, and performance metrics. Compare the results against a random\u2011entry benchmark to assess statistical significance.",
+        "source_search": {
+          "query": "BTC-USD 5h SMA 20h SMA trend backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD breakout after consolidation 3h within 5% of 20h SMA",
         "preferred_sources": [
           "web"
         ],
