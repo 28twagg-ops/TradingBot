@@ -1705,5 +1705,115 @@
     "live_trading": false,
     "ai_requests": 0,
     "safe_error": "GROQ_HTTP_429_rate_limit_exceeded"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-10-28T01:25Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-10-28T01:25Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD hourly mean reversion after extreme VWAP deviation",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "f6d06bbaea129b",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC hourly VWAP mean reversion studies"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-10-28T01:25Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Volatility compression mean reversion in major crypto assets using a 12\u2011hour moving average of hourl",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 12,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 14,
+        "end": 485,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 485,
+        "end": 694,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "b871204ff4ef57",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Volatility: Meaning in Finance and How It Works With Stocks",
+        "url": "https://www.investopedia.com/terms/v/volatility.asp",
+        "snippet": "Volatility shows how much a security or market index\u2019s returns fluctuate over time, indicating how widely prices move around their average. It's often calculated from the standard deviation or...",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "VOLATILITY Definition & Meaning - Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/volatility",
+        "snippet": "The meaning of VOLATILITY is the quality or state of being volatile. How to use volatility in a sentence.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Volatility (finance) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Volatility_(finance)",
+        "snippet": "In finance, volatility (usually denoted by \"\u03c3\") is the degree of variation of a trading price series over time, usually measured by the standard deviation of logarithmic returns. Historic volatility measures a time series of past market pri",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "GitHub - volatilityfoundation/volatility3: Volatility 3.0 development",
+        "url": "https://github.com/volatilityfoundation/volatility3",
+        "snippet": "Volatility is the world's most widely used framework for extracting digital artifacts from volatile memory (RAM) samples. The extraction techniques are performed completely independent of the system being investigated but offer visibility i",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "crypto volatility compression mean reversion 12 hour moving average backtest results"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-10-28T01:25Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 0,
+    "safe_error": "GROQ_HTTP_429_rate_limit_exceeded"
   }
 ]

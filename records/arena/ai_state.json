@@ -151,6 +151,44 @@
         "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
         "falsification_test": "If over a rolling 200\u2011period window the rule generates more than 30% losing trades or a cumulative return below the 20\u2011period SMA, the hypothesis is falsified.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-28T01:25Z",
+        "id": "f6d06bbaea129b",
+        "topic": "BTC-USD hourly mean reversion after extreme VWAP deviation",
+        "hypothesis": "When BTC-USD hourly close deviates more than 2% from its 24\u2011hour VWAP, the next hour\u2019s return tends to revert toward the VWAP, producing a statistically significant mean reversion effect.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the average absolute deviation of the next hour\u2019s close from the 24\u2011hour VWAP for all hours where the current hour\u2019s close deviates >2% from the VWAP. If the mean deviation is significantly lower than the overall mean deviation (e.g., p<0.05 in a paired t\u2011test), the hypothesis is supported; ",
+        "source_search": {
+          "query": "Given that the prior live records and replications of intraday VWAP-stop noise strategies show sub-1 profit factors and underperfo",
+          "attempted": [
+            "web",
+            "github",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC hourly VWAP mean reversion studies",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1522,6 +1560,90 @@
         ],
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T01:25Z",
+        "id": "b871204ff4ef57",
+        "topic": "Volatility compression mean reversion in major crypto assets using a 12\u2011hour moving average of hourl",
+        "hypothesis": "During periods when the 12\u2011hour rolling standard deviation of hourly log\u2011returns falls below its 12\u2011hour moving average by more than a threshold (e.g., 0.05), the asset\u2019s price will revert toward its recent mean, producing a profitable mean\u2011reversion",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 12,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 14,
+            "end": 485,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 485,
+            "end": 694,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Apply the rule to historical 1\u2011hour close data for BTC\u2011USD, ETH\u2011USD, and SOL\u2011USD over the past 3 years; compute the 12\u2011hour rolling volatility, compare to its 12\u2011hour moving average, generate signals when the ratio is below 0.95, and evaluate cumulative returns and risk metrics. If the strategy fail",
+        "source_search": {
+          "query": "volatility compression mean reversion crypto 12\u2011hour moving average",
+          "attempted": [
+            "web",
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Volatility: Meaning in Finance and How It Works With Stocks",
+            "url": "https://www.investopedia.com/terms/v/volatility.asp",
+            "snippet": "Volatility shows how much a security or market index\u2019s returns fluctuate over time, indicating how widely prices move around their average. It's often calculated from the standard deviation or...",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "VOLATILITY Definition & Meaning - Merriam-Webster",
+            "url": "https://www.merriam-webster.com/dictionary/volatility",
+            "snippet": "The meaning of VOLATILITY is the quality or state of being volatile. How to use volatility in a sentence.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Volatility (finance) - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Volatility_(finance)",
+            "snippet": "In finance, volatility (usually denoted by \"\u03c3\") is the degree of variation of a trading price series over time, usually measured by the standard deviation of logarithmic returns. Historic volatility measures a time series of past market pri",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "GitHub - volatilityfoundation/volatility3: Volatility 3.0 development",
+            "url": "https://github.com/volatilityfoundation/volatility3",
+            "snippet": "Volatility is the world's most widely used framework for extracting digital artifacts from volatile memory (RAM) samples. The extraction techniques are performed completely independent of the system being investigated but offer visibility i",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "crypto volatility compression mean reversion 12 hour moving average backtest results",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
