@@ -200,26 +200,29 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-28T14:48:01.246238+00:00",
       "entry_order_id": "fd61b948-a3f3-4f1e-8bba-a2546430c077"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "ae831f42-3e62-4ce5-b790-a157c634a4ab",
+      "lot_id": "5759576b6825",
       "bucket_id": 2009,
+      "profile_name": "day_trader_analytics_s432",
       "strategy_id": "S432",
       "occ_symbol": "FSLY261030C00030000",
       "underlying": "FSLY",
       "qty": 1,
-      "limit": 0.22,
-      "profile_name": "day_trader_analytics_s432",
-      "submitted": "2026-10-28",
-      "detail": "ORB-drive +1.3% gap -0.2% VZ=-1.7 | RS +1.4%",
-      "spread_frac": 0.2439024390243903,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.6000000000000001
+      "entry_cost": 20.0,
+      "entry_price": 0.2,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-28T14:56:49.349944+00:00",
+      "entry_order_id": "ae831f42-3e62-4ce5-b790-a157c634a4ab"
     }
   ],
+  "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {
     "b12": 28.000000000000004,
@@ -230,7 +233,8 @@
     "b67": 50.0,
     "b6": 28.000000000000004,
     "b2007": 15.0,
-    "b20": 15.0
+    "b20": 15.0,
+    "b2009": 20.0
   },
   "session_date": "2026-10-28",
   "entries_locked": [
@@ -716,7 +720,8 @@
     "8a655097-66b9-424a-b9c0-8b4836bbc87c",
     "5327ae76-cacf-4e07-a04f-f4c910b49d6a",
     "2b34f409-a9a4-4528-844b-be74e21d16b0",
-    "fd61b948-a3f3-4f1e-8bba-a2546430c077"
+    "fd61b948-a3f3-4f1e-8bba-a2546430c077",
+    "ae831f42-3e62-4ce5-b790-a157c634a4ab"
   ],
   "submitted_today": 7,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
