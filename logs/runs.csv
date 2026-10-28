@@ -11429,3 +11429,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-28 14:47:15,exits,bull,225.88,192.01,0,0,0,1,AMZN,both
 2026-10-28 14:52:02,exits,bull,225.83,192.01,0,0,0,1,AMZN,both
 2026-10-28 14:56:45,exits,bull,225.82,192.01,0,0,0,1,AMZN,both
+2026-10-28 15:02:07,exits,bull,225.76,225.76,0,0,1,0,,both
