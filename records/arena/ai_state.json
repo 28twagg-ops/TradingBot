@@ -1371,6 +1371,45 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T08:42Z",
+        "id": "4ed5b17b715b0d",
+        "topic": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 12\u2011hour cumulative return exceeds SPY\u2019s 12\u2011hour cumulative return by more than 5\u202f% (relative strength >\u202f1.05), BTC\u2011USD will continue to outperform SPY for the next 12\u202fhours, justifying a BUY signal on BTC\u2011USD.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 12\u2011hour cumulative return ratio BTC\u2011USD/SPY for all available hourly close data. Flag periods where the ratio >\u202f1.05 and test whether BTC\u2011USD\u2019s next 12\u2011hour return exceeds SPY\u2019s next 12\u2011hour return. Calculate win\u2011rate, profit factor, and maximum drawdown of the resulting strategy. If the",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results",
+          "attempted": [
+            "web",
+            "reddit",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1800,6 +1839,61 @@
           "web",
           "academic",
           "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T08:42Z",
+        "id": "c8e81fcfcceb88",
+        "topic": "Volatility compression mean reversion in major crypto assets using a 12\u2011hour moving average of hourl",
+        "hypothesis": "During periods when the 12\u2011hour rolling standard deviation of hourly returns falls below its 12\u2011hour moving average (i.e., volatility compression), the next hour\u2019s return tends to revert toward zero, producing a statistically significant mean\u2011reversi",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 12,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 14,
+            "end": 492,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 492,
+            "end": 704,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the 12\u2011hour rolling standard deviation of hourly returns for BTC\u2011USD, ETH\u2011USD, and SOL\u2011USD. Identify all hours where the rolling SD is below its 12\u2011hour moving average. For each such hour, record the next hour\u2019s return. Test whether the mean of these returns is statistically different from z",
+        "source_search": {
+          "query": "crypto volatility compression mean reversion 12 hour moving average backtest results",
+          "attempted": [
+            "web",
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "crypto volatility compression mean reversion 12 hour moving average backtest results",
+        "preferred_sources": [
+          "web",
+          "forum",
+          "academic"
         ],
         "site_domain": null,
         "research_data_requirements": [
