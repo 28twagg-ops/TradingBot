@@ -33595,11 +33595,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-10-28.log
 elapsed=3.0s reconcile=0.31s cancel=0.14s manage=1.6s
 
-=== 14:14:57 ET — manage-only (past entry window) [elapsed=2.3s reconcile=0.27s cancel=0.1s manage=1.16s] ===
-=== options_morning_bot (PAPER) 2026-10-28T14:14:57.617559-04:00 ===
+=== 14:17:43 ET — manage-only (past entry window) [elapsed=1.9s reconcile=0.33s cancel=0.15s manage=0.75s] ===
+=== options_morning_bot (PAPER) 2026-10-28T14:17:43.867121-04:00 ===
 
 [Run context]
-Paper auth OK — equity $990660.53, account PA33P8KT02IL
+Paper auth OK — equity $990666.71, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:80:live_1to1+variations
 
 [Setup]
@@ -33608,8 +33608,6 @@ S406-only twin b91 s406_only — S406 | TP+50%/SL-40% | paper edge test
 Variation study: 78 lab/promising bucket(s) | cohort: 78 unique (S163, S164, S166, S167, S168, S169, S170, S171, S172, S175, S200, S201 … +66 more) | max 200 new entries/run
 Dropped (no new entries; ex-reflected P&L): S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S398, S399, S401, S405, S407, S408
 Shared-OCC entry block ON (one lab lot per contract)
-  cancelled protective stop HOOD261030C00096000 id=51ef59ad-ea29-4f56-954c-302da730ec00
-  EXIT [b91|s406_only|S406] stop_loss (-40.3%) SELL 1 HOOD261030C00096000 @<= 0.40  id=d5ea3e6d-3a23-4bdd-a769-dbd4ca61648a
 
 [Manage only]
 Past entry window; manage/exit only.
@@ -33618,25 +33616,25 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $990,660.53
+Account equity: $990,666.71
 Active buckets: 80 of 80 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
-  Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+11,428.55 all-time  |  $-130.00 today
-  Raw (incl dropped):     $+6,204.55 all-time  |  $-130.00 today
-  Open (not sold yet): $-15.00 unrealized (virtual lots)
-  Premium deployed:    $115.00 in open positions
-  Combined P&L:        $+11,413.55 (reflected realized + open virtual)
+  Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+11,399.55 all-time  |  $-159.00 today
+  Raw (incl dropped):     $+6,175.55 all-time  |  $-159.00 today
+  Open (not sold yet): $-16.00 unrealized (virtual lots)
+  Premium deployed:    $43.00 in open positions
+  Combined P&L:        $+11,383.55 (reflected realized + open virtual)
 
 Ledger (master)
-  Total events:     16300
+  Total events:     16301
   Today entries:    10
-  Today exits (reflected): 9
-  All-time exits (reflected): 2953  wins 42%
+  Today exits (reflected): 10
+  All-time exits (reflected): 2954  wins 42%
   Avg return/trade: +26.7%  median -31.5%
 
 Open virtual lots (by bucket)
-  b6 lab0006_s210_w2_1005_1045_r1  prem=$    28  real=$-27.00  open=$-10.00  lots=1  [S210:PLTRx1]
+  b6 lab0006_s210_w2_1005_1045_r1  prem=$    28  real=$-27.00  open=$-11.00  lots=1  [S210:PLTRx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b12 lab0012_s403_w2_1005_1045_r1  prem=$     0  real=$ +2.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -33680,7 +33678,7 @@ Open virtual lots (by bucket)
   (55 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  PLTR261030C00207500  qty=1  cost=$28.00  return=-35.7%  open P&L=$-10.00
+  PLTR261030C00207500  qty=1  cost=$28.00  return=-39.3%  open P&L=$-11.00
   TTD261106C00013500  qty=1  cost=$15.00  return=-33.3%  open P&L=$-5.00
 
 Per-bucket exit stats (all time)
@@ -34096,7 +34094,7 @@ Per-bucket exit stats (all time)
   b919|lab0919_s412_w4_1120_1135_r2  n=  6  avg=+17.6%  med=-2.2%  realized=$-38.00
   b91|c091_s165_w4_1120_1135_r5  n=  2  avg=+222.0%  med=+247.0%  realized=$+293.00
   b91|g091_eod_tp30_sl30  n=  2  avg=+19.8%  med=+55.6%  realized=$+25.00
-  b91|s406_only           n= 14  avg=-28.5%  med=-41.9%  realized=$-219.00
+  b91|s406_only           n= 15  avg=-29.3%  med=-41.9%  realized=$-248.00
   b92|g092_lim_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
   b93|g093_mid_tp30_sl40  n=  2  avg=+53.6%  med=+70.8%  realized=$+94.51
   b94|g094_eod_tp30_sl40  n=  2  avg=+46.6%  med=+55.6%  realized=$+73.80
@@ -34111,20 +34109,20 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $990,660.53                                              |
-|Open Risk    : 3 lots (2 broker pos)                                    |
+|Equity       : $990,666.71                                              |
+|Open Risk    : 2 lots (2 broker pos)                                    |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
 |-- SYSTEM HEALTH --                                                     |
 |Zombies      : 0 (Ledger is clean)                                      |
-|Lab Status   : 3 Active Lots | 0 Pending Orders                         |
+|Lab Status   : 2 Active Lots | 0 Pending Orders                         |
 |Auto-Matrix  : (Pending EOD report generation)                          |
 +========================================================================+
 +========================================================================+
 |[DATA QUALITY: CLEAN vs ERRORS vs KEEP-ONLY]                            |
 +========================================================================+
 |  CLEAN              n=1756  win= 48.0%  med= -30.6%  $+18,348          |
-|  TAINTED            n=2056  win= 31.6%  med= -41.7%  $-12,143          |
+|  TAINTED            n=2057  win= 31.6%  med= -41.7%  $-12,172          |
 |  KEEP-only          n=858   win= 60.1%  med= +50.7%  $+12,416          |
 |  KEEP recent        n=673   win= 59.0%  med= +52.9%  $+8,907           |
 |  KEEP(24): S163,S164,S166,S167,S168,S173,S174,S210...                  |
@@ -34150,18 +34148,13 @@ Per-bucket exit stats (all time)
 |  b84  g084_mid_tp30_sl30      36%  -63.8%    14                        |
 +========================================================================+
 +========================================================================+
-|[PENDING EXITS (1)]                                                     |
-+========================================================================+
-|  b91  S406 HOOD261030C00096000 x1 stop_loss (-40.3%)                   |
-+========================================================================+
-+========================================================================+
 |[OPEN OPTIONS (2)]                                                      |
 +========================================================================+
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
-|  PLTR261030C00207500           1    -35.7%   $    -10.00               |
+|  PLTR261030C00207500           1    -39.3%   $    -11.00               |
 |  TTD261106C00013500            1    -33.3%   $     -5.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-10-28.log
-elapsed=2.3s reconcile=0.27s cancel=0.1s manage=1.16s
+elapsed=1.9s reconcile=0.33s cancel=0.15s manage=0.75s
 
