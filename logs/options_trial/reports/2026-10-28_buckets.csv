@@ -78,4 +78,4 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 2004,promising_s175_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2005,promising_s220_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2006,promising_s221_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
-2007,day_trader_analytics_s431,ask-0.01,bid-0.01,50.0,-40.0,0,1,0,2026-10-27,False,,0.0,-42.55,-42.55,-42.55,-42.55,-20.0,TSLA,S430,broker_fill_backfill,closed
+2007,day_trader_analytics_s431,ask-0.01,bid-0.01,50.0,-40.0,1,1,1,2026-10-28,False,,0.0,-42.55,-42.55,-42.55,-42.55,-20.0,"MCD,TSLA",S430,broker_fill_backfill,closed
