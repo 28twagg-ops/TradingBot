@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-28
 
-_Generated 2026-10-28T11:12:07.771468_
+_Generated 2026-10-28T11:17:30.863891_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-10-28T11:12:07.771468_
 
 ## Attribution health
 
-- Total exits: **3805**
+- Total exits: **3806**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **11.1%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -88,7 +88,7 @@ _Generated 2026-10-28T11:12:07.771468_
 | S418 (BBSqueeze_OTM2) | 7d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S431 (DayTrader_RS) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S432 (DayTrader_ORB_RS) | 3d | watch | 7 | 42.9 | -35.71 | -44.19 | -38.91 | +91.21 | 12 | 3 | 3 | $+3.00 | 14.3% | insufficient sample (<8 exits) |
+| S432 (DayTrader_ORB_RS) | 3d | watch | 8 | 37.5 | -36.61 | -50.00 | -42.74 | +86.59 | 12 | 3 | 4 | $-7.00 | 12.5% | early sample with non-positive median |
 | S430 (DayTrader_ORB) | 3d | watch | 7 | 42.9 | -39.29 | -43.91 | -41.47 | +70.79 | 12 | 3 | 2 | $-3.00 | 28.6% | insufficient sample (<8 exits) |
 | S367 (RubberBand_30DTE) | 30d | watch | 3 | 0.0 | -48.89 | -50.89 | -50.14 | -29.78 | 85 | 0 | 0 | $-77.00 | 66.7% | insufficient sample (<8 exits) |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 89 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
@@ -334,7 +334,7 @@ _Pipeline evaluation as of 2026-10-28. Auto-kill thresholds: median<-25% at n>=1
 | S419 | BBSqueeze_OTM3 | 0 | — | — | NEW | 0 |
 | S430 | DayTrader_ORB | 7 | -39.29% | 43% | WATCH | 12 |
 | S431 | DayTrader_RS | 0 | — | — | NEW | 0 |
-| S432 | DayTrader_ORB_RS | 7 | -35.71% | 43% | WATCH | 12 |
+| S432 | DayTrader_ORB_RS | 8 | -36.61% | 38% | WATCH | 12 |
 
 ## Auto-Kill Log
 
