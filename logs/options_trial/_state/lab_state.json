@@ -178,6 +178,22 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.4
+    },
+    {
+      "order_id": "fd61b948-a3f3-4f1e-8bba-a2546430c077",
+      "bucket_id": 20,
+      "strategy_id": "S364",
+      "occ_symbol": "TTD261106C00013500",
+      "underlying": "TTD",
+      "qty": 1,
+      "limit": 0.15,
+      "profile_name": "lab0020_s364_w2_1005_1045_r1",
+      "submitted": "2026-10-28",
+      "detail": "RB gap -1.6% reclaim",
+      "spread_frac": 0.2068965517241379,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
     }
   ],
   "pending_exits": [],
@@ -196,7 +212,8 @@
     "67|S164|2026-10-28",
     "52|S406|2026-10-28",
     "55|S411|2026-10-28",
-    "2007|S430|2026-10-28"
+    "2007|S430|2026-10-28",
+    "20|S364|2026-10-28"
   ],
   "processed_orders": [
     "dd6866ed-eb05-4a4e-8c20-8676c8a8254c",
@@ -672,7 +689,7 @@
     "8a655097-66b9-424a-b9c0-8b4836bbc87c",
     "5327ae76-cacf-4e07-a04f-f4c910b49d6a"
   ],
-  "submitted_today": 5,
+  "submitted_today": 6,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-10-28"
 }
