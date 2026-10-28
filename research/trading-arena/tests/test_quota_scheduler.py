@@ -42,6 +42,17 @@ class QuotaSchedulerTests(unittest.TestCase):
             history.append({"worker":f"S{i:02d}","cycle":"2026-10-28T12:00Z",
                             "status":"RESEARCHED","ai_requests":1})
         self.assertEqual(eligible_worker_order(accounts,history,now,1),["S01"])
+    def test_repeated_failed_attempts_do_not_monopolize_entire_day(self):
+        now=dt.datetime(2026,10,28,14,0,tzinfo=UTC)
+        a=initial()
+        past=[{"worker":"S01","cycle":f"2026-10-28T{h:02d}:00Z",
+               "status":"AI_UNAVAILABLE","safe_error":"GROQ_HTTP_429",
+               "ai_requests":1} for h in (6,8,10,12)]
+        # No bot has succeeded today. S02 has never been given a chance.
+        order=eligible_worker_order(a,past,now,5)
+        self.assertNotIn("S01",order)
+        self.assertEqual(order[0],"S02")
+
     def test_research_idea_counts_as_success_for_fair_rotation(self):
         now=dt.datetime(2026,10,28,14,0,tzinfo=UTC)
         a=initial()
