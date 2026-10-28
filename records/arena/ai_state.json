@@ -254,6 +254,44 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T20:18Z",
+        "id": "f933af7517f475",
+        "topic": "BTC\u2011USD hourly VWAP mean reversion",
+        "hypothesis": "When the hourly close price deviates more than a small percentage from the hourly VWAP, the price tends to revert toward the VWAP in the following hour, producing a predictable mean\u2011reversion signal that can be exploited with a simple buy\u2011on\u2011deviatio",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the candidate rule to a 5\u2011year backtest of BTC\u2011USD hourly close data and compute the win rate, average return per trade, and Sharpe ratio. If the win rate is below 50\u202f% or the average return is negative, the hypothesis is falsified. Additionally, compare the strategy\u2019s performance to a random\u2011",
+        "source_search": {
+          "query": "BTC hourly VWAP mean reversion empirical studies",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC hourly VWAP mean reversion empirical studies 2024 2025",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1505,6 +1543,42 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T20:17Z",
+        "id": "8c4d3123af2532",
+        "topic": "Opening Range Breakout with Volatility Filter on 24/7 Crypto Spot Markets",
+        "hypothesis": "Hourly\u2010close based opening\u2011range breakout signals, when combined with a simple volatility filter (e.g., 1\u2011hour ATR > 1.5\u00d7 median ATR over the past 20 hours), generate statistically significant excess returns on major crypto spot pairs (BTC\u2011USD, ETH\u2011U",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to the last 2\u202fyears of hourly close data for each symbol; compute the win\u2011rate, average return per trade, and Sharpe ratio. Compare these metrics against a random\u2011trade benchmark and a simple buy\u2011and\u2011hold strategy. Reject the hypothesis if the breakout rule does not outperform both be",
+        "source_search": {
+          "query": "obtain hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1792,6 +1866,45 @@
         "preferred_sources": [
           "web",
           "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T20:17Z",
+        "id": "416db110d856ce",
+        "topic": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 12\u2011hour cumulative return exceeds SPY\u2019s 12\u2011hour cumulative return by more than a small threshold, BTC\u2011USD will outperform SPY over the next 12 hours, suggesting a short\u2011term relative\u2011strength trading signal.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compare the 12\u2011hour relative\u2011strength signal against a buy\u2011and\u2011hold benchmark for BTC\u2011USD and SPY over a rolling 12\u2011hour window; a statistically significant out\u2011performance (e.g., >10% higher cumulative return) would support the hypothesis, while consistent under\u2011performance would falsify it.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results on academic or forum sites",
+        "preferred_sources": [
+          "academic",
+          "forum",
+          "blog"
         ],
         "site_domain": null,
         "research_data_requirements": [
