@@ -5,6 +5,10 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-28T10:03Z | S05 |  | AI_UNAVAILABLE |  |
+| 2026-10-28T10:03Z | S09 |  | AI_UNAVAILABLE |  |
+| 2026-10-28T10:03Z | S04 | Hourly gap‑down mean‑reversion in BTC‑USD | 0da2bbb2258465 | HOLD |
+| 2026-10-28T10:03Z | S02 | BTC-USD 12‑hour positive return followed by 1‑ho | 60abdf7fd987fb | HOLD_INSUFFICIENT_HISTORY |
 | 2026-10-28T08:42Z | S07 |  | AI_UNAVAILABLE |  |
 | 2026-10-28T08:42Z | S06 | BTC‑USD relative strength to SPY 12‑hour momentu | 4ed5b17b715b0d | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-28T08:42Z | S08 | Volatility compression mean reversion in major c | c8e81fcfcceb88 | HOLD |
@@ -36,10 +40,6 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 | 2026-10-27T13:21Z | S01 |  | AI_UNAVAILABLE |  |
 | 2026-10-27T13:21Z | S10 | Crypto volatility breakout strategy | eee87310db7447 | HOLD |
 | 2026-10-27T13:21Z | S09 | Crypto Pair Co‑Movement Lagged Volatility Spike | b25a1aca1c2bf9 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-27T13:21Z | S08 | Volatility compression in major crypto assets du | dd64e367245a49 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-27T09:22Z | S07 | Volatility‑Adjusted Opening‑Range Breakout for B | 063f46ebba0aaf | HOLD_UNTESTED_BACKTEST_SIGNAL |
-| 2026-10-27T09:22Z | S04 | Cross-asset trend divergence and mean‑reversion  | e5e5ebd56d2c15 | HOLD_UNTESTED_BACKTEST_SIGNAL |
-| 2026-10-27T09:22Z | S03 | Cross‑asset trend predictability between BTC‑USD | c682a077bcdbed | HOLD_STUDY_TRADE_SYMBOL_MISMATCH |
 
 ## Important validation boundaries
 Backtesting uses hourly price-close approximations, not real executable quotes.
