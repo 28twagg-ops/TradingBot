@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-28
 
-_Generated 2026-10-28T13:58:56.865849_
+_Generated 2026-10-28T14:02:09.069266_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-10-28T13:58:56.865849_
 
 ## Attribution health
 
-- Total exits: **3810**
+- Total exits: **3811**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **11.1%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -102,9 +102,9 @@ _Generated 2026-10-28T13:58:56.865849_
 | S408 (RubberBand_ITM1) | 3d | drop | 67 | 43.3 | -6.25 | -81.48 | -59.63 | +573.13 | 86 | 0 | 0 | $+1,137.00 | 17.9% | manually paused — excluded from new entries & reflected P&L |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 110 | 47.3 | -6.31 | -71.05 | -51.51 | +83.32 | 93 | 1 | 1 | $+48.00 | 15.5% | non-positive median return |
 | S361 (RubberBand_2DTE) | 2d | drop | 69 | 46.4 | -8.33 | -67.04 | -53.52 | +265.55 | 89 | 1 | 1 | $+84.00 | 18.8% | non-positive median return |
-| S411 (RubberBand_OTM2) | 3d | drop | 62 | 48.4 | -14.29 | -57.45 | -51.76 | +61.48 | 86 | 2 | 1 | $-197.00 | 14.5% | non-positive median return |
 | S398 (GapDown_ATM) | 3d | drop | 65 | 47.7 | -18.42 | -68.25 | -55.56 | +168.45 | 89 | 0 | 0 | $+765.00 | 24.6% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 114 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
+| S411 (RubberBand_OTM2) | 3d | drop | 63 | 47.6 | -28.57 | -58.07 | -51.98 | +61.26 | 86 | 2 | 2 | $-203.00 | 15.9% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 114 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 255 | 32.2 | -35.29 | -63.24 | -53.42 | +93.89 | 114 | 0 | 0 | $-1,276.78 | 25.9% | non-positive median return |
 | S355 (GapDown_7DTE) | 7d | drop | 71 | 45.1 | -37.50 | -77.08 | -63.70 | +138.64 | 89 | 0 | 0 | $+367.00 | 38.0% | manually paused — excluded from new entries & reflected P&L |
@@ -323,7 +323,7 @@ _Pipeline evaluation as of 2026-10-28. Auto-kill thresholds: median<-25% at n>=1
 | S408 | RubberBand_ITM1 | 67 | -6.25% | 43% | INSUFFICIENT | 86 |
 | S409 | RubberBand_ATM | 2 | +81.94% | 100% | WATCH | 34 |
 | S410 | RubberBand_OTM1 | 11 | +65.28% | 64% | WATCH | 83 |
-| S411 | RubberBand_OTM2 | 62 | -14.29% | 48% | INSUFFICIENT | 86 |
+| S411 | RubberBand_OTM2 | 63 | -28.57% | 48% | INSUFFICIENT | 86 |
 | S412 | RubberBand_OTM3 | 68 | -3.57% | 44% | INSUFFICIENT | 89 |
 | S413 | BBSqueeze_ITM3 | 0 | — | — | NEW | 0 |
 | S414 | BBSqueeze_ITM2 | 0 | — | — | NEW | 0 |
