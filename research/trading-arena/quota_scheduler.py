@@ -124,10 +124,12 @@ def eligible_worker_order(accounts,events,now,limit=MAX_BATCH,minimum_gap=MIN_IN
     oldest=dt.datetime(1970,1,1,tzinfo=UTC)
     selected.sort(key=lambda id:(
         completed_today[id],
-        # Persisted per-worker history prevents starvation across UTC rollover.
+        # If every model call fails, spread attempts instead of letting one
+        # permanently failing bot monopolize the available free request slots.
+        attempted_today[id],
+        # Historic completed work breaks ties across midnight.
         len(accounts[id].get("groq_experiments",[])),
         last_success[id] or oldest,
-        attempted_today[id],
         recent_by_worker[id] or oldest,
         id))
     return selected[:limit]
