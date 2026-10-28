@@ -534,6 +534,57 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T16:43Z",
+        "id": "923872a482e7ec",
+        "topic": "BTC-USD 12\u2011hour negative return followed by 1\u2011hour positive momentum",
+        "hypothesis": "After a 12\u2011hour period of negative return, BTC\u2011USD tends to exhibit a positive 1\u2011hour momentum trend, suggesting a short\u2011term reversion to the mean.",
+        "candidate": {
+          "family": "trend",
+          "lookback": 12,
+          "threshold": 0.0
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 14,
+            "end": 498,
+            "returns_pct": -21.39,
+            "drawdown_pct": -22.112,
+            "entries": 46
+          },
+          "retrospective_validation": {
+            "start": 498,
+            "end": 712,
+            "returns_pct": -9.456,
+            "drawdown_pct": -9.456,
+            "entries": 18
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the 1\u2011hour return following each 12\u2011hour negative return; if the average 1\u2011hour return is statistically significantly positive (e.g., t\u2011test p<0.05) then the hypothesis holds; otherwise it is falsified.",
+        "source_search": {
+          "query": "BTC-USD 12\u2011hour positive return 1\u2011hour momentum statistical analysis",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD 12\u2011hour negative return 1\u2011hour momentum statistical analysis",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -756,6 +807,44 @@
         },
         "source_leads": [],
         "next_search_query": "empirical evidence of hourly mean reversion in Bitcoin and Ethereum",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T16:42Z",
+        "id": "2f7106517f3059",
+        "topic": "Hourly mean\u2011reversion of Bitcoin and Ethereum returns",
+        "hypothesis": "Bitcoin and Ethereum hourly returns exhibit a statistically significant mean\u2011reversion pattern such that the return over the next hour is negatively correlated with the return over the previous hour, with a magnitude exceeding 1.5% in absolute value.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the correlation between consecutive hourly returns for BTC\u2011USD and ETH\u2011USD over the past 5 years; a correlation coefficient significantly less than zero (p<0.05) and an average absolute next\u2011hour return exceeding 1.5% would support the hypothesis, otherwise it would be falsified.",
+        "source_search": {
+          "query": "empirical evidence of hourly mean reversion in Bitcoin and Ethereum",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "empirical study hourly mean reversion Bitcoin Ethereum 2024",
         "preferred_sources": [
           "web",
           "academic"
@@ -2826,6 +2915,44 @@
           }
         ],
         "next_search_query": "Bitcoin hourly realized volatility calculation and mean\u2011reversion studies",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T16:41Z",
+        "id": "99a26e4f47bc67",
+        "topic": "Bitcoin hourly realized volatility mean\u2011reversion trigger",
+        "hypothesis": "When the hourly realized volatility of Bitcoin exceeds its 20\u2011hour rolling mean by more than 30\u202f% the next hour\u2019s volatility reverts to the mean, creating a predictable mean\u2011reversion signal that can be exploited with a simple long\u2011only strategy on t",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 20\u2011hour rolling mean of hourly realized volatility, flag hours where volatility > mean\u202f\u00d7\u202f1.3, then test whether the following hour\u2019s volatility falls below the mean. Measure hit\u2011rate and profit factor using a 1\u2011hour close\u2011based rule that buys at the close after a trigger and sells at the",
+        "source_search": {
+          "query": "Bitcoin hourly realized volatility calculation and mean\u2011reversion studies",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
         "preferred_sources": [
           "web",
           "academic"
