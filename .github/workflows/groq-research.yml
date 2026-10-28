@@ -9,11 +9,11 @@ on:
   # A push to this workflow also exercises the free-key path once.
   workflow_dispatch:
   schedule:
-    # A 5-researcher batch every two hours, all day (UTC).
-    - cron: '23 */2 * * *'
-    # Additional overnight backup windows: 10:53 PM, 2:53 AM and 6:53 AM
-    # in Oklahoma during daylight saving time. UTC cadence is intentional.
-    - cron: '53 3,7,11 * * *'
+    # Frequent small windows, with the persistent quota scheduler releasing
+    # requests evenly across the 24-hour UTC day. GitHub may delay/skip cron.
+    - cron: '13 * * * *'
+    # A few independent second chances overnight for skipped GitHub jobs.
+    - cron: '43 3,7,11 * * *'
 
 permissions:
   contents: write
@@ -50,6 +50,7 @@ jobs:
       - name: Verify research safety before inference
         run: python -m unittest discover -s source/research/trading-arena/tests -v
       - name: Validate Groq client identifier and free model access (secrets hidden)
+        if: github.event_name == 'workflow_dispatch'
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python source/research/trading-arena/groq_probe.py
@@ -62,7 +63,7 @@ jobs:
           else
             echo "Awaiting optional free Groq API key; no cloud API charges."
           fi
-      - name: Research up to five overdue strategists and validate paper-only experiments
+      - name: Spend available time-paced quota on least-served strategists
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python source/research/trading-arena/groq_research.py --dir ledger/records/arena --batch 5

@@ -221,3 +221,31 @@ Model output and online text cannot directly change the source code,
 brokerage integrations, security controls or real-money strategies. The existing
 rule-based virtual scoreboard is a **separate system** and is not proof of AI
 strategy validation. Gemini remains a limited-capacity specialist reviewer.
+
+
+## Fair 24-hour Groq quota scheduler (October 28, 2026)
+
+Every available scheduled session should give priority to the workers who have
+the *fewest successfully accepted research sessions* today, breaking ties by
+persistent completed lifetime history. Invalid output, rejected model output,
+and Groq 429 responses do **not** falsely count as successes. Each researcher
+gets at most one attempt within a 40-minute window, so failures don't
+monopolize all available requests or starve other accounts.
+
+The free-tier scheduler no longer tries to use all daily credits immediately
+after UTC midnight. It releases its local conservative target of **72 requests
+per UTC day** proportionally over the 24 hours, with catch-up capacity for
+missed GitHub runs. This is a **safety target, not a statement of the actual
+Groq org quota**: the account may have smaller provider-specific RPM, RPD,
+TPM, TPD, or concurrent usage limits. API response headers supply request/day
+and token/minute availability. The scheduler spaces calls at least 40 seconds
+apart, honors Retry-After and provider daily-reset hints after HTTP 429, and
+records sanitized metadata (no API keys) in records/arena/groq_quota.json. It
+does not spin on exhausted quotas, retry 429 requests in a loop, or switch to
+a paid inference provider.
+
+The dedicated workflow now checks hourly, with some extra overnight windows;
+the independent two-hour baseline Arena workflow also participates when
+time-paced free research credits are left. GitHub schedules are best-effort
+and can be delayed. The saved quota report shows which researchers are
+next priority. Research remains virtual and is not live brokerage execution.

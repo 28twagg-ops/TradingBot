@@ -114,8 +114,8 @@ class GroqResearchTests(unittest.TestCase):
         first=choose_due_workers(accounts,past,self.now,5)
         self.assertEqual(first,["S01","S02","S03","S06","S08"])
         for wid in first:
-            past.append({"worker":wid,"cycle":"2026-10-26T20:41Z","status":"RESEARCHED"})
-        second=choose_due_workers(accounts,past,self.now,5)
+            past.append({"worker":wid,"cycle":"2026-10-26T20:39Z","status":"RESEARCHED"})
+        second=choose_due_workers(accounts,past,self.now+dt.timedelta(hours=1),5)
         self.assertEqual(set(second),{"S04","S05","S07","S09","S10"})
         self.assertFalse(set(first).intersection(second))
 
@@ -127,7 +127,7 @@ class GroqResearchTests(unittest.TestCase):
             one_turn(accounts,synthetic_feed(self.now),
                      lambda *_:self.fail("Unknown worker must not invoke model"),
                      self.now,worker_id="S99")
-        self.assertEqual(MAX_GROQ_REQUESTS_PER_UTC_DAY,40)
+        self.assertEqual(MAX_GROQ_REQUESTS_PER_UTC_DAY,72)
 
     def test_no_live_order_functions_exist(self):
         import groq_research

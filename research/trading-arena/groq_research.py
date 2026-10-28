@@ -11,6 +11,7 @@ import hashlib
 import json
 import math
 import os
+import time
 from pathlib import Path
 import urllib.error
 import urllib.request
@@ -18,10 +19,15 @@ import urllib.request
 from arena import PaperAccount, council
 from gemini_cycle import execute_virtual, normalize_decision, tradable, HISTORICAL_CONTEXT
 from open_research import discover, requested_sources, safe_domain, safe_query, requires_unavailable_test_inputs
+from quota_scheduler import (
+    DAILY_REQUEST_TARGET, MAX_BATCH, eligible_worker_order,
+    remaining_time_paced_credit, read_provider_headers,
+    cooldown_deadline, cooldown_active, spacing_seconds)
 from run_virtual import CONFIG, COINS, UTC, market
 
 API="https://api.groq.com/openai/v1/chat/completions"
 MODEL="openai/gpt-oss-20b"
+PROVIDER_LIMITS={}  # numeric rate-limit headers only; no credentials
 FAMILIES={"trend","reversion","breakout","momentum"}
 TOPICS=["mean reversion","momentum","opening-range breakout","market regimes",
         "volatility", "cross-asset trends","gap effects","relative strength",
@@ -72,8 +78,12 @@ def groq_json(instructions, prompt):
                               "User-Agent":"TradingBotArena/1.0.0"})
     try:
         with urllib.request.urlopen(req,timeout=35) as response:
+            PROVIDER_LIMITS.clear()
+            PROVIDER_LIMITS.update(read_provider_headers(response.headers))
             response_data=json.load(response)
     except urllib.error.HTTPError as e:
+        PROVIDER_LIMITS.clear()
+        PROVIDER_LIMITS.update(read_provider_headers(e.headers))
         # Only provider-approved error codes, never provider message or raw response.
         try:
             detail=json.loads(e.read(1500).decode("utf-8",errors="replace")).get("error",{})
@@ -264,8 +274,9 @@ def one_turn(accounts,feed,model,now,worker_id=None):
       "No real trading, no leverage, no fabricated verification and no executed "
       "external source code. Return the full required JSON schema.")
     try:
-        raw=model(policy,model_input)
+        # Count even 429 requests; old code counted only successful calls.
         output["ai_requests"]=1
+        raw=model(policy,model_input)
     except RuntimeError as exc:
         # All unknown errors fail closed, no retries or paid fallback.
         output["status"]="AI_UNAVAILABLE"
@@ -360,53 +371,27 @@ def one_turn(accounts,feed,model,now,worker_id=None):
 
 
 # Free-tier safety budget. This is a request cap, not permission for paid billing.
-MAX_GROQ_REQUESTS_PER_UTC_DAY=40
-MAX_WORKERS_PER_JOB=5
+MAX_GROQ_REQUESTS_PER_UTC_DAY=DAILY_REQUEST_TARGET
+MAX_WORKERS_PER_JOB=MAX_BATCH
 
 
-def choose_due_workers(accounts,attempt_log,now,limit=5):
-    """Round-robin by *actual recorded research attempts*, not a clock-slot.
-
-    GitHub scheduled jobs can be late or dropped. Ranking by the least attempts
-    and oldest attempt makes the next available run catch up on missed workers.
-    """
-    if type(limit) is not int or not 1<=limit<=MAX_WORKERS_PER_JOB:
-        raise ValueError("Outside free API research budget")
-    today=now.date().isoformat()
-    roster={w["id"] for w in CONFIG["workers"]}
-    if set(accounts)!=roster:
-        raise ValueError("Strategy account roster mismatch")
-    attempts={wid:0 for wid in roster}
-    last={wid:"" for wid in roster}
-    successful={wid:len(accounts[wid].get("groq_experiments",[])) for wid in roster}
-    for event in attempt_log:
-        if not isinstance(event,dict):
-            continue
-        wid=event.get("worker")
-        cycle=event.get("cycle")
-        if wid not in roster or not isinstance(cycle,str):
-            continue
-        last[wid]=max(last[wid],cycle)
-        if cycle.startswith(today):
-            attempts[wid]+=1
-    ranked=sorted(roster,key=lambda wid:(attempts[wid], successful[wid], last[wid],wid))
-    return ranked[:limit]
+def choose_due_workers(accounts,attempt_log,now,limit=MAX_BATCH):
+    """Compatibility wrapper; failures never masquerade as completed research."""
+    return eligible_worker_order(accounts,attempt_log,now,limit)
 
 
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--dir",required=True)
-    parser.add_argument("--batch",type=int,default=MAX_WORKERS_PER_JOB,
-                        help="Independent strategists per GitHub job (maximum five)")
+    parser.add_argument("--batch",type=int,default=MAX_BATCH,
+                        help="Maximum unique researchers in one GitHub job")
     parser.add_argument("--skip-if-recent-minutes",type=int,default=0,
-                        help="Fallback only: skip if another worker ran recently")
+                        help="Deprecated: fairness and provider cooldown now decide")
     args=parser.parse_args()
-    if not 1<=args.batch<=MAX_WORKERS_PER_JOB:
-        parser.error("Batch size must be between 1 and 5.")
-    if not 0<=args.skip_if_recent_minutes<=240:
-        parser.error("Fallback delay outside supported range.")
+    if not 1<=args.batch<=MAX_BATCH:
+        parser.error("Batch must be between 1 and five")
     if not os.getenv("GROQ_API_KEY","").strip():
-        print("Groq routine research awaiting GROQ_API_KEY. No paid calls.")
+        print("Groq research key not configured; no requests made")
         return
     now=dt.datetime.now(UTC)
     directory=Path(args.dir)
@@ -416,69 +401,93 @@ def main():
     events=json.loads(snapshots.read_text()) if snapshots.exists() else []
     if not isinstance(events,list):
         raise ValueError("Invalid research event history")
-    if args.skip_if_recent_minutes:
-        cycles=[x.get("cycle","") for x in events if isinstance(x,dict)]
-        recent=[]
-        for raw in cycles:
-            try:
-                when=dt.datetime.fromisoformat(str(raw).replace("Z","+00:00"))
-                if 0<=(now-when).total_seconds()/60<args.skip_if_recent_minutes:
-                    recent.append(raw)
-            except ValueError:
-                pass
-        if recent:
-            print("Fallback research skipped: successful recent scheduling activity")
-            return
-    count_today=sum(isinstance(e,dict) and
-                    str(e.get("cycle","")).startswith(now.date().isoformat())
-                    for e in events)
-    budget=MAX_GROQ_REQUESTS_PER_UTC_DAY-count_today
-    if budget<=0:
-        print("Free-tier daily research cap reached; no further API calls.")
+    quota_file=directory/"groq_quota.json"
+    quota=json.loads(quota_file.read_text()) if quota_file.exists() else {}
+    if not isinstance(quota,dict):
+        raise ValueError("Invalid quota state")
+    if cooldown_active(quota,now):
+        print("Groq cooldown active until",quota["cooldown_until"],
+              "; preserving priority for unsuccessful bots")
         return
-    batch=min(args.batch,budget)
-    due=choose_due_workers(accounts,events,now,batch)
+
+    # Pace the daily local ceiling over UTC time instead of exhausting it early.
+    credits=remaining_time_paced_credit(now,events)
+    last=quota.get("last_provider",{})
+    observed=quota.get("last_observed_at","")
+    if isinstance(last,dict) and str(observed).startswith(now.date().isoformat()):
+        available=last.get("remaining_daily_requests")
+        if type(available)==int:
+            credits=min(credits,max(0,available))
+    if credits<=0:
+        print("Free research budget not yet replenished: next scheduled run will retry")
+        return
+    due=choose_due_workers(accounts,events,now,min(args.batch,credits))
+    if not due:
+        print("Researchers are in their minimum spacing window; preserving fair priority")
+        return
     feed=market(now)
     if not feed:
-        print("Market history unavailable: no fabricated experiments.")
+        print("Historical market data unavailable; no fabricated tests")
         return
+
     attempted=[]
-    for wid in due:
-        event=one_turn(accounts,feed,groq_json,now,worker_id=wid)
+    for index,wid in enumerate(due):
+        # A single provider limit applies to every researcher. Do not retry the
+        # same failed worker repeatedly in one job, or charge it a success.
+        if index:
+            wait=spacing_seconds(PROVIDER_LIMITS)
+            print("Pacing Groq calls by",round(wait),"seconds for TPM headroom")
+            time.sleep(wait)
+        PROVIDER_LIMITS.clear()
+        event=one_turn(accounts,feed,groq_json,dt.datetime.now(UTC),worker_id=wid)
         attempted.append(event)
         events.append(event)
         print("Routine researcher",wid,event["status"],
-              "requests",event["ai_requests"])
-        # No uncontrolled retries of a rate-limited or forbidden free API.
-        if event.get("status")=="AI_UNAVAILABLE" and (
-            str(event.get("safe_error","")).startswith(("GROQ_HTTP_429","GROQ_HTTP_403"))):
-            print("Groq rate/permission denial; ending research batch safely")
+              "provider requests",event["ai_requests"])
+        if PROVIDER_LIMITS:
+            quota["last_provider"]=dict(PROVIDER_LIMITS)
+            quota["last_observed_at"]=dt.datetime.now(UTC).isoformat()
+        err=str(event.get("safe_error",""))
+        if event.get("status")=="AI_UNAVAILABLE" and err.startswith(("GROQ_HTTP_429","GROQ_HTTP_403")):
+            code=429 if err.startswith("GROQ_HTTP_429") else 403
+            quota["cooldown_until"]=cooldown_deadline(
+                dt.datetime.now(UTC),PROVIDER_LIMITS,code)
+            quota["last_denial_kind"]="RATE_LIMIT" if code==429 else "PROVIDER_FORBIDDEN"
+            print("Groq denial; honoring cooldown",quota["cooldown_until"],
+                  "and reserving the missed worker's priority")
             break
     if not attempted:
         return
     snapshots.write_text(json.dumps(events[-750:],indent=2)+"\n")
     (directory/"ai_state.json").write_text(json.dumps(accounts,indent=2)+"\n")
-    dayfile=directory/"GROQ_RESEARCH.md"
-    lines=["# Autonomous Groq research — ten independent $100 virtual strategists",
-           "Research attempts are scheduled GitHub jobs, not continuous real-time AI.",
-           "Five overdue researchers can be served per run. No paid inference fallback.",
-           "Historical close proxies are NOT Alpaca fills or validated investment returns.",
-           "",
+    quota["local_daily_request_ceiling"]=DAILY_REQUEST_TARGET
+    quota["last_run_at"]=dt.datetime.now(UTC).isoformat()
+    quota["last_batch_attempts"]=len(attempted)
+    quota["last_batch_successes"]=sum(e["status"] in (
+        "RESEARCHED","RESEARCH_IDEA_NEEDS_DATA") for e in attempted)
+    quota["pending_worker_priority"]=choose_due_workers(
+        accounts,events,dt.datetime.now(UTC),MAX_BATCH)
+    quota_file.write_text(json.dumps(quota,indent=2)+"\n")
+
+    lines=["# Autonomous Groq research — ten separate $100 virtual strategists",
+           "Each worker picks its own research directions and public source queries.",
+           "Prioritize LEAST successful bots; failed API calls do not count as successes.",
+           "Provider-aware cooldown, TPM pacing, and an evenly released daily ceiling.",
+           "Indicative historical closes are NOT executable quotes or real profits.","",
            "| UTC cycle | Worker | Topic | Experiment | Paper-only decision |",
            "|---|---|---|---|---|"]
-    for x in events[-35:][::-1]:
+    for e in events[-35:][::-1]:
         lines.append("| {} | {} | {} | {} | {} |".format(
-          str(x.get("cycle",""))[:20], x.get("worker",""),
-          str(x.get("topic",""))[:48].replace("|","/"),
-          x.get("experiment_id",x.get("status","")),
-          str(x.get("action",""))[:60].replace("|","/")))
-    lines+=["","## Important validation boundaries",
-            "Backtesting uses hourly price-close approximations, not real executable quotes.",
-            "No strategy is automatically promoted from these experiments into real money."]
-    dayfile.write_text("\n".join(lines)+"\n")
-    print("Completed batch",len(attempted),"of",batch,
-          "selected workers; remaining daily request slots",
-          max(0,budget-len(attempted)))
+            str(e.get("cycle",""))[:20],e.get("worker",""),
+            str(e.get("topic",""))[:48].replace("|","/"),
+            e.get("experiment_id",e.get("status","")),
+            str(e.get("action",""))[:60].replace("|","/")))
+    lines+=["","Unvalidated or inaccessible-data ideas remain research only.",
+            "No real-money trading or paid fallback."]
+    (directory/"GROQ_RESEARCH.md").write_text("\n".join(lines)+"\n")
+    print("Completed",len(attempted),"of",len(due),
+          "fairly prioritized researchers;",
+          "next first-priority workers",",".join(quota["pending_worker_priority"]))
 
 
 if __name__=="__main__":
