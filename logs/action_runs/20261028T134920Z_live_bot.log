@@ -1,0 +1,128 @@
+13:49:21  INFO      Mode: morning_scan
+13:49:22  INFO        SELL MARKET [urgent] LFUS closed
+13:49:24  INFO        TX logged: SELL LFUS  P&L -0.85%
+13:49:24  INFO        SELL LIMIT AME  qty=0.140107382  limit=$247.56  id=f0cc7a6e-c8c8-464e-8074-8c58cba77645
+13:49:55  INFO        SELL LIMIT filled AME (confirmed by position check)
+13:49:55  INFO        TX logged: SELL AME  P&L 1.93%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:49 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $226.37|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-10-28|
+|  Universe                                                          both|
+|  Mon~  Oct: RubberBand + GapDown (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $226.37|
+|  Cash                                                           $157.86|
+|  Reserve                                          $11.32  (always kept)|
+|  Stocks~  $68.51 / $169.78  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $101.26  (new stock buys)|
+|  Trade size             $33.96  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (2 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AME      Pullback50      $34.74     $243.24  $247.93  +1.9%   $+0.66  |
+|  LFUS     MomReversal     $33.78     $385.01  $381.73  -0.9%   $-0.29  |
+|                                                                        |
+|  Total invested                                                  $68.51|
+|  Total open P&L                                                  $+0.37|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (13.8m))|
+|  Cached exits                                                         1|
+|  Cached signals                                                      39|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  LFUS  P&L -0.9%  $-0.29                        EXIT: stop_loss (-0.9%)|
+|  AME  P&L +1.9%  $+0.66                           EXIT: midline (+2.1%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 2 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 0|
+|  Stop-loss breaches                                                   1|
+|  LFUS                                        -0.85%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           901|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  39                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AMZN     Pullback50      eq     $254.38  50.3   -3.10   50MA bounce (-|
+|  TECH     Pullback50      eq     $72.64   60.9   -2.46   50MA bounce (+|
+|  BRO      Pullback50      eq     $67.70   59.6   -1.83   50MA bounce (+|
+|  COF      Pullback50      eq     $205.12  58.4   -2.67   50MA bounce (+|
+|  COR      Pullback50      eq     $322.85  51.7   -2.68   50MA bounce (+|
+|  CVS      Pullback50      eq     $90.68   58.4   -2.35   50MA bounce (-|
+|  DVA      Pullback50      eq     $181.44  54.9   -1.49   50MA bounce (+|
+|  DG       Pullback50      eq     $126.50  52.9   -2.38   50MA bounce (+|
+|  GRMN     Pullback50      eq     $284.98  69.9   -2.41   50MA bounce (+|
+|  MU       Pullback50      eq     $973.25  42.5   -2.66   50MA bounce (-|
+|  MDLZ     Pullback50      eq     $61.76   54.3   -3.18   50MA bounce (-|
+|  MCO      Pullback50      eq     $475.48  59.6   -1.92   50MA bounce (-|
+|  PYPL     Pullback50      eq     $55.76   54.7   -2.08   50MA bounce (+|
+|  ROST     Pullback50      eq     $229.00  54.4   -3.26   50MA bounce (-|
+|  CRM      Pullback50      eq     $237.94  59.7   -3.05   50MA bounce (+|
+|  SYF      Pullback50      eq     $75.25   56.1   -2.52   50MA bounce (+|
+|  VLO      Pullback50      eq     $392.20  31.1   -2.61   50MA bounce (-|
+|  VRTX     Pullback50      eq     $517.73  55.8   -2.44   50MA bounce (-|
+|  ZBH      Pullback50      eq     $95.91   72.1   -3.11   50MA bounce (+|
+|  AVT      Pullback50      eq     $94.30   41.4   -2.62   50MA bounce (-|
+|  CR       Pullback50      eq     $201.78  49.7   -1.81   50MA bounce (-|
+|  CROX     Pullback50      eq     $118.27  52.7   -3.34   50MA bounce (-|
+|  CNO      Pullback50      eq     $54.60   57.4   -2.26   50MA bounce (+|
+|  EHC      Pullback50      eq     $121.50  47.7   -2.29   50MA bounce (-|13:49:56  INFO        BUY  AMZN  $33.96  [Pullback50]  id=24108641-eaca-4096-962c-1805603e7c12
+13:49:56  INFO        BUY  TECH  $33.96  [Pullback50]  id=1c5a56e1-ec18-4d9e-99f8-84a3ca9edf4d
+13:49:56  INFO        BUY  BRO  $33.96  [Pullback50]  id=b0cf4ce0-e63d-4d2e-a7ec-595830f9564a

@@ -989,3 +989,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-10-27 13:53:52,2026-10-27,SELL,TECH,Pullback50,72.645,72.64,72.642,34.0,-0.0041,-0.0014,limit_fill_position_check_full,midline (-0.0%),bull
 2026-10-27 19:52:14,2026-10-27,SELL,LFUS,MomReversal,383.92,,383.92,33.82,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
 2026-10-27 19:52:45,2026-10-27,SELL,RCL,MA_Squeeze,297.05,296.96,296.996,33.99,-0.0182,-0.0062,limit_fill_position_check_full,midline (-0.0%),bull
+2026-10-28 13:49:24,2026-10-28,SELL,LFUS,MomReversal,381.7275,,381.7275,33.78,0.0,0.0,market_urgent_full,stop_loss (-0.9%),bull
+2026-10-28 13:49:55,2026-10-28,SELL,AME,Pullback50,247.925,247.56,247.704,34.71,-0.0891,-0.0309,limit_fill_position_check_full,midline (+2.1%),bull
