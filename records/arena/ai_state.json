@@ -1072,6 +1072,42 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T15:08Z",
+        "id": "9a52b66f520ef6",
+        "topic": "Cryptocurrency intraday gap\u2011down mean\u2011reversion in large\u2011cap crypto assets",
+        "hypothesis": "Large\u2011cap crypto assets (BTC\u2011USD, ETH\u2011USD, SOL\u2011USD) exhibit a statistically significant mean\u2011reversion in hourly returns following a negative intraday gap (difference between opening price and previous close) larger than 1% of the previous close. The",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute hourly returns for each symbol; flag hours where opening price < previous close by >1%. For each flagged hour, calculate the next hour\u2019s return. Test whether the mean of these returns is significantly greater than zero (t\u2011test, p<0.05) and whether the effect size decreases as gap size increa",
+        "source_search": {
+          "query": "BTC\u2011USD hourly gap\u2011down mean\u2011reversion backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly gap-down mean-reversion statistical analysis",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ],
     "ai_seen": {
@@ -1344,6 +1380,42 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T15:06Z",
+        "id": "0c79a52cb2840c",
+        "topic": "Opening Range Breakout with Volatility Filter on 24/7 Crypto Spot Markets",
+        "hypothesis": "On 24/7 crypto spot markets, a simple hourly opening\u2011range breakout strategy that incorporates a volatility filter (e.g., a threshold based on the average true range over the past 24 hours) will produce a positive risk\u2011adjusted return when applied to",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the breakout rule to hourly close data for BTC\u2011USD, ETH\u2011USD, and SOL\u2011USD over a multi\u2011year period (e.g., 2019\u20112026). Compute cumulative returns, Sharpe ratio, and maximum drawdown. If the strategy yields a Sharpe ratio >0.5 and a maximum drawdown <30% over the backtest period, the hypothesis i",
+        "source_search": {
+          "query": "obtain intraday price data for BTC-USD ETH-USD SOL-USD to define opening range and volatility filter",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "obtain hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1584,6 +1656,44 @@
           "attempted": [
             "web",
             "reddit",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T15:06Z",
+        "id": "e7d873c158ec22",
+        "topic": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 12\u2011hour cumulative return exceeds SPY\u2019s 12\u2011hour cumulative return by more than a small threshold, BTC\u2011USD will continue to outperform in the next hour; conversely, when BTC\u2011USD lags SPY by the same margin, BTC\u2011USD will underperform.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 12\u2011hour cumulative returns of BTC\u2011USD and SPY using hourly close data; flag a signal when BTC\u2011USD\u2019s return minus SPY\u2019s return > +0.02 (buy) or < \u20130.02 (sell). Backtest the signal on the available hourly close series for both symbols, recording the subsequent one\u2011hour return of BTC\u2011USD. A",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results",
+          "attempted": [
+            "web",
             "academic"
           ],
           "matches": 4
@@ -2085,6 +2195,46 @@
           "web",
           "forum",
           "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T15:07Z",
+        "id": "70fa7c92027183",
+        "topic": "Volatility compression mean reversion in major crypto assets using a 12\u2011hour moving average of hourl",
+        "hypothesis": "During periods of moderate intraday volatility, the hourly close price of a major cryptocurrency (e.g., BTC\u2011USD) tends to revert toward its 12\u2011hour simple moving average, exhibiting a volatility compression effect that can be exploited for short\u2011term",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 12,
+          "threshold": 0.05
+        },
+        "symbol": null,
+        "test": {
+          "status": "INSUFFICIENT_HOURLY_HISTORY"
+        },
+        "paper_action": "HOLD_INSUFFICIENT_HISTORY",
+        "falsification_test": "Apply the candidate rule to the historical hourly close series of BTC\u2011USD, ETH\u2011USD, and SOL\u2011USD over the past 2 years; compute the proportion of trades that yield a positive return after accounting for a 0.1% transaction cost. Compare this performance to a random\u2011walk benchmark and to a 12\u2011hour movi",
+        "source_search": {
+          "query": "crypto volatility compression mean reversion 12 hour moving average backtest results",
+          "attempted": [
+            "web",
+            "forum",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for academic papers or independent studies on crypto volatility compression mean reversion using 12\u2011hour moving averages",
+        "preferred_sources": [
+          "academic",
+          "web",
+          "forum"
         ],
         "site_domain": null,
         "research_data_requirements": [

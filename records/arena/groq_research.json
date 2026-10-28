@@ -2356,5 +2356,107 @@
       }
     ],
     "next_search_query": "BTC-USD 5h SMA 20h SMA trend backtest results"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-10-28T15:06Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum trigger",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "e7d873c158ec22",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-10-28T15:06Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Opening Range Breakout with Volatility Filter on 24/7 Crypto Spot Markets",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "0c79a52cb2840c",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "obtain hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-10-28T15:07Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Volatility compression mean reversion in major crypto assets using a 12\u2011hour moving average of hourl",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 12,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "INSUFFICIENT_HOURLY_HISTORY"
+    },
+    "action": "HOLD_INSUFFICIENT_HISTORY",
+    "experiment_id": "70fa7c92027183",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "search for academic papers or independent studies on crypto volatility compression mean reversion using 12\u2011hour moving averages"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-10-28T15:08Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "safe_error": "GROQ_HTTP_400_unknown"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-10-28T15:08Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Cryptocurrency intraday gap\u2011down mean\u2011reversion in large\u2011cap crypto assets",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "9a52b66f520ef6",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly gap-down mean-reversion statistical analysis"
   }
 ]
