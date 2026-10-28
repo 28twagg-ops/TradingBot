@@ -158,3 +158,5 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-10-27 15:26:05.717976+00:00,exit,90,live_1to1,S406,ce7332041a4e,KO,KO261030C00094000,1,,0.23,44.0,-47.73,-21.0,broker_fill_backfill,,-0.01,0.5,-0.4,,,68628d64-c2ec-4f21-983a-7973de001692
 2026-10-28 13:52:44.032988+00:00,entry,90,live_1to1,S406,650256a45967,V,V261030C00415000,1,0.64,0.64,64.0,,,,-0.01,,0.5,-0.4,,,dffeacec-fc80-4f21-9886-24d6dbd0f42e
 2026-10-28 13:46:35.632404+00:00,entry,90,live_1to1,S404,2615140b9ef0,HOOD,HOOD261030C00097000,1,0.66,0.66,66.0,,,,-0.01,,0.5,-0.4,,,fd28fc29-6bdd-4c0b-ad4f-98fed06b65f6
+2026-10-28 16:22:20.456262+00:00,exit,90,live_1to1,S404,2615140b9ef0,HOOD,HOOD261030C00097000,1,,0.4,66.0,-39.39,-26.0,broker_fill_backfill,,-0.01,0.5,-0.4,,,6c778b7d-62db-44c3-a3a4-ddcee4cf7497
+2026-10-28T16:27:16Z,reconcile,90,live_1to1,S406,650256a45967,V,V261030C00415000,0,,,64.0,,,missing_from_broker,,,0.5,-0.4,,lot closed outside of bot; no sell fill found,
