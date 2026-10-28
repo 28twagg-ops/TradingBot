@@ -11416,3 +11416,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-28 13:26:57,summary,bull,229.33,157.86,0,0,0,2,AME|LFUS,both
 2026-10-28 13:50:26,scan_morning,bull,225.97,124.17,39,0,2,3,AMZN|BRO|TECH,both
 2026-10-28 13:53:39,scan_morning,bull,225.92,192.01,39,0,2,1,AMZN,both
+2026-10-28 13:57:08,exits,bull,225.89,192.01,0,0,0,1,AMZN,both

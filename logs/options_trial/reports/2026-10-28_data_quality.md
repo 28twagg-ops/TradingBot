@@ -8,9 +8,9 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | Slice | n | Win% | Med% | Avg% | Realized $ |
 |---|---:|---:|---:|---:|---:|
 | ALL | 3805 | 39.2 | -40.0 | +21.5 | $+6,281 |
-| CLEAN (perfect running) | 1753 | 48.0 | -30.1 | +35.6 | $+18,366 |
-| TAINTED (errors/outages) | 2052 | 31.6 | -41.7 | +9.4 | $-12,085 |
-| CLEAN since 2026-08-03 | 1437 | 45.7 | -40.5 | +35.5 | $+6,066 |
+| CLEAN (perfect running) | 1752 | 48.1 | -30.1 | +35.7 | $+18,386 |
+| TAINTED (errors/outages) | 2053 | 31.6 | -41.8 | +9.4 | $-12,105 |
+| CLEAN since 2026-08-03 | 1436 | 45.8 | -40.5 | +35.5 | $+6,086 |
 | KEEP-only (CLEAN keepers) | 855 | 60.2 | +50.7 | +51.4 | $+12,444 |
 | KEEP-only since 2026-08-03 | 670 | 59.1 | +52.9 | +57.2 | $+8,935 |
 
