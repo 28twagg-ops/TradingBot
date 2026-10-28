@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-28T08:36:23.365783+00:00",
+  "timestamp": "2026-10-28T15:02:40.047974+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -11,10 +11,10 @@
       "missing_quotes": []
     },
     "S02": {
-      "action": "BUY BTC-USD",
-      "cash": 36.38512319,
-      "equity": 100.1216,
-      "ledger_events": 2,
+      "action": "SELL BTC-USD",
+      "cash": 60.11555363,
+      "equity": 99.5362,
+      "ledger_events": 3,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -43,10 +43,10 @@
       "missing_quotes": []
     },
     "S06": {
-      "action": "BUY ETH-USD",
-      "cash": 13.16167191,
-      "equity": 99.5538,
-      "ledger_events": 6,
+      "action": "SELL BTC-USD",
+      "cash": 36.73121807,
+      "equity": 99.1858,
+      "ledger_events": 7,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -67,18 +67,18 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "BUY SOL-USD",
-      "cash": 21.81481246,
-      "equity": 99.4666,
-      "ledger_events": 5,
+      "action": "SELL ETH-USD",
+      "cash": 45.40590224,
+      "equity": 98.8165,
+      "ledger_events": 6,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S10": {
-      "action": "BUY ETH-USD",
-      "cash": 21.78985586,
-      "equity": 99.4087,
-      "ledger_events": 5,
+      "action": "SELL BTC-USD",
+      "cash": 60.88473447,
+      "equity": 98.7191,
+      "ledger_events": 6,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     }

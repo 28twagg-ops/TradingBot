@@ -189,6 +189,71 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T15:04Z",
+        "id": "8e3c4ebc459263",
+        "topic": "BTC-USD hourly VWAP mean reversion",
+        "hypothesis": "After a significant hourly VWAP deviation (e.g., >5% above or below the VWAP), BTC\u2011USD hourly close prices tend to revert toward the VWAP within the next 24 hours, producing a statistically significant mean\u2011reversion signal that can be exploited with",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the mean absolute deviation of hourly closes from the VWAP over the next 24 hours following extreme deviations; compare to a random\u2011shuffled benchmark. A significant reduction in deviation would falsify the hypothesis if not observed.",
+        "source_search": {
+          "query": "BTC hourly VWAP mean reversion studies",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/BTC-USD/",
+            "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $80,596.61 USD with a 24-hour trading volume of $22,034,328,699.28 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "What is Bitcoin price today? The current price of Bitcoin (BTC) is 80,814 USD \u2014 it has risen 0.73 % in the past 24 hours. Try placing this info into the context by checking out what coins are also gaining and losing at the moment and seeing",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin Price: BTC/USD Live Price Chart, Market Cap & News Today ...",
+            "url": "https://www.coingecko.com/en/coins/bitcoin",
+            "snippet": "Price of Bitcoin (BTC) today is $81,328.17 with a 24-hour trading volume of $23,794,355,156. Track Bitcoin's live price, market cap, news, and more on CoinGecko.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "BTC hourly VWAP mean reversion empirical studies",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -654,6 +719,45 @@
         "preferred_sources": [
           "web",
           "reddit",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T15:04Z",
+        "id": "cb9a4c91c605a7",
+        "topic": "Hourly mean\u2011reversion of crypto returns",
+        "hypothesis": "Hourly returns of major cryptocurrencies (BTC\u2011USD, ETH\u2011USD, SOL\u2011USD) exhibit a statistically significant mean\u2011reversion pattern such that a return exceeding +1.5% in one hour is followed by a return below \u22121.5% in the next hour, and vice versa.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the conditional probability of a return below \u22121.5% in hour t+1 given a return above +1.5% in hour t, and compare it to the unconditional probability. A significant increase would support the hypothesis; a lack of difference would falsify it.",
+        "source_search": {
+          "query": "empirical study hourly crypto mean reversion 1.5% return",
+          "attempted": [
+            "web",
+            "reddit",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "empirical evidence of hourly mean reversion in Bitcoin and Ethereum",
+        "preferred_sources": [
+          "web",
           "academic"
         ],
         "site_domain": null,
@@ -2259,6 +2363,86 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T15:05Z",
+        "id": "e676c97dc8a25c",
+        "topic": "BTC-USD trend persistence",
+        "hypothesis": "The 5\u2011hour simple moving average (SMA) of BTC\u2011USD hourly close prices tends to stay above the 20\u2011hour SMA for extended periods, indicating a persistent trend that can be exploited with a simple trend\u2011following rule.",
+        "candidate": {
+          "family": "trend",
+          "lookback": 5,
+          "threshold": 0.0
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 496,
+            "returns_pct": -28.186,
+            "drawdown_pct": -28.813,
+            "entries": 63
+          },
+          "retrospective_validation": {
+            "start": 496,
+            "end": 710,
+            "returns_pct": -13.986,
+            "drawdown_pct": -13.986,
+            "entries": 28
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Backtest the rule (buy when 5h SMA > 20h SMA, sell when 5h SMA < 20h SMA) on BTC\u2011USD hourly close data for the past 3 years and compare the cumulative return and Sharpe ratio to a buy\u2011and\u2011hold benchmark.",
+        "source_search": {
+          "query": "BTC-USD 5h SMA 20h SMA trend backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/BTC-USD/",
+            "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $80,596.61 USD with a 24-hour trading volume of $22,034,328,699.28 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "What is Bitcoin price today? The current price of Bitcoin (BTC) is 80,814 USD \u2014 it has risen 0.73 % in the past 24 hours. Try placing this info into the context by checking out what coins are also gaining and losing at the moment and seeing",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin Price: BTC/USD Live Price Chart, Market Cap & News Today ...",
+            "url": "https://www.coingecko.com/en/coins/bitcoin",
+            "snippet": "Price of Bitcoin (BTC) today is $81,328.17 with a 24-hour trading volume of $23,794,355,156. Track Bitcoin's live price, market cap, news, and more on CoinGecko.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "BTC-USD 5h SMA 20h SMA trend backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -2434,6 +2618,74 @@
         ],
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T15:02Z",
+        "id": "46544a937b3f2c",
+        "topic": "Hourly Bitcoin volatility mean\u2011reversion trigger based on intraday intraday volatility bands",
+        "hypothesis": "When the 1\u2011hour realized volatility of BTC\u2011USD exceeds its 20\u2011hour rolling mean by more than 30\u202f%, the subsequent 1\u2011hour return tends to revert toward the mean, producing a statistically significant negative excess return in the next hour.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the mean of the next\u2011hour returns conditional on the volatility trigger and compare to the unconditional mean using a t\u2011test; a significant negative mean indicates mean\u2011reversion. Also check for autocorrelation and stationarity of the volatility series to ensure the trigger is not spurious.",
+        "source_search": {
+          "query": "Bitcoin hourly volatility breakout mean reversion strategy research",
+          "attempted": [
+            "web",
+            "reddit",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $80,596.61 USD with a 24-hour trading volume of $22,034,328,699.28 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin - Open source P2P money",
+            "url": "https://bitcoin.org/",
+            "snippet": "Bitcoin is an innovative payment network and a new kind of money. Find all you need to know and get started with Bitcoin on bitcoin.org.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bitcoin",
+            "snippet": "Bitcoin (abbreviation: BTC; sign: \u20bf) is the first decentralized cryptocurrency. Based on a free-market ideology, bitcoin was invented in 2008 when an unknown person published a white paper under the pseudonym of Satoshi Nakamoto. [4] Use of",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "Bitcoin hourly realized volatility calculation and mean\u2011reversion studies",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]

@@ -1,10 +1,16 @@
-# Autonomous Groq research — ten independent $100 virtual strategists
-Research attempts are scheduled GitHub jobs, not continuous real-time AI.
-Five overdue researchers can be served per run. No paid inference fallback.
-Historical close proxies are NOT Alpaca fills or validated investment returns.
+# Autonomous Groq research — ten separate $100 virtual strategists
+Each worker picks its own research directions and public source queries.
+Prioritize LEAST successful bots; failed API calls do not count as successes.
+Provider-aware cooldown, TPM pacing, and an evenly released daily ceiling.
+Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-28T15:05Z | S09 | BTC-USD trend persistence | e676c97dc8a25c | HOLD |
+| 2026-10-28T15:04Z | S03 | Hourly mean‑reversion of crypto returns | cb9a4c91c605a7 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-28T15:04Z | S01 | BTC-USD hourly VWAP mean reversion | 8e3c4ebc459263 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-28T15:03Z | S07 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
+| 2026-10-28T15:02Z | S10 | Hourly Bitcoin volatility mean‑reversion trigger | 46544a937b3f2c | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-28T10:03Z | S05 |  | AI_UNAVAILABLE |  |
 | 2026-10-28T10:03Z | S09 |  | AI_UNAVAILABLE |  |
 | 2026-10-28T10:03Z | S04 | Hourly gap‑down mean‑reversion in BTC‑USD | 0da2bbb2258465 | HOLD |
@@ -35,12 +41,6 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 | 2026-10-27T14:38Z | S04 | Minor intraday gap‑down mean‑reversion in large‑ | 1a7a98d98d9be7 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-27T14:35Z | S03 |  | AI_UNAVAILABLE |  |
 | 2026-10-27T14:35Z | S02 | Noise trading models in cryptocurrency markets:  | e1bf4e3e14e04c | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-27T14:35Z | S06 | Cross‑asset relative strength between BTC‑USD an | 91bf17bb77fef2 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-27T14:35Z | S05 | Opening Range Breakout with Volatility Filter on | fd6438be012a47 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-27T13:21Z | S01 |  | AI_UNAVAILABLE |  |
-| 2026-10-27T13:21Z | S10 | Crypto volatility breakout strategy | eee87310db7447 | HOLD |
-| 2026-10-27T13:21Z | S09 | Crypto Pair Co‑Movement Lagged Volatility Spike | b25a1aca1c2bf9 | RESEARCH_ONLY_NEEDS_DATA |
 
-## Important validation boundaries
-Backtesting uses hourly price-close approximations, not real executable quotes.
-No strategy is automatically promoted from these experiments into real money.
+Unvalidated or inaccessible-data ideas remain research only.
+No real-money trading or paid fallback.
