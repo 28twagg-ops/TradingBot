@@ -1,0 +1,172 @@
+13:52:36  INFO      Mode: morning_scan
+13:52:37  INFO        [positions] 3/3 (3 valid)
+13:52:37  INFO        SELL LIMIT BRO  qty=0.505118133  limit=$67.02  id=bb6f8c8d-7025-4fb6-bbf2-f78b2687c90d
+13:53:08  INFO        SELL LIMIT filled BRO (confirmed by position check)
+13:53:08  INFO        TX logged: SELL BRO  P&L -0.08%
+13:53:08  INFO        SELL LIMIT TECH  qty=0.467193262  limit=$72.66  id=272dc02f-6bba-41ca-9652-33458a1cc6c1
+13:53:39  INFO        SELL LIMIT filled TECH (confirmed by position check)
+13:53:39  INFO        TX logged: SELL TECH  P&L -0.0%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:52 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $225.95|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-10-28|
+|  Universe                                                          both|
+|  Mon~  Oct: RubberBand + GapDown (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $225.95|
+|  Cash                                                           $124.17|
+|  Reserve                                          $11.30  (always kept)|
+|  Stock~  $101.78 / $169.46  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $67.68  (new stock buys)|
+|  Trade size             $33.89  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AMZN     Pullback50      $33.91     $253.52  $253.21  -0.1%   $-0.04  |
+|  BRO      Pullback50      $33.92     $67.21   $67.16   -0.1%   $-0.03  |
+|  TECH     Pullback50      $33.95     $72.67   $72.67   -0.0%   $-0.00  |
+|                                                                        |
+|  Total invested                                                 $101.78|
+|  Total open P&L                                                  $-0.07|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (17.1m); positions refreshed live)|
+|  Cached signals                                                      39|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AMZN  P&L -0.1%  $-0.04                                           HOLD|
+|  BRO  P&L -0.1%  $-0.03                           EXIT: midline (-0.1%)|
+|  TECH  P&L -0.0%  $-0.00                          EXIT: midline (-0.0%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 2 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                          cached signals (signals fresh (17.1m))|
+|  Universe scanned in prep                                           901|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  39                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AMZN     Pullback50      eq     $254.38  50.3   -3.10   50MA bounce (-|
+|  TECH     Pullback50      eq     $72.64   60.9   -2.46   50MA bounce (+|
+|  BRO      Pullback50      eq     $67.70   59.6   -1.83   50MA bounce (+|
+|  COF      Pullback50      eq     $205.12  58.4   -2.67   50MA bounce (+|
+|  COR      Pullback50      eq     $322.85  51.7   -2.68   50MA bounce (+|
+|  CVS      Pullback50      eq     $90.68   58.4   -2.35   50MA bounce (-|
+|  DVA      Pullback50      eq     $181.44  54.9   -1.49   50MA bounce (+|
+|  DG       Pullback50      eq     $126.50  52.9   -2.38   50MA bounce (+|
+|  GRMN     Pullback50      eq     $284.98  69.9   -2.41   50MA bounce (+|
+|  MU       Pullback50      eq     $973.25  42.5   -2.66   50MA bounce (-|
+|  MDLZ     Pullback50      eq     $61.76   54.3   -3.18   50MA bounce (-|
+|  MCO      Pullback50      eq     $475.48  59.6   -1.92   50MA bounce (-|
+|  PYPL     Pullback50      eq     $55.76   54.7   -2.08   50MA bounce (+|
+|  ROST     Pullback50      eq     $229.00  54.4   -3.26   50MA bounce (-|
+|  CRM      Pullback50      eq     $237.94  59.7   -3.05   50MA bounce (+|
+|  SYF      Pullback50      eq     $75.25   56.1   -2.52   50MA bounce (+|
+|  VLO      Pullback50      eq     $392.20  31.1   -2.61   50MA bounce (-|
+|  VRTX     Pullback50      eq     $517.73  55.8   -2.44   50MA bounce (-|
+|  ZBH      Pullback50      eq     $95.91   72.1   -3.11   50MA bounce (+|
+|  AVT      Pullback50      eq     $94.30   41.4   -2.62   50MA bounce (-|
+|  CR       Pullback50      eq     $201.78  49.7   -1.81   50MA bounce (-|
+|  CROX     Pullback50      eq     $118.27  52.7   -3.34   50MA bounce (-|
+|  CNO      Pullback50      eq     $54.60   57.4   -2.26   50MA bounce (+|13:53:39  INFO        place_all_stops: checking 1 positions...
+13:53:39  INFO        STOP skipped AMZN: fractional (0.1339 shares) — software exit will handle it
+13:53:39  INFO        Daily log -> logs/daily/2026-10-28.md
+13:53:39  INFO        Dashboard written → logs/dashboard.md
+
+|  EHC      Pullback50      eq     $121.50  47.7   -2.29   50MA bounce (-|
+|  EAT      Pullback50      eq     $208.57  63.7   -2.01   50MA bounce (-|
+|  FIVE     Pullback50      eq     $231.91  81.8   -2.64   50MA bounce (-|
+|  GEF      Pullback50      eq     $82.26   51.3   -3.19   50MA bounce (-|
+|  KNSL     Pullback50      eq     $359.85  60.1   -1.92   50MA bounce (+|
+|  LNTH     Pullback50      eq     $100.06  48.6   -1.89   50MA bounce (-|
+|  MUSA     Pullback50      eq     $527.75  56.3   -2.54   50MA bounce (+|
+|  RGEN     Pullback50      eq     $178.55  64.8   -2.32   50MA bounce (+|
+|  ROKU     Pullback50      eq     $156.41  60.3   -1.21   50MA bounce (+|
+|  ROIV     Pullback50      eq     $36.58   61.4   -1.73   50MA bounce (-|
+|  SHC      Pullback50      eq     $18.60   63.0   -3.16   50MA bounce (+|
+|  SIRI     Pullback50      eq     $27.45   68.0   -2.20   50MA bounce (-|
+|  THC      Pullback50      eq     $262.43  52.0   -2.43   50MA bounce (-|
+|  TRU      Pullback50      eq     $75.22   67.6   -2.91   50MA bounce (+|
+|  UMBF     Pullback50      eq     $136.31  64.7   -2.77   50MA bounce (+|
+|  TXNM     Pullback50      eq     $58.64   52.0   -1.61   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   RubberBand + GapDown (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             39|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                2|
+|  Open pos                                                             1|
+|  Equity                                                         $225.92|
+|  Cash                                                           $192.01|
++========================================================================+
