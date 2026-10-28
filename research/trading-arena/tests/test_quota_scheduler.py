@@ -51,6 +51,9 @@ class QuotaSchedulerTests(unittest.TestCase):
                  "status":"RESEARCH_IDEA_NEEDS_DATA","ai_requests":1},
                 {"worker":"S02","cycle":"2026-10-28T12:00Z",
                  "status":"AI_UNAVAILABLE","ai_requests":1}]
+        for number in range(3,11):
+            events.append({"worker":f"S{number:02d}","cycle":"2026-10-28T12:00Z",
+                           "status":"RESEARCHED","ai_requests":1})
         self.assertEqual(eligible_worker_order(a,events,now,1),["S02"])
         self.assertEqual(SUCCESS,{"RESEARCHED","RESEARCH_IDEA_NEEDS_DATA"})
     def test_immediate_duplicate_run_skips_recent_workers(self):
