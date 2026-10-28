@@ -1815,5 +1815,86 @@
     "live_trading": false,
     "ai_requests": 0,
     "safe_error": "GROQ_HTTP_429_rate_limit_exceeded"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-10-28T01:27Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD 12\u2011hour positive return followed by 1\u2011hour momentum trend",
+    "strategy": {
+      "family": "trend",
+      "lookback": 12,
+      "threshold": 0.01
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 14,
+        "end": 487,
+        "returns_pct": -6.805,
+        "drawdown_pct": -7.024,
+        "entries": 11
+      },
+      "retrospective_validation": {
+        "start": 487,
+        "end": 697,
+        "returns_pct": -1.625,
+        "drawdown_pct": -1.625,
+        "entries": 3
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "5b440ce5cd74e7",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD 12\u2011hour positive return 1\u2011hour momentum trend study"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-10-28T01:27Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Intraday gap-down mean\u2011reversion in large\u2011cap crypto assets",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "f84bb3dde65cb1",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "cryptocurrency intraday gap\u2011down mean\u2011reversion volume anomaly study minute data"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-10-28T01:27Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-10-28T01:27Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 0,
+    "safe_error": "GROQ_HTTP_429_rate_limit_exceeded"
   }
 ]

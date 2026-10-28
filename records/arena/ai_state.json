@@ -382,6 +382,57 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T01:27Z",
+        "id": "5b440ce5cd74e7",
+        "topic": "BTC-USD 12\u2011hour positive return followed by 1\u2011hour momentum trend",
+        "hypothesis": "When BTC\u2011USD has a positive return over the previous 12 hours, the next 1\u2011hour return tends to be higher than the 12\u2011hour average, indicating a short\u2011term trend continuation. This can be captured by a simple trend rule that buys when the 12\u2011hour retu",
+        "candidate": {
+          "family": "trend",
+          "lookback": 12,
+          "threshold": 0.01
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 14,
+            "end": 487,
+            "returns_pct": -6.805,
+            "drawdown_pct": -7.024,
+            "entries": 11
+          },
+          "retrospective_validation": {
+            "start": 487,
+            "end": 697,
+            "returns_pct": -1.625,
+            "drawdown_pct": -1.625,
+            "entries": 3
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the 12\u2011hour return for each hour in the historical series; for those hours where the return is >0, calculate the next hour\u2019s return. If the mean of those next\u2011hour returns is significantly higher than the overall mean return (e.g., t\u2011test p<0.05) and the rule\u2019s hit\u2011rate exceeds random chance",
+        "source_search": {
+          "query": "BTC-USD 12\u2011hour negative return reversal pattern 1\u2011hour momentum",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD 12\u2011hour positive return 1\u2011hour momentum trend study",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -750,6 +801,42 @@
           "hourly_close",
           "minute_bars",
           "volume"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T01:27Z",
+        "id": "f84bb3dde65cb1",
+        "topic": "Intraday gap-down mean\u2011reversion in large\u2011cap crypto assets",
+        "hypothesis": "Large\u2011cap cryptocurrencies that open significantly below the previous hour\u2019s close (a gap\u2011down) tend to revert toward the previous close within the next few hours, with the magnitude of the reversion correlated to the intraday volume anomaly (i.e., u",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to hourly close data for BTC\u2011USD, ETH\u2011USD, and SOL\u2011USD over the past 12 months. Count the number of gap\u2011down events (open < previous close by >5%) and compute the proportion that revert to within 2% of the previous close within the next 5 hours. Compare this proportion to a random\u2011shu",
+        "source_search": {
+          "query": "cryptocurrency intraday gap\u2011down mean\u2011reversion volume anomaly study",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "cryptocurrency intraday gap\u2011down mean\u2011reversion volume anomaly study minute data",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
         ],
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
