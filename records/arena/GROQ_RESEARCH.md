@@ -5,6 +5,10 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-28T08:36Z | S10 |  | AI_UNAVAILABLE |  |
+| 2026-10-28T08:36Z | S03 | Short-term mean-reversion of hourly crypto retur | b00c391c9986a2 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-28T08:36Z | S05 | Opening Range Breakout with Volatility Filter on | 7aa683f9ecb427 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-28T08:36Z | S09 | BTC-USD 5h SMA 20h SMA Trend Persistence | fb1a5f8be2fc8b | HOLD |
 | 2026-10-28T01:27Z | S06 |  | AI_UNAVAILABLE |  |
 | 2026-10-28T01:27Z | S07 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
 | 2026-10-28T01:27Z | S04 | Intraday gap-down mean‑reversion in large‑cap cr | f84bb3dde65cb1 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,10 +40,6 @@ Historical close proxies are NOT Alpaca fills or validated investment returns.
 | 2026-10-27T09:22Z | S06 | Crypto liquidity impact on BTC‑USD momentum | 69eb7ca6a66a21 | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-27T07:59Z | S05 | Cross‑asset momentum‑driven breakout with volati | 83bd8e6863002e | HOLD_UNTESTED_BACKTEST_SIGNAL |
 | 2026-10-27T07:59Z | S01 | Volatility‑adjusted moving‑average trend capture | 89766009f89e42 | HOLD_UNTESTED_BACKTEST_SIGNAL |
-| 2026-10-27T07:59Z | S10 | Momentum persistence in high‑frequency crypto ma | 45568c88ce6da8 | HOLD_UNTESTED_BACKTEST_SIGNAL |
-| 2026-10-27T07:59Z | S09 | Cross‑Asset Trend Persistence | 69eb7ca6a66a21 | HOLD_UNTESTED_BACKTEST_SIGNAL |
-| 2026-10-27T07:59Z | S08 | Crypto liquidity impact on short‑term volatility | c682a077bcdbed | HOLD_UNTESTED_BACKTEST_SIGNAL |
-| 2026-10-27T07:56Z | S07 | Crypto liquidity and breakout volatility | bea29d096fa9ea | HOLD_UNTESTED_BACKTEST_SIGNAL |
 
 ## Important validation boundaries
 Backtesting uses hourly price-close approximations, not real executable quotes.

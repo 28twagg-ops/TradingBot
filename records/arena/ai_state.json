@@ -587,6 +587,46 @@
         "paper_action": "HOLD_STUDY_TRADE_SYMBOL_MISMATCH",
         "falsification_test": "If over a 12\u2011month out\u2011of\u2011sample period the proportion of days where BTC\u2019s 20\u2011day trend direction correctly predicts ETH\u2019s 24\u2011hour return direction falls below 55% or the average ETH return on correctly predicted days is less than 5% of its price, the hypothesis is falsified.",
         "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-28T08:36Z",
+        "id": "b00c391c9986a2",
+        "topic": "Short-term mean-reversion of hourly crypto returns",
+        "hypothesis": "When an asset\u2019s hourly return exceeds +1.5\u202f% (or falls below \u20131.5\u202f%), the next hourly return tends to revert toward zero, producing a statistically significant mean-reversion signal on BTC\u2011USD and ETH\u2011USD.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to the last 2000 hourly bars of BTC\u2011USD and ETH\u2011USD and compute the average next\u2011hour return conditioned on the trigger. Compare to the unconditional mean and test for statistical significance (t\u2011test).",
+        "source_search": {
+          "query": "Short-term mean-reversion pullbacks of 1.34% to 1.65% over the last 12 hours in major crypto assets like BTC-USD and ETH-USD do no",
+          "attempted": [
+            "web",
+            "github",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "empirical study hourly crypto mean reversion 1.5% return",
+        "preferred_sources": [
+          "web",
+          "reddit",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1067,6 +1107,42 @@
         },
         "source_leads": [],
         "next_search_query": "opening range breakout crypto hourly volatility filter strategy details",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T08:36Z",
+        "id": "7aa683f9ecb427",
+        "topic": "Opening Range Breakout with Volatility Filter on 24/7 Crypto Spot Markets",
+        "hypothesis": "An hourly opening\u2011range breakout strategy that incorporates a volatility filter (e.g., ATR\u2011based) will outperform a simple breakout on BTC\u2011USD, ETH\u2011USD, and SOL\u2011USD over a 12\u2011month horizon.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the hourly\u2011close breakout rule to the last 12 months of BTC\u2011USD, ETH\u2011USD, and SOL\u2011USD data and compare the cumulative return and Sharpe ratio to a buy\u2011and\u2011hold benchmark. If the strategy\u2019s cumulative return is lower or the Sharpe ratio is not significantly higher (p<0.05), the hypothesis is fa",
+        "source_search": {
+          "query": "opening range breakout crypto hourly volatility filter strategy details",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "obtain intraday price data for BTC-USD ETH-USD SOL-USD to define opening range and volatility filter",
         "preferred_sources": [
           "web"
         ],
@@ -1941,6 +2017,59 @@
           "web",
           "reddit",
           "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T08:36Z",
+        "id": "fb1a5f8be2fc8b",
+        "topic": "BTC-USD 5h SMA 20h SMA Trend Persistence",
+        "hypothesis": "When the 5\u2011hour simple moving average (SMA) of BTC\u2011USD crosses above its 20\u2011hour SMA, the asset enters a sustained bullish trend that continues for at least the next 5 hours, yielding positive hourly returns.",
+        "candidate": {
+          "family": "trend",
+          "lookback": 5,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 492,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 492,
+            "end": 704,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the 5\u2011hour SMA and 20\u2011hour SMA on the hourly close series. Record the sign of the SMA cross (positive when 5h SMA > 20h SMA). For each cross, calculate the cumulative return over the following 5 hours. If the average cumulative return is negative or the win\u2011rate falls below 50%, the hypothes",
+        "source_search": {
+          "query": "BTC-USD 5h SMA 20h SMA trend study",
+          "attempted": [
+            "web",
+            "reddit",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD 5h SMA 20h SMA trend backtest results",
+        "preferred_sources": [
+          "web"
         ],
         "site_domain": null,
         "research_data_requirements": [

@@ -1896,5 +1896,99 @@
     "live_trading": false,
     "ai_requests": 0,
     "safe_error": "GROQ_HTTP_429_rate_limit_exceeded"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-10-28T08:36Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD 5h SMA 20h SMA Trend Persistence",
+    "strategy": {
+      "family": "trend",
+      "lookback": 5,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 7,
+        "end": 492,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 492,
+        "end": 704,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "fb1a5f8be2fc8b",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD 5h SMA 20h SMA trend backtest results"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-10-28T08:36Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Opening Range Breakout with Volatility Filter on 24/7 Crypto Spot Markets",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "7aa683f9ecb427",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "obtain intraday price data for BTC-USD ETH-USD SOL-USD to define opening range and volatility filter"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-10-28T08:36Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Short-term mean-reversion of hourly crypto returns",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "b00c391c9986a2",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "empirical study hourly crypto mean reversion 1.5% return"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-10-28T08:36Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 0,
+    "safe_error": "GROQ_HTTP_429_rate_limit_exceeded"
   }
 ]
