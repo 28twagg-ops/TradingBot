@@ -1596,6 +1596,57 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T14:18Z",
+        "id": "c10e6287678fa3",
+        "topic": "Hourly gap\u2011down mean\u2011reversion in BTC\u2011USD",
+        "hypothesis": "When BTC\u2011USD opens an hour lower than the previous hour\u2019s close by more than a threshold (e.g., 1%), the price tends to revert toward the prior close within the next 5 hours, producing a statistically significant positive return.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 5,
+          "threshold": 0.01
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 496,
+            "returns_pct": -2.84,
+            "drawdown_pct": -2.84,
+            "entries": 10
+          },
+          "retrospective_validation": {
+            "start": 496,
+            "end": 710,
+            "returns_pct": -1.19,
+            "drawdown_pct": -1.408,
+            "entries": 3
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the mean return over the 5\u2011hour window following each hourly gap\u2011down event exceeding 1% and compare it to zero using a one\u2011sample t\u2011test; a p\u2011value <0.05 would support the hypothesis, while a non\u2011significant result would falsify it.",
+        "source_search": {
+          "query": "BTC\u2011USD hourly gap\u2011down mean\u2011reversion 5\u2011hour backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly gap-down events 1% threshold 5\u2011hour return distribution",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ],
     "ai_seen": {
@@ -2342,6 +2393,45 @@
           "academic",
           "forum",
           "blog"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T14:16Z",
+        "id": "c26347d808cabd",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour cumulative return exceeds SPY\u2019s 24\u2011hour cumulative return by more than 5\u202f% (i.e., relative strength >\u202f1.05), BTC\u2011USD will continue to rise in the next hour, whereas a relative strength below 0.95 will precede a BTC\u2011USD pullback",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 24\u2011hour cumulative returns for BTC\u2011USD and SPY, calculate the ratio, and test whether a ratio >\u202f1.05 predicts a positive 1\u2011hour return for BTC\u2011USD and a ratio <\u202f0.95 predicts a negative 1\u2011hour return. Use a 5\u2011hour lookback window to avoid look\u2011ahead bias and evaluate the hit\u2011rate and pro",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results on academic or forum sites",
+          "attempted": [
+            "academic",
+            "forum",
+            "blog"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+        "preferred_sources": [
+          "academic",
+          "forum"
         ],
         "site_domain": null,
         "research_data_requirements": [
@@ -3496,6 +3586,57 @@
         },
         "source_leads": [],
         "next_search_query": "BTC-USD 5h SMA 20h SMA trend persistence backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T14:17Z",
+        "id": "494185eec12562",
+        "topic": "BTC-USD mean reversion to 24\u2011hour SMA after large drawdowns",
+        "hypothesis": "After a price drop of more than 10\u202f% within the past 24\u202fhours, BTC\u2011USD tends to revert toward its 24\u2011hour simple moving average within the next 24\u202fhours, producing a statistically significant positive return relative to a buy\u2011and\u2011hold baseline.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 496,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 496,
+            "end": 710,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Run a backtest over the past 3\u202fyears using hourly close data: for each hour where the price has fallen >10\u202f% over the previous 24\u202fh, record the return over the next 24\u202fh. Compute the mean and 95\u202f% confidence interval of these returns and compare to zero. If the mean return is significantly >0 and th",
+        "source_search": {
+          "query": "BTC-USD 5h SMA 20h SMA trend persistence backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD mean reversion after 10% drawdown 24h SMA backtest results",
         "preferred_sources": [
           "web"
         ],
