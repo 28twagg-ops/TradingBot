@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-29T13:04:54.382387+00:00",
+  "timestamp": "2026-10-29T19:41:40.649412+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -11,10 +11,10 @@
       "missing_quotes": []
     },
     "S02": {
-      "action": "HOLD",
-      "cash": 98.73898174,
-      "equity": 98.739,
-      "ledger_events": 6,
+      "action": "BUY AAPL",
+      "cash": 59.5956511,
+      "equity": 98.6999,
+      "ledger_events": 7,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -43,18 +43,18 @@
       "missing_quotes": []
     },
     "S06": {
-      "action": "HOLD",
-      "cash": 59.39912954,
-      "equity": 99.1852,
-      "ledger_events": 9,
+      "action": "SELL QQQ",
+      "cash": 98.49671147,
+      "equity": 98.4967,
+      "ledger_events": 10,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S07": {
-      "action": "HOLD",
-      "cash": 99.10874765,
-      "equity": 99.1087,
-      "ledger_events": 2,
+      "action": "BUY AAPL",
+      "cash": 59.81880752,
+      "equity": 99.0695,
+      "ledger_events": 3,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -67,10 +67,10 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "HOLD",
-      "cash": 98.49346844,
-      "equity": 98.4935,
-      "ledger_events": 8,
+      "action": "BUY BTC-USD",
+      "cash": 59.40875994,
+      "equity": 98.4155,
+      "ledger_events": 9,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },

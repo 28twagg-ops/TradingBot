@@ -861,6 +861,61 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T19:42Z",
+        "id": "dfe3f702c2002c",
+        "topic": "BTC-USD 24\u2011hour price reversal after a >10% drop on a Friday close",
+        "hypothesis": "If BTC\u2011USD closes the Friday session with a drop of more than 10% from the previous close, the price will recover by at least 5% within the next 24 hours (i.e., by the end of Saturday).",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 500,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 500,
+            "end": 715,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the percentage change from the Friday close to the Saturday close for all Fridays in the past 3 years. Count the number of Fridays where the drop exceeded 10% and the subsequent 24\u2011hour return was at least +5%. If the success rate is below 30%, reject the hypothesis.",
+        "source_search": {
+          "query": "BTC-USD Friday drop >5% Saturday 24h recovery statistical analysis",
+          "attempted": [
+            "web",
+            "reddit",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD Friday 10% drop Saturday 5% recovery historical data",
+        "preferred_sources": [
+          "web",
+          "reddit",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -2553,6 +2608,44 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T19:44Z",
+        "id": "cc7897e5344f81",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour return exceeds SPY\u2019s 24\u2011hour return by a threshold of 5\u202f% or more, BTC\u2011USD will continue to outperform SPY for the next 24\u202fhours, providing a profitable long\u2011only momentum signal.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to the last 5\u202fyears of hourly BTC\u2011USD and SPY data, compute the 24\u2011hour relative\u2011strength returns, and evaluate the out\u2011of\u2011sample performance (profit factor, win rate, drawdown). If the rule fails to produce a statistically significant positive return, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+          "attempted": [
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+        "preferred_sources": [
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -3271,6 +3364,44 @@
         ],
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T19:43Z",
+        "id": "ab0daf1694121d",
+        "topic": "Volatility compression mean reversion in major crypto assets using a 12\u2011hour moving average of hourl",
+        "hypothesis": "During periods of low intraday volatility, the price of a major cryptocurrency (e.g., BTC\u2011USD or ETH\u2011USD) tends to revert toward the 12\u2011hour moving average, producing a predictable mean\u2011reversion signal that can be captured with a simple hourly\u2011close",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to a holdout period of 6 months of hourly BTC\u2011USD and ETH\u2011USD data; if the cumulative return is not statistically significantly different from zero (p>0.05) after accounting for transaction costs, the hypothesis is falsified.",
+        "source_search": {
+          "query": "search for empirical studies or backtests of volatility compression mean reversion in crypto using 12\u2011hour moving averages",
+          "attempted": [
+            "academic",
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for empirical studies or backtests of volatility compression mean reversion in crypto using 12\u2011hour moving averages",
+        "preferred_sources": [
+          "academic",
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
