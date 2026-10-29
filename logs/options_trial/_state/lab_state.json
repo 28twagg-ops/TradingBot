@@ -300,6 +300,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-29T14:37:32.583671+00:00",
       "entry_order_id": "7de97404-d4eb-4bc8-81df-466aa421823a"
+    },
+    {
+      "lot_id": "51ff005937a6",
+      "bucket_id": 6,
+      "profile_name": "lab0006_s210_w2_1005_1045_r1",
+      "strategy_id": "S210",
+      "occ_symbol": "UPST261030C00025500",
+      "underlying": "UPST",
+      "qty": 1,
+      "entry_cost": 10.0,
+      "entry_price": 0.1,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-29T14:52:03.907312+00:00",
+      "entry_order_id": "57a51763-cdcc-4c2c-a0d1-540eb042c281"
     }
   ],
   "pending_orders": [
@@ -315,22 +335,6 @@
       "submitted": "2026-10-29",
       "detail": "RB gap -2.8% reclaim",
       "spread_frac": 0.2068965517241379,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "57a51763-cdcc-4c2c-a0d1-540eb042c281",
-      "bucket_id": 6,
-      "strategy_id": "S210",
-      "occ_symbol": "UPST261030C00025500",
-      "underlying": "UPST",
-      "qty": 1,
-      "limit": 0.1,
-      "profile_name": "lab0006_s210_w2_1005_1045_r1",
-      "submitted": "2026-10-29",
-      "detail": "MA8 23.76 crossed above MA21",
-      "spread_frac": 0.09523809523809518,
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
@@ -368,7 +372,8 @@
     "b49": 70.0,
     "b55": 74.0,
     "b50": 63.0,
-    "b64": 22.0
+    "b64": 22.0,
+    "b6": 10.0
   },
   "session_date": "2026-10-29",
   "entries_locked": [
@@ -805,7 +810,8 @@
     "fd94812e-40e9-4f73-abc3-4e675c52bbb5",
     "155c33e0-eed1-4bdf-9eb0-ecffff86fbaf",
     "7de97404-d4eb-4bc8-81df-466aa421823a",
-    "dda9b968-d797-48c1-87b3-747292c36b6c"
+    "dda9b968-d797-48c1-87b3-747292c36b6c",
+    "57a51763-cdcc-4c2c-a0d1-540eb042c281"
   ],
   "submitted_today": 23,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
