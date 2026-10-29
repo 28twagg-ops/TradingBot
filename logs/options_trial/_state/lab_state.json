@@ -320,6 +320,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-29T14:52:03.907312+00:00",
       "entry_order_id": "57a51763-cdcc-4c2c-a0d1-540eb042c281"
+    },
+    {
+      "lot_id": "c9466365a415",
+      "bucket_id": 16,
+      "profile_name": "lab0016_s357_w2_1005_1045_r1",
+      "strategy_id": "S357",
+      "occ_symbol": "PATH261120C00014500",
+      "underlying": "PATH",
+      "qty": 1,
+      "entry_cost": 47.0,
+      "entry_price": 0.47,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-29T15:02:01.649082+00:00",
+      "entry_order_id": "93b7ba29-749a-4ca7-8166-0546d1edec7e"
     }
   ],
   "pending_orders": [
@@ -335,22 +355,6 @@
       "submitted": "2026-10-29",
       "detail": "RB gap -2.8% reclaim",
       "spread_frac": 0.2068965517241379,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "93b7ba29-749a-4ca7-8166-0546d1edec7e",
-      "bucket_id": 16,
-      "strategy_id": "S357",
-      "occ_symbol": "PATH261120C00014500",
-      "underlying": "PATH",
-      "qty": 1,
-      "limit": 0.48,
-      "profile_name": "lab0016_s357_w2_1005_1045_r1",
-      "submitted": "2026-10-29",
-      "detail": "gap -4.9%",
-      "spread_frac": 0.13043478260869565,
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
@@ -373,7 +377,8 @@
     "b55": 74.0,
     "b50": 63.0,
     "b64": 22.0,
-    "b6": 10.0
+    "b6": 10.0,
+    "b16": 47.0
   },
   "session_date": "2026-10-29",
   "entries_locked": [
@@ -811,7 +816,8 @@
     "155c33e0-eed1-4bdf-9eb0-ecffff86fbaf",
     "7de97404-d4eb-4bc8-81df-466aa421823a",
     "dda9b968-d797-48c1-87b3-747292c36b6c",
-    "57a51763-cdcc-4c2c-a0d1-540eb042c281"
+    "57a51763-cdcc-4c2c-a0d1-540eb042c281",
+    "93b7ba29-749a-4ca7-8166-0546d1edec7e"
   ],
   "submitted_today": 23,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

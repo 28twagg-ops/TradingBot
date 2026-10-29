@@ -15,7 +15,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 13,lab0013_s350_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-29,False,,,,,,,0,AVGO,S350,,entered_no_exit
 14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-29,False,,,,,,,0,GOOGL,S352,,entered_no_exit
 15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-29,False,,,,,,,0,MARA,S356,,entered_no_exit
-16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-26,False,,,,,,,0,,,,idle
+16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-29,False,,,,,,,0,PATH,S357,,entered_no_exit
 17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-29,False,,,,,,,0,HOOD,S359,,entered_no_exit
 18,lab0018_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-29,False,,0.0,-71.05,-71.05,-71.05,-71.05,-27.0,CRWD,S361,broker_fill_backfill,closed
 19,lab0019_s362_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-29,False,,,,,,,0,AMD,S362,,entered_no_exit
