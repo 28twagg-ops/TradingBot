@@ -1,0 +1,58 @@
+13:51:36  INFO      Mode: morning_scan
+13:51:36  INFO      Morning scan already completed today (2026-10-29T13:48:06.045570Z) — exits-only pass
+13:51:36  INFO        Daily log -> logs/daily/2026-10-29.md
+13:51:36  INFO        Daily log reconciled -> logs/daily/2026-10-29.md (2 ledger rows)
+13:51:36  INFO        place_all_stops: checking 1 positions...
+13:51:36  INFO        STOP skipped FLEX: fractional (0.3734 shares) — software exit will handle it
+13:51:36  INFO        [positions] 1/1 (1 valid)
+13:51:36  INFO        SELL MARKET [urgent] FLEX closed
+13:51:38  INFO        TX logged: SELL FLEX  P&L -1.44%
+13:51:39  INFO        Daily log -> logs/daily/2026-10-29.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:51 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $227.14|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  FLEX  P&L -1.4%  $-0.49                        EXIT: stop_loss (-1.4%)|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           1|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  1 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                0|
+|  Logged exits                                                         1|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  FLEX                                        -1.44%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+

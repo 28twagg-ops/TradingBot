@@ -11538,3 +11538,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-29 13:21:53,summary,bull,225.76,225.76,0,0,0,0,,both
 2026-10-29 13:26:57,summary,bull,225.76,225.76,0,0,0,0,,both
 2026-10-29 13:48:05,scan_morning,bull,227.34,193.78,25,0,2,1,FLEX,both
+2026-10-29 13:51:39,exits,bull,227.12,227.12,0,0,1,0,,both
