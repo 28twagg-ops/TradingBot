@@ -162,26 +162,6 @@
       "entry_order_id": "48416747-8379-4d95-bfb8-10f22122502b"
     },
     {
-      "lot_id": "c30b9e0193f3",
-      "bucket_id": 2007,
-      "profile_name": "day_trader_analytics_s430",
-      "strategy_id": "S430",
-      "occ_symbol": "AAPL261030C00355000",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 67.0,
-      "entry_price": 0.67,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-29T14:11:43.244395+00:00",
-      "entry_order_id": "9fccb096-a4da-464a-87e1-bfae90aff3e8"
-    },
-    {
       "lot_id": "5415b73d9444",
       "bucket_id": 63,
       "profile_name": "lab0063_s167_w2_1005_1045_r1",
@@ -382,7 +362,6 @@
     "b51": 59.0,
     "b19": 70.0,
     "b67": 55.00000000000001,
-    "b2007": 67.0,
     "b63": 44.0,
     "b13": 34.0,
     "b65": 40.0,
@@ -825,7 +804,8 @@
     "f204f387-5f24-4ac9-8b45-f2ffa940295d",
     "fd94812e-40e9-4f73-abc3-4e675c52bbb5",
     "155c33e0-eed1-4bdf-9eb0-ecffff86fbaf",
-    "7de97404-d4eb-4bc8-81df-466aa421823a"
+    "7de97404-d4eb-4bc8-81df-466aa421823a",
+    "dda9b968-d797-48c1-87b3-747292c36b6c"
   ],
   "submitted_today": 23,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
