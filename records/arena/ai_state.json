@@ -3213,6 +3213,57 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T07:04Z",
+        "id": "07bcea6f0eea77",
+        "topic": "BTC-USD trend persistence via 5h SMA above 20h SMA with positive slope",
+        "hypothesis": "When the 5\u2011hour simple moving average (SMA) of BTC\u2011USD is above the 20\u2011hour SMA and the 5\u2011hour SMA has been increasing at a rate exceeding 5\u202f% over the past 20 hours, BTC\u2011USD is likely to continue rising in the next hour, warranting a BUY signal.",
+        "candidate": {
+          "family": "trend",
+          "lookback": 20,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 491,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 491,
+            "end": 702,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Apply the rule to the available hourly close series for BTC\u2011USD and compute the percentage of times the rule\u2019s BUY signal correctly predicts an upward move in the following hour. If the success rate falls below 55\u202f% over a rolling window of 200 signals, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD breakout after consolidation 3h within 5% of 20h SMA",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD 5h SMA 20h SMA trend persistence backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -3525,6 +3576,43 @@
         "preferred_sources": [
           "web",
           "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T07:05Z",
+        "id": "0252c7f6e07e0b",
+        "topic": "Bitcoin hourly volatility mean\u2011reversion",
+        "hypothesis": "Hourly Bitcoin returns tend to revert toward zero when the hourly realized volatility exceeds twice its 20\u2011hour simple moving average, suggesting a volatility\u2011band trigger for mean\u2011reversion trades.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compare the performance of the volatility\u2011band rule against a random\u2011selection baseline over the same period; a statistically significant higher Sharpe ratio would support the hypothesis.",
+        "source_search": {
+          "query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
+        "preferred_sources": [
+          "web"
         ],
         "site_domain": null,
         "research_data_requirements": [
