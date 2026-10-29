@@ -7,7 +7,7 @@ S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),59,30,22,8,31.15,52.94,-
 S163,A1 GapDown ATM call EOD,7d ATM,watch,fat left tail (p10 < -45%),141,38,20,18,13.74,51.61,-75.64,-60.0,87.04,291.0,15,100,3,2,14,36.8
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),164,80,49,31,41.3,50.88,-64.85,-50.0,172.15,1265.0,28,90,1,1,26,15.0
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),146,65,42,23,117.33,50.0,-59.43,-50.82,318.09,1415.0,20,90,2,1,18,20.0
-S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),173,51,31,20,28.76,47.95,-64.91,-53.17,116.39,1021.0,20,90,1,0,19,17.6
+S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),173,52,32,20,29.64,49.67,-64.73,-52.78,116.29,1068.0,21,90,1,1,19,17.3
 S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),254,154,81,73,97.72,37.93,-59.91,-47.61,208.95,3011.0,39,90,11,10,32,10.4
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),225,109,55,54,36.11,22.22,-71.43,-50.0,146.0,1086.0,25,94,0,0,19,27.5
 S365,RubberBand_14DTE,14d,watch,fat left tail (p10 < -45%),72,38,19,19,7.68,19.23,-64.77,-52.19,69.26,23.0,18,90,0,0,9,36.8
@@ -95,7 +95,7 @@ S211,MA_Cross_21_50,3d ATM MA cross 21/50,drop,manually paused — excluded from
 S353,GapDown_3DTE,3d,drop,non-positive median return,116,45,19,26,61.44,-46.15,-82.61,-69.7,264.21,125.0,12,90,0,0,10,22.2
 S207,GapDown_AtSupport,3d ATM gap-support,drop,manually paused — excluded from new entries & reflected P&L,62,37,2,35,-38.6,-47.06,-63.64,-55.71,-6.06,-822.0,2,94,0,0,3,43.2
 S407,RubberBand_ITM2,3d,drop,manually paused — excluded from new entries & reflected P&L,96,38,11,27,29.82,-47.73,-83.88,-61.54,266.42,33.0,7,90,0,0,7,26.3
-S164,GapDown ATM 1-DTE — P2B arm,1d ATM,drop,non-positive median return,174,42,18,24,39.82,-48.48,-88.89,-53.78,183.16,307.0,25,100,4,3,16,16.7
+S164,GapDown ATM 1-DTE — P2B arm,1d ATM,drop,non-positive median return,174,43,19,24,40.38,-48.08,-88.89,-53.71,182.1,342.0,26,100,4,4,16,16.3
 S366,RubberBand_21DTE,21d,drop,manually paused — excluded from new entries & reflected P&L,50,21,9,12,0.28,-49.12,-56.92,-53.45,94.34,-63.0,8,86,0,0,3,42.9
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,drop,manually paused — excluded from new entries & reflected P&L,166,75,25,50,13.94,-49.18,-79.0,-60.0,99.05,158.0,18,94,0,0,11,40.0
 S351,GapDown_1DTE,1d,drop,manually paused — excluded from new entries & reflected P&L,213,75,28,47,31.61,-50.0,-75.68,-62.03,264.88,414.0,18,90,0,0,16,17.3

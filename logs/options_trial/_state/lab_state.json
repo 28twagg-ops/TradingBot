@@ -142,26 +142,6 @@
       "entry_order_id": "edfbcdc8-6382-49b9-8303-a1c89171bf09"
     },
     {
-      "lot_id": "0430a83f2f9d",
-      "bucket_id": 67,
-      "profile_name": "lab0067_s164_w2_1005_1045_r1",
-      "strategy_id": "S164",
-      "occ_symbol": "AMD261030C00610000",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 55.00000000000001,
-      "entry_price": 0.55,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-29T14:08:07.097147+00:00",
-      "entry_order_id": "48416747-8379-4d95-bfb8-10f22122502b"
-    },
-    {
       "lot_id": "5415b73d9444",
       "bucket_id": 63,
       "profile_name": "lab0063_s167_w2_1005_1045_r1",
@@ -262,26 +242,6 @@
       "entry_order_id": "6061680f-4e58-443b-80f7-2048067a3401"
     },
     {
-      "lot_id": "af920a7c508f",
-      "bucket_id": 50,
-      "profile_name": "lab0050_s397_w2_1005_1045_r1",
-      "strategy_id": "S397",
-      "occ_symbol": "AMD261030C00607500",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 63.0,
-      "entry_price": 0.63,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-29T14:16:53.401875+00:00",
-      "entry_order_id": "f204f387-5f24-4ac9-8b45-f2ffa940295d"
-    },
-    {
       "lot_id": "1de449343669",
       "bucket_id": 64,
       "profile_name": "lab0064_s166_w2_1005_1045_r1",
@@ -369,13 +329,11 @@
     "b66": 35.0,
     "b51": 59.0,
     "b19": 70.0,
-    "b67": 55.00000000000001,
     "b63": 44.0,
     "b13": 34.0,
     "b65": 40.0,
     "b49": 70.0,
     "b55": 74.0,
-    "b50": 63.0,
     "b64": 22.0,
     "b6": 10.0,
     "b16": 47.0
@@ -817,7 +775,9 @@
     "7de97404-d4eb-4bc8-81df-466aa421823a",
     "dda9b968-d797-48c1-87b3-747292c36b6c",
     "57a51763-cdcc-4c2c-a0d1-540eb042c281",
-    "93b7ba29-749a-4ca7-8166-0546d1edec7e"
+    "93b7ba29-749a-4ca7-8166-0546d1edec7e",
+    "a690a43c-c416-443a-8114-5e02d38b092d",
+    "609502b2-5381-4a27-9898-601c55f7aa45"
   ],
   "submitted_today": 23,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
