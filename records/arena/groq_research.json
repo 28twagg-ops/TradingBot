@@ -2768,5 +2768,61 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC\u2011USD intraday gap\u2011down mean\u2011reversion 5\u2011hour backtest"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-10-29T00:54Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Bitcoin hourly realized volatility mean\u2011reversion trigger",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "c19925f8fc4a56",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-10-29T00:55Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-10-29T00:55Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Hourly mean reversion of Bitcoin and Ethereum returns",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "74e5ee5b62144f",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "hourly mean reversion Bitcoin Ethereum returns 2024 study"
   }
 ]

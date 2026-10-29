@@ -894,6 +894,44 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T00:55Z",
+        "id": "74e5ee5b62144f",
+        "topic": "Hourly mean reversion of Bitcoin and Ethereum returns",
+        "hypothesis": "Hourly returns of Bitcoin (BTC\u2011USD) and Ethereum (ETH\u2011USD) exhibit a mean\u2011reverting pattern such that extreme positive or negative returns (\u00b11.5%) are likely to be followed by a return in the opposite direction within the next hour.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to the full historical hourly close series for BTC\u2011USD and ETH\u2011USD; compute cumulative PnL and Sharpe ratio. If cumulative PnL is negative or Sharpe < 0.5 over the sample, reject the hypothesis.",
+        "source_search": {
+          "query": "empirical study hourly mean reversion Bitcoin Ethereum 2024",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "hourly mean reversion Bitcoin Ethereum returns 2024 study",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -3223,6 +3261,44 @@
         "falsification_test": "Compute the 20\u2011hour rolling mean of hourly realized volatility, flag hours where volatility > mean\u202f\u00d7\u202f1.3, then test whether the following hour\u2019s volatility falls below the mean. Measure hit\u2011rate and profit factor using a 1\u2011hour close\u2011based rule that buys at the close after a trigger and sells at the",
         "source_search": {
           "query": "Bitcoin hourly realized volatility calculation and mean\u2011reversion studies",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T00:54Z",
+        "id": "c19925f8fc4a56",
+        "topic": "Bitcoin hourly realized volatility mean\u2011reversion trigger",
+        "hypothesis": "Hourly Bitcoin returns tend to revert to the mean when the realized volatility over the past N hours exceeds the long\u2011term average volatility by a fixed threshold.  When the volatility band is breached, a short\u2011term mean\u2011reversion trade (sell if vola",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the realized hourly volatility (e.g., rolling standard deviation of log returns) over a 20\u2011hour window.  Identify periods where the volatility exceeds the 20\u2011hour mean by >5%.  On those dates, execute a short\u2011term mean\u2011reversion trade (sell BTC\u2011USD for 1 hour if volatility high, buy if volat",
+        "source_search": {
+          "query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
           "attempted": [
             "web",
             "academic"
