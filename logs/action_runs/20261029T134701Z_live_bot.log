@@ -1,0 +1,157 @@
+13:47:02  INFO      Mode: morning_scan
+13:47:04  INFO        SELL LIMIT HCA  qty=0.072117945  limit=$473.23  id=5b73207e-278e-4e14-a11d-5415df69d98a
+13:47:34  INFO        SELL LIMIT filled HCA (confirmed by position check)
+13:47:34  INFO        TX logged: SELL HCA  P&L 1.02%
+13:47:35  INFO        SELL LIMIT CVNA  qty=0.52076923  limit=$67.90  id=4f97f304-806b-46be-9115-5e16633731c7
+13:48:05  INFO        SELL LIMIT filled CVNA (confirmed by position check)
+13:48:05  INFO        TX logged: SELL CVNA  P&L 4.48%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:47 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $227.53|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-10-29|
+|  Universe                                                          both|
+|  Mon~  Oct: RubberBand + GapDown (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $227.53|
+|  Cash                                                           $124.20|
+|  Reserve                                          $11.38  (always kept)|
+|  Stock~  $103.39 / $170.65  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $67.25  (new stock buys)|
+|  Trade size             $34.13  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  CVNA     MomReversal     $35.37     $65.00   $67.91   +4.5%   $+1.52  |
+|  FLEX     MomReversal     $33.83     $90.66   $90.61   -0.1%   $-0.02  |
+|  HCA      EarningsDrift   $34.20     $469.37  $474.18  +1.0%   $+0.35  |
+|                                                                        |
+|  Total invested                                                 $103.39|
+|  Total open P&L                                                  $+1.84|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (11.7m))|
+|  Cached exits                                                         2|
+|  Cached signals                                                      25|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  FLEX  P&L -0.1%  $-0.02                                           HOLD|
+|  HCA  P&L +1.0%  $+0.35                           EXIT: midline (-0.1%)|
+|  CVNA  P&L +4.5%  $+1.52                          EXIT: midline (+0.5%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 2 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           900|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  25                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  ABT      Pullback50      eq     $103.97  62.4   -2.13   50MA bounce (-|
+|  AES      Pullback50      eq     $15.01   63.0   -2.55   50MA bounce (+|
+|  TECH     Pullback50      eq     $72.69   62.8   -2.45   50MA bounce (+|
+|  CFG      Pullback50      eq     $66.30   69.1   -2.22   50MA bounce (-|
+|  GDDY     Pullback50      eq     $101.24  45.2   -3.12   50MA bounce (+|
+|  HPE      Pullback50      eq     $59.56   27.4   -2.17   50MA bounce (-|
+|  LYV      Pullback50      eq     $174.08  59.4   -3.11   50MA bounce (+|
+|  PNC      Pullback50      eq     $231.78  71.2   -2.29   50MA bounce (+|
+|  PRU      Pullback50      eq     $117.45  62.0   -3.56   50MA bounce (+|
+|  WELL     Pullback50      eq     $231.86  57.1   -1.90   50MA bounce (-|
+|  ARMK     Pullback50      eq     $56.50   58.5   -1.84   50MA bounce (+|
+|  AYI      Pullback50      eq     $317.57  71.9   -2.34   50MA bounce (+|
+|  AXTA     Pullback50      eq     $33.88   60.6   -2.28   50MA bounce (-|
+|  CLH      Pullback50      eq     $314.31  44.6   -2.05   50MA bounce (-|
+|  GEF      Pullback50      eq     $82.11   51.0   -3.14   50MA bounce (-|
+|  MSM      Pullback50      eq     $123.72  43.7   -1.72   50MA bounce (+|
+|  ONB      Pullback50      eq     $25.20   57.1   -2.83   50MA bounce (-|
+|  PRI      Pullback50      eq     $282.95  61.3   -3.33   50MA bounce (-|
+|  REXR     Pullback50      eq     $37.56   54.5   -2.15   50MA bounce (+|
+|  ROKU     Pullback50      eq     $155.80  61.1   -1.22   50MA bounce (+|
+|  SIRI     Pullback50      eq     $27.52   66.9   -2.12   50MA bounce (+|
+|  TXNM     Pullback50      eq     $58.74   53.9   -1.55   50MA bounce (+|
+|  UNM      Pullback50      eq     $92.12   51.7   -2.69   50MA bounce (-|13:48:05  INFO        place_all_stops: checking 1 positions...
+13:48:05  INFO        STOP skipped FLEX: fractional (0.3734 shares) — software exit will handle it
+13:48:05  INFO        Daily log -> logs/daily/2026-10-29.md
+13:48:06  INFO        Dashboard written → logs/dashboard.md
+
+|  VOYA     Pullback50      eq     $98.69   64.4   -2.25   50MA bounce (+|
+|  VNO      Pullback50      eq     $34.70   57.1   -2.80   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   RubberBand + GapDown (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             25|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                2|
+|  Open pos                                                             1|
+|  Equity                                                         $227.34|
+|  Cash                                                           $193.78|
++========================================================================+
