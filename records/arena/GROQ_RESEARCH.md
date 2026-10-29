@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-29T17:34Z | S03 | Hourly mean‑reversion of Bitcoin and Ethereum re | c619efe2c8f1d7 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-29T17:34Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | d6588fd86810bf | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-29T17:33Z | S10 |  | AI_UNAVAILABLE |  |
+| 2026-10-29T17:32Z | S05 | Opening Range Breakout with Volatility Filter on | 2a21075f86ac09 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-29T17:31Z | S07 |  | AI_UNAVAILABLE |  |
 | 2026-10-29T14:18Z | S04 | Hourly gap‑down mean‑reversion in BTC‑USD | c10e6287678fa3 | HOLD |
 | 2026-10-29T14:18Z | S05 |  | AI_UNAVAILABLE |  |
 | 2026-10-29T14:17Z | S09 | BTC-USD mean reversion to 24‑hour SMA after larg | 494185eec12562 | HOLD |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-29T00:54Z | S10 | Bitcoin hourly realized volatility mean‑reversio | c19925f8fc4a56 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-28T22:41Z | S04 | Intraday gap-down mean‑reversion in large‑cap cr | fb3bb826ce7c96 | HOLD |
 | 2026-10-28T22:41Z | S08 | Volatility compression mean reversion in Bitcoin | c41405c8ffc418 | HOLD_INSUFFICIENT_HISTORY |
-| 2026-10-28T22:40Z | S09 | BTC-USD hourly breakout after consolidation | 13d2913602ac0e | HOLD_INSUFFICIENT_HISTORY |
-| 2026-10-28T22:39Z | S10 |  | AI_UNAVAILABLE |  |
-| 2026-10-28T22:39Z | S07 | Hourly mean reversion after 3 consecutive negati | 322c952bdb9745 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-28T20:18Z | S01 | BTC‑USD hourly VWAP mean reversion | f933af7517f475 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-28T20:17Z | S05 | Opening Range Breakout with Volatility Filter on | 8c4d3123af2532 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
