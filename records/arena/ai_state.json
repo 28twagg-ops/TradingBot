@@ -783,6 +783,44 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T13:06Z",
+        "id": "622c263bda0539",
+        "topic": "BTC-USD weekly cycle: price tends to rebound within 24 hours after a >5% drop on Friday close",
+        "hypothesis": "On Friday, if BTC-USD closes with a drop of more than 5% from the previous Friday close, the price will recover by at least 3% within the next 24 hours (i.e., by the following Saturday 00:00 UTC).",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.03
+        },
+        "symbol": null,
+        "test": {
+          "status": "INSUFFICIENT_HOURLY_HISTORY"
+        },
+        "paper_action": "HOLD_INSUFFICIENT_HISTORY",
+        "falsification_test": "Compute the percentage change from Friday close to Saturday 00:00 UTC for all Fridays in the past 3 years. Count the number of instances where the Friday close dropped >5% and the subsequent 24\u2011hour return was \u22653%. If the proportion of successful recoveries is significantly higher than 50% (e.g., p<",
+        "source_search": {
+          "query": "BTC-USD weekend drop 2% 12-hour Monday return statistical analysis",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD Friday drop >5% Saturday 24h recovery statistical analysis",
+        "preferred_sources": [
+          "web",
+          "reddit",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1521,6 +1559,42 @@
         ],
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T13:04Z",
+        "id": "775f644c96f788",
+        "topic": "Hourly gap\u2011down mean\u2011reversion in large\u2011cap cryptocurrency assets",
+        "hypothesis": "Large\u2011cap cryptocurrencies (BTC\u2011USD, ETH\u2011USD, SOL\u2011USD) exhibit a statistically significant mean\u2011reversion effect after an hourly gap\u2011down: the price tends to recover within the next 5 hours, with a return above the 0.02 threshold on average.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the proportion of hourly gap\u2011down events that recover above the 0.02 threshold within 5 hours; if this proportion is not significantly greater than 0.5 (e.g., 95% CI includes 0.5), reject the hypothesis.",
+        "source_search": {
+          "query": "BTC\u2011USD intraday gap\u2011down mean\u2011reversion 5\u2011hour backtest",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD hourly gap\u2011down mean\u2011reversion 5\u2011hour backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ],
@@ -2933,6 +3007,60 @@
           "academic",
           "web",
           "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T13:07Z",
+        "id": "611b9a0b0523fb",
+        "topic": "Volatility compression mean reversion in major crypto assets using a 12\u2011hour moving average of hourl",
+        "hypothesis": "During periods of low hourly volatility, the hourly close of a major crypto asset tends to revert towards its 12\u2011hour moving average; when the price deviates more than a small threshold (e.g., 0.5%) from the 12\u2011hour MA, the next hour\u2019s return is more",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 12,
+          "threshold": 0.005
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 14,
+            "end": 495,
+            "returns_pct": -7.273,
+            "drawdown_pct": -8.422,
+            "entries": 21
+          },
+          "retrospective_validation": {
+            "start": 495,
+            "end": 708,
+            "returns_pct": -6.21,
+            "drawdown_pct": -6.5,
+            "entries": 12
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the conditional probability of a price move towards the 12\u2011hour MA given a deviation > threshold versus < threshold over a large sample of hourly close data. If the probability is not significantly higher for the > threshold case, the hypothesis is falsified.",
+        "source_search": {
+          "query": "search for empirical studies or backtests of volatility compression mean reversion in crypto using 12\u2011hour moving averages",
+          "attempted": [
+            "academic",
+            "web",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for empirical studies or backtests of volatility compression mean reversion in crypto using 12\u2011hour moving averages",
+        "preferred_sources": [
+          "academic",
+          "web"
         ],
         "site_domain": null,
         "research_data_requirements": [

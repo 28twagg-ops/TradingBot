@@ -3165,5 +3165,109 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC hourly VWAP mean reversion after extreme deviations empirical evidence 2024 2025"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-10-29T13:04Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Hourly gap\u2011down mean\u2011reversion in large\u2011cap cryptocurrency assets",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "775f644c96f788",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC\u2011USD hourly gap\u2011down mean\u2011reversion 5\u2011hour backtest results"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-10-29T13:05Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-10-29T13:06Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD weekly cycle: price tends to rebound within 24 hours after a >5% drop on Friday close",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 24,
+      "threshold": 0.03
+    },
+    "test": {
+      "status": "INSUFFICIENT_HOURLY_HISTORY"
+    },
+    "action": "HOLD_INSUFFICIENT_HISTORY",
+    "experiment_id": "622c263bda0539",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD Friday drop >5% Saturday 24h recovery statistical analysis"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-10-29T13:07Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "safe_error": "GROQ_HTTP_400_unknown"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-10-29T13:07Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Volatility compression mean reversion in major crypto assets using a 12\u2011hour moving average of hourl",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 12,
+      "threshold": 0.005
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 14,
+        "end": 495,
+        "returns_pct": -7.273,
+        "drawdown_pct": -8.422,
+        "entries": 21
+      },
+      "retrospective_validation": {
+        "start": 495,
+        "end": 708,
+        "returns_pct": -6.21,
+        "drawdown_pct": -6.5,
+        "entries": 12
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "611b9a0b0523fb",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "search for empirical studies or backtests of volatility compression mean reversion in crypto using 12\u2011hour moving averages"
   }
 ]

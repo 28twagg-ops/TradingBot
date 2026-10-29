@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-29T13:07Z | S08 | Volatility compression mean reversion in major c | 611b9a0b0523fb | HOLD |
+| 2026-10-29T13:07Z | S06 |  | AI_UNAVAILABLE |  |
+| 2026-10-29T13:06Z | S02 | BTC-USD weekly cycle: price tends to rebound wit | 622c263bda0539 | HOLD_INSUFFICIENT_HISTORY |
+| 2026-10-29T13:05Z | S07 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
+| 2026-10-29T13:04Z | S04 | Hourly gap‑down mean‑reversion in large‑cap cryp | 775f644c96f788 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-29T10:26Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | 54e28dc9d830de | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-29T10:26Z | S03 | Hourly mean‑reversion of Bitcoin and Ethereum re | c0beadc2ffe2b6 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-29T10:25Z | S07 |  | AI_UNAVAILABLE |  |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-28T20:15Z | S07 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
 | 2026-10-28T16:43Z | S02 | BTC-USD 12‑hour negative return followed by 1‑ho | 923872a482e7ec | HOLD |
 | 2026-10-28T16:42Z | S03 | Hourly mean‑reversion of Bitcoin and Ethereum re | 2f7106517f3059 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-28T16:42Z | S01 |  | AI_UNAVAILABLE |  |
-| 2026-10-28T16:41Z | S10 | Bitcoin hourly realized volatility mean‑reversio | 99a26e4f47bc67 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-28T16:40Z | S07 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
-| 2026-10-28T15:08Z | S04 | Cryptocurrency intraday gap‑down mean‑reversion  | 9a52b66f520ef6 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-28T15:08Z | S02 |  | AI_UNAVAILABLE |  |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
