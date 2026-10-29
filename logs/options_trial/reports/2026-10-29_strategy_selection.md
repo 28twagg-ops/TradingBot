@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-10-29
 
-_Generated 2026-10-29T09:27:04.956315_
+_Generated 2026-10-29T09:43:26.639273_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-10-29T09:27:04.956315_
 
 ## Attribution health
 
-- Total exits: **3813**
+- Total exits: **3814**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **11.1%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -29,7 +29,7 @@ _Generated 2026-10-29T09:27:04.956315_
 | S403 (Any_MA50_Touch) | 3d | watch | 80 | 61.2 | +50.88 | -64.85 | -50.00 | +172.15 | 90 | 1 | 1 | $+1,265.00 | 15.0% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 65 | 64.6 | +50.00 | -59.43 | -50.82 | +318.09 | 90 | 1 | 1 | $+1,415.00 | 20.0% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 51 | 60.8 | +47.95 | -64.91 | -53.17 | +116.39 | 90 | 0 | 0 | $+1,021.00 | 17.6% | fat left tail (p10 < -45%) |
-| S406 (RubberBand_ITM3) | 3d | watch | 152 | 52.6 | +37.93 | -60.28 | -47.70 | +210.00 | 90 | 9 | 8 | $+2,999.00 | 9.9% | fat left tail (p10 < -45%) |
+| S406 (RubberBand_ITM3) | 3d | watch | 152 | 52.6 | +37.93 | -60.28 | -47.70 | +210.00 | 90 | 10 | 8 | $+2,999.00 | 9.9% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 109 | 50.5 | +22.22 | -71.43 | -50.00 | +146.00 | 94 | 0 | 0 | $+1,086.00 | 27.5% | fat left tail (p10 < -45%) |
 | S365 (RubberBand_14DTE) | 14d | watch | 38 | 50.0 | +19.23 | -64.77 | -52.19 | +69.26 | 90 | 0 | 0 | $+23.00 | 36.8% | fat left tail (p10 < -45%) |
 | S404 (GapDown_OTM2) | 3d | watch | 97 | 50.5 | +17.02 | -65.49 | -50.00 | +97.54 | 90 | 3 | 3 | $+855.00 | 10.3% | fat left tail (p10 < -45%) |
@@ -100,7 +100,7 @@ _Generated 2026-10-29T09:27:04.956315_
 | S412 (RubberBand_OTM3) | 3d | drop | 68 | 44.1 | -3.57 | -58.23 | -50.00 | +125.40 | 90 | 0 | 0 | $+184.00 | 17.6% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 70 | 48.6 | -4.41 | -85.29 | -62.31 | +83.81 | 90 | 1 | 0 | $+14.00 | 37.1% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 67 | 43.3 | -6.25 | -81.48 | -59.63 | +573.13 | 87 | 0 | 0 | $+1,137.00 | 17.9% | manually paused — excluded from new entries & reflected P&L |
-| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 110 | 47.3 | -6.31 | -71.05 | -51.51 | +83.32 | 94 | 1 | 1 | $+48.00 | 15.5% | non-positive median return |
+| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 111 | 46.8 | -6.38 | -71.05 | -51.61 | +82.86 | 94 | 1 | 2 | $+32.00 | 16.2% | non-positive median return |
 | S361 (RubberBand_2DTE) | 2d | drop | 69 | 46.4 | -8.33 | -67.04 | -53.52 | +265.55 | 90 | 1 | 1 | $+84.00 | 18.8% | non-positive median return |
 | S398 (GapDown_ATM) | 3d | drop | 65 | 47.7 | -18.42 | -68.25 | -55.56 | +168.45 | 90 | 0 | 0 | $+765.00 | 24.6% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 115 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
@@ -196,7 +196,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S210 | 3d ATM MA cross 8/21 | 110 | -6.31 | -71.05 | -51.51 | 1 | 1 |
+| S210 | 3d ATM MA cross 8/21 | 111 | -6.38 | -71.05 | -51.61 | 1 | 2 |
 | S211 | 3d ATM MA cross 21/50 | 56 | -43.65 | -86.66 | -54.73 | 0 | 0 |
 | S212 | 3d ATM MA bounce 50 | 83 | -68.09 | -98.15 | -81.35 | 0 | 0 |
 | S213 | 3d ATM MA bounce 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
@@ -250,7 +250,7 @@ _Pipeline evaluation as of 2026-10-29. Auto-kill thresholds: median<-25% at n>=1
 | S207 | GapDown_AtSupport | 37 | -47.06% | 5% | INSUFFICIENT | 94 |
 | S208 | GapDown_AboveMA200 | 0 | — | — | NEW | 0 |
 | S209 | GapDown_Recovery | 7 | -64.71% | 0% | WATCH | 92 |
-| S210 | MA_Cross_8_21 | 110 | -6.31% | 47% | INSUFFICIENT | 94 |
+| S210 | MA_Cross_8_21 | 111 | -6.38% | 47% | INSUFFICIENT | 94 |
 | S211 | MA_Cross_21_50 | 56 | -43.65% | 23% | INSUFFICIENT | 94 |
 | S212 | MA_Bounce_50 | 83 | -68.09% | 13% | INSUFFICIENT | 94 |
 | S213 | MA_Bounce_200 | 0 | — | — | NEW | 0 |
