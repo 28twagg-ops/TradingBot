@@ -2824,5 +2824,166 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "hourly mean reversion Bitcoin Ethereum returns 2024 study"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-10-29T05:52Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD hourly VWAP mean reversion after extreme deviations",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "7c25b76c5755be",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "We update our BTC to USD price in real-time. Bitcoin is up 0.56% in the last 24 hours. The current CoinMarketCap ranking is #1, with a live market cap of $1,630,552,994,704 USD. It has a circulating supply of 20,104,981 BTC coins and a max.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "What is Bitcoin price today? The current price of Bitcoin (BTC) is 81,095 USD \u2014 it has risen 0.36 % in the past 24 hours. Try placing this info into the context by checking out what coins are also gaining and losing at the moment and seeing",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin Price: BTC/USD Live Price Chart, Market Cap & News ...",
+        "url": "https://www.coingecko.com/en/coins/bitcoin",
+        "snippet": "Price of Bitcoin (BTC) today is $79,942.89 with a 24-hour trading volume of $26,684,159,363. Track Bitcoin's live price, market cap, news, and more on CoinGecko.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC hourly VWAP mean reversion empirical studies 2024 2025"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-10-29T05:53Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD weekend drop followed by positive 12\u2011hour trend",
+    "strategy": {
+      "family": "trend",
+      "lookback": 24,
+      "threshold": 0.02
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 26,
+        "end": 490,
+        "returns_pct": -0.517,
+        "drawdown_pct": -0.517,
+        "entries": 1
+      },
+      "retrospective_validation": {
+        "start": 490,
+        "end": 701,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "0d5870c7253154",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD weekend drop 2% 12-hour Monday return statistical analysis"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-10-29T05:53Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum trigger",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "d7593f45794943",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results on academic or forum sites"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-10-29T05:54Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-10-29T05:55Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Volatility compression mean reversion in major crypto assets using a 12\u2011hour moving average of hourl",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 12,
+      "threshold": 0.005
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 14,
+        "end": 490,
+        "returns_pct": -7.23,
+        "drawdown_pct": -8.426,
+        "entries": 21
+      },
+      "retrospective_validation": {
+        "start": 490,
+        "end": 701,
+        "returns_pct": -6.264,
+        "drawdown_pct": -6.49,
+        "entries": 12
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "80a87bf5adf09b",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "search for empirical studies or backtests of volatility compression mean reversion in crypto using 12\u2011hour moving averages"
   }
 ]

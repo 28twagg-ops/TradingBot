@@ -4,9 +4,9 @@
     "cash": 100.0,
     "positions": {},
     "seen": {
-      "BTC-USD": "2026-10-28T21:00:00Z",
-      "ETH-USD": "2026-10-28T21:00:00Z",
-      "SOL-USD": "2026-10-28T21:00:00Z",
+      "BTC-USD": "2026-10-29T04:00:00Z",
+      "ETH-USD": "2026-10-29T04:00:00Z",
+      "SOL-USD": "2026-10-29T04:00:00Z",
       "SPY": "2026-10-28T15:30:00Z",
       "QQQ": "2026-10-28T15:30:00Z",
       "AAPL": "2026-10-28T15:30:00Z",
@@ -113,17 +113,37 @@
         },
         "previous_hash": "f8a2b741412a1e210054922f2fd221277122141222b11f5895a5114d31882a5f",
         "hash": "5afb0e9522f417845347d02e57fa8d7fef9d7fd65f8db291ca3d3b94b9b79c55"
+      },
+      {
+        "worker": "S02",
+        "seq": 6,
+        "timestamp": "2026-10-29T05:52:27.631059Z",
+        "asset_class": "crypto",
+        "symbol": "BTC/USD",
+        "side": "SELL",
+        "qty": 0.000484,
+        "price": 80138.671875,
+        "fee": 0.07757423437500001,
+        "multiplier": 1,
+        "source_id": "YAHOO:BTC-USD:2026-10-29T04:00:00Z",
+        "balance_after": 98.73898174,
+        "positions_after": {
+          "crypto:ETH/USD": 0.0,
+          "crypto:BTC/USD": 0.0
+        },
+        "previous_hash": "5afb0e9522f417845347d02e57fa8d7fef9d7fd65f8db291ca3d3b94b9b79c55",
+        "hash": "a26e28ceb2b8c0130f9f590251504ed2d2ee9b346f235f1ad56fdeac3e9916c6"
       }
     ],
-    "cash": 60.02943878,
+    "cash": 98.73898174,
     "positions": {
       "crypto:ETH/USD": 0.0,
-      "crypto:BTC/USD": 0.000484
+      "crypto:BTC/USD": 0.0
     },
     "seen": {
-      "BTC-USD": "2026-10-28T21:00:00Z",
-      "ETH-USD": "2026-10-28T21:00:00Z",
-      "SOL-USD": "2026-10-28T21:00:00Z",
+      "BTC-USD": "2026-10-29T04:00:00Z",
+      "ETH-USD": "2026-10-29T04:00:00Z",
+      "SOL-USD": "2026-10-29T04:00:00Z",
       "SPY": "2026-10-28T15:30:00Z",
       "QQQ": "2026-10-28T15:30:00Z",
       "AAPL": "2026-10-28T15:30:00Z",
@@ -135,9 +155,9 @@
     "cash": 100.0,
     "positions": {},
     "seen": {
-      "BTC-USD": "2026-10-28T21:00:00Z",
-      "ETH-USD": "2026-10-28T21:00:00Z",
-      "SOL-USD": "2026-10-28T21:00:00Z",
+      "BTC-USD": "2026-10-29T04:00:00Z",
+      "ETH-USD": "2026-10-29T04:00:00Z",
+      "SOL-USD": "2026-10-29T04:00:00Z",
       "SPY": "2026-10-28T15:30:00Z",
       "QQQ": "2026-10-28T15:30:00Z",
       "AAPL": "2026-10-28T15:30:00Z",
@@ -231,9 +251,9 @@
       "crypto:SOL/USD": 0.0
     },
     "seen": {
-      "BTC-USD": "2026-10-28T21:00:00Z",
-      "ETH-USD": "2026-10-28T21:00:00Z",
-      "SOL-USD": "2026-10-28T21:00:00Z",
+      "BTC-USD": "2026-10-29T04:00:00Z",
+      "ETH-USD": "2026-10-29T04:00:00Z",
+      "SOL-USD": "2026-10-29T04:00:00Z",
       "SPY": "2026-10-28T15:30:00Z",
       "QQQ": "2026-10-28T15:30:00Z",
       "AAPL": "2026-10-28T15:30:00Z",
@@ -245,9 +265,9 @@
     "cash": 100.0,
     "positions": {},
     "seen": {
-      "BTC-USD": "2026-10-28T21:00:00Z",
-      "ETH-USD": "2026-10-28T21:00:00Z",
-      "SOL-USD": "2026-10-28T21:00:00Z",
+      "BTC-USD": "2026-10-29T04:00:00Z",
+      "ETH-USD": "2026-10-29T04:00:00Z",
+      "SOL-USD": "2026-10-29T04:00:00Z",
       "SPY": "2026-10-28T15:30:00Z",
       "QQQ": "2026-10-28T15:30:00Z",
       "AAPL": "2026-10-28T15:30:00Z",
@@ -421,19 +441,41 @@
         },
         "previous_hash": "5ef87055960a03f19b5cc04b61e6fe9f95c1864d2826a5ed1b7e83c07ed81aeb",
         "hash": "e7aa43df571a32eb217ccdbebcb4aad713ce449c3051793291a7c989611726de"
+      },
+      {
+        "worker": "S06",
+        "seq": 9,
+        "timestamp": "2026-10-29T05:52:27.631059Z",
+        "asset_class": "crypto",
+        "symbol": "SOL/USD",
+        "side": "SELL",
+        "qty": 0.141632,
+        "price": 100.05000305175781,
+        "fee": 0.028340564064453126,
+        "multiplier": 1,
+        "source_id": "YAHOO:SOL-USD:2026-10-29T04:00:00Z",
+        "balance_after": 59.39912954,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "us_equity:QQQ": 0.054841,
+          "crypto:BTC/USD": 0.0,
+          "crypto:ETH/USD": 0.0
+        },
+        "previous_hash": "e7aa43df571a32eb217ccdbebcb4aad713ce449c3051793291a7c989611726de",
+        "hash": "b36e4cf4053dc0ed51defb20336df5f53d84a9c4bba2d1557755f2607edb2d5d"
       }
     ],
-    "cash": 45.25718807,
+    "cash": 59.39912954,
     "positions": {
-      "crypto:SOL/USD": 0.141632,
+      "crypto:SOL/USD": 0.0,
       "us_equity:QQQ": 0.054841,
       "crypto:BTC/USD": 0.0,
       "crypto:ETH/USD": 0.0
     },
     "seen": {
-      "BTC-USD": "2026-10-28T21:00:00Z",
-      "ETH-USD": "2026-10-28T21:00:00Z",
-      "SOL-USD": "2026-10-28T21:00:00Z",
+      "BTC-USD": "2026-10-29T04:00:00Z",
+      "ETH-USD": "2026-10-29T04:00:00Z",
+      "SOL-USD": "2026-10-29T04:00:00Z",
       "SPY": "2026-10-28T15:30:00Z",
       "QQQ": "2026-10-28T15:30:00Z",
       "AAPL": "2026-10-28T15:30:00Z",
@@ -460,16 +502,35 @@
         },
         "previous_hash": "GENESIS",
         "hash": "0f1ea24eeb932498d9e151eccfe9721bf13fef0ff9cd37fc9ad6f2a112dd1246"
+      },
+      {
+        "worker": "S07",
+        "seq": 2,
+        "timestamp": "2026-10-29T05:52:27.631059Z",
+        "asset_class": "crypto",
+        "symbol": "ETH/USD",
+        "side": "SELL",
+        "qty": 0.016765,
+        "price": 2318.4599609375,
+        "fee": 0.07773796249023437,
+        "multiplier": 1,
+        "source_id": "YAHOO:ETH-USD:2026-10-29T04:00:00Z",
+        "balance_after": 99.10874765,
+        "positions_after": {
+          "crypto:ETH/USD": 0.0
+        },
+        "previous_hash": "0f1ea24eeb932498d9e151eccfe9721bf13fef0ff9cd37fc9ad6f2a112dd1246",
+        "hash": "33ccdafb3cb6db6f109d8d180c3e13267179788c6effb5ea936aae11bf1be37a"
       }
     ],
-    "cash": 60.31750436,
+    "cash": 99.10874765,
     "positions": {
-      "crypto:ETH/USD": 0.016765
+      "crypto:ETH/USD": 0.0
     },
     "seen": {
-      "BTC-USD": "2026-10-28T21:00:00Z",
-      "ETH-USD": "2026-10-28T21:00:00Z",
-      "SOL-USD": "2026-10-28T21:00:00Z",
+      "BTC-USD": "2026-10-29T04:00:00Z",
+      "ETH-USD": "2026-10-29T04:00:00Z",
+      "SOL-USD": "2026-10-29T04:00:00Z",
       "SPY": "2026-10-28T15:30:00Z",
       "QQQ": "2026-10-28T15:30:00Z",
       "AAPL": "2026-10-28T15:30:00Z",
@@ -481,9 +542,9 @@
     "cash": 100.0,
     "positions": {},
     "seen": {
-      "BTC-USD": "2026-10-28T21:00:00Z",
-      "ETH-USD": "2026-10-28T21:00:00Z",
-      "SOL-USD": "2026-10-28T21:00:00Z",
+      "BTC-USD": "2026-10-29T04:00:00Z",
+      "ETH-USD": "2026-10-29T04:00:00Z",
+      "SOL-USD": "2026-10-29T04:00:00Z",
       "SPY": "2026-10-28T15:30:00Z",
       "QQQ": "2026-10-28T15:30:00Z",
       "AAPL": "2026-10-28T15:30:00Z",
@@ -633,18 +694,39 @@
         },
         "previous_hash": "75fa768789f7f3cbfbe0433f5d503b44a5ebe628a2b72a3c37efc639e1e763a3",
         "hash": "7a815616a4a77650ea93483070983d4bf30976d5f848168fc90638a6ca3151de"
+      },
+      {
+        "worker": "S09",
+        "seq": 8,
+        "timestamp": "2026-10-29T05:52:27.631059Z",
+        "asset_class": "crypto",
+        "symbol": "SOL/USD",
+        "side": "SELL",
+        "qty": 0.140152,
+        "price": 100.05000305175781,
+        "fee": 0.028044416055419925,
+        "multiplier": 1,
+        "source_id": "YAHOO:SOL-USD:2026-10-29T04:00:00Z",
+        "balance_after": 98.49346844,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "crypto:BTC/USD": 0.0,
+          "crypto:ETH/USD": 0.0
+        },
+        "previous_hash": "7a815616a4a77650ea93483070983d4bf30976d5f848168fc90638a6ca3151de",
+        "hash": "50283581d151a7e639238a62dcc3880a9f26354c56f8b36a8f6fc530de8c4f72"
       }
     ],
-    "cash": 84.49930483,
+    "cash": 98.49346844,
     "positions": {
-      "crypto:SOL/USD": 0.140152,
+      "crypto:SOL/USD": 0.0,
       "crypto:BTC/USD": 0.0,
       "crypto:ETH/USD": 0.0
     },
     "seen": {
-      "BTC-USD": "2026-10-28T21:00:00Z",
-      "ETH-USD": "2026-10-28T21:00:00Z",
-      "SOL-USD": "2026-10-28T21:00:00Z"
+      "BTC-USD": "2026-10-29T04:00:00Z",
+      "ETH-USD": "2026-10-29T04:00:00Z",
+      "SOL-USD": "2026-10-29T04:00:00Z"
     }
   },
   "S10": {
@@ -789,18 +871,39 @@
         },
         "previous_hash": "ec013f584cf3cf94a248388df62ca9a1e14ee2335afc8e31ece9c12aeaae3e7f",
         "hash": "f188a65618bb3d9f26e52176349b86ae735b3f117195afabb4dec23d8dc53b01"
+      },
+      {
+        "worker": "S10",
+        "seq": 8,
+        "timestamp": "2026-10-29T05:52:27.631059Z",
+        "asset_class": "crypto",
+        "symbol": "SOL/USD",
+        "side": "SELL",
+        "qty": 0.234481,
+        "price": 100.05000305175781,
+        "fee": 0.04691964953115845,
+        "multiplier": 1,
+        "source_id": "YAHOO:SOL-USD:2026-10-29T04:00:00Z",
+        "balance_after": 98.41296,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "crypto:BTC/USD": 0.0,
+          "crypto:ETH/USD": 0.0
+        },
+        "previous_hash": "f188a65618bb3d9f26e52176349b86ae735b3f117195afabb4dec23d8dc53b01",
+        "hash": "2cadca794070fbc1d7c96bb7dbaf6de4f1523d50561a86561b86c7002de181a7"
       }
     ],
-    "cash": 75.00005488,
+    "cash": 98.41296,
     "positions": {
-      "crypto:SOL/USD": 0.234481,
+      "crypto:SOL/USD": 0.0,
       "crypto:BTC/USD": 0.0,
       "crypto:ETH/USD": 0.0
     },
     "seen": {
-      "BTC-USD": "2026-10-28T21:00:00Z",
-      "ETH-USD": "2026-10-28T21:00:00Z",
-      "SOL-USD": "2026-10-28T21:00:00Z"
+      "BTC-USD": "2026-10-29T04:00:00Z",
+      "ETH-USD": "2026-10-29T04:00:00Z",
+      "SOL-USD": "2026-10-29T04:00:00Z"
     }
   }
 }
