@@ -300,7 +300,18 @@
       "stop_loss": -0.75
     }
   ],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "aeaf2151-2943-4eef-86f7-30903dee8d31",
+      "lot_id": "65edf839c4bf",
+      "bucket_id": 55,
+      "strategy_id": "S411",
+      "occ_symbol": "AMD261102C00622500",
+      "qty": 1,
+      "reason": "take_profit (+50.0%)",
+      "submitted": "2026-10-29T11:36:57"
+    }
+  ],
   "bucket_open_premium": {
     "b20": 15.0,
     "b14": 43.0,
