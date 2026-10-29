@@ -3076,5 +3076,94 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-10-29T10:23Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Opening Range Breakout with Volatility Filter on 24/7 Crypto Spot Markets",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "69eb518b395be2",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "search for hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-10-29T10:24Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-10-29T10:25Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "safe_error": "GROQ_HTTP_400_tool_use_failed"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-10-29T10:26Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Hourly mean\u2011reversion of Bitcoin and Ethereum returns",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "c0beadc2ffe2b6",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "empirical evidence hourly mean reversion Bitcoin Ethereum 2024"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-10-29T10:26Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD hourly VWAP mean reversion after extreme deviations",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "54e28dc9d830de",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC hourly VWAP mean reversion after extreme deviations empirical evidence 2024 2025"
   }
 ]

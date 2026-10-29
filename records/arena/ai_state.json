@@ -361,6 +361,46 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T10:26Z",
+        "id": "54e28dc9d830de",
+        "topic": "BTC-USD hourly VWAP mean reversion after extreme deviations",
+        "hypothesis": "After an hourly price deviates more than 3 standard deviations from the hourly VWAP, the price tends to revert to the VWAP within the next 5 hours, with a probability greater than 60%.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the proportion of hourly intervals where the absolute deviation from VWAP exceeds 3\u03c3 and the price returns within 5 hours; compare to 60% benchmark using historical BTC-USD hourly close data.",
+        "source_search": {
+          "query": "BTC hourly VWAP mean reversion empirical studies 2024 2025",
+          "attempted": [
+            "web",
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC hourly VWAP mean reversion after extreme deviations empirical evidence 2024 2025",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1041,6 +1081,44 @@
         },
         "source_leads": [],
         "next_search_query": "hourly mean reversion Bitcoin Ethereum returns 2024 study",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T10:26Z",
+        "id": "c0beadc2ffe2b6",
+        "topic": "Hourly mean\u2011reversion of Bitcoin and Ethereum returns",
+        "hypothesis": "Hourly returns of BTC\u2011USD and ETH\u2011USD exhibit statistically significant mean\u2011reversion over a 5\u2011hour lookback, such that a return exceeding +5% or \u20135% in any hour is likely to be followed by a return in the opposite direction within the next 5 hours.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the conditional probability of a return of opposite sign within 5 hours given an extreme return (>5% or <\u20115%) in the preceding hour. If this probability is not significantly greater than 0.5 (e.g., p>0.05 in a binomial test), the hypothesis is falsified.",
+        "source_search": {
+          "query": "hourly mean reversion Bitcoin Ethereum returns 2024 study",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "empirical evidence hourly mean reversion Bitcoin Ethereum 2024",
         "preferred_sources": [
           "web",
           "academic"
@@ -1771,6 +1849,42 @@
         "falsification_test": "Apply the rule to the last 2\u202fyears of hourly close data for each symbol; compute the win\u2011rate, average return per trade, and Sharpe ratio. Compare these metrics against a random\u2011trade benchmark and a simple buy\u2011and\u2011hold strategy. Reject the hypothesis if the breakout rule does not outperform both be",
         "source_search": {
           "query": "obtain hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T10:23Z",
+        "id": "69eb518b395be2",
+        "topic": "Opening Range Breakout with Volatility Filter on 24/7 Crypto Spot Markets",
+        "hypothesis": "A 24\u2011hour opening\u2011range breakout strategy that incorporates a volatility filter (e.g., ATR\u2011based) will generate statistically significant excess returns on BTC\u2011USD, ETH\u2011USD, and SOL\u2011USD when evaluated on hourly close prices.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Backtest the strategy on a hold\u2011out period of 2019\u20112026 using hourly close prices; compare cumulative returns and Sharpe ratio against a buy\u2011and\u2011hold benchmark. If the strategy\u2019s Sharpe ratio is not at least 0.5 higher than the benchmark or if the cumulative return is lower, the hypothesis is falsif",
+        "source_search": {
+          "query": "search for hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
           "attempted": [
             "web"
           ],

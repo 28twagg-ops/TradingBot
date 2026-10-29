@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-29T10:26Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | 54e28dc9d830de | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-29T10:26Z | S03 | Hourly mean‑reversion of Bitcoin and Ethereum re | c0beadc2ffe2b6 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-29T10:25Z | S07 |  | AI_UNAVAILABLE |  |
+| 2026-10-29T10:24Z | S04 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
+| 2026-10-29T10:23Z | S05 | Opening Range Breakout with Volatility Filter on | 69eb518b395be2 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-29T07:05Z | S10 | Bitcoin hourly volatility mean‑reversion | 0252c7f6e07e0b | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-29T07:04Z | S09 | BTC-USD trend persistence via 5h SMA above 20h S | 07bcea6f0eea77 | HOLD |
 | 2026-10-29T07:03Z | S07 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-28T16:40Z | S07 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
 | 2026-10-28T15:08Z | S04 | Cryptocurrency intraday gap‑down mean‑reversion  | 9a52b66f520ef6 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-28T15:08Z | S02 |  | AI_UNAVAILABLE |  |
-| 2026-10-28T15:07Z | S08 | Volatility compression mean reversion in major c | 70fa7c92027183 | HOLD_INSUFFICIENT_HISTORY |
-| 2026-10-28T15:06Z | S05 | Opening Range Breakout with Volatility Filter on | 0c79a52cb2840c | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-28T15:06Z | S06 | BTC‑USD relative strength to SPY 12‑hour momentu | e7d873c158ec22 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-28T15:05Z | S09 | BTC-USD trend persistence | e676c97dc8a25c | HOLD |
-| 2026-10-28T15:04Z | S03 | Hourly mean‑reversion of crypto returns | cb9a4c91c605a7 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
