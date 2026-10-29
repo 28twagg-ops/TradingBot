@@ -300,6 +300,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-29T14:16:53.401875+00:00",
       "entry_order_id": "f204f387-5f24-4ac9-8b45-f2ffa940295d"
+    },
+    {
+      "lot_id": "eba9ab9ff80a",
+      "bucket_id": 18,
+      "profile_name": "lab0018_s361_w2_1005_1045_r1",
+      "strategy_id": "S361",
+      "occ_symbol": "CRWD261030C00282500",
+      "underlying": "CRWD",
+      "qty": 1,
+      "entry_cost": 38.0,
+      "entry_price": 0.38,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-10-29T14:21:52.225062+00:00",
+      "entry_order_id": "fd94812e-40e9-4f73-abc3-4e675c52bbb5"
     }
   ],
   "pending_orders": [
@@ -352,22 +372,6 @@
       "stop_loss": -0.75
     },
     {
-      "order_id": "fd94812e-40e9-4f73-abc3-4e675c52bbb5",
-      "bucket_id": 18,
-      "strategy_id": "S361",
-      "occ_symbol": "CRWD261030C00282500",
-      "underlying": "CRWD",
-      "qty": 1,
-      "limit": 0.39,
-      "profile_name": "lab0018_s361_w2_1005_1045_r1",
-      "submitted": "2026-10-29",
-      "detail": "RB gap -4.6% reclaim",
-      "spread_frac": 0.19178082191780824,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
       "order_id": "93b7ba29-749a-4ca7-8166-0546d1edec7e",
       "bucket_id": 16,
       "strategy_id": "S357",
@@ -400,7 +404,8 @@
     "b65": 40.0,
     "b49": 70.0,
     "b55": 74.0,
-    "b50": 63.0
+    "b50": 63.0,
+    "b18": 38.0
   },
   "session_date": "2026-10-29",
   "entries_locked": [
@@ -833,7 +838,8 @@
     "2fb0ace7-0a27-48b2-8de7-9531a953c7b7",
     "dc76f3a3-fcec-4581-8e37-62e72fbeb77e",
     "6061680f-4e58-443b-80f7-2048067a3401",
-    "f204f387-5f24-4ac9-8b45-f2ffa940295d"
+    "f204f387-5f24-4ac9-8b45-f2ffa940295d",
+    "fd94812e-40e9-4f73-abc3-4e675c52bbb5"
   ],
   "submitted_today": 23,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
