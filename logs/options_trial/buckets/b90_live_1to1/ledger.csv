@@ -162,3 +162,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-10-28T16:27:16Z,reconcile,90,live_1to1,S406,650256a45967,V,V261030C00415000,0,,,64.0,,,missing_from_broker,,,0.5,-0.4,,lot closed outside of bot; no sell fill found,
 2026-10-29 13:43:24.556091+00:00,entry,90,live_1to1,S406,f86a648829e6,HOOD,HOOD261030C00093000,1,0.51,0.5,50.0,,,,-0.01,,0.5,-0.4,0.12244897959183673,RB gap -1.8% reclaim,654b3d59-bba1-44d8-a3bb-07ae1e04f4d5
 2026-10-29 13:47:56.135435+00:00,entry,90,live_1to1,S404,652a604627f1,AMD,AMD261030C00610000,1,0.6,0.59,59.0,,,,-0.01,,0.5,-0.4,0.0677966101694916,gap -2.8%,40fa0cad-2c4e-4115-9a1e-0b96fe56fbc1
+2026-10-29 13:51:50.368640+00:00,exit,90,live_1to1,S404,652a604627f1,AMD,AMD261030C00610000,1,,0.32,59.0,-45.76,-27.0,stop_loss (-47.5%),,-0.01,0.5,-0.4,,,a94161d1-e53d-456f-8c8c-128951108703
