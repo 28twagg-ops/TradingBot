@@ -63,7 +63,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 61,lab0061_s418_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-22,False,,,,,,,0,,,,idle
 62,lab0062_s419_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-22,False,,,,,,,0,,,,idle
 63,lab0063_s167_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-29,False,,,,,,,0,ARM,S167,,entered_no_exit
-64,lab0064_s166_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-22,False,,,,,,,0,,,,idle
+64,lab0064_s166_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-29,False,,,,,,,0,PATH,S166,,entered_no_exit
 65,lab0065_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-29,False,,,,,,,0,AVGO,S168,,entered_no_exit
 66,lab0066_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-29,False,,,,,,,0,MARA,S163,,entered_no_exit
 67,lab0067_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-10-29,False,,,,,,,0,AMD,S164,,entered_no_exit
