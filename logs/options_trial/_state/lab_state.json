@@ -202,26 +202,6 @@
       "entry_order_id": "dc76f3a3-fcec-4581-8e37-62e72fbeb77e"
     },
     {
-      "lot_id": "65edf839c4bf",
-      "bucket_id": 55,
-      "profile_name": "lab0055_s411_w2_1005_1045_r1",
-      "strategy_id": "S411",
-      "occ_symbol": "AMD261102C00622500",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 74.0,
-      "entry_price": 0.74,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-29T14:16:53.397708+00:00",
-      "entry_order_id": "6061680f-4e58-443b-80f7-2048067a3401"
-    },
-    {
       "lot_id": "1de449343669",
       "bucket_id": 64,
       "profile_name": "lab0064_s166_w2_1005_1045_r1",
@@ -282,34 +262,17 @@
       "entry_order_id": "93b7ba29-749a-4ca7-8166-0546d1edec7e"
     }
   ],
-  "pending_orders": [
-    {
-      "order_id": "8784dae3-2ab6-45a7-b1ae-a46da0293ded",
-      "bucket_id": 52,
-      "strategy_id": "S406",
-      "occ_symbol": "AMD261102C00650000",
-      "underlying": "AMD",
-      "qty": 1,
-      "limit": 0.15,
-      "profile_name": "lab0052_s406_w2_1005_1045_r1",
-      "submitted": "2026-10-29",
-      "detail": "RB gap -2.8% reclaim",
-      "spread_frac": 0.2068965517241379,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    }
-  ],
+  "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "aeaf2151-2943-4eef-86f7-30903dee8d31",
-      "lot_id": "65edf839c4bf",
-      "bucket_id": 55,
-      "strategy_id": "S411",
-      "occ_symbol": "AMD261102C00622500",
+      "order_id": "d35154a2-3711-47cf-8b1e-3e126a2835a0",
+      "lot_id": "c5a44e5b4af9",
+      "bucket_id": 13,
+      "strategy_id": "S350",
+      "occ_symbol": "AVGO261030C00357500",
       "qty": 1,
       "reason": "take_profit (+50.0%)",
-      "submitted": "2026-10-29T11:36:57"
+      "submitted": "2026-10-29T11:42:00"
     }
   ],
   "bucket_open_premium": {
@@ -323,7 +286,6 @@
     "b13": 34.0,
     "b65": 40.0,
     "b49": 70.0,
-    "b55": 74.0,
     "b64": 22.0,
     "b6": 10.0,
     "b16": 47.0
@@ -768,7 +730,8 @@
     "93b7ba29-749a-4ca7-8166-0546d1edec7e",
     "a690a43c-c416-443a-8114-5e02d38b092d",
     "609502b2-5381-4a27-9898-601c55f7aa45",
-    "91ccee08-3a1b-4976-8d74-046aee814ec6"
+    "91ccee08-3a1b-4976-8d74-046aee814ec6",
+    "aeaf2151-2943-4eef-86f7-30903dee8d31"
   ],
   "submitted_today": 23,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
