@@ -243,7 +243,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "ccc641ce-a43e-4f18-a122-857d37d3ec91",
+      "lot_id": "51ff005937a6",
+      "bucket_id": 6,
+      "strategy_id": "S210",
+      "occ_symbol": "UPST261030C00025500",
+      "qty": 1,
+      "reason": "stop_loss (-60.0%)",
+      "submitted": "2026-10-29T12:36:54"
+    }
+  ],
   "bucket_open_premium": {
     "b20": 15.0,
     "b14": 43.0,
