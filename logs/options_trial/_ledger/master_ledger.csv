@@ -16377,3 +16377,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-10-30 15:21:51.137667+00:00,exit,19,lab0019_s362_w2_1005_1045_r1,S362,0e813c32e1fb,AMZN,AMZN261102C00250000,1,,0.62,41.0,51.22,21.0,take_profit (+51.2%),,-0.01,0.5,-0.5,,,577b1ed6-4372-4b5f-8d9e-0806f080c442
 2026-10-30 15:21:46.665135+00:00,exit,20,lab0020_s364_w2_1005_1045_r1,S364,6c93d6eb9d01,AMZN,AMZN261106C00257500,1,,0.66,44.0,50.0,22.0,take_profit (+50.0%),,-0.01,0.5,-0.5,,,344abadd-afd8-4a68-9e64-c114e7770455
 2026-10-30 15:25:42.296727+00:00,exit,2007,day_trader_analytics_s430,S430,013eb29a6085,MCD,MCD261106C00275000,1,,0.39,65.0,-40.0,-26.0,stop_loss (-43.1%),,-0.01,0.5,-0.4,,,6ac1957f-8080-421e-b8ee-8bf280489fe8
+2026-10-30T15:31:42Z,reconcile,63,lab0063_s167_w2_1005_1045_r1,S167,641149ab4b79,NVDA,NVDA261102C00215000,0,,,24.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
