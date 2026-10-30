@@ -4370,6 +4370,44 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T19:21Z",
+        "id": "ff9b1779efc699",
+        "topic": "Volatility compression mean reversion in Bitcoin using hourly realized volatility",
+        "hypothesis": "Hourly realized volatility of BTC-USD exhibits mean reversion, such that periods of low volatility are followed by higher volatility and vice versa, allowing a simple threshold\u2011based trading rule on the 12\u2011hour moving average of hourly realized volat",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute 12\u2011hour realized volatility series, rank periods by percentile, and compare subsequent volatility changes using a paired t\u2011test or non\u2011parametric test. If the mean change after low\u2011volatility periods is significantly positive and after high\u2011volatility periods significantly negative, the hypo",
+        "source_search": {
+          "query": "search for empirical studies on hourly realized volatility mean reversion in Bitcoin",
+          "attempted": [
+            "academic",
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for empirical studies on hourly realized volatility mean reversion in Bitcoin",
+        "preferred_sources": [
+          "academic",
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -5444,6 +5482,60 @@
           "academic",
           "web",
           "reddit"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T19:22Z",
+        "id": "6415720e48c683",
+        "topic": "BTC-USD hourly price mean reversion to 24\u2011hour moving average",
+        "hypothesis": "When BTC\u2011USD hourly close deviates more than a specified threshold from its 24\u2011hour simple moving average, the price will revert toward the average within the next few hours, producing a profitable mean\u2011reversion trade.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 500,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 500,
+            "end": 715,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Apply the rule to the last 2000 hourly BTC\u2011USD observations: count the number of times the price exceeds the 24\u2011hour MA by >5% and then falls back within 3 hours; compute win rate and profit factor. If win rate <55% or profit factor <1.2, reject the hypothesis.",
+        "source_search": {
+          "query": "BTC hourly price mean reversion to 24h moving average",
+          "attempted": [
+            "academic",
+            "web",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD hourly price mean reversion to 24\u2011hour moving average backtest results",
+        "preferred_sources": [
+          "web",
+          "academic"
         ],
         "site_domain": null,
         "research_data_requirements": [

@@ -4516,5 +4516,96 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-10-30T19:20Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-10-30T19:21Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Volatility compression mean reversion in Bitcoin using hourly realized volatility",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "ff9b1779efc699",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "search for empirical studies on hourly realized volatility mean reversion in Bitcoin"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-10-30T19:22Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD hourly price mean reversion to 24\u2011hour moving average",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 24,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 26,
+        "end": 500,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 500,
+        "end": 715,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "6415720e48c683",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC\u2011USD hourly price mean reversion to 24\u2011hour moving average backtest results"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-10-30T19:22Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-10-30T19:23Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "safe_error": "GROQ_HTTP_400_unknown"
   }
 ]
