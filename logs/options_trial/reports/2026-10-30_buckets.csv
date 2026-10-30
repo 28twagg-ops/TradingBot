@@ -78,4 +78,4 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 2004,promising_s175_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2005,promising_s220_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2006,promising_s221_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
-2007,day_trader_analytics_s431,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-10-30,False,,,,,,,0,MCD,S430,,entered_no_exit
+2007,day_trader_analytics_s431,ask-0.01,bid-0.01,50.0,-40.0,1,1,0,2026-10-30,False,,0.0,-40.0,-40.0,-40.0,-40.0,-26.0,MCD,S430,stop_loss (-43.1%),closed
