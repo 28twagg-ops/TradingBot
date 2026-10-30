@@ -441,6 +441,46 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T00:58Z",
+        "id": "4e9e0c95b9187c",
+        "topic": "BTC-USD intraday VWAP mean\u2011reversion after extreme deviations",
+        "hypothesis": "After an hourly price deviates more than a fixed percentage (e.g., 1.5%) from the 30\u2011hour VWAP, BTC\u2011USD tends to revert toward the VWAP within the next 4\u20136 hours, producing a statistically significant mean\u2011reversion effect.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Collect hourly BTC\u2011USD close data, compute the 30\u2011hour VWAP, identify hours where the price deviates >1.5% from VWAP, and test whether the subsequent 4\u20136 hours show a statistically significant return toward the VWAP (e.g., using paired t\u2011test or bootstrap).",
+        "source_search": {
+          "query": "BTC hourly VWAP mean reversion after extreme deviations empirical evidence 2024 2025",
+          "attempted": [
+            "web",
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly VWAP mean reversion empirical studies 2024 2025",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -4415,6 +4455,44 @@
         "next_search_query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
         "preferred_sources": [
           "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T00:58Z",
+        "id": "cd2f7f3f27619c",
+        "topic": "Bitcoin hourly realized volatility mean\u2011reversion trigger",
+        "hypothesis": "Hourly realized volatility of BTC\u2011USD, calculated as the standard deviation of 5\u2011minute intraday returns over the past 24 hours, exhibits a mean\u2011reversion pattern that can be exploited by a simple threshold\u2011based rule: when the realized volatility fa",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to the last 12 months of hourly BTC\u2011USD close data and compute the cumulative return and Sharpe ratio. A statistically significant positive return (p<0.05) would support the hypothesis; otherwise it would be falsified.",
+        "source_search": {
+          "query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
+        "preferred_sources": [
+          "academic",
+          "web",
+          "reddit"
         ],
         "site_domain": null,
         "research_data_requirements": [

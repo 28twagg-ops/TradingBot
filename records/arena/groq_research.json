@@ -3723,5 +3723,51 @@
     "live_trading": false,
     "ai_requests": 1,
     "reason": "ValueError"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-10-30T00:58Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Bitcoin hourly realized volatility mean\u2011reversion trigger",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "cd2f7f3f27619c",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-10-30T00:58Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD intraday VWAP mean\u2011reversion after extreme deviations",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "4e9e0c95b9187c",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly VWAP mean reversion empirical studies 2024 2025"
   }
 ]
