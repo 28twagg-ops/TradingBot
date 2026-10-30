@@ -481,6 +481,46 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T10:27Z",
+        "id": "1e4fae7f93a775",
+        "topic": "BTC-USD hourly VWAP mean reversion after extreme deviations",
+        "hypothesis": "When BTC\u2011USD hourly VWAP deviates more than a threshold (e.g., 3\u202f% above or below the 24\u2011hour VWAP), the price tends to revert toward the VWAP within the next 4\u20138 hours, producing a predictable mean\u2011reversion signal.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to the last 2000 hourly BTC\u2011USD close\u2011price observations; if the proportion of cases where the price moves opposite to the deviation within 8\u202fhours exceeds 60\u202f% and the average absolute return on the signal exceeds 0.5\u202f% per hour, the hypothesis is supported; otherwise it is falsified",
+        "source_search": {
+          "query": "BTC-USD hourly VWAP mean reversion empirical studies 2024 2025",
+          "attempted": [
+            "web",
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly VWAP mean reversion empirical evidence 2024 2025",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -995,6 +1035,87 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T10:28Z",
+        "id": "b43be483744c7d",
+        "topic": "BTC-USD weekly cycle: price tends to rebound within 24 hours after a >5% drop on Friday close",
+        "hypothesis": "When BTC-USD closes on a Friday with a drop of more than 5% from the previous close, the price will recover by at least 3% within the next 24 hours (i.e., by the end of the following Saturday).",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 5,
+          "threshold": 0.03
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 494,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 494,
+            "end": 706,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the percentage change from Friday close to the close 24 hours later for all Fridays with >5% drop. If less than 70% of those instances show a \u22653% recovery, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD weekend drop >5% Monday 1\u2011hour return statistical analysis",
+          "attempted": [
+            "web",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $78,540.24 USD with a 24-hour trading volume of $53,288,990,193.20 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/BTC-USD/",
+            "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart | CoinDesk",
+            "url": "https://www.coindesk.com/price/bitcoin",
+            "snippet": "Live Bitcoin price movements from all markets and BTC market cap, use our charts and see when there is an opportunity to buy or sell.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "BTC-USD Friday >5% drop Saturday 24h recovery statistical analysis",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1405,6 +1526,64 @@
         },
         "source_leads": [],
         "next_search_query": "hourly mean reversion Bitcoin Ethereum returns 2024 empirical study",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T10:26Z",
+        "id": "0a3ce5641a3b78",
+        "topic": "Hourly mean reversion of Bitcoin and Ethereum returns",
+        "hypothesis": "Hourly returns of BTC\u2011USD and ETH\u2011USD exhibit statistically significant mean\u2011reversion within a 5\u2011hour lookback, such that the sign of the return in the current hour predicts the opposite sign in the next hour with probability >60% after controlling ",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the proportion of hourly return sign changes over the past 2 years; if <60% the hypothesis is falsified. Additionally, perform a Ljung\u2011Box test on the residuals of a simple AR(1) model to ensure no remaining autocorrelation.",
+        "source_search": {
+          "query": "hourly mean reversion Bitcoin Ethereum returns 2024 empirical study",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Payroll & Workers' Comp for Small Businesses | Hourly",
+            "url": "https://www.hourly.io/",
+            "snippet": "Hourly connects payroll, time tracking, HR, and workers' comp into one platform for small businesses nationwide. Pay only for what you need. Book a demo today!",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Hourly Paycheck Calculator - Calculate Hourly Pay | ADP",
+            "url": "https://www.adp.com/resources/tools/calculators/hourly-paycheck-calculator.aspx",
+            "snippet": "Multiply the hourly wage by the number of hours worked per week. Then, multiply that number by the total number of weeks in a year (52). For example, if an employee makes $25 per hour and works 40 hours per week, the annual salary is 25 x 4",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Hourly App",
+            "url": "https://app.hourly.io/login",
+            "snippet": "Hourly App We'll email you a magic link to complete your login",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "empirical evidence hourly mean reversion Bitcoin Ethereum 2024",
         "preferred_sources": [
           "web"
         ],
@@ -3003,6 +3182,46 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T10:29Z",
+        "id": "affaff1549a032",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour relative strength (RS) to SPY exceeds a threshold, BTC\u2011USD will outperform SPY over the next 24 hours. The strategy is to buy BTC\u2011USD when RS>threshold and hold until RS falls below threshold, and to sell when RS<threshold.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 24\u2011hour RS between BTC\u2011USD and SPY using hourly close data. Backtest the buy\u2011sell rule over the last 3 years. If the strategy\u2019s cumulative return is lower than a buy\u2011and\u2011hold on BTC\u2011USD or SPY, or if the Sharpe ratio is negative, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger backtest results on reddit or independent blog",
+          "attempted": [
+            "reddit",
+            "blog",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+        "preferred_sources": [
+          "reddit",
+          "blog",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -3848,6 +4067,44 @@
         "falsification_test": "Apply the rule to historical hourly BTC\u2011USD close data: compute 24\u2011hour realized volatility, compute 12\u2011hour moving average of that volatility, flag hours where volatility >1.5\u00d7MA; then check if the next hour\u2019s close is lower than the current close. Calculate hit rate, profit factor, and compare to ",
         "source_search": {
           "query": "search for empirical studies or backtests of volatility compression mean reversion in crypto using 12\u2011hour moving averages",
+          "attempted": [
+            "academic",
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for empirical studies on hourly realized volatility mean reversion in Bitcoin",
+        "preferred_sources": [
+          "academic",
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T10:29Z",
+        "id": "09a6a02bb33c47",
+        "topic": "Volatility compression mean reversion in Bitcoin using hourly realized volatility",
+        "hypothesis": "Hourly realized volatility of Bitcoin tends to revert toward a mean level after periods of volatility compression, such that when the 12\u2011hour rolling standard deviation falls below its 30\u2011day average by more than 20\u202f%, the next 12 hours exhibit a sta",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 12\u2011hour rolling standard deviation of hourly log\u2011returns for BTC\u2011USD over the past 2\u202fyears. Identify all instances where the 12\u2011hour volatility is 20\u202f% below the 30\u2011day moving average. For each instance, calculate the subsequent 12\u2011hour realized volatility and test whether the mean of th",
+        "source_search": {
+          "query": "search for empirical studies on hourly realized volatility mean reversion in Bitcoin",
           "attempted": [
             "academic",
             "web"
