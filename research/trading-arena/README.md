@@ -1,3 +1,5 @@
+> **Current project status and full transfer guide:** [Arena engineering handoff](../../docs/ARENA_PROJECT_HANDOFF.md) (updated 2026-10-30). This README records earlier design stages; its original “development branch only” status is obsolete. For deployed workflows and current evidence, use the handoff and `arena-ledger`.
+
 # TradingBot Arena — autonomous paper-research foundation
 
 **Status: development branch only. Not live, not deployed.** This repository contains a live-money stock bot, so Arena must have *zero* access to production Alpaca API keys, live workflows, or live account state.
