@@ -1200,6 +1200,59 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T23:52Z",
+        "id": "d43f0d1d72929a",
+        "topic": "BTC-USD weekend drop >5% Monday return pattern",
+        "hypothesis": "When BTC-USD experiences a drop of more than 5% from Friday close to Monday close, the price tends to revert upward within the first 24 hours after the Monday close, producing a positive hourly return on average.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 503,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 503,
+            "end": 719,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the distribution of hourly returns for the 24 hours following each Monday that follows a >5% weekend drop; if the mean return is significantly positive (p<0.05) and the win\u2011rate exceeds 50%, the hypothesis is supported; otherwise it is falsified.",
+        "source_search": {
+          "query": "Bitcoin intraday volatility weekend recovery institutional rebalancing",
+          "attempted": [
+            "web",
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD weekend drop >5% Monday 1-hour return distribution",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -4528,6 +4581,44 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T23:50Z",
+        "id": "3ad7457442839a",
+        "topic": "Volatility compression mean reversion in BTC-USD using hourly realized volatility",
+        "hypothesis": "Hourly realized volatility of BTC-USD exhibits a mean\u2011reverting pattern that can be exploited by a simple threshold\u2011based reversion strategy: when the realized volatility over the past 5 hours falls below the 10th percentile of its 60\u2011hour rolling di",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 10th and 90th percentiles of the 60\u2011hour rolling realized volatility distribution. Count the number of times a low\u2011volatility event (\u226410th percentile) is followed by a high\u2011volatility event (\u226590th percentile) within the next hour, and compare this frequency to the 50% baseline expected u",
+        "source_search": {
+          "query": "search for empirical studies on hourly realized volatility mean reversion in Bitcoin",
+          "attempted": [
+            "academic",
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for papers or datasets on hourly realized volatility of Bitcoin",
+        "preferred_sources": [
+          "academic",
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -5736,6 +5827,87 @@
         "preferred_sources": [
           "web",
           "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T23:51Z",
+        "id": "a74c1677119235",
+        "topic": "BTC-USD hourly price mean reversion to 24\u2011hour moving average",
+        "hypothesis": "When BTC\u2011USD hourly close deviates more than 5% from its 24\u2011hour simple moving average, the price reverts toward the average within the next 12 hours, producing a profitable mean\u2011reversion trade if entered at the deviation point and exited at the ave",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 503,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 503,
+            "end": 719,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Backtest the 24\u2011hour SMA mean\u2011reversion rule on the last 2000 hourly BTC\u2011USD closes. Count trades where the hourly close deviates >5% from SMA24, take a long position if above and short if below, exit when the price reverts to SMA24 or after 12 hours. Compute cumulative PnL and Sharpe ratio. If cumu",
+        "source_search": {
+          "query": "BTC\u2011USD hourly price mean reversion to 24\u2011hour moving average backtest results",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $76,852.23 USD with a 24-hour trading volume of $58,944,833,576.58 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/BTC-USD/",
+            "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin Price: BTC/USD Live Price Chart, Market Cap & News Today ...",
+            "url": "https://www.coingecko.com/en/coins/bitcoin",
+            "snippet": "Price of Bitcoin (BTC) today is $76,859.21 with a 24-hour trading volume of $195,388,992,473. Track Bitcoin's live price, market cap, news, and more on CoinGecko.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "BTC\u2011USD hourly price mean reversion to 24\u2011hour moving average backtest results",
+        "preferred_sources": [
+          "web"
         ],
         "site_domain": null,
         "research_data_requirements": [

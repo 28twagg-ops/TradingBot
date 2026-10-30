@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-30T19:26:01.837071+00:00",
+  "timestamp": "2026-10-30T23:50:48.378263+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -11,7 +11,7 @@
       "missing_quotes": []
     },
     "S02": {
-      "action": "SELL AAPL",
+      "action": "HOLD",
       "cash": 97.85181804,
       "equity": 97.8518,
       "ledger_events": 8,
@@ -19,17 +19,17 @@
       "missing_quotes": []
     },
     "S03": {
-      "action": "BUY SPY",
+      "action": "HOLD",
       "cash": 13.25515543,
-      "equity": 98.1863,
+      "equity": 98.7082,
       "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S04": {
-      "action": "BUY SPY",
+      "action": "HOLD",
       "cash": 60.99699131,
-      "equity": 100.6002,
+      "equity": 100.8237,
       "ledger_events": 5,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -51,7 +51,7 @@
       "missing_quotes": []
     },
     "S07": {
-      "action": "SELL AAPL",
+      "action": "HOLD",
       "cash": 98.21826112,
       "equity": 98.2183,
       "ledger_events": 4,
