@@ -16379,3 +16379,6 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-10-30 15:25:42.296727+00:00,exit,2007,day_trader_analytics_s430,S430,013eb29a6085,MCD,MCD261106C00275000,1,,0.39,65.0,-40.0,-26.0,stop_loss (-43.1%),,-0.01,0.5,-0.4,,,6ac1957f-8080-421e-b8ee-8bf280489fe8
 2026-10-30T15:31:42Z,reconcile,63,lab0063_s167_w2_1005_1045_r1,S167,641149ab4b79,NVDA,NVDA261102C00215000,0,,,24.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
 2026-10-30 15:41:07.658566+00:00,exit,90,live_1to1,S404,40f03449eda4,NVDA,NVDA261102C00212500,1,,0.25,41.0,-39.02,-16.0,broker_fill_backfill,,-0.01,0.5,-0.4,,,a1d7437b-a670-4d37-9b99-538776ced53c
+2026-10-30 16:52:54.095497+00:00,exit,15,lab0015_s356_w2_1005_1045_r1,S356,d2eebfed08f5,MARA,MARA261113C00007500,1,,0.26,51.0,-49.02,-25.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,8661deb7-89ae-4c72-a2c6-15125c0abdb0
+2026-10-30 16:51:55.253604+00:00,exit,65,lab0065_s168_w2_1005_1045_r1,S168,f1400a4bc7b7,NVDA,NVDA261104C00220000,1,,0.14,31.0,-54.84,-17.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,9be3aadb-4365-40f1-a2c9-73d5f7590bbb
+2026-10-30 16:55:23.327783+00:00,exit,66,lab0066_s163_w2_1005_1045_r1,S163,fee44b565506,NVDA,NVDA261106C00222500,1,,0.2,39.0,-48.72,-19.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,99939c3a-cd0b-4134-9b82-4de6de57cf0d
