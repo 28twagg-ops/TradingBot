@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-30T14:09Z | S03 | Hourly mean reversion of BTC-USD returns | c05e807e00d5a5 | HOLD_INSUFFICIENT_HISTORY |
+| 2026-10-30T14:08Z | S07 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
+| 2026-10-30T14:07Z | S05 | Mean Reversion After Large Hourly Swings in 24/7 | e5847f3ad4d02e | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-30T14:07Z | S04 |  | AI_UNAVAILABLE |  |
+| 2026-10-30T14:06Z | S09 | BTC-USD trend persistence via short‑term SMA abo | 4b109df0c380d0 | HOLD_INSUFFICIENT_HISTORY |
 | 2026-10-30T13:02Z | S10 | BTC-USD hourly price mean reversion to 24‑hour m | b50c238f8ac2f5 | HOLD |
 | 2026-10-30T13:02Z | S07 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
 | 2026-10-30T13:01Z | S05 |  | AI_UNAVAILABLE |  |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-29T20:16Z | S09 | BTC-USD trend persistence via short‑term SMA abo | b2a0217e3a1cc1 | HOLD |
 | 2026-10-29T19:44Z | S06 | BTC‑USD relative strength to SPY 24‑hour momentu | cc7897e5344f81 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-29T19:43Z | S10 |  | AI_UNAVAILABLE |  |
-| 2026-10-29T19:43Z | S08 | Volatility compression mean reversion in major c | ab0daf1694121d | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-29T19:42Z | S02 | BTC-USD 24‑hour price reversal after a >10% drop | dfe3f702c2002c | HOLD |
-| 2026-10-29T19:41Z | S07 |  | AI_UNAVAILABLE |  |
-| 2026-10-29T17:34Z | S03 | Hourly mean‑reversion of Bitcoin and Ethereum re | c619efe2c8f1d7 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-29T17:34Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | d6588fd86810bf | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

@@ -1594,6 +1594,42 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T14:09Z",
+        "id": "c05e807e00d5a5",
+        "topic": "Hourly mean reversion of BTC-USD returns",
+        "hypothesis": "BTC\u2011USD hourly returns exhibit mean\u2011reversion within a 5\u2011hour lookback window, such that the absolute return deviates from the mean by less than 2% in the subsequent hour.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 5,
+          "threshold": 0.02
+        },
+        "symbol": null,
+        "test": {
+          "status": "INSUFFICIENT_HOURLY_HISTORY"
+        },
+        "paper_action": "HOLD_INSUFFICIENT_HISTORY",
+        "falsification_test": "If the absolute hourly return exceeds 2% in the direction opposite to the prior 5\u2011hour mean for 5 consecutive hours, the hypothesis is falsified.",
+        "source_search": {
+          "query": "empirical evidence hourly mean reversion Bitcoin Ethereum 2024",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC hourly mean reversion 5 hour lookback 2024 study",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -2675,6 +2711,42 @@
         "falsification_test": "Compute the cumulative return of the breakout rule for each hour in the sample period 2019\u20112026 and compare the mean return and win\u2011rate to a buy\u2011and\u2011hold baseline using a paired t\u2011test; reject the hypothesis if the breakout mean return is not significantly higher (p>0.05).",
         "source_search": {
           "query": "search for hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "obtain hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T14:07Z",
+        "id": "e5847f3ad4d02e",
+        "topic": "Mean Reversion After Large Hourly Swings in 24/7 Crypto Spot Markets",
+        "hypothesis": "In BTC\u2011USD, ETH\u2011USD, and SOL\u2011USD, a price move exceeding 2% within an hour is followed by a statistically significant mean\u2011reversion within the next 3 hours, as measured by the hourly close price returning toward the 5\u2011hour moving average.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the proportion of 2%+ hourly swings that are followed by a reversal of at least 1% within the next 3 hours; compare to the proportion expected under a random walk (e.g., via bootstrapping). If the observed proportion is significantly higher (p<0.05), the hypothesis is supported; otherwise it",
+        "source_search": {
+          "query": "obtain hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
           "attempted": [
             "web"
           ],
@@ -4710,6 +4782,44 @@
           "web",
           "reddit",
           "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T14:06Z",
+        "id": "4b109df0c380d0",
+        "topic": "BTC-USD trend persistence via short\u2011term SMA above long\u2011term SMA",
+        "hypothesis": "When the 5\u2011hour SMA is above the 20\u2011hour SMA and the price is above the 5\u2011hour SMA, BTC\u2011USD tends to continue trending upward in the next hour.",
+        "candidate": {
+          "family": "trend",
+          "lookback": 20,
+          "threshold": 0.05
+        },
+        "symbol": null,
+        "test": {
+          "status": "INSUFFICIENT_HOURLY_HISTORY"
+        },
+        "paper_action": "HOLD_INSUFFICIENT_HISTORY",
+        "falsification_test": "If the hourly return following a signal is less than 5\u202f% (threshold) for more than 70\u202f% of occurrences, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD 24h SMA breakout gap 1% hourly return study",
+          "attempted": [
+            "web",
+            "reddit",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD 5h SMA above 20h SMA trend persistence hourly backtest",
+        "preferred_sources": [
+          "web"
         ],
         "site_domain": null,
         "research_data_requirements": [

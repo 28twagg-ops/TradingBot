@@ -4307,5 +4307,94 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC hourly price mean reversion to 24h moving average"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-10-30T14:06Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD trend persistence via short\u2011term SMA above long\u2011term SMA",
+    "strategy": {
+      "family": "trend",
+      "lookback": 20,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "INSUFFICIENT_HOURLY_HISTORY"
+    },
+    "action": "HOLD_INSUFFICIENT_HISTORY",
+    "experiment_id": "4b109df0c380d0",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD 5h SMA above 20h SMA trend persistence hourly backtest"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-10-30T14:07Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "safe_error": "GROQ_HTTP_400_unknown"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-10-30T14:07Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Mean Reversion After Large Hourly Swings in 24/7 Crypto Spot Markets",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "e5847f3ad4d02e",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "obtain hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-10-30T14:08Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-10-30T14:09Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Hourly mean reversion of BTC-USD returns",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 5,
+      "threshold": 0.02
+    },
+    "test": {
+      "status": "INSUFFICIENT_HOURLY_HISTORY"
+    },
+    "action": "HOLD_INSUFFICIENT_HISTORY",
+    "experiment_id": "c05e807e00d5a5",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC hourly mean reversion 5 hour lookback 2024 study"
   }
 ]
