@@ -4396,5 +4396,125 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC hourly mean reversion 5 hour lookback 2024 study"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-10-30T17:09Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Hourly gap\u2011down mean\u2011reversion in BTC\u2011USD",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 5,
+      "threshold": 0.01
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 7,
+        "end": 499,
+        "returns_pct": -2.84,
+        "drawdown_pct": -2.84,
+        "entries": 10
+      },
+      "retrospective_validation": {
+        "start": 499,
+        "end": 713,
+        "returns_pct": -2.745,
+        "drawdown_pct": -4.271,
+        "entries": 4
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "9f99bc92f1b426",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly gap-down events 1% threshold 5-hour return distribution statistics"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-10-30T17:10Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-10-30T17:11Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD hourly VWAP mean reversion after extreme deviations",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "minute_bars",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "3686cce0c45900",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD intraday VWAP calculation methodology and empirical studies 2024 2025"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-10-30T17:11Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Bitcoin weekend intraday volatility and price recovery patterns",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "minute_bars"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "77c59036eb5671",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "Bitcoin intraday volatility weekend recovery institutional rebalancing"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-10-30T17:12Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "324fd062ba995d",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites"
   }
 ]

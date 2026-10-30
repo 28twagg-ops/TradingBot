@@ -521,6 +521,50 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T17:11Z",
+        "id": "3686cce0c45900",
+        "topic": "BTC-USD hourly VWAP mean reversion after extreme deviations",
+        "hypothesis": "When BTC-USD hourly close deviates more than 2 standard deviations from its 24\u2011hour VWAP, the price tends to revert toward the VWAP within the next 4\u20138 hours, producing a statistically significant mean\u2011reversion signal.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close",
+            "minute_bars",
+            "volume"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 24\u2011hour VWAP using intraday volume data (if available) and compare the hourly close deviations to the VWAP. Test whether deviations >2\u03c3 are followed by a return to the VWAP within 4\u20138 hours more often than chance. A p\u2011value <0.05 would support the hypothesis; otherwise it would be falsif",
+        "source_search": {
+          "query": "BTC-USD hourly VWAP mean reversion empirical evidence 2024 2025",
+          "attempted": [
+            "web",
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD intraday VWAP calculation methodology and empirical studies 2024 2025",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close",
+          "minute_bars",
+          "volume"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1115,6 +1159,46 @@
         ],
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T17:11Z",
+        "id": "77c59036eb5671",
+        "topic": "Bitcoin weekend intraday volatility and price recovery patterns",
+        "hypothesis": "Bitcoin exhibits a statistically significant intraday price recovery on the first trading hour after a >5% drop on Friday close, driven by institutional rebalancing and lower weekend liquidity.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close",
+            "minute_bars"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the mean 1\u2011hour return following Friday close drops >5% over the past 5 years and compare to a bootstrap distribution of random 1\u2011hour returns; reject if p<0.01.",
+        "source_search": {
+          "query": "BTC-USD Friday >5% drop Saturday 24h recovery statistical analysis",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "Bitcoin intraday volatility weekend recovery institutional rebalancing",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close",
+          "minute_bars"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
@@ -2240,6 +2324,57 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T17:09Z",
+        "id": "9f99bc92f1b426",
+        "topic": "Hourly gap\u2011down mean\u2011reversion in BTC\u2011USD",
+        "hypothesis": "Hourly opening price of BTC\u2011USD that gaps down by at least 1% relative to the previous hour\u2019s close is followed by a mean\u2011reversion of the closing price within the next 5 hours, such that the 5\u2011hour return is positive in at least 60% of cases.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 5,
+          "threshold": 0.01
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 499,
+            "returns_pct": -2.84,
+            "drawdown_pct": -2.84,
+            "entries": 10
+          },
+          "retrospective_validation": {
+            "start": 499,
+            "end": 713,
+            "returns_pct": -2.745,
+            "drawdown_pct": -4.271,
+            "entries": 4
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the proportion of 1%+ gap\u2011down events where the 5\u2011hour return is negative; if >40% the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly gap\u2011down events 1% threshold 5\u2011hour return distribution statistics",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly gap-down events 1% threshold 5-hour return distribution statistics",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ],
     "ai_seen": {
@@ -3285,6 +3420,45 @@
         "preferred_sources": [
           "reddit",
           "blog",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T17:12Z",
+        "id": "324fd062ba995d",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "If BTC\u2011USD\u2019s 24\u2011hour cumulative return exceeds SPY\u2019s 24\u2011hour cumulative return by more than 5\u202f% (relative strength >\u202f1.05), then BTC\u2011USD will outperform SPY in the following 24\u202fhours.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Backtest the rule on historical hourly close data for BTC\u2011USD and SPY over the past 5\u202fyears, recording win\u2011rate, profit factor, and maximum drawdown. Compare performance to a buy\u2011and\u2011hold benchmark for both assets.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+          "attempted": [
+            "reddit",
+            "blog",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+        "preferred_sources": [
+          "academic",
           "forum"
         ],
         "site_domain": null,
