@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-30T00:00:46.670500+00:00",
+  "timestamp": "2026-10-30T05:52:42.705418+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -19,10 +19,10 @@
       "missing_quotes": []
     },
     "S03": {
-      "action": "BUY BTC-USD",
-      "cash": 60.36765465,
-      "equity": 99.9209,
-      "ledger_events": 1,
+      "action": "BUY ETH-USD",
+      "cash": 36.41212875,
+      "equity": 99.5105,
+      "ledger_events": 2,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -67,7 +67,7 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "SELL BTC-USD",
+      "action": "HOLD",
       "cash": 97.38885147,
       "equity": 97.3889,
       "ledger_events": 10,

@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-30T05:55Z | S03 |  | AI_UNAVAILABLE |  |
+| 2026-10-30T05:54Z | S09 | BTC-USD hourly breakout on 24h SMA with signific | a32fe7c532414e | HOLD |
+| 2026-10-30T05:54Z | S06 | BTC‑USD relative strength to SPY 24‑hour momentu | 996f7d4d476daa | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-30T05:53Z | S08 | Volatility compression mean reversion in BTC-USD | 2d5a1dcd2b8807 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-30T05:52Z | S02 | BTC-USD weekend drop >5% Monday return pattern | 327fd3050a884f | HOLD_INSUFFICIENT_HISTORY |
 | 2026-10-30T00:58Z | S01 | BTC-USD intraday VWAP mean‑reversion after extre | 4e9e0c95b9187c | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-30T00:58Z | S10 | Bitcoin hourly realized volatility mean‑reversio | cd2f7f3f27619c | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-30T00:00Z | S07 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-29T13:04Z | S04 | Hourly gap‑down mean‑reversion in large‑cap cryp | 775f644c96f788 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-29T10:26Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | 54e28dc9d830de | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-29T10:26Z | S03 | Hourly mean‑reversion of Bitcoin and Ethereum re | c0beadc2ffe2b6 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-29T10:25Z | S07 |  | AI_UNAVAILABLE |  |
-| 2026-10-29T10:24Z | S04 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
-| 2026-10-29T10:23Z | S05 | Opening Range Breakout with Volatility Filter on | 69eb518b395be2 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-29T07:05Z | S10 | Bitcoin hourly volatility mean‑reversion | 0252c7f6e07e0b | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-29T07:04Z | S09 | BTC-USD trend persistence via 5h SMA above 20h S | 07bcea6f0eea77 | HOLD |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

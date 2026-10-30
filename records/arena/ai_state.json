@@ -956,6 +956,45 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T05:52Z",
+        "id": "327fd3050a884f",
+        "topic": "BTC-USD weekend drop >5% Monday return pattern",
+        "hypothesis": "BTC-USD tends to recover at least 5% on the first trading hour of Monday following a weekend drop exceeding 5% on Friday close, indicating a weekly reversion pattern that can be exploited with a simple hourly trend rule.",
+        "candidate": {
+          "family": "trend",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": null,
+        "test": {
+          "status": "INSUFFICIENT_HOURLY_HISTORY"
+        },
+        "paper_action": "HOLD_INSUFFICIENT_HISTORY",
+        "falsification_test": "Compute the proportion of Friday close to Monday 1\u2011hour close recoveries that are \u22655% over the past 3 years. If the proportion is below 50% the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD Friday 10% drop Saturday 5% recovery historical data",
+          "attempted": [
+            "web",
+            "reddit",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD weekend drop >5% Monday 1\u2011hour return statistical analysis",
+        "preferred_sources": [
+          "web",
+          "reddit"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -2809,6 +2848,45 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T05:54Z",
+        "id": "996f7d4d476daa",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour relative strength (RS) to SPY exceeds +30\u202f% and the 24\u2011hour BTC\u2011USD momentum (price change) is positive, a short\u2011term (next 24\u202fh) bullish reversal of BTC\u2011USD is more likely than a continuation of the downtrend.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "If the strategy fails to produce a positive cumulative return over a 2\u2011year backtest period (excluding periods of extreme market stress) using the 24\u2011hour RS and momentum trigger, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+          "attempted": [
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger backtest results on reddit or independent blog",
+        "preferred_sources": [
+          "reddit",
+          "blog",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -3566,6 +3644,44 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T05:53Z",
+        "id": "2d5a1dcd2b8807",
+        "topic": "Volatility compression mean reversion in BTC-USD using hourly realized volatility",
+        "hypothesis": "When the hourly realized volatility over the past 24 hours exceeds 1.5 times its 12\u2011hour moving average, BTC\u2011USD price will revert downward within the next hour, producing a mean\u2011reversion trade.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to historical hourly BTC\u2011USD close data: compute 24\u2011hour realized volatility, compute 12\u2011hour moving average of that volatility, flag hours where volatility >1.5\u00d7MA; then check if the next hour\u2019s close is lower than the current close. Calculate hit rate, profit factor, and compare to ",
+        "source_search": {
+          "query": "search for empirical studies or backtests of volatility compression mean reversion in crypto using 12\u2011hour moving averages",
+          "attempted": [
+            "academic",
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for empirical studies on hourly realized volatility mean reversion in Bitcoin",
+        "preferred_sources": [
+          "academic",
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -4097,6 +4213,60 @@
         "next_search_query": "BTC-USD 5h SMA above 20h SMA trend persistence backtest results",
         "preferred_sources": [
           "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T05:54Z",
+        "id": "a32fe7c532414e",
+        "topic": "BTC-USD hourly breakout on 24h SMA with significant gap",
+        "hypothesis": "When BTC-USD hourly close price crosses above its 24\u2011hour simple moving average (SMA) and the price gap from the previous hour\u2019s close exceeds 1\u202f% of the previous close, the next hour\u2019s return is statistically higher than the overall hourly return di",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 24,
+          "threshold": 0.01
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 490,
+            "returns_pct": -0.8,
+            "drawdown_pct": -0.8,
+            "entries": 2
+          },
+          "retrospective_validation": {
+            "start": 490,
+            "end": 701,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the mean hourly return following such breakout events and compare it to the mean hourly return of all other hours using a two\u2011sample t\u2011test; a significant positive difference (p<0.05) would support the hypothesis, while a non\u2011significant result would falsify it.",
+        "source_search": {
+          "query": "BTC-USD 5h SMA above 20h SMA trend persistence backtest results",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD 24h SMA breakout gap 1% hourly return study",
+        "preferred_sources": [
+          "web",
+          "reddit",
           "academic"
         ],
         "site_domain": null,
