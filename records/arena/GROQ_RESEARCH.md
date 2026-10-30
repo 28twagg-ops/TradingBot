@@ -6,6 +6,7 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-30T00:00Z | S07 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
 | 2026-10-29T20:19Z | S03 | Hourly mean reversion of Bitcoin and Ethereum re | 5dcf7725081eec | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-29T20:18Z | S01 |  | AI_UNAVAILABLE |  |
 | 2026-10-29T20:18Z | S05 | Opening Range Breakout with Volatility Filter on | ed25f948d6dc8d | RESEARCH_ONLY_NEEDS_DATA |
@@ -40,7 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-29T07:04Z | S09 | BTC-USD trend persistence via 5h SMA above 20h S | 07bcea6f0eea77 | HOLD |
 | 2026-10-29T07:03Z | S07 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
 | 2026-10-29T07:03Z | S04 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
-| 2026-10-29T07:02Z | S05 |  | AI_UNAVAILABLE |  |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
