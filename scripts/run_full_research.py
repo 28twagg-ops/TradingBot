@@ -1,72 +1,41 @@
+"""Compatibility wrapper — canonical module: research/other-studies/run_full_research.py
+
+Do not edit trading logic here. GHA and local tools may still invoke this path.
 """
-run_full_research.py — Long-running research: extensive synthetic + full universe historical.
-
-Runs in sequence:
-  1. Extensive synthetic catalog (220 strategies x full grid)
-  2. Fetch full ~900 universe with max yfinance history
-  3. Historical backtest on all downloaded symbols
-
-Usage:
-  python scripts/run_full_research.py
-  python scripts/run_full_research.py --fetch-only
-  python scripts/run_full_research.py --historical-only
-"""
-
 from __future__ import annotations
 
-import subprocess
+import runpy
 import sys
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parent.parent
-PY = sys.executable
+_ROOT = Path(__file__).resolve().parents[1]
+_SEARCH = [
+    _ROOT / "live-bots/options-paper/lab",
+    _ROOT / "live-bots/options-paper/strategies",
+    _ROOT / "live-bots/options-paper/bot",
+    _ROOT / "live-bots/options-paper/reporting",
+    _ROOT / "live-bots/options-micro",
+    _ROOT / "live-bots/shared",
+    _ROOT / "live-bots/rubber-band",
+    _ROOT / "research/market-research",
+    _ROOT / "research/other-studies",
+    _ROOT / "research/options-strategies/backtests",
+    _ROOT / "research/options-strategies/experiments"
+]
+for _p in _SEARCH:
+    _s = str(_p)
+    if _s not in sys.path:
+        sys.path.insert(0, _s)
 
-
-def run(cmd: list[str], desc: str) -> int:
-    print(f"\n{'='*60}\n{desc}\n{'='*60}")
-    print(">", " ".join(cmd))
-    return subprocess.call(cmd, cwd=str(REPO))
-
-
-def main() -> int:
-    import argparse
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--fetch-only", action="store_true")
-    ap.add_argument("--historical-only", action="store_true")
-    ap.add_argument("--synthetic-only", action="store_true")
-    ap.add_argument("--n", type=int, default=500, help="signals per synthetic variant")
-    args = ap.parse_args()
-
-    rc = 0
-
-    if not args.fetch_only and not args.historical_only:
-        rc = run(
-            [PY, str(REPO / "simulations" / "options_catalog_runner.py"),
-             "--extensive", "--n", str(args.n)],
-            f"EXTENSIVE synthetic: 220 strategies x full grid x {args.n} signals",
-        )
-        if rc and args.synthetic_only:
-            return rc
-
-    if not args.synthetic_only and not args.historical_only:
-        rc = run(
-            [PY, str(REPO / "scripts" / "historical_data_fetcher.py"),
-             "--universe-full", "--max-history"],
-            "Fetch full universe (~900 stocks) max daily history",
-        )
-        if rc and args.fetch_only:
-            return rc
-
-    if not args.synthetic_only and not args.fetch_only:
-        rc = run(
-            [PY, str(REPO / "simulations" / "options_catalog_runner.py"),
-             "--historical", "--all-symbols"],
-            "Historical backtest all downloaded symbols x all strategies",
-        )
-
-    print("\nFull research pipeline finished.")
-    return rc
-
+_TARGET = _ROOT / "research" / "other-studies" / "run_full_research.py"
+if not _TARGET.is_file():
+    raise SystemExit(f"wrapper target missing: {_TARGET}")
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    sys.argv[0] = str(_TARGET)
+    runpy.run_path(str(_TARGET), run_name="__main__")
+else:
+    # Import-time: load real module into this namespace for `import options_lab` style.
+    _mod = runpy.run_path(str(_TARGET), run_name=__name__)
+    globals().update({k: v for k, v in _mod.items() if not k.startswith("__")})
+    globals()["__file__"] = str(_TARGET)

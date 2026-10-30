@@ -1,92 +1,41 @@
-"""Summarize paper lab by bucket and strategy; write per-bucket summary.md."""
+"""Compatibility wrapper — canonical module: live-bots/options-paper/reporting/options_lab_report.py
+
+Do not edit trading logic here. GHA and local tools may still invoke this path.
+"""
 from __future__ import annotations
 
-import csv
-import json
+import runpy
 import sys
-from collections import defaultdict
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from options_lab import BUCKET_EXPERIMENTS, LEDGER_PATH, TRIAL_ROOT, bucket_dir, ensure_trial_layout
+_ROOT = Path(__file__).resolve().parents[1]
+_SEARCH = [
+    _ROOT / "live-bots/options-paper/lab",
+    _ROOT / "live-bots/options-paper/strategies",
+    _ROOT / "live-bots/options-paper/bot",
+    _ROOT / "live-bots/options-paper/reporting",
+    _ROOT / "live-bots/options-micro",
+    _ROOT / "live-bots/shared",
+    _ROOT / "live-bots/rubber-band",
+    _ROOT / "research/market-research",
+    _ROOT / "research/other-studies",
+    _ROOT / "research/options-strategies/backtests",
+    _ROOT / "research/options-strategies/experiments"
+]
+for _p in _SEARCH:
+    _s = str(_p)
+    if _s not in sys.path:
+        sys.path.insert(0, _s)
 
-PAPER = ["S173", "S174", "S165", "S164", "S168", "S167", "S166", "S163"]
-
-
-def _stats(vals: list[float]) -> str:
-    if not vals:
-        return "n=0"
-    vals = sorted(vals)
-    avg = sum(vals) / len(vals)
-    med = vals[len(vals) // 2]
-    return f"n={len(vals)} avg={avg:+.1f}% med={med:+.1f}%"
-
-
-def main() -> int:
-    ensure_trial_layout()
-    if not LEDGER_PATH.exists():
-        print(f"No ledger yet: {LEDGER_PATH}")
-        print("Run options_morning_bot.py during market hours to populate.")
-        return 0
-
-    rows = list(csv.DictReader(LEDGER_PATH.open(encoding="utf-8")))
-    exits = [r for r in rows if r.get("event") == "exit" and r.get("return_pct")]
-    by_bucket: dict[str, list[float]] = defaultdict(list)
-    by_strat: dict[str, list[float]] = defaultdict(list)
-
-    for r in exits:
-        try:
-            v = float(r["return_pct"])
-        except Exception:
-            continue
-        key = f"b{r.get('bucket_id','?')}|{r.get('profile','?')}"
-        by_bucket[key].append(v)
-        by_strat[r.get("strategy_id", "?")].append(v)
-
-    print("=" * 60)
-    print("OPTIONS TRIAL — exits by bucket")
-    print("=" * 60)
-    for b in BUCKET_EXPERIMENTS:
-        key = f"b{b.bucket_id}|{b.name}"
-        print(f"  {key:28s}  {_stats(by_bucket.get(key, []))}")
-        summary = [
-            f"# Bucket b{b.bucket_id} — {b.name}",
-            "",
-            f"Virtual equity: $500",
-            "",
-            "## Profile",
-            "```json",
-            json.dumps({
-                "buy_limit_offset": b.buy_limit_offset,
-                "buy_at_mid": b.buy_at_mid,
-                "sell_limit_offset": b.sell_limit_offset,
-                "max_premium": b.max_premium,
-                "max_spread_frac": b.max_spread_frac,
-                "account_cap": b.account_cap,
-                "take_profit": b.take_profit,
-                "stop_loss": b.stop_loss,
-                "eod_only": b.eod_only,
-            }, indent=2),
-            "```",
-            "",
-            f"## Exits: {_stats(by_bucket.get(key, []))}",
-            "",
-            f"Ledger: `buckets/b{b.bucket_id}_{b.name}/ledger.csv`",
-        ]
-        (bucket_dir(b.bucket_id, b.name) / "summary.md").write_text(
-            "\n".join(summary), encoding="utf-8"
-        )
-
-    print("\n" + "=" * 60)
-    print("OPTIONS TRIAL — exits by strategy")
-    print("=" * 60)
-    for sid in PAPER:
-        print(f"  {sid:6s}  {_stats(by_strat.get(sid, []))}")
-
-    print(f"\nMaster ledger: {LEDGER_PATH}")
-    print(f"Trial root:    {TRIAL_ROOT}")
-    return 0
-
+_TARGET = _ROOT / "live-bots" / "options-paper" / "reporting" / "options_lab_report.py"
+if not _TARGET.is_file():
+    raise SystemExit(f"wrapper target missing: {_TARGET}")
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    sys.argv[0] = str(_TARGET)
+    runpy.run_path(str(_TARGET), run_name="__main__")
+else:
+    # Import-time: load real module into this namespace for `import options_lab` style.
+    _mod = runpy.run_path(str(_TARGET), run_name=__name__)
+    globals().update({k: v for k, v in _mod.items() if not k.startswith("__")})
+    globals()["__file__"] = str(_TARGET)

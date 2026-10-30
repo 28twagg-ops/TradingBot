@@ -2,6 +2,11 @@ name: Rubber Band Bot
 
 # Trigger: cron-job.org webhook (~5 min, Chicago) via workflow_dispatch only.
 # Native GitHub schedule is intentionally disabled — it drifts far more than cron-job.org.
+#
+# Repo layout (2026-10 reorg): canonical code under live-bots/; this workflow still
+# invokes compatibility wrappers (rubber_band_bot.py, scripts/*.py) and writes logs/
+# exactly as before. Do NOT relocate logs/options_trial or logs/options_live_micro here.
+# Canonical: live-bots/rubber-band/, live-bots/options-paper/, live-bots/options-micro/.
 
 on:
   workflow_dispatch:

@@ -1,39 +1,41 @@
-"""Post-PDT-removal verification (Phase C4 checklist)."""
+"""Compatibility wrapper — canonical module: research/other-studies/pdt_removal_verify.py
+
+Do not edit trading logic here. GHA and local tools may still invoke this path.
+"""
+from __future__ import annotations
+
+import runpy
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-BOT = ROOT / "rubber_band_bot.py"
+_ROOT = Path(__file__).resolve().parents[1]
+_SEARCH = [
+    _ROOT / "live-bots/options-paper/lab",
+    _ROOT / "live-bots/options-paper/strategies",
+    _ROOT / "live-bots/options-paper/bot",
+    _ROOT / "live-bots/options-paper/reporting",
+    _ROOT / "live-bots/options-micro",
+    _ROOT / "live-bots/shared",
+    _ROOT / "live-bots/rubber-band",
+    _ROOT / "research/market-research",
+    _ROOT / "research/other-studies",
+    _ROOT / "research/options-strategies/backtests",
+    _ROOT / "research/options-strategies/experiments"
+]
+for _p in _SEARCH:
+    _s = str(_p)
+    if _s not in sys.path:
+        sys.path.insert(0, _s)
 
-
-def main():
-    text = BOT.read_text(encoding="utf-8")
-    checks = [
-        ("STRICT_SAME_DAY_EXIT absent", "STRICT_SAME_DAY_EXIT" not in text),
-        ("_pdt_blocks_exit absent", "_pdt_blocks_exit" not in text),
-        ("pdt_ok absent", "def pdt_ok" not in text),
-        ("save_pdt absent", "def save_pdt" not in text),
-        ("load_pdt absent", "def load_pdt" not in text),
-        ("entry_slot_ok present", "def entry_slot_ok" in text),
-        ("EVENING_ONLY_ENTRIES present", "EVENING_ONLY_ENTRIES" in text),
-        ("MAX_OPEN_POSITIONS present", "MAX_OPEN_POSITIONS" in text),
-        ("no deprecated field reads", ".daytrade_count" not in text and ".pattern_day_trader" not in text),
-    ]
-    print("PDT removal verification:")
-    ok = True
-    for name, passed in checks:
-        status = "PASS" if passed else "FAIL"
-        print(f"  [{status}] {name}")
-        ok = ok and passed
-    try:
-        import py_compile
-        py_compile.compile(str(BOT), doraise=True)
-        print("  [PASS] py_compile rubber_band_bot.py")
-    except Exception as e:
-        print(f"  [FAIL] py_compile: {e}")
-        ok = False
-    sys.exit(0 if ok else 1)
-
+_TARGET = _ROOT / "research" / "other-studies" / "pdt_removal_verify.py"
+if not _TARGET.is_file():
+    raise SystemExit(f"wrapper target missing: {_TARGET}")
 
 if __name__ == "__main__":
-    main()
+    sys.argv[0] = str(_TARGET)
+    runpy.run_path(str(_TARGET), run_name="__main__")
+else:
+    # Import-time: load real module into this namespace for `import options_lab` style.
+    _mod = runpy.run_path(str(_TARGET), run_name=__name__)
+    globals().update({k: v for k, v in _mod.items() if not k.startswith("__")})
+    globals()["__file__"] = str(_TARGET)

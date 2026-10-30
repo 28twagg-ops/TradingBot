@@ -1,0 +1,41 @@
+[
+  {
+    "mode": "discovery",
+    "starting_options_cash": 250.0,
+    "stock_reserve": 250.0,
+    "n_fills": 196,
+    "n_skipped_capital": 0,
+    "n_skipped_simultaneous": 0,
+    "ending_cash": 4205.0,
+    "realized_pnl": 3955.0,
+    "max_drawdown": -561.0,
+    "max_simultaneous": 4,
+    "note": "DISCOVERY / exploratory paper \u2014 no capital or concurrency constraints"
+  },
+  {
+    "mode": "capital_constrained",
+    "starting_options_cash": 250.0,
+    "stock_reserve": 250.0,
+    "n_fills": 71,
+    "n_skipped_capital": 0,
+    "n_skipped_simultaneous": 125,
+    "ending_cash": 902.0,
+    "realized_pnl": 652.0,
+    "max_drawdown": -122.0,
+    "max_simultaneous": 2,
+    "note": "Whole contracts; premium locked until exit; max 2 simultaneous; stock reserve $250 untouched"
+  },
+  {
+    "mode": "combo_constrained",
+    "starting_options_cash": 250.0,
+    "stock_reserve": 250.0,
+    "n_fills": 36,
+    "n_skipped_capital": 0,
+    "n_skipped_simultaneous": 32,
+    "ending_cash": 1189.0,
+    "realized_pnl": 939.0,
+    "max_drawdown": -136.0,
+    "max_simultaneous": 2,
+    "note": "Whole contracts; premium locked until exit; max 2 simultaneous; stock reserve $250 untouched | arms=['S397', 'S362']"
+  }
+]

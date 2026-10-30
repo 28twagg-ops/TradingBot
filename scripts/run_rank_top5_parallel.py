@@ -1,51 +1,41 @@
-"""Launch 4 parallel workers for paper top-5 return-% ranking."""
+"""Compatibility wrapper — canonical module: research/other-studies/run_rank_top5_parallel.py
+
+Do not edit trading logic here. GHA and local tools may still invoke this path.
+"""
 from __future__ import annotations
 
-import os
-import subprocess
+import runpy
 import sys
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parent.parent
-SIM = REPO / "simulations"
-PY = sys.executable
+_ROOT = Path(__file__).resolve().parents[1]
+_SEARCH = [
+    _ROOT / "live-bots/options-paper/lab",
+    _ROOT / "live-bots/options-paper/strategies",
+    _ROOT / "live-bots/options-paper/bot",
+    _ROOT / "live-bots/options-paper/reporting",
+    _ROOT / "live-bots/options-micro",
+    _ROOT / "live-bots/shared",
+    _ROOT / "live-bots/rubber-band",
+    _ROOT / "research/market-research",
+    _ROOT / "research/other-studies",
+    _ROOT / "research/options-strategies/backtests",
+    _ROOT / "research/options-strategies/experiments"
+]
+for _p in _SEARCH:
+    _s = str(_p)
+    if _s not in sys.path:
+        sys.path.insert(0, _s)
 
-
-def _symbols() -> list[str]:
-    sys.path.insert(0, str(SIM))
-    from historical_backtest import list_downloaded_symbols
-    return list_downloaded_symbols()
-
-
-def _chunks(items: list[str], n: int) -> list[list[str]]:
-    size = (len(items) + n - 1) // n
-    return [items[i:i + size] for i in range(0, len(items), size)]
-
-
-def main() -> int:
-    workers = 4
-    syms = _symbols()
-    chunks = _chunks(syms, workers)
-    print(f"Launching {workers} rank workers for {len(syms)} symbols")
-    procs = []
-    for i, chunk in enumerate(chunks):
-        cmd = [
-            PY, "-u", str(SIM / "rank_paper_top5_pct.py"),
-            "--symbols", ",".join(chunk),
-            "--shard", f"shard{i}",
-        ]
-        print(f"  shard{i}: {len(chunk)} symbols")
-        procs.append(subprocess.Popen(
-            cmd, cwd=str(REPO),
-            env={**os.environ, "PYTHONUNBUFFERED": "1"},
-        ))
-    rc = 0
-    for p in procs:
-        rc = max(rc, p.wait())
-    if rc:
-        return rc
-    return subprocess.call([PY, str(SIM / "rank_paper_top5_pct.py"), "--merge-only"], cwd=str(REPO))
-
+_TARGET = _ROOT / "research" / "other-studies" / "run_rank_top5_parallel.py"
+if not _TARGET.is_file():
+    raise SystemExit(f"wrapper target missing: {_TARGET}")
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    sys.argv[0] = str(_TARGET)
+    runpy.run_path(str(_TARGET), run_name="__main__")
+else:
+    # Import-time: load real module into this namespace for `import options_lab` style.
+    _mod = runpy.run_path(str(_TARGET), run_name=__name__)
+    globals().update({k: v for k, v in _mod.items() if not k.startswith("__")})
+    globals()["__file__"] = str(_TARGET)
