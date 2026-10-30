@@ -142,26 +142,6 @@
       "entry_order_id": "7c7cf9ab-19f4-4724-9c26-6e01a143eafa"
     },
     {
-      "lot_id": "518d6072884f",
-      "bucket_id": 13,
-      "profile_name": "lab0013_s350_w2_1005_1045_r1",
-      "strategy_id": "S350",
-      "occ_symbol": "NVDA261030C00215000",
-      "underlying": "NVDA",
-      "qty": 1,
-      "entry_cost": 3.0,
-      "entry_price": 0.03,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-30T14:07:26.967856+00:00",
-      "entry_order_id": "cd49bfe2-6716-444b-8383-69037841500b"
-    },
-    {
       "lot_id": "641149ab4b79",
       "bucket_id": 63,
       "profile_name": "lab0063_s167_w2_1005_1045_r1",
@@ -262,26 +242,6 @@
       "entry_order_id": "8f82b37c-31ab-4cf6-86ac-7174888015ad"
     },
     {
-      "lot_id": "df84e2b610c6",
-      "bucket_id": 18,
-      "profile_name": "lab0018_s361_w2_1005_1045_r1",
-      "strategy_id": "S361",
-      "occ_symbol": "META261102C00652500",
-      "underlying": "META",
-      "qty": 1,
-      "entry_cost": 48.0,
-      "entry_price": 0.48,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-30T14:11:56.449769+00:00",
-      "entry_order_id": "1c4b016d-a928-4fe8-948c-29ad9af41cd3"
-    },
-    {
       "lot_id": "fee44b565506",
       "bucket_id": 66,
       "profile_name": "lab0066_s163_w2_1005_1045_r1",
@@ -380,7 +340,18 @@
       "stop_loss": -0.4
     }
   ],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "94d7d23e-7fd9-444f-8f5e-9a3b61acdb10",
+      "lot_id": "1d3dd000a07a",
+      "bucket_id": 55,
+      "strategy_id": "S411",
+      "occ_symbol": "META261102C00650000",
+      "qty": 1,
+      "reason": "take_profit (+55.7%)",
+      "submitted": "2026-10-30T11:02:06"
+    }
+  ],
   "bucket_open_premium": {
     "b15": 51.0,
     "b16": 47.0,
@@ -389,13 +360,11 @@
     "b21": 70.0,
     "b20": 44.0,
     "b19": 41.0,
-    "b13": 3.0,
     "b63": 24.0,
     "b65": 31.0,
     "b49": 54.0,
     "b51": 66.0,
     "b55": 61.0,
-    "b18": 48.0,
     "b66": 39.0,
     "b64": 53.0,
     "b2009": 36.0,
@@ -878,7 +847,9 @@
     "3b76da59-a4b2-49eb-aaeb-dbac92f37acd",
     "baeb766a-42ff-4fb7-96e3-0970f58e6ec7",
     "6db62ade-a4c3-4bc5-aec4-05ada882df26",
-    "cb98b09a-7632-4d87-ac1f-bdadd3a3c291"
+    "cb98b09a-7632-4d87-ac1f-bdadd3a3c291",
+    "f7bdf931-f4d0-4521-bae5-e3fcb1958e0e",
+    "3dd0175f-e7eb-4728-8427-125fbd704ecc"
   ],
   "submitted_today": 22,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
