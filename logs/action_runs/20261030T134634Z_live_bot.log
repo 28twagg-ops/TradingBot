@@ -1,0 +1,174 @@
+13:46:34  INFO      Mode: morning_scan
+13:46:36  INFO        BUY  ADBE  $34.07  [Pullback50]  id=f8829e19-420b-4ffb-bb3a-61f00ff59b09
+13:46:36  INFO        BUY  AES  $34.07  [Pullback50]  id=346cfd65-4881-47a5-8524-f0fcf58fcf8d
+13:46:36  INFO        BUY  TECH  $34.07  [Pullback50]  id=b1cf4192-e551-4981-9d9f-c0eb10664d18
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         13:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $227.12|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-10-30|
+|  Universe                                                          both|
+|  Mon~  Oct: RubberBand + GapDown (display only — schedule not enforced)|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $227.12|
+|  Cash                                                           $227.12|
+|  Reserve                                          $11.36  (always kept)|
+|  Stocks ~  $0.00 / $170.34  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $170.34  (new stock buys)|
+|  Trade size             $34.07  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (0 open)                        |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (11.1m))|
+|  Cached exits                                                         0|
+|  Cached signals                                                      24|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           903|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  24                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  ADBE     Pullback50      eq     $253.82  59.4   -2.26   50MA bounce (-|
+|  AES      Pullback50      eq     $14.88   38.2   -2.57   50MA bounce (+|
+|  TECH     Pullback50      eq     $72.71   59.0   -2.52   50MA bounce (+|
+|  BXP      Pullback50      eq     $63.48   62.6   -2.68   50MA bounce (+|
+|  BMY      Pullback50      eq     $63.34   66.6   -2.43   50MA bounce (+|
+|  CPAY     Pullback50      eq     $400.54  52.1   -2.16   50MA bounce (-|
+|  DE       Pullback50      eq     $662.75  66.6   -2.49   50MA bounce (-|
+|  EXPE     Pullback50      eq     $284.20  58.0   -2.63   50MA bounce (-|
+|  GRMN     Pullback50      eq     $282.47  62.6   -2.00   50MA bounce (-|
+|  GPN      Pullback50      eq     $86.18   60.9   -2.98   50MA bounce (+|
+|  INCY     Pullback50      eq     $120.25  65.6   -2.63   50MA bounce (-|
+|  PAYX     Pullback50      eq     $112.45  62.6   -2.32   50MA bounce (-|
+|  TROW     Pullback50      eq     $105.63  55.0   -2.92   50MA bounce (-|
+|  AHR      Pullback50      eq     $53.54   54.4   -1.82   50MA bounce (+|
+|  AXTA     Pullback50      eq     $34.19   58.9   -2.36   50MA bounce (+|
+|  MSM      Pullback50      eq     $123.10  43.7   -1.71   50MA bounce (-|
+|  NBIX     Pullback50      eq     $147.98  63.2   -3.21   50MA bounce (+|
+|  PAG      Pullback50      eq     $212.54  91.1   -0.97   50MA bounce (+|
+|  PRI      Pullback50      eq     $285.66  62.6   -3.35   50MA bounce (+|
+|  RGEN     Pullback50      eq     $178.18  54.8   -0.89   50MA bounce (+|
+|  ROKU     Pullback50      eq     $156.54  63.4   -1.25   50MA bounce (+|
+|  SLAB     Pullback50      eq     $222.00  54.1   -2.27   50MA bounce (+|
+|  VOYA     Pullback50      eq     $98.11   61.7   -2.16   50MA bounce (-|
+|  WEX      Pullback50      eq     $187.88  65.0   -2.56   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] ADBE  Pullback50                                   $34.07|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AES  Pullback50                                    $34.07|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] TECH  Pullback50                                   $34.07|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] BXP  Pullback50                                      cap 3|
+|    SKIP [eq] BMY  Pullback50                                      cap 3|
+|    SKIP [eq] CPAY  Pullback50                                     cap 3|
+|    SKIP [eq] DE  Pullback50                                       cap 3|
+|    SKIP [eq] EXPE  Pullback50                                     cap 3|
+|    SKIP [eq] GRMN  Pullback50                                     cap 3|
+|    SKIP [eq] GPN  Pullback50                                      cap 3|
+|    SKIP [eq] INCY  Pullback50                                     cap 3|13:47:06  INFO        place_all_stops: checking 3 positions...
+13:47:06  INFO        STOP skipped ADBE: fractional (0.1338 shares) — software exit will handle it
+13:47:06  INFO        STOP-MARKET placed AES  qty=2 (pos=2.2908)  stop=$14.79  id=163ffdf5-ad82-4f50-ae4a-33a1c883baaf
+13:47:06  INFO        STOP skipped TECH: fractional (0.4683 shares) — software exit will handle it
+13:47:06  INFO        Daily log -> logs/daily/2026-10-30.md
+13:47:06  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [eq] PAYX  Pullback50                                     cap 3|
+|    SKIP [eq] TROW  Pullback50                                     cap 3|
+|    SKIP [eq] AHR  Pullback50                                      cap 3|
+|    SKIP [eq] AXTA  Pullback50                                     cap 3|
+|    SKIP [eq] MSM  Pullback50                                      cap 3|
+|    SKIP [eq] NBIX  Pullback50                                     cap 3|
+|    SKIP [eq] PAG  Pullback50                                      cap 3|
+|    SKIP [eq] PRI  Pullback50                                      cap 3|
+|    SKIP [eq] RGEN  Pullback50                                     cap 3|
+|    SKIP [eq] ROKU  Pullback50                                     cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] VOYA  Pullback50                                     cap 3|
+|    SKIP [eq] WEX  Pullback50                                      cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  ADBE                                                 still unconfirmed|
+|  AES                                                  still unconfirmed|
+|  TECH                                                 still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Strategy   RubberBand + GapDown (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             24|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $226.99|
+|  Cash                                                           $124.93|
++========================================================================+
