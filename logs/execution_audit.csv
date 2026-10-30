@@ -997,3 +997,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-10-29 13:47:34,2026-10-29,SELL,HCA,EarningsDrift,474.175,473.23,473.992,34.18,-0.0386,-0.0132,limit_fill_position_check_full,midline (-0.1%),bull
 2026-10-29 13:48:05,2026-10-29,SELL,CVNA,MomReversal,68.035,67.9,67.996,35.41,-0.0573,-0.0203,limit_fill_position_check_full,midline (+0.5%),bull
 2026-10-29 13:51:38,2026-10-29,SELL,FLEX,MomReversal,89.355,,89.355,33.36,0.0,0.0,market_urgent_full,stop_loss (-1.4%),bull
+2026-10-30 15:06:50,2026-10-30,SELL,ADBE,Pullback50,253.12,,253.12,33.88,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
