@@ -12,7 +12,7 @@ The handoff contains the original project goals and constraints, architecture, e
 
 - [Arena research source](research/trading-arena/)
 - [Current Arena research logs and accounts](https://github.com/28twagg-ops/TradingBot/tree/arena-ledger/records/arena)
-- [Live GitHub Actions runs](../../actions)
+- [Live GitHub Actions runs](https://github.com/28twagg-ops/TradingBot/actions)
 - [Groq automated research workflow](.github/workflows/groq-research.yml)
 - [Rule-based and fallback virtual workflow](.github/workflows/arena-paper.yml)
 
