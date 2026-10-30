@@ -5113,6 +5113,61 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T13:02Z",
+        "id": "b50c238f8ac2f5",
+        "topic": "BTC-USD hourly price mean reversion to 24\u2011hour moving average",
+        "hypothesis": "When the hourly close of BTC\u2011USD deviates more than 5\u202f% above or below its 24\u2011hour simple moving average, the next hourly close tends to move in the opposite direction (mean\u2011reversion).",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 495,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 495,
+            "end": 708,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Apply the rule to a holdout period of BTC\u2011USD hourly closes and compute the directional accuracy of the next\u2011hour return relative to the sign of the deviation. If accuracy is not significantly above 50\u202f% (e.g., p\u2011value\u202f>\u202f0.05), the hypothesis is falsified.",
+        "source_search": {
+          "query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
+          "attempted": [
+            "academic",
+            "web",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC hourly price mean reversion to 24h moving average",
+        "preferred_sources": [
+          "academic",
+          "web",
+          "reddit"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   }
