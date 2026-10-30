@@ -1714,6 +1714,88 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T23:46Z",
+        "id": "e724b5c6c079fb",
+        "topic": "Hourly mean reversion of Bitcoin returns around weekly cycle",
+        "hypothesis": "Bitcoin hourly returns exhibit a statistically significant mean\u2011reversion pattern when conditioned on the hour of the week, with a 5\u2011hour lookback and a threshold of 0.05% over the last 12 months of 2024 data.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 5,
+          "threshold": 0.0005
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 503,
+            "returns_pct": -23.294,
+            "drawdown_pct": -23.673,
+            "entries": 59
+          },
+          "retrospective_validation": {
+            "start": 503,
+            "end": 719,
+            "returns_pct": -15.845,
+            "drawdown_pct": -16.32,
+            "entries": 25
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Apply the 5\u2011hour lookback reversion rule to the hourly BTC\u2011USD close series for 2024; compute the proportion of trades that yield a positive return within the next hour. If the win rate is not significantly above 50% (p<0.05) or the cumulative return is not positive, reject the hypothesis.",
+        "source_search": {
+          "query": "BTC hourly mean reversion 5 hour lookback 2024 study",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $76,733.95 USD with a 24-hour trading volume of $49,377,378,053.44 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/BTC-USD/",
+            "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin - Wikipedia",
+            "url": "https://en.m.wikipedia.org/wiki/Bitcoin",
+            "snippet": "Bitcoin (abbreviation: BTC; sign: \u20bf) is the first decentralized cryptocurrency. Based on a free-market ideology, bitcoin was invented in 2008 when an unknown person published a white paper under the pseudonym of Satoshi Nakamoto. [4] Use of",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "Bitcoin hourly mean reversion weekly cycle 2024 empirical study",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -5068,6 +5150,86 @@
         },
         "source_leads": [],
         "next_search_query": "BTC-USD 5h SMA above 20h SMA trend persistence hourly backtest",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T23:45Z",
+        "id": "e5c8a935cb4811",
+        "topic": "BTC-USD trend persistence via short\u2011term SMA above long\u2011term SMA",
+        "hypothesis": "When the 5\u2011hour simple moving average (SMA) of BTC\u2011USD hourly close prices is above the 20\u2011hour SMA, the next hourly return is more likely to be positive, indicating a trend\u2011following signal that can be exploited for systematic trading.",
+        "candidate": {
+          "family": "trend",
+          "lookback": 20,
+          "threshold": 0.0
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 503,
+            "returns_pct": -13.075,
+            "drawdown_pct": -16.56,
+            "entries": 27
+          },
+          "retrospective_validation": {
+            "start": 503,
+            "end": 719,
+            "returns_pct": -14.029,
+            "drawdown_pct": -14.029,
+            "entries": 14
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Apply the rule to the last 1,000 hourly observations of BTC\u2011USD; if the cumulative return of the strategy is negative, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD 5h SMA above 20h SMA trend persistence hourly backtest",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $76,733.95 USD with a 24-hour trading volume of $49,377,378,053.44 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/BTC-USD/",
+            "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin - Wikipedia",
+            "url": "https://en.m.wikipedia.org/wiki/Bitcoin",
+            "snippet": "Bitcoin (abbreviation: BTC; sign: \u20bf) is the first decentralized cryptocurrency. Based on a free-market ideology, bitcoin was invented in 2008 when an unknown person published a white paper under the pseudonym of Satoshi Nakamoto. [4] Use of",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "BTC-USD 5h SMA above 20h SMA trend persistence hourly backtest results",
         "preferred_sources": [
           "web"
         ],
