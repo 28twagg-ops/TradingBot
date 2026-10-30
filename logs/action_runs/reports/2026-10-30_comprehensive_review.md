@@ -15046,3 +15046,132 @@ See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace 
 ```
 
 ---
+
+## Run 20261030T195750Z
+
+- UTC timestamp: `20261030T195750Z`
+- GitHub run: [#14408](https://github.com/28twagg-ops/TradingBot/actions/runs/41119113419)
+- Run id: `41119113419`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261030T195750Z_live_bot.log`, `logs/action_runs/20261030T195750Z_live_options.log`, `logs/action_runs/20261030T195750Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1777 | 48.3 | -26.7 | +35.5 | $+18,741 |
+| TAINTED | 2074 | 31.3 | -41.9 | +8.7 | $-12,603 |
+| KEEP-only | 878 | 60.5 | +50.8 | +50.8 | $+12,835 |
+| KEEP-only recent | 693 | 59.5 | +52.9 | +56.3 | $+9,326 |
+
+- KEEP strategies (24): S163, S164, S166, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S396, S397, S403, S404, S406, S410, S411
+- KILL strategies (22): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S398, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-10-30T15:26:51.853318-04:00","date":"2026-10-30","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":3.0,"phases_s":{"reconcile":0.12,"cancel":0.04,"manage":2.17,"protective_stops":0.1},"signals":0,"placed":0,"equity":993643.83,"open_positions":7,"pending_orders":0,"open_lots":6,"submitted_today":22,"filled_today":21,"unattributed_contracts":0,"top_signals":[],"github_run":"14402","github_run_id":"41115075667","status":"ok","data_quality":{"clean":{"n":1777,"win":48.28,"med":-26.67,"avg":35.49,"pnl":18740.83},"tainted":{"n":2074,"win":31.29,"med":-41.94,"avg":8.72,"pnl":-12603.28},"keep_only":{"n":878,"win":60.48,"med":50.82,"avg":50.8,"pnl":12835.45},"keep_only_recent":{"n":693,"win":59.45,"med":52.94,"avg":56.3,"pnl":9326.0},"keep_strategies":["S163","S164","S166","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S396","S397","S403","S404","S406","S410","S411"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S398","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (169 earlier lines - see full log file)
+|                                                                        |
+|  Total invested                                                  $34.01|
+|  Total open P&L                                                  $-0.05|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                   no (stale (4336.6m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AES  P&L -0.1%  $-0.05                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Oct  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: GapDown (display only — schedule n~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  50                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AVGO     MomReversal     eq     $325.51  37.1   0.36    -22.6% drop/60|
+|  CF       Pullback50      eq     $123.25  68.6   -1.27   50MA bounce (-|
+|  CBOE     TrendResumpti~  eq     $334.81  66.0   2.06    HH/HL resumpti|
+|  CBOE     VWAP_Reclaim    eq     $334.81  66.0   2.06    VWAP reclaim V|
+|  COHR     MomReversal     eq     $208.15  24.9   1.64    -37.7% drop/60|
+|  GLW      MomReversal     eq     $122.64  26.2   0.45    -22.0% drop/60|
+|  CPAY     Pullback50      eq     $401.53  52.8   -1.09   50MA bounce (-|
+|  DVA      VWAP_Reclaim    eq     $186.98  54.5   1.36    VWAP reclaim V|
+|  DASH     MomReversal     eq     $178.62  38.6   1.35    -16.2% drop/60|
+|  ETN      MomReversal     eq     $368.07  29.3   0.35    -17.9% drop/60|
+|  EXPE     Pullback50      eq     $285.82  58.7   -0.61   50MA bounce (-|
+|  EL       VWAP_Reclaim    eq     $109.01  70.6   3.19    VWAP reclaim V|
+|  FISV     VWAP_Reclaim    eq     $50.03   66.5   2.40    VWAP reclaim V|
+|  GEV      MomReversal     eq     $852.70  32.4   0.52    -14.8% drop/60|
+|  GPN      VWAP_Reclaim    eq     $96.87   75.0   4.20    VWAP reclaim V|
+|  GDDY     VWAP_Reclaim    eq     $117.31  70.2   2.25    VWAP reclaim V|
+|  INCY     Pullback50      eq     $120.34  65.7   0.41    50MA bounce (-|
+|  KLAC     MomReversal     eq     $157.64  29.9   0.81    -18.4% drop/60|
+|  LRCX     MomReversal     eq     $238.97  24.0   0.50    -21.8% drop/60|
+|  PH       MomReversal     eq     $898.23  36.3   1.82    -16.0% drop/60|
+|  PAYX     Pullback50      eq     $112.17  62.3   -0.47   50MA bounce (-|
+|  TYL      VWAP_Reclaim    eq     $393.81  71.2   1.08    VWAP reclaim V|
+|  VLO      Pullback50      eq     $399.50  36.9   0.98    50MA bounce (+|
+|  AHR      Pullback50      eq     $53.52   54.3   -0.58   50MA bounce (+|
+|  APPF     Pullback50      eq     $213.14  58.9   -1.29   50MA bounce (+|
+|  AXTA     Pullback50      eq     $33.98   57.5   -0.87   50MA bounce (+|
+|  BSY      VWAP_Reclaim    eq     $40.90   83.1   1.34    VWAP reclaim V|
+|  EHC      EarningsDrift   eq     $136.04  66.3   0.56    post-earnings |
+|  ENTG     VWAP_Reclaim    eq     $154.24  46.9   1.28    VWAP reclaim V|
+|  HGV      VWAP_Reclaim    eq     $38.49   69.8   1.16    VWAP reclaim V|20:01:27  INFO        BUY  EHC  $34.03  [EarningsDrift]  id=e2f61342-cf4b-4f03-953c-d7fa2ea4642a
+20:01:27  INFO        BUY  SAIA  $34.03  [EarningsDrift]  id=a9fbff24-5ee2-4507-b68d-9e985ec340d9
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
