@@ -11655,3 +11655,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-10-29 23:51:53,ext_exits,bull,227.12,227.12,0,0,0,0,,both
 2026-10-29 23:56:33,ext_exits,bull,227.12,227.12,0,0,0,0,,both
 2026-10-30 13:01:49,summary,bull,227.12,227.12,0,0,0,0,,both
+2026-10-30 13:06:51,summary,bull,227.12,227.12,0,0,0,0,,both
