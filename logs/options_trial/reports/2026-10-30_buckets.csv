@@ -69,7 +69,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 67,lab0067_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-10-30,False,,0.0,-50.0,-50.0,-50.0,-50.0,-4.0,NVDA,S164,broker_fill_backfill,closed
 68,lab0068_s432_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-17,False,,,,,,,0,,,,idle
 69,lab0069_s430_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-21,False,,,,,,,0,,,,idle
-90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-10-30,False,,,,,,,0,NVDA,S404,,entered_no_exit
+90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,1,1,0,2026-10-30,False,,0.0,-39.02,-39.02,-39.02,-39.02,-16.0,NVDA,S404,broker_fill_backfill,closed
 91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-10-30,False,,,,,,,0,META,S406,,entered_no_exit
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2001,promising_s170_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
