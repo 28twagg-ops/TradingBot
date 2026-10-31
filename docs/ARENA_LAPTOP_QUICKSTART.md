@@ -34,7 +34,7 @@ The script uses Homebrew to install missing dependencies, opens Ollama, signs in
 - Each bot can research any idea it wants using public search metadata and available historical prices, propose falsification tests, and save **research-only** output. Model-generated code is never executed.
 - Uses the existing bounded deterministic backtest for supported hourly single-asset ideas. Unsupported or untestable ideas remain research-only.
 - Saves all outcomes immediately to `~/.trading-arena/pending/`. Wi-Fi outages do **not** erase pending work.
-- Syncs completed immutable JSON experiments to `arena-ledger/records/arena/local_research/YYYY-MM-DD/`, without changing the cloud-managed `ai_state.json`, `state.json`, or Groq's research log. Remote push conflicts are retried safely; records are verified before being considered sent.
+- Syncs completed immutable experiments to the dedicated **`arena-local-research`** GitHub branch. A scheduled GitHub Action imports them into the canonical `arena-ledger` after 7 AM Central using the cloud ledger-write lock. The laptop never updates `ai_state.json`, `state.json`, or Groq's research log.
 - **No real-money orders, no new virtual buys/sells, and no paid API fallback.** Independent reviewers still need credible evidence before any later change to execution.
 
 ## How to check the first morning
@@ -42,7 +42,7 @@ The script uses Homebrew to install missing dependencies, opens Ollama, signs in
 - Status and each bot's work: `~/.trading-arena/MORNING_REPORT.md` (on Windows, open `%USERPROFILE%\.trading-arena\MORNING_REPORT.md`).
 - Detailed local log: `~/.trading-arena/overnight.log`.
 - Completed individual work: `~/.trading-arena/sent/`; unsynced evidence: `~/.trading-arena/pending/`.
-- Uploaded work: [Arena local research folder](https://github.com/28twagg-ops/TradingBot/tree/arena-ledger/records/arena/local_research) (appears after the first successful upload).
+- Uploaded immediately: [isolated laptop research inbox](https://github.com/28twagg-ops/TradingBot/tree/arena-local-research/records/arena/local_research). Imported each morning: [canonical overnight dashboard](https://github.com/28twagg-ops/TradingBot/blob/arena-ledger/records/arena/LOCAL_NIGHTLY.md). Both populate only after successful runs.
 
 Optional manual test **after setup**, using your installed local Python environment:
 
@@ -88,6 +88,6 @@ Optional manual test **after setup**, using your installed local Python environm
 
 Files: `local_ollama.py` (local inference adapter), `overnight_local.py` (scheduler / checkpoints / Git sync), `setup_local.py` (installer and OS task), `scripts/overnight/Start-*.ps1/.sh` (bootstraps). GitHub-hosted cloud workflows continue independently.
 
-**Acceptance criteria before relying on nightly results:** CI tests pass, real local smoke test succeeds, model fits RAM, GitHub authentication works, a single research pass produces immutable remote events, and restart/disconnect tests preserve pending work.
+**Acceptance criteria before relying on nightly results:** CI tests pass, real local smoke succeeds, model fits RAM, login works, one research pass produces immutable remote events, and the importer serializes successfully with cloud ledger updates. Disconnect/restart tests must retain pending work.
 
 Source references: [Ollama official download](https://ollama.com/download), [Llama 3.2 models](https://ollama.com/library/llama3.2), [GitHub CLI sign-in](https://cli.github.com/manual/gh_auth_login).
