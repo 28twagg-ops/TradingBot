@@ -114,7 +114,7 @@ class LocalLlamaTests(unittest.TestCase):
                 "overnight_local.one_turn",side_effect=model_turn),patch(
                 "overnight_local.sync_pending",return_value=0),patch(
                 "overnight_local.time.sleep"),patch(
-                "overnight_local.shutil.disk_usage",return_value=(10000000000,0,9000000000)):
+                "overnight_local.shutil.disk_usage",return_value=type("Space",(),{"free":9000000000})()):
                 count=run_round(data,"llama3.2:3b",stats,now_fn=lambda:clock)
             self.assertEqual(count,10)
             self.assertEqual(len(list((data/"pending").glob("*.json"))),10)
