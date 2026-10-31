@@ -565,6 +565,46 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T05:38Z",
+        "id": "8bfbae13111c8f",
+        "topic": "BTC-USD hourly VWAP mean reversion after extreme deviations",
+        "hypothesis": "After an hourly price deviates more than 1.5\u00d7 the hourly VWAP, BTC-USD tends to revert toward the VWAP within the next 3 hours, producing a statistically significant mean reversion effect.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the proportion of hours where a deviation >1.5\u00d7 VWAP is followed by a return to within 5% of VWAP in the next 3 hours; compare to a shuffled\u2011time null distribution. A p\u2011value <0.01 would support the hypothesis; otherwise it is falsified.",
+        "source_search": {
+          "query": "BTC-USD intraday VWAP calculation methodology and empirical studies 2024 2025",
+          "attempted": [
+            "web",
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly VWAP mean reversion empirical evidence 2024 2025",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -2510,6 +2550,57 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T05:39Z",
+        "id": "7ad1a1ae638372",
+        "topic": "Hourly gap-down mean reversion in BTC\u2011USD",
+        "hypothesis": "Hourly gaps down of \u22651% in BTC\u2011USD tend to revert within the next 5 hours, producing a positive 5\u2011hour return on average.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 5,
+          "threshold": 0.01
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 490,
+            "returns_pct": -3.932,
+            "drawdown_pct": -3.691,
+            "entries": 12
+          },
+          "retrospective_validation": {
+            "start": 490,
+            "end": 701,
+            "returns_pct": -1.742,
+            "drawdown_pct": -3.388,
+            "entries": 2
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the 5\u2011hour cumulative return following each hourly gap\u2011down event of \u22651% and test whether the mean return is statistically significantly greater than zero (e.g., t\u2011test, p<0.05).",
+        "source_search": {
+          "query": "BTC-USD hourly gap-down events 1% threshold 5-hour return distribution statistics",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly gap\u2011down events 1% threshold 5\u2011hour return distribution statistics",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ],
     "ai_seen": {
@@ -3939,6 +4030,60 @@
         ],
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T05:37Z",
+        "id": "b52cd1599dfe9c",
+        "topic": "Hourly trend following on BTC-USD based on short-term momentum",
+        "hypothesis": "If BTC-USD\u2019s hourly return over the past 20 hours exceeds 5% of its 20\u2011hour mean, the next hour\u2019s return will continue in the same direction with a probability significantly above 50%",
+        "candidate": {
+          "family": "momentum",
+          "lookback": 20,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 490,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 490,
+            "end": 701,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the proportion of times the next hour\u2019s return has the same sign as the 20\u2011hour mean\u2011excess return when that excess exceeds 5%. Compare this proportion to 50% using a binomial test; reject the hypothesis if p\u2011value < 0.05.",
+        "source_search": {
+          "query": "empirical evidence of mean reversion after negative streaks in crypto hourly data",
+          "attempted": [
+            "web",
+            "forum",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC hourly momentum backtest 20h lookback 5% threshold",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
@@ -5906,6 +6051,57 @@
           }
         ],
         "next_search_query": "BTC\u2011USD hourly price mean reversion to 24\u2011hour moving average backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T05:37Z",
+        "id": "4933af61c1ea9f",
+        "topic": "BTC-USD hourly price mean reversion to 24-hour moving average",
+        "hypothesis": "Hourly BTC-USD price tends to revert toward its 24\u2011hour simple moving average within a 5\u2011hour window, producing a predictable mean\u2011reversion signal that can be exploited with a simple threshold rule.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 490,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 490,
+            "end": 701,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Apply the rule to the last 2000 hourly BTC\u2011USD close prices; if the rule fails to produce at least 10 profitable trades with a profit factor >1.2, reject the hypothesis.",
+        "source_search": {
+          "query": "BTC\u2011USD hourly price mean reversion to 24\u2011hour moving average backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly mean reversion backtest results 24h moving average",
         "preferred_sources": [
           "web"
         ],
