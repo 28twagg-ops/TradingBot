@@ -5779,5 +5779,112 @@
     "live_trading": false,
     "ai_requests": 1,
     "safe_error": "GROQ_HTTP_400_unknown"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-10-31T17:36Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Hourly realized volatility mean reversion in BTC-USD",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "555a77327a986e",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "search for empirical studies on hourly realized volatility mean reversion in Bitcoin"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-10-31T17:36Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD Monday first\u2011hour return conditioned on Friday close relative to Friday 5\u2011hour MA",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "c1a56b9f1af173",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD Monday first hour return distribution conditioned on Friday 5\u2011hour MA"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-10-31T17:37Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC relative strength to SPY 24\u2011hour momentum trigger",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "c0ef46d77f8597",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-10-31T17:38Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "Hourly momentum continuation in BTC-USD",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "c92e92545081d1",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC hourly momentum backtest 20h lookback 5% threshold"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-10-31T17:39Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError",
+    "validation_stage": "MODEL_FIELDS_OR_RESEARCH_EVIDENCE"
   }
 ]

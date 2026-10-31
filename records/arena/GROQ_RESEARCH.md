@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-31T17:39Z | S01 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
+| 2026-10-31T17:38Z | S07 | Hourly momentum continuation in BTC-USD | c92e92545081d1 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-10-31T17:37Z | S06 | BTC relative strength to SPY 24‑hour momentum tr | c0ef46d77f8597 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-31T17:36Z | S02 | BTC-USD Monday first‑hour return conditioned on  | c1a56b9f1af173 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-10-31T17:36Z | S08 | Hourly realized volatility mean reversion in BTC | 555a77327a986e | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T16:21Z | S09 |  | AI_UNAVAILABLE |  |
 | 2026-10-31T16:21Z | S04 | Hourly gap‑up mean reversion in BTC‑USD | 4093ea34126aa5 | HOLD |
 | 2026-10-31T16:20Z | S08 |  | AI_UNAVAILABLE |  |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-31T05:38Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | 8bfbae13111c8f | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T05:37Z | S10 | BTC-USD hourly price mean reversion to 24-hour m | 4933af61c1ea9f | HOLD |
 | 2026-10-31T05:37Z | S07 | Hourly trend following on BTC-USD based on short | b52cd1599dfe9c | HOLD |
-| 2026-10-30T23:53Z | S06 |  | AI_UNAVAILABLE |  |
-| 2026-10-30T23:52Z | S02 | BTC-USD weekend drop >5% Monday return pattern | d43f0d1d72929a | HOLD |
-| 2026-10-30T23:52Z | S01 |  | AI_UNAVAILABLE |  |
-| 2026-10-30T23:51Z | S10 | BTC-USD hourly price mean reversion to 24‑hour m | a74c1677119235 | HOLD |
-| 2026-10-30T23:50Z | S08 | Volatility compression mean reversion in BTC-USD | 3ad7457442839a | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
