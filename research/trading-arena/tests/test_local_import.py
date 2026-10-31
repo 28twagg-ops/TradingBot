@@ -35,6 +35,15 @@ class ImportLocalTests(unittest.TestCase):
             self.assertIn("| S07 | 1 | 1 | 0 |",
                           (ledger/"LOCAL_NIGHTLY.md").read_text())
 
+    def test_empty_inbox_still_generates_zero_report(self):
+        with tempfile.TemporaryDirectory() as root:
+            root=Path(root)
+            ledger=root/"ledger"
+            ledger.mkdir()
+            self.assertEqual(import_records(root/"missing",ledger),0)
+            self.assertIn("Total accepted immutable local events: 0",
+                          (ledger/"LOCAL_NIGHTLY.md").read_text())
+
     def test_model_cannot_import_trade_or_conflicting_file(self):
         with tempfile.TemporaryDirectory() as root:
             root=Path(root)
