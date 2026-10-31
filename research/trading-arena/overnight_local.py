@@ -77,14 +77,33 @@ def refresh_ledger(folder):
     git("clean", "-fd", "--", RELATIVE.as_posix(), cwd=folder)
 
 
+def init_upload(data=DATA):
+    """Dedicated local-only branch so laptop pushes never race cloud Arena jobs."""
+    folder = Path(data) / "upload"
+    if not (folder / ".git").exists():
+        folder.parent.mkdir(parents=True, exist_ok=True)
+        git("clone", "--quiet", "--filter=blob:none", "--depth", "1",
+            "--single-branch", "--sparse", "--branch", "arena-local-research",
+            REPO, folder, timeout=180)
+        git("sparse-checkout", "set", "records/arena", cwd=folder)
+    return folder
+
+
+def refresh_upload(folder):
+    git("fetch", "--quiet", "--depth", "1", "origin", "arena-local-research", cwd=folder)
+    git("reset", "--quiet", "--hard", "FETCH_HEAD", cwd=folder)
+    git("clean", "-fd", "--", RELATIVE.as_posix(), cwd=folder)
+
+
 def event_paths(folder, pending):
     # Immutable records only; never read or stage production data.
     for path in (folder / RELATIVE).glob("*/*.json"):
         if path.is_file():
             yield path
-    for path in Path(pending).glob("*.json"):
-        if path.is_file():
-            yield path
+    for source in (Path(pending), Path(pending).parent / "sent"):
+        for path in source.glob("*.json"):
+            if path.is_file():
+                yield path
 
 
 def read_history(folder, pending, worker, max_items=12):
@@ -139,19 +158,19 @@ def queue_record(data, worker, event, experiment, model):
 
 
 def sync_pending(data=DATA, attempts=4):
-    """Rebase by re-materializing only unique files after every fetch.
+    """Retry immutable uploads to a dedicated local branch, never cloud ledgers.
 
-    This does not mutate ai_state, state.json or other cloud-managed records.
-    Recover safely if a previous push succeeded but the acknowledgement failed.
+    A separate GitHub Action imports these files into the canonical ledger with
+    the shared Actions concurrency lock. Lost acknowledgements are idempotent.
     """
     data = Path(data)
     queue = sorted((data / "pending").glob("*.json"))
     if not queue:
         return 0
-    folder = init_ledger(data)
+    folder = init_upload(data)
     for _ in range(attempts):
         try:
-            refresh_ledger(folder)
+            refresh_upload(folder)
             added = []
             for src in queue:
                 payload = src.read_bytes()
@@ -174,9 +193,9 @@ def sync_pending(data=DATA, attempts=4):
                 git("-c", "user.name=arena-local[bot]",
                     "-c", "user.email=arena-local@users.noreply.github.com",
                     "commit", "--quiet", "-m", "Add immutable overnight Ollama research", cwd=folder)
-                git("push", "--quiet", "origin", "HEAD:refs/heads/arena-ledger", cwd=folder)
+                git("push", "--quiet", "origin", "HEAD:refs/heads/arena-local-research", cwd=folder)
             # Confirm commit is visible remotely before clearing durable queue.
-            git("fetch", "--quiet", "--depth", "1", "origin", "arena-ledger", cwd=folder)
+            git("fetch", "--quiet", "--depth", "1", "origin", "arena-local-research", cwd=folder)
             for src in queue:
                 event = json.loads(src.read_text(encoding="utf-8"))
                 path = (RELATIVE / event["cycle"][:10] /
