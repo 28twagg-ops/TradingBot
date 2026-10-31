@@ -11,7 +11,7 @@ import re
 UTC=dt.timezone.utc
 DAILY_REQUEST_TARGET=72
 MAX_BATCH=5
-SUCCESS={"RESEARCHED","RESEARCH_IDEA_NEEDS_DATA"}
+SUCCESS={"RESEARCHED","RESEARCH_IDEA_NEEDS_DATA","RESEARCH_IDEA_NEEDS_REVISION"}
 MIN_INTERVAL_MINUTES=40
 RESET_CHUNKS=re.compile(r"(\d+(?:\.\d+)?)(h|m|s)")
 
@@ -105,6 +105,7 @@ def eligible_worker_order(accounts,events,now,limit=MAX_BATCH,minimum_gap=MIN_IN
     recent_by_worker={id:None for id in roster}
     last_success={id:None for id in roster}
     attempted_today={id:0 for id in roster}
+    failure_streak={id:0 for id in roster}
     date=now.astimezone(UTC).date().isoformat()
     for x in events:
         if not isinstance(x,dict):continue
@@ -116,11 +117,19 @@ def eligible_worker_order(accounts,events,now,limit=MAX_BATCH,minimum_gap=MIN_IN
             recent_by_worker[id]=when
         if _date(x.get("cycle"))==date:attempted_today[id]+=1
         if x.get("status") in SUCCESS:
+            failure_streak[id]=0
             if _date(x.get("cycle"))==date:completed_today[id]+=1
+        elif x.get("status") in ("AI_UNAVAILABLE","REJECTED_INVALID_MODEL_EXPERIMENT"):
+            failure_streak[id]+=1
             if last_success[id] is None or when>last_success[id]:
                 last_success[id]=when
+    def gap_minutes(id):
+        # Avoid repeatedly spending free quota on the same broken account.
+        # Backoff is bounded; a failed bot always gets another chance.
+        streak=failure_streak[id]
+        return max(minimum_gap, min(240,40*2**min(3,streak-2))) if streak>=3 else minimum_gap
     selected=[id for id in roster if recent_by_worker[id] is None or
-              (now-recent_by_worker[id]).total_seconds()>=minimum_gap*60]
+              (now-recent_by_worker[id]).total_seconds()>=gap_minutes(id)*60]
     oldest=dt.datetime(1970,1,1,tzinfo=UTC)
     selected.sort(key=lambda id:(
         completed_today[id],
