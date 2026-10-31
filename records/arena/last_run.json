@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-30T23:50:48.378263+00:00",
+  "timestamp": "2026-10-31T05:45:06.223833+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -21,7 +21,7 @@
     "S03": {
       "action": "HOLD",
       "cash": 13.25515543,
-      "equity": 98.7082,
+      "equity": 98.8566,
       "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []

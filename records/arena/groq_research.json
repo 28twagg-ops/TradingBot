@@ -5129,5 +5129,124 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC-USD hourly gap\u2011down events 1% threshold 5\u2011hour return distribution statistics"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-10-31T05:45Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD hourly mean\u2011reversion of extreme returns",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 5,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 7,
+        "end": 490,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 490,
+        "end": 701,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "0c918ebb992ea6",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly return distribution extreme events mean reversion"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-10-31T05:45Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "safe_error": "GROQ_HTTP_400_unknown"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-10-31T05:46Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "e805cc61137558",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-10-31T05:47Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "safe_error": "GROQ_HTTP_400_unknown"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-10-31T05:47Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD first-hour momentum following a prior-day close below its 5\u2011hour moving average",
+    "strategy": {
+      "family": "momentum",
+      "lookback": 5,
+      "threshold": 0.005
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 7,
+        "end": 490,
+        "returns_pct": -16.243,
+        "drawdown_pct": -16.303,
+        "entries": 29
+      },
+      "retrospective_validation": {
+        "start": 490,
+        "end": 701,
+        "returns_pct": -11.109,
+        "drawdown_pct": -11.109,
+        "entries": 13
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "32e51763997515",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD first hour momentum after prior close below 5-hour moving average statistical analysis"
   }
 ]

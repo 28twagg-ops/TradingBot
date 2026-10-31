@@ -1293,6 +1293,57 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T05:47Z",
+        "id": "32e51763997515",
+        "topic": "BTC-USD first-hour momentum following a prior-day close below its 5\u2011hour moving average",
+        "hypothesis": "When the previous day\u2019s close falls below the 5\u2011hour moving average of BTC\u2011USD, the first hour of the following day tends to close higher than the previous close by at least 0.5% on average, indicating a short\u2011term momentum effect that could be explo",
+        "candidate": {
+          "family": "momentum",
+          "lookback": 5,
+          "threshold": 0.005
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 490,
+            "returns_pct": -16.243,
+            "drawdown_pct": -16.303,
+            "entries": 29
+          },
+          "retrospective_validation": {
+            "start": 490,
+            "end": 701,
+            "returns_pct": -11.109,
+            "drawdown_pct": -11.109,
+            "entries": 13
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Calculate the distribution of first\u2011hour returns for all days where the prior close < 5\u2011hour MA. If the mean return is not significantly greater than 0.5% (e.g., 95% CI includes 0.5% or lower), reject the hypothesis. Also check for consistency across multiple years to rule out a one\u2011off pattern.",
+        "source_search": {
+          "query": "BTC-USD weekend drop >5% Monday 1-hour return distribution",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD first hour momentum after prior close below 5-hour moving average statistical analysis",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -3732,6 +3783,44 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T05:46Z",
+        "id": "e805cc61137558",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour cumulative return exceeds SPY\u2019s 24\u2011hour cumulative return by more than a fixed threshold (e.g., 2\u202f%), BTC\u2011USD is likely to continue outperforming SPY for the next 24\u202fhours, generating a positive momentum signal.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 24\u2011hour cumulative returns for BTC\u2011USD and SPY over a historical window (e.g., 2020\u20112026). For each day, flag a BUY signal when BTC\u2011USD\u2019s 24\u2011hour return minus SPY\u2019s 24\u2011hour return > 0.02. Then evaluate the next 24\u2011hour return of BTC\u2011USD. If the average return of BTC\u2011USD on signal days ex",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+          "attempted": [
+            "reddit",
+            "blog"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+        "preferred_sources": [
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -5468,6 +5557,59 @@
         "next_search_query": "BTC-USD 5h SMA above 20h SMA trend persistence hourly backtest results",
         "preferred_sources": [
           "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T05:45Z",
+        "id": "0c918ebb992ea6",
+        "topic": "BTC-USD hourly mean\u2011reversion of extreme returns",
+        "hypothesis": "Hourly BTC\u2011USD returns that exceed +5% are likely to be followed by a return below \u20135% in the next hour, indicating a short\u2011term mean\u2011reversion effect.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 5,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 490,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 490,
+            "end": 701,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the conditional probability of a >\u20115% return in hour\u202ft+1 given a >\u202f+5% return in hour\u202ft using the available hourly close series. If this probability is not significantly higher than the unconditional probability (e.g., p\u2011value >\u202f0.05 in a chi\u2011square test), the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD 5h SMA above 20h SMA trend persistence hourly backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly return distribution extreme events mean reversion",
+        "preferred_sources": [
+          "web",
+          "reddit",
+          "academic"
         ],
         "site_domain": null,
         "research_data_requirements": [
