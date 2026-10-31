@@ -1,0 +1,168 @@
+"""One-time local install wizard for the isolated Trading Arena Ollama research service."""
+import argparse
+import ctypes
+import json
+import os
+from pathlib import Path
+import plistlib
+import platform
+import shutil
+import subprocess
+import sys
+import venv
+
+ROOT = Path(__file__).resolve().parent
+DATA = Path.home() / ".trading-arena"
+TASK = "TradingArenaOvernightOllama"
+
+
+def run(*args, check=True, timeout=150, quiet=False):
+    try:
+        p = subprocess.run([str(x) for x in args], timeout=timeout,
+                           check=False, stdout=subprocess.PIPE if quiet else None,
+                           stderr=subprocess.PIPE if quiet else None, text=True)
+    except (subprocess.TimeoutExpired, OSError):
+        raise RuntimeError("SETUP_COMMAND_UNAVAILABLE_OR_TIMED_OUT") from None
+    if check and p.returncode != 0:
+        raise RuntimeError("SETUP_COMMAND_FAILED: " + str(args[0]))
+    return p.returncode == 0
+
+
+def memory_gb():
+    system = platform.system()
+    try:
+        if system == "Windows":
+            class MEMORYSTATUSEX(ctypes.Structure):
+                _fields_ = [("dwLength",ctypes.c_ulong),("dwMemoryLoad",ctypes.c_ulong),
+                            ("ullTotalPhys",ctypes.c_ulonglong),
+                            ("ullAvailPhys",ctypes.c_ulonglong),
+                            ("ullTotalPageFile",ctypes.c_ulonglong),
+                            ("ullAvailPageFile",ctypes.c_ulonglong),
+                            ("ullTotalVirtual",ctypes.c_ulonglong),
+                            ("ullAvailVirtual",ctypes.c_ulonglong),
+                            ("ullAvailExtendedVirtual",ctypes.c_ulonglong)]
+            stat=MEMORYSTATUSEX()
+            stat.dwLength=ctypes.sizeof(stat)
+            if ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(stat)):
+                return round(stat.ullTotalPhys/(1024**3),1)
+        if system == "Darwin":
+            raw=subprocess.check_output(["sysctl","-n","hw.memsize"],timeout=5)
+            return round(int(raw)/(1024**3),1)
+    except (OSError,subprocess.TimeoutExpired,ValueError,AttributeError):
+        pass
+    return None
+
+
+def prerequisites():
+    missing=[x for x in ("git","gh","ollama") if not shutil.which(x)]
+    if missing:
+        raise RuntimeError("MISSING_PROGRAMS: "+", ".join(missing)+
+                           ". See docs/ARENA_LAPTOP_QUICKSTART.md")
+    if sys.version_info < (3,11):
+        raise RuntimeError("PYTHON_3_11_OR_NEWER_REQUIRED")
+
+
+def register_windows(python, model):
+    # The task is under the interactive user's account, not an administrator
+    # service. Only local repo code runs; Windows sleep settings aren't changed.
+    script = ROOT / "overnight_local.py"
+    cmd = ('$a=New-ScheduledTaskAction -Execute '+ps_quote(str(python))+
+           ' -Argument '+ps_quote('"' + str(script) + '" --model ' + model + ' --log')+
+           ';$t=New-ScheduledTaskTrigger -Daily -At "00:00"'+
+           ';$s=New-ScheduledTaskSettingsSet -WakeToRun -StartWhenAvailable '+
+           '-ExecutionTimeLimit (New-TimeSpan -Hours 8) -MultipleInstances IgnoreNew'+
+           ';Register-ScheduledTask -TaskName '+ps_quote(TASK)+
+           ' -Action $a -Trigger $t -Settings $s '+
+           '-Description "Paper-only overnight local trading research" -Force | Out-Null')
+    run("powershell.exe","-NoProfile","-NonInteractive","-Command",cmd,timeout=60)
+
+
+def ps_quote(value):
+    return "'" + value.replace("'", "''") + "'"
+
+
+def register_mac(python, model):
+    label="com.tradingarena.overnight"
+    location=Path.home()/"Library"/"LaunchAgents"/(label+".plist")
+    location.parent.mkdir(parents=True,exist_ok=True)
+    plist={"Label":label,
+           "ProgramArguments":[str(python),str(ROOT/"overnight_local.py"),
+                               "--model",model,"--log"],
+           "StartCalendarInterval":{"Hour":0,"Minute":0},
+           "RunAtLoad":False,"KeepAlive":False,
+           "WorkingDirectory":str(ROOT.parent.parent),
+           "StandardOutPath":str(DATA/"launchd.log"),
+           "StandardErrorPath":str(DATA/"launchd.log")}
+    with location.open("wb") as f:
+        plistlib.dump(plist,f)
+    domain="gui/"+str(os.getuid())
+    run("launchctl","bootout",domain+"/"+label,check=False,quiet=True)
+    run("launchctl","bootstrap",domain,str(location),timeout=30)
+
+
+def main(argv=None):
+    p=argparse.ArgumentParser()
+    p.add_argument("--model",default=None,help="Choose an installed local Ollama model")
+    p.add_argument("--skip-task",action="store_true")
+    a=p.parse_args(argv)
+    system=platform.system()
+    if system not in ("Windows","Darwin"):
+        raise RuntimeError("ONE_CLICK_INSTALL_SUPPORTED_ON_WINDOWS_OR_MACOS")
+    prerequisites()
+    ram=memory_gb()
+    if ram is not None and ram<5.5:
+        raise RuntimeError("INSUFFICIENT_RAM_FOR_RELIABLE_UNATTENDED_LOCAL_AI")
+    model=a.model or ("llama3.2:1b" if ram is not None and ram<9 else "llama3.2:3b")
+    from local_ollama import local_model_name
+    model=local_model_name(model)
+    print("Local-only Llama model:",model,"; total RAM (GB):",ram or "unknown")
+    if not run("gh","auth","status",check=False,quiet=True):
+        print("Opening GitHub's official browser login (one-time).")
+        run("gh","auth","login","--web","--git-protocol","https",timeout=300)
+    run("gh","auth","setup-git")
+    DATA.mkdir(parents=True,exist_ok=True)
+    env=DATA/"venv"
+    if not (env/("Scripts/python.exe" if system=="Windows" else "bin/python")).exists():
+        print("Setting up isolated Python environment.")
+        venv.EnvBuilder(with_pip=True).create(env)
+    python=env/("Scripts/python.exe" if system=="Windows" else "bin/python")
+    print("Installing isolated market-data libraries; no broker integrations.")
+    run(python,"-m","pip","install","--disable-pip-version-check",
+        "pandas>=2,<3","numpy>=1.24,<3","yfinance>=0.2,<2","tzdata>=2025.2",
+        timeout=600)
+    # Ollama is local; downloading 1–2 GB of model weights needs Internet once.
+    print("Downloading local model (first installation only).")
+    run("ollama","pull",model,timeout=1500)
+    import overnight_local
+    print("Checking the model responds locally.")
+    overnight_local.smoke(model)
+    print("Checking independent GitHub research ledger access.")
+    overnight_local.init_ledger(DATA)
+    overnight_local.refresh_ledger(DATA/"ledger")
+    print("Checking separate upload branch access.")
+    overnight_local.init_upload(DATA)
+    overnight_local.refresh_upload(DATA/"upload")
+    (DATA/"settings.json").write_text(json.dumps(
+        {"model":model,"start_local":"00:00","stop_local":"07:00",
+         "timezone":"America/Chicago","research_only":True},indent=2)+"\n",
+        encoding="utf-8")
+    if not a.skip_task:
+        if system=="Windows":
+            register_windows(python,model)
+        else:
+            register_mac(python,model)
+    print("\nSETUP COMPLETE.", "Scheduled midnight Central." if not a.skip_task
+          else "Scheduling skipped.")
+    print("Keep laptop powered and awake, and Ollama running.")
+    print("Research report:",DATA/"MORNING_REPORT.md")
+    print("Unsent work is retained at:",DATA/"pending")
+    return 0
+
+
+if __name__=="__main__":
+    try:
+        sys.exit(main())
+    except (RuntimeError,ValueError,OSError) as e:
+        print("\nSetup stopped:",str(e),file=sys.stderr)
+        print("Read docs/ARENA_LAPTOP_QUICKSTART.md, then retry.",file=sys.stderr)
+        sys.exit(2)
