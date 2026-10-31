@@ -46,6 +46,7 @@ def import_records(inbox,ledger):
     inbox=Path(inbox)
     ledger=Path(ledger)
     if not inbox.exists():
+        write_report(ledger)
         return 0
     destination=ledger/"local_research"
     incoming=sorted(inbox.glob("*/*.json"))
