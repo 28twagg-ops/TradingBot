@@ -132,14 +132,14 @@ class LocalLlamaTests(unittest.TestCase):
             def command(*args):
                 subprocess.run(["git",*map(str,args)],stdout=subprocess.DEVNULL,
                                stderr=subprocess.PIPE,check=True,timeout=20)
-            command("init","--bare","--initial-branch=arena-ledger",remote)
+            command("init","--bare","--initial-branch=arena-local-research",remote)
             command("clone",remote,seed)
             (seed/"records/arena").mkdir(parents=True)
             (seed/"records/arena/ai_state.json").write_text(json.dumps(initial()))
             command("-C",seed,"add","records")
             command("-C",seed,"-c","user.name=CI","-c","user.email=ci@example.invalid",
                     "commit","-m","seed")
-            command("-C",seed,"push","origin","HEAD:arena-ledger")
+            command("-C",seed,"push","origin","HEAD:arena-local-research")
             item=queue_record(data,"S07",
                               {"cycle":"2026-10-31T06:00Z","status":"RESEARCHED"},
                               {"topic":"durable local idea"},"llama3.2:3b")
@@ -148,7 +148,7 @@ class LocalLlamaTests(unittest.TestCase):
                 self.assertEqual(sync_pending(data),0)
             self.assertFalse(item.exists())
             self.assertEqual(len(list((data/"sent").glob("*.json"))),1)
-            command("-C",seed,"fetch","origin","arena-ledger")
+            command("-C",seed,"fetch","origin","arena-local-research")
             output=subprocess.check_output(
                 ["git","-C",str(seed),"ls-tree","-r","--name-only","FETCH_HEAD"])
             self.assertIn(b"records/arena/local_research/2026-10-31/S07_",output)
