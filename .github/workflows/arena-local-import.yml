@@ -56,7 +56,7 @@ jobs:
           cd ledger
           git config user.name "arena-local-import[bot]"
           git config user.email "arena-local-import@users.noreply.github.com"
-          git add -A records/arena/LOCAL_NIGHTLY.md records/arena/local_research
+          git add -A records/arena/
           if ! git diff --cached --quiet; then
             git commit -m "Import immutable overnight local research"
             git push origin HEAD:refs/heads/arena-ledger
