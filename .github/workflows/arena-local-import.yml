@@ -1,0 +1,63 @@
+name: Arena — import isolated overnight laptop research
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 13:32 UTC = 08:32 CDT / 07:32 CST, after the laptop's 07:00 Central stop.
+    - cron: '32 13 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paper-arena-ledger-writes
+  cancel-in-progress: false
+
+jobs:
+  import-local:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Fetch only safe importer from main
+        uses: actions/checkout@v4
+        with:
+          path: source
+          sparse-checkout: |
+            scripts/overnight/import_local_research.py
+          persist-credentials: false
+      - name: Fetch canonical paper ledger
+        uses: actions/checkout@v4
+        with:
+          ref: arena-ledger
+          path: ledger
+          sparse-checkout: |
+            records/arena/
+          fetch-depth: 1
+      - name: Fetch only laptop research inbox branch
+        uses: actions/checkout@v4
+        with:
+          ref: arena-local-research
+          path: inbox
+          sparse-checkout: |
+            records/arena/
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Import only immutable, validated paper research (never orders)
+        run: |
+          python source/scripts/overnight/import_local_research.py \
+            --inbox inbox/records/arena/local_research \
+            --ledger ledger/records/arena
+      - name: Save local summary and unique events to canonical paper ledger
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd ledger
+          git config user.name "arena-local-import[bot]"
+          git config user.email "arena-local-import@users.noreply.github.com"
+          git add -A records/arena/LOCAL_NIGHTLY.md records/arena/local_research
+          if ! git diff --cached --quiet; then
+            git commit -m "Import immutable overnight local research"
+            git push origin HEAD:refs/heads/arena-ledger
+          fi
