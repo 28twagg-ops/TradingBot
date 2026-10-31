@@ -274,14 +274,22 @@ def run_round(data, model, stats, allow_outside_window=False, now_fn=None):
 
 def lock_acquire(data):
     lock = Path(data) / "overnight.lock"
-    try:
-        fd = os.open(lock, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
-    except FileExistsError:
-        # A previous hard power loss may leave a stale marker; never start a
-        # second concurrent runner automatically. User can remove it when off.
-        raise RuntimeError("ANOTHER_RUN_OR_STALE_LOCK") from None
-    os.close(fd)
-    return lock
+    for _ in range(2):
+        try:
+            fd = os.open(lock, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+            with os.fdopen(fd,"w",encoding="utf-8") as f:
+                f.write(str(os.getpid()))
+            return lock
+        except FileExistsError:
+            try:
+                pid=int(lock.read_text(encoding="utf-8").strip())
+                os.kill(pid,0)
+                raise RuntimeError("ANOTHER_RUN_ALREADY_ACTIVE") from None
+            except ProcessLookupError:
+                lock.unlink(missing_ok=True)   # dead process; queue is durable
+            except (PermissionError,ValueError,OSError):
+                raise RuntimeError("ANOTHER_RUN_OR_STALE_LOCK") from None
+    raise RuntimeError("CANNOT_ACQUIRE_RESEARCH_LOCK")
 
 
 def main(argv=None):
@@ -325,6 +333,13 @@ def main(argv=None):
 
 
 if __name__=="__main__":
+    if "--log" in sys.argv:
+        sys.argv.remove("--log")
+        DATA.mkdir(parents=True,exist_ok=True)
+        stream=(DATA/"overnight.log").open("a",encoding="utf-8",buffering=1)
+        sys.stdout=stream
+        sys.stderr=stream
+        print("Overnight task started",dt.datetime.now(UTC).isoformat())
     try:
         sys.exit(main())
     except (RuntimeError,ValueError,OSError) as error:
