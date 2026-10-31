@@ -645,6 +645,47 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T18:37Z",
+        "id": "bbfcd57ba7de98",
+        "topic": "BTC-USD hourly VWAP mean reversion after extreme deviations",
+        "hypothesis": "Hourly BTC-USD prices tend to revert toward the intraday VWAP after large deviations from it, with a mean reversion strength that can be captured by a simple threshold rule.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "None \u2013 requires intraday VWAP calculation and hourly price series.",
+        "source_search": {
+          "query": "BTC-USD intraday VWAP calculation methodology and empirical studies 2024 2025",
+          "attempted": [
+            "web",
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD intraday VWAP calculation methodology and empirical studies 2024 2025",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1491,6 +1532,43 @@
         },
         "source_leads": [],
         "next_search_query": "BTC-USD Monday first hour return distribution conditioned on Friday 5\u2011hour MA",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T18:38Z",
+        "id": "00280a489d5545",
+        "topic": "BTC-USD Monday first\u2011hour return conditioned on Friday 5\u2011hour MA",
+        "hypothesis": "If Friday\u2019s close is below its 5\u2011hour moving average, the first hour of Monday\u2019s trading will exhibit a positive return exceeding a small threshold (\u22482\u202f%)",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compare Monday first\u2011hour returns on days where Friday close < 5\u2011hr MA versus days where it is \u2265 MA; test if mean return > 2\u202f% on the former and < 2\u202f% on the latter",
+        "source_search": {
+          "query": "BTC-USD Monday first hour return distribution conditioned on Friday 5\u2011hour MA",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD Monday first hour return distribution conditioned on Friday 5\u2011hour MA statistical analysis",
         "preferred_sources": [
           "web"
         ],
@@ -4429,6 +4507,45 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T18:39Z",
+        "id": "18c947206447c7",
+        "topic": "BTC-USD relative strength to SPY 24h momentum trigger",
+        "hypothesis": "If BTC-USD relative strength to SPY over the past 24 hours exceeds 5% above its 24\u2011hour mean, BTC-USD will trend higher in the next hour.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "None",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+          "attempted": [
+            "reddit",
+            "blog"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+        "preferred_sources": [
+          "reddit",
+          "blog"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -4861,6 +4978,43 @@
         },
         "source_leads": [],
         "next_search_query": "BTC hourly momentum backtest 20h lookback 5% threshold",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T18:39Z",
+        "id": "4fa3269f3883b9",
+        "topic": "Hourly trend persistence in BTC-USD",
+        "hypothesis": "BTC-USD hourly price trend persists over a 20\u2011hour lookback with a 5% return threshold",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If the strategy fails to generate >5% return in >70% of 20\u2011hour windows over 2020\u20112026, reject",
+        "source_search": {
+          "query": "BTC hourly momentum backtest 20h lookback 5% threshold",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "historical hourly BTC-USD price data 2020-2026",
         "preferred_sources": [
           "web"
         ],
