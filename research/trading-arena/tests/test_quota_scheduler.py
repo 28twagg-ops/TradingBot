@@ -78,6 +78,9 @@ class QuotaSchedulerTests(unittest.TestCase):
         a=initial()
         failed=[{"worker":"S07","cycle":f"2026-10-28T{h}:00Z",
                  "status":"REJECTED_INVALID_MODEL_EXPERIMENT"} for h in ("10","11","13")]
+        # Other bots have succeeded today, so a recovered S07 is high priority.
+        failed += [{"worker":wid,"cycle":"2026-10-28T10:00Z",
+                    "status":"RESEARCHED"} for wid in a if wid!="S07"]
         self.assertNotIn("S07",eligible_worker_order(a,failed,now,5))
         self.assertIn("S07",eligible_worker_order(a,failed,
             now+dt.timedelta(minutes=25),5))
