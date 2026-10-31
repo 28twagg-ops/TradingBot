@@ -73,6 +73,8 @@ def refresh_ledger(folder):
     git("fetch", "--quiet", "--depth", "1", "origin", "arena-ledger", cwd=folder)
     # This is an app-owned isolated checkout; all unsynced events live outside it.
     git("reset", "--quiet", "--hard", "FETCH_HEAD", cwd=folder)
+    # Pending events are separately durable. Clean files left by interrupted pushes.
+    git("clean", "-fd", "--", RELATIVE.as_posix(), cwd=folder)
 
 
 def event_paths(folder, pending):
@@ -92,7 +94,7 @@ def read_history(folder, pending, worker, max_items=12):
             x = json.loads(path.read_text(encoding="utf-8"))
             if x.get("worker") != worker:
                 continue
-            if not isinstance(x.get("experiment"), dict):
+            if not isinstance(x.get("experiment"), dict) or not x["experiment"].get("topic"):
                 continue
             if x.get("kind") != "local_research_only":
                 continue
@@ -224,7 +226,7 @@ def smoke(model):
     print("Ollama local smoke test succeeded; no trades or GitHub changes.")
 
 
-def run_round(data, model, stats, smoke_only=False, now_fn=None):
+def run_round(data, model, stats, allow_outside_window=False, now_fn=None):
     now_fn = now_fn or (lambda: dt.datetime.now(UTC))
     source = init_ledger(data)
     try:
@@ -241,8 +243,8 @@ def run_round(data, model, stats, smoke_only=False, now_fn=None):
         return 0
     provider = OllamaResearch(model)
     processed = 0
-    for worker in WORKERS[:1] if smoke_only else WORKERS:
-        if not smoke_only and not within_window(now_fn()):
+    for worker in WORKERS:
+        if not allow_outside_window and not within_window(now_fn()):
             break
         try:
             accounts = research_account(source, Path(data)/"pending", worker)
@@ -258,18 +260,15 @@ def run_round(data, model, stats, smoke_only=False, now_fn=None):
             stats.setdefault(worker,{})[bucket] = stats.setdefault(worker,{}).get(bucket,0)+1
             experiment = record.get("groq_experiments",[])[-1] if (
                 len(record.get("groq_experiments",[])) > original) else None
-            if not smoke_only:
-                queue_record(data, worker, event, experiment or {}, model)
+            queue_record(data, worker, event, experiment or {}, model)
             processed += 1
             print(worker, status, "research-only", flush=True)
         except (ValueError,RuntimeError,OSError,KeyError,TypeError):
             stats.setdefault(worker,{})["failed"]=stats.setdefault(worker,{}).get("failed",0)+1
             print(worker, "local research failure (safe hold)", flush=True)
-        if not smoke_only:
-            time.sleep(3)
-    if not smoke_only:
-        synced = sync_pending(data)
-        print("Synced immutable events:",synced,"; pending saved locally", flush=True)
+        time.sleep(3)
+    synced = sync_pending(data)
+    print("Synced immutable events:",synced,"; pending saved locally", flush=True)
     return processed
 
 
@@ -306,8 +305,8 @@ def main(argv=None):
     stats={}
     try:
         if args.once:
-            # Manual run is intentionally allowed outside the overnight window.
-            run_round(data, model, stats, smoke_only=True)
+            # Manual one-pass run is allowed outside the overnight window.
+            run_round(data, model, stats, allow_outside_window=True)
         else:
             while within_window(dt.datetime.now(UTC)):
                 run_round(data,model,stats)
