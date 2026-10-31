@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'research/trading-arena/**'
+      - 'scripts/overnight/**'
+      - '.github/workflows/arena-local-import.yml'
       - '.github/workflows/arena-paper.yml'
       - '.github/workflows/arena-ai-ci.yml'
 
@@ -19,6 +21,7 @@ jobs:
         with:
           sparse-checkout: |
             research/trading-arena/
+            scripts/overnight/
             .github/workflows/arena-paper.yml
       - uses: actions/setup-python@v5
         with:
