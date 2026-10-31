@@ -23,7 +23,7 @@ jobs:
         with:
           path: source
           sparse-checkout: |
-            scripts/overnight/import_local_research.py
+            scripts/overnight/
           persist-credentials: false
       - name: Fetch canonical paper ledger
         uses: actions/checkout@v4
