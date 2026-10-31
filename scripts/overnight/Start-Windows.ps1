@@ -10,7 +10,15 @@ $tools = @(
     @{ Command="py"; Id="Python.Python.3.11" },
     @{ Command="ollama"; Id="Ollama.Ollama" }
 )
-$missing = @($tools | Where-Object { -not (Get-Command $_.Command -ErrorAction SilentlyContinue) })
+function Test-ArenaPython {
+    if (-not (Get-Command py -ErrorAction SilentlyContinue)) { return $false }
+    & py -3 -c 'import sys; assert sys.version_info >= (3,11)' 2>$null
+    return ($LASTEXITCODE -eq 0)
+}
+$missing = @($tools | Where-Object {
+    if ($_.Command -eq "py") { -not (Test-ArenaPython) }
+    else { -not (Get-Command $_.Command -ErrorAction SilentlyContinue) }
+})
 if ($missing.Count -gt 0) {
     if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
         throw "Windows Package Manager (winget) is required. See docs/ARENA_LAPTOP_QUICKSTART.md."
@@ -26,7 +34,8 @@ if ($missing.Count -gt 0) {
         [Environment]::GetEnvironmentVariable("Path", "User")
 }
 foreach ($tool in $tools) {
-    if (-not (Get-Command $tool.Command -ErrorAction SilentlyContinue)) {
+    if (($tool.Command -eq "py" -and -not (Test-ArenaPython)) -or
+        ($tool.Command -ne "py" -and -not (Get-Command $tool.Command -ErrorAction SilentlyContinue))) {
         throw "$($tool.Command) not found yet. Open a NEW PowerShell window and rerun this same setup."
     }
 }
@@ -38,6 +47,6 @@ if (-not (Test-Path (Join-Path $dir ".git"))) {
 & git -C $dir sparse-checkout set research/trading-arena scripts/overnight docs
 if ($LASTEXITCODE -ne 0) { throw "Sparse source checkout failed." }
 Write-Host "GitHub sign-in and model installation will be handled by the guided setup."
-& py -3.11 (Join-Path $dir "research/trading-arena/setup_local.py")
+& py -3 (Join-Path $dir "research/trading-arena/setup_local.py")
 if ($LASTEXITCODE -ne 0) { throw "Local Arena setup did not complete. See troubleshooting document." }
 Write-Host "Done. Scheduled for midnight to 7 AM Central; keep laptop on and awake."
