@@ -129,6 +129,66 @@ class GroqResearchTests(unittest.TestCase):
                      self.now,worker_id="S99")
         self.assertEqual(MAX_GROQ_REQUESTS_PER_UTC_DAY,72)
 
+    def test_s07_invalid_candidate_is_saved_for_research_but_never_traded(self):
+        from personas import PERSONAS
+        self.assertEqual(len(PERSONAS),10)
+        self.assertEqual(len({p["name"] for p in PERSONAS.values()}),10)
+        accounts=initial()
+        seen=[]
+        def poorly_formatted_bot(policy,context):
+            seen.append(context)
+            return {"research_topic":"Test unverified trend idea",
+                    "hypothesis":"A novel market trend should persist, unless costs erase it",
+                    "candidate":{"family":"trend","lookback":900,"threshold":.5},
+                    "study_symbol":"BTC-USD","action":"BUY","symbol":"BTC-USD",
+                    "allocation_fraction":.3,"reason":"preliminary",
+                    "falsification_test":"Test unseen later data",
+                    "next_search_query":"trend regime shift research",
+                    "preferred_sources":["academic","blog"],"site_domain":None,
+                    "research_data_requirements":["hourly_close"],
+                    "hypothesis_timeframe":"hourly",
+                    "rule_expressible_as_candidate":True,"source_indices":[]}
+        with patch("groq_research.discover",return_value={
+                "query":"test","attempted":[],"found":[]}), patch(
+                "groq_research.tradable",return_value={}):
+            event=one_turn(accounts,synthetic_feed(self.now),poorly_formatted_bot,
+                           self.now,worker_id="S07")
+        self.assertEqual(event["status"],"RESEARCH_IDEA_NEEDS_REVISION")
+        self.assertEqual(event["validation_issue"],"INVALID_EXECUTABLE_CANDIDATE")
+        self.assertEqual(event["action"],"RESEARCH_ONLY_NEEDS_REVISION")
+        self.assertEqual(accounts["S07"]["cash"],100)
+        self.assertEqual(accounts["S07"]["events"],[])
+        self.assertEqual(len(accounts["S07"]["groq_experiments"]),1)
+        self.assertEqual(seen[0]["research_personality"]["name"],"Patient Trend Pilot")
+        self.assertTrue(seen[0]["personality_is_not_a_constraint"])
+
+    def test_groq_uses_json_object_with_safe_local_validation(self):
+        import io,json,os
+        from groq_research import groq_json,groq_error_category,bounded_json_context
+        payload={"idea":"value","untrusted_search_results":[
+            {"title":"example","snippet":"x"*9000,"platform":"web"}]}
+        bounded=bounded_json_context(payload)
+        self.assertLessEqual(len(bounded),7200)
+        self.assertIsInstance(json.loads(bounded),dict)
+        response=io.BytesIO(json.dumps({"choices":[{"message":{
+            "content":json.dumps({"research_topic":"mock"})}}]}).encode())
+        response.headers={}
+        captured={}
+        def no_network(request,timeout):
+            captured["body"]=json.loads(request.data)
+            return response
+        with patch.dict(os.environ,{"GROQ_API_KEY":"test-only-key"}),patch(
+                "groq_research.urllib.request.urlopen",side_effect=no_network):
+            self.assertEqual(groq_json("Research only",{"worker":"S07"}),
+                             {"research_topic":"mock"})
+        self.assertEqual(captured["body"]["response_format"],{"type":"json_object"})
+        self.assertEqual(captured["body"]["reasoning_effort"],"low")
+        self.assertEqual(groq_error_category({
+            "message":"Generated JSON does not match the expected schema."}),
+            "JSON_VALIDATION")
+        self.assertEqual(groq_error_category({"message":"secret arbitrary output"}),
+                         "UNCLASSIFIED")
+
     def test_no_live_order_functions_exist(self):
         import groq_research
         self.assertFalse(hasattr(groq_research,"place_live_order"))
