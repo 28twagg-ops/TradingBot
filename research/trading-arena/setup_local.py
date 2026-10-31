@@ -139,6 +139,9 @@ def main(argv=None):
     print("Checking independent GitHub research ledger access.")
     overnight_local.init_ledger(DATA)
     overnight_local.refresh_ledger(DATA/"ledger")
+    print("Checking separate upload branch access.")
+    overnight_local.init_upload(DATA)
+    overnight_local.refresh_upload(DATA/"upload")
     (DATA/"settings.json").write_text(json.dumps(
         {"model":model,"start_local":"00:00","stop_local":"07:00",
          "timezone":"America/Chicago","research_only":True},indent=2)+"\n",
