@@ -352,8 +352,9 @@ def one_turn(accounts,feed,model,now,worker_id=None):
         next_domain=safe_domain(raw.get("site_domain"))
         source_indices=raw.get("source_indices",[])
         if not isinstance(source_indices,list):source_indices=[]
-        chosen_sources=[discovered["found"][i] for i in dict.fromkeys(source_indices)
-                        if type(i)==int and 0<=i<len(discovered["found"])][:4]
+        valid_indices=[i for i in source_indices
+                       if type(i)==int and 0<=i<len(discovered["found"])]
+        chosen_sources=[discovered["found"][i] for i in dict.fromkeys(valid_indices)][:4]
         sym=raw.get("symbol")
         # The experiment can study held/ineligible symbols but cannot trade them.
         research_symbol=raw.get("study_symbol",sym)
