@@ -5675,5 +5675,109 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "ETH-USD hourly mean reversion 3% SMA backtest results"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-10-31T16:19Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD hourly price mean reversion around intraday VWAP",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "6ffd0c67fcd366",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD intraday VWAP calculation methodology and empirical studies 2024 2025"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-10-31T16:19Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Mean reversion after large hourly swings in 24/7 crypto spot markets",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 10,
+      "threshold": 0.08
+    },
+    "test": {
+      "status": "INSUFFICIENT_HOURLY_HISTORY"
+    },
+    "action": "HOLD_INSUFFICIENT_HISTORY",
+    "experiment_id": "582d27695f4a4e",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "obtain hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-10-31T16:20Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "safe_error": "GROQ_HTTP_400_unknown"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-10-31T16:21Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Hourly gap\u2011up mean reversion in BTC\u2011USD",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 5,
+      "threshold": 0.01
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 7,
+        "end": 498,
+        "returns_pct": -3.833,
+        "drawdown_pct": -3.833,
+        "entries": 12
+      },
+      "retrospective_validation": {
+        "start": 498,
+        "end": 712,
+        "returns_pct": -1.742,
+        "drawdown_pct": -3.388,
+        "entries": 2
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "4093ea34126aa5",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly gap\u2011up events 1% threshold 5\u2011hour return distribution statistics"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-10-31T16:21Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "safe_error": "GROQ_HTTP_400_unknown"
   }
 ]

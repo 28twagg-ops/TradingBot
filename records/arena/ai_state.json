@@ -605,6 +605,46 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T16:19Z",
+        "id": "6ffd0c67fcd366",
+        "topic": "BTC-USD hourly price mean reversion around intraday VWAP",
+        "hypothesis": "BTC-USD hourly close prices exhibit a statistically significant mean reversion tendency towards the intraday VWAP after extreme deviations within the same hour, such that the hourly return is negatively correlated with the magnitude of the deviation ",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the correlation between the absolute deviation of the hourly close from the intraday VWAP and the subsequent hourly return over a large sample; a statistically significant negative correlation would support the hypothesis, while a correlation not significantly different from zero would falsi",
+        "source_search": {
+          "query": "BTC-USD hourly VWAP mean reversion empirical evidence 2024 2025",
+          "attempted": [
+            "web",
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD intraday VWAP calculation methodology and empirical studies 2024 2025",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -2857,6 +2897,57 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T16:21Z",
+        "id": "4093ea34126aa5",
+        "topic": "Hourly gap\u2011up mean reversion in BTC\u2011USD",
+        "hypothesis": "Hourly gap\u2011up events in BTC\u2011USD (price opening 1% higher than previous close) are followed by a mean reversion to the pre\u2011gap price within the next 5 hours, with the 5\u2011hour return distribution centered near zero and a standard deviation below 1% of t",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 5,
+          "threshold": 0.01
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 498,
+            "returns_pct": -3.833,
+            "drawdown_pct": -3.833,
+            "entries": 12
+          },
+          "retrospective_validation": {
+            "start": 498,
+            "end": 712,
+            "returns_pct": -1.742,
+            "drawdown_pct": -3.388,
+            "entries": 2
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Collect hourly close data for BTC\u2011USD, identify all hours where the open is \u22651% above the previous close, compute the cumulative return over the next 5 hours, and test whether the mean return is statistically indistinguishable from zero (e.g., t\u2011test p>0.05) and the standard deviation is <1% of the ",
+        "source_search": {
+          "query": "BTC-USD hourly gap\u2011up 1% events 5\u2011hour return distribution statistics",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly gap\u2011up events 1% threshold 5\u2011hour return distribution statistics",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ],
     "ai_seen": {
@@ -3407,6 +3498,42 @@
         },
         "source_leads": [],
         "next_search_query": "search for hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T16:19Z",
+        "id": "582d27695f4a4e",
+        "topic": "Mean reversion after large hourly swings in 24/7 crypto spot markets",
+        "hypothesis": "After an hourly price move exceeding a volatility\u2011adjusted threshold, the next hour tends to revert toward the previous hour\u2019s close, producing a statistically significant mean\u2011reverting signal that can be exploited with a simple buy\u2011on\u2011reversal rule",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 10,
+          "threshold": 0.08
+        },
+        "symbol": null,
+        "test": {
+          "status": "INSUFFICIENT_HOURLY_HISTORY"
+        },
+        "paper_action": "HOLD_INSUFFICIENT_HISTORY",
+        "falsification_test": "Apply the rule to a hold\u2011out period of BTC\u2011USD, ETH\u2011USD, and SOL\u2011USD hourly close data (e.g., 2024\u20112026). Compute the win rate, profit factor, and Sharpe ratio. If the win rate is below 50% or the profit factor falls below 1.0, reject the hypothesis.",
+        "source_search": {
+          "query": "search for hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "obtain hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
         "preferred_sources": [
           "web"
         ],
