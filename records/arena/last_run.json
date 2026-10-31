@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-31T05:45:06.223833+00:00",
+  "timestamp": "2026-10-31T12:32:17.912732+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -21,7 +21,7 @@
     "S03": {
       "action": "HOLD",
       "cash": 13.25515543,
-      "equity": 98.8566,
+      "equity": 99.1846,
       "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -43,10 +43,10 @@
       "missing_quotes": []
     },
     "S06": {
-      "action": "HOLD",
-      "cash": 98.49671147,
-      "equity": 98.4967,
-      "ledger_events": 10,
+      "action": "BUY BTC-USD",
+      "cash": 59.45388274,
+      "equity": 98.4188,
+      "ledger_events": 11,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },

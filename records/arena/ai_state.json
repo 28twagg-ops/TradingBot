@@ -1344,6 +1344,86 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T12:33Z",
+        "id": "315098c475befa",
+        "topic": "BTC-USD weekend intraday volatility and price recovery patterns",
+        "hypothesis": "On weekends, BTC-USD exhibits a statistically significant intraday volatility spike during the first hour of trading on Monday, followed by a mean reversion toward the prior Friday close within the first 3 hours of Monday trading.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 5,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 495,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 495,
+            "end": 708,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Compute the distribution of 1\u2011hour returns on Monday mornings (09:00\u201110:00 UTC) relative to the prior Friday close over the past 3 years. If the mean return is not significantly different from zero (p>0.05) or the 95% confidence interval includes zero, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD first hour momentum after prior close below 5-hour moving average statistical analysis",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/BTC-USD/",
+            "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $77,328.59 USD with a 24-hour trading volume of $24,733,278,769.95 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BRTI - CFB - CF Benchmarks",
+            "url": "https://www.cfbenchmarks.com/data/indices/BRTI",
+            "snippet": "The CME CF Bitcoin Real Time Index (BRTI) is a once per 200 millisecond benchmark index price for Bitcoin that aggregates order data from Bitcoin-USD markets operated by major cryptocurrency exchanges that conform to the CME CF Constituent ",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "BTC-USD Monday 1\u2011hour return distribution relative to prior Friday close",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -1983,6 +2063,42 @@
         },
         "source_leads": [],
         "next_search_query": "BTC\u2011USD hourly mean reversion 12\u2011hour lag 2024 empirical study",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T12:33Z",
+        "id": "20b7cf67428d5d",
+        "topic": "Hourly mean reversion of BTC-USD around a 6\u2011hour lag",
+        "hypothesis": "BTC\u2011USD hourly returns exhibit a statistically significant mean\u2011reverting pattern when the 6\u2011hour lag is used as a lookback, with a threshold of 0.05 for the absolute return magnitude.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 6,
+          "threshold": 0.05
+        },
+        "symbol": null,
+        "test": {
+          "status": "INSUFFICIENT_HOURLY_HISTORY"
+        },
+        "paper_action": "HOLD_INSUFFICIENT_HISTORY",
+        "falsification_test": "Compute the mean of the 6\u2011hour lagged returns over a rolling window; if the mean absolute deviation exceeds 0.05 for more than 70% of the window, the hypothesis is falsified. Alternatively, a t\u2011test on the lagged returns against zero with p<0.05 would falsify the null of no mean reversion.",
+        "source_search": {
+          "query": "BTC\u2011USD hourly mean reversion 12\u2011hour lag 2024 empirical study",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly mean reversion 6-hour lag 2024 study",
         "preferred_sources": [
           "web"
         ],
@@ -3938,6 +4054,44 @@
         "preferred_sources": [
           "academic",
           "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T12:32Z",
+        "id": "b125d75e722870",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour relative strength (RS) to SPY exceeds a threshold, BTC\u2011USD exhibits a positive momentum that can be captured by a simple hourly\u2011close momentum rule.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to the last 2000 hourly close observations of BTC\u2011USD and SPY; if the strategy\u2019s cumulative return is negative or the win\u2011rate falls below 50% after accounting for a 0.1% transaction cost, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+          "attempted": [
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+        "preferred_sources": [
+          "reddit",
+          "blog"
         ],
         "site_domain": null,
         "research_data_requirements": [
@@ -6580,6 +6734,57 @@
           }
         ],
         "next_search_query": "BTC-USD hourly mean reversion 3% SMA backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T12:35Z",
+        "id": "14621dbc9569e5",
+        "topic": "ETH-USD hourly price mean reversion to 24\u2011hour moving average",
+        "hypothesis": "Hourly closing prices of ETH\u2011USD tend to revert toward the 24\u2011hour simple moving average within a 3% band, producing profitable trades when the price deviates beyond this band and then returns.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.03
+        },
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 495,
+            "returns_pct": 2.166,
+            "drawdown_pct": -1.924,
+            "entries": 7
+          },
+          "retrospective_validation": {
+            "start": 495,
+            "end": 708,
+            "returns_pct": -0.361,
+            "drawdown_pct": -2.227,
+            "entries": 3
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Apply the rule to the last 2000 hourly closes of ETH\u2011USD; if the strategy\u2019s cumulative return is negative or the win\u2011rate falls below 50% after accounting for a 0.1% commission, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly mean reversion 3% SMA backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly mean reversion 3% SMA backtest results",
         "preferred_sources": [
           "web"
         ],

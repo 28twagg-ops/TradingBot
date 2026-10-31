@@ -5514,5 +5514,166 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "Reddit Bitcoin upvote surge hourly impact BTC price"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-10-31T12:32Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "b125d75e722870",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-10-31T12:33Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD weekend intraday volatility and price recovery patterns",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 5,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 7,
+        "end": 495,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 495,
+        "end": 708,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "315098c475befa",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "The live Bitcoin price today is $77,328.59 USD with a 24-hour trading volume of $24,733,278,769.95 USD. We update our BTC to USD price in real-time.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BRTI - CFB - CF Benchmarks",
+        "url": "https://www.cfbenchmarks.com/data/indices/BRTI",
+        "snippet": "The CME CF Bitcoin Real Time Index (BRTI) is a once per 200 millisecond benchmark index price for Bitcoin that aggregates order data from Bitcoin-USD markets operated by major cryptocurrency exchanges that conform to the CME CF Constituent ",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD Monday 1\u2011hour return distribution relative to prior Friday close"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-10-31T12:33Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Hourly mean reversion of BTC-USD around a 6\u2011hour lag",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 6,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "INSUFFICIENT_HOURLY_HISTORY"
+    },
+    "action": "HOLD_INSUFFICIENT_HISTORY",
+    "experiment_id": "20b7cf67428d5d",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly mean reversion 6-hour lag 2024 study"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-10-31T12:34Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-10-31T12:35Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "ETH-USD hourly price mean reversion to 24\u2011hour moving average",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 24,
+      "threshold": 0.03
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 26,
+        "end": 495,
+        "returns_pct": 2.166,
+        "drawdown_pct": -1.924,
+        "entries": 7
+      },
+      "retrospective_validation": {
+        "start": 495,
+        "end": 708,
+        "returns_pct": -0.361,
+        "drawdown_pct": -2.227,
+        "entries": 3
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "14621dbc9569e5",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "ETH-USD hourly mean reversion 3% SMA backtest results"
   }
 ]
