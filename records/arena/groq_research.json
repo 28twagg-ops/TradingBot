@@ -5411,5 +5411,108 @@
       }
     ],
     "next_search_query": "BTC-USD hourly mean reversion 3% SMA backtest results"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-10-31T12:24Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Mean reversion after large hourly swings in 24/7 crypto spot markets",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 5,
+      "threshold": 0.08
+    },
+    "test": {
+      "status": "INSUFFICIENT_HOURLY_HISTORY"
+    },
+    "action": "HOLD_INSUFFICIENT_HISTORY",
+    "experiment_id": "b5b6c0d5cd5655",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "search for hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-10-31T12:25Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Volatility compression mean reversion in BTC-USD using hourly realized volatility",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "a352dce77b6f4a",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "search for empirical studies on hourly realized volatility mean reversion in Bitcoin"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-10-31T12:25Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "safe_error": "GROQ_HTTP_400_unknown"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-10-31T12:26Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "Hourly gap\u2011up mean reversion in BTC\u2011USD",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 5,
+      "threshold": 0.01
+    },
+    "test": {
+      "status": "INSUFFICIENT_HOURLY_HISTORY"
+    },
+    "action": "HOLD_INSUFFICIENT_HISTORY",
+    "experiment_id": "0415b6bbf48b2c",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly gap\u2011up 1% events 5\u2011hour return distribution statistics"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-10-31T12:27Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "topic": "BTC-USD hourly price reaction to cross\u2011market sentiment spikes on Reddit",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "social_signal"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "d5827d075d5911",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "Reddit Bitcoin upvote surge hourly impact BTC price"
   }
 ]

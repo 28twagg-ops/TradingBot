@@ -2705,6 +2705,42 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T12:26Z",
+        "id": "0415b6bbf48b2c",
+        "topic": "Hourly gap\u2011up mean reversion in BTC\u2011USD",
+        "hypothesis": "When BTC\u2011USD opens the hour with a gap\u2011up of at least 1% relative to the previous hour\u2019s close, the price tends to revert toward the previous close within the next 5 hours, producing a net negative return over that 5\u2011hour window.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 5,
+          "threshold": 0.01
+        },
+        "symbol": null,
+        "test": {
+          "status": "INSUFFICIENT_HOURLY_HISTORY"
+        },
+        "paper_action": "HOLD_INSUFFICIENT_HISTORY",
+        "falsification_test": "Count the number of 1%+ gap\u2011up events in the last 3 years and compute the mean 5\u2011hour return after the gap. If the mean return is not significantly negative (e.g., p>0.05 in a one\u2011sample t\u2011test), the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly gap\u2011down events 1% threshold 5\u2011hour return distribution statistics",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly gap\u2011up 1% events 5\u2011hour return distribution statistics",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ],
     "ai_seen": {
@@ -3228,6 +3264,42 @@
         ],
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T12:24Z",
+        "id": "b5b6c0d5cd5655",
+        "topic": "Mean reversion after large hourly swings in 24/7 crypto spot markets",
+        "hypothesis": "In 24/7 crypto spot markets, when an asset experiences a large hourly price swing exceeding a volatility threshold, the subsequent hour tends to revert toward the mean, producing a statistically significant mean\u2011reversion signal that can be exploited",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 5,
+          "threshold": 0.08
+        },
+        "symbol": null,
+        "test": {
+          "status": "INSUFFICIENT_HOURLY_HISTORY"
+        },
+        "paper_action": "HOLD_INSUFFICIENT_HISTORY",
+        "falsification_test": "Apply the rule to BTC\u2011USD, ETH\u2011USD, and SOL\u2011USD hourly close data from 2019\u20112026; compute the percentage of times the price reverts to within 2% of the previous hour\u2019s close within the next hour. If the observed reversion rate is not significantly higher than 50% (e.g., p\u2011value >0.05), reject the hy",
+        "source_search": {
+          "query": "obtain hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
@@ -4958,6 +5030,44 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T12:25Z",
+        "id": "a352dce77b6f4a",
+        "topic": "Volatility compression mean reversion in BTC-USD using hourly realized volatility",
+        "hypothesis": "Hourly realized volatility of BTC-USD exhibits a mean\u2011reverting pattern such that periods of unusually high volatility are followed by a statistically significant drop in volatility, and vice\u2011versa, over a 5\u201330 hour lookback.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 15\u2011hour rolling realized volatility series; identify spikes exceeding the 95th percentile and test whether the subsequent 15\u2011hour volatility is significantly lower than the 5th percentile using a paired t\u2011test (p<0.05). The reverse test for low spikes should also be performed.",
+        "source_search": {
+          "query": "search for papers or datasets on hourly realized volatility of Bitcoin",
+          "attempted": [
+            "academic",
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for empirical studies on hourly realized volatility mean reversion in Bitcoin",
+        "preferred_sources": [
+          "academic",
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -5722,6 +5832,47 @@
         ],
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T12:27Z",
+        "id": "d5827d075d5911",
+        "topic": "BTC-USD hourly price reaction to cross\u2011market sentiment spikes on Reddit",
+        "hypothesis": "When a Reddit thread about Bitcoin reaches a sudden surge in upvotes (\u22651000 upvotes within 1 hour) the BTC\u2011USD hourly close will exhibit a statistically significant mean\u2011reversion within the next 3 hours, i.e. the price will move opposite to the dire",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close",
+            "social_signal"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the hourly return distribution for all hours following a Reddit upvote surge and compare the mean return to a null distribution generated by random hour selection; reject hypothesis if the mean return is not significantly different from zero at 5% level.",
+        "source_search": {
+          "query": "BTC-USD hourly return distribution extreme events mean reversion",
+          "attempted": [
+            "web",
+            "reddit",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "Reddit Bitcoin upvote surge hourly impact BTC price",
+        "preferred_sources": [
+          "reddit",
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close",
+          "social_signal"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
