@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-31T17:46Z | S04 | Hourly gap‑down >2% in BTC‑USD followed by 5‑hou | 553b5532b9abd0 | HOLD |
+| 2026-10-31T17:45Z | S10 | ETH-USD hourly mean reversion to 12‑hour SMA | 278c813c09ce5d | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-10-31T17:44Z | S05 | Opening Range Breakout on BTC-USD | 5ae51064a3c169 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-31T17:44Z | S09 | Reddit Bitcoin upvote surge hourly impact BTC pr | f47f81bc347a4c | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-31T17:43Z | S03 | Hourly mean reversion of BTC-USD around a 4‑hour | 456fe8552b34b2 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-10-31T17:39Z | S01 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
 | 2026-10-31T17:38Z | S07 | Hourly momentum continuation in BTC-USD | c92e92545081d1 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-10-31T17:37Z | S06 | BTC relative strength to SPY 24‑hour momentum tr | c0ef46d77f8597 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-31T05:46Z | S06 | BTC‑USD relative strength to SPY 24‑hour momentu | e805cc61137558 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T05:45Z | S03 |  | AI_UNAVAILABLE |  |
 | 2026-10-31T05:45Z | S09 | BTC-USD hourly mean‑reversion of extreme returns | 0c918ebb992ea6 | HOLD |
-| 2026-10-31T05:39Z | S04 | Hourly gap-down mean reversion in BTC‑USD | 7ad1a1ae638372 | HOLD |
-| 2026-10-31T05:39Z | S05 |  | AI_UNAVAILABLE |  |
-| 2026-10-31T05:38Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | 8bfbae13111c8f | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-31T05:37Z | S10 | BTC-USD hourly price mean reversion to 24-hour m | 4933af61c1ea9f | HOLD |
-| 2026-10-31T05:37Z | S07 | Hourly trend following on BTC-USD based on short | b52cd1599dfe9c | HOLD |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

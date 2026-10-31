@@ -5886,5 +5886,140 @@
     "ai_requests": 1,
     "reason": "ValueError",
     "validation_stage": "MODEL_FIELDS_OR_RESEARCH_EVIDENCE"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-10-31T17:43Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "Hourly mean reversion of BTC-USD around a 4\u2011hour lag",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "456fe8552b34b2",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly returns autocorrelation lag 4 2024 empirical study"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-10-31T17:44Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Reddit Bitcoin upvote surge hourly impact BTC price",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "f47f81bc347a4c",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "Bitcoin subreddit upvote time series hourly"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-10-31T17:44Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Opening Range Breakout on BTC-USD",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "5ae51064a3c169",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "search for BTC-USD hourly price data 2019\u20112026"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-10-31T17:45Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "ETH-USD hourly mean reversion to 12\u2011hour SMA",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "278c813c09ce5d",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "ETH-USD hourly mean reversion 12h SMA backtest results"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-10-31T17:46Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Hourly gap\u2011down >2% in BTC\u2011USD followed by 5\u2011hour mean reversion",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 5,
+      "threshold": 0.02
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 7,
+        "end": 499,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 499,
+        "end": 713,
+        "returns_pct": 0.231,
+        "drawdown_pct": -1.341,
+        "entries": 2
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "553b5532b9abd0",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly gap\u2011down events 2% threshold 5\u2011hour return distribution statistics"
   }
 ]
