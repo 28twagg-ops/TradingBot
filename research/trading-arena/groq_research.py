@@ -19,6 +19,7 @@ import urllib.request
 from arena import PaperAccount, council
 from gemini_cycle import execute_virtual, normalize_decision, tradable, HISTORICAL_CONTEXT
 from open_research import discover, requested_sources, safe_domain, safe_query, requires_unavailable_test_inputs
+from personas import persona_for
 from quota_scheduler import (
     DAILY_REQUEST_TARGET, MAX_BATCH, eligible_worker_order,
     remaining_time_paced_credit, read_provider_headers,
@@ -34,44 +35,73 @@ TOPICS=["mean reversion","momentum","opening-range breakout","market regimes",
         "crypto liquidity","risk-defined entries"]
 
 
+def bounded_json_context(prompt, limit=7200):
+    """Never truncate JSON mid-string: preserve a valid context object for inference."""
+    context=dict(prompt)
+    def encoded():
+        return json.dumps(context, ensure_ascii=False, separators=(",",":"), allow_nan=False)
+    if len(encoded())>limit:
+        context["untrusted_search_results"]=[
+            {key:str(item.get(key,""))[:(240 if key=="snippet" else 150)]
+             for key in ("platform","title","url","snippet","read_level")}
+            for item in context.get("untrusted_search_results",[])[:3]
+            if isinstance(item,dict)]
+        context["research_history"]=context.get("research_history",[])[-2:]
+    if len(encoded())>limit:
+        context["untrusted_search_results"]=[]
+        context["research_cautions"]=[]
+    if len(encoded())>limit:
+        raise RuntimeError("GROQ_CONTEXT_TOO_LARGE")
+    return encoded()
+
+
+def groq_error_category(detail):
+    """Finite diagnostic categories only. Do not store model/provider raw text."""
+    if not isinstance(detail,dict):
+        return "UNCLASSIFIED"
+    sample=" ".join(str(detail.get(k) or "")[:300].lower()
+                    for k in ("code","type","message"))
+    markers=(
+        ("tool_use_failed","TOOL_GENERATION"),
+        ("json_validate_failed","JSON_VALIDATION"),
+        ("generated json does not match","JSON_VALIDATION"),
+        ("could not parse","JSON_VALIDATION"),
+        ("failed to generate","JSON_GENERATION"),
+        ("invalid schema","SCHEMA"),
+        ("schema_validation","SCHEMA"),
+        ("context_length","CONTEXT_LIMIT"),
+        ("rate_limit","RATE_LIMIT"),
+        ("model_permission","MODEL_PERMISSION"),
+        ("invalid_api_key","AUTHENTICATION"),
+    )
+    return next((category for marker,category in markers if marker in sample),
+                "UNCLASSIFIED")
+
+
 def groq_json(instructions, prompt):
     key=os.getenv("GROQ_API_KEY","").strip()
     if not key:
         raise RuntimeError("NO_GROQ_KEY")
-    candidate_schema={"type":"object","properties":{
-        "family":{"type":"string","enum":["trend","reversion","breakout","momentum"]},
-        "lookback":{"type":"integer"},"threshold":{"type":"number"}},
-        "required":["family","lookback","threshold"],"additionalProperties":False}
-    properties={
-        "research_topic":{"type":"string"},
-        "hypothesis":{"type":"string"},
-        "candidate":candidate_schema,
-        "study_symbol":{"type":["string","null"]},
-        "action":{"type":"string","enum":["BUY","SELL","HOLD"]},
-        "symbol":{"type":["string","null"]},
-        "allocation_fraction":{"type":"number"},
-        "reason":{"type":"string"},
-        "falsification_test":{"type":"string"},
-        "next_search_query":{"type":"string"},
-        "preferred_sources":{"type":"array","items":{"type":"string",
-            "enum":["web","reddit","youtube","tiktok","github","academic","forum","blog"]}},
-        "site_domain":{"type":["string","null"]},
-        "research_data_requirements":{"type":"array","items":{"type":"string",
-            "enum":["hourly_close","minute_bars","daily_bars","volume","order_book",
-                    "cross_asset","options_chain","fundamentals","social_signal","other"]}},
-        "hypothesis_timeframe":{"type":"string",
-             "enum":["hourly","daily","minute","mixed","other"]},
-        "rule_expressible_as_candidate":{"type":"boolean"},
-        "source_indices":{"type":"array","items":{"type":"integer"}}}
-    schema={"type":"object","properties":properties,
-            "required":list(properties),"additionalProperties":False}
-    body={"model":MODEL, "messages":[
-        {"role":"system","content":instructions},
-        {"role":"user","content":json.dumps(prompt,allow_nan=False)[:6300]}],
-        "response_format":{"type":"json_schema","json_schema":{
-            "name":"paper_research_hypothesis","strict":True,"schema":schema}},
-        "include_reasoning":False, "reasoning_effort":"low",
-        "temperature":.35,"max_completion_tokens":1800}
+    # Groq GPT-OSS strict schema has generated intermittent HTTP 400 responses.
+    # JSON object mode bypasses provider-side schema generation; all trading
+    # decisions are still checked by our deterministic validators below.
+    required=("research_topic hypothesis candidate study_symbol action symbol "
+              "allocation_fraction reason falsification_test next_search_query "
+              "preferred_sources site_domain research_data_requirements "
+              "hypothesis_timeframe rule_expressible_as_candidate source_indices")
+    guidance=(" Return ONLY a valid JSON object with these keys: "+required+
+              ". Keep every text value concise. candidate must have family "
+              "trend|reversion|breakout|momentum, integer lookback 5..80, "
+              "numeric threshold 0..0.12. Use arrays for preferred_sources, "
+              "research_data_requirements, source_indices. Use null for "
+              "optional symbols or domain. For unsupported studies set "
+              "rule_expressible_as_candidate=false; never invent a backtest.")
+    body={"model":MODEL,"messages":[
+        {"role":"system","content":instructions+guidance},
+        {"role":"user","content":bounded_json_context(prompt)}],
+        "response_format":{"type":"json_object"},
+        "include_reasoning":False,"reasoning_effort":"low",
+        "temperature":.25,"max_completion_tokens":2200}
     req=urllib.request.Request(API, data=json.dumps(body).encode(),
         method="POST",headers={"Authorization":"Bearer "+key,
                               "Content-Type":"application/json",
@@ -84,18 +114,21 @@ def groq_json(instructions, prompt):
     except urllib.error.HTTPError as e:
         PROVIDER_LIMITS.clear()
         PROVIDER_LIMITS.update(read_provider_headers(e.headers))
-        # Only provider-approved error codes, never provider message or raw response.
         try:
-            detail=json.loads(e.read(1500).decode("utf-8",errors="replace")).get("error",{})
-            provider_code=detail.get("code") or detail.get("type") or "unknown"
-            provider_code=str(provider_code)
-            if len(provider_code)>75 or not all(c.isalnum() or c in "_-" for c in provider_code):
-                provider_code="unknown"
+            detail=json.loads(e.read(1800).decode("utf-8",errors="replace")).get("error",{})
         except (ValueError,AttributeError,TypeError):
-            provider_code="unknown"
-        raise RuntimeError("GROQ_HTTP_"+str(e.code)+"_"+provider_code) from None
-    message=response_data["choices"][0]["message"]["content"]
-    return json.loads(message)
+            detail={}
+        raise RuntimeError("GROQ_HTTP_"+str(e.code)+"_"+groq_error_category(detail)) from None
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError):
+        raise RuntimeError("GROQ_TRANSPORT_OR_RESPONSE_ERROR") from None
+    try:
+        message=response_data["choices"][0]["message"]["content"]
+        result=json.loads(message)
+        if not isinstance(result,dict):
+            raise ValueError("not a JSON object")
+        return result
+    except (KeyError,IndexError,TypeError,ValueError):
+        raise RuntimeError("GROQ_INVALID_JSON_OUTPUT") from None
 
 
 def strategy_spec(raw):
@@ -232,6 +265,8 @@ def one_turn(accounts,feed,model,now,worker_id=None):
     discovered=discover(current_query,desired_sources,desired_domain)
     model_input={"worker":wid,
          "research_goal":"Discover any hypothesis from any public source or none; you control next research query and domains",
+         "research_personality":persona_for(wid),
+         "personality_is_not_a_constraint":True,
          "starting_specialty_only":worker["hypothesis"],
          "research_history":recent,
          "untrusted_search_results":discovered["found"],
@@ -247,6 +282,7 @@ def one_turn(accounts,feed,model,now,worker_id=None):
          "research_integrity":"If a novel strategy cannot be encoded and tested with hourly closes, say so. "
                               "It can be pursued later, but MUST NOT enter paper trading."}
     policy=("You are an independent research scientist with full intellectual freedom. "
+      "Your personality is an optional creative lens, never a market or strategy restriction. "
       "Your earlier mission is only historical context, not an assignment. Investigate "
       "ANY markets, idea, or website, including Reddit, YouTube, TikTok, GitHub repos, "
       "news, independent blogs, forums, old research or your own novel hypotheses. "
@@ -280,7 +316,7 @@ def one_turn(accounts,feed,model,now,worker_id=None):
     except RuntimeError as exc:
         # All unknown errors fail closed, no retries or paid fallback.
         output["status"]="AI_UNAVAILABLE"
-        output["safe_error"]=str(exc)[:50] if str(exc).startswith(("GROQ_HTTP_","NO_GROQ_KEY")) else "PROVIDER_ERROR"
+        output["safe_error"]=str(exc)[:60] if str(exc).startswith(("GROQ_HTTP_","NO_GROQ_KEY","GROQ_")) else "PROVIDER_ERROR"
         return output
     try:
         # The model chooses any question, source platform and future direction.
@@ -297,7 +333,18 @@ def one_turn(accounts,feed,model,now,worker_id=None):
                    requested_requirements==["hourly_close"] and
                    raw.get("rule_expressible_as_candidate") is True and
                    not requires_unavailable_test_inputs(hypothesis_claim))
-        spec=strategy_spec(raw) if supported else None
+        validation_issue=None
+        if supported:
+            try:
+                spec=strategy_spec(raw)
+            except (ValueError,TypeError,KeyError):
+                # S07 frequently lost otherwise useful research to bad numeric
+                # parameters. Keep the hypothesis; never backtest or trade it.
+                supported=False
+                spec=None
+                validation_issue="INVALID_EXECUTABLE_CANDIDATE"
+        else:
+            spec=None
         topic=str(raw.get("research_topic",""))[:100]
         hypothesis=str(raw.get("hypothesis",""))[:250]
         next_search=safe_query(raw.get("next_search_query")) or current_query
@@ -305,8 +352,9 @@ def one_turn(accounts,feed,model,now,worker_id=None):
         next_domain=safe_domain(raw.get("site_domain"))
         source_indices=raw.get("source_indices",[])
         if not isinstance(source_indices,list):source_indices=[]
-        chosen_sources=[discovered["found"][i] for i in dict.fromkeys(source_indices)
-                        if type(i)==int and 0<=i<len(discovered["found"])][:4]
+        valid_indices=[i for i in source_indices
+                       if type(i)==int and 0<=i<len(discovered["found"])]
+        chosen_sources=[discovered["found"][i] for i in dict.fromkeys(valid_indices)][:4]
         sym=raw.get("symbol")
         # The experiment can study held/ineligible symbols but cannot trade them.
         research_symbol=raw.get("study_symbol",sym)
@@ -317,14 +365,21 @@ def one_turn(accounts,feed,model,now,worker_id=None):
             "needed":requested_requirements,
             "note":"No misleading proxy: hypothesis requires unavailable inputs or rule expression."})
         # Do not allow model-generated orders from an unsupported scientific hypothesis.
-        quote=normalize_decision(raw,eligible) if supported else {"action":"HOLD","symbol":None}
+        try:
+            quote=normalize_decision(raw,eligible) if supported else {"action":"HOLD","symbol":None}
+        except ValueError:
+            # Invalid model-proposed paper actions must never execute.
+            quote={"action":"HOLD","symbol":None}
+            validation_issue="INVALID_PAPER_DECISION"
         if not supported:
-            action="RESEARCH_ONLY_NEEDS_DATA"
+            action="RESEARCH_ONLY_NEEDS_REVISION" if validation_issue else "RESEARCH_ONLY_NEEDS_DATA"
         # Keep experiment discovery autonomous, but do not convert a strategy
         # that has NEVER traded, or a mismatched/false signal, into a paper BUY.
         # This is still a quote-close simulation, NOT a verified next-bar fill.
         if not supported:
-            action="RESEARCH_ONLY_NEEDS_DATA"
+            action="RESEARCH_ONLY_NEEDS_REVISION" if validation_issue else "RESEARCH_ONLY_NEEDS_DATA"
+        elif validation_issue=="INVALID_PAPER_DECISION":
+            action="HOLD_INVALID_MODEL_DECISION"
         elif score.get("status")!="HISTORICAL_PROXY_ONLY":
             action="HOLD_INSUFFICIENT_HISTORY"
         elif quote["action"]=="BUY" and quote["symbol"]!=researched_sym:
@@ -345,6 +400,7 @@ def one_turn(accounts,feed,model,now,worker_id=None):
         entry={"cycle":cycle_id,"id":fingerprint,"topic":topic,
                "hypothesis":hypothesis,"candidate":spec,"symbol":researched_sym,
                "test":score,"paper_action":action,
+               "validation_issue":validation_issue,
                "falsification_test":str(raw.get("falsification_test",""))[:300],
                "source_search":{"query":discovered["query"],"attempted":discovered["attempted"],
                                 "matches":len(discovered["found"])},
@@ -359,7 +415,9 @@ def one_turn(accounts,feed,model,now,worker_id=None):
         history.append(entry)
         # The trade function edits the shared record; keep the recorded history.
         record["groq_experiments"]=history
-        output.update({"status":"RESEARCHED" if supported else "RESEARCH_IDEA_NEEDS_DATA",
+        status=("RESEARCHED" if supported else
+                "RESEARCH_IDEA_NEEDS_REVISION" if validation_issue else "RESEARCH_IDEA_NEEDS_DATA")
+        output.update({"status":status,"validation_issue":validation_issue,
                        "topic":topic,"strategy":spec,"test":score,
                        "action":action,"experiment_id":fingerprint,
                        "sources_found":len(discovered["found"]),
@@ -367,6 +425,7 @@ def one_turn(accounts,feed,model,now,worker_id=None):
     except (ValueError,KeyError,TypeError) as exc:
         output["status"]="REJECTED_INVALID_MODEL_EXPERIMENT"
         output["reason"]=type(exc).__name__
+        output["validation_stage"]="MODEL_FIELDS_OR_RESEARCH_EVIDENCE"
     return output
 
 
@@ -464,7 +523,8 @@ def main():
     quota["last_run_at"]=dt.datetime.now(UTC).isoformat()
     quota["last_batch_attempts"]=len(attempted)
     quota["last_batch_successes"]=sum(e["status"] in (
-        "RESEARCHED","RESEARCH_IDEA_NEEDS_DATA") for e in attempted)
+        "RESEARCHED","RESEARCH_IDEA_NEEDS_DATA",
+        "RESEARCH_IDEA_NEEDS_REVISION") for e in attempted)
     quota["pending_worker_priority"]=choose_due_workers(
         accounts,events,dt.datetime.now(UTC),MAX_BATCH)
     quota_file.write_text(json.dumps(quota,indent=2)+"\n")

@@ -66,12 +66,25 @@ class QuotaSchedulerTests(unittest.TestCase):
             events.append({"worker":f"S{number:02d}","cycle":"2026-10-28T12:00Z",
                            "status":"RESEARCHED","ai_requests":1})
         self.assertEqual(eligible_worker_order(a,events,now,1),["S02"])
-        self.assertEqual(SUCCESS,{"RESEARCHED","RESEARCH_IDEA_NEEDS_DATA"})
+        self.assertEqual(SUCCESS,{"RESEARCHED","RESEARCH_IDEA_NEEDS_DATA",
+                                  "RESEARCH_IDEA_NEEDS_REVISION"})
     def test_immediate_duplicate_run_skips_recent_workers(self):
         a=initial()
         now=dt.datetime(2026,10,28,14,0,tzinfo=UTC)
         events=[{"worker":"S01","cycle":"2026-10-28T13:55Z","status":"RESEARCHED"}]
         self.assertNotIn("S01",eligible_worker_order(a,events,now,5))
+    def test_multiple_consecutive_failures_trigger_finite_backoff(self):
+        now=dt.datetime(2026,10,28,14,0,tzinfo=UTC)
+        a=initial()
+        failed=[{"worker":"S07","cycle":f"2026-10-28T{h}:00Z",
+                 "status":"REJECTED_INVALID_MODEL_EXPERIMENT"} for h in ("10","11","13")]
+        # Other bots have succeeded today, so a recovered S07 is high priority.
+        failed += [{"worker":wid,"cycle":"2026-10-28T10:00Z",
+                    "status":"RESEARCHED"} for wid in a if wid!="S07"]
+        self.assertNotIn("S07",eligible_worker_order(a,failed,now,5))
+        self.assertIn("S07",eligible_worker_order(a,failed,
+            now+dt.timedelta(minutes=25),5))
+
     def test_only_provider_numeric_headers_are_stored(self):
         headers={"X-RateLimit-Remaining-Requests":"39",
                  "X-RateLimit-Remaining-Tokens":"2900",
