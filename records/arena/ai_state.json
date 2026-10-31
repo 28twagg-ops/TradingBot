@@ -686,6 +686,47 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T23:29Z",
+        "id": "168125a29d695c",
+        "topic": "BTC-USD hourly VWAP mean reversion after extreme deviations",
+        "hypothesis": "Hourly BTC-USD prices tend to revert toward the intraday VWAP after large deviations, suggesting a mean\u2011reverting behavior that could be exploited with a simple threshold rule.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "Apply a 5\u2011hour lookback VWAP and a 0.05 threshold to historical BTC\u2011USD hourly closes; if the rule fails to produce a statistically significant edge, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD intraday VWAP calculation methodology and empirical studies 2024 2025",
+          "attempted": [
+            "web",
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly VWAP calculation methodology empirical study 2024 2025",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -2301,6 +2342,43 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T23:27Z",
+        "id": "7912e69c464728",
+        "topic": "Hourly BTC\u2011USD mean\u2011reversion at 4\u2011hour lag",
+        "hypothesis": "BTC\u2011USD hourly returns are negatively autocorrelated at lag\u202f4, so a price move in one direction tends to reverse after four hours",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compute 4\u2011hour lag autocorrelation on 2024 hourly BTC\u2011USD data; if |\u03c1|<0.05, reject hypothesis",
+        "source_search": {
+          "query": "BTC-USD hourly returns autocorrelation lag 4 2024 empirical study",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD hourly returns autocorrelation lag 4 2024 empirical study",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -3768,6 +3846,43 @@
         "falsification_test": "Compare 30\u2011hour lookback breakout wins vs random trades on BTC-USD hourly data 2019\u20112026",
         "source_search": {
           "query": "obtain hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for BTC-USD hourly price data 2019\u20112026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T23:29Z",
+        "id": "1f944ff888891d",
+        "topic": "Opening Range Breakout on BTC-USD",
+        "hypothesis": "A 1\u2011hour opening range breakout strategy that enters long when the price closes above the high of the first 5 hours of the day and exits when it falls below the low of the same 5\u2011hour range will produce a positive risk\u2011adjusted return on BTC\u2011USD hour",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "None \u2013 strategy not yet backtested.",
+        "source_search": {
+          "query": "search for BTC-USD hourly price data 2019\u20112026",
           "attempted": [
             "web"
           ],
@@ -5781,6 +5896,45 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T23:27Z",
+        "id": "19a16990a7585b",
+        "topic": "Hourly realized volatility mean reversion in Bitcoin",
+        "hypothesis": "Hourly realized volatility of BTC-USD exhibits mean\u2011reverting behavior that can be exploited with a simple threshold rule on the deviation from a short\u2011term moving average.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "Would require hourly realized volatility series; absent, cannot falsify.",
+        "source_search": {
+          "query": "search for empirical studies on hourly realized volatility mean reversion in Bitcoin",
+          "attempted": [
+            "academic",
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for publicly available hourly realized volatility dataset for BTC-USD",
+        "preferred_sources": [
+          "academic",
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": null,
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },
@@ -6607,6 +6761,45 @@
         "falsification_test": "Compare hourly upvote counts to subsequent 5\u2011hour price direction; requires external data source.",
         "source_search": {
           "query": "Reddit Bitcoin upvote surge hourly impact BTC price",
+          "attempted": [
+            "reddit",
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "Bitcoin subreddit upvote time series hourly",
+        "preferred_sources": [
+          "reddit",
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T23:28Z",
+        "id": "0b5daa0cb8add4",
+        "topic": "BTC-USD hourly price reaction to Reddit Bitcoin upvote spikes",
+        "hypothesis": "Hourly BTC-USD price exhibits a statistically significant mean\u2011reversion within 5\u201320 hours following a large Reddit upvote surge on the Bitcoin subreddit",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "Compare post\u2011surge hourly returns to a matched control period; reject if mean return > +5% or < -5% within 10 hours",
+        "source_search": {
+          "query": "Bitcoin subreddit upvote time series hourly",
           "attempted": [
             "reddit",
             "web"

@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-10-31T23:29Z | S05 | Opening Range Breakout on BTC-USD | 1f944ff888891d | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-31T23:29Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | 168125a29d695c | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-31T23:28Z | S09 | BTC-USD hourly price reaction to Reddit Bitcoin  | 0b5daa0cb8add4 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-10-31T23:27Z | S03 | Hourly BTC‑USD mean‑reversion at 4‑hour lag | 7912e69c464728 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-10-31T23:27Z | S08 | Hourly realized volatility mean reversion in Bit | 19a16990a7585b | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T18:39Z | S07 | Hourly trend persistence in BTC-USD | 4fa3269f3883b9 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-10-31T18:39Z | S06 | BTC-USD relative strength to SPY 24h momentum tr | 18c947206447c7 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T18:38Z | S02 | BTC-USD Monday first‑hour return conditioned on  | 00280a489d5545 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-31T12:25Z | S01 |  | AI_UNAVAILABLE |  |
 | 2026-10-31T12:25Z | S08 | Volatility compression mean reversion in BTC-USD | a352dce77b6f4a | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T12:24Z | S05 | Mean reversion after large hourly swings in 24/7 | b5b6c0d5cd5655 | HOLD_INSUFFICIENT_HISTORY |
-| 2026-10-31T09:59Z | S10 | BTC-USD hourly price mean reversion to 24‑hour m | 83cdc85dad4e3c | HOLD |
-| 2026-10-31T09:58Z | S07 | Hourly momentum continuation in BTC-USD | c2883c328db627 | HOLD |
-| 2026-10-31T09:57Z | S08 |  | AI_UNAVAILABLE |  |
-| 2026-10-31T09:57Z | S03 | Hourly mean reversion of BTC-USD around 12‑hour  | d564167c8033df | HOLD |
-| 2026-10-31T09:56Z | S05 |  | AI_UNAVAILABLE |  |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
