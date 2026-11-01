@@ -199,6 +199,16 @@ class LocalLlamaTests(unittest.TestCase):
             self.assertEqual(len(list((data/"pending").glob("*.json"))),2)
             self.assertEqual(json.loads((repo/"records/arena/ai_state.json").read_text()),original)
 
+    def test_sync_only_never_calls_ollama_or_market_feed(self):
+        from overnight_local import main
+        with tempfile.TemporaryDirectory() as root:
+            with patch("overnight_local.available_models",side_effect=AssertionError(
+                    "sync-only must not invoke Ollama")), patch(
+                    "overnight_local.market",side_effect=AssertionError(
+                        "sync-only must not download market data")), patch(
+                    "overnight_local.sync_pending",return_value=0):
+                self.assertEqual(main(["--sync-only","--data-dir",root]),0)
+
     def test_parallel_request_limit_prevents_ten_worker_fanout(self):
         with self.assertRaisesRegex(ValueError,"PARALLEL_RESEARCH_LANES"):
             run_round(Path("."),"qwen3:8b",{},parallel=10)
@@ -332,6 +342,14 @@ class LocalLlamaTests(unittest.TestCase):
                 "arena-local-research:records/arena/local_research/2026-11-01/"
                 + "S01_"+filename.split("_")[-1])
             self.assertEqual(payload,legacy.replace(b"\r\n",b"\n"))
+            # Simulate the exact field failure: uploaded event stays pending
+            # despite already being present on the remote branch.
+            restored=data/"pending"/item.name
+            restored.parent.mkdir(exist_ok=True)
+            restored.write_bytes(legacy)
+            with patch("overnight_local.REPO",str(remote)):
+                self.assertEqual(sync_pending(data,attempts=2),1)
+            self.assertFalse(restored.exists())
 
     @unittest.skipUnless(sys.platform!="win32","Requires Git subprocess in CI")
     def test_git_sync_is_immutable_and_idempotent(self):
