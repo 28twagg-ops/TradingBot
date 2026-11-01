@@ -174,7 +174,7 @@ def format_report(doc):
     for model, stats in doc.get("models", {}).items():
         def fmt(v):
             return "Unavailable" if v is None else str(v)
-        rows.append("| {} | {} | {} | {} | {} |".format(
+        rows.append("| {} | {} | {} | {} | {} | {} | {} |".format(
             model, stats["attempts"], fmt(stats["valid_percent"])+
             ("%" if stats["valid_percent"] is not None else ""),
             fmt(stats["median_tokens_per_second"]),
