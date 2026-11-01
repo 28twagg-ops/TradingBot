@@ -20,7 +20,7 @@ from zoneinfo import ZoneInfo
 from arena import PaperAccount, council
 from run_virtual import CONFIG, COINS, UTC, initial, market
 
-MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash-lite")
+MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
 ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/"
 MAX_CALLS = 13  # 10 independent workers + 3 independent council reviews, once per day.
 JUDGES = {
@@ -62,11 +62,12 @@ def gemini_json(role, payload, api_key=None, model=None, timeout=40):
     key = api_key if api_key is not None else os.getenv("GEMINI_API_KEY", "").strip()
     if not key:
         raise RuntimeError("Gemini key unavailable")
+    chosen = model or MODEL
     body = {"contents": [{"role": "user", "parts": [{"text":json.dumps(payload, ensure_ascii=False)[:13000]}]}],
             "systemInstruction": {"parts": [{"text": role}]},
             "generationConfig": {"responseMimeType": "application/json",
-                "temperature": 0.6, "maxOutputTokens": 700}}
-    chosen = model or MODEL
+                "temperature": 0.25 if chosen == "gemini-3.8-flash" else 0.6,
+                "maxOutputTokens": 2100 if chosen == "gemini-3.8-flash" else 700}}
     if not chosen.startswith("gemini-") or "/" in chosen or "?" in chosen:
         raise ValueError("invalid model name")
     req = urllib.request.Request(ENDPOINT + chosen + ":generateContent",
