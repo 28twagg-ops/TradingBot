@@ -6,6 +6,7 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-01T00:07Z | S07 | Hourly trend persistence in BTC-USD | f537a85f2582c1 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-10-31T23:29Z | S05 | Opening Range Breakout on BTC-USD | 1f944ff888891d | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T23:29Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | 168125a29d695c | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T23:28Z | S09 | BTC-USD hourly price reaction to Reddit Bitcoin  | 0b5daa0cb8add4 | RESEARCH_ONLY_NEEDS_DATA |
@@ -40,7 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-31T12:26Z | S04 | Hourly gap‑up mean reversion in BTC‑USD | 0415b6bbf48b2c | HOLD_INSUFFICIENT_HISTORY |
 | 2026-10-31T12:25Z | S01 |  | AI_UNAVAILABLE |  |
 | 2026-10-31T12:25Z | S08 | Volatility compression mean reversion in BTC-USD | a352dce77b6f4a | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-31T12:24Z | S05 | Mean reversion after large hourly swings in 24/7 | b5b6c0d5cd5655 | HOLD_INSUFFICIENT_HISTORY |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

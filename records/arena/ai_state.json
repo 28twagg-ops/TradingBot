@@ -5140,6 +5140,43 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-11-01T00:07Z",
+        "id": "f537a85f2582c1",
+        "topic": "Hourly trend persistence in BTC-USD",
+        "hypothesis": "BTC-USD hourly price exhibits a statistically significant trend continuation over a 20\u2011hour lookback, with a 5% return threshold indicating a higher probability of continuation than reversal.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compare 20\u2011hour trend continuation rate to 50% benchmark; reject if <50% or p>0.05.",
+        "source_search": {
+          "query": "historical hourly BTC-USD price data 2020-2026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly price trend backtest 20h lookback",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
       }
     ]
   },

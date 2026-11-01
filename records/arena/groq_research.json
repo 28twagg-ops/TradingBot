@@ -6248,5 +6248,29 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "search for BTC-USD hourly price data 2019\u20112026"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-11-01T00:07Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "Hourly trend persistence in BTC-USD",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "f537a85f2582c1",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly price trend backtest 20h lookback"
   }
 ]
