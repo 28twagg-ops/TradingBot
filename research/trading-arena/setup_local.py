@@ -217,7 +217,7 @@ def main(argv=None):
             register_mac(python,model,parallel)
     print("\nSETUP COMPLETE.", "Window checks every 15 min; research only midnight Central." if not a.skip_task
           else "Scheduling skipped.")
-    print("Keep laptop powered and awake, and Ollama running.")
+    print("Keep laptop powered, awake and signed in; the task will start the local Ollama daemon if closed.")
     print("Research report:",DATA/"MORNING_REPORT.md")
     print("Unsent work is retained at:",DATA/"pending")
     return 0
