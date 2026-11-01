@@ -1,6 +1,6 @@
 # Trading Arena — Laptop Llama Quick Start
 
-**Updated October 31, 2026.** Windows 32 GB machines now default to Qwen3 8B and two bounded research lanes after a setup refresh. Existing research remains intact. Runs local Ollama/Llama models, **not** a cloud Llama API. Each Llama model's license and any electricity/storage costs still apply.
+**Updated November 1, 2026.** After observing the real Intel i7-1365U / Iris Xe trial, the Windows 24+ GB default is **Qwen3 4B Instruct with one lane**, not Qwen3 8B with two lanes. The smaller model is a safer CPU inference choice; the larger model remains available by explicit request. Existing research stays intact. Runs local Ollama/Llama models, **not** a cloud Llama API. Each Llama model's license and any electricity/storage costs still apply.
 
 ## Your tasks tonight (Windows or Mac)
 
@@ -15,7 +15,7 @@
 
 3. Follow the GitHub browser sign-in when prompted. Leave the computer **plugged in, awake and connected to Wi-Fi** with Ollama open. If Windows says a program was just installed but cannot be found, close PowerShell, reopen and run the *same* command once more.
 
-The script installs any missing **Git, Python 3.11, GitHub CLI and Ollama** through Windows Package Manager, downloads/refreshes only the relevant Arena source folders, downloads a local Llama model and sets up a daily **midnight** Windows task. Re-running it updates an existing checkout and refreshes the task and settings. A machine with 24+ GB RAM selects `qwen3:8b` (~5.2 GB download) and two research lanes; 9–24 GB selects `llama3.2:3b` (~2 GB) and one lane; 5.5–9 GB selects `llama3.2:1b` (~1.3 GB). Actual throughput depends heavily on CPU/GPU and free VRAM: RAM capacity alone cannot guarantee two efficient simultaneous inferences. Under ~5.5 GB RAM, setup stops safely. On Windows the installer sets the user-level `OLLAMA_NUM_PARALLEL=2` for future Ollama processes, then asks you to **quit Ollama from the system tray and reopen it** so it takes effect.
+The script installs any missing **Git, Python 3.11, GitHub CLI and Ollama** through Windows Package Manager, downloads/refreshes only the relevant Arena source folders, downloads a local Llama model and sets up a daily **midnight** Windows task. Re-running it updates an existing checkout and refreshes the task and settings. On **Windows with 24+ GB RAM**, the conservative default is `qwen3:4b-instruct` (~2.5 GB model) with **one lane**, because high RAM does not imply an AI-capable GPU. 9–24 GB RAM selects `llama3.2:3b` (~2 GB) with one lane; 5.5–9 GB uses `llama3.2:1b` (~1.3 GB). On 24+ GB macOS systems, Qwen3 8B and two lanes remain the automatic profile. You can override with explicit model/parallel flags, after measuring throughput. Windows installer sets the user-level `OLLAMA_NUM_PARALLEL` to the chosen lane count; **fully quit Ollama from the tray and reopen** to apply it. Under ~5.5 GB RAM, setup stops safely. It also retries any prior pending GitHub uploads without generating new research.
 
 ### macOS — alternative
 
@@ -29,7 +29,7 @@ The script uses Homebrew to install missing dependencies, opens Ollama, signs in
 
 ## What the laptop will do
 
-- **Weekdays: midnight–7:00 AM; Saturdays and Sundays: midnight–10:00 AM America/Chicago.** Cycle researchers **S01–S10** with at most **two concurrent workers** on 24+ GB machines (one on smaller machines); roughly one pass per 40 minutes while running. The Ollama daemon may still queue requests if its parallel setting or hardware cannot support two contexts. The weekend window follows Central Time, including daylight-saving changes.
+- **Weekdays: midnight–7:00 AM; Saturdays and Sundays: midnight–10:00 AM America/Chicago.** Cycle researchers **S01–S10** with one sequential worker on Windows by default, or up to two on explicitly supported systems; roughly one pass per 40 minutes while running. With CPU-only inference, the actual pass may exceed that interval. The weekend window follows Central Time, including daylight-saving changes.
 - Every bot retains an independent history, with its previously configured [personality](../research/trading-arena/personas.py). Personality inspires brainstorming, but is never a fixed market or strategy assignment.
 - Each bot can research any idea it wants using public search metadata and available historical prices, propose falsification tests, and save **research-only** output. Model-generated code is never executed.
 - Uses the existing bounded deterministic backtest for supported hourly single-asset ideas. Unsupported or untestable ideas remain research-only.
@@ -58,6 +58,13 @@ Optional manual test **after setup**, using your installed local Python environm
 
 Observe the terminal output and review `%USERPROFILE%\.trading-arena\MORNING_REPORT.md`. Trial records are clearly marked as research-only and uploaded to the isolated GitHub inbox when possible.
 
+**Recover unsent research only (no model inference or market-data requests, Command Prompt):**
+```cmd
+"%USERPROFILE%\.trading-arena\venv\Scripts\python.exe" "%USERPROFILE%\TradingArenaLocal\research\trading-arena\overnight_local.py" --sync-only
+```
+
+On Windows, older JSON files may use CRLF line endings while Git stores LF; the sync process now compares normalized JSON to avoid false `REMOTE_EVENT_NOT_CONFIRMED` errors. The installer also attempts this recovery automatically. **Do not delete your `pending` folder.**
+
 **macOS Terminal:**
 ```bash
 "$HOME/.trading-arena/venv/bin/python" "$HOME/TradingArenaLocal/research/trading-arena/overnight_local.py" --smoke
@@ -70,9 +77,9 @@ Observe the terminal output and review `%USERPROFILE%\.trading-arena\MORNING_REP
 - **Wake/sleep:** macOS launchd or Windows Task Scheduler can run at midnight only when the user session and hardware permit it. Keep the laptop open/awake or use an approved awake/power setting, plugged in and on Wi-Fi. Closing the lid commonly sleeps the laptop; this installer does **not** silently change power settings.
 - **Login:** The first GitHub CLI browser login is required to upload research. GitHub CLI's authorization may have broader repository permissions than the one Arena branch; the model never sees that token. Do not copy passwords or tokens into a file or chat.
 - **Cloud services:** Ollama's local models require no inference API key. This installer refuses model names containing `:cloud`, remote URLs and nonlocal endpoints. Do not select a cloud model.
-- **Quota/duplicates:** Ten researchers share one Ollama instance with **up to two independent in-process research lanes** on supported machines. Unique research IDs and Git verification prevent duplicate uploads; an app-only lock blocks overlapping *overnight program instances*. This limit is separate from the two allowed research lanes.
+- **Quota/duplicates:** Ten researchers share one Ollama instance with **one lane on Windows by default**, or up to two independent in-process lanes on explicitly supported machines. Unique research IDs and Git verification prevent duplicate uploads; an app-only lock blocks overlapping *overnight program instances*. This limit is separate from the two allowed research lanes.
 - **Missed schedule:** Windows task runs at midnight if possible and checks its Central-time execution window. If the laptop wakes later, only remaining hours are available. If it wakes after 7 AM on a weekday or after 10 AM on a weekend, it exits without generating new overnight work. Windows Task Scheduler allows a 12-hour maximum runtime to accommodate the extra hour during the fall daylight-saving transition; the runner itself still enforces the local stop time.
-- **Slow laptop:** Local Llama can take substantial time without a GPU; some bots may complete fewer ideas than others. Low disk, missing prices, API errors, and incompatible history fail safely.
+- **Slow laptop:** Qwen3 8B already timed out on an Intel i7-1365U running 100% CPU. The CPU-friendly Qwen3 4B Instruct is now the Windows 24+ GB default, but still requires real testing. Some bots may complete fewer ideas than others. Low disk, missing prices, API errors and incompatible history fail safely.
 - **No guarantee of profitability:** Research records and proxy backtests are not real fills, statistically proven edge or investment recommendations.
 
 ## If setup fails
@@ -82,7 +89,7 @@ Observe the terminal output and review `%USERPROFILE%\.trading-arena\MORNING_REP
 | `winget` not found | Update Windows App Installer or install [winget](https://learn.microsoft.com/windows/package-manager/winget/) first |
 | Program missing right after install | Open a new terminal and rerun bootstrap |
 | `OLLAMA_MODEL_NOT_INSTALLED_OR_SERVICE_OFFLINE` | Open the Ollama desktop app; run `ollama pull llama3.2:3b` (or `llama3.2:1b`) and retry |
-| `OLLAMA_INVALID_JSON` or slow generation | On 24+ GB machines inspect CPU/GPU usage; try `--parallel 1` before downgrading to `llama3.2:3b`. No positions are changed |
+| `OLLAMA_INVALID_JSON` or slow generation | Inspect `ollama ps`: 100% CPU processing on an integrated-graphics laptop can be slow. Prefer `qwen3:4b-instruct` with `--parallel 1` until benchmarked. No positions are changed |
 | GitHub sign-in fails | In terminal run `gh auth login --web`, then rerun setup |
 | GitHub uploads fail | Leave pending local JSON files untouched. Rerun overnight or `--once`; the next successful sync resumes |
 | `ANOTHER_RUN_ALREADY_ACTIVE` | Do not start a second run. Wait for the first to finish |

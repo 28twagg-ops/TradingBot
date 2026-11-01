@@ -35,7 +35,9 @@ def json_atomic(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_name(path.name + "." + uuid.uuid4().hex + ".tmp")
     try:
-        with temp.open("w", encoding="utf-8") as f:
+        # Always LF even on Windows: Git can normalize CRLF on commit, which
+        # otherwise breaks the byte-for-byte remote acknowledgement check.
+        with temp.open("w", encoding="utf-8", newline="\n") as f:
             json.dump(data, f, ensure_ascii=False, indent=2, allow_nan=False)
             f.write("\n")
             f.flush()
@@ -164,6 +166,16 @@ def queue_record(data, worker, event, experiment, model):
     return path
 
 
+def canonical_json_bytes(payload):
+    """Normalize only JSON whitespace line endings for cross-platform Git.
+
+    JSON strings cannot contain raw CR or LF characters, so converting line
+    endings cannot modify an actual JSON string value. Legacy queued Windows
+    files can have CRLF, whereas Git stores LF in committed text blobs.
+    """
+    return payload.replace(b"\r\n", b"\n")
+
+
 def sync_pending(data=DATA, attempts=4):
     """Retry immutable uploads to a dedicated local branch, never cloud ledgers.
 
@@ -175,12 +187,12 @@ def sync_pending(data=DATA, attempts=4):
     if not queue:
         return 0
     folder = init_upload(data)
-    for _ in range(attempts):
+    for attempt in range(attempts):
         try:
             refresh_upload(folder)
             added = []
             for src in queue:
-                payload = src.read_bytes()
+                payload = canonical_json_bytes(src.read_bytes())
                 event = json.loads(payload.decode("utf-8"))
                 day = event["cycle"][:10]
                 ident = event["event_id"]
@@ -190,7 +202,7 @@ def sync_pending(data=DATA, attempts=4):
                 target = folder / RELATIVE / day / (worker + "_" + ident + ".json")
                 target.parent.mkdir(parents=True, exist_ok=True)
                 if target.exists():
-                    if target.read_bytes() != payload:
+                    if canonical_json_bytes(target.read_bytes()) != payload:
                         raise ValueError("IMMUTABLE_EVENT_CONFLICT")
                 else:
                     target.write_bytes(payload)
@@ -210,14 +222,22 @@ def sync_pending(data=DATA, attempts=4):
                 remote = subprocess.run(["git","show","FETCH_HEAD:"+path], cwd=folder,
                                         stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
                                         timeout=30, check=False)
-                if remote.returncode or remote.stdout != src.read_bytes():
+                if remote.returncode or canonical_json_bytes(remote.stdout) != canonical_json_bytes(src.read_bytes()):
                     raise RuntimeError("REMOTE_EVENT_NOT_CONFIRMED")
             archived = data / "sent"
             archived.mkdir(exist_ok=True, parents=True)
             for src in queue:
                 os.replace(src, archived / src.name)
             return len(queue)
-        except (RuntimeError, subprocess.TimeoutExpired):
+        except (RuntimeError, subprocess.TimeoutExpired) as exc:
+            # Report only a bounded error category, never raw Git credentials,
+            # URLs, stdout, stderr, or untrusted remote content.
+            code = str(exc)
+            allowed = {"GIT_UNAVAILABLE_OR_TIMED_OUT", "GIT_COMMAND_FAILED",
+                       "REMOTE_EVENT_NOT_CONFIRMED"}
+            category = code if code in allowed else "GIT_SYNC_TIMEOUT_OR_ERROR"
+            print("Research upload attempt", attempt + 1, "of", attempts,
+                  "not confirmed:", category, flush=True)
             time.sleep(2)
             continue
     return 0
@@ -406,7 +426,7 @@ def lock_acquire(data):
 
 def main(argv=None):
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", default=os.getenv("ARENA_OLLAMA_MODEL","qwen3:8b"))
+    parser.add_argument("--model", default=os.getenv("ARENA_OLLAMA_MODEL","qwen3:4b-instruct"))
     parser.add_argument("--parallel",type=int,choices=(1,2),default=1,
                         help="Parallel research lanes (2 only when RAM/VRAM allows)")
     parser.add_argument("--smoke", action="store_true",
@@ -415,6 +435,8 @@ def main(argv=None):
                         help="One research pass, any hour, useful for testing")
     parser.add_argument("--trial", action="store_true",
                         help="Two-worker real inference + paper-only GitHub sync trial")
+    parser.add_argument("--sync-only", action="store_true",
+                        help="Recover pending append-only GitHub uploads, no AI inference")
     parser.add_argument("--data-dir", type=Path, default=DATA)
     args=parser.parse_args(argv)
     model=local_model_name(args.model)
@@ -423,13 +445,18 @@ def main(argv=None):
     if args.smoke:
         smoke(model)
         return 0
-    if args.trial and args.once:
-        parser.error("Choose --trial OR --once")
-    if model not in available_models():
+    if sum(bool(v) for v in (args.trial,args.once,args.sync_only))>1:
+        parser.error("Choose --trial OR --once OR --sync-only")
+    if not args.sync_only and model not in available_models():
         raise RuntimeError("OLLAMA_MODEL_NOT_INSTALLED_OR_SERVICE_OFFLINE")
     lock=lock_acquire(data)
     stats={}
     try:
+        if args.sync_only:
+            confirmed = sync_pending(data)
+            pending = len(list((data / "pending").glob("*.json")))
+            print("Confirmed GitHub sync:", confirmed, "; pending local records:", pending)
+            return 0 if pending == 0 else 2
         if args.trial:
             # Exactly two researchers to prove genuine parallelism, market
             # data integration and append-only upload before a full night.

@@ -5,7 +5,7 @@ import urllib.request
 
 ENDPOINT = "http://127.0.0.1:11434/api/chat"
 TAGS = "http://127.0.0.1:11434/api/tags"
-DEFAULT_MODEL = "qwen3:8b"
+DEFAULT_MODEL = "qwen3:4b-instruct"
 
 # Llama 3B's strength is generating diverse research leads. A compact schema
 # reliably requests a falsifiable hypothesis while the larger Groq model can
@@ -110,7 +110,8 @@ class OllamaResearch:
                 "options":{"temperature":0.25,"num_ctx":4096,"num_predict":1500}}
         # Only Qwen3 receives this optional flag. Legacy Llama adapters should
         # not receive JSON null for 'think' (older Ollama servers may reject it).
-        if self.model.startswith("qwen3:"):
+        if self.model.startswith("qwen3:") and "instruct" not in self.model:
+            # Instruct-only checkpoints cannot reason in thinking mode.
             body["think"] = False
         request = urllib.request.Request(
             ENDPOINT, data=json.dumps(body).encode("utf-8"), method="POST",

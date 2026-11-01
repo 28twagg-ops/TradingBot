@@ -114,9 +114,15 @@ def main(argv=None):
     ram=memory_gb()
     if ram is not None and ram<5.5:
         raise RuntimeError("INSUFFICIENT_RAM_FOR_RELIABLE_UNATTENDED_LOCAL_AI")
+    # RAM capacity alone does not predict inference throughput. Integrated GPU
+    # / ultrabook-class Windows machines often run Ollama on CPU; choose a
+    # smaller instruct model + one lane until a real hardware benchmark passes.
+    # Explicit --model and --parallel override these conservative defaults.
     model=a.model or ("llama3.2:1b" if ram is not None and ram<9 else
-                      "llama3.2:3b" if ram is None or ram<24 else "qwen3:8b")
-    parallel = a.parallel if a.parallel is not None else (2 if ram is not None and ram>=24 else 1)
+                      "llama3.2:3b" if ram is None or ram<24 else
+                      "qwen3:4b-instruct" if system=="Windows" else "qwen3:8b")
+    parallel = a.parallel if a.parallel is not None else (
+        2 if system=="Darwin" and ram is not None and ram>=24 else 1)
     if ram is not None and ram<16 and parallel>1:
         raise RuntimeError("TWO_PARALLEL_LANES_REQUIRE_AT_LEAST_16GB_RAM")
     from local_ollama import local_model_name
@@ -137,7 +143,8 @@ def main(argv=None):
     run(python,"-m","pip","install","--disable-pip-version-check",
         "pandas>=2,<3","numpy>=1.24,<3","yfinance>=0.2,<2","tzdata>=2025.2",
         timeout=600)
-    # Ollama is local; first model download (up to ~5.2 GB for qwen3:8b) needs internet.
+    # Ollama is local; first model download (~2.5GB on Windows 24+ GB
+    # defaults) requires internet once. Model overrides can be larger.
     print("Downloading or verifying local model (only missing weights download).")
     run("ollama","pull",model,timeout=1500)
     import overnight_local
@@ -149,6 +156,18 @@ def main(argv=None):
     print("Checking separate upload branch access.")
     overnight_local.init_upload(DATA)
     overnight_local.refresh_upload(DATA/"upload")
+    # Previous Windows versions could upload records successfully but leave
+    # them pending due to CRLF/LF acknowledgement mismatch. Recover without
+    # generating new hypotheses, reusing the existing isolated branch.
+    pending_dir = DATA/"pending"
+    if pending_dir.exists() and any(pending_dir.glob("*.json")):
+        if (DATA/"overnight.lock").exists():
+            print("Pending upload recovery deferred: overnight task lock exists.")
+        else:
+            print("Recovering prior unsent paper research records.")
+            confirmed = overnight_local.sync_pending(DATA)
+            remaining = len(list(pending_dir.glob("*.json")))
+            print("Previous records confirmed:",confirmed,"; still pending:",remaining)
     (DATA/"settings.json").write_text(json.dumps(
         {"model":model,"parallel_research_lanes":parallel,"start_local":"00:00",
          "stop_local_weekday":"07:00","stop_local_weekend":"10:00",
@@ -157,14 +176,13 @@ def main(argv=None):
     if not a.skip_task:
         if system=="Windows":
             register_windows(python,model,parallel)
-            if parallel == 2:
-                # Applies when the Ollama desktop service is NEXT started, not
-                # to an already-running process. No forced termination/restart.
-                run("powershell.exe","-NoProfile","-NonInteractive","-Command",
-                    '[Environment]::SetEnvironmentVariable("OLLAMA_NUM_PARALLEL","2","User")',
-                    timeout=30)
-                print("IMPORTANT: Quit Ollama from the Windows system tray and "
-                      "reopen it once so the 2-request Ollama setting takes effect.")
+            # Set the service's future concurrency to match the scheduled
+            # worker count; don't terminate any running Ollama instance.
+            run("powershell.exe","-NoProfile","-NonInteractive","-Command",
+                '[Environment]::SetEnvironmentVariable("OLLAMA_NUM_PARALLEL","'
+                +str(parallel)+'","User")', timeout=30)
+            print("IMPORTANT: Quit Ollama from the Windows system tray and "
+                  "reopen it once for the concurrency setting to take effect.")
         else:
             register_mac(python,model,parallel)
     print("\nSETUP COMPLETE.", "Scheduled midnight Central." if not a.skip_task
