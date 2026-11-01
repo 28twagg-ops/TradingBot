@@ -36,8 +36,9 @@ def signal(worker,vals,generation_index=0):
     if generation_index:
         n=int(worker[1:])
         phase=(generation_index-1)%4
-        lookback=(8,12,18,24)[phase]
-        threshold=(.009,.012,.016,.020)[phase]
+        step=min((generation_index-1)//4,12)
+        lookback=(8,12,18,24)[phase]+step
+        threshold=(.009,.012,.016,.020)[phase]+step*.0005
         x=vals[-1]
         short=sum(vals[-13:-1])/12
         long=sum(vals[-41:-1])/40
