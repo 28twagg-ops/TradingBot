@@ -156,6 +156,18 @@ def main(argv=None):
     print("Checking separate upload branch access.")
     overnight_local.init_upload(DATA)
     overnight_local.refresh_upload(DATA/"upload")
+    # Previous Windows versions could upload records successfully but leave
+    # them pending due to CRLF/LF acknowledgement mismatch. Recover without
+    # generating new hypotheses, reusing the existing isolated branch.
+    pending_dir = DATA/"pending"
+    if pending_dir.exists() and any(pending_dir.glob("*.json")):
+        if (DATA/"overnight.lock").exists():
+            print("Pending upload recovery deferred: overnight task lock exists.")
+        else:
+            print("Recovering prior unsent paper research records.")
+            confirmed = overnight_local.sync_pending(DATA)
+            remaining = len(list(pending_dir.glob("*.json")))
+            print("Previous records confirmed:",confirmed,"; still pending:",remaining)
     (DATA/"settings.json").write_text(json.dumps(
         {"model":model,"parallel_research_lanes":parallel,"start_local":"00:00",
          "stop_local_weekday":"07:00","stop_local_weekend":"10:00",
