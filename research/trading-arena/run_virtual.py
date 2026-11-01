@@ -30,7 +30,24 @@ def market(now):
             if len(bars)>60:res[ticker]=bars
         except Exception as e:print("Feed unavailable",ticker,type(e).__name__)
     return res
-def signal(worker,vals):
+def signal(worker,vals,generation_index=0):
+    # A successor changes its bounded, deterministic paper strategy. It never
+    # executes model-generated code, and original a generation is unchanged.
+    if generation_index:
+        n=int(worker[1:])
+        phase=(generation_index-1)%4
+        step=min((generation_index-1)//4,12)
+        lookback=(8,12,18,24)[phase]+step
+        threshold=(.009,.012,.016,.020)[phase]+step*.0005
+        x=vals[-1]
+        short=sum(vals[-13:-1])/12
+        long=sum(vals[-41:-1])/40
+        deviation=x/long-1
+        if n in (3,4,8):
+            return 1 if deviation < -threshold else -1 if x > short else 0
+        if n in (1,5,7,9):
+            return 1 if x/vals[-lookback-1]-1 > threshold and x>long else -1 if x<short else 0
+        return 1 if x > max(vals[-lookback-1:-1])*(1+threshold/2) else -1 if x<short else 0
     x=vals[-1];a=sum(vals[-21:-1])/20;b=sum(vals[-51:-1])/50
     mom=x/vals[-13]-1;z=x/(sum(vals[-31:-1])/30)-1
     hi=max(vals[-21:-1]);lo=min(vals[-21:-1])
@@ -66,7 +83,7 @@ def run_one(accounts,bars,now):
                 if ticker not in COINS and not stocks_open:continue
                 ts=dt.datetime.fromisoformat(b[-1][0].replace("Z","+00:00"))
                 if now-ts>dt.timedelta(hours=3) or record["seen"].get(ticker)==b[-1][0]:continue
-                choices.append((ticker,b[-1][0],b[-1][1],signal(wid,[p for _,p in b])))
+                choices.append((ticker,b[-1][0],b[-1][1],signal(wid,[p for _,p in b],record.get("generation_index",0))))
             action="HOLD"
             for ticker,timestamp,price,s in choices:
                 kind="crypto" if ticker in COINS else "us_equity"
@@ -101,7 +118,7 @@ def run_one(accounts,bars,now):
                 if ticker not in quotes:missing.append(ticker)
                 else:nav+=qty*quotes[ticker]
             verdict=council(acc.statement())
-            results[wid]={"action":action,"cash":acc.cash,"equity":None if missing else round(nav,4),
+            results[wid]={"action":action,"generation_index":record.get("generation_index",0),"cash":acc.cash,"equity":None if missing else round(nav,4),
                 "ledger_events":len(acc.events),"council":verdict["status"],"missing_quotes":missing}
         except Exception as e:results[wid]={"action":"QUARANTINED","equity":None,"error":str(e)}
     return results
@@ -125,9 +142,11 @@ def main():
       "Updated: "+now.isoformat(),"",
       "| Worker | Virtual action | Equity | Cash | Council |",
       "|---|---|---:|---:|---|"]
+    from generation_manager import alias
     for wid,r in result.items():
+        public_name=alias(wid,accounts[wid].get("generation_index",0))
         eq="Unavailable" if r.get("equity") is None else str(round(r["equity"],2))
-        lines.append("| {} | {} | {} | {} | {} |".format(wid,r["action"],eq,r.get("cash","—"),r.get("council","QUARANTINED")))
+        lines.append("| {} | {} | {} | {} | {} |".format(public_name,r["action"],eq,r.get("cash","—"),r.get("council","QUARANTINED")))
     lines+=["","**Review status:** Missing independently executable market quotes means",
       "the evidence council cannot certify a real-world trading edge.",""]
     (out/"DASHBOARD.md").write_text("\n".join(lines))

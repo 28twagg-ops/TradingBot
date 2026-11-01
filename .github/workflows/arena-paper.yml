@@ -7,6 +7,7 @@ on:
       - 'research/trading-arena/arena.py'
       - 'research/trading-arena/run_virtual.py'
       - 'research/trading-arena/config.json'
+      - 'research/trading-arena/generation_manager.py'
       - 'research/trading-arena/gemini_special.py'
       - 'research/trading-arena/gemini_cycle.py'
       - '.github/workflows/arena-paper.yml'
@@ -15,6 +16,9 @@ on:
     - cron: '17 */2 * * *'
     # Weekly Sunday specialist council, independent of routine Groq research
     - cron: '17 19 * * 0'
+    # One-time Nov 1, 2026 final-chance cutoff (Nov 2 05:41 UTC).
+    # Repeats annually but date-gated in generation_manager, so no 2027 reset.
+    - cron: '41 5 2 11 *'
 
 permissions:
   contents: write
@@ -51,6 +55,8 @@ jobs:
       - name: Run all 10 simulated workers, never broker orders
         run: |
           python research/trading-arena/run_virtual.py --dir /tmp/arena-state/records/arena
+      - name: Record immutable versioned paper observations
+        run: python research/trading-arena/generation_manager.py --dir /tmp/arena-state/records/arena --record
       - name: Fair Groq quota fallback if hourly scheduler is delayed
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
@@ -59,12 +65,15 @@ jobs:
             --dir /tmp/arena-state/records/arena \
             --batch 5
       - name: Weekly Gemini specialist council (up to three free AI calls)
-        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '17 19 * * 0')
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && (github.event.schedule == '17 19 * * 0' || github.event.schedule == '41 5 2 11 *'))
         env:
           GEMINI_API_KEY: ${{ secrets.Gemini_API_Key }}
           GEMINI_MODEL: gemini-3.8-flash
         run: python research/trading-arena/gemini_special.py --dir /tmp/arena-state/records/arena
 
+      - name: Weekly council-led retirement and one-time final-chance archival
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && (github.event.schedule == '17 19 * * 0' || github.event.schedule == '41 5 2 11 *'))
+        run: python research/trading-arena/generation_manager.py --dir /tmp/arena-state/records/arena --review
       - name: Commit only Arena state to the separate ledger branch
         shell: bash
         run: |
