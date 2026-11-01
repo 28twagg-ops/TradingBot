@@ -6272,5 +6272,82 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC-USD hourly price trend backtest 20h lookback"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-11-01T00:40Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "ETH-USD hourly mean reversion to 12\u2011hour SMA",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "ed641f66de74c7",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Ethereum price today, ETH to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/ethereum/",
+        "snippet": "The live Ethereum price today is $2,242.10 USD with a 24-hour trading volume of $20,406,470,277.74 USD. We update our ETH to USD price in real-time.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Ethereum ETH (ETH-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/ETH-USD/",
+        "snippet": "Find the live Ethereum USD (ETH-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Ethereum (ETH) Blockchain Explorer",
+        "url": "https://etherscan.io/",
+        "snippet": "Explore Ethereum blockchain data, transactions, and smart contracts with Etherscan, the leading Ethereum block explorer.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Ethereum - The complete guide from ethereum.org",
+        "url": "https://ethereum.org/",
+        "snippet": "Ethereum is a decentralized platform for resilient apps and infrastructure. Control your money, data, and identity, with no bank or middleman needed.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "ETH-USD hourly mean reversion 12h SMA backtest results"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-11-01T00:40Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly VWAP calculation methodology empirical study 2024 2025",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "5f34e0172debb9",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly VWAP calculation methodology empirical study 2024 2025"
   }
 ]

@@ -727,6 +727,48 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-11-01T00:40Z",
+        "id": "5f34e0172debb9",
+        "topic": "BTC-USD hourly VWAP calculation methodology empirical study 2024 2025",
+        "hypothesis": "Hourly VWAP mean reversion after extreme deviations is driven by market microstructure frictions that dampen price swings within the hour",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "None available with hourly close data",
+        "source_search": {
+          "query": "BTC-USD hourly VWAP calculation methodology empirical study 2024 2025",
+          "attempted": [
+            "web",
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly VWAP calculation methodology empirical study 2024 2025",
+        "preferred_sources": [
+          "web",
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ]
   },
@@ -7660,6 +7702,73 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-11-01T00:40Z",
+        "id": "ed641f66de74c7",
+        "topic": "ETH-USD hourly mean reversion to 12\u2011hour SMA",
+        "hypothesis": "Hourly ETH-USD price tends to revert toward its 12\u2011hour simple moving average when the deviation exceeds 5% of the SMA, producing a profitable reversion trade within the same hour.",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Apply the 12\u2011hour SMA reversion rule to historical hourly ETH-USD data and compute cumulative PnL; if the strategy yields a negative return or a profit factor below 1, the hypothesis is falsified.",
+        "source_search": {
+          "query": "ETH-USD hourly mean reversion 12h SMA backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Ethereum price today, ETH to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/ethereum/",
+            "snippet": "The live Ethereum price today is $2,242.10 USD with a 24-hour trading volume of $20,406,470,277.74 USD. We update our ETH to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Ethereum ETH (ETH-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/ETH-USD/",
+            "snippet": "Find the live Ethereum USD (ETH-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Ethereum (ETH) Blockchain Explorer",
+            "url": "https://etherscan.io/",
+            "snippet": "Explore Ethereum blockchain data, transactions, and smart contracts with Etherscan, the leading Ethereum block explorer.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Ethereum - The complete guide from ethereum.org",
+            "url": "https://ethereum.org/",
+            "snippet": "Ethereum is a decentralized platform for resilient apps and infrastructure. Control your money, data, and identity, with no bank or middleman needed.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "ETH-USD hourly mean reversion 12h SMA backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ]
   }

@@ -6,6 +6,8 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-01T00:40Z | S01 | BTC-USD hourly VWAP calculation methodology empi | 5f34e0172debb9 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-01T00:40Z | S10 | ETH-USD hourly mean reversion to 12‑hour SMA | ed641f66de74c7 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T00:07Z | S07 | Hourly trend persistence in BTC-USD | f537a85f2582c1 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-10-31T23:29Z | S05 | Opening Range Breakout on BTC-USD | 1f944ff888891d | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T23:29Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | 168125a29d695c | RESEARCH_ONLY_NEEDS_DATA |
@@ -39,8 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-31T12:32Z | S06 | BTC‑USD relative strength to SPY 24‑hour momentu | b125d75e722870 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T12:27Z | S09 | BTC-USD hourly price reaction to cross‑market se | d5827d075d5911 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T12:26Z | S04 | Hourly gap‑up mean reversion in BTC‑USD | 0415b6bbf48b2c | HOLD_INSUFFICIENT_HISTORY |
-| 2026-10-31T12:25Z | S01 |  | AI_UNAVAILABLE |  |
-| 2026-10-31T12:25Z | S08 | Volatility compression mean reversion in BTC-USD | a352dce77b6f4a | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
