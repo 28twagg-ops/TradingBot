@@ -57,10 +57,14 @@ class GroqResearchTests(unittest.TestCase):
                     {"platform":"reddit","title":"An unpopular trade idea",
                      "url":"https://www.reddit.com/r/algotrading/comments/example",
                      "snippet":"unverified hypothesis","read_level":"public_search_result_only"}]}):
-            event=one_turn(accounts,feed,fake_model,self.now)
+            event=one_turn(accounts,feed,fake_model,self.now,local_leads=[{
+                "source":"UNVERIFIED_LOCAL_LLAMA_RESEARCH_ONLY",
+                "worker":"S01","hypothesis":"No trade until out-of-sample validation"}])
         self.assertEqual(event["status"],"RESEARCHED")
         self.assertEqual(len(calls),1)
         self.assertIn("eligible_symbols",calls[0])
+        self.assertEqual(len(calls[0]["local_llama_hypotheses_untrusted"]),1)
+        self.assertTrue(calls[0]["local_ideas_are_only_leads"])
         self.assertEqual(event["sources_found"],1)
         self.assertEqual(event["source_leads"][0]["platform"],"reddit")
         self.assertEqual(accounts[event["worker"]]["groq_experiments"][0]["next_search_query"],
