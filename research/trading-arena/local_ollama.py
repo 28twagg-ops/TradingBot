@@ -102,10 +102,11 @@ class OllamaResearch:
                 "messages": [{"role":"system","content":policy},
                              {"role":"user","content":prompt}],
                 "format":IDEA_SCHEMA, "stream":False, "keep_alive":"10m",
-                # Qwen3's thinking trace is not needed for cheap structured
-                # exploration and otherwise consumes substantial latency.
-                "think": False if self.model.startswith("qwen3:") else None,
                 "options":{"temperature":0.25,"num_ctx":4096,"num_predict":1500}}
+        # Only Qwen3 receives this optional flag. Legacy Llama adapters should
+        # not receive JSON null for 'think' (older Ollama servers may reject it).
+        if self.model.startswith("qwen3:"):
+            body["think"] = False
         request = urllib.request.Request(
             ENDPOINT, data=json.dumps(body).encode("utf-8"), method="POST",
             headers={"Content-Type":"application/json"})
