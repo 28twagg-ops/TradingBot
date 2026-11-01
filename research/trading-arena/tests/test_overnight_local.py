@@ -1,5 +1,6 @@
 """Offline safety and integration tests for overnight laptop research."""
 import datetime as dt
+import ctypes
 import io
 import json
 import os
@@ -8,12 +9,12 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 
 from local_ollama import OllamaResearch, local_model_name, available_models
 from overnight_local import (WORKERS, within_window, queue_record, read_history,
-                             research_account, sync_pending, run_round, lock_acquire)
+                             research_account, sync_pending, run_round, lock_acquire, process_running)
 from run_virtual import initial, UTC
 
 
@@ -93,6 +94,27 @@ class LocalLlamaTests(unittest.TestCase):
             with patch("overnight_local.os.kill",side_effect=ProcessLookupError):
                 renewed=lock_acquire(data)
             self.assertEqual(renewed,acquired)
+
+    def test_windows_lock_probe_never_sends_kill_zero(self):
+        # os.kill(pid, 0) terminates the target on Windows, unlike POSIX.
+        kernel32 = Mock()
+        kernel32.OpenProcess.return_value = 123
+        def live_exit_code(handle, output):
+            output._obj.value = 259  # STILL_ACTIVE
+            return 1
+        kernel32.GetExitCodeProcess.side_effect = live_exit_code
+        with patch("overnight_local.os.name", "nt"), patch.object(
+                ctypes, "WinDLL", return_value=kernel32, create=True), patch(
+                "overnight_local.os.kill", side_effect=AssertionError("Unsafe Windows signal")):
+            self.assertTrue(process_running(4321))
+            kernel32.OpenProcess.assert_called_with(0x1000, False, 4321)
+            kernel32.CloseHandle.assert_called_with(123)
+            kernel32.OpenProcess.return_value = None
+            with patch.object(ctypes, "get_last_error", return_value=87, create=True):
+                self.assertFalse(process_running(999999))
+            with patch.object(ctypes, "get_last_error", return_value=5, create=True):
+                with self.assertRaises(PermissionError):
+                    process_running(4321)
 
     def test_a_research_round_queues_ten_isolated_no_trade_events(self):
         with tempfile.TemporaryDirectory() as root:
