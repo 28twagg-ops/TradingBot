@@ -6928,5 +6928,156 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC-USD hourly VWAP calculation methodology empirical study 2024 2025"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-11-01T15:05Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly gap\u2011down >2% followed by short\u2011term momentum",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "0c3a29614daef2",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly gap\u2011down >2% next\u2011hour return distribution"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-11-01T15:06Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly mean reversion lag 4",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 5,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 7,
+        "end": 497,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 497,
+        "end": 711,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "1ee41808ca01f1",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly returns lag 4 autocorrelation 2024 empirical study"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-11-01T15:07Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "Opening Range Breakout on BTC-USD",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "195de41e921b9d",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "obtain BTC-USD hourly close price data 2019\u20112026"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-11-01T15:07Z",
+    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "reason": "ValueError",
+    "validation_stage": "MODEL_FIELDS_OR_RESEARCH_EVIDENCE"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-11-01T15:08Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD Monday first\u2011hour return conditioned on Friday 5\u2011hour MA slope",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "94fa0464f138d8",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "What Is Bitcoin (BTC)? Bitcoin is a decentralized cryptocurrency originally described in a 2008 whitepaper by a person, or group of people, using the alias Satoshi Nakamoto.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "What is Bitcoin price today? The current price of Bitcoin (BTC) is 77,540 USD \u2014 it has risen 0.30 % in the past 24 hours. Try placing this info into the context by checking out what coins are also gaining and losing at the moment and seeing",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin Price: BTC/USD Live Price Chart, Market Cap & News Today ...",
+        "url": "https://www.coingecko.com/en/coins/bitcoin",
+        "snippet": "Price of Bitcoin (BTC) today is $77,696.16 with a 24-hour trading volume of $36,344,815,176. Track Bitcoin's live price, market cap, news, and more on CoinGecko.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD Monday first hour return distribution conditioned on Friday 5\u2011hour MA slope statistical analysis"
   }
 ]

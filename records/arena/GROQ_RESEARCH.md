@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-01T15:08Z | S02 | BTC-USD Monday first‑hour return conditioned on  | 94fa0464f138d8 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T15:07Z | S08 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
+| 2026-11-01T15:07Z | S05 | Opening Range Breakout on BTC-USD | 195de41e921b9d | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T15:06Z | S03 | BTC-USD hourly mean reversion lag 4 | 1ee41808ca01f1 | HOLD |
+| 2026-11-01T15:05Z | S04 | BTC-USD hourly gap‑down >2% followed by short‑te | 0c3a29614daef2 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T13:31Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | 9bdced9ed804dd | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-01T13:30Z | S10 | ETH-USD hourly trend persistence | 338aa58ca6e3cb | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T13:29Z | S07 | BTC-USD hourly trend persistence | aa422c270d05d5 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-31T23:27Z | S03 | Hourly BTC‑USD mean‑reversion at 4‑hour lag | 7912e69c464728 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-10-31T23:27Z | S08 | Hourly realized volatility mean reversion in Bit | 19a16990a7585b | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T18:39Z | S07 | Hourly trend persistence in BTC-USD | 4fa3269f3883b9 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-10-31T18:39Z | S06 | BTC-USD relative strength to SPY 24h momentum tr | 18c947206447c7 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-31T18:38Z | S02 | BTC-USD Monday first‑hour return conditioned on  | 00280a489d5545 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-10-31T18:37Z | S08 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
-| 2026-10-31T18:37Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | bbfcd57ba7de98 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-31T17:46Z | S04 | Hourly gap‑down >2% in BTC‑USD followed by 5‑hou | 553b5532b9abd0 | HOLD |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

@@ -1831,6 +1831,73 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T15:08Z",
+        "id": "94fa0464f138d8",
+        "topic": "BTC-USD Monday first\u2011hour return conditioned on Friday 5\u2011hour MA slope",
+        "hypothesis": "If the slope of the 5\u2011hour moving average on Friday is positive, the first hour of trading on Monday tends to be positive; a trend\u2011following rule can exploit this pattern.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compare Monday first\u2011hour returns on days with positive vs negative Friday 5\u2011hour MA slopes; reject if mean difference < 0.01 or p\u2011value > 0.05.",
+        "source_search": {
+          "query": "BTC-USD Monday first hour return trend conditioned on Friday 5\u2011hour MA slope",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/BTC-USD/",
+            "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "What Is Bitcoin (BTC)? Bitcoin is a decentralized cryptocurrency originally described in a 2008 whitepaper by a person, or group of people, using the alias Satoshi Nakamoto.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "What is Bitcoin price today? The current price of Bitcoin (BTC) is 77,540 USD \u2014 it has risen 0.30 % in the past 24 hours. Try placing this info into the context by checking out what coins are also gaining and losing at the moment and seeing",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin Price: BTC/USD Live Price Chart, Market Cap & News Today ...",
+            "url": "https://www.coingecko.com/en/coins/bitcoin",
+            "snippet": "Price of Bitcoin (BTC) today is $77,696.16 with a 24-hour trading volume of $36,344,815,176. Track Bitcoin's live price, market cap, news, and more on CoinGecko.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "BTC-USD Monday first hour return distribution conditioned on Friday 5\u2011hour MA slope statistical analysis",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ]
   },
@@ -2664,6 +2731,59 @@
         ],
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T15:06Z",
+        "id": "1ee41808ca01f1",
+        "topic": "BTC-USD hourly mean reversion lag 4",
+        "hypothesis": "Hourly BTC-USD returns exhibit mean reversion at lag 4, such that a negative return at time t-4 predicts a positive return at time t, and vice versa.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 5,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 497,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 497,
+            "end": 711,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "validation_issue": null,
+        "falsification_test": "Compute lag\u20114 autocorrelation of hourly returns and test against zero using a t\u2011test; if p>0.05, reject hypothesis.",
+        "source_search": {
+          "query": "BTC\u2011USD hourly mean reversion lag 4 2024 empirical study",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly returns lag 4 autocorrelation 2024 empirical study",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 0
       }
@@ -3593,6 +3713,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T15:05Z",
+        "id": "0c3a29614daef2",
+        "topic": "BTC-USD hourly gap\u2011down >2% followed by short\u2011term momentum",
+        "hypothesis": "After an hourly gap\u2011down of more than 2%, the next hour\u2019s return exceeds +1% in at least 60% of cases, indicating a momentum continuation rather than mean reversion.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compute the proportion of 1\u2011hour returns >1% following >2% gap\u2011downs; if <60% the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly gap\u2011down >2% events 5\u2011hour return distribution statistics",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly gap\u2011down >2% next\u2011hour return distribution",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ],
     "ai_seen": {
@@ -4319,6 +4477,44 @@
         "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
         "validation_issue": null,
         "falsification_test": "Compare 4\u2011hour returns following breakout vs. non\u2011breakout periods; reject if mean return < 0 or Sharpe < 0.5.",
+        "source_search": {
+          "query": "obtain BTC-USD hourly close price data 2019\u20112026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "obtain BTC-USD hourly close price data 2019\u20112026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T15:07Z",
+        "id": "195de41e921b9d",
+        "topic": "Opening Range Breakout on BTC-USD",
+        "hypothesis": "If BTC-USD closes above the high of the previous 5 hourly bars, a breakout occurs and the price will trend upward for at least the next 5 hours.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compare post\u2011breakout 5\u2011hour returns to a random\u2011time baseline; a statistically significant positive mean would support the hypothesis.",
         "source_search": {
           "query": "obtain BTC-USD hourly close price data 2019\u20112026",
           "attempted": [
