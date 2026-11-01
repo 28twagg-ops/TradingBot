@@ -18,8 +18,8 @@ def special_review(root, provider=gemini_json):
     recent=[{"worker":x.get("worker"),"topic":x.get("topic"),
              "strategy":x.get("strategy"),"test":x.get("test"),
              "status":x.get("status"),"paper_action":x.get("action")}
-            for x in source[-25:]]
-    local_ideas=read_local_ideas(p, limit=12)
+            for x in source[-12:]]
+    local_ideas=read_local_ideas(p, limit=10)
     if not recent and not local_ideas:
         return {"status":"NO_RESEARCH_TO_REVIEW","judges":{},"provider_requests":0}
     report={"status":"PAPER_EVIDENCE_REVIEW","date":dt.datetime.now(dt.timezone.utc).date().isoformat(),
