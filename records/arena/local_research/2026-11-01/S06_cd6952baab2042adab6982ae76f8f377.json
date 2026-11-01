@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "cd6952baab2042adab6982ae76f8f377",
+  "worker": "S06",
+  "cycle": "2026-11-01T07:24Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S06",
+    "cycle": "2026-11-01T07:24Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD relative strength mean reversion after 30-hour deviation exceeding 8%",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "daily_bars",
+        "daily_bars"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "666a3c5f15caaf",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "FX Replay | Futures, Forex & Crypto Backtesting Platform",
+        "url": "https://fxreplay.com/",
+        "snippet": "What markets can I backtest on FX Replay? FX Replay supports backtesting across Futures, Forex pairs, Indices, Metals, Energy, Stocks, Crypto, and Agricultural markets. Historical data goes back as far as 2012 for major Futures contracts an",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Backtest Portfolio Asset Allocation",
+        "url": "https://www.portfoliovisualizer.com/backtest-portfolio",
+        "snippet": "You can analyze and backtest portfolio returns, risk characteristics, style exposures, and drawdowns. The results cover both returns and fund fundamentals based portfolio style analysis along with risk and return decomposition by each portf",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BacktestingMax - Free Trading Strategy Backtesting Software",
+        "url": "https://www.backtestingmax.com/",
+        "snippet": "Free backtesting software: replay 1-minute historical data, have the AI backtest a strategy for you, or practice prop firm challenges under real rules.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "A-Backtest — Bar Replay Trading Trainer",
+        "url": "https://abacktest.com/",
+        "snippet": "Backtest forex, crypto, gold and indices with realistic bar replay. Practice on real historical charts candle by candle — orders, SL/TP, risk sizing, indicators and a built-in trade journal. Free until 31 Dec 2026, runs in your browser.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Backtest results of BTC-USD relative strength mean reversion over 30-hour lookback with 8% threshold on TradingView or independent",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T07:24Z",
+    "id": "666a3c5f15caaf",
+    "topic": "BTC-USD relative strength mean reversion after 30-hour deviation exceeding 8%",
+    "hypothesis": "BTC-USD relative strength exhibits mean reversion after a 30-hour deviation exceeding 8% of its historical mean, with reversion occurring within 12 hours of deviation onset.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "daily_bars",
+        "daily_bars"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "No backtest results from TradingView or independent sources show that BTC-USD relative strength reverts to mean after a 30-hour deviation exceeding 8% over at least 100 historical periods with statistically significant p-values (p < 0.05) in a controlled, timestamp-leak-free environment.",
+    "source_search": {
+      "query": "Backtest results of BTC-USD relative strength reversion to mean over 30-hour lookback with 8% threshold on TradingView or independ",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "FX Replay | Futures, Forex & Crypto Backtesting Platform",
+        "url": "https://fxreplay.com/",
+        "snippet": "What markets can I backtest on FX Replay? FX Replay supports backtesting across Futures, Forex pairs, Indices, Metals, Energy, Stocks, Crypto, and Agricultural markets. Historical data goes back as far as 2012 for major Futures contracts an",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Backtest Portfolio Asset Allocation",
+        "url": "https://www.portfoliovisualizer.com/backtest-portfolio",
+        "snippet": "You can analyze and backtest portfolio returns, risk characteristics, style exposures, and drawdowns. The results cover both returns and fund fundamentals based portfolio style analysis along with risk and return decomposition by each portf",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BacktestingMax - Free Trading Strategy Backtesting Software",
+        "url": "https://www.backtestingmax.com/",
+        "snippet": "Free backtesting software: replay 1-minute historical data, have the AI backtest a strategy for you, or practice prop firm challenges under real rules.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "A-Backtest — Bar Replay Trading Trainer",
+        "url": "https://abacktest.com/",
+        "snippet": "Backtest forex, crypto, gold and indices with realistic bar replay. Practice on real historical charts candle by candle — orders, SL/TP, risk sizing, indicators and a built-in trade journal. Free until 31 Dec 2026, runs in your browser.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Backtest results of BTC-USD relative strength mean reversion over 30-hour lookback with 8% threshold on TradingView or independent",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "daily_bars",
+      "daily_bars",
+      "daily_bars"
+    ],
+    "hypothesis_timeframe": "30-hour lookback, 12-hour reversion window",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

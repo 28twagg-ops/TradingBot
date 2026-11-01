@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "e7c7feb39ece4fe599086414b9a9eb84",
+  "worker": "S08",
+  "cycle": "2026-11-01T05:34Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S08",
+    "cycle": "2026-11-01T05:34Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Volatility compression and mean reversion in BTC-USD using hourly realized volatility",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "hourly_close",
+        "hourly_close",
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "3124d340f5cb28",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "academic",
+        "title": "Google",
+        "url": "https://www.google.com/xhtml/search",
+        "snippet": "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "academic",
+        "title": "Yahoo Search - Web Search",
+        "url": "https://search.yahoo.com/",
+        "snippet": "Type a question and get a clear answer with trusted sources. Yahoo Scout helps you understand more, faster. Golden State Valkyries vs Atlanta Dream: WNBA Finals game 7 time, channel. 2026 Daytime...",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "academic",
+        "title": "Search - Microsoft Bing",
+        "url": "https://www.bing.com/",
+        "snippet": "Search with Microsoft Bing and use the power of AI to find information, explore webpages, images, videos, maps, and more. A smart search engine for the forever curious.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "search for publicly available hourly realized volatility dataset for BTC-USD with 20-period rolling window and mean reversion vali",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T05:34Z",
+    "id": "3124d340f5cb28",
+    "topic": "Volatility compression and mean reversion in BTC-USD using hourly realized volatility",
+    "hypothesis": "When hourly realized volatility in BTC-USD exceeds a 20-period threshold of 0.08, price reversion to mean occurs within the next 12 hours with a probability greater than 70%.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "hourly_close",
+        "hourly_close",
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If hourly realized volatility in BTC-USD exceeds 0.08 over a 20-period window and the price does not revert to a mean level within the next 12 hours, the hypothesis is falsified.",
+    "source_search": {
+      "query": "search for publicly available hourly realized volatility dataset for BTC-USD",
+      "attempted": [
+        "academic",
+        "web"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "academic",
+        "title": "Google",
+        "url": "https://www.google.com/xhtml/search",
+        "snippet": "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "academic",
+        "title": "Yahoo Search - Web Search",
+        "url": "https://search.yahoo.com/",
+        "snippet": "Type a question and get a clear answer with trusted sources. Yahoo Scout helps you understand more, faster. Golden State Valkyries vs Atlanta Dream: WNBA Finals game 7 time, channel. 2026 Daytime...",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "academic",
+        "title": "Search - Microsoft Bing",
+        "url": "https://www.bing.com/",
+        "snippet": "Search with Microsoft Bing and use the power of AI to find information, explore webpages, images, videos, maps, and more. A smart search engine for the forever curious.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "search for publicly available hourly realized volatility dataset for BTC-USD with 20-period rolling window and mean reversion vali",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "hourly_close",
+      "hourly_close",
+      "hourly_close"
+    ],
+    "hypothesis_timeframe": "12 hours",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

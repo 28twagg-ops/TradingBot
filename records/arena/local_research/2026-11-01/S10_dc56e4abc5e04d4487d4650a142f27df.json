@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "dc56e4abc5e04d4487d4650a142f27df",
+  "worker": "S10",
+  "cycle": "2026-11-01T07:30Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S10",
+    "cycle": "2026-11-01T07:30Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "ETH-USD hourly mean reversion to 24-hour moving average with 3% threshold",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "06fec1f8903fd3",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Ethereum price today, ETH to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/ethereum/",
+        "snippet": "Ethereum is a decentralized open-source blockchain system that features its own cryptocurrency, Ether. ETH works as a platform for numerous other cryptocurrencies, as well as for the execution of decentralized smart contracts. Ethereum was ",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Ethereum ETH (ETH-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/ETH-USD/",
+        "snippet": "Find the live Ethereum USD (ETH-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "ETHUSD — Ethereum Price Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/ETHUSD/",
+        "snippet": "Watch live Ethereum to Dollar charts, follow ETH USD prices in real-time, get historical data. Check the Ethereum market cap, top trading ideas and forecasts.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "ETH-USD hourly mean reversion 24h SMA backtest results with 3% threshold and error metrics including R-squared, RMSE, and Sharpe r",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T07:30Z",
+    "id": "06fec1f8903fd3",
+    "topic": "ETH-USD hourly mean reversion to 24-hour moving average with 3% threshold",
+    "hypothesis": "ETH-USD hourly price movements exhibit mean reversion to a 24-hour moving average with a 3% threshold, resulting in a statistically significant reversal probability after deviations exceeding the threshold.",
+    "candidate": null,
+    "symbol": "ETH-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If ETH-USD hourly returns exhibit no mean reversion to a 24-hour moving average within a 3% threshold over at least 100 consecutive trading hours, and this holds across multiple backtest runs with consistent error metrics, the hypothesis is falsified.",
+    "source_search": {
+      "query": "ETH-USD hourly mean reversion 24h SMA backtest results with 3% threshold and error metrics",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Ethereum price today, ETH to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/ethereum/",
+        "snippet": "Ethereum is a decentralized open-source blockchain system that features its own cryptocurrency, Ether. ETH works as a platform for numerous other cryptocurrencies, as well as for the execution of decentralized smart contracts. Ethereum was ",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Ethereum ETH (ETH-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/ETH-USD/",
+        "snippet": "Find the live Ethereum USD (ETH-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "ETHUSD — Ethereum Price Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/ETHUSD/",
+        "snippet": "Watch live Ethereum to Dollar charts, follow ETH USD prices in real-time, get historical data. Check the Ethereum market cap, top trading ideas and forecasts.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "ETH-USD hourly mean reversion 24h SMA backtest results with 3% threshold and error metrics including R-squared, RMSE, and Sharpe r",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "daily_bars",
+      "volume",
+      "volume"
+    ],
+    "hypothesis_timeframe": "100 consecutive trading hours",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

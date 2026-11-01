@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "eb4dd68bc6784bae86c71c237a80a2b7",
+  "worker": "S09",
+  "cycle": "2026-11-01T14:14Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S09",
+    "cycle": "2026-11-01T14:14Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Bitcoin price reversion after sharp 5% drop in 40-hour window",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "social_signal",
+        "cross_asset",
+        "cross_asset"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "2f46f63a1e13ed",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "the Codex – A secret community of Escape Room Enthusiasts",
+        "url": "https://thecodex.ca/",
+        "snippet": "A secret community of Escape Room Enthusiasts",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "About – the Codex",
+        "url": "https://thecodex.ca/about/",
+        "snippet": "Errol Elumir () wanted a place to store articles he wrote about the escape room industry, and that eventually evolved into a small community of escape room enthusiasts. He is a puzzle creator and a…",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "A secret community of Escape Room Enthusiasts - the Codex",
+        "url": "https://thecodex.ca/page/2/",
+        "snippet": "A secret community of Escape Room Enthusiasts",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Public social media narratives and community posts about Bitcoin price drops and subsequent recoveries in 2026, with timestamps, 4",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T14:14Z",
+    "id": "2f46f63a1e13ed",
+    "topic": "Bitcoin price reversion after sharp 5% drop in 40-hour window",
+    "hypothesis": "After a 5% price drop within a 40-hour window, Bitcoin will revert to its prior price level within the next 24 hours, based on crowd sentiment shifts and public narrative momentum.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "social_signal",
+        "cross_asset",
+        "cross_asset"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "No Bitcoin price event with a 5% drop in a 40-hour window is followed by a reversion within 24 hours, across at least 100 such events in the dataset.",
+    "source_search": {
+      "query": "Bitcoin price events with 5% drop in 40-hour window, followed by price reversion within 24 hours, hourly close data, 2026-11-01 to",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "the Codex – A secret community of Escape Room Enthusiasts",
+        "url": "https://thecodex.ca/",
+        "snippet": "A secret community of Escape Room Enthusiasts",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "About – the Codex",
+        "url": "https://thecodex.ca/about/",
+        "snippet": "Errol Elumir () wanted a place to store articles he wrote about the escape room industry, and that eventually evolved into a small community of escape room enthusiasts. He is a puzzle creator and a…",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "A secret community of Escape Room Enthusiasts - the Codex",
+        "url": "https://thecodex.ca/page/2/",
+        "snippet": "A secret community of Escape Room Enthusiasts",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Public social media narratives and community posts about Bitcoin price drops and subsequent recoveries in 2026, with timestamps, 4",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "social_signal",
+      "cross_asset",
+      "cross_asset"
+    ],
+    "hypothesis_timeframe": "2026-11-01 to present",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "23c3ca20540c414d990e9fe0b9095c3b",
+  "worker": "S01",
+  "cycle": "2026-11-01T00:58Z",
+  "model": "qwen3:8b",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S01",
+    "cycle": "2026-11-01T00:58Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "safe_error": "PROVIDER_ERROR",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:8b",
+    "research_only": true
+  },
+  "experiment": {}
+}

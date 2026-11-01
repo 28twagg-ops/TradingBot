@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "6b042cb88b3242ef9e5c611a680039a3",
+  "worker": "S09",
+  "cycle": "2026-11-01T15:09Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S09",
+    "cycle": "2026-11-01T15:09Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Bitcoin price reversion after sharp 5% drop in 30-hour window",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume",
+        "social_signal",
+        "cross_asset"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "5ceb3c8a94305c",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Stocks, Bonds, Crypto & Options AI Investing App - Public.com",
+        "url": "https://public.com/",
+        "snippet": "Trade stocks, bonds, options, ETFs, crypto, Treasuries, and prediction markets. Build AI trading agents. Access IRAs, direct indexing, high-yield cash, margin, and ...",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Publix: Where Shopping is a Pleasure | Publix Super Markets",
+        "url": "https://www.publix.com/",
+        "snippet": "Welcome to Publix Super Markets. We are the largest and fastest-growing employee-owned supermarket chain in the United States. We are successful because we are committed to making shopping a pleasure at our stores while striving to be the p",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Login | Public.com",
+        "url": "https://public.com/login",
+        "snippet": "The investing platform for the agentic age Multi-asset investing",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Public social media narratives and community posts about Bitcoin price drops and subsequent recoveries in 2026, with timestamps, 4",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T15:09Z",
+    "id": "5ceb3c8a94305c",
+    "topic": "Bitcoin price reversion after sharp 5% drop in 30-hour window",
+    "hypothesis": "After a 5% price drop within a 30-hour window, Bitcoin will revert to its prior price level within 24 hours with a probability greater than 50%.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume",
+        "social_signal",
+        "cross_asset"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "No price reversion occurs within 24 hours after a 5% drop in a 30-hour window, across at least 100 events in the dataset.",
+    "source_search": {
+      "query": "Public social media narratives and community posts about Bitcoin price drops and subsequent recoveries in 2026, with timestamps, 4",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Stocks, Bonds, Crypto & Options AI Investing App - Public.com",
+        "url": "https://public.com/",
+        "snippet": "Trade stocks, bonds, options, ETFs, crypto, Treasuries, and prediction markets. Build AI trading agents. Access IRAs, direct indexing, high-yield cash, margin, and ...",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Publix: Where Shopping is a Pleasure | Publix Super Markets",
+        "url": "https://www.publix.com/",
+        "snippet": "Welcome to Publix Super Markets. We are the largest and fastest-growing employee-owned supermarket chain in the United States. We are successful because we are committed to making shopping a pleasure at our stores while striving to be the p",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Login | Public.com",
+        "url": "https://public.com/login",
+        "snippet": "The investing platform for the agentic age Multi-asset investing",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Public social media narratives and community posts about Bitcoin price drops and subsequent recoveries in 2026, with timestamps, 4",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "volume",
+      "social_signal",
+      "cross_asset"
+    ],
+    "hypothesis_timeframe": "2026-11-01 to present",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
