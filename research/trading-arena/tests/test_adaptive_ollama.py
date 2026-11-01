@@ -60,7 +60,8 @@ class AdaptiveLocalTests(unittest.TestCase):
                 selected.append((model, kwargs["model_selector"]("S01")))
                 kwargs["on_result"]({
                     "model":model,"worker":"S01","status":"RESEARCHED",
-                    "local_metrics":{"tokens_per_second":14.2,"elapsed_seconds":9.7}})
+                    "local_metrics":{"tokens_per_second":14.2,"elapsed_seconds":9.7,
+                                     "hardware_snapshot":hardware(11.3,42.5)}})
                 return 1
             with patch("overnight_local.available_models",return_value=[BASE,STRONG]), patch(
                 "overnight_local.run_round",side_effect=dry_run), patch(
@@ -73,6 +74,9 @@ class AdaptiveLocalTests(unittest.TestCase):
             self.assertIn("qwen3:4b-instruct",report)
             records=json.loads(Path(root,"model_runtime.json").read_text())
             self.assertEqual(records["records"][0]["model"],BASE)
+            self.assertEqual(records["records"][0]["cpu_percent"],42.5)
+            self.assertEqual(records["records"][0]["free_ram_gb"],11.3)
+            self.assertIn("42.5",report)
 
     def test_no_cloud_fallback_or_uninstalled_models(self):
         with tempfile.TemporaryDirectory() as root:
