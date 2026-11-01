@@ -426,7 +426,7 @@ def lock_acquire(data):
 
 def main(argv=None):
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", default=os.getenv("ARENA_OLLAMA_MODEL","qwen3:8b"))
+    parser.add_argument("--model", default=os.getenv("ARENA_OLLAMA_MODEL","qwen3:4b-instruct"))
     parser.add_argument("--parallel",type=int,choices=(1,2),default=1,
                         help="Parallel research lanes (2 only when RAM/VRAM allows)")
     parser.add_argument("--smoke", action="store_true",
@@ -435,6 +435,8 @@ def main(argv=None):
                         help="One research pass, any hour, useful for testing")
     parser.add_argument("--trial", action="store_true",
                         help="Two-worker real inference + paper-only GitHub sync trial")
+    parser.add_argument("--sync-only", action="store_true",
+                        help="Recover pending append-only GitHub uploads, no AI inference")
     parser.add_argument("--data-dir", type=Path, default=DATA)
     args=parser.parse_args(argv)
     model=local_model_name(args.model)
@@ -443,13 +445,18 @@ def main(argv=None):
     if args.smoke:
         smoke(model)
         return 0
-    if args.trial and args.once:
-        parser.error("Choose --trial OR --once")
-    if model not in available_models():
+    if sum(bool(v) for v in (args.trial,args.once,args.sync_only))>1:
+        parser.error("Choose --trial OR --once OR --sync-only")
+    if not args.sync_only and model not in available_models():
         raise RuntimeError("OLLAMA_MODEL_NOT_INSTALLED_OR_SERVICE_OFFLINE")
     lock=lock_acquire(data)
     stats={}
     try:
+        if args.sync_only:
+            confirmed = sync_pending(data)
+            pending = len(list((data / "pending").glob("*.json")))
+            print("Confirmed GitHub sync:", confirmed, "; pending local records:", pending)
+            return 0 if pending == 0 else 2
         if args.trial:
             # Exactly two researchers to prove genuine parallelism, market
             # data integration and append-only upload before a full night.
