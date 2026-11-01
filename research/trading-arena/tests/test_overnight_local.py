@@ -43,9 +43,27 @@ class LocalLlamaTests(unittest.TestCase):
         self.assertEqual(x["allocation_fraction"],0)
         self.assertEqual(captured["url"],"http://127.0.0.1:11434/api/chat")
         self.assertEqual(captured["body"]["stream"],False)
-        self.assertEqual(captured["body"]["format"],"json")
+        self.assertEqual(captured["body"]["format"]["type"],"object")
+        self.assertIn("research_topic",captured["body"]["format"]["required"])
         self.assertEqual(captured["body"]["model"],"llama3.2:3b")
         self.assertNotIn("tools",captured["body"])
+
+    def test_smoke_does_not_abort_for_partial_but_safe_research_reply(self):
+        # An intermittent 3B answer omitting research_topic is a research
+        # quality issue, not a failed Ollama or GitHub installation.
+        from overnight_local import smoke
+        with patch("overnight_local.available_models",return_value=["llama3.2:3b"]), patch(
+                "overnight_local.OllamaResearch",return_value=lambda *_: {
+                    "action":"HOLD","symbol":None,"hypothesis":"needs independent review"}):
+            self.assertEqual(smoke("llama3.2:3b"),None)
+
+    def test_smoke_rejects_unsafe_action(self):
+        from overnight_local import smoke
+        with patch("overnight_local.available_models",return_value=["llama3.2:3b"]), patch(
+                "overnight_local.OllamaResearch",return_value=lambda *_: {
+                    "action":"BUY","symbol":"BTC-USD","research_topic":"unsafe"}):
+            with self.assertRaisesRegex(RuntimeError,"OLLAMA_SMOKE_UNSAFE_ACTION"):
+                smoke("llama3.2:3b")
 
     def test_invalid_local_json_fails_without_execution(self):
         sample=io.BytesIO(json.dumps({"message":{"content":"not JSON"}}).encode())
