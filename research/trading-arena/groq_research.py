@@ -588,9 +588,10 @@ def main():
            "Indicative historical closes are NOT executable quotes or real profits.","",
            "| UTC cycle | Worker | Topic | Experiment | Paper-only decision |",
            "|---|---|---|---|---|"]
+    from generation_manager import alias
     for e in events[-35:][::-1]:
         lines.append("| {} | {} | {} | {} | {} |".format(
-            str(e.get("cycle",""))[:20],e.get("worker",""),
+            str(e.get("cycle",""))[:20],alias(e.get("worker"),e.get("generation_index",0)),
             str(e.get("topic",""))[:48].replace("|","/"),
             e.get("experiment_id",e.get("status","")),
             str(e.get("action",""))[:60].replace("|","/")))
