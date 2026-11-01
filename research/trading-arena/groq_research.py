@@ -462,9 +462,25 @@ MAX_GROQ_REQUESTS_PER_UTC_DAY=DAILY_REQUEST_TARGET
 MAX_WORKERS_PER_JOB=MAX_BATCH
 
 
+# Final-chance cohort was chosen from the fixed Nov 1 morning paper balances.
+# Automatically reverts to ordinary fair rotation at the deadline.
+FINAL_CHANCE_WORKERS=("S09","S02","S07","S10","S06")
+FINAL_CHANCE_START=dt.datetime(2026,11,1,18,0,tzinfo=UTC)
+FINAL_CHANCE_END=dt.datetime(2026,11,2,5,30,tzinfo=UTC)
+
+
 def choose_due_workers(accounts,attempt_log,now,limit=MAX_BATCH):
-    """Compatibility wrapper; failures never masquerade as completed research."""
-    return eligible_worker_order(accounts,attempt_log,now,limit)
+    """Give the five loss leaders fair access to remaining free research quota.
+
+    A priority is NOT a promotion, performance finding or trading authorization.
+    Model API limits, retries/cooldowns and the global paper safety gates remain
+    exactly as before. After the cutoff, all 10 resume normal fair rotation.
+    """
+    active=(now.tzinfo is not None and
+            FINAL_CHANCE_START<=now.astimezone(UTC)<FINAL_CHANCE_END)
+    return eligible_worker_order(
+        accounts,attempt_log,now,limit,
+        priority_workers=FINAL_CHANCE_WORKERS if active else ())
 
 
 def main():
