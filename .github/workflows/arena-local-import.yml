@@ -5,6 +5,9 @@ on:
   schedule:
     # 13:32 UTC = 08:32 CDT / 07:32 CST, after the laptop's 07:00 Central stop.
     - cron: '32 13 * * *'
+    # Additional weekend import after the 10:00 Central stop, including DST.
+    # 16:32 UTC = 11:32 CDT / 10:32 CST Saturday and Sunday.
+    - cron: '32 16 * * 6,0'
 
 permissions:
   contents: write
