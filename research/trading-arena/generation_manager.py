@@ -154,8 +154,15 @@ def decision(record, slot, marks, now, final=False):
             or now - marks[-1][0] > dt.timedelta(hours=8)):
         return "DEFER_STALE_OR_BAD_EQUITY"
     if final:
-        # User-authorized one-off elimination, NOT a statistically proven loss.
-        # No successor inherits any claimed historical profit.
+        # Preserve a provisional paper survivor only with meaningful positive
+        # cumulative results and multiple future observations, not a one-day
+        # rebound. These are still INDICATIVE marks, never live-edge proof.
+        profitable = latest["equity"] > 100.5
+        dated = {(t.date()) for t, r in marks
+                 if r.get("equity") is not None and not r.get("missing_quotes")}
+        exits = sum(e.get("side") == "SELL" for e in record.get("events", []))
+        if profitable and len(marks) >= 60 and len(dated) >= 14 and exits >= 10:
+            return "RETAIN_PROVISIONAL_PAPER_ONLY"
         return "ROTATE_FINAL_CHANCE_UNPROVEN"
     age = (now - start).total_seconds() / 86400
     if age < MIN_AGE_DAYS:
