@@ -66,14 +66,29 @@ def register_windows(python, model, parallel=1):
     # The task is under the interactive user's account, not an administrator
     # service. Only local repo code runs; Windows sleep settings aren't changed.
     script = ROOT / "overnight_local.py"
-    cmd = ('$a=New-ScheduledTaskAction -Execute '+ps_quote(str(python))+
-           ' -Argument '+ps_quote('"' + str(script) + '" --model ' + model + ' --parallel ' + str(parallel) + ' --log')+
-           ';$t=New-ScheduledTaskTrigger -Daily -At "00:00"'+
+    # Daily wall-clock 00:00 scheduled triggers can shift across the fall
+    # DST transition on some Windows installations (seen as 11 PM the previous
+    # day, with the midnight run missed). Use a repeating 15-minute watchdog;
+    # overnight_local.py --scheduled checks America/Chicago independently and
+    # immediately exits outside its permitted window without reading accounts,
+    # running Ollama or overwriting yesterday's morning report.
+    #
+    # Keep the unattended service within its active user's session. Don't
+    # clobber an existing active job, which might abort an overnight run.
+    cmd = ('$old=Get-ScheduledTask -TaskName '+ps_quote(TASK)+
+           ' -ErrorAction SilentlyContinue'+
+           ';if($old -and $old.State -eq "Running"){ throw "ARENA_TASK_RUNNING_DEFER_SCHEDULE_UPDATE" }'+
+           ';$a=New-ScheduledTaskAction -Execute '+ps_quote(str(python))+
+           ' -Argument '+ps_quote('"' + str(script) + '" --model ' + model +
+                                 ' --parallel ' + str(parallel) + ' --scheduled --log')+
+           ';$t=New-ScheduledTaskTrigger -Once -At ((Get-Date).Date.AddDays(1)) '+
+           '-RepetitionInterval (New-TimeSpan -Minutes 15) '+
+           '-RepetitionDuration (New-TimeSpan -Days 3650)'+
            ';$s=New-ScheduledTaskSettingsSet -WakeToRun -StartWhenAvailable '+
            '-ExecutionTimeLimit (New-TimeSpan -Hours 12) -MultipleInstances IgnoreNew'+
            ';Register-ScheduledTask -TaskName '+ps_quote(TASK)+
            ' -Action $a -Trigger $t -Settings $s '+
-           '-Description "Paper-only overnight local trading research" -Force | Out-Null')
+           '-Description "Paper-only overnight local trading research, DST-safe checks" -Force | Out-Null')
     run("powershell.exe","-NoProfile","-NonInteractive","-Command",cmd,timeout=60)
 
 
@@ -185,7 +200,7 @@ def main(argv=None):
                   "reopen it once for the concurrency setting to take effect.")
         else:
             register_mac(python,model,parallel)
-    print("\nSETUP COMPLETE.", "Scheduled midnight Central." if not a.skip_task
+    print("\nSETUP COMPLETE.", "Window checks every 15 min; research only midnight Central." if not a.skip_task
           else "Scheduling skipped.")
     print("Keep laptop powered and awake, and Ollama running.")
     print("Research report:",DATA/"MORNING_REPORT.md")
