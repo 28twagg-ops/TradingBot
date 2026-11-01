@@ -5,7 +5,7 @@ import urllib.request
 
 ENDPOINT = "http://127.0.0.1:11434/api/chat"
 TAGS = "http://127.0.0.1:11434/api/tags"
-DEFAULT_MODEL = "llama3.2:3b"
+DEFAULT_MODEL = "qwen3:8b"
 
 # Llama 3B's strength is generating diverse research leads. A compact schema
 # reliably requests a falsifiable hypothesis while the larger Groq model can
@@ -102,6 +102,9 @@ class OllamaResearch:
                 "messages": [{"role":"system","content":policy},
                              {"role":"user","content":prompt}],
                 "format":IDEA_SCHEMA, "stream":False, "keep_alive":"10m",
+                # Qwen3's thinking trace is not needed for cheap structured
+                # exploration and otherwise consumes substantial latency.
+                "think": False if self.model.startswith("qwen3:") else None,
                 "options":{"temperature":0.25,"num_ctx":4096,"num_predict":1500}}
         request = urllib.request.Request(
             ENDPOINT, data=json.dumps(body).encode("utf-8"), method="POST",
