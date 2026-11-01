@@ -99,6 +99,12 @@ def search_web(query,channel="web",site_domain=None,fetcher=fetch_public_index):
     for item in root.findall(".//item")[:5]:
         link=url_for_display(item.findtext("link",""))
         if not link:continue
+        # Search providers can ignore site: filters. Discard any result
+        # from outside an explicitly selected channel or custom-site domain.
+        if chosen:
+            host=urllib.parse.urlsplit(link).hostname.lower()
+            if host!=chosen and not host.endswith("."+chosen):
+                continue
         results.append({"platform":channel if not site_domain else "custom_site",
                         "title":strip_markup(item.findtext("title",""))[:140],
                         "url":link,"snippet":strip_markup(item.findtext("description",""))[:240],

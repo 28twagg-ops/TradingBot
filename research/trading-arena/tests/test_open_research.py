@@ -47,6 +47,25 @@ class IndependentDiscoveryTests(unittest.TestCase):
         self.assertEqual(len(calls),1)
         self.assertEqual(url_for_display("https://localhost/secrets"),"")
         self.assertEqual(url_for_display("https://127.0.0.1/private"),"")
+    def test_bing_ignoring_academic_site_filter_is_not_evidence(self):
+        xml=(b'<rss><channel>'
+             b'<item><title>Dictionary</title><link>https://www.dictionary.com/browse/academic</link></item>'
+             b'<item><title>Actual paper</title><link>https://arxiv.org/abs/2601.12345</link></item>'
+             b'</channel></rss>')
+        found=search_web("BTC hourly risk","academic",fetcher=lambda _:xml)
+        self.assertEqual(len(found),1)
+        self.assertEqual(found[0]["url"],"https://arxiv.org/abs/2601.12345")
+
+    def test_custom_site_drops_wrong_domain_search_results(self):
+        xml=(b'<rss><channel>'
+             b'<item><title>Other</title><link>https://other.example/strategy</link></item>'
+             b'<item><title>Blog</title><link>https://www.example.com/paper</link></item>'
+             b'</channel></rss>')
+        found=search_web("BTC","web",site_domain="example.com",
+                         fetcher=lambda _:xml)
+        self.assertEqual(len(found),1)
+        self.assertEqual(found[0]["platform"],"custom_site")
+
     def test_git_repositories_are_metadata_not_executed(self):
         rows='{"items":[{"full_name":"hello/strange-strategy","html_url":"https://github.com/hello/strange-strategy","description":"unusual backtest script"}]}'
         items=search_github("unknown hedge",fetcher=lambda _:rows.encode())
