@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "1d3cd2d84eae4821b9bd4fe587e05cf6",
+  "worker": "S04",
+  "cycle": "2026-11-01T08:17Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S04",
+    "cycle": "2026-11-01T08:17Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Gap-down quality in BTC-USD: 5-hour mean reversion probability after 2% gap-down events",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "daily_bars",
+        "daily_bars"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "74bfe83e60ef17",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "The live Bitcoin price today is $77,395.59 USD with a 24-hour trading volume of $11,935,471,650.37 USD. We update our BTC to USD price in real-time.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart | CoinDesk",
+        "url": "https://www.coindesk.com/price/bitcoin",
+        "snippet": "Live Bitcoin price movements from all markets and BTC market cap, use our charts and see when there is an opportunity to buy or sell.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD hourly gap-down events >2% followed by 5-hour return distribution statistics with 5-hour return <2% and event count over 1",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T08:17Z",
+    "id": "74bfe83e60ef17",
+    "topic": "Gap-down quality in BTC-USD: 5-hour mean reversion probability after 2% gap-down events",
+    "hypothesis": "After a BTC-USD hourly gap-down exceeding 2%, the price will revert to its pre-gap level within 5 hours with a probability greater than 60%.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "daily_bars",
+        "daily_bars"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "No gap-down event >2% in BTC-USD followed by a 5-hour return below 2% over a 100-day period, despite sufficient data availability and consistent market conditions.",
+    "source_search": {
+      "query": "BTC-USD hourly gap-down events >2% followed by 5-hour return distribution statistics with 5-hour return <2%",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "The live Bitcoin price today is $77,395.59 USD with a 24-hour trading volume of $11,935,471,650.37 USD. We update our BTC to USD price in real-time.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart | CoinDesk",
+        "url": "https://www.coindesk.com/price/bitcoin",
+        "snippet": "Live Bitcoin price movements from all markets and BTC market cap, use our charts and see when there is an opportunity to buy or sell.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD hourly gap-down events >2% followed by 5-hour return distribution statistics with 5-hour return <2% and event count over 1",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "daily_bars",
+      "daily_bars",
+      "daily_bars"
+    ],
+    "hypothesis_timeframe": "100 days",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
