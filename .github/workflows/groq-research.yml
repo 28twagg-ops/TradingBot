@@ -34,6 +34,7 @@ jobs:
           path: source
           sparse-checkout: |
             research/trading-arena/
+            scripts/overnight/
             .github/workflows/groq-research.yml
           persist-credentials: false
       - name: Fetch only paper records
