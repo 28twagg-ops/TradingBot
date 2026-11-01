@@ -52,6 +52,27 @@ class AdaptiveLocalTests(unittest.TestCase):
                 for i in range(8):
                     self.assertEqual(r.choose("S01"), BASE)
 
+    def test_closed_ollama_daemon_is_restarted_locally_only(self):
+        from overnight_local import ensure_local_ollama
+        from urllib.error import URLError
+        with patch("overnight_local.available_models",return_value=[]), patch(
+                "overnight_local.shutil.which",return_value="/usr/bin/ollama"), patch(
+                "overnight_local.subprocess.Popen") as spawn, patch(
+                "overnight_local.time.sleep"), patch(
+                "overnight_local.urllib.request.urlopen",
+                side_effect=[URLError("offline"),io.BytesIO(b'{"version":"test"}')]) as probe:
+            ensure_local_ollama()
+        spawn.assert_called_once()
+        self.assertEqual(spawn.call_args.args[0],["ollama","serve"])
+        self.assertEqual(probe.call_count,2)
+
+    def test_running_daemon_does_not_spawn_duplicate(self):
+        from overnight_local import ensure_local_ollama
+        with patch("overnight_local.available_models",return_value=[BASE]), patch(
+                "overnight_local.subprocess.Popen",side_effect=AssertionError(
+                    "server already healthy must not start second daemon")):
+            self.assertIsNone(ensure_local_ollama())
+
     def test_manual_auto_once_selects_installed_model_without_broker_calls(self):
         from overnight_local import main
         with tempfile.TemporaryDirectory() as root:
