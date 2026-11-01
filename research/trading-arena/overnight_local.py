@@ -261,7 +261,7 @@ def smoke(model):
     print("Ollama local smoke test succeeded; no trades or GitHub changes.")
 
 
-def run_round(data, model, stats, allow_outside_window=False, now_fn=None, parallel=1):
+def run_round(data, model, stats, allow_outside_window=False, now_fn=None, parallel=1, workers=None):
     """Run up to two independent researchers at once; serialize disk/Git writes.
 
     All account copies are worker-private and model output is research-only.
@@ -270,6 +270,11 @@ def run_round(data, model, stats, allow_outside_window=False, now_fn=None, paral
     """
     if type(parallel) is not int or not 1 <= parallel <= 2:
         raise ValueError("PARALLEL_RESEARCH_LANES_MUST_BE_ONE_OR_TWO")
+    selected = WORKERS if workers is None else tuple(workers)
+    if not selected or len(selected) > len(WORKERS) or len(set(selected)) != len(selected):
+        raise ValueError("INVALID_TRIAL_WORKERS")
+    if any(worker not in WORKERS for worker in selected):
+        raise ValueError("UNKNOWN_TRIAL_WORKER")
     now_fn = now_fn or (lambda: dt.datetime.now(UTC))
     source = init_ledger(data)
     try:
@@ -305,7 +310,7 @@ def run_round(data, model, stats, allow_outside_window=False, now_fn=None, paral
     processed = 0
     print("Local research lanes:", parallel, "model:", model, flush=True)
     with ThreadPoolExecutor(max_workers=parallel, thread_name_prefix="arena-local") as pool:
-        futures = {pool.submit(research_one, worker): worker for worker in WORKERS}
+        futures = {pool.submit(research_one, worker): worker for worker in selected}
         for future in as_completed(futures):
             worker = futures[future]
             try:
@@ -398,6 +403,8 @@ def main(argv=None):
                         help="One local-only model response, no market/GitHub writes")
     parser.add_argument("--once", action="store_true",
                         help="One research pass, any hour, useful for testing")
+    parser.add_argument("--trial", action="store_true",
+                        help="Two-worker real inference + paper-only GitHub sync trial")
     parser.add_argument("--data-dir", type=Path, default=DATA)
     args=parser.parse_args(argv)
     model=local_model_name(args.model)
@@ -406,12 +413,20 @@ def main(argv=None):
     if args.smoke:
         smoke(model)
         return 0
+    if args.trial and args.once:
+        parser.error("Choose --trial OR --once")
     if model not in available_models():
         raise RuntimeError("OLLAMA_MODEL_NOT_INSTALLED_OR_SERVICE_OFFLINE")
     lock=lock_acquire(data)
     stats={}
     try:
-        if args.once:
+        if args.trial:
+            # Exactly two researchers to prove genuine parallelism, market
+            # data integration and append-only upload before a full night.
+            selected=WORKERS[:2]
+            run_round(data, model, stats, allow_outside_window=True,
+                      parallel=args.parallel, workers=selected)
+        elif args.once:
             # Manual one-pass run is allowed outside the overnight window.
             run_round(data, model, stats, allow_outside_window=True, parallel=args.parallel)
         else:
