@@ -6,6 +6,7 @@ records can be consumed/reviewed later without cloud-writer state conflicts.
 """
 import argparse
 import copy
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import datetime as dt
 import json
 import os
@@ -241,7 +242,7 @@ def smoke(model):
     names = available_models()
     if model not in names:
         raise RuntimeError("OLLAMA_MODEL_NOT_INSTALLED_OR_SERVICE_OFFLINE")
-    result = OllamaResearch(model, timeout=120)(
+    result = OllamaResearch(model, timeout=240)(
         "You are an independent trading research scientist.",
         {"worker":"S07","research_personality":{"name":"Patient Trend Pilot"},
          "supported_backtest_rules":["trend","reversion","breakout","momentum"],
@@ -260,7 +261,15 @@ def smoke(model):
     print("Ollama local smoke test succeeded; no trades or GitHub changes.")
 
 
-def run_round(data, model, stats, allow_outside_window=False, now_fn=None):
+def run_round(data, model, stats, allow_outside_window=False, now_fn=None, parallel=1):
+    """Run up to two independent researchers at once; serialize disk/Git writes.
+
+    All account copies are worker-private and model output is research-only.
+    A single Ollama daemon may still queue inference unless its NUM_PARALLEL
+    is configured and the RAM/VRAM is sufficient.
+    """
+    if type(parallel) is not int or not 1 <= parallel <= 2:
+        raise ValueError("PARALLEL_RESEARCH_LANES_MUST_BE_ONE_OR_TWO")
     now_fn = now_fn or (lambda: dt.datetime.now(UTC))
     source = init_ledger(data)
     try:
@@ -275,34 +284,51 @@ def run_round(data, model, stats, allow_outside_window=False, now_fn=None):
     if not feed:
         print("Public market feed unavailable; no fictional historical tests.")
         return 0
-    provider = OllamaResearch(model)
-    processed = 0
-    for worker in WORKERS:
+
+    def research_one(worker):
         if not allow_outside_window and not within_window(now_fn()):
-            break
-        try:
-            accounts = research_account(source, Path(data)/"pending", worker)
-            record = accounts[worker]
-            original = len(record.get("groq_experiments", []))
-            event = one_turn(accounts,feed,provider,now_fn(),worker_id=worker)
-            event["provider"] = "LOCAL_OLLAMA"
-            event["model"] = model
-            event["research_only"] = True
-            status = event.get("status", "")
-            bucket = "researched" if status=="RESEARCHED" else (
-                "needs_data" if status.startswith("RESEARCH_IDEA_NEEDS_") else "failed")
-            stats.setdefault(worker,{})[bucket] = stats.setdefault(worker,{}).get(bucket,0)+1
-            experiment = record.get("groq_experiments",[])[-1] if (
-                len(record.get("groq_experiments",[])) > original) else None
-            queue_record(data, worker, event, experiment or {}, model)
-            processed += 1
-            print(worker, status, "research-only", flush=True)
-        except (ValueError,RuntimeError,OSError,KeyError,TypeError):
-            stats.setdefault(worker,{})["failed"]=stats.setdefault(worker,{}).get("failed",0)+1
-            print(worker, "local research failure (safe hold)", flush=True)
-        time.sleep(3)
+            return None
+        # Never share a mutable account record, an LLM adapter or Git objects
+        # between concurrent workers. Files are written by the main thread.
+        accounts = research_account(source, Path(data) / "pending", worker)
+        record = accounts[worker]
+        original = len(record.get("groq_experiments", []))
+        provider = OllamaResearch(model, timeout=300)
+        event = one_turn(accounts, feed, provider, now_fn(), worker_id=worker)
+        event["provider"] = "LOCAL_OLLAMA"
+        event["model"] = model
+        event["research_only"] = True
+        experiment = (record.get("groq_experiments", [])[-1]
+                      if len(record.get("groq_experiments", [])) > original else {})
+        return event, experiment
+
+    processed = 0
+    print("Local research lanes:", parallel, "model:", model, flush=True)
+    with ThreadPoolExecutor(max_workers=parallel, thread_name_prefix="arena-local") as pool:
+        futures = {pool.submit(research_one, worker): worker for worker in WORKERS}
+        for future in as_completed(futures):
+            worker = futures[future]
+            try:
+                result = future.result()
+                if result is None:
+                    continue
+                event, experiment = result
+                status = event.get("status", "")
+                bucket = ("researched" if status == "RESEARCHED" else
+                          "needs_data" if status.startswith("RESEARCH_IDEA_NEEDS_")
+                          else "failed")
+                # Main-thread-only mutation and append-only durable recording.
+                stats.setdefault(worker, {})[bucket] = (
+                    stats.setdefault(worker, {}).get(bucket, 0) + 1)
+                queue_record(data, worker, event, experiment, model)
+                processed += 1
+                print(worker, status, "research-only", flush=True)
+            except (ValueError, RuntimeError, OSError, KeyError, TypeError):
+                stats.setdefault(worker, {})["failed"] = (
+                    stats.setdefault(worker, {}).get("failed", 0) + 1)
+                print(worker, "local research failure (safe hold)", flush=True)
     synced = sync_pending(data)
-    print("Synced immutable events:",synced,"; pending saved locally", flush=True)
+    print("Synced immutable events:", synced, "; pending saved locally", flush=True)
     return processed
 
 
@@ -365,7 +391,9 @@ def lock_acquire(data):
 
 def main(argv=None):
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", default=os.getenv("ARENA_OLLAMA_MODEL","llama3.2:3b"))
+    parser.add_argument("--model", default=os.getenv("ARENA_OLLAMA_MODEL","qwen3:8b"))
+    parser.add_argument("--parallel",type=int,choices=(1,2),default=1,
+                        help="Parallel research lanes (2 only when RAM/VRAM allows)")
     parser.add_argument("--smoke", action="store_true",
                         help="One local-only model response, no market/GitHub writes")
     parser.add_argument("--once", action="store_true",
@@ -385,12 +413,12 @@ def main(argv=None):
     try:
         if args.once:
             # Manual one-pass run is allowed outside the overnight window.
-            run_round(data, model, stats, allow_outside_window=True)
+            run_round(data, model, stats, allow_outside_window=True, parallel=args.parallel)
         else:
             while within_window(dt.datetime.now(UTC)):
-                run_round(data,model,stats)
+                run_round(data,model,stats,parallel=args.parallel)
                 write_summary(data,stats)
-                # At most one round per 40 min; no burst retries, sequential bots.
+                # At most one round per 40 min; no burst retries, up to two lanes.
                 for _ in range(40):
                     if not within_window(dt.datetime.now(UTC)):
                         break
