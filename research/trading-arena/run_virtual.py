@@ -141,9 +141,11 @@ def main():
       "Updated: "+now.isoformat(),"",
       "| Worker | Virtual action | Equity | Cash | Council |",
       "|---|---|---:|---:|---|"]
+    from generation_manager import alias
     for wid,r in result.items():
+        public_name=alias(wid,accounts[wid].get("generation_index",0))
         eq="Unavailable" if r.get("equity") is None else str(round(r["equity"],2))
-        lines.append("| {} | {} | {} | {} | {} |".format(wid,r["action"],eq,r.get("cash","—"),r.get("council","QUARANTINED")))
+        lines.append("| {} | {} | {} | {} | {} |".format(public_name,r["action"],eq,r.get("cash","—"),r.get("council","QUARANTINED")))
     lines+=["","**Review status:** Missing independently executable market quotes means",
       "the evidence council cannot certify a real-world trading edge.",""]
     (out/"DASHBOARD.md").write_text("\n".join(lines))
