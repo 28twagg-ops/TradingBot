@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-01T07:33Z | S04 | BTC-USD hourly gap-down >2% mean reversion | 5e789ed135b008 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T07:32Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | 448eaec0de30c9 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-01T07:31Z | S10 | ETH-USD hourly trend persistence | 0a506ad5c850bd | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T07:31Z | S07 | BTC-USD hourly trend persistence | 27786aedd3e0c5 | HOLD_INVALID_MODEL_DECISION |
+| 2026-11-01T07:30Z | S06 | BTC‑USD relative strength to SPY 24‑hour momentu | ab31b2dfdee695 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-01T06:11Z | S02 | BTC-USD Monday first‑hour return conditioned on  | 1bb4db8fa0f28e | HOLD_INVALID_MODEL_DECISION |
 | 2026-11-01T06:11Z | S08 | Hourly realized volatility dataset for BTC-USD | 70762eeefab4e1 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-01T06:10Z | S09 | BTC subreddit upvote impact | 7f5113ca488d91 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-31T17:36Z | S02 | BTC-USD Monday first‑hour return conditioned on  | c1a56b9f1af173 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-10-31T17:36Z | S08 | Hourly realized volatility mean reversion in BTC | 555a77327a986e | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T16:21Z | S09 |  | AI_UNAVAILABLE |  |
-| 2026-10-31T16:21Z | S04 | Hourly gap‑up mean reversion in BTC‑USD | 4093ea34126aa5 | HOLD |
-| 2026-10-31T16:20Z | S08 |  | AI_UNAVAILABLE |  |
-| 2026-10-31T16:19Z | S05 | Mean reversion after large hourly swings in 24/7 | 582d27695f4a4e | HOLD_INSUFFICIENT_HISTORY |
-| 2026-10-31T16:19Z | S01 | BTC-USD hourly price mean reversion around intra | 6ffd0c67fcd366 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-31T12:35Z | S10 | ETH-USD hourly price mean reversion to 24‑hour m | 14621dbc9569e5 | HOLD |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
