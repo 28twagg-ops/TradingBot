@@ -81,7 +81,12 @@ class OllamaResearch:
 
     def __call__(self, instructions, context):
         from groq_research import bounded_json_context
-        prompt = bounded_json_context(context, limit=7200)
+        try:
+            prompt = bounded_json_context(context, limit=7200)
+        except RuntimeError as exc:
+            if str(exc) == "GROQ_CONTEXT_TOO_LARGE":
+                raise RuntimeError("OLLAMA_CONTEXT_TOO_LARGE") from None
+            raise RuntimeError("OLLAMA_LOCAL_CONTEXT_ERROR") from None
         policy = ("You are a local overnight research idea generator; your job is to "
                   "propose one falsifiable hypothesis, NOT approve a trading decision. "
                   "Use the supplied research personality and prior ideas as inspiration, "

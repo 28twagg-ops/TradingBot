@@ -233,6 +233,10 @@ def write_summary(data, stats):
         x = stats.get(w, {})
         rows.append("| {} | {} | {} | {} |".format(
             w, x.get("researched",0), x.get("needs_data",0), x.get("failed",0)))
+    rows += ["", "Last diagnostic codes (no credentials or provider text):"]
+    for w in WORKERS:
+        if stats.get(w, {}).get("last_error"):
+            rows.append("- " + w + ": " + str(stats[w]["last_error"])[:32])
     rows += ["", "Pending GitHub sync: " + str(len(list((Path(data)/"pending").glob("*.json")))),
              "Details: ~/.trading-arena/sent/ (one immutable JSON record per turn).", ""]
     (Path(data)/"MORNING_REPORT.md").write_text("\n".join(rows), encoding="utf-8")
@@ -301,6 +305,7 @@ def run_round(data, model, stats, allow_outside_window=False, now_fn=None, paral
         provider = OllamaResearch(model, timeout=300)
         event = one_turn(accounts, feed, provider, now_fn(), worker_id=worker)
         event["provider"] = "LOCAL_OLLAMA"
+        event["source"] = "Local Ollama research-only"
         event["model"] = model
         event["research_only"] = True
         experiment = (record.get("groq_experiments", [])[-1]
@@ -325,15 +330,20 @@ def run_round(data, model, stats, allow_outside_window=False, now_fn=None, paral
                 # Main-thread-only mutation and append-only durable recording.
                 stats.setdefault(worker, {})[bucket] = (
                     stats.setdefault(worker, {}).get(bucket, 0) + 1)
+                if status == "AI_UNAVAILABLE":
+                    stats[worker]["last_error"] = event.get("safe_error", "PROVIDER_ERROR")
                 queue_record(data, worker, event, experiment, model)
                 processed += 1
-                print(worker, status, "research-only", flush=True)
+                print(worker, status, stats[worker].get("last_error", ""),
+                      "research-only", flush=True)
             except (ValueError, RuntimeError, OSError, KeyError, TypeError):
                 stats.setdefault(worker, {})["failed"] = (
                     stats.setdefault(worker, {}).get("failed", 0) + 1)
                 print(worker, "local research failure (safe hold)", flush=True)
     synced = sync_pending(data)
-    print("Synced immutable events:", synced, "; pending saved locally", flush=True)
+    pending_count = len(list((Path(data) / "pending").glob("*.json")))
+    print("Confirmed GitHub sync:", synced,
+          "; pending local records:", pending_count, flush=True)
     return processed
 
 
