@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "3382d34bba8445d18488efed37f9e40a",
+  "worker": "S02",
+  "cycle": "2026-11-01T01:14Z",
+  "model": "qwen3:8b",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S02",
+    "cycle": "2026-11-01T01:14Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD Monday first-hour return distribution conditioned on Friday 5-hour MA",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume",
+        "minute_bars"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "229d8c637d0904",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD Monday first-hour return distribution conditioned on Friday 5-hour MA statistical analysis",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:8b",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T01:14Z",
+    "id": "229d8c637d0904",
+    "topic": "BTC-USD Monday first-hour return distribution conditioned on Friday 5-hour MA",
+    "hypothesis": "BTC-USD exhibits a statistically significant mean reversion pattern in the first hour of trading on Mondays, when the Friday 5-hour moving average is above the closing price.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume",
+        "minute_bars"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If the first-hour return distribution on Mondays does not show a statistically significant mean reversion when the Friday 5-hour MA is above the closing price, the hypothesis is falsified.",
+    "source_search": {
+      "query": "BTC-USD Monday first hour return distribution conditioned on Friday 5‑hour MA statistical analysis",
+      "attempted": [
+        "web"
+      ],
+      "matches": 4
+    },
+    "source_leads": [],
+    "next_search_query": "BTC-USD Monday first-hour return distribution conditioned on Friday 5-hour MA statistical analysis",
+    "preferred_sources": [
+      "web",
+      "github"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "volume",
+      "minute_bars"
+    ],
+    "hypothesis_timeframe": "weekly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
