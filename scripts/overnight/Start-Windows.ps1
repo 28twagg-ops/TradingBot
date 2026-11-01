@@ -46,7 +46,10 @@ if (-not (Test-Path (Join-Path $dir ".git"))) {
 }
 & git -C $dir sparse-checkout set research/trading-arena scripts/overnight docs
 if ($LASTEXITCODE -ne 0) { throw "Sparse source checkout failed." }
+# Re-running this bootstrap also updates an existing installation safely.
+& git -C $dir pull --ff-only origin main
+if ($LASTEXITCODE -ne 0) { throw "Could not fast-forward local Arena source. No files were overwritten." }
 Write-Host "GitHub sign-in and model installation will be handled by the guided setup."
 & py -3 (Join-Path $dir "research/trading-arena/setup_local.py")
 if ($LASTEXITCODE -ne 0) { throw "Local Arena setup did not complete. See troubleshooting document." }
-Write-Host "Done. Scheduled for midnight to 7 AM Central; keep laptop on and awake."
+Write-Host "Done. Midnight-7 AM weekdays / midnight-10 AM weekends Central; keep laptop on and awake."
