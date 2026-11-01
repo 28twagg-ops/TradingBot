@@ -291,6 +291,44 @@ def run_round(data, model, stats, allow_outside_window=False, now_fn=None):
     return processed
 
 
+def process_running(pid):
+    """Inspect a lock owner's status without signalling/killing it on Windows.
+
+    On Windows, os.kill(pid, 0) calls TerminateProcess and can terminate the
+    running overnight worker. Query the exit status via a read-only WinAPI
+    process handle instead. Unknown/access-denied states fail safely.
+    """
+    if os.name == "nt":
+        import ctypes
+        from ctypes import wintypes
+        kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+        kernel32.OpenProcess.argtypes = [wintypes.DWORD, wintypes.BOOL, wintypes.DWORD]
+        kernel32.OpenProcess.restype = wintypes.HANDLE
+        kernel32.GetExitCodeProcess.argtypes = [wintypes.HANDLE, ctypes.POINTER(wintypes.DWORD)]
+        kernel32.GetExitCodeProcess.restype = wintypes.BOOL
+        kernel32.CloseHandle.argtypes = [wintypes.HANDLE]
+        kernel32.CloseHandle.restype = wintypes.BOOL
+        handle = kernel32.OpenProcess(0x1000, False, pid)  # PROCESS_QUERY_LIMITED_INFORMATION
+        if not handle:
+            if ctypes.get_last_error() == 87:  # ERROR_INVALID_PARAMETER: PID no longer exists
+                return False
+            raise PermissionError("CANNOT_INSPECT_LOCK_OWNER")
+        try:
+            code = wintypes.DWORD()
+            if not kernel32.GetExitCodeProcess(handle, ctypes.byref(code)):
+                raise OSError("CANNOT_INSPECT_LOCK_OWNER")
+            return code.value == 259  # STILL_ACTIVE
+        finally:
+            kernel32.CloseHandle(handle)
+    try:
+        os.kill(pid, 0)  # POSIX only: probes without signalling
+        return True
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True  # Be conservative if the lock's owner cannot be inspected.
+
+
 def lock_acquire(data):
     lock = Path(data) / "overnight.lock"
     for _ in range(2):
@@ -302,9 +340,8 @@ def lock_acquire(data):
         except FileExistsError:
             try:
                 pid=int(lock.read_text(encoding="utf-8").strip())
-                os.kill(pid,0)
-                raise RuntimeError("ANOTHER_RUN_ALREADY_ACTIVE") from None
-            except ProcessLookupError:
+                if process_running(pid):
+                    raise RuntimeError("ANOTHER_RUN_ALREADY_ACTIVE") from None
                 lock.unlink(missing_ok=True)   # dead process; queue is durable
             except (PermissionError,ValueError,OSError):
                 raise RuntimeError("ANOTHER_RUN_OR_STALE_LOCK") from None
