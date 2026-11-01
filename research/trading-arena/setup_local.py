@@ -62,12 +62,12 @@ def prerequisites():
         raise RuntimeError("PYTHON_3_11_OR_NEWER_REQUIRED")
 
 
-def register_windows(python, model):
+def register_windows(python, model, parallel=1):
     # The task is under the interactive user's account, not an administrator
     # service. Only local repo code runs; Windows sleep settings aren't changed.
     script = ROOT / "overnight_local.py"
     cmd = ('$a=New-ScheduledTaskAction -Execute '+ps_quote(str(python))+
-           ' -Argument '+ps_quote('"' + str(script) + '" --model ' + model + ' --log')+
+           ' -Argument '+ps_quote('"' + str(script) + '" --model ' + model + ' --parallel ' + str(parallel) + ' --log')+
            ';$t=New-ScheduledTaskTrigger -Daily -At "00:00"'+
            ';$s=New-ScheduledTaskSettingsSet -WakeToRun -StartWhenAvailable '+
            '-ExecutionTimeLimit (New-TimeSpan -Hours 12) -MultipleInstances IgnoreNew'+
@@ -81,13 +81,13 @@ def ps_quote(value):
     return "'" + value.replace("'", "''") + "'"
 
 
-def register_mac(python, model):
+def register_mac(python, model, parallel=1):
     label="com.tradingarena.overnight"
     location=Path.home()/"Library"/"LaunchAgents"/(label+".plist")
     location.parent.mkdir(parents=True,exist_ok=True)
     plist={"Label":label,
            "ProgramArguments":[str(python),str(ROOT/"overnight_local.py"),
-                               "--model",model,"--log"],
+                               "--model",model,"--parallel",str(parallel),"--log"],
            "StartCalendarInterval":{"Hour":0,"Minute":0},
            "RunAtLoad":False,"KeepAlive":False,
            "WorkingDirectory":str(ROOT.parent.parent),
@@ -104,6 +104,8 @@ def main(argv=None):
     p=argparse.ArgumentParser()
     p.add_argument("--model",default=None,help="Choose an installed local Ollama model")
     p.add_argument("--skip-task",action="store_true")
+    p.add_argument("--parallel",type=int,choices=(1,2),default=None,
+                   help="At most two local inference research lanes")
     a=p.parse_args(argv)
     system=platform.system()
     if system not in ("Windows","Darwin"):
@@ -112,10 +114,15 @@ def main(argv=None):
     ram=memory_gb()
     if ram is not None and ram<5.5:
         raise RuntimeError("INSUFFICIENT_RAM_FOR_RELIABLE_UNATTENDED_LOCAL_AI")
-    model=a.model or ("llama3.2:1b" if ram is not None and ram<9 else "llama3.2:3b")
+    model=a.model or ("llama3.2:1b" if ram is not None and ram<9 else
+                      "llama3.2:3b" if ram is None or ram<24 else "qwen3:8b")
+    parallel = a.parallel if a.parallel is not None else (2 if ram is not None and ram>=24 else 1)
+    if ram is not None and ram<16 and parallel>1:
+        raise RuntimeError("TWO_PARALLEL_LANES_REQUIRE_AT_LEAST_16GB_RAM")
     from local_ollama import local_model_name
     model=local_model_name(model)
-    print("Local-only Llama model:",model,"; total RAM (GB):",ram or "unknown")
+    print("Local-only Ollama model:",model,"; total RAM (GB):",ram or "unknown",
+          "; research lanes:",parallel)
     if not run("gh","auth","status",check=False,quiet=True):
         print("Opening GitHub's official browser login (one-time).")
         run("gh","auth","login","--web","--git-protocol","https",timeout=300)
@@ -130,8 +137,8 @@ def main(argv=None):
     run(python,"-m","pip","install","--disable-pip-version-check",
         "pandas>=2,<3","numpy>=1.24,<3","yfinance>=0.2,<2","tzdata>=2025.2",
         timeout=600)
-    # Ollama is local; downloading 1–2 GB of model weights needs Internet once.
-    print("Downloading local model (first installation only).")
+    # Ollama is local; first model download (up to ~5.2 GB for qwen3:8b) needs internet.
+    print("Downloading or verifying local model (only missing weights download).")
     run("ollama","pull",model,timeout=1500)
     import overnight_local
     print("Checking the model responds locally.")
@@ -143,15 +150,23 @@ def main(argv=None):
     overnight_local.init_upload(DATA)
     overnight_local.refresh_upload(DATA/"upload")
     (DATA/"settings.json").write_text(json.dumps(
-        {"model":model,"start_local":"00:00",
+        {"model":model,"parallel_research_lanes":parallel,"start_local":"00:00",
          "stop_local_weekday":"07:00","stop_local_weekend":"10:00",
          "timezone":"America/Chicago","research_only":True},indent=2)+"\n",
         encoding="utf-8")
     if not a.skip_task:
         if system=="Windows":
-            register_windows(python,model)
+            register_windows(python,model,parallel)
+            if parallel == 2:
+                # Applies when the Ollama desktop service is NEXT started, not
+                # to an already-running process. No forced termination/restart.
+                run("powershell.exe","-NoProfile","-NonInteractive","-Command",
+                    '[Environment]::SetEnvironmentVariable("OLLAMA_NUM_PARALLEL","2","User")',
+                    timeout=30)
+                print("IMPORTANT: Quit Ollama from the Windows system tray and "
+                      "reopen it once so the 2-request Ollama setting takes effect.")
         else:
-            register_mac(python,model)
+            register_mac(python,model,parallel)
     print("\nSETUP COMPLETE.", "Scheduled midnight Central." if not a.skip_task
           else "Scheduling skipped.")
     print("Keep laptop powered and awake, and Ollama running.")
