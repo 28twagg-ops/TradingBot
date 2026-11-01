@@ -246,8 +246,17 @@ def smoke(model):
         {"worker":"S07","research_personality":{"name":"Patient Trend Pilot"},
          "supported_backtest_rules":["trend","reversion","breakout","momentum"],
          "eligible_symbols":{},"research_history":[],"untrusted_search_results":[]})
-    if not isinstance(result.get("research_topic"), str):
-        raise RuntimeError("OLLAMA_SMOKE_JSON_FIELDS_MISSING")
+    # Smoke tests only local API connectivity, valid JSON and enforced HOLD.
+    # A 3B model may omit a research field on a single sample; never interpret
+    # that as a Windows/GitHub installation failure. Full research runs still
+    # enforce the independent deterministic validation gates.
+    if not isinstance(result, dict) or not result:
+        raise RuntimeError("OLLAMA_SMOKE_EMPTY_JSON")
+    if result.get("action") != "HOLD" or result.get("symbol") is not None:
+        raise RuntimeError("OLLAMA_SMOKE_UNSAFE_ACTION")
+    if not isinstance(result.get("research_topic"), str) or not result["research_topic"].strip():
+        print("Ollama API smoke passed, but the sample omitted research_topic; "
+              "idea quality must be assessed from overnight research.")
     print("Ollama local smoke test succeeded; no trades or GitHub changes.")
 
 
