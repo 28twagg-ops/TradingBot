@@ -161,6 +161,14 @@ class LocalLlamaTests(unittest.TestCase):
                 self.assertEqual(record["model"],"qwen3:8b")
                 self.assertEqual(record["event"]["action"],"HOLD")
 
+    def test_report_includes_finite_model_error_reason_and_pending_count(self):
+        from overnight_local import write_summary
+        with tempfile.TemporaryDirectory() as d:
+            write_summary(d,{"S01":{"failed":1,"last_error":"OLLAMA_OFFLINE_OR_TIMEOUT"}})
+            report=(Path(d)/"MORNING_REPORT.md").read_text()
+            self.assertIn("S01: OLLAMA_OFFLINE_OR_TIMEOUT",report)
+            self.assertIn("Pending GitHub sync: 0",report)
+
     def test_two_worker_trial_only_runs_s01_and_s02(self):
         with tempfile.TemporaryDirectory() as root:
             data=Path(root)
