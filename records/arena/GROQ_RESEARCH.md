@@ -6,6 +6,9 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-01T23:42Z | S04a | BTC-USD hourly gap‑down >2% followed by next‑hou | 86d6156b8f0933 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T23:41Z | S01a | BTC-USD hourly price reversion to 24‑hour moving | dffec19abf45a7 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T23:40Z | S08a | Hourly return mean reversion in BTC-USD | 9de83b0b4e6ea9 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T23:37Z | S10a | ETH-USD hourly mean reversion to 24‑hour SMA | 28d417ab7b6a81 | HOLD_INVALID_MODEL_DECISION |
 | 2026-11-01T23:36Z | S07a | Hourly trend persistence in BTC-USD | 07912573af1274 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T23:36Z | S09a | BTC-USD hourly trend reversal after sustained 10 | 4d3754e420a98a | RESEARCH_ONLY_NEEDS_DATA |
@@ -38,9 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-01T18:03Z | S06a | BTC‑USD relative strength to SPY 24‑hour momentu | 4b4c2ff3eda9f6 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-01T17:56Z | S02a | BTC-USD Monday first‑hour return conditioned on  | cf4a8c7e3f43fc | HOLD_INVALID_MODEL_DECISION |
 | 2026-11-01T17:55Z | S05a | Opening Range Breakout on BTC-USD | 6ca5554391baec | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-01T17:54Z | S03a | BTC-USD hourly mean reversion lag 4 | 54c24a1926f72d | HOLD_INVALID_MODEL_DECISION |
-| 2026-11-01T17:54Z | S04a | Hourly gap‑down >2% in BTC‑USD followed by short | 9373978357eeb9 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-01T17:53Z | S01a | BTC-USD hourly VWAP mean‑reversion after extreme | 09b4d4b7fe56ae | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
