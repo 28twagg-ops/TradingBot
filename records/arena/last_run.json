@@ -1,9 +1,10 @@
 {
-  "timestamp": "2026-11-01T13:28:20.706119+00:00",
+  "timestamp": "2026-11-01T18:23:26.157589+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
       "action": "HOLD",
+      "generation_index": 0,
       "cash": 100.0,
       "equity": 100.0,
       "ledger_events": 0,
@@ -11,23 +12,26 @@
       "missing_quotes": []
     },
     "S02": {
-      "action": "SELL ETH-USD",
+      "action": "HOLD",
+      "generation_index": 0,
       "cash": 74.44967151,
-      "equity": 97.7742,
+      "equity": 97.8059,
       "ledger_events": 11,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S03": {
       "action": "HOLD",
+      "generation_index": 0,
       "cash": 13.25515543,
-      "equity": 99.3275,
+      "equity": 99.3744,
       "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S04": {
       "action": "HOLD",
+      "generation_index": 0,
       "cash": 60.99699131,
       "equity": 100.8237,
       "ledger_events": 5,
@@ -36,6 +40,7 @@
     },
     "S05": {
       "action": "HOLD",
+      "generation_index": 0,
       "cash": 100.0,
       "equity": 100.0,
       "ledger_events": 0,
@@ -43,15 +48,17 @@
       "missing_quotes": []
     },
     "S06": {
-      "action": "SELL ETH-USD",
+      "action": "HOLD",
+      "generation_index": 0,
       "cash": 59.42814853,
-      "equity": 98.5356,
+      "equity": 98.5887,
       "ledger_events": 13,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S07": {
       "action": "HOLD",
+      "generation_index": 0,
       "cash": 98.21826112,
       "equity": 98.2183,
       "ledger_events": 4,
@@ -60,6 +67,7 @@
     },
     "S08": {
       "action": "HOLD",
+      "generation_index": 0,
       "cash": 100.0,
       "equity": 100.0,
       "ledger_events": 0,
@@ -68,6 +76,7 @@
     },
     "S09": {
       "action": "HOLD",
+      "generation_index": 0,
       "cash": 97.38885147,
       "equity": 97.3889,
       "ledger_events": 10,
@@ -75,9 +84,10 @@
       "missing_quotes": []
     },
     "S10": {
-      "action": "SELL ETH-USD",
+      "action": "HOLD",
+      "generation_index": 0,
       "cash": 74.83836325,
-      "equity": 98.3184,
+      "equity": 98.3503,
       "ledger_events": 11,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []

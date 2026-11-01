@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "workers": {
+    "S01": {
+      "index": 0,
+      "active": "S01a",
+      "started_at": "2026-11-01T18:23:26.157589+00:00",
+      "history": []
+    },
+    "S02": {
+      "index": 0,
+      "active": "S02a",
+      "started_at": "2026-10-28T01:25:48.147637+00:00",
+      "history": []
+    },
+    "S03": {
+      "index": 0,
+      "active": "S03a",
+      "started_at": "2026-10-30T00:00:46.670500+00:00",
+      "history": []
+    },
+    "S04": {
+      "index": 0,
+      "active": "S04a",
+      "started_at": "2026-10-26T02:54:05.374098+00:00",
+      "history": []
+    },
+    "S05": {
+      "index": 0,
+      "active": "S05a",
+      "started_at": "2026-11-01T18:23:26.157589+00:00",
+      "history": []
+    },
+    "S06": {
+      "index": 0,
+      "active": "S06a",
+      "started_at": "2026-10-26T15:15:04.789717+00:00",
+      "history": []
+    },
+    "S07": {
+      "index": 0,
+      "active": "S07a",
+      "started_at": "2026-10-28T22:38:56.452291+00:00",
+      "history": []
+    },
+    "S08": {
+      "index": 0,
+      "active": "S08a",
+      "started_at": "2026-11-01T18:23:26.157589+00:00",
+      "history": []
+    },
+    "S09": {
+      "index": 0,
+      "active": "S09a",
+      "started_at": "2026-10-26T15:15:04.789717+00:00",
+      "history": []
+    },
+    "S10": {
+      "index": 0,
+      "active": "S10a",
+      "started_at": "2026-10-26T15:15:04.789717+00:00",
+      "history": []
+    }
+  }
+}
