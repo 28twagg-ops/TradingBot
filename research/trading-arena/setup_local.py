@@ -141,7 +141,13 @@ def main(argv=None):
     if ram is not None and ram<16 and parallel>1:
         raise RuntimeError("TWO_PARALLEL_LANES_REQUIRE_AT_LEAST_16GB_RAM")
     from local_ollama import local_model_name
-    model=local_model_name(model)
+    adaptive = a.model == "auto"
+    download_model = ("llama3.2:1b" if ram is not None and ram < 9
+                      else "qwen3:4b-instruct") if adaptive else model
+    download_model = local_model_name(download_model)
+    model = "auto" if adaptive else local_model_name(model)
+    if adaptive and a.parallel not in (None, 1):
+        raise RuntimeError("ADAPTIVE_REQUIRES_ONE_LANE")
     print("Local-only Ollama model:",model,"; total RAM (GB):",ram or "unknown",
           "; research lanes:",parallel)
     if not run("gh","auth","status",check=False,quiet=True):
@@ -157,14 +163,21 @@ def main(argv=None):
     print("Installing isolated market-data libraries; no broker integrations.")
     run(python,"-m","pip","install","--disable-pip-version-check",
         "pandas>=2,<3","numpy>=1.24,<3","yfinance>=0.2,<2","tzdata>=2025.2",
+        "psutil>=6,<9",
         timeout=600)
     # Ollama is local; first model download (~2.5GB on Windows 24+ GB
     # defaults) requires internet once. Model overrides can be larger.
     print("Downloading or verifying local model (only missing weights download).")
-    run("ollama","pull",model,timeout=1500)
+    run("ollama","pull",download_model,timeout=1500)
+    if adaptive and ram is not None and ram >= 16 and shutil.disk_usage(DATA).free >= 10 * 1024**3:
+        print("Trying optional larger 8B model; compact model remains fallback.")
+        if not run("ollama","pull","qwen3:8b",check=False,timeout=1800):
+            print("8B download unavailable; continuing with smaller local model.")
+    elif adaptive:
+        print("Hardware not confirmed for 8B; baseline-only adaptive model routing.")
     import overnight_local
     print("Checking the model responds locally.")
-    overnight_local.smoke(model)
+    overnight_local.smoke(download_model)
     print("Checking independent GitHub research ledger access.")
     overnight_local.init_ledger(DATA)
     overnight_local.refresh_ledger(DATA/"ledger")
@@ -184,7 +197,8 @@ def main(argv=None):
             remaining = len(list(pending_dir.glob("*.json")))
             print("Previous records confirmed:",confirmed,"; still pending:",remaining)
     (DATA/"settings.json").write_text(json.dumps(
-        {"model":model,"parallel_research_lanes":parallel,"start_local":"00:00",
+        {"model":model,"baseline_model":download_model,"adaptive_models":adaptive,
+         "parallel_research_lanes":parallel,"start_local":"00:00",
          "stop_local_weekday":"07:00","stop_local_weekend":"10:00",
          "timezone":"America/Chicago","research_only":True},indent=2)+"\n",
         encoding="utf-8")

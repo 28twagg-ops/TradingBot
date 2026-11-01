@@ -268,6 +268,8 @@ def audit_and_rotate(root, now=None):
               "monthly_minimum_days": MIN_AGE_DAYS,
               "no_live_trading": True, "results": findings}
     write(root / "generation_review.json", output)
+    from approval_readiness import report as approval_report
+    approval_report(root, reg, state, rows, marks_for)
     render(root, reg, rows, findings)
     return output
 
