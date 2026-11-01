@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "be8d291badba4104be5a7f374a9dfa6c",
+  "worker": "S10",
+  "cycle": "2026-11-01T14:15Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S10",
+    "cycle": "2026-11-01T14:15Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "ETH-USD hourly mean reversion to 24-hour moving average with 3% threshold",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume",
+        "daily_bars"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "b91429402e22b5",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "FX Replay | Futures, Forex & Crypto Backtesting Platform",
+        "url": "https://fxreplay.com/",
+        "snippet": "What markets can I backtest on FX Replay? FX Replay supports backtesting across Futures, Forex pairs, Indices, Metals, Energy, Stocks, Crypto, and Agricultural markets. Historical data goes back as far as 2012 for major Futures contracts an",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Backtest Portfolio Asset Allocation",
+        "url": "https://www.portfoliovisualizer.com/backtest-portfolio",
+        "snippet": "You can analyze and backtest portfolio returns, risk characteristics, style exposures, and drawdowns. The results cover both returns and fund fundamentals based portfolio style analysis along with risk and return decomposition by each portf",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BacktestingMax - Free Trading Strategy Backtesting Software",
+        "url": "https://www.backtestingmax.com/",
+        "snippet": "Free backtesting software: replay 1-minute historical data, have the AI backtest a strategy for you, or practice prop firm challenges under real rules.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Backtest results for ETH-USD hourly mean reversion to 24-hour SMA with 3% threshold, including R-squared, RMSE, Sharpe ratio, and ",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T14:15Z",
+    "id": "b91429402e22b5",
+    "topic": "ETH-USD hourly mean reversion to 24-hour moving average with 3% threshold",
+    "hypothesis": "ETH-USD hourly price deviations from a 24-hour moving average revert to the mean with a 3% threshold, exhibiting statistically significant mean reversion with an R-squared of at least 0.30 and a Sharpe ratio of at least 0.5 over a 30-day rolling wind",
+    "candidate": null,
+    "symbol": "ETH-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume",
+        "daily_bars"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If the R-squared of the mean reversion model is below 0.30 across at least 30 days of ETH-USD hourly data, or if the Sharpe ratio is less than 0.5 and RMSE exceeds 5% of the price range, the hypothesis is falsified.",
+    "source_search": {
+      "query": "Backtest results for ETH-USD hourly mean reversion to 24-hour SMA with 3% threshold, including R-squared, RMSE, Sharpe ratio, and",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "FX Replay | Futures, Forex & Crypto Backtesting Platform",
+        "url": "https://fxreplay.com/",
+        "snippet": "What markets can I backtest on FX Replay? FX Replay supports backtesting across Futures, Forex pairs, Indices, Metals, Energy, Stocks, Crypto, and Agricultural markets. Historical data goes back as far as 2012 for major Futures contracts an",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Backtest Portfolio Asset Allocation",
+        "url": "https://www.portfoliovisualizer.com/backtest-portfolio",
+        "snippet": "You can analyze and backtest portfolio returns, risk characteristics, style exposures, and drawdowns. The results cover both returns and fund fundamentals based portfolio style analysis along with risk and return decomposition by each portf",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BacktestingMax - Free Trading Strategy Backtesting Software",
+        "url": "https://www.backtestingmax.com/",
+        "snippet": "Free backtesting software: replay 1-minute historical data, have the AI backtest a strategy for you, or practice prop firm challenges under real rules.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Backtest results for ETH-USD hourly mean reversion to 24-hour SMA with 3% threshold, including R-squared, RMSE, Sharpe ratio, and ",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "daily_bars",
+      "volume",
+      "daily_bars"
+    ],
+    "hypothesis_timeframe": "30-day rolling window with hourly data",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

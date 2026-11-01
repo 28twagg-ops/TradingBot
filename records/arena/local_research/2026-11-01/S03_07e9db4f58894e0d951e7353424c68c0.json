@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "07e9db4f58894e0d951e7353424c68c0",
+  "worker": "S03",
+  "cycle": "2026-11-01T14:07Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S03",
+    "cycle": "2026-11-01T14:07Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Mean reversion of BTC-USD hourly returns at 24-hour lag with 3% threshold",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "daily_bars",
+        "daily_bars"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "cbfdf191294468",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "We update our BTC to USD price in real-time. Bitcoin is up 0.51% in the last 24 hours. The current CoinMarketCap ranking is #1, with a live market cap of $1,562,685,478,535 USD. It has a circulating supply of 20,105,365 BTC coins and a max.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "The current price of Bitcoin (BTC) is 77,820 USD — it has risen 0.30 % in the past 24 hours. Try placing this info into the context by checking out what coins are also gaining and losing at the moment and seeing BTC price chart.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "CME CF Bitcoin Real Time Index - CF Benchmarks",
+        "url": "https://www.cfbenchmarks.com/data/indices/BRTI",
+        "snippet": "About The CME CF Bitcoin Real Time Index (BRTI) is a once per 200 millisecond benchmark index price for Bitcoin that aggregates order data from Bitcoin-USD markets operated by major cryptocurrency exchanges that conform to the CME CF Consti",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD hourly returns autocorrelation lag 24 threshold 0.03 2024-2026 empirical study with multiple testing correction and holdou",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T14:07Z",
+    "id": "cbfdf191294468",
+    "topic": "Mean reversion of BTC-USD hourly returns at 24-hour lag with 3% threshold",
+    "hypothesis": "BTC-USD hourly returns exhibit mean reversion at a 24-hour lag with a 3% threshold, surviving a holdout validation and multiple-testing correction across 2024-2026 data.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "daily_bars",
+        "daily_bars"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If BTC-USD hourly returns show no significant mean reversion at a 24-hour lag with a 3% threshold over 2024-2026, and the effect fails a holdout validation with multiple testing correction, the hypothesis is falsified.",
+    "source_search": {
+      "query": "BTC-USD hourly returns autocorrelation lag 48 2024-2026 empirical study with multiple testing correction and holdout validation us",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "We update our BTC to USD price in real-time. Bitcoin is up 0.51% in the last 24 hours. The current CoinMarketCap ranking is #1, with a live market cap of $1,562,685,478,535 USD. It has a circulating supply of 20,105,365 BTC coins and a max.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "The current price of Bitcoin (BTC) is 77,820 USD — it has risen 0.30 % in the past 24 hours. Try placing this info into the context by checking out what coins are also gaining and losing at the moment and seeing BTC price chart.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "CME CF Bitcoin Real Time Index - CF Benchmarks",
+        "url": "https://www.cfbenchmarks.com/data/indices/BRTI",
+        "snippet": "About The CME CF Bitcoin Real Time Index (BRTI) is a once per 200 millisecond benchmark index price for Bitcoin that aggregates order data from Bitcoin-USD markets operated by major cryptocurrency exchanges that conform to the CME CF Consti",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD hourly returns autocorrelation lag 24 threshold 0.03 2024-2026 empirical study with multiple testing correction and holdou",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "daily_bars",
+      "daily_bars",
+      "daily_bars"
+    ],
+    "hypothesis_timeframe": "2024-2026",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

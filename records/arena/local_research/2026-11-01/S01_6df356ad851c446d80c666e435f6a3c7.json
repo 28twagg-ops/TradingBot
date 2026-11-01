@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "6df356ad851c446d80c666e435f6a3c7",
+  "worker": "S01",
+  "cycle": "2026-11-01T14:02Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S01",
+    "cycle": "2026-11-01T14:02Z",
+    "status": "AI_UNAVAILABLE",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "safe_error": "OLLAMA_INVALID_JSON",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {}
+}
