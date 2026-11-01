@@ -8,6 +8,7 @@ from pathlib import Path
 import subprocess
 import sys
 import tempfile
+import threading
 import unittest
 from unittest.mock import Mock, patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
@@ -21,6 +22,7 @@ from run_virtual import initial, UTC
 class LocalLlamaTests(unittest.TestCase):
     def test_only_local_llama_models_are_accepted(self):
         self.assertEqual(local_model_name("llama3.2:3b"),"llama3.2:3b")
+        self.assertEqual(local_model_name("qwen3:8b"),"qwen3:8b")
         for name in ("llama3.2:cloud","http://localhost:11434",
                      "example/remote-model","",None):
             with self.assertRaises(ValueError):
@@ -47,6 +49,21 @@ class LocalLlamaTests(unittest.TestCase):
         self.assertIn("research_topic",captured["body"]["format"]["required"])
         self.assertEqual(captured["body"]["model"],"llama3.2:3b")
         self.assertNotIn("tools",captured["body"])
+
+    def test_qwen3_uses_non_thinking_json_schema(self):
+        blob={"message":{"content":json.dumps({"research_topic":"hypothesis",
+              "hypothesis":"null test","candidate":{"family":"trend",
+              "lookback":12,"threshold":0.01}})}}
+        captured={}
+        def handler(req,timeout):
+            captured.update(json.loads(req.data))
+            return io.BytesIO(json.dumps(blob).encode())
+        with patch("local_ollama.urllib.request.urlopen",side_effect=handler):
+            output=OllamaResearch("qwen3:8b")("research",{})
+        self.assertFalse(captured["think"])
+        self.assertEqual(captured["format"]["type"],"object")
+        self.assertEqual(output["action"],"HOLD")
+        self.assertIsNone(output["symbol"])
 
     def test_smoke_does_not_abort_for_partial_but_safe_research_reply(self):
         # An intermittent 3B answer omitting research_topic is a research
@@ -105,6 +122,48 @@ class LocalLlamaTests(unittest.TestCase):
         command = runner.call_args.args[-1]
         self.assertIn('-At "00:00"', command)
         self.assertIn("-ExecutionTimeLimit (New-TimeSpan -Hours 12)", command)
+
+    def test_parallel_two_workers_overlap_but_preserve_isolated_ledgers(self):
+        with tempfile.TemporaryDirectory() as root:
+            data=Path(root)
+            repo=data/"ledger"
+            (repo/"records/arena").mkdir(parents=True)
+            original=initial()
+            (repo/"records/arena/ai_state.json").write_text(json.dumps(original))
+            clock=dt.datetime(2026,11,1,7,10,tzinfo=UTC)
+            feed={"BTC-USD":[(clock.isoformat(),100.0)]*139}
+            gate=threading.Barrier(2)
+            overlap=[]
+            def model_turn(accounts,feed,provider,now,worker_id):
+                gate.wait(timeout=5)
+                overlap.append(worker_id)
+                accounts[worker_id].setdefault("groq_experiments",[]).append({
+                    "cycle":now.isoformat(),"topic":worker_id+" independent parallel research"})
+                return {"worker":worker_id,"cycle":now.strftime("%Y-%m-%dT%H:%MZ"),
+                        "status":"RESEARCHED","action":"HOLD","live_trading":False}
+            stats={}
+            with patch("overnight_local.init_ledger",return_value=repo), patch(
+                "overnight_local.refresh_ledger"), patch(
+                "overnight_local.market",return_value=feed), patch(
+                "overnight_local.one_turn",side_effect=model_turn), patch(
+                "overnight_local.sync_pending",return_value=0), patch(
+                "overnight_local.shutil.disk_usage",return_value=type(
+                    "Space",(),{"free":9000000000})()):
+                count=run_round(data,"qwen3:8b",stats,parallel=2,now_fn=lambda:clock)
+            self.assertEqual(count,10)
+            self.assertEqual(len(overlap),10)
+            self.assertEqual(set(overlap),set(WORKERS))
+            self.assertEqual(len(list((data/"pending").glob("*.json"))),10)
+            self.assertEqual(json.loads((repo/"records/arena/ai_state.json").read_text()),original)
+            self.assertEqual(set(stats),set(WORKERS))
+            for event_path in (data/"pending").glob("*.json"):
+                record=json.loads(event_path.read_text())
+                self.assertEqual(record["model"],"qwen3:8b")
+                self.assertEqual(record["event"]["action"],"HOLD")
+
+    def test_parallel_request_limit_prevents_ten_worker_fanout(self):
+        with self.assertRaisesRegex(ValueError,"PARALLEL_RESEARCH_LANES"):
+            run_round(Path("."),"qwen3:8b",{},parallel=10)
 
     def test_history_is_per_bot_not_canonical_accounts(self):
         with tempfile.TemporaryDirectory() as folder:
