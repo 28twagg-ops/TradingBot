@@ -92,7 +92,7 @@ def _when(value):
         return None
 
 
-def eligible_worker_order(accounts,events,now,limit=MAX_BATCH,minimum_gap=MIN_INTERVAL_MINUTES):
+def eligible_worker_order(accounts,events,now,limit=MAX_BATCH,minimum_gap=MIN_INTERVAL_MINUTES,priority_workers=()):
     """Prioritize the FEWEST successful research sessions, not failures.
 
     Bots whose last call failed stay eligible on the next chance after a
@@ -131,7 +131,11 @@ def eligible_worker_order(accounts,events,now,limit=MAX_BATCH,minimum_gap=MIN_IN
     selected=[id for id in roster if recent_by_worker[id] is None or
               (now-recent_by_worker[id]).total_seconds()>=gap_minutes(id)*60]
     oldest=dt.datetime(1970,1,1,tzinfo=UTC)
+    # A time-boxed evaluation may prioritize a declared subset WITHOUT
+    # bypassing cooldowns, request limits, or ledger/evidence safety gates.
+    priority=set(priority_workers) & set(roster)
     selected.sort(key=lambda id:(
+        0 if id in priority else 1,
         completed_today[id],
         # If every model call fails, spread attempts instead of letting one
         # permanently failing bot monopolize the available free request slots.
