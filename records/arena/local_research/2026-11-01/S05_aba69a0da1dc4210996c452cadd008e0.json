@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "aba69a0da1dc4210996c452cadd008e0",
+  "worker": "S05",
+  "cycle": "2026-11-01T07:23Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S05",
+    "cycle": "2026-11-01T07:23Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Statistical Validation of Opening Range Breakouts in Crypto Assets (BTC-USD, ETH-USD, SOL-USD) 2019-",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "c5beaffa9fa8f1",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com/xhtml/search",
+        "snippet": "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Yahoo Search - Web Search",
+        "url": "https://search.yahoo.com/",
+        "snippet": "Try Yahoo Scout Type a question and get a clear answer with trusted sources. Yahoo Scout helps you understand more, faster.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com.nf/webhp?gl=nf&hl=en&gws_rd=cr&pws=0",
+        "snippet": "Advertising Business Solutions About Google Google.com © 2026 - Privacy - Terms",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "search for academic papers or technical analysis studies on opening range breakouts in crypto assets with hourly price data from 2",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T07:23Z",
+    "id": "c5beaffa9fa8f1",
+    "topic": "Statistical Validation of Opening Range Breakouts in Crypto Assets (BTC-USD, ETH-USD, SOL-USD) 2019-",
+    "hypothesis": "A 30-hour opening range breakout with a 3% price threshold on BTC-USD, ETH-USD, and SOL-USD generates statistically significant positive returns in a regime shift, with a false breakout rate below 20%.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If, over a 12-month period, the 30-hour opening range breakout rule fails to generate at least 30% positive returns on average across BTC-USD, ETH-USD, and SOL-USD with a false signal rate exceeding 20%, the hypothesis is falsified.",
+    "source_search": {
+      "query": "search for academic papers or technical analysis studies on opening range breakouts in crypto assets with hourly price data from 2",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com/xhtml/search",
+        "snippet": "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Yahoo Search - Web Search",
+        "url": "https://search.yahoo.com/",
+        "snippet": "Try Yahoo Scout Type a question and get a clear answer with trusted sources. Yahoo Scout helps you understand more, faster.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com.nf/webhp?gl=nf&hl=en&gws_rd=cr&pws=0",
+        "snippet": "Advertising Business Solutions About Google Google.com © 2026 - Privacy - Terms",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "search for academic papers or technical analysis studies on opening range breakouts in crypto assets with hourly price data from 2",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "daily_bars",
+      "volume",
+      "volume"
+    ],
+    "hypothesis_timeframe": "2019-2026",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
