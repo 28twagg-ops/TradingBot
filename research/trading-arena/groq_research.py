@@ -322,9 +322,18 @@ def one_turn(accounts,feed,model,now,worker_id=None,local_leads=None):
         output["ai_requests"]=1
         raw=model(policy,model_input)
     except RuntimeError as exc:
-        # All unknown errors fail closed, no retries or paid fallback.
+        # Fail closed, but preserve a finite, preapproved diagnostic code so
+        # local Ollama failures aren't indistinguishable from cloud failures.
+        # NEVER retain arbitrary exception text, prompts or provider responses.
+        code=str(exc)
+        local_codes={"OLLAMA_INVALID_JSON","OLLAMA_OFFLINE_OR_TIMEOUT",
+                     "OLLAMA_CONTEXT_TOO_LARGE"}
+        local_http=(code.startswith("OLLAMA_HTTP_") and
+                    len(code)==15 and code[12:].isdigit())
+        safe=(code in local_codes or local_http or
+              code.startswith(("GROQ_HTTP_","NO_GROQ_KEY","GROQ_")))
         output["status"]="AI_UNAVAILABLE"
-        output["safe_error"]=str(exc)[:60] if str(exc).startswith(("GROQ_HTTP_","NO_GROQ_KEY","GROQ_")) else "PROVIDER_ERROR"
+        output["safe_error"]=code[:60] if safe else "PROVIDER_ERROR"
         return output
     try:
         # The model chooses any question, source platform and future direction.
