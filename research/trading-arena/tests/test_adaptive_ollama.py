@@ -52,6 +52,28 @@ class AdaptiveLocalTests(unittest.TestCase):
                 for i in range(8):
                     self.assertEqual(r.choose("S01"), BASE)
 
+    def test_manual_auto_once_selects_installed_model_without_broker_calls(self):
+        from overnight_local import main
+        with tempfile.TemporaryDirectory() as root:
+            selected=[]
+            def dry_run(data, model, stats, **kwargs):
+                selected.append((model, kwargs["model_selector"]("S01")))
+                kwargs["on_result"]({
+                    "model":model,"worker":"S01","status":"RESEARCHED",
+                    "local_metrics":{"tokens_per_second":14.2,"elapsed_seconds":9.7}})
+                return 1
+            with patch("overnight_local.available_models",return_value=[BASE,STRONG]), patch(
+                "overnight_local.run_round",side_effect=dry_run), patch(
+                "local_adaptive.hardware",return_value=hardware()):
+                self.assertEqual(main(["--model","auto","--parallel","1",
+                                       "--once","--data-dir",root]),0)
+            self.assertEqual(selected[0],(BASE,BASE))
+            report=Path(root,"MORNING_REPORT.md").read_text()
+            self.assertIn("Adaptive local model telemetry",report)
+            self.assertIn("qwen3:4b-instruct",report)
+            records=json.loads(Path(root,"model_runtime.json").read_text())
+            self.assertEqual(records["records"][0]["model"],BASE)
+
     def test_no_cloud_fallback_or_uninstalled_models(self):
         with tempfile.TemporaryDirectory() as root:
             r=AdaptiveRouter(root,["llama3.2:3b"],sample_hardware=lambda:hardware())
