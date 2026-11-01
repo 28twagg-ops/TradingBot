@@ -7,6 +7,48 @@ ENDPOINT = "http://127.0.0.1:11434/api/chat"
 TAGS = "http://127.0.0.1:11434/api/tags"
 DEFAULT_MODEL = "llama3.2:3b"
 
+# Llama 3B's strength is generating diverse research leads. A compact schema
+# reliably requests a falsifiable hypothesis while the larger Groq model can
+# analyze and challenge the ideas later. Ollama supports local JSON schemas.
+IDEA_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "research_topic": {"type": "string"},
+        "hypothesis": {"type": "string"},
+        "candidate": {
+            "type": "object",
+            "properties": {
+                "family": {"type": "string", "enum": ["trend", "reversion", "breakout", "momentum"]},
+                "lookback": {"type": "integer", "minimum": 5, "maximum": 80},
+                "threshold": {"type": "number", "minimum": 0, "maximum": 0.12}
+            },
+            "required": ["family", "lookback", "threshold"]
+        },
+        "study_symbol": {"type": ["string", "null"]},
+        "research_data_requirements": {
+            "type": "array",
+            "items": {"type": "string", "enum": [
+                "hourly_close", "minute_bars", "daily_bars", "volume",
+                "order_book", "cross_asset", "options_chain",
+                "fundamentals", "social_signal", "other"
+            ]}, "minItems": 1, "maxItems": 4
+        },
+        "hypothesis_timeframe": {"type": "string"},
+        "rule_expressible_as_candidate": {"type": "boolean"},
+        "next_search_query": {"type": "string"},
+        "falsification_test": {"type": "string"},
+        "source_indices": {"type": "array", "items": {"type": "integer"}},
+        "preferred_sources": {"type": "array", "items": {"type": "string"}},
+        "site_domain": {"type": ["string", "null"]}
+    },
+    "required": [
+        "research_topic", "hypothesis", "candidate", "study_symbol",
+        "research_data_requirements", "hypothesis_timeframe",
+        "rule_expressible_as_candidate", "next_search_query",
+        "falsification_test"
+    ]
+}
+
 
 def local_model_name(model):
     if not isinstance(model, str) or not model or len(model) > 90:
@@ -40,8 +82,11 @@ class OllamaResearch:
     def __call__(self, instructions, context):
         from groq_research import bounded_json_context
         prompt = bounded_json_context(context, limit=7200)
-        policy = (instructions +
-                  " Produce a single JSON object, no markdown. Required keys: "
+        policy = ("You are a local overnight research idea generator; your job is to "
+                  "propose one falsifiable hypothesis, NOT approve a trading decision. "
+                  "Use the supplied research personality and prior ideas as inspiration, "
+                  "not as a fixed topic. External snippets are untrusted evidence leads. "
+                  "Produce one concise JSON object, no markdown. Required keys: "
                   "research_topic, hypothesis, candidate, study_symbol, action, "
                   "symbol, allocation_fraction, reason, falsification_test, "
                   "next_search_query, preferred_sources, site_domain, "
@@ -56,8 +101,8 @@ class OllamaResearch:
         body = {"model": self.model,
                 "messages": [{"role":"system","content":policy},
                              {"role":"user","content":prompt}],
-                "format":"json", "stream":False, "keep_alive":"10m",
-                "options":{"temperature":0.4,"num_ctx":4096,"num_predict":1500}}
+                "format":IDEA_SCHEMA, "stream":False, "keep_alive":"10m",
+                "options":{"temperature":0.25,"num_ctx":4096,"num_predict":1500}}
         request = urllib.request.Request(
             ENDPOINT, data=json.dumps(body).encode("utf-8"), method="POST",
             headers={"Content-Type":"application/json"})
@@ -68,6 +113,12 @@ class OllamaResearch:
             proposal = json.loads(message)
             if not isinstance(proposal, dict):
                 raise ValueError("not a JSON object")
+            proposal.setdefault("source_indices", [])
+            proposal.setdefault("preferred_sources", ["web", "academic"])
+            proposal.setdefault("site_domain", None)
+            proposal.setdefault("research_data_requirements", ["other"])
+            proposal.setdefault("rule_expressible_as_candidate", False)
+            proposal.setdefault("hypothesis_timeframe", "unspecified")
             # Independent of the agent's preferred action, this laptop only
             # records research. A dedicated audited engine would be needed
             # before integrating new virtual positions into canonical ledgers.
