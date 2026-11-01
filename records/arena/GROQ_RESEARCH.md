@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-01T13:31Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | 9bdced9ed804dd | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-01T13:30Z | S10 | ETH-USD hourly trend persistence | 338aa58ca6e3cb | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T13:29Z | S07 | BTC-USD hourly trend persistence | aa422c270d05d5 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T13:29Z | S09 | BTC-USD hourly trend reversal after sustained up | 732de2d0ecbb6e | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T13:28Z | S06 | BTC‑USD relative strength to SPY 24‑hour momentu | ccd7ff186edd0d | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-01T10:50Z | S02 | BTC-USD Monday first‑hour return conditioned on  | a30a5da537232e | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T10:50Z | S08 | Hourly realized volatility dataset for BTC-USD | ec9d6631a0b347 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-01T10:49Z | S09 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-31T18:37Z | S08 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
 | 2026-10-31T18:37Z | S01 | BTC-USD hourly VWAP mean reversion after extreme | bbfcd57ba7de98 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T17:46Z | S04 | Hourly gap‑down >2% in BTC‑USD followed by 5‑hou | 553b5532b9abd0 | HOLD |
-| 2026-10-31T17:45Z | S10 | ETH-USD hourly mean reversion to 12‑hour SMA | 278c813c09ce5d | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-10-31T17:44Z | S05 | Opening Range Breakout on BTC-USD | 5ae51064a3c169 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-31T17:44Z | S09 | Reddit Bitcoin upvote surge hourly impact BTC pr | f47f81bc347a4c | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-31T17:43Z | S03 | Hourly mean reversion of BTC-USD around a 4‑hour | 456fe8552b34b2 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-10-31T17:39Z | S01 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

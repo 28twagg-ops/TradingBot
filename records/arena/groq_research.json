@@ -6779,5 +6779,154 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC-USD Monday first hour return trend conditioned on Friday 5\u2011hour MA slope"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-11-01T13:28Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "ccd7ff186edd0d",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on independent blog"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-11-01T13:29Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly trend reversal after sustained uptrend",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "732de2d0ecbb6e",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly price trend reversal study"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-11-01T13:29Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly trend persistence",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "aa422c270d05d5",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly trend backtest 20h lookback 5% threshold results"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-11-01T13:30Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "ETH-USD hourly trend persistence",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "338aa58ca6e3cb",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Ethereum price today, ETH to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/ethereum/",
+        "snippet": "Ethereum is a decentralized open-source blockchain system that features its own cryptocurrency, Ether. ETH works as a platform for numerous other cryptocurrencies, as well as for the execution of decentralized smart contracts. Ethereum was ",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Ethereum USD Price (ETH-USD) - Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/ETH-USD/",
+        "snippet": "Find the live Ethereum USD (ETH-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "ETHUSD \u2014 Ethereum Price Chart \u2014 TradingView",
+        "url": "https://www.tradingview.com/symbols/ETHUSD/",
+        "snippet": "Watch live Ethereum to Dollar charts, follow ETH USD prices in real-time, get historical data. Check the Ethereum market cap, top trading ideas and forecasts.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "ETH Zurich - Homepage",
+        "url": "https://ethz.ch/en.html",
+        "snippet": "Situated in the heart of Europe, yet forging con\u00adnec\u00adtions all over the world, ETH Zurich is pioneering solutions to the global challenges of today and tomorrow.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "ETH-USD hourly trend persistence backtest results"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-11-01T13:31Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly VWAP mean reversion after extreme deviations",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "9bdced9ed804dd",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly VWAP calculation methodology empirical study 2024 2025"
   }
 ]
