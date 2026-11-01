@@ -44,7 +44,9 @@ def score(rows):
             "valid_percent": round(100 * valid / total, 1) if total else None,
             "median_tokens_per_second": _median(rows, "tokens_per_second"),
             "median_latency_seconds": _median(rows, "elapsed_seconds"),
-            "invalid_json_count": sum(x.get("safe_error") == "OLLAMA_INVALID_JSON" for x in rows)}
+            "invalid_json_count": sum(x.get("safe_error") == "OLLAMA_INVALID_JSON" for x in rows),
+            "median_cpu_percent": _median(rows, "cpu_percent"),
+            "median_free_ram_gb": _median(rows, "free_ram_gb")}
 
 
 class AdaptiveRouter:
@@ -130,6 +132,12 @@ class AdaptiveRouter:
                "model": model,
                "status": str(event.get("status", ""))[:50],
                "safe_error": str(event.get("safe_error", ""))[:40]}
+        hw = metric.get("hardware_snapshot", {})
+        hw = hw if isinstance(hw, dict) else {}
+        for field in ("cpu_percent","free_ram_gb","total_ram_gb"):
+            val = hw.get(field)
+            if type(val) in (int,float) and math.isfinite(val) and 0 <= val <= 1e9:
+                row[field] = round(val,2)
         for k in ("tokens_per_second", "elapsed_seconds", "load_seconds",
                   "eval_count", "prompt_eval_count", "retries"):
             v = metric.get(k)
@@ -161,16 +169,17 @@ def format_report(doc):
             "Success % measures accepted research output, NOT profitable trading.",
             "Ollama response metrics include prompt and generated token counts;",
             "latency and generation throughput are measured separately.", "",
-            "| Installed model | Samples | Valid output | Median tokens/s | Median response seconds |",
-            "|---|---:|---:|---:|---:|"]
+            "| Installed model | Samples | Valid output | Median tokens/s | Median response seconds | CPU sample % | Free RAM GB |",
+            "|---|---:|---:|---:|---:|---:|---:|"]
     for model, stats in doc.get("models", {}).items():
         def fmt(v):
             return "Unavailable" if v is None else str(v)
-        rows.append("| {} | {} | {} | {} | {} |".format(
+        rows.append("| {} | {} | {} | {} | {} | {} | {} |".format(
             model, stats["attempts"], fmt(stats["valid_percent"])+
             ("%" if stats["valid_percent"] is not None else ""),
             fmt(stats["median_tokens_per_second"]),
-            fmt(stats["median_latency_seconds"])))
+            fmt(stats["median_latency_seconds"]),
+            fmt(stats["median_cpu_percent"]),fmt(stats["median_free_ram_gb"])))
     hw = doc.get("hardware_snapshot", {})
     rows.append("")
     rows.append("Latest hardware sample: CPU {}%; free RAM {} GB / total {} GB.".format(

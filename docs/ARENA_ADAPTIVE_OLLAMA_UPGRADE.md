@@ -49,7 +49,7 @@ git -C "%USERPROFILE%\TradingArenaLocal" switch main && git -C "%USERPROFILE%\Tr
 
 The command fails safely if local source changes block switching branches or a fast-forward pull. It keeps old research records and separate GitHub ledger history, installs the extra telemetry dependency and potentially the optional larger model if hardware and free disk qualify, checks Ollama and GitHub access, then updates the existing Windows Task Scheduler job. No extra GitHub repository or separate deployment is needed. It will not install software without your running it.
 
-Verify the setup prints **SETUP COMPLETE** and Windows Task Scheduler action contains `--model auto --parallel 1 --scheduled --log`. Keep the laptop powered, awake, signed in, with Ollama running during overnight windows. The task runs under the interactive user account, not a power-on cloud service.
+Verify the setup prints **SETUP COMPLETE** and Windows Task Scheduler action contains `--model auto --parallel 1 --scheduled --log`. Keep the laptop powered, awake, and signed in. The scheduled job first checks the local Ollama API and can start `ollama serve` if the tray app was closed. This is a best-effort local restart, not a way to wake a shut-down laptop or run when signed out. The task runs under the interactive user account, not a power-on cloud service.
 
 The existing `qwen3:4b-instruct` model and tonight's cloud Groq research remain unaffected until you run this command locally.
 
