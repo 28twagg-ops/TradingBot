@@ -17,7 +17,7 @@ def _short(value, maximum=200):
     return value.strip()[:maximum] if isinstance(value, str) else ""
 
 
-def read_local_ideas(root, worker=None, limit=3):
+def read_local_ideas(root, worker=None, limit=3, generation_index=None):
     """Expose only bounded, labeled hypotheses from imported immutable events.
 
     Files must have passed the independent importer; this second read still
@@ -44,6 +44,10 @@ def read_local_ideas(root, worker=None, limit=3):
                 continue
             wid = item.get("worker")
             if wid not in WORKERS or (worker is not None and wid != worker):
+                continue
+            # Predecessor research remains archived but is not a fresh
+            # forward observation for the successor generation.
+            if generation_index is not None and item.get("generation_index",0) != generation_index:
                 continue
             if (item.get("kind") != "local_research_only"
                     or item.get("research_only") is not True
@@ -76,6 +80,7 @@ def read_local_ideas(root, worker=None, limit=3):
             collected.append({
                 "source": "UNVERIFIED_LOCAL_LLAMA_RESEARCH_ONLY",
                 "worker": wid,
+                "generation_index": item.get("generation_index",0),
                 "cycle": _short(item.get("cycle"), 30),
                 "model": _short(item.get("model"), 65),
                 "status": event["status"],
