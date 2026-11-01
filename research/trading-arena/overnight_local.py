@@ -109,12 +109,14 @@ def event_paths(folder, pending):
                 yield path
 
 
-def read_history(folder, pending, worker, max_items=12):
+def read_history(folder, pending, worker, max_items=12, generation_index=None):
     rows = {}
     for path in event_paths(folder, pending):
         try:
             x = json.loads(path.read_text(encoding="utf-8"))
             if x.get("worker") != worker:
+                continue
+            if generation_index is not None and x.get("generation_index", 0) != generation_index:
                 continue
             if not isinstance(x.get("experiment"), dict) or not x["experiment"].get("topic"):
                 continue
@@ -134,7 +136,8 @@ def research_account(folder, pending, worker):
         raise ValueError("ARENA_ACCOUNT_ROSTER_MISMATCH")
     record = copy.deepcopy(accounts[worker])
     history = list(record.get("groq_experiments", []))[-6:]
-    history.extend(x["experiment"] for x in read_history(folder, pending, worker))
+    history.extend(x["experiment"] for x in read_history(
+        folder, pending, worker, generation_index=record.get("generation_index",0)))
     # Local experimental history is private to the research identity; account
     # positions/real ledger events remain untouched. Only history is appended.
     record["groq_experiments"] = history
@@ -159,6 +162,7 @@ def queue_record(data, worker, event, experiment, model):
     cycle = str(event.get("cycle", ""))[:20]
     record = {"schema_version":1,"kind":"local_research_only",
               "event_id":identifier,"worker":worker,"cycle":cycle,
+              "generation_index":event.get("generation_index",0),
               "model":model,"research_only":True,"live_trading":False,
               "event":event,"experiment":experiment}
     path = Path(data) / "pending" / (cycle[:10] + "_" + worker + "_" + identifier + ".json")
