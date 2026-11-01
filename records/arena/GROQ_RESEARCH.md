@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-01T17:56Z | S02 | BTC-USD Monday first‑hour return conditioned on  | cf4a8c7e3f43fc | HOLD_INVALID_MODEL_DECISION |
+| 2026-11-01T17:55Z | S05 | Opening Range Breakout on BTC-USD | 6ca5554391baec | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-01T17:54Z | S03 | BTC-USD hourly mean reversion lag 4 | 54c24a1926f72d | HOLD_INVALID_MODEL_DECISION |
+| 2026-11-01T17:54Z | S04 | Hourly gap‑down >2% in BTC‑USD followed by short | 9373978357eeb9 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T17:53Z | S01 | BTC-USD hourly VWAP mean‑reversion after extreme | 09b4d4b7fe56ae | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-01T17:17Z | S10 | ETH-USD hourly trend persistence | c7651bf4a832f0 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T17:16Z | S07 | BTC-USD hourly trend persistence | 0d3a5a53bdac09 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T17:15Z | S08 |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-01T06:10Z | S09 | BTC subreddit upvote impact | 7f5113ca488d91 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-01T06:09Z | S05 | Opening Range Breakout on BTC-USD | 5ef72f5bb6bd21 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T06:09Z | S03 | BTC-USD hourly mean reversion at 4‑hour lag | 1480fd15c8c896 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-01T01:07Z | S04 | Hourly gap‑down >2% in BTC‑USD followed by 5‑hou | f275ae8a6b7404 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-01T00:40Z | S01 | BTC-USD hourly VWAP calculation methodology empi | 5f34e0172debb9 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-01T00:40Z | S10 | ETH-USD hourly mean reversion to 12‑hour SMA | ed641f66de74c7 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-01T00:07Z | S07 | Hourly trend persistence in BTC-USD | f537a85f2582c1 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-10-31T23:29Z | S05 | Opening Range Breakout on BTC-USD | 1f944ff888891d | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
