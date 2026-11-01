@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "2c50238bf2a644bfb9169fd80fbb031c",
+  "worker": "S01",
+  "cycle": "2026-11-01T13:09Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S01",
+    "cycle": "2026-11-01T13:09Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly VWAP reversion under liquidity friction and order flow imbalance",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "hourly_close",
+        "volume",
+        "order_book"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "12f693b311fef2",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "ACADEMIC Definition & Meaning - Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/academic",
+        "snippet": "The meaning of ACADEMIC is of, relating to, or associated with an academy or school especially of higher learning. How to use academic in a sentence.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Google Académico",
+        "url": "https://scholar.google.com/?hl=es",
+        "snippet": "Google Académico ofrece una forma sencilla de buscar literatura académica. Puedes buscar entre una amplia gama de disciplinas y fuentes académicas, como artículos, tesis, libros, resúmenes y dictámenes jurídicos.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "ACADEMIC | English meaning - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/dictionary/english/academic",
+        "snippet": "ACADEMIC definition: 1. relating to schools, colleges, and universities, or connected with studying and thinking, not…. Learn more.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "empirical study liquidity friction order flow imbalance BTC-USD hourly VWAP reversion 3% threshold 30-hour lookback with price dev",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T13:09Z",
+    "id": "12f693b311fef2",
+    "topic": "BTC-USD hourly VWAP reversion under liquidity friction and order flow imbalance",
+    "hypothesis": "Liquidity friction and order flow imbalance create a temporary noise band around the BTC-USD hourly VWAP, causing price to exhibit statistically significant reversion to VWAP when deviating by 3% over a 30-hour lookback period, with the reversion bei",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "hourly_close",
+        "volume",
+        "order_book"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If the BTC-USD hourly VWAP reversion with a 3% threshold over a 30-hour lookback fails to show statistically significant mean reversion in price deviation from VWAP across at least 100 independent trading sessions, and no liquidity friction or order flow imbalance is identified as a mediating mechan",
+    "source_search": {
+      "query": "academic study liquidity friction order flow imbalance BTC-USD hourly VWAP reversion 3% threshold 30-hour lookback empirical valid",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "ACADEMIC Definition & Meaning - Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/academic",
+        "snippet": "The meaning of ACADEMIC is of, relating to, or associated with an academy or school especially of higher learning. How to use academic in a sentence.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Google Académico",
+        "url": "https://scholar.google.com/?hl=es",
+        "snippet": "Google Académico ofrece una forma sencilla de buscar literatura académica. Puedes buscar entre una amplia gama de disciplinas y fuentes académicas, como artículos, tesis, libros, resúmenes y dictámenes jurídicos.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "ACADEMIC | English meaning - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/dictionary/english/academic",
+        "snippet": "ACADEMIC definition: 1. relating to schools, colleges, and universities, or connected with studying and thinking, not…. Learn more.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "empirical study liquidity friction order flow imbalance BTC-USD hourly VWAP reversion 3% threshold 30-hour lookback with price dev",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "hourly_close",
+      "volume",
+      "order_book"
+    ],
+    "hypothesis_timeframe": "12 hours to 30 days",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
