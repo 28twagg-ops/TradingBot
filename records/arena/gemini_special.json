@@ -1,0 +1,27 @@
+{
+  "status": "PAPER_EVIDENCE_REVIEW",
+  "date": "2026-11-01",
+  "judges": {
+    "J01": {
+      "verdict": "NEEDS_MORE_EVIDENCE",
+      "finding": "Provider unavailable: ProviderConfigurationError"
+    },
+    "J02": {
+      "verdict": "NEEDS_MORE_EVIDENCE",
+      "finding": "Provider unavailable: ProviderConfigurationError"
+    },
+    "J03": {
+      "verdict": "NEEDS_MORE_EVIDENCE",
+      "finding": "Provider unavailable: TimeoutError"
+    }
+  },
+  "provider_requests": 0,
+  "source_counts": {
+    "groq": 12,
+    "local_llama": 10
+  },
+  "disagreement_note": "Disagreeing judges request supporting evidence; a majority is NOT ground truth.",
+  "note": "Historical hourly bars and virtual orders are unverified proxy data, not broker fills.",
+  "paper_promotions": 0,
+  "live_trading_authorized": false
+}

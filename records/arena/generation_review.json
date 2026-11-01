@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-11-01T22:55:40.467244+00:00",
+  "rotations": 0,
+  "monthly_minimum_days": 28,
+  "no_live_trading": true,
+  "results": [
+    {
+      "generation": "S01a",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 100.0,
+      "observations": 4,
+      "closed_trades": 0
+    },
+    {
+      "generation": "S02a",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 97.7345,
+      "observations": 4,
+      "closed_trades": 6
+    },
+    {
+      "generation": "S03a",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 99.2989,
+      "observations": 4,
+      "closed_trades": 0
+    },
+    {
+      "generation": "S04a",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 100.8237,
+      "observations": 4,
+      "closed_trades": 2
+    },
+    {
+      "generation": "S05a",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 100.0,
+      "observations": 4,
+      "closed_trades": 0
+    },
+    {
+      "generation": "S06a",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 98.469,
+      "observations": 4,
+      "closed_trades": 7
+    },
+    {
+      "generation": "S07a",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 98.2183,
+      "observations": 4,
+      "closed_trades": 2
+    },
+    {
+      "generation": "S08a",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 100.0,
+      "observations": 4,
+      "closed_trades": 0
+    },
+    {
+      "generation": "S09a",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 97.3889,
+      "observations": 4,
+      "closed_trades": 5
+    },
+    {
+      "generation": "S10a",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 98.2784,
+      "observations": 4,
+      "closed_trades": 6
+    }
+  ]
+}

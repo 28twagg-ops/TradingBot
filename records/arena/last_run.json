@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-01T18:59:42.835381+00:00",
+  "timestamp": "2026-11-01T22:52:08.413424+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -12,11 +12,11 @@
       "missing_quotes": []
     },
     "S02": {
-      "action": "HOLD",
+      "action": "SELL BTC-USD",
       "generation_index": 0,
-      "cash": 74.44967151,
-      "equity": 97.8059,
-      "ledger_events": 11,
+      "cash": 97.73445627,
+      "equity": 97.7345,
+      "ledger_events": 12,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -24,7 +24,7 @@
       "action": "HOLD",
       "generation_index": 0,
       "cash": 13.25515543,
-      "equity": 99.3744,
+      "equity": 99.2989,
       "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -48,11 +48,11 @@
       "missing_quotes": []
     },
     "S06": {
-      "action": "HOLD",
+      "action": "SELL BTC-USD",
       "generation_index": 0,
-      "cash": 59.42814853,
-      "equity": 98.5887,
-      "ledger_events": 13,
+      "cash": 98.46897098,
+      "equity": 98.469,
+      "ledger_events": 14,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -84,11 +84,11 @@
       "missing_quotes": []
     },
     "S10": {
-      "action": "HOLD",
+      "action": "SELL BTC-USD",
       "generation_index": 0,
-      "cash": 74.83836325,
-      "equity": 98.3503,
-      "ledger_events": 11,
+      "cash": 98.27837991,
+      "equity": 98.2784,
+      "ledger_events": 12,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     }

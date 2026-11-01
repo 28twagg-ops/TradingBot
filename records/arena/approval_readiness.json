@@ -1,0 +1,216 @@
+{
+  "schema": 1,
+  "council": {
+    "S01a": {
+      "worker": "S01",
+      "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
+      "blockers": [
+        "LESS_THAN_60_FORWARD_PAPER_MARKS",
+        "LESS_THAN_30_DISTINCT_FORWARD_DAYS",
+        "LESS_THAN_20_CLOSED_PAPER_EXITS",
+        "NO_NET_POSITIVE_CUMULATIVE_PAPER_EQUITY",
+        "INDEPENDENT_COUNCIL_EVIDENCE_NOT_PASSED",
+        "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
+        "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
+      ],
+      "forward_marks": 4,
+      "closed_paper_exits": 0,
+      "distinct_mark_days": 1,
+      "latest_indicative_equity": 100.0,
+      "live_trading_enabled": false,
+      "automatic_real_trading": false,
+      "approval_requested": false,
+      "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
+    },
+    "S02a": {
+      "worker": "S02",
+      "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
+      "blockers": [
+        "LESS_THAN_60_FORWARD_PAPER_MARKS",
+        "LESS_THAN_30_DISTINCT_FORWARD_DAYS",
+        "LESS_THAN_20_CLOSED_PAPER_EXITS",
+        "NO_NET_POSITIVE_CUMULATIVE_PAPER_EQUITY",
+        "INDEPENDENT_COUNCIL_EVIDENCE_NOT_PASSED",
+        "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
+        "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
+      ],
+      "forward_marks": 4,
+      "closed_paper_exits": 6,
+      "distinct_mark_days": 1,
+      "latest_indicative_equity": 97.7345,
+      "live_trading_enabled": false,
+      "automatic_real_trading": false,
+      "approval_requested": false,
+      "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
+    },
+    "S03a": {
+      "worker": "S03",
+      "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
+      "blockers": [
+        "LESS_THAN_60_FORWARD_PAPER_MARKS",
+        "LESS_THAN_30_DISTINCT_FORWARD_DAYS",
+        "LESS_THAN_20_CLOSED_PAPER_EXITS",
+        "NO_NET_POSITIVE_CUMULATIVE_PAPER_EQUITY",
+        "INDEPENDENT_COUNCIL_EVIDENCE_NOT_PASSED",
+        "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
+        "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
+      ],
+      "forward_marks": 4,
+      "closed_paper_exits": 0,
+      "distinct_mark_days": 1,
+      "latest_indicative_equity": 99.2989,
+      "live_trading_enabled": false,
+      "automatic_real_trading": false,
+      "approval_requested": false,
+      "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
+    },
+    "S04a": {
+      "worker": "S04",
+      "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
+      "blockers": [
+        "LESS_THAN_60_FORWARD_PAPER_MARKS",
+        "LESS_THAN_30_DISTINCT_FORWARD_DAYS",
+        "LESS_THAN_20_CLOSED_PAPER_EXITS",
+        "INDEPENDENT_COUNCIL_EVIDENCE_NOT_PASSED",
+        "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
+        "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
+      ],
+      "forward_marks": 4,
+      "closed_paper_exits": 2,
+      "distinct_mark_days": 1,
+      "latest_indicative_equity": 100.8237,
+      "live_trading_enabled": false,
+      "automatic_real_trading": false,
+      "approval_requested": false,
+      "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
+    },
+    "S05a": {
+      "worker": "S05",
+      "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
+      "blockers": [
+        "LESS_THAN_60_FORWARD_PAPER_MARKS",
+        "LESS_THAN_30_DISTINCT_FORWARD_DAYS",
+        "LESS_THAN_20_CLOSED_PAPER_EXITS",
+        "NO_NET_POSITIVE_CUMULATIVE_PAPER_EQUITY",
+        "INDEPENDENT_COUNCIL_EVIDENCE_NOT_PASSED",
+        "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
+        "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
+      ],
+      "forward_marks": 4,
+      "closed_paper_exits": 0,
+      "distinct_mark_days": 1,
+      "latest_indicative_equity": 100.0,
+      "live_trading_enabled": false,
+      "automatic_real_trading": false,
+      "approval_requested": false,
+      "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
+    },
+    "S06a": {
+      "worker": "S06",
+      "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
+      "blockers": [
+        "LESS_THAN_60_FORWARD_PAPER_MARKS",
+        "LESS_THAN_30_DISTINCT_FORWARD_DAYS",
+        "LESS_THAN_20_CLOSED_PAPER_EXITS",
+        "NO_NET_POSITIVE_CUMULATIVE_PAPER_EQUITY",
+        "INDEPENDENT_COUNCIL_EVIDENCE_NOT_PASSED",
+        "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
+        "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
+      ],
+      "forward_marks": 4,
+      "closed_paper_exits": 7,
+      "distinct_mark_days": 1,
+      "latest_indicative_equity": 98.469,
+      "live_trading_enabled": false,
+      "automatic_real_trading": false,
+      "approval_requested": false,
+      "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
+    },
+    "S07a": {
+      "worker": "S07",
+      "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
+      "blockers": [
+        "LESS_THAN_60_FORWARD_PAPER_MARKS",
+        "LESS_THAN_30_DISTINCT_FORWARD_DAYS",
+        "LESS_THAN_20_CLOSED_PAPER_EXITS",
+        "NO_NET_POSITIVE_CUMULATIVE_PAPER_EQUITY",
+        "INDEPENDENT_COUNCIL_EVIDENCE_NOT_PASSED",
+        "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
+        "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
+      ],
+      "forward_marks": 4,
+      "closed_paper_exits": 2,
+      "distinct_mark_days": 1,
+      "latest_indicative_equity": 98.2183,
+      "live_trading_enabled": false,
+      "automatic_real_trading": false,
+      "approval_requested": false,
+      "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
+    },
+    "S08a": {
+      "worker": "S08",
+      "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
+      "blockers": [
+        "LESS_THAN_60_FORWARD_PAPER_MARKS",
+        "LESS_THAN_30_DISTINCT_FORWARD_DAYS",
+        "LESS_THAN_20_CLOSED_PAPER_EXITS",
+        "NO_NET_POSITIVE_CUMULATIVE_PAPER_EQUITY",
+        "INDEPENDENT_COUNCIL_EVIDENCE_NOT_PASSED",
+        "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
+        "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
+      ],
+      "forward_marks": 4,
+      "closed_paper_exits": 0,
+      "distinct_mark_days": 1,
+      "latest_indicative_equity": 100.0,
+      "live_trading_enabled": false,
+      "automatic_real_trading": false,
+      "approval_requested": false,
+      "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
+    },
+    "S09a": {
+      "worker": "S09",
+      "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
+      "blockers": [
+        "LESS_THAN_60_FORWARD_PAPER_MARKS",
+        "LESS_THAN_30_DISTINCT_FORWARD_DAYS",
+        "LESS_THAN_20_CLOSED_PAPER_EXITS",
+        "NO_NET_POSITIVE_CUMULATIVE_PAPER_EQUITY",
+        "INDEPENDENT_COUNCIL_EVIDENCE_NOT_PASSED",
+        "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
+        "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
+      ],
+      "forward_marks": 4,
+      "closed_paper_exits": 5,
+      "distinct_mark_days": 1,
+      "latest_indicative_equity": 97.3889,
+      "live_trading_enabled": false,
+      "automatic_real_trading": false,
+      "approval_requested": false,
+      "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
+    },
+    "S10a": {
+      "worker": "S10",
+      "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
+      "blockers": [
+        "LESS_THAN_60_FORWARD_PAPER_MARKS",
+        "LESS_THAN_30_DISTINCT_FORWARD_DAYS",
+        "LESS_THAN_20_CLOSED_PAPER_EXITS",
+        "NO_NET_POSITIVE_CUMULATIVE_PAPER_EQUITY",
+        "INDEPENDENT_COUNCIL_EVIDENCE_NOT_PASSED",
+        "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
+        "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
+      ],
+      "forward_marks": 4,
+      "closed_paper_exits": 6,
+      "distinct_mark_days": 1,
+      "latest_indicative_equity": 98.2784,
+      "live_trading_enabled": false,
+      "automatic_real_trading": false,
+      "approval_requested": false,
+      "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
+    }
+  },
+  "live_order_permissions_unchanged": true,
+  "approval_candidates": []
+}
