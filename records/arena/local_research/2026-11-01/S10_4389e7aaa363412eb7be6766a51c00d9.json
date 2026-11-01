@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "4389e7aaa363412eb7be6766a51c00d9",
+  "worker": "S10",
+  "cycle": "2026-11-01T15:10Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S10",
+    "cycle": "2026-11-01T15:10Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "ETH-USD hourly mean reversion to 24-hour moving average with 3% threshold",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "ffcc238042c53d",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "FX Replay | Futures, Forex & Crypto Backtesting Platform",
+        "url": "https://fxreplay.com/",
+        "snippet": "What markets can I backtest on FX Replay? FX Replay supports backtesting across Futures, Forex pairs, Indices, Metals, Energy, Stocks, Crypto, and Agricultural markets. Historical data goes back as far as 2012 for major Futures contracts an",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Backtest Portfolio Asset Allocation",
+        "url": "https://www.portfoliovisualizer.com/backtest-portfolio",
+        "snippet": "You can analyze and backtest portfolio returns, risk characteristics, style exposures, and drawdowns. The results cover both returns and fund fundamentals based portfolio style analysis along with risk and return decomposition by each portf",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BacktestingMax - Free Trading Strategy Backtesting Software",
+        "url": "https://www.backtestingmax.com/",
+        "snippet": "Free backtesting software: replay 1-minute historical data, have the AI backtest a strategy for you, or practice prop firm challenges under real rules.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Backtest results for ETH-USD hourly mean reversion to 24-hour SMA with 3% threshold, including R-squared, RMSE, Sharpe ratio, and ",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T15:10Z",
+    "id": "ffcc238042c53d",
+    "topic": "ETH-USD hourly mean reversion to 24-hour moving average with 3% threshold",
+    "hypothesis": "ETH-USD hourly price exhibits mean reversion to a 24-hour simple moving average with a 3% threshold, as measured by statistically significant price reversion in 1-hour intervals over a 100-period backtest window.",
+    "candidate": null,
+    "symbol": "ETH-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If the strategy fails to produce a statistically significant mean reversion (p-value > 0.05 in a t-test of price deviation from the 24-hour SMA) over at least 100 backtested 1-hour intervals with R-squared < 0.3 and Sharpe ratio < 0.5, the hypothesis is falsified.",
+    "source_search": {
+      "query": "Backtest results for ETH-USD hourly mean reversion to 24-hour SMA with 3% threshold, including R-squared, RMSE, Sharpe ratio, and",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "FX Replay | Futures, Forex & Crypto Backtesting Platform",
+        "url": "https://fxreplay.com/",
+        "snippet": "What markets can I backtest on FX Replay? FX Replay supports backtesting across Futures, Forex pairs, Indices, Metals, Energy, Stocks, Crypto, and Agricultural markets. Historical data goes back as far as 2012 for major Futures contracts an",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Backtest Portfolio Asset Allocation",
+        "url": "https://www.portfoliovisualizer.com/backtest-portfolio",
+        "snippet": "You can analyze and backtest portfolio returns, risk characteristics, style exposures, and drawdowns. The results cover both returns and fund fundamentals based portfolio style analysis along with risk and return decomposition by each portf",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BacktestingMax - Free Trading Strategy Backtesting Software",
+        "url": "https://www.backtestingmax.com/",
+        "snippet": "Free backtesting software: replay 1-minute historical data, have the AI backtest a strategy for you, or practice prop firm challenges under real rules.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Backtest results for ETH-USD hourly mean reversion to 24-hour SMA with 3% threshold, including R-squared, RMSE, Sharpe ratio, and ",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "daily_bars",
+      "volume",
+      "volume"
+    ],
+    "hypothesis_timeframe": "2023-01-01 to 2026-11-01",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
