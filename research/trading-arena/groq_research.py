@@ -547,7 +547,8 @@ def main():
             print("Pacing Groq calls by",round(wait),"seconds for TPM headroom")
             time.sleep(wait)
         PROVIDER_LIMITS.clear()
-        leads=read_local_ideas(directory,worker=wid,limit=2)
+        leads=read_local_ideas(directory,worker=wid,limit=2,
+                               generation_index=accounts[wid].get("generation_index",0))
         event=one_turn(accounts,feed,groq_json,dt.datetime.now(UTC),worker_id=wid,
                        local_leads=leads)
         attempted.append(event)
