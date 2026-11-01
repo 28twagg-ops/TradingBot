@@ -6349,5 +6349,29 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC-USD hourly VWAP calculation methodology empirical study 2024 2025"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-11-01T01:07Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "Hourly gap\u2011down >2% in BTC\u2011USD followed by 5\u2011hour mean reversion",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "f275ae8a6b7404",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly gap\u2011down >2% events 5\u2011hour return distribution statistics"
   }
 ]

@@ -3272,6 +3272,44 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-11-01T01:07Z",
+        "id": "f275ae8a6b7404",
+        "topic": "Hourly gap\u2011down >2% in BTC\u2011USD followed by 5\u2011hour mean reversion",
+        "hypothesis": "BTC\u2011USD experiences a >2% hourly gap\u2011down and the price tends to revert toward the previous close within the next 5 hours, yielding a positive 5\u2011hour return on average.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compare 5\u2011hour return distribution after >2% gap\u2011downs to overall 5\u2011hour return distribution; significant positive mean indicates support",
+        "source_search": {
+          "query": "BTC-USD hourly gap\u2011down events 2% threshold 5\u2011hour return distribution statistics",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly gap\u2011down >2% events 5\u2011hour return distribution statistics",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ],
     "ai_seen": {

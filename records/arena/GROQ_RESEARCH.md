@@ -6,6 +6,7 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-01T01:07Z | S04 | Hourly gap‑down >2% in BTC‑USD followed by 5‑hou | f275ae8a6b7404 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T00:40Z | S01 | BTC-USD hourly VWAP calculation methodology empi | 5f34e0172debb9 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-01T00:40Z | S10 | ETH-USD hourly mean reversion to 12‑hour SMA | ed641f66de74c7 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T00:07Z | S07 | Hourly trend persistence in BTC-USD | f537a85f2582c1 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -40,7 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-10-31T12:33Z | S02 | BTC-USD weekend intraday volatility and price re | 315098c475befa | HOLD |
 | 2026-10-31T12:32Z | S06 | BTC‑USD relative strength to SPY 24‑hour momentu | b125d75e722870 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-10-31T12:27Z | S09 | BTC-USD hourly price reaction to cross‑market se | d5827d075d5911 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-10-31T12:26Z | S04 | Hourly gap‑up mean reversion in BTC‑USD | 0415b6bbf48b2c | HOLD_INSUFFICIENT_HISTORY |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
