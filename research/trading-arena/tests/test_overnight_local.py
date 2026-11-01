@@ -161,6 +161,36 @@ class LocalLlamaTests(unittest.TestCase):
                 self.assertEqual(record["model"],"qwen3:8b")
                 self.assertEqual(record["event"]["action"],"HOLD")
 
+    def test_two_worker_trial_only_runs_s01_and_s02(self):
+        with tempfile.TemporaryDirectory() as root:
+            data=Path(root)
+            repo=data/"ledger"
+            (repo/"records/arena").mkdir(parents=True)
+            original=initial()
+            (repo/"records/arena/ai_state.json").write_text(json.dumps(original))
+            clock=dt.datetime(2026,11,1,7,10,tzinfo=UTC)
+            feed={"BTC-USD":[(clock.isoformat(),100.0)]*139}
+            observed=[]
+            def fake_turn(accounts,feed,provider,now,worker_id):
+                observed.append(worker_id)
+                accounts[worker_id].setdefault("groq_experiments",[]).append({
+                    "cycle":now.isoformat(),"topic":worker_id+" trial idea"})
+                return {"worker":worker_id,"cycle":now.strftime("%Y-%m-%dT%H:%MZ"),
+                        "status":"RESEARCHED","action":"HOLD","live_trading":False}
+            with patch("overnight_local.init_ledger",return_value=repo), patch(
+                "overnight_local.refresh_ledger"), patch(
+                "overnight_local.market",return_value=feed), patch(
+                "overnight_local.one_turn",side_effect=fake_turn), patch(
+                "overnight_local.sync_pending",return_value=0), patch(
+                "overnight_local.shutil.disk_usage",return_value=type(
+                    "Space",(),{"free":9000000000})()):
+                stats={}
+                self.assertEqual(run_round(data,"qwen3:8b",stats,parallel=2,
+                    workers=("S01","S02"),now_fn=lambda:clock),2)
+            self.assertEqual(set(observed),{"S01","S02"})
+            self.assertEqual(len(list((data/"pending").glob("*.json"))),2)
+            self.assertEqual(json.loads((repo/"records/arena/ai_state.json").read_text()),original)
+
     def test_parallel_request_limit_prevents_ten_worker_fanout(self):
         with self.assertRaisesRegex(ValueError,"PARALLEL_RESEARCH_LANES"):
             run_round(Path("."),"qwen3:8b",{},parallel=10)
