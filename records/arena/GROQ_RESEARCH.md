@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-01T18:50Z | S05a | Hourly Opening Range Breakout on BTC-USD | 1ad28fa311ad8b | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-01T18:49Z | S03a | BTC-USD hourly mean reversion at lag 4 | db4fcb4cf3076d | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T18:49Z | S04a | BTC-USD hourly gap‑down >2% next‑hour momentum | dbd2a82fb4bf0f | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T18:48Z | S08a | BTC-USD hourly return mean reversion | aca6a0075010a6 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T18:47Z | S10a | ETH-USD hourly trend persistence | a787a42f9d4fac | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T18:47Z | S01a | BTC-USD hourly price reversion to 24‑hour moving | 45b1ee17ea9e90 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T18:46Z | S07a | Hourly trend persistence in BTC-USD | 3859a84a477817 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T18:46Z | S09a | BTC-USD hourly trend reversal after sustained up | 65e40c3c44c9ea | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-01T13:29Z | S07a | BTC-USD hourly trend persistence | aa422c270d05d5 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T13:29Z | S09a | BTC-USD hourly trend reversal after sustained up | 732de2d0ecbb6e | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T13:28Z | S06a | BTC‑USD relative strength to SPY 24‑hour momentu | ccd7ff186edd0d | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-01T10:50Z | S02a | BTC-USD Monday first‑hour return conditioned on  | a30a5da537232e | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-01T10:50Z | S08a | Hourly realized volatility dataset for BTC-USD | ec9d6631a0b347 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-01T10:49Z | S09a |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
-| 2026-11-01T10:48Z | S05a | Opening Range Breakout on BTC-USD | 73e1dfceeb2b60 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-01T10:48Z | S03a | BTC-USD hourly mean reversion lag 4 | a4dbffe37d35d2 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
