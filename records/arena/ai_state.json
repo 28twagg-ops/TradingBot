@@ -5636,6 +5636,46 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T18:03Z",
+        "id": "4b4c2ff3eda9f6",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour return exceeds SPY\u2019s 24\u2011hour return by more than 5\u202f% the next hour\u2019s BTC\u2011USD return is positive",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "None performed",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on independent blog",
+          "attempted": [
+            "blog",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on independent blog",
+        "preferred_sources": [
+          "blog",
+          "reddit"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ]
   },
@@ -6327,6 +6367,44 @@
             "read_level": "public_search_result_only"
           }
         ],
+        "next_search_query": "BTC-USD hourly trend backtest 20h lookback 5% threshold results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T18:04Z",
+        "id": "1e7f69946266d6",
+        "topic": "BTC-USD hourly trend persistence",
+        "hypothesis": "BTC-USD hourly price trend persists over a 20\u2011hour lookback when the cumulative return exceeds 5%",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If cumulative 20\u2011hour return <5% or trend direction reverses within 20h, hypothesis fails",
+        "source_search": {
+          "query": "BTC-USD hourly trend backtest 20h lookback 5% threshold results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
         "next_search_query": "BTC-USD hourly trend backtest 20h lookback 5% threshold results",
         "preferred_sources": [
           "web"
@@ -7205,6 +7283,46 @@
         "preferred_sources": [
           "academic",
           "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T18:05Z",
+        "id": "98c3fa75dc211e",
+        "topic": "Hourly realized volatility mean reversion in BTC-USD",
+        "hypothesis": "Hourly realized volatility of BTC-USD tends to revert to a long\u2011term mean, allowing a simple reversion rule to generate excess returns.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "If hourly realized volatility data were available, a reversion rule with lookback 20 and threshold 0.05 would be backtested; failure to produce positive out\u2011of\u2011sample Sharpe would falsify the hypothesis.",
+        "source_search": {
+          "query": "search for publicly available hourly realized volatility dataset for BTC-USD",
+          "attempted": [
+            "academic",
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for publicly available hourly realized volatility dataset for BTC-USD",
+        "preferred_sources": [
+          "web",
+          "academic"
         ],
         "site_domain": null,
         "research_data_requirements": [
@@ -8247,6 +8365,74 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T18:03Z",
+        "id": "f4bdbb772c3ed9",
+        "topic": "BTC-USD trend reversal after sustained uptrend",
+        "hypothesis": "BTC-USD will reverse after a 20\u2011hour uptrend when the price drops 2% below the 20\u2011hour moving average",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If BTC-USD price falls 2% below its 20\u2011hour MA after >10 consecutive hourly up\u2011days, the trend reversal hypothesis is falsified",
+        "source_search": {
+          "query": "BTC-USD hourly trend reversal study 20h moving average 2%",
+          "attempted": [
+            "web",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $77,911.42 USD with a 24-hour trading volume of $12,127,579,944.91 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "What is Bitcoin price today? The current price of Bitcoin (BTC) is 77,827 USD \u2014 it has risen 0.30 % in the past 24 hours. Try placing this info into the context by checking out what coins are also gaining and losing at the moment and seeing",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/BTC-USD/",
+            "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart | CoinDesk",
+            "url": "https://www.coindesk.com/price/bitcoin",
+            "snippet": "The price of Bitcoin (BTC) is $78,077.38 today as of Nov 1, 2026, 12:01 pm EST, with a 24-hour trading volume of $5.44B.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "BTC-USD hourly price series 2026-10-01 to 2026-11-01",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ]
   },
@@ -9250,6 +9436,44 @@
         },
         "source_leads": [],
         "next_search_query": "ETH-USD hourly trend persistence 20h 5% rule backtest",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T18:05Z",
+        "id": "2b8e1215f4b277",
+        "topic": "ETH-USD hourly trend persistence",
+        "hypothesis": "Hourly price changes of ETH-USD exhibit a trend persistence effect: if the price has moved up by at least 5% over the past 20 hours, it is likely to continue moving up in the next hour.",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "None \u2013 rule not expressible with current data.",
+        "source_search": {
+          "query": "ETH-USD hourly trend persistence 20h 5% rule backtest",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly trend persistence 20h 5% rule backtest results",
         "preferred_sources": [
           "web"
         ],
