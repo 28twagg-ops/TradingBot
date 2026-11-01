@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-01T23:37Z | S10a | ETH-USD hourly mean reversion to 24‑hour SMA | 28d417ab7b6a81 | HOLD_INVALID_MODEL_DECISION |
+| 2026-11-01T23:36Z | S07a | Hourly trend persistence in BTC-USD | 07912573af1274 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T23:36Z | S09a | BTC-USD hourly trend reversal after sustained 10 | 4d3754e420a98a | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-01T23:35Z | S02a | BTC-USD hourly trend persistence | 9b0957af225a0e | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-01T23:34Z | S06a | BTC-USD hourly momentum trigger | f9b114d644e856 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T22:54Z | S10a | ETH-USD hourly mean reversion to 24‑hour SMA | aa017c90bdbe03 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T22:54Z | S07a | BTC-USD hourly trend persistence | af92e7310cbb27 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T22:53Z | S09a | BTC-USD trend reversal after sustained 10‑hour u | 379dd57a308a30 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-01T17:54Z | S03a | BTC-USD hourly mean reversion lag 4 | 54c24a1926f72d | HOLD_INVALID_MODEL_DECISION |
 | 2026-11-01T17:54Z | S04a | Hourly gap‑down >2% in BTC‑USD followed by short | 9373978357eeb9 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T17:53Z | S01a | BTC-USD hourly VWAP mean‑reversion after extreme | 09b4d4b7fe56ae | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-01T17:17Z | S10a | ETH-USD hourly trend persistence | c7651bf4a832f0 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-01T17:16Z | S07a | BTC-USD hourly trend persistence | 0d3a5a53bdac09 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-01T17:15Z | S08a |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
-| 2026-11-01T17:14Z | S09a | BTC-USD hourly trend reversal after sustained up | 51e0c8e187aeb3 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-01T17:14Z | S06a | BTC‑USD relative strength to SPY 24‑hour momentu | 7c5c3d0bb0397c | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
