@@ -1662,6 +1662,59 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-11-01T06:11Z",
+        "id": "1bb4db8fa0f28e",
+        "topic": "BTC-USD Monday first\u2011hour return conditioned on Friday 5\u2011hour MA",
+        "hypothesis": "When Friday\u2019s 5\u2011hour moving average exceeds Friday\u2019s close, the Monday first\u2011hour return tends to revert toward zero, producing a mean\u2011reverting pattern that can be exploited with a simple hourly\u2011close rule.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 5,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 491,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 491,
+            "end": 702,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_INVALID_MODEL_DECISION",
+        "validation_issue": "INVALID_PAPER_DECISION",
+        "falsification_test": "If the Monday first\u2011hour return exceeds +5% or -5% when Friday 5\u2011hour MA > Friday close, the reversion hypothesis fails.",
+        "source_search": {
+          "query": "BTC-USD Monday first hour return distribution conditioned on Friday 5\u2011hour MA statistical analysis",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD Monday first hour return distribution conditioned on Friday 5\u2011hour MA statistical analysis",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ]
   },
@@ -2421,6 +2474,44 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-11-01T06:09Z",
+        "id": "1480fd15c8c896",
+        "topic": "BTC-USD hourly mean reversion at 4\u2011hour lag",
+        "hypothesis": "BTC\u2011USD hourly returns exhibit significant negative autocorrelation at lag\u202f4, implying a mean\u2011reversion effect that can be exploited with a simple threshold rule.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compute the 4\u2011hour lag autocorrelation on a hold\u2011out period and compare to a null model of independent hourly returns; reject if p\u2011value\u202f>\u202f0.05.",
+        "source_search": {
+          "query": "BTC\u2011USD hourly returns autocorrelation lag 4 2024 empirical study",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD hourly returns autocorrelation lag 4 2024 empirical study",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ]
   },
@@ -3980,6 +4071,44 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-11-01T06:09Z",
+        "id": "5ef72f5bb6bd21",
+        "topic": "Opening Range Breakout on BTC-USD",
+        "hypothesis": "A breakout above the 95th percentile of the previous 24\u2011hour high signals a new bullish regime in BTC\u2011USD hourly prices.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compare post\u2011breakout returns over 24\u2011hour window to baseline; reject if mean return < 0",
+        "source_search": {
+          "query": "search for BTC-USD hourly price data 2019\u20112026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "obtain BTC-USD hourly close price data 2019\u20112026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ]
   },
@@ -6052,6 +6181,46 @@
         "hypothesis_timeframe": null,
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-11-01T06:11Z",
+        "id": "70762eeefab4e1",
+        "topic": "Hourly realized volatility dataset for BTC-USD",
+        "hypothesis": "Hourly realized volatility of BTC-USD exhibits mean reversion that can be exploited with a reversion rule on hourly close prices.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "None \u2013 requires realized volatility series not available.",
+        "source_search": {
+          "query": "search for publicly available hourly realized volatility dataset for BTC-USD",
+          "attempted": [
+            "academic",
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for publicly available hourly realized volatility dataset for BTC-USD",
+        "preferred_sources": [
+          "academic",
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ]
   },
@@ -6936,6 +7105,46 @@
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-11-01T06:10Z",
+        "id": "7f5113ca488d91",
+        "topic": "BTC subreddit upvote impact",
+        "hypothesis": "Hourly BTC price rises when the Bitcoin subreddit receives an upvote spike relative to the previous hour",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "None",
+        "source_search": {
+          "query": "Bitcoin subreddit upvote time series hourly",
+          "attempted": [
+            "reddit",
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "Bitcoin subreddit upvote hourly time series",
+        "preferred_sources": [
+          "reddit",
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ]
   },

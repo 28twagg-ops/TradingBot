@@ -6373,5 +6373,140 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC-USD hourly gap\u2011down >2% events 5\u2011hour return distribution statistics"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-11-01T06:09Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly mean reversion at 4\u2011hour lag",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "1480fd15c8c896",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC\u2011USD hourly returns autocorrelation lag 4 2024 empirical study"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-11-01T06:09Z",
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "Opening Range Breakout on BTC-USD",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "5ef72f5bb6bd21",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "obtain BTC-USD hourly close price data 2019\u20112026"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-11-01T06:10Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC subreddit upvote impact",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "7f5113ca488d91",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "Bitcoin subreddit upvote hourly time series"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-11-01T06:11Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Hourly realized volatility dataset for BTC-USD",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "70762eeefab4e1",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "search for publicly available hourly realized volatility dataset for BTC-USD"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-11-01T06:11Z",
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_PAPER_DECISION",
+    "topic": "BTC-USD Monday first\u2011hour return conditioned on Friday 5\u2011hour MA",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 5,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 7,
+        "end": 491,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 491,
+        "end": 702,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_INVALID_MODEL_DECISION",
+    "experiment_id": "1bb4db8fa0f28e",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD Monday first hour return distribution conditioned on Friday 5\u2011hour MA statistical analysis"
   }
 ]
