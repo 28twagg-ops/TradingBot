@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "977b87c4dac54960b02638096266a7e5",
+  "worker": "S01",
+  "cycle": "2026-11-01T01:25Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S01",
+    "cycle": "2026-11-01T01:25Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly VWAP mean reversion under liquidity friction",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "hourly_close",
+        "hourly_close",
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "546d8f071c585a",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "The live Bitcoin price today is $77,395.59 USD with a 24-hour trading volume of $11,935,471,650.37 USD. We update our BTC to USD price in real-time.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD hourly VWAP mean reversion empirical study 2024-2025 liquidity friction order flow imbalance",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T01:25Z",
+    "id": "546d8f071c585a",
+    "topic": "BTC-USD hourly VWAP mean reversion under liquidity friction",
+    "hypothesis": "BTC-USD hourly VWAP exhibits mean reversion when deviating by more than 3% from its 30-period average, due to micro-liquidity frictions in high-frequency order flow imbalances.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "hourly_close",
+        "hourly_close",
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "Over a 30-minute rolling window, if BTC-USD hourly VWAP deviates by more than 3% from its 30-period mean and remains above/below the mean for at least 10 consecutive hours without reversion, the hypothesis is falsified.",
+    "source_search": {
+      "query": "BTC-USD hourly VWAP calculation methodology empirical study 2024 2025",
+      "attempted": [
+        "web",
+        "academic",
+        "forum"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "The live Bitcoin price today is $77,395.59 USD with a 24-hour trading volume of $11,935,471,650.37 USD. We update our BTC to USD price in real-time.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD hourly VWAP mean reversion empirical study 2024-2025 liquidity friction order flow imbalance",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "hourly_close",
+      "hourly_close",
+      "hourly_close"
+    ],
+    "hypothesis_timeframe": "2024-11-01 to 2025-11-01",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
