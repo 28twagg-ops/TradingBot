@@ -15,7 +15,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 
 from local_ollama import OllamaResearch, local_model_name, available_models
 from overnight_local import (WORKERS, within_window, queue_record, read_history,
-                             research_account, sync_pending, run_round, lock_acquire, process_running)
+                             research_account, sync_pending, run_round, lock_acquire, process_running, init_upload)
 from run_virtual import initial, UTC
 
 
@@ -281,6 +281,57 @@ class LocalLlamaTests(unittest.TestCase):
             self.assertEqual(len(list((data/"pending").glob("*.json"))),10)
             self.assertEqual(set(stats),set(WORKERS))
             self.assertEqual(json.loads((repo/"records/arena/ai_state.json").read_text()),initial())
+
+    def test_new_local_events_use_lf_only_on_any_platform(self):
+        with tempfile.TemporaryDirectory() as d:
+            item=queue_record(Path(d),"S01",
+                {"cycle":"2026-11-01T00:58Z","status":"AI_UNAVAILABLE",
+                 "action":"HOLD"},
+                {"topic":"test a defensible hypothesis"},"qwen3:8b")
+            self.assertNotIn(b"\r\n",item.read_bytes())
+            self.assertIn(b"\n",item.read_bytes())
+
+    @unittest.skipUnless(sys.platform!="win32","Requires Git subprocess in CI")
+    def test_recovers_legacy_windows_crlf_records_with_autocrlf_true(self):
+        # Reproduce the field report: events reach GitHub on Windows but
+        # remote-ack fails because Git normalized CRLF to LF when committing.
+        with tempfile.TemporaryDirectory() as root:
+            root=Path(root)
+            remote=root/"remote.git"
+            seed=root/"seed"
+            data=root/"data"
+            data.mkdir()
+            def command(*args):
+                return subprocess.run(["git",*map(str,args)],capture_output=True,
+                    check=True,timeout=30).stdout
+            command("init","--bare","--initial-branch=arena-local-research",remote)
+            command("clone",remote,seed)
+            (seed/"records/arena").mkdir(parents=True)
+            (seed/"records/arena/ai_state.json").write_text(json.dumps(initial()))
+            command("-C",seed,"add","records")
+            command("-C",seed,"-c","user.name=CI","-c",
+                    "user.email=ci@example.invalid","commit","-m","seed")
+            command("-C",seed,"push","origin","HEAD:arena-local-research")
+            item=queue_record(data,"S01",
+                {"cycle":"2026-11-01T00:58Z","status":"RESEARCH_IDEA_NEEDS_DATA",
+                 "action":"HOLD"},
+                {"topic":"an unverified idea","test":{"status":"PENDING_PROPER_HISTORICAL_DATA"}},
+                "qwen3:8b")
+            legacy=item.read_bytes().replace(b"\n",b"\r\n")
+            item.write_bytes(legacy)
+            with patch("overnight_local.REPO",str(remote)):
+                upload=init_upload(data)
+                command("-C",upload,"config","core.autocrlf","true")
+                self.assertEqual(sync_pending(data,attempts=2),1)
+                self.assertEqual(sync_pending(data,attempts=1),0)
+            self.assertFalse(item.exists())
+            archived=data/"sent"/item.name
+            self.assertEqual(archived.read_bytes(),legacy)
+            filename=archived.name
+            payload=command("--git-dir",remote,"show",
+                "arena-local-research:records/arena/local_research/2026-11-01/"
+                + "S01_"+filename.split("_")[-1])
+            self.assertEqual(payload,legacy.replace(b"\r\n",b"\n"))
 
     @unittest.skipUnless(sys.platform!="win32","Requires Git subprocess in CI")
     def test_git_sync_is_immutable_and_idempotent(self):
