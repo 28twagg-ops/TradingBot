@@ -62,7 +62,7 @@ jobs:
         if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '17 19 * * 0')
         env:
           GEMINI_API_KEY: ${{ secrets.Gemini_API_Key }}
-          GEMINI_MODEL: gemini-3.5-flash-lite
+          GEMINI_MODEL: gemini-3.8-flash
         run: python research/trading-arena/gemini_special.py --dir /tmp/arena-state/records/arena
 
       - name: Commit only Arena state to the separate ledger branch
