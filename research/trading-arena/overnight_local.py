@@ -437,8 +437,17 @@ def main(argv=None):
                         help="Two-worker real inference + paper-only GitHub sync trial")
     parser.add_argument("--sync-only", action="store_true",
                         help="Recover pending append-only GitHub uploads, no AI inference")
+    parser.add_argument("--scheduled", action="store_true",
+                        help="Task Scheduler watchdog; exit quietly outside local research window")
     parser.add_argument("--data-dir", type=Path, default=DATA)
     args=parser.parse_args(argv)
+    if args.scheduled:
+        if args.trial or args.once or args.smoke or args.sync_only:
+            parser.error("--scheduled cannot run manual test modes")
+        # This guard also protects a morning report created by the completed
+        # overnight session from being overwritten by daytime watchdog checks.
+        if not within_window(dt.datetime.now(UTC)):
+            return 0
     model=local_model_name(args.model)
     data=args.data_dir.expanduser()
     data.mkdir(parents=True, exist_ok=True)
@@ -486,6 +495,11 @@ def main(argv=None):
 if __name__=="__main__":
     if "--log" in sys.argv:
         sys.argv.remove("--log")
+        # Repeat every fifteen minutes in Task Scheduler to survive DST and
+        # missed midnight triggers. Outside the research window this must be
+        # a true no-op: no log spam, Ollama calls, Git I/O or report writes.
+        if "--scheduled" in sys.argv and not within_window(dt.datetime.now(UTC)):
+            sys.exit(0)
         DATA.mkdir(parents=True,exist_ok=True)
         stream=(DATA/"overnight.log").open("a",encoding="utf-8",buffering=1)
         sys.stdout=stream
