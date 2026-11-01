@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "fb046b47872f41d49bb5c1862ba7319a",
+  "worker": "S01",
+  "cycle": "2026-11-01T09:11Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S01",
+    "cycle": "2026-11-01T09:11Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly VWAP reversion under liquidity friction and order flow imbalance",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "hourly_close",
+        "hourly_close",
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "71560462a5d92f",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "EMPIRICAL Definition & Meaning - Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/empirical",
+        "snippet": "Empirical can still be used critically to describe ideas and practices that rely on experience or observation alone and without due regard for system or theory.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "EMPIRICAL | English meaning - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/dictionary/english/empirical",
+        "snippet": "EMPIRICAL definition: 1. based on what is experienced or seen rather than on theory: 2. based on what is experienced or…. Learn more.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Empirical evidence - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Empirical_evidence",
+        "snippet": "Empirical evidence is evidence obtained through sense experience or experimental procedure. [1] It is of central importance to the sciences and plays a role in various other fields, like epistemology and law.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "EMPIRICAL Definition & Meaning | Dictionary.com",
+        "url": "https://www.dictionary.com/browse/empirical",
+        "snippet": "EMPIRICAL definition: derived from or guided by direct experience or by experiment, rather than abstract principles or theory. See examples of empirical used in a sentence.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "empirical study BTC-USD hourly VWAP reversion 4% threshold 20-hour lookback liquidity friction order flow imbalance data collectio",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T09:11Z",
+    "id": "71560462a5d92f",
+    "topic": "BTC-USD hourly VWAP reversion under liquidity friction and order flow imbalance",
+    "hypothesis": "BTC-USD hourly VWAP reversion with a 4% threshold and 20-hour lookback is a statistically valid edge driven by micro-liquidity frictions and order flow imbalances, not random noise.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "hourly_close",
+        "hourly_close",
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If, over a 20-hour lookback, BTC-USD hourly VWAP reversion fails to produce statistically significant returns when triggered by a 4% deviation from VWAP, and this failure persists across at least 100 independent 24-hour windows with no underlying liquidity friction or order flow imbalance, then the ",
+    "source_search": {
+      "query": "empirical study BTC-USD hourly VWAP reversion 4% threshold 20-hour lookback liquidity friction order flow imbalance data collectio",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "EMPIRICAL Definition & Meaning - Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/empirical",
+        "snippet": "Empirical can still be used critically to describe ideas and practices that rely on experience or observation alone and without due regard for system or theory.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "EMPIRICAL | English meaning - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/dictionary/english/empirical",
+        "snippet": "EMPIRICAL definition: 1. based on what is experienced or seen rather than on theory: 2. based on what is experienced or…. Learn more.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Empirical evidence - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Empirical_evidence",
+        "snippet": "Empirical evidence is evidence obtained through sense experience or experimental procedure. [1] It is of central importance to the sciences and plays a role in various other fields, like epistemology and law.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "EMPIRICAL Definition & Meaning | Dictionary.com",
+        "url": "https://www.dictionary.com/browse/empirical",
+        "snippet": "EMPIRICAL definition: derived from or guided by direct experience or by experiment, rather than abstract principles or theory. See examples of empirical used in a sentence.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "empirical study BTC-USD hourly VWAP reversion 4% threshold 20-hour lookback liquidity friction order flow imbalance data collectio",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "hourly_close",
+      "hourly_close",
+      "hourly_close"
+    ],
+    "hypothesis_timeframe": "2024-2025",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

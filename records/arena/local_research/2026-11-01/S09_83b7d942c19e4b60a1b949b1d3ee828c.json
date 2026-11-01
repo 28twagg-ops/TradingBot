@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "83b7d942c19e4b60a1b949b1d3ee828c",
+  "worker": "S09",
+  "cycle": "2026-11-01T09:23Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S09",
+    "cycle": "2026-11-01T09:23Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Bitcoin price reversion after sharp 5% drop in 20-hour window",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "cross_asset",
+        "daily_bars",
+        "cross_asset"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "c85c556ec14baa",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "Bitcoin is a peer-to-peer online currency, meaning that all transactions happen directly between equal, independent network participants, without the need for any intermediary to permit or facilitate them.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin - Open source P2P money",
+        "url": "https://bitcoin.org/",
+        "snippet": "Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source; its design is public, nobody owns or c",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bitcoin",
+        "snippet": "Bitcoin works through the collaboration of computers, each of which acts as a node in the peer-to-peer bitcoin network. Each node maintains an independent copy of a public distributed ledger of transactions, called a blockchain, without cen",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Bitcoin price events with 5% drop in 20-hour window, followed by price reversion within 24 hours, hourly close data, 2026-11-01 to",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T09:23Z",
+    "id": "c85c556ec14baa",
+    "topic": "Bitcoin price reversion after sharp 5% drop in 20-hour window",
+    "hypothesis": "After a 5% price drop within a 20-hour window, Bitcoin's price will revert to its pre-drop level within 24 hours, based on historical hourly close data.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "cross_asset",
+        "daily_bars",
+        "cross_asset"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "No event with a 5% drop in price within a 20-hour window is followed by a reversion to the prior price level within 24 hours, across at least 100 such events in the dataset.",
+    "source_search": {
+      "query": "Bitcoin price events with 5% drop in 20-hour window, followed by price reversion within 24 hours, hourly close data, 2026-11-01 to",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "Bitcoin is a peer-to-peer online currency, meaning that all transactions happen directly between equal, independent network participants, without the need for any intermediary to permit or facilitate them.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin - Open source P2P money",
+        "url": "https://bitcoin.org/",
+        "snippet": "Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source; its design is public, nobody owns or c",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bitcoin",
+        "snippet": "Bitcoin works through the collaboration of computers, each of which acts as a node in the peer-to-peer bitcoin network. Each node maintains an independent copy of a public distributed ledger of transactions, called a blockchain, without cen",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Bitcoin price events with 5% drop in 20-hour window, followed by price reversion within 24 hours, hourly close data, 2026-11-01 to",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "cross_asset",
+      "daily_bars",
+      "cross_asset"
+    ],
+    "hypothesis_timeframe": "2026-11-01 to 2026-11-03",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
