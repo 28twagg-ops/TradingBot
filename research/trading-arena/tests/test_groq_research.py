@@ -1,5 +1,6 @@
 """API-free tests of rotating Groq research agents and non-executable backtests."""
 import datetime as dt
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -74,6 +75,28 @@ class GroqResearchTests(unittest.TestCase):
         again=one_turn(accounts,feed,fake_model,self.now)
         self.assertEqual(again["status"],"ALREADY_EVALUATED")
         self.assertEqual(len(calls),1)
+    def test_local_ollama_safe_error_codes_not_masked_or_leaked(self):
+        feed=synthetic_feed(self.now)
+        safe_cases=(("OLLAMA_HTTP_500","OLLAMA_HTTP_500"),
+                    ("OLLAMA_HTTP_429","OLLAMA_HTTP_429"),
+                    ("OLLAMA_INVALID_JSON","OLLAMA_INVALID_JSON"),
+                    ("OLLAMA_CONTEXT_TOO_LARGE","OLLAMA_CONTEXT_TOO_LARGE"),
+                    ("OLLAMA_OFFLINE_OR_TIMEOUT","OLLAMA_OFFLINE_OR_TIMEOUT"),
+                    ("secret_token_raw_http_error","PROVIDER_ERROR"))
+        for error,expected in safe_cases:
+            with self.subTest(error=error):
+                with patch("groq_research.discover",return_value={
+                    "query":"local","attempted":[],"found":[]}),patch(
+                    "groq_research.tradable",return_value={}):
+                    def failing_provider(*args):
+                        raise RuntimeError(error)
+                    result=one_turn(initial(),feed,failing_provider,self.now,
+                                    worker_id="S01")
+                self.assertEqual(result["status"],"AI_UNAVAILABLE")
+                self.assertEqual(result["safe_error"],expected)
+                self.assertEqual(result["ai_requests"],1)
+                self.assertNotIn("secret_token",json.dumps(result))
+
     def test_agent_can_investigate_unavailable_data_without_fake_backtest_or_trade(self):
         accounts=initial()
         feed=synthetic_feed(self.now)
