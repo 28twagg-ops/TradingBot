@@ -58,11 +58,35 @@ class LocalLlamaTests(unittest.TestCase):
         with patch("local_ollama.urllib.request.urlopen",return_value=sample):
             self.assertEqual(available_models(),["llama3.2:3b"])
 
-    def test_dst_midnight_to_seven_in_central_time(self):
-        self.assertTrue(within_window(dt.datetime(2026,10,31,6,30,tzinfo=UTC)))
-        self.assertFalse(within_window(dt.datetime(2026,10,31,13,1,tzinfo=UTC)))
-        self.assertTrue(within_window(dt.datetime(2026,11,1,7,20,tzinfo=UTC)))
-        self.assertFalse(within_window(dt.datetime(2026,11,1,14,1,tzinfo=UTC)))
+    def test_central_time_weekend_extended_window_and_fall_dst(self):
+        # 2026-10-31 Saturday, still in Central Daylight Time (UTC-5).
+        self.assertFalse(within_window(dt.datetime(2026,10,31,4,59,tzinfo=UTC)))
+        self.assertTrue(within_window(dt.datetime(2026,10,31,5,0,tzinfo=UTC)))
+        self.assertTrue(within_window(dt.datetime(2026,10,31,14,59,tzinfo=UTC)))
+        self.assertFalse(within_window(dt.datetime(2026,10,31,15,0,tzinfo=UTC)))
+        # 2026-11-01 Sunday switches from CDT to CST. Both 01:30 hours count.
+        self.assertTrue(within_window(dt.datetime(2026,11,1,5,0,tzinfo=UTC)))
+        self.assertTrue(within_window(dt.datetime(2026,11,1,6,30,tzinfo=UTC)))
+        self.assertTrue(within_window(dt.datetime(2026,11,1,7,30,tzinfo=UTC)))
+        self.assertTrue(within_window(dt.datetime(2026,11,1,15,59,tzinfo=UTC)))
+        self.assertFalse(within_window(dt.datetime(2026,11,1,16,0,tzinfo=UTC)))
+        # Monday returns to 07:00 CST cutoff.
+        self.assertFalse(within_window(dt.datetime(2026,11,2,5,59,tzinfo=UTC)))
+        self.assertTrue(within_window(dt.datetime(2026,11,2,6,0,tzinfo=UTC)))
+        self.assertTrue(within_window(dt.datetime(2026,11,2,12,59,tzinfo=UTC)))
+        self.assertFalse(within_window(dt.datetime(2026,11,2,13,0,tzinfo=UTC)))
+
+    def test_weekday_friday_still_stops_at_seven(self):
+        self.assertTrue(within_window(dt.datetime(2026,10,30,11,59,tzinfo=UTC)))
+        self.assertFalse(within_window(dt.datetime(2026,10,30,12,0,tzinfo=UTC)))
+
+    def test_windows_schedule_runtime_covers_dst_fallback(self):
+        from setup_local import register_windows
+        with patch("setup_local.run") as runner:
+            register_windows("C:\\Python311\\python.exe", "llama3.2:3b")
+        command = runner.call_args.args[-1]
+        self.assertIn('-At "00:00"', command)
+        self.assertIn("-ExecutionTimeLimit (New-TimeSpan -Hours 12)", command)
 
     def test_history_is_per_bot_not_canonical_accounts(self):
         with tempfile.TemporaryDirectory() as folder:

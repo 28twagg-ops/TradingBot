@@ -70,7 +70,7 @@ def register_windows(python, model):
            ' -Argument '+ps_quote('"' + str(script) + '" --model ' + model + ' --log')+
            ';$t=New-ScheduledTaskTrigger -Daily -At "00:00"'+
            ';$s=New-ScheduledTaskSettingsSet -WakeToRun -StartWhenAvailable '+
-           '-ExecutionTimeLimit (New-TimeSpan -Hours 8) -MultipleInstances IgnoreNew'+
+           '-ExecutionTimeLimit (New-TimeSpan -Hours 12) -MultipleInstances IgnoreNew'+
            ';Register-ScheduledTask -TaskName '+ps_quote(TASK)+
            ' -Action $a -Trigger $t -Settings $s '+
            '-Description "Paper-only overnight local trading research" -Force | Out-Null')
@@ -143,7 +143,8 @@ def main(argv=None):
     overnight_local.init_upload(DATA)
     overnight_local.refresh_upload(DATA/"upload")
     (DATA/"settings.json").write_text(json.dumps(
-        {"model":model,"start_local":"00:00","stop_local":"07:00",
+        {"model":model,"start_local":"00:00",
+         "stop_local_weekday":"07:00","stop_local_weekend":"10:00",
          "timezone":"America/Chicago","research_only":True},indent=2)+"\n",
         encoding="utf-8")
     if not a.skip_task:

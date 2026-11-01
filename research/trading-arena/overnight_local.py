@@ -1,4 +1,4 @@
-"""Scheduled midnight-to-7 local Ollama research with safe, append-only GitHub sync.
+"""Scheduled local Ollama research: midnight–7 weekdays, midnight–10 weekends Central.
 
 This program is NOT a GitHub self-hosted runner, a broker or a trading executor.
 It never edits the canonical Arena account ledgers. The immutable local research
@@ -139,8 +139,14 @@ def research_account(folder, pending, worker):
 
 
 def within_window(when):
+    """Weekday stop 07:00; Saturday/Sunday stop 10:00 America/Chicago.
+
+    Resolve in local civil time so daylight-saving transitions are handled
+    correctly, including the repeated hour on fall-back Sunday.
+    """
     here = when.astimezone(LOCAL_TZ)
-    return 0 <= here.hour < 7
+    stop_hour = 10 if here.weekday() >= 5 else 7
+    return 0 <= here.hour < stop_hour
 
 
 def queue_record(data, worker, event, experiment, model):

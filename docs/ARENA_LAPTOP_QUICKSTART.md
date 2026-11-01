@@ -15,7 +15,7 @@
 
 3. Follow the GitHub browser sign-in when prompted. Leave the computer **plugged in, awake and connected to Wi-Fi** with Ollama open. If Windows says a program was just installed but cannot be found, close PowerShell, reopen and run the *same* command once more.
 
-The script installs any missing **Git, Python 3.11, GitHub CLI and Ollama** through Windows Package Manager, clones only the relevant Arena source folders, downloads a local Llama model and sets up a daily **midnight** Windows task. An 8+ GB machine normally gets `llama3.2:3b` (~2 GB download); lower-RAM systems use `llama3.2:1b` (~1.3 GB download). Actual performance depends on laptop hardware. Under ~5.5 GB RAM, setup stops safely.
+The script installs any missing **Git, Python 3.11, GitHub CLI and Ollama** through Windows Package Manager, downloads/refreshes only the relevant Arena source folders, downloads a local Llama model and sets up a daily **midnight** Windows task. Re-running it updates an existing checkout and refreshes the task and settings. An 8+ GB machine normally gets `llama3.2:3b` (~2 GB download); lower-RAM systems use `llama3.2:1b` (~1.3 GB download). Actual performance depends on laptop hardware. Under ~5.5 GB RAM, setup stops safely.
 
 ### macOS — alternative
 
@@ -29,12 +29,12 @@ The script uses Homebrew to install missing dependencies, opens Ollama, signs in
 
 ## What the laptop will do
 
-- **Midnight–7:00 AM America/Chicago:** cycle sequentially through researchers **S01–S10**, roughly one pass every 40 minutes while the machine stays running.
+- **Weekdays: midnight–7:00 AM; Saturdays and Sundays: midnight–10:00 AM America/Chicago.** Cycle sequentially through researchers **S01–S10**, roughly one pass every 40 minutes while the machine stays running. The weekend window follows Central Time, including daylight-saving changes.
 - Every bot retains an independent history, with its previously configured [personality](../research/trading-arena/personas.py). Personality inspires brainstorming, but is never a fixed market or strategy assignment.
 - Each bot can research any idea it wants using public search metadata and available historical prices, propose falsification tests, and save **research-only** output. Model-generated code is never executed.
 - Uses the existing bounded deterministic backtest for supported hourly single-asset ideas. Unsupported or untestable ideas remain research-only.
 - Saves all outcomes immediately to `~/.trading-arena/pending/`. Wi-Fi outages do **not** erase pending work.
-- Syncs completed immutable experiments to the dedicated **`arena-local-research`** GitHub branch. A scheduled GitHub Action imports them into the canonical `arena-ledger` after 7 AM Central using the cloud ledger-write lock. The laptop never updates `ai_state.json`, `state.json`, or Groq's research log.
+- Syncs completed immutable experiments to the dedicated **`arena-local-research`** GitHub branch. Scheduled GitHub Actions import them into the canonical `arena-ledger` after the weekday stop and again after the weekend 10 AM stop, using the cloud ledger-write lock. The laptop never updates `ai_state.json`, `state.json`, or Groq's research log.
 - **No real-money orders, no new virtual buys/sells, and no paid API fallback.** Independent reviewers still need credible evidence before any later change to execution.
 
 ## How to check the first morning
@@ -56,7 +56,7 @@ Optional manual test **after setup**, using your installed local Python environm
 "$HOME/.trading-arena/venv/bin/python" "$HOME/TradingArenaLocal/research/trading-arena/overnight_local.py" --smoke
 ```
 
-`--smoke` sends **one** local test prompt, but does not change accounts or push anything. `--once` performs one full **ten-bot research pass** immediately, even outside midnight–7 AM.
+`--smoke` sends **one** local test prompt, but does not change accounts or push anything. `--once` performs one full **ten-bot research pass** immediately, even outside the scheduled window.
 
 ## Important operating conditions
 
@@ -64,7 +64,7 @@ Optional manual test **after setup**, using your installed local Python environm
 - **Login:** The first GitHub CLI browser login is required to upload research. GitHub CLI's authorization may have broader repository permissions than the one Arena branch; the model never sees that token. Do not copy passwords or tokens into a file or chat.
 - **Cloud services:** Ollama's local models require no inference API key. This installer refuses model names containing `:cloud`, remote URLs and nonlocal endpoints. Do not select a cloud model.
 - **Quota/duplicates:** Ten researchers share one Ollama instance sequentially to limit memory load. Unique research IDs and Git verification prevent duplicate uploads; an app-only lock blocks parallel laptop runs.
-- **Missed schedule:** Windows task runs at midnight if possible and checks its Central-time execution window. If the laptop wakes later, only remaining hours are available. If it wakes after 7 AM, it exits without generating new overnight work.
+- **Missed schedule:** Windows task runs at midnight if possible and checks its Central-time execution window. If the laptop wakes later, only remaining hours are available. If it wakes after 7 AM on a weekday or after 10 AM on a weekend, it exits without generating new overnight work. Windows Task Scheduler allows a 12-hour maximum runtime to accommodate the extra hour during the fall daylight-saving transition; the runner itself still enforces the local stop time.
 - **Slow laptop:** Local Llama can take substantial time without a GPU; some bots may complete fewer ideas than others. Low disk, missing prices, API errors, and incompatible history fail safely.
 - **No guarantee of profitability:** Research records and proxy backtests are not real fills, statistically proven edge or investment recommendations.
 
