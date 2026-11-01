@@ -118,6 +118,18 @@ class PaperGenerationTests(unittest.TestCase):
         self.assertNotEqual(signal("S07", values, 1),
                             signal("S07", values, 0))
 
+    def test_ranking_retains_original_loss_and_new_starts_unranked(self):
+        self.seed()
+        record_snapshot(self.root)
+        audit_and_rotate(self.root, dt.datetime(2026, 11, 2, 5, 45, tzinfo=UTC))
+        ranking = json.loads((self.root / "generation_rankings.json").read_text())
+        previous = next(x for x in ranking if x["generation"] == "S07a")
+        self.assertEqual(previous["status"], "ARCHIVED")
+        self.assertAlmostEqual(previous["return_pct"], -2.5)
+        self.assertFalse(any(x["generation"] == "S07b" for x in ranking))
+        self.assertIn("S07b", (self.root / "GENERATIONS.md").read_text())
+        self.assertIn("S07a", (self.root / "GENERATIONS.md").read_text())
+
     def test_no_fake_equity_if_mark_is_missing(self):
         self.seed()
         last = json.loads((self.root / "last_run.json").read_text())
