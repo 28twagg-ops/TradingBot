@@ -19,6 +19,8 @@ import uuid
 from zoneinfo import ZoneInfo
 
 from local_ollama import OllamaResearch, available_models, local_model_name
+from local_adaptive import AdaptiveRouter, format_report, score, hardware
+from mentor_planner import plan as mentor_plan
 from groq_research import one_turn
 from run_virtual import CONFIG, UTC, market
 
@@ -141,6 +143,7 @@ def research_account(folder, pending, worker):
     # Local experimental history is private to the research identity; account
     # positions/real ledger events remain untouched. Only history is appended.
     record["groq_experiments"] = history
+    record["mentor_research_plan_untrusted"] = mentor_plan(folder / "records/arena", worker, record)
     return {worker: record}
 
 
@@ -263,6 +266,18 @@ def write_summary(data, stats):
             rows.append("- " + w + ": " + str(stats[w]["last_error"])[:32])
     rows += ["", "Pending GitHub sync: " + str(len(list((Path(data)/"pending").glob("*.json")))),
              "Details: ~/.trading-arena/sent/ (one immutable JSON record per turn).", ""]
+    try:
+        metrics=json.loads((Path(data)/"model_runtime.json").read_text(encoding="utf-8"))
+        history=[x for x in metrics.get("records",[]) if isinstance(x,dict)]
+        models=sorted(set(x.get("model") for x in history if isinstance(x.get("model"),str)))
+        model_report={"models":{m:score([x for x in history if x.get("model")==m][-30:])
+                                for m in models},
+                      "last_selected":history[-1].get("model") if history else "None",
+                      "last_switch_reason":"See model_runtime.json for chronological selection",
+                      "hardware_snapshot":hardware()}
+        rows.append(format_report(model_report))
+    except (OSError,ValueError,TypeError):
+        pass
     (Path(data)/"MORNING_REPORT.md").write_text("\n".join(rows), encoding="utf-8")
 
 
@@ -289,7 +304,7 @@ def smoke(model):
     print("Ollama local smoke test succeeded; no trades or GitHub changes.")
 
 
-def run_round(data, model, stats, allow_outside_window=False, now_fn=None, parallel=1, workers=None):
+def run_round(data, model, stats, allow_outside_window=False, now_fn=None, parallel=1, workers=None, model_selector=None, on_result=None):
     """Run up to two independent researchers at once; serialize disk/Git writes.
 
     All account copies are worker-private and model output is research-only.
@@ -326,11 +341,15 @@ def run_round(data, model, stats, allow_outside_window=False, now_fn=None, paral
         accounts = research_account(source, Path(data) / "pending", worker)
         record = accounts[worker]
         original = len(record.get("groq_experiments", []))
-        provider = OllamaResearch(model, timeout=300)
+        chosen = model_selector(worker) if model_selector is not None else model
+        chosen = local_model_name(chosen)
+        provider = OllamaResearch(chosen, timeout=300)
         event = one_turn(accounts, feed, provider, now_fn(), worker_id=worker)
         event["provider"] = "LOCAL_OLLAMA"
         event["source"] = "Local Ollama research-only"
-        event["model"] = model
+        event["model"] = chosen
+        event["generation_index"] = record.get("generation_index",0)
+        event["local_metrics"] = getattr(provider,"last_metrics",{})
         event["research_only"] = True
         experiment = (record.get("groq_experiments", [])[-1]
                       if len(record.get("groq_experiments", [])) > original else {})
@@ -356,7 +375,12 @@ def run_round(data, model, stats, allow_outside_window=False, now_fn=None, paral
                     stats.setdefault(worker, {}).get(bucket, 0) + 1)
                 if status == "AI_UNAVAILABLE":
                     stats[worker]["last_error"] = event.get("safe_error", "PROVIDER_ERROR")
-                queue_record(data, worker, event, experiment, model)
+                if on_result is not None:
+                    try:
+                        on_result(event)
+                    except (OSError,ValueError,TypeError):
+                        print(worker,"MODEL_TELEMETRY_UNAVAILABLE",flush=True)
+                queue_record(data, worker, event, experiment, event.get("model",model))
                 processed += 1
                 print(worker, status, stats[worker].get("last_error", ""),
                       "research-only", flush=True)
@@ -430,7 +454,8 @@ def lock_acquire(data):
 
 def main(argv=None):
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", default=os.getenv("ARENA_OLLAMA_MODEL","qwen3:4b-instruct"))
+    parser.add_argument("--model", default=os.getenv("ARENA_OLLAMA_MODEL","qwen3:4b-instruct"),
+                        help="Installed local model, or auto for measured 4B/8B switching")
     parser.add_argument("--parallel",type=int,choices=(1,2),default=1,
                         help="Parallel research lanes (2 only when RAM/VRAM allows)")
     parser.add_argument("--smoke", action="store_true",
@@ -452,7 +477,8 @@ def main(argv=None):
         # overnight session from being overwritten by daytime watchdog checks.
         if not within_window(dt.datetime.now(UTC)):
             return 0
-    model=local_model_name(args.model)
+    automated=(args.model=="auto")
+    model=local_model_name("qwen3:4b-instruct" if automated else args.model)
     data=args.data_dir.expanduser()
     data.mkdir(parents=True, exist_ok=True)
     if args.smoke:
@@ -460,6 +486,12 @@ def main(argv=None):
         return 0
     if sum(bool(v) for v in (args.trial,args.once,args.sync_only))>1:
         parser.error("Choose --trial OR --once OR --sync-only")
+    router=None
+    if automated and not args.sync_only:
+        if args.parallel != 1:
+            raise RuntimeError("ADAPTIVE_ROUTING_REQUIRES_ONE_INFERENCE_LANE")
+        router=AdaptiveRouter(data,available_models())
+        model=router.preferred
     if not args.sync_only and model not in available_models():
         raise RuntimeError("OLLAMA_MODEL_NOT_INSTALLED_OR_SERVICE_OFFLINE")
     lock=lock_acquire(data)
@@ -475,13 +507,19 @@ def main(argv=None):
             # data integration and append-only upload before a full night.
             selected=WORKERS[:2]
             run_round(data, model, stats, allow_outside_window=True,
-                      parallel=args.parallel, workers=selected)
+                      parallel=args.parallel, workers=selected,
+                      model_selector=router.choose if router else None,
+                      on_result=router.record if router else None)
         elif args.once:
             # Manual one-pass run is allowed outside the overnight window.
-            run_round(data, model, stats, allow_outside_window=True, parallel=args.parallel)
+            run_round(data, model, stats, allow_outside_window=True, parallel=args.parallel,
+                      model_selector=router.choose if router else None,
+                      on_result=router.record if router else None)
         else:
             while within_window(dt.datetime.now(UTC)):
-                run_round(data,model,stats,parallel=args.parallel)
+                run_round(data,model,stats,parallel=args.parallel,
+                          model_selector=router.choose if router else None,
+                          on_result=router.record if router else None)
                 write_summary(data,stats)
                 # At most one round per 40 min; no burst retries, up to two lanes.
                 for _ in range(40):
