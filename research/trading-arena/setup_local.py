@@ -167,6 +167,8 @@ def main(argv=None):
         timeout=600)
     # Ollama is local; first model download (~2.5GB on Windows 24+ GB
     # defaults) requires internet once. Model overrides can be larger.
+    import overnight_local
+    overnight_local.ensure_local_ollama()
     print("Downloading or verifying local model (only missing weights download).")
     run("ollama","pull",download_model,timeout=1500)
     if adaptive and ram is not None and ram >= 16 and shutil.disk_usage(DATA).free >= 10 * 1024**3:
@@ -175,7 +177,6 @@ def main(argv=None):
             print("8B download unavailable; continuing with smaller local model.")
     elif adaptive:
         print("Hardware not confirmed for 8B; baseline-only adaptive model routing.")
-    import overnight_local
     print("Checking the model responds locally.")
     overnight_local.smoke(download_model)
     print("Checking independent GitHub research ledger access.")
