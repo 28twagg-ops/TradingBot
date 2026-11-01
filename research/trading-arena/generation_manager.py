@@ -281,6 +281,36 @@ def render(root, reg, rows, findings=()):
         table.append("| {} | {} | {} | {} |".format(
             slot["active"], "New trial" if eq is None else "$" + format(eq, ".2f"),
             len(marks), old))
+    # Side-by-side quantitative generations (not a claim that different
+    # market periods have identical risk or that indicative marks are fills).
+    rankings = []
+    for wid in WORKERS:
+        slot = reg["workers"][wid]
+        for item in slot["history"]:
+            equity = item.get("equity")
+            if type(equity) in (int, float) and math.isfinite(equity):
+                rankings.append((item["generation"], equity,
+                                 item.get("closed_at", ""), "ARCHIVED"))
+        current_marks = marks_for(rows, wid, slot["active"])
+        current_eq = next((v["equity"] for _, v in reversed(current_marks)
+                           if type(v.get("equity")) in (int, float)), None)
+        if current_eq is not None:
+            rankings.append((slot["active"], current_eq,
+                             current_marks[-1][0].isoformat(), "ACTIVE"))
+    rankings.sort(key=lambda x: (-x[1], x[0]))
+    table += ["", "## All generations, ranked by indicative cumulative return", "",
+              "Ranks compare different market windows and are NOT forward proof.",
+              "", "| Generation | Equity | Return vs $100 | Status | Last mark / archive |",
+              "|---|---:|---:|---|---|"]
+    for ident, equity, updated, status in rankings:
+        table.append("| {} | {} | {} | {} | {} |".format(
+            ident, "$" + format(equity, ".2f"),
+            format(equity - 100, "+.2f") + "%", status, updated[:19]))
+    write(Path(root) / "generation_rankings.json", [
+        {"generation": ident, "equity": equity,
+         "return_pct": round(equity - 100, 4),
+         "status": status, "updated_at": updated}
+        for ident, equity, updated, status in rankings])
     if findings:
         table += ["", "## Council decisions", "",
                   "| Generation | Result | New bot |", "|---|---|---|"]
