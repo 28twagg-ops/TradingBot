@@ -16,6 +16,7 @@ import subprocess
 import sys
 import time
 import uuid
+import urllib.request
 from zoneinfo import ZoneInfo
 
 from local_ollama import OllamaResearch, available_models, local_model_name
@@ -30,6 +31,39 @@ LOCAL_TZ = ZoneInfo("America/Chicago")
 DATA = Path.home() / ".trading-arena"
 WORKERS = tuple(w["id"] for w in CONFIG["workers"])
 MIN_DISK_FREE = 600 * 1024 * 1024
+
+
+def ensure_local_ollama():
+    """Start only the local Ollama server when a scheduled night needs it.
+
+    No online service, model downloads, remote APIs or broker interaction.
+    Windows tasks remain user-session processes: the computer must be awake.
+    """
+    # Existing installed models mean the local server is already responding.
+    if available_models():
+        return
+    try:
+        with urllib.request.urlopen("http://127.0.0.1:11434/api/version",timeout=3):
+            return  # A responsive daemon with no models: setup can pull later.
+    except (OSError,ValueError,TimeoutError):
+        pass
+    if not shutil.which("ollama"):
+        raise RuntimeError("OLLAMA_EXECUTABLE_NOT_AVAILABLE")
+    flags = (getattr(subprocess,"CREATE_NO_WINDOW",0) |
+             getattr(subprocess,"DETACHED_PROCESS",0)) if os.name == "nt" else 0
+    try:
+        subprocess.Popen(["ollama","serve"],stdin=subprocess.DEVNULL,
+                         stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,
+                         creationflags=flags, start_new_session=(os.name!="nt"))
+    except (OSError,ValueError):
+        raise RuntimeError("OLLAMA_SERVER_COULD_NOT_START") from None
+    for _ in range(15):
+        try:
+            with urllib.request.urlopen("http://127.0.0.1:11434/api/version",timeout=2):
+                return
+        except (OSError,ValueError,TimeoutError):
+            time.sleep(1)
+    raise RuntimeError("OLLAMA_SERVER_STARTUP_TIMEOUT")
 
 
 def json_atomic(path, data):
@@ -484,11 +518,14 @@ def main(argv=None):
     data=args.data_dir.expanduser()
     data.mkdir(parents=True, exist_ok=True)
     if args.smoke:
+        ensure_local_ollama()
         smoke(model)
         return 0
     if sum(bool(v) for v in (args.trial,args.once,args.sync_only))>1:
         parser.error("Choose --trial OR --once OR --sync-only")
     router=None
+    if not args.sync_only:
+        ensure_local_ollama()
     if automated and not args.sync_only:
         if args.parallel != 1:
             raise RuntimeError("ADAPTIVE_ROUTING_REQUIRES_ONE_INFERENCE_LANE")
