@@ -20,7 +20,7 @@ class PaperGenerationTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
 
-    def seed(self, timestamp="2026-11-01T20:00:00+00:00"):
+    def seed(self, timestamp="2026-11-01T23:00:00+00:00"):
         state = initial()
         ai = initial()
         (self.root / "state.json").write_text(json.dumps(state))
