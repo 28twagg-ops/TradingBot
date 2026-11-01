@@ -118,10 +118,37 @@ class LocalLlamaTests(unittest.TestCase):
     def test_windows_schedule_runtime_covers_dst_fallback(self):
         from setup_local import register_windows
         with patch("setup_local.run") as runner:
-            register_windows("C:\\Python311\\python.exe", "llama3.2:3b")
+            register_windows("C:\\Python311\\python.exe", "qwen3:4b-instruct")
         command = runner.call_args.args[-1]
-        self.assertIn('-At "00:00"', command)
+        # A daily calendar trigger drifted to 11 PM during the 2026 fall
+        # transition and missed midnight. The watchdog rechecks every 15m.
+        self.assertIn("New-ScheduledTaskTrigger -Once",command)
+        self.assertIn("-RepetitionInterval (New-TimeSpan -Minutes 15)",command)
+        self.assertIn("-RepetitionDuration (New-TimeSpan -Days 3650)",command)
+        self.assertIn("--scheduled --log",command)
+        self.assertIn('-MultipleInstances IgnoreNew',command)
+        self.assertIn('ARENA_TASK_RUNNING_DEFER_SCHEDULE_UPDATE',command)
+        self.assertNotIn('New-ScheduledTaskTrigger -Daily',command)
         self.assertIn("-ExecutionTimeLimit (New-TimeSpan -Hours 12)", command)
+
+    def test_daytime_scheduled_watchdog_is_noop_without_report_clobber(self):
+        from overnight_local import main
+        with tempfile.TemporaryDirectory() as root:
+            data=Path(root)
+            data.joinpath("MORNING_REPORT.md").write_text("overnight evidence",encoding="utf-8")
+            with patch("overnight_local.within_window",return_value=False), patch(
+                "overnight_local.available_models",
+                side_effect=AssertionError("no model probing outside window")), patch(
+                "overnight_local.sync_pending",
+                side_effect=AssertionError("no Git I/O outside window")):
+                self.assertEqual(main(["--scheduled","--data-dir",root]),0)
+            self.assertEqual(data.joinpath("MORNING_REPORT.md").read_text(),"overnight evidence")
+            self.assertFalse(data.joinpath("overnight.lock").exists())
+
+    def test_scheduled_mode_rejects_manual_override(self):
+        from overnight_local import main
+        with self.assertRaises(SystemExit):
+            main(["--scheduled","--once"])
 
     def test_parallel_two_workers_overlap_but_preserve_isolated_ledgers(self):
         with tempfile.TemporaryDirectory() as root:

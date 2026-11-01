@@ -52,4 +52,4 @@ if ($LASTEXITCODE -ne 0) { throw "Could not fast-forward local Arena source. No 
 Write-Host "GitHub sign-in and model installation will be handled by the guided setup."
 & py -3 (Join-Path $dir "research/trading-arena/setup_local.py")
 if ($LASTEXITCODE -ne 0) { throw "Local Arena setup did not complete. See troubleshooting document." }
-Write-Host "Done. Midnight-7 AM weekdays / midnight-10 AM weekends Central; keep laptop on and awake."
+Write-Host "Done. Windows checks every 15 minutes; research runs only midnight-7 AM weekdays / midnight-10 AM weekends Central."
