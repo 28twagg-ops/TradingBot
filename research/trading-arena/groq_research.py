@@ -345,11 +345,21 @@ def one_turn(accounts,feed,model,now,worker_id=None,local_leads=None):
                               "cross_asset","options_chain","fundamentals","social_signal","other"}
         if not requested_requirements or any(x not in allowed_requirements for x in requested_requirements):
             raise ValueError("Invalid data requirements")
-        hypothesis_claim=str(raw.get("hypothesis",""))
+        # Small models repeat requirement names; never drop a distinct dependency.
+        requested_requirements=list(dict.fromkeys(requested_requirements))
+        topic_claim=raw.get("research_topic")
+        hypothesis_claim=raw.get("hypothesis")
+        falsification=raw.get("falsification_test")
+        if any(not isinstance(s,str) or not s.strip()
+               for s in (topic_claim,hypothesis_claim,falsification)):
+            raise ValueError("Missing falsifiable hypothesis fields")
+        # Scan the title and test too: an hourly-close-only flag cannot certify
+        # a study secretly depending on spread, volume, or order-book data.
         supported=(raw.get("hypothesis_timeframe")=="hourly" and
                    requested_requirements==["hourly_close"] and
                    raw.get("rule_expressible_as_candidate") is True and
-                   not requires_unavailable_test_inputs(hypothesis_claim))
+                   not any(requires_unavailable_test_inputs(s) for s in
+                           (topic_claim,hypothesis_claim,falsification)))
         validation_issue=None
         if supported:
             try:
