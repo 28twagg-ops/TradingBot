@@ -130,6 +130,21 @@ class PaperGenerationTests(unittest.TestCase):
         self.assertIn("S07b", (self.root / "GENERATIONS.md").read_text())
         self.assertIn("S07a", (self.root / "GENERATIONS.md").read_text())
 
+    def test_final_chance_can_keep_replicated_positive_paper_evidence(self):
+        now=dt.datetime(2026,11,2,5,45,tzinfo=UTC)
+        start=now-dt.timedelta(days=20)
+        slot={"started_at":start.isoformat()}
+        record={"events":[{"side":"SELL"} for _ in range(10)]}
+        marks=[(start+dt.timedelta(hours=6*i),
+                {"equity":101.25,"action":"HOLD","missing_quotes":False})
+               for i in range(80)]
+        marks[-1]=(now,marks[-1][1])
+        self.assertEqual(decision(record,slot,marks,now,final=True),
+                         "RETAIN_PROVISIONAL_PAPER_ONLY")
+        # A single lucky positive snapshot cannot meet the evidence gate.
+        self.assertEqual(decision(record,slot,marks[-1:],now,final=True),
+                         "ROTATE_FINAL_CHANCE_UNPROVEN")
+
     def test_no_fake_equity_if_mark_is_missing(self):
         self.seed()
         last = json.loads((self.root / "last_run.json").read_text())
