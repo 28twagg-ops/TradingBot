@@ -344,12 +344,14 @@ def run_round(data, model, stats, allow_outside_window=False, now_fn=None, paral
         chosen = model_selector(worker) if model_selector is not None else model
         chosen = local_model_name(chosen)
         provider = OllamaResearch(chosen, timeout=300)
+        pre_inference_hardware = hardware()
         event = one_turn(accounts, feed, provider, now_fn(), worker_id=worker)
         event["provider"] = "LOCAL_OLLAMA"
         event["source"] = "Local Ollama research-only"
         event["model"] = chosen
         event["generation_index"] = record.get("generation_index",0)
-        event["local_metrics"] = getattr(provider,"last_metrics",{})
+        event["local_metrics"] = dict(getattr(provider,"last_metrics",{}),
+                                      hardware_snapshot=pre_inference_hardware)
         event["research_only"] = True
         experiment = (record.get("groq_experiments", [])[-1]
                       if len(record.get("groq_experiments", [])) > original else {})
