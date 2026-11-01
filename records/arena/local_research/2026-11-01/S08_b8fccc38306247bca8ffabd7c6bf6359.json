@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "b8fccc38306247bca8ffabd7c6bf6359",
+  "worker": "S08",
+  "cycle": "2026-11-01T06:31Z",
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S08",
+    "cycle": "2026-11-01T06:31Z",
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Mean reversion of hourly realized volatility in BTC-USD using 20-period rolling window",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "hourly_close",
+        "hourly_close",
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "ba743b3ede6462",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com/xhtml/search",
+        "snippet": "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Yahoo Search - Web Search",
+        "url": "https://search.yahoo.com/",
+        "snippet": "Try Yahoo Scout Type a question and get a clear answer with trusted sources. Yahoo Scout helps you understand more, faster.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com.nf/webhp?gl=nf&hl=en&gws_rd=cr&pws=0",
+        "snippet": "Advertising Business Solutions About Google Google.com © 2026 - Privacy - Terms",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "search for publicly available hourly realized volatility dataset for BTC-USD with 20-period rolling window and mean reversion vali",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-01T06:31Z",
+    "id": "ba743b3ede6462",
+    "topic": "Mean reversion of hourly realized volatility in BTC-USD using 20-period rolling window",
+    "hypothesis": "Volatility compression in BTC-USD, as measured by hourly realized volatility, exhibits mean reversion with a 20-period rolling window, where periods of low volatility (below 6% standard deviation) are followed by a statistically significant return to",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "hourly_close",
+        "hourly_close",
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If the 20-period rolling realized volatility of BTC-USD exceeds 0.06 for at least 80% of the sample period without subsequent mean reversion (i.e., no price reversion to lower volatility levels), the hypothesis is falsified.",
+    "source_search": {
+      "query": "search for publicly available hourly realized volatility dataset for BTC-USD with 20-period rolling window and mean reversion vali",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com/xhtml/search",
+        "snippet": "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Yahoo Search - Web Search",
+        "url": "https://search.yahoo.com/",
+        "snippet": "Try Yahoo Scout Type a question and get a clear answer with trusted sources. Yahoo Scout helps you understand more, faster.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com.nf/webhp?gl=nf&hl=en&gws_rd=cr&pws=0",
+        "snippet": "Advertising Business Solutions About Google Google.com © 2026 - Privacy - Terms",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "search for publicly available hourly realized volatility dataset for BTC-USD with 20-period rolling window and mean reversion vali",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "hourly_close",
+      "hourly_close",
+      "hourly_close"
+    ],
+    "hypothesis_timeframe": "2024-11-01 to 2026-11-01",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
