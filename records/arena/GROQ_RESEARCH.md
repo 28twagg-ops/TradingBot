@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-02T06:10Z | S02a | BTC-USD hourly return mean reversion | f67e784c1d9419 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-02T06:09Z | S06a | BTC-USD hourly momentum trigger | b8855bfe618d18 | HOLD |
+| 2026-11-02T06:08Z | S09a | BTC-USD hourly trend reversal after sustained 10 | 42a8c92611aa2e | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-02T06:08Z | S10a | ETH-USD hourly breakout reversal | 8f811fb027381f | HOLD |
+| 2026-11-02T06:07Z | S04a | BTC-USD hourly gap‑down >2% trend persistence | 9bb0a35d1eafe7 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-02T06:01Z | S08a | BTC-USD hourly return mean reversion | dbda518adc2334 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-02T06:00Z | S01a | BTC-USD hourly price reversion to 24‑hour moving | c03ffcb6fb9ef0 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-02T05:59Z | S05a | Hourly breakout of BTC-USD after a 5‑hour high | 77cd1f3f0b6e98 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-01T18:47Z | S10a | ETH-USD hourly trend persistence | a787a42f9d4fac | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T18:47Z | S01a | BTC-USD hourly price reversion to 24‑hour moving | 45b1ee17ea9e90 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T18:46Z | S07a | Hourly trend persistence in BTC-USD | 3859a84a477817 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-01T18:46Z | S09a | BTC-USD hourly trend reversal after sustained up | 65e40c3c44c9ea | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-01T18:45Z | S06a |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
-| 2026-11-01T18:44Z | S02a | BTC-USD hourly return trend | 62a0cdb5a19731 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-01T18:05Z | S08a | Hourly realized volatility mean reversion in BTC | 98c3fa75dc211e | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-01T18:05Z | S10a | ETH-USD hourly trend persistence | 2b8e1215f4b277 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

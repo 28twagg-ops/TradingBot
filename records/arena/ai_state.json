@@ -2255,6 +2255,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-02T06:10Z",
+        "id": "f67e784c1d9419",
+        "topic": "BTC-USD hourly return mean reversion",
+        "hypothesis": "Hourly BTC-USD returns exhibit significant negative autocorrelation over a 20\u2011hour lookback, implying a mean\u2011reverting pattern that can be exploited with a reversion strategy.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "If the 20\u2011hour lagged hourly return correlation is not statistically significantly negative (p>0.05) across the available data, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly return autocorrelation 20-hour lookback",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly return autocorrelation 20-hour lookback",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -4351,6 +4389,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-02T06:07Z",
+        "id": "9bb0a35d1eafe7",
+        "topic": "BTC-USD hourly gap\u2011down >2% trend persistence",
+        "hypothesis": "After a 2% or greater hourly gap\u2011down in BTC\u2011USD, the price continues to trend upward for the next 5 hours with a cumulative return exceeding 2%",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If, across at least 30 BTC\u2011USD gap\u2011down events (>2% drop), the 5\u2011hour cumulative return is less than 2% in more than 50% of cases, the hypothesis is falsified",
+        "source_search": {
+          "query": "BTC-USD hourly gap\u2011down >2% next\u2011hour return distribution",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly gap\u2011down >2% next\u2011hour return distribution",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ],
     "ai_seen": {
@@ -6301,6 +6377,60 @@
         ],
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-02T06:09Z",
+        "id": "b8855bfe618d18",
+        "topic": "BTC-USD hourly momentum trigger",
+        "hypothesis": "BTC-USD price rises by more than 8% over a 6\u2011hour lookback, indicating a momentum continuation.",
+        "candidate": {
+          "family": "momentum",
+          "lookback": 6,
+          "threshold": 0.08
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 8,
+            "end": 491,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 491,
+            "end": 702,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "validation_issue": null,
+        "falsification_test": "If BTC-USD price does not increase >8% over the 6\u2011hour lookback, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly momentum 6-hour lookback backtest results",
+          "attempted": [
+            "blog",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly momentum 6-hour lookback backtest results",
+        "preferred_sources": [
+          "blog"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
       }
@@ -9517,6 +9647,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-02T06:08Z",
+        "id": "42a8c92611aa2e",
+        "topic": "BTC-USD hourly trend reversal after sustained 10\u2011hour uptrend",
+        "hypothesis": "After a 10\u2011hour period of cumulative price increase exceeding 5%, BTC\u2011USD will reverse direction within the next 24 hours with probability >50%.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "No reversal (price decline >0%) occurs within 24 hours after any 10\u2011hour uptrend >5% across at least 100 events in the dataset.",
+        "source_search": {
+          "query": "BTC-USD hourly trend reversal after 10\u2011hour uptrend",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly price series 2025-2026 10\u2011hour uptrend reversal",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -10740,6 +10908,59 @@
           }
         ],
         "next_search_query": "ETH-USD hourly mean reversion 24h SMA 3% backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-02T06:08Z",
+        "id": "8f811fb027381f",
+        "topic": "ETH-USD hourly breakout reversal",
+        "hypothesis": "When ETH-USD hourly close exceeds its 24\u2011hour simple moving average by more than 5%, the price tends to revert to the SMA within the next 3 hours, producing a statistically significant mean\u2011reversion profit.",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 491,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 491,
+            "end": 702,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "validation_issue": null,
+        "falsification_test": "If the strategy fails to achieve a Sharpe ratio >0.5 over a 200\u2011hour backtest window, or if the mean return per trade is negative, the hypothesis is falsified.",
+        "source_search": {
+          "query": "ETH-USD hourly mean reversion 24h SMA 3% backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly breakout 5% SMA reversal backtest",
         "preferred_sources": [
           "web"
         ],
