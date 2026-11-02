@@ -11883,3 +11883,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-02 23:17:03,ext_exits,bull,227.19,124.62,0,0,0,2,AES|MTZ,both
 2026-11-02 23:21:57,ext_exits,bull,227.19,124.62,0,0,0,2,AES|MTZ,both
 2026-11-02 23:28:24,ext_exits,bull,227.19,124.62,0,0,0,2,AES|MTZ,both
+2026-11-02 23:31:42,ext_exits,bull,227.16,124.62,0,0,0,2,AES|MTZ,both
