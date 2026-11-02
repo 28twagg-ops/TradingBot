@@ -1,0 +1,58 @@
+name: Rubber Band automated research validation
+
+on:
+  schedule:
+    - cron: '25 13 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rubber-band-research
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout isolated research branch (never main trading logic)
+        uses: actions/checkout@v4
+        with:
+          ref: research/rubber-band-validation-2026-11-02
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install data dependency
+        run: python -m pip install 'yfinance>=0.2.50,<2'
+      - name: Run temporal execution unit tests
+        run: python -m unittest discover -s tests -p 'test_rubber_band_validation.py' -v
+      - name: Fetch actual daily adjusted OHLCV and record source manifest
+        run: python scripts/fetch_rubber_band_validation_data.py
+      - name: Run three execution scenarios and OOS gate
+        run: python simulations/validate_rubber_band.py --data-dir data/validation_csv --split-date 2024-01-01 --hold-bars 3 --stop-pct 0.005
+      - name: Show research gate
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('simulations/results/rubber_band_validation/summary.json')
+          x=json.loads(p.read_text())
+          print('RESEARCH GATE:', x['gate'])
+          print(json.dumps(x['scenarios'], indent=2))
+          if x['gate']=='BLOCK':
+              print('RESEARCH NOT APPROVED - this is an expected finding, not a permission to trade.')
+          PY
+      - name: Upload audit evidence including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rubber-band-validation-${{ github.run_number }}
+          path: |
+            data/validation_csv/source_manifest.json
+            simulations/results/rubber_band_validation/
+          if-no-files-found: warn
+          retention-days: 90
