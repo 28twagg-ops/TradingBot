@@ -142,24 +142,7 @@
       "entry_order_id": "7d8c9668-c695-44a7-94d8-1f1e90206796"
     }
   ],
-  "pending_orders": [
-    {
-      "order_id": "ebf60334-eac9-4f34-8bfa-011f35c6770b",
-      "bucket_id": 90,
-      "strategy_id": "S404",
-      "occ_symbol": "SLB261106C00055000",
-      "underlying": "SLB",
-      "qty": 1,
-      "limit": 0.25,
-      "profile_name": "live_1to1",
-      "submitted": "2026-11-02",
-      "detail": "gap -2.7%",
-      "spread_frac": 0.08000000000000007,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.4
-    }
-  ],
+  "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {
     "b16": 47.0,
