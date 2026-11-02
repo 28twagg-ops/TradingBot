@@ -83,7 +83,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "e575f6ee-069f-4ce2-9b69-7e17d6911b51",
+      "lot_id": "01077666527d",
+      "bucket_id": 21,
+      "strategy_id": "S365",
+      "occ_symbol": "QQQ261113C00744000",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-11-02T14:06:59"
+    }
+  ],
   "bucket_open_premium": {
     "b16": 47.0,
     "b91": 61.0,
