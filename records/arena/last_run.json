@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-02T13:51:38.731595+00:00",
+  "timestamp": "2026-11-02T15:57:03.817823+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -12,11 +12,11 @@
       "missing_quotes": []
     },
     "S02": {
-      "action": "SELL BTC-USD",
-      "generation_index": 0,
-      "cash": 97.30099949,
-      "equity": 97.301,
-      "ledger_events": 14,
+      "action": "HOLD",
+      "generation_index": 1,
+      "cash": 100.0,
+      "equity": 100.0,
+      "ledger_events": 0,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -24,17 +24,17 @@
       "action": "HOLD",
       "generation_index": 0,
       "cash": 13.25515543,
-      "equity": 99.4356,
+      "equity": 99.6283,
       "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S04": {
-      "action": "HOLD",
+      "action": "BUY AAPL",
       "generation_index": 0,
-      "cash": 60.99699131,
-      "equity": 100.8237,
-      "ledger_events": 5,
+      "cash": 36.81587157,
+      "equity": 101.2172,
+      "ledger_events": 6,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -49,19 +49,19 @@
     },
     "S06": {
       "action": "HOLD",
-      "generation_index": 0,
-      "cash": 98.46897098,
-      "equity": 98.469,
-      "ledger_events": 14,
+      "generation_index": 1,
+      "cash": 100.0,
+      "equity": 100.0,
+      "ledger_events": 0,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S07": {
       "action": "HOLD",
-      "generation_index": 0,
-      "cash": 98.21826112,
-      "equity": 98.2183,
-      "ledger_events": 4,
+      "generation_index": 1,
+      "cash": 100.0,
+      "equity": 100.0,
+      "ledger_events": 0,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -76,19 +76,19 @@
     },
     "S09": {
       "action": "HOLD",
-      "generation_index": 0,
-      "cash": 58.74317281,
-      "equity": 97.2015,
-      "ledger_events": 11,
+      "generation_index": 1,
+      "cash": 100.0,
+      "equity": 100.0,
+      "ledger_events": 0,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S10": {
       "action": "HOLD",
-      "generation_index": 0,
-      "cash": 98.27837991,
-      "equity": 98.2784,
-      "ledger_events": 12,
+      "generation_index": 1,
+      "cash": 100.0,
+      "equity": 100.0,
+      "ledger_events": 0,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     }

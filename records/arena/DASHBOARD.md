@@ -4,20 +4,20 @@
 Stocks/crypto indicative Yahoo hourly prices; NO options executed.
 All 10 workers start at $100; no real money or new AI charges.
 
-Updated: 2026-11-02T13:51:38.731595+00:00
+Updated: 2026-11-02T15:57:03.817823+00:00
 
 | Worker | Virtual action | Equity | Cash | Council |
 |---|---|---:|---:|---|
 | S01a | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
-| S02a | SELL BTC-USD | 97.3 | 97.30099949 | REVIEW_REQUIRED |
-| S03a | HOLD | 99.44 | 13.25515543 | REVIEW_REQUIRED |
-| S04a | HOLD | 100.82 | 60.99699131 | REVIEW_REQUIRED |
+| S02b | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
+| S03a | HOLD | 99.63 | 13.25515543 | REVIEW_REQUIRED |
+| S04a | BUY AAPL | 101.22 | 36.81587157 | REVIEW_REQUIRED |
 | S05a | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
-| S06a | HOLD | 98.47 | 98.46897098 | REVIEW_REQUIRED |
-| S07a | HOLD | 98.22 | 98.21826112 | REVIEW_REQUIRED |
+| S06b | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
+| S07b | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
 | S08a | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
-| S09a | HOLD | 97.2 | 58.74317281 | REVIEW_REQUIRED |
-| S10a | HOLD | 98.28 | 98.27837991 | REVIEW_REQUIRED |
+| S09b | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
+| S10b | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
 
 **Review status:** Missing independently executable market quotes means
 the evidence council cannot certify a real-world trading edge.
