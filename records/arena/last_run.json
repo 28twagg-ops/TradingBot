@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-02T15:57:03.817823+00:00",
+  "timestamp": "2026-11-02T23:36:16.283597+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -24,16 +24,16 @@
       "action": "HOLD",
       "generation_index": 0,
       "cash": 13.25515543,
-      "equity": 99.6283,
+      "equity": 98.3333,
       "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S04": {
-      "action": "BUY AAPL",
+      "action": "HOLD",
       "generation_index": 0,
       "cash": 36.81587157,
-      "equity": 101.2172,
+      "equity": 100.5262,
       "ledger_events": 6,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []

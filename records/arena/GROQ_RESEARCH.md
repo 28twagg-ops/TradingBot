@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-02T23:39Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 9894593af66f5a | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-02T23:38Z | S07b | Hourly trend persistence in BTC-USD across marke | dac31d374667b8 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-02T23:37Z | S02b | BTC-USD hourly extreme return mean reversion | 4c8f1071ee5307 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-02T23:37Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | 7fd9f91d4bd08f | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-02T23:36Z | S06b | BTC-USD hourly relative strength momentum | c2a0864a257ca3 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-02T23:32Z | S04a | BTC-USD hourly gap‑down >2% next‑hour return | bc9140aacecbc0 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-02T23:31Z | S08a | Hourly volatility compression and price move siz | 8e6531790306fb | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-02T23:31Z | S01a | BTC-USD hourly price reversion to 24‑hour SMA | 1a84ef7a1ccb7c | HOLD_INVALID_MODEL_DECISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-02T11:41Z | S05a | Hourly breakout of BTC-USD after a 5‑hour high | 90441807551f04 | HOLD_INVALID_MODEL_DECISION |
 | 2026-11-02T11:40Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 6b795ca8f331e1 | HOLD_INVALID_MODEL_DECISION |
 | 2026-11-02T11:40Z | S07a | Hourly trend persistence in BTC-USD across marke | c4693ffb3ad18a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-02T06:10Z | S02a | BTC-USD hourly return mean reversion | f67e784c1d9419 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-02T06:09Z | S06a | BTC-USD hourly momentum trigger | b8855bfe618d18 | HOLD |
-| 2026-11-02T06:08Z | S09a | BTC-USD hourly trend reversal after sustained 10 | 42a8c92611aa2e | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-02T06:08Z | S10a | ETH-USD hourly breakout reversal | 8f811fb027381f | HOLD |
-| 2026-11-02T06:07Z | S04a | BTC-USD hourly gap‑down >2% trend persistence | 9bb0a35d1eafe7 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
