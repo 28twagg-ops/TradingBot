@@ -9315,5 +9315,145 @@
     "ai_requests": 1,
     "reason": "ValueError",
     "validation_stage": "MODEL_FIELDS_OR_RESEARCH_EVIDENCE"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-11-02T23:29Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly mean reversion at 24h lag",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "cba498d1c4380a",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly returns autocorrelation lag 24 2024 empirical study"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-11-02T23:30Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly opening\u2011range breakout",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "0fe7b3ca7820e6",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly close data 2019\u20112026"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-11-02T23:31Z",
+    "generation_index": 0,
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_PAPER_DECISION",
+    "topic": "BTC-USD hourly price reversion to 24\u2011hour SMA",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 24,
+      "threshold": 0.03
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 26,
+        "end": 503,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 503,
+        "end": 719,
+        "returns_pct": 0.798,
+        "drawdown_pct": -0.827,
+        "entries": 1
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD_INVALID_MODEL_DECISION",
+    "experiment_id": "1a84ef7a1ccb7c",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly 24h SMA reversion empirical study 2024 2025"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-11-02T23:31Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Hourly volatility compression and price move size",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "8e6531790306fb",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "search for publicly available hourly realized volatility dataset for BTC-USD"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-11-02T23:32Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly gap\u2011down >2% next\u2011hour return",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "bc9140aacecbc0",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly gap\u2011down >2% next\u2011hour return distribution"
   }
 ]
