@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-02
 
-_Generated 2026-11-02T10:27:27.749379_
+_Generated 2026-11-02T10:32:38.789738_
 
 ## Summary
 
@@ -25,7 +25,7 @@ _Generated 2026-11-02T10:27:27.749379_
 | S166 (GapDown strong call) | 3d ATM strong | watch | 18 | 61.1 | +60.78 | -67.83 | -49.76 | +142.86 | 104 | 2 | 2 | $+394.00 | 27.8% | building sample (8-19 exits) |
 | S396 (GapDown_ITM2) | 3d | watch | 14 | 64.3 | +55.64 | -55.79 | -50.51 | +95.00 | 88 | 2 | 1 | $+257.00 | 78.6% | building sample (8-19 exits) |
 | S357 (GapDown_21DTE) | 21d | watch | 30 | 73.3 | +52.94 | -63.65 | -24.03 | +74.44 | 94 | 1 | 0 | $+510.00 | 33.3% | fat left tail (p10 < -45%) |
-| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 25 | 52.0 | +51.61 | -71.88 | -55.56 | +326.67 | 104 | 2 | 1 | $+406.00 | 28.0% | fat left tail (p10 < -45%) |
+| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 25 | 52.0 | +51.61 | -71.88 | -55.56 | +326.67 | 104 | 3 | 1 | $+406.00 | 28.0% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 53 | 62.3 | +51.39 | -64.56 | -52.38 | +116.19 | 94 | 2 | 2 | $+1,108.00 | 17.0% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 80 | 61.2 | +50.88 | -64.85 | -50.00 | +172.15 | 94 | 0 | 0 | $+1,265.00 | 15.0% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 67 | 64.2 | +50.00 | -61.56 | -50.84 | +315.24 | 94 | 2 | 2 | $+1,367.00 | 19.4% | fat left tail (p10 < -45%) |
@@ -151,7 +151,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S165 | 3d ATM | 255 | -35.29 | -63.24 | -53.42 | 0 | 0 |
-| S167 | 3d 1-OTM | 25 | +51.61 | -71.88 | -55.56 | 2 | 1 |
+| S167 | 3d 1-OTM | 25 | +51.61 | -71.88 | -55.56 | 3 | 1 |
 
 ### New Pattern Strategies — GapDown signal independent
 
