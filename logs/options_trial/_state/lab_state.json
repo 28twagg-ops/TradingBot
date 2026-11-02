@@ -174,6 +174,22 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
+    },
+    {
+      "order_id": "34705042-c149-418c-8ae1-115716f9039e",
+      "bucket_id": 63,
+      "strategy_id": "S167",
+      "occ_symbol": "OXY261106C00064000",
+      "underlying": "OXY",
+      "qty": 1,
+      "limit": 0.52,
+      "profile_name": "lab0063_s167_w2_1005_1045_r1",
+      "submitted": "2026-11-02",
+      "detail": "gap -2.0%",
+      "spread_frac": 0.14141414141414144,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
   "pending_exits": [],
@@ -192,7 +208,8 @@
     "90|S406|2026-11-02",
     "2007|S430|2026-11-02",
     "2009|S432|2026-11-02",
-    "65|S168|2026-11-02"
+    "65|S168|2026-11-02",
+    "63|S167|2026-11-02"
   ],
   "processed_orders": [
     "fb5b7222-4e33-4762-943e-cc5184ccc107",
@@ -664,7 +681,7 @@
     "99faf714-dc5b-468f-b2eb-19fcb1b37b2e",
     "b7424cdc-9676-4a26-9dc8-de95f2a326c5"
   ],
-  "submitted_today": 5,
+  "submitted_today": 6,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-02"
 }
