@@ -80,6 +80,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-10-30T14:11:56.438625+00:00",
       "entry_order_id": "7590a655-d762-4855-822f-505def73a718"
+    },
+    {
+      "lot_id": "6549c974829d",
+      "bucket_id": 90,
+      "profile_name": "live_1to1",
+      "strategy_id": "S406",
+      "occ_symbol": "VZ261106C00045000",
+      "underlying": "VZ",
+      "qty": 1,
+      "entry_cost": 40.0,
+      "entry_price": 0.4,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-02T14:57:03.621228+00:00",
+      "entry_order_id": "33c8b2f6-ae1c-4cc3-a4b2-a1f931769f86"
     }
   ],
   "pending_orders": [
@@ -98,22 +118,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.4
-    },
-    {
-      "order_id": "33c8b2f6-ae1c-4cc3-a4b2-a1f931769f86",
-      "bucket_id": 90,
-      "strategy_id": "S406",
-      "occ_symbol": "VZ261106C00045000",
-      "underlying": "VZ",
-      "qty": 1,
-      "limit": 0.4,
-      "profile_name": "live_1to1",
-      "submitted": "2026-11-02",
-      "detail": "RB gap -1.6% reclaim",
-      "spread_frac": 0.21621621621621612,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.4
     }
   ],
   "pending_exits": [],
@@ -121,7 +125,8 @@
     "b16": 47.0,
     "b91": 61.0,
     "b21": 70.0,
-    "b49": 54.0
+    "b49": 54.0,
+    "b90": 40.0
   },
   "session_date": "2026-11-02",
   "entries_locked": [
@@ -593,7 +598,8 @@
     "9be3aadb-4365-40f1-a2c9-73d5f7590bbb",
     "99939c3a-cd0b-4134-9b82-4de6de57cf0d",
     "8d9503a0-8269-45ae-bfa9-c4c7cf7e8035",
-    "d4991f4c-6d54-4f3a-98c3-4c2e86ab1778"
+    "d4991f4c-6d54-4f3a-98c3-4c2e86ab1778",
+    "33c8b2f6-ae1c-4cc3-a4b2-a1f931769f86"
   ],
   "submitted_today": 2,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
