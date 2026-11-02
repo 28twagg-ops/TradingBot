@@ -42,26 +42,6 @@
       "entry_order_id": "638f7156-6c10-4e25-a34c-fa14351cc81e"
     },
     {
-      "lot_id": "01077666527d",
-      "bucket_id": 21,
-      "profile_name": "lab0021_s365_w2_1005_1045_r1",
-      "strategy_id": "S365",
-      "occ_symbol": "QQQ261113C00744000",
-      "underlying": "QQQ",
-      "qty": 1,
-      "entry_cost": 70.0,
-      "entry_price": 0.7,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-30T14:07:26.954318+00:00",
-      "entry_order_id": "b3accdf6-e1d1-4744-a5bd-595bc0ca9449"
-    },
-    {
       "lot_id": "bf6383dd2892",
       "bucket_id": 49,
       "profile_name": "lab0049_s396_w2_1005_1045_r1",
@@ -83,22 +63,10 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "e575f6ee-069f-4ce2-9b69-7e17d6911b51",
-      "lot_id": "01077666527d",
-      "bucket_id": 21,
-      "strategy_id": "S365",
-      "occ_symbol": "QQQ261113C00744000",
-      "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-11-02T14:06:59"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b16": 47.0,
     "b91": 61.0,
-    "b21": 70.0,
     "b49": 54.0
   },
   "session_date": "2026-11-02",
@@ -588,7 +556,8 @@
     "613a9500-cb78-4aac-b497-b8948afb0801",
     "8bf74a19-9749-4e96-a8e9-ccecfda50574",
     "2b9fda27-f618-4a5a-a3a6-e98512a99423",
-    "e8468d46-7bf1-4754-9d66-0358b7a26fb9"
+    "e8468d46-7bf1-4754-9d66-0358b7a26fb9",
+    "e575f6ee-069f-4ce2-9b69-7e17d6911b51"
   ],
   "submitted_today": 7,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
