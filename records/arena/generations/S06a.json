@@ -1,0 +1,1701 @@
+{
+  "schema": 1,
+  "generation": "S06a",
+  "started_at": "2026-10-26T15:15:04.789717+00:00",
+  "closed_at": "2026-11-02T13:54:30.963952+00:00",
+  "decision": "ROTATE_FINAL_CHANCE_UNPROVEN",
+  "last_indicative_equity": 98.469,
+  "includes_open_paper_positions_without_fictitious_closing": true,
+  "real_money_trades": false,
+  "rule_book": {
+    "events": [
+      {
+        "worker": "S06",
+        "seq": 1,
+        "timestamp": "2026-10-26T15:15:04.789717Z",
+        "asset_class": "crypto",
+        "symbol": "SOL/USD",
+        "side": "BUY",
+        "qty": 0.388426,
+        "price": 101.95999908447266,
+        "fee": 0.07920782920877074,
+        "multiplier": 1,
+        "source_id": "YAHOO:SOL-USD:2026-10-26T14:00:00Z",
+        "balance_after": 60.31687757,
+        "positions_after": {
+          "crypto:SOL/USD": 0.388426
+        },
+        "previous_hash": "GENESIS",
+        "hash": "a44157866383ef242d351be3437f41807019772574082d35372e6368576293aa"
+      },
+      {
+        "worker": "S06",
+        "seq": 2,
+        "timestamp": "2026-10-26T21:03:56.415682Z",
+        "asset_class": "crypto",
+        "symbol": "SOL/USD",
+        "side": "SELL",
+        "qty": 0.388426,
+        "price": 100.27999877929688,
+        "fee": 0.07790271761169433,
+        "multiplier": 1,
+        "source_id": "YAHOO:SOL-USD:2026-10-26T19:00:00Z",
+        "balance_after": 99.19033366,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0
+        },
+        "previous_hash": "a44157866383ef242d351be3437f41807019772574082d35372e6368576293aa",
+        "hash": "4e0007dd89e5ab49f1b2d36953440889be1e28d93afb4c6f57622a48d4ad11bc"
+      },
+      {
+        "worker": "S06",
+        "seq": 3,
+        "timestamp": "2026-10-27T14:35:09.684622Z",
+        "asset_class": "us_equity",
+        "symbol": "QQQ",
+        "side": "BUY",
+        "qty": 0.054841,
+        "price": 716.2999877929688,
+        "fee": 0.0392826076305542,
+        "multiplier": 1,
+        "source_id": "YAHOO:QQQ:2026-10-27T13:30:00Z",
+        "balance_after": 59.86844342,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "us_equity:QQQ": 0.054841
+        },
+        "previous_hash": "4e0007dd89e5ab49f1b2d36953440889be1e28d93afb4c6f57622a48d4ad11bc",
+        "hash": "876b10d8ad0ed3c96939356dbb4a7c5ad20cd574c4af9be4c3932052f6a15322"
+      },
+      {
+        "worker": "S06",
+        "seq": 4,
+        "timestamp": "2026-10-27T20:45:47.163892Z",
+        "asset_class": "crypto",
+        "symbol": "BTC/USD",
+        "side": "BUY",
+        "qty": 0.000293,
+        "price": 80708.8125,
+        "fee": 0.04729536412500001,
+        "multiplier": 1,
+        "source_id": "YAHOO:BTC-USD:2026-10-27T19:00:00Z",
+        "balance_after": 36.173466,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "us_equity:QQQ": 0.054841,
+          "crypto:BTC/USD": 0.000293
+        },
+        "previous_hash": "876b10d8ad0ed3c96939356dbb4a7c5ad20cd574c4af9be4c3932052f6a15322",
+        "hash": "a39258e75f9b9b136b0b05502e860277fa082eab0dbb7f0ea52d92a073b0ecb7"
+      },
+      {
+        "worker": "S06",
+        "seq": 5,
+        "timestamp": "2026-10-28T01:25:48.147637Z",
+        "asset_class": "crypto",
+        "symbol": "SOL/USD",
+        "side": "BUY",
+        "qty": 0.141632,
+        "price": 101.1500015258789,
+        "fee": 0.028652154032226568,
+        "multiplier": 1,
+        "source_id": "YAHOO:SOL-USD:2026-10-28T00:00:00Z",
+        "balance_after": 21.81873683,
+        "positions_after": {
+          "crypto:SOL/USD": 0.141632,
+          "us_equity:QQQ": 0.054841,
+          "crypto:BTC/USD": 0.000293
+        },
+        "previous_hash": "a39258e75f9b9b136b0b05502e860277fa082eab0dbb7f0ea52d92a073b0ecb7",
+        "hash": "1559491d3c3bfa044e2897fda9323ed7f9b35c2db46ebde93f08d4866678c418"
+      },
+      {
+        "worker": "S06",
+        "seq": 6,
+        "timestamp": "2026-10-28T08:36:23.365783Z",
+        "asset_class": "crypto",
+        "symbol": "ETH/USD",
+        "side": "BUY",
+        "qty": 0.003664,
+        "price": 2358.02001953125,
+        "fee": 0.017279570703125,
+        "multiplier": 1,
+        "source_id": "YAHOO:ETH-USD:2026-10-28T07:00:00Z",
+        "balance_after": 13.16167191,
+        "positions_after": {
+          "crypto:SOL/USD": 0.141632,
+          "us_equity:QQQ": 0.054841,
+          "crypto:BTC/USD": 0.000293,
+          "crypto:ETH/USD": 0.003664
+        },
+        "previous_hash": "1559491d3c3bfa044e2897fda9323ed7f9b35c2db46ebde93f08d4866678c418",
+        "hash": "30db2ad03c4d1bc82b0021b82ce50778bdee7222155f6f751aa520f0a4c8485a"
+      },
+      {
+        "worker": "S06",
+        "seq": 7,
+        "timestamp": "2026-10-28T15:02:40.047974Z",
+        "asset_class": "crypto",
+        "symbol": "BTC/USD",
+        "side": "SELL",
+        "qty": 0.000293,
+        "price": 80603.34375,
+        "fee": 0.04723355943750001,
+        "multiplier": 1,
+        "source_id": "YAHOO:BTC-USD:2026-10-28T13:00:00Z",
+        "balance_after": 36.73121807,
+        "positions_after": {
+          "crypto:SOL/USD": 0.141632,
+          "us_equity:QQQ": 0.054841,
+          "crypto:BTC/USD": 0.0,
+          "crypto:ETH/USD": 0.003664
+        },
+        "previous_hash": "30db2ad03c4d1bc82b0021b82ce50778bdee7222155f6f751aa520f0a4c8485a",
+        "hash": "5ef87055960a03f19b5cc04b61e6fe9f95c1864d2826a5ed1b7e83c07ed81aeb"
+      },
+      {
+        "worker": "S06",
+        "seq": 8,
+        "timestamp": "2026-10-28T16:40:44.739163Z",
+        "asset_class": "crypto",
+        "symbol": "ETH/USD",
+        "side": "SELL",
+        "qty": 0.003664,
+        "price": 2331.6201171875,
+        "fee": 0.01708611221875,
+        "multiplier": 1,
+        "source_id": "YAHOO:ETH-USD:2026-10-28T15:00:00Z",
+        "balance_after": 45.25718807,
+        "positions_after": {
+          "crypto:SOL/USD": 0.141632,
+          "us_equity:QQQ": 0.054841,
+          "crypto:BTC/USD": 0.0,
+          "crypto:ETH/USD": 0.0
+        },
+        "previous_hash": "5ef87055960a03f19b5cc04b61e6fe9f95c1864d2826a5ed1b7e83c07ed81aeb",
+        "hash": "e7aa43df571a32eb217ccdbebcb4aad713ce449c3051793291a7c989611726de"
+      },
+      {
+        "worker": "S06",
+        "seq": 9,
+        "timestamp": "2026-10-29T05:52:27.631059Z",
+        "asset_class": "crypto",
+        "symbol": "SOL/USD",
+        "side": "SELL",
+        "qty": 0.141632,
+        "price": 100.05000305175781,
+        "fee": 0.028340564064453126,
+        "multiplier": 1,
+        "source_id": "YAHOO:SOL-USD:2026-10-29T04:00:00Z",
+        "balance_after": 59.39912954,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "us_equity:QQQ": 0.054841,
+          "crypto:BTC/USD": 0.0,
+          "crypto:ETH/USD": 0.0
+        },
+        "previous_hash": "e7aa43df571a32eb217ccdbebcb4aad713ce449c3051793291a7c989611726de",
+        "hash": "b36e4cf4053dc0ed51defb20336df5f53d84a9c4bba2d1557755f2607edb2d5d"
+      },
+      {
+        "worker": "S06",
+        "seq": 10,
+        "timestamp": "2026-10-29T19:41:40.649412Z",
+        "asset_class": "us_equity",
+        "symbol": "QQQ",
+        "side": "SELL",
+        "qty": 0.054841,
+        "price": 713.6397705078125,
+        "fee": 0.03913671865441895,
+        "multiplier": 1,
+        "source_id": "YAHOO:QQQ:2026-10-29T18:30:00Z",
+        "balance_after": 98.49671147,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "us_equity:QQQ": 0.0,
+          "crypto:BTC/USD": 0.0,
+          "crypto:ETH/USD": 0.0
+        },
+        "previous_hash": "b36e4cf4053dc0ed51defb20336df5f53d84a9c4bba2d1557755f2607edb2d5d",
+        "hash": "ddb5feb8d7ffec4f681df48e7004fd290b1e487b8d31cd01a77af12f9aa4020b"
+      },
+      {
+        "worker": "S06",
+        "seq": 11,
+        "timestamp": "2026-10-31T12:32:17.912732Z",
+        "asset_class": "crypto",
+        "symbol": "BTC/USD",
+        "side": "BUY",
+        "qty": 0.000503,
+        "price": 77465.0078125,
+        "fee": 0.077929797859375,
+        "multiplier": 1,
+        "source_id": "YAHOO:BTC-USD:2026-10-31T11:00:00Z",
+        "balance_after": 59.45388274,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "us_equity:QQQ": 0.0,
+          "crypto:BTC/USD": 0.000503,
+          "crypto:ETH/USD": 0.0
+        },
+        "previous_hash": "ddb5feb8d7ffec4f681df48e7004fd290b1e487b8d31cd01a77af12f9aa4020b",
+        "hash": "f3be57c1572268cc46eff144d23a60e0fd1f6f17df117478f884c1ab274c9126"
+      },
+      {
+        "worker": "S06",
+        "seq": 12,
+        "timestamp": "2026-10-31T18:37:08.894420Z",
+        "asset_class": "crypto",
+        "symbol": "ETH/USD",
+        "side": "BUY",
+        "qty": 0.010454,
+        "price": 2252.14990234375,
+        "fee": 0.04708795015820312,
+        "multiplier": 1,
+        "source_id": "YAHOO:ETH-USD:2026-10-31T17:00:00Z",
+        "balance_after": 35.86281971,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "us_equity:QQQ": 0.0,
+          "crypto:BTC/USD": 0.000503,
+          "crypto:ETH/USD": 0.010454
+        },
+        "previous_hash": "f3be57c1572268cc46eff144d23a60e0fd1f6f17df117478f884c1ab274c9126",
+        "hash": "cb0712505254437f13c464d3e38cf2af930baf6655bfab46cf5378bd24f4ad3f"
+      },
+      {
+        "worker": "S06",
+        "seq": 13,
+        "timestamp": "2026-11-01T13:28:20.706119Z",
+        "asset_class": "crypto",
+        "symbol": "ETH/USD",
+        "side": "SELL",
+        "qty": 0.010454,
+        "price": 2258.7099609375,
+        "fee": 0.047225107863281254,
+        "multiplier": 1,
+        "source_id": "YAHOO:ETH-USD:2026-11-01T12:00:00Z",
+        "balance_after": 59.42814853,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "us_equity:QQQ": 0.0,
+          "crypto:BTC/USD": 0.000503,
+          "crypto:ETH/USD": 0.0
+        },
+        "previous_hash": "cb0712505254437f13c464d3e38cf2af930baf6655bfab46cf5378bd24f4ad3f",
+        "hash": "1de748d186765bf27f0f35ff794782ff13d17356c61bfc81955288b64c0f04f7"
+      },
+      {
+        "worker": "S06",
+        "seq": 14,
+        "timestamp": "2026-11-01T22:52:08.413424Z",
+        "asset_class": "crypto",
+        "symbol": "BTC/USD",
+        "side": "SELL",
+        "qty": 0.000503,
+        "price": 77771.4921875,
+        "fee": 0.078238121140625,
+        "multiplier": 1,
+        "source_id": "YAHOO:BTC-USD:2026-11-01T21:00:00Z",
+        "balance_after": 98.46897098,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "us_equity:QQQ": 0.0,
+          "crypto:BTC/USD": 0.0,
+          "crypto:ETH/USD": 0.0
+        },
+        "previous_hash": "1de748d186765bf27f0f35ff794782ff13d17356c61bfc81955288b64c0f04f7",
+        "hash": "d660c01a7f7ab30ba764a65af18663ce151812321cb6aae2da2d770cdfebe046"
+      }
+    ],
+    "cash": 98.46897098,
+    "positions": {
+      "crypto:SOL/USD": 0.0,
+      "us_equity:QQQ": 0.0,
+      "crypto:BTC/USD": 0.0,
+      "crypto:ETH/USD": 0.0
+    },
+    "seen": {
+      "BTC-USD": "2026-11-02T12:00:00Z",
+      "ETH-USD": "2026-11-02T12:00:00Z",
+      "SOL-USD": "2026-11-02T12:00:00Z",
+      "SPY": "2026-10-30T17:30:00Z",
+      "QQQ": "2026-10-30T17:30:00Z",
+      "AAPL": "2026-10-30T17:30:00Z",
+      "MSFT": "2026-10-30T17:30:00Z"
+    }
+  },
+  "ai_book": {
+    "events": [
+      {
+        "worker": "S06",
+        "seq": 1,
+        "timestamp": "2026-10-26T03:21:59.923013Z",
+        "asset_class": "crypto",
+        "symbol": "SOL/USD",
+        "side": "BUY",
+        "qty": 0.098527,
+        "price": 100.48999786376953,
+        "fee": 0.01980195603904724,
+        "multiplier": 1,
+        "source_id": "YAHOO_AI:SOL-USD:2026-10-26T02:00:00Z",
+        "balance_after": 90.07922002,
+        "positions_after": {
+          "crypto:SOL/USD": 0.098527
+        },
+        "previous_hash": "GENESIS",
+        "hash": "63fddabd7131841c21dc0e72b21ab1b0a2e09e5b60fc02171de0fe86c3607303"
+      }
+    ],
+    "cash": 90.07922002,
+    "positions": {
+      "crypto:SOL/USD": 0.098527
+    },
+    "seen": {},
+    "ai_seen": {
+      "SOL-USD": "2026-10-26T02:00:00Z"
+    },
+    "ai_last_day": "2026-10-26",
+    "ai_research": [
+      {
+        "day": "2026-10-26",
+        "hypothesis": "In short-term crypto corrections, assets exhibiting milder negative relative returns over a 12-hour lookback (lower drawdown magnitude) demonstrate relative strength and outperform peers during subsequent market stabilization.",
+        "test_plan": "Enter a long position in SOL-USD based on its superior relative strength (-0.75% vs BTC's -1.34% and ETH's -1.65%) over the last 12 hours. Hold for 24 hours and evaluate whether SOL-USD outperforms the equally-weighted basket return over the holding period. Falsify if SOL-USD underperforms the average of BTC and ETH over the test window.",
+        "reasoning": "SOL-USD shows smaller downside participation (-0.75%) compared to BTC (-1.34%) and ETH (-1.65%) over the past 12 hours. According to relative strength principles, the asset declining the least during a market-wide pullback tends to lead the recovery when buying pressure returns.",
+        "source_titles": [
+          "A Relative Strength Asset Allocation Trading System"
+        ],
+        "virtual_action": "BUY SOL-USD (VIRTUAL_CLOSE_PROXY)"
+      }
+    ],
+    "groq_experiments": [
+      {
+        "cycle": "2026-10-26T14:50Z",
+        "id": "bfeb8ba40451e7",
+        "topic": "Cross\u2011asset trend persistence between equity and crypto markets",
+        "hypothesis": "When the 20\u2011day moving average of SPY diverges from that of BTC\u2011USD by more than 1.5%, the subsequent 5\u2011day return of SPY is positively correlated with the direction of the divergence, indicating a cross\u2011asset trend effect that can be exploited with ",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 20,
+          "threshold": 0.015
+        },
+        "symbol": "SPY",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 142,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 142,
+            "end": 204,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "If, over the next 12 months, the 5\u2011day return of SPY fails to be statistically significantly higher (p<0.05) when the 20\u2011day MA divergence exceeds 1.5% in the predicted direction, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-26T21:04Z",
+        "id": "dd1b87161c6fc6",
+        "topic": "Opening\u2011range breakout on BTC\u2011USD",
+        "hypothesis": "If BTC\u2011USD opens above its 5\u2011minute high and closes above the opening range high, the price will continue to rise for at least the next 30 minutes, yielding a positive return above 0.5% within that window.",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 5,
+          "threshold": 0.005
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 501,
+            "returns_pct": -6.73,
+            "drawdown_pct": -6.861,
+            "entries": 9
+          },
+          "retrospective_validation": {
+            "start": 501,
+            "end": 716,
+            "returns_pct": -2.669,
+            "drawdown_pct": -2.669,
+            "entries": 4
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_NO_CURRENT_ENTRY_SIGNAL",
+        "falsification_test": "If, over a rolling 12\u2011month sample, the strategy\u2019s cumulative return is negative or its Sharpe ratio falls below 0.5, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T07:56Z",
+        "id": "69eb7ca6a66a21",
+        "topic": "Cross\u2011asset momentum\u2011strength trigger for BTC\u2011USD",
+        "hypothesis": "When BTC\u2011USD\u2019s 20\u2011day momentum exceeds 5% and its relative strength versus SPY (20\u2011day return ratio) is above 1.2, the next 24\u2011hour return will be positive on average, providing a statistically significant edge.",
+        "candidate": {
+          "family": "momentum",
+          "lookback": 20,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 492,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 492,
+            "end": 703,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "Run an out\u2011of\u2011sample backtest on 2024\u20112026 BTC\u2011USD data; if the strategy\u2019s win\u2011rate falls below 55% or its Sharpe ratio drops below 0.5, reject the hypothesis.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T09:22Z",
+        "id": "69eb7ca6a66a21",
+        "topic": "Crypto liquidity impact on BTC\u2011USD momentum",
+        "hypothesis": "Periods of high on\u2011chain liquidity (measured by daily transaction volume) amplify short\u2011term momentum in BTC\u2011USD, producing >5% intraday gains within 20\u2011minute windows.",
+        "candidate": {
+          "family": "momentum",
+          "lookback": 20,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 493,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 493,
+            "end": 705,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "If BTC\u2011USD fails to achieve >5% return in any 20\u2011minute window over the next 5 trading days, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T14:35Z",
+        "id": "91bf17bb77fef2",
+        "topic": "Cross\u2011asset relative strength between BTC\u2011USD and SPY",
+        "hypothesis": "When BTC\u2011USD exhibits a positive 12\u2011hour relative return compared to SPY (i.e., BTC\u2019s 12\u2011hour return minus SPY\u2019s 12\u2011hour return > 0), BTC\u2011USD is more likely to generate a positive hourly return in the following hour.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 12\u2011hour relative return (BTC\u2011USD return \u2013 SPY return). If it exceeds 0, record the next hour\u2019s BTC\u2011USD return. Calculate the mean and standard deviation of these next\u2011hour returns. A statistically significant positive mean (e.g., t\u2011test p<0.05) would support the hypothesis; a mean not si",
+        "source_search": {
+          "query": "In short-term crypto corrections, assets exhibiting milder negative relative returns over a 12-hour lookback (lower drawdown magni",
+          "attempted": [
+            "web",
+            "github",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results",
+        "preferred_sources": [
+          "web",
+          "reddit",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T08:42Z",
+        "id": "4ed5b17b715b0d",
+        "topic": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 12\u2011hour cumulative return exceeds SPY\u2019s 12\u2011hour cumulative return by more than 5\u202f% (relative strength >\u202f1.05), BTC\u2011USD will continue to outperform SPY for the next 12\u202fhours, justifying a BUY signal on BTC\u2011USD.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 12\u2011hour cumulative return ratio BTC\u2011USD/SPY for all available hourly close data. Flag periods where the ratio >\u202f1.05 and test whether BTC\u2011USD\u2019s next 12\u2011hour return exceeds SPY\u2019s next 12\u2011hour return. Calculate win\u2011rate, profit factor, and maximum drawdown of the resulting strategy. If the",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results",
+          "attempted": [
+            "web",
+            "reddit",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T15:06Z",
+        "id": "e7d873c158ec22",
+        "topic": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 12\u2011hour cumulative return exceeds SPY\u2019s 12\u2011hour cumulative return by more than a small threshold, BTC\u2011USD will continue to outperform in the next hour; conversely, when BTC\u2011USD lags SPY by the same margin, BTC\u2011USD will underperform.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 12\u2011hour cumulative returns of BTC\u2011USD and SPY using hourly close data; flag a signal when BTC\u2011USD\u2019s return minus SPY\u2019s return > +0.02 (buy) or < \u20130.02 (sell). Backtest the signal on the available hourly close series for both symbols, recording the subsequent one\u2011hour return of BTC\u2011USD. A",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T20:17Z",
+        "id": "416db110d856ce",
+        "topic": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 12\u2011hour cumulative return exceeds SPY\u2019s 12\u2011hour cumulative return by more than a small threshold, BTC\u2011USD will outperform SPY over the next 12 hours, suggesting a short\u2011term relative\u2011strength trading signal.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compare the 12\u2011hour relative\u2011strength signal against a buy\u2011and\u2011hold benchmark for BTC\u2011USD and SPY over a rolling 12\u2011hour window; a statistically significant out\u2011performance (e.g., >10% higher cumulative return) would support the hypothesis, while consistent under\u2011performance would falsify it.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results on academic or forum sites",
+        "preferred_sources": [
+          "academic",
+          "forum",
+          "blog"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T05:53Z",
+        "id": "d7593f45794943",
+        "topic": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 12\u2011hour relative strength (RS) to SPY exceeds a positive threshold, BTC\u2011USD exhibits a statistically significant positive excess return over the next 12 hours, justifying a buy signal.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Backtest the 12\u2011hour RS rule on the available hourly close series for BTC\u2011USD and SPY over the past 3\u20115 years, compute win rate, average return, Sharpe ratio, and compare to a random\u2011walk benchmark.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results on academic or forum sites",
+          "attempted": [
+            "academic",
+            "forum",
+            "blog"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results on academic or forum sites",
+        "preferred_sources": [
+          "academic",
+          "forum",
+          "blog"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T14:16Z",
+        "id": "c26347d808cabd",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour cumulative return exceeds SPY\u2019s 24\u2011hour cumulative return by more than 5\u202f% (i.e., relative strength >\u202f1.05), BTC\u2011USD will continue to rise in the next hour, whereas a relative strength below 0.95 will precede a BTC\u2011USD pullback",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 24\u2011hour cumulative returns for BTC\u2011USD and SPY, calculate the ratio, and test whether a ratio >\u202f1.05 predicts a positive 1\u2011hour return for BTC\u2011USD and a ratio <\u202f0.95 predicts a negative 1\u2011hour return. Use a 5\u2011hour lookback window to avoid look\u2011ahead bias and evaluate the hit\u2011rate and pro",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 12\u2011hour momentum backtest results on academic or forum sites",
+          "attempted": [
+            "academic",
+            "forum",
+            "blog"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+        "preferred_sources": [
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T19:44Z",
+        "id": "cc7897e5344f81",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour return exceeds SPY\u2019s 24\u2011hour return by a threshold of 5\u202f% or more, BTC\u2011USD will continue to outperform SPY for the next 24\u202fhours, providing a profitable long\u2011only momentum signal.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to the last 5\u202fyears of hourly BTC\u2011USD and SPY data, compute the 24\u2011hour relative\u2011strength returns, and evaluate the out\u2011of\u2011sample performance (profit factor, win rate, drawdown). If the rule fails to produce a statistically significant positive return, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+          "attempted": [
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+        "preferred_sources": [
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T05:54Z",
+        "id": "996f7d4d476daa",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour relative strength (RS) to SPY exceeds +30\u202f% and the 24\u2011hour BTC\u2011USD momentum (price change) is positive, a short\u2011term (next 24\u202fh) bullish reversal of BTC\u2011USD is more likely than a continuation of the downtrend.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "If the strategy fails to produce a positive cumulative return over a 2\u2011year backtest period (excluding periods of extreme market stress) using the 24\u2011hour RS and momentum trigger, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+          "attempted": [
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger backtest results on reddit or independent blog",
+        "preferred_sources": [
+          "reddit",
+          "blog",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T10:29Z",
+        "id": "affaff1549a032",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour relative strength (RS) to SPY exceeds a threshold, BTC\u2011USD will outperform SPY over the next 24 hours. The strategy is to buy BTC\u2011USD when RS>threshold and hold until RS falls below threshold, and to sell when RS<threshold.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 24\u2011hour RS between BTC\u2011USD and SPY using hourly close data. Backtest the buy\u2011sell rule over the last 3 years. If the strategy\u2019s cumulative return is lower than a buy\u2011and\u2011hold on BTC\u2011USD or SPY, or if the Sharpe ratio is negative, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger backtest results on reddit or independent blog",
+          "attempted": [
+            "reddit",
+            "blog",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+        "preferred_sources": [
+          "reddit",
+          "blog",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T17:12Z",
+        "id": "324fd062ba995d",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "If BTC\u2011USD\u2019s 24\u2011hour cumulative return exceeds SPY\u2019s 24\u2011hour cumulative return by more than 5\u202f% (relative strength >\u202f1.05), then BTC\u2011USD will outperform SPY in the following 24\u202fhours.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Backtest the rule on historical hourly close data for BTC\u2011USD and SPY over the past 5\u202fyears, recording win\u2011rate, profit factor, and maximum drawdown. Compare performance to a buy\u2011and\u2011hold benchmark for both assets.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+          "attempted": [
+            "reddit",
+            "blog",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+        "preferred_sources": [
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T19:28Z",
+        "id": "74fbea02e24d45",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour return exceeds SPY\u2019s 24\u2011hour return by more than a specified threshold, BTC\u2011USD will outperform SPY over the next 24 hours.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 24\u2011hour return differential between BTC\u2011USD and SPY; if the differential is >0.05 and BTC\u2011USD\u2019s next 24\u2011hour return is lower than SPY\u2019s, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+          "attempted": [
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+        "preferred_sources": [
+          "reddit",
+          "blog"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T05:46Z",
+        "id": "e805cc61137558",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour cumulative return exceeds SPY\u2019s 24\u2011hour cumulative return by more than a fixed threshold (e.g., 2\u202f%), BTC\u2011USD is likely to continue outperforming SPY for the next 24\u202fhours, generating a positive momentum signal.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 24\u2011hour cumulative returns for BTC\u2011USD and SPY over a historical window (e.g., 2020\u20112026). For each day, flag a BUY signal when BTC\u2011USD\u2019s 24\u2011hour return minus SPY\u2019s 24\u2011hour return > 0.02. Then evaluate the next 24\u2011hour return of BTC\u2011USD. If the average return of BTC\u2011USD on signal days ex",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+          "attempted": [
+            "reddit",
+            "blog"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+        "preferred_sources": [
+          "academic",
+          "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T12:32Z",
+        "id": "b125d75e722870",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour relative strength (RS) to SPY exceeds a threshold, BTC\u2011USD exhibits a positive momentum that can be captured by a simple hourly\u2011close momentum rule.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to the last 2000 hourly close observations of BTC\u2011USD and SPY; if the strategy\u2019s cumulative return is negative or the win\u2011rate falls below 50% after accounting for a 0.1% transaction cost, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites",
+          "attempted": [
+            "academic",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+        "preferred_sources": [
+          "reddit",
+          "blog"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T17:37Z",
+        "id": "c0ef46d77f8597",
+        "topic": "BTC relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "BTC\u2011USD outperforms SPY over the past 24\u202fh and exhibits positive 24\u2011hour momentum, indicating a potential buy signal.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "If BTC\u2011USD\u2019s 24\u2011hour return divided by SPY\u2019s 24\u2011hour return falls below 1.05 or BTC\u2019s 24\u2011hour momentum is below 2\u202f% over any 24\u2011hour window, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+          "attempted": [
+            "reddit",
+            "blog"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+        "preferred_sources": [
+          "reddit",
+          "blog"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T18:39Z",
+        "id": "18c947206447c7",
+        "topic": "BTC-USD relative strength to SPY 24h momentum trigger",
+        "hypothesis": "If BTC-USD relative strength to SPY over the past 24 hours exceeds 5% above its 24\u2011hour mean, BTC-USD will trend higher in the next hour.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "None",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+          "attempted": [
+            "reddit",
+            "blog"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+        "preferred_sources": [
+          "reddit",
+          "blog"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-11-01T07:30Z",
+        "id": "ab31b2dfdee695",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour relative strength (BTC\u2011USD 24\u2011h return / SPY 24\u2011h return) exceeds 1.05, BTC\u2011USD will trend higher for the next 24 hours.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "Compare BTC\u2011USD 24\u2011h return to SPY 24\u2011h return; if ratio >1.05 and BTC\u2011USD does not trend higher in the next 24 hours, hypothesis falsified.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+          "attempted": [
+            "reddit",
+            "blog"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+        "preferred_sources": [
+          "reddit",
+          "blog"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T13:28Z",
+        "id": "ccd7ff186edd0d",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour relative strength to SPY exceeds a threshold, BTC\u2011USD will continue to outperform SPY for the next hour",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "Compare hourly returns of BTC\u2011USD and SPY over a 6\u2011month period; if BTC\u2011USD\u2019s 24\u2011hour relative strength >0.05 does not predict higher next\u2011hour return, hypothesis falsified",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on reddit or independent blog",
+          "attempted": [
+            "reddit",
+            "blog"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on independent blog",
+        "preferred_sources": [
+          "blog",
+          "reddit"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T17:14Z",
+        "id": "7c5c3d0bb0397c",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "BTC\u2011USD\u2019s 24\u2011hour relative strength to SPY predicts a 24\u2011hour momentum signal for BTC\u2011USD",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "If a 24\u2011hour momentum rule with lookback 24 and threshold 0.05 fails to produce >5% win rate over 2000 hours, hypothesis is falsified",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on independent blog",
+          "attempted": [
+            "blog",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on independent blog",
+        "preferred_sources": [
+          "blog",
+          "reddit"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T18:03Z",
+        "id": "4b4c2ff3eda9f6",
+        "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s 24\u2011hour return exceeds SPY\u2019s 24\u2011hour return by more than 5\u202f% the next hour\u2019s BTC\u2011USD return is positive",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "None performed",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on independent blog",
+          "attempted": [
+            "blog",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on independent blog",
+        "preferred_sources": [
+          "blog",
+          "reddit"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T19:38Z",
+        "id": "3e717a1dfd9f69",
+        "topic": "BTC-USD hourly trend trigger",
+        "hypothesis": "BTC-USD price trend over the last 10 hours predicts a 5\u2011hour continuation if the 10\u2011hour slope exceeds 5% of the current price.",
+        "candidate": {
+          "family": "trend",
+          "lookback": 10,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 12,
+            "end": 500,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 500,
+            "end": 715,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_INVALID_MODEL_DECISION",
+        "validation_issue": "INVALID_PAPER_DECISION",
+        "falsification_test": "If BTC-USD price falls more than 5% within the next 5 hours after the signal, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on independent blog",
+          "attempted": [
+            "blog",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly trend 10-hour lookback backtest results",
+        "preferred_sources": [
+          "blog",
+          "reddit"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-01T22:52Z",
+        "id": "abc51cf36d0998",
+        "topic": "BTC-USD hourly trend trigger",
+        "hypothesis": "BTC-USD price rises by at least 3% over a 6\u2011hour lookback, indicating a trend continuation.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If price fails to rise 3% over 6 hours after a trigger, hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly trend 10-hour lookback backtest results",
+          "attempted": [
+            "blog",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly trend 6-hour lookback backtest results",
+        "preferred_sources": [
+          "blog"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-01T23:34Z",
+        "id": "f9b114d644e856",
+        "topic": "BTC-USD hourly momentum trigger",
+        "hypothesis": "BTC-USD price rises 2% or more over a 6\u2011hour lookback indicates a continuation of the upward trend and warrants a BUY signal.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If the BTC\u2011USD price fails to increase by at least 2% over any 6\u2011hour window, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly trend 6-hour lookback backtest results",
+          "attempted": [
+            "blog"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly momentum 6-hour lookback backtest results",
+        "preferred_sources": [
+          "blog",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-02T06:09Z",
+        "id": "b8855bfe618d18",
+        "topic": "BTC-USD hourly momentum trigger",
+        "hypothesis": "BTC-USD price rises by more than 8% over a 6\u2011hour lookback, indicating a momentum continuation.",
+        "candidate": {
+          "family": "momentum",
+          "lookback": 6,
+          "threshold": 0.08
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 8,
+            "end": 491,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 491,
+            "end": 702,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "validation_issue": null,
+        "falsification_test": "If BTC-USD price does not increase >8% over the 6\u2011hour lookback, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly momentum 6-hour lookback backtest results",
+          "attempted": [
+            "blog",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly momentum 6-hour lookback backtest results",
+        "preferred_sources": [
+          "blog"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-02T13:53Z",
+        "id": "bcb8e2515d4e9d",
+        "topic": "BTC-USD hourly breakout on 12\u2011hour SMA",
+        "hypothesis": "BTC\u2011USD hourly close exceeds 1.5\u202f% above its 12\u2011hour simple moving average, signalling a breakout that persists for at least 3 consecutive hours.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If BTC\u2011USD hourly close surpasses 1.5\u202f% above the 12\u2011hour SMA but does not remain above the SMA for the next 3 hours, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly momentum 6-hour lookback backtest results",
+          "attempted": [
+            "blog"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly breakout 12\u2011hour SMA backtest",
+        "preferred_sources": [
+          "blog"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      }
+    ]
+  },
+  "paper_observations": [
+    {
+      "timestamp": "2026-11-01T18:23:26.157589+00:00",
+      "generation": "S06a",
+      "equity": 98.5887,
+      "ledger_events": 13,
+      "action": "HOLD",
+      "missing_quotes": false,
+      "council": "REVIEW_REQUIRED"
+    },
+    {
+      "timestamp": "2026-11-01T18:44:38.738246+00:00",
+      "generation": "S06a",
+      "equity": 98.5887,
+      "ledger_events": 13,
+      "action": "HOLD",
+      "missing_quotes": false,
+      "council": "REVIEW_REQUIRED"
+    },
+    {
+      "timestamp": "2026-11-01T18:59:42.835381+00:00",
+      "generation": "S06a",
+      "equity": 98.5887,
+      "ledger_events": 13,
+      "action": "HOLD",
+      "missing_quotes": false,
+      "council": "REVIEW_REQUIRED"
+    },
+    {
+      "timestamp": "2026-11-01T22:52:08.413424+00:00",
+      "generation": "S06a",
+      "equity": 98.469,
+      "ledger_events": 14,
+      "action": "SELL BTC-USD",
+      "missing_quotes": false,
+      "council": "REVIEW_REQUIRED"
+    },
+    {
+      "timestamp": "2026-11-01T23:40:48.019745+00:00",
+      "generation": "S06a",
+      "equity": 98.469,
+      "ledger_events": 14,
+      "action": "HOLD",
+      "missing_quotes": false,
+      "council": "REVIEW_REQUIRED"
+    },
+    {
+      "timestamp": "2026-11-02T06:07:14.385616+00:00",
+      "generation": "S06a",
+      "equity": 98.469,
+      "ledger_events": 14,
+      "action": "HOLD",
+      "missing_quotes": false,
+      "council": "REVIEW_REQUIRED"
+    },
+    {
+      "timestamp": "2026-11-02T13:51:38.731595+00:00",
+      "generation": "S06a",
+      "equity": 98.469,
+      "ledger_events": 14,
+      "action": "HOLD",
+      "missing_quotes": false,
+      "council": "REVIEW_REQUIRED"
+    }
+  ],
+  "deterministic_council": {
+    "rules": {
+      "status": "REVIEW_REQUIRED",
+      "vote_count": 2,
+      "judges": [
+        {
+          "judge": "J01",
+          "passes": true,
+          "findings": []
+        },
+        {
+          "judge": "J02",
+          "passes": null,
+          "findings": [
+            "unverified observation: YAHOO:SOL-USD:2026-10-26T14:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-26T19:00:00Z",
+            "unverified observation: YAHOO:QQQ:2026-10-27T13:30:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-27T19:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-28T00:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-28T07:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-28T13:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-28T15:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-29T04:00:00Z",
+            "unverified observation: YAHOO:QQQ:2026-10-29T18:30:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-31T11:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-31T17:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-11-01T12:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-11-01T21:00:00Z"
+          ]
+        },
+        {
+          "judge": "J03",
+          "passes": true,
+          "findings": []
+        }
+      ],
+      "disagreement_training": [
+        {
+          "judge": "J01",
+          "lesson": [
+            "unverified observation: YAHOO:SOL-USD:2026-10-26T14:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-26T19:00:00Z",
+            "unverified observation: YAHOO:QQQ:2026-10-27T13:30:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-27T19:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-28T00:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-28T07:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-28T13:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-28T15:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-29T04:00:00Z",
+            "unverified observation: YAHOO:QQQ:2026-10-29T18:30:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-31T11:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-31T17:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-11-01T12:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-11-01T21:00:00Z"
+          ]
+        },
+        {
+          "judge": "J02",
+          "lesson": []
+        },
+        {
+          "judge": "J02",
+          "lesson": []
+        },
+        {
+          "judge": "J03",
+          "lesson": [
+            "unverified observation: YAHOO:SOL-USD:2026-10-26T14:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-26T19:00:00Z",
+            "unverified observation: YAHOO:QQQ:2026-10-27T13:30:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-27T19:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-28T00:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-28T07:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-28T13:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-28T15:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-29T04:00:00Z",
+            "unverified observation: YAHOO:QQQ:2026-10-29T18:30:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-31T11:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-31T17:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-11-01T12:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-11-01T21:00:00Z"
+          ]
+        }
+      ],
+      "note": "Deterministic reviewer roles, NOT 3 separate LLMs. Ledger hash chain is not an externally signed provenance guarantee."
+    },
+    "ai": {
+      "status": "REVIEW_REQUIRED",
+      "vote_count": 2,
+      "judges": [
+        {
+          "judge": "J01",
+          "passes": true,
+          "findings": []
+        },
+        {
+          "judge": "J02",
+          "passes": null,
+          "findings": [
+            "unverified observation: YAHOO_AI:SOL-USD:2026-10-26T02:00:00Z"
+          ]
+        },
+        {
+          "judge": "J03",
+          "passes": true,
+          "findings": []
+        }
+      ],
+      "disagreement_training": [
+        {
+          "judge": "J01",
+          "lesson": [
+            "unverified observation: YAHOO_AI:SOL-USD:2026-10-26T02:00:00Z"
+          ]
+        },
+        {
+          "judge": "J02",
+          "lesson": []
+        },
+        {
+          "judge": "J02",
+          "lesson": []
+        },
+        {
+          "judge": "J03",
+          "lesson": [
+            "unverified observation: YAHOO_AI:SOL-USD:2026-10-26T02:00:00Z"
+          ]
+        }
+      ],
+      "note": "Deterministic reviewer roles, NOT 3 separate LLMs. Ledger hash chain is not an externally signed provenance guarantee."
+    }
+  },
+  "gemini_advisory": {
+    "status": "PAPER_EVIDENCE_REVIEW",
+    "date": "2026-11-02",
+    "judges": {
+      "J01": {
+        "verdict": "NEEDS_MORE_EVIDENCE",
+        "finding": "Provider unavailable: ProviderConfigurationError"
+      },
+      "J02": {
+        "verdict": "NEEDS_MORE_EVIDENCE",
+        "finding": "Provider unavailable: ProviderConfigurationError"
+      },
+      "J03": {
+        "verdict": "NEEDS_MORE_EVIDENCE",
+        "finding": "Provider unavailable: ProviderConfigurationError"
+      }
+    },
+    "provider_requests": 0,
+    "source_counts": {
+      "groq": 12,
+      "local_llama": 10
+    },
+    "disagreement_note": "Disagreeing judges request supporting evidence; a majority is NOT ground truth.",
+    "note": "Historical hourly bars and virtual orders are unverified proxy data, not broker fills.",
+    "paper_promotions": 0,
+    "live_trading_authorized": false
+  },
+  "ollama_source_branch": "arena-local-research",
+  "sha256_content": "4ac957c3f6b3596ccfee22cf0224eec47fc7863716df3d4071686246a25437ff"
+}

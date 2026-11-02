@@ -8,10 +8,19 @@
       "history": []
     },
     "S02": {
-      "index": 0,
-      "active": "S02a",
-      "started_at": "2026-10-28T01:25:48.147637+00:00",
-      "history": []
+      "index": 1,
+      "active": "S02b",
+      "started_at": "2026-11-02T13:54:30.963952+00:00",
+      "history": [
+        {
+          "generation": "S02a",
+          "archive": "generations/S02a.json",
+          "sha256": "c0c98db93b75515f5cb453c3913e95c8c5c9cbe51cf34913a7fc1a16154cc3c0",
+          "equity": 97.301,
+          "closed_at": "2026-11-02T13:54:30.963952+00:00",
+          "decision": "ROTATE_FINAL_CHANCE_UNPROVEN"
+        }
+      ]
     },
     "S03": {
       "index": 0,
@@ -32,16 +41,34 @@
       "history": []
     },
     "S06": {
-      "index": 0,
-      "active": "S06a",
-      "started_at": "2026-10-26T15:15:04.789717+00:00",
-      "history": []
+      "index": 1,
+      "active": "S06b",
+      "started_at": "2026-11-02T13:54:30.963952+00:00",
+      "history": [
+        {
+          "generation": "S06a",
+          "archive": "generations/S06a.json",
+          "sha256": "4ac957c3f6b3596ccfee22cf0224eec47fc7863716df3d4071686246a25437ff",
+          "equity": 98.469,
+          "closed_at": "2026-11-02T13:54:30.963952+00:00",
+          "decision": "ROTATE_FINAL_CHANCE_UNPROVEN"
+        }
+      ]
     },
     "S07": {
-      "index": 0,
-      "active": "S07a",
-      "started_at": "2026-10-28T22:38:56.452291+00:00",
-      "history": []
+      "index": 1,
+      "active": "S07b",
+      "started_at": "2026-11-02T13:54:30.963952+00:00",
+      "history": [
+        {
+          "generation": "S07a",
+          "archive": "generations/S07a.json",
+          "sha256": "b3fb7b78fece2cbbc621040901193cbad8e1459b39cc4125077c572f06ba9651",
+          "equity": 98.2183,
+          "closed_at": "2026-11-02T13:54:30.963952+00:00",
+          "decision": "ROTATE_FINAL_CHANCE_UNPROVEN"
+        }
+      ]
     },
     "S08": {
       "index": 0,
@@ -50,16 +77,34 @@
       "history": []
     },
     "S09": {
-      "index": 0,
-      "active": "S09a",
-      "started_at": "2026-10-26T15:15:04.789717+00:00",
-      "history": []
+      "index": 1,
+      "active": "S09b",
+      "started_at": "2026-11-02T13:54:30.963952+00:00",
+      "history": [
+        {
+          "generation": "S09a",
+          "archive": "generations/S09a.json",
+          "sha256": "2b9df543ec7204c541a28cf2644c1a39d4ce3e56c237fa447a51b86877d1c8f0",
+          "equity": 97.2015,
+          "closed_at": "2026-11-02T13:54:30.963952+00:00",
+          "decision": "ROTATE_FINAL_CHANCE_UNPROVEN"
+        }
+      ]
     },
     "S10": {
-      "index": 0,
-      "active": "S10a",
-      "started_at": "2026-10-26T15:15:04.789717+00:00",
-      "history": []
+      "index": 1,
+      "active": "S10b",
+      "started_at": "2026-11-02T13:54:30.963952+00:00",
+      "history": [
+        {
+          "generation": "S10a",
+          "archive": "generations/S10a.json",
+          "sha256": "3258d5b3e7a071ae09e1718e012a95392ff6f76f28af358788e582c8095dda0f",
+          "equity": 98.2784,
+          "closed_at": "2026-11-02T13:54:30.963952+00:00",
+          "decision": "ROTATE_FINAL_CHANCE_UNPROVEN"
+        }
+      ]
     }
   }
 }

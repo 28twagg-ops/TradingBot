@@ -1,0 +1,1817 @@
+{
+  "schema": 1,
+  "generation": "S10a",
+  "started_at": "2026-10-26T15:15:04.789717+00:00",
+  "closed_at": "2026-11-02T13:54:30.963952+00:00",
+  "decision": "ROTATE_FINAL_CHANCE_UNPROVEN",
+  "last_indicative_equity": 98.2784,
+  "includes_open_paper_positions_without_fictitious_closing": true,
+  "real_money_trades": false,
+  "rule_book": {
+    "events": [
+      {
+        "worker": "S10",
+        "seq": 1,
+        "timestamp": "2026-10-26T15:15:04.789717Z",
+        "asset_class": "crypto",
+        "symbol": "SOL/USD",
+        "side": "BUY",
+        "qty": 0.388426,
+        "price": 101.95999908447266,
+        "fee": 0.07920782920877074,
+        "multiplier": 1,
+        "source_id": "YAHOO:SOL-USD:2026-10-26T14:00:00Z",
+        "balance_after": 60.31687757,
+        "positions_after": {
+          "crypto:SOL/USD": 0.388426
+        },
+        "previous_hash": "GENESIS",
+        "hash": "de6fce2032dd51c5820cfbc480024609e190a8623c3a22ea2a3dc644e29bda7e"
+      },
+      {
+        "worker": "S10",
+        "seq": 2,
+        "timestamp": "2026-10-26T21:03:56.415682Z",
+        "asset_class": "crypto",
+        "symbol": "SOL/USD",
+        "side": "SELL",
+        "qty": 0.388426,
+        "price": 100.27999877929688,
+        "fee": 0.07790271761169433,
+        "multiplier": 1,
+        "source_id": "YAHOO:SOL-USD:2026-10-26T19:00:00Z",
+        "balance_after": 99.19033366,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0
+        },
+        "previous_hash": "de6fce2032dd51c5820cfbc480024609e190a8623c3a22ea2a3dc644e29bda7e",
+        "hash": "29331794670d11b17c41d77b91a0073704d74f6b26b6eb734775dae6de6ac566"
+      },
+      {
+        "worker": "S10",
+        "seq": 3,
+        "timestamp": "2026-10-27T20:45:47.163892Z",
+        "asset_class": "crypto",
+        "symbol": "BTC/USD",
+        "side": "BUY",
+        "qty": 0.000486,
+        "price": 80708.8125,
+        "fee": 0.07844896575,
+        "multiplier": 1,
+        "source_id": "YAHOO:BTC-USD:2026-10-27T19:00:00Z",
+        "balance_after": 59.88740182,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "crypto:BTC/USD": 0.000486
+        },
+        "previous_hash": "29331794670d11b17c41d77b91a0073704d74f6b26b6eb734775dae6de6ac566",
+        "hash": "2041a66c1d39c181796647576621abf3c1ae567cd0d5798ed540b0bca26a1ca1"
+      },
+      {
+        "worker": "S10",
+        "seq": 4,
+        "timestamp": "2026-10-28T01:25:48.147637Z",
+        "asset_class": "crypto",
+        "symbol": "SOL/USD",
+        "side": "BUY",
+        "qty": 0.234481,
+        "price": 101.1500015258789,
+        "fee": 0.04743550701557922,
+        "multiplier": 1,
+        "source_id": "YAHOO:SOL-USD:2026-10-28T00:00:00Z",
+        "balance_after": 36.1222128,
+        "positions_after": {
+          "crypto:SOL/USD": 0.234481,
+          "crypto:BTC/USD": 0.000486
+        },
+        "previous_hash": "2041a66c1d39c181796647576621abf3c1ae567cd0d5798ed540b0bca26a1ca1",
+        "hash": "b20af9c81c4b12a742f14c0d38d91a8e0eb8bb0f53e3374ba6e68ad075f7b832"
+      },
+      {
+        "worker": "S10",
+        "seq": 5,
+        "timestamp": "2026-10-28T08:36:23.365783Z",
+        "asset_class": "crypto",
+        "symbol": "ETH/USD",
+        "side": "BUY",
+        "qty": 0.006066,
+        "price": 2358.02001953125,
+        "fee": 0.028607498876953127,
+        "multiplier": 1,
+        "source_id": "YAHOO:ETH-USD:2026-10-28T07:00:00Z",
+        "balance_after": 21.78985586,
+        "positions_after": {
+          "crypto:SOL/USD": 0.234481,
+          "crypto:BTC/USD": 0.000486,
+          "crypto:ETH/USD": 0.006066
+        },
+        "previous_hash": "b20af9c81c4b12a742f14c0d38d91a8e0eb8bb0f53e3374ba6e68ad075f7b832",
+        "hash": "468a2ee4d1c00483c4d1794739e4bfd558ad0c3c102f1b72d5087b1420c2ff91"
+      },
+      {
+        "worker": "S10",
+        "seq": 6,
+        "timestamp": "2026-10-28T15:02:40.047974Z",
+        "asset_class": "crypto",
+        "symbol": "BTC/USD",
+        "side": "SELL",
+        "qty": 0.000486,
+        "price": 80603.34375,
+        "fee": 0.07834645012500001,
+        "multiplier": 1,
+        "source_id": "YAHOO:BTC-USD:2026-10-28T13:00:00Z",
+        "balance_after": 60.88473447,
+        "positions_after": {
+          "crypto:SOL/USD": 0.234481,
+          "crypto:BTC/USD": 0.0,
+          "crypto:ETH/USD": 0.006066
+        },
+        "previous_hash": "468a2ee4d1c00483c4d1794739e4bfd558ad0c3c102f1b72d5087b1420c2ff91",
+        "hash": "ec013f584cf3cf94a248388df62ca9a1e14ee2335afc8e31ece9c12aeaae3e7f"
+      },
+      {
+        "worker": "S10",
+        "seq": 7,
+        "timestamp": "2026-10-28T16:40:44.739163Z",
+        "asset_class": "crypto",
+        "symbol": "ETH/USD",
+        "side": "SELL",
+        "qty": 0.006066,
+        "price": 2331.6201171875,
+        "fee": 0.028287215261718752,
+        "multiplier": 1,
+        "source_id": "YAHOO:ETH-USD:2026-10-28T15:00:00Z",
+        "balance_after": 75.00005488,
+        "positions_after": {
+          "crypto:SOL/USD": 0.234481,
+          "crypto:BTC/USD": 0.0,
+          "crypto:ETH/USD": 0.0
+        },
+        "previous_hash": "ec013f584cf3cf94a248388df62ca9a1e14ee2335afc8e31ece9c12aeaae3e7f",
+        "hash": "f188a65618bb3d9f26e52176349b86ae735b3f117195afabb4dec23d8dc53b01"
+      },
+      {
+        "worker": "S10",
+        "seq": 8,
+        "timestamp": "2026-10-29T05:52:27.631059Z",
+        "asset_class": "crypto",
+        "symbol": "SOL/USD",
+        "side": "SELL",
+        "qty": 0.234481,
+        "price": 100.05000305175781,
+        "fee": 0.04691964953115845,
+        "multiplier": 1,
+        "source_id": "YAHOO:SOL-USD:2026-10-29T04:00:00Z",
+        "balance_after": 98.41296,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "crypto:BTC/USD": 0.0,
+          "crypto:ETH/USD": 0.0
+        },
+        "previous_hash": "f188a65618bb3d9f26e52176349b86ae735b3f117195afabb4dec23d8dc53b01",
+        "hash": "2cadca794070fbc1d7c96bb7dbaf6de4f1523d50561a86561b86c7002de181a7"
+      },
+      {
+        "worker": "S10",
+        "seq": 9,
+        "timestamp": "2026-10-31T18:37:08.894420Z",
+        "asset_class": "crypto",
+        "symbol": "ETH/USD",
+        "side": "BUY",
+        "qty": 0.017305,
+        "price": 2252.14990234375,
+        "fee": 0.07794690812011719,
+        "multiplier": 1,
+        "source_id": "YAHOO:ETH-USD:2026-10-31T17:00:00Z",
+        "balance_after": 59.36155903,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "crypto:BTC/USD": 0.0,
+          "crypto:ETH/USD": 0.017305
+        },
+        "previous_hash": "2cadca794070fbc1d7c96bb7dbaf6de4f1523d50561a86561b86c7002de181a7",
+        "hash": "0fa037d88add472cbf2b9cc21063ad7a173bf64729c97cb55323f222b4c1e219"
+      },
+      {
+        "worker": "S10",
+        "seq": 10,
+        "timestamp": "2026-11-01T06:09:05.003849Z",
+        "asset_class": "crypto",
+        "symbol": "BTC/USD",
+        "side": "BUY",
+        "qty": 0.000302,
+        "price": 77764.9921875,
+        "fee": 0.046970055281250006,
+        "multiplier": 1,
+        "source_id": "YAHOO:BTC-USD:2026-11-01T05:00:00Z",
+        "balance_after": 35.82956133,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "crypto:BTC/USD": 0.000302,
+          "crypto:ETH/USD": 0.017305
+        },
+        "previous_hash": "0fa037d88add472cbf2b9cc21063ad7a173bf64729c97cb55323f222b4c1e219",
+        "hash": "9dc2c5e0dbd3d72c3ba3a3b7f072613f67a9f272e128a782c73da8e83319780c"
+      },
+      {
+        "worker": "S10",
+        "seq": 11,
+        "timestamp": "2026-11-01T13:28:20.706119Z",
+        "asset_class": "crypto",
+        "symbol": "ETH/USD",
+        "side": "SELL",
+        "qty": 0.017305,
+        "price": 2258.7099609375,
+        "fee": 0.07817395174804688,
+        "multiplier": 1,
+        "source_id": "YAHOO:ETH-USD:2026-11-01T12:00:00Z",
+        "balance_after": 74.83836325,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "crypto:BTC/USD": 0.000302,
+          "crypto:ETH/USD": 0.0
+        },
+        "previous_hash": "9dc2c5e0dbd3d72c3ba3a3b7f072613f67a9f272e128a782c73da8e83319780c",
+        "hash": "7250d9c98de36ed8118a79739fcb3b38399108ada92fe91ffa9b5fc751e0e25a"
+      },
+      {
+        "worker": "S10",
+        "seq": 12,
+        "timestamp": "2026-11-01T22:52:08.413424Z",
+        "asset_class": "crypto",
+        "symbol": "BTC/USD",
+        "side": "SELL",
+        "qty": 0.000302,
+        "price": 77771.4921875,
+        "fee": 0.04697398128125001,
+        "multiplier": 1,
+        "source_id": "YAHOO:BTC-USD:2026-11-01T21:00:00Z",
+        "balance_after": 98.27837991,
+        "positions_after": {
+          "crypto:SOL/USD": 0.0,
+          "crypto:BTC/USD": 0.0,
+          "crypto:ETH/USD": 0.0
+        },
+        "previous_hash": "7250d9c98de36ed8118a79739fcb3b38399108ada92fe91ffa9b5fc751e0e25a",
+        "hash": "4efd1e6f39227f58ba000abef2ed92a3b13d4f8293cd067aa715830d2db8af7e"
+      }
+    ],
+    "cash": 98.27837991,
+    "positions": {
+      "crypto:SOL/USD": 0.0,
+      "crypto:BTC/USD": 0.0,
+      "crypto:ETH/USD": 0.0
+    },
+    "seen": {
+      "BTC-USD": "2026-11-02T12:00:00Z",
+      "ETH-USD": "2026-11-02T12:00:00Z",
+      "SOL-USD": "2026-11-02T12:00:00Z"
+    }
+  },
+  "ai_book": {
+    "events": [],
+    "cash": 100.0,
+    "positions": {},
+    "seen": {},
+    "ai_last_day": "2026-10-26",
+    "ai_research": [
+      {
+        "day": "2026-10-26",
+        "hypothesis": "Given that the instruction set allows long options research but strictly prohibits execution without reliable contract chains in the current execution environment, attempting to trade options without verifiable real-time option chains introduces uncontrollable execution slippage and model misspecification.",
+        "test_plan": "Monitor implied volatility surfaces against realized volatility models for BTC and ETH over a rolling 30-day window to identify mispricings before executing risk-defined structures.",
+        "reasoning": "No reliable contract chain data is currently provided in the eligible symbols feed to execute risk-defined long options. Maintaining a HOLD posture preserves capital until valid contract pricing is available.",
+        "source_titles": [
+          "Distribution based Trading Strategies for Crypto Options",
+          "Risk-Optimized Crypto Trading Bot"
+        ],
+        "virtual_action": "HOLD"
+      }
+    ],
+    "groq_experiments": [
+      {
+        "cycle": "2026-10-26T21:03Z",
+        "id": "164878380770a9",
+        "topic": "Crypto volatility breakout strategy",
+        "hypothesis": "When BTC-USD\u2019s intraday volatility exceeds the 20\u2011period average by more than 8%, a breakout trade will capture a significant portion of the subsequent price move.",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 20,
+          "threshold": 0.08
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 501,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 501,
+            "end": 716,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "If over a 12\u2011month out\u2011of\u2011sample period the strategy\u2019s cumulative return is not at least 1.5\u00d7 the benchmark (risk\u2011free) or the win rate falls below 55%, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T01:32Z",
+        "id": "e5e5ebd56d2c15",
+        "topic": "Crypto volatility mean\u2011reversion trigger",
+        "hypothesis": "When BTC\u2011USD\u2019s intraday realized volatility exceeds its 20\u2011minute moving average by more than 8\u202f%, the price will revert to the moving\u2011average level within the next 30 minutes, providing a profitable entry point.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 20,
+          "threshold": 0.08
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 487,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 487,
+            "end": 696,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "If, over a rolling 200\u2011day sample, the proportion of trades that close within 30 minutes with a profit exceeding 0.5\u202f% falls below 40\u202f%, the hypothesis is falsified.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T07:59Z",
+        "id": "45568c88ce6da8",
+        "topic": "Momentum persistence in high\u2011frequency crypto markets",
+        "hypothesis": "When BTC\u2011USD exhibits a 5\u2011minute intraday price increase exceeding 0.05 of its 30\u2011minute moving average, the next 5 minutes will continue to trend upward with probability >60%",
+        "candidate": {
+          "family": "momentum",
+          "lookback": 30,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 32,
+            "end": 492,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 492,
+            "end": 703,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
+        "falsification_test": "Backtest the rule on 2024\u20112026 BTC\u2011USD intraday data; if the win rate falls below 55% or the Sharpe ratio drops below 0.5, reject the hypothesis.",
+        "limitations": "Backtest is a delayed-close historical proxy, not independently verified fills"
+      },
+      {
+        "cycle": "2026-10-27T13:21Z",
+        "id": "eee87310db7447",
+        "topic": "Crypto volatility breakout strategy",
+        "hypothesis": "Hourly price of BTC-USD will exceed its 24\u2011hour rolling standard deviation by 1.5\u00d7 (i.e., volatility breakout) and then revert to the mean within the next 12 hours.",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 24,
+          "threshold": 0.015
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 496,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 496,
+            "end": 709,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "If the strategy fails to produce a positive cumulative return over a 12\u2011month backtest with the given lookback and threshold, the hypothesis is falsified.",
+        "source_search": {
+          "query": "Given that the instruction set allows long options research but strictly prohibits execution without reliable contract chains in t",
+          "attempted": [
+            "web",
+            "github",
+            "reddit"
+          ],
+          "matches": 5
+        },
+        "source_leads": [],
+        "next_search_query": "Bitcoin hourly volatility breakout mean reversion strategy research",
+        "preferred_sources": [
+          "web",
+          "reddit",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T15:02Z",
+        "id": "46544a937b3f2c",
+        "topic": "Hourly Bitcoin volatility mean\u2011reversion trigger based on intraday intraday volatility bands",
+        "hypothesis": "When the 1\u2011hour realized volatility of BTC\u2011USD exceeds its 20\u2011hour rolling mean by more than 30\u202f%, the subsequent 1\u2011hour return tends to revert toward the mean, producing a statistically significant negative excess return in the next hour.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the mean of the next\u2011hour returns conditional on the volatility trigger and compare to the unconditional mean using a t\u2011test; a significant negative mean indicates mean\u2011reversion. Also check for autocorrelation and stationarity of the volatility series to ensure the trigger is not spurious.",
+        "source_search": {
+          "query": "Bitcoin hourly volatility breakout mean reversion strategy research",
+          "attempted": [
+            "web",
+            "reddit",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $80,596.61 USD with a 24-hour trading volume of $22,034,328,699.28 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin - Open source P2P money",
+            "url": "https://bitcoin.org/",
+            "snippet": "Bitcoin is an innovative payment network and a new kind of money. Find all you need to know and get started with Bitcoin on bitcoin.org.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bitcoin",
+            "snippet": "Bitcoin (abbreviation: BTC; sign: \u20bf) is the first decentralized cryptocurrency. Based on a free-market ideology, bitcoin was invented in 2008 when an unknown person published a white paper under the pseudonym of Satoshi Nakamoto. [4] Use of",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "Bitcoin hourly realized volatility calculation and mean\u2011reversion studies",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-28T16:41Z",
+        "id": "99a26e4f47bc67",
+        "topic": "Bitcoin hourly realized volatility mean\u2011reversion trigger",
+        "hypothesis": "When the hourly realized volatility of Bitcoin exceeds its 20\u2011hour rolling mean by more than 30\u202f% the next hour\u2019s volatility reverts to the mean, creating a predictable mean\u2011reversion signal that can be exploited with a simple long\u2011only strategy on t",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the 20\u2011hour rolling mean of hourly realized volatility, flag hours where volatility > mean\u202f\u00d7\u202f1.3, then test whether the following hour\u2019s volatility falls below the mean. Measure hit\u2011rate and profit factor using a 1\u2011hour close\u2011based rule that buys at the close after a trigger and sells at the",
+        "source_search": {
+          "query": "Bitcoin hourly realized volatility calculation and mean\u2011reversion studies",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T00:54Z",
+        "id": "c19925f8fc4a56",
+        "topic": "Bitcoin hourly realized volatility mean\u2011reversion trigger",
+        "hypothesis": "Hourly Bitcoin returns tend to revert to the mean when the realized volatility over the past N hours exceeds the long\u2011term average volatility by a fixed threshold.  When the volatility band is breached, a short\u2011term mean\u2011reversion trade (sell if vola",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compute the realized hourly volatility (e.g., rolling standard deviation of log returns) over a 20\u2011hour window.  Identify periods where the volatility exceeds the 20\u2011hour mean by >5%.  On those dates, execute a short\u2011term mean\u2011reversion trade (sell BTC\u2011USD for 1 hour if volatility high, buy if volat",
+        "source_search": {
+          "query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-29T07:05Z",
+        "id": "0252c7f6e07e0b",
+        "topic": "Bitcoin hourly volatility mean\u2011reversion",
+        "hypothesis": "Hourly Bitcoin returns tend to revert toward zero when the hourly realized volatility exceeds twice its 20\u2011hour simple moving average, suggesting a volatility\u2011band trigger for mean\u2011reversion trades.",
+        "candidate": null,
+        "symbol": null,
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Compare the performance of the volatility\u2011band rule against a random\u2011selection baseline over the same period; a statistically significant higher Sharpe ratio would support the hypothesis.",
+        "source_search": {
+          "query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T00:58Z",
+        "id": "cd2f7f3f27619c",
+        "topic": "Bitcoin hourly realized volatility mean\u2011reversion trigger",
+        "hypothesis": "Hourly realized volatility of BTC\u2011USD, calculated as the standard deviation of 5\u2011minute intraday returns over the past 24 hours, exhibits a mean\u2011reversion pattern that can be exploited by a simple threshold\u2011based rule: when the realized volatility fa",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "falsification_test": "Apply the rule to the last 12 months of hourly BTC\u2011USD close data and compute the cumulative return and Sharpe ratio. A statistically significant positive return (p<0.05) would support the hypothesis; otherwise it would be falsified.",
+        "source_search": {
+          "query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
+        "preferred_sources": [
+          "academic",
+          "web",
+          "reddit"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T13:02Z",
+        "id": "b50c238f8ac2f5",
+        "topic": "BTC-USD hourly price mean reversion to 24\u2011hour moving average",
+        "hypothesis": "When the hourly close of BTC\u2011USD deviates more than 5\u202f% above or below its 24\u2011hour simple moving average, the next hourly close tends to move in the opposite direction (mean\u2011reversion).",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 495,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 495,
+            "end": 708,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Apply the rule to a holdout period of BTC\u2011USD hourly closes and compute the directional accuracy of the next\u2011hour return relative to the sign of the deviation. If accuracy is not significantly above 50\u202f% (e.g., p\u2011value\u202f>\u202f0.05), the hypothesis is falsified.",
+        "source_search": {
+          "query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature",
+          "attempted": [
+            "academic",
+            "web",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC hourly price mean reversion to 24h moving average",
+        "preferred_sources": [
+          "academic",
+          "web",
+          "reddit"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T19:22Z",
+        "id": "6415720e48c683",
+        "topic": "BTC-USD hourly price mean reversion to 24\u2011hour moving average",
+        "hypothesis": "When BTC\u2011USD hourly close deviates more than a specified threshold from its 24\u2011hour simple moving average, the price will revert toward the average within the next few hours, producing a profitable mean\u2011reversion trade.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 500,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 500,
+            "end": 715,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Apply the rule to the last 2000 hourly BTC\u2011USD observations: count the number of times the price exceeds the 24\u2011hour MA by >5% and then falls back within 3 hours; compute win rate and profit factor. If win rate <55% or profit factor <1.2, reject the hypothesis.",
+        "source_search": {
+          "query": "BTC hourly price mean reversion to 24h moving average",
+          "attempted": [
+            "academic",
+            "web",
+            "reddit"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD hourly price mean reversion to 24\u2011hour moving average backtest results",
+        "preferred_sources": [
+          "web",
+          "academic"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-30T23:51Z",
+        "id": "a74c1677119235",
+        "topic": "BTC-USD hourly price mean reversion to 24\u2011hour moving average",
+        "hypothesis": "When BTC\u2011USD hourly close deviates more than 5% from its 24\u2011hour simple moving average, the price reverts toward the average within the next 12 hours, producing a profitable mean\u2011reversion trade if entered at the deviation point and exited at the ave",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 503,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 503,
+            "end": 719,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Backtest the 24\u2011hour SMA mean\u2011reversion rule on the last 2000 hourly BTC\u2011USD closes. Count trades where the hourly close deviates >5% from SMA24, take a long position if above and short if below, exit when the price reverts to SMA24 or after 12 hours. Compute cumulative PnL and Sharpe ratio. If cumu",
+        "source_search": {
+          "query": "BTC\u2011USD hourly price mean reversion to 24\u2011hour moving average backtest results",
+          "attempted": [
+            "web",
+            "academic"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $76,852.23 USD with a 24-hour trading volume of $58,944,833,576.58 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/BTC-USD/",
+            "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin Price: BTC/USD Live Price Chart, Market Cap & News Today ...",
+            "url": "https://www.coingecko.com/en/coins/bitcoin",
+            "snippet": "Price of Bitcoin (BTC) today is $76,859.21 with a 24-hour trading volume of $195,388,992,473. Track Bitcoin's live price, market cap, news, and more on CoinGecko.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "BTC\u2011USD hourly price mean reversion to 24\u2011hour moving average backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T05:37Z",
+        "id": "4933af61c1ea9f",
+        "topic": "BTC-USD hourly price mean reversion to 24-hour moving average",
+        "hypothesis": "Hourly BTC-USD price tends to revert toward its 24\u2011hour simple moving average within a 5\u2011hour window, producing a predictable mean\u2011reversion signal that can be exploited with a simple threshold rule.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 490,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 490,
+            "end": 701,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Apply the rule to the last 2000 hourly BTC\u2011USD close prices; if the rule fails to produce at least 10 profitable trades with a profit factor >1.2, reject the hypothesis.",
+        "source_search": {
+          "query": "BTC\u2011USD hourly price mean reversion to 24\u2011hour moving average backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly mean reversion backtest results 24h moving average",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T09:59Z",
+        "id": "83cdc85dad4e3c",
+        "topic": "BTC-USD hourly price mean reversion to 24\u2011hour moving average",
+        "hypothesis": "When BTC\u2011USD hourly close deviates more than 3% below its 24\u2011hour simple moving average (SMA), the price will revert to the SMA within the next 12 hours, producing a positive return if a long position is entered at the deviation point.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.03
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 493,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 493,
+            "end": 705,
+            "returns_pct": 0.798,
+            "drawdown_pct": -0.827,
+            "entries": 1
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Apply the rule to the last 2000 hourly BTC\u2011USD close observations; count the number of times the price reverts to the SMA within 12 hours after a >3% deviation. If the success rate is below 60% or the average return is negative, reject the hypothesis.",
+        "source_search": {
+          "query": "BTC-USD hourly mean reversion backtest results 24h moving average",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $77,128.75 USD with a 24-hour trading volume of $31,303,801,952.96 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/BTC-USD/",
+            "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin Price: BTC/USD Live Price Chart, Market Cap & News Today ...",
+            "url": "https://www.coingecko.com/en/coins/bitcoin",
+            "snippet": "Price of Bitcoin (BTC) today is $77,217.11 with a 24-hour trading volume of $201,828,179,723. Track Bitcoin's live price, market cap, news, and more on CoinGecko.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "BTC-USD hourly mean reversion 3% SMA backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T12:35Z",
+        "id": "14621dbc9569e5",
+        "topic": "ETH-USD hourly price mean reversion to 24\u2011hour moving average",
+        "hypothesis": "Hourly closing prices of ETH\u2011USD tend to revert toward the 24\u2011hour simple moving average within a 3% band, producing profitable trades when the price deviates beyond this band and then returns.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.03
+        },
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 495,
+            "returns_pct": 2.166,
+            "drawdown_pct": -1.924,
+            "entries": 7
+          },
+          "retrospective_validation": {
+            "start": 495,
+            "end": 708,
+            "returns_pct": -0.361,
+            "drawdown_pct": -2.227,
+            "entries": 3
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "falsification_test": "Apply the rule to the last 2000 hourly closes of ETH\u2011USD; if the strategy\u2019s cumulative return is negative or the win\u2011rate falls below 50% after accounting for a 0.1% commission, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly mean reversion 3% SMA backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly mean reversion 3% SMA backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-10-31T17:45Z",
+        "id": "278c813c09ce5d",
+        "topic": "ETH-USD hourly mean reversion to 12\u2011hour SMA",
+        "hypothesis": "Hourly ETH price deviates >5% above or below its 12\u2011hour simple moving average, then reverts within the next 3 hours",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If 12\u2011hour SMA deviation >5% does not revert within 3 hours in >70% of cases, hypothesis fails",
+        "source_search": {
+          "query": "ETH-USD hourly mean reversion 3% SMA backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly mean reversion 12h SMA backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes"
+      },
+      {
+        "cycle": "2026-11-01T00:40Z",
+        "id": "ed641f66de74c7",
+        "topic": "ETH-USD hourly mean reversion to 12\u2011hour SMA",
+        "hypothesis": "Hourly ETH-USD price tends to revert toward its 12\u2011hour simple moving average when the deviation exceeds 5% of the SMA, producing a profitable reversion trade within the same hour.",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Apply the 12\u2011hour SMA reversion rule to historical hourly ETH-USD data and compute cumulative PnL; if the strategy yields a negative return or a profit factor below 1, the hypothesis is falsified.",
+        "source_search": {
+          "query": "ETH-USD hourly mean reversion 12h SMA backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Ethereum price today, ETH to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/ethereum/",
+            "snippet": "The live Ethereum price today is $2,242.10 USD with a 24-hour trading volume of $20,406,470,277.74 USD. We update our ETH to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Ethereum ETH (ETH-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/ETH-USD/",
+            "snippet": "Find the live Ethereum USD (ETH-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Ethereum (ETH) Blockchain Explorer",
+            "url": "https://etherscan.io/",
+            "snippet": "Explore Ethereum blockchain data, transactions, and smart contracts with Etherscan, the leading Ethereum block explorer.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Ethereum - The complete guide from ethereum.org",
+            "url": "https://ethereum.org/",
+            "snippet": "Ethereum is a decentralized platform for resilient apps and infrastructure. Control your money, data, and identity, with no bank or middleman needed.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "ETH-USD hourly mean reversion 12h SMA backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T07:31Z",
+        "id": "0a506ad5c850bd",
+        "topic": "ETH-USD hourly trend persistence",
+        "hypothesis": "When ETH-USD hourly close has increased for 20 consecutive hours, the next hour will continue to rise with probability >0.55",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Check if 20\u2011hour up\u2011trend predicts next\u2011hour up\u2011trend >55% using historical hourly data",
+        "source_search": {
+          "query": "ETH-USD hourly mean reversion 12h SMA backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly trend persistence backtest",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T13:30Z",
+        "id": "338aa58ca6e3cb",
+        "topic": "ETH-USD hourly trend persistence",
+        "hypothesis": "Hourly price moves persist in the same direction for at least 10 consecutive hours, exceeding a 5% cumulative return threshold",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Test if 10\u2011hour cumulative return >5% in >50% of windows over past 2000 hours",
+        "source_search": {
+          "query": "ETH-USD hourly trend persistence backtest",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Ethereum price today, ETH to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/ethereum/",
+            "snippet": "Ethereum is a decentralized open-source blockchain system that features its own cryptocurrency, Ether. ETH works as a platform for numerous other cryptocurrencies, as well as for the execution of decentralized smart contracts. Ethereum was ",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Ethereum USD Price (ETH-USD) - Yahoo Finance",
+            "url": "https://finance.yahoo.com/quote/ETH-USD/",
+            "snippet": "Find the live Ethereum USD (ETH-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "ETHUSD \u2014 Ethereum Price Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/ETHUSD/",
+            "snippet": "Watch live Ethereum to Dollar charts, follow ETH USD prices in real-time, get historical data. Check the Ethereum market cap, top trading ideas and forecasts.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "ETH Zurich - Homepage",
+            "url": "https://ethz.ch/en.html",
+            "snippet": "Situated in the heart of Europe, yet forging con\u00adnec\u00adtions all over the world, ETH Zurich is pioneering solutions to the global challenges of today and tomorrow.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "ETH-USD hourly trend persistence backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T17:17Z",
+        "id": "c7651bf4a832f0",
+        "topic": "ETH-USD hourly trend persistence",
+        "hypothesis": "Hourly price tends to continue its recent direction for at least 20 hours, with a 5% cumulative return over that window",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If 20\u2011hour cumulative return >5% occurs in >70% of windows, rule would be valid",
+        "source_search": {
+          "query": "ETH-USD hourly trend persistence backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly trend persistence 20h 5% rule backtest",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T18:05Z",
+        "id": "2b8e1215f4b277",
+        "topic": "ETH-USD hourly trend persistence",
+        "hypothesis": "Hourly price changes of ETH-USD exhibit a trend persistence effect: if the price has moved up by at least 5% over the past 20 hours, it is likely to continue moving up in the next hour.",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "None \u2013 rule not expressible with current data.",
+        "source_search": {
+          "query": "ETH-USD hourly trend persistence 20h 5% rule backtest",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly trend persistence 20h 5% rule backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-01T18:47Z",
+        "id": "a787a42f9d4fac",
+        "topic": "ETH-USD hourly trend persistence",
+        "hypothesis": "ETH-USD hourly price continues a 5% upward move over a 20\u2011hour lookback with probability >50%",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If the strategy fails to achieve >50% win rate over a 100\u2011hour backtest window",
+        "source_search": {
+          "query": "ETH-USD hourly trend persistence 20h 5% rule backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly trend persistence 20h 5% rule backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-01T19:41Z",
+        "id": "e2f75d09e3e790",
+        "topic": "ETH-USD hourly mean reversion to 24\u2011hour SMA",
+        "hypothesis": "Hourly ETH\u2011USD price deviates from its 24\u2011hour simple moving average and reverts within a 3% threshold, producing statistically significant mean\u2011reversion trades over a 100\u2011hour backtest window.",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If the strategy fails to achieve a Sharpe ratio >0.5 or an R\u00b2 >0.30 over 100 hourly periods, the hypothesis is falsified.",
+        "source_search": {
+          "query": "ETH-USD hourly trend persistence 20h 5% rule backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly mean reversion 24h SMA 3% backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-01T22:54Z",
+        "id": "aa017c90bdbe03",
+        "topic": "ETH-USD hourly mean reversion to 24\u2011hour SMA",
+        "hypothesis": "Hourly ETH\u2011USD price tends to revert to its 24\u2011hour simple moving average within a 3% deviation band, producing statistically significant mean\u2011reversion trades over a 100\u2011period window.",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If over 100 consecutive hourly periods the strategy fails to generate a statistically significant mean\u2011reversion signal (p\u2011value > 0.05) or produces a negative Sharpe ratio, the hypothesis is falsified.",
+        "source_search": {
+          "query": "ETH-USD hourly mean reversion 24h SMA 3% backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly mean reversion 24h SMA 3% backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-01T23:37Z",
+        "id": "28d417ab7b6a81",
+        "topic": "ETH-USD hourly mean reversion to 24\u2011hour SMA",
+        "hypothesis": "ETH\u2011USD hourly price deviates from its 24\u2011hour simple moving average by more than 3% and subsequently reverts within the next hour, producing statistically significant mean\u2011reversion trades.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.03
+        },
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 503,
+            "returns_pct": 2.223,
+            "drawdown_pct": -1.924,
+            "entries": 7
+          },
+          "retrospective_validation": {
+            "start": 503,
+            "end": 719,
+            "returns_pct": -0.368,
+            "drawdown_pct": -2.213,
+            "entries": 3
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_INVALID_MODEL_DECISION",
+        "validation_issue": "INVALID_PAPER_DECISION",
+        "falsification_test": "If over a 100\u2011hour backtest the strategy fails to achieve a Sharpe ratio >0.5 or the mean absolute deviation from the SMA exceeds 3% in >30% of trades, the hypothesis is falsified.",
+        "source_search": {
+          "query": "ETH-USD hourly mean reversion 24h SMA 3% backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Ethereum price today, ETH to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/ethereum/",
+            "snippet": "Ethereum is a decentralized open-source blockchain system that features its own cryptocurrency, Ether. ETH works as a platform for numerous other cryptocurrencies, as well as for the execution of decentralized smart contracts. Ethereum was ",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Ethereum ETH (ETH-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/ETH-USD/",
+            "snippet": "Find the live Ethereum USD (ETH-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "ETH-USD hourly mean reversion 24h SMA 3% backtest results",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-02T06:08Z",
+        "id": "8f811fb027381f",
+        "topic": "ETH-USD hourly breakout reversal",
+        "hypothesis": "When ETH-USD hourly close exceeds its 24\u2011hour simple moving average by more than 5%, the price tends to revert to the SMA within the next 3 hours, producing a statistically significant mean\u2011reversion profit.",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 491,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 491,
+            "end": 702,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "validation_issue": null,
+        "falsification_test": "If the strategy fails to achieve a Sharpe ratio >0.5 over a 200\u2011hour backtest window, or if the mean return per trade is negative, the hypothesis is falsified.",
+        "source_search": {
+          "query": "ETH-USD hourly mean reversion 24h SMA 3% backtest results",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly breakout 5% SMA reversal backtest",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-02T13:52Z",
+        "id": "41ae3278ca5423",
+        "topic": "ETH-USD hourly breakout above 5% SMA triggers mean reversion",
+        "hypothesis": "When ETH\u2011USD hourly close exceeds the 24\u2011hour SMA by >5%, the price reverts toward the SMA within the next 5 hours.",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If the average absolute deviation from the SMA over the next 5 hours is not statistically lower than the deviation before the breakout (p>0.05), the hypothesis is falsified.",
+        "source_search": {
+          "query": "ETH-USD hourly breakout 5% SMA reversal backtest",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly breakout 5% SMA mean reversion backtest",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      }
+    ]
+  },
+  "paper_observations": [
+    {
+      "timestamp": "2026-11-01T18:23:26.157589+00:00",
+      "generation": "S10a",
+      "equity": 98.3503,
+      "ledger_events": 11,
+      "action": "HOLD",
+      "missing_quotes": false,
+      "council": "REVIEW_REQUIRED"
+    },
+    {
+      "timestamp": "2026-11-01T18:44:38.738246+00:00",
+      "generation": "S10a",
+      "equity": 98.3503,
+      "ledger_events": 11,
+      "action": "HOLD",
+      "missing_quotes": false,
+      "council": "REVIEW_REQUIRED"
+    },
+    {
+      "timestamp": "2026-11-01T18:59:42.835381+00:00",
+      "generation": "S10a",
+      "equity": 98.3503,
+      "ledger_events": 11,
+      "action": "HOLD",
+      "missing_quotes": false,
+      "council": "REVIEW_REQUIRED"
+    },
+    {
+      "timestamp": "2026-11-01T22:52:08.413424+00:00",
+      "generation": "S10a",
+      "equity": 98.2784,
+      "ledger_events": 12,
+      "action": "SELL BTC-USD",
+      "missing_quotes": false,
+      "council": "REVIEW_REQUIRED"
+    },
+    {
+      "timestamp": "2026-11-01T23:40:48.019745+00:00",
+      "generation": "S10a",
+      "equity": 98.2784,
+      "ledger_events": 12,
+      "action": "HOLD",
+      "missing_quotes": false,
+      "council": "REVIEW_REQUIRED"
+    },
+    {
+      "timestamp": "2026-11-02T06:07:14.385616+00:00",
+      "generation": "S10a",
+      "equity": 98.2784,
+      "ledger_events": 12,
+      "action": "HOLD",
+      "missing_quotes": false,
+      "council": "REVIEW_REQUIRED"
+    },
+    {
+      "timestamp": "2026-11-02T13:51:38.731595+00:00",
+      "generation": "S10a",
+      "equity": 98.2784,
+      "ledger_events": 12,
+      "action": "HOLD",
+      "missing_quotes": false,
+      "council": "REVIEW_REQUIRED"
+    }
+  ],
+  "deterministic_council": {
+    "rules": {
+      "status": "REVIEW_REQUIRED",
+      "vote_count": 2,
+      "judges": [
+        {
+          "judge": "J01",
+          "passes": true,
+          "findings": []
+        },
+        {
+          "judge": "J02",
+          "passes": null,
+          "findings": [
+            "unverified observation: YAHOO:SOL-USD:2026-10-26T14:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-26T19:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-27T19:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-28T00:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-28T07:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-28T13:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-28T15:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-29T04:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-31T17:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-11-01T05:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-11-01T12:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-11-01T21:00:00Z"
+          ]
+        },
+        {
+          "judge": "J03",
+          "passes": true,
+          "findings": []
+        }
+      ],
+      "disagreement_training": [
+        {
+          "judge": "J01",
+          "lesson": [
+            "unverified observation: YAHOO:SOL-USD:2026-10-26T14:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-26T19:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-27T19:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-28T00:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-28T07:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-28T13:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-28T15:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-29T04:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-31T17:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-11-01T05:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-11-01T12:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-11-01T21:00:00Z"
+          ]
+        },
+        {
+          "judge": "J02",
+          "lesson": []
+        },
+        {
+          "judge": "J02",
+          "lesson": []
+        },
+        {
+          "judge": "J03",
+          "lesson": [
+            "unverified observation: YAHOO:SOL-USD:2026-10-26T14:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-26T19:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-27T19:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-28T00:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-28T07:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-10-28T13:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-28T15:00:00Z",
+            "unverified observation: YAHOO:SOL-USD:2026-10-29T04:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-10-31T17:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-11-01T05:00:00Z",
+            "unverified observation: YAHOO:ETH-USD:2026-11-01T12:00:00Z",
+            "unverified observation: YAHOO:BTC-USD:2026-11-01T21:00:00Z"
+          ]
+        }
+      ],
+      "note": "Deterministic reviewer roles, NOT 3 separate LLMs. Ledger hash chain is not an externally signed provenance guarantee."
+    },
+    "ai": {
+      "status": "REVIEW_REQUIRED",
+      "vote_count": 2,
+      "judges": [
+        {
+          "judge": "J01",
+          "passes": true,
+          "findings": []
+        },
+        {
+          "judge": "J02",
+          "passes": null,
+          "findings": [
+            "no trade observations yet"
+          ]
+        },
+        {
+          "judge": "J03",
+          "passes": true,
+          "findings": []
+        }
+      ],
+      "disagreement_training": [
+        {
+          "judge": "J01",
+          "lesson": [
+            "no trade observations yet"
+          ]
+        },
+        {
+          "judge": "J02",
+          "lesson": []
+        },
+        {
+          "judge": "J02",
+          "lesson": []
+        },
+        {
+          "judge": "J03",
+          "lesson": [
+            "no trade observations yet"
+          ]
+        }
+      ],
+      "note": "Deterministic reviewer roles, NOT 3 separate LLMs. Ledger hash chain is not an externally signed provenance guarantee."
+    }
+  },
+  "gemini_advisory": {
+    "status": "PAPER_EVIDENCE_REVIEW",
+    "date": "2026-11-02",
+    "judges": {
+      "J01": {
+        "verdict": "NEEDS_MORE_EVIDENCE",
+        "finding": "Provider unavailable: ProviderConfigurationError"
+      },
+      "J02": {
+        "verdict": "NEEDS_MORE_EVIDENCE",
+        "finding": "Provider unavailable: ProviderConfigurationError"
+      },
+      "J03": {
+        "verdict": "NEEDS_MORE_EVIDENCE",
+        "finding": "Provider unavailable: ProviderConfigurationError"
+      }
+    },
+    "provider_requests": 0,
+    "source_counts": {
+      "groq": 12,
+      "local_llama": 10
+    },
+    "disagreement_note": "Disagreeing judges request supporting evidence; a majority is NOT ground truth.",
+    "note": "Historical hourly bars and virtual orders are unverified proxy data, not broker fills.",
+    "paper_promotions": 0,
+    "live_trading_authorized": false
+  },
+  "ollama_source_branch": "arena-local-research",
+  "sha256_content": "3258d5b3e7a071ae09e1718e012a95392ff6f76f28af358788e582c8095dda0f"
+}

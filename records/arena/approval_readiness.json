@@ -13,16 +13,16 @@
         "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
         "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
       ],
-      "forward_marks": 4,
+      "forward_marks": 7,
       "closed_paper_exits": 0,
-      "distinct_mark_days": 1,
+      "distinct_mark_days": 2,
       "latest_indicative_equity": 100.0,
       "live_trading_enabled": false,
       "automatic_real_trading": false,
       "approval_requested": false,
       "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
     },
-    "S02a": {
+    "S02b": {
       "worker": "S02",
       "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
       "blockers": [
@@ -34,10 +34,10 @@
         "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
         "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
       ],
-      "forward_marks": 4,
-      "closed_paper_exits": 6,
-      "distinct_mark_days": 1,
-      "latest_indicative_equity": 97.7345,
+      "forward_marks": 0,
+      "closed_paper_exits": 0,
+      "distinct_mark_days": 0,
+      "latest_indicative_equity": null,
       "live_trading_enabled": false,
       "automatic_real_trading": false,
       "approval_requested": false,
@@ -55,10 +55,10 @@
         "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
         "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
       ],
-      "forward_marks": 4,
+      "forward_marks": 7,
       "closed_paper_exits": 0,
-      "distinct_mark_days": 1,
-      "latest_indicative_equity": 99.2989,
+      "distinct_mark_days": 2,
+      "latest_indicative_equity": 99.4356,
       "live_trading_enabled": false,
       "automatic_real_trading": false,
       "approval_requested": false,
@@ -75,9 +75,9 @@
         "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
         "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
       ],
-      "forward_marks": 4,
+      "forward_marks": 7,
       "closed_paper_exits": 2,
-      "distinct_mark_days": 1,
+      "distinct_mark_days": 2,
       "latest_indicative_equity": 100.8237,
       "live_trading_enabled": false,
       "automatic_real_trading": false,
@@ -96,16 +96,16 @@
         "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
         "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
       ],
-      "forward_marks": 4,
+      "forward_marks": 7,
       "closed_paper_exits": 0,
-      "distinct_mark_days": 1,
+      "distinct_mark_days": 2,
       "latest_indicative_equity": 100.0,
       "live_trading_enabled": false,
       "automatic_real_trading": false,
       "approval_requested": false,
       "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
     },
-    "S06a": {
+    "S06b": {
       "worker": "S06",
       "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
       "blockers": [
@@ -117,16 +117,16 @@
         "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
         "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
       ],
-      "forward_marks": 4,
-      "closed_paper_exits": 7,
-      "distinct_mark_days": 1,
-      "latest_indicative_equity": 98.469,
+      "forward_marks": 0,
+      "closed_paper_exits": 0,
+      "distinct_mark_days": 0,
+      "latest_indicative_equity": null,
       "live_trading_enabled": false,
       "automatic_real_trading": false,
       "approval_requested": false,
       "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
     },
-    "S07a": {
+    "S07b": {
       "worker": "S07",
       "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
       "blockers": [
@@ -138,10 +138,10 @@
         "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
         "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
       ],
-      "forward_marks": 4,
-      "closed_paper_exits": 2,
-      "distinct_mark_days": 1,
-      "latest_indicative_equity": 98.2183,
+      "forward_marks": 0,
+      "closed_paper_exits": 0,
+      "distinct_mark_days": 0,
+      "latest_indicative_equity": null,
       "live_trading_enabled": false,
       "automatic_real_trading": false,
       "approval_requested": false,
@@ -159,16 +159,16 @@
         "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
         "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
       ],
-      "forward_marks": 4,
+      "forward_marks": 7,
       "closed_paper_exits": 0,
-      "distinct_mark_days": 1,
+      "distinct_mark_days": 2,
       "latest_indicative_equity": 100.0,
       "live_trading_enabled": false,
       "automatic_real_trading": false,
       "approval_requested": false,
       "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
     },
-    "S09a": {
+    "S09b": {
       "worker": "S09",
       "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
       "blockers": [
@@ -180,16 +180,16 @@
         "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
         "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
       ],
-      "forward_marks": 4,
-      "closed_paper_exits": 5,
-      "distinct_mark_days": 1,
-      "latest_indicative_equity": 97.3889,
+      "forward_marks": 0,
+      "closed_paper_exits": 0,
+      "distinct_mark_days": 0,
+      "latest_indicative_equity": null,
       "live_trading_enabled": false,
       "automatic_real_trading": false,
       "approval_requested": false,
       "note": "No trading method can be proven 100% profitable. Do not request approval without new independent executable-quote evidence and an untouched forward trial."
     },
-    "S10a": {
+    "S10b": {
       "worker": "S10",
       "status": "NOT_ELIGIBLE_FOR_LIVE_APPROVAL",
       "blockers": [
@@ -201,10 +201,10 @@
         "NO_VERIFIED_EXECUTABLE_QUOTES_AND_SLIPPAGE",
         "NO_UNTOUCHED_OUT_OF_SAMPLE_MULTIPLE_TEST_CORRECTION"
       ],
-      "forward_marks": 4,
-      "closed_paper_exits": 6,
-      "distinct_mark_days": 1,
-      "latest_indicative_equity": 98.2784,
+      "forward_marks": 0,
+      "closed_paper_exits": 0,
+      "distinct_mark_days": 0,
+      "latest_indicative_equity": null,
       "live_trading_enabled": false,
       "automatic_real_trading": false,
       "approval_requested": false,
