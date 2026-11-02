@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-02T06:01Z | S08a | BTC-USD hourly return mean reversion | dbda518adc2334 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-02T06:00Z | S01a | BTC-USD hourly price reversion to 24‑hour moving | c03ffcb6fb9ef0 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-02T05:59Z | S05a | Hourly breakout of BTC-USD after a 5‑hour high | 77cd1f3f0b6e98 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-02T05:59Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | eaa81d20558f76 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-02T05:58Z | S07a | BTC-USD hourly trend persistence across market r | d98cbc6ef8cb07 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T23:42Z | S04a | BTC-USD hourly gap‑down >2% followed by next‑hou | 86d6156b8f0933 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T23:41Z | S01a | BTC-USD hourly price reversion to 24‑hour moving | dffec19abf45a7 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T23:40Z | S08a | Hourly return mean reversion in BTC-USD | 9de83b0b4e6ea9 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-01T18:44Z | S02a | BTC-USD hourly return trend | 62a0cdb5a19731 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-01T18:05Z | S08a | Hourly realized volatility mean reversion in BTC | 98c3fa75dc211e | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-01T18:05Z | S10a | ETH-USD hourly trend persistence | 2b8e1215f4b277 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-01T18:04Z | S07a | BTC-USD hourly trend persistence | 1e7f69946266d6 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-01T18:03Z | S09a | BTC-USD trend reversal after sustained uptrend | f4bdbb772c3ed9 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-01T18:03Z | S06a | BTC‑USD relative strength to SPY 24‑hour momentu | 4b4c2ff3eda9f6 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-01T17:56Z | S02a | BTC-USD Monday first‑hour return conditioned on  | cf4a8c7e3f43fc | HOLD_INVALID_MODEL_DECISION |
-| 2026-11-01T17:55Z | S05a | Opening Range Breakout on BTC-USD | 6ca5554391baec | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
