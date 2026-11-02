@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-02
 
-_Generated 2026-11-02T10:03:06.491506_
+_Generated 2026-11-02T10:07:37.550509_
 
 ## Summary
 
@@ -86,8 +86,8 @@ _Generated 2026-11-02T10:03:06.491506_
 | S418 (BBSqueeze_OTM2) | 7d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S431 (DayTrader_RS) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S432 (DayTrader_ORB_RS) | 3d | watch | 10 | 30.0 | -38.31 | -50.56 | -47.58 | +77.35 | 17 | 2 | 2 | $-45.00 | 10.0% | early sample with non-positive median |
-| S430 (DayTrader_ORB) | 3d | watch | 10 | 30.0 | -40.00 | -42.89 | -40.36 | +68.37 | 17 | 2 | 2 | $-62.00 | 20.0% | early sample with non-positive median |
+| S432 (DayTrader_ORB_RS) | 3d | watch | 10 | 30.0 | -38.31 | -50.56 | -47.58 | +77.35 | 17 | 3 | 2 | $-45.00 | 10.0% | early sample with non-positive median |
+| S430 (DayTrader_ORB) | 3d | watch | 10 | 30.0 | -40.00 | -42.89 | -40.36 | +68.37 | 17 | 3 | 2 | $-62.00 | 20.0% | early sample with non-positive median |
 | S367 (RubberBand_30DTE) | 30d | watch | 3 | 0.0 | -48.89 | -50.89 | -50.14 | -29.78 | 90 | 0 | 0 | $-77.00 | 66.7% | insufficient sample (<8 exits) |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 94 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
 | S358 (GapDown_30DTE) | 30d | watch | 5 | 40.0 | -50.00 | -51.39 | -51.39 | +54.28 | 90 | 0 | 0 | $-49.00 | 40.0% | insufficient sample (<8 exits) |

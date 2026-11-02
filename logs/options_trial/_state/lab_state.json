@@ -100,6 +100,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-02T14:57:03.621228+00:00",
       "entry_order_id": "33c8b2f6-ae1c-4cc3-a4b2-a1f931769f86"
+    },
+    {
+      "lot_id": "bb239603b3f1",
+      "bucket_id": 2009,
+      "profile_name": "day_trader_analytics_s432",
+      "strategy_id": "S432",
+      "occ_symbol": "AMZN261104C00262500",
+      "underlying": "AMZN",
+      "qty": 1,
+      "entry_cost": 36.0,
+      "entry_price": 0.36,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-02T15:07:35.251283+00:00",
+      "entry_order_id": "99faf714-dc5b-468f-b2eb-19fcb1b37b2e"
+    },
+    {
+      "lot_id": "0fb3adb31fc2",
+      "bucket_id": 2007,
+      "profile_name": "day_trader_analytics_s430",
+      "strategy_id": "S430",
+      "occ_symbol": "NVDA261104C00217500",
+      "underlying": "NVDA",
+      "qty": 1,
+      "entry_cost": 36.0,
+      "entry_price": 0.36,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-02T15:07:35.254777+00:00",
+      "entry_order_id": "b7424cdc-9676-4a26-9dc8-de95f2a326c5"
     }
   ],
   "pending_orders": [
@@ -118,6 +158,22 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.4
+    },
+    {
+      "order_id": "7d8c9668-c695-44a7-94d8-1f1e90206796",
+      "bucket_id": 65,
+      "strategy_id": "S168",
+      "occ_symbol": "OXY261106C00063000",
+      "underlying": "OXY",
+      "qty": 1,
+      "limit": 0.73,
+      "profile_name": "lab0065_s168_w2_1005_1045_r1",
+      "submitted": "2026-11-02",
+      "detail": "gap -2.0%",
+      "spread_frac": 0.20895522388059706,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
   "pending_exits": [],
@@ -126,12 +182,17 @@
     "b91": 61.0,
     "b21": 70.0,
     "b49": 54.0,
-    "b90": 40.0
+    "b90": 40.0,
+    "b2009": 36.0,
+    "b2007": 36.0
   },
   "session_date": "2026-11-02",
   "entries_locked": [
     "90|S404|2026-11-02",
-    "90|S406|2026-11-02"
+    "90|S406|2026-11-02",
+    "2007|S430|2026-11-02",
+    "2009|S432|2026-11-02",
+    "65|S168|2026-11-02"
   ],
   "processed_orders": [
     "fb5b7222-4e33-4762-943e-cc5184ccc107",
@@ -599,9 +660,11 @@
     "99939c3a-cd0b-4134-9b82-4de6de57cf0d",
     "8d9503a0-8269-45ae-bfa9-c4c7cf7e8035",
     "d4991f4c-6d54-4f3a-98c3-4c2e86ab1778",
-    "33c8b2f6-ae1c-4cc3-a4b2-a1f931769f86"
+    "33c8b2f6-ae1c-4cc3-a4b2-a1f931769f86",
+    "99faf714-dc5b-468f-b2eb-19fcb1b37b2e",
+    "b7424cdc-9676-4a26-9dc8-de95f2a326c5"
   ],
-  "submitted_today": 2,
+  "submitted_today": 5,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-02"
 }
