@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-03T21:00Z | S09b | BTC-USD hourly trend reversal after sustained 10 | ea560140402350 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-03T21:00Z | S07b | BTC-USD hourly trend persistence in low‑volatili | 4014ef73efa639 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-03T20:59Z | S02b | BTC-USD hourly trend persistence | 4a7af0ad933490 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-03T20:58Z | S10b | ETH-USD hourly breakout above 5% SMA triggers me | b0a31e6974fa3a | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-03T20:58Z | S06b | BTC-USD hourly relative strength vs SPY | 69bb6534cd109d | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-03T18:42Z | S04a | BTC-USD hourly gap‑down >2% next‑hour return dis | d2dccc48856350 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-03T18:41Z | S08a | Hourly realized volatility compression and price | 8358db5c2a1b53 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-03T18:41Z | S01a | BTC-USD hourly trend persistence | 7b711de603423b | HOLD |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-03T06:46Z | S02b | BTC-USD hourly extreme return mean reversion | 3092b22a23a700 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-03T06:45Z | S10b | ETH-USD hourly breakout above 5% SMA triggers me | 5423f263c56e90 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-03T06:45Z | S06b | BTC-USD hourly relative strength vs SPY | d157d545e83da4 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-02T23:39Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 9894593af66f5a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-02T23:38Z | S07b | Hourly trend persistence in BTC-USD across marke | dac31d374667b8 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-02T23:37Z | S02b | BTC-USD hourly extreme return mean reversion | 4c8f1071ee5307 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-02T23:37Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | 7fd9f91d4bd08f | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-02T23:36Z | S06b | BTC-USD hourly relative strength momentum | c2a0864a257ca3 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
