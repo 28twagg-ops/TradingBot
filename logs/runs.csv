@@ -11910,3 +11910,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-03 14:53:42,scan_morning,bull,229.74,126.84,21,0,0,3,AES|ELV|FANG,both
 2026-11-03 14:56:56,scan_morning,bull,229.77,126.84,21,0,0,3,AES|ELV|FANG,both
 2026-11-03 15:02:11,exits,bull,229.53,126.84,0,0,0,3,AES|ELV|FANG,both
+2026-11-03 15:07:02,exits,bull,229.66,126.84,0,0,0,3,AES|ELV|FANG,both
