@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "5fec9164898543ba95e99980b5ccc9e5",
+  "worker": "S10",
+  "cycle": "2026-11-03T09:56Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S10",
+    "cycle": "2026-11-03T09:56Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "ETH-USD hourly mean reversion to 24-hour SMA",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "2e05e069236c27",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "ETH Zurich - Homepage",
+        "url": "https://ethz.ch/en.html",
+        "snippet": "Situated in the heart of Europe, yet forging con­nec­tions all over the world, ETH Zurich is pioneering solutions to the global challenges of today and tomorrow.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Retrieve hourly close, 24-hour SMA, next-hour return, and volatility regime classification (e.g., high-volatility events, macro sh",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 91.377,
+      "load_seconds": 0.029,
+      "eval_count": 384,
+      "prompt_eval_count": 1699,
+      "tokens_per_second": 6.863,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 8.6,
+        "free_ram_gb": 8.37,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-03T09:56Z",
+    "id": "2e05e069236c27",
+    "topic": "ETH-USD hourly mean reversion to 24-hour SMA",
+    "hypothesis": "When ETH-USD hourly close deviates more than 5% above its 24-hour SMA, the next hour’s return tends to be negative, indicating a mean-reversion effect.",
+    "candidate": null,
+    "symbol": "ETH-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For each hour in the dataset from 2020 to 2026, compute the hourly close of ETH-USD, its 24-hour simple moving average (SMA), and the return of the next hour. If the close exceeds the 24-hour SMA by more than 5%, then the next hour's return must be negative. If, in at least 95% of such cases, the ne",
+    "source_search": {
+      "query": "ETH-USD hourly close, 24-hour SMA, next-hour return, and volatility regime classification (e.g., high-volatility events, macro sho",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "ETH Zurich - Homepage",
+        "url": "https://ethz.ch/en.html",
+        "snippet": "Situated in the heart of Europe, yet forging con­nec­tions all over the world, ETH Zurich is pioneering solutions to the global challenges of today and tomorrow.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Retrieve hourly close, 24-hour SMA, next-hour return, and volatility regime classification (e.g., high-volatility events, macro sh",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close"
+    ],
+    "hypothesis_timeframe": "hourly, 2020–2026",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
