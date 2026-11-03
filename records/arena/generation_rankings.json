@@ -1,66 +1,66 @@
 [
   {
     "generation": "S04a",
-    "equity": 100.5262,
-    "return_pct": 0.5262,
+    "equity": 100.5237,
+    "return_pct": 0.5237,
     "status": "ACTIVE",
-    "updated_at": "2026-11-02T23:36:16.283597+00:00"
+    "updated_at": "2026-11-03T06:51:16.361664+00:00"
   },
   {
     "generation": "S01a",
     "equity": 100.0,
     "return_pct": 0.0,
     "status": "ACTIVE",
-    "updated_at": "2026-11-02T23:36:16.283597+00:00"
+    "updated_at": "2026-11-03T06:51:16.361664+00:00"
   },
   {
     "generation": "S02b",
     "equity": 100.0,
     "return_pct": 0.0,
     "status": "ACTIVE",
-    "updated_at": "2026-11-02T23:36:16.283597+00:00"
+    "updated_at": "2026-11-03T06:51:16.361664+00:00"
   },
   {
     "generation": "S05a",
     "equity": 100.0,
     "return_pct": 0.0,
     "status": "ACTIVE",
-    "updated_at": "2026-11-02T23:36:16.283597+00:00"
+    "updated_at": "2026-11-03T06:51:16.361664+00:00"
   },
   {
     "generation": "S06b",
     "equity": 100.0,
     "return_pct": 0.0,
     "status": "ACTIVE",
-    "updated_at": "2026-11-02T23:36:16.283597+00:00"
+    "updated_at": "2026-11-03T06:51:16.361664+00:00"
   },
   {
     "generation": "S07b",
     "equity": 100.0,
     "return_pct": 0.0,
     "status": "ACTIVE",
-    "updated_at": "2026-11-02T23:36:16.283597+00:00"
+    "updated_at": "2026-11-03T06:51:16.361664+00:00"
   },
   {
     "generation": "S08a",
     "equity": 100.0,
     "return_pct": 0.0,
     "status": "ACTIVE",
-    "updated_at": "2026-11-02T23:36:16.283597+00:00"
+    "updated_at": "2026-11-03T06:51:16.361664+00:00"
   },
   {
     "generation": "S09b",
     "equity": 100.0,
     "return_pct": 0.0,
     "status": "ACTIVE",
-    "updated_at": "2026-11-02T23:36:16.283597+00:00"
+    "updated_at": "2026-11-03T06:51:16.361664+00:00"
   },
   {
     "generation": "S10b",
     "equity": 100.0,
     "return_pct": 0.0,
     "status": "ACTIVE",
-    "updated_at": "2026-11-02T23:36:16.283597+00:00"
+    "updated_at": "2026-11-03T06:51:16.361664+00:00"
   },
   {
     "generation": "S06a",
@@ -68,13 +68,6 @@
     "return_pct": -1.531,
     "status": "ARCHIVED",
     "updated_at": "2026-11-02T13:54:30.963952+00:00"
-  },
-  {
-    "generation": "S03a",
-    "equity": 98.3333,
-    "return_pct": -1.6667,
-    "status": "ACTIVE",
-    "updated_at": "2026-11-02T23:36:16.283597+00:00"
   },
   {
     "generation": "S10a",
@@ -89,6 +82,13 @@
     "return_pct": -1.7817,
     "status": "ARCHIVED",
     "updated_at": "2026-11-02T13:54:30.963952+00:00"
+  },
+  {
+    "generation": "S03a",
+    "equity": 98.0442,
+    "return_pct": -1.9558,
+    "status": "ACTIVE",
+    "updated_at": "2026-11-03T06:51:16.361664+00:00"
   },
   {
     "generation": "S02a",
