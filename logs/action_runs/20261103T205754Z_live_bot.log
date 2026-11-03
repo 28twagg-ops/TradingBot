@@ -1,0 +1,145 @@
+20:57:55  INFO      Mode: scan
+20:57:57  INFO        [positions] 2/2 (2 valid)
+20:57:57  INFO        Universe cache hit: 903 tickers (tickers_2026-11-03.json)
+20:57:58  INFO        [universe] 40/901 (40 valid)
+20:57:59  INFO        [universe] 80/901 (80 valid)
+20:58:01  INFO        [universe] 120/901 (120 valid)
+20:58:02  INFO        [universe] 160/901 (160 valid)
+20:58:03  INFO        [universe] 200/901 (199 valid)
+20:58:11  INFO        [universe] 240/901 (238 valid)
+20:58:22  INFO        [universe] 280/901 (278 valid)
+20:58:35  INFO        [universe] 320/901 (318 valid)
+20:58:45  INFO        [universe] 360/901 (358 valid)
+20:58:59  INFO        [universe] 400/901 (398 valid)
+20:59:12  INFO        [universe] 440/901 (438 valid)
+20:59:23  INFO        [universe] 480/901 (477 valid)
+20:59:36  INFO        [universe] 520/901 (517 valid)
+20:59:46  INFO        [universe] 560/901 (557 valid)
+21:00:00  INFO        [universe] 600/901 (597 valid)
+21:00:11  INFO        [universe] 640/901 (637 valid)
+21:00:24  INFO        [universe] 680/901 (677 valid)
+21:00:35  INFO        [universe] 720/901 (717 valid)
+21:00:48  INFO        [universe] 760/901 (757 valid)
+21:00:59  INFO        [universe] 800/901 (797 valid)
+21:01:12  INFO        [universe] 840/901 (837 valid)
+21:01:23  INFO        [universe] 880/901 (877 valid)
+21:01:30  INFO        [universe] 901/901 (898 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         20:57 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $229.44|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-03|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $229.44|
+|  Cash                                                           $161.02|
+|  Reserve                                          $11.47  (always kept)|
+|  Stocks~  $68.42 / $172.08  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $103.66  (new stock buys)|
+|  Trade size             $34.42  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (2 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AES      Pullback50      $34.00     $14.89   $14.90   +0.1%   $+0.02  |
+|  ELV      Pullback50      $34.43     $413.44  $413.16  -0.1%   $-0.02  |
+|                                                                        |
+|  Total invested                                                  $68.42|
+|  Total open P&L                                                  $-0.00|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                   no (stale (1462.3m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  ELV  P&L -0.1%  $-0.02                                            HOLD|
+|  AES  P&L +0.1%  $+0.02                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  57                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AAPL     Pullback50      eq     $331.92  38.5   0.50    50MA bounce (-|
+|  ANET     RSIRecovery     eq     $169.03  34.7   1.25    RSI 27.7→34.7 |
+|  BR       VWAP_Reclaim    eq     $182.82  68.6   1.67    VWAP reclaim V|
+|  CVS      Pullback50      eq     $91.84   54.2   2.45    50MA bounce (+|
+|  CVS      VWAP_Reclaim    eq     $91.84   54.2   2.45    VWAP reclaim V|
+|  EQIX     Pullback50      eq     $1012.~  53.7   -1.60   50MA bounce (-|
+|  BEN      Pullback50      eq     $32.38   65.5   -1.44   50MA bounce (-|
+|  FOX      EarningsDrift   eq     $59.63   61.2   0.60    post-earnings |
+|  FOXA     EarningsDrift   eq     $67.22   62.2   1.13    post-earnings |
+|  FOXA     VWAP_Reclaim    eq     $67.22   62.2   1.13    VWAP reclaim V|
+|  LYV      VWAP_Reclaim    eq     $178.97  73.5   2.28    VWAP reclaim V|
+|  OKE      Pullback50      eq     $91.94   49.9   -1.38   50MA bounce (-|
+|  OXY      Pullback50      eq     $60.28   45.1   -1.69   50MA bounce (+|
+|  PLTR     RSIRecovery     eq     $175.56  30.5   2.33    RSI 28.4→30.5 |
+|  PFG      Pullback50      eq     $112.62  65.5   -1.28   50MA bounce (+|
+|  PRU      VWAP_Reclaim    eq     $118.77  63.3   1.18    VWAP reclaim V|
+|  RVTY     TrendResumpti~  eq     $163.77  62.3   1.63    HH/HL resumpti|
+|  ROST     Pullback50      eq     $231.81  51.4   -0.91   50MA bounce (+|
+|  SLB      Pullback50      eq     $52.13   65.3   -1.68   50MA bounce (-|
+|  TROW     Pullback50      eq     $106.23  70.6   -1.66   50MA bounce (+|
+|  TPL      RSIRecovery     eq     $331.88  30.9   0.65    RSI 22.7→30.9 |
+|  TRMB     VWAP_Reclaim    eq     $65.56   75.8   1.20    VWAP reclaim V|
+|  UBER     MomReversal     eq     $66.59   40.0   0.35    -14.7% drop/60|
+|  UDR      VWAP_Reclaim    eq     $35.90   66.9   1.37    VWAP reclaim V|
+|  VRSN     MA_Squeeze      eq     $313.77  65.0   2.44    BBW squeeze br|
+|  VRSN     VWAP_Reclaim    eq     $313.77  65.0   2.44    VWAP reclaim V|
+|  VTR      Pullback50      eq     $87.06   56.6   -1.71   50MA bounce (+|21:01:33  INFO        BUY  FOX  $34.42  [EarningsDrift]  id=92963e3d-57cf-4eca-8bf3-7951d713fc3f
