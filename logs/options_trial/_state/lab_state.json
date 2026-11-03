@@ -120,82 +120,17 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-03T15:33:18.958459+00:00",
       "entry_order_id": "bf5d7cc7-a081-4709-9b8d-6570476cb8b5"
-    },
-    {
-      "lot_id": "0d72b30ab25b",
-      "bucket_id": 14,
-      "profile_name": "lab0014_s352_w2_1005_1045_r1",
-      "strategy_id": "S352",
-      "occ_symbol": "AAPL261104C00337500",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 65.0,
-      "entry_price": 0.65,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-03T15:37:41.013565+00:00",
-      "entry_order_id": "91854c9d-2440-4a72-a65a-57af2e945f52"
     }
   ],
-  "pending_orders": [
-    {
-      "order_id": "b56d287c-8cc0-46e2-ab31-25dede5e3882",
-      "bucket_id": 2009,
-      "strategy_id": "S432",
-      "occ_symbol": "MARA261106C00007000",
-      "underlying": "MARA",
-      "qty": 1,
-      "limit": 0.27,
-      "profile_name": "day_trader_analytics_s432",
-      "submitted": "2026-11-03",
-      "detail": "ORB-drive +1.0% gap +1.7% VZ=-3.4 | RS +0.9%",
-      "spread_frac": 0.03636363636363639,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.6000000000000001
-    },
-    {
-      "order_id": "59c31ce9-192f-4ed9-a6e7-cef297eb2e62",
-      "bucket_id": 12,
-      "strategy_id": "S403",
-      "occ_symbol": "DKNG261106C00023000",
-      "underlying": "DKNG",
-      "qty": 1,
-      "limit": 0.51,
-      "profile_name": "lab0012_s403_w2_1005_1045_r1",
-      "submitted": "2026-11-03",
-      "detail": "touch MA50 green",
-      "spread_frac": 0.12244897959183673,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    }
-  ],
-  "pending_exits": [
-    {
-      "order_id": "f5d141b3-37a7-46e3-84f9-e21b6bffb3fa",
-      "lot_id": "0d72b30ab25b",
-      "bucket_id": 14,
-      "strategy_id": "S352",
-      "occ_symbol": "AAPL261104C00337500",
-      "qty": 1,
-      "reason": "take_profit (+69.2%)",
-      "submitted": "2026-11-03T11:37:38"
-    }
-  ],
+  "pending_orders": [],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b49": 54.0,
     "b2007": 57.99999999999999,
     "b6": 69.0,
     "b15": 71.0,
     "b64": 60.0,
-    "b66": 73.0,
-    "b14": 65.0
+    "b66": 73.0
   },
   "session_date": "2026-11-03",
   "entries_locked": [
@@ -713,7 +648,8 @@
     "f2f70d2d-7f2d-4372-9ea2-3b9e2a5e2ac9",
     "c436004d-b5a8-4171-9b6b-7ea36136ba2f",
     "91854c9d-2440-4a72-a65a-57af2e945f52",
-    "5b4e58b3-62af-4585-80ce-7e7df54c0af3"
+    "5b4e58b3-62af-4585-80ce-7e7df54c0af3",
+    "f5d141b3-37a7-46e3-84f9-e21b6bffb3fa"
   ],
   "submitted_today": 14,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
