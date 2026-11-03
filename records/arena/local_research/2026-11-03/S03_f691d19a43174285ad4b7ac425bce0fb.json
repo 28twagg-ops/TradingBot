@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "f691d19a43174285ad4b7ac425bce0fb",
+  "worker": "S03",
+  "cycle": "2026-11-03T11:36Z",
+  "generation_index": 0,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S03",
+    "cycle": "2026-11-03T11:36Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Does the BTC-USD hourly return mean reversion at a 24-hour lag with a 3% threshold persist across a ",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "fundamentals",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "5dfba516d886cc",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "EMPIRICAL Definition & Meaning | Dictionary.com",
+        "url": "https://www.dictionary.com/browse/empirical",
+        "snippet": "EMPIRICAL definition: derived from or guided by direct experience or by experiment, rather than abstract principles or theory. See examples of empirical used in a sentence.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Empirical study on BTC-USD hourly autocorrelation at 24-hour lag with 3% threshold, 2024-2026, including multiple testing correcti",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 89.776,
+      "load_seconds": 0.029,
+      "eval_count": 379,
+      "prompt_eval_count": 1654,
+      "tokens_per_second": 8.547,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 0.0,
+        "free_ram_gb": 10.2,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-03T11:36Z",
+    "id": "5dfba516d886cc",
+    "topic": "Does the BTC-USD hourly return mean reversion at a 24-hour lag with a 3% threshold persist across a ",
+    "hypothesis": "The mean reversion in BTC-USD hourly returns at a 24-hour lag with a 3% threshold is a spurious result arising from autocorrelation and multiple testing, and does not persist in an independent holdout period after adjustment.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "fundamentals",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "Test whether the observed mean reversion in BTC-USD hourly returns at a 24-hour lag with a 3% threshold is absent in a holdout period (2024-2026) when the null model of random walk with drift is applied, using only hourly close prices and adjusted for multiple testing via Bonferroni correction. The ",
+    "source_search": {
+      "query": "Empirical study on BTC-USD hourly autocorrelation at 24-hour lag with 3% threshold, 2024-2026, including multiple testing correcti",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "EMPIRICAL Definition & Meaning | Dictionary.com",
+        "url": "https://www.dictionary.com/browse/empirical",
+        "snippet": "EMPIRICAL definition: derived from or guided by direct experience or by experiment, rather than abstract principles or theory. See examples of empirical used in a sentence.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Empirical study on BTC-USD hourly autocorrelation at 24-hour lag with 3% threshold, 2024-2026, including multiple testing correcti",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "daily_bars",
+      "fundamentals",
+      "volume"
+    ],
+    "hypothesis_timeframe": "2024-2026",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

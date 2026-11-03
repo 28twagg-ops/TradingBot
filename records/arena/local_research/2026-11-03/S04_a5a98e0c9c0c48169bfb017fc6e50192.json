@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "a5a98e0c9c0c48169bfb017fc6e50192",
+  "worker": "S04",
+  "cycle": "2026-11-03T06:03Z",
+  "generation_index": 0,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S04",
+    "cycle": "2026-11-03T06:03Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Gap-down quality in BTC-USD: 30-hour mean reversion probability after 2% gap-down events",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume",
+        "order_book",
+        "fundamentals"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "7db5d75c0908b4",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "The live Bitcoin price today is $76,911.31 USD with a 24-hour trading volume of $23,543,677,659.77 USD. We update our BTC to USD price in real-time.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "What's Bitcoin 's price today? The current price of Bitcoin (BTC) is 77,009 USD. For broader market analysis, dive into the technicals on the BTC price chart and read the latest Bitcoin news:",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "$76,553.43 Bitcoin Price (BTC/USD) Today | Live Chart - Binance",
+        "url": "https://www.binance.com/en/price/bitcoin",
+        "snippet": "1 Bitcoin currently costs $76,553.43, down 2.3%% in the last 24 hours. View the live Bitcoin price in USD (BTC/USD), chart, market cap and 24-hour volume.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Retrieve historical BTC-USD data for hourly close prices from 2020 to present, filtered for gap-down events >2% in price, with tim",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 87.182,
+      "load_seconds": 0.026,
+      "eval_count": 325,
+      "prompt_eval_count": 1746,
+      "tokens_per_second": 7.15,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 0.0,
+        "free_ram_gb": 14.97,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-03T06:03Z",
+    "id": "7db5d75c0908b4",
+    "topic": "Gap-down quality in BTC-USD: 30-hour mean reversion probability after 2% gap-down events",
+    "hypothesis": "After a 2% gap-down event in BTC-USD, price exhibits a 30-hour mean reversion with a 90% probability of returning to within 5% of the pre-gap level, indicating liquidity-driven reversion rather than a structural shift.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume",
+        "order_book",
+        "fundamentals"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For each BTC-USD gap-down event exceeding 2% in price, compute the 30-hour return; if the 30-hour return is greater than or equal to 5%, the hypothesis is falsified; if all such events have 30-hour returns below 5%, the hypothesis is supported.",
+    "source_search": {
+      "query": "BTC-USD hourly gap-down events >2% followed by 30-hour return distribution statistics with 30-hour return <5% and event count over",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "The live Bitcoin price today is $76,911.31 USD with a 24-hour trading volume of $23,543,677,659.77 USD. We update our BTC to USD price in real-time.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "What's Bitcoin 's price today? The current price of Bitcoin (BTC) is 77,009 USD. For broader market analysis, dive into the technicals on the BTC price chart and read the latest Bitcoin news:",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "$76,553.43 Bitcoin Price (BTC/USD) Today | Live Chart - Binance",
+        "url": "https://www.binance.com/en/price/bitcoin",
+        "snippet": "1 Bitcoin currently costs $76,553.43, down 2.3%% in the last 24 hours. View the live Bitcoin price in USD (BTC/USD), chart, market cap and 24-hour volume.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Retrieve historical BTC-USD data for hourly close prices from 2020 to present, filtered for gap-down events >2% in price, with tim",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "volume",
+      "order_book",
+      "fundamentals"
+    ],
+    "hypothesis_timeframe": "30 hours post-gap-down",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

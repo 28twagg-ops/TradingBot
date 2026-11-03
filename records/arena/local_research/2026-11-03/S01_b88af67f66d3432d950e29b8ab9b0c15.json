@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "b88af67f66d3432d950e29b8ab9b0c15",
+  "worker": "S01",
+  "cycle": "2026-11-03T07:51Z",
+  "generation_index": 0,
+  "model": "qwen3:8b",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S01",
+    "cycle": "2026-11-03T07:51Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly VWAP reversion under liquidity friction and order flow imbalance",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "order_book",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "483c525650f34b",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Publix: Where Shopping is a Pleasure | Publix Super Markets",
+        "url": "https://www.publix.com/",
+        "snippet": "Welcome to Publix Super Markets. We are the largest and fastest-growing employee-owned supermarket chain in the United States. We are successful because we are committed to making shopping a pleasure at our stores while striving to be the p",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Stocks, Bonds, Crypto & Options AI Investing App - Public.com",
+        "url": "https://public.com/",
+        "snippet": "Trade stocks, bonds, options, ETFs, crypto, Treasuries, and prediction markets. Build AI trading agents. Access IRAs, direct indexing, high-yield cash, margin, and ...",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Login | Public.com",
+        "url": "https://public.com/login",
+        "snippet": "See public.com/#disclosures-main for more information. ¹APY is variable and subject to change. See full disclosure at public.com/hyca. ²This yield is the current average, annualized yield to worst (YTW) across all ten bonds in the Bond Acco",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Public - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Public",
+        "snippet": "The diverse public is symbolized in this sculpture situated in Montreal, Canada, named \" La Foule illuminée [fr] \". In public relations and communication science, publics are groups of individual people, and the public (a.k.a. the general p",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "public academic or empirical study on liquidity friction and order flow imbalance in BTC-USD hourly trading with 3% threshold and ",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:8b",
+    "local_metrics": {
+      "elapsed_seconds": 120.306,
+      "load_seconds": 3.717,
+      "eval_count": 285,
+      "prompt_eval_count": 1641,
+      "tokens_per_second": 5.306,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 1.1,
+        "free_ram_gb": 18.93,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-03T07:51Z",
+    "id": "483c525650f34b",
+    "topic": "BTC-USD hourly VWAP reversion under liquidity friction and order flow imbalance",
+    "hypothesis": "Liquidity friction and order flow imbalance in BTC-USD hourly trading create a temporary noise band around the VWAP, which causes price deviations to revert to VWAP within 30 hours with a 3% threshold.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "order_book",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "Compare hourly close prices against VWAP over a 30-hour window, measuring the frequency and magnitude of deviations exceeding 3% and checking for reversion to VWAP.",
+    "source_search": {
+      "query": "public academic or empirical study on liquidity friction and order flow imbalance in BTC-USD hourly trading with 3% threshold and",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Publix: Where Shopping is a Pleasure | Publix Super Markets",
+        "url": "https://www.publix.com/",
+        "snippet": "Welcome to Publix Super Markets. We are the largest and fastest-growing employee-owned supermarket chain in the United States. We are successful because we are committed to making shopping a pleasure at our stores while striving to be the p",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Stocks, Bonds, Crypto & Options AI Investing App - Public.com",
+        "url": "https://public.com/",
+        "snippet": "Trade stocks, bonds, options, ETFs, crypto, Treasuries, and prediction markets. Build AI trading agents. Access IRAs, direct indexing, high-yield cash, margin, and ...",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Login | Public.com",
+        "url": "https://public.com/login",
+        "snippet": "See public.com/#disclosures-main for more information. ¹APY is variable and subject to change. See full disclosure at public.com/hyca. ²This yield is the current average, annualized yield to worst (YTW) across all ten bonds in the Bond Acco",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Public - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Public",
+        "snippet": "The diverse public is symbolized in this sculpture situated in Montreal, Canada, named \" La Foule illuminée [fr] \". In public relations and communication science, publics are groups of individual people, and the public (a.k.a. the general p",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "public academic or empirical study on liquidity friction and order flow imbalance in BTC-USD hourly trading with 3% threshold and ",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "order_book",
+      "volume"
+    ],
+    "hypothesis_timeframe": "hourly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

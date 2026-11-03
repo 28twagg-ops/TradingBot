@@ -1,21 +1,21 @@
 # Overnight local Ollama research — paper-only
 
-Updated: 2026-11-02T22:26:02.636546+00:00
+Updated: 2026-11-03T20:15:46.515927+00:00
 
 **Separate local Llama research; not rule-based balances or validated profits.**
 No model-generated orders; no live trading.
 
 | Bot | Research attempts | Supported proxy ideas | Errors |
 |---|---:|---:|---:|
-| S01 | 15 | 0 | 3 |
-| S02 | 15 | 0 | 4 |
-| S03 | 12 | 0 | 3 |
-| S04 | 12 | 0 | 4 |
-| S05 | 11 | 0 | 2 |
-| S06 | 11 | 0 | 3 |
-| S07 | 11 | 0 | 0 |
-| S08 | 11 | 0 | 3 |
-| S09 | 11 | 0 | 0 |
-| S10 | 11 | 0 | 2 |
+| S01 | 23 | 0 | 3 |
+| S02 | 23 | 0 | 4 |
+| S03 | 20 | 0 | 3 |
+| S04 | 20 | 0 | 4 |
+| S05 | 19 | 0 | 2 |
+| S06 | 19 | 0 | 3 |
+| S07 | 19 | 0 | 0 |
+| S08 | 19 | 0 | 3 |
+| S09 | 19 | 2 | 0 |
+| S10 | 19 | 0 | 2 |
 
-Total accepted immutable local events: 120
+Total accepted immutable local events: 200
