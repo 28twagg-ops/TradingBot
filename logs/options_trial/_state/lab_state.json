@@ -22,26 +22,6 @@
       "entry_order_id": "93b7ba29-749a-4ca7-8166-0546d1edec7e"
     },
     {
-      "lot_id": "48e7c4e15df7",
-      "bucket_id": 91,
-      "profile_name": "s406_only",
-      "strategy_id": "S406",
-      "occ_symbol": "META261102C00647500",
-      "underlying": "META",
-      "qty": 1,
-      "entry_cost": 61.0,
-      "entry_price": 0.61,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-10-30T13:44:04.234585+00:00",
-      "entry_order_id": "638f7156-6c10-4e25-a34c-fa14351cc81e"
-    },
-    {
       "lot_id": "bf6383dd2892",
       "bucket_id": 49,
       "profile_name": "lab0049_s396_w2_1005_1045_r1",
@@ -66,19 +46,10 @@
   "pending_exits": [],
   "bucket_open_premium": {
     "b16": 47.0,
-    "b91": 61.0,
     "b49": 54.0
   },
-  "session_date": "2026-11-02",
-  "entries_locked": [
-    "90|S404|2026-11-02",
-    "90|S406|2026-11-02",
-    "2007|S430|2026-11-02",
-    "2009|S432|2026-11-02",
-    "65|S168|2026-11-02",
-    "63|S167|2026-11-02",
-    "66|S163|2026-11-02"
-  ],
+  "session_date": "2026-11-03",
+  "entries_locked": [],
   "processed_orders": [
     "fb5b7222-4e33-4762-943e-cc5184ccc107",
     "9e99f9e1-7d76-499e-9ee2-b8dfa9c7726c",
@@ -559,7 +530,7 @@
     "e8468d46-7bf1-4754-9d66-0358b7a26fb9",
     "e575f6ee-069f-4ce2-9b69-7e17d6911b51"
   ],
-  "submitted_today": 7,
+  "submitted_today": 0,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
-  "updated": "2026-11-02"
+  "updated": "2026-11-03"
 }
