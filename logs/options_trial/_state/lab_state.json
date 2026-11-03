@@ -42,26 +42,6 @@
       "entry_order_id": "b699deca-a6f6-42d4-b14c-1a2da853bea5"
     },
     {
-      "lot_id": "5c838529a927",
-      "bucket_id": 52,
-      "profile_name": "lab0052_s406_w2_1005_1045_r1",
-      "strategy_id": "S406",
-      "occ_symbol": "PLTR261106C00192500",
-      "underlying": "PLTR",
-      "qty": 1,
-      "entry_cost": 34.0,
-      "entry_price": 0.34,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-03T15:08:13.165357+00:00",
-      "entry_order_id": "7d1e0bb9-b559-4e13-832a-0b628136cb38"
-    },
-    {
       "lot_id": "2186c1829bf7",
       "bucket_id": 6,
       "profile_name": "lab0006_s210_w2_1005_1045_r1",
@@ -200,7 +180,6 @@
   "bucket_open_premium": {
     "b49": 54.0,
     "b2007": 57.99999999999999,
-    "b52": 34.0,
     "b6": 69.0,
     "b15": 71.0,
     "b64": 60.0,
@@ -722,7 +701,8 @@
     "f0f3d811-0140-4898-a212-c71d08c96a22",
     "f2f70d2d-7f2d-4372-9ea2-3b9e2a5e2ac9",
     "c436004d-b5a8-4171-9b6b-7ea36136ba2f",
-    "91854c9d-2440-4a72-a65a-57af2e945f52"
+    "91854c9d-2440-4a72-a65a-57af2e945f52",
+    "5b4e58b3-62af-4585-80ce-7e7df54c0af3"
   ],
   "submitted_today": 14,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
