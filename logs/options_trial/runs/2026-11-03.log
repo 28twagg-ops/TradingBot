@@ -32454,19 +32454,19 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-11-03.log
 elapsed=5.8s reconcile=0.5s cancel=0.21s manage=3.78s
 
-=== 16:29:09 ET — after hours (exit summary) [elapsed=0.7s reconcile=0.13s] ===
-=== options_morning_bot (PAPER) 2026-11-03T16:29:09.451739-05:00 ===
+=== 16:31:56 ET — after hours (exit summary) [elapsed=1.3s reconcile=0.51s] ===
+=== options_morning_bot (PAPER) 2026-11-03T16:31:56.223872-05:00 ===
 
 [Run context]
-After hours (16:29 ET) — exit summary only.
-Paper auth OK — equity $992304.22, account PA33P8KT02IL
+After hours (16:31 ET) — exit summary only.
+Paper auth OK — equity $992335.06, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:80:live_1to1+variations
 
 [Exit summary]
 ========================================================
 OPTIONS EXIT SUMMARY — 2026-11-03
 ========================================================
-Account equity: $992,304.22
+Account equity: $992,335.06
 Open broker positions: 5  unrealized $-25.00
 
 Today's closed trades
@@ -32519,7 +32519,7 @@ Recent exits (last 8)
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $992,304.22
+Account equity: $992,335.06
 Active buckets: 80 of 80 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
@@ -33015,7 +33015,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (after_hours) --                                      |
-|Equity       : $992,304.22                                              |
+|Equity       : $992,335.06                                              |
 |Open Risk    : 5 lots (5 broker pos)                                    |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -33065,5 +33065,5 @@ Per-bucket exit stats (all time)
 |  MS261106C00192500             1    -14.5%   $    -10.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-11-03.log
-elapsed=0.7s reconcile=0.13s
+elapsed=1.3s reconcile=0.51s
 
