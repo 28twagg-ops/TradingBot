@@ -1,0 +1,185 @@
+14:53:20  INFO      Mode: morning_scan
+14:53:20  INFO        [positions] 1/1 (1 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:53 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $229.72|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-03|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $229.72|
+|  Cash                                                           $195.74|
+|  Reserve                                          $11.49  (always kept)|
+|  Stocks~  $33.98 / $172.29  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $138.31  (new stock buys)|
+|  Trade size             $34.46  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (1 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AES      Pullback50      $33.98     $14.89   $14.89   +0.0%   $+0.00  |
+|                                                                        |
+|  Total invested                                                  $33.98|
+|  Total open P&L                                                  $+0.00|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sign~  yes (signals fresh (6.6m); positions refreshed live)|
+|  Cached signals                                                      21|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AES  P&L +0.0%  $+0.00                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                           cached signals (signals fresh (6.6m))|
+|  Universe scanned in prep                                           901|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  21                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  FANG     Pullback50      eq     $197.94  50.4   -2.49   50MA bounce (+|
+|  ELV      Pullback50      eq     $414.28  41.1   -2.38   50MA bounce (+|
+|  P        Pullback50      eq     $120.50  37.6   -2.28   50MA bounce (+|
+|  INCY     Pullback50      eq     $120.34  68.6   -2.51   50MA bounce (+|
+|  MSFT     Pullback50      eq     $512.42  36.3   -2.26   50MA bounce (-|
+|  OXY      Pullback50      eq     $60.60   46.4   -2.96   50MA bounce (+|
+|  OKE      Pullback50      eq     $92.48   51.4   -2.68   50MA bounce (-|
+|  SLB      Pullback50      eq     $52.49   66.8   -2.93   50MA bounce (+|
+|  BIO      Pullback50      eq     $374.70  58.3   -2.64   50MA bounce (+|
+|  BRKR     Pullback50      eq     $58.66   56.7   -2.66   50MA bounce (-|
+|  CHRD     Pullback50      eq     $146.60  50.5   -2.81   50MA bounce (+|
+|  DBX      Pullback50      eq     $35.18   46.8   -3.41   50MA bounce (-|
+|  DINO     Pullback50      eq     $113.15  28.9   -2.92   50MA bounce (+|
+|  JAZZ     Pullback50      eq     $228.84  66.2   -2.42   50MA bounce (-|
+|  LNTH     Pullback50      eq     $100.42  58.2   -1.88   50MA bounce (+|
+|  PBF      Pullback50      eq     $78.02   35.3   -3.25   50MA bounce (+|
+|  RGEN     Pullback50      eq     $178.34  50.1   -1.51   50MA bounce (+|
+|  ROIV     Pullback50      eq     $36.41   64.1   -1.69   50MA bounce (-|
+|  SBRA     Pullback50      eq     $20.00   60.6   -2.83   50MA bounce (+|
+|  UMBF     Pullback50      eq     $136.31  64.7   -2.60   50MA bounce (+|
+|  WCC      Pullback50      eq     $351.15  49.9   -2.27   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+14:53:20  INFO        BUY  FANG  $34.46  [Pullback50]  id=86db8a31-34e3-4a78-8ca6-f9395aa0866d
+14:53:20  INFO        BUY  ELV  $34.46  [Pullback50]  id=8cf2ec78-d471-4d44-a3fc-6998193ff614
+14:53:42  INFO        place_all_stops: checking 3 positions...
+14:53:42  INFO        STOP already live AES @ $14.81
+14:53:42  INFO        STOP skipped ELV: fractional (0.0833 shares) — software exit will handle it
+14:53:42  INFO        STOP skipped FANG: fractional (0.1761 shares) — software exit will handle it
+14:53:42  INFO        Daily log -> logs/daily/2026-11-03.md
+14:53:42  INFO        Dashboard written → logs/dashboard.md
+|    ENTER [eq] FANG  Pullback50                                   $34.46|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] ELV  Pullback50                                    $34.46|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] P  Pullback50                                        cap 3|
+|    SKIP [eq] INCY  Pullback50                                     cap 3|
+|    SKIP [eq] MSFT  Pullback50                                     cap 3|
+|    SKIP [eq] OXY  Pullback50                                      cap 3|
+|    SKIP [eq] OKE  Pullback50                                      cap 3|
+|    SKIP [eq] SLB  Pullback50                                      cap 3|
+|    SKIP [eq] BIO  Pullback50                                      cap 3|
+|    SKIP [eq] BRKR  Pullback50                                     cap 3|
+|    SKIP [eq] CHRD  Pullback50                                     cap 3|
+|    SKIP [eq] DBX  Pullback50                                      cap 3|
+|    SKIP [eq] DINO  Pullback50                                     cap 3|
+|    SKIP [eq] JAZZ  Pullback50                                     cap 3|
+|    SKIP [eq] LNTH  Pullback50                                     cap 3|
+|    SKIP [eq] PBF  Pullback50                                      cap 3|
+|    SKIP [eq] RGEN  Pullback50                                     cap 3|
+|    SKIP [eq] ROIV  Pullback50                                     cap 3|
+|    SKIP [eq] SBRA  Pullback50                                     cap 3|
+|    SKIP [eq] UMBF  Pullback50                                     cap 3|
+|    SKIP [eq] WCC  Pullback50                                      cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  FANG                                                 still unconfirmed|
+|  ELV                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             21|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $229.74|
+|  Cash                                                           $126.84|
++========================================================================+
