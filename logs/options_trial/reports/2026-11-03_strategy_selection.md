@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-03
 
-_Generated 2026-11-03T09:57:35.778389_
+_Generated 2026-11-03T10:03:11.066770_
 
 ## Summary
 
@@ -30,7 +30,7 @@ _Generated 2026-11-03T09:57:35.778389_
 | S362 (RubberBand_3DTE) | 3d | watch | 67 | 64.2 | +50.00 | -61.56 | -50.84 | +315.24 | 95 | 1 | 2 | $+1,367.00 | 19.4% | fat left tail (p10 < -45%) |
 | S406 (RubberBand_ITM3) | 3d | watch | 156 | 53.2 | +40.97 | -59.55 | -47.45 | +207.89 | 95 | 3 | 2 | $+3,063.00 | 10.3% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 109 | 50.5 | +22.22 | -71.43 | -50.00 | +146.00 | 99 | 0 | 0 | $+1,086.00 | 27.5% | fat left tail (p10 < -45%) |
-| S404 (GapDown_OTM2) | 3d | watch | 102 | 50.0 | +3.51 | -66.47 | -49.79 | +99.15 | 95 | 3 | 4 | $+866.00 | 9.8% | fat left tail (p10 < -45%) |
+| S404 (GapDown_OTM2) | 3d | watch | 102 | 50.0 | +3.51 | -66.47 | -49.79 | +99.15 | 95 | 4 | 4 | $+866.00 | 9.8% | fat left tail (p10 < -45%) |
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | watch | 26 | 50.0 | +3.30 | -71.88 | -55.51 | +326.19 | 105 | 2 | 1 | $+381.00 | 26.9% | fat left tail (p10 < -45%) |
 | S169 (BB Squeeze Breakout call 3 DTE) | 3d ATM BB squeeze | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S170 (Golden Pocket call 3 DTE) | 3d ATM golden pocket | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
