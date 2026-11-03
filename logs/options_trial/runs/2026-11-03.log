@@ -23919,11 +23919,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-11-03.log
 elapsed=2.5s reconcile=0.13s cancel=0.05s manage=1.66s
 
-=== 13:34:36 ET — manage-only (past entry window) [elapsed=4.4s reconcile=0.47s cancel=0.18s manage=2.73s] ===
-=== options_morning_bot (PAPER) 2026-11-03T13:34:36.347211-05:00 ===
+=== 13:40:23 ET — manage-only (past entry window) [elapsed=6.1s reconcile=0.38s cancel=0.17s manage=4.46s] ===
+=== options_morning_bot (PAPER) 2026-11-03T13:40:23.426230-05:00 ===
 
 [Run context]
-Paper auth OK — equity $992708.96, account PA33P8KT02IL
+Paper auth OK — equity $992724.56, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:80:live_1to1+variations
 
 [Setup]
@@ -23940,15 +23940,15 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $992,708.96
+Account equity: $992,724.56
 Active buckets: 80 of 80 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+11,122.55 all-time  |  $-75.00 today
   Raw (incl dropped):     $+5,898.55 all-time  |  $-75.00 today
-  Open (not sold yet): $+46.00 unrealized (virtual lots)
+  Open (not sold yet): $+34.00 unrealized (virtual lots)
   Premium deployed:    $327.00 in open positions
-  Combined P&L:        $+11,168.55 (reflected realized + open virtual)
+  Combined P&L:        $+11,156.55 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     16422
@@ -23958,7 +23958,7 @@ Ledger (master)
   Avg return/trade: +26.0%  median -32.7%
 
 Open virtual lots (by bucket)
-  b6 lab0006_s210_w2_1005_1045_r1  prem=$    69  real=$-49.00  open=$+16.00  lots=1  [S210:MSx1]
+  b6 lab0006_s210_w2_1005_1045_r1  prem=$    69  real=$-49.00  open=$+14.00  lots=1  [S210:MSx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b12 lab0012_s403_w2_1005_1045_r1  prem=$     0  real=$ +2.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -23980,7 +23980,7 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b21 lab0021_s365_w2_1005_1045_r1  prem=$     0  real=$-18.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b49 lab0049_s396_w2_1005_1045_r1  prem=$    54  real=$-12.00  open=$+21.00  lots=1  [S396:MARAx1]
+  b49 lab0049_s396_w2_1005_1045_r1  prem=$    54  real=$-12.00  open=$+20.00  lots=1  [S396:MARAx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b50 lab0050_s397_w2_1005_1045_r1  prem=$     0  real=$+13.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -23992,21 +23992,21 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b63 lab0063_s167_w2_1005_1045_r1  prem=$     0  real=$-110.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b64 lab0064_s166_w2_1005_1045_r1  prem=$    60  real=$+37.00  open=$ +0.00  lots=1  [S166:AAPLx1]
+  b64 lab0064_s166_w2_1005_1045_r1  prem=$    60  real=$+37.00  open=$ -2.00  lots=1  [S166:AAPLx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b65 lab0065_s168_w2_1005_1045_r1  prem=$     0  real=$-197.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b66 lab0066_s163_w2_1005_1045_r1  prem=$    73  real=$-188.00  open=$ +8.00  lots=1  [S163:AAPLx1]
+  b66 lab0066_s163_w2_1005_1045_r1  prem=$    73  real=$-188.00  open=$ +1.00  lots=1  [S163:AAPLx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   (5 more active bucket(s) omitted)
   (55 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  AAPL261109C00345000  qty=1  cost=$73.00  return=+11.0%  open P&L=$+8.00
-  AAPL261111C00350000  qty=1  cost=$60.00  return=+0.0%  open P&L=$+0.00
+  AAPL261109C00345000  qty=1  cost=$73.00  return=+1.4%  open P&L=$+1.00
+  AAPL261111C00350000  qty=1  cost=$60.00  return=-3.3%  open P&L=$-2.00
   AAPL261120C00357500  qty=1  cost=$71.00  return=+1.4%  open P&L=$+1.00
-  MARA261106C00006500  qty=1  cost=$54.00  return=+38.9%  open P&L=$+21.00
-  MS261106C00192500  qty=1  cost=$69.00  return=+23.2%  open P&L=$+16.00
+  MARA261106C00006500  qty=1  cost=$54.00  return=+37.0%  open P&L=$+20.00
+  MS261106C00192500  qty=1  cost=$69.00  return=+20.3%  open P&L=$+14.00
 
 Per-bucket exit stats (all time)
   b0|c000_s173_w1_0928_1005_r1  n= 22  avg=+24.8%  med=+34.9%  realized=$+283.00
@@ -24436,7 +24436,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $992,708.96                                              |
+|Equity       : $992,724.56                                              |
 |Open Risk    : 5 lots (5 broker pos)                                    |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -24479,20 +24479,20 @@ Per-bucket exit stats (all time)
 +========================================================================+
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
-|  MARA261106C00006500           1    +38.9%   $    +21.00               |
-|  MS261106C00192500             1    +23.2%   $    +16.00               |
-|  AAPL261109C00345000           1    +11.0%   $     +8.00               |
+|  MARA261106C00006500           1    +37.0%   $    +20.00               |
+|  MS261106C00192500             1    +20.3%   $    +14.00               |
+|  AAPL261111C00350000           1     -3.3%   $     -2.00               |
+|  AAPL261109C00345000           1     +1.4%   $     +1.00               |
 |  AAPL261120C00357500           1     +1.4%   $     +1.00               |
-|  AAPL261111C00350000           1     +0.0%   $     +0.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-11-03.log
-elapsed=4.4s reconcile=0.47s cancel=0.18s manage=2.73s
+elapsed=6.1s reconcile=0.38s cancel=0.17s manage=4.46s
 
-=== 13:45:08 ET — manage-only (past entry window) [elapsed=6.4s reconcile=0.15s cancel=0.07s manage=5.62s] ===
-=== options_morning_bot (PAPER) 2026-11-03T13:45:08.753129-05:00 ===
+=== 13:48:01 ET — manage-only (past entry window) [elapsed=6.2s reconcile=0.47s cancel=0.23s manage=4.29s] ===
+=== options_morning_bot (PAPER) 2026-11-03T13:48:01.509628-05:00 ===
 
 [Run context]
-Paper auth OK — equity $992679.93, account PA33P8KT02IL
+Paper auth OK — equity $992621.37, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:80:live_1to1+variations
 
 [Setup]
@@ -24509,15 +24509,15 @@ Past entry window; manage/exit only.
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $992,679.93
+Account equity: $992,621.37
 Active buckets: 80 of 80 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+11,122.55 all-time  |  $-75.00 today
   Raw (incl dropped):     $+5,898.55 all-time  |  $-75.00 today
-  Open (not sold yet): $+40.00 unrealized (virtual lots)
+  Open (not sold yet): $+41.00 unrealized (virtual lots)
   Premium deployed:    $327.00 in open positions
-  Combined P&L:        $+11,162.55 (reflected realized + open virtual)
+  Combined P&L:        $+11,163.55 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     16422
@@ -24535,7 +24535,7 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b14 lab0014_s352_w2_1005_1045_r1  prem=$     0  real=$+22.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b15 lab0015_s356_w2_1005_1045_r1  prem=$    71  real=$+14.00  open=$ +3.00  lots=1  [S356:AAPLx1]
+  b15 lab0015_s356_w2_1005_1045_r1  prem=$    71  real=$+14.00  open=$ +4.00  lots=1  [S356:AAPLx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b16 lab0016_s357_w2_1005_1045_r1  prem=$     0  real=$-57.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -24549,7 +24549,7 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b21 lab0021_s365_w2_1005_1045_r1  prem=$     0  real=$-18.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b49 lab0049_s396_w2_1005_1045_r1  prem=$    54  real=$-12.00  open=$+20.00  lots=1  [S396:MARAx1]
+  b49 lab0049_s396_w2_1005_1045_r1  prem=$    54  real=$-12.00  open=$+22.00  lots=1  [S396:MARAx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b50 lab0050_s397_w2_1005_1045_r1  prem=$     0  real=$+13.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -24561,20 +24561,20 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b63 lab0063_s167_w2_1005_1045_r1  prem=$     0  real=$-110.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b64 lab0064_s166_w2_1005_1045_r1  prem=$    60  real=$+37.00  open=$ -1.00  lots=1  [S166:AAPLx1]
+  b64 lab0064_s166_w2_1005_1045_r1  prem=$    60  real=$+37.00  open=$ -6.00  lots=1  [S166:AAPLx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b65 lab0065_s168_w2_1005_1045_r1  prem=$     0  real=$-197.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b66 lab0066_s163_w2_1005_1045_r1  prem=$    73  real=$-188.00  open=$ +3.00  lots=1  [S163:AAPLx1]
+  b66 lab0066_s163_w2_1005_1045_r1  prem=$    73  real=$-188.00  open=$ +6.00  lots=1  [S163:AAPLx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   (5 more active bucket(s) omitted)
   (55 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  AAPL261109C00345000  qty=1  cost=$73.00  return=+4.1%  open P&L=$+3.00
-  AAPL261111C00350000  qty=1  cost=$60.00  return=-1.7%  open P&L=$-1.00
-  AAPL261120C00357500  qty=1  cost=$71.00  return=+4.2%  open P&L=$+3.00
-  MARA261106C00006500  qty=1  cost=$54.00  return=+37.0%  open P&L=$+20.00
+  AAPL261109C00345000  qty=1  cost=$73.00  return=+8.2%  open P&L=$+6.00
+  AAPL261111C00350000  qty=1  cost=$60.00  return=-10.0%  open P&L=$-6.00
+  AAPL261120C00357500  qty=1  cost=$71.00  return=+5.6%  open P&L=$+4.00
+  MARA261106C00006500  qty=1  cost=$54.00  return=+40.7%  open P&L=$+22.00
   MS261106C00192500  qty=1  cost=$69.00  return=+21.7%  open P&L=$+15.00
 
 Per-bucket exit stats (all time)
@@ -25005,7 +25005,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (manage-only) --                                      |
-|Equity       : $992,679.93                                              |
+|Equity       : $992,621.37                                              |
 |Open Risk    : 5 lots (5 broker pos)                                    |
 |Today's Run  : 0 signals -> 0 orders submitted                          |
 |                                                                        |
@@ -25048,12 +25048,12 @@ Per-bucket exit stats (all time)
 +========================================================================+
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
-|  MARA261106C00006500           1    +37.0%   $    +20.00               |
+|  MARA261106C00006500           1    +40.7%   $    +22.00               |
 |  MS261106C00192500             1    +21.7%   $    +15.00               |
-|  AAPL261109C00345000           1     +4.1%   $     +3.00               |
-|  AAPL261120C00357500           1     +4.2%   $     +3.00               |
-|  AAPL261111C00350000           1     -1.7%   $     -1.00               |
+|  AAPL261109C00345000           1     +8.2%   $     +6.00               |
+|  AAPL261111C00350000           1    -10.0%   $     -6.00               |
+|  AAPL261120C00357500           1     +5.6%   $     +4.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-11-03.log
-elapsed=6.4s reconcile=0.15s cancel=0.07s manage=5.62s
+elapsed=6.2s reconcile=0.47s cancel=0.23s manage=4.29s
 
