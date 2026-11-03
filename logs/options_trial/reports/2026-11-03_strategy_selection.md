@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-03
 
-_Generated 2026-11-03T11:47:07.739132_
+_Generated 2026-11-03T11:52:29.038155_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-11-03T11:47:07.739132_
 
 ## Attribution health
 
-- Total exits: **3869**
+- Total exits: **3870**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **10.9%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -84,7 +84,7 @@ _Generated 2026-11-03T11:47:07.739132_
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S431 (DayTrader_RS) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S432 (DayTrader_ORB_RS) | 3d | watch | 11 | 36.4 | -37.50 | -50.00 | -45.16 | +72.73 | 18 | 2 | 2 | $-26.00 | 9.1% | early sample with non-positive median |
-| S430 (DayTrader_ORB) | 3d | watch | 11 | 27.3 | -40.00 | -42.55 | -40.34 | +67.57 | 18 | 3 | 2 | $-76.00 | 18.2% | early sample with non-positive median |
+| S430 (DayTrader_ORB) | 3d | watch | 12 | 25.0 | -39.83 | -42.33 | -40.32 | +65.94 | 18 | 3 | 3 | $-99.00 | 16.7% | early sample with non-positive median |
 | S367 (RubberBand_30DTE) | 30d | watch | 3 | 0.0 | -48.89 | -50.89 | -50.14 | -29.78 | 91 | 0 | 0 | $-77.00 | 66.7% | insufficient sample (<8 exits) |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 95 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
 | S358 (GapDown_30DTE) | 30d | watch | 5 | 40.0 | -50.00 | -51.39 | -51.39 | +54.28 | 91 | 0 | 0 | $-49.00 | 40.0% | insufficient sample (<8 exits) |
@@ -332,7 +332,7 @@ _Pipeline evaluation as of 2026-11-03. Auto-kill thresholds: median<-25% at n>=1
 | S417 | BBSqueeze_OTM1 | 0 | — | — | NEW | 0 |
 | S418 | BBSqueeze_OTM2 | 0 | — | — | NEW | 0 |
 | S419 | BBSqueeze_OTM3 | 0 | — | — | NEW | 0 |
-| S430 | DayTrader_ORB | 11 | -40.00% | 27% | WATCH | 18 |
+| S430 | DayTrader_ORB | 12 | -39.83% | 25% | WATCH | 18 |
 | S431 | DayTrader_RS | 0 | — | — | NEW | 0 |
 | S432 | DayTrader_ORB_RS | 11 | -37.50% | 36% | WATCH | 18 |
 
