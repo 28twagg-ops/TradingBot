@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "61434263aab0408a834b17d33912cd5f",
+  "worker": "S09",
+  "cycle": "2026-11-03T07:08Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S09",
+    "cycle": "2026-11-03T07:08Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly trend reversal after sustained 10-hour uptrend",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "4b997cd57c45cb",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "The live Bitcoin price today is $76,911.31 USD with a 24-hour trading volume of $23,543,677,659.77 USD. We update our BTC to USD price in real-time.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "What's Bitcoin 's price today? The current price of Bitcoin (BTC) is 77,009 USD. For broader market analysis, dive into the technicals on the BTC price chart and read the latest Bitcoin news:",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "$76,553.43 Bitcoin Price (BTC/USD) Today | Live Chart - Binance",
+        "url": "https://www.binance.com/en/price/bitcoin",
+        "snippet": "1 Bitcoin currently costs $76,553.43, down 2.3%% in the last 24 hours. View the live Bitcoin price in USD (BTC/USD), chart, market cap and 24-hour volume.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "btc 10 hour uptrend reversal hypothesis with 5% drop evidence in hourly close data",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 81.965,
+      "load_seconds": 0.027,
+      "eval_count": 272,
+      "prompt_eval_count": 1686,
+      "tokens_per_second": 7.041,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 0.0,
+        "free_ram_gb": 8.85,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-03T07:08Z",
+    "id": "4b997cd57c45cb",
+    "topic": "BTC-USD hourly trend reversal after sustained 10-hour uptrend",
+    "hypothesis": "A 10-hour consecutive uptrend in BTC-USD hourly close prices is followed by a reversal (downward move) in the next hour, with at least a 5% drop relative to the last uptrend close.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For each 10-hour consecutive upward movement in BTC-USD hourly close prices, verify whether the next hour's close is at least 5% lower than the last uptrend close. This test must be applied to a dataset with hourly closes only, without lookahead, and must be executed on a time-ordered, non-lookahead",
+    "source_search": {
+      "query": "btc 10 hour uptrend reversal hypothesis",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "The live Bitcoin price today is $76,911.31 USD with a 24-hour trading volume of $23,543,677,659.77 USD. We update our BTC to USD price in real-time.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "What's Bitcoin 's price today? The current price of Bitcoin (BTC) is 77,009 USD. For broader market analysis, dive into the technicals on the BTC price chart and read the latest Bitcoin news:",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "$76,553.43 Bitcoin Price (BTC/USD) Today | Live Chart - Binance",
+        "url": "https://www.binance.com/en/price/bitcoin",
+        "snippet": "1 Bitcoin currently costs $76,553.43, down 2.3%% in the last 24 hours. View the live Bitcoin price in USD (BTC/USD), chart, market cap and 24-hour volume.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "btc 10 hour uptrend reversal hypothesis with 5% drop evidence in hourly close data",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close"
+    ],
+    "hypothesis_timeframe": "hourly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

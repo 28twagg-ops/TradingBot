@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "802dd67e877f457e84a826b6ec5c2f6b",
+  "worker": "S07",
+  "cycle": "2026-11-03T07:05Z",
+  "generation_index": 1,
+  "model": "qwen3:8b",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S07",
+    "cycle": "2026-11-03T07:05Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly trend persistence across volatility regimes defined by 20-hour standard deviation",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "1e721acca792e6",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "What's Bitcoin 's price today? The current price of Bitcoin (BTC) is 77,009 USD. For broader market analysis, dive into the technicals on the BTC price chart and read the latest Bitcoin news:",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "$76,553.43 Bitcoin Price (BTC/USD) Today | Live Chart - Binance",
+        "url": "https://www.binance.com/en/price/bitcoin",
+        "snippet": "1 Bitcoin currently costs $76,553.43, down 2.3%% in the last 24 hours. View the live Bitcoin price in USD (BTC/USD), chart, market cap and 24-hour volume.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD volatility regime segmentation methodology using 20-hour standard deviation",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:8b",
+    "local_metrics": {
+      "elapsed_seconds": 143.057,
+      "load_seconds": 0.042,
+      "eval_count": 280,
+      "prompt_eval_count": 1682,
+      "tokens_per_second": 4.821,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 3.0,
+        "free_ram_gb": 8.97,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-03T07:05Z",
+    "id": "1e721acca792e6",
+    "topic": "BTC-USD hourly trend persistence across volatility regimes defined by 20-hour standard deviation",
+    "hypothesis": "BTC-USD hourly price trends persist across distinct volatility regimes, with a 20-hour lookback trend rule yielding >70% directional accuracy when the market is in a high-volatility regime.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "Compare directional accuracy of the 20-hour trend rule in high-volatility regimes (defined by 20-hour standard deviation > 1.5) versus low-volatility regimes (standard deviation < 1.5).",
+    "source_search": {
+      "query": "BTC-USD volatility regime segmentation methodology using 20-hour standard deviation",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "What's Bitcoin 's price today? The current price of Bitcoin (BTC) is 77,009 USD. For broader market analysis, dive into the technicals on the BTC price chart and read the latest Bitcoin news:",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "$76,553.43 Bitcoin Price (BTC/USD) Today | Live Chart - Binance",
+        "url": "https://www.binance.com/en/price/bitcoin",
+        "snippet": "1 Bitcoin currently costs $76,553.43, down 2.3%% in the last 24 hours. View the live Bitcoin price in USD (BTC/USD), chart, market cap and 24-hour volume.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD volatility regime segmentation methodology using 20-hour standard deviation",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "volume"
+    ],
+    "hypothesis_timeframe": "hourly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
