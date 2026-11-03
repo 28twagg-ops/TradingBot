@@ -1308,6 +1308,73 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-03T06:46Z",
+        "id": "3092b22a23a700",
+        "topic": "BTC-USD hourly extreme return mean reversion",
+        "hypothesis": "Large hourly returns (\u22655% absolute) are followed by a statistically significant mean reversion within the next 24 hours.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Apply a reversion rule with lookback 24 and threshold 0.05; record win\u2011rate and profit factor. If win\u2011rate < 55% or profit factor < 1.0, reject hypothesis.",
+        "source_search": {
+          "query": "BTC-USD hourly extreme return mean reversion evidence",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $76,834.36 USD with a 24-hour trading volume of $24,634,448,177.72 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "What's Bitcoin 's price today? The current price of Bitcoin (BTC) is 77,009 USD. For broader market analysis, dive into the technicals on the BTC price chart and read the latest Bitcoin news:",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/BTC-USD/",
+            "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "$76,665.36 Bitcoin Price (BTC/USD) Today | Live Chart - Binance",
+            "url": "https://www.binance.com/en/price/bitcoin",
+            "snippet": "1 Bitcoin currently costs $76,665.36, down 2.31%% in the last 24 hours. View the live Bitcoin price in USD (BTC/USD), chart, market cap and 24-hour volume.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "BTC-USD hourly extreme return mean reversion statistical evidence",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ]
   },
@@ -4825,6 +4892,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-03T06:45Z",
+        "id": "d157d545e83da4",
+        "topic": "BTC-USD hourly relative strength vs SPY",
+        "hypothesis": "When BTC-USD hourly relative strength exceeds 1.05 for 12 consecutive hours, BTC-USD exhibits a positive momentum that can be exploited with a buy signal.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "If 12\u2011hour relative strength >1.05 does not produce statistically significant positive returns compared to a random strategy, hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD relative strength vs SPY hourly",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly relative strength vs SPY statistical analysis",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ]
   },
@@ -4974,6 +5079,45 @@
         "preferred_sources": [
           "web",
           "forum"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-03T06:47Z",
+        "id": "35d06d71148711",
+        "topic": "Hourly trend persistence in BTC-USD across market regimes",
+        "hypothesis": "Hourly trend persistence in BTC-USD is stronger during low\u2011volatility regimes and weakens during high\u2011volatility regimes",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Apply a trend rule (lookback 20, threshold 0.05) to hourly BTC-USD and compare win rates in regimes defined by rolling 24\u2011hour volatility above/below median",
+        "source_search": {
+          "query": "BTC-USD hourly trend persistence regime segmentation methodology",
+          "attempted": [
+            "web",
+            "forum"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly trend persistence volatility regime definition",
+        "preferred_sources": [
+          "web"
         ],
         "site_domain": null,
         "research_data_requirements": [
@@ -6267,6 +6411,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-03T06:48Z",
+        "id": "d0db6999edee06",
+        "topic": "BTC-USD hourly trend reversal after sustained 10\u2011hour uptrend",
+        "hypothesis": "After a BTC\u2011USD 10\u2011hour uptrend, the next hour is more likely to close lower than the previous hour\u2019s close by at least 0.05%",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If the next hourly close is lower than the previous close by \u22650.05% after a 10\u2011hour uptrend, count as a reversal; otherwise not. Compute reversal rate over historical data.",
+        "source_search": {
+          "query": "btc 10 hour uptrend reversal hypothesis",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "btc 10 hour uptrend reversal hypothesis evidence",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
       }
     ]
   },
@@ -6421,6 +6603,66 @@
         },
         "source_leads": [],
         "next_search_query": "ETH-USD hourly mean reversion 24h SMA backtest",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 0
+      },
+      {
+        "cycle": "2026-11-03T06:45Z",
+        "id": "5423f263c56e90",
+        "topic": "ETH-USD hourly breakout above 5% SMA triggers mean reversion",
+        "hypothesis": "When ETH-USD hourly close exceeds the 24\u2011hour SMA by more than 5%, the price subsequently reverts toward the SMA within the next 24 hours.",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Apply the breakout rule (lookback 24, threshold 0.05) to historical hourly closes and check if the next 24\u2011hour return is negative on >50% of occurrences.",
+        "source_search": {
+          "query": "ETH-USD hourly mean reversion 24h SMA backtest",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Ethereum price today, ETH to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/ethereum/",
+            "snippet": "Ethereum is a decentralized open-source blockchain system that features its own cryptocurrency, Ether. ETH works as a platform for numerous other cryptocurrencies, as well as for the execution of decentralized smart contracts. Ethereum was ",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Ethereum ETH (ETH-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/ETH-USD/",
+            "snippet": "Find the live Ethereum USD (ETH-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "ETHUSD \u2014 Ethereum Price Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/ETHUSD/",
+            "snippet": "Watch live Ethereum to Dollar charts, follow ETH USD prices in real-time, get historical data. Check the Ethereum market cap, top trading ideas and forecasts.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "ETH-USD hourly breakout 24h SMA 5% backtest",
         "preferred_sources": [
           "web"
         ],
