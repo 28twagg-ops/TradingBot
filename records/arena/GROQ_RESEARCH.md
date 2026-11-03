@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-03T21:58Z | S04a | BTC-USD hourly gap‑down >2% next‑hour return | a17b1e0e886484 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-03T21:57Z | S08a | BTC-USD hourly return mean reversion under low r | f532d2e84e6a1e | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-03T21:56Z | S01a | BTC-USD hourly trend persistence | e3e90d1b205c50 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-03T21:56Z | S05a | Hourly opening‑range breakout on BTC‑USD | 3ad39ccb62350d | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-03T21:55Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | 22c6608e6db452 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-03T21:00Z | S09b | BTC-USD hourly trend reversal after sustained 10 | ea560140402350 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-03T21:00Z | S07b | BTC-USD hourly trend persistence in low‑volatili | 4014ef73efa639 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-03T20:59Z | S02b | BTC-USD hourly trend persistence | 4a7af0ad933490 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-03T06:52Z | S01a | BTC-USD hourly price reversion to 24‑hour SMA | 13f5d2ebc7765a | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-03T06:52Z | S05a | Hourly opening‑range breakout on BTC‑USD | 81023cc782f230 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-03T06:51Z | S03a | BTC-USD hourly mean reversion at 24h lag | fc668db8cf2b23 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-03T06:48Z | S09b | BTC-USD hourly trend reversal after sustained 10 | d0db6999edee06 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-03T06:47Z | S07b | Hourly trend persistence in BTC-USD across marke | 35d06d71148711 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-03T06:46Z | S02b | BTC-USD hourly extreme return mean reversion | 3092b22a23a700 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-03T06:45Z | S10b | ETH-USD hourly breakout above 5% SMA triggers me | 5423f263c56e90 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-03T06:45Z | S06b | BTC-USD hourly relative strength vs SPY | d157d545e83da4 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
