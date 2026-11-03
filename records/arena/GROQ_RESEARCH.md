@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-03T16:22Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 930845737c5c7b | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-03T16:21Z | S07b | Hourly trend persistence in BTC-USD during low‑v | 4b53f8243ad78f | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-03T16:21Z | S02b | BTC-USD hourly trend persistence | 0ab62bd6bb58a7 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-03T16:20Z | S10b | ETH-USD hourly breakout above 5% SMA triggers me | d96de60e69c120 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-03T16:19Z | S06b | BTC-USD hourly relative strength vs SPY statisti | 50bf12b7a89857 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-03T15:08Z | S04a | BTC-USD hourly gap‑down >2% next‑hour momentum | 71952682f40648 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-03T15:07Z | S08a | Hourly price move size under low realized volati | eb9d95522025e7 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-03T15:07Z | S01a | BTC-USD hourly reversion to 24‑hour SMA | 56969f8e902280 | HOLD |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-02T23:31Z | S01a | BTC-USD hourly price reversion to 24‑hour SMA | 1a84ef7a1ccb7c | HOLD_INVALID_MODEL_DECISION |
 | 2026-11-02T23:30Z | S05a | BTC-USD hourly opening‑range breakout | 0fe7b3ca7820e6 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-02T23:29Z | S03a | BTC-USD hourly mean reversion at 24h lag | cba498d1c4380a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-02T20:55Z | S06b |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
-| 2026-11-02T20:54Z | S09b | BTC-USD hourly trend reversal after sustained 10 | d55a889eb4b016 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-02T20:54Z | S07b | Hourly trend persistence in BTC-USD across marke | 779b1ca17b1303 | HOLD |
-| 2026-11-02T20:53Z | S02b | BTC-USD hourly trend persistence | c9eb00b3d39985 | HOLD |
-| 2026-11-02T20:52Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | 09dba8e40672a9 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
