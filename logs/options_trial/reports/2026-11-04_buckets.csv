@@ -17,7 +17,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-11-03,False,,100.0,519.72,519.72,519.72,519.72,369.0,AAPL,S356,take_profit (+512.7%),closed
 16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-29,False,,,,,,,0,,,,idle
 17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-04,False,,0.0,-47.06,-47.06,-47.06,-47.06,-8.0,NVDA,S359,broker_fill_backfill,closed
-18,lab0018_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-04,False,,,,,,,0,NVDA,S361,,entered_no_exit
+18,lab0018_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-04,False,,0.0,-50.0,-50.0,-50.0,-50.0,-15.0,NVDA,S361,broker_fill_backfill,closed
 19,lab0019_s362_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-04,False,,,,,,,0,AVGO,S362,,entered_no_exit
 20,lab0020_s364_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-04,False,,,,,,,0,NVDA,S364,,entered_no_exit
 21,lab0021_s365_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-30,False,,,,,,,0,,,,idle
@@ -50,8 +50,8 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 48,lab0048_s394_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 49,lab0049_s396_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-10-30,False,,,,,,,0,,,,open
 50,lab0050_s397_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-04,False,,,,,,,0,TSLA,S397,,entered_no_exit
-51,lab0051_s404_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-30,False,,,,,,,0,,,,idle
-52,lab0052_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-04,False,,,,,,,0,NVDA,S406,,entered_no_exit
+51,lab0051_s404_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-04,False,,,,,,,0,MARA,S404,,entered_no_exit
+52,lab0052_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-04,False,,0.0,-45.45,-45.45,-45.45,-45.45,-5.0,NVDA,S406,broker_fill_backfill,closed
 53,lab0053_s409_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-22,False,,,,,,,0,,,,idle
 54,lab0054_s410_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-14,False,,,,,,,0,,,,idle
 55,lab0055_s411_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-04,False,,,,,,,0,PLTR,S411,,entered_no_exit
@@ -69,7 +69,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 67,lab0067_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-04,False,,100.0,94.44,94.44,94.44,94.44,34.0,TSLA,S164,take_profit (+58.3%),closed
 68,lab0068_s432_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-17,False,,,,,,,0,,,,idle
 69,lab0069_s430_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-21,False,,,,,,,0,,,,idle
-90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,1,1,2026-11-04,False,,100.0,60.66,60.66,60.66,60.66,37.0,"NVDA,TSLA","S404,S406",take_profit (+59.0%),closed
+90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,2,0,2026-11-04,False,,50.0,10.72,10.72,60.66,-39.22,17.0,"NVDA,TSLA","S404,S406",take_profit (+59.0%); broker_fill_backfill,closed
 91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,1,0,2026-11-04,False,,100.0,74.55,74.55,74.55,74.55,41.0,COIN,S406,take_profit (+72.7%),closed
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2001,promising_s170_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
@@ -78,4 +78,4 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 2004,promising_s175_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2005,promising_s220_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2006,promising_s221_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
-2007,day_trader_analytics_s431,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-11-04,False,,,,,,,0,SMCI,S430,,entered_no_exit
+2007,day_trader_analytics_s431,ask-0.01,bid-0.01,50.0,-40.0,1,1,0,2026-11-04,False,,0.0,-45.45,-45.45,-45.45,-45.45,-25.0,SMCI,S430,broker_fill_backfill,closed
