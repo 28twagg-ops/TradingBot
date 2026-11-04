@@ -34,3 +34,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-10-30 13:44:04.042049+00:00,entry,91,s406_only,S406,48e7c4e15df7,META,META261102C00647500,1,0.62,0.61,61.0,,,,-0.01,,0.5,-0.4,0.21052631578947364,RB gap -1.6% reclaim,638f7156-6c10-4e25-a34c-fa14351cc81e
 2026-11-03T14:01:55Z,reconcile,91,s406_only,S406,48e7c4e15df7,META,META261102C00647500,0,,,61.0,,,missing_from_broker,,,0.5,-0.4,,lot closed outside of bot; no sell fill found,
 2026-11-04 14:49:27.223714+00:00,entry,91,s406_only,S406,db79c8c1e5b7,COIN,COIN261106C00162500,1,0.57,0.55,55.0,,,,-0.01,,0.5,-0.4,0.20952380952380953,RB gap -2.4% reclaim,d6c7ae8b-0e4a-4df0-b4b8-0bfee47afa15
+2026-11-04 15:22:09.480941+00:00,exit,91,s406_only,S406,db79c8c1e5b7,COIN,COIN261106C00162500,1,,0.96,55.0,74.55,41.0,take_profit (+72.7%),,-0.01,0.5,-0.4,,,9eeb83d4-a518-4a57-af77-380d87983368

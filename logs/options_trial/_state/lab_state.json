@@ -42,26 +42,6 @@
       "entry_order_id": "b4e242f9-c39a-46dd-8669-e0cdfefbebe8"
     },
     {
-      "lot_id": "28685627867b",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S404",
-      "occ_symbol": "TSLA261106C00410000",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 61.0,
-      "entry_price": 0.61,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-04T14:49:16.530523+00:00",
-      "entry_order_id": "9ee4d6c9-fcad-43b9-927e-c54093cf3b27"
-    },
-    {
       "lot_id": "9663e890c2a0",
       "bucket_id": 90,
       "profile_name": "live_1to1",
@@ -80,26 +60,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-04T14:49:16.534747+00:00",
       "entry_order_id": "1d401ae6-689c-40fd-8238-857715a66dcd"
-    },
-    {
-      "lot_id": "db79c8c1e5b7",
-      "bucket_id": 91,
-      "profile_name": "s406_only",
-      "strategy_id": "S406",
-      "occ_symbol": "COIN261106C00162500",
-      "underlying": "COIN",
-      "qty": 1,
-      "entry_cost": 55.00000000000001,
-      "entry_price": 0.55,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-04T14:52:17.491875+00:00",
-      "entry_order_id": "d6c7ae8b-0e4a-4df0-b4b8-0bfee47afa15"
     },
     {
       "lot_id": "e7d3ee66af5b",
@@ -322,43 +282,27 @@
       "entry_order_id": "bd4dcbd8-37f7-40ba-826a-1185cb2f2d24"
     },
     {
-      "lot_id": "cdc5119cba9e",
-      "bucket_id": 17,
-      "profile_name": "lab0017_s359_w2_1005_1045_r1",
-      "strategy_id": "S359",
-      "occ_symbol": "NVDA261104C00210000",
-      "underlying": "NVDA",
-      "qty": 1,
-      "entry_cost": 17.0,
-      "entry_price": 0.17,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-04T15:12:19.616274+00:00",
-      "entry_order_id": "d0a436c4-133d-4586-bfc1-16ed24812b06"
-    }
-  ],
-  "pending_orders": [
-    {
-      "order_id": "4c837ac7-c167-4f50-ac2a-f8570104c955",
+      "lot_id": "d5c12dc6d917",
       "bucket_id": 2007,
+      "profile_name": "day_trader_analytics_s430",
       "strategy_id": "S430",
       "occ_symbol": "SMCI261106C00033000",
       "underlying": "SMCI",
       "qty": 1,
-      "limit": 0.55,
-      "profile_name": "day_trader_analytics_s430",
-      "submitted": "2026-11-04",
-      "detail": "ORB-drive +2.8% gap +0.1% VZ=-1.1",
-      "spread_frac": 0.03636363636363639,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.6000000000000001
-    },
+      "entry_cost": 55.00000000000001,
+      "entry_price": 0.55,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-04T15:22:55.444119+00:00",
+      "entry_order_id": "4c837ac7-c167-4f50-ac2a-f8570104c955"
+    }
+  ],
+  "pending_orders": [
     {
       "order_id": "a34ddd92-04e0-4000-b5c3-a0b6924bd793",
       "bucket_id": 51,
@@ -391,8 +335,7 @@
   "bucket_open_premium": {
     "b49": 54.0,
     "b6": 69.0,
-    "b90": 112.0,
-    "b91": 55.00000000000001,
+    "b90": 51.0,
     "b12": 66.0,
     "b19": 46.0,
     "b2009": 33.0,
@@ -404,7 +347,7 @@
     "b18": 30.0,
     "b66": 32.0,
     "b55": 57.99999999999999,
-    "b17": 17.0
+    "b2007": 55.00000000000001
   },
   "session_date": "2026-11-04",
   "entries_locked": [
@@ -844,7 +787,11 @@
     "6b6b71f3-eab5-437e-93a0-0b5b88e7a240",
     "4eb4047d-4c78-45f0-9e34-e5a5931df8f9",
     "bd4dcbd8-37f7-40ba-826a-1185cb2f2d24",
-    "d0a436c4-133d-4586-bfc1-16ed24812b06"
+    "d0a436c4-133d-4586-bfc1-16ed24812b06",
+    "d370f85a-0e32-443d-8ca3-33c21c3087de",
+    "9eeb83d4-a518-4a57-af77-380d87983368",
+    "4c837ac7-c167-4f50-ac2a-f8570104c955",
+    "c8214b64-16ca-40ed-9a94-d979d2f3e6ce"
   ],
   "submitted_today": 17,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
