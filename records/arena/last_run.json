@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-04T12:12:09.922380+00:00",
+  "timestamp": "2026-11-04T19:48:52.566713+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -21,29 +21,29 @@
       "missing_quotes": []
     },
     "S03": {
-      "action": "SELL BTC-USD",
+      "action": "SELL SPY",
       "generation_index": 0,
-      "cash": 90.95173863,
-      "equity": 99.6833,
-      "ledger_events": 7,
+      "cash": 99.83033892,
+      "equity": 99.8303,
+      "ledger_events": 8,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S04": {
-      "action": "HOLD",
+      "action": "SELL SPY",
       "generation_index": 0,
-      "cash": 36.81587157,
-      "equity": 100.1213,
-      "ledger_events": 6,
+      "cash": 77.24871121,
+      "equity": 102.3128,
+      "ledger_events": 7,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S05": {
-      "action": "HOLD",
+      "action": "BUY SPY",
       "generation_index": 0,
-      "cash": 60.3172616,
-      "equity": 100.4189,
-      "ledger_events": 1,
+      "cash": 36.40535629,
+      "equity": 102.0484,
+      "ledger_events": 2,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -57,11 +57,11 @@
       "missing_quotes": []
     },
     "S07": {
-      "action": "BUY BTC-USD",
+      "action": "BUY SPY",
       "generation_index": 1,
-      "cash": 60.08609976,
-      "equity": 99.4297,
-      "ledger_events": 3,
+      "cash": 36.26644421,
+      "equity": 100.361,
+      "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -75,11 +75,11 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "BUY BTC-USD",
+      "action": "BUY ETH-USD",
       "generation_index": 1,
-      "cash": 60.08609976,
-      "equity": 99.4297,
-      "ledger_events": 3,
+      "cash": 36.2428311,
+      "equity": 100.3372,
+      "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
