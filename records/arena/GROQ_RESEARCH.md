@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-04T11:35Z | S01a | BTC-USD hourly trend persistence | 13d70ed9d4adb6 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-04T11:34Z | S05a | Hourly opening‑range breakout on BTC‑USD | adab785f36582f | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-04T11:34Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | 191a14a404ae22 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-04T11:33Z | S09b | BTC-USD hourly trend reversal after sustained 10 | f1ee29df6ea3f3 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-04T11:32Z | S07b | Hourly trend persistence in BTC-USD across low‑v | 331d698758919b | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-04T09:11Z | S02b | BTC-USD hourly trend persistence | 3e4c43e23888c4 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-04T09:10Z | S10b | ETH-USD hourly breakout 5% SMA mean reversion | 7108971d984c2a | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-04T09:10Z | S06b | BTC-USD hourly trend on 12‑hour SMA | d1fbf8a5fb9d05 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-03T18:39Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | 37ed0b26943246 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-03T16:22Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 930845737c5c7b | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-03T16:21Z | S07b | Hourly trend persistence in BTC-USD during low‑v | 4b53f8243ad78f | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-03T16:21Z | S02b | BTC-USD hourly trend persistence | 0ab62bd6bb58a7 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-03T16:20Z | S10b | ETH-USD hourly breakout above 5% SMA triggers me | d96de60e69c120 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-03T16:19Z | S06b | BTC-USD hourly relative strength vs SPY statisti | 50bf12b7a89857 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-03T15:08Z | S04a | BTC-USD hourly gap‑down >2% next‑hour momentum | 71952682f40648 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-03T15:07Z | S08a | Hourly price move size under low realized volati | eb9d95522025e7 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

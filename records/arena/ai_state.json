@@ -1377,6 +1377,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-04T11:35Z",
+        "id": "13d70ed9d4adb6",
+        "topic": "BTC-USD hourly trend persistence",
+        "hypothesis": "Hourly returns of BTC-USD exhibit a trend persistence over a 20\u2011hour window, such that if the cumulative return over the last 20 hours exceeds 5% the next hour\u2019s return is more likely to continue in the same direction.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compute the 20\u2011hour cumulative return for each hour. Count the number of times a cumulative return >5% is followed by a positive next\u2011hour return. Compare this frequency to 50% using a binomial test. If the proportion is not significantly >0.5, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly trend persistence empirical study 2024 2025",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly trend persistence 20h 5% empirical study 2024 2025",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -3125,6 +3163,44 @@
         },
         "source_leads": [],
         "next_search_query": "BTC-USD hourly returns 12\u2011hour lag autocorrelation 2025 2026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-04T11:34Z",
+        "id": "191a14a404ae22",
+        "topic": "BTC-USD hourly mean reversion at 12\u2011hour lag",
+        "hypothesis": "Hourly returns of BTC\u2011USD exhibit significant negative autocorrelation at lag\u202f12, implying a mean\u2011reverting pattern that can be exploited with a simple reversion rule.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compute the 12\u2011hour lag autocorrelation of BTC\u2011USD hourly returns over a recent 2\u2011year window and test whether a reversion rule with lookback\u202f12 and threshold\u202f0.05 yields a statistically significant positive Sharpe ratio on a fixed holdout period.",
+        "source_search": {
+          "query": "BTC-USD hourly returns 12\u2011hour lag autocorrelation 2025 2026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly returns autocorrelation lag 12 2025 2026",
         "preferred_sources": [
           "web"
         ],
@@ -5789,6 +5865,52 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-04T11:34Z",
+        "id": "adab785f36582f",
+        "topic": "Hourly opening\u2011range breakout on BTC\u2011USD",
+        "hypothesis": "A 5\u2011hour opening\u2011range breakout on BTC\u2011USD with a 5% threshold signals a statistically significant regime shift in subsequent hourly returns.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compare the frequency of 5\u2011hour opening\u2011range breakouts with a 5% threshold to a random\u2011walk benchmark using hourly close data. If the observed breakout frequency is not significantly higher than the benchmark, reject the hypothesis.",
+        "source_search": {
+          "query": "BTC-USD hourly close data 2019\u20112026 opening range breakout statistics",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History ...",
+            "url": "https://finance.yahoo.com/quote/BTC-USD/",
+            "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "BTC-USD hourly close data 2019\u20112026 opening\u2011range breakout statistics",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -6453,6 +6575,44 @@
         },
         "source_leads": [],
         "next_search_query": "BTC-USD low\u2011volatility regime definition 10\u2011hour standard deviation",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-04T11:32Z",
+        "id": "331d698758919b",
+        "topic": "Hourly trend persistence in BTC-USD across low\u2011volatility regimes",
+        "hypothesis": "A 20\u2011hour upward trend in BTC\u2011USD, defined by a cumulative return >5%, persists for at least 4 additional hours when the preceding 20\u2011hour standard deviation is below 2% of the price.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "If a 20\u2011hour upward trend fails to continue for 4 hours during a low\u2011volatility regime (20\u2011hour SD <2%), the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD low\u2011volatility regime definition 10\u2011hour standard deviation",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD low\u2011volatility regime definition 20\u2011hour standard deviation",
         "preferred_sources": [
           "web"
         ],
@@ -8118,6 +8278,44 @@
         "falsification_test": "Identify every 10\u2011hour consecutive uptrend; if any subsequent hour closes lower than 95% of the 10\u2011hour peak, the hypothesis is falsified",
         "source_search": {
           "query": "btc 10 hour uptrend reversal evidence",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "btc 10 hour uptrend reversal frequency",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-04T11:33Z",
+        "id": "f1ee29df6ea3f3",
+        "topic": "BTC-USD hourly trend reversal after sustained 10\u2011hour uptrend",
+        "hypothesis": "After a sustained 10\u2011hour uptrend in BTC\u2011USD hourly close prices, the next hour\u2019s close will fall by at least 5% relative to the 10\u2011hour uptrend peak.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Identify every 10\u2011hour period of consecutive hourly close increases; if any subsequent hour\u2019s close is not at least 5% lower than the peak of that period, the hypothesis is falsified.",
+        "source_search": {
+          "query": "btc 10 hour uptrend reversal frequency",
           "attempted": [
             "web"
           ],
