@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "c484ffa28c5b4ad38911edd22cdf7766",
+  "worker": "S03",
+  "cycle": "2026-11-04T12:41Z",
+  "generation_index": 0,
+  "model": "qwen3:8b",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S03",
+    "cycle": "2026-11-04T12:41Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Does the BTC-USD hourly return exhibit mean reversion at a 24-hour lag with a 3% threshold under rea",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "fundamentals",
+        "order_book",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "087599f2a43a5a",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "EMPIRICAL Definition & Meaning - Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/empirical",
+        "snippet": "Empirical can still be used critically to describe ideas and practices that rely on experience or observation alone and without due regard for system or theory.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "EMPIRICAL | English meaning - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/dictionary/english/empirical",
+        "snippet": "EMPIRICAL definition: 1. based on what is experienced or seen rather than on theory: 2. based on what is experienced or…. Learn more.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Empirical evidence - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Empirical_evidence",
+        "snippet": "Empirical evidence is evidence obtained through sense experience or experimental procedure. [1] It is of central importance to the sciences and plays a role in various other fields, like epistemology and law.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "EMPIRICAL Definition & Meaning | Dictionary.com",
+        "url": "https://www.dictionary.com/browse/empirical",
+        "snippet": "EMPIRICAL definition: derived from or guided by direct experience or by experiment, rather than abstract principles or theory. See examples of empirical used in a sentence.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Empirical study on BTC-USD hourly autocorrelation at 24-hour lag with 3% threshold, 2024-2026, including multiple testing correcti",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:8b",
+    "local_metrics": {
+      "elapsed_seconds": 157.738,
+      "load_seconds": 5.243,
+      "eval_count": 321,
+      "prompt_eval_count": 1667,
+      "tokens_per_second": 4.559,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 5.7,
+        "free_ram_gb": 12.48,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-04T12:41Z",
+    "id": "087599f2a43a5a",
+    "topic": "Does the BTC-USD hourly return exhibit mean reversion at a 24-hour lag with a 3% threshold under rea",
+    "hypothesis": "The BTC-USD hourly returns show mean reversion at a 24-hour lag with a 3% threshold, even after accounting for fees, latency, and slippage.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "fundamentals",
+        "order_book",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "Test if the BTC-USD hourly returns at a 24-hour lag with a 3% threshold show no significant mean reversion after applying realistic fees, latency, and slippage in a fixed holdout period.",
+    "source_search": {
+      "query": "Empirical study on BTC-USD hourly autocorrelation at 24-hour lag with 3% threshold, 2024-2026, including multiple testing correcti",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "EMPIRICAL Definition & Meaning - Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/empirical",
+        "snippet": "Empirical can still be used critically to describe ideas and practices that rely on experience or observation alone and without due regard for system or theory.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "EMPIRICAL | English meaning - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/dictionary/english/empirical",
+        "snippet": "EMPIRICAL definition: 1. based on what is experienced or seen rather than on theory: 2. based on what is experienced or…. Learn more.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Empirical evidence - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Empirical_evidence",
+        "snippet": "Empirical evidence is evidence obtained through sense experience or experimental procedure. [1] It is of central importance to the sciences and plays a role in various other fields, like epistemology and law.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "EMPIRICAL Definition & Meaning | Dictionary.com",
+        "url": "https://www.dictionary.com/browse/empirical",
+        "snippet": "EMPIRICAL definition: derived from or guided by direct experience or by experiment, rather than abstract principles or theory. See examples of empirical used in a sentence.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Empirical study on BTC-USD hourly autocorrelation at 24-hour lag with 3% threshold, 2024-2026, including multiple testing correcti",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "fundamentals",
+      "order_book",
+      "volume"
+    ],
+    "hypothesis_timeframe": "2024-2026",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

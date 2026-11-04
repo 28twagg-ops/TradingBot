@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "6213d9c106684533a6c03c2ec9986192",
+  "worker": "S06",
+  "cycle": "2026-11-04T12:47Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S06",
+    "cycle": "2026-11-04T12:47Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD relative strength to SPY",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "06c1cb991e3052",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "SPDR S&P 500 ETF Trust: SPY Stock Price Quote & News | Robinhood",
+        "url": "https://robinhood.com/us/en/stocks/SPY/",
+        "snippet": "SPY tracks a market cap-weighted index of US large- and mid-cap stocks selected by the S&P Committee. The listed name for SPY is State Street SPDR S&P 500 ETF Trust.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "SPY: The original S&P 500® ETF | State Street SPDR® - SSGA",
+        "url": "https://www.ssga.com/us/en/intermediary/capabilities/spdr-core-equity-etfs/spy-sp-500",
+        "snippet": "SPY is the ticker symbol for the State Street® SPDR® S&P 500® ETF, an exchange traded fund that tracks the performance of the S&P 500® Index.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "State Street SPDR S&P 500 ETF Trust (SPY ) - Yahoo Finance",
+        "url": "https://finance.yahoo.com/chart/SPY",
+        "snippet": "At Yahoo Finance, you get free stock quotes, up-to-date news, portfolio management resources, international market data, social interaction and mortgage rates that help you manage your financial...",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD and SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps, and full time",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 95.522,
+      "load_seconds": 0.03,
+      "eval_count": 309,
+      "prompt_eval_count": 1721,
+      "tokens_per_second": 6.498,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 6.0,
+        "free_ram_gb": 6.42,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-04T12:47Z",
+    "id": "06c1cb991e3052",
+    "topic": "BTC-USD relative strength to SPY",
+    "hypothesis": "When BTC-USD's 12-hour relative strength to SPY exceeds 5% above its 12-hour mean, BTC-USD will close lower in the next hour.",
+    "candidate": null,
+    "symbol": "SPY",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For each hour in 2020-2026, compute BTC-USD's 12-hour relative strength to SPY. If the relative strength exceeds 5% above its 12-hour mean, then BTC-USD must close lower in the next hour. If this occurs in any hour and BTC-USD closes higher, the hypothesis is falsified.",
+    "source_search": {
+      "query": "SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "SPDR S&P 500 ETF Trust: SPY Stock Price Quote & News | Robinhood",
+        "url": "https://robinhood.com/us/en/stocks/SPY/",
+        "snippet": "SPY tracks a market cap-weighted index of US large- and mid-cap stocks selected by the S&P Committee. The listed name for SPY is State Street SPDR S&P 500 ETF Trust.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "SPY: The original S&P 500® ETF | State Street SPDR® - SSGA",
+        "url": "https://www.ssga.com/us/en/intermediary/capabilities/spdr-core-equity-etfs/spy-sp-500",
+        "snippet": "SPY is the ticker symbol for the State Street® SPDR® S&P 500® ETF, an exchange traded fund that tracks the performance of the S&P 500® Index.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "State Street SPDR S&P 500 ETF Trust (SPY ) - Yahoo Finance",
+        "url": "https://finance.yahoo.com/chart/SPY",
+        "snippet": "At Yahoo Finance, you get free stock quotes, up-to-date news, portfolio management resources, international market data, social interaction and mortgage rates that help you manage your financial...",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD and SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps, and full time",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close"
+    ],
+    "hypothesis_timeframe": "2020-2026",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

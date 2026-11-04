@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "274d9c32869240dfbba9ea50b6486c67",
+  "worker": "S09",
+  "cycle": "2026-11-04T12:52Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S09",
+    "cycle": "2026-11-04T12:52Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly trend reversal after sustained 10-hour uptrend",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "6c103d4cbf2c85",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "To Do List Maker",
+        "url": "https://listmaker.com/to-do",
+        "snippet": "Create online to-do lists for work and keep your tasks organized. Manage your to-do list, take notes, track habits, and organize ideas into outlines and lists.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "List-maker.com",
+        "url": "https://list-maker.com/",
+        "snippet": "list-maker.com Create a list that you can easily share with your friends or family!",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "LIST Definition & Meaning - Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/list",
+        "snippet": "The meaning of LIST is a simple series of words or numerals (such as the names of persons or objects). How to use list in a sentence.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "list of market regimes in BTC-USD with timestamped price action clusters and volatility indicators",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 83.474,
+      "load_seconds": 0.013,
+      "eval_count": 275,
+      "prompt_eval_count": 1602,
+      "tokens_per_second": 7.157,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 6.9,
+        "free_ram_gb": 5.72,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-04T12:52Z",
+    "id": "6c103d4cbf2c85",
+    "topic": "BTC-USD hourly trend reversal after sustained 10-hour uptrend",
+    "hypothesis": "A sustained 10-hour uptrend in BTC-USD hourly close prices is associated with a statistically significant reversal in the following hour, independent of broader market regimes.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For each 10-hour sustained uptrend in BTC-USD hourly close prices, observe whether the following hour's close is lower than the previous hour's close, with no lookahead, using only historical hourly close prices from 2020 to 2026, and with no external data or model inputs.",
+    "source_search": {
+      "query": "list of market regimes in BTC-USD with timestamped price action clusters and volatility indicators",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "To Do List Maker",
+        "url": "https://listmaker.com/to-do",
+        "snippet": "Create online to-do lists for work and keep your tasks organized. Manage your to-do list, take notes, track habits, and organize ideas into outlines and lists.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "List-maker.com",
+        "url": "https://list-maker.com/",
+        "snippet": "list-maker.com Create a list that you can easily share with your friends or family!",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "LIST Definition & Meaning - Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/list",
+        "snippet": "The meaning of LIST is a simple series of words or numerals (such as the names of persons or objects). How to use list in a sentence.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "list of market regimes in BTC-USD with timestamped price action clusters and volatility indicators",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "volume"
+    ],
+    "hypothesis_timeframe": "2020-2026",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
