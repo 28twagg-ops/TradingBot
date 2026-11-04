@@ -45,9 +45,9 @@
       "crypto:ETH/USD": 0.0
     },
     "seen": {
-      "BTC-USD": "2026-11-04T01:00:00Z",
-      "ETH-USD": "2026-11-04T01:00:00Z",
-      "SOL-USD": "2026-11-04T01:00:00Z",
+      "BTC-USD": "2026-11-04T11:00:00Z",
+      "ETH-USD": "2026-11-04T11:00:00Z",
+      "SOL-USD": "2026-11-04T11:00:00Z",
       "SPY": "2026-11-03T14:30:00Z",
       "QQQ": "2026-11-03T14:30:00Z",
       "AAPL": "2026-11-03T14:30:00Z",
@@ -104,9 +104,9 @@
       "QQQ": "2026-11-03T14:30:00Z",
       "AAPL": "2026-11-03T14:30:00Z",
       "MSFT": "2026-11-03T14:30:00Z",
-      "BTC-USD": "2026-11-04T01:00:00Z",
-      "ETH-USD": "2026-11-04T01:00:00Z",
-      "SOL-USD": "2026-11-04T01:00:00Z"
+      "BTC-USD": "2026-11-04T11:00:00Z",
+      "ETH-USD": "2026-11-04T11:00:00Z",
+      "SOL-USD": "2026-11-04T11:00:00Z"
     },
     "generation_index": 1
   },
@@ -237,19 +237,41 @@
         },
         "previous_hash": "41ee06c576ed87ea8871399b73b2635ec7bfe1fe168ca849ab4af7182facca7b",
         "hash": "a15c53e0888d72856df9a04a08e02e1dfa98d812cea8cd5dd7c50f3fd187a8bc"
+      },
+      {
+        "worker": "S03",
+        "seq": 7,
+        "timestamp": "2026-11-04T12:12:09.922380Z",
+        "asset_class": "crypto",
+        "symbol": "BTC/USD",
+        "side": "SELL",
+        "qty": 0.000502,
+        "price": 78373.6171875,
+        "fee": 0.07868711165625,
+        "multiplier": 1,
+        "source_id": "YAHOO:BTC-USD:2026-11-04T11:00:00Z",
+        "balance_after": 90.95173863,
+        "positions_after": {
+          "crypto:BTC/USD": 0.0,
+          "crypto:ETH/USD": 0.0,
+          "crypto:SOL/USD": 0.0,
+          "us_equity:SPY": 0.011574
+        },
+        "previous_hash": "a15c53e0888d72856df9a04a08e02e1dfa98d812cea8cd5dd7c50f3fd187a8bc",
+        "hash": "cc2b41fba1429e4838340db749dc7fc41f452ccc8ab06f7d333860d84f3a2cb9"
       }
     ],
-    "cash": 51.68686991,
+    "cash": 90.95173863,
     "positions": {
-      "crypto:BTC/USD": 0.000502,
+      "crypto:BTC/USD": 0.0,
       "crypto:ETH/USD": 0.0,
       "crypto:SOL/USD": 0.0,
       "us_equity:SPY": 0.011574
     },
     "seen": {
-      "BTC-USD": "2026-11-04T01:00:00Z",
-      "ETH-USD": "2026-11-04T01:00:00Z",
-      "SOL-USD": "2026-11-04T01:00:00Z",
+      "BTC-USD": "2026-11-04T11:00:00Z",
+      "ETH-USD": "2026-11-04T11:00:00Z",
+      "SOL-USD": "2026-11-04T11:00:00Z",
       "SPY": "2026-11-03T14:30:00Z",
       "QQQ": "2026-11-03T14:30:00Z",
       "AAPL": "2026-11-03T14:30:00Z",
@@ -388,9 +410,9 @@
       "us_equity:AAPL": 0.070981
     },
     "seen": {
-      "BTC-USD": "2026-11-04T01:00:00Z",
-      "ETH-USD": "2026-11-04T01:00:00Z",
-      "SOL-USD": "2026-11-04T01:00:00Z",
+      "BTC-USD": "2026-11-04T11:00:00Z",
+      "ETH-USD": "2026-11-04T11:00:00Z",
+      "SOL-USD": "2026-11-04T11:00:00Z",
       "SPY": "2026-11-03T14:30:00Z",
       "QQQ": "2026-11-03T14:30:00Z",
       "AAPL": "2026-11-03T14:30:00Z",
@@ -424,9 +446,9 @@
       "crypto:ETH/USD": 0.017249
     },
     "seen": {
-      "BTC-USD": "2026-11-04T01:00:00Z",
-      "ETH-USD": "2026-11-04T01:00:00Z",
-      "SOL-USD": "2026-11-04T01:00:00Z",
+      "BTC-USD": "2026-11-04T11:00:00Z",
+      "ETH-USD": "2026-11-04T11:00:00Z",
+      "SOL-USD": "2026-11-04T11:00:00Z",
       "SPY": "2026-11-03T14:30:00Z",
       "QQQ": "2026-11-03T14:30:00Z",
       "AAPL": "2026-11-03T14:30:00Z",
@@ -483,9 +505,9 @@
       "QQQ": "2026-11-03T14:30:00Z",
       "AAPL": "2026-11-03T14:30:00Z",
       "MSFT": "2026-11-03T14:30:00Z",
-      "BTC-USD": "2026-11-04T01:00:00Z",
-      "ETH-USD": "2026-11-04T01:00:00Z",
-      "SOL-USD": "2026-11-04T01:00:00Z"
+      "BTC-USD": "2026-11-04T11:00:00Z",
+      "ETH-USD": "2026-11-04T11:00:00Z",
+      "SOL-USD": "2026-11-04T11:00:00Z"
     },
     "generation_index": 1
   },
@@ -528,20 +550,39 @@
         },
         "previous_hash": "72b4af6afb18144fe89ab05707b153cf7bc31940dd0b1ab4c02540264ebf0457",
         "hash": "95c47551ed505f2e775dfcdfd761d4fd2eb36eac756aa4a023e634a38de3670d"
+      },
+      {
+        "worker": "S07",
+        "seq": 3,
+        "timestamp": "2026-11-04T12:12:09.922380Z",
+        "asset_class": "crypto",
+        "symbol": "BTC/USD",
+        "side": "BUY",
+        "qty": 0.000502,
+        "price": 78373.6171875,
+        "fee": 0.07868711165625,
+        "multiplier": 1,
+        "source_id": "YAHOO:BTC-USD:2026-11-04T11:00:00Z",
+        "balance_after": 60.08609976,
+        "positions_after": {
+          "crypto:BTC/USD": 0.000502
+        },
+        "previous_hash": "95c47551ed505f2e775dfcdfd761d4fd2eb36eac756aa4a023e634a38de3670d",
+        "hash": "ed0325342e8611f36ae02364059e0fdd67c1c0cf0421211fcde8b4b3641713ea"
       }
     ],
-    "cash": 99.5083427,
+    "cash": 60.08609976,
     "positions": {
-      "crypto:BTC/USD": 0.0
+      "crypto:BTC/USD": 0.000502
     },
     "seen": {
       "SPY": "2026-11-03T14:30:00Z",
       "QQQ": "2026-11-03T14:30:00Z",
       "AAPL": "2026-11-03T14:30:00Z",
       "MSFT": "2026-11-03T14:30:00Z",
-      "BTC-USD": "2026-11-04T01:00:00Z",
-      "ETH-USD": "2026-11-04T01:00:00Z",
-      "SOL-USD": "2026-11-04T01:00:00Z"
+      "BTC-USD": "2026-11-04T11:00:00Z",
+      "ETH-USD": "2026-11-04T11:00:00Z",
+      "SOL-USD": "2026-11-04T11:00:00Z"
     },
     "generation_index": 1
   },
@@ -550,9 +591,9 @@
     "cash": 100.0,
     "positions": {},
     "seen": {
-      "BTC-USD": "2026-11-04T01:00:00Z",
-      "ETH-USD": "2026-11-04T01:00:00Z",
-      "SOL-USD": "2026-11-04T01:00:00Z",
+      "BTC-USD": "2026-11-04T11:00:00Z",
+      "ETH-USD": "2026-11-04T11:00:00Z",
+      "SOL-USD": "2026-11-04T11:00:00Z",
       "SPY": "2026-11-03T14:30:00Z",
       "QQQ": "2026-11-03T14:30:00Z",
       "AAPL": "2026-11-03T14:30:00Z",
@@ -598,16 +639,35 @@
         },
         "previous_hash": "e1fe48dc5e3504d97e6e0120317d16a3157dea2fe6c0316372d417bdff4630d9",
         "hash": "47a854c2f563a3fe62b52554515e2fceaebf756103da66dbebc69d5533db3d13"
+      },
+      {
+        "worker": "S09",
+        "seq": 3,
+        "timestamp": "2026-11-04T12:12:09.922380Z",
+        "asset_class": "crypto",
+        "symbol": "BTC/USD",
+        "side": "BUY",
+        "qty": 0.000502,
+        "price": 78373.6171875,
+        "fee": 0.07868711165625,
+        "multiplier": 1,
+        "source_id": "YAHOO:BTC-USD:2026-11-04T11:00:00Z",
+        "balance_after": 60.08609976,
+        "positions_after": {
+          "crypto:BTC/USD": 0.000502
+        },
+        "previous_hash": "47a854c2f563a3fe62b52554515e2fceaebf756103da66dbebc69d5533db3d13",
+        "hash": "d8ed4e27cf41799aa404bdc8e254a57f7c799d3e0f406f8749392ea09b0caeaa"
       }
     ],
-    "cash": 99.5083427,
+    "cash": 60.08609976,
     "positions": {
-      "crypto:BTC/USD": 0.0
+      "crypto:BTC/USD": 0.000502
     },
     "seen": {
-      "BTC-USD": "2026-11-04T01:00:00Z",
-      "ETH-USD": "2026-11-04T01:00:00Z",
-      "SOL-USD": "2026-11-04T01:00:00Z"
+      "BTC-USD": "2026-11-04T11:00:00Z",
+      "ETH-USD": "2026-11-04T11:00:00Z",
+      "SOL-USD": "2026-11-04T11:00:00Z"
     },
     "generation_index": 1
   },
@@ -657,9 +717,9 @@
       "crypto:ETH/USD": 0.0
     },
     "seen": {
-      "BTC-USD": "2026-11-04T01:00:00Z",
-      "ETH-USD": "2026-11-04T01:00:00Z",
-      "SOL-USD": "2026-11-04T01:00:00Z"
+      "BTC-USD": "2026-11-04T11:00:00Z",
+      "ETH-USD": "2026-11-04T11:00:00Z",
+      "SOL-USD": "2026-11-04T11:00:00Z"
     },
     "generation_index": 1
   }
