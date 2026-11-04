@@ -17221,3 +17221,132 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261104T205741Z
+
+- UTC timestamp: `20261104T205741Z`
+- GitHub run: [#14803](https://github.com/28twagg-ops/TradingBot/actions/runs/41911112581)
+- Run id: `41911112581`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261104T205741Z_live_bot.log`, `logs/action_runs/20261104T205741Z_live_options.log`, `logs/action_runs/20261104T205741Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1795 | 48.4 | -26.2 | +36.5 | $+20,374 |
+| TAINTED | 2095 | 31.0 | -42.0 | +8.2 | $-12,996 |
+| KEEP-only | 895 | 60.4 | +50.9 | +52.6 | $+14,449 |
+| KEEP-only recent | 710 | 59.4 | +52.9 | +58.4 | $+10,940 |
+
+- KEEP strategies (24): S163, S164, S166, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S396, S397, S403, S404, S406, S410, S411
+- KILL strategies (22): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S398, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-11-04T15:26:56.114046-05:00","date":"2026-11-04","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":1.6,"phases_s":{"reconcile":0.1,"cancel":0.05,"manage":0.78,"protective_stops":0.14},"signals":0,"placed":0,"equity":997670.96,"open_positions":5,"pending_orders":0,"open_lots":4,"submitted_today":19,"filled_today":19,"unattributed_contracts":0,"top_signals":[],"github_run":"14797","github_run_id":"41906394025","status":"ok","data_quality":{"clean":{"n":1795,"win":48.41,"med":-26.23,"avg":36.53,"pnl":20373.83},"tainted":{"n":2095,"win":31.03,"med":-42.0,"avg":8.22,"pnl":-12996.28},"keep_only":{"n":895,"win":60.45,"med":50.88,"avg":52.56,"pnl":14449.45},"keep_only_recent":{"n":710,"win":59.44,"med":52.94,"avg":58.38,"pnl":10940.0},"keep_strategies":["S163","S164","S166","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S396","S397","S403","S404","S406","S410","S411"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S398","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+... (67 earlier lines - see full log file)
+|                                                                        |
+|  Total invested                                                  $34.01|
+|  Total open P&L                                                  $+0.03|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                   no (stale (2902.1m))|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AES  P&L +0.1%  $+0.03                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                       live scan|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  50                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AAPL     TrendResumpti~  eq     $349.55  55.8   1.84    HH/HL resumpti|
+|  AAPL     VWAP_Reclaim    eq     $349.55  55.8   1.84    VWAP reclaim V|
+|  APO      VWAP_Reclaim    eq     $122.56  64.9   1.30    VWAP reclaim V|
+|  AMGN     TrendResumpti~  eq     $477.99  74.7   1.08    HH/HL resumpti|
+|  COR      VWAP_Reclaim    eq     $354.69  62.3   2.52    VWAP reclaim V|
+|  CDW      VWAP_Reclaim    eq     $168.87  62.0   1.54    VWAP reclaim V|
+|  CI       VWAP_Reclaim    eq     $305.49  55.0   1.05    VWAP reclaim V|
+|  DLR      VWAP_Reclaim    eq     $184.73  62.6   1.99    VWAP reclaim V|
+|  DLTR     VWAP_Reclaim    eq     $146.95  73.0   2.41    VWAP reclaim V|
+|  DASH     EarningsDrift   eq     $198.57  53.4   0.77    post-earnings |
+|  DUK      VWAP_Reclaim    eq     $129.80  72.1   1.50    VWAP reclaim V|
+|  ECHO     VWAP_Reclaim    eq     $98.69   66.2   1.13    VWAP reclaim V|
+|  ETR      TrendResumpti~  eq     $111.59  74.7   1.73    HH/HL resumpti|
+|  ETR      VWAP_Reclaim    eq     $111.59  74.7   1.73    VWAP reclaim V|
+|  EQIX     VWAP_Reclaim    eq     $1051.~  60.4   1.59    VWAP reclaim V|
+|  EVRG     VWAP_Reclaim    eq     $86.28   67.8   3.68    VWAP reclaim V|
+|  ESS      Pullback50      eq     $272.40  52.5   -0.09   50MA bounce (-|
+|  HCA      TrendResumpti~  eq     $509.73  63.8   2.43    HH/HL resumpti|
+|  HSIC     VWAP_Reclaim    eq     $87.96   52.2   1.72    VWAP reclaim V|
+|  IFF      Pullback50      eq     $87.80   43.3   2.10    50MA bounce (+|
+|  PODD     VWAP_Reclaim    eq     $165.07  87.3   1.03    VWAP reclaim V|
+|  JKHY     VWAP_Reclaim    eq     $179.05  75.1   1.14    VWAP reclaim V|
+|  IQV      Pullback50      eq     $264.60  44.7   -1.23   50MA bounce (-|
+|  IRM      VWAP_Reclaim    eq     $118.81  62.6   1.30    VWAP reclaim V|
+|  MPC      RubberBand      eq     $390.69  21.7   1.91    RSI           |
+|  MLM      VWAP_Reclaim    eq     $556.97  79.7   1.70    VWAP reclaim V|
+|  MSI      VWAP_Reclaim    eq     $494.64  81.5   1.21    VWAP reclaim V|
+|  PPL      VWAP_Reclaim    eq     $35.77   62.9   2.98    VWAP reclaim V|
+|  SBAC     TrendResumpti~  eq     $195.23  62.2   0.35    HH/HL resumpti|
+|  XEL      TrendResumpti~  eq     $80.40   69.2   0.48    HH/HL resumpti|21:01:16  INFO        BUY  DASH  $34.75  [EarningsDrift]  id=12237d14-d2ea-4a96-8e09-9013bd190fce
+21:01:16  INFO        BUY  ALSN  $34.75  [EarningsDrift]  id=7262ab06-ef58-43d1-a7c5-4f7e0c864832
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
