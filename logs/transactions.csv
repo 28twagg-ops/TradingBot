@@ -1370,3 +1370,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-11-02 20:52:18,2026-11-02,SELL,ADBE,Pullback50,251.48,33.92,-0.16,-0.06,0,midline (-0.2%),bull,226.57
 2026-11-03 14:49:39,2026-11-03,SELL,MTZ,MomReversal,201.07,71.14,4.68,3.18,1,midline (+4.7%),bull,229.73
 2026-11-03 16:27:58,2026-11-03,SELL,FANG,Pullback50,194.23,34.21,-0.7,-0.24,0,stop_loss (-0.7%),bull,229.6
+2026-11-04 14:48:16,2026-11-04,SELL,FOX,EarningsDrift,60.71,34.79,1.12,0.38,0,midline (+0.5%),bull,230.74
