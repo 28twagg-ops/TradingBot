@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "1a25bfb4bf5e496b80191783b2b10f1b",
+  "worker": "S06",
+  "cycle": "2026-11-04T07:07Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S06",
+    "cycle": "2026-11-04T07:07Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly momentum trigger",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "e4bb393ab943f4",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "SPY Stock Price - SPDR® S&P 500 ETF Trust Quote | Morningstar",
+        "url": "https://www.morningstar.com/etfs/arcx/spy/quote",
+        "snippet": "Check SPY stock price for SPDR® S&P 500 ETF Trust, review total assets, see historical growth, and review the analyst rating from Morningstar.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "SPY | State Street SPDR S&P 500 ETF Trust Overview | MarketWatch",
+        "url": "https://www.marketwatch.com/investing/fund/spy",
+        "snippet": "SPY | A complete State Street SPDR S&P 500 ETF Trust exchange traded fund overview by MarketWatch. View the latest ETF prices and news for better ETF investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "State Street SPDR S&P 500 ETF Trust (SPY ) - Yahoo Finance",
+        "url": "https://finance.yahoo.com/chart/SPY",
+        "snippet": "At Yahoo Finance, you get free stock quotes, up-to-date news, portfolio management resources, international market data, social interaction and mortgage rates that help you manage your financial life.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "SPY hourly close price history 2020-2026",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 83.336,
+      "load_seconds": 0.025,
+      "eval_count": 237,
+      "prompt_eval_count": 1635,
+      "tokens_per_second": 6.865,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 0.0,
+        "free_ram_gb": 6.16,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-04T07:07Z",
+    "id": "e4bb393ab943f4",
+    "topic": "BTC-USD hourly momentum trigger",
+    "hypothesis": "When BTC-USD's 12-hour relative strength to SPY exceeds 5% above its 12-hour mean, BTC-USD will trend higher in the next hour.",
+    "candidate": null,
+    "symbol": "SPY",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If BTC-USD's 12-hour relative strength to SPY is 5% above its 12-hour mean, but BTC-USD closes lower in the next hour, this falsifies the hypothesis.",
+    "source_search": {
+      "query": "SPY hourly close price history 2020-2026",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "SPY Stock Price - SPDR® S&P 500 ETF Trust Quote | Morningstar",
+        "url": "https://www.morningstar.com/etfs/arcx/spy/quote",
+        "snippet": "Check SPY stock price for SPDR® S&P 500 ETF Trust, review total assets, see historical growth, and review the analyst rating from Morningstar.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "SPY | State Street SPDR S&P 500 ETF Trust Overview | MarketWatch",
+        "url": "https://www.marketwatch.com/investing/fund/spy",
+        "snippet": "SPY | A complete State Street SPDR S&P 500 ETF Trust exchange traded fund overview by MarketWatch. View the latest ETF prices and news for better ETF investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "State Street SPDR S&P 500 ETF Trust (SPY ) - Yahoo Finance",
+        "url": "https://finance.yahoo.com/chart/SPY",
+        "snippet": "At Yahoo Finance, you get free stock quotes, up-to-date news, portfolio management resources, international market data, social interaction and mortgage rates that help you manage your financial life.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "SPY hourly close price history 2020-2026",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close"
+    ],
+    "hypothesis_timeframe": "hourly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "5c66ae21136040709a08ddfb97da027e",
+  "worker": "S10",
+  "cycle": "2026-11-04T11:57Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S10",
+    "cycle": "2026-11-04T11:57Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "ETH-USD hourly mean reversion to 24-hour SMA",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "social_signal",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "663e6e5c01ca5c",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "RETRIEVE | English meaning - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/dictionary/english/retrieve",
+        "snippet": "RETRIEVE definition: 1. to find and bring back something: 2. in tennis and similar sports, to successfully return a…. Learn more.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Retrieve - ABOUT Ensocare Retrieve",
+        "url": "https://retrieve.ensocare.com/",
+        "snippet": "Welcome to ABOUT Ensocare Retrieve! An online portal that allows you to retrieve referral information and documents. Gather your new patient referral information by entering the following information from the fax you received.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "RETRIEVE Definition & Meaning | Dictionary.com",
+        "url": "https://www.dictionary.com/browse/retrieve",
+        "snippet": "RETRIEVE definition: to recover or regain. See examples of retrieve used in a sentence.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Retrieve historical hourly close, 24-hour SMA, next-hour return, and volatility regime classification (e.g., high-volatility event",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 95.714,
+      "load_seconds": 0.03,
+      "eval_count": 336,
+      "prompt_eval_count": 1649,
+      "tokens_per_second": 6.923,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 6.6,
+        "free_ram_gb": 5.65,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-04T11:57Z",
+    "id": "663e6e5c01ca5c",
+    "topic": "ETH-USD hourly mean reversion to 24-hour SMA",
+    "hypothesis": "When ETH-USD hourly close exceeds its 24-hour SMA by more than 5%, the next hour's return is negative, indicating mean reversion.",
+    "candidate": null,
+    "symbol": "ETH-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "social_signal",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For each hour in the dataset, compute the hourly close, the 24-hour SMA, and whether the close exceeds the SMA by more than 5%. Then, compute the next hour's return. If, in at least 10% of such cases, the next hour's return is positive, the hypothesis is falsified. If all such cases show negative ne",
+    "source_search": {
+      "query": "Retrieve historical hourly close, 24-hour SMA, next-hour return, and volatility regime classification (e.g., high-volatility event",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "RETRIEVE | English meaning - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/dictionary/english/retrieve",
+        "snippet": "RETRIEVE definition: 1. to find and bring back something: 2. in tennis and similar sports, to successfully return a…. Learn more.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Retrieve - ABOUT Ensocare Retrieve",
+        "url": "https://retrieve.ensocare.com/",
+        "snippet": "Welcome to ABOUT Ensocare Retrieve! An online portal that allows you to retrieve referral information and documents. Gather your new patient referral information by entering the following information from the fax you received.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "RETRIEVE Definition & Meaning | Dictionary.com",
+        "url": "https://www.dictionary.com/browse/retrieve",
+        "snippet": "RETRIEVE definition: to recover or regain. See examples of retrieve used in a sentence.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Retrieve historical hourly close, 24-hour SMA, next-hour return, and volatility regime classification (e.g., high-volatility event",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "social_signal",
+      "volume"
+    ],
+    "hypothesis_timeframe": "hourly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
