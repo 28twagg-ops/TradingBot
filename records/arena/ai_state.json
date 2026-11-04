@@ -1339,6 +1339,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-04T02:24Z",
+        "id": "df1f84f100e00d",
+        "topic": "BTC-USD hourly trend persistence",
+        "hypothesis": "Hourly returns of BTC-USD exhibit a trend persistence of at least 5% over a 20\u2011hour lookback window, such that the sign of the return remains unchanged for 20 consecutive hours more often than random chance.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "Compare the proportion of 20\u2011hour streaks with consistent sign to the expected 50% under randomness; if the observed proportion exceeds 55% with statistical significance, the hypothesis is supported, otherwise falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly trend persistence 20h 5% empirical study 2024 2025",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly trend persistence empirical study 2024 2025",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -3011,6 +3049,44 @@
         },
         "source_leads": [],
         "next_search_query": "BTC-USD hourly returns autocorrelation lag 12 2024 2026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-04T02:23Z",
+        "id": "686075ab4e1361",
+        "topic": "BTC-USD hourly mean reversion at 12\u2011hour lag",
+        "hypothesis": "Hourly returns of BTC\u2011USD exhibit statistically significant mean reversion at a 12\u2011hour lag with a 5% threshold, implying that a price move exceeding 5% in one hour is likely to be followed by an opposite move within the next 12 hours.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "Compute the 12\u2011hour lag autocorrelation of hourly returns and test whether returns exceeding \u00b15% are followed by opposite moves within 12 hours in a fixed holdout period (e.g., 2025\u20112026). Compare against a random\u2011walk null model using permutation testing.",
+        "source_search": {
+          "query": "BTC-USD hourly returns autocorrelation lag 12 2024 2026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly returns 12\u2011hour lag autocorrelation 2025 2026",
         "preferred_sources": [
           "web"
         ],
@@ -5579,6 +5655,44 @@
         "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
         "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
         "falsification_test": "Compare the frequency of 30\u2011minute opening\u2011range breakouts with a 2% threshold against a random\u2011walk model using hourly close data. If the breakout frequency is not significantly higher than chance, reject the hypothesis.",
+        "source_search": {
+          "query": "BTC-USD hourly close data 2019\u20112026 opening range breakout statistics",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly close data 2019\u20112026 opening range breakout statistics",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-04T02:24Z",
+        "id": "7146443f61a494",
+        "topic": "BTC-USD 5\u2011hour opening\u2011range breakout",
+        "hypothesis": "A 5\u2011hour opening\u2011range breakout on BTC\u2011USD with a 5% threshold is an independently measurable event that initiates a profitable regime, yielding a win rate >50% and positive expectancy when applied to hourly close data.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If the breakout rule fails to produce a win rate >50% or a positive expectancy over a 2\u2011year sample, the hypothesis is falsified.",
         "source_search": {
           "query": "BTC-USD hourly close data 2019\u20112026 opening range breakout statistics",
           "attempted": [
