@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-04T17:16Z | S01a | BTC-USD hourly trend persistence | b8b82dd6a76c2c | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-04T17:16Z | S05a | 5‑hour opening‑range breakout on BTC‑USD | 712a9ba41995e9 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-04T17:15Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | 5944c87f49d6ee | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-04T17:14Z | S09b | BTC-USD hourly trend reversal after sustained 10 | d7748947d16ca7 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-04T17:14Z | S07b | BTC-USD hourly trend persistence across volatili | b981b5710f52ec | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-04T12:14Z | S02b | BTC-USD hourly trend persistence | 5667c55fbe2a28 | HOLD |
 | 2026-11-04T12:14Z | S10b | ETH-USD hourly breakout above 3% of 12‑hour SMA  | c0baa5569bfc0f | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-04T12:13Z | S06b | BTC-USD hourly relative strength to SPY momentum | 2d7a5c692dc359 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-03T21:55Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | 22c6608e6db452 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-03T21:00Z | S09b | BTC-USD hourly trend reversal after sustained 10 | ea560140402350 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-03T21:00Z | S07b | BTC-USD hourly trend persistence in low‑volatili | 4014ef73efa639 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-03T20:59Z | S02b | BTC-USD hourly trend persistence | 4a7af0ad933490 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-03T20:58Z | S10b | ETH-USD hourly breakout above 5% SMA triggers me | b0a31e6974fa3a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-03T20:58Z | S06b | BTC-USD hourly relative strength vs SPY | 69bb6534cd109d | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-03T18:42Z | S04a | BTC-USD hourly gap‑down >2% next‑hour return dis | d2dccc48856350 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-03T18:41Z | S08a | Hourly realized volatility compression and price | 8358db5c2a1b53 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
