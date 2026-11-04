@@ -142,26 +142,6 @@
       "entry_order_id": "25511ee7-e7c9-46c9-abce-f2b5c6c0b91e"
     },
     {
-      "lot_id": "05ca54ea57e9",
-      "bucket_id": 67,
-      "profile_name": "lab0067_s164_w2_1005_1045_r1",
-      "strategy_id": "S164",
-      "occ_symbol": "TSLA261104C00397500",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 36.0,
-      "entry_price": 0.36,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-04T15:08:02.857507+00:00",
-      "entry_order_id": "70b624bf-bee7-4149-b906-b48ae35ae8dc"
-    },
-    {
       "lot_id": "dd031d7e964d",
       "bucket_id": 52,
       "profile_name": "lab0052_s406_w2_1005_1045_r1",
@@ -280,6 +260,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-04T15:28:07.207567+00:00",
       "entry_order_id": "eed1381b-bb12-4f3f-8ab6-1650bc1d4922"
+    },
+    {
+      "lot_id": "d3ec0d02024a",
+      "bucket_id": 13,
+      "profile_name": "lab0013_s350_w2_1005_1045_r1",
+      "strategy_id": "S350",
+      "occ_symbol": "TSLA261104C00400000",
+      "underlying": "TSLA",
+      "qty": 1,
+      "entry_cost": 32.0,
+      "entry_price": 0.32,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-04T15:41:54.212669+00:00",
+      "entry_order_id": "895f1fec-0f6b-458b-8ac8-a59a9f0c3afe"
     }
   ],
   "pending_orders": [
@@ -295,22 +295,6 @@
       "submitted": "2026-11-04",
       "detail": "gap -5.2%",
       "spread_frac": 0.04081632653061228,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "895f1fec-0f6b-458b-8ac8-a59a9f0c3afe",
-      "bucket_id": 13,
-      "strategy_id": "S350",
-      "occ_symbol": "TSLA261104C00400000",
-      "underlying": "TSLA",
-      "qty": 1,
-      "limit": 0.32,
-      "profile_name": "lab0013_s350_w2_1005_1045_r1",
-      "submitted": "2026-11-04",
-      "detail": "gap -4.7%",
-      "spread_frac": 0.030769230769230795,
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
@@ -336,13 +320,13 @@
     "b19": 46.0,
     "b50": 64.0,
     "b63": 50.0,
-    "b67": 36.0,
     "b52": 11.0,
     "b20": 45.0,
     "b18": 30.0,
     "b55": 57.99999999999999,
     "b2007": 55.00000000000001,
-    "b64": 48.0
+    "b64": 48.0,
+    "b13": 32.0
   },
   "session_date": "2026-11-04",
   "entries_locked": [
@@ -791,7 +775,9 @@
     "c8214b64-16ca-40ed-9a94-d979d2f3e6ce",
     "eed1381b-bb12-4f3f-8ab6-1650bc1d4922",
     "7f37e825-e21e-47b4-b22d-d66596615893",
-    "1552f4b8-50e2-4529-b4e4-71c2bab020ca"
+    "1552f4b8-50e2-4529-b4e4-71c2bab020ca",
+    "895f1fec-0f6b-458b-8ac8-a59a9f0c3afe",
+    "93c26973-ef96-4298-b6b1-704277369a65"
   ],
   "submitted_today": 19,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
