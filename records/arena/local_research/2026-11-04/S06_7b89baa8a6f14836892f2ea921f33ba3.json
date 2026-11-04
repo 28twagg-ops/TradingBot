@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "7b89baa8a6f14836892f2ea921f33ba3",
+  "worker": "S06",
+  "cycle": "2026-11-04T11:50Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S06",
+    "cycle": "2026-11-04T11:50Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly relative strength to SPY",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "06c1cb991e3052",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "$78,484.47 Bitcoin Price (BTC/USD) Today | Live Chart - Binance",
+        "url": "https://www.binance.com/en/price/bitcoin",
+        "snippet": "(Use our BTC to USD conversion table to check how much Bitcoin is worth in US dollars at the current live rate). BTC rose 1.6% in 24h to $78,400, rebounding from a dip on strong dip-buying and reserve announcements. Track Bitcoin price move",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 80.704,
+      "load_seconds": 0.034,
+      "eval_count": 299,
+      "prompt_eval_count": 1700,
+      "tokens_per_second": 8.26,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 0.0,
+        "free_ram_gb": 6.48,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-04T11:50Z",
+    "id": "06c1cb991e3052",
+    "topic": "BTC-USD hourly relative strength to SPY",
+    "hypothesis": "When BTC-USD's 12-hour relative strength to SPY exceeds 5% above its 12-hour mean, BTC-USD will close lower in the next hour.",
+    "candidate": null,
+    "symbol": "SPY",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For each hour in the 2020-2026 period, compute the 12-hour relative strength of BTC-USD to SPY. If the relative strength exceeds 5% above its 12-hour mean, then BTC-USD must close lower in the next hour. If this occurs in any hour and BTC-USD closes higher in the next hour, the hypothesis is falsifi",
+    "source_search": {
+      "query": "BTC-USD and SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "$78,484.47 Bitcoin Price (BTC/USD) Today | Live Chart - Binance",
+        "url": "https://www.binance.com/en/price/bitcoin",
+        "snippet": "(Use our BTC to USD conversion table to check how much Bitcoin is worth in US dollars at the current live rate). BTC rose 1.6% in 24h to $78,400, rebounding from a dip on strong dip-buying and reserve announcements. Track Bitcoin price move",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close"
+    ],
+    "hypothesis_timeframe": "2020-2026",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
