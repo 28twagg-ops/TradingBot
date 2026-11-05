@@ -12166,3 +12166,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-05 16:56:43,exits,bull,229.1,194.76,0,0,0,1,TXNM,both
 2026-11-05 17:02:08,exits,bull,229.1,194.76,0,0,0,1,TXNM,both
 2026-11-05 17:07:03,exits,bull,229.08,194.76,0,0,0,1,TXNM,both
+2026-11-05 17:11:49,exits,bull,229.09,194.76,0,0,0,1,TXNM,both
