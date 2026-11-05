@@ -4,7 +4,7 @@
 Stocks/crypto indicative Yahoo hourly prices; NO options executed.
 All 10 workers start at $100; no real money or new AI charges.
 
-Updated: 2026-11-05T00:58:04.799736+00:00
+Updated: 2026-11-05T09:33:14.230167+00:00
 
 | Worker | Virtual action | Equity | Cash | Council |
 |---|---|---:|---:|---|
@@ -12,11 +12,11 @@ Updated: 2026-11-05T00:58:04.799736+00:00
 | S02b | HOLD | 99.24 | 99.23529163 | REVIEW_REQUIRED |
 | S03a | HOLD | 99.83 | 99.83033892 | REVIEW_REQUIRED |
 | S04a | HOLD | 102.06 | 77.24871121 | REVIEW_REQUIRED |
-| S05a | HOLD | 101.92 | 36.40535629 | REVIEW_REQUIRED |
+| S05a | BUY SOL-USD | 101.94 | 21.95856652 | REVIEW_REQUIRED |
 | S06b | HOLD | 99.24 | 99.23529163 | REVIEW_REQUIRED |
-| S07b | HOLD | 100.29 | 36.26644421 | REVIEW_REQUIRED |
+| S07b | BUY SOL-USD | 100.37 | 21.87479819 | REVIEW_REQUIRED |
 | S08a | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
-| S09b | HOLD | 100.25 | 36.2428311 | REVIEW_REQUIRED |
+| S09b | SELL ETH-USD | 100.34 | 59.96570381 | REVIEW_REQUIRED |
 | S10b | HOLD | 99.24 | 99.23529163 | REVIEW_REQUIRED |
 
 **Review status:** Missing independently executable market quotes means
