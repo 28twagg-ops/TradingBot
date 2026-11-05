@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-05
 
-_Generated 2026-11-05T10:12:55.555830_
+_Generated 2026-11-05T10:18:04.357025_
 
 ## Summary
 
@@ -23,7 +23,7 @@ _Generated 2026-11-05T10:12:55.555830_
 | S409 (RubberBand_ATM) | 3d | watch | 2 | 100.0 | +81.94 | +79.72 | +80.56 | +84.17 | 42 | 0 | 0 | $+118.00 | 100.0% | insufficient sample (<8 exits) |
 | S410 (RubberBand_OTM1) | 3d | watch | 11 | 63.6 | +65.28 | -68.49 | -58.43 | +101.49 | 91 | 0 | 0 | $+192.00 | 72.7% | building sample (8-19 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 20 | 60.0 | +60.78 | -62.00 | -50.00 | +172.08 | 107 | 3 | 2 | $+850.00 | 25.0% | fat left tail (p10 < -45%) |
-| S396 (GapDown_ITM2) | 3d | watch | 15 | 60.0 | +55.17 | -55.34 | -50.34 | +94.72 | 91 | 0 | 1 | $+230.00 | 80.0% | building sample (8-19 exits) |
+| S396 (GapDown_ITM2) | 3d | watch | 15 | 60.0 | +55.17 | -55.34 | -50.34 | +94.72 | 91 | 1 | 1 | $+230.00 | 80.0% | building sample (8-19 exits) |
 | S357 (GapDown_21DTE) | 21d | watch | 31 | 71.0 | +52.94 | -74.47 | -48.25 | +73.68 | 97 | 1 | 1 | $+475.00 | 32.3% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 81 | 60.5 | +50.88 | -64.71 | -50.00 | +170.91 | 97 | 1 | 1 | $+1,231.00 | 14.8% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 54 | 61.1 | +49.67 | -64.38 | -51.96 | +116.09 | 97 | 2 | 1 | $+1,076.00 | 16.7% | fat left tail (p10 < -45%) |
@@ -84,7 +84,7 @@ _Generated 2026-11-05T10:12:55.555830_
 | S418 (BBSqueeze_OTM2) | 7d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S431 (DayTrader_RS) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S432 (DayTrader_ORB_RS) | 3d | watch | 12 | 33.3 | -38.31 | -50.00 | -42.74 | +72.46 | 20 | 2 | 3 | $-39.00 | 16.7% | early sample with non-positive median |
+| S432 (DayTrader_ORB_RS) | 3d | watch | 12 | 33.3 | -38.31 | -50.00 | -42.74 | +72.46 | 20 | 3 | 3 | $-39.00 | 16.7% | early sample with non-positive median |
 | S430 (DayTrader_ORB) | 3d | watch | 13 | 23.1 | -40.00 | -44.87 | -40.38 | +64.30 | 20 | 4 | 3 | $-124.00 | 15.4% | early sample with non-positive median |
 | S367 (RubberBand_30DTE) | 30d | watch | 3 | 0.0 | -48.89 | -50.89 | -50.14 | -29.78 | 93 | 0 | 0 | $-77.00 | 66.7% | insufficient sample (<8 exits) |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 97 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
