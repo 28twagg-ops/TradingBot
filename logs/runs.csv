@@ -12210,3 +12210,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-05 20:52:39,scan_evening,bull,229.28,194.75,5,0,2,1,BG,both
 2026-11-05 20:57:27,scan_evening,bull,229.31,125.97,5,0,0,2,BG|NEM,both
 2026-11-05 21:01:48,ext_exits,bull,229.38,125.97,0,0,0,2,BG|NEM,both
+2026-11-05 21:07:00,ext_exits,bull,229.38,125.97,0,0,0,2,BG|NEM,both
