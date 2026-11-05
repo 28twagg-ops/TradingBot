@@ -1,0 +1,67 @@
+21:52:01  INFO      Mode: ext_exits
+21:52:02  INFO        Daily log -> logs/daily/2026-11-05.md
+21:52:02  INFO        Daily log reconciled -> logs/daily/2026-11-05.md (7 ledger rows)
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1754: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  f"type={getattr(o,'order_type','?')}  id={o.id}")
+21:52:02  INFO        SELL order cancelled NEM  type=OrderType.LIMIT  id=f9efd51f-8174-4ace-89be-66b84dbaa7ac
+21:52:02  INFO        SELL LIMIT [EXT HRS] NEM  qty=0.286769733  limit=$118.87  id=164230bf-b851-48f5-b2b9-57a88d0a65bc
+21:52:08  INFO        SELL LIMIT[EXT] pending for NEM — 9:35am will follow up
+21:52:08  INFO        Daily log -> logs/daily/2026-11-05.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                         EXT_EXITS|
+|  Time                                                         21:52 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $229.19|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit log~  stop-0.5% / 3d max  (midline skipped — close already final)|
++------------------------------------------------------------------------+
+|  NEM  P&L -0.7%  $-0.25          EXIT [EXTENDED HRS]: stop_loss (-0.7%)|
+|  NEM                              SELL pending (after-hours limit open)|
+|  BG  P&L +0.5%  $+0.34          HOLDING until 9:35am scan (MomReversal)|
++========================================================================+
+
++========================================================================+
+|                          EXTENDED HOURS SELLS                          |
++========================================================================+
+|                                                                        |
+|  No extended-hours sells this run.                                     |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                         ext_exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  0 filled  |  0 partial  |  1 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  NEM                                         -0.73%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             1|
++========================================================================+
