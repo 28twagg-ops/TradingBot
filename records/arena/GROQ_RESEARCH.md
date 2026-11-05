@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-05T18:06Z | S01a | BTC-USD hourly trend persistence | 64870c99e9e830 | HOLD |
+| 2026-11-05T18:06Z | S05a | Hourly opening‑range breakout on BTC‑USD | 88a7f73f6a6e09 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-05T18:05Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 4637ea96fca944 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-05T18:04Z | S02b | BTC-USD hourly extreme return mean reversion | 45afa4cccdb828 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-05T18:04Z | S10b | ETH-USD hourly breakout above 3% of 12‑hour SMA  | 1bbe8865a9bc84 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-05T15:30Z | S06b | BTC-USD hourly breakout on 12‑hour SMA | 76084797cd2a17 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-05T15:29Z | S09b | BTC-USD hourly trend reversal after sustained 10 | c52657e768cf8d | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-05T15:28Z | S07b | Hourly trend persistence in BTC-USD across low‑v | ee827c2b7385c8 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-04T23:39Z | S08a | BTC-USD hourly return momentum under low absolut | d05bb978cd3d69 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-04T19:51Z | S01a | BTC-USD hourly trend persistence | 2fa1b8d29fdf1e | HOLD |
 | 2026-11-04T19:51Z | S05a | Hourly opening‑range breakout on BTC‑USD | 30c7f585d207f3 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-04T19:50Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | cf6efb9f1303ac | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-04T19:49Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 2ba9ac1c314e45 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-04T19:48Z | S07b | BTC-USD hourly trend persistence across volatili | e4e7a7a463f323 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-04T18:54Z | S02b | BTC-USD hourly trend persistence | 50e1553514116c | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-04T18:53Z | S10b | ETH-USD hourly breakout above 3% of 12‑hour SMA  | 95e7870241c3bc | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

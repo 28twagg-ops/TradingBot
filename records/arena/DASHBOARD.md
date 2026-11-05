@@ -4,19 +4,19 @@
 Stocks/crypto indicative Yahoo hourly prices; NO options executed.
 All 10 workers start at $100; no real money or new AI charges.
 
-Updated: 2026-11-05T09:33:14.230167+00:00
+Updated: 2026-11-05T18:04:09.715562+00:00
 
 | Worker | Virtual action | Equity | Cash | Council |
 |---|---|---:|---:|---|
 | S01a | HOLD | 99.24 | 99.23529163 | REVIEW_REQUIRED |
 | S02b | HOLD | 99.24 | 99.23529163 | REVIEW_REQUIRED |
-| S03a | HOLD | 99.83 | 99.83033892 | REVIEW_REQUIRED |
-| S04a | HOLD | 102.06 | 77.24871121 | REVIEW_REQUIRED |
-| S05a | BUY SOL-USD | 101.94 | 21.95856652 | REVIEW_REQUIRED |
+| S03a | BUY SPY | 99.79 | 60.25428352 | REVIEW_REQUIRED |
+| S04a | SELL AAPL | 101.69 | 101.6871412 | REVIEW_REQUIRED |
+| S05a | SELL SPY | 97.41 | 44.93506991 | REVIEW_REQUIRED |
 | S06b | HOLD | 99.24 | 99.23529163 | REVIEW_REQUIRED |
-| S07b | BUY SOL-USD | 100.37 | 21.87479819 | REVIEW_REQUIRED |
+| S07b | SELL SPY | 96.45 | 44.76266051 | REVIEW_REQUIRED |
 | S08a | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
-| S09b | SELL ETH-USD | 100.34 | 59.96570381 | REVIEW_REQUIRED |
+| S09b | SELL BTC-USD | 98.18 | 98.17673527 | REVIEW_REQUIRED |
 | S10b | HOLD | 99.24 | 99.23529163 | REVIEW_REQUIRED |
 
 **Review status:** Missing independently executable market quotes means

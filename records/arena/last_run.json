@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-05T09:33:14.230167+00:00",
+  "timestamp": "2026-11-05T18:04:09.715562+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -21,29 +21,29 @@
       "missing_quotes": []
     },
     "S03": {
-      "action": "HOLD",
+      "action": "BUY SPY",
       "generation_index": 0,
-      "cash": 99.83033892,
-      "equity": 99.8303,
-      "ledger_events": 8,
+      "cash": 60.25428352,
+      "equity": 99.7908,
+      "ledger_events": 9,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S04": {
-      "action": "HOLD",
+      "action": "SELL AAPL",
       "generation_index": 0,
-      "cash": 77.24871121,
-      "equity": 102.0644,
-      "ledger_events": 7,
+      "cash": 101.6871412,
+      "equity": 101.6871,
+      "ledger_events": 8,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S05": {
-      "action": "BUY SOL-USD",
+      "action": "SELL SPY",
       "generation_index": 0,
-      "cash": 21.95856652,
-      "equity": 101.9363,
-      "ledger_events": 3,
+      "cash": 44.93506991,
+      "equity": 97.41,
+      "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -57,11 +57,11 @@
       "missing_quotes": []
     },
     "S07": {
-      "action": "BUY SOL-USD",
+      "action": "SELL SPY",
       "generation_index": 1,
-      "cash": 21.87479819,
-      "equity": 100.3668,
-      "ledger_events": 5,
+      "cash": 44.76266051,
+      "equity": 96.4465,
+      "ledger_events": 6,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -75,11 +75,11 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "SELL ETH-USD",
+      "action": "SELL BTC-USD",
       "generation_index": 1,
-      "cash": 59.96570381,
-      "equity": 100.3377,
-      "ledger_events": 5,
+      "cash": 98.17673527,
+      "equity": 98.1767,
+      "ledger_events": 6,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
