@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-05T18:04:09.715562+00:00",
+  "timestamp": "2026-11-05T23:41:04.056501+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -21,16 +21,16 @@
       "missing_quotes": []
     },
     "S03": {
-      "action": "BUY SPY",
+      "action": "BUY BTC-USD",
       "generation_index": 0,
-      "cash": 60.25428352,
-      "equity": 99.7908,
-      "ledger_events": 9,
+      "cash": 36.39896566,
+      "equity": 99.4071,
+      "ledger_events": 10,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S04": {
-      "action": "SELL AAPL",
+      "action": "HOLD",
       "generation_index": 0,
       "cash": 101.6871412,
       "equity": 101.6871,
@@ -39,11 +39,11 @@
       "missing_quotes": []
     },
     "S05": {
-      "action": "SELL SPY",
+      "action": "SELL ETH-USD",
       "generation_index": 0,
-      "cash": 44.93506991,
-      "equity": 97.41,
-      "ledger_events": 4,
+      "cash": 83.26539448,
+      "equity": 96.6011,
+      "ledger_events": 5,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -57,11 +57,11 @@
       "missing_quotes": []
     },
     "S07": {
-      "action": "SELL SPY",
+      "action": "SELL BTC-USD",
       "generation_index": 1,
-      "cash": 44.76266051,
-      "equity": 96.4465,
-      "ledger_events": 6,
+      "cash": 82.6279421,
+      "equity": 95.9128,
+      "ledger_events": 7,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -75,7 +75,7 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "SELL BTC-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 98.17673527,
       "equity": 98.1767,
