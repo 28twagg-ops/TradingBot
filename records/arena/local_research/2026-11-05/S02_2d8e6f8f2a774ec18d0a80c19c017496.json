@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "2d8e6f8f2a774ec18d0a80c19c017496",
+  "worker": "S02",
+  "cycle": "2026-11-05T10:46Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S02",
+    "cycle": "2026-11-05T10:46Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly extreme return mean reversion",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume",
+        "options_chain"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "75e08939151abe",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Find Devices - Apple iCloud",
+        "url": "https://www.icloud.com/find",
+        "snippet": "Find your Apple devices like iPhone, Apple Watch, AirPods and more with Find My. Play sound, activate Lost Mode, or locate devices from your Family Sharing group.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Find a Grave - Millions of Cemetery Records",
+        "url": "https://www.findagrave.com/",
+        "snippet": "Find the graves of ancestors, create virtual memorials or add photos, virtual flowers and a note to a loved one's memorial. Search or browse cemeteries and grave records for every-day and famous people from around the world.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "iCloud - Find My - Apple",
+        "url": "https://www.apple.com/icloud/find-my/",
+        "snippet": "Find your Apple devices. You take your devices everywhere. Which means you might leave them anywhere. Get help finding them in the Find My app or the Find My widget, which lets you track your devices at a glance, right on the Home Screen of",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Find academic or public sources that analyze BTC-USD price reversion after extreme hourly moves using only hourly close prices, wi",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 91.426,
+      "load_seconds": 0.024,
+      "eval_count": 293,
+      "prompt_eval_count": 1620,
+      "tokens_per_second": 5.756,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 8.9,
+        "free_ram_gb": 11.87,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-05T10:46Z",
+    "id": "75e08939151abe",
+    "topic": "BTC-USD hourly extreme return mean reversion",
+    "hypothesis": "BTC-USD hourly returns exceeding +2% are followed by a statistically significant negative return within the next 12 hours, indicating mean reversion.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume",
+        "options_chain"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For each hour where BTC-USD closes with a return exceeding +2%, check whether the next 12 hours show a statistically significant negative return (mean < 0) using only hourly close prices, with a 95% confidence interval. If no such negative return occurs in 100 consecutive hours of data, the hypothes",
+    "source_search": {
+      "query": "Find academic or public sources that analyze BTC-USD price reversion after extreme hourly moves using only hourly close prices, wi",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Find Devices - Apple iCloud",
+        "url": "https://www.icloud.com/find",
+        "snippet": "Find your Apple devices like iPhone, Apple Watch, AirPods and more with Find My. Play sound, activate Lost Mode, or locate devices from your Family Sharing group.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Find a Grave - Millions of Cemetery Records",
+        "url": "https://www.findagrave.com/",
+        "snippet": "Find the graves of ancestors, create virtual memorials or add photos, virtual flowers and a note to a loved one's memorial. Search or browse cemeteries and grave records for every-day and famous people from around the world.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "iCloud - Find My - Apple",
+        "url": "https://www.apple.com/icloud/find-my/",
+        "snippet": "Find your Apple devices. You take your devices everywhere. Which means you might leave them anywhere. Get help finding them in the Find My app or the Find My widget, which lets you track your devices at a glance, right on the Home Screen of",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Find academic or public sources that analyze BTC-USD price reversion after extreme hourly moves using only hourly close prices, wi",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "daily_bars",
+      "volume",
+      "options_chain"
+    ],
+    "hypothesis_timeframe": "12 hours after extreme positive hourly return",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "514bc28fec8947e6ac68026c7afc37dc",
+  "worker": "S09",
+  "cycle": "2026-11-05T10:58Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S09",
+    "cycle": "2026-11-05T10:58Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly trend reversal after sustained 10-hour uptrend",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "6c103d4cbf2c85",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "To Do List Maker",
+        "url": "https://listmaker.com/to-do",
+        "snippet": "Create online to-do lists for work and keep your tasks organized. Manage your to-do list, take notes, track habits, and organize ideas into outlines and lists.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "List-maker.com",
+        "url": "https://list-maker.com/",
+        "snippet": "list-maker.com Create a list that you can easily share with your friends or family!",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Online List Maker - Create a List & Share It Free",
+        "url": "https://onlinelistmaker.com/",
+        "snippet": "Make a list online in seconds, free with no account needed. Create a list, share the link, and everyone edits it in real time on any device. Grocery lists, to-do lists, checklists.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "list of market regimes in BTC-USD with timestamped price action clusters and volatility indicators",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 91.062,
+      "load_seconds": 0.021,
+      "eval_count": 310,
+      "prompt_eval_count": 1610,
+      "tokens_per_second": 6.059,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 1.6,
+        "free_ram_gb": 5.0,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-05T10:58Z",
+    "id": "6c103d4cbf2c85",
+    "topic": "BTC-USD hourly trend reversal after sustained 10-hour uptrend",
+    "hypothesis": "A sustained 10-hour uptrend in BTC-USD hourly close prices is associated with a statistically significant reversal in the following hour, independent of broader market regimes.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For each 10-hour uptrend in BTC-USD hourly close prices, compute the following hour's close. If the close is lower than the previous hour's close, record a reversal. If no such reversal occurs in 100 consecutive hours of data, the hypothesis is falsified. The test must use only 1-hour close prices, ",
+    "source_search": {
+      "query": "list of market regimes in BTC-USD with timestamped price action clusters and volatility indicators",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "To Do List Maker",
+        "url": "https://listmaker.com/to-do",
+        "snippet": "Create online to-do lists for work and keep your tasks organized. Manage your to-do list, take notes, track habits, and organize ideas into outlines and lists.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "List-maker.com",
+        "url": "https://list-maker.com/",
+        "snippet": "list-maker.com Create a list that you can easily share with your friends or family!",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Online List Maker - Create a List & Share It Free",
+        "url": "https://onlinelistmaker.com/",
+        "snippet": "Make a list online in seconds, free with no account needed. Create a list, share the link, and everyone edits it in real time on any device. Grocery lists, to-do lists, checklists.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "list of market regimes in BTC-USD with timestamped price action clusters and volatility indicators",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "volume"
+    ],
+    "hypothesis_timeframe": "1-hour close prices, 10-hour lookback, 1-hour reversal window",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "9bf7dde3a44a43429e3aca2990473f4b",
+  "worker": "S05",
+  "cycle": "2026-11-05T10:52Z",
+  "generation_index": 0,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S05",
+    "cycle": "2026-11-05T10:52Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Statistical Validation of 30-Minute Opening Range Breakouts in BTC-USD, ETH-USD, and SOL-USD with 2%",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume",
+        "order_book"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "bd89d1602be539",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Search - Microsoft Bing",
+        "url": "https://www.bing.com/",
+        "snippet": "Search with Microsoft Bing and use the power of AI to find information, explore webpages, images, videos, maps, and more. A smart search engine for the forever curious.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Yahoo Search - Web Search",
+        "url": "https://search.yahoo.com/",
+        "snippet": "Type a question and get a clear answer with trusted sources. Yahoo Scout helps you understand more, faster.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Google Search - A new kind of help",
+        "url": "https://search.google/",
+        "snippet": "Explore a new kind of help for your everyday with breakthroughs in Search intelligence from Google I/O.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "search for academic papers or technical analysis studies on regime shifts in cryptocurrency markets with measurable thresholds and",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 76.516,
+      "load_seconds": 0.022,
+      "eval_count": 372,
+      "prompt_eval_count": 1548,
+      "tokens_per_second": 8.53,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 30.6,
+        "free_ram_gb": 5.92,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-05T10:52Z",
+    "id": "bd89d1602be539",
+    "topic": "Statistical Validation of 30-Minute Opening Range Breakouts in BTC-USD, ETH-USD, and SOL-USD with 2%",
+    "hypothesis": "A 30-minute opening range breakout in BTC-USD, ETH-USD, or SOL-USD with a 2% threshold is an independently measurable event that initiates a genuine new regime with a probability greater than 0.05.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume",
+        "order_book"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For a 30-minute opening range breakout in BTC-USD, ETH-USD, or SOL-USD with a 2% threshold, the hypothesis is falsified if, across at least 100 consecutive hours of hourly close data, no breakout event occurs that is statistically independent of market noise (i.e., no event exceeds a 2% threshold in",
+    "source_search": {
+      "query": "search for academic papers or technical analysis studies on regime shifts in cryptocurrency markets with measurable thresholds and",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Search - Microsoft Bing",
+        "url": "https://www.bing.com/",
+        "snippet": "Search with Microsoft Bing and use the power of AI to find information, explore webpages, images, videos, maps, and more. A smart search engine for the forever curious.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Yahoo Search - Web Search",
+        "url": "https://search.yahoo.com/",
+        "snippet": "Type a question and get a clear answer with trusted sources. Yahoo Scout helps you understand more, faster.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Google Search - A new kind of help",
+        "url": "https://search.google/",
+        "snippet": "Explore a new kind of help for your everyday with breakthroughs in Search intelligence from Google I/O.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "search for academic papers or technical analysis studies on regime shifts in cryptocurrency markets with measurable thresholds and",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "daily_bars",
+      "volume",
+      "order_book"
+    ],
+    "hypothesis_timeframe": "12 hours",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
