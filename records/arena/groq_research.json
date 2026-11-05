@@ -12720,5 +12720,145 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC-USD 12\u2011hour SMA breakout hourly data"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-11-05T21:58Z",
+    "generation_index": 1,
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "ETH-USD hourly mean reversion to 24\u2011hour SMA",
+    "strategy": {
+      "family": "reversion",
+      "lookback": 24,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 26,
+        "end": 501,
+        "returns_pct": 1.439,
+        "drawdown_pct": -0.25,
+        "entries": 1
+      },
+      "retrospective_validation": {
+        "start": 501,
+        "end": 717,
+        "returns_pct": -0.527,
+        "drawdown_pct": -0.973,
+        "entries": 2
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "d2fb9fe51e735c",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "ETH\u2011USD hourly 24\u2011hour SMA mean reversion backtest data"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-11-05T21:59Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly extreme return momentum",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "e3da6694e427f3",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly momentum persistence empirical study"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-11-05T22:00Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly mean reversion at 12\u2011hour lag",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "19b40f62338fa1",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly mean reversion 12\u2011hour lag 4% threshold"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-11-05T22:00Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "Hourly trend breakout on BTC-USD",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "62107eccb88e7f",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly close data 2019\u20112026 trend statistics"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-11-05T22:01Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly momentum persistence",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "3dea21a007e797",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly momentum 3\u2011hour 1% threshold 2024 2025 empirical study"
   }
 ]
