@@ -48,7 +48,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 46,lab0046_s392_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-28,False,,,,,,,0,,,,idle
 47,lab0047_s393_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-28,False,,,,,,,0,,,,idle
 48,lab0048_s394_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
-49,lab0049_s396_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-11-05,False,,0.0,-50.0,-50.0,-50.0,-50.0,-27.0,"MARA,SMCI",S396,broker_fill_backfill,closed
+49,lab0049_s396_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-11-05,False,,50.0,4.81,4.81,59.62,-50.0,4.0,"MARA,SMCI",S396,broker_fill_backfill; take_profit (+57.7%),closed
 50,lab0050_s397_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-05,False,,0.0,-50.82,-50.82,-50.82,-50.82,-31.0,TSLA,S397,broker_fill_backfill,closed
 51,lab0051_s404_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-11-05,False,,0.0,-52.45,-52.45,-50.72,-54.17,-48.0,"AMD,MARA",S404,broker_fill_backfill; broker_fill_backfill,closed
 52,lab0052_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-04,False,,,,,,,0,,,,idle

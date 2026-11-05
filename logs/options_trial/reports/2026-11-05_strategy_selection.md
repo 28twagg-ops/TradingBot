@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-05
 
-_Generated 2026-11-05T14:47:04.486283_
+_Generated 2026-11-05T14:52:08.935593_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-11-05T14:47:04.486283_
 
 ## Attribution health
 
-- Total exits: **3904**
+- Total exits: **3905**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **10.8%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -23,7 +23,7 @@ _Generated 2026-11-05T14:47:04.486283_
 | S409 (RubberBand_ATM) | 3d | watch | 2 | 100.0 | +81.94 | +79.72 | +80.56 | +84.17 | 42 | 0 | 0 | $+118.00 | 100.0% | insufficient sample (<8 exits) |
 | S410 (RubberBand_OTM1) | 3d | watch | 11 | 63.6 | +65.28 | -68.49 | -58.43 | +101.49 | 91 | 0 | 0 | $+192.00 | 72.7% | building sample (8-19 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 20 | 60.0 | +60.78 | -62.00 | -50.00 | +172.08 | 107 | 3 | 2 | $+850.00 | 25.0% | fat left tail (p10 < -45%) |
-| S396 (GapDown_ITM2) | 3d | watch | 15 | 60.0 | +55.17 | -55.34 | -50.34 | +94.72 | 91 | 1 | 1 | $+230.00 | 80.0% | building sample (8-19 exits) |
+| S396 (GapDown_ITM2) | 3d | watch | 16 | 62.5 | +55.64 | -54.89 | -50.17 | +94.44 | 91 | 1 | 2 | $+261.00 | 75.0% | building sample (8-19 exits) |
 | S357 (GapDown_21DTE) | 21d | watch | 31 | 71.0 | +52.94 | -74.47 | -48.25 | +73.68 | 97 | 1 | 1 | $+475.00 | 32.3% | fat left tail (p10 < -45%) |
 | S403 (Any_MA50_Touch) | 3d | watch | 81 | 60.5 | +50.88 | -64.71 | -50.00 | +170.91 | 97 | 1 | 1 | $+1,231.00 | 14.8% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 55 | 60.0 | +47.95 | -64.21 | -51.60 | +115.99 | 97 | 2 | 2 | $+1,045.00 | 16.4% | fat left tail (p10 < -45%) |
@@ -308,7 +308,7 @@ _Pipeline evaluation as of 2026-11-05. Auto-kill thresholds: median<-25% at n>=1
 | S393 | VolClimax_21DTE | 0 | — | — | NEW | 0 |
 | S394 | VolClimax_30DTE | 0 | — | — | NEW | 0 |
 | S395 | GapDown_ITM3 | 1 | -68.75% | 0% | WATCH | 22 |
-| S396 | GapDown_ITM2 | 15 | +55.17% | 60% | INSUFFICIENT | 91 |
+| S396 | GapDown_ITM2 | 16 | +55.64% | 62% | INSUFFICIENT | 91 |
 | S397 | GapDown_ITM1 | 55 | +47.95% | 60% | INSUFFICIENT | 97 |
 | S398 | GapDown_ATM | 65 | -18.42% | 48% | INSUFFICIENT | 97 |
 | S399 | GapDown_OTM1 | 80 | -50.72% | 39% | INSUFFICIENT | 97 |
