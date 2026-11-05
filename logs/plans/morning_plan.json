@@ -8,20 +8,20 @@
     {
       "ticker": "ALSN",
       "strategy": "EarningsDrift",
-      "dollar_amt": 34.993598,
+      "dollar_amt": 35.465815,
       "entry_price": 119.18,
-      "current_price": 120.05,
-      "pnl_pct": 0.73,
-      "pnl_dollar": 0.253598
+      "current_price": 121.67,
+      "pnl_pct": 2.089,
+      "pnl_dollar": 0.725815
     },
     {
       "ticker": "DASH",
       "strategy": "EarningsDrift",
-      "dollar_amt": 34.088704,
+      "dollar_amt": 33.332185,
       "entry_price": 191.49,
-      "current_price": 187.9,
-      "pnl_pct": -1.875,
-      "pnl_dollar": -0.651296
+      "current_price": 183.73,
+      "pnl_pct": -4.052,
+      "pnl_dollar": -1.407815
     }
   ],
   "open_sell_orders": [],
@@ -29,32 +29,21 @@
   "exit_plan": [
     {
       "ticker": "ALSN",
-      "why": "midline (+0.7%)"
+      "why": "midline (+2.1%)"
     },
     {
       "ticker": "DASH",
-      "why": "stop_loss (-1.9%)"
+      "why": "stop_loss (-4.1%)"
     }
   ],
   "signals": [
     {
       "ticker": "EOG",
       "strategy": "Pullback50",
-      "close": 148.38,
-      "rsi": 35.7,
-      "vol_z": -2.33,
-      "trigger": "50MA bounce (-0.6%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
-    {
-      "ticker": "FICO",
-      "strategy": "MomReversal",
-      "close": 701.03,
-      "rsi": 36.2,
-      "vol_z": 0.48,
-      "trigger": "-32.5% drop/60d stabilising",
+      "close": 148.55,
+      "rsi": 36.0,
+      "vol_z": -2.26,
+      "trigger": "50MA bounce (-0.5%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
@@ -62,54 +51,10 @@
     {
       "ticker": "GPC",
       "strategy": "Pullback50",
-      "close": 129.08,
-      "rsi": 42.7,
-      "vol_z": -2.16,
-      "trigger": "50MA bounce (-0.1%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
-    {
-      "ticker": "IRM",
-      "strategy": "VWAP_Reclaim",
-      "close": 118.66,
-      "rsi": 62.4,
-      "vol_z": 2.6,
-      "trigger": "VWAP reclaim VZ=2.6",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
-    {
-      "ticker": "MS",
-      "strategy": "Pullback50",
-      "close": 196.41,
-      "rsi": 66.9,
-      "vol_z": -2.73,
-      "trigger": "50MA bounce (+0.1%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
-    {
-      "ticker": "HWC",
-      "strategy": "Pullback50",
-      "close": 74.08,
-      "rsi": 54.4,
-      "vol_z": -2.95,
-      "trigger": "50MA bounce (+0.8%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
-    {
-      "ticker": "SLAB",
-      "strategy": "Pullback50",
-      "close": 222.36,
-      "rsi": 67.1,
-      "vol_z": -2.13,
-      "trigger": "50MA bounce (+0.6%)",
+      "close": 128.69,
+      "rsi": 42.0,
+      "vol_z": -2.15,
+      "trigger": "50MA bounce (-0.4%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
@@ -117,14 +62,25 @@
     {
       "ticker": "TXNM",
       "strategy": "Pullback50",
-      "close": 58.58,
-      "rsi": 51.5,
-      "vol_z": -1.67,
-      "trigger": "50MA bounce (+0.4%)",
+      "close": 58.53,
+      "rsi": 50.4,
+      "vol_z": -1.66,
+      "trigger": "50MA bounce (+0.3%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "WTS",
+      "strategy": "Pullback50",
+      "close": 354.21,
+      "rsi": 48.5,
+      "vol_z": -2.07,
+      "trigger": "50MA bounce (-0.5%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
     }
   ],
-  "saved_at_utc": "2026-11-05T14:35:41Z"
+  "saved_at_utc": "2026-11-05T14:41:13Z"
 }
