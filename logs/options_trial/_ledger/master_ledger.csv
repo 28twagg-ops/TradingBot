@@ -16460,3 +16460,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-11-04 16:25:16.492200+00:00,exit,63,lab0063_s167_w2_1005_1045_r1,S167,ad8ed5c41894,TSLA,TSLA261106C00415000,1,,0.25,50.0,-50.0,-25.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,d63756fa-6b0a-4b97-b4ad-a34a0904fd3c
 2026-11-04 16:50:43.404075+00:00,exit,6,lab0006_s210_w2_1005_1045_r1,S210,2186c1829bf7,MS,MS261106C00192500,1,,1.82,69.0,163.77,113.0,take_profit (+136.2%),,-0.01,0.5,-0.5,,,2777d296-7115-4c27-a7ce-325223bc9f7a
 2026-11-04 20:24:17.944936+00:00,exit,20,lab0020_s364_w2_1005_1045_r1,S364,cc0370645706,NVDA,NVDA261111C00222500,1,,0.23,45.0,-48.89,-22.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,aa5f209b-8cad-4f8f-a54d-86cb185e7896
+2026-11-05T14:02:02Z,reconcile,13,lab0013_s350_w2_1005_1045_r1,S350,d3ec0d02024a,TSLA,TSLA261104C00400000,0,,,32.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
