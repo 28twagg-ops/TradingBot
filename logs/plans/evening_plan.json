@@ -12,9 +12,9 @@
     {
       "ticker": "BG",
       "strategy": "MomReversal",
-      "close": 97.63,
-      "rsi": 27.1,
-      "vol_z": 1.19,
+      "close": 97.69,
+      "rsi": 27.3,
+      "vol_z": 1.25,
       "trigger": "-12.6% drop/60d stabilising",
       "seasonal": false,
       "month": 11,
@@ -23,9 +23,9 @@
     {
       "ticker": "MSI",
       "strategy": "VWAP_Reclaim",
-      "close": 522.78,
-      "rsi": 86.3,
-      "vol_z": 3.09,
+      "close": 521.13,
+      "rsi": 86.0,
+      "vol_z": 3.15,
       "trigger": "VWAP reclaim VZ=3.1",
       "seasonal": false,
       "month": 11,
@@ -34,9 +34,9 @@
     {
       "ticker": "NEM",
       "strategy": "EarningsDrift",
-      "close": 118.65,
-      "rsi": 50.1,
-      "vol_z": 1.29,
+      "close": 118.97,
+      "rsi": 50.5,
+      "vol_z": 1.34,
       "trigger": "post-earnings continuation day 1",
       "seasonal": false,
       "month": 11,
@@ -45,10 +45,10 @@
     {
       "ticker": "VRSK",
       "strategy": "VWAP_Reclaim",
-      "close": 209.9,
+      "close": 209.76,
       "rsi": 65.0,
-      "vol_z": 1.31,
-      "trigger": "VWAP reclaim VZ=1.3",
+      "vol_z": 1.42,
+      "trigger": "VWAP reclaim VZ=1.4",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
@@ -56,25 +56,14 @@
     {
       "ticker": "BIO",
       "strategy": "Pullback50",
-      "close": 370.87,
-      "rsi": 61.4,
-      "vol_z": 1.25,
-      "trigger": "50MA bounce (-0.8%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
-    {
-      "ticker": "FOUR",
-      "strategy": "VWAP_Reclaim",
-      "close": 41.53,
-      "rsi": 55.8,
-      "vol_z": 3.53,
-      "trigger": "VWAP reclaim VZ=3.5",
+      "close": 370.27,
+      "rsi": 60.9,
+      "vol_z": 1.55,
+      "trigger": "50MA bounce (-0.9%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
     }
   ],
-  "saved_at_utc": "2026-11-05T20:35:27Z"
+  "saved_at_utc": "2026-11-05T20:41:23Z"
 }
