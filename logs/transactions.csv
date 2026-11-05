@@ -1376,3 +1376,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-11-05 14:47:32,2026-11-05,SELL,ALSN,EarningsDrift,121.87,35.52,2.3,0.8,0,midline (+2.1%),bull,229.75
 2026-11-05 15:02:08,2026-11-05,SELL,GPC,Pullback50,128.17,34.24,-0.63,-0.22,0,stop_loss (-0.6%),bull,229.64
 2026-11-05 16:42:54,2026-11-05,SELL,EOG,Pullback50,148.15,34.18,-0.81,-0.28,0,stop_loss (-0.8%),bull,229.11
+2026-11-05 17:51:47,2026-11-05,SELL,TXNM,Pullback50,58.25,34.28,-0.52,-0.18,0,stop_loss (-0.5%),bull,229.04
