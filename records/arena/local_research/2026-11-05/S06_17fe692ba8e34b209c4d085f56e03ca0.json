@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "17fe692ba8e34b209c4d085f56e03ca0",
+  "worker": "S06",
+  "cycle": "2026-11-05T08:03Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S06",
+    "cycle": "2026-11-05T08:03Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD relative strength to SPY",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "06c1cb991e3052",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "SPY: The original S&P 500® ETF | State Street SPDR® - SSGA",
+        "url": "https://www.ssga.com/us/en/intermediary/capabilities/spdr-core-equity-etfs/spy-sp-500",
+        "snippet": "SPY, managed State Street Investment Management, aims to replicate the performance of the S&P 500® Index as closely as possible by investing in the same stocks that are included in the index in the same weightings.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "SPY Stock Price - SPDR® S&P 500 ETF Trust Quote | Morningstar",
+        "url": "https://www.morningstar.com/etfs/arcx/spy/quote",
+        "snippet": "Check SPY stock price for SPDR® S&P 500 ETF Trust, review total assets, see historical growth, and review the analyst rating from Morningstar.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "SPY | State Street SPDR S&P 500 ETF Trust Overview | MarketWatch",
+        "url": "https://www.marketwatch.com/investing/fund/spy",
+        "snippet": "SPY | A complete State Street SPDR S&P 500 ETF Trust exchange traded fund overview by MarketWatch. View the latest ETF prices and news for better ETF investing.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD and SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps, and full time",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 101.108,
+      "load_seconds": 0.021,
+      "eval_count": 307,
+      "prompt_eval_count": 1749,
+      "tokens_per_second": 6.679,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 1.2,
+        "free_ram_gb": 5.69,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-05T08:03Z",
+    "id": "06c1cb991e3052",
+    "topic": "BTC-USD relative strength to SPY",
+    "hypothesis": "When BTC-USD's 12-hour relative strength to SPY exceeds 5% above its 12-hour mean, BTC-USD will close lower in the next hour.",
+    "candidate": null,
+    "symbol": "SPY",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For each hour in 2020-2026, compute BTC-USD's 12-hour relative strength to SPY. If at any hour the relative strength exceeds 5% above its 12-hour mean, then BTC-USD must close lower in the next hour. If this occurs in even one instance and BTC-USD closes higher, the hypothesis is falsified.",
+    "source_search": {
+      "query": "SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps, and full time",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "SPY: The original S&P 500® ETF | State Street SPDR® - SSGA",
+        "url": "https://www.ssga.com/us/en/intermediary/capabilities/spdr-core-equity-etfs/spy-sp-500",
+        "snippet": "SPY, managed State Street Investment Management, aims to replicate the performance of the S&P 500® Index as closely as possible by investing in the same stocks that are included in the index in the same weightings.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "SPY Stock Price - SPDR® S&P 500 ETF Trust Quote | Morningstar",
+        "url": "https://www.morningstar.com/etfs/arcx/spy/quote",
+        "snippet": "Check SPY stock price for SPDR® S&P 500 ETF Trust, review total assets, see historical growth, and review the analyst rating from Morningstar.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "SPY | State Street SPDR S&P 500 ETF Trust Overview | MarketWatch",
+        "url": "https://www.marketwatch.com/investing/fund/spy",
+        "snippet": "SPY | A complete State Street SPDR S&P 500 ETF Trust exchange traded fund overview by MarketWatch. View the latest ETF prices and news for better ETF investing.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD and SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps, and full time",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close"
+    ],
+    "hypothesis_timeframe": "2020-2026",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
