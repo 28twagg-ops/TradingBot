@@ -6,6 +6,9 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-05T00:59Z | S06b | BTC-USD hourly relative strength to SPY | a702c423a216c1 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-05T00:58Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 23475948629f76 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-05T00:58Z | S07b | BTC-USD hourly trend persistence in low‑volatili | 281538356abc77 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-04T23:41Z | S02b | BTC-USD hourly trend persistence | 920caa4ac4092b | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-04T23:41Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | ec20d41267172e | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-04T23:40Z | S06b | BTC-USD hourly momentum trigger via 12‑hour RSI | 07f489b03f0bf3 | RESEARCH_ONLY_NEEDS_DATA |
@@ -38,9 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-04T11:32Z | S07b | Hourly trend persistence in BTC-USD across low‑v | 331d698758919b | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-04T09:11Z | S02b | BTC-USD hourly trend persistence | 3e4c43e23888c4 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-04T09:10Z | S10b | ETH-USD hourly breakout 5% SMA mean reversion | 7108971d984c2a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-04T09:10Z | S06b | BTC-USD hourly trend on 12‑hour SMA | d1fbf8a5fb9d05 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-04T09:09Z | S04a | BTC-USD hourly gap‑down >2% mean‑reversion | d3420e6b6d8bcc | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-04T09:08Z | S08a | Hourly realized volatility compression in BTC-US | cd262752611126 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

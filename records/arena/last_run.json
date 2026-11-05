@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-04T19:48:52.566713+00:00",
+  "timestamp": "2026-11-05T00:58:04.799736+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -21,7 +21,7 @@
       "missing_quotes": []
     },
     "S03": {
-      "action": "SELL SPY",
+      "action": "HOLD",
       "generation_index": 0,
       "cash": 99.83033892,
       "equity": 99.8303,
@@ -30,19 +30,19 @@
       "missing_quotes": []
     },
     "S04": {
-      "action": "SELL SPY",
+      "action": "HOLD",
       "generation_index": 0,
       "cash": 77.24871121,
-      "equity": 102.3128,
+      "equity": 102.0644,
       "ledger_events": 7,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S05": {
-      "action": "BUY SPY",
+      "action": "HOLD",
       "generation_index": 0,
       "cash": 36.40535629,
-      "equity": 102.0484,
+      "equity": 101.9226,
       "ledger_events": 2,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -57,10 +57,10 @@
       "missing_quotes": []
     },
     "S07": {
-      "action": "BUY SPY",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 36.26644421,
-      "equity": 100.361,
+      "equity": 100.2875,
       "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -75,10 +75,10 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "BUY ETH-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 36.2428311,
-      "equity": 100.3372,
+      "equity": 100.2529,
       "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []

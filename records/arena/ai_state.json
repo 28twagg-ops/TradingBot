@@ -6845,6 +6845,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-05T00:59Z",
+        "id": "a702c423a216c1",
+        "topic": "BTC-USD hourly relative strength to SPY",
+        "hypothesis": "When BTC-USD\u2019s 12\u2011hour relative strength to SPY exceeds 5\u202f% above its 12\u2011hour mean, BTC\u2011USD will close lower in the next hour.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "For each hour in 2020\u20112026, compute BTC\u2011USD\u2019s 12\u2011hour relative strength to SPY. If the relative strength exceeds 5\u202f% above its 12\u2011hour mean, then BTC\u2011USD must close lower in the next hour. Count the number of violations versus predictions.",
+        "source_search": {
+          "query": "BTC-USD hourly RSI data",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly relative strength to SPY data",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -7297,6 +7335,44 @@
         },
         "source_leads": [],
         "next_search_query": "BTC\u2011USD high\u2011volatility regime definition 20\u2011hour standard deviation",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-05T00:58Z",
+        "id": "281538356abc77",
+        "topic": "BTC-USD hourly trend persistence in low\u2011volatility regimes",
+        "hypothesis": "A 20\u2011hour upward trend (price above its 20\u2011hour moving average) persists for at least 4 additional hours when the 20\u2011hour standard deviation of hourly returns is below 3%.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If a 20\u2011hour upward trend exists and the 20\u2011hour return standard deviation is <3%, then the trend must continue for \u22654 more hours. Failure to observe this continuation falsifies the hypothesis.",
+        "source_search": {
+          "query": "BTC\u2011USD high\u2011volatility regime definition 20\u2011hour standard deviation",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD low\u2011volatility regime definition 20\u2011hour standard deviation",
         "preferred_sources": [
           "web"
         ],
@@ -9191,6 +9267,44 @@
         "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
         "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
         "falsification_test": "For each 10\u2011hour uptrend, check if the following hour\u2019s close is \u22655% below the peak; if any instance fails, hypothesis is falsified",
+        "source_search": {
+          "query": "btc 10 hour uptrend reversal frequency",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "btc 10 hour uptrend reversal frequency",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-05T00:58Z",
+        "id": "23475948629f76",
+        "topic": "BTC-USD hourly trend reversal after sustained 10\u2011hour uptrend",
+        "hypothesis": "A sustained 10\u2011hour uptrend in BTC\u2011USD hourly close prices is followed by a reversal (downward move) in the next hour, independent of broader market regimes.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Count all 10\u2011hour uptrend episodes and record whether the following hour closes lower; compute reversal frequency and compare to chance level.",
         "source_search": {
           "query": "btc 10 hour uptrend reversal frequency",
           "attempted": [
