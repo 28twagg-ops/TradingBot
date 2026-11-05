@@ -1377,3 +1377,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-11-05 15:02:08,2026-11-05,SELL,GPC,Pullback50,128.17,34.24,-0.63,-0.22,0,stop_loss (-0.6%),bull,229.64
 2026-11-05 16:42:54,2026-11-05,SELL,EOG,Pullback50,148.15,34.18,-0.81,-0.28,0,stop_loss (-0.8%),bull,229.11
 2026-11-05 17:51:47,2026-11-05,SELL,TXNM,Pullback50,58.25,34.28,-0.52,-0.18,0,stop_loss (-0.5%),bull,229.04
+2026-11-05 20:52:08,2026-11-05,SELL,BIO,Pullback50,371.01,34.18,-0.51,-0.17,0,stop_loss (-0.5%),bull,229.27
+2026-11-05 20:52:39,2026-11-05,SELL,NEM,EarningsDrift,119.96,34.57,0.66,0.23,0,midline (+0.7%),bull,229.28

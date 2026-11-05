@@ -1,0 +1,140 @@
+20:52:04  INFO      Mode: scan
+20:52:06  INFO        [positions] 3/3 (3 valid)
+20:52:06  INFO        SELL MARKET [urgent] BIO closed
+20:52:08  INFO        TX logged: SELL BIO  P&L -0.51%
+20:52:08  INFO        SELL LIMIT NEM  qty=0.288224336  limit=$119.73  id=606c21ff-77bf-4544-976d-4d3239965c65
+20:52:39  INFO        SELL LIMIT filled NEM (confirmed by position check)
+20:52:39  INFO        TX logged: SELL NEM  P&L 0.66%
+20:52:39  INFO        place_all_stops: checking 1 positions...
+20:52:39  INFO        STOP skipped BG: fractional (0.3517 shares) — software exit will handle it
+20:52:39  INFO        place_eod_stops: updating 1 stops to current price...
+20:52:39  INFO        EOD stop skip BG: 0.3517 shares (fractional) — ext_exits will cover
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         20:52 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $229.25|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-05|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $229.25|
+|  Cash                                                           $125.99|
+|  Reserve                                          $11.46  (always kept)|
+|  Stock~  $103.26 / $171.94  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $68.67  (new stock buys)|
+|  Trade size             $34.39  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  BG       MomReversal     $34.51     $97.67   $98.13   +0.5%   $+0.16  |
+|  BIO      Pullback50      $34.18     $372.91  $371.01  -0.5%   $-0.17  |
+|  NEM      EarningsDrift   $34.58     $119.18  $119.97  +0.7%   $+0.23  |
+|                                                                        |
+|  Total invested                                                 $103.26|
+|  Total open P&L                                                  $+0.21|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (10.7m); positions refreshed live)|
+|  Cached signals                                                       5|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  BIO  P&L -0.5%  $-0.17                         EXIT: stop_loss (-0.5%)|
+|  BG  P&L +0.5%  $+0.16                                             HOLD|
+|  NEM  P&L +0.7%  $+0.23                           EXIT: midline (+0.7%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 2 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                   1|
+|  BIO                                         -0.51%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                          cached signals (signals fresh (10.7m))|
+|  Universe scanned in prep                                           903|
++========================================================================+
+
++========================================================================+
+|                          SIGNALS FOUND  --  5                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  BG       MomReversal     eq     $97.69   27.3   1.25    -12.6% drop/60|
+|  MSI      VWAP_Reclaim    eq     $521.13  86.0   3.15    VWAP reclaim V|
+|  NEM      EarningsDrift   eq     $118.97  50.5   1.34    post-earnings |
+|  VRSK     VWAP_Reclaim    eq     $209.76  65.0   1.42    VWAP reclaim V|
+|  BIO      Pullback50      eq     $370.27  60.9   1.55    50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                              5|
+|  Entries                                                              0|20:52:39  INFO        Daily log -> logs/daily/2026-11-05.md
+20:52:39  INFO        Dashboard written → logs/dashboard.md
+
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                2|
+|  Open pos                                                             1|
+|  Equity                                                         $229.28|
+|  Cash                                                           $194.75|
++========================================================================+
