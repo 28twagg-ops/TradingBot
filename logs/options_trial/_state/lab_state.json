@@ -123,7 +123,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "618eea7d-dec3-4f8b-a55c-37d1a4caea8c",
+      "lot_id": "269271f4f9e1",
+      "bucket_id": 2007,
+      "strategy_id": "S430",
+      "occ_symbol": "XOM261106C00177500",
+      "qty": 1,
+      "reason": "take_profit (+51.6%)",
+      "submitted": "2026-11-05T11:01:50"
+    }
+  ],
   "bucket_open_premium": {
     "b2007": 31.0,
     "b16": 45.0,
