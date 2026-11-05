@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "be1fe374c88840a09704101543dfb889",
+  "worker": "S07",
+  "cycle": "2026-11-05T07:08Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S07",
+    "cycle": "2026-11-05T07:08Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Hourly trend persistence in BTC-USD across market regimes defined by 20-hour standard deviation",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "05f713daebc5e7",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "PUBLICLY | English meaning - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/dictionary/english/publicly",
+        "snippet": "PUBLICLY definition: 1. If something is done publicly, it is done so that everyone can know about it: 2. done, owned…. Learn more.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Publicly vs Publically – Which is Correct? - Two Minute English",
+        "url": "https://twominenglish.com/publicly-vs-publically/",
+        "snippet": "The correct spelling is publicly. Publically” is a common misspelling of the adverb “publicly,” which means “in a public manner ” or “openly.” For example, if you speak publicly, it means you are speaking in a way that everyone can hear and",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Publically Or Publicly: Correct Spelling, Usage & Examples",
+        "url": "https://thoughtgenic.com/publically-or-publicly/",
+        "snippet": "Confused about publically or publicly? Learn the correct spelling, see real-life examples & discover when to use publicly in sentences. Clear guide for writers and students.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Publicly available hourly BTC-USD close price data from 2020 to present, including 20-hour moving averages, 20-hour standard devia",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 96.192,
+      "load_seconds": 0.022,
+      "eval_count": 332,
+      "prompt_eval_count": 1721,
+      "tokens_per_second": 7.034,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 30.9,
+        "free_ram_gb": 5.56,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-05T07:08Z",
+    "id": "05f713daebc5e7",
+    "topic": "Hourly trend persistence in BTC-USD across market regimes defined by 20-hour standard deviation",
+    "hypothesis": "A 20-hour upward trend in BTC-USD persists for at least 4 additional hours when the 20-hour standard deviation of price returns exceeds 5%.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For a 20-hour upward trend in BTC-USD, if the 20-hour standard deviation of returns exceeds 5%, and the price continues to rise for at least 4 additional hours, then the trend persists across a regime. If, in at least one market regime (e.g., high volatility, low liquidity), the trend fails to persi",
+    "source_search": {
+      "query": "Publicly available hourly BTC-USD close price data from 2020 to present, including 20-hour moving averages, 20-hour standard devia",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "PUBLICLY | English meaning - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/dictionary/english/publicly",
+        "snippet": "PUBLICLY definition: 1. If something is done publicly, it is done so that everyone can know about it: 2. done, owned…. Learn more.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Publicly vs Publically – Which is Correct? - Two Minute English",
+        "url": "https://twominenglish.com/publicly-vs-publically/",
+        "snippet": "The correct spelling is publicly. Publically” is a common misspelling of the adverb “publicly,” which means “in a public manner ” or “openly.” For example, if you speak publicly, it means you are speaking in a way that everyone can hear and",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Publically Or Publicly: Correct Spelling, Usage & Examples",
+        "url": "https://thoughtgenic.com/publically-or-publicly/",
+        "snippet": "Confused about publically or publicly? Learn the correct spelling, see real-life examples & discover when to use publicly in sentences. Clear guide for writers and students.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Publicly available hourly BTC-USD close price data from 2020 to present, including 20-hour moving averages, 20-hour standard devia",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close"
+    ],
+    "hypothesis_timeframe": "hourly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
