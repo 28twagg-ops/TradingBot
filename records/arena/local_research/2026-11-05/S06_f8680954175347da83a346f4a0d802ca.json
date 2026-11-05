@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "f8680954175347da83a346f4a0d802ca",
+  "worker": "S06",
+  "cycle": "2026-11-05T11:50Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S06",
+    "cycle": "2026-11-05T11:50Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD relative strength to SPY",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "13352cdf03dabf",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "What's Bitcoin 's price today? The current price of Bitcoin (BTC) is 80,468 USD. For broader market analysis, dive into the technicals on the BTC price chart and read the latest Bitcoin news:",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BRTI - CFB - CF Benchmarks",
+        "url": "https://www.cfbenchmarks.com/data/indices/BRTI",
+        "snippet": "The CME CF Bitcoin Real Time Index (BRTI) is a once per 200 millisecond benchmark index price for Bitcoin that aggregates order data from Bitcoin-USD markets operated by major cryptocurrency exchanges that conform to the CME CF Constituent ",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD and SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps, and full time",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 81.755,
+      "load_seconds": 0.022,
+      "eval_count": 291,
+      "prompt_eval_count": 1733,
+      "tokens_per_second": 6.526,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 0.0,
+        "free_ram_gb": 5.84,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-05T11:50Z",
+    "id": "13352cdf03dabf",
+    "topic": "BTC-USD relative strength to SPY",
+    "hypothesis": "When BTC-USD's 12-hour relative strength to SPY is within 5% of its 12-hour mean, BTC-USD will close higher in the next hour.",
+    "candidate": null,
+    "symbol": "SPY",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For each hour in 2020-2026, if BTC-USD's 12-hour relative strength to SPY is within 5% of its 12-hour mean, then BTC-USD must close higher in the next hour; if this fails for any hour, the hypothesis is falsified.",
+    "source_search": {
+      "query": "BTC-USD and SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps, and full time",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "What's Bitcoin 's price today? The current price of Bitcoin (BTC) is 80,468 USD. For broader market analysis, dive into the technicals on the BTC price chart and read the latest Bitcoin news:",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "BRTI - CFB - CF Benchmarks",
+        "url": "https://www.cfbenchmarks.com/data/indices/BRTI",
+        "snippet": "The CME CF Bitcoin Real Time Index (BRTI) is a once per 200 millisecond benchmark index price for Bitcoin that aggregates order data from Bitcoin-USD markets operated by major cryptocurrency exchanges that conform to the CME CF Constituent ",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD and SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps, and full time",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close"
+    ],
+    "hypothesis_timeframe": "2020-2026",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
