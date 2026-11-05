@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "75adb5ded67046ef9c04f295f68b47b7",
+  "worker": "S03",
+  "cycle": "2026-11-05T07:58Z",
+  "generation_index": 0,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S03",
+    "cycle": "2026-11-05T07:58Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly mean reversion at 24-hour lag with 3% threshold",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "fundamentals",
+        "volume",
+        "order_book"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "7dd98bddc01d4b",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Cortana (virtual assistant) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cortana_(virtual_assistant)",
+        "snippet": "On March 31, 2021, Microsoft shut down the Cortana apps globally for iOS and Android and removed the apps entirely from their corresponding app stores. To access previously recorded content, users had to use Cortana on Windows 10 or other s",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Say Goodbye to Cortana: How to Disable it on Windows 10",
+        "url": "https://www.addictivetips.com/windows-tips/disable-cortana/",
+        "snippet": "Learn how to disable Cortana on Windows 10 and regain control of your operating system. Say goodbye to the unwanted smart AI assistant.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "End of support for Cortana",
+        "url": "https://support.microsoft.com/en-us/cortana/end-of-support-for-cortana",
+        "snippet": "Tell me about end of support for Cortana. We made some changes to Windows and Microsoft 365 that will impact Cortana users. Cortana voice assistance in Windows as a standalone app was retired in the spring of 2023.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Empirical study on BTC-USD hourly autocorrelation at 24-hour lag with 3% threshold, 2024-2026, including multiple testing correcti",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 115.762,
+      "load_seconds": 0.024,
+      "eval_count": 408,
+      "prompt_eval_count": 1736,
+      "tokens_per_second": 6.503,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 1.4,
+        "free_ram_gb": 6.78,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-05T07:58Z",
+    "id": "7dd98bddc01d4b",
+    "topic": "BTC-USD hourly mean reversion at 24-hour lag with 3% threshold",
+    "hypothesis": "The observed mean reversion in BTC-USD hourly returns at a 24-hour lag with a 3% threshold is not robust to a fixed holdout and multiple-testing adjustments when fees, latency, and slippage are accounted for.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "fundamentals",
+        "volume",
+        "order_book"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "Test whether the autocorrelation of BTC-USD hourly returns at a 24-hour lag is statistically non-significant under a null model of independent and identically distributed returns, after correcting for multiple testing using the Bonferroni method, using only 1-hour close prices from 2024 to 2026 with",
+    "source_search": {
+      "query": "Empirical study on BTC-USD hourly autocorrelation at 24-hour lag with 3% threshold, 2024-2026, including multiple testing correcti",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Cortana (virtual assistant) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cortana_(virtual_assistant)",
+        "snippet": "On March 31, 2021, Microsoft shut down the Cortana apps globally for iOS and Android and removed the apps entirely from their corresponding app stores. To access previously recorded content, users had to use Cortana on Windows 10 or other s",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Say Goodbye to Cortana: How to Disable it on Windows 10",
+        "url": "https://www.addictivetips.com/windows-tips/disable-cortana/",
+        "snippet": "Learn how to disable Cortana on Windows 10 and regain control of your operating system. Say goodbye to the unwanted smart AI assistant.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "End of support for Cortana",
+        "url": "https://support.microsoft.com/en-us/cortana/end-of-support-for-cortana",
+        "snippet": "Tell me about end of support for Cortana. We made some changes to Windows and Microsoft 365 that will impact Cortana users. Cortana voice assistance in Windows as a standalone app was retired in the spring of 2023.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Empirical study on BTC-USD hourly autocorrelation at 24-hour lag with 3% threshold, 2024-2026, including multiple testing correcti",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "fundamentals",
+      "volume",
+      "order_book"
+    ],
+    "hypothesis_timeframe": "2024-2026",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

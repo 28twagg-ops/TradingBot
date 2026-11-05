@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "b62d615088c541e2bf98110fcf209ed9",
+  "worker": "S01",
+  "cycle": "2026-11-05T09:48Z",
+  "generation_index": 0,
+  "model": "qwen3:8b",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S01",
+    "cycle": "2026-11-05T09:48Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Liquidity friction and order flow imbalance in BTC-USD hourly trading",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "order_book",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "a37dbfbdc2863b",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "public | Bunkr",
+        "url": "https://bunkr.cr/a/W1qWxeXe",
+        "snippet": "Explore this album with 2 files.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Public cumshot | Bunkr",
+        "url": "https://bunkr.cr/a/X7tivV8g",
+        "snippet": "Explore this album with 2 files.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Download New Public.mp4",
+        "url": "https://dl.bunkr.cr/file/4310667",
+        "snippet": "New Public.mp4 279.23 MB Download",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "public academic or empirical study on liquidity friction and order flow imbalance in BTC-USD hourly trading with 3% threshold and ",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:8b",
+    "local_metrics": {
+      "elapsed_seconds": 127.232,
+      "load_seconds": 6.258,
+      "eval_count": 303,
+      "prompt_eval_count": 1524,
+      "tokens_per_second": 4.908,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 9.6,
+        "free_ram_gb": 14.74,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-05T09:48Z",
+    "id": "a37dbfbdc2863b",
+    "topic": "Liquidity friction and order flow imbalance in BTC-USD hourly trading",
+    "hypothesis": "The temporary noise band around the VWAP in BTC-USD hourly trading is caused by liquidity frictions and order flow imbalances, leading to price deviations that revert to the VWAP within 30 hours with a 3% threshold.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "order_book",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "Compare the price deviations from the VWAP in BTC-USD hourly data against a control group of assets with similar liquidity profiles but no known order flow imbalances. If the reversion to VWAP is not observed in the control group, the hypothesis is falsified.",
+    "source_search": {
+      "query": "public academic or empirical study on liquidity friction and order flow imbalance in BTC-USD hourly trading with 3% threshold and",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "public | Bunkr",
+        "url": "https://bunkr.cr/a/W1qWxeXe",
+        "snippet": "Explore this album with 2 files.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Public cumshot | Bunkr",
+        "url": "https://bunkr.cr/a/X7tivV8g",
+        "snippet": "Explore this album with 2 files.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Download New Public.mp4",
+        "url": "https://dl.bunkr.cr/file/4310667",
+        "snippet": "New Public.mp4 279.23 MB Download",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "public academic or empirical study on liquidity friction and order flow imbalance in BTC-USD hourly trading with 3% threshold and ",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "order_book",
+      "volume"
+    ],
+    "hypothesis_timeframe": "hourly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
