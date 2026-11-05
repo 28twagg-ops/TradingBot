@@ -24,3 +24,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-11-04 15:39:02.794683+00:00,entry,13,lab0013_s350_w2_1005_1045_r1,S350,d3ec0d02024a,TSLA,TSLA261104C00400000,1,0.32,0.32,32.0,,,,-0.01,,0.75,-0.75,0.030769230769230795,gap -4.7%,895f1fec-0f6b-458b-8ac8-a59a9f0c3afe
 2026-11-05T14:02:02Z,reconcile,13,lab0013_s350_w2_1005_1045_r1,S350,d3ec0d02024a,TSLA,TSLA261104C00400000,0,,,32.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
 2026-11-05 15:07:47.237530+00:00,entry,13,lab0013_s350_w2_1005_1045_r1,S350,b7f3f0e1a3e6,TSLA,TSLA261106C00380000,1,0.5,0.49,49.0,,,,-0.01,,0.75,-0.75,0.125,gap -2.9%,b3a8acb1-a0b1-4da6-9302-c7171092694e
+2026-11-05 15:27:22.742300+00:00,exit,13,lab0013_s350_w2_1005_1045_r1,S350,b7f3f0e1a3e6,TSLA,TSLA261106C00380000,1,,0.23,49.0,-53.06,-26.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,f401a729-7b4b-415a-bf86-e7251ed4a172

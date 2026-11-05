@@ -4,3 +4,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-10-21 14:38:07.050163+00:00,exit,64,lab0064_s168_w2_1005_1045_r1,S168,d26359872e48,NFLX,NFLX261030C00070000,1,,0.21,43.0,-51.16,-22.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,d8f9fc23-8cca-4061-80a4-815e8bf0828d
 2026-10-21T14:41:40Z,reconcile,64,lab0064_s168_w2_1005_1045_r1,S168,7c5502dc58e9,NFLX,NFLX261030C00070000,0,,,44.0,,,missing_from_broker,,,0.5,-0.5,,lot closed outside of bot; no sell fill found,
 2026-11-05 15:07:45.992924+00:00,entry,64,lab0064_s168_w2_1005_1045_r1,S168,48d041ff8c07,NVDA,NVDA261109C00205000,1,0.43,0.42,42.0,,,,-0.01,,0.75,-0.75,0.046511627906976785,gap -2.0%,830ef5c4-2c3c-4481-8121-ce7ea2bb53c6
+2026-11-05 15:27:44.392258+00:00,exit,64,lab0064_s168_w2_1005_1045_r1,S168,48d041ff8c07,NVDA,NVDA261109C00205000,1,,0.2,42.0,-52.38,-22.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,9e6a570a-b33a-4c77-a5fd-082b8729e420

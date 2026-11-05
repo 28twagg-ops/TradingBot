@@ -82,46 +82,6 @@
       "entry_order_id": "f70c813d-5329-4ed5-9543-50ecdff64e53"
     },
     {
-      "lot_id": "6eba1e755f2d",
-      "bucket_id": 14,
-      "profile_name": "lab0014_s352_w2_1005_1045_r1",
-      "strategy_id": "S352",
-      "occ_symbol": "AMD261106C00482500",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 64.0,
-      "entry_price": 0.64,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-05T15:07:55.711792+00:00",
-      "entry_order_id": "cf714512-5ff4-49a6-9d29-466267991848"
-    },
-    {
-      "lot_id": "b7f3f0e1a3e6",
-      "bucket_id": 13,
-      "profile_name": "lab0013_s350_w2_1005_1045_r1",
-      "strategy_id": "S350",
-      "occ_symbol": "TSLA261106C00380000",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 49.0,
-      "entry_price": 0.49,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-05T15:07:55.715826+00:00",
-      "entry_order_id": "b3a8acb1-a0b1-4da6-9302-c7171092694e"
-    },
-    {
       "lot_id": "984e7308ff60",
       "bucket_id": 65,
       "profile_name": "lab0065_s163_w2_1005_1045_r1",
@@ -140,26 +100,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-05T15:07:55.719735+00:00",
       "entry_order_id": "143edf95-b701-402c-bb0f-67367a74c6dd"
-    },
-    {
-      "lot_id": "48d041ff8c07",
-      "bucket_id": 64,
-      "profile_name": "lab0064_s168_w2_1005_1045_r1",
-      "strategy_id": "S168",
-      "occ_symbol": "NVDA261109C00205000",
-      "underlying": "NVDA",
-      "qty": 1,
-      "entry_cost": 42.0,
-      "entry_price": 0.42,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-05T15:07:55.723691+00:00",
-      "entry_order_id": "830ef5c4-2c3c-4481-8121-ce7ea2bb53c6"
     },
     {
       "lot_id": "e04a4334e3e9",
@@ -200,63 +140,18 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-05T15:17:02.098836+00:00",
       "entry_order_id": "c4d46e09-8464-410c-8625-7e62b0a97ff6"
-    },
-    {
-      "lot_id": "d710384f4bf1",
-      "bucket_id": 2009,
-      "profile_name": "day_trader_analytics_s432",
-      "strategy_id": "S432",
-      "occ_symbol": "CVX261106C00230000",
-      "underlying": "CVX",
-      "qty": 1,
-      "entry_cost": 13.0,
-      "entry_price": 0.13,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-05T15:17:02.104773+00:00",
-      "entry_order_id": "861e5f8d-d951-4fc8-bc29-326b4543a486"
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "7cfdde58-3fa2-4e0f-8cbe-8b0dd04e184c",
-      "lot_id": "d710384f4bf1",
-      "bucket_id": 2009,
-      "strategy_id": "S432",
-      "occ_symbol": "CVX261106C00230000",
-      "qty": 1,
-      "reason": "stop_loss (-46.2%)",
-      "submitted": "2026-11-05T10:17:12"
-    },
-    {
-      "order_id": "99deb88a-86c2-4cf9-b1fd-cda09b38dc3b",
-      "lot_id": "6eba1e755f2d",
-      "bucket_id": 14,
-      "strategy_id": "S352",
-      "occ_symbol": "AMD261106C00482500",
-      "qty": 1,
-      "reason": "stop_loss (-53.1%)",
-      "submitted": "2026-11-05T10:27:13"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b2007": 31.0,
     "b16": 45.0,
     "b15": 39.0,
     "b63": 44.0,
-    "b14": 64.0,
-    "b13": 49.0,
     "b65": 44.0,
-    "b64": 42.0,
     "b51": 69.0,
-    "b49": 52.0,
-    "b2009": 13.0
+    "b49": 52.0
   },
   "session_date": "2026-11-05",
   "entries_locked": [
@@ -739,7 +634,11 @@
     "4818dc3c-73c2-42ad-a6da-4d2bc1e15088",
     "7db15c5b-e74c-4e93-8912-523eaf31c782",
     "502f4870-c85a-4843-aed2-efc502e455f3",
-    "3c39cf0d-2573-4dd3-aa72-0b7b88f64702"
+    "3c39cf0d-2573-4dd3-aa72-0b7b88f64702",
+    "99deb88a-86c2-4cf9-b1fd-cda09b38dc3b",
+    "f401a729-7b4b-415a-bf86-e7251ed4a172",
+    "9e6a570a-b33a-4c77-a5fd-082b8729e420",
+    "7cfdde58-3fa2-4e0f-8cbe-8b0dd04e184c"
   ],
   "submitted_today": 15,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
