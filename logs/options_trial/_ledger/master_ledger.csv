@@ -16490,3 +16490,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-11-05 15:27:44.392258+00:00,exit,64,lab0064_s168_w2_1005_1045_r1,S168,48d041ff8c07,NVDA,NVDA261109C00205000,1,,0.2,42.0,-52.38,-22.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,9e6a570a-b33a-4c77-a5fd-082b8729e420
 2026-11-05 15:28:43.187272+00:00,exit,2009,day_trader_analytics_s432,S432,d710384f4bf1,CVX,CVX261106C00230000,1,,0.08,13.0,-38.46,-5.0,stop_loss (-46.2%),,-0.01,0.5,-0.4,,,7cfdde58-3fa2-4e0f-8cbe-8b0dd04e184c
 2026-11-05 15:50:22.864533+00:00,exit,51,lab0051_s404_w2_1005_1045_r1,S404,e04a4334e3e9,AMD,AMD261106C00480000,1,,0.34,69.0,-50.72,-35.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,89736cd6-5156-46ad-8e8f-39d6d4dc71b0
+2026-11-05 16:01:50.324637+00:00,exit,2007,day_trader_analytics_s430,S430,269271f4f9e1,XOM,XOM261106C00177500,1,,0.47,31.0,51.61,16.0,take_profit (+51.6%),,-0.01,0.5,-0.4,,,618eea7d-dec3-4f8b-a55c-37d1a4caea8c
