@@ -1,0 +1,161 @@
+14:46:58  INFO      Mode: morning_scan
+14:46:59  INFO        SELL MARKET [urgent] DASH closed
+14:47:01  INFO        TX logged: SELL DASH  P&L -7.61%
+14:47:01  INFO        SELL LIMIT ALSN  qty=0.291491861  limit=$121.82  id=98348837-1158-4f9c-b34f-6711473506e6
+14:47:32  INFO        SELL LIMIT filled ALSN (confirmed by position check)
+14:47:32  INFO        TX logged: SELL ALSN  P&L 2.3%
+14:47:33  INFO        BUY  EOG  $34.47  [Pullback50]  id=3c5d4012-6a64-49da-9742-cdb77f5126f7
+14:47:33  INFO        BUY  GPC  $34.47  [Pullback50]  id=e417b7da-f7d8-4778-ac00-ebae52b56471
+14:47:34  INFO        BUY  TXNM  $34.47  [Pullback50]  id=c9eeff23-6976-4890-b635-3685358c9f21
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $229.82|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-05|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $229.82|
+|  Cash                                                           $162.18|
+|  Reserve                                          $11.49  (always kept)|
+|  Stocks~  $67.64 / $172.37  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $104.73  (new stock buys)|
+|  Trade size             $34.47  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (2 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ALSN     EarningsDrift   $35.54     $119.18  $121.92  +2.3%   $+0.80  |
+|  DASH     EarningsDrift   $32.10     $191.49  $176.93  -7.6%   $-2.64  |
+|                                                                        |
+|  Total invested                                                  $67.64|
+|  Total open P&L                                                  $-1.84|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                     yes (fresh (5.8m))|
+|  Cached exits                                                         2|
+|  Cached signals                                                       4|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  DASH  P&L -7.6%  $-2.64                        EXIT: stop_loss (-7.6%)|
+|  ALSN  P&L +2.3%  $+0.80                          EXIT: midline (+2.1%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 2 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 0|
+|  Stop-loss breaches                                                   1|
+|  DASH                                        -7.61%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           901|
++========================================================================+
+
++========================================================================+
+|                          SIGNALS FOUND  --  4                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  EOG      Pullback50      eq     $148.55  36.0   -2.26   50MA bounce (-|
+|  GPC      Pullback50      eq     $128.69  42.0   -2.15   50MA bounce (-|
+|  TXNM     Pullback50      eq     $58.53   50.4   -1.66   50MA bounce (+|
+|  WTS      Pullback50      eq     $354.21  48.5   -2.07   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] EOG  Pullback50                                    $34.47|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] GPC  Pullback50                                    $34.47|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] TXNM  Pullback50                                   $34.47|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] WTS  Pullback50                                      cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  EOG                                                  still unconfirmed|
+|  GPC                                                  still unconfirmed|14:48:04  INFO        place_all_stops: checking 3 positions...
+14:48:04  INFO        STOP skipped EOG: fractional (0.2307 shares) — software exit will handle it
+14:48:04  INFO        STOP skipped GPC: fractional (0.2672 shares) — software exit will handle it
+14:48:04  INFO        STOP skipped TXNM: fractional (0.5885 shares) — software exit will handle it
+14:48:04  INFO        Daily log -> logs/daily/2026-11-05.md
+14:48:04  INFO        Dashboard written → logs/dashboard.md
+
+|  TXNM                                                 still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                              4|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                2|
+|  Open pos                                                             3|
+|  Equity                                                         $229.71|
+|  Cash                                                           $126.37|
++========================================================================+

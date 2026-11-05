@@ -2,7 +2,7 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "75c7f01a2c1d",
+      "lot_id": "cc00215c946f",
       "bucket_id": 90,
       "profile_name": "live_1to1",
       "strategy_id": "S404",
@@ -18,7 +18,7 @@
       "stop_loss": -0.4,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-11-05T14:44:25.605590+00:00",
+      "entry_date": "2026-11-05T14:48:09.868456+00:00",
       "entry_order_id": "4babaf7f-9f0f-47bf-bd11-ede3c6cba947"
     }
   ],
@@ -28,9 +28,7 @@
     "b90": 63.0
   },
   "session_date": "2026-11-05",
-  "entries_locked": [
-    "90|S404|2026-11-05"
-  ],
+  "entries_locked": [],
   "processed_orders": [
     "83bbdd9e-8f69-4c7f-9979-745933b5f513",
     "8aeef062-472b-4538-8aff-d7d721d3d320",
@@ -476,7 +474,7 @@
     "50f3dcf6-2750-41da-8119-f3ec29dc4485",
     "4babaf7f-9f0f-47bf-bd11-ede3c6cba947"
   ],
-  "submitted_today": 1,
+  "submitted_today": 0,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-05"
 }

@@ -1007,3 +1007,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-11-03 16:27:58,2026-11-03,SELL,FANG,Pullback50,194.23,,194.23,34.21,0.0,0.0,market_urgent_full,stop_loss (-0.7%),bull
 2026-11-04 14:48:16,2026-11-04,SELL,FOX,EarningsDrift,60.71,60.59,60.71,34.79,0.0,0.0,market_fallback_full,midline (+0.5%),bull
 2026-11-04 20:48:05,2026-11-04,SELL,ELV,Pullback50,436.975,436.1,436.81,36.4,-0.0378,-0.0137,limit_fill_position_check_full,midline (+5.7%),bull
+2026-11-05 14:47:01,2026-11-05,SELL,DASH,EarningsDrift,176.925,,176.925,32.1,0.0,0.0,market_urgent_full,stop_loss (-7.6%),bull
+2026-11-05 14:47:32,2026-11-05,SELL,ALSN,EarningsDrift,121.92,121.82,121.868,35.52,-0.0427,-0.0152,limit_fill_position_check_full,midline (+2.1%),bull

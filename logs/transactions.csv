@@ -1372,3 +1372,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-11-03 16:27:58,2026-11-03,SELL,FANG,Pullback50,194.23,34.21,-0.7,-0.24,0,stop_loss (-0.7%),bull,229.6
 2026-11-04 14:48:16,2026-11-04,SELL,FOX,EarningsDrift,60.71,34.79,1.12,0.38,0,midline (+0.5%),bull,230.74
 2026-11-04 20:48:05,2026-11-04,SELL,ELV,Pullback50,436.81,36.4,5.69,1.96,1,midline (+5.7%),bull,231.71
+2026-11-05 14:47:01,2026-11-05,SELL,DASH,EarningsDrift,176.93,32.1,-7.61,-2.64,0,stop_loss (-7.6%),bull,229.77
+2026-11-05 14:47:32,2026-11-05,SELL,ALSN,EarningsDrift,121.87,35.52,2.3,0.8,0,midline (+2.1%),bull,229.75
