@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-06T10:53Z | S06b | BTC-USD hourly trend reversal via SMA crossover | de7d7d7b348043 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-06T10:52Z | S09b | BTC-USD hourly trend reversal after sustained 10 | dfb2f065c0858f | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-06T10:51Z | S07b | BTC-USD hourly trend persistence across volatili | 2198fa7a24f688 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-06T10:51Z | S02b | BTC-USD hourly breakout after extreme positive r | 510009304f5dc7 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-06T10:50Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | 1e5473f2f79f2f | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-06T06:52Z | S04a | BTC-USD hourly gap‑down >2% momentum | 65d87b44827df4 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-06T06:52Z | S08a | Low hourly volatility predicts larger next‑hour  | 239d4bc4df8f1f | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-06T06:51Z | S01a | BTC-USD hourly reversion to mean in absence of v | 1a473f1df5eb74 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-05T18:05Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 4637ea96fca944 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-05T18:04Z | S02b | BTC-USD hourly extreme return mean reversion | 45afa4cccdb828 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-05T18:04Z | S10b | ETH-USD hourly breakout above 3% of 12‑hour SMA  | 1bbe8865a9bc84 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T15:30Z | S06b | BTC-USD hourly breakout on 12‑hour SMA | 76084797cd2a17 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T15:29Z | S09b | BTC-USD hourly trend reversal after sustained 10 | c52657e768cf8d | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T15:28Z | S07b | Hourly trend persistence in BTC-USD across low‑v | ee827c2b7385c8 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T15:27Z | S04a | BTC-USD hourly gap‑down >2% momentum | 87da56de6771b8 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T15:27Z | S08a | BTC-USD hourly return under low realized volatil | 572bd49479b63e | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
