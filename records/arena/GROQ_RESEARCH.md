@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-06T16:00Z | S06b | BTC-USD hourly breakout on 12‑hour SMA | 38d42e5ac9456b | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-06T15:59Z | S09b | BTC-USD hourly trend reversal after sustained 10 | d518616a1e4ee7 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-06T15:59Z | S07b | BTC-USD trend persistence in high volatility reg | 26923261b15442 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-06T15:58Z | S02b | BTC-USD hourly trend persistence after extreme n | 6cb46483433c62 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-06T15:57Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | 23329497459594 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-06T11:30Z | S04a | BTC-USD hourly gap‑down >2% next‑5‑hour cumulati | e7c431297a8581 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-06T11:29Z | S08a | Low hourly volatility predicts larger next‑hour  | 5d9769f8d22289 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-06T11:28Z | S01a | BTC-USD hourly trend persistence | b7dd1eddeffb27 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-05T22:00Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | 19b40f62338fa1 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-05T21:59Z | S02b | BTC-USD hourly extreme return momentum | e3da6694e427f3 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-05T21:58Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | d2fb9fe51e735c | HOLD |
-| 2026-11-05T19:00Z | S06b | BTC-USD hourly breakout on 12‑hour SMA | 7224b3a3cc6be4 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T18:59Z | S09b | BTC-USD hourly trend reversal after sustained 10 | cc3f048204c72f | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T18:59Z | S07b | BTC-USD hourly trend persistence in low‑volatili | 3d2f7721f1ed2a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T18:58Z | S04a | BTC-USD hourly gap‑down >2% next‑5‑hour cumulati | 8e7be89dfa4f17 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T18:57Z | S08a | BTC-USD hourly volatility predicts next‑hour ret | cb09e1a9279943 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

@@ -2543,6 +2543,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-06T15:58Z",
+        "id": "6cb46483433c62",
+        "topic": "BTC-USD hourly trend persistence after extreme negative return",
+        "hypothesis": "Hourly BTC-USD returns that fall below -2% are followed by a statistically significant positive trend over the next 6 hours, indicating trend persistence after a shock.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If any hour with return < -2% is followed by a net negative return over the next 6 hours, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly breakout after extreme positive return empirical study",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly trend persistence after extreme negative return empirical study",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -8310,6 +8348,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-06T16:00Z",
+        "id": "38d42e5ac9456b",
+        "topic": "BTC-USD hourly breakout on 12\u2011hour SMA",
+        "hypothesis": "BTC-USD will close above its 12\u2011hour SMA when the price exceeds the SMA by more than 5% of the SMA value, indicating a breakout.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "For each hour in 2020\u20112026, if BTC\u2011USD close > SMA12 \u00d7 1.05, then BTC\u2011USD must close higher than the previous hour. If this fails for any hour, hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly close data 2020-2026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly close data 2020-2026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -9036,6 +9112,44 @@
         "falsification_test": "Check if a 20\u2011hour trend continues 4 hours when 20\u2011hour volatility >5%",
         "source_search": {
           "query": "BTC\u2011USD low\u2011volatility regime definition 20\u2011hour standard deviation <2%",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD 20\u2011hour volatility definition 5%",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-06T15:59Z",
+        "id": "26923261b15442",
+        "topic": "BTC-USD trend persistence in high volatility regimes",
+        "hypothesis": "A 20\u2011hour upward trend in BTC\u2011USD persists for at least 4 additional hours when the 20\u2011hour standard deviation of hourly returns exceeds 5%",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If a 20\u2011hour trend exists and the 20\u2011hour volatility >5% in the initial window, then the trend continues for \u22654 hours; otherwise the hypothesis is falsified",
+        "source_search": {
+          "query": "BTC\u2011USD 20\u2011hour volatility definition 5%",
           "attempted": [
             "web"
           ],
@@ -11486,6 +11600,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-06T15:59Z",
+        "id": "d518616a1e4ee7",
+        "topic": "BTC-USD hourly trend reversal after sustained 10\u2011hour uptrend",
+        "hypothesis": "A sustained 10\u2011hour uptrend in BTC\u2011USD hourly close prices exceeding a 5\u202f% cumulative rise is followed by a reversal (price drop) in the next hour.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Identify every 10\u2011hour window where the cumulative return \u22655\u202f%. For each, check if the next hour\u2019s close is lower than the previous hour\u2019s close. Count the proportion of such reversals; compare to a 50\u202f% baseline using a binomial test.",
+        "source_search": {
+          "query": "btc hourly trend reversal after 10\u2011hour uptrend 5%",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "btc hourly trend reversal after 10\u2011hour uptrend 5%",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -12261,6 +12413,44 @@
         "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
         "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
         "falsification_test": "For each hour where close > SMA\u202f\u00d7\u202f1.05, compute next hour\u2019s return. If \u226590\u202f% of those returns are negative, hypothesis is supported; otherwise rejected.",
+        "source_search": {
+          "query": "ETH\u2011USD hourly 24\u2011hour SMA mean reversion backtest data",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH\u2011USD hourly 24\u2011hour SMA mean reversion backtest data",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-06T15:57Z",
+        "id": "23329497459594",
+        "topic": "ETH-USD hourly mean reversion to 24\u2011hour SMA",
+        "hypothesis": "When ETH\u2011USD hourly close exceeds its 24\u2011hour SMA by more than 5%, the next hour\u2019s return is negative (mean reversion).",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "For each hour where close > SMA\u00d71.05, compute next hour\u2019s return. If \u226590% of such cases yield negative return, hypothesis holds; otherwise reject.",
         "source_search": {
           "query": "ETH\u2011USD hourly 24\u2011hour SMA mean reversion backtest data",
           "attempted": [
