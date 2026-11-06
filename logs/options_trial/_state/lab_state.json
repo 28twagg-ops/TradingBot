@@ -42,26 +42,6 @@
       "entry_order_id": "6661a213-9d9a-4a0e-81d8-e44e69377974"
     },
     {
-      "lot_id": "4f24f9ab69ba",
-      "bucket_id": 13,
-      "profile_name": "lab0013_s350_w2_1005_1045_r1",
-      "strategy_id": "S350",
-      "occ_symbol": "NKE261106C00038500",
-      "underlying": "NKE",
-      "qty": 1,
-      "entry_cost": 44.0,
-      "entry_price": 0.44,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-06T15:08:58.130892+00:00",
-      "entry_order_id": "5794436f-7dd9-4f6c-bbd3-2aa9861bb0af"
-    },
-    {
       "lot_id": "af03c4d8d298",
       "bucket_id": 63,
       "profile_name": "lab0063_s166_w2_1005_1045_r1",
@@ -143,22 +123,10 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "ac0c417b-4f55-429b-b3fc-43ecf7babb93",
-      "lot_id": "4f24f9ab69ba",
-      "bucket_id": 13,
-      "strategy_id": "S350",
-      "occ_symbol": "NKE261106C00038500",
-      "qty": 1,
-      "reason": "stop_loss (-61.4%)",
-      "submitted": "2026-11-06T12:02:01"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b16": 45.0,
     "b90": 56.00000000000001,
-    "b13": 44.0,
     "b63": 63.0,
     "b15": 54.0,
     "b64": 36.0,
@@ -681,7 +649,8 @@
     "534be60b-67b5-41e1-a5cd-78f1e0254d4d",
     "124ee002-ca88-46af-9adc-fbfe8f64a05c",
     "2b785fbe-8933-41dd-b96c-dfd695200fa7",
-    "38a6a076-3b4f-4882-ad07-b97284bc0a30"
+    "38a6a076-3b4f-4882-ad07-b97284bc0a30",
+    "ac0c417b-4f55-429b-b3fc-43ecf7babb93"
   ],
   "submitted_today": 19,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
