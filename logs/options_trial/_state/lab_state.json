@@ -100,26 +100,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-06T15:08:58.156272+00:00",
       "entry_order_id": "d697233d-8984-41d3-bd1d-c87dd8a31b0d"
-    },
-    {
-      "lot_id": "9ad23649ff8d",
-      "bucket_id": 19,
-      "profile_name": "lab0019_s362_w2_1005_1045_r1",
-      "strategy_id": "S362",
-      "occ_symbol": "MSFT261109C00555000",
-      "underlying": "MSFT",
-      "qty": 1,
-      "entry_cost": 45.0,
-      "entry_price": 0.45,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-06T15:27:14.414737+00:00",
-      "entry_order_id": "a279a163-c39b-4eec-b667-6dfae2d492ff"
     }
   ],
   "pending_orders": [],
@@ -129,8 +109,7 @@
     "b90": 56.00000000000001,
     "b63": 63.0,
     "b15": 54.0,
-    "b64": 36.0,
-    "b19": 45.0
+    "b64": 36.0
   },
   "session_date": "2026-11-06",
   "entries_locked": [
@@ -650,7 +629,8 @@
     "124ee002-ca88-46af-9adc-fbfe8f64a05c",
     "2b785fbe-8933-41dd-b96c-dfd695200fa7",
     "38a6a076-3b4f-4882-ad07-b97284bc0a30",
-    "ac0c417b-4f55-429b-b3fc-43ecf7babb93"
+    "ac0c417b-4f55-429b-b3fc-43ecf7babb93",
+    "4f0142e4-e0b4-423e-8e05-ba5423ec8058"
   ],
   "submitted_today": 19,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
