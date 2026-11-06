@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-06T02:27Z | S06b | BTC-USD hourly momentum trigger | 0f82ff5a8a97bf | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-06T02:27Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 83f40ef3b45af5 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-06T02:26Z | S07b | Hourly trend persistence in BTC-USD across low‑v | 725194bdc2d08f | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-06T02:25Z | S02b | BTC-USD hourly momentum persistence | c7f4b1196b9497 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-06T02:25Z | S10b | ETH-USD hourly breakout above 5% of 24‑hour SMA  | 23329497459594 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-05T23:43Z | S06b | BTC-USD hourly momentum trigger | 2990e842a8c22f | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-05T23:43Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 702a575c6b70c8 | HOLD |
 | 2026-11-05T23:42Z | S07b | Hourly trend persistence in BTC‑USD across low‑v | d9c535581583e3 | HOLD_INVALID_MODEL_DECISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-05T11:30Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 2b7e51ea156ca6 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-05T11:29Z | S02b | BTC-USD hourly extreme return mean reversion | 45afa4cccdb828 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-05T11:28Z | S10b | ETH-USD hourly breakout above 3% of 12‑hour SMA  | 1bbe8865a9bc84 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T09:36Z | S06b | BTC-USD hourly breakout on 12‑hour SMA | e2dfe753c7fd68 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T09:35Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 385aba921fd8d4 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T09:34Z | S07b | Hourly trend persistence in BTC-USD across volat | 1772859e0dd371 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-05T09:34Z | S04a | BTC-USD hourly gap‑down >2% mean‑reversion | 891a0b939371d0 | HOLD |
-| 2026-11-05T09:33Z | S08a | BTC-USD hourly return momentum after low volatil | 5e5d7759efcf6c | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
