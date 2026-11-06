@@ -1,0 +1,76 @@
+14:31:34  INFO      Mode: morning_prep
+14:31:35  INFO        [prep_positions] 1/1 (1 valid)
+14:31:35  INFO      Fetching tickers (universe=both)...
+14:31:35  INFO        S&P 500: 503
+14:31:36  INFO        MidCap 400: 400
+14:31:36  INFO        Total: 903 tickers
+14:31:37  INFO        [prep_universe] 40/902 (40 valid)
+14:31:39  INFO        [prep_universe] 80/902 (80 valid)
+14:31:41  INFO        [prep_universe] 120/902 (120 valid)
+14:31:43  INFO        [prep_universe] 160/902 (160 valid)
+14:31:45  INFO        [prep_universe] 200/902 (199 valid)
+14:31:50  INFO        [prep_universe] 240/902 (238 valid)
+14:32:00  INFO        [prep_universe] 280/902 (278 valid)
+14:32:14  INFO        [prep_universe] 320/902 (318 valid)
+14:32:24  INFO        [prep_universe] 360/902 (358 valid)
+14:32:38  INFO        [prep_universe] 400/902 (398 valid)
+14:32:48  INFO        [prep_universe] 440/902 (438 valid)
+14:33:02  INFO        [prep_universe] 480/902 (477 valid)
+14:33:12  INFO        [prep_universe] 520/902 (517 valid)
+14:33:25  INFO        [prep_universe] 560/902 (557 valid)
+14:33:36  INFO        [prep_universe] 600/902 (597 valid)
+14:33:50  INFO        [prep_universe] 640/902 (637 valid)
+14:34:01  INFO        [prep_universe] 680/902 (677 valid)
+14:34:14  INFO        [prep_universe] 720/902 (717 valid)
+14:34:24  INFO        [prep_universe] 760/902 (757 valid)
+14:34:38  INFO        [prep_universe] 800/902 (797 valid)
+14:34:48  INFO        [prep_universe] 840/902 (837 valid)
+14:35:02  INFO        [prep_universe] 880/902 (877 valid)
+14:35:09  INFO        [prep_universe] 902/902 (899 valid)
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         14:31 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $229.03|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       1|
+|  Invested                                                        $68.97|
+|  Open P&L                                                        $+0.23|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  BG       MomReversal     $68.97     $98.05   $98.38   +0.3%   $+0.23  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                0|
+|                                                                        |
+|  No open sell orders.                                                  |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      0|
+|  Signal candidates                                                   20|
+|  Universe scanned                                                   902|
++========================================================================+
