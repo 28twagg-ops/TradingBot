@@ -182,26 +182,6 @@
       "entry_order_id": "d697233d-8984-41d3-bd1d-c87dd8a31b0d"
     },
     {
-      "lot_id": "5ad70b33dd6e",
-      "bucket_id": 2009,
-      "profile_name": "day_trader_analytics_s432",
-      "strategy_id": "S432",
-      "occ_symbol": "TSLA261109C00385000",
-      "underlying": "TSLA",
-      "qty": 1,
-      "entry_cost": 38.0,
-      "entry_price": 0.38,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-06T15:08:58.160353+00:00",
-      "entry_order_id": "50ba4716-69c6-4365-a62e-ac2395f2dc73"
-    },
-    {
       "lot_id": "fbc8bb8f60e5",
       "bucket_id": 2007,
       "profile_name": "day_trader_analytics_s430",
@@ -347,7 +327,6 @@
     "b50": 59.0,
     "b15": 54.0,
     "b64": 36.0,
-    "b2009": 38.0,
     "b2007": 33.0
   },
   "session_date": "2026-11-06",
@@ -859,7 +838,8 @@
     "d697233d-8984-41d3-bd1d-c87dd8a31b0d",
     "50ba4716-69c6-4365-a62e-ac2395f2dc73",
     "82851885-6bfd-4f25-8a7e-f5d88c9dc212",
-    "c64dbbdc-867d-4427-8425-d578421f32c5"
+    "c64dbbdc-867d-4427-8425-d578421f32c5",
+    "24aa22d4-9931-41ca-9e45-b6090df2d49d"
   ],
   "submitted_today": 19,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
