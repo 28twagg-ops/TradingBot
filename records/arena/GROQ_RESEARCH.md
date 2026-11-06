@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-06T18:28Z | S06b | BTC-USD hourly breakout on 12‑hour SMA | 47f6e7b39325bb | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-06T18:27Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 8b39e448ebb6da | HOLD_INVALID_MODEL_DECISION |
+| 2026-11-06T18:26Z | S07b | BTC-USD hourly trend persistence across volatili | 12503c3e15e559 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-06T18:26Z | S02b | BTC-USD hourly trend persistence after extreme n | ea239df4c4abc6 | HOLD |
+| 2026-11-06T18:25Z | S10b | ETH-USD hourly mean reversion after large breako | 6fdb59f183e027 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-06T18:00Z | S04a | BTC-USD hourly gap‑down >2% next‑5‑hour cumulati | 40ec908c627669 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-06T17:59Z | S08a | Low hourly volatility predicts larger next‑hour  | 32c601e7ff0378 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-06T17:58Z | S01a | BTC-USD hourly trend persistence | e45ae13cc6c866 | HOLD |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-06T02:26Z | S07b | Hourly trend persistence in BTC-USD across low‑v | 725194bdc2d08f | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-06T02:25Z | S02b | BTC-USD hourly momentum persistence | c7f4b1196b9497 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-06T02:25Z | S10b | ETH-USD hourly breakout above 5% of 24‑hour SMA  | 23329497459594 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T23:43Z | S06b | BTC-USD hourly momentum trigger | 2990e842a8c22f | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T23:43Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 702a575c6b70c8 | HOLD |
-| 2026-11-05T23:42Z | S07b | Hourly trend persistence in BTC‑USD across low‑v | d9c535581583e3 | HOLD_INVALID_MODEL_DECISION |
-| 2026-11-05T23:41Z | S04a | BTC-USD hourly gap‑down >2% mean‑reversion | 90727c97897d4e | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-05T23:41Z | S08a | BTC-USD hourly volatility‑to‑return magnitude re | 1e0d41682edaf6 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
