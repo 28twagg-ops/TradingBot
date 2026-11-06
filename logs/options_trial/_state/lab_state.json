@@ -200,6 +200,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-06T15:08:58.165276+00:00",
       "entry_order_id": "82851885-6bfd-4f25-8a7e-f5d88c9dc212"
+    },
+    {
+      "lot_id": "9ad23649ff8d",
+      "bucket_id": 19,
+      "profile_name": "lab0019_s362_w2_1005_1045_r1",
+      "strategy_id": "S362",
+      "occ_symbol": "MSFT261109C00555000",
+      "underlying": "MSFT",
+      "qty": 1,
+      "entry_cost": 45.0,
+      "entry_price": 0.45,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-06T15:27:14.414737+00:00",
+      "entry_order_id": "a279a163-c39b-4eec-b667-6dfae2d492ff"
+    },
+    {
+      "lot_id": "1372f321544c",
+      "bucket_id": 62,
+      "profile_name": "lab0062_s167_w2_1005_1045_r1",
+      "strategy_id": "S167",
+      "occ_symbol": "DKNG261113C00018000",
+      "underlying": "DKNG",
+      "qty": 1,
+      "entry_cost": 36.0,
+      "entry_price": 0.36,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-06T15:27:14.421047+00:00",
+      "entry_order_id": "5834a13e-7dbc-4f99-9300-d40417cdf27e"
     }
   ],
   "pending_orders": [
@@ -215,22 +255,6 @@
       "submitted": "2026-11-06",
       "detail": "gap -2.6%",
       "spread_frac": 0.22222222222222227,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
-    {
-      "order_id": "5834a13e-7dbc-4f99-9300-d40417cdf27e",
-      "bucket_id": 62,
-      "strategy_id": "S167",
-      "occ_symbol": "DKNG261113C00018000",
-      "underlying": "DKNG",
-      "qty": 1,
-      "limit": 0.36,
-      "profile_name": "lab0062_s167_w2_1005_1045_r1",
-      "submitted": "2026-11-06",
-      "detail": "gap -26.3%",
-      "spread_frac": 0.14492753623188404,
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
@@ -298,25 +322,20 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.5
-    },
-    {
-      "order_id": "a279a163-c39b-4eec-b667-6dfae2d492ff",
-      "bucket_id": 19,
-      "strategy_id": "S362",
-      "occ_symbol": "MSFT261109C00555000",
-      "underlying": "MSFT",
-      "qty": 1,
-      "limit": 0.45,
-      "profile_name": "lab0019_s362_w2_1005_1045_r1",
-      "submitted": "2026-11-06",
-      "detail": "RB gap -1.9% reclaim",
-      "spread_frac": 0.2168674698795181,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
     }
   ],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "124ee002-ca88-46af-9adc-fbfe8f64a05c",
+      "lot_id": "981c581991e9",
+      "bucket_id": 18,
+      "strategy_id": "S361",
+      "occ_symbol": "AAPL261109C00350000",
+      "qty": 1,
+      "reason": "take_profit (+84.7%)",
+      "submitted": "2026-11-06T10:27:18"
+    }
+  ],
   "bucket_open_premium": {
     "b16": 45.0,
     "b90": 56.00000000000001,
@@ -327,7 +346,9 @@
     "b50": 59.0,
     "b15": 54.0,
     "b64": 36.0,
-    "b2007": 33.0
+    "b2007": 33.0,
+    "b19": 45.0,
+    "b62": 36.0
   },
   "session_date": "2026-11-06",
   "entries_locked": [
@@ -839,7 +860,9 @@
     "50ba4716-69c6-4365-a62e-ac2395f2dc73",
     "82851885-6bfd-4f25-8a7e-f5d88c9dc212",
     "c64dbbdc-867d-4427-8425-d578421f32c5",
-    "24aa22d4-9931-41ca-9e45-b6090df2d49d"
+    "24aa22d4-9931-41ca-9e45-b6090df2d49d",
+    "a279a163-c39b-4eec-b667-6dfae2d492ff",
+    "5834a13e-7dbc-4f99-9300-d40417cdf27e"
   ],
   "submitted_today": 19,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
