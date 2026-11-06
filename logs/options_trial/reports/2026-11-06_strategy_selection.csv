@@ -9,7 +9,6 @@ S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),176,55,33,22,27.3,47.95,-6
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),148,68,43,25,110.72,44.12,-61.17,-50.83,313.81,1344.0,22,98,1,1,19,19.1
 S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),263,160,85,75,95.49,40.97,-58.8,-46.66,205.79,3114.0,43,98,7,5,32,10.6
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),225,109,55,54,36.11,22.22,-71.43,-50.0,146.0,1086.0,25,102,0,0,19,27.5
-S356,GapDown_14DTE,14d,watch,fat left tail (p10 < -45%),74,36,18,18,20.2,8.54,-51.25,-48.92,68.59,479.0,17,98,2,1,7,38.9
 S163,A1 GapDown ATM call EOD,7d ATM,watch,fat left tail (p10 < -45%),146,44,22,22,28.95,0.68,-77.21,-60.0,88.54,916.0,19,108,4,4,16,34.1
 S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S170,Golden Pocket call 3 DTE,3d ATM golden pocket,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
@@ -80,6 +79,7 @@ S408,RubberBand_ITM1,3d,drop,manually paused — excluded from new entries & ref
 S210,MA_Cross_8_21,3d ATM MA cross 8/21,drop,non-positive median return,236,113,53,60,8.41,-6.38,-70.69,-51.61,86.57,139.0,26,102,1,1,28,15.9
 S361,RubberBand_2DTE,2d,drop,non-positive median return,176,72,33,39,71.44,-8.33,-68.33,-53.52,260.33,70.0,26,98,1,1,22,18.1
 S398,GapDown_ATM,3d,drop,non-positive median return,158,65,31,34,31.49,-18.42,-68.25,-55.56,168.45,765.0,17,98,0,0,16,24.6
+S356,GapDown_14DTE,14d,drop,non-positive median return,74,37,18,19,18.34,-18.92,-51.16,-48.89,66.6,460.0,18,98,2,2,7,40.5
 S404,GapDown_OTM2,3d,drop,non-positive median return,217,108,52,56,8.79,-24.02,-65.3,-50.0,94.07,773.0,36,98,8,7,27,10.2
 S174,RubberBand long call EOD,RubberBand (dropped),drop,non-positive median return,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,123,0,0,6,50.4
 S173,MomReversal long call,MomRev,drop,non-positive median return,1625,415,154,261,15.19,-31.51,-77.18,-62.95,101.9,62.64,8,123,0,0,12,27.5
