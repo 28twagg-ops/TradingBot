@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-06
 
-_Generated 2026-11-06T10:12:46.991434_
+_Generated 2026-11-06T10:18:04.829032_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-11-06T10:12:46.991434_
 
 ## Attribution health
 
-- Total exits: **3909**
+- Total exits: **3910**
 - Orphan exits (b0/orphan_reconcile): **422**
 - Orphan rate: **10.8%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -108,9 +108,9 @@ _Generated 2026-11-06T10:12:46.991434_
 | S355 (GapDown_7DTE) | 7d | drop | 71 | 45.1 | -37.50 | -77.08 | -63.70 | +138.64 | 98 | 0 | 0 | $+367.00 | 38.0% | manually paused — excluded from new entries & reflected P&L |
 | S411 (RubberBand_OTM2) | 3d | drop | 66 | 47.0 | -38.16 | -59.11 | -52.28 | +60.61 | 95 | 1 | 2 | $-278.00 | 15.2% | non-positive median return |
 | S352 (GapDown_2DTE) | 2d | drop | 69 | 44.9 | -38.24 | -72.14 | -51.85 | +294.28 | 98 | 2 | 2 | $+238.00 | 17.4% | non-positive median return |
+| S359 (RubberBand_0DTE) | 0d | drop | 52 | 42.3 | -41.86 | -71.40 | -62.96 | +155.71 | 95 | 2 | 2 | $+80.00 | 19.2% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 56 | 33.9 | -42.86 | -83.93 | -65.20 | +103.47 | 98 | 0 | 0 | $-118.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 56 | 23.2 | -43.65 | -86.66 | -54.73 | +95.51 | 102 | 0 | 0 | $-401.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
-| S359 (RubberBand_0DTE) | 0d | drop | 51 | 41.2 | -44.44 | -71.43 | -62.96 | +157.14 | 95 | 2 | 1 | $+39.00 | 19.6% | non-positive median return |
 | S353 (GapDown_3DTE) | 3d | drop | 45 | 42.2 | -46.15 | -82.61 | -69.70 | +264.21 | 98 | 0 | 0 | $+125.00 | 22.2% | non-positive median return |
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 102 | 0 | 0 | $-822.00 | 43.2% | manually paused — excluded from new entries & reflected P&L |
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 98 | 0 | 0 | $+33.00 | 26.3% | manually paused — excluded from new entries & reflected P&L |
@@ -271,7 +271,7 @@ _Pipeline evaluation as of 2026-11-06. Auto-kill thresholds: median<-25% at n>=1
 | S356 | GapDown_14DTE | 37 | -18.92% | 49% | INSUFFICIENT | 98 |
 | S357 | GapDown_21DTE | 31 | +52.94% | 71% | INSUFFICIENT | 98 |
 | S358 | GapDown_30DTE | 5 | -50.00% | 40% | WATCH | 94 |
-| S359 | RubberBand_0DTE | 51 | -44.44% | 41% | INSUFFICIENT | 95 |
+| S359 | RubberBand_0DTE | 52 | -41.86% | 42% | INSUFFICIENT | 95 |
 | S360 | RubberBand_1DTE | 49 | -56.41% | 10% | INSUFFICIENT | 98 |
 | S361 | RubberBand_2DTE | 72 | -8.33% | 46% | INSUFFICIENT | 98 |
 | S362 | RubberBand_3DTE | 68 | +44.12% | 63% | INSUFFICIENT | 98 |
