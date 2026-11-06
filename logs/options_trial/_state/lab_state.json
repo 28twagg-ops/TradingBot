@@ -102,46 +102,6 @@
       "entry_order_id": "2da05357-98b9-4e17-b54d-45d3621c1f80"
     },
     {
-      "lot_id": "981c581991e9",
-      "bucket_id": 18,
-      "profile_name": "lab0018_s361_w2_1005_1045_r1",
-      "strategy_id": "S361",
-      "occ_symbol": "AAPL261109C00350000",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 59.0,
-      "entry_price": 0.59,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-06T15:08:58.139872+00:00",
-      "entry_order_id": "a9ee757c-e924-46e2-8fbe-03e10a18b4f4"
-    },
-    {
-      "lot_id": "a5ae398e61ef",
-      "bucket_id": 50,
-      "profile_name": "lab0050_s397_w2_1005_1045_r1",
-      "strategy_id": "S397",
-      "occ_symbol": "DKNG261113C00017500",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 59.0,
-      "entry_price": 0.59,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-06T15:08:58.147995+00:00",
-      "entry_order_id": "5d3258b9-cbc0-46d9-88fe-aabd6ba90f32"
-    },
-    {
       "lot_id": "73576bdef06c",
       "bucket_id": 15,
       "profile_name": "lab0015_s356_w2_1005_1045_r1",
@@ -304,26 +264,13 @@
       "stop_loss": -0.5
     }
   ],
-  "pending_exits": [
-    {
-      "order_id": "124ee002-ca88-46af-9adc-fbfe8f64a05c",
-      "lot_id": "981c581991e9",
-      "bucket_id": 18,
-      "strategy_id": "S361",
-      "occ_symbol": "AAPL261109C00350000",
-      "qty": 1,
-      "reason": "take_profit (+84.7%)",
-      "submitted": "2026-11-06T10:27:18"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b16": 45.0,
     "b90": 56.00000000000001,
     "b91": 67.0,
     "b13": 44.0,
     "b63": 63.0,
-    "b18": 59.0,
-    "b50": 59.0,
     "b15": 54.0,
     "b64": 36.0,
     "b19": 45.0,
@@ -842,7 +789,9 @@
     "24aa22d4-9931-41ca-9e45-b6090df2d49d",
     "a279a163-c39b-4eec-b667-6dfae2d492ff",
     "5834a13e-7dbc-4f99-9300-d40417cdf27e",
-    "48fc9106-3c86-49d5-9985-7e805ab9baa3"
+    "48fc9106-3c86-49d5-9985-7e805ab9baa3",
+    "534be60b-67b5-41e1-a5cd-78f1e0254d4d",
+    "124ee002-ca88-46af-9adc-fbfe8f64a05c"
   ],
   "submitted_today": 19,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
