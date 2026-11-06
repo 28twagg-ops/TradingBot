@@ -1,0 +1,182 @@
+20:56:46  INFO      Mode: scan
+20:56:47  INFO        [positions] 3/3 (3 valid)
+20:56:47  INFO        SELL LIMIT WYNN  qty=0.414330742  limit=$82.91  id=69cb681d-58d4-47c8-ae0a-621036c79df6
+20:57:17  INFO        SELL LIMIT filled WYNN (confirmed by position check)
+20:57:17  INFO        TX logged: SELL WYNN  P&L -0.24%
+20:57:18  INFO        SELL LIMIT SOLV  qty=0.379947928  limit=$90.33  id=da9d5706-7404-4726-b17e-23ca18f044e6
+20:57:48  INFO        SELL LIMIT filled SOLV (confirmed by position check)
+20:57:48  INFO        TX logged: SELL SOLV  P&L -0.06%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         20:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $229.47|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-06|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $229.47|
+|  Cash                                                            $91.24|
+|  Reserve                                          $11.47  (always kept)|
+|  Stock~  $138.23 / $172.10  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $33.87  (new stock buys)|
+|  Trade size             $34.42  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  BG       MomReversal     $69.46     $98.05   $99.08   +1.0%   $+0.72  |
+|  SOLV     EarningsDrift   $34.42     $90.64   $90.59   -0.1%   $-0.02  |
+|  WYNN     EarningsDrift   $34.36     $83.12   $82.92   -0.2%   $-0.08  |
+|                                                                        |
+|  Total invested                                                 $138.23|
+|  Total open P&L                                                  $+0.61|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (21.3m); positions refreshed live)|
+|  Cached signals                                                      47|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  WYNN  P&L -0.2%  $-0.08                          EXIT: midline (-0.2%)|
+|  SOLV  P&L -0.1%  $-0.02                          EXIT: midline (-0.1%)|
+|  BG  P&L +1.0%  $+0.72                                             HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 2 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                          cached signals (signals fresh (21.3m))|
+|  Universe scanned in prep                                           900|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  47                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.90   44.0   -2.28   50MA bounce (+|
+|  COF      Pullback50      eq     $202.40  53.4   -1.49   50MA bounce (-|
+|  CVX      Pullback50      eq     $213.16  37.3   -2.00   50MA bounce (-|
+|  COHR     RSIRecovery     eq     $195.27  39.7   1.52    RSI 29.4→39.7 |
+|  COP      Pullback50      eq     $136.66  38.1   -0.94   50MA bounce (-|
+|  EOG      Pullback50      eq     $148.22  37.4   0.07    50MA bounce (-|
+|  ESS      Pullback50      eq     $273.87  56.8   -1.18   50MA bounce (+|
+|  HSIC     Pullback50      eq     $86.11   54.7   -0.73   50MA bounce (-|
+|  INCY     Pullback50      eq     $119.10  58.4   -2.06   50MA bounce (-|
+|  MRK      Pullback50      eq     $146.52  53.6   -2.07   50MA bounce (+|
+|  MET      Pullback50      eq     $98.85   48.2   -1.52   50MA bounce (+|
+|  NRG      RSIRecovery     eq     $89.81   39.5   0.56    RSI 21.6→39.5 |
+|  NTRS     Pullback50      eq     $173.38  64.0   -1.44   50MA bounce (-|
+|  RJF      Pullback50      eq     $163.48  64.7   -2.20   50MA bounce (+|
+|  SOLV     EarningsDrift   eq     $91.79   62.2   1.54    post-earnings |
+|  SOLV     VWAP_Reclaim    eq     $91.79   62.2   1.54    VWAP reclaim V|
+|  SYF      Pullback50      eq     $74.17   49.7   -0.30   50MA bounce (-|
+|  TGT      Pullback50      eq     $157.79  54.8   -2.36   50MA bounce (+|
+|  USB      Pullback50      eq     $59.63   59.5   -0.53   50MA bounce (-|
+|  URI      Pullback50      eq     $1054.~  54.0   -1.35   50MA bounce (+|
+|  UNH      Pullback50      eq     $393.08  41.4   -0.90   50MA bounce (+|
+|  VST      RSIRecovery     eq     $125.31  35.7   0.53    RSI 23.9→35.7 |20:57:48  INFO        place_all_stops: checking 1 positions...
+20:57:48  INFO        STOP skipped BG: fractional (0.7011 shares) — software exit will handle it
+20:57:48  INFO        place_eod_stops: updating 1 stops to current price...
+20:57:48  INFO        EOD stop skip BG: 0.7011 shares (fractional) — ext_exits will cover
+20:57:48  INFO        Daily log -> logs/daily/2026-11-06.md
+20:57:48  INFO        Dashboard written → logs/dashboard.md
+
+|  WAB      Pullback50      eq     $284.44  48.6   -0.85   50MA bounce (-|
+|  WFC      Pullback50      eq     $83.98   57.9   -1.31   50MA bounce (-|
+|  WYNN     EarningsDrift   eq     $83.42   63.0   1.72    post-earnings |
+|  WYNN     VWAP_Reclaim    eq     $83.42   63.0   1.72    VWAP reclaim V|
+|  WDAY     Pullback50      eq     $194.12  48.8   -1.81   50MA bounce (-|
+|  ASH      VWAP_Reclaim    eq     $77.65   75.2   1.95    VWAP reclaim V|
+|  BWXT     RSIRecovery     eq     $120.13  34.9   0.43    RSI 27.0→34.9 |
+|  CFR      Pullback50      eq     $155.67  56.6   -2.07   50MA bounce (-|
+|  CR       Pullback50      eq     $201.21  46.9   -1.40   50MA bounce (-|
+|  ELAN     VWAP_Reclaim    eq     $25.52   62.0   1.97    VWAP reclaim V|
+|  EQH      Pullback50      eq     $53.15   49.9   -1.39   50MA bounce (-|
+|  EWBC     Pullback50      eq     $129.41  58.3   -1.91   50MA bounce (+|
+|  FNB      Pullback50      eq     $17.95   64.2   -2.15   50MA bounce (+|
+|  G        VWAP_Reclaim    eq     $42.62   71.6   1.11    VWAP reclaim V|
+|  MAT      RSIRecovery     eq     $15.52   32.3   1.14    RSI 19.3→32.3 |
+|  MAT      VWAP_Reclaim    eq     $15.52   32.3   1.14    VWAP reclaim V|
+|  MTG      Pullback50      eq     $28.88   59.0   -0.53   50MA bounce (+|
+|  ONB      Pullback50      eq     $24.97   51.7   -2.37   50MA bounce (-|
+|  PK       Pullback50      eq     $15.79   46.5   -1.82   50MA bounce (+|
+|  SEIC     Pullback50      eq     $105.51  51.5   -2.13   50MA bounce (-|
+|  SSB      Pullback50      eq     $104.41  62.1   -2.01   50MA bounce (+|
+|  UMBF     Pullback50      eq     $134.53  59.1   -2.19   50MA bounce (-|
+|  VOYA     Pullback50      eq     $99.42   62.0   -1.42   50MA bounce (+|
+|  WEX      Pullback50      eq     $183.16  49.9   -1.16   50MA bounce (-|
+|  ZION     Pullback50      eq     $64.93   58.8   -1.82   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             47|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                2|
+|  Open pos                                                             1|
+|  Equity                                                         $229.60|
+|  Cash                                                           $159.98|
++========================================================================+

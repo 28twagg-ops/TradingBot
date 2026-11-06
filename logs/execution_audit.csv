@@ -1016,3 +1016,5 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-11-05 20:52:39,2026-11-05,SELL,NEM,EarningsDrift,119.965,119.73,119.956,34.57,-0.0075,-0.0026,limit_fill_position_check_full,midline (+0.7%),bull
 2026-11-06 20:47:17,2026-11-06,SELL,TECH,Pullback50,72.785,72.78,72.782,34.38,-0.0041,-0.0014,limit_fill_position_check_full,midline (+0.1%),bull
 2026-11-06 20:47:48,2026-11-06,SELL,BMY,Pullback50,62.2,62.19,62.192,34.4,-0.0129,-0.0044,limit_fill_position_check_full,midline (+0.2%),bull
+2026-11-06 20:57:17,2026-11-06,SELL,WYNN,EarningsDrift,82.92,82.91,82.916,34.35,-0.0048,-0.0017,limit_fill_position_check_full,midline (-0.2%),bull
+2026-11-06 20:57:48,2026-11-06,SELL,SOLV,EarningsDrift,90.51,90.33,90.508,34.39,-0.0022,-0.0008,limit_fill_position_check_full,midline (-0.1%),bull
