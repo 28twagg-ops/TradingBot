@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-11-06T15:57:43.845195+00:00",
+  "timestamp": "2026-11-06T21:31:41.394414+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
-      "action": "BUY SOL-USD",
+      "action": "SELL SOL-USD",
       "generation_index": 0,
-      "cash": 59.85561609,
-      "equity": 99.1567,
-      "ledger_events": 3,
+      "cash": 98.60750559,
+      "equity": 98.6075,
+      "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S02": {
-      "action": "BUY SOL-USD",
+      "action": "SELL SOL-USD",
       "generation_index": 1,
-      "cash": 59.85561609,
-      "equity": 99.1567,
-      "ledger_events": 3,
+      "cash": 98.60750559,
+      "equity": 98.6075,
+      "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S03": {
-      "action": "BUY QQQ",
+      "action": "HOLD",
       "generation_index": 0,
       "cash": 13.25063502,
-      "equity": 99.6392,
+      "equity": 99.7136,
       "ledger_events": 12,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -42,17 +42,17 @@
       "action": "HOLD",
       "generation_index": 0,
       "cash": 83.26539448,
-      "equity": 96.8083,
+      "equity": 96.6458,
       "ledger_events": 5,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S06": {
-      "action": "BUY SOL-USD",
+      "action": "SELL SOL-USD",
       "generation_index": 1,
-      "cash": 59.85561609,
-      "equity": 99.1567,
-      "ledger_events": 3,
+      "cash": 98.60750559,
+      "equity": 98.6075,
+      "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -84,11 +84,11 @@
       "missing_quotes": []
     },
     "S10": {
-      "action": "BUY SOL-USD",
+      "action": "SELL SOL-USD",
       "generation_index": 1,
-      "cash": 59.85561609,
-      "equity": 99.1567,
-      "ledger_events": 3,
+      "cash": 98.60750559,
+      "equity": 98.6075,
+      "ledger_events": 4,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     }

@@ -1831,6 +1831,44 @@
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-06T21:33Z",
+        "id": "af01ef7333f111",
+        "topic": "BTC-USD hourly trend persistence",
+        "hypothesis": "Hourly BTC-USD prices exhibit statistically significant trend persistence over a 20\u2011hour lookback, with directional momentum exceeding a 5% return threshold.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Apply a 20\u2011hour trend rule with 5% threshold to historical hourly closes; if cumulative PnL < 0 or profit factor < 1, reject hypothesis.",
+        "source_search": {
+          "query": "BTC-USD hourly trend persistence empirical study 2024 2025",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly trend persistence empirical study 2024 2025",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -4434,6 +4472,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-06T21:31Z",
+        "id": "14094eb9269ab5",
+        "topic": "BTC-USD hourly mean reversion at 12\u2011hour lag",
+        "hypothesis": "BTC\u2011USD hourly returns revert toward zero when the 12\u2011hour lag exceeds \u00b14\u202f%",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Test whether the 12\u2011hour lag mean reversion with a 4\u202f% threshold holds in a hold\u2011out period after adjusting for multiple testing",
+        "source_search": {
+          "query": "BTC-USD hourly returns 12\u2011hour lag mean reversion 4% threshold statistical test",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly close price data 2015\u20112026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -6250,6 +6326,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-06T21:34Z",
+        "id": "7dd69ca5b61fb9",
+        "topic": "gap_down_quality",
+        "hypothesis": "After a >2% hourly gap\u2011down in BTC\u2011USD, the price reverts within the next 5 hours with \u226570% probability of returning to within 5% of the pre\u2011gap level.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "For each hourly gap\u2011down >2% in BTC\u2011USD, check if the price does not return to within 5% of the pre\u2011gap level within 5 hours using only hourly close prices.",
+        "source_search": {
+          "query": "BTC-USD hourly gap\u2011down >2% next\u20115\u2011hour cumulative return distribution",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly gap\u2011down >2% next\u20115\u2011hour return distribution",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ],
     "ai_seen": {
@@ -7858,6 +7972,73 @@
           "matches": 4
         },
         "source_leads": [],
+        "next_search_query": "BTC-USD hourly close 2019\u20112026 trend breakout performance",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-06T21:32Z",
+        "id": "0ecea033a423a1",
+        "topic": "Hourly trend breakout on BTC-USD",
+        "hypothesis": "A 20\u2011hour trend breakout in BTC\u2011USD with a 5% threshold predicts a statistically significant directional move in the next 24 hours.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "If the rule fails to produce a >10% win rate over 2000 events, it is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly close 2019\u20112026 trend breakout performance",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $75,925.12 USD with a 24-hour trading volume of $35,418,383,497.57 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
+            "url": "https://www.tradingview.com/symbols/BTCUSD/",
+            "snippet": "What's Bitcoin all-time high? Bitcoin (BTC) reached its highest price of 126,272 USD on Oct 6, 2025. View more Bitcoin dynamics on the BTC price chart and scan other coins to find out what crypto hits its all-time high.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+            "url": "https://finance.yahoo.com/quote/BTC-USD/",
+            "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+            "read_level": "public_search_result_only"
+          },
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart | CoinDesk",
+            "url": "https://www.coindesk.com/price/bitcoin",
+            "snippet": "The price of Bitcoin (BTC) is $75,714.35 today as of Nov 6, 2026, 12:34 pm EST, with a 24-hour trading volume of $16.91B.",
+            "read_level": "public_search_result_only"
+          }
+        ],
         "next_search_query": "BTC-USD hourly close 2019\u20112026 trend breakout performance",
         "preferred_sources": [
           "web"
@@ -11195,6 +11376,44 @@
         },
         "source_leads": [],
         "next_search_query": "search for studies on low volatility and return magnitude in BTC\u2011USD hourly data",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-06T21:33Z",
+        "id": "8b230db79ec1ca",
+        "topic": "High hourly volatility predicts next\u2011hour return reversal in BTC\u2011USD",
+        "hypothesis": "When the hourly realized volatility of BTC\u2011USD exceeds 1.5 times its 20\u2011period rolling average, the next hour\u2019s return tends to have the opposite sign.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "Compute 20\u2011period rolling volatility; flag hours where volatility>1.5\u00d7average; check sign of next hour\u2019s return; calculate proportion of opposite signs. If >60% then rule holds.",
+        "source_search": {
+          "query": "search for studies on low volatility and return magnitude in BTC\u2011USD hourly data",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for studies on volatility\u2011reversal in BTC\u2011USD hourly data",
         "preferred_sources": [
           "web"
         ],
