@@ -22,26 +22,6 @@
       "entry_order_id": "e5d3b23c-7c64-4122-9402-b0ef8adc47c9"
     },
     {
-      "lot_id": "3038c34ecf91",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S406",
-      "occ_symbol": "AAPL261109C00350000",
-      "underlying": "AAPL",
-      "qty": 1,
-      "entry_cost": 48.0,
-      "entry_price": 0.48,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-06T14:48:51.824965+00:00",
-      "entry_order_id": "471d312f-d84c-405d-9c99-ecd552faa311"
-    },
-    {
       "lot_id": "405d6e0584ea",
       "bucket_id": 90,
       "profile_name": "live_1to1",
@@ -83,21 +63,10 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "a5c99b6f-e26b-4620-a8b1-d1d91b797c3a",
-      "lot_id": "3038c34ecf91",
-      "bucket_id": 90,
-      "strategy_id": "S406",
-      "occ_symbol": "AAPL261109C00350000",
-      "qty": 1,
-      "reason": "take_profit (+108.3%)",
-      "submitted": "2026-11-06T09:56:54"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b16": 45.0,
-    "b90": 104.0,
+    "b90": 56.00000000000001,
     "b91": 67.0
   },
   "session_date": "2026-11-06",
@@ -582,7 +551,8 @@
     "470e0748-0c11-49f5-9ed7-f83a5eb2e357",
     "7c1332e9-501c-460e-88ef-76005b80574b",
     "c33bed3f-5a76-4526-b937-a48f10db38af",
-    "5d0889cb-bfbe-4e28-bd29-919a2ef728a3"
+    "5d0889cb-bfbe-4e28-bd29-919a2ef728a3",
+    "a5c99b6f-e26b-4620-a8b1-d1d91b797c3a"
   ],
   "submitted_today": 3,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
