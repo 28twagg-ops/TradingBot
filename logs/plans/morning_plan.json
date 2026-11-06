@@ -1,86 +1,332 @@
 {
   "mode_name": "morning",
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "month": 11,
   "regime": "bull",
-  "positions_count": 2,
+  "positions_count": 1,
   "positions_snapshot": [
     {
-      "ticker": "ALSN",
-      "strategy": "EarningsDrift",
-      "dollar_amt": 35.465815,
-      "entry_price": 119.18,
-      "current_price": 121.67,
-      "pnl_pct": 2.089,
-      "pnl_dollar": 0.725815
-    },
-    {
-      "ticker": "DASH",
-      "strategy": "EarningsDrift",
-      "dollar_amt": 33.332185,
-      "entry_price": 191.49,
-      "current_price": 183.73,
-      "pnl_pct": -4.052,
-      "pnl_dollar": -1.407815
+      "ticker": "BG",
+      "strategy": "MomReversal",
+      "dollar_amt": 68.836917,
+      "entry_price": 98.051756,
+      "current_price": 98.19,
+      "pnl_pct": 0.14100000000000001,
+      "pnl_dollar": 0.096917
     }
   ],
   "open_sell_orders": [],
-  "scan_universe_count": 901,
-  "exit_plan": [
-    {
-      "ticker": "ALSN",
-      "why": "midline (+2.1%)"
-    },
-    {
-      "ticker": "DASH",
-      "why": "stop_loss (-4.1%)"
-    }
-  ],
+  "scan_universe_count": 902,
+  "exit_plan": [],
   "signals": [
     {
-      "ticker": "EOG",
+      "ticker": "TECH",
       "strategy": "Pullback50",
-      "close": 148.55,
-      "rsi": 36.0,
-      "vol_z": -2.26,
-      "trigger": "50MA bounce (-0.5%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
-    {
-      "ticker": "GPC",
-      "strategy": "Pullback50",
-      "close": 128.69,
-      "rsi": 42.0,
-      "vol_z": -2.15,
-      "trigger": "50MA bounce (-0.4%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
-    {
-      "ticker": "TXNM",
-      "strategy": "Pullback50",
-      "close": 58.53,
-      "rsi": 50.4,
-      "vol_z": -1.66,
+      "close": 72.7,
+      "rsi": 62.7,
+      "vol_z": -2.64,
       "trigger": "50MA bounce (+0.3%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
     },
     {
-      "ticker": "WTS",
+      "ticker": "BMY",
       "strategy": "Pullback50",
-      "close": 354.21,
-      "rsi": 48.5,
-      "vol_z": -2.07,
-      "trigger": "50MA bounce (-0.5%)",
+      "close": 62.08,
+      "rsi": 59.9,
+      "vol_z": -2.52,
+      "trigger": "50MA bounce (-0.4%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "COF",
+      "strategy": "Pullback50",
+      "close": 204.28,
+      "rsi": 56.1,
+      "vol_z": -2.36,
+      "trigger": "50MA bounce (+0.3%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "DE",
+      "strategy": "Pullback50",
+      "close": 666.77,
+      "rsi": 70.2,
+      "vol_z": -2.71,
+      "trigger": "50MA bounce (-0.0%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "FITB",
+      "strategy": "Pullback50",
+      "close": 53.09,
+      "rsi": 63.2,
+      "vol_z": -2.25,
+      "trigger": "50MA bounce (+0.9%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "LYV",
+      "strategy": "Pullback50",
+      "close": 173.37,
+      "rsi": 54.3,
+      "vol_z": -1.76,
+      "trigger": "50MA bounce (+0.3%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "MET",
+      "strategy": "Pullback50",
+      "close": 98.39,
+      "rsi": 47.1,
+      "vol_z": -2.31,
+      "trigger": "50MA bounce (+0.2%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "NEM",
+      "strategy": "Pullback50",
+      "close": 119.59,
+      "rsi": 52.0,
+      "vol_z": -2.16,
+      "trigger": "50MA bounce (+0.6%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "PFG",
+      "strategy": "Pullback50",
+      "close": 112.04,
+      "rsi": 61.1,
+      "vol_z": -2.37,
+      "trigger": "50MA bounce (-0.3%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "RMD",
+      "strategy": "Pullback50",
+      "close": 234.1,
+      "rsi": 46.0,
+      "vol_z": -1.82,
+      "trigger": "50MA bounce (+1.0%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "RJF",
+      "strategy": "Pullback50",
+      "close": 164.12,
+      "rsi": 65.9,
+      "vol_z": -3.11,
+      "trigger": "50MA bounce (+0.4%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "SYF",
+      "strategy": "Pullback50",
+      "close": 74.27,
+      "rsi": 50.1,
+      "vol_z": -2.12,
+      "trigger": "50MA bounce (-0.4%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "TGT",
+      "strategy": "Pullback50",
+      "close": 156.7,
+      "rsi": 53.6,
+      "vol_z": -3.11,
+      "trigger": "50MA bounce (+0.2%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "USB",
+      "strategy": "Pullback50",
+      "close": 59.49,
+      "rsi": 58.6,
+      "vol_z": -1.95,
+      "trigger": "50MA bounce (-0.3%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "UNH",
+      "strategy": "Pullback50",
+      "close": 392.49,
+      "rsi": 41.1,
+      "vol_z": -1.92,
+      "trigger": "50MA bounce (+0.5%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "WFC",
+      "strategy": "Pullback50",
+      "close": 84.3,
+      "rsi": 59.2,
+      "vol_z": -1.87,
+      "trigger": "50MA bounce (-0.1%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "WDAY",
+      "strategy": "Pullback50",
+      "close": 195.25,
+      "rsi": 50.1,
+      "vol_z": -3.12,
+      "trigger": "50MA bounce (+0.4%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "BRKR",
+      "strategy": "Pullback50",
+      "close": 59.25,
+      "rsi": 56.1,
+      "vol_z": -1.62,
+      "trigger": "50MA bounce (+0.5%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "CFR",
+      "strategy": "Pullback50",
+      "close": 155.83,
+      "rsi": 57.1,
+      "vol_z": -2.96,
+      "trigger": "50MA bounce (-0.9%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "JAZZ",
+      "strategy": "Pullback50",
+      "close": 227.91,
+      "rsi": 65.7,
+      "vol_z": -2.54,
+      "trigger": "50MA bounce (-0.6%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "LNTH",
+      "strategy": "Pullback50",
+      "close": 100.79,
+      "rsi": 63.1,
+      "vol_z": -2.1,
+      "trigger": "50MA bounce (+0.5%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "ONB",
+      "strategy": "Pullback50",
+      "close": 25.01,
+      "rsi": 52.0,
+      "vol_z": -2.88,
+      "trigger": "50MA bounce (-0.7%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "PK",
+      "strategy": "Pullback50",
+      "close": 15.62,
+      "rsi": 44.5,
+      "vol_z": -3.01,
+      "trigger": "50MA bounce (-0.4%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "SEIC",
+      "strategy": "Pullback50",
+      "close": 104.67,
+      "rsi": 49.8,
+      "vol_z": -2.72,
+      "trigger": "50MA bounce (-0.8%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "SSB",
+      "strategy": "Pullback50",
+      "close": 103.92,
+      "rsi": 59.9,
+      "vol_z": -2.83,
+      "trigger": "50MA bounce (+0.4%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "UMBF",
+      "strategy": "Pullback50",
+      "close": 134.59,
+      "rsi": 59.2,
+      "vol_z": -2.76,
+      "trigger": "50MA bounce (-0.3%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "VOYA",
+      "strategy": "Pullback50",
+      "close": 98.05,
+      "rsi": 59.5,
+      "vol_z": -2.3,
+      "trigger": "50MA bounce (-0.6%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "ZION",
+      "strategy": "Pullback50",
+      "close": 64.87,
+      "rsi": 58.5,
+      "vol_z": -2.43,
+      "trigger": "50MA bounce (-0.4%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
     }
   ],
-  "saved_at_utc": "2026-11-05T14:41:13Z"
+  "saved_at_utc": "2026-11-06T14:40:54Z"
 }
