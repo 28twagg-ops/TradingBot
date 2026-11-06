@@ -1,0 +1,198 @@
+14:47:44  INFO      Mode: morning_scan
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:47 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $229.10|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-06|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $229.10|
+|  Cash                                                           $160.06|
+|  Reserve                                          $11.46  (always kept)|
+|  Stocks~  $69.04 / $171.82  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $102.79  (new stock buys)|
+|  Trade size             $34.36  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (1 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  BG       MomReversal     $69.04     $98.05   $98.47   +0.4%   $+0.30  |
+|                                                                        |
+|  Total invested                                                  $69.04|
+|  Total open P&L                                                  $+0.30|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                     yes (fresh (6.9m))|
+|  Cached exits                                                         0|
+|  Cached signals                                                      28|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  BG  P&L +0.4%  $+0.30                                             HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           902|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  28                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  TECH     Pullback50      eq     $72.70   62.7   -2.64   50MA bounce (+|
+|  BMY      Pullback50      eq     $62.08   59.9   -2.52   50MA bounce (-|
+|  COF      Pullback50      eq     $204.28  56.1   -2.36   50MA bounce (+|
+|  DE       Pullback50      eq     $666.77  70.2   -2.71   50MA bounce (-|
+|  FITB     Pullback50      eq     $53.09   63.2   -2.25   50MA bounce (+|
+|  LYV      Pullback50      eq     $173.37  54.3   -1.76   50MA bounce (+|
+|  MET      Pullback50      eq     $98.39   47.1   -2.31   50MA bounce (+|
+|  NEM      Pullback50      eq     $119.59  52.0   -2.16   50MA bounce (+|
+|  PFG      Pullback50      eq     $112.04  61.1   -2.37   50MA bounce (-|
+|  RMD      Pullback50      eq     $234.10  46.0   -1.82   50MA bounce (+|
+|  RJF      Pullback50      eq     $164.12  65.9   -3.11   50MA bounce (+|
+|  SYF      Pullback50      eq     $74.27   50.1   -2.12   50MA bounce (-|
+|  TGT      Pullback50      eq     $156.70  53.6   -3.11   50MA bounce (+|
+|  USB      Pullback50      eq     $59.49   58.6   -1.95   50MA bounce (-|
+|  UNH      Pullback50      eq     $392.49  41.1   -1.92   50MA bounce (+|
+|  WFC      Pullback50      eq     $84.30   59.2   -1.87   50MA bounce (-|
+|  WDAY     Pullback50      eq     $195.25  50.1   -3.12   50MA bounce (+|
+|  BRKR     Pullback50      eq     $59.25   56.1   -1.62   50MA bounce (+|
+|  CFR      Pullback50      eq     $155.83  57.1   -2.96   50MA bounce (-|
+|  JAZZ     Pullback50      eq     $227.91  65.7   -2.54   50MA bounce (-|
+|  LNTH     Pullback50      eq     $100.79  63.1   -2.10   50MA bounce (+|
+|  ONB      Pullback50      eq     $25.01   52.0   -2.88   50MA bounce (-|
+|  PK       Pullback50      eq     $15.62   44.5   -3.01   50MA bounce (-|
+|  SEIC     Pullback50      eq     $104.67  49.8   -2.72   50MA bounce (-|
+|  SSB      Pullback50      eq     $103.92  59.9   -2.83   50MA bounce (+|
+|  UMBF     Pullback50      eq     $134.59  59.2   -2.76   50MA bounce (-|
+|  VOYA     Pullback50      eq     $98.05   59.5   -2.30   50MA bounce (-|14:47:45  INFO        BUY  TECH  $34.36  [Pullback50]  id=68615c8e-84f4-47cb-ba4c-5ba7d9402cc1
+14:47:46  INFO        BUY  BMY  $34.36  [Pullback50]  id=8eac701b-9c38-4213-8bf8-7a03a6c6842a
+14:48:07  INFO        place_all_stops: checking 3 positions...
+14:48:07  INFO        STOP skipped BG: fractional (0.7011 shares) — software exit will handle it
+14:48:07  INFO        STOP skipped BMY: fractional (0.5531 shares) — software exit will handle it
+14:48:07  INFO        STOP skipped TECH: fractional (0.4723 shares) — software exit will handle it
+14:48:08  INFO        Daily log -> logs/daily/2026-11-06.md
+14:48:08  INFO        Dashboard written → logs/dashboard.md
+
+|  ZION     Pullback50      eq     $64.87   58.5   -2.43   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] TECH  Pullback50                                   $34.36|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] BMY  Pullback50                                    $34.36|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] COF  Pullback50                                      cap 3|
+|    SKIP [eq] DE  Pullback50                                       cap 3|
+|    SKIP [eq] FITB  Pullback50                                     cap 3|
+|    SKIP [eq] LYV  Pullback50                                      cap 3|
+|    SKIP [eq] MET  Pullback50                                      cap 3|
+|    SKIP [eq] NEM  Pullback50                                      cap 3|
+|    SKIP [eq] PFG  Pullback50                                      cap 3|
+|    SKIP [eq] RMD  Pullback50                                      cap 3|
+|    SKIP [eq] RJF  Pullback50                                      cap 3|
+|    SKIP [eq] SYF  Pullback50                                      cap 3|
+|    SKIP [eq] TGT  Pullback50                                      cap 3|
+|    SKIP [eq] USB  Pullback50                                      cap 3|
+|    SKIP [eq] UNH  Pullback50                                      cap 3|
+|    SKIP [eq] WFC  Pullback50                                      cap 3|
+|    SKIP [eq] WDAY  Pullback50                                     cap 3|
+|    SKIP [eq] BRKR  Pullback50                                     cap 3|
+|    SKIP [eq] CFR  Pullback50                                      cap 3|
+|    SKIP [eq] JAZZ  Pullback50                                     cap 3|
+|    SKIP [eq] LNTH  Pullback50                                     cap 3|
+|    SKIP [eq] ONB  Pullback50                                      cap 3|
+|    SKIP [eq] PK  Pullback50                                       cap 3|
+|    SKIP [eq] SEIC  Pullback50                                     cap 3|
+|    SKIP [eq] SSB  Pullback50                                      cap 3|
+|    SKIP [eq] UMBF  Pullback50                                     cap 3|
+|    SKIP [eq] VOYA  Pullback50                                     cap 3|
+|    SKIP [eq] ZION  Pullback50                                     cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  TECH                                                 still unconfirmed|
+|  BMY                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             28|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $229.07|
+|  Cash                                                            $91.35|
++========================================================================+
