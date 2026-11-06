@@ -12280,3 +12280,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-06 16:06:57,exits,bull,230.28,91.35,0,0,0,3,BG|BMY|TECH,both
 2026-11-06 16:12:03,exits,bull,230.5,91.35,0,0,0,3,BG|BMY|TECH,both
 2026-11-06 16:17:06,exits,bull,230.59,91.35,0,0,0,3,BG|BMY|TECH,both
+2026-11-06 16:21:53,exits,bull,230.44,91.35,0,0,0,3,BG|BMY|TECH,both
