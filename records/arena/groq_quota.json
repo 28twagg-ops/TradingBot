@@ -2,21 +2,17 @@
   "last_provider": {
     "remaining_daily_requests": 995,
     "limit_daily_requests": 1000,
-    "remaining_minute_tokens": 5057,
+    "remaining_minute_tokens": 5167,
     "limit_minute_tokens": 8000,
     "reset_daily_seconds": 432.0,
-    "reset_minute_seconds": 22.072
+    "reset_minute_seconds": 21.247
   },
-  "last_observed_at": "2026-11-06T10:53:13.259907+00:00",
+  "last_observed_at": "2026-11-06T11:30:04.920399+00:00",
   "local_daily_request_ceiling": 72,
-  "last_run_at": "2026-11-06T10:53:13.274250+00:00",
+  "last_run_at": "2026-11-06T11:30:04.941674+00:00",
   "last_batch_attempts": 5,
   "last_batch_successes": 5,
   "pending_worker_priority": [
-    "S03",
-    "S05",
-    "S01",
-    "S08",
-    "S04"
+    "S10"
   ]
 }
