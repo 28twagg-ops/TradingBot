@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "df447b6d03884aaaa70333078b44492f",
+  "worker": "S09",
+  "cycle": "2026-11-07T10:05Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S09",
+    "cycle": "2026-11-07T10:05Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly trend reversal after sustained 10-hour uptrend above $1,000,000.0",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "cross_asset",
+        "social_signal"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "129fae649a0fb7",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "To Do List Maker",
+        "url": "https://listmaker.com/to-do",
+        "snippet": "Create online to-do lists for work and keep your tasks organized. Manage your to-do list, take notes, track habits, and organize ideas into outlines and lists.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Online List Maker - Create a List & Share It Free",
+        "url": "https://onlinelistmaker.com/",
+        "snippet": "Make a list online in seconds, free with no account needed. Create a list, share the link, and everyone edits it in real time on any device. Grocery lists, to-do lists, checklists.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "List-maker.com",
+        "url": "https://list-maker.com/",
+        "snippet": "list-maker.com Create a list that you can easily share with your friends or family!",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "list of public, timestamped, hourly close price data for BTC-USD from 2023-01-01 to 2023-12-31 with no lookahead or data leakage",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 122.116,
+      "load_seconds": 0.026,
+      "eval_count": 403,
+      "prompt_eval_count": 1755,
+      "tokens_per_second": 6.184,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 6.1,
+        "free_ram_gb": 11.39,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-07T10:05Z",
+    "id": "129fae649a0fb7",
+    "topic": "BTC-USD hourly trend reversal after sustained 10-hour uptrend above $1,000,000.0",
+    "hypothesis": "BTC-USD hourly price reversals following a sustained 10-hour uptrend above $1,000,000.0 are statistically significant and can be detected in real-time without lookahead.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "cross_asset",
+        "social_signal"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For each hour in 2023-01-01 to 2023-12-31, check if BTC-USD closed above $1,000,000.0 for 10 consecutive hours, then closed below $1,000,000.0 in the next hour. This event must be detected using only historical close prices, with no lookahead, and with no access to future data. If such a reversal oc",
+    "source_search": {
+      "query": "list of public, timestamped, hourly close price data for BTC-USD from 2023-01-01 to 2023-12-31 with no lookahead or data leakage",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "To Do List Maker",
+        "url": "https://listmaker.com/to-do",
+        "snippet": "Create online to-do lists for work and keep your tasks organized. Manage your to-do list, take notes, track habits, and organize ideas into outlines and lists.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Online List Maker - Create a List & Share It Free",
+        "url": "https://onlinelistmaker.com/",
+        "snippet": "Make a list online in seconds, free with no account needed. Create a list, share the link, and everyone edits it in real time on any device. Grocery lists, to-do lists, checklists.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "List-maker.com",
+        "url": "https://list-maker.com/",
+        "snippet": "list-maker.com Create a list that you can easily share with your friends or family!",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "list of public, timestamped, hourly close price data for BTC-USD from 2023-01-01 to 2023-12-31 with no lookahead or data leakage",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "daily_bars",
+      "cross_asset",
+      "social_signal"
+    ],
+    "hypothesis_timeframe": "2023-01-01 to 2023-12-31",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
