@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-07T16:28Z | S08a | Low hourly volatility predicts larger next‑hour  | c7756a331103dd | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-07T16:27Z | S01a | BTC-USD hourly price reversion to 24‑hour VWAP | efcad27653b78f | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-07T16:26Z | S05a | Hourly opening‑range breakout on BTC‑USD | d2e1241b4a8023 | HOLD |
+| 2026-11-07T16:26Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 697c454e984fa6 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-07T16:25Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 1a9b2773f0e871 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-07T10:42Z | S07b | BTC-USD hourly trend persistence during high‑vol | f84025012afcd1 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-07T10:41Z | S02b | BTC-USD hourly trend persistence after extreme n | c88993f7b93d3b | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-07T10:41Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | c549223e4780c6 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-06T23:07Z | S02b | BTC-USD hourly trend persistence after extreme n | 05a782536fc36b | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-06T23:06Z | S10b | ETH-USD hourly breakout above 5% SMA triggers me | 23329497459594 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-06T21:34Z | S04a | gap_down_quality | 7dd69ca5b61fb9 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-06T21:33Z | S08a | High hourly volatility predicts next‑hour return | 8b230db79ec1ca | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-06T21:33Z | S01a | BTC-USD hourly trend persistence | af01ef7333f111 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-06T21:32Z | S05a | Hourly trend breakout on BTC-USD | 0ecea033a423a1 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-06T21:31Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | 14094eb9269ab5 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-06T18:28Z | S06b | BTC-USD hourly breakout on 12‑hour SMA | 47f6e7b39325bb | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
