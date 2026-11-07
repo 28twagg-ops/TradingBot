@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "90f863a60bc54f96a08751c76689d50b",
+  "worker": "S06",
+  "cycle": "2026-11-07T06:08Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S06",
+    "cycle": "2026-11-07T06:08Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD relative strength to SPY",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "minute_bars",
+        "volume",
+        "options_chain"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "0a1a3436cac9e8",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "The live Bitcoin price today is $75,767.16 USD with a 24-hour trading volume of $28,332,742,880.00 USD. We update our BTC to USD price in real-time.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "$75,900.18 Bitcoin Price (BTC/USD) Today | Live Chart - Binance",
+        "url": "https://www.binance.com/en/price/bitcoin",
+        "snippet": "1 Bitcoin currently costs $75,900.18, down 0.17%% in the last 24 hours. View the live Bitcoin price in USD (BTC/USD), chart, market cap and 24-hour volume.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD and SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps, and full time",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 118.059,
+      "load_seconds": 0.024,
+      "eval_count": 324,
+      "prompt_eval_count": 1761,
+      "tokens_per_second": 5.737,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 10.0,
+        "free_ram_gb": 13.42,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-07T06:08Z",
+    "id": "0a1a3436cac9e8",
+    "topic": "BTC-USD relative strength to SPY",
+    "hypothesis": "When BTC-USD's 12-hour relative strength to SPY is within 5% of its 12-hour mean, BTC-USD will close lower in the next hour.",
+    "candidate": null,
+    "symbol": "SPY",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "minute_bars",
+        "volume",
+        "options_chain"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For each hour in the 2020-2026 period, compute the 12-hour relative strength of BTC-USD to SPY. If the relative strength is within 5% of its 12-hour mean, then BTC-USD must close lower in the next hour. If this occurs in at least 10% of such cases, the hypothesis is not falsified; if it occurs in fe",
+    "source_search": {
+      "query": "BTC-USD and SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps, and full time",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "The live Bitcoin price today is $75,767.16 USD with a 24-hour trading volume of $28,332,742,880.00 USD. We update our BTC to USD price in real-time.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "$75,900.18 Bitcoin Price (BTC/USD) Today | Live Chart - Binance",
+        "url": "https://www.binance.com/en/price/bitcoin",
+        "snippet": "1 Bitcoin currently costs $75,900.18, down 0.17%% in the last 24 hours. View the live Bitcoin price in USD (BTC/USD), chart, market cap and 24-hour volume.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD and SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps, and full time",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "minute_bars",
+      "volume",
+      "options_chain"
+    ],
+    "hypothesis_timeframe": "2020-2026",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
