@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-07T16:31:12.640686+00:00",
+  "timestamp": "2026-11-07T21:54:42.366710+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -24,26 +24,26 @@
       "action": "HOLD",
       "generation_index": 0,
       "cash": 13.25063502,
-      "equity": 99.5621,
+      "equity": 99.4832,
       "ledger_events": 12,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S04": {
-      "action": "HOLD",
+      "action": "BUY SOL-USD",
       "generation_index": 0,
-      "cash": 101.6871412,
-      "equity": 101.6871,
-      "ledger_events": 8,
+      "cash": 62.00401462,
+      "equity": 101.6079,
+      "ledger_events": 9,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S05": {
-      "action": "HOLD",
+      "action": "SELL SOL-USD",
       "generation_index": 0,
-      "cash": 83.26539448,
-      "equity": 96.6011,
-      "ledger_events": 5,
+      "cash": 96.49856221,
+      "equity": 96.4986,
+      "ledger_events": 6,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },

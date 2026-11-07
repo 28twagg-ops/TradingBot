@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-07T21:57Z | S07b | Hourly trend persistence in BTC-USD across high  | 2198fa7a24f688 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-07T21:56Z | S02b | BTC-USD hourly mean reversion after extreme nega | 7579e674db9122 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-07T21:56Z | S10b | ETH-USD hourly mean reversion to 12‑hour SMA | 4b3976fdec065f | HOLD_INVALID_MODEL_DECISION |
+| 2026-11-07T21:55Z | S06b | BTC-USD relative strength to SPY 12‑hour mean re | 11839e9ef409bb | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-07T21:54Z | S04a | gap_down_quality | 2a2ad217d6e2bb | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-07T20:54Z | S08a | Low hourly volatility predicts larger next‑hour  | 50e30c614e3d4e | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-07T20:54Z | S01a | BTC-USD hourly trend persistence | 83ec7949ee9a9c | HOLD |
 | 2026-11-07T20:53Z | S05a | Hourly BTC‑USD breakout triggered by a 5% intrad | 9c15fb5ca77d4c | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-07T08:52Z | S10b | ETH-USD hourly mean reversion after large breako | 23329497459594 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-07T08:51Z | S06b | BTC-USD relative strength to SPY | b449c4d4c53960 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-07T08:50Z | S04a | gap_down_quality | 76f778cbd6b037 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-07T02:48Z | S08a | Low hourly volatility predicts larger next‑hour  | 6e11c95107d350 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-07T02:48Z | S01a | BTC-USD hourly trend persistence | c91f3f9d726d4d | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-07T02:47Z | S05a | Hourly opening‑range breakout on BTC‑USD | a99b403e9104d3 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-07T02:46Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | 3564addebb7fc5 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-07T02:02Z | S06b |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
