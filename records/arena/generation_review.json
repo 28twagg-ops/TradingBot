@@ -1,83 +1,78 @@
 {
-  "timestamp": "2026-11-02T13:54:30.963952+00:00",
-  "rotations": 5,
+  "timestamp": "2026-11-08T22:59:54.402833+00:00",
+  "rotations": 0,
   "monthly_minimum_days": 28,
   "no_live_trading": true,
   "results": [
     {
       "generation": "S01a",
       "decision": "DEFER_MINIMUM_28_DAYS",
-      "equity": 100.0,
-      "observations": 7,
-      "closed_trades": 0
+      "equity": 98.6075,
+      "observations": 31,
+      "closed_trades": 2
     },
     {
-      "generation": "S02a",
-      "decision": "ROTATE_FINAL_CHANCE_UNPROVEN",
-      "equity": 97.301,
-      "observations": 7,
-      "closed_trades": 7,
-      "successor": "S02b"
+      "generation": "S02b",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 98.6075,
+      "observations": 24,
+      "closed_trades": 2
     },
     {
       "generation": "S03a",
       "decision": "DEFER_MINIMUM_28_DAYS",
-      "equity": 99.4356,
-      "observations": 7,
-      "closed_trades": 0
+      "equity": 98.3231,
+      "observations": 31,
+      "closed_trades": 4
     },
     {
       "generation": "S04a",
       "decision": "DEFER_MINIMUM_28_DAYS",
-      "equity": 100.8237,
-      "observations": 7,
-      "closed_trades": 2
+      "equity": 101.7383,
+      "observations": 31,
+      "closed_trades": 5
     },
     {
       "generation": "S05a",
       "decision": "DEFER_MINIMUM_28_DAYS",
-      "equity": 100.0,
-      "observations": 7,
-      "closed_trades": 0
+      "equity": 96.4986,
+      "observations": 31,
+      "closed_trades": 3
     },
     {
-      "generation": "S06a",
-      "decision": "ROTATE_FINAL_CHANCE_UNPROVEN",
-      "equity": 98.469,
-      "observations": 7,
-      "closed_trades": 7,
-      "successor": "S06b"
+      "generation": "S06b",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 98.6075,
+      "observations": 24,
+      "closed_trades": 2
     },
     {
-      "generation": "S07a",
-      "decision": "ROTATE_FINAL_CHANCE_UNPROVEN",
-      "equity": 98.2183,
-      "observations": 7,
-      "closed_trades": 2,
-      "successor": "S07b"
+      "generation": "S07b",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 95.8699,
+      "observations": 24,
+      "closed_trades": 4
     },
     {
       "generation": "S08a",
       "decision": "DEFER_MINIMUM_28_DAYS",
       "equity": 100.0,
-      "observations": 7,
+      "observations": 31,
       "closed_trades": 0
     },
     {
-      "generation": "S09a",
-      "decision": "ROTATE_FINAL_CHANCE_UNPROVEN",
-      "equity": 97.2015,
-      "observations": 7,
-      "closed_trades": 5,
-      "successor": "S09b"
+      "generation": "S09b",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 98.1767,
+      "observations": 24,
+      "closed_trades": 3
     },
     {
-      "generation": "S10a",
-      "decision": "ROTATE_FINAL_CHANCE_UNPROVEN",
-      "equity": 98.2784,
-      "observations": 7,
-      "closed_trades": 6,
-      "successor": "S10b"
+      "generation": "S10b",
+      "decision": "DEFER_MINIMUM_28_DAYS",
+      "equity": 98.6075,
+      "observations": 24,
+      "closed_trades": 2
     }
   ]
 }

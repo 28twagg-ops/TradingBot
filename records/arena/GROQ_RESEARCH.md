@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-08T22:59Z | S04a | gap_down_quality | cf60c0418d3440 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-08T22:59Z | S08a | Low hourly volatility predicts larger next‑hour  | a91e6062a251c1 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-08T22:58Z | S01a | ETH-USD hourly momentum persistence | 67c3f649ec24f3 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-08T22:57Z | S05a | BTC-USD hourly trend persistence | 0d20797d87d647 | HOLD |
+| 2026-11-08T22:57Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 4ac99e0214fd83 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-08T22:10Z | S07b | Hourly trend persistence in BTC-USD across volat | 60a7dd0d8abcfe | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-08T22:09Z | S02b | BTC-USD hourly trend persistence after 5‑hour po | 92d9eca211aed1 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-08T22:09Z | S10b | ETH-USD hourly mean reversion to 24h SMA | 049adaea4221fc | HOLD_INVALID_MODEL_DECISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-08T10:46Z | S01a | BTC-USD hourly trend persistence | 6cac50eebe89bf | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-08T10:45Z | S05a | BTC-USD hourly momentum 5% over 20 hours | 90b2aef1eb3578 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-08T10:44Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | 06edfb7cb52ab9 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-08T09:04Z | S07b | Hourly trend persistence in BTC-USD across volat | fdd2737a2d69e6 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-08T09:03Z | S02b | BTC-USD hourly mean reversion after extreme nega | ac2bd121e2094f | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-08T09:03Z | S10b | ETH-USD hourly breakout above 10% SMA triggers m | 6ecae68fe3644a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-08T09:02Z | S06b | BTC-USD hourly momentum trigger | 3cd2ee286aec63 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-08T09:01Z | S09b | BTC-USD hourly trend reversal after sustained 10 | db4ed8edcd025f | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
