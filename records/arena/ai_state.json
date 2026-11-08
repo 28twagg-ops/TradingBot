@@ -9904,6 +9904,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-08T00:34Z",
+        "id": "769473e244e9ff",
+        "topic": "BTC-USD relative strength to SPY 12\u2011hour mean reversion",
+        "hypothesis": "When BTC\u2011USD\u2019s 12\u2011hour relative strength to SPY is within 5\u202f% of its 12\u2011hour mean, BTC\u2011USD will close lower in the next hour.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "For each hour in 2020\u20112026, compute BTC\u2011USD/ SPY 12\u2011hour relative strength. If the value lies within \u00b15\u202f% of its 12\u2011hour mean, check whether BTC\u2011USD closes lower in the following hour. Count violations to evaluate predictive power.",
+        "source_search": {
+          "query": "BTC-USD hourly close 2020-2026 SPY hourly close 2020-2026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly close 2020-2026 SPY hourly close 2020-2026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -13904,6 +13942,44 @@
         "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
         "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
         "falsification_test": "Check each 10\u2011hour window where price increased \u22655%; if next hour close < previous close, count as reversal. Compute reversal rate and compare to random chance.",
+        "source_search": {
+          "query": "btc hourly trend reversal 10\u2011hour 5%",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "btc hourly trend reversal 10\u2011hour 5%",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-08T00:33Z",
+        "id": "e2add92a3df5c8",
+        "topic": "BTC-USD hourly trend reversal after sustained 10\u2011hour uptrend",
+        "hypothesis": "BTC-USD hourly price reverses after a sustained 10\u2011hour uptrend of at least 5% relative to the start of the uptrend",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "For each 10\u2011hour period where price increases \u22655%, check if the next hour closes lower than the previous hour. Count successes vs failures.",
         "source_search": {
           "query": "btc hourly trend reversal 10\u2011hour 5%",
           "attempted": [
