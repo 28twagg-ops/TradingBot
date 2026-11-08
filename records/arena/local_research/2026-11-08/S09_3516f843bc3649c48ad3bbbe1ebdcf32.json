@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "3516f843bc3649c48ad3bbbe1ebdcf32",
+  "worker": "S09",
+  "cycle": "2026-11-08T15:18Z",
+  "generation_index": 1,
+  "model": "qwen3:8b",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S09",
+    "cycle": "2026-11-08T15:18Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly trend reversal following a sustained 10-hour uptrend above $1,000,000.0",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume",
+        "order_book"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "6641cdf21b58cd",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Microsoft Lists App | Microsoft 365",
+        "url": "https://www.microsoft.com/en-us/microsoft-365/microsoft-lists",
+        "snippet": "Stay on top of it all with Lists, your smart information-tracking app in Microsoft 365. Work with anyone, anywhere. Configure your lists to better organize events, issues, and assets.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "To Do List Maker",
+        "url": "https://listmaker.com/to-do",
+        "snippet": "Create online to-do lists for work and keep your tasks organized. Manage your to-do list, take notes, track habits, and organize ideas into outlines and lists.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "List-maker.com",
+        "url": "https://list-maker.com/",
+        "snippet": "list-maker.com Create a list that you can easily share with your friends or family!",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "list of public, timestamped, hourly close price data for BTC-USD from 2023-01-01 to 2023-12-31 with no lookahead or data leakage",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:8b",
+    "local_metrics": {
+      "elapsed_seconds": 153.944,
+      "load_seconds": 5.994,
+      "eval_count": 305,
+      "prompt_eval_count": 1766,
+      "tokens_per_second": 4.683,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 0.0,
+        "free_ram_gb": 11.09,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-08T15:18Z",
+    "id": "6641cdf21b58cd",
+    "topic": "BTC-USD hourly trend reversal following a sustained 10-hour uptrend above $1,000,000.0",
+    "hypothesis": "A sustained 10-hour uptrend in BTC-USD hourly close prices above $1,000,000.0 is statistically associated with a subsequent hourly price reversal, detectable without lookahead.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume",
+        "order_book"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If the reversal does not occur within 1 hour of the 10-hour uptrend, the hypothesis is falsified.",
+    "source_search": {
+      "query": "list of public, timestamped, hourly close price data for BTC-USD from 2023-01-01 to 2023-12-31 with no lookahead or data leakage",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Microsoft Lists App | Microsoft 365",
+        "url": "https://www.microsoft.com/en-us/microsoft-365/microsoft-lists",
+        "snippet": "Stay on top of it all with Lists, your smart information-tracking app in Microsoft 365. Work with anyone, anywhere. Configure your lists to better organize events, issues, and assets.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "To Do List Maker",
+        "url": "https://listmaker.com/to-do",
+        "snippet": "Create online to-do lists for work and keep your tasks organized. Manage your to-do list, take notes, track habits, and organize ideas into outlines and lists.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "List-maker.com",
+        "url": "https://list-maker.com/",
+        "snippet": "list-maker.com Create a list that you can easily share with your friends or family!",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "list of public, timestamped, hourly close price data for BTC-USD from 2023-01-01 to 2023-12-31 with no lookahead or data leakage",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "daily_bars",
+      "volume",
+      "order_book"
+    ],
+    "hypothesis_timeframe": "hourly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
