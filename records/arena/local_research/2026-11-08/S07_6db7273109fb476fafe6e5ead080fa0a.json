@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "6db7273109fb476fafe6e5ead080fa0a",
+  "worker": "S07",
+  "cycle": "2026-11-08T07:08Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S07",
+    "cycle": "2026-11-08T07:08Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Hourly trend persistence in BTC-USD across market regimes defined by 20-hour standard deviation",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "101c20c7e89677",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "PUBLICLY | English meaning - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/dictionary/english/publicly",
+        "snippet": "PUBLICLY definition: 1. If something is done publicly, it is done so that everyone can know about it: 2. done, owned…. Learn more.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "PUBLICLY Synonyms: 11 Similar and Opposite Words - Merriam-Webster",
+        "url": "https://www.merriam-webster.com/thesaurus/publicly",
+        "snippet": "Synonyms for PUBLICLY: openly; Antonyms of PUBLICLY: privately, secretly, intimately, confidentially, backstage, in camera, inwardly, à deux",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "PUBLICLY | definition in the Cambridge English Dictionary",
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/publicly",
+        "snippet": "PUBLICLY meaning: 1. If something is done publicly, it is done so that everyone can know about it: 2. done, owned…. Learn more.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Publicly available hourly BTC-USD close price data from 2020 to present, including 20-hour moving averages and 20-hour standard de",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 102.77,
+      "load_seconds": 0.035,
+      "eval_count": 369,
+      "prompt_eval_count": 1711,
+      "tokens_per_second": 7.373,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 8.0,
+        "free_ram_gb": 9.03,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-08T07:08Z",
+    "id": "101c20c7e89677",
+    "topic": "Hourly trend persistence in BTC-USD across market regimes defined by 20-hour standard deviation",
+    "hypothesis": "A 20-hour upward trend in BTC-USD persists for at least 4 additional hours when the 20-hour standard deviation of price returns exceeds 5% and the market regime remains stable.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For a 20-hour upward trend in BTC-USD, if the 20-hour standard deviation of returns exceeds 5% and the market regime remains stable, then the trend must persist for at least 4 additional hours. If, in any out-of-sample period (e.g., 2023-08-01 to 2023-08-05), the trend fails to persist for 4 hours d",
+    "source_search": {
+      "query": "Publicly available hourly BTC-USD close price data from 2020 to present, including 20-hour moving averages and 20-hour standard de",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "PUBLICLY | English meaning - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/dictionary/english/publicly",
+        "snippet": "PUBLICLY definition: 1. If something is done publicly, it is done so that everyone can know about it: 2. done, owned…. Learn more.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "PUBLICLY Synonyms: 11 Similar and Opposite Words - Merriam-Webster",
+        "url": "https://www.merriam-webster.com/thesaurus/publicly",
+        "snippet": "Synonyms for PUBLICLY: openly; Antonyms of PUBLICLY: privately, secretly, intimately, confidentially, backstage, in camera, inwardly, à deux",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "PUBLICLY | definition in the Cambridge English Dictionary",
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/publicly",
+        "snippet": "PUBLICLY meaning: 1. If something is done publicly, it is done so that everyone can know about it: 2. done, owned…. Learn more.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Publicly available hourly BTC-USD close price data from 2020 to present, including 20-hour moving averages and 20-hour standard de",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close"
+    ],
+    "hypothesis_timeframe": "2020 to present",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
