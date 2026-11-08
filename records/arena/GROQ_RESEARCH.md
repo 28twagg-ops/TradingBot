@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-08T09:04Z | S07b | Hourly trend persistence in BTC-USD across volat | fdd2737a2d69e6 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-08T09:03Z | S02b | BTC-USD hourly mean reversion after extreme nega | ac2bd121e2094f | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-08T09:03Z | S10b | ETH-USD hourly breakout above 10% SMA triggers m | 6ecae68fe3644a | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-08T09:02Z | S06b | BTC-USD hourly momentum trigger | 3cd2ee286aec63 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-08T09:01Z | S09b | BTC-USD hourly trend reversal after sustained 10 | db4ed8edcd025f | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-08T07:20Z | S04a | gap_down_quality | c1f582d22998ff | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-08T07:19Z | S08a | High hourly volatility predicts lower next‑hour  | edc39513a81072 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-08T07:19Z | S01a | BTC-USD hourly trend persistence | 13e299a1c4c0d7 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-07T16:26Z | S05a | Hourly opening‑range breakout on BTC‑USD | d2e1241b4a8023 | HOLD |
 | 2026-11-07T16:26Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 697c454e984fa6 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-07T16:25Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 1a9b2773f0e871 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-07T10:42Z | S07b | BTC-USD hourly trend persistence during high‑vol | f84025012afcd1 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-07T10:41Z | S02b | BTC-USD hourly trend persistence after extreme n | c88993f7b93d3b | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-07T10:41Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | c549223e4780c6 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-07T10:40Z | S06b | BTC-USD hourly momentum trigger | db32b7c24fcf91 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-07T10:39Z | S04a | BTC-USD gap-down mean reversion | 812b8b42916b81 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
