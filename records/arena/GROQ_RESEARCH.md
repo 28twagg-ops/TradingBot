@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-08T17:16Z | S07b | Hourly trend persistence in BTC-USD across volat | fdd2737a2d69e6 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-08T17:16Z | S02b | BTC-USD hourly trend persistence after 5‑hour po | 301faf8894ec13 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-08T17:15Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | 1e5473f2f79f2f | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-08T17:14Z | S06b | BTC-USD hourly breakout on 12‑hour SMA | a6ff469d3d1d88 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-08T17:14Z | S09b | BTC-USD hourly trend reversal after sustained 10 | aefc24807ffd3c | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-08T16:46Z | S04a | gap_down_quality | 3318823be8901a | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-08T16:45Z | S08a | Low hourly volatility predicts larger next‑hour  | 46c8e4d06e0287 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-08T16:45Z | S01a | BTC-USD hourly trend persistence | b9644c501765ea | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-08T01:30Z | S10b | ETH-USD hourly trend momentum | 72b8e175ccd1a4 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-08T00:34Z | S06b | BTC-USD relative strength to SPY 12‑hour mean re | 769473e244e9ff | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-08T00:33Z | S09b | BTC-USD hourly trend reversal after sustained 10 | e2add92a3df5c8 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-07T21:57Z | S07b | Hourly trend persistence in BTC-USD across high  | 2198fa7a24f688 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-07T21:56Z | S02b | BTC-USD hourly mean reversion after extreme nega | 7579e674db9122 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-07T21:56Z | S10b | ETH-USD hourly mean reversion to 12‑hour SMA | 4b3976fdec065f | HOLD_INVALID_MODEL_DECISION |
-| 2026-11-07T21:55Z | S06b | BTC-USD relative strength to SPY 12‑hour mean re | 11839e9ef409bb | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-07T21:54Z | S04a | gap_down_quality | 2a2ad217d6e2bb | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
