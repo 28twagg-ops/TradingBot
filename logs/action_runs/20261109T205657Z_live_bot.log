@@ -1,0 +1,163 @@
+20:56:58  INFO      Mode: scan
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:2928: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  "type": str(getattr(o, "order_type", "?")),
+20:56:59  INFO        [positions] 3/3 (3 valid)
+20:56:59  INFO        SELL LIMIT GWW  qty=0.023946261  limit=$1446.20  id=d473ca8e-db8d-4047-858a-b5703e86510d
+20:57:30  INFO        SELL LIMIT filled GWW (confirmed by position check)
+20:57:30  INFO        TX logged: SELL GWW  P&L -0.1%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         20:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $231.22|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-09|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $231.22|
+|  Cash                                                           $127.37|
+|  Reserve                                          $11.56  (always kept)|
+|  Stock~  $103.86 / $173.41  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $69.56  (new stock buys)|
+|  Trade size             $34.68  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AES      Pullback50      $34.61     $14.89   $14.92   +0.2%   $+0.06  |
+|  COHR     EarningsDrift   $34.58     $225.51  $224.71  -0.4%   $-0.12  |
+|  GWW      EarningsDrift   $34.67     $1449.~  $1447.~  -0.1%   $-0.03  |
+|                                                                        |
+|  Total invested                                                 $103.86|
+|  Total open P&L                                                  $-0.10|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (21.4m); positions refreshed live)|
+|  Cached signals                                                      22|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  COHR  P&L -0.4%  $-0.12                                           HOLD|
+|  GWW  P&L -0.1%  $-0.03                           EXIT: midline (-0.1%)|
+|  AES  P&L +0.2%  $+0.06                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                          cached signals (signals fresh (21.4m))|
+|  Universe scanned in prep                                           900|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  22                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AME      Pullback50      eq     $240.48  46.1   -0.57   50MA bounce (-|
+|  TECH     Pullback50      eq     $72.84   65.0   -0.91   50MA bounce (+|
+|  COHR     EarningsDrift   eq     $228.82  49.3   0.86    post-earnings |
+|  FERG     TrendResumpti~  eq     $262.82  75.0   2.55    HH/HL resumpti|
+|  JPM      Pullback50      eq     $342.77  55.3   -1.47   50MA bounce (+|
+|  NSC      Pullback50      eq     $325.24  49.8   -0.75   50MA bounce (+|
+|  SWKS     Pullback50      eq     $83.06   54.7   -1.24   50MA bounce (+|
+|  GWW      EarningsDrift   eq     $1452.~  69.9   1.35    post-earnings |
+|  GWW      TrendResumpti~  eq     $1452.~  69.9   1.35    HH/HL resumpti|
+|  ATI      Pullback50      eq     $186.31  51.6   -1.09   50MA bounce (-|
+|  CFR      Pullback50      eq     $158.53  56.4   -2.21   50MA bounce (+|
+|  CBSH     Pullback50      eq     $56.18   53.7   -1.03   50MA bounce (+|
+|  EGP      Pullback50      eq     $200.00  48.2   -1.66   50MA bounce (+|
+|  ESNT     Pullback50      eq     $65.00   47.8   -0.75   50MA bounce (-|
+|  FLR      Pullback50      eq     $50.62   63.7   -0.53   50MA bounce (+|
+|  HWC      Pullback50      eq     $73.51   47.6   0.20    50MA bounce (+|
+|  LAMR     TrendResumpti~  eq     $159.22  61.1   1.49    HH/HL resumpti|
+|  LAMR     VWAP_Reclaim    eq     $159.22  61.1   1.49    VWAP reclaim V|
+|  LNTH     Pullback50      eq     $101.08  60.4   -1.41   50MA bounce (+|
+|  ROKU     VWAP_Reclaim    eq     $160.52  61.5   3.22    VWAP reclaim V|
+|  SLAB     Pullback50      eq     $221.75  57.1   -1.13   50MA bounce (+|
+|  UGI      Pullback50      eq     $37.50   37.2   -1.58   50MA bounce (-|
+|                                                                        |20:57:30  INFO        place_all_stops: checking 2 positions...
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1791: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  if (getattr(o, "order_type", None) in (OrderType.STOP,
+20:57:30  INFO        STOP already live AES @ $14.84
+20:57:30  INFO        STOP skipped COHR: fractional (0.1539 shares) — software exit will handle it
+20:57:30  INFO        place_eod_stops: updating 2 stops to current price...
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1912: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  if (getattr(o, "order_type", None) in
+20:57:30  INFO        EOD stop: cancelled old stop AES
+20:57:30  INFO        EOD stop placed AES @ $14.84  (cur $14.91  qty=2)
+20:57:30  INFO        EOD stop skip COHR: 0.1539 shares (fractional) — ext_exits will cover
+20:57:31  INFO        Daily log -> logs/daily/2026-11-09.md
+20:57:31  INFO        Dashboard written → logs/dashboard.md
+
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             22|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             2|
+|  Equity                                                         $231.22|
+|  Cash                                                           $162.04|
++========================================================================+
