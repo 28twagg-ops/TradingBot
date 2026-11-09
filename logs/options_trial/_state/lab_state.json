@@ -200,6 +200,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-09T15:07:42.344638+00:00",
       "entry_order_id": "1b2a50eb-d280-417a-900c-7027c254be68"
+    },
+    {
+      "lot_id": "8e99ecd970f8",
+      "bucket_id": 50,
+      "profile_name": "lab0050_s397_w2_1005_1045_r1",
+      "strategy_id": "S397",
+      "occ_symbol": "DKNG261113C00018500",
+      "underlying": "DKNG",
+      "qty": 1,
+      "entry_cost": 66.0,
+      "entry_price": 0.66,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-09T15:11:54.038001+00:00",
+      "entry_order_id": "f9db7b31-d997-4a05-a337-9ab574029c97"
+    },
+    {
+      "lot_id": "9d4db83f574a",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "DKNG261127C00020000",
+      "underlying": "DKNG",
+      "qty": 1,
+      "entry_cost": 49.0,
+      "entry_price": 0.49,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-09T15:11:54.116064+00:00",
+      "entry_order_id": "orphan:DKNG261127C00020000"
     }
   ],
   "pending_orders": [
@@ -234,22 +274,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
-    },
-    {
-      "order_id": "f9db7b31-d997-4a05-a337-9ab574029c97",
-      "bucket_id": 50,
-      "strategy_id": "S397",
-      "occ_symbol": "DKNG261113C00018500",
-      "underlying": "DKNG",
-      "qty": 1,
-      "limit": 0.67,
-      "profile_name": "lab0050_s397_w2_1005_1045_r1",
-      "submitted": "2026-11-09",
-      "detail": "gap -3.9%",
-      "spread_frac": 0.22950819672131145,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
     }
   ],
   "pending_exits": [],
@@ -263,7 +287,9 @@
     "b2009": 33.0,
     "b2007": 48.0,
     "b52": 24.0,
-    "b13": 21.0
+    "b13": 21.0,
+    "b50": 66.0,
+    "b0": 49.0
   },
   "session_date": "2026-11-09",
   "entries_locked": [
@@ -686,7 +712,8 @@
     "f938c0a0-1e0b-42a0-ab07-473f1ab5dfcb",
     "a1646d3b-3a62-4cbf-b028-79f0a1f8f3f8",
     "89e4c080-44f9-4194-b7f9-aa21a25ca385",
-    "1b2a50eb-d280-417a-900c-7027c254be68"
+    "1b2a50eb-d280-417a-900c-7027c254be68",
+    "f9db7b31-d997-4a05-a337-9ab574029c97"
   ],
   "submitted_today": 11,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
