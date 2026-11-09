@@ -12394,3 +12394,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-09 15:06:47,exits,bull,230.74,126.69,0,0,0,3,AES|BNY|PFG,both
 2026-11-09 15:11:49,exits,bull,230.95,126.69,0,0,0,3,AES|BNY|PFG,both
 2026-11-09 15:16:52,exits,bull,230.98,126.69,0,0,0,3,AES|BNY|PFG,both
+2026-11-09 15:21:57,exits,bull,230.91,126.69,0,0,0,3,AES|BNY|PFG,both
