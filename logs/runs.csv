@@ -12476,3 +12476,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-09 22:21:54,ext_exits,bull,231.63,162.04,0,0,0,2,AES|COHR,both
 2026-11-09 22:26:55,ext_exits,bull,231.59,162.04,0,0,0,2,AES|COHR,both
 2026-11-09 22:32:01,ext_exits,bull,231.55,162.04,0,0,0,2,AES|COHR,both
+2026-11-09 22:37:00,ext_exits,bull,231.54,162.04,0,0,0,2,AES|COHR,both
