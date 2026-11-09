@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-09T09:51:54.886294+00:00",
+  "timestamp": "2026-11-09T20:48:18.471566+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -12,56 +12,56 @@
       "missing_quotes": []
     },
     "S02": {
-      "action": "HOLD",
+      "action": "BUY QQQ",
       "generation_index": 1,
-      "cash": 98.60750559,
-      "equity": 98.6075,
-      "ledger_events": 4,
+      "cash": 59.51638207,
+      "equity": 98.5685,
+      "ledger_events": 5,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S03": {
-      "action": "HOLD",
+      "action": "SELL QQQ",
       "generation_index": 0,
-      "cash": 7.99240742,
-      "equity": 98.4917,
-      "ledger_events": 13,
+      "cash": 16.98273476,
+      "equity": 99.9913,
+      "ledger_events": 14,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S04": {
-      "action": "HOLD",
+      "action": "SELL BTC-USD",
       "generation_index": 0,
-      "cash": 37.47851504,
-      "equity": 101.6742,
-      "ledger_events": 12,
+      "cash": 77.40526651,
+      "equity": 101.8359,
+      "ledger_events": 13,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S05": {
-      "action": "HOLD",
+      "action": "BUY SPY",
       "generation_index": 0,
-      "cash": 96.49856221,
-      "equity": 96.4986,
-      "ledger_events": 6,
+      "cash": 58.24345333,
+      "equity": 96.4603,
+      "ledger_events": 7,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S06": {
-      "action": "HOLD",
+      "action": "BUY QQQ",
       "generation_index": 1,
-      "cash": 98.60750559,
-      "equity": 98.6075,
-      "ledger_events": 4,
+      "cash": 59.51638207,
+      "equity": 98.5685,
+      "ledger_events": 5,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S07": {
-      "action": "HOLD",
+      "action": "BUY SPY",
       "generation_index": 1,
-      "cash": 95.86987992,
-      "equity": 95.8699,
-      "ledger_events": 8,
+      "cash": 57.8642313,
+      "equity": 95.8319,
+      "ledger_events": 9,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
