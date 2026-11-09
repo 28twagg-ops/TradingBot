@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-09
 
-_Generated 2026-11-09T10:47:31.640157_
+_Generated 2026-11-09T10:52:44.206396_
 
 ## Summary
 
@@ -11,8 +11,8 @@ _Generated 2026-11-09T10:47:31.640157_
 
 ## Attribution health
 
-- Total exits: **3921**
-- Orphan exits (b0/orphan_reconcile): **422**
+- Total exits: **3922**
+- Orphan exits (b0/orphan_reconcile): **423**
 - Orphan rate: **10.8%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
 
@@ -114,7 +114,7 @@ _Generated 2026-11-09T10:47:31.640157_
 | S353 (GapDown_3DTE) | 3d | drop | 45 | 42.2 | -46.15 | -82.61 | -69.70 | +264.21 | 101 | 0 | 0 | $+125.00 | 22.2% | non-positive median return |
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 105 | 0 | 0 | $-822.00 | 43.2% | manually paused — excluded from new entries & reflected P&L |
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 101 | 0 | 0 | $+33.00 | 26.3% | manually paused — excluded from new entries & reflected P&L |
-| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | drop | 47 | 42.6 | -48.89 | -88.89 | -52.83 | +177.89 | 111 | 1 | 1 | $+328.00 | 14.9% | non-positive median return |
+| S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | drop | 47 | 42.6 | -48.89 | -88.89 | -52.83 | +177.89 | 111 | 2 | 1 | $+328.00 | 14.9% | non-positive median return |
 | S366 (RubberBand_21DTE) | 21d | drop | 21 | 42.9 | -49.12 | -56.92 | -53.45 | +94.34 | 97 | 0 | 0 | $-63.00 | 42.9% | manually paused — excluded from new entries & reflected P&L |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 75 | 33.3 | -49.18 | -79.00 | -60.00 | +99.05 | 105 | 0 | 0 | $+158.00 | 40.0% | manually paused — excluded from new entries & reflected P&L |
 | S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | drop | 30 | 43.3 | -49.51 | -71.91 | -55.51 | +324.29 | 111 | 2 | 2 | $+272.00 | 23.3% | non-positive median return |
@@ -140,7 +140,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S163 | 7d ATM | 44 | +0.68 | -77.21 | -60.00 | 1 | 1 |
-| S164 | 1d ATM | 47 | -48.89 | -88.89 | -52.83 | 1 | 1 |
+| S164 | 1d ATM | 47 | -48.89 | -88.89 | -52.83 | 2 | 1 |
 | S165 | 3d ATM | 255 | -35.29 | -63.24 | -53.42 | 0 | 0 |
 | S168 | 5d ATM | 38 | -50.42 | -75.00 | -55.23 | 3 | 2 |
 
