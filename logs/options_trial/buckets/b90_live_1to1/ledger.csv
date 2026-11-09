@@ -187,3 +187,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-11-09 14:43:02.920920+00:00,entry,90,live_1to1,S404,2c6ee3cdbf49,SMCI,SMCI261113C00029500,1,0.66,0.65,65.0,,,,-0.01,,0.5,-0.4,0.09375000000000008,gap -2.2%,bc0d504b-aaf5-414f-9c5d-101136e9d1b1
 2026-11-09 14:43:02.517385+00:00,entry,90,live_1to1,S406,ee231d56407f,NVDA,NVDA261111C00192500,1,0.61,0.6,60.0,,,,-0.01,,0.5,-0.4,0.13793103448275854,RB gap -7.3% reclaim,abacaa7a-4baa-4144-9fe2-48690b8985a1
 2026-11-09 14:56:46.290834+00:00,exit,90,live_1to1,S404,2c6ee3cdbf49,SMCI,SMCI261113C00029500,1,,1.13,65.0,73.85,48.0,take_profit (+73.8%),,-0.01,0.5,-0.4,,,d0ded056-3c0a-46ff-af5c-403d68bfb530
+2026-11-09 16:06:23.870266+00:00,exit,90,live_1to1,S406,ee231d56407f,NVDA,NVDA261111C00192500,1,,0.34,60.0,-43.33,-26.0,broker_fill_backfill,,-0.01,0.5,-0.4,,,d7dcbf71-83e6-4612-b957-e032bcd41ba8

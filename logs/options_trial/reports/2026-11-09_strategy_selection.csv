@@ -6,7 +6,7 @@ S166,GapDown strong call,3d ATM strong,watch,fat left tail (p10 < -45%),65,21,13
 S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),60,31,22,9,27.75,52.94,-74.47,-48.25,73.68,475.0,16,101,1,0,5,32.3
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),165,81,49,32,40.16,50.88,-64.71,-50.0,170.91,1231.0,29,101,0,0,27,14.8
 S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),178,56,33,23,25.9,47.95,-64.03,-51.23,115.88,1015.0,25,101,3,2,19,16.1
-S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),266,162,87,75,95.32,44.31,-58.54,-46.28,202.63,3203.0,44,101,5,2,33,10.5
+S406,RubberBand_ITM3,3d,watch,fat left tail (p10 < -45%),266,163,87,76,94.47,44.0,-58.46,-46.13,200.0,3177.0,45,101,5,3,33,11.0
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),149,69,43,26,108.4,38.24,-60.78,-50.82,312.38,1322.0,23,101,1,1,20,18.8
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),225,109,55,54,36.11,22.22,-71.43,-50.0,146.0,1086.0,25,105,0,0,19,27.5
 S163,A1 GapDown ATM call EOD,7d ATM,watch,fat left tail (p10 < -45%),146,44,22,22,28.95,0.68,-77.21,-60.0,88.54,916.0,19,111,1,1,16,34.1
@@ -87,7 +87,7 @@ S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1470,255,82,
 S355,GapDown_7DTE,7d,drop,manually paused — excluded from new entries & reflected P&L,133,71,32,39,13.44,-37.5,-77.08,-63.7,138.64,367.0,17,101,0,0,9,38.0
 S411,RubberBand_OTM2,3d,drop,non-positive median return,169,66,31,35,-8.18,-38.16,-59.11,-52.28,60.61,-278.0,28,98,0,1,18,15.2
 S352,GapDown_2DTE,2d,drop,non-positive median return,163,69,31,38,42.83,-38.24,-72.14,-51.85,294.28,238.0,25,101,1,1,16,17.4
-S359,RubberBand_0DTE,0d,drop,non-positive median return,113,52,22,30,42.09,-41.86,-71.4,-62.96,155.71,80.0,24,98,1,1,16,19.2
+S359,RubberBand_0DTE,0d,drop,non-positive median return,114,52,22,30,42.09,-41.86,-71.4,-62.96,155.71,80.0,24,98,2,1,16,19.2
 S405,GapDown_OTM3,3d,drop,manually paused — excluded from new entries & reflected P&L,115,56,19,37,-8.5,-42.86,-83.93,-65.2,103.47,-118.0,8,101,0,0,8,26.8
 S211,MA_Cross_21_50,3d ATM MA cross 21/50,drop,manually paused — excluded from new entries & reflected P&L,154,56,13,43,35.53,-43.65,-86.66,-54.73,95.51,-401.0,14,105,0,0,17,26.8
 S353,GapDown_3DTE,3d,drop,non-positive median return,116,45,19,26,61.44,-46.15,-82.61,-69.7,264.21,125.0,12,101,0,0,10,22.2
