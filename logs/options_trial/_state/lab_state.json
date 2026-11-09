@@ -220,6 +220,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-09T15:11:54.116064+00:00",
       "entry_order_id": "orphan:DKNG261127C00020000"
+    },
+    {
+      "lot_id": "65400bab91c1",
+      "bucket_id": 18,
+      "profile_name": "lab0018_s361_w2_1005_1045_r1",
+      "strategy_id": "S361",
+      "occ_symbol": "DKNG261113C00020000",
+      "underlying": "DKNG",
+      "qty": 1,
+      "entry_cost": 12.0,
+      "entry_price": 0.12,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-09T15:36:57.562190+00:00",
+      "entry_order_id": "bd127043-a5b6-4e27-b5b2-f17a064a1ac7"
     }
   ],
   "pending_orders": [
@@ -254,22 +274,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
-    },
-    {
-      "order_id": "bd127043-a5b6-4e27-b5b2-f17a064a1ac7",
-      "bucket_id": 18,
-      "strategy_id": "S361",
-      "occ_symbol": "DKNG261113C00020000",
-      "underlying": "DKNG",
-      "qty": 1,
-      "limit": 0.12,
-      "profile_name": "lab0018_s361_w2_1005_1045_r1",
-      "submitted": "2026-11-09",
-      "detail": "RB gap -3.9% reclaim",
-      "spread_frac": 0.1666666666666667,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
     }
   ],
   "pending_exits": [],
@@ -284,7 +288,8 @@
     "b52": 24.0,
     "b13": 21.0,
     "b50": 66.0,
-    "b0": 49.0
+    "b0": 49.0,
+    "b18": 12.0
   },
   "session_date": "2026-11-09",
   "entries_locked": [
@@ -709,7 +714,8 @@
     "a1646d3b-3a62-4cbf-b028-79f0a1f8f3f8",
     "89e4c080-44f9-4194-b7f9-aa21a25ca385",
     "1b2a50eb-d280-417a-900c-7027c254be68",
-    "f9db7b31-d997-4a05-a337-9ab574029c97"
+    "f9db7b31-d997-4a05-a337-9ab574029c97",
+    "bd127043-a5b6-4e27-b5b2-f17a064a1ac7"
   ],
   "submitted_today": 12,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
