@@ -1247,3 +1247,76 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261109T143716Z
+
+- UTC timestamp: `20261109T143716Z`
+- GitHub run: [#15120](https://github.com/28twagg-ops/TradingBot/actions/runs/42636095042)
+- Run id: `42636095042`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261109T143716Z_live_bot.log`, `logs/action_runs/20261109T143716Z_live_options.log`, `logs/action_runs/20261109T143716Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1809 | 48.5 | -25.0 | +36.4 | $+20,528 |
+| TAINTED | 2109 | 30.8 | -42.2 | +7.8 | $-13,322 |
+| KEEP-only | 870 | 60.9 | +51.5 | +54.2 | $+14,454 |
+| KEEP-only recent | 685 | 60.0 | +53.3 | +60.7 | $+10,945 |
+
+- KEEP strategies (23): S163, S164, S166, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S396, S397, S403, S404, S406, S410
+- KILL strategies (22): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S398, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-11-09T09:26:37.043234-05:00","date":"2026-11-09","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.7,"phases_s":{"reconcile":0.25},"signals":0,"placed":0,"equity":997960.37,"open_positions":5,"pending_orders":0,"open_lots":5,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"15118","github_run_id":"42634455685","status":"ok","data_quality":{"clean":{"n":1809,"win":48.54,"med":-25.0,"avg":36.43,"pnl":20527.83},"tainted":{"n":2109,"win":30.82,"med":-42.22,"avg":7.83,"pnl":-13322.28},"keep_only":{"n":870,"win":60.92,"med":51.48,"avg":54.21,"pnl":14454.45},"keep_only_recent":{"n":685,"win":60.0,"med":53.33,"avg":60.7,"pnl":10945.0},"keep_strategies":["S163","S164","S166","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S396","S397","S403","S404","S406","S410"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S398","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+14:37:17  INFO      Mode: morning_prep
+14:37:17  INFO        [prep_positions] 1/1 (1 valid)
+14:37:17  INFO      Fetching tickers (universe=both)...
+14:37:18  INFO        S&P 500: 503
+14:37:18  INFO        MidCap 400: 400
+14:37:18  INFO        Total: 903 tickers
+14:37:19  INFO        [prep_universe] 40/902 (40 valid)
+14:37:20  INFO        [prep_universe] 80/902 (80 valid)
+14:37:21  INFO        [prep_universe] 120/902 (120 valid)
+14:37:22  INFO        [prep_universe] 160/902 (160 valid)
+14:37:23  INFO        [prep_universe] 200/902 (199 valid)
+14:37:31  INFO        [prep_universe] 240/902 (238 valid)
+14:37:44  INFO        [prep_universe] 280/902 (278 valid)
+14:37:57  INFO        [prep_universe] 320/902 (318 valid)
+14:38:07  INFO        [prep_universe] 360/902 (358 valid)
+14:38:20  INFO        [prep_universe] 400/902 (398 valid)
+14:38:33  INFO        [prep_universe] 440/902 (438 valid)
+14:38:43  INFO        [prep_universe] 480/902 (477 valid)
+14:38:56  INFO        [prep_universe] 520/902 (517 valid)
+14:39:06  INFO        [prep_universe] 560/902 (557 valid)
+14:39:19  INFO        [prep_universe] 600/902 (597 valid)
+14:39:32  INFO        [prep_universe] 640/902 (637 valid)
+14:39:42  INFO        [prep_universe] 680/902 (677 valid)
+14:39:55  INFO        [prep_universe] 720/902 (717 valid)
+14:40:08  INFO        [prep_universe] 760/902 (757 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
