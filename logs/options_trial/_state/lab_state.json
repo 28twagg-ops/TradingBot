@@ -62,26 +62,6 @@
       "entry_order_id": "b25e0641-daf7-4c96-b73b-dadb897d283d"
     },
     {
-      "lot_id": "2c6ee3cdbf49",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S404",
-      "occ_symbol": "SMCI261113C00029500",
-      "underlying": "SMCI",
-      "qty": 1,
-      "entry_cost": 65.0,
-      "entry_price": 0.65,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-09T14:43:03.979897+00:00",
-      "entry_order_id": "bc0d504b-aaf5-414f-9c5d-101136e9d1b1"
-    },
-    {
       "lot_id": "ee231d56407f",
       "bucket_id": 90,
       "profile_name": "live_1to1",
@@ -123,23 +103,12 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "d0ded056-3c0a-46ff-af5c-403d68bfb530",
-      "lot_id": "2c6ee3cdbf49",
-      "bucket_id": 90,
-      "strategy_id": "S404",
-      "occ_symbol": "SMCI261113C00029500",
-      "qty": 1,
-      "reason": "take_profit (+73.8%)",
-      "submitted": "2026-11-09T09:56:46"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b16": 45.0,
     "b63": 63.0,
     "b15": 54.0,
-    "b90": 125.0,
+    "b90": 60.0,
     "b91": 62.0
   },
   "session_date": "2026-11-09",
@@ -549,7 +518,8 @@
     "eae73e4c-8c2c-48a6-94d8-4faa2907ac8a",
     "bc0d504b-aaf5-414f-9c5d-101136e9d1b1",
     "abacaa7a-4baa-4144-9fe2-48690b8985a1",
-    "4ed9962b-ba9f-4eb5-8fe8-9a1b2592ab9d"
+    "4ed9962b-ba9f-4eb5-8fe8-9a1b2592ab9d",
+    "d0ded056-3c0a-46ff-af5c-403d68bfb530"
   ],
   "submitted_today": 3,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
