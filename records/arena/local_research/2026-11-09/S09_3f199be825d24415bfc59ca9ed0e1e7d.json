@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "3f199be825d24415bfc59ca9ed0e1e7d",
+  "worker": "S09",
+  "cycle": "2026-11-09T08:07Z",
+  "generation_index": 1,
+  "model": "qwen3:8b",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S09",
+    "cycle": "2026-11-09T08:07Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly trend reversal after sustained 10-hour uptrend above $1,000,000.0",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "6641cdf21b58cd",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Listed Price of $1 : r/FacebookMarketplace - Reddit",
+        "url": "https://www.reddit.com/r/FacebookMarketplace/comments/1bd0pdx/listed_price_of_1/",
+        "snippet": "Sometimes Facebook forces your hand to do that. Marketplace “assumes” prices for certain vehicles (like a 40 year old Pontiac is only worth a few grand at most) However Facebook doesn’t know that if it’s a mint condition, 1988 Pontiac Fiero",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Facebook share link - can you customize the message body text?",
+        "url": "https://stackoverflow.com/questions/5023602/facebook-share-link-can-you-customize-the-message-body-text",
+        "snippet": "Facebook will not allow developers pre-fill messages. Developers may customize the story by providing OG meta tags, but it's up to the user to fill the message. This is only possible if you are posting on the user's behalf, which requires t",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Can't access Eclipse marketplace - Stack Overflow",
+        "url": "https://stackoverflow.com/questions/14794885/cant-access-eclipse-marketplace",
+        "snippet": "I can't seem to access the Eclipse marketplace. I'm using Juno 4.2. I tried deleting eclipse and removing all plugins, deleting my .metadata, and deleting the eclipse app data. I've tried switchin...",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "list of public, timestamped, hourly close price data for BTC-USD from 2023-01-01 to 2023-12-31 with no lookahead or data leakage",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:8b",
+    "local_metrics": {
+      "elapsed_seconds": 176.089,
+      "load_seconds": 6.257,
+      "eval_count": 318,
+      "prompt_eval_count": 1934,
+      "tokens_per_second": 4.371,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 13.4,
+        "free_ram_gb": 9.08,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-09T08:07Z",
+    "id": "6641cdf21b58cd",
+    "topic": "BTC-USD hourly trend reversal after sustained 10-hour uptrend above $1,000,000.0",
+    "hypothesis": "A sustained 10-hour uptrend in BTC-USD hourly close prices above $1,000,000.0 is statistically associated with a subsequent hourly price reversal, detectable without lookahead.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "daily_bars",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If the 10-hour uptrend above $1,000,000.0 does not consistently precede a reversal in the next 24 hours, the hypothesis is falsified.",
+    "source_search": {
+      "query": "list of public, timestamped, hourly close price data for BTC-USD from 2023-01-01 to 2023-12-31 with no lookahead or data leakage",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Listed Price of $1 : r/FacebookMarketplace - Reddit",
+        "url": "https://www.reddit.com/r/FacebookMarketplace/comments/1bd0pdx/listed_price_of_1/",
+        "snippet": "Sometimes Facebook forces your hand to do that. Marketplace “assumes” prices for certain vehicles (like a 40 year old Pontiac is only worth a few grand at most) However Facebook doesn’t know that if it’s a mint condition, 1988 Pontiac Fiero",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Facebook share link - can you customize the message body text?",
+        "url": "https://stackoverflow.com/questions/5023602/facebook-share-link-can-you-customize-the-message-body-text",
+        "snippet": "Facebook will not allow developers pre-fill messages. Developers may customize the story by providing OG meta tags, but it's up to the user to fill the message. This is only possible if you are posting on the user's behalf, which requires t",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Can't access Eclipse marketplace - Stack Overflow",
+        "url": "https://stackoverflow.com/questions/14794885/cant-access-eclipse-marketplace",
+        "snippet": "I can't seem to access the Eclipse marketplace. I'm using Juno 4.2. I tried deleting eclipse and removing all plugins, deleting my .metadata, and deleting the eclipse app data. I've tried switchin...",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "list of public, timestamped, hourly close price data for BTC-USD from 2023-01-01 to 2023-12-31 with no lookahead or data leakage",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "daily_bars",
+      "volume"
+    ],
+    "hypothesis_timeframe": "hourly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
