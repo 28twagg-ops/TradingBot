@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-10T12:42:06.334081+00:00",
+  "timestamp": "2026-11-10T20:51:43.477294+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -12,11 +12,11 @@
       "missing_quotes": []
     },
     "S02": {
-      "action": "HOLD",
+      "action": "SELL QQQ",
       "generation_index": 1,
-      "cash": 59.51638207,
-      "equity": 98.4154,
-      "ledger_events": 5,
+      "cash": 98.11432669,
+      "equity": 98.1143,
+      "ledger_events": 6,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -24,7 +24,7 @@
       "action": "HOLD",
       "generation_index": 0,
       "cash": 16.98273476,
-      "equity": 99.3727,
+      "equity": 98.4822,
       "ledger_events": 14,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -33,7 +33,7 @@
       "action": "HOLD",
       "generation_index": 0,
       "cash": 77.40526651,
-      "equity": 101.4431,
+      "equity": 100.8774,
       "ledger_events": 13,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -42,26 +42,26 @@
       "action": "HOLD",
       "generation_index": 0,
       "cash": 58.24345333,
-      "equity": 96.33,
+      "equity": 96.1676,
       "ledger_events": 7,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S06": {
-      "action": "HOLD",
+      "action": "SELL QQQ",
       "generation_index": 1,
-      "cash": 59.51638207,
-      "equity": 98.4154,
-      "ledger_events": 5,
+      "cash": 98.11432669,
+      "equity": 98.1143,
+      "ledger_events": 6,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S07": {
-      "action": "HOLD",
+      "action": "SELL SPY",
       "generation_index": 1,
-      "cash": 57.8642313,
-      "equity": 95.7025,
-      "ledger_events": 9,
+      "cash": 95.50339009,
+      "equity": 95.5034,
+      "ledger_events": 10,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
