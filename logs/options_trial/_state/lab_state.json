@@ -380,26 +380,29 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-10T15:32:11.677247+00:00",
       "entry_order_id": "e6242f33-2475-492b-a0e6-8fb22d465ffe"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "300a3443-2469-42bb-934a-9ac1a0015b29",
+      "lot_id": "9210b6fff6df",
       "bucket_id": 2009,
+      "profile_name": "day_trader_analytics_s432",
       "strategy_id": "S432",
       "occ_symbol": "AMZN261113C00285000",
       "underlying": "AMZN",
       "qty": 1,
-      "limit": 0.44,
-      "profile_name": "day_trader_analytics_s432",
-      "submitted": "2026-11-10",
-      "detail": "ORB-drive +1.6% gap -0.3% VZ=-1.7 | RS +1.6%",
-      "spread_frac": 0.09302325581395357,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.6000000000000001
+      "entry_cost": 44.0,
+      "entry_price": 0.44,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-10T15:41:55.003772+00:00",
+      "entry_order_id": "300a3443-2469-42bb-934a-9ac1a0015b29"
     }
   ],
+  "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {
     "b90": 141.0,
@@ -419,7 +422,8 @@
     "b21": 73.0,
     "b18": 36.0,
     "b54": 66.0,
-    "b14": 52.0
+    "b14": 52.0,
+    "b2009": 44.0
   },
   "session_date": "2026-11-10",
   "entries_locked": [
@@ -893,7 +897,8 @@
     "88e9977e-3a64-48d4-b7d2-ea914e5321d0",
     "ad46064d-60f1-4f64-8f9c-53e5adfca3f4",
     "e6242f33-2475-492b-a0e6-8fb22d465ffe",
-    "1b76eca0-51f0-4234-8e19-4f83880122a8"
+    "1b76eca0-51f0-4234-8e19-4f83880122a8",
+    "300a3443-2469-42bb-934a-9ac1a0015b29"
   ],
   "submitted_today": 21,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
