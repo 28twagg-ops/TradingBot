@@ -1024,3 +1024,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-11-09 20:57:30,2026-11-09,SELL,GWW,EarningsDrift,1447.66,1446.2,1447.772,34.67,0.0077,0.0027,limit_fill_position_check_full,midline (-0.1%),bull
 2026-11-10 14:47:14,2026-11-10,SELL,COHR,EarningsDrift,223.1016,,223.1016,34.33,0.0,0.0,market_urgent_full,stop_loss (-1.1%),bull
 2026-11-10 16:52:26,2026-11-10,SELL,ANET,EarningsDrift,186.365,,186.365,34.36,0.0,0.0,market_urgent_full,stop_loss (-0.8%),bull
+2026-11-10 20:47:12,2026-11-10,SELL,MAR,EarningsDrift,427.81,427.67,427.756,35.36,-0.0126,-0.0045,limit_fill_position_check_full,midline (+1.9%),bull
