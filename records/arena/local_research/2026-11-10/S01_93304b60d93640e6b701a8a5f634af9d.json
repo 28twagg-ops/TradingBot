@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "93304b60d93640e6b701a8a5f634af9d",
+  "worker": "S01",
+  "cycle": "2026-11-10T10:54Z",
+  "generation_index": 0,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S01",
+    "cycle": "2026-11-10T10:54Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Liquidity friction and order flow imbalance in BTC-USD hourly trading",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume",
+        "order_book",
+        "fundamentals"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "97c9b773f4fad9",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "lilydaisyphillips-cumwalk-public-manniecoco LD03.mp4 | Bunkr",
+        "url": "https://bunkr.cr/f/OV4lTuHJIz0Uu",
+        "snippet": "File hosted for free on Bunkr. bunkr-albums.io is now balbums.st (old domain isn't working anymore), click here to visit",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Your Valentine's date goes wild, ends up giving head in a public park.mp4",
+        "url": "https://dl.bunkr.cr/file/41167555",
+        "snippet": "Your Valentine's date goes wild, ends up giving head in a public park.mp4 581.04 MB",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Dakota James - Squirting in Public Place and Getting Caught on a ...",
+        "url": "https://dl.bunkr.cr/file/2217522",
+        "snippet": "Dakota James - Squirting in Public Place and Getting Caught on a Security Camera.mp4 63.52 MB",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "public academic or empirical study on liquidity friction and order flow imbalance in BTC-USD hourly trading with 3% threshold and ",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 76.079,
+      "load_seconds": 3.325,
+      "eval_count": 360,
+      "prompt_eval_count": 1581,
+      "tokens_per_second": 9.164,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 0.0,
+        "free_ram_gb": 20.8,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-10T10:54Z",
+    "id": "97c9b773f4fad9",
+    "topic": "Liquidity friction and order flow imbalance in BTC-USD hourly trading",
+    "hypothesis": "The apparent price reversion to VWAP in BTC-USD hourly trading is driven by liquidity frictions and order flow imbalances, not by a predictable signal.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume",
+        "order_book",
+        "fundamentals"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If the apparent price reversion to VWAP in BTC-USD hourly trading is driven by liquidity frictions and order flow imbalances, then a 24-hour lookback with a 3% threshold should show a statistically significant correlation between price deviation from VWAP and subsequent price reversion, when control",
+    "source_search": {
+      "query": "public academic or empirical study on liquidity friction and order flow imbalance in BTC-USD hourly trading with 3% threshold and",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "lilydaisyphillips-cumwalk-public-manniecoco LD03.mp4 | Bunkr",
+        "url": "https://bunkr.cr/f/OV4lTuHJIz0Uu",
+        "snippet": "File hosted for free on Bunkr. bunkr-albums.io is now balbums.st (old domain isn't working anymore), click here to visit",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Your Valentine's date goes wild, ends up giving head in a public park.mp4",
+        "url": "https://dl.bunkr.cr/file/41167555",
+        "snippet": "Your Valentine's date goes wild, ends up giving head in a public park.mp4 581.04 MB",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Dakota James - Squirting in Public Place and Getting Caught on a ...",
+        "url": "https://dl.bunkr.cr/file/2217522",
+        "snippet": "Dakota James - Squirting in Public Place and Getting Caught on a Security Camera.mp4 63.52 MB",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "public academic or empirical study on liquidity friction and order flow imbalance in BTC-USD hourly trading with 3% threshold and ",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "volume",
+      "order_book",
+      "fundamentals"
+    ],
+    "hypothesis_timeframe": "hourly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}

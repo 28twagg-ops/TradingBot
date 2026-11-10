@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "b5aea4b549f0453281e763948f0397eb",
+  "worker": "S05",
+  "cycle": "2026-11-10T10:02Z",
+  "generation_index": 0,
+  "model": "qwen3:8b",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S05",
+    "cycle": "2026-11-10T10:02Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Statistical Validation of 30-Minute Opening Range Breakouts in BTC-USD, ETH-USD, and SOL-USD with 2%",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume",
+        "order_book",
+        "options_chain"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "bd89d1602be539",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com/xhtml/search",
+        "snippet": "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Search - Microsoft Bing",
+        "url": "https://www.bing.com/",
+        "snippet": "Search with Microsoft Bing and use the power of AI to find information, explore webpages, images, videos, maps, and more. A smart search engine for the forever curious.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Yahoo Search - Web Search",
+        "url": "https://search.yahoo.com/",
+        "snippet": "Trump goes all in on midterm voter fraud claims in stunning post: 'Does anybody really believe that this election was honest?' Mississippi and Alaska Senate races remain uncalled. See results.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "DuckDuckGo - Protection. Privacy. Peace of mind.",
+        "url": "https://duckduckgo.com/",
+        "snippet": "That's why millions of people choose DuckDuckGo over Chrome and other browsers to search and browse online. Our built-in search engine is like Google but never tracks your searches, and our browser blocks ads, trackers, and cookies that col",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "search for academic papers or technical analysis studies on regime shifts in cryptocurrency markets with measurable thresholds and",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:8b",
+    "local_metrics": {
+      "elapsed_seconds": 154.098,
+      "load_seconds": 0.008,
+      "eval_count": 297,
+      "prompt_eval_count": 1606,
+      "tokens_per_second": 4.352,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 3.0,
+        "free_ram_gb": 12.15,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-10T10:02Z",
+    "id": "bd89d1602be539",
+    "topic": "Statistical Validation of 30-Minute Opening Range Breakouts in BTC-USD, ETH-USD, and SOL-USD with 2%",
+    "hypothesis": "A 30-minute opening range breakout in BTC-USD, ETH-USD, or SOL-USD with a 2% threshold is an independently measurable event that initiates a genuine new regime with a probability greater than 0.05.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume",
+        "order_book",
+        "options_chain"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "Test whether the 30-minute opening range breakout with a 2% threshold consistently leads to profitable trades when adjusted for fees, latency, and slippage across multiple assets and timeframes.",
+    "source_search": {
+      "query": "search for academic papers or technical analysis studies on regime shifts in cryptocurrency markets with measurable thresholds and",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com/xhtml/search",
+        "snippet": "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Search - Microsoft Bing",
+        "url": "https://www.bing.com/",
+        "snippet": "Search with Microsoft Bing and use the power of AI to find information, explore webpages, images, videos, maps, and more. A smart search engine for the forever curious.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Yahoo Search - Web Search",
+        "url": "https://search.yahoo.com/",
+        "snippet": "Trump goes all in on midterm voter fraud claims in stunning post: 'Does anybody really believe that this election was honest?' Mississippi and Alaska Senate races remain uncalled. See results.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "DuckDuckGo - Protection. Privacy. Peace of mind.",
+        "url": "https://duckduckgo.com/",
+        "snippet": "That's why millions of people choose DuckDuckGo over Chrome and other browsers to search and browse online. Our built-in search engine is like Google but never tracks your searches, and our browser blocks ads, trackers, and cookies that col",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "search for academic papers or technical analysis studies on regime shifts in cryptocurrency markets with measurable thresholds and",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "volume",
+      "order_book",
+      "options_chain"
+    ],
+    "hypothesis_timeframe": "hourly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
