@@ -16,7 +16,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-10,False,,,,,,,0,HOOD,S352,,entered_no_exit
 15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-11-06,False,,0.0,-57.41,-57.41,-57.41,-57.41,-31.0,NFLX,S356,broker_fill_backfill,closed
 16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-11-05,False,,100.0,53.33,53.33,53.33,53.33,24.0,MARA,S357,take_profit (+51.1%),closed
-17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-10,False,,,,,,,0,TSLA,S359,,entered_no_exit
+17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-10,False,,0.0,-48.84,-48.84,-48.84,-48.84,-21.0,TSLA,S359,broker_fill_backfill,closed
 18,lab0018_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-11-10,False,,0.0,-48.61,-48.61,-38.89,-58.33,-21.0,"DKNG,XOM",S361,stop_loss (-66.7%); stop_loss (-50.0%),closed
 19,lab0019_s362_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-10,False,,,,,,,0,TSLA,S362,,entered_no_exit
 20,lab0020_s364_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-10,False,,,,,,,0,TSLA,S364,,entered_no_exit
@@ -69,7 +69,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 67,lab0067_s432_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-04,False,,,,,,,0,,,,idle
 68,lab0068_s430_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-17,False,,,,,,,0,,,,idle
 90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,1,1,2026-11-10,False,,0.0,-38.89,-38.89,-38.89,-38.89,-28.0,"NVDA,TSLA","S404,S406",broker_fill_backfill,closed
-91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,1,1,2026-11-10,False,,0.0,-62.9,-62.9,-62.9,-62.9,-39.0,SMCI,S406,broker_fill_backfill,closed
+91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,2,0,2026-11-10,False,,0.0,-51.45,-51.45,-40.0,-62.9,-65.0,SMCI,S406,broker_fill_backfill; broker_fill_backfill,closed
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2001,promising_s170_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2002,promising_s171_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
