@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-10
 
-_Generated 2026-11-10T12:57:07.871071_
+_Generated 2026-11-10T13:02:05.492386_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-11-10T12:57:07.871071_
 
 ## Attribution health
 
-- Total exits: **3948**
+- Total exits: **3949**
 - Orphan exits (b0/orphan_reconcile): **423**
 - Orphan rate: **10.7%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -102,8 +102,8 @@ _Generated 2026-11-10T12:57:07.871071_
 | S356 (GapDown_14DTE) | 14d | drop | 38 | 47.4 | -19.18 | -52.29 | -48.99 | +64.61 | 102 | 1 | 2 | $+429.00 | 39.5% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 127 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 127 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
-| S404 (GapDown_OTM2) | 3d | drop | 112 | 47.3 | -33.37 | -66.47 | -50.00 | +91.53 | 102 | 5 | 4 | $+713.00 | 9.8% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 255 | 32.2 | -35.29 | -63.24 | -53.42 | +93.89 | 127 | 0 | 0 | $-1,276.78 | 25.9% | non-positive median return |
+| S404 (GapDown_OTM2) | 3d | drop | 113 | 46.9 | -35.71 | -66.28 | -50.00 | +91.53 | 102 | 5 | 5 | $+676.00 | 9.7% | non-positive median return |
 | S355 (GapDown_7DTE) | 7d | drop | 71 | 45.1 | -37.50 | -77.08 | -63.70 | +138.64 | 102 | 0 | 0 | $+367.00 | 38.0% | manually paused — excluded from new entries & reflected P&L |
 | S411 (RubberBand_OTM2) | 3d | drop | 66 | 47.0 | -38.16 | -59.11 | -52.28 | +60.61 | 99 | 0 | 0 | $-278.00 | 15.2% | non-positive median return |
 | S352 (GapDown_2DTE) | 2d | drop | 69 | 44.9 | -38.24 | -72.14 | -51.85 | +294.28 | 102 | 1 | 0 | $+238.00 | 17.4% | non-positive median return |
@@ -316,7 +316,7 @@ _Pipeline evaluation as of 2026-11-10. Auto-kill thresholds: median<-25% at n>=1
 | S401 | Any_Gap_Down_Small | 135 | +0.00% | 50% | INSUFFICIENT | 102 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
 | S403 | Any_MA50_Touch | 81 | +50.88% | 60% | INSUFFICIENT | 102 |
-| S404 | GapDown_OTM2 | 112 | -33.37% | 47% | INSUFFICIENT | 102 |
+| S404 | GapDown_OTM2 | 113 | -35.71% | 47% | INSUFFICIENT | 102 |
 | S405 | GapDown_OTM3 | 56 | -42.86% | 34% | INSUFFICIENT | 102 |
 | S406 | RubberBand_ITM3 | 166 | +37.93% | 52% | INSUFFICIENT | 102 |
 | S407 | RubberBand_ITM2 | 38 | -47.73% | 29% | INSUFFICIENT | 102 |
