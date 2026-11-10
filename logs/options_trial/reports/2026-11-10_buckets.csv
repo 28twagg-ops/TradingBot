@@ -13,7 +13,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 11,lab0011_s402_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 12,lab0012_s403_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-04,False,,,,,,,0,,,,idle
 13,lab0013_s350_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-10,False,,,,,,,0,TTD,S350,,entered_no_exit
-14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-05,False,,,,,,,0,,,,idle
+14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-10,False,,,,,,,0,HOOD,S352,,entered_no_exit
 15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-11-06,False,,0.0,-57.41,-57.41,-57.41,-57.41,-31.0,NFLX,S356,broker_fill_backfill,closed
 16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-11-05,False,,100.0,53.33,53.33,53.33,53.33,24.0,MARA,S357,take_profit (+51.1%),closed
 17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-10,False,,,,,,,0,TSLA,S359,,entered_no_exit
@@ -77,4 +77,4 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 2004,promising_s175_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2005,promising_s220_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2006,promising_s221_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
-2007,day_trader_analytics_s431,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-11-10,False,,,,,,,0,RTX,S430,,entered_no_exit
+2007,day_trader_analytics_s431,ask-0.01,bid-0.01,50.0,-40.0,1,1,0,2026-11-10,False,,0.0,-41.18,-41.18,-41.18,-41.18,-7.0,RTX,S430,stop_loss (-41.2%),closed

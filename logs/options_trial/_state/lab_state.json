@@ -362,24 +362,24 @@
       "entry_order_id": "88e9977e-3a64-48d4-b7d2-ea914e5321d0"
     },
     {
-      "lot_id": "ac9352baa4b0",
-      "bucket_id": 2007,
-      "profile_name": "day_trader_analytics_s430",
-      "strategy_id": "S430",
-      "occ_symbol": "RTX261113C00210000",
-      "underlying": "RTX",
+      "lot_id": "1beb37a5c754",
+      "bucket_id": 14,
+      "profile_name": "lab0014_s352_w2_1005_1045_r1",
+      "strategy_id": "S352",
+      "occ_symbol": "HOOD261113C00088000",
+      "underlying": "HOOD",
       "qty": 1,
-      "entry_cost": 17.0,
-      "entry_price": 0.17,
+      "entry_cost": 52.0,
+      "entry_price": 0.52,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
       "take_profit": 0.5,
-      "stop_loss": -0.4,
+      "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-11-10T15:22:01.619657+00:00",
-      "entry_order_id": "ad46064d-60f1-4f64-8f9c-53e5adfca3f4"
+      "entry_date": "2026-11-10T15:32:11.677247+00:00",
+      "entry_order_id": "e6242f33-2475-492b-a0e6-8fb22d465ffe"
     }
   ],
   "pending_orders": [
@@ -398,22 +398,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.6000000000000001
-    },
-    {
-      "order_id": "e6242f33-2475-492b-a0e6-8fb22d465ffe",
-      "bucket_id": 14,
-      "strategy_id": "S352",
-      "occ_symbol": "HOOD261113C00088000",
-      "underlying": "HOOD",
-      "qty": 1,
-      "limit": 0.53,
-      "profile_name": "lab0014_s352_w2_1005_1045_r1",
-      "submitted": "2026-11-10",
-      "detail": "gap -2.5%",
-      "spread_frac": 0.07692307692307698,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
     }
   ],
   "pending_exits": [],
@@ -435,7 +419,7 @@
     "b21": 73.0,
     "b18": 36.0,
     "b54": 66.0,
-    "b2007": 17.0
+    "b14": 52.0
   },
   "session_date": "2026-11-10",
   "entries_locked": [
@@ -907,7 +891,9 @@
     "4ec2e3bf-34a0-4852-a889-0158aa656c12",
     "5941420d-eaf7-429a-b30f-4b1894a24a69",
     "88e9977e-3a64-48d4-b7d2-ea914e5321d0",
-    "ad46064d-60f1-4f64-8f9c-53e5adfca3f4"
+    "ad46064d-60f1-4f64-8f9c-53e5adfca3f4",
+    "e6242f33-2475-492b-a0e6-8fb22d465ffe",
+    "1b76eca0-51f0-4234-8e19-4f83880122a8"
   ],
   "submitted_today": 21,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
