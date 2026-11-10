@@ -398,6 +398,22 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.6000000000000001
+    },
+    {
+      "order_id": "e6242f33-2475-492b-a0e6-8fb22d465ffe",
+      "bucket_id": 14,
+      "strategy_id": "S352",
+      "occ_symbol": "HOOD261113C00088000",
+      "underlying": "HOOD",
+      "qty": 1,
+      "limit": 0.53,
+      "profile_name": "lab0014_s352_w2_1005_1045_r1",
+      "submitted": "2026-11-10",
+      "detail": "gap -2.5%",
+      "spread_frac": 0.07692307692307698,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
     }
   ],
   "pending_exits": [],
@@ -442,7 +458,8 @@
     "13|S350|2026-11-10",
     "21|S365|2026-11-10",
     "2009|S432|2026-11-10",
-    "54|S410|2026-11-10"
+    "54|S410|2026-11-10",
+    "14|S352|2026-11-10"
   ],
   "processed_orders": [
     "8f4610b6-a69c-418f-a740-9063f350cdab",
@@ -892,7 +909,7 @@
     "88e9977e-3a64-48d4-b7d2-ea914e5321d0",
     "ad46064d-60f1-4f64-8f9c-53e5adfca3f4"
   ],
-  "submitted_today": 20,
+  "submitted_today": 21,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-10"
 }
