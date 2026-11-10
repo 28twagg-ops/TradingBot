@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "de76aebd41d44e4caefdb44bad5116e7",
+  "worker": "S03",
+  "cycle": "2026-11-10T10:56Z",
+  "generation_index": 0,
+  "model": "qwen3:8b",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S03",
+    "cycle": "2026-11-10T10:56Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Does BTC-USD hourly return mean reversion at a 24-hour lag persist in a fixed holdout period after a",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "fundamentals",
+        "order_book",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "3a20652b616c09",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "Publicly available empirical study on BTC-USD hourly autocorrelation at 24-hour lag with 3% threshold, 2024-01-01 to 2024-12-31, i",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:8b",
+    "local_metrics": {
+      "elapsed_seconds": 162.427,
+      "load_seconds": 6.849,
+      "eval_count": 344,
+      "prompt_eval_count": 1716,
+      "tokens_per_second": 4.673,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 0.0,
+        "free_ram_gb": 17.49,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-10T10:56Z",
+    "id": "3a20652b616c09",
+    "topic": "Does BTC-USD hourly return mean reversion at a 24-hour lag persist in a fixed holdout period after a",
+    "hypothesis": "The observed mean reversion in BTC-USD hourly returns at a 24-hour lag with a 3% threshold is not robust to a fixed holdout period and realistic trading frictions.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "fundamentals",
+        "order_book",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "Test the hypothesis using a fixed holdout period (e.g., 2024-01-01 to 2024-06-30) and simulate trading with realistic fees (0.1%), latency (5 minutes), and slippage (1%).",
+    "source_search": {
+      "query": "Publicly available empirical study on BTC-USD hourly autocorrelation at 24-hour lag with 3% threshold, 2024-01-01 to 2024-12-31, i",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [],
+    "next_search_query": "Publicly available empirical study on BTC-USD hourly autocorrelation at 24-hour lag with 3% threshold, 2024-01-01 to 2024-12-31, i",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "fundamentals",
+      "order_book",
+      "volume"
+    ],
+    "hypothesis_timeframe": "2024-01-01 to 2024-12-31",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
