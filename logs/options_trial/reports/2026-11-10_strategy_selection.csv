@@ -64,7 +64,7 @@ S418,BBSqueeze_OTM2,7d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,
 S419,BBSqueeze_OTM3,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S431,DayTrader_RS,3d,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S432,DayTrader_ORB_RS,3d,watch,early sample with non-positive median,15,14,5,9,-0.61,-37.98,-50.0,-40.09,71.91,-20.0,12,25,2,1,11,14.3
-S430,DayTrader_ORB,3d,watch,early sample with non-positive median,16,16,4,12,-15.34,-39.62,-44.0,-40.32,59.59,-140.0,15,25,2,2,10,18.8
+S430,DayTrader_ORB,3d,watch,early sample with non-positive median,17,16,4,12,-15.34,-39.62,-44.0,-40.32,59.59,-140.0,15,25,3,2,10,18.8
 S367,RubberBand_30DTE,30d,watch,insufficient sample (<8 exits),12,3,0,3,-41.76,-48.89,-50.89,-50.14,-29.78,-77.0,3,98,0,0,2,66.7
 S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),20,6,1,5,-33.91,-50.0,-66.67,-62.5,14.93,-5.0,2,102,0,0,2,83.3
 S358,GapDown_30DTE,30d,watch,insufficient sample (<8 exits),15,5,2,3,-8.92,-50.0,-51.39,-51.39,54.28,-49.0,4,98,0,0,3,40.0
