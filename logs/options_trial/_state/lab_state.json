@@ -323,7 +323,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "980ac451-8479-4423-9f21-648949051d87",
+      "lot_id": "9dc75ae4384a",
+      "bucket_id": 13,
+      "strategy_id": "S350",
+      "occ_symbol": "TTD261113C00015000",
+      "qty": 1,
+      "reason": "take_profit (+51.2%)",
+      "submitted": "2026-11-10T11:02:16"
+    }
+  ],
   "bucket_open_premium": {
     "b90": 69.0,
     "b91": 65.0,
