@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-10T23:20Z | S04a | gap_down_quality | 27753361e1ee0f | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-10T23:20Z | S08a | Low hourly volatility predicts larger next‑hour  | 9cc1f1ebe69299 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-10T23:19Z | S01a | ETH-USD hourly mean‑reversion to 24‑hour SMA | b395b1103a8258 | HOLD |
+| 2026-11-10T23:18Z | S05a | Hourly BTC‑USD trend persistence | a2b44473c0ed87 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-10T23:18Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 693960f4c306d4 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-10T20:54Z | S07b | Hourly trend persistence in BTC-USD across marke | e90f0180e00412 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-10T20:53Z | S02b | BTC-USD hourly trend reversal after 6 consecutiv | 02ec7d32268b23 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-10T20:53Z | S10b | ETH-USD hourly mean reversion after 1% breakout  | 2b8fe385e4a2e6 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-10T04:13Z | S01a | ETH-USD hourly mean‑reversion to 24‑hour moving  | 3c8ea65baa69fe | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-10T04:12Z | S05a | Hourly BTC‑USD trend persistence | 4e2faf3311a5b9 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-10T04:11Z | S03a | BTC-USD hourly mean reversion | 75bdc73967194f | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-10T01:32Z | S07b | Hourly trend persistence in BTC-USD during low‑v | 725194bdc2d08f | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-10T01:32Z | S02b | BTC-USD hourly trend reversal after 5 consecutiv | 2ff9f995a5bf4b | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-10T01:31Z | S10b | ETH-USD hourly mean reversion after 5% breakout  | 1e5473f2f79f2f | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-10T01:30Z | S06b | BTC-USD hourly breakout on 24‑hour SMA | 3f23f8598db6af | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-10T01:29Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 423ed8cf36abfc | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

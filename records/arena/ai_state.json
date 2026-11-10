@@ -2477,6 +2477,59 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-10T23:19Z",
+        "id": "b395b1103a8258",
+        "topic": "ETH-USD hourly mean\u2011reversion to 24\u2011hour SMA",
+        "hypothesis": "Hourly ETH\u2011USD prices exhibit a statistically significant reversion to the 24\u2011hour simple moving average within the next hour when the deviation exceeds 5% of the SMA.",
+        "candidate": {
+          "family": "reversion",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 503,
+            "returns_pct": 0.724,
+            "drawdown_pct": -0.25,
+            "entries": 1
+          },
+          "retrospective_validation": {
+            "start": 503,
+            "end": 719,
+            "returns_pct": -1.604,
+            "drawdown_pct": -1.857,
+            "entries": 1
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "validation_issue": null,
+        "falsification_test": "Count instances where |close_t\u2212SMA24_t|/SMA24_t>0.05 and check if close_{t+1} moves toward SMA24_t more often than 50%. Reject if <60% of such instances revert.",
+        "source_search": {
+          "query": "ETH-USD hourly mean reversion 24h SMA statistical significance 2024 2025",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly mean reversion 24h SMA statistical significance 2024 2025",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -6425,6 +6478,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-10T23:18Z",
+        "id": "693960f4c306d4",
+        "topic": "BTC-USD hourly mean reversion at 24\u2011hour lag",
+        "hypothesis": "Hourly BTC\u2011USD returns exhibit mean\u2011reversion when the 24\u2011hour lagged return exceeds \u00b13\u202f%: a 5\u2011hour lookback reversion rule with a 0.03 threshold will predict a reversal in the next hour.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Apply the 5\u2011hour lookback reversion rule with 0.03 threshold to BTC\u2011USD hourly closes and compare predictive accuracy against a random\u2011guess baseline in a fixed holdout period.",
+        "source_search": {
+          "query": "BTC-USD hourly close price dataset 2015-2026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly close price dataset 2015-2026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -8849,6 +8940,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-10T23:20Z",
+        "id": "27753361e1ee0f",
+        "topic": "gap_down_quality",
+        "hypothesis": "After a 2% hourly gap\u2011down in BTC\u2011USD, the price reverts to within 5% of the pre\u2011gap level within 30 hours with 90% probability.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "For each hourly gap\u2011down >2%, check if within 30 hours the close is within \u00b15% of the pre\u2011gap close. If >10% of events fail, reject hypothesis.",
+        "source_search": {
+          "query": "BTC-USD hourly gap\u2011down >2% events list",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly gap\u2011down >2% events list",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ],
     "ai_seen": {
@@ -11126,6 +11255,44 @@
         "falsification_test": "If over any 10\u2011hour window the cumulative return is >5% but the price reverses direction within the next 5 hours, the hypothesis is falsified.",
         "source_search": {
           "query": "BTC-USD hourly close 2020\u20112026 mean reversion after breakout",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly close 2020\u20112026 trend persistence 10h 5%",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-10T23:18Z",
+        "id": "a2b44473c0ed87",
+        "topic": "Hourly BTC\u2011USD trend persistence",
+        "hypothesis": "Hourly BTC\u2011USD prices exhibit a trend that persists for at least 10 consecutive hours with a return exceeding 5% of the starting price, occurring more often than random chance would predict.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Count the number of 10\u2011hour sequences where the cumulative return exceeds 5% and compare to a shuffled\u2011return null distribution. If the observed frequency is not statistically higher than chance, reject the hypothesis.",
+        "source_search": {
+          "query": "BTC-USD hourly close 2020\u20112026 trend persistence 10h 5%",
           "attempted": [
             "web"
           ],
@@ -16519,6 +16686,44 @@
         "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
         "validation_issue": null,
         "falsification_test": "Compute 30\u2011hour rolling std of hourly log\u2011returns. If current volatility < rolling mean \u2013 0.08*rolling std, then test whether next hour\u2019s volatility > rolling mean. Count successes vs failures to assess mean\u2011reversion.",
+        "source_search": {
+          "query": "search for empirical studies on low hourly volatility and next\u2011hour return magnitude in BTC\u2011USD",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "search for empirical studies on low hourly volatility and next\u2011hour return magnitude in BTC\u2011USD",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-10T23:20Z",
+        "id": "9cc1f1ebe69299",
+        "topic": "Low hourly volatility predicts larger next\u2011hour return magnitude in BTC\u2011USD",
+        "hypothesis": "When the 30\u2011hour realized volatility of BTC\u2011USD falls below 0.08, the absolute return of the following hour tends to exceed the 30\u2011hour average magnitude.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "Compute 30\u2011hour realized volatility; flag hours where volatility<0.08; compare next\u2011hour absolute return to 30\u2011hour average magnitude; test if proportion > 0.5.",
         "source_search": {
           "query": "search for empirical studies on low hourly volatility and next\u2011hour return magnitude in BTC\u2011USD",
           "attempted": [
