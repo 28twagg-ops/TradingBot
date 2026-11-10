@@ -12515,3 +12515,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-10 14:51:59,exits,bull,231.01,127.06,0,0,0,3,AES|ANET|MAR,both
 2026-11-10 14:56:58,exits,bull,231.18,127.06,0,0,0,3,AES|ANET|MAR,both
 2026-11-10 15:02:05,exits,bull,231.55,127.06,0,0,0,3,AES|ANET|MAR,both
+2026-11-10 15:06:58,exits,bull,231.3,127.06,0,0,0,3,AES|ANET|MAR,both
