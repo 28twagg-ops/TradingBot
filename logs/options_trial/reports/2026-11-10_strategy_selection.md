@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-10
 
-_Generated 2026-11-10T09:48:34.372379_
+_Generated 2026-11-10T09:52:53.295309_
 
 ## Summary
 
@@ -28,7 +28,7 @@ _Generated 2026-11-10T09:48:34.372379_
 | S403 (Any_MA50_Touch) | 3d | watch | 81 | 60.5 | +50.88 | -64.71 | -50.00 | +170.91 | 102 | 0 | 0 | $+1,231.00 | 14.8% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 57 | 57.9 | +47.95 | -63.86 | -50.85 | +115.78 | 102 | 2 | 2 | $+986.00 | 15.8% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 69 | 62.3 | +38.24 | -60.78 | -50.82 | +312.38 | 102 | 1 | 1 | $+1,322.00 | 18.8% | fat left tail (p10 < -45%) |
-| S406 (RubberBand_ITM3) | 3d | watch | 165 | 52.7 | +37.93 | -59.73 | -46.43 | +194.74 | 102 | 6 | 5 | $+3,127.00 | 11.5% | fat left tail (p10 < -45%) |
+| S406 (RubberBand_ITM3) | 3d | watch | 165 | 52.7 | +37.93 | -59.73 | -46.43 | +194.74 | 102 | 7 | 5 | $+3,127.00 | 11.5% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 109 | 50.5 | +22.22 | -71.43 | -50.00 | +146.00 | 106 | 0 | 0 | $+1,086.00 | 27.5% | fat left tail (p10 < -45%) |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | watch | 44 | 50.0 | +0.68 | -77.21 | -60.00 | +88.54 | 112 | 0 | 1 | $+916.00 | 34.1% | fat left tail (p10 < -45%) |
 | S169 (BB Squeeze Breakout call 3 DTE) | 3d ATM BB squeeze | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
