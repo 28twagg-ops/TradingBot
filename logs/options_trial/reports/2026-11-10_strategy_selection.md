@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-10
 
-_Generated 2026-11-10T11:23:08.790757_
+_Generated 2026-11-10T11:28:06.714093_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-11-10T11:23:08.790757_
 
 ## Attribution health
 
-- Total exits: **3943**
+- Total exits: **3944**
 - Orphan exits (b0/orphan_reconcile): **423**
 - Orphan rate: **10.7%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -21,7 +21,7 @@ _Generated 2026-11-10T11:23:08.790757_
 | strategy | DTE | rec | exits | win% | med% | p10% | p25% | p90% | days live | ent 5d | exit 5d | realized $ | top share | rationale |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | S409 (RubberBand_ATM) | 3d | watch | 2 | 100.0 | +81.94 | +79.72 | +80.56 | +84.17 | 47 | 0 | 0 | $+118.00 | 100.0% | insufficient sample (<8 exits) |
-| S410 (RubberBand_OTM1) | 3d | watch | 11 | 63.6 | +65.28 | -68.49 | -58.43 | +101.49 | 96 | 1 | 0 | $+192.00 | 72.7% | building sample (8-19 exits) |
+| S410 (RubberBand_OTM1) | 3d | watch | 12 | 66.7 | +67.85 | -68.48 | -53.44 | +99.67 | 96 | 1 | 1 | $+239.00 | 66.7% | building sample (8-19 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 22 | 63.6 | +56.35 | -58.26 | -49.76 | +158.30 | 112 | 1 | 2 | $+909.00 | 22.7% | fat left tail (p10 < -45%) |
 | S396 (GapDown_ITM2) | 3d | watch | 16 | 62.5 | +55.64 | -54.89 | -50.17 | +94.44 | 96 | 0 | 0 | $+261.00 | 75.0% | building sample (8-19 exits) |
 | S357 (GapDown_21DTE) | 21d | watch | 32 | 71.9 | +52.94 | -73.18 | -47.99 | +73.68 | 102 | 0 | 1 | $+499.00 | 34.4% | fat left tail (p10 < -45%) |
@@ -322,7 +322,7 @@ _Pipeline evaluation as of 2026-11-10. Auto-kill thresholds: median<-25% at n>=1
 | S407 | RubberBand_ITM2 | 38 | -47.73% | 29% | INSUFFICIENT | 102 |
 | S408 | RubberBand_ITM1 | 67 | -6.25% | 43% | INSUFFICIENT | 99 |
 | S409 | RubberBand_ATM | 2 | +81.94% | 100% | WATCH | 47 |
-| S410 | RubberBand_OTM1 | 11 | +65.28% | 64% | WATCH | 96 |
+| S410 | RubberBand_OTM1 | 12 | +67.85% | 67% | WATCH | 96 |
 | S411 | RubberBand_OTM2 | 66 | -38.16% | 47% | INSUFFICIENT | 99 |
 | S412 | RubberBand_OTM3 | 68 | -3.57% | 44% | INSUFFICIENT | 102 |
 | S413 | BBSqueeze_ITM3 | 0 | — | — | NEW | 0 |
