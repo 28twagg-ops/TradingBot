@@ -1,0 +1,255 @@
+14:47:11  INFO      Mode: morning_scan
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:2928: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  "type": str(getattr(o, "order_type", "?")),
+14:47:12  INFO        SELL MARKET [urgent] COHR closed
+14:47:14  INFO        TX logged: SELL COHR  P&L -1.07%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:47 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $230.95|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-10|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $230.95|
+|  Cash                                                           $162.04|
+|  Reserve                                          $11.55  (always kept)|
+|  Stocks~  $68.91 / $173.21  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $104.31  (new stock buys)|
+|  Trade size             $34.64  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (2 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AES      Pullback50      $34.58     $14.89   $14.90   +0.1%   $+0.02  |
+|  COHR     EarningsDrift   $34.33     $225.51  $223.10  -1.1%   $-0.37  |
+|                                                                        |
+|  Total invested                                                  $68.91|
+|  Total open P&L                                                  $-0.35|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (11.8m))|
+|  Cached exits                                                         1|
+|  Cached signals                                                      52|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  COHR  P&L -1.1%  $-0.37                        EXIT: stop_loss (-1.1%)|
+|  AES  P&L +0.1%  $+0.02                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                   1|
+|  COHR                                        -1.07%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           901|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  52                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AEP      VWAP_Reclaim    eq     $128.33  53.5   1.09    VWAP reclaim V|
+|  AMP      Pullback50      eq     $518.30  63.5   -0.36   50MA bounce (+|
+|  ADI      Pullback50      eq     $394.66  49.4   0.62    50MA bounce (+|
+|  ANET     EarningsDrift   eq     $186.17  52.1   0.67    post-earnings |
+|  BNY      Pullback50      eq     $151.23  65.1   -0.09   50MA bounce (+|
+|  COR      TrendResumpti~  eq     $345.76  51.5   0.90    HH/HL resumpti|
+|  CEG      VWAP_Reclaim    eq     $276.09  57.3   2.14    VWAP reclaim V|
+|  STZ      TrendResumpti~  eq     $145.51  64.3   1.50    HH/HL resumpti|
+|  STZ      VWAP_Reclaim    eq     $145.51  64.3   1.50    VWAP reclaim V|
+|  EOG      Pullback50      eq     $148.43  37.3   2.04    50MA bounce (-|
+|  FERG     TrendResumpti~  eq     $259.93  73.9   3.33    HH/HL resumpti|
+|  JPM      Pullback50      eq     $342.08  54.8   -0.21   50MA bounce (+|
+|  LRCX     RSIRecovery     eq     $221.31  37.6   0.51    RSI 27.2→37.6 |
+|  LLY      TrendResumpti~  eq     $1411.~  67.6   0.90    HH/HL resumpti|
+|  MAR      EarningsDrift   eq     $417.16  63.6   1.02    post-earnings |
+|  MAS      TrendResumpti~  eq     $85.92   69.4   0.67    HH/HL resumpti|
+|  MPWR     VWAP_Reclaim    eq     $1388.~  58.2   1.02    VWAP reclaim V|
+|  NDSN     Pullback50      eq     $323.84  48.0   -0.94   50MA bounce (+|
+|  NSC      Pullback50      eq     $325.82  50.2   0.66    50MA bounce (+|
+|  NSC      TrendResumpti~  eq     $325.82  50.2   0.66    HH/HL resumpti|
+|  ODFL     RSIRecovery     eq     $170.89  34.3   0.86    RSI 28.6→34.3 |
+|  OMC      TrendResumpti~  eq     $88.50   66.5   0.54    HH/HL resumpti|
+|  PNW      VWAP_Reclaim    eq     $105.26  56.9   1.18    VWAP reclaim V|14:47:15  INFO        BUY  ANET  $34.64  [EarningsDrift]  id=33fa82eb-a8a3-403e-98e7-6581849280bc
+14:47:15  INFO        BUY  MAR  $34.64  [EarningsDrift]  id=272e141d-9933-4650-84b1-d937aba43430
+14:47:37  INFO        place_all_stops: checking 3 positions...
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1791: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  if (getattr(o, "order_type", None) in (OrderType.STOP,
+14:47:37  INFO        STOP already live AES @ $14.84
+14:47:37  INFO        STOP skipped ANET: fractional (0.1844 shares) — software exit will handle it
+14:47:37  INFO        STOP skipped MAR: fractional (0.0827 shares) — software exit will handle it
+
+|  RL       TrendResumpti~  eq     $398.52  58.0   0.79    HH/HL resumpti|
+|  REG      VWAP_Reclaim    eq     $76.11   60.3   1.14    VWAP reclaim V|
+|  RJF      TrendResumpti~  eq     $167.80  66.5   0.76    HH/HL resumpti|
+|  SWKS     Pullback50      eq     $82.83   54.1   -0.57   50MA bounce (+|
+|  TGT      VWAP_Reclaim    eq     $165.90  61.1   1.10    VWAP reclaim V|
+|  GWW      EarningsDrift   eq     $1447.~  69.4   2.21    post-earnings |
+|  AAON     RSIRecovery     eq     $62.87   38.5   0.59    RSI 29.2→38.5 |
+|  AMG      VWAP_Reclaim    eq     $383.15  47.6   2.27    VWAP reclaim V|
+|  ATI      Pullback50      eq     $184.85  50.9   -0.12   50MA bounce (-|
+|  BCO      VWAP_Reclaim    eq     $114.57  60.3   1.47    VWAP reclaim V|
+|  BROS     RSIRecovery     eq     $36.01   31.3   0.73    RSI 26.8→31.3 |
+|  CBSH     Pullback50      eq     $56.03   52.8   1.42    50MA bounce (-|
+|  CFR      Pullback50      eq     $158.05  55.3   -0.90   50MA bounce (+|
+|  CNM      TrendResumpti~  eq     $47.90   72.8   2.20    HH/HL resumpti|
+|  CNM      VWAP_Reclaim    eq     $47.90   72.8   2.20    VWAP reclaim V|
+|  CNX      VWAP_Reclaim    eq     $36.03   52.2   2.11    VWAP reclaim V|
+|  CTVA     MomReversal     eq     $12.11   38.5   0.66    -84.2% drop/60|
+|  CUZ      VWAP_Reclaim    eq     $30.12   67.8   1.86    VWAP reclaim V|
+|  EGP      Pullback50      eq     $199.26  47.0   -0.38   50MA bounce (+|
+|  ESNT     Pullback50      eq     $65.76   49.8   0.85    50MA bounce (+|
+|  EXEL     VWAP_Reclaim    eq     $71.74   71.4   1.58    VWAP reclaim V|
+|  FHI      TrendResumpti~  eq     $64.95   77.7   0.93    HH/HL resumpti|
+|  FLR      Pullback50      eq     $50.33   63.2   0.93    50MA bounce (-|
+|  GBCI     TrendResumpti~  eq     $49.08   69.0   0.52    HH/HL resumpti|
+|  MTG      Pullback50      eq     $28.61   61.7   -2.36   50MA bounce (-|
+|  ONB      Pullback50      eq     $25.36   58.0   -2.61   50MA bounce (+|
+|  ROKU     VWAP_Reclaim    eq     $160.52  61.5   3.22    VWAP reclaim V|
+|  SLAB     Pullback50      eq     $221.65  49.3   -1.89   50MA bounce (+|
+|  UGI      Pullback50      eq     $37.41   36.5   -3.11   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] ANET  EarningsDrift                                $34.64|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] MAR  EarningsDrift                                 $34.64|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] GWW  EarningsDrift                                   cap 3|
+|    SKIP [eq] CTVA  MomReversal                                    cap 3|
+|    SKIP [eq] AMP  Pullback50                                      cap 3|
+|    SKIP [eq] ADI  Pullback50                                      cap 3|
+|    SKIP [eq] BNY  Pullback50                                      cap 3|
+|    SKIP [eq] EOG  Pullback50                                      cap 3|
+|    SKIP [eq] JPM  Pullback50                                      cap 3|
+|    SKIP [eq] NDSN  Pullback50                                     cap 3|
+|    SKIP [eq] NSC  Pullback50                                      cap 3|
+|    SKIP [eq] SWKS  Pullback50                                     cap 3|
+|    SKIP [eq] ATI  Pullback50                                      cap 3|
+|    SKIP [eq] CBSH  Pullback50                                     cap 3|
+|    SKIP [eq] CFR  Pullback50                                      cap 3|
+|    SKIP [eq] EGP  Pullback50                                      cap 3|
+|    SKIP [eq] ESNT  Pullback50                                     cap 3|
+|    SKIP [eq] FLR  Pullback50                                      cap 3|
+|    SKIP [eq] MTG  Pullback50                                      cap 3|
+|    SKIP [eq] ONB  Pullback50                                      cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] UGI  Pullback50                                      cap 3|
+|    SKIP [eq] LRCX  RSIRecovery                                    cap 3|
+|    SKIP [eq] ODFL  RSIRecovery                                    cap 3|
+|    SKIP [eq] AAON  RSIRecovery                                    cap 3|
+|    SKIP [eq] BROS  RSIRecovery                                    cap 3|
+|    SKIP [eq] COR  TrendResumption                                 cap 3|
+|    SKIP [eq] STZ  TrendResumption                                 cap 3|
+|    SKIP [eq] FERG  TrendResumption                                cap 3|
+|    SKIP [eq] LLY  TrendResumption                                 cap 3|
+|    SKIP [eq] MAS  TrendResumption                                 cap 3|
+|    SKIP [eq] NSC  TrendResumption                                 cap 3|
+|    SKIP [eq] OMC  TrendResumption                                 cap 3|
+|    SKIP [eq] RL  TrendResumption                                  cap 3|
+|    SKIP [eq] RJF  TrendResumption                                 cap 3|
+|    SKIP [eq] CNM  TrendResumption                                 cap 3|
+|    SKIP [eq] FHI  TrendResumption                                 cap 3|
+|    SKIP [eq] GBCI  TrendResumption                                cap 3|
+|    SKIP [eq] AEP  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] CEG  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] STZ  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] MPWR  VWAP_Reclaim                                   cap 3|
+|    SKIP [eq] PNW  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] REG  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] TGT  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] AMG  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] BCO  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] CNM  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] CNX  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] CUZ  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] EXEL  VWAP_Reclaim                                   cap 3|
+|    SKIP [eq] ROKU  VWAP_Reclaim                                   cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  ANET                                                 still unconfirmed|
+|  MAR                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             52|14:47:37  INFO        Daily log -> logs/daily/2026-11-10.md
+14:47:37  INFO        Dashboard written → logs/dashboard.md
+
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             3|
+|  Equity                                                         $230.85|
+|  Cash                                                           $127.06|
++========================================================================+

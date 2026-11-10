@@ -2,66 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "ea3d36f2c596",
-      "bucket_id": 64,
-      "profile_name": "lab0064_s168_w2_1005_1045_r1",
-      "strategy_id": "S168",
-      "occ_symbol": "DKNG261113C00019000",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 44.0,
-      "entry_price": 0.44,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-09T15:07:42.330576+00:00",
-      "entry_order_id": "877b17ef-b444-4801-993d-021f2886a4a3"
-    },
-    {
-      "lot_id": "8e99ecd970f8",
-      "bucket_id": 50,
-      "profile_name": "lab0050_s397_w2_1005_1045_r1",
-      "strategy_id": "S397",
-      "occ_symbol": "DKNG261113C00018500",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 66.0,
-      "entry_price": 0.66,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-09T15:11:54.038001+00:00",
-      "entry_order_id": "f9db7b31-d997-4a05-a337-9ab574029c97"
-    },
-    {
-      "lot_id": "65400bab91c1",
-      "bucket_id": 18,
-      "profile_name": "lab0018_s361_w2_1005_1045_r1",
-      "strategy_id": "S361",
-      "occ_symbol": "DKNG261113C00020000",
-      "underlying": "DKNG",
-      "qty": 1,
-      "entry_cost": 12.0,
-      "entry_price": 0.12,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-09T15:36:57.562190+00:00",
-      "entry_order_id": "bd127043-a5b6-4e27-b5b2-f17a064a1ac7"
-    },
-    {
       "lot_id": "a59b153f5107",
       "bucket_id": 21,
       "profile_name": "lab0021_s365_w2_1005_1045_r1",
@@ -100,25 +40,29 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-10T14:43:43.849705+00:00",
       "entry_order_id": "c30cfb9a-cc0e-4389-8d35-500ee74fdb79"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "f43eee5a-6e2e-4d62-a81f-db366192e1f3",
+      "lot_id": "6d3ca5e8cae8",
       "bucket_id": 90,
+      "profile_name": "live_1to1",
       "strategy_id": "S406",
       "occ_symbol": "TSLA261113C00402500",
       "underlying": "TSLA",
       "qty": 1,
-      "limit": 0.69,
-      "profile_name": "live_1to1",
-      "submitted": "2026-11-10",
-      "detail": "RB gap -1.9% reclaim",
-      "spread_frac": 0.0588235294117646,
-      "buy_offset": -0.01,
+      "entry_cost": 69.0,
+      "entry_price": 0.69,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
       "take_profit": 0.5,
-      "stop_loss": -0.4
-    },
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-10T14:47:43.515441+00:00",
+      "entry_order_id": "f43eee5a-6e2e-4d62-a81f-db366192e1f3"
+    }
+  ],
+  "pending_orders": [
     {
       "order_id": "933a4dd4-5e1b-4618-9830-8d21fa855f0b",
       "bucket_id": 91,
@@ -138,42 +82,19 @@
   ],
   "pending_exits": [
     {
-      "order_id": "d0f9b8ea-bf3d-4805-b6e9-b78b37209e1f",
-      "lot_id": "8e99ecd970f8",
-      "bucket_id": 50,
-      "strategy_id": "S397",
-      "occ_symbol": "DKNG261113C00018500",
+      "order_id": "80d979ff-b54d-41dd-a49f-c2084ed1aa20",
+      "lot_id": "a59b153f5107",
+      "bucket_id": 21,
+      "strategy_id": "S365",
+      "occ_symbol": "DKNG261127C00020000",
       "qty": 1,
-      "reason": "stop_loss (-51.5%)",
-      "submitted": "2026-11-10T09:42:53"
-    },
-    {
-      "order_id": "bad6d2aa-08ac-4b2d-9ebe-986dd4849f3c",
-      "lot_id": "65400bab91c1",
-      "bucket_id": 18,
-      "strategy_id": "S361",
-      "occ_symbol": "DKNG261113C00020000",
-      "qty": 1,
-      "reason": "stop_loss (-66.7%)",
-      "submitted": "2026-11-10T09:42:53"
-    },
-    {
-      "order_id": "4fe4399a-1a1e-4640-89c1-6031814a7c0f",
-      "lot_id": "ea3d36f2c596",
-      "bucket_id": 64,
-      "strategy_id": "S168",
-      "occ_symbol": "DKNG261113C00019000",
-      "qty": 1,
-      "reason": "stop_loss (-59.1%)",
-      "submitted": "2026-11-10T09:42:54"
+      "reason": "stop_loss (-57.1%)",
+      "submitted": "2026-11-10T09:47:46"
     }
   ],
   "bucket_open_premium": {
-    "b64": 44.0,
-    "b50": 66.0,
-    "b18": 12.0,
     "b21": 49.0,
-    "b90": 72.0
+    "b90": 141.0
   },
   "session_date": "2026-11-10",
   "entries_locked": [
@@ -605,7 +526,11 @@
     "a4b95a75-cfb3-4b2a-8447-4fe9772417a1",
     "3ceaa377-4cf3-43af-8ac5-3c485704898d",
     "c30cfb9a-cc0e-4389-8d35-500ee74fdb79",
-    "6939e1a8-42f9-4260-9b6f-61e3c1bab3bb"
+    "6939e1a8-42f9-4260-9b6f-61e3c1bab3bb",
+    "4fe4399a-1a1e-4640-89c1-6031814a7c0f",
+    "bad6d2aa-08ac-4b2d-9ebe-986dd4849f3c",
+    "f43eee5a-6e2e-4d62-a81f-db366192e1f3",
+    "d0f9b8ea-bf3d-4805-b6e9-b78b37209e1f"
   ],
   "submitted_today": 3,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
