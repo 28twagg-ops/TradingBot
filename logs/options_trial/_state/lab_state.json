@@ -62,26 +62,6 @@
       "entry_order_id": "44f9e3d2-ed9f-45d1-9a37-4aee6a79e055"
     },
     {
-      "lot_id": "6a2c38390d47",
-      "bucket_id": 6,
-      "profile_name": "lab0006_s210_w2_1005_1045_r1",
-      "strategy_id": "S210",
-      "occ_symbol": "AMZN261113C00287500",
-      "underlying": "AMZN",
-      "qty": 1,
-      "entry_cost": 32.0,
-      "entry_price": 0.32,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-10T15:12:06.933132+00:00",
-      "entry_order_id": "b4b95615-4fe6-43e5-979b-0c0516a61060"
-    },
-    {
       "lot_id": "f931f1fcc9e9",
       "bucket_id": 19,
       "profile_name": "lab0019_s362_w2_1005_1045_r1",
@@ -143,23 +123,11 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "405cab09-52a3-404d-bdeb-01292bd15138",
-      "lot_id": "6a2c38390d47",
-      "bucket_id": 6,
-      "strategy_id": "S210",
-      "occ_symbol": "AMZN261113C00287500",
-      "qty": 1,
-      "reason": "stop_loss (-53.1%)",
-      "submitted": "2026-11-10T11:12:13"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b90": 69.0,
     "b52": 39.0,
     "b20": 47.0,
-    "b6": 32.0,
     "b19": 47.0,
     "b21": 73.0,
     "b14": 52.0
@@ -650,7 +618,8 @@
     "aab2825b-0ef0-466e-aaf1-8163d1abecaf",
     "257cceff-fa77-42b8-afaf-fd09677763b7",
     "e7367bd8-140d-43fe-932d-2b810d5a70c7",
-    "4fa5ad42-08ea-4e32-b6de-58fad9fb6fe2"
+    "4fa5ad42-08ea-4e32-b6de-58fad9fb6fe2",
+    "405cab09-52a3-404d-bdeb-01292bd15138"
   ],
   "submitted_today": 21,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
