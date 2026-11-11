@@ -1,0 +1,173 @@
+14:46:49  INFO      Mode: morning_scan
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:2928: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  "type": str(getattr(o, "order_type", "?")),
+14:46:50  INFO        SELL LIMIT ADI  qty=0.176869508  limit=$397.97  id=7031298b-1a1b-401e-90e9-fa7636b09fc1
+14:47:20  INFO        SELL LIMIT filled ADI (confirmed by position check)
+14:47:20  INFO        TX logged: SELL ADI  P&L 1.58%
+14:47:21  INFO        BUY  EXPD  $34.88  [Pullback50]  id=b1e6ca31-3a16-4c97-9a44-c31993e5b321
+14:47:21  INFO        BUY  INCY  $34.88  [Pullback50]  id=fae3486e-c975-4eec-abd3-d79ae4076685
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $232.52|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-11|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $232.52|
+|  Cash                                                           $127.35|
+|  Reserve                                          $11.63  (always kept)|
+|  Stock~  $105.17 / $174.39  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $69.22  (new stock buys)|
+|  Trade size             $34.88  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (2 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ADI      Pullback50      $70.53     $392.55  $398.77  +1.6%   $+1.10  |
+|  AES      Pullback50      $34.64     $14.89   $14.93   +0.2%   $+0.08  |
+|                                                                        |
+|  Total invested                                                 $105.17|
+|  Total open P&L                                                  $+1.18|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (11.2m))|
+|  Cached exits                                                         1|
+|  Cached signals                                                      11|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AES  P&L +0.2%  $+0.08                                            HOLD|
+|  ADI  P&L +1.6%  $+1.10                           EXIT: midline (+3.2%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           901|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  11                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  EXPD     Pullback50      eq     $191.08  43.6   -2.50   50MA bounce (-|
+|  INCY     Pullback50      eq     $120.03  55.3   -2.69   50MA bounce (+|
+|  JPM      Pullback50      eq     $342.98  54.6   -2.58   50MA bounce (+|
+|  MRK      Pullback50      eq     $146.93  49.6   -2.62   50MA bounce (+|
+|  RMD      Pullback50      eq     $231.53  32.4   -1.96   50MA bounce (-|
+|  STLD     Pullback50      eq     $239.75  49.9   -2.54   50MA bounce (+|
+|  ATI      Pullback50      eq     $186.98  65.0   -2.22   50MA bounce (+|
+|  CFR      Pullback50      eq     $158.24  51.7   -2.92   50MA bounce (+|
+|  LAD      Pullback50      eq     $309.64  60.6   -1.53   50MA bounce (-|
+|  RGEN     Pullback50      eq     $178.50  49.9   -1.45   50MA bounce (+|
+|  ROKU     VWAP_Reclaim    eq     $160.52  61.5   3.22    VWAP reclaim V|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] EXPD  Pullback50                                   $34.88|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] INCY  Pullback50                                   $34.88|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] JPM  Pullback50                                      cap 3|
+|    SKIP [eq] MRK  Pullback50                                      cap 3|
+|    SKIP [eq] RMD  Pullback50                                      cap 3|
+|    SKIP [eq] STLD  Pullback50                                     cap 3|14:47:43  INFO        place_all_stops: checking 3 positions...
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1791: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  if (getattr(o, "order_type", None) in (OrderType.STOP,
+14:47:43  INFO        STOP already live AES @ $14.85
+14:47:43  INFO        STOP skipped EXPD: fractional (0.1822 shares) — software exit will handle it
+14:47:43  INFO        STOP skipped INCY: fractional (0.2896 shares) — software exit will handle it
+14:47:43  INFO        Daily log -> logs/daily/2026-11-11.md
+14:47:43  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [eq] ATI  Pullback50                                      cap 3|
+|    SKIP [eq] CFR  Pullback50                                      cap 3|
+|    SKIP [eq] LAD  Pullback50                                      cap 3|
+|    SKIP [eq] RGEN  Pullback50                                     cap 3|
+|    SKIP [eq] ROKU  VWAP_Reclaim                                   cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  EXPD                                                 still unconfirmed|
+|  INCY                                                 still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             11|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             3|
+|  Equity                                                         $232.39|
+|  Cash                                                           $128.08|
++========================================================================+
