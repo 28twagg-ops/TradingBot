@@ -63,7 +63,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "eee58ab1-0f41-45cd-b3d5-bdaa2e6096f7",
+      "lot_id": "1beb37a5c754",
+      "bucket_id": 14,
+      "strategy_id": "S352",
+      "occ_symbol": "HOOD261113C00088000",
+      "qty": 1,
+      "reason": "take_profit (+51.9%)",
+      "submitted": "2026-11-11T11:27:08"
+    }
+  ],
   "bucket_open_premium": {
     "b21": 73.0,
     "b14": 52.0,
