@@ -80,25 +80,29 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-11T15:07:08.271191+00:00",
       "entry_order_id": "b4049278-ca94-4a80-9fa3-a88e6abe032f"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "96a83c20-6739-49f2-bd11-32099ff33ef3",
+      "lot_id": "86f0a80ee1fd",
       "bucket_id": 2007,
+      "profile_name": "day_trader_analytics_s430",
       "strategy_id": "S430",
       "occ_symbol": "NVDA261113C00185000",
       "underlying": "NVDA",
       "qty": 1,
-      "limit": 0.36,
-      "profile_name": "day_trader_analytics_s430",
-      "submitted": "2026-11-11",
-      "detail": "ORB-drive +0.7% gap +2.3% VZ=-0.9",
-      "spread_frac": 0.02739726027397263,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.6000000000000001
-    },
+      "entry_cost": 36.0,
+      "entry_price": 0.36,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-11T15:11:56.354628+00:00",
+      "entry_order_id": "96a83c20-6739-49f2-bd11-32099ff33ef3"
+    }
+  ],
+  "pending_orders": [
     {
       "order_id": "960445f8-27c6-41ac-bdac-bbd44ad872bc",
       "bucket_id": 52,
@@ -121,7 +125,8 @@
     "b21": 73.0,
     "b14": 52.0,
     "b6": 60.0,
-    "b2009": 35.0
+    "b2009": 35.0,
+    "b2007": 36.0
   },
   "session_date": "2026-11-11",
   "entries_locked": [
@@ -599,7 +604,8 @@
     "e1427c42-8ba4-4c31-a4d6-898d52766240",
     "a8e88073-2dc7-4a6f-baca-e20fa1d9ee16",
     "536f2a00-32ea-4ad6-af29-02b06f82cd50",
-    "b4049278-ca94-4a80-9fa3-a88e6abe032f"
+    "b4049278-ca94-4a80-9fa3-a88e6abe032f",
+    "96a83c20-6739-49f2-bd11-32099ff33ef3"
   ],
   "submitted_today": 4,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
