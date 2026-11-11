@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-11
 
-_Generated 2026-11-11T10:02:18.081087_
+_Generated 2026-11-11T10:07:10.203407_
 
 ## Summary
 
@@ -83,7 +83,7 @@ _Generated 2026-11-11T10:02:18.081087_
 | S418 (BBSqueeze_OTM2) | 7d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S419 (BBSqueeze_OTM3) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S431 (DayTrader_RS) | 3d | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
-| S432 (DayTrader_ORB_RS) | 3d | watch | 15 | 33.3 | -38.46 | -50.00 | -41.75 | +71.64 | 26 | 2 | 1 | $-39.00 | 20.0% | early sample with non-positive median |
+| S432 (DayTrader_ORB_RS) | 3d | watch | 15 | 33.3 | -38.46 | -50.00 | -41.75 | +71.64 | 26 | 3 | 1 | $-39.00 | 20.0% | early sample with non-positive median |
 | S430 (DayTrader_ORB) | 3d | watch | 17 | 23.5 | -39.66 | -43.71 | -40.38 | +57.99 | 26 | 2 | 2 | $-147.00 | 17.6% | early sample with non-positive median |
 | S367 (RubberBand_30DTE) | 30d | watch | 3 | 0.0 | -48.89 | -50.89 | -50.14 | -29.78 | 99 | 0 | 0 | $-77.00 | 66.7% | insufficient sample (<8 exits) |
 | S400 (Any_Green_Close) | 3d | watch | 6 | 16.7 | -50.00 | -66.67 | -62.50 | +14.93 | 103 | 0 | 0 | $-5.00 | 83.3% | insufficient sample (<8 exits) |
@@ -95,7 +95,7 @@ _Generated 2026-11-11T10:02:18.081087_
 | S365 (RubberBand_14DTE) | 14d | drop | 40 | 47.5 | +0.00 | -64.53 | -52.55 | +67.96 | 103 | 2 | 1 | $-37.00 | 35.0% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 68 | 44.1 | -3.57 | -58.23 | -50.00 | +125.40 | 103 | 0 | 0 | $+184.00 | 17.6% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 67 | 43.3 | -6.25 | -81.48 | -59.63 | +573.13 | 100 | 0 | 0 | $+1,137.00 | 17.9% | manually paused — excluded from new entries & reflected P&L |
-| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 114 | 46.5 | -6.38 | -70.50 | -51.61 | +86.11 | 107 | 1 | 1 | $+123.00 | 15.8% | non-positive median return |
+| S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 114 | 46.5 | -6.38 | -70.50 | -51.61 | +86.11 | 107 | 2 | 1 | $+123.00 | 15.8% | non-positive median return |
 | S361 (RubberBand_2DTE) | 2d | drop | 75 | 45.3 | -8.33 | -67.78 | -53.52 | +258.00 | 103 | 2 | 2 | $+103.00 | 17.3% | non-positive median return |
 | S398 (GapDown_ATM) | 3d | drop | 65 | 47.7 | -18.42 | -68.25 | -55.56 | +168.45 | 103 | 0 | 0 | $+765.00 | 24.6% | non-positive median return |
 | S356 (GapDown_14DTE) | 14d | drop | 38 | 47.4 | -19.18 | -52.29 | -48.99 | +64.61 | 103 | 0 | 1 | $+429.00 | 39.5% | non-positive median return |
@@ -196,7 +196,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
-| S210 | 3d ATM MA cross 8/21 | 114 | -6.38 | -70.50 | -51.61 | 1 | 1 |
+| S210 | 3d ATM MA cross 8/21 | 114 | -6.38 | -70.50 | -51.61 | 2 | 1 |
 | S211 | 3d ATM MA cross 21/50 | 56 | -43.65 | -86.66 | -54.73 | 0 | 0 |
 | S212 | 3d ATM MA bounce 50 | 83 | -68.09 | -98.15 | -81.35 | 0 | 0 |
 | S213 | 3d ATM MA bounce 200 | 0 | +0.00 | +0.00 | +0.00 | 0 | 0 |
