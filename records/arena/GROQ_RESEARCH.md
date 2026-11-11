@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-11T14:29Z | S07b | Hourly trend persistence in BTC-USD under low vo | 928b862993cd71 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-11T14:29Z | S02b | BTC-USD hourly trend persistence after 6 consecu | b2d51a66db1c84 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-11T14:28Z | S10b | ETH-USD hourly mean reversion after 5% breakout  | 23329497459594 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-11T14:27Z | S06b | BTC-USD hourly momentum trigger | 1dd178fe2e9489 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-11T14:27Z | S09b | BTC-USD hourly trend reversal after sustained 10 | f83ab631c58272 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-11T11:28Z | S04a | gap_down_rebound | 6df287abef7c34 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-11T11:27Z | S08a | Low hourly volatility predicts larger next‑hour  | 8916999919d42d | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-11T11:27Z | S01a | ETH-USD hourly mean reversion to 24‑hour SMA | b339caefdbef59 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-10T20:53Z | S10b | ETH-USD hourly mean reversion after 1% breakout  | 2b8fe385e4a2e6 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-10T20:52Z | S06b | BTC-USD hourly momentum trigger | 08f4d59069eea6 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-10T20:51Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 225bdc765b57cc | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-10T17:50Z | S04a | gap_down_quality | ec2bca97026d98 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-10T17:49Z | S08a | Volatility Compression in BTC‑USD | 14c219c12580a5 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-10T17:49Z | S01a | ETH-USD hourly mean‑reversion to 24‑hour SMA | 2c0b043ab1e0aa | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-10T17:48Z | S05a | BTC-USD hourly trend persistence | 4e3e060b02aa71 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-10T17:47Z | S03a | BTC-USD hourly mean reversion | 49eb397073266a | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
