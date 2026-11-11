@@ -1,0 +1,25 @@
+14:37:40  INFO      Mode: morning_prep
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:2928: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  "type": str(getattr(o, "order_type", "?")),
+14:37:41  INFO        [prep_positions] 2/2 (2 valid)
+14:37:41  INFO      Fetching tickers (universe=both)...
+14:37:42  INFO        S&P 500: 503
+14:37:42  INFO        MidCap 400: 400
+14:37:42  INFO        Total: 903 tickers
+14:37:43  INFO        [prep_universe] 40/901 (40 valid)
+14:37:45  INFO        [prep_universe] 80/901 (80 valid)
+14:37:46  INFO        [prep_universe] 120/901 (120 valid)
+14:37:48  INFO        [prep_universe] 160/901 (160 valid)
+14:37:49  INFO        [prep_universe] 200/901 (199 valid)
+14:37:57  INFO        [prep_universe] 240/901 (238 valid)
+14:38:07  INFO        [prep_universe] 280/901 (278 valid)
+14:38:20  INFO        [prep_universe] 320/901 (318 valid)
+14:38:31  INFO        [prep_universe] 360/901 (358 valid)
+14:38:45  INFO        [prep_universe] 400/901 (398 valid)
+14:38:55  INFO        [prep_universe] 440/901 (438 valid)
+14:39:09  INFO        [prep_universe] 480/901 (477 valid)
+14:39:19  INFO        [prep_universe] 520/901 (517 valid)
+14:39:32  INFO        [prep_universe] 560/901 (557 valid)
+14:39:43  INFO        [prep_universe] 600/901 (597 valid)
+14:39:57  INFO        [prep_universe] 640/901 (637 valid)
+14:40:08  INFO        [prep_universe] 680/901 (677 valid)
