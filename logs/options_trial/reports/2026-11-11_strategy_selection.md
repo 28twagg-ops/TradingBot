@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-11
 
-_Generated 2026-11-11T11:27:40.887031_
+_Generated 2026-11-11T11:32:11.895027_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-11-11T11:27:40.887031_
 
 ## Attribution health
 
-- Total exits: **3957**
+- Total exits: **3958**
 - Orphan exits (b0/orphan_reconcile): **423**
 - Orphan rate: **10.7%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -104,9 +104,9 @@ _Generated 2026-11-11T11:27:40.887031_
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 128 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 255 | 32.2 | -35.29 | -63.24 | -53.42 | +93.89 | 128 | 0 | 0 | $-1,276.78 | 25.9% | non-positive median return |
 | S404 (GapDown_OTM2) | 3d | drop | 113 | 46.9 | -35.71 | -66.28 | -50.00 | +91.53 | 103 | 4 | 5 | $+676.00 | 9.7% | non-positive median return |
+| S352 (GapDown_2DTE) | 2d | drop | 70 | 45.7 | -35.78 | -71.79 | -51.85 | +290.00 | 103 | 1 | 1 | $+266.00 | 17.1% | non-positive median return |
 | S355 (GapDown_7DTE) | 7d | drop | 71 | 45.1 | -37.50 | -77.08 | -63.70 | +138.64 | 103 | 0 | 0 | $+367.00 | 38.0% | manually paused — excluded from new entries & reflected P&L |
 | S411 (RubberBand_OTM2) | 3d | drop | 66 | 47.0 | -38.16 | -59.11 | -52.28 | +60.61 | 100 | 0 | 0 | $-278.00 | 15.2% | non-positive median return |
-| S352 (GapDown_2DTE) | 2d | drop | 69 | 44.9 | -38.24 | -72.14 | -51.85 | +294.28 | 103 | 1 | 0 | $+238.00 | 17.4% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 56 | 33.9 | -42.86 | -83.93 | -65.20 | +103.47 | 103 | 0 | 0 | $-118.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 56 | 23.2 | -43.65 | -86.66 | -54.73 | +95.51 | 107 | 0 | 0 | $-401.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S359 (RubberBand_0DTE) | 0d | drop | 54 | 40.7 | -44.44 | -71.35 | -60.52 | +152.86 | 100 | 2 | 2 | $+55.00 | 18.5% | non-positive median return |
@@ -264,7 +264,7 @@ _Pipeline evaluation as of 2026-11-11. Auto-kill thresholds: median<-25% at n>=1
 | S221 | GoldenPocket | 0 | — | — | NEW | 0 |
 | S350 | GapDown_0DTE | 59 | +0.00% | 47% | INSUFFICIENT | 103 |
 | S351 | GapDown_1DTE | 75 | -50.00% | 37% | INSUFFICIENT | 103 |
-| S352 | GapDown_2DTE | 69 | -38.24% | 45% | INSUFFICIENT | 103 |
+| S352 | GapDown_2DTE | 70 | -35.78% | 46% | INSUFFICIENT | 103 |
 | S353 | GapDown_3DTE | 45 | -46.15% | 42% | INSUFFICIENT | 103 |
 | S354 | GapDown_5DTE | 66 | -51.96% | 36% | INSUFFICIENT | 103 |
 | S355 | GapDown_7DTE | 71 | -37.50% | 45% | INSUFFICIENT | 103 |
