@@ -12690,3 +12690,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-11 19:01:52,exits,bull,233.35,128.08,0,0,0,3,AES|EXPD|INCY,both
 2026-11-11 19:06:52,exits,bull,233.37,128.08,0,0,0,3,AES|EXPD|INCY,both
 2026-11-11 19:11:55,exits,bull,233.37,128.08,0,0,0,3,AES|EXPD|INCY,both
+2026-11-11 19:16:56,exits,bull,233.35,128.08,0,0,0,3,AES|EXPD|INCY,both
