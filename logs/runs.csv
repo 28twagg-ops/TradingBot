@@ -12631,3 +12631,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-11 00:52:03,ext_exits,bull,231.53,127.35,0,0,0,2,ADI|AES,both
 2026-11-11 00:56:32,ext_exits,bull,231.53,127.35,0,0,0,2,ADI|AES,both
 2026-11-11 14:02:01,summary,bull,234.07,127.35,0,0,0,2,ADI|AES,both
+2026-11-11 14:06:56,summary,bull,234.07,127.35,0,0,0,2,ADI|AES,both
