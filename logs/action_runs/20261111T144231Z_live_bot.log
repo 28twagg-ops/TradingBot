@@ -1,0 +1,31 @@
+14:42:32  INFO      Mode: morning_prep
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:2928: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  "type": str(getattr(o, "order_type", "?")),
+14:42:32  INFO        Prep cache reused; skipped full universe scan
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_PREP|
+|  Time                                                         14:42 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $233.04|
++========================================================================+
+
++========================================================================+
+|                              MORNING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/morning_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                               PREP CACHE                               |
++========================================================================+
+|  Using cached plan                                   yes (fresh (6.9m))|
+|  Exit candidates                                                      1|
+|  Signal candidates                                                   11|
+|  Universe scanned                                                   901|
++========================================================================+
