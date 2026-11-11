@@ -60,31 +60,46 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-11T15:07:08.268544+00:00",
       "entry_order_id": "536f2a00-32ea-4ad6-af29-02b06f82cd50"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "960445f8-27c6-41ac-bdac-bbd44ad872bc",
+      "lot_id": "b7ec05352aa2",
       "bucket_id": 52,
+      "profile_name": "lab0052_s406_w2_1005_1045_r1",
       "strategy_id": "S406",
       "occ_symbol": "CAG261113C00015000",
       "underlying": "CAG",
       "qty": 1,
-      "limit": 0.12,
-      "profile_name": "lab0052_s406_w2_1005_1045_r1",
-      "submitted": "2026-11-11",
-      "detail": "RB gap -2.0% reclaim",
-      "spread_frac": 0.08000000000000007,
-      "buy_offset": -0.01,
-      "take_profit": 0.3,
-      "stop_loss": -0.3
+      "entry_cost": 10.0,
+      "entry_price": 0.1,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-11T15:56:49.865854+00:00",
+      "entry_order_id": "960445f8-27c6-41ac-bdac-bbd44ad872bc"
     }
   ],
-  "pending_exits": [],
+  "pending_orders": [],
+  "pending_exits": [
+    {
+      "order_id": "95e1c990-42fd-40b9-8c47-3871a3937f2b",
+      "lot_id": "b7ec05352aa2",
+      "bucket_id": 52,
+      "strategy_id": "S406",
+      "occ_symbol": "CAG261113C00015000",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-11-11T10:56:52"
+    }
+  ],
   "bucket_open_premium": {
     "b21": 73.0,
     "b14": 52.0,
-    "b6": 60.0
+    "b6": 60.0,
+    "b52": 10.0
   },
   "session_date": "2026-11-11",
   "entries_locked": [
@@ -565,7 +580,8 @@
     "b4049278-ca94-4a80-9fa3-a88e6abe032f",
     "96a83c20-6739-49f2-bd11-32099ff33ef3",
     "26386316-5623-4276-b360-a0bf97e0c4d2",
-    "c63e2b8a-b047-4713-8ee4-d683a41ff8db"
+    "c63e2b8a-b047-4713-8ee4-d683a41ff8db",
+    "960445f8-27c6-41ac-bdac-bbd44ad872bc"
   ],
   "submitted_today": 4,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
