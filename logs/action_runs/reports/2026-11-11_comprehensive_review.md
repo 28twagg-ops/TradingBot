@@ -3470,3 +3470,80 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261111T143158Z
+
+- UTC timestamp: `20261111T143158Z`
+- GitHub run: [#15382](https://github.com/28twagg-ops/TradingBot/actions/runs/43039048936)
+- Run id: `43039048936`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261111T143158Z_live_bot.log`, `logs/action_runs/20261111T143158Z_live_options.log`, `logs/action_runs/20261111T143158Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1827 | 48.3 | -26.7 | +35.9 | $+20,453 |
+| TAINTED | 2124 | 30.6 | -42.3 | +7.4 | $-13,712 |
+| KEEP-only | 886 | 60.4 | +51.2 | +52.9 | $+14,405 |
+| KEEP-only recent | 701 | 59.3 | +53.1 | +58.9 | $+10,896 |
+
+- KEEP strategies (23): S163, S164, S166, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S396, S397, S403, S404, S406, S410
+- KILL strategies (22): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S398, S399, S401, S405, S407, S408
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-11-11T09:26:40.321550-05:00","date":"2026-11-11","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.9,"phases_s":{"reconcile":0.36},"signals":0,"placed":0,"equity":992376.88,"open_positions":5,"pending_orders":0,"open_lots":5,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"15381","github_run_id":"43038251806","status":"ok","data_quality":{"clean":{"n":1827,"win":48.33,"med":-26.67,"avg":35.88,"pnl":20452.83},"tainted":{"n":2124,"win":30.6,"med":-42.31,"avg":7.41,"pnl":-13712.28},"keep_only":{"n":886,"win":60.38,"med":51.22,"avg":52.94,"pnl":14405.45},"keep_only_recent":{"n":701,"win":59.34,"med":53.12,"avg":58.94,"pnl":10896.0},"keep_strategies":["S163","S164","S166","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S396","S397","S403","S404","S406","S410"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S398","S399","S401","S405","S407","S408"]}}
+```
+
+### Live bot (tail)
+
+```text
+14:31:59  INFO      Mode: morning_prep
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:2928: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  "type": str(getattr(o, "order_type", "?")),
+14:32:01  INFO        [prep_positions] 2/2 (2 valid)
+14:32:01  INFO      Fetching tickers (universe=both)...
+14:32:01  INFO        S&P 500: 503
+14:32:01  INFO        MidCap 400: 400
+14:32:01  INFO        Total: 903 tickers
+14:32:03  INFO        [prep_universe] 40/901 (40 valid)
+14:32:04  INFO        [prep_universe] 80/901 (80 valid)
+14:32:06  INFO        [prep_universe] 120/901 (120 valid)
+14:32:08  INFO        [prep_universe] 160/901 (160 valid)
+14:32:10  INFO        [prep_universe] 200/901 (199 valid)
+14:32:15  INFO        [prep_universe] 240/901 (238 valid)
+14:32:26  INFO        [prep_universe] 280/901 (278 valid)
+14:32:39  INFO        [prep_universe] 320/901 (318 valid)
+14:32:50  INFO        [prep_universe] 360/901 (358 valid)
+14:33:03  INFO        [prep_universe] 400/901 (398 valid)
+14:33:14  INFO        [prep_universe] 440/901 (438 valid)
+14:33:27  INFO        [prep_universe] 480/901 (477 valid)
+14:33:38  INFO        [prep_universe] 520/901 (517 valid)
+14:33:52  INFO        [prep_universe] 560/901 (557 valid)
+14:34:02  INFO        [prep_universe] 600/901 (597 valid)
+14:34:16  INFO        [prep_universe] 640/901 (637 valid)
+14:34:26  INFO        [prep_universe] 680/901 (677 valid)
+14:34:40  INFO        [prep_universe] 720/901 (717 valid)
+14:34:50  INFO        [prep_universe] 760/901 (757 valid)
+14:35:04  INFO        [prep_universe] 800/901 (797 valid)
+14:35:15  INFO        [prep_universe] 840/901 (837 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
