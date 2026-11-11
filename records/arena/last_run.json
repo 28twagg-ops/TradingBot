@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-11T01:58:16.632481+00:00",
+  "timestamp": "2026-11-11T09:30:35.226134+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -24,17 +24,17 @@
       "action": "HOLD",
       "generation_index": 0,
       "cash": 16.98273476,
-      "equity": 98.5703,
+      "equity": 98.6835,
       "ledger_events": 14,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S04": {
-      "action": "HOLD",
+      "action": "SELL ETH-USD",
       "generation_index": 0,
-      "cash": 77.40526651,
-      "equity": 100.9315,
-      "ledger_events": 13,
+      "cash": 100.9907239,
+      "equity": 100.9907,
+      "ledger_events": 14,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },

@@ -4,14 +4,14 @@
 Stocks/crypto indicative Yahoo hourly prices; NO options executed.
 All 10 workers start at $100; no real money or new AI charges.
 
-Updated: 2026-11-11T01:58:16.632481+00:00
+Updated: 2026-11-11T09:30:35.226134+00:00
 
 | Worker | Virtual action | Equity | Cash | Council |
 |---|---|---:|---:|---|
 | S01a | HOLD | 98.61 | 98.60750559 | REVIEW_REQUIRED |
 | S02b | HOLD | 98.11 | 98.11432669 | REVIEW_REQUIRED |
-| S03a | HOLD | 98.57 | 16.98273476 | REVIEW_REQUIRED |
-| S04a | HOLD | 100.93 | 77.40526651 | REVIEW_REQUIRED |
+| S03a | HOLD | 98.68 | 16.98273476 | REVIEW_REQUIRED |
+| S04a | SELL ETH-USD | 100.99 | 100.9907239 | REVIEW_REQUIRED |
 | S05a | HOLD | 96.19 | 58.24345333 | REVIEW_REQUIRED |
 | S06b | HOLD | 98.11 | 98.11432669 | REVIEW_REQUIRED |
 | S07b | HOLD | 95.5 | 95.50339009 | REVIEW_REQUIRED |
