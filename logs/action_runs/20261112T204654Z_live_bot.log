@@ -1,0 +1,153 @@
+20:46:54  INFO      Mode: scan
+20:46:55  INFO        BUY  SMCI  $34.96  [MomReversal]  id=bfdab68f-e1a9-4660-b01a-23e47af13a12
+20:46:55  INFO        BUY  ENS  $34.96  [MomReversal]  id=6cabc570-3adb-483c-82c7-8f482fe817ca
+20:46:55  INFO        BUY  AME  $34.96  [Pullback50]  id=7674ac5d-5ebb-4a3f-bfb8-7dda52df9ee0
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         20:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $233.06|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-12|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $233.06|
+|  Cash                                                           $233.06|
+|  Reserve                                          $11.65  (always kept)|
+|  Stocks ~  $0.00 / $174.80  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $174.80  (new stock buys)|
+|  Trade size             $34.96  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (0 open)                        |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                    yes (fresh (11.5m))|
+|  Cached exits                                                         0|
+|  Cached signals                                                      10|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           903|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  10                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AME      Pullback50      eq     $240.96  50.6   -1.47   50MA bounce (-|
+|  TECH     Pullback50      eq     $72.86   68.9   -1.64   50MA bounce (+|
+|  XOM      Pullback50      eq     $170.41  35.2   -1.59   50MA bounce (+|
+|  MSFT     Pullback50      eq     $522.03  49.2   -1.24   50MA bounce (+|
+|  SMCI     MomReversal     eq     $27.10   37.1   2.33    -25.9% drop/60|
+|  AVTR     Pullback50      eq     $15.62   27.1   -1.23   50MA bounce (-|
+|  CFR      Pullback50      eq     $158.47  54.2   -2.11   50MA bounce (+|
+|  ENS      MomReversal     eq     $145.56  35.5   0.85    -24.9% drop/60|
+|  GWRE     Pullback50      eq     $159.95  26.6   -1.36   50MA bounce (-|
+|  OVV      Pullback50      eq     $65.06   31.8   -2.13   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] SMCI  MomReversal                                  $34.96|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] ENS  MomReversal                                   $34.96|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AME  Pullback50                                    $34.96|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] TECH  Pullback50                                     cap 3|
+|    SKIP [eq] XOM  Pullback50                                      cap 3|
+|    SKIP [eq] MSFT  Pullback50                                     cap 3|
+|    SKIP [eq] AVTR  Pullback50                                     cap 3|
+|    SKIP [eq] CFR  Pullback50                                      cap 3|
+|    SKIP [eq] GWRE  Pullback50                                     cap 3|
+|    SKIP [eq] OVV  Pullback50                                      cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  SMCI                                                 still unconfirmed|
+|  ENS                                                  still unconfirmed|
+|  AME                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+20:47:25  INFO        place_all_stops: checking 3 positions...
+20:47:25  INFO        STOP skipped AME: fractional (0.1448 shares) — software exit will handle it
+20:47:25  INFO        STOP skipped ENS: fractional (0.2398 shares) — software exit will handle it
+20:47:25  INFO        STOP-MARKET placed SMCI  qty=1 (pos=1.2780)  stop=$27.21  id=60925bd2-e84b-4992-90dc-c6e416742e4d
+20:47:25  INFO        place_eod_stops: updating 3 stops to current price...
+20:47:25  INFO        EOD stop skip AME: 0.1448 shares (fractional) — ext_exits will cover
+20:47:25  INFO        EOD stop skip ENS: 0.2398 shares (fractional) — ext_exits will cover
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1912: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  if (getattr(o, "order_type", None) in
+20:47:25  INFO        EOD stop: cancelled old stop SMCI
+20:47:25  WARNING     EOD stop failed SMCI: {"available":"0.277972795","code":40310000,"existing_qty":"1.277972795","held_for_orders":"1","message":"insufficient qty available for order (requested: 1, available: 0.277972795)","symbol":"SMCI"}
+20:47:25  INFO        Daily log -> logs/daily/2026-11-12.md
+20:47:25  INFO        Dashboard written → logs/dashboard.md
+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             10|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $233.17|
+|  Cash                                                           $128.21|
++========================================================================+
