@@ -1,0 +1,144 @@
+20:56:50  INFO      Mode: scan
+20:56:52  INFO        [positions] 3/3 (3 valid)
+20:56:52  INFO        SELL MARKET [urgent] SMCI closed
+20:56:55  INFO        TX logged: SELL SMCI  P&L -0.52%
+20:56:55  INFO        place_all_stops: checking 2 positions...
+20:56:55  INFO        STOP skipped AME: fractional (0.1448 shares) — software exit will handle it
+20:56:55  INFO        STOP skipped ENS: fractional (0.2398 shares) — software exit will handle it
+20:56:55  INFO        place_eod_stops: updating 2 stops to current price...
+20:56:55  INFO        EOD stop skip AME: 0.1448 shares (fractional) — ext_exits will cover
+20:56:55  INFO        EOD stop skip ENS: 0.2398 shares (fractional) — ext_exits will cover
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         20:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $233.03|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-12|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $233.03|
+|  Cash                                                           $128.21|
+|  Reserve                                          $11.65  (always kept)|
+|  Stock~  $104.82 / $174.77  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $69.95  (new stock buys)|
+|  Trade size             $34.95  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AME      Pullback50      $34.84     $241.45  $240.69  -0.3%   $-0.11  |
+|  ENS      MomReversal     $35.22     $145.74  $146.84  +0.8%   $+0.27  |
+|  SMCI     MomReversal     $34.77     $27.35   $27.20   -0.5%   $-0.18  |
+|                                                                        |
+|  Total invested                                                 $104.82|
+|  Total open P&L                                                  $-0.03|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (21.4m); positions refreshed live)|
+|  Cached signals                                                      10|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  SMCI  P&L -0.5%  $-0.18                        EXIT: stop_loss (-0.5%)|
+|  AME  P&L -0.3%  $-0.11                                            HOLD|
+|  ENS  P&L +0.8%  $+0.27                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                   1|
+|  SMCI                                        -0.52%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                          cached signals (signals fresh (21.4m))|
+|  Universe scanned in prep                                           903|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  10                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AME      Pullback50      eq     $240.96  50.6   -1.47   50MA bounce (-|
+|  TECH     Pullback50      eq     $72.86   68.9   -1.64   50MA bounce (+|
+|  XOM      Pullback50      eq     $170.41  35.2   -1.59   50MA bounce (+|
+|  MSFT     Pullback50      eq     $522.03  49.2   -1.24   50MA bounce (+|
+|  SMCI     MomReversal     eq     $27.10   37.1   2.33    -25.9% drop/60|
+|  AVTR     Pullback50      eq     $15.62   27.1   -1.23   50MA bounce (-|
+|  CFR      Pullback50      eq     $158.47  54.2   -2.11   50MA bounce (+|
+|  ENS      MomReversal     eq     $145.56  35.5   0.85    -24.9% drop/60|
+|  GWRE     Pullback50      eq     $159.95  26.6   -1.36   50MA bounce (-|
+|  OVV      Pullback50      eq     $65.06   31.8   -2.13   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|20:56:55  INFO        Daily log -> logs/daily/2026-11-12.md
+20:56:55  INFO        Dashboard written → logs/dashboard.md
+
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             10|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             2|
+|  Equity                                                         $233.04|
+|  Cash                                                           $162.98|
++========================================================================+
