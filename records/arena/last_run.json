@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-12T09:54:23.898105+00:00",
+  "timestamp": "2026-11-12T18:23:20.681832+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -24,7 +24,7 @@
       "action": "HOLD",
       "generation_index": 0,
       "cash": 57.61654633,
-      "equity": 99.1184,
+      "equity": 98.2969,
       "ledger_events": 15,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -39,11 +39,11 @@
       "missing_quotes": []
     },
     "S05": {
-      "action": "HOLD",
+      "action": "BUY AAPL",
       "generation_index": 0,
-      "cash": 35.15427053,
-      "equity": 96.5497,
-      "ledger_events": 8,
+      "cash": 21.21801983,
+      "equity": 96.5922,
+      "ledger_events": 9,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -60,7 +60,7 @@
       "action": "HOLD",
       "generation_index": 1,
       "cash": 57.64293568,
-      "equity": 95.4205,
+      "equity": 95.4769,
       "ledger_events": 11,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -75,7 +75,7 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "SELL ETH-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 97.50625104,
       "equity": 97.5063,
