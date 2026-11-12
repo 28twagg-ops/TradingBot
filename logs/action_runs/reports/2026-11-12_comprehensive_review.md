@@ -22458,3 +22458,116 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261112T231002Z
+
+- UTC timestamp: `20261112T231002Z`
+- GitHub run: [#15617](https://github.com/28twagg-ops/TradingBot/actions/runs/43325739734)
+- Run id: `43325739734`
+- Live bot: exit=`0`, duration=`2s`
+- Live options: exit=`0`, duration=`2s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261112T231002Z_live_bot.log`, `logs/action_runs/20261112T231002Z_live_options.log`, `logs/action_runs/20261112T231002Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1856 | 48.9 | -23.2 | +36.2 | $+21,247 |
+| TAINTED | 2125 | 30.6 | -42.3 | +7.4 | $-13,725 |
+| KEEP-only | 911 | 61.1 | +52.0 | +53.0 | $+15,136 |
+| KEEP-only recent | 726 | 60.3 | +53.4 | +58.8 | $+11,627 |
+
+- KEEP strategies (23): S163, S164, S166, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S396, S397, S403, S404, S406, S410
+- KILL strategies (23): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S398, S399, S401, S405, S407, S408, S432
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-11-12T17:57:07.258267-05:00","date":"2026-11-12","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":0.9,"phases_s":{"reconcile":0.08},"signals":0,"placed":0,"equity":991507.09,"open_positions":3,"pending_orders":0,"open_lots":3,"submitted_today":24,"filled_today":24,"unattributed_contracts":0,"top_signals":[],"github_run":"15615","github_run_id":"43324256728","status":"ok","data_quality":{"clean":{"n":1856,"win":48.92,"med":-23.18,"avg":36.15,"pnl":21246.83},"tainted":{"n":2125,"win":30.59,"med":-42.31,"avg":7.39,"pnl":-13725.28},"keep_only":{"n":911,"win":61.14,"med":52.0,"avg":53.02,"pnl":15136.45},"keep_only_recent":{"n":726,"win":60.33,"med":53.41,"avg":58.83,"pnl":11627.0},"keep_strategies":["S163","S164","S166","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S396","S397","S403","S404","S406","S410"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S398","S399","S401","S405","S407","S408","S432"]}}
+```
+
+### Live bot (tail)
+
+```text
+23:10:03  INFO      Mode: ext_exits
+23:10:04  INFO        Daily log -> logs/daily/2026-11-12.md
+23:10:04  INFO        Daily log reconciled -> logs/daily/2026-11-12.md (6 ledger rows)
+23:10:04  INFO        Daily log -> logs/daily/2026-11-12.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                         EXT_EXITS|
+|  Time                                                         23:10 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $233.78|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit log~  stop-0.5% / 3d max  (midline skipped — close already final)|
++------------------------------------------------------------------------+
+|  AME  P&L -0.2%  $-0.06          HOLDING until 9:35am scan (Pullback50)|
+|  ENS  P&L +2.8%  $+0.96         HOLDING until 9:35am scan (MomReversal)|
++========================================================================+
+
++========================================================================+
+|                          EXTENDED HOURS SELLS                          |
++========================================================================+
+|                                                                        |
+|  No extended-hours sells this run.                                     |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                         ext_exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+```
+
+### Live options micro (tail)
+
+```text
+=== options_live_micro LIVE 2026-11-12T18:10:05.722959-05:00 share=25% ===
+2026-11-12 18:10:05,723 INFO === options_live_micro LIVE 2026-11-12T18:10:05.722959-05:00 share=25% ===
+Live account equity $233.78 cash $162.98 #225458845 options_level=3
+2026-11-12 18:10:05,929 INFO Live account equity $233.78 cash $162.98 #225458845 options_level=3
+Live micro done. open_options=0 lots=0
+2026-11-12 18:10:06,126 INFO Live micro done. open_options=0 lots=0
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
