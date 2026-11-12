@@ -42,7 +42,7 @@
       "entry_order_id": "b0d365ea-1482-4b95-9c1c-1a42d063e643"
     },
     {
-      "lot_id": "814a243e3c92",
+      "lot_id": "52687e24ebc5",
       "bucket_id": 90,
       "profile_name": "live_1to1",
       "strategy_id": "S404",
@@ -58,11 +58,11 @@
       "stop_loss": -0.4,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-11-12T14:48:40.755073+00:00",
+      "entry_date": "2026-11-12T14:53:07.354016+00:00",
       "entry_order_id": "7a62dc0a-bfe9-45d5-bcd6-2bb14839d72f"
     },
     {
-      "lot_id": "f9f9aac6aa68",
+      "lot_id": "eba960bd8568",
       "bucket_id": 90,
       "profile_name": "live_1to1",
       "strategy_id": "S406",
@@ -78,7 +78,7 @@
       "stop_loss": -0.4,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-11-12T14:48:40.760529+00:00",
+      "entry_date": "2026-11-12T14:53:07.359954+00:00",
       "entry_order_id": "6717ec2b-8ff7-4e74-ae3b-042ceaad1018"
     }
   ],

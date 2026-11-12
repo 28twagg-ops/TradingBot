@@ -3987,11 +3987,11 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-11-12.log
 elapsed=59.9s reconcile=0.44s cancel=0.12s manage=1.54s scan=54.3s entries=1.72s
 
-=== 09:48:40 ET — entry+manage (0 new) [elapsed=48.2s reconcile=0.46s cancel=0.14s manage=2.37s scan=44.06s entries=0.1s] ===
-=== options_morning_bot (PAPER) 2026-11-12T09:48:40.163253-05:00 ===
+=== 09:53:07 ET — entry+manage (0 new) [elapsed=47.0s reconcile=0.2s cancel=0.07s manage=1.52s scan=44.34s entries=0.08s] ===
+=== options_morning_bot (PAPER) 2026-11-12T09:53:07.043087-05:00 ===
 
 [Run context]
-Paper auth OK — equity $991866.72, account PA33P8KT02IL
+Paper auth OK — equity $991949.72, account PA33P8KT02IL
   reconcile: layout changed controlled:100:c000_s173_w1_0928_1005_r1 -> controlled:78:live_1to1+variations
   reconcile: reattributed orphan -> b90|S404 SMCI x1 @ 0.53
   reconcile: entry fill b90|S404 SMCI x1 @ 0.53
@@ -4003,15 +4003,13 @@ S406-only twin b91 s406_only — S406 | TP+50%/SL-40% | paper edge test
 Variation study: 76 lab/promising bucket(s) | cohort: 76 unique (S163, S164, S166, S167, S168, S169, S170, S171, S172, S175, S200, S201 … +64 more) | max 200 new entries/run
 Dropped (no new entries; ex-reflected P&L): S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S398, S399, S401, S405, S407, S408
 Shared-OCC entry block ON (one lab lot per contract)
-  PROT STOP-MKT NVDA261116C00177500 x1 stop=0.44 tif=gtc sl=-40% id=d8c5530d-f0e2-4a04-81a3-328007e94a67
-Protective stops: placed=1 upgraded=0 already=3 failed=0 (market-first)
 
 [Scan + entries]
 Scanning 117 symbols for [S164, S168, S167, S166, S163, S169, S170, S171, S172, S175, S200, S201, S204, S205, S206, S208, S210, S213, S214, S215, S219, S220, S221, S402, S403, S350, S352, S356, S357, S359, S361, S362, S364, S365, S368, S369, S370, S371, S372, S373, S374, S375, S376, S377, S378, S379, S380, S381, S382, S383, S384, S385, S386, S387, S388, S389, S390, S391, S392, S393, S394, S413, S414, S415, S416, S417, S418, S396, S397, S404, S406, S409, S410, S413, S414, S415, S416, S417, S418, S430, S431, S432] …
   Daily bars disk cache hit (options_daily_bars_2026-11-12.parquet)
 Fetched daily bars for 113/117 symbols
 Found 347 signal(s); top: ['S164:NVDA', 'S168:NVDA', 'S167:NVDA', 'S166:NVDA', 'S163:NVDA', 'S350:NVDA', 'S352:NVDA', 'S356:NVDA']
-Paper lab: $991867 broker equity -> 78 bucket(s) ($500 virtual each, unlimited paper)
+Paper lab: $991950 broker equity -> 78 bucket(s) ($500 virtual each, unlimited paper)
   All bucket slots blocked or closed for today's signals — skip entry loop.
 Placed 0 new entry order(s).
 
@@ -4019,15 +4017,15 @@ Placed 0 new entry order(s).
 ========================================================
 OPTIONS TRIAL STATS
 ========================================================
-Account equity: $991,866.72
+Account equity: $991,949.72
 Active buckets: 78 of 78 profiles ($500 virtual each) — paper unlimited mode
 
 P&L summary
   Reflected (ex-S202,S203,S207,S211,S212,S216,S217,S351,S354,S355,S360,S363,S366,S405,S407,S408): $+12,198.55 all-time  |  $+33.00 today
   Raw (incl dropped):     $+6,974.55 all-time  |  $+33.00 today
-  Open (not sold yet): $-8.00 unrealized (virtual lots)
+  Open (not sold yet): $+25.00 unrealized (virtual lots)
   Premium deployed:    $260.00 in open positions
-  Combined P&L:        $+12,190.55 (reflected realized + open virtual)
+  Combined P&L:        $+12,223.55 (reflected realized + open virtual)
 
 Ledger (master)
   Total events:     16606
@@ -4057,7 +4055,7 @@ Open virtual lots (by bucket)
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b20 lab0020_s364_w2_1005_1045_r1  prem=$     0  real=$-62.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
-  b21 lab0021_s365_w2_1005_1045_r1  prem=$    73  real=$-44.00  open=$+14.00  lots=1  [S365:XOMx1]
+  b21 lab0021_s365_w2_1005_1045_r1  prem=$    73  real=$-44.00  open=$+23.00  lots=1  [S365:XOMx1]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
   b49 lab0049_s396_w2_1005_1045_r1  prem=$     0  real=$ -8.00  open=$ +0.00  lots=0  [-]
        buy: ask-0.01  sell: bid-0.01  tp=+50% sl=-50%
@@ -4081,10 +4079,10 @@ Open virtual lots (by bucket)
   (53 quiet bucket profile(s) — no trades yet)
 
 Alpaca option positions
-  COIN261113C00138000  qty=1  cost=$61.00  return=-4.9%  open P&L=$-3.00
-  NVDA261116C00177500  qty=1  cost=$73.00  return=-13.7%  open P&L=$-10.00
-  SMCI261113C00028500  qty=1  cost=$53.00  return=-17.0%  open P&L=$-9.00
-  XOM261127C00175000  qty=1  cost=$73.00  return=+19.2%  open P&L=$+14.00
+  COIN261113C00138000  qty=1  cost=$61.00  return=-8.2%  open P&L=$-5.00
+  NVDA261116C00177500  qty=1  cost=$73.00  return=+16.4%  open P&L=$+12.00
+  SMCI261113C00028500  qty=1  cost=$53.00  return=-9.4%  open P&L=$-5.00
+  XOM261127C00175000  qty=1  cost=$73.00  return=+31.5%  open P&L=$+23.00
 
 Per-bucket exit stats (all time)
   b0|c000_s173_w1_0928_1005_r1  n= 22  avg=+24.8%  med=+34.9%  realized=$+283.00
@@ -4515,7 +4513,7 @@ Per-bucket exit stats (all time)
 |[OPTIONS BOT DAILY VITALS (MATRIX EXPERIMENT)]                          |
 +========================================================================+
 |-- ACCOUNT STATUS (entry+manage) --                                     |
-|Equity       : $991,866.72                                              |
+|Equity       : $991,949.72                                              |
 |Open Risk    : 4 lots (4 broker pos)                                    |
 |Today's Run  : 347 signals -> 0 orders submitted                        |
 |                                                                        |
@@ -4558,11 +4556,11 @@ Per-bucket exit stats (all time)
 +========================================================================+
 |  SYMBOL                      QTY    RET%        OPEN P&L               |
 |  ---------------------------------------------------------             |
-|  XOM261127C00175000            1    +19.2%   $    +14.00               |
-|  NVDA261116C00177500           1    -13.7%   $    -10.00               |
-|  SMCI261113C00028500           1    -17.0%   $     -9.00               |
-|  COIN261113C00138000           1     -4.9%   $     -3.00               |
+|  XOM261127C00175000            1    +31.5%   $    +23.00               |
+|  NVDA261116C00177500           1    +16.4%   $    +12.00               |
+|  COIN261113C00138000           1     -8.2%   $     -5.00               |
+|  SMCI261113C00028500           1     -9.4%   $     -5.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-11-12.log
-elapsed=48.2s reconcile=0.46s cancel=0.14s manage=2.37s scan=44.06s entries=0.1s
+elapsed=47.0s reconcile=0.2s cancel=0.07s manage=1.52s scan=44.34s entries=0.08s
 
