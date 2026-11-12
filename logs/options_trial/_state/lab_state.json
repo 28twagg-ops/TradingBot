@@ -42,26 +42,6 @@
       "entry_order_id": "7a62dc0a-bfe9-45d5-bcd6-2bb14839d72f"
     },
     {
-      "lot_id": "eba960bd8568",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S406",
-      "occ_symbol": "NVDA261116C00177500",
-      "underlying": "NVDA",
-      "qty": 1,
-      "entry_cost": 73.0,
-      "entry_price": 0.73,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-12T14:53:07.359954+00:00",
-      "entry_order_id": "6717ec2b-8ff7-4e74-ae3b-042ceaad1018"
-    },
-    {
       "lot_id": "aae492fd67f4",
       "bucket_id": 13,
       "profile_name": "lab0013_s350_w2_1005_1045_r1",
@@ -362,11 +342,28 @@
       "entry_order_id": "369ac876-8dd7-429a-86f8-d1020a0aee12"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "3a8ad603-7e9e-4989-945b-d8af3e45237a",
+      "bucket_id": 62,
+      "strategy_id": "S166",
+      "occ_symbol": "UPST261120C00021000",
+      "underlying": "UPST",
+      "qty": 1,
+      "limit": 0.31,
+      "profile_name": "lab0062_s166_w2_1005_1045_r1",
+      "submitted": "2026-11-12",
+      "detail": "gap -3.3%",
+      "spread_frac": 0.24561403508771928,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    }
+  ],
   "pending_exits": [],
   "bucket_open_premium": {
     "b21": 73.0,
-    "b90": 126.0,
+    "b90": 53.0,
     "b13": 45.0,
     "b61": 56.99999999999999,
     "b54": 30.0,
@@ -405,7 +402,8 @@
     "13|S350|2026-11-12",
     "2009|S432|2026-11-12",
     "14|S352|2026-11-12",
-    "16|S357|2026-11-12"
+    "16|S357|2026-11-12",
+    "62|S166|2026-11-12"
   ],
   "processed_orders": [
     "aaf16a0f-80f4-4fa9-b44e-149d1478a276",
@@ -807,9 +805,10 @@
     "de7bda05-09d5-43ee-9ecc-7b160ec59173",
     "5dea3d0c-a447-4c91-930c-a7898e6c32fa",
     "d9bca09e-c761-4bfc-b78a-837dadafc09d",
-    "369ac876-8dd7-429a-86f8-d1020a0aee12"
+    "369ac876-8dd7-429a-86f8-d1020a0aee12",
+    "2a2843b3-8205-4913-bde5-1cbec19c9174"
   ],
-  "submitted_today": 21,
+  "submitted_today": 22,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-12"
 }
