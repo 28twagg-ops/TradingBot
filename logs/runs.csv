@@ -12776,3 +12776,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-12 16:06:54,exits,bull,233.51,198.27,0,0,0,1,MSFT,both
 2026-11-12 16:12:08,exits,bull,233.58,198.27,0,0,0,1,MSFT,both
 2026-11-12 16:16:54,exits,bull,233.56,198.27,0,0,0,1,MSFT,both
+2026-11-12 16:21:55,exits,bull,233.53,198.27,0,0,0,1,MSFT,both
