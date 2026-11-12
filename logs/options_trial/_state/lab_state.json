@@ -340,27 +340,41 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-12T15:42:52.443150+00:00",
       "entry_order_id": "92716de1-a425-4bd5-8e90-e055c5f5a8ef"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "acfe7102-cf0c-4f36-a01f-e1b5f3dea71e",
+      "lot_id": "c884592b35ad",
       "bucket_id": 62,
+      "profile_name": "lab0062_s167_w2_1005_1045_r1",
       "strategy_id": "S167",
       "occ_symbol": "COIN261113C00138000",
       "underlying": "COIN",
       "qty": 1,
-      "limit": 0.46,
-      "profile_name": "lab0062_s167_w2_1005_1045_r1",
-      "submitted": "2026-11-12",
-      "detail": "gap -4.7%",
-      "spread_frac": 0.13636363636363638,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
+      "entry_cost": 43.0,
+      "entry_price": 0.43,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-12T15:51:59.052532+00:00",
+      "entry_order_id": "acfe7102-cf0c-4f36-a01f-e1b5f3dea71e"
     }
   ],
-  "pending_exits": [],
+  "pending_orders": [],
+  "pending_exits": [
+    {
+      "order_id": "88a84bcc-3db1-49a3-a08c-26d71aba0d66",
+      "lot_id": "02f9e1e35798",
+      "bucket_id": 12,
+      "strategy_id": "S403",
+      "occ_symbol": "AMD261113C00620000",
+      "qty": 1,
+      "reason": "take_profit (+125.0%)",
+      "submitted": "2026-11-12T10:52:02"
+    }
+  ],
   "bucket_open_premium": {
     "b21": 73.0,
     "b90": 53.0,
@@ -377,7 +391,7 @@
     "b14": 9.0,
     "b63": 28.999999999999996,
     "b16": 52.0,
-    "b62": 31.0,
+    "b62": 74.0,
     "b66": 37.0
   },
   "session_date": "2026-11-12",
@@ -812,7 +826,8 @@
     "b3395cd9-14b6-422a-82e7-279181651968",
     "45938f6e-317a-4851-a433-e0cfa96f8480",
     "3a8ad603-7e9e-4989-945b-d8af3e45237a",
-    "92716de1-a425-4bd5-8e90-e055c5f5a8ef"
+    "92716de1-a425-4bd5-8e90-e055c5f5a8ef",
+    "acfe7102-cf0c-4f36-a01f-e1b5f3dea71e"
   ],
   "submitted_today": 24,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

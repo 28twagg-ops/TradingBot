@@ -61,7 +61,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 59,lab0059_s417_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-08,False,,,,,,,0,,,,idle
 60,lab0060_s418_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-05,False,,,,,,,0,,,,idle
 61,lab0061_s419_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-12,False,,,,,,,0,MSTR,S167,,entered_no_exit
-62,lab0062_s167_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-12,False,,,,,,,0,UPST,S166,,entered_no_exit
+62,lab0062_s167_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,2,2026-11-12,False,,,,,,,0,"COIN,UPST","S166,S167",,entered_no_exit
 63,lab0063_s166_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-12,False,,,,,,,0,MARA,S168,,entered_no_exit
 64,lab0064_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-10,False,,,,,,,0,,,,idle
 65,lab0065_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-12,False,,,,,,,0,SNOW,S164,,entered_no_exit
