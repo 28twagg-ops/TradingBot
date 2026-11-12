@@ -1,0 +1,171 @@
+14:46:59  INFO      Mode: morning_scan
+14:47:01  INFO        SELL LIMIT INCY  qty=0.28956022  limit=$121.57  id=624d36d6-bbe0-43a4-a04a-a941f6f83478
+14:47:31  INFO        SELL LIMIT filled INCY (confirmed by position check)
+14:47:31  INFO        TX logged: SELL INCY  P&L 1.15%
+14:47:32  INFO        SELL LIMIT EXPD  qty=0.182237227  limit=$194.70  id=415899bd-1f7a-45f2-ad05-452cc9feb20a
+14:48:02  INFO        SELL LIMIT filled EXPD (confirmed by position check)
+14:48:02  INFO        TX logged: SELL EXPD  P&L 1.96%
+14:48:03  INFO        BUY  TECH  $35.02  [Pullback50]  id=77c09452-f4bf-4b28-acf6-bd2b43be8200
+14:48:03  INFO        BUY  MSFT  $35.02  [Pullback50]  id=fdcae17a-3309-4611-8ca7-57c93eaa7cc0
+14:48:03  INFO        BUY  QCOM  $35.02  [Pullback50]  id=d310085d-c62d-4aa8-b22b-13d20e519ea9
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:47 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $233.47|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-12|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $233.47|
+|  Cash                                                           $162.65|
+|  Reserve                                          $11.67  (always kept)|
+|  Stocks~  $70.82 / $175.10  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $104.28  (new stock buys)|
+|  Trade size             $35.02  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (2 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  EXPD     Pullback50      $35.55     $191.34  $195.09  +2.0%   $+0.68  |
+|  INCY     Pullback50      $35.27     $120.42  $121.81  +1.2%   $+0.40  |
+|                                                                        |
+|  Total invested                                                  $70.82|
+|  Total open P&L                                                  $+1.08|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (11.6m))|
+|  Cached exits                                                         2|
+|  Cached signals                                                       9|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  INCY  P&L +1.2%  $+0.40                          EXIT: midline (+2.2%)|
+|  EXPD  P&L +2.0%  $+0.68                          EXIT: midline (+2.2%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 2 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 0|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           901|
++========================================================================+
+
++========================================================================+
+|                          SIGNALS FOUND  --  9                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  TECH     Pullback50      eq     $72.83   67.7   -2.88   50MA bounce (+|
+|  MSFT     Pullback50      eq     $523.50  49.7   -2.09   50MA bounce (+|
+|  QCOM     Pullback50      eq     $176.92  50.6   -1.56   50MA bounce (-|
+|  STLD     Pullback50      eq     $240.25  49.1   -2.39   50MA bounce (+|
+|  ATI      Pullback50      eq     $184.53  66.8   -2.17   50MA bounce (-|
+|  ENTG     Pullback50      eq     $146.88  56.0   -1.90   50MA bounce (-|
+|  FLR      Pullback50      eq     $50.38   70.8   -2.22   50MA bounce (+|
+|  KBR      Pullback50      eq     $36.93   40.4   -2.09   50MA bounce (+|
+|  REXR     Pullback50      eq     $37.87   45.0   -1.84   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] TECH  Pullback50                                   $35.02|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] MSFT  Pullback50                                   $35.02|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] QCOM  Pullback50                                   $35.02|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] STLD  Pullback50                                     cap 3|
+|    SKIP [eq] ATI  Pullback50                                      cap 3|
+|    SKIP [eq] ENTG  Pullback50                                     cap 3|
+|    SKIP [eq] FLR  Pullback50                                      cap 3|14:48:35  INFO        place_all_stops: checking 3 positions...
+14:48:35  INFO        STOP skipped MSFT: fractional (0.0667 shares) — software exit will handle it
+14:48:35  INFO        STOP skipped QCOM: fractional (0.1946 shares) — software exit will handle it
+14:48:35  INFO        STOP skipped TECH: fractional (0.4808 shares) — software exit will handle it
+14:48:35  INFO        Daily log -> logs/daily/2026-11-12.md
+14:48:35  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [eq] KBR  Pullback50                                      cap 3|
+|    SKIP [eq] REXR  Pullback50                                     cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  TECH                                                 still unconfirmed|
+|  MSFT                                                 still unconfirmed|
+|  QCOM                                                 still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                              9|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                2|
+|  Open pos                                                             3|
+|  Equity                                                         $233.32|
+|  Cash                                                           $128.35|
++========================================================================+

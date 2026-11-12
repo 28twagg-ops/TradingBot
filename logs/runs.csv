@@ -12757,3 +12757,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-12 14:17:05,summary,bull,233.52,162.65,0,0,0,2,EXPD|INCY,both
 2026-11-12 14:21:53,summary,bull,233.62,162.65,0,0,0,2,EXPD|INCY,both
 2026-11-12 14:26:57,summary,bull,233.62,162.65,0,0,0,2,EXPD|INCY,both
+2026-11-12 14:48:35,scan_morning,bull,233.32,128.35,9,0,2,3,MSFT|QCOM|TECH,both

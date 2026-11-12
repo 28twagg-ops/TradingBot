@@ -1392,3 +1392,5 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-11-10 20:47:12,2026-11-10,SELL,MAR,EarningsDrift,427.76,35.36,2.11,0.73,0,midline (+1.9%),bull,231.43
 2026-11-10 20:52:38,2026-11-10,SELL,TECH,Pullback50,72.82,34.7,0.0,0.0,0,midline (+0.0%),bull,231.69
 2026-11-11 14:47:20,2026-11-11,SELL,ADI,Pullback50,398.52,70.49,1.58,1.1,1,midline (+3.2%),bull,232.44
+2026-11-12 14:47:31,2026-11-12,SELL,INCY,Pullback50,121.68,35.23,1.15,0.4,1,midline (+2.2%),bull,233.41
+2026-11-12 14:48:02,2026-11-12,SELL,EXPD,Pullback50,194.9,35.52,1.96,0.68,1,midline (+2.2%),bull,233.38
