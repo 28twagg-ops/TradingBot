@@ -12831,3 +12831,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-12 20:56:55,scan_evening,bull,233.04,162.98,10,0,1,2,AME|ENS,both
 2026-11-12 21:01:53,ext_exits,bull,233.32,162.98,0,0,0,2,AME|ENS,both
 2026-11-12 21:06:55,ext_exits,bull,233.67,162.98,0,0,0,2,AME|ENS,both
+2026-11-12 21:12:04,ext_exits,bull,233.32,162.98,0,0,0,2,AME|ENS,both
