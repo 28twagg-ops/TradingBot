@@ -1,97 +1,71 @@
 {
   "mode_name": "morning",
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "month": 11,
   "regime": "bull",
   "positions_count": 2,
   "positions_snapshot": [
     {
-      "ticker": "ADI",
-      "strategy": "Pullback50",
-      "dollar_amt": 71.653375,
-      "entry_price": 392.549288,
-      "current_price": 405.12,
-      "pnl_pct": 3.202,
-      "pnl_dollar": 2.223376
-    },
-    {
-      "ticker": "AES",
-      "strategy": "Pullback50",
-      "dollar_amt": 34.636197,
-      "entry_price": 14.895,
-      "current_price": 14.93,
-      "pnl_pct": 0.23500000000000001,
-      "pnl_dollar": 0.081197
-    }
-  ],
-  "open_sell_orders": [
-    {
-      "ticker": "AES",
-      "type": "OrderType.STOP",
-      "qty": "2",
-      "limit": "None",
-      "stop": "14.85"
-    }
-  ],
-  "scan_universe_count": 901,
-  "exit_plan": [
-    {
-      "ticker": "ADI",
-      "why": "midline (+3.2%)"
-    }
-  ],
-  "signals": [
-    {
       "ticker": "EXPD",
       "strategy": "Pullback50",
-      "close": 191.08,
-      "rsi": 43.6,
-      "vol_z": -2.5,
-      "trigger": "50MA bounce (-0.7%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
+      "dollar_amt": 35.63166,
+      "entry_price": 191.344,
+      "current_price": 195.5235,
+      "pnl_pct": 2.1839999999999997,
+      "pnl_dollar": 0.76166
     },
     {
       "ticker": "INCY",
       "strategy": "Pullback50",
-      "close": 120.03,
-      "rsi": 55.3,
-      "vol_z": -2.69,
-      "trigger": "50MA bounce (+0.5%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
+      "dollar_amt": 35.644863,
+      "entry_price": 120.424,
+      "current_price": 123.1,
+      "pnl_pct": 2.222,
+      "pnl_dollar": 0.774863
+    }
+  ],
+  "open_sell_orders": [],
+  "scan_universe_count": 901,
+  "exit_plan": [
+    {
+      "ticker": "EXPD",
+      "why": "midline (+2.2%)"
     },
     {
-      "ticker": "JPM",
-      "strategy": "Pullback50",
-      "close": 342.98,
-      "rsi": 54.6,
-      "vol_z": -2.58,
-      "trigger": "50MA bounce (+0.6%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
+      "ticker": "INCY",
+      "why": "midline (+2.2%)"
+    }
+  ],
+  "signals": [
     {
-      "ticker": "MRK",
+      "ticker": "TECH",
       "strategy": "Pullback50",
-      "close": 146.93,
-      "rsi": 49.6,
-      "vol_z": -2.62,
+      "close": 72.83,
+      "rsi": 67.7,
+      "vol_z": -2.88,
       "trigger": "50MA bounce (+0.4%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
     },
     {
-      "ticker": "RMD",
+      "ticker": "MSFT",
       "strategy": "Pullback50",
-      "close": 231.53,
-      "rsi": 32.4,
-      "vol_z": -1.96,
-      "trigger": "50MA bounce (-0.1%)",
+      "close": 523.5,
+      "rsi": 49.7,
+      "vol_z": -2.09,
+      "trigger": "50MA bounce (+0.9%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "QCOM",
+      "strategy": "Pullback50",
+      "close": 176.92,
+      "rsi": 50.6,
+      "vol_z": -1.56,
+      "trigger": "50MA bounce (-1.0%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
@@ -99,10 +73,10 @@
     {
       "ticker": "STLD",
       "strategy": "Pullback50",
-      "close": 239.75,
-      "rsi": 49.9,
-      "vol_z": -2.54,
-      "trigger": "50MA bounce (+0.6%)",
+      "close": 240.25,
+      "rsi": 49.1,
+      "vol_z": -2.39,
+      "trigger": "50MA bounce (+0.8%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
@@ -110,8 +84,30 @@
     {
       "ticker": "ATI",
       "strategy": "Pullback50",
-      "close": 186.98,
-      "rsi": 65.0,
+      "close": 184.53,
+      "rsi": 66.8,
+      "vol_z": -2.17,
+      "trigger": "50MA bounce (-0.4%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "ENTG",
+      "strategy": "Pullback50",
+      "close": 146.88,
+      "rsi": 56.0,
+      "vol_z": -1.9,
+      "trigger": "50MA bounce (-0.2%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "FLR",
+      "strategy": "Pullback50",
+      "close": 50.38,
+      "rsi": 70.8,
       "vol_z": -2.22,
       "trigger": "50MA bounce (+0.7%)",
       "seasonal": false,
@@ -119,49 +115,27 @@
       "regime": "bull"
     },
     {
-      "ticker": "CFR",
+      "ticker": "KBR",
       "strategy": "Pullback50",
-      "close": 158.24,
-      "rsi": 51.7,
-      "vol_z": -2.92,
+      "close": 36.93,
+      "rsi": 40.4,
+      "vol_z": -2.09,
+      "trigger": "50MA bounce (+0.5%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "REXR",
+      "strategy": "Pullback50",
+      "close": 37.87,
+      "rsi": 45.0,
+      "vol_z": -1.84,
       "trigger": "50MA bounce (+0.7%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
-    {
-      "ticker": "LAD",
-      "strategy": "Pullback50",
-      "close": 309.64,
-      "rsi": 60.6,
-      "vol_z": -1.53,
-      "trigger": "50MA bounce (-1.0%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
-    {
-      "ticker": "RGEN",
-      "strategy": "Pullback50",
-      "close": 178.5,
-      "rsi": 49.9,
-      "vol_z": -1.45,
-      "trigger": "50MA bounce (+0.6%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
-    {
-      "ticker": "ROKU",
-      "strategy": "VWAP_Reclaim",
-      "close": 160.52,
-      "rsi": 61.5,
-      "vol_z": 3.22,
-      "trigger": "VWAP reclaim VZ=3.2",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
     }
   ],
-  "saved_at_utc": "2026-11-11T14:35:37Z"
+  "saved_at_utc": "2026-11-12T14:35:24Z"
 }
