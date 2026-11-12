@@ -93,6 +93,16 @@
       "qty": 1,
       "reason": "take_profit (+75.7%)",
       "submitted": "2026-11-12T11:12:15"
+    },
+    {
+      "order_id": "11aaa6af-abdf-4e92-a07b-9b4efaae161f",
+      "lot_id": "f7d22b91ec4e",
+      "bucket_id": 21,
+      "strategy_id": "S365",
+      "occ_symbol": "XOM261127C00175000",
+      "qty": 1,
+      "reason": "take_profit (+54.8%)",
+      "submitted": "2026-11-12T11:41:56"
     }
   ],
   "bucket_open_premium": {
