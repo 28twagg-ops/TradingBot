@@ -16,7 +16,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-12,False,,,,,,,0,MARA,S352,,entered_no_exit
 15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-12,False,,,,,,,0,MARA,S356,,entered_no_exit
 16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-05,False,,,,,,,0,,,,idle
-17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-12,False,,,,,,,0,NVDA,S359,,entered_no_exit
+17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-12,False,,100.0,60.98,60.98,60.98,60.98,25.0,NVDA,S359,take_profit (+70.7%),closed
 18,lab0018_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-12,False,,,,,,,0,MARA,S361,,entered_no_exit
 19,lab0019_s362_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-10,False,,,,,,,0,,,,idle
 20,lab0020_s364_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-12,False,,,,,,,0,SMCI,S364,,entered_no_exit
@@ -51,7 +51,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 49,lab0049_s396_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-05,False,,,,,,,0,,,,idle
 50,lab0050_s397_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-12,False,,,,,,,0,SMCI,S397,,entered_no_exit
 51,lab0051_s404_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-12,False,,,,,,,0,COIN,S404,,entered_no_exit
-52,lab0052_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-12,False,,,,,,,0,NVDA,S406,,entered_no_exit
+52,lab0052_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-12,False,,100.0,59.26,59.26,59.26,59.26,16.0,NVDA,S406,take_profit (+66.7%),closed
 53,lab0053_s409_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-12,False,,,,,,,0,MARA,S409,,entered_no_exit
 54,lab0054_s410_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-12,False,,,,,,,0,MARA,S410,,entered_no_exit
 55,lab0055_s413_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-04,False,,,,,,,0,,,,idle
@@ -68,7 +68,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 66,lab0066_s432_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-10,False,,,,,,,0,,,,idle
 67,lab0067_s430_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-04,False,,,,,,,0,,,,idle
 90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,0,2,2026-11-12,False,,,,,,,0,"NVDA,SMCI","S404,S406",,entered_no_exit
-91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-11-12,False,,,,,,,0,COIN,S406,,entered_no_exit
+91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,1,0,2026-11-12,False,,0.0,-34.43,-34.43,-34.43,-34.43,-21.0,COIN,S406,stop_loss (-41.0%),closed
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2001,promising_s170_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2002,promising_s171_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
