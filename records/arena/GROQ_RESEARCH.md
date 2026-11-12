@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-12T03:00Z | S01a | BTC-USD hourly price reversion to 12‑hour SMA af | 4d402f09300a95 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-12T02:59Z | S05a | BTC-USD hourly trend persistence | 7547554c33ed2c | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-12T02:59Z | S03a | BTC-USD hourly breakout at 5‑hour lookback 5% th | 0bfd965d865197 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-12T02:58Z | S07b | Hourly trend persistence in BTC-USD under low vo | d3207c9cc858bc | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-12T02:57Z | S02b | BTC-USD hourly trend persistence after 6 consecu | 4dc166fed9b87e | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-12T00:49Z | S10b | ETH-USD hourly mean reversion after 5% breakout  | 3afc16b3bddbe7 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-12T00:48Z | S06b | BTC-USD hourly momentum trigger | cae2f23f09de9b | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-12T00:47Z | S09b | BTC-USD hourly price reversion after steep 10‑ho | fd170ddbbae395 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-11T11:25Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | bd706f1e6599f8 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-11T09:33Z | S07b | BTC-USD hourly trend persistence under low volat | 07c9dbcf141209 | HOLD_INVALID_MODEL_DECISION |
 | 2026-11-11T09:32Z | S02b | BTC-USD hourly trend persistence after 6 consecu | 226afffb126d2a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-11T09:32Z | S10b | ETH-USD hourly mean reversion after 1% breakout  | 2b8fe385e4a2e6 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-11T09:31Z | S06b | BTC-USD hourly momentum trigger | bce2322952d366 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-11T09:30Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 8005b98977931a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-11T06:14Z | S04a | gap_down_quality | 32b8aaa7260090 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-11T06:13Z | S08a | Low hourly volatility predicts larger next‑hour  | 8565cd8bd31138 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

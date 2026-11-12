@@ -2682,6 +2682,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-12T03:00Z",
+        "id": "4d402f09300a95",
+        "topic": "BTC-USD hourly price reversion to 12\u2011hour SMA after large deviation",
+        "hypothesis": "Hourly BTC\u2011USD price tends to revert toward its 12\u2011hour simple moving average when the current price deviates by more than 5% from that average, indicating a mean\u2011reversion mechanism in the hourly market.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compute the proportion of hourly periods where |price\u201112hSMA|/12hSMA > 5% and the subsequent hour\u2019s price moves toward the SMA by at least 2%. If this proportion is not significantly higher than random chance, reject the hypothesis.",
+        "source_search": {
+          "query": "BTC-USD hourly mean reversion to 12h SMA statistical significance 2024 2025",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly mean reversion to 12h SMA statistical significance 2024 2025",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -4400,6 +4438,44 @@
         "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
         "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
         "falsification_test": "Count occurrences of 6 consecutive negative hours and compute the proportion of subsequent positive hourly returns; compare to 50% baseline using a binomial test.",
+        "source_search": {
+          "query": "BTC-USD hourly trend persistence after 6 consecutive negative hours empirical study",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly trend persistence after 6 consecutive negative hours empirical study",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-12T02:57Z",
+        "id": "4dc166fed9b87e",
+        "topic": "BTC-USD hourly trend persistence after 6 consecutive negative hours",
+        "hypothesis": "After 6 consecutive hourly negative returns, the next hour is more likely to be negative, indicating trend persistence.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compute the proportion of times the 7th hour is negative following 6 negative hours; compare to overall negative rate.",
         "source_search": {
           "query": "BTC-USD hourly trend persistence after 6 consecutive negative hours empirical study",
           "attempted": [
@@ -6961,6 +7037,44 @@
         },
         "source_leads": [],
         "next_search_query": "BTC-USD hourly price breakout 5\u2011hour lookback 5% threshold",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-12T02:59Z",
+        "id": "0bfd965d865197",
+        "topic": "BTC-USD hourly breakout at 5\u2011hour lookback 5% threshold",
+        "hypothesis": "BTC-USD hourly price exceeds the maximum of the previous 5 hours by \u22655% predicts a positive return in the next hour",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Compare the next\u2011hour return distribution for breakout signals against a null model of random returns; test significance via permutation test",
+        "source_search": {
+          "query": "BTC-USD hourly price breakout 5\u2011hour lookback 5% threshold",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly close price dataset 2015-2026",
         "preferred_sources": [
           "web"
         ],
@@ -12071,6 +12185,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-12T02:59Z",
+        "id": "7547554c33ed2c",
+        "topic": "BTC-USD hourly trend persistence",
+        "hypothesis": "Hourly BTC-USD prices exhibit a trend persistence of at least 10 consecutive hours with a directional return exceeding 5% within that window, indicating a measurable regime shift.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "For each hour, compute the cumulative return over the next 10 hours. Count the proportion of windows where the return exceeds +5% or -5%. If this proportion is >5%, the hypothesis holds; otherwise it is falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly close trend persistence 10h 5%",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly trend persistence 10h 5%",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -15470,6 +15622,44 @@
         },
         "source_leads": [],
         "next_search_query": "BTC-USD 20-hour standard deviation high volatility definition",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-12T02:58Z",
+        "id": "d3207c9cc858bc",
+        "topic": "Hourly trend persistence in BTC-USD under low volatility",
+        "hypothesis": "A 10\u2011hour downward trend in BTC\u2011USD (close below 10\u2011hour moving average) persists for at least 3 additional hours when the 10\u2011hour standard deviation is below 3% and the market regime is stable.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Check if a 10\u2011hour downward trend fails to persist 3 hours when volatility <3% and regime stable.",
+        "source_search": {
+          "query": "BTC-USD 20-hour standard deviation high volatility definition",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD 10\u2011hour standard deviation low volatility definition",
         "preferred_sources": [
           "web"
         ],
