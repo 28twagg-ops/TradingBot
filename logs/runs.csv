@@ -12861,3 +12861,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-12 23:31:35,ext_exits,bull,233.32,162.98,0,0,0,2,AME|ENS,both
 2026-11-12 23:36:42,ext_exits,bull,233.32,162.98,0,0,0,2,AME|ENS,both
 2026-11-12 23:41:47,ext_exits,bull,233.32,162.98,0,0,0,2,AME|ENS,both
+2026-11-12 23:46:45,ext_exits,bull,233.32,162.98,0,0,0,2,AME|ENS,both
