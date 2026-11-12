@@ -1,0 +1,8 @@
+=== options_live_micro LIVE 2026-11-12T11:06:55.622701-05:00 share=25% ===
+2026-11-12 11:06:55,622 INFO === options_live_micro LIVE 2026-11-12T11:06:55.622701-05:00 share=25% ===
+Live account equity $233.51 cash $198.27 #225458845 options_level=3
+2026-11-12 11:06:55,815 INFO Live account equity $233.51 cash $198.27 #225458845 options_level=3
+Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+2026-11-12 11:06:55,996 INFO Live micro: new entries paused (LIVE_OPTIONS_ENTRIES=0); manage/orphans only
+Live micro done. open_options=0 lots=0
+2026-11-12 11:06:56,114 INFO Live micro done. open_options=0 lots=0
