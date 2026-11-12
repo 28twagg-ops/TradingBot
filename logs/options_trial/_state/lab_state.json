@@ -22,34 +22,92 @@
       "entry_order_id": "4ec2e3bf-34a0-4852-a889-0158aa656c12"
     },
     {
-      "lot_id": "effd002f0db3",
-      "bucket_id": 6,
-      "profile_name": "lab0006_s210_w2_1005_1045_r1",
-      "strategy_id": "S210",
-      "occ_symbol": "AAPL261113C00360000",
-      "underlying": "AAPL",
+      "lot_id": "68b20d7d9514",
+      "bucket_id": 91,
+      "profile_name": "s406_only",
+      "strategy_id": "S406",
+      "occ_symbol": "COIN261113C00138000",
+      "underlying": "COIN",
       "qty": 1,
-      "entry_cost": 60.0,
-      "entry_price": 0.6,
+      "entry_cost": 61.0,
+      "entry_price": 0.61,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
       "take_profit": 0.5,
-      "stop_loss": -0.5,
+      "stop_loss": -0.4,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-11-11T15:07:08.268544+00:00",
-      "entry_order_id": "536f2a00-32ea-4ad6-af29-02b06f82cd50"
+      "entry_date": "2026-11-12T14:43:43.538153+00:00",
+      "entry_order_id": "b0d365ea-1482-4b95-9c1c-1a42d063e643"
+    },
+    {
+      "lot_id": "bdeeea14cba9",
+      "bucket_id": 0,
+      "profile_name": "orphan_reconcile",
+      "strategy_id": "ORPHAN",
+      "occ_symbol": "SMCI261113C00028500",
+      "underlying": "SMCI",
+      "qty": 1,
+      "entry_cost": 53.0,
+      "entry_price": 0.53,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-12T14:43:43.643956+00:00",
+      "entry_order_id": "orphan:SMCI261113C00028500"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "6717ec2b-8ff7-4e74-ae3b-042ceaad1018",
+      "bucket_id": 90,
+      "strategy_id": "S406",
+      "occ_symbol": "NVDA261116C00177500",
+      "underlying": "NVDA",
+      "qty": 1,
+      "limit": 0.73,
+      "profile_name": "live_1to1",
+      "submitted": "2026-11-12",
+      "detail": "RB gap -13.1% reclaim",
+      "spread_frac": 0.04137931034482763,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.4
+    },
+    {
+      "order_id": "7a62dc0a-bfe9-45d5-bcd6-2bb14839d72f",
+      "bucket_id": 90,
+      "strategy_id": "S404",
+      "occ_symbol": "SMCI261113C00028500",
+      "underlying": "SMCI",
+      "qty": 1,
+      "limit": 0.56,
+      "profile_name": "live_1to1",
+      "submitted": "2026-11-12",
+      "detail": "gap -10.4%",
+      "spread_frac": 0.09174311926605494,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.4
+    }
+  ],
   "pending_exits": [],
   "bucket_open_premium": {
     "b21": 73.0,
-    "b6": 60.0
+    "b91": 61.0,
+    "b0": 53.0
   },
   "session_date": "2026-11-12",
-  "entries_locked": [],
+  "entries_locked": [
+    "90|S406|2026-11-12",
+    "90|S404|2026-11-12",
+    "91|S406|2026-11-12"
+  ],
   "processed_orders": [
     "8f4610b6-a69c-418f-a740-9063f350cdab",
     "376a3f75-28c3-4a03-b091-e330097032a2",
@@ -525,9 +583,11 @@
     "c63e2b8a-b047-4713-8ee4-d683a41ff8db",
     "960445f8-27c6-41ac-bdac-bbd44ad872bc",
     "95e1c990-42fd-40b9-8c47-3871a3937f2b",
-    "eee58ab1-0f41-45cd-b3d5-bdaa2e6096f7"
+    "eee58ab1-0f41-45cd-b3d5-bdaa2e6096f7",
+    "b0d365ea-1482-4b95-9c1c-1a42d063e643",
+    "e84ce97a-3c16-4475-9fd2-3c9063cd4451"
   ],
-  "submitted_today": 0,
+  "submitted_today": 3,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-12"
 }
