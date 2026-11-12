@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "44401858bf5747789a1bb88adab9976a",
+  "worker": "S01",
+  "cycle": "2026-11-11T09:55Z",
+  "generation_index": 0,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S01",
+    "cycle": "2026-11-11T09:55Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "liquidity friction and order flow imbalance in BTC-USD hourly trading",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume",
+        "order_book",
+        "fundamentals"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "c63167bd6bd203",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Login | Public.com",
+        "url": "https://public.com/login",
+        "snippet": "The investing platform for the agentic age Multi-asset investing",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "PUBLIC Definition & Meaning - Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/public",
+        "snippet": "The meaning of PUBLIC is exposed to general view : open. How to use public in a sentence.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "PUBLIC | English meaning - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/dictionary/english/public",
+        "snippet": "PUBLIC definition: 1. relating to or involving people in general, rather than being limited to a particular group of…. Learn more.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "public academic or empirical study on liquidity friction and order flow imbalance in BTC-USD hourly trading with 3% threshold and ",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 74.998,
+      "load_seconds": 3.846,
+      "eval_count": 308,
+      "prompt_eval_count": 1520,
+      "tokens_per_second": 8.192,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 12.4,
+        "free_ram_gb": 15.28,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-11T09:55Z",
+    "id": "c63167bd6bd203",
+    "topic": "liquidity friction and order flow imbalance in BTC-USD hourly trading",
+    "hypothesis": "Apparent price reversion to VWAP in BTC-USD hourly trading is driven by liquidity frictions and order flow imbalances, not by a predictable signal.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume",
+        "order_book",
+        "fundamentals"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If the apparent price reversion to VWAP in BTC-USD hourly trading is driven by liquidity frictions and order flow imbalances, then a 3% threshold deviation from VWAP should show a statistically significant negative correlation with realized returns over the prior 12 hours, when adjusted for fees, sl",
+    "source_search": {
+      "query": "public academic or empirical study on liquidity friction and order flow imbalance in BTC-USD hourly trading with 3% threshold and",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Login | Public.com",
+        "url": "https://public.com/login",
+        "snippet": "The investing platform for the agentic age Multi-asset investing",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "PUBLIC Definition & Meaning - Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/public",
+        "snippet": "The meaning of PUBLIC is exposed to general view : open. How to use public in a sentence.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "PUBLIC | English meaning - Cambridge Dictionary",
+        "url": "https://dictionary.cambridge.org/dictionary/english/public",
+        "snippet": "PUBLIC definition: 1. relating to or involving people in general, rather than being limited to a particular group of…. Learn more.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "public academic or empirical study on liquidity friction and order flow imbalance in BTC-USD hourly trading with 3% threshold and ",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "volume",
+      "order_book",
+      "fundamentals"
+    ],
+    "hypothesis_timeframe": "hourly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
