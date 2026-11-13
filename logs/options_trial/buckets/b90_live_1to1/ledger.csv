@@ -199,3 +199,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-11-13 14:43:08.270838+00:00,entry,90,live_1to1,S404,0bdbdac21ad2,AMD,AMD261116C00620000,1,0.63,0.62,62.0,,,,-0.01,,0.5,-0.4,0.11570247933884308,gap -3.2%,e1ffdb34-e679-48d8-b36a-6beae139c74d
 2026-11-13 14:43:46.266214+00:00,entry,90,live_1to1,S406,2c6f0aafbb41,HOOD,HOOD261120C00087000,1,0.74,0.73,73.0,,,,-0.01,,0.5,-0.4,0.11267605633802812,RB gap -2.0% reclaim,83e8c4b1-5605-45c5-9154-da1806949851
 2026-11-13 14:49:36.276570+00:00,exit,90,live_1to1,S404,0bdbdac21ad2,AMD,AMD261116C00620000,1,,0.37,62.0,-40.32,-25.0,broker_fill_backfill,,-0.01,0.5,-0.4,,,84b94f04-8833-47ad-bfaa-cf3fd606ce69
+2026-11-13 15:21:21.711789+00:00,exit,90,live_1to1,S406,2c6f0aafbb41,HOOD,HOOD261120C00087000,1,,0.4,73.0,-45.21,-33.0,broker_fill_backfill,,-0.01,0.5,-0.4,,,6232fbb7-a5bf-4d60-b74d-5fbfd65448b0

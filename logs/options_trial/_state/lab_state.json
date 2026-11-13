@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "2c6f0aafbb41",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S406",
-      "occ_symbol": "HOOD261120C00087000",
-      "underlying": "HOOD",
-      "qty": 1,
-      "entry_cost": 73.0,
-      "entry_price": 0.73,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-13T14:47:38.504098+00:00",
-      "entry_order_id": "83e8c4b1-5605-45c5-9154-da1806949851"
-    },
-    {
       "lot_id": "1956c53f2692",
       "bucket_id": 52,
       "profile_name": "lab0052_s406_w2_1005_1045_r1",
@@ -40,26 +20,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-13T15:07:47.747747+00:00",
       "entry_order_id": "71eafa1a-73ec-4b65-8988-c1c5c78660a6"
-    },
-    {
-      "lot_id": "a5e68a1e3d91",
-      "bucket_id": 17,
-      "profile_name": "lab0017_s359_w2_1005_1045_r1",
-      "strategy_id": "S359",
-      "occ_symbol": "MSTR261113C00115000",
-      "underlying": "MSTR",
-      "qty": 1,
-      "entry_cost": 21.0,
-      "entry_price": 0.21,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-13T15:07:47.752151+00:00",
-      "entry_order_id": "e15337bc-384c-4775-8e05-c7c8b6ae4905"
     },
     {
       "lot_id": "f61f3f219604",
@@ -100,26 +60,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-13T15:07:47.760008+00:00",
       "entry_order_id": "efd77ba2-bf1a-49a1-bc1b-b252efdac9c7"
-    },
-    {
-      "lot_id": "954a8585fceb",
-      "bucket_id": 2007,
-      "profile_name": "day_trader_analytics_s430",
-      "strategy_id": "S430",
-      "occ_symbol": "META261116C00667500",
-      "underlying": "META",
-      "qty": 1,
-      "entry_cost": 62.0,
-      "entry_price": 0.62,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-13T15:07:47.763903+00:00",
-      "entry_order_id": "1511b7f4-1337-4ab5-9311-f5a53993de4c"
     },
     {
       "lot_id": "b752383863ca",
@@ -202,15 +142,29 @@
       "entry_order_id": "b77beeee-5a8b-4317-98fb-5ef38aedd1a7"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "7a0be455-2b9d-4924-9200-36766781f8e3",
+      "bucket_id": 65,
+      "strategy_id": "S163",
+      "occ_symbol": "AVGO261116C00375000",
+      "underlying": "AVGO",
+      "qty": 1,
+      "limit": 0.19,
+      "profile_name": "lab0065_s163_w2_1005_1045_r1",
+      "submitted": "2026-11-13",
+      "detail": "gap -2.1%",
+      "spread_frac": 0.10526315789473693,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
+    }
+  ],
   "pending_exits": [],
   "bucket_open_premium": {
-    "b90": 73.0,
     "b52": 52.0,
-    "b17": 21.0,
     "b51": 60.0,
     "b64": 43.0,
-    "b2007": 62.0,
     "b91": 74.0,
     "b12": 46.0,
     "b62": 60.0,
@@ -231,7 +185,8 @@
     "52|S406|2026-11-13",
     "91|S406|2026-11-13",
     "62|S167|2026-11-13",
-    "63|S166|2026-11-13"
+    "63|S166|2026-11-13",
+    "65|S163|2026-11-13"
   ],
   "processed_orders": [
     "aaf16a0f-80f4-4fa9-b44e-149d1478a276",
@@ -675,9 +630,12 @@
     "48e49ce0-307c-4928-a119-cd43b1fd26e0",
     "1abd8d02-3cef-45bd-ab16-40ee8f0d1479",
     "2a889cfe-0346-4125-9211-e264c3efd5c1",
-    "b77beeee-5a8b-4317-98fb-5ef38aedd1a7"
+    "b77beeee-5a8b-4317-98fb-5ef38aedd1a7",
+    "6232fbb7-a5bf-4d60-b74d-5fbfd65448b0",
+    "4139c62a-cfe7-4363-b8a2-f8f0030533c8",
+    "81425145-69c5-4e52-be5f-e6e3210d16fb"
   ],
-  "submitted_today": 14,
+  "submitted_today": 15,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-13"
 }
