@@ -6,6 +6,7 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-13T00:19Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 51a3f21ff1617f | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-12T18:57Z | S10b | ETH-USD hourly mean reversion after 1% breakout  | 78923274dfb959 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-12T18:56Z | S06b | BTC-USD hourly momentum trigger | b0f40d96e3dc90 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-12T18:55Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 6620381caef3ff | RESEARCH_ONLY_NEEDS_REVISION |
@@ -40,7 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-12T00:48Z | S06b | BTC-USD hourly momentum trigger | cae2f23f09de9b | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-12T00:47Z | S09b | BTC-USD hourly price reversion after steep 10‑ho | fd170ddbbae395 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-11T21:58Z | S04a | gap_down_breakout | 7205068d64c4b7 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-11T21:57Z | S08a | Low hourly volatility predicts larger next‑hour  | 981b4b4d3f7422 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
