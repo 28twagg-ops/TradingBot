@@ -1,0 +1,146 @@
+20:46:51  INFO      Mode: scan
+20:46:53  INFO        BUY  DELL  $34.79  [MomReversal]  id=175fd89c-d9c4-4afe-a9de-bc7a3aa5bff4
+20:46:53  INFO        BUY  DXCM  $34.79  [Pullback50]  id=50e56885-3f4f-4774-b34c-17ed9a44f005
+20:46:53  INFO        BUY  HSIC  $34.79  [Pullback50]  id=ca655384-1c0c-48e3-ad23-e29d1db39617
+20:47:24  INFO        place_all_stops: checking 3 positions...
+20:47:24  INFO        STOP skipped DELL: fractional (0.1014 shares) — software exit will handle it
+20:47:24  INFO        STOP skipped DXCM: fractional (0.4168 shares) — software exit will handle it
+20:47:24  INFO        STOP skipped HSIC: fractional (0.4028 shares) — software exit will handle it
+20:47:24  INFO        place_eod_stops: updating 3 stops to current price...
+20:47:24  INFO        EOD stop skip DELL: 0.1014 shares (fractional) — ext_exits will cover
+20:47:24  INFO        EOD stop skip DXCM: 0.4168 shares (fractional) — ext_exits will cover
+20:47:24  INFO        EOD stop skip HSIC: 0.4028 shares (fractional) — ext_exits will cover
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         20:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $231.95|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-13|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $231.95|
+|  Cash                                                           $231.95|
+|  Reserve                                          $11.60  (always kept)|
+|  Stocks ~  $0.00 / $173.96  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $173.96  (new stock buys)|
+|  Trade size             $34.79  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (0 open)                        |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                    yes (fresh (11.4m))|
+|  Cached exits                                                         0|
+|  Cached signals                                                       8|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           903|
++========================================================================+
+
++========================================================================+
+|                          SIGNALS FOUND  --  8                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  DELL     MomReversal     eq     $341.96  32.8   0.34    -21.3% drop/60|
+|  DXCM     Pullback50      eq     $83.49   58.5   -1.49   50MA bounce (-|
+|  HSIC     Pullback50      eq     $86.41   53.8   0.02    50MA bounce (+|
+|  SO       VWAP_Reclaim    eq     $93.57   54.6   2.25    VWAP reclaim V|
+|  PATH     Pullback50      eq     $13.37   35.1   -1.25   50MA bounce (-|
+|  PR       Pullback50      eq     $23.04   32.3   -1.70   50MA bounce (-|
+|  UGI      Pullback50      eq     $37.69   30.9   -2.12   50MA bounce (+|
+|  WEX      Pullback50      eq     $181.32  33.3   -1.81   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] DELL  MomReversal                                  $34.79|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] DXCM  Pullback50                                   $34.79|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] HSIC  Pullback50                                   $34.79|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] PATH  Pullback50                                     cap 3|
+|    SKIP [eq] PR  Pullback50                                       cap 3|
+|    SKIP [eq] UGI  Pullback50                                      cap 3|
+|    SKIP [eq] WEX  Pullback50                                      cap 3|
+|    SKIP [eq] SO  VWAP_Reclaim                                     cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  DELL                                                 still unconfirmed|
+|  DXCM                                                 still unconfirmed|
+|  HSIC                                                 still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|20:47:24  INFO        Daily log -> logs/daily/2026-11-13.md
+20:47:24  INFO        Dashboard written → logs/dashboard.md
+
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                              8|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $231.98|
+|  Cash                                                           $127.61|
++========================================================================+
