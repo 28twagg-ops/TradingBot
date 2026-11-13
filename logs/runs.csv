@@ -12954,3 +12954,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-13 20:47:24,scan_evening,bull,231.98,127.61,8,0,0,3,DELL|DXCM|HSIC,both
 2026-11-13 20:52:49,scan_evening,bull,232.19,197.24,8,0,2,1,DELL,both
 2026-11-13 20:57:24,scan_evening,bull,231.87,127.62,8,0,0,2,DELL|DXCM,both
+2026-11-13 21:01:51,ext_exits,bull,232.33,127.62,0,0,0,2,DELL|DXCM,both
