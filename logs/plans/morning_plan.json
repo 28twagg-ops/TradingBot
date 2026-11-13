@@ -1,141 +1,115 @@
 {
   "mode_name": "morning",
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "month": 11,
   "regime": "bull",
   "positions_count": 2,
   "positions_snapshot": [
     {
-      "ticker": "EXPD",
+      "ticker": "AME",
       "strategy": "Pullback50",
-      "dollar_amt": 35.63166,
-      "entry_price": 191.344,
-      "current_price": 195.5235,
-      "pnl_pct": 2.1839999999999997,
-      "pnl_dollar": 0.76166
+      "dollar_amt": 35.329831,
+      "entry_price": 241.446,
+      "current_price": 244.07,
+      "pnl_pct": 1.087,
+      "pnl_dollar": 0.379831
     },
     {
-      "ticker": "INCY",
-      "strategy": "Pullback50",
-      "dollar_amt": 35.644863,
-      "entry_price": 120.424,
-      "current_price": 123.1,
-      "pnl_pct": 2.222,
-      "pnl_dollar": 0.774863
+      "ticker": "ENS",
+      "strategy": "MomReversal",
+      "dollar_amt": 35.185497,
+      "entry_price": 145.738,
+      "current_price": 146.72,
+      "pnl_pct": 0.674,
+      "pnl_dollar": 0.235497
     }
   ],
   "open_sell_orders": [],
   "scan_universe_count": 901,
   "exit_plan": [
     {
-      "ticker": "EXPD",
-      "why": "midline (+2.2%)"
-    },
-    {
-      "ticker": "INCY",
-      "why": "midline (+2.2%)"
+      "ticker": "AME",
+      "why": "midline (+1.1%)"
     }
   ],
   "signals": [
     {
-      "ticker": "TECH",
+      "ticker": "PFE",
       "strategy": "Pullback50",
-      "close": 72.83,
-      "rsi": 67.7,
-      "vol_z": -2.88,
+      "close": 28.93,
+      "rsi": 42.2,
+      "vol_z": -2.47,
       "trigger": "50MA bounce (+0.4%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
     },
     {
-      "ticker": "MSFT",
+      "ticker": "STT",
       "strategy": "Pullback50",
-      "close": 523.5,
-      "rsi": 49.7,
-      "vol_z": -2.09,
+      "close": 174.67,
+      "rsi": 57.7,
+      "vol_z": -2.78,
+      "trigger": "50MA bounce (-0.8%)",
+      "seasonal": false,
+      "month": 11,
+      "regime": "bull"
+    },
+    {
+      "ticker": "ANF",
+      "strategy": "Pullback50",
+      "close": 149.72,
+      "rsi": 37.8,
+      "vol_z": -2.85,
       "trigger": "50MA bounce (+0.9%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
     },
     {
-      "ticker": "QCOM",
+      "ticker": "AVTR",
       "strategy": "Pullback50",
-      "close": 176.92,
-      "rsi": 50.6,
-      "vol_z": -1.56,
-      "trigger": "50MA bounce (-1.0%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
-    {
-      "ticker": "STLD",
-      "strategy": "Pullback50",
-      "close": 240.25,
-      "rsi": 49.1,
-      "vol_z": -2.39,
-      "trigger": "50MA bounce (+0.8%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
-    {
-      "ticker": "ATI",
-      "strategy": "Pullback50",
-      "close": 184.53,
-      "rsi": 66.8,
-      "vol_z": -2.17,
-      "trigger": "50MA bounce (-0.4%)",
-      "seasonal": false,
-      "month": 11,
-      "regime": "bull"
-    },
-    {
-      "ticker": "ENTG",
-      "strategy": "Pullback50",
-      "close": 146.88,
-      "rsi": 56.0,
-      "vol_z": -1.9,
+      "close": 15.66,
+      "rsi": 28.0,
+      "vol_z": -1.63,
       "trigger": "50MA bounce (-0.2%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
     },
     {
-      "ticker": "FLR",
+      "ticker": "BIO",
       "strategy": "Pullback50",
-      "close": 50.38,
-      "rsi": 70.8,
-      "vol_z": -2.22,
-      "trigger": "50MA bounce (+0.7%)",
+      "close": 373.3,
+      "rsi": 50.5,
+      "vol_z": -2.16,
+      "trigger": "50MA bounce (+0.1%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
     },
     {
-      "ticker": "KBR",
+      "ticker": "CBSH",
       "strategy": "Pullback50",
-      "close": 36.93,
-      "rsi": 40.4,
-      "vol_z": -2.09,
-      "trigger": "50MA bounce (+0.5%)",
+      "close": 55.86,
+      "rsi": 50.4,
+      "vol_z": -3.15,
+      "trigger": "50MA bounce (-0.1%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
     },
     {
-      "ticker": "REXR",
+      "ticker": "UMBF",
       "strategy": "Pullback50",
-      "close": 37.87,
-      "rsi": 45.0,
-      "vol_z": -1.84,
-      "trigger": "50MA bounce (+0.7%)",
+      "close": 134.74,
+      "rsi": 50.9,
+      "vol_z": -2.34,
+      "trigger": "50MA bounce (+0.4%)",
       "seasonal": false,
       "month": 11,
       "regime": "bull"
     }
   ],
-  "saved_at_utc": "2026-11-12T14:35:24Z"
+  "saved_at_utc": "2026-11-13T14:35:20Z"
 }
