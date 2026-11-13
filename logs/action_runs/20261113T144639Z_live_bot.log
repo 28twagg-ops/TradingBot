@@ -1,0 +1,161 @@
+14:46:40  INFO      Mode: morning_scan
+14:46:41  INFO        SELL LIMIT AME  qty=0.144752863  limit=$239.96  id=5df9b785-6da6-406c-877f-53c7503c6c46
+14:47:11  INFO        SELL LIMIT filled AME (confirmed by position check)
+14:47:11  INFO        TX logged: SELL AME  P&L -0.42%
+14:47:12  INFO        BUY  PFE  $34.94  [Pullback50]  id=956ff60a-94e0-4092-a1b8-9f1d0859f52d
+14:47:12  INFO        BUY  STT  $34.94  [Pullback50]  id=e2a2fcf6-5644-4749-86c4-85fec3fbcb9d
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $232.90|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-13|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $232.90|
+|  Cash                                                           $162.98|
+|  Reserve                                          $11.65  (always kept)|
+|  Stocks~  $69.92 / $174.68  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $104.76  (new stock buys)|
+|  Trade size             $34.94  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (2 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AME      Pullback50      $34.80     $241.45  $240.44  -0.4%   $-0.15  |
+|  ENS      MomReversal     $35.11     $145.74  $146.42  +0.5%   $+0.16  |
+|                                                                        |
+|  Total invested                                                  $69.92|
+|  Total open P&L                                                  $+0.02|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (11.4m))|
+|  Cached exits                                                         1|
+|  Cached signals                                                       7|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AME  P&L -0.4%  $-0.15                           EXIT: midline (+1.1%)|
+|  ENS  P&L +0.5%  $+0.16                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           901|
++========================================================================+
+
++========================================================================+
+|                          SIGNALS FOUND  --  7                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  PFE      Pullback50      eq     $28.93   42.2   -2.47   50MA bounce (+|
+|  STT      Pullback50      eq     $174.67  57.7   -2.78   50MA bounce (-|
+|  ANF      Pullback50      eq     $149.72  37.8   -2.85   50MA bounce (+|
+|  AVTR     Pullback50      eq     $15.66   28.0   -1.63   50MA bounce (-|
+|  BIO      Pullback50      eq     $373.30  50.5   -2.16   50MA bounce (+|
+|  CBSH     Pullback50      eq     $55.86   50.4   -3.15   50MA bounce (-|
+|  UMBF     Pullback50      eq     $134.74  50.9   -2.34   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] PFE  Pullback50                                    $34.94|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] STT  Pullback50                                    $34.94|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] ANF  Pullback50                                      cap 3|
+|    SKIP [eq] AVTR  Pullback50                                     cap 3|
+|    SKIP [eq] BIO  Pullback50                                      cap 3|
+|    SKIP [eq] CBSH  Pullback50                                     cap 3|
+|    SKIP [eq] UMBF  Pullback50                                     cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+14:47:33  INFO        place_all_stops: checking 3 positions...
+14:47:33  INFO        STOP skipped ENS: fractional (0.2398 shares) — software exit will handle it
+14:47:34  INFO        STOP-MARKET placed PFE  qty=1 (pos=1.2138)  stop=$28.63  id=6678a5c5-f91f-4ef6-a44a-0aec6f9f7a1f
+14:47:34  INFO        STOP skipped STT: fractional (0.2007 shares) — software exit will handle it
+14:47:34  INFO        Daily log -> logs/daily/2026-11-13.md
+14:47:34  INFO        Dashboard written → logs/dashboard.md
+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  PFE                                                  still unconfirmed|
+|  STT                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                              7|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             3|
+|  Equity                                                         $232.88|
+|  Cash                                                           $127.85|
++========================================================================+

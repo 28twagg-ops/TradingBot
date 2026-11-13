@@ -60,31 +60,45 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-13T14:43:09.855655+00:00",
       "entry_order_id": "e1ffdb34-e679-48d8-b36a-6beae139c74d"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "83e8c4b1-5605-45c5-9154-da1806949851",
+      "lot_id": "2c6f0aafbb41",
       "bucket_id": 90,
+      "profile_name": "live_1to1",
       "strategy_id": "S406",
       "occ_symbol": "HOOD261120C00087000",
       "underlying": "HOOD",
       "qty": 1,
-      "limit": 0.74,
-      "profile_name": "live_1to1",
-      "submitted": "2026-11-13",
-      "detail": "RB gap -2.0% reclaim",
-      "spread_frac": 0.11267605633802812,
-      "buy_offset": -0.01,
+      "entry_cost": 73.0,
+      "entry_price": 0.73,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
       "take_profit": 0.5,
-      "stop_loss": -0.4
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-13T14:47:38.504098+00:00",
+      "entry_order_id": "83e8c4b1-5605-45c5-9154-da1806949851"
     }
   ],
-  "pending_exits": [],
+  "pending_orders": [],
+  "pending_exits": [
+    {
+      "order_id": "1133bb81-238d-4b77-8347-4374afa3ad9f",
+      "lot_id": "2ca1f9048a10",
+      "bucket_id": 20,
+      "strategy_id": "S364",
+      "occ_symbol": "SMCI261120C00030500",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-11-13T09:47:42"
+    }
+  ],
   "bucket_open_premium": {
     "b20": 57.99999999999999,
     "b62": 31.0,
-    "b90": 62.0
+    "b90": 135.0
   },
   "session_date": "2026-11-13",
   "entries_locked": [
@@ -514,7 +528,8 @@
     "3664f8b2-76db-4de9-afe0-7efcdfcc2343",
     "11aaa6af-abdf-4e92-a07b-9b4efaae161f",
     "4aef8853-c4a9-40d2-949e-a9459d443f30",
-    "e1ffdb34-e679-48d8-b36a-6beae139c74d"
+    "e1ffdb34-e679-48d8-b36a-6beae139c74d",
+    "83e8c4b1-5605-45c5-9154-da1806949851"
   ],
   "submitted_today": 2,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
