@@ -7,12 +7,12 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 
 | Slice | n | Win% | Med% | Avg% | Realized $ |
 |---|---:|---:|---:|---:|---:|
-| ALL | 3981 | 39.1 | -40.0 | +20.8 | $+7,522 |
-| CLEAN (perfect running) | 1856 | 48.9 | -23.2 | +36.2 | $+21,247 |
+| ALL | 3982 | 39.1 | -40.0 | +20.8 | $+7,489 |
+| CLEAN (perfect running) | 1857 | 48.9 | -23.3 | +36.1 | $+21,214 |
 | TAINTED (errors/outages) | 2125 | 30.6 | -42.3 | +7.4 | $-13,725 |
-| CLEAN since 2026-08-03 | 1540 | 46.9 | -38.4 | +36.1 | $+8,947 |
-| KEEP-only (CLEAN keepers) | 911 | 61.1 | +52.0 | +53.0 | $+15,136 |
-| KEEP-only since 2026-08-03 | 726 | 60.3 | +53.4 | +58.8 | $+11,627 |
+| CLEAN since 2026-08-03 | 1541 | 46.9 | -38.5 | +36.1 | $+8,914 |
+| KEEP-only (CLEAN keepers) | 912 | 61.1 | +51.9 | +52.9 | $+15,103 |
+| KEEP-only since 2026-08-03 | 727 | 60.2 | +53.3 | +58.6 | $+11,594 |
 
 ## Known outage / degraded days
 
@@ -96,6 +96,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 | 2026-11-10 | OK | 24 | 0 | 12 | -50.0 |
 | 2026-11-11 | OK | 7 | 0 | 86 | +68.6 |
 | 2026-11-12 | OK | 23 | 0 | 83 | +59.4 |
+| 2026-11-13 | OK | 1 | 0 | 0 | -89.2 |
 
 ## CLEAN strategy kill list (n>=10, med<=-20%)
 
@@ -131,7 +132,7 @@ Splits ledger exits into **CLEAN** (natural TP/SL/EOD, healthy runtime) vs **TAI
 |---|---:|---:|---:|---:|---:|
 | S167 | 23 | 65.2 | +81.8 | +101.8 | $+546 |
 | S396 | 11 | 90.9 | +74.6 | +66.0 | $+455 |
-| S164 | 37 | 56.8 | +62.2 | +65.2 | $+567 |
+| S164 | 38 | 55.3 | +60.8 | +61.1 | $+534 |
 | S410 | 12 | 66.7 | +59.3 | +27.4 | $+205 |
 | S166 | 17 | 70.6 | +57.1 | +84.9 | $+875 |
 | S163 | 36 | 58.3 | +57.1 | +45.2 | $+1,025 |
