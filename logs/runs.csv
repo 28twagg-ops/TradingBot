@@ -12986,3 +12986,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-13 23:26:38,ext_exits,bull,231.51,196.71,0,0,0,1,DXCM,both
 2026-11-13 23:31:42,ext_exits,bull,231.51,196.71,0,0,0,1,DXCM,both
 2026-11-13 23:36:46,ext_exits,bull,231.51,196.71,0,0,0,1,DXCM,both
+2026-11-13 23:41:42,ext_exits,bull,231.51,196.71,0,0,0,1,DXCM,both
