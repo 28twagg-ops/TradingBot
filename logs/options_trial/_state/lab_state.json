@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "137dab4f981c",
-      "bucket_id": 62,
-      "profile_name": "lab0062_s166_w2_1005_1045_r1",
-      "strategy_id": "S166",
-      "occ_symbol": "UPST261120C00021000",
-      "underlying": "UPST",
-      "qty": 1,
-      "entry_cost": 31.0,
-      "entry_price": 0.31,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-12T15:36:55.329769+00:00",
-      "entry_order_id": "3a8ad603-7e9e-4989-945b-d8af3e45237a"
-    },
-    {
       "lot_id": "2c6f0aafbb41",
       "bucket_id": 90,
       "profile_name": "live_1to1",
@@ -182,15 +162,35 @@
       "entry_order_id": "32d23cc4-c084-43b1-97c4-ac5a6fd5c593"
     },
     {
-      "lot_id": "fbf01517172b",
-      "bucket_id": 66,
-      "profile_name": "lab0066_s164_w2_1005_1045_r1",
-      "strategy_id": "S164",
-      "occ_symbol": "AMD261113C00570000",
-      "underlying": "AMD",
+      "lot_id": "b752383863ca",
+      "bucket_id": 91,
+      "profile_name": "s406_only",
+      "strategy_id": "S406",
+      "occ_symbol": "HOOD261120C00086000",
+      "underlying": "HOOD",
       "qty": 1,
-      "entry_cost": 43.0,
-      "entry_price": 0.43,
+      "entry_cost": 74.0,
+      "entry_price": 0.74,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-13T15:11:49.666710+00:00",
+      "entry_order_id": "517afd99-7497-48b4-aa09-cbbed3f682a8"
+    },
+    {
+      "lot_id": "000fbcc99ff2",
+      "bucket_id": 12,
+      "profile_name": "lab0012_s403_w2_1005_1045_r1",
+      "strategy_id": "S403",
+      "occ_symbol": "UBER261120C00072000",
+      "underlying": "UBER",
+      "qty": 1,
+      "entry_cost": 46.0,
+      "entry_price": 0.46,
       "buy_limit_offset": -0.01,
       "sell_limit_offset": -0.01,
       "sell_at_mid": false,
@@ -198,47 +198,44 @@
       "stop_loss": -0.5,
       "eod_only": false,
       "market_exit_eod": true,
-      "entry_date": "2026-11-13T15:07:47.777342+00:00",
-      "entry_order_id": "488ca9ab-14e7-47e6-9f9b-2b770c88138b"
-    }
-  ],
-  "pending_orders": [
-    {
-      "order_id": "31e951e9-447a-4785-b4d7-bebdd18d4a32",
-      "bucket_id": 12,
-      "strategy_id": "S403",
-      "occ_symbol": "UBER261120C00072000",
-      "underlying": "UBER",
-      "qty": 1,
-      "limit": 0.47,
-      "profile_name": "lab0012_s403_w2_1005_1045_r1",
-      "submitted": "2026-11-13",
-      "detail": "touch MA50 green",
-      "spread_frac": 0.13333333333333333,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
+      "entry_date": "2026-11-13T15:11:49.672458+00:00",
+      "entry_order_id": "31e951e9-447a-4785-b4d7-bebdd18d4a32"
     },
     {
-      "order_id": "517afd99-7497-48b4-aa09-cbbed3f682a8",
-      "bucket_id": 91,
-      "strategy_id": "S406",
-      "occ_symbol": "HOOD261120C00086000",
-      "underlying": "HOOD",
+      "lot_id": "54f3884761d2",
+      "bucket_id": 62,
+      "profile_name": "lab0062_s167_w2_1005_1045_r1",
+      "strategy_id": "S167",
+      "occ_symbol": "AMD261116C00595000",
+      "underlying": "AMD",
       "qty": 1,
-      "limit": 0.74,
-      "profile_name": "s406_only",
-      "submitted": "2026-11-13",
-      "detail": "RB gap -2.0% reclaim",
-      "spread_frac": 0.05479452054794526,
-      "buy_offset": -0.01,
+      "entry_cost": 60.0,
+      "entry_price": 0.6,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
       "take_profit": 0.5,
-      "stop_loss": -0.4
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-13T15:12:43.649367+00:00",
+      "entry_order_id": "be3bdd39-1052-47a5-b3d4-6a95198dbdd7"
     }
   ],
-  "pending_exits": [],
+  "pending_orders": [],
+  "pending_exits": [
+    {
+      "order_id": "1abd8d02-3cef-45bd-ab16-40ee8f0d1479",
+      "lot_id": "2f0ccb334cfd",
+      "bucket_id": 13,
+      "strategy_id": "S350",
+      "occ_symbol": "COIN261113C00132000",
+      "qty": 1,
+      "reason": "stop_loss (-54.1%)",
+      "submitted": "2026-11-13T10:11:53"
+    }
+  ],
   "bucket_open_premium": {
-    "b62": 31.0,
     "b90": 73.0,
     "b52": 52.0,
     "b17": 21.0,
@@ -247,7 +244,9 @@
     "b2007": 62.0,
     "b13": 37.0,
     "b50": 71.0,
-    "b66": 43.0
+    "b91": 74.0,
+    "b12": 46.0,
+    "b62": 60.0
   },
   "session_date": "2026-11-13",
   "entries_locked": [
@@ -262,7 +261,8 @@
     "51|S404|2026-11-13",
     "17|S359|2026-11-13",
     "52|S406|2026-11-13",
-    "91|S406|2026-11-13"
+    "91|S406|2026-11-13",
+    "62|S167|2026-11-13"
   ],
   "processed_orders": [
     "aaf16a0f-80f4-4fa9-b44e-149d1478a276",
@@ -698,9 +698,14 @@
     "1511b7f4-1337-4ab5-9311-f5a53993de4c",
     "1fa88651-6f0c-417b-9359-22c6cb18d920",
     "32d23cc4-c084-43b1-97c4-ac5a6fd5c593",
-    "488ca9ab-14e7-47e6-9f9b-2b770c88138b"
+    "488ca9ab-14e7-47e6-9f9b-2b770c88138b",
+    "df7b165a-9a96-48d2-84fe-9fd1c71357b2",
+    "517afd99-7497-48b4-aa09-cbbed3f682a8",
+    "31e951e9-447a-4785-b4d7-bebdd18d4a32",
+    "be3bdd39-1052-47a5-b3d4-6a95198dbdd7",
+    "48e49ce0-307c-4928-a119-cd43b1fd26e0"
   ],
-  "submitted_today": 12,
+  "submitted_today": 13,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-13"
 }
