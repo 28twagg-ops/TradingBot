@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-13T16:21Z | S06b | BTC-USD hourly breakout on 12‑hour SMA | 0dabdea9a1f10f | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-13T16:20Z | S07b | Hourly trend persistence in BTC-USD | a3a81b2dd3d7d5 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-13T16:20Z | S02b | BTC-USD hourly trend persistence after 4 consecu | 3a430cffb981b7 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-13T16:19Z | S09b | BTC-USD hourly trend reversal after sustained 5‑ | d2433ea1e05d21 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-13T16:18Z | S04a | gap_down_quality | fa83709a6976bd | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-13T11:32Z | S08a | Low hourly volatility predicts larger next‑hour  | 4dd33db82e0b3e | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-13T11:32Z | S01a | BTC-USD hourly momentum reversion | 21bbc1da3a0dd8 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-13T11:31Z | S05a | BTC-USD hourly trend persistence | 0e9846b4183b29 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-12T18:24Z | S07b | Hourly trend persistence in BTC-USD under high v | 6c8b5aff39bbf8 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-12T18:23Z | S02b | BTC-USD hourly trend persistence after 3 consecu | 9c96a05418dafe | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-12T11:50Z | S10b | ETH-USD hourly mean reversion after 5% breakout  | ec20d41267172e | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-12T11:50Z | S06b | BTC-USD hourly momentum trigger | 89b031929982f8 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-12T11:49Z | S09b | BTC-USD hourly trend reversal after sustained 10 | fc0f56733c29a8 | HOLD |
-| 2026-11-12T11:48Z | S04a | gap_down_quality | 785d047cf89680 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-12T11:48Z | S08a | Low hourly volatility predicts larger next‑hour  | 5d08d32fb6f8e6 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-12T11:04Z | S01a | BTC-USD hourly mean reversion to 12h SMA | cbbfc1d56e72c2 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
