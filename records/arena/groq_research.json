@@ -1,180 +1,5 @@
 [
   {
-    "worker": "S09",
-    "cycle": "2026-10-27T07:59Z",
-    "status": "RESEARCHED",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Cross\u2011Asset Trend Persistence",
-    "strategy": {
-      "family": "momentum",
-      "lookback": 20,
-      "threshold": 0.05
-    },
-    "test": {
-      "status": "HISTORICAL_PROXY_ONLY",
-      "research": {
-        "start": 22,
-        "end": 492,
-        "returns_pct": 0.0,
-        "drawdown_pct": 0.0,
-        "entries": 0
-      },
-      "retrospective_validation": {
-        "start": 492,
-        "end": 703,
-        "returns_pct": 0.0,
-        "drawdown_pct": 0.0,
-        "entries": 0
-      },
-      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
-    },
-    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
-    "experiment_id": "69eb7ca6a66a21"
-  },
-  {
-    "worker": "S10",
-    "cycle": "2026-10-27T07:59Z",
-    "status": "RESEARCHED",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Momentum persistence in high\u2011frequency crypto markets",
-    "strategy": {
-      "family": "momentum",
-      "lookback": 30,
-      "threshold": 0.05
-    },
-    "test": {
-      "status": "HISTORICAL_PROXY_ONLY",
-      "research": {
-        "start": 32,
-        "end": 492,
-        "returns_pct": 0.0,
-        "drawdown_pct": 0.0,
-        "entries": 0
-      },
-      "retrospective_validation": {
-        "start": 492,
-        "end": 703,
-        "returns_pct": 0.0,
-        "drawdown_pct": 0.0,
-        "entries": 0
-      },
-      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
-    },
-    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
-    "experiment_id": "45568c88ce6da8"
-  },
-  {
-    "worker": "S01",
-    "cycle": "2026-10-27T07:59Z",
-    "status": "RESEARCHED",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Volatility\u2011adjusted moving\u2011average trend capture",
-    "strategy": {
-      "family": "trend",
-      "lookback": 20,
-      "threshold": 0.08
-    },
-    "test": {
-      "status": "HISTORICAL_PROXY_ONLY",
-      "research": {
-        "start": 22,
-        "end": 492,
-        "returns_pct": 0.0,
-        "drawdown_pct": 0.0,
-        "entries": 0
-      },
-      "retrospective_validation": {
-        "start": 492,
-        "end": 703,
-        "returns_pct": 0.0,
-        "drawdown_pct": 0.0,
-        "entries": 0
-      },
-      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
-    },
-    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
-    "experiment_id": "89766009f89e42"
-  },
-  {
-    "worker": "S05",
-    "cycle": "2026-10-27T07:59Z",
-    "status": "RESEARCHED",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Cross\u2011asset momentum\u2011driven breakout with volatility\u2011adjusted entry",
-    "strategy": {
-      "family": "momentum",
-      "lookback": 5,
-      "threshold": 0.08
-    },
-    "test": {
-      "status": "HISTORICAL_PROXY_ONLY",
-      "research": {
-        "start": 7,
-        "end": 492,
-        "returns_pct": 0.0,
-        "drawdown_pct": 0.0,
-        "entries": 0
-      },
-      "retrospective_validation": {
-        "start": 492,
-        "end": 703,
-        "returns_pct": 0.0,
-        "drawdown_pct": 0.0,
-        "entries": 0
-      },
-      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
-    },
-    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
-    "experiment_id": "83bd8e6863002e"
-  },
-  {
-    "worker": "S06",
-    "cycle": "2026-10-27T09:22Z",
-    "status": "RESEARCHED",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Crypto liquidity impact on BTC\u2011USD momentum",
-    "strategy": {
-      "family": "momentum",
-      "lookback": 20,
-      "threshold": 0.05
-    },
-    "test": {
-      "status": "HISTORICAL_PROXY_ONLY",
-      "research": {
-        "start": 22,
-        "end": 493,
-        "returns_pct": 0.0,
-        "drawdown_pct": 0.0,
-        "entries": 0
-      },
-      "retrospective_validation": {
-        "start": 493,
-        "end": 705,
-        "returns_pct": 0.0,
-        "drawdown_pct": 0.0,
-        "entries": 0
-      },
-      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
-    },
-    "action": "HOLD_UNTESTED_BACKTEST_SIGNAL",
-    "experiment_id": "69eb7ca6a66a21"
-  },
-  {
     "worker": "S02",
     "cycle": "2026-10-27T09:22Z",
     "status": "RESEARCHED",
@@ -19556,5 +19381,130 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC-USD hourly close 2020-2026 SMA 12"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-11-13T07:54Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "ETH-USD hourly mean reversion after 1% breakout of 12\u2011hour SMA",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "47f9f813165e10",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "ETH-USD hourly 12\u2011hour SMA 1% breakout mean reversion backtest data"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-11-13T07:55Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly mean reversion at 24\u2011hour lag",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "560314ee809001",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly close price dataset 2015-2026"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-11-13T07:56Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly trend persistence",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "c14d2cac8ab405",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD 10 hour trend persistence hourly close"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-11-13T07:56Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly momentum edge",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "a0d9b752799d60",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly momentum 6h 1h probability 2024 2025"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-11-13T07:57Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Low hourly volatility predicts larger next\u2011hour return magnitude in BTC\u2011USD",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "b646fdc6a74d49",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "search for empirical studies on low hourly volatility predicting larger next\u2011hour return magnitude in BTC\u2011USD"
   }
 ]
