@@ -1,0 +1,161 @@
+20:57:01  INFO      Mode: scan
+20:57:01  INFO        [positions] 1/1 (1 valid)
+20:57:02  INFO        BUY  DELL  $34.82  [MomReversal]  id=8ae54b09-a272-4895-a86b-379eec5b1f22
+20:57:02  INFO        BUY  DXCM  $34.82  [Pullback50]  id=c786b7f4-3453-4def-91fa-af7e3689e54d
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         20:57 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $232.12|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-13|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $232.12|
+|  Cash                                                           $197.24|
+|  Reserve                                          $11.61  (always kept)|
+|  Stocks~  $34.88 / $174.09  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $139.21  (new stock buys)|
+|  Trade size             $34.82  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (1 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  DELL     MomReversal     $34.88     $343.14  $344.12  +0.3%   $+0.10  |
+|                                                                        |
+|  Total invested                                                  $34.88|
+|  Total open P&L                                                  $+0.10|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (21.5m); positions refreshed live)|
+|  Cached signals                                                       8|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  DELL  P&L +0.3%  $+0.10                                           HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 0 | filled 0 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                          cached signals (signals fresh (21.5m))|
+|  Universe scanned in prep                                           903|
++========================================================================+
+
++========================================================================+
+|                          SIGNALS FOUND  --  8                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  DELL     MomReversal     eq     $341.96  32.8   0.34    -21.3% drop/60|
+|  DXCM     Pullback50      eq     $83.49   58.5   -1.49   50MA bounce (-|
+|  HSIC     Pullback50      eq     $86.41   53.8   0.02    50MA bounce (+|
+|  SO       VWAP_Reclaim    eq     $93.57   54.6   2.25    VWAP reclaim V|
+|  PATH     Pullback50      eq     $13.37   35.1   -1.25   50MA bounce (-|
+|  PR       Pullback50      eq     $23.04   32.3   -1.70   50MA bounce (-|
+|  UGI      Pullback50      eq     $37.69   30.9   -2.12   50MA bounce (+|
+|  WEX      Pullback50      eq     $181.32  33.3   -1.81   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] DELL  MomReversal                                  $34.82|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] DXCM  Pullback50                                   $34.82|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] HSIC  Pullback50                                     cap 3|
+|    SKIP [eq] PATH  Pullback50                                     cap 3|
+|    SKIP [eq] PR  Pullback50                                       cap 3|
+|    SKIP [eq] UGI  Pullback50                                      cap 3|
+|    SKIP [eq] WEX  Pullback50                                      cap 3|
+|    SKIP [eq] SO  VWAP_Reclaim                                     cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+20:57:23  INFO        place_all_stops: checking 2 positions...
+20:57:23  INFO        STOP skipped DELL: fractional (0.2025 shares) — software exit will handle it
+20:57:23  INFO        STOP skipped DXCM: fractional (0.4177 shares) — software exit will handle it
+20:57:23  INFO        place_eod_stops: updating 2 stops to current price...
+20:57:23  INFO        EOD stop skip DELL: 0.2025 shares (fractional) — ext_exits will cover
+20:57:23  INFO        EOD stop skip DXCM: 0.4177 shares (fractional) — ext_exits will cover
+20:57:24  INFO        Daily log -> logs/daily/2026-11-13.md
+20:57:24  INFO        Dashboard written → logs/dashboard.md
+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  DELL                                                 still unconfirmed|
+|  DXCM                                                 still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                              8|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             2|
+|  Equity                                                         $231.87|
+|  Cash                                                           $127.62|
++========================================================================+
