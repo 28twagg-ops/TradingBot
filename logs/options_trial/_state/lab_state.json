@@ -140,26 +140,49 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-13T15:17:26.825667+00:00",
       "entry_order_id": "b77beeee-5a8b-4317-98fb-5ef38aedd1a7"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "7a0be455-2b9d-4924-9200-36766781f8e3",
+      "lot_id": "448f05f8356c",
       "bucket_id": 65,
+      "profile_name": "lab0065_s163_w2_1005_1045_r1",
       "strategy_id": "S163",
       "occ_symbol": "AVGO261116C00375000",
       "underlying": "AVGO",
       "qty": 1,
-      "limit": 0.19,
-      "profile_name": "lab0065_s163_w2_1005_1045_r1",
-      "submitted": "2026-11-13",
-      "detail": "gap -2.1%",
-      "spread_frac": 0.10526315789473693,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
+      "entry_cost": 18.0,
+      "entry_price": 0.18,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-13T15:26:48.133637+00:00",
+      "entry_order_id": "7a0be455-2b9d-4924-9200-36766781f8e3"
+    },
+    {
+      "lot_id": "3e77514950b7",
+      "bucket_id": 14,
+      "profile_name": "lab0014_s352_w2_1005_1045_r1",
+      "strategy_id": "S352",
+      "occ_symbol": "AMD261116C00592500",
+      "underlying": "AMD",
+      "qty": 1,
+      "entry_cost": 62.0,
+      "entry_price": 0.62,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-13T15:27:41.007508+00:00",
+      "entry_order_id": "3a13257f-e892-4400-96c0-abbd17de88af"
     }
   ],
+  "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {
     "b52": 52.0,
@@ -168,7 +191,9 @@
     "b91": 74.0,
     "b12": 46.0,
     "b62": 60.0,
-    "b63": 42.0
+    "b63": 42.0,
+    "b65": 18.0,
+    "b14": 62.0
   },
   "session_date": "2026-11-13",
   "entries_locked": [
@@ -186,7 +211,8 @@
     "91|S406|2026-11-13",
     "62|S167|2026-11-13",
     "63|S166|2026-11-13",
-    "65|S163|2026-11-13"
+    "65|S163|2026-11-13",
+    "14|S352|2026-11-13"
   ],
   "processed_orders": [
     "aaf16a0f-80f4-4fa9-b44e-149d1478a276",
@@ -633,9 +659,11 @@
     "b77beeee-5a8b-4317-98fb-5ef38aedd1a7",
     "6232fbb7-a5bf-4d60-b74d-5fbfd65448b0",
     "4139c62a-cfe7-4363-b8a2-f8f0030533c8",
-    "81425145-69c5-4e52-be5f-e6e3210d16fb"
+    "81425145-69c5-4e52-be5f-e6e3210d16fb",
+    "7a0be455-2b9d-4924-9200-36766781f8e3",
+    "3a13257f-e892-4400-96c0-abbd17de88af"
   ],
-  "submitted_today": 15,
+  "submitted_today": 16,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-13"
 }

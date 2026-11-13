@@ -79,7 +79,7 @@ S356,GapDown_14DTE,14d,drop,non-positive median return,76,39,19,20,17.3,-18.92,-
 S361,RubberBand_2DTE,2d,drop,non-positive median return,180,76,34,42,66.73,-19.38,-67.59,-53.55,257.22,101.0,29,105,3,3,23,18.4
 S174,RubberBand long call EOD,RubberBand (dropped),drop,non-positive median return,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,130,0,0,6,50.4
 S173,MomReversal long call,MomRev,drop,non-positive median return,1625,415,154,261,15.19,-31.51,-77.18,-62.95,101.9,62.64,8,130,0,0,12,27.5
-S352,GapDown_2DTE,2d,drop,non-positive median return,165,71,33,38,43.33,-33.33,-71.43,-51.85,285.71,272.0,27,105,2,2,16,16.9
+S352,GapDown_2DTE,2d,drop,non-positive median return,166,71,33,38,43.33,-33.33,-71.43,-51.85,285.71,272.0,27,105,3,2,16,16.9
 S404,GapDown_OTM2,3d,drop,non-positive median return,225,116,55,61,7.78,-33.37,-65.69,-50.0,91.53,733.0,40,105,8,8,27,10.3
 S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1470,255,82,173,2.52,-35.29,-63.24,-53.42,93.89,-1276.78,11,130,0,0,16,25.9
 S355,GapDown_7DTE,7d,drop,manually paused — excluded from new entries & reflected P&L,133,71,32,39,13.44,-37.5,-77.08,-63.7,138.64,367.0,17,105,0,0,9,38.0
@@ -92,7 +92,7 @@ S359,RubberBand_0DTE,0d,drop,non-positive median return,117,56,23,33,37.47,-44.4
 S353,GapDown_3DTE,3d,drop,non-positive median return,116,45,19,26,61.44,-46.15,-82.61,-69.7,264.21,125.0,12,105,0,0,10,22.2
 S207,GapDown_AtSupport,3d ATM gap-support,drop,manually paused — excluded from new entries & reflected P&L,62,37,2,35,-38.6,-47.06,-63.64,-55.71,-6.06,-822.0,2,109,0,0,3,43.2
 S407,RubberBand_ITM2,3d,drop,manually paused — excluded from new entries & reflected P&L,96,38,11,27,29.82,-47.73,-83.88,-61.54,266.42,33.0,7,105,0,0,7,26.3
-S163,A1 GapDown ATM call EOD,7d ATM,drop,non-positive median return,147,45,22,23,27.19,-48.65,-76.82,-60.0,88.16,890.0,20,115,1,1,17,33.3
+S163,A1 GapDown ATM call EOD,7d ATM,drop,non-positive median return,148,45,22,23,27.19,-48.65,-76.82,-60.0,88.16,890.0,20,115,2,1,17,33.3
 S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,drop,non-positive median return,150,33,15,18,54.19,-49.02,-71.88,-55.36,293.78,339.0,21,115,4,3,17,21.2
 S366,RubberBand_21DTE,21d,drop,manually paused — excluded from new entries & reflected P&L,50,21,9,12,0.28,-49.12,-56.92,-53.45,94.34,-63.0,8,101,0,0,3,42.9
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,drop,manually paused — excluded from new entries & reflected P&L,166,75,25,50,13.94,-49.18,-79.0,-60.0,99.05,158.0,18,109,0,0,11,40.0

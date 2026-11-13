@@ -13,7 +13,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 11,lab0011_s402_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-29,False,,,,,,,0,,,,idle
 12,lab0012_s403_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-13,False,,,,,,,0,UBER,S403,,entered_no_exit
 13,lab0013_s350_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-13,False,,0.0,-51.35,-51.35,-51.35,-51.35,-19.0,COIN,S350,stop_loss (-54.1%),closed
-14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-12,False,,,,,,,0,,,,idle
+14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-13,False,,,,,,,0,AMD,S352,,entered_no_exit
 15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-12,False,,,,,,,0,,,,idle
 16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-12,False,,,,,,,0,,,,idle
 17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-13,False,,0.0,-52.38,-52.38,-52.38,-52.38,-11.0,MSTR,S359,broker_fill_backfill,closed
@@ -64,7 +64,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 62,lab0062_s167_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-11-13,False,,0.0,-51.61,-51.61,-51.61,-51.61,-16.0,"AMD,UPST","S166,S167",stop_loss (-51.6%),closed
 63,lab0063_s166_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-13,False,,,,,,,0,AMD,S166,,entered_no_exit
 64,lab0064_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-13,False,,,,,,,0,AVGO,S168,,entered_no_exit
-65,lab0065_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-12,False,,,,,,,0,,,,idle
+65,lab0065_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-13,False,,,,,,,0,AVGO,S163,,entered_no_exit
 66,lab0066_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-11-13,False,,0.0,-70.17,-70.17,-51.16,-89.19,-55.0,"AMD,SMCI",S164,stop_loss (-73.0%); broker_fill_backfill,closed
 67,lab0067_s430_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-04,False,,,,,,,0,,,,idle
 90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,2,0,2026-11-13,False,,0.0,-42.77,-42.77,-40.32,-45.21,-58.0,"AMD,HOOD","S404,S406",broker_fill_backfill; broker_fill_backfill,closed
