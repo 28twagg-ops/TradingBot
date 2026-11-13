@@ -42,26 +42,6 @@
       "entry_order_id": "efd77ba2-bf1a-49a1-bc1b-b252efdac9c7"
     },
     {
-      "lot_id": "b752383863ca",
-      "bucket_id": 91,
-      "profile_name": "s406_only",
-      "strategy_id": "S406",
-      "occ_symbol": "HOOD261120C00086000",
-      "underlying": "HOOD",
-      "qty": 1,
-      "entry_cost": 74.0,
-      "entry_price": 0.74,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-13T15:11:49.666710+00:00",
-      "entry_order_id": "517afd99-7497-48b4-aa09-cbbed3f682a8"
-    },
-    {
       "lot_id": "000fbcc99ff2",
       "bucket_id": 12,
       "profile_name": "lab0012_s403_w2_1005_1045_r1",
@@ -133,22 +113,11 @@
       "qty": 1,
       "reason": "stop_loss (-53.5%)",
       "submitted": "2026-11-13T10:41:52"
-    },
-    {
-      "order_id": "b6b6175f-72ce-4658-bbef-ea36c0e0c3a3",
-      "lot_id": "b752383863ca",
-      "bucket_id": 91,
-      "strategy_id": "S406",
-      "occ_symbol": "HOOD261120C00086000",
-      "qty": 1,
-      "reason": "stop_loss (-40.5%)",
-      "submitted": "2026-11-13T11:22:08"
     }
   ],
   "bucket_open_premium": {
     "b52": 52.0,
     "b64": 43.0,
-    "b91": 74.0,
     "b12": 46.0,
     "b63": 42.0,
     "b14": 62.0
@@ -622,7 +591,8 @@
     "3a13257f-e892-4400-96c0-abbd17de88af",
     "60744863-b88e-497b-8758-4dbe6ead4ed9",
     "a197b7d8-9ba6-4372-837d-03544a7ee567",
-    "6cfe6fe4-a3c5-43f0-80ea-db72bb605f39"
+    "6cfe6fe4-a3c5-43f0-80ea-db72bb605f39",
+    "b6b6175f-72ce-4658-bbef-ea36c0e0c3a3"
   ],
   "submitted_today": 16,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
