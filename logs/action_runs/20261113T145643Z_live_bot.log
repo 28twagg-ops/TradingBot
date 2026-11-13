@@ -1,0 +1,67 @@
+14:56:44  INFO      Mode: morning_scan
+14:56:44  INFO      Morning scan already completed today (2026-11-13T14:47:34.283189Z) — exits-only pass
+14:56:44  INFO        Daily log -> logs/daily/2026-11-13.md
+14:56:44  INFO        Daily log reconciled -> logs/daily/2026-11-13.md (1 ledger rows)
+14:56:45  INFO        place_all_stops: checking 3 positions...
+14:56:45  INFO        STOP skipped ENS: fractional (0.2398 shares) — software exit will handle it
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1791: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  if (getattr(o, "order_type", None) in (OrderType.STOP,
+14:56:45  INFO        STOP already live PFE @ $28.63
+14:56:45  INFO        STOP skipped STT: fractional (0.2007 shares) — software exit will handle it
+14:56:45  INFO        [positions] 3/3 (3 valid)
+14:56:45  INFO        SELL MARKET [urgent] ENS closed
+14:56:47  INFO        TX logged: SELL ENS  P&L -1.08%
+14:56:47  INFO        SELL MARKET [urgent] STT closed
+14:56:49  INFO        TX logged: SELL STT  P&L -0.54%
+14:56:50  INFO        Daily log -> logs/daily/2026-11-13.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:56 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $232.07|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  ENS  P&L -1.1%  $-0.38                         EXIT: stop_loss (-1.1%)|
+|  STT  P&L -0.5%  $-0.19                         EXIT: stop_loss (-0.5%)|
+|  PFE  P&L -0.1%  $-0.03                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  2 attempted  |  2 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         2|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  ENS                                         -1.08%  (threshold -0.50%)|
+|  STT                                         -0.54%  (threshold -0.50%)|
+|  Count                                                                2|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
