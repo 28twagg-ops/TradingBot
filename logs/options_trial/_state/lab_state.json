@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "2ca1f9048a10",
-      "bucket_id": 20,
-      "profile_name": "lab0020_s364_w2_1005_1045_r1",
-      "strategy_id": "S364",
-      "occ_symbol": "SMCI261120C00030500",
-      "underlying": "SMCI",
-      "qty": 1,
-      "entry_cost": 57.99999999999999,
-      "entry_price": 0.58,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-12T15:12:06.574055+00:00",
-      "entry_order_id": "8ff6a1bf-555f-4f42-8f05-05efb6c7e1e5"
-    },
-    {
       "lot_id": "137dab4f981c",
       "bucket_id": 62,
       "profile_name": "lab0062_s166_w2_1005_1045_r1",
@@ -40,26 +20,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-12T15:36:55.329769+00:00",
       "entry_order_id": "3a8ad603-7e9e-4989-945b-d8af3e45237a"
-    },
-    {
-      "lot_id": "0bdbdac21ad2",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S404",
-      "occ_symbol": "AMD261116C00620000",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 62.0,
-      "entry_price": 0.62,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-13T14:43:09.855655+00:00",
-      "entry_order_id": "e1ffdb34-e679-48d8-b36a-6beae139c74d"
     },
     {
       "lot_id": "2c6f0aafbb41",
@@ -83,22 +43,10 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "1133bb81-238d-4b77-8347-4374afa3ad9f",
-      "lot_id": "2ca1f9048a10",
-      "bucket_id": 20,
-      "strategy_id": "S364",
-      "occ_symbol": "SMCI261120C00030500",
-      "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-11-13T09:47:42"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
-    "b20": 57.99999999999999,
     "b62": 31.0,
-    "b90": 135.0
+    "b90": 73.0
   },
   "session_date": "2026-11-13",
   "entries_locked": [
@@ -529,7 +477,9 @@
     "11aaa6af-abdf-4e92-a07b-9b4efaae161f",
     "4aef8853-c4a9-40d2-949e-a9459d443f30",
     "e1ffdb34-e679-48d8-b36a-6beae139c74d",
-    "83e8c4b1-5605-45c5-9154-da1806949851"
+    "83e8c4b1-5605-45c5-9154-da1806949851",
+    "1133bb81-238d-4b77-8347-4374afa3ad9f",
+    "84b94f04-8833-47ad-bfaa-cf3fd606ce69"
   ],
   "submitted_today": 2,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

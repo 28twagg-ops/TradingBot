@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-13
 
-_Generated 2026-11-13T09:48:25.287927_
+_Generated 2026-11-13T09:52:34.611058_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-11-13T09:48:25.287927_
 
 ## Attribution health
 
-- Total exits: **3982**
+- Total exits: **3984**
 - Orphan exits (b0/orphan_reconcile): **423**
 - Orphan rate: **10.6%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -99,14 +99,14 @@ _Generated 2026-11-13T09:48:25.287927_
 | S398 (GapDown_ATM) | 3d | drop | 65 | 47.7 | -18.42 | -68.25 | -55.56 | +168.45 | 105 | 0 | 0 | $+765.00 | 24.6% | non-positive median return |
 | S356 (GapDown_14DTE) | 14d | drop | 39 | 48.7 | -18.92 | -52.08 | -48.95 | +62.61 | 105 | 1 | 2 | $+452.00 | 41.0% | non-positive median return |
 | S361 (RubberBand_2DTE) | 2d | drop | 76 | 44.7 | -19.38 | -67.59 | -53.55 | +257.22 | 105 | 3 | 3 | $+101.00 | 18.4% | non-positive median return |
-| S364 (RubberBand_7DTE) | 7d | drop | 74 | 47.3 | -24.10 | -85.24 | -58.11 | +82.54 | 105 | 2 | 1 | $-21.00 | 35.1% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 130 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
-| S404 (GapDown_OTM2) | 3d | drop | 115 | 47.8 | -31.03 | -65.89 | -50.00 | +91.53 | 105 | 7 | 7 | $+758.00 | 9.6% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 130 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
 | S352 (GapDown_2DTE) | 2d | drop | 71 | 46.5 | -33.33 | -71.43 | -51.85 | +285.71 | 105 | 2 | 2 | $+272.00 | 16.9% | non-positive median return |
+| S404 (GapDown_OTM2) | 3d | drop | 116 | 47.4 | -33.37 | -65.69 | -50.00 | +91.53 | 105 | 7 | 8 | $+733.00 | 10.3% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 255 | 32.2 | -35.29 | -63.24 | -53.42 | +93.89 | 130 | 0 | 0 | $-1,276.78 | 25.9% | non-positive median return |
 | S355 (GapDown_7DTE) | 7d | drop | 71 | 45.1 | -37.50 | -77.08 | -63.70 | +138.64 | 105 | 0 | 0 | $+367.00 | 38.0% | manually paused — excluded from new entries & reflected P&L |
 | S411 (RubberBand_OTM2) | 3d | drop | 66 | 47.0 | -38.16 | -59.11 | -52.28 | +60.61 | 102 | 0 | 0 | $-278.00 | 15.2% | non-positive median return |
+| S364 (RubberBand_7DTE) | 7d | drop | 75 | 46.7 | -42.31 | -85.22 | -57.89 | +82.37 | 105 | 2 | 2 | $-50.00 | 34.7% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 56 | 33.9 | -42.86 | -83.93 | -65.20 | +103.47 | 105 | 0 | 0 | $-118.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 56 | 23.2 | -43.65 | -86.66 | -54.73 | +95.51 | 109 | 0 | 0 | $-401.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S359 (RubberBand_0DTE) | 0d | drop | 55 | 41.8 | -44.44 | -71.32 | -58.08 | +151.43 | 102 | 3 | 3 | $+80.00 | 18.2% | non-positive median return |
@@ -276,7 +276,7 @@ _Pipeline evaluation as of 2026-11-13. Auto-kill thresholds: median<-25% at n>=1
 | S361 | RubberBand_2DTE | 76 | -19.38% | 45% | INSUFFICIENT | 105 |
 | S362 | RubberBand_3DTE | 70 | +44.12% | 63% | INSUFFICIENT | 105 |
 | S363 | RubberBand_5DTE | 41 | -65.38% | 39% | INSUFFICIENT | 102 |
-| S364 | RubberBand_7DTE | 74 | -24.10% | 47% | INSUFFICIENT | 105 |
+| S364 | RubberBand_7DTE | 75 | -42.31% | 47% | INSUFFICIENT | 105 |
 | S365 | RubberBand_14DTE | 41 | +0.00% | 49% | INSUFFICIENT | 105 |
 | S366 | RubberBand_21DTE | 21 | -49.12% | 43% | INSUFFICIENT | 101 |
 | S367 | RubberBand_30DTE | 3 | -48.89% | 0% | WATCH | 101 |
@@ -316,7 +316,7 @@ _Pipeline evaluation as of 2026-11-13. Auto-kill thresholds: median<-25% at n>=1
 | S401 | Any_Gap_Down_Small | 135 | +0.00% | 50% | INSUFFICIENT | 105 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
 | S403 | Any_MA50_Touch | 82 | +50.88% | 61% | INSUFFICIENT | 105 |
-| S404 | GapDown_OTM2 | 115 | -31.03% | 48% | INSUFFICIENT | 105 |
+| S404 | GapDown_OTM2 | 116 | -33.37% | 47% | INSUFFICIENT | 105 |
 | S405 | GapDown_OTM3 | 56 | -42.86% | 34% | INSUFFICIENT | 105 |
 | S406 | RubberBand_ITM3 | 172 | +40.97% | 53% | INSUFFICIENT | 105 |
 | S407 | RubberBand_ITM2 | 38 | -47.73% | 29% | INSUFFICIENT | 105 |

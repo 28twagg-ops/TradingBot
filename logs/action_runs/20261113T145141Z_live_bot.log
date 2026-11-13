@@ -1,0 +1,61 @@
+14:51:42  INFO      Mode: morning_scan
+14:51:42  INFO      Morning scan already completed today (2026-11-13T14:47:34.283189Z) — exits-only pass
+14:51:42  INFO        Daily log -> logs/daily/2026-11-13.md
+14:51:42  INFO        Daily log reconciled -> logs/daily/2026-11-13.md (1 ledger rows)
+14:51:42  INFO        place_all_stops: checking 3 positions...
+14:51:42  INFO        STOP skipped ENS: fractional (0.2398 shares) — software exit will handle it
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1791: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  if (getattr(o, "order_type", None) in (OrderType.STOP,
+14:51:42  INFO        STOP already live PFE @ $28.63
+14:51:42  INFO        STOP skipped STT: fractional (0.2007 shares) — software exit will handle it
+14:51:42  INFO        [positions] 3/3 (3 valid)
+14:51:42  INFO        Daily log -> logs/daily/2026-11-13.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:51 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $232.75|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit logic                   stop-0.5% / 3d max  (midline at EOD only)|
++------------------------------------------------------------------------+
+|  STT  P&L -0.3%  $-0.09                                            HOLD|
+|  PFE  P&L +0.0%  $+0.01                                            HOLD|
+|  ENS  P&L +0.5%  $+0.17                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                             exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  0 attempted  |  0 filled  |  0 partial  |  0 pending  |  0 failed|
+|  Holds                                                                3|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
