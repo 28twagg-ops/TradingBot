@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-14T06:30Z | S04a | gap_down_quality | 25a58ee08c4861 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-14T06:29Z | S08a | Low hourly volatility predicts larger next‑hour  | 0441fdeaaf594c | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-14T06:28Z | S01a | BTC-USD hourly trend persistence | 8f61df1777028a | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-14T06:28Z | S05a | BTC-USD hourly trend persistence | eebed120268f76 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-14T06:27Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 05aeffbe7bbe66 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-14T03:14Z | S06b | BTC-USD hourly breakout on 12‑hour SMA | e6c8ff634ae677 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-14T03:14Z | S07b | Hourly trend persistence in BTC-USD across volat | a3a81b2dd3d7d5 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-14T03:13Z | S02b | BTC-USD hourly trend persistence after 6 consecu | 47c1904a487876 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-13T16:20Z | S02b | BTC-USD hourly trend persistence after 4 consecu | 3a430cffb981b7 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-13T16:19Z | S09b | BTC-USD hourly trend reversal after sustained 5‑ | d2433ea1e05d21 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-13T16:18Z | S04a | gap_down_quality | fa83709a6976bd | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-13T11:32Z | S08a | Low hourly volatility predicts larger next‑hour  | 4dd33db82e0b3e | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-13T11:32Z | S01a | BTC-USD hourly momentum reversion | 21bbc1da3a0dd8 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-13T11:31Z | S05a | BTC-USD hourly trend persistence | 0e9846b4183b29 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-13T11:30Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 1205b582188d3d | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-13T11:30Z | S10b | ETH-USD hourly mean reversion after 1% breakout  | 47f9f813165e10 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
