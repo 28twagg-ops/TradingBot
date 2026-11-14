@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "cd3160f424994701b27a1e86dab8f485",
+  "worker": "S02",
+  "cycle": "2026-11-14T06:01Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S02",
+    "cycle": "2026-11-14T06:01Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly extreme return mean reversion",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "75e08939151abe",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Find Devices - Apple iCloud",
+        "url": "https://www.icloud.com/find",
+        "snippet": "Find your Apple devices like iPhone, Apple Watch, AirPods and more with Find My. Play sound, activate Lost Mode, or locate devices from your Family Sharing group.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com/android/find/?login",
+        "snippet": "Google",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "iCloud - Find My - Apple",
+        "url": "https://www.apple.com/icloud/find-my/",
+        "snippet": "Easily locate your Apple devices, items with an AirTag, compatible third-party products, and friends and family — all with the Find My app.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Find academic or public sources that analyze BTC-USD price reversion after extreme hourly moves using only hourly close prices, wi",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 76.296,
+      "load_seconds": 0.028,
+      "eval_count": 279,
+      "prompt_eval_count": 1544,
+      "tokens_per_second": 8.293,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 17.7,
+        "free_ram_gb": 13.37,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-14T06:01Z",
+    "id": "75e08939151abe",
+    "topic": "BTC-USD hourly extreme return mean reversion",
+    "hypothesis": "BTC-USD hourly returns exceeding +2% are followed by a statistically significant negative return within the next 12 hours, indicating mean reversion.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "volume"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For the next 12 hours after an hourly BTC-USD close exceeds +2% return, if the price does not exhibit a statistically significant negative return (defined as mean reversion), then the hypothesis is falsified. This test must be conducted using only hourly close prices, with no interpolation, no exter",
+    "source_search": {
+      "query": "Find academic or public sources that analyze BTC-USD price reversion after extreme hourly moves using only hourly close prices, wi",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Find Devices - Apple iCloud",
+        "url": "https://www.icloud.com/find",
+        "snippet": "Find your Apple devices like iPhone, Apple Watch, AirPods and more with Find My. Play sound, activate Lost Mode, or locate devices from your Family Sharing group.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com/android/find/?login",
+        "snippet": "Google",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "iCloud - Find My - Apple",
+        "url": "https://www.apple.com/icloud/find-my/",
+        "snippet": "Easily locate your Apple devices, items with an AirTag, compatible third-party products, and friends and family — all with the Find My app.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "Find academic or public sources that analyze BTC-USD price reversion after extreme hourly moves using only hourly close prices, wi",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "volume"
+    ],
+    "hypothesis_timeframe": "12 hours",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
