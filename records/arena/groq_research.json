@@ -1,151 +1,5 @@
 [
   {
-    "worker": "S10",
-    "cycle": "2026-10-29T00:54Z",
-    "status": "RESEARCH_IDEA_NEEDS_DATA",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Bitcoin hourly realized volatility mean\u2011reversion trigger",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_DATA",
-    "experiment_id": "c19925f8fc4a56",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "Bitcoin hourly realized volatility calculation methods and mean\u2011reversion literature"
-  },
-  {
-    "worker": "S07",
-    "cycle": "2026-10-29T00:55Z",
-    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "reason": "ValueError"
-  },
-  {
-    "worker": "S03",
-    "cycle": "2026-10-29T00:55Z",
-    "status": "RESEARCH_IDEA_NEEDS_DATA",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Hourly mean reversion of Bitcoin and Ethereum returns",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_DATA",
-    "experiment_id": "74e5ee5b62144f",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "hourly mean reversion Bitcoin Ethereum returns 2024 study"
-  },
-  {
-    "worker": "S01",
-    "cycle": "2026-10-29T05:52Z",
-    "status": "RESEARCH_IDEA_NEEDS_DATA",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "BTC-USD hourly VWAP mean reversion after extreme deviations",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_DATA",
-    "experiment_id": "7c25b76c5755be",
-    "sources_found": 4,
-    "source_leads": [
-      {
-        "platform": "web",
-        "title": "Bitcoin price today, BTC to USD live price, marketcap and ...",
-        "url": "https://coinmarketcap.com/currencies/bitcoin/",
-        "snippet": "We update our BTC to USD price in real-time. Bitcoin is up 0.56% in the last 24 hours. The current CoinMarketCap ranking is #1, with a live market cap of $1,630,552,994,704 USD. It has a circulating supply of 20,104,981 BTC coins and a max.",
-        "read_level": "public_search_result_only"
-      },
-      {
-        "platform": "web",
-        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History ...",
-        "url": "https://finance.yahoo.com/quote/BTC-USD/",
-        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
-        "read_level": "public_search_result_only"
-      },
-      {
-        "platform": "web",
-        "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
-        "url": "https://www.tradingview.com/symbols/BTCUSD/",
-        "snippet": "What is Bitcoin price today? The current price of Bitcoin (BTC) is 81,095 USD \u2014 it has risen 0.36 % in the past 24 hours. Try placing this info into the context by checking out what coins are also gaining and losing at the moment and seeing",
-        "read_level": "public_search_result_only"
-      },
-      {
-        "platform": "web",
-        "title": "Bitcoin Price: BTC/USD Live Price Chart, Market Cap & News ...",
-        "url": "https://www.coingecko.com/en/coins/bitcoin",
-        "snippet": "Price of Bitcoin (BTC) today is $79,942.89 with a 24-hour trading volume of $26,684,159,363. Track Bitcoin's live price, market cap, news, and more on CoinGecko.",
-        "read_level": "public_search_result_only"
-      }
-    ],
-    "next_search_query": "BTC hourly VWAP mean reversion empirical studies 2024 2025"
-  },
-  {
-    "worker": "S02",
-    "cycle": "2026-10-29T05:53Z",
-    "status": "RESEARCHED",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "BTC-USD weekend drop followed by positive 12\u2011hour trend",
-    "strategy": {
-      "family": "trend",
-      "lookback": 24,
-      "threshold": 0.02
-    },
-    "test": {
-      "status": "HISTORICAL_PROXY_ONLY",
-      "research": {
-        "start": 26,
-        "end": 490,
-        "returns_pct": -0.517,
-        "drawdown_pct": -0.517,
-        "entries": 1
-      },
-      "retrospective_validation": {
-        "start": 490,
-        "end": 701,
-        "returns_pct": 0.0,
-        "drawdown_pct": 0.0,
-        "entries": 0
-      },
-      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
-    },
-    "action": "HOLD",
-    "experiment_id": "0d5870c7253154",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "BTC-USD weekend drop 2% 12-hour Monday return statistical analysis"
-  },
-  {
     "worker": "S06",
     "cycle": "2026-10-29T05:53Z",
     "status": "RESEARCH_IDEA_NEEDS_DATA",
@@ -19695,5 +19549,130 @@
       }
     ],
     "next_search_query": "BTC-USD hourly gap\u2011down >2% events list"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-11-14T17:17Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly trend reversal after sustained 10\u2011hour uptrend",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "f3ee59a814c90b",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "btc hourly 10 hour uptrend reversal frequency"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-11-14T17:18Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "ETH-USD hourly breakout above 5% SMA triggers mean reversion",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "de1283cc34081e",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "ETH-USD hourly 24\u2011hour SMA 5% breakout mean reversion backtest data"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-11-14T17:19Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly trend persistence after 6 consecutive positive hours",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "c8cd414bb2b8b7",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly trend persistence after 6 consecutive positive hours empirical study"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-11-14T17:19Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "Hourly trend persistence in BTC-USD under low volatility",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "1471385c251232",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC\u2011USD 12\u2011hour standard deviation calculation method"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-11-14T17:20Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD relative strength to SPY mean reversion",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "b61ca43c68778e",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly close 2020-2026 SPY hourly close 2020-2026 relative strength"
   }
 ]

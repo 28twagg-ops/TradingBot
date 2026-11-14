@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-14T17:20Z | S06b | BTC-USD relative strength to SPY mean reversion | b61ca43c68778e | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-14T17:19Z | S07b | Hourly trend persistence in BTC-USD under low vo | 1471385c251232 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-14T17:19Z | S02b | BTC-USD hourly trend persistence after 6 consecu | c8cd414bb2b8b7 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-14T17:18Z | S10b | ETH-USD hourly breakout above 5% SMA triggers me | de1283cc34081e | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-14T17:17Z | S09b | BTC-USD hourly trend reversal after sustained 10 | f3ee59a814c90b | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-14T17:07Z | S04a | gap_down_quality | 4e60eee4344031 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-14T17:06Z | S08a | Low hourly volatility predicts larger next‑hour  | fc73baa5b8f6de | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-14T17:05Z | S01a | BTC-USD hourly trend persistence | 6b56e354ff0b55 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-14T03:13Z | S02b | BTC-USD hourly trend persistence after 6 consecu | 47c1904a487876 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-14T03:12Z | S10b | ETH-USD hourly mean reversion after 5% breakout  | ec20d41267172e | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-14T03:12Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 99fa50714bcae3 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-13T23:40Z | S06b | BTC-USD relative strength to SPY reversion | f938604259da08 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-13T23:39Z | S07b | Hourly trend persistence in BTC-USD across regim | 15da8af807c104 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-13T23:39Z | S02b | BTC-USD hourly trend persistence after 4 consecu | 5a9da97230fafb | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-13T23:38Z | S09b | BTC-USD hourly trend reversal after sustained 10 | f1b6c9041c165a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-13T23:37Z | S04a | gap_down_quality | 85aab6610f6243 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
