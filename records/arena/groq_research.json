@@ -1,28 +1,5 @@
 [
   {
-    "worker": "S02",
-    "cycle": "2026-10-29T13:06Z",
-    "status": "RESEARCHED",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "BTC-USD weekly cycle: price tends to rebound within 24 hours after a >5% drop on Friday close",
-    "strategy": {
-      "family": "reversion",
-      "lookback": 24,
-      "threshold": 0.03
-    },
-    "test": {
-      "status": "INSUFFICIENT_HOURLY_HISTORY"
-    },
-    "action": "HOLD_INSUFFICIENT_HISTORY",
-    "experiment_id": "622c263bda0539",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "BTC-USD Friday drop >5% Saturday 24h recovery statistical analysis"
-  },
-  {
     "worker": "S06",
     "cycle": "2026-10-29T13:07Z",
     "status": "AI_UNAVAILABLE",
@@ -19832,5 +19809,30 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC-USD hourly close 2020-2026 12-hour SMA breakout"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-11-15T01:59Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly mean reversion at 12\u2011hour lag",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "76e6a4ea0cfc91",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly close price dataset 2015\u20112026"
   }
 ]

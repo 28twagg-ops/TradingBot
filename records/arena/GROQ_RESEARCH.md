@@ -6,6 +6,7 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-15T01:59Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | 76e6a4ea0cfc91 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-15T01:56Z | S06b | BTC-USD hourly breakout on 12‑hour SMA | 7258750608ec16 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-15T01:55Z | S07b | Hourly trend persistence in BTC-USD under low vo | ac66e1a1c249b5 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-15T01:55Z | S02b | BTC-USD hourly extreme return mean reversion | 45afa4cccdb828 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -40,7 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-14T10:55Z | S08a | Low hourly volatility predicts larger next‑hour  | 34a7fe6a378136 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-14T10:54Z | S01a | BTC-USD hourly trend persistence | a7c53e8e81aaff | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-14T10:54Z | S05a | BTC-USD hourly trend persistence | 66facc20fb5b24 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-14T10:53Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | 79ec6b75480d90 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
