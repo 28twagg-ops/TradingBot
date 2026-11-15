@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-15T09:24Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 288ef511a75f3f | HOLD |
+| 2026-11-15T09:23Z | S04a | gap_down_quality | 31244c45c8cc0b | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-15T09:23Z | S08a | Low hourly volatility predicts larger next‑hour  | e86b9835223dd5 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-15T09:22Z | S01a | BTC-USD hourly trend persistence | fe4bfbf6d69808 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-15T09:21Z | S05a | BTC-USD hourly breakout | 1f7e329afc6210 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-15T01:59Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | 76e6a4ea0cfc91 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-15T01:56Z | S06b | BTC-USD hourly breakout on 12‑hour SMA | 7258750608ec16 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-15T01:55Z | S07b | Hourly trend persistence in BTC-USD under low vo | ac66e1a1c249b5 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-14T15:09Z | S07b | Hourly trend persistence in BTC-USD | b0233a08123b82 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-14T15:08Z | S02b | BTC-USD hourly trend persistence after 6 consecu | fd3e6b431f1551 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-14T15:08Z | S10b | ETH-USD hourly mean reversion after 10% breakout | 4a008d1af5815a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-14T15:07Z | S09b | BTC-USD hourly trend reversal after sustained 10 | f1b6c9041c165a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-14T10:56Z | S04a | gap_down_quality | 90e99cdd57aeca | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-14T10:55Z | S08a | Low hourly volatility predicts larger next‑hour  | 34a7fe6a378136 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-14T10:54Z | S01a | BTC-USD hourly trend persistence | a7c53e8e81aaff | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-14T10:54Z | S05a | BTC-USD hourly trend persistence | 66facc20fb5b24 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

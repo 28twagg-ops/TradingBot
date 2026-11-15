@@ -1,124 +1,5 @@
 [
   {
-    "worker": "S06",
-    "cycle": "2026-10-29T13:07Z",
-    "status": "AI_UNAVAILABLE",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "safe_error": "GROQ_HTTP_400_unknown"
-  },
-  {
-    "worker": "S08",
-    "cycle": "2026-10-29T13:07Z",
-    "status": "RESEARCHED",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Volatility compression mean reversion in major crypto assets using a 12\u2011hour moving average of hourl",
-    "strategy": {
-      "family": "reversion",
-      "lookback": 12,
-      "threshold": 0.005
-    },
-    "test": {
-      "status": "HISTORICAL_PROXY_ONLY",
-      "research": {
-        "start": 14,
-        "end": 495,
-        "returns_pct": -7.273,
-        "drawdown_pct": -8.422,
-        "entries": 21
-      },
-      "retrospective_validation": {
-        "start": 495,
-        "end": 708,
-        "returns_pct": -6.21,
-        "drawdown_pct": -6.5,
-        "entries": 12
-      },
-      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
-    },
-    "action": "HOLD",
-    "experiment_id": "611b9a0b0523fb",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "search for empirical studies or backtests of volatility compression mean reversion in crypto using 12\u2011hour moving averages"
-  },
-  {
-    "worker": "S07",
-    "cycle": "2026-10-29T14:16Z",
-    "status": "AI_UNAVAILABLE",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "safe_error": "GROQ_HTTP_400_unknown"
-  },
-  {
-    "worker": "S06",
-    "cycle": "2026-10-29T14:16Z",
-    "status": "RESEARCH_IDEA_NEEDS_DATA",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_DATA",
-    "experiment_id": "c26347d808cabd",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum backtest results on academic or forum sites"
-  },
-  {
-    "worker": "S09",
-    "cycle": "2026-10-29T14:17Z",
-    "status": "RESEARCHED",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "BTC-USD mean reversion to 24\u2011hour SMA after large drawdowns",
-    "strategy": {
-      "family": "reversion",
-      "lookback": 24,
-      "threshold": 0.05
-    },
-    "test": {
-      "status": "HISTORICAL_PROXY_ONLY",
-      "research": {
-        "start": 26,
-        "end": 496,
-        "returns_pct": 0.0,
-        "drawdown_pct": 0.0,
-        "entries": 0
-      },
-      "retrospective_validation": {
-        "start": 496,
-        "end": 710,
-        "returns_pct": 0.0,
-        "drawdown_pct": 0.0,
-        "entries": 0
-      },
-      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
-    },
-    "action": "HOLD",
-    "experiment_id": "494185eec12562",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "BTC-USD mean reversion after 10% drawdown 24h SMA backtest results"
-  },
-  {
     "worker": "S05",
     "cycle": "2026-10-29T14:18Z",
     "status": "AI_UNAVAILABLE",
@@ -19834,5 +19715,145 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC-USD hourly close price dataset 2015\u20112026"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-11-15T09:21Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly breakout",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "1f7e329afc6210",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly breakout 20h 5%"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-11-15T09:22Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly trend persistence",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "fe4bfbf6d69808",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly trend persistence 20h 0.05% threshold 2024 2025 statistical significance"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-11-15T09:23Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Low hourly volatility predicts larger next\u2011hour return magnitude in BTC\u2011USD",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "e86b9835223dd5",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "empirical evidence low hourly volatility BTC next hour return magnitude"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-11-15T09:23Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "gap_down_quality",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "31244c45c8cc0b",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly gap\u2011down >2% events list"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-11-15T09:24Z",
+    "generation_index": 1,
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly trend reversal after sustained 10\u2011hour uptrend",
+    "strategy": {
+      "family": "trend",
+      "lookback": 10,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 12,
+        "end": 493,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 493,
+        "end": 705,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "288ef511a75f3f",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "btc hourly 10 hour uptrend reversal frequency"
   }
 ]
