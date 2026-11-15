@@ -4,7 +4,7 @@ This is a review of unverified experiments, not independent broker fills.
 
 Reviewer requests: 0 (max 3)
 
-* J01: NEEDS_MORE_EVIDENCE — Provider unavailable: ProviderConfigurationError
+* J01: NEEDS_MORE_EVIDENCE — Provider unavailable: TimeoutError
 * J02: NEEDS_MORE_EVIDENCE — Provider unavailable: ProviderConfigurationError
 * J03: NEEDS_MORE_EVIDENCE — Provider unavailable: ProviderConfigurationError
 

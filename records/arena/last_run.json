@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-15T22:52:07.856100+00:00",
+  "timestamp": "2026-11-15T23:25:31.832478+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -12,20 +12,20 @@
       "missing_quotes": []
     },
     "S02": {
-      "action": "HOLD",
+      "action": "BUY SOL-USD",
       "generation_index": 1,
-      "cash": 97.6340376,
-      "equity": 97.634,
-      "ledger_events": 8,
+      "cash": 58.88981782,
+      "equity": 97.5567,
+      "ledger_events": 9,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S03": {
-      "action": "HOLD",
+      "action": "SELL ETH-USD",
       "generation_index": 0,
-      "cash": 57.61654633,
-      "equity": 94.2755,
-      "ledger_events": 15,
+      "cash": 69.43985594,
+      "equity": 94.4044,
+      "ledger_events": 16,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -48,20 +48,20 @@
       "missing_quotes": []
     },
     "S06": {
-      "action": "HOLD",
+      "action": "BUY SOL-USD",
       "generation_index": 1,
-      "cash": 97.6340376,
-      "equity": 97.634,
-      "ledger_events": 8,
+      "cash": 58.88981782,
+      "equity": 97.5567,
+      "ledger_events": 9,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S07": {
-      "action": "HOLD",
+      "action": "BUY ETH-USD",
       "generation_index": 1,
-      "cash": 94.98207667,
-      "equity": 94.9821,
-      "ledger_events": 12,
+      "cash": 57.29087302,
+      "equity": 94.9068,
+      "ledger_events": 13,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -75,20 +75,20 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "HOLD",
+      "action": "BUY ETH-USD",
       "generation_index": 1,
-      "cash": 97.50625104,
-      "equity": 97.5063,
-      "ledger_events": 8,
+      "cash": 58.81392627,
+      "equity": 97.429,
+      "ledger_events": 9,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S10": {
-      "action": "HOLD",
+      "action": "BUY SOL-USD",
       "generation_index": 1,
-      "cash": 98.12479487,
-      "equity": 98.1248,
-      "ledger_events": 6,
+      "cash": 59.18579229,
+      "equity": 98.0471,
+      "ledger_events": 7,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     }

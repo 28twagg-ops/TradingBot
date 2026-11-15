@@ -1,10 +1,10 @@
 {
   "status": "PAPER_EVIDENCE_REVIEW",
-  "date": "2026-11-08",
+  "date": "2026-11-15",
   "judges": {
     "J01": {
       "verdict": "NEEDS_MORE_EVIDENCE",
-      "finding": "Provider unavailable: ProviderConfigurationError"
+      "finding": "Provider unavailable: TimeoutError"
     },
     "J02": {
       "verdict": "NEEDS_MORE_EVIDENCE",
