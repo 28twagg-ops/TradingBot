@@ -1,122 +1,5 @@
 [
   {
-    "worker": "S02",
-    "cycle": "2026-10-30T05:52Z",
-    "status": "RESEARCHED",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "BTC-USD weekend drop >5% Monday return pattern",
-    "strategy": {
-      "family": "trend",
-      "lookback": 24,
-      "threshold": 0.05
-    },
-    "test": {
-      "status": "INSUFFICIENT_HOURLY_HISTORY"
-    },
-    "action": "HOLD_INSUFFICIENT_HISTORY",
-    "experiment_id": "327fd3050a884f",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "BTC-USD weekend drop >5% Monday 1\u2011hour return statistical analysis"
-  },
-  {
-    "worker": "S08",
-    "cycle": "2026-10-30T05:53Z",
-    "status": "RESEARCH_IDEA_NEEDS_DATA",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Volatility compression mean reversion in BTC-USD using hourly realized volatility",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_DATA",
-    "experiment_id": "2d5a1dcd2b8807",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "search for empirical studies on hourly realized volatility mean reversion in Bitcoin"
-  },
-  {
-    "worker": "S06",
-    "cycle": "2026-10-30T05:54Z",
-    "status": "RESEARCH_IDEA_NEEDS_DATA",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_DATA",
-    "experiment_id": "996f7d4d476daa",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "BTC\u2011USD relative strength to SPY 24\u2011hour momentum trigger backtest results on reddit or independent blog"
-  },
-  {
-    "worker": "S09",
-    "cycle": "2026-10-30T05:54Z",
-    "status": "RESEARCHED",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "BTC-USD hourly breakout on 24h SMA with significant gap",
-    "strategy": {
-      "family": "breakout",
-      "lookback": 24,
-      "threshold": 0.01
-    },
-    "test": {
-      "status": "HISTORICAL_PROXY_ONLY",
-      "research": {
-        "start": 26,
-        "end": 490,
-        "returns_pct": -0.8,
-        "drawdown_pct": -0.8,
-        "entries": 2
-      },
-      "retrospective_validation": {
-        "start": 490,
-        "end": 701,
-        "returns_pct": 0.0,
-        "drawdown_pct": 0.0,
-        "entries": 0
-      },
-      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
-    },
-    "action": "HOLD",
-    "experiment_id": "a32fe7c532414e",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "BTC-USD 24h SMA breakout gap 1% hourly return study"
-  },
-  {
-    "worker": "S03",
-    "cycle": "2026-10-30T05:55Z",
-    "status": "AI_UNAVAILABLE",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "safe_error": "GROQ_HTTP_400_unknown"
-  },
-  {
     "worker": "S04",
     "cycle": "2026-10-30T07:05Z",
     "status": "RESEARCHED",
@@ -19926,5 +19809,130 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "btc hourly 10 hour uptrend reversal frequency"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-11-15T17:58Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "ETH-USD hourly breakout above 5% of 24\u2011hour SMA triggers mean reversion",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "23329497459594",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "ETH\u2011USD hourly 24\u2011hour SMA 5% breakout mean reversion backtest data"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-11-15T17:58Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly trend persistence after 4 consecutive positive hours",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "3b38451461f1a8",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly trend persistence after 4 consecutive positive hours empirical study"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-11-15T17:59Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "Hourly trend persistence in BTC-USD across market regimes",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "a3a81b2dd3d7d5",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD 12\u2011hour standard deviation calculation method"
+  },
+  {
+    "worker": "S06",
+    "cycle": "2026-11-15T18:00Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly SMA crossover momentum",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "828fa51b76b283",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly SMA 12 24 crossovers 2020-2026"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-11-15T18:00Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly mean reversion at 12\u2011hour lag",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "7fc5ab3fe332e8",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly close price dataset 2015\u20112026"
   }
 ]
