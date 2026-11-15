@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "cc99b8f4a5bd4a3a9bc1b94df09588c6",
+  "worker": "S05",
+  "cycle": "2026-11-15T10:17Z",
+  "generation_index": 0,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S05",
+    "cycle": "2026-11-15T10:17Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "regime shifts in cryptocurrency markets with measurable thresholds and fee-embedded performance vali",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "order_book",
+        "volume",
+        "fundamentals"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "bd89d1602be539",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com/xhtml/search",
+        "snippet": "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Search - Microsoft Bing",
+        "url": "https://www.bing.com/",
+        "snippet": "Search with Microsoft Bing and use the power of AI to find information, explore webpages, images, videos, maps, and more. A smart search engine for the forever curious.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Yahoo Search - Web Search",
+        "url": "https://search.yahoo.com/",
+        "snippet": "Ask a question and get a clear answer from trusted sources, powered by Yahoo Scout.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Google Search - A new kind of help",
+        "url": "https://search.google/",
+        "snippet": "Explore a new kind of help for your everyday with breakthroughs in Search intelligence from Google I/O.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "search for academic papers or technical analysis studies on regime shifts in cryptocurrency markets with measurable thresholds and",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 125.647,
+      "load_seconds": 0.015,
+      "eval_count": 286,
+      "prompt_eval_count": 1498,
+      "tokens_per_second": 4.84,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 40.3,
+        "free_ram_gb": 3.3,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-15T10:17Z",
+    "id": "bd89d1602be539",
+    "topic": "regime shifts in cryptocurrency markets with measurable thresholds and fee-embedded performance vali",
+    "hypothesis": "A 30-minute opening range breakout in BTC-USD, ETH-USD, or SOL-USD with a 2% threshold is an independently measurable event that initiates a genuine new regime with a probability greater than 0.05.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "order_book",
+        "volume",
+        "fundamentals"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "Test whether a 30-minute opening range breakout in BTC-USD, ETH-USD, or SOL-USD with a 2% threshold fails to generate a statistically significant regime shift when fees, realistic latency, slippage, and a fixed holdout are included in the out-of-sample evaluation.",
+    "source_search": {
+      "query": "search for academic papers or technical analysis studies on regime shifts in cryptocurrency markets with measurable thresholds and",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com/xhtml/search",
+        "snippet": "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Search - Microsoft Bing",
+        "url": "https://www.bing.com/",
+        "snippet": "Search with Microsoft Bing and use the power of AI to find information, explore webpages, images, videos, maps, and more. A smart search engine for the forever curious.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Yahoo Search - Web Search",
+        "url": "https://search.yahoo.com/",
+        "snippet": "Ask a question and get a clear answer from trusted sources, powered by Yahoo Scout.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Google Search - A new kind of help",
+        "url": "https://search.google/",
+        "snippet": "Explore a new kind of help for your everyday with breakthroughs in Search intelligence from Google I/O.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "search for academic papers or technical analysis studies on regime shifts in cryptocurrency markets with measurable thresholds and",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "order_book",
+      "volume",
+      "fundamentals"
+    ],
+    "hypothesis_timeframe": "hourly close data only",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
