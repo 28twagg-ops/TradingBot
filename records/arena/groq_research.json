@@ -1,167 +1,5 @@
 [
   {
-    "worker": "S04",
-    "cycle": "2026-10-30T07:05Z",
-    "status": "RESEARCHED",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Hourly gap-down mean\u2011reversion in large\u2011cap cryptocurrency assets",
-    "strategy": {
-      "family": "reversion",
-      "lookback": 5,
-      "threshold": 0.01
-    },
-    "test": {
-      "status": "HISTORICAL_PROXY_ONLY",
-      "research": {
-        "start": 7,
-        "end": 492,
-        "returns_pct": -2.811,
-        "drawdown_pct": -2.811,
-        "entries": 10
-      },
-      "retrospective_validation": {
-        "start": 492,
-        "end": 703,
-        "returns_pct": -2.743,
-        "drawdown_pct": -4.268,
-        "entries": 4
-      },
-      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
-    },
-    "action": "HOLD",
-    "experiment_id": "1e31421fe4862a",
-    "sources_found": 4,
-    "source_leads": [
-      {
-        "platform": "web",
-        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
-        "url": "https://finance.yahoo.com/quote/BTC-USD/",
-        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
-        "read_level": "public_search_result_only"
-      },
-      {
-        "platform": "web",
-        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
-        "url": "https://coinmarketcap.com/currencies/bitcoin/",
-        "snippet": "The live Bitcoin price today is $77,865.26 USD with a 24-hour trading volume of $51,396,160,215.72 USD. We update our BTC to USD price in real-time.",
-        "read_level": "public_search_result_only"
-      },
-      {
-        "platform": "web",
-        "title": "BTC USD \u2014 Bitcoin Price and Chart \u2014 TradingView",
-        "url": "https://www.tradingview.com/symbols/BTCUSD/",
-        "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
-        "read_level": "public_search_result_only"
-      },
-      {
-        "platform": "web",
-        "title": "BRTI - CFB - CF Benchmarks",
-        "url": "https://www.cfbenchmarks.com/data/indices/BRTI",
-        "snippet": "The CME CF Bitcoin Real Time Index (BRTI) is a once per 200 millisecond benchmark index price for Bitcoin that aggregates order data from Bitcoin-USD markets operated by major cryptocurrency exchanges that conform to the CME CF Constituent ",
-        "read_level": "public_search_result_only"
-      }
-    ],
-    "next_search_query": "BTC-USD hourly gap\u2011down events 1% threshold 5\u2011hour return distribution statistics"
-  },
-  {
-    "worker": "S05",
-    "cycle": "2026-10-30T07:05Z",
-    "status": "RESEARCH_IDEA_NEEDS_DATA",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Hourly Opening Range Breakout with Volatility Filter on 24/7 Crypto Spot Markets",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_DATA",
-    "experiment_id": "8ea6c5ce8fa7b1",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "obtain hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026"
-  },
-  {
-    "worker": "S07",
-    "cycle": "2026-10-30T07:06Z",
-    "status": "RESEARCH_IDEA_NEEDS_DATA",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Hourly mean reversion after consecutive negative returns in crypto",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_DATA",
-    "experiment_id": "25e91762cb8d04",
-    "sources_found": 4,
-    "source_leads": [
-      {
-        "platform": "web",
-        "title": "EMPIRICAL Definition & Meaning - Merriam-Webster",
-        "url": "https://www.merriam-webster.com/dictionary/empirical",
-        "snippet": "The meaning of EMPIRICAL is originating in or based on observation or experience. How to use empirical in a sentence. Empirical Has ...",
-        "read_level": "public_search_result_only"
-      },
-      {
-        "platform": "web",
-        "title": "EMPIRICAL | English meaning - Cambridge Dictionary",
-        "url": "https://dictionary.cambridge.org/dictionary/english/empirical",
-        "snippet": "EMPIRICAL definition: 1. based on what is experienced or seen rather than on theory: 2. based on what is experienced or\u2026. Learn more.",
-        "read_level": "public_search_result_only"
-      },
-      {
-        "platform": "web",
-        "title": "Empirical evidence - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Empirical_evidence",
-        "snippet": "Empirical evidence is evidence obtained through sense experience or experimental procedure. [1] It is of central importance to the sciences and plays a role in various other fields, like epistemology and law. The terms evidence and empirica",
-        "read_level": "public_search_result_only"
-      },
-      {
-        "platform": "web",
-        "title": "EMPIRICAL Definition & Meaning | Dictionary.com",
-        "url": "https://www.dictionary.com/browse/empirical",
-        "snippet": "EMPIRICAL definition: derived from or guided by direct experience or by experiment, rather than abstract principles or theory. See examples of empirical used in a sentence.",
-        "read_level": "public_search_result_only"
-      }
-    ],
-    "next_search_query": "empirical evidence of mean reversion after negative streaks in crypto hourly data"
-  },
-  {
-    "worker": "S03",
-    "cycle": "2026-10-30T07:07Z",
-    "status": "REJECTED_INVALID_MODEL_EXPERIMENT",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "reason": "ValueError"
-  },
-  {
-    "worker": "S10",
-    "cycle": "2026-10-30T07:08Z",
-    "status": "AI_UNAVAILABLE",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "safe_error": "GROQ_HTTP_400_unknown"
-  },
-  {
     "worker": "S03",
     "cycle": "2026-10-30T10:26Z",
     "status": "RESEARCH_IDEA_NEEDS_DATA",
@@ -19934,5 +19772,153 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "BTC-USD hourly close price dataset 2015\u20112026"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-11-15T21:47Z",
+    "generation_index": 0,
+    "status": "RESEARCHED",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly trend persistence",
+    "strategy": {
+      "family": "trend",
+      "lookback": 20,
+      "threshold": 0.05
+    },
+    "test": {
+      "status": "HISTORICAL_PROXY_ONLY",
+      "research": {
+        "start": 22,
+        "end": 501,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "retrospective_validation": {
+        "start": 501,
+        "end": 717,
+        "returns_pct": 0.0,
+        "drawdown_pct": 0.0,
+        "entries": 0
+      },
+      "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+    },
+    "action": "HOLD",
+    "experiment_id": "17133732029d8d",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly trend persistence 20h 5% frequency"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-11-15T21:47Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly trend persistence",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "34aabaa4e9f640",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "snippet": "The live Bitcoin price today is $64,668.03 USD with a 24-hour trading volume of $49,979,449,765.98 USD. We update our BTC to USD price in real-time.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD hourly trend persistence 20h 0.05% threshold 2024 2025 statistical significance"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-11-15T21:48Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "Low hourly volatility predicts larger next\u2011hour return magnitude in BTC\u2011USD",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "859d00a90406aa",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "empirical evidence low hourly volatility BTC next hour return magnitude"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-11-15T21:49Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "gap_down_rebound",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "8c74f70acfb2f1",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly gap\u2011down >2% events list"
+  },
+  {
+    "worker": "S09",
+    "cycle": "2026-11-15T21:50Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly trend reversal after sustained 10\u2011hour uptrend",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "e7865f837fcfad",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "btc hourly 10 hour uptrend 5% reversal frequency"
   }
 ]
