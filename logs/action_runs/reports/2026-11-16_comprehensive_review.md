@@ -1699,3 +1699,69 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261116T145916Z
+
+- UTC timestamp: `20261116T145916Z`
+- GitHub run: [#15774](https://github.com/28twagg-ops/TradingBot/actions/runs/43882900259)
+- Run id: `43882900259`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261116T145916Z_live_bot.log`, `logs/action_runs/20261116T145916Z_live_options.log`, `logs/action_runs/20261116T145916Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1865 | 48.7 | -25.0 | +35.7 | $+21,037 |
+| TAINTED | 2132 | 30.5 | -42.3 | +7.2 | $-13,912 |
+| KEEP-only | 920 | 60.5 | +51.6 | +52.0 | $+14,926 |
+| KEEP-only recent | 735 | 59.6 | +53.3 | +57.5 | $+11,417 |
+
+- KEEP strategies (23): S163, S164, S166, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S396, S397, S403, S404, S406, S410
+- KILL strategies (23): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S398, S399, S401, S405, S407, S408, S432
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-11-16T09:07:06.822782-05:00","date":"2026-11-16","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.3,"phases_s":{"reconcile":0.53},"signals":0,"placed":0,"equity":995171.35,"open_positions":3,"pending_orders":0,"open_lots":3,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"15773","github_run_id":"43882067289","status":"ok","data_quality":{"clean":{"n":1865,"win":48.69,"med":-25.0,"avg":35.73,"pnl":21036.83},"tainted":{"n":2132,"win":30.49,"med":-42.34,"avg":7.21,"pnl":-13912.28},"keep_only":{"n":920,"win":60.54,"med":51.59,"avg":51.99,"pnl":14926.45},"keep_only_recent":{"n":735,"win":59.59,"med":53.33,"avg":57.48,"pnl":11417.0},"keep_strategies":["S163","S164","S166","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S396","S397","S403","S404","S406","S410"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S398","S399","S401","S405","S407","S408","S432"]}}
+```
+
+### Live bot (tail)
+
+```text
+14:59:16  INFO      Mode: morning_scan
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:2928: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  "type": str(getattr(o, "order_type", "?")),
+14:59:17  INFO        [positions] 3/3 (3 valid)
+14:59:17  INFO        SELL LIMIT TECH  qty=0.476602405  limit=$72.83  id=3f0d54c7-a7c8-4e7f-a58c-61b454d4fd19
+14:59:47  INFO        SELL LIMIT filled TECH (confirmed by position check)
+14:59:47  INFO        TX logged: SELL TECH  P&L 0.0%
+14:59:47  INFO      Fetching tickers (universe=both)...
+14:59:48  INFO        S&P 500: 503
+14:59:48  INFO        MidCap 400: 400
+14:59:48  INFO        Total: 903 tickers
+14:59:48  INFO        [universe] 40/901 (40 valid)
+14:59:50  INFO        [universe] 80/901 (80 valid)
+14:59:50  INFO        [universe] 120/901 (120 valid)
+14:59:51  INFO        [universe] 160/901 (160 valid)
+14:59:52  INFO        [universe] 200/901 (199 valid)
+15:00:02  INFO        [universe] 240/901 (238 valid)
+15:00:13  INFO        [universe] 280/901 (278 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---

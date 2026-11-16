@@ -1,0 +1,18 @@
+14:59:16  INFO      Mode: morning_scan
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:2928: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  "type": str(getattr(o, "order_type", "?")),
+14:59:17  INFO        [positions] 3/3 (3 valid)
+14:59:17  INFO        SELL LIMIT TECH  qty=0.476602405  limit=$72.83  id=3f0d54c7-a7c8-4e7f-a58c-61b454d4fd19
+14:59:47  INFO        SELL LIMIT filled TECH (confirmed by position check)
+14:59:47  INFO        TX logged: SELL TECH  P&L 0.0%
+14:59:47  INFO      Fetching tickers (universe=both)...
+14:59:48  INFO        S&P 500: 503
+14:59:48  INFO        MidCap 400: 400
+14:59:48  INFO        Total: 903 tickers
+14:59:48  INFO        [universe] 40/901 (40 valid)
+14:59:50  INFO        [universe] 80/901 (80 valid)
+14:59:50  INFO        [universe] 120/901 (120 valid)
+14:59:51  INFO        [universe] 160/901 (160 valid)
+14:59:52  INFO        [universe] 200/901 (199 valid)
+15:00:02  INFO        [universe] 240/901 (238 valid)
+15:00:13  INFO        [universe] 280/901 (278 valid)
