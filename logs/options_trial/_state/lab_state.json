@@ -222,26 +222,6 @@
       "entry_order_id": "7ba5a8a7-e8ba-4443-a74c-b1fecc99f345"
     },
     {
-      "lot_id": "a33d6ab5544f",
-      "bucket_id": 17,
-      "profile_name": "lab0017_s359_w2_1005_1045_r1",
-      "strategy_id": "S359",
-      "occ_symbol": "AMD261116C00560000",
-      "underlying": "AMD",
-      "qty": 1,
-      "entry_cost": 4.0,
-      "entry_price": 0.04,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-16T15:12:28.272827+00:00",
-      "entry_order_id": "9f3ef6b2-bc7e-4b6a-a77f-7dbba5134788"
-    },
-    {
       "lot_id": "f6e9b10181a1",
       "bucket_id": 63,
       "profile_name": "lab0063_s166_w2_1005_1045_r1",
@@ -314,6 +294,22 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.6000000000000001
+    },
+    {
+      "order_id": "e3c3d3ee-96a0-43b3-b057-9dbe3be083d8",
+      "bucket_id": 65,
+      "strategy_id": "S163",
+      "occ_symbol": "HOOD261120C00081000",
+      "underlying": "HOOD",
+      "qty": 1,
+      "limit": 0.51,
+      "profile_name": "lab0065_s163_w2_1005_1045_r1",
+      "submitted": "2026-11-16",
+      "detail": "gap -5.0%",
+      "spread_frac": 0.08000000000000007,
+      "buy_offset": -0.01,
+      "take_profit": 0.75,
+      "stop_loss": -0.75
     }
   ],
   "pending_exits": [
@@ -340,7 +336,6 @@
     "b13": 18.0,
     "b49": 72.0,
     "b16": 53.0,
-    "b17": 4.0,
     "b63": 19.0,
     "b64": 52.0
   },
@@ -361,7 +356,8 @@
     "2007|S430|2026-11-16",
     "17|S359|2026-11-16",
     "16|S357|2026-11-16",
-    "49|S396|2026-11-16"
+    "49|S396|2026-11-16",
+    "65|S163|2026-11-16"
   ],
   "processed_orders": [
     "aaf16a0f-80f4-4fa9-b44e-149d1478a276",
@@ -833,9 +829,10 @@
     "9f3ef6b2-bc7e-4b6a-a77f-7dbba5134788",
     "35c992f8-a5d5-43ad-bf1e-fa2557af9e0c",
     "dbe2ad22-ea8d-456f-a221-27c1a1c07de0",
-    "49ac8790-df4d-4318-a64f-6bd93fb40813"
+    "49ac8790-df4d-4318-a64f-6bd93fb40813",
+    "745925a3-d564-4ef1-8fd7-8753dd572c12"
   ],
-  "submitted_today": 16,
+  "submitted_today": 17,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-16"
 }
