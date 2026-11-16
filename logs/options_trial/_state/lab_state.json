@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "000fbcc99ff2",
-      "bucket_id": 12,
-      "profile_name": "lab0012_s403_w2_1005_1045_r1",
-      "strategy_id": "S403",
-      "occ_symbol": "UBER261120C00072000",
-      "underlying": "UBER",
-      "qty": 1,
-      "entry_cost": 46.0,
-      "entry_price": 0.46,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-13T15:11:49.672458+00:00",
-      "entry_order_id": "31e951e9-447a-4785-b4d7-bebdd18d4a32"
-    },
-    {
       "lot_id": "4a1761d6cbe3",
       "bucket_id": 91,
       "profile_name": "s406_only",
@@ -262,43 +242,27 @@
       "entry_order_id": "e3c3d3ee-96a0-43b3-b057-9dbe3be083d8"
     },
     {
-      "lot_id": "239ff81ea1e8",
-      "bucket_id": 2007,
-      "profile_name": "day_trader_analytics_s430",
-      "strategy_id": "S430",
-      "occ_symbol": "CELH261120C00035000",
-      "underlying": "CELH",
-      "qty": 1,
-      "entry_cost": 18.0,
-      "entry_price": 0.18,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-16T15:46:51.949548+00:00",
-      "entry_order_id": "2ecff439-621e-49a2-b8f5-c075c3566e69"
-    }
-  ],
-  "pending_orders": [
-    {
-      "order_id": "c1815520-c837-45d6-8656-9c275c449d50",
+      "lot_id": "29f3d2d55e59",
       "bucket_id": 66,
+      "profile_name": "lab0066_s164_w2_1005_1045_r1",
       "strategy_id": "S164",
       "occ_symbol": "NVDA261116C00167500",
       "underlying": "NVDA",
       "qty": 1,
-      "limit": 0.05,
-      "profile_name": "lab0066_s164_w2_1005_1045_r1",
-      "submitted": "2026-11-16",
-      "detail": "gap -2.4%",
-      "spread_frac": 0.18181818181818174,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    },
+      "entry_cost": 5.0,
+      "entry_price": 0.05,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-16T16:01:58.538636+00:00",
+      "entry_order_id": "c1815520-c837-45d6-8656-9c275c449d50"
+    }
+  ],
+  "pending_orders": [
     {
       "order_id": "ab04a7a8-7185-4ca0-affc-3d89d7df47cf",
       "bucket_id": 14,
@@ -326,20 +290,9 @@
       "qty": 1,
       "reason": "stop_loss (-40.6%)",
       "submitted": "2026-11-16T10:21:48"
-    },
-    {
-      "order_id": "90c3ba9d-e9a3-4f76-98fe-24a248eb7031",
-      "lot_id": "000fbcc99ff2",
-      "bucket_id": 12,
-      "strategy_id": "S403",
-      "occ_symbol": "UBER261120C00072000",
-      "qty": 1,
-      "reason": "take_profit (+50.0%)",
-      "submitted": "2026-11-16T10:56:46"
     }
   ],
   "bucket_open_premium": {
-    "b12": 46.0,
     "b91": 32.0,
     "b90": 68.0,
     "b51": 43.0,
@@ -352,7 +305,7 @@
     "b63": 19.0,
     "b64": 52.0,
     "b65": 51.0,
-    "b2007": 18.0
+    "b66": 5.0
   },
   "session_date": "2026-11-16",
   "entries_locked": [
@@ -849,7 +802,10 @@
     "745925a3-d564-4ef1-8fd7-8753dd572c12",
     "e3c3d3ee-96a0-43b3-b057-9dbe3be083d8",
     "aeef554e-4576-42c9-b0ab-c7118b5e3da9",
-    "2ecff439-621e-49a2-b8f5-c075c3566e69"
+    "2ecff439-621e-49a2-b8f5-c075c3566e69",
+    "90c3ba9d-e9a3-4f76-98fe-24a248eb7031",
+    "c1815520-c837-45d6-8656-9c275c449d50",
+    "9dedea7b-22b0-4c84-8dcf-24b3fcfedc13"
   ],
   "submitted_today": 18,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
