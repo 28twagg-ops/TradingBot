@@ -260,6 +260,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-16T15:17:05.506087+00:00",
       "entry_order_id": "dbe2ad22-ea8d-456f-a221-27c1a1c07de0"
+    },
+    {
+      "lot_id": "7d2c4bed3ecf",
+      "bucket_id": 65,
+      "profile_name": "lab0065_s163_w2_1005_1045_r1",
+      "strategy_id": "S163",
+      "occ_symbol": "HOOD261120C00081000",
+      "underlying": "HOOD",
+      "qty": 1,
+      "entry_cost": 51.0,
+      "entry_price": 0.51,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-16T15:37:55.942030+00:00",
+      "entry_order_id": "e3c3d3ee-96a0-43b3-b057-9dbe3be083d8"
     }
   ],
   "pending_orders": [
@@ -296,17 +316,17 @@
       "stop_loss": -0.6000000000000001
     },
     {
-      "order_id": "e3c3d3ee-96a0-43b3-b057-9dbe3be083d8",
-      "bucket_id": 65,
-      "strategy_id": "S163",
-      "occ_symbol": "HOOD261120C00081000",
-      "underlying": "HOOD",
+      "order_id": "ab04a7a8-7185-4ca0-affc-3d89d7df47cf",
+      "bucket_id": 14,
+      "strategy_id": "S352",
+      "occ_symbol": "FSLY261120C00017000",
+      "underlying": "FSLY",
       "qty": 1,
-      "limit": 0.51,
-      "profile_name": "lab0065_s163_w2_1005_1045_r1",
+      "limit": 0.22,
+      "profile_name": "lab0014_s352_w2_1005_1045_r1",
       "submitted": "2026-11-16",
-      "detail": "gap -5.0%",
-      "spread_frac": 0.08000000000000007,
+      "detail": "gap -3.1%",
+      "spread_frac": 0.04444444444444448,
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
@@ -337,7 +357,8 @@
     "b49": 72.0,
     "b16": 53.0,
     "b63": 19.0,
-    "b64": 52.0
+    "b64": 52.0,
+    "b65": 51.0
   },
   "session_date": "2026-11-16",
   "entries_locked": [
@@ -357,7 +378,8 @@
     "17|S359|2026-11-16",
     "16|S357|2026-11-16",
     "49|S396|2026-11-16",
-    "65|S163|2026-11-16"
+    "65|S163|2026-11-16",
+    "14|S352|2026-11-16"
   ],
   "processed_orders": [
     "aaf16a0f-80f4-4fa9-b44e-149d1478a276",
@@ -830,9 +852,10 @@
     "35c992f8-a5d5-43ad-bf1e-fa2557af9e0c",
     "dbe2ad22-ea8d-456f-a221-27c1a1c07de0",
     "49ac8790-df4d-4318-a64f-6bd93fb40813",
-    "745925a3-d564-4ef1-8fd7-8753dd572c12"
+    "745925a3-d564-4ef1-8fd7-8753dd572c12",
+    "e3c3d3ee-96a0-43b3-b057-9dbe3be083d8"
   ],
-  "submitted_today": 17,
+  "submitted_today": 18,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-16"
 }
