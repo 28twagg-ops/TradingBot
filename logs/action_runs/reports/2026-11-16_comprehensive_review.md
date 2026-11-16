@@ -14117,3 +14117,75 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261116T203213Z
+
+- UTC timestamp: `20261116T203213Z`
+- GitHub run: [#15850](https://github.com/28twagg-ops/TradingBot/actions/runs/43950399594)
+- Run id: `43950399594`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261116T203213Z_live_bot.log`, `logs/action_runs/20261116T203213Z_live_options.log`, `logs/action_runs/20261116T203213Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1871 | 48.7 | -25.0 | +35.6 | $+21,091 |
+| TAINTED | 2138 | 30.4 | -42.5 | +7.0 | $-14,022 |
+| KEEP-only | 935 | 60.4 | +51.6 | +51.4 | $+15,021 |
+| KEEP-only recent | 750 | 59.5 | +53.2 | +56.6 | $+11,512 |
+
+- KEEP strategies (24): S163, S164, S166, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S396, S397, S403, S404, S406, S410, S430
+- KILL strategies (23): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S398, S399, S401, S405, S407, S408, S432
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-11-16T15:26:54.056911-05:00","date":"2026-11-16","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":4.3,"phases_s":{"reconcile":0.39,"cancel":0.19,"manage":2.46,"protective_stops":0.57},"signals":0,"placed":0,"equity":994083.01,"open_positions":8,"pending_orders":0,"open_lots":8,"submitted_today":18,"filled_today":17,"unattributed_contracts":0,"top_signals":[],"github_run":"15849","github_run_id":"43949546908","status":"ok","data_quality":{"clean":{"n":1871,"win":48.69,"med":-25.0,"avg":35.64,"pnl":21090.83},"tainted":{"n":2138,"win":30.4,"med":-42.46,"avg":7.04,"pnl":-14022.28},"keep_only":{"n":935,"win":60.43,"med":51.56,"avg":51.36,"pnl":15021.45},"keep_only_recent":{"n":750,"win":59.47,"med":53.17,"avg":56.57,"pnl":11512.0},"keep_strategies":["S163","S164","S166","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S396","S397","S403","S404","S406","S410","S430"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S398","S399","S401","S405","S407","S408","S432"]}}
+```
+
+### Live bot (tail)
+
+```text
+20:32:14  INFO      Mode: evening_prep
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:2928: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  "type": str(getattr(o, "order_type", "?")),
+20:32:15  INFO        [prep_positions] 2/2 (2 valid)
+20:32:15  INFO        Universe cache hit: 903 tickers (tickers_2026-11-16.json)
+20:32:15  INFO        [prep_universe] 40/901 (40 valid)
+20:32:16  INFO        [prep_universe] 80/901 (80 valid)
+20:32:17  INFO        [prep_universe] 120/901 (120 valid)
+20:32:18  INFO        [prep_universe] 160/901 (160 valid)
+20:32:18  INFO        [prep_universe] 200/901 (199 valid)
+20:32:28  INFO        [prep_universe] 240/901 (238 valid)
+20:32:41  INFO        [prep_universe] 280/901 (278 valid)
+20:32:54  INFO        [prep_universe] 320/901 (318 valid)
+20:33:04  INFO        [prep_universe] 360/901 (358 valid)
+20:33:16  INFO        [prep_universe] 400/901 (398 valid)
+20:33:29  INFO        [prep_universe] 440/901 (438 valid)
+20:33:42  INFO        [prep_universe] 480/901 (477 valid)
+20:33:54  INFO        [prep_universe] 520/901 (517 valid)
+20:34:04  INFO        [prep_universe] 560/901 (557 valid)
+20:34:17  INFO        [prep_universe] 600/901 (597 valid)
+20:34:30  INFO        [prep_universe] 640/901 (637 valid)
+20:34:42  INFO        [prep_universe] 680/901 (677 valid)
+20:34:52  INFO        [prep_universe] 720/901 (717 valid)
+20:35:05  INFO        [prep_universe] 760/901 (757 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
