@@ -94,9 +94,9 @@ S167,GapDown long call 3 DTE 1-OTM — P2C,3d 1-OTM,drop,non-positive median ret
 S207,GapDown_AtSupport,3d ATM gap-support,drop,manually paused — excluded from new entries & reflected P&L,62,37,2,35,-38.6,-47.06,-63.64,-55.71,-6.06,-822.0,2,112,0,0,3,43.2
 S407,RubberBand_ITM2,3d,drop,manually paused — excluded from new entries & reflected P&L,96,38,11,27,29.82,-47.73,-83.88,-61.54,266.42,33.0,7,108,0,0,7,26.3
 S163,A1 GapDown ATM call EOD,7d ATM,drop,non-positive median return,149,46,22,24,25.51,-48.69,-76.42,-58.89,87.79,881.0,21,118,2,1,17,32.6
+S164,GapDown ATM 1-DTE — P2B arm,1d ATM,drop,non-positive median return,184,52,21,31,29.58,-49.05,-88.89,-52.45,171.91,280.0,34,118,4,4,19,13.5
 S366,RubberBand_21DTE,21d,drop,manually paused — excluded from new entries & reflected P&L,50,21,9,12,0.28,-49.12,-56.92,-53.45,94.34,-63.0,8,104,0,0,3,42.9
 S217,RSI_25_Bounce,3d ATM RSI<25 bounce,drop,manually paused — excluded from new entries & reflected P&L,166,75,25,50,13.94,-49.18,-79.0,-60.0,99.05,158.0,18,112,0,0,11,40.0
-S164,GapDown ATM 1-DTE — P2B arm,1d ATM,drop,non-positive median return,184,51,21,30,30.55,-49.21,-88.89,-52.83,173.68,281.0,33,118,4,3,19,13.7
 S351,GapDown_1DTE,1d,drop,manually paused — excluded from new entries & reflected P&L,213,75,28,47,31.61,-50.0,-75.68,-62.03,264.88,414.0,18,108,0,0,16,17.3
 S168,GapDown ATM 5-DTE — P2B arm,5d ATM,drop,non-positive median return,132,42,16,26,16.96,-50.42,-74.95,-54.84,214.37,80.0,23,118,3,2,14,35.7
 S399,GapDown_OTM1,3d,drop,non-positive median return,204,80,31,49,37.31,-50.72,-83.55,-66.67,141.0,-170.0,19,108,0,0,17,20.0
