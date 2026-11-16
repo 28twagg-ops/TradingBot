@@ -260,6 +260,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-16T15:37:55.942030+00:00",
       "entry_order_id": "e3c3d3ee-96a0-43b3-b057-9dbe3be083d8"
+    },
+    {
+      "lot_id": "239ff81ea1e8",
+      "bucket_id": 2007,
+      "profile_name": "day_trader_analytics_s430",
+      "strategy_id": "S430",
+      "occ_symbol": "CELH261120C00035000",
+      "underlying": "CELH",
+      "qty": 1,
+      "entry_cost": 18.0,
+      "entry_price": 0.18,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-16T15:46:51.949548+00:00",
+      "entry_order_id": "2ecff439-621e-49a2-b8f5-c075c3566e69"
     }
   ],
   "pending_orders": [
@@ -278,22 +298,6 @@
       "buy_offset": -0.01,
       "take_profit": 0.75,
       "stop_loss": -0.75
-    },
-    {
-      "order_id": "2ecff439-621e-49a2-b8f5-c075c3566e69",
-      "bucket_id": 2007,
-      "strategy_id": "S430",
-      "occ_symbol": "CELH261120C00035000",
-      "underlying": "CELH",
-      "qty": 1,
-      "limit": 0.18,
-      "profile_name": "day_trader_analytics_s430",
-      "submitted": "2026-11-16",
-      "detail": "ORB-drive +1.9% gap +0.1% VZ=-1.8",
-      "spread_frac": 0.054054054054054106,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.6000000000000001
     },
     {
       "order_id": "ab04a7a8-7185-4ca0-affc-3d89d7df47cf",
@@ -337,7 +341,8 @@
     "b16": 53.0,
     "b63": 19.0,
     "b64": 52.0,
-    "b65": 51.0
+    "b65": 51.0,
+    "b2007": 18.0
   },
   "session_date": "2026-11-16",
   "entries_locked": [
@@ -833,7 +838,8 @@
     "49ac8790-df4d-4318-a64f-6bd93fb40813",
     "745925a3-d564-4ef1-8fd7-8753dd572c12",
     "e3c3d3ee-96a0-43b3-b057-9dbe3be083d8",
-    "aeef554e-4576-42c9-b0ab-c7118b5e3da9"
+    "aeef554e-4576-42c9-b0ab-c7118b5e3da9",
+    "2ecff439-621e-49a2-b8f5-c075c3566e69"
   ],
   "submitted_today": 18,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
