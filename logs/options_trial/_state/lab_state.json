@@ -2,26 +2,6 @@
   "version": 5,
   "lots": [
     {
-      "lot_id": "4a1761d6cbe3",
-      "bucket_id": 91,
-      "profile_name": "s406_only",
-      "strategy_id": "S406",
-      "occ_symbol": "AFRM261120C00069000",
-      "underlying": "AFRM",
-      "qty": 1,
-      "entry_cost": 32.0,
-      "entry_price": 0.32,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-16T15:07:05.038777+00:00",
-      "entry_order_id": "b023ba09-510a-47fd-90d1-f378cbfde85b"
-    },
-    {
       "lot_id": "33206168dea3",
       "bucket_id": 90,
       "profile_name": "live_1to1",
@@ -260,20 +240,8 @@
       "stop_loss": -0.75
     }
   ],
-  "pending_exits": [
-    {
-      "order_id": "f8c73705-6e98-4efb-8099-a0b3a3cdac01",
-      "lot_id": "4a1761d6cbe3",
-      "bucket_id": 91,
-      "strategy_id": "S406",
-      "occ_symbol": "AFRM261120C00069000",
-      "qty": 1,
-      "reason": "stop_loss (-40.6%)",
-      "submitted": "2026-11-16T10:21:48"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
-    "b91": 32.0,
     "b90": 68.0,
     "b51": 43.0,
     "b15": 45.0,
@@ -785,7 +753,8 @@
     "90c3ba9d-e9a3-4f76-98fe-24a248eb7031",
     "c1815520-c837-45d6-8656-9c275c449d50",
     "9dedea7b-22b0-4c84-8dcf-24b3fcfedc13",
-    "a58f7391-06f9-4303-a47e-97b9e11a54c3"
+    "a58f7391-06f9-4303-a47e-97b9e11a54c3",
+    "f8c73705-6e98-4efb-8099-a0b3a3cdac01"
   ],
   "submitted_today": 18,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
