@@ -200,6 +200,66 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-16T15:08:17.780117+00:00",
       "entry_order_id": "d436513e-5913-496e-a577-13761c68eb83"
+    },
+    {
+      "lot_id": "03beacc7fb87",
+      "bucket_id": 49,
+      "profile_name": "lab0049_s396_w2_1005_1045_r1",
+      "strategy_id": "S396",
+      "occ_symbol": "MARA261120C00006000",
+      "underlying": "MARA",
+      "qty": 1,
+      "entry_cost": 72.0,
+      "entry_price": 0.72,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-16T15:12:28.265733+00:00",
+      "entry_order_id": "55d5d5d6-5110-4a1a-a4d6-4c3bf59cee3c"
+    },
+    {
+      "lot_id": "c59023663a18",
+      "bucket_id": 16,
+      "profile_name": "lab0016_s357_w2_1005_1045_r1",
+      "strategy_id": "S357",
+      "occ_symbol": "MARA261211C00007000",
+      "underlying": "MARA",
+      "qty": 1,
+      "entry_cost": 53.0,
+      "entry_price": 0.53,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-16T15:12:28.269655+00:00",
+      "entry_order_id": "7ba5a8a7-e8ba-4443-a74c-b1fecc99f345"
+    },
+    {
+      "lot_id": "a33d6ab5544f",
+      "bucket_id": 17,
+      "profile_name": "lab0017_s359_w2_1005_1045_r1",
+      "strategy_id": "S359",
+      "occ_symbol": "AMD261116C00560000",
+      "underlying": "AMD",
+      "qty": 1,
+      "entry_cost": 4.0,
+      "entry_price": 0.04,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-16T15:12:28.272827+00:00",
+      "entry_order_id": "9f3ef6b2-bc7e-4b6a-a77f-7dbba5134788"
     }
   ],
   "pending_orders": [
@@ -278,7 +338,10 @@
     "b50": 59.0,
     "b62": 45.0,
     "b52": 71.0,
-    "b13": 18.0
+    "b13": 18.0,
+    "b49": 72.0,
+    "b16": 53.0,
+    "b17": 4.0
   },
   "session_date": "2026-11-16",
   "entries_locked": [
@@ -294,7 +357,10 @@
     "63|S166|2026-11-16",
     "15|S356|2026-11-16",
     "51|S404|2026-11-16",
-    "2007|S430|2026-11-16"
+    "2007|S430|2026-11-16",
+    "17|S359|2026-11-16",
+    "16|S357|2026-11-16",
+    "49|S396|2026-11-16"
   ],
   "processed_orders": [
     "aaf16a0f-80f4-4fa9-b44e-149d1478a276",
@@ -760,9 +826,12 @@
     "eb36cd67-8abb-4f52-ba56-2ba3032c2a99",
     "aa5a2e2d-3a48-461f-ad10-f4ce57a63758",
     "c6101028-6593-4ae0-92ac-05e612d2ccb3",
-    "d436513e-5913-496e-a577-13761c68eb83"
+    "d436513e-5913-496e-a577-13761c68eb83",
+    "55d5d5d6-5110-4a1a-a4d6-4c3bf59cee3c",
+    "7ba5a8a7-e8ba-4443-a74c-b1fecc99f345",
+    "9f3ef6b2-bc7e-4b6a-a77f-7dbba5134788"
   ],
-  "submitted_today": 13,
+  "submitted_today": 16,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-16"
 }
