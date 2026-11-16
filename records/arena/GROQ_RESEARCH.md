@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-16T02:05Z | S09b | BTC-USD hourly price reaction to 50‑hour SMA cro | 254db340538b70 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-16T02:04Z | S06b | BTC-USD hourly SMA crossover momentum | 0b8f84bf1ac2f5 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-16T02:03Z | S07b | Hourly trend persistence in BTC-USD | e65c870c275478 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-16T02:03Z | S02b | BTC-USD hourly trend reversal after consecutive  | d6308d383d2d68 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-16T02:02Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | 6bad0ad8b0a4f4 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-15T23:28Z | S09b | BTC-USD hourly trend reversal after sustained 10 | f1f2a7bff80a71 | HOLD_INVALID_MODEL_DECISION |
 | 2026-11-15T23:27Z | S04a | gap_down_quality | 7fd47af7fc95fd | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-15T23:26Z | S08a | Low hourly volatility predicts larger next‑hour  | 76c5392582d2e8 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-15T17:08Z | S07b | BTC-USD hourly trend persistence | 3a46d672962da1 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-15T17:08Z | S02b | BTC-USD hourly trend persistence after 4 consecu | 91b95126a8c1e0 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-15T17:07Z | S10b | ETH-USD hourly breakout above 5% of 24‑hour SMA  | 23329497459594 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-15T11:31Z | S09b | BTC-USD hourly trend reversal after sustained 10 | f1b6c9041c165a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-15T11:30Z | S04a | gap_down_rebound | 1ad4a79549c541 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-15T11:30Z | S08a | Low hourly volatility predicts larger next‑hour  | 8ca77e5e15301d | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-15T11:29Z | S01a | BTC-USD hourly trend persistence | 669fb287b8673a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-15T11:28Z | S05a | BTC-USD hourly breakout | d794d6821cd99e | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
