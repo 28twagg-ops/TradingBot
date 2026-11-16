@@ -1404,3 +1404,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-11-13 15:56:44,2026-11-13,SELL,PFE,Pullback50,28.63,6.12,-0.51,-0.03,0,stop_loss (-0.5%),bull,231.95
 2026-11-13 20:52:18,2026-11-13,SELL,HSIC,Pullback50,86.44,34.81,0.09,0.03,0,midline (+0.1%),bull,232.29
 2026-11-13 20:52:49,2026-11-13,SELL,DXCM,Pullback50,83.55,34.82,0.23,0.08,0,midline (+0.2%),bull,232.19
+2026-11-16 14:47:13,2026-11-16,SELL,DXCM,Pullback50,83.06,34.69,-0.31,-0.11,3,max_hold 3d (-0.3%),bull,231.38

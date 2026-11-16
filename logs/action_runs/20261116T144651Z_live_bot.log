@@ -1,0 +1,170 @@
+14:46:52  INFO      Mode: morning_scan
+14:46:53  INFO        SELL LIMIT DXCM  qty=0.417706633  limit=$82.97  id=6330c8e4-7bd0-4ac9-98d8-2eaf3c3a704d
+14:47:13  INFO        SELL LIMIT filled DXCM (confirmed by position check)
+14:47:13  INFO        TX logged: SELL DXCM  P&L -0.31%
+14:47:14  INFO        BUY  AES  $34.72  [Pullback50]  id=b8fad0bd-f348-4ac4-8c77-4fca15cf903e
+14:47:14  INFO        BUY  TECH  $34.72  [Pullback50]  id=5c02ec31-7e0e-4a26-9e97-e50dc8e150ce
+14:47:14  INFO        BUY  EXPD  $34.72  [Pullback50]  id=9c39730b-f593-4909-a8e9-47453599301a
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $231.44|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-16|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $231.44|
+|  Cash                                                           $196.71|
+|  Reserve                                          $11.57  (always kept)|
+|  Stocks~  $34.73 / $173.58  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $138.85  (new stock buys)|
+|  Trade size             $34.72  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (1 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  DXCM     Pullback50      $34.73     $83.39   $83.14   -0.3%   $-0.11  |
+|                                                                        |
+|  Total invested                                                  $34.73|
+|  Total open P&L                                                  $-0.11|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (11.6m))|
+|  Cached exits                                                         1|
+|  Cached signals                                                      11|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  DXCM  P&L -0.3%  $-0.11                      EXIT: max_hold 3d (-0.3%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 0|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           902|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  11                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.91   39.4   -2.04   50MA bounce (+|
+|  TECH     Pullback50      eq     $72.79   65.6   -2.80   50MA bounce (+|
+|  EXPD     Pullback50      eq     $194.00  43.4   -2.40   50MA bounce (+|
+|  XOM      Pullback50      eq     $169.59  36.6   -2.62   50MA bounce (+|
+|  GRMN     Pullback50      eq     $282.46  45.9   -2.09   50MA bounce (-|
+|  HSIC     Pullback50      eq     $86.00   53.6   -1.46   50MA bounce (+|
+|  ROST     Pullback50      eq     $232.91  52.2   -2.70   50MA bounce (+|
+|  CFR      Pullback50      eq     $157.98  51.4   -3.05   50MA bounce (+|
+|  ESNT     Pullback50      eq     $65.34   47.2   -2.36   50MA bounce (+|
+|  SLAB     Pullback50      eq     $221.69  49.3   -1.62   50MA bounce (+|
+|  WEX      Pullback50      eq     $183.89  45.7   -2.38   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AES  Pullback50                                    $34.72|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] TECH  Pullback50                                   $34.72|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] EXPD  Pullback50                                   $34.72|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] XOM  Pullback50                                      cap 3|
+|    SKIP [eq] GRMN  Pullback50                                     cap 3|
+|    SKIP [eq] HSIC  Pullback50                                     cap 3|
+|    SKIP [eq] ROST  Pullback50                                     cap 3|14:47:44  INFO        place_all_stops: checking 3 positions...
+14:47:44  INFO        STOP-MARKET placed AES  qty=2 (pos=2.3252)  stop=$14.85  id=1cbc8d7a-a2e9-4f81-95b5-b5908cc0d73c
+14:47:44  INFO        STOP skipped EXPD: fractional (0.1802 shares) — software exit will handle it
+14:47:44  INFO        STOP skipped TECH: fractional (0.4766 shares) — software exit will handle it
+14:47:44  INFO        Daily log -> logs/daily/2026-11-16.md
+14:47:44  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [eq] CFR  Pullback50                                      cap 3|
+|    SKIP [eq] ESNT  Pullback50                                     cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] WEX  Pullback50                                      cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  AES                                                  still unconfirmed|
+|  TECH                                                 still unconfirmed|
+|  EXPD                                                 still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             11|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             3|
+|  Equity                                                         $231.33|
+|  Cash                                                           $127.25|
++========================================================================+
