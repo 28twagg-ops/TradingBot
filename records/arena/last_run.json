@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-16T06:33:16.245817+00:00",
+  "timestamp": "2026-11-16T18:36:51.482588+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -12,7 +12,7 @@
       "missing_quotes": []
     },
     "S02": {
-      "action": "SELL SOL-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 96.8077828,
       "equity": 96.8078,
@@ -21,11 +21,11 @@
       "missing_quotes": []
     },
     "S03": {
-      "action": "HOLD",
+      "action": "BUY QQQ",
       "generation_index": 0,
-      "cash": 69.43985594,
-      "equity": 94.0754,
-      "ledger_events": 16,
+      "cash": 41.91187768,
+      "equity": 94.1873,
+      "ledger_events": 17,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -39,16 +39,16 @@
       "missing_quotes": []
     },
     "S05": {
-      "action": "HOLD",
+      "action": "SELL QQQ",
       "generation_index": 0,
-      "cash": 59.22177215,
-      "equity": 95.7403,
-      "ledger_events": 10,
+      "cash": 81.22557661,
+      "equity": 95.0059,
+      "ledger_events": 11,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S06": {
-      "action": "SELL SOL-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 96.8077828,
       "equity": 96.8078,
@@ -57,11 +57,11 @@
       "missing_quotes": []
     },
     "S07": {
-      "action": "SELL ETH-USD",
+      "action": "BUY ETH-USD",
       "generation_index": 1,
-      "cash": 94.49947864,
-      "equity": 94.4995,
-      "ledger_events": 14,
+      "cash": 56.99912625,
+      "equity": 94.4246,
+      "ledger_events": 15,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -75,16 +75,16 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "SELL ETH-USD",
+      "action": "BUY ETH-USD",
       "generation_index": 1,
-      "cash": 97.01083466,
-      "equity": 97.0108,
-      "ledger_events": 10,
+      "cash": 58.51504289,
+      "equity": 96.934,
+      "ledger_events": 11,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S10": {
-      "action": "SELL SOL-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 97.29438615,
       "equity": 97.2944,
