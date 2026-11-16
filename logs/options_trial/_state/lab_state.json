@@ -182,24 +182,7 @@
       "entry_order_id": "e3c3d3ee-96a0-43b3-b057-9dbe3be083d8"
     }
   ],
-  "pending_orders": [
-    {
-      "order_id": "ab04a7a8-7185-4ca0-affc-3d89d7df47cf",
-      "bucket_id": 14,
-      "strategy_id": "S352",
-      "occ_symbol": "FSLY261120C00017000",
-      "underlying": "FSLY",
-      "qty": 1,
-      "limit": 0.22,
-      "profile_name": "lab0014_s352_w2_1005_1045_r1",
-      "submitted": "2026-11-16",
-      "detail": "gap -3.1%",
-      "spread_frac": 0.04444444444444448,
-      "buy_offset": -0.01,
-      "take_profit": 0.75,
-      "stop_loss": -0.75
-    }
-  ],
+  "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {
     "b90": 68.0,
