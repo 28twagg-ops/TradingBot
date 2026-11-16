@@ -1,0 +1,24 @@
+20:57:40  INFO      Mode: scan
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:2928: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  "type": str(getattr(o, "order_type", "?")),
+20:57:41  INFO        [positions] 3/3 (3 valid)
+20:57:41  INFO        Universe cache hit: 903 tickers (tickers_2026-11-16.json)
+20:57:42  INFO        [universe] 40/900 (40 valid)
+20:57:42  WARNING   Crumb fetch rate-limited (HTTP 429), continuing without crumb
+20:57:43  INFO        [universe] 80/900 (80 valid)
+20:57:43  INFO        [universe] 120/900 (120 valid)
+20:57:44  INFO        [universe] 160/900 (160 valid)
+20:57:45  INFO        [universe] 200/900 (199 valid)
+20:57:55  INFO        [universe] 240/900 (238 valid)
+20:58:08  INFO        [universe] 280/900 (278 valid)
+20:58:18  INFO        [universe] 320/900 (318 valid)
+20:58:31  INFO        [universe] 360/900 (358 valid)
+20:58:44  INFO        [universe] 400/900 (398 valid)
+20:58:54  INFO        [universe] 440/900 (438 valid)
+20:59:08  INFO        [universe] 480/900 (477 valid)
+20:59:21  INFO        [universe] 520/900 (517 valid)
+20:59:31  INFO        [universe] 560/900 (557 valid)
+20:59:44  INFO        [universe] 600/900 (597 valid)
+20:59:54  INFO        [universe] 640/900 (637 valid)
+21:00:07  INFO        [universe] 680/900 (677 valid)
+21:00:20  INFO        [universe] 720/900 (717 valid)
