@@ -1,0 +1,78 @@
+20:37:25  INFO      Mode: evening_prep
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:2928: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  "type": str(getattr(o, "order_type", "?")),
+20:37:26  INFO        [prep_positions] 2/2 (2 valid)
+20:37:26  INFO        Universe cache hit: 903 tickers (tickers_2026-11-16.json)
+20:37:27  INFO        [prep_universe] 40/901 (40 valid)
+20:37:29  INFO        [prep_universe] 80/901 (80 valid)
+20:37:30  INFO        [prep_universe] 120/901 (120 valid)
+20:37:31  INFO        [prep_universe] 160/901 (160 valid)
+20:37:32  INFO        [prep_universe] 200/901 (199 valid)
+20:37:39  INFO        [prep_universe] 240/901 (238 valid)
+20:37:53  INFO        [prep_universe] 280/901 (278 valid)
+20:38:03  INFO        [prep_universe] 320/901 (318 valid)
+20:38:16  INFO        [prep_universe] 360/901 (358 valid)
+20:38:27  INFO        [prep_universe] 400/901 (398 valid)
+20:38:40  INFO        [prep_universe] 440/901 (438 valid)
+20:38:53  INFO        [prep_universe] 480/901 (477 valid)
+20:39:04  INFO        [prep_universe] 520/901 (517 valid)
+20:39:17  INFO        [prep_universe] 560/901 (557 valid)
+20:39:27  INFO        [prep_universe] 600/901 (597 valid)
+20:39:41  INFO        [prep_universe] 640/901 (637 valid)
+20:39:51  INFO        [prep_universe] 680/901 (677 valid)
+20:40:05  INFO        [prep_universe] 720/901 (717 valid)
+20:40:15  INFO        [prep_universe] 760/901 (757 valid)
+20:40:29  INFO        [prep_universe] 800/901 (797 valid)
+20:40:39  INFO        [prep_universe] 840/901 (837 valid)
+20:40:53  INFO        [prep_universe] 880/901 (877 valid)
+20:41:00  INFO        [prep_universe] 901/901 (898 valid)
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:2928: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  "type": str(getattr(o, "order_type", "?")),
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      EVENING_PREP|
+|  Time                                                         20:37 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $231.72|
++========================================================================+
+
++========================================================================+
+|                              EVENING PREP                              |
++========================================================================+
+|  Goal                   Precompute exits/signals for next execution run|
+|  Plan file                                 logs/plans/evening_plan.json|
+|  Regime                                                            BULL|
++========================================================================+
+
++========================================================================+
+|                       OPEN POSITION P&L SNAPSHOT                       |
++========================================================================+
+|  Open positions                                                       2|
+|  Invested                                                        $69.76|
+|  Open P&L                                                        $+0.34|
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AES      Pullback50      $34.68     $14.93   $14.91   -0.1%   $-0.03  |
+|  EXPD     Pullback50      $35.08     $192.60  $194.64  +1.1%   $+0.37  |
++========================================================================+
+
++========================================================================+
+|                            OPEN SELL ORDERS                            |
++========================================================================+
+|  Count                                                                1|
+|  TICKER    TYPE              QTY       LIMIT       STOP                |
++------------------------------------------------------------------------+
+|  AES       OrderType.STOP    2         None        14.85               |
++========================================================================+
+
++========================================================================+
+|                              PREP SUMMARY                              |
++========================================================================+
+|  Saved                                                              yes|
+|  Exit candidates                                                      0|
+|  Signal candidates                                                    7|
+|  Universe scanned                                                   901|
++========================================================================+
