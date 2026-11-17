@@ -142,26 +142,6 @@
       "entry_order_id": "94005b1b-5146-4f91-92d2-0da39e07eabe"
     },
     {
-      "lot_id": "e1da2fb9e956",
-      "bucket_id": 14,
-      "profile_name": "lab0014_s352_w2_1005_1045_r1",
-      "strategy_id": "S352",
-      "occ_symbol": "UNH261120C00420000",
-      "underlying": "UNH",
-      "qty": 1,
-      "entry_cost": 63.0,
-      "entry_price": 0.63,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-17T15:33:08.693738+00:00",
-      "entry_order_id": "db1683ee-d60b-4503-bd13-4cbf37376685"
-    },
-    {
       "lot_id": "3a39fe8de284",
       "bucket_id": 54,
       "profile_name": "lab0054_s410_w2_1005_1045_r1",
@@ -183,18 +163,7 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "2daaf448-5b9d-4249-8782-145528efc062",
-      "lot_id": "e1da2fb9e956",
-      "bucket_id": 14,
-      "strategy_id": "S352",
-      "occ_symbol": "UNH261120C00420000",
-      "qty": 1,
-      "reason": "stop_loss (-52.4%)",
-      "submitted": "2026-11-17T14:02:00"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
     "b51": 43.0,
     "b15": 45.0,
@@ -203,7 +172,6 @@
     "b90": 32.0,
     "b21": 54.0,
     "b20": 38.0,
-    "b14": 63.0,
     "b54": 71.0
   },
   "session_date": "2026-11-17",
@@ -639,7 +607,8 @@
     "af2a89b9-6fb0-4c62-8589-4d6da5041788",
     "c029a83e-e7ea-48c7-aba1-c023d4a7f848",
     "9134841e-fc12-4bff-b11a-cd3a9353fcac",
-    "96543ce2-c4ad-4a9e-9fe1-c3a013441413"
+    "96543ce2-c4ad-4a9e-9fe1-c3a013441413",
+    "2daaf448-5b9d-4249-8782-145528efc062"
   ],
   "submitted_today": 18,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
