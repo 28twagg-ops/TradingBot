@@ -13140,3 +13140,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-17 15:41:50,exits,bull,231.05,161.44,0,0,1,2,AMCR|LOPE,both
 2026-11-17 15:47:11,exits,correction,230.9,161.44,0,0,0,2,AMCR|LOPE,both
 2026-11-17 15:51:47,exits,correction,230.91,161.44,0,0,0,2,AMCR|LOPE,both
+2026-11-17 15:57:00,exits,correction,230.8,161.44,0,0,0,2,AMCR|LOPE,both
