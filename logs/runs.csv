@@ -13231,3 +13231,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-17 23:31:59,ext_exits,bull,230.43,126.87,0,0,0,3,AES|AMCR|ESS,both
 2026-11-17 23:36:46,ext_exits,bull,230.43,126.87,0,0,0,3,AES|AMCR|ESS,both
 2026-11-17 23:41:48,ext_exits,bull,230.43,126.87,0,0,0,3,AES|AMCR|ESS,both
+2026-11-17 23:46:46,ext_exits,bull,230.43,126.87,0,0,0,3,AES|AMCR|ESS,both
