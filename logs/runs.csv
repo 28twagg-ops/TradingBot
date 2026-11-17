@@ -13132,3 +13132,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-17 15:02:09,exits,bull,231.85,126.96,0,0,0,3,AMCR|EXPD|LOPE,both
 2026-11-17 15:06:48,exits,bull,232.0,126.96,0,0,0,3,AMCR|EXPD|LOPE,both
 2026-11-17 15:11:48,exits,bull,231.75,126.96,0,0,0,3,AMCR|EXPD|LOPE,both
+2026-11-17 15:17:00,exits,bull,231.84,126.96,0,0,0,3,AMCR|EXPD|LOPE,both
