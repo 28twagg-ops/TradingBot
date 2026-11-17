@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-17
 
-_Generated 2026-11-17T09:47:31.790753_
+_Generated 2026-11-17T09:52:21.515387_
 
 ## Summary
 
@@ -29,7 +29,7 @@ _Generated 2026-11-17T09:47:31.790753_
 | S397 (GapDown_ITM1) | 3d | watch | 61 | 57.4 | +47.95 | -63.16 | -50.85 | +115.38 | 109 | 2 | 2 | $+1,009.00 | 14.8% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 70 | 62.9 | +44.12 | -60.39 | -50.62 | +310.95 | 109 | 0 | 0 | $+1,371.00 | 18.6% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 109 | 50.5 | +22.22 | -71.43 | -50.00 | +146.00 | 113 | 0 | 0 | $+1,086.00 | 27.5% | fat left tail (p10 < -45%) |
-| S406 (RubberBand_ITM3) | 3d | watch | 177 | 51.4 | +19.23 | -59.36 | -45.83 | +178.95 | 109 | 7 | 5 | $+3,092.00 | 11.9% | fat left tail (p10 < -45%) |
+| S406 (RubberBand_ITM3) | 3d | watch | 177 | 51.4 | +19.23 | -59.36 | -45.83 | +178.95 | 109 | 8 | 5 | $+3,092.00 | 11.9% | fat left tail (p10 < -45%) |
 | S169 (BB Squeeze Breakout call 3 DTE) | 3d ATM BB squeeze | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S170 (Golden Pocket call 3 DTE) | 3d ATM golden pocket | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |
 | S171 (VWAP Reclaim call 3 DTE) | 3d ATM VWAP reclaim | watch | 0 | 0.0 | +0.00 | +0.00 | +0.00 | +0.00 | — | 0 | 0 | $+0.00 | 0.0% | insufficient sample (<8 exits) |

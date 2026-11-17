@@ -13127,3 +13127,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-17 14:22:06,summary,bull,231.95,161.73,0,0,0,2,EXPD|LOPE,both
 2026-11-17 14:26:45,summary,bull,231.95,161.73,0,0,0,2,EXPD|LOPE,both
 2026-11-17 14:47:03,scan_morning,bull,231.79,126.96,18,0,0,3,AMCR|EXPD|LOPE,both
+2026-11-17 14:51:54,exits,bull,232.16,126.96,0,0,0,3,AMCR|EXPD|LOPE,both
