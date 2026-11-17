@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-17T22:31Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 943c5fe60341c7 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-17T22:30Z | S06b | BTC-USD hourly momentum trigger | c876ff718a90e6 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-17T22:30Z | S02b | BTC-USD hourly trend persistence after 4 consecu | 51a3a13f58f7cb | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-17T22:29Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | d2fb9fe51e735c | HOLD_INVALID_MODEL_DECISION |
+| 2026-11-17T22:28Z | S07b | Hourly trend persistence in BTC-USD | 91651cdb59f971 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-17T22:23Z | S04a | gap_down_quality | 9a264624e83654 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-17T22:22Z | S08a | Low hourly volatility predicts larger next‑hour  | fdae0a9c43f1c4 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-17T22:21Z | S01a | BTC-USD hourly trend persistence | dba51c9d270717 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-17T03:00Z | S07b | Hourly trend persistence in BTC-USD | 692530f50e0287 | HOLD |
 | 2026-11-17T03:00Z | S02b | BTC-USD hourly trend persistence after 3 consecu | cfd9eda175d47a | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-17T02:59Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | 4f1b2ba0f9abd6 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-16T20:29Z | S04a | gap_down_quality | 90c8cdff49b130 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-16T20:28Z | S08a | Low hourly volatility predicts larger next‑hour  | c8fdb7fc76822e | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-16T20:28Z | S01a | BTC-USD hourly trend persistence | 77e6a5e3388d9b | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-16T20:27Z | S05a | BTC-USD hourly trend persistence | 07578f233d5a7c | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-16T20:26Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 576ea130177093 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
