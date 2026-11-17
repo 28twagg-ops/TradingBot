@@ -16830,3 +16830,70 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261117T203741Z
+
+- UTC timestamp: `20261117T203741Z`
+- GitHub run: [#15983](https://github.com/28twagg-ops/TradingBot/actions/runs/44170822671)
+- Run id: `44170822671`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261117T203741Z_live_bot.log`, `logs/action_runs/20261117T203741Z_live_options.log`, `logs/action_runs/20261117T203741Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1879 | 48.6 | -25.0 | +35.5 | $+21,126 |
+| TAINTED | 2146 | 30.3 | -42.7 | +6.8 | $-14,234 |
+| KEEP-only | 943 | 60.2 | +51.4 | +50.9 | $+15,056 |
+| KEEP-only recent | 758 | 59.2 | +53.0 | +56.0 | $+11,547 |
+
+- KEEP strategies (24): S163, S164, S166, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S396, S397, S403, S404, S406, S410, S430
+- KILL strategies (23): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S398, S399, S401, S405, S407, S408, S432
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-11-17T15:27:07.888921-05:00","date":"2026-11-17","mode":"manage-only","header":"manage-only (past entry window)","elapsed_s":1.8,"phases_s":{"reconcile":0.17,"cancel":0.08,"manage":0.89,"protective_stops":0.23},"signals":0,"placed":0,"equity":991435.4,"open_positions":8,"pending_orders":0,"open_lots":8,"submitted_today":18,"filled_today":16,"unattributed_contracts":0,"top_signals":[],"github_run":"15981","github_run_id":"44169071666","status":"ok","data_quality":{"clean":{"n":1879,"win":48.64,"med":-25.0,"avg":35.48,"pnl":21125.83},"tainted":{"n":2146,"win":30.29,"med":-42.7,"avg":6.84,"pnl":-14234.28},"keep_only":{"n":943,"win":60.23,"med":51.39,"avg":50.91,"pnl":15056.45},"keep_only_recent":{"n":758,"win":59.23,"med":53.0,"avg":55.96,"pnl":11547.0},"keep_strategies":["S163","S164","S166","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S396","S397","S403","S404","S406","S410","S430"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S398","S399","S401","S405","S407","S408","S432"]}}
+```
+
+### Live bot (tail)
+
+```text
+20:37:42  INFO      Mode: evening_prep
+20:37:43  INFO        Universe cache hit: 903 tickers (tickers_2026-11-17.json)
+20:37:44  INFO        [prep_universe] 40/903 (40 valid)
+20:37:46  INFO        [prep_universe] 80/903 (80 valid)
+20:37:47  INFO        [prep_universe] 120/903 (120 valid)
+20:37:48  INFO        [prep_universe] 160/903 (160 valid)
+20:37:49  INFO        [prep_universe] 200/903 (199 valid)
+20:37:56  INFO        [prep_universe] 240/903 (238 valid)
+20:38:09  INFO        [prep_universe] 280/903 (278 valid)
+20:38:20  INFO        [prep_universe] 320/903 (318 valid)
+20:38:33  INFO        [prep_universe] 360/903 (358 valid)
+20:38:46  INFO        [prep_universe] 400/903 (398 valid)
+20:38:57  INFO        [prep_universe] 440/903 (438 valid)
+20:39:10  INFO        [prep_universe] 480/903 (477 valid)
+20:39:20  INFO        [prep_universe] 520/903 (517 valid)
+20:39:34  INFO        [prep_universe] 560/903 (557 valid)
+20:39:44  INFO        [prep_universe] 600/903 (597 valid)
+20:39:57  INFO        [prep_universe] 640/903 (637 valid)
+20:40:08  INFO        [prep_universe] 680/903 (677 valid)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---
