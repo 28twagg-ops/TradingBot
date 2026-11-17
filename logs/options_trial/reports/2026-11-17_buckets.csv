@@ -64,7 +64,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 62,lab0062_s166_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-17,False,,,,,,,0,UNH,S166,,entered_no_exit
 63,lab0063_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-11-16,False,,,,,,,0,,,,open
 64,lab0064_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-11-16,False,,0.0,-53.85,-53.85,-53.85,-53.85,-28.0,SMCI,S168,broker_fill_backfill,closed
-65,lab0065_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-17,False,,,,,,,0,UNH,S164,,entered_no_exit
+65,lab0065_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-17,False,,100.0,51.79,51.79,51.79,51.79,29.0,UNH,S164,take_profit (+51.8%),closed
 66,lab0066_s430_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-16,False,,,,,,,0,,,,idle
 90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,2,1,2026-11-17,False,,50.0,37.44,37.44,116.07,-41.18,37.0,"HD,SMCI,TTD","S404,S406",broker_fill_backfill; take_profit (+116.1%),closed
 91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-11-17,False,,,,,,,0,HD,S406,,entered_no_exit
