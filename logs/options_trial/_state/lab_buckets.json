@@ -326,8 +326,8 @@
   {
     "bucket_id": 54,
     "profile": "lab0054_s410_w2_1005_1045_r1",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 71.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 55,
@@ -452,8 +452,8 @@
   {
     "bucket_id": 2007,
     "profile": "day_trader_analytics_s430",
-    "open_premium": 0.0,
-    "open_lots": 0
+    "open_premium": 51.0,
+    "open_lots": 1
   },
   {
     "bucket_id": 2008,

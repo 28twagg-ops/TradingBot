@@ -53,7 +53,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 51,lab0051_s404_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,1,2026-11-16,False,,,,,,,0,,,,open
 52,lab0052_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-11-17,False,,0.0,-50.7,-50.7,-50.7,-50.7,-36.0,"NVDA,TTD",S406,broker_fill_backfill,closed
 53,lab0053_s409_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-12,False,,,,,,,0,,,,idle
-54,lab0054_s410_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-12,False,,,,,,,0,,,,idle
+54,lab0054_s410_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-17,False,,,,,,,0,TTD,S410,,entered_no_exit
 55,lab0055_s413_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-04,False,,,,,,,0,,,,idle
 56,lab0056_s414_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-22,False,,,,,,,0,,,,idle
 57,lab0057_s415_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-14,False,,,,,,,0,,,,idle
@@ -75,5 +75,5 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 2004,promising_s175_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2005,promising_s220_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2006,promising_s221_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
-2007,day_trader_analytics_s431,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,2026-11-16,False,,,,,,,0,,,,idle
+2007,day_trader_analytics_s431,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-11-17,False,,,,,,,0,DIS,S430,,entered_no_exit
 2008,day_trader_analytics_s432,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
