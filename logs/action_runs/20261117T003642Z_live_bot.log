@@ -1,0 +1,66 @@
+00:36:43  INFO      Mode: ext_exits
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1754: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  f"type={getattr(o,'order_type','?')}  id={o.id}")
+00:36:44  INFO        SELL order cancelled AES  type=OrderType.STOP  id=1cbc8d7a-a2e9-4f81-95b5-b5908cc0d73c
+00:36:45  INFO        SELL LIMIT [EXT HRS] AES  qty=2.325195462  limit=$14.83  id=132f4ceb-f12e-4826-8d5e-600db27ce91d
+00:36:50  INFO        SELL LIMIT[EXT] pending for AES — 9:35am will follow up
+00:36:50  INFO        Daily log -> logs/daily/2026-11-17.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                         EXT_EXITS|
+|  Time                                                         00:36 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $231.97|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit log~  stop-0.5% / 3d max  (midline skipped — close already final)|
++------------------------------------------------------------------------+
+|  AES  P&L -0.5%  $-0.18          EXIT [EXTENDED HRS]: stop_loss (-0.5%)|
+|  AES                              SELL pending (after-hours limit open)|
+|  LOPE  P&L +0.8%  $+0.27        HOLDING until 9:35am scan (MomReversal)|
+|  EXPD  P&L +1.4%  $+0.49         HOLDING until 9:35am scan (Pullback50)|
++========================================================================+
+
++========================================================================+
+|                          EXTENDED HOURS SELLS                          |
++========================================================================+
+|                                                                        |
+|  No extended-hours sells this run.                                     |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                         ext_exits|
+|  Candidates                                                           3|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  0 filled  |  0 partial  |  1 pending  |  0 failed|
+|  Holds                                                                2|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  AES                                         -0.51%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             1|
++========================================================================+
