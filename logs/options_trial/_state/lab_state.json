@@ -222,40 +222,7 @@
       "entry_order_id": "12c0f3f7-f497-4ec5-b599-b87a7b70d747"
     }
   ],
-  "pending_orders": [
-    {
-      "order_id": "75b887fa-a7fe-4435-ad59-29a5ec899343",
-      "bucket_id": 63,
-      "strategy_id": "S168",
-      "occ_symbol": "UNH261120C00412500",
-      "underlying": "UNH",
-      "qty": 1,
-      "limit": 0.73,
-      "profile_name": "lab0063_s168_w2_1005_1045_r1",
-      "submitted": "2026-11-17",
-      "detail": "gap -3.1%",
-      "spread_frac": 0.1605839416058394,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    },
-    {
-      "order_id": "fc73c5d4-dbdc-461c-80f9-ffe2ce32af36",
-      "bucket_id": 64,
-      "strategy_id": "S163",
-      "occ_symbol": "UNH261120C00417500",
-      "underlying": "UNH",
-      "qty": 1,
-      "limit": 0.61,
-      "profile_name": "lab0064_s163_w2_1005_1045_r1",
-      "submitted": "2026-11-17",
-      "detail": "gap -3.1%",
-      "spread_frac": 0.175438596491228,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.5
-    }
-  ],
+  "pending_orders": [],
   "pending_exits": [
     {
       "order_id": "9134841e-fc12-4bff-b11a-cd3a9353fcac",
