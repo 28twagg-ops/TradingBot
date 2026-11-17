@@ -1,0 +1,161 @@
+20:47:08  INFO      Mode: scan
+20:47:08  INFO        BUY  AES  $34.58  [Pullback50]  id=1177ef97-91e1-4d4c-8fef-21ef52cd4e5c
+20:47:08  INFO        BUY  AMCR  $34.58  [Pullback50]  id=66f2155b-7ede-475e-b5aa-926e056c4e91
+20:47:08  INFO        BUY  ESS  $34.58  [Pullback50]  id=fb5fba72-e422-42b3-be01-f0606fde2bd3
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         20:47 UTC|
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Equity                                                         $230.56|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-17|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                      CORRECTION|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $230.56|
+|  Cash                                                           $230.56|
+|  Reserve                                          $11.53  (always kept)|
+|  Stocks ~  $0.00 / $172.92  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $172.92  (new stock buys)|
+|  Trade size             $34.58  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (0 open)                        |
++========================================================================+
+|                                                                        |
+|  No open positions.                                                    |
+|                                                                        |
+|  Buys today: 0  |  entry cap: 3  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                    yes (fresh (11.7m))|
+|  Cached exits                                                         0|
+|  Cached signals                                                      14|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: CORRECTION                                     |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           903|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  14                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $14.96   48.6   -0.11   50MA bounce (+|
+|  AMCR     Pullback50      eq     $43.48   41.4   -1.35   50MA bounce (-|
+|  ESS      Pullback50      eq     $271.50  69.6   -1.41   50MA bounce (-|
+|  GM       Pullback50      eq     $83.71   52.1   -1.30   50MA bounce (+|
+|  PM       Pullback50      eq     $195.31  40.3   -1.25   50MA bounce (-|
+|  CRM      RubberBand      eq     $194.89  15.9   1.94    RSI           |
+|  AGNC     RubberBand      eq     $7.89    28.7   0.61    RSI           |
+|  BILL     VWAP_Reclaim    eq     $64.78   91.8   4.04    VWAP reclaim V|
+|  DLB      RubberBand      eq     $58.80   37.5   2.85    7d-down       |
+|  OHI      Pullback50      eq     $46.87   58.1   -2.28   50MA bounce (+|
+|  SLAB     Pullback50      eq     $221.38  45.8   0.35    50MA bounce (+|
+|  TXNM     Pullback50      eq     $58.91   56.9   -0.74   50MA bounce (+|
+|  UGI      Pullback50      eq     $37.67   37.8   -1.28   50MA bounce (+|
+|  WTS      Pullback50      eq     $356.08  60.3   -1.06   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] AES  Pullback50                                    $34.58|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] AMCR  Pullback50                                   $34.58|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] ESS  Pullback50                                    $34.58|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] GM  Pullback50                                       cap 3|
+|    SKIP [eq] PM  Pullback50                                       cap 3|
+|    SKIP [eq] OHI  Pullback50                                      cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] TXNM  Pullback50                                     cap 3|
+|    SKIP [eq] UGI  Pullback50                                      cap 3|
+|    SKIP [eq] WTS  Pullback50                                      cap 3|
+|    SKIP [eq] CRM  RubberBand                                      cap 3|
+|    SKIP [eq] AGNC  RubberBand                                     cap 3|
+|    SKIP [eq] DLB  RubberBand                                      cap 3|
+|    SKIP [eq] BILL  VWAP_Reclaim                                   cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  AES                                                  still unconfirmed|
+|  AMCR                                                 still unconfirmed|20:47:38  INFO        place_all_stops: checking 3 positions...
+20:47:38  INFO        STOP-MARKET placed AES  qty=2 (pos=2.3095)  stop=$14.89  id=cbfa5ce4-f4a5-43f8-a4ba-acf06e3a5523
+20:47:38  INFO        STOP skipped AMCR: fractional (0.7942 shares) — software exit will handle it
+20:47:38  INFO        STOP skipped ESS: fractional (0.1273 shares) — software exit will handle it
+20:47:38  INFO        place_eod_stops: updating 3 stops to current price...
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1912: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  if (getattr(o, "order_type", None) in
+20:47:38  INFO        EOD stop: cancelled old stop AES
+20:47:38  WARNING     EOD stop failed AES: {"available":"0.30946893","code":40310000,"existing_qty":"2.30946893","held_for_orders":"2","message":"insufficient qty available for order (requested: 2, available: 0.30946893)","symbol":"AES"}
+20:47:38  INFO        EOD stop skip AMCR: 0.7942 shares (fractional) — ext_exits will cover
+20:47:38  INFO        EOD stop skip ESS: 0.1273 shares (fractional) — ext_exits will cover
+20:47:38  INFO        Daily log -> logs/daily/2026-11-17.md
+20:47:38  INFO        Dashboard written → logs/dashboard.md
+
+|  ESS                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             14|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             3|
+|  Equity                                                         $230.52|
+|  Cash                                                           $126.85|
++========================================================================+
