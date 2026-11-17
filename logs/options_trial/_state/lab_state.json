@@ -82,26 +82,6 @@
       "entry_order_id": "7ba5a8a7-e8ba-4443-a74c-b1fecc99f345"
     },
     {
-      "lot_id": "f8c9f1800e54",
-      "bucket_id": 91,
-      "profile_name": "s406_only",
-      "strategy_id": "S406",
-      "occ_symbol": "HD261120C00360000",
-      "underlying": "HD",
-      "qty": 1,
-      "entry_cost": 56.99999999999999,
-      "entry_price": 0.57,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-17T14:47:29.736765+00:00",
-      "entry_order_id": "2a7ad5a0-61c8-491f-8e5f-fc7304d14a1c"
-    },
-    {
       "lot_id": "3f22e40eee97",
       "bucket_id": 90,
       "profile_name": "live_1to1",
@@ -293,7 +273,6 @@
     "b15": 45.0,
     "b49": 72.0,
     "b16": 53.0,
-    "b91": 56.99999999999999,
     "b90": 32.0,
     "b12": 53.0,
     "b21": 54.0,
@@ -732,7 +711,8 @@
     "6ec2b779-72a5-45a4-9a65-f41676985cd5",
     "74a521f2-1bd2-4fda-a756-712f5b8d63d1",
     "4956dc4a-19ba-401e-8cf4-0ec3e7c68dda",
-    "af2a89b9-6fb0-4c62-8589-4d6da5041788"
+    "af2a89b9-6fb0-4c62-8589-4d6da5041788",
+    "c029a83e-e7ea-48c7-aba1-c023d4a7f848"
   ],
   "submitted_today": 18,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
