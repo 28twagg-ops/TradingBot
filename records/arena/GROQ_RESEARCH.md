@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-17T03:52Z | S04a | gap_down_quality | 1d489e3176af4f | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-17T03:52Z | S08a | Low hourly volatility predicts larger next‑hour  | 678cc495e7a769 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-17T03:51Z | S01a | BTC-USD hourly trend persistence | 71721360aa8333 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-17T03:50Z | S05a | BTC-USD hourly trend persistence | 37e28abf0bdf88 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-17T03:50Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 05aeffbe7bbe66 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-17T03:02Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 0e12cc7058a302 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-17T03:01Z | S06b | BTC-USD hourly momentum trigger | 9b5152f0a1f5e7 | HOLD_NO_POSITIVE_BACKTEST_EVIDENCE |
 | 2026-11-17T03:00Z | S07b | Hourly trend persistence in BTC-USD | 692530f50e0287 | HOLD |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-16T06:34Z | S01a | BTC-USD hourly trend persistence | e78c926e29b351 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-16T06:34Z | S05a | BTC-USD hourly trend persistence | 8c5dc5eba873ac | HOLD_INVALID_MODEL_DECISION |
 | 2026-11-16T06:33Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 3fde998aa7f9f4 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-16T02:05Z | S09b | BTC-USD hourly price reaction to 50‑hour SMA cro | 254db340538b70 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-16T02:04Z | S06b | BTC-USD hourly SMA crossover momentum | 0b8f84bf1ac2f5 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-16T02:03Z | S07b | Hourly trend persistence in BTC-USD | e65c870c275478 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-16T02:03Z | S02b | BTC-USD hourly trend reversal after consecutive  | d6308d383d2d68 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-16T02:02Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | 6bad0ad8b0a4f4 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
