@@ -13145,3 +13145,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-17 16:06:59,exits,correction,230.73,195.98,0,0,1,1,LOPE,both
 2026-11-17 16:11:48,exits,bull,230.68,195.98,0,0,0,1,LOPE,both
 2026-11-17 16:17:06,exits,correction,230.66,195.98,0,0,0,1,LOPE,both
+2026-11-17 16:22:00,exits,correction,230.56,230.56,0,0,1,0,,both
