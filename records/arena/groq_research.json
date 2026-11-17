@@ -1,108 +1,5 @@
 [
   {
-    "worker": "S05",
-    "cycle": "2026-10-31T12:24Z",
-    "status": "RESEARCHED",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Mean reversion after large hourly swings in 24/7 crypto spot markets",
-    "strategy": {
-      "family": "reversion",
-      "lookback": 5,
-      "threshold": 0.08
-    },
-    "test": {
-      "status": "INSUFFICIENT_HOURLY_HISTORY"
-    },
-    "action": "HOLD_INSUFFICIENT_HISTORY",
-    "experiment_id": "b5b6c0d5cd5655",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "search for hourly close price data for BTC-USD ETH-USD SOL-USD 2019-2026"
-  },
-  {
-    "worker": "S08",
-    "cycle": "2026-10-31T12:25Z",
-    "status": "RESEARCH_IDEA_NEEDS_DATA",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Volatility compression mean reversion in BTC-USD using hourly realized volatility",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_DATA",
-    "experiment_id": "a352dce77b6f4a",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "search for empirical studies on hourly realized volatility mean reversion in Bitcoin"
-  },
-  {
-    "worker": "S01",
-    "cycle": "2026-10-31T12:25Z",
-    "status": "AI_UNAVAILABLE",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "safe_error": "GROQ_HTTP_400_unknown"
-  },
-  {
-    "worker": "S04",
-    "cycle": "2026-10-31T12:26Z",
-    "status": "RESEARCHED",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "Hourly gap\u2011up mean reversion in BTC\u2011USD",
-    "strategy": {
-      "family": "reversion",
-      "lookback": 5,
-      "threshold": 0.01
-    },
-    "test": {
-      "status": "INSUFFICIENT_HOURLY_HISTORY"
-    },
-    "action": "HOLD_INSUFFICIENT_HISTORY",
-    "experiment_id": "0415b6bbf48b2c",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "BTC-USD hourly gap\u2011up 1% events 5\u2011hour return distribution statistics"
-  },
-  {
-    "worker": "S09",
-    "cycle": "2026-10-31T12:27Z",
-    "status": "RESEARCH_IDEA_NEEDS_DATA",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "topic": "BTC-USD hourly price reaction to cross\u2011market sentiment spikes on Reddit",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close",
-        "social_signal"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_DATA",
-    "experiment_id": "d5827d075d5911",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "Reddit Bitcoin upvote surge hourly impact BTC price"
-  },
-  {
     "worker": "S06",
     "cycle": "2026-10-31T12:32Z",
     "status": "RESEARCH_IDEA_NEEDS_DATA",
@@ -20097,5 +19994,138 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "btc hourly 10 hour uptrend reversal 200 hour sma frequency"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-11-17T13:21Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly trend persistence",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "721ad157cffb03",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly close price dataset 2015\u20112026"
+  },
+  {
+    "worker": "S05",
+    "cycle": "2026-11-17T13:21Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly trend persistence",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "8327c9e6f860b0",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Microsoft - Official Home Page",
+        "url": "https://www.microsoft.com/en-us/",
+        "snippet": "At Microsoft our mission and values are to help people and businesses throughout the world realize their full potential.",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD hourly trend persistence 20h 5% frequency"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-11-17T13:22Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly trend persistence",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "39d1bc101ca706",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly trend persistence 20h 0.05% statistical significance 2024 2025"
+  },
+  {
+    "worker": "S08",
+    "cycle": "2026-11-17T13:23Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "Low hourly volatility predicts larger next hour return magnitude in BTC-USD",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "0a0f71a72d8211",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "empirical evidence low hourly volatility BTC next hour return magnitude"
+  },
+  {
+    "worker": "S04",
+    "cycle": "2026-11-17T13:23Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "gap_down_quality",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "762b62aac1cd92",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly gap\u2011down >2% events list"
   }
 ]

@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-17T13:23Z | S04a | gap_down_quality | 762b62aac1cd92 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-17T13:23Z | S08a | Low hourly volatility predicts larger next hour  | 0a0f71a72d8211 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-17T13:22Z | S01a | BTC-USD hourly trend persistence | 39d1bc101ca706 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-17T13:21Z | S05a | BTC-USD hourly trend persistence | 8327c9e6f860b0 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-17T13:21Z | S03a | BTC-USD hourly trend persistence | 721ad157cffb03 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-17T12:28Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 555764d2e71a69 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-17T12:27Z | S06b | BTC-USD hourly momentum trigger | bfcb9b39499c60 | HOLD |
 | 2026-11-17T12:27Z | S07b |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-16T12:02Z | S01a | BTC-USD hourly trend persistence | 91e7fe92e08641 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-16T12:01Z | S05a | BTC-USD hourly trend persistence | 8b41e1998ae620 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-16T12:00Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 05aeffbe7bbe66 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-16T09:41Z | S09b | BTC-USD hourly return after 50‑hour SMA crossove | 219fe9fbcd4205 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-16T09:40Z | S06b | BTC-USD relative strength to SPY and hourly mean | d1f7bca8baddc4 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-16T09:40Z | S07b | Hourly trend persistence in BTC-USD | 46e327a3679e87 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-16T09:39Z | S02b | BTC-USD hourly volatility clustering after 3 con | fb8da4c8749e35 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-16T09:38Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA whe | 72a944af434452 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
