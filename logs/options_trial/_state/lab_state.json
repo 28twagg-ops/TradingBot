@@ -182,26 +182,6 @@
       "entry_order_id": "24d25032-7ebc-45b3-a2ec-9274e72cf33a"
     },
     {
-      "lot_id": "f0a20ffe2a7f",
-      "bucket_id": 17,
-      "profile_name": "lab0017_s359_w2_1005_1045_r1",
-      "strategy_id": "S359",
-      "occ_symbol": "MSTR261120C00104000",
-      "underlying": "MSTR",
-      "qty": 1,
-      "entry_cost": 55.00000000000001,
-      "entry_price": 0.55,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-18T15:17:23.433729+00:00",
-      "entry_order_id": "e288f42d-a396-44c7-bbe2-b6017db76c26"
-    },
-    {
       "lot_id": "82e0c2b0ddf5",
       "bucket_id": 18,
       "profile_name": "lab0018_s361_w2_1005_1045_r1",
@@ -282,7 +262,6 @@
     "b54": 71.0,
     "b2007": 33.0,
     "b6": 60.0,
-    "b17": 55.00000000000001,
     "b18": 55.00000000000001,
     "b91": 32.0
   },
@@ -720,7 +699,8 @@
     "317c47a0-af3b-4cdb-9f78-a065b51e9fdd",
     "3d210a56-1ac5-4b89-9674-686bde919e19",
     "ec9ded34-717a-4ce7-a671-458fd6821bd8",
-    "997fae24-93ab-4f37-90a4-37cd860c2614"
+    "997fae24-93ab-4f37-90a4-37cd860c2614",
+    "8392de9e-924c-4669-a1dd-7dbea62867a9"
   ],
   "submitted_today": 8,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
