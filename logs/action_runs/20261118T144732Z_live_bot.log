@@ -1,0 +1,22 @@
+14:47:33  INFO      Mode: morning_scan
+14:47:34  INFO        [positions] 3/3 (3 valid)
+14:47:34  INFO        SELL LIMIT AES  qty=2.308272585  limit=$15.01  id=8469b7e4-2f52-4e71-9af6-a7b7e45c2b28
+14:48:05  INFO        SELL LIMIT filled AES (confirmed by position check)
+14:48:05  INFO        TX logged: SELL AES  P&L 0.32%
+14:48:05  INFO        Universe cache hit: 903 tickers (tickers_2026-11-18.json)
+14:48:05  INFO        [universe] 40/901 (40 valid)
+14:48:07  INFO        [universe] 80/901 (80 valid)
+14:48:08  INFO        [universe] 120/901 (120 valid)
+14:48:09  INFO        [universe] 160/901 (160 valid)
+14:48:10  INFO        [universe] 200/901 (199 valid)
+14:48:20  INFO        [universe] 240/901 (238 valid)
+14:48:30  INFO        [universe] 280/901 (278 valid)
+14:48:43  INFO        [universe] 320/901 (318 valid)
+14:48:53  INFO        [universe] 360/901 (358 valid)
+14:49:07  INFO        [universe] 400/901 (398 valid)
+14:49:20  INFO        [universe] 440/901 (438 valid)
+14:49:30  INFO        [universe] 480/901 (477 valid)
+14:49:43  INFO        [universe] 520/901 (517 valid)
+14:49:53  INFO        [universe] 560/901 (557 valid)
+14:50:07  INFO        [universe] 600/901 (597 valid)
+14:50:17  INFO        [universe] 640/901 (637 valid)
