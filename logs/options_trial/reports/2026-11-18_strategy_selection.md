@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-18
 
-_Generated 2026-11-18T09:26:49.562873_
+_Generated 2026-11-18T10:03:51.966956_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-11-18T09:26:49.562873_
 
 ## Attribution health
 
-- Total exits: **4025**
+- Total exits: **4026**
 - Orphan exits (b0/orphan_reconcile): **423**
 - Orphan rate: **10.5%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -101,7 +101,7 @@ _Generated 2026-11-18T09:26:49.562873_
 | S361 (RubberBand_2DTE) | 2d | drop | 77 | 44.2 | -30.43 | -67.41 | -53.52 | +256.44 | 110 | 1 | 1 | $+63.00 | 18.2% | non-positive median return |
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 135 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 255 | 32.2 | -35.29 | -63.24 | -53.42 | +93.89 | 135 | 0 | 0 | $-1,276.78 | 25.9% | non-positive median return |
-| S404 (GapDown_OTM2) | 3d | drop | 119 | 47.1 | -35.71 | -65.10 | -50.00 | +93.22 | 110 | 3 | 2 | $+737.00 | 10.1% | non-positive median return |
+| S404 (GapDown_OTM2) | 3d | drop | 120 | 46.7 | -36.31 | -64.91 | -50.00 | +92.38 | 110 | 3 | 3 | $+715.00 | 10.0% | non-positive median return |
 | S355 (GapDown_7DTE) | 7d | drop | 71 | 45.1 | -37.50 | -77.08 | -63.70 | +138.64 | 110 | 0 | 0 | $+367.00 | 38.0% | manually paused — excluded from new entries & reflected P&L |
 | S411 (RubberBand_OTM2) | 3d | drop | 66 | 47.0 | -38.16 | -59.11 | -52.28 | +60.61 | 107 | 0 | 0 | $-278.00 | 15.2% | non-positive median return |
 | S352 (GapDown_2DTE) | 2d | drop | 73 | 45.2 | -38.24 | -70.12 | -51.85 | +267.46 | 110 | 1 | 1 | $+211.00 | 16.4% | non-positive median return |
@@ -316,7 +316,7 @@ _Pipeline evaluation as of 2026-11-18. Auto-kill thresholds: median<-25% at n>=1
 | S401 | Any_Gap_Down_Small | 135 | +0.00% | 50% | INSUFFICIENT | 110 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
 | S403 | Any_MA50_Touch | 84 | +50.88% | 61% | INSUFFICIENT | 110 |
-| S404 | GapDown_OTM2 | 119 | -35.71% | 47% | INSUFFICIENT | 110 |
+| S404 | GapDown_OTM2 | 120 | -36.31% | 47% | INSUFFICIENT | 110 |
 | S405 | GapDown_OTM3 | 56 | -42.86% | 34% | INSUFFICIENT | 110 |
 | S406 | RubberBand_ITM3 | 180 | +10.88% | 51% | INSUFFICIENT | 110 |
 | S407 | RubberBand_ITM2 | 38 | -47.73% | 29% | INSUFFICIENT | 110 |
