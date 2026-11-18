@@ -200,6 +200,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-18T15:07:43.745582+00:00",
       "entry_order_id": "24d25032-7ebc-45b3-a2ec-9274e72cf33a"
+    },
+    {
+      "lot_id": "f0a20ffe2a7f",
+      "bucket_id": 17,
+      "profile_name": "lab0017_s359_w2_1005_1045_r1",
+      "strategy_id": "S359",
+      "occ_symbol": "MSTR261120C00104000",
+      "underlying": "MSTR",
+      "qty": 1,
+      "entry_cost": 55.00000000000001,
+      "entry_price": 0.55,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-18T15:17:23.433729+00:00",
+      "entry_order_id": "e288f42d-a396-44c7-bbe2-b6017db76c26"
     }
   ],
   "pending_orders": [
@@ -231,14 +251,16 @@
     "b54": 71.0,
     "b52": 47.0,
     "b2007": 33.0,
-    "b6": 60.0
+    "b6": 60.0,
+    "b17": 55.00000000000001
   },
   "session_date": "2026-11-18",
   "entries_locked": [
     "91|S406|2026-11-18",
     "6|S210|2026-11-18",
     "2007|S430|2026-11-18",
-    "52|S406|2026-11-18"
+    "52|S406|2026-11-18",
+    "17|S359|2026-11-18"
   ],
   "processed_orders": [
     "f204f387-5f24-4ac9-8b45-f2ffa940295d",
@@ -657,9 +679,10 @@
     "ea18d96f-07b8-4e6a-ab9d-332f473559c2",
     "346013b0-d45b-415f-91c2-b1f4cd1f4601",
     "f2667e45-e359-453c-a2e6-bf64b73ae28a",
-    "24d25032-7ebc-45b3-a2ec-9274e72cf33a"
+    "24d25032-7ebc-45b3-a2ec-9274e72cf33a",
+    "e288f42d-a396-44c7-bbe2-b6017db76c26"
   ],
-  "submitted_today": 4,
+  "submitted_today": 5,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-18"
 }
