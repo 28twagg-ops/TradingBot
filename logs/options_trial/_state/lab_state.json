@@ -220,6 +220,26 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-18T15:17:23.433729+00:00",
       "entry_order_id": "e288f42d-a396-44c7-bbe2-b6017db76c26"
+    },
+    {
+      "lot_id": "82e0c2b0ddf5",
+      "bucket_id": 18,
+      "profile_name": "lab0018_s361_w2_1005_1045_r1",
+      "strategy_id": "S361",
+      "occ_symbol": "MSTR261120C00103000",
+      "underlying": "MSTR",
+      "qty": 1,
+      "entry_cost": 55.00000000000001,
+      "entry_price": 0.55,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-18T15:27:52.412649+00:00",
+      "entry_order_id": "de66a1a7-11fc-4ed3-b241-82d3c3407512"
     }
   ],
   "pending_orders": [
@@ -238,6 +258,22 @@
       "buy_offset": -0.01,
       "take_profit": 0.5,
       "stop_loss": -0.4
+    },
+    {
+      "order_id": "3d210a56-1ac5-4b89-9674-686bde919e19",
+      "bucket_id": 19,
+      "strategy_id": "S362",
+      "occ_symbol": "HD261120C00365000",
+      "underlying": "HD",
+      "qty": 1,
+      "limit": 0.07,
+      "profile_name": "lab0019_s362_w2_1005_1045_r1",
+      "submitted": "2026-11-18",
+      "detail": "RB gap -2.3% reclaim",
+      "spread_frac": 0.13333333333333325,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.5
     }
   ],
   "pending_exits": [],
@@ -252,7 +288,8 @@
     "b52": 47.0,
     "b2007": 33.0,
     "b6": 60.0,
-    "b17": 55.00000000000001
+    "b17": 55.00000000000001,
+    "b18": 55.00000000000001
   },
   "session_date": "2026-11-18",
   "entries_locked": [
@@ -260,7 +297,9 @@
     "6|S210|2026-11-18",
     "2007|S430|2026-11-18",
     "52|S406|2026-11-18",
-    "17|S359|2026-11-18"
+    "17|S359|2026-11-18",
+    "18|S361|2026-11-18",
+    "19|S362|2026-11-18"
   ],
   "processed_orders": [
     "f204f387-5f24-4ac9-8b45-f2ffa940295d",
@@ -680,9 +719,10 @@
     "346013b0-d45b-415f-91c2-b1f4cd1f4601",
     "f2667e45-e359-453c-a2e6-bf64b73ae28a",
     "24d25032-7ebc-45b3-a2ec-9274e72cf33a",
-    "e288f42d-a396-44c7-bbe2-b6017db76c26"
+    "e288f42d-a396-44c7-bbe2-b6017db76c26",
+    "de66a1a7-11fc-4ed3-b241-82d3c3407512"
   ],
-  "submitted_today": 5,
+  "submitted_today": 7,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-18"
 }
