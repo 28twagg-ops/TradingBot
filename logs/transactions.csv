@@ -1413,3 +1413,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-11-18 14:48:05,2026-11-18,SELL,AES,Pullback50,15.01,34.66,0.32,0.11,1,midline (+0.3%),correction,230.56
 2026-11-18 15:12:07,2026-11-18,SELL,AMCR,Pullback50,43.44,34.5,-0.59,-0.2,1,stop_loss (-0.6%),correction,230.44
 2026-11-18 15:32:08,2026-11-18,SELL,ESS,Pullback50,270.09,34.38,-0.56,-0.19,1,stop_loss (-0.6%),correction,230.36
+2026-11-18 20:52:24,2026-11-18,SELL,ANET,Pullback50,193.68,34.6,0.16,0.06,0,midline (+0.2%),correction,230.32

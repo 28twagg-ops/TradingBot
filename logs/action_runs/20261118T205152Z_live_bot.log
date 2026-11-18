@@ -1,0 +1,168 @@
+20:51:54  INFO      Mode: scan
+20:51:54  INFO        [positions] 3/3 (3 valid)
+20:51:54  INFO        SELL LIMIT ANET  qty=0.178645316  limit=$193.62  id=22320101-8240-458d-bf6e-aca92ebb435c
+20:52:24  INFO        SELL LIMIT filled ANET (confirmed by position check)
+20:52:24  INFO        TX logged: SELL ANET  P&L 0.16%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         20:51 UTC|
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Equity                                                         $230.32|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-18|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                      CORRECTION|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $230.32|
+|  Cash                                                           $126.74|
+|  Reserve                                          $11.52  (always kept)|
+|  Stock~  $103.58 / $172.74  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $69.16  (new stock buys)|
+|  Trade size             $34.55  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AMCR     Pullback50      $34.51     $43.85   $43.81   -0.1%   $-0.03  |
+|  AMP      Pullback50      $34.47     $503.48  $502.53  -0.2%   $-0.07  |
+|  ANET     Pullback50      $34.60     $193.34  $193.66  +0.2%   $+0.06  |
+|                                                                        |
+|  Total invested                                                 $103.58|
+|  Total open P&L                                                  $-0.04|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (16.3m); positions refreshed live)|
+|  Cached signals                                                      34|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AMP  P&L -0.2%  $-0.07                                            HOLD|
+|  AMCR  P&L -0.1%  $-0.03                                           HOLD|
+|  ANET  P&L +0.2%  $+0.06                          EXIT: midline (+0.2%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: CORRECTION                                     |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                          cached signals (signals fresh (16.3m))|
+|  Universe scanned in prep                                           903|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  34                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AMCR     Pullback50      eq     $43.82   35.7   -1.51   50MA bounce (+|
+|  AMP      Pullback50      eq     $504.12  52.7   -2.01   50MA bounce (-|
+|  ANET     Pullback50      eq     $193.34  53.5   -1.15   50MA bounce (+|
+|  TECH     Pullback50      eq     $72.80   55.2   -1.10   50MA bounce (+|
+|  ESS      Pullback50      eq     $272.92  65.8   -1.86   50MA bounce (+|
+|  FCX      RubberBand      eq     $51.47   25.6   1.39    RSI           |
+|  HSIC     Pullback50      eq     $85.64   48.6   -0.36   50MA bounce (-|
+|  IEX      Pullback50      eq     $233.45  44.0   -1.64   50MA bounce (+|
+|  L        Pullback50      eq     $110.01  41.2   -2.12   50MA bounce (+|
+|  MCO      Pullback50      eq     $481.44  46.7   -1.68   50MA bounce (+|
+|  NDSN     Pullback50      eq     $322.69  45.3   -2.11   50MA bounce (-|
+|  NSC      Pullback50      eq     $324.13  36.9   -0.85   50MA bounce (+|
+|  PANW     RSIRecovery     eq     $334.75  34.4   1.32    RSI 18.6→34.4 |
+|  RVTY     Pullback50      eq     $152.41  39.9   -1.62   50MA bounce (+|
+|  SOLV     Pullback50      eq     $86.57   57.0   -1.32   50MA bounce (-|
+|  TGT      VWAP_Reclaim    eq     $166.89  65.4   3.44    VWAP reclaim V|
+|  TEL      Pullback50      eq     $212.68  40.9   -1.70   50MA bounce (-|
+|  TJX      VWAP_Reclaim    eq     $141.42  50.0   2.21    VWAP reclaim V|
+|  UNH      RubberBand      eq     $347.60  23.9   3.21    RSI           |
+|  VEEV     RubberBand      eq     $278.93  22.4   1.53    RSI           |
+|  ANF      Pullback50      eq     $147.29  35.4   -0.25   50MA bounce (-|
+|  BIO      Pullback50      eq     $369.26  42.7   -1.00   50MA bounce (-|20:52:24  INFO        place_all_stops: checking 2 positions...
+20:52:24  INFO        STOP skipped AMCR: fractional (0.7877 shares) — software exit will handle it
+20:52:24  INFO        STOP skipped AMP: fractional (0.0686 shares) — software exit will handle it
+20:52:24  INFO        place_eod_stops: updating 2 stops to current price...
+20:52:24  INFO        EOD stop skip AMCR: 0.7877 shares (fractional) — ext_exits will cover
+20:52:24  INFO        EOD stop skip AMP: 0.0686 shares (fractional) — ext_exits will cover
+20:52:25  INFO        Daily log -> logs/daily/2026-11-18.md
+20:52:25  INFO        Dashboard written → logs/dashboard.md
+
+|  DBX      Pullback50      eq     $35.06   43.0   -0.39   50MA bounce (-|
+|  EAT      Pullback50      eq     $202.67  38.5   -1.01   50MA bounce (+|
+|  DLB      RubberBand      eq     $57.89   27.4   0.86    RSI           |
+|  MSA      Pullback50      eq     $178.18  49.1   0.08    50MA bounce (-|
+|  PATH     RubberBand      eq     $11.85   23.6   1.84    RSI           |
+|  PNFP     Pullback50      eq     $98.18   41.1   -1.32   50MA bounce (+|
+|  SEIC     Pullback50      eq     $105.60  52.1   -1.67   50MA bounce (+|
+|  UBSI     Pullback50      eq     $47.23   39.4   -1.56   50MA bounce (-|
+|  TXNM     Pullback50      eq     $58.98   57.3   -1.03   50MA bounce (+|
+|  VNO      Pullback50      eq     $34.44   45.7   -1.03   50MA bounce (+|
+|  WEX      Pullback50      eq     $182.55  48.2   -1.78   50MA bounce (-|
+|  WMG      VWAP_Reclaim    eq     $32.84   72.5   1.46    VWAP reclaim V|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             34|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             2|
+|  Equity                                                         $230.32|
+|  Cash                                                           $161.34|
++========================================================================+
