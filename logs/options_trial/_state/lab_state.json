@@ -183,7 +183,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "ed0596df-ef7a-4378-a38b-b4b50c7b70b8",
+      "lot_id": "3f22e40eee97",
+      "bucket_id": 90,
+      "strategy_id": "S406",
+      "occ_symbol": "TTD261120C00015000",
+      "qty": 1,
+      "reason": "take_profit (+59.4%)",
+      "submitted": "2026-11-18T12:52:00"
+    }
+  ],
   "bucket_open_premium": {
     "b15": 45.0,
     "b49": 72.0,
