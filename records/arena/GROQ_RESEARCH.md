@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-18T12:15Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 9af34426fc5ec9 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-18T12:14Z | S06b | BTC-USD hourly momentum trigger | cab8734e5173be | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-18T12:14Z | S10b | ETH-USD hourly breakout above 5% SMA triggers me | c69270a637d0c1 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-18T12:13Z | S02b | BTC-USD hourly trend persistence after 4 consecu | 0303d9fea59cf9 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-18T12:12Z | S07b | Hourly trend persistence in BTC-USD | 2b91e2a8afbe8c | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-18T07:34Z | S04a | gap_down_quality | 1e315ec819f535 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-18T07:34Z | S08a | Low hourly volatility predicts larger next‑hour  | 81d4d1918af143 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-18T07:33Z | S05a | BTC-USD hourly breakout regime shift | e0ecdf6b4ff9dd | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-17T13:22Z | S01a | BTC-USD hourly trend persistence | 39d1bc101ca706 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-17T13:21Z | S05a | BTC-USD hourly trend persistence | 8327c9e6f860b0 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-17T13:21Z | S03a | BTC-USD hourly trend persistence | 721ad157cffb03 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-17T12:28Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 555764d2e71a69 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-17T12:27Z | S06b | BTC-USD hourly momentum trigger | bfcb9b39499c60 | HOLD |
-| 2026-11-17T12:27Z | S07b |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
-| 2026-11-17T12:26Z | S02b | BTC-USD hourly trend persistence after 3 consecu | 9047a30f0b5d4c | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-17T12:25Z | S10b | ETH-USD hourly mean reversion when price is far  | 81cc176de86a12 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
