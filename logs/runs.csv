@@ -13326,3 +13326,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-18 21:12:10,ext_exits,correction,230.09,126.8,0,0,0,2,AMCR|AMP,both
 2026-11-18 21:17:01,ext_exits,correction,230.09,126.8,0,0,0,2,AMCR|AMP,both
 2026-11-18 21:21:43,ext_exits,correction,230.22,126.8,0,0,0,2,AMCR|AMP,both
+2026-11-18 21:27:03,ext_exits,correction,230.22,126.8,0,0,0,2,AMCR|AMP,both
