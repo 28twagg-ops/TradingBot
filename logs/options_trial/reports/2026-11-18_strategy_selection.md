@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-18
 
-_Generated 2026-11-18T12:57:00.337896_
+_Generated 2026-11-18T13:02:05.303994_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-11-18T12:57:00.337896_
 
 ## Attribution health
 
-- Total exits: **4032**
+- Total exits: **4033**
 - Orphan exits (b0/orphan_reconcile): **423**
 - Orphan rate: **10.5%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -105,7 +105,7 @@ _Generated 2026-11-18T12:57:00.337896_
 | S355 (GapDown_7DTE) | 7d | drop | 71 | 45.1 | -37.50 | -77.08 | -63.70 | +138.64 | 110 | 0 | 0 | $+367.00 | 38.0% | manually paused — excluded from new entries & reflected P&L |
 | S411 (RubberBand_OTM2) | 3d | drop | 66 | 47.0 | -38.16 | -59.11 | -52.28 | +60.61 | 107 | 0 | 0 | $-278.00 | 15.2% | non-positive median return |
 | S352 (GapDown_2DTE) | 2d | drop | 73 | 45.2 | -38.24 | -70.12 | -51.85 | +267.46 | 110 | 1 | 1 | $+211.00 | 16.4% | non-positive median return |
-| S430 (DayTrader_ORB) | 3d | drop | 22 | 22.7 | -39.62 | -45.16 | -40.98 | +52.66 | 33 | 3 | 2 | $-199.00 | 18.2% | non-positive median return |
+| S430 (DayTrader_ORB) | 3d | drop | 23 | 26.1 | -39.58 | -44.87 | -40.78 | +54.20 | 33 | 3 | 3 | $-181.00 | 17.4% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 75 | 46.7 | -42.31 | -85.22 | -57.89 | +82.37 | 110 | 1 | 0 | $-50.00 | 34.7% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 56 | 33.9 | -42.86 | -83.93 | -65.20 | +103.47 | 110 | 0 | 0 | $-118.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 56 | 23.2 | -43.65 | -86.66 | -54.73 | +95.51 | 114 | 0 | 0 | $-401.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
@@ -332,7 +332,7 @@ _Pipeline evaluation as of 2026-11-18. Auto-kill thresholds: median<-25% at n>=1
 | S417 | BBSqueeze_OTM1 | 0 | — | — | NEW | 0 |
 | S418 | BBSqueeze_OTM2 | 0 | — | — | NEW | 0 |
 | S419 | BBSqueeze_OTM3 | 0 | — | — | NEW | 0 |
-| S430 | DayTrader_ORB | 22 | -39.62% | 23% | INSUFFICIENT | 33 |
+| S430 | DayTrader_ORB | 23 | -39.58% | 26% | INSUFFICIENT | 33 |
 | S431 | DayTrader_RS | 0 | — | — | NEW | 0 |
 | S432 | DayTrader_ORB_RS | 17 | -37.50% | 35% | INSUFFICIENT | 33 |
 
