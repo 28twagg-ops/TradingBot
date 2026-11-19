@@ -1,0 +1,67 @@
+23:01:48  INFO      Mode: ext_exits
+23:01:49  INFO        Daily log -> logs/daily/2026-11-19.md
+23:01:49  INFO        Daily log reconciled -> logs/daily/2026-11-19.md (5 ledger rows)
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1754: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  f"type={getattr(o,'order_type','?')}  id={o.id}")
+23:01:49  INFO        SELL order cancelled EXPD  type=OrderType.LIMIT  id=7fbc91bd-b0ca-40e3-abb7-e648fd2fc4c2
+23:01:49  INFO        SELL LIMIT [EXT HRS] EXPD  qty=0.353444526  limit=$192.21  id=4548ebac-a6f4-4aaf-82f3-ee209811fcd4
+23:01:54  INFO        SELL LIMIT[EXT] pending for EXPD — 9:35am will follow up
+23:01:54  INFO        Daily log -> logs/daily/2026-11-19.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                         EXT_EXITS|
+|  Time                                                         23:01 UTC|
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Equity                                                         $227.90|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit log~  stop-0.5% / 3d max  (midline skipped — close already final)|
++------------------------------------------------------------------------+
+|  EXPD  P&L -0.6%  $-0.44         EXIT [EXTENDED HRS]: stop_loss (-0.6%)|
+|  EXPD                             SELL pending (after-hours limit open)|
+|  L  P&L -0.1%  $-0.04            HOLDING until 9:35am scan (Pullback50)|
++========================================================================+
+
++========================================================================+
+|                          EXTENDED HOURS SELLS                          |
++========================================================================+
+|                                                                        |
+|  No extended-hours sells this run.                                     |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                         ext_exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  0 filled  |  0 partial  |  1 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  EXPD                                        -0.65%  (threshold -0.50%)|
+|  Count                                                                1|
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             1|
++========================================================================+
