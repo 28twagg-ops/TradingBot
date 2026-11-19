@@ -100,6 +100,66 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-17T15:32:21.879395+00:00",
       "entry_order_id": "94005b1b-5146-4f91-92d2-0da39e07eabe"
+    },
+    {
+      "lot_id": "0575917a0277",
+      "bucket_id": 12,
+      "profile_name": "lab0012_s403_w2_1005_1045_r1",
+      "strategy_id": "S403",
+      "occ_symbol": "MSFT261120C00530000",
+      "underlying": "MSFT",
+      "qty": 1,
+      "entry_cost": 65.0,
+      "entry_price": 0.65,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-19T15:07:35.532701+00:00",
+      "entry_order_id": "d396ceab-c584-4c0f-aade-ad7dfaaa4aff"
+    },
+    {
+      "lot_id": "c6eaf4bd711e",
+      "bucket_id": 6,
+      "profile_name": "lab0006_s210_w2_1005_1045_r1",
+      "strategy_id": "S210",
+      "occ_symbol": "TSLA261123C00417500",
+      "underlying": "TSLA",
+      "qty": 1,
+      "entry_cost": 60.0,
+      "entry_price": 0.6,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-19T15:07:35.536346+00:00",
+      "entry_order_id": "a7ededbf-20c4-40fb-8198-2819452b13fb"
+    },
+    {
+      "lot_id": "27443be0c4ac",
+      "bucket_id": 2007,
+      "profile_name": "day_trader_analytics_s430",
+      "strategy_id": "S430",
+      "occ_symbol": "NVDA261123C00167500",
+      "underlying": "NVDA",
+      "qty": 1,
+      "entry_cost": 34.0,
+      "entry_price": 0.34,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-19T15:07:35.539494+00:00",
+      "entry_order_id": "7dd62c30-f503-4fd7-ac13-19919bfa16e4"
     }
   ],
   "pending_orders": [
@@ -126,11 +186,17 @@
     "b49": 72.0,
     "b16": 53.0,
     "b21": 54.0,
-    "b20": 38.0
+    "b20": 38.0,
+    "b12": 65.0,
+    "b6": 60.0,
+    "b2007": 34.0
   },
   "session_date": "2026-11-19",
   "entries_locked": [
-    "90|S406|2026-11-19"
+    "90|S406|2026-11-19",
+    "2007|S430|2026-11-19",
+    "6|S210|2026-11-19",
+    "12|S403|2026-11-19"
   ],
   "processed_orders": [
     "f204f387-5f24-4ac9-8b45-f2ffa940295d",
@@ -562,9 +628,12 @@
     "ed0596df-ef7a-4378-a38b-b4b50c7b70b8",
     "5be09486-930a-40e7-941e-4f3e45409f38",
     "8333c9d5-ff61-4a3e-a9d3-c04f9ad057ed",
-    "d066a1a3-e1d8-4669-91c1-50bab098a819"
+    "d066a1a3-e1d8-4669-91c1-50bab098a819",
+    "d396ceab-c584-4c0f-aade-ad7dfaaa4aff",
+    "a7ededbf-20c4-40fb-8198-2819452b13fb",
+    "7dd62c30-f503-4fd7-ac13-19919bfa16e4"
   ],
-  "submitted_today": 1,
+  "submitted_today": 4,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-19"
 }
