@@ -1052,3 +1052,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-11-19 14:46:44,2026-11-19,SELL,AMCR,Pullback50,42.76,,42.76,24.65,0.0,0.0,market_urgent_full,stop_loss (-2.4%),bull
 2026-11-19 14:51:54,2026-11-19,SELL,CNC,Pullback50,65.555,,65.555,33.97,0.0,0.0,market_urgent_full,stop_loss (-1.2%),bull
 2026-11-19 14:56:54,2026-11-19,SELL,APA,Pullback50,45.7,,45.7,34.19,0.0,0.0,market_urgent_full,stop_loss (-0.5%),bull
+2026-11-19 15:37:06,2026-11-19,SELL,AMP,Pullback50,500.91,,500.91,34.36,0.0,0.0,market_urgent_full,stop_loss (-0.5%),correction
