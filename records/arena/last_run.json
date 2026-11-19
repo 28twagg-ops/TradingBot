@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-18T17:19:13.949594+00:00",
+  "timestamp": "2026-11-19T00:27:08.824645+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -21,28 +21,28 @@
       "missing_quotes": []
     },
     "S03": {
-      "action": "BUY SPY",
+      "action": "HOLD",
       "generation_index": 0,
       "cash": 28.00764424,
-      "equity": 93.3324,
+      "equity": 93.5411,
       "ledger_events": 19,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S04": {
-      "action": "BUY BTC-USD",
+      "action": "HOLD",
       "generation_index": 0,
       "cash": 58.76579522,
-      "equity": 97.2573,
+      "equity": 97.2565,
       "ledger_events": 19,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S05": {
-      "action": "SELL SOL-USD",
+      "action": "HOLD",
       "generation_index": 0,
       "cash": 80.72623279,
-      "equity": 94.514,
+      "equity": 94.487,
       "ledger_events": 13,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []

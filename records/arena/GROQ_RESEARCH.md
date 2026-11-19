@@ -6,6 +6,8 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-19T00:27Z | S02b | BTC-USD hourly trend persistence after 4 consecu | 0303d9fea59cf9 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-19T00:27Z | S07b | Hourly trend persistence in BTC-USD across volat | a3a81b2dd3d7d5 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-18T21:57Z | S04a | gap_down_quality | f74cf90bd4402d | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-18T21:56Z | S08a | Low hourly volatility predicts larger next‑hour  | 5958ae4f43cefa | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-18T21:56Z | S05a | BTC-USD hourly trend persistence | 7342a43794f38c | RESEARCH_ONLY_NEEDS_REVISION |
@@ -39,8 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-17T22:31Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 943c5fe60341c7 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-17T22:30Z | S06b | BTC-USD hourly momentum trigger | c876ff718a90e6 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-17T22:30Z | S02b | BTC-USD hourly trend persistence after 4 consecu | 51a3a13f58f7cb | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-17T22:29Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | d2fb9fe51e735c | HOLD_INVALID_MODEL_DECISION |
-| 2026-11-17T22:28Z | S07b | Hourly trend persistence in BTC-USD | 91651cdb59f971 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
