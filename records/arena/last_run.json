@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-19T10:24:25.693795+00:00",
+  "timestamp": "2026-11-19T20:40:44.805149+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -21,29 +21,29 @@
       "missing_quotes": []
     },
     "S03": {
-      "action": "HOLD",
+      "action": "BUY MSFT",
       "generation_index": 0,
-      "cash": 28.00764424,
-      "equity": 93.887,
-      "ledger_events": 19,
-      "council": "REVIEW_REQUIRED",
-      "missing_quotes": []
-    },
-    "S04": {
-      "action": "SELL BTC-USD",
-      "generation_index": 0,
-      "cash": 97.85257267,
-      "equity": 97.8526,
+      "cash": 16.90463568,
+      "equity": 92.4913,
       "ledger_events": 20,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
-    "S05": {
-      "action": "BUY BTC-USD",
+    "S04": {
+      "action": "BUY SPY",
       "generation_index": 0,
-      "cash": 48.70512142,
-      "equity": 94.4231,
-      "ledger_events": 14,
+      "cash": 59.06039018,
+      "equity": 97.8138,
+      "ledger_events": 21,
+      "council": "REVIEW_REQUIRED",
+      "missing_quotes": []
+    },
+    "S05": {
+      "action": "SELL AAPL",
+      "generation_index": 0,
+      "cash": 62.32924177,
+      "equity": 93.539,
+      "ledger_events": 15,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -57,11 +57,11 @@
       "missing_quotes": []
     },
     "S07": {
-      "action": "BUY BTC-USD",
+      "action": "SELL BTC-USD",
       "generation_index": 1,
-      "cash": 56.95143906,
-      "equity": 94.2667,
-      "ledger_events": 17,
+      "cash": 93.32112891,
+      "equity": 93.3211,
+      "ledger_events": 18,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -75,11 +75,11 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "BUY BTC-USD",
+      "action": "SELL BTC-USD",
       "generation_index": 1,
-      "cash": 58.43596751,
-      "equity": 96.7718,
-      "ledger_events": 13,
+      "cash": 95.80038392,
+      "equity": 95.8004,
+      "ledger_events": 14,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
