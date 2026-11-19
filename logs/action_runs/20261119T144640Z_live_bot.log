@@ -1,0 +1,193 @@
+14:46:41  INFO      Mode: morning_scan
+14:46:41  INFO        SELL MARKET [urgent] AMCR closed
+14:46:44  INFO        TX logged: SELL AMCR  P&L -2.41%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:46 UTC|
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Equity                                                         $229.23|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-19|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                            BULL|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $229.23|
+|  Cash                                                           $170.02|
+|  Reserve                                          $11.46  (always kept)|
+|  Stocks~  $59.21 / $171.92  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $112.71  (new stock buys)|
+|  Trade size             $34.38  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (2 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  AMCR     Pullback50      $24.65     $43.82   $42.76   -2.4%   $-0.61  |
+|  AMP      Pullback50      $34.56     $503.48  $503.74  +0.1%   $+0.02  |
+|                                                                        |
+|  Total invested                                                  $59.21|
+|  Total open P&L                                                  $-0.59|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (11.3m))|
+|  Cached exits                                                         1|
+|  Cached signals                                                      23|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AMCR  P&L -2.4%  $-0.61                        EXIT: stop_loss (-2.4%)|
+|  AMP  P&L +0.1%  $+0.02                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                   1|
+|  AMCR                                        -2.41%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: BULL                                           |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           901|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  23                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  APA      Pullback50      eq     $46.00   30.9   -2.49   50MA bounce (-|
+|  CNC      Pullback50      eq     $67.66   48.8   -1.98   50MA bounce (+|
+|  ESS      Pullback50      eq     $272.38  66.0   -2.30   50MA bounce (+|
+|  FITB     Pullback50      eq     $52.33   42.5   -2.74   50MA bounce (-|
+|  FOXA     Pullback50      eq     $65.09   54.5   -0.97   50MA bounce (+|
+|  GDDY     Pullback50      eq     $104.49  32.4   -2.11   50MA bounce (-|
+|  MSFT     Pullback50      eq     $522.25  50.1   -2.34   50MA bounce (+|
+|  MCO      Pullback50      eq     $480.44  43.9   -2.57   50MA bounce (+|
+|  NTRS     Pullback50      eq     $172.78  55.6   -3.04   50MA bounce (+|
+|  PANW     Pullback50      eq     $364.94  49.7   -1.55   50MA bounce (-|
+|  SOLV     Pullback50      eq     $87.18   64.7   -1.89   50MA bounce (-|
+|  SNPS     Pullback50      eq     $451.84  42.9   -2.58   50MA bounce (+|
+|  TEL      Pullback50      eq     $214.89  52.0   -2.09   50MA bounce (+|
+|  WSM      Pullback50      eq     $245.97  46.5   -2.51   50MA bounce (+|
+|  AVTR     Pullback50      eq     $15.62   43.5   -1.46   50MA bounce (-|
+|  DBX      Pullback50      eq     $34.84   41.8   -0.96   50MA bounce (-|
+|  EAT      Pullback50      eq     $200.00  41.4   -1.89   50MA bounce (-|
+|  EQH      Pullback50      eq     $53.81   49.8   -2.07   50MA bounce (+|
+|  KRYS     Pullback50      eq     $321.58  44.9   -1.15   50MA bounce (-|
+|  MSA      Pullback50      eq     $178.72  50.1   -1.84   50MA bounce (-|
+|  PNFP     Pullback50      eq     $98.32   41.7   -2.59   50MA bounce (+|
+|  RGEN     Pullback50      eq     $176.66  49.8   -1.30   50MA bounce (-|
+|  VNO      Pullback50      eq     $34.35   48.7   -1.65   50MA bounce (-|
+|                                                                        |14:46:44  INFO        BUY  APA  $34.38  [Pullback50]  id=6b2b055a-384b-4eca-9f9f-2ae9fc94a79b
+14:46:44  INFO        BUY  CNC  $34.38  [Pullback50]  id=77d332ab-7ae9-4dc0-b11a-1dff1f389567
+14:47:05  INFO        place_all_stops: checking 3 positions...
+14:47:05  INFO        STOP skipped AMP: fractional (0.0686 shares) — software exit will handle it
+14:47:05  INFO        STOP skipped APA: fractional (0.7481 shares) — software exit will handle it
+14:47:05  INFO        STOP skipped CNC: fractional (0.5182 shares) — software exit will handle it
+14:47:05  INFO        Daily log -> logs/daily/2026-11-19.md
+14:47:05  INFO        Dashboard written → logs/dashboard.md
+
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] APA  Pullback50                                    $34.38|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] CNC  Pullback50                                    $34.38|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] ESS  Pullback50                                      cap 3|
+|    SKIP [eq] FITB  Pullback50                                     cap 3|
+|    SKIP [eq] FOXA  Pullback50                                     cap 3|
+|    SKIP [eq] GDDY  Pullback50                                     cap 3|
+|    SKIP [eq] MSFT  Pullback50                                     cap 3|
+|    SKIP [eq] MCO  Pullback50                                      cap 3|
+|    SKIP [eq] NTRS  Pullback50                                     cap 3|
+|    SKIP [eq] PANW  Pullback50                                     cap 3|
+|    SKIP [eq] SOLV  Pullback50                                     cap 3|
+|    SKIP [eq] SNPS  Pullback50                                     cap 3|
+|    SKIP [eq] TEL  Pullback50                                      cap 3|
+|    SKIP [eq] WSM  Pullback50                                      cap 3|
+|    SKIP [eq] AVTR  Pullback50                                     cap 3|
+|    SKIP [eq] DBX  Pullback50                                      cap 3|
+|    SKIP [eq] EAT  Pullback50                                      cap 3|
+|    SKIP [eq] EQH  Pullback50                                      cap 3|
+|    SKIP [eq] KRYS  Pullback50                                     cap 3|
+|    SKIP [eq] MSA  Pullback50                                      cap 3|
+|    SKIP [eq] PNFP  Pullback50                                     cap 3|
+|    SKIP [eq] RGEN  Pullback50                                     cap 3|
+|    SKIP [eq] VNO  Pullback50                                      cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      2|
++------------------------------------------------------------------------+
+|  APA                                                  still unconfirmed|
+|  CNC                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 2 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                            BULL|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             23|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  2 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             3|
+|  Equity                                                         $229.10|
+|  Cash                                                           $125.89|
++========================================================================+
