@@ -102,7 +102,24 @@
       "entry_order_id": "94005b1b-5146-4f91-92d2-0da39e07eabe"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "e6e9e589-d0a2-4530-843a-ccff7fce423a",
+      "bucket_id": 90,
+      "strategy_id": "S406",
+      "occ_symbol": "WMT261120C00137000",
+      "underlying": "WMT",
+      "qty": 1,
+      "limit": 0.73,
+      "profile_name": "live_1to1",
+      "submitted": "2026-11-19",
+      "detail": "RB gap -2.9% reclaim",
+      "spread_frac": 0.11428571428571424,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.4
+    }
+  ],
   "pending_exits": [],
   "bucket_open_premium": {
     "b15": 45.0,
@@ -112,7 +129,9 @@
     "b20": 38.0
   },
   "session_date": "2026-11-19",
-  "entries_locked": [],
+  "entries_locked": [
+    "90|S406|2026-11-19"
+  ],
   "processed_orders": [
     "f204f387-5f24-4ac9-8b45-f2ffa940295d",
     "fd94812e-40e9-4f73-abc3-4e675c52bbb5",
@@ -545,7 +564,7 @@
     "8333c9d5-ff61-4a3e-a9d3-c04f9ad057ed",
     "d066a1a3-e1d8-4669-91c1-50bab098a819"
   ],
-  "submitted_today": 0,
+  "submitted_today": 1,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-19"
 }
