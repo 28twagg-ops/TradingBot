@@ -13447,3 +13447,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-19 20:47:35,scan_evening,correction,228.36,125.62,12,0,0,3,EXPD|L|TXNM,both
 2026-11-19 20:52:17,scan_evening,correction,228.34,159.88,12,0,1,2,EXPD|L,both
 2026-11-19 20:56:55,scan_evening,correction,228.24,125.65,12,0,0,2,EXPD|L,both
+2026-11-19 21:02:05,ext_exits,correction,228.13,125.65,0,0,0,2,EXPD|L,both
