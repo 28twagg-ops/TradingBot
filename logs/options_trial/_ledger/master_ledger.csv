@@ -16771,3 +16771,4 @@ ts,event,bucket_id,profile,strategy_id,lot_id,symbol,occ,qty,limit,fill_price,co
 2026-11-19 16:16:34.739259+00:00,exit,90,live_1to1,S404,3f8565cda3a4,WMT,WMT261120C00127000,1,,0.42,72.0,-41.67,-30.0,broker_fill_backfill,,-0.01,0.5,-0.4,,,b7eb1124-3ca2-40bd-9ed8-fc7d2489b487
 2026-11-19 16:51:16.216500+00:00,exit,2007,day_trader_analytics_s430,S430,27443be0c4ac,NVDA,NVDA261123C00167500,1,,0.19,34.0,-44.12,-15.0,broker_fill_backfill,,-0.01,0.5,-0.4,,,9f2370d4-a6f7-46c7-a1ca-f23e9d97c571
 2026-11-19 17:05:54.081754+00:00,exit,49,lab0049_s396_w2_1005_1045_r1,S396,03beacc7fb87,MARA,MARA261120C00006000,1,,0.35,72.0,-51.39,-37.0,broker_fill_backfill,,-0.01,0.5,-0.5,,,2219cfa3-cde1-4ce5-873e-5068910e0e8a
+2026-11-19 20:47:40.828100+00:00,exit,20,lab0020_s364_w2_1005_1045_r1,S364,cb4dd8e04368,TTD,TTD261127C00015500,1,,0.18,38.0,-52.63,-20.0,stop_loss (-52.6%),,-0.01,0.5,-0.5,,,d89e7e1f-25f0-4ed3-9475-4f79e2b86a91

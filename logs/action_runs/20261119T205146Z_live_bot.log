@@ -1,0 +1,146 @@
+20:51:47  INFO      Mode: scan
+20:51:47  INFO        [positions] 3/3 (3 valid)
+20:51:47  INFO        SELL LIMIT TXNM  qty=0.58102056  limit=$58.97  id=d9c4e925-2963-4062-8216-4028f206948c
+20:52:17  INFO        SELL LIMIT filled TXNM (confirmed by position check)
+20:52:17  INFO        TX logged: SELL TXNM  P&L 0.05%
+20:52:17  INFO        place_all_stops: checking 2 positions...
+20:52:17  INFO        STOP skipped EXPD: fractional (0.1764 shares) — software exit will handle it
+20:52:17  INFO        STOP skipped L: fractional (0.3119 shares) — software exit will handle it
+20:52:17  INFO        place_eod_stops: updating 2 stops to current price...
+20:52:17  INFO        EOD stop skip EXPD: 0.1764 shares (fractional) — ext_exits will cover
+20:52:17  INFO        EOD stop skip L: 0.3119 shares (fractional) — ext_exits will cover
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         20:51 UTC|
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Equity                                                         $228.38|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-19|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                      CORRECTION|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $228.38|
+|  Cash                                                           $125.62|
+|  Reserve                                          $11.42  (always kept)|
+|  Stock~  $102.76 / $171.28  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $68.53  (new stock buys)|
+|  Trade size             $34.26  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  EXPD     Pullback50      $34.19     $194.14  $193.82  -0.2%   $-0.06  |
+|  L        Pullback50      $34.29     $109.82  $109.96  +0.1%   $+0.04  |
+|  TXNM     Pullback50      $34.27     $58.95   $58.98   +0.1%   $+0.02  |
+|                                                                        |
+|  Total invested                                                 $102.76|
+|  Total open P&L                                                  $+0.01|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (16.3m); positions refreshed live)|
+|  Cached signals                                                      12|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  EXPD  P&L -0.2%  $-0.06                                           HOLD|
+|  TXNM  P&L +0.1%  $+0.02                          EXIT: midline (+0.1%)|
+|  L  P&L +0.1%  $+0.04                                              HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: CORRECTION                                     |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                          cached signals (signals fresh (16.3m))|
+|  Universe scanned in prep                                           903|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  12                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  CI       RubberBand      eq     $272.12  32.2   1.33    3d-down       |
+|  ELV      RubberBand      eq     $392.31  39.0   0.81    3d-down       |
+|  EXPD     Pullback50      eq     $194.55  45.7   -0.31   50MA bounce (+|
+|  FCX      RubberBand      eq     $49.23   26.9   0.90    RSI           |
+|  L        Pullback50      eq     $110.01  42.9   -1.92   50MA bounce (+|
+|  PM       RubberBand      eq     $186.53  22.5   1.08    RSI           |
+|  UNH      RubberBand      eq     $333.66  22.1   2.43    RSI           |
+|  VEEV     RubberBand      eq     $263.00  14.4   1.29    RSI           |
+|  BBWI     RSIRecovery     eq     $19.23   31.3   2.25    RSI 26.9→31.3 |
+|  TXNM     Pullback50      eq     $58.98   65.3   -0.88   50MA bounce (+|
+|  UGI      RubberBand      eq     $34.92   22.8   3.80    RSI           |
+|  VVV      VWAP_Reclaim    eq     $36.31   64.0   3.10    VWAP reclaim V|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+20:52:17  INFO        Daily log -> logs/daily/2026-11-19.md
+20:52:18  INFO        Dashboard written → logs/dashboard.md
+
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             12|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             2|
+|  Equity                                                         $228.34|
+|  Cash                                                           $159.88|
++========================================================================+
