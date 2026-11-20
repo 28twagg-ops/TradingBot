@@ -42,43 +42,17 @@ class PaperGenerationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             suffix(-1)
 
-    def test_final_chance_mints_independent_virtual_books_and_archives_all(self):
+    def test_unproven_final_chance_replacement_is_blocked(self):
         self.seed()
-        # A held paper position must be preserved rather than fake-closed.
-        state = json.loads((self.root / "state.json").read_text())
-        old = PaperAccount("S07")
-        old.trade(timestamp="2026-11-01T12:00:00Z", asset_class="crypto",
-                  symbol="BTC/USD", side="BUY", qty=0.0001, price=50000,
-                  fee=0.01, source_id="YAHOO:BTC-USD:PROXY")
-        state["S07"].update(events=old.events, cash=old.cash, positions=old.holdings)
-        (self.root / "state.json").write_text(json.dumps(state))
-        self.assertTrue(record_snapshot(self.root))
-        self.assertFalse(record_snapshot(self.root))
+        record_snapshot(self.root)
         review = audit_and_rotate(
             self.root, dt.datetime(2026, 11, 2, 5, 45, tzinfo=UTC))
-        self.assertEqual(review["rotations"], 5)
-        new_state = json.loads((self.root / "state.json").read_text())
-        new_ai = json.loads((self.root / "ai_state.json").read_text())
-        registry = json.loads((self.root / "generation_registry.json").read_text())
-        self.assertEqual(new_state["S07"]["generation_index"], 1)
-        self.assertEqual(new_state["S07"]["cash"], 100)
-        self.assertEqual(new_state["S07"]["events"], [])
-        self.assertEqual(new_ai["S07"]["previous_generation_context"][
-                         "previous_generation"], "S07a")
-        self.assertEqual(registry["workers"]["S07"]["active"], "S07b")
-        self.assertEqual(registry["workers"]["S04"]["active"], "S04a")
-        self.assertEqual(len(list((self.root / "generations").glob("*.json"))), 5)
-        archived = json.loads((self.root / "generations" / "S07a.json").read_text())
-        self.assertEqual(archived["rule_book"]["cash"], old.cash)
-        self.assertEqual(archived["rule_book"]["events"], old.events)
-        self.assertTrue(archived[
-            "includes_open_paper_positions_without_fictitious_closing"])
-        self.assertEqual(archived["last_indicative_equity"], 97.5)
-        # Re-run is idempotent and must not overwrite immutable archives.
-        old_text = (self.root / "generations" / "S07a.json").read_text()
-        again = audit_and_rotate(self.root, dt.datetime(2026, 11, 2, 5, 46, tzinfo=UTC))
-        self.assertEqual(again["rotations"], 0)
-        self.assertEqual(old_text, (self.root / "generations" / "S07a.json").read_text())
+        self.assertEqual(review["rotations"], 0)
+        self.assertEqual(
+            sum(x["decision"] == "DEFER_UNVALIDATED_REPLACEMENT"
+                for x in review["results"]), 5)
+        self.assertFalse(list((self.root / "generations").glob("*.json")))
+        self.assertEqual(json.loads((self.root / "state.json").read_text())["S07"].get("generation_index", 0), 0)
 
     def test_bad_cash_cannot_be_laundered_by_rotation(self):
         self.seed()
@@ -118,17 +92,13 @@ class PaperGenerationTests(unittest.TestCase):
         self.assertNotEqual(signal("S07", values, 1),
                             signal("S07", values, 0))
 
-    def test_ranking_retains_original_loss_and_new_starts_unranked(self):
+    def test_ranking_preserves_unproven_incumbent(self):
         self.seed()
         record_snapshot(self.root)
         audit_and_rotate(self.root, dt.datetime(2026, 11, 2, 5, 45, tzinfo=UTC))
         ranking = json.loads((self.root / "generation_rankings.json").read_text())
-        previous = next(x for x in ranking if x["generation"] == "S07a")
-        self.assertEqual(previous["status"], "ARCHIVED")
-        self.assertAlmostEqual(previous["return_pct"], -2.5)
+        self.assertTrue(any(x["generation"] == "S07a" for x in ranking))
         self.assertFalse(any(x["generation"] == "S07b" for x in ranking))
-        self.assertIn("S07b", (self.root / "GENERATIONS.md").read_text())
-        self.assertIn("S07a", (self.root / "GENERATIONS.md").read_text())
 
     def test_final_chance_can_keep_replicated_positive_paper_evidence(self):
         now=dt.datetime(2026,11,2,5,45,tzinfo=UTC)
