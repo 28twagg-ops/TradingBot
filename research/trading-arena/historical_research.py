@@ -9,6 +9,7 @@ import json
 import math
 from pathlib import Path
 from run_virtual import signal, UTC, TICKERS, COINS, CONFIG
+from portfolio_replay import compare_all
 
 SYMBOLS = tuple(TICKERS)
 FEE = 0.0025  # per-side conservative combined fee/slippage assumption
@@ -87,6 +88,29 @@ def fetch_hourly(symbol):
         raise ValueError("INSUFFICIENT_COMPLETED_BARS")
     return [float(data["close"].iloc[i]) for i in valid], [float(data["open"].iloc[i]) for i in valid]
 
+def fetch_portfolio_bars():
+    import yfinance as yf
+    output = {}
+    for symbol in SYMBOLS:
+        frame = yf.download(symbol, period="60d", interval="1h",
+                            auto_adjust=True, progress=False, threads=False, timeout=15)
+        if frame.empty or frame.index.tz is None:
+            continue
+        if hasattr(frame.columns, "levels"):
+            frame.columns = [str(x[0]).lower() for x in frame.columns]
+        else:
+            frame.columns = [str(x).lower() for x in frame.columns]
+        frame = frame.dropna(subset=["open", "close"])
+        now = dt.datetime.now(UTC)
+        output[symbol] = [(stamp.to_pydatetime().astimezone(UTC),
+                           float(row["open"]), float(row["close"]))
+                          for stamp, row in frame.iterrows()
+                          if stamp.to_pydatetime().astimezone(UTC) +
+                          dt.timedelta(hours=1) <= now-dt.timedelta(minutes=5)]
+    if not output:
+        raise ValueError("NO_HOURLY_PORTFOLIO_DATA")
+    return output
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dir", required=True)
@@ -94,6 +118,7 @@ def main():
     root = Path(args.dir)
     registry = json.loads((root / "generation_registry.json").read_text())
     results = {}
+    portfolio_bars = {}
     # Evaluate every worker across its eligible universe; this is a
     # diagnostic, not a multi-asset portfolio execution replay.
     for worker in CONFIG["workers"]:
@@ -110,11 +135,18 @@ def main():
             except (ValueError, OSError, RuntimeError, KeyError, TypeError) as exc:
                 results[wid][symbol] = {"status": "DATA_UNAVAILABLE",
                                         "error_type": type(exc).__name__}
+    # Existing per-symbol research remains separate from the portfolio replay.
+    # Portfolio execution requires timestamped, aligned OHLC, fetched below.
+    try:
+        portfolio_bars = fetch_portfolio_bars()
+        portfolio = compare_all(portfolio_bars, registry)
+    except (ValueError, OSError, RuntimeError, KeyError, TypeError) as exc:
+        portfolio = {"status": "UNAVAILABLE", "reason": type(exc).__name__}
     report = {"generated_at": dt.datetime.now(UTC).isoformat(),
               "status": "RESEARCH_ONLY_NO_AUTOMATIC_PROMOTION",
               "execution": "signal prior completed hourly close, fill next hourly open",
               "universe": list(SYMBOLS), "per_side_cost_fraction": FEE,
-              "workers": results}
+              "workers": results, "portfolio_comparison": portfolio}
     root.mkdir(parents=True, exist_ok=True)
     (root / "BACKTEST_RESEARCH.json").write_text(json.dumps(report, indent=2)+"\n")
     lines = ["# Arena historical research — NOT certified promotion evidence", "",
