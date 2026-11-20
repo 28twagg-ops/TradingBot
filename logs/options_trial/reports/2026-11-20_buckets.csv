@@ -14,7 +14,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 12,lab0012_s403_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-19,False,,,,,,,0,,,,idle
 13,lab0013_s350_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-20,False,,0.0,-55.17,-55.17,-55.17,-55.17,-16.0,SMCI,S350,broker_fill_backfill,closed
 14,lab0014_s352_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-17,False,,,,,,,0,,,,idle
-15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-11-20,False,,0.0,-55.56,-55.56,-55.56,-55.56,-25.0,MARA,S356,broker_fill_backfill,closed
+15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-11-20,False,,0.0,-52.78,-52.78,-50.0,-55.56,-38.0,MARA,S356,broker_fill_backfill; broker_fill_backfill,closed
 16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-11-20,False,,0.0,-50.94,-50.94,-50.94,-50.94,-27.0,MARA,S357,broker_fill_backfill,closed
 17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-20,False,,0.0,-51.52,-51.52,-51.52,-51.52,-17.0,NVDA,S359,broker_fill_backfill,closed
 18,lab0018_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-20,False,,0.0,-51.06,-51.06,-51.06,-51.06,-24.0,NVDA,S361,broker_fill_backfill,closed
