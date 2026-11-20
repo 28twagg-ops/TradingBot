@@ -4,15 +4,15 @@
 Stocks/crypto indicative Yahoo hourly prices; NO options executed.
 All 10 workers start at $100; no real money or new AI charges.
 
-Updated: 2026-11-20T03:19:39.203522+00:00
+Updated: 2026-11-20T12:56:48.219637+00:00
 
 | Worker | Virtual action | Equity | Cash | Council |
 |---|---|---:|---:|---|
 | S01a | HOLD | 98.61 | 98.60750559 | REVIEW_REQUIRED |
 | S02b | HOLD | 96.81 | 96.8077828 | REVIEW_REQUIRED |
-| S03a | HOLD | 92.35 | 16.90463568 | REVIEW_REQUIRED |
+| S03a | BUY SOL-USD | 92.2 | 10.19640048 | REVIEW_REQUIRED |
 | S04a | HOLD | 97.76 | 59.06039018 | REVIEW_REQUIRED |
-| S05a | SELL BTC-USD | 93.42 | 93.41955296 | REVIEW_REQUIRED |
+| S05a | HOLD | 93.42 | 93.41955296 | REVIEW_REQUIRED |
 | S06b | HOLD | 96.81 | 96.8077828 | REVIEW_REQUIRED |
 | S07b | HOLD | 93.32 | 93.32112891 | REVIEW_REQUIRED |
 | S08a | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
