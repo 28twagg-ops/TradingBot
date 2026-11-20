@@ -8,6 +8,8 @@ on:
       - 'research/trading-arena/run_virtual.py'
       - 'research/trading-arena/config.json'
       - 'research/trading-arena/generation_manager.py'
+      - 'research/trading-arena/promotion_gate.py'
+      - 'research/trading-arena/historical_research.py'
       - 'research/trading-arena/gemini_special.py'
       - 'research/trading-arena/gemini_cycle.py'
       - '.github/workflows/arena-paper.yml'
@@ -57,6 +59,10 @@ jobs:
           python research/trading-arena/run_virtual.py --dir /tmp/arena-state/records/arena
       - name: Record immutable versioned paper observations
         run: python research/trading-arena/generation_manager.py --dir /tmp/arena-state/records/arena --record
+      - name: Historical research report (not promotion evidence)
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '17 19 * * 0')
+        continue-on-error: true
+        run: python research/trading-arena/historical_research.py --dir /tmp/arena-state/records/arena
       - name: Fair Groq quota fallback if hourly scheduler is delayed
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}

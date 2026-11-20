@@ -8,6 +8,7 @@ import math
 from pathlib import Path
 from arena import PaperAccount, council
 from run_virtual import CONFIG, UTC, initial
+from promotion_gate import evaluate as evaluate_promotion
 
 WORKERS = tuple(w["id"] for w in CONFIG["workers"])
 MIN_AGE_DAYS = 28
@@ -214,6 +215,17 @@ def audit_and_rotate(root, now=None):
                 "observations": len(marks),
                 "closed_trades": sum(x.get("side") == "SELL"
                                      for x in state[wid].get("events", []))}
+        if verdict.startswith("ROTATE_"):
+            # Never discard an incumbent merely because its scheduled trial
+            # expired. The successor must first beat the baseline in an
+            # independently certified, cost-adjusted out-of-sample test.
+            candidate = alias(wid, slot["index"] + 1)
+            approved, reason = evaluate_promotion(root, wid, candidate, now)
+            item["candidate"] = candidate
+            item["promotion_evidence"] = reason
+            if not approved:
+                verdict = "DEFER_UNVALIDATED_REPLACEMENT"
+                item["decision"] = verdict
         if verdict.startswith("ROTATE_"):
             path = root / "generations" / (old + ".json")
             if path.exists():
