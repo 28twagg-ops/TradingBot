@@ -1,0 +1,23 @@
+14:47:36  INFO      Mode: morning_scan
+14:47:37  INFO        [positions] 2/2 (2 valid)
+14:47:37  INFO        SELL LIMIT L  qty=0.311873975  limit=$111.15  id=92ba9bea-b168-43e9-aae8-f8205fa1e5f7
+14:48:07  INFO        SELL LIMIT not filled for L, falling back to market
+14:48:07  INFO        SELL MARKET L closed
+14:48:10  INFO        TX logged: SELL L  P&L 1.42%
+14:48:10  INFO        SELL LIMIT EXPD  qty=0.353444526  limit=$198.28  id=aa1abdb0-55b4-497f-82d2-05dd67beab7e
+14:48:40  INFO        SELL LIMIT filled EXPD (confirmed by position check)
+14:48:40  INFO        TX logged: SELL EXPD  P&L 2.4%
+14:48:40  INFO        Universe cache hit: 903 tickers (tickers_2026-11-20.json)
+14:48:41  INFO        [universe] 40/903 (40 valid)
+14:48:42  INFO        [universe] 80/903 (80 valid)
+14:48:43  INFO        [universe] 120/903 (120 valid)
+14:48:43  INFO        [universe] 160/903 (160 valid)
+14:48:44  INFO        [universe] 200/903 (199 valid)
+14:48:54  INFO        [universe] 240/903 (238 valid)
+14:49:07  INFO        [universe] 280/903 (278 valid)
+14:49:17  INFO        [universe] 320/903 (318 valid)
+14:49:30  INFO        [universe] 360/903 (358 valid)
+14:49:43  INFO        [universe] 400/903 (398 valid)
+14:49:53  INFO        [universe] 440/903 (438 valid)
+14:50:06  INFO        [universe] 480/903 (477 valid)
+14:50:19  INFO        [universe] 520/903 (517 valid)
