@@ -119,6 +119,13 @@ def main():
     registry = json.loads((root / "generation_registry.json").read_text())
     results = {}
     portfolio_bars = {}
+    # Fetch each market once, not once for each of ten workers.
+    hourly_cache = {}
+    for symbol in SYMBOLS:
+        try:
+            hourly_cache[symbol] = fetch_hourly(symbol)
+        except (ValueError, OSError, RuntimeError, KeyError, TypeError) as exc:
+            hourly_cache[symbol] = {"error_type": type(exc).__name__}
     # Evaluate every worker across its eligible universe; this is a
     # diagnostic, not a multi-asset portfolio execution replay.
     for worker in CONFIG["workers"]:
@@ -129,7 +136,11 @@ def main():
             if wid in ("S09", "S10") and symbol not in COINS:
                 continue
             try:
-                close, opening = fetch_hourly(symbol)
+                source = hourly_cache[symbol]
+                if isinstance(source, dict):
+                    results[wid][symbol] = {"status": "DATA_UNAVAILABLE", **source}
+                    continue
+                close, opening = source
                 results[wid][symbol] = research(symbol, close, opening, wid,
                                                 slot["index"], slot["index"] + 1)
             except (ValueError, OSError, RuntimeError, KeyError, TypeError) as exc:
