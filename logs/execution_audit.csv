@@ -1058,3 +1058,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-11-20 14:48:40,2026-11-20,SELL,EXPD,Pullback50,198.68,198.28,198.726,70.24,0.0232,0.0163,limit_fill_position_check_full,midline (+2.4%),correction
 2026-11-20 15:22:00,2026-11-20,SELL,ARES,Pullback50,123.665,,123.665,34.3,0.0,0.0,market_urgent_full,stop_loss (-0.8%),correction
 2026-11-20 15:22:03,2026-11-20,SELL,EOG,Pullback50,150.59,,150.6,34.38,0.0066,0.0023,market_urgent_full,stop_loss (-0.6%),correction
+2026-11-20 20:52:22,2026-11-20,SELL,TTWO,EarningsDrift,210.28,209.86,210.23,34.6,-0.0238,-0.0082,limit_fill_position_check_full,midline (+0.3%),correction

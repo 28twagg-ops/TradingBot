@@ -1423,3 +1423,4 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-11-20 14:48:40,2026-11-20,SELL,EXPD,Pullback50,198.73,70.24,2.4,1.64,1,midline (+2.4%),correction,230.53
 2026-11-20 15:22:00,2026-11-20,SELL,ARES,Pullback50,123.67,34.3,-0.78,-0.27,0,stop_loss (-0.8%),correction,229.93
 2026-11-20 15:22:03,2026-11-20,SELL,EOG,Pullback50,150.6,34.38,-0.56,-0.19,0,stop_loss (-0.6%),correction,229.93
+2026-11-20 20:52:22,2026-11-20,SELL,TTWO,EarningsDrift,210.23,34.6,0.29,0.1,0,midline (+0.3%),correction,229.85

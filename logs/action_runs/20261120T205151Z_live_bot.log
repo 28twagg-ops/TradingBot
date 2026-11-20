@@ -1,0 +1,152 @@
+20:51:51  INFO      Mode: scan
+20:51:52  INFO        [positions] 3/3 (3 valid)
+20:51:52  INFO        SELL LIMIT TTWO  qty=0.164590407  limit=$209.86  id=d054e87f-1ab8-4548-971c-18fa011858fd
+20:52:22  INFO        SELL LIMIT filled TTWO (confirmed by position check)
+20:52:22  INFO        TX logged: SELL TTWO  P&L 0.29%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         20:51 UTC|
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Equity                                                         $229.90|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-20|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                      CORRECTION|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $229.90|
+|  Cash                                                           $126.44|
+|  Reserve                                          $11.50  (always kept)|
+|  Stock~  $103.46 / $172.43  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $68.97  (new stock buys)|
+|  Trade size             $34.48  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ACN      Pullback50      $34.36     $222.60  $221.62  -0.4%   $-0.15  |
+|  COP      Pullback50      $34.49     $136.78  $136.46  -0.2%   $-0.08  |
+|  TTWO     EarningsDrift   $34.61     $209.67  $210.28  +0.3%   $+0.10  |
+|                                                                        |
+|  Total invested                                                 $103.46|
+|  Total open P&L                                                  $-0.13|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (16.4m); positions refreshed live)|
+|  Cached signals                                                      18|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  ACN  P&L -0.4%  $-0.15                                            HOLD|
+|  COP  P&L -0.2%  $-0.08                                            HOLD|
+|  TTWO  P&L +0.3%  $+0.10                          EXIT: midline (+0.3%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: CORRECTION                                     |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                          cached signals (signals fresh (16.4m))|
+|  Universe scanned in prep                                           902|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  18                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  ACN      Pullback50      eq     $222.73  25.2   -1.01   50MA bounce (+|
+|  BE       RubberBand      eq     $141.62  35.7   0.98    7d-down       |
+|  DE       RubberBand      eq     $606.90  29.2   0.86    RSI           |
+|  EOG      Pullback50      eq     $149.81  38.6   -0.65   50MA bounce (-|
+|  FCX      RubberBand      eq     $45.83   22.8   0.96    RSI           |
+|  GS       RubberBand      eq     $791.09  32.0   1.13    5d-down       |
+|  INTU     RubberBand      eq     $276.22  18.2   3.25    RSI           |
+|  NEM      RubberBand      eq     $94.80   36.4   0.53    3d-down       |
+|  NVDA     RubberBand      eq     $127.39  14.0   1.09    RSI           |
+|  SNDK     RubberBand      eq     $78.96   16.7   4.12    RSI           |
+|  TTWO     EarningsDrift   eq     $209.52  58.3   1.15    post-earnings |
+|  UNH      RubberBand      eq     $339.58  27.8   0.65    RSI           |
+|  AA       RubberBand      eq     $33.24   31.2   0.55    7d-down       |
+|  ESNT     Pullback50      eq     $64.57   37.7   -1.36   50MA bounce (-|
+|  LAMR     Pullback50      eq     $152.40  40.9   -1.28   50MA bounce (+|
+|  ST       RubberBand      eq     $35.29   24.3   0.52    RSI           |
+|  TXNM     Pullback50      eq     $59.01   58.9   -0.35   50MA bounce (+|
+|  UGI      RubberBand      eq     $35.58   27.9   0.54    RSI           |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
+20:52:22  INFO        place_all_stops: checking 2 positions...
+20:52:22  INFO        STOP skipped ACN: fractional (0.1550 shares) — software exit will handle it
+20:52:22  INFO        STOP skipped COP: fractional (0.2527 shares) — software exit will handle it
+20:52:22  INFO        place_eod_stops: updating 2 stops to current price...
+20:52:22  INFO        EOD stop skip ACN: 0.1550 shares (fractional) — ext_exits will cover
+20:52:22  INFO        EOD stop skip COP: 0.2527 shares (fractional) — ext_exits will cover
+20:52:22  INFO        Daily log -> logs/daily/2026-11-20.md
+20:52:22  INFO        Dashboard written → logs/dashboard.md
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             18|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             2|
+|  Equity                                                         $229.85|
+|  Cash                                                           $161.04|
++========================================================================+
