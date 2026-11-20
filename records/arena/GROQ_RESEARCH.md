@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-20T11:44Z | S02b | BTC-USD hourly trend persistence after 4 consecu | 8eb2cd0c97632b | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-20T11:43Z | S07b | Hourly trend persistence in BTC-USD across low‑v | ca15126cde8572 | HOLD |
+| 2026-11-20T11:43Z | S09b | BTC-USD hourly trend reversal after sustained 10 | feab047a7c555c | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-20T11:42Z | S06b | BTC-USD hourly momentum trigger | 1cc1f43192fcdb | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-20T11:41Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | 1e5473f2f79f2f | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-20T03:22Z | S04a | gap_down_quality | 4813eb937844dd | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-20T03:21Z | S08a | Low hourly realized volatility predicts larger n | 584027e13bfb84 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-20T03:21Z | S05a | BTC-USD hourly breakout regime shift | fb198e6c87ada8 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-19T12:07Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 4ca5b8c8a7e223 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-19T12:07Z | S06b | BTC-USD hourly momentum trigger | 6d04d54e94ea49 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-19T12:06Z | S10b | ETH-USD hourly mean reversion to 24‑hour SMA | ec20d41267172e | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-19T10:27Z | S02b | BTC-USD hourly trend persistence after 4 consecu | 31b06a76425b2b | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-19T10:26Z | S07b | Hourly trend persistence in BTC-USD | 475b205b201ef1 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-19T10:25Z | S04a | gap_down_quality | 360860ec6ddf27 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-19T10:25Z | S08a | High hourly volatility predicts next‑hour return | cc0deeb1081041 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-19T10:24Z | S05a | BTC-USD hourly trend persistence | e2c55cf3965c37 | HOLD |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
