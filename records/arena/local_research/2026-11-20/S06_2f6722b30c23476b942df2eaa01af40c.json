@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "2f6722b30c23476b942df2eaa01af40c",
+  "worker": "S06",
+  "cycle": "2026-11-20T07:08Z",
+  "generation_index": 1,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S06",
+    "cycle": "2026-11-20T07:08Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD relative strength to SPY",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "minute_bars",
+        "volume",
+        "order_book"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "874651b360f4af",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "$61,799.9 Bitcoin Price (BTC/USD) Today | Live Chart - Binance",
+        "url": "https://www.binance.com/en/price/bitcoin",
+        "snippet": "Price of Bitcoin Today in USD The live Bitcoin price today is $61,799.9 USD. Track the latest BTC to USD price, 24-hour price movement, market capitalization and trading volume in real time. Bitcoin price has changed by -1.21% over the past",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD and SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps, and full time",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 106.675,
+      "load_seconds": 0.016,
+      "eval_count": 300,
+      "prompt_eval_count": 1737,
+      "tokens_per_second": 6.126,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 0.0,
+        "free_ram_gb": 13.05,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-20T07:08Z",
+    "id": "874651b360f4af",
+    "topic": "BTC-USD relative strength to SPY",
+    "hypothesis": "When BTC-USD's relative strength to SPY is within 5% of its 12-hour mean, it will revert to that mean within the next hour.",
+    "candidate": null,
+    "symbol": "SPY",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "minute_bars",
+        "volume",
+        "order_book"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "For each hour in 2020-2026, if BTC-USD's relative strength to SPY is within 5% of its 12-hour mean, then in the next hour, it must not revert to that mean — i.e., the relative strength must move away by at least 0.05% in absolute value. If this fails for any hour, the hypothesis is falsified.",
+    "source_search": {
+      "query": "BTC-USD and SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps, and full time",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "BTC USD — Bitcoin Price and Chart — TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "snippet": "Watch live Bitcoin to Dollar chart, follow BTCUSD prices in real-time and get bitcoin price history. Check the Bitcoin technical analysis and forecasts.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo ...",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "snippet": "Find the live Bitcoin USD (BTC-USD) price, history, news and other vital information to help with your cryptocurrency trading and investing.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "$61,799.9 Bitcoin Price (BTC/USD) Today | Live Chart - Binance",
+        "url": "https://www.binance.com/en/price/bitcoin",
+        "snippet": "Price of Bitcoin Today in USD The live Bitcoin price today is $61,799.9 USD. Track the latest BTC to USD price, 24-hour price movement, market capitalization and trading volume in real time. Bitcoin price has changed by -1.21% over the past",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "BTC-USD and SPY hourly close price history 2020-2026 with timestamps in UTC, no interpolation, no missing data gaps, and full time",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "minute_bars",
+      "volume",
+      "order_book"
+    ],
+    "hypothesis_timeframe": "hourly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
