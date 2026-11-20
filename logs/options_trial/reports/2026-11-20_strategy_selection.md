@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-20
 
-_Generated 2026-11-20T12:07:20.986792_
+_Generated 2026-11-20T12:11:53.111547_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-11-20T12:07:20.986792_
 
 ## Attribution health
 
-- Total exits: **4060**
+- Total exits: **4061**
 - Orphan exits (b0/orphan_reconcile): **423**
 - Orphan rate: **10.4%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -102,9 +102,9 @@ _Generated 2026-11-20T12:07:20.986792_
 | S173 (MomReversal long call) | MomRev | drop | 415 | 37.1 | -31.51 | -77.18 | -62.95 | +101.90 | 137 | 0 | 0 | $+62.64 | 27.5% | non-positive median return |
 | S165 (GapDown long call 3 DTE) | 3d ATM | drop | 255 | 32.2 | -35.29 | -63.24 | -53.42 | +93.89 | 137 | 0 | 0 | $-1,276.78 | 25.9% | non-positive median return |
 | S355 (GapDown_7DTE) | 7d | drop | 71 | 45.1 | -37.50 | -77.08 | -63.70 | +138.64 | 112 | 0 | 0 | $+367.00 | 38.0% | manually paused — excluded from new entries & reflected P&L |
-| S404 (GapDown_OTM2) | 3d | drop | 122 | 45.9 | -37.91 | -64.53 | -50.00 | +91.53 | 112 | 6 | 5 | $+657.00 | 9.8% | non-positive median return |
 | S411 (RubberBand_OTM2) | 3d | drop | 66 | 47.0 | -38.16 | -59.11 | -52.28 | +60.61 | 109 | 0 | 0 | $-278.00 | 15.2% | non-positive median return |
 | S352 (GapDown_2DTE) | 2d | drop | 73 | 45.2 | -38.24 | -70.12 | -51.85 | +267.46 | 112 | 1 | 1 | $+211.00 | 16.4% | non-positive median return |
+| S404 (GapDown_OTM2) | 3d | drop | 123 | 45.5 | -38.89 | -64.36 | -50.00 | +91.53 | 112 | 6 | 6 | $+644.00 | 10.6% | non-positive median return |
 | S430 (DayTrader_ORB) | 3d | drop | 25 | 24.0 | -39.58 | -44.92 | -41.18 | +53.84 | 35 | 5 | 5 | $-209.00 | 20.0% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 77 | 45.5 | -42.31 | -85.18 | -57.45 | +82.04 | 112 | 2 | 2 | $-90.00 | 33.8% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 56 | 33.9 | -42.86 | -83.93 | -65.20 | +103.47 | 112 | 0 | 0 | $-118.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
@@ -316,7 +316,7 @@ _Pipeline evaluation as of 2026-11-20. Auto-kill thresholds: median<-25% at n>=1
 | S401 | Any_Gap_Down_Small | 135 | +0.00% | 50% | INSUFFICIENT | 112 |
 | S402 | Any_High_Volume | 0 | — | — | NEW | 0 |
 | S403 | Any_MA50_Touch | 85 | +50.88% | 61% | INSUFFICIENT | 112 |
-| S404 | GapDown_OTM2 | 122 | -37.91% | 46% | INSUFFICIENT | 112 |
+| S404 | GapDown_OTM2 | 123 | -38.89% | 46% | INSUFFICIENT | 112 |
 | S405 | GapDown_OTM3 | 56 | -42.86% | 34% | INSUFFICIENT | 112 |
 | S406 | RubberBand_ITM3 | 188 | +0.00% | 49% | INSUFFICIENT | 112 |
 | S407 | RubberBand_ITM2 | 38 | -47.73% | 29% | INSUFFICIENT | 112 |
