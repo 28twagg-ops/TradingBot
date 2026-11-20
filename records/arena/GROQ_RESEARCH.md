@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-20T03:22Z | S04a | gap_down_quality | 4813eb937844dd | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-20T03:21Z | S08a | Low hourly realized volatility predicts larger n | 584027e13bfb84 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-20T03:21Z | S05a | BTC-USD hourly breakout regime shift | fb198e6c87ada8 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-20T03:20Z | S01a | BTC-USD hourly trend persistence 10h 0.05% 2024  | c5163665ab01ad | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-20T03:19Z | S03a | BTC-USD hourly momentum at 3‑hour lag | 6de7a99e810009 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-20T03:13Z | S02b | BTC-USD hourly trend persistence after 4 consecu | 4a13f3ff89c44a | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-20T03:13Z | S07b | Hourly trend persistence in BTC-USD across volat | 9fd56ce12063a3 | HOLD |
 | 2026-11-20T03:12Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 5b77025544dab8 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-19T10:25Z | S04a | gap_down_quality | 360860ec6ddf27 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-19T10:25Z | S08a | High hourly volatility predicts next‑hour return | cc0deeb1081041 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-19T10:24Z | S05a | BTC-USD hourly trend persistence | e2c55cf3965c37 | HOLD |
-| 2026-11-19T03:27Z | S01a | BTC-USD hourly trend persistence | 9b07e0cc171814 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-19T03:26Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 3b277f5746c390 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-19T03:25Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 9eb377d9b71ebf | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-19T03:24Z | S06b | BTC-USD hourly momentum trigger | 0ac2415fe4355b | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-19T03:24Z | S10b | ETH-USD hourly breakout above 5% SMA triggers me | 23329497459594 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

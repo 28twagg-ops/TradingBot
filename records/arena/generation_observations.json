@@ -5588,5 +5588,91 @@
       }
     },
     "basis": "INDICATIVE_YAHOO_HOURLY_NOT_EXECUTABLE"
+  },
+  {
+    "timestamp": "2026-11-20T03:19:39.203522+00:00",
+    "workers": {
+      "S01": {
+        "generation": "S01a",
+        "equity": 98.6075,
+        "ledger_events": 4,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S02": {
+        "generation": "S02b",
+        "equity": 96.8078,
+        "ledger_events": 10,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S03": {
+        "generation": "S03a",
+        "equity": 92.354,
+        "ledger_events": 20,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S04": {
+        "generation": "S04a",
+        "equity": 97.7598,
+        "ledger_events": 21,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S05": {
+        "generation": "S05a",
+        "equity": 93.4196,
+        "ledger_events": 16,
+        "action": "SELL BTC-USD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S06": {
+        "generation": "S06b",
+        "equity": 96.8078,
+        "ledger_events": 10,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S07": {
+        "generation": "S07b",
+        "equity": 93.3211,
+        "ledger_events": 18,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S08": {
+        "generation": "S08a",
+        "equity": 100.0,
+        "ledger_events": 0,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S09": {
+        "generation": "S09b",
+        "equity": 95.8004,
+        "ledger_events": 14,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S10": {
+        "generation": "S10b",
+        "equity": 97.2944,
+        "ledger_events": 8,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      }
+    },
+    "basis": "INDICATIVE_YAHOO_HOURLY_NOT_EXECUTABLE"
   }
 ]
