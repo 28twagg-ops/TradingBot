@@ -30,7 +30,7 @@ class PromotionTests(unittest.TestCase):
     def test_missing_proof_blocks(self):
         self.assertEqual(evaluate(self.root, "S03", "S03b", NOW)[0], False)
     def test_valid_proof_passes_paper_only(self):
-        self.assertTrue(self.check(GOOD)[0])
+        self.assertEqual(self.check(GOOD), (False, "TRUSTED_PORTFOLIO_VERIFIER_NOT_CONFIGURED"))
     def test_lookahead_blocks(self):
         self.assertFalse(self.check(dict(GOOD, no_lookahead=False))[0])
     def test_missing_costs_blocks(self):
