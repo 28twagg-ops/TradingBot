@@ -49,6 +49,6 @@ def evaluate(root, worker, candidate_id, now):
                 e["baseline_max_drawdown_pct"] < 0 or
                 e["candidate_max_drawdown_pct"] > e["baseline_max_drawdown_pct"]):
             return False, "CANDIDATE_FAILED_COMPARISON"
-        return True, "BACKTEST_GATE_PASSED_PAPER_ONLY"
+        return False, "TRUSTED_PORTFOLIO_VERIFIER_NOT_CONFIGURED"
     except (OSError, ValueError, TypeError, OverflowError, AttributeError):
         return False, "INVALID_BACKTEST_EVIDENCE"
