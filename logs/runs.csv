@@ -13490,3 +13490,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-20 00:21:46,ext_exits,correction,228.13,125.65,0,0,0,2,EXPD|L,both
 2026-11-20 00:26:40,ext_exits,correction,228.13,125.65,0,0,0,2,EXPD|L,both
 2026-11-20 00:32:12,ext_exits,correction,228.13,125.65,0,0,0,2,EXPD|L,both
+2026-11-20 00:36:46,ext_exits,correction,228.13,125.65,0,0,0,2,EXPD|L,both
