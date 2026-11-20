@@ -13529,3 +13529,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-20 17:07:13,exits,correction,230.17,195.46,0,0,0,1,COP,both
 2026-11-20 17:11:45,exits,correction,230.19,195.46,0,0,0,1,COP,both
 2026-11-20 17:16:43,exits,correction,230.19,195.46,0,0,0,1,COP,both
+2026-11-20 17:21:38,exits,correction,230.18,195.46,0,0,0,1,COP,both
