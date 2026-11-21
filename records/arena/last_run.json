@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-21T03:17:36.579887+00:00",
+  "timestamp": "2026-11-21T12:43:38.924921+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -12,11 +12,11 @@
       "missing_quotes": []
     },
     "S02": {
-      "action": "HOLD",
+      "action": "BUY ETH-USD",
       "generation_index": 1,
-      "cash": 96.8077828,
-      "equity": 96.8078,
-      "ledger_events": 10,
+      "cash": 58.39251996,
+      "equity": 96.7311,
+      "ledger_events": 11,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -24,17 +24,17 @@
       "action": "HOLD",
       "generation_index": 0,
       "cash": 6.14857194,
-      "equity": 88.5386,
+      "equity": 88.5267,
       "ledger_events": 22,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S04": {
-      "action": "HOLD",
+      "action": "SELL SOL-USD",
       "generation_index": 0,
-      "cash": 35.6233828,
-      "equity": 96.7362,
-      "ledger_events": 22,
+      "cash": 59.43439035,
+      "equity": 96.7891,
+      "ledger_events": 23,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -48,11 +48,11 @@
       "missing_quotes": []
     },
     "S06": {
-      "action": "HOLD",
+      "action": "BUY ETH-USD",
       "generation_index": 1,
-      "cash": 96.8077828,
-      "equity": 96.8078,
-      "ledger_events": 10,
+      "cash": 58.39251996,
+      "equity": 96.7311,
+      "ledger_events": 11,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
@@ -84,11 +84,11 @@
       "missing_quotes": []
     },
     "S10": {
-      "action": "HOLD",
+      "action": "BUY ETH-USD",
       "generation_index": 1,
-      "cash": 97.29438615,
-      "equity": 97.2944,
-      "ledger_events": 8,
+      "cash": 58.68573293,
+      "equity": 97.2173,
+      "ledger_events": 9,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     }
