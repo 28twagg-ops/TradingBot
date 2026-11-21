@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-21T11:46Z | S04a | gap_down_trend_continuation | 72a52e8dc271d5 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-21T11:46Z | S08a | Low hourly realized volatility predicts larger n | 8cfecd04318821 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-21T11:45Z | S05a | BTC-USD hourly breakout regime shift | 6dd6a4b293bc68 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-21T11:44Z | S01a | BTC-USD hourly trend persistence | 565aa7ae2d69c3 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-21T11:44Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 05aeffbe7bbe66 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-21T09:49Z | S02b | BTC-USD hourly trend persistence after 4 consecu | 9a6814ec06a6e8 | HOLD |
 | 2026-11-21T09:48Z | S07b | Hourly trend persistence in BTC-USD across volat | a3a81b2dd3d7d5 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-21T09:47Z | S09b | BTC-USD hourly trend reversal after sustained 10 | c0038960aea092 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-20T12:58Z | S09b | BTC-USD hourly trend reversal after 10‑hour uptr | 674585b12a8139 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-20T12:57Z | S06b | BTC-USD relative strength to SPY reversion | 55419ce4704c47 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-20T12:56Z | S10b | ETH-USD hourly breakout reversal | e3ab3f2dfa6da5 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-20T12:11Z | S04a | gap_down_quality | ac1b4ed2c9de40 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-20T12:10Z | S08a | Low hourly realized volatility predicts larger n | b2b243e1b9575a | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-20T12:10Z | S05a | BTC-USD hourly breakout regime shift | a01cabb899916c | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-20T12:09Z | S01a | BTC-USD hourly trend persistence | 689af92f5e16a3 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-20T12:08Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 4c3ee0e79d81ca | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
