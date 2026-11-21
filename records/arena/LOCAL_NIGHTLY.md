@@ -1,6 +1,6 @@
 # Overnight local Ollama research — paper-only
 
-Updated: 2026-11-21T20:12:11.594083+00:00
+Updated: 2026-11-21T21:46:22.326265+00:00
 
 **Separate local Llama research; not rule-based balances or validated profits.**
 No model-generated orders; no live trading.
