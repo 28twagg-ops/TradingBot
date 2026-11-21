@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-21T17:31Z | S04a | gap_down_trend_continuation | ceb3894bf9a2f4 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-21T17:31Z | S08a | Hourly realized volatility mean‑reversion in BTC | 9598a5b4421ca7 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-21T17:30Z | S05a | BTC-USD hourly breakout regime shift | eeb751a5720ad2 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-21T17:29Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 9d6a6053b486e3 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-21T17:29Z | S01a | BTC-USD hourly trend persistence | 170019f1b44f05 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-21T12:46Z | S02b | BTC-USD hourly trend reversal after 5 consecutiv | 89ceb1c2bd89f8 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-21T12:45Z | S07b | Hourly trend persistence in BTC-USD across volat | aa6e88a0cda5bc | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-21T12:45Z | S09b | BTC-USD hourly trend reversal after sustained 10 | f9583c15aea925 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-20T21:53Z | S09b | BTC-USD hourly trend reversal after sustained 10 | e1cdabdb8077eb | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-20T21:53Z | S06b | BTC-USD hourly momentum trigger | 6950c2c909c9b5 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-20T21:52Z | S10b | ETH-USD hourly mean reversion after large breako | 04cc13a7511196 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-20T20:15Z | S04a | gap_down_quality | 74701dfd63d13d | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-20T20:14Z | S08a | High hourly realized volatility predicts next‑ho | cc97f01507ff1c | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-20T20:13Z | S05a | BTC-USD hourly breakout regime shift | 555a86bbdd278d | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-20T20:13Z | S01a | BTC-USD hourly trend persistence | 12c290926df76b | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-20T20:12Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 01daf1a97c4520 | HOLD |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
