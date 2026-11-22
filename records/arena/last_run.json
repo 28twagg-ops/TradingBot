@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-22T02:18:24.372359+00:00",
+  "timestamp": "2026-11-22T09:54:35.681335+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -12,7 +12,7 @@
       "missing_quotes": []
     },
     "S02": {
-      "action": "SELL ETH-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 97.42564618,
       "equity": 97.4256,
@@ -21,10 +21,10 @@
       "missing_quotes": []
     },
     "S03": {
-      "action": "SELL ETH-USD",
+      "action": "HOLD",
       "generation_index": 0,
       "cash": 29.32275778,
-      "equity": 89.3637,
+      "equity": 89.3245,
       "ledger_events": 24,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -39,16 +39,16 @@
       "missing_quotes": []
     },
     "S05": {
-      "action": "HOLD",
+      "action": "SELL BTC-USD",
       "generation_index": 0,
-      "cash": 56.36347171,
-      "equity": 93.1914,
-      "ledger_events": 17,
+      "cash": 92.94341806,
+      "equity": 92.9434,
+      "ledger_events": 18,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S06": {
-      "action": "SELL ETH-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 97.42564618,
       "equity": 97.4256,
@@ -57,7 +57,7 @@
       "missing_quotes": []
     },
     "S07": {
-      "action": "SELL BTC-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 93.01981919,
       "equity": 93.0198,
@@ -75,7 +75,7 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "SELL BTC-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 95.49120966,
       "equity": 95.4912,
@@ -84,7 +84,7 @@
       "missing_quotes": []
     },
     "S10": {
-      "action": "SELL ETH-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 97.91535998,
       "equity": 97.9154,
