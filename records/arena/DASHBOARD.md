@@ -4,20 +4,20 @@
 Stocks/crypto indicative Yahoo hourly prices; NO options executed.
 All 10 workers start at $100; no real money or new AI charges.
 
-Updated: 2026-11-21T20:35:40.181094+00:00
+Updated: 2026-11-22T02:18:24.372359+00:00
 
 | Worker | Virtual action | Equity | Cash | Council |
 |---|---|---:|---:|---|
 | S01a | HOLD | 98.61 | 98.60750559 | REVIEW_REQUIRED |
-| S02b | HOLD | 97.52 | 58.39251996 | REVIEW_REQUIRED |
-| S03a | SELL BTC-USD | 89.4 | 25.08353632 | REVIEW_REQUIRED |
+| S02b | SELL ETH-USD | 97.43 | 97.42564618 | REVIEW_REQUIRED |
+| S03a | SELL ETH-USD | 89.36 | 29.32275778 | REVIEW_REQUIRED |
 | S04a | HOLD | 96.79 | 59.43439035 | REVIEW_REQUIRED |
-| S05a | BUY BTC-USD | 93.35 | 56.36347171 | REVIEW_REQUIRED |
-| S06b | HOLD | 97.52 | 58.39251996 | REVIEW_REQUIRED |
-| S07b | BUY BTC-USD | 93.25 | 56.32539959 | REVIEW_REQUIRED |
+| S05a | HOLD | 93.19 | 56.36347171 | REVIEW_REQUIRED |
+| S06b | SELL ETH-USD | 97.43 | 97.42564618 | REVIEW_REQUIRED |
+| S07b | SELL BTC-USD | 93.02 | 93.01981919 | REVIEW_REQUIRED |
 | S08a | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
-| S09b | BUY BTC-USD | 95.72 | 57.83902381 | REVIEW_REQUIRED |
-| S10b | HOLD | 98.01 | 58.68573293 | REVIEW_REQUIRED |
+| S09b | SELL BTC-USD | 95.49 | 95.49120966 | REVIEW_REQUIRED |
+| S10b | SELL ETH-USD | 97.92 | 97.91535998 | REVIEW_REQUIRED |
 
 **Review status:** Missing independently executable market quotes means
 the evidence council cannot certify a real-world trading edge.
