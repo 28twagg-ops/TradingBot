@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-22T17:53:46.106843+00:00",
+  "timestamp": "2026-11-22T23:40:17.566014+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -24,7 +24,7 @@
       "action": "HOLD",
       "generation_index": 0,
       "cash": 29.32275778,
-      "equity": 89.4011,
+      "equity": 89.3675,
       "ledger_events": 24,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -39,10 +39,10 @@
       "missing_quotes": []
     },
     "S05": {
-      "action": "BUY BTC-USD",
+      "action": "HOLD",
       "generation_index": 0,
       "cash": 56.10812372,
-      "equity": 92.8699,
+      "equity": 92.7702,
       "ledger_events": 19,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -57,10 +57,10 @@
       "missing_quotes": []
     },
     "S07": {
-      "action": "BUY BTC-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 56.12323484,
-      "equity": 92.9462,
+      "equity": 92.8463,
       "ledger_events": 21,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -75,10 +75,10 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "BUY BTC-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 57.6139852,
-      "equity": 95.4156,
+      "equity": 95.3131,
       "ledger_events": 17,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
