@@ -20,44 +20,12 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-23T15:07:24.742077+00:00",
       "entry_order_id": "ab993295-853d-49bc-af19-89a04538afcf"
-    },
-    {
-      "lot_id": "d845164ac8d7",
-      "bucket_id": 50,
-      "profile_name": "lab0050_s397_w2_1005_1045_r1",
-      "strategy_id": "S397",
-      "occ_symbol": "CRWD261127C00235000",
-      "underlying": "CRWD",
-      "qty": 1,
-      "entry_cost": 64.0,
-      "entry_price": 0.64,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-23T15:11:45.044995+00:00",
-      "entry_order_id": "a33f3fab-de6a-4286-85c2-0715a915e83b"
     }
   ],
   "pending_orders": [],
-  "pending_exits": [
-    {
-      "order_id": "8e9d40c4-0b1e-4f8f-bf5b-7a8b5507c036",
-      "lot_id": "d845164ac8d7",
-      "bucket_id": 50,
-      "strategy_id": "S397",
-      "occ_symbol": "CRWD261127C00235000",
-      "qty": 1,
-      "reason": "stop_loss (-53.1%)",
-      "submitted": "2026-11-23T13:41:46"
-    }
-  ],
+  "pending_exits": [],
   "bucket_open_premium": {
-    "b52": 57.99999999999999,
-    "b50": 64.0
+    "b52": 57.99999999999999
   },
   "session_date": "2026-11-23",
   "entries_locked": [
@@ -473,7 +441,8 @@
     "5ba56b48-e379-4b74-aa6d-fa74d84fcaf0",
     "a0be41d5-9fd0-45b5-b2bd-45eca837067c",
     "82169767-ded2-461f-ac3f-2f2f44154936",
-    "92e99904-a9c7-46a1-b2c6-927b3d9b8b5f"
+    "92e99904-a9c7-46a1-b2c6-927b3d9b8b5f",
+    "8e9d40c4-0b1e-4f8f-bf5b-7a8b5507c036"
   ],
   "submitted_today": 9,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

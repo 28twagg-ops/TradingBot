@@ -5,7 +5,7 @@ S396,GapDown_ITM2,3d,watch,building sample (8-19 exits),41,18,10,8,18.44,53.78,-
 S166,GapDown strong call,3d ATM strong,watch,fat left tail (p10 < -45%),69,26,15,11,53.15,52.95,-73.66,-50.0,148.0,883.0,16,125,0,0,16,19.2
 S357,GapDown_21DTE,21d,watch,fat left tail (p10 < -45%),63,35,24,11,24.75,52.94,-69.3,-49.39,73.68,483.0,19,115,1,2,5,40.0
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),169,85,52,33,40.74,50.88,-63.83,-50.0,159.58,1358.0,33,115,1,1,29,14.1
-S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),184,62,35,27,22.41,45.8,-63.05,-51.79,115.32,979.0,30,115,2,1,21,14.5
+S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),184,63,35,28,21.24,43.66,-62.94,-51.84,115.25,946.0,31,115,2,2,22,14.3
 S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),153,73,44,29,101.32,34.88,-63.11,-50.85,307.62,1312.0,27,115,2,2,22,17.8
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),225,109,55,54,36.11,22.22,-71.43,-50.0,146.0,1086.0,25,119,0,0,19,27.5
 S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
