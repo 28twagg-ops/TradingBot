@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-23
 
-_Generated 2026-11-23T09:27:04.955142_
+_Generated 2026-11-23T09:43:45.692620_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-11-23T09:27:04.955142_
 
 ## Attribution health
 
-- Total exits: **4065**
+- Total exits: **4066**
 - Orphan exits (b0/orphan_reconcile): **423**
 - Orphan rate: **10.4%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -104,18 +104,18 @@ _Generated 2026-11-23T09:27:04.955142_
 | S355 (GapDown_7DTE) | 7d | drop | 71 | 45.1 | -37.50 | -77.08 | -63.70 | +138.64 | 115 | 0 | 0 | $+367.00 | 38.0% | manually paused — excluded from new entries & reflected P&L |
 | S411 (RubberBand_OTM2) | 3d | drop | 66 | 47.0 | -38.16 | -59.11 | -52.28 | +60.61 | 112 | 0 | 0 | $-278.00 | 15.2% | non-positive median return |
 | S352 (GapDown_2DTE) | 2d | drop | 73 | 45.2 | -38.24 | -70.12 | -51.85 | +267.46 | 115 | 0 | 0 | $+211.00 | 16.4% | non-positive median return |
-| S404 (GapDown_OTM2) | 3d | drop | 123 | 45.5 | -38.89 | -64.36 | -50.00 | +91.53 | 115 | 3 | 3 | $+644.00 | 10.6% | non-positive median return |
+| S404 (GapDown_OTM2) | 3d | drop | 123 | 45.5 | -38.89 | -64.36 | -50.00 | +91.53 | 115 | 4 | 3 | $+644.00 | 10.6% | non-positive median return |
 | S430 (DayTrader_ORB) | 3d | drop | 25 | 24.0 | -39.58 | -44.92 | -41.18 | +53.84 | 38 | 2 | 2 | $-209.00 | 20.0% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 77 | 45.5 | -42.31 | -85.18 | -57.45 | +82.04 | 115 | 1 | 2 | $-90.00 | 33.8% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 56 | 33.9 | -42.86 | -83.93 | -65.20 | +103.47 | 115 | 0 | 0 | $-118.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 56 | 23.2 | -43.65 | -86.66 | -54.73 | +95.51 | 119 | 0 | 0 | $-401.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S359 (RubberBand_0DTE) | 0d | drop | 60 | 38.3 | -45.84 | -71.18 | -52.67 | +144.29 | 112 | 1 | 1 | $+14.00 | 16.7% | non-positive median return |
 | S353 (GapDown_3DTE) | 3d | drop | 45 | 42.2 | -46.15 | -82.61 | -69.70 | +264.21 | 115 | 0 | 0 | $+125.00 | 22.2% | non-positive median return |
-| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | drop | 36 | 44.4 | -47.01 | -71.88 | -55.36 | +248.75 | 125 | 1 | 0 | $+324.00 | 19.4% | non-positive median return |
 | S207 (GapDown_AtSupport) | 3d ATM gap-support | drop | 37 | 5.4 | -47.06 | -63.64 | -55.71 | -6.06 | 119 | 0 | 0 | $-822.00 | 43.2% | manually paused — excluded from new entries & reflected P&L |
 | S407 (RubberBand_ITM2) | 3d | drop | 38 | 28.9 | -47.73 | -83.88 | -61.54 | +266.42 | 115 | 0 | 0 | $+33.00 | 26.3% | manually paused — excluded from new entries & reflected P&L |
 | S164 (GapDown ATM 1-DTE — P2B arm) | 1d ATM | drop | 54 | 40.7 | -48.48 | -88.89 | -51.94 | +168.38 | 125 | 1 | 1 | $+283.00 | 14.8% | non-positive median return |
 | S163 (A1 GapDown ATM call EOD) | 7d ATM | drop | 48 | 45.8 | -48.69 | -75.64 | -56.67 | +87.04 | 125 | 1 | 1 | $+850.00 | 33.3% | non-positive median return |
+| S167 (GapDown long call 3 DTE 1-OTM — P2C) | 3d 1-OTM | drop | 37 | 43.2 | -49.02 | -72.02 | -55.36 | +233.73 | 125 | 1 | 1 | $+274.00 | 18.9% | non-positive median return |
 | S366 (RubberBand_21DTE) | 21d | drop | 21 | 42.9 | -49.12 | -56.92 | -53.45 | +94.34 | 111 | 0 | 0 | $-63.00 | 42.9% | manually paused — excluded from new entries & reflected P&L |
 | S217 (RSI_25_Bounce) | 3d ATM RSI<25 bounce | drop | 75 | 33.3 | -49.18 | -79.00 | -60.00 | +99.05 | 119 | 0 | 0 | $+158.00 | 40.0% | manually paused — excluded from new entries & reflected P&L |
 | S351 (GapDown_1DTE) | 1d | drop | 75 | 37.3 | -50.00 | -75.68 | -62.03 | +264.88 | 115 | 0 | 0 | $+414.00 | 17.3% | manually paused — excluded from new entries & reflected P&L |
@@ -151,7 +151,7 @@ Experiment arms grouped for side-by-side decisions. INSUFFICIENT if any arm has 
 | strategy | DTE profile | exits | med% | p10% | p25% | entries 5d | exits 5d |
 |---|---|---:|---:|---:|---:|---:|---:|
 | S165 | 3d ATM | 255 | -35.29 | -63.24 | -53.42 | 0 | 0 |
-| S167 | 3d 1-OTM | 36 | -47.01 | -71.88 | -55.36 | 1 | 0 |
+| S167 | 3d 1-OTM | 37 | -49.02 | -72.02 | -55.36 | 1 | 1 |
 
 ### New Pattern Strategies — GapDown signal independent
 
@@ -231,7 +231,7 @@ _Pipeline evaluation as of 2026-11-23. Auto-kill thresholds: median<-25% at n>=1
 | S164 | GapDown ATM 1-DTE — P2 | 54 | -48.48% | 41% | INSUFFICIENT | 125 |
 | S165 | GapDown long call 3 DT | 255 | -35.29% | 32% | INSUFFICIENT | 140 |
 | S166 | GapDown strong call | 26 | +52.95% | 58% | INSUFFICIENT | 125 |
-| S167 | GapDown long call 3 DT | 36 | -47.01% | 44% | INSUFFICIENT | 125 |
+| S167 | GapDown long call 3 DT | 37 | -49.02% | 43% | INSUFFICIENT | 125 |
 | S168 | GapDown ATM 5-DTE — P2 | 44 | -50.88% | 36% | INSUFFICIENT | 125 |
 | S169 | BB Squeeze Breakout ca | 0 | — | — | NEW | 0 |
 | S170 | Golden Pocket call 3 D | 0 | — | — | NEW | 0 |
