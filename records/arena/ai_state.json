@@ -12099,6 +12099,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-23T22:37Z",
+        "id": "8d256e88dc4cd7",
+        "topic": "BTC-USD hourly mean reversion at 24\u2011hour lag",
+        "hypothesis": "BTC\u2011USD hourly returns revert toward zero when the 24\u2011hour lag return exceeds \u00b15% after accounting for realistic trading frictions.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "Compute 24\u2011hour lag autocorrelation of hourly returns; test if correlation is significantly different from zero using a holdout period 2024\u201101\u201101 to 2026\u201101\u201101. If correlation \u22480, hypothesis falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly close price dataset 2015\u20112026",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly close price dataset 2015\u20112026",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -16274,6 +16312,44 @@
         "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
         "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
         "falsification_test": "Count events where a >2% gap-down occurs and check if within next 5 hours the close falls below the low of the preceding 5 hours; if less than 70% success, hypothesis falsified.",
+        "source_search": {
+          "query": "BTC-USD hourly gap\u2011down >2% events list",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly gap\u2011down >2% events list",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-23T22:39Z",
+        "id": "cb1dbbb9186767",
+        "topic": "gap_down_trend",
+        "hypothesis": "After a 2% hourly gap\u2011down in BTC\u2011USD, the price continues to decline for at least 10 consecutive hours.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "For each hourly gap\u2011down >2% in BTC\u2011USD, verify that the next 10 hours contain no price increase >2% relative to the gap\u2011down close.",
         "source_search": {
           "query": "BTC-USD hourly gap\u2011down >2% events list",
           "attempted": [
@@ -20592,6 +20668,59 @@
         ],
         "hypothesis_timeframe": "hourly",
         "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-23T22:38Z",
+        "id": "018241b8b53474",
+        "topic": "BTC-USD hourly 5\u2011hour high breakout",
+        "hypothesis": "A 5\u2011hour high breakout of BTC\u2011USD with a 1% threshold predicts a positive return in the following hour",
+        "candidate": {
+          "family": "breakout",
+          "lookback": 5,
+          "threshold": 0.01
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 7,
+            "end": 502,
+            "returns_pct": -1.75,
+            "drawdown_pct": -1.75,
+            "entries": 2
+          },
+          "retrospective_validation": {
+            "start": 502,
+            "end": 718,
+            "returns_pct": -2.294,
+            "drawdown_pct": -2.294,
+            "entries": 3
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "validation_issue": null,
+        "falsification_test": "If the price fails to rise by at least 0.01 in the next hour after a breakout, the hypothesis is falsified",
+        "source_search": {
+          "query": "BTC-USD hourly 5h high breakout 1% next hour return",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly 5h high breakout 1% next hour return",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
       }
@@ -31758,6 +31887,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-23T22:39Z",
+        "id": "5fb128aa45d31f",
+        "topic": "Low hourly realized volatility predicts larger next\u2011hour return magnitude in BTC\u2011USD",
+        "hypothesis": "When hourly realized volatility falls below its 30\u2011period rolling average by more than 0.08 standard deviations, the next hour\u2019s return magnitude exceeds the average magnitude.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "Compute hourly realized volatility as the absolute return of the 1\u2011hour close. For each hour, compare it to the 30\u2011period rolling mean. If the deviation is <\u20110.08 SD, record the next hour\u2019s return magnitude. Test whether the mean magnitude in these cases is statistically higher than the overall mean",
+        "source_search": {
+          "query": "BTC hourly realized volatility calculation from 1\u2011hour close data",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC hourly realized volatility calculation from 1\u2011hour close data",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -39035,6 +39202,44 @@
         "falsification_test": "For each hour where close > SMA24 \u00d71.03, compute next\u2011hour return. If \u226590% of such cases have negative return, hypothesis holds; otherwise reject.",
         "source_search": {
           "query": "ETH-USD hourly close 2024 2025 2026 SMA 24 breakout 1% momentum",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly close 2024 2025 2026 SMA 24 breakout 3% mean reversion",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-23T22:40Z",
+        "id": "c904ee16988a85",
+        "topic": "ETH-USD hourly mean reversion after 3% breakout",
+        "hypothesis": "When ETH\u2011USD hourly close exceeds its 24\u2011hour SMA by more than 3\u202f%, the next hour\u2019s return is negative (mean reversion).",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "For each hour where close>24\u2011hour SMA\u00d71.03, compute next\u2011hour return. If \u226590\u202f% of such cases have negative return, hypothesis supported; otherwise rejected.",
+        "source_search": {
+          "query": "ETH-USD hourly close 2024 2025 2026 SMA 24 breakout 3% mean reversion",
           "attempted": [
             "web"
           ],
