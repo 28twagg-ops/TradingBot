@@ -102,7 +102,24 @@
       "entry_order_id": "8e374477-8ef5-4091-b961-42909c3ec1c0"
     }
   ],
-  "pending_orders": [],
+  "pending_orders": [
+    {
+      "order_id": "2c6f1cae-7dc5-4449-a8c1-4f9a82809f1e",
+      "bucket_id": 90,
+      "strategy_id": "S406",
+      "occ_symbol": "UNH261127C00355000",
+      "underlying": "UNH",
+      "qty": 1,
+      "limit": 0.44,
+      "profile_name": "live_1to1",
+      "submitted": "2026-11-23",
+      "detail": "RB gap -5.2% reclaim",
+      "spread_frac": 0.11764705882352937,
+      "buy_offset": -0.01,
+      "take_profit": 0.5,
+      "stop_loss": -0.4
+    }
+  ],
   "pending_exits": [],
   "bucket_open_premium": {
     "b52": 57.99999999999999,
@@ -120,7 +137,8 @@
     "50|S397|2026-11-23",
     "52|S406|2026-11-23",
     "19|S362|2026-11-23",
-    "63|S168|2026-11-23"
+    "63|S168|2026-11-23",
+    "90|S406|2026-11-23"
   ],
   "processed_orders": [
     "f204f387-5f24-4ac9-8b45-f2ffa940295d",
@@ -622,7 +640,7 @@
     "590b9a67-c127-4934-9cbe-4c40338b8a72",
     "3f8010b3-aa15-4b19-b8f2-081a9991a1ea"
   ],
-  "submitted_today": 8,
+  "submitted_today": 9,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-23"
 }
