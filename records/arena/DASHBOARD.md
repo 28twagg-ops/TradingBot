@@ -4,19 +4,19 @@
 Stocks/crypto indicative Yahoo hourly prices; NO options executed.
 All 10 workers start at $100; no real money or new AI charges.
 
-Updated: 2026-11-23T00:21:12.993336+00:00
+Updated: 2026-11-23T07:43:49.284563+00:00
 
 | Worker | Virtual action | Equity | Cash | Council |
 |---|---|---:|---:|---|
 | S01a | HOLD | 98.61 | 98.60750559 | REVIEW_REQUIRED |
 | S02b | HOLD | 97.43 | 97.42564618 | REVIEW_REQUIRED |
-| S03a | HOLD | 89.37 | 29.32275778 | REVIEW_REQUIRED |
+| S03a | SELL SOL-USD | 89.51 | 36.02284868 | REVIEW_REQUIRED |
 | S04a | HOLD | 96.79 | 59.43439035 | REVIEW_REQUIRED |
-| S05a | HOLD | 92.7 | 56.10812372 | REVIEW_REQUIRED |
+| S05a | BUY SOL-USD | 92.95 | 33.84269962 | REVIEW_REQUIRED |
 | S06b | HOLD | 97.43 | 97.42564618 | REVIEW_REQUIRED |
-| S07b | HOLD | 92.78 | 56.12323484 | REVIEW_REQUIRED |
+| S07b | BUY SOL-USD | 93.03 | 33.85175821 | REVIEW_REQUIRED |
 | S08a | HOLD | 100.0 | 100.0 | REVIEW_REQUIRED |
-| S09b | HOLD | 95.24 | 57.6139852 | REVIEW_REQUIRED |
+| S09b | BUY SOL-USD | 95.5 | 34.75094668 | REVIEW_REQUIRED |
 | S10b | HOLD | 97.92 | 97.91535998 | REVIEW_REQUIRED |
 
 **Review status:** Missing independently executable market quotes means
