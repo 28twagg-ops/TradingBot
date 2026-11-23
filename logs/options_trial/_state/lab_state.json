@@ -43,7 +43,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "8e9d40c4-0b1e-4f8f-bf5b-7a8b5507c036",
+      "lot_id": "d845164ac8d7",
+      "bucket_id": 50,
+      "strategy_id": "S397",
+      "occ_symbol": "CRWD261127C00235000",
+      "qty": 1,
+      "reason": "stop_loss (-53.1%)",
+      "submitted": "2026-11-23T13:41:46"
+    }
+  ],
   "bucket_open_premium": {
     "b52": 57.99999999999999,
     "b50": 64.0
