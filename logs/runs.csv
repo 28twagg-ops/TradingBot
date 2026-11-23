@@ -13618,3 +13618,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-21 00:47:00,ext_exits,correction,230.03,126.33,0,0,0,3,ACN|EOG|TTWO,both
 2026-11-21 00:51:54,ext_exits,correction,230.03,126.33,0,0,0,3,ACN|EOG|TTWO,both
 2026-11-21 00:56:46,ext_exits,correction,230.14,126.33,0,0,0,3,ACN|EOG|TTWO,both
+2026-11-23 14:02:08,summary,correction,231.54,126.33,0,0,0,3,ACN|EOG|TTWO,both
