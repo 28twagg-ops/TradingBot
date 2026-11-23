@@ -1,0 +1,147 @@
+14:47:07  INFO      Mode: morning_scan
+14:47:08  INFO        SELL MARKET [urgent] TTWO closed
+14:47:11  INFO        TX logged: SELL TTWO  P&L -2.39%
+14:47:11  INFO        SELL MARKET [urgent] EOG closed
+14:47:13  INFO        TX logged: SELL EOG  P&L -1.01%
+14:47:14  INFO        SELL LIMIT ACN  qty=0.15585685  limit=$222.77  id=d601c26b-3cc2-4e26-9435-6cd6c9a951d3
+14:47:34  INFO        SELL LIMIT filled ACN (confirmed by position check)
+14:47:34  INFO        TX logged: SELL ACN  P&L 0.59%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:47 UTC|
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Equity                                                         $229.10|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-23|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                      CORRECTION|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $229.10|
+|  Cash                                                           $126.33|
+|  Reserve                                          $11.46  (always kept)|
+|  Stock~  $102.77 / $171.82  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $69.05  (new stock buys)|
+|  Trade size             $34.36  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ACN      Pullback50      $34.77     $221.78  $223.10  +0.6%   $+0.21  |
+|  EOG      Pullback50      $34.44     $149.91  $148.40  -1.0%   $-0.35  |
+|  TTWO     EarningsDrift   $33.56     $210.02  $205.00  -2.4%   $-0.82  |
+|                                                                        |
+|  Total invested                                                 $102.77|
+|  Total open P&L                                                  $-0.97|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (11.6m))|
+|  Cached exits                                                         3|
+|  Cached signals                                                      14|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  TTWO  P&L -2.4%  $-0.82                        EXIT: stop_loss (-2.4%)|
+|  EOG  P&L -1.0%  $-0.35                         EXIT: stop_loss (-1.0%)|
+|  ACN  P&L +0.6%  $+0.21                       EXIT: max_hold 3d (+0.6%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 3 | filled 3 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 0|
+|  Stop-loss breaches                                                   2|
+|  TTWO                                        -2.39%  (threshold -0.50%)|
+|  EOG                                         -1.01%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: CORRECTION                                     |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           900|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  14                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $15.03   73.3   -0.71   50MA bounce (+|
+|  BNY      Pullback50      eq     $146.25  45.2   -2.62   50MA bounce (-|
+|  CSX      Pullback50      eq     $49.66   45.5   -2.32   50MA bounce (+|
+|  EMR      Pullback50      eq     $159.20  43.1   -2.19   50MA bounce (-|
+|  MET      Pullback50      eq     $99.26   47.1   -2.58   50MA bounce (+|
+|  UHS      Pullback50      eq     $182.51  54.0   -1.95   50MA bounce (-|
+|  VRTX     Pullback50      eq     $524.59  46.3   -1.95   50MA bounce (+|
+|  ESNT     Pullback50      eq     $64.27   38.0   -2.43   50MA bounce (-|
+|  PK       Pullback50      eq     $15.92   39.7   -2.28   50MA bounce (+|
+|  QLYS     Pullback50      eq     $195.00  44.3   -2.88   50MA bounce (+|
+|  RNR      Pullback50      eq     $343.01  45.6   -2.14   50MA bounce (+|
+|  RS       RubberBand      eq     $398.46  22.1   0.57    RSI           |
+|  THC      Pullback50      eq     $266.80  50.1   -2.04   50MA bounce (-|
+|  TXNM     Pullback50      eq     $58.97   62.4   -1.49   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
+14:47:35  INFO        Daily log -> logs/daily/2026-11-23.md
+14:47:35  INFO        Dashboard written → logs/dashboard.md
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             14|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                3|
+|  Open pos                                                             0|
+|  Equity                                                         $229.06|
+|  Cash                                                           $229.06|
++========================================================================+

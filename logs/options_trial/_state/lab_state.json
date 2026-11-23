@@ -20,16 +20,38 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-23T14:43:43.311635+00:00",
       "entry_order_id": "973be71f-9c79-4024-a418-71a462091724"
+    },
+    {
+      "lot_id": "a048a80aa56b",
+      "bucket_id": 91,
+      "profile_name": "s406_only",
+      "strategy_id": "S406",
+      "occ_symbol": "KO261127C00098000",
+      "underlying": "KO",
+      "qty": 1,
+      "entry_cost": 42.0,
+      "entry_price": 0.42,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-23T14:48:06.252330+00:00",
+      "entry_order_id": "3d209ea2-a851-4abb-9e48-1118e5aec64e"
     }
   ],
   "pending_orders": [],
   "pending_exits": [],
   "bucket_open_premium": {
-    "b90": 22.0
+    "b90": 22.0,
+    "b91": 42.0
   },
   "session_date": "2026-11-23",
   "entries_locked": [
-    "90|S404|2026-11-23"
+    "90|S404|2026-11-23",
+    "91|S406|2026-11-23"
   ],
   "processed_orders": [
     "f204f387-5f24-4ac9-8b45-f2ffa940295d",
@@ -519,9 +541,10 @@
     "a881f125-f6be-4158-b48a-1e10af9f415b",
     "a61b4e56-a21d-49f3-9d3e-dc2e935b4d1a",
     "324fd69c-0436-4b55-914a-4bc152024997",
-    "973be71f-9c79-4024-a418-71a462091724"
+    "973be71f-9c79-4024-a418-71a462091724",
+    "3d209ea2-a851-4abb-9e48-1118e5aec64e"
   ],
-  "submitted_today": 1,
+  "submitted_today": 2,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
   "updated": "2026-11-23"
 }

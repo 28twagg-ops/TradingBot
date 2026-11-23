@@ -1061,3 +1061,6 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-11-20 20:52:22,2026-11-20,SELL,TTWO,EarningsDrift,210.28,209.86,210.23,34.6,-0.0238,-0.0082,limit_fill_position_check_full,midline (+0.3%),correction
 2026-11-20 20:57:04,2026-11-20,SELL,ACN,Pullback50,221.005,,221.01,34.26,0.0023,0.0008,market_urgent_full,stop_loss (-0.7%),correction
 2026-11-20 20:57:06,2026-11-20,SELL,COP,Pullback50,135.92,,135.95,34.36,0.0221,0.0076,market_urgent_full,stop_loss (-0.6%),correction
+2026-11-23 14:47:11,2026-11-23,SELL,TTWO,EarningsDrift,205.005,,205.005,33.56,0.0,0.0,market_urgent_full,stop_loss (-2.4%),correction
+2026-11-23 14:47:13,2026-11-23,SELL,EOG,Pullback50,148.4,,148.4,34.44,0.0,0.0,market_urgent_full,stop_loss (-1.0%),correction
+2026-11-23 14:47:34,2026-11-23,SELL,ACN,Pullback50,223.22,222.77,223.15,34.78,-0.0314,-0.0109,limit_fill_position_check_full,max_hold 3d (+0.6%),correction

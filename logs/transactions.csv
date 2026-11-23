@@ -1426,3 +1426,6 @@ timestamp,date,action,ticker,strategy,price,dollar_amount,pnl_pct,pnl_dollar,hol
 2026-11-20 20:52:22,2026-11-20,SELL,TTWO,EarningsDrift,210.23,34.6,0.29,0.1,0,midline (+0.3%),correction,229.85
 2026-11-20 20:57:04,2026-11-20,SELL,ACN,Pullback50,221.01,34.26,-0.71,-0.25,0,stop_loss (-0.7%),correction,229.65
 2026-11-20 20:57:06,2026-11-20,SELL,COP,Pullback50,135.95,34.36,-0.61,-0.21,0,stop_loss (-0.6%),correction,229.65
+2026-11-23 14:47:11,2026-11-23,SELL,TTWO,EarningsDrift,205.0,33.56,-2.39,-0.82,3,stop_loss (-2.4%),correction,229.06
+2026-11-23 14:47:13,2026-11-23,SELL,EOG,Pullback50,148.4,34.44,-1.01,-0.35,3,stop_loss (-1.0%),correction,229.07
+2026-11-23 14:47:34,2026-11-23,SELL,ACN,Pullback50,223.15,34.78,0.59,0.21,3,max_hold 3d (+0.6%),correction,229.06
