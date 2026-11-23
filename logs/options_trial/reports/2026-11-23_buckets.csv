@@ -66,7 +66,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 64,lab0064_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-23,False,,,,,,,0,CRWD,S163,,entered_no_exit
 65,lab0065_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-20,False,,,,,,,0,,,,idle
 66,lab0066_s430_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-16,False,,,,,,,0,,,,idle
-90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,1,0,1,2026-11-23,False,,,,,,,0,KO,S404,,entered_no_exit
+90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,1,1,0,2026-11-23,False,,0.0,-36.36,-36.36,-36.36,-36.36,-8.0,KO,S404,stop_loss (-40.9%),closed
 91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,1,0,2026-11-23,False,,0.0,-42.86,-42.86,-42.86,-42.86,-18.0,KO,S406,broker_fill_backfill,closed
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
 2001,promising_s170_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
