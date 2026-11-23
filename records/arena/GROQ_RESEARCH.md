@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-23T20:21Z | S01a | BTC-USD hourly trend persistence | 6cb7031879b714 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-23T20:20Z | S02b | BTC-USD hourly extreme return mean reversion | 45afa4cccdb828 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-23T20:20Z | S07b | Hourly trend persistence in BTC-USD across volat | a3a81b2dd3d7d5 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-23T20:19Z | S09b | BTC-USD hourly trend reversal after sustained 10 | e36d618813f7f8 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-23T20:18Z | S06b | BTC-USD hourly momentum trigger | c2a5664347493b | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-23T13:40Z | S10b | ETH-USD hourly mean reversion after large breako | 2591138fedfba2 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-23T13:39Z | S04a | gap_down_breakout | c26bdf134a71fe | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-23T13:39Z | S08a | Low hourly realized volatility predicts larger n | 634fbbb4002014 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-22T20:22Z | S07b | Hourly trend persistence in BTC-USD across volat | bd8162cba7628a | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-22T20:21Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 26024e39ad2751 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-22T20:20Z | S06b | BTC-USD relative strength to SPY mean reversion | d5b15dc3294760 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-22T20:19Z | S10b | ETH-USD hourly breakout above 2% of 24‑hour SMA  | 0367a2d2aa9cb4 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-22T17:56Z | S04a | gap_down_quality | d65d071265de2d | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-22T17:55Z | S08a | Low hourly realized volatility predicts larger n | 61f004c5c4cbb9 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-22T17:55Z | S05a | BTC-USD hourly breakout regime shift | 8ca79a89f6afbd | HOLD_INVALID_MODEL_DECISION |
-| 2026-11-22T17:54Z | S03a | ETH-USD hourly mean reversion at 12‑hour lag | b523a79cbb78e1 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
