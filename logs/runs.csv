@@ -13697,3 +13697,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-23 20:51:53,scan_evening,correction,228.33,228.33,37,0,3,0,,both
 2026-11-23 20:57:17,scan_evening,correction,228.36,125.61,37,0,0,3,DELL|MU|NVDA,both
 2026-11-23 21:02:20,ext_exits,correction,228.91,125.61,0,0,0,3,DELL|MU|NVDA,both
+2026-11-23 21:07:05,ext_exits,correction,228.73,125.61,0,0,0,3,DELL|MU|NVDA,both
