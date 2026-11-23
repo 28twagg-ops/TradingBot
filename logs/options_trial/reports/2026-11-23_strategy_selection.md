@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-23
 
-_Generated 2026-11-23T11:02:22.046850_
+_Generated 2026-11-23T11:07:59.252848_
 
 ## Summary
 
@@ -88,7 +88,7 @@ _Generated 2026-11-23T11:02:22.046850_
 | S358 (GapDown_30DTE) | 30d | watch | 5 | 40.0 | -50.00 | -51.39 | -51.39 | +54.28 | 111 | 0 | 0 | $-49.00 | 40.0% | insufficient sample (<8 exits) |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 7 | 0.0 | -64.71 | -80.40 | -68.79 | -50.75 | 117 | 0 | 0 | $-212.00 | 71.4% | insufficient sample (<8 exits) |
 | S395 (GapDown_ITM3) | 3d | watch | 1 | 0.0 | -68.75 | -68.75 | -68.75 | -68.75 | 40 | 0 | 0 | $-44.00 | 100.0% | insufficient sample (<8 exits) |
-| S406 (RubberBand_ITM3) | 3d | drop | 189 | 49.2 | +0.00 | -58.99 | -47.37 | +175.79 | 115 | 7 | 6 | $+2,928.00 | 12.7% | non-positive median return |
+| S406 (RubberBand_ITM3) | 3d | drop | 189 | 49.2 | +0.00 | -58.99 | -47.37 | +175.79 | 115 | 8 | 6 | $+2,928.00 | 12.7% | non-positive median return |
 | S401 (Any_Gap_Down_Small) | 3d | drop | 135 | 49.6 | +0.00 | -84.10 | -51.33 | +230.91 | 115 | 0 | 0 | $+928.00 | 23.7% | non-positive median return |
 | S365 (RubberBand_14DTE) | 14d | drop | 43 | 46.5 | +0.00 | -64.95 | -53.28 | +66.58 | 115 | 1 | 2 | $-69.00 | 32.6% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 68 | 44.1 | -3.57 | -58.23 | -50.00 | +125.40 | 115 | 0 | 0 | $+184.00 | 17.6% | non-positive median return |
