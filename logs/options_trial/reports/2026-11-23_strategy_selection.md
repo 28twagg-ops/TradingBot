@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-23
 
-_Generated 2026-11-23T10:02:33.401055_
+_Generated 2026-11-23T10:07:26.610423_
 
 ## Summary
 
@@ -88,7 +88,7 @@ _Generated 2026-11-23T10:02:33.401055_
 | S358 (GapDown_30DTE) | 30d | watch | 5 | 40.0 | -50.00 | -51.39 | -51.39 | +54.28 | 111 | 0 | 0 | $-49.00 | 40.0% | insufficient sample (<8 exits) |
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 7 | 0.0 | -64.71 | -80.40 | -68.79 | -50.75 | 117 | 0 | 0 | $-212.00 | 71.4% | insufficient sample (<8 exits) |
 | S395 (GapDown_ITM3) | 3d | watch | 1 | 0.0 | -68.75 | -68.75 | -68.75 | -68.75 | 40 | 0 | 0 | $-44.00 | 100.0% | insufficient sample (<8 exits) |
-| S406 (RubberBand_ITM3) | 3d | drop | 188 | 49.5 | +0.00 | -59.17 | -47.37 | +176.19 | 115 | 6 | 5 | $+2,946.00 | 12.8% | non-positive median return |
+| S406 (RubberBand_ITM3) | 3d | drop | 188 | 49.5 | +0.00 | -59.17 | -47.37 | +176.19 | 115 | 7 | 5 | $+2,946.00 | 12.8% | non-positive median return |
 | S401 (Any_Gap_Down_Small) | 3d | drop | 135 | 49.6 | +0.00 | -84.10 | -51.33 | +230.91 | 115 | 0 | 0 | $+928.00 | 23.7% | non-positive median return |
 | S365 (RubberBand_14DTE) | 14d | drop | 43 | 46.5 | +0.00 | -64.95 | -53.28 | +66.58 | 115 | 1 | 2 | $-69.00 | 32.6% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 68 | 44.1 | -3.57 | -58.23 | -50.00 | +125.40 | 115 | 0 | 0 | $+184.00 | 17.6% | non-positive median return |
@@ -105,7 +105,7 @@ _Generated 2026-11-23T10:02:33.401055_
 | S411 (RubberBand_OTM2) | 3d | drop | 66 | 47.0 | -38.16 | -59.11 | -52.28 | +60.61 | 112 | 0 | 0 | $-278.00 | 15.2% | non-positive median return |
 | S352 (GapDown_2DTE) | 2d | drop | 73 | 45.2 | -38.24 | -70.12 | -51.85 | +267.46 | 115 | 0 | 0 | $+211.00 | 16.4% | non-positive median return |
 | S404 (GapDown_OTM2) | 3d | drop | 123 | 45.5 | -38.89 | -64.36 | -50.00 | +91.53 | 115 | 4 | 3 | $+644.00 | 10.6% | non-positive median return |
-| S430 (DayTrader_ORB) | 3d | drop | 25 | 24.0 | -39.58 | -44.92 | -41.18 | +53.84 | 38 | 2 | 2 | $-209.00 | 20.0% | non-positive median return |
+| S430 (DayTrader_ORB) | 3d | drop | 25 | 24.0 | -39.58 | -44.92 | -41.18 | +53.84 | 38 | 3 | 2 | $-209.00 | 20.0% | non-positive median return |
 | S364 (RubberBand_7DTE) | 7d | drop | 77 | 45.5 | -42.31 | -85.18 | -57.45 | +82.04 | 115 | 1 | 2 | $-90.00 | 33.8% | non-positive median return |
 | S405 (GapDown_OTM3) | 3d | drop | 56 | 33.9 | -42.86 | -83.93 | -65.20 | +103.47 | 115 | 0 | 0 | $-118.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
 | S211 (MA_Cross_21_50) | 3d ATM MA cross 21/50 | drop | 56 | 23.2 | -43.65 | -86.66 | -54.73 | +95.51 | 119 | 0 | 0 | $-401.00 | 26.8% | manually paused — excluded from new entries & reflected P&L |
