@@ -1,0 +1,22 @@
+14:37:59  INFO      Mode: morning_prep
+14:37:59  INFO        [prep_positions] 3/3 (3 valid)
+14:37:59  INFO      Fetching tickers (universe=both)...
+14:37:59  INFO        S&P 500: 503
+14:38:00  INFO        MidCap 400: 400
+14:38:00  INFO        Total: 903 tickers
+14:38:00  INFO        [prep_universe] 40/900 (40 valid)
+14:38:02  INFO        [prep_universe] 80/900 (80 valid)
+14:38:03  INFO        [prep_universe] 120/900 (120 valid)
+14:38:04  INFO        [prep_universe] 160/900 (160 valid)
+14:38:05  INFO        [prep_universe] 200/900 (199 valid)
+14:38:15  INFO        [prep_universe] 240/900 (238 valid)
+14:38:25  INFO        [prep_universe] 280/900 (278 valid)
+14:38:38  INFO        [prep_universe] 320/900 (318 valid)
+14:38:51  INFO        [prep_universe] 360/900 (358 valid)
+14:39:01  INFO        [prep_universe] 400/900 (398 valid)
+14:39:14  INFO        [prep_universe] 440/900 (438 valid)
+14:39:27  INFO        [prep_universe] 480/900 (477 valid)
+14:39:37  INFO        [prep_universe] 520/900 (517 valid)
+14:39:50  INFO        [prep_universe] 560/900 (557 valid)
+14:40:02  INFO        [prep_universe] 600/900 (597 valid)
+14:40:13  INFO        [prep_universe] 640/900 (637 valid)
