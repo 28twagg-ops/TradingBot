@@ -1064,3 +1064,6 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-11-23 14:47:11,2026-11-23,SELL,TTWO,EarningsDrift,205.005,,205.005,33.56,0.0,0.0,market_urgent_full,stop_loss (-2.4%),correction
 2026-11-23 14:47:13,2026-11-23,SELL,EOG,Pullback50,148.4,,148.4,34.44,0.0,0.0,market_urgent_full,stop_loss (-1.0%),correction
 2026-11-23 14:47:34,2026-11-23,SELL,ACN,Pullback50,223.22,222.77,223.15,34.78,-0.0314,-0.0109,limit_fill_position_check_full,max_hold 3d (+0.6%),correction
+2026-11-23 20:51:49,2026-11-23,SELL,DELL,MomReversal,334.65,,334.65,34.06,0.0,0.0,market_urgent_full,stop_loss (-0.8%),correction
+2026-11-23 20:51:51,2026-11-23,SELL,NVDA,MomReversal,164.355,,164.295,34.1,-0.0365,-0.0124,market_urgent_full,stop_loss (-0.7%),correction
+2026-11-23 20:51:53,2026-11-23,SELL,MU,MomReversal,703.165,,702.67,34.11,-0.0704,-0.024,market_urgent_full,stop_loss (-0.7%),correction

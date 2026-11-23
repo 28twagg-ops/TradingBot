@@ -1,0 +1,171 @@
+20:51:46  INFO      Mode: scan
+20:51:47  INFO        [positions] 3/3 (3 valid)
+20:51:47  INFO        SELL MARKET [urgent] DELL closed
+20:51:49  INFO        TX logged: SELL DELL  P&L -0.84%
+20:51:49  INFO        SELL MARKET [urgent] NVDA closed
+20:51:51  INFO        TX logged: SELL NVDA  P&L -0.72%
+20:51:51  INFO        SELL MARKET [urgent] MU closed
+20:51:53  INFO        TX logged: SELL MU  P&L -0.7%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         20:51 UTC|
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Equity                                                         $228.29|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-23|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                      CORRECTION|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $228.29|
+|  Cash                                                           $126.01|
+|  Reserve                                          $11.41  (always kept)|
+|  Stock~  $102.28 / $171.22  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $68.94  (new stock buys)|
+|  Trade size             $34.24  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  DELL     MomReversal     $34.06     $337.48  $334.65  -0.8%   $-0.29  |
+|  MU       MomReversal     $34.11     $707.59  $702.67  -0.7%   $-0.24  |
+|  NVDA     MomReversal     $34.10     $165.49  $164.29  -0.7%   $-0.25  |
+|                                                                        |
+|  Total invested                                                 $102.28|
+|  Total open P&L                                                  $-0.77|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (16.4m); positions refreshed live)|
+|  Cached signals                                                      37|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  DELL  P&L -0.8%  $-0.29                        EXIT: stop_loss (-0.8%)|
+|  NVDA  P&L -0.7%  $-0.25                        EXIT: stop_loss (-0.7%)|
+|  MU  P&L -0.7%  $-0.24                          EXIT: stop_loss (-0.7%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 3 | filled 3 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 0|
+|  Stop-loss breaches                                                   3|
+|  DELL                                        -0.84%  (threshold -0.50%)|
+|  NVDA                                        -0.72%  (threshold -0.50%)|
+|  MU                                          -0.70%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: CORRECTION                                     |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                          cached signals (signals fresh (16.4m))|
+|  Universe scanned in prep                                           903|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  37                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  ABT      Pullback50      eq     $103.03  35.7   -1.94   50MA bounce (-|
+|  ACN      Pullback50      eq     $222.81  27.6   -1.37   50MA bounce (+|
+|  AES      Pullback50      eq     $15.04   74.5   -0.41   50MA bounce (+|
+|  AMCR     Pullback50      eq     $43.49   32.6   -0.98   50MA bounce (-|
+|  TECH     Pullback50      eq     $72.86   60.4   0.16    50MA bounce (+|
+|  DHR      Pullback50      eq     $226.49  46.5   -1.32   50MA bounce (+|
+|  DELL     MomReversal     eq     $339.66  39.7   1.63    -25.6% drop/60|
+|  EMR      Pullback50      eq     $159.31  43.2   -1.22   50MA bounce (-|
+|  ESS      Pullback50      eq     $272.57  62.9   -1.72   50MA bounce (+|
+|  FOXA     Pullback50      eq     $64.28   42.7   -0.74   50MA bounce (-|
+|  GRMN     Pullback50      eq     $279.89  55.4   -1.42   50MA bounce (-|
+|  HSIC     Pullback50      eq     $85.13   55.3   -0.70   50MA bounce (-|
+|  INCY     Pullback50      eq     $117.31  49.5   -1.53   50MA bounce (-|
+|  IP       RubberBand      eq     $29.19   23.6   1.03    RSI           |
+|  MET      Pullback50      eq     $99.12   46.8   -1.57   50MA bounce (+|
+|  MU       MomReversal     eq     $708.72  39.6   0.51    -24.0% drop/60|
+|  MCO      Pullback50      eq     $482.00  41.2   -1.34   50MA bounce (+|
+|  NDSN     Pullback50      eq     $322.65  45.0   -1.75   50MA bounce (-|
+|  NVDA     MomReversal     eq     $166.35  35.8   1.73    -23.5% drop/60|
+|  RJF      Pullback50      eq     $160.53  48.5   -1.95   50MA bounce (-|20:51:53  INFO        Daily log -> logs/daily/2026-11-23.md
+20:51:54  INFO        Dashboard written → logs/dashboard.md
+
+|  RVTY     Pullback50      eq     $152.72  40.2   -1.75   50MA bounce (-|
+|  SNDK     RubberBand      eq     $88.66   14.3   2.36    RSI           |
+|  TROW     Pullback50      eq     $104.22  46.9   -0.82   50MA bounce (-|
+|  TEL      Pullback50      eq     $214.35  45.8   -0.85   50MA bounce (+|
+|  UHS      Pullback50      eq     $183.76  54.9   -1.41   50MA bounce (+|
+|  UNH      RubberBand      eq     $334.31  24.7   0.62    RSI           |
+|  AMG      Pullback50      eq     $380.87  54.3   -0.86   50MA bounce (+|
+|  AVTR     Pullback50      eq     $15.64   50.7   -0.56   50MA bounce (-|
+|  BIO      Pullback50      eq     $372.49  48.8   -1.10   50MA bounce (+|
+|  BJ       RubberBand      eq     $100.62  26.1   0.55    RSI           |
+|  COKE     Pullback50      eq     $202.90  47.2   -1.85   50MA bounce (+|
+|  CXT      Pullback50      eq     $52.70   32.5   -0.75   50MA bounce (-|
+|  IESC     MomReversal     eq     $171.78  38.4   0.68    -44.6% drop/60|
+|  KRYS     Pullback50      eq     $321.76  61.4   -0.68   50MA bounce (-|
+|  MEDP     Pullback50      eq     $636.77  41.9   -0.16   50MA bounce (+|
+|  RS       Pullback50      eq     $412.49  34.1   -1.90   50MA bounce (+|
+|  TXNM     Pullback50      eq     $58.95   62.0   -1.09   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             37|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                3|
+|  Open pos                                                             0|
+|  Equity                                                         $228.33|
+|  Cash                                                           $228.33|
++========================================================================+
