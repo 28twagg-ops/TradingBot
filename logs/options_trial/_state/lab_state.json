@@ -103,7 +103,18 @@
     }
   ],
   "pending_orders": [],
-  "pending_exits": [],
+  "pending_exits": [
+    {
+      "order_id": "a0be41d5-9fd0-45b5-b2bd-45eca837067c",
+      "lot_id": "aa530f6ce972",
+      "bucket_id": 2007,
+      "strategy_id": "S430",
+      "occ_symbol": "TSLA261125C00422500",
+      "qty": 1,
+      "reason": "stop_loss (-40.5%)",
+      "submitted": "2026-11-23T11:47:00"
+    }
+  ],
   "bucket_open_premium": {
     "b52": 57.99999999999999,
     "b2007": 42.0,
