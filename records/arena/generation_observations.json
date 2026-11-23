@@ -6448,5 +6448,91 @@
       }
     },
     "basis": "INDICATIVE_YAHOO_HOURLY_NOT_EXECUTABLE"
+  },
+  {
+    "timestamp": "2026-11-23T00:21:12.993336+00:00",
+    "workers": {
+      "S01": {
+        "generation": "S01a",
+        "equity": 98.6075,
+        "ledger_events": 4,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S02": {
+        "generation": "S02b",
+        "equity": 97.4256,
+        "ledger_events": 12,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S03": {
+        "generation": "S03a",
+        "equity": 89.3712,
+        "ledger_events": 24,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S04": {
+        "generation": "S04a",
+        "equity": 96.7891,
+        "ledger_events": 23,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S05": {
+        "generation": "S05a",
+        "equity": 92.702,
+        "ledger_events": 19,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S06": {
+        "generation": "S06b",
+        "equity": 97.4256,
+        "ledger_events": 12,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S07": {
+        "generation": "S07b",
+        "equity": 92.778,
+        "ledger_events": 21,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S08": {
+        "generation": "S08a",
+        "equity": 100.0,
+        "ledger_events": 0,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S09": {
+        "generation": "S09b",
+        "equity": 95.243,
+        "ledger_events": 17,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S10": {
+        "generation": "S10b",
+        "equity": 97.9154,
+        "ledger_events": 10,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      }
+    },
+    "basis": "INDICATIVE_YAHOO_HOURLY_NOT_EXECUTABLE"
   }
 ]

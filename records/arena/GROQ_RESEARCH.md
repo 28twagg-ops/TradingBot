@@ -6,6 +6,8 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-23T00:21Z | S06b | BTC-USD hourly momentum trigger | 88af86be1c27b6 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-23T00:21Z | S10b | ETH-USD hourly breakout above 1% of 24‑hour SMA  | 93d3b8c6deae01 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-22T23:43Z | S04a | gap_down_quality | 1a84d8d2102599 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-22T23:42Z | S08a | Low hourly realized volatility predicts larger n | 8d8e8416f0094e | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-22T23:41Z | S05a | BTC-USD hourly breakout regime shift | addfb77ed07b9a | HOLD |
@@ -39,8 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-22T03:18Z | S04a | gap_down_quality | 1e9aa968fb58ae | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-22T03:17Z | S08a | Low hourly realized volatility predicts larger n | eb0b5e33072f40 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-22T03:16Z | S05a | BTC-USD hourly breakout regime shift | 8eaee7432c5d31 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-22T03:16Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 44ac220ed2a94c | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-22T03:15Z | S01a | BTC-USD hourly trend persistence | 50842999096018 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.

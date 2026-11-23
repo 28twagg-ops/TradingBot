@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-22T23:40:17.566014+00:00",
+  "timestamp": "2026-11-23T00:21:12.993336+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -24,7 +24,7 @@
       "action": "HOLD",
       "generation_index": 0,
       "cash": 29.32275778,
-      "equity": 89.3675,
+      "equity": 89.3712,
       "ledger_events": 24,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -42,7 +42,7 @@
       "action": "HOLD",
       "generation_index": 0,
       "cash": 56.10812372,
-      "equity": 92.7702,
+      "equity": 92.702,
       "ledger_events": 19,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -60,7 +60,7 @@
       "action": "HOLD",
       "generation_index": 1,
       "cash": 56.12323484,
-      "equity": 92.8463,
+      "equity": 92.778,
       "ledger_events": 21,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -78,7 +78,7 @@
       "action": "HOLD",
       "generation_index": 1,
       "cash": 57.6139852,
-      "equity": 95.3131,
+      "equity": 95.243,
       "ledger_events": 17,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []

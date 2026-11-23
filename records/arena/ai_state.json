@@ -23466,6 +23466,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-23T00:21Z",
+        "id": "88af86be1c27b6",
+        "topic": "BTC-USD hourly momentum trigger",
+        "hypothesis": "When BTC-USD\u2019s hourly close exceeds its 12\u2011hour simple moving average by more than 5% of the SMA, the price will continue to rise for at least the next hour.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "For each hour in the historical record, compute the 12\u2011hour SMA and compare the close to SMA. If close > SMA * 1.05, record the next hour\u2019s return. Compute the proportion of such events that produced a positive return. If the success rate is below 50%, the hypothesis is falsified.",
+        "source_search": {
+          "query": "BTC\u2011USD relative strength to SPY mean reversion empirical study",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly momentum strategy literature",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -38017,6 +38055,44 @@
         },
         "source_leads": [],
         "next_search_query": "ETH-USD hourly close 2024 2025 2026 SMA 24 breakout 2%",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-23T00:21Z",
+        "id": "93d3b8c6deae01",
+        "topic": "ETH-USD hourly breakout above 1% of 24\u2011hour SMA triggers momentum",
+        "hypothesis": "When ETH\u2011USD hourly close exceeds its 24\u2011hour SMA by more than 1%, the next hour\u2019s return is positive, indicating a momentum effect.",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "For each hour where close > SMA24 \u00d71.01, compute next\u2011hour return; if \u226590% of such cases yield positive return, hypothesis supported.",
+        "source_search": {
+          "query": "ETH-USD hourly close 2024 2025 2026 SMA 24 breakout 2%",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly close 2024 2025 2026 SMA 24 breakout 1% momentum",
         "preferred_sources": [
           "web"
         ],

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-15T23:29:05.308953+00:00",
+  "timestamp": "2026-11-23T00:23:16.714149+00:00",
   "rotations": 0,
   "monthly_minimum_days": 28,
   "no_live_trading": true,
@@ -8,71 +8,71 @@
       "generation": "S01a",
       "decision": "DEFER_MINIMUM_28_DAYS",
       "equity": 98.6075,
-      "observations": 55,
+      "observations": 76,
       "closed_trades": 2
     },
     {
       "generation": "S02b",
       "decision": "DEFER_MINIMUM_28_DAYS",
-      "equity": 97.5567,
-      "observations": 48,
-      "closed_trades": 4
+      "equity": 97.4256,
+      "observations": 69,
+      "closed_trades": 6
     },
     {
       "generation": "S03a",
       "decision": "DEFER_MINIMUM_28_DAYS",
-      "equity": 94.4044,
-      "observations": 55,
-      "closed_trades": 7
+      "equity": 89.3712,
+      "observations": 76,
+      "closed_trades": 10
     },
     {
       "generation": "S04a",
       "decision": "DEFER_MINIMUM_28_DAYS",
-      "equity": 97.3342,
-      "observations": 55,
-      "closed_trades": 9
+      "equity": 96.7891,
+      "observations": 76,
+      "closed_trades": 11
     },
     {
       "generation": "S05a",
       "decision": "DEFER_MINIMUM_28_DAYS",
-      "equity": 95.7403,
-      "observations": 55,
-      "closed_trades": 4
+      "equity": 92.702,
+      "observations": 76,
+      "closed_trades": 9
     },
     {
       "generation": "S06b",
       "decision": "DEFER_MINIMUM_28_DAYS",
-      "equity": 97.5567,
-      "observations": 48,
-      "closed_trades": 4
+      "equity": 97.4256,
+      "observations": 69,
+      "closed_trades": 6
     },
     {
       "generation": "S07b",
       "decision": "DEFER_MINIMUM_28_DAYS",
-      "equity": 94.9068,
-      "observations": 48,
-      "closed_trades": 6
+      "equity": 92.778,
+      "observations": 69,
+      "closed_trades": 10
     },
     {
       "generation": "S08a",
       "decision": "DEFER_MINIMUM_28_DAYS",
       "equity": 100.0,
-      "observations": 55,
+      "observations": 76,
       "closed_trades": 0
     },
     {
       "generation": "S09b",
       "decision": "DEFER_MINIMUM_28_DAYS",
-      "equity": 97.429,
-      "observations": 48,
-      "closed_trades": 4
+      "equity": 95.243,
+      "observations": 69,
+      "closed_trades": 8
     },
     {
       "generation": "S10b",
       "decision": "DEFER_MINIMUM_28_DAYS",
-      "equity": 98.0471,
-      "observations": 48,
-      "closed_trades": 3
+      "equity": 97.9154,
+      "observations": 69,
+      "closed_trades": 5
     }
   ]
 }
