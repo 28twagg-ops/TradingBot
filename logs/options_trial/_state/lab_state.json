@@ -60,46 +60,25 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-23T15:46:58.072265+00:00",
       "entry_order_id": "8e374477-8ef5-4091-b961-42909c3ec1c0"
-    },
-    {
-      "lot_id": "109e6929404a",
-      "bucket_id": 90,
-      "profile_name": "live_1to1",
-      "strategy_id": "S406",
-      "occ_symbol": "UNH261127C00355000",
-      "underlying": "UNH",
-      "qty": 1,
-      "entry_cost": 44.0,
-      "entry_price": 0.44,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-23T16:07:06.990196+00:00",
-      "entry_order_id": "2c6f1cae-7dc5-4449-a8c1-4f9a82809f1e"
     }
   ],
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "82169767-ded2-461f-ac3f-2f2f44154936",
-      "lot_id": "109e6929404a",
-      "bucket_id": 90,
-      "strategy_id": "S406",
-      "occ_symbol": "UNH261127C00355000",
+      "order_id": "92e99904-a9c7-46a1-b2c6-927b3d9b8b5f",
+      "lot_id": "be9bef0911e8",
+      "bucket_id": 63,
+      "strategy_id": "S168",
+      "occ_symbol": "UNH261127C00352500",
       "qty": 1,
-      "reason": "take_profit (+61.4%)",
-      "submitted": "2026-11-23T11:52:08"
+      "reason": "take_profit (+55.1%)",
+      "submitted": "2026-11-23T11:57:00"
     }
   ],
   "bucket_open_premium": {
     "b52": 57.99999999999999,
     "b50": 64.0,
-    "b63": 69.0,
-    "b90": 44.0
+    "b63": 69.0
   },
   "session_date": "2026-11-23",
   "entries_locked": [
@@ -513,7 +492,8 @@
     "3f8010b3-aa15-4b19-b8f2-081a9991a1ea",
     "2c6f1cae-7dc5-4449-a8c1-4f9a82809f1e",
     "5ba56b48-e379-4b74-aa6d-fa74d84fcaf0",
-    "a0be41d5-9fd0-45b5-b2bd-45eca837067c"
+    "a0be41d5-9fd0-45b5-b2bd-45eca837067c",
+    "82169767-ded2-461f-ac3f-2f2f44154936"
   ],
   "submitted_today": 9,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
