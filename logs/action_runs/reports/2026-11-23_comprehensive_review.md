@@ -1182,3 +1182,82 @@ Wrote /home/runner/work/TradingBot/TradingBot/logs/rubber_band_report.md
 ```
 
 ---
+
+## Run 20261123T143156Z
+
+- UTC timestamp: `20261123T143156Z`
+- GitHub run: [#16438](https://github.com/28twagg-ops/TradingBot/actions/runs/45194866823)
+- Run id: `45194866823`
+- Live bot: exit=`0`, duration=`0s`
+- Live options: exit=`0`, duration=`0s`
+- Paper options: exit=`0`, duration=`0s`
+- Full logs: `logs/action_runs/20261123T143156Z_live_bot.log`, `logs/action_runs/20261123T143156Z_live_options.log`, `logs/action_runs/20261123T143156Z_options_bot.log`
+
+
+### Options data quality (CLEAN vs TAINTED vs KEEP-only)
+
+| Slice | n | Win% | Med% | Avg% | $ |
+|---|---:|---:|---:|---:|---:|
+| CLEAN | 1896 | 48.5 | -26.4 | +35.0 | $+20,954 |
+| TAINTED | 2169 | 30.0 | -43.1 | +6.2 | $-14,707 |
+| KEEP-only | 960 | 59.7 | +51.2 | +49.7 | $+14,884 |
+| KEEP-only recent | 775 | 58.6 | +52.8 | +54.3 | $+11,375 |
+
+- KEEP strategies (24): S163, S164, S166, S167, S168, S173, S174, S210, S350, S352, S356, S357, S359, S361, S362, S364, S365, S396, S397, S403, S404, S406, S410, S430
+- KILL strategies (23): ORPHAN, S202, S203, S207, S211, S212, S216, S217, S218, S351, S353, S354, S355, S360, S363, S366, S398, S399, S401, S405, S407, S408, S432
+- Note: KILL/KEEP are advisory - all strategies still trade for ~1 week observation.
+
+- Options structured summary (latest JSON):
+```json
+{"ts_et":"2026-11-23T09:27:02.004702-05:00","date":"2026-11-23","mode":"after_hours","header":"after hours (exit summary)","elapsed_s":1.3,"phases_s":{"reconcile":0.44},"signals":0,"placed":0,"equity":990331.68,"open_positions":1,"pending_orders":0,"open_lots":1,"submitted_today":0,"filled_today":0,"unattributed_contracts":0,"top_signals":[],"github_run":"16437","github_run_id":"45193971909","status":"ok","data_quality":{"clean":{"n":1896,"win":48.47,"med":-26.45,"avg":34.98,"pnl":20953.83},"tainted":{"n":2169,"win":29.97,"med":-43.14,"avg":6.23,"pnl":-14707.28},"keep_only":{"n":960,"win":59.69,"med":51.22,"avg":49.65,"pnl":14884.45},"keep_only_recent":{"n":775,"win":58.58,"med":52.83,"avg":54.29,"pnl":11375.0},"keep_strategies":["S163","S164","S166","S167","S168","S173","S174","S210","S350","S352","S356","S357","S359","S361","S362","S364","S365","S396","S397","S403","S404","S406","S410","S430"],"kill_strategies":["ORPHAN","S202","S203","S207","S211","S212","S216","S217","S218","S351","S353","S354","S355","S360","S363","S366","S398","S399","S401","S405","S407","S408","S432"]}}
+```
+
+### Live bot (tail)
+
+```text
+14:31:57  INFO      Mode: morning_prep
+14:31:58  INFO        [prep_positions] 3/3 (3 valid)
+14:31:58  INFO      Fetching tickers (universe=both)...
+14:31:58  INFO        S&P 500: 503
+14:31:58  INFO        MidCap 400: 400
+14:31:58  INFO        Total: 903 tickers
+14:31:59  INFO        [prep_universe] 40/900 (40 valid)
+14:32:01  INFO        [prep_universe] 80/900 (80 valid)
+14:32:02  INFO        [prep_universe] 120/900 (120 valid)
+14:32:03  INFO        [prep_universe] 160/900 (160 valid)
+14:32:04  INFO        [prep_universe] 200/900 (199 valid)
+14:32:12  INFO        [prep_universe] 240/900 (238 valid)
+14:32:25  INFO        [prep_universe] 280/900 (278 valid)
+14:32:37  INFO        [prep_universe] 320/900 (318 valid)
+14:32:47  INFO        [prep_universe] 360/900 (358 valid)
+14:33:00  INFO        [prep_universe] 400/900 (398 valid)
+14:33:13  INFO        [prep_universe] 440/900 (438 valid)
+14:33:24  INFO        [prep_universe] 480/900 (477 valid)
+14:33:37  INFO        [prep_universe] 520/900 (517 valid)
+14:33:47  INFO        [prep_universe] 560/900 (557 valid)
+14:34:00  INFO        [prep_universe] 600/900 (597 valid)
+14:34:13  INFO        [prep_universe] 640/900 (637 valid)
+14:34:23  INFO        [prep_universe] 680/900 (677 valid)
+14:34:36  INFO        [prep_universe] 720/900 (717 valid)
+14:34:49  INFO        [prep_universe] 760/900 (757 valid)
+14:34:59  INFO        [prep_universe] 800/900 (797 valid)
+14:35:12  INFO        [prep_universe] 840/900 (837 valid)
+14:35:16  ERROR     $TCBI: possibly delisted; no price data found  (1d 2025-11-28 14:35:16.161611 -> 2026-11-23 14:35:16.161620)
+14:35:16  ERROR     
+1 Failed download:
+14:35:16  ERROR     ['TCBI']: possibly delisted; no price data found  (1d 2025-11-28 14:35:16.161611 -> 2026-11-23 14:35:16.161620)
+```
+
+### Live options micro (tail)
+
+```text
+
+```
+
+### Paper options bot (tail)
+
+```text
+
+```
+
+---

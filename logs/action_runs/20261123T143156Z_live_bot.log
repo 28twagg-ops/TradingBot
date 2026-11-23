@@ -1,0 +1,31 @@
+14:31:57  INFO      Mode: morning_prep
+14:31:58  INFO        [prep_positions] 3/3 (3 valid)
+14:31:58  INFO      Fetching tickers (universe=both)...
+14:31:58  INFO        S&P 500: 503
+14:31:58  INFO        MidCap 400: 400
+14:31:58  INFO        Total: 903 tickers
+14:31:59  INFO        [prep_universe] 40/900 (40 valid)
+14:32:01  INFO        [prep_universe] 80/900 (80 valid)
+14:32:02  INFO        [prep_universe] 120/900 (120 valid)
+14:32:03  INFO        [prep_universe] 160/900 (160 valid)
+14:32:04  INFO        [prep_universe] 200/900 (199 valid)
+14:32:12  INFO        [prep_universe] 240/900 (238 valid)
+14:32:25  INFO        [prep_universe] 280/900 (278 valid)
+14:32:37  INFO        [prep_universe] 320/900 (318 valid)
+14:32:47  INFO        [prep_universe] 360/900 (358 valid)
+14:33:00  INFO        [prep_universe] 400/900 (398 valid)
+14:33:13  INFO        [prep_universe] 440/900 (438 valid)
+14:33:24  INFO        [prep_universe] 480/900 (477 valid)
+14:33:37  INFO        [prep_universe] 520/900 (517 valid)
+14:33:47  INFO        [prep_universe] 560/900 (557 valid)
+14:34:00  INFO        [prep_universe] 600/900 (597 valid)
+14:34:13  INFO        [prep_universe] 640/900 (637 valid)
+14:34:23  INFO        [prep_universe] 680/900 (677 valid)
+14:34:36  INFO        [prep_universe] 720/900 (717 valid)
+14:34:49  INFO        [prep_universe] 760/900 (757 valid)
+14:34:59  INFO        [prep_universe] 800/900 (797 valid)
+14:35:12  INFO        [prep_universe] 840/900 (837 valid)
+14:35:16  ERROR     $TCBI: possibly delisted; no price data found  (1d 2025-11-28 14:35:16.161611 -> 2026-11-23 14:35:16.161620)
+14:35:16  ERROR     
+1 Failed download:
+14:35:16  ERROR     ['TCBI']: possibly delisted; no price data found  (1d 2025-11-28 14:35:16.161611 -> 2026-11-23 14:35:16.161620)
