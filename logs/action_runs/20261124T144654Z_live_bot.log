@@ -1,0 +1,188 @@
+14:46:55  INFO      Mode: morning_scan
+14:46:55  INFO        SELL MARKET [urgent] NVDA closed
+14:46:57  INFO        TX logged: SELL NVDA  P&L -5.31%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:46 UTC|
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Equity                                                         $226.15|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-24|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                      CORRECTION|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $226.15|
+|  Cash                                                           $193.60|
+|  Reserve                                          $11.31  (always kept)|
+|  Stocks~  $32.55 / $169.61  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $137.06  (new stock buys)|
+|  Trade size             $33.92  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (1 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  NVDA     MomReversal     $32.55     $164.84  $156.09  -5.3%   $-1.82  |
+|                                                                        |
+|  Total invested                                                  $32.55|
+|  Total open P&L                                                  $-1.82|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (11.5m))|
+|  Cached exits                                                         1|
+|  Cached signals                                                      20|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  NVDA  P&L -5.3%  $-1.82                        EXIT: stop_loss (-5.3%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 0|
+|  Stop-loss breaches                                                   1|
+|  NVDA                                        -5.31%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: CORRECTION                                     |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           902|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  20                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  ACN      Pullback50      eq     $223.75  17.3   -2.35   50MA bounce (+|
+|  TECH     Pullback50      eq     $72.79   53.5   -2.53   50MA bounce (+|
+|  DHR      Pullback50      eq     $227.00  41.8   -3.30   50MA bounce (+|
+|  DRI      VWAP_Reclaim    eq     $232.27  62.2   1.61    VWAP reclaim V|
+|  HSIC     Pullback50      eq     $85.03   41.6   -1.72   50MA bounce (-|
+|  INCY     Pullback50      eq     $118.33  40.4   -2.35   50MA bounce (+|
+|  MCO      Pullback50      eq     $481.64  26.4   -2.55   50MA bounce (+|
+|  RVTY     Pullback50      eq     $152.76  43.4   -2.07   50MA bounce (-|
+|  AVTR     Pullback50      eq     $15.65   50.0   -1.48   50MA bounce (-|
+|  BIO      Pullback50      eq     $370.70  45.2   -2.11   50MA bounce (-|
+|  BJ       Pullback50      eq     $102.73  26.8   -1.48   50MA bounce (+|
+|  DUOL     Pullback50      eq     $147.08  39.6   -0.86   50MA bounce (+|
+|  M        Pullback50      eq     $23.50   39.8   -3.31   50MA bounce (+|
+|  MTN      Pullback50      eq     $147.24  30.7   -2.10   50MA bounce (-|
+|  OLLI     Pullback50      eq     $89.49   41.7   -2.95   50MA bounce (+|
+|  PK       Pullback50      eq     $16.03   38.5   -2.36   50MA bounce (+|
+|  RS       Pullback50      eq     $410.18  34.1   -2.79   50MA bounce (-|
+|  TXNM     Pullback50      eq     $58.90   62.7   -1.51   50MA bounce (+|
+|  VOYA     Pullback50      eq     $98.09   37.8   -2.33   50MA bounce (-|
+|  WTS      Pullback50      eq     $357.36  52.7   -2.02   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+14:46:58  INFO        BUY  ACN  $33.92  [Pullback50]  id=451a1309-1304-4111-8d93-22b50e0e20bc
+14:46:58  INFO        BUY  TECH  $33.92  [Pullback50]  id=4366d5c2-90eb-4286-8e6f-7ada80ecff06
+14:46:58  INFO        BUY  DHR  $33.92  [Pullback50]  id=f9cf90b8-17b9-474b-861b-4e0cea3269f8
+14:47:27  INFO        place_all_stops: checking 3 positions...
+14:47:27  INFO        STOP skipped ACN: fractional (0.1458 shares) — software exit will handle it
+14:47:27  INFO        STOP skipped DHR: fractional (0.1466 shares) — software exit will handle it
+14:47:27  INFO        STOP skipped TECH: fractional (0.4659 shares) — software exit will handle it
+14:47:27  INFO        Daily log -> logs/daily/2026-11-24.md
+14:47:27  INFO        Dashboard written → logs/dashboard.md
+|    ENTER [eq] ACN  Pullback50                                    $33.92|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] TECH  Pullback50                                   $33.92|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] DHR  Pullback50                                    $33.92|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] HSIC  Pullback50                                     cap 3|
+|    SKIP [eq] INCY  Pullback50                                     cap 3|
+|    SKIP [eq] MCO  Pullback50                                      cap 3|
+|    SKIP [eq] RVTY  Pullback50                                     cap 3|
+|    SKIP [eq] AVTR  Pullback50                                     cap 3|
+|    SKIP [eq] BIO  Pullback50                                      cap 3|
+|    SKIP [eq] BJ  Pullback50                                       cap 3|
+|    SKIP [eq] DUOL  Pullback50                                     cap 3|
+|    SKIP [eq] M  Pullback50                                        cap 3|
+|    SKIP [eq] MTN  Pullback50                                      cap 3|
+|    SKIP [eq] OLLI  Pullback50                                     cap 3|
+|    SKIP [eq] PK  Pullback50                                       cap 3|
+|    SKIP [eq] RS  Pullback50                                       cap 3|
+|    SKIP [eq] TXNM  Pullback50                                     cap 3|
+|    SKIP [eq] VOYA  Pullback50                                     cap 3|
+|    SKIP [eq] WTS  Pullback50                                      cap 3|
+|    SKIP [eq] DRI  VWAP_Reclaim                                    cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  ACN                                                  still unconfirmed|
+|  TECH                                                 still unconfirmed|
+|  DHR                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             20|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             3|
+|  Equity                                                         $226.02|
+|  Cash                                                           $124.40|
++========================================================================+
