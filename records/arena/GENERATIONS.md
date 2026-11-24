@@ -6,16 +6,16 @@ prices are INDICATIVE, not executable. No live trading.
 
 | Active | Latest indicative equity | Marks | Archived versions |
 |---|---:|---:|---|
-| S01a | $98.61 | 79 | — |
-| S02b | $97.43 | 72 | S02a |
-| S03a | $92.18 | 79 | — |
-| S04a | $98.52 | 79 | — |
-| S05a | $92.02 | 79 | — |
-| S06b | $97.43 | 72 | S06a |
-| S07b | $92.61 | 72 | S07a |
-| S08a | $100.00 | 79 | — |
-| S09b | $95.07 | 72 | S09a |
-| S10b | $97.92 | 72 | S10a |
+| S01a | $98.61 | 80 | — |
+| S02b | $97.43 | 73 | S02a |
+| S03a | $91.74 | 80 | — |
+| S04a | $98.44 | 80 | — |
+| S05a | $91.26 | 80 | — |
+| S06b | $97.43 | 73 | S06a |
+| S07b | $92.57 | 73 | S07a |
+| S08a | $100.00 | 80 | — |
+| S09b | $95.07 | 73 | S09a |
+| S10b | $97.92 | 73 | S10a |
 
 ## All generations, ranked by indicative cumulative return
 
@@ -23,21 +23,21 @@ Ranks compare different market windows and are NOT forward proof.
 
 | Generation | Equity | Return vs $100 | Status | Last mark / archive |
 |---|---:|---:|---|---|
-| S08a | $100.00 | +0.00% | ACTIVE | 2026-11-24T04:53:07 |
-| S01a | $98.61 | -1.39% | ACTIVE | 2026-11-24T04:53:07 |
-| S04a | $98.52 | -1.48% | ACTIVE | 2026-11-24T04:53:07 |
+| S08a | $100.00 | +0.00% | ACTIVE | 2026-11-24T17:48:27 |
+| S01a | $98.61 | -1.39% | ACTIVE | 2026-11-24T17:48:27 |
 | S06a | $98.47 | -1.53% | ARCHIVED | 2026-11-02T13:54:30 |
+| S04a | $98.44 | -1.56% | ACTIVE | 2026-11-24T17:48:27 |
 | S10a | $98.28 | -1.72% | ARCHIVED | 2026-11-02T13:54:30 |
 | S07a | $98.22 | -1.78% | ARCHIVED | 2026-11-02T13:54:30 |
-| S10b | $97.92 | -2.08% | ACTIVE | 2026-11-24T04:53:07 |
-| S02b | $97.43 | -2.57% | ACTIVE | 2026-11-24T04:53:07 |
-| S06b | $97.43 | -2.57% | ACTIVE | 2026-11-24T04:53:07 |
+| S10b | $97.92 | -2.08% | ACTIVE | 2026-11-24T17:48:27 |
+| S02b | $97.43 | -2.57% | ACTIVE | 2026-11-24T17:48:27 |
+| S06b | $97.43 | -2.57% | ACTIVE | 2026-11-24T17:48:27 |
 | S02a | $97.30 | -2.70% | ARCHIVED | 2026-11-02T13:54:30 |
 | S09a | $97.20 | -2.80% | ARCHIVED | 2026-11-02T13:54:30 |
-| S09b | $95.07 | -4.93% | ACTIVE | 2026-11-24T04:53:07 |
-| S07b | $92.61 | -7.39% | ACTIVE | 2026-11-24T04:53:07 |
-| S03a | $92.18 | -7.82% | ACTIVE | 2026-11-24T04:53:07 |
-| S05a | $92.02 | -7.98% | ACTIVE | 2026-11-24T04:53:07 |
+| S09b | $95.07 | -4.93% | ACTIVE | 2026-11-24T17:48:27 |
+| S07b | $92.57 | -7.43% | ACTIVE | 2026-11-24T17:48:27 |
+| S03a | $91.74 | -8.26% | ACTIVE | 2026-11-24T17:48:27 |
+| S05a | $91.26 | -8.74% | ACTIVE | 2026-11-24T17:48:27 |
 
 Archived books and evidence: records/arena/generations/
 Immutable local Llama ideas: arena-local-research branch.

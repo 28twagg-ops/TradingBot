@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-24T17:51Z | S04a | gap_down_momentum | b14482a9553ea8 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-24T17:50Z | S08a | Low hourly realized volatility predicts large ne | 850d5e6db02805 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-24T17:49Z | S05a | BTC-USD hourly breakout | 7c9f03c0109b23 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-24T17:49Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 8290ebdf01111d | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-24T17:48Z | S01a | BTC-USD hourly price reversion to 24‑hour moving | e2fc17d921e671 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-24T14:17Z | S10b | ETH-USD hourly mean reversion after 5% breakout | de1283cc34081e | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-24T14:17Z | S02b | BTC-USD hourly momentum persistence | 46ed608d55a82a | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-24T14:16Z | S07b | Hourly trend persistence in BTC-USD across volat | aa6e88a0cda5bc | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-23T13:39Z | S08a | Low hourly realized volatility predicts larger n | 634fbbb4002014 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-23T13:38Z | S05a | BTC-USD hourly breakout regime shift | de3ab94aaad22f | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-23T13:37Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 05aeffbe7bbe66 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-23T10:46Z | S01a | BTC-USD hourly trend persistence | f72d2082eb382b | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-23T10:45Z | S02b | BTC-USD hourly extreme return mean reversion | d5b8cfe3fc9d80 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-23T10:44Z | S07b | Hourly trend persistence in BTC-USD across volat | a3a81b2dd3d7d5 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-23T10:44Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 160ab04cff2be7 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-23T10:43Z | S06b | BTC-USD hourly momentum trigger | 56dec464bc0967 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
