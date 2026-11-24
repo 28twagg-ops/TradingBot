@@ -1069,3 +1069,4 @@ timestamp,date,action,ticker,strategy,expected_price,order_price,actual_price,fi
 2026-11-23 20:51:53,2026-11-23,SELL,MU,MomReversal,703.165,,702.67,34.11,-0.0704,-0.024,market_urgent_full,stop_loss (-0.7%),correction
 2026-11-24 14:46:57,2026-11-24,SELL,NVDA,MomReversal,156.085,,156.085,32.55,0.0,0.0,market_urgent_full,stop_loss (-5.3%),correction
 2026-11-24 14:56:51,2026-11-24,SELL,DHR,Pullback50,230.1125,,230.1125,33.74,0.0,0.0,market_urgent_full,stop_loss (-0.5%),correction
+2026-11-24 20:48:12,2026-11-24,SELL,TECH,Pullback50,72.87,72.86,72.862,33.94,-0.011,-0.0037,limit_fill_position_check_full,midline (+0.1%),correction
