@@ -65,7 +65,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 63,lab0063_s166_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-24,False,,,,,,,0,SMCI,S168,,entered_no_exit
 64,lab0064_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,2,2026-11-24,False,,,,,,,0,"HOOD,MARA","S163,S168",,entered_no_exit
 65,lab0065_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,1,1,2026-11-24,False,,0.0,-50.0,-50.0,-50.0,-50.0,-20.0,"NVDA,SMCI","S163,S164",broker_fill_backfill,closed
-66,lab0066_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-24,False,,,,,,,0,MARA,S164,,entered_no_exit
+66,lab0066_s164_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-24,False,,100.0,66.67,66.67,66.67,66.67,2.0,MARA,S164,take_profit (+66.7%),closed
 90,live_1to1,ask-0.01,bid-0.01,50.0,-40.0,2,2,0,2026-11-24,False,,0.0,-39.19,-39.19,-38.98,-39.39,-49.0,"HOOD,NVDA","S404,S406",broker_fill_backfill; stop_loss (-40.7%),closed
 91,s406_only,ask-0.01,bid-0.01,50.0,-40.0,1,1,0,2026-11-24,False,,0.0,-42.42,-42.42,-42.42,-42.42,-28.0,QQQ,S406,broker_fill_backfill,closed
 2000,promising_s169_baseline,ask-0.01,bid-0.01,50.0,-40.0,0,0,0,,False,,,,,,,0,,,,idle
