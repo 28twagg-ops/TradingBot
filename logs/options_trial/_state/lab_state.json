@@ -82,26 +82,6 @@
       "entry_order_id": "aff0726f-0408-49ee-baf9-c636e8fc781d"
     },
     {
-      "lot_id": "7ca7574ddf04",
-      "bucket_id": 61,
-      "profile_name": "lab0061_s167_w2_1005_1045_r1",
-      "strategy_id": "S167",
-      "occ_symbol": "MSTR261127C00089000",
-      "underlying": "MSTR",
-      "qty": 1,
-      "entry_cost": 57.99999999999999,
-      "entry_price": 0.58,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-24T15:12:13.308387+00:00",
-      "entry_order_id": "f5c344d0-fb7a-4734-a768-9eb313613fa4"
-    },
-    {
       "lot_id": "1daf72ca8793",
       "bucket_id": 49,
       "profile_name": "lab0049_s396_w2_1005_1045_r1",
@@ -265,34 +245,24 @@
   "pending_orders": [],
   "pending_exits": [
     {
-      "order_id": "91828138-02ce-49de-b016-09e24b2d121d",
+      "order_id": "15ec2ad8-d741-4942-973f-732e91953707",
       "lot_id": "809d464c3bab",
       "bucket_id": 17,
       "strategy_id": "S359",
       "occ_symbol": "UPST261127C00018500",
       "qty": 1,
-      "reason": "stop_loss (-66.7%)",
-      "submitted": "2026-11-24T10:37:00"
+      "reason": "stop_loss (-83.3%)",
+      "submitted": "2026-11-24T16:02:51"
     },
     {
-      "order_id": "bef6c9ee-9ba2-46a9-9501-884664e68d64",
+      "order_id": "7ccf5e43-50d5-43ca-adcd-50791ada05b6",
       "lot_id": "f4c0b0ad4277",
       "bucket_id": 12,
       "strategy_id": "S403",
       "occ_symbol": "MDT261127C00106000",
       "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-11-24T10:57:06"
-    },
-    {
-      "order_id": "bee51a75-396f-403d-920f-9fc411c52ad7",
-      "lot_id": "7ca7574ddf04",
-      "bucket_id": 61,
-      "strategy_id": "S167",
-      "occ_symbol": "MSTR261127C00089000",
-      "qty": 1,
-      "reason": "stop_loss (-51.7%)",
-      "submitted": "2026-11-24T15:27:10"
+      "reason": "stop_loss (-75.0%)",
+      "submitted": "2026-11-24T16:02:51"
     }
   ],
   "bucket_open_premium": {
@@ -300,7 +270,6 @@
     "b16": 34.0,
     "b63": 34.0,
     "b50": 59.0,
-    "b61": 57.99999999999999,
     "b49": 62.0,
     "b62": 85.0,
     "b14": 21.0,
@@ -784,7 +753,8 @@
     "ebbd69a0-57f4-4c5a-af97-27e629b32e15",
     "b0483bee-d045-4a3b-9fa7-a7cfc4f852e6",
     "d35b803d-9cb5-4ce3-a62f-95f1af584ff9",
-    "4c2e5349-3d5a-4836-8e58-fd1cd5408254"
+    "4c2e5349-3d5a-4836-8e58-fd1cd5408254",
+    "bee51a75-396f-403d-920f-9fc411c52ad7"
   ],
   "submitted_today": 27,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
