@@ -13738,3 +13738,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-24 00:16:59,ext_exits,correction,228.09,193.6,0,0,0,1,NVDA,both
 2026-11-24 00:21:43,ext_exits,correction,228.08,193.6,0,0,0,1,NVDA,both
 2026-11-24 00:26:43,ext_exits,correction,228.17,193.6,0,0,0,1,NVDA,both
+2026-11-24 00:31:50,ext_exits,correction,228.31,193.6,0,0,0,1,NVDA,both
