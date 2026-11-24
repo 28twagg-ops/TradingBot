@@ -343,6 +343,26 @@
       "qty": 1,
       "reason": "stop_loss (-50.0%)",
       "submitted": "2026-11-24T10:57:06"
+    },
+    {
+      "order_id": "4c2e5349-3d5a-4836-8e58-fd1cd5408254",
+      "lot_id": "bf41f7929f53",
+      "bucket_id": 64,
+      "strategy_id": "S163",
+      "occ_symbol": "MARA261204C00006000",
+      "qty": 1,
+      "reason": "take_profit (+50.0%)",
+      "submitted": "2026-11-24T14:57:56"
+    },
+    {
+      "order_id": "b0483bee-d045-4a3b-9fa7-a7cfc4f852e6",
+      "lot_id": "ffcfc149c618",
+      "bucket_id": 66,
+      "strategy_id": "S164",
+      "occ_symbol": "MARA261127C00006000",
+      "qty": 1,
+      "reason": "take_profit (+66.7%)",
+      "submitted": "2026-11-24T14:57:57"
     }
   ],
   "bucket_open_premium": {
