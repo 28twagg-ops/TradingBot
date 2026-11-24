@@ -13752,3 +13752,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-24 14:26:49,summary,correction,226.48,193.6,0,0,0,1,NVDA,both
 2026-11-24 14:47:27,scan_morning,correction,226.02,124.4,20,0,1,3,ACN|DHR|TECH,both
 2026-11-24 14:51:51,exits,correction,225.83,124.4,0,0,0,3,ACN|DHR|TECH,both
+2026-11-24 14:56:51,exits,correction,225.96,158.14,0,0,1,2,ACN|TECH,both
