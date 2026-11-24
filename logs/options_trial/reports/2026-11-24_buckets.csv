@@ -17,7 +17,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 15,lab0015_s356_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-24,False,,,,,,,0,MARA,S356,,entered_no_exit
 16,lab0016_s357_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-24,False,,,,,,,0,MARA,S357,,entered_no_exit
 17,lab0017_s359_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-24,False,,,,,,,0,UPST,S359,,entered_no_exit
-18,lab0018_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-24,False,,,,,,,0,QQQ,S361,,entered_no_exit
+18,lab0018_s361_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-24,False,,0.0,-50.0,-50.0,-50.0,-50.0,-33.0,QQQ,S361,broker_fill_backfill,closed
 19,lab0019_s362_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-24,False,,,,,,,0,MSTR,S362,,entered_no_exit
 20,lab0020_s364_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-24,False,,,,,,,0,QQQ,S364,,entered_no_exit
 21,lab0021_s365_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-24,False,,,,,,,0,QQQ,S365,,entered_no_exit
@@ -61,7 +61,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 59,lab0059_s417_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-08,False,,,,,,,0,,,,idle
 60,lab0060_s418_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-05,False,,,,,,,0,,,,idle
 61,lab0061_s419_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-24,False,,,,,,,0,MSTR,S167,,entered_no_exit
-62,lab0062_s167_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-24,False,,,,,,,0,SMCI,S166,,entered_no_exit
+62,lab0062_s167_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,2,2026-11-24,False,,,,,,,0,"NVDA,SMCI","S166,S167",,entered_no_exit
 63,lab0063_s166_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,0,1,2026-11-24,False,,,,,,,0,SMCI,S168,,entered_no_exit
 64,lab0064_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,2,2026-11-24,False,,,,,,,0,"HOOD,MARA","S163,S168",,entered_no_exit
 65,lab0065_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,2,0,2,2026-11-24,False,,,,,,,0,"NVDA,SMCI","S163,S164",,entered_no_exit
