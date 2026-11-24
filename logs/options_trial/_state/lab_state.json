@@ -22,46 +22,6 @@
       "entry_order_id": "450b9076-8208-45ad-901e-607fbe12b827"
     },
     {
-      "lot_id": "7d9cad016c78",
-      "bucket_id": 52,
-      "profile_name": "lab0052_s406_w2_1005_1045_r1",
-      "strategy_id": "S406",
-      "occ_symbol": "MSTR261127C00091000",
-      "underlying": "MSTR",
-      "qty": 1,
-      "entry_cost": 41.0,
-      "entry_price": 0.41,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-24T15:07:31.113455+00:00",
-      "entry_order_id": "9dbc5ef7-da78-43a4-84f6-ddb0c4dab7c2"
-    },
-    {
-      "lot_id": "f8819f610776",
-      "bucket_id": 19,
-      "profile_name": "lab0019_s362_w2_1005_1045_r1",
-      "strategy_id": "S362",
-      "occ_symbol": "MSTR261127C00090000",
-      "underlying": "MSTR",
-      "qty": 1,
-      "entry_cost": 50.0,
-      "entry_price": 0.5,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-24T15:07:31.115714+00:00",
-      "entry_order_id": "85564663-2572-45a8-b667-2e14edd170b5"
-    },
-    {
       "lot_id": "5508f666e116",
       "bucket_id": 16,
       "profile_name": "lab0016_s357_w2_1005_1045_r1",
@@ -383,32 +343,10 @@
       "qty": 1,
       "reason": "stop_loss (-50.0%)",
       "submitted": "2026-11-24T10:57:06"
-    },
-    {
-      "order_id": "ebbd69a0-57f4-4c5a-af97-27e629b32e15",
-      "lot_id": "f8819f610776",
-      "bucket_id": 19,
-      "strategy_id": "S362",
-      "occ_symbol": "MSTR261127C00090000",
-      "qty": 1,
-      "reason": "stop_loss (-50.0%)",
-      "submitted": "2026-11-24T14:41:54"
-    },
-    {
-      "order_id": "477b2bd4-779a-4c8a-bd24-1df45e27b3b7",
-      "lot_id": "7d9cad016c78",
-      "bucket_id": 52,
-      "strategy_id": "S406",
-      "occ_symbol": "MSTR261127C00091000",
-      "qty": 1,
-      "reason": "stop_loss (-51.2%)",
-      "submitted": "2026-11-24T14:41:56"
     }
   ],
   "bucket_open_premium": {
     "b21": 71.0,
-    "b52": 41.0,
-    "b19": 50.0,
     "b16": 34.0,
     "b63": 34.0,
     "b50": 59.0,
@@ -893,7 +831,9 @@
     "c7addbc4-6106-4bbf-ac51-e296a400ce9b",
     "23821666-b13c-4bc3-9319-c7343d878880",
     "aa3e227b-8ae9-4d77-bc24-c2d5d902cb2a",
-    "5505b679-f87f-4d6c-aa28-853700b8e308"
+    "5505b679-f87f-4d6c-aa28-853700b8e308",
+    "477b2bd4-779a-4c8a-bd24-1df45e27b3b7",
+    "ebbd69a0-57f4-4c5a-af97-27e629b32e15"
   ],
   "submitted_today": 27,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
