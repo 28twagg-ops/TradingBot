@@ -380,26 +380,29 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-24T15:46:54.172068+00:00",
       "entry_order_id": "c7addbc4-6106-4bbf-ac51-e296a400ce9b"
-    }
-  ],
-  "pending_orders": [
+    },
     {
-      "order_id": "23821666-b13c-4bc3-9319-c7343d878880",
+      "lot_id": "f4c0b0ad4277",
       "bucket_id": 12,
+      "profile_name": "lab0012_s403_w2_1005_1045_r1",
       "strategy_id": "S403",
       "occ_symbol": "MDT261127C00106000",
       "underlying": "MDT",
       "qty": 1,
-      "limit": 0.04,
-      "profile_name": "lab0012_s403_w2_1005_1045_r1",
-      "submitted": "2026-11-24",
-      "detail": "touch MA50 green",
-      "spread_frac": 0.22222222222222227,
-      "buy_offset": -0.01,
+      "entry_cost": 4.0,
+      "entry_price": 0.04,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
       "take_profit": 0.5,
-      "stop_loss": -0.5
+      "stop_loss": -0.5,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-24T15:56:57.996585+00:00",
+      "entry_order_id": "23821666-b13c-4bc3-9319-c7343d878880"
     }
   ],
+  "pending_orders": [],
   "pending_exits": [
     {
       "order_id": "91828138-02ce-49de-b016-09e24b2d121d",
@@ -410,6 +413,16 @@
       "qty": 1,
       "reason": "stop_loss (-66.7%)",
       "submitted": "2026-11-24T10:37:00"
+    },
+    {
+      "order_id": "bef6c9ee-9ba2-46a9-9501-884664e68d64",
+      "lot_id": "f4c0b0ad4277",
+      "bucket_id": 12,
+      "strategy_id": "S403",
+      "occ_symbol": "MDT261127C00106000",
+      "qty": 1,
+      "reason": "stop_loss (-50.0%)",
+      "submitted": "2026-11-24T10:57:06"
     }
   ],
   "bucket_open_premium": {
@@ -428,7 +441,8 @@
     "b64": 62.0,
     "b14": 21.0,
     "b17": 6.0,
-    "b66": 3.0
+    "b66": 3.0,
+    "b12": 4.0
   },
   "session_date": "2026-11-24",
   "entries_locked": [
@@ -897,7 +911,8 @@
     "b247fb20-0777-4342-b785-97562a469b73",
     "451bcf44-d69f-4077-b15e-c7f7e523caf8",
     "a66ea197-66ad-44d2-9b54-9258862bff8c",
-    "c7addbc4-6106-4bbf-ac51-e296a400ce9b"
+    "c7addbc4-6106-4bbf-ac51-e296a400ce9b",
+    "23821666-b13c-4bc3-9319-c7343d878880"
   ],
   "submitted_today": 27,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-24
 
-_Generated 2026-11-24T10:52:47.980648_
+_Generated 2026-11-24T10:57:55.011662_
 
 ## Summary
 
@@ -25,7 +25,7 @@ _Generated 2026-11-24T10:52:47.980648_
 | S396 (GapDown_ITM2) | 3d | watch | 18 | 55.6 | +53.78 | -53.98 | -50.51 | +93.89 | 110 | 2 | 1 | $+194.00 | 77.8% | building sample (8-19 exits) |
 | S166 (GapDown strong call) | 3d ATM strong | watch | 26 | 57.7 | +52.95 | -73.66 | -50.00 | +148.00 | 126 | 1 | 0 | $+883.00 | 19.2% | fat left tail (p10 < -45%) |
 | S357 (GapDown_21DTE) | 21d | watch | 35 | 68.6 | +52.94 | -69.30 | -49.39 | +73.68 | 116 | 2 | 2 | $+483.00 | 40.0% | fat left tail (p10 < -45%) |
-| S403 (Any_MA50_Touch) | 3d | watch | 85 | 61.2 | +50.88 | -63.83 | -50.00 | +159.58 | 116 | 0 | 0 | $+1,358.00 | 14.1% | fat left tail (p10 < -45%) |
+| S403 (Any_MA50_Touch) | 3d | watch | 85 | 61.2 | +50.88 | -63.83 | -50.00 | +159.58 | 116 | 1 | 0 | $+1,358.00 | 14.1% | fat left tail (p10 < -45%) |
 | S397 (GapDown_ITM1) | 3d | watch | 63 | 55.6 | +43.66 | -62.94 | -51.84 | +115.25 | 116 | 3 | 2 | $+946.00 | 14.3% | fat left tail (p10 < -45%) |
 | S362 (RubberBand_3DTE) | 3d | watch | 73 | 60.3 | +34.88 | -63.11 | -50.85 | +307.62 | 116 | 3 | 2 | $+1,312.00 | 17.8% | fat left tail (p10 < -45%) |
 | S218 (BB_Lower_Touch) | 3d ATM BB lower touch | watch | 109 | 50.5 | +22.22 | -71.43 | -50.00 | +146.00 | 120 | 0 | 0 | $+1,086.00 | 27.5% | fat left tail (p10 < -45%) |
