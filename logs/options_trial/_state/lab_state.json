@@ -22,26 +22,6 @@
       "entry_order_id": "b453ff4e-1a41-469c-a3a7-bfc0a9e7303f"
     },
     {
-      "lot_id": "884c5bb75b5d",
-      "bucket_id": 91,
-      "profile_name": "s406_only",
-      "strategy_id": "S406",
-      "occ_symbol": "QQQ261127C00669000",
-      "underlying": "QQQ",
-      "qty": 1,
-      "entry_cost": 66.0,
-      "entry_price": 0.66,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.4,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-24T15:06:51.784280+00:00",
-      "entry_order_id": "d4569eb2-c4f1-4e7a-a105-1827a019ed28"
-    },
-    {
       "lot_id": "d804092f310f",
       "bucket_id": 21,
       "profile_name": "lab0021_s365_w2_1005_1045_r1",
@@ -420,7 +400,6 @@
   ],
   "bucket_open_premium": {
     "b90": 59.0,
-    "b91": 66.0,
     "b21": 71.0,
     "b20": 53.0,
     "b18": 66.0,
@@ -892,7 +871,8 @@
     "ffaa7914-9083-4eb3-b98c-0344af9f89cf",
     "ec57e4d6-9095-4a0d-b74d-e1d0beca23e9",
     "e9d15554-c38f-4b77-9747-5a63a4c1690a",
-    "1a842d3f-4bfa-44fc-bbf3-0a6163b44f54"
+    "1a842d3f-4bfa-44fc-bbf3-0a6163b44f54",
+    "233cc429-55d6-4e9c-9b69-92ea1754b8ec"
   ],
   "submitted_today": 23,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

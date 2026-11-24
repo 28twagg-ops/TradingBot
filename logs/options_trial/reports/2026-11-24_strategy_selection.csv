@@ -67,7 +67,7 @@ S400,Any_Green_Close,3d,watch,insufficient sample (<8 exits),20,6,1,5,-33.91,-50
 S358,GapDown_30DTE,30d,watch,insufficient sample (<8 exits),15,5,2,3,-8.92,-50.0,-51.39,-51.39,54.28,-49.0,4,112,0,0,3,40.0
 S209,GapDown_Recovery,3d ATM gap-recovery,watch,insufficient sample (<8 exits),36,7,0,7,-65.23,-64.71,-80.4,-68.79,-50.75,-212.0,3,118,0,0,3,71.4
 S395,GapDown_ITM3,3d,watch,insufficient sample (<8 exits),1,1,0,1,-68.75,-68.75,-68.75,-68.75,-68.75,-44.0,1,41,0,0,1,100.0
-S406,RubberBand_ITM3,3d,drop,non-positive median return,295,191,95,96,78.43,0.0,-58.62,-46.9,175.0,2986.0,56,116,9,6,38,12.6
+S406,RubberBand_ITM3,3d,drop,non-positive median return,295,192,95,97,77.8,0.0,-58.54,-46.66,173.82,2958.0,56,116,9,7,39,12.5
 S401,Any_Gap_Down_Small,3d,drop,non-positive median return,284,135,67,68,57.31,0.0,-84.1,-51.33,230.91,928.0,22,116,0,0,25,23.7
 S365,RubberBand_14DTE,14d,drop,non-positive median return,78,43,20,23,2.83,0.0,-64.95,-53.28,66.58,-69.0,22,116,2,2,13,32.6
 S412,RubberBand_OTM3,3d,drop,non-positive median return,167,68,30,38,39.49,-3.57,-58.23,-50.0,125.4,184.0,21,116,0,0,20,17.6
