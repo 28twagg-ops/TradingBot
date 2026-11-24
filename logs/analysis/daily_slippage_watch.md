@@ -1,5 +1,5 @@
 # Daily Slippage Watch
-*Updated: 2026-11-23 23:57 UTC*
+*Updated: 2026-11-24 00:02 UTC*
 
 Tracks **stop P&L** (position loss vs entry) vs **execution slippage** (fill vs limit). Target: stops near -0.5% trigger when no overnight gap.
 
@@ -12,16 +12,10 @@ Tracks **stop P&L** (position loss vs entry) vs **execution slippage** (fill vs 
 | 2026-11-17 | 3 | -0.57% | -0.07pp | 3/3 | -0.0286% | **OK** |
 | 2026-11-13 | 3 | -0.71% | -0.21pp | 2/3 | -0.0286% | **OK** |
 | 2026-11-12 | 2 | -0.56% | -0.07pp | 2/2 | -0.0286% | **OK** |
-| 2026-11-10 | 2 | -0.92% | -0.42pp | 1/2 | -0.0286% | **WATCH** |
 
-## Today (2026-11-23) detail
+## Today (2026-11-24) detail
 
-- Stop count: **5**
-- Mean stop P&L: **-1.13%** (overshoot -0.63pp)
-- Within -1.0%: 3/5
-- Worst: TTWO -2.4%, EOG -1.0%, DELL -0.8%, NVDA -0.7%, MU -0.7%
-- Stop execution methods:
-  - `market_urgent_full`: 5
+_No stop losses recorded today._
 
 ## Historical baseline (all logs)
 - Stop samples: 562
