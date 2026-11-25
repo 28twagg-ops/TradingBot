@@ -6,7 +6,7 @@ S166,GapDown strong call,3d ATM strong,watch,fat left tail (p10 < -45%),71,27,15
 S396,GapDown_ITM2,3d,watch,building sample (8-19 exits),42,19,10,9,13.05,52.38,-62.15,-51.03,93.61,142.0,14,111,1,1,2,73.7
 S403,Any_MA50_Touch,3d,watch,fat left tail (p10 < -45%),170,85,52,33,40.74,50.88,-63.83,-50.0,159.58,1358.0,33,117,1,0,29,14.1
 S397,GapDown_ITM1,3d,watch,fat left tail (p10 < -45%),186,64,35,29,19.74,42.0,-64.38,-52.18,115.19,902.0,32,117,3,2,22,14.1
-S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),155,74,44,30,99.27,30.16,-62.72,-50.84,306.66,1287.0,28,117,3,2,23,17.6
+S362,RubberBand_3DTE,3d,watch,fat left tail (p10 < -45%),155,75,44,31,97.13,25.45,-62.95,-50.85,305.71,1279.0,29,117,3,3,24,17.3
 S218,BB_Lower_Touch,3d ATM BB lower touch,watch,fat left tail (p10 < -45%),225,109,55,54,36.11,22.22,-71.43,-50.0,146.0,1086.0,25,121,0,0,19,27.5
 S169,BB Squeeze Breakout call 3 DTE,3d ATM BB squeeze,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
 S170,Golden Pocket call 3 DTE,3d ATM golden pocket,watch,insufficient sample (<8 exits),0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,,0,0,0,0.0
@@ -76,7 +76,7 @@ S398,GapDown_ATM,3d,drop,non-positive median return,158,65,31,34,31.49,-18.42,-6
 S356,GapDown_14DTE,14d,drop,non-positive median return,80,42,20,22,14.9,-19.18,-53.52,-49.76,58.62,427.0,22,117,2,1,7,45.2
 S365,RubberBand_14DTE,14d,drop,non-positive median return,79,44,20,24,1.1,-23.91,-65.46,-54.35,66.21,-121.0,23,117,2,1,13,31.8
 S174,RubberBand long call EOD,RubberBand (dropped),drop,non-positive median return,1075,119,43,76,-23.43,-25.0,-89.83,-71.19,36.67,-1658.19,3,142,0,0,6,50.4
-S350,GapDown_0DTE,0d,drop,non-positive median return,131,64,29,35,35.57,-28.26,-65.49,-51.78,161.12,703.0,30,117,2,1,17,23.4
+S350,GapDown_0DTE,0d,drop,non-positive median return,131,65,29,36,34.26,-28.26,-65.1,-51.35,160.66,687.0,31,117,2,2,17,23.1
 S361,RubberBand_2DTE,2d,drop,non-positive median return,185,80,34,46,60.87,-30.43,-66.86,-53.52,254.11,-21.0,33,117,2,1,25,17.5
 S173,MomReversal long call,MomRev,drop,non-positive median return,1625,415,154,261,15.19,-31.51,-77.18,-62.95,101.9,62.64,8,142,0,0,12,27.5
 S165,GapDown long call 3 DTE,3d ATM,drop,non-positive median return,1470,255,82,173,2.52,-35.29,-63.24,-53.42,93.89,-1276.78,11,142,0,0,16,25.9
