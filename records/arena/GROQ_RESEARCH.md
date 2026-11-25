@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-25T03:05Z | S04a | gap_down_breakout | f6efa8511d5282 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-25T03:04Z | S08a | Low hourly realized volatility predicts larger n | 0b0e4f9a98436c | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-25T03:03Z | S05a | BTC-USD hourly breakout based on 24h high | e60640fe06408e | HOLD_INSUFFICIENT_HISTORY |
+| 2026-11-25T03:02Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | 49d2a07f542ac9 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-25T03:02Z | S01a | BTC-USD hourly price reversion to 24‑hour SMA | c111082822e653 | HOLD |
 | 2026-11-25T02:36Z | S10b | ETH-USD hourly mean reversion after 5% breakout | 51905af8b1e4df | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-25T02:36Z | S02b | BTC-USD hourly momentum persistence | 06892f739f5bb1 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-25T02:35Z | S07b | Hourly trend persistence in BTC-USD across volat | a3a81b2dd3d7d5 | RESEARCH_ONLY_NEEDS_DATA |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-24T04:54Z | S07b | Hourly trend persistence in BTC-USD across volat | a3a81b2dd3d7d5 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-24T04:53Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 9061fafecd7728 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-24T04:53Z | S06b |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
-| 2026-11-23T22:40Z | S10b | ETH-USD hourly mean reversion after 3% breakout | c904ee16988a85 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-23T22:39Z | S04a | gap_down_trend | cb1dbbb9186767 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-23T22:39Z | S08a | Low hourly realized volatility predicts larger n | 5fb128aa45d31f | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-23T22:38Z | S05a | BTC-USD hourly 5‑hour high breakout | 018241b8b53474 | HOLD |
-| 2026-11-23T22:37Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 8d256e88dc4cd7 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
