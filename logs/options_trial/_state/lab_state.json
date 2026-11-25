@@ -213,6 +213,16 @@
       "qty": 1,
       "reason": "stop_loss (-75.0%)",
       "submitted": "2026-11-24T16:02:51"
+    },
+    {
+      "order_id": "47f35827-c684-4eaf-887f-e81ddf3e1e9e",
+      "lot_id": "8c970dee7ac6",
+      "bucket_id": 15,
+      "strategy_id": "S356",
+      "occ_symbol": "SPY261209C00750000",
+      "qty": 1,
+      "reason": "take_profit (+50.0%)",
+      "submitted": "2026-11-25T12:21:55"
     }
   ],
   "bucket_open_premium": {
