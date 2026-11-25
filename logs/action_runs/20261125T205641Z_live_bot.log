@@ -1,0 +1,190 @@
+20:56:43  INFO      Mode: scan
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:2928: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  "type": str(getattr(o, "order_type", "?")),
+20:56:43  INFO        [positions] 3/3 (3 valid)
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1754: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  f"type={getattr(o,'order_type','?')}  id={o.id}")
+20:56:43  INFO        SELL order cancelled AES  type=OrderType.STOP  id=ba9588f7-0eef-4648-bbef-5c8b333604c5
+20:56:43  WARNING     SELL LIMIT setup failed AES: {"available":"0.294940079","code":40310000,"existing_qty":"2.294940079","held_for_orders":"2","message":"insufficient qty available for order (requested: 2.294940079, available: 0.294940079)","related_orders":["ba9588f7-0eef-4648-bbef-5c8b333604c5"],"symbol":"AES"}
+20:56:43  WARNING     SELL AES: {"available":"0.294940079","code":40310000,"existing_qty":"2.294940079","held_for_orders":"2","message":"insufficient qty available for order (requested: 2.294940079, available: 0.294940079)","symbol":"AES"}
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1754: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  f"type={getattr(o,'order_type','?')}  id={o.id}")
+20:56:43  INFO        SELL order cancelled HPQ  type=OrderType.STOP  id=a7d72f34-2d30-488f-a339-a6cecfe8df29
+20:56:43  INFO        SELL LIMIT HPQ  qty=1.104878517  limit=$31.35  id=8b76aa47-941e-4ff9-9151-152813616b37
+20:57:13  INFO        SELL LIMIT filled HPQ (confirmed by position check)
+20:57:13  INFO        TX logged: SELL HPQ  P&L 0.5%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                              SCAN|
+|  Time                                                         20:56 UTC|
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Equity                                                         $230.13|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-25|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                      CORRECTION|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $230.13|
+|  Cash                                                           $125.71|
+|  Reserve                                          $11.51  (always kept)|
+|  Stock~  $104.42 / $172.60  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $68.18  (new stock buys)|
+|  Trade size             $34.52  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ACN      Pullback50      $35.28     $232.51  $241.91  +4.0%   $+1.37  |
+|  AES      Pullback50      $34.49     $15.02   $15.03   +0.1%   $+0.02  |
+|  HPQ      MA_Squeeze      $34.64     $31.20   $31.36   +0.5%   $+0.17  |
+|                                                                        |
+|  Total invested                                                 $104.42|
+|  Total open P&L                                                  $+1.57|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           evening|
+|  File                                      logs/plans/evening_plan.json|
+|  Use cached plan                                 no (positions changed)|
+|  Use cached sig~  yes (signals fresh (21.2m); positions refreshed live)|
+|  Cached signals                                                      42|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AES  P&L +0.1%  $+0.02                           EXIT: midline (+0.1%)|
+|  AES                          SELL attempt failed (will retry next run)|
+|  HPQ  P&L +0.5%  $+0.17                           EXIT: midline (+0.5%)|
+|  ACN  P&L +4.0%  $+1.37                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 2 | filled 1 | partial 0 | pending 0 | failed 1|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: CORRECTION                                     |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                          cached signals (signals fresh (21.2m))|
+|  Universe scanned in prep                                           901|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  42                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $15.03   81.8   -0.55   50MA bounce (+|
+|  AMP      Pullback50      eq     $503.49  47.1   -1.75   50MA bounce (+|
+|  BNY      Pullback50      eq     $146.79  48.6   -1.73   50MA bounce (-|
+|  DHR      Pullback50      eq     $227.41  51.2   -2.31   50MA bounce (+|
+|  DAL      Pullback50      eq     $82.89   45.4   -1.21   50MA bounce (+|
+|  EBAY     Pullback50      eq     $115.09  34.9   -1.09   50MA bounce (-|
+|  FOX      Pullback50      eq     $58.17   43.5   -1.37   50MA bounce (+|
+|  GRMN     Pullback50      eq     $281.18  45.7   -1.48   50MA bounce (-|
+|  FOXA     Pullback50      eq     $64.92   41.5   -0.75   50MA bounce (+|
+|  GDDY     Pullback50      eq     $105.34  28.0   -1.16   50MA bounce (-|
+|  HPQ      MA_Squeeze      eq     $31.09   58.6   2.44    BBW squeeze br|
+|  IFF      Pullback50      eq     $86.29   49.8   -1.01   50MA bounce (+|
+|  MDT      Pullback50      eq     $95.75   22.4   -0.08   50MA bounce (+|
+|  MET      Pullback50      eq     $99.76   50.0   -1.44   50MA bounce (+|
+|  NSC      Pullback50      eq     $326.11  47.7   -0.72   50MA bounce (+|
+|  OKTA     Pullback50      eq     $199.82  64.7   -0.47   50MA bounce (-|
+|  TRGP     Pullback50      eq     $285.69  60.1   -1.23   50MA bounce (-|
+|  TPL      RSIRecovery     eq     $261.77  43.4   0.48    RSI 28.4→43.4 |
+|  TMO      Pullback50      eq     $684.15  52.4   -2.41   50MA bounce (+|
+|  USB      Pullback50      eq     $58.43   43.5   -1.04   50MA bounce (-|
+|  WAB      Pullback50      eq     $287.48  55.2   -1.76   50MA bounce (+|20:57:13  INFO        place_all_stops: checking 2 positions...
+20:57:13  INFO        STOP skipped ACN: fractional (0.1458 shares) — software exit will handle it
+20:57:13  INFO        STOP-MARKET placed AES  qty=2 (pos=2.2949)  stop=$14.94  id=cbc2ea29-f516-40c4-b561-2b5e7d66506c
+20:57:13  INFO        place_eod_stops: updating 2 stops to current price...
+20:57:13  INFO        EOD stop skip ACN: 0.1458 shares (fractional) — ext_exits will cover
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1912: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  if (getattr(o, "order_type", None) in
+20:57:13  INFO        EOD stop: cancelled old stop AES
+20:57:13  WARNING     EOD stop failed AES: {"available":"0.294940079","code":40310000,"existing_qty":"2.294940079","held_for_orders":"2","message":"insufficient qty available for order (requested: 2, available: 0.294940079)","symbol":"AES"}
+20:57:13  INFO        Daily log -> logs/daily/2026-11-25.md
+20:57:13  INFO        Dashboard written → logs/dashboard.md
+
+|  WDAY     RSIRecovery     eq     $180.75  30.7   0.75    RSI 27.6→30.7 |
+|  AR       Pullback50      eq     $37.10   53.8   -0.89   50MA bounce (+|
+|  APPF     Pullback50      eq     $213.45  27.0   -0.78   50MA bounce (+|
+|  ASB      Pullback50      eq     $29.48   36.1   -1.08   50MA bounce (-|
+|  AYI      Pullback50      eq     $315.38  44.0   -1.98   50MA bounce (+|
+|  CRBG     Pullback50      eq     $34.45   51.2   -0.70   50MA bounce (-|
+|  CVLT     Pullback50      eq     $155.90  48.6   -1.92   50MA bounce (+|
+|  EAT      Pullback50      eq     $200.91  41.9   -1.37   50MA bounce (+|
+|  ELF      Pullback50      eq     $108.13  48.1   -1.18   50MA bounce (-|
+|  HQY      Pullback50      eq     $97.07   33.1   -1.71   50MA bounce (+|
+|  HRB      Pullback50      eq     $47.10   12.8   -2.21   50MA bounce (+|
+|  MOH      Pullback50      eq     $204.82  43.2   -1.18   50MA bounce (+|
+|  NTNX     RubberBand      eq     $46.45   26.6   3.52    RSI           |
+|  PK       Pullback50      eq     $15.87   55.7   -1.17   50MA bounce (-|
+|  RGLD     Pullback50      eq     $241.06  41.0   -0.80   50MA bounce (-|
+|  RS       Pullback50      eq     $414.93  50.6   -2.19   50MA bounce (+|
+|  SLAB     Pullback50      eq     $220.89  45.7   -1.36   50MA bounce (-|
+|  SSB      Pullback50      eq     $101.78  38.2   -1.62   50MA bounce (-|
+|  TXNM     Pullback50      eq     $58.90   65.5   -0.73   50MA bounce (+|
+|  UBSI     Pullback50      eq     $46.82   35.0   -1.31   50MA bounce (-|
+|  WTS      Pullback50      eq     $354.67  55.1   -1.41   50MA bounce (-|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             42|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             2|
+|  Equity                                                         $230.08|
+|  Cash                                                           $160.35|
++========================================================================+
