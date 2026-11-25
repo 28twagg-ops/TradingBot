@@ -80,46 +80,6 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-25T15:08:31.317868+00:00",
       "entry_order_id": "ff9cfa0d-bc5b-4649-a183-e1e4e06eb467"
-    },
-    {
-      "lot_id": "1674899b2ec9",
-      "bucket_id": 50,
-      "profile_name": "lab0050_s397_w2_1005_1045_r1",
-      "strategy_id": "S397",
-      "occ_symbol": "NVDA261127C00155000",
-      "underlying": "NVDA",
-      "qty": 1,
-      "entry_cost": 72.0,
-      "entry_price": 0.72,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-25T15:08:31.342961+00:00",
-      "entry_order_id": "b85ef586-d359-46cc-916e-1c1becac513e"
-    },
-    {
-      "lot_id": "4b2024b007fb",
-      "bucket_id": 62,
-      "profile_name": "lab0062_s167_w2_1005_1045_r1",
-      "strategy_id": "S167",
-      "occ_symbol": "NVDA261127C00157500",
-      "underlying": "NVDA",
-      "qty": 1,
-      "entry_cost": 47.0,
-      "entry_price": 0.47,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-25T15:08:31.347001+00:00",
-      "entry_order_id": "fc2faa09-ae95-44e8-a5db-2bf6f9541fb2"
     }
   ],
   "pending_orders": [],
@@ -135,16 +95,6 @@
       "submitted": "2026-11-24T16:02:51"
     },
     {
-      "order_id": "745a651e-8de3-4ca3-90a3-de5e5c7f3cac",
-      "lot_id": "4b2024b007fb",
-      "bucket_id": 62,
-      "strategy_id": "S167",
-      "occ_symbol": "NVDA261127C00157500",
-      "qty": 1,
-      "reason": "take_profit (+57.4%)",
-      "submitted": "2026-11-25T13:17:20"
-    },
-    {
       "order_id": "a25cbc78-9add-407a-96f4-f3dcc8047e54",
       "lot_id": "68d0fa6398ce",
       "bucket_id": 18,
@@ -153,25 +103,13 @@
       "qty": 1,
       "reason": "take_profit (+62.1%)",
       "submitted": "2026-11-25T13:17:20"
-    },
-    {
-      "order_id": "d0c0238a-e851-4747-9d2b-ebeda3a6f128",
-      "lot_id": "1674899b2ec9",
-      "bucket_id": 50,
-      "strategy_id": "S397",
-      "occ_symbol": "NVDA261127C00155000",
-      "qty": 1,
-      "reason": "take_profit (+59.7%)",
-      "submitted": "2026-11-25T13:17:21"
     }
   ],
   "bucket_open_premium": {
     "b16": 34.0,
     "b12": 4.0,
     "b21": 63.0,
-    "b18": 66.0,
-    "b50": 72.0,
-    "b62": 47.0
+    "b18": 66.0
   },
   "session_date": "2026-11-25",
   "entries_locked": [
@@ -682,7 +620,9 @@
     "47f35827-c684-4eaf-887f-e81ddf3e1e9e",
     "700240e1-b287-4a22-8ddf-9073209d0b11",
     "dc6530ce-4111-4d10-8e5b-99228a4bc820",
-    "a6761f56-e557-495a-add8-245db736e738"
+    "a6761f56-e557-495a-add8-245db736e738",
+    "d0c0238a-e851-4747-9d2b-ebeda3a6f128",
+    "745a651e-8de3-4ca3-90a3-de5e5c7f3cac"
   ],
   "submitted_today": 18,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",

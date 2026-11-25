@@ -49,7 +49,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 47,lab0047_s393_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-28,False,,,,,,,0,,,,idle
 48,lab0048_s394_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-07-24,False,,,,,,,0,,,,idle
 49,lab0049_s396_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,1,0,2026-11-24,False,,0.0,-83.87,-83.87,-83.87,-83.87,-52.0,SMCI,S396,broker_fill_backfill,closed
-50,lab0050_s397_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,1,2026-11-25,False,,0.0,-74.58,-74.58,-74.58,-74.58,-44.0,NVDA,S397,broker_fill_backfill,closed
+50,lab0050_s397_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-11-25,False,,50.0,-7.43,-7.43,59.72,-74.58,-1.0,NVDA,S397,broker_fill_backfill; take_profit (+59.7%),closed
 51,lab0051_s404_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-25,False,,100.0,80.33,80.33,80.33,80.33,49.0,TSLA,S404,take_profit (+75.4%),closed
 52,lab0052_s406_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,1,0,2026-11-25,False,,0.0,-66.67,-66.67,-66.67,-66.67,-16.0,JPM,S406,stop_loss (-95.8%),closed
 53,lab0053_s409_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-12,False,,,,,,,0,,,,idle
@@ -61,7 +61,7 @@ bucket_id,profile,buy_rule,sell_rule,take_profit_pct,stop_loss_pct,entries,exits
 59,lab0059_s417_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-10-08,False,,,,,,,0,,,,idle
 60,lab0060_s418_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-08-05,False,,,,,,,0,,,,idle
 61,lab0061_s419_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,0,0,0,2026-11-24,False,,,,,,,0,,,,idle
-62,lab0062_s167_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,1,2026-11-25,False,,0.0,-72.22,-72.22,-68.75,-75.68,-61.0,"NVDA,SMCI","S166,S167",broker_fill_backfill; broker_fill_backfill,closed
+62,lab0062_s167_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,3,0,2026-11-25,False,,33.3,-28.99,-68.75,57.45,-75.68,-34.0,"NVDA,SMCI","S166,S167",broker_fill_backfill; broker_fill_backfill; take_profit (+57.4%),closed
 63,lab0063_s166_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-11-25,False,,0.0,-71.67,-71.67,-55.1,-88.24,-57.0,SMCI,"S166,S168",broker_fill_backfill; broker_fill_backfill,closed
 64,lab0064_s168_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-11-25,False,,50.0,-22.49,-22.49,52.94,-97.92,-20.0,"HOOD,TSLA",S168,broker_fill_backfill; take_profit (+52.9%),closed
 65,lab0065_s163_w2_1005_1045_r1,ask-0.01,bid-0.01,50.0,-50.0,1,2,0,2026-11-25,False,,0.0,-61.82,-61.82,-60.0,-63.64,-50.0,"COIN,SMCI",S163,stop_loss (-65.5%); stop_loss (-64.0%),closed
