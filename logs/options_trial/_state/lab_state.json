@@ -113,6 +113,16 @@
       "qty": 1,
       "reason": "stop_loss (-75.0%)",
       "submitted": "2026-11-24T16:02:51"
+    },
+    {
+      "order_id": "1dca068f-2e15-41a5-a345-2fd199d20195",
+      "lot_id": "ff8edda90b52",
+      "bucket_id": 90,
+      "strategy_id": "S404",
+      "occ_symbol": "NVDA261127C00155000",
+      "qty": 1,
+      "reason": "take_profit (+64.9%)",
+      "submitted": "2026-11-25T10:02:04"
     }
   ],
   "bucket_open_premium": {
