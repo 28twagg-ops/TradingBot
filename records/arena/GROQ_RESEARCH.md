@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-25T12:51Z | S10b | ETH-USD hourly mean reversion after 5% breakout | de1283cc34081e | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-25T12:50Z | S02b | BTC-USD hourly trend persistence | 79ab62d9dc1650 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-25T12:49Z | S07b | Hourly trend persistence in BTC-USD across volat | 15906a0cb757b4 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-25T12:49Z | S09b | BTC-USD hourly trend reversal after sustained 10 | c4f96373e620f1 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-25T12:48Z | S06b | BTC-USD relative strength to SPY mean reversion | bc29ecb78b41ce | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-25T03:05Z | S04a | gap_down_breakout | f6efa8511d5282 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-25T03:04Z | S08a | Low hourly realized volatility predicts larger n | 0b0e4f9a98436c | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-25T03:03Z | S05a | BTC-USD hourly breakout based on 24h high | e60640fe06408e | HOLD_INSUFFICIENT_HISTORY |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-24T06:58Z | S05a | BTC-USD hourly breakout regime shift | c153292e935fab | HOLD |
 | 2026-11-24T06:57Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | f6699a6e0decc2 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-24T06:56Z | S01a | BTC-USD hourly trend persistence | e26859187ce113 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-24T04:55Z | S10b | ETH-USD hourly mean reversion after 5% breakout | 788d12e4ec32c4 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-24T04:55Z | S02b | BTC-USD hourly extreme return mean reversion | f535c5bb632afb | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-24T04:54Z | S07b | Hourly trend persistence in BTC-USD across volat | a3a81b2dd3d7d5 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-24T04:53Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 9061fafecd7728 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-24T04:53Z | S06b |  | REJECTED_INVALID_MODEL_EXPERIMENT |  |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
