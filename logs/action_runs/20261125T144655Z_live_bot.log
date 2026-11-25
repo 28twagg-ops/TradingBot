@@ -1,0 +1,154 @@
+14:46:56  INFO      Mode: morning_scan
+14:46:57  INFO        SELL MARKET [urgent] F closed
+14:46:59  INFO        TX logged: SELL F  P&L -0.5%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:46 UTC|
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Equity                                                         $226.40|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-25|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                      CORRECTION|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $226.40|
+|  Cash                                                           $124.31|
+|  Reserve                                          $11.32  (always kept)|
+|  Stock~  $102.09 / $169.80  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $67.71  (new stock buys)|
+|  Trade size             $33.96  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (3 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ACN      Pullback50      $34.23     $232.51  $234.74  +1.0%   $+0.32  |
+|  F        MomReversal     $33.71     $11.96   $11.90   -0.5%   $-0.17  |
+|  PINS     MomReversal     $34.14     $18.17   $18.31   +0.8%   $+0.26  |
+|                                                                        |
+|  Total invested                                                 $102.09|
+|  Total open P&L                                                  $+0.42|
+|  Buys today: 0  |  entry cap: 0  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (11.4m))|
+|  Cached exits                                                         0|
+|  Cached signals                                                      24|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  F  P&L -0.5%  $-0.17                           EXIT: stop_loss (-0.5%)|
+|  PINS  P&L +0.8%  $+0.26                                           HOLD|
+|  ACN  P&L +1.0%  $+0.32                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 2|
+|  Stop-loss breaches                                                   1|
+|  F                                           -0.50%  (threshold -0.50%)|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: CORRECTION                                     |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           900|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  24                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AES      Pullback50      eq     $15.03   81.8   -0.70   50MA bounce (+|
+|  ABNB     Pullback50      eq     $171.26  51.0   -1.90   50MA bounce (+|
+|  AMCR     Pullback50      eq     $44.12   38.6   -2.17   50MA bounce (+|
+|  CTSH     Pullback50      eq     $62.22   38.6   -2.18   50MA bounce (-|
+|  FAST     Pullback50      eq     $51.79   44.3   -2.24   50MA bounce (-|
+|  FOXA     Pullback50      eq     $64.80   41.1   -0.99   50MA bounce (+|
+|  FOX      Pullback50      eq     $58.05   43.2   -2.37   50MA bounce (+|
+|  ISRG     Pullback50      eq     $430.11  35.5   -2.10   50MA bounce (+|
+|  MET      Pullback50      eq     $98.08   45.8   -2.68   50MA bounce (-|
+|  MCO      Pullback50      eq     $483.63  32.7   -2.54   50MA bounce (+|
+|  PYPL     Pullback50      eq     $55.84   39.2   -2.44   50MA bounce (-|
+|  PKG      Pullback50      eq     $238.95  36.2   -2.07   50MA bounce (-|
+|  UNP      Pullback50      eq     $288.69  41.5   -2.44   50MA bounce (+|
+|  UHS      Pullback50      eq     $183.64  33.9   -1.93   50MA bounce (+|
+|  WST      Pullback50      eq     $384.83  45.2   -1.72   50MA bounce (-|
+|  APPF     Pullback50      eq     $211.31  24.1   -2.10   50MA bounce (-|
+|  CNO      Pullback50      eq     $55.20   43.9   -2.57   50MA bounce (+|
+|  DUOL     Pullback50      eq     $146.11  41.6   -0.84   50MA bounce (-|
+|  FHI      Pullback50      eq     $58.82   29.9   -2.65   50MA bounce (+|
+|  MTN      Pullback50      eq     $148.20  35.2   -2.08   50MA bounce (-|
+|  PK       Pullback50      eq     $15.89   56.2   -2.26   50MA bounce (-|
+|  TXNM     Pullback50      eq     $58.80   62.7   -1.48   50MA bounce (+|14:46:59  INFO        place_all_stops: checking 2 positions...
+14:46:59  INFO        STOP skipped ACN: fractional (0.1458 shares) — software exit will handle it
+14:46:59  INFO        STOP-MARKET placed PINS  qty=1 (pos=1.8646)  stop=$18.08  id=87676a33-1b5b-4ab7-8b11-57760892e487
+14:46:59  INFO        Daily log -> logs/daily/2026-11-25.md
+14:46:59  INFO        Dashboard written → logs/dashboard.md
+
+|  VOYA     Pullback50      eq     $97.75   48.5   -2.52   50MA bounce (-|
+|  WEX      Pullback50      eq     $181.59  52.7   -2.23   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|  Skipped                                  no entry slots (max_trades=0)|
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             24|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  0 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             2|
+|  Equity                                                         $226.36|
+|  Cash                                                           $157.98|
++========================================================================+

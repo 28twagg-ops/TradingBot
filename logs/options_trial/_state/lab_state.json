@@ -22,26 +22,6 @@
       "entry_order_id": "61e4c32e-85b7-4278-bd0e-d53543ec9eff"
     },
     {
-      "lot_id": "0bed6d602d4a",
-      "bucket_id": 65,
-      "profile_name": "lab0065_s163_w2_1005_1045_r1",
-      "strategy_id": "S163",
-      "occ_symbol": "SMCI261204C00025500",
-      "underlying": "SMCI",
-      "qty": 1,
-      "entry_cost": 55.00000000000001,
-      "entry_price": 0.55,
-      "buy_limit_offset": -0.01,
-      "sell_limit_offset": -0.01,
-      "sell_at_mid": false,
-      "take_profit": 0.5,
-      "stop_loss": -0.5,
-      "eod_only": false,
-      "market_exit_eod": true,
-      "entry_date": "2026-11-24T15:42:47.928378+00:00",
-      "entry_order_id": "451bcf44-d69f-4077-b15e-c7f7e523caf8"
-    },
-    {
       "lot_id": "f4c0b0ad4277",
       "bucket_id": 12,
       "profile_name": "lab0012_s403_w2_1005_1045_r1",
@@ -80,42 +60,49 @@
       "market_exit_eod": true,
       "entry_date": "2026-11-25T14:43:41.294462+00:00",
       "entry_order_id": "e0f03b31-ac0f-4607-9a44-50a02094f2b6"
-    }
-  ],
-  "pending_orders": [
-    {
-      "order_id": "32f2c45e-20a5-4733-b2ac-2f1fcf4d99f7",
-      "bucket_id": 90,
-      "strategy_id": "S406",
-      "occ_symbol": "PANW261127C00372500",
-      "underlying": "PANW",
-      "qty": 1,
-      "limit": 0.41,
-      "profile_name": "live_1to1",
-      "submitted": "2026-11-25",
-      "detail": "RB gap -4.0% reclaim",
-      "spread_frac": 0.15384615384615383,
-      "buy_offset": -0.01,
-      "take_profit": 0.5,
-      "stop_loss": -0.4
     },
     {
-      "order_id": "bf3d87c1-6970-43c4-8321-745850685491",
+      "lot_id": "386eaf3ecdc7",
       "bucket_id": 91,
+      "profile_name": "s406_only",
       "strategy_id": "S406",
       "occ_symbol": "JPM261127C00320000",
       "underlying": "JPM",
       "qty": 1,
-      "limit": 0.47,
-      "profile_name": "s406_only",
-      "submitted": "2026-11-25",
-      "detail": "RB gap -2.1% reclaim",
-      "spread_frac": 0.18181818181818174,
-      "buy_offset": -0.01,
+      "entry_cost": 47.0,
+      "entry_price": 0.47,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
       "take_profit": 0.5,
-      "stop_loss": -0.4
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-25T14:47:02.553882+00:00",
+      "entry_order_id": "bf3d87c1-6970-43c4-8321-745850685491"
+    },
+    {
+      "lot_id": "a5e0581aa967",
+      "bucket_id": 90,
+      "profile_name": "live_1to1",
+      "strategy_id": "S406",
+      "occ_symbol": "PANW261127C00372500",
+      "underlying": "PANW",
+      "qty": 1,
+      "entry_cost": 41.0,
+      "entry_price": 0.41,
+      "buy_limit_offset": -0.01,
+      "sell_limit_offset": -0.01,
+      "sell_at_mid": false,
+      "take_profit": 0.5,
+      "stop_loss": -0.4,
+      "eod_only": false,
+      "market_exit_eod": true,
+      "entry_date": "2026-11-25T14:47:02.559132+00:00",
+      "entry_order_id": "32f2c45e-20a5-4733-b2ac-2f1fcf4d99f7"
     }
   ],
+  "pending_orders": [],
   "pending_exits": [
     {
       "order_id": "7ccf5e43-50d5-43ca-adcd-50791ada05b6",
@@ -126,23 +113,13 @@
       "qty": 1,
       "reason": "stop_loss (-75.0%)",
       "submitted": "2026-11-24T16:02:51"
-    },
-    {
-      "order_id": "32be4d78-67f1-450c-82e2-8a5fe3966c5a",
-      "lot_id": "0bed6d602d4a",
-      "bucket_id": 65,
-      "strategy_id": "S163",
-      "occ_symbol": "SMCI261204C00025500",
-      "qty": 1,
-      "reason": "stop_loss (-65.5%)",
-      "submitted": "2026-11-25T09:42:55"
     }
   ],
   "bucket_open_premium": {
     "b16": 34.0,
-    "b65": 55.00000000000001,
     "b12": 4.0,
-    "b90": 56.99999999999999
+    "b90": 98.0,
+    "b91": 47.0
   },
   "session_date": "2026-11-25",
   "entries_locked": [
@@ -606,7 +583,10 @@
     "15ec2ad8-d741-4942-973f-732e91953707",
     "2272e771-4ca5-4200-92b6-6fa598b66281",
     "29a0d2e0-43fa-4e19-9f6a-32bf61f8f6d7",
-    "e0f03b31-ac0f-4607-9a44-50a02094f2b6"
+    "e0f03b31-ac0f-4607-9a44-50a02094f2b6",
+    "32be4d78-67f1-450c-82e2-8a5fe3966c5a",
+    "bf3d87c1-6970-43c4-8321-745850685491",
+    "32f2c45e-20a5-4733-b2ac-2f1fcf4d99f7"
   ],
   "submitted_today": 3,
   "layout_id": "controlled:100:c000_s173_w1_0928_1005_r1",
