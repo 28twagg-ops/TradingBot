@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-25T14:30Z | S10b | ETH-USD hourly mean reversion after 5% breakout  | 23329497459594 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-25T14:29Z | S02b | BTC-USD hourly trend persistence | ef30a8ebf08ae0 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-25T14:28Z | S07b | Hourly trend persistence in BTC-USD under low vo | 179d2ff98143e7 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-25T14:28Z | S09b | BTC-USD hourly trend reversal after sustained 10 | c582b16c8d7163 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-25T14:27Z | S06b | BTC-USD hourly momentum trigger | 236a337fbaf8e9 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-25T13:31Z | S04a | gap_down_breakout | 728ad2f1139762 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-25T13:30Z | S08a | Low hourly realized volatility predicts larger n | ee6240797c11fb | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-25T13:30Z | S05a | BTC-USD hourly breakout 1% high next hour return | 018241b8b53474 | HOLD_INVALID_MODEL_DECISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-24T17:49Z | S05a | BTC-USD hourly breakout | 7c9f03c0109b23 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-24T17:49Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 8290ebdf01111d | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-24T17:48Z | S01a | BTC-USD hourly price reversion to 24‑hour moving | e2fc17d921e671 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-24T14:17Z | S10b | ETH-USD hourly mean reversion after 5% breakout | de1283cc34081e | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-24T14:17Z | S02b | BTC-USD hourly momentum persistence | 46ed608d55a82a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-24T14:16Z | S07b | Hourly trend persistence in BTC-USD across volat | aa6e88a0cda5bc | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-24T14:15Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 124ad75fdad3d6 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-24T14:14Z | S06b | BTC-USD relative strength to SPY mean reversion | 7e0f93574b9173 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
