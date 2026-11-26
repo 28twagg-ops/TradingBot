@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-26T21:38Z | S03a | ETH-USD hourly mean reversion at 12‑hour lag | b7b861cff71836 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-26T21:38Z | S01a | BTC-USD hourly trend persistence | f9925717f4483d | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-26T21:37Z | S10b | BTC-USD hourly mean reversion after 5% breakout  | 8edbbb9c68de51 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-26T21:36Z | S02b | BTC-USD hourly trend persistence | bb3a8d359e837f | HOLD |
+| 2026-11-26T21:36Z | S07b | Hourly trend persistence in BTC-USD across volat | aa6e88a0cda5bc | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-26T15:13Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 2d8271cc3db2c0 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-26T15:13Z | S06b | BTC-USD hourly momentum trigger | 0ef7b9df1fb394 | HOLD_NO_POSITIVE_BACKTEST_EVIDENCE |
 | 2026-11-26T15:12Z | S04a | gap_down_momentum | cee9f382e83efc | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-25T14:30Z | S10b | ETH-USD hourly mean reversion after 5% breakout  | 23329497459594 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-25T14:29Z | S02b | BTC-USD hourly trend persistence | ef30a8ebf08ae0 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-25T14:28Z | S07b | Hourly trend persistence in BTC-USD under low vo | 179d2ff98143e7 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-25T14:28Z | S09b | BTC-USD hourly trend reversal after sustained 10 | c582b16c8d7163 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-25T14:27Z | S06b | BTC-USD hourly momentum trigger | 236a337fbaf8e9 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-25T13:31Z | S04a | gap_down_breakout | 728ad2f1139762 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-25T13:30Z | S08a | Low hourly realized volatility predicts larger n | ee6240797c11fb | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-25T13:30Z | S05a | BTC-USD hourly breakout 1% high next hour return | 018241b8b53474 | HOLD_INVALID_MODEL_DECISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
