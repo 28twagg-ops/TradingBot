@@ -25433,6 +25433,44 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-26T00:24Z",
+        "id": "8908b5571eadb2",
+        "topic": "BTC-USD relative strength mean reversion to SPY",
+        "hypothesis": "When BTC-USD\u2019s hourly relative strength to SPY deviates more than 10% from its 12\u2011hour moving average, the ratio reverts toward the mean within the next hour.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "For each hour, compute R_t = BTC_t/SPY_t. Compute 12\u2011hour SMA of R. If |R_t \u2013 SMA|/SMA > 0.10, check R_{t+1}. If |R_{t+1} \u2013 SMA|/SMA < |R_t \u2013 SMA|/SMA, record success. Compute success rate over all such events.",
+        "source_search": {
+          "query": "BTC-USD hourly momentum trigger backtest",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD SPY hourly relative strength mean reversion study",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -37366,6 +37404,44 @@
         "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
         "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
         "falsification_test": "Count all 10\u2011hour uptrend periods where the 200\u2011hour SMA is crossed; check if the next hour\u2019s close is lower than the previous hour\u2019s close. If the proportion of reversals is <60%, reject the hypothesis.",
+        "source_search": {
+          "query": "btc hourly 10 hour uptrend crossing 200 hour sma reversal frequency",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "btc hourly 10 hour uptrend crossing 200 hour sma reversal frequency",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-26T00:25Z",
+        "id": "4db39eb060206b",
+        "topic": "BTC-USD hourly trend reversal after sustained 10\u2011hour uptrend crossing 200\u2011hour SMA",
+        "hypothesis": "After BTC-USD experiences a 10\u2011hour uptrend that crosses above its 200\u2011hour simple moving average, the next hour\u2019s close will reverse (i.e., close lower than the previous hour).",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "For each 10\u2011hour period where BTC\u2011USD closes are strictly increasing and the 10\u2011hour high exceeds the 200\u2011hour SMA, check if the next hour\u2019s close is lower than the previous hour\u2019s close.",
         "source_search": {
           "query": "btc hourly 10 hour uptrend crossing 200 hour sma reversal frequency",
           "attempted": [
