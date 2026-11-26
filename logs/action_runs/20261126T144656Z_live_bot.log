@@ -1,0 +1,286 @@
+14:46:57  INFO      Mode: morning_scan
+14:46:58  INFO        SELL LIMIT AES  qty=2.294940079  limit=$14.99  id=4fb7eec2-2b18-40a3-8f03-8ff39ed07655
+14:47:28  INFO        SELL LIMIT not filled for AES, falling back to market
+14:47:28  INFO        SELL MARKET AES closed
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:46 UTC|
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Equity                                                         $229.89|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-26|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                      CORRECTION|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $229.89|
+|  Cash                                                           $160.35|
+|  Reserve                                          $11.49  (always kept)|
+|  Stocks~  $69.54 / $172.42  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                    $102.87  (new stock buys)|
+|  Trade size             $34.48  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (2 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  ACN      Pullback50      $35.07     $232.51  $240.49  +3.4%   $+1.16  |
+|  AES      Pullback50      $34.47     $15.02   $15.02   +0.0%   $+0.00  |
+|                                                                        |
+|  Total invested                                                  $69.54|
+|  Total open P&L                                                  $+1.16|
+|  Buys today: 0  |  entry cap: 1  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (11.5m))|
+|  Cached exits                                                         1|
+|  Cached signals                                                      70|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  AES  P&L +0.0%  $+0.00                           EXIT: midline (+0.0%)|
+|  AES          PARTIAL SELL (2.2949 sh remain) — will retry this session|
+|  ACN  P&L +3.4%  $+1.16                                            HOLD|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 0 | partial 1 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 1|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: CORRECTION                                     |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           901|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  70                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  AMP      Pullback50      eq     $504.98  47.9   -0.91   50MA bounce (+|
+|  APTV     RSIRecovery     eq     $37.55   35.2   0.81    RSI 28.4→35.2 |
+|  BNY      Pullback50      eq     $147.16  49.4   -0.74   50MA bounce (+|
+|  BG       RSIRecovery     eq     $88.15   33.3   0.43    RSI 27.3→33.3 |
+|  DHR      Pullback50      eq     $227.35  51.2   -1.41   50MA bounce (+|
+|  DAL      Pullback50      eq     $82.95   45.5   -0.48   50MA bounce (+|
+|  EBAY     Pullback50      eq     $115.54  36.0   0.13    50MA bounce (-|
+|  GRMN     Pullback50      eq     $279.75  44.6   -0.49   50MA bounce (-|
+|  FOX      Pullback50      eq     $57.99   43.0   -0.71   50MA bounce (+|
+|  GDDY     Pullback50      eq     $105.14  27.6   -0.54   50MA bounce (-|
+|  HAS      RSIRecovery     eq     $110.58  30.5   1.84    RSI 30.0→30.5 |
+|  HPQ      MA_Squeeze      eq     $31.15   58.9   2.99    BBW squeeze br|
+|  HUM      Pullback50      eq     $406.51  48.7   -0.34   50MA bounce (-|
+|  IFF      Pullback50      eq     $86.11   49.4   0.20    50MA bounce (-|
+|  ISRG     Pullback50      eq     $427.18  34.7   0.32    50MA bounce (+|
+|  MET      Pullback50      eq     $99.78   50.1   0.04    50MA bounce (+|
+|  MS       RSIRecovery     eq     $167.55  35.1   1.30    RSI 29.1→35.1 |
+|  NFLX     MomReversal     eq     $59.41   30.1   0.52    -26.5% drop/60|
+|  NFLX     RSIRecovery     eq     $59.41   30.1   0.52    RSI 26.1→30.1 |
+|  NDSN     Pullback50      eq     $321.02  58.0   -0.91   50MA bounce (-|
+|  NSC      Pullback50      eq     $326.51  48.0   -0.10   50MA bounce (+|
+|  OKTA     Pullback50      eq     $201.77  65.4   -0.36   50MA bounce (+|
+|  TRGP     Pullback50      eq     $285.53  60.0   -0.31   50MA bounce (-|14:47:32  INFO        BUY  DKS  $34.48  [EarningsDrift]  id=7a60598a-1f24-4b90-aa43-cda252441205
+
+|  TPL      RSIRecovery     eq     $261.37  43.1   1.27    RSI 28.4→43.1 |
+|  TMO      Pullback50      eq     $685.52  52.9   -0.82   50MA bounce (+|
+|  USB      Pullback50      eq     $58.55   44.1   0.17    50MA bounce (-|
+|  WAB      Pullback50      eq     $287.59  55.3   0.69    50MA bounce (+|
+|  DIS      VWAP_Reclaim    eq     $125.60  66.8   1.31    VWAP reclaim V|
+|  WY       MomReversal     eq     $20.52   36.5   0.74    -12.2% drop/60|
+|  WDAY     RSIRecovery     eq     $180.44  30.3   2.12    RSI 27.6→30.3 |
+|  AGNC     MomReversal     eq     $8.31    37.7   0.76    -21.6% drop/60|
+|  APPF     Pullback50      eq     $212.50  25.3   -0.24   50MA bounce (+|
+|  AR       Pullback50      eq     $37.13   54.0   0.13    50MA bounce (+|
+|  ASB      Pullback50      eq     $29.58   37.8   -0.65   50MA bounce (-|
+|  AYI      Pullback50      eq     $316.95  45.1   -0.43   50MA bounce (+|
+|  AXTA     VWAP_Reclaim    eq     $36.06   48.3   2.01    VWAP reclaim V|
+|  CACI     Pullback50      eq     $619.14  55.5   -0.90   50MA bounce (-|
+|  CHWY     MomReversal     eq     $20.47   31.9   1.02    -13.7% drop/60|
+|  CHWY     RSIRecovery     eq     $20.47   31.9   1.02    RSI 19.8→31.9 |
+|  COLB     RSIRecovery     eq     $29.47   37.0   0.39    RSI 29.1→37.0 |
+|  CRBG     Pullback50      eq     $34.63   52.3   0.31    50MA bounce (-|
+|  CUZ      VWAP_Reclaim    eq     $30.34   58.5   1.07    VWAP reclaim V|
+|  CVLT     Pullback50      eq     $157.14  49.6   -1.05   50MA bounce (+|
+|  DKS      EarningsDrift   eq     $158.59  62.7   0.81    post-earnings |
+|  CXT      Pullback50      eq     $53.26   33.6   0.94    50MA bounce (-|
+|  CXT      RSIRecovery     eq     $53.26   33.6   0.94    RSI 26.1→33.6 |
+|  ELF      Pullback50      eq     $108.93  49.0   -0.43   50MA bounce (-|
+|  EQH      Pullback50      eq     $53.18   51.1   0.79    50MA bounce (-|
+|  FAF      VWAP_Reclaim    eq     $66.02   41.6   1.55    VWAP reclaim V|
+|  FND      VWAP_Reclaim    eq     $51.62   50.4   1.11    VWAP reclaim V|
+|  GWRE     MomReversal     eq     $148.47  33.6   0.50    -26.2% drop/60|
+|  GWRE     RSIRecovery     eq     $148.47  33.6   0.50    RSI 28.7→33.6 |
+|  HRB      Pullback50      eq     $47.33   14.6   -0.82   50MA bounce (+|
+|  NLY      MomReversal     eq     $17.86   36.4   0.49    -21.0% drop/60|
+|  NLY      RSIRecovery     eq     $17.86   36.4   0.49    RSI 29.6→36.4 |
+|  NTNX     RubberBand      eq     $46.30   26.5   3.75    RSI           |
+|  ORA      RSIRecovery     eq     $84.60   32.8   1.13    RSI 29.4→32.8 |
+|  PK       Pullback50      eq     $15.89   56.2   -0.53   50MA bounce (-|
+|  PNFP     Pullback50      eq     $96.96   39.4   -0.59   50MA bounce (-|
+|  RGLD     Pullback50      eq     $241.28  41.1   0.08    50MA bounce (-|
+|  RS       Pullback50      eq     $415.80  51.2   -1.43   50MA bounce (+|
+|  SLAB     Pullback50      eq     $221.09  47.7   -0.93   50MA bounce (-|
+|  SSB      Pullback50      eq     $101.95  39.1   -0.13   50MA bounce (-|
+|  UMBF     RSIRecovery     eq     $129.03  35.2   0.81    RSI 28.9→35.2 |
+|  UBSI     Pullback50      eq     $46.86   35.3   -0.15   50MA bounce (-|
+|  TXNM     Pullback50      eq     $58.90   65.5   -0.29   50MA bounce (+|
+|  VLY      VWAP_Reclaim    eq     $14.18   53.7   1.06    VWAP reclaim V|
+|  WLK      MomReversal     eq     $62.59   39.4   0.31    -15.7% drop/60|
+|  WLK      RSIRecovery     eq     $62.59   39.4   0.31    RSI 28.2→39.4 |
+|  WTS      Pullback50      eq     $357.19  56.8   -0.96   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] DKS  EarningsDrift                                 $34.48|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] HPQ  MA_Squeeze                                      cap 3|
+|    SKIP [eq] NFLX  MomReversal                                    cap 3|
+|    SKIP [eq] WY  MomReversal                                      cap 3|
+|    SKIP [eq] AGNC  MomReversal                                    cap 3|
+|    SKIP [eq] CHWY  MomReversal                                    cap 3|
+|    SKIP [eq] GWRE  MomReversal                                    cap 3|
+|    SKIP [eq] NLY  MomReversal                                     cap 3|
+|    SKIP [eq] WLK  MomReversal                                     cap 3|
+|    SKIP [eq] AMP  Pullback50                                      cap 3|
+|    SKIP [eq] BNY  Pullback50                                      cap 3|
+|    SKIP [eq] DHR  Pullback50                                      cap 3|
+|    SKIP [eq] DAL  Pullback50                                      cap 3|
+|    SKIP [eq] EBAY  Pullback50                                     cap 3|
+|    SKIP [eq] GRMN  Pullback50                                     cap 3|
+|    SKIP [eq] FOX  Pullback50                                      cap 3|
+|    SKIP [eq] GDDY  Pullback50                                     cap 3|
+|    SKIP [eq] HUM  Pullback50                                      cap 3|
+|    SKIP [eq] IFF  Pullback50                                      cap 3|
+|    SKIP [eq] ISRG  Pullback50                                     cap 3|
+|    SKIP [eq] MET  Pullback50                                      cap 3|
+|    SKIP [eq] NDSN  Pullback50                                     cap 3|
+|    SKIP [eq] NSC  Pullback50                                      cap 3|
+|    SKIP [eq] OKTA  Pullback50                                     cap 3|
+|    SKIP [eq] TRGP  Pullback50                                     cap 3|
+|    SKIP [eq] TMO  Pullback50                                      cap 3|
+|    SKIP [eq] USB  Pullback50                                      cap 3|
+|    SKIP [eq] WAB  Pullback50                                      cap 3|
+|    SKIP [eq] APPF  Pullback50                                     cap 3|
+|    SKIP [eq] AR  Pullback50                                       cap 3|
+|    SKIP [eq] ASB  Pullback50                                      cap 3|
+|    SKIP [eq] AYI  Pullback50                                      cap 3|
+|    SKIP [eq] CACI  Pullback50                                     cap 3|
+|    SKIP [eq] CRBG  Pullback50                                     cap 3|
+|    SKIP [eq] CVLT  Pullback50                                     cap 3|
+|    SKIP [eq] CXT  Pullback50                                      cap 3|
+|    SKIP [eq] ELF  Pullback50                                      cap 3|
+|    SKIP [eq] EQH  Pullback50                                      cap 3|
+|    SKIP [eq] HRB  Pullback50                                      cap 3|
+|    SKIP [eq] PK  Pullback50                                       cap 3|
+|    SKIP [eq] PNFP  Pullback50                                     cap 3|
+|    SKIP [eq] RGLD  Pullback50                                     cap 3|
+|    SKIP [eq] RS  Pullback50                                       cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] SSB  Pullback50                                      cap 3|
+|    SKIP [eq] UBSI  Pullback50                                     cap 3|
+|    SKIP [eq] TXNM  Pullback50                                     cap 3|
+|    SKIP [eq] WTS  Pullback50                                      cap 3|
+|    SKIP [eq] APTV  RSIRecovery                                    cap 3|
+|    SKIP [eq] BG  RSIRecovery                                      cap 3|
+|    SKIP [eq] HAS  RSIRecovery                                     cap 3|
+|    SKIP [eq] MS  RSIRecovery                                      cap 3|
+|    SKIP [eq] NFLX  RSIRecovery                                    cap 3|
+|    SKIP [eq] TPL  RSIRecovery                                     cap 3|
+|    SKIP [eq] WDAY  RSIRecovery                                    cap 3|
+|    SKIP [eq] CHWY  RSIRecovery                                    cap 3|14:47:45  INFO        place_all_stops: checking 2 positions...
+14:47:45  INFO        STOP skipped ACN: fractional (0.1458 shares) — software exit will handle it
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1791: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  if (getattr(o, "order_type", None) in (OrderType.STOP,
+14:47:45  WARNING     STOP placement failed AES: {"available":"0","code":40310000,"existing_qty":"2.294940079","held_for_orders":"2.294940079","message":"insufficient qty available for order (requested: 2, available: 0)","related_orders":["4044a22a-6948-4186-9387-8c60bbc31318"],"symbol":"AES"}
+14:47:46  INFO        Daily log -> logs/daily/2026-11-26.md
+14:47:46  INFO        Dashboard written → logs/dashboard.md
+
+|    SKIP [eq] COLB  RSIRecovery                                    cap 3|
+|    SKIP [eq] CXT  RSIRecovery                                     cap 3|
+|    SKIP [eq] GWRE  RSIRecovery                                    cap 3|
+|    SKIP [eq] NLY  RSIRecovery                                     cap 3|
+|    SKIP [eq] ORA  RSIRecovery                                     cap 3|
+|    SKIP [eq] UMBF  RSIRecovery                                    cap 3|
+|    SKIP [eq] WLK  RSIRecovery                                     cap 3|
+|    SKIP [eq] NTNX  RubberBand                                     cap 3|
+|    SKIP [eq] DIS  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] AXTA  VWAP_Reclaim                                   cap 3|
+|    SKIP [eq] CUZ  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] FAF  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] FND  VWAP_Reclaim                                    cap 3|
+|    SKIP [eq] VLY  VWAP_Reclaim                                    cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      1|
++------------------------------------------------------------------------+
+|  DKS                                                  still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 1 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             70|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  1 unconfirmed|
+|  Exits                                                                0|
+|  Open pos                                                             2|
+|  Equity                                                         $229.89|
+|  Cash                                                           $160.35|
++========================================================================+
