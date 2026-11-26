@@ -1,130 +1,5 @@
 [
   {
-    "worker": "S01",
-    "cycle": "2026-11-06T11:28Z",
-    "generation_index": 0,
-    "status": "RESEARCH_IDEA_NEEDS_REVISION",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
-    "topic": "BTC-USD hourly trend persistence",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_REVISION",
-    "experiment_id": "b7dd1eddeffb27",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "BTC-USD hourly trend persistence empirical study 2024 2025"
-  },
-  {
-    "worker": "S08",
-    "cycle": "2026-11-06T11:29Z",
-    "generation_index": 0,
-    "status": "RESEARCH_IDEA_NEEDS_DATA",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "validation_issue": null,
-    "topic": "Low hourly volatility predicts larger next\u2011hour return magnitude in BTC\u2011USD",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_DATA",
-    "experiment_id": "5d9769f8d22289",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "search for studies on low volatility and return magnitude in BTC\u2011USD hourly data"
-  },
-  {
-    "worker": "S04",
-    "cycle": "2026-11-06T11:30Z",
-    "generation_index": 0,
-    "status": "RESEARCH_IDEA_NEEDS_DATA",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "validation_issue": null,
-    "topic": "BTC-USD hourly gap\u2011down >2% next\u20115\u2011hour cumulative return",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_DATA",
-    "experiment_id": "e7c431297a8581",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "BTC-USD hourly gap\u2011down >2% next\u20115\u2011hour cumulative return distribution"
-  },
-  {
-    "worker": "S10",
-    "cycle": "2026-11-06T15:57Z",
-    "generation_index": 1,
-    "status": "RESEARCH_IDEA_NEEDS_REVISION",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
-    "topic": "ETH-USD hourly mean reversion to 24\u2011hour SMA",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_REVISION",
-    "experiment_id": "23329497459594",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "ETH\u2011USD hourly 24\u2011hour SMA mean reversion backtest data"
-  },
-  {
-    "worker": "S02",
-    "cycle": "2026-11-06T15:58Z",
-    "generation_index": 1,
-    "status": "RESEARCH_IDEA_NEEDS_REVISION",
-    "source": "Groq free tier",
-    "experimental": true,
-    "live_trading": false,
-    "ai_requests": 1,
-    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
-    "topic": "BTC-USD hourly trend persistence after extreme negative return",
-    "strategy": null,
-    "test": {
-      "status": "PENDING_PROPER_HISTORICAL_DATA",
-      "needed": [
-        "hourly_close"
-      ],
-      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
-    },
-    "action": "RESEARCH_ONLY_NEEDS_REVISION",
-    "experiment_id": "6cb46483433c62",
-    "sources_found": 4,
-    "source_leads": [],
-    "next_search_query": "BTC-USD hourly trend persistence after extreme negative return empirical study"
-  },
-  {
     "worker": "S07",
     "cycle": "2026-11-06T15:59Z",
     "generation_index": 1,
@@ -20024,5 +19899,130 @@
     "sources_found": 4,
     "source_leads": [],
     "next_search_query": "btc hourly 10 hour uptrend crossing 200 hour sma reversal frequency"
+  },
+  {
+    "worker": "S07",
+    "cycle": "2026-11-26T13:06Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "Hourly trend persistence in BTC-USD across volatility regimes",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "011da9646d025c",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC\u2011USD 20\u2011hour rolling standard deviation calculation and regime classification"
+  },
+  {
+    "worker": "S02",
+    "cycle": "2026-11-26T13:07Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly trend persistence",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "fa74c8f6f190a5",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly trend persistence statistical evidence"
+  },
+  {
+    "worker": "S10",
+    "cycle": "2026-11-26T13:08Z",
+    "generation_index": 1,
+    "status": "RESEARCH_IDEA_NEEDS_REVISION",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+    "topic": "BTC-USD hourly mean reversion after 5% breakout of 24\u2011hour SMA",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_REVISION",
+    "experiment_id": "c4da2e7f3901d3",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly close 2024 2025 2026 24h SMA breakout 5% mean reversion"
+  },
+  {
+    "worker": "S01",
+    "cycle": "2026-11-26T13:08Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly trend persistence",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "391da5fd90f79a",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly trend persistence 10h 5% empirical study 2024 2025"
+  },
+  {
+    "worker": "S03",
+    "cycle": "2026-11-26T13:09Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Groq free tier",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "BTC-USD hourly mean reversion at 24h lag",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "d9ab17bdecc344",
+    "sources_found": 4,
+    "source_leads": [],
+    "next_search_query": "BTC-USD hourly close price dataset 2015\u20112026"
   }
 ]
