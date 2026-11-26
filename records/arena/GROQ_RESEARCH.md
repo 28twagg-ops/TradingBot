@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-26T11:00Z | S09b | BTC-USD hourly trend reversal after sustained 10 | dc6961e4dace00 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-26T10:59Z | S06b | BTC-USD relative strength to SPY mean reversion | 34c9dabaea0bb5 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-26T10:58Z | S04a | gap_down_momentum | a0206915aa0b2a | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-26T10:58Z | S08a | Low hourly realized volatility predicts larger n | 74cfeaaee47f02 | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-26T10:57Z | S05a | BTC-USD hourly breakout based on 24h high 1% thr | 35ddc1efc19df8 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-26T05:02Z | S03a | BTC-USD hourly mean reversion at 24‑hour lag | 756c73d9a0460a | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-26T05:02Z | S01a | BTC-USD hourly trend persistence | 1eb76cd32864b9 | HOLD |
 | 2026-11-26T05:01Z | S10b | ETH-USD hourly mean reversion after 5% breakout  | ec20d41267172e | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-25T03:05Z | S04a | gap_down_breakout | f6efa8511d5282 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-25T03:04Z | S08a | Low hourly realized volatility predicts larger n | 0b0e4f9a98436c | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-25T03:03Z | S05a | BTC-USD hourly breakout based on 24h high | e60640fe06408e | HOLD_INSUFFICIENT_HISTORY |
-| 2026-11-25T03:02Z | S03a | BTC-USD hourly mean reversion at 12‑hour lag | 49d2a07f542ac9 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-25T03:02Z | S01a | BTC-USD hourly price reversion to 24‑hour SMA | c111082822e653 | HOLD |
-| 2026-11-25T02:36Z | S10b | ETH-USD hourly mean reversion after 5% breakout | 51905af8b1e4df | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-25T02:36Z | S02b | BTC-USD hourly momentum persistence | 06892f739f5bb1 | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-25T02:35Z | S07b | Hourly trend persistence in BTC-USD across volat | a3a81b2dd3d7d5 | RESEARCH_ONLY_NEEDS_DATA |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
