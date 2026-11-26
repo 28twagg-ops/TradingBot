@@ -14029,3 +14029,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-26 17:41:59,exits,correction,229.89,160.35,0,0,0,2,ACN|AES,both
 2026-11-26 17:47:01,exits,correction,229.89,160.35,0,0,0,2,ACN|AES,both
 2026-11-26 17:51:57,exits,correction,229.89,160.35,0,0,0,2,ACN|AES,both
+2026-11-26 17:56:50,exits,correction,229.89,160.35,0,0,0,2,ACN|AES,both
