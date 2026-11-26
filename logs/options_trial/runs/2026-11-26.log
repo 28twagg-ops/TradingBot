@@ -19688,8 +19688,8 @@ Per-bucket exit stats (all time)
 Full detail: logs/options_trial/runs/2026-11-26.log
 elapsed=3.9s reconcile=0.77s cancel=0.37s manage=1.41s
 
-=== 12:09:53 ET — manage-only (past entry window) [elapsed=1.8s reconcile=0.32s cancel=0.15s manage=0.61s] ===
-=== options_morning_bot (PAPER) 2026-11-26T12:09:53.414314-05:00 ===
+=== 12:12:35 ET — manage-only (past entry window) [elapsed=1.9s reconcile=0.3s cancel=0.13s manage=0.71s] ===
+=== options_morning_bot (PAPER) 2026-11-26T12:12:35.971416-05:00 ===
 
 [Run context]
 Paper auth OK — equity $993814.64, account PA33P8KT02IL
@@ -20259,5 +20259,5 @@ Per-bucket exit stats (all time)
 |  MDT261127C00106000            1   -100.0%   $     -4.00               |
 +========================================================================+
 Full detail: logs/options_trial/runs/2026-11-26.log
-elapsed=1.8s reconcile=0.32s cancel=0.15s manage=0.61s
+elapsed=1.9s reconcile=0.3s cancel=0.13s manage=0.71s
 
