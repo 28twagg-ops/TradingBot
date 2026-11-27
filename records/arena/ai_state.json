@@ -8653,6 +8653,59 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-27T13:06Z",
+        "id": "93c6961930e417",
+        "topic": "BTC-USD hourly trend persistence",
+        "hypothesis": "Hourly BTC-USD returns exhibit a statistically significant positive autocorrelation over a 20\u2011hour lag, implying trend persistence that can be exploited with a simple trend\u2011following rule.",
+        "candidate": {
+          "family": "trend",
+          "lookback": 20,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 22,
+            "end": 496,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 496,
+            "end": 709,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_INVALID_MODEL_DECISION",
+        "validation_issue": "INVALID_PAPER_DECISION",
+        "falsification_test": "Compute the 20\u2011hour lag autocorrelation of hourly returns; if the 95% confidence interval excludes zero, reject the null of no persistence.",
+        "source_search": {
+          "query": "BTC-USD hourly trend persistence statistical evidence",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC-USD hourly autocorrelation 20 hours",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -26495,6 +26548,67 @@
         "rule_expressible_as_candidate": false,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-27T13:05Z",
+        "id": "e5fc05f9604260",
+        "topic": "BTC-USD hourly SMA trend continuation",
+        "hypothesis": "When BTC\u2011USD\u2019s hourly close is more than 5% above its 24\u2011hour SMA, the price will remain above that SMA for the next 5 hours.",
+        "candidate": {
+          "family": "trend",
+          "lookback": 24,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 26,
+            "end": 496,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 496,
+            "end": 709,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD",
+        "validation_issue": null,
+        "falsification_test": "For each hour, if close>1.05\u00d724hSMA, check next 5 hours all >24hSMA; record success rate.",
+        "source_search": {
+          "query": "BTC-USD SPY hourly relative strength SMA12 reversion backtest",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [
+          {
+            "platform": "web",
+            "title": "Bitcoin price today, BTC to USD live price, marketcap and chart ...",
+            "url": "https://coinmarketcap.com/currencies/bitcoin/",
+            "snippet": "The live Bitcoin price today is $61,661.65 USD with a 24-hour trading volume of $21,127,874,746.27 USD. We update our BTC to USD price in real-time.",
+            "read_level": "public_search_result_only"
+          }
+        ],
+        "next_search_query": "BTC-USD hourly SMA 24 trend continuation test",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -30433,6 +30547,44 @@
         "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
         "validation_issue": null,
         "falsification_test": "For each 20\u2011hour upward trend, compute the 20\u2011hour rolling standard deviation. If it exceeds 5% and the regime is stable, check whether the price continues to rise for the next 4 hours. Failure to do so falsifies the hypothesis.",
+        "source_search": {
+          "query": "BTC\u2011USD 20\u2011hour rolling standard deviation calculation and regime classification",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "BTC\u2011USD 20\u2011hour rolling standard deviation calculation and regime classification",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-27T13:05Z",
+        "id": "aa6e88a0cda5bc",
+        "topic": "Hourly trend persistence in BTC-USD across volatility regimes",
+        "hypothesis": "A 20\u2011hour upward trend in BTC\u2011USD persists for at least 4 additional hours when the 20\u2011hour rolling standard deviation exceeds 5% and the market regime remains stable.",
+        "candidate": null,
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_REVISION",
+        "validation_issue": "INVALID_EXECUTABLE_CANDIDATE",
+        "falsification_test": "Identify all 20\u2011hour upward trends with 20\u2011hour SD >5%; check if price continues upward for next 4 hours. If any instance fails, hypothesis is falsified.",
         "source_search": {
           "query": "BTC\u2011USD 20\u2011hour rolling standard deviation calculation and regime classification",
           "attempted": [
@@ -38980,6 +39132,59 @@
         "rule_expressible_as_candidate": true,
         "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
         "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-27T13:07Z",
+        "id": "1ee5b5ca8a1e62",
+        "topic": "BTC-USD hourly trend reversal after sustained 10\u2011hour uptrend crossing 200\u2011hour SMA",
+        "hypothesis": "When BTC\u2011USD hourly close prices form a 10\u2011hour uptrend that also crosses above its 200\u2011hour simple moving average, the next hourly close will fall below the previous hour\u2019s close (reversal).",
+        "candidate": {
+          "family": "trend",
+          "lookback": 10,
+          "threshold": 0.05
+        },
+        "symbol": "BTC-USD",
+        "test": {
+          "status": "HISTORICAL_PROXY_ONLY",
+          "research": {
+            "start": 12,
+            "end": 496,
+            "returns_pct": 0.0,
+            "drawdown_pct": 0.0,
+            "entries": 0
+          },
+          "retrospective_validation": {
+            "start": 496,
+            "end": 709,
+            "returns_pct": -1.175,
+            "drawdown_pct": -1.175,
+            "entries": 1
+          },
+          "note": "Next-hour-close proxy, 25bp each side; repeated searches overfit the shared history."
+        },
+        "paper_action": "HOLD_INVALID_MODEL_DECISION",
+        "validation_issue": "INVALID_PAPER_DECISION",
+        "falsification_test": "Identify every 10\u2011hour period where BTC\u2011USD closes are strictly increasing and the 10\u2011hour average exceeds the 200\u2011hour SMA. For each such period, check if the next hour\u2019s close is lower than the 10th hour\u2019s close. Count the number of reversals versus non\u2011reversals to compute a reversal rate. If the",
+        "source_search": {
+          "query": "btc hourly 10 hour uptrend crossing 200 hour sma reversal frequency",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "btc hourly 10 hour uptrend crossing 200 hour sma reversal rate",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": true,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
       }
     ]
   },
@@ -43098,6 +43303,44 @@
         },
         "source_leads": [],
         "next_search_query": "BTC-USD hourly close 2024 2025 2026 24h SMA breakout 5% mean reversion",
+        "preferred_sources": [
+          "web"
+        ],
+        "site_domain": null,
+        "research_data_requirements": [
+          "hourly_close"
+        ],
+        "hypothesis_timeframe": "hourly",
+        "rule_expressible_as_candidate": false,
+        "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+        "local_llama_leads_considered": 2
+      },
+      {
+        "cycle": "2026-11-27T13:07Z",
+        "id": "ec20d41267172e",
+        "topic": "ETH-USD hourly mean reversion after 5% breakout of 24\u2011hour SMA",
+        "hypothesis": "When ETH\u2011USD hourly close exceeds its 24\u2011hour SMA by more than 5\u202f%, the next hour\u2019s return is negative (mean reversion).",
+        "candidate": null,
+        "symbol": "ETH-USD",
+        "test": {
+          "status": "PENDING_PROPER_HISTORICAL_DATA",
+          "needed": [
+            "hourly_close"
+          ],
+          "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+        },
+        "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+        "validation_issue": null,
+        "falsification_test": "For each hour where close > SMA\u00d71.05, compute next\u2011hour return; if \u226590\u202f% of such cases have negative return, hypothesis holds.",
+        "source_search": {
+          "query": "BTC-USD hourly close 2024 2025 2026 24h SMA breakout 5% mean reversion",
+          "attempted": [
+            "web"
+          ],
+          "matches": 4
+        },
+        "source_leads": [],
+        "next_search_query": "ETH-USD hourly close 2024 2025 2026 24h SMA breakout 5% mean reversion",
         "preferred_sources": [
           "web"
         ],

@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-27T13:07Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 1ee5b5ca8a1e62 | HOLD_INVALID_MODEL_DECISION |
+| 2026-11-27T13:07Z | S10b | ETH-USD hourly mean reversion after 5% breakout  | ec20d41267172e | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-27T13:06Z | S02b | BTC-USD hourly trend persistence | 93c6961930e417 | HOLD_INVALID_MODEL_DECISION |
+| 2026-11-27T13:05Z | S06b | BTC-USD hourly SMA trend continuation | e5fc05f9604260 | HOLD |
+| 2026-11-27T13:05Z | S07b | Hourly trend persistence in BTC-USD across volat | aa6e88a0cda5bc | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-27T08:27Z | S04a | gap_down_quality | f2d916e0c6a438 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-27T08:27Z | S08a | Hourly realized volatility mean‑reversion in BTC | 9da7c12a863fb8 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-27T08:26Z | S05a | BTC-USD hourly breakout based on 24‑hour high +  | 0ad8a656abab79 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-26T13:08Z | S10b | BTC-USD hourly mean reversion after 5% breakout  | c4da2e7f3901d3 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-26T13:07Z | S02b | BTC-USD hourly trend persistence | fa74c8f6f190a5 | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-26T13:06Z | S07b | Hourly trend persistence in BTC-USD across volat | 011da9646d025c | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-26T11:00Z | S09b | BTC-USD hourly trend reversal after sustained 10 | dc6961e4dace00 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-26T10:59Z | S06b | BTC-USD relative strength to SPY mean reversion | 34c9dabaea0bb5 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-26T10:58Z | S04a | gap_down_momentum | a0206915aa0b2a | RESEARCH_ONLY_NEEDS_REVISION |
-| 2026-11-26T10:58Z | S08a | Low hourly realized volatility predicts larger n | 74cfeaaee47f02 | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-26T10:57Z | S05a | BTC-USD hourly breakout based on 24h high 1% thr | 35ddc1efc19df8 | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
