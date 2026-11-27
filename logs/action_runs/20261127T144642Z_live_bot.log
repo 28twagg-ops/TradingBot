@@ -1,0 +1,210 @@
+14:46:42  INFO      Mode: morning_scan
+14:46:43  INFO        SELL LIMIT DKS  qty=0.868261964  limit=$159.35  id=10a0f8bd-302c-40f2-9c92-c65b8665b5bf
+14:47:14  INFO        SELL LIMIT filled DKS (confirmed by position check)
+14:47:14  INFO        TX logged: SELL DKS  P&L 0.55%
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                      MORNING_SCAN|
+|  Time                                                         14:46 UTC|
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Equity                                                         $230.64|
++========================================================================+
+
++========================================================================+
+|                   RUBBER BAND BOT v8  --  DAILY SCAN                   |
++========================================================================+
+|  Mode                                                      *** LIVE ***|
+|  Date                                                        2026-11-27|
+|  Universe                                                          both|
+|  M~  Nov: RubberBand + MomReversal (display only — schedule not enforc~|
+|  Disabled  GapDown, GoldenPocket, VolumeSpike (see DISABLED_STRATEGIES)|
+|  Regime                                                      CORRECTION|
+|  Exit                                      midline / stop-0.5% / 3d max|
++========================================================================+
+
++========================================================================+
+|                                ACCOUNT                                 |
++========================================================================+
+|  Equity (total)                                                 $230.64|
+|  Cash                                                            $92.00|
+|  Reserve                                          $11.53  (always kept)|
+|  Stock~  $138.64 / $172.98  (75% equity; 25% reserved for live options)|
+|  Options MV                        $0.00  open P&L $+0.00  (0 contract)|
+|  Available                                     $34.34  (new stock buys)|
+|  Trade size             $34.60  (15% per signal — all strategies equal)|
++========================================================================+
+
++========================================================================+
+|                        STOCK HOLDINGS  (1 open)                        |
++========================================================================+
+|  TICKER   STRATEGY        INVESTED   ENTRY    NOW      P&L%    P&L$    |
++------------------------------------------------------------------------+
+|  DKS      EarningsDrift   $138.64    $158.80  $159.67  +0.5%   $+0.76  |
+|                                                                        |
+|  Total invested                                                 $138.64|
+|  Total open P&L                                                  $+0.76|
+|  Buys today: 0  |  entry cap: 2  |  max open: 3                        |
++========================================================================+
+
++========================================================================+
+|                               PLAN CACHE                               |
++========================================================================+
+|  Mode                                                           morning|
+|  File                                      logs/plans/morning_plan.json|
+|  Use cached plan                                    yes (fresh (11.2m))|
+|  Cached exits                                                         1|
+|  Cached signals                                                      31|
++========================================================================+
+
++========================================================================+
+|          EXIT EVALUATION  (EOD -- midline + stop + max-hold)           |
++========================================================================+
+|  DKS  P&L +0.5%  $+0.76                           EXIT: midline (-0.0%)|
++========================================================================+
+
++========================================================================+
+|                           EXIT EVAL SUMMARY                            |
++========================================================================+
+|  Exit eval    attempted 1 | filled 1 | partial 0 | pending 0 | failed 0|
+|  Other skips     already logged today 0  |  no price data 0  |  holds 0|
+|  Stop-loss breaches                                                none|
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             0|
++========================================================================+
+
++========================================================================+
+|                             DATA DOWNLOAD                              |
++========================================================================+
+|  Universe: both  |  Alpaca primary / yfinance fallback                 |
++========================================================================+
+
++========================================================================+
+|                              SIGNAL SCAN                               |
++========================================================================+
+|  Month: Nov  |  Regime: CORRECTION                                     |
+|  Primary: RubberBand  |  Secondary: MomReversal (display only — schedu~|
+|  Source                                                cached prep plan|
+|  Universe scanned in prep                                           902|
++========================================================================+
+
++========================================================================+
+|                         SIGNALS FOUND  --  31                          |
++========================================================================+
+|  TICKER   STRATEGY        TIER   PRICE    RSI    VOL_Z   TRIGGER       |
++------------------------------------------------------------------------+
+|  APA      Pullback50      eq     $46.19   56.9   -2.50   50MA bounce (-|
+|  BMY      Pullback50      eq     $61.72   48.2   -3.05   50MA bounce (+|
+|  CF       Pullback50      eq     $119.05  49.3   -2.09   50MA bounce (+|
+|  CVX      Pullback50      eq     $214.09  52.0   -3.25   50MA bounce (-|
+|  COP      Pullback50      eq     $136.95  51.2   -2.83   50MA bounce (-|
+|  DHR      Pullback50      eq     $228.25  47.5   -3.27   50MA bounce (+|
+|  EBAY     Pullback50      eq     $116.41  39.8   -3.20   50MA bounce (+|
+|  EOG      Pullback50      eq     $150.43  55.6   -2.65   50MA bounce (-|
+|  FITB     Pullback50      eq     $52.43   47.2   -3.00   50MA bounce (+|
+|  FOXA     Pullback50      eq     $65.31   45.8   -0.98   50MA bounce (+|
+|  GRMN     Pullback50      eq     $282.94  48.0   -2.20   50MA bounce (+|
+|  GDDY     Pullback50      eq     $105.37  33.9   -2.09   50MA bounce (-|
+|  IFF      Pullback50      eq     $86.28   60.1   -2.79   50MA bounce (+|
+|  J        Pullback50      eq     $147.42  48.2   -1.83   50MA bounce (+|
+|  KMI      Pullback50      eq     $32.23   68.5   -2.67   50MA bounce (+|
+|  NTRS     Pullback50      eq     $170.19  46.2   -2.55   50MA bounce (-|
+|  NUE      Pullback50      eq     $254.86  58.9   -1.93   50MA bounce (+|
+|  PFG      Pullback50      eq     $110.27  48.6   -3.10   50MA bounce (-|
+|  SOLV     Pullback50      eq     $87.39   38.2   -1.69   50MA bounce (+|
+|  TROW     Pullback50      eq     $105.19  43.4   -2.70   50MA bounce (+|
+|  TEL      Pullback50      eq     $215.67  57.3   -2.95   50MA bounce (+|
+|  BJ       Pullback50      eq     $101.64  29.7   -1.57   50MA bounce (-|
+|  BIO      Pullback50      eq     $371.91  44.3   -2.08   50MA bounce (+|
+|  CNH      Pullback50      eq     $11.96   53.6   -2.44   50MA bounce (-|
+|  ELF      Pullback50      eq     $109.56  41.6   -2.25   50MA bounce (+|
+|  HRB      Pullback50      eq     $47.30   18.6   -3.02   50MA bounce (+|
+|  MSA      Pullback50      eq     $178.44  62.0   -1.97   50MA bounce (-|14:47:14  INFO        BUY  APA  $34.60  [Pullback50]  id=3cba67d6-0b01-4233-92e8-c99ca1fd025c
+14:47:15  INFO        BUY  BMY  $34.60  [Pullback50]  id=3ab19a0e-2aba-4b0e-87ee-c3b766f2019e
+14:47:15  INFO        BUY  CF  $34.60  [Pullback50]  id=96c7d540-86da-4e84-91b1-8f34350d7f47
+14:47:45  INFO        place_all_stops: checking 3 positions...
+14:47:45  INFO        STOP skipped APA: fractional (0.7480 shares) — software exit will handle it
+14:47:45  INFO        STOP skipped BMY: fractional (0.5618 shares) — software exit will handle it
+14:47:45  INFO        STOP skipped CF: fractional (0.2900 shares) — software exit will handle it
+14:47:45  INFO        Daily log -> logs/daily/2026-11-27.md
+14:47:45  INFO        Dashboard written → logs/dashboard.md
+
+|  PK       Pullback50      eq     $16.02   55.3   -2.24   50MA bounce (+|
+|  SLAB     Pullback50      eq     $221.20  47.3   -2.14   50MA bounce (-|
+|  SSB      Pullback50      eq     $103.31  47.0   -2.71   50MA bounce (+|
+|  UBSI     Pullback50      eq     $47.40   42.6   -2.81   50MA bounce (+|
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                              ENTRY ORDERS                              |
++========================================================================+
+|    ENTER [eq] APA  Pullback50                                    $34.60|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] BMY  Pullback50                                    $34.60|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    ENTER [eq] CF  Pullback50                                     $34.60|
+|    BUY SUBMITTED [e~  fill pending — batched confirmation after entries|
+|    SKIP [eq] CVX  Pullback50                                      cap 3|
+|    SKIP [eq] COP  Pullback50                                      cap 3|
+|    SKIP [eq] DHR  Pullback50                                      cap 3|
+|    SKIP [eq] EBAY  Pullback50                                     cap 3|
+|    SKIP [eq] EOG  Pullback50                                      cap 3|
+|    SKIP [eq] FITB  Pullback50                                     cap 3|
+|    SKIP [eq] FOXA  Pullback50                                     cap 3|
+|    SKIP [eq] GRMN  Pullback50                                     cap 3|
+|    SKIP [eq] GDDY  Pullback50                                     cap 3|
+|    SKIP [eq] IFF  Pullback50                                      cap 3|
+|    SKIP [eq] J  Pullback50                                        cap 3|
+|    SKIP [eq] KMI  Pullback50                                      cap 3|
+|    SKIP [eq] NTRS  Pullback50                                     cap 3|
+|    SKIP [eq] NUE  Pullback50                                      cap 3|
+|    SKIP [eq] PFG  Pullback50                                      cap 3|
+|    SKIP [eq] SOLV  Pullback50                                     cap 3|
+|    SKIP [eq] TROW  Pullback50                                     cap 3|
+|    SKIP [eq] TEL  Pullback50                                      cap 3|
+|    SKIP [eq] BJ  Pullback50                                       cap 3|
+|    SKIP [eq] BIO  Pullback50                                      cap 3|
+|    SKIP [eq] CNH  Pullback50                                      cap 3|
+|    SKIP [eq] ELF  Pullback50                                      cap 3|
+|    SKIP [eq] HRB  Pullback50                                      cap 3|
+|    SKIP [eq] MSA  Pullback50                                      cap 3|
+|    SKIP [eq] PK  Pullback50                                       cap 3|
+|    SKIP [eq] SLAB  Pullback50                                     cap 3|
+|    SKIP [eq] SSB  Pullback50                                      cap 3|
+|    SKIP [eq] UBSI  Pullback50                                     cap 3|
+
++========================================================================+
+|                         BUY FILL CONFIRMATION                          |
++========================================================================+
+|  Pending submits                                                      3|
++------------------------------------------------------------------------+
+|  APA                                                  still unconfirmed|
+|  BMY                                                  still unconfirmed|
+|  CF                                                   still unconfirmed|
++========================================================================+
++========================================================================+
+
++========================================================================+
+|                           GTC STOP PLACEMENT                           |
++========================================================================+
+|  Waiting 5s for 3 buy submit(s) to settle...                           |
++========================================================================+
+
++========================================================================+
+|                            SESSION SUMMARY                             |
++========================================================================+
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Stra~  RubberBand + MomReversal (display only — schedule not enforced)|
+|  Scanned                                                              0|
+|  Signals                                                             31|
+|  Entries                                                              0|
+|  Buy submits                              0 confirmed  |  3 unconfirmed|
+|  Exits                                                                1|
+|  Open pos                                                             3|
+|  Equity                                                         $230.39|
+|  Cash                                                           $126.65|
++========================================================================+
